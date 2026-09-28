@@ -16,6 +16,8 @@ interface HandsFreeAudioGatewayProfile extends BaseProfile
 
 **替代接口：** [HandsFreeAudioGatewayProfile](arkts-connectivity-hfp-handsfreeaudiogatewayprofile-i-sys.md)
 
+<!--Device-bluetoothManager-interface HandsFreeAudioGatewayProfile extends BaseProfile--><!--Device-bluetoothManager-interface HandsFreeAudioGatewayProfile extends BaseProfile-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -43,6 +45,8 @@ connect(device: string): void
 **需要权限：** 
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH
 - API版本9：ohos.permission.DISCOVER_BLUETOOTH
+
+<!--Device-HandsFreeAudioGatewayProfile-connect(device: string): void--><!--Device-HandsFreeAudioGatewayProfile-connect(device: string): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -96,6 +100,8 @@ disconnect(device: string): void
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH
 - API版本9：ohos.permission.DISCOVER_BLUETOOTH
 
+<!--Device-HandsFreeAudioGatewayProfile-disconnect(device: string): void--><!--Device-HandsFreeAudioGatewayProfile-disconnect(device: string): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -148,6 +154,8 @@ off(type: 'connectionStateChange', callback?: Callback<StateChangeParam>): void
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH
 - API版本9：N/A
 
+<!--Device-HandsFreeAudioGatewayProfile-off(type: 'connectionStateChange', callback?: Callback<StateChangeParam>): void--><!--Device-HandsFreeAudioGatewayProfile-off(type: 'connectionStateChange', callback?: Callback<StateChangeParam>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -183,6 +191,8 @@ on(type: 'connectionStateChange', callback: Callback<StateChangeParam>): void
 **需要权限：** 
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH
 - API版本9：N/A
+
+<!--Device-HandsFreeAudioGatewayProfile-on(type: 'connectionStateChange', callback: Callback<StateChangeParam>): void--><!--Device-HandsFreeAudioGatewayProfile-on(type: 'connectionStateChange', callback: Callback<StateChangeParam>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

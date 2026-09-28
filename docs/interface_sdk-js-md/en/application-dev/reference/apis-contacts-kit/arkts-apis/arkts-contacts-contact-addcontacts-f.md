@@ -20,6 +20,8 @@ Adds contacts in batches. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-contact-function addContacts(context: Context, contacts: Array<Contact>): Promise<Array<int>>--><!--Device-contact-function addContacts(context: Context, contacts: Array<Contact>): Promise<Array<int>>-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**

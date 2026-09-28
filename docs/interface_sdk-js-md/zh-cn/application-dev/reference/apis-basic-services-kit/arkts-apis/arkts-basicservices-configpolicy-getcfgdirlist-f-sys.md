@@ -16,6 +16,8 @@ function getCfgDirList(callback: AsyncCallback<Array<string>>): void
 
 **起始版本：** 8
 
+<!--Device-configPolicy-function getCfgDirList(callback: AsyncCallback<Array<string>>): void--><!--Device-configPolicy-function getCfgDirList(callback: AsyncCallback<Array<string>>): void-End-->
+
 **系统能力：** SystemCapability.Customization.ConfigPolicy
 
 **系统接口：** 此接口为系统接口。
@@ -44,6 +46,8 @@ function getCfgDirList(): Promise<Array<string>>
 获取配置层级目录列表，按优先级从低到高。使用Promise异步回调。
 
 **起始版本：** 8
+
+<!--Device-configPolicy-function getCfgDirList(): Promise<Array<string>>--><!--Device-configPolicy-function getCfgDirList(): Promise<Array<string>>-End-->
 
 **系统能力：** SystemCapability.Customization.ConfigPolicy
 

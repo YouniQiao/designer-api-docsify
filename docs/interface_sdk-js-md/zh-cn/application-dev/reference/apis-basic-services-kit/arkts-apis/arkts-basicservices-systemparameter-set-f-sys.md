@@ -20,6 +20,8 @@ function set(key: string, value: string, callback: AsyncCallback<void>): void
 
 **替代接口：** set
 
+<!--Device-systemParameter-function set(key: string, value: string, callback: AsyncCallback<void>): void--><!--Device-systemParameter-function set(key: string, value: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Startup.SystemInfo
 
 **系统接口：** 此接口为系统接口。
@@ -66,6 +68,8 @@ function set(key: string, value: string): Promise<void>
 **废弃版本：** 9
 
 **替代接口：** set
+
+<!--Device-systemParameter-function set(key: string, value: string): Promise<void>--><!--Device-systemParameter-function set(key: string, value: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 

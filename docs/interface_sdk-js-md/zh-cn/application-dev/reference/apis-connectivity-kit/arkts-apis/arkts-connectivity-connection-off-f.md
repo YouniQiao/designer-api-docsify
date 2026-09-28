@@ -22,6 +22,8 @@ function off(type: 'bluetoothDeviceFind', callback?: Callback<Array<string>>): v
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-connection-function off(type: 'bluetoothDeviceFind', callback?: Callback<Array<string>>): void--><!--Device-connection-function off(type: 'bluetoothDeviceFind', callback?: Callback<Array<string>>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -71,6 +73,8 @@ function off(type: 'discoveryResult', callback?: Callback<Array<DiscoveryResult>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-connection-function off(type: 'discoveryResult', callback?: Callback<Array<DiscoveryResult>>): void--><!--Device-connection-function off(type: 'discoveryResult', callback?: Callback<Array<DiscoveryResult>>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -117,6 +121,8 @@ function off(type: 'bondStateChange', callback?: Callback<BondStateParam>): void
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-connection-function off(type: 'bondStateChange', callback?: Callback<BondStateParam>): void--><!--Device-connection-function off(type: 'bondStateChange', callback?: Callback<BondStateParam>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -166,6 +172,8 @@ function off(type: 'pinRequired', callback?: Callback<PinRequiredParam>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-connection-function off(type: 'pinRequired', callback?: Callback<PinRequiredParam>): void--><!--Device-connection-function off(type: 'pinRequired', callback?: Callback<PinRequiredParam>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -213,6 +221,8 @@ function off(type: 'batteryChange', callback?: Callback<BatteryInfo>): void
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-connection-function off(type: 'batteryChange', callback?: Callback<BatteryInfo>): void--><!--Device-connection-function off(type: 'batteryChange', callback?: Callback<BatteryInfo>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

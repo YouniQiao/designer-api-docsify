@@ -14,6 +14,8 @@ Defines the parameters for subscribing to the gyroscope sensor, including the ca
 
 **Required permissions:** ohos.permission.GYROSCOPE
 
+<!--Device-unnamed-export interface SubscribeGyroscopeOptions--><!--Device-unnamed-export interface SubscribeGyroscopeOptions-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 ## Modules to Import
@@ -39,6 +41,8 @@ Callback invoked when an API call fails. The callback parameters are **data** of
 **Required permissions:** ohos.permission.GYROSCOPE
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-SubscribeGyroscopeOptions-fail?: (data: string, code: number) => void--><!--Device-SubscribeGyroscopeOptions-fail?: (data: string, code: number) => void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
@@ -66,6 +70,8 @@ Callback invoked when the gyroscope sensor data changes. The callback parameter 
 **Required permissions:** ohos.permission.GYROSCOPE
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-SubscribeGyroscopeOptions-success: (data: GyroscopeResponse) => void--><!--Device-SubscribeGyroscopeOptions-success: (data: GyroscopeResponse) => void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
@@ -102,5 +108,7 @@ Possible values:
 **Required permissions:** ohos.permission.GYROSCOPE
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-SubscribeGyroscopeOptions-interval: string--><!--Device-SubscribeGyroscopeOptions-interval: string-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite

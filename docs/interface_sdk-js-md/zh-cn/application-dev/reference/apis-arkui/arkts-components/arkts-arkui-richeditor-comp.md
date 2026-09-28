@@ -4,7 +4,7 @@
 
 > **说明：** 
 > 
-> - 该组件从API版本26.0.0开始支持[WithTheme](arkts-arkui-withtheme-comp.md#with_themedefines-withtheme-component)。
+> - 该组件从API版本26.0.0开始支持[WithTheme](arkts-arkui-withtheme-comp.md)。
 
 ## 子组件
 
@@ -23,6 +23,8 @@ RichEditor(value: RichEditorOptions)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-RichEditorInterface-(value: RichEditorOptions): RichEditorAttribute--><!--Device-RichEditorInterface-(value: RichEditorOptions): RichEditorAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,6 +47,8 @@ RichEditor(options: RichEditorStyledStringOptions)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-RichEditorInterface-(options: RichEditorStyledStringOptions): RichEditorAttribute--><!--Device-RichEditorInterface-(options: RichEditorStyledStringOptions): RichEditorAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

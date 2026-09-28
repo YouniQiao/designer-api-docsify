@@ -8,6 +8,8 @@ The module provides a set of camera service APIs for you to easily develop a cam
 
 **Since:** 10
 
+<!--Device-unnamed-declare namespace camera--><!--Device-unnamed-declare namespace camera-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## Modules to Import

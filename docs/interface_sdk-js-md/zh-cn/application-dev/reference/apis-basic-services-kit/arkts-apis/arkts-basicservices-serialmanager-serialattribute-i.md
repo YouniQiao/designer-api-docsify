@@ -8,6 +8,8 @@ interface SerialAttribute
 
 **起始版本：** 19
 
+<!--Device-serialManager-interface SerialAttribute--><!--Device-serialManager-interface SerialAttribute-End-->
+
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
 ## 导入模块
@@ -28,6 +30,8 @@ baudRate: BaudRates
 
 **起始版本：** 19
 
+<!--Device-SerialAttribute-baudRate: BaudRates--><!--Device-SerialAttribute-baudRate: BaudRates-End-->
+
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
 ## dataBits
@@ -43,6 +47,8 @@ dataBits?: DataBits
 **默认值：** DATABIT_8
 
 **起始版本：** 19
+
+<!--Device-SerialAttribute-dataBits?: DataBits--><!--Device-SerialAttribute-dataBits?: DataBits-End-->
 
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
@@ -60,6 +66,8 @@ parity?: Parity
 
 **起始版本：** 19
 
+<!--Device-SerialAttribute-parity?: Parity--><!--Device-SerialAttribute-parity?: Parity-End-->
+
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
 ## stopBits
@@ -75,5 +83,7 @@ stopBits?: StopBits
 **默认值：** STOPBIT_1
 
 **起始版本：** 19
+
+<!--Device-SerialAttribute-stopBits?: StopBits--><!--Device-SerialAttribute-stopBits?: StopBits-End-->
 
 **系统能力：** SystemCapability.USB.USBManager.Serial

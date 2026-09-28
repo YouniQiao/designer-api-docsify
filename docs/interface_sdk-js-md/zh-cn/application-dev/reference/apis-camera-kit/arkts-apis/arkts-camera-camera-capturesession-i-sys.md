@@ -16,6 +16,8 @@ interface CaptureSession
 
 **替代接口：** [VideoSession](arkts-camera-camera-videosession-i.md)
 
+<!--Device-camera-interface CaptureSession--><!--Device-camera-interface CaptureSession-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
@@ -37,6 +39,8 @@ Obtains the level of the beauty type in use.
 **废弃版本：** 11
 
 **替代接口：** [getBeauty](arkts-camera-camera-beauty-i-sys.md#getbeauty)
+
+<!--Device-CaptureSession-getBeauty(type: BeautyType): number--><!--Device-CaptureSession-getBeauty(type: BeautyType): number-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -90,15 +94,17 @@ Obtains the levels that can be set a beauty type. The beauty levels vary accordi
 | Input Parameter | Example Return Value | Return Value Description |  
 | ----------------| ---- | ---------|  
 | AUTO | [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] |Beauty levels supported when **type** is set to **AUTO**. The value **0** means that beauty mode is disabled, and other positive values mean the corresponding automatic beauty levels. |
-| [SKIN_SMOOTH](arkts-camera-camera-beautytype-e-sys.md) | [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] | Beauty levels supported when **type** is set to **SKIN_SMOOTH**. The value **0** means that the skin smoothing feature is disabled, and other positive values mean the corresponding skin smoothing levels. |
-| [FACE_SLENDER](arkts-camera-camera-beautytype-e-sys.md) | [0, 1, 2, 3, 4, 5] | Beauty levels supported when **type** is set to **FACE_SLENDER**. The value **0** means that the face slimming feature is disabled, and other positive values mean the corresponding face slimming levels. |
-| [SKIN_TONE](arkts-camera-camera-beautytype-e-sys.md) | [-1, 16242611] | Beauty levels supported when **type** is set to **SKIN_TONE**. The value **-1** means that the skin tone perfection feature is disabled. Other non-negative values mean the skin tone perfection levels represented by RGB,<br> for example, 16242611, which is 0xF7D7B3 in hexadecimal format, where F7, D7, and B3 represent the values of the R channel, G channel, and B channel, respectively. |
+| SKIN_SMOOTH | [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] | Beauty levels supported when **type** is set to **SKIN_SMOOTH**. The value **0** means that the skin smoothing feature is disabled, and other positive values mean the corresponding skin smoothing levels. |
+| FACE_SLENDER | [0, 1, 2, 3, 4, 5] | Beauty levels supported when **type** is set to **FACE_SLENDER**. The value **0** means that the face slimming feature is disabled, and other positive values mean the corresponding face slimming levels. |
+| SKIN_TONE | [-1, 16242611] | Beauty levels supported when **type** is set to **SKIN_TONE**. The value **-1** means that the skin tone perfection feature is disabled. Other non-negative values mean the skin tone perfection levels represented by RGB,<br> for example, 16242611, which is 0xF7D7B3 in hexadecimal format, where F7, D7, and B3 represent the values of the R channel, G channel, and B channel, respectively. |
 
 **起始版本：** 10
 
 **废弃版本：** 11
 
 **替代接口：** [getSupportedBeautyRange](arkts-camera-camera-beautyquery-i-sys.md#getsupportedbeautyrange)
+
+<!--Device-CaptureSession-getSupportedBeautyRange(type: BeautyType): Array<number>--><!--Device-CaptureSession-getSupportedBeautyRange(type: BeautyType): Array<number>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -149,6 +155,8 @@ Obtains the supported beauty types.
 
 **替代接口：** [getSupportedBeautyTypes](arkts-camera-camera-beautyquery-i-sys.md#getsupportedbeautytypes)
 
+<!--Device-CaptureSession-getSupportedBeautyTypes(): Array<BeautyType>--><!--Device-CaptureSession-getSupportedBeautyTypes(): Array<BeautyType>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -187,6 +195,8 @@ Sets a beauty type and its level. Beauty mode is turned off only when all the [b
 **废弃版本：** 11
 
 **替代接口：** [setBeauty](arkts-camera-camera-beauty-i-sys.md#setbeauty)
+
+<!--Device-CaptureSession-setBeauty(type: BeautyType, value: number): void--><!--Device-CaptureSession-setBeauty(type: BeautyType, value: number): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

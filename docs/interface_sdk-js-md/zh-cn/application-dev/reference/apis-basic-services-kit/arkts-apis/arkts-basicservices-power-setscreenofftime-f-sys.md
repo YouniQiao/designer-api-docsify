@@ -20,6 +20,8 @@ function setScreenOffTime(timeout: number): void
 - API版本19+：ohos.permission.POWER_MANAGER
 - API版本12-18：N/A
 
+<!--Device-power-function setScreenOffTime(timeout: long): void--><!--Device-power-function setScreenOffTime(timeout: long): void-End-->
+
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 
 **系统接口：** 此接口为系统接口。

@@ -10,6 +10,8 @@ declare class DotIndicator extends Indicator<DotIndicator>
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare class DotIndicator extends Indicator<DotIndicator>--><!--Device-unnamed-declare class DotIndicator extends Indicator<DotIndicator>-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## color
@@ -27,6 +29,8 @@ Swiper组件圆点导航指示器的颜色。
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DotIndicator-color(value: ResourceColor): DotIndicator--><!--Device-DotIndicator-color(value: ResourceColor): DotIndicator-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,6 +68,8 @@ DotIndicator的构造函数。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-DotIndicator-constructor()--><!--Device-DotIndicator-constructor()-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## indicatorIcon
@@ -81,6 +87,8 @@ indicatorIcon(iconList: Array<IndicatorIconInfo>): DotIndicator
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DotIndicator-indicatorIcon(iconList: Array<IndicatorIconInfo>): DotIndicator--><!--Device-DotIndicator-indicatorIcon(iconList: Array<IndicatorIconInfo>): DotIndicator-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -112,6 +120,8 @@ Swiper组件圆点导航指示器的高。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-DotIndicator-itemHeight(value: Length): DotIndicator--><!--Device-DotIndicator-itemHeight(value: Length): DotIndicator-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -141,6 +151,8 @@ Swiper组件圆点导航指示器的宽。
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DotIndicator-itemWidth(value: Length): DotIndicator--><!--Device-DotIndicator-itemWidth(value: Length): DotIndicator-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -172,6 +184,8 @@ mask(value: boolean): DotIndicator
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-DotIndicator-mask(value: boolean): DotIndicator--><!--Device-DotIndicator-mask(value: boolean): DotIndicator-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -199,6 +213,8 @@ maxDisplayCount(maxDisplayCount: number): DotIndicator
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-DotIndicator-maxDisplayCount(maxDisplayCount: number): DotIndicator--><!--Device-DotIndicator-maxDisplayCount(maxDisplayCount: number): DotIndicator-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -230,6 +246,8 @@ selectedColor(value: ResourceColor): DotIndicator
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-DotIndicator-selectedColor(value: ResourceColor): DotIndicator--><!--Device-DotIndicator-selectedColor(value: ResourceColor): DotIndicator-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -259,6 +277,8 @@ selectedItemHeight(value: Length): DotIndicator
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DotIndicator-selectedItemHeight(value: Length): DotIndicator--><!--Device-DotIndicator-selectedItemHeight(value: Length): DotIndicator-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -290,6 +310,8 @@ selectedItemWidth(value: Length): DotIndicator
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-DotIndicator-selectedItemWidth(value: Length): DotIndicator--><!--Device-DotIndicator-selectedItemWidth(value: Length): DotIndicator-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -319,6 +341,8 @@ space(space: LengthMetrics): DotIndicator
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本19开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DotIndicator-space(space: LengthMetrics): DotIndicator--><!--Device-DotIndicator-space(space: LengthMetrics): DotIndicator-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

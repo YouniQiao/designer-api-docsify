@@ -24,6 +24,8 @@ function notifySaveAsResult(parameter: AbilityResult, requestCode: number, callb
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-abilityManager-function notifySaveAsResult(parameter: AbilityResult, requestCode: int, callback: AsyncCallback<void>): void--><!--Device-abilityManager-function notifySaveAsResult(parameter: AbilityResult, requestCode: int, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +63,8 @@ function notifySaveAsResult(parameter: AbilityResult, requestCode: number): Prom
 **废弃版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-abilityManager-function notifySaveAsResult(parameter: AbilityResult, requestCode: int): Promise<void>--><!--Device-abilityManager-function notifySaveAsResult(parameter: AbilityResult, requestCode: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

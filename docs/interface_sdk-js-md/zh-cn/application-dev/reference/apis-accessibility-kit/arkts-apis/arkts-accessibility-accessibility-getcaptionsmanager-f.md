@@ -19,6 +19,8 @@ function getCaptionsManager(): CaptionsManager
 
 **废弃版本：** 12
 
+<!--Device-accessibility-function getCaptionsManager(): CaptionsManager--><!--Device-accessibility-function getCaptionsManager(): CaptionsManager-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Hearing
 
 **返回值：**

@@ -22,6 +22,8 @@ export function removePreferredLanguage(index: number): boolean
 
 **需要权限：** ohos.permission.UPDATE_CONFIGURATION
 
+<!--Device-i18n-export function removePreferredLanguage(index: int): boolean--><!--Device-i18n-export function removePreferredLanguage(index: int): boolean-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 **参数：**

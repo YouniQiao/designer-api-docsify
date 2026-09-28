@@ -8,6 +8,8 @@ interface SystemMemInfo
 
 **起始版本：** 12
 
+<!--Device-hidebug-interface SystemMemInfo--><!--Device-hidebug-interface SystemMemInfo-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 ## 导入模块
@@ -28,6 +30,8 @@ availableMem: bigint
 
 **起始版本：** 12
 
+<!--Device-SystemMemInfo-availableMem: bigint--><!--Device-SystemMemInfo-availableMem: bigint-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 ## freeMem
@@ -42,6 +46,8 @@ freeMem: bigint
 
 **起始版本：** 12
 
+<!--Device-SystemMemInfo-freeMem: bigint--><!--Device-SystemMemInfo-freeMem: bigint-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 ## totalMem
@@ -55,5 +61,7 @@ totalMem: bigint
 **类型：** bigint
 
 **起始版本：** 12
+
+<!--Device-SystemMemInfo-totalMem: bigint--><!--Device-SystemMemInfo-totalMem: bigint-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug

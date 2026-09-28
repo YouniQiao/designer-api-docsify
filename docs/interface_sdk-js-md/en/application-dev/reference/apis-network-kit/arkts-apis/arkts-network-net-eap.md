@@ -4,6 +4,8 @@ The **eap** module provides the extensible authentication mechanism to enable th
 
 **Since:** 20
 
+<!--Device-unnamed-declare namespace eap--><!--Device-unnamed-declare namespace eap-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 ## Modules to Import

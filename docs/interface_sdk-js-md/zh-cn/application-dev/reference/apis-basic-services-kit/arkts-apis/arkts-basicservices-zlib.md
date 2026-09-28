@@ -4,6 +4,8 @@
 
 **起始版本：** 7
 
+<!--Device-unnamed-declare namespace zlib--><!--Device-unnamed-declare namespace zlib-End-->
+
 **系统能力：** SystemCapability.BundleManager.Zlib
 
 ## 导入模块

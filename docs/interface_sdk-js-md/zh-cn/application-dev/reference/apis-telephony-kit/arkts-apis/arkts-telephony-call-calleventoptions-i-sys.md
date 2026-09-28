@@ -8,6 +8,8 @@ export interface CallEventOptions
 
 **起始版本：** 8
 
+<!--Device-call-export interface CallEventOptions--><!--Device-call-export interface CallEventOptions-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -29,6 +31,8 @@ eventId: CallAbilityEventId
 **类型：** [CallAbilityEventId](arkts-telephony-call-callabilityeventid-e-sys.md)
 
 **起始版本：** 8
+
+<!--Device-CallEventOptions-eventId: CallAbilityEventId--><!--Device-CallEventOptions-eventId: CallAbilityEventId-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 

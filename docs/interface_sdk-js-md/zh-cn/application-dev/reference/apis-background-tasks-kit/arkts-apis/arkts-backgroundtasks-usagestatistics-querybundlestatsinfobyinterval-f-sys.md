@@ -23,6 +23,8 @@ function queryBundleStatsInfoByInterval(
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-usageStatistics-function queryBundleStatsInfoByInterval(    byInterval: IntervalType,    begin: long,    end: long,    callback: AsyncCallback<Array<BundleStatsInfo>>  ): void--><!--Device-usageStatistics-function queryBundleStatsInfoByInterval(    byInterval: IntervalType,    begin: long,    end: long,    callback: AsyncCallback<Array<BundleStatsInfo>>  ): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **系统接口：** 此接口为系统接口。
@@ -88,6 +90,8 @@ function queryBundleStatsInfoByInterval(
 **起始版本：** 9
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
+
+<!--Device-usageStatistics-function queryBundleStatsInfoByInterval(    byInterval: IntervalType,    begin: long,    end: long  ): Promise<Array<BundleStatsInfo>>--><!--Device-usageStatistics-function queryBundleStatsInfoByInterval(    byInterval: IntervalType,    begin: long,    end: long  ): Promise<Array<BundleStatsInfo>>-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 

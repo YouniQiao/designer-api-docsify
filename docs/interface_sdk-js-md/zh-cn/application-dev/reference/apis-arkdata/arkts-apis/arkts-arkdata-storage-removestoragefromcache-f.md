@@ -19,6 +19,8 @@ function removeStorageFromCache(path: string, callback: AsyncCallback<void>): vo
 
 **替代接口：** removePreferencesFromCache
 
+<!--Device-storage-function removeStorageFromCache(path: string, callback: AsyncCallback<void>): void--><!--Device-storage-function removeStorageFromCache(path: string, callback: AsyncCallback<void>): void-End-->
+
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
@@ -42,6 +44,8 @@ function removeStorageFromCache(path: string): Promise<void>
 **废弃版本：** 9
 
 **替代接口：** removePreferencesFromCache
+
+<!--Device-storage-function removeStorageFromCache(path: string): Promise<void>--><!--Device-storage-function removeStorageFromCache(path: string): Promise<void>-End-->
 
 **参数：**
 

@@ -10,6 +10,8 @@ GATT客户端类，提供了和服务端进行连接和数据传输等操作方�
 
 **起始版本：** 10
 
+<!--Device-ble-interface GattClientDevice--><!--Device-ble-interface GattClientDevice-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -34,6 +36,8 @@ client端向指定的server端特征值写入数据，适用于需要获取serve
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-GattClientDevice-writeCharacteristicValueWithContext(      characteristic: BLECharacteristic, writeType: GattWriteType): Promise<GattRspContext>--><!--Device-GattClientDevice-writeCharacteristicValueWithContext(      characteristic: BLECharacteristic, writeType: GattWriteType): Promise<GattRspContext>-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

@@ -8,6 +8,8 @@ class ExactTimerConfig
 
 **起始版本：** 26.0.1
 
+<!--Device-systemManager-class ExactTimerConfig--><!--Device-systemManager-class ExactTimerConfig-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## 导入模块
@@ -28,6 +30,8 @@ callback(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExactTimerConfig-callback(): void--><!--Device-ExactTimerConfig-callback(): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## interval
@@ -43,6 +47,8 @@ interval: number
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExactTimerConfig-interval: number--><!--Device-ExactTimerConfig-interval: number-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -60,6 +66,8 @@ name: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExactTimerConfig-name: string--><!--Device-ExactTimerConfig-name: string-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## repeat
@@ -75,5 +83,7 @@ repeat: boolean
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExactTimerConfig-repeat: boolean--><!--Device-ExactTimerConfig-repeat: boolean-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager

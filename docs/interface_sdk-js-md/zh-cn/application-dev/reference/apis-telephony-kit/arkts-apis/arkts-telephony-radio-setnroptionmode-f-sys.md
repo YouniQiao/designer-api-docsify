@@ -18,6 +18,8 @@ Set the NR option mode.
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-radio-function setNROptionMode(slotId: int, mode: NROptionMode, callback: AsyncCallback<void>): void--><!--Device-radio-function setNROptionMode(slotId: int, mode: NROptionMode, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -72,6 +74,8 @@ Set the NR option mode.
 **起始版本：** 10
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
+
+<!--Device-radio-function setNROptionMode(slotId: int, mode: NROptionMode): Promise<void>--><!--Device-radio-function setNROptionMode(slotId: int, mode: NROptionMode): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

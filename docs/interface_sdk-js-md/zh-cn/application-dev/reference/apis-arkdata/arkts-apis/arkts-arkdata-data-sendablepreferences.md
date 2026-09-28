@@ -14,6 +14,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare namespace sendablePreferences--><!--Device-unnamed-declare namespace sendablePreferences-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
 ## 导入模块

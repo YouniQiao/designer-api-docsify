@@ -4,6 +4,8 @@ The **accessibility.config** module provides APIs for configuring system accessi
 
 **Since:** 9
 
+<!--Device-unnamed-declare namespace config--><!--Device-unnamed-declare namespace config-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.

@@ -8,6 +8,8 @@ export enum CallRestrictionMode
 
 **起始版本：** 8
 
+<!--Device-call-export enum CallRestrictionMode--><!--Device-call-export enum CallRestrictionMode-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -22,6 +24,8 @@ RESTRICTION_MODE_DEACTIVATION = 0
 
 **起始版本：** 8
 
+<!--Device-CallRestrictionMode-RESTRICTION_MODE_DEACTIVATION = 0--><!--Device-CallRestrictionMode-RESTRICTION_MODE_DEACTIVATION = 0-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -35,6 +39,8 @@ RESTRICTION_MODE_ACTIVATION = 1
 限制模式激活。
 
 **起始版本：** 8
+
+<!--Device-CallRestrictionMode-RESTRICTION_MODE_ACTIVATION = 1--><!--Device-CallRestrictionMode-RESTRICTION_MODE_ACTIVATION = 1-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 

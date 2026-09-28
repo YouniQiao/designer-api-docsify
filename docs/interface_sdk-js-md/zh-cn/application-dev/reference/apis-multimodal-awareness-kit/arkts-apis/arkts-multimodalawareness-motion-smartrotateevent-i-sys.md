@@ -8,6 +8,8 @@ interface SmartRotateEvent
 
 **起始版本：** 26.0.0
 
+<!--Device-motion-interface SmartRotateEvent--><!--Device-motion-interface SmartRotateEvent-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.Motion
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ logicalOrientation?: LogicalOrientation
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SmartRotateEvent-logicalOrientation?: LogicalOrientation--><!--Device-SmartRotateEvent-logicalOrientation?: LogicalOrientation-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.Motion
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ physicalOrientation: PhysicalOrientation
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SmartRotateEvent-physicalOrientation: PhysicalOrientation--><!--Device-SmartRotateEvent-physicalOrientation: PhysicalOrientation-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.Motion
 

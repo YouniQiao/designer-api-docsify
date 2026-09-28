@@ -8,6 +8,8 @@ interface PackingOptionsForTiff
 
 **起始版本：** 26.0.0
 
+<!--Device-image-interface PackingOptionsForTiff--><!--Device-image-interface PackingOptionsForTiff-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
 ## 导入模块
@@ -33,6 +35,8 @@ compression?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PackingOptionsForTiff-compression?: int--><!--Device-PackingOptionsForTiff-compression?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
 ## orientation
@@ -48,6 +52,8 @@ orientation?: Orientation
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PackingOptionsForTiff-orientation?: Orientation--><!--Device-PackingOptionsForTiff-orientation?: Orientation-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
@@ -65,6 +71,8 @@ resolutionUnit?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PackingOptionsForTiff-resolutionUnit?: int--><!--Device-PackingOptionsForTiff-resolutionUnit?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
 ## xResolution
@@ -81,6 +89,8 @@ xResolution?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PackingOptionsForTiff-xResolution?: double--><!--Device-PackingOptionsForTiff-xResolution?: double-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
 ## yResolution
@@ -96,5 +106,7 @@ yResolution?: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PackingOptionsForTiff-yResolution?: double--><!--Device-PackingOptionsForTiff-yResolution?: double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker

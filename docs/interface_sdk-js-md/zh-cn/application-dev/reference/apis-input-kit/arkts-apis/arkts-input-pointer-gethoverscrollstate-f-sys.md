@@ -16,6 +16,8 @@ function getHoverScrollState(callback: AsyncCallback<boolean>): void
 
 **起始版本：** 10
 
+<!--Device-pointer-function getHoverScrollState(callback: AsyncCallback<boolean>): void--><!--Device-pointer-function getHoverScrollState(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 **系统接口：** 此接口为系统接口。
@@ -76,6 +78,8 @@ function getHoverScrollState(): Promise<boolean>
 获取当前鼠标悬停滚动开关状态，使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-pointer-function getHoverScrollState(): Promise<boolean>--><!--Device-pointer-function getHoverScrollState(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 

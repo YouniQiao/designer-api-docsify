@@ -8,6 +8,8 @@ export interface TagInfo
 
 **起始版本：** 7
 
+<!--Device-tag-export interface TagInfo--><!--Device-tag-export interface TagInfo-End-->
+
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 ## 导入模块
@@ -30,7 +32,9 @@ technology: number[]
 
 **需要权限：** ohos.permission.NFC_TAG
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TagInfo-technology: int[]--><!--Device-TagInfo-technology: int[]-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -48,7 +52,9 @@ uid: number[]
 
 **需要权限：** ohos.permission.NFC_TAG
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TagInfo-uid: int[]--><!--Device-TagInfo-uid: int[]-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -71,5 +77,7 @@ supportedProfiles: number[]
 **替代接口：** [technology](#technology)
 
 **需要权限：** ohos.permission.NFC_TAG
+
+<!--Device-TagInfo-supportedProfiles: number[]--><!--Device-TagInfo-supportedProfiles: number[]-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag

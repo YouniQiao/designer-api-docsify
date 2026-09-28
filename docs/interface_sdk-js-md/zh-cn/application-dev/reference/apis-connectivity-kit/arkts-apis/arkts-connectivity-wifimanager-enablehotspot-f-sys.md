@@ -18,6 +18,8 @@ function enableHotspot(): void
 
 **需要权限：** ohos.permission.MANAGE_WIFI_HOTSPOT
 
+<!--Device-wifiManager-function enableHotspot(): void--><!--Device-wifiManager-function enableHotspot(): void-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
 **系统接口：** 此接口为系统接口。

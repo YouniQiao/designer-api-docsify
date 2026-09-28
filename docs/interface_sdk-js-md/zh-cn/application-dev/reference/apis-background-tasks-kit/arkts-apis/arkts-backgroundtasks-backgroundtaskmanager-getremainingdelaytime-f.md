@@ -16,6 +16,8 @@ function getRemainingDelayTime(requestId: number, callback: AsyncCallback<number
 
 **起始版本：** 9
 
+<!--Device-backgroundTaskManager-function getRemainingDelayTime(requestId: int, callback: AsyncCallback<int>): void--><!--Device-backgroundTaskManager-function getRemainingDelayTime(requestId: int, callback: AsyncCallback<int>): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
 **参数：**
@@ -66,6 +68,8 @@ function getRemainingDelayTime(requestId: number): Promise<number>
 获取本次短时任务的剩余时间，使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-backgroundTaskManager-function getRemainingDelayTime(requestId: int): Promise<int>--><!--Device-backgroundTaskManager-function getRemainingDelayTime(requestId: int): Promise<int>-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 

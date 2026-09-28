@@ -18,6 +18,8 @@ function setDefaultSmdpAddress(slotId: number, address: string): Promise<ResultC
 
 **需要权限：** ohos.permission.SET_TELEPHONY_ESIM_STATE
 
+<!--Device-eSIM-function setDefaultSmdpAddress(slotId: int, address: string): Promise<ResultCode>--><!--Device-eSIM-function setDefaultSmdpAddress(slotId: int, address: string): Promise<ResultCode>-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。

@@ -18,6 +18,8 @@ function isInEmergencyCall(callback: AsyncCallback<boolean>): void
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-call-function isInEmergencyCall(callback: AsyncCallback<boolean>): void--><!--Device-call-function isInEmergencyCall(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -68,6 +70,8 @@ function isInEmergencyCall(): Promise<boolean>
 **起始版本：** 7
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
+
+<!--Device-call-function isInEmergencyCall(): Promise<boolean>--><!--Device-call-function isInEmergencyCall(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 

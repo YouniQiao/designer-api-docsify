@@ -20,6 +20,8 @@ export class FrameNode
 
 **Since:** 11
 
+<!--Device-unnamed-export class FrameNode--><!--Device-unnamed-export class FrameNode-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## addComponentContent
@@ -35,6 +37,8 @@ Adds component content. The current node must be modifiable, which means the ret
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-FrameNode-addComponentContent<T>(content: ComponentContent<T> | ReactiveComponentContent<T>): void--><!--Device-FrameNode-addComponentContent<T>(content: ComponentContent<T> | ReactiveComponentContent<T>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,6 +68,8 @@ Adds the polymorphic style states supported by the component.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-FrameNode-addSupportedUIStates(uiStates: number, statesChangeHandler: UIStatesChangeHandler, excludeInner?: boolean): void--><!--Device-FrameNode-addSupportedUIStates(uiStates: number, statesChangeHandler: UIStatesChangeHandler, excludeInner?: boolean): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -91,6 +97,8 @@ Adopts the target node as an affiliated node. If the current FrameNode is not mo
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-FrameNode-adoptChild(child: FrameNode): void--><!--Device-FrameNode-adoptChild(child: FrameNode): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -126,6 +134,8 @@ Appends a child node to the end of this FrameNode. If this FrameNode is not modi
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-FrameNode-appendChild(node: FrameNode): void--><!--Device-FrameNode-appendChild(node: FrameNode): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -159,6 +169,8 @@ Cancels all animations for specified properties on the FrameNode. This API execu
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-FrameNode-cancelAnimations(properties: AnimationPropertyType[]): boolean--><!--Device-FrameNode-cancelAnimations(properties: AnimationPropertyType[]): boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -191,6 +203,8 @@ Clears all child nodes of this FrameNode. If this FrameNode is not modifiable, a
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-FrameNode-clearChildren(): void--><!--Device-FrameNode-clearChildren(): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Error codes:**
@@ -217,6 +231,8 @@ A constructor used to create a FrameNode.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-FrameNode-constructor(uiContext: UIContext)--><!--Device-FrameNode-constructor(uiContext: UIContext)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -238,6 +254,8 @@ Converts a coordinate point from this node's coordinate system to the target nod
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-FrameNode-convertPosition(position: Position, targetNode: FrameNode): Position--><!--Device-FrameNode-convertPosition(position: Position, targetNode: FrameNode): Position-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -345,6 +363,8 @@ Converts the coordinates of a point from the coordinate system of the window whe
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-FrameNode-convertPositionFromWindow(positionByWindow: Position): Position--><!--Device-FrameNode-convertPositionFromWindow(positionByWindow: Position): Position-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -383,6 +403,8 @@ Converts the coordinates of a point from the coordinate system of the current no
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-FrameNode-convertPositionToWindow(positionByLocal: Position): Position--><!--Device-FrameNode-convertPositionToWindow(positionByLocal: Position): Position-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -423,6 +445,8 @@ Creates a property animation for the FrameNode.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-FrameNode-createAnimation(property: AnimationPropertyType, startValue: Optional<number[]>, endValue: number[], param: AnimateParam): boolean--><!--Device-FrameNode-createAnimation(property: AnimationPropertyType, startValue: Optional<number[]>, endValue: number[], param: AnimateParam): boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -457,6 +481,8 @@ Creates a specified number of FrameNodes in batches and returns a FrameNode arra
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-FrameNode-static createFrameNodes(uiContext: UIContext, count: number): FrameNode[]--><!--Device-FrameNode-static createFrameNodes(uiContext: UIContext, count: number): FrameNode[]-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -528,6 +554,8 @@ Immediately releases the reference to the underlying FrameNode entity.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-FrameNode-dispose(): void--><!--Device-FrameNode-dispose(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -632,6 +660,8 @@ Traverses down the tree and recursively releases the subtree with this node as t
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-FrameNode-disposeTree(): void--><!--Device-FrameNode-disposeTree(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -828,6 +858,8 @@ Obtains the child node in the specified position of this node.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-FrameNode-getChild(index: number): FrameNode | null--><!--Device-FrameNode-getChild(index: number): FrameNode | null-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -862,6 +894,8 @@ Obtains a child node at a specified index from this FrameNode, with optional sup
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-FrameNode-getChild(index: number, expandMode?: ExpandMode): FrameNode | null--><!--Device-FrameNode-getChild(index: number, expandMode?: ExpandMode): FrameNode | null-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -895,6 +929,8 @@ Obtains the number of child nodes of this FrameNode.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-FrameNode-getChildrenCount(): number--><!--Device-FrameNode-getChildrenCount(): number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -922,6 +958,8 @@ Obtains the number of child nodes of this FrameNode based on the specified count
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-FrameNode-getChildrenCount(countMode?: ChildrenCountMode): int--><!--Device-FrameNode-getChildrenCount(countMode?: ChildrenCountMode): int-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1176,6 +1214,8 @@ Obtains the cross-language access options for this FrameNode. For example, for n
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-FrameNode-getCrossLanguageOptions(): CrossLanguageOptions--><!--Device-FrameNode-getCrossLanguageOptions(): CrossLanguageOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -1201,6 +1241,8 @@ Obtains the component's custom property by its name.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-FrameNode-getCustomProperty(name: string): Object | undefined--><!--Device-FrameNode-getCustomProperty(name: string): Object | undefined-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1234,6 +1276,8 @@ Obtains the first child node of this FrameNode.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-FrameNode-getFirstChild(): FrameNode | null--><!--Device-FrameNode-getFirstChild(): FrameNode | null-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -1259,6 +1303,8 @@ Obtains the sequence number of the first child node of this node that is in the 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-FrameNode-getFirstChildIndexWithoutExpand(): number--><!--Device-FrameNode-getFirstChildIndexWithoutExpand(): number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1286,13 +1332,15 @@ Searches for all child nodes layer by layer from the current node (which is used
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-FrameNode-getFrameNodeById(id: string): FrameNode | null--><!--Device-FrameNode-getFrameNodeById(id: string): FrameNode | null-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | ID of the child node to be queried, which is the same as the [component ID](../arkts-components/arkts-arkui-common-comp.md#common). |
+| id | string | Yes | ID of the child node to be queried, which is the same as the [component ID](../arkts-components/arkts-arkui-common-comp.md). |
 
 **Return value:**
 
@@ -1368,6 +1416,8 @@ Searches for and returns the child node with the specified unique ID (which can 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-FrameNode-getFrameNodeByUniqueId(id: int): FrameNode | null--><!--Device-FrameNode-getFrameNodeByUniqueId(id: int): FrameNode | null-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1453,6 +1503,8 @@ Obtains the position offset of this FrameNode relative to the global display, in
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-FrameNode-getGlobalPositionOnDisplay(): Position--><!--Device-FrameNode-getGlobalPositionOnDisplay(): Position-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -1471,7 +1523,7 @@ See Example of Node Operations.
 getId(): string
 ```
 
-Obtains the node ID set by the user, which is the same as the value of the [component ID](../arkts-components/arkts-arkui-common-comp.md#common).
+Obtains the node ID set by the user, which is the same as the value of the [component ID](../arkts-components/arkts-arkui-common-comp.md).
 
 **Since:** 12
 
@@ -1479,13 +1531,15 @@ Obtains the node ID set by the user, which is the same as the value of the [comp
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-FrameNode-getId(): string--><!--Device-FrameNode-getId(): string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Node ID set by the user, which is the same as the value of the [component ID](../arkts-components/arkts-arkui-common-comp.md#common). |
+| string | Node ID set by the user, which is the same as the value of the [component ID](../arkts-components/arkts-arkui-common-comp.md). |
 
 **Examples**
 
@@ -1509,6 +1563,8 @@ Obtains the structure information of the node, which is consistent with what is 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-FrameNode-getInspectorInfo(): Object--><!--Device-FrameNode-getInspectorInfo(): Object-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1535,6 +1591,8 @@ Obtains the event binding information for the target node. Returns **undefined**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-FrameNode-getInteractionEventBindingInfo(eventType: EventQueryType): InteractionEventBindingInfo | undefined--><!--Device-FrameNode-getInteractionEventBindingInfo(eventType: EventQueryType): InteractionEventBindingInfo | undefined-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1568,6 +1626,8 @@ Obtains the sequence number of the last child node of this node that is in the m
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-FrameNode-getLastChildIndexWithoutExpand(): number--><!--Device-FrameNode-getLastChildIndexWithoutExpand(): number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -1593,6 +1653,8 @@ Obtains the position offset of this FrameNode relative to the parent component a
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-FrameNode-getLayoutPosition(): Position--><!--Device-FrameNode-getLayoutPosition(): Position-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1620,6 +1682,8 @@ Obtains the measured size of this FrameNode, in px.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-FrameNode-getMeasuredSize(): Size--><!--Device-FrameNode-getMeasuredSize(): Size-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -1645,6 +1709,8 @@ Obtains the next sibling node of this FrameNode.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-FrameNode-getNextSibling(): FrameNode | null--><!--Device-FrameNode-getNextSibling(): FrameNode | null-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1672,6 +1738,8 @@ Obtains the property value of the FrameNode.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-FrameNode-getNodePropertyValue(property: AnimationPropertyType): number[]--><!--Device-FrameNode-getNodePropertyValue(property: AnimationPropertyType): number[]-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1696,13 +1764,15 @@ See Example of Creating and Canceling an Animation.
 getNodeType(): string
 ```
 
-Obtains the type of the node. For built-in components, the node type corresponds to the component name. For example, the node type of the [Button](../arkts-components/arkts-arkui-button-comp.md#button) component is **Button**. For custom components that implement rendering, the node type is **__Common__**.
+Obtains the type of the node. For built-in components, the node type corresponds to the component name. For example, the node type of the [Button](../arkts-components/arkts-arkui-button-comp.md) component is **Button**. For custom components that implement rendering, the node type is **__Common__**.
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-FrameNode-getNodeType(): string--><!--Device-FrameNode-getNodeType(): string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1730,6 +1800,8 @@ Obtains the opacity of the node. The minimum value is 0, and the maximum value i
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-FrameNode-getOpacity(): number--><!--Device-FrameNode-getOpacity(): number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -1756,6 +1828,8 @@ Obtains the parent node of this FrameNode.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-FrameNode-getParent(): FrameNode | null--><!--Device-FrameNode-getParent(): FrameNode | null-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -1781,6 +1855,8 @@ Obtains the position offset of this FrameNode relative to the parent component, 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-FrameNode-getPositionToParent(): Position--><!--Device-FrameNode-getPositionToParent(): Position-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1868,6 +1944,8 @@ Obtains the position offset of this FrameNode relative to its parent component w
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-FrameNode-getPositionToParentWithTransform(): Position--><!--Device-FrameNode-getPositionToParentWithTransform(): Position-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -1953,6 +2031,8 @@ Obtains the position offset of this FrameNode relative to the screen, in vp.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-FrameNode-getPositionToScreen(): Position--><!--Device-FrameNode-getPositionToScreen(): Position-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2040,6 +2120,8 @@ Obtains the position offset of this FrameNode relative to the screen with drawin
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-FrameNode-getPositionToScreenWithTransform(): Position--><!--Device-FrameNode-getPositionToScreenWithTransform(): Position-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -2126,6 +2208,8 @@ Obtains the position offset of this FrameNode relative to the window, in vp.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-FrameNode-getPositionToWindow(): Position--><!--Device-FrameNode-getPositionToWindow(): Position-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -2210,6 +2294,8 @@ Obtains the position offset of this FrameNode relative to the window with drawin
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-FrameNode-getPositionToWindowWithTransform(): Position--><!--Device-FrameNode-getPositionToWindowWithTransform(): Position-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2296,6 +2382,8 @@ Obtains the previous sibling node of this FrameNode.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-FrameNode-getPreviousSibling(): FrameNode | null--><!--Device-FrameNode-getPreviousSibling(): FrameNode | null-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -2321,6 +2409,8 @@ Obtains the [RenderNode](arkts-arkui-rendernode-c.md) held by the FrameNode.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-FrameNode-getRenderNode(): RenderNode | null--><!--Device-FrameNode-getRenderNode(): RenderNode | null-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2380,6 +2470,8 @@ Obtains the unique identifier (**UniqueID**) assigned by the system to this node
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-FrameNode-getUniqueId(): number--><!--Device-FrameNode-getUniqueId(): number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -2405,6 +2497,8 @@ Obtains the border width set by the user.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-FrameNode-getUserConfigBorderWidth(): Edges<LengthMetrics>--><!--Device-FrameNode-getUserConfigBorderWidth(): Edges<LengthMetrics>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2432,6 +2526,8 @@ Obtains the margin set by the user.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-FrameNode-getUserConfigMargin(): Edges<LengthMetrics>--><!--Device-FrameNode-getUserConfigMargin(): Edges<LengthMetrics>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -2457,6 +2553,8 @@ Obtains the padding set by the user.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-FrameNode-getUserConfigPadding(): Edges<LengthMetrics>--><!--Device-FrameNode-getUserConfigPadding(): Edges<LengthMetrics>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2484,6 +2582,8 @@ Obtains the width and height set by the user.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-FrameNode-getUserConfigSize(): SizeT<LengthMetrics>--><!--Device-FrameNode-getUserConfigSize(): SizeT<LengthMetrics>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -2509,6 +2609,8 @@ Adds a new child node after the specified child node of this FrameNode. If the c
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-FrameNode-insertChildAfter(child: FrameNode, sibling: FrameNode | null): void--><!--Device-FrameNode-insertChildAfter(child: FrameNode, sibling: FrameNode | null): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2544,6 +2646,8 @@ Invalidates this FrameNode to trigger a re-rendering of the self-drawing content
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-FrameNode-invalidate(): void--><!--Device-FrameNode-invalidate(): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## invalidateAttributes
@@ -2563,6 +2667,8 @@ This API ensures rendering synchronization by triggering immediate property upda
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
+
+<!--Device-FrameNode-invalidateAttributes(): void--><!--Device-FrameNode-invalidateAttributes(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2684,6 +2790,8 @@ Obtains whether the node is mounted to the main node tree.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-FrameNode-isAttached(): boolean--><!--Device-FrameNode-isAttached(): boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -2709,6 +2817,8 @@ Obtains whether the node is clipped to the component area. After [dispose](#disp
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-FrameNode-isClipToFrame(): boolean--><!--Device-FrameNode-isClipToFrame(): boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2736,6 +2846,8 @@ Queries whether the current **FrameNode** object has been released from the refe
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-FrameNode-isDisposed(): boolean--><!--Device-FrameNode-isDisposed(): boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -2761,6 +2873,8 @@ Obtains whether the node is in render state. A node is considered to be in rende
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-FrameNode-isInRenderState(): boolean--><!--Device-FrameNode-isInRenderState(): boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2851,6 +2965,8 @@ Checks whether this FrameNode is modifiable.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-FrameNode-isModifiable(): boolean--><!--Device-FrameNode-isModifiable(): boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -2876,6 +2992,8 @@ Queries whether the node is mounted to the main node tree. Both this API and [is
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-FrameNode-isOnMainTree(): boolean--><!--Device-FrameNode-isOnMainTree(): boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -3426,6 +3544,8 @@ Returns a flag indicating whether the current FrameNode was obtained through dyn
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-FrameNode-isTransferred(): boolean--><!--Device-FrameNode-isTransferred(): boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -3451,6 +3571,8 @@ Obtains whether the node is visible.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-FrameNode-isVisible(): boolean--><!--Device-FrameNode-isVisible(): boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -3478,6 +3600,8 @@ Lays out this FrameNode, specifying the layout positions for the FrameNode and i
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-FrameNode-layout(position: Position): void--><!--Device-FrameNode-layout(position: Position): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -3503,6 +3627,8 @@ Measures this FrameNode and calculates its size based on the layout constraints 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-FrameNode-measure(constraint: LayoutConstraint): void--><!--Device-FrameNode-measure(constraint: LayoutConstraint): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -3531,8 +3657,8 @@ Moves this FrameNode to a specified position within the target FrameNode. If thi
 > other node types.
 > 
 > This API only supports [BuilderNode](arkts-arkui-buildernode-c.md) with root components of these types:
-> [Stack](../arkts-components/arkts-arkui-stack-comp.md#stack), [XComponent](../arkts-components/arkts-arkui-xcomponent-comp.md#xcomponent),
-> [EmbeddedComponent](../arkts-components/arkts-arkui-embeddedcomponent-comp.md#embedded_component). This API does not work for other
+> [Stack](../arkts-components/arkts-arkui-stack-comp.md), [XComponent](../arkts-components/arkts-arkui-xcomponent-comp.md),
+> [EmbeddedComponent](../arkts-components/arkts-arkui-embeddedcomponent-comp.md). This API does not work for other
 > component types.
 
 **Since:** 18
@@ -3540,6 +3666,8 @@ Moves this FrameNode to a specified position within the target FrameNode. If thi
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-FrameNode-moveTo(targetParent: FrameNode, index?: number): void--><!--Device-FrameNode-moveTo(targetParent: FrameNode, index?: number): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -3577,6 +3705,8 @@ Note: The Canvas provided in the [DrawContext](arkts-arkui-graphics-drawcontext-
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-FrameNode-onDraw?(context: DrawContext): void--><!--Device-FrameNode-onDraw?(context: DrawContext): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -3602,6 +3732,8 @@ Called when this FrameNode needs to determine its layout. This API provides cust
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-FrameNode-onLayout(position: Position): void--><!--Device-FrameNode-onLayout(position: Position): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -3629,6 +3761,8 @@ Called when this FrameNode needs to determine its size. This API provides custom
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-FrameNode-onMeasure(constraint: LayoutConstraint): void--><!--Device-FrameNode-onMeasure(constraint: LayoutConstraint): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -3655,6 +3789,8 @@ Triggers child component recycling in global reuse scenarios and fully releases 
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-FrameNode-recycle(): void--><!--Device-FrameNode-recycle(): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Examples**
@@ -3674,6 +3810,8 @@ Removes the adopted target affiliated node. If the current FrameNode is not modi
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-FrameNode-removeAdoptedChild(child: FrameNode): void--><!--Device-FrameNode-removeAdoptedChild(child: FrameNode): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -3709,6 +3847,8 @@ Deletes the specified child node from this FrameNode. If this FrameNode is not m
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-FrameNode-removeChild(node: FrameNode): void--><!--Device-FrameNode-removeChild(node: FrameNode): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -3741,6 +3881,8 @@ Removes the state processing registration from the component.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-FrameNode-removeSupportedUIStates(uiStates: number): void--><!--Device-FrameNode-removeSupportedUIStates(uiStates: number): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -3766,6 +3908,8 @@ Triggers child component reuse in global reuse scenarios to recycle FrameNode ba
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-FrameNode-reuse(): void--><!--Device-FrameNode-reuse(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -3801,6 +3945,8 @@ Sets the cross-language access options for this FrameNode. For example, for node
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-FrameNode-setCrossLanguageOptions(options: CrossLanguageOptions): void--><!--Device-FrameNode-setCrossLanguageOptions(options: CrossLanguageOptions): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -3833,6 +3979,8 @@ Sets the position of this FrameNode after layout. The default unit is px. It is 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-FrameNode-setLayoutPosition(position: Position): void--><!--Device-FrameNode-setLayoutPosition(position: Position): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -3858,6 +4006,8 @@ Sets the measured size of this FrameNode. The default unit is px. If the set wid
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-FrameNode-setMeasuredSize(size: Size): void--><!--Device-FrameNode-setMeasuredSize(size: Size): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -3885,6 +4035,8 @@ Marks this FrameNode as needing layout, so that it will be re-laid out in the ne
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-FrameNode-setNeedsLayout(): void--><!--Device-FrameNode-setNeedsLayout(): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Examples**
@@ -3897,14 +4049,14 @@ See Example of Customizing a Node.
 get commonAttribute(): CommonAttribute
 ```
 
-Obtains the **CommonAttribute** API associated with the FrameNode, which is used to configure [universal attributes](../arkts-components/arkts-arkui-common-comp.md#common) and [universal events](../arkts-components/arkts-arkui-common-comp.md#common).
+Obtains the **CommonAttribute** API associated with the FrameNode, which is used to configure [universal attributes](../arkts-components/arkts-arkui-common-comp.md) and [universal events](../arkts-components/arkts-arkui-common-comp.md).
 
 Note that only the attributes of a custom node can be modified.
 
 > **NOTE:** 
 > 
 > The visual representation of the FrameNode is similar to that of a
-> [Stack](../arkts-components/arkts-arkui-stack-comp.md#stack) container that is aligned to the top start edge.
+> [Stack](../arkts-components/arkts-arkui-stack-comp.md) container that is aligned to the top start edge.
 > 
 > For details about the supported attributes, see
 > [attributeModifier Support for Attributes and Events](../../../ui/arkts-user-defined-extension-attributeModifier.md#attributemodifier-support-for-attributes-and-events).
@@ -3916,6 +4068,8 @@ Note that only the attributes of a custom node can be modified.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-FrameNode-get commonAttribute(): CommonAttribute--><!--Device-FrameNode-get commonAttribute(): CommonAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -3941,6 +4095,8 @@ In scenarios involving **LazyForEach**, where nodes may be destroyed and reconst
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-FrameNode-get commonEvent(): UICommonEvent--><!--Device-FrameNode-get commonEvent(): UICommonEvent-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Examples**
@@ -3953,7 +4109,7 @@ See Basic Event Example and Example of Using Basic Events in the LazyForEach Sce
 get gestureEvent(): UIGestureEvent
 ```
 
-Obtains the **UIGestureEvent** object held by this FrameNode, which is used to set gesture events bound to the component. Gesture events set using the **gestureEvent** API will not override gestures bound using the [gesture binding API](../arkts-components/arkts-arkui-common-comp.md#common). If both APIs are used to set gestures, the gesture binding API takes precedence.
+Obtains the **UIGestureEvent** object held by this FrameNode, which is used to set gesture events bound to the component. Gesture events set using the **gestureEvent** API will not override gestures bound using the [gesture binding API](../arkts-components/arkts-arkui-common-comp.md). If both APIs are used to set gestures, the gesture binding API takes precedence.
 
 In LazyForEach scenarios, due to node destruction and reconstruction, gesture event callbacks must be re-set for reconstructed nodes to ensure that the listening events respond properly.
 
@@ -3964,6 +4120,8 @@ In LazyForEach scenarios, due to node destruction and reconstruction, gesture ev
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-FrameNode-get gestureEvent(): UIGestureEvent--><!--Device-FrameNode-get gestureEvent(): UIGestureEvent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

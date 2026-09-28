@@ -8,6 +8,8 @@ interface Location
 
 **起始版本：** 10
 
+<!--Device-camera-interface Location--><!--Device-camera-interface Location-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
@@ -28,7 +30,9 @@ altitude: number
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-Location-altitude: double--><!--Device-Location-altitude: double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -44,7 +48,9 @@ latitude: number
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-Location-latitude: double--><!--Device-Location-latitude: double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -60,6 +66,8 @@ longitude: number
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-Location-longitude: double--><!--Device-Location-longitude: double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core

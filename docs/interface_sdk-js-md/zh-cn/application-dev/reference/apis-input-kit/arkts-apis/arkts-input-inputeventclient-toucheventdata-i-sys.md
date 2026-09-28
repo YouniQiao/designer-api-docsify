@@ -8,6 +8,8 @@ interface TouchEventData
 
 **起始版本：** 11
 
+<!--Device-inputEventClient-interface TouchEventData--><!--Device-inputEventClient-interface TouchEventData-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ touchEvent: TouchEvent
 
 **起始版本：** 11
 
+<!--Device-TouchEventData-touchEvent: TouchEvent--><!--Device-TouchEventData-touchEvent: TouchEvent-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ useGlobalCoordinate?: boolean
 **类型：** boolean
 
 **起始版本：** 20
+
+<!--Device-TouchEventData-useGlobalCoordinate?: boolean--><!--Device-TouchEventData-useGlobalCoordinate?: boolean-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 

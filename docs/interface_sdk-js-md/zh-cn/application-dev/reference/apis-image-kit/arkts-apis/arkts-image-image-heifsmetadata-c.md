@@ -12,6 +12,8 @@ HEIF序列图像元数据类，用于存储图像的元数据。
 
 **起始版本：** 23
 
+<!--Device-image-class HeifsMetadata implements Metadata--><!--Device-image-class HeifsMetadata implements Metadata-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## 导入模块
@@ -31,6 +33,8 @@ clone(): Promise<HeifsMetadata>
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HeifsMetadata-clone(): Promise<HeifsMetadata>--><!--Device-HeifsMetadata-clone(): Promise<HeifsMetadata>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -82,6 +86,8 @@ static createInstance(): HeifsMetadata
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HeifsMetadata-static createInstance(): HeifsMetadata--><!--Device-HeifsMetadata-static createInstance(): HeifsMetadata-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **返回值：**
@@ -114,6 +120,8 @@ getAllProperties(): Promise<Record<string, string | null>>
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HeifsMetadata-getAllProperties(): Promise<Record<string, string | null>>--><!--Device-HeifsMetadata-getAllProperties(): Promise<Record<string, string | null>>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -165,6 +173,8 @@ getBlob(): Promise<ArrayBuffer>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HeifsMetadata-getBlob(): Promise<ArrayBuffer>--><!--Device-HeifsMetadata-getBlob(): Promise<ArrayBuffer>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **返回值：**
@@ -211,6 +221,8 @@ getProperties(key: Array<string>): Promise<Record<string, string | null>>
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HeifsMetadata-getProperties(key: Array<string>): Promise<Record<string, string | null>>--><!--Device-HeifsMetadata-getProperties(key: Array<string>): Promise<Record<string, string | null>>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -272,6 +284,8 @@ setBlob(blob: ArrayBuffer): Promise<void>
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HeifsMetadata-setBlob(blob: ArrayBuffer): Promise<void>--><!--Device-HeifsMetadata-setBlob(blob: ArrayBuffer): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -336,6 +350,8 @@ setProperties(records: Record<string, string | null>): Promise<void>
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HeifsMetadata-setProperties(records: Record<string, string | null>): Promise<void>--><!--Device-HeifsMetadata-setProperties(records: Record<string, string | null>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -407,6 +423,8 @@ HEIF序列图片的画布高度。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HeifsMetadata-readonly heifsCanvasHeight?: int--><!--Device-HeifsMetadata-readonly heifsCanvasHeight?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## heifsCanvasWidth
@@ -427,6 +445,8 @@ HEIF序列图片的画布宽度。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HeifsMetadata-readonly heifsCanvasWidth?: int--><!--Device-HeifsMetadata-readonly heifsCanvasWidth?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## heifsDelayTime
@@ -442,6 +462,8 @@ HEIF序列图片的每帧播放时长。单位为毫秒（ms）。
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HeifsMetadata-readonly heifsDelayTime?: int--><!--Device-HeifsMetadata-readonly heifsDelayTime?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -462,5 +484,7 @@ HEIF序列图片每帧未钳制的延迟时长。
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HeifsMetadata-readonly heifsUnclampedDelayTime?: int--><!--Device-HeifsMetadata-readonly heifsUnclampedDelayTime?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core

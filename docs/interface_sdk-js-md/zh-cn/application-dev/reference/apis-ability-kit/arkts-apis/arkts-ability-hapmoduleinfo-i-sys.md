@@ -8,6 +8,8 @@ HAP信息。
 
 **起始版本：** 9
 
+<!--Device-unnamed-export interface HapModuleInfo--><!--Device-unnamed-export interface HapModuleInfo-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## codePhysicalPath
@@ -23,6 +25,8 @@ readonly codePhysicalPath?: string
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HapModuleInfo-readonly codePhysicalPath?: string--><!--Device-HapModuleInfo-readonly codePhysicalPath?: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

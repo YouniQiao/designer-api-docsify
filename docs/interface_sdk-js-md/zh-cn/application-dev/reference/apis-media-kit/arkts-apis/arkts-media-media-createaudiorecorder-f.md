@@ -25,6 +25,8 @@ function createAudioRecorder(): AudioRecorder
 
 **替代接口：** [createAVRecorder](arkts-media-media-createavrecorder-f.md)(callback: AsyncCallback&lt;AVRecorder&gt;)
 
+<!--Device-media-function createAudioRecorder(): AudioRecorder--><!--Device-media-function createAudioRecorder(): AudioRecorder-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
 
 **返回值：**

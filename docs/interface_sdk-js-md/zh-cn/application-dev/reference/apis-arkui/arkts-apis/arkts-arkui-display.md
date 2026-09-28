@@ -4,6 +4,8 @@
 
 **起始版本：** 7
 
+<!--Device-unnamed-declare namespace display--><!--Device-unnamed-declare namespace display-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 ## 导入模块

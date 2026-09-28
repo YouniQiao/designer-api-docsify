@@ -16,6 +16,8 @@ function off(type: 'steadyStandingDetect', callback?: Callback<SteadyStandingSta
 
 **起始版本：** 18
 
+<!--Device-deviceStatus-function off(type: 'steadyStandingDetect', callback?: Callback<SteadyStandingStatus>): void--><!--Device-deviceStatus-function off(type: 'steadyStandingDetect', callback?: Callback<SteadyStandingStatus>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.DeviceStatus
 
 **参数：**

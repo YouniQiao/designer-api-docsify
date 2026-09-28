@@ -14,6 +14,8 @@ interface HandsFreeAudioGatewayProfile extends BaseProfile
 
 **起始版本：** 10
 
+<!--Device-hfp-interface HandsFreeAudioGatewayProfile extends BaseProfile--><!--Device-hfp-interface HandsFreeAudioGatewayProfile extends BaseProfile-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -35,6 +37,8 @@ connect(deviceId: string): void
 **起始版本：** 10
 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
+
+<!--Device-HandsFreeAudioGatewayProfile-connect(deviceId: string): void--><!--Device-HandsFreeAudioGatewayProfile-connect(deviceId: string): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -84,6 +88,8 @@ disconnect(deviceId: string): void
 **起始版本：** 10
 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
+
+<!--Device-HandsFreeAudioGatewayProfile-disconnect(deviceId: string): void--><!--Device-HandsFreeAudioGatewayProfile-disconnect(deviceId: string): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

@@ -23,6 +23,8 @@ function off(type: 'formUninstall', callback?: Callback<string>): void
 
 **替代接口：** [off](arkts-form-formhost-off-f-sys.md)
 
+<!--Device-formHost-function off(type: 'formUninstall', callback?: Callback<string>): void--><!--Device-formHost-function off(type: 'formUninstall', callback?: Callback<string>): void-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。

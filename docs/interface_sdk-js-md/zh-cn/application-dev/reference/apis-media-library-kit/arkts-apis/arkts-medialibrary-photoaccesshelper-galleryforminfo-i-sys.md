@@ -8,6 +8,8 @@ interface GalleryFormInfo
 
 **起始版本：** 18
 
+<!--Device-photoAccessHelper-interface GalleryFormInfo--><!--Device-photoAccessHelper-interface GalleryFormInfo-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -36,6 +38,8 @@ assetUris?: Array<string>
 
 **起始版本：** 18
 
+<!--Device-GalleryFormInfo-assetUris?: Array<string>--><!--Device-GalleryFormInfo-assetUris?: Array<string>-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +55,8 @@ formId: string
 **类型：** string
 
 **起始版本：** 18
+
+<!--Device-GalleryFormInfo-formId: string--><!--Device-GalleryFormInfo-formId: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

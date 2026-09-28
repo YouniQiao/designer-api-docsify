@@ -8,6 +8,8 @@ PermissionRequestResult是权限申请的结果对象。开发者需先创建atM
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare class PermissionRequestResult--><!--Device-unnamed-declare class PermissionRequestResult-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 ## authResults
@@ -29,7 +31,9 @@ authResults: Array<number>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-PermissionRequestResult-authResults: Array<int>--><!--Device-PermissionRequestResult-authResults: Array<int>-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -52,7 +56,9 @@ dialogShownResults?: Array<boolean>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PermissionRequestResult-dialogShownResults?: Array<boolean>--><!--Device-PermissionRequestResult-dialogShownResults?: Array<boolean>-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -80,7 +86,9 @@ errorReasons?: Array<number>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-PermissionRequestResult-errorReasons?: Array<int>--><!--Device-PermissionRequestResult-errorReasons?: Array<int>-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -98,6 +106,8 @@ permissions: Array<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-PermissionRequestResult-permissions: Array<string>--><!--Device-PermissionRequestResult-permissions: Array<string>-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken

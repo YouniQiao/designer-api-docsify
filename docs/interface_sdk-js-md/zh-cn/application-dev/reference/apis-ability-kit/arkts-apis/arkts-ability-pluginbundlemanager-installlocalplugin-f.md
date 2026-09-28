@@ -20,6 +20,8 @@ function installLocalPlugin(pluginFilePaths: Array<string>): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-pluginBundleManager-function installLocalPlugin(pluginFilePaths: Array<string>): Promise<void>--><!--Device-pluginBundleManager-function installLocalPlugin(pluginFilePaths: Array<string>): Promise<void>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **参数：**

@@ -8,6 +8,8 @@ interface ReturningConfig
 
 **起始版本：** 23
 
+<!--Device-relationalStore-interface ReturningConfig--><!--Device-relationalStore-interface ReturningConfig-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ columns: Array<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ReturningConfig-columns: Array<string>--><!--Device-ReturningConfig-columns: Array<string>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## maxReturningCount
@@ -45,5 +49,7 @@ maxReturningCount?: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ReturningConfig-maxReturningCount?: int--><!--Device-ReturningConfig-maxReturningCount?: int-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core

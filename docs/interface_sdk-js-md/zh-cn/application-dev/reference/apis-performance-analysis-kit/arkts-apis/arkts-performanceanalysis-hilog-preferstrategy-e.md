@@ -8,6 +8,8 @@ enum PreferStrategy
 
 **起始版本：** 21
 
+<!--Device-hilog-enum PreferStrategy--><!--Device-hilog-enum PreferStrategy-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiLog
 
 ## UNSET_LOGLEVEL
@@ -20,7 +22,9 @@ UNSET_LOGLEVEL = 0
 
 **起始版本：** 21
 
-**原子化服务API：** 从API版本21开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本21开始，该接口支持在原子化服务中使用。
+
+<!--Device-PreferStrategy-UNSET_LOGLEVEL = 0--><!--Device-PreferStrategy-UNSET_LOGLEVEL = 0-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiLog
 
@@ -34,7 +38,9 @@ PREFER_CLOSE_LOG = 1
 
 **起始版本：** 21
 
-**原子化服务API：** 从API版本21开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本21开始，该接口支持在原子化服务中使用。
+
+<!--Device-PreferStrategy-PREFER_CLOSE_LOG = 1--><!--Device-PreferStrategy-PREFER_CLOSE_LOG = 1-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiLog
 
@@ -48,6 +54,8 @@ PREFER_OPEN_LOG = 2
 
 **起始版本：** 21
 
-**原子化服务API：** 从API版本21开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本21开始，该接口支持在原子化服务中使用。
+
+<!--Device-PreferStrategy-PREFER_OPEN_LOG = 2--><!--Device-PreferStrategy-PREFER_OPEN_LOG = 2-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiLog

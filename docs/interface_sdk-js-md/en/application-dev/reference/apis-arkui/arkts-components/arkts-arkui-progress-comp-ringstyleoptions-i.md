@@ -12,6 +12,8 @@ Inherits from [ScanEffectOptions](arkts-arkui-progress-comp-scaneffectoptions-i.
 
 **Since:** 10
 
+<!--Device-unnamed-declare interface RingStyleOptions extends ScanEffectOptions, CommonProgressStyleOptions--><!--Device-unnamed-declare interface RingStyleOptions extends ScanEffectOptions, CommonProgressStyleOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## shadow
@@ -34,6 +36,8 @@ Default value: **false**
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-RingStyleOptions-shadow?: boolean--><!--Device-RingStyleOptions-shadow?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## status
@@ -55,6 +59,8 @@ Default value: **ProgressStatus.PROGRESSING**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-RingStyleOptions-status?: ProgressStatus--><!--Device-RingStyleOptions-status?: ProgressStatus-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -81,5 +87,7 @@ When the width is greater than or equal to the radius, the width is changed to h
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-RingStyleOptions-strokeWidth?: Length--><!--Device-RingStyleOptions-strokeWidth?: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

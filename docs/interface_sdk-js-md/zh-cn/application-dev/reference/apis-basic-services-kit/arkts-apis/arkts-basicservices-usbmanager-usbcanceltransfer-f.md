@@ -22,6 +22,8 @@ function usbCancelTransfer(transfer: UsbDataTransferParams): void
 
 **起始版本：** 18
 
+<!--Device-usbManager-function usbCancelTransfer(transfer: UsbDataTransferParams): void--><!--Device-usbManager-function usbCancelTransfer(transfer: UsbDataTransferParams): void-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 **参数：**

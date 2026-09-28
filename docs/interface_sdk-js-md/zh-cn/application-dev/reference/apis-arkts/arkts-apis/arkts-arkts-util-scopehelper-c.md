@@ -8,6 +8,8 @@ class ScopeHelper
 
 **起始版本：** 9
 
+<!--Device-util-class ScopeHelper--><!--Device-util-class ScopeHelper-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -27,6 +29,8 @@ clamp(value: ScopeType): ScopeType
 **起始版本：** 9
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ScopeHelper-clamp(value: ScopeType): ScopeType--><!--Device-ScopeHelper-clamp(value: ScopeType): ScopeType-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -86,6 +90,8 @@ constructor(lowerObj: ScopeType, upperObj: ScopeType)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-ScopeHelper-constructor(lowerObj: ScopeType, upperObj: ScopeType)--><!--Device-ScopeHelper-constructor(lowerObj: ScopeType, upperObj: ScopeType)-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -135,6 +141,8 @@ contains(value: ScopeType): boolean
 **起始版本：** 9
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ScopeHelper-contains(value: ScopeType): boolean--><!--Device-ScopeHelper-contains(value: ScopeType): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -196,6 +204,8 @@ contains(range: ScopeHelper): boolean
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-ScopeHelper-contains(range: ScopeHelper): boolean--><!--Device-ScopeHelper-contains(range: ScopeHelper): boolean-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -255,6 +265,8 @@ expand(lowerObj: ScopeType, upperObj: ScopeType): ScopeHelper
 **起始版本：** 9
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ScopeHelper-expand(lowerObj: ScopeType, upperObj: ScopeType): ScopeHelper--><!--Device-ScopeHelper-expand(lowerObj: ScopeType, upperObj: ScopeType): ScopeHelper-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -318,6 +330,8 @@ expand(range: ScopeHelper): ScopeHelper
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-ScopeHelper-expand(range: ScopeHelper): ScopeHelper--><!--Device-ScopeHelper-expand(range: ScopeHelper): ScopeHelper-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -380,6 +394,8 @@ expand(value: ScopeType): ScopeHelper
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-ScopeHelper-expand(value: ScopeType): ScopeHelper--><!--Device-ScopeHelper-expand(value: ScopeType): ScopeHelper-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -438,6 +454,8 @@ getLower(): ScopeType
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-ScopeHelper-getLower(): ScopeType--><!--Device-ScopeHelper-getLower(): ScopeType-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -489,6 +507,8 @@ getUpper(): ScopeType
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-ScopeHelper-getUpper(): ScopeType--><!--Device-ScopeHelper-getUpper(): ScopeType-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -539,6 +559,8 @@ intersect(range: ScopeHelper): ScopeHelper
 **起始版本：** 9
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ScopeHelper-intersect(range: ScopeHelper): ScopeHelper--><!--Device-ScopeHelper-intersect(range: ScopeHelper): ScopeHelper-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -602,6 +624,8 @@ intersect(lowerObj: ScopeType, upperObj: ScopeType): ScopeHelper
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-ScopeHelper-intersect(lowerObj: ScopeType, upperObj: ScopeType): ScopeHelper--><!--Device-ScopeHelper-intersect(lowerObj: ScopeType, upperObj: ScopeType): ScopeHelper-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -661,6 +685,8 @@ toString(): string
 **起始版本：** 9
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ScopeHelper-toString(): string--><!--Device-ScopeHelper-toString(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

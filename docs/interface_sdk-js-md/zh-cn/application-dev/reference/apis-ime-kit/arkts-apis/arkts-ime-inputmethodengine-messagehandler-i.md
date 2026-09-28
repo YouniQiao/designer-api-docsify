@@ -17,6 +17,8 @@ interface MessageHandler
 
 **起始版本：** 15
 
+<!--Device-inputMethodEngine-interface MessageHandler--><!--Device-inputMethodEngine-interface MessageHandler-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## 导入模块
@@ -41,6 +43,8 @@ onMessage(msgId: string, msgParam?: ArrayBuffer): void
 > msgId为必选参数，msgParam为可选参数。存在收到仅有msgId自定义数据的可能，需与数据发送方确认自定义数据。
 
 **起始版本：** 15
+
+<!--Device-MessageHandler-onMessage(msgId: string, msgParam?: ArrayBuffer): void--><!--Device-MessageHandler-onMessage(msgId: string, msgParam?: ArrayBuffer): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -83,6 +87,8 @@ onTerminated(): void
 > 当应用取消注册时，会触发当前已注册[MessageHandler](#messagehandler)对象的[onTerminated](#onterminated)回调函数。
 
 **起始版本：** 15
+
+<!--Device-MessageHandler-onTerminated(): void--><!--Device-MessageHandler-onTerminated(): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 

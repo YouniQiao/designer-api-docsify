@@ -4,7 +4,7 @@
 declare class LoadingProgressAttribute extends CommonMethod<LoadingProgressAttribute>
 ```
 
-In addition to the [universal attributes](arkts-arkui-common-comp.md#common), the following attributes are supported.
+In addition to the [universal attributes](arkts-arkui-common-comp.md), the following attributes are supported.
 
 > **NOTE:** 
 > 
@@ -14,6 +14,8 @@ In addition to the [universal attributes](arkts-arkui-common-comp.md#common), th
 **Inheritance/Implementation:** LoadingProgressAttribute extends CommonMethod<LoadingProgressAttribute>
 
 **Since:** 8
+
+<!--Device-unnamed-declare class LoadingProgressAttribute extends CommonMethod<LoadingProgressAttribute>--><!--Device-unnamed-declare class LoadingProgressAttribute extends CommonMethod<LoadingProgressAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,6 +32,8 @@ Sets the foreground color for the **LoadingProgress** component.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-LoadingProgressAttribute-color(value: ResourceColor): LoadingProgressAttribute--><!--Device-LoadingProgressAttribute-color(value: ResourceColor): LoadingProgressAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -53,6 +57,8 @@ Creates a content modifier.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LoadingProgressAttribute-contentModifier(modifier: ContentModifier<LoadingProgressConfiguration>): LoadingProgressAttribute--><!--Device-LoadingProgressAttribute-contentModifier(modifier: ContentModifier<LoadingProgressConfiguration>): LoadingProgressAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -74,6 +80,8 @@ Sets whether to display the LoadingProgress animation. The component still takes
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-LoadingProgressAttribute-enableLoading(value: boolean): LoadingProgressAttribute--><!--Device-LoadingProgressAttribute-enableLoading(value: boolean): LoadingProgressAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

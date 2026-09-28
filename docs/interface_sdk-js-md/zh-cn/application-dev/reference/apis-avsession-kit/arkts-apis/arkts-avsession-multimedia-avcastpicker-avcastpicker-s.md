@@ -16,6 +16,8 @@ declare struct AVCastPicker
 
 **装饰器类型：** @Component
 
+<!--Device-unnamed-declare struct AVCastPicker--><!--Device-unnamed-declare struct AVCastPicker-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 ## 导入模块
@@ -35,6 +37,8 @@ onStateChange?: (state: AVCastPickerState) => void
 **起始版本：** 11
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVCastPicker-onStateChange?: (state: AVCastPickerState) => void--><!--Device-AVCastPicker-onStateChange?: (state: AVCastPickerState) => void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -62,6 +66,8 @@ activeColor?: Color | number | string
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVCastPicker-activeColor?: Color | number | string--><!--Device-AVCastPicker-activeColor?: Color | number | string-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 ## colorMode
@@ -83,6 +89,8 @@ colorMode?: AVCastPickerColorMode
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVCastPicker-colorMode?: AVCastPickerColorMode--><!--Device-AVCastPicker-colorMode?: AVCastPickerColorMode-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 ## customPicker
@@ -100,6 +108,8 @@ customPicker?: CustomBuilder
 **装饰器类型：** @Prop
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVCastPicker-customPicker?: CustomBuilder--><!--Device-AVCastPicker-customPicker?: CustomBuilder-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -120,6 +130,8 @@ normalColor?: Color | number | string
 **装饰器类型：** @Prop
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVCastPicker-normalColor?: Color | number | string--><!--Device-AVCastPicker-normalColor?: Color | number | string-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -142,6 +154,8 @@ pickerStyle?: AVCastPickerStyle
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVCastPicker-pickerStyle?: AVCastPickerStyle--><!--Device-AVCastPicker-pickerStyle?: AVCastPickerStyle-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 ## sessionType
@@ -159,5 +173,7 @@ sessionType?: string
 **装饰器类型：** @Prop
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVCastPicker-sessionType?: string--><!--Device-AVCastPicker-sessionType?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast

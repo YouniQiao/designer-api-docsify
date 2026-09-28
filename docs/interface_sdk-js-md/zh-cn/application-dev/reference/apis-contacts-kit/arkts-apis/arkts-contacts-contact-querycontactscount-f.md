@@ -20,6 +20,8 @@ function queryContactsCount(context: Context): Promise<number>
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
+<!--Device-contact-function queryContactsCount(context: Context): Promise<int>--><!--Device-contact-function queryContactsCount(context: Context): Promise<int>-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 **参数：**

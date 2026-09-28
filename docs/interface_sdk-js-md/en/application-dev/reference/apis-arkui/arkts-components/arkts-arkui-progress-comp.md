@@ -22,6 +22,8 @@ Creates a progress indicator.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-ProgressInterface-<Type extends keyof ProgressStyleMap>(options: ProgressOptions<Type>): ProgressAttribute<Type>--><!--Device-ProgressInterface-<Type extends keyof ProgressStyleMap>(options: ProgressOptions<Type>): ProgressAttribute<Type>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

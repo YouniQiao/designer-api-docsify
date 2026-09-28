@@ -8,6 +8,8 @@ interface CloudAssetDownloadStatus
 
 **起始版本：** 21
 
+<!--Device-photoAccessHelper-interface CloudAssetDownloadStatus--><!--Device-photoAccessHelper-interface CloudAssetDownloadStatus-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -29,6 +31,8 @@ readonly taskInfos: string[]
 **类型：** string[]
 
 **起始版本：** 21
+
+<!--Device-CloudAssetDownloadStatus-readonly taskInfos: string[]--><!--Device-CloudAssetDownloadStatus-readonly taskInfos: string[]-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

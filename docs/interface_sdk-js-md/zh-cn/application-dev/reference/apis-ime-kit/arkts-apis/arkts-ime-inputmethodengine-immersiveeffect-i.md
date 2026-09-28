@@ -8,6 +8,8 @@ interface ImmersiveEffect
 
 **起始版本：** 20
 
+<!--Device-inputMethodEngine-interface ImmersiveEffect--><!--Device-inputMethodEngine-interface ImmersiveEffect-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## 导入模块
@@ -28,6 +30,8 @@ gradientHeight: number
 
 **起始版本：** 20
 
+<!--Device-ImmersiveEffect-gradientHeight: int--><!--Device-ImmersiveEffect-gradientHeight: int-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## gradientMode
@@ -41,5 +45,7 @@ gradientMode: GradientMode
 **类型：** [GradientMode](arkts-ime-inputmethodengine-gradientmode-e.md)
 
 **起始版本：** 20
+
+<!--Device-ImmersiveEffect-gradientMode: GradientMode--><!--Device-ImmersiveEffect-gradientMode: GradientMode-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework

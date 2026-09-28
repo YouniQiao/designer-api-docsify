@@ -15,6 +15,8 @@ ArkTS TypedArray（[Int8Array](arkts-arkts-collections-int8array-c.md)、[Uint8A
 
 **装饰器类型：** @Sendable
 
+<!--Device-collections-class ArrayBuffer--><!--Device-collections-class ArrayBuffer-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -34,6 +36,8 @@ constructor(byteLength: number)
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ArrayBuffer-constructor(byteLength: number)--><!--Device-ArrayBuffer-constructor(byteLength: number)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -60,6 +64,8 @@ slice(begin: number, end?: number): ArrayBuffer
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ArrayBuffer-slice(begin: number, end?: number): ArrayBuffer--><!--Device-ArrayBuffer-slice(begin: number, end?: number): ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -96,5 +102,7 @@ buffer所占的字节数。
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ArrayBuffer-readonly byteLength: number--><!--Device-ArrayBuffer-readonly byteLength: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

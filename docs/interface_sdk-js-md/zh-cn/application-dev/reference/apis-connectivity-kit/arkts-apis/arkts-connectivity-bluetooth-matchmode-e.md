@@ -14,6 +14,8 @@ enum MatchMode
 
 **替代接口：** [MatchMode](arkts-connectivity-bluetoothmanager-matchmode-e.md)
 
+<!--Device-bluetooth-enum MatchMode--><!--Device-bluetooth-enum MatchMode-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## MATCH_MODE_AGGRESSIVE
@@ -30,6 +32,8 @@ MATCH_MODE_AGGRESSIVE = 1
 
 **替代接口：** [MATCH_MODE_AGGRESSIVE](arkts-connectivity-bluetoothmanager-matchmode-e.md#match_mode_aggressive)
 
+<!--Device-MatchMode-MATCH_MODE_AGGRESSIVE = 1--><!--Device-MatchMode-MATCH_MODE_AGGRESSIVE = 1-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## MATCH_MODE_STICKY
@@ -45,5 +49,7 @@ MATCH_MODE_STICKY = 2
 **废弃版本：** 9
 
 **替代接口：** [MATCH_MODE_STICKY](arkts-connectivity-bluetoothmanager-matchmode-e.md#match_mode_sticky)
+
+<!--Device-MatchMode-MATCH_MODE_STICKY = 2--><!--Device-MatchMode-MATCH_MODE_STICKY = 2-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

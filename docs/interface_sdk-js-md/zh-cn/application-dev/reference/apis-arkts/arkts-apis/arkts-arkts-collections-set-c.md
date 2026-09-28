@@ -17,6 +17,8 @@ class Set<T>
 
 **装饰器类型：** @Sendable
 
+<!--Device-collections-class Set<T>--><!--Device-collections-class Set<T>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -36,6 +38,8 @@ import { collections } from '@kit.ArkTS';
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Set-[Symbol.iterator](): IterableIterator<T>--><!--Device-Set-[Symbol.iterator](): IterableIterator<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -62,6 +66,8 @@ add(value: T): Set<T>
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Set-add(value: T): Set<T>--><!--Device-Set-add(value: T): Set<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -96,6 +102,8 @@ clear(): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Set-clear(): void--><!--Device-Set-clear(): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **错误码：**
@@ -116,6 +124,8 @@ constructor(values?: readonly T[] | null)
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Set-constructor(values?: readonly T[] | null)--><!--Device-Set-constructor(values?: readonly T[] | null)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -145,6 +155,8 @@ constructor(iterable: Iterable<T>)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Set-constructor(iterable: Iterable<T>)--><!--Device-Set-constructor(iterable: Iterable<T>)-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -170,6 +182,8 @@ delete(value: T): boolean
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Set-delete(value: T): boolean--><!--Device-Set-delete(value: T): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -204,6 +218,8 @@ entries(): IterableIterator<[T, T]>
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Set-entries(): IterableIterator<[T, T]>--><!--Device-Set-entries(): IterableIterator<[T, T]>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -231,6 +247,8 @@ forEach(callbackFn: (value: T, value2: T, set: Set<T>) => void): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Set-forEach(callbackFn: (value: T, value2: T, set: Set<T>) => void): void--><!--Device-Set-forEach(callbackFn: (value: T, value2: T, set: Set<T>) => void): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -257,6 +275,8 @@ has(value: T): boolean
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Set-has(value: T): boolean--><!--Device-Set-has(value: T): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -291,6 +311,8 @@ keys(): IterableIterator<T>
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Set-keys(): IterableIterator<T>--><!--Device-Set-keys(): IterableIterator<T>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -317,6 +339,8 @@ values(): IterableIterator<T>
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Set-values(): IterableIterator<T>--><!--Device-Set-values(): IterableIterator<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -346,5 +370,7 @@ Set的元素个数。
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Set-readonly size: number--><!--Device-Set-readonly size: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

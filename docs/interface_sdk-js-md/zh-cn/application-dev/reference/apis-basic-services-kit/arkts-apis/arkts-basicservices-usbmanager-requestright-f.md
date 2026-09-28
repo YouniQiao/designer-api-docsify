@@ -16,6 +16,8 @@ function requestRight(deviceName: string): Promise<boolean>
 
 **起始版本：** 9
 
+<!--Device-usbManager-function requestRight(deviceName: string): Promise<boolean>--><!--Device-usbManager-function requestRight(deviceName: string): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 **参数：**

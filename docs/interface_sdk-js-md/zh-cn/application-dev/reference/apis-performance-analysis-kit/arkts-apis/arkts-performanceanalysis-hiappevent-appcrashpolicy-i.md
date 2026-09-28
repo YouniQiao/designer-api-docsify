@@ -8,6 +8,8 @@ interface AppCrashPolicy
 
 **起始版本：** 24
 
+<!--Device-hiAppEvent-interface AppCrashPolicy--><!--Device-hiAppEvent-interface AppCrashPolicy-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 ## 导入模块
@@ -40,7 +42,9 @@ false：log_over_limit字段判断生成的与已存在的故障日志文件的�
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-AppCrashPolicy-collectMinidump?: boolean--><!--Device-AppCrashPolicy-collectMinidump?: boolean-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -68,7 +72,9 @@ false：64位系统打印pc和lr寄存器地址向前16字节、向后232字节�
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-AppCrashPolicy-extendPcLrPrinting?: boolean--><!--Device-AppCrashPolicy-extendPcLrPrinting?: boolean-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -90,7 +96,9 @@ logFileCutoffSzBytes?: number
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-AppCrashPolicy-logFileCutoffSzBytes?: int--><!--Device-AppCrashPolicy-logFileCutoffSzBytes?: int-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -116,7 +124,9 @@ false：不使能崩溃事件的页面切换日志。
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-AppCrashPolicy-pageSwitchLogEnable?: boolean--><!--Device-AppCrashPolicy-pageSwitchLogEnable?: boolean-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -144,6 +154,8 @@ false：打印所有VMA映射信息。
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-AppCrashPolicy-simplifyVmaPrinting?: boolean--><!--Device-AppCrashPolicy-simplifyVmaPrinting?: boolean-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent

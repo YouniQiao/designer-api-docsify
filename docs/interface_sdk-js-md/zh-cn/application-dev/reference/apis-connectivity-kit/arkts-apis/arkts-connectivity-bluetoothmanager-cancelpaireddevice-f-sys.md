@@ -24,6 +24,8 @@ function cancelPairedDevice(deviceId: string): void
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH
 - API版本9：ohos.permission.DISCOVER_BLUETOOTH
 
+<!--Device-bluetoothManager-function cancelPairedDevice(deviceId: string): void--><!--Device-bluetoothManager-function cancelPairedDevice(deviceId: string): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。

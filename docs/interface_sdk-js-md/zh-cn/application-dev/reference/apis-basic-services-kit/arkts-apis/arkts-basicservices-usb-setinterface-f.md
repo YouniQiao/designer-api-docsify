@@ -22,6 +22,8 @@ function setInterface(pipe: USBDevicePipe, iface: USBInterface): number
 
 **替代接口：** [setInterface](arkts-basicservices-usbmanager-setinterface-f.md)
 
+<!--Device-usb-function setInterface(pipe: USBDevicePipe, iface: USBInterface): number--><!--Device-usb-function setInterface(pipe: USBDevicePipe, iface: USBInterface): number-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 **参数：**

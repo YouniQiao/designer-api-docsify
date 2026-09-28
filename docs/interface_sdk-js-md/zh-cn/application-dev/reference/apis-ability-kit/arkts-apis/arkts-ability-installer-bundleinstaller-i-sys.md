@@ -8,6 +8,8 @@ Bundle installer interface, include install uninstall recover.
 
 **起始版本：** 9
 
+<!--Device-installer-interface BundleInstaller--><!--Device-installer-interface BundleInstaller-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -29,6 +31,8 @@ addExtResource(bundleName: string, filePaths: Array<string>): Promise<void>
 **起始版本：** 12
 
 **需要权限：** ohos.permission.INSTALL_BUNDLE
+
+<!--Device-BundleInstaller-addExtResource(bundleName: string, filePaths: Array<string>): Promise<void>--><!--Device-BundleInstaller-addExtResource(bundleName: string, filePaths: Array<string>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -92,6 +96,8 @@ createAppClone(bundleName: string, createAppCloneParam?: CreateAppCloneParam): P
 **起始版本：** 12
 
 **需要权限：** ohos.permission.INSTALL_CLONE_BUNDLE
+
+<!--Device-BundleInstaller-createAppClone(bundleName: string, createAppCloneParam?: CreateAppCloneParam): Promise<int>--><!--Device-BundleInstaller-createAppClone(bundleName: string, createAppCloneParam?: CreateAppCloneParam): Promise<int>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -163,6 +169,8 @@ destroyAppClone(bundleName: string, appIndex: number, userId?: number): Promise<
 
 **需要权限：** ohos.permission.UNINSTALL_CLONE_BUNDLE
 
+<!--Device-BundleInstaller-destroyAppClone(bundleName: string, appIndex: number, userId?: number): Promise<void>--><!--Device-BundleInstaller-destroyAppClone(bundleName: string, appIndex: number, userId?: number): Promise<void>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -232,6 +240,8 @@ destroyAppClone(bundleName: string, appIndex: number, destroyAppCloneParam?: Des
 **起始版本：** 15
 
 **需要权限：** ohos.permission.UNINSTALL_CLONE_BUNDLE
+
+<!--Device-BundleInstaller-destroyAppClone(bundleName: string, appIndex: number, destroyAppCloneParam?: DestroyAppCloneParam): Promise<void>--><!--Device-BundleInstaller-destroyAppClone(bundleName: string, appIndex: number, destroyAppCloneParam?: DestroyAppCloneParam): Promise<void>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -319,6 +329,8 @@ install(hapFilePaths: Array<string>, installParam: InstallParam, callback: Async
 - API版本13-22：ohos.permission.INSTALL_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_MDM_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_NORMAL_BUNDLE or ohos.permission.INSTALL_INTERNALTESTING_BUNDLE
 - API版本10-12：ohos.permission.INSTALL_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_MDM_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_NORMAL_BUNDLE
 - API版本9：ohos.permission.INSTALL_BUNDLE
+
+<!--Device-BundleInstaller-install(hapFilePaths: Array<string>, installParam: InstallParam, callback: AsyncCallback<void>): void--><!--Device-BundleInstaller-install(hapFilePaths: Array<string>, installParam: InstallParam, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -420,6 +432,8 @@ install(hapFilePaths: Array<string>, callback: AsyncCallback<void>): void
 - API版本10-12：ohos.permission.INSTALL_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_MDM_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_NORMAL_BUNDLE
 - API版本9：ohos.permission.INSTALL_BUNDLE
 
+<!--Device-BundleInstaller-install(hapFilePaths: Array<string>, callback: AsyncCallback<void>): void--><!--Device-BundleInstaller-install(hapFilePaths: Array<string>, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -513,6 +527,8 @@ install(hapFilePaths: Array<string>, installParam?: InstallParam): Promise<void>
 - API版本10-12：ohos.permission.INSTALL_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_MDM_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_NORMAL_BUNDLE
 - API版本9：ohos.permission.INSTALL_BUNDLE
 
+<!--Device-BundleInstaller-install(hapFilePaths: Array<string>, installParam?: InstallParam): Promise<void>--><!--Device-BundleInstaller-install(hapFilePaths: Array<string>, installParam?: InstallParam): Promise<void>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -605,6 +621,8 @@ installPlugin(hostBundleName: string, pluginFilePaths: Array<string>, pluginPara
 
 **需要权限：** ohos.permission.INSTALL_PLUGIN_BUNDLE
 
+<!--Device-BundleInstaller-installPlugin(hostBundleName: string, pluginFilePaths: Array<string>, pluginParam?: PluginParam): Promise<void>--><!--Device-BundleInstaller-installPlugin(hostBundleName: string, pluginFilePaths: Array<string>, pluginParam?: PluginParam): Promise<void>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -692,6 +710,8 @@ installPreexistingApp(bundleName: string, userId?: number): Promise<void>
 
 **需要权限：** ohos.permission.INSTALL_BUNDLE
 
+<!--Device-BundleInstaller-installPreexistingApp(bundleName: string, userId?: int): Promise<void>--><!--Device-BundleInstaller-installPreexistingApp(bundleName: string, userId?: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -758,6 +778,8 @@ recover(bundleName: string, installParam: InstallParam, callback: AsyncCallback<
 **起始版本：** 9
 
 **需要权限：** ohos.permission.INSTALL_BUNDLE or ohos.permission.RECOVER_BUNDLE
+
+<!--Device-BundleInstaller-recover(bundleName: string, installParam: InstallParam, callback: AsyncCallback<void>): void--><!--Device-BundleInstaller-recover(bundleName: string, installParam: InstallParam, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -828,6 +850,8 @@ recover(bundleName: string, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.INSTALL_BUNDLE or ohos.permission.RECOVER_BUNDLE
 
+<!--Device-BundleInstaller-recover(bundleName: string, callback: AsyncCallback<void>): void--><!--Device-BundleInstaller-recover(bundleName: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -889,6 +913,8 @@ recover(bundleName: string, installParam?: InstallParam): Promise<void>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.INSTALL_BUNDLE or ohos.permission.RECOVER_BUNDLE
+
+<!--Device-BundleInstaller-recover(bundleName: string, installParam?: InstallParam): Promise<void>--><!--Device-BundleInstaller-recover(bundleName: string, installParam?: InstallParam): Promise<void>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -961,6 +987,8 @@ removeExtResource(bundleName: string, moduleNames: Array<string>): Promise<void>
 
 **需要权限：** ohos.permission.INSTALL_BUNDLE or ohos.permission.UNINSTALL_BUNDLE
 
+<!--Device-BundleInstaller-removeExtResource(bundleName: string, moduleNames: Array<string>): Promise<void>--><!--Device-BundleInstaller-removeExtResource(bundleName: string, moduleNames: Array<string>): Promise<void>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1023,6 +1051,8 @@ uninstall(bundleName: string, installParam: InstallParam, callback: AsyncCallbac
 **起始版本：** 9
 
 **需要权限：** ohos.permission.INSTALL_BUNDLE or ohos.permission.UNINSTALL_BUNDLE
+
+<!--Device-BundleInstaller-uninstall(bundleName: string, installParam: InstallParam, callback: AsyncCallback<void>): void--><!--Device-BundleInstaller-uninstall(bundleName: string, installParam: InstallParam, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -1097,6 +1127,8 @@ uninstall(bundleName: string, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.INSTALL_BUNDLE or ohos.permission.UNINSTALL_BUNDLE
 
+<!--Device-BundleInstaller-uninstall(bundleName: string, callback: AsyncCallback<void>): void--><!--Device-BundleInstaller-uninstall(bundleName: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1161,6 +1193,8 @@ uninstall(bundleName: string, installParam?: InstallParam): Promise<void>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.INSTALL_BUNDLE or ohos.permission.UNINSTALL_BUNDLE
+
+<!--Device-BundleInstaller-uninstall(bundleName: string, installParam?: InstallParam): Promise<void>--><!--Device-BundleInstaller-uninstall(bundleName: string, installParam?: InstallParam): Promise<void>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -1239,6 +1273,8 @@ uninstall(uninstallParam: UninstallParam, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.INSTALL_BUNDLE or ohos.permission.UNINSTALL_BUNDLE
 
+<!--Device-BundleInstaller-uninstall(uninstallParam: UninstallParam, callback: AsyncCallback<void>): void--><!--Device-BundleInstaller-uninstall(uninstallParam: UninstallParam, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1302,6 +1338,8 @@ uninstall(uninstallParam: UninstallParam): Promise<void>
 **起始版本：** 10
 
 **需要权限：** ohos.permission.INSTALL_BUNDLE or ohos.permission.UNINSTALL_BUNDLE
+
+<!--Device-BundleInstaller-uninstall(uninstallParam: UninstallParam): Promise<void>--><!--Device-BundleInstaller-uninstall(uninstallParam: UninstallParam): Promise<void>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -1372,6 +1410,8 @@ uninstallNewPreinstalledApps(bundleNames: Array<string>): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BundleInstaller-uninstallNewPreinstalledApps(bundleNames: Array<string>): Promise<void>--><!--Device-BundleInstaller-uninstallNewPreinstalledApps(bundleNames: Array<string>): Promise<void>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1431,6 +1471,8 @@ uninstallPlugin(hostBundleName: string, pluginBundleName: string, pluginParam?: 
 **起始版本：** 19
 
 **需要权限：** ohos.permission.UNINSTALL_PLUGIN_BUNDLE
+
+<!--Device-BundleInstaller-uninstallPlugin(hostBundleName: string, pluginBundleName: string, pluginParam?: PluginParam): Promise<void>--><!--Device-BundleInstaller-uninstallPlugin(hostBundleName: string, pluginBundleName: string, pluginParam?: PluginParam): Promise<void>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -1500,6 +1542,8 @@ uninstallUpdates(bundleName: string, installParam?: InstallParam): Promise<void>
 **起始版本：** 12
 
 **需要权限：** ohos.permission.INSTALL_BUNDLE or ohos.permission.UNINSTALL_BUNDLE
+
+<!--Device-BundleInstaller-uninstallUpdates(bundleName: string, installParam?: InstallParam): Promise<void>--><!--Device-BundleInstaller-uninstallUpdates(bundleName: string, installParam?: InstallParam): Promise<void>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -1572,6 +1616,8 @@ updateBundleForSelf(hapFilePaths: Array<string>, installParam: InstallParam, cal
 **起始版本：** 10
 
 **需要权限：** ohos.permission.INSTALL_SELF_BUNDLE
+
+<!--Device-BundleInstaller-updateBundleForSelf(hapFilePaths: Array<string>, installParam: InstallParam, callback: AsyncCallback<void>): void--><!--Device-BundleInstaller-updateBundleForSelf(hapFilePaths: Array<string>, installParam: InstallParam, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -1656,6 +1702,8 @@ updateBundleForSelf(hapFilePaths: Array<string>, callback: AsyncCallback<void>):
 
 **需要权限：** ohos.permission.INSTALL_SELF_BUNDLE
 
+<!--Device-BundleInstaller-updateBundleForSelf(hapFilePaths: Array<string>, callback: AsyncCallback<void>): void--><!--Device-BundleInstaller-updateBundleForSelf(hapFilePaths: Array<string>, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1731,6 +1779,8 @@ updateBundleForSelf(hapFilePaths: Array<string>, installParam?: InstallParam): P
 **起始版本：** 10
 
 **需要权限：** ohos.permission.INSTALL_SELF_BUNDLE
+
+<!--Device-BundleInstaller-updateBundleForSelf(hapFilePaths: Array<string>, installParam?: InstallParam): Promise<void>--><!--Device-BundleInstaller-updateBundleForSelf(hapFilePaths: Array<string>, installParam?: InstallParam): Promise<void>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

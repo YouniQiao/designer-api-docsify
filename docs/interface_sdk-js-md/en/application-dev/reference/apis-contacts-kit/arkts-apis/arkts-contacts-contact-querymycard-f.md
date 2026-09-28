@@ -22,6 +22,8 @@ Queries my card. This API uses an asynchronous callback to return the result.
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryMyCard(callback: AsyncCallback<Contact>): void--><!--Device-contact-function queryMyCard(callback: AsyncCallback<Contact>): void-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
@@ -60,6 +62,8 @@ Queries my card. This API uses an asynchronous callback to return the result.
 **Since:** 10
 
 **Required permissions:** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryMyCard(context: Context, callback: AsyncCallback<Contact>): void--><!--Device-contact-function queryMyCard(context: Context, callback: AsyncCallback<Contact>): void-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -118,6 +122,8 @@ Queries my card. (The contact attribute list can be imported.) This API uses an 
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryMyCard(attrs: ContactAttributes, callback: AsyncCallback<Contact>): void--><!--Device-contact-function queryMyCard(attrs: ContactAttributes, callback: AsyncCallback<Contact>): void-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
@@ -159,6 +165,8 @@ Queries my card. (The contact attribute list can be imported.) This API uses an 
 **Since:** 10
 
 **Required permissions:** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryMyCard(context: Context, attrs: ContactAttributes, callback: AsyncCallback<Contact>): void--><!--Device-contact-function queryMyCard(context: Context, attrs: ContactAttributes, callback: AsyncCallback<Contact>): void-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -220,6 +228,8 @@ Queries my card. (The contact attribute list can be imported.) This API uses a p
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryMyCard(attrs?: ContactAttributes): Promise<Contact>--><!--Device-contact-function queryMyCard(attrs?: ContactAttributes): Promise<Contact>-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
@@ -262,6 +272,8 @@ Queries my card. (The contact attribute list can be imported.) This API uses a p
 **Since:** 10
 
 **Required permissions:** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryMyCard(context: Context, attrs?: ContactAttributes): Promise<Contact>--><!--Device-contact-function queryMyCard(context: Context, attrs?: ContactAttributes): Promise<Contact>-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 

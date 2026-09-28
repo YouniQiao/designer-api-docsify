@@ -17,6 +17,8 @@ interface AudioPlayer
 
 **替代接口：** [media](arkts-media-multimedia-media.md)
 
+<!--Device-media-interface AudioPlayer--><!--Device-media-interface AudioPlayer-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
 ## 导入模块
@@ -44,6 +46,8 @@ getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void
 **废弃版本：** 9
 
 **替代接口：** [getTrackDescription](arkts-media-media-avplayer-i.md#gettrackdescription)(callback: AsyncCallback&lt;Array&lt;MediaDescription&gt;&gt;)
+
+<!--Device-AudioPlayer-getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void--><!--Device-AudioPlayer-getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
@@ -74,6 +78,8 @@ getTrackDescription(): Promise<Array<MediaDescription>>
 
 **替代接口：** [getTrackDescription](arkts-media-media-avplayer-i.md#gettrackdescription)()
 
+<!--Device-AudioPlayer-getTrackDescription(): Promise<Array<MediaDescription>>--><!--Device-AudioPlayer-getTrackDescription(): Promise<Array<MediaDescription>>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
 **返回值：**
@@ -101,6 +107,8 @@ on(type: 'bufferingUpdate', callback: (infoType: BufferingInfoType, value: numbe
 **废弃版本：** 9
 
 **替代接口：** [on](arkts-media-media-avplayer-i.md#onbufferingupdate)(type: 'bufferingUpdate', callback: OnBufferingUpdateHandler)
+
+<!--Device-AudioPlayer-on(type: 'bufferingUpdate', callback: (infoType: BufferingInfoType, value: number) => void): void--><!--Device-AudioPlayer-on(type: 'bufferingUpdate', callback: (infoType: BufferingInfoType, value: number) => void): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
@@ -131,6 +139,8 @@ on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeCh
 
 **替代接口：** [on](arkts-media-media-avplayer-i.md#onstatechange)(type: 'stateChange', callback: OnAVPlayerStateChangeHandle)
 
+<!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void--><!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
 **参数：**
@@ -159,6 +169,8 @@ on(type: 'timeUpdate', callback: Callback<number>): void
 **废弃版本：** 9
 
 **替代接口：** on(type: 'timeUpdate', callback: Callback&lt;number&gt;)
+
+<!--Device-AudioPlayer-on(type: 'timeUpdate', callback: Callback<number>): void--><!--Device-AudioPlayer-on(type: 'timeUpdate', callback: Callback<number>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
@@ -189,6 +201,8 @@ on(type: 'audioInterrupt', callback: (info: audio.InterruptEvent) => void): void
 
 **替代接口：** [on](arkts-media-media-avplayer-i.md#onaudiointerrupt)(type: 'audioInterrupt', callback: Callback&lt;audio.InterruptEvent&gt;)
 
+<!--Device-AudioPlayer-on(type: 'audioInterrupt', callback: (info: audio.InterruptEvent) => void): void--><!--Device-AudioPlayer-on(type: 'audioInterrupt', callback: (info: audio.InterruptEvent) => void): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
 **参数：**
@@ -218,6 +232,8 @@ on(type: 'error', callback: ErrorCallback): void
 
 **替代接口：** [on](arkts-media-media-avplayer-i.md#onerror)(type: 'error', callback: ErrorCallback)
 
+<!--Device-AudioPlayer-on(type: 'error', callback: ErrorCallback): void--><!--Device-AudioPlayer-on(type: 'error', callback: ErrorCallback): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
 **参数：**
@@ -246,6 +262,8 @@ pause(): void
 
 **替代接口：** [pause](arkts-media-media-avplayer-i.md#pause)(callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-AudioPlayer-pause(): void--><!--Device-AudioPlayer-pause(): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
 ## play
@@ -266,6 +284,8 @@ play(): void
 **废弃版本：** 9
 
 **替代接口：** [play](arkts-media-media-avplayer-i.md#play)(callback: AsyncCallback&lt;void&gt;)
+
+<!--Device-AudioPlayer-play(): void--><!--Device-AudioPlayer-play(): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
@@ -288,6 +308,8 @@ release(): void
 
 **替代接口：** [release](arkts-media-media-avplayer-i.md#release)(callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-AudioPlayer-release(): void--><!--Device-AudioPlayer-release(): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
 ## reset
@@ -309,6 +331,8 @@ reset(): void
 
 **替代接口：** [reset](arkts-media-media-avplayer-i.md#reset)(callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-AudioPlayer-reset(): void--><!--Device-AudioPlayer-reset(): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
 ## seek
@@ -329,6 +353,8 @@ seek(timeMs: number): void
 **废弃版本：** 9
 
 **替代接口：** [seek](arkts-media-media-avplayer-i.md#seek)
+
+<!--Device-AudioPlayer-seek(timeMs: number): void--><!--Device-AudioPlayer-seek(timeMs: number): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
@@ -357,6 +383,8 @@ setVolume(vol: number): void
 
 **替代接口：** [setVolume](arkts-media-media-avplayer-i.md#setvolume)
 
+<!--Device-AudioPlayer-setVolume(vol: number): void--><!--Device-AudioPlayer-setVolume(vol: number): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
 **参数：**
@@ -384,6 +412,8 @@ stop(): void
 
 **替代接口：** [stop](arkts-media-media-avplayer-i.md#stop)(callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-AudioPlayer-stop(): void--><!--Device-AudioPlayer-stop(): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
 ## audioInterruptMode
@@ -401,6 +431,8 @@ audioInterruptMode?: audio.InterruptMode
 **废弃版本：** 9
 
 **替代接口：** [audioInterruptMode](arkts-media-media-avplayer-i.md#audiointerruptmode)
+
+<!--Device-AudioPlayer-audioInterruptMode?: audio.InterruptMode--><!--Device-AudioPlayer-audioInterruptMode?: audio.InterruptMode-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
@@ -420,6 +452,8 @@ readonly currentTime: number
 
 **替代接口：** [currentTime](arkts-media-media-avplayer-i.md#currenttime)
 
+<!--Device-AudioPlayer-readonly currentTime: number--><!--Device-AudioPlayer-readonly currentTime: number-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
 ## duration
@@ -437,6 +471,8 @@ readonly duration: number
 **废弃版本：** 9
 
 **替代接口：** [duration](arkts-media-media-avplayer-i.md#duration)
+
+<!--Device-AudioPlayer-readonly duration: number--><!--Device-AudioPlayer-readonly duration: number-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
@@ -472,6 +508,8 @@ fdSrc: AVFileDescriptor
 
 **替代接口：** [fdSrc](arkts-media-media-avplayer-i.md#fdsrc)
 
+<!--Device-AudioPlayer-fdSrc: AVFileDescriptor--><!--Device-AudioPlayer-fdSrc: AVFileDescriptor-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
 ## loop
@@ -489,6 +527,8 @@ loop: boolean
 **废弃版本：** 9
 
 **替代接口：** [loop](arkts-media-media-avplayer-i.md#loop)
+
+<!--Device-AudioPlayer-loop: boolean--><!--Device-AudioPlayer-loop: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
@@ -522,6 +562,8 @@ ohos.permission.READ_MEDIA 或 ohos.permission.INTERNET。
 
 **需要权限：** ohos.permission.READ_MEDIA or ohos.permission.INTERNET
 
+<!--Device-AudioPlayer-src: string--><!--Device-AudioPlayer-src: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
 ## state
@@ -539,5 +581,7 @@ readonly state: AudioState
 **废弃版本：** 9
 
 **替代接口：** [state](arkts-media-media-avplayer-i.md#state)
+
+<!--Device-AudioPlayer-readonly state: AudioState--><!--Device-AudioPlayer-readonly state: AudioState-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer

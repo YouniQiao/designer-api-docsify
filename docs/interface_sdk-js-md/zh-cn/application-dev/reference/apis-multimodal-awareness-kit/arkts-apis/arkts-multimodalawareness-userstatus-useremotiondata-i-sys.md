@@ -10,6 +10,8 @@ export interface UserEmotionData extends UserStatusData
 
 **起始版本：** 26.0.0
 
+<!--Device-userStatus-export interface UserEmotionData extends UserStatusData--><!--Device-userStatus-export interface UserEmotionData extends UserStatusData-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
 **系统接口：** 此接口为系统接口。
@@ -34,6 +36,8 @@ confidence?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UserEmotionData-confidence?: int--><!--Device-UserEmotionData-confidence?: int-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +55,8 @@ emotionNonRealTime ?: number[]
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UserEmotionData-emotionNonRealTime ?: int[]--><!--Device-UserEmotionData-emotionNonRealTime ?: int[]-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -70,6 +76,8 @@ emotionRealTime ?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UserEmotionData-emotionRealTime ?: int--><!--Device-UserEmotionData-emotionRealTime ?: int-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
 **系统接口：** 此接口为系统接口。
@@ -87,6 +95,8 @@ gravityAcceleration?: number[]
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UserEmotionData-gravityAcceleration?: double[]--><!--Device-UserEmotionData-gravityAcceleration?: double[]-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -106,6 +116,8 @@ isRealTime?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UserEmotionData-isRealTime?: boolean--><!--Device-UserEmotionData-isRealTime?: boolean-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
 **系统接口：** 此接口为系统接口。
@@ -123,6 +135,8 @@ linearAcceleration?: number[][]
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UserEmotionData-linearAcceleration?: double[][]--><!--Device-UserEmotionData-linearAcceleration?: double[][]-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 

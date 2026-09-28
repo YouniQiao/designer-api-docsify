@@ -23,6 +23,8 @@ Creates a toolbar item at the beginning of the corresponding column in the title
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ToolBarItemInterface-(options?: ToolBarItemOptions): ToolBarItemAttribute--><!--Device-ToolBarItemInterface-(options?: ToolBarItemOptions): ToolBarItemAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

@@ -8,6 +8,8 @@ BLE扫描的配置参数。
 
 **起始版本：** 10
 
+<!--Device-ble-interface ScanOptions--><!--Device-ble-interface ScanOptions-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -29,6 +31,8 @@ scanEnhanceMode?: ScanEnhanceMode
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ScanOptions-scanEnhanceMode?: ScanEnhanceMode--><!--Device-ScanOptions-scanEnhanceMode?: ScanEnhanceMode-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

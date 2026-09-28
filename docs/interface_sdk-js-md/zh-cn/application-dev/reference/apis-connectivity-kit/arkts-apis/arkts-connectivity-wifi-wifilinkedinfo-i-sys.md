@@ -16,6 +16,8 @@ interface WifiLinkedInfo
 
 **替代接口：** [WifiLinkedInfo](arkts-connectivity-wifimanager-wifilinkedinfo-i.md)
 
+<!--Device-wifi-interface WifiLinkedInfo--><!--Device-wifi-interface WifiLinkedInfo-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## 导入模块
@@ -42,6 +44,8 @@ chload: number
 
 **替代接口：** [chload](arkts-connectivity-wifimanager-wifilinkedinfo-i-sys.md#chload)
 
+<!--Device-WifiLinkedInfo-chload: number--><!--Device-WifiLinkedInfo-chload: number-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。
@@ -63,6 +67,8 @@ networkId: number
 **废弃版本：** 9
 
 **替代接口：** [networkId](arkts-connectivity-wifimanager-wifilinkedinfo-i-sys.md#networkid)
+
+<!--Device-WifiLinkedInfo-networkId: number--><!--Device-WifiLinkedInfo-networkId: number-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -86,6 +92,8 @@ snr: number
 
 **替代接口：** [snr](arkts-connectivity-wifimanager-wifilinkedinfo-i-sys.md#snr)
 
+<!--Device-WifiLinkedInfo-snr: number--><!--Device-WifiLinkedInfo-snr: number-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。
@@ -107,6 +115,8 @@ suppState: SuppState
 **废弃版本：** 9
 
 **替代接口：** [suppState](arkts-connectivity-wifimanager-wifilinkedinfo-i-sys.md#suppstate)
+
+<!--Device-WifiLinkedInfo-suppState: SuppState--><!--Device-WifiLinkedInfo-suppState: SuppState-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 

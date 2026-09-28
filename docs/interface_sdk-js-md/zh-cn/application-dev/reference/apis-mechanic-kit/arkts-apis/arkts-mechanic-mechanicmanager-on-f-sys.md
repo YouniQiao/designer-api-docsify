@@ -16,6 +16,8 @@ Register a listener for axis state changes. The status of the rotation axis chan
 
 **起始版本：** 20
 
+<!--Device-mechanicManager-function on(type: 'rotationAxesStatusChange', callback: Callback<RotationAxesStateChangeInfo>): void--><!--Device-mechanicManager-function on(type: 'rotationAxesStatusChange', callback: Callback<RotationAxesStateChangeInfo>): void-End-->
+
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。

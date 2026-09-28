@@ -10,6 +10,8 @@ class MediaHighlightAlbumChangeRequest extends MediaAnalysisAlbumChangeRequest
 
 **起始版本：** 21
 
+<!--Device-photoAccessHelper-class MediaHighlightAlbumChangeRequest extends MediaAnalysisAlbumChangeRequest--><!--Device-photoAccessHelper-class MediaHighlightAlbumChangeRequest extends MediaAnalysisAlbumChangeRequest-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -29,6 +31,8 @@ constructor(album: Album)
 构造函数。
 
 **起始版本：** 21
+
+<!--Device-MediaHighlightAlbumChangeRequest-constructor(album: Album)--><!--Device-MediaHighlightAlbumChangeRequest-constructor(album: Album)-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -83,6 +87,8 @@ setHighlightAttribute(attribute: HighlightAlbumChangeAttribute, value: string): 
 **起始版本：** 21
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-MediaHighlightAlbumChangeRequest-setHighlightAttribute(attribute: HighlightAlbumChangeAttribute, value: string): void--><!--Device-MediaHighlightAlbumChangeRequest-setHighlightAttribute(attribute: HighlightAlbumChangeAttribute, value: string): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

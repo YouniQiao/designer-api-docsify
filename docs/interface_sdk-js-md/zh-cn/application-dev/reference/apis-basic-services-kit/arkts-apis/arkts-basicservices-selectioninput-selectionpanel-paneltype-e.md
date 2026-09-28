@@ -8,6 +8,8 @@ export enum PanelType
 
 **起始版本：** 24
 
+<!--Device-unnamed-export enum PanelType--><!--Device-unnamed-export enum PanelType-End-->
+
 **系统能力：** SystemCapability.SelectionInput.Selection
 
 ## MENU_PANEL
@@ -22,6 +24,8 @@ MENU_PANEL = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PanelType-MENU_PANEL = 1--><!--Device-PanelType-MENU_PANEL = 1-End-->
+
 **系统能力：** SystemCapability.SelectionInput.Selection
 
 ## MAIN_PANEL
@@ -35,5 +39,7 @@ MAIN_PANEL = 2
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PanelType-MAIN_PANEL = 2--><!--Device-PanelType-MAIN_PANEL = 2-End-->
 
 **系统能力：** SystemCapability.SelectionInput.Selection

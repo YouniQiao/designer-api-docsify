@@ -20,6 +20,8 @@ function getCrossingSwitchState(networkId: string, callback: AsyncCallback<boole
 
 **替代接口：** [getCooperateSwitchState](arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md)(networkId: string, callback: AsyncCallback&lt;boolean&gt;)
 
+<!--Device-cooperate-function getCrossingSwitchState(networkId: string, callback: AsyncCallback<boolean>): void--><!--Device-cooperate-function getCrossingSwitchState(networkId: string, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
 
 **系统接口：** 此接口为系统接口。
@@ -73,6 +75,8 @@ function getCrossingSwitchState(networkId: string): Promise<boolean>
 **废弃版本：** 11
 
 **替代接口：** [getCooperateSwitchState](arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md#getcooperateswitchstate-1)(networkId: string)
+
+<!--Device-cooperate-function getCrossingSwitchState(networkId: string): Promise<boolean>--><!--Device-cooperate-function getCrossingSwitchState(networkId: string): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
 

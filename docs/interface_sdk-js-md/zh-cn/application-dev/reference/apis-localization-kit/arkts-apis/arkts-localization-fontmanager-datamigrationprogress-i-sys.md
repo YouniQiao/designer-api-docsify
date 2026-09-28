@@ -8,6 +8,8 @@ interface DataMigrationProgress
 
 **起始版本：** 23
 
+<!--Device-fontManager-interface DataMigrationProgress--><!--Device-fontManager-interface DataMigrationProgress-End-->
+
 **系统能力：** SystemCapability.Global.FontManager
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ progressPercentage: number
 
 **起始版本：** 23
 
+<!--Device-DataMigrationProgress-progressPercentage: int--><!--Device-DataMigrationProgress-progressPercentage: int-End-->
+
 **系统能力：** SystemCapability.Global.FontManager
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ timeRemaining: number
 **类型：** number
 
 **起始版本：** 23
+
+<!--Device-DataMigrationProgress-timeRemaining: int--><!--Device-DataMigrationProgress-timeRemaining: int-End-->
 
 **系统能力：** SystemCapability.Global.FontManager
 

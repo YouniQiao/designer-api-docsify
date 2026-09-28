@@ -12,6 +12,8 @@ TRIM_LEVEL_2相比TRIM_LEVEL_1，裁剪时间更长。冻屏的阈值为6秒。�
 
 **起始版本：** 20
 
+<!--Device-hidebug-enum JsRawHeapTrimLevel--><!--Device-hidebug-enum JsRawHeapTrimLevel-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 ## TRIM_LEVEL_1
@@ -24,6 +26,8 @@ LEVEL 1级别裁剪，主要裁剪字符串。
 
 **起始版本：** 20
 
+<!--Device-JsRawHeapTrimLevel-TRIM_LEVEL_1 = 0--><!--Device-JsRawHeapTrimLevel-TRIM_LEVEL_1 = 0-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 ## TRIM_LEVEL_2
@@ -35,5 +39,7 @@ TRIM_LEVEL_2 = 1
 LEVEL 2级别裁剪，在TRIM_LEVEL_1的基础上，精简了对象地址标识的大小，从8个字节减少到4个字节。
 
 **起始版本：** 20
+
+<!--Device-JsRawHeapTrimLevel-TRIM_LEVEL_2 = 1--><!--Device-JsRawHeapTrimLevel-TRIM_LEVEL_2 = 1-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug

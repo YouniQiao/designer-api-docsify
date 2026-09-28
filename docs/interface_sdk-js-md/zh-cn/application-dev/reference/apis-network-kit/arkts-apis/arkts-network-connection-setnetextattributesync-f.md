@@ -22,6 +22,8 @@ function setNetExtAttributeSync(netHandle: NetHandle, netExtAttribute: string): 
 
 **需要权限：** ohos.permission.SET_NET_EXT_ATTRIBUTE
 
+<!--Device-connection-function setNetExtAttributeSync(netHandle: NetHandle, netExtAttribute: string): void--><!--Device-connection-function setNetExtAttributeSync(netHandle: NetHandle, netExtAttribute: string): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**

@@ -10,6 +10,8 @@ interface PhotoAsset extends lang.ISendable
 
 **起始版本：** 12
 
+<!--Device-sendablePhotoAccessHelper-interface PhotoAsset extends lang.ISendable--><!--Device-sendablePhotoAccessHelper-interface PhotoAsset extends lang.ISendable-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
@@ -31,6 +33,8 @@ commitModify(): Promise<void>
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PhotoAsset-commitModify(): Promise<void>--><!--Device-PhotoAsset-commitModify(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -90,6 +94,8 @@ convertToPhotoAsset(): photoAccessHelper.PhotoAsset
 
 **起始版本：** 12
 
+<!--Device-PhotoAsset-convertToPhotoAsset(): photoAccessHelper.PhotoAsset--><!--Device-PhotoAsset-convertToPhotoAsset(): photoAccessHelper.PhotoAsset-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **返回值：**
@@ -140,6 +146,8 @@ get(member: string): photoAccessHelper.MemberType
 获取PhotoAsset成员参数的值。
 
 **起始版本：** 12
+
+<!--Device-PhotoAsset-get(member: string): photoAccessHelper.MemberType--><!--Device-PhotoAsset-get(member: string): photoAccessHelper.MemberType-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -203,6 +211,8 @@ getThumbnail(size?: image.Size): Promise<image.PixelMap>
 **起始版本：** 12
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAsset-getThumbnail(size?: image.Size): Promise<image.PixelMap>--><!--Device-PhotoAsset-getThumbnail(size?: image.Size): Promise<image.PixelMap>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -269,6 +279,8 @@ set(member: string, value: string): void
 
 **起始版本：** 12
 
+<!--Device-PhotoAsset-set(member: string, value: string): void--><!--Device-PhotoAsset-set(member: string, value: string): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **参数：**
@@ -322,6 +334,8 @@ readonly displayName: string
 
 **起始版本：** 12
 
+<!--Device-PhotoAsset-readonly displayName: string--><!--Device-PhotoAsset-readonly displayName: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## photoType
@@ -335,6 +349,8 @@ readonly photoType: PhotoType
 **类型：** [PhotoType](arkts-medialibrary-sendablephotoaccesshelper-phototype-e.md)
 
 **起始版本：** 12
+
+<!--Device-PhotoAsset-readonly photoType: PhotoType--><!--Device-PhotoAsset-readonly photoType: PhotoType-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -351,5 +367,7 @@ readonly uri: string
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PhotoAsset-readonly uri: string--><!--Device-PhotoAsset-readonly uri: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core

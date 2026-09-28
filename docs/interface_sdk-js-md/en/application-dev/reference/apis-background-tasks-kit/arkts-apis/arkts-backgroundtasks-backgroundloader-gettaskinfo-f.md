@@ -20,6 +20,8 @@ Obtains the information of a background load task. This API returns the result v
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-backgroundLoader-function getTaskInfo(taskId: int): Promise<TaskInfo>--><!--Device-backgroundLoader-function getTaskInfo(taskId: int): Promise<TaskInfo>-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
 **Parameters:**

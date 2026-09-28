@@ -8,6 +8,8 @@ Provides the text decoration information returned by the backend.
 
 **Since:** 12
 
+<!--Device-unnamed-interface DecorationStyleResult--><!--Device-unnamed-interface DecorationStyleResult-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## color
@@ -25,6 +27,8 @@ Color of the decoration line.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DecorationStyleResult-color: ResourceColor--><!--Device-DecorationStyleResult-color: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,6 +49,8 @@ Default value: TextDecorationStyle.SOLID
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DecorationStyleResult-style?: TextDecorationStyle--><!--Device-DecorationStyleResult-style?: TextDecorationStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -70,6 +76,8 @@ Value range: [0, +∞)
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-DecorationStyleResult-thicknessScale?: number--><!--Device-DecorationStyleResult-thicknessScale?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## type
@@ -87,5 +95,7 @@ Type of the decoration line.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DecorationStyleResult-type: TextDecorationType--><!--Device-DecorationStyleResult-type: TextDecorationType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

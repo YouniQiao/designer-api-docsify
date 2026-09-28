@@ -8,6 +8,8 @@ enum NotifyType
 
 **起始版本：** 12
 
+<!--Device-cloudSync-enum NotifyType--><!--Device-cloudSync-enum NotifyType-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## NOTIFY_ADDED
@@ -19,6 +21,8 @@ NOTIFY_ADDED = 0
 文件已新建。
 
 **起始版本：** 12
+
+<!--Device-NotifyType-NOTIFY_ADDED = 0--><!--Device-NotifyType-NOTIFY_ADDED = 0-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -32,6 +36,8 @@ NOTIFY_MODIFIED = 1
 
 **起始版本：** 12
 
+<!--Device-NotifyType-NOTIFY_MODIFIED = 1--><!--Device-NotifyType-NOTIFY_MODIFIED = 1-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## NOTIFY_DELETED
@@ -44,6 +50,8 @@ NOTIFY_DELETED = 2
 
 **起始版本：** 12
 
+<!--Device-NotifyType-NOTIFY_DELETED = 2--><!--Device-NotifyType-NOTIFY_DELETED = 2-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## NOTIFY_RENAMED
@@ -55,5 +63,7 @@ NOTIFY_RENAMED = 3
 文件被重命名或者移动。
 
 **起始版本：** 12
+
+<!--Device-NotifyType-NOTIFY_RENAMED = 3--><!--Device-NotifyType-NOTIFY_RENAMED = 3-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core

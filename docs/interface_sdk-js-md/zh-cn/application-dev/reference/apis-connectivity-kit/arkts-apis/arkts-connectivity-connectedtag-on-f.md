@@ -18,6 +18,8 @@ function on(type: "notify", callback: Callback<number>): void
 
 **需要权限：** ohos.permission.NFC_TAG
 
+<!--Device-connectedTag-function on(type: "notify", callback: Callback<number>): void--><!--Device-connectedTag-function on(type: "notify", callback: Callback<number>): void-End-->
+
 **系统能力：** SystemCapability.Communication.ConnectedTag
 
 **参数：**

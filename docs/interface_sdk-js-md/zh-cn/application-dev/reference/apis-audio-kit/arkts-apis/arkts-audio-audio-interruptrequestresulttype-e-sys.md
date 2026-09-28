@@ -8,6 +8,8 @@ enum InterruptRequestResultType
 
 **起始版本：** 9
 
+<!--Device-audio-enum InterruptRequestResultType--><!--Device-audio-enum InterruptRequestResultType-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Interrupt
 
 **系统接口：** 此接口为系统接口。
@@ -22,6 +24,8 @@ INTERRUPT_REQUEST_GRANT = 0
 
 **起始版本：** 9
 
+<!--Device-InterruptRequestResultType-INTERRUPT_REQUEST_GRANT = 0--><!--Device-InterruptRequestResultType-INTERRUPT_REQUEST_GRANT = 0-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Interrupt
 
 **系统接口：** 此接口为系统接口。
@@ -35,6 +39,8 @@ INTERRUPT_REQUEST_REJECT = 1
 请求音频中断失败，可能具有较高优先级类型。
 
 **起始版本：** 9
+
+<!--Device-InterruptRequestResultType-INTERRUPT_REQUEST_REJECT = 1--><!--Device-InterruptRequestResultType-INTERRUPT_REQUEST_REJECT = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Interrupt
 

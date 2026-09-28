@@ -12,6 +12,8 @@ Defines the Particle component attribute functions.
 
 **Since:** 10
 
+<!--Device-unnamed-declare class ParticleAttribute extends CommonMethod<ParticleAttribute>--><!--Device-unnamed-declare class ParticleAttribute extends CommonMethod<ParticleAttribute>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## disturbanceFields
@@ -27,6 +29,8 @@ Sets the disturbance fields.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ParticleAttribute-disturbanceFields(fields: Array<DisturbanceFieldOptions>): ParticleAttribute--><!--Device-ParticleAttribute-disturbanceFields(fields: Array<DisturbanceFieldOptions>): ParticleAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,6 +54,8 @@ Sets the emitter parameters.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ParticleAttribute-emitter(value: Array<EmitterProperty>): ParticleAttribute--><!--Device-ParticleAttribute-emitter(value: Array<EmitterProperty>): ParticleAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -72,6 +78,8 @@ Sets the particle wave field. The wave field applies a force that changes accord
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-ParticleAttribute-rippleFields(fields: Array<RippleFieldOptions> | undefined): ParticleAttribute--><!--Device-ParticleAttribute-rippleFields(fields: Array<RippleFieldOptions> | undefined): ParticleAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -93,6 +101,8 @@ Sets the particle velocity field. The velocity field applies a force to particle
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-ParticleAttribute-velocityFields(fields: Array<VelocityFieldOptions> | undefined): ParticleAttribute--><!--Device-ParticleAttribute-velocityFields(fields: Array<VelocityFieldOptions> | undefined): ParticleAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

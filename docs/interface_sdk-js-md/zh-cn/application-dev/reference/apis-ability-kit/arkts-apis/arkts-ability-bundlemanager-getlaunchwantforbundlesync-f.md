@@ -20,6 +20,8 @@ function getLaunchWantForBundleSync(bundleName: string, userId?: number): Want
 - API版本24+：ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or (ohos.permission.GET_BUNDLE_INFO_PRIVILEGED and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS)
 - API版本10-23：ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-bundleManager-function getLaunchWantForBundleSync(bundleName: string, userId?: int): Want--><!--Device-bundleManager-function getLaunchWantForBundleSync(bundleName: string, userId?: int): Want-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **参数：**

@@ -20,6 +20,8 @@ function getUserDocumentDir(): string
 - API版本12+：N/A
 - API版本11：ohos.permission.READ_WRITE_DOCUMENTS_DIRECTORY
 
+<!--Device-Environment-function getUserDocumentDir(): string--><!--Device-Environment-function getUserDocumentDir(): string-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.Environment.FolderObtain
 
 **返回值：**

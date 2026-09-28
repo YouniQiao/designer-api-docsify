@@ -18,6 +18,8 @@ function getDeviceRotationRadian(): Promise<DeviceRotationRadian>
 
 **起始版本：** 20
 
+<!--Device-deviceStatus-function getDeviceRotationRadian(): Promise<DeviceRotationRadian>--><!--Device-deviceStatus-function getDeviceRotationRadian(): Promise<DeviceRotationRadian>-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.DeviceStatus
 
 **系统接口：** 此接口为系统接口。

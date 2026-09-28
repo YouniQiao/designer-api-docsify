@@ -26,6 +26,8 @@ function getRemoteDeviceClass(deviceId: string): DeviceClass
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH
 - API版本9：ohos.permission.USE_BLUETOOTH
 
+<!--Device-bluetoothManager-function getRemoteDeviceClass(deviceId: string): DeviceClass--><!--Device-bluetoothManager-function getRemoteDeviceClass(deviceId: string): DeviceClass-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**

@@ -18,6 +18,8 @@ declare function createStream(path: string, mode: string): Promise<Stream>
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-unnamed-declare function createStream(path: string, mode: string): Promise<Stream>--><!--Device-unnamed-declare function createStream(path: string, mode: string): Promise<Stream>-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -79,6 +81,8 @@ declare function createStream(path: string, mode: string, callback: AsyncCallbac
 **起始版本：** 9
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-unnamed-declare function createStream(path: string, mode: string, callback: AsyncCallback<Stream>): void--><!--Device-unnamed-declare function createStream(path: string, mode: string, callback: AsyncCallback<Stream>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

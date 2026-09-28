@@ -31,6 +31,8 @@ Creates a polyline.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-PolylineInterface-new (options?: PolylineOptions): PolylineAttribute--><!--Device-PolylineInterface-new (options?: PolylineOptions): PolylineAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -54,6 +56,8 @@ Creates a polyline.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-PolylineInterface-(options?: PolylineOptions): PolylineAttribute--><!--Device-PolylineInterface-(options?: PolylineOptions): PolylineAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

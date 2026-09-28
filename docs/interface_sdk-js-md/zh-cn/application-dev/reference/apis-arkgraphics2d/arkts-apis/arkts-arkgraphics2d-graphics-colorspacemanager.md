@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace colorSpaceManager--><!--Device-unnamed-declare namespace colorSpaceManager-End-->
+
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
 ## 导入模块

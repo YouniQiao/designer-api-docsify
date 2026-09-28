@@ -20,6 +20,8 @@ function switchInputMethodWithUserId(bundleName: string, subtypeId?: string, use
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-inputMethod-function switchInputMethodWithUserId(bundleName: string, subtypeId?: string, userId?: int): Promise<void>--><!--Device-inputMethod-function switchInputMethodWithUserId(bundleName: string, subtypeId?: string, userId?: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **系统接口：** 此接口为系统接口。

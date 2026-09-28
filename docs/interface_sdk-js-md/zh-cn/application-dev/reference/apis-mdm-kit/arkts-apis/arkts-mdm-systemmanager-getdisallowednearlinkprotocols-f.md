@@ -20,6 +20,8 @@ function getDisallowedNearLinkProtocols(admin: Want, accountId: number): Array<N
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-systemManager-function getDisallowedNearLinkProtocols(admin: Want, accountId: number): Array<NearLinkProtocol>--><!--Device-systemManager-function getDisallowedNearLinkProtocols(admin: Want, accountId: number): Array<NearLinkProtocol>-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**

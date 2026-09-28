@@ -20,6 +20,8 @@ function getSkillInfoForSelf(moduleName: string, skillName: string, flags: numbe
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-skillManager-function getSkillInfoForSelf(moduleName: string, skillName: string, flags: int): Promise<SkillInfo>--><!--Device-skillManager-function getSkillInfoForSelf(moduleName: string, skillName: string, flags: int): Promise<SkillInfo>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **参数：**

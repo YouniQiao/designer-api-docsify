@@ -18,6 +18,8 @@ function offAutoSyncTrigger(observer?: Callback<AutoSyncTriggerInfo>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-cloudData-function offAutoSyncTrigger(observer?: Callback<AutoSyncTriggerInfo>): void--><!--Device-cloudData-function offAutoSyncTrigger(observer?: Callback<AutoSyncTriggerInfo>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
 **参数：**

@@ -16,7 +16,9 @@ function publish(event: string, callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-commonEventManager-function publish(event: string, callback: AsyncCallback<void>): void--><!--Device-commonEventManager-function publish(event: string, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -69,7 +71,9 @@ function publish(event: string, options: CommonEventPublishData, callback: Async
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-commonEventManager-function publish(event: string, options: CommonEventPublishData, callback: AsyncCallback<void>): void--><!--Device-commonEventManager-function publish(event: string, options: CommonEventPublishData, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 

@@ -20,6 +20,8 @@ declare function access(path: string, mode?: AccessModeType): Promise<boolean>
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-unnamed-declare function access(path: string, mode?: AccessModeType): Promise<boolean>--><!--Device-unnamed-declare function access(path: string, mode?: AccessModeType): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -67,6 +69,8 @@ declare function access(path: string, callback: AsyncCallback<boolean>): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-unnamed-declare function access(path: string, callback: AsyncCallback<boolean>): void--><!--Device-unnamed-declare function access(path: string, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -107,6 +111,8 @@ declare function access(path: string, mode: AccessModeType, flag: AccessFlagType
 校验读、写或读写权限不通过会抛出13900012（Permission denied）错误码。
 
 **起始版本：** 12
+
+<!--Device-unnamed-declare function access(path: string, mode: AccessModeType, flag: AccessFlagType): Promise<boolean>--><!--Device-unnamed-declare function access(path: string, mode: AccessModeType, flag: AccessFlagType): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

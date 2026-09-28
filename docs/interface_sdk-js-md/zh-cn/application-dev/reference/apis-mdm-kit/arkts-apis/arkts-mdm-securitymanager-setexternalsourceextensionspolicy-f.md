@@ -30,6 +30,8 @@ function setExternalSourceExtensionsPolicy(admin: Want, policy: common.ManagedPo
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-securityManager-function setExternalSourceExtensionsPolicy(admin: Want, policy: common.ManagedPolicy): void--><!--Device-securityManager-function setExternalSourceExtensionsPolicy(admin: Want, policy: common.ManagedPolicy): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**

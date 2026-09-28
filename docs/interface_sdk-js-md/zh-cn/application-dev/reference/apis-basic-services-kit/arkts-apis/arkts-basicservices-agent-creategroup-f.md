@@ -16,6 +16,8 @@ function createGroup(config: GroupConfig): Promise<string>
 
 **起始版本：** 15
 
+<!--Device-agent-function createGroup(config: GroupConfig): Promise<string>--><!--Device-agent-function createGroup(config: GroupConfig): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 **参数：**

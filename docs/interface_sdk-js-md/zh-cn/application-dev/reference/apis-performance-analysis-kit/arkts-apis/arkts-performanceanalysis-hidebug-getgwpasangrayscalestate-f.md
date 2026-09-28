@@ -21,6 +21,8 @@ function getGwpAsanGrayscaleState(): number
 
 **起始版本：** 20
 
+<!--Device-hidebug-function getGwpAsanGrayscaleState(): int--><!--Device-hidebug-function getGwpAsanGrayscaleState(): int-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **返回值：**

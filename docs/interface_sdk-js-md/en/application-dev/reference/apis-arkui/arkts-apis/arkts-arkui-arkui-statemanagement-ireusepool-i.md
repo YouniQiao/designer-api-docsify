@@ -8,6 +8,8 @@ Provides the features related to the global reuse pool of a custom component, in
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export declare interface IReusePool--><!--Device-unnamed-export declare interface IReusePool-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -30,6 +32,8 @@ Obtains the information about the recycling instance of a given reusable compone
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-IReusePool-getReusableInfo(constructor: ReusableComponentConstructor,    reuseId?: string): IReusableInfo[] | IReusableInfo | undefined--><!--Device-IReusePool-getReusableInfo(constructor: ReusableComponentConstructor,    reuseId?: string): IReusableInfo[] | IReusableInfo | undefined-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -134,6 +138,8 @@ Invokes an idle task to pre-create a reusable component and put it into the reus
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-IReusePool-preRender(builder: WrappedBuilder<[]>, times: number): Promise<void>--><!--Device-IReusePool-preRender(builder: WrappedBuilder<[]>, times: number): Promise<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

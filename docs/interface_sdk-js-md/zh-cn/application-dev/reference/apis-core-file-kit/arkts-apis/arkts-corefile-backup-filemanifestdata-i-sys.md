@@ -10,6 +10,8 @@ interface FileManifestData
 
 **起始版本：** 12
 
+<!--Device-backup-interface FileManifestData--><!--Device-backup-interface FileManifestData-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 **系统接口：** 此接口为系统接口。
@@ -31,6 +33,8 @@ manifestFd: number
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-FileManifestData-manifestFd: int--><!--Device-FileManifestData-manifestFd: int-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 

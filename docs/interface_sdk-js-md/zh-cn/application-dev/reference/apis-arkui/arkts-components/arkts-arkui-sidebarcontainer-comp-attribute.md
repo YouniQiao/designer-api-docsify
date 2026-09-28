@@ -12,6 +12,8 @@ declare class SideBarContainerAttribute extends CommonMethod<SideBarContainerAtt
 
 **起始版本：** 8
 
+<!--Device-unnamed-declare class SideBarContainerAttribute extends CommonMethod<SideBarContainerAttribute>--><!--Device-unnamed-declare class SideBarContainerAttribute extends CommonMethod<SideBarContainerAttribute>-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## autoHide
@@ -27,6 +29,8 @@ autoHide(value: boolean)
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SideBarContainerAttribute-autoHide(value: boolean): SideBarContainerAttribute--><!--Device-SideBarContainerAttribute-autoHide(value: boolean): SideBarContainerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,6 +51,8 @@ controlButton(value: ButtonStyle)
 **起始版本：** 8
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SideBarContainerAttribute-controlButton(value: ButtonStyle): SideBarContainerAttribute--><!--Device-SideBarContainerAttribute-controlButton(value: ButtonStyle): SideBarContainerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -70,6 +76,8 @@ divider(value: DividerStyle | null)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-SideBarContainerAttribute-divider(value: DividerStyle | null): SideBarContainerAttribute--><!--Device-SideBarContainerAttribute-divider(value: DividerStyle | null): SideBarContainerAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -91,6 +99,8 @@ maxSideBarWidth优先于侧边栏子组件maxWidth，maxSideBarWidth未设置时
 **起始版本：** 8
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SideBarContainerAttribute-maxSideBarWidth(value: number): SideBarContainerAttribute--><!--Device-SideBarContainerAttribute-maxSideBarWidth(value: number): SideBarContainerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -115,6 +125,8 @@ maxSideBarWidth优先于侧边栏子组件maxWidth，maxSideBarWidth未设置时
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SideBarContainerAttribute-maxSideBarWidth(value: Length): SideBarContainerAttribute--><!--Device-SideBarContainerAttribute-maxSideBarWidth(value: Length): SideBarContainerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -151,6 +163,8 @@ minContentWidth优先于侧边栏的[maxSideBarWidth](#maxsidebarwidth)与sideBa
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-SideBarContainerAttribute-minContentWidth(value: Dimension): SideBarContainerAttribute--><!--Device-SideBarContainerAttribute-minContentWidth(value: Dimension): SideBarContainerAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -172,6 +186,8 @@ minSideBarWidth优先于侧边栏子组件minWidth，minSideBarWidth未设置时
 **起始版本：** 8
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SideBarContainerAttribute-minSideBarWidth(value: number): SideBarContainerAttribute--><!--Device-SideBarContainerAttribute-minSideBarWidth(value: number): SideBarContainerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -196,6 +212,8 @@ minSideBarWidth优先于侧边栏子组件minWidth，minSideBarWidth未设置时
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SideBarContainerAttribute-minSideBarWidth(value: Length): SideBarContainerAttribute--><!--Device-SideBarContainerAttribute-minSideBarWidth(value: Length): SideBarContainerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -223,6 +241,8 @@ onChange(callback: (value: boolean) => void)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-SideBarContainerAttribute-onChange(callback: (value: boolean) => void): SideBarContainerAttribute--><!--Device-SideBarContainerAttribute-onChange(callback: (value: boolean) => void): SideBarContainerAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -242,6 +262,8 @@ showControlButton(value: boolean)
 **起始版本：** 8
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SideBarContainerAttribute-showControlButton(value: boolean): SideBarContainerAttribute--><!--Device-SideBarContainerAttribute-showControlButton(value: boolean): SideBarContainerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -266,6 +288,8 @@ showSideBar(value: boolean)
 **起始版本：** 8
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SideBarContainerAttribute-showSideBar(value: boolean): SideBarContainerAttribute--><!--Device-SideBarContainerAttribute-showSideBar(value: boolean): SideBarContainerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -305,6 +329,8 @@ showSideBarWithGesture(value: boolean)
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-SideBarContainerAttribute-showSideBarWithGesture(value: boolean): SideBarContainerAttribute--><!--Device-SideBarContainerAttribute-showSideBarWithGesture(value: boolean): SideBarContainerAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -324,6 +350,8 @@ sideBarPosition(value: SideBarPosition)
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SideBarContainerAttribute-sideBarPosition(value: SideBarPosition): SideBarContainerAttribute--><!--Device-SideBarContainerAttribute-sideBarPosition(value: SideBarPosition): SideBarContainerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -346,6 +374,8 @@ sideBarWidth(value: number)
 **起始版本：** 8
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SideBarContainerAttribute-sideBarWidth(value: number): SideBarContainerAttribute--><!--Device-SideBarContainerAttribute-sideBarWidth(value: number): SideBarContainerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -370,6 +400,8 @@ sideBarWidth(value: Length)
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SideBarContainerAttribute-sideBarWidth(value: Length): SideBarContainerAttribute--><!--Device-SideBarContainerAttribute-sideBarWidth(value: Length): SideBarContainerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

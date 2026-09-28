@@ -8,6 +8,8 @@ enum ImageFormat
 
 **起始版本：** 9
 
+<!--Device-image-enum ImageFormat--><!--Device-image-enum ImageFormat-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## YCBCR_422_SP
@@ -20,6 +22,8 @@ YCBCR422半平面格式。
 
 **起始版本：** 9
 
+<!--Device-ImageFormat-YCBCR_422_SP = 1000--><!--Device-ImageFormat-YCBCR_422_SP = 1000-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## JPEG
@@ -31,5 +35,7 @@ JPEG = 2000
 JPEG编码格式。
 
 **起始版本：** 9
+
+<!--Device-ImageFormat-JPEG = 2000--><!--Device-ImageFormat-JPEG = 2000-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core

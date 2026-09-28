@@ -8,6 +8,8 @@ interface AudioRenderer
 
 **起始版本：** 8
 
+<!--Device-audio-interface AudioRenderer--><!--Device-audio-interface AudioRenderer-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 ## 导入模块
@@ -31,6 +33,8 @@ getTarget(): RenderTarget
 > - 若调用此接口前，已经调用过[SetTarget](#settarget)，请确保[SetTarget](#settarget)的Promise对象已成功解析，否则获取到的数值可能不准确。
 
 **起始版本：** 22
+
+<!--Device-AudioRenderer-getTarget(): RenderTarget--><!--Device-AudioRenderer-getTarget(): RenderTarget-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -87,6 +91,8 @@ setTarget(target: RenderTarget): Promise<void>
 **起始版本：** 22
 
 **需要权限：** ohos.permission.INJECT_PLAYBACK_TO_AUDIO_CAPTURE
+
+<!--Device-AudioRenderer-setTarget(target: RenderTarget): Promise<void>--><!--Device-AudioRenderer-setTarget(target: RenderTarget): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -156,6 +162,8 @@ setTarget(target: RenderTarget, targetParams?: AudioRendererTargetParams): Promi
 **需要权限：** ohos.permission.INJECT_PLAYBACK_TO_AUDIO_CAPTURE
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioRenderer-setTarget(target: RenderTarget, targetParams?: AudioRendererTargetParams): Promise<void>--><!--Device-AudioRenderer-setTarget(target: RenderTarget, targetParams?: AudioRendererTargetParams): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 

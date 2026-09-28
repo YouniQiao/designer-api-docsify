@@ -8,6 +8,8 @@ interface DistributedAccountAbility
 
 **起始版本：** 7
 
+<!--Device-distributedAccount-interface DistributedAccountAbility--><!--Device-distributedAccount-interface DistributedAccountAbility-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 ## 导入模块
@@ -27,6 +29,8 @@ getOsAccountDistributedInfo(callback: AsyncCallback<DistributedInfo>): void
 **起始版本：** 9
 
 **需要权限：** ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS or ohos.permission.GET_DISTRIBUTED_ACCOUNTS or ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DistributedAccountAbility-getOsAccountDistributedInfo(callback: AsyncCallback<DistributedInfo>): void--><!--Device-DistributedAccountAbility-getOsAccountDistributedInfo(callback: AsyncCallback<DistributedInfo>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -80,6 +84,8 @@ getOsAccountDistributedInfo(): Promise<DistributedInfo>
 
 **需要权限：** ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS or ohos.permission.GET_DISTRIBUTED_ACCOUNTS or ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DistributedAccountAbility-getOsAccountDistributedInfo(): Promise<DistributedInfo>--><!--Device-DistributedAccountAbility-getOsAccountDistributedInfo(): Promise<DistributedInfo>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **返回值：**
@@ -125,6 +131,8 @@ setOsAccountDistributedInfo(accountInfo: DistributedInfo, callback: AsyncCallbac
 **起始版本：** 9
 
 **需要权限：** ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS
+
+<!--Device-DistributedAccountAbility-setOsAccountDistributedInfo(accountInfo: DistributedInfo, callback: AsyncCallback<void>): void--><!--Device-DistributedAccountAbility-setOsAccountDistributedInfo(accountInfo: DistributedInfo, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -183,6 +191,8 @@ setOsAccountDistributedInfo(accountInfo: DistributedInfo): Promise<void>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS
+
+<!--Device-DistributedAccountAbility-setOsAccountDistributedInfo(accountInfo: DistributedInfo): Promise<void>--><!--Device-DistributedAccountAbility-setOsAccountDistributedInfo(accountInfo: DistributedInfo): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -253,6 +263,8 @@ queryOsAccountDistributedInfo(callback: AsyncCallback<DistributedInfo>): void
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DistributedAccountAbility-queryOsAccountDistributedInfo(callback: AsyncCallback<DistributedInfo>): void--><!--Device-DistributedAccountAbility-queryOsAccountDistributedInfo(callback: AsyncCallback<DistributedInfo>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
@@ -302,6 +314,8 @@ queryOsAccountDistributedInfo(): Promise<DistributedInfo>
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DistributedAccountAbility-queryOsAccountDistributedInfo(): Promise<DistributedInfo>--><!--Device-DistributedAccountAbility-queryOsAccountDistributedInfo(): Promise<DistributedInfo>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **返回值：**
@@ -345,6 +359,8 @@ updateOsAccountDistributedInfo(accountInfo: DistributedInfo, callback: AsyncCall
 **替代接口：** [setOsAccountDistributedInfo](#setosaccountdistributedinfo)(accountInfo: DistributedInfo, callback: AsyncCallback&lt;void&gt;)
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-DistributedAccountAbility-updateOsAccountDistributedInfo(accountInfo: DistributedInfo, callback: AsyncCallback<void>): void--><!--Device-DistributedAccountAbility-updateOsAccountDistributedInfo(accountInfo: DistributedInfo, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -397,6 +413,8 @@ updateOsAccountDistributedInfo(accountInfo: DistributedInfo): Promise<void>
 **替代接口：** [setOsAccountDistributedInfo](#setosaccountdistributedinfo-1)(accountInfo: DistributedInfo)
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-DistributedAccountAbility-updateOsAccountDistributedInfo(accountInfo: DistributedInfo): Promise<void>--><!--Device-DistributedAccountAbility-updateOsAccountDistributedInfo(accountInfo: DistributedInfo): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 

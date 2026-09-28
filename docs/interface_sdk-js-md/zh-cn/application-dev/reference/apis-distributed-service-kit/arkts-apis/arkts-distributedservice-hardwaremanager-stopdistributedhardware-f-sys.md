@@ -18,6 +18,8 @@ function stopDistributedHardware(description: HardwareDescriptor): Promise<void>
 
 **需要权限：** ohos.permission.ACCESS_DISTRIBUTED_HARDWARE
 
+<!--Device-hardwareManager-function stopDistributedHardware(description: HardwareDescriptor): Promise<void>--><!--Device-hardwareManager-function stopDistributedHardware(description: HardwareDescriptor): Promise<void>-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DistributedHardwareFWK
 
 **系统接口：** 此接口为系统接口。

@@ -8,6 +8,8 @@ interface VibratorInfoParam
 
 **起始版本：** 19
 
+<!--Device-vibrator-interface VibratorInfoParam--><!--Device-vibrator-interface VibratorInfoParam-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## 导入模块
@@ -28,6 +30,8 @@ deviceId?: number
 
 **起始版本：** 19
 
+<!--Device-VibratorInfoParam-deviceId?: int--><!--Device-VibratorInfoParam-deviceId?: int-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## vibratorId
@@ -41,5 +45,7 @@ vibratorId?: number
 **类型：** number
 
 **起始版本：** 19
+
+<!--Device-VibratorInfoParam-vibratorId?: int--><!--Device-VibratorInfoParam-vibratorId?: int-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice

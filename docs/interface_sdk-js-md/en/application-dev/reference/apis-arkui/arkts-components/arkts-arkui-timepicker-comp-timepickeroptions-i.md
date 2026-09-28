@@ -55,6 +55,8 @@ error. For example, 10. Unit: ms (millisecond).
 
 **Since:** 8
 
+<!--Device-unnamed-declare interface TimePickerOptions--><!--Device-unnamed-declare interface TimePickerOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## end
@@ -82,6 +84,8 @@ Default value: the end time is 23:59:59 (hour = 23, minute = 59)
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TimePickerOptions-end?: Date--><!--Device-TimePickerOptions-end?: Date-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## format
@@ -106,6 +110,8 @@ Default value: TimePickerFormat.HOUR_MINUTE
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TimePickerOptions-format?: TimePickerFormat--><!--Device-TimePickerOptions-format?: TimePickerFormat-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## selected
@@ -129,6 +135,8 @@ Since API version 10, this parameter supports [$$](../../../ui/state-management/
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TimePickerOptions-selected?: Date--><!--Device-TimePickerOptions-selected?: Date-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -156,5 +164,7 @@ Default value: the start time is 00:00:00 (hour = 0, minute = 0)
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-TimePickerOptions-start?: Date--><!--Device-TimePickerOptions-start?: Date-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

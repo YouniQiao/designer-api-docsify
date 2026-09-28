@@ -16,6 +16,8 @@ function turnBySpeed(mechId: number, angleSpeed: number, duration: number): Prom
 
 **起始版本：** 26.0.0
 
+<!--Device-mechanicManager-function turnBySpeed(mechId: int, angleSpeed: double, duration: int): Promise<Result>--><!--Device-mechanicManager-function turnBySpeed(mechId: int, angleSpeed: double, duration: int): Promise<Result>-End-->
+
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。

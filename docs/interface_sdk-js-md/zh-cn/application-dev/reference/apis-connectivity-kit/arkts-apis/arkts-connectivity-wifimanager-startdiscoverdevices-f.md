@@ -20,6 +20,8 @@ function startDiscoverDevices(): void
 - API版本10+：ohos.permission.GET_WIFI_INFO
 - API版本9：ohos.permission.GET_WIFI_INFO and ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
+<!--Device-wifiManager-function startDiscoverDevices(): void--><!--Device-wifiManager-function startDiscoverDevices(): void-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
 **错误码：**

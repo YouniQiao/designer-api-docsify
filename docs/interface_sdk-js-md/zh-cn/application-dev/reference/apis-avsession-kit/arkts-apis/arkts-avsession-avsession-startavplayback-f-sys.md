@@ -18,6 +18,8 @@ function startAVPlayback(bundleName: string, assetId: string): Promise<void>
 
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
 
+<!--Device-avSession-function startAVPlayback(bundleName: string, assetId: string): Promise<void>--><!--Device-avSession-function startAVPlayback(bundleName: string, assetId: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 
 **系统接口：** 此接口为系统接口。
@@ -68,6 +70,8 @@ function startAVPlayback(bundleName: string, assetId: string, info: CommandInfo)
 **起始版本：** 22
 
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
+
+<!--Device-avSession-function startAVPlayback(bundleName: string, assetId: string, info: CommandInfo): Promise<void>--><!--Device-avSession-function startAVPlayback(bundleName: string, assetId: string, info: CommandInfo): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 

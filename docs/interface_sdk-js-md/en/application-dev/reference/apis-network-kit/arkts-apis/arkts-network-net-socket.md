@@ -9,6 +9,8 @@ The **socket** module implements data transfer over TCP, UDP, Web, and TLS socke
 
 **Since:** 7
 
+<!--Device-unnamed-declare namespace socket--><!--Device-unnamed-declare namespace socket-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import

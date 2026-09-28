@@ -8,6 +8,8 @@ export class DragPreview
 
 **起始版本：** 11
 
+<!--Device-dragController-export class DragPreview--><!--Device-dragController-export class DragPreview-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -29,6 +31,8 @@ animate(options: AnimationOptions, handler: () =>void): void
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-DragPreview-animate(options: AnimationOptions, handler: () =>void): void--><!--Device-DragPreview-animate(options: AnimationOptions, handler: () =>void): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -194,6 +198,8 @@ setForegroundColor(color: ResourceColor): void
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-DragPreview-setForegroundColor(color: ResourceColor): void--><!--Device-DragPreview-setForegroundColor(color: ResourceColor): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

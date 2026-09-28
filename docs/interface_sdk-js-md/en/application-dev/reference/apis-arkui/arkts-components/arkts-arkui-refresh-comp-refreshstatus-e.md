@@ -8,6 +8,8 @@ Enumerates the states of a refresh operation.
 
 **Since:** 8
 
+<!--Device-unnamed-declare enum RefreshStatus--><!--Device-unnamed-declare enum RefreshStatus-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Inactive
@@ -23,6 +25,8 @@ The component is not pulled down. This is the default value.
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-RefreshStatus-Inactive = 0--><!--Device-RefreshStatus-Inactive = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,6 +46,8 @@ If you release the component, it enters the **Inactive** state. If you continue 
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-RefreshStatus-Drag = 1--><!--Device-RefreshStatus-Drag = 1-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## OverDrag
@@ -60,6 +66,8 @@ If you release the component, the component enters the **Refresh** state. If you
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-RefreshStatus-OverDrag = 2--><!--Device-RefreshStatus-OverDrag = 2-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Refresh
@@ -76,6 +84,8 @@ The pull-down ends, and the component rebounds to the minimum length required to
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-RefreshStatus-Refresh = 3--><!--Device-RefreshStatus-Refresh = 3-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Done
@@ -91,5 +101,7 @@ The refresh is complete, and the component returns to the initial state (at the 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-RefreshStatus-Done = 4--><!--Device-RefreshStatus-Done = 4-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

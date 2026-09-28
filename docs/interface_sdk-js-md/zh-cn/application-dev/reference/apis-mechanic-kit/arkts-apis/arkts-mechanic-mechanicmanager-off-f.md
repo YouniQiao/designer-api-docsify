@@ -16,6 +16,8 @@ Unsubscribes from device attachment state change events.
 
 **起始版本：** 20
 
+<!--Device-mechanicManager-function off(type: 'attachStateChange', callback?: Callback<AttachStateChangeInfo>): void--><!--Device-mechanicManager-function off(type: 'attachStateChange', callback?: Callback<AttachStateChangeInfo>): void-End-->
+
 **系统能力：** SystemCapability.Mechanic.Core
 
 **参数：**
@@ -55,6 +57,8 @@ function off(type: 'trackingStateChange', callback?: Callback<TrackingEventInfo>
 设置相机跟踪布局
 
 **起始版本：** 20
+
+<!--Device-mechanicManager-function off(type: 'trackingStateChange', callback?: Callback<TrackingEventInfo>): void--><!--Device-mechanicManager-function off(type: 'trackingStateChange', callback?: Callback<TrackingEventInfo>): void-End-->
 
 **系统能力：** SystemCapability.Mechanic.Core
 

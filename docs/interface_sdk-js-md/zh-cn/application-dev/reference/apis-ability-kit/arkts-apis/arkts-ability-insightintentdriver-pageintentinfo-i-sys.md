@@ -8,6 +8,8 @@ PageIntentInfo用于描述[@InsightIntentPage](../../../reference/apis-ability-k
 
 **起始版本：** 20
 
+<!--Device-insightIntentDriver-interface PageIntentInfo--><!--Device-insightIntentDriver-interface PageIntentInfo-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ readonly navDestinationName: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PageIntentInfo-readonly navDestinationName: string--><!--Device-PageIntentInfo-readonly navDestinationName: string-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ readonly navigationId: string
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PageIntentInfo-readonly navigationId: string--><!--Device-PageIntentInfo-readonly navigationId: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -68,6 +74,8 @@ readonly pagePath: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PageIntentInfo-readonly pagePath: string--><!--Device-PageIntentInfo-readonly pagePath: string-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -85,6 +93,8 @@ Ability名称。
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PageIntentInfo-readonly uiAbility: string--><!--Device-PageIntentInfo-readonly uiAbility: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

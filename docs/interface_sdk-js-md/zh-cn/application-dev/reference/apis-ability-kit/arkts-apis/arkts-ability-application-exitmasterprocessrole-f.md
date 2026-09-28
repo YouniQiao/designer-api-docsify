@@ -18,6 +18,8 @@ export function exitMasterProcessRole(): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-application-export function exitMasterProcessRole(): Promise<void>--><!--Device-application-export function exitMasterProcessRole(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **返回值：**

@@ -8,6 +8,8 @@ Wi-Fi指纹信息。
 
 **起始版本：** 26.0.0
 
+<!--Device-geoLocationManager-export interface WirelessSignalFeature--><!--Device-geoLocationManager-export interface WirelessSignalFeature-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ mac: Array<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-WirelessSignalFeature-mac: Array<string>--><!--Device-WirelessSignalFeature-mac: Array<string>-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 **系统接口：** 此接口为系统接口。
@@ -50,6 +54,8 @@ rssiAvg: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-WirelessSignalFeature-rssiAvg: int--><!--Device-WirelessSignalFeature-rssiAvg: int-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 **系统接口：** 此接口为系统接口。
@@ -67,6 +73,8 @@ rssiStandardDeviation: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WirelessSignalFeature-rssiStandardDeviation: double--><!--Device-WirelessSignalFeature-rssiStandardDeviation: double-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geofence
 

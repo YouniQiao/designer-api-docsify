@@ -8,6 +8,8 @@ interface DeviceIconInfoFilterOptions
 
 **起始版本：** 18
 
+<!--Device-distributedDeviceManager-interface DeviceIconInfoFilterOptions--><!--Device-distributedDeviceManager-interface DeviceIconInfoFilterOptions-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ imageType: string
 
 **起始版本：** 18
 
+<!--Device-DeviceIconInfoFilterOptions-imageType: string--><!--Device-DeviceIconInfoFilterOptions-imageType: string-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -46,6 +50,8 @@ internalModel?: string
 
 **起始版本：** 18
 
+<!--Device-DeviceIconInfoFilterOptions-internalModel?: string--><!--Device-DeviceIconInfoFilterOptions-internalModel?: string-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +67,8 @@ productId: string
 **类型：** string
 
 **起始版本：** 18
+
+<!--Device-DeviceIconInfoFilterOptions-productId: string--><!--Device-DeviceIconInfoFilterOptions-productId: string-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -81,6 +89,8 @@ specName: string
 
 **起始版本：** 18
 
+<!--Device-DeviceIconInfoFilterOptions-specName: string--><!--Device-DeviceIconInfoFilterOptions-specName: string-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -96,6 +106,8 @@ subProductId?: string
 **类型：** string
 
 **起始版本：** 18
+
+<!--Device-DeviceIconInfoFilterOptions-subProductId?: string--><!--Device-DeviceIconInfoFilterOptions-subProductId?: string-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 

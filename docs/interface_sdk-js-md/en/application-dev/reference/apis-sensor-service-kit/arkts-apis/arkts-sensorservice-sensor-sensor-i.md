@@ -8,6 +8,8 @@ Describes the sensor information.
 
 **Since:** 9
 
+<!--Device-sensor-interface Sensor--><!--Device-sensor-interface Sensor-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Device ID. The value is **-1** indicates the local device. Default value: **-1**
 
 **Since:** 19
 
+<!--Device-Sensor-deviceId?: int--><!--Device-Sensor-deviceId?: int-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## deviceName
@@ -41,6 +45,8 @@ Device name, which identifies the source device of the sensor.
 **Type:** string
 
 **Since:** 19
+
+<!--Device-Sensor-deviceName?: string--><!--Device-Sensor-deviceName?: string-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -56,6 +62,8 @@ Sensor firmware version, which identifies the current version of the sensor firm
 
 **Since:** 9
 
+<!--Device-Sensor-firmwareVersion:string--><!--Device-Sensor-firmwareVersion:string-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## hardwareVersion
@@ -69,6 +77,8 @@ Sensor hardware version.
 **Type:** string
 
 **Since:** 9
+
+<!--Device-Sensor-hardwareVersion:string--><!--Device-Sensor-hardwareVersion:string-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -84,6 +94,8 @@ Whether the sensor is a local sensor. The **true** indicates a local sensor, and
 
 **Since:** 19
 
+<!--Device-Sensor-isLocalSensor?: boolean--><!--Device-Sensor-isLocalSensor?: boolean-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## isMockSensor
@@ -97,6 +109,8 @@ Indicates whether the sensor is a mock sensor. The value **true** indicates a mo
 **Type:** boolean
 
 **Since:** 23
+
+<!--Device-Sensor-isMockSensor?: boolean--><!--Device-Sensor-isMockSensor?: boolean-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -112,6 +126,8 @@ Maximum measurement range of the sensor. The unit depends on the sensor type (fo
 
 **Since:** 9
 
+<!--Device-Sensor-maxRange:double--><!--Device-Sensor-maxRange:double-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## maxSamplePeriod
@@ -125,6 +141,8 @@ Maximum sampling period of the sensor, in ns
 **Type:** number
 
 **Since:** 9
+
+<!--Device-Sensor-maxSamplePeriod:long--><!--Device-Sensor-maxSamplePeriod:long-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -140,6 +158,8 @@ Minimum sampling period of the sensor, in ns
 
 **Since:** 9
 
+<!--Device-Sensor-minSamplePeriod:long--><!--Device-Sensor-minSamplePeriod:long-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## power
@@ -153,6 +173,8 @@ Estimated power consumption of the sensor, in mA.
 **Type:** number
 
 **Since:** 9
+
+<!--Device-Sensor-power:double--><!--Device-Sensor-power:double-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -168,6 +190,8 @@ Precision of the sensor. The unit depends on the sensor type.
 
 **Since:** 9
 
+<!--Device-Sensor-precision:double--><!--Device-Sensor-precision:double-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## sensorId
@@ -181,6 +205,8 @@ Sensor type ID, corresponding to the enumerated values of [SensorId](arkts-senso
 **Type:** number
 
 **Since:** 9
+
+<!--Device-Sensor-sensorId:int--><!--Device-Sensor-sensorId:int-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -196,6 +222,8 @@ Sensor index. Multiple instances of sensors of the same type may exist, which ar
 
 **Since:** 19
 
+<!--Device-Sensor-sensorIndex?: int--><!--Device-Sensor-sensorIndex?: int-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## sensorName
@@ -210,6 +238,8 @@ Sensor name, which identifies the type and model of the sensor.
 
 **Since:** 9
 
+<!--Device-Sensor-sensorName:string--><!--Device-Sensor-sensorName:string-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## vendorName
@@ -223,5 +253,7 @@ Sensor vendor name, which identifies the sensor manufacturer.
 **Type:** string
 
 **Since:** 9
+
+<!--Device-Sensor-vendorName:string--><!--Device-Sensor-vendorName:string-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor

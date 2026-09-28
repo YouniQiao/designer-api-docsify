@@ -18,6 +18,8 @@ function destroyAbilityConnectionSession(sessionId: number): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-abilityConnectionManager-function destroyAbilityConnectionSession(sessionId: int): void--><!--Device-abilityConnectionManager-function destroyAbilityConnectionSession(sessionId: int): void-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **参数：**

@@ -22,6 +22,8 @@ function readNdefTag(): Promise<string>
 
 **需要权限：** ohos.permission.NFC_TAG
 
+<!--Device-connectedTag-function readNdefTag(): Promise<string>--><!--Device-connectedTag-function readNdefTag(): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Communication.ConnectedTag
 
 **返回值：**
@@ -61,6 +63,8 @@ function readNdefTag(callback: AsyncCallback<string>): void
 **替代接口：** [read](arkts-connectivity-connectedtag-read-f.md)
 
 **需要权限：** ohos.permission.NFC_TAG
+
+<!--Device-connectedTag-function readNdefTag(callback: AsyncCallback<string>): void--><!--Device-connectedTag-function readNdefTag(callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Communication.ConnectedTag
 

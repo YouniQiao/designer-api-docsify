@@ -22,6 +22,8 @@ function isHotspotActive(): boolean
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
+<!--Device-wifi-function isHotspotActive(): boolean--><!--Device-wifi-function isHotspotActive(): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
 **系统接口：** 此接口为系统接口。

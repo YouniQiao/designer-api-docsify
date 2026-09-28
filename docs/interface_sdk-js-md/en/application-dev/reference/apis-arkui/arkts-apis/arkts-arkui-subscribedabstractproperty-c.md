@@ -13,6 +13,8 @@ An object of a one-way or two-way synchronized property in [AppStorage](../../..
 
 **Since:** 9
 
+<!--Device-unnamed-declare abstract class SubscribedAbstractProperty<T>--><!--Device-unnamed-declare abstract class SubscribedAbstractProperty<T>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## aboutToBeDeleted
@@ -26,6 +28,8 @@ Cancels the one-way or two-way synchronization relationship between the [Subscri
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SubscribedAbstractProperty-abstract aboutToBeDeleted(): void--><!--Device-SubscribedAbstractProperty-abstract aboutToBeDeleted(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,6 +48,8 @@ Reads the data of the synchronized property from [AppStorage](../../../ui/state-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-SubscribedAbstractProperty-abstract get(): T--><!--Device-SubscribedAbstractProperty-abstract get(): T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,6 +70,8 @@ Returns the name of the synchronized property in [AppStorage](../../../ui/state-
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SubscribedAbstractProperty-info(): string--><!--Device-SubscribedAbstractProperty-info(): string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -88,6 +96,8 @@ Sets the data of the synchronized property in [AppStorage](../../../ui/state-man
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-SubscribedAbstractProperty-abstract set(newValue: T): void--><!--Device-SubscribedAbstractProperty-abstract set(newValue: T): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -8,6 +8,8 @@ export declare enum SourceType
 
 **起始版本：** 9
 
+<!--Device-unnamed-export declare enum SourceType--><!--Device-unnamed-export declare enum SourceType-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## TOUCH_SCREEN
@@ -19,6 +21,8 @@ TOUCH_SCREEN = 0
 触摸屏。
 
 **起始版本：** 9
+
+<!--Device-SourceType-TOUCH_SCREEN = 0--><!--Device-SourceType-TOUCH_SCREEN = 0-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -32,6 +36,8 @@ PEN = 1
 
 **起始版本：** 9
 
+<!--Device-SourceType-PEN = 1--><!--Device-SourceType-PEN = 1-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## TOUCH_PAD
@@ -43,5 +49,7 @@ TOUCH_PAD = 2
 触控板。
 
 **起始版本：** 9
+
+<!--Device-SourceType-TOUCH_PAD = 2--><!--Device-SourceType-TOUCH_PAD = 2-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core

@@ -8,6 +8,8 @@ interface AlbumOperation
 
 **起始版本：** 26.0.0
 
+<!--Device-photoAccessHelper-interface AlbumOperation--><!--Device-photoAccessHelper-interface AlbumOperation-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ attr: AlbumAttribute
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AlbumOperation-attr: AlbumAttribute--><!--Device-AlbumOperation-attr: AlbumAttribute-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -50,6 +54,8 @@ type: AlbumOperationType
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AlbumOperation-type: AlbumOperationType--><!--Device-AlbumOperation-type: AlbumOperationType-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -67,6 +73,8 @@ values: string[]
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AlbumOperation-values: string[]--><!--Device-AlbumOperation-values: string[]-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

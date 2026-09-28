@@ -18,6 +18,8 @@ function startEthEap(netId: number, profile: EthEapProfile): void
 
 **需要权限：** ohos.permission.MANAGE_ENTERPRISE_WIFI_CONNECTION
 
+<!--Device-eap-function startEthEap(netId: int, profile: EthEapProfile): void--><!--Device-eap-function startEthEap(netId: int, profile: EthEapProfile): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
 **参数：**

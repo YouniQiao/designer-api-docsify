@@ -8,6 +8,8 @@ class Writable
 
 **起始版本：** 12
 
+<!--Device-stream-class Writable--><!--Device-stream-class Writable-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -26,7 +28,9 @@ constructor()
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Writable-constructor()--><!--Device-Writable-constructor()-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -46,7 +50,9 @@ cork(): boolean
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Writable-cork(): boolean--><!--Device-Writable-cork(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -84,7 +90,9 @@ doInitialize(callback: Function): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Writable-doInitialize(callback: Function): void--><!--Device-Writable-doInitialize(callback: Function): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -121,7 +129,9 @@ doWrite(chunk: string | Uint8Array, encoding: string, callback: Function): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Writable-doWrite(chunk: string | Uint8Array, encoding: string, callback: Function): void--><!--Device-Writable-doWrite(chunk: string | Uint8Array, encoding: string, callback: Function): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -161,7 +171,9 @@ doWritev(chunks: string[] | Uint8Array[], callback: Function): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Writable-doWritev(chunks: string[] | Uint8Array[], callback: Function): void--><!--Device-Writable-doWritev(chunks: string[] | Uint8Array[], callback: Function): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -205,7 +217,9 @@ end(chunk?: string | Uint8Array, encoding?: string, callback?: Function): Writab
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Writable-end(chunk?: string | Uint8Array, encoding?: string, callback?: Function): Writable--><!--Device-Writable-end(chunk?: string | Uint8Array, encoding?: string, callback?: Function): Writable-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -264,6 +278,8 @@ off(event: string, callback?: Callback<emitter.EventData>): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Writable-off(event: string, callback?: Callback<emitter.EventData>): void--><!--Device-Writable-off(event: string, callback?: Callback<emitter.EventData>): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -312,6 +328,8 @@ on(event: string, callback: Callback<emitter.EventData>): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Writable-on(event: string, callback: Callback<emitter.EventData>): void--><!--Device-Writable-on(event: string, callback: Callback<emitter.EventData>): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -353,7 +371,9 @@ setDefaultEncoding(encoding?: string): boolean
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Writable-setDefaultEncoding(encoding?: string): boolean--><!--Device-Writable-setDefaultEncoding(encoding?: string): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -397,7 +417,9 @@ uncork(): boolean
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Writable-uncork(): boolean--><!--Device-Writable-uncork(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -441,7 +463,9 @@ write(chunk?: string | Uint8Array, encoding?: string, callback?: Function): bool
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Writable-write(chunk?: string | Uint8Array, encoding?: string, callback?: Function): boolean--><!--Device-Writable-write(chunk?: string | Uint8Array, encoding?: string, callback?: Function): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -497,7 +521,9 @@ get writable(): boolean
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Writable-get writable(): boolean--><!--Device-Writable-get writable(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -513,7 +539,9 @@ get writableCorked(): number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Writable-get writableCorked(): int--><!--Device-Writable-get writableCorked(): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -529,7 +557,9 @@ get writableEnded(): boolean
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Writable-get writableEnded(): boolean--><!--Device-Writable-get writableEnded(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -545,7 +575,9 @@ get writableFinished(): boolean
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Writable-get writableFinished(): boolean--><!--Device-Writable-get writableFinished(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -561,7 +593,9 @@ get writableHighWatermark(): number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Writable-get writableHighWatermark(): int--><!--Device-Writable-get writableHighWatermark(): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -577,7 +611,9 @@ get writableLength(): number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Writable-get writableLength(): int--><!--Device-Writable-get writableLength(): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -593,6 +629,8 @@ get writableObjectMode(): boolean
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Writable-get writableObjectMode(): boolean--><!--Device-Writable-get writableObjectMode(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

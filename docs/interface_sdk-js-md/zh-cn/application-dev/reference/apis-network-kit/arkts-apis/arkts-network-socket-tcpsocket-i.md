@@ -8,6 +8,8 @@ TCPSocket连接。在调用TCPSocket的方法前，需要先通过[socket.constr
 
 **起始版本：** 7
 
+<!--Device-socket-export interface TCPSocket--><!--Device-socket-export interface TCPSocket-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块
@@ -35,6 +37,8 @@ bind(address: NetAddress, callback: AsyncCallback<void>): void
 **起始版本：** 7
 
 **需要权限：** ohos.permission.INTERNET
+
+<!--Device-TCPSocket-bind(address: NetAddress, callback: AsyncCallback<void>): void--><!--Device-TCPSocket-bind(address: NetAddress, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -94,6 +98,8 @@ bind(address: NetAddress): Promise<void>
 
 **需要权限：** ohos.permission.INTERNET
 
+<!--Device-TCPSocket-bind(address: NetAddress): Promise<void>--><!--Device-TCPSocket-bind(address: NetAddress): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -145,6 +151,8 @@ close(callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.INTERNET
 
+<!--Device-TCPSocket-close(callback: AsyncCallback<void>): void--><!--Device-TCPSocket-close(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -190,6 +198,8 @@ close(): Promise<void>
 
 **需要权限：** ohos.permission.INTERNET
 
+<!--Device-TCPSocket-close(): Promise<void>--><!--Device-TCPSocket-close(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
@@ -234,6 +244,8 @@ connect(options: TCPConnectOptions, callback: AsyncCallback<void>): void
 **起始版本：** 7
 
 **需要权限：** ohos.permission.INTERNET
+
+<!--Device-TCPSocket-connect(options: TCPConnectOptions, callback: AsyncCallback<void>): void--><!--Device-TCPSocket-connect(options: TCPConnectOptions, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -336,6 +348,8 @@ connect(options: TCPConnectOptions): Promise<void>
 
 **需要权限：** ohos.permission.INTERNET
 
+<!--Device-TCPSocket-connect(options: TCPConnectOptions): Promise<void>--><!--Device-TCPSocket-connect(options: TCPConnectOptions): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -434,6 +448,8 @@ getLocalAddress(): Promise<NetAddress>
 
 **起始版本：** 12
 
+<!--Device-TCPSocket-getLocalAddress(): Promise<NetAddress>--><!--Device-TCPSocket-getLocalAddress(): Promise<NetAddress>-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
@@ -488,6 +504,8 @@ getRemoteAddress(callback: AsyncCallback<NetAddress>): void
 **起始版本：** 7
 
 **需要权限：** ohos.permission.INTERNET
+
+<!--Device-TCPSocket-getRemoteAddress(callback: AsyncCallback<NetAddress>): void--><!--Device-TCPSocket-getRemoteAddress(callback: AsyncCallback<NetAddress>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -548,6 +566,8 @@ getRemoteAddress(): Promise<NetAddress>
 
 **需要权限：** ohos.permission.INTERNET
 
+<!--Device-TCPSocket-getRemoteAddress(): Promise<NetAddress>--><!--Device-TCPSocket-getRemoteAddress(): Promise<NetAddress>-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
@@ -605,6 +625,8 @@ getSocketFd(callback: AsyncCallback<number>): void
 
 **起始版本：** 10
 
+<!--Device-TCPSocket-getSocketFd(callback: AsyncCallback<int>): void--><!--Device-TCPSocket-getSocketFd(callback: AsyncCallback<int>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -658,6 +680,8 @@ getSocketFd(): Promise<number>
 
 **起始版本：** 10
 
+<!--Device-TCPSocket-getSocketFd(): Promise<int>--><!--Device-TCPSocket-getSocketFd(): Promise<int>-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
@@ -707,6 +731,8 @@ getState(callback: AsyncCallback<SocketStateBase>): void
 **起始版本：** 7
 
 **需要权限：** ohos.permission.INTERNET
+
+<!--Device-TCPSocket-getState(callback: AsyncCallback<SocketStateBase>): void--><!--Device-TCPSocket-getState(callback: AsyncCallback<SocketStateBase>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -767,6 +793,8 @@ getState(): Promise<SocketStateBase>
 
 **需要权限：** ohos.permission.INTERNET
 
+<!--Device-TCPSocket-getState(): Promise<SocketStateBase>--><!--Device-TCPSocket-getState(): Promise<SocketStateBase>-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
@@ -818,6 +846,8 @@ off(type: 'message', callback?: Callback<SocketMessageInfo>): void
 
 **起始版本：** 7
 
+<!--Device-TCPSocket-off(type: 'message', callback?: Callback<SocketMessageInfo>): void--><!--Device-TCPSocket-off(type: 'message', callback?: Callback<SocketMessageInfo>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -861,6 +891,8 @@ off(type: 'connect' | 'close', callback?: Callback<void>): void
 
 **起始版本：** 7
 
+<!--Device-TCPSocket-off(type: 'connect' | 'close', callback?: Callback<void>): void--><!--Device-TCPSocket-off(type: 'connect' | 'close', callback?: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -903,6 +935,8 @@ off(type: 'error', callback?: ErrorCallback): void
 
 **起始版本：** 7
 
+<!--Device-TCPSocket-off(type: 'error', callback?: ErrorCallback): void--><!--Device-TCPSocket-off(type: 'error', callback?: ErrorCallback): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -937,6 +971,8 @@ on(type: 'message', callback: Callback<SocketMessageInfo>): void
 订阅TCPSocket连接的接收消息事件。使用callback异步回调。
 
 **起始版本：** 7
+
+<!--Device-TCPSocket-on(type: 'message', callback: Callback<SocketMessageInfo>): void--><!--Device-TCPSocket-on(type: 'message', callback: Callback<SocketMessageInfo>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -977,6 +1013,8 @@ on(type: 'connect' | 'close', callback: Callback<void>): void
 
 **起始版本：** 7
 
+<!--Device-TCPSocket-on(type: 'connect' | 'close', callback: Callback<void>): void--><!--Device-TCPSocket-on(type: 'connect' | 'close', callback: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -1010,6 +1048,8 @@ on(type: 'error', callback: ErrorCallback): void
 订阅TCPSocket连接的error事件。使用callback异步回调。
 
 **起始版本：** 7
+
+<!--Device-TCPSocket-on(type: 'error', callback: ErrorCallback): void--><!--Device-TCPSocket-on(type: 'error', callback: ErrorCallback): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -1047,6 +1087,8 @@ send(options: TCPSendOptions, callback: AsyncCallback<void>): void
 **起始版本：** 7
 
 **需要权限：** ohos.permission.INTERNET
+
+<!--Device-TCPSocket-send(options: TCPSendOptions, callback: AsyncCallback<void>): void--><!--Device-TCPSocket-send(options: TCPSendOptions, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -1112,6 +1154,8 @@ send(options: TCPSendOptions): Promise<void>
 
 **需要权限：** ohos.permission.INTERNET
 
+<!--Device-TCPSocket-send(options: TCPSendOptions): Promise<void>--><!--Device-TCPSocket-send(options: TCPSendOptions): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -1176,6 +1220,8 @@ setExtraOptions(options: TCPExtraOptions, callback: AsyncCallback<void>): void
 **起始版本：** 7
 
 **需要权限：** ohos.permission.INTERNET
+
+<!--Device-TCPSocket-setExtraOptions(options: TCPExtraOptions, callback: AsyncCallback<void>): void--><!--Device-TCPSocket-setExtraOptions(options: TCPExtraOptions, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -1254,6 +1300,8 @@ setExtraOptions(options: TCPExtraOptions): Promise<void>
 **起始版本：** 7
 
 **需要权限：** ohos.permission.INTERNET
+
+<!--Device-TCPSocket-setExtraOptions(options: TCPExtraOptions): Promise<void>--><!--Device-TCPSocket-setExtraOptions(options: TCPExtraOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 

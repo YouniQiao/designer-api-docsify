@@ -8,6 +8,8 @@ enum AlbumType
 
 **起始版本：** 10
 
+<!--Device-photoAccessHelper-enum AlbumType--><!--Device-photoAccessHelper-enum AlbumType-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## SMART
@@ -19,6 +21,8 @@ SMART = 4096
 智慧分析相册。
 
 **起始版本：** 11
+
+<!--Device-AlbumType-SMART = 4096--><!--Device-AlbumType-SMART = 4096-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -35,6 +39,8 @@ SHARE = 8192
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AlbumType-SHARE = 8192--><!--Device-AlbumType-SHARE = 8192-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

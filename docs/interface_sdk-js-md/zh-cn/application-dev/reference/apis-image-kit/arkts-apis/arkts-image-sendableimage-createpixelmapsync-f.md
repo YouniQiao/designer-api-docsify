@@ -16,6 +16,8 @@ Create PixelMap by data buffer.
 
 **起始版本：** 12
 
+<!--Device-sendableImage-function createPixelMapSync(colors: ArrayBuffer, options: image.InitializationOptions): PixelMap--><!--Device-sendableImage-function createPixelMapSync(colors: ArrayBuffer, options: image.InitializationOptions): PixelMap-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**

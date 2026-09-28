@@ -14,6 +14,8 @@ Sets the parameters for subscribing to the device orientation sensor, including 
 
 **Substitutes:** [ORIENTATION](arkts-sensorservice-sensor-sensorid-e.md#orientation)
 
+<!--Device-unnamed-export interface SubscribeDeviceOrientationOptions--><!--Device-unnamed-export interface SubscribeDeviceOrientationOptions-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 ## Modules to Import
@@ -37,6 +39,8 @@ Callback invoked when an API call fails. The callback parameters are **data** of
 **Substitutes:** [on](arkts-sensorservice-sensor-on-f.md)
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-SubscribeDeviceOrientationOptions-fail?: (data: string, code: number) => void--><!--Device-SubscribeDeviceOrientationOptions-fail?: (data: string, code: number) => void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
@@ -62,6 +66,8 @@ Callback invoked when the device orientation sensor data changes. The callback p
 **Substitutes:** [on](arkts-sensorservice-sensor-on-f.md)
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-SubscribeDeviceOrientationOptions-success: (data: DeviceOrientationResponse) => void--><!--Device-SubscribeDeviceOrientationOptions-success: (data: DeviceOrientationResponse) => void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
@@ -96,5 +102,7 @@ Possible values:
 **Substitutes:** [interval](arkts-sensorservice-sensor-options-i.md#interval)
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-SubscribeDeviceOrientationOptions-interval: string--><!--Device-SubscribeDeviceOrientationOptions-interval: string-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite

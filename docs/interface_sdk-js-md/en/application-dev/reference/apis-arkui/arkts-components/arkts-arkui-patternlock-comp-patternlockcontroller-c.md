@@ -14,6 +14,8 @@ let patternLockController: PatternLockController = new PatternLockController();
 
 **Since:** 9
 
+<!--Device-unnamed-declare class PatternLockController--><!--Device-unnamed-declare class PatternLockController-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
@@ -28,6 +30,8 @@ A constructor used to create a **PatternLockController** instance.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PatternLockController-constructor()--><!--Device-PatternLockController-constructor()-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## reset
@@ -41,6 +45,8 @@ Resets the component state. This API takes effect only when the corresponding co
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PatternLockController-reset()--><!--Device-PatternLockController-reset()-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -57,6 +63,8 @@ Sets the correct or incorrect state of the pattern password. This API takes effe
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PatternLockController-setChallengeResult(result: PatternLockChallengeResult): void--><!--Device-PatternLockController-setChallengeResult(result: PatternLockChallengeResult): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

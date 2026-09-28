@@ -13,6 +13,8 @@ interface MediaSource
 
 **起始版本：** 12
 
+<!--Device-media-interface MediaSource--><!--Device-media-interface MediaSource-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ enableOfflineCache(enable: boolean): void
 是否在视频播放期间启用离线缓存。
 
 **起始版本：** 23
+
+<!--Device-MediaSource-enableOfflineCache(enable: boolean): void--><!--Device-MediaSource-enableOfflineCache(enable: boolean): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -51,7 +55,9 @@ getID(): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-MediaSource-getID(): string--><!--Device-MediaSource-getID(): string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -73,6 +79,8 @@ getTrackSelectionFilter(): TrackSelectionFilter | undefined
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MediaSource-getTrackSelectionFilter(): TrackSelectionFilter | undefined--><!--Device-MediaSource-getTrackSelectionFilter(): TrackSelectionFilter | undefined-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 **返回值：**
@@ -91,7 +99,9 @@ setMediaResourceLoaderDelegate(resourceLoader: MediaSourceLoader): void
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-MediaSource-setMediaResourceLoaderDelegate(resourceLoader: MediaSourceLoader): void--><!--Device-MediaSource-setMediaResourceLoaderDelegate(resourceLoader: MediaSourceLoader): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -151,7 +161,9 @@ setMimeType(mimeType: AVMimeTypes): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MediaSource-setMimeType(mimeType: AVMimeTypes): void--><!--Device-MediaSource-setMimeType(mimeType: AVMimeTypes): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -172,6 +184,8 @@ setTrackSelectionFilter(filter: TrackSelectionFilter): void
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MediaSource-setTrackSelectionFilter(filter: TrackSelectionFilter): void--><!--Device-MediaSource-setTrackSelectionFilter(filter: TrackSelectionFilter): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 

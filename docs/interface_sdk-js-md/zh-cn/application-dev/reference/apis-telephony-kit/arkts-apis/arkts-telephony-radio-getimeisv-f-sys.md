@@ -18,6 +18,8 @@ Obtains the software version number of a specified card slot of the device.
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-radio-function getIMEISV(slotId: int): string--><!--Device-radio-function getIMEISV(slotId: int): string-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。

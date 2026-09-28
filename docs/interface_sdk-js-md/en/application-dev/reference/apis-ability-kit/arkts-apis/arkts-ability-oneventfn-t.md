@@ -10,6 +10,8 @@ Defines the callback function type for receiving CLI tool events.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-unnamed-type OnEventFn = (event: CliToolEvent) => void--><!--Device-unnamed-type OnEventFn = (event: CliToolEvent) => void-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **Parameters:**

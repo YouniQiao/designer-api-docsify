@@ -8,6 +8,8 @@ enum HdrMetadataType
 
 **起始版本：** 12
 
+<!--Device-image-enum HdrMetadataType--><!--Device-image-enum HdrMetadataType-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## NONE
@@ -19,6 +21,8 @@ NONE = 0
 无元数据内容。
 
 **起始版本：** 12
+
+<!--Device-HdrMetadataType-NONE = 0--><!--Device-HdrMetadataType-NONE = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -32,6 +36,8 @@ BASE = 1
 
 **起始版本：** 12
 
+<!--Device-HdrMetadataType-BASE = 1--><!--Device-HdrMetadataType-BASE = 1-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## GAINMAP
@@ -44,6 +50,8 @@ GAINMAP = 2
 
 **起始版本：** 12
 
+<!--Device-HdrMetadataType-GAINMAP = 2--><!--Device-HdrMetadataType-GAINMAP = 2-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## ALTERNATE
@@ -55,5 +63,7 @@ ALTERNATE = 3
 表示用于合成后HDR图的元数据。
 
 **起始版本：** 12
+
+<!--Device-HdrMetadataType-ALTERNATE = 3--><!--Device-HdrMetadataType-ALTERNATE = 3-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core

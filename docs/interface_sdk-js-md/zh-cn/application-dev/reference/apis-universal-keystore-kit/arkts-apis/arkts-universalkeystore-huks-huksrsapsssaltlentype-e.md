@@ -8,6 +8,8 @@ export enum HuksRsaPssSaltLenType
 
 **起始版本：** 10
 
+<!--Device-huks-export enum HuksRsaPssSaltLenType--><!--Device-huks-export enum HuksRsaPssSaltLenType-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core
 - API版本10-11：SystemCapability.Security.Huks.Extension
@@ -26,6 +28,8 @@ HUKS_RSA_PSS_SALT_LEN_DIGEST = 0
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-HuksRsaPssSaltLenType-HUKS_RSA_PSS_SALT_LEN_DIGEST = 0--><!--Device-HuksRsaPssSaltLenType-HUKS_RSA_PSS_SALT_LEN_DIGEST = 0-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core
 - API版本10-11：SystemCapability.Security.Huks.Extension
@@ -43,6 +47,8 @@ HUKS_RSA_PSS_SALT_LEN_MAX = 1
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HuksRsaPssSaltLenType-HUKS_RSA_PSS_SALT_LEN_MAX = 1--><!--Device-HuksRsaPssSaltLenType-HUKS_RSA_PSS_SALT_LEN_MAX = 1-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core

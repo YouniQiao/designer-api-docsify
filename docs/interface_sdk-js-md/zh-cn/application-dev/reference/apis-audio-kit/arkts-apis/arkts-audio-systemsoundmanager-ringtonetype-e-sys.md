@@ -8,6 +8,8 @@ enum RingtoneType
 
 **起始版本：** 10
 
+<!--Device-systemSoundManager-enum RingtoneType--><!--Device-systemSoundManager-enum RingtoneType-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -26,6 +28,8 @@ RINGTONE_TYPE_DEFAULT = 0
 
 **替代接口：** [RINGTONE_TYPE_SIM_CARD_0](#ringtone_type_sim_card_0)
 
+<!--Device-RingtoneType-RINGTONE_TYPE_DEFAULT = 0--><!--Device-RingtoneType-RINGTONE_TYPE_DEFAULT = 0-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -39,6 +43,8 @@ RINGTONE_TYPE_SIM_CARD_0 = 0
 SIM卡1的铃声。
 
 **起始版本：** 11
+
+<!--Device-RingtoneType-RINGTONE_TYPE_SIM_CARD_0 = 0--><!--Device-RingtoneType-RINGTONE_TYPE_SIM_CARD_0 = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -58,6 +64,8 @@ RINGTONE_TYPE_MULTISIM = 1
 
 **替代接口：** [RINGTONE_TYPE_SIM_CARD_1](#ringtone_type_sim_card_1)
 
+<!--Device-RingtoneType-RINGTONE_TYPE_MULTISIM = 1--><!--Device-RingtoneType-RINGTONE_TYPE_MULTISIM = 1-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -71,6 +79,8 @@ RINGTONE_TYPE_SIM_CARD_1 = 1
 SIM卡2的铃声。
 
 **起始版本：** 11
+
+<!--Device-RingtoneType-RINGTONE_TYPE_SIM_CARD_1 = 1--><!--Device-RingtoneType-RINGTONE_TYPE_SIM_CARD_1 = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -88,6 +98,8 @@ ESIM卡1的铃声。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RingtoneType-RINGTONE_TYPE_ESIM_CARD_0 = 2--><!--Device-RingtoneType-RINGTONE_TYPE_ESIM_CARD_0 = 2-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -103,6 +115,8 @@ ESIM卡2的铃声。
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-RingtoneType-RINGTONE_TYPE_ESIM_CARD_1 = 3--><!--Device-RingtoneType-RINGTONE_TYPE_ESIM_CARD_1 = 3-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 

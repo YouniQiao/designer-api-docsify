@@ -27,6 +27,8 @@ function getGeomagneticField(locationOptions: LocationOptions, timeMillis: numbe
 
 **替代接口：** [getGeomagneticInfo](arkts-sensorservice-sensor-getgeomagneticinfo-f.md)(locationOptions: LocationOptions, timeMillis: number, callback: AsyncCallback&lt;GeomagneticResponse&gt;)
 
+<!--Device-sensor-function getGeomagneticField(locationOptions: LocationOptions, timeMillis: number, callback: AsyncCallback<GeomagneticResponse>): void--><!--Device-sensor-function getGeomagneticField(locationOptions: LocationOptions, timeMillis: number, callback: AsyncCallback<GeomagneticResponse>): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -77,6 +79,8 @@ function getGeomagneticField(locationOptions: LocationOptions, timeMillis: numbe
 **废弃版本：** 9
 
 **替代接口：** [getGeomagneticInfo](arkts-sensorservice-sensor-getgeomagneticinfo-f.md)(locationOptions: LocationOptions, timeMillis: number)
+
+<!--Device-sensor-function getGeomagneticField(locationOptions: LocationOptions, timeMillis: number): Promise<GeomagneticResponse>--><!--Device-sensor-function getGeomagneticField(locationOptions: LocationOptions, timeMillis: number): Promise<GeomagneticResponse>-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 

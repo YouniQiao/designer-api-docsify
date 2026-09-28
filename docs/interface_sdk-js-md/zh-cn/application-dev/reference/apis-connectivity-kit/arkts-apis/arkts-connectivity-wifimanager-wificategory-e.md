@@ -8,6 +8,8 @@ enum WifiCategory
 
 **起始版本：** 12
 
+<!--Device-wifiManager-enum WifiCategory--><!--Device-wifiManager-enum WifiCategory-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## DEFAULT
@@ -19,6 +21,8 @@ DEFAULT = 1
 Default。Wifi6以下的wifi类别。
 
 **起始版本：** 12
+
+<!--Device-WifiCategory-DEFAULT = 1--><!--Device-WifiCategory-DEFAULT = 1-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -32,6 +36,8 @@ Wifi6。
 
 **起始版本：** 12
 
+<!--Device-WifiCategory-WIFI6 = 2--><!--Device-WifiCategory-WIFI6 = 2-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## WIFI6_PLUS
@@ -43,6 +49,8 @@ WIFI6_PLUS = 3
 Wifi6+。
 
 **起始版本：** 12
+
+<!--Device-WifiCategory-WIFI6_PLUS = 3--><!--Device-WifiCategory-WIFI6_PLUS = 3-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -56,6 +64,8 @@ Wifi7。
 
 **起始版本：** 15
 
+<!--Device-WifiCategory-WIFI7 = 4--><!--Device-WifiCategory-WIFI7 = 4-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## WIFI7_PLUS
@@ -67,5 +77,7 @@ WIFI7_PLUS = 5
 Wifi7+。
 
 **起始版本：** 15
+
+<!--Device-WifiCategory-WIFI7_PLUS = 5--><!--Device-WifiCategory-WIFI7_PLUS = 5-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA

@@ -10,6 +10,8 @@ declare class InsightIntentExecutor
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare class InsightIntentExecutor--><!--Device-unnamed-declare class InsightIntentExecutor-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块
@@ -31,6 +33,8 @@ onExecuteInServiceExtensionAbility(name: string, param: Record<string, Object>):
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-InsightIntentExecutor-onExecuteInServiceExtensionAbility(name: string, param: Record<string, Object>):    insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>--><!--Device-InsightIntentExecutor-onExecuteInServiceExtensionAbility(name: string, param: Record<string, Object>):    insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -140,6 +144,8 @@ onExecuteInUIAbilityBackgroundMode、[onBackground](arkts-ability-app-ability-ui
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-InsightIntentExecutor-onExecuteInUIAbilityBackgroundMode(name: string, param: Record<string, Object>):    insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>--><!--Device-InsightIntentExecutor-onExecuteInUIAbilityBackgroundMode(name: string, param: Record<string, Object>):    insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **参数：**
@@ -231,6 +237,8 @@ onExecuteInUIAbilityForegroundMode(name: string, param: Record<string, Object>, 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-InsightIntentExecutor-onExecuteInUIAbilityForegroundMode(name: string, param: Record<string, Object>, pageLoader: window.WindowStage):    insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>--><!--Device-InsightIntentExecutor-onExecuteInUIAbilityForegroundMode(name: string, param: Record<string, Object>, pageLoader: window.WindowStage):    insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -349,6 +357,8 @@ onExecuteInUIExtensionAbility(name: string, param: Record<string, Object>, pageL
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-InsightIntentExecutor-onExecuteInUIExtensionAbility(name: string, param: Record<string, Object>, pageLoader: UIExtensionContentSession):    insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>--><!--Device-InsightIntentExecutor-onExecuteInUIExtensionAbility(name: string, param: Record<string, Object>, pageLoader: UIExtensionContentSession):    insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -458,6 +468,8 @@ context: InsightIntentContext
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-InsightIntentExecutor-context: InsightIntentContext--><!--Device-InsightIntentExecutor-context: InsightIntentContext-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

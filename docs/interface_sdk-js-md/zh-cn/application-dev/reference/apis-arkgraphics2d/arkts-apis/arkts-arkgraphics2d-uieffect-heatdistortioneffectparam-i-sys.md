@@ -8,6 +8,8 @@ interface HeatDistortionEffectParam
 
 **起始版本：** 26.0.0
 
+<!--Device-uiEffect-interface HeatDistortionEffectParam--><!--Device-uiEffect-interface HeatDistortionEffectParam-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ intensity: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HeatDistortionEffectParam-intensity: double--><!--Device-HeatDistortionEffectParam-intensity: double-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ noiseScale: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HeatDistortionEffectParam-noiseScale: double--><!--Device-HeatDistortionEffectParam-noiseScale: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -68,6 +74,8 @@ progress: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HeatDistortionEffectParam-progress: double--><!--Device-HeatDistortionEffectParam-progress: double-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -85,6 +93,8 @@ riseWeight: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HeatDistortionEffectParam-riseWeight: double--><!--Device-HeatDistortionEffectParam-riseWeight: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

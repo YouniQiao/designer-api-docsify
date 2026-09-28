@@ -16,6 +16,8 @@ function getPointerColorSync(): number
 
 **起始版本：** 10
 
+<!--Device-pointer-function getPointerColorSync(): int--><!--Device-pointer-function getPointerColorSync(): int-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 **系统接口：** 此接口为系统接口。

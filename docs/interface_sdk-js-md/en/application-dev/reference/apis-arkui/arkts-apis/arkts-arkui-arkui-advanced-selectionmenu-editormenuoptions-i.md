@@ -8,6 +8,8 @@ Describes the edit menu options.
 
 **Since:** 11
 
+<!--Device-unnamed-export interface EditorMenuOptions--><!--Device-unnamed-export interface EditorMenuOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -30,6 +32,8 @@ Event callback for tapping a menu item. When both builder and action are configu
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-EditorMenuOptions-action?: () => void--><!--Device-EditorMenuOptions-action?: () => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## builder
@@ -45,6 +49,8 @@ Displays a user-defined component when tapped. The custom component is used with
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-EditorMenuOptions-builder?: () => void--><!--Device-EditorMenuOptions-builder?: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,6 +70,8 @@ Icon resource of the edit menu item. If symbolStyle is also set, this attribute 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-EditorMenuOptions-icon: ResourceStr--><!--Device-EditorMenuOptions-icon: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## symbolStyle
@@ -81,5 +89,7 @@ Symbol icon resource. Pass this parameter when a system Symbol icon (supporting 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-EditorMenuOptions-symbolStyle?: SymbolGlyphModifier--><!--Device-EditorMenuOptions-symbolStyle?: SymbolGlyphModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

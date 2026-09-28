@@ -12,6 +12,8 @@ export enum SlotLevel
 
 **替代接口：** [SlotLevel](arkts-notification-notificationmanager-slotlevel-e.md)
 
+<!--Device-notification-export enum SlotLevel--><!--Device-notification-export enum SlotLevel-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## LEVEL_NONE
@@ -27,6 +29,8 @@ LEVEL_NONE = 0
 **废弃版本：** 9
 
 **替代接口：** [LEVEL_NONE](arkts-notification-notificationmanager-slotlevel-e.md#level_none)
+
+<!--Device-SlotLevel-LEVEL_NONE = 0--><!--Device-SlotLevel-LEVEL_NONE = 0-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -44,6 +48,8 @@ LEVEL_MIN = 1
 
 **替代接口：** [LEVEL_MIN](arkts-notification-notificationmanager-slotlevel-e.md#level_min)
 
+<!--Device-SlotLevel-LEVEL_MIN = 1--><!--Device-SlotLevel-LEVEL_MIN = 1-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## LEVEL_LOW
@@ -59,6 +65,8 @@ LEVEL_LOW = 2
 **废弃版本：** 9
 
 **替代接口：** [LEVEL_LOW](arkts-notification-notificationmanager-slotlevel-e.md#level_low)
+
+<!--Device-SlotLevel-LEVEL_LOW = 2--><!--Device-SlotLevel-LEVEL_LOW = 2-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -76,6 +84,8 @@ LEVEL_DEFAULT = 3
 
 **替代接口：** [LEVEL_DEFAULT](arkts-notification-notificationmanager-slotlevel-e.md#level_default)
 
+<!--Device-SlotLevel-LEVEL_DEFAULT = 3--><!--Device-SlotLevel-LEVEL_DEFAULT = 3-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## LEVEL_HIGH
@@ -91,5 +101,7 @@ LEVEL_HIGH = 4
 **废弃版本：** 9
 
 **替代接口：** [LEVEL_HIGH](arkts-notification-notificationmanager-slotlevel-e.md#level_high)
+
+<!--Device-SlotLevel-LEVEL_HIGH = 4--><!--Device-SlotLevel-LEVEL_HIGH = 4-End-->
 
 **系统能力：** SystemCapability.Notification.Notification

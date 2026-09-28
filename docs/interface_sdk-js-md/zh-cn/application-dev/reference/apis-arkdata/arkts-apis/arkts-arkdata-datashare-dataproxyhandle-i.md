@@ -8,6 +8,8 @@ interface DataProxyHandle
 
 **起始版本：** 20
 
+<!--Device-dataShare-interface DataProxyHandle--><!--Device-dataShare-interface DataProxyHandle-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 ## 导入模块
@@ -27,6 +29,8 @@ delete(uris: string[], config: DataProxyConfig): Promise<DataProxyResult[]>
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataProxyHandle-delete(uris: string[], config: DataProxyConfig): Promise<DataProxyResult[]>--><!--Device-DataProxyHandle-delete(uris: string[], config: DataProxyConfig): Promise<DataProxyResult[]>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -79,6 +83,8 @@ deleteMyPublishedData(config: DataProxyConfig): Promise<DataProxyResult[]>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataProxyHandle-deleteMyPublishedData(config: DataProxyConfig): Promise<DataProxyResult[]>--><!--Device-DataProxyHandle-deleteMyPublishedData(config: DataProxyConfig): Promise<DataProxyResult[]>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **参数：**
@@ -126,6 +132,8 @@ get(uris: string[], config: DataProxyConfig): Promise<DataProxyGetResult[]>
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataProxyHandle-get(uris: string[], config: DataProxyConfig): Promise<DataProxyGetResult[]>--><!--Device-DataProxyHandle-get(uris: string[], config: DataProxyConfig): Promise<DataProxyGetResult[]>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -177,6 +185,8 @@ getValues(uri: string, config: DataProxyConfig): Promise<ValueType[]>
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataProxyHandle-getValues(uri: string, config: DataProxyConfig): Promise<ValueType[]>--><!--Device-DataProxyHandle-getValues(uri: string, config: DataProxyConfig): Promise<ValueType[]>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -252,6 +262,8 @@ off(
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataProxyHandle-off(      event: 'dataChange',      uris: string[],      config: DataProxyConfig,      callback?: AsyncCallback<DataProxyChangeInfo[]>    ): DataProxyResult[]--><!--Device-DataProxyHandle-off(      event: 'dataChange',      uris: string[],      config: DataProxyConfig,      callback?: AsyncCallback<DataProxyChangeInfo[]>    ): DataProxyResult[]-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **参数：**
@@ -318,6 +330,8 @@ on(
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataProxyHandle-on(      event: 'dataChange',      uris: string[],      config: DataProxyConfig,      callback: AsyncCallback<DataProxyChangeInfo[]>    ): DataProxyResult[]--><!--Device-DataProxyHandle-on(      event: 'dataChange',      uris: string[],      config: DataProxyConfig,      callback: AsyncCallback<DataProxyChangeInfo[]>    ): DataProxyResult[]-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **参数：**
@@ -377,6 +391,8 @@ publish(data: ProxyData[], config: DataProxyConfig): Promise<DataProxyResult[]>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataProxyHandle-publish(data: ProxyData[], config: DataProxyConfig): Promise<DataProxyResult[]>--><!--Device-DataProxyHandle-publish(data: ProxyData[], config: DataProxyConfig): Promise<DataProxyResult[]>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **参数：**
@@ -434,6 +450,8 @@ putValue(uri: string, key: number, value: ValueType, config: DataProxyConfig): P
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataProxyHandle-putValue(uri: string, key: int, value: ValueType, config: DataProxyConfig): Promise<void>--><!--Device-DataProxyHandle-putValue(uri: string, key: int, value: ValueType, config: DataProxyConfig): Promise<void>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -503,6 +521,8 @@ removeValue(uri: string, key: number, config: DataProxyConfig): Promise<void>
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataProxyHandle-removeValue(uri: string, key: int, config: DataProxyConfig): Promise<void>--><!--Device-DataProxyHandle-removeValue(uri: string, key: int, config: DataProxyConfig): Promise<void>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 

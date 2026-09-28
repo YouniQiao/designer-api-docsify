@@ -19,6 +19,8 @@ declare function hash(path: string, algorithm: string): Promise<string>
 
 **替代接口：** [hash](arkts-corefile-file-hash.md)
 
+<!--Device-unnamed-declare function hash(path: string, algorithm: string): Promise<string>--><!--Device-unnamed-declare function hash(path: string, algorithm: string): Promise<string>-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -50,6 +52,8 @@ declare function hash(path: string, algorithm: string, callback: AsyncCallback<s
 **废弃版本：** 9
 
 **替代接口：** [hash](arkts-corefile-file-hash.md)
+
+<!--Device-unnamed-declare function hash(path: string, algorithm: string, callback: AsyncCallback<string>): void--><!--Device-unnamed-declare function hash(path: string, algorithm: string, callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

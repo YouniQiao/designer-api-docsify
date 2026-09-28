@@ -10,6 +10,8 @@ export interface LayerMask
 
 **起始版本：** 12
 
+<!--Device-unnamed-export interface LayerMask--><!--Device-unnamed-export interface LayerMask-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## getEnabled
@@ -21,6 +23,8 @@ getEnabled(index: number): boolean
 获取指定图层下标图层掩码的使能状态。
 
 **起始版本：** 12
+
+<!--Device-LayerMask-getEnabled(index: int): boolean--><!--Device-LayerMask-getEnabled(index: int): boolean-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -67,6 +71,8 @@ setEnabled(index: number, enabled: boolean): void
 将特定下标的图层掩码使能。
 
 **起始版本：** 12
+
+<!--Device-LayerMask-setEnabled(index: int, enabled: boolean): void--><!--Device-LayerMask-setEnabled(index: int, enabled: boolean): void-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 

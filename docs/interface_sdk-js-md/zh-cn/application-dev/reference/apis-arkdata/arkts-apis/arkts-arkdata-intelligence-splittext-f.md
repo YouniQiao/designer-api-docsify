@@ -16,6 +16,8 @@ function splitText(text: string, config: SplitConfig): Promise<Array<string>>
 
 **起始版本：** 15
 
+<!--Device-intelligence-function splitText(text: string, config: SplitConfig): Promise<Array<string>>--><!--Device-intelligence-function splitText(text: string, config: SplitConfig): Promise<Array<string>>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
 **参数：**

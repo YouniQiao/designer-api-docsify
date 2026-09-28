@@ -10,6 +10,8 @@ enum DialogType
 
 **起始版本：** 23
 
+<!--Device-avMusicTemplate-enum DialogType--><!--Device-avMusicTemplate-enum DialogType-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## NORMAL
@@ -23,6 +25,8 @@ NORMAL = 0
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DialogType-NORMAL = 0--><!--Device-DialogType-NORMAL = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -38,6 +42,8 @@ INTERNET = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DialogType-INTERNET = 1--><!--Device-DialogType-INTERNET = 1-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## FLOW
@@ -51,6 +57,8 @@ FLOW = 2
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DialogType-FLOW = 2--><!--Device-DialogType-FLOW = 2-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -66,6 +74,8 @@ PAID = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DialogType-PAID = 3--><!--Device-DialogType-PAID = 3-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## VIP
@@ -79,6 +89,8 @@ VIP对话框。
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DialogType-VIP = 4--><!--Device-DialogType-VIP = 4-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -94,6 +106,8 @@ LOGIN = 5
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DialogType-LOGIN = 5--><!--Device-DialogType-LOGIN = 5-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## ERROR
@@ -108,6 +122,8 @@ ERROR = 6
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DialogType-ERROR = 6--><!--Device-DialogType-ERROR = 6-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## UNKNOWN
@@ -121,5 +137,7 @@ UNKNOWN = 7
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DialogType-UNKNOWN = 7--><!--Device-DialogType-UNKNOWN = 7-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate

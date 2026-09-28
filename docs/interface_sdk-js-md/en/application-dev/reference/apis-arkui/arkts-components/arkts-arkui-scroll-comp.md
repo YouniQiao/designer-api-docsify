@@ -16,13 +16,15 @@ Creates a **Scroll** component.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ScrollInterface-(scroller?: Scroller): ScrollAttribute--><!--Device-ScrollInterface-(scroller?: Scroller): ScrollAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scroller | [Scroller](arkts-arkui-scroll-comp-scroller-c.md) | No | Controller of the scrollable component. It is used to bind to the scrollable component and control scrolling through the controller APIs. When not passed, the Scroll component cannot be controlled through the controller APIs.<br>**NOTE:** <br>It is not allowed to bind the same scroll control object to other scrollable components, such as [ArcList](arkts-arkui-arclist-comp.md#ohosarkuiarclist), [List](arkts-arkui-list-comp.md#list), [Grid](arkts-arkui-grid-comp.md#grid), [Scroll](#scroll), and [WaterFlow](arkts-arkui-waterflow-comp.md#water_flow). |
+| scroller | [Scroller](arkts-arkui-scroll-comp-scroller-c.md) | No | Controller of the scrollable component. It is used to bind to the scrollable component and control scrolling through the controller APIs. When not passed, the Scroll component cannot be controlled through the controller APIs.<br>**NOTE:** <br>It is not allowed to bind the same scroll control object to other scrollable components, such as [ArcList](arkts-arkui-arclist-comp.md), [List](arkts-arkui-list-comp.md), [Grid](arkts-arkui-grid-comp.md), [Scroll](arkts-arkui-scroll-comp.md), and [WaterFlow](arkts-arkui-waterflow-comp.md). |
 
 ## Summary
 

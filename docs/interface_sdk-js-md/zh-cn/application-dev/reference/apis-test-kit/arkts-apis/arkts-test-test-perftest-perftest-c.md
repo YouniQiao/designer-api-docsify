@@ -8,6 +8,8 @@ PerfTest类为白盒性能测试框架的总入口。提供测试任务创建、
 
 **起始版本：** 20
 
+<!--Device-unnamed-declare class PerfTest--><!--Device-unnamed-declare class PerfTest-End-->
+
 **系统能力：** SystemCapability.Test.PerfTest
 
 **测试接口：** 此接口仅在自动化测试脚本中使用。
@@ -28,7 +30,9 @@ static create(strategy: PerfTestStrategy): PerfTest
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PerfTest-static create(strategy: PerfTestStrategy): PerfTest--><!--Device-PerfTest-static create(strategy: PerfTestStrategy): PerfTest-End-->
 
 **系统能力：** SystemCapability.Test.PerfTest
 
@@ -94,7 +98,9 @@ destroy(): void
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PerfTest-destroy(): void--><!--Device-PerfTest-destroy(): void-End-->
 
 **系统能力：** SystemCapability.Test.PerfTest
 
@@ -141,7 +147,9 @@ getMeasureResult(metric: PerfMetric): PerfMeasureResult
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PerfTest-getMeasureResult(metric: PerfMetric): PerfMeasureResult--><!--Device-PerfTest-getMeasureResult(metric: PerfMetric): PerfMeasureResult-End-->
 
 **系统能力：** SystemCapability.Test.PerfTest
 
@@ -202,7 +210,9 @@ run(): Promise<void>
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PerfTest-run(): Promise<void>--><!--Device-PerfTest-run(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.PerfTest
 

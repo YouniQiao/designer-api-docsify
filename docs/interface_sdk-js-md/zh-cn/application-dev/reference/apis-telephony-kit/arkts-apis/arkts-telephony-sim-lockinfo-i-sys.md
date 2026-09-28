@@ -6,6 +6,8 @@ export interface LockInfo
 
 **起始版本：** 8
 
+<!--Device-sim-export interface LockInfo--><!--Device-sim-export interface LockInfo-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -26,6 +28,8 @@ lockType: LockType
 
 **起始版本：** 8
 
+<!--Device-LockInfo-lockType: LockType--><!--Device-LockInfo-lockType: LockType-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -40,6 +44,8 @@ password: string
 
 **起始版本：** 8
 
+<!--Device-LockInfo-password: string--><!--Device-LockInfo-password: string-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -53,6 +59,8 @@ state: LockState
 **类型：** [LockState](arkts-telephony-sim-lockstate-e-sys.md)
 
 **起始版本：** 8
+
+<!--Device-LockInfo-state: LockState--><!--Device-LockInfo-state: LockState-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

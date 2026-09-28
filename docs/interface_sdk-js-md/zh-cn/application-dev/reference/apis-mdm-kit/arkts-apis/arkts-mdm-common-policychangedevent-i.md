@@ -10,6 +10,8 @@ export interface PolicyChangedEvent
 
 **起始版本：** 26.0.0
 
+<!--Device-common-export interface PolicyChangedEvent--><!--Device-common-export interface PolicyChangedEvent-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## 导入模块
@@ -32,6 +34,8 @@ bundleName: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PolicyChangedEvent-bundleName: string--><!--Device-PolicyChangedEvent-bundleName: string-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## functionName
@@ -47,6 +51,8 @@ functionName: string
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PolicyChangedEvent-functionName: string--><!--Device-PolicyChangedEvent-functionName: string-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -64,6 +70,8 @@ parameters: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PolicyChangedEvent-parameters: string--><!--Device-PolicyChangedEvent-parameters: string-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## time
@@ -79,5 +87,7 @@ time: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PolicyChangedEvent-time: number--><!--Device-PolicyChangedEvent-time: number-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager

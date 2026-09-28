@@ -8,6 +8,8 @@ export interface TraceRouteOptions
 
 **起始版本：** 26.0.0
 
+<!--Device-connection-export interface TraceRouteOptions--><!--Device-connection-export interface TraceRouteOptions-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ maxJumpNumber?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TraceRouteOptions-maxJumpNumber?: int--><!--Device-TraceRouteOptions-maxJumpNumber?: int-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## packetsType
@@ -45,5 +49,7 @@ packetsType?: PacketsType
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TraceRouteOptions-packetsType?: PacketsType--><!--Device-TraceRouteOptions-packetsType?: PacketsType-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core

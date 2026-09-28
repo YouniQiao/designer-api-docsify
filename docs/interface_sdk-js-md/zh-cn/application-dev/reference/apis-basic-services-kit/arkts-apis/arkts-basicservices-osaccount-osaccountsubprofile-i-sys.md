@@ -8,6 +8,8 @@ interface OsAccountSubProfile
 
 **起始版本：** 26.0.0
 
+<!--Device-osAccount-interface OsAccountSubProfile--><!--Device-osAccount-interface OsAccountSubProfile-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ createTime: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OsAccountSubProfile-createTime: long--><!--Device-OsAccountSubProfile-createTime: long-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ distributedInfo?: distributedAccount.DistributedInfo
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-OsAccountSubProfile-distributedInfo?: distributedAccount.DistributedInfo--><!--Device-OsAccountSubProfile-distributedInfo?: distributedAccount.DistributedInfo-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -68,6 +74,8 @@ id: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OsAccountSubProfile-id: int--><!--Device-OsAccountSubProfile-id: int-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -86,6 +94,8 @@ index: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OsAccountSubProfile-index: int--><!--Device-OsAccountSubProfile-index: int-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -103,6 +113,8 @@ osAccountLocalId: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-OsAccountSubProfile-osAccountLocalId: int--><!--Device-OsAccountSubProfile-osAccountLocalId: int-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 

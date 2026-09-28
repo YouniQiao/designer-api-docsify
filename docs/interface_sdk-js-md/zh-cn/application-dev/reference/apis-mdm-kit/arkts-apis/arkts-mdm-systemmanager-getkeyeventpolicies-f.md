@@ -20,6 +20,8 @@ function getKeyEventPolicies(admin: Want): Array<KeyEventPolicy>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-systemManager-function getKeyEventPolicies(admin: Want): Array<KeyEventPolicy>--><!--Device-systemManager-function getKeyEventPolicies(admin: Want): Array<KeyEventPolicy>-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -79,6 +81,8 @@ function getKeyEventPolicies(admin: Want | null): Array<KeyEventPolicy>
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_SYSTEM
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-systemManager-function getKeyEventPolicies(admin: Want | null): Array<KeyEventPolicy>--><!--Device-systemManager-function getKeyEventPolicies(admin: Want | null): Array<KeyEventPolicy>-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

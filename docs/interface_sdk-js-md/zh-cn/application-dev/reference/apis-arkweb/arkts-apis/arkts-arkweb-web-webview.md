@@ -6,6 +6,8 @@ This module provides the capability to manage web modules.
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace webview--><!--Device-unnamed-declare namespace webview-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## 导入模块

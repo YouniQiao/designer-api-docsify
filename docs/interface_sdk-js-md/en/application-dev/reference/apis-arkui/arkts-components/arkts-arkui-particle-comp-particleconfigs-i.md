@@ -10,6 +10,8 @@ Defines the particle configs.
 
 **Since:** 10
 
+<!--Device-unnamed-interface ParticleConfigs--><!--Device-unnamed-interface ParticleConfigs-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## [ParticleType.IMAGE]
@@ -28,6 +30,8 @@ Image particle configuration.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ParticleConfigs-[ParticleType.IMAGE]: ImageParticleParameters--><!--Device-ParticleConfigs-[ParticleType.IMAGE]: ImageParticleParameters-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## [ParticleType.POINT]
@@ -45,5 +49,7 @@ Point particle configuration.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ParticleConfigs-[ParticleType.POINT]: PointParticleParameters--><!--Device-ParticleConfigs-[ParticleType.POINT]: PointParticleParameters-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

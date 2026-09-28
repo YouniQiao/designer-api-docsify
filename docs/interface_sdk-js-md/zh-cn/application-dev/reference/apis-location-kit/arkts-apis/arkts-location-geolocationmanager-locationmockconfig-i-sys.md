@@ -8,6 +8,8 @@ export interface LocationMockConfig
 
 **起始版本：** 9
 
+<!--Device-geoLocationManager-export interface LocationMockConfig--><!--Device-geoLocationManager-export interface LocationMockConfig-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ locations: Array<Location>
 
 **起始版本：** 9
 
+<!--Device-LocationMockConfig-locations: Array<Location>--><!--Device-LocationMockConfig-locations: Array<Location>-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ timeInterval: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-LocationMockConfig-timeInterval: int--><!--Device-LocationMockConfig-timeInterval: int-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 

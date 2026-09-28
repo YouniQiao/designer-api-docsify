@@ -8,6 +8,8 @@ export interface LocationCommand
 
 **起始版本：** 9
 
+<!--Device-geoLocationManager-export interface LocationCommand--><!--Device-geoLocationManager-export interface LocationCommand-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ command: string
 
 **起始版本：** 9
 
+<!--Device-LocationCommand-command: string--><!--Device-LocationCommand-command: string-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 ## scenario
@@ -41,5 +45,7 @@ scenario: LocationRequestScenario
 **类型：** [LocationRequestScenario](arkts-location-geolocationmanager-locationrequestscenario-e.md)
 
 **起始版本：** 9
+
+<!--Device-LocationCommand-scenario: LocationRequestScenario--><!--Device-LocationCommand-scenario: LocationRequestScenario-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core

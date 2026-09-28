@@ -8,6 +8,8 @@ TLS连接的操作。
 
 **起始版本：** 9
 
+<!--Device-socket-export interface TLSConnectOptions--><!--Device-socket-export interface TLSConnectOptions-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块
@@ -28,6 +30,8 @@ address: NetAddress
 
 **起始版本：** 9
 
+<!--Device-TLSConnectOptions-address: NetAddress--><!--Device-TLSConnectOptions-address: NetAddress-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## ALPNProtocols
@@ -41,6 +45,8 @@ ALPN协议，支持["spdy/1", "http/1.1"]，默认为[]。
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 9
+
+<!--Device-TLSConnectOptions-ALPNProtocols?: Array<string>--><!--Device-TLSConnectOptions-ALPNProtocols?: Array<string>-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -56,6 +62,8 @@ proxy?: ProxyOptions
 
 **起始版本：** 18
 
+<!--Device-TLSConnectOptions-proxy?: ProxyOptions--><!--Device-TLSConnectOptions-proxy?: ProxyOptions-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## secureOptions
@@ -69,6 +77,8 @@ TLS安全相关操作。
 **类型：** [TLSSecureOptions](arkts-network-socket-tlssecureoptions-i.md)
 
 **起始版本：** 9
+
+<!--Device-TLSConnectOptions-secureOptions: TLSSecureOptions--><!--Device-TLSConnectOptions-secureOptions: TLSSecureOptions-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -84,6 +94,8 @@ skipRemoteValidation?: boolean
 
 **起始版本：** 12
 
+<!--Device-TLSConnectOptions-skipRemoteValidation?: boolean--><!--Device-TLSConnectOptions-skipRemoteValidation?: boolean-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## timeout
@@ -97,5 +109,7 @@ timeout?: number
 **类型：** number
 
 **起始版本：** 22
+
+<!--Device-TLSConnectOptions-timeout?: int--><!--Device-TLSConnectOptions-timeout?: int-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack

@@ -8,6 +8,8 @@ export enum ResourceType
 
 **起始版本：** 10
 
+<!--Device-deviceStandby-export enum ResourceType--><!--Device-deviceStandby-export enum ResourceType-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.DeviceStandby
 
 **系统接口：** 此接口为系统接口。
@@ -21,6 +23,8 @@ NETWORK = 1
 网络访问资源。
 
 **起始版本：** 10
+
+<!--Device-ResourceType-NETWORK = 1--><!--Device-ResourceType-NETWORK = 1-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.DeviceStandby
 
@@ -36,6 +40,8 @@ cpu-runninglock资源。
 
 **起始版本：** 10
 
+<!--Device-ResourceType-RUNNING_LOCK = 1 << 1--><!--Device-ResourceType-RUNNING_LOCK = 1 << 1-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.DeviceStandby
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +55,8 @@ TIMER = 1 << 2
 timer任务资源。
 
 **起始版本：** 10
+
+<!--Device-ResourceType-TIMER = 1 << 2--><!--Device-ResourceType-TIMER = 1 << 2-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.DeviceStandby
 
@@ -64,6 +72,8 @@ work任务资源。
 
 **起始版本：** 10
 
+<!--Device-ResourceType-WORK_SCHEDULER = 1 << 3--><!--Device-ResourceType-WORK_SCHEDULER = 1 << 3-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.DeviceStandby
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +87,8 @@ AUTO_SYNC = 1 << 4
 自动同步的资源。
 
 **起始版本：** 10
+
+<!--Device-ResourceType-AUTO_SYNC = 1 << 4--><!--Device-ResourceType-AUTO_SYNC = 1 << 4-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.DeviceStandby
 
@@ -92,6 +104,8 @@ pushkit资源。
 
 **起始版本：** 10
 
+<!--Device-ResourceType-PUSH = 1 << 5--><!--Device-ResourceType-PUSH = 1 << 5-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.DeviceStandby
 
 **系统接口：** 此接口为系统接口。
@@ -105,6 +119,8 @@ FREEZE = 1 << 6
 冻结应用资源。
 
 **起始版本：** 10
+
+<!--Device-ResourceType-FREEZE = 1 << 6--><!--Device-ResourceType-FREEZE = 1 << 6-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.DeviceStandby
 

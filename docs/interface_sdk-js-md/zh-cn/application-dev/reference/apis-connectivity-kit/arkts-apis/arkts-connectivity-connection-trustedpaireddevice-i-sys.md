@@ -8,6 +8,8 @@ interface TrustedPairedDevice
 
 **起始版本：** 15
 
+<!--Device-connection-interface TrustedPairedDevice--><!--Device-connection-interface TrustedPairedDevice-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ bluetoothClass: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TrustedPairedDevice-bluetoothClass: int--><!--Device-TrustedPairedDevice-bluetoothClass: int-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ deviceName: string
 **起始版本：** 15
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TrustedPairedDevice-deviceName: string--><!--Device-TrustedPairedDevice-deviceName: string-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -68,6 +74,8 @@ deviceNameTime: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TrustedPairedDevice-deviceNameTime: long--><!--Device-TrustedPairedDevice-deviceNameTime: long-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -85,6 +93,8 @@ deviceType: string
 **起始版本：** 15
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TrustedPairedDevice-deviceType: string--><!--Device-TrustedPairedDevice-deviceType: string-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -104,6 +114,8 @@ hiLinkVersion: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TrustedPairedDevice-hiLinkVersion: string--><!--Device-TrustedPairedDevice-hiLinkVersion: string-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -121,6 +133,8 @@ macAddress: string
 **起始版本：** 15
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TrustedPairedDevice-macAddress: string--><!--Device-TrustedPairedDevice-macAddress: string-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -140,6 +154,8 @@ manufactory: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TrustedPairedDevice-manufactory: string--><!--Device-TrustedPairedDevice-manufactory: string-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -157,6 +173,8 @@ modelId: string
 **起始版本：** 15
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TrustedPairedDevice-modelId: string--><!--Device-TrustedPairedDevice-modelId: string-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -176,6 +194,8 @@ pairState: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TrustedPairedDevice-pairState: int--><!--Device-TrustedPairedDevice-pairState: int-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -193,6 +213,8 @@ productId: string
 **起始版本：** 15
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TrustedPairedDevice-productId: string--><!--Device-TrustedPairedDevice-productId: string-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -212,6 +234,8 @@ secureAdvertisingInfo: ArrayBuffer
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TrustedPairedDevice-secureAdvertisingInfo: ArrayBuffer--><!--Device-TrustedPairedDevice-secureAdvertisingInfo: ArrayBuffer-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -229,6 +253,8 @@ serviceId: string
 **起始版本：** 15
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TrustedPairedDevice-serviceId: string--><!--Device-TrustedPairedDevice-serviceId: string-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -248,6 +274,8 @@ serviceType: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TrustedPairedDevice-serviceType: string--><!--Device-TrustedPairedDevice-serviceType: string-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -265,6 +293,8 @@ sn: string
 **起始版本：** 15
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TrustedPairedDevice-sn: string--><!--Device-TrustedPairedDevice-sn: string-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -284,6 +314,8 @@ token: ArrayBuffer
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TrustedPairedDevice-token: ArrayBuffer--><!--Device-TrustedPairedDevice-token: ArrayBuffer-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -301,6 +333,8 @@ uuids: string
 **起始版本：** 15
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TrustedPairedDevice-uuids: string--><!--Device-TrustedPairedDevice-uuids: string-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

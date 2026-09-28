@@ -10,6 +10,8 @@ type PartnerAgentExtensionAbilityDestroyReason = partnerAgent.PartnerAgentExtens
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-unnamed-type PartnerAgentExtensionAbilityDestroyReason = partnerAgent.PartnerAgentExtensionAbilityDestroyReason--><!--Device-unnamed-type PartnerAgentExtensionAbilityDestroyReason = partnerAgent.PartnerAgentExtensionAbilityDestroyReason-End-->
+
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core
 
 **类型：** [partnerAgent.PartnerAgentExtensionAbilityDestroyReason](arkts-connectivity-partneragent-partneragentextensionabilitydestroyreason-e.md)

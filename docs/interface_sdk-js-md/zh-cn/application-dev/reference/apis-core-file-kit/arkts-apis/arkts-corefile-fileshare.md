@@ -6,6 +6,8 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace fileShare--><!--Device-unnamed-declare namespace fileShare-End-->
+
 **系统能力：** SystemCapability.FileManagement.AppFileService
 
 ## 导入模块

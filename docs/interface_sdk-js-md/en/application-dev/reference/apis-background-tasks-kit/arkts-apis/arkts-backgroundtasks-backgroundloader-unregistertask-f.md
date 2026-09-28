@@ -20,6 +20,8 @@ Unregister background load task.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-backgroundLoader-function unregisterTask(taskInfo: TaskInfo): void--><!--Device-backgroundLoader-function unregisterTask(taskInfo: TaskInfo): void-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
 **Parameters:**

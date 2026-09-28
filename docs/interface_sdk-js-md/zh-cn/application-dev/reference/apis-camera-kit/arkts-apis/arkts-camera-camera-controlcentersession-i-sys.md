@@ -12,6 +12,8 @@ Control center session object.
 
 **起始版本：** 20
 
+<!--Device-camera-interface ControlCenterSession extends Beauty, Aperture, ColorEffect--><!--Device-camera-interface ControlCenterSession extends Beauty, Aperture, ColorEffect-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -31,6 +33,8 @@ enableAutoFraming(enabled: boolean): void
 Enable auto-framing effect.
 
 **起始版本：** 24
+
+<!--Device-ControlCenterSession-enableAutoFraming(enabled: boolean): void--><!--Device-ControlCenterSession-enableAutoFraming(enabled: boolean): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -60,6 +64,8 @@ Gets the status of auto-framing effect.
 
 **起始版本：** 24
 
+<!--Device-ControlCenterSession-getAutoFramingStatus(): boolean--><!--Device-ControlCenterSession-getAutoFramingStatus(): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -87,6 +93,8 @@ Gets the control center height.
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ControlCenterSession-getControlCenterHeight(): double--><!--Device-ControlCenterSession-getControlCenterHeight(): double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -116,6 +124,8 @@ Gets the current camera device.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ControlCenterSession-getCurrentDevice(): CameraDevice--><!--Device-ControlCenterSession-getCurrentDevice(): CameraDevice-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -143,6 +153,8 @@ Checks whether auto-framing is supported.
 
 **起始版本：** 24
 
+<!--Device-ControlCenterSession-isAutoFramingSupported(): boolean--><!--Device-ControlCenterSession-isAutoFramingSupported(): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -168,6 +180,8 @@ release(): Promise<void>
 Release control center session object.
 
 **起始版本：** 20
+
+<!--Device-ControlCenterSession-release(): Promise<void>--><!--Device-ControlCenterSession-release(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -196,6 +210,8 @@ Sets the camera to be used as a camera at the specified position.
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ControlCenterSession-usedAsPosition(position: CameraPosition): void--><!--Device-ControlCenterSession-usedAsPosition(position: CameraPosition): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

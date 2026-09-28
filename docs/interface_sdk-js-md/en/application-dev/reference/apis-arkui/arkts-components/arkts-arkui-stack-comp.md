@@ -35,6 +35,8 @@ Defines a stack container where child components are successively stacked and th
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-StackInterface-(options?: StackOptions): StackAttribute--><!--Device-StackInterface-(options?: StackOptions): StackAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

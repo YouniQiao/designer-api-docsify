@@ -8,6 +8,8 @@ export interface UpgradePolicy
 
 **起始版本：** 9
 
+<!--Device-update-export interface UpgradePolicy--><!--Device-update-export interface UpgradePolicy-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ autoUpgradePeriods: Array<UpgradePeriod>
 
 **起始版本：** 9
 
+<!--Device-UpgradePolicy-autoUpgradePeriods: Array<UpgradePeriod>--><!--Device-UpgradePolicy-autoUpgradePeriods: Array<UpgradePeriod>-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -46,6 +50,8 @@ autoUpgradeStrategy: boolean
 
 **起始版本：** 9
 
+<!--Device-UpgradePolicy-autoUpgradeStrategy: boolean--><!--Device-UpgradePolicy-autoUpgradeStrategy: boolean-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +67,8 @@ downloadStrategy: boolean
 **类型：** boolean
 
 **起始版本：** 9
+
+<!--Device-UpgradePolicy-downloadStrategy: boolean--><!--Device-UpgradePolicy-downloadStrategy: boolean-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
 

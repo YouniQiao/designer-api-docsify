@@ -4,6 +4,8 @@
 
 **起始版本：** 23
 
+<!--Device-unnamed-declare namespace systemSoundManager--><!--Device-unnamed-declare namespace systemSoundManager-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 ## 导入模块

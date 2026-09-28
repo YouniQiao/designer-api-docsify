@@ -8,6 +8,8 @@ interface Processor
 
 **起始版本：** 11
 
+<!--Device-hiAppEvent-interface Processor--><!--Device-hiAppEvent-interface Processor-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 ## 导入模块
@@ -30,7 +32,9 @@ appId?: string
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Processor-appId?: string--><!--Device-Processor-appId?: string-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -48,7 +52,9 @@ batchReport?: number
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Processor-batchReport?: int--><!--Device-Processor-batchReport?: int-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -66,7 +72,9 @@ configId?: number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Processor-configId?: int--><!--Device-Processor-configId?: int-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -84,7 +92,9 @@ configName?: string
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-Processor-configName?: string--><!--Device-Processor-configName?: string-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -106,7 +116,9 @@ customConfigs?: Record<string, string>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Processor-customConfigs?: Record<string, string>--><!--Device-Processor-customConfigs?: Record<string, string>-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -124,7 +136,9 @@ debugMode?: boolean
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Processor-debugMode?: boolean--><!--Device-Processor-debugMode?: boolean-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -142,7 +156,9 @@ eventConfigs?: AppEventReportConfig[]
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Processor-eventConfigs?: AppEventReportConfig[]--><!--Device-Processor-eventConfigs?: AppEventReportConfig[]-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -160,7 +176,9 @@ name: string
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Processor-name: string--><!--Device-Processor-name: string-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -178,7 +196,9 @@ onBackgroundReport?: boolean
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Processor-onBackgroundReport?: boolean--><!--Device-Processor-onBackgroundReport?: boolean-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -196,7 +216,9 @@ onStartReport?: boolean
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Processor-onStartReport?: boolean--><!--Device-Processor-onStartReport?: boolean-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -214,7 +236,9 @@ periodReport?: number
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Processor-periodReport?: int--><!--Device-Processor-periodReport?: int-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -232,7 +256,9 @@ routeInfo?: string
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Processor-routeInfo?: string--><!--Device-Processor-routeInfo?: string-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -250,7 +276,9 @@ userIds?: string[]
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Processor-userIds?: string[]--><!--Device-Processor-userIds?: string[]-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -268,6 +296,8 @@ userProperties?: string[]
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Processor-userProperties?: string[]--><!--Device-Processor-userProperties?: string[]-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent

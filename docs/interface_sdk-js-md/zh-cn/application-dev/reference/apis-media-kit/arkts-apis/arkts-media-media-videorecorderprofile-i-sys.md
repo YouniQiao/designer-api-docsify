@@ -8,6 +8,8 @@ interface VideoRecorderProfile
 
 **起始版本：** 9
 
+<!--Device-media-interface VideoRecorderProfile--><!--Device-media-interface VideoRecorderProfile-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ readonly audioBitrate: number
 
 **起始版本：** 9
 
+<!--Device-VideoRecorderProfile-readonly audioBitrate: int--><!--Device-VideoRecorderProfile-readonly audioBitrate: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ readonly audioChannels: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-VideoRecorderProfile-readonly audioChannels: int--><!--Device-VideoRecorderProfile-readonly audioChannels: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
@@ -62,6 +68,8 @@ readonly audioCodec: CodecMimeType
 
 **起始版本：** 9
 
+<!--Device-VideoRecorderProfile-readonly audioCodec: CodecMimeType--><!--Device-VideoRecorderProfile-readonly audioCodec: CodecMimeType-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +85,8 @@ readonly audioSampleRate: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-VideoRecorderProfile-readonly audioSampleRate: int--><!--Device-VideoRecorderProfile-readonly audioSampleRate: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
@@ -94,6 +104,8 @@ readonly fileFormat: ContainerFormatType
 
 **起始版本：** 9
 
+<!--Device-VideoRecorderProfile-readonly fileFormat: ContainerFormatType--><!--Device-VideoRecorderProfile-readonly fileFormat: ContainerFormatType-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
 **系统接口：** 此接口为系统接口。
@@ -109,6 +121,8 @@ readonly videoBitrate: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-VideoRecorderProfile-readonly videoBitrate: int--><!--Device-VideoRecorderProfile-readonly videoBitrate: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
@@ -126,6 +140,8 @@ readonly videoCodec: CodecMimeType
 
 **起始版本：** 9
 
+<!--Device-VideoRecorderProfile-readonly videoCodec: CodecMimeType--><!--Device-VideoRecorderProfile-readonly videoCodec: CodecMimeType-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
 **系统接口：** 此接口为系统接口。
@@ -141,6 +157,8 @@ readonly videoFrameHeight: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-VideoRecorderProfile-readonly videoFrameHeight: int--><!--Device-VideoRecorderProfile-readonly videoFrameHeight: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
@@ -158,6 +176,8 @@ readonly videoFrameRate: number
 
 **起始版本：** 9
 
+<!--Device-VideoRecorderProfile-readonly videoFrameRate: int--><!--Device-VideoRecorderProfile-readonly videoFrameRate: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
 **系统接口：** 此接口为系统接口。
@@ -173,6 +193,8 @@ readonly videoFrameWidth: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-VideoRecorderProfile-readonly videoFrameWidth: int--><!--Device-VideoRecorderProfile-readonly videoFrameWidth: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 

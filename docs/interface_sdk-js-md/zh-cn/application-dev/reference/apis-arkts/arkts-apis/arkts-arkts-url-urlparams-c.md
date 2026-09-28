@@ -8,6 +8,8 @@ URLParams是一个用于解析、构造和操作URL参数的实用类。该类�
 
 **起始版本：** 9
 
+<!--Device-url-class URLParams--><!--Device-url-class URLParams-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -27,6 +29,8 @@ import { url } from '@kit.ArkTS';
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-URLParams-[Symbol.iterator](): IterableIterator<[string, string]>--><!--Device-URLParams-[Symbol.iterator](): IterableIterator<[string, string]>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -61,7 +65,9 @@ append(name: string, value: string): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-URLParams-append(name: string, value: string): void--><!--Device-URLParams-append(name: string, value: string): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -96,6 +102,8 @@ URLParams的构造函数，用于创建URL参数对象，适用于需要解析�
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-URLParams-constructor(init?: string[][] | Record<string, string> | string | URLParams)--><!--Device-URLParams-constructor(init?: string[][] | Record<string, string> | string | URLParams)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -132,7 +140,9 @@ delete(name: string): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-URLParams-delete(name: string): void--><!--Device-URLParams-delete(name: string): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -163,7 +173,9 @@ entries(): IterableIterator<[string, string]>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-URLParams-entries(): IterableIterator<[string, string]>--><!--Device-URLParams-entries(): IterableIterator<[string, string]>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -200,6 +212,8 @@ forEach(callbackFn: (value: string, key: string, searchParams: URLParams) => voi
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-URLParams-forEach(callbackFn: (value: string, key: string, searchParams: URLParams) => void, thisArg?: Object): void--><!--Device-URLParams-forEach(callbackFn: (value: string, key: string, searchParams: URLParams) => void, thisArg?: Object): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -231,6 +245,8 @@ get(name: string): string | null
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-URLParams-get(name: string): string | null--><!--Device-URLParams-get(name: string): string | null-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -265,7 +281,9 @@ getAll(name: string): string[]
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-URLParams-getAll(name: string): string[]--><!--Device-URLParams-getAll(name: string): string[]-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -302,7 +320,9 @@ has(name: string): boolean
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-URLParams-has(name: string): boolean--><!--Device-URLParams-has(name: string): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -339,7 +359,9 @@ keys(): IterableIterator<string>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-URLParams-keys(): IterableIterator<string>--><!--Device-URLParams-keys(): IterableIterator<string>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -376,7 +398,9 @@ set(name: string, value: string): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-URLParams-set(name: string, value: string): void--><!--Device-URLParams-set(name: string, value: string): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -405,7 +429,9 @@ sort(): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-URLParams-sort(): void--><!--Device-URLParams-sort(): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -427,7 +453,9 @@ toString(): string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-URLParams-toString(): string--><!--Device-URLParams-toString(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -460,7 +488,9 @@ values(): IterableIterator<string>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-URLParams-values(): IterableIterator<string>--><!--Device-URLParams-values(): IterableIterator<string>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

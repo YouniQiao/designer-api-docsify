@@ -20,6 +20,8 @@ function disconnectNative(connectionId: number): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-webNativeMessagingExtensionManager-function disconnectNative(connectionId: number): Promise<void>--><!--Device-webNativeMessagingExtensionManager-function disconnectNative(connectionId: number): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**

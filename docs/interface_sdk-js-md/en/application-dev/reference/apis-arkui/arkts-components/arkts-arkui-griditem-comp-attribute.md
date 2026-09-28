@@ -8,6 +8,8 @@ declare class GridItemAttribute extends CommonMethod<GridItemAttribute>
 
 **Since:** 7
 
+<!--Device-unnamed-declare class GridItemAttribute extends CommonMethod<GridItemAttribute>--><!--Device-unnamed-declare class GridItemAttribute extends CommonMethod<GridItemAttribute>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## columnEnd
@@ -23,6 +25,8 @@ Sets the end column number of the component.
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-GridItemAttribute-columnEnd(value: number): GridItemAttribute--><!--Device-GridItemAttribute-columnEnd(value: number): GridItemAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,6 +50,8 @@ Sets the start column number of the component.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-GridItemAttribute-columnStart(value: number): GridItemAttribute--><!--Device-GridItemAttribute-columnStart(value: number): GridItemAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -67,6 +73,8 @@ Triggered when the selected state of the grid item changes.
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-GridItemAttribute-onSelect(event: (isSelected: boolean) => void): GridItemAttribute--><!--Device-GridItemAttribute-onSelect(event: (isSelected: boolean) => void): GridItemAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -90,6 +98,8 @@ Sets the end row number of the component.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-GridItemAttribute-rowEnd(value: number): GridItemAttribute--><!--Device-GridItemAttribute-rowEnd(value: number): GridItemAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -112,6 +122,8 @@ Sets the start row number of the component.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-GridItemAttribute-rowStart(value: number): GridItemAttribute--><!--Device-GridItemAttribute-rowStart(value: number): GridItemAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -128,13 +140,15 @@ selectable(value: boolean)
 
 Sets whether the grid item is selectable in the mouse selection box area. This attribute takes effect only when mouse box selection is enabled for the parent **Grid** container.
 
-This attribute must be used before the [polymorphic style](arkts-arkui-common-comp.md#common) is set. Otherwise, the style settings will not take effect.
+This attribute must be used before the [polymorphic style](arkts-arkui-common-comp.md) is set. Otherwise, the style settings will not take effect.
 
 **Since:** 8
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-GridItemAttribute-selectable(value: boolean): GridItemAttribute--><!--Device-GridItemAttribute-selectable(value: boolean): GridItemAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -152,13 +166,15 @@ selected(value: boolean)
 
 Sets whether the grid item is selected. This attribute supports two-way binding through [$$](../../../ui/state-management/arkts-two-way-sync.md).
 
-This attribute must be used before the [polymorphic style](arkts-arkui-common-comp.md#common) is set. Otherwise, the style settings will not take effect.
+This attribute must be used before the [polymorphic style](arkts-arkui-common-comp.md) is set. Otherwise, the style settings will not take effect.
 
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-GridItemAttribute-selected(value: boolean): GridItemAttribute--><!--Device-GridItemAttribute-selected(value: boolean): GridItemAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -187,6 +203,8 @@ Whether to re-create the component when it is being built.
 **Deprecated since:** 9
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-GridItemAttribute-forceRebuild(value: boolean): GridItemAttribute--><!--Device-GridItemAttribute-forceRebuild(value: boolean): GridItemAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

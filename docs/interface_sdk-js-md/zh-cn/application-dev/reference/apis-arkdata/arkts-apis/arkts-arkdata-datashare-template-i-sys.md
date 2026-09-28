@@ -8,6 +8,8 @@ interface Template
 
 **起始版本：** 10
 
+<!--Device-dataShare-interface Template--><!--Device-dataShare-interface Template-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ predicates: Record<string, string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Template-predicates: Record<string, string>--><!--Device-Template-predicates: Record<string, string>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -52,6 +56,8 @@ scheduler: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Template-scheduler: string--><!--Device-Template-scheduler: string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -69,6 +75,8 @@ update?: string
 **起始版本：** 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Template-update?: string--><!--Device-Template-update?: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 

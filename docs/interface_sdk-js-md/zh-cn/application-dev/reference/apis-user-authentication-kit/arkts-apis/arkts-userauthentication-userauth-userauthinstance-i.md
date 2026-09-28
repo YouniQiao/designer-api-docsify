@@ -14,6 +14,8 @@ interface UserAuthInstance
 
 **起始版本：** 10
 
+<!--Device-userAuth-interface UserAuthInstance--><!--Device-userAuth-interface UserAuthInstance-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 ## 导入模块
@@ -38,7 +40,9 @@ cancel(): void
 
 **需要权限：** ohos.permission.ACCESS_BIOMETRIC
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-UserAuthInstance-cancel(): void--><!--Device-UserAuthInstance-cancel(): void-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -108,6 +112,8 @@ off(type: 'result', callback?: IAuthCallback): void
 **起始版本：** 10
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-UserAuthInstance-off(type: 'result', callback?: IAuthCallback): void--><!--Device-UserAuthInstance-off(type: 'result', callback?: IAuthCallback): void-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -185,6 +191,8 @@ off(type: 'authTip', callback?: AuthTipCallback): void
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-UserAuthInstance-off(type: 'authTip', callback?: AuthTipCallback): void--><!--Device-UserAuthInstance-off(type: 'authTip', callback?: AuthTipCallback): void-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 **参数：**
@@ -261,6 +269,8 @@ on(type: 'result', callback: IAuthCallback): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-UserAuthInstance-on(type: 'result', callback: IAuthCallback): void--><!--Device-UserAuthInstance-on(type: 'result', callback: IAuthCallback): void-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 **参数：**
@@ -295,6 +305,8 @@ on(type: 'authTip', callback: AuthTipCallback): void
 **起始版本：** 20
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-UserAuthInstance-on(type: 'authTip', callback: AuthTipCallback): void--><!--Device-UserAuthInstance-on(type: 'authTip', callback: AuthTipCallback): void-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -374,7 +386,9 @@ start(): void
 - API版本20+：ohos.permission.ACCESS_BIOMETRIC or ohos.permission.USER_AUTH_FROM_BACKGROUND
 - API版本10-19：ohos.permission.ACCESS_BIOMETRIC
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-UserAuthInstance-start(): void--><!--Device-UserAuthInstance-start(): void-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 

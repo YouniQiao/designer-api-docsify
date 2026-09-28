@@ -10,6 +10,8 @@ interface FavoriteData
 
 **起始版本：** 23
 
+<!--Device-avMusicTemplate-interface FavoriteData--><!--Device-avMusicTemplate-interface FavoriteData-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## 导入模块
@@ -32,6 +34,8 @@ favCounts: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FavoriteData-favCounts: string--><!--Device-FavoriteData-favCounts: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## isFavorite
@@ -48,6 +52,8 @@ isFavorite: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FavoriteData-isFavorite: boolean--><!--Device-FavoriteData-isFavorite: boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## isSupportFav
@@ -63,5 +69,7 @@ isSupportFav: boolean
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FavoriteData-isSupportFav: boolean--><!--Device-FavoriteData-isSupportFav: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate

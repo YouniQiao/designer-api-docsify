@@ -16,6 +16,8 @@ function getSingleSensor(type: SensorId, callback: AsyncCallback<Sensor>): void
 
 **起始版本：** 9
 
+<!--Device-sensor-function getSingleSensor(type: SensorId, callback: AsyncCallback<Sensor>): void--><!--Device-sensor-function getSingleSensor(type: SensorId, callback: AsyncCallback<Sensor>): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -74,6 +76,8 @@ function getSingleSensor(type: SensorId): Promise<Sensor>
 获取指定类型的传感器信息。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-sensor-function getSingleSensor(type: SensorId): Promise<Sensor>--><!--Device-sensor-function getSingleSensor(type: SensorId): Promise<Sensor>-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 

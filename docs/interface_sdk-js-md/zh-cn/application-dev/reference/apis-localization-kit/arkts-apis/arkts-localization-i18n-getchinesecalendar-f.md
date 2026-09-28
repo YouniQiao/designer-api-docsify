@@ -20,6 +20,8 @@ export function getChineseCalendar(locale?: Intl.Locale): ChineseCalendar
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-i18n-export function getChineseCalendar(locale?: Intl.Locale): ChineseCalendar--><!--Device-i18n-export function getChineseCalendar(locale?: Intl.Locale): ChineseCalendar-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 **参数：**

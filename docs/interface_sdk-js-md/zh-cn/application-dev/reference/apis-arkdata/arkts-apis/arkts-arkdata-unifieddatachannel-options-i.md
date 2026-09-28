@@ -8,6 +8,8 @@ UDMF提供的数据操作接口包含三个可选参数：intention、key和visi
 
 **起始版本：** 10
 
+<!--Device-unifiedDataChannel-interface Options--><!--Device-unifiedDataChannel-interface Options-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## 导入模块
@@ -30,7 +32,9 @@ intention?: Intention
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Options-intention?: Intention--><!--Device-Options-intention?: Intention-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -52,7 +56,9 @@ UDMF中数据对象的唯一标识符，可通过[insertData](arkts-arkdata-unif
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Options-key?: string--><!--Device-Options-key?: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -72,6 +78,8 @@ visibility?: Visibility
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-Options-visibility?: Visibility--><!--Device-Options-visibility?: Visibility-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core

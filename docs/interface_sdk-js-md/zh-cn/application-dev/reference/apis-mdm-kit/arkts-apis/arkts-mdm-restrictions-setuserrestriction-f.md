@@ -24,6 +24,8 @@ function setUserRestriction(admin: Want, settingsItem: string, restricted: boole
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-restrictions-function setUserRestriction(admin: Want, settingsItem: string, restricted: boolean): void--><!--Device-restrictions-function setUserRestriction(admin: Want, settingsItem: string, restricted: boolean): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -79,6 +81,8 @@ function setUserRestriction(admin: Want, settingsItem: SettingsForDevice, restri
 **需要权限：** ohos.permission.ENTERPRISE_SET_USER_RESTRICTION
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-restrictions-function setUserRestriction(admin: Want, settingsItem: SettingsForDevice, restricted: boolean): void--><!--Device-restrictions-function setUserRestriction(admin: Want, settingsItem: SettingsForDevice, restricted: boolean): void-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

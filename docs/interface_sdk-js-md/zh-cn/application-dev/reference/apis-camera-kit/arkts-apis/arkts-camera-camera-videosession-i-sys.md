@@ -18,6 +18,8 @@ VideoSession继承自[Session](arkts-camera-camera-session-i.md)、[Flash](arkts
 
 **起始版本：** 11
 
+<!--Device-camera-interface VideoSession extends Session, Flash, AutoExposure, WhiteBalance, Focus, Zoom, Stabilization,    ColorManagement, ControlCenter, AutoDeviceSwitch, Macro, ManualExposure, ManualFocus, ManualIso, OIS,    Aperture--><!--Device-camera-interface VideoSession extends Session, Flash, AutoExposure, WhiteBalance, Focus, Zoom, Stabilization,    ColorManagement, ControlCenter, AutoDeviceSwitch, Macro, ManualExposure, ManualFocus, ManualIso, OIS,    Aperture-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
@@ -35,6 +37,8 @@ getSessionConflictFunctions(): Array<VideoConflictFunctions>
 Gets session conflict functions.
 
 **起始版本：** 13
+
+<!--Device-VideoSession-getSessionConflictFunctions(): Array<VideoConflictFunctions>--><!--Device-VideoSession-getSessionConflictFunctions(): Array<VideoConflictFunctions>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -61,6 +65,8 @@ getSessionFunctions(outputCapability: CameraOutputCapability): Array<VideoFuncti
 Gets session functions.
 
 **起始版本：** 13
+
+<!--Device-VideoSession-getSessionFunctions(outputCapability: CameraOutputCapability): Array<VideoFunctions>--><!--Device-VideoSession-getSessionFunctions(outputCapability: CameraOutputCapability): Array<VideoFunctions>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -94,6 +100,8 @@ off(type: 'lcdFlashStatus', callback?: AsyncCallback<LcdFlashStatus>): void
 Unsubscribes from LCD flash status change events.
 
 **起始版本：** 13
+
+<!--Device-VideoSession-off(type: 'lcdFlashStatus', callback?: AsyncCallback<LcdFlashStatus>): void--><!--Device-VideoSession-off(type: 'lcdFlashStatus', callback?: AsyncCallback<LcdFlashStatus>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -130,6 +138,8 @@ Unsubscribes from focus tracking information events.
 
 **起始版本：** 15
 
+<!--Device-VideoSession-off(type: 'focusTrackingInfoAvailable', callback?: Callback<FocusTrackingInfo>): void--><!--Device-VideoSession-off(type: 'focusTrackingInfoAvailable', callback?: Callback<FocusTrackingInfo>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -165,6 +175,8 @@ Unsubscribes from effect suggestion change events.
 
 **起始版本：** 18
 
+<!--Device-VideoSession-off(type: 'effectSuggestionChange', callback?: AsyncCallback<EffectSuggestionType>): void--><!--Device-VideoSession-off(type: 'effectSuggestionChange', callback?: AsyncCallback<EffectSuggestionType>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -191,6 +203,8 @@ off(type: 'lightStatusChange', callback?: AsyncCallback<LightStatus>): void
 Unsubscribes from camera light status changes.
 
 **起始版本：** 18
+
+<!--Device-VideoSession-off(type: 'lightStatusChange', callback?: AsyncCallback<LightStatus>): void--><!--Device-VideoSession-off(type: 'lightStatusChange', callback?: AsyncCallback<LightStatus>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -245,6 +259,8 @@ Unsubscribes from aperture info event callback.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-VideoSession-offApertureInfoChange(callback?: Callback<ApertureInfo>): void--><!--Device-VideoSession-offApertureInfoChange(callback?: Callback<ApertureInfo>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -270,6 +286,8 @@ on(type: 'lcdFlashStatus', callback: AsyncCallback<LcdFlashStatus>): void
 Subscribes to LCD flash status change events. This API uses an asynchronous callback to return the result.
 
 **起始版本：** 13
+
+<!--Device-VideoSession-on(type: 'lcdFlashStatus', callback: AsyncCallback<LcdFlashStatus>): void--><!--Device-VideoSession-on(type: 'lcdFlashStatus', callback: AsyncCallback<LcdFlashStatus>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -317,6 +335,8 @@ Subscribes to focus tracking information events. This API uses an asynchronous c
 
 **起始版本：** 15
 
+<!--Device-VideoSession-on(type: 'focusTrackingInfoAvailable', callback: Callback<FocusTrackingInfo>): void--><!--Device-VideoSession-on(type: 'focusTrackingInfoAvailable', callback: Callback<FocusTrackingInfo>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -360,6 +380,8 @@ Subscribes to effect suggestion change events.
 
 **起始版本：** 18
 
+<!--Device-VideoSession-on(type: 'effectSuggestionChange', callback: AsyncCallback<EffectSuggestionType>): void--><!--Device-VideoSession-on(type: 'effectSuggestionChange', callback: AsyncCallback<EffectSuggestionType>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -386,6 +408,8 @@ on(type: 'lightStatusChange', callback: AsyncCallback<LightStatus>): void
 Subscribes to camera light status changes. This API uses an asynchronous callback to return the result.
 
 **起始版本：** 18
+
+<!--Device-VideoSession-on(type: 'lightStatusChange', callback: AsyncCallback<LightStatus>): void--><!--Device-VideoSession-on(type: 'lightStatusChange', callback: AsyncCallback<LightStatus>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -439,6 +463,8 @@ Subscribes aperture info event callback.
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-VideoSession-onApertureInfoChange(callback: Callback<ApertureInfo>): void--><!--Device-VideoSession-onApertureInfoChange(callback: Callback<ApertureInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

@@ -12,6 +12,8 @@ export interface SceneResourceFactory extends RenderResourceFactory
 
 **起始版本：** 12
 
+<!--Device-unnamed-export interface SceneResourceFactory extends RenderResourceFactory--><!--Device-unnamed-export interface SceneResourceFactory extends RenderResourceFactory-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## createCamera
@@ -23,6 +25,8 @@ createCamera(params: SceneNodeParameters): Promise<Camera>
 根据节点参数创建相机，使用Promise异步回调。
 
 **起始版本：** 12
+
+<!--Device-SceneResourceFactory-createCamera(params: SceneNodeParameters): Promise<Camera>--><!--Device-SceneResourceFactory-createCamera(params: SceneNodeParameters): Promise<Camera>-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -72,6 +76,8 @@ createCamera(params: SceneNodeParameters, cameraParams: CameraParameters): Promi
 根据节点参数与相机参数创建相机，使用Promise异步回调。
 
 **起始版本：** 21
+
+<!--Device-SceneResourceFactory-createCamera(params: SceneNodeParameters, cameraParams: CameraParameters): Promise<Camera>--><!--Device-SceneResourceFactory-createCamera(params: SceneNodeParameters, cameraParams: CameraParameters): Promise<Camera>-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -123,6 +129,8 @@ createEffect(params: EffectParameters): Promise<Effect>
 
 **起始版本：** 21
 
+<!--Device-SceneResourceFactory-createEffect(params: EffectParameters): Promise<Effect>--><!--Device-SceneResourceFactory-createEffect(params: EffectParameters): Promise<Effect>-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **参数：**
@@ -172,6 +180,8 @@ createEnvironment(params: SceneResourceParameters): Promise<Environment>
 
 **起始版本：** 12
 
+<!--Device-SceneResourceFactory-createEnvironment(params: SceneResourceParameters): Promise<Environment>--><!--Device-SceneResourceFactory-createEnvironment(params: SceneResourceParameters): Promise<Environment>-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **参数：**
@@ -219,6 +229,8 @@ createGeometry(params: SceneNodeParameters, mesh:MeshResource): Promise<Geometry
 根据场景节点参数和网格数据创建几何对象，使用Promise异步回调。
 
 **起始版本：** 18
+
+<!--Device-SceneResourceFactory-createGeometry(params: SceneNodeParameters, mesh:MeshResource): Promise<Geometry>--><!--Device-SceneResourceFactory-createGeometry(params: SceneNodeParameters, mesh:MeshResource): Promise<Geometry>-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -275,6 +287,8 @@ createLight(params: SceneNodeParameters, lightType: LightType): Promise<Light>
 
 **起始版本：** 12
 
+<!--Device-SceneResourceFactory-createLight(params: SceneNodeParameters, lightType: LightType): Promise<Light>--><!--Device-SceneResourceFactory-createLight(params: SceneNodeParameters, lightType: LightType): Promise<Light>-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **参数：**
@@ -323,6 +337,8 @@ createMaterial(params: SceneResourceParameters, materialType: MaterialType): Pro
 
 **起始版本：** 12
 
+<!--Device-SceneResourceFactory-createMaterial(params: SceneResourceParameters, materialType: MaterialType): Promise<Material>--><!--Device-SceneResourceFactory-createMaterial(params: SceneResourceParameters, materialType: MaterialType): Promise<Material>-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **参数：**
@@ -370,6 +386,8 @@ createNode(params: SceneNodeParameters): Promise<Node>
 创建节点，使用Promise异步回调。
 
 **起始版本：** 12
+
+<!--Device-SceneResourceFactory-createNode(params: SceneNodeParameters): Promise<Node>--><!--Device-SceneResourceFactory-createNode(params: SceneNodeParameters): Promise<Node>-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 

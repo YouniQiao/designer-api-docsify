@@ -8,6 +8,8 @@ interface AudioDeviceDescriptor
 
 **起始版本：** 7
 
+<!--Device-audio-interface AudioDeviceDescriptor--><!--Device-audio-interface AudioDeviceDescriptor-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 ## 导入模块
@@ -34,7 +36,9 @@ SystemCapability.Multimedia.Audio.Device
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AudioDeviceDescriptor-readonly address: string--><!--Device-AudioDeviceDescriptor-readonly address: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -51,6 +55,8 @@ SystemCapability.Multimedia.Audio.Device
 **类型：** Array&lt;[AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)&gt;
 
 **起始版本：** 22
+
+<!--Device-AudioDeviceDescriptor-readonly capabilities?: Array<AudioStreamInfo>--><!--Device-AudioDeviceDescriptor-readonly capabilities?: Array<AudioStreamInfo>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -70,7 +76,9 @@ SystemCapability.Multimedia.Audio.Device
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AudioDeviceDescriptor-readonly channelCounts: Array<int>--><!--Device-AudioDeviceDescriptor-readonly channelCounts: Array<int>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -90,7 +98,9 @@ SystemCapability.Multimedia.Audio.Device
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AudioDeviceDescriptor-readonly channelMasks: Array<int>--><!--Device-AudioDeviceDescriptor-readonly channelMasks: Array<int>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -110,7 +120,9 @@ SystemCapability.Multimedia.Audio.Device
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AudioDeviceDescriptor-readonly deviceRole: DeviceRole--><!--Device-AudioDeviceDescriptor-readonly deviceRole: DeviceRole-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -130,7 +142,9 @@ SystemCapability.Multimedia.Audio.Device
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AudioDeviceDescriptor-readonly deviceType: DeviceType--><!--Device-AudioDeviceDescriptor-readonly deviceType: DeviceType-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -150,7 +164,9 @@ SystemCapability.Multimedia.Audio.Device
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AudioDeviceDescriptor-readonly displayName: string--><!--Device-AudioDeviceDescriptor-readonly displayName: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -170,7 +186,9 @@ SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AudioDeviceDescriptor-readonly encodingTypes?: Array<AudioEncodingType>--><!--Device-AudioDeviceDescriptor-readonly encodingTypes?: Array<AudioEncodingType>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -190,7 +208,9 @@ SystemCapability.Multimedia.Audio.Device
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AudioDeviceDescriptor-readonly id: int--><!--Device-AudioDeviceDescriptor-readonly id: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -207,6 +227,8 @@ SystemCapability.Multimedia.Audio.Device
 **类型：** string
 
 **起始版本：** 22
+
+<!--Device-AudioDeviceDescriptor-readonly model?: string--><!--Device-AudioDeviceDescriptor-readonly model?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -228,7 +250,9 @@ SystemCapability.Multimedia.Audio.Device
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AudioDeviceDescriptor-readonly name: string--><!--Device-AudioDeviceDescriptor-readonly name: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -248,7 +272,9 @@ SystemCapability.Multimedia.Audio.Device
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AudioDeviceDescriptor-readonly sampleRates: Array<int>--><!--Device-AudioDeviceDescriptor-readonly sampleRates: Array<int>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -265,5 +291,7 @@ SystemCapability.Multimedia.Audio.Spatialization
 **类型：** boolean
 
 **起始版本：** 18
+
+<!--Device-AudioDeviceDescriptor-readonly spatializationSupported?: boolean--><!--Device-AudioDeviceDescriptor-readonly spatializationSupported?: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization

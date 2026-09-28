@@ -8,6 +8,8 @@ interface KeyboardController
 
 **起始版本：** 26.0.0
 
+<!--Device-inputEventClient-interface KeyboardController--><!--Device-inputEventClient-interface KeyboardController-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
 ## 导入模块
@@ -29,6 +31,8 @@ pressKey(keyCode: KeyCode): Promise<void>
 **需要权限：** ohos.permission.CONTROL_DEVICE
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-KeyboardController-pressKey(keyCode: KeyCode): Promise<void>--><!--Device-KeyboardController-pressKey(keyCode: KeyCode): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
@@ -98,6 +102,8 @@ releaseKey(keyCode: KeyCode): Promise<void>
 **需要权限：** ohos.permission.CONTROL_DEVICE
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-KeyboardController-releaseKey(keyCode: KeyCode): Promise<void>--><!--Device-KeyboardController-releaseKey(keyCode: KeyCode): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 

@@ -20,6 +20,8 @@ function setPortRoles(portId: number, powerRole: PowerRoleType, dataRole: DataRo
 
 **替代接口：** [setPortRoleTypes](arkts-basicservices-usbmanager-setportroletypes-f-sys.md)(portId: number, powerRole: PowerRoleType, dataRole: DataRoleType)
 
+<!--Device-usbManager-function setPortRoles(portId: number, powerRole: PowerRoleType, dataRole: DataRoleType): Promise<void>--><!--Device-usbManager-function setPortRoles(portId: number, powerRole: PowerRoleType, dataRole: DataRoleType): Promise<void>-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 **系统接口：** 此接口为系统接口。

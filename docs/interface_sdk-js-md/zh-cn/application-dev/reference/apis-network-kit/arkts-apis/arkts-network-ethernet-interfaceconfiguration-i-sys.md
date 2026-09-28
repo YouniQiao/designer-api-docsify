@@ -8,6 +8,8 @@ export interface InterfaceConfiguration
 
 **起始版本：** 9
 
+<!--Device-ethernet-export interface InterfaceConfiguration--><!--Device-ethernet-export interface InterfaceConfiguration-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ dnsServers: string
 
 **起始版本：** 9
 
+<!--Device-InterfaceConfiguration-dnsServers: string--><!--Device-InterfaceConfiguration-dnsServers: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ gateway: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-InterfaceConfiguration-gateway: string--><!--Device-InterfaceConfiguration-gateway: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
@@ -62,6 +68,8 @@ httpProxy?: HttpProxy
 
 **起始版本：** 10
 
+<!--Device-InterfaceConfiguration-httpProxy?: HttpProxy--><!--Device-InterfaceConfiguration-httpProxy?: HttpProxy-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +85,8 @@ ipAddr: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-InterfaceConfiguration-ipAddr: string--><!--Device-InterfaceConfiguration-ipAddr: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
@@ -94,6 +104,8 @@ mode: IPSetMode
 
 **起始版本：** 9
 
+<!--Device-InterfaceConfiguration-mode: IPSetMode--><!--Device-InterfaceConfiguration-mode: IPSetMode-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
 **系统接口：** 此接口为系统接口。
@@ -110,6 +122,8 @@ netMask: string
 
 **起始版本：** 9
 
+<!--Device-InterfaceConfiguration-netMask: string--><!--Device-InterfaceConfiguration-netMask: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
 **系统接口：** 此接口为系统接口。
@@ -125,6 +139,8 @@ route: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-InterfaceConfiguration-route: string--><!--Device-InterfaceConfiguration-route: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 

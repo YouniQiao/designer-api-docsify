@@ -17,6 +17,8 @@ export class GridLayoutAlgorithm implements LayoutAlgorithm
 
 **装饰器类型：** @ObservedV2
 
+<!--Device-unnamed-export class GridLayoutAlgorithm implements LayoutAlgorithm--><!--Device-unnamed-export class GridLayoutAlgorithm implements LayoutAlgorithm-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
@@ -32,6 +34,8 @@ constructor(option?: GridLayoutAlgorithmOptions)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-GridLayoutAlgorithm-constructor(option?: GridLayoutAlgorithmOptions)--><!--Device-GridLayoutAlgorithm-constructor(option?: GridLayoutAlgorithmOptions)-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -69,6 +73,8 @@ public columnsGap?: LengthMetrics
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
 
+<!--Device-GridLayoutAlgorithm-public columnsGap?: LengthMetrics--><!--Device-GridLayoutAlgorithm-public columnsGap?: LengthMetrics-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## columnsTemplate
@@ -95,6 +101,8 @@ public columnsTemplate?: string | ItemFillPolicy
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
 
+<!--Device-GridLayoutAlgorithm-public columnsTemplate?: string | ItemFillPolicy--><!--Device-GridLayoutAlgorithm-public columnsTemplate?: string | ItemFillPolicy-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## rowsGap
@@ -120,5 +128,7 @@ public rowsGap?: LengthMetrics
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-GridLayoutAlgorithm-public rowsGap?: LengthMetrics--><!--Device-GridLayoutAlgorithm-public rowsGap?: LengthMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

@@ -8,6 +8,8 @@ enum WifiLinkType
 
 **起始版本：** 18
 
+<!--Device-wifiManager-enum WifiLinkType--><!--Device-wifiManager-enum WifiLinkType-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## DEFAULT_LINK
@@ -19,6 +21,8 @@ DEFAULT_LINK = 0
 默认连接类型。
 
 **起始版本：** 18
+
+<!--Device-WifiLinkType-DEFAULT_LINK = 0--><!--Device-WifiLinkType-DEFAULT_LINK = 0-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -32,6 +36,8 @@ Wi-Fi7单链连接。
 
 **起始版本：** 18
 
+<!--Device-WifiLinkType-WIFI7_SINGLE_LINK = 1--><!--Device-WifiLinkType-WIFI7_SINGLE_LINK = 1-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## WIFI7_MLSR
@@ -43,6 +49,8 @@ WIFI7_MLSR = 2
 Wi-Fi7 MLSR（multi-link single-radio，多链路单射频）连接。
 
 **起始版本：** 18
+
+<!--Device-WifiLinkType-WIFI7_MLSR = 2--><!--Device-WifiLinkType-WIFI7_MLSR = 2-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -56,6 +64,8 @@ Wi-Fi7 EMLSR（enhanced multi-link single-radio，增强型多链路单天线）
 
 **起始版本：** 18
 
+<!--Device-WifiLinkType-WIFI7_EMLSR = 3--><!--Device-WifiLinkType-WIFI7_EMLSR = 3-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## WIFI7_STR
@@ -67,5 +77,7 @@ WIFI7_STR = 4
 Wi-Fi7 STR（Simultaneous Tx and Rx，同时发送和接收）连接。
 
 **起始版本：** 18
+
+<!--Device-WifiLinkType-WIFI7_STR = 4--><!--Device-WifiLinkType-WIFI7_STR = 4-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA

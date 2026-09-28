@@ -12,6 +12,8 @@ export class DateTimeFormat
 
 **替代接口：** [Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)
 
+<!--Device-intl-export class DateTimeFormat--><!--Device-intl-export class DateTimeFormat-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## 导入模块
@@ -37,6 +39,8 @@ constructor()
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DateTimeFormat-constructor()--><!--Device-DateTimeFormat-constructor()-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -68,6 +72,8 @@ constructor(locale: string | Array<string>, options?: DateTimeOptions)
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DateTimeFormat-constructor(locale: string | Array<string>, options?: DateTimeOptions)--><!--Device-DateTimeFormat-constructor(locale: string | Array<string>, options?: DateTimeOptions)-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -107,6 +113,8 @@ format(date: Date): string
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DateTimeFormat-format(date: Date): string--><!--Device-DateTimeFormat-format(date: Date): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -155,6 +163,8 @@ formatRange(startDate: Date, endDate: Date): string
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-DateTimeFormat-formatRange(startDate: Date, endDate: Date): string--><!--Device-DateTimeFormat-formatRange(startDate: Date, endDate: Date): string-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 **参数：**
@@ -199,6 +209,8 @@ resolvedOptions(): DateTimeOptions
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DateTimeFormat-resolvedOptions(): DateTimeOptions--><!--Device-DateTimeFormat-resolvedOptions(): DateTimeOptions-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 

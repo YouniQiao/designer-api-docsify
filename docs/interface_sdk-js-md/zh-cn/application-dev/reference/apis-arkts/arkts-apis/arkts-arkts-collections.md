@@ -8,6 +8,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare namespace collections--><!--Device-unnamed-declare namespace collections-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块

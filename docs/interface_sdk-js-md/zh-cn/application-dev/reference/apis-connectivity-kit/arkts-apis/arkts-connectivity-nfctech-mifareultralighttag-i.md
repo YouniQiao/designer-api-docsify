@@ -16,6 +16,8 @@ MifareUltralightTag获取方式请参考[nfc-tag开发指南](../../../connectiv
 
 **起始版本：** 9
 
+<!--Device-unnamed-export interface MifareUltralightTag extends TagSession--><!--Device-unnamed-export interface MifareUltralightTag extends TagSession-End-->
+
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 ## getType
@@ -28,7 +30,9 @@ getType(): tag.MifareUltralightType
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MifareUltralightTag-getType(): tag.MifareUltralightType--><!--Device-MifareUltralightTag-getType(): tag.MifareUltralightType-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -60,7 +64,9 @@ readMultiplePages(pageIndex: number): Promise<number[]>
 
 **需要权限：** ohos.permission.NFC_TAG
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MifareUltralightTag-readMultiplePages(pageIndex: int): Promise<int[]>--><!--Device-MifareUltralightTag-readMultiplePages(pageIndex: int): Promise<int[]>-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -129,7 +135,9 @@ readMultiplePages(pageIndex: number, callback: AsyncCallback<number[]>): void
 
 **需要权限：** ohos.permission.NFC_TAG
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MifareUltralightTag-readMultiplePages(pageIndex: int, callback: AsyncCallback<int[]>): void--><!--Device-MifareUltralightTag-readMultiplePages(pageIndex: int, callback: AsyncCallback<int[]>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -193,7 +201,9 @@ writeSinglePage(pageIndex: number, data: number[]): Promise<void>
 
 **需要权限：** ohos.permission.NFC_TAG
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MifareUltralightTag-writeSinglePage(pageIndex: int, data: int[]): Promise<void>--><!--Device-MifareUltralightTag-writeSinglePage(pageIndex: int, data: int[]): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -264,7 +274,9 @@ writeSinglePage(pageIndex: number, data: number[], callback: AsyncCallback<void>
 
 **需要权限：** ohos.permission.NFC_TAG
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MifareUltralightTag-writeSinglePage(pageIndex: int, data: int[], callback: AsyncCallback<void>): void--><!--Device-MifareUltralightTag-writeSinglePage(pageIndex: int, data: int[], callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 

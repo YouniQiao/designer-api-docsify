@@ -8,6 +8,8 @@ export interface CreationSetting
 
 **起始版本：** 23
 
+<!--Device-photoAccessHelper-export interface CreationSetting--><!--Device-photoAccessHelper-export interface CreationSetting-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
@@ -30,7 +32,9 @@ fileNameExtension: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-CreationSetting-fileNameExtension: string--><!--Device-CreationSetting-fileNameExtension: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -48,7 +52,9 @@ photoType: PhotoType
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-CreationSetting-photoType: PhotoType--><!--Device-CreationSetting-photoType: PhotoType-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -72,6 +78,8 @@ title?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-CreationSetting-title?: string--><!--Device-CreationSetting-title?: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core

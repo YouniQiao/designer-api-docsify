@@ -17,6 +17,8 @@ declare function choose(types?: string[]): Promise<string>
 
 **废弃版本：** 9
 
+<!--Device-unnamed-declare function choose(types?: string[]): Promise<string>--><!--Device-unnamed-declare function choose(types?: string[]): Promise<string>-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **参数：**
@@ -46,6 +48,8 @@ declare function choose(callback: AsyncCallback<string>): void
 
 **废弃版本：** 9
 
+<!--Device-unnamed-declare function choose(callback: AsyncCallback<string>): void--><!--Device-unnamed-declare function choose(callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **参数：**
@@ -68,6 +72,8 @@ declare function choose(types: string[], callback: AsyncCallback<string>): void
 **起始版本：** 6
 
 **废弃版本：** 9
+
+<!--Device-unnamed-declare function choose(types: string[], callback: AsyncCallback<string>): void--><!--Device-unnamed-declare function choose(types: string[], callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 

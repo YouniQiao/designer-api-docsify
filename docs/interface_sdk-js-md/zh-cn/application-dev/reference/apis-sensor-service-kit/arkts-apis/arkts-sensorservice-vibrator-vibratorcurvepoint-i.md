@@ -8,6 +8,8 @@ interface VibratorCurvePoint
 
 **起始版本：** 18
 
+<!--Device-vibrator-interface VibratorCurvePoint--><!--Device-vibrator-interface VibratorCurvePoint-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## 导入模块
@@ -28,6 +30,8 @@ frequency?: number
 
 **起始版本：** 18
 
+<!--Device-VibratorCurvePoint-frequency?: int--><!--Device-VibratorCurvePoint-frequency?: int-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## intensity
@@ -42,6 +46,8 @@ intensity?: number
 
 **起始版本：** 18
 
+<!--Device-VibratorCurvePoint-intensity?: double--><!--Device-VibratorCurvePoint-intensity?: double-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## time
@@ -55,5 +61,7 @@ time: number
 **类型：** number
 
 **起始版本：** 18
+
+<!--Device-VibratorCurvePoint-time: int--><!--Device-VibratorCurvePoint-time: int-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice

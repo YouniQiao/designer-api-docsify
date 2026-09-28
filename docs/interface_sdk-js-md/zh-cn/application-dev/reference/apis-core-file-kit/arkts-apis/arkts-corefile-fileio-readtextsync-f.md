@@ -26,6 +26,8 @@ declare function readTextSync(
 
 **替代接口：** [readTextSync](arkts-corefile-file-fs-readtextsync-f.md)
 
+<!--Device-unnamed-declare function readTextSync(  filePath: string,  options?: {    position?: number;    length?: number;    encoding?: string;  }): string--><!--Device-unnamed-declare function readTextSync(  filePath: string,  options?: {    position?: number;    length?: number;    encoding?: string;  }): string-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**

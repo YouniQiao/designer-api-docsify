@@ -12,6 +12,8 @@ const MAX_ALLOWABLE_REUSE_DURATION: 300000
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-userAuth-const MAX_ALLOWABLE_REUSE_DURATION: 300000--><!--Device-userAuth-const MAX_ALLOWABLE_REUSE_DURATION: 300000-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 ## PERMANENT_LOCKOUT_DURATION
@@ -25,5 +27,7 @@ const PERMANENT_LOCKOUT_DURATION: number = 0x7fffffff
 **起始版本：** 22
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-userAuth-const PERMANENT_LOCKOUT_DURATION: int = 0x7fffffff--><!--Device-userAuth-const PERMANENT_LOCKOUT_DURATION: int = 0x7fffffff-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core

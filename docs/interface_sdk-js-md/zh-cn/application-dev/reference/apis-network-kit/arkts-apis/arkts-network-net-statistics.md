@@ -14,6 +14,8 @@
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare namespace statistics--><!--Device-unnamed-declare namespace statistics-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## 导入模块

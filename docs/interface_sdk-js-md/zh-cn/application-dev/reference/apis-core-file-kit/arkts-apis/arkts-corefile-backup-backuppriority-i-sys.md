@@ -10,6 +10,8 @@ interface BackupPriority
 
 **起始版本：** 12
 
+<!--Device-backup-interface BackupPriority--><!--Device-backup-interface BackupPriority-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 **系统接口：** 此接口为系统接口。
@@ -31,6 +33,8 @@ priority?: number
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-BackupPriority-priority?: int--><!--Device-BackupPriority-priority?: int-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 

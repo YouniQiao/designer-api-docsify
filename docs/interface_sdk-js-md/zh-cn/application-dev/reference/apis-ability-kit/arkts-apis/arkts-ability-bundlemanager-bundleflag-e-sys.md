@@ -8,6 +8,8 @@ enum BundleFlag
 
 **起始版本：** 9
 
+<!--Device-bundleManager-enum BundleFlag--><!--Device-bundleManager-enum BundleFlag-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## GET_BUNDLE_INFO_OF_ANY_USER
@@ -21,6 +23,8 @@ GET_BUNDLE_INFO_OF_ANY_USER = 0x00002000
 **系统API：** 该标记仅支持在系统API中使用。
 
 **起始版本：** 12
+
+<!--Device-BundleFlag-GET_BUNDLE_INFO_OF_ANY_USER = 0x00002000--><!--Device-BundleFlag-GET_BUNDLE_INFO_OF_ANY_USER = 0x00002000-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -38,6 +42,8 @@ GET_BUNDLE_INFO_EXCLUDE_CLONE = 0x00004000
 
 **起始版本：** 12
 
+<!--Device-BundleFlag-GET_BUNDLE_INFO_EXCLUDE_CLONE = 0x00004000--><!--Device-BundleFlag-GET_BUNDLE_INFO_EXCLUDE_CLONE = 0x00004000-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -53,6 +59,8 @@ GET_BUNDLE_INFO_WITH_CLOUD_KIT = 0x00008000
 **系统API：** 该标记仅支持在系统API中使用。
 
 **起始版本：** 20
+
+<!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_CLOUD_KIT = 0x00008000--><!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_CLOUD_KIT = 0x00008000-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

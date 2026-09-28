@@ -12,6 +12,8 @@ enum ResultCode
 
 **替代接口：** [UserAuthResultCode](arkts-userauthentication-userauth-userauthresultcode-e.md)
 
+<!--Device-userAuth-enum ResultCode--><!--Device-userAuth-enum ResultCode-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 ## SUCCESS
@@ -27,6 +29,8 @@ SUCCESS = 0
 **废弃版本：** 9
 
 **替代接口：** [SUCCESS](arkts-userauthentication-userauth-userauthresultcode-e.md#success)
+
+<!--Device-ResultCode-SUCCESS = 0--><!--Device-ResultCode-SUCCESS = 0-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -44,6 +48,8 @@ FAIL = 1
 
 **替代接口：** [FAIL](arkts-userauthentication-userauth-userauthresultcode-e.md#fail)
 
+<!--Device-ResultCode-FAIL = 1--><!--Device-ResultCode-FAIL = 1-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 ## GENERAL_ERROR
@@ -59,6 +65,8 @@ GENERAL_ERROR = 2
 **废弃版本：** 9
 
 **替代接口：** [GENERAL_ERROR](arkts-userauthentication-userauth-userauthresultcode-e.md#general_error)
+
+<!--Device-ResultCode-GENERAL_ERROR = 2--><!--Device-ResultCode-GENERAL_ERROR = 2-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -76,6 +84,8 @@ CANCELED = 3
 
 **替代接口：** [CANCELED](arkts-userauthentication-userauth-userauthresultcode-e.md#canceled)
 
+<!--Device-ResultCode-CANCELED = 3--><!--Device-ResultCode-CANCELED = 3-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 ## TIMEOUT
@@ -91,6 +101,8 @@ TIMEOUT = 4
 **废弃版本：** 9
 
 **替代接口：** [TIMEOUT](arkts-userauthentication-userauth-userauthresultcode-e.md#timeout)
+
+<!--Device-ResultCode-TIMEOUT = 4--><!--Device-ResultCode-TIMEOUT = 4-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -108,6 +120,8 @@ TYPE_NOT_SUPPORT = 5
 
 **替代接口：** [TYPE_NOT_SUPPORT](arkts-userauthentication-userauth-userauthresultcode-e.md#type_not_support)
 
+<!--Device-ResultCode-TYPE_NOT_SUPPORT = 5--><!--Device-ResultCode-TYPE_NOT_SUPPORT = 5-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 ## TRUST_LEVEL_NOT_SUPPORT
@@ -123,6 +137,8 @@ TRUST_LEVEL_NOT_SUPPORT = 6
 **废弃版本：** 9
 
 **替代接口：** [TRUST_LEVEL_NOT_SUPPORT](arkts-userauthentication-userauth-userauthresultcode-e.md#trust_level_not_support)
+
+<!--Device-ResultCode-TRUST_LEVEL_NOT_SUPPORT = 6--><!--Device-ResultCode-TRUST_LEVEL_NOT_SUPPORT = 6-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -140,6 +156,8 @@ BUSY = 7
 
 **替代接口：** [BUSY](arkts-userauthentication-userauth-userauthresultcode-e.md#busy)
 
+<!--Device-ResultCode-BUSY = 7--><!--Device-ResultCode-BUSY = 7-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 ## INVALID_PARAMETERS
@@ -155,6 +173,8 @@ INVALID_PARAMETERS = 8
 **废弃版本：** 9
 
 **替代接口：** [INVALID_PARAMETERS](arkts-userauthentication-userauth-userauthresultcode-e.md#invalid_parameters)
+
+<!--Device-ResultCode-INVALID_PARAMETERS = 8--><!--Device-ResultCode-INVALID_PARAMETERS = 8-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -172,6 +192,8 @@ LOCKED = 9
 
 **替代接口：** [LOCKED](arkts-userauthentication-userauth-userauthresultcode-e.md#locked)
 
+<!--Device-ResultCode-LOCKED = 9--><!--Device-ResultCode-LOCKED = 9-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 ## NOT_ENROLLED
@@ -187,5 +209,7 @@ NOT_ENROLLED = 10
 **废弃版本：** 9
 
 **替代接口：** [NOT_ENROLLED](arkts-userauthentication-userauth-userauthresultcode-e.md#not_enrolled)
+
+<!--Device-ResultCode-NOT_ENROLLED = 10--><!--Device-ResultCode-NOT_ENROLLED = 10-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core

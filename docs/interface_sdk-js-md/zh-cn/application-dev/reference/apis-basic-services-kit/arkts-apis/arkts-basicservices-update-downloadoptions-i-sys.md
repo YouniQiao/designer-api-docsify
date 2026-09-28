@@ -8,6 +8,8 @@ export interface DownloadOptions
 
 **起始版本：** 9
 
+<!--Device-update-export interface DownloadOptions--><!--Device-update-export interface DownloadOptions-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ allowNetwork: NetType
 
 **起始版本：** 9
 
+<!--Device-DownloadOptions-allowNetwork: NetType--><!--Device-DownloadOptions-allowNetwork: NetType-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ order: Order
 **类型：** [Order](arkts-basicservices-update-order-e-sys.md)
 
 **起始版本：** 9
+
+<!--Device-DownloadOptions-order: Order--><!--Device-DownloadOptions-order: Order-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
 

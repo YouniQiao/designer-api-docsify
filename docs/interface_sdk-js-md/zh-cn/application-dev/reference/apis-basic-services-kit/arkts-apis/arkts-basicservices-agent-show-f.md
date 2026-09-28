@@ -16,6 +16,8 @@ function show(id: string, callback: AsyncCallback<TaskInfo>): void
 
 **起始版本：** 10
 
+<!--Device-agent-function show(id: string, callback: AsyncCallback<TaskInfo>): void--><!--Device-agent-function show(id: string, callback: AsyncCallback<TaskInfo>): void-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 **参数：**
@@ -45,6 +47,8 @@ function show(id: string): Promise<TaskInfo>
 根据任务id查询任务的详细信息。使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-agent-function show(id: string): Promise<TaskInfo>--><!--Device-agent-function show(id: string): Promise<TaskInfo>-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 

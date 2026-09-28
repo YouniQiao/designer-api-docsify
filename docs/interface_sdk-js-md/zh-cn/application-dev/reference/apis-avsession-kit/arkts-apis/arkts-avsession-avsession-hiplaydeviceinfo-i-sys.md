@@ -8,6 +8,8 @@ HiPlay 设备类型定义
 
 **起始版本：** 24
 
+<!--Device-avSession-interface HiPlayDeviceInfo--><!--Device-avSession-interface HiPlayDeviceInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **系统接口：** 此接口为系统接口。
@@ -32,7 +34,9 @@ HiPlay 投播模式，设备级和应用级
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-HiPlayDeviceInfo-castMode?: int--><!--Device-HiPlayDeviceInfo-castMode?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -52,7 +56,9 @@ HiPlay 当前投播uid
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-HiPlayDeviceInfo-castUid?: int--><!--Device-HiPlayDeviceInfo-castUid?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -72,7 +78,9 @@ supportCastMode?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-HiPlayDeviceInfo-supportCastMode?: int--><!--Device-HiPlayDeviceInfo-supportCastMode?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -92,7 +100,9 @@ supportMultiDeviceMode?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
+
+<!--Device-HiPlayDeviceInfo-supportMultiDeviceMode?: int--><!--Device-HiPlayDeviceInfo-supportMultiDeviceMode?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 

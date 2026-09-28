@@ -20,6 +20,8 @@ function on(type: 'enabledAccessibilityExtensionListChange', callback: Callback<
 
 **需要权限：** ohos.permission.READ_ACCESSIBILITY_CONFIG
 
+<!--Device-config-function on(type: 'enabledAccessibilityExtensionListChange', callback: Callback<void>): void--><!--Device-config-function on(type: 'enabledAccessibilityExtensionListChange', callback: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -63,6 +65,8 @@ function on(type: 'installedAccessibilityListChange', callback: Callback<void>):
 **起始版本：** 12
 
 **需要权限：** ohos.permission.READ_ACCESSIBILITY_CONFIG
+
+<!--Device-config-function on(type: 'installedAccessibilityListChange', callback: Callback<void>): void--><!--Device-config-function on(type: 'installedAccessibilityListChange', callback: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 

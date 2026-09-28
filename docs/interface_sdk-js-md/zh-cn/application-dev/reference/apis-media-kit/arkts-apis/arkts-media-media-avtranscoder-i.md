@@ -14,6 +14,8 @@ interface AVTranscoder
 
 **起始版本：** 12
 
+<!--Device-media-interface AVTranscoder--><!--Device-media-interface AVTranscoder-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVTranscoder
 
 ## 导入模块
@@ -33,6 +35,8 @@ addWatermark(watermark: image.PixelMap, config: WatermarkConfiguration): Promise
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVTranscoder-addWatermark(watermark: image.PixelMap, config: WatermarkConfiguration): Promise<int>--><!--Device-AVTranscoder-addWatermark(watermark: image.PixelMap, config: WatermarkConfiguration): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVTranscoder
 
@@ -116,7 +120,9 @@ cancel(): Promise<void>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVTranscoder-cancel(): Promise<void>--><!--Device-AVTranscoder-cancel(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVTranscoder
 
@@ -163,6 +169,8 @@ off(type:'complete', callback?: Callback<void>):void
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVTranscoder-off(type:'complete', callback?: Callback<void>):void--><!--Device-AVTranscoder-off(type:'complete', callback?: Callback<void>):void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVTranscoder
 
 **参数：**
@@ -183,6 +191,8 @@ off(type:'error', callback?: ErrorCallback):void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVTranscoder-off(type:'error', callback?: ErrorCallback):void--><!--Device-AVTranscoder-off(type:'error', callback?: ErrorCallback):void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVTranscoder
 
@@ -216,6 +226,8 @@ off(type:'progressUpdate', callback?: Callback<number>):void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVTranscoder-off(type:'progressUpdate', callback?: Callback<int>):void--><!--Device-AVTranscoder-off(type:'progressUpdate', callback?: Callback<int>):void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVTranscoder
 
@@ -251,6 +263,8 @@ on(type:'complete', callback: Callback<void>):void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVTranscoder-on(type:'complete', callback: Callback<void>):void--><!--Device-AVTranscoder-on(type:'complete', callback: Callback<void>):void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVTranscoder
 
@@ -295,6 +309,8 @@ on(type:'error', callback: ErrorCallback):void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVTranscoder-on(type:'error', callback: ErrorCallback):void--><!--Device-AVTranscoder-on(type:'error', callback: ErrorCallback):void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVTranscoder
 
@@ -345,6 +361,8 @@ on(type:'progressUpdate', callback: Callback<number>):void
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVTranscoder-on(type:'progressUpdate', callback: Callback<int>):void--><!--Device-AVTranscoder-on(type:'progressUpdate', callback: Callback<int>):void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVTranscoder
 
 **参数：**
@@ -380,7 +398,9 @@ pause(): Promise<void>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVTranscoder-pause(): Promise<void>--><!--Device-AVTranscoder-pause(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVTranscoder
 
@@ -425,7 +445,9 @@ prepare(config: AVTranscoderConfig): Promise<void>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVTranscoder-prepare(config: AVTranscoderConfig): Promise<void>--><!--Device-AVTranscoder-prepare(config: AVTranscoderConfig): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVTranscoder
 
@@ -489,7 +511,9 @@ release(): Promise<void>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVTranscoder-release(): Promise<void>--><!--Device-AVTranscoder-release(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVTranscoder
 
@@ -535,7 +559,9 @@ resume(): Promise<void>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVTranscoder-resume(): Promise<void>--><!--Device-AVTranscoder-resume(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVTranscoder
 
@@ -582,7 +608,9 @@ start(): Promise<void>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVTranscoder-start(): Promise<void>--><!--Device-AVTranscoder-start(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVTranscoder
 
@@ -635,7 +663,9 @@ fdDst: number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVTranscoder-fdDst: int--><!--Device-AVTranscoder-fdDst: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVTranscoder
 
@@ -661,6 +691,8 @@ fdSrc: AVFileDescriptor
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVTranscoder-fdSrc: AVFileDescriptor--><!--Device-AVTranscoder-fdSrc: AVFileDescriptor-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVTranscoder

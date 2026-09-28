@@ -18,6 +18,8 @@ function getAllSubscriptionBundles(): Promise<BundleOption[]>
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationExtensionSubscription-function getAllSubscriptionBundles(): Promise<BundleOption[]>--><!--Device-notificationExtensionSubscription-function getAllSubscriptionBundles(): Promise<BundleOption[]>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。

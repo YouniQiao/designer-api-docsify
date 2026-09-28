@@ -18,6 +18,8 @@ function isWlanSupported(): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-wifiManager-function isWlanSupported(): boolean--><!--Device-wifiManager-function isWlanSupported(): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.Core
 
 **返回值：**

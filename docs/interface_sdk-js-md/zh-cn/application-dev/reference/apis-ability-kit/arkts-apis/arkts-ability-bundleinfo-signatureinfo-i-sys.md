@@ -8,6 +8,8 @@ export interface SignatureInfo
 
 **起始版本：** 9
 
+<!--Device-unnamed-export interface SignatureInfo--><!--Device-unnamed-export interface SignatureInfo-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## validity
@@ -23,6 +25,8 @@ readonly validity?: Validity
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SignatureInfo-readonly validity?: Validity--><!--Device-SignatureInfo-readonly validity?: Validity-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

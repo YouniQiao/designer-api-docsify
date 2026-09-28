@@ -16,7 +16,9 @@ function getWantAgent(info: WantAgentInfo, callback: AsyncCallback<WantAgent>): 
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-wantAgent-function getWantAgent(info: WantAgentInfo, callback: AsyncCallback<WantAgent>): void--><!--Device-wantAgent-function getWantAgent(info: WantAgentInfo, callback: AsyncCallback<WantAgent>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -102,7 +104,9 @@ function getWantAgent(info: WantAgentInfo): Promise<WantAgent>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-wantAgent-function getWantAgent(info: WantAgentInfo): Promise<WantAgent>--><!--Device-wantAgent-function getWantAgent(info: WantAgentInfo): Promise<WantAgent>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

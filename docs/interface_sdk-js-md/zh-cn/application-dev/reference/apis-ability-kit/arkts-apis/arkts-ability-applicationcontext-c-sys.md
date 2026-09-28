@@ -4,7 +4,7 @@
 declare class ApplicationContext extends Context
 ```
 
-ApplicationContext作为应用上下文，继承自Context，提供了应用生命周期监听、进程管理、应用环境设置等应用级别的管控能力。
+ApplicationContext作为应用上下文，继承自[Context](arkts-ability-context.md)，提供了应用生命周期监听、进程管理、应用环境设置等应用级别的管控能力。
 
 > **说明：** 
 > 
@@ -13,6 +13,8 @@ ApplicationContext作为应用上下文，继承自Context，提供了应用生�
 **继承/实现关系：** ApplicationContext extends Context
 
 **起始版本：** 9
+
+<!--Device-unnamed-declare class ApplicationContext extends Context--><!--Device-unnamed-declare class ApplicationContext extends Context-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -33,6 +35,8 @@ preloadUIExtensionAbility(want: Want): Promise<void>
 **需要权限：** ohos.permission.PRELOAD_UI_EXTENSION_ABILITY
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ApplicationContext-preloadUIExtensionAbility(want: Want): Promise<void>--><!--Device-ApplicationContext-preloadUIExtensionAbility(want: Want): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -120,6 +124,8 @@ getProcessRunningInformation(): Promise<Array<ProcessInformation>>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ApplicationContext-getProcessRunningInformation(): Promise<Array<ProcessInformation>>--><!--Device-ApplicationContext-getProcessRunningInformation(): Promise<Array<ProcessInformation>>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -173,6 +179,8 @@ getProcessRunningInformation(callback: AsyncCallback<Array<ProcessInformation>>)
 **替代接口：** [getRunningProcessInformation](arkts-ability-applicationcontext-c.md#getrunningprocessinformation)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ApplicationContext-getProcessRunningInformation(callback: AsyncCallback<Array<ProcessInformation>>): void--><!--Device-ApplicationContext-getProcessRunningInformation(callback: AsyncCallback<Array<ProcessInformation>>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -228,6 +236,8 @@ registerAbilityLifecycleCallback(abilityLifecycleCallback: AbilityLifecycleCallb
 **替代接口：** [on](arkts-ability-applicationcontext-c.md#onabilitylifecycle)(type: 'abilityLifecycle', callback: AbilityLifecycleCallback)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ApplicationContext-registerAbilityLifecycleCallback(abilityLifecycleCallback: AbilityLifecycleCallback): number--><!--Device-ApplicationContext-registerAbilityLifecycleCallback(abilityLifecycleCallback: AbilityLifecycleCallback): number-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -321,6 +331,8 @@ registerEnvironmentCallback(environmentCallback: EnvironmentCallback): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ApplicationContext-registerEnvironmentCallback(environmentCallback: EnvironmentCallback): number--><!--Device-ApplicationContext-registerEnvironmentCallback(environmentCallback: EnvironmentCallback): number-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -388,6 +400,8 @@ unregisterAbilityLifecycleCallback(callbackId: number, callback: AsyncCallback<v
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ApplicationContext-unregisterAbilityLifecycleCallback(callbackId: number, callback: AsyncCallback<void>): void--><!--Device-ApplicationContext-unregisterAbilityLifecycleCallback(callbackId: number, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -446,6 +460,8 @@ unregisterAbilityLifecycleCallback(callbackId: number): Promise<void>
 **替代接口：** [off](arkts-ability-applicationcontext-c.md#offabilitylifecycle)(type: 'abilityLifecycle', callbackId: number): Promise&lt;void&gt;;
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ApplicationContext-unregisterAbilityLifecycleCallback(callbackId: number): Promise<void>--><!--Device-ApplicationContext-unregisterAbilityLifecycleCallback(callbackId: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -509,6 +525,8 @@ unregisterEnvironmentCallback(callbackId: number, envcallback: AsyncCallback<voi
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ApplicationContext-unregisterEnvironmentCallback(callbackId: number, envcallback: AsyncCallback<void>): void--><!--Device-ApplicationContext-unregisterEnvironmentCallback(callbackId: number, envcallback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -564,6 +582,8 @@ unregisterEnvironmentCallback(callbackId: number): Promise<void>
 **替代接口：** [off](arkts-ability-applicationcontext-c.md#offenvironment)(type: 'environment', callbackId: number): Promise&lt;void&gt;;
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ApplicationContext-unregisterEnvironmentCallback(callbackId: number): Promise<void>--><!--Device-ApplicationContext-unregisterEnvironmentCallback(callbackId: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

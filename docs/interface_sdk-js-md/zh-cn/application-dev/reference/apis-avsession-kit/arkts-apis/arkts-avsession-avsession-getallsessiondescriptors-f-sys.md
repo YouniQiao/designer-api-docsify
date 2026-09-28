@@ -18,6 +18,8 @@ function getAllSessionDescriptors(callback: AsyncCallback<Array<Readonly<AVSessi
 
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
 
+<!--Device-avSession-function getAllSessionDescriptors(callback: AsyncCallback<Array<Readonly<AVSessionDescriptor>>>): void--><!--Device-avSession-function getAllSessionDescriptors(callback: AsyncCallback<Array<Readonly<AVSessionDescriptor>>>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 
 **系统接口：** 此接口为系统接口。

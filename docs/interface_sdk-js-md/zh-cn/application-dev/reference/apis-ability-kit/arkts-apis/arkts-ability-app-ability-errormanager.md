@@ -4,6 +4,8 @@ ErrorManager模块提供对应用运行时各类异常的全局观测能力，�
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace errorManager--><!--Device-unnamed-declare namespace errorManager-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块

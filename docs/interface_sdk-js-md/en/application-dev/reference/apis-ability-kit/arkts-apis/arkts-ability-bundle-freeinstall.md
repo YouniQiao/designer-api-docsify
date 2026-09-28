@@ -10,6 +10,8 @@ The module provides APIs for setting and obtaining installation-free information
 
 **Since:** 9
 
+<!--Device-unnamed-declare namespace freeInstall--><!--Device-unnamed-declare namespace freeInstall-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **System API:** This is a system API.

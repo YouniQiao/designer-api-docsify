@@ -17,6 +17,8 @@ declare function show(uri: string, type: string): Promise<void>
 
 **废弃版本：** 9
 
+<!--Device-unnamed-declare function show(uri: string, type: string): Promise<void>--><!--Device-unnamed-declare function show(uri: string, type: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **参数：**
@@ -46,6 +48,8 @@ declare function show(uri: string, type: string, callback: AsyncCallback<void>):
 **起始版本：** 6
 
 **废弃版本：** 9
+
+<!--Device-unnamed-declare function show(uri: string, type: string, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function show(uri: string, type: string, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 

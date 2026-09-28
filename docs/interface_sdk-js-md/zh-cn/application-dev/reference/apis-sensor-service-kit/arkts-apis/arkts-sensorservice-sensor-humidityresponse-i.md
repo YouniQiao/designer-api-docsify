@@ -10,6 +10,8 @@ interface HumidityResponse extends Response
 
 **起始版本：** 8
 
+<!--Device-sensor-interface HumidityResponse extends Response--><!--Device-sensor-interface HumidityResponse extends Response-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## 导入模块
@@ -29,5 +31,7 @@ humidity: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-HumidityResponse-humidity: double--><!--Device-HumidityResponse-humidity: double-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor

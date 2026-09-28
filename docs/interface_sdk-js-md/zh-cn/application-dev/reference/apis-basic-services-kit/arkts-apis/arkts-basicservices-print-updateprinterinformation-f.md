@@ -20,6 +20,8 @@ function updatePrinterInformation(printerInformation: PrinterInformation): Promi
 - API版本24+：ohos.permission.MANAGE_PRINT_JOB or ohos.permission.ENTERPRISE_MANAGE_PRINT
 - API版本18-23：ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-print-function updatePrinterInformation(printerInformation: PrinterInformation): Promise<void>--><!--Device-print-function updatePrinterInformation(printerInformation: PrinterInformation): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **参数：**

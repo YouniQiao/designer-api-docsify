@@ -8,6 +8,8 @@ enum CalendarType
 
 **起始版本：** 10
 
+<!--Device-calendarManager-enum CalendarType--><!--Device-calendarManager-enum CalendarType-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 ## LOCAL
@@ -21,6 +23,8 @@ LOCAL = 'local'
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-CalendarType-LOCAL = 'local'--><!--Device-CalendarType-LOCAL = 'local'-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -36,6 +40,8 @@ EMAIL = 'email'
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-CalendarType-EMAIL = 'email'--><!--Device-CalendarType-EMAIL = 'email'-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 ## BIRTHDAY
@@ -49,6 +55,8 @@ BIRTHDAY = 'birthday'
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-CalendarType-BIRTHDAY = 'birthday'--><!--Device-CalendarType-BIRTHDAY = 'birthday'-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -64,6 +72,8 @@ CALDAV = 'caldav'
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-CalendarType-CALDAV = 'caldav'--><!--Device-CalendarType-CALDAV = 'caldav'-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 ## SUBSCRIBED
@@ -77,5 +87,7 @@ SUBSCRIBED = 'subscribed'
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-CalendarType-SUBSCRIBED = 'subscribed'--><!--Device-CalendarType-SUBSCRIBED = 'subscribed'-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData

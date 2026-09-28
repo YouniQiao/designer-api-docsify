@@ -16,7 +16,9 @@ function generateCsr(keyInfo: PrivateKeyInfo, config: CsrGenerationConfig): stri
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-cert-function generateCsr(keyInfo: PrivateKeyInfo, config: CsrGenerationConfig): string | Uint8Array--><!--Device-cert-function generateCsr(keyInfo: PrivateKeyInfo, config: CsrGenerationConfig): string | Uint8Array-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 

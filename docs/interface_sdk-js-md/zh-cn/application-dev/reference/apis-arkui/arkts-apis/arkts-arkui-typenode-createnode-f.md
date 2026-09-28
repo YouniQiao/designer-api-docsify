@@ -14,6 +14,8 @@ function createNode(context: UIContext, nodeType: 'Text'): Text
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Text'): Text--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Text'): Text-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -82,6 +84,8 @@ function createNode(context: UIContext, nodeType: 'Column'): Column
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Column'): Column--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Column'): Column-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -149,6 +153,8 @@ function createNode(context: UIContext, nodeType: 'Row'): Row
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Row'): Row--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Row'): Row-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -215,6 +221,8 @@ function createNode(context: UIContext, nodeType: 'Stack'): Stack
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Stack'): Stack--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Stack'): Stack-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -286,6 +294,8 @@ function createNode(context: UIContext, nodeType: 'GridRow'): GridRow
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'GridRow'): GridRow--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'GridRow'): GridRow-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -361,6 +371,8 @@ function createNode(context: UIContext, nodeType: 'GridCol'): GridCol
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'GridCol'): GridCol--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'GridCol'): GridCol-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -435,6 +447,8 @@ function createNode(context: UIContext, nodeType: 'Flex'): Flex
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Flex'): Flex--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Flex'): Flex-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -501,6 +515,8 @@ function createNode(context: UIContext, nodeType: 'Swiper'): Swiper
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Swiper'): Swiper--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Swiper'): Swiper-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -588,6 +604,8 @@ function createNode(context: UIContext, nodeType: 'Progress'): Progress
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Progress'): Progress--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Progress'): Progress-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -657,6 +675,8 @@ function createNode(context: UIContext, nodeType: 'Scroll'): Scroll
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Scroll'): Scroll--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Scroll'): Scroll-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -742,6 +762,8 @@ function createNode(context: UIContext, nodeType: 'RelativeContainer'): Relative
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'RelativeContainer'): RelativeContainer--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'RelativeContainer'): RelativeContainer-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -808,6 +830,8 @@ function createNode(context: UIContext, nodeType: 'Divider'): Divider
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Divider'): Divider--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Divider'): Divider-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -882,6 +906,8 @@ function createNode(context: UIContext, nodeType: 'LoadingProgress'): LoadingPro
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'LoadingProgress'): LoadingProgress--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'LoadingProgress'): LoadingProgress-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -949,6 +975,8 @@ function createNode(context: UIContext, nodeType: 'Search'): Search
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Search'): Search--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Search'): Search-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1018,6 +1046,8 @@ function createNode(context: UIContext, nodeType: 'Blank'): Blank
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Blank'): Blank--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Blank'): Blank-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1092,6 +1122,8 @@ function createNode(context: UIContext, nodeType: 'Image'): Image
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Image'): Image--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Image'): Image-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1170,6 +1202,8 @@ function createNode(context: UIContext, nodeType: 'List'): List
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'List'): List--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'List'): List-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1262,6 +1296,8 @@ function createNode(context: UIContext, nodeType: 'ListItem'): ListItem
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'ListItem'): ListItem--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'ListItem'): ListItem-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -1297,6 +1333,8 @@ function createNode(context: UIContext, nodeType: 'TextInput'): TextInput
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'TextInput'): TextInput--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'TextInput'): TextInput-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1364,6 +1402,8 @@ function createNode(context: UIContext, nodeType: 'Button'): Button
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Button'): Button--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Button'): Button-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1439,6 +1479,8 @@ function createNode(context: UIContext, nodeType: 'ListItemGroup'): ListItemGrou
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'ListItemGroup'): ListItemGroup--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'ListItemGroup'): ListItemGroup-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -1474,6 +1516,8 @@ function createNode(context: UIContext, nodeType: 'WaterFlow'): WaterFlow
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'WaterFlow'): WaterFlow--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'WaterFlow'): WaterFlow-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1570,6 +1614,8 @@ function createNode(context: UIContext, nodeType: 'FlowItem'): FlowItem
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'FlowItem'): FlowItem--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'FlowItem'): FlowItem-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -1605,6 +1651,8 @@ function createNode(context: UIContext, nodeType: 'XComponent'): XComponent
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'XComponent'): XComponent--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'XComponent'): XComponent-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1673,6 +1721,8 @@ function createNode(context: UIContext, nodeType: 'XComponent', options: XCompon
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'XComponent', options: XComponentOptions): XComponent--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'XComponent', options: XComponentOptions): XComponent-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1749,6 +1799,8 @@ function createNode(context: UIContext, nodeType: 'XComponent', parameters: Nati
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'XComponent', parameters: NativeXComponentParameters): XComponent--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'XComponent', parameters: NativeXComponentParameters): XComponent-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -1821,6 +1873,8 @@ function createNode(context: UIContext, nodeType: 'Checkbox'): Checkbox
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Checkbox'): Checkbox--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Checkbox'): Checkbox-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1897,6 +1951,8 @@ function createNode(context: UIContext, nodeType: 'CheckboxGroup'): CheckboxGrou
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'CheckboxGroup'): CheckboxGroup--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'CheckboxGroup'): CheckboxGroup-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1976,6 +2032,8 @@ function createNode(context: UIContext, nodeType: 'Radio'): Radio
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Radio'): Radio--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Radio'): Radio-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -2051,6 +2109,8 @@ function createNode(context: UIContext, nodeType: 'Rating'): Rating
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Rating'): Rating--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Rating'): Rating-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -2122,6 +2182,8 @@ function createNode(context: UIContext, nodeType: 'Select'): Select
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Select'): Select--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Select'): Select-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -2190,6 +2252,8 @@ function createNode(context: UIContext, nodeType: 'Slider'): Slider
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Slider'): Slider--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Slider'): Slider-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2260,6 +2324,8 @@ function createNode(context: UIContext, nodeType: 'Toggle', options?: ToggleOpti
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Toggle', options?: ToggleOptions): Toggle--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Toggle', options?: ToggleOptions): Toggle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2333,6 +2399,8 @@ function createNode(context: UIContext, nodeType: 'Marquee'): Marquee
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Marquee'): Marquee--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Marquee'): Marquee-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -2401,6 +2469,8 @@ function createNode(context: UIContext, nodeType: 'TextArea'): TextArea
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'TextArea'): TextArea--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'TextArea'): TextArea-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -2467,6 +2537,8 @@ function createNode(context: UIContext, nodeType: 'SymbolGlyph'): SymbolGlyph
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'SymbolGlyph'): SymbolGlyph--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'SymbolGlyph'): SymbolGlyph-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2535,6 +2607,8 @@ function createNode(context: UIContext, nodeType: 'QRCode'): QRCode
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'QRCode'): QRCode--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'QRCode'): QRCode-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -2572,6 +2646,8 @@ function createNode(context: UIContext, nodeType: 'Badge'): Badge
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Badge'): Badge--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Badge'): Badge-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2611,6 +2687,8 @@ function createNode(context: UIContext, nodeType: 'TextClock'): TextClock
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'TextClock'): TextClock--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'TextClock'): TextClock-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -2649,6 +2727,8 @@ function createNode(context: UIContext, nodeType: 'TextTimer'): TextTimer
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'TextTimer'): TextTimer--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'TextTimer'): TextTimer-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -2686,6 +2766,8 @@ function createNode(context: UIContext, nodeType: 'Grid'): Grid
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Grid'): Grid--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Grid'): Grid-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2776,6 +2858,8 @@ function createNode(context: UIContext, nodeType: 'GridItem'): GridItem
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'GridItem'): GridItem--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'GridItem'): GridItem-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

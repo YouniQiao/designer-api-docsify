@@ -8,6 +8,8 @@ enum AlbumType
 
 **起始版本：** 10
 
+<!--Device-photoAccessHelper-enum AlbumType--><!--Device-photoAccessHelper-enum AlbumType-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## USER
@@ -19,6 +21,8 @@ USER = 0
 用户相册。
 
 **起始版本：** 10
+
+<!--Device-AlbumType-USER = 0--><!--Device-AlbumType-USER = 0-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -32,6 +36,8 @@ SYSTEM = 1024
 
 **起始版本：** 10
 
+<!--Device-AlbumType-SYSTEM = 1024--><!--Device-AlbumType-SYSTEM = 1024-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## SOURCE
@@ -43,5 +49,7 @@ SOURCE = 2048
 由应用创建的相册。
 
 **起始版本：** 23
+
+<!--Device-AlbumType-SOURCE = 2048--><!--Device-AlbumType-SOURCE = 2048-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core

@@ -8,6 +8,8 @@ enum ContinueState
 
 **起始版本：** 10
 
+<!--Device-distributedMissionManager-enum ContinueState--><!--Device-distributedMissionManager-enum ContinueState-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -24,6 +26,8 @@ ACTIVE = 0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ContinueState-ACTIVE = 0--><!--Device-ContinueState-ACTIVE = 0-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -39,6 +43,8 @@ INACTIVE = 1
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ContinueState-INACTIVE = 1--><!--Device-ContinueState-INACTIVE = 1-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 

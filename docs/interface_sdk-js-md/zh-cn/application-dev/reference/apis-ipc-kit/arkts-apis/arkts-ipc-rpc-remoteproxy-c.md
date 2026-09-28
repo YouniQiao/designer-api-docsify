@@ -10,6 +10,8 @@ class RemoteProxy extends IRemoteObject
 
 **起始版本：** 7
 
+<!--Device-rpc-class RemoteProxy extends IRemoteObject--><!--Device-rpc-class RemoteProxy extends IRemoteObject-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 ## 导入模块
@@ -27,6 +29,8 @@ getDescriptor(): string
 获取对象的接口描述符，接口描述符为字符串。
 
 **起始版本：** 9
+
+<!--Device-RemoteProxy-getDescriptor(): string--><!--Device-RemoteProxy-getDescriptor(): string-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -112,6 +116,8 @@ getLocalInterface(interfaceDes: string): IRemoteBroker
 查询并获取当前接口描述符对应的本地接口对象。
 
 **起始版本：** 9
+
+<!--Device-RemoteProxy-getLocalInterface(interfaceDes: string): IRemoteBroker--><!--Device-RemoteProxy-getLocalInterface(interfaceDes: string): IRemoteBroker-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -204,6 +210,8 @@ isObjectDead(): boolean
 
 **起始版本：** 7
 
+<!--Device-RemoteProxy-isObjectDead(): boolean--><!--Device-RemoteProxy-isObjectDead(): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -274,6 +282,8 @@ registerDeathRecipient(recipient: DeathRecipient, flags: number): void
 注册用于接收远程对象死亡通知的回调。
 
 **起始版本：** 9
+
+<!--Device-RemoteProxy-registerDeathRecipient(recipient: DeathRecipient, flags: int): void--><!--Device-RemoteProxy-registerDeathRecipient(recipient: DeathRecipient, flags: int): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -370,6 +380,8 @@ sendMessageRequest(
 Sends a [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) message to the peer process in synchronous or asynchronous mode. <p>If options indicates the asynchronous mode, a promise will be fulfilled immediately and the reply message does not contain any content. If options indicates the synchronous mode, a promise will be fulfilled when the response to sendMessageRequest is returned, and the reply message contains the returned information.
 
 **起始版本：** 9
+
+<!--Device-RemoteProxy-sendMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption    ): Promise<RequestResult>--><!--Device-RemoteProxy-sendMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption    ): Promise<RequestResult>-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -490,6 +502,8 @@ Sends a [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) message to the pee
 
 **起始版本：** 9
 
+<!--Device-RemoteProxy-sendMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption,      callback: AsyncCallback<RequestResult>    ): void--><!--Device-RemoteProxy-sendMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption,      callback: AsyncCallback<RequestResult>    ): void-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -596,6 +610,8 @@ unregisterDeathRecipient(recipient: DeathRecipient, flags: number): void
 
 **起始版本：** 9
 
+<!--Device-RemoteProxy-unregisterDeathRecipient(recipient: DeathRecipient, flags: int): void--><!--Device-RemoteProxy-unregisterDeathRecipient(recipient: DeathRecipient, flags: int): void-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -692,6 +708,8 @@ addDeathRecipient(recipient: DeathRecipient, flags: number): boolean
 
 **替代接口：** [registerDeathRecipient](arkts-ipc-rpc-iremoteobject-c.md#registerdeathrecipient)(recipient: DeathRecipient, flags: number)
 
+<!--Device-RemoteProxy-addDeathRecipient(recipient: DeathRecipient, flags: number): boolean--><!--Device-RemoteProxy-addDeathRecipient(recipient: DeathRecipient, flags: number): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -779,6 +797,8 @@ getInterfaceDescriptor(): string
 
 **替代接口：** [getDescriptor](arkts-ipc-rpc-iremoteobject-c.md#getdescriptor)()
 
+<!--Device-RemoteProxy-getInterfaceDescriptor(): string--><!--Device-RemoteProxy-getInterfaceDescriptor(): string-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -853,6 +873,8 @@ queryLocalInterface(interface: string): IRemoteBroker
 **废弃版本：** 9
 
 **替代接口：** [getLocalInterface](arkts-ipc-rpc-iremoteobject-c.md#getlocalinterface)(descriptor: string)
+
+<!--Device-RemoteProxy-queryLocalInterface(interface: string): IRemoteBroker--><!--Device-RemoteProxy-queryLocalInterface(interface: string): IRemoteBroker-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -934,6 +956,8 @@ removeDeathRecipient(recipient: DeathRecipient, flags: number): boolean
 **废弃版本：** 9
 
 **替代接口：** [unregisterDeathRecipient](arkts-ipc-rpc-iremoteobject-c.md#unregisterdeathrecipient)(recipient: DeathRecipient, flags: number)
+
+<!--Device-RemoteProxy-removeDeathRecipient(recipient: DeathRecipient, flags: number): boolean--><!--Device-RemoteProxy-removeDeathRecipient(recipient: DeathRecipient, flags: number): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -1022,6 +1046,8 @@ sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: Me
 **废弃版本：** 8
 
 **替代接口：** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)(code: number, data: MessageSequence, reply: MessageSequence, options: MessageOption)
+
+<!--Device-RemoteProxy-sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean--><!--Device-RemoteProxy-sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -1129,6 +1155,8 @@ sendRequest(
 **废弃版本：** 9
 
 **替代接口：** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)(code: number, data: MessageSequence, reply: MessageSequence, options: MessageOption)
+
+<!--Device-RemoteProxy-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption    ): Promise<SendRequestResult>--><!--Device-RemoteProxy-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption    ): Promise<SendRequestResult>-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -1245,6 +1273,8 @@ sendRequest(
 **废弃版本：** 9
 
 **替代接口：** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)(code: number, data: MessageSequence, reply: MessageSequence, options: MessageOption, callback: AsyncCallback&lt;RequestResult&gt;)
+
+<!--Device-RemoteProxy-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption,      callback: AsyncCallback<SendRequestResult>    ): void--><!--Device-RemoteProxy-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption,      callback: AsyncCallback<SendRequestResult>    ): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -1381,6 +1411,8 @@ static readonly DUMP_TRANSACTION: number
 
 **起始版本：** 7
 
+<!--Device-RemoteProxy-static readonly DUMP_TRANSACTION: number--><!--Device-RemoteProxy-static readonly DUMP_TRANSACTION: number-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 ## INTERFACE_TRANSACTION
@@ -1396,6 +1428,8 @@ static readonly INTERFACE_TRANSACTION: number
 **默认值：** 1598968902
 
 **起始版本：** 7
+
+<!--Device-RemoteProxy-static readonly INTERFACE_TRANSACTION: number--><!--Device-RemoteProxy-static readonly INTERFACE_TRANSACTION: number-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -1413,6 +1447,8 @@ static readonly MAX_TRANSACTION_ID: number
 
 **起始版本：** 7
 
+<!--Device-RemoteProxy-static readonly MAX_TRANSACTION_ID: number--><!--Device-RemoteProxy-static readonly MAX_TRANSACTION_ID: number-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 ## MIN_TRANSACTION_ID
@@ -1429,6 +1465,8 @@ static readonly MIN_TRANSACTION_ID: number
 
 **起始版本：** 7
 
+<!--Device-RemoteProxy-static readonly MIN_TRANSACTION_ID: number--><!--Device-RemoteProxy-static readonly MIN_TRANSACTION_ID: number-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 ## PING_TRANSACTION
@@ -1444,5 +1482,7 @@ static readonly PING_TRANSACTION: number
 **默认值：** 1599098439
 
 **起始版本：** 7
+
+<!--Device-RemoteProxy-static readonly PING_TRANSACTION: number--><!--Device-RemoteProxy-static readonly PING_TRANSACTION: number-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core

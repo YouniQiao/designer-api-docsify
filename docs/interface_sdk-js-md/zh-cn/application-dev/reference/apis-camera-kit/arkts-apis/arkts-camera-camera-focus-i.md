@@ -12,6 +12,8 @@ Focus继承自[FocusQuery](arkts-camera-camera-focusquery-i.md)。
 
 **起始版本：** 11
 
+<!--Device-camera-interface Focus extends FocusQuery--><!--Device-camera-interface Focus extends FocusQuery-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
@@ -30,7 +32,9 @@ getFocalLength(): number
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-Focus-getFocalLength(): double--><!--Device-Focus-getFocalLength(): double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -75,7 +79,9 @@ getFocusMode(): FocusMode
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-Focus-getFocusMode(): FocusMode--><!--Device-Focus-getFocusMode(): FocusMode-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -119,7 +125,9 @@ getFocusPoint(): Point
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-Focus-getFocusPoint(): Point--><!--Device-Focus-getFocusPoint(): Point-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -165,7 +173,9 @@ lockFocusTracking(focusPoint: Point): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-Focus-lockFocusTracking(focusPoint: Point): void--><!--Device-Focus-lockFocusTracking(focusPoint: Point): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -211,7 +221,9 @@ setFocusMode(afMode: FocusMode): void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-Focus-setFocusMode(afMode: FocusMode): void--><!--Device-Focus-setFocusMode(afMode: FocusMode): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -255,7 +267,9 @@ setFocusPoint(point: Point): void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-Focus-setFocusPoint(point: Point): void--><!--Device-Focus-setFocusPoint(point: Point): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -300,7 +314,9 @@ unlockFocusTracking(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-Focus-unlockFocusTracking(): void--><!--Device-Focus-unlockFocusTracking(): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

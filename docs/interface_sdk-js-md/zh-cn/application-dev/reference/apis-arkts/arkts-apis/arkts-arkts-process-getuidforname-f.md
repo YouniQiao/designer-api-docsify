@@ -20,6 +20,8 @@ function getUidForName(v: string): number
 
 **替代接口：** [getUidForName](arkts-arkts-process-processmanager-c.md#getuidforname)
 
+<!--Device-process-function getUidForName(v: string): number--><!--Device-process-function getUidForName(v: string): number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**

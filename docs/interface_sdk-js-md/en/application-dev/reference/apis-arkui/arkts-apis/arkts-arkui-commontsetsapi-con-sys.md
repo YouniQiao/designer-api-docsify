@@ -14,6 +14,8 @@ An application-level global state storage instance that provides state data stor
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-unnamed-declare const appStorage: AppStorage--><!--Device-unnamed-declare const appStorage: AppStorage-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.

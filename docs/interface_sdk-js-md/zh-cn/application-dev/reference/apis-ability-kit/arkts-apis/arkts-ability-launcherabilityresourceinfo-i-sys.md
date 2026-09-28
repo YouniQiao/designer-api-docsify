@@ -12,6 +12,8 @@ export interface LauncherAbilityResourceInfo
 
 **起始版本：** 11
 
+<!--Device-unnamed-export interface LauncherAbilityResourceInfo--><!--Device-unnamed-export interface LauncherAbilityResourceInfo-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Resource
 
 **系统接口：** 此接口为系统接口。
@@ -27,6 +29,8 @@ readonly abilityName: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-LauncherAbilityResourceInfo-readonly abilityName: string--><!--Device-LauncherAbilityResourceInfo-readonly abilityName: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Resource
 
@@ -44,6 +48,8 @@ readonly appIndex: number
 
 **起始版本：** 12
 
+<!--Device-LauncherAbilityResourceInfo-readonly appIndex: int--><!--Device-LauncherAbilityResourceInfo-readonly appIndex: int-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Resource
 
 **系统接口：** 此接口为系统接口。
@@ -59,6 +65,8 @@ readonly bundleName: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-LauncherAbilityResourceInfo-readonly bundleName: string--><!--Device-LauncherAbilityResourceInfo-readonly bundleName: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Resource
 
@@ -76,6 +84,8 @@ readonly drawableDescriptor: DrawableDescriptor
 
 **起始版本：** 12
 
+<!--Device-LauncherAbilityResourceInfo-readonly drawableDescriptor: DrawableDescriptor--><!--Device-LauncherAbilityResourceInfo-readonly drawableDescriptor: DrawableDescriptor-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Resource
 
 **系统接口：** 此接口为系统接口。
@@ -91,6 +101,8 @@ readonly icon: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-LauncherAbilityResourceInfo-readonly icon: string--><!--Device-LauncherAbilityResourceInfo-readonly icon: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Resource
 
@@ -108,6 +120,8 @@ readonly label: string
 
 **起始版本：** 11
 
+<!--Device-LauncherAbilityResourceInfo-readonly label: string--><!--Device-LauncherAbilityResourceInfo-readonly label: string-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Resource
 
 **系统接口：** 此接口为系统接口。
@@ -123,6 +137,8 @@ readonly moduleName: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-LauncherAbilityResourceInfo-readonly moduleName: string--><!--Device-LauncherAbilityResourceInfo-readonly moduleName: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Resource
 

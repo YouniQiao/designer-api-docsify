@@ -12,6 +12,8 @@ AudioDebuggingManager（音频快照）提供音频运行时调试功能，用�
 
 **起始版本：** 26.0.0
 
+<!--Device-audio-interface AudioDebuggingManager--><!--Device-audio-interface AudioDebuggingManager-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## 导入模块
@@ -32,6 +34,8 @@ printAppInfo(fd: number): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioDebuggingManager-printAppInfo(fd: int): void--><!--Device-AudioDebuggingManager-printAppInfo(fd: int): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **参数：**
@@ -51,6 +55,8 @@ printCapturerInfo(capturer: AudioCapturer, fd: number): void
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioDebuggingManager-printCapturerInfo(capturer: AudioCapturer, fd: int): void--><!--Device-AudioDebuggingManager-printCapturerInfo(capturer: AudioCapturer, fd: int): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -73,6 +79,8 @@ printLoopbackInfo(loopback: AudioLoopback, fd: number): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioDebuggingManager-printLoopbackInfo(loopback: AudioLoopback, fd: int): void--><!--Device-AudioDebuggingManager-printLoopbackInfo(loopback: AudioLoopback, fd: int): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **参数：**
@@ -94,6 +102,8 @@ printRendererInfo(renderer: AudioRenderer, fd: number): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioDebuggingManager-printRendererInfo(renderer: AudioRenderer, fd: int): void--><!--Device-AudioDebuggingManager-printRendererInfo(renderer: AudioRenderer, fd: int): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **参数：**
@@ -114,6 +124,8 @@ printSessionInfo(session: AudioSessionManager, fd: number): void
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioDebuggingManager-printSessionInfo(session: AudioSessionManager, fd: int): void--><!--Device-AudioDebuggingManager-printSessionInfo(session: AudioSessionManager, fd: int): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 

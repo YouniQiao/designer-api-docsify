@@ -8,6 +8,8 @@ export class Normalizer
 
 **起始版本：** 10
 
+<!--Device-i18n-export class Normalizer--><!--Device-i18n-export class Normalizer-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## 导入模块
@@ -26,7 +28,9 @@ static getInstance(mode: NormalizerMode): Normalizer
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Normalizer-static getInstance(mode: NormalizerMode): Normalizer--><!--Device-Normalizer-static getInstance(mode: NormalizerMode): Normalizer-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -72,7 +76,9 @@ normalize(text: string): string
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Normalizer-normalize(text: string): string--><!--Device-Normalizer-normalize(text: string): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 

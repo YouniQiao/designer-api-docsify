@@ -8,6 +8,8 @@ declare interface Stream
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare interface Stream--><!--Device-unnamed-declare interface Stream-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## 导入模块
@@ -27,6 +29,8 @@ close(): Promise<void>
 **起始版本：** 9
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-Stream-close(): Promise<void>--><!--Device-Stream-close(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -75,6 +79,8 @@ close(callback: AsyncCallback<void>): void
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-Stream-close(callback: AsyncCallback<void>): void--><!--Device-Stream-close(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -122,6 +128,8 @@ closeSync(): void
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-Stream-closeSync(): void--><!--Device-Stream-closeSync(): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **错误码：**
@@ -154,6 +162,8 @@ flush(): Promise<void>
 **起始版本：** 9
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-Stream-flush(): Promise<void>--><!--Device-Stream-flush(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -209,6 +219,8 @@ flush(callback: AsyncCallback<void>): void
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-Stream-flush(callback: AsyncCallback<void>): void--><!--Device-Stream-flush(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -263,6 +275,8 @@ flushSync(): void
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-Stream-flushSync(): void--><!--Device-Stream-flushSync(): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **错误码：**
@@ -305,6 +319,8 @@ read(
 **起始版本：** 9
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-Stream-read(      buffer: ArrayBuffer,      options?: ReadOptions  ): Promise<number>--><!--Device-Stream-read(      buffer: ArrayBuffer,      options?: ReadOptions  ): Promise<number>-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -373,6 +389,8 @@ read(buffer: ArrayBuffer, callback: AsyncCallback<number>): void
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-Stream-read(buffer: ArrayBuffer, callback: AsyncCallback<number>): void--><!--Device-Stream-read(buffer: ArrayBuffer, callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -433,6 +451,8 @@ read(
 **起始版本：** 9
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-Stream-read(      buffer: ArrayBuffer,      options: ReadOptions,      callback: AsyncCallback<number>  ): void--><!--Device-Stream-read(      buffer: ArrayBuffer,      options: ReadOptions,      callback: AsyncCallback<number>  ): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -498,6 +518,8 @@ readSync(
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-Stream-readSync(      buffer: ArrayBuffer,      options?: ReadOptions  ): number--><!--Device-Stream-readSync(      buffer: ArrayBuffer,      options?: ReadOptions  ): number-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -558,6 +580,8 @@ write(
 **起始版本：** 9
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-Stream-write(      buffer: ArrayBuffer | string,      options?: WriteOptions  ): Promise<number>--><!--Device-Stream-write(      buffer: ArrayBuffer | string,      options?: WriteOptions  ): Promise<number>-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -626,6 +650,8 @@ write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-Stream-write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void--><!--Device-Stream-write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -688,6 +714,8 @@ write(
 **起始版本：** 9
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-Stream-write(      buffer: ArrayBuffer | string,      options: WriteOptions,      callback: AsyncCallback<number>  ): void--><!--Device-Stream-write(      buffer: ArrayBuffer | string,      options: WriteOptions,      callback: AsyncCallback<number>  ): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -755,6 +783,8 @@ writeSync(
 **起始版本：** 9
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-Stream-writeSync(      buffer: ArrayBuffer | string,      options?: WriteOptions  ): number--><!--Device-Stream-writeSync(      buffer: ArrayBuffer | string,      options?: WriteOptions  ): number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

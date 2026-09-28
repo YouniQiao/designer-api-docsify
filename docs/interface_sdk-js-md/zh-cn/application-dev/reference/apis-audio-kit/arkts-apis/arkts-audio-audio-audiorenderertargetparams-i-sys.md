@@ -16,6 +16,8 @@ interface AudioRendererTargetParams
 
 **起始版本：** 26.0.0
 
+<!--Device-audio-interface AudioRendererTargetParams--><!--Device-audio-interface AudioRendererTargetParams-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **系统接口：** 此接口为系统接口。
@@ -42,6 +44,8 @@ streamId: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioRendererTargetParams-streamId: long--><!--Device-AudioRendererTargetParams-streamId: long-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +65,8 @@ uid: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioRendererTargetParams-uid: int--><!--Device-AudioRendererTargetParams-uid: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 

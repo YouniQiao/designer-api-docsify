@@ -16,6 +16,8 @@ function getCardType(slotId: number, callback: AsyncCallback<CardType>): void
 
 **起始版本：** 7
 
+<!--Device-sim-function getCardType(slotId: int, callback: AsyncCallback<CardType>): void--><!--Device-sim-function getCardType(slotId: int, callback: AsyncCallback<CardType>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**
@@ -63,6 +65,8 @@ function getCardType(slotId: number): Promise<CardType>
 获取指定卡槽SIM卡的卡类型。使用Promise异步回调。
 
 **起始版本：** 7
+
+<!--Device-sim-function getCardType(slotId: int): Promise<CardType>--><!--Device-sim-function getCardType(slotId: int): Promise<CardType>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

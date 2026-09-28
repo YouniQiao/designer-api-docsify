@@ -8,6 +8,8 @@ enum Orientation
 
 **起始版本：** 23
 
+<!--Device-image-enum Orientation--><!--Device-image-enum Orientation-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## TOP_LEFT
@@ -21,6 +23,8 @@ TOP_LEFT = 1
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Orientation-TOP_LEFT = 1--><!--Device-Orientation-TOP_LEFT = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -36,6 +40,8 @@ TOP_RIGHT = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Orientation-TOP_RIGHT = 2--><!--Device-Orientation-TOP_RIGHT = 2-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## BOTTOM_RIGHT
@@ -49,6 +55,8 @@ BOTTOM_RIGHT = 3
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Orientation-BOTTOM_RIGHT = 3--><!--Device-Orientation-BOTTOM_RIGHT = 3-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -64,6 +72,8 @@ BOTTOM_LEFT = 4
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Orientation-BOTTOM_LEFT = 4--><!--Device-Orientation-BOTTOM_LEFT = 4-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## LEFT_TOP
@@ -77,6 +87,8 @@ LEFT_TOP = 5
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Orientation-LEFT_TOP = 5--><!--Device-Orientation-LEFT_TOP = 5-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -92,6 +104,8 @@ RIGHT_TOP = 6
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Orientation-RIGHT_TOP = 6--><!--Device-Orientation-RIGHT_TOP = 6-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## RIGHT_BOTTOM
@@ -106,6 +120,8 @@ RIGHT_BOTTOM = 7
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Orientation-RIGHT_BOTTOM = 7--><!--Device-Orientation-RIGHT_BOTTOM = 7-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## LEFT_BOTTOM
@@ -119,5 +135,7 @@ LEFT_BOTTOM = 8
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Orientation-LEFT_BOTTOM = 8--><!--Device-Orientation-LEFT_BOTTOM = 8-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core

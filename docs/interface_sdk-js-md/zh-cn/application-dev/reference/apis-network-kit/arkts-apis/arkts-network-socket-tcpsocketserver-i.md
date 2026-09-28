@@ -8,6 +8,8 @@ TCPSocketServer连接。在调用TCPSocketServer的方法前，需要先通过[s
 
 **起始版本：** 10
 
+<!--Device-socket-export interface TCPSocketServer--><!--Device-socket-export interface TCPSocketServer-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块
@@ -32,6 +34,8 @@ TCPSocketServer停止监听并释放通过[listen](#listen)方法绑定的端口
 **起始版本：** 20
 
 **需要权限：** ohos.permission.INTERNET
+
+<!--Device-TCPSocketServer-close(): Promise<void>--><!--Device-TCPSocketServer-close(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -86,6 +90,8 @@ getLocalAddress(): Promise<NetAddress>
 > listen方法调用成功后，才可调用此方法。
 
 **起始版本：** 12
+
+<!--Device-TCPSocketServer-getLocalAddress(): Promise<NetAddress>--><!--Device-TCPSocketServer-getLocalAddress(): Promise<NetAddress>-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -146,6 +152,8 @@ getSocketFd(): Promise<number>
 
 **需要权限：** ohos.permission.INTERNET
 
+<!--Device-TCPSocketServer-getSocketFd(): Promise<int>--><!--Device-TCPSocketServer-getSocketFd(): Promise<int>-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
@@ -199,6 +207,8 @@ getState(callback: AsyncCallback<SocketStateBase>): void
 **起始版本：** 10
 
 **需要权限：** ohos.permission.INTERNET
+
+<!--Device-TCPSocketServer-getState(callback: AsyncCallback<SocketStateBase>): void--><!--Device-TCPSocketServer-getState(callback: AsyncCallback<SocketStateBase>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -263,6 +273,8 @@ getState(): Promise<SocketStateBase>
 
 **需要权限：** ohos.permission.INTERNET
 
+<!--Device-TCPSocketServer-getState(): Promise<SocketStateBase>--><!--Device-TCPSocketServer-getState(): Promise<SocketStateBase>-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
@@ -320,6 +332,8 @@ listen(address: NetAddress, callback: AsyncCallback<void>): void
 **起始版本：** 10
 
 **需要权限：** ohos.permission.INTERNET
+
+<!--Device-TCPSocketServer-listen(address: NetAddress, callback: AsyncCallback<void>): void--><!--Device-TCPSocketServer-listen(address: NetAddress, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -381,6 +395,8 @@ listen(address: NetAddress): Promise<void>
 
 **需要权限：** ohos.permission.INTERNET
 
+<!--Device-TCPSocketServer-listen(address: NetAddress): Promise<void>--><!--Device-TCPSocketServer-listen(address: NetAddress): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -436,6 +452,8 @@ off(type: 'connect', callback?: Callback<TCPSocketConnection>): void
 
 **起始版本：** 10
 
+<!--Device-TCPSocketServer-off(type: 'connect', callback?: Callback<TCPSocketConnection>): void--><!--Device-TCPSocketServer-off(type: 'connect', callback?: Callback<TCPSocketConnection>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -489,6 +507,8 @@ off(type: 'error', callback?: ErrorCallback): void
 取消订阅TCPSocketServer连接的error事件。使用callback异步回调。
 
 **起始版本：** 10
+
+<!--Device-TCPSocketServer-off(type: 'error', callback?: ErrorCallback): void--><!--Device-TCPSocketServer-off(type: 'error', callback?: ErrorCallback): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -548,6 +568,8 @@ on(type: 'connect', callback: Callback<TCPSocketConnection>): void
 
 **起始版本：** 10
 
+<!--Device-TCPSocketServer-on(type: 'connect', callback: Callback<TCPSocketConnection>): void--><!--Device-TCPSocketServer-on(type: 'connect', callback: Callback<TCPSocketConnection>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -601,6 +623,8 @@ on(type: 'error', callback: ErrorCallback): void
 > listen方法调用成功后，才可调用此方法。
 
 **起始版本：** 10
+
+<!--Device-TCPSocketServer-on(type: 'error', callback: ErrorCallback): void--><!--Device-TCPSocketServer-on(type: 'error', callback: ErrorCallback): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -657,6 +681,8 @@ setExtraOptions(options: TCPExtraOptions, callback: AsyncCallback<void>): void
 **起始版本：** 10
 
 **需要权限：** ohos.permission.INTERNET
+
+<!--Device-TCPSocketServer-setExtraOptions(options: TCPExtraOptions, callback: AsyncCallback<void>): void--><!--Device-TCPSocketServer-setExtraOptions(options: TCPExtraOptions, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -737,6 +763,8 @@ setExtraOptions(options: TCPExtraOptions): Promise<void>
 **起始版本：** 10
 
 **需要权限：** ohos.permission.INTERNET
+
+<!--Device-TCPSocketServer-setExtraOptions(options: TCPExtraOptions): Promise<void>--><!--Device-TCPSocketServer-setExtraOptions(options: TCPExtraOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 

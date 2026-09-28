@@ -8,6 +8,8 @@ TCP状态。
 
 **起始版本：** 24
 
+<!--Device-connection-export enum TcpState--><!--Device-connection-export enum TcpState-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## TCP_ESTABLISHED
@@ -21,6 +23,8 @@ TCP_ESTABLISHED = 1
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TcpState-TCP_ESTABLISHED = 1--><!--Device-TcpState-TCP_ESTABLISHED = 1-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -36,6 +40,8 @@ TCP_SYN_SENT = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TcpState-TCP_SYN_SENT = 2--><!--Device-TcpState-TCP_SYN_SENT = 2-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## TCP_SYN_RECV
@@ -49,6 +55,8 @@ TCP_SYN_RECV = 3
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TcpState-TCP_SYN_RECV = 3--><!--Device-TcpState-TCP_SYN_RECV = 3-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -64,6 +72,8 @@ TCP_FIN_WAIT1 = 4
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TcpState-TCP_FIN_WAIT1 = 4--><!--Device-TcpState-TCP_FIN_WAIT1 = 4-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## TCP_FIN_WAIT2
@@ -77,6 +87,8 @@ TCP_FIN_WAIT2 = 5
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TcpState-TCP_FIN_WAIT2 = 5--><!--Device-TcpState-TCP_FIN_WAIT2 = 5-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -92,6 +104,8 @@ TCP_TIME_WAIT = 6
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TcpState-TCP_TIME_WAIT = 6--><!--Device-TcpState-TCP_TIME_WAIT = 6-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## TCP_CLOSE
@@ -105,6 +119,8 @@ TCP_CLOSE = 7
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TcpState-TCP_CLOSE = 7--><!--Device-TcpState-TCP_CLOSE = 7-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -120,6 +136,8 @@ TCP_CLOSE_WAIT = 8
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TcpState-TCP_CLOSE_WAIT = 8--><!--Device-TcpState-TCP_CLOSE_WAIT = 8-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## TCP_LAST_ACK
@@ -133,6 +151,8 @@ TCP_LAST_ACK = 9
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TcpState-TCP_LAST_ACK = 9--><!--Device-TcpState-TCP_LAST_ACK = 9-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -148,6 +168,8 @@ TCP_LISTEN = 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TcpState-TCP_LISTEN = 10--><!--Device-TcpState-TCP_LISTEN = 10-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## TCP_CLOSING
@@ -161,5 +183,7 @@ TCP_CLOSING = 11
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TcpState-TCP_CLOSING = 11--><!--Device-TcpState-TCP_CLOSING = 11-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core

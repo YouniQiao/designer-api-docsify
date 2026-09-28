@@ -12,6 +12,8 @@ export type SaveRequest = _AutoFillRequest.SaveRequest
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-autoFillManager-export type SaveRequest = _AutoFillRequest.SaveRequest--><!--Device-autoFillManager-export type SaveRequest = _AutoFillRequest.SaveRequest-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **类型：** [_AutoFillRequest.SaveRequest](arkts-ability-autofillrequest-saverequest-i-sys.md)

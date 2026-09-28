@@ -24,6 +24,8 @@ function getAllNetworkInterfaces(admin: Want, callback: AsyncCallback<Array<stri
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-networkManager-function getAllNetworkInterfaces(admin: Want, callback: AsyncCallback<Array<string>>): void--><!--Device-networkManager-function getAllNetworkInterfaces(admin: Want, callback: AsyncCallback<Array<string>>): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -86,6 +88,8 @@ function getAllNetworkInterfaces(admin: Want): Promise<Array<string>>
 **需要权限：** ohos.permission.ENTERPRISE_GET_NETWORK_INFO
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-networkManager-function getAllNetworkInterfaces(admin: Want): Promise<Array<string>>--><!--Device-networkManager-function getAllNetworkInterfaces(admin: Want): Promise<Array<string>>-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

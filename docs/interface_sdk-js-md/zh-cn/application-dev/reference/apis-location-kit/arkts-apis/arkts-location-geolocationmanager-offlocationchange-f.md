@@ -22,6 +22,8 @@ function offLocationChange(callback?: Callback<Location>): void
 - API版本25+：N/A
 - API版本23-24：ohos.permission.APPROXIMATELY_LOCATION
 
+<!--Device-geoLocationManager-function offLocationChange(callback?: Callback<Location>): void--><!--Device-geoLocationManager-function offLocationChange(callback?: Callback<Location>): void-End-->
+
 **系统能力：** 
 - API版本23+：SystemCapability.Location.Location.Core
 

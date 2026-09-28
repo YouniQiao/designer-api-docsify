@@ -22,6 +22,8 @@ Adds a contact. This API uses an asynchronous callback to return the result.
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
+<!--Device-contact-function addContact(contact: Contact, callback: AsyncCallback<number>): void--><!--Device-contact-function addContact(contact: Contact, callback: AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
@@ -72,6 +74,8 @@ Adds a contact. This API uses an asynchronous callback to return the result.
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-contact-function addContact(context: Context, contact: Contact, callback: AsyncCallback<number>): void--><!--Device-contact-function addContact(context: Context, contact: Contact, callback: AsyncCallback<number>): void-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -138,6 +142,8 @@ Adds a contact. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
+<!--Device-contact-function addContact(contact: Contact): Promise<number>--><!--Device-contact-function addContact(contact: Contact): Promise<number>-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
@@ -188,6 +194,8 @@ Adds a contact. This API uses a promise to return the result.
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-contact-function addContact(context: Context, contact: Contact): Promise<number>--><!--Device-contact-function addContact(context: Context, contact: Contact): Promise<number>-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 

@@ -8,6 +8,8 @@ enum AssetConflictPolicy
 
 **起始版本：** 26.0.0
 
+<!--Device-relationalStore-enum AssetConflictPolicy--><!--Device-relationalStore-enum AssetConflictPolicy-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## CONFLICT_POLICY_DEFAULT
@@ -21,6 +23,8 @@ CONFLICT_POLICY_DEFAULT = 0
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AssetConflictPolicy-CONFLICT_POLICY_DEFAULT = 0--><!--Device-AssetConflictPolicy-CONFLICT_POLICY_DEFAULT = 0-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -36,6 +40,8 @@ CONFLICT_POLICY_TIME_FIRST = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AssetConflictPolicy-CONFLICT_POLICY_TIME_FIRST = 1--><!--Device-AssetConflictPolicy-CONFLICT_POLICY_TIME_FIRST = 1-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## CONFLICT_POLICY_TEMP_PATH
@@ -49,5 +55,7 @@ CONFLICT_POLICY_TEMP_PATH = 2
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AssetConflictPolicy-CONFLICT_POLICY_TEMP_PATH = 2--><!--Device-AssetConflictPolicy-CONFLICT_POLICY_TEMP_PATH = 2-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core

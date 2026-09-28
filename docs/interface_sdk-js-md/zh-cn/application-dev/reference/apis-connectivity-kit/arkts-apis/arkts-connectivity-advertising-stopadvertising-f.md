@@ -20,6 +20,8 @@ function stopAdvertising(advertisingId: number): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-advertising-function stopAdvertising(advertisingId: int): Promise<void>--><!--Device-advertising-function stopAdvertising(advertisingId: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **参数：**

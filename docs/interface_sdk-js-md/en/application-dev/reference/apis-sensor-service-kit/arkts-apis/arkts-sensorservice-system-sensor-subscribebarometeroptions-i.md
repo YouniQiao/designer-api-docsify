@@ -12,6 +12,8 @@ Configures the parameters for subscribing to the barometric pressure sensor, inc
 
 **Substitutes:** [BAROMETER](arkts-sensorservice-sensor-sensorid-e.md#barometer)
 
+<!--Device-unnamed-export interface SubscribeBarometerOptions--><!--Device-unnamed-export interface SubscribeBarometerOptions-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 ## Modules to Import
@@ -35,6 +37,8 @@ Callback invoked when an API call fails. The callback parameters are **data** of
 **Substitutes:** [on](arkts-sensorservice-sensor-on-f.md)
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-SubscribeBarometerOptions-fail?: (data: string, code: number) => void--><!--Device-SubscribeBarometerOptions-fail?: (data: string, code: number) => void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
@@ -60,6 +64,8 @@ Callback invoked when the barometric pressure sensor data changes. The callback 
 **Substitutes:** [on](arkts-sensorservice-sensor-on-f.md)
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-SubscribeBarometerOptions-success: (data: BarometerResponse) => void--><!--Device-SubscribeBarometerOptions-success: (data: BarometerResponse) => void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 

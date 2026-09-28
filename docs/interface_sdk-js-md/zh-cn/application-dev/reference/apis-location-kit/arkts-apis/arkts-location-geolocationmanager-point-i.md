@@ -8,6 +8,8 @@ export interface Point
 
 **起始版本：** 26.0.0
 
+<!--Device-geoLocationManager-export interface Point--><!--Device-geoLocationManager-export interface Point-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ latitude: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Point-latitude: double--><!--Device-Point-latitude: double-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 ## longitude
@@ -45,5 +49,7 @@ longitude: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Point-longitude: double--><!--Device-Point-longitude: double-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core

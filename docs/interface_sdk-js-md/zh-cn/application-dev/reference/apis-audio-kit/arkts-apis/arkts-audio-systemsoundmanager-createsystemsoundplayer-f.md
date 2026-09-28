@@ -16,6 +16,8 @@ function createSystemSoundPlayer(): Promise<SystemSoundPlayer | null>
 
 **起始版本：** 23
 
+<!--Device-systemSoundManager-function createSystemSoundPlayer(): Promise<SystemSoundPlayer | null>--><!--Device-systemSoundManager-function createSystemSoundPlayer(): Promise<SystemSoundPlayer | null>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **返回值：**

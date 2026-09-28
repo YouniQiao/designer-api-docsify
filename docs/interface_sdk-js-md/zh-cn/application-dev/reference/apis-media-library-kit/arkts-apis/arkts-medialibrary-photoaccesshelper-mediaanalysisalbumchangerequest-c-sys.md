@@ -10,6 +10,8 @@ class MediaAnalysisAlbumChangeRequest extends MediaAlbumChangeRequest
 
 **起始版本：** 18
 
+<!--Device-photoAccessHelper-class MediaAnalysisAlbumChangeRequest extends MediaAlbumChangeRequest--><!--Device-photoAccessHelper-class MediaAnalysisAlbumChangeRequest extends MediaAlbumChangeRequest-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -29,6 +31,8 @@ constructor(album: Album)
 构造函数。
 
 **起始版本：** 18
+
+<!--Device-MediaAnalysisAlbumChangeRequest-constructor(album: Album)--><!--Device-MediaAnalysisAlbumChangeRequest-constructor(album: Album)-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -98,6 +102,8 @@ static createAnalysisAlbumRequest(
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MediaAnalysisAlbumChangeRequest-static createAnalysisAlbumRequest(      context: Context,       name: string,       subtype: AlbumSubtype    ): MediaAnalysisAlbumChangeRequest--><!--Device-MediaAnalysisAlbumChangeRequest-static createAnalysisAlbumRequest(      context: Context,       name: string,       subtype: AlbumSubtype    ): MediaAnalysisAlbumChangeRequest-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -153,6 +159,8 @@ setDefaultCoverUri(coverUri: string): void
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MediaAnalysisAlbumChangeRequest-setDefaultCoverUri(coverUri: string): void--><!--Device-MediaAnalysisAlbumChangeRequest-setDefaultCoverUri(coverUri: string): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -231,6 +239,8 @@ setOrderPosition(assets: Array<PhotoAsset>, position: Array<number>): void
 **起始版本：** 18
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-MediaAnalysisAlbumChangeRequest-setOrderPosition(assets: Array<PhotoAsset>, position: Array<int>): void--><!--Device-MediaAnalysisAlbumChangeRequest-setOrderPosition(assets: Array<PhotoAsset>, position: Array<int>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -336,6 +346,8 @@ setRelationship(relationship: string): Promise<void>
 **起始版本：** 21
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-MediaAnalysisAlbumChangeRequest-setRelationship(relationship: string): Promise<void>--><!--Device-MediaAnalysisAlbumChangeRequest-setRelationship(relationship: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

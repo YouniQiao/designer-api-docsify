@@ -18,6 +18,8 @@ function tracepoint(mode: HiTraceCommunicationMode, type: HiTraceTracepointType,
 
 **起始版本：** 8
 
+<!--Device-hiTraceChain-function tracepoint(mode: HiTraceCommunicationMode, type: HiTraceTracepointType, id: HiTraceId, msg?: string): void--><!--Device-hiTraceChain-function tracepoint(mode: HiTraceCommunicationMode, type: HiTraceTracepointType, id: HiTraceId, msg?: string): void-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
 
 **参数：**

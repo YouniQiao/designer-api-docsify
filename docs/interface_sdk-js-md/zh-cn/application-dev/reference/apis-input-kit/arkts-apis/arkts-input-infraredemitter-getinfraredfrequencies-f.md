@@ -18,6 +18,8 @@ function getInfraredFrequencies(): Array<InfraredFrequency>
 
 **需要权限：** ohos.permission.MANAGE_INPUT_INFRARED_EMITTER
 
+<!--Device-infraredEmitter-function getInfraredFrequencies(): Array<InfraredFrequency>--><!--Device-infraredEmitter-function getInfraredFrequencies(): Array<InfraredFrequency>-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InfraredEmitter
 
 **返回值：**

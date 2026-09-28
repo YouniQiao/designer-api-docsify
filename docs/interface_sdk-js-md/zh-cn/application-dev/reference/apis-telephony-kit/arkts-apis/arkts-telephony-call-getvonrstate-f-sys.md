@@ -18,6 +18,8 @@ function getVoNRState(slotId: number, callback: AsyncCallback<VoNRState>): void
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-call-function getVoNRState(slotId: int, callback: AsyncCallback<VoNRState>): void--><!--Device-call-function getVoNRState(slotId: int, callback: AsyncCallback<VoNRState>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -70,6 +72,8 @@ function getVoNRState(slotId: number): Promise<VoNRState>
 **起始版本：** 10
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
+
+<!--Device-call-function getVoNRState(slotId: int): Promise<VoNRState>--><!--Device-call-function getVoNRState(slotId: int): Promise<VoNRState>-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 

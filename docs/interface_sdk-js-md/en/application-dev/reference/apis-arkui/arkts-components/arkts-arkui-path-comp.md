@@ -52,6 +52,8 @@ Creates a **Path** object instance, which is used to generate a closed custom sh
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-PathInterface-new (options?: PathOptions): PathAttribute--><!--Device-PathInterface-new (options?: PathOptions): PathAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -73,6 +75,8 @@ Creates a **Path** component, which is used to generate a closed custom shape ba
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-PathInterface-(options?: PathOptions): PathAttribute--><!--Device-PathInterface-(options?: PathOptions): PathAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -8,6 +8,8 @@ OpenLinkOptions可以作为[openLink()](arkts-ability-uiabilitycontext-c.md#open
 
 **起始版本：** 12
 
+<!--Device-unnamed-export default interface OpenLinkOptions--><!--Device-unnamed-export default interface OpenLinkOptions-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块
@@ -35,7 +37,9 @@ aa命令隐式拉起Ability时可以通过设置"--pb appLinkingOnly true/false"
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-OpenLinkOptions-appLinkingOnly?: boolean--><!--Device-OpenLinkOptions-appLinkingOnly?: boolean-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -53,7 +57,9 @@ completionHandler?: CompletionHandler
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本21开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本21开始，该接口支持在原子化服务中使用。
+
+<!--Device-OpenLinkOptions-completionHandler?: CompletionHandler--><!--Device-OpenLinkOptions-completionHandler?: CompletionHandler-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -78,7 +84,9 @@ hideFailureTipDialog?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本21开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本21开始，该接口支持在原子化服务中使用。
+
+<!--Device-OpenLinkOptions-hideFailureTipDialog?: boolean--><!--Device-OpenLinkOptions-hideFailureTipDialog?: boolean-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -99,6 +107,8 @@ parameters?: Record<string, Object>
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-OpenLinkOptions-parameters?: Record<string, Object>--><!--Device-OpenLinkOptions-parameters?: Record<string, Object>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

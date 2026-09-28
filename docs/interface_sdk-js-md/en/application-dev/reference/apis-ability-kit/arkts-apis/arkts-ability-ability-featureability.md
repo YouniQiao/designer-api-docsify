@@ -6,6 +6,8 @@ The FeatureAbility module provides APIs that enable user interaction. You can us
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-unnamed-declare namespace featureAbility--><!--Device-unnamed-declare namespace featureAbility-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 ## Modules to Import

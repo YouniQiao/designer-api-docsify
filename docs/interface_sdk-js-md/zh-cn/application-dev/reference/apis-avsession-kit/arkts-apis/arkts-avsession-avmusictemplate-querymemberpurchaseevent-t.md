@@ -12,6 +12,8 @@ type QueryMemberPurchaseEvent = (memberPurchaseType: MemberPurchaseType) => Prom
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-avMusicTemplate-type QueryMemberPurchaseEvent = (memberPurchaseType: MemberPurchaseType) => Promise<MemberPurchaseInfo[]>--><!--Device-avMusicTemplate-type QueryMemberPurchaseEvent = (memberPurchaseType: MemberPurchaseType) => Promise<MemberPurchaseInfo[]>-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **参数：**

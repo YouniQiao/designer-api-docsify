@@ -12,6 +12,8 @@ export declare class CubeGeometry extends GeometryDefinition
 
 **起始版本：** 18
 
+<!--Device-unnamed-export declare class CubeGeometry extends GeometryDefinition--><!--Device-unnamed-export declare class CubeGeometry extends GeometryDefinition-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## size
@@ -26,6 +28,8 @@ get size(): Vec3
 
 **起始版本：** 18
 
+<!--Device-CubeGeometry-get size(): Vec3--><!--Device-CubeGeometry-get size(): Vec3-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ```TypeScript
@@ -37,5 +41,7 @@ set size(value: Vec3)
 **类型：** [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)
 
 **起始版本：** 18
+
+<!--Device-CubeGeometry-set size(value: Vec3)--><!--Device-CubeGeometry-set size(value: Vec3)-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

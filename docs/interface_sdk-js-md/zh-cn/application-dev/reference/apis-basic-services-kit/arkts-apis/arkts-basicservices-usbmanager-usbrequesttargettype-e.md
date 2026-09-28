@@ -8,6 +8,8 @@ export enum USBRequestTargetType
 
 **起始版本：** 9
 
+<!--Device-usbManager-export enum USBRequestTargetType--><!--Device-usbManager-export enum USBRequestTargetType-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## USB_REQUEST_TARGET_DEVICE
@@ -19,6 +21,8 @@ USB_REQUEST_TARGET_DEVICE = 0
 将控制请求的目标设置为USB设备本身，用于对整个设备进行控制操作（如设置设备地址、获取设备描述符等）。
 
 **起始版本：** 9
+
+<!--Device-USBRequestTargetType-USB_REQUEST_TARGET_DEVICE = 0--><!--Device-USBRequestTargetType-USB_REQUEST_TARGET_DEVICE = 0-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -32,6 +36,8 @@ USB_REQUEST_TARGET_INTERFACE = 1
 
 **起始版本：** 9
 
+<!--Device-USBRequestTargetType-USB_REQUEST_TARGET_INTERFACE = 1--><!--Device-USBRequestTargetType-USB_REQUEST_TARGET_INTERFACE = 1-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## USB_REQUEST_TARGET_ENDPOINT
@@ -44,6 +50,8 @@ USB_REQUEST_TARGET_ENDPOINT = 2
 
 **起始版本：** 9
 
+<!--Device-USBRequestTargetType-USB_REQUEST_TARGET_ENDPOINT = 2--><!--Device-USBRequestTargetType-USB_REQUEST_TARGET_ENDPOINT = 2-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## USB_REQUEST_TARGET_OTHER
@@ -55,5 +63,7 @@ USB_REQUEST_TARGET_OTHER = 3
 将控制请求的目标设置为其他单元，用于对非标设备、接口或端点的单元进行控制操作。
 
 **起始版本：** 9
+
+<!--Device-USBRequestTargetType-USB_REQUEST_TARGET_OTHER = 3--><!--Device-USBRequestTargetType-USB_REQUEST_TARGET_OTHER = 3-End-->
 
 **系统能力：** SystemCapability.USB.USBManager

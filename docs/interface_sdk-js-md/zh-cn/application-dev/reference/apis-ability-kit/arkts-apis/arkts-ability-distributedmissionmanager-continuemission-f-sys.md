@@ -20,6 +20,8 @@ function continueMission(parameter: ContinueDeviceInfo, options: ContinueCallbac
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-distributedMissionManager-function continueMission(parameter: ContinueDeviceInfo, options: ContinueCallback, callback: AsyncCallback<void>): void--><!--Device-distributedMissionManager-function continueMission(parameter: ContinueDeviceInfo, options: ContinueCallback, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -95,6 +97,8 @@ function continueMission(parameter: ContinueDeviceInfo, options: ContinueCallbac
 **需要权限：** ohos.permission.MANAGE_MISSIONS and ohos.permission.DISTRIBUTED_DATASYNC
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-distributedMissionManager-function continueMission(parameter: ContinueDeviceInfo, options: ContinueCallback): Promise<void>--><!--Device-distributedMissionManager-function continueMission(parameter: ContinueDeviceInfo, options: ContinueCallback): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -174,6 +178,8 @@ function continueMission(parameter: ContinueMissionInfo, callback: AsyncCallback
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-distributedMissionManager-function continueMission(parameter: ContinueMissionInfo, callback: AsyncCallback<void>): void--><!--Device-distributedMissionManager-function continueMission(parameter: ContinueMissionInfo, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -241,6 +247,8 @@ function continueMission(parameter: ContinueMissionInfo): Promise<void>
 **需要权限：** ohos.permission.MANAGE_MISSIONS and ohos.permission.DISTRIBUTED_DATASYNC
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-distributedMissionManager-function continueMission(parameter: ContinueMissionInfo): Promise<void>--><!--Device-distributedMissionManager-function continueMission(parameter: ContinueMissionInfo): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 

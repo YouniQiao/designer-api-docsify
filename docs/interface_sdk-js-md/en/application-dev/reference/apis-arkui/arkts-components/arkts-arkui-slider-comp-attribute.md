@@ -12,6 +12,8 @@ In addition to the universal events, the following events are supported.
 
 **Since:** 7
 
+<!--Device-unnamed-declare class SliderAttribute extends CommonMethod<SliderAttribute>--><!--Device-unnamed-declare class SliderAttribute extends CommonMethod<SliderAttribute>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## blockBorderColor
@@ -33,6 +35,8 @@ When **SliderBlockType.SHAPE** is used, **blockBorderColor** sets the border col
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SliderAttribute-blockBorderColor(value: ResourceColor): SliderAttribute--><!--Device-SliderAttribute-blockBorderColor(value: ResourceColor): SliderAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -61,6 +65,8 @@ When **SliderBlockType.SHAPE** is used, **blockBorderWidth** sets the border wid
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SliderAttribute-blockBorderWidth(value: Length): SliderAttribute--><!--Device-SliderAttribute-blockBorderWidth(value: Length): SliderAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -91,6 +97,8 @@ When **SliderBlockType.SHAPE** is used, **blockColor** sets the color of the thu
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-SliderAttribute-blockColor(value: ResourceColor): SliderAttribute--><!--Device-SliderAttribute-blockColor(value: ResourceColor): SliderAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -124,6 +132,8 @@ When **SliderBlockType.SHAPE** is used, **blockColor** sets the color of the thu
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 21.
 
+<!--Device-SliderAttribute-blockColor(value: ResourceColor | LinearGradient): SliderAttribute--><!--Device-SliderAttribute-blockColor(value: ResourceColor | LinearGradient): SliderAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -152,6 +162,8 @@ When the slider type is set to **SliderBlockType.SHAPE**, this API sets the size
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SliderAttribute-blockSize(value: SizeOptions): SliderAttribute--><!--Device-SliderAttribute-blockSize(value: SizeOptions): SliderAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -174,6 +186,8 @@ Sets the style of the slider in the block direction.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SliderAttribute-blockStyle(value: SliderBlockStyle): SliderAttribute--><!--Device-SliderAttribute-blockStyle(value: SliderBlockStyle): SliderAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -195,6 +209,8 @@ Creates a content modifier.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SliderAttribute-contentModifier(modifier: ContentModifier<SliderConfiguration>): SliderAttribute--><!--Device-SliderAttribute-contentModifier(modifier: ContentModifier<SliderConfiguration>): SliderAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -222,6 +238,8 @@ Sets the sensitivity to the digital crown rotation.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SliderAttribute-digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>): SliderAttribute--><!--Device-SliderAttribute-digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>): SliderAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -246,6 +264,8 @@ To enable haptic feedback, you must declare the **ohos.permission.VIBRATE** perm
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SliderAttribute-enableHapticFeedback(enabled: boolean): SliderAttribute--><!--Device-SliderAttribute-enableHapticFeedback(enabled: boolean): SliderAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -267,6 +287,8 @@ Sets the minimum distance required for the slider to respond.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SliderAttribute-minResponsiveDistance(value: number): SliderAttribute--><!--Device-SliderAttribute-minResponsiveDistance(value: number): SliderAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -296,6 +318,8 @@ If the coherent action is a drag action, the **Click** state will not be trigger
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-SliderAttribute-onChange(callback: (value: number, mode: SliderChangeMode) => void): SliderAttribute--><!--Device-SliderAttribute-onChange(callback: (value: number, mode: SliderChangeMode) => void): SliderAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -317,6 +341,8 @@ Sets the prefix of the slider.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-SliderAttribute-prefix(content: ComponentContent, options?: SliderPrefixOptions): SliderAttribute--><!--Device-SliderAttribute-prefix(content: ComponentContent, options?: SliderPrefixOptions): SliderAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -341,6 +367,8 @@ Set the corner radius of the selected (highlighted) part of the slider.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SliderAttribute-selectedBorderRadius(value: Dimension): SliderAttribute--><!--Device-SliderAttribute-selectedBorderRadius(value: Dimension): SliderAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -364,6 +392,8 @@ Sets the color of the portion of the track between the minimum value and the thu
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-SliderAttribute-selectedColor(value: ResourceColor): SliderAttribute--><!--Device-SliderAttribute-selectedColor(value: ResourceColor): SliderAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -391,6 +421,8 @@ Sets the color of the portion of the track between the minimum value and the thu
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-SliderAttribute-selectedColor(selectedColor: ResourceColor | LinearGradient): SliderAttribute--><!--Device-SliderAttribute-selectedColor(selectedColor: ResourceColor | LinearGradient): SliderAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -414,6 +446,8 @@ Sets whether to display the step markers along the slider track.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-SliderAttribute-showSteps(value: boolean): SliderAttribute--><!--Device-SliderAttribute-showSteps(value: boolean): SliderAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -445,6 +479,8 @@ The accessibility text settings take effect only when the step markers are displ
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 20.
 
+<!--Device-SliderAttribute-showSteps(value: boolean, options?: SliderShowStepOptions): SliderAttribute--><!--Device-SliderAttribute-showSteps(value: boolean, options?: SliderShowStepOptions): SliderAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -474,6 +510,8 @@ The drawing area of the tooltip is the overlay of the slider.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-SliderAttribute-showTips(value: boolean, content?: ResourceStr): SliderAttribute--><!--Device-SliderAttribute-showTips(value: boolean, content?: ResourceStr): SliderAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -497,6 +535,8 @@ Sets the slide range.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SliderAttribute-slideRange(value: SlideRange): SliderAttribute--><!--Device-SliderAttribute-slideRange(value: SlideRange): SliderAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -518,6 +558,8 @@ Sets the interaction mode between the user and the slider.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SliderAttribute-sliderInteractionMode(value: SliderInteraction): SliderAttribute--><!--Device-SliderAttribute-sliderInteractionMode(value: SliderInteraction): SliderAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -541,6 +583,8 @@ Sets the step color.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SliderAttribute-stepColor(value: ResourceColor): SliderAttribute--><!--Device-SliderAttribute-stepColor(value: ResourceColor): SliderAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -562,6 +606,8 @@ Sets the step size (diameter). If the value is 0, the step size is not displayed
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SliderAttribute-stepSize(value: Length): SliderAttribute--><!--Device-SliderAttribute-stepSize(value: Length): SliderAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -585,6 +631,8 @@ Sets the suffix of the slider.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-SliderAttribute-suffix(content: ComponentContent, options?: SliderSuffixOptions): SliderAttribute--><!--Device-SliderAttribute-suffix(content: ComponentContent, options?: SliderSuffixOptions): SliderAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -607,6 +655,8 @@ Sets the radius of the rounded corner of the track.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SliderAttribute-trackBorderRadius(value: Length): SliderAttribute--><!--Device-SliderAttribute-trackBorderRadius(value: Length): SliderAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -634,6 +684,8 @@ Since API version 12, **LinearGradient** can be used to create a gradient effect
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-SliderAttribute-trackColor(value: ResourceColor | LinearGradient): SliderAttribute--><!--Device-SliderAttribute-trackColor(value: ResourceColor | LinearGradient): SliderAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -655,6 +707,8 @@ Sets the linear gradient background color of the track.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-SliderAttribute-trackColorMetrics(color: ColorMetricsLinearGradient): SliderAttribute--><!--Device-SliderAttribute-trackColorMetrics(color: ColorMetricsLinearGradient): SliderAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -688,6 +742,8 @@ When [SliderStyle](arkts-arkui-slider-comp-sliderstyle-e.md) is set to **OutSet*
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-SliderAttribute-trackThickness(value: Length): SliderAttribute--><!--Device-SliderAttribute-trackThickness(value: Length): SliderAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -717,6 +773,8 @@ Sets the maximum value.
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-SliderAttribute-maxLabel(value: string): SliderAttribute--><!--Device-SliderAttribute-maxLabel(value: string): SliderAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -745,6 +803,8 @@ Sets the minimum value.
 **Substitutes:** min
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-SliderAttribute-minLabel(value: string): SliderAttribute--><!--Device-SliderAttribute-minLabel(value: string): SliderAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

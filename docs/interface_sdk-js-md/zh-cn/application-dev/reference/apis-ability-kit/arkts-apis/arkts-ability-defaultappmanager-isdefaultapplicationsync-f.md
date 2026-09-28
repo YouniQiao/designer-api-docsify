@@ -16,6 +16,8 @@ function isDefaultApplicationSync(type: string): boolean
 
 **起始版本：** 10
 
+<!--Device-defaultAppManager-function isDefaultApplicationSync(type: string): boolean--><!--Device-defaultAppManager-function isDefaultApplicationSync(type: string): boolean-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.DefaultApp
 
 **参数：**

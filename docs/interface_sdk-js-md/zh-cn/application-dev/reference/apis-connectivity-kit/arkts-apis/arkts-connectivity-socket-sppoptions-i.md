@@ -8,6 +8,8 @@ interface SppOptions
 
 **起始版本：** 10
 
+<!--Device-socket-interface SppOptions--><!--Device-socket-interface SppOptions-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -36,6 +38,8 @@ SppType设置为SPP_RFCOMM时，该参数不填。SppType设置为SPP_L2CAP_BLE�
 
 **起始版本：** 20
 
+<!--Device-SppOptions-psm?: int--><!--Device-SppOptions-psm?: int-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## secure
@@ -50,6 +54,8 @@ secure: boolean
 
 **起始版本：** 10
 
+<!--Device-SppOptions-secure: boolean--><!--Device-SppOptions-secure: boolean-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## type
@@ -63,6 +69,8 @@ type: SppType
 **类型：** [SppType](arkts-connectivity-socket-spptype-e.md)
 
 **起始版本：** 10
+
+<!--Device-SppOptions-type: SppType--><!--Device-SppOptions-type: SppType-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -79,5 +87,7 @@ RFCOMM套接字链路类型的服务UUID，例如"00001101-0000-1000-8000-00805F
 **类型：** string
 
 **起始版本：** 10
+
+<!--Device-SppOptions-uuid: string--><!--Device-SppOptions-uuid: string-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

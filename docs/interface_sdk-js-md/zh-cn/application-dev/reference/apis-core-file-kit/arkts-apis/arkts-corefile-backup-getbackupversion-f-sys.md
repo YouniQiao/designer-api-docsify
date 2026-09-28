@@ -18,6 +18,8 @@ function getBackupVersion(): string
 
 **需要权限：** ohos.permission.BACKUP
 
+<!--Device-backup-function getBackupVersion(): string--><!--Device-backup-function getBackupVersion(): string-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 **系统接口：** 此接口为系统接口。

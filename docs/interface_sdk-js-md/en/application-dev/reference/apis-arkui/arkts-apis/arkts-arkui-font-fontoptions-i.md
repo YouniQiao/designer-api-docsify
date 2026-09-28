@@ -15,6 +15,8 @@ Information about the custom font to register.
 
 **Since:** 9
 
+<!--Device-font-interface FontOptions--><!--Device-font-interface FontOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -37,6 +39,8 @@ Name of the font to register. It is recommended to use letters, digits, and unde
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-FontOptions-familyName: string | Resource--><!--Device-FontOptions-familyName: string | Resource-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## familySrc
@@ -56,5 +60,7 @@ When reading resources in the system sandbox path, you are advised to use a stri
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-FontOptions-familySrc: string | Resource--><!--Device-FontOptions-familySrc: string | Resource-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

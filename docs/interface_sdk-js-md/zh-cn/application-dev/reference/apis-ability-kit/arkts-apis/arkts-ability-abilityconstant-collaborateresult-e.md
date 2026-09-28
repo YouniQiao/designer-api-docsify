@@ -8,6 +8,8 @@ export enum CollaborateResult
 
 **起始版本：** 18
 
+<!--Device-AbilityConstant-export enum CollaborateResult--><!--Device-AbilityConstant-export enum CollaborateResult-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## ACCEPT
@@ -22,6 +24,8 @@ ACCEPT = 0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-CollaborateResult-ACCEPT = 0--><!--Device-CollaborateResult-ACCEPT = 0-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## REJECT
@@ -35,5 +39,7 @@ REJECT = 1
 **起始版本：** 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-CollaborateResult-REJECT = 1--><!--Device-CollaborateResult-REJECT = 1-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

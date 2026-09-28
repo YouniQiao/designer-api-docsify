@@ -10,6 +10,8 @@ interface RotationVectorResponse extends Response
 
 **起始版本：** 8
 
+<!--Device-sensor-interface RotationVectorResponse extends Response--><!--Device-sensor-interface RotationVectorResponse extends Response-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## 导入模块
@@ -30,6 +32,8 @@ w: number
 
 **起始版本：** 8
 
+<!--Device-RotationVectorResponse-w: double--><!--Device-RotationVectorResponse-w: double-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## x
@@ -43,6 +47,8 @@ x: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-RotationVectorResponse-x: double--><!--Device-RotationVectorResponse-x: double-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -58,6 +64,8 @@ y: number
 
 **起始版本：** 8
 
+<!--Device-RotationVectorResponse-y: double--><!--Device-RotationVectorResponse-y: double-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## z
@@ -71,5 +79,7 @@ z: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-RotationVectorResponse-z: double--><!--Device-RotationVectorResponse-z: double-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor

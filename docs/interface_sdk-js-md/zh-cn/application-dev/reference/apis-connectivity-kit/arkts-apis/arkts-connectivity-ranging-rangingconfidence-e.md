@@ -8,6 +8,8 @@ enum RangingConfidence
 
 **起始版本：** 26.0.0
 
+<!--Device-ranging-enum RangingConfidence--><!--Device-ranging-enum RangingConfidence-End-->
+
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core
 
 ## HIGH
@@ -21,6 +23,8 @@ HIGH = 0
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-RangingConfidence-HIGH = 0--><!--Device-RangingConfidence-HIGH = 0-End-->
 
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core
 
@@ -36,6 +40,8 @@ MEDIUM = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RangingConfidence-MEDIUM = 1--><!--Device-RangingConfidence-MEDIUM = 1-End-->
+
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core
 
 ## LOW
@@ -49,5 +55,7 @@ LOW = 2
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-RangingConfidence-LOW = 2--><!--Device-RangingConfidence-LOW = 2-End-->
 
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core

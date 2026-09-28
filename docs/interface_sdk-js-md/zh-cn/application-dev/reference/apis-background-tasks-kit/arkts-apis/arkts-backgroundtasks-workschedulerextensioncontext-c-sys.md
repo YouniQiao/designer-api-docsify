@@ -12,6 +12,8 @@ WorkSchedulerExtensionContext可直接作为WorkSchedulerExtension的上下文�
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare class WorkSchedulerExtensionContext extends ExtensionContext--><!--Device-unnamed-declare class WorkSchedulerExtensionContext extends ExtensionContext-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
 ## startServiceExtensionAbility
@@ -25,6 +27,8 @@ startServiceExtensionAbility(want: Want): Promise<void>
 **起始版本：** 13
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WorkSchedulerExtensionContext-startServiceExtensionAbility(want: Want): Promise<void>--><!--Device-WorkSchedulerExtensionContext-startServiceExtensionAbility(want: Want): Promise<void>-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
@@ -101,6 +105,8 @@ stopServiceExtensionAbility(want: Want): Promise<void>
 **起始版本：** 13
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WorkSchedulerExtensionContext-stopServiceExtensionAbility(want: Want): Promise<void>--><!--Device-WorkSchedulerExtensionContext-stopServiceExtensionAbility(want: Want): Promise<void>-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 

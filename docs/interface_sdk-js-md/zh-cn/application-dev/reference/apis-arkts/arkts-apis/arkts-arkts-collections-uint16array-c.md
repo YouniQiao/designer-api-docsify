@@ -15,6 +15,8 @@ class Uint16Array
 
 **装饰器类型：** @Sendable
 
+<!--Device-collections-class Uint16Array--><!--Device-collections-class Uint16Array-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -34,6 +36,8 @@ import { collections } from '@kit.ArkTS';
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Uint16Array-[Symbol.iterator](): IterableIterator<number>--><!--Device-Uint16Array-[Symbol.iterator](): IterableIterator<number>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -60,6 +64,8 @@ at(index: number): number | undefined
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Uint16Array-at(index: number): number | undefined--><!--Device-Uint16Array-at(index: number): number | undefined-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -94,6 +100,8 @@ constructor()
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Uint16Array-constructor()--><!--Device-Uint16Array-constructor()-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **错误码：**
@@ -115,6 +123,8 @@ constructor(length: number)
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Uint16Array-constructor(length: number)--><!--Device-Uint16Array-constructor(length: number)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -144,6 +154,8 @@ constructor(elements: Iterable<number>)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Uint16Array-constructor(elements: Iterable<number>)--><!--Device-Uint16Array-constructor(elements: Iterable<number>)-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -171,6 +183,8 @@ constructor(array: ArrayLike<number> | ArrayBuffer)
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Uint16Array-constructor(array: ArrayLike<number> | ArrayBuffer)--><!--Device-Uint16Array-constructor(array: ArrayLike<number> | ArrayBuffer)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -200,6 +214,8 @@ constructor(buffer: ArrayBuffer, byteOffset?: number, length?: number)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Uint16Array-constructor(buffer: ArrayBuffer, byteOffset?: number, length?: number)--><!--Device-Uint16Array-constructor(buffer: ArrayBuffer, byteOffset?: number, length?: number)-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -227,6 +243,8 @@ copyWithin(target: number, start: number, end?: number): Uint16Array
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Uint16Array-copyWithin(target: number, start: number, end?: number): Uint16Array--><!--Device-Uint16Array-copyWithin(target: number, start: number, end?: number): Uint16Array-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -263,6 +281,8 @@ entries(): IterableIterator<[number, number]>
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Uint16Array-entries(): IterableIterator<[number, number]>--><!--Device-Uint16Array-entries(): IterableIterator<[number, number]>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -289,6 +309,8 @@ every(predicate: TypedArrayPredicateFn<number, Uint16Array>): boolean
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Uint16Array-every(predicate: TypedArrayPredicateFn<number, Uint16Array>): boolean--><!--Device-Uint16Array-every(predicate: TypedArrayPredicateFn<number, Uint16Array>): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -322,6 +344,8 @@ fill(value: number, start?: number, end?: number): Uint16Array
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Uint16Array-fill(value: number, start?: number, end?: number): Uint16Array--><!--Device-Uint16Array-fill(value: number, start?: number, end?: number): Uint16Array-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -358,6 +382,8 @@ filter(predicate: TypedArrayPredicateFn<number, Uint16Array>): Uint16Array
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Uint16Array-filter(predicate: TypedArrayPredicateFn<number, Uint16Array>): Uint16Array--><!--Device-Uint16Array-filter(predicate: TypedArrayPredicateFn<number, Uint16Array>): Uint16Array-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -390,6 +416,8 @@ find(predicate: TypedArrayPredicateFn<number, Uint16Array>): number | undefined
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Uint16Array-find(predicate: TypedArrayPredicateFn<number, Uint16Array>): number | undefined--><!--Device-Uint16Array-find(predicate: TypedArrayPredicateFn<number, Uint16Array>): number | undefined-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -424,6 +452,8 @@ findIndex(predicate: TypedArrayPredicateFn<number, Uint16Array>): number
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Uint16Array-findIndex(predicate: TypedArrayPredicateFn<number, Uint16Array>): number--><!--Device-Uint16Array-findIndex(predicate: TypedArrayPredicateFn<number, Uint16Array>): number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -457,6 +487,8 @@ forEach(callbackFn: TypedArrayForEachCallback<number, Uint16Array>): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Uint16Array-forEach(callbackFn: TypedArrayForEachCallback<number, Uint16Array>): void--><!--Device-Uint16Array-forEach(callbackFn: TypedArrayForEachCallback<number, Uint16Array>): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -483,6 +515,8 @@ static from(arrayLike: ArrayLike<number>): Uint16Array
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Uint16Array-static from(arrayLike: ArrayLike<number>): Uint16Array--><!--Device-Uint16Array-static from(arrayLike: ArrayLike<number>): Uint16Array-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -511,6 +545,8 @@ static from<T>(arrayLike: ArrayLike<T>, mapFn: TypedArrayFromMapFn<T, number>): 
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Uint16Array-static from<T>(arrayLike: ArrayLike<T>, mapFn: TypedArrayFromMapFn<T, number>): Uint16Array--><!--Device-Uint16Array-static from<T>(arrayLike: ArrayLike<T>, mapFn: TypedArrayFromMapFn<T, number>): Uint16Array-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -541,6 +577,8 @@ static from(arrayLike: Iterable<number>, mapFn?: TypedArrayFromMapFn<number, num
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Uint16Array-static from(arrayLike: Iterable<number>, mapFn?: TypedArrayFromMapFn<number, number>): Uint16Array--><!--Device-Uint16Array-static from(arrayLike: Iterable<number>, mapFn?: TypedArrayFromMapFn<number, number>): Uint16Array-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -567,6 +605,8 @@ includes(searchElement: number, fromIndex?: number): boolean
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Uint16Array-includes(searchElement: number, fromIndex?: number): boolean--><!--Device-Uint16Array-includes(searchElement: number, fromIndex?: number): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -602,6 +642,8 @@ indexOf(searchElement: number, fromIndex?: number): number
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Uint16Array-indexOf(searchElement: number, fromIndex?: number): number--><!--Device-Uint16Array-indexOf(searchElement: number, fromIndex?: number): number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -636,6 +678,8 @@ join(separator?: string): string
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Uint16Array-join(separator?: string): string--><!--Device-Uint16Array-join(separator?: string): string-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -669,6 +713,8 @@ keys(): IterableIterator<number>
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Uint16Array-keys(): IterableIterator<number>--><!--Device-Uint16Array-keys(): IterableIterator<number>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -695,6 +741,8 @@ lastIndexOf(searchElement: number, fromIndex?: number): number
 **起始版本：** 18
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-Uint16Array-lastIndexOf(searchElement: number, fromIndex?: number): number--><!--Device-Uint16Array-lastIndexOf(searchElement: number, fromIndex?: number): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -730,6 +778,8 @@ map(callbackFn: TypedArrayMapCallback<number, Uint16Array>): Uint16Array
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Uint16Array-map(callbackFn: TypedArrayMapCallback<number, Uint16Array>): Uint16Array--><!--Device-Uint16Array-map(callbackFn: TypedArrayMapCallback<number, Uint16Array>): Uint16Array-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -763,6 +813,8 @@ static of(...items: number[]): Uint16Array
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-Uint16Array-static of(...items: number[]): Uint16Array--><!--Device-Uint16Array-static of(...items: number[]): Uint16Array-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -788,6 +840,8 @@ reduce(callbackFn: TypedArrayReduceCallback<number, number, Uint16Array>): numbe
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Uint16Array-reduce(callbackFn: TypedArrayReduceCallback<number, number, Uint16Array>): number--><!--Device-Uint16Array-reduce(callbackFn: TypedArrayReduceCallback<number, number, Uint16Array>): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -823,6 +877,8 @@ reduce(callbackFn: TypedArrayReduceCallback<number, number, Uint16Array>, initia
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Uint16Array-reduce(callbackFn: TypedArrayReduceCallback<number, number, Uint16Array>, initialValue: number): number--><!--Device-Uint16Array-reduce(callbackFn: TypedArrayReduceCallback<number, number, Uint16Array>, initialValue: number): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -860,6 +916,8 @@ reduce<U>(callbackFn: TypedArrayReduceCallback<U, number, Uint16Array>, initialV
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Uint16Array-reduce<U>(callbackFn: TypedArrayReduceCallback<U, number, Uint16Array>, initialValue: U): U--><!--Device-Uint16Array-reduce<U>(callbackFn: TypedArrayReduceCallback<U, number, Uint16Array>, initialValue: U): U-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -893,6 +951,8 @@ reduceRight<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Uint16Ar
 **起始版本：** 18
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-Uint16Array-reduceRight<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Uint16Array>, initialValue: U): U--><!--Device-Uint16Array-reduceRight<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Uint16Array>, initialValue: U): U-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -930,6 +990,8 @@ reduceRight(callbackFn: TypedArrayReduceCallback<number, number, Uint16Array>): 
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-Uint16Array-reduceRight(callbackFn: TypedArrayReduceCallback<number, number, Uint16Array>): number--><!--Device-Uint16Array-reduceRight(callbackFn: TypedArrayReduceCallback<number, number, Uint16Array>): number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -963,6 +1025,8 @@ reverse(): Uint16Array
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Uint16Array-reverse(): Uint16Array--><!--Device-Uint16Array-reverse(): Uint16Array-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -989,6 +1053,8 @@ set(array: ArrayLike<number>, offset?: number): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Uint16Array-set(array: ArrayLike<number>, offset?: number): void--><!--Device-Uint16Array-set(array: ArrayLike<number>, offset?: number): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1017,6 +1083,8 @@ slice(start?: number, end?: number): Uint16Array
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Uint16Array-slice(start?: number, end?: number): Uint16Array--><!--Device-Uint16Array-slice(start?: number, end?: number): Uint16Array-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1052,6 +1120,8 @@ some(predicate: TypedArrayPredicateFn<number, Uint16Array>): boolean
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Uint16Array-some(predicate: TypedArrayPredicateFn<number, Uint16Array>): boolean--><!--Device-Uint16Array-some(predicate: TypedArrayPredicateFn<number, Uint16Array>): boolean-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -1085,6 +1155,8 @@ sort(compareFn?: TypedArrayCompareFn<number>): Uint16Array
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Uint16Array-sort(compareFn?: TypedArrayCompareFn<number>): Uint16Array--><!--Device-Uint16Array-sort(compareFn?: TypedArrayCompareFn<number>): Uint16Array-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -1117,6 +1189,8 @@ subarray(begin?: number, end?: number): Uint16Array
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Uint16Array-subarray(begin?: number, end?: number): Uint16Array--><!--Device-Uint16Array-subarray(begin?: number, end?: number): Uint16Array-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1152,6 +1226,8 @@ toLocaleString(): string
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-Uint16Array-toLocaleString(): string--><!--Device-Uint16Array-toLocaleString(): string-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -1179,6 +1255,8 @@ ArkTS Uint16Array转换为字符串。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-Uint16Array-toString(): string--><!--Device-Uint16Array-toString(): string-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -1205,6 +1283,8 @@ values(): IterableIterator<number>
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Uint16Array-values(): IterableIterator<number>--><!--Device-Uint16Array-values(): IterableIterator<number>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1235,6 +1315,8 @@ values(): IterableIterator<number>
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Uint16Array-[index: number]: number--><!--Device-Uint16Array-[index: number]: number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## buffer
@@ -1250,6 +1332,8 @@ ArkTS Uint16Array底层使用的ArrayBuffer对象。
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Uint16Array-readonly buffer: ArrayBuffer--><!--Device-Uint16Array-readonly buffer: ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1267,6 +1351,8 @@ ArkTS Uint16Array所占的字节数。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Uint16Array-readonly byteLength: number--><!--Device-Uint16Array-readonly byteLength: number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## byteOffset
@@ -1282,6 +1368,8 @@ ArkTS Uint16Array距离其ArrayBuffer起始位置的字节偏移。
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Uint16Array-readonly byteOffset: number--><!--Device-Uint16Array-readonly byteOffset: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1299,6 +1387,8 @@ ArkTS Uint16Array中每个元素所占的字节数。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Uint16Array-static readonly BYTES_PER_ELEMENT: number--><!--Device-Uint16Array-static readonly BYTES_PER_ELEMENT: number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## length
@@ -1314,5 +1404,7 @@ ArkTS Uint16Array元素个数。
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Uint16Array-readonly length: number--><!--Device-Uint16Array-readonly length: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

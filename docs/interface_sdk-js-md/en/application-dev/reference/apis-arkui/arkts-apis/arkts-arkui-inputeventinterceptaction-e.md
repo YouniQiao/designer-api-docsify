@@ -8,6 +8,8 @@ Enumerates the input event interception actions, used to control whether input e
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-declare enum InputEventInterceptAction--><!--Device-unnamed-declare enum InputEventInterceptAction-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## CONTINUE
@@ -24,6 +26,8 @@ The event is permitted to propagate to the UI framework.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-InputEventInterceptAction-CONTINUE = 0--><!--Device-InputEventInterceptAction-CONTINUE = 0-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## BLOCK
@@ -39,5 +43,7 @@ The event is blocked from propagating to the UI framework.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-InputEventInterceptAction-BLOCK = 1--><!--Device-InputEventInterceptAction-BLOCK = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

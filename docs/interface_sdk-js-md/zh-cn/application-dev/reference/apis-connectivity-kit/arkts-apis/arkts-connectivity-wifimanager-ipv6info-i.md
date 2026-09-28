@@ -8,6 +8,8 @@ Ipv6信息。
 
 **起始版本：** 10
 
+<!--Device-wifiManager-interface Ipv6Info--><!--Device-wifiManager-interface Ipv6Info-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## 导入模块
@@ -28,6 +30,8 @@ gateway: string
 
 **起始版本：** 10
 
+<!--Device-Ipv6Info-gateway: string--><!--Device-Ipv6Info-gateway: string-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## globalIpv6Address
@@ -41,6 +45,8 @@ globalIpv6Address: string
 **类型：** string
 
 **起始版本：** 10
+
+<!--Device-Ipv6Info-globalIpv6Address: string--><!--Device-Ipv6Info-globalIpv6Address: string-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -56,6 +62,8 @@ linkIpv6Address: string
 
 **起始版本：** 10
 
+<!--Device-Ipv6Info-linkIpv6Address: string--><!--Device-Ipv6Info-linkIpv6Address: string-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## netmask
@@ -69,6 +77,8 @@ netmask: string
 **类型：** string
 
 **起始版本：** 10
+
+<!--Device-Ipv6Info-netmask: string--><!--Device-Ipv6Info-netmask: string-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -84,6 +94,8 @@ primaryDNS: string
 
 **起始版本：** 10
 
+<!--Device-Ipv6Info-primaryDNS: string--><!--Device-Ipv6Info-primaryDNS: string-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## randomGlobalIpv6Address
@@ -97,6 +109,8 @@ randomGlobalIpv6Address: string
 **类型：** string
 
 **起始版本：** 10
+
+<!--Device-Ipv6Info-randomGlobalIpv6Address: string--><!--Device-Ipv6Info-randomGlobalIpv6Address: string-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -112,6 +126,8 @@ randomUniqueIpv6Address?: string
 
 **起始版本：** 12
 
+<!--Device-Ipv6Info-randomUniqueIpv6Address?: string--><!--Device-Ipv6Info-randomUniqueIpv6Address?: string-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## secondDNS
@@ -126,6 +142,8 @@ secondDNS: string
 
 **起始版本：** 10
 
+<!--Device-Ipv6Info-secondDNS: string--><!--Device-Ipv6Info-secondDNS: string-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## uniqueIpv6Address
@@ -139,5 +157,7 @@ uniqueIpv6Address?: string
 **类型：** string
 
 **起始版本：** 12
+
+<!--Device-Ipv6Info-uniqueIpv6Address?: string--><!--Device-Ipv6Info-uniqueIpv6Address?: string-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA

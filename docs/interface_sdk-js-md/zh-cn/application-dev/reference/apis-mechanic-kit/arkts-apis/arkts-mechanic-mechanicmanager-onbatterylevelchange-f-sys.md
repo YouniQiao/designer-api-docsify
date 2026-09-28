@@ -18,6 +18,8 @@ function onBatteryLevelChange(mechId: number, callback: Callback<BatteryLevelInf
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-mechanicManager-function onBatteryLevelChange(mechId: int, callback: Callback<BatteryLevelInfo>): void--><!--Device-mechanicManager-function onBatteryLevelChange(mechId: int, callback: Callback<BatteryLevelInfo>): void-End-->
+
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。

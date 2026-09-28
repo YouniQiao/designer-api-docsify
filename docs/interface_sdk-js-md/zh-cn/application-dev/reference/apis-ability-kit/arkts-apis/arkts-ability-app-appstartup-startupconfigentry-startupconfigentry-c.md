@@ -8,6 +8,8 @@ declare class StartupConfigEntry
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare class StartupConfigEntry--><!--Device-unnamed-declare class StartupConfigEntry-End-->
+
 **系统能力：** SystemCapability.Ability.AppStartup
 
 ## 导入模块
@@ -29,6 +31,8 @@ onConfig?(): StartupConfig
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-StartupConfigEntry-onConfig?(): StartupConfig--><!--Device-StartupConfigEntry-onConfig?(): StartupConfig-End-->
 
 **系统能力：** SystemCapability.Ability.AppStartup
 
@@ -84,6 +88,8 @@ onRequestCustomMatchRule(want: Want): string
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-StartupConfigEntry-onRequestCustomMatchRule(want: Want): string--><!--Device-StartupConfigEntry-onRequestCustomMatchRule(want: Want): string-End-->
 
 **系统能力：** SystemCapability.Ability.AppStartup
 

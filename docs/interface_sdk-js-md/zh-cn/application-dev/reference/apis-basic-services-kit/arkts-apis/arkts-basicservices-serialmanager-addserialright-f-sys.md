@@ -24,6 +24,8 @@ ohos.permission.MANAGE_USB_CONFIG）来识别是否允许静默授权，跳过�
 
 **需要权限：** ohos.permission.MANAGE_USB_CONFIG
 
+<!--Device-serialManager-function addSerialRight(tokenId: int, portId: int): void--><!--Device-serialManager-function addSerialRight(tokenId: int, portId: int): void-End-->
+
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
 **系统接口：** 此接口为系统接口。

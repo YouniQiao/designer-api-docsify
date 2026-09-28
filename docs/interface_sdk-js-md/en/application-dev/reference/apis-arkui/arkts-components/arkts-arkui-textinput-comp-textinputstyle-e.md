@@ -8,6 +8,8 @@ Text input style.
 
 **Since:** 9
 
+<!--Device-unnamed-declare enum TextInputStyle--><!--Device-unnamed-declare enum TextInputStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Default
@@ -21,6 +23,8 @@ Default style. The cursor is 1.5 vp wide, and the cursor height is related to th
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextInputStyle-Default--><!--Device-TextInputStyle-Default-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -43,5 +47,7 @@ In inline mode, dragging text into the input box is not supported.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextInputStyle-Inline--><!--Device-TextInputStyle-Inline-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

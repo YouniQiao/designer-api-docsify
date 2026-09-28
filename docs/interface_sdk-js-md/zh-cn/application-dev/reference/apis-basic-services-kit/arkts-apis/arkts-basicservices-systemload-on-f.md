@@ -16,6 +16,8 @@ function on(type: 'systemLoadChange', callback: Callback<SystemLoadLevel>): void
 
 **起始版本：** 12
 
+<!--Device-systemLoad-function on(type: 'systemLoadChange', callback: Callback<SystemLoadLevel>): void--><!--Device-systemLoad-function on(type: 'systemLoadChange', callback: Callback<SystemLoadLevel>): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.SystemLoad
 
 **参数：**

@@ -18,6 +18,8 @@ function getServiceDump(serviceid : number, fd : number, args : Array<string>) :
 
 **需要权限：** ohos.permission.DUMP
 
+<!--Device-hidebug-function getServiceDump(serviceid : int, fd : int, args : Array<string>) : void--><!--Device-hidebug-function getServiceDump(serviceid : int, fd : int, args : Array<string>) : void-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **参数：**

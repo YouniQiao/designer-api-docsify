@@ -8,6 +8,8 @@ Enumerates progress indicator styles.
 
 **Since:** 7
 
+<!--Device-unnamed-declare enum ProgressStyle--><!--Device-unnamed-declare enum ProgressStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Linear
@@ -23,6 +25,8 @@ Linear style. The progress bar is gradually filled from one end to the other alo
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-ProgressStyle-Linear--><!--Device-ProgressStyle-Linear-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,6 +44,8 @@ Ring without scale. The ring is gradually displayed until it is completely fille
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-ProgressStyle-Ring--><!--Device-ProgressStyle-Ring-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Eclipse
@@ -55,6 +61,8 @@ Eclipse style, which visualizes the progress in a way similar to the moon waxing
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-ProgressStyle-Eclipse--><!--Device-ProgressStyle-Eclipse-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,6 +80,8 @@ Ring with scale. Displays a progress effect similar to a clock scale. Since API 
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-ProgressStyle-ScaleRing--><!--Device-ProgressStyle-ScaleRing-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Capsule
@@ -87,5 +97,7 @@ Capsule style. The progress display effect at the arc ends is the same as that o
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-ProgressStyle-Capsule--><!--Device-ProgressStyle-Capsule-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

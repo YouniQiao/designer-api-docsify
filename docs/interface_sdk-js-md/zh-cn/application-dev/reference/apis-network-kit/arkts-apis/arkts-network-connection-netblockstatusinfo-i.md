@@ -8,6 +8,8 @@ export interface NetBlockStatusInfo
 
 **起始版本：** 11
 
+<!--Device-connection-export interface NetBlockStatusInfo--><!--Device-connection-export interface NetBlockStatusInfo-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ blocked: boolean
 
 **起始版本：** 11
 
+<!--Device-NetBlockStatusInfo-blocked: boolean--><!--Device-NetBlockStatusInfo-blocked: boolean-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## netHandle
@@ -41,5 +45,7 @@ netHandle: NetHandle
 **类型：** [NetHandle](arkts-network-connection-nethandle-i.md)
 
 **起始版本：** 11
+
+<!--Device-NetBlockStatusInfo-netHandle: NetHandle--><!--Device-NetBlockStatusInfo-netHandle: NetHandle-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core

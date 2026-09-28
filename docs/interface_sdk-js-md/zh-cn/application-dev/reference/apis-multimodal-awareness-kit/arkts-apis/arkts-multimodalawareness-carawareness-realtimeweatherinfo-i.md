@@ -8,6 +8,8 @@ export interface RealTimeWeatherInfo
 
 **起始版本：** 26.0.1
 
+<!--Device-carAwareness-export interface RealTimeWeatherInfo--><!--Device-carAwareness-export interface RealTimeWeatherInfo-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.CarAwareness
 
 ## 导入模块
@@ -30,6 +32,8 @@ timestamp: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RealTimeWeatherInfo-timestamp: number--><!--Device-RealTimeWeatherInfo-timestamp: number-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.CarAwareness
 
 ## weather
@@ -45,5 +49,7 @@ weather: number
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-RealTimeWeatherInfo-weather: number--><!--Device-RealTimeWeatherInfo-weather: number-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.CarAwareness

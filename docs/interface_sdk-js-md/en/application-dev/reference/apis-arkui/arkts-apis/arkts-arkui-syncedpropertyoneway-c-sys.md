@@ -11,6 +11,8 @@ Inherits from [SubscribedAbstractProperty&lt;T&gt;](arkts-arkui-subscribedabstra
 
 **Since:** 7
 
+<!--Device-unnamed-declare class SyncedPropertyOneWay<T> extends SubscribedAbstractProperty<T>  implements ISinglePropertyChangeSubscriber<T>--><!--Device-unnamed-declare class SyncedPropertyOneWay<T> extends SubscribedAbstractProperty<T>  implements ISinglePropertyChangeSubscriber<T>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Called when the object is about to be destroyed.
 **Since:** 7
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-SyncedPropertyOneWay-aboutToBeDeleted(unsubscribeMe?: IPropertySubscriber): void--><!--Device-SyncedPropertyOneWay-aboutToBeDeleted(unsubscribeMe?: IPropertySubscriber): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -48,6 +52,8 @@ Constructor. When the subscription relationship is no longer needed, call [unlin
 **Since:** 7
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-SyncedPropertyOneWay-constructor(source: SubscribedAbstractProperty<T>, subscribeMe?: IPropertySubscriber, info?: string)--><!--Device-SyncedPropertyOneWay-constructor(source: SubscribedAbstractProperty<T>, subscribeMe?: IPropertySubscriber, info?: string)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -73,6 +79,8 @@ Obtains data.
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-SyncedPropertyOneWay-get(): T--><!--Device-SyncedPropertyOneWay-get(): T-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -94,6 +102,8 @@ Notifies subscribers that the property value has changed.
 **Since:** 7
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-SyncedPropertyOneWay-hasChanged(newValue: T): void--><!--Device-SyncedPropertyOneWay-hasChanged(newValue: T): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -117,6 +127,8 @@ Sets a new value for the property.
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-SyncedPropertyOneWay-set(newValue: T): void--><!--Device-SyncedPropertyOneWay-set(newValue: T): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -139,6 +151,8 @@ A data source for the one-way synchronized property.
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-SyncedPropertyOneWay-private source_--><!--Device-SyncedPropertyOneWay-private source_-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -154,6 +168,8 @@ Value used for one-way binding.
 **Since:** 7
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-SyncedPropertyOneWay-private wrappedValue_--><!--Device-SyncedPropertyOneWay-private wrappedValue_-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

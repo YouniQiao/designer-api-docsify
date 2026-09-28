@@ -8,6 +8,8 @@ export enum UpgradeAction
 
 **起始版本：** 9
 
+<!--Device-update-export enum UpgradeAction--><!--Device-update-export enum UpgradeAction-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -22,6 +24,8 @@ UPGRADE = 'upgrade'
 
 **起始版本：** 9
 
+<!--Device-UpgradeAction-UPGRADE = 'upgrade'--><!--Device-UpgradeAction-UPGRADE = 'upgrade'-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -35,6 +39,8 @@ RECOVERY = 'recovery'
 修复包，用于修复系统异常或恢复系统功能的特殊升级包，适用于系统故障修复场景。详见[术语](../../../basic-services/update/update-kit-term.md)。
 
 **起始版本：** 9
+
+<!--Device-UpgradeAction-RECOVERY = 'recovery'--><!--Device-UpgradeAction-RECOVERY = 'recovery'-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
 

@@ -18,6 +18,8 @@ function getNetworkAccessPolicy(uid: number): Promise<NetworkAccessPolicy>
 
 **需要权限：** ohos.permission.MANAGE_NET_STRATEGY
 
+<!--Device-policy-function getNetworkAccessPolicy(uid: int): Promise<NetworkAccessPolicy>--><!--Device-policy-function getNetworkAccessPolicy(uid: int): Promise<NetworkAccessPolicy>-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -74,6 +76,8 @@ function getNetworkAccessPolicy(): Promise<UidNetworkAccessPolicy>
 **起始版本：** 12
 
 **需要权限：** ohos.permission.MANAGE_NET_STRATEGY
+
+<!--Device-policy-function getNetworkAccessPolicy(): Promise<UidNetworkAccessPolicy>--><!--Device-policy-function getNetworkAccessPolicy(): Promise<UidNetworkAccessPolicy>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 

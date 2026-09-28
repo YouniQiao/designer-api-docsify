@@ -8,6 +8,8 @@ ContentType和StreamUsage组合场景下的音效模式数组类型，[AudioEffe
 
 **起始版本：** 10
 
+<!--Device-audio-type AudioEffectInfoArray = Array<Readonly<AudioEffectMode>>--><!--Device-audio-type AudioEffectInfoArray = Array<Readonly<AudioEffectMode>>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **类型：** Array&lt;Readonly&lt;[AudioEffectMode](arkts-audio-audio-audioeffectmode-e.md)&gt;&gt;

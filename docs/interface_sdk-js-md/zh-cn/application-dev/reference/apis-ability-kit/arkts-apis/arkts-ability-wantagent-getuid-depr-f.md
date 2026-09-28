@@ -21,6 +21,8 @@ function getUid(agent: WantAgent, callback: AsyncCallback<number>): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-wantAgent-function getUid(agent: WantAgent, callback: AsyncCallback<number>): void--><!--Device-wantAgent-function getUid(agent: WantAgent, callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -102,6 +104,8 @@ function getUid(agent: WantAgent): Promise<number>
 **替代接口：** [getUid](arkts-ability-wantagent-getuid-f.md)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-wantAgent-function getUid(agent: WantAgent): Promise<number>--><!--Device-wantAgent-function getUid(agent: WantAgent): Promise<number>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

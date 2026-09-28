@@ -10,6 +10,8 @@ interface PhotoAsset extends lang.ISendable
 
 **起始版本：** 12
 
+<!--Device-sendablePhotoAccessHelper-interface PhotoAsset extends lang.ISendable--><!--Device-sendablePhotoAccessHelper-interface PhotoAsset extends lang.ISendable-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
@@ -29,6 +31,8 @@ getAnalysisData(analysisType: photoAccessHelper.AnalysisType): Promise<string>
 **起始版本：** 12
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAsset-getAnalysisData(analysisType: photoAccessHelper.AnalysisType): Promise<string>--><!--Device-PhotoAsset-getAnalysisData(analysisType: photoAccessHelper.AnalysisType): Promise<string>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -96,6 +100,8 @@ requestSource(): Promise<number>
 **起始版本：** 12
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAsset-requestSource(): Promise<number>--><!--Device-PhotoAsset-requestSource(): Promise<number>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

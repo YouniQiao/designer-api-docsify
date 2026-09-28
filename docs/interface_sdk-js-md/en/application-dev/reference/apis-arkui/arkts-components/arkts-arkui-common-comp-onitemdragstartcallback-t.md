@@ -12,6 +12,8 @@ Called when a list or grid element starts to be dragged.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-unnamed-declare type OnItemDragStartCallback = (event: ItemDragInfo, itemIndex: number) => CustomBuilder--><!--Device-unnamed-declare type OnItemDragStartCallback = (event: ItemDragInfo, itemIndex: number) => CustomBuilder-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

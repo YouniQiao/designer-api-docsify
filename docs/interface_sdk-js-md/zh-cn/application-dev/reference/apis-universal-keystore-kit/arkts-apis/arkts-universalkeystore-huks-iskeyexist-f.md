@@ -26,6 +26,8 @@ function isKeyExist(keyAlias: string, options: HuksOptions, callback: AsyncCallb
 
 **替代接口：** [isKeyItemExist](arkts-universalkeystore-huks-iskeyitemexist-f.md)(keyAlias: string, options: HuksOptions, callback: AsyncCallback&lt;boolean&gt;)
 
+<!--Device-huks-function isKeyExist(keyAlias: string, options: HuksOptions, callback: AsyncCallback<boolean>): void--><!--Device-huks-function isKeyExist(keyAlias: string, options: HuksOptions, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Extension
 
 **参数：**
@@ -71,6 +73,8 @@ function isKeyExist(keyAlias: string, options: HuksOptions): Promise<boolean>
 **废弃版本：** 9
 
 **替代接口：** [isKeyItemExist](arkts-universalkeystore-huks-iskeyitemexist-f.md#iskeyitemexist-1)(keyAlias: string, options: HuksOptions)
+
+<!--Device-huks-function isKeyExist(keyAlias: string, options: HuksOptions): Promise<boolean>--><!--Device-huks-function isKeyExist(keyAlias: string, options: HuksOptions): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Extension
 

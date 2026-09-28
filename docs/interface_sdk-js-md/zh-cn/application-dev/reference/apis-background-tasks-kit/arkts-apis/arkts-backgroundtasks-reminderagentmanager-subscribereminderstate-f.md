@@ -20,6 +20,8 @@ function subscribeReminderState(callback: Callback<Array<ReminderState>>): Promi
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-reminderAgentManager-function subscribeReminderState(callback: Callback<Array<ReminderState>>): Promise<void>--><!--Device-reminderAgentManager-function subscribeReminderState(callback: Callback<Array<ReminderState>>): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 **参数：**

@@ -18,6 +18,8 @@ function isAbilityEnabled(info: AbilityInfo, callback: AsyncCallback<boolean>): 
 
 **废弃版本：** 9
 
+<!--Device-bundle-function isAbilityEnabled(info: AbilityInfo, callback: AsyncCallback<boolean>): void--><!--Device-bundle-function isAbilityEnabled(info: AbilityInfo, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 **参数：**
@@ -60,6 +62,8 @@ function isAbilityEnabled(info: AbilityInfo): Promise<boolean>
 **起始版本：** 8
 
 **废弃版本：** 9
+
+<!--Device-bundle-function isAbilityEnabled(info: AbilityInfo): Promise<boolean>--><!--Device-bundle-function isAbilityEnabled(info: AbilityInfo): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 

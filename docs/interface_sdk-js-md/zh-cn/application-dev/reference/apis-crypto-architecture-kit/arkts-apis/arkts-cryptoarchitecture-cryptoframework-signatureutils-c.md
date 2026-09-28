@@ -8,6 +8,8 @@ class SignatureUtils
 
 **起始版本：** 20
 
+<!--Device-cryptoFramework-class SignatureUtils--><!--Device-cryptoFramework-class SignatureUtils-End-->
+
 **系统能力：** SystemCapability.Security.CryptoFramework.Signature
 
 ## 导入模块
@@ -26,7 +28,9 @@ static genEccSignature(spec: EccSignatureSpec): Uint8Array
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-SignatureUtils-static genEccSignature(spec: EccSignatureSpec): Uint8Array--><!--Device-SignatureUtils-static genEccSignature(spec: EccSignatureSpec): Uint8Array-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Signature
 
@@ -84,7 +88,9 @@ static genEccSignatureSpec(data: Uint8Array): EccSignatureSpec
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-SignatureUtils-static genEccSignatureSpec(data: Uint8Array): EccSignatureSpec--><!--Device-SignatureUtils-static genEccSignatureSpec(data: Uint8Array): EccSignatureSpec-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Signature
 

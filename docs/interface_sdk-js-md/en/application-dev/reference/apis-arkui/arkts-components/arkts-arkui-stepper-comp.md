@@ -26,6 +26,8 @@ Creates a **Stepper** component.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-StepperInterface-(value?: { index?: number }): StepperAttribute--><!--Device-StepperInterface-(value?: { index?: number }): StepperAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

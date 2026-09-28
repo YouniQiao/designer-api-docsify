@@ -8,6 +8,8 @@ export enum TrafficPlanParam
 
 **起始版本：** 26.0.0
 
+<!--Device-statistics-export enum TrafficPlanParam--><!--Device-statistics-export enum TrafficPlanParam-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -23,6 +25,8 @@ DISPLAY_TRAFFIC_SWITCH = 1
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TrafficPlanParam-DISPLAY_TRAFFIC_SWITCH = 1--><!--Device-TrafficPlanParam-DISPLAY_TRAFFIC_SWITCH = 1-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -40,6 +44,8 @@ UNLIMIT_TRAFFIC_SWITCH = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TrafficPlanParam-UNLIMIT_TRAFFIC_SWITCH = 2--><!--Device-TrafficPlanParam-UNLIMIT_TRAFFIC_SWITCH = 2-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -55,6 +61,8 @@ TRAFFIC_LIMIT = 3
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TrafficPlanParam-TRAFFIC_LIMIT = 3--><!--Device-TrafficPlanParam-TRAFFIC_LIMIT = 3-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -72,6 +80,8 @@ START_DATE = 4
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TrafficPlanParam-START_DATE = 4--><!--Device-TrafficPlanParam-START_DATE = 4-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -87,6 +97,8 @@ OVER_LIMIT_BEHAVIOR = 5
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TrafficPlanParam-OVER_LIMIT_BEHAVIOR = 5--><!--Device-TrafficPlanParam-OVER_LIMIT_BEHAVIOR = 5-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -104,6 +116,8 @@ MONTHLY_LIMIT_PERCENTAGE = 6
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TrafficPlanParam-MONTHLY_LIMIT_PERCENTAGE = 6--><!--Device-TrafficPlanParam-MONTHLY_LIMIT_PERCENTAGE = 6-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -119,6 +133,8 @@ DAILY_LIMIT_PERCENTAGE = 7
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TrafficPlanParam-DAILY_LIMIT_PERCENTAGE = 7--><!--Device-TrafficPlanParam-DAILY_LIMIT_PERCENTAGE = 7-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 

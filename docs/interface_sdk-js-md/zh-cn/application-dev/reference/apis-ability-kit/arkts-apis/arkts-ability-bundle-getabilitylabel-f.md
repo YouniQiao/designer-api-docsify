@@ -22,6 +22,8 @@ function getAbilityLabel(bundleName: string, abilityName: string, callback: Asyn
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
+<!--Device-bundle-function getAbilityLabel(bundleName: string, abilityName: string, callback: AsyncCallback<string>): void--><!--Device-bundle-function getAbilityLabel(bundleName: string, abilityName: string, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 **参数：**
@@ -67,6 +69,8 @@ function getAbilityLabel(bundleName: string, abilityName: string): Promise<strin
 **废弃版本：** 9
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
+
+<!--Device-bundle-function getAbilityLabel(bundleName: string, abilityName: string): Promise<string>--><!--Device-bundle-function getAbilityLabel(bundleName: string, abilityName: string): Promise<string>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 

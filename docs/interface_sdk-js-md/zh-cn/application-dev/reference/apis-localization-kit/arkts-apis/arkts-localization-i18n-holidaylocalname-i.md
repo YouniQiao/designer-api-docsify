@@ -8,6 +8,8 @@ export interface HolidayLocalName
 
 **起始版本：** 11
 
+<!--Device-i18n-export interface HolidayLocalName--><!--Device-i18n-export interface HolidayLocalName-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## 导入模块
@@ -28,7 +30,9 @@ language: string
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HolidayLocalName-language: string--><!--Device-HolidayLocalName-language: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -44,6 +48,8 @@ name: string
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HolidayLocalName-name: string--><!--Device-HolidayLocalName-name: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n

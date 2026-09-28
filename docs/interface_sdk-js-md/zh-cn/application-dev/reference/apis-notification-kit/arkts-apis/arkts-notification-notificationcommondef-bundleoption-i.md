@@ -8,6 +8,8 @@ export interface BundleOption
 
 **起始版本：** 9
 
+<!--Device-unnamed-export interface BundleOption--><!--Device-unnamed-export interface BundleOption-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## bundle
@@ -22,6 +24,8 @@ bundle: string
 
 **起始版本：** 9
 
+<!--Device-BundleOption-bundle: string--><!--Device-BundleOption-bundle: string-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## uid
@@ -35,5 +39,7 @@ uid?: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-BundleOption-uid?: int--><!--Device-BundleOption-uid?: int-End-->
 
 **系统能力：** SystemCapability.Notification.Notification

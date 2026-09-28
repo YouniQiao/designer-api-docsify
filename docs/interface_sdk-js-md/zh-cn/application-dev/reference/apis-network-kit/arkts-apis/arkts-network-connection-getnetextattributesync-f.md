@@ -18,6 +18,8 @@ function getNetExtAttributeSync(netHandle: NetHandle): string
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-connection-function getNetExtAttributeSync(netHandle: NetHandle): string--><!--Device-connection-function getNetExtAttributeSync(netHandle: NetHandle): string-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**

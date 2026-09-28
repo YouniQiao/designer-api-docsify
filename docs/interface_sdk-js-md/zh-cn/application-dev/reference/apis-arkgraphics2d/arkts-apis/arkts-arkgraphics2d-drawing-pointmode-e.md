@@ -8,6 +8,8 @@ enum PointMode
 
 **起始版本：** 12
 
+<!--Device-drawing-enum PointMode--><!--Device-drawing-enum PointMode-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## POINTS
@@ -19,6 +21,8 @@ POINTS = 0
 分别绘制每个点。
 
 **起始版本：** 12
+
+<!--Device-PointMode-POINTS = 0--><!--Device-PointMode-POINTS = 0-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -32,6 +36,8 @@ LINES = 1
 
 **起始版本：** 12
 
+<!--Device-PointMode-LINES = 1--><!--Device-PointMode-LINES = 1-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## POLYGON
@@ -43,5 +49,7 @@ POLYGON = 2
 将点阵列绘制为开放多边形。
 
 **起始版本：** 12
+
+<!--Device-PointMode-POLYGON = 2--><!--Device-PointMode-POLYGON = 2-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing

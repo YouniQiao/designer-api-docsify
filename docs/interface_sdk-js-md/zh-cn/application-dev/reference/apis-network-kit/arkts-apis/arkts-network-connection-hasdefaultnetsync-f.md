@@ -18,6 +18,8 @@ function hasDefaultNetSync(): boolean
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-connection-function hasDefaultNetSync(): boolean--><!--Device-connection-function hasDefaultNetSync(): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **返回值：**

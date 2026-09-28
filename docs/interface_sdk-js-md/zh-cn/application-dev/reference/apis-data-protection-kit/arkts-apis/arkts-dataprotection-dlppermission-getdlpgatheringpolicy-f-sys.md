@@ -20,6 +20,8 @@ function getDLPGatheringPolicy(): Promise<GatheringPolicyType>
 
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
 
+<!--Device-dlpPermission-function getDLPGatheringPolicy(): Promise<GatheringPolicyType>--><!--Device-dlpPermission-function getDLPGatheringPolicy(): Promise<GatheringPolicyType>-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **系统接口：** 此接口为系统接口。
@@ -68,6 +70,8 @@ function getDLPGatheringPolicy(callback: AsyncCallback<GatheringPolicyType>): vo
 **起始版本：** 10
 
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
+
+<!--Device-dlpPermission-function getDLPGatheringPolicy(callback: AsyncCallback<GatheringPolicyType>): void--><!--Device-dlpPermission-function getDLPGatheringPolicy(callback: AsyncCallback<GatheringPolicyType>): void-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 

@@ -269,6 +269,8 @@ Defines the text style and layout manager for the component whose {@link type} i
 | [ArkUI_ErrorCode OH_ArkUI_ImageAttachment_GetResizableSlice(const OH_ArkUI_ImageAttachment* imageAttachment, float* left, float* top, float* right, float* bottom)](#oh_arkui_imageattachment_getresizableslice) | Obtains the resizable image slice in the image style. |
 | [ArkUI_ErrorCode OH_ArkUI_ImageAttachment_SetResizableLattice(OH_ArkUI_ImageAttachment* imageAttachment, const OH_Drawing_Lattice* lattice)](#oh_arkui_imageattachment_setresizablelattice) | Sets the resizable image lattice in the image style. |
 | [ArkUI_ErrorCode OH_ArkUI_ImageAttachment_GetResizableLattice(const OH_ArkUI_ImageAttachment* imageAttachment, OH_Drawing_Lattice* lattice)](#oh_arkui_imageattachment_getresizablelattice) | Obtains the resizable image lattice in the image style. |
+| [ArkUI_ErrorCode OH_ArkUI_ImageAttachment_SetImageTag(OH_ArkUI_ImageAttachment *imageAttachment, const char *imageTag)](#oh_arkui_imageattachment_setimagetag) | Sets the image text tag in the image style. |
+| [ArkUI_ErrorCode OH_ArkUI_ImageAttachment_GetImageTag(const OH_ArkUI_ImageAttachment *imageAttachment, int32_t bufferSize, char *buffer, int32_t *writeLength)](#oh_arkui_imageattachment_getimagetag) | Obtains the image text tag in the image style. |
 | [ArkUI_ErrorCode OH_ArkUI_TextEditorChangeEvent_GetRangeBefore(const OH_ArkUI_TextEditorChangeEvent* event, uint32_t* start, uint32_t* end)](#oh_arkui_texteditorchangeevent_getrangebefore) | Obtains the range of the content to be replaced in the text change information. |
 | [ArkUI_ErrorCode OH_ArkUI_TextEditorChangeEvent_GetReplacementStyledString(const OH_ArkUI_TextEditorChangeEvent* event, ArkUI_StyledString_Descriptor* descriptor)](#oh_arkui_texteditorchangeevent_getreplacementstyledstring) | Obtains the styled string used for replacement in the text change information. |
 | [ArkUI_ErrorCode OH_ArkUI_TextEditorChangeEvent_GetPreviewStyledString(const OH_ArkUI_TextEditorChangeEvent* event, ArkUI_StyledString_Descriptor* descriptor)](#oh_arkui_texteditorchangeevent_getpreviewstyledstring) | Obtains the styled string of the previewed content in the text change information. |
@@ -6850,6 +6852,62 @@ Obtains the resizable image lattice in the image style.
 | Type | Description |
 | -- | -- |
 | ArkUI_ErrorCode | Returns the result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](../../apis-arkdata/c-apis/capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](../../apis-arkdata/c-apis/capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+
+### OH_ArkUI_ImageAttachment_SetImageTag()
+
+```c
+ArkUI_ErrorCode OH_ArkUI_ImageAttachment_SetImageTag(OH_ArkUI_ImageAttachment *imageAttachment, const char *imageTag)
+```
+
+**Description**
+
+Sets the image text tag in the image style.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
+**Since**: 26.2.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md) *imageAttachment | [in] Pointer to the [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md) object. The pointer must not be NULL. |
+| const char *imageTag | [in] Pointer to the image text tag string. The pointer must not be NULL. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| ArkUI_ErrorCode | Returns the result code.      <ul>      <li>Returns [ARKUI_ERROR_CODE_NO_ERROR](../../apis-arkdata/c-apis/capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>      <li>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](../../apis-arkdata/c-apis/capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>      </ul> |
+
+### OH_ArkUI_ImageAttachment_GetImageTag()
+
+```c
+ArkUI_ErrorCode OH_ArkUI_ImageAttachment_GetImageTag(const OH_ArkUI_ImageAttachment *imageAttachment, int32_t bufferSize, char *buffer, int32_t *writeLength)
+```
+
+**Description**
+
+Obtains the image text tag in the image style.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
+**Since**: 26.2.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [const OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md) *imageAttachment | [in] Pointer to the [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md) object. The pointer must not be NULL. |
+| int32_t bufferSize | [in] Buffer size. |
+| char *buffer | [out] Pointer to the buffer for storing the image text tag string in the memory. You need to allocate the memory. The pointer must not be NULL. |
+| int32_t *writeLength | [out] Pointer to the length of the string actually written to the buffer if [ARKUI_ERROR_CODE_NO_ERROR](../../apis-arkdata/c-apis/capi-error-code-h.md#arkui_errorcode) is returned. <br>Pointer to the minimum length required for writing the entire string to the buffer if [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](../../apis-arkdata/c-apis/capi-error-code-h.md#arkui_errorcode) is returned. The pointer must not be NULL. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| ArkUI_ErrorCode | Returns the result code.      <ul>      <li>Returns [ARKUI_ERROR_CODE_NO_ERROR](../../apis-arkdata/c-apis/capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>      <li>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](../../apis-arkdata/c-apis/capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>      <li>Returns [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](../../apis-arkdata/c-apis/capi-error-code-h.md#arkui_errorcode) if the buffer size is      less than the minimum buffer size.</li>      </ul> |
 
 ### OH_ArkUI_TextEditorChangeEvent_GetRangeBefore()
 

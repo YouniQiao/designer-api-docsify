@@ -20,6 +20,8 @@ function getInstallationAllowedAppDistributionTypes(admin: Want): Array<AppDistr
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-bundleManager-function getInstallationAllowedAppDistributionTypes(admin: Want): Array<AppDistributionType>--><!--Device-bundleManager-function getInstallationAllowedAppDistributionTypes(admin: Want): Array<AppDistributionType>-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -78,6 +80,8 @@ function getInstallationAllowedAppDistributionTypes(admin: Want | null): Array<A
 **需要权限：** ohos.permission.ENTERPRISE_SET_BUNDLE_INSTALL_POLICY
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-bundleManager-function getInstallationAllowedAppDistributionTypes(admin: Want | null): Array<AppDistributionType>--><!--Device-bundleManager-function getInstallationAllowedAppDistributionTypes(admin: Want | null): Array<AppDistributionType>-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

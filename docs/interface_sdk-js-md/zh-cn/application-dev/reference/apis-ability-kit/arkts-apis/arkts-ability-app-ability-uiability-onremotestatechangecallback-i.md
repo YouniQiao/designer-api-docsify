@@ -8,6 +8,8 @@ export interface OnRemoteStateChangeCallback
 
 **起始版本：** 10
 
+<!--Device-unnamed-export interface OnRemoteStateChangeCallback--><!--Device-unnamed-export interface OnRemoteStateChangeCallback-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 ## 导入模块
@@ -27,6 +29,8 @@ import { UIAbility, Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteS
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-OnRemoteStateChangeCallback-(msg: string): void--><!--Device-OnRemoteStateChangeCallback-(msg: string): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 

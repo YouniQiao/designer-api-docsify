@@ -12,6 +12,8 @@ interface ColorSpaceManager extends ISendable
 
 **起始版本：** 12
 
+<!--Device-sendableColorSpaceManager-interface ColorSpaceManager extends ISendable--><!--Device-sendableColorSpaceManager-interface ColorSpaceManager extends ISendable-End-->
+
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
 ## 导入模块
@@ -29,6 +31,8 @@ getColorSpaceName(): colorSpaceManager.ColorSpace
 获取色域类型。
 
 **起始版本：** 12
+
+<!--Device-ColorSpaceManager-getColorSpaceName(): colorSpaceManager.ColorSpace--><!--Device-ColorSpaceManager-getColorSpaceName(): colorSpaceManager.ColorSpace-End-->
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
@@ -61,6 +65,8 @@ getGamma(): number
 
 **起始版本：** 12
 
+<!--Device-ColorSpaceManager-getGamma(): number--><!--Device-ColorSpaceManager-getGamma(): number-End-->
+
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
 **返回值：**
@@ -91,6 +97,8 @@ getWhitePoint(): collections.Array<number>
 获取色域白点值，返回色度坐标[x, y]，表示色彩空间中白色点的坐标位置。
 
 **起始版本：** 12
+
+<!--Device-ColorSpaceManager-getWhitePoint(): collections.Array<number>--><!--Device-ColorSpaceManager-getWhitePoint(): collections.Array<number>-End-->
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 

@@ -16,6 +16,8 @@ export interface CurrentLocationRequest
 
 **需要权限：** ohos.permission.LOCATION
 
+<!--Device-geolocation-export interface CurrentLocationRequest--><!--Device-geolocation-export interface CurrentLocationRequest-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 ## 导入模块
@@ -40,6 +42,8 @@ maxAccuracy?: number
 
 **替代接口：** [maxAccuracy](arkts-location-geolocationmanager-currentlocationrequest-i.md#maxaccuracy)
 
+<!--Device-CurrentLocationRequest-maxAccuracy?: number--><!--Device-CurrentLocationRequest-maxAccuracy?: number-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 ## priority
@@ -57,6 +61,8 @@ priority?: LocationRequestPriority
 **废弃版本：** 9
 
 **替代接口：** [priority](arkts-location-geolocationmanager-currentlocationrequest-i.md#priority)
+
+<!--Device-CurrentLocationRequest-priority?: LocationRequestPriority--><!--Device-CurrentLocationRequest-priority?: LocationRequestPriority-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -76,6 +82,8 @@ scenario?: LocationRequestScenario
 
 **替代接口：** [scenario](arkts-location-geolocationmanager-currentlocationrequest-i.md#scenario)
 
+<!--Device-CurrentLocationRequest-scenario?: LocationRequestScenario--><!--Device-CurrentLocationRequest-scenario?: LocationRequestScenario-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 ## timeoutMs
@@ -93,5 +101,7 @@ timeoutMs?: number
 **废弃版本：** 9
 
 **替代接口：** [timeoutMs](arkts-location-geolocationmanager-currentlocationrequest-i.md#timeoutms)
+
+<!--Device-CurrentLocationRequest-timeoutMs?: number--><!--Device-CurrentLocationRequest-timeoutMs?: number-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core

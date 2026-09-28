@@ -12,6 +12,8 @@ interface ECCCommonParamsSpec extends AsyKeySpec
 
 **起始版本：** 10
 
+<!--Device-cryptoFramework-interface ECCCommonParamsSpec extends AsyKeySpec--><!--Device-cryptoFramework-interface ECCCommonParamsSpec extends AsyKeySpec-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
 - API版本10-11：SystemCapability.Security.CryptoFramework
@@ -34,7 +36,9 @@ a: bigint
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ECCCommonParamsSpec-a: bigint--><!--Device-ECCCommonParamsSpec-a: bigint-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -52,7 +56,9 @@ b: bigint
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ECCCommonParamsSpec-b: bigint--><!--Device-ECCCommonParamsSpec-b: bigint-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -70,7 +76,9 @@ field: ECField
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ECCCommonParamsSpec-field: ECField--><!--Device-ECCCommonParamsSpec-field: ECField-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -88,7 +96,9 @@ g: Point
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ECCCommonParamsSpec-g: Point--><!--Device-ECCCommonParamsSpec-g: Point-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -106,7 +116,9 @@ h: number
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ECCCommonParamsSpec-h: int--><!--Device-ECCCommonParamsSpec-h: int-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -124,7 +136,9 @@ ECC算法中基点g的阶n。
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ECCCommonParamsSpec-n: bigint--><!--Device-ECCCommonParamsSpec-n: bigint-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey

@@ -16,6 +16,8 @@ function startTimer(timer: number, triggerTime: number, callback: AsyncCallback<
 
 **起始版本：** 7
 
+<!--Device-systemTimer-function startTimer(timer: long, triggerTime: long, callback: AsyncCallback<void>): void--><!--Device-systemTimer-function startTimer(timer: long, triggerTime: long, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Time
 
 **系统接口：** 此接口为系统接口。
@@ -78,6 +80,8 @@ function startTimer(timer: number, triggerTime: number): Promise<void>
 开启定时器，使用Promise进行异步回调。
 
 **起始版本：** 7
+
+<!--Device-systemTimer-function startTimer(timer: long, triggerTime: long): Promise<void>--><!--Device-systemTimer-function startTimer(timer: long, triggerTime: long): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Time
 

@@ -18,6 +18,8 @@ function removeSlot(slotType: SlotType, callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
+<!--Device-notificationManager-function removeSlot(slotType: SlotType, callback: AsyncCallback<void>): void--><!--Device-notificationManager-function removeSlot(slotType: SlotType, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **参见：**
@@ -75,6 +77,8 @@ function removeSlot(slotType: SlotType): Promise<void>
 删除后，对应类型的通知渠道及其配置将被永久移除，后续发布该类型通知时系统将自动创建默认渠道。已通过该渠道发布的通知不受影响，仍可在通知中心查看。适用于需要重新配置渠道时先删除再创建的场景。
 
 **起始版本：** 9
+
+<!--Device-notificationManager-function removeSlot(slotType: SlotType): Promise<void>--><!--Device-notificationManager-function removeSlot(slotType: SlotType): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

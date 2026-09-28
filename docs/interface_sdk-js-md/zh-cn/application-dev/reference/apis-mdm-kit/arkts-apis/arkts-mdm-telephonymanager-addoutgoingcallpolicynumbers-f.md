@@ -26,6 +26,8 @@ function addOutgoingCallPolicyNumbers(admin: Want, policy: adminManager.Policy, 
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-telephonyManager-function addOutgoingCallPolicyNumbers(admin: Want, policy: adminManager.Policy, numbers: Array<string>): void--><!--Device-telephonyManager-function addOutgoingCallPolicyNumbers(admin: Want, policy: adminManager.Policy, numbers: Array<string>): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**

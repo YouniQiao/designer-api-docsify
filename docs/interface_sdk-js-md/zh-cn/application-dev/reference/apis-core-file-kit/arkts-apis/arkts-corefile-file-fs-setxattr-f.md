@@ -16,6 +16,8 @@ declare function setxattr(path: string, key: string, value: string): Promise<voi
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare function setxattr(path: string, key: string, value: string): Promise<void>--><!--Device-unnamed-declare function setxattr(path: string, key: string, value: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**

@@ -10,6 +10,8 @@ Aperture video session object.
 
 **起始版本：** 12
 
+<!--Device-camera-interface ApertureVideoSession extends Session, Flash, AutoExposure, Focus, Zoom, ColorEffect, Aperture--><!--Device-camera-interface ApertureVideoSession extends Session, Flash, AutoExposure, Focus, Zoom, ColorEffect, Aperture-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -29,6 +31,8 @@ off(type: 'error', callback?: ErrorCallback): void
 Unsubscribes from HighResolutionPhotoSession error events.
 
 **起始版本：** 12
+
+<!--Device-ApertureVideoSession-off(type: 'error', callback?: ErrorCallback): void--><!--Device-ApertureVideoSession-off(type: 'error', callback?: ErrorCallback): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -57,6 +61,8 @@ Unsubscribes from focus state change events.
 
 **起始版本：** 12
 
+<!--Device-ApertureVideoSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void--><!--Device-ApertureVideoSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -83,6 +89,8 @@ off(type: 'smoothZoomInfoAvailable', callback?: AsyncCallback<SmoothZoomInfo>): 
 Unsubscribes from smooth zoom state change events.
 
 **起始版本：** 12
+
+<!--Device-ApertureVideoSession-off(type: 'smoothZoomInfoAvailable', callback?: AsyncCallback<SmoothZoomInfo>): void--><!--Device-ApertureVideoSession-off(type: 'smoothZoomInfoAvailable', callback?: AsyncCallback<SmoothZoomInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -111,6 +119,8 @@ Subscribes to HighResolutionPhotoSession error events. This API uses an asynchro
 
 **起始版本：** 12
 
+<!--Device-ApertureVideoSession-on(type: 'error', callback: ErrorCallback): void--><!--Device-ApertureVideoSession-on(type: 'error', callback: ErrorCallback): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -138,6 +148,8 @@ Subscribes to focus state change events. This API uses an asynchronous callback 
 
 **起始版本：** 12
 
+<!--Device-ApertureVideoSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void--><!--Device-ApertureVideoSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -164,6 +176,8 @@ on(type: 'smoothZoomInfoAvailable', callback: AsyncCallback<SmoothZoomInfo>): vo
 Subscribes to smooth zoom state change events. This API uses an asynchronous callback to return the result.
 
 **起始版本：** 12
+
+<!--Device-ApertureVideoSession-on(type: 'smoothZoomInfoAvailable', callback: AsyncCallback<SmoothZoomInfo>): void--><!--Device-ApertureVideoSession-on(type: 'smoothZoomInfoAvailable', callback: AsyncCallback<SmoothZoomInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

@@ -8,6 +8,8 @@ export interface DLPProperty
 
 **起始版本：** 21
 
+<!--Device-dlpPermission-export interface DLPProperty--><!--Device-dlpPermission-export interface DLPProperty-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## 导入模块
@@ -28,6 +30,8 @@ actionUponExpiry?: ActionType
 
 **起始版本：** 21
 
+<!--Device-DLPProperty-actionUponExpiry?: ActionType--><!--Device-DLPProperty-actionUponExpiry?: ActionType-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## allowedOpenCount
@@ -41,6 +45,8 @@ allowedOpenCount?: number
 **类型：** number
 
 **起始版本：** 21
+
+<!--Device-DLPProperty-allowedOpenCount?: number--><!--Device-DLPProperty-allowedOpenCount?: number-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -56,6 +62,8 @@ authUserList?: Array<AuthUser>
 
 **起始版本：** 21
 
+<!--Device-DLPProperty-authUserList?: Array<AuthUser>--><!--Device-DLPProperty-authUserList?: Array<AuthUser>-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## contactAccount
@@ -69,6 +77,8 @@ contactAccount: string
 **类型：** string
 
 **起始版本：** 21
+
+<!--Device-DLPProperty-contactAccount: string--><!--Device-DLPProperty-contactAccount: string-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -86,6 +96,8 @@ countdown?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DLPProperty-countdown?: number--><!--Device-DLPProperty-countdown?: number-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## everyoneAccessList
@@ -100,6 +112,8 @@ everyoneAccessList?: Array<DLPFileAccess>
 
 **起始版本：** 21
 
+<!--Device-DLPProperty-everyoneAccessList?: Array<DLPFileAccess>--><!--Device-DLPProperty-everyoneAccessList?: Array<DLPFileAccess>-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## expireTime
@@ -113,6 +127,8 @@ expireTime?: number
 **类型：** number
 
 **起始版本：** 21
+
+<!--Device-DLPProperty-expireTime?: number--><!--Device-DLPProperty-expireTime?: number-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -130,6 +146,8 @@ extensionFields?: Record<string, Object>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DLPProperty-extensionFields?: Record<string, Object>--><!--Device-DLPProperty-extensionFields?: Record<string, Object>-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## fileId
@@ -143,6 +161,8 @@ fileId?: string
 **类型：** string
 
 **起始版本：** 21
+
+<!--Device-DLPProperty-fileId?: string--><!--Device-DLPProperty-fileId?: string-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -158,6 +178,8 @@ offlineAccess: boolean
 
 **起始版本：** 21
 
+<!--Device-DLPProperty-offlineAccess: boolean--><!--Device-DLPProperty-offlineAccess: boolean-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## ownerAccount
@@ -171,6 +193,8 @@ ownerAccount: string
 **类型：** string
 
 **起始版本：** 21
+
+<!--Device-DLPProperty-ownerAccount: string--><!--Device-DLPProperty-ownerAccount: string-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -186,6 +210,8 @@ ownerAccountID: string
 
 **起始版本：** 21
 
+<!--Device-DLPProperty-ownerAccountID: string--><!--Device-DLPProperty-ownerAccountID: string-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## ownerAccountType
@@ -200,6 +226,8 @@ ownerAccountType: AccountType
 
 **起始版本：** 21
 
+<!--Device-DLPProperty-ownerAccountType: AccountType--><!--Device-DLPProperty-ownerAccountType: AccountType-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## waterMarkConfig
@@ -213,5 +241,7 @@ waterMarkConfig?: boolean
 **类型：** boolean
 
 **起始版本：** 23
+
+<!--Device-DLPProperty-waterMarkConfig?: boolean--><!--Device-DLPProperty-waterMarkConfig?: boolean-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention

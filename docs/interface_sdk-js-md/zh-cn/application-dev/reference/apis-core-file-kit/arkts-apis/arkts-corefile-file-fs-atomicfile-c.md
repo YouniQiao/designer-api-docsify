@@ -12,6 +12,8 @@ AtomicFile是一个用于对文件进行原子读写等操作的类。
 
 **起始版本：** 15
 
+<!--Device-unnamed-export class AtomicFile--><!--Device-unnamed-export class AtomicFile-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## 导入模块
@@ -29,6 +31,8 @@ constructor(path: string)
 对于给定路径的文件创建一个AtomicFile类。
 
 **起始版本：** 15
+
+<!--Device-AtomicFile-constructor(path: string)--><!--Device-AtomicFile-constructor(path: string)-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -53,6 +57,8 @@ delete(): void
 删除AtomicFile对应的原始文件和临时文件。
 
 **起始版本：** 15
+
+<!--Device-AtomicFile-delete(): void--><!--Device-AtomicFile-delete(): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -104,6 +110,8 @@ failWrite(): void
 
 **起始版本：** 15
 
+<!--Device-AtomicFile-failWrite(): void--><!--Device-AtomicFile-failWrite(): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **错误码：**
@@ -142,6 +150,8 @@ finishWrite(): void
 在完成对startWrite返回流的写入操作时调用，表示文件写入成功。
 
 **起始版本：** 15
+
+<!--Device-AtomicFile-finishWrite(): void--><!--Device-AtomicFile-finishWrite(): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -182,6 +192,8 @@ getBaseFile(): File
 文件描述符fd需要由用户调用close方法关闭。
 
 **起始版本：** 15
+
+<!--Device-AtomicFile-getBaseFile(): File--><!--Device-AtomicFile-getBaseFile(): File-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -231,6 +243,8 @@ openRead(): ReadStream
 创建一个读文件流。
 
 **起始版本：** 15
+
+<!--Device-AtomicFile-openRead(): ReadStream--><!--Device-AtomicFile-openRead(): ReadStream-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -290,6 +304,8 @@ readFully(): ArrayBuffer
 
 **起始版本：** 15
 
+<!--Device-AtomicFile-readFully(): ArrayBuffer--><!--Device-AtomicFile-readFully(): ArrayBuffer-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
@@ -345,6 +361,8 @@ startWrite(): WriteStream
 在写入文件完成后，写入成功需要调用finishWrite()，写入失败需要调用failWrite()。
 
 **起始版本：** 15
+
+<!--Device-AtomicFile-startWrite(): WriteStream--><!--Device-AtomicFile-startWrite(): WriteStream-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

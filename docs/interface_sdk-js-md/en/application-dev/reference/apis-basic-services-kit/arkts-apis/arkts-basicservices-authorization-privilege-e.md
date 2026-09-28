@@ -8,6 +8,8 @@ Enumerates the privileges that can be authorized. Before requesting authorizatio
 
 **Since:** 26.0.1
 
+<!--Device-authorization-enum Privilege--><!--Device-authorization-enum Privilege-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 ## PRIVILEGE_OPERATE_RAW_NET_PACKETS
@@ -21,5 +23,7 @@ Privilege for operating the raw network packets.
 **Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Privilege-PRIVILEGE_OPERATE_RAW_NET_PACKETS = 'ohos.privilege.operate_raw_net_packets'--><!--Device-Privilege-PRIVILEGE_OPERATE_RAW_NET_PACKETS = 'ohos.privilege.operate_raw_net_packets'-End-->
 
 **System capability:** SystemCapability.Account.OsAccount

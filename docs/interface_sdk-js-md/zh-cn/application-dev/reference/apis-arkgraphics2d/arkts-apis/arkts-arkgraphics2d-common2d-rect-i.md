@@ -8,6 +8,8 @@ interface Rect
 
 **起始版本：** 11
 
+<!--Device-common2D-interface Rect--><!--Device-common2D-interface Rect-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## 导入模块
@@ -28,7 +30,9 @@ bottom: number
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Rect-bottom: double--><!--Device-Rect-bottom: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -44,7 +48,9 @@ left: number
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Rect-left: double--><!--Device-Rect-left: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -60,7 +66,9 @@ right: number
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Rect-right: double--><!--Device-Rect-right: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -76,6 +84,8 @@ top: number
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Rect-top: double--><!--Device-Rect-top: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing

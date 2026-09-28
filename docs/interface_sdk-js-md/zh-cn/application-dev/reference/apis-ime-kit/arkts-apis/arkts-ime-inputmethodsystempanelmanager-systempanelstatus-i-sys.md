@@ -8,6 +8,8 @@ interface SystemPanelStatus
 
 **起始版本：** 26.0.0
 
+<!--Device-inputMethodSystemPanelManager-interface SystemPanelStatus--><!--Device-inputMethodSystemPanelManager-interface SystemPanelStatus-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ inputType: InputMethodInputType
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SystemPanelStatus-inputType: InputMethodInputType--><!--Device-SystemPanelStatus-inputType: InputMethodInputType-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ isPanelRaised: boolean
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SystemPanelStatus-isPanelRaised: boolean--><!--Device-SystemPanelStatus-isPanelRaised: boolean-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -68,6 +74,8 @@ needFuncButton: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SystemPanelStatus-needFuncButton: boolean--><!--Device-SystemPanelStatus-needFuncButton: boolean-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **系统接口：** 此接口为系统接口。
@@ -85,6 +93,8 @@ panelFlag: PanelFlag
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SystemPanelStatus-panelFlag: PanelFlag--><!--Device-SystemPanelStatus-panelFlag: PanelFlag-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 

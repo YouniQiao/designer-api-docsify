@@ -8,6 +8,8 @@ export interface SystemSoundPlayer
 
 **起始版本：** 23
 
+<!--Device-unnamed-export interface SystemSoundPlayer--><!--Device-unnamed-export interface SystemSoundPlayer-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 ## load
@@ -21,6 +23,8 @@ load(soundType: systemSoundManager.SystemSoundType): Promise<void>
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SystemSoundPlayer-load(soundType: systemSoundManager.SystemSoundType): Promise<void>--><!--Device-SystemSoundPlayer-load(soundType: systemSoundManager.SystemSoundType): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -68,6 +72,8 @@ play(soundType: systemSoundManager.SystemSoundType): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SystemSoundPlayer-play(soundType: systemSoundManager.SystemSoundType): Promise<void>--><!--Device-SystemSoundPlayer-play(soundType: systemSoundManager.SystemSoundType): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **参数：**
@@ -114,6 +120,8 @@ release(): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SystemSoundPlayer-release(): Promise<void>--><!--Device-SystemSoundPlayer-release(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **返回值：**
@@ -151,6 +159,8 @@ unload(soundType: systemSoundManager.SystemSoundType): Promise<void>
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SystemSoundPlayer-unload(soundType: systemSoundManager.SystemSoundType): Promise<void>--><!--Device-SystemSoundPlayer-unload(soundType: systemSoundManager.SystemSoundType): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 

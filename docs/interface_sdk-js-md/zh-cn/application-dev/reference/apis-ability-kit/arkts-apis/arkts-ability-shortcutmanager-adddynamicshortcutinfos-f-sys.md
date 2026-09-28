@@ -18,6 +18,8 @@ function addDynamicShortcutInfos(shortcutInfo: Array<ShortcutInfo>, userId: numb
 
 **需要权限：** ohos.permission.MANAGE_SHORTCUTS or (ohos.permission.MANAGE_SHORTCUTS and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS)
 
+<!--Device-shortcutManager-function addDynamicShortcutInfos(shortcutInfo: Array<ShortcutInfo>, userId: int): Promise<void>--><!--Device-shortcutManager-function addDynamicShortcutInfos(shortcutInfo: Array<ShortcutInfo>, userId: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
 **系统接口：** 此接口为系统接口。

@@ -16,6 +16,8 @@ enum BroadcastEvent
 
 **起始版本：** 11
 
+<!--Device-agent-enum BroadcastEvent--><!--Device-agent-enum BroadcastEvent-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## COMPLETE
@@ -27,5 +29,7 @@ COMPLETE = 'ohos.request.event.COMPLETE'
 表示自定义系统事件完成。在任务结束后会触发该事件，根据任务的成功或失败，事件的code返回0x40或者0x41。
 
 **起始版本：** 11
+
+<!--Device-BroadcastEvent-COMPLETE = 'ohos.request.event.COMPLETE'--><!--Device-BroadcastEvent-COMPLETE = 'ohos.request.event.COMPLETE'-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent

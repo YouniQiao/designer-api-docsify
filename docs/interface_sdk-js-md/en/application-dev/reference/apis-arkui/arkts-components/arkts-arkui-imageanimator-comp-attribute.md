@@ -4,13 +4,15 @@
 declare class ImageAnimatorAttribute extends CommonMethod<ImageAnimatorAttribute>
 ```
 
-In addition to the [universal attributes](arkts-arkui-common-comp.md#common), the following attributes are supported.
+In addition to the [universal attributes](arkts-arkui-common-comp.md), the following attributes are supported.
 
-In addition to the [universal events](arkts-arkui-common-comp.md#common), the following events are supported.
+In addition to the [universal events](arkts-arkui-common-comp.md), the following events are supported.
 
 **Inheritance/Implementation:** ImageAnimatorAttribute extends CommonMethod<ImageAnimatorAttribute>
 
 **Since:** 7
+
+<!--Device-unnamed-declare class ImageAnimatorAttribute extends CommonMethod<ImageAnimatorAttribute>--><!--Device-unnamed-declare class ImageAnimatorAttribute extends CommonMethod<ImageAnimatorAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -29,6 +31,8 @@ Sets the playback duration. When any frame in [images](#images) has its own dura
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
+
+<!--Device-ImageAnimatorAttribute-duration(value: number): ImageAnimatorAttribute--><!--Device-ImageAnimatorAttribute-duration(value: number): ImageAnimatorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,6 +58,8 @@ Sets the status before and after execution of the animation in the current playb
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
+<!--Device-ImageAnimatorAttribute-fillMode(value: FillMode): ImageAnimatorAttribute--><!--Device-ImageAnimatorAttribute-fillMode(value: FillMode): ImageAnimatorAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -77,6 +83,8 @@ Sets whether the image size is fixed at the component size.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
+
+<!--Device-ImageAnimatorAttribute-fixedSize(value: boolean): ImageAnimatorAttribute--><!--Device-ImageAnimatorAttribute-fixedSize(value: boolean): ImageAnimatorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -102,6 +110,8 @@ Sets image frame information. Dynamic update is not supported; otherwise, issues
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
+<!--Device-ImageAnimatorAttribute-images(value: Array<ImageFrameInfo>): ImageAnimatorAttribute--><!--Device-ImageAnimatorAttribute-images(value: Array<ImageFrameInfo>): ImageAnimatorAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -124,6 +134,8 @@ Sets the number of times that the animation is played.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ImageAnimatorAttribute-iterations(value: number): ImageAnimatorAttribute--><!--Device-ImageAnimatorAttribute-iterations(value: number): ImageAnimatorAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -145,6 +157,8 @@ Sets whether the component should automatically pause or resume based on its vis
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 17.
+
+<!--Device-ImageAnimatorAttribute-monitorInvisibleArea(monitorInvisibleArea: boolean) : ImageAnimatorAttribute--><!--Device-ImageAnimatorAttribute-monitorInvisibleArea(monitorInvisibleArea: boolean) : ImageAnimatorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -170,6 +184,8 @@ Triggered when the animation is canceled (that is, **state** is set to [Animatio
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
+<!--Device-ImageAnimatorAttribute-onCancel(event: () => void): ImageAnimatorAttribute--><!--Device-ImageAnimatorAttribute-onCancel(event: () => void): ImageAnimatorAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -193,6 +209,8 @@ Triggered when the animation playback completes (all iterations set by **iterati
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
+
+<!--Device-ImageAnimatorAttribute-onFinish(event: () => void): ImageAnimatorAttribute--><!--Device-ImageAnimatorAttribute-onFinish(event: () => void): ImageAnimatorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -218,6 +236,8 @@ Triggered when the animation playback is paused.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
+<!--Device-ImageAnimatorAttribute-onPause(event: () => void): ImageAnimatorAttribute--><!--Device-ImageAnimatorAttribute-onPause(event: () => void): ImageAnimatorAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -239,6 +259,8 @@ Triggered when the animation playback is repeated.
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ImageAnimatorAttribute-onRepeat(event: () => void): ImageAnimatorAttribute--><!--Device-ImageAnimatorAttribute-onRepeat(event: () => void): ImageAnimatorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -264,6 +286,8 @@ Triggered when the animation starts to play.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
+<!--Device-ImageAnimatorAttribute-onStart(event: () => void): ImageAnimatorAttribute--><!--Device-ImageAnimatorAttribute-onStart(event: () => void): ImageAnimatorAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -288,6 +312,8 @@ Sets the playback direction.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
+<!--Device-ImageAnimatorAttribute-reverse(value: boolean): ImageAnimatorAttribute--><!--Device-ImageAnimatorAttribute-reverse(value: boolean): ImageAnimatorAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -311,6 +337,8 @@ Sets the playback state of the animation.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
+
+<!--Device-ImageAnimatorAttribute-state(value: AnimationStatus): ImageAnimatorAttribute--><!--Device-ImageAnimatorAttribute-state(value: AnimationStatus): ImageAnimatorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -338,6 +366,8 @@ Sets the number of images to be pre-decoded.
 **Deprecated since:** 9
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-ImageAnimatorAttribute-preDecode(value: number): ImageAnimatorAttribute--><!--Device-ImageAnimatorAttribute-preDecode(value: number): ImageAnimatorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

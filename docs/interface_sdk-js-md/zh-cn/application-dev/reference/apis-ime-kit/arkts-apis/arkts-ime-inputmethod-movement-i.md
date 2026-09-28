@@ -8,6 +8,8 @@ export interface Movement
 
 **起始版本：** 10
 
+<!--Device-inputMethod-export interface Movement--><!--Device-inputMethod-export interface Movement-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## 导入模块
@@ -27,5 +29,7 @@ direction: Direction
 **类型：** [Direction](arkts-ime-inputmethod-direction-e.md)
 
 **起始版本：** 10
+
+<!--Device-Movement-direction: Direction--><!--Device-Movement-direction: Direction-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework

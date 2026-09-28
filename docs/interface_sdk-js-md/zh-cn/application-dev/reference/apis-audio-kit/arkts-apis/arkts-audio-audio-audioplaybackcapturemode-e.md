@@ -8,6 +8,8 @@ enum AudioPlaybackCaptureMode
 
 **起始版本：** 26.0.0
 
+<!--Device-audio-enum AudioPlaybackCaptureMode--><!--Device-audio-enum AudioPlaybackCaptureMode-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.PlaybackCapture
 
 ## MODE_DEFAULT
@@ -21,6 +23,8 @@ MODE_DEFAULT = 0x0
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioPlaybackCaptureMode-MODE_DEFAULT = 0x0--><!--Device-AudioPlaybackCaptureMode-MODE_DEFAULT = 0x0-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.PlaybackCapture
 
@@ -36,6 +40,8 @@ MODE_MEDIA = 0x1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioPlaybackCaptureMode-MODE_MEDIA = 0x1--><!--Device-AudioPlaybackCaptureMode-MODE_MEDIA = 0x1-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.PlaybackCapture
 
 ## MODE_EXCLUDING_SELF
@@ -49,5 +55,7 @@ MODE_EXCLUDING_SELF = 0x8000
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioPlaybackCaptureMode-MODE_EXCLUDING_SELF = 0x8000--><!--Device-AudioPlaybackCaptureMode-MODE_EXCLUDING_SELF = 0x8000-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.PlaybackCapture

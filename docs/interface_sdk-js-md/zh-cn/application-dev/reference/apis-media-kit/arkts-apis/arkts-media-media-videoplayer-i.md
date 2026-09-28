@@ -16,6 +16,8 @@ interface VideoPlayer
 
 **替代接口：** [media](arkts-media-multimedia-media.md)
 
+<!--Device-media-interface VideoPlayer--><!--Device-media-interface VideoPlayer-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
 ## 导入模块
@@ -43,6 +45,8 @@ getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void
 **废弃版本：** 9
 
 **替代接口：** [getTrackDescription](arkts-media-media-avplayer-i.md#gettrackdescription)(callback: AsyncCallback&lt;Array&lt;MediaDescription&gt;&gt;)
+
+<!--Device-VideoPlayer-getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void--><!--Device-VideoPlayer-getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
@@ -73,6 +77,8 @@ getTrackDescription(): Promise<Array<MediaDescription>>
 
 **替代接口：** [getTrackDescription](arkts-media-media-avplayer-i.md#gettrackdescription)()
 
+<!--Device-VideoPlayer-getTrackDescription(): Promise<Array<MediaDescription>>--><!--Device-VideoPlayer-getTrackDescription(): Promise<Array<MediaDescription>>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
 **返回值：**
@@ -100,6 +106,8 @@ on(type: 'playbackCompleted', callback: Callback<void>): void
 **废弃版本：** 9
 
 **替代接口：** [on](arkts-media-media-avplayer-i.md#onstatechange)(type: 'stateChange', callback: OnAVPlayerStateChangeHandle)
+
+<!--Device-VideoPlayer-on(type: 'playbackCompleted', callback: Callback<void>): void--><!--Device-VideoPlayer-on(type: 'playbackCompleted', callback: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
@@ -130,6 +138,8 @@ on(type: 'bufferingUpdate', callback: (infoType: BufferingInfoType, value: numbe
 
 **替代接口：** [on](arkts-media-media-avplayer-i.md#onbufferingupdate)(type: 'bufferingUpdate', callback: OnBufferingUpdateHandler)
 
+<!--Device-VideoPlayer-on(type: 'bufferingUpdate', callback: (infoType: BufferingInfoType, value: number) => void): void--><!--Device-VideoPlayer-on(type: 'bufferingUpdate', callback: (infoType: BufferingInfoType, value: number) => void): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
 **参数：**
@@ -158,6 +168,8 @@ on(type: 'startRenderFrame', callback: Callback<void>): void
 **废弃版本：** 9
 
 **替代接口：** [on](arkts-media-media-avplayer-i.md#onstartrenderframe)(type: 'startRenderFrame', callback: Callback&lt;void&gt;)
+
+<!--Device-VideoPlayer-on(type: 'startRenderFrame', callback: Callback<void>): void--><!--Device-VideoPlayer-on(type: 'startRenderFrame', callback: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
@@ -188,6 +200,8 @@ on(type: 'videoSizeChanged', callback: (width: number, height: number) => void):
 
 **替代接口：** [on](arkts-media-media-avplayer-i.md#onvideosizechange)(type: 'videoSizeChange', callback: OnVideoSizeChangeHandler)
 
+<!--Device-VideoPlayer-on(type: 'videoSizeChanged', callback: (width: number, height: number) => void): void--><!--Device-VideoPlayer-on(type: 'videoSizeChanged', callback: (width: number, height: number) => void): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
 **参数：**
@@ -216,6 +230,8 @@ on(type: 'audioInterrupt', callback: (info: audio.InterruptEvent) => void): void
 **废弃版本：** 9
 
 **替代接口：** [on](arkts-media-media-avplayer-i.md#onaudiointerrupt)(type: 'audioInterrupt', callback: Callback&lt;audio.InterruptEvent&gt;)
+
+<!--Device-VideoPlayer-on(type: 'audioInterrupt', callback: (info: audio.InterruptEvent) => void): void--><!--Device-VideoPlayer-on(type: 'audioInterrupt', callback: (info: audio.InterruptEvent) => void): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
@@ -246,6 +262,8 @@ on(type: 'error', callback: ErrorCallback): void
 
 **替代接口：** [on](arkts-media-media-avplayer-i.md#onerror)(type: 'error', callback: ErrorCallback)
 
+<!--Device-VideoPlayer-on(type: 'error', callback: ErrorCallback): void--><!--Device-VideoPlayer-on(type: 'error', callback: ErrorCallback): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
 **参数：**
@@ -273,6 +291,8 @@ pause(callback: AsyncCallback<void>): void
 **废弃版本：** 9
 
 **替代接口：** [pause](arkts-media-media-avplayer-i.md#pause)(callback: AsyncCallback&lt;void&gt;)
+
+<!--Device-VideoPlayer-pause(callback: AsyncCallback<void>): void--><!--Device-VideoPlayer-pause(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
@@ -303,6 +323,8 @@ pause(): Promise<void>
 
 **替代接口：** [pause](arkts-media-media-avplayer-i.md#pause)()
 
+<!--Device-VideoPlayer-pause(): Promise<void>--><!--Device-VideoPlayer-pause(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
 **返回值：**
@@ -329,6 +351,8 @@ play(callback: AsyncCallback<void>): void
 **废弃版本：** 9
 
 **替代接口：** [play](arkts-media-media-avplayer-i.md#play)(callback: AsyncCallback&lt;void&gt;)
+
+<!--Device-VideoPlayer-play(callback: AsyncCallback<void>): void--><!--Device-VideoPlayer-play(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
@@ -359,6 +383,8 @@ play(): Promise<void>
 
 **替代接口：** [play](arkts-media-media-avplayer-i.md#play)()
 
+<!--Device-VideoPlayer-play(): Promise<void>--><!--Device-VideoPlayer-play(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
 **返回值：**
@@ -385,6 +411,8 @@ prepare(callback: AsyncCallback<void>): void
 **废弃版本：** 9
 
 **替代接口：** [prepare](arkts-media-media-avplayer-i.md#prepare)(callback: AsyncCallback&lt;void&gt;)
+
+<!--Device-VideoPlayer-prepare(callback: AsyncCallback<void>): void--><!--Device-VideoPlayer-prepare(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
@@ -415,6 +443,8 @@ prepare(): Promise<void>
 
 **替代接口：** [prepare](arkts-media-media-avplayer-i.md#prepare)()
 
+<!--Device-VideoPlayer-prepare(): Promise<void>--><!--Device-VideoPlayer-prepare(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
 **返回值：**
@@ -441,6 +471,8 @@ release(callback: AsyncCallback<void>): void
 **废弃版本：** 9
 
 **替代接口：** [release](arkts-media-media-avplayer-i.md#release)(callback: AsyncCallback&lt;void&gt;)
+
+<!--Device-VideoPlayer-release(callback: AsyncCallback<void>): void--><!--Device-VideoPlayer-release(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
@@ -471,6 +503,8 @@ release(): Promise<void>
 
 **替代接口：** [release](arkts-media-media-avplayer-i.md#release)()
 
+<!--Device-VideoPlayer-release(): Promise<void>--><!--Device-VideoPlayer-release(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
 **返回值：**
@@ -497,6 +531,8 @@ reset(callback: AsyncCallback<void>): void
 **废弃版本：** 9
 
 **替代接口：** [reset](arkts-media-media-avplayer-i.md#reset)(callback: AsyncCallback&lt;void&gt;)
+
+<!--Device-VideoPlayer-reset(callback: AsyncCallback<void>): void--><!--Device-VideoPlayer-reset(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
@@ -527,6 +563,8 @@ reset(): Promise<void>
 
 **替代接口：** [reset](arkts-media-media-avplayer-i.md#reset)()
 
+<!--Device-VideoPlayer-reset(): Promise<void>--><!--Device-VideoPlayer-reset(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
 **返回值：**
@@ -552,6 +590,8 @@ seek(timeMs: number, callback: AsyncCallback<number>): void
 **废弃版本：** 9
 
 **替代接口：** [seek](arkts-media-media-avplayer-i.md#seek)
+
+<!--Device-VideoPlayer-seek(timeMs: number, callback: AsyncCallback<number>): void--><!--Device-VideoPlayer-seek(timeMs: number, callback: AsyncCallback<number>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
@@ -582,6 +622,8 @@ seek(timeMs: number, mode: SeekMode, callback: AsyncCallback<number>): void
 
 **替代接口：** [seek](arkts-media-media-avplayer-i.md#seek)
 
+<!--Device-VideoPlayer-seek(timeMs: number, mode: SeekMode, callback: AsyncCallback<number>): void--><!--Device-VideoPlayer-seek(timeMs: number, mode: SeekMode, callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
 **参数：**
@@ -611,6 +653,8 @@ seek(timeMs: number, mode?: SeekMode): Promise<number>
 **废弃版本：** 9
 
 **替代接口：** [seek](arkts-media-media-avplayer-i.md#seek)
+
+<!--Device-VideoPlayer-seek(timeMs: number, mode?: SeekMode): Promise<number>--><!--Device-VideoPlayer-seek(timeMs: number, mode?: SeekMode): Promise<number>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
@@ -647,13 +691,15 @@ setDisplaySurface(surfaceId: string, callback: AsyncCallback<void>): void
 
 **替代接口：** null
 
+<!--Device-VideoPlayer-setDisplaySurface(surfaceId: string, callback: AsyncCallback<void>): void--><!--Device-VideoPlayer-setDisplaySurface(surfaceId: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| surfaceId | string | 是 | 指定SurfaceId，应从XComponent组件获取，获取方式请参考[XComponent](../../apis-arkui/arkts-components/arkts-arkui-xcomponent-comp.md#xcomponent)。 |
+| surfaceId | string | 是 | 指定SurfaceId，应从XComponent组件获取，获取方式请参考[XComponent](../../apis-arkui/arkts-components/arkts-arkui-xcomponent-comp.md)。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置SurfaceId成功，err为undefined，否则为错误对象。 |
 
 <a id="setdisplaysurface-1"></a>
@@ -678,13 +724,15 @@ setDisplaySurface(surfaceId: string): Promise<void>
 
 **替代接口：** null
 
+<!--Device-VideoPlayer-setDisplaySurface(surfaceId: string): Promise<void>--><!--Device-VideoPlayer-setDisplaySurface(surfaceId: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| surfaceId | string | 是 | 指定SurfaceId，应从XComponent组件获取，获取方式请参考[XComponent](../../apis-arkui/arkts-components/arkts-arkui-xcomponent-comp.md#xcomponent)。 |
+| surfaceId | string | 是 | 指定SurfaceId，应从XComponent组件获取，获取方式请参考[XComponent](../../apis-arkui/arkts-components/arkts-arkui-xcomponent-comp.md)。 |
 
 **返回值：**
 
@@ -710,6 +758,8 @@ setSpeed(speed: number, callback: AsyncCallback<number>): void
 **废弃版本：** 9
 
 **替代接口：** [setSpeed](arkts-media-media-avplayer-i.md#setspeed)
+
+<!--Device-VideoPlayer-setSpeed(speed: number, callback: AsyncCallback<number>): void--><!--Device-VideoPlayer-setSpeed(speed: number, callback: AsyncCallback<number>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
@@ -740,6 +790,8 @@ setSpeed(speed: number): Promise<number>
 **废弃版本：** 9
 
 **替代接口：** [setSpeed](arkts-media-media-avplayer-i.md#setspeed)
+
+<!--Device-VideoPlayer-setSpeed(speed: number): Promise<number>--><!--Device-VideoPlayer-setSpeed(speed: number): Promise<number>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
@@ -774,6 +826,8 @@ setVolume(vol: number, callback: AsyncCallback<void>): void
 
 **替代接口：** [setVolume](arkts-media-media-avplayer-i.md#setvolume)
 
+<!--Device-VideoPlayer-setVolume(vol: number, callback: AsyncCallback<void>): void--><!--Device-VideoPlayer-setVolume(vol: number, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
 **参数：**
@@ -803,6 +857,8 @@ setVolume(vol: number): Promise<void>
 **废弃版本：** 9
 
 **替代接口：** [setVolume](arkts-media-media-avplayer-i.md#setvolume)
+
+<!--Device-VideoPlayer-setVolume(vol: number): Promise<void>--><!--Device-VideoPlayer-setVolume(vol: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
@@ -837,6 +893,8 @@ stop(callback: AsyncCallback<void>): void
 
 **替代接口：** [stop](arkts-media-media-avplayer-i.md#stop)(callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-VideoPlayer-stop(callback: AsyncCallback<void>): void--><!--Device-VideoPlayer-stop(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
 **参数：**
@@ -866,6 +924,8 @@ stop(): Promise<void>
 
 **替代接口：** [stop](arkts-media-media-avplayer-i.md#stop)()
 
+<!--Device-VideoPlayer-stop(): Promise<void>--><!--Device-VideoPlayer-stop(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
 **返回值：**
@@ -890,6 +950,8 @@ audioInterruptMode?: audio.InterruptMode
 
 **替代接口：** [audioInterruptMode](arkts-media-media-avplayer-i.md#audiointerruptmode)
 
+<!--Device-VideoPlayer-audioInterruptMode?: audio.InterruptMode--><!--Device-VideoPlayer-audioInterruptMode?: audio.InterruptMode-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
 ## currentTime
@@ -908,6 +970,8 @@ readonly currentTime: number
 
 **替代接口：** [currentTime](arkts-media-media-avplayer-i.md#currenttime)
 
+<!--Device-VideoPlayer-readonly currentTime: number--><!--Device-VideoPlayer-readonly currentTime: number-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
 ## duration
@@ -925,6 +989,8 @@ readonly duration: number
 **废弃版本：** 9
 
 **替代接口：** [duration](arkts-media-media-avplayer-i.md#duration)
+
+<!--Device-VideoPlayer-readonly duration: number--><!--Device-VideoPlayer-readonly duration: number-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
@@ -960,6 +1026,8 @@ fdSrc: AVFileDescriptor
 
 **替代接口：** [fdSrc](arkts-media-media-avplayer-i.md#fdsrc)
 
+<!--Device-VideoPlayer-fdSrc: AVFileDescriptor--><!--Device-VideoPlayer-fdSrc: AVFileDescriptor-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
 ## height
@@ -977,6 +1045,8 @@ readonly height: number
 **废弃版本：** 9
 
 **替代接口：** [height](arkts-media-media-avplayer-i.md#height)
+
+<!--Device-VideoPlayer-readonly height: number--><!--Device-VideoPlayer-readonly height: number-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
@@ -996,6 +1066,8 @@ loop: boolean
 
 **替代接口：** [loop](arkts-media-media-avplayer-i.md#loop)
 
+<!--Device-VideoPlayer-loop: boolean--><!--Device-VideoPlayer-loop: boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
 ## state
@@ -1013,6 +1085,8 @@ readonly state: VideoPlayState
 **废弃版本：** 9
 
 **替代接口：** [state](arkts-media-media-avplayer-i.md#state)
+
+<!--Device-VideoPlayer-readonly state: VideoPlayState--><!--Device-VideoPlayer-readonly state: VideoPlayState-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
@@ -1047,6 +1121,8 @@ url: string
 
 **替代接口：** [url](arkts-media-media-avplayer-i.md#url)
 
+<!--Device-VideoPlayer-url: string--><!--Device-VideoPlayer-url: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
 ## videoScaleType
@@ -1065,6 +1141,8 @@ videoScaleType?: VideoScaleType
 
 **替代接口：** [videoScaleType](arkts-media-media-avplayer-i.md#videoscaletype)
 
+<!--Device-VideoPlayer-videoScaleType?: VideoScaleType--><!--Device-VideoPlayer-videoScaleType?: VideoScaleType-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
 ## width
@@ -1082,5 +1160,7 @@ readonly width: number
 **废弃版本：** 9
 
 **替代接口：** [width](arkts-media-media-avplayer-i.md#width)
+
+<!--Device-VideoPlayer-readonly width: number--><!--Device-VideoPlayer-readonly width: number-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer

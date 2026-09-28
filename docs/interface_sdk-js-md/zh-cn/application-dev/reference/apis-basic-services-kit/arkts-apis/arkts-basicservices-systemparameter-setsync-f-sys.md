@@ -28,6 +28,8 @@ function setSync(key: string, value: string): void
 
 **替代接口：** setSync
 
+<!--Device-systemParameter-function setSync(key: string, value: string): void--><!--Device-systemParameter-function setSync(key: string, value: string): void-End-->
+
 **系统能力：** SystemCapability.Startup.SystemInfo
 
 **系统接口：** 此接口为系统接口。

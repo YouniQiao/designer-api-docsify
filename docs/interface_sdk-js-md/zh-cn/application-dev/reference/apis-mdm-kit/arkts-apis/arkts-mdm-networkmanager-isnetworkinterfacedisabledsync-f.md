@@ -20,6 +20,8 @@ function isNetworkInterfaceDisabledSync(admin: Want, networkInterface: string): 
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-networkManager-function isNetworkInterfaceDisabledSync(admin: Want, networkInterface: string): boolean--><!--Device-networkManager-function isNetworkInterfaceDisabledSync(admin: Want, networkInterface: string): boolean-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -81,6 +83,8 @@ function isNetworkInterfaceDisabledSync(admin: Want | null, networkInterface: st
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_NETWORK
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-networkManager-function isNetworkInterfaceDisabledSync(admin: Want | null, networkInterface: string): boolean--><!--Device-networkManager-function isNetworkInterfaceDisabledSync(admin: Want | null, networkInterface: string): boolean-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

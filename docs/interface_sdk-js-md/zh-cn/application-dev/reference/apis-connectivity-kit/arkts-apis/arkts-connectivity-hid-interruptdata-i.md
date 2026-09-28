@@ -8,6 +8,8 @@ interface InterruptData
 
 **起始版本：** 23
 
+<!--Device-hid-interface InterruptData--><!--Device-hid-interface InterruptData-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ data: Uint8Array
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-InterruptData-data: Uint8Array--><!--Device-InterruptData-data: Uint8Array-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## id
@@ -45,5 +49,7 @@ id: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-InterruptData-id: int--><!--Device-InterruptData-id: int-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

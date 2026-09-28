@@ -39,6 +39,8 @@ Creates a root view container for route navigation, suitable for page routing us
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-NavigationInterface-(): NavigationAttribute--><!--Device-NavigationInterface-(): NavigationAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Navigation
@@ -54,6 +56,8 @@ Binds a navigation controller to the **Navigation** component, suitable for page
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-NavigationInterface-(pathInfos: NavPathStack): NavigationAttribute--><!--Device-NavigationInterface-(pathInfos: NavPathStack): NavigationAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -76,6 +80,8 @@ Binds a routing stack to the **Navigation** component and specifies a **NavDesti
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-NavigationInterface-(pathInfos: NavPathStack, homeDestination: HomePathInfo): NavigationAttribute--><!--Device-NavigationInterface-(pathInfos: NavPathStack, homeDestination: HomePathInfo): NavigationAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

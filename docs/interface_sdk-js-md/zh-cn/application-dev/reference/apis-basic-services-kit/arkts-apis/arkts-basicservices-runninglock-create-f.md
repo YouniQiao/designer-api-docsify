@@ -18,6 +18,8 @@ function create(name: string, type: RunningLockType, callback: AsyncCallback<Run
 
 **需要权限：** ohos.permission.RUNNING_LOCK
 
+<!--Device-runningLock-function create(name: string, type: RunningLockType, callback: AsyncCallback<RunningLock>): void--><!--Device-runningLock-function create(name: string, type: RunningLockType, callback: AsyncCallback<RunningLock>): void-End-->
+
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 
 **参数：**
@@ -61,6 +63,8 @@ function create(name: string, type: RunningLockType): Promise<RunningLock>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.RUNNING_LOCK
+
+<!--Device-runningLock-function create(name: string, type: RunningLockType): Promise<RunningLock>--><!--Device-runningLock-function create(name: string, type: RunningLockType): Promise<RunningLock>-End-->
 
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 

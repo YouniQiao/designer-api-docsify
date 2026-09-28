@@ -8,6 +8,8 @@ Wi-Fi围栏信息。
 
 **起始版本：** 26.0.0
 
+<!--Device-geoLocationManager-export interface WifiFence--><!--Device-geoLocationManager-export interface WifiFence-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ type: WifiFingerprintType
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-WifiFence-type: WifiFingerprintType--><!--Device-WifiFence-type: WifiFingerprintType-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ wifiFeatures: Array<WirelessSignalFeature>
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WifiFence-wifiFeatures: Array<WirelessSignalFeature>--><!--Device-WifiFence-wifiFeatures: Array<WirelessSignalFeature>-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geofence
 

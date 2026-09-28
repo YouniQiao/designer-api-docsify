@@ -8,6 +8,8 @@ export declare interface Touch
 
 **起始版本：** 9
 
+<!--Device-unnamed-export declare interface Touch--><!--Device-unnamed-export declare interface Touch-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ blobId?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Touch-blobId?: int--><!--Device-Touch-blobId?: int-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **系统接口：** 此接口为系统接口。
@@ -46,6 +50,8 @@ fixedDisplayX?: number
 
 **起始版本：** 19
 
+<!--Device-Touch-fixedDisplayX?: int--><!--Device-Touch-fixedDisplayX?: int-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +67,8 @@ fixedDisplayY?: number
 **类型：** number
 
 **起始版本：** 19
+
+<!--Device-Touch-fixedDisplayY?: int--><!--Device-Touch-fixedDisplayY?: int-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 

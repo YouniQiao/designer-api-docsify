@@ -8,6 +8,8 @@ interface AppEventReportConfig
 
 **起始版本：** 11
 
+<!--Device-hiAppEvent-interface AppEventReportConfig--><!--Device-hiAppEvent-interface AppEventReportConfig-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 ## 导入模块
@@ -28,7 +30,9 @@ domain?: string
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-AppEventReportConfig-domain?: string--><!--Device-AppEventReportConfig-domain?: string-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -44,7 +48,9 @@ isRealTime?: boolean
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-AppEventReportConfig-isRealTime?: boolean--><!--Device-AppEventReportConfig-isRealTime?: boolean-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -60,6 +66,8 @@ name?: string
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-AppEventReportConfig-name?: string--><!--Device-AppEventReportConfig-name?: string-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent

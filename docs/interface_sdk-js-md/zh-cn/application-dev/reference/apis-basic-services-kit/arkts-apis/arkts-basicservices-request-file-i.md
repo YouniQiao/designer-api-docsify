@@ -8,6 +8,8 @@ interface File
 
 **起始版本：** 6
 
+<!--Device-request-interface File--><!--Device-request-interface File-End-->
+
 **系统能力：** SystemCapability.MiscServices.Download
 
 ## 导入模块
@@ -28,6 +30,8 @@ multipart提交时，请求头中的文件名。
 
 **起始版本：** 6
 
+<!--Device-File-filename: string--><!--Device-File-filename: string-End-->
+
 **系统能力：** SystemCapability.MiscServices.Download
 
 ## name
@@ -42,6 +46,8 @@ multipart提交时，表单项目的名称，缺省为file。
 
 **起始版本：** 6
 
+<!--Device-File-name: string--><!--Device-File-name: string-End-->
+
 **系统能力：** SystemCapability.MiscServices.Download
 
 ## type
@@ -55,6 +61,8 @@ type: string
 **类型：** string
 
 **起始版本：** 6
+
+<!--Device-File-type: string--><!--Device-File-type: string-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -73,5 +81,7 @@ uri: string
 **类型：** string
 
 **起始版本：** 6
+
+<!--Device-File-uri: string--><!--Device-File-uri: string-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download

@@ -24,6 +24,8 @@ function setPowerMode(mode: PowerMode): void
 
 **需要权限：** ohos.permission.MANAGE_WIFI_HOTSPOT_EXT
 
+<!--Device-wifiManagerExt-function setPowerMode(mode: PowerMode): void--><!--Device-wifiManagerExt-function setPowerMode(mode: PowerMode): void-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.AP.Extension
 
 **参数：**

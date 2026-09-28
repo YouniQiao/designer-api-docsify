@@ -4,6 +4,8 @@
 
 **起始版本：** 7
 
+<!--Device-unnamed-declare namespace inputMonitor--><!--Device-unnamed-declare namespace inputMonitor-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **系统接口：** 此接口为系统接口。

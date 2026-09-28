@@ -10,6 +10,8 @@ You need a custom class to implement the **ContentModifier** API. Inherits from 
 
 **Since:** 12
 
+<!--Device-unnamed-declare interface SliderConfiguration extends CommonConfiguration<SliderConfiguration>--><!--Device-unnamed-declare interface SliderConfiguration extends CommonConfiguration<SliderConfiguration>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## triggerChange
@@ -25,6 +27,8 @@ Triggers slider changes.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SliderConfiguration-triggerChange: SliderTriggerChangeCallback--><!--Device-SliderConfiguration-triggerChange: SliderTriggerChangeCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,6 +48,8 @@ Maximum value.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SliderConfiguration-max: number--><!--Device-SliderConfiguration-max: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## min
@@ -61,6 +67,8 @@ Minimum value.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SliderConfiguration-min: number--><!--Device-SliderConfiguration-min: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -80,6 +88,8 @@ Step of the slider.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SliderConfiguration-step: number--><!--Device-SliderConfiguration-step: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## value
@@ -97,5 +107,7 @@ Current progress.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SliderConfiguration-value: number--><!--Device-SliderConfiguration-value: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

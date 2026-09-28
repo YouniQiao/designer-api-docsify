@@ -16,6 +16,8 @@ function getImageEmbeddingModel(config: ModelConfig): Promise<ImageEmbedding>
 
 **起始版本：** 15
 
+<!--Device-intelligence-function getImageEmbeddingModel(config: ModelConfig): Promise<ImageEmbedding>--><!--Device-intelligence-function getImageEmbeddingModel(config: ModelConfig): Promise<ImageEmbedding>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
 **参数：**

@@ -8,6 +8,8 @@ interface AppGroupCallbackInfo
 
 **起始版本：** 9
 
+<!--Device-usageStatistics-interface AppGroupCallbackInfo--><!--Device-usageStatistics-interface AppGroupCallbackInfo-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ appNewGroup: number
 
 **起始版本：** 9
 
+<!--Device-AppGroupCallbackInfo-appNewGroup: int--><!--Device-AppGroupCallbackInfo-appNewGroup: int-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
 **系统接口：** 此接口为系统接口。
@@ -46,6 +50,8 @@ appOldGroup: number
 
 **起始版本：** 9
 
+<!--Device-AppGroupCallbackInfo-appOldGroup: int--><!--Device-AppGroupCallbackInfo-appOldGroup: int-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +67,8 @@ bundleName: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-AppGroupCallbackInfo-bundleName: string--><!--Device-AppGroupCallbackInfo-bundleName: string-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
@@ -83,6 +91,8 @@ changeReason: number
 
 **起始版本：** 9
 
+<!--Device-AppGroupCallbackInfo-changeReason: long--><!--Device-AppGroupCallbackInfo-changeReason: long-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
 **系统接口：** 此接口为系统接口。
@@ -98,6 +108,8 @@ userId: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-AppGroupCallbackInfo-userId: int--><!--Device-AppGroupCallbackInfo-userId: int-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 

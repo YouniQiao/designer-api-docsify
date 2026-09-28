@@ -18,6 +18,8 @@ function terminateSelfWithResult(parameter: AbilityResult, callback: AsyncCallba
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-featureAbility-function terminateSelfWithResult(parameter: AbilityResult, callback: AsyncCallback<void>): void--><!--Device-featureAbility-function terminateSelfWithResult(parameter: AbilityResult, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **参数：**
@@ -79,6 +81,8 @@ function terminateSelfWithResult(parameter: AbilityResult): Promise<void>
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-featureAbility-function terminateSelfWithResult(parameter: AbilityResult): Promise<void>--><!--Device-featureAbility-function terminateSelfWithResult(parameter: AbilityResult): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 

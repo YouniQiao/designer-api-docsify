@@ -10,6 +10,8 @@ interface BatteryInfo
 
 **起始版本：** 12
 
+<!--Device-connection-interface BatteryInfo--><!--Device-connection-interface BatteryInfo-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -32,6 +34,8 @@ batteryLevel: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BatteryInfo-batteryLevel: int--><!--Device-BatteryInfo-batteryLevel: int-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## boxBatteryLevel
@@ -47,6 +51,8 @@ boxBatteryLevel: number
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BatteryInfo-boxBatteryLevel: int--><!--Device-BatteryInfo-boxBatteryLevel: int-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -64,6 +70,8 @@ boxChargeState: DeviceChargeState
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BatteryInfo-boxChargeState: DeviceChargeState--><!--Device-BatteryInfo-boxChargeState: DeviceChargeState-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## leftEarBatteryLevel
@@ -79,6 +87,8 @@ leftEarBatteryLevel: number
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BatteryInfo-leftEarBatteryLevel: int--><!--Device-BatteryInfo-leftEarBatteryLevel: int-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -96,6 +106,8 @@ leftEarChargeState: DeviceChargeState
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BatteryInfo-leftEarChargeState: DeviceChargeState--><!--Device-BatteryInfo-leftEarChargeState: DeviceChargeState-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## rightEarBatteryLevel
@@ -112,6 +124,8 @@ rightEarBatteryLevel: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BatteryInfo-rightEarBatteryLevel: int--><!--Device-BatteryInfo-rightEarBatteryLevel: int-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## rightEarChargeState
@@ -127,5 +141,7 @@ rightEarChargeState: DeviceChargeState
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BatteryInfo-rightEarChargeState: DeviceChargeState--><!--Device-BatteryInfo-rightEarChargeState: DeviceChargeState-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

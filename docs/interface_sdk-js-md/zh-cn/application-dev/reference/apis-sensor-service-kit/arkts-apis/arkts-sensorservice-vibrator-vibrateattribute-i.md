@@ -10,6 +10,8 @@ interface VibrateAttribute
 
 **起始版本：** 9
 
+<!--Device-vibrator-interface VibrateAttribute--><!--Device-vibrator-interface VibrateAttribute-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## 导入模块
@@ -30,7 +32,9 @@ deviceId?: number
 
 **起始版本：** 19
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-VibrateAttribute-deviceId?: int--><!--Device-VibrateAttribute-deviceId?: int-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
@@ -46,7 +50,9 @@ id?: number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-VibrateAttribute-id?: int--><!--Device-VibrateAttribute-id?: int-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
@@ -62,6 +68,8 @@ usage: Usage
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-VibrateAttribute-usage: Usage--><!--Device-VibrateAttribute-usage: Usage-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice

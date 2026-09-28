@@ -8,6 +8,8 @@ interface DataShareHelperOptions
 
 **起始版本：** 10
 
+<!--Device-dataShare-interface DataShareHelperOptions--><!--Device-dataShare-interface DataShareHelperOptions-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -34,6 +36,8 @@ isProxy?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareHelperOptions-isProxy?: boolean--><!--Device-DataShareHelperOptions-isProxy?: boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -53,6 +57,8 @@ waitTime?: number
 **起始版本：** 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareHelperOptions-waitTime?: int--><!--Device-DataShareHelperOptions-waitTime?: int-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 

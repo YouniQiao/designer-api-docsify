@@ -8,6 +8,8 @@ interface FontClientObserver
 
 **起始版本：** 26.0.1
 
+<!--Device-fontManager-interface FontClientObserver--><!--Device-fontManager-interface FontClientObserver-End-->
+
 **系统能力：** SystemCapability.Global.FontManager
 
 ## 导入模块
@@ -27,5 +29,7 @@ onServiceDied(): void
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FontClientObserver-onServiceDied(): void--><!--Device-FontClientObserver-onServiceDied(): void-End-->
 
 **系统能力：** SystemCapability.Global.FontManager

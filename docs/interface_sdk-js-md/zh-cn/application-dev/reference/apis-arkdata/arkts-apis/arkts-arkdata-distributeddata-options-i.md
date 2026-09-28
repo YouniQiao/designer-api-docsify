@@ -12,6 +12,8 @@ interface Options
 
 **替代接口：** Options
 
+<!--Device-distributedData-interface Options--><!--Device-distributedData-interface Options-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## 导入模块
@@ -39,6 +41,8 @@ ohos.permission.DISTRIBUTED_DATASYNC
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-Options-autoSync?: boolean--><!--Device-Options-autoSync?: boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## backup
@@ -56,6 +60,8 @@ backup?: boolean
 **废弃版本：** 9
 
 **替代接口：** backup
+
+<!--Device-Options-backup?: boolean--><!--Device-Options-backup?: boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -75,6 +81,8 @@ createIfMissing?: boolean
 
 **替代接口：** createIfMissing
 
+<!--Device-Options-createIfMissing?: boolean--><!--Device-Options-createIfMissing?: boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## encrypt
@@ -92,6 +100,8 @@ encrypt?: boolean
 **废弃版本：** 9
 
 **替代接口：** encrypt
+
+<!--Device-Options-encrypt?: boolean--><!--Device-Options-encrypt?: boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -111,6 +121,8 @@ kvStoreType?: KVStoreType
 
 **替代接口：** kvStoreType
 
+<!--Device-Options-kvStoreType?: KVStoreType--><!--Device-Options-kvStoreType?: KVStoreType-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## schema
@@ -129,6 +141,8 @@ schema?: Schema
 
 **替代接口：** schema
 
+<!--Device-Options-schema?: Schema--><!--Device-Options-schema?: Schema-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 ## securityLevel
@@ -146,5 +160,7 @@ securityLevel?: SecurityLevel
 **废弃版本：** 9
 
 **替代接口：** securityLevel
+
+<!--Device-Options-securityLevel?: SecurityLevel--><!--Device-Options-securityLevel?: SecurityLevel-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core

@@ -12,6 +12,8 @@ export interface ProcessInfo
 
 **起始版本：** 7
 
+<!--Device-unnamed-export interface ProcessInfo--><!--Device-unnamed-export interface ProcessInfo-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## pid
@@ -26,6 +28,8 @@ pid: number
 
 **起始版本：** 7
 
+<!--Device-ProcessInfo-pid: int--><!--Device-ProcessInfo-pid: int-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## processName
@@ -39,5 +43,7 @@ processName: string
 **类型：** string
 
 **起始版本：** 7
+
+<!--Device-ProcessInfo-processName: string--><!--Device-ProcessInfo-processName: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

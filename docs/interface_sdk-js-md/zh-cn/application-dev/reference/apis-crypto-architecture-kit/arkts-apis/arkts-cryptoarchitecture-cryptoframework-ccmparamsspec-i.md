@@ -17,6 +17,8 @@ interface CcmParamsSpec extends ParamsSpec
 
 **起始版本：** 9
 
+<!--Device-cryptoFramework-interface CcmParamsSpec extends ParamsSpec--><!--Device-cryptoFramework-interface CcmParamsSpec extends ParamsSpec-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Cipher
 - API版本9-11：SystemCapability.Security.CryptoFramework
@@ -39,7 +41,9 @@ aad: DataBlob
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-CcmParamsSpec-aad: DataBlob--><!--Device-CcmParamsSpec-aad: DataBlob-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Cipher
@@ -59,7 +63,9 @@ authTag: DataBlob
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-CcmParamsSpec-authTag: DataBlob--><!--Device-CcmParamsSpec-authTag: DataBlob-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Cipher
@@ -77,7 +83,9 @@ iv: DataBlob
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-CcmParamsSpec-iv: DataBlob--><!--Device-CcmParamsSpec-iv: DataBlob-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Cipher

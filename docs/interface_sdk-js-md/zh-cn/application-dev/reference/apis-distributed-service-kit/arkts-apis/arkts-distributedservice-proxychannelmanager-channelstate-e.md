@@ -8,6 +8,8 @@ enum ChannelState
 
 **起始版本：** 20
 
+<!--Device-proxyChannelManager-enum ChannelState--><!--Device-proxyChannelManager-enum ChannelState-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 ## CHANNEL_WAIT_RESUME
@@ -21,6 +23,8 @@ CHANNEL_WAIT_RESUME = 0
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ChannelState-CHANNEL_WAIT_RESUME = 0--><!--Device-ChannelState-CHANNEL_WAIT_RESUME = 0-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
@@ -36,6 +40,8 @@ CHANNEL_RESUME = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ChannelState-CHANNEL_RESUME = 1--><!--Device-ChannelState-CHANNEL_RESUME = 1-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 ## CHANNEL_EXCEPTION_SOFTWARE_FAILED
@@ -50,6 +56,8 @@ CHANNEL_EXCEPTION_SOFTWARE_FAILED = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ChannelState-CHANNEL_EXCEPTION_SOFTWARE_FAILED = 2--><!--Device-ChannelState-CHANNEL_EXCEPTION_SOFTWARE_FAILED = 2-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 ## CHANNEL_BR_NO_PAIRED
@@ -63,5 +71,7 @@ CHANNEL_BR_NO_PAIRED = 3
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ChannelState-CHANNEL_BR_NO_PAIRED = 3--><!--Device-ChannelState-CHANNEL_BR_NO_PAIRED = 3-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration

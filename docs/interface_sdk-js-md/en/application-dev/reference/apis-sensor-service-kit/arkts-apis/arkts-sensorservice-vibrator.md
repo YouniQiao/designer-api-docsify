@@ -4,6 +4,8 @@ The **vibrator** module allows precise control over the vibration of device vibr
 
 **Since:** 8
 
+<!--Device-unnamed-declare namespace vibrator--><!--Device-unnamed-declare namespace vibrator-End-->
+
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 ## Modules to Import

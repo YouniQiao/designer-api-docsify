@@ -8,6 +8,8 @@ export interface WebSocketMessage
 
 **起始版本：** 19
 
+<!--Device-webSocket-export interface WebSocketMessage--><!--Device-webSocket-export interface WebSocketMessage-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块
@@ -28,6 +30,8 @@ clientConnection: WebSocketConnection
 
 **起始版本：** 19
 
+<!--Device-WebSocketMessage-clientConnection: WebSocketConnection--><!--Device-WebSocketMessage-clientConnection: WebSocketConnection-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## data
@@ -41,5 +45,7 @@ data: string | ArrayBuffer
 **类型：** string &#124; ArrayBuffer
 
 **起始版本：** 19
+
+<!--Device-WebSocketMessage-data: string | ArrayBuffer--><!--Device-WebSocketMessage-data: string | ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack

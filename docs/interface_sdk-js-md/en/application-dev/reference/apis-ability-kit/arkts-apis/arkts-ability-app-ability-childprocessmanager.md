@@ -4,6 +4,8 @@ The childProcessManager module provides the child process management capability.
 
 **Since:** 11
 
+<!--Device-unnamed-declare namespace childProcessManager--><!--Device-unnamed-declare namespace childProcessManager-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## Modules to Import

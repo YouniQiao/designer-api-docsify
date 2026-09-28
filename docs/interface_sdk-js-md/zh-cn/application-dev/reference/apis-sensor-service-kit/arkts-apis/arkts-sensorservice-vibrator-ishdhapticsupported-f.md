@@ -16,6 +16,8 @@ function isHdHapticSupported(): boolean
 
 **起始版本：** 12
 
+<!--Device-vibrator-function isHdHapticSupported(): boolean--><!--Device-vibrator-function isHdHapticSupported(): boolean-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 **返回值：**

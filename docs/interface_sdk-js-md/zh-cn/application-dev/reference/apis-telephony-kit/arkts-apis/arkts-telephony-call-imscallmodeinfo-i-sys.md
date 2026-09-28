@@ -8,6 +8,8 @@ export interface ImsCallModeInfo
 
 **起始版本：** 11
 
+<!--Device-call-export interface ImsCallModeInfo--><!--Device-call-export interface ImsCallModeInfo-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ callId: number
 
 **起始版本：** 11
 
+<!--Device-ImsCallModeInfo-callId: int--><!--Device-ImsCallModeInfo-callId: int-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ imsCallMode: ImsCallMode
 **类型：** [ImsCallMode](arkts-telephony-call-imscallmode-e-sys.md)
 
 **起始版本：** 11
+
+<!--Device-ImsCallModeInfo-imsCallMode: ImsCallMode--><!--Device-ImsCallModeInfo-imsCallMode: ImsCallMode-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -62,6 +68,8 @@ isRequestInfo: boolean
 
 **起始版本：** 11
 
+<!--Device-ImsCallModeInfo-isRequestInfo: boolean--><!--Device-ImsCallModeInfo-isRequestInfo: boolean-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +85,8 @@ result: VideoRequestResultType
 **类型：** [VideoRequestResultType](arkts-telephony-call-videorequestresulttype-e-sys.md)
 
 **起始版本：** 11
+
+<!--Device-ImsCallModeInfo-result: VideoRequestResultType--><!--Device-ImsCallModeInfo-result: VideoRequestResultType-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 

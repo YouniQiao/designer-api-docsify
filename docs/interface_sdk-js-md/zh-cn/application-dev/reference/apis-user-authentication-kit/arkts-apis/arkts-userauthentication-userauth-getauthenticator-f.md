@@ -20,6 +20,8 @@ function getAuthenticator(): Authenticator
 
 **替代接口：** [getAuthInstance](arkts-userauthentication-userauth-getauthinstance-f.md)
 
+<!--Device-userAuth-function getAuthenticator(): Authenticator--><!--Device-userAuth-function getAuthenticator(): Authenticator-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 **返回值：**

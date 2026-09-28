@@ -16,6 +16,8 @@ function isGeocoderAvailable(): boolean
 
 **起始版本：** 9
 
+<!--Device-geoLocationManager-function isGeocoderAvailable(): boolean--><!--Device-geoLocationManager-function isGeocoderAvailable(): boolean-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 **返回值：**

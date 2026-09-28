@@ -12,7 +12,7 @@ When a network connection is required to redirect to the target web page, you ne
 
 ## Child Components
 
-This component can contain the [Image](arkts-arkui-image-comp.md#image) child component.
+This component can contain the [Image](arkts-arkui-image-comp.md) child component.
 
 ## Hyperlink
 
@@ -25,6 +25,8 @@ Defines the constructor of Hyperlink.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-HyperlinkInterface-(address: string | Resource, content?: string | Resource): HyperlinkAttribute--><!--Device-HyperlinkInterface-(address: string | Resource, content?: string | Resource): HyperlinkAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

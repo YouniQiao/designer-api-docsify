@@ -25,6 +25,8 @@ function removeRule(rule: bigint): void
 
 **替代接口：** [removeCheckRule](arkts-performanceanalysis-hichecker-removecheckrule-f.md)
 
+<!--Device-hichecker-function removeRule(rule: bigint): void--><!--Device-hichecker-function removeRule(rule: bigint): void-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
 **参数：**

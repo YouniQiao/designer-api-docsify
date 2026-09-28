@@ -18,6 +18,8 @@ export interface PermissionDef
 
 **替代接口：** [PermissionDef](arkts-ability-permissiondef-i-sys.md)
 
+<!--Device-unnamed-export interface PermissionDef--><!--Device-unnamed-export interface PermissionDef-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 **系统接口：** 此接口为系统接口。
@@ -39,6 +41,8 @@ descriptionId: number
 **废弃版本：** 9
 
 **替代接口：** descriptionId
+
+<!--Device-PermissionDef-descriptionId: number--><!--Device-PermissionDef-descriptionId: number-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -62,6 +66,8 @@ grantMode: number
 
 **替代接口：** grantMode
 
+<!--Device-PermissionDef-grantMode: number--><!--Device-PermissionDef-grantMode: number-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 **系统接口：** 此接口为系统接口。
@@ -84,6 +90,8 @@ labelId: number
 
 **替代接口：** labelId
 
+<!--Device-PermissionDef-labelId: number--><!--Device-PermissionDef-labelId: number-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 **系统接口：** 此接口为系统接口。
@@ -105,6 +113,8 @@ permissionName: string
 **废弃版本：** 9
 
 **替代接口：** permissionName
+
+<!--Device-PermissionDef-permissionName: string--><!--Device-PermissionDef-permissionName: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 

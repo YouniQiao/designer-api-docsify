@@ -20,6 +20,8 @@ function getDelegatedBundleNames(admin: Want, policy: string): Array<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-adminManager-function getDelegatedBundleNames(admin: Want, policy: string): Array<string>--><!--Device-adminManager-function getDelegatedBundleNames(admin: Want, policy: string): Array<string>-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**

@@ -14,6 +14,8 @@ interface SppOption
 
 **替代接口：** [SppOption](arkts-connectivity-bluetoothmanager-sppoption-i.md)
 
+<!--Device-bluetooth-interface SppOption--><!--Device-bluetooth-interface SppOption-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -38,6 +40,8 @@ secure: boolean
 
 **替代接口：** [secure](arkts-connectivity-bluetoothmanager-sppoption-i.md#secure)
 
+<!--Device-SppOption-secure: boolean--><!--Device-SppOption-secure: boolean-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## type
@@ -56,6 +60,8 @@ Spp链路类型。
 
 **替代接口：** [type](arkts-connectivity-bluetoothmanager-sppoption-i.md#type)
 
+<!--Device-SppOption-type: SppType--><!--Device-SppOption-type: SppType-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## uuid
@@ -73,5 +79,7 @@ uuid: string
 **废弃版本：** 9
 
 **替代接口：** [uuid](arkts-connectivity-bluetoothmanager-sppoption-i.md#uuid)
+
+<!--Device-SppOption-uuid: string--><!--Device-SppOption-uuid: string-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

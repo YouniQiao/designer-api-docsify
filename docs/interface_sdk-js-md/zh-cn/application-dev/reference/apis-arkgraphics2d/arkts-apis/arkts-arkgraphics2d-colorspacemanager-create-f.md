@@ -16,6 +16,8 @@ function create(colorSpaceName: ColorSpace): ColorSpaceManager
 
 **起始版本：** 9
 
+<!--Device-colorSpaceManager-function create(colorSpaceName: ColorSpace): ColorSpaceManager--><!--Device-colorSpaceManager-function create(colorSpaceName: ColorSpace): ColorSpaceManager-End-->
+
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
 **参数：**
@@ -60,6 +62,8 @@ function create(primaries: ColorSpacePrimaries, gamma: number): ColorSpaceManage
 创建用户自定义色域对象。
 
 **起始版本：** 9
+
+<!--Device-colorSpaceManager-function create(primaries: ColorSpacePrimaries, gamma: double): ColorSpaceManager--><!--Device-colorSpaceManager-function create(primaries: ColorSpacePrimaries, gamma: double): ColorSpaceManager-End-->
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 

@@ -18,6 +18,8 @@ function getOsuStatus(slotId: number): Promise<OsuStatus>
 
 **需要权限：** ohos.permission.GET_TELEPHONY_ESIM_STATE
 
+<!--Device-eSIM-function getOsuStatus(slotId: int): Promise<OsuStatus>--><!--Device-eSIM-function getOsuStatus(slotId: int): Promise<OsuStatus>-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。

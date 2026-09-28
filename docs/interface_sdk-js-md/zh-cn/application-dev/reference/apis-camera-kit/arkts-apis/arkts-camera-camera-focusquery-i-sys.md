@@ -12,6 +12,8 @@ interface FocusQuery
 
 **起始版本：** 12
 
+<!--Device-camera-interface FocusQuery--><!--Device-camera-interface FocusQuery-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
@@ -29,6 +31,8 @@ isFocusAssistSupported(): boolean
 Checks whether the focus assist is supported.
 
 **起始版本：** 12
+
+<!--Device-FocusQuery-isFocusAssistSupported(): boolean--><!--Device-FocusQuery-isFocusAssistSupported(): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -74,6 +78,8 @@ isFocusDrivenTypeSupported(type: FocusDrivenType): boolean
 Checks whether a focus drive type is supported.
 
 **起始版本：** 15
+
+<!--Device-FocusQuery-isFocusDrivenTypeSupported(type: FocusDrivenType): boolean--><!--Device-FocusQuery-isFocusDrivenTypeSupported(type: FocusDrivenType): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -126,6 +132,8 @@ isFocusRangeTypeSupported(type: FocusRangeType): boolean
 Checks whether a focus range type is supported.
 
 **起始版本：** 15
+
+<!--Device-FocusQuery-isFocusRangeTypeSupported(type: FocusRangeType): boolean--><!--Device-FocusQuery-isFocusRangeTypeSupported(type: FocusRangeType): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

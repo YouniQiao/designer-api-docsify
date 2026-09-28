@@ -8,6 +8,8 @@ Initialization parameters of TextInput.
 
 **Since:** 7
 
+<!--Device-unnamed-declare interface TextInputOptions--><!--Device-unnamed-declare interface TextInputOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## controller
@@ -24,6 +26,8 @@ Sets the TextInput controller. Pass this parameter when you need to call methods
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TextInputOptions-controller?: TextInputController--><!--Device-TextInputOptions-controller?: TextInputController-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## placeholder
@@ -39,6 +43,8 @@ Sets the placeholder text displayed when there is no input. When not set, no pla
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextInputOptions-placeholder?: ResourceStr--><!--Device-TextInputOptions-placeholder?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -63,5 +69,7 @@ Since API version 18, this parameter supports [!!](../../../ui/state-management/
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextInputOptions-text?: ResourceStr--><!--Device-TextInputOptions-text?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

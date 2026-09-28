@@ -10,6 +10,8 @@ export interface SetKeepScreenOnOptions
 
 **废弃版本：** 7
 
+<!--Device-unnamed-export interface SetKeepScreenOnOptions--><!--Device-unnamed-export interface SetKeepScreenOnOptions-End-->
+
 **系统能力：** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
 ## 导入模块
@@ -32,6 +34,8 @@ complete?: () => void
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-SetKeepScreenOnOptions-complete?: () => void--><!--Device-SetKeepScreenOnOptions-complete?: () => void-End-->
+
 **系统能力：** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
 ## fail
@@ -47,6 +51,8 @@ fail?: (data: string, code: number) => void
 **废弃版本：** 7
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-SetKeepScreenOnOptions-fail?: (data: string, code: number) => void--><!--Device-SetKeepScreenOnOptions-fail?: (data: string, code: number) => void-End-->
 
 **系统能力：** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
@@ -71,6 +77,8 @@ success?: () => void
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-SetKeepScreenOnOptions-success?: () => void--><!--Device-SetKeepScreenOnOptions-success?: () => void-End-->
+
 **系统能力：** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
 ## keepScreenOn
@@ -88,5 +96,7 @@ true表示保持屏幕常亮（仅阻止系统无活动超时灭屏，无法阻�
 **废弃版本：** 7
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-SetKeepScreenOnOptions-keepScreenOn: boolean--><!--Device-SetKeepScreenOnOptions-keepScreenOn: boolean-End-->
 
 **系统能力：** SystemCapability.PowerManager.DisplayPowerManager.Lite

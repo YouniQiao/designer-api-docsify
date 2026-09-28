@@ -1,8 +1,10 @@
-# @ohos.file.photoAccessHelper(MediaAssetManager)
+# @ohos.file.photoAccessHelper(访问图片、视频资源的辅助函数)
 
 该模块提供相册管理能力，包括创建相册、访问和修改相册中的媒体数据。
 
 **起始版本：** 10
+
+<!--Device-unnamed-declare namespace photoAccessHelper--><!--Device-unnamed-declare namespace photoAccessHelper-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

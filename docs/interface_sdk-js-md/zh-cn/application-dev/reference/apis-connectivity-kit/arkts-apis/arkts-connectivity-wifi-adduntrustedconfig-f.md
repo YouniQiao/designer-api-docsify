@@ -26,6 +26,8 @@ function addUntrustedConfig(config: WifiDeviceConfig): Promise<boolean>
 
 **需要权限：** ohos.permission.SET_WIFI_INFO
 
+<!--Device-wifi-function addUntrustedConfig(config: WifiDeviceConfig): Promise<boolean>--><!--Device-wifi-function addUntrustedConfig(config: WifiDeviceConfig): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **参数：**
@@ -95,6 +97,8 @@ function addUntrustedConfig(config: WifiDeviceConfig, callback: AsyncCallback<bo
 **替代接口：** [addCandidateConfig](arkts-connectivity-wifimanager-addcandidateconfig-f.md)
 
 **需要权限：** ohos.permission.SET_WIFI_INFO
+
+<!--Device-wifi-function addUntrustedConfig(config: WifiDeviceConfig, callback: AsyncCallback<boolean>): void--><!--Device-wifi-function addUntrustedConfig(config: WifiDeviceConfig, callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 

@@ -14,6 +14,8 @@ declare class StaticSubscriberExtensionAbility
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare class StaticSubscriberExtensionAbility--><!--Device-unnamed-declare class StaticSubscriberExtensionAbility-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -35,6 +37,8 @@ onReceiveEvent(event: CommonEventData): void
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-StaticSubscriberExtensionAbility-onReceiveEvent(event: CommonEventData): void--><!--Device-StaticSubscriberExtensionAbility-onReceiveEvent(event: CommonEventData): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -71,6 +75,8 @@ context: StaticSubscriberExtensionContext
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-StaticSubscriberExtensionAbility-context: StaticSubscriberExtensionContext--><!--Device-StaticSubscriberExtensionAbility-context: StaticSubscriberExtensionContext-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

@@ -8,6 +8,8 @@ interface InterceptedRecord
 
 **起始版本：** 14
 
+<!--Device-netFirewall-interface InterceptedRecord--><!--Device-netFirewall-interface InterceptedRecord-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ Application or service ID.
 
 **起始版本：** 14
 
+<!--Device-InterceptedRecord-appUid?: int--><!--Device-InterceptedRecord-appUid?: int-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 **系统接口：** 此接口为系统接口。
@@ -44,6 +48,8 @@ domain?: string
 
 **起始版本：** 14
 
+<!--Device-InterceptedRecord-domain?: string--><!--Device-InterceptedRecord-domain?: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 **系统接口：** 此接口为系统接口。
@@ -57,6 +63,8 @@ localIp?: string
 **类型：** string
 
 **起始版本：** 14
+
+<!--Device-InterceptedRecord-localIp?: string--><!--Device-InterceptedRecord-localIp?: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -74,6 +82,8 @@ Local port.
 
 **起始版本：** 14
 
+<!--Device-InterceptedRecord-localPort?: int--><!--Device-InterceptedRecord-localPort?: int-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 **系统接口：** 此接口为系统接口。
@@ -90,6 +100,8 @@ Transport layer protocol.
 
 **起始版本：** 14
 
+<!--Device-InterceptedRecord-protocol?: int--><!--Device-InterceptedRecord-protocol?: int-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 **系统接口：** 此接口为系统接口。
@@ -103,6 +115,8 @@ remoteIp?: string
 **类型：** string
 
 **起始版本：** 14
+
+<!--Device-InterceptedRecord-remoteIp?: string--><!--Device-InterceptedRecord-remoteIp?: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -120,6 +134,8 @@ Remote port.
 
 **起始版本：** 14
 
+<!--Device-InterceptedRecord-remotePort?: int--><!--Device-InterceptedRecord-remotePort?: int-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 **系统接口：** 此接口为系统接口。
@@ -135,6 +151,8 @@ Time stamp.
 **类型：** number
 
 **起始版本：** 14
+
+<!--Device-InterceptedRecord-time: int--><!--Device-InterceptedRecord-time: int-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 

@@ -8,6 +8,8 @@ export declare interface Touch
 
 **起始版本：** 9
 
+<!--Device-unnamed-export declare interface Touch--><!--Device-unnamed-export declare interface Touch-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ globalX?: number
 
 **起始版本：** 20
 
+<!--Device-Touch-globalX?: int--><!--Device-Touch-globalX?: int-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## globalY
@@ -41,6 +45,8 @@ globalY?: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-Touch-globalY?: int--><!--Device-Touch-globalY?: int-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -56,6 +62,8 @@ height: number
 
 **起始版本：** 9
 
+<!--Device-Touch-height: int--><!--Device-Touch-height: int-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## id
@@ -69,6 +77,8 @@ id: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-Touch-id: int--><!--Device-Touch-id: int-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -84,6 +94,8 @@ pressedTime: number
 
 **起始版本：** 9
 
+<!--Device-Touch-pressedTime: long--><!--Device-Touch-pressedTime: long-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## pressure
@@ -97,6 +109,8 @@ pressure: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-Touch-pressure: double--><!--Device-Touch-pressure: double-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -112,6 +126,8 @@ rawX: number
 
 **起始版本：** 9
 
+<!--Device-Touch-rawX: int--><!--Device-Touch-rawX: int-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## rawY
@@ -125,6 +141,8 @@ rawY: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-Touch-rawY: int--><!--Device-Touch-rawY: int-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -140,6 +158,8 @@ screenX: number
 
 **起始版本：** 9
 
+<!--Device-Touch-screenX: int--><!--Device-Touch-screenX: int-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## screenY
@@ -153,6 +173,8 @@ screenY: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-Touch-screenY: int--><!--Device-Touch-screenY: int-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -168,6 +190,8 @@ tiltX: number
 
 **起始版本：** 9
 
+<!--Device-Touch-tiltX: int--><!--Device-Touch-tiltX: int-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## tiltY
@@ -181,6 +205,8 @@ tiltY: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-Touch-tiltY: int--><!--Device-Touch-tiltY: int-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -196,6 +222,8 @@ toolHeight: number
 
 **起始版本：** 9
 
+<!--Device-Touch-toolHeight: int--><!--Device-Touch-toolHeight: int-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## toolType
@@ -209,6 +237,8 @@ toolType: ToolType
 **类型：** [ToolType](arkts-input-multimodalinput-touchevent-tooltype-e.md)
 
 **起始版本：** 9
+
+<!--Device-Touch-toolType: ToolType--><!--Device-Touch-toolType: ToolType-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -224,6 +254,8 @@ toolWidth: number
 
 **起始版本：** 9
 
+<!--Device-Touch-toolWidth: int--><!--Device-Touch-toolWidth: int-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## toolX
@@ -237,6 +269,8 @@ toolX: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-Touch-toolX: int--><!--Device-Touch-toolX: int-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -252,6 +286,8 @@ toolY: number
 
 **起始版本：** 9
 
+<!--Device-Touch-toolY: int--><!--Device-Touch-toolY: int-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## width
@@ -265,6 +301,8 @@ width: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-Touch-width: int--><!--Device-Touch-width: int-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -280,6 +318,8 @@ windowX: number
 
 **起始版本：** 9
 
+<!--Device-Touch-windowX: int--><!--Device-Touch-windowX: int-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## windowY
@@ -293,5 +333,7 @@ windowY: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-Touch-windowY: int--><!--Device-Touch-windowY: int-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core

@@ -24,6 +24,8 @@ function getUserRestrictedForAccount(admin: Want | null, settingsItem: string, a
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-restrictions-function getUserRestrictedForAccount(admin: Want | null, settingsItem: string, accountId: int): boolean--><!--Device-restrictions-function getUserRestrictedForAccount(admin: Want | null, settingsItem: string, accountId: int): boolean-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -88,6 +90,8 @@ function getUserRestrictedForAccount(admin: Want | null, settingsItem: SettingsF
 **需要权限：** ohos.permission.ENTERPRISE_SET_USER_RESTRICTION
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-restrictions-function getUserRestrictedForAccount(admin: Want | null, settingsItem: SettingsForAccount, accountId: int): boolean--><!--Device-restrictions-function getUserRestrictedForAccount(admin: Want | null, settingsItem: SettingsForAccount, accountId: int): boolean-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

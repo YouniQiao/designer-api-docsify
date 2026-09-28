@@ -8,6 +8,8 @@ Provides APIs for implementing HCE, including receiving Application Protocol Dat
 
 **Since:** 8
 
+<!--Device-cardEmulation-export class HceService--><!--Device-cardEmulation-export class HceService-End-->
+
 **System capability:** SystemCapability.Communication.NFC.CardEmulation
 
 ## Modules to Import
@@ -31,6 +33,8 @@ Unsubscribes from events indicating receiving of APDUs from the peer card reader
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-HceService-off(type: 'hceCmd', callback?: AsyncCallback<int[]>): void--><!--Device-HceService-off(type: 'hceCmd', callback?: AsyncCallback<int[]>): void-End-->
 
 **System capability:** SystemCapability.Communication.NFC.CardEmulation
 
@@ -98,6 +102,8 @@ Subscribes to events indicating receiving of APDUs from the peer card reader. Th
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-HceService-on(type: 'hceCmd', callback: AsyncCallback<int[]>): void--><!--Device-HceService-on(type: 'hceCmd', callback: AsyncCallback<int[]>): void-End-->
 
 **System capability:** SystemCapability.Communication.NFC.CardEmulation
 
@@ -208,7 +214,9 @@ Starts HCE, including enabling this application to run in the foreground prefere
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-HceService-start(elementName: ElementName, aidList: string[]): void--><!--Device-HceService-start(elementName: ElementName, aidList: string[]): void-End-->
 
 **System capability:** SystemCapability.Communication.NFC.CardEmulation
 
@@ -242,7 +250,9 @@ Stops HCE, including canceling the subscription of APDU data, exiting this appli
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-HceService-stop(elementName: ElementName): void--><!--Device-HceService-stop(elementName: ElementName): void-End-->
 
 **System capability:** SystemCapability.Communication.NFC.CardEmulation
 
@@ -275,7 +285,9 @@ Transmits an APDU to the peer card reader. This API uses a promise to return the
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-HceService-transmit(response: int[]): Promise<void>--><!--Device-HceService-transmit(response: int[]): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NFC.CardEmulation
 
@@ -350,7 +362,9 @@ Sends APDU data to the peer card reader. The application can call this API only 
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-HceService-transmit(response: int[], callback: AsyncCallback<void>): void--><!--Device-HceService-transmit(response: int[], callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.NFC.CardEmulation
 
@@ -432,6 +446,8 @@ Sends a response to the peer card reader.
 **Required permissions:** ohos.permission.NFC_CARD_EMULATION
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-HceService-sendResponse(responseApdu: number[]): void--><!--Device-HceService-sendResponse(responseApdu: number[]): void-End-->
 
 **System capability:** SystemCapability.Communication.NFC.CardEmulation
 
@@ -535,6 +551,8 @@ Starts HCE, including enabling this application to run in the foreground prefere
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-HceService-startHCE(aidList: string[]): boolean--><!--Device-HceService-startHCE(aidList: string[]): boolean-End-->
+
 **System capability:** SystemCapability.Communication.NFC.CardEmulation
 
 **Parameters:**
@@ -635,6 +653,8 @@ Stops HCE, including exiting the current application from the foreground, releas
 **Required permissions:** ohos.permission.NFC_CARD_EMULATION
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-HceService-stopHCE(): boolean--><!--Device-HceService-stopHCE(): boolean-End-->
 
 **System capability:** SystemCapability.Communication.NFC.CardEmulation
 

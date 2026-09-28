@@ -8,6 +8,8 @@ export enum AttendeeStatus
 
 **起始版本：** 18
 
+<!--Device-calendarManager-export enum AttendeeStatus--><!--Device-calendarManager-export enum AttendeeStatus-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 ## UNKNOWN
@@ -21,6 +23,8 @@ UNKNOWN = 0
 **起始版本：** 18
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-AttendeeStatus-UNKNOWN = 0--><!--Device-AttendeeStatus-UNKNOWN = 0-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -36,6 +40,8 @@ TENTATIVE = 1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-AttendeeStatus-TENTATIVE = 1--><!--Device-AttendeeStatus-TENTATIVE = 1-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 ## ACCEPTED
@@ -49,6 +55,8 @@ ACCEPTED = 2
 **起始版本：** 18
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-AttendeeStatus-ACCEPTED = 2--><!--Device-AttendeeStatus-ACCEPTED = 2-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -64,6 +72,8 @@ DECLINED = 3
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-AttendeeStatus-DECLINED = 3--><!--Device-AttendeeStatus-DECLINED = 3-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 ## UNRESPONSIVE
@@ -77,5 +87,7 @@ UNRESPONSIVE = 4
 **起始版本：** 18
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-AttendeeStatus-UNRESPONSIVE = 4--><!--Device-AttendeeStatus-UNRESPONSIVE = 4-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData

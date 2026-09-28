@@ -18,6 +18,8 @@ function isDefaultNetMeteredSync(): boolean
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-connection-function isDefaultNetMeteredSync(): boolean--><!--Device-connection-function isDefaultNetMeteredSync(): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **返回值：**

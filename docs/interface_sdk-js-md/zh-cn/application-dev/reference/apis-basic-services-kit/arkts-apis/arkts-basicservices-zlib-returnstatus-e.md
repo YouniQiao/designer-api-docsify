@@ -8,6 +8,8 @@ export enum ReturnStatus
 
 **起始版本：** 12
 
+<!--Device-zlib-export enum ReturnStatus--><!--Device-zlib-export enum ReturnStatus-End-->
+
 **系统能力：** SystemCapability.BundleManager.Zlib
 
 ## OK
@@ -20,7 +22,9 @@ OK = 0
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ReturnStatus-OK = 0--><!--Device-ReturnStatus-OK = 0-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -34,7 +38,9 @@ STREAM_END = 1
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ReturnStatus-STREAM_END = 1--><!--Device-ReturnStatus-STREAM_END = 1-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -48,7 +54,9 @@ NEED_DICT = 2
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ReturnStatus-NEED_DICT = 2--><!--Device-ReturnStatus-NEED_DICT = 2-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -62,7 +70,9 @@ ERRNO = -1
 
 **起始版本：** 23
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-ReturnStatus-ERRNO = -1--><!--Device-ReturnStatus-ERRNO = -1-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -76,7 +86,9 @@ STREAM_ERROR = -2
 
 **起始版本：** 23
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-ReturnStatus-STREAM_ERROR = -2--><!--Device-ReturnStatus-STREAM_ERROR = -2-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -90,7 +102,9 @@ DATA_ERROR = -3
 
 **起始版本：** 23
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-ReturnStatus-DATA_ERROR = -3--><!--Device-ReturnStatus-DATA_ERROR = -3-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -104,7 +118,9 @@ MEM_ERROR = -4
 
 **起始版本：** 23
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-ReturnStatus-MEM_ERROR = -4--><!--Device-ReturnStatus-MEM_ERROR = -4-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -118,6 +134,8 @@ BUF_ERROR = -5
 
 **起始版本：** 23
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-ReturnStatus-BUF_ERROR = -5--><!--Device-ReturnStatus-BUF_ERROR = -5-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib

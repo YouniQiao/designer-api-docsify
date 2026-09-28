@@ -12,6 +12,8 @@ Aperture继承自ApertureQuery。
 
 **起始版本：** 24
 
+<!--Device-camera-interface Aperture extends ApertureQuery--><!--Device-camera-interface Aperture extends ApertureQuery-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
@@ -29,6 +31,8 @@ getVirtualAperture(): number
 获取当前设置的虚拟光圈值。
 
 **起始版本：** 11
+
+<!--Device-Aperture-getVirtualAperture(): double--><!--Device-Aperture-getVirtualAperture(): double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -65,6 +69,8 @@ setVirtualAperture(aperture: number): void
 设置虚拟光圈。可以先通过getSupportedVirtualApertures获取当前设备所支持的虚拟光圈列表。
 
 **起始版本：** 11
+
+<!--Device-Aperture-setVirtualAperture(aperture: double): void--><!--Device-Aperture-setVirtualAperture(aperture: double): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

@@ -16,7 +16,9 @@ function createCertExtension(inStream: EncodingBlob, callback: AsyncCallback<Cer
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-cert-function createCertExtension(inStream: EncodingBlob, callback: AsyncCallback<CertExtension>): void--><!--Device-cert-function createCertExtension(inStream: EncodingBlob, callback: AsyncCallback<CertExtension>): void-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -82,7 +84,9 @@ function createCertExtension(inStream: EncodingBlob): Promise<CertExtension>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-cert-function createCertExtension(inStream: EncodingBlob): Promise<CertExtension>--><!--Device-cert-function createCertExtension(inStream: EncodingBlob): Promise<CertExtension>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 

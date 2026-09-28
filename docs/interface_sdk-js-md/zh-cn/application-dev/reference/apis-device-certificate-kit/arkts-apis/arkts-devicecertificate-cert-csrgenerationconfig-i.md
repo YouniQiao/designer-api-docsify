@@ -18,6 +18,8 @@ interface CsrGenerationConfig
 
 **起始版本：** 18
 
+<!--Device-cert-interface CsrGenerationConfig--><!--Device-cert-interface CsrGenerationConfig-End-->
+
 **系统能力：** SystemCapability.Security.Cert
 
 ## 导入模块
@@ -38,7 +40,9 @@ attributes?: Array<CsrAttribute>
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-CsrGenerationConfig-attributes?: Array<CsrAttribute>--><!--Device-CsrGenerationConfig-attributes?: Array<CsrAttribute>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -54,7 +58,9 @@ mdName: string
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-CsrGenerationConfig-mdName: string--><!--Device-CsrGenerationConfig-mdName: string-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -72,7 +78,9 @@ outFormat?: EncodingBaseFormat
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-CsrGenerationConfig-outFormat?: EncodingBaseFormat--><!--Device-CsrGenerationConfig-outFormat?: EncodingBaseFormat-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -88,6 +96,8 @@ subject: X500DistinguishedName
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-CsrGenerationConfig-subject: X500DistinguishedName--><!--Device-CsrGenerationConfig-subject: X500DistinguishedName-End-->
 
 **系统能力：** SystemCapability.Security.Cert

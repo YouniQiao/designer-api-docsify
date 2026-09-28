@@ -18,6 +18,8 @@ function createImageReceiver(size: image.Size, format: image.ImageFormat, capaci
 
 **起始版本：** 12
 
+<!--Device-sendableImage-function createImageReceiver(size: image.Size, format: image.ImageFormat, capacity: number): ImageReceiver--><!--Device-sendableImage-function createImageReceiver(size: image.Size, format: image.ImageFormat, capacity: number): ImageReceiver-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
 **参数：**

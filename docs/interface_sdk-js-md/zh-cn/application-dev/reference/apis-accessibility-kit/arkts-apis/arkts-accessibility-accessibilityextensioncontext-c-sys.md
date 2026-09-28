@@ -25,6 +25,8 @@ class EntryAbility extends AccessibilityExtensionAbility {
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare class AccessibilityExtensionContext extends ExtensionContext--><!--Device-unnamed-declare class AccessibilityExtensionContext extends ExtensionContext-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## addAccessibilityVirtualNodes
@@ -40,6 +42,8 @@ addAccessibilityVirtualNodes(elementId: number, windowId: number, nodes: Array<A
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AccessibilityExtensionContext-addAccessibilityVirtualNodes(elementId: long, windowId: int, nodes: Array<AccessibilityVirtualNode>): Promise<OperateVirtualNodeResult>--><!--Device-AccessibilityExtensionContext-addAccessibilityVirtualNodes(elementId: long, windowId: int, nodes: Array<AccessibilityVirtualNode>): Promise<OperateVirtualNodeResult>-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -132,6 +136,8 @@ getAccessibilityFocusedElement(): Promise<AccessibilityElement>
 
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
+<!--Device-AccessibilityExtensionContext-getAccessibilityFocusedElement(): Promise<AccessibilityElement>--><!--Device-AccessibilityExtensionContext-getAccessibilityFocusedElement(): Promise<AccessibilityElement>-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -206,6 +212,8 @@ getAccessibilityWindowsSync(displayId?: number): Array<AccessibilityElement>
 **起始版本：** 20
 
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
+
+<!--Device-AccessibilityExtensionContext-getAccessibilityWindowsSync(displayId?: long): Array<AccessibilityElement>--><!--Device-AccessibilityExtensionContext-getAccessibilityWindowsSync(displayId?: long): Array<AccessibilityElement>-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -291,6 +299,8 @@ getDefaultFocusedElementIds(windowId: number): Promise<Array<number>>
 
 **起始版本：** 18
 
+<!--Device-AccessibilityExtensionContext-getDefaultFocusedElementIds(windowId: int): Promise<Array<long>>--><!--Device-AccessibilityExtensionContext-getDefaultFocusedElementIds(windowId: int): Promise<Array<long>>-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -369,6 +379,8 @@ getElements(windowId: number, elementId?: number): Promise<Array<AccessibilityEl
 批量查询指定窗口或指定节点下的所有后代无障碍节点。使用Promise异步回调。
 
 **起始版本：** 18
+
+<!--Device-AccessibilityExtensionContext-getElements(windowId: int, elementId?: long): Promise<Array<AccessibilityElement>>--><!--Device-AccessibilityExtensionContext-getElements(windowId: int, elementId?: long): Promise<Array<AccessibilityElement>>-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -456,6 +468,8 @@ getRootInActiveWindow(windowId?: number): Promise<AccessibilityElement>
 
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
+<!--Device-AccessibilityExtensionContext-getRootInActiveWindow(windowId?: int): Promise<AccessibilityElement>--><!--Device-AccessibilityExtensionContext-getRootInActiveWindow(windowId?: int): Promise<AccessibilityElement>-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -539,6 +553,8 @@ holdRunningLockSync(): void
 
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
+<!--Device-AccessibilityExtensionContext-holdRunningLockSync(): void--><!--Device-AccessibilityExtensionContext-holdRunningLockSync(): void-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -606,6 +622,8 @@ notifyDisconnect(): void
 
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
+<!--Device-AccessibilityExtensionContext-notifyDisconnect(): void--><!--Device-AccessibilityExtensionContext-notifyDisconnect(): void-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -670,6 +688,8 @@ off(type: 'preDisconnect', callback?: Callback<void>): void
 **起始版本：** 20
 
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
+
+<!--Device-AccessibilityExtensionContext-off(type: 'preDisconnect', callback?: Callback<void>): void--><!--Device-AccessibilityExtensionContext-off(type: 'preDisconnect', callback?: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -744,6 +764,8 @@ on(type: 'preDisconnect', callback: Callback<void>): void
 **起始版本：** 20
 
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
+
+<!--Device-AccessibilityExtensionContext-on(type: 'preDisconnect', callback: Callback<void>): void--><!--Device-AccessibilityExtensionContext-on(type: 'preDisconnect', callback: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -820,6 +842,8 @@ removeAccessibilityVirtualNodes(elementId: number, windowId: number): Promise<Op
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AccessibilityExtensionContext-removeAccessibilityVirtualNodes(elementId: long, windowId: int): Promise<OperateVirtualNodeResult>--><!--Device-AccessibilityExtensionContext-removeAccessibilityVirtualNodes(elementId: long, windowId: int): Promise<OperateVirtualNodeResult>-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -901,6 +925,8 @@ startAbility(want: Want): Promise<void>
 拉起前台页面。使用Promise异步回调。
 
 **起始版本：** 12
+
+<!--Device-AccessibilityExtensionContext-startAbility(want: Want): Promise<void>--><!--Device-AccessibilityExtensionContext-startAbility(want: Want): Promise<void>-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -986,6 +1012,8 @@ unholdRunningLockSync(): void
 
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
+<!--Device-AccessibilityExtensionContext-unholdRunningLockSync(): void--><!--Device-AccessibilityExtensionContext-unholdRunningLockSync(): void-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1052,6 +1080,8 @@ updateAccessibilityElementProperty(elementId: number, windowId: number, node: Ac
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AccessibilityExtensionContext-updateAccessibilityElementProperty(elementId: long, windowId: int, node: AccessibilityVirtualNode): Promise<OperateVirtualNodeResult>--><!--Device-AccessibilityExtensionContext-updateAccessibilityElementProperty(elementId: long, windowId: int, node: AccessibilityVirtualNode): Promise<OperateVirtualNodeResult>-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 

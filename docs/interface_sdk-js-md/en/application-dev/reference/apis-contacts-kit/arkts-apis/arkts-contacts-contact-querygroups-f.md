@@ -22,6 +22,8 @@ Queries all groups of a contact. This API uses an asynchronous callback to retur
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryGroups(callback: AsyncCallback<Array<Group>>): void--><!--Device-contact-function queryGroups(callback: AsyncCallback<Array<Group>>): void-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
@@ -59,6 +61,8 @@ Queries all groups of a contact. This API uses an asynchronous callback to retur
 **Since:** 10
 
 **Required permissions:** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryGroups(context: Context, callback: AsyncCallback<Array<Group>>): void--><!--Device-contact-function queryGroups(context: Context, callback: AsyncCallback<Array<Group>>): void-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -117,6 +121,8 @@ Queries all groups of a contact based on the specified holder. This API uses an 
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryGroups(holder: Holder, callback: AsyncCallback<Array<Group>>): void--><!--Device-contact-function queryGroups(holder: Holder, callback: AsyncCallback<Array<Group>>): void-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
@@ -159,6 +165,8 @@ Queries all groups of a contact based on the specified holder. This API uses an 
 **Since:** 10
 
 **Required permissions:** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryGroups(context: Context, holder: Holder, callback: AsyncCallback<Array<Group>>): void--><!--Device-contact-function queryGroups(context: Context, holder: Holder, callback: AsyncCallback<Array<Group>>): void-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -222,6 +230,8 @@ Queries all groups of a contact based on the specified holder. This API uses a p
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryGroups(holder?: Holder): Promise<Array<Group>>--><!--Device-contact-function queryGroups(holder?: Holder): Promise<Array<Group>>-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
@@ -265,6 +275,8 @@ Queries all groups of a contact based on the specified holder. This API uses a p
 **Since:** 10
 
 **Required permissions:** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryGroups(context: Context, holder?: Holder): Promise<Array<Group>>--><!--Device-contact-function queryGroups(context: Context, holder?: Holder): Promise<Array<Group>>-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 

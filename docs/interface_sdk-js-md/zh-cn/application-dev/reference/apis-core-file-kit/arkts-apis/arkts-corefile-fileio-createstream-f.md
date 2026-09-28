@@ -19,6 +19,8 @@ declare function createStream(path: string, mode: string): Promise<Stream>
 
 **替代接口：** [createStream](arkts-corefile-file-fs-createstream-f.md)
 
+<!--Device-unnamed-declare function createStream(path: string, mode: string): Promise<Stream>--><!--Device-unnamed-declare function createStream(path: string, mode: string): Promise<Stream>-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -50,6 +52,8 @@ declare function createStream(path: string, mode: string, callback: AsyncCallbac
 **废弃版本：** 9
 
 **替代接口：** [createStream](arkts-corefile-file-fs-createstream-f.md)
+
+<!--Device-unnamed-declare function createStream(path: string, mode: string, callback: AsyncCallback<Stream>): void--><!--Device-unnamed-declare function createStream(path: string, mode: string, callback: AsyncCallback<Stream>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

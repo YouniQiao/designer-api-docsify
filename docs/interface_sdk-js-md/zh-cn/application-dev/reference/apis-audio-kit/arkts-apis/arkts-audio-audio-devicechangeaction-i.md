@@ -8,6 +8,8 @@ interface DeviceChangeAction
 
 **起始版本：** 7
 
+<!--Device-audio-interface DeviceChangeAction--><!--Device-audio-interface DeviceChangeAction-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 ## 导入模块
@@ -28,6 +30,8 @@ deviceDescriptors: AudioDeviceDescriptors
 
 **起始版本：** 7
 
+<!--Device-DeviceChangeAction-deviceDescriptors: AudioDeviceDescriptors--><!--Device-DeviceChangeAction-deviceDescriptors: AudioDeviceDescriptors-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 ## type
@@ -41,5 +45,7 @@ type: DeviceChangeType
 **类型：** [DeviceChangeType](arkts-audio-audio-devicechangetype-e.md)
 
 **起始版本：** 7
+
+<!--Device-DeviceChangeAction-type: DeviceChangeType--><!--Device-DeviceChangeAction-type: DeviceChangeType-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device

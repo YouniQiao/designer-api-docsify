@@ -14,6 +14,8 @@ Defines the prompt info of button.
 
 **Substitutes:** [Button](arkts-arkui-promptaction-button-i.md)
 
+<!--Device-prompt-interface Button--><!--Device-prompt-interface Button-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -40,6 +42,8 @@ Defines the color of button.
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-Button-color: string--><!--Device-Button-color: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## text
@@ -59,5 +63,7 @@ Defines the button info.
 **Substitutes:** [text](arkts-arkui-promptaction-button-i.md#text)
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-Button-text: string--><!--Device-Button-text: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -8,6 +8,8 @@ enum AudioPrivacyType
 
 **起始版本：** 10
 
+<!--Device-audio-enum AudioPrivacyType--><!--Device-audio-enum AudioPrivacyType-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.PlaybackCapture
 
 ## PRIVACY_TYPE_PUBLIC
@@ -20,6 +22,8 @@ PRIVACY_TYPE_PUBLIC = 0
 
 **起始版本：** 10
 
+<!--Device-AudioPrivacyType-PRIVACY_TYPE_PUBLIC = 0--><!--Device-AudioPrivacyType-PRIVACY_TYPE_PUBLIC = 0-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.PlaybackCapture
 
 ## PRIVACY_TYPE_PRIVATE
@@ -31,6 +35,8 @@ PRIVACY_TYPE_PRIVATE = 1
 表示音频流不可以被其他应用录制或屏幕投射。
 
 **起始版本：** 10
+
+<!--Device-AudioPrivacyType-PRIVACY_TYPE_PRIVATE = 1--><!--Device-AudioPrivacyType-PRIVACY_TYPE_PRIVATE = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.PlaybackCapture
 
@@ -47,5 +53,7 @@ PRIVACY_TYPE_SHARED = 2
 然而，在PRIVACY_TYPE_SHARED策略下，这些音频流将会允许被其他应用录制或屏幕投射。
 
 **起始版本：** 21
+
+<!--Device-AudioPrivacyType-PRIVACY_TYPE_SHARED = 2--><!--Device-AudioPrivacyType-PRIVACY_TYPE_SHARED = 2-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.PlaybackCapture

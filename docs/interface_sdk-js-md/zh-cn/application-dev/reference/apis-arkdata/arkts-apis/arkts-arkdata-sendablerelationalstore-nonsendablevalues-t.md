@@ -8,6 +8,8 @@ type NonSendableValues = Array<relationalStore.ValueType>
 
 **起始版本：** 20
 
+<!--Device-sendableRelationalStore-type NonSendableValues = Array<relationalStore.ValueType>--><!--Device-sendableRelationalStore-type NonSendableValues = Array<relationalStore.ValueType>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **类型：** Array&lt;[relationalStore.ValueType](arkts-arkdata-relationalstore-valuetype-t.md)&gt;

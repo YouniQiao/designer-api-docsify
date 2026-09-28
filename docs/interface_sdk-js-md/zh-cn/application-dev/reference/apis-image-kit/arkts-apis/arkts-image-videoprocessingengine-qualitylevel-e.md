@@ -8,6 +8,8 @@ enum QualityLevel
 
 **起始版本：** 18
 
+<!--Device-videoProcessingEngine-enum QualityLevel--><!--Device-videoProcessingEngine-enum QualityLevel-End-->
+
 **系统能力：** SystemCapability.Multimedia.VideoProcessingEngine
 
 ## NONE
@@ -20,7 +22,9 @@ NONE = 0
 
 **起始版本：** 18
 
-**卡片能力：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-QualityLevel-NONE = 0--><!--Device-QualityLevel-NONE = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.VideoProcessingEngine
 
@@ -34,7 +38,9 @@ LOW = 1
 
 **起始版本：** 18
 
-**卡片能力：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-QualityLevel-LOW = 1--><!--Device-QualityLevel-LOW = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.VideoProcessingEngine
 
@@ -48,7 +54,9 @@ MEDIUM = 2
 
 **起始版本：** 18
 
-**卡片能力：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-QualityLevel-MEDIUM = 2--><!--Device-QualityLevel-MEDIUM = 2-End-->
 
 **系统能力：** SystemCapability.Multimedia.VideoProcessingEngine
 
@@ -62,6 +70,8 @@ HIGH = 3
 
 **起始版本：** 18
 
-**卡片能力：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-QualityLevel-HIGH = 3--><!--Device-QualityLevel-HIGH = 3-End-->
 
 **系统能力：** SystemCapability.Multimedia.VideoProcessingEngine

@@ -10,6 +10,8 @@ export interface PolicyErrorResult
 
 **起始版本：** 11
 
+<!--Device-fileShare-export interface PolicyErrorResult--><!--Device-fileShare-export interface PolicyErrorResult-End-->
+
 **系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
 ## 导入模块
@@ -30,6 +32,8 @@ code: PolicyErrorCode
 
 **起始版本：** 11
 
+<!--Device-PolicyErrorResult-code: PolicyErrorCode--><!--Device-PolicyErrorResult-code: PolicyErrorCode-End-->
+
 **系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
 ## message
@@ -44,6 +48,8 @@ message: string
 
 **起始版本：** 11
 
+<!--Device-PolicyErrorResult-message: string--><!--Device-PolicyErrorResult-message: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
 ## uri
@@ -57,5 +63,7 @@ uri: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-PolicyErrorResult-uri: string--><!--Device-PolicyErrorResult-uri: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization

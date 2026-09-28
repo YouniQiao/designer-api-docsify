@@ -8,6 +8,8 @@ POI信息结构体。
 
 **起始版本：** 19
 
+<!--Device-geoLocationManager-export interface PoiInfo--><!--Device-geoLocationManager-export interface PoiInfo-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 ## 导入模块
@@ -28,7 +30,9 @@ poiArray: Array<Poi>
 
 **起始版本：** 19
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-PoiInfo-poiArray: Array<Poi>--><!--Device-PoiInfo-poiArray: Array<Poi>-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -44,6 +48,8 @@ timestamp: number
 
 **起始版本：** 19
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-PoiInfo-timestamp: long--><!--Device-PoiInfo-timestamp: long-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core

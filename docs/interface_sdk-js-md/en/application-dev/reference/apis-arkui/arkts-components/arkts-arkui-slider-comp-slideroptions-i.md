@@ -8,6 +8,8 @@ Provides information about the slider.
 
 **Since:** 7
 
+<!--Device-unnamed-declare interface SliderOptions--><!--Device-unnamed-declare interface SliderOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## direction
@@ -32,6 +34,8 @@ Default value: **Axis.Horizontal**
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-SliderOptions-direction?: Axis--><!--Device-SliderOptions-direction?: Axis-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,6 +68,8 @@ If the value is not within the [min, max] range, the value of **min** or **max**
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-SliderOptions-max?: number--><!--Device-SliderOptions-max?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## min
@@ -88,6 +94,8 @@ Default value: **0**
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-SliderOptions-min?: number--><!--Device-SliderOptions-min?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -115,6 +123,8 @@ Default value: **false**
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-SliderOptions-reverse?: boolean--><!--Device-SliderOptions-reverse?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -147,6 +157,8 @@ If this parameter is set to a value less than 0 or greater than the value of **m
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-SliderOptions-step?: number--><!--Device-SliderOptions-step?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## style
@@ -171,6 +183,8 @@ Default value: **SliderStyle.OutSet**
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-SliderOptions-style?: SliderStyle--><!--Device-SliderOptions-style?: SliderStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -206,5 +220,7 @@ The $$ operator enables two-way synchronization between the TS variable and the 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-SliderOptions-value?: number--><!--Device-SliderOptions-value?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -18,6 +18,8 @@ Creates a responsive spring animation curve. It is a special case of [springMoti
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-curves-function responsiveSpringMotion(response?: number, dampingFraction?: number, overlapDuration?: number): ICurve--><!--Device-curves-function responsiveSpringMotion(response?: number, dampingFraction?: number, overlapDuration?: number): ICurve-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

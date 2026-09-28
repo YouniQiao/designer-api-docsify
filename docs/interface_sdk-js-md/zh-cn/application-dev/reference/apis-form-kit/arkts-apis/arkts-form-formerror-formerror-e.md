@@ -8,6 +8,8 @@ enum FormError
 
 **起始版本：** 8
 
+<!--Device-formError-enum FormError--><!--Device-formError-enum FormError-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 ## ERR_COMMON
@@ -19,6 +21,8 @@ ERR_COMMON = 1
 默认错误码。
 
 **起始版本：** 8
+
+<!--Device-FormError-ERR_COMMON = 1--><!--Device-FormError-ERR_COMMON = 1-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -32,6 +36,8 @@ ERR_PERMISSION_DENY = 2
 
 **起始版本：** 8
 
+<!--Device-FormError-ERR_PERMISSION_DENY = 2--><!--Device-FormError-ERR_PERMISSION_DENY = 2-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 ## ERR_GET_INFO_FAILED
@@ -43,6 +49,8 @@ ERR_GET_INFO_FAILED = 4
 查询卡片信息失败。
 
 **起始版本：** 8
+
+<!--Device-FormError-ERR_GET_INFO_FAILED = 4--><!--Device-FormError-ERR_GET_INFO_FAILED = 4-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -56,6 +64,8 @@ ERR_GET_BUNDLE_FAILED = 5
 
 **起始版本：** 8
 
+<!--Device-FormError-ERR_GET_BUNDLE_FAILED = 5--><!--Device-FormError-ERR_GET_BUNDLE_FAILED = 5-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 ## ERR_GET_LAYOUT_FAILED
@@ -67,6 +77,8 @@ ERR_GET_LAYOUT_FAILED = 6
 查询布局信息失败。
 
 **起始版本：** 8
+
+<!--Device-FormError-ERR_GET_LAYOUT_FAILED = 6--><!--Device-FormError-ERR_GET_LAYOUT_FAILED = 6-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -80,6 +92,8 @@ ERR_ADD_INVALID_PARAM = 7
 
 **起始版本：** 8
 
+<!--Device-FormError-ERR_ADD_INVALID_PARAM = 7--><!--Device-FormError-ERR_ADD_INVALID_PARAM = 7-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 ## ERR_CFG_NOT_MATCH_ID
@@ -91,6 +105,8 @@ ERR_CFG_NOT_MATCH_ID = 8
 卡片配置与ID不匹配。
 
 **起始版本：** 8
+
+<!--Device-FormError-ERR_CFG_NOT_MATCH_ID = 8--><!--Device-FormError-ERR_CFG_NOT_MATCH_ID = 8-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -104,6 +120,8 @@ ERR_NOT_EXIST_ID = 9
 
 **起始版本：** 8
 
+<!--Device-FormError-ERR_NOT_EXIST_ID = 9--><!--Device-FormError-ERR_NOT_EXIST_ID = 9-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 ## ERR_BIND_PROVIDER_FAILED
@@ -115,6 +133,8 @@ ERR_BIND_PROVIDER_FAILED = 10
 绑定卡片提供方失败。
 
 **起始版本：** 8
+
+<!--Device-FormError-ERR_BIND_PROVIDER_FAILED = 10--><!--Device-FormError-ERR_BIND_PROVIDER_FAILED = 10-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -128,6 +148,8 @@ ERR_MAX_SYSTEM_FORMS = 11
 
 **起始版本：** 8
 
+<!--Device-FormError-ERR_MAX_SYSTEM_FORMS = 11--><!--Device-FormError-ERR_MAX_SYSTEM_FORMS = 11-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 ## ERR_MAX_INSTANCES_PER_FORM
@@ -139,6 +161,8 @@ ERR_MAX_INSTANCES_PER_FORM = 12
 每张卡片实例数量超过限制。
 
 **起始版本：** 8
+
+<!--Device-FormError-ERR_MAX_INSTANCES_PER_FORM = 12--><!--Device-FormError-ERR_MAX_INSTANCES_PER_FORM = 12-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -152,6 +176,8 @@ ERR_OPERATION_FORM_NOT_SELF = 13
 
 **起始版本：** 8
 
+<!--Device-FormError-ERR_OPERATION_FORM_NOT_SELF = 13--><!--Device-FormError-ERR_OPERATION_FORM_NOT_SELF = 13-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 ## ERR_PROVIDER_DEL_FAIL
@@ -163,6 +189,8 @@ ERR_PROVIDER_DEL_FAIL = 14
 卡片提供方删除卡片失败。
 
 **起始版本：** 8
+
+<!--Device-FormError-ERR_PROVIDER_DEL_FAIL = 14--><!--Device-FormError-ERR_PROVIDER_DEL_FAIL = 14-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -176,6 +204,8 @@ ERR_MAX_FORMS_PER_CLIENT = 15
 
 **起始版本：** 8
 
+<!--Device-FormError-ERR_MAX_FORMS_PER_CLIENT = 15--><!--Device-FormError-ERR_MAX_FORMS_PER_CLIENT = 15-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 ## ERR_MAX_SYSTEM_TEMP_FORMS
@@ -187,6 +217,8 @@ ERR_MAX_SYSTEM_TEMP_FORMS = 16
 系统临时卡片实例数超过限制。
 
 **起始版本：** 8
+
+<!--Device-FormError-ERR_MAX_SYSTEM_TEMP_FORMS = 16--><!--Device-FormError-ERR_MAX_SYSTEM_TEMP_FORMS = 16-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -200,6 +232,8 @@ ERR_FORM_NO_SUCH_MODULE = 17
 
 **起始版本：** 8
 
+<!--Device-FormError-ERR_FORM_NO_SUCH_MODULE = 17--><!--Device-FormError-ERR_FORM_NO_SUCH_MODULE = 17-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 ## ERR_FORM_NO_SUCH_ABILITY
@@ -211,6 +245,8 @@ ERR_FORM_NO_SUCH_ABILITY = 18
 ability组件不存在。
 
 **起始版本：** 8
+
+<!--Device-FormError-ERR_FORM_NO_SUCH_ABILITY = 18--><!--Device-FormError-ERR_FORM_NO_SUCH_ABILITY = 18-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -224,6 +260,8 @@ ERR_FORM_NO_SUCH_DIMENSION = 19
 
 **起始版本：** 8
 
+<!--Device-FormError-ERR_FORM_NO_SUCH_DIMENSION = 19--><!--Device-FormError-ERR_FORM_NO_SUCH_DIMENSION = 19-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 ## ERR_FORM_FA_NOT_INSTALLED
@@ -235,6 +273,8 @@ ERR_FORM_FA_NOT_INSTALLED = 20
 卡片所在FA未安装。
 
 **起始版本：** 8
+
+<!--Device-FormError-ERR_FORM_FA_NOT_INSTALLED = 20--><!--Device-FormError-ERR_FORM_FA_NOT_INSTALLED = 20-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -248,6 +288,8 @@ ERR_SYSTEM_RESPONSES_FAILED = 30
 
 **起始版本：** 8
 
+<!--Device-FormError-ERR_SYSTEM_RESPONSES_FAILED = 30--><!--Device-FormError-ERR_SYSTEM_RESPONSES_FAILED = 30-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 ## ERR_FORM_DUPLICATE_ADDED
@@ -260,6 +302,8 @@ ERR_FORM_DUPLICATE_ADDED = 31
 
 **起始版本：** 8
 
+<!--Device-FormError-ERR_FORM_DUPLICATE_ADDED = 31--><!--Device-FormError-ERR_FORM_DUPLICATE_ADDED = 31-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 ## ERR_IN_RECOVERY
@@ -271,5 +315,7 @@ ERR_IN_RECOVERY = 36
 卡片处于恢复状态。
 
 **起始版本：** 8
+
+<!--Device-FormError-ERR_IN_RECOVERY = 36--><!--Device-FormError-ERR_IN_RECOVERY = 36-End-->
 
 **系统能力：** SystemCapability.Ability.Form

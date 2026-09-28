@@ -24,7 +24,9 @@ function startAdvertising(setting: AdvertiseSetting, advData: AdvertiseData, adv
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ble-function startAdvertising(setting: AdvertiseSetting, advData: AdvertiseData, advResponse?: AdvertiseData): void--><!--Device-ble-function startAdvertising(setting: AdvertiseSetting, advData: AdvertiseData, advResponse?: AdvertiseData): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -118,6 +120,8 @@ function startAdvertising(advertisingParams: AdvertisingParams, callback: AsyncC
 - API版本11-22：ohos.permission.ACCESS_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ble-function startAdvertising(advertisingParams: AdvertisingParams, callback: AsyncCallback<int>): void--><!--Device-ble-function startAdvertising(advertisingParams: AdvertisingParams, callback: AsyncCallback<int>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -224,6 +228,8 @@ function startAdvertising(advertisingParams: AdvertisingParams): Promise<number>
 - API版本11-22：ohos.permission.ACCESS_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ble-function startAdvertising(advertisingParams: AdvertisingParams): Promise<int>--><!--Device-ble-function startAdvertising(advertisingParams: AdvertisingParams): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

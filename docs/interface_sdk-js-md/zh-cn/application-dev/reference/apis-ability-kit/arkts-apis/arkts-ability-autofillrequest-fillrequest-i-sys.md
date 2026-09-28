@@ -8,6 +8,8 @@ export interface FillRequest
 
 **起始版本：** 11
 
+<!--Device-unnamed-export interface FillRequest--><!--Device-unnamed-export interface FillRequest-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **系统接口：** 此接口为系统接口。
@@ -25,6 +27,8 @@ customData: CustomData
 **起始版本：** 13
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FillRequest-customData: CustomData--><!--Device-FillRequest-customData: CustomData-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -48,6 +52,8 @@ false：当前拉起模态窗。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FillRequest-isPopup: boolean--><!--Device-FillRequest-isPopup: boolean-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **系统接口：** 此接口为系统接口。
@@ -66,7 +72,9 @@ type: AutoFillType
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-FillRequest-type: AutoFillType--><!--Device-FillRequest-type: AutoFillType-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -86,7 +94,9 @@ viewData: ViewData
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-FillRequest-viewData: ViewData--><!--Device-FillRequest-viewData: ViewData-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 

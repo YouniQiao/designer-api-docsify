@@ -14,6 +14,8 @@ For the display effect of each **CounterV2** component type, see [Example 1: Lis
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-declare enum CounterV2Type--><!--Device-unnamed-declare enum CounterV2Type-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## LIST
@@ -29,6 +31,8 @@ List **CounterV2**.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-CounterV2Type-LIST = 0--><!--Device-CounterV2Type-LIST = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,6 +50,8 @@ Compact **CounterV2**.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-CounterV2Type-COMPACT = 1--><!--Device-CounterV2Type-COMPACT = 1-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## INLINE
@@ -62,6 +68,8 @@ Inline number **CounterV2**.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-CounterV2Type-INLINE = 2--><!--Device-CounterV2Type-INLINE = 2-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## INLINE_DATE
@@ -77,5 +85,7 @@ Inline date **CounterV2**.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-CounterV2Type-INLINE_DATE = 3--><!--Device-CounterV2Type-INLINE_DATE = 3-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

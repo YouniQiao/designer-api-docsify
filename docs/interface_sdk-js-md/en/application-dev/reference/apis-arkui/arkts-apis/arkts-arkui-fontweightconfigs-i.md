@@ -8,6 +8,8 @@ Defines font weight configurations. When the configuration object (including an 
 
 **Since:** 24
 
+<!--Device-unnamed-declare interface FontWeightConfigs--><!--Device-unnamed-declare interface FontWeightConfigs-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## enableDeviceFontWeightCategory
@@ -32,6 +34,8 @@ Default value: **true**
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-FontWeightConfigs-enableDeviceFontWeightCategory?: boolean--><!--Device-FontWeightConfigs-enableDeviceFontWeightCategory?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## enableVariableFontWeight
@@ -55,5 +59,7 @@ Default value: **false**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
+
+<!--Device-FontWeightConfigs-enableVariableFontWeight?: boolean--><!--Device-FontWeightConfigs-enableVariableFontWeight?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -26,6 +26,8 @@ function clearSession(sessionId: string): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-cliManager-function clearSession(sessionId: string): Promise<void>--><!--Device-cliManager-function clearSession(sessionId: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 **参数：**

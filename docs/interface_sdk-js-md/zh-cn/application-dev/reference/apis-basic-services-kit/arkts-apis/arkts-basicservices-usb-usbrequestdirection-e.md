@@ -12,6 +12,8 @@ export enum USBRequestDirection
 
 **替代接口：** [USBRequestDirection](arkts-basicservices-usbmanager-usbrequestdirection-e.md)
 
+<!--Device-usb-export enum USBRequestDirection--><!--Device-usb-export enum USBRequestDirection-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## USB_REQUEST_DIR_TO_DEVICE
@@ -28,6 +30,8 @@ USB_REQUEST_DIR_TO_DEVICE = 0
 
 **替代接口：** [USB_REQUEST_DIR_TO_DEVICE](arkts-basicservices-usbmanager-usbrequestdirection-e.md#usb_request_dir_to_device)
 
+<!--Device-USBRequestDirection-USB_REQUEST_DIR_TO_DEVICE = 0--><!--Device-USBRequestDirection-USB_REQUEST_DIR_TO_DEVICE = 0-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## USB_REQUEST_DIR_FROM_DEVICE
@@ -43,5 +47,7 @@ USB_REQUEST_DIR_FROM_DEVICE = 0x80
 **废弃版本：** 9
 
 **替代接口：** [USB_REQUEST_DIR_FROM_DEVICE](arkts-basicservices-usbmanager-usbrequestdirection-e.md#usb_request_dir_from_device)
+
+<!--Device-USBRequestDirection-USB_REQUEST_DIR_FROM_DEVICE = 0x80--><!--Device-USBRequestDirection-USB_REQUEST_DIR_FROM_DEVICE = 0x80-End-->
 
 **系统能力：** SystemCapability.USB.USBManager

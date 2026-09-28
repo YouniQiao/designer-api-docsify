@@ -10,6 +10,8 @@ export default class Geolocation
 
 **替代接口：** [geoLocationManager/geoLocationManager](arkts-location-geolocationmanager.md)
 
+<!--Device-unnamed-export default class Geolocation--><!--Device-unnamed-export default class Geolocation-End-->
+
 **系统能力：** SystemCapability.Location.Location.Lite
 
 ## 导入模块
@@ -36,6 +38,8 @@ static getLocation(options?: GetLocationOption): void
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-Geolocation-static getLocation(options?: GetLocationOption): void--><!--Device-Geolocation-static getLocation(options?: GetLocationOption): void-End-->
+
 **系统能力：** SystemCapability.Location.Location.Lite
 
 **参数：**
@@ -58,6 +62,8 @@ static getLocationType(options?: GetLocationTypeOption): void
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-Geolocation-static getLocationType(options?: GetLocationTypeOption): void--><!--Device-Geolocation-static getLocationType(options?: GetLocationTypeOption): void-End-->
+
 **系统能力：** SystemCapability.Location.Location.Lite
 
 **参数：**
@@ -79,6 +85,8 @@ static getSupportedCoordTypes(): Array<string>
 **废弃版本：** 9
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-Geolocation-static getSupportedCoordTypes(): Array<string>--><!--Device-Geolocation-static getSupportedCoordTypes(): Array<string>-End-->
 
 **系统能力：** SystemCapability.Location.Location.Lite
 
@@ -106,6 +114,8 @@ static subscribe(options: SubscribeLocationOption): void
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-Geolocation-static subscribe(options: SubscribeLocationOption): void--><!--Device-Geolocation-static subscribe(options: SubscribeLocationOption): void-End-->
+
 **系统能力：** SystemCapability.Location.Location.Lite
 
 **参数：**
@@ -131,5 +141,7 @@ static unsubscribe(): void
 **需要权限：** ohos.permission.LOCATION
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-Geolocation-static unsubscribe(): void--><!--Device-Geolocation-static unsubscribe(): void-End-->
 
 **系统能力：** SystemCapability.Location.Location.Lite

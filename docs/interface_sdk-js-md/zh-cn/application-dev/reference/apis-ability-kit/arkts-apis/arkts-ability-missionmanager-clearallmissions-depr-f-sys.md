@@ -21,6 +21,8 @@ function clearAllMissions(callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
+<!--Device-missionManager-function clearAllMissions(callback: AsyncCallback<void>): void--><!--Device-missionManager-function clearAllMissions(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -70,6 +72,8 @@ function clearAllMissions(): Promise<void>
 **替代接口：** [clearAllMissions](arkts-ability-missionmanager-clearallmissions-f-sys.md)
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
+
+<!--Device-missionManager-function clearAllMissions(): Promise<void>--><!--Device-missionManager-function clearAllMissions(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 

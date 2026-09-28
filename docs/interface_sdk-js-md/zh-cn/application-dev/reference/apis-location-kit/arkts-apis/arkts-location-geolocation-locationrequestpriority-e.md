@@ -14,6 +14,8 @@ export enum LocationRequestPriority
 
 **需要权限：** ohos.permission.LOCATION @enum { number }
 
+<!--Device-geolocation-export enum LocationRequestPriority--><!--Device-geolocation-export enum LocationRequestPriority-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 ## UNSET
@@ -29,6 +31,8 @@ UNSET = 0x200
 **废弃版本：** 9
 
 **替代接口：** [UNSET](arkts-location-geolocationmanager-locationrequestpriority-e.md#unset)
+
+<!--Device-LocationRequestPriority-UNSET = 0x200--><!--Device-LocationRequestPriority-UNSET = 0x200-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -46,6 +50,8 @@ ACCURACY
 
 **替代接口：** [ACCURACY](arkts-location-geolocationmanager-locationrequestpriority-e.md#accuracy)
 
+<!--Device-LocationRequestPriority-ACCURACY--><!--Device-LocationRequestPriority-ACCURACY-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 ## LOW_POWER
@@ -62,6 +68,8 @@ LOW_POWER
 
 **替代接口：** [LOW_POWER](arkts-location-geolocationmanager-locationrequestpriority-e.md#low_power)
 
+<!--Device-LocationRequestPriority-LOW_POWER--><!--Device-LocationRequestPriority-LOW_POWER-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 ## FIRST_FIX
@@ -77,5 +85,7 @@ FIRST_FIX
 **废弃版本：** 9
 
 **替代接口：** [FIRST_FIX](arkts-location-geolocationmanager-locationrequestpriority-e.md#first_fix)
+
+<!--Device-LocationRequestPriority-FIRST_FIX--><!--Device-LocationRequestPriority-FIRST_FIX-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core

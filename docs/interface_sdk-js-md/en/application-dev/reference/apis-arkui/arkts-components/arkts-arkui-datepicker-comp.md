@@ -26,6 +26,8 @@ Creates a date picker based on the specified date range. Use cases include appli
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DatePickerInterface-(options?: DatePickerOptions): DatePickerAttribute--><!--Device-DatePickerInterface-(options?: DatePickerOptions): DatePickerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

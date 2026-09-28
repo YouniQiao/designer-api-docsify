@@ -16,6 +16,8 @@
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare namespace distributedDeviceManager--><!--Device-unnamed-declare namespace distributedDeviceManager-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 ## 导入模块

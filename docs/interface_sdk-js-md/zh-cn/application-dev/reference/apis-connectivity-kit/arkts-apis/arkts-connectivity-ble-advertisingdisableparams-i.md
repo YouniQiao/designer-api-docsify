@@ -8,6 +8,8 @@ interface AdvertisingDisableParams
 
 **起始版本：** 11
 
+<!--Device-ble-interface AdvertisingDisableParams--><!--Device-ble-interface AdvertisingDisableParams-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -29,5 +31,7 @@ advertisingId: number
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AdvertisingDisableParams-advertisingId: int--><!--Device-AdvertisingDisableParams-advertisingId: int-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

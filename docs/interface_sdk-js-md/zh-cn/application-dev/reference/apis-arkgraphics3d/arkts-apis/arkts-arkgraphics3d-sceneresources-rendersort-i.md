@@ -10,6 +10,8 @@ export interface RenderSort
 
 **起始版本：** 20
 
+<!--Device-unnamed-export interface RenderSort--><!--Device-unnamed-export interface RenderSort-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## renderSortLayer
@@ -26,6 +28,8 @@ renderSortLayer?: number
 
 **起始版本：** 20
 
+<!--Device-RenderSort-renderSortLayer?: int--><!--Device-RenderSort-renderSortLayer?: int-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## renderSortLayerOrder
@@ -41,5 +45,7 @@ renderSortLayerOrder?: number
 **默认值：** 0
 
 **起始版本：** 20
+
+<!--Device-RenderSort-renderSortLayerOrder?: int--><!--Device-RenderSort-renderSortLayerOrder?: int-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

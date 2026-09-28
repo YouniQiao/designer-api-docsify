@@ -18,6 +18,8 @@ function list(logType: string): LogEntry[]
 
 **需要权限：** ohos.permission.READ_HIVIEW_SYSTEM
 
+<!--Device-logLibrary-function list(logType: string): LogEntry[]--><!--Device-logLibrary-function list(logType: string): LogEntry[]-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.Hiview.LogLibrary
 
 **系统接口：** 此接口为系统接口。

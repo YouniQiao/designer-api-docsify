@@ -13,6 +13,8 @@ interface CmsParser
 
 **起始版本：** 22
 
+<!--Device-cert-interface CmsParser--><!--Device-cert-interface CmsParser-End-->
+
 **系统能力：** SystemCapability.Security.Cert
 
 ## 导入模块
@@ -31,7 +33,9 @@ decryptEnvelopedData(config: CmsEnvelopedDecryptionConfig): Promise<Uint8Array>
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-CmsParser-decryptEnvelopedData(config: CmsEnvelopedDecryptionConfig): Promise<Uint8Array>--><!--Device-CmsParser-decryptEnvelopedData(config: CmsEnvelopedDecryptionConfig): Promise<Uint8Array>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -150,7 +154,9 @@ getCerts(type: CmsCertType): Promise<Array<X509Cert>>
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-CmsParser-getCerts(type: CmsCertType): Promise<Array<X509Cert>>--><!--Device-CmsParser-getCerts(type: CmsCertType): Promise<Array<X509Cert>>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -302,7 +308,9 @@ getContentData(): Promise<Uint8Array>
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-CmsParser-getContentData(): Promise<Uint8Array>--><!--Device-CmsParser-getContentData(): Promise<Uint8Array>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -445,7 +453,9 @@ getContentType(): CmsContentType
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-CmsParser-getContentType(): CmsContentType--><!--Device-CmsParser-getContentType(): CmsContentType-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -593,7 +603,9 @@ setRawData(data: Uint8Array | string, cmsFormat: CmsFormat): Promise<void>
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-CmsParser-setRawData(data: Uint8Array | string, cmsFormat: CmsFormat): Promise<void>--><!--Device-CmsParser-setRawData(data: Uint8Array | string, cmsFormat: CmsFormat): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -743,7 +755,9 @@ verifySignedData(config: CmsVerificationConfig): Promise<void>
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-CmsParser-verifySignedData(config: CmsVerificationConfig): Promise<void>--><!--Device-CmsParser-verifySignedData(config: CmsVerificationConfig): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 

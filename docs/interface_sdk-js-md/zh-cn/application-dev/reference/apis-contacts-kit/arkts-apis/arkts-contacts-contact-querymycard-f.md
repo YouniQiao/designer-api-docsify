@@ -22,6 +22,8 @@ function queryMyCard(callback: AsyncCallback<Contact>): void
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryMyCard(callback: AsyncCallback<Contact>): void--><!--Device-contact-function queryMyCard(callback: AsyncCallback<Contact>): void-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 **参数：**
@@ -60,6 +62,8 @@ function queryMyCard(context: Context, callback: AsyncCallback<Contact>): void
 **起始版本：** 10
 
 **需要权限：** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryMyCard(context: Context, callback: AsyncCallback<Contact>): void--><!--Device-contact-function queryMyCard(context: Context, callback: AsyncCallback<Contact>): void-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -118,6 +122,8 @@ function queryMyCard(attrs: ContactAttributes, callback: AsyncCallback<Contact>)
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryMyCard(attrs: ContactAttributes, callback: AsyncCallback<Contact>): void--><!--Device-contact-function queryMyCard(attrs: ContactAttributes, callback: AsyncCallback<Contact>): void-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 **参数：**
@@ -159,6 +165,8 @@ function queryMyCard(context: Context, attrs: ContactAttributes, callback: Async
 **起始版本：** 10
 
 **需要权限：** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryMyCard(context: Context, attrs: ContactAttributes, callback: AsyncCallback<Contact>): void--><!--Device-contact-function queryMyCard(context: Context, attrs: ContactAttributes, callback: AsyncCallback<Contact>): void-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -220,6 +228,8 @@ function queryMyCard(attrs?: ContactAttributes): Promise<Contact>
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryMyCard(attrs?: ContactAttributes): Promise<Contact>--><!--Device-contact-function queryMyCard(attrs?: ContactAttributes): Promise<Contact>-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 **参数：**
@@ -262,6 +272,8 @@ function queryMyCard(context: Context, attrs?: ContactAttributes): Promise<Conta
 **起始版本：** 10
 
 **需要权限：** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryMyCard(context: Context, attrs?: ContactAttributes): Promise<Contact>--><!--Device-contact-function queryMyCard(context: Context, attrs?: ContactAttributes): Promise<Contact>-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 

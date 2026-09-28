@@ -29,6 +29,8 @@ function grantUriPermission(
 
 **需要权限：** ohos.permission.PROXY_AUTHORIZATION_URI
 
+<!--Device-uriPermissionManager-function grantUriPermission(    uri: string,    flag: wantConstant.Flags,    targetBundleName: string,    callback: AsyncCallback<number>  ): void--><!--Device-uriPermissionManager-function grantUriPermission(    uri: string,    flag: wantConstant.Flags,    targetBundleName: string,    callback: AsyncCallback<number>  ): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -103,6 +105,8 @@ function grantUriPermission(uri: string, flag: wantConstant.Flags, targetBundleN
 **起始版本：** 10
 
 **需要权限：** ohos.permission.PROXY_AUTHORIZATION_URI
+
+<!--Device-uriPermissionManager-function grantUriPermission(uri: string, flag: wantConstant.Flags, targetBundleName: string): Promise<number>--><!--Device-uriPermissionManager-function grantUriPermission(uri: string, flag: wantConstant.Flags, targetBundleName: string): Promise<number>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -185,6 +189,8 @@ function grantUriPermission(uri: string, flag: wantConstant.Flags, targetBundleN
 **起始版本：** 14
 
 **需要权限：** ohos.permission.PROXY_AUTHORIZATION_URI
+
+<!--Device-uriPermissionManager-function grantUriPermission(uri: string, flag: wantConstant.Flags, targetBundleName: string, appCloneIndex: int): Promise<void>--><!--Device-uriPermissionManager-function grantUriPermission(uri: string, flag: wantConstant.Flags, targetBundleName: string, appCloneIndex: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

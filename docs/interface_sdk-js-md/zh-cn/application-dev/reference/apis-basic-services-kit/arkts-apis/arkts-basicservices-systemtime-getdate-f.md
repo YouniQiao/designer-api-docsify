@@ -20,6 +20,8 @@ function getDate(callback: AsyncCallback<Date>): void
 
 **替代接口：** [getDate](arkts-basicservices-systemdatetime-getdate-f.md)
 
+<!--Device-systemTime-function getDate(callback: AsyncCallback<Date>): void--><!--Device-systemTime-function getDate(callback: AsyncCallback<Date>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Time
 
 **参数：**
@@ -69,6 +71,8 @@ function getDate(): Promise<Date>
 **废弃版本：** 9
 
 **替代接口：** [getDate](arkts-basicservices-systemdatetime-getdate-f.md)
+
+<!--Device-systemTime-function getDate(): Promise<Date>--><!--Device-systemTime-function getDate(): Promise<Date>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Time
 

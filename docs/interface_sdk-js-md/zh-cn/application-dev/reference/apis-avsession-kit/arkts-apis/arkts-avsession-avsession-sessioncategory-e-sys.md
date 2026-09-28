@@ -10,6 +10,8 @@ enum SessionCategory
 
 **起始版本：** 22
 
+<!--Device-avSession-enum SessionCategory--><!--Device-avSession-enum SessionCategory-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 
 **系统接口：** 此接口为系统接口。
@@ -23,6 +25,8 @@ CATEGORY_ACTIVE = 1
 允许在系统控制入口显示的会话类别。
 
 **起始版本：** 22
+
+<!--Device-SessionCategory-CATEGORY_ACTIVE = 1--><!--Device-SessionCategory-CATEGORY_ACTIVE = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 
@@ -38,6 +42,8 @@ CATEGORY_NOT_ACTIVE = 2
 
 **起始版本：** 22
 
+<!--Device-SessionCategory-CATEGORY_NOT_ACTIVE = 2--><!--Device-SessionCategory-CATEGORY_NOT_ACTIVE = 2-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +57,8 @@ CATEGORY_ALL = 3
 所有会话类别。
 
 **起始版本：** 22
+
+<!--Device-SessionCategory-CATEGORY_ALL = 3--><!--Device-SessionCategory-CATEGORY_ALL = 3-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 
@@ -67,6 +75,8 @@ CATEGORY_HIPLAY = 4
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SessionCategory-CATEGORY_HIPLAY = 4--><!--Device-SessionCategory-CATEGORY_HIPLAY = 4-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 

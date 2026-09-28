@@ -18,6 +18,8 @@ function getDLPSuffix(): string
 
 **起始版本：** 10
 
+<!--Device-dlpPermission-function getDLPSuffix(): string--><!--Device-dlpPermission-function getDLPSuffix(): string-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **测试接口：** 此接口仅在自动化测试脚本中使用。

@@ -8,6 +8,8 @@ Options of the **@Provide** decorator. You can use **allowOverride** to override
 
 **Since:** 11
 
+<!--Device-unnamed-declare interface ProvideOptions--><!--Device-unnamed-declare interface ProvideOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## allowOverride
@@ -27,5 +29,7 @@ Alias of an **@Provide** decorated variable that can be overridden. In detail, y
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
+
+<!--Device-ProvideOptions-allowOverride?: string--><!--Device-ProvideOptions-allowOverride?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

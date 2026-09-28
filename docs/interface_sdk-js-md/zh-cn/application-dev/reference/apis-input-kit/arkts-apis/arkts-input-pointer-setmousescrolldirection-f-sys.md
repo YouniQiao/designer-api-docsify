@@ -18,6 +18,8 @@ function setMouseScrollDirection(inverted: boolean): Promise<void>
 
 **需要权限：** ohos.permission.INPUT_DEVICE_CONTROLLER
 
+<!--Device-pointer-function setMouseScrollDirection(inverted: boolean): Promise<void>--><!--Device-pointer-function setMouseScrollDirection(inverted: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 **系统接口：** 此接口为系统接口。

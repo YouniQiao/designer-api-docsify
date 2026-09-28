@@ -26,6 +26,8 @@ function createImageCreator(width: number, height: number, format: number, capac
 
 **替代接口：** [createImageCreator](arkts-image-image-createimagecreator-f.md)(size: Size, format: ImageFormat, capacity: number)
 
+<!--Device-image-function createImageCreator(width: number, height: number, format: number, capacity: number): ImageCreator--><!--Device-image-function createImageCreator(width: number, height: number, format: number, capacity: number): ImageCreator-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageCreator
 
 **参数：**
@@ -63,6 +65,8 @@ function createImageCreator(size: Size, format: ImageFormat, capacity: number): 
 由于图片占用内存较大，所以当ImageCreator实例使用完成后，应主动调用[release](arkts-image-image-imagecreator-i.md#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 **起始版本：** 11
+
+<!--Device-image-function createImageCreator(size: Size, format: ImageFormat, capacity: int): ImageCreator--><!--Device-image-function createImageCreator(size: Size, format: ImageFormat, capacity: int): ImageCreator-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageCreator
 

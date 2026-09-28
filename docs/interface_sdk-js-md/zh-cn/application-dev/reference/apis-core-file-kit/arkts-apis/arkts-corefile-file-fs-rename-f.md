@@ -22,6 +22,8 @@ declare function rename(oldPath: string, newPath: string): Promise<void>
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-unnamed-declare function rename(oldPath: string, newPath: string): Promise<void>--><!--Device-unnamed-declare function rename(oldPath: string, newPath: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -79,6 +81,8 @@ declare function rename(oldPath: string, newPath: string, callback: AsyncCallbac
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-unnamed-declare function rename(oldPath: string, newPath: string, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function rename(oldPath: string, newPath: string, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

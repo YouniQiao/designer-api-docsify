@@ -8,6 +8,8 @@ export interface UserdataDirInfo
 
 **起始版本：** 23
 
+<!--Device-storageStatistics-export interface UserdataDirInfo--><!--Device-storageStatistics-export interface UserdataDirInfo-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ path: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UserdataDirInfo-path: string--><!--Device-UserdataDirInfo-path: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
 **系统接口：** 此接口为系统接口。
@@ -50,6 +54,8 @@ totalCnt: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UserdataDirInfo-totalCnt: int--><!--Device-UserdataDirInfo-totalCnt: int-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
 **系统接口：** 此接口为系统接口。
@@ -67,6 +73,8 @@ totalSize: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UserdataDirInfo-totalSize: long--><!--Device-UserdataDirInfo-totalSize: long-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 

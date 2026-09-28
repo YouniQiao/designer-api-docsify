@@ -20,6 +20,8 @@ function releaseInterface(pipe: USBDevicePipe, iface: USBInterface): number
 
 **起始版本：** 9
 
+<!--Device-usbManager-function releaseInterface(pipe: USBDevicePipe, iface: USBInterface): int--><!--Device-usbManager-function releaseInterface(pipe: USBDevicePipe, iface: USBInterface): int-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 **参数：**

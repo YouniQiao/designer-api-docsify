@@ -19,6 +19,8 @@ function getAbilityDelegator(): AbilityDelegator
 
 **替代接口：** [getAbilityDelegator](arkts-test-abilitydelegatorregistry-getabilitydelegator-f.md)
 
+<!--Device-abilityDelegatorRegistry-function getAbilityDelegator(): AbilityDelegator--><!--Device-abilityDelegatorRegistry-function getAbilityDelegator(): AbilityDelegator-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **返回值：**

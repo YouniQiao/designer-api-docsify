@@ -20,6 +20,8 @@ function end(id: HiTraceId): void
 
 **起始版本：** 8
 
+<!--Device-hiTraceChain-function end(id: HiTraceId): void--><!--Device-hiTraceChain-function end(id: HiTraceId): void-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
 
 **参数：**

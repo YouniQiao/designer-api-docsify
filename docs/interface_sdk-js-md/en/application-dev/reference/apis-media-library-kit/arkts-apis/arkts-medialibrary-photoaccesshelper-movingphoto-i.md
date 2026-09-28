@@ -8,6 +8,8 @@ MovingPhoto provides APIs for managing a moving photo instance.
 
 **Since:** 12
 
+<!--Device-photoAccessHelper-interface MovingPhoto--><!--Device-photoAccessHelper-interface MovingPhoto-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
@@ -27,6 +29,8 @@ Obtains the URI of this moving photo.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MovingPhoto-getUri(): string--><!--Device-MovingPhoto-getUri(): string-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -99,7 +103,9 @@ Requests the image data and video data of this moving photo and writes them to t
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-MovingPhoto-requestContent(imageFileUri: string, videoFileUri: string): Promise<void>--><!--Device-MovingPhoto-requestContent(imageFileUri: string, videoFileUri: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -194,7 +200,9 @@ Requests the moving photo content of the specified resource type and writes it t
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-MovingPhoto-requestContent(resourceType: ResourceType, fileUri: string): Promise<void>--><!--Device-MovingPhoto-requestContent(resourceType: ResourceType, fileUri: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -284,7 +292,9 @@ Requests the moving photo content of the specified resource type and returns it 
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-MovingPhoto-requestContent(resourceType: ResourceType): Promise<ArrayBuffer>--><!--Device-MovingPhoto-requestContent(resourceType: ResourceType): Promise<ArrayBuffer>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

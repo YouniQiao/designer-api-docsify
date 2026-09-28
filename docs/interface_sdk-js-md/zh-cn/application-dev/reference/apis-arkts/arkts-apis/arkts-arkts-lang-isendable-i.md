@@ -14,6 +14,8 @@ ISendable主要用在开发者自定义Sendable数据结构的场景中。ArkTS�
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-lang-interface ISendable--><!--Device-lang-interface ISendable-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块

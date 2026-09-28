@@ -21,6 +21,8 @@ function isNotificationEnabled(bundle: BundleOption, callback: AsyncCallback<boo
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notification-function isNotificationEnabled(bundle: BundleOption, callback: AsyncCallback<boolean>): void--><!--Device-notification-function isNotificationEnabled(bundle: BundleOption, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -50,6 +52,8 @@ function isNotificationEnabled(bundle: BundleOption): Promise<boolean>
 **替代接口：** [isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f.md)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notification-function isNotificationEnabled(bundle: BundleOption): Promise<boolean>--><!--Device-notification-function isNotificationEnabled(bundle: BundleOption): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -86,6 +90,8 @@ function isNotificationEnabled(callback: AsyncCallback<boolean>): void
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notification-function isNotificationEnabled(callback: AsyncCallback<boolean>): void--><!--Device-notification-function isNotificationEnabled(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -114,6 +120,8 @@ function isNotificationEnabled(): Promise<boolean>
 **替代接口：** [isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f.md)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notification-function isNotificationEnabled(): Promise<boolean>--><!--Device-notification-function isNotificationEnabled(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -144,6 +152,8 @@ function isNotificationEnabled(userId: number, callback: AsyncCallback<boolean>)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notification-function isNotificationEnabled(userId: number, callback: AsyncCallback<boolean>): void--><!--Device-notification-function isNotificationEnabled(userId: number, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -173,6 +183,8 @@ function isNotificationEnabled(userId: number): Promise<boolean>
 **替代接口：** [isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f.md)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notification-function isNotificationEnabled(userId: number): Promise<boolean>--><!--Device-notification-function isNotificationEnabled(userId: number): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

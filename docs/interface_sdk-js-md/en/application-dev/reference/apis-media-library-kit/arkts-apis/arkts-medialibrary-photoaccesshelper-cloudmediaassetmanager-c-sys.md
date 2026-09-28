@@ -8,6 +8,8 @@ A class used for cloud media asset management. It is used to manage download tas
 
 **Since:** 14
 
+<!--Device-photoAccessHelper-class CloudMediaAssetManager--><!--Device-photoAccessHelper-class CloudMediaAssetManager-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -29,6 +31,8 @@ Cancels a task that downloads cloud media assets.
 **Since:** 14
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC_MANAGER
+
+<!--Device-CloudMediaAssetManager-cancelDownloadCloudMedia(): Promise<void>--><!--Device-CloudMediaAssetManager-cancelDownloadCloudMedia(): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -74,6 +78,8 @@ Cancels a batch download for the specified cloud media assets. This API uses a p
 **Since:** 21
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-CloudMediaAssetManager-cancelDownloadSpecificCloudMedia(assetUris: string[] | null): Promise<void>--><!--Device-CloudMediaAssetManager-cancelDownloadSpecificCloudMedia(assetUris: string[] | null): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -127,6 +133,8 @@ Obtains a CloudMediaAssetManager instance.
 
 **Since:** 14
 
+<!--Device-CloudMediaAssetManager-static getCloudMediaAssetManagerInstance(context: Context): CloudMediaAssetManager--><!--Device-CloudMediaAssetManager-static getCloudMediaAssetManagerInstance(context: Context): CloudMediaAssetManager-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -178,6 +186,8 @@ Obtains the status of a task that downloads cloud media assets.
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-CloudMediaAssetManager-getCloudMediaAssetStatus(): Promise<CloudMediaAssetStatus>--><!--Device-CloudMediaAssetManager-getCloudMediaAssetStatus(): Promise<CloudMediaAssetStatus>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -228,6 +238,8 @@ Unregisters a callback to monitor changes in the progress of a batch download fo
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-CloudMediaAssetManager-offDownloadProgressChange(callback?: Callback<CloudAssetDownloadProgressInfo>): void--><!--Device-CloudMediaAssetManager-offDownloadProgressChange(callback?: Callback<CloudAssetDownloadProgressInfo>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -272,6 +284,8 @@ Registers a callback to monitor changes in the progress of a batch download for 
 **Since:** 21
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-CloudMediaAssetManager-onDownloadProgressChange(callback: Callback<CloudAssetDownloadProgressInfo>): void--><!--Device-CloudMediaAssetManager-onDownloadProgressChange(callback: Callback<CloudAssetDownloadProgressInfo>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -322,6 +336,8 @@ Suspends a task that downloads cloud media assets.
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
+<!--Device-CloudMediaAssetManager-pauseDownloadCloudMedia(): Promise<void>--><!--Device-CloudMediaAssetManager-pauseDownloadCloudMedia(): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -366,6 +382,8 @@ Pauses a batch download for the specified cloud media assets. This API uses a pr
 **Since:** 21
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-CloudMediaAssetManager-pauseDownloadSpecificCloudMedia(assetUris: string[] | null): Promise<void>--><!--Device-CloudMediaAssetManager-pauseDownloadSpecificCloudMedia(assetUris: string[] | null): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -420,6 +438,8 @@ Obtains the details of a batch download for cloud media assets. This API uses a 
 **Since:** 21
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-CloudMediaAssetManager-queryDownloadSpecificCloudMediaDetails(predicates: dataSharePredicates.DataSharePredicates): Promise<CloudAssetDownloadStatus>--><!--Device-CloudMediaAssetManager-queryDownloadSpecificCloudMediaDetails(predicates: dataSharePredicates.DataSharePredicates): Promise<CloudAssetDownloadStatus>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -477,6 +497,8 @@ Obtains the number of batch download tasks for cloud media assets. This API uses
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-CloudMediaAssetManager-queryDownloadSpecificCloudMediaTaskCount(predicates: dataSharePredicates.DataSharePredicates): Promise<int>--><!--Device-CloudMediaAssetManager-queryDownloadSpecificCloudMediaTaskCount(predicates: dataSharePredicates.DataSharePredicates): Promise<int>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -533,6 +555,8 @@ Resumes a batch download for the specified cloud media assets. This API uses a p
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-CloudMediaAssetManager-resumeDownloadSpecificCloudMedia(assetUris: string[] | null): Promise<void>--><!--Device-CloudMediaAssetManager-resumeDownloadSpecificCloudMedia(assetUris: string[] | null): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -587,6 +611,8 @@ Deletes local metadata and files of cloud media assets.
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
+<!--Device-CloudMediaAssetManager-retainCloudMediaAsset(retainType: CloudMediaRetainType): Promise<void>--><!--Device-CloudMediaAssetManager-retainCloudMediaAsset(retainType: CloudMediaRetainType): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -639,6 +665,8 @@ Starts or resumes a task to download cloud media assets.
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
+<!--Device-CloudMediaAssetManager-startDownloadCloudMedia(downloadType: CloudMediaDownloadType): Promise<void>--><!--Device-CloudMediaAssetManager-startDownloadCloudMedia(downloadType: CloudMediaDownloadType): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -690,6 +718,8 @@ Starts a batch download for the specified cloud media assets. This API uses a pr
 **Since:** 21
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-CloudMediaAssetManager-startDownloadSpecificCloudMedia(assetUris: string[]): Promise<Map<string, CloudAssetDownloadCode>>--><!--Device-CloudMediaAssetManager-startDownloadSpecificCloudMedia(assetUris: string[]): Promise<Map<string, CloudAssetDownloadCode>>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

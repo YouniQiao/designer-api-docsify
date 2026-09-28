@@ -8,6 +8,8 @@ export enum ResponseCode
 
 **起始版本：** 6
 
+<!--Device-http-export enum ResponseCode--><!--Device-http-export enum ResponseCode-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## OK
@@ -20,7 +22,9 @@ OK = 200
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ResponseCode-OK = 200--><!--Device-ResponseCode-OK = 200-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -34,7 +38,9 @@ CREATED = 201
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ResponseCode-CREATED = 201--><!--Device-ResponseCode-CREATED = 201-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -48,7 +54,9 @@ ACCEPTED = 202
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ResponseCode-ACCEPTED = 202--><!--Device-ResponseCode-ACCEPTED = 202-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -62,7 +70,9 @@ NOT_AUTHORITATIVE = 203
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ResponseCode-NOT_AUTHORITATIVE = 203--><!--Device-ResponseCode-NOT_AUTHORITATIVE = 203-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -76,7 +86,9 @@ NO_CONTENT = 204
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ResponseCode-NO_CONTENT = 204--><!--Device-ResponseCode-NO_CONTENT = 204-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -90,7 +102,9 @@ RESET = 205
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ResponseCode-RESET = 205--><!--Device-ResponseCode-RESET = 205-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -104,7 +118,9 @@ PARTIAL = 206
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ResponseCode-PARTIAL = 206--><!--Device-ResponseCode-PARTIAL = 206-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -118,7 +134,9 @@ MULT_CHOICE = 300
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ResponseCode-MULT_CHOICE = 300--><!--Device-ResponseCode-MULT_CHOICE = 300-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -132,7 +150,9 @@ MOVED_PERM = 301
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ResponseCode-MOVED_PERM = 301--><!--Device-ResponseCode-MOVED_PERM = 301-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -146,7 +166,9 @@ MOVED_TEMP = 302
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ResponseCode-MOVED_TEMP = 302--><!--Device-ResponseCode-MOVED_TEMP = 302-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -160,7 +182,9 @@ SEE_OTHER = 303
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ResponseCode-SEE_OTHER = 303--><!--Device-ResponseCode-SEE_OTHER = 303-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -174,7 +198,9 @@ NOT_MODIFIED = 304
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ResponseCode-NOT_MODIFIED = 304--><!--Device-ResponseCode-NOT_MODIFIED = 304-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -188,7 +214,9 @@ USE_PROXY = 305
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ResponseCode-USE_PROXY = 305--><!--Device-ResponseCode-USE_PROXY = 305-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -202,7 +230,9 @@ BAD_REQUEST = 400
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ResponseCode-BAD_REQUEST = 400--><!--Device-ResponseCode-BAD_REQUEST = 400-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -216,7 +246,9 @@ UNAUTHORIZED = 401
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ResponseCode-UNAUTHORIZED = 401--><!--Device-ResponseCode-UNAUTHORIZED = 401-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -230,7 +262,9 @@ PAYMENT_REQUIRED = 402
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ResponseCode-PAYMENT_REQUIRED = 402--><!--Device-ResponseCode-PAYMENT_REQUIRED = 402-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -244,7 +278,9 @@ FORBIDDEN = 403
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ResponseCode-FORBIDDEN = 403--><!--Device-ResponseCode-FORBIDDEN = 403-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -258,7 +294,9 @@ NOT_FOUND = 404
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ResponseCode-NOT_FOUND = 404--><!--Device-ResponseCode-NOT_FOUND = 404-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -272,7 +310,9 @@ BAD_METHOD = 405
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ResponseCode-BAD_METHOD = 405--><!--Device-ResponseCode-BAD_METHOD = 405-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -286,7 +326,9 @@ NOT_ACCEPTABLE = 406
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ResponseCode-NOT_ACCEPTABLE = 406--><!--Device-ResponseCode-NOT_ACCEPTABLE = 406-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -300,7 +342,9 @@ PROXY_AUTH = 407
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ResponseCode-PROXY_AUTH = 407--><!--Device-ResponseCode-PROXY_AUTH = 407-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -314,7 +358,9 @@ CLIENT_TIMEOUT = 408
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ResponseCode-CLIENT_TIMEOUT = 408--><!--Device-ResponseCode-CLIENT_TIMEOUT = 408-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -328,7 +374,9 @@ CONFLICT = 409
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ResponseCode-CONFLICT = 409--><!--Device-ResponseCode-CONFLICT = 409-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -342,7 +390,9 @@ GONE = 410
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ResponseCode-GONE = 410--><!--Device-ResponseCode-GONE = 410-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -356,7 +406,9 @@ LENGTH_REQUIRED = 411
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ResponseCode-LENGTH_REQUIRED = 411--><!--Device-ResponseCode-LENGTH_REQUIRED = 411-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -370,7 +422,9 @@ PRECON_FAILED = 412
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ResponseCode-PRECON_FAILED = 412--><!--Device-ResponseCode-PRECON_FAILED = 412-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -384,7 +438,9 @@ ENTITY_TOO_LARGE = 413
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ResponseCode-ENTITY_TOO_LARGE = 413--><!--Device-ResponseCode-ENTITY_TOO_LARGE = 413-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -398,7 +454,9 @@ REQ_TOO_LONG = 414
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ResponseCode-REQ_TOO_LONG = 414--><!--Device-ResponseCode-REQ_TOO_LONG = 414-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -412,7 +470,9 @@ UNSUPPORTED_TYPE = 415
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ResponseCode-UNSUPPORTED_TYPE = 415--><!--Device-ResponseCode-UNSUPPORTED_TYPE = 415-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -428,6 +488,8 @@ RANGE_NOT_SATISFIABLE = 416
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-ResponseCode-RANGE_NOT_SATISFIABLE = 416--><!--Device-ResponseCode-RANGE_NOT_SATISFIABLE = 416-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## INTERNAL_ERROR
@@ -440,7 +502,9 @@ INTERNAL_ERROR = 500
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ResponseCode-INTERNAL_ERROR = 500--><!--Device-ResponseCode-INTERNAL_ERROR = 500-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -454,7 +518,9 @@ NOT_IMPLEMENTED = 501
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ResponseCode-NOT_IMPLEMENTED = 501--><!--Device-ResponseCode-NOT_IMPLEMENTED = 501-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -468,7 +534,9 @@ BAD_GATEWAY = 502
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ResponseCode-BAD_GATEWAY = 502--><!--Device-ResponseCode-BAD_GATEWAY = 502-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -482,7 +550,9 @@ UNAVAILABLE = 503
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ResponseCode-UNAVAILABLE = 503--><!--Device-ResponseCode-UNAVAILABLE = 503-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -496,7 +566,9 @@ GATEWAY_TIMEOUT = 504
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ResponseCode-GATEWAY_TIMEOUT = 504--><!--Device-ResponseCode-GATEWAY_TIMEOUT = 504-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -510,6 +582,8 @@ VERSION = 505
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ResponseCode-VERSION = 505--><!--Device-ResponseCode-VERSION = 505-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack

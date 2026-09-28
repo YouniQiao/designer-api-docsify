@@ -4,6 +4,8 @@ The quickFixManager module provides APIs for quick fix. With quick fix, you can 
 
 **Since:** 9
 
+<!--Device-unnamed-declare namespace quickFixManager--><!--Device-unnamed-declare namespace quickFixManager-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.QuickFix
 
 **System API:** This is a system API.

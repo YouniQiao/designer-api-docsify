@@ -16,6 +16,8 @@ function getDeviceAltitude(seaPressure: number, currentPressure: number, callbac
 
 **起始版本：** 9
 
+<!--Device-sensor-function getDeviceAltitude(seaPressure: double, currentPressure: double, callback: AsyncCallback<double>): void--><!--Device-sensor-function getDeviceAltitude(seaPressure: double, currentPressure: double, callback: AsyncCallback<double>): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -68,6 +70,8 @@ function getDeviceAltitude(seaPressure: number, currentPressure: number): Promis
 根据气压值获取海拔高度。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-sensor-function getDeviceAltitude(seaPressure: double, currentPressure: double): Promise<double>--><!--Device-sensor-function getDeviceAltitude(seaPressure: double, currentPressure: double): Promise<double>-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 

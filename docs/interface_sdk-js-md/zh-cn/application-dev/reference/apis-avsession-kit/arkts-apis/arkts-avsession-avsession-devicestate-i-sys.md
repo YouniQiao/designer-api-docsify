@@ -8,6 +8,8 @@ interface DeviceState
 
 **起始版本：** 20
 
+<!--Device-avSession-interface DeviceState--><!--Device-avSession-interface DeviceState-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ readonly deviceId: string
 
 **起始版本：** 20
 
+<!--Device-DeviceState-readonly deviceId: string--><!--Device-DeviceState-readonly deviceId: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ readonly deviceState: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-DeviceState-readonly deviceState: int--><!--Device-DeviceState-readonly deviceState: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -62,6 +68,8 @@ readonly radarErrorCode: number
 
 **起始版本：** 20
 
+<!--Device-DeviceState-readonly radarErrorCode: int--><!--Device-DeviceState-readonly radarErrorCode: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +85,8 @@ readonly reasonCode: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-DeviceState-readonly reasonCode: int--><!--Device-DeviceState-readonly reasonCode: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 

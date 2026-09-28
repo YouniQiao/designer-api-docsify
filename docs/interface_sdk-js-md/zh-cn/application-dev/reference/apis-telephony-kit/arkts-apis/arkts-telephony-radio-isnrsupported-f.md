@@ -16,6 +16,8 @@ function isNRSupported(): boolean
 
 **起始版本：** 9
 
+<!--Device-radio-function isNRSupported(): boolean--><!--Device-radio-function isNRSupported(): boolean-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **返回值：**
@@ -43,6 +45,8 @@ function isNRSupported(slotId: number): boolean
 判断当前设备是否支持NR(New Radio)。
 
 **起始版本：** 9
+
+<!--Device-radio-function isNRSupported(slotId: int): boolean--><!--Device-radio-function isNRSupported(slotId: int): boolean-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

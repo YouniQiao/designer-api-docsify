@@ -14,7 +14,7 @@ ForEach(
   )
 ```
 
-This API must be used together with a container component, and the components returned by the API must be child components that are allowed to be contained in the **ForEach** parent container component. For example, the [ListItem](arkts-arkui-listitem-comp.md#list_item) component requires that the parent container component of **ForEach** must be a [List](arkts-arkui-list-comp.md#list) component or a [ListItemGroup](arkts-arkui-listitemgroup-comp.md#list_item_group) component.
+This API must be used together with a container component, and the components returned by the API must be child components that are allowed to be contained in the **ForEach** parent container component. For example, the [ListItem](arkts-arkui-listitem-comp.md) component requires that the parent container component of **ForEach** must be a [List](arkts-arkui-list-comp.md) component or a [ListItemGroup](arkts-arkui-listitemgroup-comp.md) component.
 
 **Since:** 7
 
@@ -23,6 +23,8 @@ This API must be used together with a container component, and the components re
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-ForEachInterface-(    arr: Array<any>,    itemGenerator: (item: any, index: number) => void,    keyGenerator?: (item: any, index: number) => string,  ): ForEachAttribute--><!--Device-ForEachInterface-(    arr: Array<any>,    itemGenerator: (item: any, index: number) => void,    keyGenerator?: (item: any, index: number) => string,  ): ForEachAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

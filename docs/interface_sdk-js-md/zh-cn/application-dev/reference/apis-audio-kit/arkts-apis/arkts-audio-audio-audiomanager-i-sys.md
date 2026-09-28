@@ -8,6 +8,8 @@ interface AudioManager
 
 **起始版本：** 7
 
+<!--Device-audio-interface AudioManager--><!--Device-audio-interface AudioManager-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## 导入模块
@@ -27,6 +29,8 @@ disableSafeMediaVolume(): Promise<void>
 **起始版本：** 12
 
 **需要权限：** ohos.permission.MODIFY_AUDIO_SETTINGS
+
+<!--Device-AudioManager-disableSafeMediaVolume(): Promise<void>--><!--Device-AudioManager-disableSafeMediaVolume(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -67,6 +71,8 @@ getCollaborativeManager(): AudioCollaborativeManager
 
 **起始版本：** 20
 
+<!--Device-AudioManager-getCollaborativeManager(): AudioCollaborativeManager--><!--Device-AudioManager-getCollaborativeManager(): AudioCollaborativeManager-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **系统接口：** 此接口为系统接口。
@@ -92,6 +98,8 @@ getEffectManager(): AudioEffectManager
 获取音效会话管理器。
 
 **起始版本：** 18
+
+<!--Device-AudioManager-getEffectManager(): AudioEffectManager--><!--Device-AudioManager-getEffectManager(): AudioEffectManager-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -126,6 +134,8 @@ getExtraParameters(mainKey: string, subKeys?: Array<string>): Promise<Record<str
 获取指定音频参数值，适用于查询设备特定音频参数的场景，参数通常由调用者与系统底层共同约定。使用Promise异步回调。
 
 **起始版本：** 11
+
+<!--Device-AudioManager-getExtraParameters(mainKey: string, subKeys?: Array<string>): Promise<Record<string, string>>--><!--Device-AudioManager-getExtraParameters(mainKey: string, subKeys?: Array<string>): Promise<Record<string, string>>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -175,6 +185,8 @@ setAudioScene(scene: AudioScene, callback: AsyncCallback<void> ): void
 
 **起始版本：** 8
 
+<!--Device-AudioManager-setAudioScene(scene: AudioScene, callback: AsyncCallback<void> ): void--><!--Device-AudioManager-setAudioScene(scene: AudioScene, callback: AsyncCallback<void> ): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Communication
 
 **系统接口：** 此接口为系统接口。
@@ -211,6 +223,8 @@ setAudioScene(scene: AudioScene): Promise<void>
 设置音频场景模式。使用Promise异步回调。
 
 **起始版本：** 8
+
+<!--Device-AudioManager-setAudioScene(scene: AudioScene): Promise<void>--><!--Device-AudioManager-setAudioScene(scene: AudioScene): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Communication
 
@@ -251,6 +265,8 @@ setExtraParameters(mainKey: string, kvpairs: Record<string, string>): Promise<vo
 **起始版本：** 11
 
 **需要权限：** ohos.permission.MODIFY_AUDIO_SETTINGS
+
+<!--Device-AudioManager-setExtraParameters(mainKey: string, kvpairs: Record<string, string>): Promise<void>--><!--Device-AudioManager-setExtraParameters(mainKey: string, kvpairs: Record<string, string>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -315,6 +331,8 @@ on(type: 'volumeChange', callback: Callback<VolumeEvent>): void
 
 **替代接口：** volumeChange
 
+<!--Device-AudioManager-on(type: 'volumeChange', callback: Callback<VolumeEvent>): void--><!--Device-AudioManager-on(type: 'volumeChange', callback: Callback<VolumeEvent>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -354,6 +372,8 @@ on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void
 **废弃版本：** 9
 
 **替代接口：** ringerModeChange
+
+<!--Device-AudioManager-on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void--><!--Device-AudioManager-on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Communication
 

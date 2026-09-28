@@ -20,6 +20,8 @@ function releaseExemptionResource(resourceType: StandbyResourceType, bundleName:
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-applicationManager-function releaseExemptionResource(resourceType: StandbyResourceType, bundleName: string): void--><!--Device-applicationManager-function releaseExemptionResource(resourceType: StandbyResourceType, bundleName: string): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**

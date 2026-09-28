@@ -10,6 +10,8 @@ export interface Util
 
 **替代接口：** [I18NUtil](arkts-localization-i18n-i18nutil-c.md)
 
+<!--Device-i18n-export interface Util--><!--Device-i18n-export interface Util-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## 导入模块
@@ -31,6 +33,8 @@ unitConvert(fromUnit: UnitInfo, toUnit: UnitInfo, value: number, locale: string,
 **废弃版本：** 9
 
 **替代接口：** [unitConvert](arkts-localization-i18n-i18nutil-c.md#unitconvert)
+
+<!--Device-Util-unitConvert(fromUnit: UnitInfo, toUnit: UnitInfo, value: double, locale: string, style?: string): string--><!--Device-Util-unitConvert(fromUnit: UnitInfo, toUnit: UnitInfo, value: double, locale: string, style?: string): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 

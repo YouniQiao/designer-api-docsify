@@ -8,6 +8,8 @@ interface ChangeData
 
 **起始版本：** 10
 
+<!--Device-photoAccessHelper-interface ChangeData--><!--Device-photoAccessHelper-interface ChangeData-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ extraUris: Array<string>
 
 **起始版本：** 10
 
+<!--Device-ChangeData-extraUris: Array<string>--><!--Device-ChangeData-extraUris: Array<string>-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## type
@@ -42,6 +46,8 @@ ChangeData的通知类型。
 
 **起始版本：** 10
 
+<!--Device-ChangeData-type: NotifyType--><!--Device-ChangeData-type: NotifyType-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## uris
@@ -55,5 +61,7 @@ uris: Array<string>
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 10
+
+<!--Device-ChangeData-uris: Array<string>--><!--Device-ChangeData-uris: Array<string>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core

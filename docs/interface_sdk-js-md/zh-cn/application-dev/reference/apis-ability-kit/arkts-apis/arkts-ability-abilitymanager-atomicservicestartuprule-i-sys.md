@@ -8,6 +8,8 @@ export interface AtomicServiceStartupRule
 
 **起始版本：** 18
 
+<!--Device-abilityManager-export interface AtomicServiceStartupRule--><!--Device-abilityManager-export interface AtomicServiceStartupRule-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ isEmbeddedAllowed: boolean
 
 **起始版本：** 18
 
+<!--Device-AtomicServiceStartupRule-isEmbeddedAllowed: boolean--><!--Device-AtomicServiceStartupRule-isEmbeddedAllowed: boolean-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ isOpenAllowed: boolean
 **类型：** boolean
 
 **起始版本：** 18
+
+<!--Device-AtomicServiceStartupRule-isOpenAllowed: boolean--><!--Device-AtomicServiceStartupRule-isOpenAllowed: boolean-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

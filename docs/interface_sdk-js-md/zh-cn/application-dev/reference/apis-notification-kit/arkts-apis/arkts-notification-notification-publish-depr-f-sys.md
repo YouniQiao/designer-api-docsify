@@ -23,6 +23,8 @@ function publish(request: NotificationRequest, userId: number, callback: AsyncCa
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notification-function publish(request: NotificationRequest, userId: number, callback: AsyncCallback<void>): void--><!--Device-notification-function publish(request: NotificationRequest, userId: number, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -53,6 +55,8 @@ function publish(request: NotificationRequest, userId: number): Promise<void>
 **替代接口：** [publish](arkts-notification-notificationmanager-publish-f.md)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notification-function publish(request: NotificationRequest, userId: number): Promise<void>--><!--Device-notification-function publish(request: NotificationRequest, userId: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

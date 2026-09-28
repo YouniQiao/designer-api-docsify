@@ -4,13 +4,15 @@
 declare class RefreshAttribute extends CommonMethod<RefreshAttribute>
 ```
 
-In addition to the [universal attributes](arkts-arkui-common-comp.md#common), the following attributes are supported.
+In addition to the [universal attributes](arkts-arkui-common-comp.md), the following attributes are supported.
 
-In addition to the [universal events](arkts-arkui-common-comp.md#common), the following events are supported.
+In addition to the [universal events](arkts-arkui-common-comp.md), the following events are supported.
 
 **Inheritance/Implementation:** RefreshAttribute extends CommonMethod<RefreshAttribute>
 
 **Since:** 8
+
+<!--Device-unnamed-declare class RefreshAttribute extends CommonMethod<RefreshAttribute>--><!--Device-unnamed-declare class RefreshAttribute extends CommonMethod<RefreshAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,6 +29,8 @@ Sets the maximum pull-down distance.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-RefreshAttribute-maxPullDownDistance(distance: Optional<number>): RefreshAttribute--><!--Device-RefreshAttribute-maxPullDownDistance(distance: Optional<number>): RefreshAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,6 +58,8 @@ If this API is not set, the maximum pull-down distance is **undefined**.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-RefreshAttribute-maxPullDownDistance(distance: number | Resource | undefined): RefreshAttribute--><!--Device-RefreshAttribute-maxPullDownDistance(distance: number | Resource | undefined): RefreshAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -80,6 +86,8 @@ Called when the pull-down distance changes.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-RefreshAttribute-onOffsetChange(callback: Callback<number>): RefreshAttribute--><!--Device-RefreshAttribute-onOffsetChange(callback: Callback<number>): RefreshAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -101,6 +109,8 @@ Triggered when the component enters the refresh state. It is equivalent to the c
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-RefreshAttribute-onRefreshing(callback: () => void): RefreshAttribute--><!--Device-RefreshAttribute-onRefreshing(callback: () => void): RefreshAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -124,6 +134,8 @@ Called when the refresh status changes.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-RefreshAttribute-onStateChange(callback: (state: RefreshStatus) => void): RefreshAttribute--><!--Device-RefreshAttribute-onStateChange(callback: (state: RefreshStatus) => void): RefreshAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -145,6 +157,8 @@ Sets the pull-down ratio.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-RefreshAttribute-pullDownRatio(ratio: Optional<number>): RefreshAttribute--><!--Device-RefreshAttribute-pullDownRatio(ratio: Optional<number>): RefreshAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -168,6 +182,8 @@ Sets whether to initiate a refresh when the pull-down distance exceeds the value
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-RefreshAttribute-pullToRefresh(value: boolean): RefreshAttribute--><!--Device-RefreshAttribute-pullToRefresh(value: boolean): RefreshAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -190,6 +206,8 @@ Sets whether to enable the pull-up-to-cancel gesture for refreshing operations.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-RefreshAttribute-pullUpToCancelRefresh(enabled: boolean | undefined): RefreshAttribute--><!--Device-RefreshAttribute-pullUpToCancelRefresh(enabled: boolean | undefined): RefreshAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -211,6 +229,8 @@ Sets the minimum pull-down offset required to trigger a refresh. If the distance
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-RefreshAttribute-refreshOffset(value: number): RefreshAttribute--><!--Device-RefreshAttribute-refreshOffset(value: number): RefreshAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -237,6 +257,8 @@ If this API and [promptText](arkts-arkui-refresh-comp-refreshoptions-i.md) are n
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-RefreshAttribute-refreshOffset(value: number | Resource): RefreshAttribute--><!--Device-RefreshAttribute-refreshOffset(value: number | Resource): RefreshAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

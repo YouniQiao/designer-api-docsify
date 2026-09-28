@@ -8,6 +8,8 @@ export interface NotificationSubscribeInfo
 
 **起始版本：** 7
 
+<!--Device-unnamed-export interface NotificationSubscribeInfo--><!--Device-unnamed-export interface NotificationSubscribeInfo-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -24,6 +26,8 @@ bundleNames?: Array<string>
 
 **起始版本：** 7
 
+<!--Device-NotificationSubscribeInfo-bundleNames?: Array<string>--><!--Device-NotificationSubscribeInfo-bundleNames?: Array<string>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -39,6 +43,8 @@ deviceType?: string
 **类型：** string
 
 **起始版本：** 12
+
+<!--Device-NotificationSubscribeInfo-deviceType?: string--><!--Device-NotificationSubscribeInfo-deviceType?: string-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -60,6 +66,8 @@ enableClassification?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-NotificationSubscribeInfo-enableClassification?: boolean--><!--Device-NotificationSubscribeInfo-enableClassification?: boolean-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -79,6 +87,8 @@ filterLimit?: number
 **类型：** number
 
 **起始版本：** 18
+
+<!--Device-NotificationSubscribeInfo-filterLimit?: long--><!--Device-NotificationSubscribeInfo-filterLimit?: long-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -101,6 +111,8 @@ needSilentReplayOnSubscribe?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-NotificationSubscribeInfo-needSilentReplayOnSubscribe?: boolean--><!--Device-NotificationSubscribeInfo-needSilentReplayOnSubscribe?: boolean-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -119,6 +131,8 @@ pictureOptions?: PictureOptions
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-NotificationSubscribeInfo-pictureOptions?: PictureOptions--><!--Device-NotificationSubscribeInfo-pictureOptions?: PictureOptions-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -135,6 +149,8 @@ slotTypes?: Array<notificationManager.SlotType>
 
 **起始版本：** 18
 
+<!--Device-NotificationSubscribeInfo-slotTypes?: Array<notificationManager.SlotType>--><!--Device-NotificationSubscribeInfo-slotTypes?: Array<notificationManager.SlotType>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -150,6 +166,8 @@ userId?: number
 **类型：** number
 
 **起始版本：** 7
+
+<!--Device-NotificationSubscribeInfo-userId?: int--><!--Device-NotificationSubscribeInfo-userId?: int-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -168,6 +186,8 @@ voiceContentOptions?: VoiceContentOptions
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-NotificationSubscribeInfo-voiceContentOptions?: VoiceContentOptions--><!--Device-NotificationSubscribeInfo-voiceContentOptions?: VoiceContentOptions-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

@@ -10,6 +10,8 @@ interface VibrateAttribute
 
 **起始版本：** 9
 
+<!--Device-vibrator-interface VibrateAttribute--><!--Device-vibrator-interface VibrateAttribute-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## 导入模块
@@ -29,6 +31,8 @@ Indicates whether to bypass system management switches.
 **类型：** boolean
 
 **起始版本：** 12
+
+<!--Device-VibrateAttribute-systemUsage?: boolean--><!--Device-VibrateAttribute-systemUsage?: boolean-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
 

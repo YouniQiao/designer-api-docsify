@@ -18,6 +18,8 @@ Obtains data of the acceleration sensor once. This method applies to scenarios w
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 
+<!--Device-sensor-function once(type: SensorId.ACCELEROMETER, callback: Callback<AccelerometerResponse>): void--><!--Device-sensor-function once(type: SensorId.ACCELEROMETER, callback: Callback<AccelerometerResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -68,6 +70,8 @@ Obtains data of the uncalibrated acceleration sensor once. This method applies t
 **Since:** 9
 
 **Required permissions:** ohos.permission.ACCELEROMETER
+
+<!--Device-sensor-function once(type: SensorId.ACCELEROMETER_UNCALIBRATED, callback: Callback<AccelerometerUncalibratedResponse>): void--><!--Device-sensor-function once(type: SensorId.ACCELEROMETER_UNCALIBRATED, callback: Callback<AccelerometerUncalibratedResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -121,6 +125,8 @@ Obtains data of the ambient light sensor once. This method applies to scenarios 
 
 **Since:** 9
 
+<!--Device-sensor-function once(type: SensorId.AMBIENT_LIGHT, callback: Callback<LightResponse>): void--><!--Device-sensor-function once(type: SensorId.AMBIENT_LIGHT, callback: Callback<LightResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -166,6 +172,8 @@ function once(type: SensorId.AMBIENT_TEMPERATURE, callback: Callback<AmbientTemp
 Obtains data of the temperature sensor once. This method applies to scenarios where the current ambient temperature needs to be obtained only once. After the API is called, the callback is triggered only once, and the subscription is automatically canceled.
 
 **Since:** 9
+
+<!--Device-sensor-function once(type: SensorId.AMBIENT_TEMPERATURE, callback: Callback<AmbientTemperatureResponse>): void--><!--Device-sensor-function once(type: SensorId.AMBIENT_TEMPERATURE, callback: Callback<AmbientTemperatureResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -213,6 +221,8 @@ Obtains data of the barometer sensor once. This method applies to scenarios wher
 
 **Since:** 9
 
+<!--Device-sensor-function once(type: SensorId.BAROMETER, callback: Callback<BarometerResponse>): void--><!--Device-sensor-function once(type: SensorId.BAROMETER, callback: Callback<BarometerResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -258,6 +268,8 @@ function once(type: SensorId.GRAVITY, callback: Callback<GravityResponse>): void
 Obtains data of the gravity sensor once. This method applies to the scenario where only the current gravity component needs to be obtained once. After the method is called, the callback is triggered only once, and the subscription is automatically canceled.
 
 **Since:** 9
+
+<!--Device-sensor-function once(type: SensorId.GRAVITY, callback: Callback<GravityResponse>): void--><!--Device-sensor-function once(type: SensorId.GRAVITY, callback: Callback<GravityResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -309,6 +321,8 @@ Obtains data of the gyroscope sensor once. This method applies to scenarios wher
 
 **Required permissions:** ohos.permission.GYROSCOPE
 
+<!--Device-sensor-function once(type: SensorId.GYROSCOPE, callback: Callback<GyroscopeResponse>): void--><!--Device-sensor-function once(type: SensorId.GYROSCOPE, callback: Callback<GyroscopeResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -359,6 +373,8 @@ Obtains data of the uncalibrated gyroscope sensor once. This method applies to s
 **Since:** 9
 
 **Required permissions:** ohos.permission.GYROSCOPE
+
+<!--Device-sensor-function once(type: SensorId.GYROSCOPE_UNCALIBRATED, callback: Callback<GyroscopeUncalibratedResponse>): void--><!--Device-sensor-function once(type: SensorId.GYROSCOPE_UNCALIBRATED, callback: Callback<GyroscopeUncalibratedResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -412,6 +428,8 @@ Obtains data of the Hall effect sensor once. This method applies to scenarios wh
 
 **Since:** 9
 
+<!--Device-sensor-function once(type: SensorId.HALL, callback: Callback<HallResponse>): void--><!--Device-sensor-function once(type: SensorId.HALL, callback: Callback<HallResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -460,6 +478,8 @@ Obtains data of the heart rate sensor once. This method applies to scenarios whe
 
 **Required permissions:** ohos.permission.READ_HEALTH_DATA
 
+<!--Device-sensor-function once(type: SensorId.HEART_RATE, callback: Callback<HeartRateResponse>): void--><!--Device-sensor-function once(type: SensorId.HEART_RATE, callback: Callback<HeartRateResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -506,6 +526,8 @@ function once(type: SensorId.HUMIDITY, callback: Callback<HumidityResponse>): vo
 Obtains data of the humidity sensor once. This method applies to the scenario where the current humidity needs to be obtained only once. After the method is called, the callback is triggered only once, and the subscription is automatically canceled.
 
 **Since:** 9
+
+<!--Device-sensor-function once(type: SensorId.HUMIDITY, callback: Callback<HumidityResponse>): void--><!--Device-sensor-function once(type: SensorId.HUMIDITY, callback: Callback<HumidityResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -554,6 +576,8 @@ Obtains data of the linear acceleration sensor once. This method applies to scen
 **Since:** 9
 
 **Required permissions:** ohos.permission.ACCELEROMETER
+
+<!--Device-sensor-function once(type: SensorId.LINEAR_ACCELEROMETER, callback: Callback<LinearAccelerometerResponse>): void--><!--Device-sensor-function once(type: SensorId.LINEAR_ACCELEROMETER, callback: Callback<LinearAccelerometerResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -604,6 +628,8 @@ Obtains data of the magnetic field sensor once. This method applies to scenarios
 
 **Since:** 9
 
+<!--Device-sensor-function once(type: SensorId.MAGNETIC_FIELD, callback: Callback<MagneticFieldResponse>): void--><!--Device-sensor-function once(type: SensorId.MAGNETIC_FIELD, callback: Callback<MagneticFieldResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -651,6 +677,8 @@ function once(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback: Callback<Mag
 Obtains data of the uncalibrated magnetic field sensor once. This method applies to scenarios where the raw magnetic field and offset data needs to be obtained only once. After the method is called, the callback is triggered only once, and the subscription is automatically canceled.
 
 **Since:** 9
+
+<!--Device-sensor-function once(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback: Callback<MagneticFieldUncalibratedResponse>): void--><!--Device-sensor-function once(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback: Callback<MagneticFieldUncalibratedResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -702,6 +730,8 @@ function once(type: SensorId.ORIENTATION, callback: Callback<OrientationResponse
 Obtains data of the orientation sensor once. This method applies to scenarios where the current device orientation needs to be obtained only once. After the method is called, the callback is triggered only once, and the subscription is automatically canceled.
 
 **Since:** 9
+
+<!--Device-sensor-function once(type: SensorId.ORIENTATION, callback: Callback<OrientationResponse>): void--><!--Device-sensor-function once(type: SensorId.ORIENTATION, callback: Callback<OrientationResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -758,6 +788,8 @@ Obtains data of the pedometer sensor once. The step counter sensor's data report
 
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
 
+<!--Device-sensor-function once(type: SensorId.PEDOMETER, callback: Callback<PedometerResponse>): void--><!--Device-sensor-function once(type: SensorId.PEDOMETER, callback: Callback<PedometerResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -807,6 +839,8 @@ Obtains data of the pedometer sensor once. This method applies to scenarios wher
 
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
 
+<!--Device-sensor-function once(type: SensorId.PEDOMETER_DETECTION, callback: Callback<PedometerDetectionResponse>): void--><!--Device-sensor-function once(type: SensorId.PEDOMETER_DETECTION, callback: Callback<PedometerDetectionResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -854,6 +888,8 @@ Obtains data of the proximity sensor once. This method applies to scenarios wher
 
 **Since:** 9
 
+<!--Device-sensor-function once(type: SensorId.PROXIMITY, callback: Callback<ProximityResponse>): void--><!--Device-sensor-function once(type: SensorId.PROXIMITY, callback: Callback<ProximityResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -899,6 +935,8 @@ function once(type: SensorId.ROTATION_VECTOR, callback: Callback<RotationVectorR
 Obtains data of the rotation vector sensor once. This method applies to scenarios where the current device posture needs to be obtained only once. After the method is called, the callback is triggered only once, and the subscription is automatically canceled.
 
 **Since:** 9
+
+<!--Device-sensor-function once(type: SensorId.ROTATION_VECTOR, callback: Callback<RotationVectorResponse>): void--><!--Device-sensor-function once(type: SensorId.ROTATION_VECTOR, callback: Callback<RotationVectorResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -949,6 +987,8 @@ Obtains the significant motion sensor data once. This API applies to scenarios w
 
 **Since:** 9
 
+<!--Device-sensor-function once(type: SensorId.SIGNIFICANT_MOTION, callback: Callback<SignificantMotionResponse>): void--><!--Device-sensor-function once(type: SensorId.SIGNIFICANT_MOTION, callback: Callback<SignificantMotionResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -994,6 +1034,8 @@ function once(type: SensorId.WEAR_DETECTION, callback: Callback<WearDetectionRes
 Obtains data of the wear detection sensor once. This API applies to scenarios where the wear status needs to be detected only once. After the method is called, the callback is triggered only once, and the subscription is automatically canceled.
 
 **Since:** 9
+
+<!--Device-sensor-function once(type: SensorId.WEAR_DETECTION, callback: Callback<WearDetectionResponse>): void--><!--Device-sensor-function once(type: SensorId.WEAR_DETECTION, callback: Callback<WearDetectionResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -1053,6 +1095,8 @@ Subscribes to only one data change of the acceleration sensor. This method appli
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 
+<!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback: Callback<AccelerometerResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback: Callback<AccelerometerResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -1098,6 +1142,8 @@ Subscribes to only one data change of the uncalibrated acceleration sensor. This
 **Substitutes:** [once](#once-1)(type: SensorId.ACCELEROMETER_UNCALIBRATED, callback: Callback&lt;AccelerometerUncalibratedResponse&gt;)
 
 **Required permissions:** ohos.permission.ACCELEROMETER
+
+<!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED, callback: Callback<AccelerometerUncalibratedResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED, callback: Callback<AccelerometerUncalibratedResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -1146,6 +1192,8 @@ Subscribes to only one data change of the ambient light sensor. This method appl
 
 **Substitutes:** [once](#once-2)(type: SensorId.AMBIENT_LIGHT, callback: Callback&lt;LightResponse&gt;)
 
+<!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback: Callback<LightResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback: Callback<LightResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -1187,6 +1235,8 @@ Subscribes to only one data change of the ambient temperature sensor. This metho
 **Deprecated since:** 9
 
 **Substitutes:** [once](#once-3)(type: SensorId.AMBIENT_TEMPERATURE, callback: Callback&lt;AmbientTemperatureResponse&gt;)
+
+<!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback: Callback<AmbientTemperatureResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback: Callback<AmbientTemperatureResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -1230,6 +1280,8 @@ Subscribes to only one data change of the barometer sensor. This method applies 
 
 **Substitutes:** [once](#once-4)(type: SensorId.BAROMETER, callback: Callback&lt;BarometerResponse&gt;)
 
+<!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback: Callback<BarometerResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback: Callback<BarometerResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -1271,6 +1323,8 @@ Subscribes to only one data change of the gravity sensor. This method applies to
 **Deprecated since:** 9
 
 **Substitutes:** [once](#once-5)(type: SensorId.GRAVITY, callback: Callback&lt;GravityResponse&gt;)
+
+<!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_GRAVITY, callback: Callback<GravityResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_GRAVITY, callback: Callback<GravityResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -1318,6 +1372,8 @@ Subscribes to only one data change of the gyroscope sensor. This method applies 
 
 **Required permissions:** ohos.permission.GYROSCOPE
 
+<!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback: Callback<GyroscopeResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback: Callback<GyroscopeResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -1363,6 +1419,8 @@ Subscribes to only one data change of the uncalibrated gyroscope sensor. This me
 **Substitutes:** [once](#once-7)(type: SensorId.GYROSCOPE_UNCALIBRATED, callback: Callback&lt;GyroscopeUncalibratedResponse&gt;)
 
 **Required permissions:** ohos.permission.GYROSCOPE
+
+<!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED, callback: Callback<GyroscopeUncalibratedResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED, callback: Callback<GyroscopeUncalibratedResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -1411,6 +1469,8 @@ Subscribes to only one data change of the Hall effect sensor. This method applie
 
 **Substitutes:** [once](#once-8)(type: SensorId.HALL, callback: Callback&lt;HallResponse&gt;)
 
+<!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_HALL, callback: Callback<HallResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_HALL, callback: Callback<HallResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -1455,6 +1515,8 @@ Subscribes to only one data change of the heart rate sensor. This method applies
 
 **Required permissions:** ohos.permission.HEART_RATE
 
+<!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback: Callback<HeartRateResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback: Callback<HeartRateResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -1496,6 +1558,8 @@ Subscribes to only one data change of the humidity sensor. This method applies t
 **Deprecated since:** 9
 
 **Substitutes:** [once](#once-10)(type: SensorId.HUMIDITY, callback: Callback&lt;HumidityResponse&gt;)
+
+<!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_HUMIDITY, callback: Callback<HumidityResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_HUMIDITY, callback: Callback<HumidityResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -1541,6 +1605,8 @@ Subscribes to only one data change of the linear acceleration sensor. This metho
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 
+<!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION, callback: Callback<LinearAccelerometerResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION, callback: Callback<LinearAccelerometerResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -1572,6 +1638,8 @@ Subscribes to only one data change of the magnetic field sensor. This method app
 **Deprecated since:** 9
 
 **Substitutes:** [once](#once-12)(type: SensorId.MAGNETIC_FIELD, callback: Callback&lt;MagneticFieldResponse&gt;)
+
+<!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback: Callback<MagneticFieldResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback: Callback<MagneticFieldResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -1616,6 +1684,8 @@ Subscribes to only one data change of the uncalibrated magnetic field sensor. Th
 **Deprecated since:** 9
 
 **Substitutes:** [once](#once-13)(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback: Callback&lt;MagneticFieldUncalibratedResponse&gt;)
+
+<!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callback: Callback<MagneticFieldUncalibratedResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callback: Callback<MagneticFieldUncalibratedResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -1664,6 +1734,8 @@ Subscribes to only one data change of the orientation sensor. This method applie
 
 **Substitutes:** [once](#once-14)(type: SensorId.ORIENTATION, callback: Callback&lt;OrientationResponse&gt;)
 
+<!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback: Callback<OrientationResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback: Callback<OrientationResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -1710,6 +1782,8 @@ Subscribes to only one data change of the pedometer sensor. This method applies 
 
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
 
+<!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback: Callback<PedometerResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback: Callback<PedometerResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -1754,6 +1828,8 @@ Subscribes to only one data change of the pedometer detection sensor. This metho
 
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
 
+<!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION, callback: Callback<PedometerDetectionResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION, callback: Callback<PedometerDetectionResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -1795,6 +1871,8 @@ Subscribes to only one data change of the proximity sensor. This method applies 
 **Deprecated since:** 9
 
 **Substitutes:** [once](#once-17)(type: SensorId.PROXIMITY, callback: Callback&lt;ProximityResponse&gt;)
+
+<!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_PROXIMITY, callback: Callback<ProximityResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_PROXIMITY, callback: Callback<ProximityResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -1838,6 +1916,8 @@ Subscribes to only one data change of the rotation vector sensor. This method ap
 **Deprecated since:** 9
 
 **Substitutes:** [once](#once-18)(type: SensorId.ROTATION_VECTOR, callback: Callback&lt;RotationVectorResponse&gt;)
+
+<!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback: Callback<RotationVectorResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback: Callback<RotationVectorResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -1884,6 +1964,8 @@ Subscribes to only one data change of the significant motion sensor. This method
 
 **Substitutes:** [once](#once-19)(type: SensorId.SIGNIFICANT_MOTION, callback: Callback&lt;SignificantMotionResponse&gt;)
 
+<!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback: Callback<SignificantMotionResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback: Callback<SignificantMotionResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -1925,6 +2007,8 @@ Subscribes to only one data change of the wear detection sensor. This method app
 **Deprecated since:** 9
 
 **Substitutes:** [once](#once-20)(type: SensorId.WEAR_DETECTION, callback: Callback&lt;WearDetectionResponse&gt;)
+
+<!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback: Callback<WearDetectionResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback: Callback<WearDetectionResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 

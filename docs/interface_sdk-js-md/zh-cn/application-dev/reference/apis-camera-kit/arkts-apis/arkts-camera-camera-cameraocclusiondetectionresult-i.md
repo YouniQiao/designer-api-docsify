@@ -8,6 +8,8 @@ interface CameraOcclusionDetectionResult
 
 **起始版本：** 23
 
+<!--Device-camera-interface CameraOcclusionDetectionResult--><!--Device-camera-interface CameraOcclusionDetectionResult-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
@@ -28,7 +30,9 @@ readonly isCameraLensDirty: boolean
 
 **起始版本：** 23
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-CameraOcclusionDetectionResult-readonly isCameraLensDirty: boolean--><!--Device-CameraOcclusionDetectionResult-readonly isCameraLensDirty: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -44,6 +48,8 @@ readonly isCameraOccluded: boolean
 
 **起始版本：** 23
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-CameraOcclusionDetectionResult-readonly isCameraOccluded: boolean--><!--Device-CameraOcclusionDetectionResult-readonly isCameraOccluded: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core

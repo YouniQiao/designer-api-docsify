@@ -16,6 +16,8 @@ function isAbilityEnabled(info: AbilityInfo, appIndex: number): Promise<boolean>
 
 **起始版本：** 12
 
+<!--Device-bundleManager-function isAbilityEnabled(info: AbilityInfo, appIndex: int): Promise<boolean>--><!--Device-bundleManager-function isAbilityEnabled(info: AbilityInfo, appIndex: int): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -90,6 +92,8 @@ function isAbilityEnabled(info: AbilityInfo, callback: AsyncCallback<boolean>): 
 
 **起始版本：** 9
 
+<!--Device-bundleManager-function isAbilityEnabled(info: AbilityInfo, callback: AsyncCallback<boolean>): void--><!--Device-bundleManager-function isAbilityEnabled(info: AbilityInfo, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -158,6 +162,8 @@ function isAbilityEnabled(info: AbilityInfo): Promise<boolean>
 获取指定组件的禁用或使能状态。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-bundleManager-function isAbilityEnabled(info: AbilityInfo): Promise<boolean>--><!--Device-bundleManager-function isAbilityEnabled(info: AbilityInfo): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

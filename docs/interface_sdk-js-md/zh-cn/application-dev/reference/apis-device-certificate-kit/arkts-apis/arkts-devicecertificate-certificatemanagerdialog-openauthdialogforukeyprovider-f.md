@@ -20,6 +20,8 @@ function openAuthDialogForUkeyProvider(dialogInfo: UkeyAuthDialogInfo, ukeyAuthR
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-certificateManagerDialog-function openAuthDialogForUkeyProvider(dialogInfo: UkeyAuthDialogInfo, ukeyAuthRequest: UkeyAuthRequest): Promise<void>--><!--Device-certificateManagerDialog-function openAuthDialogForUkeyProvider(dialogInfo: UkeyAuthDialogInfo, ukeyAuthRequest: UkeyAuthRequest): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
 **参数：**

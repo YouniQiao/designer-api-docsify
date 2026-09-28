@@ -10,6 +10,8 @@ export interface NetHandle
 
 **起始版本：** 8
 
+<!--Device-connection-export interface NetHandle--><!--Device-connection-export interface NetHandle-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## 导入模块
@@ -27,6 +29,8 @@ bindSocket(socketParam: TCPSocket | UDPSocket, callback: AsyncCallback<void>): v
 将TCPSocket或UDPSocket绑定到当前NetHandle对应的网络。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-NetHandle-bindSocket(socketParam: TCPSocket | UDPSocket, callback: AsyncCallback<void>): void--><!--Device-NetHandle-bindSocket(socketParam: TCPSocket | UDPSocket, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -120,6 +124,8 @@ bindSocket(socketParam: TCPSocket | UDPSocket): Promise<void>
 
 **起始版本：** 9
 
+<!--Device-NetHandle-bindSocket(socketParam: TCPSocket | UDPSocket): Promise<void>--><!--Device-NetHandle-bindSocket(socketParam: TCPSocket | UDPSocket): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**
@@ -212,6 +218,8 @@ getAddressByName(host: string, callback: AsyncCallback<NetAddress>): void
 
 **需要权限：** ohos.permission.INTERNET
 
+<!--Device-NetHandle-getAddressByName(host: string, callback: AsyncCallback<NetAddress>): void--><!--Device-NetHandle-getAddressByName(host: string, callback: AsyncCallback<NetAddress>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**
@@ -267,6 +275,8 @@ getAddressByName(host: string): Promise<NetAddress>
 
 **需要权限：** ohos.permission.INTERNET
 
+<!--Device-NetHandle-getAddressByName(host: string): Promise<NetAddress>--><!--Device-NetHandle-getAddressByName(host: string): Promise<NetAddress>-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**
@@ -321,6 +331,8 @@ getAddressesByName(host: string, callback: AsyncCallback<Array<NetAddress>>): vo
 **需要权限：** ohos.permission.INTERNET
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-NetHandle-getAddressesByName(host: string, callback: AsyncCallback<Array<NetAddress>>): void--><!--Device-NetHandle-getAddressesByName(host: string, callback: AsyncCallback<Array<NetAddress>>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -379,6 +391,8 @@ getAddressesByName(host: string): Promise<Array<NetAddress>>
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
 
+<!--Device-NetHandle-getAddressesByName(host: string): Promise<Array<NetAddress>>--><!--Device-NetHandle-getAddressesByName(host: string): Promise<Array<NetAddress>>-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**
@@ -433,6 +447,8 @@ getAddressesByNameWithOptions(host: string, option?: QueryOptions): Promise<Arra
 **需要权限：** ohos.permission.INTERNET
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-NetHandle-getAddressesByNameWithOptions(host: string, option?: QueryOptions): Promise<Array<NetAddress>>--><!--Device-NetHandle-getAddressesByNameWithOptions(host: string, option?: QueryOptions): Promise<Array<NetAddress>>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -493,6 +509,8 @@ netId: number
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-NetHandle-netId: int--><!--Device-NetHandle-netId: int-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core

@@ -18,6 +18,8 @@ Get the IMS registration state info of specified IMS service type.
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-radio-function getImsRegInfo(slotId: int, imsType: ImsServiceType, callback: AsyncCallback<ImsRegInfo>): void--><!--Device-radio-function getImsRegInfo(slotId: int, imsType: ImsServiceType, callback: AsyncCallback<ImsRegInfo>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -72,6 +74,8 @@ Get the IMS registration state info of specified IMS service type.
 **起始版本：** 9
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
+
+<!--Device-radio-function getImsRegInfo(slotId: int, imsType: ImsServiceType): Promise<ImsRegInfo>--><!--Device-radio-function getImsRegInfo(slotId: int, imsType: ImsServiceType): Promise<ImsRegInfo>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

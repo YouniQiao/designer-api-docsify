@@ -20,6 +20,8 @@ function registerMissionListener(parameter: MissionDeviceInfo, options: MissionC
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-distributedMissionManager-function registerMissionListener(parameter: MissionDeviceInfo, options: MissionCallback, callback: AsyncCallback<void>): void--><!--Device-distributedMissionManager-function registerMissionListener(parameter: MissionDeviceInfo, options: MissionCallback, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -94,6 +96,8 @@ function registerMissionListener(parameter: MissionDeviceInfo, options: MissionC
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-distributedMissionManager-function registerMissionListener(parameter: MissionDeviceInfo, options: MissionCallback): Promise<void>--><!--Device-distributedMissionManager-function registerMissionListener(parameter: MissionDeviceInfo, options: MissionCallback): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 

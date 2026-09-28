@@ -8,6 +8,8 @@ Implements an **Analysis** album.
 
 **Since:** 18
 
+<!--Device-photoAccessHelper-class AnalysisAlbum--><!--Device-photoAccessHelper-class AnalysisAlbum-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -27,6 +29,8 @@ constructor(album: Album)
 Constructor.
 
 **Since:** 18
+
+<!--Device-AnalysisAlbum-constructor(album: Album)--><!--Device-AnalysisAlbum-constructor(album: Album)-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -80,6 +84,8 @@ Obtains the sequence of assets in the **Analysis** album.
 **Since:** 18
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-AnalysisAlbum-getOrderPosition(assets: Array<PhotoAsset>): Promise<Array<int>>--><!--Device-AnalysisAlbum-getOrderPosition(assets: Array<PhotoAsset>): Promise<Array<int>>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -155,6 +161,8 @@ Obtains the relationships of a person in the portrait album.
 **Since:** 21
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-AnalysisAlbum-getRelationship(): Promise<string>--><!--Device-AnalysisAlbum-getRelationship(): Promise<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

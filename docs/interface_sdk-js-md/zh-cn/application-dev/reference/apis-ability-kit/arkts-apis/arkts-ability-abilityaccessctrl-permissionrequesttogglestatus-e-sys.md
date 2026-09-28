@@ -34,6 +34,8 @@ export enum PermissionRequestToggleStatus
 
 **起始版本：** 12
 
+<!--Device-abilityAccessCtrl-export enum PermissionRequestToggleStatus--><!--Device-abilityAccessCtrl-export enum PermissionRequestToggleStatus-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -50,6 +52,8 @@ CLOSED = 0
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-PermissionRequestToggleStatus-CLOSED = 0--><!--Device-PermissionRequestToggleStatus-CLOSED = 0-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -65,6 +69,8 @@ OPEN = 1
 **起始版本：** 12
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-PermissionRequestToggleStatus-OPEN = 1--><!--Device-PermissionRequestToggleStatus-OPEN = 1-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 

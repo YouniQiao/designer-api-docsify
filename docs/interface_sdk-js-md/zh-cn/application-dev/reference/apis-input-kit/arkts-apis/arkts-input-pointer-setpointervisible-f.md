@@ -16,6 +16,8 @@ function setPointerVisible(visible: boolean, callback: AsyncCallback<void>): voi
 
 **起始版本：** 9
 
+<!--Device-pointer-function setPointerVisible(visible: boolean, callback: AsyncCallback<void>): void--><!--Device-pointer-function setPointerVisible(visible: boolean, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 **参数：**
@@ -75,6 +77,8 @@ function setPointerVisible(visible: boolean): Promise<void>
 设置光标显示/隐藏状态，此状态作用于当前进程的所有窗口。光标在屏幕上的实际显示/隐藏效果还受渲染服务进程影响。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-pointer-function setPointerVisible(visible: boolean): Promise<void>--><!--Device-pointer-function setPointerVisible(visible: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 

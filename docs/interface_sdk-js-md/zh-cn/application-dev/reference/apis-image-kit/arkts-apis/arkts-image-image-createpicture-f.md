@@ -18,6 +18,8 @@ function createPicture(mainPixelmap : PixelMap): Picture
 
 **起始版本：** 13
 
+<!--Device-image-function createPicture(mainPixelmap : PixelMap): Picture--><!--Device-image-function createPicture(mainPixelmap : PixelMap): Picture-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**

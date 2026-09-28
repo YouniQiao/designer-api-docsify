@@ -34,6 +34,8 @@ function openCustomDialog(options: CustomDialogOptions): Promise<number>
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-promptAction-function openCustomDialog(options: CustomDialogOptions): Promise<number>--><!--Device-promptAction-function openCustomDialog(options: CustomDialogOptions): Promise<number>-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**

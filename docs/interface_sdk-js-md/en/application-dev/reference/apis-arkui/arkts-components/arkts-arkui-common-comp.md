@@ -18,6 +18,8 @@ Constructor
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-CommonInterface-(): CommonAttribute--><!--Device-CommonInterface-(): CommonAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Summary
@@ -268,7 +270,7 @@ Constructor
 | [OnMoveHandler](arkts-arkui-common-comp-onmovehandler-t.md) | Defines the callback triggered when data is moved during drag-and-drop sorting. |
 | [OnNeedSoftkeyboardCallback](arkts-arkui-common-comp-onneedsoftkeyboardcallback-t.md) | Defines the callback type used in onNeedSoftkeyboard. Called when component is focused, the return value indicates whether keyboard is needed. |
 | [OnScrollCallback](arkts-arkui-common-comp-onscrollcallback-t.md) | Triggered when the scrollable component scrolls. |
-| [OnVisibleIndexesChangeCallback](arkts-arkui-common-comp-onvisibleindexeschangecallback-t.md) | Defines the callback type invoked when the indexes of the child components displayed by the lazy loading layout containers [LazyColumnLayout](../../../reference/apis-arkui/arkui-ts/ts-container-lazycolumnlayout.md), [LazyVGridLayout](arkts-arkui-lazyvgridlayout-comp.md#lazy_grid_layout), and [LazyVWaterFlowLayout](../../../reference/apis-arkui/arkui-ts/ts-container-lazyvwaterflowlayout.md) change. |
+| [OnVisibleIndexesChangeCallback](arkts-arkui-common-comp-onvisibleindexeschangecallback-t.md) | Defines the callback type invoked when the indexes of the child components displayed by the lazy loading layout containers [LazyColumnLayout](../../../reference/apis-arkui/arkui-ts/ts-container-lazycolumnlayout.md), [LazyVGridLayout](arkts-arkui-lazyvgridlayout-comp.md), and [LazyVWaterFlowLayout](../../../reference/apis-arkui/arkui-ts/ts-container-lazyvwaterflowlayout.md) change. |
 | [OnWillScrollCallback](arkts-arkui-common-comp-onwillscrollcallback-t.md) | Triggered when the scrollable component is about to scroll. |
 | [OnWillStopDraggingCallback](arkts-arkui-common-comp-onwillstopdraggingcallback-t.md) | Defines the callback invoked when the scrollable component is released. |
 | [Optional](arkts-arkui-common-comp-optional-t.md) | Defines the Optional type. The value can be **undefined**. |

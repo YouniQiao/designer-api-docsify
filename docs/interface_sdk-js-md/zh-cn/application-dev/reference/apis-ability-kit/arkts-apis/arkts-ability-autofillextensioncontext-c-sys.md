@@ -10,6 +10,8 @@ AutoFillExtensionContext模块是AutoFillExtensionAbility的上下文环境，�
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare class AutoFillExtensionContext extends ExtensionContext--><!--Device-unnamed-declare class AutoFillExtensionContext extends ExtensionContext-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **系统接口：** 此接口为系统接口。
@@ -25,6 +27,8 @@ reloadInModal(customData: CustomData): Promise<void>
 **起始版本：** 13
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AutoFillExtensionContext-reloadInModal(customData: CustomData): Promise<void>--><!--Device-AutoFillExtensionContext-reloadInModal(customData: CustomData): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 

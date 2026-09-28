@@ -8,6 +8,8 @@ export interface NewVersionInfo
 
 **起始版本：** 9
 
+<!--Device-update-export interface NewVersionInfo--><!--Device-update-export interface NewVersionInfo-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ versionComponents: Array<VersionComponent>
 
 **起始版本：** 9
 
+<!--Device-NewVersionInfo-versionComponents: Array<VersionComponent>--><!--Device-NewVersionInfo-versionComponents: Array<VersionComponent>-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ versionDigestInfo: VersionDigestInfo
 **类型：** [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md)
 
 **起始版本：** 9
+
+<!--Device-NewVersionInfo-versionDigestInfo: VersionDigestInfo--><!--Device-NewVersionInfo-versionDigestInfo: VersionDigestInfo-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
 

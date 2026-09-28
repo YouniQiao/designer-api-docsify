@@ -20,6 +20,8 @@ function getRemoteMetadata(deviceId: string, bundleName: string): Promise<Array<
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-distributedBundleManager-function getRemoteMetadata(deviceId: string, bundleName: string): Promise<Array<ModuleMetadata>>--><!--Device-distributedBundleManager-function getRemoteMetadata(deviceId: string, bundleName: string): Promise<Array<ModuleMetadata>>-End-->
+
 **系统能力：** SystemCapability.BundleManager.DistributedBundleFramework
 
 **系统接口：** 此接口为系统接口。

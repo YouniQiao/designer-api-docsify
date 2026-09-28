@@ -22,6 +22,8 @@ function getPermissionDef(permissionName: string, callback: AsyncCallback<Permis
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-bundle-function getPermissionDef(permissionName: string, callback: AsyncCallback<PermissionDef>): void--><!--Device-bundle-function getPermissionDef(permissionName: string, callback: AsyncCallback<PermissionDef>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 **系统接口：** 此接口为系统接口。
@@ -78,6 +80,8 @@ function getPermissionDef(permissionName: string): Promise<PermissionDef>
 **替代接口：** null
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-bundle-function getPermissionDef(permissionName: string): Promise<PermissionDef>--><!--Device-bundle-function getPermissionDef(permissionName: string): Promise<PermissionDef>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 

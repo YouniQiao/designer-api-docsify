@@ -14,6 +14,8 @@ export interface SubscribeGyroscopeOptions
 
 **需要权限：** ohos.permission.GYROSCOPE
 
+<!--Device-unnamed-export interface SubscribeGyroscopeOptions--><!--Device-unnamed-export interface SubscribeGyroscopeOptions-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
 ## 导入模块
@@ -39,6 +41,8 @@ fail?: (data: string, code: number) => void
 **需要权限：** ohos.permission.GYROSCOPE
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-SubscribeGyroscopeOptions-fail?: (data: string, code: number) => void--><!--Device-SubscribeGyroscopeOptions-fail?: (data: string, code: number) => void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
@@ -67,6 +71,8 @@ success: (data: GyroscopeResponse) => void
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-SubscribeGyroscopeOptions-success: (data: GyroscopeResponse) => void--><!--Device-SubscribeGyroscopeOptions-success: (data: GyroscopeResponse) => void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
 **参数：**
@@ -94,5 +100,7 @@ interval: string
 **需要权限：** ohos.permission.GYROSCOPE
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-SubscribeGyroscopeOptions-interval: string--><!--Device-SubscribeGyroscopeOptions-interval: string-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite

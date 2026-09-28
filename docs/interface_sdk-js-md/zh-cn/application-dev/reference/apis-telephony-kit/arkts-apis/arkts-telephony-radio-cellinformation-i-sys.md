@@ -8,6 +8,8 @@ export interface CellInformation
 
 **起始版本：** 8
 
+<!--Device-radio-export interface CellInformation--><!--Device-radio-export interface CellInformation-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## 导入模块
@@ -28,6 +30,8 @@ Obtains signal strength under different network formats.
 
 **起始版本：** 8
 
+<!--Device-CellInformation-data: CdmaCellInformation | GsmCellInformation | LteCellInformation | NrCellInformation | TdscdmaCellInformation      | WcdmaCellInformation--><!--Device-CellInformation-data: CdmaCellInformation | GsmCellInformation | LteCellInformation | NrCellInformation | TdscdmaCellInformation      | WcdmaCellInformation-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -46,6 +50,8 @@ Returns `true` if the user equipment (UE) is camped on the cell; returns `false`
 
 **起始版本：** 8
 
+<!--Device-CellInformation-isCamped: boolean--><!--Device-CellInformation-isCamped: boolean-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -63,6 +69,8 @@ Returns a timestamp since boot, in nanoseconds.
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-CellInformation-timeStamp: int--><!--Device-CellInformation-timeStamp: int-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

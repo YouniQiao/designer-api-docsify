@@ -18,6 +18,8 @@ function getTrafficStatsByNetwork(networkInfo: NetworkInfo): Promise<UidNetStats
 
 **需要权限：** ohos.permission.GET_NETWORK_STATS
 
+<!--Device-statistics-function getTrafficStatsByNetwork(networkInfo: NetworkInfo): Promise<UidNetStatsInfo>--><!--Device-statistics-function getTrafficStatsByNetwork(networkInfo: NetworkInfo): Promise<UidNetStatsInfo>-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。

@@ -18,6 +18,8 @@ function getHistoricalSessionDescriptors(maxSize: number, callback: AsyncCallbac
 
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
 
+<!--Device-avSession-function getHistoricalSessionDescriptors(maxSize: int, callback: AsyncCallback<Array<Readonly<AVSessionDescriptor>>>): void--><!--Device-avSession-function getHistoricalSessionDescriptors(maxSize: int, callback: AsyncCallback<Array<Readonly<AVSessionDescriptor>>>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 
 **系统接口：** 此接口为系统接口。
@@ -67,6 +69,8 @@ function getHistoricalSessionDescriptors(maxSize?: number): Promise<Array<Readon
 **起始版本：** 10
 
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
+
+<!--Device-avSession-function getHistoricalSessionDescriptors(maxSize?: int): Promise<Array<Readonly<AVSessionDescriptor>>>--><!--Device-avSession-function getHistoricalSessionDescriptors(maxSize?: int): Promise<Array<Readonly<AVSessionDescriptor>>>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 

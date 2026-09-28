@@ -19,6 +19,8 @@ function requestEnableNotification(callback: AsyncCallback<void>): void
 
 **替代接口：** [requestEnableNotification](arkts-notification-notificationmanager-requestenablenotification-f.md)
 
+<!--Device-notification-function requestEnableNotification(callback: AsyncCallback<void>): void--><!--Device-notification-function requestEnableNotification(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **参数：**
@@ -43,6 +45,8 @@ function requestEnableNotification(): Promise<void>
 **废弃版本：** 9
 
 **替代接口：** [requestEnableNotification](arkts-notification-notificationmanager-requestenablenotification-f.md)
+
+<!--Device-notification-function requestEnableNotification(): Promise<void>--><!--Device-notification-function requestEnableNotification(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

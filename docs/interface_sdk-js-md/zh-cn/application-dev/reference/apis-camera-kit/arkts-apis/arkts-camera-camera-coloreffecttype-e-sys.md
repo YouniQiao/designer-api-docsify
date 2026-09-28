@@ -8,6 +8,8 @@ Enumerates the color effect types.
 
 **起始版本：** 11
 
+<!--Device-camera-enum ColorEffectType--><!--Device-camera-enum ColorEffectType-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -21,6 +23,8 @@ NORMAL = 0
 Regular color effect.
 
 **起始版本：** 11
+
+<!--Device-ColorEffectType-NORMAL = 0--><!--Device-ColorEffectType-NORMAL = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -36,6 +40,8 @@ Bright color effect.
 
 **起始版本：** 11
 
+<!--Device-ColorEffectType-BRIGHT = 1--><!--Device-ColorEffectType-BRIGHT = 1-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -50,6 +56,8 @@ Soft color effect.
 
 **起始版本：** 11
 
+<!--Device-ColorEffectType-SOFT = 2--><!--Device-ColorEffectType-SOFT = 2-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -63,6 +71,8 @@ BLACK_WHITE = 3
 Black and white color effect.
 
 **起始版本：** 12
+
+<!--Device-ColorEffectType-BLACK_WHITE = 3--><!--Device-ColorEffectType-BLACK_WHITE = 3-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

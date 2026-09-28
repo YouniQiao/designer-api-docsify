@@ -16,6 +16,8 @@ IP信息。
 
 **替代接口：** [IpInfo](arkts-connectivity-wifimanager-ipinfo-i.md)
 
+<!--Device-wifi-interface IpInfo--><!--Device-wifi-interface IpInfo-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## 导入模块
@@ -40,6 +42,8 @@ gateway: number
 
 **替代接口：** [gateway](arkts-connectivity-wifimanager-ipinfo-i.md#gateway)
 
+<!--Device-IpInfo-gateway: number--><!--Device-IpInfo-gateway: number-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
 ## ipAddress
@@ -57,6 +61,8 @@ IP地址。
 **废弃版本：** 9
 
 **替代接口：** [ipAddress](arkts-connectivity-wifimanager-ipinfo-i.md#ipaddress)
+
+<!--Device-IpInfo-ipAddress: number--><!--Device-IpInfo-ipAddress: number-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
@@ -76,6 +82,8 @@ IP地址租用时长，单位：秒(s)。
 
 **替代接口：** [leaseDuration](arkts-connectivity-wifimanager-ipinfo-i.md#leaseduration)
 
+<!--Device-IpInfo-leaseDuration: number--><!--Device-IpInfo-leaseDuration: number-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
 ## netmask
@@ -93,6 +101,8 @@ netmask: number
 **废弃版本：** 9
 
 **替代接口：** [netmask](arkts-connectivity-wifimanager-ipinfo-i.md#netmask)
+
+<!--Device-IpInfo-netmask: number--><!--Device-IpInfo-netmask: number-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
@@ -112,6 +122,8 @@ primaryDns: number
 
 **替代接口：** [primaryDns](arkts-connectivity-wifimanager-ipinfo-i.md#primarydns)
 
+<!--Device-IpInfo-primaryDns: number--><!--Device-IpInfo-primaryDns: number-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
 ## secondDns
@@ -130,6 +142,8 @@ secondDns: number
 
 **替代接口：** [secondDns](arkts-connectivity-wifimanager-ipinfo-i.md#seconddns)
 
+<!--Device-IpInfo-secondDns: number--><!--Device-IpInfo-secondDns: number-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
 ## serverIp
@@ -147,5 +161,7 @@ DHCP服务端IP地址。
 **废弃版本：** 9
 
 **替代接口：** [serverIp](arkts-connectivity-wifimanager-ipinfo-i.md#serverip)
+
+<!--Device-IpInfo-serverIp: number--><!--Device-IpInfo-serverIp: number-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core

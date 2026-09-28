@@ -8,6 +8,8 @@ export enum AccessibilityFocusScene
 
 **起始版本：** 26.0.0
 
+<!--Device-unnamed-export enum AccessibilityFocusScene--><!--Device-unnamed-export enum AccessibilityFocusScene-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -23,6 +25,8 @@ HOVER_FOCUS = 1
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AccessibilityFocusScene-HOVER_FOCUS = 1--><!--Device-AccessibilityFocusScene-HOVER_FOCUS = 1-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -40,6 +44,8 @@ SWIPE_FOCUS = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AccessibilityFocusScene-SWIPE_FOCUS = 2--><!--Device-AccessibilityFocusScene-SWIPE_FOCUS = 2-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -55,6 +61,8 @@ SCROLL_FOCUS = 3
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AccessibilityFocusScene-SCROLL_FOCUS = 3--><!--Device-AccessibilityFocusScene-SCROLL_FOCUS = 3-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 

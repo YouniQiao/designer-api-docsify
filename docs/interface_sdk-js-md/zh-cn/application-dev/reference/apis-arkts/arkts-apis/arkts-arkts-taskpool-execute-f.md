@@ -18,6 +18,8 @@ function execute(func: Function, ...args: Object[]): Promise<Object>
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-taskpool-function execute(func: Function, ...args: Object[]): Promise<Object>--><!--Device-taskpool-function execute(func: Function, ...args: Object[]): Promise<Object>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -69,6 +71,8 @@ function execute<A extends Array<Object>, R>(func: (...args: A) => R | Promise<R
 **起始版本：** 13
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
+
+<!--Device-taskpool-function execute<A extends Array<Object>, R>(func: (...args: A) => R | Promise<R>, ...args: A): Promise<R>--><!--Device-taskpool-function execute<A extends Array<Object>, R>(func: (...args: A) => R | Promise<R>, ...args: A): Promise<R>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -144,6 +148,8 @@ function execute(task: Task, priority?: Priority): Promise<Object>
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-taskpool-function execute(task: Task, priority?: Priority): Promise<Object>--><!--Device-taskpool-function execute(task: Task, priority?: Priority): Promise<Object>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -207,6 +213,8 @@ function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, priority?
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
+<!--Device-taskpool-function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, priority?: Priority): Promise<R>--><!--Device-taskpool-function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, priority?: Priority): Promise<R>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -268,6 +276,8 @@ function execute(group: TaskGroup, priority?: Priority): Promise<Object[]>
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-taskpool-function execute(group: TaskGroup, priority?: Priority): Promise<Object[]>--><!--Device-taskpool-function execute(group: TaskGroup, priority?: Priority): Promise<Object[]>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -359,6 +369,8 @@ function execute(task: Task, configs: Configs): Promise<Object>
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
 
+<!--Device-taskpool-function execute(task: Task, configs: Configs): Promise<Object>--><!--Device-taskpool-function execute(task: Task, configs: Configs): Promise<Object>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -449,6 +461,8 @@ function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, configs: 
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
 
+<!--Device-taskpool-function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, configs: Configs): Promise<R>--><!--Device-taskpool-function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, configs: Configs): Promise<R>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -520,6 +534,8 @@ function execute(group: TaskGroup, configs: Configs): Promise<Object[]>
 **起始版本：** 24
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-taskpool-function execute(group: TaskGroup, configs: Configs): Promise<Object[]>--><!--Device-taskpool-function execute(group: TaskGroup, configs: Configs): Promise<Object[]>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

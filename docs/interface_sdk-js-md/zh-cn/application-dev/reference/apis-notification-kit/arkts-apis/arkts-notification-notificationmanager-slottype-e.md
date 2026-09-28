@@ -10,6 +10,8 @@ export enum SlotType
 
 **起始版本：** 9
 
+<!--Device-notificationManager-export enum SlotType--><!--Device-notificationManager-export enum SlotType-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## UNKNOWN_TYPE
@@ -22,7 +24,9 @@ UNKNOWN_TYPE = 0
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-SlotType-UNKNOWN_TYPE = 0--><!--Device-SlotType-UNKNOWN_TYPE = 0-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -36,7 +40,9 @@ SOCIAL_COMMUNICATION = 1
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-SlotType-SOCIAL_COMMUNICATION = 1--><!--Device-SlotType-SOCIAL_COMMUNICATION = 1-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -50,7 +56,9 @@ SERVICE_INFORMATION = 2
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-SlotType-SERVICE_INFORMATION = 2--><!--Device-SlotType-SERVICE_INFORMATION = 2-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -64,7 +72,9 @@ CONTENT_INFORMATION = 3
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-SlotType-CONTENT_INFORMATION = 3--><!--Device-SlotType-CONTENT_INFORMATION = 3-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -78,7 +88,9 @@ LIVE_VIEW = 4
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-SlotType-LIVE_VIEW = 4--><!--Device-SlotType-LIVE_VIEW = 4-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -92,7 +104,9 @@ CUSTOMER_SERVICE = 5
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-SlotType-CUSTOMER_SERVICE = 5--><!--Device-SlotType-CUSTOMER_SERVICE = 5-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -106,6 +120,8 @@ OTHER_TYPES = 0xFFFF
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-SlotType-OTHER_TYPES = 0xFFFF--><!--Device-SlotType-OTHER_TYPES = 0xFFFF-End-->
 
 **系统能力：** SystemCapability.Notification.Notification

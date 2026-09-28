@@ -8,6 +8,8 @@ export interface BluetoothScanInfo
 
 **起始版本：** 10
 
+<!--Device-geoLocationManager-export interface BluetoothScanInfo--><!--Device-geoLocationManager-export interface BluetoothScanInfo-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ deviceName: string
 
 **起始版本：** 10
 
+<!--Device-BluetoothScanInfo-deviceName: string--><!--Device-BluetoothScanInfo-deviceName: string-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ macAddress: string
 **类型：** string
 
 **起始版本：** 10
+
+<!--Device-BluetoothScanInfo-macAddress: string--><!--Device-BluetoothScanInfo-macAddress: string-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -62,6 +68,8 @@ rssi: number
 
 **起始版本：** 10
 
+<!--Device-BluetoothScanInfo-rssi: int--><!--Device-BluetoothScanInfo-rssi: int-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +85,8 @@ timestamp: number
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-BluetoothScanInfo-timestamp: long--><!--Device-BluetoothScanInfo-timestamp: long-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 

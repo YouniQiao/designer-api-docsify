@@ -28,6 +28,8 @@ Creates a **SaveButton** component with an icon, text, and background. When the 
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SaveButtonInterface-(): SaveButtonAttribute--><!--Device-SaveButtonInterface-(): SaveButtonAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## SaveButton
@@ -43,6 +45,8 @@ Creates a save button with the specified icon, text and button type. When the us
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SaveButtonInterface-(options: SaveButtonOptions): SaveButtonAttribute--><!--Device-SaveButtonInterface-(options: SaveButtonOptions): SaveButtonAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

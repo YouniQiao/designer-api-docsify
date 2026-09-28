@@ -8,6 +8,8 @@ interface AVMediaDescription
 
 **起始版本：** 10
 
+<!--Device-avSession-interface AVMediaDescription--><!--Device-avSession-interface AVMediaDescription-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 ## 导入模块
@@ -28,7 +30,9 @@ albumCoverUri?: string
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVMediaDescription-albumCoverUri?: string--><!--Device-AVMediaDescription-albumCoverUri?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -44,7 +48,9 @@ albumTitle?: string
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVMediaDescription-albumTitle?: string--><!--Device-AVMediaDescription-albumTitle?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -60,7 +66,9 @@ appName?: string
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVMediaDescription-appName?: string--><!--Device-AVMediaDescription-appName?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -76,7 +84,9 @@ artist?: string
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVMediaDescription-artist?: string--><!--Device-AVMediaDescription-artist?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -96,7 +106,9 @@ assetId: string
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVMediaDescription-assetId: string--><!--Device-AVMediaDescription-assetId: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -112,7 +124,9 @@ creditsPosition?: number
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVMediaDescription-creditsPosition?: int--><!--Device-AVMediaDescription-creditsPosition?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -128,6 +142,8 @@ dataSrc?: media.AVDataSrcDescriptor
 
 **起始版本：** 12
 
+<!--Device-AVMediaDescription-dataSrc?: media.AVDataSrcDescriptor--><!--Device-AVMediaDescription-dataSrc?: media.AVDataSrcDescriptor-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 ## description
@@ -142,7 +158,9 @@ description?: string
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVMediaDescription-description?: string--><!--Device-AVMediaDescription-description?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -160,7 +178,9 @@ displayTags?: number
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVMediaDescription-displayTags?: int--><!--Device-AVMediaDescription-displayTags?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -176,6 +196,8 @@ drmScheme?: string
 
 **起始版本：** 12
 
+<!--Device-AVMediaDescription-drmScheme?: string--><!--Device-AVMediaDescription-drmScheme?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 ## duration
@@ -190,7 +212,9 @@ duration?: number
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVMediaDescription-duration?: int--><!--Device-AVMediaDescription-duration?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -216,6 +240,8 @@ extras?: {[key: string]: Object}
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-AVMediaDescription-extras?: {[key: string]: Object}--><!--Device-AVMediaDescription-extras?: {[key: string]: Object}-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 ## fdSrc
@@ -230,7 +256,9 @@ fdSrc?: media.AVFileDescriptor
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVMediaDescription-fdSrc?: media.AVFileDescriptor--><!--Device-AVMediaDescription-fdSrc?: media.AVFileDescriptor-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -246,7 +274,9 @@ launchClientData?: string
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVMediaDescription-launchClientData?: string--><!--Device-AVMediaDescription-launchClientData?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -264,7 +294,9 @@ lyricContent?: string
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVMediaDescription-lyricContent?: string--><!--Device-AVMediaDescription-lyricContent?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -280,7 +312,9 @@ lyricUri?: string
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVMediaDescription-lyricUri?: string--><!--Device-AVMediaDescription-lyricUri?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -305,7 +339,9 @@ mediaImage?: image.PixelMap | string
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVMediaDescription-mediaImage?: image.PixelMap | string--><!--Device-AVMediaDescription-mediaImage?: image.PixelMap | string-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -321,7 +357,9 @@ mediaSize?: number
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVMediaDescription-mediaSize?: int--><!--Device-AVMediaDescription-mediaSize?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -337,7 +375,9 @@ mediaType?: string
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVMediaDescription-mediaType?: string--><!--Device-AVMediaDescription-mediaType?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -353,7 +393,9 @@ mediaUri?: string
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVMediaDescription-mediaUri?: string--><!--Device-AVMediaDescription-mediaUri?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -369,7 +411,9 @@ pcmSrc?: boolean
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVMediaDescription-pcmSrc?: boolean--><!--Device-AVMediaDescription-pcmSrc?: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -385,7 +429,9 @@ startPosition?: number
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVMediaDescription-startPosition?: int--><!--Device-AVMediaDescription-startPosition?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -401,7 +447,9 @@ subtitle?: string
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVMediaDescription-subtitle?: string--><!--Device-AVMediaDescription-subtitle?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -417,6 +465,8 @@ title?: string
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVMediaDescription-title?: string--><!--Device-AVMediaDescription-title?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core

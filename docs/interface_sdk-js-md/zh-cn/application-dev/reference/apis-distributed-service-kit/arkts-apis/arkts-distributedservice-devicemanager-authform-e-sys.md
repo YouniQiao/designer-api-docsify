@@ -10,6 +10,8 @@ enum AuthForm
 
 **废弃版本：** 11
 
+<!--Device-deviceManager-enum AuthForm--><!--Device-deviceManager-enum AuthForm-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -25,6 +27,8 @@ INVALID_TYPE = -1
 **起始版本：** 10
 
 **废弃版本：** 11
+
+<!--Device-AuthForm-INVALID_TYPE = -1--><!--Device-AuthForm-INVALID_TYPE = -1-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -42,6 +46,8 @@ PEER_TO_PEER = 0
 
 **废弃版本：** 11
 
+<!--Device-AuthForm-PEER_TO_PEER = 0--><!--Device-AuthForm-PEER_TO_PEER = 0-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -58,6 +64,8 @@ IDENTICAL_ACCOUNT = 1
 
 **废弃版本：** 11
 
+<!--Device-AuthForm-IDENTICAL_ACCOUNT = 1--><!--Device-AuthForm-IDENTICAL_ACCOUNT = 1-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -73,6 +81,8 @@ ACROSS_ACCOUNT = 2
 **起始版本：** 10
 
 **废弃版本：** 11
+
+<!--Device-AuthForm-ACROSS_ACCOUNT = 2--><!--Device-AuthForm-ACROSS_ACCOUNT = 2-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 

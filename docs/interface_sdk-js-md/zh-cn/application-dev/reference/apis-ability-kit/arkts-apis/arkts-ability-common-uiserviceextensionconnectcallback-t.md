@@ -12,6 +12,8 @@ export type UIServiceExtensionConnectCallback = _UIServiceExtensionConnectCallba
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
+<!--Device-common-export type UIServiceExtensionConnectCallback = _UIServiceExtensionConnectCallback.default--><!--Device-common-export type UIServiceExtensionConnectCallback = _UIServiceExtensionConnectCallback.default-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **类型：** _UIServiceExtensionConnectCallback.default

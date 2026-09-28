@@ -30,6 +30,8 @@ SymbolSpan(value: Resource)
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-SymbolSpanInterface-(value: Resource): SymbolSpanAttribute--><!--Device-SymbolSpanInterface-(value: Resource): SymbolSpanAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数:**

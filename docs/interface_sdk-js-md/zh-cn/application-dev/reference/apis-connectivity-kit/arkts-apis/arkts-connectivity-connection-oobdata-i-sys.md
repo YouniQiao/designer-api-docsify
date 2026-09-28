@@ -8,6 +8,8 @@ interface OobData
 
 **起始版本：** 23
 
+<!--Device-connection-interface OobData--><!--Device-connection-interface OobData-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ confirmationHash: Uint8Array
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OobData-confirmationHash: Uint8Array--><!--Device-OobData-confirmationHash: Uint8Array-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -52,6 +56,8 @@ deviceId: BluetoothAddress
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OobData-deviceId: BluetoothAddress--><!--Device-OobData-deviceId: BluetoothAddress-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -69,6 +75,8 @@ deviceName?: string
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-OobData-deviceName?: string--><!--Device-OobData-deviceName?: string-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -88,6 +96,8 @@ deviceRole?: DeviceRole
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OobData-deviceRole?: DeviceRole--><!--Device-OobData-deviceRole?: DeviceRole-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -105,6 +115,8 @@ randomizerHash?: Uint8Array
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-OobData-randomizerHash?: Uint8Array--><!--Device-OobData-randomizerHash?: Uint8Array-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

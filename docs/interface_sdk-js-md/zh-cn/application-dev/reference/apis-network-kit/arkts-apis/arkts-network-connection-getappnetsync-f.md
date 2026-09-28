@@ -16,6 +16,8 @@ function getAppNetSync(): NetHandle
 
 **起始版本：** 10
 
+<!--Device-connection-function getAppNetSync(): NetHandle--><!--Device-connection-function getAppNetSync(): NetHandle-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **返回值：**

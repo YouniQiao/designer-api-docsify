@@ -16,6 +16,8 @@ function confirmInvitation(invitationCode: string, state: State, callback: Async
 
 **起始版本：** 11
 
+<!--Device-sharing-function confirmInvitation(invitationCode: string, state: State, callback: AsyncCallback<Result<string>>): void--><!--Device-sharing-function confirmInvitation(invitationCode: string, state: State, callback: AsyncCallback<Result<string>>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
 **系统接口：** 此接口为系统接口。
@@ -64,6 +66,8 @@ function confirmInvitation(invitationCode: string, state: State): Promise<Result
 被邀请者根据共享邀请码确认当前邀请，并获取当前邀请的共享资源标识，使用Promise异步回调。
 
 **起始版本：** 11
+
+<!--Device-sharing-function confirmInvitation(invitationCode: string, state: State): Promise<Result<string>>--><!--Device-sharing-function confirmInvitation(invitationCode: string, state: State): Promise<Result<string>>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 

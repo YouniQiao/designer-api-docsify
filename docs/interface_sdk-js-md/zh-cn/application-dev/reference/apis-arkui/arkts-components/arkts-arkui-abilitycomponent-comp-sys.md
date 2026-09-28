@@ -4,7 +4,7 @@
 
 > **说明：** 
 > 
-> 从API version 10开始，该组件不再维护，推荐使用[UIExtensionComponent](arkts-arkui-uiextensioncomponent-comp-sys.md#ui_extension_componentsystem-api)。
+> 从API version 10开始，该组件不再维护，推荐使用[UIExtensionComponent](arkts-arkui-uiextensioncomponent-comp-sys.md)。
 > 
 > 本模块为系统接口。
 
@@ -35,6 +35,8 @@ AbilityComponent(value: { want: import('../api/@ohos.app.ability.Want').default 
 **废弃版本：** 10
 
 **替代接口：** [UIExtensionComponentInterface](arkts-arkui-uiextensioncomponent-comp-sys.md#uiextensioncomponentinterface)
+
+<!--Device-AbilityComponentInterface-(value: { want: import('../api/@ohos.app.ability.Want').default }): AbilityComponentAttribute--><!--Device-AbilityComponentInterface-(value: { want: import('../api/@ohos.app.ability.Want').default }): AbilityComponentAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

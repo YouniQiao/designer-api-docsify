@@ -12,6 +12,8 @@ Inherited from [TimePickerOptions](arkts-arkui-timepicker-comp-timepickeroptions
 
 **Since:** 8
 
+<!--Device-unnamed-declare interface TimePickerDialogOptions extends TimePickerOptions--><!--Device-unnamed-declare interface TimePickerDialogOptions extends TimePickerOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## distortionMode
@@ -35,6 +37,8 @@ Distortion animation mode of the dialog box under system materials.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-TimePickerDialogOptions-distortionMode?: DistortionMode--><!--Device-TimePickerDialogOptions-distortionMode?: DistortionMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -61,6 +65,8 @@ Edge light animation mode of the dialog box under system materials.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-TimePickerDialogOptions-edgeLightMode?: EdgeLightMode--><!--Device-TimePickerDialogOptions-edgeLightMode?: EdgeLightMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

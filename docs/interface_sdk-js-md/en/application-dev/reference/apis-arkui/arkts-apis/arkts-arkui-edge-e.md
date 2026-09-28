@@ -8,6 +8,8 @@ Controls the alignment position of the scrollable component in the layout.
 
 **Since:** 7
 
+<!--Device-unnamed-declare enum Edge--><!--Device-unnamed-declare enum Edge-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Top
@@ -21,6 +23,8 @@ Top edge in the vertical direction.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Edge-Top--><!--Device-Edge-Top-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,6 +42,8 @@ This API is deprecated since API version 9.
 
 **Deprecated since:** 9
 
+<!--Device-Edge-Center--><!--Device-Edge-Center-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Bottom
@@ -51,6 +57,8 @@ Bottom edge in the vertical direction.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Edge-Bottom--><!--Device-Edge-Bottom-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -68,6 +76,8 @@ This API is deprecated since API version 9.
 
 **Deprecated since:** 9
 
+<!--Device-Edge-Baseline--><!--Device-Edge-Baseline-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Start
@@ -81,6 +91,8 @@ Start position in the horizontal direction.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Edge-Start--><!--Device-Edge-Start-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -98,6 +110,8 @@ This API is deprecated since API version 9.
 
 **Deprecated since:** 9
 
+<!--Device-Edge-Middle--><!--Device-Edge-Middle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## End
@@ -111,5 +125,7 @@ End position in the horizontal direction.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Edge-End--><!--Device-Edge-End-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

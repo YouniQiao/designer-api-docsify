@@ -8,6 +8,8 @@ enum CertRevocationFlag
 
 **起始版本：** 26.0.0
 
+<!--Device-cert-enum CertRevocationFlag--><!--Device-cert-enum CertRevocationFlag-End-->
+
 **系统能力：** SystemCapability.Security.Cert
 
 ## CERT_REVOCATION_PREFER_OCSP
@@ -25,7 +27,9 @@ CERT_REVOCATION_PREFER_OCSP = 0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-CertRevocationFlag-CERT_REVOCATION_PREFER_OCSP = 0--><!--Device-CertRevocationFlag-CERT_REVOCATION_PREFER_OCSP = 0-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -43,7 +47,9 @@ CERT_REVOCATION_CRL_CHECK = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-CertRevocationFlag-CERT_REVOCATION_CRL_CHECK = 1--><!--Device-CertRevocationFlag-CERT_REVOCATION_CRL_CHECK = 1-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -67,7 +73,9 @@ CERT_REVOCATION_OCSP_CHECK = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-CertRevocationFlag-CERT_REVOCATION_OCSP_CHECK = 2--><!--Device-CertRevocationFlag-CERT_REVOCATION_OCSP_CHECK = 2-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -86,6 +94,8 @@ CERT_REVOCATION_CHECK_ALL_CERT = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-CertRevocationFlag-CERT_REVOCATION_CHECK_ALL_CERT = 3--><!--Device-CertRevocationFlag-CERT_REVOCATION_CHECK_ALL_CERT = 3-End-->
 
 **系统能力：** SystemCapability.Security.Cert

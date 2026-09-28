@@ -20,6 +20,8 @@ function setOverlayEnabledByBundleName(bundleName:string, moduleName:string, isE
 
 **需要权限：** ohos.permission.CHANGE_OVERLAY_ENABLED_STATE
 
+<!--Device-overlay-function setOverlayEnabledByBundleName(bundleName:string, moduleName:string, isEnabled: boolean, callback: AsyncCallback<void>): void--><!--Device-overlay-function setOverlayEnabledByBundleName(bundleName:string, moduleName:string, isEnabled: boolean, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Overlay
 
 **系统接口：** 此接口为系统接口。
@@ -87,6 +89,8 @@ function setOverlayEnabledByBundleName(bundleName:string, moduleName:string, isE
 **起始版本：** 10
 
 **需要权限：** ohos.permission.CHANGE_OVERLAY_ENABLED_STATE
+
+<!--Device-overlay-function setOverlayEnabledByBundleName(bundleName:string, moduleName:string, isEnabled: boolean): Promise<void>--><!--Device-overlay-function setOverlayEnabledByBundleName(bundleName:string, moduleName:string, isEnabled: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Overlay
 

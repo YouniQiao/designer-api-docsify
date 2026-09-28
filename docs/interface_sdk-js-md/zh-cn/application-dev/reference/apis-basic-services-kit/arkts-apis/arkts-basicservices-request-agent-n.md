@@ -8,6 +8,8 @@ The request agent api. Supports "background" and "frontend" tasks as while. Thou
 
 **起始版本：** 10
 
+<!--Device-request-namespace agent--><!--Device-request-namespace agent-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## 导入模块

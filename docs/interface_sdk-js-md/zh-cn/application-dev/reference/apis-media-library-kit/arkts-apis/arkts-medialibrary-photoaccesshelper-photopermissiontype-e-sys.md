@@ -12,6 +12,8 @@ enum PhotoPermissionType
 
 **起始版本：** 12
 
+<!--Device-photoAccessHelper-enum PhotoPermissionType--><!--Device-photoAccessHelper-enum PhotoPermissionType-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -26,6 +28,8 @@ TEMPORARY_READ_IMAGEVIDEO = 0
 
 **起始版本：** 12
 
+<!--Device-PhotoPermissionType-TEMPORARY_READ_IMAGEVIDEO = 0--><!--Device-PhotoPermissionType-TEMPORARY_READ_IMAGEVIDEO = 0-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -39,6 +43,8 @@ PERSISTENT_READ_IMAGEVIDEO = 1
 永久读权限类型。
 
 **起始版本：** 12
+
+<!--Device-PhotoPermissionType-PERSISTENT_READ_IMAGEVIDEO = 1--><!--Device-PhotoPermissionType-PERSISTENT_READ_IMAGEVIDEO = 1-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

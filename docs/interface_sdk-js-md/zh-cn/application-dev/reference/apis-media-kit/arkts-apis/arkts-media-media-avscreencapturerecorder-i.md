@@ -15,6 +15,8 @@ interface AVScreenCaptureRecorder
 
 **起始版本：** 12
 
+<!--Device-media-interface AVScreenCaptureRecorder--><!--Device-media-interface AVScreenCaptureRecorder-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 ## 导入模块
@@ -38,6 +40,8 @@ addWatermark(watermark: image.PixelMap, config: WatermarkConfiguration): Promise
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVScreenCaptureRecorder-addWatermark(watermark: image.PixelMap, config: WatermarkConfiguration): Promise<int>--><!--Device-AVScreenCaptureRecorder-addWatermark(watermark: image.PixelMap, config: WatermarkConfiguration): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -102,6 +106,8 @@ excludePickerWindows(excludedWindows: Array<number>): Promise<void>
 
 **起始版本：** 22
 
+<!--Device-AVScreenCaptureRecorder-excludePickerWindows(excludedWindows: Array<int>): Promise<void>--><!--Device-AVScreenCaptureRecorder-excludePickerWindows(excludedWindows: Array<int>): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 **参数：**
@@ -158,6 +164,8 @@ init(config: AVScreenCaptureRecordConfig): Promise<void>
 进行录屏初始化，设置录屏参数。使用Promise异步回调。
 
 **起始版本：** 12
+
+<!--Device-AVScreenCaptureRecorder-init(config: AVScreenCaptureRecordConfig): Promise<void>--><!--Device-AVScreenCaptureRecorder-init(config: AVScreenCaptureRecordConfig): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -224,6 +232,8 @@ off(type: 'stateChange', callback?: Callback<AVScreenCaptureStateCode>): void
 
 **起始版本：** 12
 
+<!--Device-AVScreenCaptureRecorder-off(type: 'stateChange', callback?: Callback<AVScreenCaptureStateCode>): void--><!--Device-AVScreenCaptureRecorder-off(type: 'stateChange', callback?: Callback<AVScreenCaptureStateCode>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 **参数：**
@@ -261,6 +271,8 @@ off(type: 'error', callback?: ErrorCallback): void
 
 **起始版本：** 12
 
+<!--Device-AVScreenCaptureRecorder-off(type: 'error', callback?: ErrorCallback): void--><!--Device-AVScreenCaptureRecorder-off(type: 'error', callback?: ErrorCallback): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 **参数：**
@@ -297,6 +309,8 @@ on(type: 'stateChange', callback: Callback<AVScreenCaptureStateCode>): void
 订阅录屏状态切换的事件，当状态发生的时候，会通过订阅的回调通知用户。用户只能订阅一个状态切换的回调方法，重复订阅时，以最后一次订阅的回调接口为准。
 
 **起始版本：** 12
+
+<!--Device-AVScreenCaptureRecorder-on(type: 'stateChange', callback: Callback<AVScreenCaptureStateCode>): void--><!--Device-AVScreenCaptureRecorder-on(type: 'stateChange', callback: Callback<AVScreenCaptureStateCode>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -336,6 +350,8 @@ on(type: 'error', callback: ErrorCallback): void
 订阅AVScreenCaptureRecorder的错误事件，用户可以根据应用自身逻辑对错误事件进行处理。用户只能订阅一个错误事件的回调方法，重复订阅时，以最后一次订阅的回调接口为准。
 
 **起始版本：** 12
+
+<!--Device-AVScreenCaptureRecorder-on(type: 'error', callback: ErrorCallback): void--><!--Device-AVScreenCaptureRecorder-on(type: 'error', callback: ErrorCallback): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -386,6 +402,8 @@ pauseRecording(): Promise<void>
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVScreenCaptureRecorder-pauseRecording(): Promise<void>--><!--Device-AVScreenCaptureRecorder-pauseRecording(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -440,6 +458,8 @@ presentPicker(): Promise<void>
 
 **起始版本：** 22
 
+<!--Device-AVScreenCaptureRecorder-presentPicker(): Promise<void>--><!--Device-AVScreenCaptureRecorder-presentPicker(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 **返回值：**
@@ -488,6 +508,8 @@ release(): Promise<void>
 释放录屏。使用Promise异步回调。
 
 **起始版本：** 12
+
+<!--Device-AVScreenCaptureRecorder-release(): Promise<void>--><!--Device-AVScreenCaptureRecorder-release(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -538,6 +560,8 @@ resumeRecording(): Promise<void>
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVScreenCaptureRecorder-resumeRecording(): Promise<void>--><!--Device-AVScreenCaptureRecorder-resumeRecording(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -593,6 +617,8 @@ setContentAutoRotation(enable: boolean): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVScreenCaptureRecorder-setContentAutoRotation(enable: boolean): Promise<void>--><!--Device-AVScreenCaptureRecorder-setContentAutoRotation(enable: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 **参数：**
@@ -647,6 +673,8 @@ setMicEnabled(enable: boolean): Promise<void>
 
 **起始版本：** 12
 
+<!--Device-AVScreenCaptureRecorder-setMicEnabled(enable: boolean): Promise<void>--><!--Device-AVScreenCaptureRecorder-setMicEnabled(enable: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 **参数：**
@@ -700,6 +728,8 @@ setPickerMode(pickerMode: PickerMode): Promise<void>
 设置Picker显示模式，在下一次显示Picker时生效。使用Promise异步回调。
 
 **起始版本：** 22
+
+<!--Device-AVScreenCaptureRecorder-setPickerMode(pickerMode: PickerMode): Promise<void>--><!--Device-AVScreenCaptureRecorder-setPickerMode(pickerMode: PickerMode): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -758,6 +788,8 @@ skipPrivacyMode(windowIDs: Array<number>): Promise<void>
 
 **起始版本：** 12
 
+<!--Device-AVScreenCaptureRecorder-skipPrivacyMode(windowIDs: Array<int>): Promise<void>--><!--Device-AVScreenCaptureRecorder-skipPrivacyMode(windowIDs: Array<int>): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 **参数：**
@@ -813,6 +845,8 @@ startRecording(): Promise<void>
 
 **起始版本：** 12
 
+<!--Device-AVScreenCaptureRecorder-startRecording(): Promise<void>--><!--Device-AVScreenCaptureRecorder-startRecording(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 **返回值：**
@@ -860,6 +894,8 @@ stopRecording(): Promise<void>
 结束录屏。使用Promise异步回调。
 
 **起始版本：** 12
+
+<!--Device-AVScreenCaptureRecorder-stopRecording(): Promise<void>--><!--Device-AVScreenCaptureRecorder-stopRecording(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 

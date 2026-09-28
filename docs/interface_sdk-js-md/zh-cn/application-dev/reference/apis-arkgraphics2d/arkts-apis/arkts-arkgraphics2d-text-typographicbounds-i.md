@@ -24,6 +24,8 @@ interface TypographicBounds
 
 **起始版本：** 18
 
+<!--Device-text-interface TypographicBounds--><!--Device-text-interface TypographicBounds-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## 导入模块
@@ -44,7 +46,9 @@ ascent: number
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-TypographicBounds-ascent: double--><!--Device-TypographicBounds-ascent: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -60,7 +64,9 @@ descent: number
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-TypographicBounds-descent: double--><!--Device-TypographicBounds-descent: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -76,7 +82,9 @@ leading: number
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-TypographicBounds-leading: double--><!--Device-TypographicBounds-leading: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -92,6 +100,8 @@ width: number
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-TypographicBounds-width: double--><!--Device-TypographicBounds-width: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing

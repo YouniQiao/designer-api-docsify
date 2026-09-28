@@ -18,6 +18,8 @@ function getRadioTech(slotId: number, callback: AsyncCallback<NetworkRadioTech>)
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-radio-function getRadioTech(slotId: int, callback: AsyncCallback<NetworkRadioTech>): void--><!--Device-radio-function getRadioTech(slotId: int, callback: AsyncCallback<NetworkRadioTech>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**
@@ -80,6 +82,8 @@ function getRadioTech(slotId: number): Promise<NetworkRadioTech>
 **起始版本：** 6
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
+
+<!--Device-radio-function getRadioTech(slotId: int): Promise<NetworkRadioTech>--><!--Device-radio-function getRadioTech(slotId: int): Promise<NetworkRadioTech>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

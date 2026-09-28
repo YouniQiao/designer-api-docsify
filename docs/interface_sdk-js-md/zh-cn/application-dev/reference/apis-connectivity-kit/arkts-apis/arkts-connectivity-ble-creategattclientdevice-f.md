@@ -22,6 +22,8 @@ function createGattClientDevice(deviceId: string): GattClientDevice
 
 **替代接口：** [createGattClientDevice](arkts-connectivity-ble-creategattclientdevice-f.md)
 
+<!--Device-BLE-function createGattClientDevice(deviceId: string): GattClientDevice--><!--Device-BLE-function createGattClientDevice(deviceId: string): GattClientDevice-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**

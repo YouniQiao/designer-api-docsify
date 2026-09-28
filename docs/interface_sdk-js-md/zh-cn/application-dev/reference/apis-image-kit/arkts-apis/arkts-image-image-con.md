@@ -12,6 +12,8 @@ const CAPTURE_MODE_FRONT_LENS_NIGHT_VIEW = 7
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-image-const CAPTURE_MODE_FRONT_LENS_NIGHT_VIEW = 7--><!--Device-image-const CAPTURE_MODE_FRONT_LENS_NIGHT_VIEW = 7-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## CAPTURE_MODE_LIGHT_GRAFFITI
@@ -25,6 +27,8 @@ const CAPTURE_MODE_LIGHT_GRAFFITI = 10
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-image-const CAPTURE_MODE_LIGHT_GRAFFITI = 10--><!--Device-image-const CAPTURE_MODE_LIGHT_GRAFFITI = 10-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -40,6 +44,8 @@ const CAPTURE_MODE_MOVING_PHOTO = 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-image-const CAPTURE_MODE_MOVING_PHOTO = 20--><!--Device-image-const CAPTURE_MODE_MOVING_PHOTO = 20-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## CAPTURE_MODE_PANORAMA
@@ -53,6 +59,8 @@ const CAPTURE_MODE_PANORAMA = 8
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-image-const CAPTURE_MODE_PANORAMA = 8--><!--Device-image-const CAPTURE_MODE_PANORAMA = 8-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -68,6 +76,8 @@ const CAPTURE_MODE_PORTRAIT = 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-image-const CAPTURE_MODE_PORTRAIT = 23--><!--Device-image-const CAPTURE_MODE_PORTRAIT = 23-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## CAPTURE_MODE_PROFESSIONAL
@@ -81,6 +91,8 @@ const CAPTURE_MODE_PROFESSIONAL = 2
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-image-const CAPTURE_MODE_PROFESSIONAL = 2--><!--Device-image-const CAPTURE_MODE_PROFESSIONAL = 2-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -96,6 +108,8 @@ const CAPTURE_MODE_REAR_LENS_NIGHT_VIEW = 42
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-image-const CAPTURE_MODE_REAR_LENS_NIGHT_VIEW = 42--><!--Device-image-const CAPTURE_MODE_REAR_LENS_NIGHT_VIEW = 42-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## CAPTURE_MODE_SILKY_WATER
@@ -109,6 +123,8 @@ const CAPTURE_MODE_SILKY_WATER = 11
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-image-const CAPTURE_MODE_SILKY_WATER = 11--><!--Device-image-const CAPTURE_MODE_SILKY_WATER = 11-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -124,6 +140,8 @@ const CAPTURE_MODE_SNAP_SHOT = 62
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-image-const CAPTURE_MODE_SNAP_SHOT = 62--><!--Device-image-const CAPTURE_MODE_SNAP_SHOT = 62-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## CAPTURE_MODE_STAR_TRACK
@@ -137,6 +155,8 @@ const CAPTURE_MODE_STAR_TRACK = 12
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-image-const CAPTURE_MODE_STAR_TRACK = 12--><!--Device-image-const CAPTURE_MODE_STAR_TRACK = 12-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -152,6 +172,8 @@ const CAPTURE_MODE_SUPER_MACRO = 47
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-image-const CAPTURE_MODE_SUPER_MACRO = 47--><!--Device-image-const CAPTURE_MODE_SUPER_MACRO = 47-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## CAPTURE_MODE_TAIL_LIGHT
@@ -166,6 +188,8 @@ const CAPTURE_MODE_TAIL_LIGHT = 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-image-const CAPTURE_MODE_TAIL_LIGHT = 9--><!--Device-image-const CAPTURE_MODE_TAIL_LIGHT = 9-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## CAPTURE_MODE_WIDEAPERTURE
@@ -179,6 +203,8 @@ const CAPTURE_MODE_WIDEAPERTURE = 19
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-image-const CAPTURE_MODE_WIDEAPERTURE = 19--><!--Device-image-const CAPTURE_MODE_WIDEAPERTURE = 19-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -196,6 +222,8 @@ Dublin Core元数据命名空间。Namespace uri: 'http://purl.org/dc/elements/1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-image-const DUBLIN_CORE: XMPNamespace--><!--Device-image-const DUBLIN_CORE: XMPNamespace-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## EXIF
@@ -211,6 +239,8 @@ EXIF元数据命名空间。Namespace uri: 'http://ns.adobe.com/exif/1.0/', pref
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-image-const EXIF: XMPNamespace--><!--Device-image-const EXIF: XMPNamespace-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -228,6 +258,8 @@ TIFF图像格式参数命名空间。Namespace uri: 'http://ns.adobe.com/tiff/1.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-image-const TIFF: XMPNamespace--><!--Device-image-const TIFF: XMPNamespace-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## XMAGE_WATERMARK_MODE_AT_THE_BOTTOM
@@ -242,6 +274,8 @@ XMAGE水印模式：XMAGE水印固定位于图像底部中央。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-image-const XMAGE_WATERMARK_MODE_AT_THE_BOTTOM = 9--><!--Device-image-const XMAGE_WATERMARK_MODE_AT_THE_BOTTOM = 9-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## XMAGE_WATERMARK_MODE_BORDER
@@ -255,6 +289,8 @@ XMAGE水印模式：XMAGE水印会自动调整到边界位置，系统根据图�
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-image-const XMAGE_WATERMARK_MODE_BORDER = 10--><!--Device-image-const XMAGE_WATERMARK_MODE_BORDER = 10-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -272,6 +308,8 @@ XMP基础命名空间。Namespace uri: 'http://ns.adobe.com/xap/1.0/', prefix: '
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-image-const XMP_BASIC: XMPNamespace--><!--Device-image-const XMP_BASIC: XMPNamespace-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## XMP_RIGHTS
@@ -287,5 +325,7 @@ XMP版权与权限命名空间。Namespace uri: 'http://ns.adobe.com/xap/1.0/rig
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-image-const XMP_RIGHTS: XMPNamespace--><!--Device-image-const XMP_RIGHTS: XMPNamespace-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core

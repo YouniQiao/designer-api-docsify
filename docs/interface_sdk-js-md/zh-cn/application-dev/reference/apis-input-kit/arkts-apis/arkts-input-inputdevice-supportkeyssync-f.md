@@ -16,6 +16,8 @@ function supportKeysSync(deviceId: number, keys: Array<KeyCode>): Array<boolean>
 
 **起始版本：** 10
 
+<!--Device-inputDevice-function supportKeysSync(deviceId: int, keys: Array<KeyCode>): Array<boolean>--><!--Device-inputDevice-function supportKeysSync(deviceId: int, keys: Array<KeyCode>): Array<boolean>-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 **参数：**

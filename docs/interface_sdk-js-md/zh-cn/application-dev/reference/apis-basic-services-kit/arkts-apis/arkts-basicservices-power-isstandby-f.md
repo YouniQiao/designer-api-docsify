@@ -16,6 +16,8 @@ function isStandby(): boolean
 
 **起始版本：** 10
 
+<!--Device-power-function isStandby(): boolean--><!--Device-power-function isStandby(): boolean-End-->
+
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 
 **返回值：**

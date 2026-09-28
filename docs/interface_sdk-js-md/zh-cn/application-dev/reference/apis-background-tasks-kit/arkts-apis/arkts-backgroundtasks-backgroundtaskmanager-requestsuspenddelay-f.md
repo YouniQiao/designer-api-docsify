@@ -20,6 +20,8 @@ function requestSuspendDelay(reason: string, callback: Callback<void>): DelaySus
 
 **起始版本：** 9
 
+<!--Device-backgroundTaskManager-function requestSuspendDelay(reason: string, callback: Callback<void>): DelaySuspendInfo--><!--Device-backgroundTaskManager-function requestSuspendDelay(reason: string, callback: Callback<void>): DelaySuspendInfo-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
 **参数：**

@@ -10,6 +10,8 @@ ManualExposure extends [ManualExposureQuery](arkts-camera-camera-manualexposureq
 
 **起始版本：** 24
 
+<!--Device-camera-interface ManualExposure extends ManualExposureQuery--><!--Device-camera-interface ManualExposure extends ManualExposureQuery-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
@@ -28,7 +30,9 @@ Gets current exposure value.
 
 **起始版本：** 24
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-ManualExposure-getExposureDuration(): int--><!--Device-ManualExposure-getExposureDuration(): int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -55,7 +59,9 @@ Sets Exposure duration value, units: microseconds.This control is only effective
 
 **起始版本：** 24
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-ManualExposure-setExposureDuration(exposureDuration: int): void--><!--Device-ManualExposure-setExposureDuration(exposureDuration: int): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

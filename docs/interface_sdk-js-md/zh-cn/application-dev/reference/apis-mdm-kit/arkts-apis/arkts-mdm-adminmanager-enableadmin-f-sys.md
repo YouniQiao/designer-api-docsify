@@ -20,6 +20,8 @@ function enableAdmin(admin: Want, enterpriseInfo: EnterpriseInfo, type: AdminTyp
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-adminManager-function enableAdmin(admin: Want, enterpriseInfo: EnterpriseInfo, type: AdminType, callback: AsyncCallback<void>): void--><!--Device-adminManager-function enableAdmin(admin: Want, enterpriseInfo: EnterpriseInfo, type: AdminType, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -86,6 +88,8 @@ function enableAdmin(admin: Want, enterpriseInfo: EnterpriseInfo, type: AdminTyp
 **需要权限：** ohos.permission.MANAGE_ENTERPRISE_DEVICE_ADMIN
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-adminManager-function enableAdmin(admin: Want, enterpriseInfo: EnterpriseInfo, type: AdminType, userId: number, callback: AsyncCallback<void>): void--><!--Device-adminManager-function enableAdmin(admin: Want, enterpriseInfo: EnterpriseInfo, type: AdminType, userId: number, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -154,6 +158,8 @@ function enableAdmin(admin: Want, enterpriseInfo: EnterpriseInfo, type: AdminTyp
 **需要权限：** ohos.permission.MANAGE_ENTERPRISE_DEVICE_ADMIN
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-adminManager-function enableAdmin(admin: Want, enterpriseInfo: EnterpriseInfo, type: AdminType, userId?: number): Promise<void>--><!--Device-adminManager-function enableAdmin(admin: Want, enterpriseInfo: EnterpriseInfo, type: AdminType, userId?: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

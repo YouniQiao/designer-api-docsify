@@ -22,6 +22,8 @@ function getOAID(callback: AsyncCallback<string>): void
 
 **需要权限：** ohos.permission.APP_TRACKING_CONSENT
 
+<!--Device-identifier-function getOAID(callback: AsyncCallback<string>): void--><!--Device-identifier-function getOAID(callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.Advertising.OAID
 
 **参数：**
@@ -69,6 +71,8 @@ function getOAID(): Promise<string>
 **起始版本：** 10
 
 **需要权限：** ohos.permission.APP_TRACKING_CONSENT
+
+<!--Device-identifier-function getOAID(): Promise<string>--><!--Device-identifier-function getOAID(): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Advertising.OAID
 

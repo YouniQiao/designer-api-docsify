@@ -8,6 +8,8 @@ export declare enum IntentionCode
 
 **起始版本：** 10
 
+<!--Device-unnamed-export declare enum IntentionCode--><!--Device-unnamed-export declare enum IntentionCode-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## INTENTION_UNKNOWN
@@ -20,7 +22,9 @@ INTENTION_UNKNOWN = -1
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-IntentionCode-INTENTION_UNKNOWN = -1--><!--Device-IntentionCode-INTENTION_UNKNOWN = -1-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -34,7 +38,9 @@ INTENTION_UP = 1
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-IntentionCode-INTENTION_UP = 1--><!--Device-IntentionCode-INTENTION_UP = 1-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -48,7 +54,9 @@ INTENTION_DOWN = 2
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-IntentionCode-INTENTION_DOWN = 2--><!--Device-IntentionCode-INTENTION_DOWN = 2-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -62,7 +70,9 @@ INTENTION_LEFT = 3
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-IntentionCode-INTENTION_LEFT = 3--><!--Device-IntentionCode-INTENTION_LEFT = 3-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -76,7 +86,9 @@ INTENTION_RIGHT = 4
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-IntentionCode-INTENTION_RIGHT = 4--><!--Device-IntentionCode-INTENTION_RIGHT = 4-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -90,7 +102,9 @@ INTENTION_SELECT = 5
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-IntentionCode-INTENTION_SELECT = 5--><!--Device-IntentionCode-INTENTION_SELECT = 5-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -104,7 +118,9 @@ INTENTION_ESCAPE = 6
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-IntentionCode-INTENTION_ESCAPE = 6--><!--Device-IntentionCode-INTENTION_ESCAPE = 6-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -118,7 +134,9 @@ INTENTION_BACK = 7
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-IntentionCode-INTENTION_BACK = 7--><!--Device-IntentionCode-INTENTION_BACK = 7-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -132,7 +150,9 @@ INTENTION_FORWARD = 8
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-IntentionCode-INTENTION_FORWARD = 8--><!--Device-IntentionCode-INTENTION_FORWARD = 8-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -146,7 +166,9 @@ INTENTION_MENU = 9
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-IntentionCode-INTENTION_MENU = 9--><!--Device-IntentionCode-INTENTION_MENU = 9-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -160,7 +182,9 @@ INTENTION_PAGE_UP = 11
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-IntentionCode-INTENTION_PAGE_UP = 11--><!--Device-IntentionCode-INTENTION_PAGE_UP = 11-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -174,7 +198,9 @@ INTENTION_PAGE_DOWN = 12
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-IntentionCode-INTENTION_PAGE_DOWN = 12--><!--Device-IntentionCode-INTENTION_PAGE_DOWN = 12-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -188,7 +214,9 @@ INTENTION_ZOOM_OUT = 13
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-IntentionCode-INTENTION_ZOOM_OUT = 13--><!--Device-IntentionCode-INTENTION_ZOOM_OUT = 13-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -202,6 +230,8 @@ INTENTION_ZOOM_IN = 14
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-IntentionCode-INTENTION_ZOOM_IN = 14--><!--Device-IntentionCode-INTENTION_ZOOM_IN = 14-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core

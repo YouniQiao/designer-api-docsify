@@ -16,6 +16,8 @@ function encodeImage(srcImage: image.PixelMap, metadata: string): Promise<image.
 
 **起始版本：** 18
 
+<!--Device-metadataBinding-function encodeImage(srcImage: image.PixelMap, metadata: string): Promise<image.PixelMap>--><!--Device-metadataBinding-function encodeImage(srcImage: image.PixelMap, metadata: string): Promise<image.PixelMap>-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.MetadataBinding
 
 **系统接口：** 此接口为系统接口。

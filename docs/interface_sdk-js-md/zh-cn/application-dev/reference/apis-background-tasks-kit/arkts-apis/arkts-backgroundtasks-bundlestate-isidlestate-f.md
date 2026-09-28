@@ -18,6 +18,8 @@ function isIdleState(bundleName: string, callback: AsyncCallback<boolean>): void
 
 **废弃版本：** 9
 
+<!--Device-bundleState-function isIdleState(bundleName: string, callback: AsyncCallback<boolean>): void--><!--Device-bundleState-function isIdleState(bundleName: string, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
 **参数：**
@@ -56,6 +58,8 @@ function isIdleState(bundleName: string): Promise<boolean>
 **起始版本：** 7
 
 **废弃版本：** 9
+
+<!--Device-bundleState-function isIdleState(bundleName: string): Promise<boolean>--><!--Device-bundleState-function isIdleState(bundleName: string): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 

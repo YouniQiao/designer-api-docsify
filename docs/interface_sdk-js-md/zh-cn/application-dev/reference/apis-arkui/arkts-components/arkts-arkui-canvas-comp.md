@@ -24,6 +24,8 @@ Canvas(context?: CanvasRenderingContext2D | DrawingRenderingContext)
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-CanvasInterface-(context?: CanvasRenderingContext2D | DrawingRenderingContext): CanvasAttribute--><!--Device-CanvasInterface-(context?: CanvasRenderingContext2D | DrawingRenderingContext): CanvasAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数:**
@@ -47,6 +49,8 @@ Canvas(context: CanvasRenderingContext2D | DrawingRenderingContext, imageAIOptio
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-CanvasInterface-(context: CanvasRenderingContext2D | DrawingRenderingContext, imageAIOptions: ImageAIOptions): CanvasAttribute--><!--Device-CanvasInterface-(context: CanvasRenderingContext2D | DrawingRenderingContext, imageAIOptions: ImageAIOptions): CanvasAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -78,6 +82,8 @@ Canvas(params: CanvasParams)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-CanvasInterface-(params: CanvasParams): CanvasAttribute--><!--Device-CanvasInterface-(params: CanvasParams): CanvasAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

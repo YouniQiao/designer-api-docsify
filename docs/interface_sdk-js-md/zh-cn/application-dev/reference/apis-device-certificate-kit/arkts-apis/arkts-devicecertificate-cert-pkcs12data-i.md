@@ -8,6 +8,8 @@ P12（PKCS #12）数据，包含私钥、证书和其他证书。
 
 **起始版本：** 18
 
+<!--Device-cert-interface Pkcs12Data--><!--Device-cert-interface Pkcs12Data-End-->
+
 **系统能力：** SystemCapability.Security.Cert
 
 ## 导入模块
@@ -28,7 +30,9 @@ cert?: X509Cert
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-Pkcs12Data-cert?: X509Cert--><!--Device-Pkcs12Data-cert?: X509Cert-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -44,7 +48,9 @@ otherCerts?: Array<X509Cert>
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-Pkcs12Data-otherCerts?: Array<X509Cert>--><!--Device-Pkcs12Data-otherCerts?: Array<X509Cert>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -60,6 +66,8 @@ privateKey?: string | Uint8Array
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-Pkcs12Data-privateKey?: string | Uint8Array--><!--Device-Pkcs12Data-privateKey?: string | Uint8Array-End-->
 
 **系统能力：** SystemCapability.Security.Cert

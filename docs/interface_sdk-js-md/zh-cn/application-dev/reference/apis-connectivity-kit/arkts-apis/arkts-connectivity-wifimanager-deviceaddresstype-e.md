@@ -10,6 +10,8 @@ Wi-Fi设备地址（MAC/BSSID）类型。是标识Wi-Fi设备或接入点的唯�
 
 **起始版本：** 10
 
+<!--Device-wifiManager-enum DeviceAddressType--><!--Device-wifiManager-enum DeviceAddressType-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.Core
 
 ## RANDOM_DEVICE_ADDRESS
@@ -22,7 +24,9 @@ RANDOM_DEVICE_ADDRESS
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-DeviceAddressType-RANDOM_DEVICE_ADDRESS--><!--Device-DeviceAddressType-RANDOM_DEVICE_ADDRESS-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.Core
 
@@ -36,6 +40,8 @@ REAL_DEVICE_ADDRESS
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-DeviceAddressType-REAL_DEVICE_ADDRESS--><!--Device-DeviceAddressType-REAL_DEVICE_ADDRESS-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.Core

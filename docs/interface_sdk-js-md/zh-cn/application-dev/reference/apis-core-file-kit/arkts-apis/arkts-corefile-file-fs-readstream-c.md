@@ -10,6 +10,8 @@ declare class ReadStream extends stream.Readable
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare class ReadStream extends stream.Readable--><!--Device-unnamed-declare class ReadStream extends stream.Readable-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## 导入模块
@@ -27,6 +29,8 @@ close(): void
 关闭可读流。
 
 **起始版本：** 12
+
+<!--Device-ReadStream-close(): void--><!--Device-ReadStream-close(): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -59,6 +63,8 @@ constructor()
 
 **起始版本：** 12
 
+<!--Device-ReadStream-constructor()--><!--Device-ReadStream-constructor()-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## seek
@@ -70,6 +76,8 @@ seek(offset: number, whence?: WhenceType): number
 调整可读流偏移指针位置。
 
 **起始版本：** 12
+
+<!--Device-ReadStream-seek(offset: number, whence?: WhenceType): number--><!--Device-ReadStream-seek(offset: number, whence?: WhenceType): number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -117,6 +125,8 @@ readonly bytesRead: number
 
 **起始版本：** 12
 
+<!--Device-ReadStream-readonly bytesRead: number--><!--Device-ReadStream-readonly bytesRead: number-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **错误码：**
@@ -136,6 +146,8 @@ readonly path: string
 **类型：** string
 
 **起始版本：** 12
+
+<!--Device-ReadStream-readonly path: string--><!--Device-ReadStream-readonly path: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

@@ -20,6 +20,8 @@ Subscribes to notifications based on the priority strategy. This API uses a prom
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-notificationExtensionSubscription-function subscribeNotification(priorityStrategy?: int): Promise<void>--><!--Device-notificationExtensionSubscription-function subscribeNotification(priorityStrategy?: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.

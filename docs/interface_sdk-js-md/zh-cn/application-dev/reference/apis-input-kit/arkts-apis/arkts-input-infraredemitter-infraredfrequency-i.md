@@ -8,6 +8,8 @@ interface InfraredFrequency
 
 **起始版本：** 15
 
+<!--Device-infraredEmitter-interface InfraredFrequency--><!--Device-infraredEmitter-interface InfraredFrequency-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InfraredEmitter
 
 ## 导入模块
@@ -28,6 +30,8 @@ max: number
 
 **起始版本：** 15
 
+<!--Device-InfraredFrequency-max: long--><!--Device-InfraredFrequency-max: long-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InfraredEmitter
 
 ## min
@@ -41,5 +45,7 @@ min: number
 **类型：** number
 
 **起始版本：** 15
+
+<!--Device-InfraredFrequency-min: long--><!--Device-InfraredFrequency-min: long-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InfraredEmitter

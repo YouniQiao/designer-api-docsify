@@ -12,6 +12,8 @@ export enum BackgroundTaskMode
 
 **起始版本：** 21
 
+<!--Device-backgroundTaskManager-export enum BackgroundTaskMode--><!--Device-backgroundTaskManager-export enum BackgroundTaskMode-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## MODE_DATA_TRANSFER
@@ -31,6 +33,8 @@ MODE_DATA_TRANSFER = 1
 
 **起始版本：** 21
 
+<!--Device-BackgroundTaskMode-MODE_DATA_TRANSFER = 1--><!--Device-BackgroundTaskMode-MODE_DATA_TRANSFER = 1-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## MODE_AUDIO_PLAYBACK
@@ -47,7 +51,9 @@ MODE_AUDIO_PLAYBACK = 2
 
 **起始版本：** 21
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-BackgroundTaskMode-MODE_AUDIO_PLAYBACK = 2--><!--Device-BackgroundTaskMode-MODE_AUDIO_PLAYBACK = 2-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -65,6 +71,8 @@ MODE_AUDIO_RECORDING = 3
 
 **起始版本：** 21
 
+<!--Device-BackgroundTaskMode-MODE_AUDIO_RECORDING = 3--><!--Device-BackgroundTaskMode-MODE_AUDIO_RECORDING = 3-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## MODE_LOCATION
@@ -77,7 +85,9 @@ MODE_LOCATION = 4
 
 **起始版本：** 21
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-BackgroundTaskMode-MODE_LOCATION = 4--><!--Device-BackgroundTaskMode-MODE_LOCATION = 4-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -93,6 +103,8 @@ MODE_BLUETOOTH_INTERACTION = 5
 
 **起始版本：** 21
 
+<!--Device-BackgroundTaskMode-MODE_BLUETOOTH_INTERACTION = 5--><!--Device-BackgroundTaskMode-MODE_BLUETOOTH_INTERACTION = 5-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## MODE_MULTI_DEVICE_CONNECTION
@@ -107,7 +119,9 @@ MODE_MULTI_DEVICE_CONNECTION = 6
 
 **起始版本：** 21
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-BackgroundTaskMode-MODE_MULTI_DEVICE_CONNECTION = 6--><!--Device-BackgroundTaskMode-MODE_MULTI_DEVICE_CONNECTION = 6-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -125,6 +139,8 @@ MODE_VOIP = 8
 
 **起始版本：** 21
 
+<!--Device-BackgroundTaskMode-MODE_VOIP = 8--><!--Device-BackgroundTaskMode-MODE_VOIP = 8-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## MODE_TASK_KEEPING
@@ -141,6 +157,8 @@ MODE_TASK_KEEPING = 9
 
 **起始版本：** 21
 
+<!--Device-BackgroundTaskMode-MODE_TASK_KEEPING = 9--><!--Device-BackgroundTaskMode-MODE_TASK_KEEPING = 9-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## MODE_AV_PLAYBACK_AND_RECORD
@@ -155,7 +173,9 @@ MODE_AV_PLAYBACK_AND_RECORD = 12
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-BackgroundTaskMode-MODE_AV_PLAYBACK_AND_RECORD = 12--><!--Device-BackgroundTaskMode-MODE_AV_PLAYBACK_AND_RECORD = 12-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -177,6 +197,8 @@ MODE_SPECIAL_SCENARIO_PROCESSING = 13
 
 **起始版本：** 22
 
+<!--Device-BackgroundTaskMode-MODE_SPECIAL_SCENARIO_PROCESSING = 13--><!--Device-BackgroundTaskMode-MODE_SPECIAL_SCENARIO_PROCESSING = 13-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## MODE_NEARLINK
@@ -193,6 +215,8 @@ MODE_NEARLINK = 14
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BackgroundTaskMode-MODE_NEARLINK = 14--><!--Device-BackgroundTaskMode-MODE_NEARLINK = 14-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## MODE_USB_CONNECTION
@@ -208,5 +232,7 @@ USB业务。
 **起始版本：** 26.2.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BackgroundTaskMode-MODE_USB_CONNECTION = 16--><!--Device-BackgroundTaskMode-MODE_USB_CONNECTION = 16-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask

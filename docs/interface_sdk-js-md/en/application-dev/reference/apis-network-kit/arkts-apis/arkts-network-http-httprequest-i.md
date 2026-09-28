@@ -8,6 +8,8 @@ Defines an HTTP request task. Before invoking APIs provided by **HttpRequest**, 
 
 **Since:** 6
 
+<!--Device-http-export interface HttpRequest--><!--Device-http-export interface HttpRequest-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import
@@ -26,7 +28,9 @@ Stops an HTTP request task and releases system resources.
 
 **Since:** 6
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-HttpRequest-destroy(): void--><!--Device-HttpRequest-destroy(): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -70,6 +74,8 @@ Sets whether to automatically carry and share cookies. That is, whether to autom
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-HttpRequest-enableAutoCookie(enable: boolean): void--><!--Device-HttpRequest-enableAutoCookie(enable: boolean): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -135,6 +141,8 @@ Unregisters the observer for HTTP Response Header events.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-HttpRequest-off(type: "headersReceive", callback?: Callback<Object>): void--><!--Device-HttpRequest-off(type: "headersReceive", callback?: Callback<Object>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -179,6 +187,8 @@ Unregisters the observer for events indicating receiving of HTTP streaming respo
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-HttpRequest-off(type: "dataReceive", callback?: Callback<ArrayBuffer>): void--><!--Device-HttpRequest-off(type: "dataReceive", callback?: Callback<ArrayBuffer>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -225,6 +235,8 @@ Unregisters the observer for events indicating completion of receiving HTTP stre
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-HttpRequest-off(type: "dataEnd", callback?: Callback<void>): void--><!--Device-HttpRequest-off(type: "dataEnd", callback?: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -270,6 +282,8 @@ Unregisters the observer for events indicating progress of receiving HTTP stream
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-HttpRequest-off(type: 'dataReceiveProgress', callback?: Callback<DataReceiveProgressInfo>): void--><!--Device-HttpRequest-off(type: 'dataReceiveProgress', callback?: Callback<DataReceiveProgressInfo>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -314,6 +328,8 @@ Unregisters the observer for events indicating progress of sending HTTP requests
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-HttpRequest-off(type: 'dataSendProgress', callback?: Callback<DataSendProgressInfo>): void--><!--Device-HttpRequest-off(type: 'dataSendProgress', callback?: Callback<DataSendProgressInfo>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -390,6 +406,8 @@ Unregisters the observer for HTTP Response Header events.
 
 **Substitutes:** [off_headersReceive](#offheadersreceive)
 
+<!--Device-HttpRequest-off(type: "headerReceive", callback?: AsyncCallback<Object>): void--><!--Device-HttpRequest-off(type: "headerReceive", callback?: AsyncCallback<Object>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -433,6 +451,8 @@ Registers an observer for HTTP Response Header events.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-HttpRequest-on(type: "headersReceive", callback: Callback<Object>): void--><!--Device-HttpRequest-on(type: "headersReceive", callback: Callback<Object>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -479,6 +499,8 @@ Registers an observer for events indicating receiving of HTTP streaming response
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-HttpRequest-on(type: "dataReceive", callback: Callback<ArrayBuffer>): void--><!--Device-HttpRequest-on(type: "dataReceive", callback: Callback<ArrayBuffer>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -523,6 +545,8 @@ Registers an observer for events indicating completion of receiving HTTP streami
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-HttpRequest-on(type: "dataEnd", callback: Callback<void>): void--><!--Device-HttpRequest-on(type: "dataEnd", callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -569,6 +593,8 @@ Registers an observer for events indicating progress of receiving HTTP streaming
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-HttpRequest-on(type: 'dataReceiveProgress', callback: Callback<DataReceiveProgressInfo>): void--><!--Device-HttpRequest-on(type: 'dataReceiveProgress', callback: Callback<DataReceiveProgressInfo>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -613,6 +639,8 @@ Registers an observer for events indicating progress of sending HTTP requests.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-HttpRequest-on(type: 'dataSendProgress', callback: Callback<DataSendProgressInfo>): void--><!--Device-HttpRequest-on(type: 'dataSendProgress', callback: Callback<DataSendProgressInfo>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -661,6 +689,8 @@ Registers an observer for HTTP Response Header events.
 
 **Substitutes:** [on_headersReceive](#onheadersreceive)
 
+<!--Device-HttpRequest-on(type: "headerReceive", callback: AsyncCallback<Object>): void--><!--Device-HttpRequest-on(type: "headerReceive", callback: AsyncCallback<Object>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -705,6 +735,8 @@ Registers a one-time observer for HTTP Response Header events. Once triggered, t
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-HttpRequest-once(type: "headersReceive", callback: Callback<Object>): void--><!--Device-HttpRequest-once(type: "headersReceive", callback: Callback<Object>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -764,7 +796,9 @@ Initiates an HTTP request to a given URL. This API uses an asynchronous callback
 
 **Required permissions:** ohos.permission.INTERNET
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-HttpRequest-request(url: string, callback: AsyncCallback<HttpResponse>): void--><!--Device-HttpRequest-request(url: string, callback: AsyncCallback<HttpResponse>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -883,7 +917,9 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 
 **Required permissions:** ohos.permission.INTERNET
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-HttpRequest-request(url: string, options: HttpRequestOptions, callback: AsyncCallback<HttpResponse>): void--><!--Device-HttpRequest-request(url: string, options: HttpRequestOptions, callback: AsyncCallback<HttpResponse>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -1028,7 +1064,9 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 
 **Required permissions:** ohos.permission.INTERNET
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-HttpRequest-request(url: string, options?: HttpRequestOptions): Promise<HttpResponse>--><!--Device-HttpRequest-request(url: string, options?: HttpRequestOptions): Promise<HttpResponse>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -1155,6 +1193,8 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-HttpRequest-requestInStream(url: string, callback: AsyncCallback<int>): void--><!--Device-HttpRequest-requestInStream(url: string, callback: AsyncCallback<int>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -1252,6 +1292,8 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 **Required permissions:** ohos.permission.INTERNET
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-HttpRequest-requestInStream(url: string, options: HttpRequestOptions, callback: AsyncCallback<int>): void--><!--Device-HttpRequest-requestInStream(url: string, options: HttpRequestOptions, callback: AsyncCallback<int>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -1373,6 +1415,8 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 **Required permissions:** ohos.permission.INTERNET
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-HttpRequest-requestInStream(url: string, options?: HttpRequestOptions): Promise<int>--><!--Device-HttpRequest-requestInStream(url: string, options?: HttpRequestOptions): Promise<int>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -1502,6 +1546,8 @@ Initiates an HTTP network request based on the URL and related configuration opt
 **Required permissions:** ohos.permission.INTERNET
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-HttpRequest-requestSync(url: string, options?: HttpRequestOptions): HttpResponse--><!--Device-HttpRequest-requestSync(url: string, options?: HttpRequestOptions): HttpResponse-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 

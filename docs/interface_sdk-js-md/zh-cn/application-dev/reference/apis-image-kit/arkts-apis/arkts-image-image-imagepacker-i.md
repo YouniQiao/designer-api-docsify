@@ -16,6 +16,8 @@ ImagePacker类，用于图片压缩和编码。
 
 **起始版本：** 6
 
+<!--Device-image-interface ImagePacker--><!--Device-image-interface ImagePacker-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
 ## 导入模块
@@ -35,6 +37,8 @@ packBinaryImageToTiffData(bufferInfo: BinaryBufferInfo, options?: PackingOptions
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ImagePacker-packBinaryImageToTiffData(bufferInfo: BinaryBufferInfo, options?: PackingOptionsForTiff): Promise<ArrayBuffer>--><!--Device-ImagePacker-packBinaryImageToTiffData(bufferInfo: BinaryBufferInfo, options?: PackingOptionsForTiff): Promise<ArrayBuffer>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
@@ -106,6 +110,8 @@ packBinaryImageToTiffFile(bufferInfo: BinaryBufferInfo, fd: number, options?: Pa
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ImagePacker-packBinaryImageToTiffFile(bufferInfo: BinaryBufferInfo, fd: int, options?: PackingOptionsForTiff): Promise<void>--><!--Device-ImagePacker-packBinaryImageToTiffFile(bufferInfo: BinaryBufferInfo, fd: int, options?: PackingOptionsForTiff): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
@@ -184,6 +190,8 @@ packing(picture: Picture, options: PackingOption): Promise<ArrayBuffer>
 
 **起始版本：** 13
 
+<!--Device-ImagePacker-packing(picture: Picture, options: PackingOption): Promise<ArrayBuffer>--><!--Device-ImagePacker-packing(picture: Picture, options: PackingOption): Promise<ArrayBuffer>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
 **参数：**
@@ -257,6 +265,8 @@ packing(source: ImageSource, option: PackingOption, callback: AsyncCallback<Arra
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-ImagePacker-packing(source: ImageSource, option: PackingOption, callback: AsyncCallback<ArrayBuffer>): void--><!--Device-ImagePacker-packing(source: ImageSource, option: PackingOption, callback: AsyncCallback<ArrayBuffer>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
 **参数：**
@@ -309,6 +319,8 @@ packing(source: ImageSource, option: PackingOption): Promise<ArrayBuffer>
 **替代接口：** [packToData](#packtodata)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ImagePacker-packing(source: ImageSource, option: PackingOption): Promise<ArrayBuffer>--><!--Device-ImagePacker-packing(source: ImageSource, option: PackingOption): Promise<ArrayBuffer>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
@@ -371,6 +383,8 @@ packing(source: PixelMap, option: PackingOption, callback: AsyncCallback<ArrayBu
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-ImagePacker-packing(source: PixelMap, option: PackingOption, callback: AsyncCallback<ArrayBuffer>): void--><!--Device-ImagePacker-packing(source: PixelMap, option: PackingOption, callback: AsyncCallback<ArrayBuffer>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
 **参数：**
@@ -431,6 +445,8 @@ packing(source: PixelMap, option: PackingOption): Promise<ArrayBuffer>
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-ImagePacker-packing(source: PixelMap, option: PackingOption): Promise<ArrayBuffer>--><!--Device-ImagePacker-packing(source: PixelMap, option: PackingOption): Promise<ArrayBuffer>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
 **参数：**
@@ -479,7 +495,9 @@ packToData(source: ImageSource, options: PackingOption): Promise<ArrayBuffer>
 
 **起始版本：** 13
 
-**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+
+<!--Device-ImagePacker-packToData(source: ImageSource, options: PackingOption): Promise<ArrayBuffer>--><!--Device-ImagePacker-packToData(source: ImageSource, options: PackingOption): Promise<ArrayBuffer>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
@@ -546,7 +564,9 @@ packToData(source: PixelMap, options: PackingOption): Promise<ArrayBuffer>
 
 **起始版本：** 13
 
-**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+
+<!--Device-ImagePacker-packToData(source: PixelMap, options: PackingOption): Promise<ArrayBuffer>--><!--Device-ImagePacker-packToData(source: PixelMap, options: PackingOption): Promise<ArrayBuffer>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
@@ -610,6 +630,8 @@ packToDataFromPixelmapSequence(pixelmapSequence: Array<PixelMap>, options: Packi
 
 **起始版本：** 18
 
+<!--Device-ImagePacker-packToDataFromPixelmapSequence(pixelmapSequence: Array<PixelMap>, options: PackingOptionsForSequence): Promise<ArrayBuffer>--><!--Device-ImagePacker-packToDataFromPixelmapSequence(pixelmapSequence: Array<PixelMap>, options: PackingOptionsForSequence): Promise<ArrayBuffer>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
 **参数：**
@@ -669,6 +691,8 @@ packToFile(source: ImageSource, fd: number, options: PackingOption, callback: As
 指定编码参数，将ImageSource直接编码进文件。使用callback异步回调。
 
 **起始版本：** 11
+
+<!--Device-ImagePacker-packToFile(source: ImageSource, fd: int, options: PackingOption, callback: AsyncCallback<void>): void--><!--Device-ImagePacker-packToFile(source: ImageSource, fd: int, options: PackingOption, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
@@ -730,6 +754,8 @@ packToFile(source: ImageSource, fd: number, options: PackingOption): Promise<voi
 指定编码参数，将ImageSource直接编码进文件。使用Promise异步回调。
 
 **起始版本：** 11
+
+<!--Device-ImagePacker-packToFile(source: ImageSource, fd: int, options: PackingOption): Promise<void>--><!--Device-ImagePacker-packToFile(source: ImageSource, fd: int, options: PackingOption): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
@@ -799,6 +825,8 @@ packToFile(source: PixelMap, fd: number, options: PackingOption, callback: Async
 
 **起始版本：** 11
 
+<!--Device-ImagePacker-packToFile(source: PixelMap, fd: int, options: PackingOption, callback: AsyncCallback<void>): void--><!--Device-ImagePacker-packToFile(source: PixelMap, fd: int, options: PackingOption, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
 **参数：**
@@ -865,6 +893,8 @@ packToFile(source: PixelMap, fd: number, options: PackingOption): Promise<void>
 
 **起始版本：** 11
 
+<!--Device-ImagePacker-packToFile(source: PixelMap, fd: int, options: PackingOption): Promise<void>--><!--Device-ImagePacker-packToFile(source: PixelMap, fd: int, options: PackingOption): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
 **参数：**
@@ -930,6 +960,8 @@ packToFile(picture: Picture, fd: number, options: PackingOption): Promise<void>
 指定编码参数，将Picture直接编码进文件。使用Promise异步回调。
 
 **起始版本：** 13
+
+<!--Device-ImagePacker-packToFile(picture: Picture, fd: int, options: PackingOption): Promise<void>--><!--Device-ImagePacker-packToFile(picture: Picture, fd: int, options: PackingOption): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
@@ -999,6 +1031,8 @@ packToFileFromPixelmapSequence(pixelmapSequence: Array<PixelMap>, fd: number, op
 
 **起始版本：** 18
 
+<!--Device-ImagePacker-packToFileFromPixelmapSequence(pixelmapSequence: Array<PixelMap>, fd: int, options: PackingOptionsForSequence): Promise<void>--><!--Device-ImagePacker-packToFileFromPixelmapSequence(pixelmapSequence: Array<PixelMap>, fd: int, options: PackingOptionsForSequence): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
 **参数：**
@@ -1067,6 +1101,8 @@ release(callback: AsyncCallback<void>): void
 
 **起始版本：** 6
 
+<!--Device-ImagePacker-release(callback: AsyncCallback<void>): void--><!--Device-ImagePacker-release(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
 **参数：**
@@ -1108,6 +1144,8 @@ release(): Promise<void>
 
 **起始版本：** 6
 
+<!--Device-ImagePacker-release(): Promise<void>--><!--Device-ImagePacker-release(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
 **返回值：**
@@ -1142,5 +1180,7 @@ readonly supportedFormats: Array<string>
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 6
+
+<!--Device-ImagePacker-readonly supportedFormats: Array<string>--><!--Device-ImagePacker-readonly supportedFormats: Array<string>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker

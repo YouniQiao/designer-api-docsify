@@ -8,6 +8,8 @@ class CloudFileCache
 
 **起始版本：** 11
 
+<!--Device-cloudSync-class CloudFileCache--><!--Device-cloudSync-class CloudFileCache-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## 导入模块
@@ -25,6 +27,8 @@ cleanFileCache(uri: string): void
 同步方法删除文件缓存。
 
 **起始版本：** 20
+
+<!--Device-CloudFileCache-cleanFileCache(uri: string): void--><!--Device-CloudFileCache-cleanFileCache(uri: string): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -76,6 +80,8 @@ cleanFileCache(): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-CloudFileCache-cleanFileCache(): Promise<void>--><!--Device-CloudFileCache-cleanFileCache(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **返回值：**
@@ -104,6 +110,8 @@ A constructor used to create a **CloudFileCache** instance. Data is not shared b
 
 **起始版本：** 11
 
+<!--Device-CloudFileCache-constructor()--><!--Device-CloudFileCache-constructor()-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **错误码：**
@@ -127,6 +135,8 @@ getCachedTotalSize(): Promise<number>
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-CloudFileCache-getCachedTotalSize(): Promise<long>--><!--Device-CloudFileCache-getCachedTotalSize(): Promise<long>-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -166,6 +176,8 @@ off(event: 'progress', callback?: Callback<DownloadProgress>): void
 云盘文件缓存对象移除'progress'类型的指定callback回调。
 
 **起始版本：** 11
+
+<!--Device-CloudFileCache-off(event: 'progress', callback?: Callback<DownloadProgress>): void--><!--Device-CloudFileCache-off(event: 'progress', callback?: Callback<DownloadProgress>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -215,6 +227,8 @@ off(event: 'batchDownload', callback?: Callback<MultiDownloadProgress>): void
 
 **起始版本：** 20
 
+<!--Device-CloudFileCache-off(event: 'batchDownload', callback?: Callback<MultiDownloadProgress>): void--><!--Device-CloudFileCache-off(event: 'batchDownload', callback?: Callback<MultiDownloadProgress>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **参数：**
@@ -259,6 +273,8 @@ on(event: 'progress', callback: Callback<DownloadProgress>): void
 添加云盘文件缓存过程事件监听。
 
 **起始版本：** 11
+
+<!--Device-CloudFileCache-on(event: 'progress', callback: Callback<DownloadProgress>): void--><!--Device-CloudFileCache-on(event: 'progress', callback: Callback<DownloadProgress>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -305,6 +321,8 @@ on(event: 'batchDownload', callback: Callback<MultiDownloadProgress>): void
 添加云文件批量缓存事件的监听。
 
 **起始版本：** 20
+
+<!--Device-CloudFileCache-on(event: 'batchDownload', callback: Callback<MultiDownloadProgress>): void--><!--Device-CloudFileCache-on(event: 'batchDownload', callback: Callback<MultiDownloadProgress>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -354,6 +372,8 @@ start(uri: string): Promise<void>
 异步方法启动云盘文件缓存。使用Promise异步回调。
 
 **起始版本：** 11
+
+<!--Device-CloudFileCache-start(uri: string): Promise<void>--><!--Device-CloudFileCache-start(uri: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -417,6 +437,8 @@ start(uri: string, callback: AsyncCallback<void>): void
 
 **起始版本：** 11
 
+<!--Device-CloudFileCache-start(uri: string, callback: AsyncCallback<void>): void--><!--Device-CloudFileCache-start(uri: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **参数：**
@@ -466,6 +488,8 @@ startBatch(uris: Array<string>, fileType?: DownloadFileType): Promise<number>
 不同的批量缓存任务可以通过接口返回的任务ID区分。
 
 **起始版本：** 20
+
+<!--Device-CloudFileCache-startBatch(uris: Array<string>, fileType?: DownloadFileType): Promise<long>--><!--Device-CloudFileCache-startBatch(uris: Array<string>, fileType?: DownloadFileType): Promise<long>-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -527,6 +551,8 @@ When **stop()** is called, the current file download process terminates, and dow
 
 **起始版本：** 12
 
+<!--Device-CloudFileCache-stop(uri: string, needClean?: boolean): Promise<void>--><!--Device-CloudFileCache-stop(uri: string, needClean?: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **参数：**
@@ -582,6 +608,8 @@ stop(uri: string, callback: AsyncCallback<void>): void
 
 **起始版本：** 11
 
+<!--Device-CloudFileCache-stop(uri: string, callback: AsyncCallback<void>): void--><!--Device-CloudFileCache-stop(uri: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **参数：**
@@ -630,6 +658,8 @@ stopBatch(downloadId: number, needClean?: boolean): Promise<void>
 调用stopBatch接口会终止当前文件批量缓存流程，未下载完成的缓存文件是否删除由needClean参数决定。
 
 **起始版本：** 20
+
+<!--Device-CloudFileCache-stopBatch(downloadId: long, needClean?: boolean): Promise<void>--><!--Device-CloudFileCache-stopBatch(downloadId: long, needClean?: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 

@@ -7,7 +7,7 @@ export interface UsedScene
 
 > **说明：** 
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[UsedScene](#usedscene)替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[UsedScene](arkts-ability-bundleinfo-usedscene-depr-i.md)替代。
 
 描述权限使用的场景和时机。
 
@@ -15,7 +15,9 @@ export interface UsedScene
 
 **废弃版本：** 9
 
-**替代接口：** [UsedScene](#usedscene)
+**替代接口：** [UsedScene](arkts-ability-bundleinfo-usedscene-depr-i.md)
+
+<!--Device-unnamed-export interface UsedScene--><!--Device-unnamed-export interface UsedScene-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -37,6 +39,8 @@ abilities: Array<string>
 
 **替代接口：** abilities
 
+<!--Device-UsedScene-abilities: Array<string>--><!--Device-UsedScene-abilities: Array<string>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## when
@@ -56,5 +60,7 @@ when: string
 **废弃版本：** 9
 
 **替代接口：** when
+
+<!--Device-UsedScene-when: string--><!--Device-UsedScene-when: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework

@@ -14,6 +14,8 @@ export interface SubscribeHeartRateOptions
 
 **需要权限：** ohos.permission.READ_HEALTH_DATA
 
+<!--Device-unnamed-export interface SubscribeHeartRateOptions--><!--Device-unnamed-export interface SubscribeHeartRateOptions-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
 ## 导入模块
@@ -39,6 +41,8 @@ fail?: (data: string, code: number) => void
 **需要权限：** ohos.permission.READ_HEALTH_DATA
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-SubscribeHeartRateOptions-fail?: (data: string, code: number) => void--><!--Device-SubscribeHeartRateOptions-fail?: (data: string, code: number) => void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
@@ -66,6 +70,8 @@ success: (data: HeartRateResponse) => void
 **需要权限：** ohos.permission.READ_HEALTH_DATA
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-SubscribeHeartRateOptions-success: (data: HeartRateResponse) => void--><!--Device-SubscribeHeartRateOptions-success: (data: HeartRateResponse) => void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 

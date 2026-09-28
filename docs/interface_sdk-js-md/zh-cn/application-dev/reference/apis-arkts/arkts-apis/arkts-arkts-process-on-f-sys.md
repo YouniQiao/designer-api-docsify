@@ -16,6 +16,8 @@ function on(type: string, listener: EventListener): void
 
 **起始版本：** 7
 
+<!--Device-process-function on(type: string, listener: EventListener): void--><!--Device-process-function on(type: string, listener: EventListener): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **系统接口：** 此接口为系统接口。

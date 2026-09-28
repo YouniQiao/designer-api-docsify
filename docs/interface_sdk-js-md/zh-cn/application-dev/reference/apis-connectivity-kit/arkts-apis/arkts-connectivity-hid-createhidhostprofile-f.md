@@ -16,6 +16,8 @@ function createHidHostProfile(): HidHostProfile
 
 **起始版本：** 10
 
+<!--Device-hid-function createHidHostProfile(): HidHostProfile--><!--Device-hid-function createHidHostProfile(): HidHostProfile-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **返回值：**

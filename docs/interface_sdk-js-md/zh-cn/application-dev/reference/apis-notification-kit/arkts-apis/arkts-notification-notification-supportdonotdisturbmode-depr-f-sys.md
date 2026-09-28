@@ -21,6 +21,8 @@ function supportDoNotDisturbMode(callback: AsyncCallback<boolean>): void
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notification-function supportDoNotDisturbMode(callback: AsyncCallback<boolean>): void--><!--Device-notification-function supportDoNotDisturbMode(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +51,8 @@ function supportDoNotDisturbMode(): Promise<boolean>
 **替代接口：** [isSupportDoNotDisturbMode](arkts-notification-notificationmanager-issupportdonotdisturbmode-f-sys.md)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notification-function supportDoNotDisturbMode(): Promise<boolean>--><!--Device-notification-function supportDoNotDisturbMode(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

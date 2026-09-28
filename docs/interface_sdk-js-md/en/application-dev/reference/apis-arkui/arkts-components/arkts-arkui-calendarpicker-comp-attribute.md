@@ -4,13 +4,15 @@
 declare class CalendarPickerAttribute extends CommonMethod<CalendarPickerAttribute>
 ```
 
-In addition to the [universal attributes](arkts-arkui-common-comp.md#common), the following attributes are supported.
+In addition to the [universal attributes](arkts-arkui-common-comp.md), the following attributes are supported.
 
-In addition to the [universal events](arkts-arkui-common-comp.md#common), the following events are supported.
+In addition to the [universal events](arkts-arkui-common-comp.md), the following events are supported.
 
 **Inheritance/Implementation:** CalendarPickerAttribute extends CommonMethod<CalendarPickerAttribute>
 
 **Since:** 10
+
+<!--Device-unnamed-declare class CalendarPickerAttribute extends CommonMethod<CalendarPickerAttribute>--><!--Device-unnamed-declare class CalendarPickerAttribute extends CommonMethod<CalendarPickerAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,6 +29,8 @@ Sets how the picker is aligned with the entry component.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-CalendarPickerAttribute-edgeAlign(alignType: CalendarAlign, offset?: Offset): CalendarPickerAttribute--><!--Device-CalendarPickerAttribute-edgeAlign(alignType: CalendarAlign, offset?: Offset): CalendarPickerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -53,6 +57,8 @@ Sets how the picker is aligned with the entry component. Compared with [edgeAlig
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-CalendarPickerAttribute-edgeAlign(alignType: Optional<CalendarAlign>, offset?: Offset): CalendarPickerAttribute--><!--Device-CalendarPickerAttribute-edgeAlign(alignType: Optional<CalendarAlign>, offset?: Offset): CalendarPickerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -76,6 +82,8 @@ Whether to highlight the current system date.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-CalendarPickerAttribute-markToday(enabled: boolean): CalendarPickerAttribute--><!--Device-CalendarPickerAttribute-markToday(enabled: boolean): CalendarPickerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -97,6 +105,8 @@ Triggered when a date is selected. This event cannot be triggered by two-way bou
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-CalendarPickerAttribute-onChange(callback: Callback<Date>): CalendarPickerAttribute--><!--Device-CalendarPickerAttribute-onChange(callback: Callback<Date>): CalendarPickerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -126,6 +136,8 @@ Triggered when a date is selected. This event cannot be triggered by two-way bou
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-CalendarPickerAttribute-onChange(callback: Optional<Callback<Date>>): CalendarPickerAttribute--><!--Device-CalendarPickerAttribute-onChange(callback: Optional<Callback<Date>>): CalendarPickerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -147,6 +159,8 @@ Sets the font color, font size, and font weight in the entry area.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-CalendarPickerAttribute-textStyle(value: PickerTextStyle): CalendarPickerAttribute--><!--Device-CalendarPickerAttribute-textStyle(value: PickerTextStyle): CalendarPickerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -171,6 +185,8 @@ Sets the font color, font size, and font weight in the entry area. Compared with
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-CalendarPickerAttribute-textStyle(style: Optional<PickerTextStyle>): CalendarPickerAttribute--><!--Device-CalendarPickerAttribute-textStyle(style: Optional<PickerTextStyle>): CalendarPickerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

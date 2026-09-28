@@ -8,6 +8,8 @@ export enum HuksKeyPadding
 
 **起始版本：** 8
 
+<!--Device-huks-export enum HuksKeyPadding--><!--Device-huks-export enum HuksKeyPadding-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Core
 
 ## HUKS_PADDING_NONE
@@ -24,6 +26,8 @@ HUKS_PADDING_NONE = 0
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-HuksKeyPadding-HUKS_PADDING_NONE = 0--><!--Device-HuksKeyPadding-HUKS_PADDING_NONE = 0-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Core
 
 ## HUKS_PADDING_OAEP
@@ -39,6 +43,8 @@ HUKS_PADDING_OAEP = 1
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HuksKeyPadding-HUKS_PADDING_OAEP = 1--><!--Device-HuksKeyPadding-HUKS_PADDING_OAEP = 1-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core
@@ -58,6 +64,8 @@ HUKS_PADDING_PSS = 2
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-HuksKeyPadding-HUKS_PADDING_PSS = 2--><!--Device-HuksKeyPadding-HUKS_PADDING_PSS = 2-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core
 - API版本8-11：SystemCapability.Security.Huks.Extension
@@ -75,6 +83,8 @@ HUKS_PADDING_PKCS1_V1_5 = 3
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HuksKeyPadding-HUKS_PADDING_PKCS1_V1_5 = 3--><!--Device-HuksKeyPadding-HUKS_PADDING_PKCS1_V1_5 = 3-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core
@@ -94,6 +104,8 @@ HUKS_PADDING_PKCS5 = 4
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-HuksKeyPadding-HUKS_PADDING_PKCS5 = 4--><!--Device-HuksKeyPadding-HUKS_PADDING_PKCS5 = 4-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core
 - API版本8-11：SystemCapability.Security.Huks.Extension
@@ -112,6 +124,8 @@ HUKS_PADDING_PKCS7 = 5
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-HuksKeyPadding-HUKS_PADDING_PKCS7 = 5--><!--Device-HuksKeyPadding-HUKS_PADDING_PKCS7 = 5-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Core
 
 ## HUKS_PADDING_ISO_IEC_9796_2
@@ -128,6 +142,8 @@ HUKS_PADDING_ISO_IEC_9796_2 = 6
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-HuksKeyPadding-HUKS_PADDING_ISO_IEC_9796_2 = 6--><!--Device-HuksKeyPadding-HUKS_PADDING_ISO_IEC_9796_2 = 6-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Core
 
 ## HUKS_PADDING_ISO_IEC_9797_1
@@ -143,5 +159,7 @@ HUKS_PADDING_ISO_IEC_9797_1 = 7
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HuksKeyPadding-HUKS_PADDING_ISO_IEC_9797_1 = 7--><!--Device-HuksKeyPadding-HUKS_PADDING_ISO_IEC_9797_1 = 7-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Core

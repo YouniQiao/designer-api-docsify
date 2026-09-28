@@ -8,6 +8,8 @@ enum LoopMode
 
 **起始版本：** 10
 
+<!--Device-avSession-enum LoopMode--><!--Device-avSession-enum LoopMode-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 ## LOOP_MODE_SEQUENCE
@@ -20,7 +22,9 @@ LOOP_MODE_SEQUENCE = 0
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LoopMode-LOOP_MODE_SEQUENCE = 0--><!--Device-LoopMode-LOOP_MODE_SEQUENCE = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -34,7 +38,9 @@ LOOP_MODE_SINGLE = 1
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LoopMode-LOOP_MODE_SINGLE = 1--><!--Device-LoopMode-LOOP_MODE_SINGLE = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -48,7 +54,9 @@ LOOP_MODE_LIST = 2
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LoopMode-LOOP_MODE_LIST = 2--><!--Device-LoopMode-LOOP_MODE_LIST = 2-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -62,7 +70,9 @@ LOOP_MODE_SHUFFLE = 3
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LoopMode-LOOP_MODE_SHUFFLE = 3--><!--Device-LoopMode-LOOP_MODE_SHUFFLE = 3-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -76,6 +86,8 @@ LOOP_MODE_CUSTOM = 4
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LoopMode-LOOP_MODE_CUSTOM = 4--><!--Device-LoopMode-LOOP_MODE_CUSTOM = 4-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core

@@ -22,6 +22,8 @@ function register(callback: AsyncCallback<number>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-continuationManager-function register(callback: AsyncCallback<number>): void--><!--Device-continuationManager-function register(callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.Ability.DistributedAbilityManager
 
 **参数：**
@@ -64,6 +66,8 @@ function register(options: ContinuationExtraParams, callback: AsyncCallback<numb
 **替代接口：** [on](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#ondevicestatechange)(type: 'deviceStateChange', callback: Callback&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt;)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-continuationManager-function register(options: ContinuationExtraParams, callback: AsyncCallback<number>): void--><!--Device-continuationManager-function register(options: ContinuationExtraParams, callback: AsyncCallback<number>): void-End-->
 
 **系统能力：** SystemCapability.Ability.DistributedAbilityManager
 
@@ -112,6 +116,8 @@ function register(options?: ContinuationExtraParams): Promise<number>
 **替代接口：** [on](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#ondevicestatechange)(type: 'deviceStateChange', callback: Callback&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt;)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-continuationManager-function register(options?: ContinuationExtraParams): Promise<number>--><!--Device-continuationManager-function register(options?: ContinuationExtraParams): Promise<number>-End-->
 
 **系统能力：** SystemCapability.Ability.DistributedAbilityManager
 

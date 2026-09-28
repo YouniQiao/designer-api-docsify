@@ -18,6 +18,8 @@ function off(type: 'appForegroundState', observer?: AppForegroundStateObserver):
 
 **需要权限：** ohos.permission.RUNNING_STATE_OBSERVER
 
+<!--Device-appManager-function off(type: 'appForegroundState', observer?: AppForegroundStateObserver): void--><!--Device-appManager-function off(type: 'appForegroundState', observer?: AppForegroundStateObserver): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -84,6 +86,8 @@ function off(type: 'abilityFirstFrameState', observer?: AbilityFirstFrameStateOb
 **起始版本：** 12
 
 **需要权限：** ohos.permission.RUNNING_STATE_OBSERVER
+
+<!--Device-appManager-function off(type: 'abilityFirstFrameState', observer?: AbilityFirstFrameStateObserver): void--><!--Device-appManager-function off(type: 'abilityFirstFrameState', observer?: AbilityFirstFrameStateObserver): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

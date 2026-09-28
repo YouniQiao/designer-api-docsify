@@ -8,6 +8,8 @@ enum AutoSyncTriggerMode
 
 **起始版本：** 26.0.0
 
+<!--Device-cloudData-enum AutoSyncTriggerMode--><!--Device-cloudData-enum AutoSyncTriggerMode-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
 ## ACCOUNT_LOGIN
@@ -21,6 +23,8 @@ ACCOUNT_LOGIN = 0
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AutoSyncTriggerMode-ACCOUNT_LOGIN = 0--><!--Device-AutoSyncTriggerMode-ACCOUNT_LOGIN = 0-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -36,6 +40,8 @@ CLOUD_SWITCH_ON = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AutoSyncTriggerMode-CLOUD_SWITCH_ON = 1--><!--Device-AutoSyncTriggerMode-CLOUD_SWITCH_ON = 1-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
 ## NETWORK_RECOVER
@@ -49,6 +55,8 @@ NETWORK_RECOVER = 2
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AutoSyncTriggerMode-NETWORK_RECOVER = 2--><!--Device-AutoSyncTriggerMode-NETWORK_RECOVER = 2-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -64,6 +72,8 @@ CLOUD_DATA_CHANGE = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AutoSyncTriggerMode-CLOUD_DATA_CHANGE = 3--><!--Device-AutoSyncTriggerMode-CLOUD_DATA_CHANGE = 3-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
 ## USER_CHANGE
@@ -77,5 +87,7 @@ USER_CHANGE = 4
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AutoSyncTriggerMode-USER_CHANGE = 4--><!--Device-AutoSyncTriggerMode-USER_CHANGE = 4-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client

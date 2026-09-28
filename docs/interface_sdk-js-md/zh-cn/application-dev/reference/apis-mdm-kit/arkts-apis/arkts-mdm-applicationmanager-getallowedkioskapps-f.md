@@ -20,6 +20,8 @@ function getAllowedKioskApps(admin: Want): Array<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-applicationManager-function getAllowedKioskApps(admin: Want): Array<string>--><!--Device-applicationManager-function getAllowedKioskApps(admin: Want): Array<string>-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -78,6 +80,8 @@ function getAllowedKioskApps(admin: Want | null): Array<string>
 **需要权限：** ohos.permission.ENTERPRISE_SET_KIOSK
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-applicationManager-function getAllowedKioskApps(admin: Want | null): Array<string>--><!--Device-applicationManager-function getAllowedKioskApps(admin: Want | null): Array<string>-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

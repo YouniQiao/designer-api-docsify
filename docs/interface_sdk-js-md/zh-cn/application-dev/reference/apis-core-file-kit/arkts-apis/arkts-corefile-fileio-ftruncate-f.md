@@ -19,6 +19,8 @@ declare function ftruncate(fd: number, len?: number): Promise<void>
 
 **替代接口：** [truncate](arkts-corefile-file-fs-truncate-f.md)
 
+<!--Device-unnamed-declare function ftruncate(fd: number, len?: number): Promise<void>--><!--Device-unnamed-declare function ftruncate(fd: number, len?: number): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -51,6 +53,8 @@ declare function ftruncate(fd: number, callback: AsyncCallback<void>): void
 
 **替代接口：** [truncate](arkts-corefile-file-fs-truncate-f.md)
 
+<!--Device-unnamed-declare function ftruncate(fd: number, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function ftruncate(fd: number, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -76,6 +80,8 @@ declare function ftruncate(fd: number, len: number, callback: AsyncCallback<void
 **废弃版本：** 9
 
 **替代接口：** [truncate](arkts-corefile-file-fs-truncate-f.md)
+
+<!--Device-unnamed-declare function ftruncate(fd: number, len: number, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function ftruncate(fd: number, len: number, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

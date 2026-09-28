@@ -20,6 +20,8 @@ function isModifyAutoStartAppsDisallowed(admin: Want, autoStartApp: Want, accoun
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-applicationManager-function isModifyAutoStartAppsDisallowed(admin: Want, autoStartApp: Want, accountId: number): boolean--><!--Device-applicationManager-function isModifyAutoStartAppsDisallowed(admin: Want, autoStartApp: Want, accountId: number): boolean-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**

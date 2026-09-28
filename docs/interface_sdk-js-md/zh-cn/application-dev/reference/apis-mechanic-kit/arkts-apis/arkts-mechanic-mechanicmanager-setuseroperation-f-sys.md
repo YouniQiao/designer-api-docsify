@@ -18,6 +18,8 @@ function setUserOperation(operation: Operation, mac: string, params: string): vo
 
 **需要权限：** ohos.permission.CONNECT_MECHANIC_HARDWARE
 
+<!--Device-mechanicManager-function setUserOperation(operation: Operation, mac: string, params: string): void--><!--Device-mechanicManager-function setUserOperation(operation: Operation, mac: string, params: string): void-End-->
+
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。

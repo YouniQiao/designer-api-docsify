@@ -24,6 +24,8 @@ function batchAdd(attributesArray: Array<AssetMap>): Promise<BatchResult>
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-asset-function batchAdd(attributesArray: Array<AssetMap>): Promise<BatchResult>--><!--Device-asset-function batchAdd(attributesArray: Array<AssetMap>): Promise<BatchResult>-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 **参数：**

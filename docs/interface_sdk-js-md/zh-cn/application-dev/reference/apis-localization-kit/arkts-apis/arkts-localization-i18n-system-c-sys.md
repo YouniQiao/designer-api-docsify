@@ -8,6 +8,8 @@ export class System
 
 **起始版本：** 9
 
+<!--Device-i18n-export class System--><!--Device-i18n-export class System-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## 导入模块
@@ -27,6 +29,8 @@ static addPreferredLanguage(language: string, index?: number): void
 **起始版本：** 9
 
 **需要权限：** ohos.permission.UPDATE_CONFIGURATION
+
+<!--Device-System-static addPreferredLanguage(language: string, index?: int): void--><!--Device-System-static addPreferredLanguage(language: string, index?: int): void-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -75,6 +79,8 @@ static getSystemCollations(): Map<string, string>
 
 **起始版本：** 20
 
+<!--Device-System-static getSystemCollations(): Map<string, string>--><!--Device-System-static getSystemCollations(): Map<string, string>-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 **系统接口：** 此接口为系统接口。
@@ -114,6 +120,8 @@ static getSystemMeasurements(): Map<string, string>
 获取系统支持的度量衡及其名称。
 
 **起始版本：** 20
+
+<!--Device-System-static getSystemMeasurements(): Map<string, string>--><!--Device-System-static getSystemMeasurements(): Map<string, string>-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -155,6 +163,8 @@ static getSystemNumberingSystems(): Map<string, string>
 
 **起始版本：** 20
 
+<!--Device-System-static getSystemNumberingSystems(): Map<string, string>--><!--Device-System-static getSystemNumberingSystems(): Map<string, string>-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 **系统接口：** 此接口为系统接口。
@@ -194,6 +204,8 @@ static getSystemNumberPatterns(): Map<string, string>
 获取系统支持的数字格式及示例。数字格式指数字中的千分符和小数分隔符的格式。
 
 **起始版本：** 20
+
+<!--Device-System-static getSystemNumberPatterns(): Map<string, string>--><!--Device-System-static getSystemNumberPatterns(): Map<string, string>-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -235,6 +247,8 @@ static getSystemNumericalDatePatterns(): Map<string, string>
 
 **起始版本：** 20
 
+<!--Device-System-static getSystemNumericalDatePatterns(): Map<string, string>--><!--Device-System-static getSystemNumericalDatePatterns(): Map<string, string>-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 **系统接口：** 此接口为系统接口。
@@ -274,6 +288,8 @@ static getUsingCollation(): string
 获取系统当前使用的排序方式。
 
 **起始版本：** 20
+
+<!--Device-System-static getUsingCollation(): string--><!--Device-System-static getUsingCollation(): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -315,6 +331,8 @@ static getUsingMeasurement(): string
 
 **起始版本：** 20
 
+<!--Device-System-static getUsingMeasurement(): string--><!--Device-System-static getUsingMeasurement(): string-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 **系统接口：** 此接口为系统接口。
@@ -354,6 +372,8 @@ static getUsingNumberingSystem(): string
 获取系统当前使用的数字系统。
 
 **起始版本：** 20
+
+<!--Device-System-static getUsingNumberingSystem(): string--><!--Device-System-static getUsingNumberingSystem(): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -395,6 +415,8 @@ static getUsingNumberPattern(): string
 
 **起始版本：** 20
 
+<!--Device-System-static getUsingNumberPattern(): string--><!--Device-System-static getUsingNumberPattern(): string-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 **系统接口：** 此接口为系统接口。
@@ -434,6 +456,8 @@ static getUsingNumericalDatePattern(): string
 获取系统当前使用的数字日期格式。
 
 **起始版本：** 20
+
+<!--Device-System-static getUsingNumericalDatePattern(): string--><!--Device-System-static getUsingNumericalDatePattern(): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -476,6 +500,8 @@ static removePreferredLanguage(index: number): void
 **起始版本：** 9
 
 **需要权限：** ohos.permission.UPDATE_CONFIGURATION
+
+<!--Device-System-static removePreferredLanguage(index: int): void--><!--Device-System-static removePreferredLanguage(index: int): void-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -524,6 +550,8 @@ static set24HourClock(option: boolean): void
 
 **需要权限：** ohos.permission.UPDATE_CONFIGURATION
 
+<!--Device-System-static set24HourClock(option: boolean): void--><!--Device-System-static set24HourClock(option: boolean): void-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 **系统接口：** 此接口为系统接口。
@@ -570,6 +598,8 @@ static setFirstDayOfWeek(type: WeekDay): void
 
 **需要权限：** ohos.permission.UPDATE_CONFIGURATION
 
+<!--Device-System-static setFirstDayOfWeek(type: WeekDay): void--><!--Device-System-static setFirstDayOfWeek(type: WeekDay): void-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 **系统接口：** 此接口为系统接口。
@@ -614,6 +644,8 @@ static setSystemCollation(identifier: string): void
 
 **需要权限：** ohos.permission.UPDATE_CONFIGURATION
 
+<!--Device-System-static setSystemCollation(identifier: string): void--><!--Device-System-static setSystemCollation(identifier: string): void-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 **系统接口：** 此接口为系统接口。
@@ -657,6 +689,8 @@ static setSystemLanguage(language: string): void
 **起始版本：** 9
 
 **需要权限：** ohos.permission.UPDATE_CONFIGURATION
+
+<!--Device-System-static setSystemLanguage(language: string): void--><!--Device-System-static setSystemLanguage(language: string): void-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -704,6 +738,8 @@ static setSystemMeasurement(identifier: string): void
 
 **需要权限：** ohos.permission.UPDATE_CONFIGURATION
 
+<!--Device-System-static setSystemMeasurement(identifier: string): void--><!--Device-System-static setSystemMeasurement(identifier: string): void-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 **系统接口：** 此接口为系统接口。
@@ -747,6 +783,8 @@ static setSystemNumberingSystem(identifier: string): void
 **起始版本：** 20
 
 **需要权限：** ohos.permission.UPDATE_CONFIGURATION
+
+<!--Device-System-static setSystemNumberingSystem(identifier: string): void--><!--Device-System-static setSystemNumberingSystem(identifier: string): void-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -792,6 +830,8 @@ static setSystemNumberPattern(pattern: string): void
 
 **需要权限：** ohos.permission.UPDATE_CONFIGURATION
 
+<!--Device-System-static setSystemNumberPattern(pattern: string): void--><!--Device-System-static setSystemNumberPattern(pattern: string): void-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 **系统接口：** 此接口为系统接口。
@@ -836,6 +876,8 @@ static setSystemNumericalDatePattern(identifier : string): void
 
 **需要权限：** ohos.permission.UPDATE_CONFIGURATION
 
+<!--Device-System-static setSystemNumericalDatePattern(identifier : string): void--><!--Device-System-static setSystemNumericalDatePattern(identifier : string): void-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 **系统接口：** 此接口为系统接口。
@@ -879,6 +921,8 @@ static setSystemRegion(region: string): void
 **起始版本：** 9
 
 **需要权限：** ohos.permission.UPDATE_CONFIGURATION
+
+<!--Device-System-static setSystemRegion(region: string): void--><!--Device-System-static setSystemRegion(region: string): void-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -925,6 +969,8 @@ static setTemperatureType(type: TemperatureType): void
 
 **需要权限：** ohos.permission.UPDATE_CONFIGURATION
 
+<!--Device-System-static setTemperatureType(type: TemperatureType): void--><!--Device-System-static setTemperatureType(type: TemperatureType): void-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 **系统接口：** 此接口为系统接口。
@@ -968,6 +1014,8 @@ static setUsingLocalDigit(flag: boolean): void
 **起始版本：** 9
 
 **需要权限：** ohos.permission.UPDATE_CONFIGURATION
+
+<!--Device-System-static setUsingLocalDigit(flag: boolean): void--><!--Device-System-static setUsingLocalDigit(flag: boolean): void-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -1015,6 +1063,8 @@ static setSystemLocale(locale: string): void
 **废弃版本：** 20
 
 **需要权限：** ohos.permission.UPDATE_CONFIGURATION
+
+<!--Device-System-static setSystemLocale(locale: string): void--><!--Device-System-static setSystemLocale(locale: string): void-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 

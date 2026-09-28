@@ -8,6 +8,8 @@ export class SimpleDateTimeFormat
 
 **起始版本：** 18
 
+<!--Device-i18n-export class SimpleDateTimeFormat--><!--Device-i18n-export class SimpleDateTimeFormat-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## 导入模块
@@ -26,7 +28,9 @@ format(date: Date): string
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-SimpleDateTimeFormat-format(date: Date): string--><!--Device-SimpleDateTimeFormat-format(date: Date): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 

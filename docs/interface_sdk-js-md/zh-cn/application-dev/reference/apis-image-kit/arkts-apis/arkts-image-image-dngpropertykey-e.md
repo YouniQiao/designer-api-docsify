@@ -14,6 +14,8 @@ enum DngPropertyKey
 
 **起始版本：** 24
 
+<!--Device-image-enum DngPropertyKey--><!--Device-image-enum DngPropertyKey-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## DNG_VERSION
@@ -27,6 +29,8 @@ DNG图片的版本号。
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngPropertyKey-DNG_VERSION = 'DNGVersion'--><!--Device-DngPropertyKey-DNG_VERSION = 'DNGVersion'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -42,6 +46,8 @@ DNG文件向后兼容的最低版本号。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngPropertyKey-DNG_BACKWARD_VERSION = 'DNGBackwardVersion'--><!--Device-DngPropertyKey-DNG_BACKWARD_VERSION = 'DNGBackwardVersion'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## UNIQUE_CAMERA_MODEL
@@ -55,6 +61,8 @@ UNIQUE_CAMERA_MODEL = 'UniqueCameraModel'
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngPropertyKey-UNIQUE_CAMERA_MODEL = 'UniqueCameraModel'--><!--Device-DngPropertyKey-UNIQUE_CAMERA_MODEL = 'UniqueCameraModel'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -70,6 +78,8 @@ LOCALIZED_CAMERA_MODEL = 'LocalizedCameraModel'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngPropertyKey-LOCALIZED_CAMERA_MODEL = 'LocalizedCameraModel'--><!--Device-DngPropertyKey-LOCALIZED_CAMERA_MODEL = 'LocalizedCameraModel'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## CFA_PLANE_COLOR
@@ -83,6 +93,8 @@ CFA各平面的颜色通道定义。
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngPropertyKey-CFA_PLANE_COLOR = 'CFAPlaneColor'--><!--Device-DngPropertyKey-CFA_PLANE_COLOR = 'CFAPlaneColor'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -98,6 +110,8 @@ CFA布局类型，如RGGB、BGGR等。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngPropertyKey-CFA_LAYOUT = 'CFALayout'--><!--Device-DngPropertyKey-CFA_LAYOUT = 'CFALayout'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## LINEARIZATION_TABLE
@@ -111,6 +125,8 @@ LINEARIZATION_TABLE = 'LinearizationTable'
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngPropertyKey-LINEARIZATION_TABLE = 'LinearizationTable'--><!--Device-DngPropertyKey-LINEARIZATION_TABLE = 'LinearizationTable'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -126,6 +142,8 @@ BLACK_LEVEL_REPEAT_DIM = 'BlackLevelRepeatDim'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngPropertyKey-BLACK_LEVEL_REPEAT_DIM = 'BlackLevelRepeatDim'--><!--Device-DngPropertyKey-BLACK_LEVEL_REPEAT_DIM = 'BlackLevelRepeatDim'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## BLACK_LEVEL
@@ -139,6 +157,8 @@ BLACK_LEVEL = 'BlackLevel'
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngPropertyKey-BLACK_LEVEL = 'BlackLevel'--><!--Device-DngPropertyKey-BLACK_LEVEL = 'BlackLevel'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -154,6 +174,8 @@ BLACK_LEVEL_DELTA_H = 'BlackLevelDeltaH'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngPropertyKey-BLACK_LEVEL_DELTA_H = 'BlackLevelDeltaH'--><!--Device-DngPropertyKey-BLACK_LEVEL_DELTA_H = 'BlackLevelDeltaH'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## BLACK_LEVEL_DELTA_V
@@ -167,6 +189,8 @@ BLACK_LEVEL_DELTA_V = 'BlackLevelDeltaV'
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngPropertyKey-BLACK_LEVEL_DELTA_V = 'BlackLevelDeltaV'--><!--Device-DngPropertyKey-BLACK_LEVEL_DELTA_V = 'BlackLevelDeltaV'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -182,6 +206,8 @@ WHITE_LEVEL = 'WhiteLevel'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngPropertyKey-WHITE_LEVEL = 'WhiteLevel'--><!--Device-DngPropertyKey-WHITE_LEVEL = 'WhiteLevel'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## DEFAULT_SCALE
@@ -195,6 +221,8 @@ DEFAULT_SCALE = 'DefaultScale'
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngPropertyKey-DEFAULT_SCALE = 'DefaultScale'--><!--Device-DngPropertyKey-DEFAULT_SCALE = 'DefaultScale'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -210,6 +238,8 @@ DEFAULT_CROP_ORIGIN = 'DefaultCropOrigin'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngPropertyKey-DEFAULT_CROP_ORIGIN = 'DefaultCropOrigin'--><!--Device-DngPropertyKey-DEFAULT_CROP_ORIGIN = 'DefaultCropOrigin'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## DEFAULT_CROP_SIZE
@@ -223,6 +253,8 @@ DEFAULT_CROP_SIZE = 'DefaultCropSize'
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngPropertyKey-DEFAULT_CROP_SIZE = 'DefaultCropSize'--><!--Device-DngPropertyKey-DEFAULT_CROP_SIZE = 'DefaultCropSize'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -238,6 +270,8 @@ COLOR_MATRIX1 = 'ColorMatrix1'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngPropertyKey-COLOR_MATRIX1 = 'ColorMatrix1'--><!--Device-DngPropertyKey-COLOR_MATRIX1 = 'ColorMatrix1'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## COLOR_MATRIX2
@@ -251,6 +285,8 @@ COLOR_MATRIX2 = 'ColorMatrix2'
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngPropertyKey-COLOR_MATRIX2 = 'ColorMatrix2'--><!--Device-DngPropertyKey-COLOR_MATRIX2 = 'ColorMatrix2'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -266,6 +302,8 @@ CAMERA_CALIBRATION1 = 'CameraCalibration1'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngPropertyKey-CAMERA_CALIBRATION1 = 'CameraCalibration1'--><!--Device-DngPropertyKey-CAMERA_CALIBRATION1 = 'CameraCalibration1'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## CAMERA_CALIBRATION2
@@ -279,6 +317,8 @@ CAMERA_CALIBRATION2 = 'CameraCalibration2'
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngPropertyKey-CAMERA_CALIBRATION2 = 'CameraCalibration2'--><!--Device-DngPropertyKey-CAMERA_CALIBRATION2 = 'CameraCalibration2'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -294,6 +334,8 @@ REDUCTION_MATRIX1 = 'ReductionMatrix1'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngPropertyKey-REDUCTION_MATRIX1 = 'ReductionMatrix1'--><!--Device-DngPropertyKey-REDUCTION_MATRIX1 = 'ReductionMatrix1'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## REDUCTION_MATRIX2
@@ -307,6 +349,8 @@ REDUCTION_MATRIX2 = 'ReductionMatrix2'
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngPropertyKey-REDUCTION_MATRIX2 = 'ReductionMatrix2'--><!--Device-DngPropertyKey-REDUCTION_MATRIX2 = 'ReductionMatrix2'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -322,6 +366,8 @@ ANALOG_BALANCE = 'AnalogBalance'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngPropertyKey-ANALOG_BALANCE = 'AnalogBalance'--><!--Device-DngPropertyKey-ANALOG_BALANCE = 'AnalogBalance'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## AS_SHOT_NEUTRAL
@@ -335,6 +381,8 @@ AS_SHOT_NEUTRAL = 'AsShotNeutral'
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngPropertyKey-AS_SHOT_NEUTRAL = 'AsShotNeutral'--><!--Device-DngPropertyKey-AS_SHOT_NEUTRAL = 'AsShotNeutral'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -350,6 +398,8 @@ AS_SHOT_WHITEXY = 'AsShotWhiteXY'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngPropertyKey-AS_SHOT_WHITEXY = 'AsShotWhiteXY'--><!--Device-DngPropertyKey-AS_SHOT_WHITEXY = 'AsShotWhiteXY'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## BASELINE_EXPOSURE
@@ -363,6 +413,8 @@ BASELINE_EXPOSURE = 'BaselineExposure'
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngPropertyKey-BASELINE_EXPOSURE = 'BaselineExposure'--><!--Device-DngPropertyKey-BASELINE_EXPOSURE = 'BaselineExposure'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -378,6 +430,8 @@ BASELINE_NOISE = 'BaselineNoise'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngPropertyKey-BASELINE_NOISE = 'BaselineNoise'--><!--Device-DngPropertyKey-BASELINE_NOISE = 'BaselineNoise'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## BASELINE_SHARPNESS
@@ -391,6 +445,8 @@ BASELINE_SHARPNESS = 'BaselineSharpness'
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngPropertyKey-BASELINE_SHARPNESS = 'BaselineSharpness'--><!--Device-DngPropertyKey-BASELINE_SHARPNESS = 'BaselineSharpness'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -406,6 +462,8 @@ Bayer图像中两个绿色通道的分离程度。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngPropertyKey-BAYER_GREEN_SPLIT = 'BayerGreenSplit'--><!--Device-DngPropertyKey-BAYER_GREEN_SPLIT = 'BayerGreenSplit'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## LINEAR_RESPONSE_LIMIT
@@ -419,6 +477,8 @@ LINEAR_RESPONSE_LIMIT = 'LinearResponseLimit'
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngPropertyKey-LINEAR_RESPONSE_LIMIT = 'LinearResponseLimit'--><!--Device-DngPropertyKey-LINEAR_RESPONSE_LIMIT = 'LinearResponseLimit'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -434,6 +494,8 @@ CAMERA_SERIAL_NUMBER = 'CameraSerialNumber'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngPropertyKey-CAMERA_SERIAL_NUMBER = 'CameraSerialNumber'--><!--Device-DngPropertyKey-CAMERA_SERIAL_NUMBER = 'CameraSerialNumber'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## LENS_INFO
@@ -447,6 +509,8 @@ LENS_INFO = 'LensInfo'
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngPropertyKey-LENS_INFO = 'LensInfo'--><!--Device-DngPropertyKey-LENS_INFO = 'LensInfo'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -462,6 +526,8 @@ CHROMA_BLUR_RADIUS = 'ChromaBlurRadius'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngPropertyKey-CHROMA_BLUR_RADIUS = 'ChromaBlurRadius'--><!--Device-DngPropertyKey-CHROMA_BLUR_RADIUS = 'ChromaBlurRadius'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## ANTI_ALIAS_STRENGTH
@@ -475,6 +541,8 @@ ANTI_ALIAS_STRENGTH = 'AntiAliasStrength'
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngPropertyKey-ANTI_ALIAS_STRENGTH = 'AntiAliasStrength'--><!--Device-DngPropertyKey-ANTI_ALIAS_STRENGTH = 'AntiAliasStrength'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -490,6 +558,8 @@ SHADOW_SCALE = 'ShadowScale'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngPropertyKey-SHADOW_SCALE = 'ShadowScale'--><!--Device-DngPropertyKey-SHADOW_SCALE = 'ShadowScale'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## DNG_PRIVATE_DATA
@@ -503,6 +573,8 @@ DNG_PRIVATE_DATA = 'DNGPrivateData'
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngPropertyKey-DNG_PRIVATE_DATA = 'DNGPrivateData'--><!--Device-DngPropertyKey-DNG_PRIVATE_DATA = 'DNGPrivateData'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -518,6 +590,8 @@ EXIF MakerNote 是否安全可保留。0：不安全，1：安全
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngPropertyKey-MAKER_NOTE_SAFETY = 'MakerNoteSafety'--><!--Device-DngPropertyKey-MAKER_NOTE_SAFETY = 'MakerNoteSafety'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## CALIBRATION_ILLUMINANT1
@@ -531,6 +605,8 @@ CALIBRATION_ILLUMINANT1 = 'CalibrationIlluminant1'
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngPropertyKey-CALIBRATION_ILLUMINANT1 = 'CalibrationIlluminant1'--><!--Device-DngPropertyKey-CALIBRATION_ILLUMINANT1 = 'CalibrationIlluminant1'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -546,6 +622,8 @@ CALIBRATION_ILLUMINANT2 = 'CalibrationIlluminant2'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngPropertyKey-CALIBRATION_ILLUMINANT2 = 'CalibrationIlluminant2'--><!--Device-DngPropertyKey-CALIBRATION_ILLUMINANT2 = 'CalibrationIlluminant2'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## BEST_QUALITY_SCALE
@@ -559,6 +637,8 @@ BEST_QUALITY_SCALE = 'BestQualityScale'
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngPropertyKey-BEST_QUALITY_SCALE = 'BestQualityScale'--><!--Device-DngPropertyKey-BEST_QUALITY_SCALE = 'BestQualityScale'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -574,6 +654,8 @@ RAW_DATA_UNIQUE_ID = 'RawDataUniqueID'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngPropertyKey-RAW_DATA_UNIQUE_ID = 'RawDataUniqueID'--><!--Device-DngPropertyKey-RAW_DATA_UNIQUE_ID = 'RawDataUniqueID'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## ORIGINAL_RAW_FILE_NAME
@@ -587,6 +669,8 @@ ORIGINAL_RAW_FILE_NAME = 'OriginalRawFileName'
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngPropertyKey-ORIGINAL_RAW_FILE_NAME = 'OriginalRawFileName'--><!--Device-DngPropertyKey-ORIGINAL_RAW_FILE_NAME = 'OriginalRawFileName'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -602,6 +686,8 @@ ORIGINAL_RAW_FILE_DATA = 'OriginalRawFileData'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngPropertyKey-ORIGINAL_RAW_FILE_DATA = 'OriginalRawFileData'--><!--Device-DngPropertyKey-ORIGINAL_RAW_FILE_DATA = 'OriginalRawFileData'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## ACTIVE_AREA
@@ -615,6 +701,8 @@ ACTIVE_AREA = 'ActiveArea'
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngPropertyKey-ACTIVE_AREA = 'ActiveArea'--><!--Device-DngPropertyKey-ACTIVE_AREA = 'ActiveArea'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -630,6 +718,8 @@ MASKED_AREAS = 'MaskedAreas'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngPropertyKey-MASKED_AREAS = 'MaskedAreas'--><!--Device-DngPropertyKey-MASKED_AREAS = 'MaskedAreas'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## AS_SHOT_ICC_PROFILE
@@ -643,6 +733,8 @@ AS_SHOT_ICC_PROFILE = 'AsShotICCProfile'
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngPropertyKey-AS_SHOT_ICC_PROFILE = 'AsShotICCProfile'--><!--Device-DngPropertyKey-AS_SHOT_ICC_PROFILE = 'AsShotICCProfile'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -658,6 +750,8 @@ AS_SHOT_PRE_PROFILE_MATRIX = 'AsShotPreProfileMatrix'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngPropertyKey-AS_SHOT_PRE_PROFILE_MATRIX = 'AsShotPreProfileMatrix'--><!--Device-DngPropertyKey-AS_SHOT_PRE_PROFILE_MATRIX = 'AsShotPreProfileMatrix'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## CURRENT_ICC_PROFILE
@@ -671,6 +765,8 @@ CURRENT_ICC_PROFILE = 'CurrentICCProfile'
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngPropertyKey-CURRENT_ICC_PROFILE = 'CurrentICCProfile'--><!--Device-DngPropertyKey-CURRENT_ICC_PROFILE = 'CurrentICCProfile'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -686,6 +782,8 @@ CURRENT_PRE_PROFILE_MATRIX = 'CurrentPreProfileMatrix'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngPropertyKey-CURRENT_PRE_PROFILE_MATRIX = 'CurrentPreProfileMatrix'--><!--Device-DngPropertyKey-CURRENT_PRE_PROFILE_MATRIX = 'CurrentPreProfileMatrix'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## COLORIMETRIC_REFERENCE
@@ -699,6 +797,8 @@ COLORIMETRIC_REFERENCE = 'ColorimetricReference'
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngPropertyKey-COLORIMETRIC_REFERENCE = 'ColorimetricReference'--><!--Device-DngPropertyKey-COLORIMETRIC_REFERENCE = 'ColorimetricReference'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -714,6 +814,8 @@ CAMERA_CALIBRATION_SIGNATURE = 'CameraCalibrationSignature'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngPropertyKey-CAMERA_CALIBRATION_SIGNATURE = 'CameraCalibrationSignature'--><!--Device-DngPropertyKey-CAMERA_CALIBRATION_SIGNATURE = 'CameraCalibrationSignature'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## PROFILE_CALIBRATION_SIGNATURE
@@ -727,6 +829,8 @@ PROFILE_CALIBRATION_SIGNATURE = 'ProfileCalibrationSignature'
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngPropertyKey-PROFILE_CALIBRATION_SIGNATURE = 'ProfileCalibrationSignature'--><!--Device-DngPropertyKey-PROFILE_CALIBRATION_SIGNATURE = 'ProfileCalibrationSignature'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -742,6 +846,8 @@ EXTRA_CAMERA_PROFILES = 'ExtraCameraProfiles'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngPropertyKey-EXTRA_CAMERA_PROFILES = 'ExtraCameraProfiles'--><!--Device-DngPropertyKey-EXTRA_CAMERA_PROFILES = 'ExtraCameraProfiles'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## AS_SHOT_PROFILE_NAME
@@ -755,6 +861,8 @@ AS_SHOT_PROFILE_NAME = 'AsShotProfileName'
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngPropertyKey-AS_SHOT_PROFILE_NAME = 'AsShotProfileName'--><!--Device-DngPropertyKey-AS_SHOT_PROFILE_NAME = 'AsShotProfileName'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -770,6 +878,8 @@ NOISE_REDUCTION_APPLIED = 'NoiseReductionApplied'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngPropertyKey-NOISE_REDUCTION_APPLIED = 'NoiseReductionApplied'--><!--Device-DngPropertyKey-NOISE_REDUCTION_APPLIED = 'NoiseReductionApplied'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## PROFILE_NAME
@@ -783,6 +893,8 @@ PROFILE_NAME = 'ProfileName'
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngPropertyKey-PROFILE_NAME = 'ProfileName'--><!--Device-DngPropertyKey-PROFILE_NAME = 'ProfileName'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -798,6 +910,8 @@ PROFILE_HUE_SAT_MAP_DIMS = 'ProfileHueSatMapDims'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngPropertyKey-PROFILE_HUE_SAT_MAP_DIMS = 'ProfileHueSatMapDims'--><!--Device-DngPropertyKey-PROFILE_HUE_SAT_MAP_DIMS = 'ProfileHueSatMapDims'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## PROFILE_HUE_SAT_MAP_DATA1
@@ -811,6 +925,8 @@ PROFILE_HUE_SAT_MAP_DATA1 = 'ProfileHueSatMapData1'
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngPropertyKey-PROFILE_HUE_SAT_MAP_DATA1 = 'ProfileHueSatMapData1'--><!--Device-DngPropertyKey-PROFILE_HUE_SAT_MAP_DATA1 = 'ProfileHueSatMapData1'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -826,6 +942,8 @@ PROFILE_HUE_SAT_MAP_DATA2 = 'ProfileHueSatMapData2'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngPropertyKey-PROFILE_HUE_SAT_MAP_DATA2 = 'ProfileHueSatMapData2'--><!--Device-DngPropertyKey-PROFILE_HUE_SAT_MAP_DATA2 = 'ProfileHueSatMapData2'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## PROFILE_TONE_CURVE
@@ -839,6 +957,8 @@ PROFILE_TONE_CURVE = 'ProfileToneCurve'
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngPropertyKey-PROFILE_TONE_CURVE = 'ProfileToneCurve'--><!--Device-DngPropertyKey-PROFILE_TONE_CURVE = 'ProfileToneCurve'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -854,6 +974,8 @@ PROFILE_EMBED_POLICY = 'ProfileEmbedPolicy'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngPropertyKey-PROFILE_EMBED_POLICY = 'ProfileEmbedPolicy'--><!--Device-DngPropertyKey-PROFILE_EMBED_POLICY = 'ProfileEmbedPolicy'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## PROFILE_COPYRIGHT
@@ -867,6 +989,8 @@ PROFILE_COPYRIGHT = 'ProfileCopyright'
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngPropertyKey-PROFILE_COPYRIGHT = 'ProfileCopyright'--><!--Device-DngPropertyKey-PROFILE_COPYRIGHT = 'ProfileCopyright'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -882,6 +1006,8 @@ FORWARD_MATRIX1 = 'ForwardMatrix1'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngPropertyKey-FORWARD_MATRIX1 = 'ForwardMatrix1'--><!--Device-DngPropertyKey-FORWARD_MATRIX1 = 'ForwardMatrix1'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## FORWARD_MATRIX2
@@ -895,6 +1021,8 @@ FORWARD_MATRIX2 = 'ForwardMatrix2'
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngPropertyKey-FORWARD_MATRIX2 = 'ForwardMatrix2'--><!--Device-DngPropertyKey-FORWARD_MATRIX2 = 'ForwardMatrix2'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -910,6 +1038,8 @@ PREVIEW_APPLICATION_NAME = 'PreviewApplicationName'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngPropertyKey-PREVIEW_APPLICATION_NAME = 'PreviewApplicationName'--><!--Device-DngPropertyKey-PREVIEW_APPLICATION_NAME = 'PreviewApplicationName'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## PREVIEW_APPLICATION_VERSION
@@ -923,6 +1053,8 @@ PREVIEW_APPLICATION_VERSION = 'PreviewApplicationVersion'
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngPropertyKey-PREVIEW_APPLICATION_VERSION = 'PreviewApplicationVersion'--><!--Device-DngPropertyKey-PREVIEW_APPLICATION_VERSION = 'PreviewApplicationVersion'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -938,6 +1070,8 @@ PREVIEW_SETTINGS_NAME = 'PreviewSettingsName'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngPropertyKey-PREVIEW_SETTINGS_NAME = 'PreviewSettingsName'--><!--Device-DngPropertyKey-PREVIEW_SETTINGS_NAME = 'PreviewSettingsName'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## PREVIEW_SETTINGS_DIGEST
@@ -951,6 +1085,8 @@ PREVIEW_SETTINGS_DIGEST = 'PreviewSettingsDigest'
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngPropertyKey-PREVIEW_SETTINGS_DIGEST = 'PreviewSettingsDigest'--><!--Device-DngPropertyKey-PREVIEW_SETTINGS_DIGEST = 'PreviewSettingsDigest'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -966,6 +1102,8 @@ PREVIEW_COLOR_SPACE = 'PreviewColorSpace'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngPropertyKey-PREVIEW_COLOR_SPACE = 'PreviewColorSpace'--><!--Device-DngPropertyKey-PREVIEW_COLOR_SPACE = 'PreviewColorSpace'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## PREVIEW_DATE_TIME
@@ -979,6 +1117,8 @@ PREVIEW_DATE_TIME = 'PreviewDateTime'
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngPropertyKey-PREVIEW_DATE_TIME = 'PreviewDateTime'--><!--Device-DngPropertyKey-PREVIEW_DATE_TIME = 'PreviewDateTime'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -994,6 +1134,8 @@ RAW_IMAGE_DIGEST = 'RawImageDigest'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngPropertyKey-RAW_IMAGE_DIGEST = 'RawImageDigest'--><!--Device-DngPropertyKey-RAW_IMAGE_DIGEST = 'RawImageDigest'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## ORIGINAL_RAW_FILE_DIGEST
@@ -1007,6 +1149,8 @@ ORIGINAL_RAW_FILE_DIGEST = 'OriginalRawFileDigest'
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngPropertyKey-ORIGINAL_RAW_FILE_DIGEST = 'OriginalRawFileDigest'--><!--Device-DngPropertyKey-ORIGINAL_RAW_FILE_DIGEST = 'OriginalRawFileDigest'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1022,6 +1166,8 @@ SUB_TILE_BLOCK_SIZE = 'SubTileBlockSize'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngPropertyKey-SUB_TILE_BLOCK_SIZE = 'SubTileBlockSize'--><!--Device-DngPropertyKey-SUB_TILE_BLOCK_SIZE = 'SubTileBlockSize'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## ROW_INTERLEAVE_FACTOR
@@ -1035,6 +1181,8 @@ ROW_INTERLEAVE_FACTOR = 'RowInterleaveFactor'
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngPropertyKey-ROW_INTERLEAVE_FACTOR = 'RowInterleaveFactor'--><!--Device-DngPropertyKey-ROW_INTERLEAVE_FACTOR = 'RowInterleaveFactor'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1050,6 +1198,8 @@ ProfileLookTableData的维度。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngPropertyKey-PROFILE_LOOK_TABLE_DIMS = 'ProfileLookTableDims'--><!--Device-DngPropertyKey-PROFILE_LOOK_TABLE_DIMS = 'ProfileLookTableDims'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## PROFILE_LOOK_TABLE_DATA
@@ -1063,6 +1213,8 @@ PROFILE_LOOK_TABLE_DATA = 'ProfileLookTableData'
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngPropertyKey-PROFILE_LOOK_TABLE_DATA = 'ProfileLookTableData'--><!--Device-DngPropertyKey-PROFILE_LOOK_TABLE_DATA = 'ProfileLookTableData'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1078,6 +1230,8 @@ OPCODE_LIST1 = 'OpcodeList1'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngPropertyKey-OPCODE_LIST1 = 'OpcodeList1'--><!--Device-DngPropertyKey-OPCODE_LIST1 = 'OpcodeList1'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## OPCODE_LIST2
@@ -1091,6 +1245,8 @@ OPCODE_LIST2 = 'OpcodeList2'
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngPropertyKey-OPCODE_LIST2 = 'OpcodeList2'--><!--Device-DngPropertyKey-OPCODE_LIST2 = 'OpcodeList2'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1106,6 +1262,8 @@ OPCODE_LIST3 = 'OpcodeList3'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngPropertyKey-OPCODE_LIST3 = 'OpcodeList3'--><!--Device-DngPropertyKey-OPCODE_LIST3 = 'OpcodeList3'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## NOISE_PROFILE
@@ -1119,6 +1277,8 @@ NOISE_PROFILE = 'NoiseProfile'
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngPropertyKey-NOISE_PROFILE = 'NoiseProfile'--><!--Device-DngPropertyKey-NOISE_PROFILE = 'NoiseProfile'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1134,6 +1294,8 @@ ORIGINAL_DEFAULT_FINAL_SIZE = 'OriginalDefaultFinalSize'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngPropertyKey-ORIGINAL_DEFAULT_FINAL_SIZE = 'OriginalDefaultFinalSize'--><!--Device-DngPropertyKey-ORIGINAL_DEFAULT_FINAL_SIZE = 'OriginalDefaultFinalSize'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## ORIGINAL_BEST_QUALITY_FINAL_SIZE
@@ -1147,6 +1309,8 @@ ORIGINAL_BEST_QUALITY_FINAL_SIZE = 'OriginalBestQualityFinalSize'
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngPropertyKey-ORIGINAL_BEST_QUALITY_FINAL_SIZE = 'OriginalBestQualityFinalSize'--><!--Device-DngPropertyKey-ORIGINAL_BEST_QUALITY_FINAL_SIZE = 'OriginalBestQualityFinalSize'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1162,6 +1326,8 @@ ORIGINAL_DEFAULT_CROP_SIZE = 'OriginalDefaultCropSize'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngPropertyKey-ORIGINAL_DEFAULT_CROP_SIZE = 'OriginalDefaultCropSize'--><!--Device-DngPropertyKey-ORIGINAL_DEFAULT_CROP_SIZE = 'OriginalDefaultCropSize'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## PROFILE_HUE_SAT_MAP_ENCODING
@@ -1175,6 +1341,8 @@ PROFILE_HUE_SAT_MAP_ENCODING = 'ProfileHueSatMapEncoding'
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngPropertyKey-PROFILE_HUE_SAT_MAP_ENCODING = 'ProfileHueSatMapEncoding'--><!--Device-DngPropertyKey-PROFILE_HUE_SAT_MAP_ENCODING = 'ProfileHueSatMapEncoding'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1190,6 +1358,8 @@ PROFILE_LOOK_TABLE_ENCODING = 'ProfileLookTableEncoding'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngPropertyKey-PROFILE_LOOK_TABLE_ENCODING = 'ProfileLookTableEncoding'--><!--Device-DngPropertyKey-PROFILE_LOOK_TABLE_ENCODING = 'ProfileLookTableEncoding'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## BASELINE_EXPOSURE_OFFSET
@@ -1203,6 +1373,8 @@ BASELINE_EXPOSURE_OFFSET = 'BaselineExposureOffset'
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngPropertyKey-BASELINE_EXPOSURE_OFFSET = 'BaselineExposureOffset'--><!--Device-DngPropertyKey-BASELINE_EXPOSURE_OFFSET = 'BaselineExposureOffset'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1218,6 +1390,8 @@ DEFAULT_BLACK_RENDER = 'DefaultBlackRender'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngPropertyKey-DEFAULT_BLACK_RENDER = 'DefaultBlackRender'--><!--Device-DngPropertyKey-DEFAULT_BLACK_RENDER = 'DefaultBlackRender'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## NEW_RAW_IMAGE_DIGEST
@@ -1231,6 +1405,8 @@ NEW_RAW_IMAGE_DIGEST = 'NewRawImageDigest'
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngPropertyKey-NEW_RAW_IMAGE_DIGEST = 'NewRawImageDigest'--><!--Device-DngPropertyKey-NEW_RAW_IMAGE_DIGEST = 'NewRawImageDigest'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1246,6 +1422,8 @@ RAW_TO_PREVIEW_GAIN = 'RawToPreviewGain'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngPropertyKey-RAW_TO_PREVIEW_GAIN = 'RawToPreviewGain'--><!--Device-DngPropertyKey-RAW_TO_PREVIEW_GAIN = 'RawToPreviewGain'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## DEFAULT_USER_CROP
@@ -1259,5 +1437,7 @@ DEFAULT_USER_CROP = 'DefaultUserCrop'
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngPropertyKey-DEFAULT_USER_CROP = 'DefaultUserCrop'--><!--Device-DngPropertyKey-DEFAULT_USER_CROP = 'DefaultUserCrop'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core

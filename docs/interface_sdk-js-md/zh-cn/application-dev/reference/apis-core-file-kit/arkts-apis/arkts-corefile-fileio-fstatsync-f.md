@@ -19,6 +19,8 @@ declare function fstatSync(fd: number): Stat
 
 **替代接口：** [statSync](arkts-corefile-file-fs-statsync-f.md)
 
+<!--Device-unnamed-declare function fstatSync(fd: number): Stat--><!--Device-unnamed-declare function fstatSync(fd: number): Stat-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**

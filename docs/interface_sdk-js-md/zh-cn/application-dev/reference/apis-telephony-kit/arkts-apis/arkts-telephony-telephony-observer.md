@@ -4,6 +4,8 @@
 
 **起始版本：** 6
 
+<!--Device-unnamed-declare namespace observer--><!--Device-unnamed-declare namespace observer-End-->
+
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
 ## 导入模块

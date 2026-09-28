@@ -9,6 +9,8 @@
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-unnamed-declare namespace dataShare--><!--Device-unnamed-declare namespace dataShare-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 ## 导入模块

@@ -8,6 +8,8 @@ Sets graphics clipping, which supports multiple shapes such as rectangles, round
 
 **Since:** 12
 
+<!--Device-unnamed-export declare class ShapeClip--><!--Device-unnamed-export declare class ShapeClip-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
@@ -24,6 +26,8 @@ A constructor used to create a **ShapeClip** object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ShapeClip-constructor()--><!--Device-ShapeClip-constructor()-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## setCircleShape
@@ -39,6 +43,8 @@ Sets a circle for shape clipping.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ShapeClip-setCircleShape(circle: Circle): void--><!--Device-ShapeClip-setCircleShape(circle: Circle): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -114,6 +120,8 @@ Sets the command for drawing a path.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ShapeClip-setCommandPath(path: CommandPath): void--><!--Device-ShapeClip-setCommandPath(path: CommandPath): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -186,6 +194,8 @@ Sets an oval shape for shape clipping.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ShapeClip-setOvalShape(oval: Rect): void--><!--Device-ShapeClip-setOvalShape(oval: Rect): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -264,6 +274,8 @@ Sets a rectangle for shape clipping.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ShapeClip-setRectShape(rect: Rect): void--><!--Device-ShapeClip-setRectShape(rect: Rect): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -345,6 +357,8 @@ Sets a rounded rectangle for shape clipping.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ShapeClip-setRoundRectShape(roundRect: RoundRect): void--><!--Device-ShapeClip-setRoundRectShape(roundRect: RoundRect): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -16,6 +16,8 @@ function getCfgFilesSync(relPath: string, followMode?: FollowXMode, extra?: stri
 
 **起始版本：** 11
 
+<!--Device-configPolicy-function getCfgFilesSync(relPath: string, followMode?: FollowXMode, extra?: string): Array<string>--><!--Device-configPolicy-function getCfgFilesSync(relPath: string, followMode?: FollowXMode, extra?: string): Array<string>-End-->
+
 **系统能力：** SystemCapability.Customization.ConfigPolicy
 
 **系统接口：** 此接口为系统接口。

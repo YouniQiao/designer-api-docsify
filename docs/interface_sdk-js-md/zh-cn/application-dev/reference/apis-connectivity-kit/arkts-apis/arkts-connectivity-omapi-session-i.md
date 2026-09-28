@@ -8,6 +8,8 @@ Session的实例表示在某个SE Reader实例上创建连接会话。通过[Rea
 
 **起始版本：** 10
 
+<!--Device-omapi-export interface Session--><!--Device-omapi-export interface Session-End-->
+
 **系统能力：** SystemCapability.Communication.SecureElement
 
 ## 导入模块
@@ -25,6 +27,8 @@ close(): void
 关闭与SE的当前会话连接。这将关闭此Session打开的所有Channel。
 
 **起始版本：** 10
+
+<!--Device-Session-close(): void--><!--Device-Session-close(): void-End-->
 
 **系统能力：** SystemCapability.Communication.SecureElement
 
@@ -62,6 +66,8 @@ closeChannels(): void
 
 **起始版本：** 10
 
+<!--Device-Session-closeChannels(): void--><!--Device-Session-closeChannels(): void-End-->
+
 **系统能力：** SystemCapability.Communication.SecureElement
 
 **错误码：**
@@ -97,6 +103,8 @@ getATR(): number[]
 获取该SE的ATR。如果该SE的ATR不可用，则应返回空数组。
 
 **起始版本：** 10
+
+<!--Device-Session-getATR(): number[]--><!--Device-Session-getATR(): number[]-End-->
 
 **系统能力：** SystemCapability.Communication.SecureElement
 
@@ -140,6 +148,8 @@ getReader(): Reader
 获取提供此Session的Reader实例。
 
 **起始版本：** 10
+
+<!--Device-Session-getReader(): Reader--><!--Device-Session-getReader(): Reader-End-->
 
 **系统能力：** SystemCapability.Communication.SecureElement
 
@@ -193,6 +203,8 @@ isClosed(): boolean
 
 **起始版本：** 10
 
+<!--Device-Session-isClosed(): boolean--><!--Device-Session-isClosed(): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.SecureElement
 
 **返回值：**
@@ -234,6 +246,8 @@ openBasicChannel(aid: number[]): Promise<Channel>
 打开基础通道，参考[ISO 7816-4]协议，返回基础Channel实例对象。SE不能提供基础Channel或应用程序没有访问SE的权限时，返回null。使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-Session-openBasicChannel(aid: number[]): Promise<Channel>--><!--Device-Session-openBasicChannel(aid: number[]): Promise<Channel>-End-->
 
 **系统能力：** SystemCapability.Communication.SecureElement
 
@@ -301,6 +315,8 @@ openBasicChannel(aid: number[], callback: AsyncCallback<Channel>): void
 
 **起始版本：** 10
 
+<!--Device-Session-openBasicChannel(aid: number[], callback: AsyncCallback<Channel>): void--><!--Device-Session-openBasicChannel(aid: number[], callback: AsyncCallback<Channel>): void-End-->
+
 **系统能力：** SystemCapability.Communication.SecureElement
 
 **参数：**
@@ -363,6 +379,8 @@ openBasicChannel(aid: number[], p2: number): Promise<Channel>
 打开基础通道，参考[ISO 7816-4]协议，返回基础Channel实例对象。SE不能提供基础Channel或应用程序没有访问SE的权限时，返回null。使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-Session-openBasicChannel(aid: number[], p2: number): Promise<Channel>--><!--Device-Session-openBasicChannel(aid: number[], p2: number): Promise<Channel>-End-->
 
 **系统能力：** SystemCapability.Communication.SecureElement
 
@@ -432,6 +450,8 @@ openBasicChannel(aid: number[], p2: number, callback: AsyncCallback<Channel>): v
 
 **起始版本：** 10
 
+<!--Device-Session-openBasicChannel(aid: number[], p2: number, callback: AsyncCallback<Channel>): void--><!--Device-Session-openBasicChannel(aid: number[], p2: number, callback: AsyncCallback<Channel>): void-End-->
+
 **系统能力：** SystemCapability.Communication.SecureElement
 
 **参数：**
@@ -494,6 +514,8 @@ openLogicalChannel(aid: number[]): Promise<Channel>
 打开逻辑通道，参考[ISO 7816-4]协议，返回逻辑Channel实例对象。SE不能提供逻辑Channel或应用程序没有访问SE的权限时，返回null。使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-Session-openLogicalChannel(aid: number[]): Promise<Channel>--><!--Device-Session-openLogicalChannel(aid: number[]): Promise<Channel>-End-->
 
 **系统能力：** SystemCapability.Communication.SecureElement
 
@@ -561,6 +583,8 @@ openLogicalChannel(aid: number[], callback: AsyncCallback<Channel>): void
 
 **起始版本：** 10
 
+<!--Device-Session-openLogicalChannel(aid: number[], callback: AsyncCallback<Channel>): void--><!--Device-Session-openLogicalChannel(aid: number[], callback: AsyncCallback<Channel>): void-End-->
+
 **系统能力：** SystemCapability.Communication.SecureElement
 
 **参数：**
@@ -623,6 +647,8 @@ openLogicalChannel(aid: number[], p2: number): Promise<Channel>
 打开逻辑通道，参考[ISO 7816-4]协议，返回逻辑Channel实例对象。SE不能提供逻辑Channel或应用程序没有访问SE的权限时，返回null。使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-Session-openLogicalChannel(aid: number[], p2: number): Promise<Channel>--><!--Device-Session-openLogicalChannel(aid: number[], p2: number): Promise<Channel>-End-->
 
 **系统能力：** SystemCapability.Communication.SecureElement
 
@@ -691,6 +717,8 @@ openLogicalChannel(aid: number[], p2: number, callback: AsyncCallback<Channel>):
 打开逻辑通道，参考[ISO 7816-4]协议，返回Channel实例对象。SE不能提供逻辑Channel或应用程序没有访问SE的权限时，返回null。使用callback异步回调。
 
 **起始版本：** 10
+
+<!--Device-Session-openLogicalChannel(aid: number[], p2: number, callback: AsyncCallback<Channel>): void--><!--Device-Session-openLogicalChannel(aid: number[], p2: number, callback: AsyncCallback<Channel>): void-End-->
 
 **系统能力：** SystemCapability.Communication.SecureElement
 

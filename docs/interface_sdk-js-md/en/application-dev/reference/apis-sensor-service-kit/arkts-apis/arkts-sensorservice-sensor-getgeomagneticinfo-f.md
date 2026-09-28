@@ -16,6 +16,8 @@ Obtains the geomagnetic field of a geographic location at a certain time. This A
 
 **Since:** 9
 
+<!--Device-sensor-function getGeomagneticInfo(locationOptions: LocationOptions, timeMillis: long, callback: AsyncCallback<GeomagneticResponse>): void--><!--Device-sensor-function getGeomagneticInfo(locationOptions: LocationOptions, timeMillis: long, callback: AsyncCallback<GeomagneticResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -73,6 +75,8 @@ function getGeomagneticInfo(locationOptions: LocationOptions, timeMillis: number
 Obtains the geomagnetic field of a geographic location at a certain time. This API uses a promise to return the result.
 
 **Since:** 9
+
+<!--Device-sensor-function getGeomagneticInfo(locationOptions: LocationOptions, timeMillis: long): Promise<GeomagneticResponse>--><!--Device-sensor-function getGeomagneticInfo(locationOptions: LocationOptions, timeMillis: long): Promise<GeomagneticResponse>-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 

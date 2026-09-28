@@ -10,6 +10,8 @@ export interface IpsecVpnConfig extends SysVpnConfig
 
 **起始版本：** 12
 
+<!--Device-vpn-export interface IpsecVpnConfig extends SysVpnConfig--><!--Device-vpn-export interface IpsecVpnConfig extends SysVpnConfig-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ ipsecCaCertConfig?: string
 
 **起始版本：** 12
 
+<!--Device-IpsecVpnConfig-ipsecCaCertConfig?: string--><!--Device-IpsecVpnConfig-ipsecCaCertConfig?: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -43,6 +47,8 @@ ipsecCaCertFilePath?: string
 **类型：** string
 
 **起始版本：** 12
+
+<!--Device-IpsecVpnConfig-ipsecCaCertFilePath?: string--><!--Device-IpsecVpnConfig-ipsecCaCertFilePath?: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -58,6 +64,8 @@ ipsecIdentifier?: string
 
 **起始版本：** 12
 
+<!--Device-IpsecVpnConfig-ipsecIdentifier?: string--><!--Device-IpsecVpnConfig-ipsecIdentifier?: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -71,6 +79,8 @@ ipsecPreSharedKey?: string
 **类型：** string
 
 **起始版本：** 12
+
+<!--Device-IpsecVpnConfig-ipsecPreSharedKey?: string--><!--Device-IpsecVpnConfig-ipsecPreSharedKey?: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -86,6 +96,8 @@ ipsecPrivateServerCertConfig?: string
 
 **起始版本：** 12
 
+<!--Device-IpsecVpnConfig-ipsecPrivateServerCertConfig?: string--><!--Device-IpsecVpnConfig-ipsecPrivateServerCertConfig?: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -99,6 +111,8 @@ ipsecPrivateServerCertFilePath?: string
 **类型：** string
 
 **起始版本：** 12
+
+<!--Device-IpsecVpnConfig-ipsecPrivateServerCertFilePath?: string--><!--Device-IpsecVpnConfig-ipsecPrivateServerCertFilePath?: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -114,6 +128,8 @@ ipsecPrivateUserCertConfig?: string
 
 **起始版本：** 12
 
+<!--Device-IpsecVpnConfig-ipsecPrivateUserCertConfig?: string--><!--Device-IpsecVpnConfig-ipsecPrivateUserCertConfig?: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -127,6 +143,8 @@ ipsecPrivateUserCertFilePath?: string
 **类型：** string
 
 **起始版本：** 12
+
+<!--Device-IpsecVpnConfig-ipsecPrivateUserCertFilePath?: string--><!--Device-IpsecVpnConfig-ipsecPrivateUserCertFilePath?: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -142,6 +160,8 @@ ipsecPublicServerCertConfig?: string
 
 **起始版本：** 12
 
+<!--Device-IpsecVpnConfig-ipsecPublicServerCertConfig?: string--><!--Device-IpsecVpnConfig-ipsecPublicServerCertConfig?: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -155,6 +175,8 @@ ipsecPublicServerCertFilePath?: string
 **类型：** string
 
 **起始版本：** 12
+
+<!--Device-IpsecVpnConfig-ipsecPublicServerCertFilePath?: string--><!--Device-IpsecVpnConfig-ipsecPublicServerCertFilePath?: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -170,6 +192,8 @@ ipsecPublicUserCertConfig?: string
 
 **起始版本：** 12
 
+<!--Device-IpsecVpnConfig-ipsecPublicUserCertConfig?: string--><!--Device-IpsecVpnConfig-ipsecPublicUserCertConfig?: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -183,6 +207,8 @@ ipsecPublicUserCertFilePath?: string
 **类型：** string
 
 **起始版本：** 12
+
+<!--Device-IpsecVpnConfig-ipsecPublicUserCertFilePath?: string--><!--Device-IpsecVpnConfig-ipsecPublicUserCertFilePath?: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -198,6 +224,8 @@ strongSwanConfig?: string
 
 **起始版本：** 12
 
+<!--Device-IpsecVpnConfig-strongSwanConfig?: string--><!--Device-IpsecVpnConfig-strongSwanConfig?: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -211,6 +239,8 @@ swanctlConfig?: string
 **类型：** string
 
 **起始版本：** 12
+
+<!--Device-IpsecVpnConfig-swanctlConfig?: string--><!--Device-IpsecVpnConfig-swanctlConfig?: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 

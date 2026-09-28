@@ -12,6 +12,8 @@ interface AVCastController
 
 **起始版本：** 10
 
+<!--Device-avSession-interface AVCastController--><!--Device-avSession-interface AVCastController-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 ## 导入模块
@@ -29,6 +31,8 @@ getAVPlaybackState(callback: AsyncCallback<AVPlaybackState>): void
 获取当前的远端播放状态。结果通过callback异步回调方式返回。
 
 **起始版本：** 10
+
+<!--Device-AVCastController-getAVPlaybackState(callback: AsyncCallback<AVPlaybackState>): void--><!--Device-AVCastController-getAVPlaybackState(callback: AsyncCallback<AVPlaybackState>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -68,7 +72,9 @@ getAVPlaybackState(): Promise<AVPlaybackState>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVCastController-getAVPlaybackState(): Promise<AVPlaybackState>--><!--Device-AVCastController-getAVPlaybackState(): Promise<AVPlaybackState>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -103,6 +109,8 @@ getCurrentItem(callback: AsyncCallback<AVQueueItem>): void
 获取当前投播的资源信息。结果通过callback异步回调方式返回。
 
 **起始版本：** 10
+
+<!--Device-AVCastController-getCurrentItem(callback: AsyncCallback<AVQueueItem>): void--><!--Device-AVCastController-getCurrentItem(callback: AsyncCallback<AVQueueItem>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -142,7 +150,9 @@ getCurrentItem(): Promise<AVQueueItem>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVCastController-getCurrentItem(): Promise<AVQueueItem>--><!--Device-AVCastController-getCurrentItem(): Promise<AVQueueItem>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -178,7 +188,9 @@ getRecommendedResolutionLevel(decoderType: DecoderType): Promise<ResolutionLevel
 
 **起始版本：** 19
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVCastController-getRecommendedResolutionLevel(decoderType: DecoderType): Promise<ResolutionLevel>--><!--Device-AVCastController-getRecommendedResolutionLevel(decoderType: DecoderType): Promise<ResolutionLevel>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -221,7 +233,9 @@ getSupportedDecoders(): Promise<Array<DecoderType>>
 
 **起始版本：** 19
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVCastController-getSupportedDecoders(): Promise<Array<DecoderType>>--><!--Device-AVCastController-getSupportedDecoders(): Promise<Array<DecoderType>>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -260,7 +274,9 @@ getSupportedHdrCapabilities(): Promise<Array<hdrCapability.HDRFormat>>
 
 **起始版本：** 19
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVCastController-getSupportedHdrCapabilities(): Promise<Array<hdrCapability.HDRFormat>>--><!--Device-AVCastController-getSupportedHdrCapabilities(): Promise<Array<hdrCapability.HDRFormat>>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -301,7 +317,9 @@ getSupportedPlaySpeeds(): Promise<Array<number>>
 
 **起始版本：** 19
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVCastController-getSupportedPlaySpeeds(): Promise<Array<double>>--><!--Device-AVCastController-getSupportedPlaySpeeds(): Promise<Array<double>>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -339,6 +357,8 @@ getValidCommands(callback: AsyncCallback<Array<AVCastControlCommandType>>): void
 获取当前支持的命令。结果通过callback异步回调方式返回。
 
 **起始版本：** 11
+
+<!--Device-AVCastController-getValidCommands(callback: AsyncCallback<Array<AVCastControlCommandType>>): void--><!--Device-AVCastController-getValidCommands(callback: AsyncCallback<Array<AVCastControlCommandType>>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -378,6 +398,8 @@ getValidCommands(): Promise<Array<AVCastControlCommandType>>
 
 **起始版本：** 11
 
+<!--Device-AVCastController-getValidCommands(): Promise<Array<AVCastControlCommandType>>--><!--Device-AVCastController-getValidCommands(): Promise<Array<AVCastControlCommandType>>-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **返回值：**
@@ -414,6 +436,8 @@ off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void): v
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVCastController-off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void): void--><!--Device-AVCastController-off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **参数：**
@@ -448,6 +472,8 @@ off(type: 'mediaItemChange'): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVCastController-off(type: 'mediaItemChange'): void--><!--Device-AVCastController-off(type: 'mediaItemChange'): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **参数：**
@@ -480,6 +506,8 @@ off(type: 'playNext'): void
 **起始版本：** 10
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVCastController-off(type: 'playNext'): void--><!--Device-AVCastController-off(type: 'playNext'): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -514,6 +542,8 @@ off(type: 'playPrevious'): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVCastController-off(type: 'playPrevious'): void--><!--Device-AVCastController-off(type: 'playPrevious'): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **参数：**
@@ -544,6 +574,8 @@ off(type: 'requestPlay', callback?: Callback<AVQueueItem>): void
 取消设置请求播放事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
 
 **起始版本：** 11
+
+<!--Device-AVCastController-off(type: 'requestPlay', callback?: Callback<AVQueueItem>): void--><!--Device-AVCastController-off(type: 'requestPlay', callback?: Callback<AVQueueItem>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -576,6 +608,8 @@ off(type: 'endOfStream', callback?: Callback<void>): void
 取消设置播放结束事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
 
 **起始版本：** 11
+
+<!--Device-AVCastController-off(type: 'endOfStream', callback?: Callback<void>): void--><!--Device-AVCastController-off(type: 'endOfStream', callback?: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -611,6 +645,8 @@ off(type: 'seekDone'): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVCastController-off(type: 'seekDone'): void--><!--Device-AVCastController-off(type: 'seekDone'): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **参数：**
@@ -643,6 +679,8 @@ off(type: 'validCommandChange', callback?: Callback<Array<AVCastControlCommandTy
 **起始版本：** 11
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-AVCastController-off(type: 'validCommandChange', callback?: Callback<Array<AVCastControlCommandType>>)--><!--Device-AVCastController-off(type: 'validCommandChange', callback?: Callback<Array<AVCastControlCommandType>>)-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -677,6 +715,8 @@ off(type: 'videoSizeChange'): void
 
 **起始版本：** 12
 
+<!--Device-AVCastController-off(type: 'videoSizeChange'): void--><!--Device-AVCastController-off(type: 'videoSizeChange'): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **参数：**
@@ -709,6 +749,8 @@ off(type: 'error'): void
 **起始版本：** 10
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVCastController-off(type: 'error'): void--><!--Device-AVCastController-off(type: 'error'): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -749,6 +791,8 @@ off(type: 'castControlGenericError', callback?: ErrorCallback): void
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVCastController-off(type: 'castControlGenericError', callback?: ErrorCallback): void--><!--Device-AVCastController-off(type: 'castControlGenericError', callback?: ErrorCallback): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **参数：**
@@ -781,6 +825,8 @@ off(type: 'castControlIoError', callback?: ErrorCallback): void
 **起始版本：** 13
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVCastController-off(type: 'castControlIoError', callback?: ErrorCallback): void--><!--Device-AVCastController-off(type: 'castControlIoError', callback?: ErrorCallback): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -815,6 +861,8 @@ off(type: 'castControlParsingError', callback?: ErrorCallback): void
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVCastController-off(type: 'castControlParsingError', callback?: ErrorCallback): void--><!--Device-AVCastController-off(type: 'castControlParsingError', callback?: ErrorCallback): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **参数：**
@@ -847,6 +895,8 @@ off(type: 'castControlDecodingError', callback?: ErrorCallback): void
 **起始版本：** 13
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVCastController-off(type: 'castControlDecodingError', callback?: ErrorCallback): void--><!--Device-AVCastController-off(type: 'castControlDecodingError', callback?: ErrorCallback): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -881,6 +931,8 @@ off(type: 'castControlAudioRendererError', callback?: ErrorCallback): void
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVCastController-off(type: 'castControlAudioRendererError', callback?: ErrorCallback): void--><!--Device-AVCastController-off(type: 'castControlAudioRendererError', callback?: ErrorCallback): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **参数：**
@@ -913,6 +965,8 @@ off(type: 'castControlDrmError', callback?: ErrorCallback): void
 **起始版本：** 13
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVCastController-off(type: 'castControlDrmError', callback?: ErrorCallback): void--><!--Device-AVCastController-off(type: 'castControlDrmError', callback?: ErrorCallback): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -947,6 +1001,8 @@ off(type: 'keyRequest', callback?: KeyRequestCallback): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVCastController-off(type: 'keyRequest', callback?: KeyRequestCallback): void--><!--Device-AVCastController-off(type: 'keyRequest', callback?: KeyRequestCallback): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **参数：**
@@ -980,6 +1036,8 @@ off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void
 **起始版本：** 20
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVCastController-off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void--><!--Device-AVCastController-off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -1017,6 +1075,8 @@ on(type: 'playbackStateChange', filter: Array<keyof AVPlaybackState> | 'all', ca
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVCastController-on(type: 'playbackStateChange', filter: Array<keyof AVPlaybackState> | 'all', callback: (state: AVPlaybackState) => void): void--><!--Device-AVCastController-on(type: 'playbackStateChange', filter: Array<keyof AVPlaybackState> | 'all', callback: (state: AVPlaybackState) => void): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -1062,6 +1122,8 @@ on(type: 'mediaItemChange', callback: Callback<AVQueueItem>): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVCastController-on(type: 'mediaItemChange', callback: Callback<AVQueueItem>): void--><!--Device-AVCastController-on(type: 'mediaItemChange', callback: Callback<AVQueueItem>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **参数：**
@@ -1099,6 +1161,8 @@ on(type: 'playNext', callback: Callback<void>): void
 **起始版本：** 10
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVCastController-on(type: 'playNext', callback: Callback<void>): void--><!--Device-AVCastController-on(type: 'playNext', callback: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -1138,6 +1202,8 @@ on(type: 'playPrevious', callback: Callback<void>): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVCastController-on(type: 'playPrevious', callback: Callback<void>): void--><!--Device-AVCastController-on(type: 'playPrevious', callback: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **参数：**
@@ -1174,6 +1240,8 @@ on(type: 'requestPlay', callback: Callback<AVQueueItem>): void
 
 **起始版本：** 11
 
+<!--Device-AVCastController-on(type: 'requestPlay', callback: Callback<AVQueueItem>): void--><!--Device-AVCastController-on(type: 'requestPlay', callback: Callback<AVQueueItem>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **参数：**
@@ -1209,6 +1277,8 @@ on(type: 'endOfStream', callback: Callback<void>): void
 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 11
+
+<!--Device-AVCastController-on(type: 'endOfStream', callback: Callback<void>): void--><!--Device-AVCastController-on(type: 'endOfStream', callback: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -1248,6 +1318,8 @@ on(type: 'seekDone', callback: Callback<number>): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVCastController-on(type: 'seekDone', callback: Callback<int>): void--><!--Device-AVCastController-on(type: 'seekDone', callback: Callback<int>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **参数：**
@@ -1286,6 +1358,8 @@ on(type: 'validCommandChange', callback: Callback<Array<AVCastControlCommandType
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-AVCastController-on(type: 'validCommandChange', callback: Callback<Array<AVCastControlCommandType>>)--><!--Device-AVCastController-on(type: 'validCommandChange', callback: Callback<Array<AVCastControlCommandType>>)-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **参数：**
@@ -1323,6 +1397,8 @@ on(type: 'videoSizeChange', callback: (width: number, height: number) => void): 
 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 12
+
+<!--Device-AVCastController-on(type: 'videoSizeChange', callback: (width: int, height: int) => void): void--><!--Device-AVCastController-on(type: 'videoSizeChange', callback: (width: int, height: int) => void): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -1370,6 +1446,8 @@ on(type: 'error', callback: ErrorCallback): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVCastController-on(type: 'error', callback: ErrorCallback): void--><!--Device-AVCastController-on(type: 'error', callback: ErrorCallback): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **参数：**
@@ -1415,6 +1493,8 @@ on(type: 'castControlGenericError', callback: ErrorCallback): void
 **起始版本：** 13
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVCastController-on(type: 'castControlGenericError', callback: ErrorCallback): void--><!--Device-AVCastController-on(type: 'castControlGenericError', callback: ErrorCallback): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -1468,6 +1548,8 @@ on(type: 'castControlIoError', callback: ErrorCallback): void
 **起始版本：** 13
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVCastController-on(type: 'castControlIoError', callback: ErrorCallback): void--><!--Device-AVCastController-on(type: 'castControlIoError', callback: ErrorCallback): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -1525,6 +1607,8 @@ on(type: 'castControlParsingError', callback: ErrorCallback): void
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVCastController-on(type: 'castControlParsingError', callback: ErrorCallback): void--><!--Device-AVCastController-on(type: 'castControlParsingError', callback: ErrorCallback): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **参数：**
@@ -1568,6 +1652,8 @@ on(type: 'castControlDecodingError', callback: ErrorCallback): void
 **起始版本：** 13
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVCastController-on(type: 'castControlDecodingError', callback: ErrorCallback): void--><!--Device-AVCastController-on(type: 'castControlDecodingError', callback: ErrorCallback): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -1614,6 +1700,8 @@ on(type: 'castControlAudioRendererError', callback: ErrorCallback): void
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVCastController-on(type: 'castControlAudioRendererError', callback: ErrorCallback): void--><!--Device-AVCastController-on(type: 'castControlAudioRendererError', callback: ErrorCallback): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **参数：**
@@ -1655,6 +1743,8 @@ on(type: 'castControlDrmError', callback: ErrorCallback): void
 **起始版本：** 13
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVCastController-on(type: 'castControlDrmError', callback: ErrorCallback): void--><!--Device-AVCastController-on(type: 'castControlDrmError', callback: ErrorCallback): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -1705,6 +1795,8 @@ on(type: 'keyRequest', callback: KeyRequestCallback): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVCastController-on(type: 'keyRequest', callback: KeyRequestCallback): void--><!--Device-AVCastController-on(type: 'keyRequest', callback: KeyRequestCallback): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **参数：**
@@ -1742,6 +1834,8 @@ on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVCastController-on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void--><!--Device-AVCastController-on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **参数：**
@@ -1774,6 +1868,8 @@ prepare(item: AVQueueItem, callback: AsyncCallback<void>): void
 准备播放媒体资源，即进行播放资源的加载和缓冲。结果通过callback异步回调方式返回。
 
 **起始版本：** 10
+
+<!--Device-AVCastController-prepare(item: AVQueueItem, callback: AsyncCallback<void>): void--><!--Device-AVCastController-prepare(item: AVQueueItem, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -1834,7 +1930,9 @@ prepare(item: AVQueueItem): Promise<void>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVCastController-prepare(item: AVQueueItem): Promise<void>--><!--Device-AVCastController-prepare(item: AVQueueItem): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -1896,7 +1994,9 @@ processMediaKeyResponse(assetId: string, response: Uint8Array): Promise<void>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVCastController-processMediaKeyResponse(assetId: string, response: Uint8Array): Promise<void>--><!--Device-AVCastController-processMediaKeyResponse(assetId: string, response: Uint8Array): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -1947,6 +2047,8 @@ release(callback: AsyncCallback<void>): void
 
 **起始版本：** 11
 
+<!--Device-AVCastController-release(callback: AsyncCallback<void>): void--><!--Device-AVCastController-release(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **参数：**
@@ -1985,7 +2087,9 @@ release(): Promise<void>
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVCastController-release(): Promise<void>--><!--Device-AVCastController-release(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -2020,6 +2124,8 @@ sendControlCommand(command: AVCastControlCommand, callback: AsyncCallback<void>)
 通过会话控制器发送命令到其对应的会话。结果通过callback异步回调方式返回。
 
 **起始版本：** 10
+
+<!--Device-AVCastController-sendControlCommand(command: AVCastControlCommand, callback: AsyncCallback<void>): void--><!--Device-AVCastController-sendControlCommand(command: AVCastControlCommand, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -2064,7 +2170,9 @@ sendControlCommand(command: AVCastControlCommand): Promise<void>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVCastController-sendControlCommand(command: AVCastControlCommand): Promise<void>--><!--Device-AVCastController-sendControlCommand(command: AVCastControlCommand): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -2110,7 +2218,9 @@ sendCustomData(data: Record<string, Object>): Promise<void>
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVCastController-sendCustomData(data: Record<string, Object>): Promise<void>--><!--Device-AVCastController-sendCustomData(data: Record<string, Object>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -2157,6 +2267,8 @@ start(item: AVQueueItem, callback: AsyncCallback<void>): void
 > assetId不变时，如果prepare已经传入有效的mediaUri或fdSrc，则start接口将复用prepare阶段的完整的AVMediaDescription对象信息。
 
 **起始版本：** 10
+
+<!--Device-AVCastController-start(item: AVQueueItem, callback: AsyncCallback<void>): void--><!--Device-AVCastController-start(item: AVQueueItem, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -2224,7 +2336,9 @@ start(item: AVQueueItem): Promise<void>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVCastController-start(item: AVQueueItem): Promise<void>--><!--Device-AVCastController-start(item: AVQueueItem): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -2287,6 +2401,8 @@ update(item: AVQueueItem): Promise<void>
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVCastController-update(item: AVQueueItem): Promise<void>--><!--Device-AVCastController-update(item: AVQueueItem): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 

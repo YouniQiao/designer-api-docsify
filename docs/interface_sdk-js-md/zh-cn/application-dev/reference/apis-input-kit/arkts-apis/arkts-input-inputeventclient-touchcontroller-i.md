@@ -8,6 +8,8 @@ interface TouchController
 
 **起始版本：** 26.0.0
 
+<!--Device-inputEventClient-interface TouchController--><!--Device-inputEventClient-interface TouchController-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
 ## 导入模块
@@ -29,6 +31,8 @@ touchDown(touch: TouchPoint): Promise<void>
 **需要权限：** ohos.permission.CONTROL_DEVICE
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TouchController-touchDown(touch: TouchPoint): Promise<void>--><!--Device-TouchController-touchDown(touch: TouchPoint): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
@@ -120,6 +124,8 @@ touchMove(touch: TouchPoint): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TouchController-touchMove(touch: TouchPoint): Promise<void>--><!--Device-TouchController-touchMove(touch: TouchPoint): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **参数：**
@@ -159,6 +165,8 @@ touchUp(touch: TouchPoint): Promise<void>
 **需要权限：** ohos.permission.CONTROL_DEVICE
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TouchController-touchUp(touch: TouchPoint): Promise<void>--><!--Device-TouchController-touchUp(touch: TouchPoint): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 

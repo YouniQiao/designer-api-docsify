@@ -37,6 +37,8 @@ Constructor.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-NavRouterInterface-(): NavRouterAttribute--><!--Device-NavRouterInterface-(): NavRouterAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## NavRouter
@@ -56,6 +58,8 @@ Provides route information so that clicking the **NavRouter** component redirect
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-NavRouterInterface-(value: RouteInfo): NavRouterAttribute--><!--Device-NavRouterInterface-(value: RouteInfo): NavRouterAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

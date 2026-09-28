@@ -8,6 +8,8 @@ Configures the line spacing of text and whether it applies only between lines.
 
 **Since:** 20
 
+<!--Device-unnamed-declare interface LineSpacingOptions--><!--Device-unnamed-declare interface LineSpacingOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onlyBetweenLines
@@ -29,5 +31,7 @@ Default value: false
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-LineSpacingOptions-onlyBetweenLines?: boolean--><!--Device-LineSpacingOptions-onlyBetweenLines?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

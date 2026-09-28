@@ -19,6 +19,8 @@ function claimInterfaceExclusive(pipe: USBDevicePipe, iface: USBInterface, force
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-usbManager-function claimInterfaceExclusive(pipe: USBDevicePipe, iface: USBInterface, force?: boolean,    onConflict?: Callback<InterfaceConflictInfo>): void--><!--Device-usbManager-function claimInterfaceExclusive(pipe: USBDevicePipe, iface: USBInterface, force?: boolean,    onConflict?: Callback<InterfaceConflictInfo>): void-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 **参数：**

@@ -8,6 +8,8 @@ enum HighlightAlbumChangeAttribute
 
 **起始版本：** 21
 
+<!--Device-photoAccessHelper-enum HighlightAlbumChangeAttribute--><!--Device-photoAccessHelper-enum HighlightAlbumChangeAttribute-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -21,6 +23,8 @@ IS_VIEWED = 0
 该时刻相册是否被查看过。
 
 **起始版本：** 21
+
+<!--Device-HighlightAlbumChangeAttribute-IS_VIEWED = 0--><!--Device-HighlightAlbumChangeAttribute-IS_VIEWED = 0-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -36,6 +40,8 @@ NOTIFICATION_TIME = 1
 
 **起始版本：** 21
 
+<!--Device-HighlightAlbumChangeAttribute-NOTIFICATION_TIME = 1--><!--Device-HighlightAlbumChangeAttribute-NOTIFICATION_TIME = 1-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +55,8 @@ IS_FAVORITE = 2
 该时刻相册是否被收藏。
 
 **起始版本：** 21
+
+<!--Device-HighlightAlbumChangeAttribute-IS_FAVORITE = 2--><!--Device-HighlightAlbumChangeAttribute-IS_FAVORITE = 2-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

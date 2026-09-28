@@ -16,6 +16,8 @@ declare function createReadStream(path: string, options?: ReadStreamOptions): Re
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare function createReadStream(path: string, options?: ReadStreamOptions): ReadStream--><!--Device-unnamed-declare function createReadStream(path: string, options?: ReadStreamOptions): ReadStream-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**

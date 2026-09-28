@@ -8,6 +8,8 @@ Buffer对象是处理二进制数据的缓冲区。
 
 **起始版本：** 9
 
+<!--Device-buffer-class Buffer--><!--Device-buffer-class Buffer-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -33,6 +35,8 @@ compare(
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-compare(      target: Buffer | Uint8Array,      targetStart?: number,      targetEnd?: number,      sourceStart?: number,      sourceEnd?: number    ): -1 | 0 | 1--><!--Device-Buffer-compare(      target: Buffer | Uint8Array,      targetStart?: number,      targetEnd?: number,      sourceStart?: number,      sourceEnd?: number    ): -1 | 0 | 1-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -84,7 +88,9 @@ copy(target: Buffer | Uint8Array, targetStart?: number, sourceStart?: number, so
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-copy(target: Buffer | Uint8Array, targetStart?: int, sourceStart?: int, sourceEnd?: int): int--><!--Device-Buffer-copy(target: Buffer | Uint8Array, targetStart?: int, sourceStart?: int, sourceEnd?: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -136,7 +142,9 @@ entries(): IterableIterator<[number, number]>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-entries(): IterableIterator<[int, long]>--><!--Device-Buffer-entries(): IterableIterator<[int, long]>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -179,7 +187,9 @@ equals(otherBuffer: Uint8Array | Buffer): boolean
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-equals(otherBuffer: Uint8Array | Buffer): boolean--><!--Device-Buffer-equals(otherBuffer: Uint8Array | Buffer): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -225,7 +235,9 @@ fill(
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-fill(      value: string | Buffer | Uint8Array | int | double | long,      offset?: int,      end?: int,      encoding?: BufferEncoding    ): Buffer--><!--Device-Buffer-fill(      value: string | Buffer | Uint8Array | int | double | long,      offset?: int,      end?: int,      encoding?: BufferEncoding    ): Buffer-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -270,7 +282,9 @@ includes(value: string | number | Buffer | Uint8Array, byteOffset?: number, enco
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-includes(value: string | int | double | long | Buffer | Uint8Array, byteOffset?: int, encoding?: BufferEncoding): boolean--><!--Device-Buffer-includes(value: string | int | double | long | Buffer | Uint8Array, byteOffset?: int, encoding?: BufferEncoding): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -310,7 +324,9 @@ indexOf(value: string | number | Buffer | Uint8Array, byteOffset?: number, encod
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-indexOf(value: string | int | double | long | Buffer | Uint8Array, byteOffset?: int, encoding?: BufferEncoding): int--><!--Device-Buffer-indexOf(value: string | int | double | long | Buffer | Uint8Array, byteOffset?: int, encoding?: BufferEncoding): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -350,7 +366,9 @@ keys(): IterableIterator<number>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-keys(): IterableIterator<int>--><!--Device-Buffer-keys(): IterableIterator<int>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -390,7 +408,9 @@ lastIndexOf(value: string | number | Buffer | Uint8Array, byteOffset?: number, e
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-lastIndexOf(value: string | int | double | long | Buffer | Uint8Array, byteOffset?: int, encoding?: BufferEncoding): int--><!--Device-Buffer-lastIndexOf(value: string | int | double | long | Buffer | Uint8Array, byteOffset?: int, encoding?: BufferEncoding): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -430,7 +450,9 @@ readBigInt64BE(offset?: number): bigint
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-readBigInt64BE(offset?: int): bigint--><!--Device-Buffer-readBigInt64BE(offset?: int): bigint-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -478,7 +500,9 @@ readBigInt64LE(offset?: number): bigint
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-readBigInt64LE(offset?: int): bigint--><!--Device-Buffer-readBigInt64LE(offset?: int): bigint-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -526,7 +550,9 @@ readBigUInt64BE(offset?: number): bigint
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-readBigUInt64BE(offset?: int): bigint--><!--Device-Buffer-readBigUInt64BE(offset?: int): bigint-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -573,7 +599,9 @@ readBigUInt64LE(offset?: number): bigint
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-readBigUInt64LE(offset?: int): bigint--><!--Device-Buffer-readBigUInt64LE(offset?: int): bigint-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -621,7 +649,9 @@ readDoubleBE(offset?: number): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-readDoubleBE(offset?: int): double--><!--Device-Buffer-readDoubleBE(offset?: int): double-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -667,7 +697,9 @@ readDoubleLE(offset?: number): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-readDoubleLE(offset?: int): double--><!--Device-Buffer-readDoubleLE(offset?: int): double-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -713,7 +745,9 @@ readFloatBE(offset?: number): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-readFloatBE(offset?: int): double--><!--Device-Buffer-readFloatBE(offset?: int): double-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -759,7 +793,9 @@ readFloatLE(offset?: number): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-readFloatLE(offset?: int): double--><!--Device-Buffer-readFloatLE(offset?: int): double-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -805,7 +841,9 @@ readInt16BE(offset?: number): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-readInt16BE(offset?: int): long--><!--Device-Buffer-readInt16BE(offset?: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -851,7 +889,9 @@ readInt16LE(offset?: number): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-readInt16LE(offset?: int): long--><!--Device-Buffer-readInt16LE(offset?: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -897,7 +937,9 @@ readInt32BE(offset?: number): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-readInt32BE(offset?: int): long--><!--Device-Buffer-readInt32BE(offset?: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -943,7 +985,9 @@ readInt32LE(offset?: number): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-readInt32LE(offset?: int): long--><!--Device-Buffer-readInt32LE(offset?: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -989,7 +1033,9 @@ readInt8(offset?: number): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-readInt8(offset?: int): long--><!--Device-Buffer-readInt8(offset?: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1037,7 +1083,9 @@ readIntBE(offset: number, byteLength: number): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-readIntBE(offset: int, byteLength: int): long--><!--Device-Buffer-readIntBE(offset: int, byteLength: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1085,7 +1133,9 @@ readIntLE(offset: number, byteLength: number): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-readIntLE(offset: int, byteLength: int): long--><!--Device-Buffer-readIntLE(offset: int, byteLength: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1132,7 +1182,9 @@ readUInt16BE(offset?: number): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-readUInt16BE(offset?: int): long--><!--Device-Buffer-readUInt16BE(offset?: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1180,7 +1232,9 @@ readUInt16LE(offset?: number): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-readUInt16LE(offset?: int): long--><!--Device-Buffer-readUInt16LE(offset?: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1228,7 +1282,9 @@ readUInt32BE(offset?: number): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-readUInt32BE(offset?: int): long--><!--Device-Buffer-readUInt32BE(offset?: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1274,7 +1330,9 @@ readUInt32LE(offset?: number): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-readUInt32LE(offset?: int): long--><!--Device-Buffer-readUInt32LE(offset?: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1320,7 +1378,9 @@ readUInt8(offset?: number): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-readUInt8(offset?: int): long--><!--Device-Buffer-readUInt8(offset?: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1368,7 +1428,9 @@ readUIntBE(offset: number, byteLength: number): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-readUIntBE(offset: int, byteLength: int): long--><!--Device-Buffer-readUIntBE(offset: int, byteLength: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1415,7 +1477,9 @@ readUIntLE(offset: number, byteLength: number): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-readUIntLE(offset: int, byteLength: int): long--><!--Device-Buffer-readUIntLE(offset: int, byteLength: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1462,7 +1526,9 @@ subarray(start?: number, end?: number): Buffer
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-subarray(start?: int, end?: int): Buffer--><!--Device-Buffer-subarray(start?: int, end?: int): Buffer-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1504,7 +1570,9 @@ swap16(): Buffer
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-swap16(): Buffer--><!--Device-Buffer-swap16(): Buffer-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1543,7 +1611,9 @@ swap32(): Buffer
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-swap32(): Buffer--><!--Device-Buffer-swap32(): Buffer-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1582,7 +1652,9 @@ swap64(): Buffer
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-swap64(): Buffer--><!--Device-Buffer-swap64(): Buffer-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1623,6 +1695,8 @@ toJSON(): Object
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Buffer-toJSON(): Object--><!--Device-Buffer-toJSON(): Object-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -1653,6 +1727,8 @@ toString(encoding?: string, start?: number, end?: number): string
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-toString(encoding?: string, start?: number, end?: number): string--><!--Device-Buffer-toString(encoding?: string, start?: number, end?: number): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1693,7 +1769,9 @@ values(): IterableIterator<number>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-values(): IterableIterator<long>--><!--Device-Buffer-values(): IterableIterator<long>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1735,7 +1813,9 @@ write(str: string, offset?: number, length?: number, encoding?: string): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-write(str: string, offset?: int, length?: int, encoding?: string): int--><!--Device-Buffer-write(str: string, offset?: int, length?: int, encoding?: string): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1786,7 +1866,9 @@ writeBigInt64BE(value: bigint, offset?: number): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-writeBigInt64BE(value: bigint, offset?: int): int--><!--Device-Buffer-writeBigInt64BE(value: bigint, offset?: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1830,7 +1912,9 @@ writeBigInt64LE(value: bigint, offset?: number): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-writeBigInt64LE(value: bigint, offset?: int): int--><!--Device-Buffer-writeBigInt64LE(value: bigint, offset?: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1874,7 +1958,9 @@ writeBigUInt64BE(value: bigint, offset?: number): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-writeBigUInt64BE(value: bigint, offset?: int): int--><!--Device-Buffer-writeBigUInt64BE(value: bigint, offset?: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1918,7 +2004,9 @@ writeBigUInt64LE(value: bigint, offset?: number): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-writeBigUInt64LE(value: bigint, offset?: int): int--><!--Device-Buffer-writeBigUInt64LE(value: bigint, offset?: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1962,7 +2050,9 @@ writeDoubleBE(value: number, offset?: number): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-writeDoubleBE(value: double, offset?: int): int--><!--Device-Buffer-writeDoubleBE(value: double, offset?: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -2006,7 +2096,9 @@ writeDoubleLE(value: number, offset?: number): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-writeDoubleLE(value: double, offset?: int): int--><!--Device-Buffer-writeDoubleLE(value: double, offset?: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -2050,7 +2142,9 @@ writeFloatBE(value: number, offset?: number): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-writeFloatBE(value: double, offset?: int): int--><!--Device-Buffer-writeFloatBE(value: double, offset?: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -2094,7 +2188,9 @@ writeFloatLE(value: number, offset?: number): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-writeFloatLE(value: double, offset?: int): int--><!--Device-Buffer-writeFloatLE(value: double, offset?: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -2138,7 +2234,9 @@ writeInt16BE(value: number, offset?: number): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-writeInt16BE(value: long, offset?: int): int--><!--Device-Buffer-writeInt16BE(value: long, offset?: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -2182,7 +2280,9 @@ writeInt16LE(value: number, offset?: number): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-writeInt16LE(value: long, offset?: int): int--><!--Device-Buffer-writeInt16LE(value: long, offset?: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -2226,7 +2326,9 @@ writeInt32BE(value: number, offset?: number): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-writeInt32BE(value: long, offset?: int): int--><!--Device-Buffer-writeInt32BE(value: long, offset?: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -2270,7 +2372,9 @@ writeInt32LE(value: number, offset?: number): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-writeInt32LE(value: long, offset?: int): int--><!--Device-Buffer-writeInt32LE(value: long, offset?: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -2314,7 +2418,9 @@ writeInt8(value: number, offset?: number): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-writeInt8(value: long, offset?: int): int--><!--Device-Buffer-writeInt8(value: long, offset?: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -2361,7 +2467,9 @@ writeIntBE(value: number, offset: number, byteLength: number): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-writeIntBE(value: long, offset: int, byteLength: int): int--><!--Device-Buffer-writeIntBE(value: long, offset: int, byteLength: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -2406,7 +2514,9 @@ writeIntLE(value: number, offset: number, byteLength: number): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-writeIntLE(value: long, offset: int, byteLength: int): int--><!--Device-Buffer-writeIntLE(value: long, offset: int, byteLength: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -2451,7 +2561,9 @@ writeUInt16BE(value: number, offset?: number): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-writeUInt16BE(value: long, offset?: int): int--><!--Device-Buffer-writeUInt16BE(value: long, offset?: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -2498,7 +2610,9 @@ writeUInt16LE(value: number, offset?: number): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-writeUInt16LE(value: long, offset?: int): int--><!--Device-Buffer-writeUInt16LE(value: long, offset?: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -2545,7 +2659,9 @@ writeUInt32BE(value: number, offset?: number): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-writeUInt32BE(value: long, offset?: int): int--><!--Device-Buffer-writeUInt32BE(value: long, offset?: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -2589,7 +2705,9 @@ writeUInt32LE(value: number, offset?: number): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-writeUInt32LE(value: long, offset?: int): int--><!--Device-Buffer-writeUInt32LE(value: long, offset?: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -2633,7 +2751,9 @@ writeUInt8(value: number, offset?: number): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-writeUInt8(value: long, offset?: int): int--><!--Device-Buffer-writeUInt8(value: long, offset?: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -2686,7 +2806,9 @@ writeUIntBE(value: number, offset: number, byteLength: number): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-writeUIntBE(value: long, offset: int, byteLength: int): int--><!--Device-Buffer-writeUIntBE(value: long, offset: int, byteLength: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -2731,7 +2853,9 @@ writeUIntLE(value: number, offset: number, byteLength: number): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-writeUIntLE(value: long, offset: int, byteLength: int): int--><!--Device-Buffer-writeUIntLE(value: long, offset: int, byteLength: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -2780,6 +2904,8 @@ ArrayBuffer对象。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Buffer-buffer: ArrayBuffer--><!--Device-Buffer-buffer: ArrayBuffer-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **错误码：**
@@ -2802,6 +2928,8 @@ byteOffset: number
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Buffer-byteOffset: number--><!--Device-Buffer-byteOffset: number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **错误码：**
@@ -2823,6 +2951,8 @@ Buffer对象的字节长度。
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Buffer-length: number--><!--Device-Buffer-length: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

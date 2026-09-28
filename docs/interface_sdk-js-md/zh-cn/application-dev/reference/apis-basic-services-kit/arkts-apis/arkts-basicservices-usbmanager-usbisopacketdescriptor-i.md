@@ -8,6 +8,8 @@ interface UsbIsoPacketDescriptor
 
 **起始版本：** 18
 
+<!--Device-usbManager-interface UsbIsoPacketDescriptor--><!--Device-usbManager-interface UsbIsoPacketDescriptor-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## 导入模块
@@ -28,6 +30,8 @@ actualLength: number
 
 **起始版本：** 18
 
+<!--Device-UsbIsoPacketDescriptor-actualLength: int--><!--Device-UsbIsoPacketDescriptor-actualLength: int-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## length
@@ -42,6 +46,8 @@ length: number
 
 **起始版本：** 18
 
+<!--Device-UsbIsoPacketDescriptor-length: int--><!--Device-UsbIsoPacketDescriptor-length: int-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## status
@@ -55,5 +61,7 @@ status: UsbTransferStatus
 **类型：** [UsbTransferStatus](arkts-basicservices-usbmanager-usbtransferstatus-e.md)
 
 **起始版本：** 18
+
+<!--Device-UsbIsoPacketDescriptor-status: UsbTransferStatus--><!--Device-UsbIsoPacketDescriptor-status: UsbTransferStatus-End-->
 
 **系统能力：** SystemCapability.USB.USBManager

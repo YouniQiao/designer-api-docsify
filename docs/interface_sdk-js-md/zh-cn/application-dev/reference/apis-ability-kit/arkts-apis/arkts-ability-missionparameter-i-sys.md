@@ -8,6 +8,8 @@ export interface MissionParameter
 
 **起始版本：** 9
 
+<!--Device-unnamed-export interface MissionParameter--><!--Device-unnamed-export interface MissionParameter-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -27,6 +29,8 @@ deviceId: string
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MissionParameter-deviceId: string--><!--Device-MissionParameter-deviceId: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -48,6 +52,8 @@ fixConflict: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MissionParameter-fixConflict: boolean--><!--Device-MissionParameter-fixConflict: boolean-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -67,6 +73,8 @@ tag: number
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MissionParameter-tag: int--><!--Device-MissionParameter-tag: int-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 

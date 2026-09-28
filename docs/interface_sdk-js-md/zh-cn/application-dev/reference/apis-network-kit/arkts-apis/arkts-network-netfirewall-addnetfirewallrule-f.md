@@ -68,6 +68,8 @@ function addNetFirewallRule(rule: NetFirewallRule): Promise<number>
 
 **需要权限：** ohos.permission.MANAGE_NET_FIREWALL
 
+<!--Device-netFirewall-function addNetFirewallRule(rule: NetFirewallRule): Promise<int>--><!--Device-netFirewall-function addNetFirewallRule(rule: NetFirewallRule): Promise<int>-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 **参数：**

@@ -16,6 +16,8 @@ function setPointerVisibleSync(visible: boolean): void
 
 **起始版本：** 10
 
+<!--Device-pointer-function setPointerVisibleSync(visible: boolean): void--><!--Device-pointer-function setPointerVisibleSync(visible: boolean): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 **参数：**

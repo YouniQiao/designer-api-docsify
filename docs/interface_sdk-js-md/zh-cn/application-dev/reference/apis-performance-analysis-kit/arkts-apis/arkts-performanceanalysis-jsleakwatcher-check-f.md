@@ -16,6 +16,8 @@ function check(): string
 
 **起始版本：** 12
 
+<!--Device-jsLeakWatcher-function check(): string--><!--Device-jsLeakWatcher-function check(): string-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
 **返回值：**

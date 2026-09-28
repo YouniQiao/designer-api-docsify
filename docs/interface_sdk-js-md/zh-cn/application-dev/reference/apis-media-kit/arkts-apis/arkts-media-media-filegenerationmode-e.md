@@ -8,6 +8,8 @@ enum FileGenerationMode
 
 **起始版本：** 12
 
+<!--Device-media-enum FileGenerationMode--><!--Device-media-enum FileGenerationMode-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 ## APP_CREATE
@@ -20,6 +22,8 @@ APP_CREATE = 0
 
 **起始版本：** 12
 
+<!--Device-FileGenerationMode-APP_CREATE = 0--><!--Device-FileGenerationMode-APP_CREATE = 0-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 ## AUTO_CREATE_CAMERA_SCENE
@@ -31,5 +35,7 @@ AUTO_CREATE_CAMERA_SCENE = 1
 由系统创建媒体文件，会忽略应用设置的url。
 
 **起始版本：** 12
+
+<!--Device-FileGenerationMode-AUTO_CREATE_CAMERA_SCENE = 1--><!--Device-FileGenerationMode-AUTO_CREATE_CAMERA_SCENE = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder

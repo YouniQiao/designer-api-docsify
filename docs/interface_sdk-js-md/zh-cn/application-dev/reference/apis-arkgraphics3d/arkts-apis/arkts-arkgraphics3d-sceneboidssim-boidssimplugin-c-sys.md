@@ -8,6 +8,8 @@ export declare class BoidsSimPlugin
 
 **起始版本：** 26.0.0
 
+<!--Device-unnamed-export declare class BoidsSimPlugin--><!--Device-unnamed-export declare class BoidsSimPlugin-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **系统接口：** 此接口为系统接口。
@@ -23,6 +25,8 @@ static getDefaultBoidsSimWorld(scene: Scene): BoidsSimWorld | null
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BoidsSimPlugin-static getDefaultBoidsSimWorld(scene: Scene): BoidsSimWorld | null--><!--Device-BoidsSimPlugin-static getDefaultBoidsSimWorld(scene: Scene): BoidsSimWorld | null-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 

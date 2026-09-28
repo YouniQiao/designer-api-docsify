@@ -18,6 +18,8 @@ function getP2pLinkedInfo(): Promise<WifiP2pLinkedInfo>
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
+<!--Device-wifiManager-function getP2pLinkedInfo(): Promise<WifiP2pLinkedInfo>--><!--Device-wifiManager-function getP2pLinkedInfo(): Promise<WifiP2pLinkedInfo>-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
 **返回值：**
@@ -66,6 +68,8 @@ function getP2pLinkedInfo(callback: AsyncCallback<WifiP2pLinkedInfo>): void
 **起始版本：** 9
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
+
+<!--Device-wifiManager-function getP2pLinkedInfo(callback: AsyncCallback<WifiP2pLinkedInfo>): void--><!--Device-wifiManager-function getP2pLinkedInfo(callback: AsyncCallback<WifiP2pLinkedInfo>): void-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 

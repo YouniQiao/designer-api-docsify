@@ -18,6 +18,8 @@ function refreshActivity(reason: string): void
 
 **需要权限：** ohos.permission.REFRESH_USER_ACTION
 
+<!--Device-power-function refreshActivity(reason: string): void--><!--Device-power-function refreshActivity(reason: string): void-End-->
+
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 
 **系统接口：** 此接口为系统接口。

@@ -8,6 +8,8 @@ export interface BaseProfile
 
 **起始版本：** 10
 
+<!--Device-baseProfile-export interface BaseProfile--><!--Device-baseProfile-export interface BaseProfile-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -29,6 +31,8 @@ getConnectionStrategy(deviceId: string, callback: AsyncCallback<ConnectionStrate
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BaseProfile-getConnectionStrategy(deviceId: string, callback: AsyncCallback<ConnectionStrategy>): void--><!--Device-BaseProfile-getConnectionStrategy(deviceId: string, callback: AsyncCallback<ConnectionStrategy>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -69,6 +73,8 @@ getConnectionStrategy(deviceId: string): Promise<ConnectionStrategy>
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BaseProfile-getConnectionStrategy(deviceId: string): Promise<ConnectionStrategy>--><!--Device-BaseProfile-getConnectionStrategy(deviceId: string): Promise<ConnectionStrategy>-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -112,6 +118,8 @@ setConnectionStrategy(deviceId: string, strategy: ConnectionStrategy): Promise<v
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BaseProfile-setConnectionStrategy(deviceId: string, strategy: ConnectionStrategy): Promise<void>--><!--Device-BaseProfile-setConnectionStrategy(deviceId: string, strategy: ConnectionStrategy): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -158,6 +166,8 @@ setConnectionStrategy(deviceId: string, strategy: ConnectionStrategy, callback: 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BaseProfile-setConnectionStrategy(deviceId: string, strategy: ConnectionStrategy, callback: AsyncCallback<void>): void--><!--Device-BaseProfile-setConnectionStrategy(deviceId: string, strategy: ConnectionStrategy, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

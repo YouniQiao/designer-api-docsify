@@ -10,6 +10,8 @@ interface VideoOutput extends CameraOutput
 
 **起始版本：** 10
 
+<!--Device-camera-interface VideoOutput extends CameraOutput--><!--Device-camera-interface VideoOutput extends CameraOutput-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
@@ -31,7 +33,9 @@ enableMirror(enabled: boolean): void
 
 **起始版本：** 15
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-VideoOutput-enableMirror(enabled: boolean): void--><!--Device-VideoOutput-enableMirror(enabled: boolean): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -78,7 +82,9 @@ getActiveFrameRate(): FrameRateRange
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-VideoOutput-getActiveFrameRate(): FrameRateRange--><!--Device-VideoOutput-getActiveFrameRate(): FrameRateRange-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -107,7 +113,9 @@ getActiveProfile(): VideoProfile
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-VideoOutput-getActiveProfile(): VideoProfile--><!--Device-VideoOutput-getActiveProfile(): VideoProfile-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -151,7 +159,9 @@ getSupportedFrameRates(): Array<FrameRateRange>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-VideoOutput-getSupportedFrameRates(): Array<FrameRateRange>--><!--Device-VideoOutput-getSupportedFrameRates(): Array<FrameRateRange>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -185,7 +195,9 @@ getVideoRotation(deviceDegree?: number): ImageRotation
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-VideoOutput-getVideoRotation(deviceDegree?: int): ImageRotation--><!--Device-VideoOutput-getVideoRotation(deviceDegree?: int): ImageRotation-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -282,7 +294,9 @@ isMirrorSupported(): boolean
 
 **起始版本：** 15
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-VideoOutput-isMirrorSupported(): boolean--><!--Device-VideoOutput-isMirrorSupported(): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -323,6 +337,8 @@ off(type: 'frameStart', callback?: AsyncCallback<void>): void
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
+<!--Device-VideoOutput-off(type: 'frameStart', callback?: AsyncCallback<void>): void--><!--Device-VideoOutput-off(type: 'frameStart', callback?: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **参数：**
@@ -352,6 +368,8 @@ off(type: 'frameEnd', callback?: AsyncCallback<void>): void
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
+<!--Device-VideoOutput-off(type: 'frameEnd', callback?: AsyncCallback<void>): void--><!--Device-VideoOutput-off(type: 'frameEnd', callback?: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **参数：**
@@ -380,6 +398,8 @@ off(type: 'error', callback?: ErrorCallback): void
 **起始版本：** 10
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-VideoOutput-off(type: 'error', callback?: ErrorCallback): void--><!--Device-VideoOutput-off(type: 'error', callback?: ErrorCallback): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -413,6 +433,8 @@ on(type: 'frameStart', callback: AsyncCallback<void>): void
 **起始版本：** 10
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-VideoOutput-on(type: 'frameStart', callback: AsyncCallback<void>): void--><!--Device-VideoOutput-on(type: 'frameStart', callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -452,6 +474,8 @@ on(type: 'frameEnd', callback: AsyncCallback<void>): void
 **起始版本：** 10
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-VideoOutput-on(type: 'frameEnd', callback: AsyncCallback<void>): void--><!--Device-VideoOutput-on(type: 'frameEnd', callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -496,6 +520,8 @@ on(type: 'error', callback: ErrorCallback): void
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
+<!--Device-VideoOutput-on(type: 'error', callback: ErrorCallback): void--><!--Device-VideoOutput-on(type: 'error', callback: ErrorCallback): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **参数：**
@@ -538,7 +564,9 @@ setFrameRate(minFps: number, maxFps: number): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-VideoOutput-setFrameRate(minFps: int, maxFps: int): void--><!--Device-VideoOutput-setFrameRate(minFps: int, maxFps: int): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -574,7 +602,9 @@ start(callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-VideoOutput-start(callback: AsyncCallback<void>): void--><!--Device-VideoOutput-start(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -619,7 +649,9 @@ start(): Promise<void>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-VideoOutput-start(): Promise<void>--><!--Device-VideoOutput-start(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -660,7 +692,9 @@ stop(callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-VideoOutput-stop(callback: AsyncCallback<void>): void--><!--Device-VideoOutput-stop(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -692,7 +726,9 @@ stop(): Promise<void>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-VideoOutput-stop(): Promise<void>--><!--Device-VideoOutput-stop(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

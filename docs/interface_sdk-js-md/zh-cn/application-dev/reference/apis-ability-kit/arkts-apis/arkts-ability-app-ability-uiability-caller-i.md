@@ -8,6 +8,8 @@ export interface Caller
 
 **起始版本：** 9
 
+<!--Device-unnamed-export interface Caller--><!--Device-unnamed-export interface Caller-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 ## 导入模块
@@ -27,6 +29,8 @@ Caller UIAbility向Callee UIAbility发送双方约定好的序列化的数据。
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Caller-call(method: string, data: rpc.Parcelable): Promise<void>--><!--Device-Caller-call(method: string, data: rpc.Parcelable): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -122,6 +126,8 @@ Caller UIAbility向Callee UIAbility发送消息，Callee UIAbility处理完成�
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Caller-callWithResult(method: string, data: rpc.Parcelable): Promise<rpc.MessageSequence>--><!--Device-Caller-callWithResult(method: string, data: rpc.Parcelable): Promise<rpc.MessageSequence>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -221,6 +227,8 @@ off(type: 'release', callback: OnReleaseCallback): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Caller-off(type: 'release', callback: OnReleaseCallback): void--><!--Device-Caller-off(type: 'release', callback: OnReleaseCallback): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **参数：**
@@ -279,6 +287,8 @@ off(type: 'release'): void
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Caller-off(type: 'release'): void--><!--Device-Caller-off(type: 'release'): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -339,6 +349,8 @@ Caller UIAbility可使用该接口注册与Callee UIAbility连接断开通知的
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Caller-on(type: 'release', callback: OnReleaseCallback): void--><!--Device-Caller-on(type: 'release', callback: OnReleaseCallback): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **参数：**
@@ -398,6 +410,8 @@ Caller UIAbility可使用该接口注册与Callee UIAbility连接断开通知的
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Caller-onRelease(callback: OnReleaseCallback): void--><!--Device-Caller-onRelease(callback: OnReleaseCallback): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **参数：**
@@ -454,6 +468,8 @@ onRemoteStateChange(callback: OnRemoteStateChangeCallback): void
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Caller-onRemoteStateChange(callback: OnRemoteStateChangeCallback): void--><!--Device-Caller-onRemoteStateChange(callback: OnRemoteStateChangeCallback): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -514,6 +530,8 @@ Caller主动释放与Callee UIAbility的连接。调用该接口后，Caller不�
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Caller-release(): void--><!--Device-Caller-release(): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 

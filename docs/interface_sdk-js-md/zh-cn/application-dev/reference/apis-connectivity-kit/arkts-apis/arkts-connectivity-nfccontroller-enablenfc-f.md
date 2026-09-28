@@ -18,6 +18,8 @@ function enableNfc(): void
 
 **需要权限：** ohos.permission.MANAGE_SECURE_SETTINGS
 
+<!--Device-nfcController-function enableNfc(): void--><!--Device-nfcController-function enableNfc(): void-End-->
+
 **系统能力：** SystemCapability.Communication.NFC.Core
 
 **错误码：**

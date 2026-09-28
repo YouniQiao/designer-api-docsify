@@ -13,6 +13,8 @@ enum ErrorType
 
 **起始版本：** 12
 
+<!--Device-cloudSync-enum ErrorType--><!--Device-cloudSync-enum ErrorType-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## NO_ERROR
@@ -24,6 +26,8 @@ NO_ERROR = 0
 没有错误。
 
 **起始版本：** 12
+
+<!--Device-ErrorType-NO_ERROR = 0--><!--Device-ErrorType-NO_ERROR = 0-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -37,6 +41,8 @@ NETWORK_UNAVAILABLE = 1
 
 **起始版本：** 12
 
+<!--Device-ErrorType-NETWORK_UNAVAILABLE = 1--><!--Device-ErrorType-NETWORK_UNAVAILABLE = 1-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## WIFI_UNAVAILABLE
@@ -48,6 +54,8 @@ WIFI_UNAVAILABLE = 2
 WIFI不可用。
 
 **起始版本：** 12
+
+<!--Device-ErrorType-WIFI_UNAVAILABLE = 2--><!--Device-ErrorType-WIFI_UNAVAILABLE = 2-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -61,6 +69,8 @@ BATTERY_LEVEL_LOW = 3
 
 **起始版本：** 12
 
+<!--Device-ErrorType-BATTERY_LEVEL_LOW = 3--><!--Device-ErrorType-BATTERY_LEVEL_LOW = 3-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## BATTERY_LEVEL_WARNING
@@ -72,6 +82,8 @@ BATTERY_LEVEL_WARNING = 4
 告警电量（低于15%）。
 
 **起始版本：** 12
+
+<!--Device-ErrorType-BATTERY_LEVEL_WARNING = 4--><!--Device-ErrorType-BATTERY_LEVEL_WARNING = 4-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -85,6 +97,8 @@ CLOUD_STORAGE_FULL = 5
 
 **起始版本：** 12
 
+<!--Device-ErrorType-CLOUD_STORAGE_FULL = 5--><!--Device-ErrorType-CLOUD_STORAGE_FULL = 5-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## LOCAL_STORAGE_FULL
@@ -96,6 +110,8 @@ LOCAL_STORAGE_FULL = 6
 本地空间不足。
 
 **起始版本：** 12
+
+<!--Device-ErrorType-LOCAL_STORAGE_FULL = 6--><!--Device-ErrorType-LOCAL_STORAGE_FULL = 6-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -109,6 +125,8 @@ DEVICE_TEMPERATURE_TOO_HIGH = 7
 
 **起始版本：** 12
 
+<!--Device-ErrorType-DEVICE_TEMPERATURE_TOO_HIGH = 7--><!--Device-ErrorType-DEVICE_TEMPERATURE_TOO_HIGH = 7-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## REMOTE_SERVER_ABNORMAL
@@ -120,5 +138,7 @@ REMOTE_SERVER_ABNORMAL = 8
 远端服务不可用。
 
 **起始版本：** 20
+
+<!--Device-ErrorType-REMOTE_SERVER_ABNORMAL = 8--><!--Device-ErrorType-REMOTE_SERVER_ABNORMAL = 8-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core

@@ -8,6 +8,8 @@ interface FormStateInfo
 
 **起始版本：** 9
 
+<!--Device-formInfo-interface FormStateInfo--><!--Device-formInfo-interface FormStateInfo-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 ## 导入模块
@@ -28,7 +30,9 @@ formState: FormState
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-FormStateInfo-formState: FormState--><!--Device-FormStateInfo-formState: FormState-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -44,6 +48,8 @@ Want对象，用于承载卡片状态切换时的意图信息。
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-FormStateInfo-want: Want--><!--Device-FormStateInfo-want: Want-End-->
 
 **系统能力：** SystemCapability.Ability.Form

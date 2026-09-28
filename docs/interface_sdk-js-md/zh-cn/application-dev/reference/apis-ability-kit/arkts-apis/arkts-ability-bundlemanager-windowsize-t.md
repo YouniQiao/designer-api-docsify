@@ -10,6 +10,8 @@ export type WindowSize = _AbilityInfo.WindowSize
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-bundleManager-export type WindowSize = _AbilityInfo.WindowSize--><!--Device-bundleManager-export type WindowSize = _AbilityInfo.WindowSize-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **类型：** [_AbilityInfo.WindowSize](arkts-ability-abilityinfo-windowsize-i.md)

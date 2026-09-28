@@ -16,6 +16,8 @@ function checkPersistentPermission(policies: Array<PolicyInfo>): Promise<Array<b
 
 **起始版本：** 17
 
+<!--Device-fileShare-function checkPersistentPermission(policies: Array<PolicyInfo>): Promise<Array<boolean>>--><!--Device-fileShare-function checkPersistentPermission(policies: Array<PolicyInfo>): Promise<Array<boolean>>-End-->
+
 **系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
 **参数：**

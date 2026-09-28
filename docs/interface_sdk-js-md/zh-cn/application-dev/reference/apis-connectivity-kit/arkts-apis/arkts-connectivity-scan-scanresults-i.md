@@ -8,6 +8,8 @@ interface ScanResults
 
 **起始版本：** 26.0.0
 
+<!--Device-scan-interface ScanResults--><!--Device-scan-interface ScanResults-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## 导入模块
@@ -30,6 +32,8 @@ address: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ScanResults-address: string--><!--Device-ScanResults-address: string-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## data
@@ -45,6 +49,8 @@ data: ArrayBuffer
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ScanResults-data: ArrayBuffer--><!--Device-ScanResults-data: ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -62,6 +68,8 @@ deviceClass?: nearlinkConstant.DeviceClass
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ScanResults-deviceClass?: nearlinkConstant.DeviceClass--><!--Device-ScanResults-deviceClass?: nearlinkConstant.DeviceClass-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## deviceName
@@ -77,6 +85,8 @@ deviceName: string
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ScanResults-deviceName: string--><!--Device-ScanResults-deviceName: string-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -94,6 +104,8 @@ isConnectable: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ScanResults-isConnectable: boolean--><!--Device-ScanResults-isConnectable: boolean-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## rssi
@@ -109,5 +121,7 @@ rssi: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ScanResults-rssi: int--><!--Device-ScanResults-rssi: int-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base

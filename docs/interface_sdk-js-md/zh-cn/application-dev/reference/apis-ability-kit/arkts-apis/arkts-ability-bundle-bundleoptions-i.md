@@ -15,6 +15,8 @@ export interface BundleOptions
 
 **废弃版本：** 9
 
+<!--Device-bundle-export interface BundleOptions--><!--Device-bundle-export interface BundleOptions-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## 导入模块
@@ -36,5 +38,7 @@ userId?: number
 **起始版本：** 7
 
 **废弃版本：** 9
+
+<!--Device-BundleOptions-userId?: number--><!--Device-BundleOptions-userId?: number-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework

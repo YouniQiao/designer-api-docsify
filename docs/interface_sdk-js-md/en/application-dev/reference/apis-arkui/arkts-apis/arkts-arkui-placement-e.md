@@ -8,6 +8,8 @@ Sets the position of the bubble.
 
 **Since:** 8
 
+<!--Device-unnamed-declare enum Placement--><!--Device-unnamed-declare enum Placement-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Left
@@ -23,6 +25,8 @@ The bubble is on the left of the component, aligned with the left center of the 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Placement-Left--><!--Device-Placement-Left-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,6 +44,8 @@ The bubble is on the right of the component, aligned with the right center of th
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Placement-Right--><!--Device-Placement-Right-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Top
@@ -55,6 +61,8 @@ The bubble is on the top of the component, aligned with the top center of the co
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Placement-Top--><!--Device-Placement-Top-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,6 +80,8 @@ The bubble is on the bottom of the component, aligned with the bottom center of 
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Placement-Bottom--><!--Device-Placement-Bottom-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## TopLeft
@@ -87,6 +97,8 @@ The bubble is on the top of the component. Since API version 9, it is aligned wi
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Placement-TopLeft--><!--Device-Placement-TopLeft-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -104,6 +116,8 @@ The bubble is on the top of the component. Since API version 9, it is aligned wi
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Placement-TopRight--><!--Device-Placement-TopRight-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## BottomLeft
@@ -119,6 +133,8 @@ The bubble is on the bottom of the component. Since API version 9, it is aligned
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Placement-BottomLeft--><!--Device-Placement-BottomLeft-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -136,6 +152,8 @@ The bubble is on the bottom of the component. Since API version 9, it is aligned
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Placement-BottomRight--><!--Device-Placement-BottomRight-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## LeftTop
@@ -151,6 +169,8 @@ The bubble is on the left of the component, aligned with the top edge of the com
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Placement-LeftTop--><!--Device-Placement-LeftTop-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -168,6 +188,8 @@ The bubble is on the left of the component, aligned with the bottom edge of the 
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Placement-LeftBottom--><!--Device-Placement-LeftBottom-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## RightTop
@@ -184,6 +206,8 @@ The bubble is on the right of the component, aligned with the top edge of the co
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Placement-RightTop--><!--Device-Placement-RightTop-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## RightBottom
@@ -199,5 +223,7 @@ The bubble is on the right of the component, aligned with the bottom edge of the
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Placement-RightBottom--><!--Device-Placement-RightBottom-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

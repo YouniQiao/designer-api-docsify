@@ -24,6 +24,8 @@ Call this method to clean up a session when the command process is no longer nee
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-cliManager-function clearSession(sessionId: string): Promise<void>--><!--Device-cliManager-function clearSession(sessionId: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **Parameters:**

@@ -8,6 +8,8 @@ export class StyledDateTimeFormat
 
 **起始版本：** 23
 
+<!--Device-i18n-export class StyledDateTimeFormat--><!--Device-i18n-export class StyledDateTimeFormat-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## 导入模块
@@ -27,7 +29,9 @@ constructor(dateTimeFormat: Intl.DateTimeFormat | SimpleDateTimeFormat,
 
 **起始版本：** 23
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-StyledDateTimeFormat-constructor(dateTimeFormat: Intl.DateTimeFormat | SimpleDateTimeFormat,        options?: StyledDateTimeFormatOptions)--><!--Device-StyledDateTimeFormat-constructor(dateTimeFormat: Intl.DateTimeFormat | SimpleDateTimeFormat,        options?: StyledDateTimeFormatOptions)-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -85,7 +89,9 @@ format(date: Date): StyledString
 
 **起始版本：** 23
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-StyledDateTimeFormat-format(date: Date): StyledString--><!--Device-StyledDateTimeFormat-format(date: Date): StyledString-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 

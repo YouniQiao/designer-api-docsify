@@ -12,6 +12,8 @@ Defines the mouse hover callback type for the **CounterV2** component.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-unnamed-export type OnCounterV2HoverCallback = (isHover: boolean) => void--><!--Device-unnamed-export type OnCounterV2HoverCallback = (isHover: boolean) => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

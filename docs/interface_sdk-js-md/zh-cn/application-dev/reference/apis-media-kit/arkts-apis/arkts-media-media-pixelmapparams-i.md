@@ -8,6 +8,8 @@ interface PixelMapParams
 
 **起始版本：** 12
 
+<!--Device-media-interface PixelMapParams--><!--Device-media-interface PixelMapParams-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVImageGenerator
 
 ## 导入模块
@@ -28,6 +30,8 @@ height?: number
 
 **起始版本：** 12
 
+<!--Device-PixelMapParams-height?: int--><!--Device-PixelMapParams-height?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVImageGenerator
 
 ## width
@@ -41,5 +45,7 @@ width?: number
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-PixelMapParams-width?: int--><!--Device-PixelMapParams-width?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVImageGenerator

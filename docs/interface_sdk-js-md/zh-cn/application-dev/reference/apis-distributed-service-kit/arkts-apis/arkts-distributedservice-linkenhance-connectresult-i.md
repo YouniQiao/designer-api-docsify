@@ -8,6 +8,8 @@ interface ConnectResult
 
 **起始版本：** 20
 
+<!--Device-linkEnhance-interface ConnectResult--><!--Device-linkEnhance-interface ConnectResult-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 ## 导入模块
@@ -29,6 +31,8 @@ deviceId: string
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ConnectResult-deviceId: string--><!--Device-ConnectResult-deviceId: string-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
@@ -52,6 +56,8 @@ reason: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ConnectResult-reason: int--><!--Device-ConnectResult-reason: int-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 ## success
@@ -67,5 +73,7 @@ success: boolean
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ConnectResult-success: boolean--><!--Device-ConnectResult-success: boolean-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration

@@ -30,6 +30,8 @@ through context without importing any module. For details about the context, see
 
 **Since:** 6
 
+<!--Device-unnamed-declare namespace resourceManager--><!--Device-unnamed-declare namespace resourceManager-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 ## Modules to Import

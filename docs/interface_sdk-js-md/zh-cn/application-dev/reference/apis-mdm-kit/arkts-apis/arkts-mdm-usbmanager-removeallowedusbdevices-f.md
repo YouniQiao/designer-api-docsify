@@ -26,6 +26,8 @@ function removeAllowedUsbDevices(admin: Want, usbDeviceIds: Array<UsbDeviceId>):
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-usbManager-function removeAllowedUsbDevices(admin: Want, usbDeviceIds: Array<UsbDeviceId>): void--><!--Device-usbManager-function removeAllowedUsbDevices(admin: Want, usbDeviceIds: Array<UsbDeviceId>): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**

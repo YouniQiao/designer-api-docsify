@@ -8,6 +8,8 @@ Defines the selection result of the date and time picker, including the year, mo
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export declare class DatePickerComponentResult--><!--Device-unnamed-export declare class DatePickerComponentResult-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -32,6 +34,8 @@ Day of the selected date.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-DatePickerComponentResult-day?: int--><!--Device-DatePickerComponentResult-day?: int-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## hour
@@ -49,6 +53,8 @@ Hour of the selected time.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-DatePickerComponentResult-hour?: int--><!--Device-DatePickerComponentResult-hour?: int-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -68,6 +74,8 @@ Minute of the selected time.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-DatePickerComponentResult-minute?: int--><!--Device-DatePickerComponentResult-minute?: int-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## month
@@ -85,6 +93,8 @@ Month index of the selected date, starting from 0. The value **0** indicates Jan
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-DatePickerComponentResult-month?: int--><!--Device-DatePickerComponentResult-month?: int-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -104,6 +114,8 @@ Second of the selected time.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-DatePickerComponentResult-second?: int--><!--Device-DatePickerComponentResult-second?: int-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## year
@@ -121,5 +133,7 @@ Year of the selected date.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-DatePickerComponentResult-year?: int--><!--Device-DatePickerComponentResult-year?: int-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

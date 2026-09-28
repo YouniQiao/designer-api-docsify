@@ -16,6 +16,8 @@ interface PanProfile extends BaseProfile
 
 **替代接口：** [PanProfile](arkts-connectivity-pan-panprofile-i.md)
 
+<!--Device-bluetoothManager-interface PanProfile extends BaseProfile--><!--Device-bluetoothManager-interface PanProfile extends BaseProfile-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -39,6 +41,8 @@ disconnect(device: string): void
 **需要权限：** 
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH
 - API版本9：ohos.permission.USE_BLUETOOTH
+
+<!--Device-PanProfile-disconnect(device: string): void--><!--Device-PanProfile-disconnect(device: string): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -79,6 +83,8 @@ isTetheringOn(): boolean
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH
 - API版本9：N/A
 
+<!--Device-PanProfile-isTetheringOn(): boolean--><!--Device-PanProfile-isTetheringOn(): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -111,6 +117,8 @@ setTethering(enable: boolean): void
 **需要权限：** 
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 - API版本9：ohos.permission.DISCOVER_BLUETOOTH
+
+<!--Device-PanProfile-setTethering(enable: boolean): void--><!--Device-PanProfile-setTethering(enable: boolean): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

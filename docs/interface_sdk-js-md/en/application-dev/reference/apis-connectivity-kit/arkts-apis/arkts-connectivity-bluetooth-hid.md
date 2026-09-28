@@ -4,6 +4,8 @@ Provides methods to accessing bluetooth HID(Human Interface Device)-related capa
 
 **Since:** 10
 
+<!--Device-unnamed-declare namespace hid--><!--Device-unnamed-declare namespace hid-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import

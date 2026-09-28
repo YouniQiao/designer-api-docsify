@@ -27,6 +27,8 @@ declare function read(
 
 **替代接口：** [read](arkts-corefile-file-fs-read-f.md)
 
+<!--Device-unnamed-declare function read(  fd: number,  buffer: ArrayBuffer,  options?: {    offset?: number;    length?: number;    position?: number;  }): Promise<ReadOut>--><!--Device-unnamed-declare function read(  fd: number,  buffer: ArrayBuffer,  options?: {    offset?: number;    length?: number;    position?: number;  }): Promise<ReadOut>-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -59,6 +61,8 @@ declare function read(fd: number, buffer: ArrayBuffer, callback: AsyncCallback<R
 **废弃版本：** 9
 
 **替代接口：** [read](arkts-corefile-file-fs-read-f.md)
+
+<!--Device-unnamed-declare function read(fd: number, buffer: ArrayBuffer, callback: AsyncCallback<ReadOut>): void--><!--Device-unnamed-declare function read(fd: number, buffer: ArrayBuffer, callback: AsyncCallback<ReadOut>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -95,6 +99,8 @@ declare function read(
 **废弃版本：** 9
 
 **替代接口：** [read](arkts-corefile-file-fs-read-f.md)
+
+<!--Device-unnamed-declare function read(  fd: number,  buffer: ArrayBuffer,  options: {    offset?: number;    length?: number;    position?: number;  },  callback: AsyncCallback<ReadOut>): void--><!--Device-unnamed-declare function read(  fd: number,  buffer: ArrayBuffer,  options: {    offset?: number;    length?: number;    position?: number;  },  callback: AsyncCallback<ReadOut>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

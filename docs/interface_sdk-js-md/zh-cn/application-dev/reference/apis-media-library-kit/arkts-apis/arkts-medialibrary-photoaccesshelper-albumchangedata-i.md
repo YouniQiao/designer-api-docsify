@@ -8,6 +8,8 @@ interface AlbumChangeData
 
 **起始版本：** 20
 
+<!--Device-photoAccessHelper-interface AlbumChangeData--><!--Device-photoAccessHelper-interface AlbumChangeData-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ albumAfterChange: AlbumChangeInfo | null
 
 **起始版本：** 20
 
+<!--Device-AlbumChangeData-albumAfterChange: AlbumChangeInfo | null--><!--Device-AlbumChangeData-albumAfterChange: AlbumChangeInfo | null-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## albumBeforeChange
@@ -41,5 +45,7 @@ albumBeforeChange: AlbumChangeInfo | null
 **类型：** [AlbumChangeInfo](arkts-medialibrary-photoaccesshelper-albumchangeinfo-i.md) &#124; null
 
 **起始版本：** 20
+
+<!--Device-AlbumChangeData-albumBeforeChange: AlbumChangeInfo | null--><!--Device-AlbumChangeData-albumBeforeChange: AlbumChangeInfo | null-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core

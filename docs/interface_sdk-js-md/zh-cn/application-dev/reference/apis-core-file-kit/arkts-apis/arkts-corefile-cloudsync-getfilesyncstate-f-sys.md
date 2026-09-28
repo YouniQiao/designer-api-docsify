@@ -18,6 +18,8 @@ function getFileSyncState(uri: Array<string>): Promise<Array<FileSyncState>>
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC
 
+<!--Device-cloudSync-function getFileSyncState(uri: Array<string>): Promise<Array<FileSyncState>>--><!--Device-cloudSync-function getFileSyncState(uri: Array<string>): Promise<Array<FileSyncState>>-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **系统接口：** 此接口为系统接口。
@@ -75,6 +77,8 @@ function getFileSyncState(uri: Array<string>, callback: AsyncCallback<Array<File
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC
 
+<!--Device-cloudSync-function getFileSyncState(uri: Array<string>, callback: AsyncCallback<Array<FileSyncState>>): void--><!--Device-cloudSync-function getFileSyncState(uri: Array<string>, callback: AsyncCallback<Array<FileSyncState>>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **系统接口：** 此接口为系统接口。
@@ -126,6 +130,8 @@ function getFileSyncState(uri: string): FileSyncState
 获取文件同步状态。
 
 **起始版本：** 12
+
+<!--Device-cloudSync-function getFileSyncState(uri: string): FileSyncState--><!--Device-cloudSync-function getFileSyncState(uri: string): FileSyncState-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 

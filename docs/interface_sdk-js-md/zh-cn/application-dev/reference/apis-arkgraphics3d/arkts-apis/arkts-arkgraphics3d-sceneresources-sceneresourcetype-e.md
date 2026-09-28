@@ -10,6 +10,8 @@ export enum SceneResourceType
 
 **起始版本：** 12
 
+<!--Device-unnamed-export enum SceneResourceType--><!--Device-unnamed-export enum SceneResourceType-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## UNKNOWN
@@ -21,6 +23,8 @@ UNKNOWN = 0
 未定义类型。
 
 **起始版本：** 12
+
+<!--Device-SceneResourceType-UNKNOWN = 0--><!--Device-SceneResourceType-UNKNOWN = 0-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -34,6 +38,8 @@ NODE = 1
 
 **起始版本：** 12
 
+<!--Device-SceneResourceType-NODE = 1--><!--Device-SceneResourceType-NODE = 1-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## ENVIRONMENT
@@ -45,6 +51,8 @@ ENVIRONMENT = 2
 环境类型。
 
 **起始版本：** 12
+
+<!--Device-SceneResourceType-ENVIRONMENT = 2--><!--Device-SceneResourceType-ENVIRONMENT = 2-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -58,6 +66,8 @@ MATERIAL = 3
 
 **起始版本：** 12
 
+<!--Device-SceneResourceType-MATERIAL = 3--><!--Device-SceneResourceType-MATERIAL = 3-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## MESH
@@ -69,6 +79,8 @@ MESH = 4
 网格类型。
 
 **起始版本：** 12
+
+<!--Device-SceneResourceType-MESH = 4--><!--Device-SceneResourceType-MESH = 4-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -82,6 +94,8 @@ ANIMATION = 5
 
 **起始版本：** 12
 
+<!--Device-SceneResourceType-ANIMATION = 5--><!--Device-SceneResourceType-ANIMATION = 5-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## SHADER
@@ -93,6 +107,8 @@ SHADER = 6
 着色器类型。
 
 **起始版本：** 12
+
+<!--Device-SceneResourceType-SHADER = 6--><!--Device-SceneResourceType-SHADER = 6-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -106,6 +122,8 @@ IMAGE = 7
 
 **起始版本：** 12
 
+<!--Device-SceneResourceType-IMAGE = 7--><!--Device-SceneResourceType-IMAGE = 7-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## MESH_RESOURCE
@@ -118,6 +136,8 @@ MESH_RESOURCE = 8
 
 **起始版本：** 18
 
+<!--Device-SceneResourceType-MESH_RESOURCE = 8--><!--Device-SceneResourceType-MESH_RESOURCE = 8-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## EFFECT
@@ -129,5 +149,7 @@ EFFECT = 9
 后处理特效类型。
 
 **起始版本：** 21
+
+<!--Device-SceneResourceType-EFFECT = 9--><!--Device-SceneResourceType-EFFECT = 9-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

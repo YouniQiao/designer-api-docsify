@@ -8,6 +8,8 @@ interface CloudAssetDownloadProgressInfo
 
 **起始版本：** 21
 
+<!--Device-photoAccessHelper-interface CloudAssetDownloadProgressInfo--><!--Device-photoAccessHelper-interface CloudAssetDownloadProgressInfo-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ readonly autoPauseReason: number
 
 **起始版本：** 21
 
+<!--Device-CloudAssetDownloadProgressInfo-readonly autoPauseReason: int--><!--Device-CloudAssetDownloadProgressInfo-readonly autoPauseReason: int-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ readonly downloadEventType: CloudAssetDownloadNotifyType
 **类型：** [CloudAssetDownloadNotifyType](arkts-medialibrary-photoaccesshelper-cloudassetdownloadnotifytype-e-sys.md)
 
 **起始版本：** 21
+
+<!--Device-CloudAssetDownloadProgressInfo-readonly downloadEventType: CloudAssetDownloadNotifyType--><!--Device-CloudAssetDownloadProgressInfo-readonly downloadEventType: CloudAssetDownloadNotifyType-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -62,6 +68,8 @@ readonly fileId: number
 
 **起始版本：** 21
 
+<!--Device-CloudAssetDownloadProgressInfo-readonly fileId: int--><!--Device-CloudAssetDownloadProgressInfo-readonly fileId: int-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +85,8 @@ readonly percent: number
 **类型：** number
 
 **起始版本：** 21
+
+<!--Device-CloudAssetDownloadProgressInfo-readonly percent: int--><!--Device-CloudAssetDownloadProgressInfo-readonly percent: int-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

@@ -10,6 +10,8 @@ interface ColorSpaceManager
 
 **起始版本：** 9
 
+<!--Device-colorSpaceManager-interface ColorSpaceManager--><!--Device-colorSpaceManager-interface ColorSpaceManager-End-->
+
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
 ## 导入模块
@@ -27,6 +29,8 @@ getColorSpaceName(): ColorSpace
 获取色域类型。
 
 **起始版本：** 9
+
+<!--Device-ColorSpaceManager-getColorSpaceName(): ColorSpace--><!--Device-ColorSpaceManager-getColorSpaceName(): ColorSpace-End-->
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
@@ -64,6 +68,8 @@ getGamma(): number
 
 **起始版本：** 9
 
+<!--Device-ColorSpaceManager-getGamma(): double--><!--Device-ColorSpaceManager-getGamma(): double-End-->
+
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
 **返回值：**
@@ -99,6 +105,8 @@ getWhitePoint(): Array<number>
 获取色域白点值。
 
 **起始版本：** 9
+
+<!--Device-ColorSpaceManager-getWhitePoint(): Array<double>--><!--Device-ColorSpaceManager-getWhitePoint(): Array<double>-End-->
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 

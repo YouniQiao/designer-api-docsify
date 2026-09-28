@@ -16,6 +16,8 @@ function createAssetLoaderStub(instance: AssetLoader): Promise<rpc.RemoteObject>
 
 **起始版本：** 11
 
+<!--Device-cloudExtension-function createAssetLoaderStub(instance: AssetLoader): Promise<rpc.RemoteObject>--><!--Device-cloudExtension-function createAssetLoaderStub(instance: AssetLoader): Promise<rpc.RemoteObject>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。

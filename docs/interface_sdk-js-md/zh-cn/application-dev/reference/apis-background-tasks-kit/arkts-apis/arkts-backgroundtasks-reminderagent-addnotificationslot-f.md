@@ -20,6 +20,8 @@ function addNotificationSlot(slot: NotificationSlot, callback: AsyncCallback<voi
 
 **替代接口：** [addNotificationSlot](arkts-backgroundtasks-reminderagentmanager-addnotificationslot-f.md)
 
+<!--Device-reminderAgent-function addNotificationSlot(slot: NotificationSlot, callback: AsyncCallback<void>): void--><!--Device-reminderAgent-function addNotificationSlot(slot: NotificationSlot, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 **参数：**
@@ -61,6 +63,8 @@ function addNotificationSlot(slot: NotificationSlot): Promise<void>
 **废弃版本：** 9
 
 **替代接口：** [addNotificationSlot](arkts-backgroundtasks-reminderagentmanager-addnotificationslot-f.md)
+
+<!--Device-reminderAgent-function addNotificationSlot(slot: NotificationSlot): Promise<void>--><!--Device-reminderAgent-function addNotificationSlot(slot: NotificationSlot): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 

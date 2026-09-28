@@ -8,6 +8,8 @@ enum XmageColorMode
 
 **起始版本：** 23
 
+<!--Device-image-enum XmageColorMode--><!--Device-image-enum XmageColorMode-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## NORMAL
@@ -21,6 +23,8 @@ NORMAL = 0
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-XmageColorMode-NORMAL = 0--><!--Device-XmageColorMode-NORMAL = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -36,6 +40,8 @@ BRIGHT = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-XmageColorMode-BRIGHT = 1--><!--Device-XmageColorMode-BRIGHT = 1-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## SOFT
@@ -50,6 +56,8 @@ SOFT = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-XmageColorMode-SOFT = 2--><!--Device-XmageColorMode-SOFT = 2-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## MONO
@@ -63,5 +71,7 @@ MONO = 3
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-XmageColorMode-MONO = 3--><!--Device-XmageColorMode-MONO = 3-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core

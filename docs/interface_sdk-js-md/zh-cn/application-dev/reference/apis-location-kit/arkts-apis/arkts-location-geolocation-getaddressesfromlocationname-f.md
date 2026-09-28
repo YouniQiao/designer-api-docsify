@@ -22,6 +22,8 @@ function getAddressesFromLocationName(request: GeoCodeRequest, callback: AsyncCa
 
 **需要权限：** ohos.permission.LOCATION
 
+<!--Device-geolocation-function getAddressesFromLocationName(request: GeoCodeRequest, callback: AsyncCallback<Array<GeoAddress>>): void--><!--Device-geolocation-function getAddressesFromLocationName(request: GeoCodeRequest, callback: AsyncCallback<Array<GeoAddress>>): void-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 **参数：**
@@ -64,6 +66,8 @@ function getAddressesFromLocationName(request: GeoCodeRequest): Promise<Array<Ge
 **替代接口：** [getAddressesFromLocationName](arkts-location-geolocationmanager-getaddressesfromlocationname-f.md)
 
 **需要权限：** ohos.permission.LOCATION
+
+<!--Device-geolocation-function getAddressesFromLocationName(request: GeoCodeRequest): Promise<Array<GeoAddress>>--><!--Device-geolocation-function getAddressesFromLocationName(request: GeoCodeRequest): Promise<Array<GeoAddress>>-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geocoder
 

@@ -10,6 +10,8 @@ export default class Sensor
 
 **Substitutes:** [sensor/sensor](arkts-sensorservice-sensor.md)
 
+<!--Device-unnamed-export default class Sensor--><!--Device-unnamed-export default class Sensor-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 ## Modules to Import
@@ -43,6 +45,8 @@ After this API is called, the system returns the current wearing state through t
 **Substitutes:** [on](arkts-sensorservice-sensor-on-f.md#on-44)(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback: Callback&lt;WearDetectionResponse&gt;, options?: Options)
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-Sensor-static getOnBodyState(options: GetOnBodyStateOptions): void--><!--Device-Sensor-static getOnBodyState(options: GetOnBodyStateOptions): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
@@ -80,6 +84,8 @@ After this API is called, the system reports acceleration data at the specified 
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Sensor-static subscribeAccelerometer(options: subscribeAccelerometerOptions): void--><!--Device-Sensor-static subscribeAccelerometer(options: subscribeAccelerometerOptions): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 **Parameters:**
@@ -114,6 +120,8 @@ After this API is called, the system reports data when the barometric pressure c
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Sensor-static subscribeBarometer(options: SubscribeBarometerOptions): void--><!--Device-Sensor-static subscribeBarometer(options: SubscribeBarometerOptions): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 **Parameters:**
@@ -147,6 +155,8 @@ After this API is called, the system reports the device direction data when the 
 **Substitutes:** [ORIENTATION](arkts-sensorservice-sensor-sensorid-e.md#orientation)
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-Sensor-static subscribeCompass(options: SubscribeCompassOptions): void--><!--Device-Sensor-static subscribeCompass(options: SubscribeCompassOptions): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
@@ -184,6 +194,8 @@ If this API is called multiple times for the same app, the last call takes effec
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Sensor-static subscribeDeviceOrientation(options: SubscribeDeviceOrientationOptions): void--><!--Device-Sensor-static subscribeDeviceOrientation(options: SubscribeDeviceOrientationOptions): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 **Parameters:**
@@ -219,6 +231,8 @@ If this API is called multiple times for the same app, the last call takes effec
 **Required permissions:** ohos.permission.GYROSCOPE
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-Sensor-static subscribeGyroscope(options: SubscribeGyroscopeOptions): void--><!--Device-Sensor-static subscribeGyroscope(options: SubscribeGyroscopeOptions): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
@@ -256,6 +270,8 @@ After this API is called, the system reports heart rate data every 5 seconds. If
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Sensor-static subscribeHeartRate(options: SubscribeHeartRateOptions): void--><!--Device-Sensor-static subscribeHeartRate(options: SubscribeHeartRateOptions): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 **Parameters:**
@@ -292,6 +308,8 @@ If this API is called multiple times, the last call takes effect.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Sensor-static subscribeLight(options: SubscribeLightOptions): void--><!--Device-Sensor-static subscribeLight(options: SubscribeLightOptions): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 **Parameters:**
@@ -325,6 +343,8 @@ After this API is called, the system reports data when the wear status changes. 
 **Substitutes:** [on](arkts-sensorservice-sensor-on-f.md#on-44)(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback: Callback&lt;WearDetectionResponse&gt;, options?: Options)
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-Sensor-static subscribeOnBodyState(options: SubscribeOnBodyStateOptions): void--><!--Device-Sensor-static subscribeOnBodyState(options: SubscribeOnBodyStateOptions): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
@@ -363,6 +383,8 @@ After this API is called, the system reports data when the data of the proximity
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Sensor-static subscribeProximity(options: SubscribeProximityOptions): void--><!--Device-Sensor-static subscribeProximity(options: SubscribeProximityOptions): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 **Parameters:**
@@ -398,6 +420,8 @@ After this API is called, the system reports data when the step count data chang
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-Sensor-static subscribeStepCounter(options: SubscribeStepCounterOptions): void--><!--Device-Sensor-static subscribeStepCounter(options: SubscribeStepCounterOptions): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
@@ -435,6 +459,8 @@ After this method is called, the callback registered using **subscribeAccelerome
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Sensor-static unsubscribeAccelerometer(): void--><!--Device-Sensor-static unsubscribeAccelerometer(): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 ## unsubscribeBarometer
@@ -463,6 +489,8 @@ After this method is called, the callback function registered using **subscribeB
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Sensor-static unsubscribeBarometer(): void--><!--Device-Sensor-static unsubscribeBarometer(): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 ## unsubscribeCompass
@@ -490,6 +518,8 @@ After this method is called, the callback registered using **subscribeCompass** 
 **Substitutes:** [off](arkts-sensorservice-sensor-off-f.md#off-61)(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback?: Callback&lt;OrientationResponse&gt;)
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-Sensor-static unsubscribeCompass(): void--><!--Device-Sensor-static unsubscribeCompass(): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
@@ -521,6 +551,8 @@ After this method is called, the callback registered using **subscribeDeviceOrie
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Sensor-static unsubscribeDeviceOrientation(): void--><!--Device-Sensor-static unsubscribeDeviceOrientation(): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 ## unsubscribeGyroscope
@@ -550,6 +582,8 @@ After this method is called, the callback function registered using **subscribeG
 **Required permissions:** ohos.permission.GYROSCOPE
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-Sensor-static unsubscribeGyroscope(): void--><!--Device-Sensor-static unsubscribeGyroscope(): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
@@ -581,6 +615,8 @@ After this method is called, the callback function registered using **subscribeH
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Sensor-static unsubscribeHeartRate(): void--><!--Device-Sensor-static unsubscribeHeartRate(): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 ## unsubscribeLight
@@ -611,6 +647,8 @@ After this method is called, the callback registered using **subscribeLight** wi
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Sensor-static unsubscribeLight(): void--><!--Device-Sensor-static unsubscribeLight(): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 ## unsubscribeOnBodyState
@@ -638,6 +676,8 @@ After this method is called, the callback registered using **subscribeOnBodyStat
 **Substitutes:** [off](arkts-sensorservice-sensor-off-f.md#off-67)(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback?: Callback&lt;WearDetectionResponse&gt;)
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-Sensor-static unsubscribeOnBodyState(): void--><!--Device-Sensor-static unsubscribeOnBodyState(): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
@@ -669,6 +709,8 @@ After this method is called, the callback registered using **subscribeProximity*
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Sensor-static unsubscribeProximity(): void--><!--Device-Sensor-static unsubscribeProximity(): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 ## unsubscribeStepCounter
@@ -698,5 +740,7 @@ After this method is called, the callback registered using **subscribeStepCounte
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-Sensor-static unsubscribeStepCounter(): void--><!--Device-Sensor-static unsubscribeStepCounter(): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite

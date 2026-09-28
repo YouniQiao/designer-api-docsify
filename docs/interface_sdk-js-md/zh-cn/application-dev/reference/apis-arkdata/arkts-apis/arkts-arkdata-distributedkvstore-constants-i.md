@@ -8,6 +8,8 @@ interface Constants
 
 **起始版本：** 9
 
+<!--Device-distributedKVStore-interface Constants--><!--Device-distributedKVStore-interface Constants-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ readonly MAX_BATCH_SIZE: number
 
 **起始版本：** 9
 
+<!--Device-Constants-readonly MAX_BATCH_SIZE: number--><!--Device-Constants-readonly MAX_BATCH_SIZE: number-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## MAX_KEY_LENGTH
@@ -41,6 +45,8 @@ readonly MAX_KEY_LENGTH: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-Constants-readonly MAX_KEY_LENGTH: number--><!--Device-Constants-readonly MAX_KEY_LENGTH: number-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -56,6 +62,8 @@ readonly MAX_KEY_LENGTH_DEVICE: number
 
 **起始版本：** 9
 
+<!--Device-Constants-readonly MAX_KEY_LENGTH_DEVICE: number--><!--Device-Constants-readonly MAX_KEY_LENGTH_DEVICE: number-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## MAX_QUERY_LENGTH
@@ -69,6 +77,8 @@ readonly MAX_QUERY_LENGTH: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-Constants-readonly MAX_QUERY_LENGTH: number--><!--Device-Constants-readonly MAX_QUERY_LENGTH: number-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -84,6 +94,8 @@ readonly MAX_STORE_ID_LENGTH: number
 
 **起始版本：** 9
 
+<!--Device-Constants-readonly MAX_STORE_ID_LENGTH: number--><!--Device-Constants-readonly MAX_STORE_ID_LENGTH: number-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## MAX_VALUE_LENGTH
@@ -97,5 +109,7 @@ readonly MAX_VALUE_LENGTH: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-Constants-readonly MAX_VALUE_LENGTH: number--><!--Device-Constants-readonly MAX_VALUE_LENGTH: number-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core

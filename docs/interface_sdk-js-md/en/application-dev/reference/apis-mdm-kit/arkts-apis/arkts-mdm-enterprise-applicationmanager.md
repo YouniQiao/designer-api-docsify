@@ -11,6 +11,8 @@ This module provides application management capabilities, including managing the
 
 **Since:** 12
 
+<!--Device-unnamed-declare namespace applicationManager--><!--Device-unnamed-declare namespace applicationManager-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## Modules to Import

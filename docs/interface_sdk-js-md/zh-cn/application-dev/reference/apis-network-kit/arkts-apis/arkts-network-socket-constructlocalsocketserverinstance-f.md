@@ -16,6 +16,8 @@ function constructLocalSocketServerInstance(): LocalSocketServer
 
 **起始版本：** 11
 
+<!--Device-socket-function constructLocalSocketServerInstance(): LocalSocketServer--><!--Device-socket-function constructLocalSocketServerInstance(): LocalSocketServer-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**

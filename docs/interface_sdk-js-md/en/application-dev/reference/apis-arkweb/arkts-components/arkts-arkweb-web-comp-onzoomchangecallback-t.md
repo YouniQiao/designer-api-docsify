@@ -10,6 +10,8 @@ Called when the browser zoom factor of the page changes.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-unnamed-type OnZoomChangeCallback = (zoomChangeInfo: OnZoomChangeEvent) => void--><!--Device-unnamed-type OnZoomChangeCallback = (zoomChangeInfo: OnZoomChangeEvent) => void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**

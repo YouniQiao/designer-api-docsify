@@ -12,6 +12,8 @@ type ValueType = number | number | string | boolean | image.PixelMap | Want | Ar
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-unifiedDataChannel-type ValueType = int | long | double | string | boolean | image.PixelMap | Want | ArrayBuffer | object | null | undefined--><!--Device-unifiedDataChannel-type ValueType = int | long | double | string | boolean | image.PixelMap | Want | ArrayBuffer | object | null | undefined-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 | 类型 | 说明 |

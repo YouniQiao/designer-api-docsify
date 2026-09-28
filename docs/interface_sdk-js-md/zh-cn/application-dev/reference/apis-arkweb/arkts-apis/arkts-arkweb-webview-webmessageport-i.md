@@ -10,6 +10,8 @@ WebMessagePort是Web组件中用于应用侧（ArkTS）与HTML5侧（JavaScript�
 
 **起始版本：** 9
 
+<!--Device-webview-interface WebMessagePort--><!--Device-webview-interface WebMessagePort-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## 导入模块
@@ -29,6 +31,8 @@ close(): void
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebMessagePort-close(): void--><!--Device-WebMessagePort-close(): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -87,6 +91,8 @@ onMessageEvent(callback: (result: WebMessage) => void): void
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebMessagePort-onMessageEvent(callback: (result: WebMessage) => void): void--><!--Device-WebMessagePort-onMessageEvent(callback: (result: WebMessage) => void): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -156,6 +162,8 @@ onMessageEventExt(callback: (result: WebMessageExt) => void): void
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebMessagePort-onMessageEventExt(callback: (result: WebMessageExt) => void): void--><!--Device-WebMessagePort-onMessageEventExt(callback: (result: WebMessageExt) => void): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -474,6 +482,8 @@ postMessageEvent(message: WebMessage): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebMessagePort-postMessageEvent(message: WebMessage): void--><!--Device-WebMessagePort-postMessageEvent(message: WebMessage): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -545,6 +555,8 @@ postMessageEventExt(message: WebMessageExt): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebMessagePort-postMessageEventExt(message: WebMessageExt): void--><!--Device-WebMessagePort-postMessageEventExt(message: WebMessageExt): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -577,5 +589,7 @@ true表示使用扩展增强接口，false表示不使用扩展增强接口。
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebMessagePort-isExtentionType?: boolean--><!--Device-WebMessagePort-isExtentionType?: boolean-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core

@@ -8,6 +8,8 @@ export interface ShortMessage
 
 **起始版本：** 6
 
+<!--Device-sms-export interface ShortMessage--><!--Device-sms-export interface ShortMessage-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 ## 导入模块
@@ -34,6 +36,8 @@ hasReplyPath: boolean
 
 **起始版本：** 6
 
+<!--Device-ShortMessage-hasReplyPath: boolean--><!--Device-ShortMessage-hasReplyPath: boolean-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 ## isReplaceMessage
@@ -53,6 +57,8 @@ isReplaceMessage: boolean
 **类型：** boolean
 
 **起始版本：** 6
+
+<!--Device-ShortMessage-isReplaceMessage: boolean--><!--Device-ShortMessage-isReplaceMessage: boolean-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -74,6 +80,8 @@ isSmsStatusReportMessage: boolean
 
 **起始版本：** 6
 
+<!--Device-ShortMessage-isSmsStatusReportMessage: boolean--><!--Device-ShortMessage-isSmsStatusReportMessage: boolean-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 ## messageClass
@@ -87,6 +95,8 @@ messageClass: ShortMessageClass
 **类型：** [ShortMessageClass](arkts-telephony-sms-shortmessageclass-e.md)
 
 **起始版本：** 6
+
+<!--Device-ShortMessage-messageClass: ShortMessageClass--><!--Device-ShortMessage-messageClass: ShortMessageClass-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -102,6 +112,8 @@ SMS消息中的协议数据单元 (PDU)。
 
 **起始版本：** 6
 
+<!--Device-ShortMessage-pdu: Array<int>--><!--Device-ShortMessage-pdu: Array<int>-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 ## protocolId
@@ -115,6 +127,8 @@ protocolId: number
 **类型：** number
 
 **起始版本：** 6
+
+<!--Device-ShortMessage-protocolId: int--><!--Device-ShortMessage-protocolId: int-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -130,6 +144,8 @@ scAddress: string
 
 **起始版本：** 6
 
+<!--Device-ShortMessage-scAddress: string--><!--Device-ShortMessage-scAddress: string-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 ## scTimestamp
@@ -143,6 +159,8 @@ SMSC时间戳。
 **类型：** number
 
 **起始版本：** 6
+
+<!--Device-ShortMessage-scTimestamp: long--><!--Device-ShortMessage-scTimestamp: long-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -158,6 +176,8 @@ SMS-STATUS-REPORT消息中的短信状态指示短信服务中心(SMSC)发送的
 
 **起始版本：** 6
 
+<!--Device-ShortMessage-status: int--><!--Device-ShortMessage-status: int-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 ## visibleMessageBody
@@ -172,6 +192,8 @@ visibleMessageBody: string
 
 **起始版本：** 6
 
+<!--Device-ShortMessage-visibleMessageBody: string--><!--Device-ShortMessage-visibleMessageBody: string-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 ## visibleRawAddress
@@ -185,5 +207,7 @@ visibleRawAddress: string
 **类型：** string
 
 **起始版本：** 6
+
+<!--Device-ShortMessage-visibleRawAddress: string--><!--Device-ShortMessage-visibleRawAddress: string-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms

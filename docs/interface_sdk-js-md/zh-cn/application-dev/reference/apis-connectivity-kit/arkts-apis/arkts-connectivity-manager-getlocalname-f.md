@@ -20,6 +20,8 @@ function getLocalName(): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-manager-function getLocalName(): string--><!--Device-manager-function getLocalName(): string-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **返回值：**

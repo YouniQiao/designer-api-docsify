@@ -16,6 +16,8 @@ function getAudioHapticManager(): AudioHapticManager
 
 **起始版本：** 11
 
+<!--Device-audioHaptic-function getAudioHapticManager(): AudioHapticManager--><!--Device-audioHaptic-function getAudioHapticManager(): AudioHapticManager-End-->
+
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
 **返回值：**

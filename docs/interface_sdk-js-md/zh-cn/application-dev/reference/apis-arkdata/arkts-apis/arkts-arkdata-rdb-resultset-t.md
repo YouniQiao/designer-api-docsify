@@ -10,6 +10,8 @@ export type ResultSet = _ResultSet
 
 **废弃版本：** 9
 
+<!--Device-rdb-export type ResultSet = _ResultSet--><!--Device-rdb-export type ResultSet = _ResultSet-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **类型：** _ResultSet

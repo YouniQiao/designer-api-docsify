@@ -18,6 +18,8 @@ For details about the development guide, see [wrapBuilder: Encapsulating Global 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-unnamed-declare function wrapBuilder<Args extends Object[]>(builder: (...args: Args) => void): WrappedBuilder<Args>--><!--Device-unnamed-declare function wrapBuilder<Args extends Object[]>(builder: (...args: Args) => void): WrappedBuilder<Args>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

@@ -20,6 +20,8 @@ function setPointerColor(color: number, callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
+<!--Device-pointer-function setPointerColor(color: int, callback: AsyncCallback<void>): void--><!--Device-pointer-function setPointerColor(color: int, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 **系统接口：** 此接口为系统接口。
@@ -85,6 +87,8 @@ function setPointerColor(color: number): Promise<void>
 > 设置和调试时，需连接外部设备，如鼠标、蓝牙等。
 
 **起始版本：** 10
+
+<!--Device-pointer-function setPointerColor(color: int): Promise<void>--><!--Device-pointer-function setPointerColor(color: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 

@@ -8,6 +8,8 @@ interface PasteDataRecord
 
 **起始版本：** 7
 
+<!--Device-pasteboard-interface PasteDataRecord--><!--Device-pasteboard-interface PasteDataRecord-End-->
+
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
 ## 导入模块
@@ -25,6 +27,8 @@ addEntry(type: string, value: ValueType): void
 往一个PasteDataRecord中额外添加一种样式的数据。此方式添加的MIME类型都不是Record的默认类型，粘贴时只能使用[getData](#getdata)接口读取对应数据。
 
 **起始版本：** 14
+
+<!--Device-PasteDataRecord-addEntry(type: string, value: ValueType): void--><!--Device-PasteDataRecord-addEntry(type: string, value: ValueType): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -63,6 +67,8 @@ getData(type: string): Promise<ValueType>
 从PasteDataRecord中获取指定MIME类型的自定义数据，使用Promise异步回调。
 
 **起始版本：** 14
+
+<!--Device-PasteDataRecord-getData(type: string): Promise<ValueType>--><!--Device-PasteDataRecord-getData(type: string): Promise<ValueType>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -117,6 +123,8 @@ getValidTypes(types: Array<string>): Array<string>
 
 **起始版本：** 14
 
+<!--Device-PasteDataRecord-getValidTypes(types: Array<string>): Array<string>--><!--Device-PasteDataRecord-getValidTypes(types: Array<string>): Array<string>-End-->
+
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
 **参数：**
@@ -163,7 +171,9 @@ toPlainText(): string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-PasteDataRecord-toPlainText(): string--><!--Device-PasteDataRecord-toPlainText(): string-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -194,6 +204,8 @@ convertToText(callback: AsyncCallback<string>): void
 **废弃版本：** 9
 
 **替代接口：** [toPlainText](#toplaintext)()
+
+<!--Device-PasteDataRecord-convertToText(callback: AsyncCallback<string>): void--><!--Device-PasteDataRecord-convertToText(callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -240,6 +252,8 @@ convertToText(): Promise<string>
 
 **替代接口：** [toPlainText](#toplaintext)()
 
+<!--Device-PasteDataRecord-convertToText(): Promise<string>--><!--Device-PasteDataRecord-convertToText(): Promise<string>-End-->
+
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
 **返回值：**
@@ -273,7 +287,9 @@ data: Record<string, ArrayBuffer>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-PasteDataRecord-data: Record<string, ArrayBuffer>--><!--Device-PasteDataRecord-data: Record<string, ArrayBuffer>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -289,7 +305,9 @@ HTML内容，需符合标准HTML格式。对此属性的修改无效，如需刷
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-PasteDataRecord-htmlText: string--><!--Device-PasteDataRecord-htmlText: string-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -305,7 +323,9 @@ mimeType: string
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-PasteDataRecord-mimeType: string--><!--Device-PasteDataRecord-mimeType: string-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -321,7 +341,9 @@ PixelMap内容。对此属性的修改无效，如需刷新属性值，请使用
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-PasteDataRecord-pixelMap: image.PixelMap--><!--Device-PasteDataRecord-pixelMap: image.PixelMap-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -337,7 +359,9 @@ plainText: string
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-PasteDataRecord-plainText: string--><!--Device-PasteDataRecord-plainText: string-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -353,7 +377,9 @@ URI内容，需符合标准URI格式。对此属性的修改无效，如需刷�
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-PasteDataRecord-uri: string--><!--Device-PasteDataRecord-uri: string-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -369,6 +395,8 @@ Want内容。对此属性的修改无效，如需刷新属性值，请使用[add
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-PasteDataRecord-want: Want--><!--Device-PasteDataRecord-want: Want-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard

@@ -18,6 +18,8 @@ function queryDevices(busType?: number): Array<Readonly<Device>>
 
 **需要权限：** ohos.permission.ACCESS_EXTENSIONAL_DEVICE_DRIVER
 
+<!--Device-deviceManager-function queryDevices(busType?: int): Array<Readonly<Device>>--><!--Device-deviceManager-function queryDevices(busType?: int): Array<Readonly<Device>>-End-->
+
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
 **参数：**

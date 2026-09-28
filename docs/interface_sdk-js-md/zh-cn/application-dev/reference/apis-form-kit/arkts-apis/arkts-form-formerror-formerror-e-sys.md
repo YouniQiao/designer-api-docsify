@@ -8,6 +8,8 @@ enum FormError
 
 **起始版本：** 8
 
+<!--Device-formError-enum FormError--><!--Device-formError-enum FormError-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 ## ERR_DISTRIBUTED_SCHEDULE_FAILED
@@ -19,6 +21,8 @@ ERR_DISTRIBUTED_SCHEDULE_FAILED = 37
 分布式调度失败。
 
 **起始版本：** 9
+
+<!--Device-FormError-ERR_DISTRIBUTED_SCHEDULE_FAILED = 37--><!--Device-FormError-ERR_DISTRIBUTED_SCHEDULE_FAILED = 37-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 

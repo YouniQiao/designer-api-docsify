@@ -22,6 +22,8 @@ function getAllSessionDescriptors(): Promise<Array<Readonly<AVSessionDescriptor>
 - API版本23+：ohos.permission.MANAGE_MEDIA_RESOURCES or ohos.permission.MANAGE_MEDIA_RESOURCES_FOR_PUBLIC
 - API版本9-22：ohos.permission.MANAGE_MEDIA_RESOURCES
 
+<!--Device-avSession-function getAllSessionDescriptors(): Promise<Array<Readonly<AVSessionDescriptor>>>--><!--Device-avSession-function getAllSessionDescriptors(): Promise<Array<Readonly<AVSessionDescriptor>>>-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 
 **返回值：**

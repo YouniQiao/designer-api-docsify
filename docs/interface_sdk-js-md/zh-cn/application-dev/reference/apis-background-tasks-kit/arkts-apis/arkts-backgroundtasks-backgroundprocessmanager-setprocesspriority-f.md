@@ -16,6 +16,8 @@ function setProcessPriority(pid: number, priority: ProcessPriority): Promise<voi
 
 **起始版本：** 17
 
+<!--Device-backgroundProcessManager-function setProcessPriority(pid: int, priority: ProcessPriority): Promise<void>--><!--Device-backgroundProcessManager-function setProcessPriority(pid: int, priority: ProcessPriority): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Resourceschedule.BackgroundProcessManager
 
 **参数：**

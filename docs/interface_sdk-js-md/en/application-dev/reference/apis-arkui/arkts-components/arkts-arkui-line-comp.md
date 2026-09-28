@@ -32,6 +32,8 @@ Draws a straight line. The **Line** component draws the line within the rectangu
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-LineInterface-new (options?: LineOptions): LineAttribute--><!--Device-LineInterface-new (options?: LineOptions): LineAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -55,6 +57,8 @@ Draws a straight line. The **Line** component draws the line within the rectangu
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-LineInterface-(options?: LineOptions): LineAttribute--><!--Device-LineInterface-(options?: LineOptions): LineAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

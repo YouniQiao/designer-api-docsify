@@ -10,6 +10,8 @@ The module provides APIs for setting and obtaining installation-free information
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace freeInstall--><!--Device-unnamed-declare namespace freeInstall-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **系统接口：** 此接口为系统接口。

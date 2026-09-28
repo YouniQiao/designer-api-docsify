@@ -8,6 +8,8 @@ interface GetPropertyRequest
 
 **起始版本：** 8
 
+<!--Device-osAccount-interface GetPropertyRequest--><!--Device-osAccount-interface GetPropertyRequest-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ accountId?: number
 
 **起始版本：** 12
 
+<!--Device-GetPropertyRequest-accountId?: int--><!--Device-GetPropertyRequest-accountId?: int-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -46,6 +50,8 @@ authType: AuthType
 
 **起始版本：** 8
 
+<!--Device-GetPropertyRequest-authType: AuthType--><!--Device-GetPropertyRequest-authType: AuthType-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +67,8 @@ keys: Array<GetPropertyType>
 **类型：** Array&lt;[GetPropertyType](arkts-basicservices-osaccount-getpropertytype-e-sys.md)&gt;
 
 **起始版本：** 8
+
+<!--Device-GetPropertyRequest-keys: Array<GetPropertyType>--><!--Device-GetPropertyRequest-keys: Array<GetPropertyType>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 

@@ -14,6 +14,8 @@ declare interface FunctionIntentDecoratorInfo extends IntentDecoratorInfo
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-unnamed-declare interface FunctionIntentDecoratorInfo extends IntentDecoratorInfo--><!--Device-unnamed-declare interface FunctionIntentDecoratorInfo extends IntentDecoratorInfo-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块

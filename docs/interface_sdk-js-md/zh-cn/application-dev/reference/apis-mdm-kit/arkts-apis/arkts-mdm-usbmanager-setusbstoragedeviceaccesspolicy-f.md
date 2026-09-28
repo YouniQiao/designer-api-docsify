@@ -40,6 +40,8 @@ function setUsbStorageDeviceAccessPolicy(admin: Want, usbPolicy: UsbPolicy): voi
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-usbManager-function setUsbStorageDeviceAccessPolicy(admin: Want, usbPolicy: UsbPolicy): void--><!--Device-usbManager-function setUsbStorageDeviceAccessPolicy(admin: Want, usbPolicy: UsbPolicy): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**

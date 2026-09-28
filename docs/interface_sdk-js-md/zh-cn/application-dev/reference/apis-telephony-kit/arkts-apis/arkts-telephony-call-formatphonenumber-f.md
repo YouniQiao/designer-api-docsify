@@ -18,6 +18,8 @@ function formatPhoneNumber(phoneNumber: string, options: NumberFormatOptions, ca
 
 **起始版本：** 7
 
+<!--Device-call-function formatPhoneNumber(phoneNumber: string, options: NumberFormatOptions, callback: AsyncCallback<string>): void--><!--Device-call-function formatPhoneNumber(phoneNumber: string, options: NumberFormatOptions, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **参数：**
@@ -69,6 +71,8 @@ function formatPhoneNumber(phoneNumber: string, options?: NumberFormatOptions): 
 电话号码格式化后为标准数字字符串，例如：“138 xxxx xxxx”、“0755 xxxx xxxx”。
 
 **起始版本：** 7
+
+<!--Device-call-function formatPhoneNumber(phoneNumber: string, options?: NumberFormatOptions): Promise<string>--><!--Device-call-function formatPhoneNumber(phoneNumber: string, options?: NumberFormatOptions): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -124,6 +128,8 @@ function formatPhoneNumber(phoneNumber: string, callback: AsyncCallback<string>)
 电话号码格式化后为标准数字字符串，例如：“138 xxxx xxxx”、“0755 xxxx xxxx”。
 
 **起始版本：** 7
+
+<!--Device-call-function formatPhoneNumber(phoneNumber: string, callback: AsyncCallback<string>): void--><!--Device-call-function formatPhoneNumber(phoneNumber: string, callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 

@@ -8,6 +8,8 @@ USB数据传输参数对象，包含USB数据传输所需的所有参数，用�
 
 **起始版本：** 18
 
+<!--Device-usbManager-interface UsbDataTransferParams--><!--Device-usbManager-interface UsbDataTransferParams-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## 导入模块
@@ -28,6 +30,8 @@ buffer: Uint8Array
 
 **起始版本：** 18
 
+<!--Device-UsbDataTransferParams-buffer: Uint8Array--><!--Device-UsbDataTransferParams-buffer: Uint8Array-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## callback
@@ -41,6 +45,8 @@ callback: AsyncCallback<SubmitTransferCallback>
 **类型：** [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[SubmitTransferCallback](arkts-basicservices-usbmanager-submittransfercallback-i.md)&gt;
 
 **起始版本：** 18
+
+<!--Device-UsbDataTransferParams-callback: AsyncCallback<SubmitTransferCallback>--><!--Device-UsbDataTransferParams-callback: AsyncCallback<SubmitTransferCallback>-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -56,6 +62,8 @@ devPipe: USBDevicePipe
 
 **起始版本：** 18
 
+<!--Device-UsbDataTransferParams-devPipe: USBDevicePipe--><!--Device-UsbDataTransferParams-devPipe: USBDevicePipe-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## endpoint
@@ -69,6 +77,8 @@ endpoint: number
 **类型：** number
 
 **起始版本：** 18
+
+<!--Device-UsbDataTransferParams-endpoint: int--><!--Device-UsbDataTransferParams-endpoint: int-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -84,6 +94,8 @@ USB传输标志，用于控制传输行为。可选值包括：0（将短帧报�
 
 **起始版本：** 18
 
+<!--Device-UsbDataTransferParams-flags: UsbTransferFlags--><!--Device-UsbDataTransferParams-flags: UsbTransferFlags-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## isoPacketCount
@@ -97,6 +109,8 @@ isoPacketCount: number
 **类型：** number
 
 **起始版本：** 18
+
+<!--Device-UsbDataTransferParams-isoPacketCount: int--><!--Device-UsbDataTransferParams-isoPacketCount: int-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -112,6 +126,8 @@ length: number
 
 **起始版本：** 18
 
+<!--Device-UsbDataTransferParams-length: int--><!--Device-UsbDataTransferParams-length: int-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## timeout
@@ -125,6 +141,8 @@ timeout: number
 **类型：** number
 
 **起始版本：** 18
+
+<!--Device-UsbDataTransferParams-timeout: int--><!--Device-UsbDataTransferParams-timeout: int-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -140,6 +158,8 @@ type: UsbEndpointTransferType
 
 **起始版本：** 18
 
+<!--Device-UsbDataTransferParams-type: UsbEndpointTransferType--><!--Device-UsbDataTransferParams-type: UsbEndpointTransferType-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## userData
@@ -153,5 +173,7 @@ userData: Uint8Array
 **类型：** Uint8Array
 
 **起始版本：** 18
+
+<!--Device-UsbDataTransferParams-userData: Uint8Array--><!--Device-UsbDataTransferParams-userData: Uint8Array-End-->
 
 **系统能力：** SystemCapability.USB.USBManager

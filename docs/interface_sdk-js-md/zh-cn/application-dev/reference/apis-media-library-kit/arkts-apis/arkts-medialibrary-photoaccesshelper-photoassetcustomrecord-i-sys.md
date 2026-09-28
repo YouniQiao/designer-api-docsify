@@ -8,6 +8,8 @@ interface PhotoAssetCustomRecord
 
 **起始版本：** 20
 
+<!--Device-photoAccessHelper-interface PhotoAssetCustomRecord--><!--Device-photoAccessHelper-interface PhotoAssetCustomRecord-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ readonly fileId: number
 
 **起始版本：** 20
 
+<!--Device-PhotoAssetCustomRecord-readonly fileId: int--><!--Device-PhotoAssetCustomRecord-readonly fileId: int-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -46,6 +50,8 @@ readonly lcdJumpCount: number
 
 **起始版本：** 20
 
+<!--Device-PhotoAssetCustomRecord-readonly lcdJumpCount: int--><!--Device-PhotoAssetCustomRecord-readonly lcdJumpCount: int-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +67,8 @@ readonly shareCount: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-PhotoAssetCustomRecord-readonly shareCount: int--><!--Device-PhotoAssetCustomRecord-readonly shareCount: int-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

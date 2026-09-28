@@ -19,6 +19,8 @@ declare function renameSync(oldPath: string, newPath: string): void
 
 **替代接口：** [renameSync](arkts-corefile-file-fs-renamesync-f.md)
 
+<!--Device-unnamed-declare function renameSync(oldPath: string, newPath: string): void--><!--Device-unnamed-declare function renameSync(oldPath: string, newPath: string): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**

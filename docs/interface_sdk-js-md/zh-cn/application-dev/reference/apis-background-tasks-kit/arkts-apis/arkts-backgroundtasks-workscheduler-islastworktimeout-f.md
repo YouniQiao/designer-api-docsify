@@ -22,6 +22,8 @@ function isLastWorkTimeOut(workId: number, callback: AsyncCallback<void>): boole
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-workScheduler-function isLastWorkTimeOut(workId: number, callback: AsyncCallback<void>): boolean--><!--Device-workScheduler-function isLastWorkTimeOut(workId: number, callback: AsyncCallback<void>): boolean-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
 **参数：**
@@ -90,6 +92,8 @@ function isLastWorkTimeOut(workId: number, callback: AsyncCallback<boolean>): vo
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-workScheduler-function isLastWorkTimeOut(workId: int, callback: AsyncCallback<boolean>): void--><!--Device-workScheduler-function isLastWorkTimeOut(workId: int, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
 **参数：**
@@ -138,6 +142,8 @@ function isLastWorkTimeOut(workId: number): Promise<boolean>
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-workScheduler-function isLastWorkTimeOut(workId: int): Promise<boolean>--><!--Device-workScheduler-function isLastWorkTimeOut(workId: int): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 

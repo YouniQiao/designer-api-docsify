@@ -10,6 +10,8 @@ export type PluginBundleInfo = _PluginBundleInfo
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-pluginBundleManager-export type PluginBundleInfo = _PluginBundleInfo--><!--Device-pluginBundleManager-export type PluginBundleInfo = _PluginBundleInfo-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **类型：** _PluginBundleInfo

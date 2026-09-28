@@ -14,4 +14,6 @@ PrintExtensionContext可直接作为PrintExtensionAbility的上下文环境，�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-unnamed-export default class PrintExtensionContext extends ExtensionContext--><!--Device-unnamed-export default class PrintExtensionContext extends ExtensionContext-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework

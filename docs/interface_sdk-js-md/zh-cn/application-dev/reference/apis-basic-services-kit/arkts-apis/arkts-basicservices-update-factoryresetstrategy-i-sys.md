@@ -8,6 +8,8 @@ export interface FactoryResetStrategy
 
 **起始版本：** 26.0.0
 
+<!--Device-update-export interface FactoryResetStrategy--><!--Device-update-export interface FactoryResetStrategy-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ scope: FactoryResetScope
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FactoryResetStrategy-scope: FactoryResetScope--><!--Device-FactoryResetStrategy-scope: FactoryResetScope-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ strategy: string
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FactoryResetStrategy-strategy: string--><!--Device-FactoryResetStrategy-strategy: string-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
 

@@ -27,6 +27,8 @@ export function getSystemResourceManager(): ResourceManager
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-resourceManager-export function getSystemResourceManager(): ResourceManager--><!--Device-resourceManager-export function getSystemResourceManager(): ResourceManager-End-->
+
 **系统能力：** SystemCapability.Global.ResourceManager
 
 **返回值：**

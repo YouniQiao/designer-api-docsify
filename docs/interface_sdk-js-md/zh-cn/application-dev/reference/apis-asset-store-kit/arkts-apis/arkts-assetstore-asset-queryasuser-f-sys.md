@@ -18,6 +18,8 @@ function queryAsUser(userId: number, query: AssetMap): Promise<Array<AssetMap>>
 
 **需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
+<!--Device-asset-function queryAsUser(userId: number, query: AssetMap): Promise<Array<AssetMap>>--><!--Device-asset-function queryAsUser(userId: number, query: AssetMap): Promise<Array<AssetMap>>-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 **系统接口：** 此接口为系统接口。

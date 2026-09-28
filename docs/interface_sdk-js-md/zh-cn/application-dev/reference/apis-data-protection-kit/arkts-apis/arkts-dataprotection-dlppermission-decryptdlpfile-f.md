@@ -24,6 +24,8 @@ function decryptDlpFile(dlpFd: number, plaintextFd: number): Promise<void>
 
 **需要权限：** ohos.permission.ENTERPRISE_ACCESS_DLP_FILE
 
+<!--Device-dlpPermission-function decryptDlpFile(dlpFd: number, plaintextFd: number): Promise<void>--><!--Device-dlpPermission-function decryptDlpFile(dlpFd: number, plaintextFd: number): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **参数：**

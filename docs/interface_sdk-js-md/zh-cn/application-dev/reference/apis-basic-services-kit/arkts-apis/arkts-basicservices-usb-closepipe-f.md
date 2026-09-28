@@ -22,6 +22,8 @@ function closePipe(pipe: USBDevicePipe): number
 
 **替代接口：** [closePipe](arkts-basicservices-usbmanager-closepipe-f.md)
 
+<!--Device-usb-function closePipe(pipe: USBDevicePipe): number--><!--Device-usb-function closePipe(pipe: USBDevicePipe): number-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 **参数：**

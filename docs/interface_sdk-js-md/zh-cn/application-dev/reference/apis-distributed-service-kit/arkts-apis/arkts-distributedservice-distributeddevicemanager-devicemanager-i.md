@@ -8,6 +8,8 @@ interface DeviceManager
 
 **起始版本：** 10
 
+<!--Device-distributedDeviceManager-interface DeviceManager--><!--Device-distributedDeviceManager-interface DeviceManager-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 ## 导入模块
@@ -27,6 +29,8 @@ bindTarget(deviceId: string, bindParam: { [key: string]: Object; }, callback: As
 **起始版本：** 10
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-bindTarget(deviceId: string, bindParam: { [key: string]: Object; }, callback: AsyncCallback<{deviceId: string;}>): void--><!--Device-DeviceManager-bindTarget(deviceId: string, bindParam: { [key: string]: Object; }, callback: AsyncCallback<{deviceId: string;}>): void-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -96,6 +100,8 @@ getAvailableDeviceList(callback: AsyncCallback<Array<DeviceBasicInfo>>): void
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-getAvailableDeviceList(callback: AsyncCallback<Array<DeviceBasicInfo>>): void--><!--Device-DeviceManager-getAvailableDeviceList(callback: AsyncCallback<Array<DeviceBasicInfo>>): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **参数：**
@@ -148,6 +154,8 @@ getAvailableDeviceList(): Promise<Array<DeviceBasicInfo>>
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-getAvailableDeviceList(): Promise<Array<DeviceBasicInfo>>--><!--Device-DeviceManager-getAvailableDeviceList(): Promise<Array<DeviceBasicInfo>>-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **返回值：**
@@ -196,6 +204,8 @@ getAvailableDeviceListSync(): Array<DeviceBasicInfo>
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-getAvailableDeviceListSync(): Array<DeviceBasicInfo>--><!--Device-DeviceManager-getAvailableDeviceListSync(): Array<DeviceBasicInfo>-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **返回值：**
@@ -239,6 +249,8 @@ getDeviceName(networkId: string): string
 **起始版本：** 10
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-getDeviceName(networkId: string): string--><!--Device-DeviceManager-getDeviceName(networkId: string): string-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -294,6 +306,8 @@ getDeviceType(networkId: string): number
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-getDeviceType(networkId: string): int--><!--Device-DeviceManager-getDeviceType(networkId: string): int-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **参数：**
@@ -348,6 +362,8 @@ getLocalDeviceId(): string
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-getLocalDeviceId(): string--><!--Device-DeviceManager-getLocalDeviceId(): string-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **返回值：**
@@ -392,6 +408,8 @@ getLocalDeviceName(): string
 **起始版本：** 10
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-getLocalDeviceName(): string--><!--Device-DeviceManager-getLocalDeviceName(): string-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -438,6 +456,8 @@ getLocalDeviceNetworkId(): string
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-getLocalDeviceNetworkId(): string--><!--Device-DeviceManager-getLocalDeviceNetworkId(): string-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **返回值：**
@@ -483,6 +503,8 @@ getLocalDeviceType(): number
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-getLocalDeviceType(): int--><!--Device-DeviceManager-getLocalDeviceType(): int-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **返回值：**
@@ -527,6 +549,8 @@ off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChange; 
 **起始版本：** 10
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChange; device: DeviceBasicInfo; }>): void--><!--Device-DeviceManager-off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChange; device: DeviceBasicInfo; }>): void-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -585,6 +609,8 @@ off(type: 'discoverSuccess', callback?: Callback<{ device: DeviceBasicInfo; }>):
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-off(type: 'discoverSuccess', callback?: Callback<{ device: DeviceBasicInfo; }>): void--><!--Device-DeviceManager-off(type: 'discoverSuccess', callback?: Callback<{ device: DeviceBasicInfo; }>): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **参数：**
@@ -641,6 +667,8 @@ off(type: 'deviceNameChange', callback?: Callback<{ deviceName: string; }>): voi
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-off(type: 'deviceNameChange', callback?: Callback<{ deviceName: string; }>): void--><!--Device-DeviceManager-off(type: 'deviceNameChange', callback?: Callback<{ deviceName: string; }>): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **参数：**
@@ -691,6 +719,8 @@ off(type: 'discoverFailure', callback?: Callback<{ reason: number; }>): void
 **起始版本：** 10
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-off(type: 'discoverFailure', callback?: Callback<{ reason: int; }>): void--><!--Device-DeviceManager-off(type: 'discoverFailure', callback?: Callback<{ reason: int; }>): void-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -743,6 +773,8 @@ off(type: 'serviceDie', callback?: Callback<{}>): void
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-off(type: 'serviceDie', callback?: Callback<{}>): void--><!--Device-DeviceManager-off(type: 'serviceDie', callback?: Callback<{}>): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **参数：**
@@ -789,6 +821,8 @@ on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChange; de
 **起始版本：** 10
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChange; device: DeviceBasicInfo; }>): void--><!--Device-DeviceManager-on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChange; device: DeviceBasicInfo; }>): void-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -847,6 +881,8 @@ on(type: 'discoverSuccess', callback: Callback<{ device: DeviceBasicInfo; }>): v
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-on(type: 'discoverSuccess', callback: Callback<{ device: DeviceBasicInfo; }>): void--><!--Device-DeviceManager-on(type: 'discoverSuccess', callback: Callback<{ device: DeviceBasicInfo; }>): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **参数：**
@@ -903,6 +939,8 @@ on(type: 'deviceNameChange', callback: Callback<{ deviceName: string; }>): void
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-on(type: 'deviceNameChange', callback: Callback<{ deviceName: string; }>): void--><!--Device-DeviceManager-on(type: 'deviceNameChange', callback: Callback<{ deviceName: string; }>): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **参数：**
@@ -953,6 +991,8 @@ on(type: 'discoverFailure', callback: Callback<{ reason: number; }>): void
 **起始版本：** 10
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-on(type: 'discoverFailure', callback: Callback<{ reason: number; }>): void--><!--Device-DeviceManager-on(type: 'discoverFailure', callback: Callback<{ reason: number; }>): void-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -1005,6 +1045,8 @@ on(type: 'serviceDie', callback: Callback<{}>): void
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-on(type: 'serviceDie', callback: Callback<{}>): void--><!--Device-DeviceManager-on(type: 'serviceDie', callback: Callback<{}>): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **参数：**
@@ -1051,6 +1093,8 @@ startDiscovering(discoverParam: { [key: string]: Object; }, filterOptions?: { [k
 **起始版本：** 10
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-startDiscovering(discoverParam: { [key: string]: Object; }, filterOptions?: { [key: string]: Object; }): void--><!--Device-DeviceManager-startDiscovering(discoverParam: { [key: string]: Object; }, filterOptions?: { [key: string]: Object; }): void-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -1107,6 +1151,8 @@ stopDiscovering(): void
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-stopDiscovering(): void--><!--Device-DeviceManager-stopDiscovering(): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **错误码：**
@@ -1144,6 +1190,8 @@ unbindTarget(deviceId: string): void
 **起始版本：** 10
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-unbindTarget(deviceId: string): void--><!--Device-DeviceManager-unbindTarget(deviceId: string): void-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 

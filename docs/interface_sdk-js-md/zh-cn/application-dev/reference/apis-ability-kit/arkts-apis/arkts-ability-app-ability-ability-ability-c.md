@@ -8,6 +8,8 @@ Ability类是应用生命周期调度的基本单元，是[UIAbility](arkts-abil
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare class Ability--><!--Device-unnamed-declare class Ability-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 ## 导入模块
@@ -37,7 +39,9 @@ onConfigurationUpdate(newConfig: Configuration): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Ability-onConfigurationUpdate(newConfig: Configuration): void--><!--Device-Ability-onConfigurationUpdate(newConfig: Configuration): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -79,7 +83,9 @@ onMemoryLevel(level: AbilityConstant.MemoryLevel): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Ability-onMemoryLevel(level: AbilityConstant.MemoryLevel): void--><!--Device-Ability-onMemoryLevel(level: AbilityConstant.MemoryLevel): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 

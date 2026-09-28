@@ -22,6 +22,8 @@ DLP管理应用退出或不再需要追踪沙箱状态变化时，取消事件�
 
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
 
+<!--Device-dlpPermission-function off(type: 'uninstallDLPSandbox', listener?: Callback<DLPSandboxState>): void--><!--Device-dlpPermission-function off(type: 'uninstallDLPSandbox', listener?: Callback<DLPSandboxState>): void-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **系统接口：** 此接口为系统接口。

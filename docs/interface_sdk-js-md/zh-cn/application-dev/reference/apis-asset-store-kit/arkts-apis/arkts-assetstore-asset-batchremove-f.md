@@ -22,6 +22,8 @@ function batchRemove(assetsToBeRemoved: Array<AssetMap>): Promise<void>
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-asset-function batchRemove(assetsToBeRemoved: Array<AssetMap>): Promise<void>--><!--Device-asset-function batchRemove(assetsToBeRemoved: Array<AssetMap>): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 **参数：**

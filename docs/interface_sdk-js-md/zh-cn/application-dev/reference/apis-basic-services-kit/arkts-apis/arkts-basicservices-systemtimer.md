@@ -4,6 +4,8 @@
 
 **起始版本：** 7
 
+<!--Device-unnamed-declare namespace systemTimer--><!--Device-unnamed-declare namespace systemTimer-End-->
+
 **系统能力：** SystemCapability.MiscServices.Time
 
 **系统接口：** 此接口为系统接口。

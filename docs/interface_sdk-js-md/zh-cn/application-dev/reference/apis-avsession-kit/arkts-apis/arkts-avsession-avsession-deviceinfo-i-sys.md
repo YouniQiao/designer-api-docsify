@@ -8,6 +8,8 @@ interface DeviceInfo
 
 **起始版本：** 10
 
+<!--Device-avSession-interface DeviceInfo--><!--Device-avSession-interface DeviceInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ authenticationStatus?: number
 
 **起始版本：** 11
 
+<!--Device-DeviceInfo-authenticationStatus?: int--><!--Device-DeviceInfo-authenticationStatus?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **系统接口：** 此接口为系统接口。
@@ -47,6 +51,8 @@ HiPlay设备类型定义
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DeviceInfo-hiPlayDeviceInfo?: HiPlayDeviceInfo--><!--Device-DeviceInfo-hiPlayDeviceInfo?: HiPlayDeviceInfo-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -66,6 +72,8 @@ ipAddress?: string
 
 **起始版本：** 10
 
+<!--Device-DeviceInfo-ipAddress?: string--><!--Device-DeviceInfo-ipAddress?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **系统接口：** 此接口为系统接口。
@@ -83,6 +91,8 @@ isLegacy?: boolean
 **类型：** boolean
 
 **起始版本：** 13
+
+<!--Device-DeviceInfo-isLegacy?: boolean--><!--Device-DeviceInfo-isLegacy?: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -106,6 +116,8 @@ mediumTypes?: number
 
 **起始版本：** 13
 
+<!--Device-DeviceInfo-mediumTypes?: int--><!--Device-DeviceInfo-mediumTypes?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **系统接口：** 此接口为系统接口。
@@ -124,6 +136,8 @@ networkId?: string
 
 **起始版本：** 13
 
+<!--Device-DeviceInfo-networkId?: string--><!--Device-DeviceInfo-networkId?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **系统接口：** 此接口为系统接口。
@@ -141,6 +155,8 @@ providerId?: number
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-DeviceInfo-providerId?: int--><!--Device-DeviceInfo-providerId?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 

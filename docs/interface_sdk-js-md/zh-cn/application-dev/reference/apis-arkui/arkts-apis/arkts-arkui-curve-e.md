@@ -8,6 +8,8 @@ declare enum Curve
 
 **起始版本：** 7
 
+<!--Device-unnamed-declare enum Curve--><!--Device-unnamed-declare enum Curve-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## Linear
@@ -23,6 +25,8 @@ Linear
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-Curve-Linear--><!--Device-Curve-Linear-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,6 +44,8 @@ Ease
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-Curve-Ease--><!--Device-Curve-Ease-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## EaseIn
@@ -55,6 +61,8 @@ EaseIn
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-Curve-EaseIn--><!--Device-Curve-EaseIn-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,6 +80,8 @@ EaseOut
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-Curve-EaseOut--><!--Device-Curve-EaseOut-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## EaseInOut
@@ -87,6 +97,8 @@ EaseInOut
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-Curve-EaseInOut--><!--Device-Curve-EaseInOut-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -104,6 +116,8 @@ FastOutSlowIn
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-Curve-FastOutSlowIn--><!--Device-Curve-FastOutSlowIn-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## LinearOutSlowIn
@@ -119,6 +133,8 @@ LinearOutSlowIn
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-Curve-LinearOutSlowIn--><!--Device-Curve-LinearOutSlowIn-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -136,6 +152,8 @@ FastOutLinearIn
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-Curve-FastOutLinearIn--><!--Device-Curve-FastOutLinearIn-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## ExtremeDeceleration
@@ -151,6 +169,8 @@ ExtremeDeceleration
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-Curve-ExtremeDeceleration--><!--Device-Curve-ExtremeDeceleration-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -168,6 +188,8 @@ Sharp
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-Curve-Sharp--><!--Device-Curve-Sharp-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## Rhythm
@@ -183,6 +205,8 @@ Rhythm
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-Curve-Rhythm--><!--Device-Curve-Rhythm-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -200,6 +224,8 @@ Smooth
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-Curve-Smooth--><!--Device-Curve-Smooth-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## Friction
@@ -215,5 +241,7 @@ Friction
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-Curve-Friction--><!--Device-Curve-Friction-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

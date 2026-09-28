@@ -26,6 +26,8 @@ Obtains the altitude at which the device is located based on the sea-level atmos
 
 **Substitutes:** [getDeviceAltitude](arkts-sensorservice-sensor-getdevicealtitude-f.md)(seaPressure: number, currentPressure: number, callback: AsyncCallback&lt;number&gt;)
 
+<!--Device-sensor-function getAltitude(seaPressure: number, currentPressure: number, callback: AsyncCallback<number>): void--><!--Device-sensor-function getAltitude(seaPressure: number, currentPressure: number, callback: AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -72,6 +74,8 @@ Obtains the altitude at which the device is located based on the sea-level atmos
 **Deprecated since:** 9
 
 **Substitutes:** [getDeviceAltitude](arkts-sensorservice-sensor-getdevicealtitude-f.md)(seaPressure: number, currentPressure: number)
+
+<!--Device-sensor-function getAltitude(seaPressure: number, currentPressure: number): Promise<number>--><!--Device-sensor-function getAltitude(seaPressure: number, currentPressure: number): Promise<number>-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 

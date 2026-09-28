@@ -20,6 +20,8 @@ function enableLocation(callback: AsyncCallback<void>): void
 - API版本20+：ohos.permission.MANAGE_SECURE_SETTINGS and ohos.permission.CONTROL_LOCATION_SWITCH
 - API版本9-19：ohos.permission.MANAGE_SECURE_SETTINGS
 
+<!--Device-geoLocationManager-function enableLocation(callback: AsyncCallback<void>): void--><!--Device-geoLocationManager-function enableLocation(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **系统接口：** 此接口为系统接口。
@@ -72,6 +74,8 @@ function enableLocation(): Promise<void>
 **需要权限：** 
 - API版本20+：ohos.permission.MANAGE_SECURE_SETTINGS and ohos.permission.CONTROL_LOCATION_SWITCH
 - API版本9-19：ohos.permission.MANAGE_SECURE_SETTINGS
+
+<!--Device-geoLocationManager-function enableLocation(): Promise<void>--><!--Device-geoLocationManager-function enableLocation(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 

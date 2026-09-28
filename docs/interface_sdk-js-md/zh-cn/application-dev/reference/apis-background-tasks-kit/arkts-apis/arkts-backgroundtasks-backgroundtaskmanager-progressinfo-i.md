@@ -8,6 +8,8 @@ export interface ProgressInfo
 
 **起始版本：** 26.0.1
 
+<!--Device-backgroundTaskManager-export interface ProgressInfo--><!--Device-backgroundTaskManager-export interface ProgressInfo-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## 导入模块
@@ -30,6 +32,8 @@ fileName: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ProgressInfo-fileName: string--><!--Device-ProgressInfo-fileName: string-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## isMute
@@ -47,6 +51,8 @@ isMute?: boolean
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ProgressInfo-isMute?: boolean--><!--Device-ProgressInfo-isMute?: boolean-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -66,6 +72,8 @@ progressValue?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ProgressInfo-progressValue?: int--><!--Device-ProgressInfo-progressValue?: int-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## title
@@ -81,5 +89,7 @@ title: string
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ProgressInfo-title: string--><!--Device-ProgressInfo-title: string-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask

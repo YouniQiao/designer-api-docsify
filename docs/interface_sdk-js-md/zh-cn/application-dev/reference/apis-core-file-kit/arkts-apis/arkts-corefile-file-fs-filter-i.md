@@ -8,6 +8,8 @@ export interface Filter
 
 **起始版本：** 10
 
+<!--Device-unnamed-export interface Filter--><!--Device-unnamed-export interface Filter-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## 导入模块
@@ -30,6 +32,8 @@ displayName?: Array<string>
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Filter-displayName?: Array<string>--><!--Device-Filter-displayName?: Array<string>-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## excludeMedia
@@ -45,6 +49,8 @@ excludeMedia?: boolean
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Filter-excludeMedia?: boolean--><!--Device-Filter-excludeMedia?: boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -62,6 +68,8 @@ fileSizeOver?: number
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Filter-fileSizeOver?: number--><!--Device-Filter-fileSizeOver?: number-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## lastModifiedAfter
@@ -77,6 +85,8 @@ lastModifiedAfter?: number
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Filter-lastModifiedAfter?: number--><!--Device-Filter-lastModifiedAfter?: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -94,6 +104,8 @@ mime类型完全匹配，各个关键词OR关系。预留字段，暂不支持�
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Filter-mimeType?: Array<string>--><!--Device-Filter-mimeType?: Array<string>-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## suffix
@@ -109,5 +121,7 @@ suffix?: Array<string>
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Filter-suffix?: Array<string>--><!--Device-Filter-suffix?: Array<string>-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO

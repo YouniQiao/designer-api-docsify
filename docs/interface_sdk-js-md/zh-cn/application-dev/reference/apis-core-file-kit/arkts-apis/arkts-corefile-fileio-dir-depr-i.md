@@ -12,6 +12,8 @@ declare interface Dir
 
 **替代接口：** [listFile](arkts-corefile-file-fs-listfile-f.md)
 
+<!--Device-unnamed-declare interface Dir--><!--Device-unnamed-declare interface Dir-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## 导入模块
@@ -32,6 +34,8 @@ close(): Promise<void>
 **废弃版本：** 9
 
 **替代接口：** [listFile](arkts-corefile-file-fs-listfile-f.md)
+
+<!--Device-Dir-close(): Promise<void>--><!--Device-Dir-close(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -66,6 +70,8 @@ close(callback: AsyncCallback<void>): void
 
 **替代接口：** [listFile](arkts-corefile-file-fs-listfile-f.md)
 
+<!--Device-Dir-close(callback: AsyncCallback<void>): void--><!--Device-Dir-close(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -97,6 +103,8 @@ closeSync(): void
 
 **替代接口：** [listFile](arkts-corefile-file-fs-listfile-f.md)
 
+<!--Device-Dir-closeSync(): void--><!--Device-Dir-closeSync(): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **示例**
@@ -118,6 +126,8 @@ read(): Promise<Dirent>
 **废弃版本：** 9
 
 **替代接口：** [listFile](arkts-corefile-file-fs-listfile-f.md)
+
+<!--Device-Dir-read(): Promise<Dirent>--><!--Device-Dir-read(): Promise<Dirent>-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -154,6 +164,8 @@ read(callback: AsyncCallback<Dirent>): void
 
 **替代接口：** [listFile](arkts-corefile-file-fs-listfile-f.md)
 
+<!--Device-Dir-read(callback: AsyncCallback<Dirent>): void--><!--Device-Dir-read(callback: AsyncCallback<Dirent>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -187,6 +199,8 @@ readSync(): Dirent
 **废弃版本：** 9
 
 **替代接口：** [listFile](arkts-corefile-file-fs-listfile-f.md)
+
+<!--Device-Dir-readSync(): Dirent--><!--Device-Dir-readSync(): Dirent-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

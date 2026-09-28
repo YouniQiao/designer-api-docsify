@@ -16,6 +16,8 @@ function isDefaultApplication(type: string, callback: AsyncCallback<boolean>) : 
 
 **起始版本：** 9
 
+<!--Device-defaultAppManager-function isDefaultApplication(type: string, callback: AsyncCallback<boolean>) : void--><!--Device-defaultAppManager-function isDefaultApplication(type: string, callback: AsyncCallback<boolean>) : void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.DefaultApp
 
 **参数：**
@@ -59,6 +61,8 @@ function isDefaultApplication(type: string) : Promise<boolean>
 根据系统已定义的应用类型或者[UniformDataType](../../apis-arkdata/arkts-apis/arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)类型判断当前应用是否是该类型的默认应用。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-defaultAppManager-function isDefaultApplication(type: string) : Promise<boolean>--><!--Device-defaultAppManager-function isDefaultApplication(type: string) : Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.DefaultApp
 

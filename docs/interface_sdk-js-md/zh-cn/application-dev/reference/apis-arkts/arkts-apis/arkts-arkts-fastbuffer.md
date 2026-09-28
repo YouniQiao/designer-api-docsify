@@ -10,6 +10,8 @@ FastBuffer通过from构造时，仅支持FastBuffer、Uint8Array、string、Arra
 
 **起始版本：** 20
 
+<!--Device-unnamed-declare namespace fastbuffer--><!--Device-unnamed-declare namespace fastbuffer-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块

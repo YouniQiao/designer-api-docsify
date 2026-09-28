@@ -23,6 +23,8 @@ function getInputMethodEngine(): InputMethodEngine
 
 **替代接口：** [getInputMethodAbility](arkts-ime-inputmethodengine-getinputmethodability-f.md)()
 
+<!--Device-inputMethodEngine-function getInputMethodEngine(): InputMethodEngine--><!--Device-inputMethodEngine-function getInputMethodEngine(): InputMethodEngine-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**

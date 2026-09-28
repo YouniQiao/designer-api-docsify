@@ -18,6 +18,8 @@ function clearUpApplicationData(bundleName: string): Promise<void>
 
 **需要权限：** ohos.permission.CLEAN_APPLICATION_DATA
 
+<!--Device-appManager-function clearUpApplicationData(bundleName: string): Promise<void>--><!--Device-appManager-function clearUpApplicationData(bundleName: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -78,6 +80,8 @@ function clearUpApplicationData(bundleName: string, callback: AsyncCallback<void
 **起始版本：** 9
 
 **需要权限：** ohos.permission.CLEAN_APPLICATION_DATA
+
+<!--Device-appManager-function clearUpApplicationData(bundleName: string, callback: AsyncCallback<void>): void--><!--Device-appManager-function clearUpApplicationData(bundleName: string, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

@@ -10,6 +10,8 @@ export interface FileRmdirOption
 
 **废弃版本：** 10
 
+<!--Device-unnamed-export interface FileRmdirOption--><!--Device-unnamed-export interface FileRmdirOption-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## 导入模块
@@ -29,6 +31,8 @@ complete?: () => void
 
 **废弃版本：** 10
 
+<!--Device-FileRmdirOption-complete?: () => void--><!--Device-FileRmdirOption-complete?: () => void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## fail
@@ -42,6 +46,8 @@ fail?: (data: string, code: number) => void
 **起始版本：** 3
 
 **废弃版本：** 10
+
+<!--Device-FileRmdirOption-fail?: (data: string, code: number) => void--><!--Device-FileRmdirOption-fail?: (data: string, code: number) => void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -64,6 +70,8 @@ success?: () => void
 
 **废弃版本：** 10
 
+<!--Device-FileRmdirOption-success?: () => void--><!--Device-FileRmdirOption-success?: () => void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## recursive
@@ -79,6 +87,8 @@ recursive?: boolean
 **起始版本：** 3
 
 **废弃版本：** 10
+
+<!--Device-FileRmdirOption-recursive?: boolean--><!--Device-FileRmdirOption-recursive?: boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -97,5 +107,7 @@ uri: string
 **起始版本：** 3
 
 **废弃版本：** 10
+
+<!--Device-FileRmdirOption-uri: string--><!--Device-FileRmdirOption-uri: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite

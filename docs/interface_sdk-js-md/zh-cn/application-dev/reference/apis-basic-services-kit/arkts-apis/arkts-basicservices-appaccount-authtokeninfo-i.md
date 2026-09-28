@@ -8,6 +8,8 @@ interface AuthTokenInfo
 
 **起始版本：** 9
 
+<!--Device-appAccount-interface AuthTokenInfo--><!--Device-appAccount-interface AuthTokenInfo-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 ## 导入模块
@@ -28,6 +30,8 @@ account?: AppAccountInfo
 
 **起始版本：** 9
 
+<!--Device-AuthTokenInfo-account?: AppAccountInfo--><!--Device-AuthTokenInfo-account?: AppAccountInfo-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 ## authType
@@ -42,6 +46,8 @@ authType: string
 
 **起始版本：** 9
 
+<!--Device-AuthTokenInfo-authType: string--><!--Device-AuthTokenInfo-authType: string-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 ## token
@@ -55,5 +61,7 @@ token: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-AuthTokenInfo-token: string--><!--Device-AuthTokenInfo-token: string-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount

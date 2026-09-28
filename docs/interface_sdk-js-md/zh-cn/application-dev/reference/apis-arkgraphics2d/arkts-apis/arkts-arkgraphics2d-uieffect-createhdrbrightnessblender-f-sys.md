@@ -16,6 +16,8 @@ function createHdrBrightnessBlender(param: BrightnessBlenderParam): HdrBrightnes
 
 **起始版本：** 20
 
+<!--Device-uiEffect-function createHdrBrightnessBlender(param: BrightnessBlenderParam): HdrBrightnessBlender--><!--Device-uiEffect-function createHdrBrightnessBlender(param: BrightnessBlenderParam): HdrBrightnessBlender-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。

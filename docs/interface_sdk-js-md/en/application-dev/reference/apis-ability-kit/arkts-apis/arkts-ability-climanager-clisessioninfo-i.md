@@ -8,6 +8,8 @@ Describes the session information of a CLI tool or command execution.
 
 **Since:** 26.0.1
 
+<!--Device-cliManager-interface CliSessionInfo--><!--Device-cliManager-interface CliSessionInfo-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 ## Modules to Import
@@ -30,6 +32,8 @@ Indicates the execution result, has a value when status is completed or failed.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-CliSessionInfo-result?: ExecResult--><!--Device-CliSessionInfo-result?: ExecResult-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 ## sessionId
@@ -48,6 +52,8 @@ This ID is used in subsequent calls to [subscribeSession](arkts-ability-climanag
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-CliSessionInfo-sessionId: string--><!--Device-CliSessionInfo-sessionId: string-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 ## status
@@ -63,6 +69,8 @@ Indicates status of session.
 **Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-CliSessionInfo-status: SessionStatus--><!--Device-CliSessionInfo-status: SessionStatus-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -81,5 +89,7 @@ For [execCmd](arkts-ability-climanager-execcmd-f.md), this field is set to "shel
 **Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-CliSessionInfo-toolName: string--><!--Device-CliSessionInfo-toolName: string-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core

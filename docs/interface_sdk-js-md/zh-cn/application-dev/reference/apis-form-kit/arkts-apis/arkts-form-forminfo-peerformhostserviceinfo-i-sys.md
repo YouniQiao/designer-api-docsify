@@ -8,6 +8,8 @@ interface PeerFormHostServiceInfo
 
 **起始版本：** 26.0.1
 
+<!--Device-formInfo-interface PeerFormHostServiceInfo--><!--Device-formInfo-interface PeerFormHostServiceInfo-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ customData?: Record<string, string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PeerFormHostServiceInfo-customData?: Record<string, string>--><!--Device-PeerFormHostServiceInfo-customData?: Record<string, string>-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ deviceId: string
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PeerFormHostServiceInfo-deviceId: string--><!--Device-PeerFormHostServiceInfo-deviceId: string-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -68,6 +74,8 @@ displayId: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PeerFormHostServiceInfo-displayId: string--><!--Device-PeerFormHostServiceInfo-displayId: string-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -85,6 +93,8 @@ networkId: string
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PeerFormHostServiceInfo-networkId: string--><!--Device-PeerFormHostServiceInfo-networkId: string-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -104,6 +114,8 @@ serviceDisplayName: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PeerFormHostServiceInfo-serviceDisplayName: string--><!--Device-PeerFormHostServiceInfo-serviceDisplayName: string-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -122,6 +134,8 @@ serviceId: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PeerFormHostServiceInfo-serviceId: string--><!--Device-PeerFormHostServiceInfo-serviceId: string-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -139,6 +153,8 @@ serviceName: string
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PeerFormHostServiceInfo-serviceName: string--><!--Device-PeerFormHostServiceInfo-serviceName: string-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 

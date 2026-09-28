@@ -8,6 +8,8 @@ Queries portrait parameters.
 
 **起始版本：** 12
 
+<!--Device-camera-interface PortraitQuery--><!--Device-camera-interface PortraitQuery-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -27,6 +29,8 @@ getSupportedPortraitEffects(): Array<PortraitEffect>
 Obtains the supported portrait effects.
 
 **起始版本：** 10
+
+<!--Device-PortraitQuery-getSupportedPortraitEffects(): Array<PortraitEffect>--><!--Device-PortraitQuery-getSupportedPortraitEffects(): Array<PortraitEffect>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

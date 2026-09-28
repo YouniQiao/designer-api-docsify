@@ -8,6 +8,8 @@ Imaging mode query object.
 
 **起始版本：** 26.0.0
 
+<!--Device-camera-interface ImagingModeQuery--><!--Device-camera-interface ImagingModeQuery-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -29,6 +31,8 @@ Checks whether a camera imaging mode is supported.
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ImagingModeQuery-isImagingModeSupported(mode: CameraImagingMode): boolean--><!--Device-ImagingModeQuery-isImagingModeSupported(mode: CameraImagingMode): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

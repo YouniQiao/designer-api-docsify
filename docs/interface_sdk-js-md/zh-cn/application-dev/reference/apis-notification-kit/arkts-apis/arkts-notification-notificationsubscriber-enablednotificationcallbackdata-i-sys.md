@@ -8,6 +8,8 @@ export interface EnabledNotificationCallbackData
 
 **起始版本：** 8
 
+<!--Device-unnamed-export interface EnabledNotificationCallbackData--><!--Device-unnamed-export interface EnabledNotificationCallbackData-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -23,6 +25,8 @@ readonly bundle: string
 **类型：** string
 
 **起始版本：** 8
+
+<!--Device-EnabledNotificationCallbackData-readonly bundle: string--><!--Device-EnabledNotificationCallbackData-readonly bundle: string-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -42,6 +46,8 @@ readonly enable: boolean
 
 **起始版本：** 8
 
+<!--Device-EnabledNotificationCallbackData-readonly enable: boolean--><!--Device-EnabledNotificationCallbackData-readonly enable: boolean-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -57,6 +63,8 @@ readonly uid: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-EnabledNotificationCallbackData-readonly uid: int--><!--Device-EnabledNotificationCallbackData-readonly uid: int-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

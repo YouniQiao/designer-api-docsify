@@ -12,6 +12,8 @@ export interface GeolocationResponse
 
 **替代接口：** [Location](arkts-location-geolocationmanager-location-i.md)
 
+<!--Device-unnamed-export interface GeolocationResponse--><!--Device-unnamed-export interface GeolocationResponse-End-->
+
 **系统能力：** SystemCapability.Location.Location.Lite
 
 ## 导入模块
@@ -38,6 +40,8 @@ accuracy: number
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-GeolocationResponse-accuracy: number--><!--Device-GeolocationResponse-accuracy: number-End-->
+
 **系统能力：** SystemCapability.Location.Location.Lite
 
 ## altitude
@@ -57,6 +61,8 @@ altitude: number
 **替代接口：** [altitude](arkts-location-geolocationmanager-location-i.md#altitude)
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-GeolocationResponse-altitude: number--><!--Device-GeolocationResponse-altitude: number-End-->
 
 **系统能力：** SystemCapability.Location.Location.Lite
 
@@ -78,6 +84,8 @@ latitude: number
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-GeolocationResponse-latitude: number--><!--Device-GeolocationResponse-latitude: number-End-->
+
 **系统能力：** SystemCapability.Location.Location.Lite
 
 ## longitude
@@ -98,6 +106,8 @@ longitude: number
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-GeolocationResponse-longitude: number--><!--Device-GeolocationResponse-longitude: number-End-->
+
 **系统能力：** SystemCapability.Location.Location.Lite
 
 ## time
@@ -117,5 +127,7 @@ time: number
 **替代接口：** [timeStamp](arkts-location-geolocationmanager-location-i.md#timestamp)
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-GeolocationResponse-time: number--><!--Device-GeolocationResponse-time: number-End-->
 
 **系统能力：** SystemCapability.Location.Location.Lite

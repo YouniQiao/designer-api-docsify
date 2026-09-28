@@ -24,6 +24,8 @@ function stopBluetoothDiscovery(): boolean
 
 **需要权限：** ohos.permission.DISCOVER_BLUETOOTH
 
+<!--Device-bluetooth-function stopBluetoothDiscovery(): boolean--><!--Device-bluetooth-function stopBluetoothDiscovery(): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **返回值：**

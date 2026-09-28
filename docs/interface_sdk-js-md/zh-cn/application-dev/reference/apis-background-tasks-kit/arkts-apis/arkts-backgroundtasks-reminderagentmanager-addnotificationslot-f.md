@@ -16,6 +16,8 @@ function addNotificationSlot(slot: NotificationSlot, callback: AsyncCallback<voi
 
 **起始版本：** 9
 
+<!--Device-reminderAgentManager-function addNotificationSlot(slot: NotificationSlot, callback: AsyncCallback<void>): void--><!--Device-reminderAgentManager-function addNotificationSlot(slot: NotificationSlot, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 **参数：**
@@ -63,6 +65,8 @@ function addNotificationSlot(slot: NotificationSlot): Promise<void>
 添加通知渠道。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-reminderAgentManager-function addNotificationSlot(slot: NotificationSlot): Promise<void>--><!--Device-reminderAgentManager-function addNotificationSlot(slot: NotificationSlot): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 

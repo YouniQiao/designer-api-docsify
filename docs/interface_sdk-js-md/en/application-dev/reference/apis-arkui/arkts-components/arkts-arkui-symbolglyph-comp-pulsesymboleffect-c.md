@@ -16,4 +16,6 @@ Inherits from **SymbolEffect**.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-unnamed-declare class PulseSymbolEffect extends SymbolEffect--><!--Device-unnamed-declare class PulseSymbolEffect extends SymbolEffect-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

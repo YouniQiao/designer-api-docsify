@@ -18,6 +18,8 @@ function getCooperateSwitchState(networkId: string, callback: AsyncCallback<bool
 
 **需要权限：** ohos.permission.COOPERATE_MANAGER
 
+<!--Device-cooperate-function getCooperateSwitchState(networkId: string, callback: AsyncCallback<boolean>): void--><!--Device-cooperate-function getCooperateSwitchState(networkId: string, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
 
 **系统接口：** 此接口为系统接口。
@@ -70,6 +72,8 @@ function getCooperateSwitchState(networkId: string): Promise<boolean>
 **起始版本：** 11
 
 **需要权限：** ohos.permission.COOPERATE_MANAGER
+
+<!--Device-cooperate-function getCooperateSwitchState(networkId: string): Promise<boolean>--><!--Device-cooperate-function getCooperateSwitchState(networkId: string): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
 

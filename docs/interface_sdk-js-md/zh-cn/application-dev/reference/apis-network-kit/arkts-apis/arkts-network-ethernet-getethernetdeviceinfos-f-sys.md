@@ -18,6 +18,8 @@ function getEthernetDeviceInfos(): Promise<Array<EthernetDeviceInfos>>
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-ethernet-function getEthernetDeviceInfos(): Promise<Array<EthernetDeviceInfos>>--><!--Device-ethernet-function getEthernetDeviceInfos(): Promise<Array<EthernetDeviceInfos>>-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
 **系统接口：** 此接口为系统接口。

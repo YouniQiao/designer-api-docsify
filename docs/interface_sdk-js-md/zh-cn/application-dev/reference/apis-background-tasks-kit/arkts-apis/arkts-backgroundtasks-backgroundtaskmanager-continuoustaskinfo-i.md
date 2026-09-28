@@ -8,6 +8,8 @@ interface ContinuousTaskInfo
 
 **起始版本：** 20
 
+<!--Device-backgroundTaskManager-interface ContinuousTaskInfo--><!--Device-backgroundTaskManager-interface ContinuousTaskInfo-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## 导入模块
@@ -28,6 +30,8 @@ UIAbility ID.
 
 **起始版本：** 20
 
+<!--Device-ContinuousTaskInfo-abilityId: int--><!--Device-ContinuousTaskInfo-abilityId: int-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## abilityName
@@ -41,6 +45,8 @@ UIAbility名称。
 **类型：** string
 
 **起始版本：** 20
+
+<!--Device-ContinuousTaskInfo-abilityName: string--><!--Device-ContinuousTaskInfo-abilityName: string-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -56,6 +62,8 @@ appIndex?: number
 
 **起始版本：** 23
 
+<!--Device-ContinuousTaskInfo-appIndex?: int--><!--Device-ContinuousTaskInfo-appIndex?: int-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## backgroundModes
@@ -69,6 +77,8 @@ backgroundModes: string[]
 **类型：** string[]
 
 **起始版本：** 20
+
+<!--Device-ContinuousTaskInfo-backgroundModes: string[]--><!--Device-ContinuousTaskInfo-backgroundModes: string[]-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -84,6 +94,8 @@ backgroundSubModes: string[]
 
 **起始版本：** 20
 
+<!--Device-ContinuousTaskInfo-backgroundSubModes: string[]--><!--Device-ContinuousTaskInfo-backgroundSubModes: string[]-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## bundleName
@@ -97,6 +109,8 @@ bundleName?: string
 **类型：** string
 
 **起始版本：** 23
+
+<!--Device-ContinuousTaskInfo-bundleName?: string--><!--Device-ContinuousTaskInfo-bundleName?: string-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -112,6 +126,8 @@ continuousTaskId: number
 
 **起始版本：** 20
 
+<!--Device-ContinuousTaskInfo-continuousTaskId: int--><!--Device-ContinuousTaskInfo-continuousTaskId: int-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## isFromWebView
@@ -125,6 +141,8 @@ isFromWebView: boolean
 **类型：** boolean
 
 **起始版本：** 20
+
+<!--Device-ContinuousTaskInfo-isFromWebView: boolean--><!--Device-ContinuousTaskInfo-isFromWebView: boolean-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -140,6 +158,8 @@ notificationId: number
 
 **起始版本：** 20
 
+<!--Device-ContinuousTaskInfo-notificationId: int--><!--Device-ContinuousTaskInfo-notificationId: int-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## pid
@@ -153,6 +173,8 @@ pid: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-ContinuousTaskInfo-pid: int--><!--Device-ContinuousTaskInfo-pid: int-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -168,6 +190,8 @@ suspendState: boolean
 
 **起始版本：** 20
 
+<!--Device-ContinuousTaskInfo-suspendState: boolean--><!--Device-ContinuousTaskInfo-suspendState: boolean-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## uid
@@ -181,6 +205,8 @@ uid: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-ContinuousTaskInfo-uid: int--><!--Device-ContinuousTaskInfo-uid: int-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -196,6 +222,8 @@ wantAgentAbilityName: string
 
 **起始版本：** 20
 
+<!--Device-ContinuousTaskInfo-wantAgentAbilityName: string--><!--Device-ContinuousTaskInfo-wantAgentAbilityName: string-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## wantAgentBundleName
@@ -209,5 +237,7 @@ wantAgentBundleName: string
 **类型：** string
 
 **起始版本：** 20
+
+<!--Device-ContinuousTaskInfo-wantAgentBundleName: string--><!--Device-ContinuousTaskInfo-wantAgentBundleName: string-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask

@@ -14,6 +14,8 @@ WebNativeMessagingExtensionContext是Web原生消息扩展（[WebNativeMessaging
 
 **起始版本：** 21
 
+<!--Device-unnamed-export default class WebNativeMessagingExtensionContext extends ExtensionContext--><!--Device-unnamed-export default class WebNativeMessagingExtensionContext extends ExtensionContext-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## 导入模块
@@ -33,6 +35,8 @@ startAbility(want: Want, options?: StartOptions): Promise<void>
 **起始版本：** 21
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WebNativeMessagingExtensionContext-startAbility(want: Want, options?: StartOptions): Promise<void>--><!--Device-WebNativeMessagingExtensionContext-startAbility(want: Want, options?: StartOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -121,6 +125,8 @@ startAbilityForResult(want: Want, options?: StartOptions): Promise<AbilityResult
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-WebNativeMessagingExtensionContext-startAbilityForResult(want: Want, options?: StartOptions): Promise<AbilityResult>--><!--Device-WebNativeMessagingExtensionContext-startAbilityForResult(want: Want, options?: StartOptions): Promise<AbilityResult>-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -207,6 +213,8 @@ stopNativeConnection(connectionId: number): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-WebNativeMessagingExtensionContext-stopNativeConnection(connectionId: number): Promise<void>--><!--Device-WebNativeMessagingExtensionContext-stopNativeConnection(connectionId: number): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -265,6 +273,8 @@ terminateSelf(): Promise<void>
 **起始版本：** 21
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WebNativeMessagingExtensionContext-terminateSelf(): Promise<void>--><!--Device-WebNativeMessagingExtensionContext-terminateSelf(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

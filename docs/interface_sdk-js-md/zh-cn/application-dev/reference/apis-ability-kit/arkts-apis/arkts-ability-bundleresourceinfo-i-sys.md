@@ -12,6 +12,8 @@ export interface BundleResourceInfo
 
 **起始版本：** 11
 
+<!--Device-unnamed-export interface BundleResourceInfo--><!--Device-unnamed-export interface BundleResourceInfo-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Resource
 
 **系统接口：** 此接口为系统接口。
@@ -27,6 +29,8 @@ readonly appIndex: number
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-BundleResourceInfo-readonly appIndex: int--><!--Device-BundleResourceInfo-readonly appIndex: int-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Resource
 
@@ -44,6 +48,8 @@ readonly bundleName: string
 
 **起始版本：** 11
 
+<!--Device-BundleResourceInfo-readonly bundleName: string--><!--Device-BundleResourceInfo-readonly bundleName: string-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Resource
 
 **系统接口：** 此接口为系统接口。
@@ -59,6 +65,8 @@ readonly drawableDescriptor: DrawableDescriptor
 **类型：** [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md)
 
 **起始版本：** 12
+
+<!--Device-BundleResourceInfo-readonly drawableDescriptor: DrawableDescriptor--><!--Device-BundleResourceInfo-readonly drawableDescriptor: DrawableDescriptor-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Resource
 
@@ -76,6 +84,8 @@ readonly icon: string
 
 **起始版本：** 11
 
+<!--Device-BundleResourceInfo-readonly icon: string--><!--Device-BundleResourceInfo-readonly icon: string-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Resource
 
 **系统接口：** 此接口为系统接口。
@@ -91,6 +101,8 @@ readonly label: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-BundleResourceInfo-readonly label: string--><!--Device-BundleResourceInfo-readonly label: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Resource
 

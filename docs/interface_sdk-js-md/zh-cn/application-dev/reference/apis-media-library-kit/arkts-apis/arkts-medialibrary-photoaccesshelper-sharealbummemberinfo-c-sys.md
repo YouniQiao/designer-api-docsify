@@ -8,6 +8,8 @@ export class ShareAlbumMemberInfo
 
 **起始版本：** 26.0.1
 
+<!--Device-photoAccessHelper-export class ShareAlbumMemberInfo--><!--Device-photoAccessHelper-export class ShareAlbumMemberInfo-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ public memberInfos: MemberInfo[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ShareAlbumMemberInfo-public memberInfos: MemberInfo[]--><!--Device-ShareAlbumMemberInfo-public memberInfos: MemberInfo[]-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ public shareAlbumOwner: string
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ShareAlbumMemberInfo-public shareAlbumOwner: string--><!--Device-ShareAlbumMemberInfo-public shareAlbumOwner: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

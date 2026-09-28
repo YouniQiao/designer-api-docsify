@@ -21,6 +21,8 @@ function off(type: 'colorChange', callback?: (colors: Array<RgbaColor>, wallpape
 
 **废弃版本：** 9
 
+<!--Device-wallpaper-function off(type: 'colorChange', callback?: (colors: Array<RgbaColor>, wallpaperType: WallpaperType) => void): void--><!--Device-wallpaper-function off(type: 'colorChange', callback?: (colors: Array<RgbaColor>, wallpaperType: WallpaperType) => void): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
 **参数：**

@@ -16,6 +16,8 @@ interface DeviceKVStore extends SingleKVStore
 
 **起始版本：** 9
 
+<!--Device-distributedKVStore-interface DeviceKVStore extends SingleKVStore--><!--Device-distributedKVStore-interface DeviceKVStore extends SingleKVStore-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 ## 导入模块
@@ -37,6 +39,8 @@ getResultSet(predicates: dataSharePredicates.DataSharePredicates, callback: Asyn
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DeviceKVStore-getResultSet(predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<KVStoreResultSet>): void--><!--Device-DeviceKVStore-getResultSet(predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<KVStoreResultSet>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Provider
 
@@ -402,6 +406,8 @@ getResultSet(predicates: dataSharePredicates.DataSharePredicates): Promise<KVSto
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DeviceKVStore-getResultSet(predicates: dataSharePredicates.DataSharePredicates): Promise<KVStoreResultSet>--><!--Device-DeviceKVStore-getResultSet(predicates: dataSharePredicates.DataSharePredicates): Promise<KVStoreResultSet>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Provider
 
@@ -773,6 +779,8 @@ getResultSet(deviceId: string, predicates: dataSharePredicates.DataSharePredicat
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DeviceKVStore-getResultSet(deviceId: string, predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<KVStoreResultSet>): void--><!--Device-DeviceKVStore-getResultSet(deviceId: string, predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<KVStoreResultSet>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Provider
 
 **系统接口：** 此接口为系统接口。
@@ -1138,6 +1146,8 @@ getResultSet(deviceId: string, predicates: dataSharePredicates.DataSharePredicat
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DeviceKVStore-getResultSet(deviceId: string, predicates: dataSharePredicates.DataSharePredicates): Promise<KVStoreResultSet>--><!--Device-DeviceKVStore-getResultSet(deviceId: string, predicates: dataSharePredicates.DataSharePredicates): Promise<KVStoreResultSet>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Provider
 

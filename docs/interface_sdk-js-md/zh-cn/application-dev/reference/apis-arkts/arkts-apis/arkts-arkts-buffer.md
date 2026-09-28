@@ -4,6 +4,8 @@ Buffer对象用于表示固定长度的字节序列，是专门存放二进制�
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace buffer--><!--Device-unnamed-declare namespace buffer-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块

@@ -8,6 +8,8 @@ Describes the focus tracking information, which is obtained by calling VideoSess
 
 **起始版本：** 15
 
+<!--Device-camera-interface FocusTrackingInfo--><!--Device-camera-interface FocusTrackingInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ Tracing mode.
 
 **起始版本：** 15
 
+<!--Device-FocusTrackingInfo-trackingMode: FocusTrackingMode--><!--Device-FocusTrackingInfo-trackingMode: FocusTrackingMode-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ Tracking region.
 **类型：** [Rect](arkts-camera-camera-rect-i.md)
 
 **起始版本：** 15
+
+<!--Device-FocusTrackingInfo-trackingRegion: Rect--><!--Device-FocusTrackingInfo-trackingRegion: Rect-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

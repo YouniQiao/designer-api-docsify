@@ -4,6 +4,8 @@
 
 **起始版本：** 7
 
+<!--Device-unnamed-declare namespace contact--><!--Device-unnamed-declare namespace contact-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 ## 导入模块

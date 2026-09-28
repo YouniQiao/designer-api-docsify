@@ -8,6 +8,8 @@ export interface ReadOptions
 
 **起始版本：** 11
 
+<!--Device-unnamed-export interface ReadOptions--><!--Device-unnamed-export interface ReadOptions-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## 导入模块
@@ -30,6 +32,8 @@ length?: number
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-ReadOptions-length?: number--><!--Device-ReadOptions-length?: number-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## offset
@@ -45,5 +49,7 @@ offset?: number
 **起始版本：** 11
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ReadOptions-offset?: number--><!--Device-ReadOptions-offset?: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO

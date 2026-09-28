@@ -10,6 +10,8 @@ interface DialogButtonInfo
 
 **起始版本：** 23
 
+<!--Device-avMusicTemplate-interface DialogButtonInfo--><!--Device-avMusicTemplate-interface DialogButtonInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## 导入模块
@@ -32,6 +34,8 @@ buttonId: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DialogButtonInfo-buttonId: string--><!--Device-DialogButtonInfo-buttonId: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## buttonText
@@ -48,6 +52,8 @@ buttonText: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DialogButtonInfo-buttonText: string--><!--Device-DialogButtonInfo-buttonText: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## buttonType
@@ -63,5 +69,7 @@ buttonType: ButtonType
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DialogButtonInfo-buttonType: ButtonType--><!--Device-DialogButtonInfo-buttonType: ButtonType-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate

@@ -18,6 +18,8 @@ Starting from API 26.0.0, it is recommended to use [createPixelMapFromPixelsSync
 
 **起始版本：** 12
 
+<!--Device-image-function createPixelMapSync(colors: ArrayBuffer, options: InitializationOptions): PixelMap--><!--Device-image-function createPixelMapSync(colors: ArrayBuffer, options: InitializationOptions): PixelMap-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
@@ -80,6 +82,8 @@ Create an empty pixelmap.
 Starting from API 26.0.0, it is recommended to use [createEmptyPixelMap](arkts-image-image-createemptypixelmap-f.md) instead for better exception handling capabilities.
 
 **起始版本：** 12
+
+<!--Device-image-function createPixelMapSync(options: InitializationOptions): PixelMap--><!--Device-image-function createPixelMapSync(options: InitializationOptions): PixelMap-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 

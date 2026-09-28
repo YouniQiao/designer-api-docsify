@@ -8,6 +8,8 @@ export @interface Available
 
 **起始版本：** 22
 
+<!--Device-unnamed-export @interface Available--><!--Device-unnamed-export @interface Available-End-->
+
 **系统能力：** SystemCapability.Base
 
 ## 导入模块
@@ -33,6 +35,8 @@ minApiVersion用于标识最低可用版本，由两部分组成：系统类型+
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-Available-minApiVersion: string = ''--><!--Device-Available-minApiVersion: string = ''-End-->
 
 **系统能力：** SystemCapability.Base
 

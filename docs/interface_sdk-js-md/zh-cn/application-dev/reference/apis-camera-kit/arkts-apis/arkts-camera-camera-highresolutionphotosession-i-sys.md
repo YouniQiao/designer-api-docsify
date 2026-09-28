@@ -14,6 +14,8 @@ HighResolutionPhotoSession extends Session, AutoExposure, Focus Implements a hig
 
 **起始版本：** 12
 
+<!--Device-camera-interface HighResolutionPhotoSession extends Session, AutoExposure, Focus--><!--Device-camera-interface HighResolutionPhotoSession extends Session, AutoExposure, Focus-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -33,6 +35,8 @@ off(type: 'error', callback?: ErrorCallback): void
 Unsubscribes from HighResolutionPhotoSession error events.
 
 **起始版本：** 12
+
+<!--Device-HighResolutionPhotoSession-off(type: 'error', callback?: ErrorCallback): void--><!--Device-HighResolutionPhotoSession-off(type: 'error', callback?: ErrorCallback): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -69,6 +73,8 @@ Unsubscribes from focus state change events.
 
 **起始版本：** 12
 
+<!--Device-HighResolutionPhotoSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void--><!--Device-HighResolutionPhotoSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -103,6 +109,8 @@ on(type: 'error', callback: ErrorCallback): void
 Subscribes to HighResolutionPhotoSession error events. This API uses an asynchronous callback to return the result.
 
 **起始版本：** 12
+
+<!--Device-HighResolutionPhotoSession-on(type: 'error', callback: ErrorCallback): void--><!--Device-HighResolutionPhotoSession-on(type: 'error', callback: ErrorCallback): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -144,6 +152,8 @@ on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
 Subscribes to focus state change events. This API uses an asynchronous callback to return the result.
 
 **起始版本：** 12
+
+<!--Device-HighResolutionPhotoSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void--><!--Device-HighResolutionPhotoSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

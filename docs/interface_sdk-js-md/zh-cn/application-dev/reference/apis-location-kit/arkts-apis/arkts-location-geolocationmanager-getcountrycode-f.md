@@ -16,6 +16,8 @@ function getCountryCode(callback: AsyncCallback<CountryCode>): void
 
 **起始版本：** 9
 
+<!--Device-geoLocationManager-function getCountryCode(callback: AsyncCallback<CountryCode>): void--><!--Device-geoLocationManager-function getCountryCode(callback: AsyncCallback<CountryCode>): void-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **参数：**
@@ -64,6 +66,8 @@ function getCountryCode(): Promise<CountryCode>
 查询当前的国家码。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-geoLocationManager-function getCountryCode(): Promise<CountryCode>--><!--Device-geoLocationManager-function getCountryCode(): Promise<CountryCode>-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 

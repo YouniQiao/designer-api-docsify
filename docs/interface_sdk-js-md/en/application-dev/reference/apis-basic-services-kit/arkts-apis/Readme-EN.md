@@ -267,6 +267,8 @@
   - [BatteryStatsInfo(system api)](arkts-basicservices-batterystats-batterystatsinfo-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [ConsumptionType(system api)](arkts-basicservices-batterystats-consumptiontype-e-sys.md)<!--DelEnd-->
+- [@ohos.boardInfo](arkts-basicservices-boardinfo.md)
+  - [Constants](arkts-basicservices-boardinfo-con.md)
 <!--Del-->
 - [@ohos.brightness(Screen Brightness)](arkts-basicservices-brightness.md)<!--DelEnd-->
   <!--Del-->

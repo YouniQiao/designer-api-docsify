@@ -28,6 +28,8 @@ function transformCoordinateSystem(inRotationVector: Array<number>, coordinates:
 
 **替代接口：** [transformRotationMatrix](arkts-sensorservice-sensor-transformrotationmatrix-f.md)(inRotationVector: Array&lt;number&gt;, coordinates: CoordinatesOptions, callback: AsyncCallback&lt;Array&lt;number&gt;&gt;)
 
+<!--Device-sensor-function transformCoordinateSystem(inRotationVector: Array<number>, coordinates: CoordinatesOptions,    callback: AsyncCallback<Array<number>>): void--><!--Device-sensor-function transformCoordinateSystem(inRotationVector: Array<number>, coordinates: CoordinatesOptions,    callback: AsyncCallback<Array<number>>): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -79,6 +81,8 @@ function transformCoordinateSystem(inRotationVector: Array<number>, coordinates:
 **废弃版本：** 9
 
 **替代接口：** [transformRotationMatrix](arkts-sensorservice-sensor-transformrotationmatrix-f.md)(inRotationVector: Array&lt;number&gt;, coordinates: CoordinatesOptions)
+
+<!--Device-sensor-function transformCoordinateSystem(inRotationVector: Array<number>, coordinates: CoordinatesOptions): Promise<Array<number>>--><!--Device-sensor-function transformCoordinateSystem(inRotationVector: Array<number>, coordinates: CoordinatesOptions): Promise<Array<number>>-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 

@@ -18,6 +18,8 @@ Starts EAP authentication on an Ethernet NIC.
 
 **Required permissions:** ohos.permission.MANAGE_ENTERPRISE_WIFI_CONNECTION
 
+<!--Device-eap-function startEthEap(netId: int, profile: EthEapProfile): void--><!--Device-eap-function startEthEap(netId: int, profile: EthEapProfile): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 **Parameters:**

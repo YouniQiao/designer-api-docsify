@@ -21,6 +21,8 @@ function offDistanceMeasure(configParams: DistanceMeasurementConfigParams,
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-spatialAwareness-function offDistanceMeasure(configParams: DistanceMeasurementConfigParams,    callback?: Callback<DistanceMeasurementResponse>): void--><!--Device-spatialAwareness-function offDistanceMeasure(configParams: DistanceMeasurementConfigParams,    callback?: Callback<DistanceMeasurementResponse>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.DistanceMeasurement
 
 **系统接口：** 此接口为系统接口。

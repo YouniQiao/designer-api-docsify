@@ -18,6 +18,8 @@ This API is used when you need to obtain the ambient light intensity and color t
 
 **Since:** 10
 
+<!--Device-sensor-function on(type: SensorId.COLOR, callback: Callback<ColorResponse>, options?: Options): void--><!--Device-sensor-function on(type: SensorId.COLOR, callback: Callback<ColorResponse>, options?: Options): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **System API:** This is a system API.
@@ -72,6 +74,8 @@ Subscribes to data changes of the Sodium Adsorption Ratio (SAR) sensor. This API
 This API can be used to monitor the SAR of a device to implement functions such as communication security detection and radiation detection.
 
 **Since:** 10
+
+<!--Device-sensor-function on(type: SensorId.SAR, callback: Callback<SarResponse>, options?: Options): void--><!--Device-sensor-function on(type: SensorId.SAR, callback: Callback<SarResponse>, options?: Options): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 

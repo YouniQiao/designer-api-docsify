@@ -8,6 +8,8 @@ USB Key PIN码认证请求。
 
 **起始版本：** 22
 
+<!--Device-certificateManagerDialog-export interface UkeyAuthRequest--><!--Device-certificateManagerDialog-export interface UkeyAuthRequest-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
 ## 导入模块
@@ -30,6 +32,8 @@ customData?: Uint8Array
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UkeyAuthRequest-customData?: Uint8Array--><!--Device-UkeyAuthRequest-customData?: Uint8Array-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
 ## keyUri
@@ -46,6 +50,8 @@ keyUri: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UkeyAuthRequest-keyUri: string--><!--Device-UkeyAuthRequest-keyUri: string-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
 ## timeoutDuration
@@ -61,5 +67,7 @@ Ukey认证对话框操作超时时间。单位为：秒。取值应为[180,600]�
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UkeyAuthRequest-timeoutDuration?: int--><!--Device-UkeyAuthRequest-timeoutDuration?: int-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManagerDialog

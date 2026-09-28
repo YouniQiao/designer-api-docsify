@@ -8,6 +8,8 @@ interface TransientParam
 
 **起始版本：** 18
 
+<!--Device-vibrator-interface TransientParam--><!--Device-vibrator-interface TransientParam-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## 导入模块
@@ -28,6 +30,8 @@ frequency?: number
 
 **起始版本：** 18
 
+<!--Device-TransientParam-frequency?: int--><!--Device-TransientParam-frequency?: int-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## index
@@ -42,6 +46,8 @@ index?: number
 
 **起始版本：** 18
 
+<!--Device-TransientParam-index?: int--><!--Device-TransientParam-index?: int-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## intensity
@@ -55,5 +61,7 @@ intensity?: number
 **类型：** number
 
 **起始版本：** 18
+
+<!--Device-TransientParam-intensity?: int--><!--Device-TransientParam-intensity?: int-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice

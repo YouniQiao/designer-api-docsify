@@ -8,6 +8,8 @@ TreeSet基于[TreeMap](arkts-arkts-util-treemap-treemap-c.md)实现，在TreeSet
 
 **起始版本：** 8
 
+<!--Device-unnamed-declare class TreeSet<T>--><!--Device-unnamed-declare class TreeSet<T>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -27,6 +29,8 @@ import { TreeSet } from '@kit.ArkTS';
 **起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TreeSet-[Symbol.iterator](): IterableIterator<T>--><!--Device-TreeSet-[Symbol.iterator](): IterableIterator<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -87,7 +91,9 @@ add(value: T): boolean
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TreeSet-add(value: T): boolean--><!--Device-TreeSet-add(value: T): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -127,7 +133,9 @@ clear(): void
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TreeSet-clear(): void--><!--Device-TreeSet-clear(): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -159,6 +167,8 @@ TreeSet的构造函数，支持通过比较函数对元素进行升序或降序�
 **起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TreeSet-constructor(comparator?: (firstValue: T, secondValue: T) => boolean)--><!--Device-TreeSet-constructor(comparator?: (firstValue: T, secondValue: T) => boolean)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -226,7 +236,9 @@ entries(): IterableIterator<[T, T]>
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TreeSet-entries(): IterableIterator<[T, T]>--><!--Device-TreeSet-entries(): IterableIterator<[T, T]>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -283,6 +295,8 @@ forEach(callbackFn: (value?: T, key?: T, set?: TreeSet<T>) => void, thisArg?: Ob
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-TreeSet-forEach(callbackFn: (value?: T, key?: T, set?: TreeSet<T>) => void, thisArg?: Object): void--><!--Device-TreeSet-forEach(callbackFn: (value?: T, key?: T, set?: TreeSet<T>) => void, thisArg?: Object): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -333,7 +347,9 @@ getFirstValue(): T
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TreeSet-getFirstValue(): T--><!--Device-TreeSet-getFirstValue(): T-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -371,6 +387,8 @@ getHigherValue(key: T): T
 **起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TreeSet-getHigherValue(key: T): T--><!--Device-TreeSet-getHigherValue(key: T): T-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -413,7 +431,9 @@ getLastValue(): T
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TreeSet-getLastValue(): T--><!--Device-TreeSet-getLastValue(): T-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -451,6 +471,8 @@ getLowerValue(key: T): T
 **起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TreeSet-getLowerValue(key: T): T--><!--Device-TreeSet-getLowerValue(key: T): T-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -493,7 +515,9 @@ has(value: T): boolean
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TreeSet-has(value: T): boolean--><!--Device-TreeSet-has(value: T): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -535,7 +559,9 @@ isEmpty(): boolean
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TreeSet-isEmpty(): boolean--><!--Device-TreeSet-isEmpty(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -570,7 +596,9 @@ popFirst(): T
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TreeSet-popFirst(): T--><!--Device-TreeSet-popFirst(): T-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -607,7 +635,9 @@ popLast(): T
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TreeSet-popLast(): T--><!--Device-TreeSet-popLast(): T-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -644,7 +674,9 @@ remove(value: T): boolean
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TreeSet-remove(value: T): boolean--><!--Device-TreeSet-remove(value: T): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -686,7 +718,9 @@ values(): IterableIterator<T>
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TreeSet-values(): IterableIterator<T>--><!--Device-TreeSet-values(): IterableIterator<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -730,5 +764,7 @@ TreeSet的元素个数。
 **起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TreeSet-length: number--><!--Device-TreeSet-length: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

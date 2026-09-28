@@ -16,6 +16,8 @@ function getPowerMode(): DevicePowerMode
 
 **起始版本：** 9
 
+<!--Device-power-function getPowerMode(): DevicePowerMode--><!--Device-power-function getPowerMode(): DevicePowerMode-End-->
+
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 
 **返回值：**

@@ -8,6 +8,8 @@ interface CustomCursor
 
 **起始版本：** 15
 
+<!--Device-pointer-interface CustomCursor--><!--Device-pointer-interface CustomCursor-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## 导入模块
@@ -28,6 +30,8 @@ focusX?: number
 
 **起始版本：** 15
 
+<!--Device-CustomCursor-focusX?: int--><!--Device-CustomCursor-focusX?: int-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## focusY
@@ -42,6 +46,8 @@ focusY?: number
 
 **起始版本：** 15
 
+<!--Device-CustomCursor-focusY?: int--><!--Device-CustomCursor-focusY?: int-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## pixelMap
@@ -55,5 +61,7 @@ pixelMap: image.PixelMap
 **类型：** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **起始版本：** 15
+
+<!--Device-CustomCursor-pixelMap: image.PixelMap--><!--Device-CustomCursor-pixelMap: image.PixelMap-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer

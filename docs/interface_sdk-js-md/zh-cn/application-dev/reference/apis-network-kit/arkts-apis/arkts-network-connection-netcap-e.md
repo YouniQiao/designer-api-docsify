@@ -8,6 +8,8 @@ export enum NetCap
 
 **起始版本：** 8
 
+<!--Device-connection-export enum NetCap--><!--Device-connection-export enum NetCap-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## NET_CAPABILITY_MMS
@@ -20,7 +22,9 @@ NET_CAPABILITY_MMS = 0
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-NetCap-NET_CAPABILITY_MMS = 0--><!--Device-NetCap-NET_CAPABILITY_MMS = 0-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -34,7 +38,9 @@ NET_CAPABILITY_NOT_METERED = 11
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-NetCap-NET_CAPABILITY_NOT_METERED = 11--><!--Device-NetCap-NET_CAPABILITY_NOT_METERED = 11-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -48,7 +54,9 @@ NET_CAPABILITY_INTERNET = 12
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-NetCap-NET_CAPABILITY_INTERNET = 12--><!--Device-NetCap-NET_CAPABILITY_INTERNET = 12-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -62,7 +70,9 @@ NET_CAPABILITY_NOT_VPN = 15
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-NetCap-NET_CAPABILITY_NOT_VPN = 15--><!--Device-NetCap-NET_CAPABILITY_NOT_VPN = 15-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -78,7 +88,9 @@ NET_CAPABILITY_VALIDATED = 16
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-NetCap-NET_CAPABILITY_VALIDATED = 16--><!--Device-NetCap-NET_CAPABILITY_VALIDATED = 16-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -92,7 +104,9 @@ NET_CAPABILITY_PORTAL = 17
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-NetCap-NET_CAPABILITY_PORTAL = 17--><!--Device-NetCap-NET_CAPABILITY_PORTAL = 17-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -106,6 +120,8 @@ NET_CAPABILITY_CHECKING_CONNECTIVITY = 31
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-NetCap-NET_CAPABILITY_CHECKING_CONNECTIVITY = 31--><!--Device-NetCap-NET_CAPABILITY_CHECKING_CONNECTIVITY = 31-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core

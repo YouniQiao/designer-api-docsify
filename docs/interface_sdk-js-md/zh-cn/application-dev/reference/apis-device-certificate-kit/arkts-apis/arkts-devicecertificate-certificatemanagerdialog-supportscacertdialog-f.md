@@ -18,6 +18,8 @@ function supportsCACertDialog(): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-certificateManagerDialog-function supportsCACertDialog(): boolean--><!--Device-certificateManagerDialog-function supportsCACertDialog(): boolean-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
 **返回值：**

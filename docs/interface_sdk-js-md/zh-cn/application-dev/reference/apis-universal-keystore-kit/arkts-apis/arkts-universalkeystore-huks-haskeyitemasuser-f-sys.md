@@ -18,6 +18,8 @@ function hasKeyItemAsUser(userId: number, keyAlias: string, huksOptions: HuksOpt
 
 **需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
+<!--Device-huks-function hasKeyItemAsUser(userId: number, keyAlias: string, huksOptions: HuksOptions): Promise<boolean>--><!--Device-huks-function hasKeyItemAsUser(userId: number, keyAlias: string, huksOptions: HuksOptions): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Extension
 
 **系统接口：** 此接口为系统接口。
@@ -40,10 +42,10 @@ function hasKeyItemAsUser(userId: number, keyAlias: string, huksOptions: HuksOpt
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | the application permission is not sufficient, which may be caused by lack of<br>cross-account permission, or the system has not been unlocked by user, or the user does not exist. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed: call the hasKeyItemAsUser API, missing Permission: ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS, or the system has not been unlocked by user, or the user does not exist. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | non-system applications are not allowed to use system APIs. |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | api is not supported |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: 1. The hardware does not support the capability. 2. The chip does not support the capability. 3. A dependent service feature is not supported. |
 | [12000002](../errorcode-huks.md#12000002-缺少密钥算法参数) | algorithm param is missing |
 | [12000003](../errorcode-huks.md#12000003-无效的密钥算法参数) | algorithm param is invalid |
 | [12000004](../errorcode-huks.md#12000004-文件错误) | operating file failed |

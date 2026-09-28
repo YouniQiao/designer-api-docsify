@@ -8,6 +8,8 @@ Enumerates the modes of the date picker.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export declare enum DateMode--><!--Device-unnamed-export declare enum DateMode-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## DATE
@@ -23,6 +25,8 @@ Three columns: year, month, and day.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-DateMode-DATE = 0--><!--Device-DateMode-DATE = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,6 +44,8 @@ Two columns: year and month.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-DateMode-YEAR_AND_MONTH = 1--><!--Device-DateMode-YEAR_AND_MONTH = 1-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## MONTH_AND_DAY
@@ -55,5 +61,7 @@ Two columns: month and day. In this mode, the year is specified by **selected** 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-DateMode-MONTH_AND_DAY = 2--><!--Device-DateMode-MONTH_AND_DAY = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

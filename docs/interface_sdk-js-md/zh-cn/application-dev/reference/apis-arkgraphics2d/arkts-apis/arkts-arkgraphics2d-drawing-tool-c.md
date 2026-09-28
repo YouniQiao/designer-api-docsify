@@ -16,6 +16,8 @@ class Tool
 
 **起始版本：** 15
 
+<!--Device-drawing-class Tool--><!--Device-drawing-class Tool-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## 导入模块
@@ -33,6 +35,8 @@ static makeColorFromResourceColor(resourceColor: ResourceColor): common2D.Color
 将ResourceColor类型的值转换为common2D.Color对象。
 
 **起始版本：** 15
+
+<!--Device-Tool-static makeColorFromResourceColor(resourceColor: ResourceColor): common2D.Color--><!--Device-Tool-static makeColorFromResourceColor(resourceColor: ResourceColor): common2D.Color-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

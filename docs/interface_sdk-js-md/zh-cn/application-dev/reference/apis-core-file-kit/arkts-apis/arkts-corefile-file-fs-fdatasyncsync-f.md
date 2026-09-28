@@ -16,6 +16,8 @@ declare function fdatasyncSync(fd: number): void
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare function fdatasyncSync(fd: number): void--><!--Device-unnamed-declare function fdatasyncSync(fd: number): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**

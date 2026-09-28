@@ -16,6 +16,8 @@ function resetProcessPriority(pid: number): Promise<void>
 
 **起始版本：** 17
 
+<!--Device-backgroundProcessManager-function resetProcessPriority(pid: int): Promise<void>--><!--Device-backgroundProcessManager-function resetProcessPriority(pid: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Resourceschedule.BackgroundProcessManager
 
 **参数：**

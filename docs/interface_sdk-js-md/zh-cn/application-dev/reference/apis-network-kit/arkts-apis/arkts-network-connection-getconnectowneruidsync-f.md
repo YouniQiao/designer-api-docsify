@@ -28,6 +28,8 @@ function getConnectOwnerUidSync(protocol: ProtocolType, local: NetAddress, remot
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-connection-function getConnectOwnerUidSync(protocol: ProtocolType, local: NetAddress, remote: NetAddress): int--><!--Device-connection-function getConnectOwnerUidSync(protocol: ProtocolType, local: NetAddress, remote: NetAddress): int-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**

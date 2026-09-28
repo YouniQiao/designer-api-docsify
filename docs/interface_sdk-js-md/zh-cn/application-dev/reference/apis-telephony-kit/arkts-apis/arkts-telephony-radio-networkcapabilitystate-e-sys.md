@@ -8,6 +8,8 @@ Enum for network capability state.
 
 **起始版本：** 10
 
+<!--Device-radio-export enum NetworkCapabilityState--><!--Device-radio-export enum NetworkCapabilityState-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -22,6 +24,8 @@ Indicates turn off network switch.
 
 **起始版本：** 10
 
+<!--Device-NetworkCapabilityState-SERVICE_CAPABILITY_OFF = 0--><!--Device-NetworkCapabilityState-SERVICE_CAPABILITY_OFF = 0-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -35,6 +39,8 @@ SERVICE_CAPABILITY_ON = 1
 Indicates turn on network switch.
 
 **起始版本：** 10
+
+<!--Device-NetworkCapabilityState-SERVICE_CAPABILITY_ON = 1--><!--Device-NetworkCapabilityState-SERVICE_CAPABILITY_ON = 1-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

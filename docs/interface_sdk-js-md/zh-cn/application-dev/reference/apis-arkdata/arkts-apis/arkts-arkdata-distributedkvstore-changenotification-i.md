@@ -8,6 +8,8 @@ interface ChangeNotification
 
 **起始版本：** 9
 
+<!--Device-distributedKVStore-interface ChangeNotification--><!--Device-distributedKVStore-interface ChangeNotification-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ deleteEntries: Entry[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ChangeNotification-deleteEntries: Entry[]--><!--Device-ChangeNotification-deleteEntries: Entry[]-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## deviceId
@@ -45,6 +49,8 @@ deviceId: string
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ChangeNotification-deviceId: string--><!--Device-ChangeNotification-deviceId: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -62,6 +68,8 @@ insertEntries: Entry[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ChangeNotification-insertEntries: Entry[]--><!--Device-ChangeNotification-insertEntries: Entry[]-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## updateEntries
@@ -77,5 +85,7 @@ updateEntries: Entry[]
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ChangeNotification-updateEntries: Entry[]--><!--Device-ChangeNotification-updateEntries: Entry[]-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core

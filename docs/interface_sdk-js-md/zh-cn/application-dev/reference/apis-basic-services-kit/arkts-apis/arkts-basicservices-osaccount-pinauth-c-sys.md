@@ -8,6 +8,8 @@ PIN码认证基类。
 
 **起始版本：** 8
 
+<!--Device-osAccount-class PINAuth--><!--Device-osAccount-class PINAuth-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -27,6 +29,8 @@ constructor()
 创建PIN码认证的实例。
 
 **起始版本：** 8
+
+<!--Device-PINAuth-constructor()--><!--Device-PINAuth-constructor()-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -55,6 +59,8 @@ registerInputer(inputer: IInputer): void
 **起始版本：** 8
 
 **需要权限：** ohos.permission.ACCESS_PIN_AUTH
+
+<!--Device-PINAuth-registerInputer(inputer: IInputer): void--><!--Device-PINAuth-registerInputer(inputer: IInputer): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -108,6 +114,8 @@ unregisterInputer(): void
 **起始版本：** 8
 
 **需要权限：** ohos.permission.ACCESS_PIN_AUTH
+
+<!--Device-PINAuth-unregisterInputer(): void--><!--Device-PINAuth-unregisterInputer(): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 

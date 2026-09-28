@@ -22,6 +22,8 @@ A maximum of 100 contacts can be imported at a time. Importing contact portraits
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-contact-function importContactsViaUI(context: Context, contacts: Array<Contact>): Promise<Array<int>>--><!--Device-contact-function importContactsViaUI(context: Context, contacts: Array<Contact>): Promise<Array<int>>-End-->
+
 **System capability:** SystemCapability.Applications.Contacts
 
 **Parameters:**

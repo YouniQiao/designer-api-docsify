@@ -8,6 +8,8 @@ interface Session
 
 **起始版本：** 11
 
+<!--Device-camera-interface Session--><!--Device-camera-interface Session-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
@@ -27,6 +29,8 @@ Gets the active value of the given key in camera metadata.
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Session-getActiveParameter(key: string): string--><!--Device-Session-getActiveParameter(key: string): string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -63,6 +67,8 @@ Get the supported camera output capability set.
 
 **起始版本：** 13
 
+<!--Device-Session-getCameraOutputCapabilities(camera: CameraDevice): Array<CameraOutputCapability>--><!--Device-Session-getCameraOutputCapabilities(camera: CameraDevice): Array<CameraOutputCapability>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -98,6 +104,8 @@ Gets the values of the given key in camera metadata.
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Session-getParameters(key: string): Array<string>--><!--Device-Session-getParameters(key: string): Array<string>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -136,6 +144,8 @@ Gets the supported keys in camera metadata.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Session-getSupportedKeys(): Array<string>--><!--Device-Session-getSupportedKeys(): Array<string>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -166,6 +176,8 @@ Sets key-value pairs parameters for the session.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Session-setParameters(kvpairs: Record<string, string>): void--><!--Device-Session-setParameters(kvpairs: Record<string, string>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -194,6 +206,8 @@ setUsage(usage: UsageType, enabled: boolean): void
 Set usage for the capture session.
 
 **起始版本：** 13
+
+<!--Device-Session-setUsage(usage: UsageType, enabled: boolean): void--><!--Device-Session-setUsage(usage: UsageType, enabled: boolean): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

@@ -16,6 +16,8 @@ function isGeofenceEnabled(): Promise<boolean>
 
 **起始版本：** 23
 
+<!--Device-notificationManager-function isGeofenceEnabled(): Promise<boolean>--><!--Device-notificationManager-function isGeofenceEnabled(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **返回值：**

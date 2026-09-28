@@ -12,6 +12,8 @@ interface Authenticator
 
 **替代接口：** [AuthInstance](arkts-userauthentication-userauth-authinstance-i.md)
 
+<!--Device-userAuth-interface Authenticator--><!--Device-userAuth-interface Authenticator-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 ## 导入模块
@@ -35,6 +37,8 @@ execute(type: AuthType, level: SecureLevel, callback: AsyncCallback<number>): vo
 **替代接口：** [start](arkts-userauthentication-userauth-authinstance-i.md#start)
 
 **需要权限：** ohos.permission.ACCESS_BIOMETRIC
+
+<!--Device-Authenticator-execute(type: AuthType, level: SecureLevel, callback: AsyncCallback<number>): void--><!--Device-Authenticator-execute(type: AuthType, level: SecureLevel, callback: AsyncCallback<number>): void-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -78,6 +82,8 @@ execute(type: AuthType, level: SecureLevel): Promise<number>
 **替代接口：** [start](arkts-userauthentication-userauth-authinstance-i.md#start)
 
 **需要权限：** ohos.permission.ACCESS_BIOMETRIC
+
+<!--Device-Authenticator-execute(type: AuthType, level: SecureLevel): Promise<number>--><!--Device-Authenticator-execute(type: AuthType, level: SecureLevel): Promise<number>-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 

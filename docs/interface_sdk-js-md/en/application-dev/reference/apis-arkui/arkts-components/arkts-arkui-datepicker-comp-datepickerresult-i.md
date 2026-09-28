@@ -8,6 +8,8 @@ Defines the time format returned by the date picker.
 
 **Since:** 8
 
+<!--Device-unnamed-declare interface DatePickerResult--><!--Device-unnamed-declare interface DatePickerResult-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## day
@@ -27,6 +29,8 @@ Value range: related to the set **start** and **end** parameters. If **start** a
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DatePickerResult-day?: number--><!--Device-DatePickerResult-day?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -48,6 +52,8 @@ Value range: related to the set **start** and **end** parameters. If **start** a
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DatePickerResult-month?: number--><!--Device-DatePickerResult-month?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## year
@@ -67,5 +73,7 @@ Value range: related to the set **start** and **end** parameters. If **start** a
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DatePickerResult-year?: number--><!--Device-DatePickerResult-year?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

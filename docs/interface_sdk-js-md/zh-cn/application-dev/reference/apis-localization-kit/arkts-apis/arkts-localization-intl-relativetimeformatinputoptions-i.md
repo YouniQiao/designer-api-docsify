@@ -14,6 +14,8 @@ export interface RelativeTimeFormatInputOptions
 
 **替代接口：** [Intl.RelativeTimeFormatOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#options)
 
+<!--Device-intl-export interface RelativeTimeFormatInputOptions--><!--Device-intl-export interface RelativeTimeFormatInputOptions-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## 导入模块
@@ -42,6 +44,8 @@ localeMatcher?: string
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-RelativeTimeFormatInputOptions-localeMatcher?: string--><!--Device-RelativeTimeFormatInputOptions-localeMatcher?: string-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## numeric
@@ -66,6 +70,8 @@ numeric?: string
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-RelativeTimeFormatInputOptions-numeric?: string--><!--Device-RelativeTimeFormatInputOptions-numeric?: string-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## style
@@ -89,5 +95,7 @@ style?: string
 **替代接口：** [Intl.RelativeTimeFormatOptions.style](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#style)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-RelativeTimeFormatInputOptions-style?: string--><!--Device-RelativeTimeFormatInputOptions-style?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n

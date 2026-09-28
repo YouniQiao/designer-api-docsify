@@ -5,7 +5,7 @@ declare class ProgressAttribute<Type extends keyof ProgressStyleMap = keyof Prog
   Style extends ProgressStyleMap[Type] = ProgressStyleMap[Type]> extends CommonMethod<ProgressAttribute<Type>>
 ```
 
-除支持[通用属性](arkts-arkui-common-comp.md#common)外，还支持以下属性：
+除支持[通用属性](arkts-arkui-common-comp.md)外，还支持以下属性：
 
 > **说明：** 
 > 
@@ -15,6 +15,8 @@ declare class ProgressAttribute<Type extends keyof ProgressStyleMap = keyof Prog
 **继承/实现关系：** ProgressAttribute extends CommonMethod<ProgressAttribute<Type>>
 
 **起始版本：** 7
+
+<!--Device-unnamed-declare class ProgressAttribute<Type extends keyof ProgressStyleMap = keyof ProgressStyleMap,  Style extends ProgressStyleMap[Type] = ProgressStyleMap[Type]> extends CommonMethod<ProgressAttribute<Type>>--><!--Device-unnamed-declare class ProgressAttribute<Type extends keyof ProgressStyleMap = keyof ProgressStyleMap,  Style extends ProgressStyleMap[Type] = ProgressStyleMap[Type]> extends CommonMethod<ProgressAttribute<Type>>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,7 +28,7 @@ color(value: ResourceColor | LinearGradient)
 
 设置进度条前景色。
 
-从API version 10开始支持利用LinearGradient设置Ring样式的渐变色。Ring类型不建议设置透明度，如需设置透明度，建议使用[DataPanel](arkts-arkui-datapanel-comp.md#data_panel)。
+从API version 10开始支持利用LinearGradient设置Ring样式的渐变色。Ring类型不建议设置透明度，如需设置透明度，建议使用[DataPanel](arkts-arkui-datapanel-comp.md)。
 
 从API version 23开始支持利用LinearGradient设置Linear样式和Capsule样式的渐变色。API version 22及之前版本使用该方式设置时，会以默认主题色显示。
 
@@ -35,6 +37,8 @@ color(value: ResourceColor | LinearGradient)
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-ProgressAttribute-color(value: ResourceColor | LinearGradient): ProgressAttribute<Type>--><!--Device-ProgressAttribute-color(value: ResourceColor | LinearGradient): ProgressAttribute<Type>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -57,6 +61,8 @@ contentModifier(modifier: ContentModifier<ProgressConfiguration>)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ProgressAttribute-contentModifier(modifier: ContentModifier<ProgressConfiguration>): ProgressAttribute<Type>--><!--Device-ProgressAttribute-contentModifier(modifier: ContentModifier<ProgressConfiguration>): ProgressAttribute<Type>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -86,13 +92,15 @@ privacySensitive(isPrivacySensitiveMode: Optional<boolean>)
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-ProgressAttribute-privacySensitive(isPrivacySensitiveMode: Optional<boolean>): ProgressAttribute<Type>--><!--Device-ProgressAttribute-privacySensitive(isPrivacySensitiveMode: Optional<boolean>): ProgressAttribute<Type>-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isPrivacySensitiveMode | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;boolean&gt; | 是 | 设置隐私敏感，隐私模式下进度清零，文字将被遮罩。true：打开隐私敏感；false：关闭隐私敏感。<br> 默认值：false <br>**说明：** <br>设置null表示不敏感。<!--Del--> <br>需要在卡片中使用Progress，并用[FormComponent](arkts-arkui-formcomponent-comp-sys.md#form_component系统接口)组件设置[隐私遮罩](arkts-arkui-common-comp.md#common)属性，显示卡片时才有隐私遮罩效果。<!-- DelEnd--> |
+| isPrivacySensitiveMode | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;boolean&gt; | 是 | 设置隐私敏感，隐私模式下进度清零，文字将被遮罩。true：打开隐私敏感；false：关闭隐私敏感。<br> 默认值：false <br>**说明：** <br>设置null表示不敏感。<!--Del--> <br>需要在卡片中使用Progress，并用[FormComponent](arkts-arkui-formcomponent-comp-sys.md)组件设置[隐私遮罩](arkts-arkui-common-comp.md)属性，显示卡片时才有隐私遮罩效果。<!-- DelEnd--> |
 
 ## style
 
@@ -107,6 +115,8 @@ style(value: Style)
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-ProgressAttribute-style(value: Style): ProgressAttribute<Type>--><!--Device-ProgressAttribute-style(value: Style): ProgressAttribute<Type>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -129,6 +139,8 @@ value(value: number)
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-ProgressAttribute-value(value: number): ProgressAttribute<Type>--><!--Device-ProgressAttribute-value(value: number): ProgressAttribute<Type>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

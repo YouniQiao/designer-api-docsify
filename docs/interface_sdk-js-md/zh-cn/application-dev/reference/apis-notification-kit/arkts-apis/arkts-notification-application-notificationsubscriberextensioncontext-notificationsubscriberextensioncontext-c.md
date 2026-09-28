@@ -14,6 +14,8 @@ NotificationSubscriberExtensionContext继承自ExtensionContext类，是Notifica
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-unnamed-export default class NotificationSubscriberExtensionContext extends ExtensionContext--><!--Device-unnamed-export default class NotificationSubscriberExtensionContext extends ExtensionContext-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## 导入模块

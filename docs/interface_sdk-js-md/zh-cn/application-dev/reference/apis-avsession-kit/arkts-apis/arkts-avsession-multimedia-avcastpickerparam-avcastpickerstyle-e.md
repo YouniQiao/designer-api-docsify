@@ -10,6 +10,8 @@ export declare enum AVCastPickerStyle
 
 **起始版本：** 12
 
+<!--Device-unnamed-export declare enum AVCastPickerStyle--><!--Device-unnamed-export declare enum AVCastPickerStyle-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 ## STYLE_PANEL
@@ -22,7 +24,9 @@ The picker shows in a panel style.
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVCastPickerStyle-STYLE_PANEL = 0--><!--Device-AVCastPickerStyle-STYLE_PANEL = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -36,6 +40,8 @@ The picker shows in a menu style.
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVCastPickerStyle-STYLE_MENU = 1--><!--Device-AVCastPickerStyle-STYLE_MENU = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast

@@ -8,6 +8,8 @@ interface Statistic
 
 **起始版本：** 10
 
+<!--Device-relationalStore-interface Statistic--><!--Device-relationalStore-interface Statistic-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ failed: number
 
 **起始版本：** 10
 
+<!--Device-Statistic-failed: int--><!--Device-Statistic-failed: int-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## remained
@@ -41,6 +45,8 @@ remained: number
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-Statistic-remained: int--><!--Device-Statistic-remained: int-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -56,6 +62,8 @@ successful: number
 
 **起始版本：** 10
 
+<!--Device-Statistic-successful: int--><!--Device-Statistic-successful: int-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## total
@@ -69,5 +77,7 @@ total: number
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-Statistic-total: int--><!--Device-Statistic-total: int-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core

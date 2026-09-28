@@ -8,6 +8,8 @@ Ability上次退出原因，该类型为枚举，可配合UIAbility的[onCreate(
 
 **起始版本：** 9
 
+<!--Device-AbilityConstant-export enum LastExitReason--><!--Device-AbilityConstant-export enum LastExitReason-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## UNKNOWN
@@ -22,7 +24,9 @@ UNKNOWN = 0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-LastExitReason-UNKNOWN = 0--><!--Device-LastExitReason-UNKNOWN = 0-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -42,6 +46,8 @@ Ability组件未响应。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-LastExitReason-ABILITY_NOT_RESPONDING = 1--><!--Device-LastExitReason-ABILITY_NOT_RESPONDING = 1-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## NORMAL
@@ -58,7 +64,9 @@ NORMAL = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-LastExitReason-NORMAL = 2--><!--Device-LastExitReason-NORMAL = 2-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -74,7 +82,9 @@ CPP_CRASH = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-LastExitReason-CPP_CRASH = 3--><!--Device-LastExitReason-CPP_CRASH = 3-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -90,7 +100,9 @@ JS_ERROR = 4
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-LastExitReason-JS_ERROR = 4--><!--Device-LastExitReason-JS_ERROR = 4-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -106,7 +118,9 @@ APP_FREEZE = 5
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-LastExitReason-APP_FREEZE = 5--><!--Device-LastExitReason-APP_FREEZE = 5-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -124,7 +138,9 @@ PERFORMANCE_CONTROL = 6
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-LastExitReason-PERFORMANCE_CONTROL = 6--><!--Device-LastExitReason-PERFORMANCE_CONTROL = 6-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -147,7 +163,9 @@ RESOURCE_CONTROL = 7
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-LastExitReason-RESOURCE_CONTROL = 7--><!--Device-LastExitReason-RESOURCE_CONTROL = 7-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -163,7 +181,9 @@ UPGRADE = 8
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-LastExitReason-UPGRADE = 8--><!--Device-LastExitReason-UPGRADE = 8-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -179,7 +199,9 @@ USER_REQUEST = 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-LastExitReason-USER_REQUEST = 9--><!--Device-LastExitReason-USER_REQUEST = 9-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -195,6 +217,8 @@ SIGNAL = 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-LastExitReason-SIGNAL = 10--><!--Device-LastExitReason-SIGNAL = 10-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

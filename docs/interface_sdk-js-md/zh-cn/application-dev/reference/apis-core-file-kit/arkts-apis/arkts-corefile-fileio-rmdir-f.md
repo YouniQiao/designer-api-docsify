@@ -19,6 +19,8 @@ declare function rmdir(path: string): Promise<void>
 
 **替代接口：** [rmdir](arkts-corefile-file-fs-rmdir-f.md)
 
+<!--Device-unnamed-declare function rmdir(path: string): Promise<void>--><!--Device-unnamed-declare function rmdir(path: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -49,6 +51,8 @@ declare function rmdir(path: string, callback: AsyncCallback<void>): void
 **废弃版本：** 9
 
 **替代接口：** [rmdir](arkts-corefile-file-fs-rmdir-f.md)
+
+<!--Device-unnamed-declare function rmdir(path: string, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function rmdir(path: string, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

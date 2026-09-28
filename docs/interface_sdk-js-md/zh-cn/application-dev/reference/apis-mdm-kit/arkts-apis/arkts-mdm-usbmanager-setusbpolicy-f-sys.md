@@ -24,6 +24,8 @@ function setUsbPolicy(admin: Want, usbPolicy: UsbPolicy, callback: AsyncCallback
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-usbManager-function setUsbPolicy(admin: Want, usbPolicy: UsbPolicy, callback: AsyncCallback<void>): void--><!--Device-usbManager-function setUsbPolicy(admin: Want, usbPolicy: UsbPolicy, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -88,6 +90,8 @@ function setUsbPolicy(admin: Want, usbPolicy: UsbPolicy): Promise<void>
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_USB
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-usbManager-function setUsbPolicy(admin: Want, usbPolicy: UsbPolicy): Promise<void>--><!--Device-usbManager-function setUsbPolicy(admin: Want, usbPolicy: UsbPolicy): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

@@ -18,6 +18,8 @@ function getActiveApnName(): Promise<string>
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-data-function getActiveApnName(): Promise<string>--><!--Device-data-function getActiveApnName(): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Telephony.CellularData
 
 **返回值：**

@@ -8,6 +8,8 @@ enum AudioSessionStateChangeHint
 
 **起始版本：** 20
 
+<!--Device-audio-enum AudioSessionStateChangeHint--><!--Device-audio-enum AudioSessionStateChangeHint-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## AUDIO_SESSION_STATE_CHANGE_HINT_RESUME
@@ -19,6 +21,8 @@ AUDIO_SESSION_STATE_CHANGE_HINT_RESUME = 0
 提示音频会话恢复，应用可主动触发开始渲染等操作。
 
 **起始版本：** 20
+
+<!--Device-AudioSessionStateChangeHint-AUDIO_SESSION_STATE_CHANGE_HINT_RESUME = 0--><!--Device-AudioSessionStateChangeHint-AUDIO_SESSION_STATE_CHANGE_HINT_RESUME = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -32,6 +36,8 @@ AUDIO_SESSION_STATE_CHANGE_HINT_PAUSE = 1
 
 **起始版本：** 20
 
+<!--Device-AudioSessionStateChangeHint-AUDIO_SESSION_STATE_CHANGE_HINT_PAUSE = 1--><!--Device-AudioSessionStateChangeHint-AUDIO_SESSION_STATE_CHANGE_HINT_PAUSE = 1-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## AUDIO_SESSION_STATE_CHANGE_HINT_STOP
@@ -44,6 +50,8 @@ AUDIO_SESSION_STATE_CHANGE_HINT_STOP = 2
 
 **起始版本：** 20
 
+<!--Device-AudioSessionStateChangeHint-AUDIO_SESSION_STATE_CHANGE_HINT_STOP = 2--><!--Device-AudioSessionStateChangeHint-AUDIO_SESSION_STATE_CHANGE_HINT_STOP = 2-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## AUDIO_SESSION_STATE_CHANGE_HINT_TIME_OUT_STOP
@@ -55,6 +63,8 @@ AUDIO_SESSION_STATE_CHANGE_HINT_TIME_OUT_STOP = 3
 提示音频会话因长时间无业务而被系统停止，导致失去音频焦点。
 
 **起始版本：** 20
+
+<!--Device-AudioSessionStateChangeHint-AUDIO_SESSION_STATE_CHANGE_HINT_TIME_OUT_STOP = 3--><!--Device-AudioSessionStateChangeHint-AUDIO_SESSION_STATE_CHANGE_HINT_TIME_OUT_STOP = 3-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -70,6 +80,8 @@ AUDIO_SESSION_STATE_CHANGE_HINT_DUCK = 4
 
 **起始版本：** 20
 
+<!--Device-AudioSessionStateChangeHint-AUDIO_SESSION_STATE_CHANGE_HINT_DUCK = 4--><!--Device-AudioSessionStateChangeHint-AUDIO_SESSION_STATE_CHANGE_HINT_DUCK = 4-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## AUDIO_SESSION_STATE_CHANGE_HINT_UNDUCK
@@ -83,6 +95,8 @@ AUDIO_SESSION_STATE_CHANGE_HINT_UNDUCK = 5
 如果已启用[enableMuteSuggestionWhenMixWithOthers](./arkts-apis-audio-AudioSessionManager.md#enablemutesuggestionwhenmixwithothers)，此时可取消静音。
 
 **起始版本：** 20
+
+<!--Device-AudioSessionStateChangeHint-AUDIO_SESSION_STATE_CHANGE_HINT_UNDUCK = 5--><!--Device-AudioSessionStateChangeHint-AUDIO_SESSION_STATE_CHANGE_HINT_UNDUCK = 5-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -100,6 +114,8 @@ AUDIO_SESSION_STATE_CHANGE_HINT_MUTE_SUGGESTION = 6
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioSessionStateChangeHint-AUDIO_SESSION_STATE_CHANGE_HINT_MUTE_SUGGESTION = 6--><!--Device-AudioSessionStateChangeHint-AUDIO_SESSION_STATE_CHANGE_HINT_MUTE_SUGGESTION = 6-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## AUDIO_SESSION_STATE_CHANGE_HINT_UNMUTE_SUGGESTION
@@ -115,6 +131,8 @@ AUDIO_SESSION_STATE_CHANGE_HINT_UNMUTE_SUGGESTION = 7
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioSessionStateChangeHint-AUDIO_SESSION_STATE_CHANGE_HINT_UNMUTE_SUGGESTION = 7--><!--Device-AudioSessionStateChangeHint-AUDIO_SESSION_STATE_CHANGE_HINT_UNMUTE_SUGGESTION = 7-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -132,6 +150,8 @@ AUDIO_SESSION_STATE_CHANGE_HINT_MUTE = 8
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioSessionStateChangeHint-AUDIO_SESSION_STATE_CHANGE_HINT_MUTE = 8--><!--Device-AudioSessionStateChangeHint-AUDIO_SESSION_STATE_CHANGE_HINT_MUTE = 8-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## AUDIO_SESSION_STATE_CHANGE_HINT_UNMUTE
@@ -147,5 +167,7 @@ AUDIO_SESSION_STATE_CHANGE_HINT_UNMUTE = 9
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioSessionStateChangeHint-AUDIO_SESSION_STATE_CHANGE_HINT_UNMUTE = 9--><!--Device-AudioSessionStateChangeHint-AUDIO_SESSION_STATE_CHANGE_HINT_UNMUTE = 9-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core

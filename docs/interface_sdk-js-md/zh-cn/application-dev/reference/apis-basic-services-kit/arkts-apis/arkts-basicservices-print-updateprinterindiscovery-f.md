@@ -18,6 +18,8 @@ function updatePrinterInDiscovery(printerInformation: PrinterInformation): Promi
 
 **需要权限：** ohos.permission.PRINT
 
+<!--Device-print-function updatePrinterInDiscovery(printerInformation: PrinterInformation): Promise<void>--><!--Device-print-function updatePrinterInDiscovery(printerInformation: PrinterInformation): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **参数：**

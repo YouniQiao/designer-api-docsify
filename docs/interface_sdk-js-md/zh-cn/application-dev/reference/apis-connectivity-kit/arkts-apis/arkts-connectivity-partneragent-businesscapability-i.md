@@ -8,6 +8,8 @@ interface BusinessCapability
 
 **起始版本：** 23
 
+<!--Device-partnerAgent-interface BusinessCapability--><!--Device-partnerAgent-interface BusinessCapability-End-->
+
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core
 
 ## 导入模块
@@ -34,6 +36,8 @@ supportMediaControl和supportTelephonyControl均选择false时，设备发现时
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BusinessCapability-supportMediaControl?: boolean--><!--Device-BusinessCapability-supportMediaControl?: boolean-End-->
+
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core
 
 ## supportTelephonyControl
@@ -53,5 +57,7 @@ supportMediaControl和supportTelephonyControl均选择false时，设备发现时
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BusinessCapability-supportTelephonyControl?: boolean--><!--Device-BusinessCapability-supportTelephonyControl?: boolean-End-->
 
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core

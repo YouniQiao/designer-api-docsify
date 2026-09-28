@@ -8,6 +8,8 @@ interface ImagePropertyOptions
 
 **起始版本：** 11
 
+<!--Device-image-interface ImagePropertyOptions--><!--Device-image-interface ImagePropertyOptions-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 ## 导入模块
@@ -28,6 +30,8 @@ defaultValue?: string
 
 **起始版本：** 11
 
+<!--Device-ImagePropertyOptions-defaultValue?: string--><!--Device-ImagePropertyOptions-defaultValue?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 ## index
@@ -41,5 +45,7 @@ index?: number
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-ImagePropertyOptions-index?: int--><!--Device-ImagePropertyOptions-index?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource

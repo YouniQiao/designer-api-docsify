@@ -10,6 +10,8 @@ abstract class AppIntentEntity<T> implements IntentEntity
 
 **起始版本：** 26.0.0
 
+<!--Device-insightIntent-abstract class AppIntentEntity<T> implements IntentEntity--><!--Device-insightIntent-abstract class AppIntentEntity<T> implements IntentEntity-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块
@@ -30,7 +32,9 @@ abstract onQueryEntity(params: QueryEntityParam): Promise<Array<T>>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-AppIntentEntity-abstract onQueryEntity(params: QueryEntityParam): Promise<Array<T>>--><!--Device-AppIntentEntity-abstract onQueryEntity(params: QueryEntityParam): Promise<Array<T>>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -62,6 +66,8 @@ displayName: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-AppIntentEntity-displayName: string--><!--Device-AppIntentEntity-displayName: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

@@ -4,13 +4,15 @@
 declare class TimePickerAttribute extends CommonMethod<TimePickerAttribute>
 ```
 
-In addition to the [universal attributes](arkts-arkui-common-comp.md#common), the following attributes are supported.
+In addition to the [universal attributes](arkts-arkui-common-comp.md), the following attributes are supported.
 
-In addition to the [universal events](arkts-arkui-common-comp.md#common), the following events are supported.
+In addition to the [universal events](arkts-arkui-common-comp.md), the following events are supported.
 
 **Inheritance/Implementation:** TimePickerAttribute extends CommonMethod<TimePickerAttribute>
 
 **Since:** 8
+
+<!--Device-unnamed-declare class TimePickerAttribute extends CommonMethod<TimePickerAttribute>--><!--Device-unnamed-declare class TimePickerAttribute extends CommonMethod<TimePickerAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,6 +29,8 @@ Sets whether to display a leading zero for the hour, minute, and second. '2-digi
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TimePickerAttribute-dateTimeOptions(value: DateTimeOptions): TimePickerAttribute--><!--Device-TimePickerAttribute-dateTimeOptions(value: DateTimeOptions): TimePickerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -52,6 +56,8 @@ Sets whether to display a leading zero for the hours, minutes, and seconds. Comp
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TimePickerAttribute-dateTimeOptions(timeFormat: Optional<DateTimeOptions>): TimePickerAttribute--><!--Device-TimePickerAttribute-dateTimeOptions(timeFormat: Optional<DateTimeOptions>): TimePickerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -74,6 +80,8 @@ Sets the crown sensitivity. High sensitivity applies to scenarios where the time
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TimePickerAttribute-digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>): TimePickerAttribute--><!--Device-TimePickerAttribute-digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>): TimePickerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -95,6 +103,8 @@ Sets the text color, font size, and font weight of edge items (the second item a
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TimePickerAttribute-disappearTextStyle(value: PickerTextStyle): TimePickerAttribute--><!--Device-TimePickerAttribute-disappearTextStyle(value: PickerTextStyle): TimePickerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -120,6 +130,8 @@ Sets the text color, font size, and font weight of edge items (the second item a
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TimePickerAttribute-disappearTextStyle(style: Optional<PickerTextStyle>): TimePickerAttribute--><!--Device-TimePickerAttribute-disappearTextStyle(style: Optional<PickerTextStyle>): TimePickerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -141,6 +153,8 @@ Sets whether the AM/PM indicator automatically switches based on the hour value.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-TimePickerAttribute-enableCascade(enabled: boolean): TimePickerAttribute--><!--Device-TimePickerAttribute-enableCascade(enabled: boolean): TimePickerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -170,6 +184,8 @@ To enable haptic feedback, you must declare the following permission under **req
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TimePickerAttribute-enableHapticFeedback(enable: boolean): TimePickerAttribute--><!--Device-TimePickerAttribute-enableHapticFeedback(enable: boolean): TimePickerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -196,6 +212,8 @@ To enable haptic feedback, you must declare the following permission under **req
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TimePickerAttribute-enableHapticFeedback(enable: Optional<boolean>): TimePickerAttribute--><!--Device-TimePickerAttribute-enableHapticFeedback(enable: Optional<boolean>): TimePickerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -217,6 +235,8 @@ Sets whether to enable loop mode. Loop mode is suitable for scenarios where the 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TimePickerAttribute-loop(value: boolean): TimePickerAttribute--><!--Device-TimePickerAttribute-loop(value: boolean): TimePickerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -246,6 +266,8 @@ Sets whether to enable loop scrolling. Compared with [loop&lt;sup&gt;11+&lt;/sup
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TimePickerAttribute-loop(isLoop: Optional<boolean>): TimePickerAttribute--><!--Device-TimePickerAttribute-loop(isLoop: Optional<boolean>): TimePickerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -269,6 +291,8 @@ The callback is triggered after the scroll animation ends. If you need to obtain
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TimePickerAttribute-onChange(callback: (value: TimePickerResult) => void): TimePickerAttribute--><!--Device-TimePickerAttribute-onChange(callback: (value: TimePickerResult) => void): TimePickerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -295,6 +319,8 @@ The callback is triggered after the scroll animation ends. If you need to obtain
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-TimePickerAttribute-onChange(callback: Optional<OnTimePickerChangeCallback>): TimePickerAttribute--><!--Device-TimePickerAttribute-onChange(callback: Optional<OnTimePickerChangeCallback>): TimePickerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -324,6 +350,8 @@ The difference from the [onChange](#onchange) event is that this event is trigge
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TimePickerAttribute-onEnterSelectedArea(callback: Callback<TimePickerResult>): TimePickerAttribute--><!--Device-TimePickerAttribute-onEnterSelectedArea(callback: Callback<TimePickerResult>): TimePickerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -345,6 +373,8 @@ Sets the text color, font size, and font weight of the selected item.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TimePickerAttribute-selectedTextStyle(value: PickerTextStyle): TimePickerAttribute--><!--Device-TimePickerAttribute-selectedTextStyle(value: PickerTextStyle): TimePickerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -370,6 +400,8 @@ Sets the text color, font size, and font weight of the selected item. Compared w
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TimePickerAttribute-selectedTextStyle(style: Optional<PickerTextStyle>): TimePickerAttribute--><!--Device-TimePickerAttribute-selectedTextStyle(style: Optional<PickerTextStyle>): TimePickerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -391,6 +423,8 @@ Sets the text color, font size, and font weight of candidate items (the item imm
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TimePickerAttribute-textStyle(value: PickerTextStyle): TimePickerAttribute--><!--Device-TimePickerAttribute-textStyle(value: PickerTextStyle): TimePickerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -416,6 +450,8 @@ Sets the text color, font size, and font weight of candidate items (the item imm
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TimePickerAttribute-textStyle(style: Optional<PickerTextStyle>): TimePickerAttribute--><!--Device-TimePickerAttribute-textStyle(style: Optional<PickerTextStyle>): TimePickerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -437,6 +473,8 @@ Sets whether the time is displayed in 24-hour format. If this API is not used, t
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TimePickerAttribute-useMilitaryTime(value: boolean): TimePickerAttribute--><!--Device-TimePickerAttribute-useMilitaryTime(value: boolean): TimePickerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -461,6 +499,8 @@ Sets whether the time is displayed in 24-hour format. If this attribute is not s
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-TimePickerAttribute-useMilitaryTime(isMilitaryTime: Optional<boolean>): TimePickerAttribute--><!--Device-TimePickerAttribute-useMilitaryTime(isMilitaryTime: Optional<boolean>): TimePickerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

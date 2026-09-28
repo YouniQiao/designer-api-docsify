@@ -24,6 +24,8 @@ function unregisterContinuation(token: number, callback: AsyncCallback<void>): v
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-continuationManager-function unregisterContinuation(token: number, callback: AsyncCallback<void>): void--><!--Device-continuationManager-function unregisterContinuation(token: number, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.DistributedAbilityManager
 
 **参数：**
@@ -81,6 +83,8 @@ function unregisterContinuation(token: number): Promise<void>
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-continuationManager-function unregisterContinuation(token: number): Promise<void>--><!--Device-continuationManager-function unregisterContinuation(token: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.DistributedAbilityManager
 

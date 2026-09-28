@@ -8,6 +8,8 @@ export enum PowerConsumptionScenario
 
 **起始版本：** 12
 
+<!--Device-geoLocationManager-export enum PowerConsumptionScenario--><!--Device-geoLocationManager-export enum PowerConsumptionScenario-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 ## HIGH_POWER_CONSUMPTION
@@ -22,7 +24,9 @@ HIGH_POWER_CONSUMPTION = 0x601
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PowerConsumptionScenario-HIGH_POWER_CONSUMPTION = 0x601--><!--Device-PowerConsumptionScenario-HIGH_POWER_CONSUMPTION = 0x601-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -40,7 +44,9 @@ LOW_POWER_CONSUMPTION = 0x602
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PowerConsumptionScenario-LOW_POWER_CONSUMPTION = 0x602--><!--Device-PowerConsumptionScenario-LOW_POWER_CONSUMPTION = 0x602-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -56,6 +62,8 @@ NO_POWER_CONSUMPTION = 0x603
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PowerConsumptionScenario-NO_POWER_CONSUMPTION = 0x603--><!--Device-PowerConsumptionScenario-NO_POWER_CONSUMPTION = 0x603-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core

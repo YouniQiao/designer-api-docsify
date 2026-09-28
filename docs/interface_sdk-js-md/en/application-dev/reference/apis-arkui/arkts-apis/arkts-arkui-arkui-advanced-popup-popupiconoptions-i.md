@@ -8,6 +8,8 @@ Defines the icon options.
 
 **Since:** 11
 
+<!--Device-unnamed-export interface PopupIconOptions--><!--Device-unnamed-export interface PopupIconOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -34,6 +36,8 @@ Default value: **$r('sys.float.ohos_id_corner_radius_default_s')**
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PopupIconOptions-borderRadius?: Length | BorderRadiuses--><!--Device-PopupIconOptions-borderRadius?: Length | BorderRadiuses-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## fillColor
@@ -53,6 +57,8 @@ By default, the icon color is not changed.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PopupIconOptions-fillColor?: ResourceColor--><!--Device-PopupIconOptions-fillColor?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -74,6 +80,8 @@ Default value: **32VP**
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PopupIconOptions-height?: Dimension--><!--Device-PopupIconOptions-height?: Dimension-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## image
@@ -91,6 +99,8 @@ Icon content.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PopupIconOptions-image: ResourceStr--><!--Device-PopupIconOptions-image: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -111,5 +121,7 @@ Default value: **32VP**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PopupIconOptions-width?: Dimension--><!--Device-PopupIconOptions-width?: Dimension-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

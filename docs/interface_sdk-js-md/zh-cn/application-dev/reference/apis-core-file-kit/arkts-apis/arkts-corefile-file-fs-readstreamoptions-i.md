@@ -8,6 +8,8 @@ export interface ReadStreamOptions
 
 **起始版本：** 12
 
+<!--Device-unnamed-export interface ReadStreamOptions--><!--Device-unnamed-export interface ReadStreamOptions-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## 导入模块
@@ -28,6 +30,8 @@ end?: number
 
 **起始版本：** 12
 
+<!--Device-ReadStreamOptions-end?: number--><!--Device-ReadStreamOptions-end?: number-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## start
@@ -41,5 +45,7 @@ start?: number
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-ReadStreamOptions-start?: number--><!--Device-ReadStreamOptions-start?: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO

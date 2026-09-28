@@ -12,6 +12,8 @@ interface ChangeNotification
 
 **替代接口：** ChangeNotification
 
+<!--Device-distributedData-interface ChangeNotification--><!--Device-distributedData-interface ChangeNotification-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## 导入模块
@@ -35,6 +37,8 @@ deleteEntries: Entry[]
 
 **替代接口：** deleteEntries
 
+<!--Device-ChangeNotification-deleteEntries: Entry[]--><!--Device-ChangeNotification-deleteEntries: Entry[]-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## deviceId
@@ -52,6 +56,8 @@ deviceId: string
 **废弃版本：** 9
 
 **替代接口：** deviceId
+
+<!--Device-ChangeNotification-deviceId: string--><!--Device-ChangeNotification-deviceId: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -71,6 +77,8 @@ insertEntries: Entry[]
 
 **替代接口：** insertEntries
 
+<!--Device-ChangeNotification-insertEntries: Entry[]--><!--Device-ChangeNotification-insertEntries: Entry[]-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## updateEntries
@@ -88,5 +96,7 @@ updateEntries: Entry[]
 **废弃版本：** 9
 
 **替代接口：** updateEntries
+
+<!--Device-ChangeNotification-updateEntries: Entry[]--><!--Device-ChangeNotification-updateEntries: Entry[]-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core

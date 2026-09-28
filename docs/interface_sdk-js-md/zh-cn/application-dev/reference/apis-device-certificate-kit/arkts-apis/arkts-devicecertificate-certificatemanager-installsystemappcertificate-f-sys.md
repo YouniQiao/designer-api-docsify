@@ -20,6 +20,8 @@ function installSystemAppCertificate(keystore: Uint8Array, keystorePwd: string):
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-certificateManager-function installSystemAppCertificate(keystore: Uint8Array, keystorePwd: string): Promise<CMResult>--><!--Device-certificateManager-function installSystemAppCertificate(keystore: Uint8Array, keystorePwd: string): Promise<CMResult>-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
 
 **系统接口：** 此接口为系统接口。

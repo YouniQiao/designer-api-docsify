@@ -18,6 +18,8 @@ function removeNetFirewallRule(userId: number, ruleId: number): Promise<void>
 
 **需要权限：** ohos.permission.MANAGE_NET_FIREWALL
 
+<!--Device-netFirewall-function removeNetFirewallRule(userId: int, ruleId: int): Promise<void>--><!--Device-netFirewall-function removeNetFirewallRule(userId: int, ruleId: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 **参数：**

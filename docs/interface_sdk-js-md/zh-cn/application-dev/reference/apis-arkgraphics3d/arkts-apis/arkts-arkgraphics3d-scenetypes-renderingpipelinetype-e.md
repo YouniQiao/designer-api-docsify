@@ -10,6 +10,8 @@ export enum RenderingPipelineType
 
 **起始版本：** 21
 
+<!--Device-unnamed-export enum RenderingPipelineType--><!--Device-unnamed-export enum RenderingPipelineType-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## FORWARD_LIGHTWEIGHT
@@ -22,6 +24,8 @@ FORWARD_LIGHTWEIGHT = 0
 
 **起始版本：** 21
 
+<!--Device-RenderingPipelineType-FORWARD_LIGHTWEIGHT = 0--><!--Device-RenderingPipelineType-FORWARD_LIGHTWEIGHT = 0-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## FORWARD
@@ -33,5 +37,7 @@ FORWARD = 1
 高质量前向渲染管线，用于复杂的视觉效果（例如光晕）。
 
 **起始版本：** 21
+
+<!--Device-RenderingPipelineType-FORWARD = 1--><!--Device-RenderingPipelineType-FORWARD = 1-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

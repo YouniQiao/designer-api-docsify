@@ -18,6 +18,8 @@ function switchUninstallState(bundleName: string, state: boolean): void
 
 **需要权限：** ohos.permission.CHANGE_BUNDLE_UNINSTALL_STATE
 
+<!--Device-bundleManager-function switchUninstallState(bundleName: string, state: boolean): void--><!--Device-bundleManager-function switchUninstallState(bundleName: string, state: boolean): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。

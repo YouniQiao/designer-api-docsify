@@ -20,6 +20,8 @@ function closePipe(pipe: USBDevicePipe): number
 
 **起始版本：** 9
 
+<!--Device-usbManager-function closePipe(pipe: USBDevicePipe): int--><!--Device-usbManager-function closePipe(pipe: USBDevicePipe): int-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 **参数：**

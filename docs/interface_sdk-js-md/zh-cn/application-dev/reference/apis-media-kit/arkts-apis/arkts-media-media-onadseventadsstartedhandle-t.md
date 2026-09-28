@@ -10,6 +10,8 @@ type OnAdsEventAdsStartedHandle = (adsId: string, duration: number) => void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-media-type OnAdsEventAdsStartedHandle = (adsId: string, duration: int) => void--><!--Device-media-type OnAdsEventAdsStartedHandle = (adsId: string, duration: int) => void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVPlayer
 
 **参数：**

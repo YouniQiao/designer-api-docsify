@@ -18,6 +18,8 @@ function isDefaultNetMetered(callback: AsyncCallback<boolean>): void
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-connection-function isDefaultNetMetered(callback: AsyncCallback<boolean>): void--><!--Device-connection-function isDefaultNetMetered(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**
@@ -61,6 +63,8 @@ function isDefaultNetMetered(): Promise<boolean>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
+
+<!--Device-connection-function isDefaultNetMetered(): Promise<boolean>--><!--Device-connection-function isDefaultNetMetered(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 

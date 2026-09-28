@@ -21,6 +21,8 @@ function getAppNativeMemInfoWithCache(forceRefresh?: boolean): NativeMemInfo
 
 **起始版本：** 20
 
+<!--Device-hidebug-function getAppNativeMemInfoWithCache(forceRefresh?: boolean): NativeMemInfo--><!--Device-hidebug-function getAppNativeMemInfoWithCache(forceRefresh?: boolean): NativeMemInfo-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **参数：**

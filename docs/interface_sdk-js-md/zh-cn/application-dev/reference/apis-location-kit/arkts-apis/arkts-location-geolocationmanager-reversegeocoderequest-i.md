@@ -8,6 +8,8 @@ export interface ReverseGeoCodeRequest
 
 **起始版本：** 9
 
+<!--Device-geoLocationManager-export interface ReverseGeoCodeRequest--><!--Device-geoLocationManager-export interface ReverseGeoCodeRequest-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 ## 导入模块
@@ -28,6 +30,8 @@ country?: string
 
 **起始版本：** 12
 
+<!--Device-ReverseGeoCodeRequest-country?: string--><!--Device-ReverseGeoCodeRequest-country?: string-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 ## latitude
@@ -41,6 +45,8 @@ latitude: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-ReverseGeoCodeRequest-latitude: double--><!--Device-ReverseGeoCodeRequest-latitude: double-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
@@ -56,6 +62,8 @@ locale?: string
 
 **起始版本：** 9
 
+<!--Device-ReverseGeoCodeRequest-locale?: string--><!--Device-ReverseGeoCodeRequest-locale?: string-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 ## longitude
@@ -70,6 +78,8 @@ longitude: number
 
 **起始版本：** 9
 
+<!--Device-ReverseGeoCodeRequest-longitude: double--><!--Device-ReverseGeoCodeRequest-longitude: double-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 ## maxItems
@@ -83,5 +93,7 @@ maxItems?: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-ReverseGeoCodeRequest-maxItems?: int--><!--Device-ReverseGeoCodeRequest-maxItems?: int-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geocoder

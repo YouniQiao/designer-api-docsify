@@ -8,6 +8,8 @@ interface DataParams
 
 **起始版本：** 26.0.0
 
+<!--Device-dataTransfer-interface DataParams--><!--Device-dataTransfer-interface DataParams-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## 导入模块
@@ -30,6 +32,8 @@ address: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataParams-address: string--><!--Device-DataParams-address: string-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## data
@@ -46,6 +50,8 @@ data: ArrayBuffer
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataParams-data: ArrayBuffer--><!--Device-DataParams-data: ArrayBuffer-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## uuid
@@ -61,5 +67,7 @@ uuid: string
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataParams-uuid: string--><!--Device-DataParams-uuid: string-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base

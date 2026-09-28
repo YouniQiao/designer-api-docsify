@@ -18,6 +18,8 @@ function getWallpaperByState(wallpaperType: WallpaperType, foldState: FoldState,
 
 **需要权限：** ohos.permission.GET_WALLPAPER
 
+<!--Device-wallpaper-function getWallpaperByState(wallpaperType: WallpaperType, foldState: FoldState, rotateState: RotateState): Promise<image.PixelMap>--><!--Device-wallpaper-function getWallpaperByState(wallpaperType: WallpaperType, foldState: FoldState, rotateState: RotateState): Promise<image.PixelMap>-End-->
+
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
 **系统接口：** 此接口为系统接口。

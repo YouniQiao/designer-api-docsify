@@ -8,6 +8,8 @@ enum HighlightAlbumInfoType
 
 **起始版本：** 12
 
+<!--Device-photoAccessHelper-enum HighlightAlbumInfoType--><!--Device-photoAccessHelper-enum HighlightAlbumInfoType-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -21,6 +23,8 @@ COVER_INFO = 0
 封面信息类别。
 
 **起始版本：** 12
+
+<!--Device-HighlightAlbumInfoType-COVER_INFO = 0--><!--Device-HighlightAlbumInfoType-COVER_INFO = 0-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -36,6 +40,8 @@ PLAY_INFO = 1
 
 **起始版本：** 12
 
+<!--Device-HighlightAlbumInfoType-PLAY_INFO = 1--><!--Device-HighlightAlbumInfoType-PLAY_INFO = 1-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +55,8 @@ ALBUM_INFO = 2
 相册信息类别。
 
 **起始版本：** 21
+
+<!--Device-HighlightAlbumInfoType-ALBUM_INFO = 2--><!--Device-HighlightAlbumInfoType-ALBUM_INFO = 2-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

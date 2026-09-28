@@ -8,6 +8,8 @@ declare class FormExtensionAbility
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare class FormExtensionAbility--><!--Device-unnamed-declare class FormExtensionAbility-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 ## 导入模块
@@ -29,6 +31,8 @@ onAcquireFormState?(want: Want): formInfo.FormState
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-FormExtensionAbility-onAcquireFormState?(want: Want): formInfo.FormState--><!--Device-FormExtensionAbility-onAcquireFormState?(want: Want): formInfo.FormState-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -74,7 +78,9 @@ onAddForm(want: Want): formBindingData.FormBindingData
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-FormExtensionAbility-onAddForm(want: Want): formBindingData.FormBindingData--><!--Device-FormExtensionAbility-onAddForm(want: Want): formBindingData.FormBindingData-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -122,7 +128,9 @@ onCastToNormalForm(formId: string): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-FormExtensionAbility-onCastToNormalForm(formId: string): void--><!--Device-FormExtensionAbility-onCastToNormalForm(formId: string): void-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -156,6 +164,8 @@ onChangeFormVisibility(newStatus: Record<string, number>): void
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FormExtensionAbility-onChangeFormVisibility(newStatus: Record<string, int>): void--><!--Device-FormExtensionAbility-onChangeFormVisibility(newStatus: Record<string, int>): void-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -213,7 +223,9 @@ onConfigurationUpdate(newConfig: Configuration): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-FormExtensionAbility-onConfigurationUpdate(newConfig: Configuration): void--><!--Device-FormExtensionAbility-onConfigurationUpdate(newConfig: Configuration): void-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -250,7 +262,9 @@ onFormEvent(formId: string, message: string): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-FormExtensionAbility-onFormEvent(formId: string, message: string): void--><!--Device-FormExtensionAbility-onFormEvent(formId: string, message: string): void-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -285,7 +299,9 @@ onFormLocationChanged(formId: string, newFormLocation: formInfo.FormLocation): v
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-FormExtensionAbility-onFormLocationChanged(formId: string, newFormLocation: formInfo.FormLocation): void--><!--Device-FormExtensionAbility-onFormLocationChanged(formId: string, newFormLocation: formInfo.FormLocation): void-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -327,7 +343,9 @@ onRemoveForm(formId: string): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-FormExtensionAbility-onRemoveForm(formId: string): void--><!--Device-FormExtensionAbility-onRemoveForm(formId: string): void-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -361,7 +379,9 @@ onSizeChanged(formId: string, newDimension: formInfo.FormDimension, newRect: for
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-FormExtensionAbility-onSizeChanged(formId: string, newDimension: formInfo.FormDimension, newRect: formInfo.Rect): void--><!--Device-FormExtensionAbility-onSizeChanged(formId: string, newDimension: formInfo.FormDimension, newRect: formInfo.Rect): void-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -399,6 +419,8 @@ onStop?(): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-FormExtensionAbility-onStop?(): void--><!--Device-FormExtensionAbility-onStop?(): void-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **示例**
@@ -425,7 +447,9 @@ onUpdateForm(formId: string, wantParams?: Record<string, Object>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-FormExtensionAbility-onUpdateForm(formId: string, wantParams?: Record<string, Object>): void--><!--Device-FormExtensionAbility-onUpdateForm(formId: string, wantParams?: Record<string, Object>): void-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -474,6 +498,8 @@ FormExtensionAbility的上下文环境，继承自[ExtensionContext](../../apis-
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-FormExtensionAbility-context: FormExtensionContext--><!--Device-FormExtensionAbility-context: FormExtensionContext-End-->
 
 **系统能力：** SystemCapability.Ability.Form

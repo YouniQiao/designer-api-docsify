@@ -8,6 +8,8 @@ interface RequestData
 
 **起始版本：** 6
 
+<!--Device-request-interface RequestData--><!--Device-request-interface RequestData-End-->
+
 **系统能力：** SystemCapability.MiscServices.Download
 
 ## 导入模块
@@ -28,6 +30,8 @@ name: string
 
 **起始版本：** 6
 
+<!--Device-RequestData-name: string--><!--Device-RequestData-name: string-End-->
+
 **系统能力：** SystemCapability.MiscServices.Download
 
 ## value
@@ -41,5 +45,7 @@ value: string
 **类型：** string
 
 **起始版本：** 6
+
+<!--Device-RequestData-value: string--><!--Device-RequestData-value: string-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download

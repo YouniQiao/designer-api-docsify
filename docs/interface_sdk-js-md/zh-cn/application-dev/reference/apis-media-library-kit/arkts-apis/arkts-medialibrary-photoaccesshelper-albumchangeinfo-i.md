@@ -8,6 +8,8 @@ interface AlbumChangeInfo
 
 **起始版本：** 20
 
+<!--Device-photoAccessHelper-interface AlbumChangeInfo--><!--Device-photoAccessHelper-interface AlbumChangeInfo-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ albumName: string
 
 **起始版本：** 20
 
+<!--Device-AlbumChangeInfo-albumName: string--><!--Device-AlbumChangeInfo-albumName: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## albumSubtype
@@ -41,6 +45,8 @@ albumSubtype: AlbumSubtype
 **类型：** [AlbumSubtype](arkts-medialibrary-photoaccesshelper-albumsubtype-e.md)
 
 **起始版本：** 20
+
+<!--Device-AlbumChangeInfo-albumSubtype: AlbumSubtype--><!--Device-AlbumChangeInfo-albumSubtype: AlbumSubtype-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -56,6 +62,8 @@ albumType: AlbumType
 
 **起始版本：** 20
 
+<!--Device-AlbumChangeInfo-albumType: AlbumType--><!--Device-AlbumChangeInfo-albumType: AlbumType-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## albumUri
@@ -69,6 +77,8 @@ albumUri: string
 **类型：** string
 
 **起始版本：** 20
+
+<!--Device-AlbumChangeInfo-albumUri: string--><!--Device-AlbumChangeInfo-albumUri: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -84,6 +94,8 @@ count: number
 
 **起始版本：** 20
 
+<!--Device-AlbumChangeInfo-count: int--><!--Device-AlbumChangeInfo-count: int-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## coverUri
@@ -97,6 +109,8 @@ coverUri: string
 **类型：** string
 
 **起始版本：** 20
+
+<!--Device-AlbumChangeInfo-coverUri: string--><!--Device-AlbumChangeInfo-coverUri: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -112,6 +126,8 @@ imageCount: number
 
 **起始版本：** 20
 
+<!--Device-AlbumChangeInfo-imageCount: int--><!--Device-AlbumChangeInfo-imageCount: int-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## videoCount
@@ -125,5 +141,7 @@ videoCount: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-AlbumChangeInfo-videoCount: int--><!--Device-AlbumChangeInfo-videoCount: int-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core

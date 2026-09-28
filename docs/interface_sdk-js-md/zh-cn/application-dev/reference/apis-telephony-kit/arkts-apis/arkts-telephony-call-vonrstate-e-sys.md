@@ -8,6 +8,8 @@ export enum VoNRState
 
 **起始版本：** 10
 
+<!--Device-call-export enum VoNRState--><!--Device-call-export enum VoNRState-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -22,6 +24,8 @@ VONR_STATE_OFF = 0
 
 **起始版本：** 10
 
+<!--Device-VoNRState-VONR_STATE_OFF = 0--><!--Device-VoNRState-VONR_STATE_OFF = 0-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -35,6 +39,8 @@ VONR_STATE_ON = 1
 打开状态。
 
 **起始版本：** 10
+
+<!--Device-VoNRState-VONR_STATE_ON = 1--><!--Device-VoNRState-VONR_STATE_ON = 1-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 

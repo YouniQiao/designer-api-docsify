@@ -22,6 +22,8 @@ function setDistributedEnableByBundle(bundle: BundleOption, enable: boolean, cal
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function setDistributedEnableByBundle(bundle: BundleOption, enable: boolean, callback: AsyncCallback<void>): void--><!--Device-notificationManager-function setDistributedEnableByBundle(bundle: BundleOption, enable: boolean, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -85,6 +87,8 @@ function setDistributedEnableByBundle(bundle: BundleOption, enable: boolean): Pr
 **替代接口：** [setDistributedEnabledByBundle](arkts-notification-notificationmanager-setdistributedenabledbybundle-f-sys.md)(bundle: BundleOption, deviceType: string, enable: boolean)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function setDistributedEnableByBundle(bundle: BundleOption, enable: boolean): Promise<void>--><!--Device-notificationManager-function setDistributedEnableByBundle(bundle: BundleOption, enable: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

@@ -16,6 +16,8 @@ function getFileDescriptor(pipe: USBDevicePipe): number
 
 **起始版本：** 9
 
+<!--Device-usbManager-function getFileDescriptor(pipe: USBDevicePipe): int--><!--Device-usbManager-function getFileDescriptor(pipe: USBDevicePipe): int-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 **参数：**

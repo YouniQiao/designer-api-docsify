@@ -8,6 +8,8 @@ Initialization parameters of TextArea.
 
 **Since:** 7
 
+<!--Device-unnamed-declare interface TextAreaOptions--><!--Device-unnamed-declare interface TextAreaOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## controller
@@ -23,6 +25,8 @@ Sets the TextArea controller. When not set, the component uses the internal defa
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextAreaOptions-controller?: TextAreaController--><!--Device-TextAreaOptions-controller?: TextAreaController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -43,6 +47,8 @@ Default value: empty string. When not set, no placeholder text is displayed.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextAreaOptions-placeholder?: ResourceStr--><!--Device-TextAreaOptions-placeholder?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -67,5 +73,7 @@ Since API version 18, this parameter supports two-way binding through [!!](../..
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextAreaOptions-text?: ResourceStr--><!--Device-TextAreaOptions-text?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -18,6 +18,8 @@ function notifyFormsVisible(formIds: Array<string>, isVisible: boolean, callback
 
 **需要权限：** ohos.permission.REQUIRE_FORM
 
+<!--Device-formHost-function notifyFormsVisible(formIds: Array<string>, isVisible: boolean, callback: AsyncCallback<void>): void--><!--Device-formHost-function notifyFormsVisible(formIds: Array<string>, isVisible: boolean, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -74,6 +76,8 @@ function notifyFormsVisible(formIds: Array<string>, isVisible: boolean): Promise
 **起始版本：** 9
 
 **需要权限：** ohos.permission.REQUIRE_FORM
+
+<!--Device-formHost-function notifyFormsVisible(formIds: Array<string>, isVisible: boolean): Promise<void>--><!--Device-formHost-function notifyFormsVisible(formIds: Array<string>, isVisible: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 

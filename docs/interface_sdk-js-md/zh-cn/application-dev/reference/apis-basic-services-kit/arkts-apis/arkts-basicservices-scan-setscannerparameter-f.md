@@ -18,6 +18,8 @@ function setScannerParameter(scannerId: string, optionIndex: number, value: Scan
 
 **需要权限：** ohos.permission.PRINT
 
+<!--Device-scan-function setScannerParameter(scannerId: string, optionIndex: int, value: ScannerOptionValue): Promise<void>--><!--Device-scan-function setScannerParameter(scannerId: string, optionIndex: int, value: ScannerOptionValue): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **参数：**

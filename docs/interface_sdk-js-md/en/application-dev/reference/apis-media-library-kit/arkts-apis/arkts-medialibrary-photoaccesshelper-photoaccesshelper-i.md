@@ -8,6 +8,8 @@ Helper functions to access photos and albums.
 
 **Since:** 10
 
+<!--Device-photoAccessHelper-interface PhotoAccessHelper--><!--Device-photoAccessHelper-interface PhotoAccessHelper-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
@@ -28,7 +30,9 @@ Applies media changes. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-PhotoAccessHelper-applyChanges(mediaChangeRequest: MediaChangeRequest): Promise<void>--><!--Device-PhotoAccessHelper-applyChanges(mediaChangeRequest: MediaChangeRequest): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -67,6 +71,8 @@ Query whether the assets exist and whether the invoker has read permission on th
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PhotoAccessHelper-checkPhotoUrisReadPermission(uris: string[]): Promise<Map<string, MediaAssetPermissionState>>--><!--Device-PhotoAccessHelper-checkPhotoUrisReadPermission(uris: string[]): Promise<Map<string, MediaAssetPermissionState>>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -129,7 +135,9 @@ If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can 
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-PhotoAccessHelper-createAsset(photoType: PhotoType, extension: string, options: CreateOptions, callback: AsyncCallback<string>): void--><!--Device-PhotoAccessHelper-createAsset(photoType: PhotoType, extension: string, options: CreateOptions, callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -191,7 +199,9 @@ If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can 
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-PhotoAccessHelper-createAsset(photoType: PhotoType, extension: string, callback: AsyncCallback<string>): void--><!--Device-PhotoAccessHelper-createAsset(photoType: PhotoType, extension: string, callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -249,7 +259,9 @@ If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can 
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-PhotoAccessHelper-createAsset(photoType: PhotoType, extension: string, options?: CreateOptions): Promise<string>--><!--Device-PhotoAccessHelper-createAsset(photoType: PhotoType, extension: string, options?: CreateOptions): Promise<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -312,6 +324,8 @@ Within 5 minutes after the user agrees to save the asset, if the same applicatio
 **Since:** 12
 
 **Required permissions:** ohos.permission.SHORT_TERM_WRITE_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-createAssetWithShortTermPermission(photoCreationConfig: PhotoCreationConfig): Promise<string>--><!--Device-PhotoAccessHelper-createAssetWithShortTermPermission(photoCreationConfig: PhotoCreationConfig): Promise<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -397,6 +411,8 @@ Displays the dialog box for the first time for the user to confirm whether to sa
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PhotoAccessHelper-createAssetWithShortTermPermissionEx(creationSetting: CreationSetting): Promise<string>--><!--Device-PhotoAccessHelper-createAssetWithShortTermPermissionEx(creationSetting: CreationSetting): Promise<string>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
@@ -434,7 +450,9 @@ If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can 
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 23.
+
+<!--Device-PhotoAccessHelper-createPhotoAsset(photoType: PhotoType, extension: string, title?: string): Promise<string>--><!--Device-PhotoAccessHelper-createPhotoAsset(photoType: PhotoType, extension: string, title?: string): Promise<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -493,6 +511,8 @@ This API supports the following albums: camera application album, screenshot app
 **Since:** 22
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PhotoAccessHelper-getAlbumIdByLpath(lpath: string): Promise<int>--><!--Device-PhotoAccessHelper-getAlbumIdByLpath(lpath: string): Promise<int>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -553,6 +573,8 @@ Before the operation, ensure that the albums to obtain exist.
 **Since:** 10
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-getAlbums(      type: AlbumType,      subtype: AlbumSubtype,      options: FetchOptions,      callback: AsyncCallback<FetchResult<Album>>    ): void--><!--Device-PhotoAccessHelper-getAlbums(      type: AlbumType,      subtype: AlbumSubtype,      options: FetchOptions,      callback: AsyncCallback<FetchResult<Album>>    ): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -623,6 +645,8 @@ Before the operation, ensure that the albums to obtain exist.
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-PhotoAccessHelper-getAlbums(type: AlbumType, subtype: AlbumSubtype, callback: AsyncCallback<FetchResult<Album>>): void--><!--Device-PhotoAccessHelper-getAlbums(type: AlbumType, subtype: AlbumSubtype, callback: AsyncCallback<FetchResult<Album>>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
@@ -682,6 +706,8 @@ Before the operation, ensure that the albums to obtain exist.
 **Since:** 10
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-getAlbums(type: AlbumType, subtype: AlbumSubtype, options?: FetchOptions): Promise<FetchResult<Album>>--><!--Device-PhotoAccessHelper-getAlbums(type: AlbumType, subtype: AlbumSubtype, options?: FetchOptions): Promise<FetchResult<Album>>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -752,6 +778,8 @@ Obtains image and video assets. This API uses an asynchronous callback to return
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-PhotoAccessHelper-getAssets(options: FetchOptions, callback: AsyncCallback<FetchResult<PhotoAsset>>): void--><!--Device-PhotoAccessHelper-getAssets(options: FetchOptions, callback: AsyncCallback<FetchResult<PhotoAsset>>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
@@ -814,7 +842,9 @@ Obtains image and video assets. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+
+<!--Device-PhotoAccessHelper-getAssets(options: FetchOptions): Promise<FetchResult<PhotoAsset>>--><!--Device-PhotoAccessHelper-getAssets(options: FetchOptions): Promise<FetchResult<PhotoAsset>>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -880,7 +910,9 @@ Obtains burst assets. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+
+<!--Device-PhotoAccessHelper-getBurstAssets(burstKey: string, options: FetchOptions): Promise<FetchResult<PhotoAsset>>--><!--Device-PhotoAccessHelper-getBurstAssets(burstKey: string, options: FetchOptions): Promise<FetchResult<PhotoAsset>>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -946,7 +978,9 @@ Obtains the name of the album that the **PhotoPickerComponent** shows by default
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+
+<!--Device-PhotoAccessHelper-getPhotoPickerComponentDefaultAlbumName(): Promise<string>--><!--Device-PhotoAccessHelper-getPhotoPickerComponentDefaultAlbumName(): Promise<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -990,7 +1024,9 @@ Obtains the information about the recent image or video when the application use
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+
+<!--Device-PhotoAccessHelper-getRecentPhotoInfo(options?: RecentPhotoOptions): Promise<RecentPhotoInfo>--><!--Device-PhotoAccessHelper-getRecentPhotoInfo(options?: RecentPhotoOptions): Promise<RecentPhotoInfo>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -1038,6 +1074,8 @@ getSupportedPhotoFormats(photoType: PhotoType): Promise<Array<string>>
 Obtains the list of image or video file name extensions supported by the media library.
 
 **Since:** 18
+
+<!--Device-PhotoAccessHelper-getSupportedPhotoFormats(photoType: PhotoType): Promise<Array<string>>--><!--Device-PhotoAccessHelper-getSupportedPhotoFormats(photoType: PhotoType): Promise<Array<string>>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -1103,6 +1141,8 @@ Unregisters the listener for the **'photoChange'** event to stop monitoring medi
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-PhotoAccessHelper-off(type: 'photoChange', callback?: Callback<PhotoAssetChangeInfos>): void--><!--Device-PhotoAccessHelper-off(type: 'photoChange', callback?: Callback<PhotoAssetChangeInfos>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
@@ -1164,6 +1204,8 @@ Unregisters a listener for the **'photoAlbumChange'** event to stop monitoring a
 **Since:** 20
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-off(type: 'photoAlbumChange', callback?: Callback<AlbumChangeInfos>): void--><!--Device-PhotoAccessHelper-off(type: 'photoAlbumChange', callback?: Callback<AlbumChangeInfos>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -1229,6 +1271,8 @@ Unsubscribes to changes of medialibrary availability.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PhotoAccessHelper-offMediaLibraryAvailability(callback? : Callback<MediaLibraryAvailability>):void--><!--Device-PhotoAccessHelper-offMediaLibraryAvailability(callback? : Callback<MediaLibraryAvailability>):void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
@@ -1284,6 +1328,8 @@ Unregisters a listener for a single album. Note the following:
 **Since:** 23
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-offSinglePhotoAlbumChange(album?: Album, callback?: Callback<AlbumChangeInfos>): void--><!--Device-PhotoAccessHelper-offSinglePhotoAlbumChange(album?: Album, callback?: Callback<AlbumChangeInfos>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -1373,6 +1419,8 @@ all callback listeners of the **asset** are unregistered.
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-PhotoAccessHelper-offSinglePhotoChange(asset?: PhotoAsset, callback?: Callback<PhotoAssetChangeInfos>): void--><!--Device-PhotoAccessHelper-offSinglePhotoChange(asset?: PhotoAsset, callback?: Callback<PhotoAssetChangeInfos>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
@@ -1458,6 +1506,8 @@ Registers a listener for the **'photoChange'** event to monitor media asset chan
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-PhotoAccessHelper-on(type: 'photoChange', callback: Callback<PhotoAssetChangeInfos>): void--><!--Device-PhotoAccessHelper-on(type: 'photoChange', callback: Callback<PhotoAssetChangeInfos>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
@@ -1516,6 +1566,8 @@ Registers a listener for the **'photoAlbumChange'** event to monitor album chang
 **Since:** 20
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-on(type: 'photoAlbumChange', callback: Callback<AlbumChangeInfos>): void--><!--Device-PhotoAccessHelper-on(type: 'photoAlbumChange', callback: Callback<AlbumChangeInfos>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -1578,6 +1630,8 @@ Subscribes to changes of medialibrary availability.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PhotoAccessHelper-onMediaLibraryAvailability(callback: Callback<MediaLibraryAvailability>): void--><!--Device-PhotoAccessHelper-onMediaLibraryAvailability(callback: Callback<MediaLibraryAvailability>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
@@ -1636,6 +1690,8 @@ Registers a listener for changes of a single common asset. This API uses an asyn
 **Since:** 23
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-onSinglePhotoAlbumChange(album: Album, callback: Callback<AlbumChangeInfos>): void--><!--Device-PhotoAccessHelper-onSinglePhotoAlbumChange(album: Album, callback: Callback<AlbumChangeInfos>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -1707,6 +1763,8 @@ Registers a listener for changes of a single common asset. This API uses an asyn
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-PhotoAccessHelper-onSinglePhotoChange(asset: PhotoAsset, callback: Callback<PhotoAssetChangeInfos>): void--><!--Device-PhotoAccessHelper-onSinglePhotoChange(asset: PhotoAsset, callback: Callback<PhotoAssetChangeInfos>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
@@ -1777,6 +1835,8 @@ Registers listening for the specified URI. This API uses a callback to return th
 
 **Since:** 10
 
+<!--Device-PhotoAccessHelper-registerChange(uri: string, forChildUris: boolean, callback: Callback<ChangeData>): void--><!--Device-PhotoAccessHelper-registerChange(uri: string, forChildUris: boolean, callback: Callback<ChangeData>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
@@ -1843,6 +1903,8 @@ Call this API when the APIs of the PhotoAccessHelper instance are no longer used
 
 **Since:** 10
 
+<!--Device-PhotoAccessHelper-release(callback: AsyncCallback<void>): void--><!--Device-PhotoAccessHelper-release(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
@@ -1890,6 +1952,8 @@ Call this API when the APIs of the PhotoAccessHelper instance are no longer used
 
 **Since:** 10
 
+<!--Device-PhotoAccessHelper-release(): Promise<void>--><!--Device-PhotoAccessHelper-release(): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Return value:**
@@ -1932,7 +1996,9 @@ requestPhotoUrisReadPermission(srcFileUris: Array<string>): Promise<Array<string
 
 **Since:** 14
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 14.
+
+<!--Device-PhotoAccessHelper-requestPhotoUrisReadPermission(srcFileUris: Array<string>): Promise<Array<string>>--><!--Device-PhotoAccessHelper-requestPhotoUrisReadPermission(srcFileUris: Array<string>): Promise<Array<string>>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -1992,7 +2058,9 @@ It contains the list of URIs that have been created and granted the save permiss
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 23.
+
+<!--Device-PhotoAccessHelper-requestPhotoUrisReadPermissionEx(srcFileUris: Array<string>): Promise<RequestReadPermissionResult>--><!--Device-PhotoAccessHelper-requestPhotoUrisReadPermissionEx(srcFileUris: Array<string>): Promise<RequestReadPermissionResult>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -2052,6 +2120,8 @@ Sets the asset compatibility capability. The system performs compatibility proce
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PhotoAccessHelper-setAssetCompatibleCapability(capability: AssetCompatibleCapability): Promise<void>--><!--Device-PhotoAccessHelper-setAssetCompatibleCapability(capability: AssetCompatibleCapability): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
@@ -2106,7 +2176,9 @@ The dialog box must display the application name, but this cannot be directly ob
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-PhotoAccessHelper-showAssetsCreationDialog(srcFileUris: Array<string>, photoCreationConfigs: Array<PhotoCreationConfig>): Promise<Array<string>>--><!--Device-PhotoAccessHelper-showAssetsCreationDialog(srcFileUris: Array<string>, photoCreationConfigs: Array<PhotoCreationConfig>): Promise<Array<string>>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -2180,7 +2252,9 @@ Displays a dialog box for the user to confirm whether to save the images or vide
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 23.
+
+<!--Device-PhotoAccessHelper-showAssetsCreationDialogEx(srcFileUris: Array<string>, creationSettings: Array<CreationSetting>): Promise<Array<string>>--><!--Device-PhotoAccessHelper-showAssetsCreationDialogEx(srcFileUris: Array<string>, creationSettings: Array<CreationSetting>): Promise<Array<string>>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -2253,7 +2327,9 @@ Displays a dialog box for the user to confirm whether to save an image or video.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 23.
+
+<!--Device-PhotoAccessHelper-showSingleAssetCreationDialogEx(srcFileUri: string, creationSetting: CreationSetting, isImageFullyDisplayed: boolean): Promise<string>--><!--Device-PhotoAccessHelper-showSingleAssetCreationDialogEx(srcFileUri: string, creationSetting: CreationSetting, isImageFullyDisplayed: boolean): Promise<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -2313,6 +2389,8 @@ unRegisterChange(uri: string, callback?: Callback<ChangeData>): void
 Unregisters listening for the specified URI. Multiple callbacks can be registered for a URI for listening. You can use this API to unregister the listening of the specified callbacks or all callbacks.
 
 **Since:** 10
+
+<!--Device-PhotoAccessHelper-unRegisterChange(uri: string, callback?: Callback<ChangeData>): void--><!--Device-PhotoAccessHelper-unRegisterChange(uri: string, callback?: Callback<ChangeData>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -2381,6 +2459,8 @@ Creates a dialog box for deleting media files. This API uses an asynchronous cal
 **Substitutes:** [deleteAssets](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md#deleteassets)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-createDeleteRequest(uriList: Array<string>, callback: AsyncCallback<void>): void--><!--Device-PhotoAccessHelper-createDeleteRequest(uriList: Array<string>, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -2451,6 +2531,8 @@ Creates a dialog box for deleting media files. This API uses a promise to return
 **Substitutes:** [deleteAssets](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md#deleteassets)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-createDeleteRequest(uriList: Array<string>): Promise<void>--><!--Device-PhotoAccessHelper-createDeleteRequest(uriList: Array<string>): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

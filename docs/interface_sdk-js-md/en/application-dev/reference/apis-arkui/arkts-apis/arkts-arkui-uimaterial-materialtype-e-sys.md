@@ -8,6 +8,8 @@ Enumerates system material types.
 
 **Since:** 26.0.0
 
+<!--Device-uiMaterial-enum MaterialType--><!--Device-uiMaterial-enum MaterialType-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## NONE
@@ -23,6 +25,8 @@ No system material effect. The corresponding effects are: [backgroundColor](../a
 **Model restriction:** This API can be used only in the stage model.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
+
+<!--Device-MaterialType-NONE = 0--><!--Device-MaterialType-NONE = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -49,6 +53,8 @@ Semi-transparent system material effect. The corresponding effect is as follows:
 **Model restriction:** This API can be used only in the stage model.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
+
+<!--Device-MaterialType-SEMI_TRANSPARENT = 1--><!--Device-MaterialType-SEMI_TRANSPARENT = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

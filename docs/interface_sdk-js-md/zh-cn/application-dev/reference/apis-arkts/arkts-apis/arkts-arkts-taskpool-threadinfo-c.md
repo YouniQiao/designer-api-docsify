@@ -8,6 +8,8 @@ class ThreadInfo
 
 **起始版本：** 10
 
+<!--Device-taskpool-class ThreadInfo--><!--Device-taskpool-class ThreadInfo-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -30,6 +32,8 @@ priority?: Priority
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-ThreadInfo-priority?: Priority--><!--Device-ThreadInfo-priority?: Priority-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## taskIds
@@ -45,6 +49,8 @@ taskIds?: number[]
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ThreadInfo-taskIds?: number[]--><!--Device-ThreadInfo-taskIds?: number[]-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -63,5 +69,7 @@ tid: number
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ThreadInfo-tid: number--><!--Device-ThreadInfo-tid: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

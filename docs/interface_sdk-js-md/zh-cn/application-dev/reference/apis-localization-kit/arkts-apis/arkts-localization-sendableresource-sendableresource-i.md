@@ -10,6 +10,8 @@ interface SendableResource extends lang.ISendable
 
 **起始版本：** 12
 
+<!--Device-unnamed-interface SendableResource extends lang.ISendable--><!--Device-unnamed-interface SendableResource extends lang.ISendable-End-->
+
 **系统能力：** SystemCapability.Global.ResourceManager
 
 ## bundleName
@@ -25,6 +27,8 @@ bundleName: string
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-SendableResource-bundleName: string--><!--Device-SendableResource-bundleName: string-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -44,6 +48,8 @@ id: number
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-SendableResource-id: number--><!--Device-SendableResource-id: number-End-->
+
 **系统能力：** SystemCapability.Global.ResourceManager
 
 ## moduleName
@@ -60,6 +66,8 @@ moduleName: string
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-SendableResource-moduleName: string--><!--Device-SendableResource-moduleName: string-End-->
+
 **系统能力：** SystemCapability.Global.ResourceManager
 
 ## params
@@ -75,6 +83,8 @@ params?: collections.Array <string | number>
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-SendableResource-params?: collections.Array <string | number>--><!--Device-SendableResource-params?: collections.Array <string | number>-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -103,5 +113,7 @@ type?: number
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-SendableResource-type?: number--><!--Device-SendableResource-type?: number-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager

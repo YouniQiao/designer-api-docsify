@@ -8,6 +8,8 @@ export interface AccessibilityGrid
 
 **起始版本：** 20
 
+<!--Device-unnamed-export interface AccessibilityGrid--><!--Device-unnamed-export interface AccessibilityGrid-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -24,6 +26,8 @@ columnIndex: number
 
 **起始版本：** 20
 
+<!--Device-AccessibilityGrid-columnIndex: int--><!--Device-AccessibilityGrid-columnIndex: int-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -39,6 +43,8 @@ rowIndex: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-AccessibilityGrid-rowIndex: int--><!--Device-AccessibilityGrid-rowIndex: int-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 

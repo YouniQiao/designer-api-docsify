@@ -16,6 +16,8 @@ function unregisterThermalLevelCallback(callback?: Callback<void>): void
 
 **起始版本：** 9
 
+<!--Device-thermal-function unregisterThermalLevelCallback(callback?: Callback<void>): void--><!--Device-thermal-function unregisterThermalLevelCallback(callback?: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.PowerManager.ThermalManager
 
 **参数：**

@@ -10,6 +10,8 @@ interface LightResponse extends Response
 
 **起始版本：** 8
 
+<!--Device-sensor-interface LightResponse extends Response--><!--Device-sensor-interface LightResponse extends Response-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## 导入模块
@@ -30,6 +32,8 @@ colorTemperature?: number
 
 **起始版本：** 12
 
+<!--Device-LightResponse-colorTemperature?: double--><!--Device-LightResponse-colorTemperature?: double-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## infraredLuminance
@@ -44,6 +48,8 @@ infraredLuminance?: number
 
 **起始版本：** 12
 
+<!--Device-LightResponse-infraredLuminance?: double--><!--Device-LightResponse-infraredLuminance?: double-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## intensity
@@ -57,5 +63,7 @@ intensity: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-LightResponse-intensity: double--><!--Device-LightResponse-intensity: double-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor

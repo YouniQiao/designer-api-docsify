@@ -10,6 +10,8 @@ interface PolicyFile
 
 **起始版本：** 12
 
+<!--Device-securityGuard-interface PolicyFile--><!--Device-securityGuard-interface PolicyFile-End-->
+
 **系统能力：** SystemCapability.Security.SecurityGuard
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ fd: number
 
 **起始版本：** 12
 
+<!--Device-PolicyFile-fd: number--><!--Device-PolicyFile-fd: number-End-->
+
 **系统能力：** SystemCapability.Security.SecurityGuard
 
 **系统接口：** 此接口为系统接口。
@@ -47,6 +51,8 @@ name: string
 **类型：** string
 
 **起始版本：** 12
+
+<!--Device-PolicyFile-name: string--><!--Device-PolicyFile-name: string-End-->
 
 **系统能力：** SystemCapability.Security.SecurityGuard
 

@@ -19,6 +19,8 @@ function publishAsUser(event: string, userId: number, callback: AsyncCallback<vo
 
 **替代接口：** [publishAsUser](arkts-basicservices-commoneventmanager-publishasuser-f-sys.md)(event: string, userId: number, callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-commonEvent-function publishAsUser(event: string, userId: number, callback: AsyncCallback<void>): void--><!--Device-commonEvent-function publishAsUser(event: string, userId: number, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **系统接口：** 此接口为系统接口。
@@ -73,6 +75,8 @@ function publishAsUser(
 **废弃版本：** 9
 
 **替代接口：** [publishAsUser](arkts-basicservices-commoneventmanager-publishasuser-f-sys.md)( event: string, userId: number, options: CommonEventPublishData, callback: AsyncCallback&lt;void&gt; )
+
+<!--Device-commonEvent-function publishAsUser(    event: string,    userId: number,    options: CommonEventPublishData,    callback: AsyncCallback<void>  ): void--><!--Device-commonEvent-function publishAsUser(    event: string,    userId: number,    options: CommonEventPublishData,    callback: AsyncCallback<void>  ): void-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 

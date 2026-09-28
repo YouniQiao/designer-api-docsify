@@ -20,6 +20,8 @@ startOptimizeSpace的使用和stopOptimizeSpace方法调用一一对应，重复
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC
 
+<!--Device-cloudSync-function startOptimizeSpace(optimizePara: OptimizeSpaceParam, callback?: Callback<OptimizeSpaceProgress>): Promise<void>--><!--Device-cloudSync-function startOptimizeSpace(optimizePara: OptimizeSpaceParam, callback?: Callback<OptimizeSpaceProgress>): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **系统接口：** 此接口为系统接口。

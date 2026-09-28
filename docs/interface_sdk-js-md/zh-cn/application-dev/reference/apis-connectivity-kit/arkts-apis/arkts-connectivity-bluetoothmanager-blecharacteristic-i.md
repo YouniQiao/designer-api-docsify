@@ -14,6 +14,8 @@ interface BLECharacteristic
 
 **替代接口：** [BLECharacteristic](arkts-connectivity-ble-blecharacteristic-i.md)
 
+<!--Device-bluetoothManager-interface BLECharacteristic--><!--Device-bluetoothManager-interface BLECharacteristic-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -38,6 +40,8 @@ characteristicUuid: string
 
 **替代接口：** [characteristicUuid](arkts-connectivity-ble-blecharacteristic-i.md#characteristicuuid)
 
+<!--Device-BLECharacteristic-characteristicUuid: string--><!--Device-BLECharacteristic-characteristicUuid: string-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## characteristicValue
@@ -55,6 +59,8 @@ characteristicValue: ArrayBuffer
 **废弃版本：** 10
 
 **替代接口：** [characteristicValue](arkts-connectivity-ble-blecharacteristic-i.md#characteristicvalue)
+
+<!--Device-BLECharacteristic-characteristicValue: ArrayBuffer--><!--Device-BLECharacteristic-characteristicValue: ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -74,6 +80,8 @@ descriptors: Array<BLEDescriptor>
 
 **替代接口：** [descriptors](arkts-connectivity-ble-blecharacteristic-i.md#descriptors)
 
+<!--Device-BLECharacteristic-descriptors: Array<BLEDescriptor>--><!--Device-BLECharacteristic-descriptors: Array<BLEDescriptor>-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## serviceUuid
@@ -91,5 +99,7 @@ serviceUuid: string
 **废弃版本：** 10
 
 **替代接口：** [serviceUuid](arkts-connectivity-ble-blecharacteristic-i.md#serviceuuid)
+
+<!--Device-BLECharacteristic-serviceUuid: string--><!--Device-BLECharacteristic-serviceUuid: string-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

@@ -18,6 +18,8 @@ function getAllAppProvisionInfo(userId?: number): Promise<Array<AppProvisionInfo
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or (ohos.permission.GET_BUNDLE_INFO_PRIVILEGED and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS)
 
+<!--Device-bundleManager-function getAllAppProvisionInfo(userId?: int): Promise<Array<AppProvisionInfo>>--><!--Device-bundleManager-function getAllAppProvisionInfo(userId?: int): Promise<Array<AppProvisionInfo>>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。

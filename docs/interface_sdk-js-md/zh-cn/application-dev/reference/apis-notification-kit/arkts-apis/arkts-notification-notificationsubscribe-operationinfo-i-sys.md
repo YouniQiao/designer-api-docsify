@@ -8,6 +8,8 @@ export interface OperationInfo
 
 **起始版本：** 18
 
+<!--Device-notificationSubscribe-export interface OperationInfo--><!--Device-notificationSubscribe-export interface OperationInfo-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ actionName?: string
 
 **起始版本：** 18
 
+<!--Device-OperationInfo-actionName?: string--><!--Device-OperationInfo-actionName?: string-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ buttonIndex?: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-OperationInfo-buttonIndex?: int--><!--Device-OperationInfo-buttonIndex?: int-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -67,6 +73,8 @@ operationType?: number
 
 **起始版本：** 20
 
+<!--Device-OperationInfo-operationType?: int--><!--Device-OperationInfo-operationType?: int-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -82,6 +90,8 @@ userInput?: string
 **类型：** string
 
 **起始版本：** 18
+
+<!--Device-OperationInfo-userInput?: string--><!--Device-OperationInfo-userInput?: string-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

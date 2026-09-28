@@ -8,6 +8,8 @@ export default class ErrorObserver
 
 **起始版本：** 9
 
+<!--Device-unnamed-export default class ErrorObserver--><!--Device-unnamed-export default class ErrorObserver-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## onException
@@ -21,6 +23,8 @@ onException?(errObject: Error): void
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ErrorObserver-onException?(errObject: Error): void--><!--Device-ErrorObserver-onException?(errObject: Error): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -67,6 +71,8 @@ onUnhandledException(errMsg: string): void
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ErrorObserver-onUnhandledException(errMsg: string): void--><!--Device-ErrorObserver-onUnhandledException(errMsg: string): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

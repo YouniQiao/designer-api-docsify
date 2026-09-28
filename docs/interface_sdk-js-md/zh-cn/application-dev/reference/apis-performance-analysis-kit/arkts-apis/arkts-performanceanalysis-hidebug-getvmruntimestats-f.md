@@ -16,6 +16,8 @@ function getVMRuntimeStats(): GcStats
 
 **起始版本：** 12
 
+<!--Device-hidebug-function getVMRuntimeStats(): GcStats--><!--Device-hidebug-function getVMRuntimeStats(): GcStats-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **返回值：**

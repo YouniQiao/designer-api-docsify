@@ -18,6 +18,8 @@ function removeBackupBundleData(bundleName: string, userId: number, appIndex: nu
 
 **需要权限：** ohos.permission.CLEAN_APPLICATION_DATA
 
+<!--Device-bundleManager-function removeBackupBundleData(bundleName: string, userId: int, appIndex: int): Promise<void>--><!--Device-bundleManager-function removeBackupBundleData(bundleName: string, userId: int, appIndex: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。

@@ -16,6 +16,8 @@ export declare class CylinderGeometry extends GeometryDefinition
 
 **起始版本：** 23
 
+<!--Device-unnamed-export declare class CylinderGeometry extends GeometryDefinition--><!--Device-unnamed-export declare class CylinderGeometry extends GeometryDefinition-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## height
@@ -30,6 +32,8 @@ get height(): number
 
 **起始版本：** 23
 
+<!--Device-CylinderGeometry-get height(): double--><!--Device-CylinderGeometry-get height(): double-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ```TypeScript
@@ -41,6 +45,8 @@ set height(value: number)
 **类型：** number
 
 **起始版本：** 23
+
+<!--Device-CylinderGeometry-set height(value: double)--><!--Device-CylinderGeometry-set height(value: double)-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -56,6 +62,8 @@ get radius(): number
 
 **起始版本：** 23
 
+<!--Device-CylinderGeometry-get radius(): double--><!--Device-CylinderGeometry-get radius(): double-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ```TypeScript
@@ -67,6 +75,8 @@ set radius(value: number)
 **类型：** number
 
 **起始版本：** 23
+
+<!--Device-CylinderGeometry-set radius(value: double)--><!--Device-CylinderGeometry-set radius(value: double)-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -82,6 +92,8 @@ get segmentCount(): number
 
 **起始版本：** 23
 
+<!--Device-CylinderGeometry-get segmentCount(): int--><!--Device-CylinderGeometry-get segmentCount(): int-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ```TypeScript
@@ -93,5 +105,7 @@ set segmentCount(value: number)
 **类型：** number
 
 **起始版本：** 23
+
+<!--Device-CylinderGeometry-set segmentCount(value: int)--><!--Device-CylinderGeometry-set segmentCount(value: int)-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

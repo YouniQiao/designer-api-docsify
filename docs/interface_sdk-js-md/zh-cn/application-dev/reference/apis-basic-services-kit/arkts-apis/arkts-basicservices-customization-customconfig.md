@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare namespace customConfig--><!--Device-unnamed-declare namespace customConfig-End-->
+
 **系统能力：** SystemCapability.Customization.CustomConfig
 
 ## 导入模块

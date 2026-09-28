@@ -26,6 +26,8 @@ function startDiscoverDevices(): boolean
 
 **需要权限：** ohos.permission.GET_WIFI_INFO and ohos.permission.LOCATION
 
+<!--Device-wifi-function startDiscoverDevices(): boolean--><!--Device-wifi-function startDiscoverDevices(): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
 **返回值：**

@@ -8,6 +8,8 @@ export interface LocatingRequiredDataConfig
 
 **起始版本：** 10
 
+<!--Device-geoLocationManager-export interface LocatingRequiredDataConfig--><!--Device-geoLocationManager-export interface LocatingRequiredDataConfig-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ arfcn?: number[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-LocatingRequiredDataConfig-arfcn?: int[]--><!--Device-LocatingRequiredDataConfig-arfcn?: int[]-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **系统接口：** 此接口为系统接口。
@@ -47,6 +51,8 @@ needStartScan: boolean
 **类型：** boolean
 
 **起始版本：** 10
+
+<!--Device-LocatingRequiredDataConfig-needStartScan: boolean--><!--Device-LocatingRequiredDataConfig-needStartScan: boolean-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -66,6 +72,8 @@ plmnId?: number[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-LocatingRequiredDataConfig-plmnId?: int[]--><!--Device-LocatingRequiredDataConfig-plmnId?: int[]-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **系统接口：** 此接口为系统接口。
@@ -82,6 +90,8 @@ scanInterval?: number
 
 **起始版本：** 10
 
+<!--Device-LocatingRequiredDataConfig-scanInterval?: int--><!--Device-LocatingRequiredDataConfig-scanInterval?: int-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **系统接口：** 此接口为系统接口。
@@ -97,6 +107,8 @@ scanTimeout?: number
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-LocatingRequiredDataConfig-scanTimeout?: int--><!--Device-LocatingRequiredDataConfig-scanTimeout?: int-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -116,6 +128,8 @@ slotId?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-LocatingRequiredDataConfig-slotId?: int--><!--Device-LocatingRequiredDataConfig-slotId?: int-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **系统接口：** 此接口为系统接口。
@@ -131,6 +145,8 @@ type: LocatingRequiredDataType
 **类型：** [LocatingRequiredDataType](arkts-location-geolocationmanager-locatingrequireddatatype-e-sys.md)
 
 **起始版本：** 10
+
+<!--Device-LocatingRequiredDataConfig-type: LocatingRequiredDataType--><!--Device-LocatingRequiredDataConfig-type: LocatingRequiredDataType-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 

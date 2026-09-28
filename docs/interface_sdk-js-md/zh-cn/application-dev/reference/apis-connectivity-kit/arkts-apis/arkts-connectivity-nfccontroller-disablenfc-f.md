@@ -18,6 +18,8 @@ function disableNfc(): void
 
 **需要权限：** ohos.permission.MANAGE_SECURE_SETTINGS
 
+<!--Device-nfcController-function disableNfc(): void--><!--Device-nfcController-function disableNfc(): void-End-->
+
 **系统能力：** SystemCapability.Communication.NFC.Core
 
 **错误码：**

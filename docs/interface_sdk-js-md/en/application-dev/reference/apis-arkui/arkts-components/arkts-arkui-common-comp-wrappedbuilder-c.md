@@ -8,6 +8,8 @@ declare class WrappedBuilder<Args extends Object[]>
 
 **Since:** 11
 
+<!--Device-unnamed-declare class WrappedBuilder<Args extends Object[]>--><!--Device-unnamed-declare class WrappedBuilder<Args extends Object[]>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## builder
@@ -23,6 +25,8 @@ Global function decorated by `@Builder`, used to generate the corresponding cust
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-WrappedBuilder-builder: (...args: Args) => void--><!--Device-WrappedBuilder-builder: (...args: Args) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,6 +49,8 @@ A constructor used to create a `WrappedBuilder` instance.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-WrappedBuilder-constructor(builder: (...args: Args) => void)--><!--Device-WrappedBuilder-constructor(builder: (...args: Args) => void)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

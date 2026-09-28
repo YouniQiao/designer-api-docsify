@@ -18,6 +18,8 @@ function removeAllSlots(callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
+<!--Device-notificationManager-function removeAllSlots(callback: AsyncCallback<void>): void--><!--Device-notificationManager-function removeAllSlots(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **参见：**
@@ -72,6 +74,8 @@ function removeAllSlots(): Promise<void>
 删除后，当前应用的所有通知渠道及其配置将被永久移除，后续发布通知时系统将自动创建对应类型的渠道。已通过这些渠道发布的通知不受影响，仍可在通知中心查看。适用于需要一次性清除所有渠道配置的场景。
 
 **起始版本：** 9
+
+<!--Device-notificationManager-function removeAllSlots(): Promise<void>--><!--Device-notificationManager-function removeAllSlots(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

@@ -8,6 +8,8 @@ Defines accessibility options for the span.
 
 **Since:** 23
 
+<!--Device-unnamed-declare interface AccessibilitySpanOptions--><!--Device-unnamed-declare interface AccessibilitySpanOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityDescription
@@ -29,6 +31,8 @@ If the value is **undefined**, the default value is used.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-AccessibilitySpanOptions-accessibilityDescription?: ResourceStr--><!--Device-AccessibilitySpanOptions-accessibilityDescription?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -56,6 +60,8 @@ cannot be recognized by the accessibility service. Default value: "auto"If the v
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-AccessibilitySpanOptions-accessibilityLevel?: string--><!--Device-AccessibilitySpanOptions-accessibilityLevel?: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityText
@@ -77,5 +83,7 @@ If the value is **undefined**, the default value is used.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-AccessibilitySpanOptions-accessibilityText?: ResourceStr--><!--Device-AccessibilitySpanOptions-accessibilityText?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

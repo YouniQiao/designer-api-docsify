@@ -19,4 +19,6 @@ The function decorated by **\@ComponentReuse** is called when a reusable custom 
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-unnamed-export declare const ComponentReuse: MethodDecorator--><!--Device-unnamed-export declare const ComponentReuse: MethodDecorator-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -8,6 +8,8 @@ export enum HuksImportKeyType
 
 **起始版本：** 9
 
+<!--Device-huks-export enum HuksImportKeyType--><!--Device-huks-export enum HuksImportKeyType-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core
 - API版本9-11：SystemCapability.Security.Huks.Extension
@@ -25,6 +27,8 @@ HUKS_KEY_TYPE_PUBLIC_KEY = 0
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HuksImportKeyType-HUKS_KEY_TYPE_PUBLIC_KEY = 0--><!--Device-HuksImportKeyType-HUKS_KEY_TYPE_PUBLIC_KEY = 0-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core
@@ -44,6 +48,8 @@ HUKS_KEY_TYPE_PRIVATE_KEY = 1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-HuksImportKeyType-HUKS_KEY_TYPE_PRIVATE_KEY = 1--><!--Device-HuksImportKeyType-HUKS_KEY_TYPE_PRIVATE_KEY = 1-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core
 - API版本9-11：SystemCapability.Security.Huks.Extension
@@ -61,6 +67,8 @@ HUKS_KEY_TYPE_KEY_PAIR = 2
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HuksImportKeyType-HUKS_KEY_TYPE_KEY_PAIR = 2--><!--Device-HuksImportKeyType-HUKS_KEY_TYPE_KEY_PAIR = 2-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core

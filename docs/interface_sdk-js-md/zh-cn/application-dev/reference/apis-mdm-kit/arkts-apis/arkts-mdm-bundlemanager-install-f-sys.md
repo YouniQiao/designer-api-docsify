@@ -24,6 +24,8 @@ function install(admin: Want, hapFilePaths: Array<string>, callback: AsyncCallba
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-bundleManager-function install(admin: Want, hapFilePaths: Array<string>, callback: AsyncCallback<void>): void--><!--Device-bundleManager-function install(admin: Want, hapFilePaths: Array<string>, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -90,6 +92,8 @@ function install(admin: Want, hapFilePaths: Array<string>, installParam: Install
 **需要权限：** ohos.permission.ENTERPRISE_INSTALL_BUNDLE
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-bundleManager-function install(admin: Want, hapFilePaths: Array<string>, installParam: InstallParam, callback: AsyncCallback<void>): void--><!--Device-bundleManager-function install(admin: Want, hapFilePaths: Array<string>, installParam: InstallParam, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

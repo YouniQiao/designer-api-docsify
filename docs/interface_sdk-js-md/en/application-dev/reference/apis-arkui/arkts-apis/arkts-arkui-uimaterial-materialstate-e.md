@@ -8,6 +8,8 @@ Enumerates the material enabling states, indicating the states of the applicatio
 
 **Since:** 26.0.0
 
+<!--Device-uiMaterial-enum MaterialState--><!--Device-uiMaterial-enum MaterialState-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## DEFAULT
@@ -23,6 +25,8 @@ Default state. The immersive system material is enabled by default for the [Dial
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-MaterialState-DEFAULT = 0--><!--Device-MaterialState-DEFAULT = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,6 +44,8 @@ Enabled state. The immersive system material is enabled by default for the [Dial
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-MaterialState-ENABLE = 1--><!--Device-MaterialState-ENABLE = 1-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## DISABLE
@@ -55,5 +61,7 @@ Disabled state. The immersive system material cannot be enabled for any componen
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-MaterialState-DISABLE = 2--><!--Device-MaterialState-DISABLE = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

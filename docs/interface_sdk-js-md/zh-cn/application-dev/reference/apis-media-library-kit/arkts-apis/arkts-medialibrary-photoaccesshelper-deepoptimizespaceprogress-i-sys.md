@@ -8,6 +8,8 @@ interface DeepOptimizeSpaceProgress
 
 **起始版本：** 26.0.0
 
+<!--Device-photoAccessHelper-interface DeepOptimizeSpaceProgress--><!--Device-photoAccessHelper-interface DeepOptimizeSpaceProgress-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ progress: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DeepOptimizeSpaceProgress-progress: int--><!--Device-DeepOptimizeSpaceProgress-progress: int-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ state: DeepOptimizeState
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DeepOptimizeSpaceProgress-state: DeepOptimizeState--><!--Device-DeepOptimizeSpaceProgress-state: DeepOptimizeState-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

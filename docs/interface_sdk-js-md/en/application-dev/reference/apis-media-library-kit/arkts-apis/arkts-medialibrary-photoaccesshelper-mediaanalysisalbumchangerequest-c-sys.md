@@ -10,6 +10,8 @@ Provides APIs for managing the analysis album change request.
 
 **Since:** 18
 
+<!--Device-photoAccessHelper-class MediaAnalysisAlbumChangeRequest extends MediaAlbumChangeRequest--><!--Device-photoAccessHelper-class MediaAnalysisAlbumChangeRequest extends MediaAlbumChangeRequest-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -29,6 +31,8 @@ constructor(album: Album)
 Constructor.
 
 **Since:** 18
+
+<!--Device-MediaAnalysisAlbumChangeRequest-constructor(album: Album)--><!--Device-MediaAnalysisAlbumChangeRequest-constructor(album: Album)-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -98,6 +102,8 @@ Creates a change request for the **Analysis** album.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-MediaAnalysisAlbumChangeRequest-static createAnalysisAlbumRequest(      context: Context,       name: string,       subtype: AlbumSubtype    ): MediaAnalysisAlbumChangeRequest--><!--Device-MediaAnalysisAlbumChangeRequest-static createAnalysisAlbumRequest(      context: Context,       name: string,       subtype: AlbumSubtype    ): MediaAnalysisAlbumChangeRequest-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -153,6 +159,8 @@ Sets the default cover image for the smart album.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MediaAnalysisAlbumChangeRequest-setDefaultCoverUri(coverUri: string): void--><!--Device-MediaAnalysisAlbumChangeRequest-setDefaultCoverUri(coverUri: string): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -231,6 +239,8 @@ Sets the sequence of assets in the **Analysis** album.
 **Since:** 18
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-MediaAnalysisAlbumChangeRequest-setOrderPosition(assets: Array<PhotoAsset>, position: Array<int>): void--><!--Device-MediaAnalysisAlbumChangeRequest-setOrderPosition(assets: Array<PhotoAsset>, position: Array<int>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -336,6 +346,8 @@ The supported relationship names include:
 **Since:** 21
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-MediaAnalysisAlbumChangeRequest-setRelationship(relationship: string): Promise<void>--><!--Device-MediaAnalysisAlbumChangeRequest-setRelationship(relationship: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

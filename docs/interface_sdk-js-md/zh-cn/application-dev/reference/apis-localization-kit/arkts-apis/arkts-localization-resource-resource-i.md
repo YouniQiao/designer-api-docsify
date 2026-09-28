@@ -8,6 +8,8 @@ export interface Resource
 
 **起始版本：** 9
 
+<!--Device-unnamed-export interface Resource--><!--Device-unnamed-export interface Resource-End-->
+
 **系统能力：** SystemCapability.Global.ResourceManager
 
 ## bundleName
@@ -22,7 +24,9 @@ bundleName: string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Resource-bundleName: string--><!--Device-Resource-bundleName: string-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -41,7 +45,9 @@ id: number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Resource-id: long--><!--Device-Resource-id: long-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -57,7 +63,9 @@ moduleName: string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Resource-moduleName: string--><!--Device-Resource-moduleName: string-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -75,6 +83,8 @@ params?: any[]
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Resource-params?: any[]--><!--Device-Resource-params?: any[]-End-->
+
 **系统能力：** SystemCapability.Global.ResourceManager
 
 ## type
@@ -89,6 +99,8 @@ type?: number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Resource-type?: int--><!--Device-Resource-type?: int-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager

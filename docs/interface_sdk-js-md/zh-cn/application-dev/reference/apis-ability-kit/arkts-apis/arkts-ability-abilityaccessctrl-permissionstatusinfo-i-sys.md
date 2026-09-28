@@ -8,6 +8,8 @@ interface PermissionStatusInfo
 
 **起始版本：** 26.0.0
 
+<!--Device-abilityAccessCtrl-interface PermissionStatusInfo--><!--Device-abilityAccessCtrl-interface PermissionStatusInfo-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -44,6 +46,8 @@ grantFlags: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PermissionStatusInfo-grantFlags: int--><!--Device-PermissionStatusInfo-grantFlags: int-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +65,8 @@ grantStatus: GrantStatus
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PermissionStatusInfo-grantStatus: GrantStatus--><!--Device-PermissionStatusInfo-grantStatus: GrantStatus-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -80,6 +86,8 @@ grantTimestamp?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PermissionStatusInfo-grantTimestamp?: long--><!--Device-PermissionStatusInfo-grantTimestamp?: long-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -98,6 +106,8 @@ permissionName: Permissions
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PermissionStatusInfo-permissionName: Permissions--><!--Device-PermissionStatusInfo-permissionName: Permissions-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -115,6 +125,8 @@ tokenID: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PermissionStatusInfo-tokenID: int--><!--Device-PermissionStatusInfo-tokenID: int-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 

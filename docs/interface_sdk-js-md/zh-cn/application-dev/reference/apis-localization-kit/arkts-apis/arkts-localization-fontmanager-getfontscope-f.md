@@ -20,6 +20,8 @@ function getFontScope(url: string): Promise<FontScope>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-fontManager-function getFontScope(url: string): Promise<FontScope>--><!--Device-fontManager-function getFontScope(url: string): Promise<FontScope>-End-->
+
 **系统能力：** SystemCapability.Global.FontManager
 
 **参数：**

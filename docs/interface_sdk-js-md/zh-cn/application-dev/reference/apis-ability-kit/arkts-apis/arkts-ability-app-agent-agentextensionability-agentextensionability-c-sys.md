@@ -18,6 +18,8 @@ AgentExtensionAbility继承自[ExtensionAbility](arkts-ability-app-ability-exten
 
 **起始版本：** 24
 
+<!--Device-unnamed-declare class AgentExtensionAbility extends ExtensionAbility--><!--Device-unnamed-declare class AgentExtensionAbility extends ExtensionAbility-End-->
+
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 ## 导入模块
@@ -37,6 +39,8 @@ onAgentInvoked(agentId: string): void
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AgentExtensionAbility-onAgentInvoked(agentId: string): void--><!--Device-AgentExtensionAbility-onAgentInvoked(agentId: string): void-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 

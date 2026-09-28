@@ -8,6 +8,8 @@ interface RemoteAuthPackage
 
 **起始版本：** 26.0.1
 
+<!--Device-abilityToolAccessCtrl-interface RemoteAuthPackage--><!--Device-abilityToolAccessCtrl-interface RemoteAuthPackage-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 **系统接口：** 此接口为系统接口。
@@ -31,6 +33,8 @@ challenge: string
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-RemoteAuthPackage-challenge: string--><!--Device-RemoteAuthPackage-challenge: string-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ remoteMessage: string
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-RemoteAuthPackage-remoteMessage: string--><!--Device-RemoteAuthPackage-remoteMessage: string-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 **系统接口：** 此接口为系统接口。
@@ -66,6 +72,8 @@ ticket: string
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-RemoteAuthPackage-ticket: string--><!--Device-RemoteAuthPackage-ticket: string-End-->
 
 **系统能力：** SystemCapability.Security.Asset
 

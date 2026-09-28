@@ -8,6 +8,8 @@ interface Profile
 
 **起始版本：** 10
 
+<!--Device-camera-interface Profile--><!--Device-camera-interface Profile-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
@@ -28,7 +30,9 @@ readonly format: CameraFormat
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-Profile-readonly format: CameraFormat--><!--Device-Profile-readonly format: CameraFormat-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -46,6 +50,8 @@ readonly size: Size
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-Profile-readonly size: Size--><!--Device-Profile-readonly size: Size-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core

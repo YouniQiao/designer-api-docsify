@@ -12,6 +12,8 @@ formInfo模块提供了卡片信息和状态等相关类型和枚举。
 
 **替代接口：** [formInfo/formInfo](arkts-form-app-form-forminfo.md)
 
+<!--Device-unnamed-declare namespace formInfo--><!--Device-unnamed-declare namespace formInfo-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 ## 导入模块

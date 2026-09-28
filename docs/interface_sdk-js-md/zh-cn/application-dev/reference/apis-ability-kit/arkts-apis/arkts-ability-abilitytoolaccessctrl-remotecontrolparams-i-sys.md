@@ -8,6 +8,8 @@ interface RemoteControlParams
 
 **起始版本：** 26.0.1
 
+<!--Device-abilityToolAccessCtrl-interface RemoteControlParams--><!--Device-abilityToolAccessCtrl-interface RemoteControlParams-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 **系统接口：** 此接口为系统接口。
@@ -31,6 +33,8 @@ challenge?: string
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-RemoteControlParams-challenge?: string--><!--Device-RemoteControlParams-challenge?: string-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 **系统接口：** 此接口为系统接口。
@@ -48,6 +52,8 @@ controlledDeviceName?: string
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-RemoteControlParams-controlledDeviceName?: string--><!--Device-RemoteControlParams-controlledDeviceName?: string-End-->
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -67,6 +73,8 @@ controllerDeviceName?: string
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-RemoteControlParams-controllerDeviceName?: string--><!--Device-RemoteControlParams-controllerDeviceName?: string-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 **系统接口：** 此接口为系统接口。
@@ -85,6 +93,8 @@ remoteControlTicket?: string
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-RemoteControlParams-remoteControlTicket?: string--><!--Device-RemoteControlParams-remoteControlTicket?: string-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 **系统接口：** 此接口为系统接口。
@@ -102,6 +112,8 @@ signVerifyMsg?: string
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-RemoteControlParams-signVerifyMsg?: string--><!--Device-RemoteControlParams-signVerifyMsg?: string-End-->
 
 **系统能力：** SystemCapability.Security.Asset
 

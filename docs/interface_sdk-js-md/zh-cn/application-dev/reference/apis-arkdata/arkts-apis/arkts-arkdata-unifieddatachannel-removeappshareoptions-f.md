@@ -22,6 +22,8 @@ function removeAppShareOptions(intention: Intention): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-unifiedDataChannel-function removeAppShareOptions(intention: Intention): void--><!--Device-unifiedDataChannel-function removeAppShareOptions(intention: Intention): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 **参数：**

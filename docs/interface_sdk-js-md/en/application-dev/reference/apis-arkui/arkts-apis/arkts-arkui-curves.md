@@ -4,6 +4,8 @@ The **Curves** module provides APIs for interpolation calculation to create step
 
 **Since:** 7
 
+<!--Device-unnamed-declare namespace curves--><!--Device-unnamed-declare namespace curves-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import

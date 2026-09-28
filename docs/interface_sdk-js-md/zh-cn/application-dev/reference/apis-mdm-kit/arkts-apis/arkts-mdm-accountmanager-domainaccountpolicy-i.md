@@ -8,6 +8,8 @@ interface DomainAccountPolicy
 
 **起始版本：** 19
 
+<!--Device-accountManager-interface DomainAccountPolicy--><!--Device-accountManager-interface DomainAccountPolicy-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## 导入模块
@@ -32,6 +34,8 @@ authenticationValidityPeriod?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DomainAccountPolicy-authenticationValidityPeriod?: number--><!--Device-DomainAccountPolicy-authenticationValidityPeriod?: number-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## passwordExpirationNotification
@@ -52,6 +56,8 @@ passwordExpirationNotification?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DomainAccountPolicy-passwordExpirationNotification?: number--><!--Device-DomainAccountPolicy-passwordExpirationNotification?: number-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## passwordValidityPeriod
@@ -70,6 +76,8 @@ passwordValidityPeriod?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DomainAccountPolicy-passwordValidityPeriod?: number--><!--Device-DomainAccountPolicy-passwordValidityPeriod?: number-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## supportUKeyAuthentication
@@ -85,5 +93,7 @@ supportUKeyAuthentication?: boolean
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DomainAccountPolicy-supportUKeyAuthentication?: boolean--><!--Device-DomainAccountPolicy-supportUKeyAuthentication?: boolean-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager

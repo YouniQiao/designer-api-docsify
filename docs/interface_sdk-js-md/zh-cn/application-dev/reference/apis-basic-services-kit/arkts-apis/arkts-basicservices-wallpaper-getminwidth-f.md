@@ -21,6 +21,8 @@ function getMinWidth(callback: AsyncCallback<number>): void
 
 **废弃版本：** 9
 
+<!--Device-wallpaper-function getMinWidth(callback: AsyncCallback<number>): void--><!--Device-wallpaper-function getMinWidth(callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
 **参数：**
@@ -60,6 +62,8 @@ function getMinWidth(): Promise<number>
 **起始版本：** 7
 
 **废弃版本：** 9
+
+<!--Device-wallpaper-function getMinWidth(): Promise<number>--><!--Device-wallpaper-function getMinWidth(): Promise<number>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 

@@ -26,6 +26,8 @@ function removeGroup(): boolean
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
+<!--Device-wifi-function removeGroup(): boolean--><!--Device-wifi-function removeGroup(): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
 **返回值：**

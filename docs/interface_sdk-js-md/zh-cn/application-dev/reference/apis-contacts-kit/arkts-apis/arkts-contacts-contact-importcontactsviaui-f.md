@@ -22,6 +22,8 @@ function importContactsViaUI(context: Context, contacts: Array<Contact>): Promis
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-contact-function importContactsViaUI(context: Context, contacts: Array<Contact>): Promise<Array<int>>--><!--Device-contact-function importContactsViaUI(context: Context, contacts: Array<Contact>): Promise<Array<int>>-End-->
+
 **系统能力：** SystemCapability.Applications.Contacts
 
 **参数：**

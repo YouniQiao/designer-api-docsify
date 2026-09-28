@@ -18,6 +18,8 @@ function getRemoteAbilityInfo(elementName: ElementName, callback: AsyncCallback<
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-distributedBundleManager-function getRemoteAbilityInfo(elementName: ElementName, callback: AsyncCallback<RemoteAbilityInfo>): void--><!--Device-distributedBundleManager-function getRemoteAbilityInfo(elementName: ElementName, callback: AsyncCallback<RemoteAbilityInfo>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.DistributedBundleFramework
 
 **系统接口：** 此接口为系统接口。
@@ -82,6 +84,8 @@ function getRemoteAbilityInfo(elementName: ElementName): Promise<RemoteAbilityIn
 **起始版本：** 9
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-distributedBundleManager-function getRemoteAbilityInfo(elementName: ElementName): Promise<RemoteAbilityInfo>--><!--Device-distributedBundleManager-function getRemoteAbilityInfo(elementName: ElementName): Promise<RemoteAbilityInfo>-End-->
 
 **系统能力：** SystemCapability.BundleManager.DistributedBundleFramework
 
@@ -150,6 +154,8 @@ function getRemoteAbilityInfo(elementNames: Array<ElementName>, callback: AsyncC
 **起始版本：** 9
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-distributedBundleManager-function getRemoteAbilityInfo(elementNames: Array<ElementName>, callback: AsyncCallback<Array<RemoteAbilityInfo>>): void--><!--Device-distributedBundleManager-function getRemoteAbilityInfo(elementNames: Array<ElementName>, callback: AsyncCallback<Array<RemoteAbilityInfo>>): void-End-->
 
 **系统能力：** SystemCapability.BundleManager.DistributedBundleFramework
 
@@ -222,6 +228,8 @@ function getRemoteAbilityInfo(elementNames: Array<ElementName>): Promise<Array<R
 **起始版本：** 9
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-distributedBundleManager-function getRemoteAbilityInfo(elementNames: Array<ElementName>): Promise<Array<RemoteAbilityInfo>>--><!--Device-distributedBundleManager-function getRemoteAbilityInfo(elementNames: Array<ElementName>): Promise<Array<RemoteAbilityInfo>>-End-->
 
 **系统能力：** SystemCapability.BundleManager.DistributedBundleFramework
 
@@ -298,6 +306,8 @@ function getRemoteAbilityInfo(elementName: ElementName, locale: string, callback
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-distributedBundleManager-function getRemoteAbilityInfo(elementName: ElementName, locale: string, callback: AsyncCallback<RemoteAbilityInfo>): void--><!--Device-distributedBundleManager-function getRemoteAbilityInfo(elementName: ElementName, locale: string, callback: AsyncCallback<RemoteAbilityInfo>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.DistributedBundleFramework
 
 **系统接口：** 此接口为系统接口。
@@ -363,6 +373,8 @@ function getRemoteAbilityInfo(elementName: ElementName, locale: string): Promise
 **起始版本：** 9
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-distributedBundleManager-function getRemoteAbilityInfo(elementName: ElementName, locale: string): Promise<RemoteAbilityInfo>--><!--Device-distributedBundleManager-function getRemoteAbilityInfo(elementName: ElementName, locale: string): Promise<RemoteAbilityInfo>-End-->
 
 **系统能力：** SystemCapability.BundleManager.DistributedBundleFramework
 
@@ -432,6 +444,8 @@ function getRemoteAbilityInfo(elementNames: Array<ElementName>, locale: string, 
 **起始版本：** 9
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-distributedBundleManager-function getRemoteAbilityInfo(elementNames: Array<ElementName>, locale: string, callback: AsyncCallback<Array<RemoteAbilityInfo>>): void--><!--Device-distributedBundleManager-function getRemoteAbilityInfo(elementNames: Array<ElementName>, locale: string, callback: AsyncCallback<Array<RemoteAbilityInfo>>): void-End-->
 
 **系统能力：** SystemCapability.BundleManager.DistributedBundleFramework
 
@@ -505,6 +519,8 @@ function getRemoteAbilityInfo(elementNames: Array<ElementName>, locale: string):
 **起始版本：** 9
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-distributedBundleManager-function getRemoteAbilityInfo(elementNames: Array<ElementName>, locale: string): Promise<Array<RemoteAbilityInfo>>--><!--Device-distributedBundleManager-function getRemoteAbilityInfo(elementNames: Array<ElementName>, locale: string): Promise<Array<RemoteAbilityInfo>>-End-->
 
 **系统能力：** SystemCapability.BundleManager.DistributedBundleFramework
 

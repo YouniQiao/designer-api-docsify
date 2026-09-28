@@ -18,6 +18,8 @@ function getDisposedStatus(appId: string, callback: AsyncCallback<Want>): void
 
 **需要权限：** ohos.permission.MANAGE_DISPOSED_APP_STATUS or ohos.permission.GET_DISPOSED_APP_STATUS
 
+<!--Device-appControl-function getDisposedStatus(appId: string, callback: AsyncCallback<Want>): void--><!--Device-appControl-function getDisposedStatus(appId: string, callback: AsyncCallback<Want>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 
 **系统接口：** 此接口为系统接口。
@@ -76,6 +78,8 @@ function getDisposedStatus(appId: string): Promise<Want>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.MANAGE_DISPOSED_APP_STATUS or ohos.permission.GET_DISPOSED_APP_STATUS
+
+<!--Device-appControl-function getDisposedStatus(appId: string): Promise<Want>--><!--Device-appControl-function getDisposedStatus(appId: string): Promise<Want>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 

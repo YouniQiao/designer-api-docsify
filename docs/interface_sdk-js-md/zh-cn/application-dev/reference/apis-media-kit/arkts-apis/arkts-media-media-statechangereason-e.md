@@ -8,6 +8,8 @@ enum StateChangeReason
 
 **起始版本：** 9
 
+<!--Device-media-enum StateChangeReason--><!--Device-media-enum StateChangeReason-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 ## USER
@@ -20,7 +22,9 @@ USER = 1
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-StateChangeReason-USER = 1--><!--Device-StateChangeReason-USER = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -34,6 +38,8 @@ BACKGROUND = 2
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-StateChangeReason-BACKGROUND = 2--><!--Device-StateChangeReason-BACKGROUND = 2-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core

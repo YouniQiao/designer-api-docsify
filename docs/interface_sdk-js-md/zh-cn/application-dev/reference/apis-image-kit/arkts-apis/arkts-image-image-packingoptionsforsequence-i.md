@@ -8,6 +8,8 @@ interface PackingOptionsForSequence
 
 **起始版本：** 18
 
+<!--Device-image-interface PackingOptionsForSequence--><!--Device-image-interface PackingOptionsForSequence-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
 ## 导入模块
@@ -31,6 +33,8 @@ GIF编码中设定每帧输出图像的延迟时间，取值需大于0。
 
 **起始版本：** 18
 
+<!--Device-PackingOptionsForSequence-delayTimeList: Array<int>--><!--Device-PackingOptionsForSequence-delayTimeList: Array<int>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
 ## disposalTypes
@@ -50,6 +54,8 @@ GIF编码中设定每帧输出图像的帧过渡模式，如果长度小于frame
 
 **起始版本：** 18
 
+<!--Device-PackingOptionsForSequence-disposalTypes?: Array<int>--><!--Device-PackingOptionsForSequence-disposalTypes?: Array<int>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
 ## frameCount
@@ -63,6 +69,8 @@ GIF编码中指定的帧数。
 **类型：** number
 
 **起始版本：** 18
+
+<!--Device-PackingOptionsForSequence-frameCount: int--><!--Device-PackingOptionsForSequence-frameCount: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
@@ -79,5 +87,7 @@ loopCount?: number
 **类型：** number
 
 **起始版本：** 18
+
+<!--Device-PackingOptionsForSequence-loopCount?: int--><!--Device-PackingOptionsForSequence-loopCount?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker

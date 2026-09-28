@@ -14,6 +14,8 @@ Obtains the **UIScrollEvent** object held by the **Scroll** node, which is used 
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-typeNode-function getEvent(node: FrameNode, nodeType: 'Scroll'): UIScrollEvent | undefined--><!--Device-typeNode-function getEvent(node: FrameNode, nodeType: 'Scroll'): UIScrollEvent | undefined-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -49,6 +51,8 @@ Obtains the **UIListEvent** object held by the **List** node, which is used to s
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-typeNode-function getEvent(node: FrameNode, nodeType: 'List'): UIListEvent | undefined--><!--Device-typeNode-function getEvent(node: FrameNode, nodeType: 'List'): UIListEvent | undefined-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -86,6 +90,8 @@ Obtains the **UIWaterFlowEvent** object held by the [WaterFlow](arkts-arkui-type
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-typeNode-function getEvent(node: FrameNode, nodeType: 'WaterFlow'): UIWaterFlowEvent | undefined--><!--Device-typeNode-function getEvent(node: FrameNode, nodeType: 'WaterFlow'): UIWaterFlowEvent | undefined-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -121,6 +127,8 @@ Obtains the **UIGridEvent** object held by the **Grid** node, which is used to s
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-typeNode-function getEvent(node: FrameNode, nodeType: 'Grid'): UIGridEvent | undefined--><!--Device-typeNode-function getEvent(node: FrameNode, nodeType: 'Grid'): UIGridEvent | undefined-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

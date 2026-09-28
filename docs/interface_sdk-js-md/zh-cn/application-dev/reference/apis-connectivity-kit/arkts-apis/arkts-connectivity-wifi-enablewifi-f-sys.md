@@ -22,6 +22,8 @@ function enableWifi(): boolean
 
 **需要权限：** ohos.permission.SET_WIFI_INFO and ohos.permission.MANAGE_WIFI_CONNECTION
 
+<!--Device-wifi-function enableWifi(): boolean--><!--Device-wifi-function enableWifi(): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。

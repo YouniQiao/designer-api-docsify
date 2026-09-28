@@ -22,6 +22,8 @@ function uninit(): boolean
 
 **需要权限：** ohos.permission.NFC_TAG
 
+<!--Device-connectedTag-function uninit(): boolean--><!--Device-connectedTag-function uninit(): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.ConnectedTag
 
 **返回值：**

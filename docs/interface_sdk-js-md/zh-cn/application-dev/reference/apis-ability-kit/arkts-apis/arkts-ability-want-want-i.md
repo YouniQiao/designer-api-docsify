@@ -12,6 +12,8 @@ Want是对象间信息传递的载体, 可以用于应用组件间的信息传�
 
 **替代接口：** [Want](arkts-ability-app-ability-want-want-c.md)
 
+<!--Device-unnamed-export declare interface Want--><!--Device-unnamed-export declare interface Want-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityBase
 
 ## abilityName
@@ -30,6 +32,8 @@ abilityName?: string
 
 **替代接口：** [abilityName](arkts-ability-app-ability-want-want-c.md#abilityname)
 
+<!--Device-Want-abilityName?: string--><!--Device-Want-abilityName?: string-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityBase
 
 ## action
@@ -38,7 +42,7 @@ abilityName?: string
 action?: string
 ```
 
-表示要执行的通用操作（如：查看、分享、应用详情）。在隐式Want中，您可以定义该字段，配合uri或parameters来表示对数据要执行的操作。具体参考：[action说明](arkts-ability-wantconstant-action-depr-e.md#action)。隐式Want定义及匹配规则参考：[显式Want与隐式Want匹配规则](../../../application-models/explicit-implicit-want-mappings.md)。
+表示要执行的通用操作（如：查看、分享、应用详情）。在隐式Want中，您可以定义该字段，配合uri或parameters来表示对数据要执行的操作。具体参考：[action说明](arkts-ability-wantconstant-action-depr-e.md)。隐式Want定义及匹配规则参考：[显式Want与隐式Want匹配规则](../../../application-models/explicit-implicit-want-mappings.md)。
 
 **类型：** string
 
@@ -47,6 +51,8 @@ action?: string
 **废弃版本：** 9
 
 **替代接口：** [action](arkts-ability-app-ability-want-want-c.md#action)
+
+<!--Device-Want-action?: string--><!--Device-Want-action?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -66,6 +72,8 @@ bundleName?: string
 
 **替代接口：** [bundleName](arkts-ability-app-ability-want-want-c.md#bundlename)
 
+<!--Device-Want-bundleName?: string--><!--Device-Want-bundleName?: string-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityBase
 
 ## deviceId
@@ -83,6 +91,8 @@ deviceId?: string
 **废弃版本：** 9
 
 **替代接口：** [deviceId](arkts-ability-app-ability-want-want-c.md#deviceid)
+
+<!--Device-Want-deviceId?: string--><!--Device-Want-deviceId?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -102,6 +112,8 @@ entities?: Array<string>
 
 **替代接口：** [entities](arkts-ability-app-ability-want-want-c.md#entities)
 
+<!--Device-Want-entities?: Array<string>--><!--Device-Want-entities?: Array<string>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityBase
 
 ## flags
@@ -110,7 +122,7 @@ entities?: Array<string>
 flags?: number
 ```
 
-表示处理Want的方式。默认传数字，具体参考：[flags说明](arkts-ability-wantconstant-flags-depr-e.md#flags)。
+表示处理Want的方式。默认传数字，具体参考：[flags说明](arkts-ability-wantconstant-flags-depr-e.md)。
 
 **类型：** number
 
@@ -119,6 +131,8 @@ flags?: number
 **废弃版本：** 9
 
 **替代接口：** [flags](arkts-ability-app-ability-want-want-c.md#flags)
+
+<!--Device-Want-flags?: number--><!--Device-Want-flags?: number-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -148,6 +162,8 @@ ohos.aafwk.param.callerUid 表示bundleInfo中的uid，应用包里应用程序�
 
 **替代接口：** [parameters](arkts-ability-app-ability-want-want-c.md#parameters)
 
+<!--Device-Want-parameters?: { [key: string]: any }--><!--Device-Want-parameters?: { [key: string]: any }-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityBase
 
 ## type
@@ -166,6 +182,8 @@ type?: string
 
 **替代接口：** [type](arkts-ability-app-ability-want-want-c.md#type)
 
+<!--Device-Want-type?: string--><!--Device-Want-type?: string-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityBase
 
 ## uri
@@ -183,5 +201,7 @@ uri?: string
 **废弃版本：** 9
 
 **替代接口：** [uri](arkts-ability-app-ability-want-want-c.md#uri)
+
+<!--Device-Want-uri?: string--><!--Device-Want-uri?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase

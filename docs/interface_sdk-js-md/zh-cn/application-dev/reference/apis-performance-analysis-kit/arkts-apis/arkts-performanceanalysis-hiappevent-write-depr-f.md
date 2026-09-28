@@ -19,6 +19,8 @@ function write(eventName: string, eventType: EventType, keyValues: object): Prom
 
 **替代接口：** [write](arkts-performanceanalysis-hiappevent-write-f.md)
 
+<!--Device-hiAppEvent-function write(eventName: string, eventType: EventType, keyValues: object): Promise<void>--><!--Device-hiAppEvent-function write(eventName: string, eventType: EventType, keyValues: object): Promise<void>-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 **参数：**
@@ -70,6 +72,8 @@ function write(eventName: string, eventType: EventType, keyValues: object, callb
 **废弃版本：** 9
 
 **替代接口：** [write](arkts-performanceanalysis-hiappevent-write-f.md)
+
+<!--Device-hiAppEvent-function write(eventName: string, eventType: EventType, keyValues: object, callback: AsyncCallback<void>): void--><!--Device-hiAppEvent-function write(eventName: string, eventType: EventType, keyValues: object, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 

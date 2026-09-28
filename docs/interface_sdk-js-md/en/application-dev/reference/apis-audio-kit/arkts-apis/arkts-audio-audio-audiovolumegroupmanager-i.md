@@ -14,6 +14,8 @@ Before calling any API in AudioVolumeGroupManager, you must use [getVolumeGroupM
 
 **Since:** 9
 
+<!--Device-audio-interface AudioVolumeGroupManager--><!--Device-audio-interface AudioVolumeGroupManager-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 ## Modules to Import
@@ -31,6 +33,8 @@ getMaxAmplitudeForInputDevice(inputDevice: AudioDeviceDescriptor): Promise<numbe
 Obtains the maximum amplitude (in the range [0, 1]) of the audio stream for an input device. This API uses a promise to return the result.
 
 **Since:** 12
+
+<!--Device-AudioVolumeGroupManager-getMaxAmplitudeForInputDevice(inputDevice: AudioDeviceDescriptor): Promise<double>--><!--Device-AudioVolumeGroupManager-getMaxAmplitudeForInputDevice(inputDevice: AudioDeviceDescriptor): Promise<double>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -85,6 +89,8 @@ Obtains the maximum amplitude (in the range [0, 1]) of the audio stream for an o
 
 **Since:** 12
 
+<!--Device-AudioVolumeGroupManager-getMaxAmplitudeForOutputDevice(outputDevice: AudioDeviceDescriptor): Promise<double>--><!--Device-AudioVolumeGroupManager-getMaxAmplitudeForOutputDevice(outputDevice: AudioDeviceDescriptor): Promise<double>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **Parameters:**
@@ -138,6 +144,8 @@ Obtains the ringer mode. This API uses an asynchronous callback to return the re
 
 **Since:** 9
 
+<!--Device-AudioVolumeGroupManager-getRingerMode(callback: AsyncCallback<AudioRingMode>): void--><!--Device-AudioVolumeGroupManager-getRingerMode(callback: AsyncCallback<AudioRingMode>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **Parameters:**
@@ -172,6 +180,8 @@ Obtains the ringer mode. This API uses a promise to return the result.
 
 **Since:** 9
 
+<!--Device-AudioVolumeGroupManager-getRingerMode(): Promise<AudioRingMode>--><!--Device-AudioVolumeGroupManager-getRingerMode(): Promise<AudioRingMode>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **Return value:**
@@ -201,6 +211,8 @@ getRingerModeSync(): AudioRingMode
 Obtains the ringer mode. This API returns the result synchronously.
 
 **Since:** 10
+
+<!--Device-AudioVolumeGroupManager-getRingerModeSync(): AudioRingMode--><!--Device-AudioVolumeGroupManager-getRingerModeSync(): AudioRingMode-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -233,6 +245,8 @@ isMicrophoneMute(callback: AsyncCallback<boolean>): void
 Checks whether the microphone is muted. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-AudioVolumeGroupManager-isMicrophoneMute(callback: AsyncCallback<boolean>): void--><!--Device-AudioVolumeGroupManager-isMicrophoneMute(callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -268,6 +282,8 @@ Checks whether the microphone is muted. This API uses a promise to return the re
 
 **Since:** 9
 
+<!--Device-AudioVolumeGroupManager-isMicrophoneMute(): Promise<boolean>--><!--Device-AudioVolumeGroupManager-isMicrophoneMute(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **Return value:**
@@ -297,6 +313,8 @@ isMicrophoneMuteSync(): boolean
 Checks whether the microphone is muted. This API returns the result synchronously.
 
 **Since:** 10
+
+<!--Device-AudioVolumeGroupManager-isMicrophoneMuteSync(): boolean--><!--Device-AudioVolumeGroupManager-isMicrophoneMuteSync(): boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -330,6 +348,8 @@ Checks whether the fixed volume mode is enabled. When the fixed volume mode is e
 
 **Since:** 10
 
+<!--Device-AudioVolumeGroupManager-isVolumeUnadjustable(): boolean--><!--Device-AudioVolumeGroupManager-isVolumeUnadjustable(): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **Return value:**
@@ -354,6 +374,8 @@ off(type: 'ringerModeChange', callback?: Callback<AudioRingMode>): void
 Unsubscribes from the ringer mode change event. This API uses an asynchronous callback to return the result.
 
 **Since:** 18
+
+<!--Device-AudioVolumeGroupManager-off(type: 'ringerModeChange', callback?: Callback<AudioRingMode>): void--><!--Device-AudioVolumeGroupManager-off(type: 'ringerModeChange', callback?: Callback<AudioRingMode>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -395,6 +417,8 @@ off(type: 'micStateChange', callback?: Callback<MicStateChangeEvent>): void
 Unsubscribes from the microphone state change event. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
+
+<!--Device-AudioVolumeGroupManager-off(type: 'micStateChange', callback?: Callback<MicStateChangeEvent>): void--><!--Device-AudioVolumeGroupManager-off(type: 'micStateChange', callback?: Callback<MicStateChangeEvent>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -438,6 +462,8 @@ Subscribes to the ringer mode change event, which is triggered when the [AudioRi
 
 **Since:** 9
 
+<!--Device-AudioVolumeGroupManager-on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void--><!--Device-AudioVolumeGroupManager-on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **Parameters:**
@@ -473,6 +499,8 @@ Subscribes to the microphone state change event, which is triggered when the mic
 Currently, when multiple AudioManager instances are used in a single process, only the subscription of the last instance takes effect, and the subscription of other instances is overwritten (even if the last instance does not initiate a subscription). Therefore, you are advised to use a single AudioManager instance.
 
 **Since:** 9
+
+<!--Device-AudioVolumeGroupManager-on(type: 'micStateChange', callback: Callback<MicStateChangeEvent>): void--><!--Device-AudioVolumeGroupManager-on(type: 'micStateChange', callback: Callback<MicStateChangeEvent>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -511,6 +539,8 @@ Obtains the maximum volume level of a stream. This API uses an asynchronous call
 **Deprecated since:** 20
 
 **Substitutes:** [getMaxVolumeByStream](arkts-audio-audio-audiovolumemanager-i.md#getmaxvolumebystream)
+
+<!--Device-AudioVolumeGroupManager-getMaxVolume(volumeType: AudioVolumeType, callback: AsyncCallback<int>): void--><!--Device-AudioVolumeGroupManager-getMaxVolume(volumeType: AudioVolumeType, callback: AsyncCallback<int>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -551,6 +581,8 @@ Obtains the maximum volume level of a stream. This API uses a promise to return 
 
 **Substitutes:** [getMaxVolumeByStream](arkts-audio-audio-audiovolumemanager-i.md#getmaxvolumebystream)
 
+<!--Device-AudioVolumeGroupManager-getMaxVolume(volumeType: AudioVolumeType): Promise<int>--><!--Device-AudioVolumeGroupManager-getMaxVolume(volumeType: AudioVolumeType): Promise<int>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **Parameters:**
@@ -586,6 +618,8 @@ Obtains the maximum volume level of a stream. This API returns the result synchr
 **Deprecated since:** 20
 
 **Substitutes:** [getMaxVolumeByStream](arkts-audio-audio-audiovolumemanager-i.md#getmaxvolumebystream)
+
+<!--Device-AudioVolumeGroupManager-getMaxVolumeSync(volumeType: AudioVolumeType): int--><!--Device-AudioVolumeGroupManager-getMaxVolumeSync(volumeType: AudioVolumeType): int-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -636,6 +670,8 @@ Obtains the minimum volume level of a stream. This API uses an asynchronous call
 
 **Substitutes:** [getMinVolumeByStream](arkts-audio-audio-audiovolumemanager-i.md#getminvolumebystream)
 
+<!--Device-AudioVolumeGroupManager-getMinVolume(volumeType: AudioVolumeType, callback: AsyncCallback<int>): void--><!--Device-AudioVolumeGroupManager-getMinVolume(volumeType: AudioVolumeType, callback: AsyncCallback<int>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **Parameters:**
@@ -675,6 +711,8 @@ Obtains the minimum volume level of a stream. This API uses a promise to return 
 
 **Substitutes:** [getMinVolumeByStream](arkts-audio-audio-audiovolumemanager-i.md#getminvolumebystream)
 
+<!--Device-AudioVolumeGroupManager-getMinVolume(volumeType: AudioVolumeType): Promise<int>--><!--Device-AudioVolumeGroupManager-getMinVolume(volumeType: AudioVolumeType): Promise<int>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **Parameters:**
@@ -710,6 +748,8 @@ Obtains the minimum volume level of a stream. This API returns the result synchr
 **Deprecated since:** 20
 
 **Substitutes:** [getMinVolumeByStream](arkts-audio-audio-audiovolumemanager-i.md#getminvolumebystream)
+
+<!--Device-AudioVolumeGroupManager-getMinVolumeSync(volumeType: AudioVolumeType): int--><!--Device-AudioVolumeGroupManager-getMinVolumeSync(volumeType: AudioVolumeType): int-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -760,6 +800,8 @@ Obtains the volume gain. This API uses an asynchronous callback to return the re
 
 **Substitutes:** [getVolumeInUnitOfDbByStream](arkts-audio-audio-audiovolumemanager-i.md#getvolumeinunitofdbbystream)
 
+<!--Device-AudioVolumeGroupManager-getSystemVolumeInDb(volumeType: AudioVolumeType, volumeLevel: int, device: DeviceType, callback: AsyncCallback<double>): void--><!--Device-AudioVolumeGroupManager-getSystemVolumeInDb(volumeType: AudioVolumeType, volumeLevel: int, device: DeviceType, callback: AsyncCallback<double>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **Parameters:**
@@ -808,6 +850,8 @@ Obtains the volume gain. This API uses a promise to return the result.
 **Deprecated since:** 20
 
 **Substitutes:** [getVolumeInUnitOfDbByStream](arkts-audio-audio-audiovolumemanager-i.md#getvolumeinunitofdbbystream)
+
+<!--Device-AudioVolumeGroupManager-getSystemVolumeInDb(volumeType: AudioVolumeType, volumeLevel: int, device: DeviceType): Promise<double>--><!--Device-AudioVolumeGroupManager-getSystemVolumeInDb(volumeType: AudioVolumeType, volumeLevel: int, device: DeviceType): Promise<double>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -858,6 +902,8 @@ Obtains the volume gain. This API returns the result synchronously.
 **Deprecated since:** 20
 
 **Substitutes:** [getVolumeInUnitOfDbByStream](arkts-audio-audio-audiovolumemanager-i.md#getvolumeinunitofdbbystream)
+
+<!--Device-AudioVolumeGroupManager-getSystemVolumeInDbSync(volumeType: AudioVolumeType, volumeLevel: int, device: DeviceType): double--><!--Device-AudioVolumeGroupManager-getSystemVolumeInDbSync(volumeType: AudioVolumeType, volumeLevel: int, device: DeviceType): double-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -910,6 +956,8 @@ Obtains the volume level of a stream. This API uses an asynchronous callback to 
 
 **Substitutes:** [getVolumeByStream](arkts-audio-audio-audiovolumemanager-i.md#getvolumebystream)
 
+<!--Device-AudioVolumeGroupManager-getVolume(volumeType: AudioVolumeType, callback: AsyncCallback<int>): void--><!--Device-AudioVolumeGroupManager-getVolume(volumeType: AudioVolumeType, callback: AsyncCallback<int>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **Parameters:**
@@ -949,6 +997,8 @@ Obtains the volume level of a stream. This API uses a promise to return the resu
 
 **Substitutes:** [getVolumeByStream](arkts-audio-audio-audiovolumemanager-i.md#getvolumebystream)
 
+<!--Device-AudioVolumeGroupManager-getVolume(volumeType: AudioVolumeType): Promise<int>--><!--Device-AudioVolumeGroupManager-getVolume(volumeType: AudioVolumeType): Promise<int>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **Parameters:**
@@ -984,6 +1034,8 @@ Obtains the volume level of a stream. This API returns the result synchronously.
 **Deprecated since:** 20
 
 **Substitutes:** [getVolumeByStream](arkts-audio-audio-audiovolumemanager-i.md#getvolumebystream)
+
+<!--Device-AudioVolumeGroupManager-getVolumeSync(volumeType: AudioVolumeType): int--><!--Device-AudioVolumeGroupManager-getVolumeSync(volumeType: AudioVolumeType): int-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -1034,6 +1086,8 @@ Checks whether a stream is muted. This API uses an asynchronous callback to retu
 
 **Substitutes:** [isSystemMutedForStream](arkts-audio-audio-audiovolumemanager-i.md#issystemmutedforstream)
 
+<!--Device-AudioVolumeGroupManager-isMute(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void--><!--Device-AudioVolumeGroupManager-isMute(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **Parameters:**
@@ -1073,6 +1127,8 @@ Checks whether a stream is muted. This API uses a promise to return the result.
 
 **Substitutes:** [isSystemMutedForStream](arkts-audio-audio-audiovolumemanager-i.md#issystemmutedforstream)
 
+<!--Device-AudioVolumeGroupManager-isMute(volumeType: AudioVolumeType): Promise<boolean>--><!--Device-AudioVolumeGroupManager-isMute(volumeType: AudioVolumeType): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **Parameters:**
@@ -1108,6 +1164,8 @@ Checks whether a stream is muted. This API returns the result synchronously.
 **Deprecated since:** 20
 
 **Substitutes:** [isSystemMutedForStream](arkts-audio-audio-audiovolumemanager-i.md#issystemmutedforstream)
+
+<!--Device-AudioVolumeGroupManager-isMuteSync(volumeType: AudioVolumeType): boolean--><!--Device-AudioVolumeGroupManager-isMuteSync(volumeType: AudioVolumeType): boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -1158,6 +1216,8 @@ Mutes or unmutes the microphone. This method uses an asynchronous callback to re
 
 **Required permissions:** ohos.permission.MANAGE_AUDIO_CONFIG
 
+<!--Device-AudioVolumeGroupManager-setMicrophoneMute(mute: boolean, callback: AsyncCallback<void>): void--><!--Device-AudioVolumeGroupManager-setMicrophoneMute(mute: boolean, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **Parameters:**
@@ -1196,6 +1256,8 @@ Mutes or unmutes the microphone. This method uses a promise to return the result
 **Deprecated since:** 11
 
 **Required permissions:** ohos.permission.MANAGE_AUDIO_CONFIG
+
+<!--Device-AudioVolumeGroupManager-setMicrophoneMute(mute: boolean): Promise<void>--><!--Device-AudioVolumeGroupManager-setMicrophoneMute(mute: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 

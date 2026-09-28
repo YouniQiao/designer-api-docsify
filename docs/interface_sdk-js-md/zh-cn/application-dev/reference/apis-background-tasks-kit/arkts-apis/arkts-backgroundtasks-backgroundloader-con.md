@@ -14,6 +14,8 @@ const ON_START: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-backgroundLoader-const ON_START: string--><!--Device-backgroundLoader-const ON_START: string-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
 ## ON_STOP
@@ -29,5 +31,7 @@ const ON_STOP: string
 **起始版本：** 26.2.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-backgroundLoader-const ON_STOP: string--><!--Device-backgroundLoader-const ON_STOP: string-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler

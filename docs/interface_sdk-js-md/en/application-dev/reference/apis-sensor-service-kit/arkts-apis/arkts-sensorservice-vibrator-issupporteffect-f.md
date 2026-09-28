@@ -16,6 +16,8 @@ Checks whether an effect ID is supported. This API uses an asynchronous callback
 
 **Since:** 10
 
+<!--Device-vibrator-function isSupportEffect(effectId: string, callback: AsyncCallback<boolean>): void--><!--Device-vibrator-function isSupportEffect(effectId: string, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 **Parameters:**
@@ -87,6 +89,8 @@ function isSupportEffect(effectId: string): Promise<boolean>
 Checks whether an effect ID is supported. This API uses a promise to return the result.
 
 **Since:** 10
+
+<!--Device-vibrator-function isSupportEffect(effectId: string): Promise<boolean>--><!--Device-vibrator-function isSupportEffect(effectId: string): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice
 

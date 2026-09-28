@@ -18,6 +18,8 @@ function evictFilePages(fileNames: Array<string>): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-appMemoryOptimizer-function evictFilePages(fileNames: Array<string>): Promise<void>--><!--Device-appMemoryOptimizer-function evictFilePages(fileNames: Array<string>): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**

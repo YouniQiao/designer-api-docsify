@@ -16,6 +16,8 @@ declare function utimes(path: string, mtime: number): void
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare function utimes(path: string, mtime: number): void--><!--Device-unnamed-declare function utimes(path: string, mtime: number): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**

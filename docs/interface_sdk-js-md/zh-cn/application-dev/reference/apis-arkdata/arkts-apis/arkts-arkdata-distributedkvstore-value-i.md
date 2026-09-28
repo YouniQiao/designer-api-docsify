@@ -8,6 +8,8 @@ interface Value
 
 **起始版本：** 9
 
+<!--Device-distributedKVStore-interface Value--><!--Device-distributedKVStore-interface Value-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ type: ValueType
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Value-type: ValueType--><!--Device-Value-type: ValueType-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## value
@@ -45,5 +49,7 @@ value: Uint8Array | string | number | boolean
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Value-value: Uint8Array | string | long | double | boolean--><!--Device-Value-value: Uint8Array | string | long | double | boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core

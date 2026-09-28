@@ -18,6 +18,8 @@ Verifies the server certificate chain and returns a sorted chain.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-networkSecurity-export function verifyCertChain(cert: CertBlob[], caCert?: CertBlob, hostname?: string): Promise<CertBlob[]>--><!--Device-networkSecurity-export function verifyCertChain(cert: CertBlob[], caCert?: CertBlob, hostname?: string): Promise<CertBlob[]>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**

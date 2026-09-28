@@ -27,6 +27,8 @@ function startArkChildProcess(srcEntry: string, args: ChildProcessArgs, options?
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-childProcessManager-function startArkChildProcess(srcEntry: string, args: ChildProcessArgs, options?: ChildProcessOptions): Promise<int>--><!--Device-childProcessManager-function startArkChildProcess(srcEntry: string, args: ChildProcessArgs, options?: ChildProcessOptions): Promise<int>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**

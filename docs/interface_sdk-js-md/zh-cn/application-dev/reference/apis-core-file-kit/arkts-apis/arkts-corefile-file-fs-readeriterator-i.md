@@ -8,6 +8,8 @@ declare interface ReaderIterator
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare interface ReaderIterator--><!--Device-unnamed-declare interface ReaderIterator-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## 导入模块
@@ -25,6 +27,8 @@ next(): ReaderIteratorResult
 获取迭代器下一项内容。
 
 **起始版本：** 11
+
+<!--Device-ReaderIterator-next(): ReaderIteratorResult--><!--Device-ReaderIterator-next(): ReaderIteratorResult-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

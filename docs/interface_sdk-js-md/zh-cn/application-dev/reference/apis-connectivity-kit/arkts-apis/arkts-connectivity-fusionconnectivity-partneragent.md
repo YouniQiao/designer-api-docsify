@@ -8,6 +8,8 @@
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-unnamed-declare namespace partnerAgent--><!--Device-unnamed-declare namespace partnerAgent-End-->
+
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core
 
 ## 导入模块

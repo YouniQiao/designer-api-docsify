@@ -8,6 +8,8 @@ Socket的连接信息。
 
 **起始版本：** 7
 
+<!--Device-socket-export interface SocketRemoteInfo--><!--Device-socket-export interface SocketRemoteInfo-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块
@@ -28,6 +30,8 @@ address: string
 
 **起始版本：** 7
 
+<!--Device-SocketRemoteInfo-address: string--><!--Device-SocketRemoteInfo-address: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## family
@@ -47,6 +51,8 @@ family: 'IPv4' | 'IPv6'
 
 **起始版本：** 7
 
+<!--Device-SocketRemoteInfo-family: 'IPv4' | 'IPv6'--><!--Device-SocketRemoteInfo-family: 'IPv4' | 'IPv6'-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## port
@@ -61,6 +67,8 @@ port: number
 
 **起始版本：** 7
 
+<!--Device-SocketRemoteInfo-port: int--><!--Device-SocketRemoteInfo-port: int-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## size
@@ -74,5 +82,7 @@ size: number
 **类型：** number
 
 **起始版本：** 7
+
+<!--Device-SocketRemoteInfo-size: int--><!--Device-SocketRemoteInfo-size: int-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack

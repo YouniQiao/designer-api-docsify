@@ -10,6 +10,8 @@ interface HeapMemoryThreshold
 
 **起始版本：** 24
 
+<!--Device-util-interface HeapMemoryThreshold--><!--Device-util-interface HeapMemoryThreshold-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -32,6 +34,8 @@ localHeapThreshold?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HeapMemoryThreshold-localHeapThreshold?: number--><!--Device-HeapMemoryThreshold-localHeapThreshold?: number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## processHeapThreshold
@@ -48,6 +52,8 @@ processHeapThreshold?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HeapMemoryThreshold-processHeapThreshold?: number--><!--Device-HeapMemoryThreshold-processHeapThreshold?: number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## sharedHeapThreshold
@@ -63,5 +69,7 @@ sharedHeapThreshold?: number
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HeapMemoryThreshold-sharedHeapThreshold?: number--><!--Device-HeapMemoryThreshold-sharedHeapThreshold?: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

@@ -10,6 +10,8 @@ export interface UserGesturesData extends UserFacesData
 
 **起始版本：** 26.0.0
 
+<!--Device-userStatus-export interface UserGesturesData extends UserFacesData--><!--Device-userStatus-export interface UserGesturesData extends UserFacesData-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
 **系统接口：** 此接口为系统接口。
@@ -34,6 +36,8 @@ directionAngle?: number[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UserGesturesData-directionAngle?: double[]--><!--Device-UserGesturesData-directionAngle?: double[]-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +55,8 @@ gestureSpeed?: number[]
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UserGesturesData-gestureSpeed?: double[]--><!--Device-UserGesturesData-gestureSpeed?: double[]-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -70,6 +76,8 @@ handPosition?: number[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UserGesturesData-handPosition?: double[]--><!--Device-UserGesturesData-handPosition?: double[]-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
 **系统接口：** 此接口为系统接口。
@@ -87,6 +95,8 @@ handType?: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UserGesturesData-handType?: int--><!--Device-UserGesturesData-handType?: int-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -106,6 +116,8 @@ isHandExist?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UserGesturesData-isHandExist?: boolean--><!--Device-UserGesturesData-isHandExist?: boolean-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
 **系统接口：** 此接口为系统接口。
@@ -123,6 +135,8 @@ motionGesture?: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UserGesturesData-motionGesture?: int--><!--Device-UserGesturesData-motionGesture?: int-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 

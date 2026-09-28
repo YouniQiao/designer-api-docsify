@@ -10,6 +10,8 @@ missionManager模块提供系统任务管理能力，包括对系统任务执行
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
+<!--Device-unnamed-declare namespace missionManager--><!--Device-unnamed-declare namespace missionManager-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -41,7 +43,7 @@ missionManager模块提供系统任务管理能力，包括对系统任务执行
 | [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-depr-f-sys.md#movemissiontofront) | 把指定任务id的任务切到前台。使用callback异步回调。 |
 | [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-depr-f-sys.md#movemissiontofront-1) | 把指定任务id的任务切到前台，同时指定任务切换到前台时的启动参数，例如窗口模式、设备ID等。使用callback异步回调。 |
 | [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-depr-f-sys.md#movemissiontofront-2) | 把指定任务id的任务切到前台，同时指定任务切换到前台时的启动参数，例如窗口模式、设备ID等。使用Promise异步回调。 |
-| [registerMissionListener](arkts-ability-missionmanager-registermissionlistener-depr-f-sys.md#registermissionlistener) | 注册系统任务状态监听器。 |
+| [registerMissionListener](arkts-ability-missionmanager-registermissionlistener-depr-f-sys.md) | 注册系统任务状态监听器。 |
 | [unlockMission](arkts-ability-missionmanager-unlockmission-depr-f-sys.md#unlockmission) | 解锁指定任务id的任务。使用callback异步回调。 |
 | [unlockMission](arkts-ability-missionmanager-unlockmission-depr-f-sys.md#unlockmission-1) | 解锁指定任务id的任务。使用Promise异步回调。 |
 | [unregisterMissionListener](arkts-ability-missionmanager-unregistermissionlistener-depr-f-sys.md#unregistermissionlistener) | 解注册任务状态监听器。使用callback异步回调。 |

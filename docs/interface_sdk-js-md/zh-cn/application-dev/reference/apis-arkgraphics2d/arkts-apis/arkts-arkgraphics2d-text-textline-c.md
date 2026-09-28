@@ -10,6 +10,8 @@ class TextLine
 
 **起始版本：** 12
 
+<!--Device-text-class TextLine--><!--Device-text-class TextLine-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## 导入模块
@@ -29,6 +31,8 @@ createTruncatedLine(width: number, ellipsisMode: EllipsisMode, ellipsis: string)
 **起始版本：** 18
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextLine-createTruncatedLine(width: double, ellipsisMode: EllipsisMode, ellipsis: string): TextLine--><!--Device-TextLine-createTruncatedLine(width: double, ellipsisMode: EllipsisMode, ellipsis: string): TextLine-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -89,7 +93,9 @@ enumerateCaretOffsets(callback: CaretOffsetsCallback): void
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextLine-enumerateCaretOffsets(callback: CaretOffsetsCallback): void--><!--Device-TextLine-enumerateCaretOffsets(callback: CaretOffsetsCallback): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -118,7 +124,9 @@ getAlignmentOffset(alignmentFactor: number, alignmentWidth: number): number
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextLine-getAlignmentOffset(alignmentFactor: double, alignmentWidth: double): double--><!--Device-TextLine-getAlignmentOffset(alignmentFactor: double, alignmentWidth: double): double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -151,7 +159,9 @@ getGlyphCount(): number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextLine-getGlyphCount(): int--><!--Device-TextLine-getGlyphCount(): int-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -177,7 +187,9 @@ getGlyphRuns(): Array<Run>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextLine-getGlyphRuns(): Array<Run>--><!--Device-TextLine-getGlyphRuns(): Array<Run>-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -213,7 +225,9 @@ getImageBounds(): common2D.Rect
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextLine-getImageBounds(): common2D.Rect--><!--Device-TextLine-getImageBounds(): common2D.Rect-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -239,7 +253,9 @@ getOffsetForStringIndex(index: number): number
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextLine-getOffsetForStringIndex(index: int): double--><!--Device-TextLine-getOffsetForStringIndex(index: int): double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -271,7 +287,9 @@ getStringIndexForPosition(point: common2D.Point): number
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextLine-getStringIndexForPosition(point: common2D.Point): int--><!--Device-TextLine-getStringIndexForPosition(point: common2D.Point): int-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -305,7 +323,9 @@ getTextRange(): Range
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextLine-getTextRange(): Range--><!--Device-TextLine-getTextRange(): Range-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -331,7 +351,9 @@ getTrailingSpaceWidth(): number
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextLine-getTrailingSpaceWidth(): double--><!--Device-TextLine-getTrailingSpaceWidth(): double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -368,7 +390,9 @@ getTypographicBounds(): TypographicBounds
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextLine-getTypographicBounds(): TypographicBounds--><!--Device-TextLine-getTypographicBounds(): TypographicBounds-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -395,7 +419,9 @@ paint(canvas: drawing.Canvas, x: number, y: number): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextLine-paint(canvas: drawing.Canvas, x: double, y: double): void--><!--Device-TextLine-paint(canvas: drawing.Canvas, x: double, y: double): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

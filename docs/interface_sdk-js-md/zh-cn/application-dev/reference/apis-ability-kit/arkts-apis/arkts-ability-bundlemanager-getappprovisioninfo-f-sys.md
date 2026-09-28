@@ -20,6 +20,8 @@ function getAppProvisionInfo(bundleName: string, callback: AsyncCallback<AppProv
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-bundleManager-function getAppProvisionInfo(bundleName: string, callback: AsyncCallback<AppProvisionInfo>): void--><!--Device-bundleManager-function getAppProvisionInfo(bundleName: string, callback: AsyncCallback<AppProvisionInfo>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -79,6 +81,8 @@ function getAppProvisionInfo(bundleName: string, userId: number, callback: Async
 **起始版本：** 10
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-bundleManager-function getAppProvisionInfo(bundleName: string, userId: int, callback: AsyncCallback<AppProvisionInfo>): void--><!--Device-bundleManager-function getAppProvisionInfo(bundleName: string, userId: int, callback: AsyncCallback<AppProvisionInfo>): void-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -142,6 +146,8 @@ function getAppProvisionInfo(bundleName: string, userId?: number): Promise<AppPr
 **起始版本：** 10
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-bundleManager-function getAppProvisionInfo(bundleName: string, userId?: int): Promise<AppProvisionInfo>--><!--Device-bundleManager-function getAppProvisionInfo(bundleName: string, userId?: int): Promise<AppProvisionInfo>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

@@ -15,6 +15,8 @@ interface PBKDF2Spec extends KdfSpec
 
 **起始版本：** 11
 
+<!--Device-cryptoFramework-interface PBKDF2Spec extends KdfSpec--><!--Device-cryptoFramework-interface PBKDF2Spec extends KdfSpec-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Kdf
 - API版本11：SystemCapability.Security.CryptoFramework
@@ -37,7 +39,9 @@ iterations: number
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PBKDF2Spec-iterations: int--><!--Device-PBKDF2Spec-iterations: int-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Kdf
@@ -55,7 +59,9 @@ keySize: number
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PBKDF2Spec-keySize: int--><!--Device-PBKDF2Spec-keySize: int-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Kdf
@@ -73,7 +79,9 @@ password: string | Uint8Array
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PBKDF2Spec-password: string | Uint8Array--><!--Device-PBKDF2Spec-password: string | Uint8Array-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Kdf
@@ -91,7 +99,9 @@ salt: Uint8Array
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PBKDF2Spec-salt: Uint8Array--><!--Device-PBKDF2Spec-salt: Uint8Array-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Kdf

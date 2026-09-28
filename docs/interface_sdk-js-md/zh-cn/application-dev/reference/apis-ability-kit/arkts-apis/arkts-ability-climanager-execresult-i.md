@@ -8,6 +8,8 @@ CLI工具执行的结果。包含CLI工具的退出码、标准输出、标准�
 
 **起始版本：** 26.0.1
 
+<!--Device-cliManager-interface ExecResult--><!--Device-cliManager-interface ExecResult-End-->
+
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ errorText?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExecResult-errorText?: string--><!--Device-ExecResult-errorText?: string-End-->
+
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 ## executionTime
@@ -45,6 +49,8 @@ executionTime: number
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExecResult-executionTime: long--><!--Device-ExecResult-executionTime: long-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -62,6 +68,8 @@ exitCode?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExecResult-exitCode?: int--><!--Device-ExecResult-exitCode?: int-End-->
+
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 ## outputText
@@ -77,6 +85,8 @@ outputText?: string
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExecResult-outputText?: string--><!--Device-ExecResult-outputText?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -94,6 +104,8 @@ signalNumber?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExecResult-signalNumber?: int--><!--Device-ExecResult-signalNumber?: int-End-->
+
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 ## timeOut
@@ -109,5 +121,7 @@ timeOut: boolean
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExecResult-timeOut: boolean--><!--Device-ExecResult-timeOut: boolean-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core

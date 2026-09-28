@@ -12,6 +12,8 @@ type RequestDialogInfoEvent = (actionType: DialogActionType, actionInfo?: Dialog
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-avMusicTemplate-type RequestDialogInfoEvent = (actionType: DialogActionType, actionInfo?: DialogActionInfo) => Promise<DialogInfo>--><!--Device-avMusicTemplate-type RequestDialogInfoEvent = (actionType: DialogActionType, actionInfo?: DialogActionInfo) => Promise<DialogInfo>-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **参数：**

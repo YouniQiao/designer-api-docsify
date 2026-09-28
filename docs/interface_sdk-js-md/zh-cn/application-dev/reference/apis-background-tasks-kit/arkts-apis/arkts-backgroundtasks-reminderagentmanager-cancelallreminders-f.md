@@ -16,6 +16,8 @@ function cancelAllReminders(callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
+<!--Device-reminderAgentManager-function cancelAllReminders(callback: AsyncCallback<void>): void--><!--Device-reminderAgentManager-function cancelAllReminders(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 **参数：**
@@ -58,6 +60,8 @@ function cancelAllReminders(): Promise<void>
 取消当前应用设置的所有代理提醒。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-reminderAgentManager-function cancelAllReminders(): Promise<void>--><!--Device-reminderAgentManager-function cancelAllReminders(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 

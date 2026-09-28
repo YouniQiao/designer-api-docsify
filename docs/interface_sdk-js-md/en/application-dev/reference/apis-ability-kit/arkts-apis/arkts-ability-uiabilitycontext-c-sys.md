@@ -4,11 +4,13 @@
 declare class UIAbilityContext extends Context
 ```
 
-UIAbilityContext provides the context environment for a [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) that needs to store its status. It inherits from Context and provides UIAbility-related configuration and APIs for operating UIAbility and ServiceExtensionAbility components. For example, you can use the APIs to start a UIAbility, terminate a UIAbility to which the UIAbilityContext belongs, and start, terminate, connect to, or disconnect from a ServiceExtensionAbility.
+UIAbilityContext provides the context environment for a [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) that needs to store its status. It inherits from [Context](arkts-ability-context.md) and provides UIAbility-related configuration and APIs for operating UIAbility and ServiceExtensionAbility components. For example, you can use the APIs to start a UIAbility, terminate a UIAbility to which the UIAbilityContext belongs, and start, terminate, connect to, or disconnect from a ServiceExtensionAbility.
 
 **Inheritance/Implementation:** UIAbilityContext extends [Context](arkts-ability-context-c.md)
 
 **Since:** 9
+
+<!--Device-unnamed-declare class UIAbilityContext extends Context--><!--Device-unnamed-declare class UIAbilityContext extends Context-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -32,6 +34,8 @@ Connects this UIAbility to a ServiceExtensionAbility, with the account ID specif
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIAbilityContext-connectServiceExtensionAbilityWithAccount(want: Want, accountId: int, options: ConnectOptions): long--><!--Device-UIAbilityContext-connectServiceExtensionAbilityWithAccount(want: Want, accountId: int, options: ConnectOptions): long-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -130,6 +134,8 @@ Requests the specified foreground application to start the UIExtensionAbility of
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-UIAbilityContext-requestModalUIExtension(pickerWant: Want, callback: AsyncCallback<void>): void--><!--Device-UIAbilityContext-requestModalUIExtension(pickerWant: Want, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -211,6 +217,8 @@ Requests the specified foreground application to start the UIExtensionAbility of
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIAbilityContext-requestModalUIExtension(pickerWant: Want): Promise<void>--><!--Device-UIAbilityContext-requestModalUIExtension(pickerWant: Want): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -301,6 +309,8 @@ Before starting the UIExtensionAbility, ensure that the foreground application h
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-UIAbilityContext-requestModalUIExtensionWithAccount(pickerWant: Want, accountId: int): Promise<void>--><!--Device-UIAbilityContext-requestModalUIExtensionWithAccount(pickerWant: Want, accountId: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -381,6 +391,8 @@ Sets an icon for this UIAbility in the mission. The maximum size of the icon is 
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-UIAbilityContext-setMissionIcon(icon: image.PixelMap, callback: AsyncCallback<void>): void--><!--Device-UIAbilityContext-setMissionIcon(icon: image.PixelMap, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -450,6 +462,8 @@ Sets an icon for this UIAbility in the mission. The maximum size of the icon is 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIAbilityContext-setMissionIcon(icon: image.PixelMap): Promise<void>--><!--Device-UIAbilityContext-setMissionIcon(icon: image.PixelMap): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -528,6 +542,8 @@ Starts a UIAbility with the caller information specified. The caller information
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIAbilityContext-startAbilityAsCaller(want: Want, callback: AsyncCallback<void>): void--><!--Device-UIAbilityContext-startAbilityAsCaller(want: Want, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -614,6 +630,8 @@ Starts a UIAbility with the caller information and start options specified. The 
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIAbilityContext-startAbilityAsCaller(want: Want, options: StartOptions, callback: AsyncCallback<void>): void--><!--Device-UIAbilityContext-startAbilityAsCaller(want: Want, options: StartOptions, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -702,6 +720,8 @@ Starts a UIAbility with the caller information specified. The caller information
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIAbilityContext-startAbilityAsCaller(want: Want, options?: StartOptions): Promise<void>--><!--Device-UIAbilityContext-startAbilityAsCaller(want: Want, options?: StartOptions): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -801,6 +821,8 @@ ohos.permission.START_INVISIBLE_ABILITY permission.
 **Required permissions:** ohos.permission.ABILITY_BACKGROUND_COMMUNICATION and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIAbilityContext-startAbilityByCallWithAccount(want: Want, accountId: int): Promise<Caller>--><!--Device-UIAbilityContext-startAbilityByCallWithAccount(want: Want, accountId: int): Promise<Caller>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -907,6 +929,8 @@ Starts a UIAbility with the account ID specified and returns the result when the
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIAbilityContext-startAbilityForResultWithAccount(want: Want, accountId: int, callback: AsyncCallback<AbilityResult>): void--><!--Device-UIAbilityContext-startAbilityForResultWithAccount(want: Want, accountId: int, callback: AsyncCallback<AbilityResult>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -1016,6 +1040,8 @@ Starts a UIAbility with the account ID and start options specified and returns t
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-UIAbilityContext-startAbilityForResultWithAccount(    want: Want,    accountId: int,    options: StartOptions,    callback: AsyncCallback<void>  ): void--><!--Device-UIAbilityContext-startAbilityForResultWithAccount(    want: Want,    accountId: int,    options: StartOptions,    callback: AsyncCallback<void>  ): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -1121,6 +1147,8 @@ Starts a UIAbility with the account ID specified and returns the result when the
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIAbilityContext-startAbilityForResultWithAccount(want: Want, accountId: int, options?: StartOptions): Promise<AbilityResult>--><!--Device-UIAbilityContext-startAbilityForResultWithAccount(want: Want, accountId: int, options?: StartOptions): Promise<AbilityResult>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -1231,6 +1259,8 @@ Starts a UIAbility with want and the account ID specified. This API uses an asyn
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-UIAbilityContext-startAbilityWithAccount(want: Want, accountId: int, callback: AsyncCallback<void>): void--><!--Device-UIAbilityContext-startAbilityWithAccount(want: Want, accountId: int, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -1332,6 +1362,8 @@ Starts a UIAbility with want, the account ID, and start options specified. This 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIAbilityContext-startAbilityWithAccount(want: Want, accountId: int, options: StartOptions, callback: AsyncCallback<void>): void--><!--Device-UIAbilityContext-startAbilityWithAccount(want: Want, accountId: int, options: StartOptions, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -1438,6 +1470,8 @@ Starts a UIAbility with want, the account ID, and start options specified. This 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIAbilityContext-startAbilityWithAccount(want: Want, accountId: int, options?: StartOptions): Promise<void>--><!--Device-UIAbilityContext-startAbilityWithAccount(want: Want, accountId: int, options?: StartOptions): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -1549,6 +1583,8 @@ Starts a UIAbility. If the UIAbility has multiple instances, the latest instance
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-UIAbilityContext-startRecentAbility(want: Want, callback: AsyncCallback<void>): void--><!--Device-UIAbilityContext-startRecentAbility(want: Want, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -1647,6 +1683,8 @@ Starts a UIAbility with the start options specified. If the UIAbility has multip
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIAbilityContext-startRecentAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): void--><!--Device-UIAbilityContext-startRecentAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -1752,6 +1790,8 @@ Starts a UIAbility. If the UIAbility has multiple instances, the latest instance
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-UIAbilityContext-startRecentAbility(want: Want, options?: StartOptions): Promise<void>--><!--Device-UIAbilityContext-startRecentAbility(want: Want, options?: StartOptions): Promise<void>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -1848,6 +1888,8 @@ Starts a ServiceExtensionAbility. This API uses an asynchronous callback to retu
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-UIAbilityContext-startServiceExtensionAbility(want: Want, callback: AsyncCallback<void>): void--><!--Device-UIAbilityContext-startServiceExtensionAbility(want: Want, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -1926,6 +1968,8 @@ Starts a ServiceExtensionAbility. This API uses a promise to return the result.
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIAbilityContext-startServiceExtensionAbility(want: Want): Promise<void>--><!--Device-UIAbilityContext-startServiceExtensionAbility(want: Want): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -2018,6 +2062,8 @@ Starts a ServiceExtensionAbility with the account ID specified. This API uses an
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-UIAbilityContext-startServiceExtensionAbilityWithAccount(want: Want, accountId: int, callback: AsyncCallback<void>): void--><!--Device-UIAbilityContext-startServiceExtensionAbilityWithAccount(want: Want, accountId: int, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -2108,6 +2154,8 @@ Starts a ServiceExtensionAbility with the account ID specified. This API uses a 
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-UIAbilityContext-startServiceExtensionAbilityWithAccount(want: Want, accountId: int): Promise<void>--><!--Device-UIAbilityContext-startServiceExtensionAbilityWithAccount(want: Want, accountId: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -2192,6 +2240,8 @@ Stops a ServiceExtensionAbility. This API uses an asynchronous callback to retur
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-UIAbilityContext-stopServiceExtensionAbility(want: Want, callback: AsyncCallback<void>): void--><!--Device-UIAbilityContext-stopServiceExtensionAbility(want: Want, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -2268,6 +2318,8 @@ Stops a ServiceExtensionAbility in the same application. This API uses a promise
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIAbilityContext-stopServiceExtensionAbility(want: Want): Promise<void>--><!--Device-UIAbilityContext-stopServiceExtensionAbility(want: Want): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -2353,6 +2405,8 @@ Stops a ServiceExtensionAbility with the account ID specified in the same applic
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-UIAbilityContext-stopServiceExtensionAbilityWithAccount(want: Want, accountId: int, callback: AsyncCallback<void>): void--><!--Device-UIAbilityContext-stopServiceExtensionAbilityWithAccount(want: Want, accountId: int, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -2435,6 +2489,8 @@ Stops a ServiceExtensionAbility with the account ID specified in the same applic
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIAbilityContext-stopServiceExtensionAbilityWithAccount(want: Want, accountId: int): Promise<void>--><!--Device-UIAbilityContext-stopServiceExtensionAbilityWithAccount(want: Want, accountId: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -2528,6 +2584,8 @@ Connects this UIAbility to a ServiceExtensionAbility, with the account ID specif
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIAbilityContext-connectAbilityWithAccount(want: Want, accountId: int, options: ConnectOptions): long--><!--Device-UIAbilityContext-connectAbilityWithAccount(want: Want, accountId: int, options: ConnectOptions): long-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -2623,6 +2681,8 @@ Disconnects from a [ServiceExtensionAbility](../../../application-models/extensi
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-UIAbilityContext-disconnectAbility(connection: long, callback: AsyncCallback<void>): void--><!--Device-UIAbilityContext-disconnectAbility(connection: long, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -2694,6 +2754,8 @@ Disconnects from a [ServiceExtensionAbility](../../../application-models/extensi
 **Substitutes:** [disconnectServiceExtensionAbility](arkts-ability-uiabilitycontext-c.md#disconnectserviceextensionability)(connection: number)
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIAbilityContext-disconnectAbility(connection: long): Promise<void>--><!--Device-UIAbilityContext-disconnectAbility(connection: long): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

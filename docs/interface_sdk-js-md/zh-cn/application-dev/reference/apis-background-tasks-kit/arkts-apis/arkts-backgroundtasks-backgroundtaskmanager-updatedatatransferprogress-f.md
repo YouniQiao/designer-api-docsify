@@ -20,6 +20,8 @@ function updateDataTransferProgress(context: Context, progressInfo: DataTransfer
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-backgroundTaskManager-function updateDataTransferProgress(context: Context, progressInfo: DataTransferProgress): void--><!--Device-backgroundTaskManager-function updateDataTransferProgress(context: Context, progressInfo: DataTransferProgress): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 **参数：**

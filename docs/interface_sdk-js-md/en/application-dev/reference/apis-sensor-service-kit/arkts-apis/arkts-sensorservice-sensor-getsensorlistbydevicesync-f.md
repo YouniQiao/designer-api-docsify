@@ -16,6 +16,8 @@ Obtains the information about all sensors on the device. **getSensorListByDevice
 
 **Since:** 19
 
+<!--Device-sensor-function getSensorListByDeviceSync(deviceId?: int): Array<Sensor>--><!--Device-sensor-function getSensorListByDeviceSync(deviceId?: int): Array<Sensor>-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**

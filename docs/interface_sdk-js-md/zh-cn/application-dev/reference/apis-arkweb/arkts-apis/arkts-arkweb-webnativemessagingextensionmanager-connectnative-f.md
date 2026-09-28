@@ -20,6 +20,8 @@ function connectNative(context: UIAbilityContext, want: Want, callback: WebExten
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-webNativeMessagingExtensionManager-function connectNative(context: UIAbilityContext, want: Want, callback: WebExtensionConnectionCallback): number--><!--Device-webNativeMessagingExtensionManager-function connectNative(context: UIAbilityContext, want: Want, callback: WebExtensionConnectionCallback): number-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**

@@ -8,6 +8,8 @@ VPN观察者对象。用于监听VPN相关事件。在调用VpnObserver的方法
 
 **起始版本：** 26.0.0
 
+<!--Device-vpnExtension-export interface VpnObserver--><!--Device-vpnExtension-export interface VpnObserver-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 ## 导入模块
@@ -31,6 +33,8 @@ offAuthorizationResult(callback?: Callback<boolean>): void
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-VpnObserver-offAuthorizationResult(callback?: Callback<boolean>): void--><!--Device-VpnObserver-offAuthorizationResult(callback?: Callback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -75,6 +79,8 @@ onAuthorizationResult(callback: Callback<boolean>): void
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-VpnObserver-onAuthorizationResult(callback: Callback<boolean>): void--><!--Device-VpnObserver-onAuthorizationResult(callback: Callback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 

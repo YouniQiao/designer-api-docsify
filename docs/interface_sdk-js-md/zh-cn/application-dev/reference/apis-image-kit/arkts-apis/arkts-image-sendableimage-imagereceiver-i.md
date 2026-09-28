@@ -10,6 +10,8 @@ interface ImageReceiver
 
 **起始版本：** 12
 
+<!--Device-sendableImage-interface ImageReceiver--><!--Device-sendableImage-interface ImageReceiver-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
 ## 导入模块
@@ -27,6 +29,8 @@ getReceivingSurfaceId(): Promise<string>
 用于获取一个Surface ID供Camera或其他组件使用。使用promise异步回调。
 
 **起始版本：** 12
+
+<!--Device-ImageReceiver-getReceivingSurfaceId(): Promise<string>--><!--Device-ImageReceiver-getReceivingSurfaceId(): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
@@ -66,6 +70,8 @@ on(type: 'imageArrival', callback: AsyncCallback<void>): void
 接收图片时注册。使用callback异步回调。
 
 **起始版本：** 12
+
+<!--Device-ImageReceiver-on(type: 'imageArrival', callback: AsyncCallback<void>): void--><!--Device-ImageReceiver-on(type: 'imageArrival', callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
@@ -108,6 +114,8 @@ readLatestImage(): Promise<Image>
 > 用完毕后需要调用[release](arkts-image-sendableimage-pixelmap-i.md#release)方法释放，释放后才可以继续接收新的数据。
 
 **起始版本：** 12
+
+<!--Device-ImageReceiver-readLatestImage(): Promise<Image>--><!--Device-ImageReceiver-readLatestImage(): Promise<Image>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
@@ -153,6 +161,8 @@ readNextImage(): Promise<Image>
 
 **起始版本：** 12
 
+<!--Device-ImageReceiver-readNextImage(): Promise<Image>--><!--Device-ImageReceiver-readNextImage(): Promise<Image>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
 **返回值：**
@@ -196,6 +206,8 @@ release(): Promise<void>
 
 **起始版本：** 12
 
+<!--Device-ImageReceiver-release(): Promise<void>--><!--Device-ImageReceiver-release(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
 **返回值：**
@@ -237,6 +249,8 @@ readonly capacity: number
 
 **起始版本：** 12
 
+<!--Device-ImageReceiver-readonly capacity: number--><!--Device-ImageReceiver-readonly capacity: number-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
 ## format
@@ -251,6 +265,8 @@ readonly format: image.ImageFormat
 
 **起始版本：** 12
 
+<!--Device-ImageReceiver-readonly format: image.ImageFormat--><!--Device-ImageReceiver-readonly format: image.ImageFormat-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
 ## size
@@ -264,5 +280,7 @@ readonly size: image.Size
 **类型：** [image.Size](arkts-image-image-size-i.md)
 
 **起始版本：** 12
+
+<!--Device-ImageReceiver-readonly size: image.Size--><!--Device-ImageReceiver-readonly size: image.Size-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver

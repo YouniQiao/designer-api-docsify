@@ -8,6 +8,8 @@ interface UserAuthResult
 
 **起始版本：** 26.0.0
 
+<!--Device-abilityToolAccessCtrl-interface UserAuthResult--><!--Device-abilityToolAccessCtrl-interface UserAuthResult-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 **系统接口：** 此接口为系统接口。
@@ -31,6 +33,8 @@ permissionInfo: PermissionInfo[]
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-UserAuthResult-permissionInfo: PermissionInfo[]--><!--Device-UserAuthResult-permissionInfo: PermissionInfo[]-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 **系统接口：** 此接口为系统接口。
@@ -48,6 +52,8 @@ permissionQuery: PermissionQuery
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-UserAuthResult-permissionQuery: PermissionQuery--><!--Device-UserAuthResult-permissionQuery: PermissionQuery-End-->
 
 **系统能力：** SystemCapability.Security.Asset
 

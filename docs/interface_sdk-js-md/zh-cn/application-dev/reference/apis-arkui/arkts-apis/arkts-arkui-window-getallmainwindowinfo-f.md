@@ -18,6 +18,8 @@ function getAllMainWindowInfo(): Promise<Array<MainWindowInfo>>
 
 **需要权限：** ohos.permission.CUSTOM_SCREEN_CAPTURE
 
+<!--Device-window-function getAllMainWindowInfo(): Promise<Array<MainWindowInfo>>--><!--Device-window-function getAllMainWindowInfo(): Promise<Array<MainWindowInfo>>-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **返回值：**

@@ -10,6 +10,8 @@ Implements depth data output. It inherits from [CameraOutput](arkts-camera-camer
 
 **起始版本：** 13
 
+<!--Device-camera-interface DepthDataOutput extends CameraOutput--><!--Device-camera-interface DepthDataOutput extends CameraOutput-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -29,6 +31,8 @@ off(type: 'depthDataAvailable', callback?: AsyncCallback<DepthData>): void
 Unsubscribes from depth data availability events.
 
 **起始版本：** 13
+
+<!--Device-DepthDataOutput-off(type: 'depthDataAvailable', callback?: AsyncCallback<DepthData>): void--><!--Device-DepthDataOutput-off(type: 'depthDataAvailable', callback?: AsyncCallback<DepthData>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -74,6 +78,8 @@ Unsubscribes from DepthDataOutput error events.
 
 **起始版本：** 13
 
+<!--Device-DepthDataOutput-off(type: 'error', callback?: ErrorCallback): void--><!--Device-DepthDataOutput-off(type: 'error', callback?: ErrorCallback): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -112,6 +118,8 @@ Subscribes to depth data availability events. This API uses an asynchronous call
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **起始版本：** 13
+
+<!--Device-DepthDataOutput-on(type: 'depthDataAvailable', callback: AsyncCallback<DepthData>): void--><!--Device-DepthDataOutput-on(type: 'depthDataAvailable', callback: AsyncCallback<DepthData>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -161,6 +169,8 @@ Subscribes to DepthDataOutput error events. This API uses an asynchronous callba
 
 **起始版本：** 13
 
+<!--Device-DepthDataOutput-on(type: 'error', callback: ErrorCallback): void--><!--Device-DepthDataOutput-on(type: 'error', callback: ErrorCallback): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -201,6 +211,8 @@ start(): Promise<void>
 Starts depth data output. This API uses a promise to return the result.
 
 **起始版本：** 13
+
+<!--Device-DepthDataOutput-start(): Promise<void>--><!--Device-DepthDataOutput-start(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -243,6 +255,8 @@ stop(): Promise<void>
 Stops depth data output. This API uses a promise to return the result.
 
 **起始版本：** 13
+
+<!--Device-DepthDataOutput-stop(): Promise<void>--><!--Device-DepthDataOutput-stop(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

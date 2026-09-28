@@ -19,6 +19,8 @@ function hasSerialRight(portId: number): boolean
 
 **起始版本：** 19
 
+<!--Device-serialManager-function hasSerialRight(portId: int): boolean--><!--Device-serialManager-function hasSerialRight(portId: int): boolean-End-->
+
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
 **参数：**

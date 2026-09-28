@@ -18,6 +18,8 @@ function setDefaultSmsSlotId(slotId: number, callback: AsyncCallback<void>): voi
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-sms-function setDefaultSmsSlotId(slotId: int, callback: AsyncCallback<void>): void--><!--Device-sms-function setDefaultSmsSlotId(slotId: int, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -67,6 +69,8 @@ function setDefaultSmsSlotId(slotId: number): Promise<void>
 **起始版本：** 7
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
+
+<!--Device-sms-function setDefaultSmsSlotId(slotId: int): Promise<void>--><!--Device-sms-function setDefaultSmsSlotId(slotId: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 

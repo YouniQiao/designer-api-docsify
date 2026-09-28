@@ -4,6 +4,8 @@ The appManager module implements application management. You can use the APIs of
 
 **Since:** 9
 
+<!--Device-unnamed-declare namespace appManager--><!--Device-unnamed-declare namespace appManager-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Test API:** This API is used only in automated test scripts.

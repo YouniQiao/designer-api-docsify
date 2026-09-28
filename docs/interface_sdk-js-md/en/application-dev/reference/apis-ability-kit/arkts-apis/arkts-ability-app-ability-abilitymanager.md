@@ -4,6 +4,8 @@ The AbilityManager module provides APIs for obtaining, adding, and updating abil
 
 **Since:** 9
 
+<!--Device-unnamed-declare namespace abilityManager--><!--Device-unnamed-declare namespace abilityManager-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## Modules to Import

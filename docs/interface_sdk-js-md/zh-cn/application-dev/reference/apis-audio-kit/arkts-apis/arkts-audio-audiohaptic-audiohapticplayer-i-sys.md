@@ -8,6 +8,8 @@ interface AudioHapticPlayer
 
 **起始版本：** 11
 
+<!--Device-audioHaptic-interface AudioHapticPlayer--><!--Device-audioHaptic-interface AudioHapticPlayer-End-->
+
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
 ## 导入模块
@@ -29,6 +31,8 @@ enableHapticsInSilentMode(enable: boolean): void
 > 该方法必须在释放音振播放器前使用，不能在播放中调用。
 
 **起始版本：** 20
+
+<!--Device-AudioHapticPlayer-enableHapticsInSilentMode(enable: boolean): void--><!--Device-AudioHapticPlayer-enableHapticsInSilentMode(enable: boolean): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -57,6 +61,8 @@ isHapticsIntensityAdjustmentSupported(): boolean
 
 **起始版本：** 20
 
+<!--Device-AudioHapticPlayer-isHapticsIntensityAdjustmentSupported(): boolean--><!--Device-AudioHapticPlayer-isHapticsIntensityAdjustmentSupported(): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
 **系统接口：** 此接口为系统接口。
@@ -82,6 +88,8 @@ isHapticsRampSupported(): boolean
 查询设备是否可以设置振动渐变。
 
 **起始版本：** 20
+
+<!--Device-AudioHapticPlayer-isHapticsRampSupported(): boolean--><!--Device-AudioHapticPlayer-isHapticsRampSupported(): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -112,6 +120,8 @@ setHapticsIntensity(intensity: number): Promise<void>
 > 该方法需在音振播放器释放前调用，且每次播放仅支持调用一次。
 
 **起始版本：** 20
+
+<!--Device-AudioHapticPlayer-setHapticsIntensity(intensity: double): Promise<void>--><!--Device-AudioHapticPlayer-setHapticsIntensity(intensity: double): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -153,6 +163,8 @@ setHapticsRamp(duration: number, startIntensity: number, endIntensity: number): 
 > - 该方法仅能调用一次。
 
 **起始版本：** 20
+
+<!--Device-AudioHapticPlayer-setHapticsRamp(duration: int, startIntensity: double, endIntensity: double): Promise<void>--><!--Device-AudioHapticPlayer-setHapticsRamp(duration: int, startIntensity: double, endIntensity: double): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 

@@ -8,6 +8,8 @@ export interface CertStoreProperty
 
 **起始版本：** 18
 
+<!--Device-certificateManager-export interface CertStoreProperty--><!--Device-certificateManager-export interface CertStoreProperty-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
 
 ## 导入模块
@@ -28,6 +30,8 @@ certAlg?: CertAlgorithm
 
 **起始版本：** 20
 
+<!--Device-CertStoreProperty-certAlg?: CertAlgorithm--><!--Device-CertStoreProperty-certAlg?: CertAlgorithm-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
 
 ## certScope
@@ -42,6 +46,8 @@ certScope?: CertScope
 
 **起始版本：** 18
 
+<!--Device-CertStoreProperty-certScope?: CertScope--><!--Device-CertStoreProperty-certScope?: CertScope-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
 
 ## certType
@@ -55,5 +61,7 @@ certType: CertType
 **类型：** [CertType](arkts-devicecertificate-certificatemanager-certtype-e.md)
 
 **起始版本：** 18
+
+<!--Device-CertStoreProperty-certType: CertType--><!--Device-CertStoreProperty-certType: CertType-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManager

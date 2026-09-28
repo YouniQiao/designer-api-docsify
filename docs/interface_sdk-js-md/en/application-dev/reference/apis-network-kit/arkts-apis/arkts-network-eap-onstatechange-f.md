@@ -20,6 +20,8 @@ Subscribes to 802.1X EAP authentication state changes.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-eap-function onStateChange(callback: Callback<EthEapStateInfo>): void--><!--Device-eap-function onStateChange(callback: Callback<EthEapStateInfo>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 **Parameters:**

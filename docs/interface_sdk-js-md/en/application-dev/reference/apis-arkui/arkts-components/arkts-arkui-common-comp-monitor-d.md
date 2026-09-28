@@ -16,4 +16,6 @@ For details, see [@Monitor Decorator: Listening for Value Changes of the State V
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-unnamed-declare const Monitor: MonitorDecorator--><!--Device-unnamed-declare const Monitor: MonitorDecorator-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

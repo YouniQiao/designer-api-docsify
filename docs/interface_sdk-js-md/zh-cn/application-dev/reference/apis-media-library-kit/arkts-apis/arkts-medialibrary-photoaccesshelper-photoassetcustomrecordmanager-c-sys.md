@@ -8,6 +8,8 @@ class PhotoAssetCustomRecordManager
 
 **起始版本：** 20
 
+<!--Device-photoAccessHelper-class PhotoAssetCustomRecordManager--><!--Device-photoAccessHelper-class PhotoAssetCustomRecordManager-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -27,6 +29,8 @@ addLcdJumpCount(ids: Array<number>): Promise<Array<number>>
 根据[PhotoAssetCustomRecord](arkts-medialibrary-photoaccesshelper-photoassetcustomrecord-i-sys.md)中的fileId给数据库中对应数据的LcdJumpCount加1。使用Promise异步回调。
 
 **起始版本：** 20
+
+<!--Device-PhotoAssetCustomRecordManager-addLcdJumpCount(ids: Array<int>): Promise<Array<int>>--><!--Device-PhotoAssetCustomRecordManager-addLcdJumpCount(ids: Array<int>): Promise<Array<int>>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -62,6 +66,8 @@ addShareCount(ids: Array<number>): Promise<Array<number>>
 
 **起始版本：** 20
 
+<!--Device-PhotoAssetCustomRecordManager-addShareCount(ids: Array<int>): Promise<Array<int>>--><!--Device-PhotoAssetCustomRecordManager-addShareCount(ids: Array<int>): Promise<Array<int>>-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -95,6 +101,8 @@ createCustomRecords(customRecords: Array<PhotoAssetCustomRecord>): Promise<void>
 新增自定义用户统计行为数据。使用Promise异步回调。
 
 **起始版本：** 20
+
+<!--Device-PhotoAssetCustomRecordManager-createCustomRecords(customRecords: Array<PhotoAssetCustomRecord>): Promise<void>--><!--Device-PhotoAssetCustomRecordManager-createCustomRecords(customRecords: Array<PhotoAssetCustomRecord>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -149,6 +157,8 @@ static getCustomRecordManagerInstance(context: Context): PhotoAssetCustomRecordM
 
 **起始版本：** 20
 
+<!--Device-PhotoAssetCustomRecordManager-static getCustomRecordManagerInstance(context: Context): PhotoAssetCustomRecordManager--><!--Device-PhotoAssetCustomRecordManager-static getCustomRecordManagerInstance(context: Context): PhotoAssetCustomRecordManager-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -194,6 +204,8 @@ getCustomRecords(optionCheck: FetchOptions): Promise<FetchResult<PhotoAssetCusto
 根据检索选项获取自定义用户统计行为数据。使用Promise异步回调。
 
 **起始版本：** 20
+
+<!--Device-PhotoAssetCustomRecordManager-getCustomRecords(optionCheck: FetchOptions): Promise<FetchResult<PhotoAssetCustomRecord>>--><!--Device-PhotoAssetCustomRecordManager-getCustomRecords(optionCheck: FetchOptions): Promise<FetchResult<PhotoAssetCustomRecord>>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -253,6 +265,8 @@ removeCustomRecords(optionCheck: FetchOptions): Promise<void>
 
 **起始版本：** 20
 
+<!--Device-PhotoAssetCustomRecordManager-removeCustomRecords(optionCheck: FetchOptions): Promise<void>--><!--Device-PhotoAssetCustomRecordManager-removeCustomRecords(optionCheck: FetchOptions): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -309,6 +323,8 @@ setCustomRecords(customRecords: Array<PhotoAssetCustomRecord>): Promise<Array<nu
 根据自定义用户统计行为数据，更新已存在的数据库字段。使用Promise异步回调。
 
 **起始版本：** 20
+
+<!--Device-PhotoAssetCustomRecordManager-setCustomRecords(customRecords: Array<PhotoAssetCustomRecord>): Promise<Array<int>>--><!--Device-PhotoAssetCustomRecordManager-setCustomRecords(customRecords: Array<PhotoAssetCustomRecord>): Promise<Array<int>>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

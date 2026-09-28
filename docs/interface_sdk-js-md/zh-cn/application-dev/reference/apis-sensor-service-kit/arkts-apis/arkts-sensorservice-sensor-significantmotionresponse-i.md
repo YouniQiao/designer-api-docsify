@@ -10,6 +10,8 @@ interface SignificantMotionResponse extends Response
 
 **起始版本：** 8
 
+<!--Device-sensor-interface SignificantMotionResponse extends Response--><!--Device-sensor-interface SignificantMotionResponse extends Response-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## 导入模块
@@ -29,5 +31,7 @@ scalar: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-SignificantMotionResponse-scalar: double--><!--Device-SignificantMotionResponse-scalar: double-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor

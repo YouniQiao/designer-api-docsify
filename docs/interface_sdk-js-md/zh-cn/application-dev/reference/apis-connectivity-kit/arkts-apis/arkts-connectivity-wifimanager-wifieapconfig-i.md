@@ -11,6 +11,8 @@ interface WifiEapConfig
 
 **起始版本：** 10
 
+<!--Device-wifiManager-interface WifiEapConfig--><!--Device-wifiManager-interface WifiEapConfig-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## 导入模块
@@ -31,6 +33,8 @@ altSubjectMatch: string
 
 **起始版本：** 10
 
+<!--Device-WifiEapConfig-altSubjectMatch: string--><!--Device-WifiEapConfig-altSubjectMatch: string-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## anonymousIdentity
@@ -44,6 +48,8 @@ anonymousIdentity: string
 **类型：** string
 
 **起始版本：** 10
+
+<!--Device-WifiEapConfig-anonymousIdentity: string--><!--Device-WifiEapConfig-anonymousIdentity: string-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -59,6 +65,8 @@ CA证书别名。
 
 **起始版本：** 10
 
+<!--Device-WifiEapConfig-caCertAlias: string--><!--Device-WifiEapConfig-caCertAlias: string-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## caPath
@@ -72,6 +80,8 @@ CA证书路径。
 **类型：** string
 
 **起始版本：** 10
+
+<!--Device-WifiEapConfig-caPath: string--><!--Device-WifiEapConfig-caPath: string-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -87,6 +97,8 @@ CA证书内容。当eapMethod为EAP_TLS时，如果该字段为空，则clientCe
 
 **起始版本：** 10
 
+<!--Device-WifiEapConfig-certEntry: Uint8Array--><!--Device-WifiEapConfig-certEntry: Uint8Array-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## certPassword
@@ -100,6 +112,8 @@ CA证书密码，最大长度为128字节。
 **类型：** string
 
 **起始版本：** 10
+
+<!--Device-WifiEapConfig-certPassword: string--><!--Device-WifiEapConfig-certPassword: string-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -115,6 +129,8 @@ clientCertAlias: string
 
 **起始版本：** 10
 
+<!--Device-WifiEapConfig-clientCertAlias: string--><!--Device-WifiEapConfig-clientCertAlias: string-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## domainSuffixMatch
@@ -128,6 +144,8 @@ domainSuffixMatch: string
 **类型：** string
 
 **起始版本：** 10
+
+<!--Device-WifiEapConfig-domainSuffixMatch: string--><!--Device-WifiEapConfig-domainSuffixMatch: string-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -143,6 +161,8 @@ EAP认证方式。
 
 **起始版本：** 10
 
+<!--Device-WifiEapConfig-eapMethod: EapMethod--><!--Device-WifiEapConfig-eapMethod: EapMethod-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## eapSubId
@@ -156,6 +176,8 @@ SIM卡的子ID。
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-WifiEapConfig-eapSubId: int--><!--Device-WifiEapConfig-eapSubId: int-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -171,6 +193,8 @@ identity: string
 
 **起始版本：** 10
 
+<!--Device-WifiEapConfig-identity: string--><!--Device-WifiEapConfig-identity: string-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## password
@@ -184,6 +208,8 @@ password: string
 **类型：** string
 
 **起始版本：** 10
+
+<!--Device-WifiEapConfig-password: string--><!--Device-WifiEapConfig-password: string-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -199,6 +225,8 @@ phase2Method: Phase2Method
 
 **起始版本：** 10
 
+<!--Device-WifiEapConfig-phase2Method: Phase2Method--><!--Device-WifiEapConfig-phase2Method: Phase2Method-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## plmn
@@ -213,6 +241,8 @@ plmn: string
 
 **起始版本：** 10
 
+<!--Device-WifiEapConfig-plmn: string--><!--Device-WifiEapConfig-plmn: string-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## realm
@@ -226,5 +256,7 @@ realm: string
 **类型：** string
 
 **起始版本：** 10
+
+<!--Device-WifiEapConfig-realm: string--><!--Device-WifiEapConfig-realm: string-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA

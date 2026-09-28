@@ -20,6 +20,8 @@ function getLaunchWantForBundle(bundleName: string, callback: AsyncCallback<Want
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-bundle-function getLaunchWantForBundle(bundleName: string, callback: AsyncCallback<Want>): void--><!--Device-bundle-function getLaunchWantForBundle(bundleName: string, callback: AsyncCallback<Want>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 **参数：**
@@ -61,6 +63,8 @@ function getLaunchWantForBundle(bundleName: string): Promise<Want>
 **废弃版本：** 9
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-bundle-function getLaunchWantForBundle(bundleName: string): Promise<Want>--><!--Device-bundle-function getLaunchWantForBundle(bundleName: string): Promise<Want>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 

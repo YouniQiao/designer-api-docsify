@@ -8,6 +8,8 @@ export type ShortcutWant = _ShortcutWant
 
 **起始版本：** 20
 
+<!--Device-shortcutManager-export type ShortcutWant = _ShortcutWant--><!--Device-shortcutManager-export type ShortcutWant = _ShortcutWant-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
 **类型：** _ShortcutWant

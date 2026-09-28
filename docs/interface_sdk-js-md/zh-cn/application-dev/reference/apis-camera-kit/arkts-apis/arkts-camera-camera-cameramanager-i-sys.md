@@ -8,6 +8,8 @@ interface CameraManager
 
 **起始版本：** 10
 
+<!--Device-camera-interface CameraManager--><!--Device-camera-interface CameraManager-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
@@ -31,6 +33,8 @@ Before using this interface, first through the getSupportedCameras interface to 
 **需要权限：** ohos.permission.CAMERA
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-CameraManager-createCameraInputWithTokenId(camera: CameraDevice, tokenId: int): CameraInput--><!--Device-CameraManager-createCameraInputWithTokenId(camera: CameraDevice, tokenId: int): CameraInput-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -70,6 +74,8 @@ Create a ControlCenterSession instance.
 
 **需要权限：** ohos.permission.CAMERA_CONTROL
 
+<!--Device-CameraManager-createControlCenterSession(): ControlCenterSession--><!--Device-CameraManager-createControlCenterSession(): ControlCenterSession-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -96,6 +102,8 @@ createDepthDataOutput(profile: DepthProfile): DepthDataOutput
 Creates a DepthDataOutput instance. This API returns the result synchronously.
 
 **起始版本：** 13
+
+<!--Device-CameraManager-createDepthDataOutput(profile: DepthProfile): DepthDataOutput--><!--Device-CameraManager-createDepthDataOutput(profile: DepthProfile): DepthDataOutput-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -149,6 +157,8 @@ Checks whether the camera device can be muted.
 
 **起始版本：** 10
 
+<!--Device-CameraManager-isCameraMuteSupported(): boolean--><!--Device-CameraManager-isCameraMuteSupported(): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -184,6 +194,8 @@ Check if the control center active.
 
 **起始版本：** 20
 
+<!--Device-CameraManager-isControlCenterActive(): boolean--><!--Device-CameraManager-isControlCenterActive(): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -209,6 +221,8 @@ isPrelaunchSupported(camera: CameraDevice): boolean
 Checks whether a camera device supports prelaunch.
 
 **起始版本：** 10
+
+<!--Device-CameraManager-isPrelaunchSupported(camera: CameraDevice): boolean--><!--Device-CameraManager-isPrelaunchSupported(camera: CameraDevice): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -263,6 +277,8 @@ Mutes the camera device permanently.
 
 **需要权限：** ohos.permission.CAMERA_CONTROL
 
+<!--Device-CameraManager-muteCameraPersistent(mute: boolean, type: PolicyType): void--><!--Device-CameraManager-muteCameraPersistent(mute: boolean, type: PolicyType): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -300,6 +316,8 @@ off(type: 'cameraMute', callback?: AsyncCallback<boolean>): void
 Unsubscribes from camera mute status events.
 
 **起始版本：** 10
+
+<!--Device-CameraManager-off(type: 'cameraMute', callback?: AsyncCallback<boolean>): void--><!--Device-CameraManager-off(type: 'cameraMute', callback?: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -342,6 +360,8 @@ Unsubscribes control center status change event callback.
 
 **起始版本：** 20
 
+<!--Device-CameraManager-off(type: 'controlCenterStatusChange', callback?: AsyncCallback<boolean>): void--><!--Device-CameraManager-off(type: 'controlCenterStatusChange', callback?: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -368,6 +388,8 @@ on(type: 'cameraMute', callback: AsyncCallback<boolean>): void
 Subscribes to camera mute status events. This API uses an asynchronous callback to return the result.
 
 **起始版本：** 10
+
+<!--Device-CameraManager-on(type: 'cameraMute', callback: AsyncCallback<boolean>): void--><!--Device-CameraManager-on(type: 'cameraMute', callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -415,6 +437,8 @@ Subscribes control center status change event callback.
 
 **起始版本：** 20
 
+<!--Device-CameraManager-on(type: 'controlCenterStatusChange', callback: AsyncCallback<boolean>): void--><!--Device-CameraManager-on(type: 'controlCenterStatusChange', callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -441,6 +465,8 @@ prelaunch(): void
 Prelaunches the camera device. This API is called when a user clicks the system camera icon to start the camera application.
 
 **起始版本：** 10
+
+<!--Device-CameraManager-prelaunch(): void--><!--Device-CameraManager-prelaunch(): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -479,6 +505,8 @@ preSwitchCamera(cameraId: string): void
 Pre-switches a camera device to speed up its startup.
 
 **起始版本：** 11
+
+<!--Device-CameraManager-preSwitchCamera(cameraId: string): void--><!--Device-CameraManager-preSwitchCamera(cameraId: string): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -526,6 +554,8 @@ Sets prelaunch configuration. Before the setting, call [isPrelaunchSupported](#i
 **起始版本：** 10
 
 **需要权限：** ohos.permission.CAMERA
+
+<!--Device-CameraManager-setPrelaunchConfig(prelaunchConfig: PrelaunchConfig): void--><!--Device-CameraManager-setPrelaunchConfig(prelaunchConfig: PrelaunchConfig): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -582,6 +612,8 @@ Mutes or unmutes the camera device.
 **废弃版本：** 12
 
 **替代接口：** [muteCameraPersistent](#mutecamerapersistent)
+
+<!--Device-CameraManager-muteCamera(mute: boolean): void--><!--Device-CameraManager-muteCamera(mute: boolean): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

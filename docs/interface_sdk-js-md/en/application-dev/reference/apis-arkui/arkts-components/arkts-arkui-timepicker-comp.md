@@ -28,6 +28,8 @@ Creates a sliding picker, which uses a 24-hour time range by default. It is suit
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TimePickerInterface-(options?: TimePickerOptions): TimePickerAttribute--><!--Device-TimePickerInterface-(options?: TimePickerOptions): TimePickerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

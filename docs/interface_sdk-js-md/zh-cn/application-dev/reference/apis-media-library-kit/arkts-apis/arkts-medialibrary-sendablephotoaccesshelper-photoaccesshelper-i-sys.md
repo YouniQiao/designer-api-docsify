@@ -10,6 +10,8 @@ interface PhotoAccessHelper extends lang.ISendable
 
 **起始版本：** 12
 
+<!--Device-sendablePhotoAccessHelper-interface PhotoAccessHelper extends lang.ISendable--><!--Device-sendablePhotoAccessHelper-interface PhotoAccessHelper extends lang.ISendable-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
@@ -39,6 +41,8 @@ API10-17，非法字符包括：. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 **起始版本：** 12
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-createAsset(displayName: string): Promise<PhotoAsset>--><!--Device-PhotoAccessHelper-createAsset(displayName: string): Promise<PhotoAsset>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -109,6 +113,8 @@ API10-17，非法字符包括： . .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-PhotoAccessHelper-createAsset(displayName: string, options: photoAccessHelper.PhotoCreateOptions): Promise<PhotoAsset>--><!--Device-PhotoAccessHelper-createAsset(displayName: string, options: photoAccessHelper.PhotoCreateOptions): Promise<PhotoAsset>-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -169,6 +175,8 @@ getHiddenAlbums(mode: photoAccessHelper.HiddenPhotosDisplayMode, options?: photo
 **起始版本：** 12
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
+
+<!--Device-PhotoAccessHelper-getHiddenAlbums(mode: photoAccessHelper.HiddenPhotosDisplayMode, options?: photoAccessHelper.FetchOptions): Promise<FetchResult<Album>>--><!--Device-PhotoAccessHelper-getHiddenAlbums(mode: photoAccessHelper.HiddenPhotosDisplayMode, options?: photoAccessHelper.FetchOptions): Promise<FetchResult<Album>>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -264,6 +272,8 @@ getPhotoAssets(assetsData: photoAccessHelper.ValuesBucket[]): Promise<PhotoAsset
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PhotoAccessHelper-getPhotoAssets(assetsData: photoAccessHelper.ValuesBucket[]): Promise<PhotoAsset[]>--><!--Device-PhotoAccessHelper-getPhotoAssets(assetsData: photoAccessHelper.ValuesBucket[]): Promise<PhotoAsset[]>-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -330,6 +340,8 @@ getShareAlbums(options?: photoAccessHelper.FetchOptions): Promise<FetchResult<Al
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PhotoAccessHelper-getShareAlbums(options?: photoAccessHelper.FetchOptions): Promise<FetchResult<Album>>--><!--Device-PhotoAccessHelper-getShareAlbums(options?: photoAccessHelper.FetchOptions): Promise<FetchResult<Album>>-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -366,6 +378,8 @@ Fetch shared photo assets.
 **起始版本：** 14
 
 **需要权限：** ohos.permission.ACCESS_MEDIALIB_THUMB_DB
+
+<!--Device-PhotoAccessHelper-getSharedPhotoAssets(options: photoAccessHelper.FetchOptions): Array<SharedPhotoAsset>--><!--Device-PhotoAccessHelper-getSharedPhotoAssets(options: photoAccessHelper.FetchOptions): Array<SharedPhotoAsset>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

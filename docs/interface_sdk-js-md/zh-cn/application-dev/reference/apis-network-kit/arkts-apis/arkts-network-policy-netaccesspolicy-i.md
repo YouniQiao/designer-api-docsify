@@ -8,6 +8,8 @@ export interface NetAccessPolicy
 
 **起始版本：** 26.0.0
 
+<!--Device-policy-export interface NetAccessPolicy--><!--Device-policy-export interface NetAccessPolicy-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## 导入模块
@@ -34,6 +36,8 @@ false： 不允许使用蜂窝网络上网。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-NetAccessPolicy-allowCellular: boolean--><!--Device-NetAccessPolicy-allowCellular: boolean-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## allowWiFi
@@ -53,5 +57,7 @@ false： 不允许使用Wi-Fi网络上网。
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-NetAccessPolicy-allowWiFi: boolean--><!--Device-NetAccessPolicy-allowWiFi: boolean-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core

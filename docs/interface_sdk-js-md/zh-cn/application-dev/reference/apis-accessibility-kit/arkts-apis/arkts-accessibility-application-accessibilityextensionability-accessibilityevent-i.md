@@ -8,6 +8,8 @@ export declare interface AccessibilityEvent
 
 **起始版本：** 9
 
+<!--Device-unnamed-export declare interface AccessibilityEvent--><!--Device-unnamed-export declare interface AccessibilityEvent-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## 导入模块
@@ -27,6 +29,8 @@ elementId?: number
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-AccessibilityEvent-elementId?: long--><!--Device-AccessibilityEvent-elementId?: long-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -52,6 +56,8 @@ PageUpdateType：页面更新类型。
 
 **起始版本：** 9
 
+<!--Device-AccessibilityEvent-eventType: accessibility.EventType | accessibility.WindowUpdateType |        TouchGuideType | GestureType | PageUpdateType--><!--Device-AccessibilityEvent-eventType: accessibility.EventType | accessibility.WindowUpdateType |        TouchGuideType | GestureType | PageUpdateType-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## extraInfo
@@ -65,6 +71,8 @@ extraInfo?: string
 **类型：** string
 
 **起始版本：** 20
+
+<!--Device-AccessibilityEvent-extraInfo?: string--><!--Device-AccessibilityEvent-extraInfo?: string-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -80,6 +88,8 @@ target?: AccessibilityElement
 
 **起始版本：** 9
 
+<!--Device-AccessibilityEvent-target?: AccessibilityElement--><!--Device-AccessibilityEvent-target?: AccessibilityElement-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## textAnnouncedForAccessibility
@@ -94,6 +104,8 @@ textAnnouncedForAccessibility?: string
 
 **起始版本：** 12
 
+<!--Device-AccessibilityEvent-textAnnouncedForAccessibility?: string--><!--Device-AccessibilityEvent-textAnnouncedForAccessibility?: string-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## timeStamp
@@ -107,5 +119,7 @@ timeStamp?: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-AccessibilityEvent-timeStamp?: long--><!--Device-AccessibilityEvent-timeStamp?: long-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core

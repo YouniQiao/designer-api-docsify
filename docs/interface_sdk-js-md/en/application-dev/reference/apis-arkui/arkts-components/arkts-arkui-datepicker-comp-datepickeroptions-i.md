@@ -50,6 +50,8 @@ Describes the parameters of the date picker.
 
 **Since:** 8
 
+<!--Device-unnamed-declare interface DatePickerOptions--><!--Device-unnamed-declare interface DatePickerOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## end
@@ -79,6 +81,8 @@ When **start** or **end** is set to a non-default value, **canLoop** does not ta
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DatePickerOptions-end?: Date--><!--Device-DatePickerOptions-end?: Date-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## mode
@@ -89,7 +93,7 @@ mode?: DatePickerMode
 
 Date display mode. It applies to scenarios where the date display columns need to be customized, for example, only the year and month or the month and day need to be selected. If this parameter is not passed, **DatePickerMode.DATE** is used by default, and the year, month, and day columns are displayed.
 
-In [DatePickerDialog](arkts-arkui-datepicker-comp.md#date_picker), when **showTime** of [DatePickerDialogOptions](arkts-arkui-datepicker-comp-datepickerdialogoptions-i.md) is set to **true**, this parameter does not take effect, and the year, month, and day columns are displayed by default. This is to ensure layout rationality, because an additional time column is displayed when **showTime** is set to **true**.
+In [DatePickerDialog](arkts-arkui-datepicker-comp.md), when **showTime** of [DatePickerDialogOptions](arkts-arkui-datepicker-comp-datepickerdialogoptions-i.md) is set to **true**, this parameter does not take effect, and the year, month, and day columns are displayed by default. This is to ensure layout rationality, because an additional time column is displayed when **showTime** is set to **true**.
 
 **Note:** 
 
@@ -104,6 +108,8 @@ The preceding **DatePickerDialog**-related restriction applies only to the **Dat
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-DatePickerOptions-mode?: DatePickerMode--><!--Device-DatePickerOptions-mode?: DatePickerMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -131,6 +137,8 @@ Since API version 10, this parameter supports two-way binding through [$$](../..
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DatePickerOptions-selected?: Date--><!--Device-DatePickerOptions-selected?: Date-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -160,5 +168,7 @@ When **start** or **end** is set to a non-default value, **canLoop** does not ta
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DatePickerOptions-start?: Date--><!--Device-DatePickerOptions-start?: Date-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

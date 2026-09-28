@@ -8,6 +8,8 @@ enum ShareAlbumRiskStatus
 
 **起始版本：** 26.0.1
 
+<!--Device-photoAccessHelper-enum ShareAlbumRiskStatus--><!--Device-photoAccessHelper-enum ShareAlbumRiskStatus-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -23,6 +25,8 @@ UNDER_REVIEW = 0
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ShareAlbumRiskStatus-UNDER_REVIEW = 0--><!--Device-ShareAlbumRiskStatus-UNDER_REVIEW = 0-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -40,6 +44,8 @@ LOW_REVIEW_RISK = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ShareAlbumRiskStatus-LOW_REVIEW_RISK = 1--><!--Device-ShareAlbumRiskStatus-LOW_REVIEW_RISK = 1-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -55,6 +61,8 @@ HIGH_REVIEW_RISK = 2
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ShareAlbumRiskStatus-HIGH_REVIEW_RISK = 2--><!--Device-ShareAlbumRiskStatus-HIGH_REVIEW_RISK = 2-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

@@ -8,6 +8,8 @@ interface RunMetrics
 
 **起始版本：** 12
 
+<!--Device-text-interface RunMetrics--><!--Device-text-interface RunMetrics-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## 导入模块
@@ -28,7 +30,9 @@ fontMetrics: drawing.FontMetrics
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-RunMetrics-fontMetrics: drawing.FontMetrics--><!--Device-RunMetrics-fontMetrics: drawing.FontMetrics-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -44,6 +48,8 @@ textStyle: TextStyle
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-RunMetrics-textStyle: TextStyle--><!--Device-RunMetrics-textStyle: TextStyle-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing

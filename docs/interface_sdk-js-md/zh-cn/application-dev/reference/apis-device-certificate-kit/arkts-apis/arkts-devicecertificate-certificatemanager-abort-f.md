@@ -18,6 +18,8 @@ function abort(handle: Uint8Array, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER
 
+<!--Device-certificateManager-function abort(handle: Uint8Array, callback: AsyncCallback<void>): void--><!--Device-certificateManager-function abort(handle: Uint8Array, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
 
 **参数：**
@@ -71,6 +73,8 @@ function abort(handle: Uint8Array): Promise<void>
 **起始版本：** 11
 
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER
+
+<!--Device-certificateManager-function abort(handle: Uint8Array): Promise<void>--><!--Device-certificateManager-function abort(handle: Uint8Array): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManager
 

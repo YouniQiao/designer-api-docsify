@@ -14,6 +14,8 @@ WebCookieManager是Web组件的cookie管理器，提供对Web组件中cookie的�
 
 **起始版本：** 9
 
+<!--Device-webview-class WebCookieManager--><!--Device-webview-class WebCookieManager-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## 导入模块
@@ -33,6 +35,8 @@ static clearAllCookies(): Promise<void>
 **起始版本：** 11
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebCookieManager-static clearAllCookies(): Promise<void>--><!--Device-WebCookieManager-static clearAllCookies(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -92,6 +96,8 @@ static clearAllCookies(callback: AsyncCallback<void>): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebCookieManager-static clearAllCookies(callback: AsyncCallback<void>): void--><!--Device-WebCookieManager-static clearAllCookies(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -150,6 +156,8 @@ static clearAllCookiesSync(incognito?: boolean): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebCookieManager-static clearAllCookiesSync(incognito?: boolean): void--><!--Device-WebCookieManager-static clearAllCookiesSync(incognito?: boolean): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -192,6 +200,8 @@ static clearSessionCookie(): Promise<void>
 **起始版本：** 11
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebCookieManager-static clearSessionCookie(): Promise<void>--><!--Device-WebCookieManager-static clearSessionCookie(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -255,6 +265,8 @@ static clearSessionCookie(callback: AsyncCallback<void>): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebCookieManager-static clearSessionCookie(callback: AsyncCallback<void>): void--><!--Device-WebCookieManager-static clearSessionCookie(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -313,6 +325,8 @@ static clearSessionCookieSync(): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebCookieManager-static clearSessionCookieSync(): void--><!--Device-WebCookieManager-static clearSessionCookieSync(): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **示例**
@@ -365,6 +379,8 @@ static configCookie(url: string, value: string): Promise<void>
 **起始版本：** 11
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebCookieManager-static configCookie(url: string, value: string): Promise<void>--><!--Device-WebCookieManager-static configCookie(url: string, value: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -448,6 +464,8 @@ static configCookie(url: string, value: string, incognito: boolean, includeHttpO
 > - 如果指定的值包含"Secure"属性，则url必须使用"https://"协议。
 
 **起始版本：** 14
+
+<!--Device-WebCookieManager-static configCookie(url: string, value: string, incognito: boolean, includeHttpOnly: boolean): Promise<void>--><!--Device-WebCookieManager-static configCookie(url: string, value: string, incognito: boolean, includeHttpOnly: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -538,6 +556,8 @@ static configCookie(url: string, value: string, callback: AsyncCallback<void>): 
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebCookieManager-static configCookie(url: string, value: string, callback: AsyncCallback<void>): void--><!--Device-WebCookieManager-static configCookie(url: string, value: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -616,6 +636,8 @@ static configCookieSync(url: string, value: string, incognito?: boolean): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebCookieManager-static configCookieSync(url: string, value: string, incognito?: boolean): void--><!--Device-WebCookieManager-static configCookieSync(url: string, value: string, incognito?: boolean): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -689,6 +711,8 @@ static configCookieSync(url: string, value: string, incognito: boolean, includeH
 
 **起始版本：** 14
 
+<!--Device-WebCookieManager-static configCookieSync(url: string, value: string, incognito: boolean, includeHttpOnly: boolean): void--><!--Device-WebCookieManager-static configCookieSync(url: string, value: string, incognito: boolean, includeHttpOnly: boolean): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -749,6 +773,8 @@ static existCookie(incognito?: boolean): boolean
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebCookieManager-static existCookie(incognito?: boolean): boolean--><!--Device-WebCookieManager-static existCookie(incognito?: boolean): boolean-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -796,6 +822,8 @@ static fetchAllCookies(incognito: boolean):  Promise<Array<WebHttpCookie>>
 获取所有cookie，使用Promise异步回调。
 
 **起始版本：** 23
+
+<!--Device-WebCookieManager-static fetchAllCookies(incognito: boolean):  Promise<Array<WebHttpCookie>>--><!--Device-WebCookieManager-static fetchAllCookies(incognito: boolean):  Promise<Array<WebHttpCookie>>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -864,6 +892,8 @@ static fetchCookie(url: string): Promise<string>
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebCookieManager-static fetchCookie(url: string): Promise<string>--><!--Device-WebCookieManager-static fetchCookie(url: string): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -930,6 +960,8 @@ static fetchCookie(url: string, incognito: boolean): Promise<string>
 获取指定url对应cookie的值。使用Promise异步回调。
 
 **起始版本：** 14
+
+<!--Device-WebCookieManager-static fetchCookie(url: string, incognito: boolean): Promise<string>--><!--Device-WebCookieManager-static fetchCookie(url: string, incognito: boolean): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -1003,6 +1035,8 @@ static fetchCookie(url: string, incognito: boolean, includePartitionedCookies: b
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-WebCookieManager-static fetchCookie(url: string, incognito: boolean, includePartitionedCookies: boolean): Promise<string>--><!--Device-WebCookieManager-static fetchCookie(url: string, incognito: boolean, includePartitionedCookies: boolean): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -1072,6 +1106,8 @@ static fetchCookie(url: string, callback: AsyncCallback<string>): void
 **起始版本：** 11
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebCookieManager-static fetchCookie(url: string, callback: AsyncCallback<string>): void--><!--Device-WebCookieManager-static fetchCookie(url: string, callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -1144,6 +1180,8 @@ static fetchCookieSync(url: string, incognito?: boolean): string
 **起始版本：** 11
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebCookieManager-static fetchCookieSync(url: string, incognito?: boolean): string--><!--Device-WebCookieManager-static fetchCookieSync(url: string, incognito?: boolean): string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -1218,6 +1256,8 @@ static fetchCookieSync(url: string, incognito?: boolean, includePartitionedCooki
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-WebCookieManager-static fetchCookieSync(url: string, incognito?: boolean, includePartitionedCookies?: boolean): string--><!--Device-WebCookieManager-static fetchCookieSync(url: string, incognito?: boolean, includePartitionedCookies?: boolean): string-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -1281,6 +1321,8 @@ static isCookieAllowed(): boolean
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebCookieManager-static isCookieAllowed(): boolean--><!--Device-WebCookieManager-static isCookieAllowed(): boolean-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -1325,6 +1367,8 @@ static isThirdPartyCookieAllowed(): boolean
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebCookieManager-static isThirdPartyCookieAllowed(): boolean--><!--Device-WebCookieManager-static isThirdPartyCookieAllowed(): boolean-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -1368,6 +1412,8 @@ static putAcceptCookieEnabled(accept: boolean): void
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebCookieManager-static putAcceptCookieEnabled(accept: boolean): void--><!--Device-WebCookieManager-static putAcceptCookieEnabled(accept: boolean): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -1422,6 +1468,8 @@ static putAcceptThirdPartyCookieEnabled(accept: boolean): void
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebCookieManager-static putAcceptThirdPartyCookieEnabled(accept: boolean): void--><!--Device-WebCookieManager-static putAcceptThirdPartyCookieEnabled(accept: boolean): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -1480,6 +1528,8 @@ static saveCookieAsync(): Promise<void>
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebCookieManager-static saveCookieAsync(): Promise<void>--><!--Device-WebCookieManager-static saveCookieAsync(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -1547,6 +1597,8 @@ static saveCookieAsync(callback: AsyncCallback<void>): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebCookieManager-static saveCookieAsync(callback: AsyncCallback<void>): void--><!--Device-WebCookieManager-static saveCookieAsync(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -1609,6 +1661,8 @@ static saveCookieSync(): void
 
 **起始版本：** 15
 
+<!--Device-WebCookieManager-static saveCookieSync(): void--><!--Device-WebCookieManager-static saveCookieSync(): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **示例**
@@ -1654,6 +1708,8 @@ static setLazyInitializeWebEngine(lazy: boolean): void
 > - 该接口仅适用于调用后会初始化CookieManager的接口，比如本类WebCookieManager的其他接口。调用本接口设置为true后，再调用适用的接口，会在初始化CookieManager时跳过初始化ArkWeb内核，后续需自行初始化ArkWeb内核。
 
 **起始版本：** 22
+
+<!--Device-WebCookieManager-static setLazyInitializeWebEngine(lazy: boolean): void--><!--Device-WebCookieManager-static setLazyInitializeWebEngine(lazy: boolean): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -1703,6 +1759,8 @@ static deleteEntireCookie(): void
 
 **替代接口：** [clearAllCookiesSync](#clearallcookiessync)
 
+<!--Device-WebCookieManager-static deleteEntireCookie(): void--><!--Device-WebCookieManager-static deleteEntireCookie(): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **示例**
@@ -1742,6 +1800,8 @@ static deleteSessionCookie(): void
 
 **替代接口：** [clearSessionCookieSync](#clearsessioncookiesync)
 
+<!--Device-WebCookieManager-static deleteSessionCookie(): void--><!--Device-WebCookieManager-static deleteSessionCookie(): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **示例**
@@ -1780,6 +1840,8 @@ static getCookie(url: string): string
 **废弃版本：** 11
 
 **替代接口：** [fetchCookieSync](#fetchcookiesync)
+
+<!--Device-WebCookieManager-static getCookie(url: string): string--><!--Device-WebCookieManager-static getCookie(url: string): string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -1844,6 +1906,8 @@ static setCookie(url: string, value: string): void
 **废弃版本：** 11
 
 **替代接口：** [configCookieSync](#configcookiesync)
+
+<!--Device-WebCookieManager-static setCookie(url: string, value: string): void--><!--Device-WebCookieManager-static setCookie(url: string, value: string): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

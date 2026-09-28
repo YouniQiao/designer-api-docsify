@@ -8,6 +8,8 @@ UIAbility启动后是否可见。当用户设置目标UIAbility为不可见时�
 
 **起始版本：** 12
 
+<!--Device-contextConstant-export enum StartupVisibility--><!--Device-contextConstant-export enum StartupVisibility-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## STARTUP_HIDE
@@ -22,6 +24,8 @@ STARTUP_HIDE = 0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-StartupVisibility-STARTUP_HIDE = 0--><!--Device-StartupVisibility-STARTUP_HIDE = 0-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## STARTUP_SHOW
@@ -35,5 +39,7 @@ STARTUP_SHOW = 1
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-StartupVisibility-STARTUP_SHOW = 1--><!--Device-StartupVisibility-STARTUP_SHOW = 1-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

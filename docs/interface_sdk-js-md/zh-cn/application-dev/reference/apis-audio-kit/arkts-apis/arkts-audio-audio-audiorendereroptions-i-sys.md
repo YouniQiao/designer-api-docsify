@@ -8,6 +8,8 @@ interface AudioRendererOptions
 
 **起始版本：** 8
 
+<!--Device-audio-interface AudioRendererOptions--><!--Device-audio-interface AudioRendererOptions-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 ## 导入模块
@@ -29,6 +31,8 @@ originalAppIdInfo?: AppIdInfo
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioRendererOptions-originalAppIdInfo?: AppIdInfo--><!--Device-AudioRendererOptions-originalAppIdInfo?: AppIdInfo-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 

@@ -8,6 +8,8 @@ interface ExtraData
 
 **起始版本：** 11
 
+<!--Device-cloudData-interface ExtraData--><!--Device-cloudData-interface ExtraData-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ eventId: string
 
 **起始版本：** 11
 
+<!--Device-ExtraData-eventId: string--><!--Device-ExtraData-eventId: string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ extraData: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-ExtraData-extraData: string--><!--Device-ExtraData-extraData: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 

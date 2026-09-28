@@ -20,6 +20,8 @@ function off(type: 'receiveData', channelId: number, callback?: Callback<DataInf
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-proxyChannelManager-function off(type: 'receiveData', channelId: number, callback?: Callback<DataInfo>): void--><!--Device-proxyChannelManager-function off(type: 'receiveData', channelId: number, callback?: Callback<DataInfo>): void-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **参数：**
@@ -81,6 +83,8 @@ function off(type: 'channelStateChange', channelId: number, callback?: Callback<
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-proxyChannelManager-function off(type: 'channelStateChange', channelId: number, callback?: Callback<ChannelStateInfo>): void--><!--Device-proxyChannelManager-function off(type: 'channelStateChange', channelId: number, callback?: Callback<ChannelStateInfo>): void-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 

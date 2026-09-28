@@ -22,6 +22,8 @@ function setNetExtAttribute(netHandle: NetHandle, netExtAttribute: string): Prom
 
 **需要权限：** ohos.permission.SET_NET_EXT_ATTRIBUTE
 
+<!--Device-connection-function setNetExtAttribute(netHandle: NetHandle, netExtAttribute: string): Promise<void>--><!--Device-connection-function setNetExtAttribute(netHandle: NetHandle, netExtAttribute: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**

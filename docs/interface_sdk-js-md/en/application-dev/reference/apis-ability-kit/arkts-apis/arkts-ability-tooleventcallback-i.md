@@ -10,6 +10,8 @@ ToolEventCallback is used to receive session events generated during the running
 
 **Since:** 26.0.1
 
+<!--Device-unnamed-export interface ToolEventCallback--><!--Device-unnamed-export interface ToolEventCallback-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 ## onEvent
@@ -27,5 +29,7 @@ The [CliToolEvent](arkts-ability-clitoolevent-i.md) parameter contains the event
 **Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ToolEventCallback-onEvent: OnEventFn--><!--Device-ToolEventCallback-onEvent: OnEventFn-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core

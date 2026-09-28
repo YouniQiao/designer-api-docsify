@@ -8,6 +8,8 @@ enum ShareMemberStatus
 
 **起始版本：** 26.0.1
 
+<!--Device-photoAccessHelper-enum ShareMemberStatus--><!--Device-photoAccessHelper-enum ShareMemberStatus-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -23,6 +25,8 @@ INVITING = 0
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ShareMemberStatus-INVITING = 0--><!--Device-ShareMemberStatus-INVITING = 0-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -40,6 +44,8 @@ ACCEPTED = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ShareMemberStatus-ACCEPTED = 1--><!--Device-ShareMemberStatus-ACCEPTED = 1-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -56,6 +62,8 @@ DECLINED = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ShareMemberStatus-DECLINED = 2--><!--Device-ShareMemberStatus-DECLINED = 2-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -71,6 +79,8 @@ REQUESTING = 3
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ShareMemberStatus-REQUESTING = 3--><!--Device-ShareMemberStatus-REQUESTING = 3-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

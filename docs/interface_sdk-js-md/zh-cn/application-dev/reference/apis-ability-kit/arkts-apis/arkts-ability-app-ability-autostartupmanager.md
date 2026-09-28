@@ -4,6 +4,8 @@ aautoStartupManager模块提供获取自身应用的开机自启状态以及检�
 
 **起始版本：** 21
 
+<!--Device-unnamed-declare namespace autoStartupManager--><!--Device-unnamed-declare namespace autoStartupManager-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块

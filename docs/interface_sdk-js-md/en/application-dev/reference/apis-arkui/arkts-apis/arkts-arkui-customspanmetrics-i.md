@@ -8,6 +8,8 @@ Defines the CustomSpanMetrics interface.
 
 **Since:** 12
 
+<!--Device-unnamed-declare interface CustomSpanMetrics--><!--Device-unnamed-declare interface CustomSpanMetrics-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## height
@@ -30,6 +32,8 @@ Unit: [vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#basic-pixel-
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-CustomSpanMetrics-height?: number--><!--Device-CustomSpanMetrics-height?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## width
@@ -51,5 +55,7 @@ Unit: [vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#basic-pixel-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-CustomSpanMetrics-width: number--><!--Device-CustomSpanMetrics-width: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

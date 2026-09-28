@@ -22,6 +22,8 @@ function connectDevice(device: USBDevice): Readonly<USBDevicePipe>
 
 **替代接口：** [connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md)
 
+<!--Device-usb-function connectDevice(device: USBDevice): Readonly<USBDevicePipe>--><!--Device-usb-function connectDevice(device: USBDevice): Readonly<USBDevicePipe>-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 **参数：**

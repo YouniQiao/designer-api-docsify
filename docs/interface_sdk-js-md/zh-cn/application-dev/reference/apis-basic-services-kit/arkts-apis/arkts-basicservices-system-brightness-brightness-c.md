@@ -10,6 +10,8 @@ export default class Brightness
 
 **废弃版本：** 7
 
+<!--Device-unnamed-export default class Brightness--><!--Device-unnamed-export default class Brightness-End-->
+
 **系统能力：** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
 ## 导入模块
@@ -31,6 +33,8 @@ static getMode(options?: GetBrightnessModeOptions): void
 **废弃版本：** 7
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-Brightness-static getMode(options?: GetBrightnessModeOptions): void--><!--Device-Brightness-static getMode(options?: GetBrightnessModeOptions): void-End-->
 
 **系统能力：** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
@@ -120,6 +124,8 @@ static getValue(options?: GetBrightnessOptions): void
 **废弃版本：** 7
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-Brightness-static getValue(options?: GetBrightnessOptions): void--><!--Device-Brightness-static getValue(options?: GetBrightnessOptions): void-End-->
 
 **系统能力：** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
@@ -218,6 +224,8 @@ static setKeepScreenOn(options?: SetKeepScreenOnOptions): void
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-Brightness-static setKeepScreenOn(options?: SetKeepScreenOnOptions): void--><!--Device-Brightness-static setKeepScreenOn(options?: SetKeepScreenOnOptions): void-End-->
+
 **系统能力：** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
 **参数：**
@@ -307,6 +315,8 @@ static setMode(options?: SetBrightnessModeOptions): void
 **废弃版本：** 7
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-Brightness-static setMode(options?: SetBrightnessModeOptions): void--><!--Device-Brightness-static setMode(options?: SetBrightnessModeOptions): void-End-->
 
 **系统能力：** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
@@ -399,6 +409,8 @@ static setValue(options?: SetBrightnessOptions): void
 **替代接口：** [setValue](arkts-basicservices-brightness-setvalue-f-sys.md)
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-Brightness-static setValue(options?: SetBrightnessOptions): void--><!--Device-Brightness-static setValue(options?: SetBrightnessOptions): void-End-->
 
 **系统能力：** SystemCapability.PowerManager.DisplayPowerManager.Lite
 

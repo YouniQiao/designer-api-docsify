@@ -19,6 +19,8 @@ function getAppMemorySize(): Promise<number>
 
 **替代接口：** [getAppMemorySize](arkts-ability-appmanager-getappmemorysize-f.md)
 
+<!--Device-appManager-function getAppMemorySize(): Promise<number>--><!--Device-appManager-function getAppMemorySize(): Promise<number>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **返回值：**
@@ -56,6 +58,8 @@ function getAppMemorySize(callback: AsyncCallback<number>): void
 **废弃版本：** 9
 
 **替代接口：** [getAppMemorySize](arkts-ability-appmanager-getappmemorysize-f.md)
+
+<!--Device-appManager-function getAppMemorySize(callback: AsyncCallback<number>): void--><!--Device-appManager-function getAppMemorySize(callback: AsyncCallback<number>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

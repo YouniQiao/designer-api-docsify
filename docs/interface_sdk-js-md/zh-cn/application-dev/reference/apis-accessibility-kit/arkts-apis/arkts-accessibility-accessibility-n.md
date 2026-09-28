@@ -8,6 +8,8 @@ declare namespace accessibility
 
 **起始版本：** 7
 
+<!--Device-unnamed-declare namespace accessibility--><!--Device-unnamed-declare namespace accessibility-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## 导入模块

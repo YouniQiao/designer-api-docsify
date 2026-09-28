@@ -20,6 +20,8 @@ function setGlobalProxySync(admin: Want, httpProxy: connection.HttpProxy): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-networkManager-function setGlobalProxySync(admin: Want, httpProxy: connection.HttpProxy): void--><!--Device-networkManager-function setGlobalProxySync(admin: Want, httpProxy: connection.HttpProxy): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**

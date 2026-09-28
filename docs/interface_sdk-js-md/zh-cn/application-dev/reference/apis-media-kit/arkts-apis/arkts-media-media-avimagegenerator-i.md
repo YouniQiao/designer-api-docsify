@@ -15,6 +15,8 @@ interface AVImageGenerator
 
 **起始版本：** 12
 
+<!--Device-media-interface AVImageGenerator--><!--Device-media-interface AVImageGenerator-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVImageGenerator
 
 ## 导入模块
@@ -33,6 +35,8 @@ fetchFrameByTime(timeUs: number, options: AVImageQueryOptions, param: PixelMapPa
 获取视频缩略图。使用callback异步回调。
 
 **起始版本：** 12
+
+<!--Device-AVImageGenerator-fetchFrameByTime(timeUs: number, options: AVImageQueryOptions, param: PixelMapParams,      callback: AsyncCallback<image.PixelMap>): void--><!--Device-AVImageGenerator-fetchFrameByTime(timeUs: number, options: AVImageQueryOptions, param: PixelMapParams,      callback: AsyncCallback<image.PixelMap>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVImageGenerator
 
@@ -103,6 +107,8 @@ fetchFrameByTime(timeUs: number, options: AVImageQueryOptions, param: PixelMapPa
 获取视频缩略图。使用Promise异步回调。
 
 **起始版本：** 12
+
+<!--Device-AVImageGenerator-fetchFrameByTime(timeUs: number, options: AVImageQueryOptions, param: PixelMapParams): Promise<image.PixelMap>--><!--Device-AVImageGenerator-fetchFrameByTime(timeUs: number, options: AVImageQueryOptions, param: PixelMapParams): Promise<image.PixelMap>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVImageGenerator
 
@@ -176,6 +182,8 @@ fetchScaledFrameByTime(timeUs: number, queryMode: AVImageQueryOptions, outputSiz
 
 **起始版本：** 20
 
+<!--Device-AVImageGenerator-fetchScaledFrameByTime(timeUs: number, queryMode: AVImageQueryOptions, outputSize?: OutputSize):      Promise<image.PixelMap>--><!--Device-AVImageGenerator-fetchScaledFrameByTime(timeUs: number, queryMode: AVImageQueryOptions, outputSize?: OutputSize):      Promise<image.PixelMap>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVImageGenerator
 
 **参数：**
@@ -243,6 +251,8 @@ release(callback: AsyncCallback<void>): void
 
 **起始版本：** 12
 
+<!--Device-AVImageGenerator-release(callback: AsyncCallback<void>): void--><!--Device-AVImageGenerator-release(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVImageGenerator
 
 **参数：**
@@ -294,6 +304,8 @@ release(): Promise<void>
 释放资源。使用Promise异步回调。
 
 **起始版本：** 12
+
+<!--Device-AVImageGenerator-release(): Promise<void>--><!--Device-AVImageGenerator-release(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVImageGenerator
 
@@ -352,5 +364,7 @@ fdSrc ?: AVFileDescriptor
 **类型：** [AVFileDescriptor](arkts-media-media-avfiledescriptor-i.md)
 
 **起始版本：** 12
+
+<!--Device-AVImageGenerator-fdSrc ?: AVFileDescriptor--><!--Device-AVImageGenerator-fdSrc ?: AVFileDescriptor-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVImageGenerator

@@ -14,6 +14,8 @@ The context of form extension. It allows access to formExtension-specific resour
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-common-export type FormExtensionContext = _FormExtensionContext.default--><!--Device-common-export type FormExtensionContext = _FormExtensionContext.default-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **类型：** _FormExtensionContext.default

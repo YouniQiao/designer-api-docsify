@@ -6,6 +6,8 @@ This module provides the capability to manage web modules.
 
 **Since:** 9
 
+<!--Device-unnamed-declare namespace webview--><!--Device-unnamed-declare namespace webview-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import

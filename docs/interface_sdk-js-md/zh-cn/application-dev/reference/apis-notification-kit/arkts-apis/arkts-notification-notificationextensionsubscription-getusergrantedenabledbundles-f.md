@@ -20,6 +20,8 @@ function getUserGrantedEnabledBundles(): Promise<GrantedBundleInfo[]>
 
 **需要权限：** ohos.permission.SUBSCRIBE_NOTIFICATION
 
+<!--Device-notificationExtensionSubscription-function getUserGrantedEnabledBundles(): Promise<GrantedBundleInfo[]>--><!--Device-notificationExtensionSubscription-function getUserGrantedEnabledBundles(): Promise<GrantedBundleInfo[]>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **返回值：**

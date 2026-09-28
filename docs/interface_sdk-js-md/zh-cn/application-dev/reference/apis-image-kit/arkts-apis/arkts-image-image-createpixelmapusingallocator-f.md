@@ -17,6 +17,8 @@ Create pixelmap by data buffer based on opts, the memory type used by the PixelM
 
 **起始版本：** 20
 
+<!--Device-image-function createPixelMapUsingAllocator(colors: ArrayBuffer, param: InitializationOptions,    allocatorType?: AllocatorType): Promise<PixelMap>--><!--Device-image-function createPixelMapUsingAllocator(colors: ArrayBuffer, param: InitializationOptions,    allocatorType?: AllocatorType): Promise<PixelMap>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**

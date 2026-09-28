@@ -8,6 +8,8 @@ class StringDecoder
 
 **起始版本：** 12
 
+<!--Device-util-class StringDecoder--><!--Device-util-class StringDecoder-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -27,6 +29,8 @@ constructor(encoding?: string)
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-StringDecoder-constructor(encoding?: string)--><!--Device-StringDecoder-constructor(encoding?: string)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -53,6 +57,8 @@ end(chunk?: string | Uint8Array): string
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-StringDecoder-end(chunk?: string | Uint8Array): string--><!--Device-StringDecoder-end(chunk?: string | Uint8Array): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -92,6 +98,8 @@ write(chunk: string | Uint8Array): string
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-StringDecoder-write(chunk: string | Uint8Array): string--><!--Device-StringDecoder-write(chunk: string | Uint8Array): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

@@ -14,6 +14,8 @@ Defines the options of ShowToast.
 
 **Substitutes:** [ShowToastOptions](arkts-arkui-promptaction-showtoastoptions-i.md)
 
+<!--Device-unnamed-export interface ShowToastOptions--><!--Device-unnamed-export interface ShowToastOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -40,6 +42,8 @@ The distance between toast dialog box and the bottom of screen.
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-ShowToastOptions-bottom?: string | number--><!--Device-ShowToastOptions-bottom?: string | number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## duration
@@ -60,6 +64,8 @@ Duration of toast dialog box. The default value is 1500. The recommended value r
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-ShowToastOptions-duration?: number--><!--Device-ShowToastOptions-duration?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## message
@@ -79,5 +85,7 @@ Text to display.
 **Substitutes:** [message](arkts-arkui-promptaction-showtoastoptions-i.md#message)
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-ShowToastOptions-message: string--><!--Device-ShowToastOptions-message: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

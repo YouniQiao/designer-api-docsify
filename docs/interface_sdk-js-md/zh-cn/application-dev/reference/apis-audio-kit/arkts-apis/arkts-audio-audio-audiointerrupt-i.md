@@ -16,6 +16,8 @@ interface AudioInterrupt
 
 **替代接口：** [AudioRendererOptions](arkts-audio-audio-audiorendereroptions-i.md)
 
+<!--Device-audio-interface AudioInterrupt--><!--Device-audio-interface AudioInterrupt-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 ## 导入模块
@@ -40,6 +42,8 @@ contentType: ContentType
 
 **替代接口：** rendererInfo
 
+<!--Device-AudioInterrupt-contentType: ContentType--><!--Device-AudioInterrupt-contentType: ContentType-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 ## pauseWhenDucked
@@ -58,6 +62,8 @@ pauseWhenDucked: boolean
 
 **替代接口：** [hintType](arkts-audio-audio-interruptevent-i.md#hinttype)
 
+<!--Device-AudioInterrupt-pauseWhenDucked: boolean--><!--Device-AudioInterrupt-pauseWhenDucked: boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 ## streamUsage
@@ -75,5 +81,7 @@ streamUsage: StreamUsage
 **废弃版本：** 9
 
 **替代接口：** rendererInfo
+
+<!--Device-AudioInterrupt-streamUsage: StreamUsage--><!--Device-AudioInterrupt-streamUsage: StreamUsage-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer

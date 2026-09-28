@@ -8,6 +8,8 @@ Declare ButtonOptions
 
 **Since:** 18
 
+<!--Device-unnamed-export declare class ButtonOptions--><!--Device-unnamed-export declare class ButtonOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -30,6 +32,8 @@ Sets the Button Callback.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ButtonOptions-action?: () => void--><!--Device-ButtonOptions-action?: () => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## background
@@ -47,6 +51,8 @@ Sets the background color of a button.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ButtonOptions-background?: ResourceColor--><!--Device-ButtonOptions-background?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -68,6 +74,8 @@ Describes the Button style.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ButtonOptions-buttonStyle?: ButtonStyleMode--><!--Device-ButtonOptions-buttonStyle?: ButtonStyleMode-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## defaultFocus
@@ -88,6 +96,8 @@ Set the default focus of a button.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ButtonOptions-defaultFocus?: boolean--><!--Device-ButtonOptions-defaultFocus?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## fontColor
@@ -105,6 +115,8 @@ Sets the Button Text Color.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ButtonOptions-fontColor?: ResourceColor--><!--Device-ButtonOptions-fontColor?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -126,6 +138,8 @@ Describes the Button role.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ButtonOptions-role?: ButtonRole--><!--Device-ButtonOptions-role?: ButtonRole-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## textAlign
@@ -146,6 +160,8 @@ Set the alignment mode for the button label.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-ButtonOptions-textAlign?: TextAlign--><!--Device-ButtonOptions-textAlign?: TextAlign-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## value
@@ -163,5 +179,7 @@ Sets the Display Content of a Button.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ButtonOptions-value: ResourceStr--><!--Device-ButtonOptions-value: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

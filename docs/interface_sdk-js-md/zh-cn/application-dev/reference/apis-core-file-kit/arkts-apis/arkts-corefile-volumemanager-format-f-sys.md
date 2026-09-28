@@ -18,6 +18,8 @@ function format(volumeId: string, fsType: string, callback: AsyncCallback<void>)
 
 **需要权限：** ohos.permission.MOUNT_FORMAT_MANAGER
 
+<!--Device-volumeManager-function format(volumeId: string, fsType: string, callback: AsyncCallback<void>): void--><!--Device-volumeManager-function format(volumeId: string, fsType: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -57,6 +59,8 @@ function format(volumeId: string, fsType: string): Promise<void>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.MOUNT_FORMAT_MANAGER
+
+<!--Device-volumeManager-function format(volumeId: string, fsType: string): Promise<void>--><!--Device-volumeManager-function format(volumeId: string, fsType: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Volume
 

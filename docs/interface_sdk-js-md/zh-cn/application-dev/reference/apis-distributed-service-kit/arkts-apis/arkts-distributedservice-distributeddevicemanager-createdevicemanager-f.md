@@ -16,6 +16,8 @@ function createDeviceManager(bundleName: string): DeviceManager
 
 **起始版本：** 10
 
+<!--Device-distributedDeviceManager-function createDeviceManager(bundleName: string): DeviceManager--><!--Device-distributedDeviceManager-function createDeviceManager(bundleName: string): DeviceManager-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **参数：**

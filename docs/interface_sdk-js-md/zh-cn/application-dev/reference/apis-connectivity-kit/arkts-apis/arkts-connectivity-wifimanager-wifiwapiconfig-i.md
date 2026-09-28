@@ -20,6 +20,8 @@ WAPI(Wireless LAN Authentication and Privacy Infrastructure) 身份验证协议�
 
 **起始版本：** 12
 
+<!--Device-wifiManager-interface WifiWapiConfig--><!--Device-wifiManager-interface WifiWapiConfig-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## 导入模块
@@ -40,6 +42,8 @@ AS证书(Authentication Server Certificate，认证服务器证书)。
 
 **起始版本：** 12
 
+<!--Device-WifiWapiConfig-wapiAsCert: string--><!--Device-WifiWapiConfig-wapiAsCert: string-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## wapiPskType
@@ -54,6 +58,8 @@ wapiPskType: WapiPskType
 
 **起始版本：** 12
 
+<!--Device-WifiWapiConfig-wapiPskType: WapiPskType--><!--Device-WifiWapiConfig-wapiPskType: WapiPskType-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## wapiUserCert
@@ -67,5 +73,7 @@ wapiUserCert: string
 **类型：** string
 
 **起始版本：** 12
+
+<!--Device-WifiWapiConfig-wapiUserCert: string--><!--Device-WifiWapiConfig-wapiUserCert: string-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA

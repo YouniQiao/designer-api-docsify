@@ -20,6 +20,8 @@ If the device is registered with a 3GPP-compliant network, the international mob
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-radio-function getUniqueDeviceId(slotId: int, callback: AsyncCallback<string>): void--><!--Device-radio-function getUniqueDeviceId(slotId: int, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -74,6 +76,8 @@ If the device is registered with a 3GPP-compliant network, the international mob
 **起始版本：** 8
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
+
+<!--Device-radio-function getUniqueDeviceId(slotId?: int): Promise<string>--><!--Device-radio-function getUniqueDeviceId(slotId?: int): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -132,6 +136,8 @@ If the device is registered with a 3GPP-compliant network, the international mob
 **起始版本：** 8
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
+
+<!--Device-radio-function getUniqueDeviceId(callback: AsyncCallback<string>): void--><!--Device-radio-function getUniqueDeviceId(callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

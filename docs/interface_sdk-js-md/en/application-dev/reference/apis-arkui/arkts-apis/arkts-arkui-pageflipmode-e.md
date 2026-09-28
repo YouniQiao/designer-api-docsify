@@ -8,6 +8,8 @@ Enumerates the modes for flipping pages using the mouse wheel.
 
 **Since:** 15
 
+<!--Device-unnamed-declare enum PageFlipMode--><!--Device-unnamed-declare enum PageFlipMode-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## CONTINUOUS
@@ -26,6 +28,8 @@ Continuous page flipping mode where multiple pages are turned continuously when 
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 15.
 
+<!--Device-PageFlipMode-CONTINUOUS = 0--><!--Device-PageFlipMode-CONTINUOUS = 0-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## SINGLE
@@ -43,5 +47,7 @@ Single-page flipping mode where the mouse wheel event is ignored until the curre
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 15.
+
+<!--Device-PageFlipMode-SINGLE = 1--><!--Device-PageFlipMode-SINGLE = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

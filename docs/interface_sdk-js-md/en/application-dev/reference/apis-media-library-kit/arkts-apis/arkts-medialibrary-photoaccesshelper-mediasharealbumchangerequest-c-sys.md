@@ -10,6 +10,8 @@ Represents a change request for managing the share album.
 
 **Since:** 26.0.1
 
+<!--Device-photoAccessHelper-class MediaShareAlbumChangeRequest implements MediaChangeRequest--><!--Device-photoAccessHelper-class MediaShareAlbumChangeRequest implements MediaChangeRequest-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -33,6 +35,8 @@ Add member of share Album.
 **Required permissions:** ohos.permission.MANAGE_SHARE_PHOTO and ohos.permission.WRITE_IMAGEVIDEO
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MediaShareAlbumChangeRequest-public addShareMember(owner: string, member: string, status: ShareMemberStatus): void--><!--Device-MediaShareAlbumChangeRequest-public addShareMember(owner: string, member: string, status: ShareMemberStatus): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -68,6 +72,8 @@ Constructor used to initialize a new MediaShareAlbumChangeRequest.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-MediaShareAlbumChangeRequest-public constructor(album: Album)--><!--Device-MediaShareAlbumChangeRequest-public constructor(album: Album)-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -100,6 +106,8 @@ Creates a MediaShareAlbumChangeRequest instance of creating share album.
 **Required permissions:** ohos.permission.MANAGE_SHARE_PHOTO and ohos.permission.WRITE_IMAGEVIDEO
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MediaShareAlbumChangeRequest-public static createShareAlbum(context: Context, owner: string, name: string, cloudId:       string, albumConfig: ValuesBucket): MediaShareAlbumChangeRequest|null--><!--Device-MediaShareAlbumChangeRequest-public static createShareAlbum(context: Context, owner: string, name: string, cloudId:       string, albumConfig: ValuesBucket): MediaShareAlbumChangeRequest|null-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -143,6 +151,8 @@ Delete member share album.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-MediaShareAlbumChangeRequest-public static deleteMemberShareAlbum(context: Context, owner: string, albums: Album[]): Promise<void>--><!--Device-MediaShareAlbumChangeRequest-public static deleteMemberShareAlbum(context: Context, owner: string, albums: Album[]): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -183,6 +193,8 @@ Delete share album.
 **Required permissions:** ohos.permission.MANAGE_SHARE_PHOTO and ohos.permission.WRITE_IMAGEVIDEO
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MediaShareAlbumChangeRequest-public static deleteShareAlbum(context: Context, owner: string, albums: Album[]): Promise<void>--><!--Device-MediaShareAlbumChangeRequest-public static deleteShareAlbum(context: Context, owner: string, albums: Album[]): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -225,6 +237,8 @@ Delete assets of share album.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-MediaShareAlbumChangeRequest-public static deleteShareAssets(context: Context, owner: string, assets: string[]): Promise<void>--><!--Device-MediaShareAlbumChangeRequest-public static deleteShareAssets(context: Context, owner: string, assets: string[]): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -266,6 +280,8 @@ delete share member.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-MediaShareAlbumChangeRequest-public deleteShareMember(owner: string, member: string): void--><!--Device-MediaShareAlbumChangeRequest-public deleteShareMember(owner: string, member: string): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -299,6 +315,8 @@ Get the member information of share album.
 **Required permissions:** ohos.permission.MANAGE_SHARE_PHOTO
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MediaShareAlbumChangeRequest-public static getShareAlbumMemberInfo(context: Context, owner: string,       album: Album): Promise<ShareAlbumMemberInfo>--><!--Device-MediaShareAlbumChangeRequest-public static getShareAlbumMemberInfo(context: Context, owner: string,       album: Album): Promise<ShareAlbumMemberInfo>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -341,6 +359,8 @@ reset the cover of share album.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-MediaShareAlbumChangeRequest-public resetShareCoverUri(owner: string): void--><!--Device-MediaShareAlbumChangeRequest-public resetShareCoverUri(owner: string): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -372,6 +392,8 @@ set the name of share album.
 **Required permissions:** ohos.permission.MANAGE_SHARE_PHOTO and ohos.permission.WRITE_IMAGEVIDEO
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MediaShareAlbumChangeRequest-public setShareAlbumName(owner: string, name: string): void--><!--Device-MediaShareAlbumChangeRequest-public setShareAlbumName(owner: string, name: string): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -406,6 +428,8 @@ set the cover of share album.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-MediaShareAlbumChangeRequest-public setShareCoverUri(owner: string, coverUri: string): void--><!--Device-MediaShareAlbumChangeRequest-public setShareCoverUri(owner: string, coverUri: string): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -438,6 +462,8 @@ update share member status.
 **Required permissions:** ohos.permission.MANAGE_SHARE_PHOTO and ohos.permission.WRITE_IMAGEVIDEO
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MediaShareAlbumChangeRequest-public updateShareMemberStatus(owner: string, member: string, status: ShareMemberStatus): void--><!--Device-MediaShareAlbumChangeRequest-public updateShareMemberStatus(owner: string, member: string, status: ShareMemberStatus): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -472,6 +498,8 @@ A readonly member for type checking.
 **Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MediaShareAlbumChangeRequest-readonly comment: string--><!--Device-MediaShareAlbumChangeRequest-readonly comment: string-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

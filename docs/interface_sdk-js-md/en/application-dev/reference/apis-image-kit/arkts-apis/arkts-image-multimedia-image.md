@@ -56,6 +56,8 @@ objects, with the actual content determined by the producer. For example, the Im
 
 **Since:** 6
 
+<!--Device-unnamed-declare namespace image--><!--Device-unnamed-declare namespace image-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## Modules to Import

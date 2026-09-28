@@ -19,6 +19,8 @@ function cancel(url: string): void
 
 **起始版本：** 18
 
+<!--Device-cacheDownload-function cancel(url: string): void--><!--Device-cacheDownload-function cancel(url: string): void-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 **参数：**

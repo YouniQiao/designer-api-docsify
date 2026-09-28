@@ -18,6 +18,8 @@ function decomposeToPicture(hdrPixelMap : PixelMap, options?: HdrDecomposeOption
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-image-function decomposeToPicture(hdrPixelMap : PixelMap, options?: HdrDecomposeOptions): Promise<Picture | undefined>--><!--Device-image-function decomposeToPicture(hdrPixelMap : PixelMap, options?: HdrDecomposeOptions): Promise<Picture | undefined>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **系统接口：** 此接口为系统接口。

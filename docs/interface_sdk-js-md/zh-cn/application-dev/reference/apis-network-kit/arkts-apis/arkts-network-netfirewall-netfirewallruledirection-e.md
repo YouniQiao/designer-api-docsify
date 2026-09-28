@@ -8,6 +8,8 @@ enum NetFirewallRuleDirection
 
 **起始版本：** 15
 
+<!--Device-netFirewall-enum NetFirewallRuleDirection--><!--Device-netFirewall-enum NetFirewallRuleDirection-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 ## RULE_IN
@@ -20,6 +22,8 @@ RULE_IN = 1
 
 **起始版本：** 15
 
+<!--Device-NetFirewallRuleDirection-RULE_IN = 1--><!--Device-NetFirewallRuleDirection-RULE_IN = 1-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 ## RULE_OUT
@@ -31,5 +35,7 @@ RULE_OUT = 2
 出站。
 
 **起始版本：** 15
+
+<!--Device-NetFirewallRuleDirection-RULE_OUT = 2--><!--Device-NetFirewallRuleDirection-RULE_OUT = 2-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall

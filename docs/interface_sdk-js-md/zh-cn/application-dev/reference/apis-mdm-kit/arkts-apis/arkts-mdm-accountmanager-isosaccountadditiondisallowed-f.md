@@ -20,6 +20,8 @@ function isOsAccountAdditionDisallowed(admin: Want, accountId?: number): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-accountManager-function isOsAccountAdditionDisallowed(admin: Want, accountId?: number): boolean--><!--Device-accountManager-function isOsAccountAdditionDisallowed(admin: Want, accountId?: number): boolean-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -81,6 +83,8 @@ function isOsAccountAdditionDisallowed(admin: Want | null, accountId?: number): 
 **需要权限：** ohos.permission.ENTERPRISE_SET_ACCOUNT_POLICY
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-accountManager-function isOsAccountAdditionDisallowed(admin: Want | null, accountId?: number): boolean--><!--Device-accountManager-function isOsAccountAdditionDisallowed(admin: Want | null, accountId?: number): boolean-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

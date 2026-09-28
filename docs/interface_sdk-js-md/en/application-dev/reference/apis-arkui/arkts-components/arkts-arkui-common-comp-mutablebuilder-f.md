@@ -18,6 +18,8 @@ The `builder` attribute method of the `MutableBuilder` object returned by the `m
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-unnamed-declare function mutableBuilder<Args extends Object[]>(builder: BuilderCallback): MutableBuilder<Args>--><!--Device-unnamed-declare function mutableBuilder<Args extends Object[]>(builder: BuilderCallback): MutableBuilder<Args>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

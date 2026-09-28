@@ -20,6 +20,8 @@ function isDistributedEnabled(deviceType: string): Promise<boolean>
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function isDistributedEnabled(deviceType: string): Promise<boolean>--><!--Device-notificationManager-function isDistributedEnabled(deviceType: string): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。

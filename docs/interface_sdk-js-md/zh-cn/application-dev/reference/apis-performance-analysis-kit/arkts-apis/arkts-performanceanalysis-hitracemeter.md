@@ -14,6 +14,8 @@
 
 **起始版本：** 8
 
+<!--Device-unnamed-declare namespace hiTraceMeter--><!--Device-unnamed-declare namespace hiTraceMeter-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
 
 ## 导入模块

@@ -19,6 +19,8 @@ function getRunningProcessInformationByBundleType(
 
 **需要权限：** ohos.permission.GET_RUNNING_INFO
 
+<!--Device-appManager-function getRunningProcessInformationByBundleType(    bundleType: bundleManager.BundleType): Promise<Array<ProcessInformation>>--><!--Device-appManager-function getRunningProcessInformationByBundleType(    bundleType: bundleManager.BundleType): Promise<Array<ProcessInformation>>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。

@@ -10,6 +10,8 @@ interface AVControlCommand
 
 **起始版本：** 10
 
+<!--Device-avSession-interface AVControlCommand--><!--Device-avSession-interface AVControlCommand-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 ## 导入模块
@@ -30,7 +32,9 @@ command: AVControlCommandType
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVControlCommand-command: AVControlCommandType--><!--Device-AVControlCommand-command: AVControlCommandType-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -46,6 +50,8 @@ commandInfo?: CommandInfo
 
 **起始版本：** 22
 
+<!--Device-AVControlCommand-commandInfo?: CommandInfo--><!--Device-AVControlCommand-commandInfo?: CommandInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 ## parameter
@@ -60,6 +66,8 @@ parameter?: LoopMode | string | number
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVControlCommand-parameter?: LoopMode | string | double--><!--Device-AVControlCommand-parameter?: LoopMode | string | double-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core

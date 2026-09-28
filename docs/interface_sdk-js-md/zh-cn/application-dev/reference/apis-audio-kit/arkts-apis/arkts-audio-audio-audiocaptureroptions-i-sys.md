@@ -8,6 +8,8 @@ interface AudioCapturerOptions
 
 **起始版本：** 8
 
+<!--Device-audio-interface AudioCapturerOptions--><!--Device-audio-interface AudioCapturerOptions-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 ## 导入模块
@@ -33,6 +35,8 @@ SystemCapability.Multimedia.Audio.PlaybackCapture
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioCapturerOptions-playbackCaptureUid?: int--><!--Device-AudioCapturerOptions-playbackCaptureUid?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.PlaybackCapture
 
@@ -60,6 +64,8 @@ preferredInputDevice?: AudioDeviceDescriptor
 **类型：** [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md)
 
 **起始版本：** 22
+
+<!--Device-AudioCapturerOptions-preferredInputDevice?: AudioDeviceDescriptor--><!--Device-AudioCapturerOptions-preferredInputDevice?: AudioDeviceDescriptor-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 

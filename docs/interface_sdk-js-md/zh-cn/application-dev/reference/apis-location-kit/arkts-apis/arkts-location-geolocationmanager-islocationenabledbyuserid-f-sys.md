@@ -16,6 +16,8 @@ function isLocationEnabledByUserId(userId: number): boolean
 
 **起始版本：** 18
 
+<!--Device-geoLocationManager-function isLocationEnabledByUserId(userId: int): boolean--><!--Device-geoLocationManager-function isLocationEnabledByUserId(userId: int): boolean-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **系统接口：** 此接口为系统接口。

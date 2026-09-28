@@ -8,6 +8,8 @@ interface CloudSyncConfig
 
 **起始版本：** 26.0.0
 
+<!--Device-relationalStore-interface CloudSyncConfig--><!--Device-relationalStore-interface CloudSyncConfig-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
 ## 导入模块
@@ -30,6 +32,8 @@ enablePredicate?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-CloudSyncConfig-enablePredicate?: boolean--><!--Device-CloudSyncConfig-enablePredicate?: boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
 ## mode
@@ -46,6 +50,8 @@ mode: SyncMode
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-CloudSyncConfig-mode: SyncMode--><!--Device-CloudSyncConfig-mode: SyncMode-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
 ## predicate
@@ -61,5 +67,7 @@ predicate?: RdbPredicates
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-CloudSyncConfig-predicate?: RdbPredicates--><!--Device-CloudSyncConfig-predicate?: RdbPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client

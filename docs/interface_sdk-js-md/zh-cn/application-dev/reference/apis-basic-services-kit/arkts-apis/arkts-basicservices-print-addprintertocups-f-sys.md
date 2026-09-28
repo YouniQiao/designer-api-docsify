@@ -20,6 +20,8 @@ function addPrinterToCups(printerUri: string, printerName: string, printerMake: 
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-print-function addPrinterToCups(printerUri: string, printerName: string, printerMake: string): Promise<boolean>--><!--Device-print-function addPrinterToCups(printerUri: string, printerName: string, printerMake: string): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **系统接口：** 此接口为系统接口。

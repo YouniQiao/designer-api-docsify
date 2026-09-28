@@ -20,6 +20,8 @@ function replaceSuperAdmin(oldAdmin: Want, newAdmin: Want, isKeepPolicy: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-adminManager-function replaceSuperAdmin(oldAdmin: Want, newAdmin: Want, isKeepPolicy: boolean): void--><!--Device-adminManager-function replaceSuperAdmin(oldAdmin: Want, newAdmin: Want, isKeepPolicy: boolean): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。

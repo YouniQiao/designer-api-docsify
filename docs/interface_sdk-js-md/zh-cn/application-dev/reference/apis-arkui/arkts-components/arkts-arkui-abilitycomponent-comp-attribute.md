@@ -16,6 +16,8 @@ declare class AbilityComponentAttribute extends CommonMethod<AbilityComponentAtt
 
 **替代接口：** [UIExtensionComponentAttribute](arkts-arkui-uiextensioncomponent-comp-attribute.md#uiextensioncomponentattribute系统接口)
 
+<!--Device-unnamed-declare class AbilityComponentAttribute extends CommonMethod<AbilityComponentAttribute>--><!--Device-unnamed-declare class AbilityComponentAttribute extends CommonMethod<AbilityComponentAttribute>-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。

@@ -8,6 +8,8 @@ export enum KeyCommandTriggerType
 
 **起始版本：** 26.0.0
 
+<!--Device-inputConsumer-export enum KeyCommandTriggerType--><!--Device-inputConsumer-export enum KeyCommandTriggerType-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 
 **系统接口：** 此接口为系统接口。
@@ -23,6 +25,8 @@ PRESSED = 1
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-KeyCommandTriggerType-PRESSED = 1--><!--Device-KeyCommandTriggerType-PRESSED = 1-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 
@@ -40,6 +44,8 @@ REPEAT_PRESSED = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-KeyCommandTriggerType-REPEAT_PRESSED = 2--><!--Device-KeyCommandTriggerType-REPEAT_PRESSED = 2-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 
 **系统接口：** 此接口为系统接口。
@@ -55,6 +61,8 @@ ALL_RELEASED = 3
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-KeyCommandTriggerType-ALL_RELEASED = 3--><!--Device-KeyCommandTriggerType-ALL_RELEASED = 3-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 

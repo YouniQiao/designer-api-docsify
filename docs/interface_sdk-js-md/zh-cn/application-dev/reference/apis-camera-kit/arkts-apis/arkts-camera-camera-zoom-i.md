@@ -12,6 +12,8 @@ Zoom继承自[ZoomQuery](arkts-camera-camera-zoomquery-i.md)。
 
 **起始版本：** 11
 
+<!--Device-camera-interface Zoom extends ZoomQuery--><!--Device-camera-interface Zoom extends ZoomQuery-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
@@ -30,7 +32,9 @@ getZoomRatio(): number
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-Zoom-getZoomRatio(): double--><!--Device-Zoom-getZoomRatio(): double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -76,7 +80,9 @@ setSmoothZoom(targetRatio: number, mode?: SmoothZoomMode): void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-Zoom-setSmoothZoom(targetRatio: double, mode?: SmoothZoomMode): void--><!--Device-Zoom-setSmoothZoom(targetRatio: double, mode?: SmoothZoomMode): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -111,7 +117,9 @@ setZoomRatio(zoomRatio: number): void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-Zoom-setZoomRatio(zoomRatio: double): void--><!--Device-Zoom-setZoomRatio(zoomRatio: double): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

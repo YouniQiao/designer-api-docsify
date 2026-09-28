@@ -8,6 +8,8 @@ interface AVAdsController
 
 **起始版本：** 26.0.0
 
+<!--Device-media-interface AVAdsController--><!--Device-media-interface AVAdsController-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVPlayer
 
 ## 导入模块
@@ -27,6 +29,8 @@ addAdsMediaSource(src: MediaSource, start: number): Promise<string>
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVAdsController-addAdsMediaSource(src: MediaSource, start: int): Promise<string>--><!--Device-AVAdsController-addAdsMediaSource(src: MediaSource, start: int): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -76,6 +80,8 @@ disableAllAdsMediaSource(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVAdsController-disableAllAdsMediaSource(): void--><!--Device-AVAdsController-disableAllAdsMediaSource(): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVPlayer
 
 **示例**
@@ -101,6 +107,8 @@ offAdsEventListenerLoadingError(callback?: OnAdsEventLoadingErrorHandle): void
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVAdsController-offAdsEventListenerLoadingError(callback?: OnAdsEventLoadingErrorHandle): void--><!--Device-AVAdsController-offAdsEventListenerLoadingError(callback?: OnAdsEventLoadingErrorHandle): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -134,6 +142,8 @@ offAdsListenerAdsCompleted(callback?: Callback<string>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVAdsController-offAdsListenerAdsCompleted(callback?: Callback<string>): void--><!--Device-AVAdsController-offAdsListenerAdsCompleted(callback?: Callback<string>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVPlayer
 
 **参数：**
@@ -165,6 +175,8 @@ offAdsListenerAdsSkipped(callback?: Callback<string>): void
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVAdsController-offAdsListenerAdsSkipped(callback?: Callback<string>): void--><!--Device-AVAdsController-offAdsListenerAdsSkipped(callback?: Callback<string>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -198,6 +210,8 @@ offAdsListenerAdsStarted(callback?: OnAdsEventAdsStartedHandle): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVAdsController-offAdsListenerAdsStarted(callback?: OnAdsEventAdsStartedHandle): void--><!--Device-AVAdsController-offAdsListenerAdsStarted(callback?: OnAdsEventAdsStartedHandle): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVPlayer
 
 **参数：**
@@ -229,6 +243,8 @@ onAdsEventListenerLoadingError(callback: OnAdsEventLoadingErrorHandle): void
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVAdsController-onAdsEventListenerLoadingError(callback: OnAdsEventLoadingErrorHandle): void--><!--Device-AVAdsController-onAdsEventListenerLoadingError(callback: OnAdsEventLoadingErrorHandle): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -266,6 +282,8 @@ onAdsListenerAdsCompleted(callback: Callback<string>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVAdsController-onAdsListenerAdsCompleted(callback: Callback<string>): void--><!--Device-AVAdsController-onAdsListenerAdsCompleted(callback: Callback<string>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVPlayer
 
 **参数：**
@@ -299,6 +317,8 @@ onAdsListenerAdsSkipped(callback: Callback<string>): void
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVAdsController-onAdsListenerAdsSkipped(callback: Callback<string>): void--><!--Device-AVAdsController-onAdsListenerAdsSkipped(callback: Callback<string>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -334,6 +354,8 @@ onAdsListenerAdsStarted(callback: OnAdsEventAdsStartedHandle): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVAdsController-onAdsListenerAdsStarted(callback: OnAdsEventAdsStartedHandle): void--><!--Device-AVAdsController-onAdsListenerAdsStarted(callback: OnAdsEventAdsStartedHandle): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVPlayer
 
 **参数：**
@@ -368,6 +390,8 @@ release(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVAdsController-release(): void--><!--Device-AVAdsController-release(): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVPlayer
 
 **示例**
@@ -393,6 +417,8 @@ removeAdsMediaSource(id: string): void
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVAdsController-removeAdsMediaSource(id: string): void--><!--Device-AVAdsController-removeAdsMediaSource(id: string): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -434,6 +460,8 @@ skipCurrentAdsMediaSource(): void
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVAdsController-skipCurrentAdsMediaSource(): void--><!--Device-AVAdsController-skipCurrentAdsMediaSource(): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVPlayer
 

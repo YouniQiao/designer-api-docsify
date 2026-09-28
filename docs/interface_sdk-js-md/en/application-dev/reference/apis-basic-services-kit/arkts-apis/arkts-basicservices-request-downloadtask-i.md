@@ -8,6 +8,8 @@ Implements file downloads. Before using any APIs of this class, you must obtain 
 
 **Since:** 6
 
+<!--Device-request-interface DownloadTask--><!--Device-request-interface DownloadTask-End-->
+
 **System capability:** SystemCapability.MiscServices.Download
 
 ## Modules to Import
@@ -32,6 +34,8 @@ Deletes the download task. This API uses an asynchronous callback to return the 
 **Since:** 9
 
 **Required permissions:** ohos.permission.INTERNET
+
+<!--Device-DownloadTask-delete(callback: AsyncCallback<boolean>): void--><!--Device-DownloadTask-delete(callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -93,6 +97,8 @@ Deletes the download task. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-DownloadTask-delete(): Promise<boolean>--><!--Device-DownloadTask-delete(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.MiscServices.Download
 
 **Return value:**
@@ -147,6 +153,8 @@ Obtains the information about this download task. This API uses an asynchronous 
 **Since:** 9
 
 **Required permissions:** ohos.permission.INTERNET
+
+<!--Device-DownloadTask-getTaskInfo(callback: AsyncCallback<DownloadInfo>): void--><!--Device-DownloadTask-getTaskInfo(callback: AsyncCallback<DownloadInfo>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -208,6 +216,8 @@ Obtains the information about this download task. This API uses a promise to ret
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-DownloadTask-getTaskInfo(): Promise<DownloadInfo>--><!--Device-DownloadTask-getTaskInfo(): Promise<DownloadInfo>-End-->
+
 **System capability:** SystemCapability.MiscServices.Download
 
 **Return value:**
@@ -263,6 +273,8 @@ Obtains the MIME type (that is, media type of resources in HTTP) of a download t
 **Since:** 9
 
 **Required permissions:** ohos.permission.INTERNET
+
+<!--Device-DownloadTask-getTaskMimeType(callback: AsyncCallback<string>): void--><!--Device-DownloadTask-getTaskMimeType(callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -324,6 +336,8 @@ Obtains the MIME type (that is, media type of resources in HTTP) of a download t
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-DownloadTask-getTaskMimeType(): Promise<string>--><!--Device-DownloadTask-getTaskMimeType(): Promise<string>-End-->
+
 **System capability:** SystemCapability.MiscServices.Download
 
 **Return value:**
@@ -372,6 +386,8 @@ off(type: 'progress', callback?: (receivedSize: number, totalSize: number) => vo
 Unsubscribes from download progress events.
 
 **Since:** 6
+
+<!--Device-DownloadTask-off(type: 'progress', callback?: (receivedSize: long, totalSize: long) => void): void--><!--Device-DownloadTask-off(type: 'progress', callback?: (receivedSize: long, totalSize: long) => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -429,6 +445,8 @@ off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
 Unsubscribes from download events.
 
 **Since:** 7
+
+<!--Device-DownloadTask-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void--><!--Device-DownloadTask-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -513,6 +531,8 @@ Unsubscribes from download failure events.
 
 **Since:** 7
 
+<!--Device-DownloadTask-off(type: 'fail', callback?: (err: int) => void): void--><!--Device-DownloadTask-off(type: 'fail', callback?: (err: int) => void): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Download
 
 **Parameters:**
@@ -575,6 +595,8 @@ Subscribes to download progress events. This API uses an asynchronous callback t
 
 **Since:** 6
 
+<!--Device-DownloadTask-on(type: 'progress', callback: (receivedSize: long, totalSize: long) => void): void--><!--Device-DownloadTask-on(type: 'progress', callback: (receivedSize: long, totalSize: long) => void): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Download
 
 **Parameters:**
@@ -623,6 +645,8 @@ on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
 Subscribes to download events. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
+
+<!--Device-DownloadTask-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void--><!--Device-DownloadTask-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -683,6 +707,8 @@ Subscribes to download failure events. This API uses an asynchronous callback to
 
 **Since:** 7
 
+<!--Device-DownloadTask-on(type: 'fail', callback: (err: int) => void): void--><!--Device-DownloadTask-on(type: 'fail', callback: (err: int) => void): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Download
 
 **Parameters:**
@@ -738,6 +764,8 @@ Restores the download task. This API uses an asynchronous callback to return the
 **Since:** 9
 
 **Required permissions:** ohos.permission.INTERNET
+
+<!--Device-DownloadTask-restore(callback: AsyncCallback<boolean>): void--><!--Device-DownloadTask-restore(callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -799,6 +827,8 @@ Restores the download task. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-DownloadTask-restore(): Promise<boolean>--><!--Device-DownloadTask-restore(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.MiscServices.Download
 
 **Return value:**
@@ -854,6 +884,8 @@ Suspends this download task. You can use [restore](#restore) to restore the down
 **Since:** 9
 
 **Required permissions:** ohos.permission.INTERNET
+
+<!--Device-DownloadTask-suspend(callback: AsyncCallback<boolean>): void--><!--Device-DownloadTask-suspend(callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -915,6 +947,8 @@ Suspends this download task. You can use [restore](#restore) to restore the down
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-DownloadTask-suspend(): Promise<boolean>--><!--Device-DownloadTask-suspend(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.MiscServices.Download
 
 **Return value:**
@@ -970,6 +1004,8 @@ Pauses this download task. This API uses an asynchronous callback to return the 
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-DownloadTask-pause(callback: AsyncCallback<void>): void--><!--Device-DownloadTask-pause(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Download
 
 **Parameters:**
@@ -1014,6 +1050,8 @@ Pauses this download task. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-DownloadTask-pause(): Promise<void>--><!--Device-DownloadTask-pause(): Promise<void>-End-->
+
 **System capability:** SystemCapability.MiscServices.Download
 
 **Return value:**
@@ -1053,6 +1091,8 @@ Queries this download task. This API uses an asynchronous callback to return the
 **Substitutes:** [getTaskInfo](#gettaskinfo)(callback: AsyncCallback&lt;DownloadInfo&gt;)
 
 **Required permissions:** ohos.permission.INTERNET
+
+<!--Device-DownloadTask-query(callback: AsyncCallback<DownloadInfo>): void--><!--Device-DownloadTask-query(callback: AsyncCallback<DownloadInfo>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -1098,6 +1138,8 @@ Queries this download task. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-DownloadTask-query(): Promise<DownloadInfo>--><!--Device-DownloadTask-query(): Promise<DownloadInfo>-End-->
+
 **System capability:** SystemCapability.MiscServices.Download
 
 **Return value:**
@@ -1137,6 +1179,8 @@ Queries the MIME type of this download task. This API uses an asynchronous callb
 **Substitutes:** [getTaskMimeType](#gettaskmimetype)(callback: AsyncCallback&lt;string&gt;)
 
 **Required permissions:** ohos.permission.INTERNET
+
+<!--Device-DownloadTask-queryMimeType(callback: AsyncCallback<string>): void--><!--Device-DownloadTask-queryMimeType(callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -1182,6 +1226,8 @@ Queries the MIME type of this download task. This API uses a promise to return t
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-DownloadTask-queryMimeType(): Promise<string>--><!--Device-DownloadTask-queryMimeType(): Promise<string>-End-->
+
 **System capability:** SystemCapability.MiscServices.Download
 
 **Return value:**
@@ -1221,6 +1267,8 @@ Deletes the download task. This API uses an asynchronous callback to return the 
 **Substitutes:** [delete](arkts-basicservices-request-uploadtask-i.md#delete)(callback: AsyncCallback&lt;boolean&gt;)
 
 **Required permissions:** ohos.permission.INTERNET
+
+<!--Device-DownloadTask-remove(callback: AsyncCallback<boolean>): void--><!--Device-DownloadTask-remove(callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -1266,6 +1314,8 @@ Deletes the download task. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-DownloadTask-remove(): Promise<boolean>--><!--Device-DownloadTask-remove(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.MiscServices.Download
 
 **Return value:**
@@ -1305,6 +1355,8 @@ Restores the download task. This API uses an asynchronous callback to return the
 **Substitutes:** [restore](#restore)(callback: AsyncCallback&lt;boolean&gt;)
 
 **Required permissions:** ohos.permission.INTERNET
+
+<!--Device-DownloadTask-resume(callback: AsyncCallback<void>): void--><!--Device-DownloadTask-resume(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -1349,6 +1401,8 @@ Restores the download task. This API uses a promise to return the result.
 **Substitutes:** [restore](#restore)()
 
 **Required permissions:** ohos.permission.INTERNET
+
+<!--Device-DownloadTask-resume(): Promise<void>--><!--Device-DownloadTask-resume(): Promise<void>-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
 

@@ -12,6 +12,8 @@ interface AudioHapticFileDescriptor
 
 **起始版本：** 20
 
+<!--Device-audioHaptic-interface AudioHapticFileDescriptor--><!--Device-audioHaptic-interface AudioHapticFileDescriptor-End-->
+
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
 ## 导入模块
@@ -32,6 +34,8 @@ fd: number
 
 **起始版本：** 20
 
+<!--Device-AudioHapticFileDescriptor-fd: int--><!--Device-AudioHapticFileDescriptor-fd: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
 ## length
@@ -46,6 +50,8 @@ length?: number
 
 **起始版本：** 20
 
+<!--Device-AudioHapticFileDescriptor-length?: long--><!--Device-AudioHapticFileDescriptor-length?: long-End-->
+
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
 ## offset
@@ -59,5 +65,7 @@ offset?: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-AudioHapticFileDescriptor-offset?: long--><!--Device-AudioHapticFileDescriptor-offset?: long-End-->
 
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core

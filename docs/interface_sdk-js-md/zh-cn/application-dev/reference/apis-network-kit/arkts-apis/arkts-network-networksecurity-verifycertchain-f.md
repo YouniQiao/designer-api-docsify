@@ -18,6 +18,8 @@ export function verifyCertChain(cert: CertBlob[], caCert?: CertBlob, hostname?: 
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-networkSecurity-export function verifyCertChain(cert: CertBlob[], caCert?: CertBlob, hostname?: string): Promise<CertBlob[]>--><!--Device-networkSecurity-export function verifyCertChain(cert: CertBlob[], caCert?: CertBlob, hostname?: string): Promise<CertBlob[]>-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**

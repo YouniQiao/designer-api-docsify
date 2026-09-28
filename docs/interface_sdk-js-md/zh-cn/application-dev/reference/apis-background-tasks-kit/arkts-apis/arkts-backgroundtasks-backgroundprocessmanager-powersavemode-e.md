@@ -8,6 +8,8 @@ export enum PowerSaveMode
 
 **起始版本：** 20
 
+<!--Device-backgroundProcessManager-export enum PowerSaveMode--><!--Device-backgroundProcessManager-export enum PowerSaveMode-End-->
+
 **系统能力：** SystemCapability.Resourceschedule.BackgroundProcessManager
 
 ## EFFICIENCY_MODE
@@ -20,6 +22,8 @@ EFFICIENCY_MODE = 1
 
 **起始版本：** 20
 
+<!--Device-PowerSaveMode-EFFICIENCY_MODE = 1--><!--Device-PowerSaveMode-EFFICIENCY_MODE = 1-End-->
+
 **系统能力：** SystemCapability.Resourceschedule.BackgroundProcessManager
 
 ## DEFAULT_MODE
@@ -31,5 +35,7 @@ DEFAULT_MODE = 2
 跟随系统，可能会进入能效模式。
 
 **起始版本：** 20
+
+<!--Device-PowerSaveMode-DEFAULT_MODE = 2--><!--Device-PowerSaveMode-DEFAULT_MODE = 2-End-->
 
 **系统能力：** SystemCapability.Resourceschedule.BackgroundProcessManager

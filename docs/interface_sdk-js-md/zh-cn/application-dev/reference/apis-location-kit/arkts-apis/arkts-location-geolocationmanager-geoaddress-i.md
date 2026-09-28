@@ -8,6 +8,8 @@ export interface GeoAddress
 
 **起始版本：** 9
 
+<!--Device-geoLocationManager-export interface GeoAddress--><!--Device-geoLocationManager-export interface GeoAddress-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 ## 导入模块
@@ -28,6 +30,8 @@ addressUrl?: string
 
 **起始版本：** 9
 
+<!--Device-GeoAddress-addressUrl?: string--><!--Device-GeoAddress-addressUrl?: string-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 ## administrativeArea
@@ -41,6 +45,8 @@ administrativeArea?: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-GeoAddress-administrativeArea?: string--><!--Device-GeoAddress-administrativeArea?: string-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
@@ -56,6 +62,8 @@ countryCode?: string
 
 **起始版本：** 9
 
+<!--Device-GeoAddress-countryCode?: string--><!--Device-GeoAddress-countryCode?: string-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 ## countryName
@@ -69,6 +77,8 @@ countryName?: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-GeoAddress-countryName?: string--><!--Device-GeoAddress-countryName?: string-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
@@ -84,6 +94,8 @@ descriptions?: Array<string>
 
 **起始版本：** 9
 
+<!--Device-GeoAddress-descriptions?: Array<string>--><!--Device-GeoAddress-descriptions?: Array<string>-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 ## descriptionsSize
@@ -97,6 +109,8 @@ descriptionsSize?: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-GeoAddress-descriptionsSize?: int--><!--Device-GeoAddress-descriptionsSize?: int-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
@@ -112,6 +126,8 @@ latitude?: number
 
 **起始版本：** 9
 
+<!--Device-GeoAddress-latitude?: double--><!--Device-GeoAddress-latitude?: double-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 ## locale
@@ -125,6 +141,8 @@ locale?: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-GeoAddress-locale?: string--><!--Device-GeoAddress-locale?: string-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
@@ -140,6 +158,8 @@ locality?: string
 
 **起始版本：** 9
 
+<!--Device-GeoAddress-locality?: string--><!--Device-GeoAddress-locality?: string-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 ## longitude
@@ -153,6 +173,8 @@ longitude?: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-GeoAddress-longitude?: double--><!--Device-GeoAddress-longitude?: double-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
@@ -168,6 +190,8 @@ phoneNumber?: string
 
 **起始版本：** 9
 
+<!--Device-GeoAddress-phoneNumber?: string--><!--Device-GeoAddress-phoneNumber?: string-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 ## placeName
@@ -181,6 +205,8 @@ placeName?: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-GeoAddress-placeName?: string--><!--Device-GeoAddress-placeName?: string-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
@@ -196,6 +222,8 @@ postalCode?: string
 
 **起始版本：** 9
 
+<!--Device-GeoAddress-postalCode?: string--><!--Device-GeoAddress-postalCode?: string-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 ## premises
@@ -209,6 +237,8 @@ premises?: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-GeoAddress-premises?: string--><!--Device-GeoAddress-premises?: string-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
@@ -224,6 +254,8 @@ roadName?: string
 
 **起始版本：** 9
 
+<!--Device-GeoAddress-roadName?: string--><!--Device-GeoAddress-roadName?: string-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 ## subAdministrativeArea
@@ -237,6 +269,8 @@ subAdministrativeArea?: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-GeoAddress-subAdministrativeArea?: string--><!--Device-GeoAddress-subAdministrativeArea?: string-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
@@ -252,6 +286,8 @@ subLocality?: string
 
 **起始版本：** 9
 
+<!--Device-GeoAddress-subLocality?: string--><!--Device-GeoAddress-subLocality?: string-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 ## subRoadName
@@ -265,5 +301,7 @@ subRoadName?: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-GeoAddress-subRoadName?: string--><!--Device-GeoAddress-subRoadName?: string-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geocoder

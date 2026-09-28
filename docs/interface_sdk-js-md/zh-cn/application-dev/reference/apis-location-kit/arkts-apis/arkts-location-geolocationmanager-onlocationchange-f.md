@@ -20,6 +20,8 @@ function onLocationChange(request: LocationRequest | ContinuousLocationRequest,
 **需要权限：** 
 - API版本23+：ohos.permission.APPROXIMATELY_LOCATION
 
+<!--Device-geoLocationManager-function onLocationChange(request: LocationRequest | ContinuousLocationRequest,  callback: Callback<Location>): void--><!--Device-geoLocationManager-function onLocationChange(request: LocationRequest | ContinuousLocationRequest,  callback: Callback<Location>): void-End-->
+
 **系统能力：** 
 - API版本23+：SystemCapability.Location.Location.Core
 

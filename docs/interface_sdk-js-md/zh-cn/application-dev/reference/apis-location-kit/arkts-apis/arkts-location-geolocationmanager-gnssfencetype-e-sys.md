@@ -8,6 +8,8 @@ GNSS围栏类型。
 
 **起始版本：** 26.0.0
 
+<!--Device-geoLocationManager-export enum GnssFenceType--><!--Device-geoLocationManager-export enum GnssFenceType-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 **系统接口：** 此接口为系统接口。
@@ -24,6 +26,8 @@ POLYGON = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-GnssFenceType-POLYGON = 1--><!--Device-GnssFenceType-POLYGON = 1-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 **系统接口：** 此接口为系统接口。
@@ -39,6 +43,8 @@ CIRCULAR = 2
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-GnssFenceType-CIRCULAR = 2--><!--Device-GnssFenceType-CIRCULAR = 2-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geofence
 

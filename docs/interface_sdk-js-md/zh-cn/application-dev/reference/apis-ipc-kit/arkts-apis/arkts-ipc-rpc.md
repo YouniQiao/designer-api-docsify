@@ -6,6 +6,8 @@
 
 **起始版本：** 7
 
+<!--Device-unnamed-declare namespace rpc--><!--Device-unnamed-declare namespace rpc-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 ## 导入模块

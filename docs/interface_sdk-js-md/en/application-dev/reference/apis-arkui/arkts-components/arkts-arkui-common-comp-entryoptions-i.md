@@ -8,6 +8,8 @@ Page entry configuration options, used to configure parameters such as the route
 
 **Since:** 10
 
+<!--Device-unnamed-declare interface EntryOptions--><!--Device-unnamed-declare interface EntryOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## routeName
@@ -27,6 +29,8 @@ Name of the page as a named route. When the page needs to be navigated to throug
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
+
+<!--Device-EntryOptions-routeName? : string--><!--Device-EntryOptions-routeName? : string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -48,6 +52,8 @@ Page-level UI state storage. Pass this parameter when you need to create and man
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
+<!--Device-EntryOptions-storage? : LocalStorage--><!--Device-EntryOptions-storage? : LocalStorage-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## useSharedStorage
@@ -67,5 +73,7 @@ Whether to use the LocalStorage instance passed in by loadContent. The default v
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-EntryOptions-useSharedStorage? : boolean--><!--Device-EntryOptions-useSharedStorage? : boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

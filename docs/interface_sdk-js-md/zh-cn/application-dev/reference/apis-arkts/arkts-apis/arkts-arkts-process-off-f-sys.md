@@ -16,6 +16,8 @@ function off(type: string): boolean
 
 **起始版本：** 7
 
+<!--Device-process-function off(type: string): boolean--><!--Device-process-function off(type: string): boolean-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **系统接口：** 此接口为系统接口。

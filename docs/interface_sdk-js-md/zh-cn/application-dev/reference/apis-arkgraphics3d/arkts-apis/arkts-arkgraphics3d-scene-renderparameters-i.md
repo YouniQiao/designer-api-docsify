@@ -10,6 +10,8 @@ export interface RenderParameters
 
 **起始版本：** 15
 
+<!--Device-unnamed-export interface RenderParameters--><!--Device-unnamed-export interface RenderParameters-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## alwaysRender
@@ -23,5 +25,7 @@ alwaysRender?: boolean
 **类型：** boolean
 
 **起始版本：** 15
+
+<!--Device-RenderParameters-alwaysRender?: boolean--><!--Device-RenderParameters-alwaysRender?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

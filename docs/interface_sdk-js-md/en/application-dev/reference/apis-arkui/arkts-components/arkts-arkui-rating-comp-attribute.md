@@ -8,6 +8,8 @@ declare class RatingAttribute extends CommonMethod<RatingAttribute>
 
 **Since:** 7
 
+<!--Device-unnamed-declare class RatingAttribute extends CommonMethod<RatingAttribute>--><!--Device-unnamed-declare class RatingAttribute extends CommonMethod<RatingAttribute>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## contentModifier
@@ -23,6 +25,8 @@ Creates a content modifier.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-RatingAttribute-contentModifier(modifier: ContentModifier<RatingConfiguration>): RatingAttribute--><!--Device-RatingAttribute-contentModifier(modifier: ContentModifier<RatingConfiguration>): RatingAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -48,6 +52,8 @@ Creates a content modifier. Compared with [contentModifier](#contentmodifier), t
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-RatingAttribute-contentModifier(modifier: Optional<ContentModifier<RatingConfiguration>>): RatingAttribute--><!--Device-RatingAttribute-contentModifier(modifier: Optional<ContentModifier<RatingConfiguration>>): RatingAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -71,6 +77,8 @@ Triggered when the rating value changes.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-RatingAttribute-onChange(callback: (value: number) => void): RatingAttribute--><!--Device-RatingAttribute-onChange(callback: (value: number) => void): RatingAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -98,6 +106,8 @@ Triggered when the rating value changes. Compared with [onChange](#onchange), th
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-RatingAttribute-onChange(callback: Optional<OnRatingChangeCallback>): RatingAttribute--><!--Device-RatingAttribute-onChange(callback: Optional<OnRatingChangeCallback>): RatingAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -121,6 +131,8 @@ Sets the total number of stars. Values less than 0 are treated as the default va
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-RatingAttribute-stars(value: number): RatingAttribute--><!--Device-RatingAttribute-stars(value: number): RatingAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -147,6 +159,8 @@ Sets the total number of stars. Values less than 0 are treated as the default va
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-RatingAttribute-stars(starCount: Optional<number>): RatingAttribute--><!--Device-RatingAttribute-stars(starCount: Optional<number>): RatingAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -175,6 +189,8 @@ By default, the image is loaded in asynchronous mode. Synchronous loading is not
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-RatingAttribute-starStyle(options: StarStyleOptions): RatingAttribute--><!--Device-RatingAttribute-starStyle(options: StarStyleOptions): RatingAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -208,6 +224,8 @@ Compared with [starStyle](#starstyle), this API supports the **undefined** type 
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-RatingAttribute-starStyle(options: Optional<StarStyleOptions>): RatingAttribute--><!--Device-RatingAttribute-starStyle(options: Optional<StarStyleOptions>): RatingAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -231,6 +249,8 @@ Sets the step for rating. Values less than 0.1 are treated as the default value.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-RatingAttribute-stepSize(value: number): RatingAttribute--><!--Device-RatingAttribute-stepSize(value: number): RatingAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -257,6 +277,8 @@ Sets the step for rating. Values less than 0.1 are treated as the default value.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-RatingAttribute-stepSize(size: Optional<number>): RatingAttribute--><!--Device-RatingAttribute-stepSize(size: Optional<number>): RatingAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

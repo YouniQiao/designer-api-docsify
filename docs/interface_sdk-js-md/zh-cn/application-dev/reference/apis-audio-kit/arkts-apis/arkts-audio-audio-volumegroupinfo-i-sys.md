@@ -8,6 +8,8 @@ interface VolumeGroupInfo
 
 **起始版本：** 9
 
+<!--Device-audio-interface VolumeGroupInfo--><!--Device-audio-interface VolumeGroupInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ readonly groupId: number
 
 **起始版本：** 9
 
+<!--Device-VolumeGroupInfo-readonly groupId: int--><!--Device-VolumeGroupInfo-readonly groupId: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ readonly groupName: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-VolumeGroupInfo-readonly groupName: string--><!--Device-VolumeGroupInfo-readonly groupName: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -62,6 +68,8 @@ readonly mappingId: number
 
 **起始版本：** 9
 
+<!--Device-VolumeGroupInfo-readonly mappingId: int--><!--Device-VolumeGroupInfo-readonly mappingId: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -78,6 +86,8 @@ readonly networkId: string
 
 **起始版本：** 9
 
+<!--Device-VolumeGroupInfo-readonly networkId: string--><!--Device-VolumeGroupInfo-readonly networkId: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -93,6 +103,8 @@ readonly type: ConnectType
 **类型：** [ConnectType](arkts-audio-audio-connecttype-e-sys.md)
 
 **起始版本：** 9
+
+<!--Device-VolumeGroupInfo-readonly type: ConnectType--><!--Device-VolumeGroupInfo-readonly type: ConnectType-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 

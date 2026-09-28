@@ -8,6 +8,8 @@ interface ThreadCpuUsage
 
 **起始版本：** 12
 
+<!--Device-hidebug-interface ThreadCpuUsage--><!--Device-hidebug-interface ThreadCpuUsage-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 ## 导入模块
@@ -28,6 +30,8 @@ cpuUsage: number
 
 **起始版本：** 12
 
+<!--Device-ThreadCpuUsage-cpuUsage: double--><!--Device-ThreadCpuUsage-cpuUsage: double-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 ## threadId
@@ -42,6 +46,8 @@ threadId: number
 
 **起始版本：** 12
 
+<!--Device-ThreadCpuUsage-threadId: long--><!--Device-ThreadCpuUsage-threadId: long-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 ## threadName
@@ -55,5 +61,7 @@ threadName?: string
 **类型：** string
 
 **起始版本：** 26.0.1
+
+<!--Device-ThreadCpuUsage-threadName?: string--><!--Device-ThreadCpuUsage-threadName?: string-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug

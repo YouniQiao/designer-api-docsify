@@ -16,6 +16,8 @@ function getHardwareUnitPowerPercent(type: ConsumptionType): number
 
 **起始版本：** 8
 
+<!--Device-batteryStats-function getHardwareUnitPowerPercent(type: ConsumptionType): double--><!--Device-batteryStats-function getHardwareUnitPowerPercent(type: ConsumptionType): double-End-->
+
 **系统能力：** SystemCapability.PowerManager.BatteryStatistics
 
 **系统接口：** 此接口为系统接口。

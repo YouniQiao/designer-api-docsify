@@ -18,6 +18,8 @@ function from(array: number[]): FastBuffer
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-fastbuffer-function from(array: number[]): FastBuffer--><!--Device-fastbuffer-function from(array: number[]): FastBuffer-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -56,6 +58,8 @@ function from(arrayBuffer: ArrayBuffer | SharedArrayBuffer, byteOffset?: number,
 **起始版本：** 20
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-fastbuffer-function from(arrayBuffer: ArrayBuffer | SharedArrayBuffer, byteOffset?: number, length?: number): FastBuffer--><!--Device-fastbuffer-function from(arrayBuffer: ArrayBuffer | SharedArrayBuffer, byteOffset?: number, length?: number): FastBuffer-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -107,6 +111,8 @@ function from(buffer: FastBuffer | Uint8Array): FastBuffer
 **起始版本：** 20
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-fastbuffer-function from(buffer: FastBuffer | Uint8Array): FastBuffer--><!--Device-fastbuffer-function from(buffer: FastBuffer | Uint8Array): FastBuffer-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -163,6 +169,8 @@ function from(value: string, encoding?: BufferEncoding): FastBuffer
 **起始版本：** 20
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-fastbuffer-function from(value: string, encoding?: BufferEncoding): FastBuffer--><!--Device-fastbuffer-function from(value: string, encoding?: BufferEncoding): FastBuffer-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

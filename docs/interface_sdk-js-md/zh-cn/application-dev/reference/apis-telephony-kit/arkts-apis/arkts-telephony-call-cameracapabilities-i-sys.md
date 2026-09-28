@@ -8,6 +8,8 @@ export interface CameraCapabilities
 
 **起始版本：** 11
 
+<!--Device-call-export interface CameraCapabilities--><!--Device-call-export interface CameraCapabilities-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ callId: number
 
 **起始版本：** 11
 
+<!--Device-CameraCapabilities-callId: int--><!--Device-CameraCapabilities-callId: int-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -46,6 +50,8 @@ height: number
 
 **起始版本：** 11
 
+<!--Device-CameraCapabilities-height: int--><!--Device-CameraCapabilities-height: int-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +67,8 @@ width: number
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-CameraCapabilities-width: int--><!--Device-CameraCapabilities-width: int-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 

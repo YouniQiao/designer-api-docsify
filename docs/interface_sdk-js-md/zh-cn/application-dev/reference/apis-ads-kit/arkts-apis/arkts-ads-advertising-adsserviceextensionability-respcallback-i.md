@@ -8,6 +8,8 @@ export interface RespCallback
 
 **起始版本：** 11
 
+<!--Device-unnamed-export interface RespCallback--><!--Device-unnamed-export interface RespCallback-End-->
+
 **系统能力：** SystemCapability.Advertising.Ads
 
 ## 导入模块
@@ -25,6 +27,8 @@ import { AdsServiceExtensionAbility, RespCallback } from '@kit.AdsKit';
 广告请求回调。
 
 **起始版本：** 11
+
+<!--Device-RespCallback-(respData: Map<string, Array<advertising.Advertisement>>): void--><!--Device-RespCallback-(respData: Map<string, Array<advertising.Advertisement>>): void-End-->
 
 **系统能力：** SystemCapability.Advertising.Ads
 

@@ -28,6 +28,8 @@ function off(type: 'BundleStatusChange', callback: AsyncCallback<string>): void
 
 **需要权限：** ohos.permission.LISTEN_BUNDLE_CHANGE
 
+<!--Device-innerBundleManager-function off(type: 'BundleStatusChange', callback: AsyncCallback<string>): void--><!--Device-innerBundleManager-function off(type: 'BundleStatusChange', callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +63,8 @@ function off(type: 'BundleStatusChange'): Promise<string>
 **替代接口：** off
 
 **需要权限：** ohos.permission.LISTEN_BUNDLE_CHANGE
+
+<!--Device-innerBundleManager-function off(type: 'BundleStatusChange'): Promise<string>--><!--Device-innerBundleManager-function off(type: 'BundleStatusChange'): Promise<string>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 

@@ -12,6 +12,8 @@ StaticSubscriberExtensionContext模块提供StaticSubscriberExtensionAbility具�
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare class StaticSubscriberExtensionContext extends ExtensionContext--><!--Device-unnamed-declare class StaticSubscriberExtensionContext extends ExtensionContext-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -35,6 +37,8 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 **需要权限：** ohos.permission.START_ABILITIES_FROM_BACKGROUND
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-StaticSubscriberExtensionContext-startAbility(want: Want, callback: AsyncCallback<void>): void--><!--Device-StaticSubscriberExtensionContext-startAbility(want: Want, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -118,6 +122,8 @@ startAbility(want: Want): Promise<void>
 **需要权限：** ohos.permission.START_ABILITIES_FROM_BACKGROUND
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-StaticSubscriberExtensionContext-startAbility(want: Want): Promise<void>--><!--Device-StaticSubscriberExtensionContext-startAbility(want: Want): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

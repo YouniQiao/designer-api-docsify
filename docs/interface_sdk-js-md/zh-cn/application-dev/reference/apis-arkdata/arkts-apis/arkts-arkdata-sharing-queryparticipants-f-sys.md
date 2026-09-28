@@ -16,6 +16,8 @@ function queryParticipants(sharingResource: string, callback: AsyncCallback<Resu
 
 **起始版本：** 11
 
+<!--Device-sharing-function queryParticipants(sharingResource: string, callback: AsyncCallback<Result<Array<Participant>>>): void--><!--Device-sharing-function queryParticipants(sharingResource: string, callback: AsyncCallback<Result<Array<Participant>>>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +63,8 @@ function queryParticipants(sharingResource: string): Promise<Result<Array<Partic
 根据指定的共享资源标识查询当前共享的参与者，使用Promise异步回调。
 
 **起始版本：** 11
+
+<!--Device-sharing-function queryParticipants(sharingResource: string): Promise<Result<Array<Participant>>>--><!--Device-sharing-function queryParticipants(sharingResource: string): Promise<Result<Array<Participant>>>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 

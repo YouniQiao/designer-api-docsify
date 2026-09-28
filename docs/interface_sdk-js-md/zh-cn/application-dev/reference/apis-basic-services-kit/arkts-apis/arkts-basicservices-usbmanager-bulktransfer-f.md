@@ -27,6 +27,8 @@ function bulkTransfer(
 
 **起始版本：** 9
 
+<!--Device-usbManager-function bulkTransfer(    pipe: USBDevicePipe,    endpoint: USBEndpoint,    buffer: Uint8Array,    timeout?: int  ): Promise<int>--><!--Device-usbManager-function bulkTransfer(    pipe: USBDevicePipe,    endpoint: USBEndpoint,    buffer: Uint8Array,    timeout?: int  ): Promise<int>-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 **参数：**

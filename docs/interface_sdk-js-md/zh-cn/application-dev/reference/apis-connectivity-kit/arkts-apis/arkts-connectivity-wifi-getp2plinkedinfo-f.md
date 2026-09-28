@@ -26,6 +26,8 @@ function getP2pLinkedInfo(): Promise<WifiP2pLinkedInfo>
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
+<!--Device-wifi-function getP2pLinkedInfo(): Promise<WifiP2pLinkedInfo>--><!--Device-wifi-function getP2pLinkedInfo(): Promise<WifiP2pLinkedInfo>-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
 **返回值：**
@@ -74,6 +76,8 @@ function getP2pLinkedInfo(callback: AsyncCallback<WifiP2pLinkedInfo>): void
 **替代接口：** [getP2pLinkedInfo](arkts-connectivity-wifimanager-getp2plinkedinfo-f.md)
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
+
+<!--Device-wifi-function getP2pLinkedInfo(callback: AsyncCallback<WifiP2pLinkedInfo>): void--><!--Device-wifi-function getP2pLinkedInfo(callback: AsyncCallback<WifiP2pLinkedInfo>): void-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 

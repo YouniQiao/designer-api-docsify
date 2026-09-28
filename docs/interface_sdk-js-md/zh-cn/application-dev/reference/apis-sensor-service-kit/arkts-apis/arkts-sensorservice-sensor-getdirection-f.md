@@ -26,6 +26,8 @@ function getDirection(rotationMatrix: Array<number>, callback: AsyncCallback<Arr
 
 **替代接口：** [getOrientation](arkts-sensorservice-sensor-getorientation-f.md)(rotationMatrix: Array&lt;number&gt;, callback: AsyncCallback&lt;Array&lt;number&gt;&gt;)
 
+<!--Device-sensor-function getDirection(rotationMatrix: Array<number>, callback: AsyncCallback<Array<number>>): void--><!--Device-sensor-function getDirection(rotationMatrix: Array<number>, callback: AsyncCallback<Array<number>>): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -74,6 +76,8 @@ function getDirection(rotationMatrix: Array<number>): Promise<Array<number>>
 **废弃版本：** 9
 
 **替代接口：** [getOrientation](arkts-sensorservice-sensor-getorientation-f.md)(rotationMatrix: Array&lt;number&gt;)
+
+<!--Device-sensor-function getDirection(rotationMatrix: Array<number>): Promise<Array<number>>--><!--Device-sensor-function getDirection(rotationMatrix: Array<number>): Promise<Array<number>>-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 

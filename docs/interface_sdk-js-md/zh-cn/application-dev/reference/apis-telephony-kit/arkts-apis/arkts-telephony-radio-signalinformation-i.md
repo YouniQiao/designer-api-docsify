@@ -8,6 +8,8 @@ export interface SignalInformation
 
 **起始版本：** 6
 
+<!--Device-radio-export interface SignalInformation--><!--Device-radio-export interface SignalInformation-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## 导入模块
@@ -28,6 +30,8 @@ dBm: number
 
 **起始版本：** 9
 
+<!--Device-SignalInformation-dBm: int--><!--Device-SignalInformation-dBm: int-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## signalLevel
@@ -42,6 +46,8 @@ signalLevel: number
 
 **起始版本：** 6
 
+<!--Device-SignalInformation-signalLevel: int--><!--Device-SignalInformation-signalLevel: int-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## signalType
@@ -55,5 +61,7 @@ signalType: NetworkType
 **类型：** [NetworkType](arkts-telephony-radio-networktype-e.md)
 
 **起始版本：** 6
+
+<!--Device-SignalInformation-signalType: NetworkType--><!--Device-SignalInformation-signalType: NetworkType-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService

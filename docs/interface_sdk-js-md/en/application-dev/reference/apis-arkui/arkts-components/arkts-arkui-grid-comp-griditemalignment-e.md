@@ -18,6 +18,8 @@ Enumerates the alignment modes of grid items.
 
 **Since:** 12
 
+<!--Device-unnamed-declare enum GridItemAlignment--><!--Device-unnamed-declare enum GridItemAlignment-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## DEFAULT
@@ -34,6 +36,8 @@ Use the default alignment mode of the grid.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-GridItemAlignment-DEFAULT = 0--><!--Device-GridItemAlignment-DEFAULT = 0-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## STRETCH
@@ -49,5 +53,7 @@ Use the height of the tallest grid item in a row as the height for all other gri
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GridItemAlignment-STRETCH = 1--><!--Device-GridItemAlignment-STRETCH = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

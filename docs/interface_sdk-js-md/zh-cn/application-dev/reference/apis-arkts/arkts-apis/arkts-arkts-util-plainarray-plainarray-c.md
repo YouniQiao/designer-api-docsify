@@ -8,6 +8,8 @@ PlainArray可用于存储具有关联关系的key-value键值对集合，其中k
 
 **起始版本：** 8
 
+<!--Device-unnamed-declare class PlainArray<T>--><!--Device-unnamed-declare class PlainArray<T>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -27,6 +29,8 @@ import { PlainArray } from '@kit.ArkTS';
 **起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PlainArray-[Symbol.iterator](): IterableIterator<[number, T]>--><!--Device-PlainArray-[Symbol.iterator](): IterableIterator<[number, T]>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -78,7 +82,9 @@ add(key: number, value: T): void
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PlainArray-add(key: int, value: T): void--><!--Device-PlainArray-add(key: int, value: T): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -113,7 +119,9 @@ clear(): void
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PlainArray-clear(): void--><!--Device-PlainArray-clear(): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -144,7 +152,9 @@ clone(): PlainArray<T>
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PlainArray-clone(): PlainArray<T>--><!--Device-PlainArray-clone(): PlainArray<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -180,7 +190,9 @@ PlainArray的构造函数。
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PlainArray-constructor()--><!--Device-PlainArray-constructor()-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -207,6 +219,8 @@ forEach(callbackFn: (value: T, index?: number, PlainArray?: PlainArray<T>) => vo
 **起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PlainArray-forEach(callbackFn: (value: T, index?: number, PlainArray?: PlainArray<T>) => void, thisArg?: Object): void--><!--Device-PlainArray-forEach(callbackFn: (value: T, index?: number, PlainArray?: PlainArray<T>) => void, thisArg?: Object): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -260,6 +274,8 @@ get(key: number): T
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-PlainArray-get(key: number): T--><!--Device-PlainArray-get(key: number): T-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -300,7 +316,9 @@ getIndexOfKey(key: number): number
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PlainArray-getIndexOfKey(key: int): int--><!--Device-PlainArray-getIndexOfKey(key: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -342,7 +360,9 @@ getIndexOfValue(value: T): number
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PlainArray-getIndexOfValue(value: T): int--><!--Device-PlainArray-getIndexOfValue(value: T): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -384,7 +404,9 @@ getKeyAt(index: number): number
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PlainArray-getKeyAt(index: int): int--><!--Device-PlainArray-getKeyAt(index: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -426,7 +448,9 @@ getValueAt(index: number): T
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PlainArray-getValueAt(index: int): T--><!--Device-PlainArray-getValueAt(index: int): T-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -469,7 +493,9 @@ has(key: number): boolean
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PlainArray-has(key: int): boolean--><!--Device-PlainArray-has(key: int): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -510,7 +536,9 @@ isEmpty(): boolean
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PlainArray-isEmpty(): boolean--><!--Device-PlainArray-isEmpty(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -545,6 +573,8 @@ remove(key: number): T
 **起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PlainArray-remove(key: number): T--><!--Device-PlainArray-remove(key: number): T-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -588,6 +618,8 @@ removeAt(index: number): T
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-PlainArray-removeAt(index: number): T--><!--Device-PlainArray-removeAt(index: number): T-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -628,7 +660,9 @@ removeRangeFrom(index: number, size: number): number
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PlainArray-removeRangeFrom(index: int, size: int): int--><!--Device-PlainArray-removeRangeFrom(index: int, size: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -673,7 +707,9 @@ setValueAt(index: number, value: T): void
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PlainArray-setValueAt(index: int, value: T): void--><!--Device-PlainArray-setValueAt(index: int, value: T): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -714,7 +750,9 @@ toString(): String
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PlainArray-toString(): String--><!--Device-PlainArray-toString(): String-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -753,5 +791,7 @@ PlainArray的元素个数。
 **起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PlainArray-length: number--><!--Device-PlainArray-length: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

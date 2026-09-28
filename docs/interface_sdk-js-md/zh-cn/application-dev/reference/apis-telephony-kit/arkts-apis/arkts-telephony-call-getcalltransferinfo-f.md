@@ -20,6 +20,8 @@ function getCallTransferInfo(type: CallTransferType, number: string): Promise<Ca
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-call-function getCallTransferInfo(type: CallTransferType, number: string): Promise<CallTransferResult>--><!--Device-call-function getCallTransferInfo(type: CallTransferType, number: string): Promise<CallTransferResult>-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **参数：**

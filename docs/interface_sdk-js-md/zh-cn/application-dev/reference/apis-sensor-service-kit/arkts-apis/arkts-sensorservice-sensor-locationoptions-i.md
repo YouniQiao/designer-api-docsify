@@ -8,6 +8,8 @@ interface LocationOptions
 
 **起始版本：** 8
 
+<!--Device-sensor-interface LocationOptions--><!--Device-sensor-interface LocationOptions-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## 导入模块
@@ -28,6 +30,8 @@ altitude: number
 
 **起始版本：** 8
 
+<!--Device-LocationOptions-altitude: double--><!--Device-LocationOptions-altitude: double-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## latitude
@@ -42,6 +46,8 @@ latitude: number
 
 **起始版本：** 8
 
+<!--Device-LocationOptions-latitude: double--><!--Device-LocationOptions-latitude: double-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## longitude
@@ -55,5 +61,7 @@ longitude: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-LocationOptions-longitude: double--><!--Device-LocationOptions-longitude: double-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor

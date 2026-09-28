@@ -10,6 +10,8 @@ Describes the vibration attribute.
 
 **Since:** 9
 
+<!--Device-vibrator-interface VibrateAttribute--><!--Device-vibrator-interface VibrateAttribute-End-->
+
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 ## Modules to Import
@@ -29,6 +31,8 @@ Indicates whether to bypass system management switches.
 **Type:** boolean
 
 **Since:** 12
+
+<!--Device-VibrateAttribute-systemUsage?: boolean--><!--Device-VibrateAttribute-systemUsage?: boolean-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice
 

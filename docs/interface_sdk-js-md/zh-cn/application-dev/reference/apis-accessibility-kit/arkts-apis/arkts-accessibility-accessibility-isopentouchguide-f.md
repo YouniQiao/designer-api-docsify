@@ -21,6 +21,8 @@ function isOpenTouchGuide(callback: AsyncCallback<boolean>): void
 
 **替代接口：** [isOpenTouchGuideSync](arkts-accessibility-accessibility-isopentouchguidesync-f.md)
 
+<!--Device-accessibility-function isOpenTouchGuide(callback: AsyncCallback<boolean>): void--><!--Device-accessibility-function isOpenTouchGuide(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Vision
 
 **参数：**
@@ -60,6 +62,8 @@ function isOpenTouchGuide(): Promise<boolean>
 **废弃版本：** 10
 
 **替代接口：** [isOpenTouchGuideSync](arkts-accessibility-accessibility-isopentouchguidesync-f.md)
+
+<!--Device-accessibility-function isOpenTouchGuide(): Promise<boolean>--><!--Device-accessibility-function isOpenTouchGuide(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Vision
 

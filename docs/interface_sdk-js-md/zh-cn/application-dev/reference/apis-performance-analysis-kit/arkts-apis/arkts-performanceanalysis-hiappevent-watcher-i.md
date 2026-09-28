@@ -12,6 +12,8 @@ interface Watcher
 
 **起始版本：** 9
 
+<!--Device-hiAppEvent-interface Watcher--><!--Device-hiAppEvent-interface Watcher-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 ## 导入模块
@@ -34,7 +36,9 @@ appEventGroups：回调事件集合。
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Watcher-onReceive?: (domain: string, appEventGroups: Array<AppEventGroup>) => void--><!--Device-Watcher-onReceive?: (domain: string, appEventGroups: Array<AppEventGroup>) => void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -61,7 +65,9 @@ holder：订阅数据持有者对象，可以通过其对订阅事件进行处�
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Watcher-onTrigger?: (curRow: int, curSize: int, holder: AppEventPackageHolder) => void--><!--Device-Watcher-onTrigger?: (curRow: int, curSize: int, holder: AppEventPackageHolder) => void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -85,7 +91,9 @@ appEventFilters?: AppEventFilter[]
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Watcher-appEventFilters?: AppEventFilter[]--><!--Device-Watcher-appEventFilters?: AppEventFilter[]-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -101,7 +109,9 @@ name: string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Watcher-name: string--><!--Device-Watcher-name: string-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -117,6 +127,8 @@ triggerCondition?: TriggerCondition
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Watcher-triggerCondition?: TriggerCondition--><!--Device-Watcher-triggerCondition?: TriggerCondition-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent

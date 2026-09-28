@@ -8,6 +8,8 @@ export interface CachedGnssLocationsRequest
 
 **起始版本：** 9
 
+<!--Device-geoLocationManager-export interface CachedGnssLocationsRequest--><!--Device-geoLocationManager-export interface CachedGnssLocationsRequest-End-->
+
 **系统能力：** SystemCapability.Location.Location.Gnss
 
 ## 导入模块
@@ -28,6 +30,8 @@ reportingPeriodSec: number
 
 **起始版本：** 9
 
+<!--Device-CachedGnssLocationsRequest-reportingPeriodSec: int--><!--Device-CachedGnssLocationsRequest-reportingPeriodSec: int-End-->
+
 **系统能力：** SystemCapability.Location.Location.Gnss
 
 ## wakeUpCacheQueueFull
@@ -43,5 +47,7 @@ false表示GNSS芯片底层缓存队列满之后不会主动唤醒AP芯片，会
 **类型：** boolean
 
 **起始版本：** 9
+
+<!--Device-CachedGnssLocationsRequest-wakeUpCacheQueueFull: boolean--><!--Device-CachedGnssLocationsRequest-wakeUpCacheQueueFull: boolean-End-->
 
 **系统能力：** SystemCapability.Location.Location.Gnss

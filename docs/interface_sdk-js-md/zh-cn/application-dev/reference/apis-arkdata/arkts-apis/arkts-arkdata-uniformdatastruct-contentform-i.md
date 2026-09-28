@@ -8,6 +8,8 @@ interface ContentForm
 
 **起始版本：** 14
 
+<!--Device-uniformDataStruct-interface ContentForm--><!--Device-uniformDataStruct-interface ContentForm-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ appIcon?: Uint8Array
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ContentForm-appIcon?: Uint8Array--><!--Device-ContentForm-appIcon?: Uint8Array-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## appName
@@ -45,6 +49,8 @@ appName?: string
 **起始版本：** 14
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ContentForm-appName?: string--><!--Device-ContentForm-appName?: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -62,6 +68,8 @@ description?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ContentForm-description?: string--><!--Device-ContentForm-description?: string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## linkUri
@@ -77,6 +85,8 @@ linkUri?: string
 **起始版本：** 14
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ContentForm-linkUri?: string--><!--Device-ContentForm-linkUri?: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -94,6 +104,8 @@ thumbData?: Uint8Array
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ContentForm-thumbData?: Uint8Array--><!--Device-ContentForm-thumbData?: Uint8Array-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## title
@@ -110,6 +122,8 @@ title: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ContentForm-title: string--><!--Device-ContentForm-title: string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## uniformDataType
@@ -125,5 +139,7 @@ readonly uniformDataType: 'general.content-form'
 **起始版本：** 14
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ContentForm-readonly uniformDataType: 'general.content-form'--><!--Device-ContentForm-readonly uniformDataType: 'general.content-form'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core

@@ -8,6 +8,8 @@ GNSS围栏的配置参数。目前只支持圆形围栏。
 
 **起始版本：** 9
 
+<!--Device-geoLocationManager-export interface Geofence--><!--Device-geoLocationManager-export interface Geofence-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 ## 导入模块
@@ -30,6 +32,8 @@ APP应先使用[getGeofenceSupportedCoordTypes](arkts-location-geolocationmanage
 
 **起始版本：** 12
 
+<!--Device-Geofence-coordinateSystemType?: CoordinateSystemType--><!--Device-Geofence-coordinateSystemType?: CoordinateSystemType-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 ## expiration
@@ -43,6 +47,8 @@ expiration: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-Geofence-expiration: double--><!--Device-Geofence-expiration: double-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geofence
 
@@ -58,6 +64,8 @@ latitude: number
 
 **起始版本：** 9
 
+<!--Device-Geofence-latitude: double--><!--Device-Geofence-latitude: double-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 ## longitude
@@ -72,6 +80,8 @@ longitude: number
 
 **起始版本：** 9
 
+<!--Device-Geofence-longitude: double--><!--Device-Geofence-longitude: double-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 ## radius
@@ -85,5 +95,7 @@ radius: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-Geofence-radius: double--><!--Device-Geofence-radius: double-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geofence

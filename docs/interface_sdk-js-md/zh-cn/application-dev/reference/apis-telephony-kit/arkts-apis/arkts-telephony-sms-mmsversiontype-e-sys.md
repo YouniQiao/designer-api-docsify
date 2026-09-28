@@ -8,6 +8,8 @@ export enum MmsVersionType
 
 **起始版本：** 8
 
+<!--Device-sms-export enum MmsVersionType--><!--Device-sms-export enum MmsVersionType-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -21,6 +23,8 @@ MMS_VERSION_1_0 = 0x10
 彩信版本1_0
 
 **起始版本：** 8
+
+<!--Device-MmsVersionType-MMS_VERSION_1_0 = 0x10--><!--Device-MmsVersionType-MMS_VERSION_1_0 = 0x10-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -36,6 +40,8 @@ MMS_VERSION_1_1 = 0x11
 
 **起始版本：** 8
 
+<!--Device-MmsVersionType-MMS_VERSION_1_1 = 0x11--><!--Device-MmsVersionType-MMS_VERSION_1_1 = 0x11-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -50,6 +56,8 @@ MMS_VERSION_1_2 = 0x12
 
 **起始版本：** 8
 
+<!--Device-MmsVersionType-MMS_VERSION_1_2 = 0x12--><!--Device-MmsVersionType-MMS_VERSION_1_2 = 0x12-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -63,6 +71,8 @@ MMS_VERSION_1_3 = 0x13
 彩信版本1_3
 
 **起始版本：** 8
+
+<!--Device-MmsVersionType-MMS_VERSION_1_3 = 0x13--><!--Device-MmsVersionType-MMS_VERSION_1_3 = 0x13-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 

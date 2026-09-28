@@ -10,6 +10,8 @@ AdsBlockManager的核心机制基于域名后缀匹配的AllowedList/DisallowedL
 
 **起始版本：** 12
 
+<!--Device-webview-class AdsBlockManager--><!--Device-webview-class AdsBlockManager-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## 导入模块
@@ -35,6 +37,8 @@ static addAdsBlockAllowedList(domainSuffixes: Array<string>): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AdsBlockManager-static addAdsBlockAllowedList(domainSuffixes: Array<string>): void--><!--Device-AdsBlockManager-static addAdsBlockAllowedList(domainSuffixes: Array<string>): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -124,6 +128,8 @@ static addAdsBlockDisallowedList(domainSuffixes: Array<string>): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AdsBlockManager-static addAdsBlockDisallowedList(domainSuffixes: Array<string>): void--><!--Device-AdsBlockManager-static addAdsBlockDisallowedList(domainSuffixes: Array<string>): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -206,6 +212,8 @@ static clearAdsBlockAllowedList(): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AdsBlockManager-static clearAdsBlockAllowedList(): void--><!--Device-AdsBlockManager-static clearAdsBlockAllowedList(): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **错误码：**
@@ -231,6 +239,8 @@ static clearAdsBlockDisallowedList(): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AdsBlockManager-static clearAdsBlockDisallowedList(): void--><!--Device-AdsBlockManager-static clearAdsBlockDisallowedList(): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -302,6 +312,8 @@ static removeAdsBlockAllowedList(domainSuffixes: Array<string>): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AdsBlockManager-static removeAdsBlockAllowedList(domainSuffixes: Array<string>): void--><!--Device-AdsBlockManager-static removeAdsBlockAllowedList(domainSuffixes: Array<string>): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -385,6 +397,8 @@ static removeAdsBlockDisallowedList(domainSuffixes: Array<string>): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AdsBlockManager-static removeAdsBlockDisallowedList(domainSuffixes: Array<string>): void--><!--Device-AdsBlockManager-static removeAdsBlockDisallowedList(domainSuffixes: Array<string>): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -466,6 +480,8 @@ static setAdsBlockRules(rulesFile: string, replace: boolean): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AdsBlockManager-static setAdsBlockRules(rulesFile: string, replace: boolean): void--><!--Device-AdsBlockManager-static setAdsBlockRules(rulesFile: string, replace: boolean): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

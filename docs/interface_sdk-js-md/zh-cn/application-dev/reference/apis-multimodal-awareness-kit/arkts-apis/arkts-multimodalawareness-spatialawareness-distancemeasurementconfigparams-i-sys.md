@@ -8,6 +8,8 @@ export interface DistanceMeasurementConfigParams
 
 **起始版本：** 23
 
+<!--Device-spatialAwareness-export interface DistanceMeasurementConfigParams--><!--Device-spatialAwareness-export interface DistanceMeasurementConfigParams-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.DistanceMeasurement
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ deviceList: string[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DistanceMeasurementConfigParams-deviceList: string[]--><!--Device-DistanceMeasurementConfigParams-deviceList: string[]-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.DistanceMeasurement
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ reportFrequency: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DistanceMeasurementConfigParams-reportFrequency: int--><!--Device-DistanceMeasurementConfigParams-reportFrequency: int-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.DistanceMeasurement
 
@@ -68,6 +74,8 @@ reportMode: ReportingMode
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DistanceMeasurementConfigParams-reportMode: ReportingMode--><!--Device-DistanceMeasurementConfigParams-reportMode: ReportingMode-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.DistanceMeasurement
 
 **系统接口：** 此接口为系统接口。
@@ -85,6 +93,8 @@ techType: TechnologyType
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DistanceMeasurementConfigParams-techType: TechnologyType--><!--Device-DistanceMeasurementConfigParams-techType: TechnologyType-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.DistanceMeasurement
 

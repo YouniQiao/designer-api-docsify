@@ -26,6 +26,8 @@ Defines the constructor of TextArea.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TextAreaInterface-(value?: TextAreaOptions): TextAreaAttribute--><!--Device-TextAreaInterface-(value?: TextAreaOptions): TextAreaAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

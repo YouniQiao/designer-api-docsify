@@ -20,6 +20,8 @@ function getRemoteBundleVersionCode(deviceId: string, bundleName: string): Promi
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-distributedBundleManager-function getRemoteBundleVersionCode(deviceId: string, bundleName: string): Promise<long>--><!--Device-distributedBundleManager-function getRemoteBundleVersionCode(deviceId: string, bundleName: string): Promise<long>-End-->
+
 **系统能力：** SystemCapability.BundleManager.DistributedBundleFramework
 
 **系统接口：** 此接口为系统接口。

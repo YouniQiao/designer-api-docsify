@@ -18,6 +18,8 @@ function getBackupInfo(bundleToBackup: string): string
 
 **需要权限：** ohos.permission.BACKUP
 
+<!--Device-backup-function getBackupInfo(bundleToBackup: string): string--><!--Device-backup-function getBackupInfo(bundleToBackup: string): string-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 **系统接口：** 此接口为系统接口。

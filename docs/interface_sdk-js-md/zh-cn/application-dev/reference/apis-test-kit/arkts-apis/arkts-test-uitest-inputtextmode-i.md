@@ -8,6 +8,8 @@ declare interface InputTextMode
 
 **起始版本：** 20
 
+<!--Device-unnamed-declare interface InputTextMode--><!--Device-unnamed-declare interface InputTextMode-End-->
+
 **系统能力：** SystemCapability.Test.UiTest
 
 **测试接口：** 此接口仅在自动化测试脚本中使用。
@@ -31,7 +33,9 @@ addition?: boolean
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-InputTextMode-addition?: boolean--><!--Device-InputTextMode-addition?: boolean-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -51,7 +55,9 @@ paste?: boolean
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-InputTextMode-paste?: boolean--><!--Device-InputTextMode-paste?: boolean-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 

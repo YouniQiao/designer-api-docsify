@@ -16,6 +16,8 @@ function cancelReminder(reminderId: number, callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
+<!--Device-reminderAgentManager-function cancelReminder(reminderId: int, callback: AsyncCallback<void>): void--><!--Device-reminderAgentManager-function cancelReminder(reminderId: int, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 **参数：**
@@ -61,6 +63,8 @@ function cancelReminder(reminderId: number): Promise<void>
 取消指定id的代理提醒。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-reminderAgentManager-function cancelReminder(reminderId: int): Promise<void>--><!--Device-reminderAgentManager-function cancelReminder(reminderId: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 

@@ -8,6 +8,8 @@ enum AlbumSubtype
 
 **起始版本：** 10
 
+<!--Device-photoAccessHelper-enum AlbumSubtype--><!--Device-photoAccessHelper-enum AlbumSubtype-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## HIDDEN
@@ -19,6 +21,8 @@ HIDDEN = 1027
 隐藏相册。
 
 **起始版本：** 10
+
+<!--Device-AlbumSubtype-HIDDEN = 1027--><!--Device-AlbumSubtype-HIDDEN = 1027-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -34,6 +38,8 @@ TRASH = 1028
 
 **起始版本：** 10
 
+<!--Device-AlbumSubtype-TRASH = 1028--><!--Device-AlbumSubtype-TRASH = 1028-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -47,6 +53,8 @@ SCREENSHOT = 1029
 截屏和录屏相册。
 
 **起始版本：** 10
+
+<!--Device-AlbumSubtype-SCREENSHOT = 1029--><!--Device-AlbumSubtype-SCREENSHOT = 1029-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -62,6 +70,8 @@ CAMERA = 1030
 
 **起始版本：** 10
 
+<!--Device-AlbumSubtype-CAMERA = 1030--><!--Device-AlbumSubtype-CAMERA = 1030-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -75,6 +85,8 @@ CLOUD_ENHANCEMENT = 1032
 AI云增强相册。
 
 **起始版本：** 13
+
+<!--Device-AlbumSubtype-CLOUD_ENHANCEMENT = 1032--><!--Device-AlbumSubtype-CLOUD_ENHANCEMENT = 1032-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -92,6 +104,8 @@ LIVEPHOTO_4D = 1033
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-AlbumSubtype-LIVEPHOTO_4D = 1033--><!--Device-AlbumSubtype-LIVEPHOTO_4D = 1033-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -105,6 +119,8 @@ CLASSIFY = 4097
 分类相册。
 
 **起始版本：** 11
+
+<!--Device-AlbumSubtype-CLASSIFY = 4097--><!--Device-AlbumSubtype-CLASSIFY = 4097-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -120,6 +136,8 @@ GEOGRAPHY_LOCATION = 4099
 
 **起始版本：** 11
 
+<!--Device-AlbumSubtype-GEOGRAPHY_LOCATION = 4099--><!--Device-AlbumSubtype-GEOGRAPHY_LOCATION = 4099-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -133,6 +151,8 @@ GEOGRAPHY_CITY = 4100
 城市相册。
 
 **起始版本：** 11
+
+<!--Device-AlbumSubtype-GEOGRAPHY_CITY = 4100--><!--Device-AlbumSubtype-GEOGRAPHY_CITY = 4100-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -148,6 +168,8 @@ SHOOTING_MODE = 4101
 
 **起始版本：** 11
 
+<!--Device-AlbumSubtype-SHOOTING_MODE = 4101--><!--Device-AlbumSubtype-SHOOTING_MODE = 4101-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -161,6 +183,8 @@ PORTRAIT = 4102
 人像相册。
 
 **起始版本：** 11
+
+<!--Device-AlbumSubtype-PORTRAIT = 4102--><!--Device-AlbumSubtype-PORTRAIT = 4102-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -176,6 +200,8 @@ GROUP_PHOTO = 4103
 
 **起始版本：** 13
 
+<!--Device-AlbumSubtype-GROUP_PHOTO = 4103--><!--Device-AlbumSubtype-GROUP_PHOTO = 4103-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -190,6 +216,8 @@ HIGHLIGHT = 4104
 
 **起始版本：** 12
 
+<!--Device-AlbumSubtype-HIGHLIGHT = 4104--><!--Device-AlbumSubtype-HIGHLIGHT = 4104-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -203,6 +231,8 @@ HIGHLIGHT_SUGGESTIONS = 4105
 时刻建议相册。
 
 **起始版本：** 12
+
+<!--Device-AlbumSubtype-HIGHLIGHT_SUGGESTIONS = 4105--><!--Device-AlbumSubtype-HIGHLIGHT_SUGGESTIONS = 4105-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -219,6 +249,8 @@ SHARE = 8193
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AlbumSubtype-SHARE = 8193--><!--Device-AlbumSubtype-SHARE = 8193-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

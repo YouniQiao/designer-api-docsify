@@ -8,6 +8,8 @@ export interface NotificationInfo
 
 **起始版本：** 22
 
+<!--Device-unnamed-export interface NotificationInfo--><!--Device-unnamed-export interface NotificationInfo-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## appIndex
@@ -21,6 +23,8 @@ readonly appIndex: number
 **类型：** number
 
 **起始版本：** 22
+
+<!--Device-NotificationInfo-readonly appIndex: int--><!--Device-NotificationInfo-readonly appIndex: int-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -36,6 +40,8 @@ readonly appName?: string
 
 **起始版本：** 22
 
+<!--Device-NotificationInfo-readonly appName?: string--><!--Device-NotificationInfo-readonly appName?: string-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## bundleName
@@ -49,6 +55,8 @@ readonly bundleName: string
 **类型：** string
 
 **起始版本：** 22
+
+<!--Device-NotificationInfo-readonly bundleName: string--><!--Device-NotificationInfo-readonly bundleName: string-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -64,6 +72,8 @@ readonly content: NotificationExtensionContent
 
 **起始版本：** 22
 
+<!--Device-NotificationInfo-readonly content: NotificationExtensionContent--><!--Device-NotificationInfo-readonly content: NotificationExtensionContent-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## deliveryTime
@@ -77,6 +87,8 @@ readonly deliveryTime?: number
 **类型：** number
 
 **起始版本：** 22
+
+<!--Device-NotificationInfo-readonly deliveryTime?: long--><!--Device-NotificationInfo-readonly deliveryTime?: long-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -92,6 +104,8 @@ readonly groupName?: string
 
 **起始版本：** 22
 
+<!--Device-NotificationInfo-readonly groupName?: string--><!--Device-NotificationInfo-readonly groupName?: string-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## hashCode
@@ -106,6 +120,8 @@ readonly hashCode: string
 
 **起始版本：** 22
 
+<!--Device-NotificationInfo-readonly hashCode: string--><!--Device-NotificationInfo-readonly hashCode: string-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## notificationSlotType
@@ -119,5 +135,7 @@ readonly notificationSlotType: notificationManager.SlotType
 **类型：** [notificationManager.SlotType](arkts-notification-notificationmanager-slottype-e.md)
 
 **起始版本：** 22
+
+<!--Device-NotificationInfo-readonly notificationSlotType: notificationManager.SlotType--><!--Device-NotificationInfo-readonly notificationSlotType: notificationManager.SlotType-End-->
 
 **系统能力：** SystemCapability.Notification.Notification

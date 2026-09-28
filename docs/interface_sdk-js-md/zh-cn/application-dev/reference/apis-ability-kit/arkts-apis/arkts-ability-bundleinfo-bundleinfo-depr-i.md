@@ -7,13 +7,15 @@ export interface BundleInfo
 
 > **说明：** 
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[bundleManager-BundleInfo](#bundleinfo)替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[bundleManager-BundleInfo](arkts-ability-bundleinfo-bundleinfo-depr-i.md)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [BundleInfo](#bundleinfo)
+**替代接口：** [BundleInfo](arkts-ability-bundleinfo-bundleinfo-depr-i.md)
+
+<!--Device-unnamed-export interface BundleInfo--><!--Device-unnamed-export interface BundleInfo-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -37,6 +39,8 @@ Ability的配置信息
 
 **替代接口：** abilitiesInfo
 
+<!--Device-BundleInfo-readonly abilityInfos: Array<AbilityInfo>--><!--Device-BundleInfo-readonly abilityInfos: Array<AbilityInfo>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## appId
@@ -56,6 +60,8 @@ readonly appId: string
 **废弃版本：** 9
 
 **替代接口：** appId
+
+<!--Device-BundleInfo-readonly appId: string--><!--Device-BundleInfo-readonly appId: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -77,6 +83,8 @@ readonly appInfo: ApplicationInfo
 
 **替代接口：** appInfo
 
+<!--Device-BundleInfo-readonly appInfo: ApplicationInfo--><!--Device-BundleInfo-readonly appInfo: ApplicationInfo-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## compatibleVersion
@@ -94,6 +102,8 @@ readonly compatibleVersion: number
 **起始版本：** 7
 
 **废弃版本：** 9
+
+<!--Device-BundleInfo-readonly compatibleVersion: number--><!--Device-BundleInfo-readonly compatibleVersion: number-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -113,6 +123,8 @@ readonly cpuAbi: string
 
 **废弃版本：** 9
 
+<!--Device-BundleInfo-readonly cpuAbi: string--><!--Device-BundleInfo-readonly cpuAbi: string-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## entryInstallationFree
@@ -131,6 +143,8 @@ Entry是否支持免安装，取值为true表示支持免安装，取值为false
 
 **废弃版本：** 9
 
+<!--Device-BundleInfo-readonly entryInstallationFree: boolean--><!--Device-BundleInfo-readonly entryInstallationFree: boolean-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## entryModuleName
@@ -148,6 +162,8 @@ Entry的模块名称。
 **起始版本：** 7
 
 **废弃版本：** 9
+
+<!--Device-BundleInfo-readonly entryModuleName: string--><!--Device-BundleInfo-readonly entryModuleName: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -169,6 +185,8 @@ readonly hapModuleInfos: Array<HapModuleInfo>
 
 **替代接口：** hapModulesInfo
 
+<!--Device-BundleInfo-readonly hapModuleInfos: Array<HapModuleInfo>--><!--Device-BundleInfo-readonly hapModuleInfos: Array<HapModuleInfo>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## installTime
@@ -189,6 +207,8 @@ HAP安装时间，单位：毫秒。
 
 **替代接口：** installTime
 
+<!--Device-BundleInfo-readonly installTime: number--><!--Device-BundleInfo-readonly installTime: number-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## isCompressNativeLibs
@@ -207,6 +227,8 @@ readonly isCompressNativeLibs: boolean
 
 **废弃版本：** 9
 
+<!--Device-BundleInfo-readonly isCompressNativeLibs: boolean--><!--Device-BundleInfo-readonly isCompressNativeLibs: boolean-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## isSilentInstallation
@@ -224,6 +246,8 @@ readonly isSilentInstallation: string
 **起始版本：** 7
 
 **废弃版本：** 9
+
+<!--Device-BundleInfo-readonly isSilentInstallation: string--><!--Device-BundleInfo-readonly isSilentInstallation: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -245,6 +269,8 @@ readonly minCompatibleVersionCode: number
 
 **替代接口：** minCompatibleVersionCode
 
+<!--Device-BundleInfo-readonly minCompatibleVersionCode: number--><!--Device-BundleInfo-readonly minCompatibleVersionCode: number-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## name
@@ -264,6 +290,8 @@ readonly name: string
 **废弃版本：** 9
 
 **替代接口：** name
+
+<!--Device-BundleInfo-readonly name: string--><!--Device-BundleInfo-readonly name: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -287,6 +315,8 @@ readonly reqPermissionDetails: Array<ReqPermissionDetail>
 
 **替代接口：** reqPermissionDetails
 
+<!--Device-BundleInfo-readonly reqPermissionDetails: Array<ReqPermissionDetail>--><!--Device-BundleInfo-readonly reqPermissionDetails: Array<ReqPermissionDetail>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## reqPermissions
@@ -309,6 +339,8 @@ readonly reqPermissions: Array<string>
 
 **替代接口：** permissions
 
+<!--Device-BundleInfo-readonly reqPermissions: Array<string>--><!--Device-BundleInfo-readonly reqPermissions: Array<string>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## reqPermissionStates
@@ -328,6 +360,8 @@ readonly reqPermissionStates: Array<number>
 **废弃版本：** 9
 
 **替代接口：** permissionGrantStates
+
+<!--Device-BundleInfo-readonly reqPermissionStates: Array<number>--><!--Device-BundleInfo-readonly reqPermissionStates: Array<number>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -349,6 +383,8 @@ readonly targetVersion: number
 
 **替代接口：** targetVersion
 
+<!--Device-BundleInfo-readonly targetVersion: number--><!--Device-BundleInfo-readonly targetVersion: number-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## type
@@ -368,6 +404,8 @@ readonly type: string
 **废弃版本：** 9
 
 **替代接口：** bundleType
+
+<!--Device-BundleInfo-readonly type: string--><!--Device-BundleInfo-readonly type: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -389,6 +427,8 @@ readonly uid: number
 
 **替代接口：** uid
 
+<!--Device-BundleInfo-readonly uid: number--><!--Device-BundleInfo-readonly uid: number-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## updateTime
@@ -408,6 +448,8 @@ HAP更新时间，单位：毫秒。
 **废弃版本：** 9
 
 **替代接口：** updateTime
+
+<!--Device-BundleInfo-readonly updateTime: number--><!--Device-BundleInfo-readonly updateTime: number-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -429,6 +471,8 @@ readonly vendor: string
 
 **替代接口：** vendor
 
+<!--Device-BundleInfo-readonly vendor: string--><!--Device-BundleInfo-readonly vendor: string-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## versionCode
@@ -449,6 +493,8 @@ readonly versionCode: number
 
 **替代接口：** versionCode
 
+<!--Device-BundleInfo-readonly versionCode: number--><!--Device-BundleInfo-readonly versionCode: number-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## versionName
@@ -468,5 +514,7 @@ readonly versionName: string
 **废弃版本：** 9
 
 **替代接口：** versionName
+
+<!--Device-BundleInfo-readonly versionName: string--><!--Device-BundleInfo-readonly versionName: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework

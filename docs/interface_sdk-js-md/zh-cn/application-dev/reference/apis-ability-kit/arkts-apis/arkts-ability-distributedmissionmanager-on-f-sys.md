@@ -20,6 +20,8 @@ function on(type: 'continueStateChange', callback: Callback<ContinueCallbackInfo
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-distributedMissionManager-function on(type: 'continueStateChange', callback: Callback<ContinueCallbackInfo>): void--><!--Device-distributedMissionManager-function on(type: 'continueStateChange', callback: Callback<ContinueCallbackInfo>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。

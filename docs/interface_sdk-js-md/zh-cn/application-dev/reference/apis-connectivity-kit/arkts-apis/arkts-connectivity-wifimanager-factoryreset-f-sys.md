@@ -18,6 +18,8 @@ function factoryReset(): void
 
 **需要权限：** ohos.permission.SET_WIFI_INFO and ohos.permission.SET_WIFI_CONFIG
 
+<!--Device-wifiManager-function factoryReset(): void--><!--Device-wifiManager-function factoryReset(): void-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。

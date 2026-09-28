@@ -8,6 +8,8 @@ interface Reference
 
 **起始版本：** 11
 
+<!--Device-relationalStore-interface Reference--><!--Device-relationalStore-interface Reference-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ refFields: Record<string, string>
 
 **起始版本：** 11
 
+<!--Device-Reference-refFields: Record<string, string>--><!--Device-Reference-refFields: Record<string, string>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **系统接口：** 此接口为系统接口。
@@ -46,6 +50,8 @@ sourceTable: string
 
 **起始版本：** 11
 
+<!--Device-Reference-sourceTable: string--><!--Device-Reference-sourceTable: string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +67,8 @@ targetTable: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-Reference-targetTable: string--><!--Device-Reference-targetTable: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 

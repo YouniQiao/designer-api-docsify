@@ -8,6 +8,8 @@ interface TextStyle
 
 **起始版本：** 12
 
+<!--Device-text-interface TextStyle--><!--Device-text-interface TextStyle-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## 导入模块
@@ -28,7 +30,9 @@ backgroundRect?: RectStyle
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextStyle-backgroundRect?: RectStyle--><!--Device-TextStyle-backgroundRect?: RectStyle-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -44,7 +48,9 @@ badgeType?: TextBadgeType
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextStyle-badgeType?: TextBadgeType--><!--Device-TextStyle-badgeType?: TextBadgeType-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -60,7 +66,9 @@ baseline?: TextBaseline
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextStyle-baseline?: TextBaseline--><!--Device-TextStyle-baseline?: TextBaseline-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -76,7 +84,9 @@ baselineShift?: number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextStyle-baselineShift?: double--><!--Device-TextStyle-baselineShift?: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -92,7 +102,9 @@ color?: common2D.Color
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextStyle-color?: common2D.Color--><!--Device-TextStyle-color?: common2D.Color-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -108,7 +120,9 @@ decoration?: Decoration
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextStyle-decoration?: Decoration--><!--Device-TextStyle-decoration?: Decoration-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -124,7 +138,9 @@ ellipsis?: string
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextStyle-ellipsis?: string--><!--Device-TextStyle-ellipsis?: string-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -140,7 +156,9 @@ ellipsisMode?: EllipsisMode
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextStyle-ellipsisMode?: EllipsisMode--><!--Device-TextStyle-ellipsisMode?: EllipsisMode-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -158,7 +176,9 @@ fontEdging?: drawing.FontEdging
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextStyle-fontEdging?: drawing.FontEdging--><!--Device-TextStyle-fontEdging?: drawing.FontEdging-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -174,7 +194,9 @@ fontFamilies?: Array<string>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextStyle-fontFamilies?: Array<string>--><!--Device-TextStyle-fontFamilies?: Array<string>-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -190,7 +212,9 @@ fontFeatures?: Array<FontFeature>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextStyle-fontFeatures?: Array<FontFeature>--><!--Device-TextStyle-fontFeatures?: Array<FontFeature>-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -206,7 +230,9 @@ fontSize?: number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextStyle-fontSize?: double--><!--Device-TextStyle-fontSize?: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -222,7 +248,9 @@ fontStyle?: FontStyle
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextStyle-fontStyle?: FontStyle--><!--Device-TextStyle-fontStyle?: FontStyle-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -242,7 +270,9 @@ fontTypefaces?: Array<drawing.Typeface>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextStyle-fontTypefaces?: Array<drawing.Typeface>--><!--Device-TextStyle-fontTypefaces?: Array<drawing.Typeface>-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -258,7 +288,9 @@ fontVariations?: Array<FontVariation>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextStyle-fontVariations?: Array<FontVariation>--><!--Device-TextStyle-fontVariations?: Array<FontVariation>-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -274,7 +306,9 @@ fontWeight?: FontWeight
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextStyle-fontWeight?: FontWeight--><!--Device-TextStyle-fontWeight?: FontWeight-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -290,7 +324,9 @@ fontWidth?: FontWidth
 
 **起始版本：** 21
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextStyle-fontWidth?: FontWidth--><!--Device-TextStyle-fontWidth?: FontWidth-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -306,7 +342,9 @@ true表示将行间距平分至行的顶部与底部，false则不平分，默�
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextStyle-halfLeading?: boolean--><!--Device-TextStyle-halfLeading?: boolean-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -322,7 +360,9 @@ true表示根据字体大小和heightScale设置文本框的高度，false表示
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextStyle-heightOnly?: boolean--><!--Device-TextStyle-heightOnly?: boolean-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -338,7 +378,9 @@ heightScale?: number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextStyle-heightScale?: double--><!--Device-TextStyle-heightScale?: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -354,7 +396,9 @@ letterSpacing?: number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextStyle-letterSpacing?: double--><!--Device-TextStyle-letterSpacing?: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -370,7 +414,9 @@ lineHeightMaximum?: number
 
 **起始版本：** 21
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextStyle-lineHeightMaximum?: double--><!--Device-TextStyle-lineHeightMaximum?: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -386,7 +432,9 @@ lineHeightMinimum?: number
 
 **起始版本：** 21
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextStyle-lineHeightMinimum?: double--><!--Device-TextStyle-lineHeightMinimum?: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -402,7 +450,9 @@ lineHeightStyle?: LineHeightStyle
 
 **起始版本：** 21
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextStyle-lineHeightStyle?: LineHeightStyle--><!--Device-TextStyle-lineHeightStyle?: LineHeightStyle-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -418,7 +468,9 @@ locale?: string
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextStyle-locale?: string--><!--Device-TextStyle-locale?: string-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -434,7 +486,9 @@ textShadows?: Array<TextShadow>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextStyle-textShadows?: Array<TextShadow>--><!--Device-TextStyle-textShadows?: Array<TextShadow>-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -450,6 +504,8 @@ wordSpacing?: number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextStyle-wordSpacing?: double--><!--Device-TextStyle-wordSpacing?: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing

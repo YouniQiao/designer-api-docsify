@@ -19,6 +19,8 @@ declare function fdopenStream(fd: number, mode: string): Promise<Stream>
 
 **替代接口：** [fdopenStream](arkts-corefile-file-fs-fdopenstream-f.md)
 
+<!--Device-unnamed-declare function fdopenStream(fd: number, mode: string): Promise<Stream>--><!--Device-unnamed-declare function fdopenStream(fd: number, mode: string): Promise<Stream>-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -50,6 +52,8 @@ declare function fdopenStream(fd: number, mode: string, callback: AsyncCallback<
 **废弃版本：** 9
 
 **替代接口：** [fdopenStream](arkts-corefile-file-fs-fdopenstream-f.md)
+
+<!--Device-unnamed-declare function fdopenStream(fd: number, mode: string, callback: AsyncCallback<Stream>): void--><!--Device-unnamed-declare function fdopenStream(fd: number, mode: string, callback: AsyncCallback<Stream>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

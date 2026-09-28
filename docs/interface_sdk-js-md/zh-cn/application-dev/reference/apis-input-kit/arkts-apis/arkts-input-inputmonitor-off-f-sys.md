@@ -18,6 +18,8 @@ function off(type: 'touch', receiver?: TouchEventReceiver): void
 
 **需要权限：** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function off(type: 'touch', receiver?: TouchEventReceiver): void--><!--Device-inputMonitor-function off(type: 'touch', receiver?: TouchEventReceiver): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **系统接口：** 此接口为系统接口。
@@ -113,6 +115,8 @@ function off(type: 'mouse', receiver?: Callback<MouseEvent>): void
 **起始版本：** 9
 
 **需要权限：** ohos.permission.INPUT_MONITORING
+
+<!--Device-inputMonitor-function off(type: 'mouse', receiver?: Callback<MouseEvent>): void--><!--Device-inputMonitor-function off(type: 'mouse', receiver?: Callback<MouseEvent>): void-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputMonitor
 
@@ -210,6 +214,8 @@ function off(type: 'pinch', receiver?: Callback<Pinch>): void
 
 **需要权限：** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function off(type: 'pinch', receiver?: Callback<Pinch>): void--><!--Device-inputMonitor-function off(type: 'pinch', receiver?: Callback<Pinch>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **系统接口：** 此接口为系统接口。
@@ -305,6 +311,8 @@ function off(type: 'pinch', fingers: number, receiver?: Callback<Pinch>): void
 **起始版本：** 11
 
 **需要权限：** ohos.permission.INPUT_MONITORING
+
+<!--Device-inputMonitor-function off(type: 'pinch', fingers: number, receiver?: Callback<Pinch>): void--><!--Device-inputMonitor-function off(type: 'pinch', fingers: number, receiver?: Callback<Pinch>): void-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputMonitor
 
@@ -403,6 +411,8 @@ function off(type: 'rotate', fingers: number, receiver?: Callback<Rotate>): void
 
 **需要权限：** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function off(type: 'rotate', fingers: number, receiver?: Callback<Rotate>): void--><!--Device-inputMonitor-function off(type: 'rotate', fingers: number, receiver?: Callback<Rotate>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **系统接口：** 此接口为系统接口。
@@ -500,6 +510,8 @@ function off(type: 'threeFingersSwipe', receiver?: Callback<ThreeFingersSwipe>):
 
 **需要权限：** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function off(type: 'threeFingersSwipe', receiver?: Callback<ThreeFingersSwipe>): void--><!--Device-inputMonitor-function off(type: 'threeFingersSwipe', receiver?: Callback<ThreeFingersSwipe>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **系统接口：** 此接口为系统接口。
@@ -595,6 +607,8 @@ function off(type: 'fourFingersSwipe', receiver?: Callback<FourFingersSwipe>): v
 **起始版本：** 10
 
 **需要权限：** ohos.permission.INPUT_MONITORING
+
+<!--Device-inputMonitor-function off(type: 'fourFingersSwipe', receiver?: Callback<FourFingersSwipe>): void--><!--Device-inputMonitor-function off(type: 'fourFingersSwipe', receiver?: Callback<FourFingersSwipe>): void-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputMonitor
 
@@ -692,6 +706,8 @@ function off(type: 'threeFingersTap', receiver?: Callback<ThreeFingersTap>): voi
 
 **需要权限：** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function off(type: 'threeFingersTap', receiver?: Callback<ThreeFingersTap>): void--><!--Device-inputMonitor-function off(type: 'threeFingersTap', receiver?: Callback<ThreeFingersTap>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **系统接口：** 此接口为系统接口。
@@ -787,6 +803,8 @@ function off(type: 'fingerprint', receiver?: Callback<FingerprintEvent>): void
 **起始版本：** 12
 
 **需要权限：** ohos.permission.INPUT_MONITORING
+
+<!--Device-inputMonitor-function off(type: 'fingerprint', receiver?: Callback<FingerprintEvent>): void--><!--Device-inputMonitor-function off(type: 'fingerprint', receiver?: Callback<FingerprintEvent>): void-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputMonitor
 
@@ -884,6 +902,8 @@ function off(type: 'swipeInward', receiver?: Callback<SwipeInward>): void
 
 **需要权限：** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function off(type: 'swipeInward', receiver?: Callback<SwipeInward>): void--><!--Device-inputMonitor-function off(type: 'swipeInward', receiver?: Callback<SwipeInward>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **系统接口：** 此接口为系统接口。
@@ -980,6 +1000,8 @@ function off(type: 'touchscreenSwipe', fingers: number, receiver?: Callback<Touc
 
 **需要权限：** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function off(type: 'touchscreenSwipe', fingers: number, receiver?: Callback<TouchGestureEvent>): void--><!--Device-inputMonitor-function off(type: 'touchscreenSwipe', fingers: number, receiver?: Callback<TouchGestureEvent>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **系统接口：** 此接口为系统接口。
@@ -1074,6 +1096,8 @@ function off(type: 'touchscreenPinch', fingers: number, receiver?: Callback<Touc
 
 **需要权限：** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function off(type: 'touchscreenPinch', fingers: number, receiver?: Callback<TouchGestureEvent>): void--><!--Device-inputMonitor-function off(type: 'touchscreenPinch', fingers: number, receiver?: Callback<TouchGestureEvent>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **系统接口：** 此接口为系统接口。
@@ -1167,6 +1191,8 @@ function off(type: 'keyPressed', receiver?: Callback<KeyEvent>): void
 **起始版本：** 15
 
 **需要权限：** ohos.permission.INPUT_MONITORING
+
+<!--Device-inputMonitor-function off(type: 'keyPressed', receiver?: Callback<KeyEvent>): void--><!--Device-inputMonitor-function off(type: 'keyPressed', receiver?: Callback<KeyEvent>): void-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputMonitor
 

@@ -24,6 +24,8 @@ function replyCustomEapData(result: CustomResult, data: EapData): void
 
 **需要权限：** ohos.permission.MANAGE_ENTERPRISE_WIFI_CONNECTION
 
+<!--Device-eap-function replyCustomEapData(result: CustomResult, data: EapData): void--><!--Device-eap-function replyCustomEapData(result: CustomResult, data: EapData): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
 **参数：**

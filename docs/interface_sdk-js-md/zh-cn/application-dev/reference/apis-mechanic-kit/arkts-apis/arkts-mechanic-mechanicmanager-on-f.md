@@ -16,6 +16,8 @@ Subscribes to device attachment state change events.
 
 **起始版本：** 20
 
+<!--Device-mechanicManager-function on(type: 'attachStateChange', callback: Callback<AttachStateChangeInfo>): void--><!--Device-mechanicManager-function on(type: 'attachStateChange', callback: Callback<AttachStateChangeInfo>): void-End-->
+
 **系统能力：** SystemCapability.Mechanic.Core
 
 **参数：**
@@ -57,6 +59,8 @@ function on(type: 'trackingStateChange', callback: Callback<TrackingEventInfo>):
 Subscribes to tracking events.
 
 **起始版本：** 20
+
+<!--Device-mechanicManager-function on(type: 'trackingStateChange', callback: Callback<TrackingEventInfo>): void--><!--Device-mechanicManager-function on(type: 'trackingStateChange', callback: Callback<TrackingEventInfo>): void-End-->
 
 **系统能力：** SystemCapability.Mechanic.Core
 

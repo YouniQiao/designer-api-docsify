@@ -10,6 +10,8 @@ FormEditExtensionAbility模块提供卡片编辑功能，支持用户在卡片�
 
 **起始版本：** 18
 
+<!--Device-unnamed-declare class FormEditExtensionAbility extends UIExtensionAbility--><!--Device-unnamed-declare class FormEditExtensionAbility extends UIExtensionAbility-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 ## 导入模块
@@ -31,5 +33,7 @@ FormEditExtensionAbility的上下文环境，FormEditExtensionContext继承自UI
 **起始版本：** 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FormEditExtensionAbility-context: FormEditExtensionContext--><!--Device-FormEditExtensionAbility-context: FormEditExtensionContext-End-->
 
 **系统能力：** SystemCapability.Ability.Form

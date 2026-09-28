@@ -10,6 +10,8 @@ export interface NotificationLiveViewContent extends NotificationBasicContent
 
 **起始版本：** 11
 
+<!--Device-unnamed-export interface NotificationLiveViewContent extends NotificationBasicContent--><!--Device-unnamed-export interface NotificationLiveViewContent extends NotificationBasicContent-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -26,6 +28,8 @@ extensionWantAgent?: WantAgent
 
 **起始版本：** 20
 
+<!--Device-NotificationLiveViewContent-extensionWantAgent?: WantAgent--><!--Device-NotificationLiveViewContent-extensionWantAgent?: WantAgent-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -41,6 +45,8 @@ extraInfo?: Record<string, Object>
 **类型：** Record&lt;string, Object&gt;
 
 **起始版本：** 11
+
+<!--Device-NotificationLiveViewContent-extraInfo?: Record<string, Object>--><!--Device-NotificationLiveViewContent-extraInfo?: Record<string, Object>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -61,6 +67,8 @@ isLocalUpdateOnly?: boolean
 
 **起始版本：** 12
 
+<!--Device-NotificationLiveViewContent-isLocalUpdateOnly?: boolean--><!--Device-NotificationLiveViewContent-isLocalUpdateOnly?: boolean-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -76,6 +84,8 @@ pictureInfo?: Record<string, Array<image.PixelMap>>
 **类型：** Record&lt;string, Array&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt;&gt;
 
 **起始版本：** 11
+
+<!--Device-NotificationLiveViewContent-pictureInfo?: Record<string, Array<image.PixelMap>>--><!--Device-NotificationLiveViewContent-pictureInfo?: Record<string, Array<image.PixelMap>>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -93,6 +103,8 @@ status: LiveViewStatus
 
 **起始版本：** 11
 
+<!--Device-NotificationLiveViewContent-status: LiveViewStatus--><!--Device-NotificationLiveViewContent-status: LiveViewStatus-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -108,6 +120,8 @@ version?: number
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-NotificationLiveViewContent-version?: int--><!--Device-NotificationLiveViewContent-version?: int-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

@@ -10,6 +10,8 @@ WebResourceHandler与[WebSchemeHandler](arkts-arkweb-webview-webschemehandler-c.
 
 **起始版本：** 12
 
+<!--Device-webview-class WebResourceHandler--><!--Device-webview-class WebResourceHandler-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## 导入模块
@@ -29,6 +31,8 @@ didFail(code: WebNetErrorList): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebResourceHandler-didFail(code: WebNetErrorList): void--><!--Device-WebResourceHandler-didFail(code: WebNetErrorList): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -60,6 +64,8 @@ didFail(code: WebNetErrorList, completeIfNoResponse: boolean): void
 通知ArkWeb内核，被拦截请求将返回失败。若completeIfNoResponse为false，调用前需调用[didReceiveResponse](#didreceiveresponse)传入响应头。若completeIfNoResponse为true，且调用前未调用[didReceiveResponse](#didreceiveresponse)，则自动生成一个响应头，网络错误码为-104，详情参见[WebNetErrorList](arkts-arkweb-web-neterrorlist-webneterrorlist-e.md)。
 
 **起始版本：** 20
+
+<!--Device-WebResourceHandler-didFail(code: WebNetErrorList, completeIfNoResponse: boolean): void--><!--Device-WebResourceHandler-didFail(code: WebNetErrorList, completeIfNoResponse: boolean): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -163,6 +169,8 @@ didFail(code: WebNetErrorList, completeIfNoResponse: boolean, customErrorCode: n
 
 **起始版本：** 26.0.1
 
+<!--Device-WebResourceHandler-didFail(code: WebNetErrorList, completeIfNoResponse: boolean, customErrorCode: number): void--><!--Device-WebResourceHandler-didFail(code: WebNetErrorList, completeIfNoResponse: boolean, customErrorCode: number): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -245,6 +253,8 @@ didFinish(): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebResourceHandler-didFinish(): void--><!--Device-WebResourceHandler-didFinish(): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **错误码：**
@@ -268,6 +278,8 @@ didReceiveResponse(response: WebSchemeHandlerResponse): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebResourceHandler-didReceiveResponse(response: WebSchemeHandlerResponse): void--><!--Device-WebResourceHandler-didReceiveResponse(response: WebSchemeHandlerResponse): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -299,6 +311,8 @@ didReceiveResponseBody(data: ArrayBuffer): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebResourceHandler-didReceiveResponseBody(data: ArrayBuffer): void--><!--Device-WebResourceHandler-didReceiveResponseBody(data: ArrayBuffer): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

@@ -4,13 +4,15 @@
 declare class ScrollAttribute extends ScrollableCommonMethod<ScrollAttribute>
 ```
 
-In addition to [universal attributes](arkts-arkui-common-comp.md#common) and [scrollable component common attributes](arkts-arkui-common-comp-scrollablecommonmethod-c.md), the following attributes are also supported.
+In addition to [universal attributes](arkts-arkui-common-comp.md) and [scrollable component common attributes](arkts-arkui-common-comp-scrollablecommonmethod-c.md), the following attributes are also supported.
 
-In addition to [universal events](arkts-arkui-common-comp.md#common) and [scrollable component common events](arkts-arkui-common-comp-scrollablecommonmethod-c.md), the following events are also supported.
+In addition to [universal events](arkts-arkui-common-comp.md) and [scrollable component common events](arkts-arkui-common-comp-scrollablecommonmethod-c.md), the following events are also supported.
 
 **Inheritance/Implementation:** ScrollAttribute extends ScrollableCommonMethod<ScrollAttribute>
 
 **Since:** 7
+
+<!--Device-unnamed-declare class ScrollAttribute extends ScrollableCommonMethod<ScrollAttribute>--><!--Device-unnamed-declare class ScrollAttribute extends ScrollableCommonMethod<ScrollAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,6 +29,8 @@ Sets the effect used when the scroll boundary is reached.
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ScrollAttribute-edgeEffect(edgeEffect: EdgeEffect, options?: EdgeEffectOptions): ScrollAttribute--><!--Device-ScrollAttribute-edgeEffect(edgeEffect: EdgeEffect, options?: EdgeEffectOptions): ScrollAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -51,6 +55,8 @@ Sets whether to enable the zoom bounce effect.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-ScrollAttribute-enableBouncesZoom(enable: boolean): ScrollAttribute--><!--Device-ScrollAttribute-enableBouncesZoom(enable: boolean): ScrollAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -72,6 +78,8 @@ Sets whether to enable swipe paging. If both swipe paging (**enablePaging**) and
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ScrollAttribute-enablePaging(value: boolean): ScrollAttribute--><!--Device-ScrollAttribute-enablePaging(value: boolean): ScrollAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -95,6 +103,8 @@ Sets whether to support scroll gestures. It can be used to temporarily disable u
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ScrollAttribute-enableScrollInteraction(value: boolean): ScrollAttribute--><!--Device-ScrollAttribute-enableScrollInteraction(value: boolean): ScrollAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -116,6 +126,8 @@ Sets the friction coefficient. It takes effect when the scroll area is swiped, a
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ScrollAttribute-friction(value: number | Resource): ScrollAttribute--><!--Device-ScrollAttribute-friction(value: number | Resource): ScrollAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -139,6 +151,8 @@ Sets the initial scroll offset. It takes effect only during the first layout, an
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ScrollAttribute-initialOffset(value: OffsetOptions): ScrollAttribute--><!--Device-ScrollAttribute-initialOffset(value: OffsetOptions): ScrollAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -160,6 +174,8 @@ Sets the maximum gesture-based zoom scale for the **Scroll** component's content
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-ScrollAttribute-maxZoomScale(scale: number): ScrollAttribute--><!--Device-ScrollAttribute-maxZoomScale(scale: number): ScrollAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -183,6 +199,8 @@ Sets the minimum gesture-based zoom scale for the **Scroll** component's content
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-ScrollAttribute-minZoomScale(scale: number): ScrollAttribute--><!--Device-ScrollAttribute-minZoomScale(scale: number): ScrollAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -204,6 +222,8 @@ Sets the nested scroll mode in both forward and backward directions to implement
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ScrollAttribute-nestedScroll(value: NestedScrollOptions): ScrollAttribute--><!--Device-ScrollAttribute-nestedScroll(value: NestedScrollOptions): ScrollAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -236,6 +256,8 @@ input settings that trigger scrolling.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ScrollAttribute-onDidScroll(handler: ScrollOnScrollCallback): ScrollAttribute--><!--Device-ScrollAttribute-onDidScroll(handler: ScrollOnScrollCallback): ScrollAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -257,6 +279,8 @@ Triggered when the zoom operation of each frame is completed.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-ScrollAttribute-onDidZoom(event: ScrollOnDidZoomCallback): ScrollAttribute--><!--Device-ScrollAttribute-onDidZoom(event: ScrollOnDidZoomCallback): ScrollAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -286,6 +310,8 @@ input settings that trigger scrolling.
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ScrollAttribute-onScrollEdge(event: OnScrollEdgeCallback): ScrollAttribute--><!--Device-ScrollAttribute-onScrollEdge(event: OnScrollEdgeCallback): ScrollAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -325,6 +351,8 @@ This event is not triggered when any of the following conditions is met:
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ScrollAttribute-onScrollFrameBegin(event: OnScrollFrameBeginCallback): ScrollAttribute--><!--Device-ScrollAttribute-onScrollFrameBegin(event: OnScrollFrameBeginCallback): ScrollAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -353,6 +381,8 @@ settings that trigger scrolling.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ScrollAttribute-onScrollStart(event: VoidCallback): ScrollAttribute--><!--Device-ScrollAttribute-onScrollStart(event: VoidCallback): ScrollAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -380,6 +410,8 @@ operations and other input settings that trigger scrolling.
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ScrollAttribute-onScrollStop(event: VoidCallback): ScrollAttribute--><!--Device-ScrollAttribute-onScrollStop(event: VoidCallback): ScrollAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -420,6 +452,8 @@ input settings that trigger scrolling.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ScrollAttribute-onWillScroll(handler: ScrollOnWillScrollCallback): ScrollAttribute--><!--Device-ScrollAttribute-onWillScroll(handler: ScrollOnWillScrollCallback): ScrollAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -441,6 +475,8 @@ Triggered when a zoom gesture starts.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-ScrollAttribute-onZoomStart(event: VoidCallback): ScrollAttribute--><!--Device-ScrollAttribute-onZoomStart(event: VoidCallback): ScrollAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -464,6 +500,8 @@ Triggered when a zoom gesture stops.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-ScrollAttribute-onZoomStop(event: VoidCallback): ScrollAttribute--><!--Device-ScrollAttribute-onZoomStop(event: VoidCallback): ScrollAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -485,6 +523,8 @@ Sets the scroll direction. After this value is modified, the scroll offset is re
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ScrollAttribute-scrollable(value: ScrollDirection): ScrollAttribute--><!--Device-ScrollAttribute-scrollable(value: ScrollDirection): ScrollAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -510,6 +550,8 @@ Since API version 10, when the scrollable component has rounded corners, to prev
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ScrollAttribute-scrollBar(barState: BarState): ScrollAttribute--><!--Device-ScrollAttribute-scrollBar(barState: BarState): ScrollAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -531,6 +573,8 @@ Sets the scrollbar color.
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ScrollAttribute-scrollBarColor(color: Color | number | string): ScrollAttribute--><!--Device-ScrollAttribute-scrollBarColor(color: Color | number | string): ScrollAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -556,6 +600,8 @@ Sets the scrollbar color. Compared with [scrollBarColor](#scrollbarcolor), this 
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-ScrollAttribute-scrollBarColor(color: Color | number | string | Resource): ScrollAttribute--><!--Device-ScrollAttribute-scrollBarColor(color: Color | number | string | Resource): ScrollAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -577,6 +623,8 @@ Sets the width of the scroll bar. Percentage values are not supported. After the
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ScrollAttribute-scrollBarWidth(value: number | string): ScrollAttribute--><!--Device-ScrollAttribute-scrollBarWidth(value: number | string): ScrollAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -604,6 +652,8 @@ If this attribute is not set, the scrollbar width is 4 vp.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ScrollAttribute-scrollBarWidth(value: number | string | Resource): ScrollAttribute--><!--Device-ScrollAttribute-scrollBarWidth(value: number | string | Resource): ScrollAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -628,6 +678,8 @@ During the snap animation, the scroll operation source type reported by the [onW
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ScrollAttribute-scrollSnap(value: ScrollSnapOptions): ScrollAttribute--><!--Device-ScrollAttribute-scrollSnap(value: ScrollSnapOptions): ScrollAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -649,6 +701,8 @@ Sets the zoom scale of the **Scroll** component's content.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-ScrollAttribute-zoomScale(scale: number): ScrollAttribute--><!--Device-ScrollAttribute-zoomScale(scale: number): ScrollAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -683,6 +737,8 @@ input settings that trigger scrolling.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ScrollAttribute-onScroll(event: (xOffset: number, yOffset: number) => void): ScrollAttribute--><!--Device-ScrollAttribute-onScroll(event: (xOffset: number, yOffset: number) => void): ScrollAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -712,6 +768,8 @@ operations and other input settings that trigger scrolling.
 **Substitutes:** onScrollStop
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-ScrollAttribute-onScrollEnd(event: () => void): ScrollAttribute--><!--Device-ScrollAttribute-onScrollEnd(event: () => void): ScrollAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

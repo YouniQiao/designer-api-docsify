@@ -8,6 +8,8 @@ enum ControlCenterEffectType
 
 **起始版本：** 20
 
+<!--Device-camera-enum ControlCenterEffectType--><!--Device-camera-enum ControlCenterEffectType-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## BEAUTY
@@ -20,7 +22,9 @@ BEAUTY = 0
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-ControlCenterEffectType-BEAUTY = 0--><!--Device-ControlCenterEffectType-BEAUTY = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -34,7 +38,9 @@ PORTRAIT = 1
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-ControlCenterEffectType-PORTRAIT = 1--><!--Device-ControlCenterEffectType-PORTRAIT = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -48,7 +54,9 @@ AUTO_FRAMING = 2
 
 **起始版本：** 24
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-ControlCenterEffectType-AUTO_FRAMING = 2--><!--Device-ControlCenterEffectType-AUTO_FRAMING = 2-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -64,6 +72,8 @@ COLOR_EFFECT = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-ControlCenterEffectType-COLOR_EFFECT = 3--><!--Device-ControlCenterEffectType-COLOR_EFFECT = 3-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core

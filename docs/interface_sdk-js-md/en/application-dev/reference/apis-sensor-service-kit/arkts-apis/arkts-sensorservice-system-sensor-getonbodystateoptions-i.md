@@ -12,6 +12,8 @@ Sets the parameters for subscribing to the device wearing status, including the 
 
 **Substitutes:** [WEAR_DETECTION](arkts-sensorservice-sensor-sensorid-e.md#wear_detection)
 
+<!--Device-unnamed-export interface GetOnBodyStateOptions--><!--Device-unnamed-export interface GetOnBodyStateOptions-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 ## Modules to Import
@@ -36,6 +38,8 @@ Callback invoked when the API call is complete. This callback will be executed r
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-GetOnBodyStateOptions-complete?: () => void--><!--Device-GetOnBodyStateOptions-complete?: () => void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 ## fail
@@ -53,6 +57,8 @@ Callback invoked when an API call fails. The callback parameters are **data** of
 **Substitutes:** [once](arkts-sensorservice-sensor-once-f.md)
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-GetOnBodyStateOptions-fail?: (data: string, code: number) => void--><!--Device-GetOnBodyStateOptions-fail?: (data: string, code: number) => void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
@@ -78,6 +84,8 @@ Callback invoked when the API call succeeds. The callback parameter is an **OnBo
 **Substitutes:** [once](arkts-sensorservice-sensor-once-f.md)
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-GetOnBodyStateOptions-success: (data: OnBodyStateResponse) => void--><!--Device-GetOnBodyStateOptions-success: (data: OnBodyStateResponse) => void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 

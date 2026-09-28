@@ -16,6 +16,8 @@ function hasSmsCapability(): boolean
 
 **起始版本：** 7
 
+<!--Device-sms-function hasSmsCapability(): boolean--><!--Device-sms-function hasSmsCapability(): boolean-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **返回值：**

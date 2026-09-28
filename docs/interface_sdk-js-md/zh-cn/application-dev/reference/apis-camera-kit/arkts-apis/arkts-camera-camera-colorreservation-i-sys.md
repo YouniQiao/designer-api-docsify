@@ -10,6 +10,8 @@ ColorReservation extends [ColorReservationQuery](arkts-camera-camera-colorreserv
 
 **起始版本：** 15
 
+<!--Device-camera-interface ColorReservation extends ColorReservationQuery--><!--Device-camera-interface ColorReservation extends ColorReservationQuery-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -29,6 +31,8 @@ getColorReservation(): ColorReservationType
 Obtains the color reservation type in use.
 
 **起始版本：** 15
+
+<!--Device-ColorReservation-getColorReservation(): ColorReservationType--><!--Device-ColorReservation-getColorReservation(): ColorReservationType-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -58,6 +62,8 @@ setColorReservation(type: ColorReservationType): void
 Sets a color reservation type. Before the setting, call [getSupportedColorReservationTypes](arkts-camera-camera-colorreservationquery-i-sys.md#getsupportedcolorreservationtypes) to obtain the supported color reservation types.
 
 **起始版本：** 15
+
+<!--Device-ColorReservation-setColorReservation(type: ColorReservationType): void--><!--Device-ColorReservation-setColorReservation(type: ColorReservationType): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

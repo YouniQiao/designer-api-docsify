@@ -18,6 +18,8 @@ function isSuperAdmin(bundleName: String, callback: AsyncCallback<boolean>): voi
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-adminManager-function isSuperAdmin(bundleName: String, callback: AsyncCallback<boolean>): void--><!--Device-adminManager-function isSuperAdmin(bundleName: String, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -68,6 +70,8 @@ function isSuperAdmin(bundleName: String): Promise<boolean>
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-adminManager-function isSuperAdmin(bundleName: String): Promise<boolean>--><!--Device-adminManager-function isSuperAdmin(bundleName: String): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

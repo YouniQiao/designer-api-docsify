@@ -8,6 +8,8 @@ AbilityRunningInfo是记录Ability运行信息和状态的数据结构，通过[
 
 **起始版本：** 14
 
+<!--Device-unnamed-export interface AbilityRunningInfo--><!--Device-unnamed-export interface AbilityRunningInfo-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## ability
@@ -23,6 +25,8 @@ Ability的ElementName信息。
 **默认值：** the ohos.bundleManager.ElementName object of the ability.
 
 **起始版本：** 14
+
+<!--Device-AbilityRunningInfo-ability: ElementName--><!--Device-AbilityRunningInfo-ability: ElementName-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -40,6 +44,8 @@ Ability的状态。
 
 **起始版本：** 14
 
+<!--Device-AbilityRunningInfo-abilityState: abilityManager.AbilityState--><!--Device-AbilityRunningInfo-abilityState: abilityManager.AbilityState-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## pid
@@ -55,6 +61,8 @@ pid: number
 **默认值：** process id
 
 **起始版本：** 14
+
+<!--Device-AbilityRunningInfo-pid: int--><!--Device-AbilityRunningInfo-pid: int-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -72,6 +80,8 @@ processName: string
 
 **起始版本：** 14
 
+<!--Device-AbilityRunningInfo-processName: string--><!--Device-AbilityRunningInfo-processName: string-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## startTime
@@ -88,6 +98,8 @@ Ability的启动时间，单位：ms。
 
 **起始版本：** 14
 
+<!--Device-AbilityRunningInfo-startTime: long--><!--Device-AbilityRunningInfo-startTime: long-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## uid
@@ -103,6 +115,8 @@ uid: number
 **默认值：** user id
 
 **起始版本：** 14
+
+<!--Device-AbilityRunningInfo-uid: int--><!--Device-AbilityRunningInfo-uid: int-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

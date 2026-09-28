@@ -8,6 +8,8 @@ class Task
 
 **起始版本：** 9
 
+<!--Device-taskpool-class Task--><!--Device-taskpool-class Task-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -27,6 +29,8 @@ addDependency(...tasks: Task[]): void
 **起始版本：** 11
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Task-addDependency(...tasks: Task[]): void--><!--Device-Task-addDependency(...tasks: Task[]): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -89,6 +93,8 @@ Task的构造函数。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Task-constructor(func: Function, ...args: Object[])--><!--Device-Task-constructor(func: Function, ...args: Object[])-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -129,6 +135,8 @@ Task的构造函数用于创建任务，并可指定任务名称。
 **起始版本：** 11
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Task-constructor(name: string, func: Function, ...args: Object[])--><!--Device-Task-constructor(name: string, func: Function, ...args: Object[])-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -175,6 +183,8 @@ static isCanceled(): boolean
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Task-static isCanceled(): boolean--><!--Device-Task-static isCanceled(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -248,6 +258,8 @@ isDone(): boolean
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Task-isDone(): boolean--><!--Device-Task-isDone(): boolean-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -301,6 +313,8 @@ onEnqueued(callback: CallbackFunction): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Task-onEnqueued(callback: CallbackFunction): void--><!--Device-Task-onEnqueued(callback: CallbackFunction): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -349,6 +363,8 @@ onExecutionFailed(callback: CallbackFunctionWithError): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Task-onExecutionFailed(callback: CallbackFunctionWithError): void--><!--Device-Task-onExecutionFailed(callback: CallbackFunctionWithError): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -402,6 +418,8 @@ onExecutionSucceeded(callback: CallbackFunction): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Task-onExecutionSucceeded(callback: CallbackFunction): void--><!--Device-Task-onExecutionSucceeded(callback: CallbackFunction): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -458,6 +476,8 @@ onReceiveData(callback?: Function): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Task-onReceiveData(callback?: Function): void--><!--Device-Task-onReceiveData(callback?: Function): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -504,6 +524,8 @@ onStartExecution(callback: CallbackFunction): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Task-onStartExecution(callback: CallbackFunction): void--><!--Device-Task-onStartExecution(callback: CallbackFunction): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -553,6 +575,8 @@ removeDependency(...tasks: Task[]): void
 **起始版本：** 11
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Task-removeDependency(...tasks: Task[]): void--><!--Device-Task-removeDependency(...tasks: Task[]): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -628,6 +652,8 @@ static sendData(...args: Object[]): void
 **起始版本：** 11
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Task-static sendData(...args: Object[]): void--><!--Device-Task-static sendData(...args: Object[]): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -721,6 +747,8 @@ setCloneList(cloneList: Object[] | ArrayBuffer[]): void
 **起始版本：** 11
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Task-setCloneList(cloneList: Object[] | ArrayBuffer[]): void--><!--Device-Task-setCloneList(cloneList: Object[] | ArrayBuffer[]): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -884,6 +912,8 @@ setTransferList(transfer?: ArrayBuffer[]): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Task-setTransferList(transfer?: ArrayBuffer[]): void--><!--Device-Task-setTransferList(transfer?: ArrayBuffer[]): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -947,6 +977,8 @@ arguments?: Object[]
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Task-arguments?: Object[]--><!--Device-Task-arguments?: Object[]-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## cpuDuration
@@ -965,6 +997,8 @@ cpuDuration: number
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Task-cpuDuration: number--><!--Device-Task-cpuDuration: number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## function
@@ -980,6 +1014,8 @@ function: Function
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Task-function: Function--><!--Device-Task-function: Function-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -999,6 +1035,8 @@ ioDuration: number
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Task-ioDuration: number--><!--Device-Task-ioDuration: number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## name
@@ -1014,6 +1052,8 @@ name: string
 **起始版本：** 11
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Task-name: string--><!--Device-Task-name: string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1033,6 +1073,8 @@ taskId: number
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-Task-taskId: number--><!--Device-Task-taskId: number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## totalDuration
@@ -1050,5 +1092,7 @@ totalDuration: number
 **起始版本：** 11
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Task-totalDuration: number--><!--Device-Task-totalDuration: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

@@ -8,6 +8,8 @@
 
 **起始版本：** 6
 
+<!--Device-unnamed-declare namespace wifi--><!--Device-unnamed-declare namespace wifi-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## 导入模块

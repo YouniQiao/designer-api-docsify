@@ -8,6 +8,8 @@ Selects the resource release strategy of **LazyForEach**.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-declare enum LazyForEachReleaseStrategy--><!--Device-unnamed-declare enum LazyForEachReleaseStrategy-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## BATCH
@@ -24,6 +26,8 @@ BATCH = 0
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-LazyForEachReleaseStrategy-BATCH = 0--><!--Device-LazyForEachReleaseStrategy-BATCH = 0-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## PROGRESSIVE
@@ -39,5 +43,7 @@ PROGRESSIVE = 1
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-LazyForEachReleaseStrategy-PROGRESSIVE = 1--><!--Device-LazyForEachReleaseStrategy-PROGRESSIVE = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

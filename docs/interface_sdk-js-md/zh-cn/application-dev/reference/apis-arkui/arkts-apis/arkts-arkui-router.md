@@ -14,6 +14,8 @@ Router提供页面跳转能力，包括跳转到应用内的指定页面、同�
 
 **起始版本：** 8
 
+<!--Device-unnamed-declare namespace router--><!--Device-unnamed-declare namespace router-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块

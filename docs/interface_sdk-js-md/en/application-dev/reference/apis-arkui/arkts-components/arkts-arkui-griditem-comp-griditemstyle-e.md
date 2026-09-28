@@ -13,6 +13,8 @@ Enumerates the **GridItem** styles, used to define the interaction state styles 
 
 **Since:** 11
 
+<!--Device-unnamed-declare enum GridItemStyle--><!--Device-unnamed-declare enum GridItemStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## NONE
@@ -29,6 +31,8 @@ No style. **Hover** and **Press** state styles are not displayed.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-GridItemStyle-NONE = 0--><!--Device-GridItemStyle-NONE = 0-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## PLAIN
@@ -44,5 +48,7 @@ Displays **Hover** and **Press** state styles. The **Hover** state is the style 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GridItemStyle-PLAIN = 1--><!--Device-GridItemStyle-PLAIN = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

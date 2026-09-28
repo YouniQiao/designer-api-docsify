@@ -8,6 +8,8 @@ Enumerates the standby resource types. These types represent resources that can 
 
 **Since:** 26.0.1
 
+<!--Device-applicationManager-enum StandbyResourceType--><!--Device-applicationManager-enum StandbyResourceType-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## NETWORK
@@ -21,5 +23,7 @@ Network access resource. When applied, the specified application can continue to
 **Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-StandbyResourceType-NETWORK = 1--><!--Device-StandbyResourceType-NETWORK = 1-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager

@@ -8,6 +8,8 @@ enum ScanMode
 
 **起始版本：** 10
 
+<!--Device-connection-enum ScanMode--><!--Device-connection-enum ScanMode-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## SCAN_MODE_NONE
@@ -21,6 +23,8 @@ SCAN_MODE_NONE = 0
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ScanMode-SCAN_MODE_NONE = 0--><!--Device-ScanMode-SCAN_MODE_NONE = 0-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -36,6 +40,8 @@ SCAN_MODE_CONNECTABLE = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ScanMode-SCAN_MODE_CONNECTABLE = 1--><!--Device-ScanMode-SCAN_MODE_CONNECTABLE = 1-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## SCAN_MODE_GENERAL_DISCOVERABLE
@@ -49,6 +55,8 @@ SCAN_MODE_GENERAL_DISCOVERABLE = 2
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ScanMode-SCAN_MODE_GENERAL_DISCOVERABLE = 2--><!--Device-ScanMode-SCAN_MODE_GENERAL_DISCOVERABLE = 2-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -64,6 +72,8 @@ SCAN_MODE_LIMITED_DISCOVERABLE = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ScanMode-SCAN_MODE_LIMITED_DISCOVERABLE = 3--><!--Device-ScanMode-SCAN_MODE_LIMITED_DISCOVERABLE = 3-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## SCAN_MODE_CONNECTABLE_GENERAL_DISCOVERABLE
@@ -78,6 +88,8 @@ SCAN_MODE_CONNECTABLE_GENERAL_DISCOVERABLE = 4
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ScanMode-SCAN_MODE_CONNECTABLE_GENERAL_DISCOVERABLE = 4--><!--Device-ScanMode-SCAN_MODE_CONNECTABLE_GENERAL_DISCOVERABLE = 4-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## SCAN_MODE_CONNECTABLE_LIMITED_DISCOVERABLE
@@ -91,5 +103,7 @@ SCAN_MODE_CONNECTABLE_LIMITED_DISCOVERABLE = 5
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ScanMode-SCAN_MODE_CONNECTABLE_LIMITED_DISCOVERABLE = 5--><!--Device-ScanMode-SCAN_MODE_CONNECTABLE_LIMITED_DISCOVERABLE = 5-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

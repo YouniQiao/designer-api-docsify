@@ -10,6 +10,8 @@ interface InteractionText extends InteractionUI
 
 **起始版本：** 26.0.1
 
+<!--Device-insightIntent-interface InteractionText extends InteractionUI--><!--Device-insightIntent-interface InteractionText extends InteractionUI-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -34,6 +36,8 @@ buttons?: Array<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-InteractionText-buttons?: Array<string>--><!--Device-InteractionText-buttons?: Array<string>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -52,6 +56,8 @@ interactionUIType: 'TEXT'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-InteractionText-interactionUIType: 'TEXT'--><!--Device-InteractionText-interactionUIType: 'TEXT'-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -69,6 +75,8 @@ parameters: Record<string, Object>
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-InteractionText-parameters: Record<string, Object>--><!--Device-InteractionText-parameters: Record<string, Object>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

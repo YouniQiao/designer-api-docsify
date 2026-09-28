@@ -8,6 +8,8 @@ declare enum FailureCode
 
 **起始版本：** 20
 
+<!--Device-unnamed-declare enum FailureCode--><!--Device-unnamed-declare enum FailureCode-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## FAILURE_CODE_SYSTEM_MALFUNCTION
@@ -23,6 +25,8 @@ FAILURE_CODE_SYSTEM_MALFUNCTION = 0
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-FailureCode-FAILURE_CODE_SYSTEM_MALFUNCTION = 0--><!--Device-FailureCode-FAILURE_CODE_SYSTEM_MALFUNCTION = 0-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -40,6 +44,8 @@ FAILURE_CODE_USER_CANCEL = 1
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-FailureCode-FAILURE_CODE_USER_CANCEL = 1--><!--Device-FailureCode-FAILURE_CODE_USER_CANCEL = 1-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## FAILURE_CODE_USER_REFUSE
@@ -55,5 +61,7 @@ FAILURE_CODE_USER_REFUSE = 2
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-FailureCode-FAILURE_CODE_USER_REFUSE = 2--><!--Device-FailureCode-FAILURE_CODE_USER_REFUSE = 2-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

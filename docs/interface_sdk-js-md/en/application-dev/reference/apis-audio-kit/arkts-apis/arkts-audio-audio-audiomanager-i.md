@@ -10,6 +10,8 @@ Before calling any API in AudioManager, you must use [getAudioManager](arkts-aud
 
 **Since:** 7
 
+<!--Device-audio-interface AudioManager--><!--Device-audio-interface AudioManager-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## Modules to Import
@@ -27,6 +29,8 @@ getAudioScene(callback: AsyncCallback<AudioScene>): void
 Obtains the audio scene. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
+
+<!--Device-AudioManager-getAudioScene(callback: AsyncCallback<AudioScene>): void--><!--Device-AudioManager-getAudioScene(callback: AsyncCallback<AudioScene>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Communication
 
@@ -62,6 +66,8 @@ Obtains the audio scene. This API uses a promise to return the result.
 
 **Since:** 8
 
+<!--Device-AudioManager-getAudioScene(): Promise<AudioScene>--><!--Device-AudioManager-getAudioScene(): Promise<AudioScene>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Communication
 
 **Return value:**
@@ -91,6 +97,8 @@ getAudioSceneSync(): AudioScene
 Obtains the audio scene. This API returns the result synchronously.
 
 **Since:** 10
+
+<!--Device-AudioManager-getAudioSceneSync(): AudioScene--><!--Device-AudioManager-getAudioSceneSync(): AudioScene-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Communication
 
@@ -126,6 +134,8 @@ Obtains an AudioDebuggingManager instance. <p>&lt;strong&gt;NOTE&lt;/strong&gt;:
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AudioManager-getDebuggingManager(): AudioDebuggingManager--><!--Device-AudioManager-getDebuggingManager(): AudioDebuggingManager-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 **Return value:**
@@ -152,6 +162,8 @@ Obtains a device enhancement manager instance.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioManager-getDeviceEnhanceManager(): AudioDeviceEnhanceManager--><!--Device-AudioManager-getDeviceEnhanceManager(): AudioDeviceEnhanceManager-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.DeviceEnhance
 
@@ -181,6 +193,8 @@ Obtains a recording manager instance. Provides recording strategy management, in
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AudioManager-getRecordingManager(): AudioRecordingManager--><!--Device-AudioManager-getRecordingManager(): AudioRecordingManager-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 **Return value:**
@@ -206,6 +220,8 @@ getRoutingManager(): AudioRoutingManager
 Obtains an AudioRoutingManager instance.
 
 **Since:** 9
+
+<!--Device-AudioManager-getRoutingManager(): AudioRoutingManager--><!--Device-AudioManager-getRoutingManager(): AudioRoutingManager-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -233,7 +249,9 @@ Obtains an AudioSessionManager instance.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+
+<!--Device-AudioManager-getSessionManager(): AudioSessionManager--><!--Device-AudioManager-getSessionManager(): AudioSessionManager-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -261,6 +279,8 @@ Obtains an AudioSpatializationManager instance.
 
 **Since:** 18
 
+<!--Device-AudioManager-getSpatializationManager(): AudioSpatializationManager--><!--Device-AudioManager-getSpatializationManager(): AudioSpatializationManager-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
 **Return value:**
@@ -285,6 +305,8 @@ getStreamManager(): AudioStreamManager
 Obtains an AudioStreamManager instance.
 
 **Since:** 9
+
+<!--Device-AudioManager-getStreamManager(): AudioStreamManager--><!--Device-AudioManager-getStreamManager(): AudioStreamManager-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -312,7 +334,9 @@ Obtains an AudioVolumeManager instance.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 23.
+
+<!--Device-AudioManager-getVolumeManager(): AudioVolumeManager--><!--Device-AudioManager-getVolumeManager(): AudioVolumeManager-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -339,6 +363,8 @@ off(type: 'audioSceneChange', callback?: Callback<AudioScene>): void
 Unsubscribes from the audio scene change event. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
+
+<!--Device-AudioManager-off(type: 'audioSceneChange', callback?: Callback<AudioScene>): void--><!--Device-AudioManager-off(type: 'audioSceneChange', callback?: Callback<AudioScene>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Communication
 
@@ -378,6 +404,8 @@ Unsubscribes from the audio device change event. This API uses an asynchronous c
 **Deprecated since:** 9
 
 **Substitutes:** deviceChange
+
+<!--Device-AudioManager-off(type: 'deviceChange', callback?: Callback<DeviceChangeAction>): void--><!--Device-AudioManager-off(type: 'deviceChange', callback?: Callback<DeviceChangeAction>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -420,6 +448,8 @@ Unsubscribes from the audio interruption event. This API uses an asynchronous ca
 **Deprecated since:** 11
 
 **Substitutes:** audioInterrupt
+
+<!--Device-AudioManager-off(type: 'interrupt', interrupt: AudioInterrupt, callback?: Callback<InterruptAction>): void--><!--Device-AudioManager-off(type: 'interrupt', interrupt: AudioInterrupt, callback?: Callback<InterruptAction>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -472,6 +502,8 @@ Subscribes to the audio scene change event. This API uses an asynchronous callba
 
 **Since:** 20
 
+<!--Device-AudioManager-on(type: 'audioSceneChange', callback: Callback<AudioScene>): void--><!--Device-AudioManager-on(type: 'audioSceneChange', callback: Callback<AudioScene>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Communication
 
 **Parameters:**
@@ -502,6 +534,8 @@ Subscribes to the event indicating that the connection status of an audio device
 **Deprecated since:** 9
 
 **Substitutes:** deviceChange
+
+<!--Device-AudioManager-on(type: 'deviceChange', callback: Callback<DeviceChangeAction>): void--><!--Device-AudioManager-on(type: 'deviceChange', callback: Callback<DeviceChangeAction>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -538,6 +572,8 @@ Same as [on('audioInterrupt')](arkts-audio-audio-audiorenderer-i.md#onaudiointer
 **Deprecated since:** 11
 
 **Substitutes:** audioInterrupt
+
+<!--Device-AudioManager-on(type: 'interrupt', interrupt: AudioInterrupt, callback: Callback<InterruptAction>): void--><!--Device-AudioManager-on(type: 'interrupt', interrupt: AudioInterrupt, callback: Callback<InterruptAction>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -584,6 +620,8 @@ Obtains the value of an audio parameter. This method uses an asynchronous callba
 
 **Deprecated since:** 11
 
+<!--Device-AudioManager-getAudioParameter(key: string, callback: AsyncCallback<string>): void--><!--Device-AudioManager-getAudioParameter(key: string, callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 **Parameters:**
@@ -621,6 +659,8 @@ Obtains the value of an audio parameter. This method uses a promise to return th
 
 **Deprecated since:** 11
 
+<!--Device-AudioManager-getAudioParameter(key: string): Promise<string>--><!--Device-AudioManager-getAudioParameter(key: string): Promise<string>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 **Parameters:**
@@ -656,6 +696,8 @@ Obtains the audio devices with a specific flag. This API uses an asynchronous ca
 **Deprecated since:** 9
 
 **Substitutes:** getDevices
+
+<!--Device-AudioManager-getDevices(deviceFlag: DeviceFlag, callback: AsyncCallback<AudioDeviceDescriptors>): void--><!--Device-AudioManager-getDevices(deviceFlag: DeviceFlag, callback: AsyncCallback<AudioDeviceDescriptors>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -696,6 +738,8 @@ Obtains the audio devices with a specific flag. This API uses a promise to retur
 
 **Substitutes:** getDevices
 
+<!--Device-AudioManager-getDevices(deviceFlag: DeviceFlag): Promise<AudioDeviceDescriptors>--><!--Device-AudioManager-getDevices(deviceFlag: DeviceFlag): Promise<AudioDeviceDescriptors>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 **Parameters:**
@@ -731,6 +775,8 @@ Obtains the maximum volume allowed for a stream. This API uses an asynchronous c
 **Deprecated since:** 9
 
 **Substitutes:** getMaxVolume
+
+<!--Device-AudioManager-getMaxVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void--><!--Device-AudioManager-getMaxVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -771,6 +817,8 @@ Obtains the maximum volume allowed for a stream. This API uses a promise to retu
 
 **Substitutes:** getMaxVolume
 
+<!--Device-AudioManager-getMaxVolume(volumeType: AudioVolumeType): Promise<number>--><!--Device-AudioManager-getMaxVolume(volumeType: AudioVolumeType): Promise<number>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **Parameters:**
@@ -806,6 +854,8 @@ Obtains the minimum volume allowed for a stream. This API uses an asynchronous c
 **Deprecated since:** 9
 
 **Substitutes:** getMinVolume
+
+<!--Device-AudioManager-getMinVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void--><!--Device-AudioManager-getMinVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -846,6 +896,8 @@ Obtains the minimum volume allowed for a stream. This API uses a promise to retu
 
 **Substitutes:** getMinVolume
 
+<!--Device-AudioManager-getMinVolume(volumeType: AudioVolumeType): Promise<number>--><!--Device-AudioManager-getMinVolume(volumeType: AudioVolumeType): Promise<number>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **Parameters:**
@@ -881,6 +933,8 @@ Obtains the ringer mode. This API uses an asynchronous callback to return the re
 **Deprecated since:** 9
 
 **Substitutes:** getRingerMode
+
+<!--Device-AudioManager-getRingerMode(callback: AsyncCallback<AudioRingMode>): void--><!--Device-AudioManager-getRingerMode(callback: AsyncCallback<AudioRingMode>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Communication
 
@@ -920,6 +974,8 @@ Obtains the ringer mode. This API uses a promise to return the result.
 
 **Substitutes:** getRingerMode
 
+<!--Device-AudioManager-getRingerMode(): Promise<AudioRingMode>--><!--Device-AudioManager-getRingerMode(): Promise<AudioRingMode>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Communication
 
 **Return value:**
@@ -949,6 +1005,8 @@ Obtains the volume of a stream. This API uses an asynchronous callback to return
 **Deprecated since:** 9
 
 **Substitutes:** getVolume
+
+<!--Device-AudioManager-getVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void--><!--Device-AudioManager-getVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -989,6 +1047,8 @@ Obtains the volume of a stream. This API uses a promise to return the result.
 
 **Substitutes:** getVolume
 
+<!--Device-AudioManager-getVolume(volumeType: AudioVolumeType): Promise<number>--><!--Device-AudioManager-getVolume(volumeType: AudioVolumeType): Promise<number>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **Parameters:**
@@ -1024,6 +1084,8 @@ Checks whether a stream is active. This API uses an asynchronous callback to ret
 **Deprecated since:** 9
 
 **Substitutes:** isActive
+
+<!--Device-AudioManager-isActive(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void--><!--Device-AudioManager-isActive(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -1064,6 +1126,8 @@ Checks whether a stream is active. This API uses a promise to return the result.
 
 **Substitutes:** isActive
 
+<!--Device-AudioManager-isActive(volumeType: AudioVolumeType): Promise<boolean>--><!--Device-AudioManager-isActive(volumeType: AudioVolumeType): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **Parameters:**
@@ -1099,6 +1163,8 @@ Checks whether a device is active. This API uses an asynchronous callback to ret
 **Deprecated since:** 9
 
 **Substitutes:** [isCommunicationDeviceActive](arkts-audio-audio-audioroutingmanager-i.md#iscommunicationdeviceactive)
+
+<!--Device-AudioManager-isDeviceActive(deviceType: ActiveDeviceType, callback: AsyncCallback<boolean>): void--><!--Device-AudioManager-isDeviceActive(deviceType: ActiveDeviceType, callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -1139,6 +1205,8 @@ Checks whether a device is active. This API uses a promise to return the result.
 
 **Substitutes:** [isCommunicationDeviceActive](arkts-audio-audio-audioroutingmanager-i.md#iscommunicationdeviceactive)
 
+<!--Device-AudioManager-isDeviceActive(deviceType: ActiveDeviceType): Promise<boolean>--><!--Device-AudioManager-isDeviceActive(deviceType: ActiveDeviceType): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 **Parameters:**
@@ -1176,6 +1244,8 @@ Checks whether the microphone is muted. This API uses an asynchronous callback t
 **Substitutes:** isMicrophoneMute
 
 **Required permissions:** ohos.permission.MICROPHONE
+
+<!--Device-AudioManager-isMicrophoneMute(callback: AsyncCallback<boolean>): void--><!--Device-AudioManager-isMicrophoneMute(callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -1217,6 +1287,8 @@ Checks whether the microphone is muted. This API uses a promise to return the re
 
 **Required permissions:** ohos.permission.MICROPHONE
 
+<!--Device-AudioManager-isMicrophoneMute(): Promise<boolean>--><!--Device-AudioManager-isMicrophoneMute(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 **Return value:**
@@ -1246,6 +1318,8 @@ Checks whether a stream is muted. This API uses an asynchronous callback to retu
 **Deprecated since:** 9
 
 **Substitutes:** isMute
+
+<!--Device-AudioManager-isMute(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void--><!--Device-AudioManager-isMute(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -1286,6 +1360,8 @@ Checks whether a stream is muted. This API uses a promise to return the result.
 
 **Substitutes:** isMute
 
+<!--Device-AudioManager-isMute(volumeType: AudioVolumeType): Promise<boolean>--><!--Device-AudioManager-isMute(volumeType: AudioVolumeType): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **Parameters:**
@@ -1321,6 +1397,8 @@ Mutes a volume type. This method uses an asynchronous callback to return the res
 **Deprecated since:** 9
 
 **Substitutes:** [AVVolumePanel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md)
+
+<!--Device-AudioManager-mute(volumeType: AudioVolumeType, mute: boolean, callback: AsyncCallback<void>): void--><!--Device-AudioManager-mute(volumeType: AudioVolumeType, mute: boolean, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -1362,6 +1440,8 @@ Mutes a volume type. This method uses a promise to return the result.
 
 **Substitutes:** [AVVolumePanel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md)
 
+<!--Device-AudioManager-mute(volumeType: AudioVolumeType, mute: boolean): Promise<void>--><!--Device-AudioManager-mute(volumeType: AudioVolumeType, mute: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **Parameters:**
@@ -1398,6 +1478,8 @@ Sets an audio parameter. This method uses an asynchronous callback to return the
 **Deprecated since:** 11
 
 **Required permissions:** ohos.permission.MODIFY_AUDIO_SETTINGS
+
+<!--Device-AudioManager-setAudioParameter(key: string, value: string, callback: AsyncCallback<void>): void--><!--Device-AudioManager-setAudioParameter(key: string, value: string, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -1439,6 +1521,8 @@ Sets an audio parameter. This method uses a promise to return the result.
 
 **Required permissions:** ohos.permission.MODIFY_AUDIO_SETTINGS
 
+<!--Device-AudioManager-setAudioParameter(key: string, value: string): Promise<void>--><!--Device-AudioManager-setAudioParameter(key: string, value: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 **Parameters:**
@@ -1475,6 +1559,8 @@ Sets a device to the active state. This API uses an asynchronous callback to ret
 **Deprecated since:** 9
 
 **Substitutes:** [setCommunicationDevice](arkts-audio-audio-audioroutingmanager-i.md#setcommunicationdevice)
+
+<!--Device-AudioManager-setDeviceActive(deviceType: ActiveDeviceType, active: boolean, callback: AsyncCallback<void>): void--><!--Device-AudioManager-setDeviceActive(deviceType: ActiveDeviceType, active: boolean, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -1516,6 +1602,8 @@ Sets a device to the active state. This API uses a promise to return the result.
 
 **Substitutes:** [setCommunicationDevice](arkts-audio-audio-audioroutingmanager-i.md#setcommunicationdevice)
 
+<!--Device-AudioManager-setDeviceActive(deviceType: ActiveDeviceType, active: boolean): Promise<void>--><!--Device-AudioManager-setDeviceActive(deviceType: ActiveDeviceType, active: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 **Parameters:**
@@ -1552,6 +1640,8 @@ Mutes or unmutes the microphone. This method uses an asynchronous callback to re
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.MICROPHONE
+
+<!--Device-AudioManager-setMicrophoneMute(mute: boolean, callback: AsyncCallback<void>): void--><!--Device-AudioManager-setMicrophoneMute(mute: boolean, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -1592,6 +1682,8 @@ Mutes or unmutes the microphone. This method uses a promise to return the result
 
 **Required permissions:** ohos.permission.MICROPHONE
 
+<!--Device-AudioManager-setMicrophoneMute(mute: boolean): Promise<void>--><!--Device-AudioManager-setMicrophoneMute(mute: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 **Parameters:**
@@ -1627,6 +1719,8 @@ Sets the ringer mode. This method uses an asynchronous callback to return the re
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.ACCESS_NOTIFICATION_POLICY
+
+<!--Device-AudioManager-setRingerMode(mode: AudioRingMode, callback: AsyncCallback<void>): void--><!--Device-AudioManager-setRingerMode(mode: AudioRingMode, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Communication
 
@@ -1667,6 +1761,8 @@ Sets the ringer mode. This method uses a promise to return the result.
 
 **Required permissions:** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
+<!--Device-AudioManager-setRingerMode(mode: AudioRingMode): Promise<void>--><!--Device-AudioManager-setRingerMode(mode: AudioRingMode): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Communication
 
 **Parameters:**
@@ -1704,6 +1800,8 @@ Sets the volume for a volume type. This method uses an asynchronous callback to 
 **Substitutes:** [AVVolumePanel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md)
 
 **Required permissions:** ohos.permission.ACCESS_NOTIFICATION_POLICY
+
+<!--Device-AudioManager-setVolume(volumeType: AudioVolumeType, volume: number, callback: AsyncCallback<void>): void--><!--Device-AudioManager-setVolume(volumeType: AudioVolumeType, volume: number, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -1746,6 +1844,8 @@ Sets the volume for a volume type. This method uses a promise to return the resu
 **Substitutes:** [AVVolumePanel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md)
 
 **Required permissions:** ohos.permission.ACCESS_NOTIFICATION_POLICY
+
+<!--Device-AudioManager-setVolume(volumeType: AudioVolumeType, volume: number): Promise<void>--><!--Device-AudioManager-setVolume(volumeType: AudioVolumeType, volume: number): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 

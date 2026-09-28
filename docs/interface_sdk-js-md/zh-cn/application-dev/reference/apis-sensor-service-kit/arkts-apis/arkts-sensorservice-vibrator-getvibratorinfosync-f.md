@@ -16,6 +16,8 @@ function getVibratorInfoSync(param?: VibratorInfoParam): Array<VibratorInfo>
 
 **起始版本：** 19
 
+<!--Device-vibrator-function getVibratorInfoSync(param?: VibratorInfoParam): Array<VibratorInfo>--><!--Device-vibrator-function getVibratorInfoSync(param?: VibratorInfoParam): Array<VibratorInfo>-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 **参数：**

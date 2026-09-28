@@ -8,6 +8,8 @@ export interface ChildProcessOptions
 
 **起始版本：** 12
 
+<!--Device-unnamed-export interface ChildProcessOptions--><!--Device-unnamed-export interface ChildProcessOptions-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ isolationMode?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ChildProcessOptions-isolationMode?: boolean--><!--Device-ChildProcessOptions-isolationMode?: boolean-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## isolationUid
@@ -45,6 +49,8 @@ isolationUid?: boolean
 **起始版本：** 21
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ChildProcessOptions-isolationUid?: boolean--><!--Device-ChildProcessOptions-isolationUid?: boolean-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

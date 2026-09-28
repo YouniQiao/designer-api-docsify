@@ -8,6 +8,8 @@ export interface ShortcutInfo
 
 **起始版本：** 20
 
+<!--Device-unnamed-export interface ShortcutInfo--><!--Device-unnamed-export interface ShortcutInfo-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
 ## appIndex
@@ -21,6 +23,8 @@ appIndex: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-ShortcutInfo-appIndex: int--><!--Device-ShortcutInfo-appIndex: int-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
@@ -36,6 +40,8 @@ bundleName: string
 
 **起始版本：** 20
 
+<!--Device-ShortcutInfo-bundleName: string--><!--Device-ShortcutInfo-bundleName: string-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
 ## hostAbility
@@ -49,6 +55,8 @@ hostAbility?: string
 **类型：** string
 
 **起始版本：** 20
+
+<!--Device-ShortcutInfo-hostAbility?: string--><!--Device-ShortcutInfo-hostAbility?: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
@@ -64,6 +72,8 @@ icon?: string
 
 **起始版本：** 20
 
+<!--Device-ShortcutInfo-icon?: string--><!--Device-ShortcutInfo-icon?: string-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
 ## iconId
@@ -77,6 +87,8 @@ iconId?: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-ShortcutInfo-iconId?: long--><!--Device-ShortcutInfo-iconId?: long-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
@@ -92,6 +104,8 @@ id: string
 
 **起始版本：** 20
 
+<!--Device-ShortcutInfo-id: string--><!--Device-ShortcutInfo-id: string-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
 ## label
@@ -105,6 +119,8 @@ label?: string
 **类型：** string
 
 **起始版本：** 20
+
+<!--Device-ShortcutInfo-label?: string--><!--Device-ShortcutInfo-label?: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
@@ -120,6 +136,8 @@ labelId?: number
 
 **起始版本：** 20
 
+<!--Device-ShortcutInfo-labelId?: long--><!--Device-ShortcutInfo-labelId?: long-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
 ## moduleName
@@ -133,6 +151,8 @@ moduleName?: string
 **类型：** string
 
 **起始版本：** 20
+
+<!--Device-ShortcutInfo-moduleName?: string--><!--Device-ShortcutInfo-moduleName?: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
@@ -148,6 +168,8 @@ sourceType: number
 
 **起始版本：** 20
 
+<!--Device-ShortcutInfo-sourceType: int--><!--Device-ShortcutInfo-sourceType: int-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
 ## visible
@@ -162,6 +184,8 @@ visible?: boolean
 
 **起始版本：** 20
 
+<!--Device-ShortcutInfo-visible?: boolean--><!--Device-ShortcutInfo-visible?: boolean-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
 ## wants
@@ -175,5 +199,7 @@ wants?: Array<ShortcutWant>
 **类型：** Array&lt;[ShortcutWant](arkts-ability-shortcutinfo-shortcutwant-i.md)&gt;
 
 **起始版本：** 20
+
+<!--Device-ShortcutInfo-wants?: Array<ShortcutWant>--><!--Device-ShortcutInfo-wants?: Array<ShortcutWant>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher

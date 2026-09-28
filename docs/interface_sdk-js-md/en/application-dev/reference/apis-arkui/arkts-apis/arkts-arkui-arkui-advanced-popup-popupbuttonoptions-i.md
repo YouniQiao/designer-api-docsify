@@ -8,6 +8,8 @@ Defines the button attributes and events.
 
 **Since:** 11
 
+<!--Device-unnamed-export interface PopupButtonOptions--><!--Device-unnamed-export interface PopupButtonOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -32,6 +34,8 @@ By default, no operation is performed.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PopupButtonOptions-action?: () => void--><!--Device-PopupButtonOptions-action?: () => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## fontColor
@@ -51,6 +55,8 @@ Default value: **$r('sys.color.ohos_id_color_text_primary_activated')**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PopupButtonOptions-fontColor?: ResourceColor--><!--Device-PopupButtonOptions-fontColor?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -76,6 +82,8 @@ Invalid values are handled as default values.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PopupButtonOptions-fontSize?: number | string | Resource--><!--Device-PopupButtonOptions-fontSize?: number | string | Resource-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## text
@@ -93,5 +101,7 @@ Text of the button.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PopupButtonOptions-text: ResourceStr--><!--Device-PopupButtonOptions-text: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

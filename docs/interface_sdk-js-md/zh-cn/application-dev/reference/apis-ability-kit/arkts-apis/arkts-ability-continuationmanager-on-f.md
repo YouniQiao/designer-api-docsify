@@ -26,6 +26,8 @@ function on(type: 'deviceSelected', token: number, callback: Callback<Array<Cont
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-continuationManager-function on(type: 'deviceSelected', token: number, callback: Callback<Array<ContinuationResult>>): void--><!--Device-continuationManager-function on(type: 'deviceSelected', token: number, callback: Callback<Array<ContinuationResult>>): void-End-->
+
 **系统能力：** SystemCapability.Ability.DistributedAbilityManager
 
 **参数：**
@@ -87,6 +89,8 @@ function on(type: 'deviceUnselected', token: number, callback: Callback<Array<Co
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-continuationManager-function on(type: 'deviceUnselected', token: number, callback: Callback<Array<ContinuationResult>>): void--><!--Device-continuationManager-function on(type: 'deviceUnselected', token: number, callback: Callback<Array<ContinuationResult>>): void-End-->
+
 **系统能力：** SystemCapability.Ability.DistributedAbilityManager
 
 **参数：**
@@ -145,6 +149,8 @@ function on(type: 'deviceConnect', callback: Callback<ContinuationResult>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-continuationManager-function on(type: 'deviceConnect', callback: Callback<ContinuationResult>): void--><!--Device-continuationManager-function on(type: 'deviceConnect', callback: Callback<ContinuationResult>): void-End-->
+
 **系统能力：** SystemCapability.Ability.DistributedAbilityManager
 
 **参数：**
@@ -182,6 +188,8 @@ function on(type: 'deviceDisconnect', callback: Callback<string>): void
 **替代接口：** [on](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#ondevicestatechange)(type: 'deviceStateChange', callback: Callback&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt;)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-continuationManager-function on(type: 'deviceDisconnect', callback: Callback<string>): void--><!--Device-continuationManager-function on(type: 'deviceDisconnect', callback: Callback<string>): void-End-->
 
 **系统能力：** SystemCapability.Ability.DistributedAbilityManager
 

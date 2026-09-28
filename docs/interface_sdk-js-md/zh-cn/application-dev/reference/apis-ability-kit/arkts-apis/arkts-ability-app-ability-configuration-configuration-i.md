@@ -8,6 +8,8 @@ export interface Configuration
 
 **起始版本：** 9
 
+<!--Device-unnamed-export interface Configuration--><!--Device-unnamed-export interface Configuration-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityBase
 
 ## 导入模块
@@ -36,7 +38,9 @@ colorMode?: ConfigurationConstant.ColorMode
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Configuration-colorMode?: ConfigurationConstant.ColorMode--><!--Device-Configuration-colorMode?: ConfigurationConstant.ColorMode-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -60,7 +64,9 @@ direction?: ConfigurationConstant.Direction
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Configuration-direction?: ConfigurationConstant.Direction--><!--Device-Configuration-direction?: ConfigurationConstant.Direction-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -78,7 +84,9 @@ displayId?: number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Configuration-displayId?: long--><!--Device-Configuration-displayId?: long-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -94,7 +102,9 @@ fontId?: string
 
 **起始版本：** 14
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-Configuration-fontId?: string--><!--Device-Configuration-fontId?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -112,7 +122,9 @@ fontSizeScale?: number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Configuration-fontSizeScale?: double--><!--Device-Configuration-fontSizeScale?: double-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -128,7 +140,9 @@ fontWeightScale?: number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Configuration-fontWeightScale?: double--><!--Device-Configuration-fontWeightScale?: double-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -144,7 +158,9 @@ hasPointerDevice?: boolean
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Configuration-hasPointerDevice?: boolean--><!--Device-Configuration-hasPointerDevice?: boolean-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -164,7 +180,9 @@ language?: string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Configuration-language?: string--><!--Device-Configuration-language?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -182,7 +200,9 @@ locale?: Intl.Locale
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-Configuration-locale?: Intl.Locale--><!--Device-Configuration-locale?: Intl.Locale-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -198,7 +218,9 @@ mcc?: string
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Configuration-mcc?: string--><!--Device-Configuration-mcc?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -214,7 +236,9 @@ mnc?: string
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Configuration-mnc?: string--><!--Device-Configuration-mnc?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -244,7 +268,9 @@ screenDensity?: ConfigurationConstant.ScreenDensity
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Configuration-screenDensity?: ConfigurationConstant.ScreenDensity--><!--Device-Configuration-screenDensity?: ConfigurationConstant.ScreenDensity-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 

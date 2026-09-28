@@ -8,6 +8,8 @@ export enum CallTransferType
 
 **起始版本：** 26.0.0
 
+<!--Device-call-export enum CallTransferType--><!--Device-call-export enum CallTransferType-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 ## TRANSFER_TYPE_UNCONDITIONAL
@@ -19,6 +21,8 @@ TRANSFER_TYPE_UNCONDITIONAL = 0
 无条件转移。
 
 **起始版本：** 26.0.0
+
+<!--Device-CallTransferType-TRANSFER_TYPE_UNCONDITIONAL = 0--><!--Device-CallTransferType-TRANSFER_TYPE_UNCONDITIONAL = 0-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -32,6 +36,8 @@ TRANSFER_TYPE_BUSY = 1
 
 **起始版本：** 26.0.0
 
+<!--Device-CallTransferType-TRANSFER_TYPE_BUSY = 1--><!--Device-CallTransferType-TRANSFER_TYPE_BUSY = 1-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 ## TRANSFER_TYPE_NO_REPLY
@@ -44,6 +50,8 @@ TRANSFER_TYPE_NO_REPLY = 2
 
 **起始版本：** 26.0.0
 
+<!--Device-CallTransferType-TRANSFER_TYPE_NO_REPLY = 2--><!--Device-CallTransferType-TRANSFER_TYPE_NO_REPLY = 2-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 ## TRANSFER_TYPE_NOT_REACHABLE
@@ -55,5 +63,7 @@ TRANSFER_TYPE_NOT_REACHABLE = 3
 无法访问转移。
 
 **起始版本：** 26.0.0
+
+<!--Device-CallTransferType-TRANSFER_TYPE_NOT_REACHABLE = 3--><!--Device-CallTransferType-TRANSFER_TYPE_NOT_REACHABLE = 3-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager

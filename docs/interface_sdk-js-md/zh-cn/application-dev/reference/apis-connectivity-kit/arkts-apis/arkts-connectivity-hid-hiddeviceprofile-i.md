@@ -12,6 +12,8 @@ interface HidDeviceProfile extends BaseProfile
 
 **起始版本：** 23
 
+<!--Device-hid-interface HidDeviceProfile extends BaseProfile--><!--Device-hid-interface HidDeviceProfile extends BaseProfile-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -35,6 +37,8 @@ connect(deviceId: BluetoothAddress): void
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HidDeviceProfile-connect(deviceId: BluetoothAddress): void--><!--Device-HidDeviceProfile-connect(deviceId: BluetoothAddress): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -88,6 +92,8 @@ disconnect(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HidDeviceProfile-disconnect(): void--><!--Device-HidDeviceProfile-disconnect(): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **错误码：**
@@ -124,6 +130,8 @@ offGetReport(callback?: Callback<GetReportData>): void
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HidDeviceProfile-offGetReport(callback?: Callback<GetReportData>): void--><!--Device-HidDeviceProfile-offGetReport(callback?: Callback<GetReportData>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -169,6 +177,8 @@ offInterruptDataReceived(callback?: Callback<InterruptData>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HidDeviceProfile-offInterruptDataReceived(callback?: Callback<InterruptData>): void--><!--Device-HidDeviceProfile-offInterruptDataReceived(callback?: Callback<InterruptData>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -212,6 +222,8 @@ offSetProtocol(callback?: Callback<ProtocolData>): void
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HidDeviceProfile-offSetProtocol(callback?: Callback<ProtocolData>): void--><!--Device-HidDeviceProfile-offSetProtocol(callback?: Callback<ProtocolData>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -257,6 +269,8 @@ offSetReport(callback?: Callback<SetReportData>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HidDeviceProfile-offSetReport(callback?: Callback<SetReportData>): void--><!--Device-HidDeviceProfile-offSetReport(callback?: Callback<SetReportData>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -300,6 +314,8 @@ offVirtualCableUnplug(callback?: Callback<void>): void
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HidDeviceProfile-offVirtualCableUnplug(callback?: Callback<void>): void--><!--Device-HidDeviceProfile-offVirtualCableUnplug(callback?: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -345,6 +361,8 @@ onGetReport(callback: Callback<GetReportData>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HidDeviceProfile-onGetReport(callback: Callback<GetReportData>): void--><!--Device-HidDeviceProfile-onGetReport(callback: Callback<GetReportData>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -387,6 +405,8 @@ onInterruptDataReceived(callback: Callback<InterruptData>): void
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HidDeviceProfile-onInterruptDataReceived(callback: Callback<InterruptData>): void--><!--Device-HidDeviceProfile-onInterruptDataReceived(callback: Callback<InterruptData>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -431,6 +451,8 @@ onSetProtocol(callback: Callback<ProtocolData>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HidDeviceProfile-onSetProtocol(callback: Callback<ProtocolData>): void--><!--Device-HidDeviceProfile-onSetProtocol(callback: Callback<ProtocolData>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -474,6 +496,8 @@ onSetReport(callback: Callback<SetReportData>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HidDeviceProfile-onSetReport(callback: Callback<SetReportData>): void--><!--Device-HidDeviceProfile-onSetReport(callback: Callback<SetReportData>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -516,6 +540,8 @@ onVirtualCableUnplug(callback: Callback<void>): void
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HidDeviceProfile-onVirtualCableUnplug(callback: Callback<void>): void--><!--Device-HidDeviceProfile-onVirtualCableUnplug(callback: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -561,6 +587,8 @@ registerHidDevice(sdp: HidDeviceSdp, inQos: HidDeviceQos, outQos: HidDeviceQos, 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HidDeviceProfile-registerHidDevice(sdp: HidDeviceSdp, inQos: HidDeviceQos, outQos: HidDeviceQos, callback: Callback<boolean>): void--><!--Device-HidDeviceProfile-registerHidDevice(sdp: HidDeviceSdp, inQos: HidDeviceQos, outQos: HidDeviceQos, callback: Callback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -651,6 +679,8 @@ replyReport(type: ReportType, id: number, reportData: Uint8Array): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HidDeviceProfile-replyReport(type: ReportType, id: int, reportData: Uint8Array): void--><!--Device-HidDeviceProfile-replyReport(type: ReportType, id: int, reportData: Uint8Array): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -702,6 +732,8 @@ reportError(error: ErrorReason): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HidDeviceProfile-reportError(error: ErrorReason): void--><!--Device-HidDeviceProfile-reportError(error: ErrorReason): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -748,6 +780,8 @@ sendReport(id: number, reportData: Uint8Array): void
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HidDeviceProfile-sendReport(id: int, reportData: Uint8Array): void--><!--Device-HidDeviceProfile-sendReport(id: int, reportData: Uint8Array): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -797,6 +831,8 @@ unregisterHidDevice(): void
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HidDeviceProfile-unregisterHidDevice(): void--><!--Device-HidDeviceProfile-unregisterHidDevice(): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

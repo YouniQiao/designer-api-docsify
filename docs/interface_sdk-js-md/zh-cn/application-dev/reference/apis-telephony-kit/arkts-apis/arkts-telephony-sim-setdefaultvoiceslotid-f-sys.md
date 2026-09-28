@@ -18,6 +18,8 @@ Set the card slot ID of the default voice service.
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-sim-function setDefaultVoiceSlotId(slotId: int, callback: AsyncCallback<void>): void--><!--Device-sim-function setDefaultVoiceSlotId(slotId: int, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -68,6 +70,8 @@ Set the card slot ID of the default voice service.
 **起始版本：** 7
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
+
+<!--Device-sim-function setDefaultVoiceSlotId(slotId: int): Promise<void>--><!--Device-sim-function setDefaultVoiceSlotId(slotId: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

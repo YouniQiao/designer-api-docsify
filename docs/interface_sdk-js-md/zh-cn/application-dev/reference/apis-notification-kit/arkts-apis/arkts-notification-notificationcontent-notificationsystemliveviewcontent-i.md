@@ -14,6 +14,8 @@ export interface NotificationSystemLiveViewContent extends NotificationBasicCont
 
 **起始版本：** 11
 
+<!--Device-unnamed-export interface NotificationSystemLiveViewContent extends NotificationBasicContent--><!--Device-unnamed-export interface NotificationSystemLiveViewContent extends NotificationBasicContent-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## button
@@ -27,6 +29,8 @@ button?: NotificationButton
 **类型：** [NotificationButton](arkts-notification-notificationcontent-notificationbutton-i.md)
 
 **起始版本：** 11
+
+<!--Device-NotificationSystemLiveViewContent-button?: NotificationButton--><!--Device-NotificationSystemLiveViewContent-button?: NotificationButton-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -42,6 +46,8 @@ capsule?: NotificationCapsule
 
 **起始版本：** 11
 
+<!--Device-NotificationSystemLiveViewContent-capsule?: NotificationCapsule--><!--Device-NotificationSystemLiveViewContent-capsule?: NotificationCapsule-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## progress
@@ -55,6 +61,8 @@ progress?: NotificationProgress
 **类型：** [NotificationProgress](arkts-notification-notificationcontent-notificationprogress-i.md)
 
 **起始版本：** 11
+
+<!--Device-NotificationSystemLiveViewContent-progress?: NotificationProgress--><!--Device-NotificationSystemLiveViewContent-progress?: NotificationProgress-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -70,6 +78,8 @@ time?: NotificationTime
 
 **起始版本：** 11
 
+<!--Device-NotificationSystemLiveViewContent-time?: NotificationTime--><!--Device-NotificationSystemLiveViewContent-time?: NotificationTime-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## typeCode
@@ -83,5 +93,7 @@ typeCode: number
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-NotificationSystemLiveViewContent-typeCode: int--><!--Device-NotificationSystemLiveViewContent-typeCode: int-End-->
 
 **系统能力：** SystemCapability.Notification.Notification

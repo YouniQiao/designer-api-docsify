@@ -8,6 +8,8 @@ MIFARE Classic标签存储大小的定义。
 
 **起始版本：** 9
 
+<!--Device-tag-enum MifareClassicSize--><!--Device-tag-enum MifareClassicSize-End-->
+
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 ## MC_SIZE_MINI
@@ -20,7 +22,9 @@ MC_SIZE_MINI = 320
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MifareClassicSize-MC_SIZE_MINI = 320--><!--Device-MifareClassicSize-MC_SIZE_MINI = 320-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -34,7 +38,9 @@ MC_SIZE_1K = 1024
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MifareClassicSize-MC_SIZE_1K = 1024--><!--Device-MifareClassicSize-MC_SIZE_1K = 1024-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -48,7 +54,9 @@ MC_SIZE_2K = 2048
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MifareClassicSize-MC_SIZE_2K = 2048--><!--Device-MifareClassicSize-MC_SIZE_2K = 2048-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -62,6 +70,8 @@ MC_SIZE_4K = 4096
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MifareClassicSize-MC_SIZE_4K = 4096--><!--Device-MifareClassicSize-MC_SIZE_4K = 4096-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag

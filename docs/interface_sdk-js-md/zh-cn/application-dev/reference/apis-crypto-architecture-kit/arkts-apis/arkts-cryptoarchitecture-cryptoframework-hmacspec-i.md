@@ -14,6 +14,8 @@ interface HmacSpec extends MacSpec
 
 **起始版本：** 18
 
+<!--Device-cryptoFramework-interface HmacSpec extends MacSpec--><!--Device-cryptoFramework-interface HmacSpec extends MacSpec-End-->
+
 **系统能力：** SystemCapability.Security.CryptoFramework.Mac
 
 ## 导入模块
@@ -34,6 +36,8 @@ mdName: string
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-HmacSpec-mdName: string--><!--Device-HmacSpec-mdName: string-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Mac

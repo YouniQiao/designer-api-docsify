@@ -8,6 +8,8 @@ interface AppAccountManager
 
 **起始版本：** 7
 
+<!--Device-appAccount-interface AppAccountManager--><!--Device-appAccount-interface AppAccountManager-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 ## 导入模块
@@ -25,6 +27,8 @@ auth(name: string, owner: string, authType: string, callback: AuthCallback): voi
 对应用账号进行鉴权以获取授权令牌。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-AppAccountManager-auth(name: string, owner: string, authType: string, callback: AuthCallback): void--><!--Device-AppAccountManager-auth(name: string, owner: string, authType: string, callback: AuthCallback): void-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -113,6 +117,8 @@ auth(
 
 **起始版本：** 9
 
+<!--Device-AppAccountManager-auth(      name: string,      owner: string,      authType: string,      options: Record<string, Object>,      callback: AuthCallback    ): void--><!--Device-AppAccountManager-auth(      name: string,      owner: string,      authType: string,      options: Record<string, Object>,      callback: AuthCallback    ): void-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -196,6 +202,8 @@ checkAccountLabels(name: string, owner: string, labels: Array<string>, callback:
 
 **起始版本：** 9
 
+<!--Device-AppAccountManager-checkAccountLabels(name: string, owner: string, labels: Array<string>, callback: AsyncCallback<boolean>): void--><!--Device-AppAccountManager-checkAccountLabels(name: string, owner: string, labels: Array<string>, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -251,6 +259,8 @@ checkAccountLabels(name: string, owner: string, labels: Array<string>): Promise<
 检查指定应用账号是否满足特定的标签集合。使用Promise异步回调。该方法依赖目标应用的认证器提供标签检查的能力。
 
 **起始版本：** 9
+
+<!--Device-AppAccountManager-checkAccountLabels(name: string, owner: string, labels: Array<string>): Promise<boolean>--><!--Device-AppAccountManager-checkAccountLabels(name: string, owner: string, labels: Array<string>): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -309,6 +319,8 @@ checkAppAccess(name: string, bundleName: string, callback: AsyncCallback<boolean
 
 **起始版本：** 9
 
+<!--Device-AppAccountManager-checkAppAccess(name: string, bundleName: string, callback: AsyncCallback<boolean>): void--><!--Device-AppAccountManager-checkAppAccess(name: string, bundleName: string, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -360,6 +372,8 @@ checkAppAccess(name: string, bundleName: string): Promise<boolean>
 
 **起始版本：** 9
 
+<!--Device-AppAccountManager-checkAppAccess(name: string, bundleName: string): Promise<boolean>--><!--Device-AppAccountManager-checkAppAccess(name: string, bundleName: string): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -410,6 +424,8 @@ checkAuthTokenVisibility(name: string, authType: string, bundleName: string, cal
 检查指定应用账号的特定鉴权类型的授权令牌对指定应用的可见性。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-AppAccountManager-checkAuthTokenVisibility(name: string, authType: string, bundleName: string, callback: AsyncCallback<boolean>): void--><!--Device-AppAccountManager-checkAuthTokenVisibility(name: string, authType: string, bundleName: string, callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -463,6 +479,8 @@ checkAuthTokenVisibility(name: string, authType: string, bundleName: string): Pr
 检查指定应用账号的特定鉴权类型的授权令牌对指定应用的可见性。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-AppAccountManager-checkAuthTokenVisibility(name: string, authType: string, bundleName: string): Promise<boolean>--><!--Device-AppAccountManager-checkAuthTokenVisibility(name: string, authType: string, bundleName: string): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -520,6 +538,8 @@ checkDataSyncEnabled(name: string, callback: AsyncCallback<boolean>): void
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-AppAccountManager-checkDataSyncEnabled(name: string, callback: AsyncCallback<boolean>): void--><!--Device-AppAccountManager-checkDataSyncEnabled(name: string, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -572,6 +592,8 @@ checkDataSyncEnabled(name: string): Promise<boolean>
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-AppAccountManager-checkDataSyncEnabled(name: string): Promise<boolean>--><!--Device-AppAccountManager-checkDataSyncEnabled(name: string): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -623,6 +645,8 @@ createAccount(name: string, callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
+<!--Device-AppAccountManager-createAccount(name: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-createAccount(name: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -672,6 +696,8 @@ createAccount(name: string, options: CreateAccountOptions, callback: AsyncCallba
 根据账号名和可选项创建应用账号。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-AppAccountManager-createAccount(name: string, options: CreateAccountOptions, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-createAccount(name: string, options: CreateAccountOptions, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -729,6 +755,8 @@ createAccount(name: string, options?: CreateAccountOptions): Promise<void>
 
 **起始版本：** 9
 
+<!--Device-AppAccountManager-createAccount(name: string, options?: CreateAccountOptions): Promise<void>--><!--Device-AppAccountManager-createAccount(name: string, options?: CreateAccountOptions): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -785,6 +813,8 @@ createAccountImplicitly(owner: string, callback: AuthCallback): void
 根据指定的账号所有者，由认证器自动完成应用账号创建流程。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-AppAccountManager-createAccountImplicitly(owner: string, callback: AuthCallback): void--><!--Device-AppAccountManager-createAccountImplicitly(owner: string, callback: AuthCallback): void-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -863,6 +893,8 @@ createAccountImplicitly(owner: string, options: CreateAccountImplicitlyOptions, 
 根据指定的账号所有者和可选项，由认证器自动完成应用账号创建流程。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-AppAccountManager-createAccountImplicitly(owner: string, options: CreateAccountImplicitlyOptions, callback: AuthCallback): void--><!--Device-AppAccountManager-createAccountImplicitly(owner: string, options: CreateAccountImplicitlyOptions, callback: AuthCallback): void-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -945,6 +977,8 @@ deleteAuthToken(name: string, owner: string, authType: string, token: string, ca
 
 **起始版本：** 9
 
+<!--Device-AppAccountManager-deleteAuthToken(name: string, owner: string, authType: string, token: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-deleteAuthToken(name: string, owner: string, authType: string, token: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -998,6 +1032,8 @@ deleteAuthToken(name: string, owner: string, authType: string, token: string): P
 删除指定应用账号的特定鉴权类型的授权令牌。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-AppAccountManager-deleteAuthToken(name: string, owner: string, authType: string, token: string): Promise<void>--><!--Device-AppAccountManager-deleteAuthToken(name: string, owner: string, authType: string, token: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -1053,6 +1089,8 @@ deleteCredential(name: string, credentialType: string, callback: AsyncCallback<v
 
 **起始版本：** 9
 
+<!--Device-AppAccountManager-deleteCredential(name: string, credentialType: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-deleteCredential(name: string, credentialType: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -1103,6 +1141,8 @@ deleteCredential(name: string, credentialType: string): Promise<void>
 删除指定应用账号的特定类型的凭据信息。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-AppAccountManager-deleteCredential(name: string, credentialType: string): Promise<void>--><!--Device-AppAccountManager-deleteCredential(name: string, credentialType: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -1156,6 +1196,8 @@ getAccountsByOwner(owner: string, callback: AsyncCallback<Array<AppAccountInfo>>
 
 **起始版本：** 9
 
+<!--Device-AppAccountManager-getAccountsByOwner(owner: string, callback: AsyncCallback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-getAccountsByOwner(owner: string, callback: AsyncCallback<Array<AppAccountInfo>>): void-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -1204,6 +1246,8 @@ getAccountsByOwner(owner: string): Promise<Array<AppAccountInfo>>
 根据应用账号所有者获取调用方可访问的应用账号列表。使用Promise异步回调。此方法适用于以下账户：<br> 本应用的账户。<br> 第三方应用的账户。要获取此类信息，<br> 您的应用必须已获得第三方应用的授权，或<br> 已获得ohos.permission.GET_ALL_APP_ACCOUNTS权限。
 
 **起始版本：** 9
+
+<!--Device-AppAccountManager-getAccountsByOwner(owner: string): Promise<Array<AppAccountInfo>>--><!--Device-AppAccountManager-getAccountsByOwner(owner: string): Promise<Array<AppAccountInfo>>-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -1255,6 +1299,8 @@ getAllAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void
 
 **起始版本：** 9
 
+<!--Device-AppAccountManager-getAllAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-getAllAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -1300,6 +1346,8 @@ getAllAccounts(): Promise<Array<AppAccountInfo>>
 获取所有可访问的应用账号信息。使用Promise异步回调。此方法适用于以下账户：<br> 本应用的账户。<br> 第三方应用的账户。要获取此类信息，<br> 您的应用必须已获得第三方应用的授权，或<br> 已获得ohos.permission.GET_ALL_APP_ACCOUNTS权限。
 
 **起始版本：** 9
+
+<!--Device-AppAccountManager-getAllAccounts(): Promise<Array<AppAccountInfo>>--><!--Device-AppAccountManager-getAllAccounts(): Promise<Array<AppAccountInfo>>-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -1356,6 +1404,8 @@ getAllAccounts(owner: string, callback: AsyncCallback<Array<AppAccountInfo>>): v
 
 **需要权限：** ohos.permission.GET_ALL_APP_ACCOUNTS
 
+<!--Device-AppAccountManager-getAllAccounts(owner: string, callback: AsyncCallback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-getAllAccounts(owner: string, callback: AsyncCallback<Array<AppAccountInfo>>): void-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -1403,6 +1453,8 @@ getAllAccounts(owner: string): Promise<Array<AppAccountInfo>>
 
 **需要权限：** ohos.permission.GET_ALL_APP_ACCOUNTS
 
+<!--Device-AppAccountManager-getAllAccounts(owner: string): Promise<Array<AppAccountInfo>>--><!--Device-AppAccountManager-getAllAccounts(owner: string): Promise<Array<AppAccountInfo>>-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -1439,6 +1491,8 @@ getAllAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<Auth
 获取指定账号对调用方可见的所有授权令牌。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-AppAccountManager-getAllAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<AuthTokenInfo>>): void--><!--Device-AppAccountManager-getAllAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<AuthTokenInfo>>): void-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -1491,6 +1545,8 @@ getAllAuthTokens(name: string, owner: string): Promise<Array<AuthTokenInfo>>
 
 **起始版本：** 9
 
+<!--Device-AppAccountManager-getAllAuthTokens(name: string, owner: string): Promise<Array<AuthTokenInfo>>--><!--Device-AppAccountManager-getAllAuthTokens(name: string, owner: string): Promise<Array<AuthTokenInfo>>-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -1542,6 +1598,8 @@ getAuthCallback(sessionId: string, callback: AsyncCallback<AuthCallback>): void
 获取鉴权会话的认证器回调对象。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-AppAccountManager-getAuthCallback(sessionId: string, callback: AsyncCallback<AuthCallback>): void--><!--Device-AppAccountManager-getAuthCallback(sessionId: string, callback: AsyncCallback<AuthCallback>): void-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -1607,6 +1665,8 @@ getAuthCallback(sessionId: string): Promise<AuthCallback>
 获取鉴权会话的认证器回调对象。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-AppAccountManager-getAuthCallback(sessionId: string): Promise<AuthCallback>--><!--Device-AppAccountManager-getAuthCallback(sessionId: string): Promise<AuthCallback>-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -1674,6 +1734,8 @@ getAuthList(name: string, authType: string, callback: AsyncCallback<Array<string
 
 **起始版本：** 9
 
+<!--Device-AppAccountManager-getAuthList(name: string, authType: string, callback: AsyncCallback<Array<string>>): void--><!--Device-AppAccountManager-getAuthList(name: string, authType: string, callback: AsyncCallback<Array<string>>): void-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -1724,6 +1786,8 @@ getAuthList(name: string, authType: string): Promise<Array<string>>
 获取指定应用账号的特定鉴权类型的授权列表，即被授权的包名数组（令牌的授权列表通过[setAuthTokenVisibility](#setauthtokenvisibility)来设置）。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-AppAccountManager-getAuthList(name: string, authType: string): Promise<Array<string>>--><!--Device-AppAccountManager-getAuthList(name: string, authType: string): Promise<Array<string>>-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -1776,6 +1840,8 @@ getAuthToken(name: string, owner: string, authType: string, callback: AsyncCallb
 获取指定应用账号的特定鉴权类型的授权令牌。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-AppAccountManager-getAuthToken(name: string, owner: string, authType: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getAuthToken(name: string, owner: string, authType: string, callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -1830,6 +1896,8 @@ getAuthToken(name: string, owner: string, authType: string): Promise<string>
 
 **起始版本：** 9
 
+<!--Device-AppAccountManager-getAuthToken(name: string, owner: string, authType: string): Promise<string>--><!--Device-AppAccountManager-getAuthToken(name: string, owner: string, authType: string): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -1883,6 +1951,8 @@ getCredential(name: string, credentialType: string, callback: AsyncCallback<stri
 
 **起始版本：** 9
 
+<!--Device-AppAccountManager-getCredential(name: string, credentialType: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getCredential(name: string, credentialType: string, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -1933,6 +2003,8 @@ getCredential(name: string, credentialType: string): Promise<string>
 获取指定应用账号的凭据。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-AppAccountManager-getCredential(name: string, credentialType: string): Promise<string>--><!--Device-AppAccountManager-getCredential(name: string, credentialType: string): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -1986,6 +2058,8 @@ getCustomData(name: string, key: string, callback: AsyncCallback<string>): void
 
 **起始版本：** 9
 
+<!--Device-AppAccountManager-getCustomData(name: string, key: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getCustomData(name: string, key: string, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -2036,6 +2110,8 @@ getCustomData(name: string, key: string): Promise<string>
 根据指定键名获取特定应用账号的自定义数据。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-AppAccountManager-getCustomData(name: string, key: string): Promise<string>--><!--Device-AppAccountManager-getCustomData(name: string, key: string): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -2089,6 +2165,8 @@ getCustomDataSync(name: string, key: string): string
 
 **起始版本：** 9
 
+<!--Device-AppAccountManager-getCustomDataSync(name: string, key: string): string--><!--Device-AppAccountManager-getCustomDataSync(name: string, key: string): string-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -2137,6 +2215,8 @@ off(type: 'accountChange', callback?: Callback<Array<AppAccountInfo>>): void
 取消订阅账号信息变更事件。
 
 **起始版本：** 9
+
+<!--Device-AppAccountManager-off(type: 'accountChange', callback?: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-off(type: 'accountChange', callback?: Callback<Array<AppAccountInfo>>): void-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -2198,6 +2278,8 @@ off(type: 'change', callback?: Callback<Array<AppAccountInfo>>): void
 
 **替代接口：** [off](#offaccountchange)(type: 'accountChange', callback?: Callback&lt;Array&lt;AppAccountInfo&gt;&gt;)
 
+<!--Device-AppAccountManager-off(type: 'change', callback?: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-off(type: 'change', callback?: Callback<Array<AppAccountInfo>>): void-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -2236,6 +2318,8 @@ on(type: 'accountChange', owners: Array<string>, callback: Callback<Array<AppAcc
 订阅指定应用的账号信息变更事件。
 
 **起始版本：** 9
+
+<!--Device-AppAccountManager-on(type: 'accountChange', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-on(type: 'accountChange', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -2292,6 +2376,8 @@ on(type: 'change', owners: Array<string>, callback: Callback<Array<AppAccountInf
 
 **替代接口：** [on](#onaccountchange)(type: 'accountChange', owners: Array&lt;string&gt;, callback: Callback&lt;Array&lt;AppAccountInfo&gt;&gt;)
 
+<!--Device-AppAccountManager-on(type: 'change', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-on(type: 'change', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -2328,6 +2414,8 @@ queryAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>
 获取指定应用的认证器信息。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-AppAccountManager-queryAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>): void--><!--Device-AppAccountManager-queryAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>): void-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -2378,6 +2466,8 @@ queryAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>
 获取指定应用的认证器信息。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-AppAccountManager-queryAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>--><!--Device-AppAccountManager-queryAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -2430,6 +2520,8 @@ removeAccount(name: string, callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
+<!--Device-AppAccountManager-removeAccount(name: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-removeAccount(name: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -2478,6 +2570,8 @@ removeAccount(name: string): Promise<void>
 删除应用账号。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-AppAccountManager-removeAccount(name: string): Promise<void>--><!--Device-AppAccountManager-removeAccount(name: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -2528,6 +2622,8 @@ selectAccountsByOptions(options: SelectAccountsOptions, callback: AsyncCallback<
 根据选项选择调用方可访问的账号列表。使用callback异步回调。如果选项中包含标签约束，则该方法依赖目标应用的认证器提供标签检查的能力。
 
 **起始版本：** 9
+
+<!--Device-AppAccountManager-selectAccountsByOptions(options: SelectAccountsOptions, callback: AsyncCallback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-selectAccountsByOptions(options: SelectAccountsOptions, callback: AsyncCallback<Array<AppAccountInfo>>): void-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -2584,6 +2680,8 @@ selectAccountsByOptions(options: SelectAccountsOptions): Promise<Array<AppAccoun
 
 **起始版本：** 9
 
+<!--Device-AppAccountManager-selectAccountsByOptions(options: SelectAccountsOptions): Promise<Array<AppAccountInfo>>--><!--Device-AppAccountManager-selectAccountsByOptions(options: SelectAccountsOptions): Promise<Array<AppAccountInfo>>-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -2638,6 +2736,8 @@ setAppAccess(name: string, bundleName: string, isAccessible: boolean, callback: 
 
 **起始版本：** 9
 
+<!--Device-AppAccountManager-setAppAccess(name: string, bundleName: string, isAccessible: boolean, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setAppAccess(name: string, bundleName: string, isAccessible: boolean, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -2689,6 +2789,8 @@ setAppAccess(name: string, bundleName: string, isAccessible: boolean): Promise<v
 设置指定应用对特定账号的数据访问权限。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-AppAccountManager-setAppAccess(name: string, bundleName: string, isAccessible: boolean): Promise<void>--><!--Device-AppAccountManager-setAppAccess(name: string, bundleName: string, isAccessible: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -2743,6 +2845,8 @@ setAuthenticatorProperties(owner: string, callback: AuthCallback): void
 
 **起始版本：** 9
 
+<!--Device-AppAccountManager-setAuthenticatorProperties(owner: string, callback: AuthCallback): void--><!--Device-AppAccountManager-setAuthenticatorProperties(owner: string, callback: AuthCallback): void-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -2796,6 +2900,8 @@ setAuthenticatorProperties(owner: string, options: SetPropertiesOptions, callbac
 设置指定应用的认证器属性。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-AppAccountManager-setAuthenticatorProperties(owner: string, options: SetPropertiesOptions, callback: AuthCallback): void--><!--Device-AppAccountManager-setAuthenticatorProperties(owner: string, options: SetPropertiesOptions, callback: AuthCallback): void-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -2853,6 +2959,8 @@ setAuthToken(name: string, authType: string, token: string, callback: AsyncCallb
 
 **起始版本：** 9
 
+<!--Device-AppAccountManager-setAuthToken(name: string, authType: string, token: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setAuthToken(name: string, authType: string, token: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -2904,6 +3012,8 @@ setAuthToken(name: string, authType: string, token: string): Promise<void>
 为指定应用账号设置特定鉴权类型的授权令牌。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-AppAccountManager-setAuthToken(name: string, authType: string, token: string): Promise<void>--><!--Device-AppAccountManager-setAuthToken(name: string, authType: string, token: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -2964,6 +3074,8 @@ setAuthTokenVisibility(
 
 **起始版本：** 9
 
+<!--Device-AppAccountManager-setAuthTokenVisibility(      name: string,      authType: string,      bundleName: string,      isVisible: boolean,      callback: AsyncCallback<void>    ): void--><!--Device-AppAccountManager-setAuthTokenVisibility(      name: string,      authType: string,      bundleName: string,      isVisible: boolean,      callback: AsyncCallback<void>    ): void-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -3018,6 +3130,8 @@ setAuthTokenVisibility(name: string, authType: string, bundleName: string, isVis
 设置指定账号的特定鉴权类型的授权令牌对指定应用的可见性。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-AppAccountManager-setAuthTokenVisibility(name: string, authType: string, bundleName: string, isVisible: boolean): Promise<void>--><!--Device-AppAccountManager-setAuthTokenVisibility(name: string, authType: string, bundleName: string, isVisible: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -3075,6 +3189,8 @@ setCredential(name: string, credentialType: string, credential: string,
 
 **起始版本：** 9
 
+<!--Device-AppAccountManager-setCredential(name: string, credentialType: string, credential: string,                             callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setCredential(name: string, credentialType: string, credential: string,                             callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -3125,6 +3241,8 @@ setCredential(name: string, credentialType: string, credential: string): Promise
 设置指定应用账号的凭据。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-AppAccountManager-setCredential(name: string, credentialType: string, credential: string): Promise<void>--><!--Device-AppAccountManager-setCredential(name: string, credentialType: string, credential: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -3178,6 +3296,8 @@ setCustomData(name: string, key: string, value: string, callback: AsyncCallback<
 
 **起始版本：** 9
 
+<!--Device-AppAccountManager-setCustomData(name: string, key: string, value: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setCustomData(name: string, key: string, value: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -3229,6 +3349,8 @@ setCustomData(name: string, key: string, value: string): Promise<void>
 设置指定应用账号的自定义数据。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-AppAccountManager-setCustomData(name: string, key: string, value: string): Promise<void>--><!--Device-AppAccountManager-setCustomData(name: string, key: string, value: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -3285,6 +3407,8 @@ setDataSyncEnabled(name: string, isEnabled: boolean, callback: AsyncCallback<voi
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-AppAccountManager-setDataSyncEnabled(name: string, isEnabled: boolean, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setDataSyncEnabled(name: string, isEnabled: boolean, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -3333,6 +3457,8 @@ setDataSyncEnabled(name: string, isEnabled: boolean): Promise<void>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-AppAccountManager-setDataSyncEnabled(name: string, isEnabled: boolean): Promise<void>--><!--Device-AppAccountManager-setDataSyncEnabled(name: string, isEnabled: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -3385,6 +3511,8 @@ verifyCredential(name: string, owner: string, callback: AuthCallback): void
 验证指定账号的凭据有效性。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-AppAccountManager-verifyCredential(name: string, owner: string, callback: AuthCallback): void--><!--Device-AppAccountManager-verifyCredential(name: string, owner: string, callback: AuthCallback): void-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -3441,6 +3569,8 @@ verifyCredential(name: string, owner: string, options: VerifyCredentialOptions, 
 验证指定账号的凭据。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-AppAccountManager-verifyCredential(name: string, owner: string, options: VerifyCredentialOptions, callback: AuthCallback): void--><!--Device-AppAccountManager-verifyCredential(name: string, owner: string, options: VerifyCredentialOptions, callback: AuthCallback): void-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -3511,6 +3641,8 @@ addAccount(name: string, callback: AsyncCallback<void>): void
 
 **替代接口：** [createAccount](#createaccount)(name: string, callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-AppAccountManager-addAccount(name: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-addAccount(name: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -3552,6 +3684,8 @@ addAccount(name: string, extraInfo: string, callback: AsyncCallback<void>): void
 
 **替代接口：** [createAccount](#createaccount-1)(name: string, options: CreateAccountOptions, callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-AppAccountManager-addAccount(name: string, extraInfo: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-addAccount(name: string, extraInfo: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -3592,6 +3726,8 @@ addAccount(name: string, extraInfo?: string): Promise<void>
 **废弃版本：** 9
 
 **替代接口：** [createAccount](#createaccount-2)(name: string, options?: CreateAccountOptions)
+
+<!--Device-AppAccountManager-addAccount(name: string, extraInfo?: string): Promise<void>--><!--Device-AppAccountManager-addAccount(name: string, extraInfo?: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -3644,6 +3780,8 @@ addAccountImplicitly(
 **废弃版本：** 9
 
 **替代接口：** [createAccountImplicitly](#createaccountimplicitly)(owner: string, callback: AuthCallback)
+
+<!--Device-AppAccountManager-addAccountImplicitly(      owner: string,      authType: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void--><!--Device-AppAccountManager-addAccountImplicitly(      owner: string,      authType: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -3723,6 +3861,8 @@ authenticate(
 
 **替代接口：** [auth](#auth)(name: string, owner: string, authType: string, callback: AuthCallback)
 
+<!--Device-AppAccountManager-authenticate(      name: string,      owner: string,      authType: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void--><!--Device-AppAccountManager-authenticate(      name: string,      owner: string,      authType: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -3798,6 +3938,8 @@ checkAppAccountSyncEnable(name: string, callback: AsyncCallback<boolean>): void
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-AppAccountManager-checkAppAccountSyncEnable(name: string, callback: AsyncCallback<boolean>): void--><!--Device-AppAccountManager-checkAppAccountSyncEnable(name: string, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -3843,6 +3985,8 @@ checkAppAccountSyncEnable(name: string): Promise<boolean>
 **替代接口：** [checkDataSyncEnabled](#checkdatasyncenabled-1)(name: string)
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-AppAccountManager-checkAppAccountSyncEnable(name: string): Promise<boolean>--><!--Device-AppAccountManager-checkAppAccountSyncEnable(name: string): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -3895,6 +4039,8 @@ checkOAuthTokenVisibility(
 
 **替代接口：** [checkAuthTokenVisibility](#checkauthtokenvisibility)(name: string, authType: string, bundleName: string, callback: AsyncCallback&lt;boolean&gt;)
 
+<!--Device-AppAccountManager-checkOAuthTokenVisibility(      name: string,      authType: string,      bundleName: string,      callback: AsyncCallback<boolean>    ): void--><!--Device-AppAccountManager-checkOAuthTokenVisibility(      name: string,      authType: string,      bundleName: string,      callback: AsyncCallback<boolean>    ): void-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -3942,6 +4088,8 @@ checkOAuthTokenVisibility(name: string, authType: string, bundleName: string): P
 **废弃版本：** 9
 
 **替代接口：** [checkAuthTokenVisibility](#checkauthtokenvisibility-1)(name: string, authType: string, bundleName: string)
+
+<!--Device-AppAccountManager-checkOAuthTokenVisibility(name: string, authType: string, bundleName: string): Promise<boolean>--><!--Device-AppAccountManager-checkOAuthTokenVisibility(name: string, authType: string, bundleName: string): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -3992,6 +4140,8 @@ deleteAccount(name: string, callback: AsyncCallback<void>): void
 
 **替代接口：** [removeAccount](#removeaccount)(name: string, callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-AppAccountManager-deleteAccount(name: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-deleteAccount(name: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -4032,6 +4182,8 @@ deleteAccount(name: string): Promise<void>
 **废弃版本：** 9
 
 **替代接口：** [removeAccount](#removeaccount-1)(name: string)
+
+<!--Device-AppAccountManager-deleteAccount(name: string): Promise<void>--><!--Device-AppAccountManager-deleteAccount(name: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -4078,6 +4230,8 @@ deleteOAuthToken(name: string, owner: string, authType: string, token: string, c
 **废弃版本：** 9
 
 **替代接口：** [deleteAuthToken](#deleteauthtoken)(name: string, owner: string, authType: string, token: string, callback: AsyncCallback&lt;void&gt;)
+
+<!--Device-AppAccountManager-deleteOAuthToken(name: string, owner: string, authType: string, token: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-deleteOAuthToken(name: string, owner: string, authType: string, token: string, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -4128,6 +4282,8 @@ deleteOAuthToken(name: string, owner: string, authType: string, token: string): 
 
 **替代接口：** [deleteAuthToken](#deleteauthtoken-1)(name: string, owner: string, authType: string, token: string)
 
+<!--Device-AppAccountManager-deleteOAuthToken(name: string, owner: string, authType: string, token: string): Promise<void>--><!--Device-AppAccountManager-deleteOAuthToken(name: string, owner: string, authType: string, token: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -4177,6 +4333,8 @@ disableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>
 
 **替代接口：** [setAppAccess](#setappaccess)(name: string, bundleName: string, isAccessible: boolean, callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-AppAccountManager-disableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-disableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -4218,6 +4376,8 @@ disableAppAccess(name: string, bundleName: string): Promise<void>
 **废弃版本：** 9
 
 **替代接口：** [setAppAccess](#setappaccess-1)(name: string, bundleName: string, isAccessible: boolean)
+
+<!--Device-AppAccountManager-disableAppAccess(name: string, bundleName: string): Promise<void>--><!--Device-AppAccountManager-disableAppAccess(name: string, bundleName: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -4266,6 +4426,8 @@ enableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>)
 
 **替代接口：** [setAppAccess](#setappaccess)(name: string, bundleName: string, isAccessible: boolean, callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-AppAccountManager-enableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-enableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -4311,6 +4473,8 @@ enableAppAccess(name: string, bundleName: string): Promise<void>
 **废弃版本：** 9
 
 **替代接口：** [setAppAccess](#setappaccess-1)(name: string, bundleName: string, isAccessible: boolean)
+
+<!--Device-AppAccountManager-enableAppAccess(name: string, bundleName: string): Promise<void>--><!--Device-AppAccountManager-enableAppAccess(name: string, bundleName: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -4359,6 +4523,8 @@ getAccountCredential(name: string, credentialType: string, callback: AsyncCallba
 
 **替代接口：** [getCredential](#getcredential)(name: string, credentialType: string, callback: AsyncCallback&lt;string&gt;)
 
+<!--Device-AppAccountManager-getAccountCredential(name: string, credentialType: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getAccountCredential(name: string, credentialType: string, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -4403,6 +4569,8 @@ getAccountCredential(name: string, credentialType: string): Promise<string>
 **废弃版本：** 9
 
 **替代接口：** [getCredential](#getcredential-1)(name: string, credentialType: string)
+
+<!--Device-AppAccountManager-getAccountCredential(name: string, credentialType: string): Promise<string>--><!--Device-AppAccountManager-getAccountCredential(name: string, credentialType: string): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -4451,6 +4619,8 @@ getAccountExtraInfo(name: string, callback: AsyncCallback<string>): void
 
 **替代接口：** [getCustomData](#getcustomdata)(name: string, key: string, callback: AsyncCallback&lt;string&gt;)
 
+<!--Device-AppAccountManager-getAccountExtraInfo(name: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getAccountExtraInfo(name: string, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -4494,6 +4664,8 @@ getAccountExtraInfo(name: string): Promise<string>
 **废弃版本：** 9
 
 **替代接口：** [getCustomData](#getcustomdata-1)(name: string, key: string)
+
+<!--Device-AppAccountManager-getAccountExtraInfo(name: string): Promise<string>--><!--Device-AppAccountManager-getAccountExtraInfo(name: string): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -4543,6 +4715,8 @@ getAllAccessibleAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void
 
 **需要权限：** ohos.permission.GET_ALL_APP_ACCOUNTS
 
+<!--Device-AppAccountManager-getAllAccessibleAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-getAllAccessibleAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -4588,6 +4762,8 @@ getAllAccessibleAccounts(): Promise<Array<AppAccountInfo>>
 
 **需要权限：** ohos.permission.GET_ALL_APP_ACCOUNTS
 
+<!--Device-AppAccountManager-getAllAccessibleAccounts(): Promise<Array<AppAccountInfo>>--><!--Device-AppAccountManager-getAllAccessibleAccounts(): Promise<Array<AppAccountInfo>>-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **返回值：**
@@ -4627,6 +4803,8 @@ getAllOAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<OAu
 **废弃版本：** 9
 
 **替代接口：** [getAllAuthTokens](#getallauthtokens)(name: string, owner: string, callback: AsyncCallback&lt;Array&lt;AuthTokenInfo&gt;&gt;)
+
+<!--Device-AppAccountManager-getAllOAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<OAuthTokenInfo>>): void--><!--Device-AppAccountManager-getAllOAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<OAuthTokenInfo>>): void-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -4673,6 +4851,8 @@ getAllOAuthTokens(name: string, owner: string): Promise<Array<OAuthTokenInfo>>
 **废弃版本：** 9
 
 **替代接口：** [getAllAuthTokens](#getallauthtokens-1)(name: string, owner: string)
+
+<!--Device-AppAccountManager-getAllOAuthTokens(name: string, owner: string): Promise<Array<OAuthTokenInfo>>--><!--Device-AppAccountManager-getAllOAuthTokens(name: string, owner: string): Promise<Array<OAuthTokenInfo>>-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -4722,6 +4902,8 @@ getAssociatedData(name: string, key: string, callback: AsyncCallback<string>): v
 
 **替代接口：** [getCustomData](#getcustomdata)(name: string, key: string, callback: AsyncCallback&lt;string&gt;)
 
+<!--Device-AppAccountManager-getAssociatedData(name: string, key: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getAssociatedData(name: string, key: string, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -4766,6 +4948,8 @@ getAssociatedData(name: string, key: string): Promise<string>
 **废弃版本：** 9
 
 **替代接口：** [getCustomData](#getcustomdata-1)(name: string, key: string)
+
+<!--Device-AppAccountManager-getAssociatedData(name: string, key: string): Promise<string>--><!--Device-AppAccountManager-getAssociatedData(name: string, key: string): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -4813,6 +4997,8 @@ getAuthenticatorCallback(sessionId: string, callback: AsyncCallback<Authenticato
 **废弃版本：** 9
 
 **替代接口：** [getAuthCallback](#getauthcallback)(sessionId: string, callback: AsyncCallback&lt;AuthCallback&gt;)
+
+<!--Device-AppAccountManager-getAuthenticatorCallback(sessionId: string, callback: AsyncCallback<AuthenticatorCallback>): void--><!--Device-AppAccountManager-getAuthenticatorCallback(sessionId: string, callback: AsyncCallback<AuthenticatorCallback>): void-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -4869,6 +5055,8 @@ getAuthenticatorCallback(sessionId: string): Promise<AuthenticatorCallback>
 **废弃版本：** 9
 
 **替代接口：** [getAuthCallback](#getauthcallback-1)(sessionId: string)
+
+<!--Device-AppAccountManager-getAuthenticatorCallback(sessionId: string): Promise<AuthenticatorCallback>--><!--Device-AppAccountManager-getAuthenticatorCallback(sessionId: string): Promise<AuthenticatorCallback>-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -4928,6 +5116,8 @@ getAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>):
 
 **替代接口：** [queryAuthenticatorInfo](#queryauthenticatorinfo)(owner: string, callback: AsyncCallback&lt;AuthenticatorInfo&gt;)
 
+<!--Device-AppAccountManager-getAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>): void--><!--Device-AppAccountManager-getAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>): void-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -4972,6 +5162,8 @@ getAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>
 **废弃版本：** 9
 
 **替代接口：** [queryAuthenticatorInfo](#queryauthenticatorinfo-1)(owner: string)
+
+<!--Device-AppAccountManager-getAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>--><!--Device-AppAccountManager-getAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -5020,6 +5212,8 @@ getOAuthList(name: string, authType: string, callback: AsyncCallback<Array<strin
 
 **替代接口：** [getAuthList](#getauthlist)(name: string, authType: string, callback: AsyncCallback&lt;Array&lt;string&gt;&gt;)
 
+<!--Device-AppAccountManager-getOAuthList(name: string, authType: string, callback: AsyncCallback<Array<string>>): void--><!--Device-AppAccountManager-getOAuthList(name: string, authType: string, callback: AsyncCallback<Array<string>>): void-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -5064,6 +5258,8 @@ getOAuthList(name: string, authType: string): Promise<Array<string>>
 **废弃版本：** 9
 
 **替代接口：** [getAuthList](#getauthlist-1)(name: string, authType: string)
+
+<!--Device-AppAccountManager-getOAuthList(name: string, authType: string): Promise<Array<string>>--><!--Device-AppAccountManager-getOAuthList(name: string, authType: string): Promise<Array<string>>-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -5112,6 +5308,8 @@ getOAuthToken(name: string, owner: string, authType: string, callback: AsyncCall
 
 **替代接口：** [getAuthToken](#getauthtoken)(name: string, owner: string, authType: string, callback: AsyncCallback&lt;string&gt;)
 
+<!--Device-AppAccountManager-getOAuthToken(name: string, owner: string, authType: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getOAuthToken(name: string, owner: string, authType: string, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -5158,6 +5356,8 @@ getOAuthToken(name: string, owner: string, authType: string): Promise<string>
 **废弃版本：** 9
 
 **替代接口：** [getAuthToken](#getauthtoken-1)(name: string, owner: string, authType: string)
+
+<!--Device-AppAccountManager-getOAuthToken(name: string, owner: string, authType: string): Promise<string>--><!--Device-AppAccountManager-getOAuthToken(name: string, owner: string, authType: string): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -5207,6 +5407,8 @@ setAccountCredential(name: string, credentialType: string, credential: string, c
 
 **替代接口：** [setCredential](#setcredential)(name: string, credentialType: string, credential: string, callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-AppAccountManager-setAccountCredential(name: string, credentialType: string, credential: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setAccountCredential(name: string, credentialType: string, credential: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -5253,6 +5455,8 @@ setAccountCredential(name: string, credentialType: string, credential: string): 
 **废弃版本：** 9
 
 **替代接口：** [setCredential](#setcredential-1)(name: string, credentialType: string, credential: string)
+
+<!--Device-AppAccountManager-setAccountCredential(name: string, credentialType: string, credential: string): Promise<void>--><!--Device-AppAccountManager-setAccountCredential(name: string, credentialType: string, credential: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -5302,6 +5506,8 @@ setAccountExtraInfo(name: string, extraInfo: string, callback: AsyncCallback<voi
 
 **替代接口：** [setCustomData](#setcustomdata)(name: string, key: string, value: string, callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-AppAccountManager-setAccountExtraInfo(name: string, extraInfo: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setAccountExtraInfo(name: string, extraInfo: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -5346,6 +5552,8 @@ setAccountExtraInfo(name: string, extraInfo: string): Promise<void>
 **废弃版本：** 9
 
 **替代接口：** [setCustomData](#setcustomdata-1)(name: string, key: string, value: string)
+
+<!--Device-AppAccountManager-setAccountExtraInfo(name: string, extraInfo: string): Promise<void>--><!--Device-AppAccountManager-setAccountExtraInfo(name: string, extraInfo: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -5396,6 +5604,8 @@ setAppAccountSyncEnable(name: string, isEnable: boolean, callback: AsyncCallback
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-AppAccountManager-setAppAccountSyncEnable(name: string, isEnable: boolean, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setAppAccountSyncEnable(name: string, isEnable: boolean, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -5442,6 +5652,8 @@ setAppAccountSyncEnable(name: string, isEnable: boolean): Promise<void>
 **替代接口：** [setDataSyncEnabled](#setdatasyncenabled-1)(name: string, isEnabled: boolean)
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-AppAccountManager-setAppAccountSyncEnable(name: string, isEnable: boolean): Promise<void>--><!--Device-AppAccountManager-setAppAccountSyncEnable(name: string, isEnable: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -5490,6 +5702,8 @@ setAssociatedData(name: string, key: string, value: string, callback: AsyncCallb
 
 **替代接口：** [setCustomData](#setcustomdata)(name: string, key: string, value: string, callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-AppAccountManager-setAssociatedData(name: string, key: string, value: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setAssociatedData(name: string, key: string, value: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -5535,6 +5749,8 @@ setAssociatedData(name: string, key: string, value: string): Promise<void>
 **废弃版本：** 9
 
 **替代接口：** [setCustomData](#setcustomdata-1)(name: string, key: string, value: string)
+
+<!--Device-AppAccountManager-setAssociatedData(name: string, key: string, value: string): Promise<void>--><!--Device-AppAccountManager-setAssociatedData(name: string, key: string, value: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -5584,6 +5800,8 @@ setOAuthToken(name: string, authType: string, token: string, callback: AsyncCall
 
 **替代接口：** [setAuthToken](#setauthtoken)(name: string, authType: string, token: string, callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-AppAccountManager-setOAuthToken(name: string, authType: string, token: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setOAuthToken(name: string, authType: string, token: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -5629,6 +5847,8 @@ setOAuthToken(name: string, authType: string, token: string): Promise<void>
 **废弃版本：** 9
 
 **替代接口：** [setAuthToken](#setauthtoken-1)(name: string, authType: string, token: string)
+
+<!--Device-AppAccountManager-setOAuthToken(name: string, authType: string, token: string): Promise<void>--><!--Device-AppAccountManager-setOAuthToken(name: string, authType: string, token: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -5684,6 +5904,8 @@ setOAuthTokenVisibility(
 
 **替代接口：** [setAuthTokenVisibility](#setauthtokenvisibility)( name: string, authType: string, bundleName: string, isVisible: boolean, callback: AsyncCallback&lt;void&gt; )
 
+<!--Device-AppAccountManager-setOAuthTokenVisibility(      name: string,      authType: string,      bundleName: string,      isVisible: boolean,      callback: AsyncCallback<void>    ): void--><!--Device-AppAccountManager-setOAuthTokenVisibility(      name: string,      authType: string,      bundleName: string,      isVisible: boolean,      callback: AsyncCallback<void>    ): void-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -5732,6 +5954,8 @@ setOAuthTokenVisibility(name: string, authType: string, bundleName: string, isVi
 **废弃版本：** 9
 
 **替代接口：** [setAuthTokenVisibility](#setauthtokenvisibility-1)(name: string, authType: string, bundleName: string, isVisible: boolean)
+
+<!--Device-AppAccountManager-setOAuthTokenVisibility(name: string, authType: string, bundleName: string, isVisible: boolean): Promise<void>--><!--Device-AppAccountManager-setOAuthTokenVisibility(name: string, authType: string, bundleName: string, isVisible: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 

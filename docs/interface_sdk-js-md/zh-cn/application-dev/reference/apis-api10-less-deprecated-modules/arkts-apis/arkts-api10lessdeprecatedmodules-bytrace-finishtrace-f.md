@@ -24,6 +24,8 @@ function finishTrace(name: string, taskId: number): void
 
 **替代接口：** finishTrace
 
+<!--Device-bytrace-function finishTrace(name: string, taskId: number): void--><!--Device-bytrace-function finishTrace(name: string, taskId: number): void-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
 
 **参数：**

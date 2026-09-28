@@ -10,6 +10,8 @@ export interface FileGetOption
 
 **废弃版本：** 10
 
+<!--Device-unnamed-export interface FileGetOption--><!--Device-unnamed-export interface FileGetOption-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## 导入模块
@@ -29,6 +31,8 @@ complete?: () => void
 
 **废弃版本：** 10
 
+<!--Device-FileGetOption-complete?: () => void--><!--Device-FileGetOption-complete?: () => void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## fail
@@ -42,6 +46,8 @@ fail?: (data: string, code: number) => void
 **起始版本：** 3
 
 **废弃版本：** 10
+
+<!--Device-FileGetOption-fail?: (data: string, code: number) => void--><!--Device-FileGetOption-fail?: (data: string, code: number) => void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -58,11 +64,13 @@ fail?: (data: string, code: number) => void
 success?: (file: FileResponse) => void
 ```
 
-接口调用成功的回调函数。 返回[FileResponse](arkts-corefile-system-file-fileresponse-depr-i.md#fileresponse)。
+接口调用成功的回调函数。 返回[FileResponse](arkts-corefile-system-file-fileresponse-depr-i.md)。
 
 **起始版本：** 3
 
 **废弃版本：** 10
+
+<!--Device-FileGetOption-success?: (file: FileResponse) => void--><!--Device-FileGetOption-success?: (file: FileResponse) => void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -86,6 +94,8 @@ recursive?: boolean
 
 **废弃版本：** 10
 
+<!--Device-FileGetOption-recursive?: boolean--><!--Device-FileGetOption-recursive?: boolean-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## uri
@@ -103,5 +113,7 @@ uri: string
 **起始版本：** 3
 
 **废弃版本：** 10
+
+<!--Device-FileGetOption-uri: string--><!--Device-FileGetOption-uri: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite

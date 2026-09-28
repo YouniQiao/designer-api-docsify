@@ -12,6 +12,8 @@ enum EapMethod
 
 **起始版本：** 12
 
+<!--Device-wifiManager-enum EapMethod--><!--Device-wifiManager-enum EapMethod-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## EAP_NONE
@@ -25,6 +27,8 @@ EAP_NONE = 0
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EapMethod-EAP_NONE = 0--><!--Device-EapMethod-EAP_NONE = 0-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -40,6 +44,8 @@ PEAP类型，受保护的可扩展认证协议。先建立安全的TLS隧道、�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-EapMethod-EAP_PEAP = 1--><!--Device-EapMethod-EAP_PEAP = 1-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## EAP_TLS
@@ -53,6 +59,8 @@ TLS类型，传输层安全协议。双向证书认证。
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EapMethod-EAP_TLS = 2--><!--Device-EapMethod-EAP_TLS = 2-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -68,6 +76,8 @@ TTLS类型，隧道传输层安全协议。与PEAP类似，但后续隧道内部
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-EapMethod-EAP_TTLS = 3--><!--Device-EapMethod-EAP_TTLS = 3-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## EAP_PWD
@@ -81,6 +91,8 @@ PWD类型，密码认证。无需服务器证书。
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EapMethod-EAP_PWD = 4--><!--Device-EapMethod-EAP_PWD = 4-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -96,6 +108,8 @@ SIM类型，使用手机SIM卡中的密钥和算法进行认证。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-EapMethod-EAP_SIM = 5--><!--Device-EapMethod-EAP_SIM = 5-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## EAP_AKA
@@ -109,6 +123,8 @@ AKA类型，使用USIM卡（3G/4G/5G SIM卡）中的增强密钥和算法进行�
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EapMethod-EAP_AKA = 6--><!--Device-EapMethod-EAP_AKA = 6-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -124,6 +140,8 @@ AKA Prime类型，EAP-AKA增强版，在密钥派生中绑定网络名称。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-EapMethod-EAP_AKA_PRIME = 7--><!--Device-EapMethod-EAP_AKA_PRIME = 7-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## EAP_UNAUTH_TLS
@@ -137,5 +155,7 @@ UNAUTH TLS类型，单向认证（仅认证客户端）和加密通道。
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EapMethod-EAP_UNAUTH_TLS = 8--><!--Device-EapMethod-EAP_UNAUTH_TLS = 8-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager

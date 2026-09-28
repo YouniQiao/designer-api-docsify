@@ -8,6 +8,8 @@ interface DeviceProfileInfo
 
 **起始版本：** 15
 
+<!--Device-distributedDeviceManager-interface DeviceProfileInfo--><!--Device-distributedDeviceManager-interface DeviceProfileInfo-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ bleMac: string
 
 **起始版本：** 15
 
+<!--Device-DeviceProfileInfo-bleMac: string--><!--Device-DeviceProfileInfo-bleMac: string-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ brMac: string
 **类型：** string
 
 **起始版本：** 15
+
+<!--Device-DeviceProfileInfo-brMac: string--><!--Device-DeviceProfileInfo-brMac: string-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -62,6 +68,8 @@ deviceId: string
 
 **起始版本：** 15
 
+<!--Device-DeviceProfileInfo-deviceId: string--><!--Device-DeviceProfileInfo-deviceId: string-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +85,8 @@ deviceName: string
 **类型：** string
 
 **起始版本：** 15
+
+<!--Device-DeviceProfileInfo-deviceName: string--><!--Device-DeviceProfileInfo-deviceName: string-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -94,6 +104,8 @@ deviceSn: string
 
 **起始版本：** 15
 
+<!--Device-DeviceProfileInfo-deviceSn: string--><!--Device-DeviceProfileInfo-deviceSn: string-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -109,6 +121,8 @@ deviceType: string
 **类型：** string
 
 **起始版本：** 15
+
+<!--Device-DeviceProfileInfo-deviceType: string--><!--Device-DeviceProfileInfo-deviceType: string-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -126,6 +140,8 @@ firmwareVersion: string
 
 **起始版本：** 15
 
+<!--Device-DeviceProfileInfo-firmwareVersion: string--><!--Device-DeviceProfileInfo-firmwareVersion: string-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -142,6 +158,8 @@ hardwareVersion: string
 
 **起始版本：** 15
 
+<!--Device-DeviceProfileInfo-hardwareVersion: string--><!--Device-DeviceProfileInfo-hardwareVersion: string-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -157,6 +175,8 @@ internalModel?: string
 **类型：** string
 
 **起始版本：** 18
+
+<!--Device-DeviceProfileInfo-internalModel?: string--><!--Device-DeviceProfileInfo-internalModel?: string-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -177,6 +197,8 @@ isLocalDevice: boolean
 
 **起始版本：** 15
 
+<!--Device-DeviceProfileInfo-isLocalDevice: boolean--><!--Device-DeviceProfileInfo-isLocalDevice: boolean-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -192,6 +214,8 @@ MAC地址。
 **类型：** string
 
 **起始版本：** 15
+
+<!--Device-DeviceProfileInfo-mac: string--><!--Device-DeviceProfileInfo-mac: string-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -209,6 +233,8 @@ manufacturer: string
 
 **起始版本：** 15
 
+<!--Device-DeviceProfileInfo-manufacturer: string--><!--Device-DeviceProfileInfo-manufacturer: string-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -224,6 +250,8 @@ model: string
 **类型：** string
 
 **起始版本：** 15
+
+<!--Device-DeviceProfileInfo-model: string--><!--Device-DeviceProfileInfo-model: string-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -241,6 +269,8 @@ modifyTime: string
 
 **起始版本：** 15
 
+<!--Device-DeviceProfileInfo-modifyTime: string--><!--Device-DeviceProfileInfo-modifyTime: string-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -256,6 +286,8 @@ productId: string
 **类型：** string
 
 **起始版本：** 15
+
+<!--Device-DeviceProfileInfo-productId: string--><!--Device-DeviceProfileInfo-productId: string-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -273,6 +305,8 @@ productName?: string
 
 **起始版本：** 18
 
+<!--Device-DeviceProfileInfo-productName?: string--><!--Device-DeviceProfileInfo-productName?: string-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -288,6 +322,8 @@ protocolType: number
 **类型：** number
 
 **起始版本：** 15
+
+<!--Device-DeviceProfileInfo-protocolType: int--><!--Device-DeviceProfileInfo-protocolType: int-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -305,6 +341,8 @@ registerTime: string
 
 **起始版本：** 15
 
+<!--Device-DeviceProfileInfo-registerTime: string--><!--Device-DeviceProfileInfo-registerTime: string-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -320,6 +358,8 @@ SDK版本。
 **类型：** string
 
 **起始版本：** 15
+
+<!--Device-DeviceProfileInfo-sdkVersion: string--><!--Device-DeviceProfileInfo-sdkVersion: string-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -337,6 +377,8 @@ services?: Array<ServiceProfileInfo>
 
 **起始版本：** 15
 
+<!--Device-DeviceProfileInfo-services?: Array<ServiceProfileInfo>--><!--Device-DeviceProfileInfo-services?: Array<ServiceProfileInfo>-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -352,6 +394,8 @@ setupType: number
 **类型：** number
 
 **起始版本：** 15
+
+<!--Device-DeviceProfileInfo-setupType: int--><!--Device-DeviceProfileInfo-setupType: int-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -369,6 +413,8 @@ shareTime: string
 
 **起始版本：** 15
 
+<!--Device-DeviceProfileInfo-shareTime: string--><!--Device-DeviceProfileInfo-shareTime: string-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -384,6 +430,8 @@ Starflash的MAC地址。
 **类型：** string
 
 **起始版本：** 15
+
+<!--Device-DeviceProfileInfo-sleMac: string--><!--Device-DeviceProfileInfo-sleMac: string-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -401,6 +449,8 @@ softwareVersion: string
 
 **起始版本：** 15
 
+<!--Device-DeviceProfileInfo-softwareVersion: string--><!--Device-DeviceProfileInfo-softwareVersion: string-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -416,6 +466,8 @@ subProductId?: string
 **类型：** string
 
 **起始版本：** 15
+
+<!--Device-DeviceProfileInfo-subProductId?: string--><!--Device-DeviceProfileInfo-subProductId?: string-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -433,6 +485,8 @@ wiseDeviceId: string
 
 **起始版本：** 15
 
+<!--Device-DeviceProfileInfo-wiseDeviceId: string--><!--Device-DeviceProfileInfo-wiseDeviceId: string-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -448,6 +502,8 @@ wiseUserId: string
 **类型：** string
 
 **起始版本：** 15
+
+<!--Device-DeviceProfileInfo-wiseUserId: string--><!--Device-DeviceProfileInfo-wiseUserId: string-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 

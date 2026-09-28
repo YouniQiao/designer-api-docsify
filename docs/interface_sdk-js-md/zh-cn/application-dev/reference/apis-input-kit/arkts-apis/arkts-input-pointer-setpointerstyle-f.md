@@ -16,6 +16,8 @@ function setPointerStyle(windowId: number, pointerStyle: PointerStyle, callback:
 
 **起始版本：** 9
 
+<!--Device-pointer-function setPointerStyle(windowId: int, pointerStyle: PointerStyle, callback: AsyncCallback<void>): void--><!--Device-pointer-function setPointerStyle(windowId: int, pointerStyle: PointerStyle, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 **参数：**
@@ -84,6 +86,8 @@ function setPointerStyle(windowId: number, pointerStyle: PointerStyle): Promise<
 设置指定窗口的鼠标样式类型，此接口仅支持设置本应用进程内窗口的鼠标样式类型，如需通过UIExtensionAbility进程设置宿主窗口的鼠标样式类型，请参阅[setCursor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-cursorcontroller-c.md#setcursor)，使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-pointer-function setPointerStyle(windowId: int, pointerStyle: PointerStyle): Promise<void>--><!--Device-pointer-function setPointerStyle(windowId: int, pointerStyle: PointerStyle): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 

@@ -23,7 +23,9 @@ function getUserRecognitionMgr(): UserRecognitionMgr | null
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
+
+<!--Device-userAuth-function getUserRecognitionMgr(): UserRecognitionMgr | null--><!--Device-userAuth-function getUserRecognitionMgr(): UserRecognitionMgr | null-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 

@@ -8,6 +8,8 @@ export enum StopCode
 
 **起始版本：** 26.2.0
 
+<!--Device-backgroundLoader-export enum StopCode--><!--Device-backgroundLoader-export enum StopCode-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
 ## SUCCESS
@@ -21,6 +23,8 @@ SUCCESS = 0
 **起始版本：** 26.2.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-StopCode-SUCCESS = 0--><!--Device-StopCode-SUCCESS = 0-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
@@ -36,6 +40,8 @@ SYSTEM_ERROR = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-StopCode-SYSTEM_ERROR = 1--><!--Device-StopCode-SYSTEM_ERROR = 1-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
 ## PERCEPTIBLE_ERROR
@@ -49,6 +55,8 @@ PERCEPTIBLE_ERROR = 2
 **起始版本：** 26.2.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-StopCode-PERCEPTIBLE_ERROR = 2--><!--Device-StopCode-PERCEPTIBLE_ERROR = 2-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
@@ -64,6 +72,8 @@ TIMEOUT_ERROR = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-StopCode-TIMEOUT_ERROR = 3--><!--Device-StopCode-TIMEOUT_ERROR = 3-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
 ## EXECUTE_ERROR
@@ -77,5 +87,7 @@ EXECUTE_ERROR = 4
 **起始版本：** 26.2.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-StopCode-EXECUTE_ERROR = 4--><!--Device-StopCode-EXECUTE_ERROR = 4-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler

@@ -10,6 +10,8 @@ Inherits from [TextPickerOptions](arkts-arkui-textpicker-comp-textpickeroptions-
 
 **Since:** 8
 
+<!--Device-unnamed-declare interface TextPickerDialogOptions extends TextPickerOptions--><!--Device-unnamed-declare interface TextPickerDialogOptions extends TextPickerOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onAccept
@@ -23,6 +25,8 @@ Triggered when the OK button in the dialog box is clicked.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextPickerDialogOptions-onAccept?: (value: TextPickerResult) => void--><!--Device-TextPickerDialogOptions-onAccept?: (value: TextPickerResult) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,6 +50,8 @@ Triggered when the Cancel button in the dialog box is clicked.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TextPickerDialogOptions-onCancel?: () => void--><!--Device-TextPickerDialogOptions-onCancel?: () => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onChange
@@ -63,6 +69,8 @@ This callback is triggered only after the scroll animation completes. To obtain 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextPickerDialogOptions-onChange?: (value: TextPickerResult) => void--><!--Device-TextPickerDialogOptions-onChange?: (value: TextPickerResult) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -96,6 +104,8 @@ before the **onDidAppear** callback. In this case, the parameter settings in **o
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TextPickerDialogOptions-onDidAppear?: () => void--><!--Device-TextPickerDialogOptions-onDidAppear?: () => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onDidDisappear
@@ -116,6 +126,8 @@ Event callback after the dialog box disappears.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextPickerDialogOptions-onDidDisappear?: () => void--><!--Device-TextPickerDialogOptions-onDidDisappear?: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -140,6 +152,8 @@ effect next time the dialog box appears.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TextPickerDialogOptions-onWillAppear?: () => void--><!--Device-TextPickerDialogOptions-onWillAppear?: () => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onWillDisappear
@@ -162,6 +176,8 @@ Event callback when the dialog box is about to disappear.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextPickerDialogOptions-onWillDisappear?: () => void--><!--Device-TextPickerDialogOptions-onWillDisappear?: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -188,6 +204,8 @@ fixed even in accessibility and large-font modes. In addition, even if the butto
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TextPickerDialogOptions-acceptButtonStyle?: PickerDialogButtonStyle--><!--Device-TextPickerDialogOptions-acceptButtonStyle?: PickerDialogButtonStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## alignment
@@ -210,6 +228,8 @@ Default value: **DialogAlignment.Default**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextPickerDialogOptions-alignment?: DialogAlignment--><!--Device-TextPickerDialogOptions-alignment?: DialogAlignment-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -239,6 +259,8 @@ to a value other than **NONE**, do not set **backgroundColor**. If you do, the c
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TextPickerDialogOptions-backgroundBlurStyle?: BlurStyle--><!--Device-TextPickerDialogOptions-backgroundBlurStyle?: BlurStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## backgroundBlurStyleOptions
@@ -260,6 +282,8 @@ If this attribute is not set, the default effect of **BlurStyle.COMPONENT_ULTRA_
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-TextPickerDialogOptions-backgroundBlurStyleOptions?: BackgroundBlurStyleOptions--><!--Device-TextPickerDialogOptions-backgroundBlurStyleOptions?: BackgroundBlurStyleOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -289,6 +313,8 @@ Default value: **Color.Transparent**
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TextPickerDialogOptions-backgroundColor?: ResourceColor--><!--Device-TextPickerDialogOptions-backgroundColor?: ResourceColor-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## backgroundEffect
@@ -310,6 +336,8 @@ If this parameter is not set, the blur effect of the pop-up window background is
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-TextPickerDialogOptions-backgroundEffect?: BackgroundEffectOptions--><!--Device-TextPickerDialogOptions-backgroundEffect?: BackgroundEffectOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -336,6 +364,8 @@ fixed even in accessibility and large-font modes. In addition, even if the butto
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TextPickerDialogOptions-cancelButtonStyle?: PickerDialogButtonStyle--><!--Device-TextPickerDialogOptions-cancelButtonStyle?: PickerDialogButtonStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## canLoop
@@ -360,6 +390,8 @@ Default value: **true**.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextPickerDialogOptions-canLoop?: boolean--><!--Device-TextPickerDialogOptions-canLoop?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -386,6 +418,8 @@ If the value of **defaultPickerItemHeight** is a negative number, the default va
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TextPickerDialogOptions-defaultPickerItemHeight?: number | string--><!--Device-TextPickerDialogOptions-defaultPickerItemHeight?: number | string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## defaultTextStyle
@@ -396,7 +430,7 @@ defaultTextStyle?: TextPickerTextStyle
 
 Style of the text items when the text style change animation during the scrolling process is disabled. It is effective only when **disableTextStyleAnimation** is **true**.
 
-Default value: same as the default value of the [Text](arkts-arkui-text-comp.md#text) component
+Default value: same as the default value of the [Text](arkts-arkui-text-comp.md) component
 
 **Type:** [TextPickerTextStyle](arkts-arkui-textpicker-comp-textpickertextstyle-i.md)
 
@@ -405,6 +439,8 @@ Default value: same as the default value of the [Text](arkts-arkui-text-comp.md#
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-TextPickerDialogOptions-defaultTextStyle?: TextPickerTextStyle--><!--Device-TextPickerDialogOptions-defaultTextStyle?: TextPickerTextStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -423,7 +459,7 @@ Default value: **false**.
 
 **NOTE:** 
 
-When this API is used with **true**, there are no text style changes, including the font size, weight, and color, during scrolling, and all text is displayed in the style set by **defaultTextStyle**. If **defaultTextStyle** is not set, the default style of the [Text](arkts-arkui-text-comp.md#text) component is used.
+When this API is used with **true**, there are no text style changes, including the font size, weight, and color, during scrolling, and all text is displayed in the style set by **defaultTextStyle**. If **defaultTextStyle** is not set, the default style of the [Text](arkts-arkui-text-comp.md) component is used.
 
 **Type:** boolean
 
@@ -434,6 +470,8 @@ When this API is used with **true**, there are no text style changes, including 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-TextPickerDialogOptions-disableTextStyleAnimation?: boolean--><!--Device-TextPickerDialogOptions-disableTextStyleAnimation?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -471,6 +509,8 @@ weight: FontWeight.Regular
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TextPickerDialogOptions-disappearTextStyle?: PickerTextStyle--><!--Device-TextPickerDialogOptions-disappearTextStyle?: PickerTextStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## enableHapticFeedback
@@ -504,6 +544,8 @@ Default value: **true**.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TextPickerDialogOptions-enableHapticFeedback?: boolean--><!--Device-TextPickerDialogOptions-enableHapticFeedback?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## enableHoverMode
@@ -530,6 +572,8 @@ Default value: **false**.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-TextPickerDialogOptions-enableHoverMode?: boolean--><!--Device-TextPickerDialogOptions-enableHoverMode?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## hoverModeArea
@@ -551,6 +595,8 @@ Default value: **HoverModeAreaType.BOTTOM_SCREEN**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-TextPickerDialogOptions-hoverModeArea?: HoverModeAreaType--><!--Device-TextPickerDialogOptions-hoverModeArea?: HoverModeAreaType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -575,6 +621,8 @@ Default value: **{ x: 0, y: 0, width: '100%', height: '100%' }**
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TextPickerDialogOptions-maskRect?: Rectangle--><!--Device-TextPickerDialogOptions-maskRect?: Rectangle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## offset
@@ -598,6 +646,8 @@ Default value: **{ dx: 0 , dy: 0 }**
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TextPickerDialogOptions-offset?: Offset--><!--Device-TextPickerDialogOptions-offset?: Offset-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onEnterSelectedArea
@@ -620,6 +670,8 @@ In scenarios where the picker contains linked columns, the use of this callback 
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TextPickerDialogOptions-onEnterSelectedArea?: Callback<TextPickerResult>--><!--Device-TextPickerDialogOptions-onEnterSelectedArea?: Callback<TextPickerResult>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onScrollStop
@@ -637,6 +689,8 @@ Callback triggered when the picker scrolling stops. It is used to listen for the
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-TextPickerDialogOptions-onScrollStop?: Callback<TextPickerResult>--><!--Device-TextPickerDialogOptions-onScrollStop?: Callback<TextPickerResult>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -667,6 +721,8 @@ borderRadius: $r('sys.float.corner_radius_level12')
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-TextPickerDialogOptions-selectedBackgroundStyle?: PickerBackgroundStyle--><!--Device-TextPickerDialogOptions-selectedBackgroundStyle?: PickerBackgroundStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -702,6 +758,8 @@ weight: FontWeight.Medium
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TextPickerDialogOptions-selectedTextStyle?: PickerTextStyle--><!--Device-TextPickerDialogOptions-selectedTextStyle?: PickerTextStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## shadow
@@ -721,6 +779,8 @@ Default value on 2-in-1 devices: **ShadowStyle.OUTER_FLOATING_MD** when the dial
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextPickerDialogOptions-shadow?: ShadowOptions | ShadowStyle--><!--Device-TextPickerDialogOptions-shadow?: ShadowOptions | ShadowStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -757,5 +817,7 @@ weight: FontWeight.Regular
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextPickerDialogOptions-textStyle?: PickerTextStyle--><!--Device-TextPickerDialogOptions-textStyle?: PickerTextStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

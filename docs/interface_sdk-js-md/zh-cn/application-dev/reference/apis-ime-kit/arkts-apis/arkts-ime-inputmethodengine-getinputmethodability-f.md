@@ -16,6 +16,8 @@ function getInputMethodAbility(): InputMethodAbility
 
 **起始版本：** 9
 
+<!--Device-inputMethodEngine-function getInputMethodAbility(): InputMethodAbility--><!--Device-inputMethodEngine-function getInputMethodAbility(): InputMethodAbility-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**

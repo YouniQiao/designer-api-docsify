@@ -26,6 +26,8 @@ function getLinkedInfo(): Promise<WifiLinkedInfo>
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
+<!--Device-wifi-function getLinkedInfo(): Promise<WifiLinkedInfo>--><!--Device-wifi-function getLinkedInfo(): Promise<WifiLinkedInfo>-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **返回值：**
@@ -76,6 +78,8 @@ function getLinkedInfo(callback: AsyncCallback<WifiLinkedInfo>): void
 **替代接口：** [getLinkedInfo](arkts-connectivity-wifimanager-getlinkedinfo-f.md)
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
+
+<!--Device-wifi-function getLinkedInfo(callback: AsyncCallback<WifiLinkedInfo>): void--><!--Device-wifi-function getLinkedInfo(callback: AsyncCallback<WifiLinkedInfo>): void-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 

@@ -8,6 +8,8 @@ interface CreateAccountImplicitlyOptions
 
 **起始版本：** 9
 
+<!--Device-appAccount-interface CreateAccountImplicitlyOptions--><!--Device-appAccount-interface CreateAccountImplicitlyOptions-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 ## 导入模块
@@ -28,6 +30,8 @@ authType?: string
 
 **起始版本：** 9
 
+<!--Device-CreateAccountImplicitlyOptions-authType?: string--><!--Device-CreateAccountImplicitlyOptions-authType?: string-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 ## parameters
@@ -42,6 +46,8 @@ parameters?: Record<string, Object>
 
 **起始版本：** 9
 
+<!--Device-CreateAccountImplicitlyOptions-parameters?: Record<string, Object>--><!--Device-CreateAccountImplicitlyOptions-parameters?: Record<string, Object>-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 ## requiredLabels
@@ -55,5 +61,7 @@ requiredLabels?: Array<string>
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 9
+
+<!--Device-CreateAccountImplicitlyOptions-requiredLabels?: Array<string>--><!--Device-CreateAccountImplicitlyOptions-requiredLabels?: Array<string>-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount

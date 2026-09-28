@@ -8,6 +8,8 @@ HTTP拦截器链。
 
 **起始版本：** 22
 
+<!--Device-http-export class HttpInterceptorChain--><!--Device-http-export class HttpInterceptorChain-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块
@@ -31,6 +33,8 @@ public addChain(chain: HttpInterceptor[]): boolean
 **起始版本：** 22
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-HttpInterceptorChain-public addChain(chain: HttpInterceptor[]): boolean--><!--Device-HttpInterceptorChain-public addChain(chain: HttpInterceptor[]): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -120,6 +124,8 @@ public apply(httpRequest: HttpRequest): boolean
 **起始版本：** 22
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-HttpInterceptorChain-public apply(httpRequest: HttpRequest): boolean--><!--Device-HttpInterceptorChain-public apply(httpRequest: HttpRequest): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -218,6 +224,8 @@ public getChain(): HttpInterceptor[]
 **起始版本：** 22
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-HttpInterceptorChain-public getChain(): HttpInterceptor[]--><!--Device-HttpInterceptorChain-public getChain(): HttpInterceptor[]-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 

@@ -27,6 +27,8 @@ huks.init、huks.update、huks.finish为三段式接口，需要一起使用。
 
 **替代接口：** [initSession](arkts-universalkeystore-huks-initsession-f.md#initsession-1)(keyAlias: string, options: HuksOptions)
 
+<!--Device-huks-function init(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksHandle>): void--><!--Device-huks-function init(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksHandle>): void-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Extension
 
 **参数：**
@@ -60,6 +62,8 @@ huks.init、huks.update、huks.finish为三段式接口，需要一起使用。
 **废弃版本：** 9
 
 **替代接口：** [initSession](arkts-universalkeystore-huks-initsession-f.md#initsession-1)(keyAlias: string, options: HuksOptions)
+
+<!--Device-huks-function init(keyAlias: string, options: HuksOptions): Promise<HuksHandle>--><!--Device-huks-function init(keyAlias: string, options: HuksOptions): Promise<HuksHandle>-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Extension
 

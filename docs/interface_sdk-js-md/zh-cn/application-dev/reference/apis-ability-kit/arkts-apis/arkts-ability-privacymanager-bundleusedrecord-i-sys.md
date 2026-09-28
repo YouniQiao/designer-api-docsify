@@ -8,6 +8,8 @@ interface BundleUsedRecord
 
 **起始版本：** 9
 
+<!--Device-privacyManager-interface BundleUsedRecord--><!--Device-privacyManager-interface BundleUsedRecord-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ bundleName: string
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-BundleUsedRecord-bundleName: string--><!--Device-BundleUsedRecord-bundleName: string-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ deviceId: string
 **起始版本：** 9
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-BundleUsedRecord-deviceId: string--><!--Device-BundleUsedRecord-deviceId: string-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -68,6 +74,8 @@ deviceName?: string
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-BundleUsedRecord-deviceName?: string--><!--Device-BundleUsedRecord-deviceName?: string-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -85,6 +93,8 @@ isRemote: boolean
 **起始版本：** 9
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-BundleUsedRecord-isRemote: boolean--><!--Device-BundleUsedRecord-isRemote: boolean-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -104,6 +114,8 @@ permissionRecords: Array<PermissionUsedRecord>
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-BundleUsedRecord-permissionRecords: Array<PermissionUsedRecord>--><!--Device-BundleUsedRecord-permissionRecords: Array<PermissionUsedRecord>-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -121,6 +133,8 @@ tokenId: number
 **起始版本：** 9
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-BundleUsedRecord-tokenId: int--><!--Device-BundleUsedRecord-tokenId: int-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 

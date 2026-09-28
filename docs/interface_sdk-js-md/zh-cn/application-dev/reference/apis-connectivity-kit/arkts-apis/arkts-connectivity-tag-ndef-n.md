@@ -8,6 +8,8 @@ Provides methods for accessing NDEF tag.
 
 **起始版本：** 9
 
+<!--Device-tag-namespace ndef--><!--Device-tag-namespace ndef-End-->
+
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 ## 导入模块

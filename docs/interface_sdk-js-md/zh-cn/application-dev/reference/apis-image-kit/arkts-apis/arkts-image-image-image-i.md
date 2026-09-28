@@ -18,6 +18,8 @@ Image的属性仅支持在创建时初始化，后续无法再修改，且其属
 
 **起始版本：** 9
 
+<!--Device-image-interface Image--><!--Device-image-interface Image-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## 导入模块
@@ -41,6 +43,8 @@ getBufferData(): ImageBufferData | null
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Image-getBufferData(): ImageBufferData | null--><!--Device-Image-getBufferData(): ImageBufferData | null-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -72,6 +76,8 @@ getComponent(componentType: ComponentType, callback: AsyncCallback<Component>): 
 根据图像的组件类型从图像中获取组件缓存。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-Image-getComponent(componentType: ComponentType, callback: AsyncCallback<Component>): void--><!--Device-Image-getComponent(componentType: ComponentType, callback: AsyncCallback<Component>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -109,6 +115,8 @@ getComponent(componentType: ComponentType): Promise<Component>
 根据图像的组件类型从图像中获取组件缓存。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-Image-getComponent(componentType: ComponentType): Promise<Component>--><!--Device-Image-getComponent(componentType: ComponentType): Promise<Component>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -149,6 +157,8 @@ getMetadata(key: HdrMetadataKey): HdrMetadataValue | null
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Image-getMetadata(key: HdrMetadataKey): HdrMetadataValue | null--><!--Device-Image-getMetadata(key: HdrMetadataKey): HdrMetadataValue | null-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -200,6 +210,8 @@ release(callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
+<!--Device-Image-release(callback: AsyncCallback<void>): void--><!--Device-Image-release(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
@@ -242,6 +254,8 @@ release(): Promise<void>
 
 **起始版本：** 9
 
+<!--Device-Image-release(): Promise<void>--><!--Device-Image-release(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **返回值：**
@@ -276,6 +290,8 @@ clipRect: Region
 
 **起始版本：** 9
 
+<!--Device-Image-clipRect: Region--><!--Device-Image-clipRect: Region-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## colorSpace
@@ -292,6 +308,8 @@ readonly colorSpace: colorSpaceManager.ColorSpace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Image-readonly colorSpace: colorSpaceManager.ColorSpace--><!--Device-Image-readonly colorSpace: colorSpaceManager.ColorSpace-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## format
@@ -305,6 +323,8 @@ readonly format: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-Image-readonly format: int--><!--Device-Image-readonly format: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -328,6 +348,8 @@ Image对象所存储的数据是预览流还是拍照流，取决于应用将rec
 
 **起始版本：** 9
 
+<!--Device-Image-readonly size: Size--><!--Device-Image-readonly size: Size-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## timestamp
@@ -341,5 +363,7 @@ readonly timestamp: number
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-Image-readonly timestamp: long--><!--Device-Image-readonly timestamp: long-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core

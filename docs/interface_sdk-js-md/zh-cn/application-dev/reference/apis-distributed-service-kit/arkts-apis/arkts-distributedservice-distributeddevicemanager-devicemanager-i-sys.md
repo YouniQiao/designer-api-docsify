@@ -8,6 +8,8 @@ interface DeviceManager
 
 **起始版本：** 10
 
+<!--Device-distributedDeviceManager-interface DeviceManager--><!--Device-distributedDeviceManager-interface DeviceManager-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 ## 导入模块
@@ -27,6 +29,8 @@ getDeviceIconInfo(filterOptions: DeviceIconInfoFilterOptions): Promise<DeviceIco
 **起始版本：** 18
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
+
+<!--Device-DeviceManager-getDeviceIconInfo(filterOptions: DeviceIconInfoFilterOptions): Promise<DeviceIconInfo>--><!--Device-DeviceManager-getDeviceIconInfo(filterOptions: DeviceIconInfoFilterOptions): Promise<DeviceIconInfo>-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -96,6 +100,8 @@ getDeviceNetworkIdList(filterOptions: NetworkIdQueryFilter): Promise<Array<strin
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-getDeviceNetworkIdList(filterOptions: NetworkIdQueryFilter): Promise<Array<string>>--><!--Device-DeviceManager-getDeviceNetworkIdList(filterOptions: NetworkIdQueryFilter): Promise<Array<string>>-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -157,6 +163,8 @@ getDeviceProfileInfoList(filterOptions: DeviceProfileInfoFilterOptions): Promise
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-getDeviceProfileInfoList(filterOptions: DeviceProfileInfoFilterOptions): Promise<Array<DeviceProfileInfo>>--><!--Device-DeviceManager-getDeviceProfileInfoList(filterOptions: DeviceProfileInfoFilterOptions): Promise<Array<DeviceProfileInfo>>-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -217,6 +225,8 @@ getIdentificationByDeviceIds(deviceIds: Array<string>): Array<DeviceIdentificati
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DeviceManager-getIdentificationByDeviceIds(deviceIds: Array<string>): Array<DeviceIdentification>--><!--Device-DeviceManager-getIdentificationByDeviceIds(deviceIds: Array<string>): Array<DeviceIdentification>-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -268,6 +278,8 @@ getLocalDisplayDeviceName(maxNameLength: number): Promise<string>
 **起始版本：** 18
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
+
+<!--Device-DeviceManager-getLocalDisplayDeviceName(maxNameLength: int): Promise<string>--><!--Device-DeviceManager-getLocalDisplayDeviceName(maxNameLength: int): Promise<string>-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -328,6 +340,8 @@ getOsTypeByNetworkId(networkId: string): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DeviceManager-getOsTypeByNetworkId(networkId: string): int--><!--Device-DeviceManager-getOsTypeByNetworkId(networkId: string): int-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -382,6 +396,8 @@ off(type: 'replyResult', callback?: Callback<{ param: string; }>): void
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-off(type: 'replyResult', callback?: Callback<{ param: string; }>): void--><!--Device-DeviceManager-off(type: 'replyResult', callback?: Callback<{ param: string; }>): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -427,6 +443,8 @@ on(type: 'replyResult', callback: Callback<{ param: string; }>): void
 **起始版本：** 10
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
+
+<!--Device-DeviceManager-on(type: 'replyResult', callback: Callback<{ param: string; }>): void--><!--Device-DeviceManager-on(type: 'replyResult', callback: Callback<{ param: string; }>): void-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -487,6 +505,8 @@ putDeviceProfileInfoList(deviceProfileInfoList: Array<DeviceProfileInfo>): Promi
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-putDeviceProfileInfoList(deviceProfileInfoList: Array<DeviceProfileInfo>): Promise<int>--><!--Device-DeviceManager-putDeviceProfileInfoList(deviceProfileInfoList: Array<DeviceProfileInfo>): Promise<int>-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -543,6 +563,8 @@ replyUiAction(action: number, actionResult: string): void
 **起始版本：** 10
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
+
+<!--Device-DeviceManager-replyUiAction(action: int, actionResult: string): void--><!--Device-DeviceManager-replyUiAction(action: int, actionResult: string): void-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -601,6 +623,8 @@ restoreLocalDeviceName(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DeviceManager-restoreLocalDeviceName(): void--><!--Device-DeviceManager-restoreLocalDeviceName(): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -639,6 +663,8 @@ setHeartbeatPolicy(policy: StrategyForHeartbeat, delayTime: number): void
 **起始版本：** 15
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
+
+<!--Device-DeviceManager-setHeartbeatPolicy(policy: StrategyForHeartbeat, delayTime: int): void--><!--Device-DeviceManager-setHeartbeatPolicy(policy: StrategyForHeartbeat, delayTime: int): void-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -688,6 +714,8 @@ setLocalDeviceName(deviceName: string): Promise<number>
 **起始版本：** 18
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
+
+<!--Device-DeviceManager-setLocalDeviceName(deviceName: string): Promise<int>--><!--Device-DeviceManager-setLocalDeviceName(deviceName: string): Promise<int>-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -748,6 +776,8 @@ setRemoteDeviceName(deviceId: string, deviceName: string): Promise<number>
 **起始版本：** 18
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
+
+<!--Device-DeviceManager-setRemoteDeviceName(deviceId: string, deviceName: string): Promise<int>--><!--Device-DeviceManager-setRemoteDeviceName(deviceId: string, deviceName: string): Promise<int>-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -814,6 +844,8 @@ restoreLocalDeivceName(): void
 **替代接口：** [restoreLocalDeviceName](#restorelocaldevicename)
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
+
+<!--Device-DeviceManager-restoreLocalDeivceName(): void--><!--Device-DeviceManager-restoreLocalDeivceName(): void-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 

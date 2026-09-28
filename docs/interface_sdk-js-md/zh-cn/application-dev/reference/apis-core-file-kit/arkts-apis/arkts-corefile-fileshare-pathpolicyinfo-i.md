@@ -10,6 +10,8 @@ export interface PathPolicyInfo
 
 **起始版本：** 15
 
+<!--Device-fileShare-export interface PathPolicyInfo--><!--Device-fileShare-export interface PathPolicyInfo-End-->
+
 **系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
 ## 导入模块
@@ -30,6 +32,8 @@ operationMode: OperationMode
 
 **起始版本：** 15
 
+<!--Device-PathPolicyInfo-operationMode: OperationMode--><!--Device-PathPolicyInfo-operationMode: OperationMode-End-->
+
 **系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
 ## path
@@ -43,5 +47,7 @@ path: string
 **类型：** string
 
 **起始版本：** 15
+
+<!--Device-PathPolicyInfo-path: string--><!--Device-PathPolicyInfo-path: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization

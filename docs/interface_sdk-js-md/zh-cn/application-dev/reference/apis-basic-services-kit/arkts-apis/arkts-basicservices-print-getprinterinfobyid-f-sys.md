@@ -18,6 +18,8 @@ function getPrinterInfoById(printerId: string): Promise<PrinterInfo>
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-print-function getPrinterInfoById(printerId: string): Promise<PrinterInfo>--><!--Device-print-function getPrinterInfoById(printerId: string): Promise<PrinterInfo>-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **系统接口：** 此接口为系统接口。

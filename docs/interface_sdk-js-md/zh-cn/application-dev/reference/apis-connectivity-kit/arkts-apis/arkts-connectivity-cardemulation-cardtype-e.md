@@ -8,6 +8,8 @@ enum CardType
 
 **起始版本：** 9
 
+<!--Device-cardEmulation-enum CardType--><!--Device-cardEmulation-enum CardType-End-->
+
 **系统能力：** SystemCapability.Communication.NFC.CardEmulation
 
 ## PAYMENT
@@ -22,7 +24,9 @@ PAYMENT = "payment"
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-CardType-PAYMENT = "payment"--><!--Device-CardType-PAYMENT = "payment"-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.CardEmulation
 
@@ -38,6 +42,8 @@ OTHER = "other"
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-CardType-OTHER = "other"--><!--Device-CardType-OTHER = "other"-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.CardEmulation

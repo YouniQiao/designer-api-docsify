@@ -12,6 +12,8 @@ Inherits from [CommonProgressStyleOptions](arkts-arkui-progress-comp-commonprogr
 
 **Since:** 8
 
+<!--Device-unnamed-declare interface ProgressStyleOptions extends CommonProgressStyleOptions--><!--Device-unnamed-declare interface ProgressStyleOptions extends CommonProgressStyleOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## scaleCount
@@ -35,6 +37,8 @@ When both scaleCount and scaleWidth are equal to their default values, setting t
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-ProgressStyleOptions-scaleCount?: number--><!--Device-ProgressStyleOptions-scaleCount?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,6 +68,8 @@ When both scaleCount and scaleWidth are equal to their default values, setting t
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-ProgressStyleOptions-scaleWidth?: Length--><!--Device-ProgressStyleOptions-scaleWidth?: Length-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## strokeWidth
@@ -87,5 +93,7 @@ When the value exceeds the value range or an invalid value is set, the default v
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-ProgressStyleOptions-strokeWidth?: Length--><!--Device-ProgressStyleOptions-strokeWidth?: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -8,6 +8,8 @@ interface PerformanceInfo
 
 **起始版本：** 20
 
+<!--Device-cacheDownload-interface PerformanceInfo--><!--Device-cacheDownload-interface PerformanceInfo-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## 导入模块
@@ -28,6 +30,8 @@ readonly connectTime: number
 
 **起始版本：** 20
 
+<!--Device-PerformanceInfo-readonly connectTime: double--><!--Device-PerformanceInfo-readonly connectTime: double-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## dnsTime
@@ -41,6 +45,8 @@ readonly dnsTime: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-PerformanceInfo-readonly dnsTime: double--><!--Device-PerformanceInfo-readonly dnsTime: double-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -56,6 +62,8 @@ readonly firstReceiveTime: number
 
 **起始版本：** 20
 
+<!--Device-PerformanceInfo-readonly firstReceiveTime: double--><!--Device-PerformanceInfo-readonly firstReceiveTime: double-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## firstSendTime
@@ -69,6 +77,8 @@ readonly firstSendTime: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-PerformanceInfo-readonly firstSendTime: double--><!--Device-PerformanceInfo-readonly firstSendTime: double-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -84,6 +94,8 @@ readonly redirectTime: number
 
 **起始版本：** 20
 
+<!--Device-PerformanceInfo-readonly redirectTime: double--><!--Device-PerformanceInfo-readonly redirectTime: double-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## tlsTime
@@ -98,6 +110,8 @@ readonly tlsTime: number
 
 **起始版本：** 20
 
+<!--Device-PerformanceInfo-readonly tlsTime: double--><!--Device-PerformanceInfo-readonly tlsTime: double-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## totalTime
@@ -111,5 +125,7 @@ readonly totalTime: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-PerformanceInfo-readonly totalTime: double--><!--Device-PerformanceInfo-readonly totalTime: double-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent

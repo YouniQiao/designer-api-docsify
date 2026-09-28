@@ -20,6 +20,8 @@ function createKeyboardController(): Promise<KeyboardController>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-inputEventClient-function createKeyboardController(): Promise<KeyboardController>--><!--Device-inputEventClient-function createKeyboardController(): Promise<KeyboardController>-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **返回值：**

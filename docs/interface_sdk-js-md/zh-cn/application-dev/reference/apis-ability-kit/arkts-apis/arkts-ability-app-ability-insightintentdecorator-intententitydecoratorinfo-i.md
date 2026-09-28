@@ -8,6 +8,8 @@ declare interface IntentEntityDecoratorInfo
 
 **起始版本：** 20
 
+<!--Device-unnamed-declare interface IntentEntityDecoratorInfo--><!--Device-unnamed-declare interface IntentEntityDecoratorInfo-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块
@@ -32,6 +34,8 @@ entityCategory: string
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-IntentEntityDecoratorInfo-entityCategory: string--><!--Device-IntentEntityDecoratorInfo-entityCategory: string-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## parameters
@@ -50,6 +54,8 @@ parameters?: Record<string, Object>
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-IntentEntityDecoratorInfo-parameters?: Record<string, Object>--><!--Device-IntentEntityDecoratorInfo-parameters?: Record<string, Object>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## supportedQueryProperties
@@ -67,5 +73,7 @@ supportedQueryProperties?: string[]
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-IntentEntityDecoratorInfo-supportedQueryProperties?: string[]--><!--Device-IntentEntityDecoratorInfo-supportedQueryProperties?: string[]-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

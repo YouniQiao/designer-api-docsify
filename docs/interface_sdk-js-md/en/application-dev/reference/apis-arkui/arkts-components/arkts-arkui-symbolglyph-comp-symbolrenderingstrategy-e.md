@@ -8,6 +8,8 @@ Enumerates the rendering modes.
 
 **Since:** 11
 
+<!--Device-unnamed-declare enum SymbolRenderingStrategy--><!--Device-unnamed-declare enum SymbolRenderingStrategy-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## SINGLE
@@ -29,6 +31,8 @@ When multiple colors are set, only the first color takes effect.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-SymbolRenderingStrategy-SINGLE = 0--><!--Device-SymbolRenderingStrategy-SINGLE = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -52,6 +56,8 @@ The color setting order matches the icon layer order. When the number of colors 
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-SymbolRenderingStrategy-MULTIPLE_COLOR = 1--><!--Device-SymbolRenderingStrategy-MULTIPLE_COLOR = 1-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## MULTIPLE_OPACITY
@@ -73,5 +79,7 @@ The opacity is related to the layers. For a common symbol icon, the default opac
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-SymbolRenderingStrategy-MULTIPLE_OPACITY = 2--><!--Device-SymbolRenderingStrategy-MULTIPLE_OPACITY = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

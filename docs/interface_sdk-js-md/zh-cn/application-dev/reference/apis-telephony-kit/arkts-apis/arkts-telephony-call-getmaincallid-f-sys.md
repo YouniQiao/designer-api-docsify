@@ -16,6 +16,8 @@ function getMainCallId(callId: number, callback: AsyncCallback<number>): void
 
 **起始版本：** 7
 
+<!--Device-call-function getMainCallId(callId: int, callback: AsyncCallback<int>): void--><!--Device-call-function getMainCallId(callId: int, callback: AsyncCallback<int>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -64,6 +66,8 @@ function getMainCallId(callId: number): Promise<number>
 获取主呼叫Id。使用Promise异步回调。
 
 **起始版本：** 7
+
+<!--Device-call-function getMainCallId(callId: int): Promise<int>--><!--Device-call-function getMainCallId(callId: int): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 

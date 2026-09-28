@@ -12,6 +12,8 @@ SSAP客户端类，提供了和服务端进行连接和数据传输等操作方�
 
 **起始版本：** 26.0.0
 
+<!--Device-ssap-interface Client--><!--Device-ssap-interface Client-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## 导入模块
@@ -33,6 +35,8 @@ close(): void
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Client-close(): void--><!--Device-Client-close(): void-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -57,6 +61,8 @@ connect(): Promise<void>
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Client-connect(): Promise<void>--><!--Device-Client-connect(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -88,6 +94,8 @@ disconnect(): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Client-disconnect(): Promise<void>--><!--Device-Client-disconnect(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **返回值：**
@@ -118,6 +126,8 @@ getServices(): Promise<Service[]>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Client-getServices(): Promise<Service[]>--><!--Device-Client-getServices(): Promise<Service[]>-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **返回值：**
@@ -146,6 +156,8 @@ offConnectionStateChange(callback?: Callback<ConnectionChangeState>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Client-offConnectionStateChange(callback?: Callback<ConnectionChangeState>): void--><!--Device-Client-offConnectionStateChange(callback?: Callback<ConnectionChangeState>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **参数：**
@@ -166,6 +178,8 @@ offMtuChange(callback?: Callback<number>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Client-offMtuChange(callback?: Callback<int>): void--><!--Device-Client-offMtuChange(callback?: Callback<int>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **参数：**
@@ -185,6 +199,8 @@ offPropertyChange(callback?: Callback<Property>): void
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Client-offPropertyChange(callback?: Callback<Property>): void--><!--Device-Client-offPropertyChange(callback?: Callback<Property>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -208,6 +224,8 @@ onConnectionStateChange(callback: Callback<ConnectionChangeState>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Client-onConnectionStateChange(callback: Callback<ConnectionChangeState>): void--><!--Device-Client-onConnectionStateChange(callback: Callback<ConnectionChangeState>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **参数：**
@@ -229,6 +247,8 @@ onMtuChange(callback: Callback<number>): void
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Client-onMtuChange(callback: Callback<int>): void--><!--Device-Client-onMtuChange(callback: Callback<int>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -252,6 +272,8 @@ onPropertyChange(callback: Callback<Property>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Client-onPropertyChange(callback: Callback<Property>): void--><!--Device-Client-onPropertyChange(callback: Callback<Property>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **参数：**
@@ -273,6 +295,8 @@ readProperty(property: Property): Promise<Property>
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Client-readProperty(property: Property): Promise<Property>--><!--Device-Client-readProperty(property: Property): Promise<Property>-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -312,6 +336,8 @@ requestMtuSize(mtu: number): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Client-requestMtuSize(mtu: int): Promise<void>--><!--Device-Client-requestMtuSize(mtu: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **参数：**
@@ -347,6 +373,8 @@ setPropertyNotification(property: Property, enable: boolean): Promise<void>
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Client-setPropertyNotification(property: Property, enable: boolean): Promise<void>--><!--Device-Client-setPropertyNotification(property: Property, enable: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -386,6 +414,8 @@ writeProperty(property: Property, writeType: PropertyWriteType): Promise<void>
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Client-writeProperty(property: Property, writeType: PropertyWriteType): Promise<void>--><!--Device-Client-writeProperty(property: Property, writeType: PropertyWriteType): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 

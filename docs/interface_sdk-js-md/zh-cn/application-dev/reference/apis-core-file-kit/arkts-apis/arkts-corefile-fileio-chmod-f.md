@@ -17,6 +17,8 @@ declare function chmod(path: string, mode: number): Promise<void>
 
 **废弃版本：** 9
 
+<!--Device-unnamed-declare function chmod(path: string, mode: number): Promise<void>--><!--Device-unnamed-declare function chmod(path: string, mode: number): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -46,6 +48,8 @@ declare function chmod(path: string, mode: number, callback: AsyncCallback<void>
 **起始版本：** 7
 
 **废弃版本：** 9
+
+<!--Device-unnamed-declare function chmod(path: string, mode: number, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function chmod(path: string, mode: number, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

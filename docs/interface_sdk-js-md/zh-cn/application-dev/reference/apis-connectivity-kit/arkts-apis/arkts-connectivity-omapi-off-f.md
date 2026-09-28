@@ -16,6 +16,8 @@ function off(type: 'stateChanged', callback?: Callback<ServiceState>): void
 
 **起始版本：** 18
 
+<!--Device-omapi-function off(type: 'stateChanged', callback?: Callback<ServiceState>): void--><!--Device-omapi-function off(type: 'stateChanged', callback?: Callback<ServiceState>): void-End-->
+
 **系统能力：** SystemCapability.Communication.SecureElement
 
 **参数：**

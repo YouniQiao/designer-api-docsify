@@ -8,6 +8,8 @@ rtt通话消息
 
 **起始版本：** 22
 
+<!--Device-call-export interface RttMessageInfo--><!--Device-call-export interface RttMessageInfo-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ rtt通话id
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-RttMessageInfo-callId: int--><!--Device-RttMessageInfo-callId: int-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ rtt消息
 **起始版本：** 22
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-RttMessageInfo-rttMessage: string--><!--Device-RttMessageInfo-rttMessage: string-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 

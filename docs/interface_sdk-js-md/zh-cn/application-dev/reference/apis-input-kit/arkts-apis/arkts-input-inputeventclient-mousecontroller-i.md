@@ -9,6 +9,8 @@ interface MouseController
 
 **起始版本：** 26.0.0
 
+<!--Device-inputEventClient-interface MouseController--><!--Device-inputEventClient-interface MouseController-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
 ## 导入模块
@@ -30,6 +32,8 @@ beginAxis(axis: Axis, value: number): Promise<void>
 **需要权限：** ohos.permission.CONTROL_DEVICE
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MouseController-beginAxis(axis: Axis, value: int): Promise<void>--><!--Device-MouseController-beginAxis(axis: Axis, value: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
@@ -105,6 +109,8 @@ endAxis(axis: Axis): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MouseController-endAxis(axis: Axis): Promise<void>--><!--Device-MouseController-endAxis(axis: Axis): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **参数：**
@@ -144,6 +150,8 @@ moveTo(displayId: number, displayX: number, displayY: number): Promise<void>
 **需要权限：** ohos.permission.CONTROL_DEVICE
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MouseController-moveTo(displayId: int, displayX: int, displayY: int): Promise<void>--><!--Device-MouseController-moveTo(displayId: int, displayX: int, displayY: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
@@ -211,6 +219,8 @@ pressButton(button: Button): Promise<void>
 **需要权限：** ohos.permission.CONTROL_DEVICE
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MouseController-pressButton(button: Button): Promise<void>--><!--Device-MouseController-pressButton(button: Button): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
@@ -281,6 +291,8 @@ releaseButton(button: Button): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MouseController-releaseButton(button: Button): Promise<void>--><!--Device-MouseController-releaseButton(button: Button): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **参数：**
@@ -320,6 +332,8 @@ updateAxis(axis: Axis, value: number): Promise<void>
 **需要权限：** ohos.permission.CONTROL_DEVICE
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MouseController-updateAxis(axis: Axis, value: int): Promise<void>--><!--Device-MouseController-updateAxis(axis: Axis, value: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 

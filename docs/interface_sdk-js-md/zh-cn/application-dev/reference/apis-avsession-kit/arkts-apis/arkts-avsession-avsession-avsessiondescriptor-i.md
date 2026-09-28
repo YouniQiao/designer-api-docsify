@@ -8,6 +8,8 @@ interface AVSessionDescriptor
 
 **起始版本：** 23
 
+<!--Device-avSession-interface AVSessionDescriptor--><!--Device-avSession-interface AVSessionDescriptor-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 
 ## 导入模块
@@ -28,6 +30,8 @@ elementName: ElementName
 
 **起始版本：** 23
 
+<!--Device-AVSessionDescriptor-elementName: ElementName--><!--Device-AVSessionDescriptor-elementName: ElementName-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 
 ## isActive
@@ -45,6 +49,8 @@ false：没有被激活。
 **类型：** boolean
 
 **起始版本：** 23
+
+<!--Device-AVSessionDescriptor-isActive: boolean--><!--Device-AVSessionDescriptor-isActive: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 
@@ -64,6 +70,8 @@ false：不是最新的会话。
 
 **起始版本：** 23
 
+<!--Device-AVSessionDescriptor-isTopSession: boolean--><!--Device-AVSessionDescriptor-isTopSession: boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 
 ## sessionId
@@ -77,6 +85,8 @@ sessionId: string
 **类型：** string
 
 **起始版本：** 23
+
+<!--Device-AVSessionDescriptor-sessionId: string--><!--Device-AVSessionDescriptor-sessionId: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 
@@ -92,6 +102,8 @@ sessionTag: string
 
 **起始版本：** 23
 
+<!--Device-AVSessionDescriptor-sessionTag: string--><!--Device-AVSessionDescriptor-sessionTag: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 
 ## type
@@ -105,5 +117,7 @@ type: AVSessionType
 **类型：** [AVSessionType](arkts-avsession-avsession-avsessiontype-t.md)
 
 **起始版本：** 23
+
+<!--Device-AVSessionDescriptor-type: AVSessionType--><!--Device-AVSessionDescriptor-type: AVSessionType-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager

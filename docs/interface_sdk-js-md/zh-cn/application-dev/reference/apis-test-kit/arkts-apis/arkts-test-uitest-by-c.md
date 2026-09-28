@@ -26,6 +26,8 @@ By类提供的所有API均为同步接口，建议使用者通过静态构造器
 
 **替代接口：** [On](arkts-test-uitest-on-c.md)
 
+<!--Device-unnamed-declare class By--><!--Device-unnamed-declare class By-End-->
+
 **系统能力：** SystemCapability.Test.UiTest
 
 **测试接口：** 此接口仅在自动化测试脚本中使用。
@@ -54,6 +56,8 @@ clickable(b?: boolean): By
 **废弃版本：** 9
 
 **替代接口：** [clickable](arkts-test-uitest-on-c.md#clickable)
+
+<!--Device-By-clickable(b?: boolean): By--><!--Device-By-clickable(b?: boolean): By-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -98,6 +102,8 @@ enabled(b?: boolean): By
 
 **替代接口：** [enabled](arkts-test-uitest-on-c.md#enabled)
 
+<!--Device-By-enabled(b?: boolean): By--><!--Device-By-enabled(b?: boolean): By-End-->
+
 **系统能力：** SystemCapability.Test.UiTest
 
 **测试接口：** 此接口仅在自动化测试脚本中使用。
@@ -140,6 +146,8 @@ focused(b?: boolean): By
 **废弃版本：** 9
 
 **替代接口：** [focused](arkts-test-uitest-on-c.md#focused)
+
+<!--Device-By-focused(b?: boolean): By--><!--Device-By-focused(b?: boolean): By-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -184,6 +192,8 @@ id(id: number): By
 
 **替代接口：** [id](arkts-test-uitest-on-c.md#id)(id: string)
 
+<!--Device-By-id(id: number): By--><!--Device-By-id(id: number): By-End-->
+
 **系统能力：** SystemCapability.Test.UiTest
 
 **测试接口：** 此接口仅在自动化测试脚本中使用。
@@ -226,6 +236,8 @@ isAfter(by: By): By
 **废弃版本：** 9
 
 **替代接口：** [isAfter](arkts-test-uitest-on-c.md#isafter)(on: On)
+
+<!--Device-By-isAfter(by: By): By--><!--Device-By-isAfter(by: By): By-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -271,6 +283,8 @@ isBefore(by: By): By
 
 **替代接口：** [isBefore](arkts-test-uitest-on-c.md#isbefore)(on: On)
 
+<!--Device-By-isBefore(by: By): By--><!--Device-By-isBefore(by: By): By-End-->
+
 **系统能力：** SystemCapability.Test.UiTest
 
 **测试接口：** 此接口仅在自动化测试脚本中使用。
@@ -315,6 +329,8 @@ key(key: string): By
 
 **替代接口：** [id](arkts-test-uitest-on-c.md#id)(id: string)
 
+<!--Device-By-key(key: string): By--><!--Device-By-key(key: string): By-End-->
+
 **系统能力：** SystemCapability.Test.UiTest
 
 **测试接口：** 此接口仅在自动化测试脚本中使用。
@@ -357,6 +373,8 @@ scrollable(b?: boolean): By
 **废弃版本：** 9
 
 **替代接口：** [scrollable](arkts-test-uitest-on-c.md#scrollable)
+
+<!--Device-By-scrollable(b?: boolean): By--><!--Device-By-scrollable(b?: boolean): By-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -401,6 +419,8 @@ selected(b?: boolean): By
 
 **替代接口：** [selected](arkts-test-uitest-on-c.md#selected)
 
+<!--Device-By-selected(b?: boolean): By--><!--Device-By-selected(b?: boolean): By-End-->
+
 **系统能力：** SystemCapability.Test.UiTest
 
 **测试接口：** 此接口仅在自动化测试脚本中使用。
@@ -443,6 +463,8 @@ text(txt: string, pattern?: MatchPattern): By
 **废弃版本：** 9
 
 **替代接口：** [text](arkts-test-uitest-on-c.md#text)
+
+<!--Device-By-text(txt: string, pattern?: MatchPattern): By--><!--Device-By-text(txt: string, pattern?: MatchPattern): By-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -487,6 +509,8 @@ type(tp: string): By
 **废弃版本：** 9
 
 **替代接口：** [type](arkts-test-uitest-on-c.md#type)(tp: string)
+
+<!--Device-By-type(tp: string): By--><!--Device-By-type(tp: string): By-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 

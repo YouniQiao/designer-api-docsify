@@ -10,6 +10,8 @@ WebMessageExt与WebMessagePort配合使用：WebMessagePort负责消息通道的
 
 **起始版本：** 10
 
+<!--Device-webview-class WebMessageExt--><!--Device-webview-class WebMessageExt-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## 导入模块
@@ -29,6 +31,8 @@ getArray(): Array<string | number | boolean>
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebMessageExt-getArray(): Array<string | number | boolean>--><!--Device-WebMessageExt-getArray(): Array<string | number | boolean>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -56,6 +60,8 @@ getArrayBuffer(): ArrayBuffer
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebMessageExt-getArrayBuffer(): ArrayBuffer--><!--Device-WebMessageExt-getArrayBuffer(): ArrayBuffer-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -81,6 +87,8 @@ getBoolean(): boolean
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebMessageExt-getBoolean(): boolean--><!--Device-WebMessageExt-getBoolean(): boolean-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -108,6 +116,8 @@ getError(): Error
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebMessageExt-getError(): Error--><!--Device-WebMessageExt-getError(): Error-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -133,6 +143,8 @@ getNumber(): number
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebMessageExt-getNumber(): number--><!--Device-WebMessageExt-getNumber(): number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -160,6 +172,8 @@ getString(): string
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebMessageExt-getString(): string--><!--Device-WebMessageExt-getString(): string-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -186,6 +200,8 @@ getType(): WebMessageType
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebMessageExt-getType(): WebMessageType--><!--Device-WebMessageExt-getType(): WebMessageType-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -205,6 +221,8 @@ setArray(message: Array<string | number | boolean>): void
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebMessageExt-setArray(message: Array<string | number | boolean>): void--><!--Device-WebMessageExt-setArray(message: Array<string | number | boolean>): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -233,6 +251,8 @@ setArrayBuffer(message: ArrayBuffer): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebMessageExt-setArrayBuffer(message: ArrayBuffer): void--><!--Device-WebMessageExt-setArrayBuffer(message: ArrayBuffer): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -259,6 +279,8 @@ setBoolean(message: boolean): void
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebMessageExt-setBoolean(message: boolean): void--><!--Device-WebMessageExt-setBoolean(message: boolean): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -287,6 +309,8 @@ setError(message: Error): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebMessageExt-setError(message: Error): void--><!--Device-WebMessageExt-setError(message: Error): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -313,6 +337,8 @@ setNumber(message: number): void
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebMessageExt-setNumber(message: number): void--><!--Device-WebMessageExt-setNumber(message: number): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -341,6 +367,8 @@ setString(message: string): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebMessageExt-setString(message: string): void--><!--Device-WebMessageExt-setString(message: string): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -367,6 +395,8 @@ setType(type: WebMessageType): void
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebMessageExt-setType(type: WebMessageType): void--><!--Device-WebMessageExt-setType(type: WebMessageType): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

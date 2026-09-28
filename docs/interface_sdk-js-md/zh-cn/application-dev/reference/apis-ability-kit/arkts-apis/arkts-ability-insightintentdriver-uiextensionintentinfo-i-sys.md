@@ -8,6 +8,8 @@ interface UIExtensionIntentInfo
 
 **起始版本：** 23
 
+<!--Device-insightIntentDriver-interface UIExtensionIntentInfo--><!--Device-insightIntentDriver-interface UIExtensionIntentInfo-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -31,6 +33,8 @@ readonly abilityName: string
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionIntentInfo-readonly abilityName: string--><!--Device-UIExtensionIntentInfo-readonly abilityName: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

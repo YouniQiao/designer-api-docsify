@@ -21,6 +21,8 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace relationalStore--><!--Device-unnamed-declare namespace relationalStore-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## 导入模块

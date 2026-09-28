@@ -16,6 +16,8 @@ function isBatteryConfigSupported(sceneName: string): boolean
 
 **起始版本：** 11
 
+<!--Device-batteryInfo-function isBatteryConfigSupported(sceneName: string): boolean--><!--Device-batteryInfo-function isBatteryConfigSupported(sceneName: string): boolean-End-->
+
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
 **系统接口：** 此接口为系统接口。

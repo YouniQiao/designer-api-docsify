@@ -24,6 +24,8 @@ function getSelfTrafficStats(networkInfo: NetworkInfo): Promise<NetStatsInfo>
 
 **起始版本：** 22
 
+<!--Device-statistics-function getSelfTrafficStats(networkInfo: NetworkInfo): Promise<NetStatsInfo>--><!--Device-statistics-function getSelfTrafficStats(networkInfo: NetworkInfo): Promise<NetStatsInfo>-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**

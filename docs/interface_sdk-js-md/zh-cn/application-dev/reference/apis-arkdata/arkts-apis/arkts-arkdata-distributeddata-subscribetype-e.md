@@ -12,6 +12,8 @@ enum SubscribeType
 
 **替代接口：** SubscribeType
 
+<!--Device-distributedData-enum SubscribeType--><!--Device-distributedData-enum SubscribeType-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## SUBSCRIBE_TYPE_LOCAL
@@ -27,6 +29,8 @@ SUBSCRIBE_TYPE_LOCAL = 0
 **废弃版本：** 9
 
 **替代接口：** SUBSCRIBE_TYPE_LOCAL
+
+<!--Device-SubscribeType-SUBSCRIBE_TYPE_LOCAL = 0--><!--Device-SubscribeType-SUBSCRIBE_TYPE_LOCAL = 0-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -44,6 +48,8 @@ SUBSCRIBE_TYPE_REMOTE = 1
 
 **替代接口：** SUBSCRIBE_TYPE_REMOTE
 
+<!--Device-SubscribeType-SUBSCRIBE_TYPE_REMOTE = 1--><!--Device-SubscribeType-SUBSCRIBE_TYPE_REMOTE = 1-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## SUBSCRIBE_TYPE_ALL
@@ -59,5 +65,7 @@ SUBSCRIBE_TYPE_ALL = 2
 **废弃版本：** 9
 
 **替代接口：** SUBSCRIBE_TYPE_ALL
+
+<!--Device-SubscribeType-SUBSCRIBE_TYPE_ALL = 2--><!--Device-SubscribeType-SUBSCRIBE_TYPE_ALL = 2-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core

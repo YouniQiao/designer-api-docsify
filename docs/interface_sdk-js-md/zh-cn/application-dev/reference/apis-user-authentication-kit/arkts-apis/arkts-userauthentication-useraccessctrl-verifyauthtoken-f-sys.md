@@ -20,6 +20,8 @@ function verifyAuthToken(authToken: Uint8Array, allowableDuration: number): Prom
 
 **需要权限：** ohos.permission.USE_USER_ACCESS_MANAGER
 
+<!--Device-userAccessCtrl-function verifyAuthToken(authToken: Uint8Array, allowableDuration: int): Promise<AuthToken>--><!--Device-userAccessCtrl-function verifyAuthToken(authToken: Uint8Array, allowableDuration: int): Promise<AuthToken>-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 **系统接口：** 此接口为系统接口。

@@ -16,6 +16,8 @@ function createVpnConnection(context: AbilityContext): VpnConnection
 
 **起始版本：** 10
 
+<!--Device-vpn-function createVpnConnection(context: AbilityContext): VpnConnection--><!--Device-vpn-function createVpnConnection(context: AbilityContext): VpnConnection-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。

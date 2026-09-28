@@ -18,6 +18,8 @@ function getProxyMode(): Promise<ProxyMode>
 
 **需要权限：** ohos.permission.CONNECTIVITY_INTERNAL
 
+<!--Device-connection-function getProxyMode(): Promise<ProxyMode>--><!--Device-connection-function getProxyMode(): Promise<ProxyMode>-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。

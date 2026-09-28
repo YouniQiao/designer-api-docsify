@@ -16,6 +16,8 @@ function updateId(uri: string, id: number): string
 
 **起始版本：** 9
 
+<!--Device-dataUriUtils-function updateId(uri: string, id: double): string--><!--Device-dataUriUtils-function updateId(uri: string, id: double): string-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**

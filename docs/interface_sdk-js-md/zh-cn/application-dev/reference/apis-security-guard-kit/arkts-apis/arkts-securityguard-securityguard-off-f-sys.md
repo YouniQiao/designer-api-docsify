@@ -18,6 +18,8 @@ function off(type: 'securityEventOccur', securityEventInfo: SecurityEventInfo, c
 
 **需要权限：** ohos.permission.QUERY_SECURITY_EVENT
 
+<!--Device-securityGuard-function off(type: 'securityEventOccur', securityEventInfo: SecurityEventInfo, callback?: Callback<SecurityEvent>): void--><!--Device-securityGuard-function off(type: 'securityEventOccur', securityEventInfo: SecurityEventInfo, callback?: Callback<SecurityEvent>): void-End-->
+
 **系统能力：** SystemCapability.Security.SecurityGuard
 
 **系统接口：** 此接口为系统接口。

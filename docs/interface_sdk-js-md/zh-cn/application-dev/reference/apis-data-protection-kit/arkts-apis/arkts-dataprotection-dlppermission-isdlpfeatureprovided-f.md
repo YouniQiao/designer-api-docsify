@@ -22,6 +22,8 @@ function isDLPFeatureProvided(): Promise<boolean>
 
 **起始版本：** 12
 
+<!--Device-dlpPermission-function isDLPFeatureProvided(): Promise<boolean>--><!--Device-dlpPermission-function isDLPFeatureProvided(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **返回值：**

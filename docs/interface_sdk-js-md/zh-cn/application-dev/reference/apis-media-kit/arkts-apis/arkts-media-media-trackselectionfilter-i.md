@@ -8,6 +8,8 @@ Describes the filter conditions for track selection.
 
 **起始版本：** 26.0.0
 
+<!--Device-media-interface TrackSelectionFilter--><!--Device-media-interface TrackSelectionFilter-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ Maximum allowed audio bitrate. The value should be an integer.Value constraint:T
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TrackSelectionFilter-maxAudioBitrate?: int--><!--Device-TrackSelectionFilter-maxAudioBitrate?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 ## maxAudioChannels
@@ -45,6 +49,8 @@ Maximum allowed audio channel count. The value should be an integer.Value constr
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TrackSelectionFilter-maxAudioChannels?: int--><!--Device-TrackSelectionFilter-maxAudioChannels?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -62,6 +68,8 @@ Maximum allowed video bitrate. The value should be an integer.Value constraint:T
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TrackSelectionFilter-maxVideoBitrate?: int--><!--Device-TrackSelectionFilter-maxVideoBitrate?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 ## maxVideoFrameRate
@@ -77,6 +85,8 @@ Maximum allowed video frame rate. The value should be an integer.Value constrain
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TrackSelectionFilter-maxVideoFrameRate?: int--><!--Device-TrackSelectionFilter-maxVideoFrameRate?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -94,6 +104,8 @@ Maximum allowed video resolution. <br>Default value:If not specified, the maximu
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TrackSelectionFilter-maxVideoResolution?: VideoSize--><!--Device-TrackSelectionFilter-maxVideoResolution?: VideoSize-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 ## minAudioBitrate
@@ -109,6 +121,8 @@ Minimum allowed audio bitrate. The value should be an integer.Value constraint:T
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TrackSelectionFilter-minAudioBitrate?: int--><!--Device-TrackSelectionFilter-minAudioBitrate?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -126,6 +140,8 @@ Minimum allowed video bitrate. The value should be an integer.Value constraint:T
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TrackSelectionFilter-minVideoBitrate?: int--><!--Device-TrackSelectionFilter-minVideoBitrate?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 ## minVideoFrameRate
@@ -141,6 +157,8 @@ Minimum allowed video frame rate. The value should be an integer.Value constrain
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TrackSelectionFilter-minVideoFrameRate?: int--><!--Device-TrackSelectionFilter-minVideoFrameRate?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -158,6 +176,8 @@ Minimum allowed video resolution. <br>Default value:If not specified, the minimu
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TrackSelectionFilter-minVideoResolution?: VideoSize--><!--Device-TrackSelectionFilter-minVideoResolution?: VideoSize-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 ## preferredAudioLanguages
@@ -173,6 +193,8 @@ The preferred languages for audio tracks. Multiple languages are arranged in the
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TrackSelectionFilter-preferredAudioLanguages?: Array<string>--><!--Device-TrackSelectionFilter-preferredAudioLanguages?: Array<string>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -190,6 +212,8 @@ Indicates the preferred encoding MIME type of the audio track. Multiple MIMEs ar
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TrackSelectionFilter-preferredAudioMimeTypes?: Array<string>--><!--Device-TrackSelectionFilter-preferredAudioMimeTypes?: Array<string>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 ## preferredSubtitleLanguages
@@ -206,6 +230,8 @@ Preferred language set for subtitles. Multiple languages are arranged in the ord
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TrackSelectionFilter-preferredSubtitleLanguages?: Array<string>--><!--Device-TrackSelectionFilter-preferredSubtitleLanguages?: Array<string>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 ## preferredVideoMimeTypes
@@ -221,5 +247,7 @@ The preferred sample MIME types for video tracks in order of preference, Multipl
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TrackSelectionFilter-preferredVideoMimeTypes?: Array<string>--><!--Device-TrackSelectionFilter-preferredVideoMimeTypes?: Array<string>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core

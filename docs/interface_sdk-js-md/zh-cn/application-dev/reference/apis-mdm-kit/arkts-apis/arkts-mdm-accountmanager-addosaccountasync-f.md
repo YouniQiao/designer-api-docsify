@@ -24,6 +24,8 @@ function addOsAccountAsync(admin: Want, name: string, type: osAccount.OsAccountT
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-accountManager-function addOsAccountAsync(admin: Want, name: string, type: osAccount.OsAccountType): Promise<osAccount.OsAccountInfo>--><!--Device-accountManager-function addOsAccountAsync(admin: Want, name: string, type: osAccount.OsAccountType): Promise<osAccount.OsAccountInfo>-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**

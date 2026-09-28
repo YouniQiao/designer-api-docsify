@@ -16,6 +16,8 @@ export interface LocationCommand
 
 **需要权限：** ohos.permission.LOCATION
 
+<!--Device-geolocation-export interface LocationCommand--><!--Device-geolocation-export interface LocationCommand-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 ## 导入模块
@@ -40,6 +42,8 @@ command: string
 
 **替代接口：** [command](arkts-location-geolocationmanager-locationcommand-i.md#command)
 
+<!--Device-LocationCommand-command: string--><!--Device-LocationCommand-command: string-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 ## scenario
@@ -57,5 +61,7 @@ scenario: LocationRequestScenario
 **废弃版本：** 9
 
 **替代接口：** [scenario](arkts-location-geolocationmanager-locationcommand-i.md#scenario)
+
+<!--Device-LocationCommand-scenario: LocationRequestScenario--><!--Device-LocationCommand-scenario: LocationRequestScenario-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core

@@ -13,6 +13,8 @@ export interface TagSession
 
 **起始版本：** 7
 
+<!--Device-unnamed-export interface TagSession--><!--Device-unnamed-export interface TagSession-End-->
+
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 ## connect
@@ -27,7 +29,9 @@ connect(): void
 
 **需要权限：** ohos.permission.NFC_TAG
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TagSession-connect(): void--><!--Device-TagSession-connect(): void-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -67,7 +71,9 @@ getMaxTransmitSize(): number
 
 **需要权限：** ohos.permission.NFC_TAG
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TagSession-getMaxTransmitSize(): int--><!--Device-TagSession-getMaxTransmitSize(): int-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -113,7 +119,9 @@ getTimeout(): number
 
 **需要权限：** ohos.permission.NFC_TAG
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TagSession-getTimeout(): int--><!--Device-TagSession-getTimeout(): int-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -157,7 +165,9 @@ isConnected(): boolean
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TagSession-isConnected(): boolean--><!--Device-TagSession-isConnected(): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -201,7 +211,9 @@ resetConnection(): void
 
 **需要权限：** ohos.permission.NFC_TAG
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TagSession-resetConnection(): void--><!--Device-TagSession-resetConnection(): void-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -241,7 +253,9 @@ setTimeout(timeout: number): void
 
 **需要权限：** ohos.permission.NFC_TAG
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TagSession-setTimeout(timeout: int): void--><!--Device-TagSession-setTimeout(timeout: int): void-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -289,7 +303,9 @@ transmit(data: number[]): Promise<number[]>
 
 **需要权限：** ohos.permission.NFC_TAG
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TagSession-transmit(data: int[]): Promise<int[]>--><!--Device-TagSession-transmit(data: int[]): Promise<int[]>-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -363,7 +379,9 @@ transmit(data: number[], callback: AsyncCallback<number[]>): void
 
 **需要权限：** ohos.permission.NFC_TAG
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TagSession-transmit(data: int[], callback: AsyncCallback<int[]>): void--><!--Device-TagSession-transmit(data: int[], callback: AsyncCallback<int[]>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -435,6 +453,8 @@ connectTag(): boolean
 
 **需要权限：** ohos.permission.NFC_TAG
 
+<!--Device-TagSession-connectTag(): boolean--><!--Device-TagSession-connectTag(): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **返回值：**
@@ -470,6 +490,8 @@ getMaxSendLength(): number
 **替代接口：** [getMaxTransmitSize](#getmaxtransmitsize)
 
 **需要权限：** ohos.permission.NFC_TAG
+
+<!--Device-TagSession-getMaxSendLength(): number--><!--Device-TagSession-getMaxSendLength(): number-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -507,6 +529,8 @@ getSendDataTimeout(): number
 
 **需要权限：** ohos.permission.NFC_TAG
 
+<!--Device-TagSession-getSendDataTimeout(): number--><!--Device-TagSession-getSendDataTimeout(): number-End-->
+
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **返回值：**
@@ -543,6 +567,8 @@ getTagInfo(): tag.TagInfo
 
 **需要权限：** ohos.permission.NFC_TAG
 
+<!--Device-TagSession-getTagInfo(): tag.TagInfo--><!--Device-TagSession-getTagInfo(): tag.TagInfo-End-->
+
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **返回值：**
@@ -576,6 +602,8 @@ isTagConnected(): boolean
 **废弃版本：** 9
 
 **替代接口：** isConnected
+
+<!--Device-TagSession-isTagConnected(): boolean--><!--Device-TagSession-isTagConnected(): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -613,6 +641,8 @@ reset(): void
 
 **需要权限：** ohos.permission.NFC_TAG
 
+<!--Device-TagSession-reset(): void--><!--Device-TagSession-reset(): void-End-->
+
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **示例**
@@ -641,6 +671,8 @@ sendData(data: number[]): Promise<number[]>
 **替代接口：** transmit
 
 **需要权限：** ohos.permission.NFC_TAG
+
+<!--Device-TagSession-sendData(data: number[]): Promise<number[]>--><!--Device-TagSession-sendData(data: number[]): Promise<number[]>-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -701,6 +733,8 @@ sendData(data: number[], callback: AsyncCallback<number[]>): void
 
 **需要权限：** ohos.permission.NFC_TAG
 
+<!--Device-TagSession-sendData(data: number[], callback: AsyncCallback<number[]>): void--><!--Device-TagSession-sendData(data: number[], callback: AsyncCallback<number[]>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **参数：**
@@ -753,6 +787,8 @@ setSendDataTimeout(timeout: number): boolean
 **替代接口：** setTimeout
 
 **需要权限：** ohos.permission.NFC_TAG
+
+<!--Device-TagSession-setSendDataTimeout(timeout: number): boolean--><!--Device-TagSession-setSendDataTimeout(timeout: number): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 

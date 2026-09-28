@@ -16,6 +16,8 @@ function getAllEfficiencyResources(): Promise<EfficiencyResourcesInfo[]>
 
 **起始版本：** 20
 
+<!--Device-backgroundTaskManager-function getAllEfficiencyResources(): Promise<EfficiencyResourcesInfo[]>--><!--Device-backgroundTaskManager-function getAllEfficiencyResources(): Promise<EfficiencyResourcesInfo[]>-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
 
 **系统接口：** 此接口为系统接口。

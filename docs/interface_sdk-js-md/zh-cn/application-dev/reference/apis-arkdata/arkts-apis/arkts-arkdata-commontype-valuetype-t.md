@@ -8,6 +8,8 @@ type ValueType = null | number | string | boolean | Uint8Array | Asset | Assets
 
 **起始版本：** 11
 
+<!--Device-commonType-type ValueType = null | long | double | string | boolean | Uint8Array | Asset | Assets--><!--Device-commonType-type ValueType = null | long | double | string | boolean | Uint8Array | Asset | Assets-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CommonType
 
 | 类型 | 说明 |

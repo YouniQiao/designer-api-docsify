@@ -12,6 +12,8 @@ interface KVManager
 
 **替代接口：** KVManager
 
+<!--Device-distributedData-interface KVManager--><!--Device-distributedData-interface KVManager-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core @version 1
 
 ## 导入模块
@@ -32,6 +34,8 @@ closeKVStore(appId: string, storeId: string, kvStore: KVStore, callback: AsyncCa
 **废弃版本：** 9
 
 **替代接口：** closeKVStore
+
+<!--Device-KVManager-closeKVStore(appId: string, storeId: string, kvStore: KVStore, callback: AsyncCallback<void>): void--><!--Device-KVManager-closeKVStore(appId: string, storeId: string, kvStore: KVStore, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -86,6 +90,8 @@ closeKVStore(appId: string, storeId: string, kvStore: KVStore): Promise<void>
 **废弃版本：** 9
 
 **替代接口：** closeKVStore
+
+<!--Device-KVManager-closeKVStore(appId: string, storeId: string, kvStore: KVStore): Promise<void>--><!--Device-KVManager-closeKVStore(appId: string, storeId: string, kvStore: KVStore): Promise<void>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -148,6 +154,8 @@ deleteKVStore(appId: string, storeId: string, callback: AsyncCallback<void>): vo
 
 **替代接口：** deleteKVStore
 
+<!--Device-KVManager-deleteKVStore(appId: string, storeId: string, callback: AsyncCallback<void>): void--><!--Device-KVManager-deleteKVStore(appId: string, storeId: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **参数：**
@@ -200,6 +208,8 @@ deleteKVStore(appId: string, storeId: string): Promise<void>
 **废弃版本：** 9
 
 **替代接口：** deleteKVStore
+
+<!--Device-KVManager-deleteKVStore(appId: string, storeId: string): Promise<void>--><!--Device-KVManager-deleteKVStore(appId: string, storeId: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -261,6 +271,8 @@ getAllKVStoreId(appId: string, callback: AsyncCallback<string[]>): void
 
 **替代接口：** getAllKVStoreId
 
+<!--Device-KVManager-getAllKVStoreId(appId: string, callback: AsyncCallback<string[]>): void--><!--Device-KVManager-getAllKVStoreId(appId: string, callback: AsyncCallback<string[]>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **参数：**
@@ -299,6 +311,8 @@ getAllKVStoreId(appId: string): Promise<string[]>
 **废弃版本：** 9
 
 **替代接口：** getAllKVStoreId
+
+<!--Device-KVManager-getAllKVStoreId(appId: string): Promise<string[]>--><!--Device-KVManager-getAllKVStoreId(appId: string): Promise<string[]>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -344,6 +358,8 @@ getKVStore<T extends KVStore>(storeId: string, options: Options): Promise<T>
 **废弃版本：** 9
 
 **替代接口：** getKVStore
+
+<!--Device-KVManager-getKVStore<T extends KVStore>(storeId: string, options: Options): Promise<T>--><!--Device-KVManager-getKVStore<T extends KVStore>(storeId: string, options: Options): Promise<T>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -401,6 +417,8 @@ getKVStore<T extends KVStore>(storeId: string, options: Options, callback: Async
 
 **替代接口：** getKVStore
 
+<!--Device-KVManager-getKVStore<T extends KVStore>(storeId: string, options: Options, callback: AsyncCallback<T>): void--><!--Device-KVManager-getKVStore<T extends KVStore>(storeId: string, options: Options, callback: AsyncCallback<T>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **参数：**
@@ -452,6 +470,8 @@ off(event: 'distributedDataServiceDie', deathCallback?: Callback<void>): void
 
 **替代接口：** off
 
+<!--Device-KVManager-off(event: 'distributedDataServiceDie', deathCallback?: Callback<void>): void--><!--Device-KVManager-off(event: 'distributedDataServiceDie', deathCallback?: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 **参数：**
@@ -489,6 +509,8 @@ on(event: 'distributedDataServiceDie', deathCallback: Callback<void>): void
 **废弃版本：** 9
 
 **替代接口：** on
+
+<!--Device-KVManager-on(event: 'distributedDataServiceDie', deathCallback: Callback<void>): void--><!--Device-KVManager-on(event: 'distributedDataServiceDie', deathCallback: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 

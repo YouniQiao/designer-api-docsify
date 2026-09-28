@@ -8,6 +8,8 @@ interface AdvertisingSettings
 
 **起始版本：** 26.0.0
 
+<!--Device-advertising-interface AdvertisingSettings--><!--Device-advertising-interface AdvertisingSettings-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## 导入模块
@@ -30,6 +32,8 @@ interval?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AdvertisingSettings-interval?: int--><!--Device-AdvertisingSettings-interval?: int-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## isConnectable
@@ -46,6 +50,8 @@ isConnectable?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AdvertisingSettings-isConnectable?: boolean--><!--Device-AdvertisingSettings-isConnectable?: boolean-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## power
@@ -61,5 +67,7 @@ power?: TxPowerMode
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AdvertisingSettings-power?: TxPowerMode--><!--Device-AdvertisingSettings-power?: TxPowerMode-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base

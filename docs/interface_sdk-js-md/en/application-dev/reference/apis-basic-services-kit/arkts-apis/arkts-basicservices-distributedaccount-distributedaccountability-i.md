@@ -8,6 +8,8 @@ Provides APIs for querying and updating the login state of a distributed account
 
 **Since:** 7
 
+<!--Device-distributedAccount-interface DistributedAccountAbility--><!--Device-distributedAccount-interface DistributedAccountAbility-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 ## Modules to Import
@@ -27,6 +29,8 @@ Obtains the distributed account information. This API uses an asynchronous callb
 **Since:** 9
 
 **Required permissions:** ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS or ohos.permission.GET_DISTRIBUTED_ACCOUNTS or ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DistributedAccountAbility-getOsAccountDistributedInfo(callback: AsyncCallback<DistributedInfo>): void--><!--Device-DistributedAccountAbility-getOsAccountDistributedInfo(callback: AsyncCallback<DistributedInfo>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -80,6 +84,8 @@ Obtains the distributed account information. This API uses a promise to return t
 
 **Required permissions:** ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS or ohos.permission.GET_DISTRIBUTED_ACCOUNTS or ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DistributedAccountAbility-getOsAccountDistributedInfo(): Promise<DistributedInfo>--><!--Device-DistributedAccountAbility-getOsAccountDistributedInfo(): Promise<DistributedInfo>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Return value:**
@@ -125,6 +131,8 @@ Sets the distributed account information. This API uses an asynchronous callback
 **Since:** 9
 
 **Required permissions:** ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS
+
+<!--Device-DistributedAccountAbility-setOsAccountDistributedInfo(accountInfo: DistributedInfo, callback: AsyncCallback<void>): void--><!--Device-DistributedAccountAbility-setOsAccountDistributedInfo(accountInfo: DistributedInfo, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -183,6 +191,8 @@ Sets the distributed account information. This API uses a promise to return the 
 **Since:** 9
 
 **Required permissions:** ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS
+
+<!--Device-DistributedAccountAbility-setOsAccountDistributedInfo(accountInfo: DistributedInfo): Promise<void>--><!--Device-DistributedAccountAbility-setOsAccountDistributedInfo(accountInfo: DistributedInfo): Promise<void>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -253,6 +263,8 @@ Queries the distributed account information. This API uses an asynchronous callb
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DistributedAccountAbility-queryOsAccountDistributedInfo(callback: AsyncCallback<DistributedInfo>): void--><!--Device-DistributedAccountAbility-queryOsAccountDistributedInfo(callback: AsyncCallback<DistributedInfo>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
@@ -302,6 +314,8 @@ Queries the distributed account information. This API uses a promise to return t
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DistributedAccountAbility-queryOsAccountDistributedInfo(): Promise<DistributedInfo>--><!--Device-DistributedAccountAbility-queryOsAccountDistributedInfo(): Promise<DistributedInfo>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Return value:**
@@ -345,6 +359,8 @@ Updates the distributed account information. This API uses an asynchronous callb
 **Substitutes:** [setOsAccountDistributedInfo](#setosaccountdistributedinfo)(accountInfo: DistributedInfo, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-DistributedAccountAbility-updateOsAccountDistributedInfo(accountInfo: DistributedInfo, callback: AsyncCallback<void>): void--><!--Device-DistributedAccountAbility-updateOsAccountDistributedInfo(accountInfo: DistributedInfo, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -397,6 +413,8 @@ Updates the distributed account information. This API uses a promise to return t
 **Substitutes:** [setOsAccountDistributedInfo](#setosaccountdistributedinfo-1)(accountInfo: DistributedInfo)
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-DistributedAccountAbility-updateOsAccountDistributedInfo(accountInfo: DistributedInfo): Promise<void>--><!--Device-DistributedAccountAbility-updateOsAccountDistributedInfo(accountInfo: DistributedInfo): Promise<void>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 

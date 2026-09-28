@@ -10,6 +10,8 @@ export type ValidationCallback = (context: ValidationContext) => boolean | Promi
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-http-export type ValidationCallback = (context: ValidationContext) => boolean | Promise<boolean>--><!--Device-http-export type ValidationCallback = (context: ValidationContext) => boolean | Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**

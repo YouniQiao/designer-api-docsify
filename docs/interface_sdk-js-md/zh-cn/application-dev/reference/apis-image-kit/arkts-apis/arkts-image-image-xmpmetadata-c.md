@@ -8,6 +8,8 @@ XMPMetadata instance.
 
 **起始版本：** 26.0.0
 
+<!--Device-image-class XMPMetadata--><!--Device-image-class XMPMetadata-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## 导入模块
@@ -31,6 +33,8 @@ Enumerate the XMP tags from specified path and uses a callback to return the res
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-XMPMetadata-public enumerateTags(      callback: (path: string, tag: XMPTag) => boolean,      rootPath?: string,      options?: XMPEnumerateOptions    ): void--><!--Device-XMPMetadata-public enumerateTags(      callback: (path: string, tag: XMPTag) => boolean,      rootPath?: string,      options?: XMPEnumerateOptions    ): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -60,6 +64,8 @@ Obtains the XMP metadata as a blob.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-XMPMetadata-public getBlob(): Promise<ArrayBuffer>--><!--Device-XMPMetadata-public getBlob(): Promise<ArrayBuffer>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **返回值：**
@@ -86,6 +92,8 @@ Get a single XMP tag from specified path.
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-XMPMetadata-public getTag(path: string): Promise<XMPTag | null>--><!--Device-XMPMetadata-public getTag(path: string): Promise<XMPTag | null>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -118,6 +126,8 @@ Get all XMP tags from specified path.
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-XMPMetadata-public getTags(rootPath?: string, options?: XMPEnumerateOptions): Promise<Record<string, XMPTag>>--><!--Device-XMPMetadata-public getTags(rootPath?: string, options?: XMPEnumerateOptions): Promise<Record<string, XMPTag>>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -152,6 +162,8 @@ Register a new namespace according to the xml namespace and prefix.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-XMPMetadata-public registerXMPNamespace(xmpNamespace: XMPNamespace): Promise<void>--><!--Device-XMPMetadata-public registerXMPNamespace(xmpNamespace: XMPNamespace): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
@@ -183,6 +195,8 @@ Remove the XMP tag from specified path.
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-XMPMetadata-public removeTag(path: string): Promise<void>--><!--Device-XMPMetadata-public removeTag(path: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -216,6 +230,8 @@ Set a blob into the XMP metadata.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-XMPMetadata-public setBlob(buffer: ArrayBuffer): Promise<void>--><!--Device-XMPMetadata-public setBlob(buffer: ArrayBuffer): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
@@ -247,6 +263,8 @@ Set the XMP type and value of the XMP tag in the specified path.
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-XMPMetadata-public setValue(path: string, type: XMPTagType, value?: string): Promise<void>--><!--Device-XMPMetadata-public setValue(path: string, type: XMPTagType, value?: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 

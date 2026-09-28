@@ -20,6 +20,8 @@ function setExecFrequency(info: FrequencyInfo): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-workScheduler-function setExecFrequency(info: FrequencyInfo): void--><!--Device-workScheduler-function setExecFrequency(info: FrequencyInfo): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
 **系统接口：** 此接口为系统接口。

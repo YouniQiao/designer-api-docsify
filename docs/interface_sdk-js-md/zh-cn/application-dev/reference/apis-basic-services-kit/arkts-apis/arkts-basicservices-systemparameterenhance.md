@@ -9,6 +9,8 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace systemParameterEnhance--><!--Device-unnamed-declare namespace systemParameterEnhance-End-->
+
 **系统能力：** SystemCapability.Startup.SystemInfo
 
 **系统接口：** 此接口为系统接口。

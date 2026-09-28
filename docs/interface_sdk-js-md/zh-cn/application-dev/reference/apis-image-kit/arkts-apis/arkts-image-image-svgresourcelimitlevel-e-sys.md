@@ -10,6 +10,8 @@ SVG资源限制等级枚举。
 
 **起始版本：** 26.0.1
 
+<!--Device-image-enum SVGResourceLimitLevel--><!--Device-image-enum SVGResourceLimitLevel-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **系统接口：** 此接口为系统接口。
@@ -27,6 +29,8 @@ NONE = 0
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SVGResourceLimitLevel-NONE = 0--><!--Device-SVGResourceLimitLevel-NONE = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -46,6 +50,8 @@ LOW = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SVGResourceLimitLevel-LOW = 1--><!--Device-SVGResourceLimitLevel-LOW = 1-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **系统接口：** 此接口为系统接口。
@@ -64,6 +70,8 @@ MEDIUM = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SVGResourceLimitLevel-MEDIUM = 2--><!--Device-SVGResourceLimitLevel-MEDIUM = 2-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **系统接口：** 此接口为系统接口。
@@ -81,6 +89,8 @@ HIGH = 3
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SVGResourceLimitLevel-HIGH = 3--><!--Device-SVGResourceLimitLevel-HIGH = 3-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 

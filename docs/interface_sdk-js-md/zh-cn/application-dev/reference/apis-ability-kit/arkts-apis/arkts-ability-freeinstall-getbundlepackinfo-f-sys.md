@@ -19,6 +19,8 @@ function getBundlePackInfo(bundleName: string,
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-freeInstall-function getBundlePackInfo(bundleName: string,     bundlePackFlag : BundlePackFlag, callback: AsyncCallback<BundlePackInfo>): void--><!--Device-freeInstall-function getBundlePackInfo(bundleName: string,     bundlePackFlag : BundlePackFlag, callback: AsyncCallback<BundlePackInfo>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **系统接口：** 此接口为系统接口。
@@ -55,6 +57,8 @@ function getBundlePackInfo(bundleName: string, bundlePackFlag : BundlePackFlag):
 **起始版本：** 9
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-freeInstall-function getBundlePackInfo(bundleName: string, bundlePackFlag : BundlePackFlag): Promise<BundlePackInfo>--><!--Device-freeInstall-function getBundlePackInfo(bundleName: string, bundlePackFlag : BundlePackFlag): Promise<BundlePackInfo>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 

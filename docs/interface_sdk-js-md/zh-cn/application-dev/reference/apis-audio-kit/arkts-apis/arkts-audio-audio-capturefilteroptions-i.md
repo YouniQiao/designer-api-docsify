@@ -17,6 +17,8 @@ interface CaptureFilterOptions
 
 **替代接口：** OH_AVScreenCapture in native interface.
 
+<!--Device-audio-interface CaptureFilterOptions--><!--Device-audio-interface CaptureFilterOptions-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.PlaybackCapture
 
 ## 导入模块
@@ -48,5 +50,7 @@ usages: Array<StreamUsage>
 **需要权限：** 
 - API版本11+：N/A
 - API版本10：ohos.permission.CAPTURE_VOICE_DOWNLINK_AUDIO
+
+<!--Device-CaptureFilterOptions-usages: Array<StreamUsage>--><!--Device-CaptureFilterOptions-usages: Array<StreamUsage>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.PlaybackCapture

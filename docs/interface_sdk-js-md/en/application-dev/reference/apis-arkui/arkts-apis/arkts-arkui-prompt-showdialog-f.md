@@ -22,6 +22,8 @@ Displays the dialog box.
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-prompt-function showDialog(options: ShowDialogOptions, callback: AsyncCallback<ShowDialogSuccessResponse>): void--><!--Device-prompt-function showDialog(options: ShowDialogOptions, callback: AsyncCallback<ShowDialogSuccessResponse>): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -75,6 +77,8 @@ Displays the dialog box.
 **Substitutes:** showDialog
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-prompt-function showDialog(options: ShowDialogOptions): Promise<ShowDialogSuccessResponse>--><!--Device-prompt-function showDialog(options: ShowDialogOptions): Promise<ShowDialogSuccessResponse>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -20,6 +20,8 @@ function setInterfaceUp(ifaceName: string): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-connection-function setInterfaceUp(ifaceName: string): Promise<void>--><!--Device-connection-function setInterfaceUp(ifaceName: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。

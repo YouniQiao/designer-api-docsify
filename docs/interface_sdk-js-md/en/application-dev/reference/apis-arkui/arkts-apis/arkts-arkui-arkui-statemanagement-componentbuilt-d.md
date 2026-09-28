@@ -12,4 +12,6 @@ The function decorated by **\@ComponentBuilt** is called after the **build()** f
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-unnamed-export declare const ComponentBuilt: MethodDecorator--><!--Device-unnamed-export declare const ComponentBuilt: MethodDecorator-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

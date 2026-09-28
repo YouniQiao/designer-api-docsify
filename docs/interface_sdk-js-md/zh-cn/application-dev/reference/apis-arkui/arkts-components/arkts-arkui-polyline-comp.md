@@ -29,6 +29,8 @@ Uses new to create Polyline. Anonymous Object Rectification.
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-PolylineInterface-new (options?: PolylineOptions): PolylineAttribute--><!--Device-PolylineInterface-new (options?: PolylineOptions): PolylineAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数:**
@@ -52,6 +54,8 @@ Polyline(options?: PolylineOptions)
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PolylineInterface-(options?: PolylineOptions): PolylineAttribute--><!--Device-PolylineInterface-(options?: PolylineOptions): PolylineAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

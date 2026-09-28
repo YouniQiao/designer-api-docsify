@@ -20,6 +20,8 @@ function getTotalSize(callback: AsyncCallback<number>): void
 - API版本15+：N/A
 - API版本9-14：ohos.permission.STORAGE_MANAGER
 
+<!--Device-storageStatistics-function getTotalSize(callback: AsyncCallback<long>): void--><!--Device-storageStatistics-function getTotalSize(callback: AsyncCallback<long>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
 **参数：**
@@ -68,6 +70,8 @@ function getTotalSize(): Promise<number>
 **需要权限：** 
 - API版本15+：N/A
 - API版本9-14：ohos.permission.STORAGE_MANAGER
+
+<!--Device-storageStatistics-function getTotalSize(): Promise<long>--><!--Device-storageStatistics-function getTotalSize(): Promise<long>-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 

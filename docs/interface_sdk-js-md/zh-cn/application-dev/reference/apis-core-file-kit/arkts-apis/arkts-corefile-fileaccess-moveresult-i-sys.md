@@ -10,6 +10,8 @@ interface MoveResult
 
 **废弃版本：** 23
 
+<!--Device-fileAccess-interface MoveResult--><!--Device-fileAccess-interface MoveResult-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -38,6 +40,8 @@ destUri: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MoveResult-destUri: string--><!--Device-MoveResult-destUri: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -59,6 +63,8 @@ errCode: number
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MoveResult-errCode: number--><!--Device-MoveResult-errCode: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -82,6 +88,8 @@ errMsg: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MoveResult-errMsg: string--><!--Device-MoveResult-errMsg: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -103,6 +111,8 @@ sourceUri: string
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MoveResult-sourceUri: string--><!--Device-MoveResult-sourceUri: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 

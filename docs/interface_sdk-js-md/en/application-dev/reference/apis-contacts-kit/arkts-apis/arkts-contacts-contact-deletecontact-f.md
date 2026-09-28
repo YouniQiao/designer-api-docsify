@@ -22,6 +22,8 @@ Deletes a contact. This API uses an asynchronous callback to return the result.
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
+<!--Device-contact-function deleteContact(key: string, callback: AsyncCallback<void>): void--><!--Device-contact-function deleteContact(key: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
@@ -66,6 +68,8 @@ Deletes a contact. This API uses an asynchronous callback to return the result.
 **Since:** 10
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS
+
+<!--Device-contact-function deleteContact(context: Context, key: string, callback: AsyncCallback<void>): void--><!--Device-contact-function deleteContact(context: Context, key: string, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -129,6 +133,8 @@ Deletes a contact. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
+<!--Device-contact-function deleteContact(key: string): Promise<void>--><!--Device-contact-function deleteContact(key: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
@@ -172,6 +178,8 @@ Deletes a contact. This API uses a promise to return the result.
 **Since:** 10
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS
+
+<!--Device-contact-function deleteContact(context: Context, key: string): Promise<void>--><!--Device-contact-function deleteContact(context: Context, key: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 

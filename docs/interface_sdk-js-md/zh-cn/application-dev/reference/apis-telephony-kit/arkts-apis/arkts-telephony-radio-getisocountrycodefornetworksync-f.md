@@ -16,6 +16,8 @@ function getISOCountryCodeForNetworkSync(slotId: number): string
 
 **起始版本：** 10
 
+<!--Device-radio-function getISOCountryCodeForNetworkSync(slotId: int): string--><!--Device-radio-function getISOCountryCodeForNetworkSync(slotId: int): string-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**

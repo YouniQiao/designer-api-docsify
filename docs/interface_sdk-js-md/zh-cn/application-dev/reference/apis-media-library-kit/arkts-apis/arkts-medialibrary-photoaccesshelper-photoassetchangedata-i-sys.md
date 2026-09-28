@@ -8,6 +8,8 @@ interface PhotoAssetChangeData
 
 **起始版本：** 20
 
+<!--Device-photoAccessHelper-interface PhotoAssetChangeData--><!--Device-photoAccessHelper-interface PhotoAssetChangeData-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ thumbnailChangeStatus: ThumbnailChangeStatus
 
 **起始版本：** 20
 
+<!--Device-PhotoAssetChangeData-thumbnailChangeStatus: ThumbnailChangeStatus--><!--Device-PhotoAssetChangeData-thumbnailChangeStatus: ThumbnailChangeStatus-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -43,6 +47,8 @@ version: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-PhotoAssetChangeData-version: long--><!--Device-PhotoAssetChangeData-version: long-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

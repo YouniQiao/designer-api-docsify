@@ -22,6 +22,8 @@ function acquireAccess(dataType: DataType): AccessStatus
 
 **需要权限：** ohos.permission.ACCESS_SCREEN_LOCK_MEDIA_DATA or ohos.permission.ACCESS_SCREEN_LOCK_ALL_DATA
 
+<!--Device-screenLockFileManager-function acquireAccess(dataType: DataType): AccessStatus--><!--Device-screenLockFileManager-function acquireAccess(dataType: DataType): AccessStatus-End-->
+
 **系统能力：** SystemCapability.Security.ScreenLockFileManager
 
 **系统接口：** 此接口为系统接口。

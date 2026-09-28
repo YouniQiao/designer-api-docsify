@@ -12,6 +12,8 @@ Flash继承自[FlashQuery](arkts-camera-camera-flashquery-i.md)。
 
 **起始版本：** 11
 
+<!--Device-camera-interface Flash extends FlashQuery--><!--Device-camera-interface Flash extends FlashQuery-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
@@ -31,6 +33,8 @@ Enables or disables the LCD flash.
 Before the setting, call [isLcdFlashSupported](arkts-camera-camera-flashquery-i-sys.md#islcdflashsupported) to check whether the device supports the LCD flash.
 
 **起始版本：** 13
+
+<!--Device-Flash-enableLcdFlash(enabled: boolean): void--><!--Device-Flash-enableLcdFlash(enabled: boolean): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

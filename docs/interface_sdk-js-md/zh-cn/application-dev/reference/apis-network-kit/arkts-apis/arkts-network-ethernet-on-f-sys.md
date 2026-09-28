@@ -18,6 +18,8 @@ function on(type: 'interfaceStateChange', callback: Callback<InterfaceStateInfo>
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-ethernet-function on(type: 'interfaceStateChange', callback: Callback<InterfaceStateInfo>): void--><!--Device-ethernet-function on(type: 'interfaceStateChange', callback: Callback<InterfaceStateInfo>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
 **系统接口：** 此接口为系统接口。

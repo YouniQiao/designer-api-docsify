@@ -8,6 +8,8 @@ export interface GeoAddress
 
 **起始版本：** 9
 
+<!--Device-geoLocationManager-export interface GeoAddress--><!--Device-geoLocationManager-export interface GeoAddress-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 ## 导入模块
@@ -27,6 +29,8 @@ isFromMock?: Boolean
 **类型：** Boolean
 
 **起始版本：** 9
+
+<!--Device-GeoAddress-isFromMock?: Boolean--><!--Device-GeoAddress-isFromMock?: Boolean-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geocoder
 

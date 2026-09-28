@@ -8,6 +8,8 @@ Image frame information set.
 
 **Since:** 7
 
+<!--Device-unnamed-interface ImageFrameInfo--><!--Device-unnamed-interface ImageFrameInfo-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## duration
@@ -29,6 +31,8 @@ Negative values are not supported. Setting a negative value causes the image to 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ImageFrameInfo-duration?: number--><!--Device-ImageFrameInfo-duration?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,6 +58,8 @@ Unit: vp
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
+<!--Device-ImageFrameInfo-height?: number | string--><!--Device-ImageFrameInfo-height?: number | string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## left
@@ -77,6 +83,8 @@ Unit: vp
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
+
+<!--Device-ImageFrameInfo-left?: number | string--><!--Device-ImageFrameInfo-left?: number | string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -108,6 +116,8 @@ image, cross-package or cross-module invocation is not supported. Files in the *
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
+<!--Device-ImageFrameInfo-src: string | Resource | PixelMap--><!--Device-ImageFrameInfo-src: string | Resource | PixelMap-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## top
@@ -132,6 +142,8 @@ Unit: vp
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
+<!--Device-ImageFrameInfo-top?: number | string--><!--Device-ImageFrameInfo-top?: number | string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## width
@@ -155,5 +167,7 @@ Unit: vp
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
+
+<!--Device-ImageFrameInfo-width?: number | string--><!--Device-ImageFrameInfo-width?: number | string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

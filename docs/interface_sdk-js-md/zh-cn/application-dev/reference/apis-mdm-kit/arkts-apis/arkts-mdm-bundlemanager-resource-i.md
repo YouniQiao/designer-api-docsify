@@ -8,6 +8,8 @@ interface Resource
 
 **起始版本：** 20
 
+<!--Device-bundleManager-interface Resource--><!--Device-bundleManager-interface Resource-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## 导入模块
@@ -30,6 +32,8 @@ bundleName: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Resource-bundleName: string--><!--Device-Resource-bundleName: string-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## id
@@ -46,6 +50,8 @@ id: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Resource-id: number--><!--Device-Resource-id: number-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## moduleName
@@ -61,5 +67,7 @@ moduleName: string
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Resource-moduleName: string--><!--Device-Resource-moduleName: string-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager

@@ -20,6 +20,8 @@ function setAbilityDisabled(admin: Want, bundleName: string, accountId: number, 
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-applicationManager-function setAbilityDisabled(admin: Want, bundleName: string, accountId: number, abilityName: string, isDisabled: boolean): void--><!--Device-applicationManager-function setAbilityDisabled(admin: Want, bundleName: string, accountId: number, abilityName: string, isDisabled: boolean): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**

@@ -18,6 +18,8 @@ function updateConfiguration(config: Configuration, callback: AsyncCallback<void
 
 **需要权限：** ohos.permission.UPDATE_CONFIGURATION
 
+<!--Device-abilityManager-function updateConfiguration(config: Configuration, callback: AsyncCallback<void>): void--><!--Device-abilityManager-function updateConfiguration(config: Configuration, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -52,6 +54,8 @@ function updateConfiguration(config: Configuration): Promise<void>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.UPDATE_CONFIGURATION
+
+<!--Device-abilityManager-function updateConfiguration(config: Configuration): Promise<void>--><!--Device-abilityManager-function updateConfiguration(config: Configuration): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

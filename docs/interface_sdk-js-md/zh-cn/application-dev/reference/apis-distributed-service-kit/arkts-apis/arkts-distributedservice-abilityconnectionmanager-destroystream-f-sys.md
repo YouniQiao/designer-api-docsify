@@ -18,6 +18,8 @@ function destroyStream(streamId: number): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-abilityConnectionManager-function destroyStream(streamId: int): void--><!--Device-abilityConnectionManager-function destroyStream(streamId: int): void-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **系统接口：** 此接口为系统接口。

@@ -20,6 +20,8 @@ Creates a step curve.
 
 **Substitutes:** [stepsCurve](arkts-arkui-curves-stepscurve-f.md)
 
+<!--Device-curves-function steps(count: number, end: boolean): string--><!--Device-curves-function steps(count: number, end: boolean): string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

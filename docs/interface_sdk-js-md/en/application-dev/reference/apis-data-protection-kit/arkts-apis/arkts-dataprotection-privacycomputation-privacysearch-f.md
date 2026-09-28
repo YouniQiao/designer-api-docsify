@@ -20,6 +20,8 @@ Performs a privacy-preserving search. Searches the given dataset elements agains
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.1.
 
+<!--Device-privacyComputation-function privacySearch(privacyTarget: Uint8Array, elements: Element[], privacyProtocol: PrivacyProtocol):        Promise<PrivacySearchResult>--><!--Device-privacyComputation-function privacySearch(privacyTarget: Uint8Array, elements: Element[], privacyProtocol: PrivacyProtocol):        Promise<PrivacySearchResult>-End-->
+
 **System capability:** SystemCapability.Security.Asset
 
 **Parameters:**

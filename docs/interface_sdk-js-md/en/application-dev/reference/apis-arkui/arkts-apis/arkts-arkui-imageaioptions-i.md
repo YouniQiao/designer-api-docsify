@@ -14,9 +14,11 @@ Provides the image AI analysis options.
 > 
 > This API depends on device capabilities and must be used together with the
 > [enableAnalyzer](../arkts-components/arkts-arkui-image-comp-attribute.md#enableanalyzer) API of the corresponding component (for example, the
-> [Image](../arkts-components/arkts-arkui-image-comp.md#image) component).
+> [Image](../arkts-components/arkts-arkui-image-comp.md) component).
 
 **Since:** 12
+
+<!--Device-unnamed-declare interface ImageAIOptions--><!--Device-unnamed-declare interface ImageAIOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,6 +38,8 @@ Image AI analysis controller.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ImageAIOptions-aiController?: ImageAnalyzerController--><!--Device-ImageAIOptions-aiController?: ImageAnalyzerController-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## types
@@ -53,5 +57,7 @@ Image AI analysis type.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ImageAIOptions-types?: ImageAnalyzerType[]--><!--Device-ImageAIOptions-types?: ImageAnalyzerType[]-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

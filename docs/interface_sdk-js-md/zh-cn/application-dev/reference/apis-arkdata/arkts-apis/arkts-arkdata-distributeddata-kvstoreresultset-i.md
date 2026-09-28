@@ -12,6 +12,8 @@ interface KvStoreResultSet
 
 **替代接口：** [KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)
 
+<!--Device-distributedData-interface KvStoreResultSet--><!--Device-distributedData-interface KvStoreResultSet-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## 导入模块
@@ -32,6 +34,8 @@ getCount(): number
 **废弃版本：** 9
 
 **替代接口：** getCount
+
+<!--Device-KvStoreResultSet-getCount(): number--><!--Device-KvStoreResultSet-getCount(): number-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -74,6 +78,8 @@ getEntry(): Entry
 
 **替代接口：** getEntry
 
+<!--Device-KvStoreResultSet-getEntry(): Entry--><!--Device-KvStoreResultSet-getEntry(): Entry-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **返回值：**
@@ -114,6 +120,8 @@ getPosition(): number
 **废弃版本：** 9
 
 **替代接口：** getPosition
+
+<!--Device-KvStoreResultSet-getPosition(): number--><!--Device-KvStoreResultSet-getPosition(): number-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -156,6 +164,8 @@ isAfterLast(): boolean
 
 **替代接口：** isAfterLast
 
+<!--Device-KvStoreResultSet-isAfterLast(): boolean--><!--Device-KvStoreResultSet-isAfterLast(): boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **返回值：**
@@ -196,6 +206,8 @@ isBeforeFirst(): boolean
 **废弃版本：** 9
 
 **替代接口：** isBeforeFirst
+
+<!--Device-KvStoreResultSet-isBeforeFirst(): boolean--><!--Device-KvStoreResultSet-isBeforeFirst(): boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -238,6 +250,8 @@ isFirst(): boolean
 
 **替代接口：** isFirst
 
+<!--Device-KvStoreResultSet-isFirst(): boolean--><!--Device-KvStoreResultSet-isFirst(): boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **返回值：**
@@ -279,6 +293,8 @@ isLast(): boolean
 
 **替代接口：** isLast
 
+<!--Device-KvStoreResultSet-isLast(): boolean--><!--Device-KvStoreResultSet-isLast(): boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **返回值：**
@@ -319,6 +335,8 @@ move(offset: number): boolean
 **废弃版本：** 9
 
 **替代接口：** move
+
+<!--Device-KvStoreResultSet-move(offset: number): boolean--><!--Device-KvStoreResultSet-move(offset: number): boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -367,6 +385,8 @@ moveToFirst(): boolean
 
 **替代接口：** moveToFirst
 
+<!--Device-KvStoreResultSet-moveToFirst(): boolean--><!--Device-KvStoreResultSet-moveToFirst(): boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **返回值：**
@@ -407,6 +427,8 @@ moveToLast(): boolean
 **废弃版本：** 9
 
 **替代接口：** moveToLast
+
+<!--Device-KvStoreResultSet-moveToLast(): boolean--><!--Device-KvStoreResultSet-moveToLast(): boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -449,6 +471,8 @@ moveToNext(): boolean
 
 **替代接口：** moveToNext
 
+<!--Device-KvStoreResultSet-moveToNext(): boolean--><!--Device-KvStoreResultSet-moveToNext(): boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **返回值：**
@@ -489,6 +513,8 @@ moveToPosition(position: number): boolean
 **废弃版本：** 9
 
 **替代接口：** moveToPosition
+
+<!--Device-KvStoreResultSet-moveToPosition(position: number): boolean--><!--Device-KvStoreResultSet-moveToPosition(position: number): boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -536,6 +562,8 @@ moveToPrevious(): boolean
 **废弃版本：** 9
 
 **替代接口：** moveToPrevious
+
+<!--Device-KvStoreResultSet-moveToPrevious(): boolean--><!--Device-KvStoreResultSet-moveToPrevious(): boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 

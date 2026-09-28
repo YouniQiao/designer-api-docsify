@@ -10,6 +10,8 @@ Inherits from [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) to
 
 **Since:** 7
 
+<!--Device-unnamed-interface ISinglePropertyChangeSubscriber<T> extends IPropertySubscriber--><!--Device-unnamed-interface ISinglePropertyChangeSubscriber<T> extends IPropertySubscriber-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -25,6 +27,8 @@ Notifies subscribers that the property value has changed.
 **Since:** 7
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-ISinglePropertyChangeSubscriber-hasChanged(newValue: T): void--><!--Device-ISinglePropertyChangeSubscriber-hasChanged(newValue: T): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

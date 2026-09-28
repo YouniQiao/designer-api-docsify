@@ -8,6 +8,8 @@ interface WatermarkConfiguration
 
 **起始版本：** 26.0.0
 
+<!--Device-media-interface WatermarkConfiguration--><!--Device-media-interface WatermarkConfiguration-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ height?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-WatermarkConfiguration-height?: int--><!--Device-WatermarkConfiguration-height?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 ## left
@@ -45,6 +49,8 @@ left: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WatermarkConfiguration-left: int--><!--Device-WatermarkConfiguration-left: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -62,6 +68,8 @@ top: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-WatermarkConfiguration-top: int--><!--Device-WatermarkConfiguration-top: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 ## width
@@ -77,5 +85,7 @@ width?: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WatermarkConfiguration-width?: int--><!--Device-WatermarkConfiguration-width?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core

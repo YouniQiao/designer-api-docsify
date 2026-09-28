@@ -16,6 +16,8 @@ function off(type: SensorId.COLOR, callback?: Callback<ColorResponse>): void
 
 **起始版本：** 10
 
+<!--Device-sensor-function off(type: SensorId.COLOR, callback?: Callback<ColorResponse>): void--><!--Device-sensor-function off(type: SensorId.COLOR, callback?: Callback<ColorResponse>): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **系统接口：** 此接口为系统接口。
@@ -73,6 +75,8 @@ function off(type: SensorId.COLOR, sensorInfoParam?: SensorInfoParam, callback?:
 取消订阅颜色传感器数据。与API version 10的off接口相比，新增sensorInfoParam参数，支持通过指定deviceId和sensorIndex来精确取消订阅某一设备上的特定传感器回调，适用于多设备场景。<br>当开发者需要取消订阅特定设备上的颜色传感器数据时（如多设备连接场景），使用此接口。不传入sensorInfoParam时，默认取消本地设备（deviceId为-1）上的回调。<br>调用此接口后，指定设备上的颜色传感器回调函数将不再被触发。若传入callback参数，仅取消该指定回调函数的订阅；若不传入callback参数，则取消指定设备上SensorId.COLOR类型的所有回调函数。
 
 **起始版本：** 19
+
+<!--Device-sensor-function off(type: SensorId.COLOR, sensorInfoParam?: SensorInfoParam, callback?: Callback<ColorResponse>): void--><!--Device-sensor-function off(type: SensorId.COLOR, sensorInfoParam?: SensorInfoParam, callback?: Callback<ColorResponse>): void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -164,6 +168,8 @@ function off(type: SensorId.SAR, callback?: Callback<SarResponse>): void
 
 **起始版本：** 10
 
+<!--Device-sensor-function off(type: SensorId.SAR, callback?: Callback<SarResponse>): void--><!--Device-sensor-function off(type: SensorId.SAR, callback?: Callback<SarResponse>): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **系统接口：** 此接口为系统接口。
@@ -221,6 +227,8 @@ function off(type: SensorId.SAR, sensorInfoParam?: SensorInfoParam, callback?: C
 取消订阅吸收比率传感器数据。与API version 10的off接口相比，新增sensorInfoParam参数，支持通过指定deviceId和sensorIndex来精确取消订阅某一设备上的特定传感器回调，适用于多设备场景。<br>当开发者需要取消订阅特定设备上的SAR传感器数据时（如多设备连接场景），使用此接口。不传入sensorInfoParam时，默认取消本地设备（deviceId为-1）上的回调。<br>调用此接口后，指定设备上的SAR传感器回调函数将不再被触发。若传入callback参数，仅取消该指定回调函数的订阅；若不传入callback参数，则取消指定设备上SensorId.SAR类型的所有回调函数。
 
 **起始版本：** 19
+
+<!--Device-sensor-function off(type: SensorId.SAR, sensorInfoParam?: SensorInfoParam, callback?: Callback<SarResponse>): void--><!--Device-sensor-function off(type: SensorId.SAR, sensorInfoParam?: SensorInfoParam, callback?: Callback<SarResponse>): void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 

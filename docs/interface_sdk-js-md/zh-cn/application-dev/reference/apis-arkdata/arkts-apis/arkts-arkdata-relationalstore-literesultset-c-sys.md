@@ -16,6 +16,8 @@ LiteResultSet实例不会实时刷新。使用结果集后，如果数据库中�
 
 **起始版本：** 23
 
+<!--Device-relationalStore-class LiteResultSet--><!--Device-relationalStore-class LiteResultSet-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## 导入模块
@@ -35,6 +37,8 @@ getFloat32Array(columnIndex: number): Float32Array
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-LiteResultSet-getFloat32Array(columnIndex: int): Float32Array--><!--Device-LiteResultSet-getFloat32Array(columnIndex: int): Float32Array-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 

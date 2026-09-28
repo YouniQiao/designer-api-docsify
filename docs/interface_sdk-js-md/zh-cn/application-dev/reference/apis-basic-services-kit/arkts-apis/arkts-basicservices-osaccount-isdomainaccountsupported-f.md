@@ -18,6 +18,8 @@ function isDomainAccountSupported(): Promise<boolean>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-osAccount-function isDomainAccountSupported(): Promise<boolean>--><!--Device-osAccount-function isDomainAccountSupported(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **返回值：**

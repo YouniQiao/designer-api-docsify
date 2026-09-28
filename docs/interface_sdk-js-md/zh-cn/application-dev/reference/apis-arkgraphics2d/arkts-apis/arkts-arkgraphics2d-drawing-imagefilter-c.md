@@ -16,6 +16,8 @@ class ImageFilter
 
 **起始版本：** 12
 
+<!--Device-drawing-class ImageFilter--><!--Device-drawing-class ImageFilter-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## 导入模块
@@ -33,6 +35,8 @@ static createBlendImageFilter(mode: BlendMode, background: ImageFilter, foregrou
 按照指定的混合模式对两个滤波器进行叠加，生成一个新的滤波器。
 
 **起始版本：** 20
+
+<!--Device-ImageFilter-static createBlendImageFilter(mode: BlendMode, background: ImageFilter, foreground: ImageFilter): ImageFilter--><!--Device-ImageFilter-static createBlendImageFilter(mode: BlendMode, background: ImageFilter, foreground: ImageFilter): ImageFilter-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -81,6 +85,8 @@ static createBlurImageFilter(sigmaX: number, sigmaY: number,
 
 **起始版本：** 12
 
+<!--Device-ImageFilter-static createBlurImageFilter(sigmaX: number, sigmaY: number,        tileMode: TileMode, imageFilter?: ImageFilter | null): ImageFilter--><!--Device-ImageFilter-static createBlurImageFilter(sigmaX: number, sigmaY: number,        tileMode: TileMode, imageFilter?: ImageFilter | null): ImageFilter-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -121,6 +127,8 @@ static createComposeImageFilter(cOuter: ImageFilter, cInner: ImageFilter): Image
 将两个图像滤波器进行级联，生成新的图像滤波器，级联时会将第一级滤波器的输出作为第二级滤波器的输入，经过第二级滤波器处理后，输出最终的滤波结果。
 
 **起始版本：** 20
+
+<!--Device-ImageFilter-static createComposeImageFilter(cOuter: ImageFilter, cInner: ImageFilter): ImageFilter--><!--Device-ImageFilter-static createComposeImageFilter(cOuter: ImageFilter, cInner: ImageFilter): ImageFilter-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -166,6 +174,8 @@ static createFromColorFilter(colorFilter: ColorFilter, imageFilter?: ImageFilter
 
 **起始版本：** 12
 
+<!--Device-ImageFilter-static createFromColorFilter(colorFilter: ColorFilter, imageFilter?: ImageFilter | null): ImageFilter--><!--Device-ImageFilter-static createFromColorFilter(colorFilter: ColorFilter, imageFilter?: ImageFilter | null): ImageFilter-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -206,6 +216,8 @@ static createFromImage(pixelmap: image.PixelMap, srcRect?: common2D.Rect | null,
 基于给定的图像创建一个图像滤波器。此接口不建议用于录制类型的画布（即用于记录绘制指令而非直接渲染的Canvas对象），会影响性能。
 
 **起始版本：** 20
+
+<!--Device-ImageFilter-static createFromImage(pixelmap: image.PixelMap, srcRect?: common2D.Rect | null, dstRect?: common2D.Rect | null): ImageFilter--><!--Device-ImageFilter-static createFromImage(pixelmap: image.PixelMap, srcRect?: common2D.Rect | null, dstRect?: common2D.Rect | null): ImageFilter-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -281,6 +293,8 @@ static createFromShaderEffect(shader: ShaderEffect): ImageFilter
 
 **起始版本：** 20
 
+<!--Device-ImageFilter-static createFromShaderEffect(shader: ShaderEffect): ImageFilter--><!--Device-ImageFilter-static createFromShaderEffect(shader: ShaderEffect): ImageFilter-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -313,6 +327,8 @@ static createOffsetImageFilter(dx: number, dy: number, input?: ImageFilter | nul
 创建一个偏移滤波器，将输入的滤波器按照指定向量进行平移。
 
 **起始版本：** 20
+
+<!--Device-ImageFilter-static createOffsetImageFilter(dx: number, dy: number, input?: ImageFilter | null): ImageFilter--><!--Device-ImageFilter-static createOffsetImageFilter(dx: number, dy: number, input?: ImageFilter | null): ImageFilter-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

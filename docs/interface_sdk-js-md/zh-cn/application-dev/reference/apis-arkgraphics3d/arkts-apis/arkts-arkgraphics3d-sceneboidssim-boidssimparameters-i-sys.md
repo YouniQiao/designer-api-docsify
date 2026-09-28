@@ -16,6 +16,8 @@ export interface BoidsSimParameters
 
 **起始版本：** 26.0.0
 
+<!--Device-unnamed-export interface BoidsSimParameters--><!--Device-unnamed-export interface BoidsSimParameters-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **系统接口：** 此接口为系统接口。
@@ -33,6 +35,8 @@ alignmentDistance?: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BoidsSimParameters-alignmentDistance?: double--><!--Device-BoidsSimParameters-alignmentDistance?: double-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -52,6 +56,8 @@ alignmentWeight?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BoidsSimParameters-alignmentWeight?: double--><!--Device-BoidsSimParameters-alignmentWeight?: double-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **系统接口：** 此接口为系统接口。
@@ -69,6 +75,8 @@ boundaryDistance?: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BoidsSimParameters-boundaryDistance?: double--><!--Device-BoidsSimParameters-boundaryDistance?: double-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -88,6 +96,8 @@ boundaryMaxPos?: Vec3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BoidsSimParameters-boundaryMaxPos?: Vec3--><!--Device-BoidsSimParameters-boundaryMaxPos?: Vec3-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **系统接口：** 此接口为系统接口。
@@ -105,6 +115,8 @@ boundaryMinPos?: Vec3
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BoidsSimParameters-boundaryMinPos?: Vec3--><!--Device-BoidsSimParameters-boundaryMinPos?: Vec3-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -124,6 +136,8 @@ boundaryWeight?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BoidsSimParameters-boundaryWeight?: double--><!--Device-BoidsSimParameters-boundaryWeight?: double-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **系统接口：** 此接口为系统接口。
@@ -141,6 +155,8 @@ cohesionDistance?: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BoidsSimParameters-cohesionDistance?: double--><!--Device-BoidsSimParameters-cohesionDistance?: double-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -160,6 +176,8 @@ cohesionWeight?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BoidsSimParameters-cohesionWeight?: double--><!--Device-BoidsSimParameters-cohesionWeight?: double-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **系统接口：** 此接口为系统接口。
@@ -177,6 +195,8 @@ gravityWeight?: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BoidsSimParameters-gravityWeight?: double--><!--Device-BoidsSimParameters-gravityWeight?: double-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -196,6 +216,8 @@ initialPosition?: Vec3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BoidsSimParameters-initialPosition?: Vec3--><!--Device-BoidsSimParameters-initialPosition?: Vec3-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **系统接口：** 此接口为系统接口。
@@ -213,6 +235,8 @@ initialRotation?: Quaternion
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BoidsSimParameters-initialRotation?: Quaternion--><!--Device-BoidsSimParameters-initialRotation?: Quaternion-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -232,6 +256,8 @@ initialVelocity?: Vec3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BoidsSimParameters-initialVelocity?: Vec3--><!--Device-BoidsSimParameters-initialVelocity?: Vec3-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **系统接口：** 此接口为系统接口。
@@ -249,6 +275,8 @@ maxAccelerationMag?: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BoidsSimParameters-maxAccelerationMag?: double--><!--Device-BoidsSimParameters-maxAccelerationMag?: double-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -268,6 +296,8 @@ maxTurnRate?: Vec3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BoidsSimParameters-maxTurnRate?: Vec3--><!--Device-BoidsSimParameters-maxTurnRate?: Vec3-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **系统接口：** 此接口为系统接口。
@@ -285,6 +315,8 @@ maxVelocityMag?: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BoidsSimParameters-maxVelocityMag?: double--><!--Device-BoidsSimParameters-maxVelocityMag?: double-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -304,6 +336,8 @@ repulsionWeight?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BoidsSimParameters-repulsionWeight?: double--><!--Device-BoidsSimParameters-repulsionWeight?: double-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **系统接口：** 此接口为系统接口。
@@ -322,6 +356,8 @@ separationDistance?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BoidsSimParameters-separationDistance?: double--><!--Device-BoidsSimParameters-separationDistance?: double-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **系统接口：** 此接口为系统接口。
@@ -339,6 +375,8 @@ separationWeight?: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BoidsSimParameters-separationWeight?: double--><!--Device-BoidsSimParameters-separationWeight?: double-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 

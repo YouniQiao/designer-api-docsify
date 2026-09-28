@@ -16,6 +16,8 @@ function changeAppCloudSwitch(accountId: string, bundleName: string, status: boo
 
 **起始版本：** 10
 
+<!--Device-cloudSyncManager-function changeAppCloudSwitch(accountId: string, bundleName: string, status: boolean): Promise<void>--><!--Device-cloudSyncManager-function changeAppCloudSwitch(accountId: string, bundleName: string, status: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 **系统接口：** 此接口为系统接口。
@@ -68,6 +70,8 @@ function changeAppCloudSwitch(accountId: string, bundleName: string, status: boo
 异步方法修改应用的端云文件同步开关。使用callback异步回调。
 
 **起始版本：** 10
+
+<!--Device-cloudSyncManager-function changeAppCloudSwitch(accountId: string, bundleName: string, status: boolean, callback: AsyncCallback<void>): void--><!--Device-cloudSyncManager-function changeAppCloudSwitch(accountId: string, bundleName: string, status: boolean, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 

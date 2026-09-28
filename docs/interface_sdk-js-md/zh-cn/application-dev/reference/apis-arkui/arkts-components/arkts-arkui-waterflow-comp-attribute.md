@@ -12,6 +12,8 @@ declare class WaterFlowAttribute extends ScrollableCommonMethod<WaterFlowAttribu
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare class WaterFlowAttribute extends ScrollableCommonMethod<WaterFlowAttribute>--><!--Device-unnamed-declare class WaterFlowAttribute extends ScrollableCommonMethod<WaterFlowAttribute>-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## cachedCount
@@ -29,6 +31,8 @@ cachedCount(value: number)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WaterFlowAttribute-cachedCount(value: number): WaterFlowAttribute--><!--Device-WaterFlowAttribute-cachedCount(value: number): WaterFlowAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -58,6 +62,8 @@ cachedCount(count: number, show: boolean)
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
+<!--Device-WaterFlowAttribute-cachedCount(count: number, show: boolean): WaterFlowAttribute--><!--Device-WaterFlowAttribute-cachedCount(count: number, show: boolean): WaterFlowAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -80,6 +86,8 @@ columnsGap(value: Length)
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WaterFlowAttribute-columnsGap(value: Length): WaterFlowAttribute--><!--Device-WaterFlowAttribute-columnsGap(value: Length): WaterFlowAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -111,6 +119,8 @@ columnsTemplate(value: string)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WaterFlowAttribute-columnsTemplate(value: string): WaterFlowAttribute--><!--Device-WaterFlowAttribute-columnsTemplate(value: string): WaterFlowAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -141,6 +151,8 @@ columnsTemplate(value: string | ItemFillPolicy)
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
+<!--Device-WaterFlowAttribute-columnsTemplate(value: string | ItemFillPolicy): WaterFlowAttribute--><!--Device-WaterFlowAttribute-columnsTemplate(value: string | ItemFillPolicy): WaterFlowAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -162,6 +174,8 @@ enableScrollInteraction(value: boolean)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WaterFlowAttribute-enableScrollInteraction(value: boolean): WaterFlowAttribute--><!--Device-WaterFlowAttribute-enableScrollInteraction(value: boolean): WaterFlowAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -185,6 +199,8 @@ friction(value: number | Resource)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WaterFlowAttribute-friction(value: number | Resource): WaterFlowAttribute--><!--Device-WaterFlowAttribute-friction(value: number | Resource): WaterFlowAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -206,6 +222,8 @@ itemConstraintSize(value: ConstraintSizeOptions)
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WaterFlowAttribute-itemConstraintSize(value: ConstraintSizeOptions): WaterFlowAttribute--><!--Device-WaterFlowAttribute-itemConstraintSize(value: ConstraintSizeOptions): WaterFlowAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -229,6 +247,8 @@ layoutDirection(value: FlexDirection)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WaterFlowAttribute-layoutDirection(value: FlexDirection): WaterFlowAttribute--><!--Device-WaterFlowAttribute-layoutDirection(value: FlexDirection): WaterFlowAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -250,6 +270,8 @@ nestedScroll(value: NestedScrollOptions)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WaterFlowAttribute-nestedScroll(value: NestedScrollOptions): WaterFlowAttribute--><!--Device-WaterFlowAttribute-nestedScroll(value: NestedScrollOptions): WaterFlowAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -273,6 +295,8 @@ onReachEnd(event: () => void)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WaterFlowAttribute-onReachEnd(event: () => void): WaterFlowAttribute--><!--Device-WaterFlowAttribute-onReachEnd(event: () => void): WaterFlowAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -294,6 +318,8 @@ onReachStart(event: () => void)
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WaterFlowAttribute-onReachStart(event: () => void): WaterFlowAttribute--><!--Device-WaterFlowAttribute-onReachStart(event: () => void): WaterFlowAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -329,6 +355,8 @@ onScrollFrameBegin(event: OnScrollFrameBeginCallback)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WaterFlowAttribute-onScrollFrameBegin(event: OnScrollFrameBeginCallback): WaterFlowAttribute--><!--Device-WaterFlowAttribute-onScrollFrameBegin(event: OnScrollFrameBeginCallback): WaterFlowAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -357,6 +385,8 @@ onScrollIndex(event: (first: number, last: number) => void)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WaterFlowAttribute-onScrollIndex(event: (first: number, last: number) => void): WaterFlowAttribute--><!--Device-WaterFlowAttribute-onScrollIndex(event: (first: number, last: number) => void): WaterFlowAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -378,6 +408,8 @@ rowsGap(value: Length)
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WaterFlowAttribute-rowsGap(value: Length): WaterFlowAttribute--><!--Device-WaterFlowAttribute-rowsGap(value: Length): WaterFlowAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -409,6 +441,8 @@ rowsTemplate(value: string)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WaterFlowAttribute-rowsTemplate(value: string): WaterFlowAttribute--><!--Device-WaterFlowAttribute-rowsTemplate(value: string): WaterFlowAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -437,6 +471,8 @@ supportEmptyBranchInLazyLoading(supported: boolean | undefined)
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-WaterFlowAttribute-supportEmptyBranchInLazyLoading(supported: boolean | undefined): WaterFlowAttribute--><!--Device-WaterFlowAttribute-supportEmptyBranchInLazyLoading(supported: boolean | undefined): WaterFlowAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -458,6 +494,8 @@ syncLoad(enable: boolean)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-WaterFlowAttribute-syncLoad(enable: boolean): WaterFlowAttribute--><!--Device-WaterFlowAttribute-syncLoad(enable: boolean): WaterFlowAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

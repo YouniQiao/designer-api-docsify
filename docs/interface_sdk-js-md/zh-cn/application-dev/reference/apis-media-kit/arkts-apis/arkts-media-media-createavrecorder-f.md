@@ -20,6 +20,8 @@ function createAVRecorder(callback: AsyncCallback<AVRecorder>): void
 
 **起始版本：** 9
 
+<!--Device-media-function createAVRecorder(callback: AsyncCallback<AVRecorder>): void--><!--Device-media-function createAVRecorder(callback: AsyncCallback<AVRecorder>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 **参数：**
@@ -68,6 +70,8 @@ function createAVRecorder(): Promise<AVRecorder>
 **起始版本：** 9
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-media-function createAVRecorder(): Promise<AVRecorder>--><!--Device-media-function createAVRecorder(): Promise<AVRecorder>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 

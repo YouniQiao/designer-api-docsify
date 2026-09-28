@@ -16,6 +16,8 @@ function getTargetOverlayModuleInfos(targetModuleName: string, callback: AsyncCa
 
 **起始版本：** 10
 
+<!--Device-overlay-function getTargetOverlayModuleInfos(targetModuleName: string, callback: AsyncCallback<Array<OverlayModuleInfo>>): void--><!--Device-overlay-function getTargetOverlayModuleInfos(targetModuleName: string, callback: AsyncCallback<Array<OverlayModuleInfo>>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Overlay
 
 **参数：**
@@ -69,6 +71,8 @@ function getTargetOverlayModuleInfos(targetModuleName: string): Promise<Array<Ov
 获取指定的目标module所关联的OverlayModuleInfo。overlay特征的module一般是为设备上存在的非overlay特征的module提供覆盖的资源文件，其中非overlay特征的module被称作目标module。使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-overlay-function getTargetOverlayModuleInfos(targetModuleName: string): Promise<Array<OverlayModuleInfo>>--><!--Device-overlay-function getTargetOverlayModuleInfos(targetModuleName: string): Promise<Array<OverlayModuleInfo>>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Overlay
 

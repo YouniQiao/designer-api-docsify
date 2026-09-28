@@ -8,6 +8,8 @@ interface VibrateFromPattern
 
 **起始版本：** 18
 
+<!--Device-vibrator-interface VibrateFromPattern--><!--Device-vibrator-interface VibrateFromPattern-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## 导入模块
@@ -28,6 +30,8 @@ pattern: VibratorPattern
 
 **起始版本：** 18
 
+<!--Device-VibrateFromPattern-pattern: VibratorPattern--><!--Device-VibrateFromPattern-pattern: VibratorPattern-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## type
@@ -41,5 +45,7 @@ type: 'pattern'
 **类型：** 'pattern'
 
 **起始版本：** 18
+
+<!--Device-VibrateFromPattern-type: 'pattern'--><!--Device-VibrateFromPattern-type: 'pattern'-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice

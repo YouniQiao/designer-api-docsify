@@ -8,6 +8,8 @@ Defines the underline color width property.
 
 **Since:** 12
 
+<!--Device-unnamed-declare interface UnderlineColor--><!--Device-unnamed-declare interface UnderlineColor-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## disable
@@ -25,6 +27,8 @@ Underline color in the disabled state. When not set, undefined, null, or an inva
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UnderlineColor-disable?: ResourceColor | undefined--><!--Device-UnderlineColor-disable?: ResourceColor | undefined-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,6 +48,8 @@ Underline color in the error state. When not set, undefined, null, or an invalid
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-UnderlineColor-error?: ResourceColor | undefined--><!--Device-UnderlineColor-error?: ResourceColor | undefined-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## normal
@@ -62,6 +68,8 @@ Underline color in the non-special state. When not set, undefined, null, or an i
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-UnderlineColor-normal?: ResourceColor | undefined--><!--Device-UnderlineColor-normal?: ResourceColor | undefined-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## typing
@@ -79,5 +87,7 @@ Underline color during typing. When not set, undefined, null, or an invalid valu
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UnderlineColor-typing?: ResourceColor | undefined--><!--Device-UnderlineColor-typing?: ResourceColor | undefined-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

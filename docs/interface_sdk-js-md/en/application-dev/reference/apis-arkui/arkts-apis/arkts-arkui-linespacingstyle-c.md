@@ -8,6 +8,8 @@ Describes the text line spacing object. It is suitable for scenarios that requir
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-declare class LineSpacingStyle--><!--Device-unnamed-declare class LineSpacingStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
@@ -23,6 +25,8 @@ A constructor used to create the text line spacing. If this API is not used to s
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-LineSpacingStyle-constructor(lineSpacing: LengthMetrics, options?: LineSpacingOptions)--><!--Device-LineSpacingStyle-constructor(lineSpacing: LengthMetrics, options?: LineSpacingOptions)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -53,6 +57,8 @@ Unit: [vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#basic-pixel-
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-LineSpacingStyle-readonly lineSpacing: number--><!--Device-LineSpacingStyle-readonly lineSpacing: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## options
@@ -70,5 +76,7 @@ Line spacing configuration options.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-LineSpacingStyle-readonly options?: LineSpacingOptions--><!--Device-LineSpacingStyle-readonly options?: LineSpacingOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

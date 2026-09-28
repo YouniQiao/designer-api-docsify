@@ -21,6 +21,8 @@ function removeGroupByBundle(bundle: BundleOption, groupName: string, callback: 
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notification-function removeGroupByBundle(bundle: BundleOption, groupName: string, callback: AsyncCallback<void>): void--><!--Device-notification-function removeGroupByBundle(bundle: BundleOption, groupName: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +53,8 @@ function removeGroupByBundle(bundle: BundleOption, groupName: string): Promise<v
 **替代接口：** [removeGroupByBundle](arkts-notification-notificationmanager-removegroupbybundle-f-sys.md)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notification-function removeGroupByBundle(bundle: BundleOption, groupName: string): Promise<void>--><!--Device-notification-function removeGroupByBundle(bundle: BundleOption, groupName: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

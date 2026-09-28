@@ -8,6 +8,8 @@ Response object for setting the rotation matrix, which describes the calculation
 
 **Since:** 8
 
+<!--Device-sensor-interface RotationMatrixResponse--><!--Device-sensor-interface RotationMatrixResponse-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Tilt matrix, which is a one-dimensional array with a length of 9 and indicates t
 
 **Since:** 8
 
+<!--Device-RotationMatrixResponse-inclination: Array<double>--><!--Device-RotationMatrixResponse-inclination: Array<double>-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## rotation
@@ -41,5 +45,7 @@ Rotation matrix, which is a one-dimensional array with a length of 9, indicating
 **Type:** Array&lt;number&gt;
 
 **Since:** 8
+
+<!--Device-RotationMatrixResponse-rotation: Array<double>--><!--Device-RotationMatrixResponse-rotation: Array<double>-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor

@@ -8,6 +8,8 @@ WiFi扫描信息，包含扫描到的WiFi热点的ssid、bssid和rssi等信息�
 
 **起始版本：** 10
 
+<!--Device-geoLocationManager-export interface WifiScanInfo--><!--Device-geoLocationManager-export interface WifiScanInfo-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ WiFi热点的BSSID。
 
 **起始版本：** 10
 
+<!--Device-WifiScanInfo-bssid: string--><!--Device-WifiScanInfo-bssid: string-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ WiFi热点的频率。单位是赫兹。
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-WifiScanInfo-frequency: int--><!--Device-WifiScanInfo-frequency: int-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -62,6 +68,8 @@ WiFi热点的信号强度(dBm)。
 
 **起始版本：** 10
 
+<!--Device-WifiScanInfo-rssi: int--><!--Device-WifiScanInfo-rssi: int-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **系统接口：** 此接口为系统接口。
@@ -78,6 +86,8 @@ WiFi热点的SSID，编码格式为UTF-8。
 
 **起始版本：** 10
 
+<!--Device-WifiScanInfo-ssid: string--><!--Device-WifiScanInfo-ssid: string-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **系统接口：** 此接口为系统接口。
@@ -93,6 +103,8 @@ timestamp: number
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-WifiScanInfo-timestamp: long--><!--Device-WifiScanInfo-timestamp: long-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 

@@ -12,6 +12,8 @@ MakerNoteHuaweiMetadata implements Metadata
 
 **起始版本：** 23
 
+<!--Device-image-class MakerNoteHuaweiMetadata implements Metadata--><!--Device-image-class MakerNoteHuaweiMetadata implements Metadata-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## 导入模块
@@ -31,6 +33,8 @@ clone(): Promise<MakerNoteHuaweiMetadata>
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MakerNoteHuaweiMetadata-clone(): Promise<MakerNoteHuaweiMetadata>--><!--Device-MakerNoteHuaweiMetadata-clone(): Promise<MakerNoteHuaweiMetadata>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -82,6 +86,8 @@ static createInstance(): MakerNoteHuaweiMetadata
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MakerNoteHuaweiMetadata-static createInstance(): MakerNoteHuaweiMetadata--><!--Device-MakerNoteHuaweiMetadata-static createInstance(): MakerNoteHuaweiMetadata-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **返回值：**
@@ -112,6 +118,8 @@ getAllProperties(): Promise<Record<string, string | null>>
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MakerNoteHuaweiMetadata-getAllProperties(): Promise<Record<string, string | null>>--><!--Device-MakerNoteHuaweiMetadata-getAllProperties(): Promise<Record<string, string | null>>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -163,6 +171,8 @@ getBlob(): Promise<ArrayBuffer>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MakerNoteHuaweiMetadata-getBlob(): Promise<ArrayBuffer>--><!--Device-MakerNoteHuaweiMetadata-getBlob(): Promise<ArrayBuffer>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **返回值：**
@@ -209,6 +219,8 @@ getProperties(key: Array<string>): Promise<Record<string, string | null>>
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MakerNoteHuaweiMetadata-getProperties(key: Array<string>): Promise<Record<string, string | null>>--><!--Device-MakerNoteHuaweiMetadata-getProperties(key: Array<string>): Promise<Record<string, string | null>>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -270,6 +282,8 @@ setBlob(blob: ArrayBuffer): Promise<void>
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MakerNoteHuaweiMetadata-setBlob(blob: ArrayBuffer): Promise<void>--><!--Device-MakerNoteHuaweiMetadata-setBlob(blob: ArrayBuffer): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -334,6 +348,8 @@ setProperties(records: Record<string, string | null>): Promise<void>
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MakerNoteHuaweiMetadata-setProperties(records: Record<string, string | null>): Promise<void>--><!--Device-MakerNoteHuaweiMetadata-setProperties(records: Record<string, string | null>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -402,6 +418,8 @@ burstNumber?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MakerNoteHuaweiMetadata-burstNumber?: int--><!--Device-MakerNoteHuaweiMetadata-burstNumber?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## captureMode
@@ -417,6 +435,8 @@ captureMode?: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MakerNoteHuaweiMetadata-captureMode?: int--><!--Device-MakerNoteHuaweiMetadata-captureMode?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -434,6 +454,8 @@ cloudLabel?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MakerNoteHuaweiMetadata-cloudLabel?: string--><!--Device-MakerNoteHuaweiMetadata-cloudLabel?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## faceConfidences
@@ -449,6 +471,8 @@ faceConfidences?: number[]
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MakerNoteHuaweiMetadata-faceConfidences?: int[]--><!--Device-MakerNoteHuaweiMetadata-faceConfidences?: int[]-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -466,6 +490,8 @@ faceCount?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MakerNoteHuaweiMetadata-faceCount?: int--><!--Device-MakerNoteHuaweiMetadata-faceCount?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## faceSmileScores
@@ -481,6 +507,8 @@ faceSmileScores?: number[]
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MakerNoteHuaweiMetadata-faceSmileScores?: int[]--><!--Device-MakerNoteHuaweiMetadata-faceSmileScores?: int[]-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -498,6 +526,8 @@ focusMode?: FocusMode
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MakerNoteHuaweiMetadata-focusMode?: FocusMode--><!--Device-MakerNoteHuaweiMetadata-focusMode?: FocusMode-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## isCloudEnhanced
@@ -514,6 +544,8 @@ isCloudEnhanced?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MakerNoteHuaweiMetadata-isCloudEnhanced?: boolean--><!--Device-MakerNoteHuaweiMetadata-isCloudEnhanced?: boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## isFrontCamera
@@ -529,6 +561,8 @@ isFrontCamera?: boolean
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MakerNoteHuaweiMetadata-isFrontCamera?: boolean--><!--Device-MakerNoteHuaweiMetadata-isFrontCamera?: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -548,6 +582,8 @@ isWindSnapshot?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MakerNoteHuaweiMetadata-isWindSnapshot?: boolean--><!--Device-MakerNoteHuaweiMetadata-isWindSnapshot?: boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## isXmageSupported
@@ -563,6 +599,8 @@ isXmageSupported?: boolean
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MakerNoteHuaweiMetadata-isXmageSupported?: boolean--><!--Device-MakerNoteHuaweiMetadata-isXmageSupported?: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -580,6 +618,8 @@ physicalAperture?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MakerNoteHuaweiMetadata-physicalAperture?: int--><!--Device-MakerNoteHuaweiMetadata-physicalAperture?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## pitchAngle
@@ -595,6 +635,8 @@ pitchAngle?: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MakerNoteHuaweiMetadata-pitchAngle?: int--><!--Device-MakerNoteHuaweiMetadata-pitchAngle?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -612,6 +654,8 @@ rollAngle?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MakerNoteHuaweiMetadata-rollAngle?: int--><!--Device-MakerNoteHuaweiMetadata-rollAngle?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## sceneBeachConfidence
@@ -627,6 +671,8 @@ sceneBeachConfidence?: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MakerNoteHuaweiMetadata-sceneBeachConfidence?: int--><!--Device-MakerNoteHuaweiMetadata-sceneBeachConfidence?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -644,6 +690,8 @@ sceneBlueSkyConfidence?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MakerNoteHuaweiMetadata-sceneBlueSkyConfidence?: int--><!--Device-MakerNoteHuaweiMetadata-sceneBlueSkyConfidence?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## sceneFlowersConfidence
@@ -659,6 +707,8 @@ sceneFlowersConfidence?: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MakerNoteHuaweiMetadata-sceneFlowersConfidence?: int--><!--Device-MakerNoteHuaweiMetadata-sceneFlowersConfidence?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -676,6 +726,8 @@ sceneFoodConfidence?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MakerNoteHuaweiMetadata-sceneFoodConfidence?: int--><!--Device-MakerNoteHuaweiMetadata-sceneFoodConfidence?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## sceneGreenPlantConfidence
@@ -691,6 +743,8 @@ sceneGreenPlantConfidence?: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MakerNoteHuaweiMetadata-sceneGreenPlantConfidence?: int--><!--Device-MakerNoteHuaweiMetadata-sceneGreenPlantConfidence?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -708,6 +762,8 @@ sceneNightConfidence?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MakerNoteHuaweiMetadata-sceneNightConfidence?: int--><!--Device-MakerNoteHuaweiMetadata-sceneNightConfidence?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## sceneSnowConfidence
@@ -723,6 +779,8 @@ sceneSnowConfidence?: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MakerNoteHuaweiMetadata-sceneSnowConfidence?: int--><!--Device-MakerNoteHuaweiMetadata-sceneSnowConfidence?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -740,6 +798,8 @@ sceneStageConfidence?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MakerNoteHuaweiMetadata-sceneStageConfidence?: int--><!--Device-MakerNoteHuaweiMetadata-sceneStageConfidence?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## sceneSunsetConfidence
@@ -755,6 +815,8 @@ sceneSunsetConfidence?: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MakerNoteHuaweiMetadata-sceneSunsetConfidence?: int--><!--Device-MakerNoteHuaweiMetadata-sceneSunsetConfidence?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -772,6 +834,8 @@ sceneTextConfidence?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MakerNoteHuaweiMetadata-sceneTextConfidence?: int--><!--Device-MakerNoteHuaweiMetadata-sceneTextConfidence?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## sceneVersion
@@ -787,6 +851,8 @@ sceneVersion?: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MakerNoteHuaweiMetadata-sceneVersion?: int--><!--Device-MakerNoteHuaweiMetadata-sceneVersion?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -804,6 +870,8 @@ xmageBottom?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MakerNoteHuaweiMetadata-xmageBottom?: int--><!--Device-MakerNoteHuaweiMetadata-xmageBottom?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## xmageColorMode
@@ -819,6 +887,8 @@ XMAGE颜色模式。
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MakerNoteHuaweiMetadata-xmageColorMode?: XmageColorMode--><!--Device-MakerNoteHuaweiMetadata-xmageColorMode?: XmageColorMode-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -836,6 +906,8 @@ xmageLeft?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MakerNoteHuaweiMetadata-xmageLeft?: int--><!--Device-MakerNoteHuaweiMetadata-xmageLeft?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## xmageRight
@@ -851,6 +923,8 @@ xmageRight?: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MakerNoteHuaweiMetadata-xmageRight?: int--><!--Device-MakerNoteHuaweiMetadata-xmageRight?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -868,6 +942,8 @@ xmageTop?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MakerNoteHuaweiMetadata-xmageTop?: int--><!--Device-MakerNoteHuaweiMetadata-xmageTop?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## xmageWatermarkMode
@@ -883,5 +959,7 @@ XMAGE水印模式。具体取值请参考[Constants](arkts-image-multimedia-imag
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MakerNoteHuaweiMetadata-xmageWatermarkMode?: int--><!--Device-MakerNoteHuaweiMetadata-xmageWatermarkMode?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core

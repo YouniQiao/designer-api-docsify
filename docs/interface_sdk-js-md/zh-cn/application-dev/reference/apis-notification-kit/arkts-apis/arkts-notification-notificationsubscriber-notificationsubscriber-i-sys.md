@@ -8,6 +8,8 @@ export interface NotificationSubscriber
 
 **起始版本：** 7
 
+<!--Device-unnamed-export interface NotificationSubscriber--><!--Device-unnamed-export interface NotificationSubscriber-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -21,6 +23,8 @@ onBadgeChanged?:(data: BadgeNumberCallbackData) => void
 回调返回监听到的应用角标数量变化。
 
 **起始版本：** 10
+
+<!--Device-NotificationSubscriber-onBadgeChanged?:(data: BadgeNumberCallbackData) => void--><!--Device-NotificationSubscriber-onBadgeChanged?:(data: BadgeNumberCallbackData) => void-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -61,6 +65,8 @@ onBatchCancel?: (data: Array<SubscribeCallbackData>) => void
 批量删除的通知信息。
 
 **起始版本：** 11
+
+<!--Device-NotificationSubscriber-onBatchCancel?: (data: Array<SubscribeCallbackData>) => void--><!--Device-NotificationSubscriber-onBatchCancel?: (data: Array<SubscribeCallbackData>) => void-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -104,6 +110,8 @@ onCancel?:(data: SubscribeCallbackData) => void
 
 **起始版本：** 7
 
+<!--Device-NotificationSubscriber-onCancel?:(data: SubscribeCallbackData) => void--><!--Device-NotificationSubscriber-onCancel?:(data: SubscribeCallbackData) => void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -146,6 +154,8 @@ onConnect?:() => void
 
 **起始版本：** 7
 
+<!--Device-NotificationSubscriber-onConnect?:() => void--><!--Device-NotificationSubscriber-onConnect?:() => void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -179,6 +189,8 @@ onConsume?:(data: SubscribeCallbackData) => void
 新接收到的通知信息。
 
 **起始版本：** 7
+
+<!--Device-NotificationSubscriber-onConsume?:(data: SubscribeCallbackData) => void--><!--Device-NotificationSubscriber-onConsume?:(data: SubscribeCallbackData) => void-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -222,6 +234,8 @@ onDestroy?:() => void
 
 **起始版本：** 7
 
+<!--Device-NotificationSubscriber-onDestroy?:() => void--><!--Device-NotificationSubscriber-onDestroy?:() => void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -255,6 +269,8 @@ onDisconnect?:() => void
 取消订阅的回调。
 
 **起始版本：** 7
+
+<!--Device-NotificationSubscriber-onDisconnect?:() => void--><!--Device-NotificationSubscriber-onDisconnect?:() => void-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -305,6 +321,8 @@ onDoNotDisturbChanged?: (mode: notificationManager.DoNotDisturbDate) => void
 
 **起始版本：** 11
 
+<!--Device-NotificationSubscriber-onDoNotDisturbChanged?: (mode: notificationManager.DoNotDisturbDate) => void--><!--Device-NotificationSubscriber-onDoNotDisturbChanged?: (mode: notificationManager.DoNotDisturbDate) => void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -345,6 +363,8 @@ onEnabledNotificationChanged?:(callbackData: EnabledNotificationCallbackData) =>
 回调返回监听到的应用信息。
 
 **起始版本：** 8
+
+<!--Device-NotificationSubscriber-onEnabledNotificationChanged?:(callbackData: EnabledNotificationCallbackData) => void--><!--Device-NotificationSubscriber-onEnabledNotificationChanged?:(callbackData: EnabledNotificationCallbackData) => void-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -388,6 +408,8 @@ onEnabledPriorityByBundleChanged?: (callbackData: EnabledPriorityNotificationByB
 
 **起始版本：** 23
 
+<!--Device-NotificationSubscriber-onEnabledPriorityByBundleChanged?: (callbackData: EnabledPriorityNotificationByBundleCallbackData) => void--><!--Device-NotificationSubscriber-onEnabledPriorityByBundleChanged?: (callbackData: EnabledPriorityNotificationByBundleCallbackData) => void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -424,6 +446,8 @@ onEnabledPriorityChanged?: (callbackData: EnabledPriorityNotificationCallbackDat
 返回通知优先级总开关状态。
 
 **起始版本：** 23
+
+<!--Device-NotificationSubscriber-onEnabledPriorityChanged?: (callbackData: EnabledPriorityNotificationCallbackData) => void--><!--Device-NotificationSubscriber-onEnabledPriorityChanged?: (callbackData: EnabledPriorityNotificationCallbackData) => void-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -464,6 +488,8 @@ onEnabledSilentReminderChanged?: EnabledSilentReminderChangedCallback
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-NotificationSubscriber-onEnabledSilentReminderChanged?: EnabledSilentReminderChangedCallback--><!--Device-NotificationSubscriber-onEnabledSilentReminderChanged?: EnabledSilentReminderChangedCallback-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -479,6 +505,8 @@ onNotificationSwitchChanged?: NotificationSwitchChangedCallback
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-NotificationSubscriber-onNotificationSwitchChanged?: NotificationSwitchChangedCallback--><!--Device-NotificationSubscriber-onNotificationSwitchChanged?: NotificationSwitchChangedCallback-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -496,6 +524,8 @@ onSystemUpdate?: SystemUpdateCallback
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-NotificationSubscriber-onSystemUpdate?: SystemUpdateCallback--><!--Device-NotificationSubscriber-onSystemUpdate?: SystemUpdateCallback-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -509,6 +539,8 @@ onUpdate?:(data: NotificationSortingMap) => void
 最新的通知排序列表。
 
 **起始版本：** 7
+
+<!--Device-NotificationSubscriber-onUpdate?:(data: NotificationSortingMap) => void--><!--Device-NotificationSubscriber-onUpdate?:(data: NotificationSortingMap) => void-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -551,6 +583,8 @@ onDoNotDisturbDateChange?: (mode: notification.DoNotDisturbDate) => void
 **废弃版本：** 11
 
 **替代接口：** [onDoNotDisturbChanged](#ondonotdisturbchanged)
+
+<!--Device-NotificationSubscriber-onDoNotDisturbDateChange?: (mode: notification.DoNotDisturbDate) => void--><!--Device-NotificationSubscriber-onDoNotDisturbDateChange?: (mode: notification.DoNotDisturbDate) => void-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -598,6 +632,8 @@ onBadgeEnabledChanged?: BadgeEnabledChangedCallback
 **类型：** [BadgeEnabledChangedCallback](arkts-notification-notificationsubscriber-badgeenabledchangedcallback-i-sys.md)
 
 **起始版本：** 12
+
+<!--Device-NotificationSubscriber-onBadgeEnabledChanged?: BadgeEnabledChangedCallback--><!--Device-NotificationSubscriber-onBadgeEnabledChanged?: BadgeEnabledChangedCallback-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

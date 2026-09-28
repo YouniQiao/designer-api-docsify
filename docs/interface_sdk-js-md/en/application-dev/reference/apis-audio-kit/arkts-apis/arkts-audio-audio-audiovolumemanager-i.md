@@ -14,6 +14,8 @@ Before calling any API in AudioVolumeManager, you must use [getVolumeManager](ar
 
 **Since:** 9
 
+<!--Device-audio-interface AudioVolumeManager--><!--Device-audio-interface AudioVolumeManager-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 ## Modules to Import
@@ -32,7 +34,9 @@ Obtains the volume of the application. (The volume range is 0 to 100.) This API 
 
 **Since:** 19
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 23.
+
+<!--Device-AudioVolumeManager-getAppVolumePercentage(): Promise<int>--><!--Device-AudioVolumeManager-getAppVolumePercentage(): Promise<int>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -62,7 +66,9 @@ Obtains the maximum volume of a specified audio stream.
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 23.
+
+<!--Device-AudioVolumeManager-getMaxVolumeByStream(streamUsage: StreamUsage): int--><!--Device-AudioVolumeManager-getMaxVolumeByStream(streamUsage: StreamUsage): int-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -110,7 +116,9 @@ Obtains the minimum volume of a specified audio stream.
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 23.
+
+<!--Device-AudioVolumeManager-getMinVolumeByStream(streamUsage: StreamUsage): int--><!--Device-AudioVolumeManager-getMinVolumeByStream(streamUsage: StreamUsage): int-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -158,7 +166,9 @@ Obtains the volume of a specified audio stream.
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 23.
+
+<!--Device-AudioVolumeManager-getVolumeByStream(streamUsage: StreamUsage): int--><!--Device-AudioVolumeManager-getVolumeByStream(streamUsage: StreamUsage): int-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -206,6 +216,8 @@ Obtains a VolumeGroupManager instance. This API uses an asynchronous callback to
 
 **Since:** 9
 
+<!--Device-AudioVolumeManager-getVolumeGroupManager(groupId: int, callback: AsyncCallback<AudioVolumeGroupManager>): void--><!--Device-AudioVolumeManager-getVolumeGroupManager(groupId: int, callback: AsyncCallback<AudioVolumeGroupManager>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **Parameters:**
@@ -244,6 +256,8 @@ getVolumeGroupManager(groupId: number): Promise<AudioVolumeGroupManager>
 Obtains a VolumeGroupManager instance. This API uses a promise to return the result.
 
 **Since:** 9
+
+<!--Device-AudioVolumeManager-getVolumeGroupManager(groupId: int): Promise<AudioVolumeGroupManager>--><!--Device-AudioVolumeManager-getVolumeGroupManager(groupId: int): Promise<AudioVolumeGroupManager>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -286,7 +300,9 @@ Obtains a VolumeGroupManager instance. This API returns the result synchronously
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 23.
+
+<!--Device-AudioVolumeManager-getVolumeGroupManagerSync(groupId: int): AudioVolumeGroupManager--><!--Device-AudioVolumeManager-getVolumeGroupManagerSync(groupId: int): AudioVolumeGroupManager-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -332,6 +348,8 @@ getVolumeInUnitOfDbByStream(streamUsage: StreamUsage, volumeLevel: number, devic
 Obtains the volume (in dB) calculated by the system based on the audio stream, volume level, and device type.
 
 **Since:** 20
+
+<!--Device-AudioVolumeManager-getVolumeInUnitOfDbByStream(streamUsage: StreamUsage, volumeLevel: int, device: DeviceType): double--><!--Device-AudioVolumeManager-getVolumeInUnitOfDbByStream(streamUsage: StreamUsage, volumeLevel: int, device: DeviceType): double-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -382,6 +400,8 @@ Checks whether a specified audio stream is muted.
 
 **Since:** 20
 
+<!--Device-AudioVolumeManager-isSystemMutedForStream(streamUsage: StreamUsage): boolean--><!--Device-AudioVolumeManager-isSystemMutedForStream(streamUsage: StreamUsage): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **Parameters:**
@@ -428,6 +448,8 @@ Unsubscribes from the application-level volume change event of the application. 
 
 **Since:** 19
 
+<!--Device-AudioVolumeManager-off(type: 'appVolumeChange', callback?: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-off(type: 'appVolumeChange', callback?: Callback<VolumeEvent>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **Parameters:**
@@ -471,6 +493,8 @@ Unsubscribes from the system audio volume change event, which is triggered when 
 
 **Since:** 20
 
+<!--Device-AudioVolumeManager-off(type: 'streamVolumeChange', callback?: Callback<StreamVolumeEvent>): void--><!--Device-AudioVolumeManager-off(type: 'streamVolumeChange', callback?: Callback<StreamVolumeEvent>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **Parameters:**
@@ -511,6 +535,8 @@ Unsubscribes from the system volume change event. This API uses an asynchronous 
 **Deprecated since:** 20
 
 **Substitutes:** streamVolumeChange
+
+<!--Device-AudioVolumeManager-off(type: 'volumeChange', callback?: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-off(type: 'volumeChange', callback?: Callback<VolumeEvent>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -556,6 +582,8 @@ Subscribes to the application-level volume change event of the application (trig
 
 **Since:** 19
 
+<!--Device-AudioVolumeManager-on(type: 'appVolumeChange', callback: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-on(type: 'appVolumeChange', callback: Callback<VolumeEvent>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **Parameters:**
@@ -590,6 +618,8 @@ on(type: 'streamVolumeChange', streamUsage: StreamUsage, callback: Callback<Stre
 Subscribes to the system audio volume change event, which is triggered when the system audio volume is changed. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
+
+<!--Device-AudioVolumeManager-on(type: 'streamVolumeChange', streamUsage: StreamUsage, callback: Callback<StreamVolumeEvent>): void--><!--Device-AudioVolumeManager-on(type: 'streamVolumeChange', streamUsage: StreamUsage, callback: Callback<StreamVolumeEvent>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -631,6 +661,8 @@ Subscribes to the system volume change event, which is triggered when the system
 
 **Substitutes:** streamVolumeChange
 
+<!--Device-AudioVolumeManager-on(type: 'volumeChange', callback: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-on(type: 'volumeChange', callback: Callback<VolumeEvent>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **Parameters:**
@@ -667,7 +699,9 @@ Sets the volume (within a range of 0 to 100) for the application. This API uses 
 
 **Since:** 19
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 23.
+
+<!--Device-AudioVolumeManager-setAppVolumePercentage(volume: int): Promise<void>--><!--Device-AudioVolumeManager-setAppVolumePercentage(volume: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 

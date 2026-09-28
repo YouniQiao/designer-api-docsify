@@ -8,6 +8,8 @@ PhotoSubtype是不同[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasse
 
 **起始版本：** 12
 
+<!--Device-photoAccessHelper-export enum PhotoSubtype--><!--Device-photoAccessHelper-export enum PhotoSubtype-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## SCREENSHOT
@@ -19,6 +21,8 @@ SCREENSHOT = 1
 截屏录屏文件类型。
 
 **起始版本：** 10
+
+<!--Device-PhotoSubtype-SCREENSHOT = 1--><!--Device-PhotoSubtype-SCREENSHOT = 1-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -34,6 +38,8 @@ CINEMATIC_VIDEO = 5
 
 **起始版本：** 26.0.1
 
+<!--Device-PhotoSubtype-CINEMATIC_VIDEO = 5--><!--Device-PhotoSubtype-CINEMATIC_VIDEO = 5-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -47,6 +53,8 @@ SLOW_MOTION_VIDEO = 6
 慢动作视频文件类型。
 
 **起始版本：** 22
+
+<!--Device-PhotoSubtype-SLOW_MOTION_VIDEO = 6--><!--Device-PhotoSubtype-SLOW_MOTION_VIDEO = 6-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -62,6 +70,8 @@ SPATIAL_3DGS = 7
 
 **起始版本：** 22
 
+<!--Device-PhotoSubtype-SPATIAL_3DGS = 7--><!--Device-PhotoSubtype-SPATIAL_3DGS = 7-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -75,6 +85,8 @@ CINEMATIC_VIDEO_V2 = 8
 电影版本2视频文件。与CINEMATIC_VIDEO相比，它增加了更多效果，如希区柯克风格。
 
 **起始版本：** 26.0.1
+
+<!--Device-PhotoSubtype-CINEMATIC_VIDEO_V2 = 8--><!--Device-PhotoSubtype-CINEMATIC_VIDEO_V2 = 8-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

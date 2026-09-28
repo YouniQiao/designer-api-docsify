@@ -24,6 +24,8 @@ function executePeriodically(period: number, task: Task, priority?: Priority): v
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-taskpool-function executePeriodically(period: number, task: Task, priority?: Priority): void--><!--Device-taskpool-function executePeriodically(period: number, task: Task, priority?: Priority): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -99,6 +101,8 @@ function executePeriodically<A extends Array<Object>, R>(period: number, task: G
 **起始版本：** 13
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
+
+<!--Device-taskpool-function executePeriodically<A extends Array<Object>, R>(period: number, task: GenericsTask<A, R>, priority?: Priority): void--><!--Device-taskpool-function executePeriodically<A extends Array<Object>, R>(period: number, task: GenericsTask<A, R>, priority?: Priority): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

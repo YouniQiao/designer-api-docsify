@@ -8,6 +8,8 @@ Panel是输入法面板对象，提供面板页面加载、显示/隐藏、尺�
 
 **起始版本：** 10
 
+<!--Device-inputMethodEngine-interface Panel--><!--Device-inputMethodEngine-interface Panel-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## 导入模块
@@ -28,6 +30,8 @@ off(type: 'sizeUpdate', callback?: SizeUpdateCallback): void
 > 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED或FLG_FLOATING的面板。
 
 **起始版本：** 14
+
+<!--Device-Panel-off(type: 'sizeUpdate', callback?: SizeUpdateCallback): void--><!--Device-Panel-off(type: 'sizeUpdate', callback?: SizeUpdateCallback): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -65,6 +69,8 @@ on(type: 'sizeUpdate', callback: SizeUpdateCallback): void
 
 **起始版本：** 14
 
+<!--Device-Panel-on(type: 'sizeUpdate', callback: SizeUpdateCallback): void--><!--Device-Panel-on(type: 'sizeUpdate', callback: SizeUpdateCallback): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **系统接口：** 此接口为系统接口。
@@ -101,6 +107,8 @@ setShadow(radius: number, color: string, offsetX: number, offsetY: number): void
 > 不支持PanelType为SOFT_KEYBOARD类型且PanelFlag状态为FLG_FIXED的面板。
 
 **起始版本：** 22
+
+<!--Device-Panel-setShadow(radius: double, color: string, offsetX: double, offsetY: double): void--><!--Device-Panel-setShadow(radius: double, color: string, offsetX: double, offsetY: double): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 

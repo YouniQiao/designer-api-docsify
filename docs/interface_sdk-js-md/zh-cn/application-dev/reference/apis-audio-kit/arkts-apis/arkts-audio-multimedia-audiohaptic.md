@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare namespace audioHaptic--><!--Device-unnamed-declare namespace audioHaptic-End-->
+
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
 ## 导入模块

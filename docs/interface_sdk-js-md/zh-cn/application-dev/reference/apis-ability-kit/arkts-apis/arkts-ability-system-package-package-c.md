@@ -15,6 +15,8 @@ export default class Package
 
 **废弃版本：** 9
 
+<!--Device-unnamed-export default class Package--><!--Device-unnamed-export default class Package-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## 导入模块
@@ -36,6 +38,8 @@ static hasInstalled(options: CheckPackageHasInstalledOptions): void
 **废弃版本：** 9
 
 **替代接口：** [canOpenLink](arkts-ability-bundlemanager-canopenlink-f.md)
+
+<!--Device-Package-static hasInstalled(options: CheckPackageHasInstalledOptions): void--><!--Device-Package-static hasInstalled(options: CheckPackageHasInstalledOptions): void-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 

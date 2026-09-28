@@ -8,6 +8,8 @@ export enum ApplicationReservedFlag
 
 **起始版本：** 26.0.1
 
+<!--Device-bundleManager-export enum ApplicationReservedFlag--><!--Device-bundleManager-export enum ApplicationReservedFlag-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -24,6 +26,8 @@ ENCRYPTED_APPLICATION = 0x00000001
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ApplicationReservedFlag-ENCRYPTED_APPLICATION = 0x00000001--><!--Device-ApplicationReservedFlag-ENCRYPTED_APPLICATION = 0x00000001-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -39,6 +43,8 @@ ENCRYPTED_KEY_EXISTED = 0x00000002
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ApplicationReservedFlag-ENCRYPTED_KEY_EXISTED = 0x00000002--><!--Device-ApplicationReservedFlag-ENCRYPTED_KEY_EXISTED = 0x00000002-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

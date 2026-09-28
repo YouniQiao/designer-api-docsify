@@ -18,6 +18,8 @@ Query dialing number information on SIM card.
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
+<!--Device-sim-function queryIccDiallingNumbers(slotId: int, type: ContactType, callback: AsyncCallback<Array<DiallingNumbersInfo>>): void--><!--Device-sim-function queryIccDiallingNumbers(slotId: int, type: ContactType, callback: AsyncCallback<Array<DiallingNumbersInfo>>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -69,6 +71,8 @@ Query dialing number information on SIM card.
 **起始版本：** 8
 
 **需要权限：** ohos.permission.READ_CONTACTS
+
+<!--Device-sim-function queryIccDiallingNumbers(slotId: int, type: ContactType): Promise<Array<DiallingNumbersInfo>>--><!--Device-sim-function queryIccDiallingNumbers(slotId: int, type: ContactType): Promise<Array<DiallingNumbersInfo>>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

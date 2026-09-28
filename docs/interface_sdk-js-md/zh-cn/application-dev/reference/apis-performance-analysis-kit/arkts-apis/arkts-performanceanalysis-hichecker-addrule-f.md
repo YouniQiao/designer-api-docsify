@@ -25,6 +25,8 @@ function addRule(rule: bigint): void
 
 **替代接口：** [addCheckRule](arkts-performanceanalysis-hichecker-addcheckrule-f.md)
 
+<!--Device-hichecker-function addRule(rule: bigint): void--><!--Device-hichecker-function addRule(rule: bigint): void-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
 **参数：**

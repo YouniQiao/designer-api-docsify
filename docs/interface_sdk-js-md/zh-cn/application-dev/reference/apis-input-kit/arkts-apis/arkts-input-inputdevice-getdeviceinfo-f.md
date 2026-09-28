@@ -16,6 +16,8 @@ function getDeviceInfo(deviceId: number, callback: AsyncCallback<InputDeviceData
 
 **起始版本：** 9
 
+<!--Device-inputDevice-function getDeviceInfo(deviceId: int, callback: AsyncCallback<InputDeviceData>): void--><!--Device-inputDevice-function getDeviceInfo(deviceId: int, callback: AsyncCallback<InputDeviceData>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 **参数：**
@@ -75,6 +77,8 @@ function getDeviceInfo(deviceId: number): Promise<InputDeviceData>
 获取指定id的输入设备信息，使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-inputDevice-function getDeviceInfo(deviceId: int): Promise<InputDeviceData>--><!--Device-inputDevice-function getDeviceInfo(deviceId: int): Promise<InputDeviceData>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 

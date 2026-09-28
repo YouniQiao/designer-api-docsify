@@ -12,6 +12,8 @@ Preferences继承自[ISendable](../../../arkts-utils/arkts-sendable.md#isendable
 
 **起始版本：** 12
 
+<!--Device-sendablePreferences-interface Preferences extends lang.ISendable--><!--Device-sendablePreferences-interface Preferences extends lang.ISendable-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
 ## 导入模块
@@ -31,6 +33,8 @@ clear(): Promise<void>
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Preferences-clear(): Promise<void>--><!--Device-Preferences-clear(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
@@ -71,6 +75,8 @@ clearSync(): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Preferences-clearSync(): void--><!--Device-Preferences-clearSync(): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
 **错误码：**
@@ -96,6 +102,8 @@ delete(key: string): Promise<void>
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Preferences-delete(key: string): Promise<void>--><!--Device-Preferences-delete(key: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
@@ -143,6 +151,8 @@ deleteSync(key: string): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Preferences-deleteSync(key: string): void--><!--Device-Preferences-deleteSync(key: string): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
 **参数：**
@@ -179,6 +189,8 @@ flush(): Promise<void>
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Preferences-flush(): Promise<void>--><!--Device-Preferences-flush(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
@@ -223,6 +235,8 @@ flushSync(): void
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
+<!--Device-Preferences-flushSync(): void--><!--Device-Preferences-flushSync(): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
 **错误码：**
@@ -248,6 +262,8 @@ get(key: string, defValue: lang.ISendable): Promise<lang.ISendable>
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Preferences-get(key: string, defValue: lang.ISendable): Promise<lang.ISendable>--><!--Device-Preferences-get(key: string, defValue: lang.ISendable): Promise<lang.ISendable>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
@@ -298,6 +314,8 @@ getAll(): Promise<lang.ISendable>
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Preferences-getAll(): Promise<lang.ISendable>--><!--Device-Preferences-getAll(): Promise<lang.ISendable>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
 **返回值：**
@@ -340,6 +358,8 @@ getAllSync(): lang.ISendable
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Preferences-getAllSync(): lang.ISendable--><!--Device-Preferences-getAllSync(): lang.ISendable-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
 **返回值：**
@@ -376,6 +396,8 @@ getSync(key: string, defValue: lang.ISendable): lang.ISendable
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Preferences-getSync(key: string, defValue: lang.ISendable): lang.ISendable--><!--Device-Preferences-getSync(key: string, defValue: lang.ISendable): lang.ISendable-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
@@ -418,6 +440,8 @@ has(key: string): Promise<boolean>
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Preferences-has(key: string): Promise<boolean>--><!--Device-Preferences-has(key: string): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
@@ -469,6 +493,8 @@ hasSync(key: string): boolean
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Preferences-hasSync(key: string): boolean--><!--Device-Preferences-hasSync(key: string): boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
 **参数：**
@@ -512,6 +538,8 @@ off(type: 'change', callback?: Callback<string>): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Preferences-off(type: 'change', callback?: Callback<string>): void--><!--Device-Preferences-off(type: 'change', callback?: Callback<string>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
@@ -561,6 +589,8 @@ off(type: 'multiProcessChange', callback?: Callback<string>): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Preferences-off(type: 'multiProcessChange', callback?: Callback<string>): void--><!--Device-Preferences-off(type: 'multiProcessChange', callback?: Callback<string>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
 **参数：**
@@ -606,6 +636,8 @@ off(type: 'dataChange', keys: Array<string>, callback?: Callback<lang.ISendable>
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Preferences-off(type: 'dataChange', keys: Array<string>, callback?: Callback<lang.ISendable>): void--><!--Device-Preferences-off(type: 'dataChange', keys: Array<string>, callback?: Callback<lang.ISendable>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
@@ -671,6 +703,8 @@ on(type: 'change', callback: Callback<string>): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Preferences-on(type: 'change', callback: Callback<string>): void--><!--Device-Preferences-on(type: 'change', callback: Callback<string>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
 **参数：**
@@ -726,6 +760,8 @@ on(type: 'multiProcessChange', callback: Callback<string>): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Preferences-on(type: 'multiProcessChange', callback: Callback<string>): void--><!--Device-Preferences-on(type: 'multiProcessChange', callback: Callback<string>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
 **参数：**
@@ -777,6 +813,8 @@ on(type: 'dataChange', keys: Array<string>, callback: Callback<lang.ISendable>):
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Preferences-on(type: 'dataChange', keys: Array<string>, callback: Callback<lang.ISendable>): void--><!--Device-Preferences-on(type: 'dataChange', keys: Array<string>, callback: Callback<lang.ISendable>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
@@ -833,6 +871,8 @@ put(key: string, value: lang.ISendable): Promise<void>
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Preferences-put(key: string, value: lang.ISendable): Promise<void>--><!--Device-Preferences-put(key: string, value: lang.ISendable): Promise<void>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
 **参数：**
@@ -885,6 +925,8 @@ putSync(key: string, value: lang.ISendable): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Preferences-putSync(key: string, value: lang.ISendable): void--><!--Device-Preferences-putSync(key: string, value: lang.ISendable): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 

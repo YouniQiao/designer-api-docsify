@@ -8,6 +8,8 @@ Describes the rotation parameters.
 
 **Since:** 7
 
+<!--Device-matrix4-interface RotateOption--><!--Device-matrix4-interface RotateOption-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -31,6 +33,8 @@ Default value: **0**
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-RotateOption-angle?: number--><!--Device-RotateOption-angle?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -56,6 +60,8 @@ The value **0** indicates that the transformation center coincides with the comp
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-RotateOption-centerX?: number--><!--Device-RotateOption-centerX?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## centerY
@@ -80,6 +86,8 @@ The value **0** indicates that the transformation center coincides with the comp
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-RotateOption-centerY?: number--><!--Device-RotateOption-centerY?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## x
@@ -100,6 +108,8 @@ Value range: (-∞, +∞)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-RotateOption-x?: number--><!--Device-RotateOption-x?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## y
@@ -119,6 +129,8 @@ Value range: (-∞, +∞)
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-RotateOption-y?: number--><!--Device-RotateOption-y?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -143,5 +155,7 @@ The rotation axis vector is valid only when at least one of **x**, **y**, and **
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-RotateOption-z?: number--><!--Device-RotateOption-z?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

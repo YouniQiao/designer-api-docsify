@@ -21,6 +21,8 @@ function unregisterApplicationStateObserver(observerId: number, callback: AsyncC
 
 **需要权限：** ohos.permission.RUNNING_STATE_OBSERVER
 
+<!--Device-appManager-function unregisterApplicationStateObserver(observerId: number, callback: AsyncCallback<void>): void--><!--Device-appManager-function unregisterApplicationStateObserver(observerId: number, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -68,6 +70,8 @@ function unregisterApplicationStateObserver(observerId: number): Promise<void>
 **替代接口：** [off](arkts-ability-appmanager-off-f.md)
 
 **需要权限：** ohos.permission.RUNNING_STATE_OBSERVER
+
+<!--Device-appManager-function unregisterApplicationStateObserver(observerId: number): Promise<void>--><!--Device-appManager-function unregisterApplicationStateObserver(observerId: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

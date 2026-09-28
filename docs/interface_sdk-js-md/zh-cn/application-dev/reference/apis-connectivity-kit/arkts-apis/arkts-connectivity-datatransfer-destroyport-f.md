@@ -20,6 +20,8 @@ function destroyPort(uuid: string): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-dataTransfer-function destroyPort(uuid: string): void--><!--Device-dataTransfer-function destroyPort(uuid: string): void-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **参数：**

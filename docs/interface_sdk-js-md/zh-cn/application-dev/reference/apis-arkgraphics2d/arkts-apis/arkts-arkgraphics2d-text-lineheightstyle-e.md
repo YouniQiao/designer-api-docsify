@@ -8,6 +8,8 @@ enum LineHeightStyle
 
 **起始版本：** 21
 
+<!--Device-text-enum LineHeightStyle--><!--Device-text-enum LineHeightStyle-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## FONT_SIZE
@@ -20,7 +22,9 @@ FONT_SIZE = 0
 
 **起始版本：** 21
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-LineHeightStyle-FONT_SIZE = 0--><!--Device-LineHeightStyle-FONT_SIZE = 0-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -34,6 +38,8 @@ FONT_HEIGHT = 1
 
 **起始版本：** 21
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-LineHeightStyle-FONT_HEIGHT = 1--><!--Device-LineHeightStyle-FONT_HEIGHT = 1-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing

@@ -14,6 +14,8 @@ interface ScanResult
 
 **替代接口：** [ScanResult](arkts-connectivity-bluetoothmanager-scanresult-i.md)
 
+<!--Device-bluetooth-interface ScanResult--><!--Device-bluetooth-interface ScanResult-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -38,6 +40,8 @@ data: ArrayBuffer
 
 **替代接口：** [data](arkts-connectivity-bluetoothmanager-scanresult-i.md#data)
 
+<!--Device-ScanResult-data: ArrayBuffer--><!--Device-ScanResult-data: ArrayBuffer-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## deviceId
@@ -56,6 +60,8 @@ deviceId: string
 
 **替代接口：** [deviceId](arkts-connectivity-bluetoothmanager-scanresult-i.md#deviceid)
 
+<!--Device-ScanResult-deviceId: string--><!--Device-ScanResult-deviceId: string-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## rssi
@@ -73,5 +79,7 @@ rssi: number
 **废弃版本：** 9
 
 **替代接口：** [rssi](arkts-connectivity-bluetoothmanager-scanresult-i.md#rssi)
+
+<!--Device-ScanResult-rssi: number--><!--Device-ScanResult-rssi: number-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

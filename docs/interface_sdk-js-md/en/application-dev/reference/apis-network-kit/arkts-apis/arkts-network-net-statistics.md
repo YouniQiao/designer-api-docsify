@@ -13,6 +13,8 @@ of long-term network usage trends of the application.
 
 **Since:** 10
 
+<!--Device-unnamed-declare namespace statistics--><!--Device-unnamed-declare namespace statistics-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 ## Modules to Import

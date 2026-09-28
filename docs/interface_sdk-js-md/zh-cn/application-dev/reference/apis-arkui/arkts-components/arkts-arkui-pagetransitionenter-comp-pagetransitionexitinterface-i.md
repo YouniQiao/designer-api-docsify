@@ -12,6 +12,8 @@ interface PageTransitionExitInterface extends CommonTransition<PageTransitionExi
 
 **起始版本：** 7
 
+<!--Device-unnamed-interface PageTransitionExitInterface extends CommonTransition<PageTransitionExitInterface>--><!--Device-unnamed-interface PageTransitionExitInterface extends CommonTransition<PageTransitionExitInterface>-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## [[Call]]
@@ -25,6 +27,8 @@ interface PageTransitionExitInterface extends CommonTransition<PageTransitionExi
 **起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-PageTransitionExitInterface-(value: PageTransitionOptions): PageTransitionExitInterface--><!--Device-PageTransitionExitInterface-(value: PageTransitionOptions): PageTransitionExitInterface-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -51,6 +55,8 @@ onExit(event: PageTransitionCallback): PageTransitionExitInterface
 **起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-PageTransitionExitInterface-onExit(event: PageTransitionCallback): PageTransitionExitInterface--><!--Device-PageTransitionExitInterface-onExit(event: PageTransitionCallback): PageTransitionExitInterface-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

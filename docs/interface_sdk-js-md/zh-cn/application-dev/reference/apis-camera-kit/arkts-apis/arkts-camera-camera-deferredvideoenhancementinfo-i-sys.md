@@ -8,6 +8,8 @@ Deferred video enhancement info.
 
 **起始版本：** 13
 
+<!--Device-camera-interface DeferredVideoEnhancementInfo--><!--Device-camera-interface DeferredVideoEnhancementInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ Check whether deferred video enhancement available.
 
 **起始版本：** 13
 
+<!--Device-DeferredVideoEnhancementInfo-readonly isDeferredVideoEnhancementAvailable: boolean--><!--Device-DeferredVideoEnhancementInfo-readonly isDeferredVideoEnhancementAvailable: boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ Video identifier.
 **类型：** string
 
 **起始版本：** 13
+
+<!--Device-DeferredVideoEnhancementInfo-readonly videoId?: string--><!--Device-DeferredVideoEnhancementInfo-readonly videoId?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

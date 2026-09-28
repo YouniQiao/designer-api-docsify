@@ -10,6 +10,8 @@ UkeyAuthExtensionAbility是用于UKey认证UI显示的ExtensionAbility组件。�
 
 **起始版本：** 26.0.1
 
+<!--Device-unnamed-declare class UkeyAuthExtensionAbility extends ExtensionAbility--><!--Device-unnamed-declare class UkeyAuthExtensionAbility extends ExtensionAbility-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
 ## 导入模块
@@ -29,6 +31,8 @@ onCreate(launchParam: AbilityConstant.LaunchParam): void
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UkeyAuthExtensionAbility-onCreate(launchParam: AbilityConstant.LaunchParam): void--><!--Device-UkeyAuthExtensionAbility-onCreate(launchParam: AbilityConstant.LaunchParam): void-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
@@ -50,6 +54,8 @@ onDestroy(): void | Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UkeyAuthExtensionAbility-onDestroy(): void | Promise<void>--><!--Device-UkeyAuthExtensionAbility-onDestroy(): void | Promise<void>-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
 ## onSessionCreate
@@ -63,6 +69,8 @@ onSessionCreate(want: Want, session: UIExtensionContentSession): void
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UkeyAuthExtensionAbility-onSessionCreate(want: Want, session: UIExtensionContentSession): void--><!--Device-UkeyAuthExtensionAbility-onSessionCreate(want: Want, session: UIExtensionContentSession): void-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
@@ -85,6 +93,8 @@ onSessionDestroy(session: UIExtensionContentSession): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UkeyAuthExtensionAbility-onSessionDestroy(session: UIExtensionContentSession): void--><!--Device-UkeyAuthExtensionAbility-onSessionDestroy(session: UIExtensionContentSession): void-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
 **参数：**
@@ -106,5 +116,7 @@ UkeyAuthExtensionAbility的上下文。
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UkeyAuthExtensionAbility-context: UkeyAuthExtensionContext--><!--Device-UkeyAuthExtensionAbility-context: UkeyAuthExtensionContext-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManagerDialog

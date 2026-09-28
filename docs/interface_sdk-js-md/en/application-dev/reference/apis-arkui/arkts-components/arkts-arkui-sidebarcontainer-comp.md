@@ -33,6 +33,8 @@ Creates a sidebar container.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SideBarContainerInterface-(type?: SideBarContainerType): SideBarContainerAttribute--><!--Device-SideBarContainerInterface-(type?: SideBarContainerType): SideBarContainerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

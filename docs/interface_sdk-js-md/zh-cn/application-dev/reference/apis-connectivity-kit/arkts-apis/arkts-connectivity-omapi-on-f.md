@@ -14,9 +14,11 @@ function on(type: 'stateChanged', callback: Callback<ServiceState>): void
 
 注册监听服务状态变化事件。
 
-调用[omapi.newSEService](arkts-connectivity-omapi-newseservice-f.md#newseserviceservicestate)或[omapi.createService](arkts-connectivity-omapi-createservice-f.md)创建服务成功后再用on接口注册回调。
+调用[omapi.newSEService](arkts-connectivity-omapi-newseservice-f.md)或[omapi.createService](arkts-connectivity-omapi-createservice-f.md)创建服务成功后再用on接口注册回调。
 
 **起始版本：** 18
+
+<!--Device-omapi-function on(type: 'stateChanged', callback: Callback<ServiceState>): void--><!--Device-omapi-function on(type: 'stateChanged', callback: Callback<ServiceState>): void-End-->
 
 **系统能力：** SystemCapability.Communication.SecureElement
 

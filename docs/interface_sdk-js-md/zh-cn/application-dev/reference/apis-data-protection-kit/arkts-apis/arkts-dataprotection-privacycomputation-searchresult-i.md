@@ -8,6 +8,8 @@ interface SearchResult
 
 **起始版本：** 26.0.1
 
+<!--Device-privacyComputation-interface SearchResult--><!--Device-privacyComputation-interface SearchResult-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 ## 导入模块
@@ -31,6 +33,8 @@ attachedValues?: Uint8Array[]
 
 **原子化服务API：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
 
+<!--Device-SearchResult-attachedValues?: Uint8Array[]--><!--Device-SearchResult-attachedValues?: Uint8Array[]-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 ## matchedResult
@@ -48,5 +52,7 @@ matchedResult: boolean
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
+
+<!--Device-SearchResult-matchedResult: boolean--><!--Device-SearchResult-matchedResult: boolean-End-->
 
 **系统能力：** SystemCapability.Security.Asset

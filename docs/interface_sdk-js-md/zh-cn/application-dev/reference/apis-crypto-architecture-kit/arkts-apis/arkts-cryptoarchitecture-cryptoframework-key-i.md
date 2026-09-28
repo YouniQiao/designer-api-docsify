@@ -10,6 +10,8 @@ interface Key
 
 **起始版本：** 9
 
+<!--Device-cryptoFramework-interface Key--><!--Device-cryptoFramework-interface Key-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key
 - API版本9-11：SystemCapability.Security.CryptoFramework
@@ -34,7 +36,9 @@ getEncoded(): DataBlob
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Key-getEncoded(): DataBlob--><!--Device-Key-getEncoded(): DataBlob-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key
@@ -79,7 +83,9 @@ getKeySize(): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-Key-getKeySize(): int--><!--Device-Key-getKeySize(): int-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Key
 
@@ -123,7 +129,9 @@ readonly algName: string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Key-readonly algName: string--><!--Device-Key-readonly algName: string-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key
@@ -141,7 +149,9 @@ readonly format: string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Key-readonly format: string--><!--Device-Key-readonly format: string-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key

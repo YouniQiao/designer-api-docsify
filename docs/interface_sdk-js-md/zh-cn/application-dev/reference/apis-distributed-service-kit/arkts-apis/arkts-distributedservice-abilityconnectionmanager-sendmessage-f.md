@@ -18,6 +18,8 @@ function sendMessage(sessionId: number, msg: string): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-abilityConnectionManager-function sendMessage(sessionId: int, msg: string): Promise<void>--><!--Device-abilityConnectionManager-function sendMessage(sessionId: int, msg: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **参数：**

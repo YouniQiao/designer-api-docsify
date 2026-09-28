@@ -16,7 +16,9 @@ function parsePkcs12(data: Uint8Array, config: Pkcs12ParsingConfig): Pkcs12Data
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-cert-function parsePkcs12(data: Uint8Array, config: Pkcs12ParsingConfig): Pkcs12Data--><!--Device-cert-function parsePkcs12(data: Uint8Array, config: Pkcs12ParsingConfig): Pkcs12Data-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -233,7 +235,9 @@ function parsePkcs12(data: Uint8Array, password: string): Promise<Pkcs12Data>
 
 **起始版本：** 21
 
-**原子化服务API：** 从API版本21开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本21开始，该接口支持在原子化服务中使用。
+
+<!--Device-cert-function parsePkcs12(data: Uint8Array, password: string): Promise<Pkcs12Data>--><!--Device-cert-function parsePkcs12(data: Uint8Array, password: string): Promise<Pkcs12Data>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 

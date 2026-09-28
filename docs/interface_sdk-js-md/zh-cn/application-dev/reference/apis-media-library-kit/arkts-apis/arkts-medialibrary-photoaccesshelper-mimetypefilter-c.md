@@ -8,6 +8,8 @@ class MimeTypeFilter
 
 **起始版本：** 19
 
+<!--Device-photoAccessHelper-class MimeTypeFilter--><!--Device-photoAccessHelper-class MimeTypeFilter-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ PhotoPicker可供用户选择媒体文件的过滤类型。数组长度最大为
 
 **起始版本：** 19
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-MimeTypeFilter-mimeTypeArray: Array<string>--><!--Device-MimeTypeFilter-mimeTypeArray: Array<string>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core

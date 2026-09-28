@@ -14,4 +14,6 @@ VpnExtensionContext可直接作为VpnExtension的上下文环境，提供允许�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-unnamed-export default class VpnExtensionContext extends ExtensionContext--><!--Device-unnamed-export default class VpnExtensionContext extends ExtensionContext-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

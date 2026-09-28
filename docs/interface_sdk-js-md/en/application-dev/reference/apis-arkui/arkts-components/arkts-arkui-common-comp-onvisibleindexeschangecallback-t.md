@@ -4,7 +4,7 @@
 declare type OnVisibleIndexesChangeCallback = (start: number, end: number) => void
 ```
 
-Defines the callback type invoked when the indexes of the child components displayed by the lazy loading layout containers [LazyColumnLayout](../../../reference/apis-arkui/arkui-ts/ts-container-lazycolumnlayout.md), [LazyVGridLayout](arkts-arkui-lazyvgridlayout-comp.md#lazy_grid_layout), and [LazyVWaterFlowLayout](../../../reference/apis-arkui/arkui-ts/ts-container-lazyvwaterflowlayout.md) change.
+Defines the callback type invoked when the indexes of the child components displayed by the lazy loading layout containers [LazyColumnLayout](../../../reference/apis-arkui/arkui-ts/ts-container-lazycolumnlayout.md), [LazyVGridLayout](arkts-arkui-lazyvgridlayout-comp.md), and [LazyVWaterFlowLayout](../../../reference/apis-arkui/arkui-ts/ts-container-lazyvwaterflowlayout.md) change.
 
 > **NOTE:** 
 > 
@@ -17,6 +17,8 @@ Defines the callback type invoked when the indexes of the child components displ
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-unnamed-declare type OnVisibleIndexesChangeCallback = (start: int, end: int) => void--><!--Device-unnamed-declare type OnVisibleIndexesChangeCallback = (start: int, end: int) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

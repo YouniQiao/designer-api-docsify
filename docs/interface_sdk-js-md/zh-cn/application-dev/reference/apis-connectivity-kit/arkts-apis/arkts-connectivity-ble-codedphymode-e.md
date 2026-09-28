@@ -8,6 +8,8 @@ enum CodedPhyMode
 
 **起始版本：** 23
 
+<!--Device-ble-enum CodedPhyMode--><!--Device-ble-enum CodedPhyMode-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## BLE_PHY_CODED_S2
@@ -22,6 +24,8 @@ BLE_PHY_CODED_S2 = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-CodedPhyMode-BLE_PHY_CODED_S2 = 1--><!--Device-CodedPhyMode-BLE_PHY_CODED_S2 = 1-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## BLE_PHY_CODED_S8
@@ -35,5 +39,7 @@ BLE_PHY_CODED_S8 = 2
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-CodedPhyMode-BLE_PHY_CODED_S8 = 2--><!--Device-CodedPhyMode-BLE_PHY_CODED_S8 = 2-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

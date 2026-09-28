@@ -8,6 +8,8 @@ Defines a list of fallback generic font families.
 
 **Since:** 11
 
+<!--Device-font-interface UIFontFallbackGroupInfo--><!--Device-font-interface UIFontFallbackGroupInfo-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -32,6 +34,8 @@ Fallback fonts for the font family. If **fontSetName** is set to **""**, it indi
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-UIFontFallbackGroupInfo-fallback: Array<UIFontFallbackInfo>--><!--Device-UIFontFallbackGroupInfo-fallback: Array<UIFontFallbackInfo>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## fontSetName
@@ -49,5 +53,7 @@ Name of the font family corresponding to the fallback font group. If **fontSetNa
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIFontFallbackGroupInfo-fontSetName: string--><!--Device-UIFontFallbackGroupInfo-fontSetName: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

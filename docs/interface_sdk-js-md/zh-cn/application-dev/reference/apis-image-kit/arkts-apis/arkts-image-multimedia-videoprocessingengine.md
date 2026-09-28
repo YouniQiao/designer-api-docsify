@@ -4,6 +4,8 @@
 
 **起始版本：** 18
 
+<!--Device-unnamed-declare namespace videoProcessingEngine--><!--Device-unnamed-declare namespace videoProcessingEngine-End-->
+
 **系统能力：** SystemCapability.Multimedia.VideoProcessingEngine
 
 ## 导入模块

@@ -22,6 +22,8 @@ function isLocationEnabled(callback: AsyncCallback<boolean>): void
 
 **需要权限：** ohos.permission.LOCATION
 
+<!--Device-geolocation-function isLocationEnabled(callback: AsyncCallback<boolean>): void--><!--Device-geolocation-function isLocationEnabled(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **参数：**
@@ -62,6 +64,8 @@ function isLocationEnabled(): Promise<boolean>
 **替代接口：** [isLocationEnabled](arkts-location-geolocationmanager-islocationenabled-f.md)
 
 **需要权限：** ohos.permission.LOCATION
+
+<!--Device-geolocation-function isLocationEnabled(): Promise<boolean>--><!--Device-geolocation-function isLocationEnabled(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 

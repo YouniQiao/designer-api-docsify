@@ -16,6 +16,8 @@ function getImsShortMessageFormat(callback: AsyncCallback<string>): void
 
 **起始版本：** 8
 
+<!--Device-sms-function getImsShortMessageFormat(callback: AsyncCallback<string>): void--><!--Device-sms-function getImsShortMessageFormat(callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -60,6 +62,8 @@ function getImsShortMessageFormat(): Promise<string>
 获取IMS上支持的SMS格式。使用Promise异步回调。
 
 **起始版本：** 8
+
+<!--Device-sms-function getImsShortMessageFormat(): Promise<string>--><!--Device-sms-function getImsShortMessageFormat(): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 

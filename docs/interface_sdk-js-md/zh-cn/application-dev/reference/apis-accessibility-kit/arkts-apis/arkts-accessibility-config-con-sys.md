@@ -12,6 +12,8 @@ const audioBalance: Config<number>
 
 **起始版本：** 10
 
+<!--Device-config-const audioBalance: Config<double>--><!--Device-config-const audioBalance: Config<double>-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -27,6 +29,8 @@ const audioMono: Config<boolean>
 **类型：** [Config](arkts-accessibility-config-config-i-sys.md)&lt;boolean&gt;
 
 **起始版本：** 10
+
+<!--Device-config-const audioMono: Config<boolean>--><!--Device-config-const audioMono: Config<boolean>-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -44,6 +48,8 @@ const clickResponseTime: Config<ClickResponseTime>
 
 **起始版本：** 11
 
+<!--Device-config-const clickResponseTime: Config<ClickResponseTime>--><!--Device-config-const clickResponseTime: Config<ClickResponseTime>-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -59,6 +65,8 @@ const daltonizationState: Config<boolean>
 **类型：** [Config](arkts-accessibility-config-config-i-sys.md)&lt;boolean&gt;
 
 **起始版本：** 11
+
+<!--Device-config-const daltonizationState: Config<boolean>--><!--Device-config-const daltonizationState: Config<boolean>-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -76,6 +84,8 @@ const ignoreRepeatClick: Config<boolean>
 
 **起始版本：** 11
 
+<!--Device-config-const ignoreRepeatClick: Config<boolean>--><!--Device-config-const ignoreRepeatClick: Config<boolean>-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -91,6 +101,8 @@ const repeatClickInterval: Config<RepeatClickInterval>
 **类型：** [Config](arkts-accessibility-config-config-i-sys.md)&lt;[RepeatClickInterval](arkts-accessibility-config-repeatclickinterval-t-sys.md)&gt;
 
 **起始版本：** 11
+
+<!--Device-config-const repeatClickInterval: Config<RepeatClickInterval>--><!--Device-config-const repeatClickInterval: Config<RepeatClickInterval>-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -108,6 +120,8 @@ const screenMagnification: Config<boolean>
 
 **起始版本：** 12
 
+<!--Device-config-const screenMagnification: Config<boolean>--><!--Device-config-const screenMagnification: Config<boolean>-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -123,6 +137,8 @@ const shortkeyMultiTargets: Config<Array<string>>
 **类型：** [Config](arkts-accessibility-config-config-i-sys.md)&lt;Array&lt;string&gt;&gt;
 
 **起始版本：** 11
+
+<!--Device-config-const shortkeyMultiTargets: Config<Array<string>>--><!--Device-config-const shortkeyMultiTargets: Config<Array<string>>-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 

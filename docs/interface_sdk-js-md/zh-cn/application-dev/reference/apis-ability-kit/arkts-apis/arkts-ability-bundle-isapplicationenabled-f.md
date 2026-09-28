@@ -18,6 +18,8 @@ function isApplicationEnabled(bundleName: string, callback: AsyncCallback<boolea
 
 **废弃版本：** 9
 
+<!--Device-bundle-function isApplicationEnabled(bundleName: string, callback: AsyncCallback<boolean>): void--><!--Device-bundle-function isApplicationEnabled(bundleName: string, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 **参数：**
@@ -57,6 +59,8 @@ function isApplicationEnabled(bundleName: string): Promise<boolean>
 **起始版本：** 8
 
 **废弃版本：** 9
+
+<!--Device-bundle-function isApplicationEnabled(bundleName: string): Promise<boolean>--><!--Device-bundle-function isApplicationEnabled(bundleName: string): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 

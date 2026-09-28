@@ -8,6 +8,8 @@ export default class Animator
 
 **起始版本：** 6
 
+<!--Device-unnamed-export default class Animator--><!--Device-unnamed-export default class Animator-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -31,6 +33,8 @@ static create(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-Animator-static create(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult--><!--Device-Animator-static create(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -85,6 +89,8 @@ static create(options: AnimatorOptions): AnimatorResult
 **替代接口：** createAnimator
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Animator-static create(options: AnimatorOptions): AnimatorResult--><!--Device-Animator-static create(options: AnimatorOptions): AnimatorResult-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -147,6 +153,8 @@ static createAnimator(options: AnimatorOptions): AnimatorResult
 **废弃版本：** 9
 
 **替代接口：** create
+
+<!--Device-Animator-static createAnimator(options: AnimatorOptions): AnimatorResult--><!--Device-Animator-static createAnimator(options: AnimatorOptions): AnimatorResult-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

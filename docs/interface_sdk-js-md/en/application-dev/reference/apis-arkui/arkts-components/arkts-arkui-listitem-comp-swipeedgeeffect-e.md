@@ -8,6 +8,8 @@ Enumerates the edge effects.
 
 **Since:** 9
 
+<!--Device-unnamed-declare enum SwipeEdgeEffect--><!--Device-unnamed-declare enum SwipeEdgeEffect-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Spring
@@ -28,6 +30,8 @@ and it rebounds along the spring damping curve after being released.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SwipeEdgeEffect-Spring--><!--Device-SwipeEdgeEffect-Spring-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## None
@@ -47,5 +51,7 @@ and when a delete callback is set, releasing the **ListItem** after the delete t
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SwipeEdgeEffect-None--><!--Device-SwipeEdgeEffect-None-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

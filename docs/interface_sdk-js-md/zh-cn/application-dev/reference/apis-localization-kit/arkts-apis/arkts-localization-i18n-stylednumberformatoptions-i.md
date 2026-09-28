@@ -8,6 +8,8 @@ export interface StyledNumberFormatOptions
 
 **起始版本：** 18
 
+<!--Device-i18n-export interface StyledNumberFormatOptions--><!--Device-i18n-export interface StyledNumberFormatOptions-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## 导入模块
@@ -28,7 +30,9 @@ decimal?: TextStyle
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-StyledNumberFormatOptions-decimal?: TextStyle--><!--Device-StyledNumberFormatOptions-decimal?: TextStyle-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -44,7 +48,9 @@ fraction?: TextStyle
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-StyledNumberFormatOptions-fraction?: TextStyle--><!--Device-StyledNumberFormatOptions-fraction?: TextStyle-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -60,7 +66,9 @@ integer?: TextStyle
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-StyledNumberFormatOptions-integer?: TextStyle--><!--Device-StyledNumberFormatOptions-integer?: TextStyle-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -76,6 +84,8 @@ unit?: TextStyle
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-StyledNumberFormatOptions-unit?: TextStyle--><!--Device-StyledNumberFormatOptions-unit?: TextStyle-End-->
 
 **系统能力：** SystemCapability.Global.I18n

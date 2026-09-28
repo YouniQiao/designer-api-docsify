@@ -20,6 +20,8 @@ Queries the number of all contacts. This API uses a promise to return the result
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-contact-function queryContactsCount(context: Context): Promise<int>--><!--Device-contact-function queryContactsCount(context: Context): Promise<int>-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**

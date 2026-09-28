@@ -18,6 +18,8 @@ function startDTMF(callId: number, character: string, callback: AsyncCallback<vo
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-call-function startDTMF(callId: int, character: string, callback: AsyncCallback<void>): void--><!--Device-call-function startDTMF(callId: int, character: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -70,6 +72,8 @@ function startDTMF(callId: number, character: string): Promise<void>
 **起始版本：** 7
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
+
+<!--Device-call-function startDTMF(callId: int, character: string): Promise<void>--><!--Device-call-function startDTMF(callId: int, character: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 

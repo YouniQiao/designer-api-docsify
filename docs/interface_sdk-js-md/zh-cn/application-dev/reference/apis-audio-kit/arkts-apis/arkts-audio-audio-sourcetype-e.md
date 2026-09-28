@@ -8,6 +8,8 @@ enum SourceType
 
 **起始版本：** 8
 
+<!--Device-audio-enum SourceType--><!--Device-audio-enum SourceType-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## SOURCE_TYPE_INVALID
@@ -21,6 +23,8 @@ SOURCE_TYPE_INVALID = -1
 SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 8
+
+<!--Device-SourceType-SOURCE_TYPE_INVALID = -1--><!--Device-SourceType-SOURCE_TYPE_INVALID = -1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -36,6 +40,8 @@ SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 8
 
+<!--Device-SourceType-SOURCE_TYPE_MIC = 0--><!--Device-SourceType-SOURCE_TYPE_MIC = 0-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## SOURCE_TYPE_VOICE_RECOGNITION
@@ -49,6 +55,8 @@ SOURCE_TYPE_VOICE_RECOGNITION = 1
 SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 9
+
+<!--Device-SourceType-SOURCE_TYPE_VOICE_RECOGNITION = 1--><!--Device-SourceType-SOURCE_TYPE_VOICE_RECOGNITION = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -70,6 +78,8 @@ SystemCapability.Multimedia.Audio.PlaybackCapture
 
 **替代接口：** OH_AVScreenCapture in native interface.
 
+<!--Device-SourceType-SOURCE_TYPE_PLAYBACK_CAPTURE = 2--><!--Device-SourceType-SOURCE_TYPE_PLAYBACK_CAPTURE = 2-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.PlaybackCapture
 
 ## SOURCE_TYPE_VOICE_COMMUNICATION
@@ -83,6 +93,8 @@ SOURCE_TYPE_VOICE_COMMUNICATION = 7
 SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 8
+
+<!--Device-SourceType-SOURCE_TYPE_VOICE_COMMUNICATION = 7--><!--Device-SourceType-SOURCE_TYPE_VOICE_COMMUNICATION = 7-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -98,6 +110,8 @@ SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 12
 
+<!--Device-SourceType-SOURCE_TYPE_VOICE_MESSAGE = 10--><!--Device-SourceType-SOURCE_TYPE_VOICE_MESSAGE = 10-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## SOURCE_TYPE_CAMCORDER
@@ -111,6 +125,8 @@ SOURCE_TYPE_CAMCORDER = 13
 SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 13
+
+<!--Device-SourceType-SOURCE_TYPE_CAMCORDER = 13--><!--Device-SourceType-SOURCE_TYPE_CAMCORDER = 13-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -126,6 +142,8 @@ SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 14
 
+<!--Device-SourceType-SOURCE_TYPE_UNPROCESSED = 14--><!--Device-SourceType-SOURCE_TYPE_UNPROCESSED = 14-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## SOURCE_TYPE_LIVE
@@ -139,5 +157,7 @@ SOURCE_TYPE_LIVE = 17
 SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 20
+
+<!--Device-SourceType-SOURCE_TYPE_LIVE = 17--><!--Device-SourceType-SOURCE_TYPE_LIVE = 17-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core

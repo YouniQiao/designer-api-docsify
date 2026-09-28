@@ -8,6 +8,8 @@ Defines the custom vibration effect.
 
 **Since:** 18
 
+<!--Device-vibrator-interface VibrateFromPattern--><!--Device-vibrator-interface VibrateFromPattern-End-->
+
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Array of vibration events.
 
 **Since:** 18
 
+<!--Device-VibrateFromPattern-pattern: VibratorPattern--><!--Device-VibrateFromPattern-pattern: VibratorPattern-End-->
+
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 ## type
@@ -41,5 +45,7 @@ If the value is **pattern**, the vibrator vibrates based on the specified patter
 **Type:** 'pattern'
 
 **Since:** 18
+
+<!--Device-VibrateFromPattern-type: 'pattern'--><!--Device-VibrateFromPattern-type: 'pattern'-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice

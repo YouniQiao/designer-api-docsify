@@ -8,6 +8,8 @@ Want.flags字段常用的系统预置关键字。开发者可以通过这些预�
 
 **起始版本：** 9
 
+<!--Device-wantConstant-export enum Flags--><!--Device-wantConstant-export enum Flags-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityBase
 
 ## FLAG_AUTH_READ_URI_PERMISSION
@@ -20,7 +22,9 @@ FLAG_AUTH_READ_URI_PERMISSION = 0x00000001
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Flags-FLAG_AUTH_READ_URI_PERMISSION = 0x00000001--><!--Device-Flags-FLAG_AUTH_READ_URI_PERMISSION = 0x00000001-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -34,7 +38,9 @@ FLAG_AUTH_WRITE_URI_PERMISSION = 0x00000002
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Flags-FLAG_AUTH_WRITE_URI_PERMISSION = 0x00000002--><!--Device-Flags-FLAG_AUTH_WRITE_URI_PERMISSION = 0x00000002-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -47,6 +53,8 @@ FLAG_AUTH_PERSISTABLE_URI_PERMISSION = 0x00000040
 表示该URI可被接收方持久化。目标应用可以通过[fileShare.persistPermission](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileshare-persistpermission-f.md)接口进行权限持久化。
 
 **起始版本：** 12
+
+<!--Device-Flags-FLAG_AUTH_PERSISTABLE_URI_PERMISSION = 0x00000040--><!--Device-Flags-FLAG_AUTH_PERSISTABLE_URI_PERMISSION = 0x00000040-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -63,7 +71,9 @@ FLAG_INSTALL_ON_DEMAND = 0x00000800
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Flags-FLAG_INSTALL_ON_DEMAND = 0x00000800--><!--Device-Flags-FLAG_INSTALL_ON_DEMAND = 0x00000800-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -76,6 +86,8 @@ FLAG_ABILITY_ON_COLLABORATE = 0x00002000
 在多设备协同场景下，调用方应用通过DMS系统发起请求并且通过Flags字段携带此标志，协同方应用才会触发生命周期回调方法[onCollaborate()](arkts-ability-app-ability-uiability-uiability-c.md#oncollaborate)。
 
 **起始版本：** 18
+
+<!--Device-Flags-FLAG_ABILITY_ON_COLLABORATE = 0x00002000--><!--Device-Flags-FLAG_ABILITY_ON_COLLABORATE = 0x00002000-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -90,5 +102,7 @@ FLAG_START_WITHOUT_TIPS = 0x40000000
 通过[隐式方式拉起应用](../../../application-models/app-startup-overview.md)时，如果没有能够匹配的应用，默认会弹出提示弹窗“暂无可用打开方式”。开发者可以通过该字段屏蔽该弹窗。
 
 **起始版本：** 11
+
+<!--Device-Flags-FLAG_START_WITHOUT_TIPS = 0x40000000--><!--Device-Flags-FLAG_START_WITHOUT_TIPS = 0x40000000-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase

@@ -18,6 +18,8 @@ function getCurrentWifiBssidForLocating(): string
 
 **需要权限：** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
+<!--Device-geoLocationManager-function getCurrentWifiBssidForLocating(): string--><!--Device-geoLocationManager-function getCurrentWifiBssidForLocating(): string-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **返回值：**

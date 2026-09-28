@@ -8,6 +8,8 @@ export interface CallTransferResult
 
 **起始版本：** 26.0.0
 
+<!--Device-call-export interface CallTransferResult--><!--Device-call-export interface CallTransferResult-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 ## 导入模块
@@ -28,6 +30,8 @@ endHour: number
 
 **起始版本：** 26.0.0
 
+<!--Device-CallTransferResult-endHour: int--><!--Device-CallTransferResult-endHour: int-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 ## endMinute
@@ -41,6 +45,8 @@ endMinute: number
 **类型：** number
 
 **起始版本：** 26.0.0
+
+<!--Device-CallTransferResult-endMinute: int--><!--Device-CallTransferResult-endMinute: int-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -56,6 +62,8 @@ startHour: number
 
 **起始版本：** 26.0.0
 
+<!--Device-CallTransferResult-startHour: int--><!--Device-CallTransferResult-startHour: int-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 ## startMinute
@@ -70,6 +78,8 @@ startMinute: number
 
 **起始版本：** 26.0.0
 
+<!--Device-CallTransferResult-startMinute: int--><!--Device-CallTransferResult-startMinute: int-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 ## status
@@ -83,5 +93,7 @@ status: TransferStatus
 **类型：** [TransferStatus](arkts-telephony-call-transferstatus-e.md)
 
 **起始版本：** 26.0.0
+
+<!--Device-CallTransferResult-status: TransferStatus--><!--Device-CallTransferResult-status: TransferStatus-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager

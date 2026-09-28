@@ -24,6 +24,8 @@ function claimInterface(pipe: USBDevicePipe, iface: USBInterface, force?: boolea
 
 **起始版本：** 9
 
+<!--Device-usbManager-function claimInterface(pipe: USBDevicePipe, iface: USBInterface, force?: boolean): int--><!--Device-usbManager-function claimInterface(pipe: USBDevicePipe, iface: USBInterface, force?: boolean): int-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 **参数：**

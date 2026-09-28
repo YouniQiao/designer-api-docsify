@@ -8,6 +8,8 @@ declare interface TouchPadSwipeOptions
 
 **起始版本：** 18
 
+<!--Device-unnamed-declare interface TouchPadSwipeOptions--><!--Device-unnamed-declare interface TouchPadSwipeOptions-End-->
+
 **系统能力：** SystemCapability.Test.UiTest
 
 **测试接口：** 此接口仅在自动化测试脚本中使用。
@@ -31,7 +33,9 @@ speed?: number
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-TouchPadSwipeOptions-speed?: int--><!--Device-TouchPadSwipeOptions-speed?: int-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -49,7 +53,9 @@ stay?: boolean
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-TouchPadSwipeOptions-stay?: boolean--><!--Device-TouchPadSwipeOptions-stay?: boolean-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 

@@ -8,6 +8,8 @@ export type ProxyConfiguration = 'system' | 'no-proxy' | HttpProxy
 
 **起始版本：** 12
 
+<!--Device-webSocket-export type ProxyConfiguration = 'system' | 'no-proxy' | HttpProxy--><!--Device-webSocket-export type ProxyConfiguration = 'system' | 'no-proxy' | HttpProxy-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 | 类型 | 说明 |

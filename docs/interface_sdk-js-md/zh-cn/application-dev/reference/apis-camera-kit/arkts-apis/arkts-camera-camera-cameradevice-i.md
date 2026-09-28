@@ -8,6 +8,8 @@ interface CameraDevice
 
 **起始版本：** 10
 
+<!--Device-camera-interface CameraDevice--><!--Device-camera-interface CameraDevice-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
@@ -30,7 +32,9 @@ Car设备摄像头位置。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-CameraDevice-readonly automotiveCameraPosition?: AutomotiveCameraPosition--><!--Device-CameraDevice-readonly automotiveCameraPosition?: AutomotiveCameraPosition-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -46,7 +50,9 @@ readonly cameraId: string
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-CameraDevice-readonly cameraId: string--><!--Device-CameraDevice-readonly cameraId: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -62,7 +68,9 @@ readonly cameraOrientation: number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-CameraDevice-readonly cameraOrientation: int--><!--Device-CameraDevice-readonly cameraOrientation: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -78,7 +86,9 @@ readonly cameraPosition: CameraPosition
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-CameraDevice-readonly cameraPosition: CameraPosition--><!--Device-CameraDevice-readonly cameraPosition: CameraPosition-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -94,7 +104,9 @@ readonly cameraType: CameraType
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-CameraDevice-readonly cameraType: CameraType--><!--Device-CameraDevice-readonly cameraType: CameraType-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -110,7 +122,9 @@ readonly connectionType: ConnectionType
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-CameraDevice-readonly connectionType: ConnectionType--><!--Device-CameraDevice-readonly connectionType: ConnectionType-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -128,7 +142,9 @@ readonly constituentCameraDevices?: Array<CameraDevice>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-CameraDevice-readonly constituentCameraDevices?: Array<CameraDevice>--><!--Device-CameraDevice-readonly constituentCameraDevices?: Array<CameraDevice>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -144,7 +160,9 @@ readonly hostDeviceName: string
 
 **起始版本：** 15
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-CameraDevice-readonly hostDeviceName: string--><!--Device-CameraDevice-readonly hostDeviceName: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -160,7 +178,9 @@ readonly hostDeviceType: HostDeviceType
 
 **起始版本：** 15
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-CameraDevice-readonly hostDeviceType: HostDeviceType--><!--Device-CameraDevice-readonly hostDeviceType: HostDeviceType-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -178,7 +198,9 @@ readonly isLogicalCamera?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-CameraDevice-readonly isLogicalCamera?: boolean--><!--Device-CameraDevice-readonly isLogicalCamera?: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -196,7 +218,9 @@ readonly lensDistortion?: Array<number>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-CameraDevice-readonly lensDistortion?: Array<double>--><!--Device-CameraDevice-readonly lensDistortion?: Array<double>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -212,7 +236,9 @@ readonly lensEquivalentFocalLength?: Array<number>
 
 **起始版本：** 24
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-CameraDevice-readonly lensEquivalentFocalLength?: Array<int>--><!--Device-CameraDevice-readonly lensEquivalentFocalLength?: Array<int>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -230,7 +256,9 @@ readonly lensFocalLength?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-CameraDevice-readonly lensFocalLength?: double--><!--Device-CameraDevice-readonly lensFocalLength?: double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -248,7 +276,9 @@ readonly lensIntrinsicCalibration?: Array<number>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-CameraDevice-readonly lensIntrinsicCalibration?: Array<double>--><!--Device-CameraDevice-readonly lensIntrinsicCalibration?: Array<double>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -266,7 +296,9 @@ readonly minimumFocusDistance?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-CameraDevice-readonly minimumFocusDistance?: double--><!--Device-CameraDevice-readonly minimumFocusDistance?: double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -284,7 +316,9 @@ readonly sensorColorFilterArrangement?: SensorColorFilterArrangement
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-CameraDevice-readonly sensorColorFilterArrangement?: SensorColorFilterArrangement--><!--Device-CameraDevice-readonly sensorColorFilterArrangement?: SensorColorFilterArrangement-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -302,7 +336,9 @@ readonly sensorPhysicalSize?: Array<number>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-CameraDevice-readonly sensorPhysicalSize?: Array<double>--><!--Device-CameraDevice-readonly sensorPhysicalSize?: Array<double>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -320,6 +356,8 @@ readonly sensorPixelArraySize?: Array<number>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-CameraDevice-readonly sensorPixelArraySize?: Array<int>--><!--Device-CameraDevice-readonly sensorPixelArraySize?: Array<int>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core

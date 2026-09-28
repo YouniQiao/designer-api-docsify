@@ -8,6 +8,8 @@ Defines the custom indentation of a text paragraph, which provides only a base c
 
 **Since:** 22
 
+<!--Device-unnamed-declare abstract class LeadingMarginSpan--><!--Device-unnamed-declare abstract class LeadingMarginSpan-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## getLeadingMargin
@@ -23,6 +25,8 @@ Returns the indentation distance for a text paragraph.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-LeadingMarginSpan-abstract getLeadingMargin(): LengthMetrics--><!--Device-LeadingMarginSpan-abstract getLeadingMargin(): LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,6 +49,8 @@ Draws a custom pattern. This API is triggered once for each line of text in a pa
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-LeadingMarginSpan-abstract onDraw(context: DrawContext, drawInfo: LeadingMarginSpanDrawInfo): void--><!--Device-LeadingMarginSpan-abstract onDraw(context: DrawContext, drawInfo: LeadingMarginSpanDrawInfo): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

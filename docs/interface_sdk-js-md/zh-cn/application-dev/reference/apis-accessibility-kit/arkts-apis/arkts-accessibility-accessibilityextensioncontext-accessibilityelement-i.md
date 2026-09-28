@@ -10,6 +10,8 @@ export declare interface AccessibilityElement
 
 **起始版本：** 9
 
+<!--Device-unnamed-export declare interface AccessibilityElement--><!--Device-unnamed-export declare interface AccessibilityElement-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## actionNames
@@ -23,6 +25,8 @@ actionNames(callback: AsyncCallback<Array<string>>): void
 **起始版本：** 9
 
 **废弃版本：** 12
+
+<!--Device-AccessibilityElement-actionNames(callback: AsyncCallback<Array<string>>): void--><!--Device-AccessibilityElement-actionNames(callback: AsyncCallback<Array<string>>): void-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -61,6 +65,8 @@ actionNames(): Promise<Array<string>>
 
 **废弃版本：** 12
 
+<!--Device-AccessibilityElement-actionNames(): Promise<Array<string>>--><!--Device-AccessibilityElement-actionNames(): Promise<Array<string>>-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **返回值：**
@@ -93,6 +99,8 @@ attributeNames<T extends keyof ElementAttributeValues>(callback: AsyncCallback<A
 **起始版本：** 9
 
 **废弃版本：** 12
+
+<!--Device-AccessibilityElement-attributeNames<T extends keyof ElementAttributeValues>(callback: AsyncCallback<Array<T>>): void--><!--Device-AccessibilityElement-attributeNames<T extends keyof ElementAttributeValues>(callback: AsyncCallback<Array<T>>): void-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -132,6 +140,8 @@ attributeNames<T extends keyof ElementAttributeValues>(): Promise<Array<T>>
 
 **废弃版本：** 12
 
+<!--Device-AccessibilityElement-attributeNames<T extends keyof ElementAttributeValues>(): Promise<Array<T>>--><!--Device-AccessibilityElement-attributeNames<T extends keyof ElementAttributeValues>(): Promise<Array<T>>-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **返回值：**
@@ -168,6 +178,8 @@ attributeValue<T extends keyof ElementAttributeValues>(
 **起始版本：** 9
 
 **废弃版本：** 12
+
+<!--Device-AccessibilityElement-attributeValue<T extends keyof ElementAttributeValues>(    attributeName: T,    callback: AsyncCallback<ElementAttributeValues[T]>  ): void--><!--Device-AccessibilityElement-attributeValue<T extends keyof ElementAttributeValues>(    attributeName: T,    callback: AsyncCallback<ElementAttributeValues[T]>  ): void-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -216,6 +228,8 @@ attributeValue<T extends keyof ElementAttributeValues>(attributeName: T): Promis
 **起始版本：** 9
 
 **废弃版本：** 12
+
+<!--Device-AccessibilityElement-attributeValue<T extends keyof ElementAttributeValues>(attributeName: T): Promise<ElementAttributeValues[T]>--><!--Device-AccessibilityElement-attributeValue<T extends keyof ElementAttributeValues>(attributeName: T): Promise<ElementAttributeValues[T]>-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -266,6 +280,8 @@ findElement(type: 'content', condition: string, callback: AsyncCallback<Array<Ac
 
 **废弃版本：** 12
 
+<!--Device-AccessibilityElement-findElement(type: 'content', condition: string, callback: AsyncCallback<Array<AccessibilityElement>>): void--><!--Device-AccessibilityElement-findElement(type: 'content', condition: string, callback: AsyncCallback<Array<AccessibilityElement>>): void-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **参数：**
@@ -311,6 +327,8 @@ findElement(type: 'content', condition: string): Promise<Array<AccessibilityElem
 **起始版本：** 9
 
 **废弃版本：** 12
+
+<!--Device-AccessibilityElement-findElement(type: 'content', condition: string): Promise<Array<AccessibilityElement>>--><!--Device-AccessibilityElement-findElement(type: 'content', condition: string): Promise<Array<AccessibilityElement>>-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -361,6 +379,8 @@ findElement(type: 'focusType', condition: FocusType, callback: AsyncCallback<Acc
 
 **废弃版本：** 12
 
+<!--Device-AccessibilityElement-findElement(type: 'focusType', condition: FocusType, callback: AsyncCallback<AccessibilityElement>): void--><!--Device-AccessibilityElement-findElement(type: 'focusType', condition: FocusType, callback: AsyncCallback<AccessibilityElement>): void-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **参数：**
@@ -406,6 +426,8 @@ findElement(type: 'focusType', condition: FocusType): Promise<AccessibilityEleme
 **起始版本：** 9
 
 **废弃版本：** 12
+
+<!--Device-AccessibilityElement-findElement(type: 'focusType', condition: FocusType): Promise<AccessibilityElement>--><!--Device-AccessibilityElement-findElement(type: 'focusType', condition: FocusType): Promise<AccessibilityElement>-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -456,6 +478,8 @@ findElement(type: 'focusDirection', condition: FocusDirection, callback: AsyncCa
 
 **废弃版本：** 12
 
+<!--Device-AccessibilityElement-findElement(type: 'focusDirection', condition: FocusDirection, callback: AsyncCallback<AccessibilityElement>): void--><!--Device-AccessibilityElement-findElement(type: 'focusDirection', condition: FocusDirection, callback: AsyncCallback<AccessibilityElement>): void-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **参数：**
@@ -501,6 +525,8 @@ findElement(type: 'focusDirection', condition: FocusDirection): Promise<Accessib
 **起始版本：** 9
 
 **废弃版本：** 12
+
+<!--Device-AccessibilityElement-findElement(type: 'focusDirection', condition: FocusDirection): Promise<AccessibilityElement>--><!--Device-AccessibilityElement-findElement(type: 'focusDirection', condition: FocusDirection): Promise<AccessibilityElement>-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -551,6 +577,8 @@ performAction(actionName: string, parameters: object, callback: AsyncCallback<vo
 
 **废弃版本：** 12
 
+<!--Device-AccessibilityElement-performAction(actionName: string, parameters: object, callback: AsyncCallback<void>): void--><!--Device-AccessibilityElement-performAction(actionName: string, parameters: object, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **参数：**
@@ -599,6 +627,8 @@ performAction(actionName: string, parameters?: object): Promise<void>
 **起始版本：** 9
 
 **废弃版本：** 12
+
+<!--Device-AccessibilityElement-performAction(actionName: string, parameters?: object): Promise<void>--><!--Device-AccessibilityElement-performAction(actionName: string, parameters?: object): Promise<void>-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -685,6 +715,8 @@ performAction(actionName: string, callback: AsyncCallback<void>): void
 **起始版本：** 9
 
 **废弃版本：** 12
+
+<!--Device-AccessibilityElement-performAction(actionName: string, callback: AsyncCallback<void>): void--><!--Device-AccessibilityElement-performAction(actionName: string, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 

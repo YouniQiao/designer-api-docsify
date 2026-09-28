@@ -10,6 +10,8 @@ interface MetadataCatFaceObject extends MetadataObject
 
 **起始版本：** 26.0.0
 
+<!--Device-camera-interface MetadataCatFaceObject extends MetadataObject--><!--Device-camera-interface MetadataCatFaceObject extends MetadataObject-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
@@ -30,7 +32,9 @@ readonly leftEyeBoundingBox: Rect
 
 **起始版本：** 26.0.0
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-MetadataCatFaceObject-readonly leftEyeBoundingBox: Rect--><!--Device-MetadataCatFaceObject-readonly leftEyeBoundingBox: Rect-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -46,6 +50,8 @@ readonly rightEyeBoundingBox: Rect
 
 **起始版本：** 26.0.0
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-MetadataCatFaceObject-readonly rightEyeBoundingBox: Rect--><!--Device-MetadataCatFaceObject-readonly rightEyeBoundingBox: Rect-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core

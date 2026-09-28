@@ -8,6 +8,8 @@ interface ConstraintSourceTypeInfo
 
 **起始版本：** 9
 
+<!--Device-osAccount-interface ConstraintSourceTypeInfo--><!--Device-osAccount-interface ConstraintSourceTypeInfo-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ localId: number
 
 **起始版本：** 9
 
+<!--Device-ConstraintSourceTypeInfo-localId: int--><!--Device-ConstraintSourceTypeInfo-localId: int-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ type: ConstraintSourceType
 **类型：** [ConstraintSourceType](arkts-basicservices-osaccount-constraintsourcetype-e-sys.md)
 
 **起始版本：** 9
+
+<!--Device-ConstraintSourceTypeInfo-type: ConstraintSourceType--><!--Device-ConstraintSourceTypeInfo-type: ConstraintSourceType-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 

@@ -8,6 +8,8 @@ export interface TagInfo
 
 **起始版本：** 7
 
+<!--Device-tag-export interface TagInfo--><!--Device-tag-export interface TagInfo-End-->
+
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 ## 导入模块
@@ -32,6 +34,8 @@ extrasData: PacMap[]
 
 **需要权限：** ohos.permission.NFC_TAG
 
+<!--Device-TagInfo-extrasData: PacMap[]--><!--Device-TagInfo-extrasData: PacMap[]-End-->
+
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **系统接口：** 此接口为系统接口。
@@ -52,6 +56,8 @@ NFC服务进程的远端对象，用于客户端和服务之间的接口通信�
 
 **需要权限：** ohos.permission.NFC_TAG
 
+<!--Device-TagInfo-remoteTagService: rpc.RemoteObject--><!--Device-TagInfo-remoteTagService: rpc.RemoteObject-End-->
+
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **系统接口：** 此接口为系统接口。
@@ -71,6 +77,8 @@ tagRfDiscId: number
 **起始版本：** 9
 
 **需要权限：** ohos.permission.NFC_TAG
+
+<!--Device-TagInfo-tagRfDiscId: int--><!--Device-TagInfo-tagRfDiscId: int-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 

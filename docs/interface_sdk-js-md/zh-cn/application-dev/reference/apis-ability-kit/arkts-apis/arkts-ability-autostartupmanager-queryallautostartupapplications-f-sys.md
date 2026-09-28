@@ -20,6 +20,8 @@ function queryAllAutoStartupApplications(callback: AsyncCallback<Array<AutoStart
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-autoStartupManager-function queryAllAutoStartupApplications(callback: AsyncCallback<Array<AutoStartupInfo>>): void--><!--Device-autoStartupManager-function queryAllAutoStartupApplications(callback: AsyncCallback<Array<AutoStartupInfo>>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -55,6 +57,8 @@ function queryAllAutoStartupApplications(): Promise<Array<AutoStartupInfo>>
 **需要权限：** ohos.permission.MANAGE_APP_BOOT
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-autoStartupManager-function queryAllAutoStartupApplications(): Promise<Array<AutoStartupInfo>>--><!--Device-autoStartupManager-function queryAllAutoStartupApplications(): Promise<Array<AutoStartupInfo>>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

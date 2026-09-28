@@ -8,6 +8,8 @@ interface CreateAccountOptions
 
 **起始版本：** 9
 
+<!--Device-appAccount-interface CreateAccountOptions--><!--Device-appAccount-interface CreateAccountOptions-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 ## 导入模块
@@ -27,5 +29,7 @@ customData?: Record<string, string>
 **类型：** Record&lt;string, string&gt;
 
 **起始版本：** 9
+
+<!--Device-CreateAccountOptions-customData?: Record<string, string>--><!--Device-CreateAccountOptions-customData?: Record<string, string>-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount

@@ -21,6 +21,8 @@ function isAnimationReduceEnabledSync(): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-accessibility-function isAnimationReduceEnabledSync(): boolean--><!--Device-accessibility-function isAnimationReduceEnabledSync(): boolean-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **返回值：**

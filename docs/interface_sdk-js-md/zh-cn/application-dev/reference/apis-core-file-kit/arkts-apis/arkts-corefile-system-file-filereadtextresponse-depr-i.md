@@ -10,6 +10,8 @@ export interface FileReadTextResponse
 
 **废弃版本：** 10
 
+<!--Device-unnamed-export interface FileReadTextResponse--><!--Device-unnamed-export interface FileReadTextResponse-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## 导入模块
@@ -30,5 +32,7 @@ text: string
 **起始版本：** 3
 
 **废弃版本：** 10
+
+<!--Device-FileReadTextResponse-text: string--><!--Device-FileReadTextResponse-text: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite

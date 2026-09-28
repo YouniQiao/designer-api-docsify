@@ -8,6 +8,8 @@ AbilityManager模块提供对Ability相关信息和状态信息进行获取、�
 
 **替代接口：** [abilityManager/abilityManager](arkts-ability-app-ability-abilitymanager.md)
 
+<!--Device-unnamed-declare namespace abilityManager--><!--Device-unnamed-declare namespace abilityManager-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。

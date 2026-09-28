@@ -10,6 +10,8 @@ Configuration parameter of ExceptionPromptV2. Use @ObservedV2 and @Trace to supp
 
 **Decorator:** @ObservedV2
 
+<!--Device-unnamed-export declare class PromptOptionsV2--><!--Device-unnamed-export declare class PromptOptionsV2-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -31,6 +33,8 @@ Constructor of PromptOptionsV2.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-PromptOptionsV2-constructor(config?: PromptOptionsV2Config)--><!--Device-PromptOptionsV2-constructor(config?: PromptOptionsV2Config)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -58,6 +62,8 @@ Text of the icon on the right of the ExceptionPromptV2. If this parameter is not
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-PromptOptionsV2-actionText?: ResourceStr--><!--Device-PromptOptionsV2-actionText?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## icon
@@ -77,6 +83,8 @@ Icon style of the ExceptionPromptV2. If this parameter is not set or is set to u
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-PromptOptionsV2-icon?: ResourceStr--><!--Device-PromptOptionsV2-icon?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -98,6 +106,8 @@ Whether the ExceptionPromptV2 is displayed. true: The exception prompt is displa
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-PromptOptionsV2-isShown?: boolean--><!--Device-PromptOptionsV2-isShown?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## marginTop
@@ -117,6 +127,8 @@ Top margin of the ExceptionPromptV2. Distance from the top to the content area o
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-PromptOptionsV2-marginTop: Dimension--><!--Device-PromptOptionsV2-marginTop: Dimension-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -138,6 +150,8 @@ Margin Type of ExceptionPromptV2. Margin from the content area to the edge of th
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-PromptOptionsV2-marginType: MarginTypeV2--><!--Device-PromptOptionsV2-marginType: MarginTypeV2-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## symbolStyle
@@ -157,6 +171,8 @@ Symbol icon style of the ExceptionPromptV2, which has higher priority than icon.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-PromptOptionsV2-symbolStyle?: SymbolGlyphModifier--><!--Device-PromptOptionsV2-symbolStyle?: SymbolGlyphModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -182,5 +198,7 @@ but the location fails to be obtained. If this parameter is not set or is set to
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-PromptOptionsV2-tip?: ResourceStr--><!--Device-PromptOptionsV2-tip?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

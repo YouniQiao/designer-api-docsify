@@ -8,6 +8,8 @@ export interface AuthorizeRequest
 
 **起始版本：** 22
 
+<!--Device-certificateManagerDialog-export interface AuthorizeRequest--><!--Device-certificateManagerDialog-export interface AuthorizeRequest-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
 ## 导入模块
@@ -30,6 +32,8 @@ certPurpose?: certificateManager.CertificatePurpose
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AuthorizeRequest-certPurpose?: certificateManager.CertificatePurpose--><!--Device-AuthorizeRequest-certPurpose?: certificateManager.CertificatePurpose-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
 ## certTypes
@@ -45,6 +49,8 @@ certTypes: Array<CertificateType>
 **起始版本：** 22
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AuthorizeRequest-certTypes: Array<CertificateType>--><!--Device-AuthorizeRequest-certTypes: Array<CertificateType>-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
@@ -68,6 +74,8 @@ issuers?: Array<Uint8Array>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AuthorizeRequest-issuers?: Array<Uint8Array>--><!--Device-AuthorizeRequest-issuers?: Array<Uint8Array>-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
 ## keyAlgIDs
@@ -84,6 +92,8 @@ keyAlgIDs?: Array<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AuthorizeRequest-keyAlgIDs?: Array<string>--><!--Device-AuthorizeRequest-keyAlgIDs?: Array<string>-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
 ## uri
@@ -99,5 +109,7 @@ uri?: string
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AuthorizeRequest-uri?: string--><!--Device-AuthorizeRequest-uri?: string-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManagerDialog

@@ -14,6 +14,8 @@ interface ReminderRequestAlarm extends ReminderRequest
 
 **替代接口：** [ReminderRequestAlarm](arkts-backgroundtasks-reminderagentmanager-reminderrequestalarm-i.md)
 
+<!--Device-reminderAgent-interface ReminderRequestAlarm extends ReminderRequest--><!--Device-reminderAgent-interface ReminderRequestAlarm extends ReminderRequest-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## 导入模块
@@ -38,6 +40,8 @@ daysOfWeek?: Array<number>
 
 **替代接口：** [daysOfWeek](arkts-backgroundtasks-reminderagentmanager-reminderrequestalarm-i.md#daysofweek)
 
+<!--Device-ReminderRequestAlarm-daysOfWeek?: Array<number>--><!--Device-ReminderRequestAlarm-daysOfWeek?: Array<number>-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## hour
@@ -56,6 +60,8 @@ hour: number
 
 **替代接口：** [hour](arkts-backgroundtasks-reminderagentmanager-reminderrequestalarm-i.md#hour)
 
+<!--Device-ReminderRequestAlarm-hour: number--><!--Device-ReminderRequestAlarm-hour: number-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## minute
@@ -73,5 +79,7 @@ minute: number
 **废弃版本：** 9
 
 **替代接口：** [minute](arkts-backgroundtasks-reminderagentmanager-reminderrequestalarm-i.md#minute)
+
+<!--Device-ReminderRequestAlarm-minute: number--><!--Device-ReminderRequestAlarm-minute: number-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent

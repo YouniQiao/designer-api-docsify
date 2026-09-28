@@ -18,6 +18,8 @@ function getExemptedApps(resourceTypes: number, callback: AsyncCallback<Array<Ex
 
 **需要权限：** ohos.permission.DEVICE_STANDBY_EXEMPTION
 
+<!--Device-deviceStandby-function getExemptedApps(resourceTypes: int, callback: AsyncCallback<Array<ExemptedAppInfo>>): void--><!--Device-deviceStandby-function getExemptedApps(resourceTypes: int, callback: AsyncCallback<Array<ExemptedAppInfo>>): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.DeviceStandby
 
 **系统接口：** 此接口为系统接口。
@@ -75,6 +77,8 @@ function getExemptedApps(resourceTypes: number): Promise<Array<ExemptedAppInfo>>
 **起始版本：** 10
 
 **需要权限：** ohos.permission.DEVICE_STANDBY_EXEMPTION
+
+<!--Device-deviceStandby-function getExemptedApps(resourceTypes: int): Promise<Array<ExemptedAppInfo>>--><!--Device-deviceStandby-function getExemptedApps(resourceTypes: int): Promise<Array<ExemptedAppInfo>>-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.DeviceStandby
 

@@ -8,6 +8,8 @@ enum ProtocolType
 
 **起始版本：** 23
 
+<!--Device-hid-enum ProtocolType--><!--Device-hid-enum ProtocolType-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## PROTOCOL_BOOT_MODE
@@ -22,6 +24,8 @@ PROTOCOL_BOOT_MODE = 0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ProtocolType-PROTOCOL_BOOT_MODE = 0--><!--Device-ProtocolType-PROTOCOL_BOOT_MODE = 0-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## PROTOCOL_REPORT_MODE
@@ -35,5 +39,7 @@ PROTOCOL_REPORT_MODE = 1
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ProtocolType-PROTOCOL_REPORT_MODE = 1--><!--Device-ProtocolType-PROTOCOL_REPORT_MODE = 1-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

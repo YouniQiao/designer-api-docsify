@@ -18,6 +18,8 @@ function uninstallUserTrustedCertificateSync(certUri: string): void
 
 **需要权限：** ohos.permission.ACCESS_ENTERPRISE_USER_TRUSTED_CERT or ohos.permission.ACCESS_USER_TRUSTED_CERT
 
+<!--Device-certificateManager-function uninstallUserTrustedCertificateSync(certUri: string): void--><!--Device-certificateManager-function uninstallUserTrustedCertificateSync(certUri: string): void-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
 
 **参数：**

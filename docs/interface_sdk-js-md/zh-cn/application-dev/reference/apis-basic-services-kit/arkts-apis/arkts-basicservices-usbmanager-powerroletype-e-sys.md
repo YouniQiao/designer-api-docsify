@@ -8,6 +8,8 @@ export enum PowerRoleType
 
 **起始版本：** 9
 
+<!--Device-usbManager-export enum PowerRoleType--><!--Device-usbManager-export enum PowerRoleType-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 **系统接口：** 此接口为系统接口。
@@ -21,6 +23,8 @@ NONE = 0
 无。
 
 **起始版本：** 9
+
+<!--Device-PowerRoleType-NONE = 0--><!--Device-PowerRoleType-NONE = 0-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -36,6 +40,8 @@ SOURCE = 1
 
 **起始版本：** 9
 
+<!--Device-PowerRoleType-SOURCE = 1--><!--Device-PowerRoleType-SOURCE = 1-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +55,8 @@ SINK = 2
 需要外部供电。
 
 **起始版本：** 9
+
+<!--Device-PowerRoleType-SINK = 2--><!--Device-PowerRoleType-SINK = 2-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 

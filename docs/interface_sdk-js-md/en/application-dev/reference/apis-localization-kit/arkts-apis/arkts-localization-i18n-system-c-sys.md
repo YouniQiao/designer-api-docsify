@@ -8,6 +8,8 @@ Provides system attribute configuration functions, including translating languag
 
 **Since:** 9
 
+<!--Device-i18n-export class System--><!--Device-i18n-export class System-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 ## Modules to Import
@@ -27,6 +29,8 @@ Adds a preferred language to the specified position on the preferred language li
 **Since:** 9
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
+
+<!--Device-System-static addPreferredLanguage(language: string, index?: int): void--><!--Device-System-static addPreferredLanguage(language: string, index?: int): void-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -75,6 +79,8 @@ Gets collations supported by system locale.
 
 **Since:** 20
 
+<!--Device-System-static getSystemCollations(): Map<string, string>--><!--Device-System-static getSystemCollations(): Map<string, string>-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -114,6 +120,8 @@ static getSystemMeasurements(): Map<string, string>
 Gets measurements supported by system locale.
 
 **Since:** 20
+
+<!--Device-System-static getSystemMeasurements(): Map<string, string>--><!--Device-System-static getSystemMeasurements(): Map<string, string>-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -155,6 +163,8 @@ Gets numbering systems supported by system locale.
 
 **Since:** 20
 
+<!--Device-System-static getSystemNumberingSystems(): Map<string, string>--><!--Device-System-static getSystemNumberingSystems(): Map<string, string>-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -194,6 +204,8 @@ static getSystemNumberPatterns(): Map<string, string>
 Gets commonly used number patterns for system locale.
 
 **Since:** 20
+
+<!--Device-System-static getSystemNumberPatterns(): Map<string, string>--><!--Device-System-static getSystemNumberPatterns(): Map<string, string>-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -235,6 +247,8 @@ Gets numerical date patterns and examples supported by system locale.
 
 **Since:** 20
 
+<!--Device-System-static getSystemNumericalDatePatterns(): Map<string, string>--><!--Device-System-static getSystemNumericalDatePatterns(): Map<string, string>-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -274,6 +288,8 @@ static getUsingCollation(): string
 Gets collation currently used by system locale.
 
 **Since:** 20
+
+<!--Device-System-static getUsingCollation(): string--><!--Device-System-static getUsingCollation(): string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -315,6 +331,8 @@ Gets measurement currently used by system locale.
 
 **Since:** 20
 
+<!--Device-System-static getUsingMeasurement(): string--><!--Device-System-static getUsingMeasurement(): string-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -355,6 +373,8 @@ Gets numbering system currently used by system locale.
 
 **Since:** 20
 
+<!--Device-System-static getUsingNumberingSystem(): string--><!--Device-System-static getUsingNumberingSystem(): string-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -380,6 +400,8 @@ static getUsingNumberPattern(): string
 Gets number pattern used by system locale.
 
 **Since:** 20
+
+<!--Device-System-static getUsingNumberPattern(): string--><!--Device-System-static getUsingNumberPattern(): string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -420,6 +442,8 @@ static getUsingNumericalDatePattern(): string
 Gets numerical date pattern currently used by system locale.
 
 **Since:** 20
+
+<!--Device-System-static getUsingNumericalDatePattern(): string--><!--Device-System-static getUsingNumericalDatePattern(): string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -462,6 +486,8 @@ Removes a preferred language from the specified position on the preferred langua
 **Since:** 9
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
+
+<!--Device-System-static removePreferredLanguage(index: int): void--><!--Device-System-static removePreferredLanguage(index: int): void-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -510,6 +536,8 @@ Sets whether to use the 24-hour clock.
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
 
+<!--Device-System-static set24HourClock(option: boolean): void--><!--Device-System-static set24HourClock(option: boolean): void-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -556,6 +584,8 @@ Sets the first day of a week.
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
 
+<!--Device-System-static setFirstDayOfWeek(type: WeekDay): void--><!--Device-System-static setFirstDayOfWeek(type: WeekDay): void-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -600,6 +630,8 @@ Sets the system collation mode.
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
 
+<!--Device-System-static setSystemCollation(identifier: string): void--><!--Device-System-static setSystemCollation(identifier: string): void-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -643,6 +675,8 @@ Sets the system language.
 **Since:** 9
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
+
+<!--Device-System-static setSystemLanguage(language: string): void--><!--Device-System-static setSystemLanguage(language: string): void-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -690,6 +724,8 @@ Sets the measurement system used by the system locale.
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
 
+<!--Device-System-static setSystemMeasurement(identifier: string): void--><!--Device-System-static setSystemMeasurement(identifier: string): void-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -733,6 +769,8 @@ Sets the numbering system used by the system locale.
 **Since:** 20
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
+
+<!--Device-System-static setSystemNumberingSystem(identifier: string): void--><!--Device-System-static setSystemNumberingSystem(identifier: string): void-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -778,6 +816,8 @@ Sets the number pattern used by the system locale.
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
 
+<!--Device-System-static setSystemNumberPattern(pattern: string): void--><!--Device-System-static setSystemNumberPattern(pattern: string): void-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -822,6 +862,8 @@ Sets the numerical date pattern used by the system locale.
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
 
+<!--Device-System-static setSystemNumericalDatePattern(identifier : string): void--><!--Device-System-static setSystemNumericalDatePattern(identifier : string): void-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -865,6 +907,8 @@ Sets the system region.
 **Since:** 9
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
+
+<!--Device-System-static setSystemRegion(region: string): void--><!--Device-System-static setSystemRegion(region: string): void-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -911,6 +955,8 @@ Sets the temperature unit of the system.
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
 
+<!--Device-System-static setTemperatureType(type: TemperatureType): void--><!--Device-System-static setTemperatureType(type: TemperatureType): void-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -954,6 +1000,8 @@ Specifies whether to enable use of local digits.
 **Since:** 9
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
+
+<!--Device-System-static setUsingLocalDigit(flag: boolean): void--><!--Device-System-static setUsingLocalDigit(flag: boolean): void-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -1001,6 +1049,8 @@ Sets the system locale.
 **Deprecated since:** 20
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
+
+<!--Device-System-static setSystemLocale(locale: string): void--><!--Device-System-static setSystemLocale(locale: string): void-End-->
 
 **System capability:** SystemCapability.Global.I18n
 

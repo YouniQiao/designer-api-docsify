@@ -8,7 +8,7 @@ enum Tokenizer
 
 在使用不同的分词器时，使用的建表语句会有所区别。
 
-示例代码中this.context定义见Stage模型的应用Context。
+示例代码中this.context定义见Stage模型的应用[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context.md)。
 
 使用ICU_TOKENIZER分词器时，创建表的示例：
 
@@ -17,6 +17,8 @@ enum Tokenizer
 使用CUSTOM_TOKENIZER分词器，并指定分词模式时，创建表的示例：
 
 **起始版本：** 17
+
+<!--Device-relationalStore-enum Tokenizer--><!--Device-relationalStore-enum Tokenizer-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -30,6 +32,8 @@ NONE_TOKENIZER = 0
 
 **起始版本：** 17
 
+<!--Device-Tokenizer-NONE_TOKENIZER = 0--><!--Device-Tokenizer-NONE_TOKENIZER = 0-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## ICU_TOKENIZER
@@ -42,6 +46,8 @@ ICU_TOKENIZER = 1
 
 **起始版本：** 17
 
+<!--Device-Tokenizer-ICU_TOKENIZER = 1--><!--Device-Tokenizer-ICU_TOKENIZER = 1-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## CUSTOM_TOKENIZER
@@ -53,5 +59,7 @@ CUSTOM_TOKENIZER = 2
 表示使用自研分词器，可支持中文（简体、繁体）、英文、阿拉伯数字。CUSTOM_TOKENIZER相比ICU_TOKENIZER在分词准确率、常驻内存占用上更有优势。自研分词器支持默认分词模式和短词分词模式（short_words）两种，使用参数cut_mode可指定模式，不指定模式时使用默认模式。
 
 **起始版本：** 18
+
+<!--Device-Tokenizer-CUSTOM_TOKENIZER = 2--><!--Device-Tokenizer-CUSTOM_TOKENIZER = 2-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core

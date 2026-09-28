@@ -8,6 +8,8 @@ export class HolidayManager
 
 **起始版本：** 11
 
+<!--Device-i18n-export class HolidayManager--><!--Device-i18n-export class HolidayManager-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## 导入模块
@@ -26,7 +28,9 @@ constructor(icsPath: String)
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HolidayManager-constructor(icsPath: String)--><!--Device-HolidayManager-constructor(icsPath: String)-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -68,7 +72,9 @@ getHolidayInfoItemArray(year?: number): Array<HolidayInfoItem>
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HolidayManager-getHolidayInfoItemArray(year?: int): Array<HolidayInfoItem>--><!--Device-HolidayManager-getHolidayInfoItemArray(year?: int): Array<HolidayInfoItem>-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -117,7 +123,9 @@ isHoliday(date?: Date): boolean
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HolidayManager-isHoliday(date?: Date): boolean--><!--Device-HolidayManager-isHoliday(date?: Date): boolean-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 

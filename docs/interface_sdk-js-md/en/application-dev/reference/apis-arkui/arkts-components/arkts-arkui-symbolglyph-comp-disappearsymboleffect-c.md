@@ -10,6 +10,8 @@ Inherits from **SymbolEffect**.
 
 **Since:** 12
 
+<!--Device-unnamed-declare class DisappearSymbolEffect extends SymbolEffect--><!--Device-unnamed-declare class DisappearSymbolEffect extends SymbolEffect-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
@@ -27,6 +29,8 @@ A constructor used to create a **DisappearSymbolEffect** instance, which comes w
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-DisappearSymbolEffect-constructor(scope?: EffectScope)--><!--Device-DisappearSymbolEffect-constructor(scope?: EffectScope)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -55,5 +59,7 @@ Default value: EffectScope.LAYER
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-DisappearSymbolEffect-scope?: EffectScope--><!--Device-DisappearSymbolEffect-scope?: EffectScope-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

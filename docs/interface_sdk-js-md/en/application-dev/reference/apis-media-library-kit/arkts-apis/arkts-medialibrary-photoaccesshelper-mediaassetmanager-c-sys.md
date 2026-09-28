@@ -8,6 +8,8 @@ The MediaAssetManager class is used for manipulating the read and write operatio
 
 **Since:** 11
 
+<!--Device-photoAccessHelper-class MediaAssetManager--><!--Device-photoAccessHelper-class MediaAssetManager-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
@@ -35,6 +37,8 @@ The AI enhancement generates an additional image. Together with the original ima
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-MediaAssetManager-static requestCompositeAuxiliaryImageData(      context: Context,      asset: PhotoAsset,      dataHandler: MediaAssetDataHandler<ArrayBuffer>    ): Promise<string>--><!--Device-MediaAssetManager-static requestCompositeAuxiliaryImageData(      context: Context,      asset: PhotoAsset,      dataHandler: MediaAssetDataHandler<ArrayBuffer>    ): Promise<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -82,6 +86,8 @@ This interface is restricted to local AI enhancement only, distinguishing it fro
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-MediaAssetManager-static requestEnhancementImage(      context: Context,       asset: PhotoAsset,       dataHandler: MediaAssetDataHandler<image.ImageSource>    ) : Promise<string>--><!--Device-MediaAssetManager-static requestEnhancementImage(      context: Context,       asset: PhotoAsset,       dataHandler: MediaAssetDataHandler<image.ImageSource>    ) : Promise<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

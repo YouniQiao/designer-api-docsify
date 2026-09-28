@@ -8,6 +8,8 @@ Describes audio capturer configurations.
 
 **Since:** 8
 
+<!--Device-audio-interface AudioCapturerOptions--><!--Device-audio-interface AudioCapturerOptions-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Audio capturer information.
 
 **Since:** 8
 
+<!--Device-AudioCapturerOptions-capturerInfo: AudioCapturerInfo--><!--Device-AudioCapturerOptions-capturerInfo: AudioCapturerInfo-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 ## playbackCaptureMode
@@ -44,6 +48,8 @@ The playback capture mode for audio capturer. This can be a combination of the a
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AudioCapturerOptions-playbackCaptureMode?: AudioPlaybackCaptureMode--><!--Device-AudioCapturerOptions-playbackCaptureMode?: AudioPlaybackCaptureMode-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.PlaybackCapture
 
 ## streamInfo
@@ -57,6 +63,8 @@ Audio stream information.
 **Type:** [AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)
 
 **Since:** 8
+
+<!--Device-AudioCapturerOptions-streamInfo: AudioStreamInfo--><!--Device-AudioCapturerOptions-streamInfo: AudioStreamInfo-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -77,5 +85,7 @@ This API is supported since API version 10 and deprecated since API version 12. 
 **Deprecated since:** 12
 
 **Substitutes:** OH_AVScreenCapture in native interface.
+
+<!--Device-AudioCapturerOptions-playbackCaptureConfig?: AudioPlaybackCaptureConfig--><!--Device-AudioCapturerOptions-playbackCaptureConfig?: AudioPlaybackCaptureConfig-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.PlaybackCapture

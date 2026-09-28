@@ -18,6 +18,8 @@ function isDesktopLyricSupported(): Promise<boolean>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-avSession-function isDesktopLyricSupported(): Promise<boolean>--><!--Device-avSession-function isDesktopLyricSupported(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **返回值：**

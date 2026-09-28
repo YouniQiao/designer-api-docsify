@@ -16,6 +16,8 @@ function setCameraTrackingEnabled(isEnabled: boolean): void
 
 **起始版本：** 20
 
+<!--Device-mechanicManager-function setCameraTrackingEnabled(isEnabled: boolean): void--><!--Device-mechanicManager-function setCameraTrackingEnabled(isEnabled: boolean): void-End-->
+
 **系统能力：** SystemCapability.Mechanic.Core
 
 **参数：**

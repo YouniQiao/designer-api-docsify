@@ -16,6 +16,8 @@ function getWant(agent: WantAgent, callback: AsyncCallback<Want>): void
 
 **起始版本：** 9
 
+<!--Device-wantAgent-function getWant(agent: WantAgent, callback: AsyncCallback<Want>): void--><!--Device-wantAgent-function getWant(agent: WantAgent, callback: AsyncCallback<Want>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +51,8 @@ function getWant(agent: WantAgent): Promise<Want>
 获取WantAgent对象的want。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-wantAgent-function getWant(agent: WantAgent): Promise<Want>--><!--Device-wantAgent-function getWant(agent: WantAgent): Promise<Want>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

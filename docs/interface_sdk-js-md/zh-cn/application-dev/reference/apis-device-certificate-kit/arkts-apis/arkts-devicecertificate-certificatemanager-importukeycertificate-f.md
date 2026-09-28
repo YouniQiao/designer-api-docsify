@@ -20,6 +20,8 @@ function importUkeyCertificate(keyUri: string, cert: Uint8Array, ukeyInfo: UkeyI
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-certificateManager-function importUkeyCertificate(keyUri: string, cert: Uint8Array, ukeyInfo: UkeyInfo): Promise<void>--><!--Device-certificateManager-function importUkeyCertificate(keyUri: string, cert: Uint8Array, ukeyInfo: UkeyInfo): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
 
 **参数：**

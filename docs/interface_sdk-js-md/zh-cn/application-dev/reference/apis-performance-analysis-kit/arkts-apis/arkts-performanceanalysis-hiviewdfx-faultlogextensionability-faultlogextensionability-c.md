@@ -20,6 +20,8 @@ declare class FaultLogExtensionAbility
 
 **起始版本：** 21
 
+<!--Device-unnamed-declare class FaultLogExtensionAbility--><!--Device-unnamed-declare class FaultLogExtensionAbility-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
 ## 导入模块
@@ -39,6 +41,8 @@ FaultLogExtensionAbility生命周期回调。当系统服务完成连接时调�
 **起始版本：** 21
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FaultLogExtensionAbility-onConnect(): void--><!--Device-FaultLogExtensionAbility-onConnect(): void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
@@ -64,6 +68,8 @@ FaultLogExtensionAbility生命周期回调。当系统服务完成断开连接�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FaultLogExtensionAbility-onDisconnect(): void--><!--Device-FaultLogExtensionAbility-onDisconnect(): void-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
 **示例**
@@ -87,6 +93,8 @@ FaultLogExtensionAbility回调。系统服务通知FaultLogExtensionAbility可�
 **起始版本：** 21
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FaultLogExtensionAbility-onFaultReportReady(): void--><!--Device-FaultLogExtensionAbility-onFaultReportReady(): void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
@@ -126,5 +134,7 @@ FaultLogExtensionAbility的上下文环境，继承自[ExtensionContext](../../a
 **起始版本：** 21
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FaultLogExtensionAbility-context: FaultLogExtensionContext--><!--Device-FaultLogExtensionAbility-context: FaultLogExtensionContext-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.Hiview.FaultLogger

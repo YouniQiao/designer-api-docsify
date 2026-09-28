@@ -24,6 +24,8 @@ Init FormLink component with options.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
+<!--Device-FormLinkInterface-(options: FormLinkOptions): FormLinkAttribute--><!--Device-FormLinkInterface-(options: FormLinkOptions): FormLinkAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

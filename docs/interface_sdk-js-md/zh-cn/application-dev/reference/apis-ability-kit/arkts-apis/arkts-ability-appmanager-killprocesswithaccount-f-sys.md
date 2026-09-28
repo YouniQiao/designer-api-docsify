@@ -24,6 +24,8 @@ function killProcessWithAccount(bundleName: string, accountId: number): Promise<
 - API版本14+：ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS and ohos.permission.KILL_APP_PROCESSES or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS and ohos.permission.CLEAN_BACKGROUND_PROCESSES
 - API版本9-13：ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS and ohos.permission.CLEAN_BACKGROUND_PROCESSES
 
+<!--Device-appManager-function killProcessWithAccount(bundleName: string, accountId: int): Promise<void>--><!--Device-appManager-function killProcessWithAccount(bundleName: string, accountId: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -91,6 +93,8 @@ function killProcessWithAccount(bundleName: string, accountId: number, clearPage
 **起始版本：** 14
 
 **需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS and ohos.permission.KILL_APP_PROCESSES or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS and ohos.permission.CLEAN_BACKGROUND_PROCESSES
+
+<!--Device-appManager-function killProcessWithAccount(bundleName: string, accountId: int, clearPageStack: boolean, appIndex?: int):    Promise<void>--><!--Device-appManager-function killProcessWithAccount(bundleName: string, accountId: int, clearPageStack: boolean, appIndex?: int):    Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -164,6 +168,8 @@ function killProcessWithAccount(bundleName: string, accountId: number, callback:
 **需要权限：** 
 - API版本14+：ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS and ohos.permission.KILL_APP_PROCESSES or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS and ohos.permission.CLEAN_BACKGROUND_PROCESSES
 - API版本9-13：ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS and ohos.permission.CLEAN_BACKGROUND_PROCESSES
+
+<!--Device-appManager-function killProcessWithAccount(bundleName: string, accountId: int, callback: AsyncCallback<void>): void--><!--Device-appManager-function killProcessWithAccount(bundleName: string, accountId: int, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

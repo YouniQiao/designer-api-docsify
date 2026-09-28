@@ -8,6 +8,8 @@ declare interface FileMapping
 
 **起始版本：** 26.0.0
 
+<!--Device-unnamed-declare interface FileMapping--><!--Device-unnamed-declare interface FileMapping-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## 导入模块
@@ -27,6 +29,8 @@ capacity(): number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FileMapping-capacity(): number--><!--Device-FileMapping-capacity(): number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -70,6 +74,8 @@ flip(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FileMapping-flip(): void--><!--Device-FileMapping-flip(): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **错误码：**
@@ -111,6 +117,8 @@ getLimit(): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FileMapping-getLimit(): number--><!--Device-FileMapping-getLimit(): number-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
@@ -151,6 +159,8 @@ getPosition(): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FileMapping-getPosition(): number--><!--Device-FileMapping-getPosition(): number-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
@@ -190,6 +200,8 @@ msync(): Promise<void>
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FileMapping-msync(): Promise<void>--><!--Device-FileMapping-msync(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -245,6 +257,8 @@ msync(position: number, length: number): Promise<void>
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FileMapping-msync(position: number, length: number): Promise<void>--><!--Device-FileMapping-msync(position: number, length: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -306,6 +320,8 @@ msyncSync(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FileMapping-msyncSync(): void--><!--Device-FileMapping-msyncSync(): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **错误码：**
@@ -351,6 +367,8 @@ msyncSync(position: number, length: number): void
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FileMapping-msyncSync(position: number, length: number): void--><!--Device-FileMapping-msyncSync(position: number, length: number): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -402,6 +420,8 @@ read(buffer: ArrayBuffer, length?: number): number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FileMapping-read(buffer: ArrayBuffer, length?: number): number--><!--Device-FileMapping-read(buffer: ArrayBuffer, length?: number): number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -457,6 +477,8 @@ read(position: number, buffer: ArrayBuffer, length?: number): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FileMapping-read(position: number, buffer: ArrayBuffer, length?: number): number--><!--Device-FileMapping-read(position: number, buffer: ArrayBuffer, length?: number): number-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -510,6 +532,8 @@ remaining(): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FileMapping-remaining(): number--><!--Device-FileMapping-remaining(): number-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
@@ -553,6 +577,8 @@ setLimit(limit: number): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FileMapping-setLimit(limit: number): void--><!--Device-FileMapping-setLimit(limit: number): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -593,6 +619,8 @@ setPosition(position: number): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FileMapping-setPosition(position: number): void--><!--Device-FileMapping-setPosition(position: number): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -632,6 +660,8 @@ unmap(): Promise<void>
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FileMapping-unmap(): Promise<void>--><!--Device-FileMapping-unmap(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -680,6 +710,8 @@ unmapSync(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FileMapping-unmapSync(): void--><!--Device-FileMapping-unmapSync(): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **错误码：**
@@ -714,6 +746,8 @@ write(data: ArrayBuffer, length?: number): number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FileMapping-write(data: ArrayBuffer, length?: number): number--><!--Device-FileMapping-write(data: ArrayBuffer, length?: number): number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -770,6 +804,8 @@ write(position: number, data: ArrayBuffer, length?: number): number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FileMapping-write(position: number, data: ArrayBuffer, length?: number): number--><!--Device-FileMapping-write(position: number, data: ArrayBuffer, length?: number): number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

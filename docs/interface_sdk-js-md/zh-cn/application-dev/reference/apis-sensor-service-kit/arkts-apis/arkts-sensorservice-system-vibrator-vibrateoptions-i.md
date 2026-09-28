@@ -18,6 +18,8 @@ export interface VibrateOptions
 
 **需要权限：** ohos.permission.VIBRATE
 
+<!--Device-unnamed-export interface VibrateOptions--><!--Device-unnamed-export interface VibrateOptions-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice.Lite
 
 ## 导入模块
@@ -44,6 +46,8 @@ complete?: () => void
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-VibrateOptions-complete?: () => void--><!--Device-VibrateOptions-complete?: () => void-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice.Lite
 
 ## fail
@@ -63,6 +67,8 @@ fail?: (data: string, code: number) => void
 **需要权限：** ohos.permission.VIBRATE
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-VibrateOptions-fail?: (data: string, code: number) => void--><!--Device-VibrateOptions-fail?: (data: string, code: number) => void-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice.Lite
 
@@ -91,6 +97,8 @@ success: () => void
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-VibrateOptions-success: () => void--><!--Device-VibrateOptions-success: () => void-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice.Lite
 
 ## mode
@@ -112,5 +120,7 @@ mode?: 'number' | 'short'
 **需要权限：** ohos.permission.VIBRATE
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-VibrateOptions-mode?: 'long' | 'short'--><!--Device-VibrateOptions-mode?: 'long' | 'short'-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice.Lite

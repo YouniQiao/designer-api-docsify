@@ -20,6 +20,8 @@ function activate(targetNetworkId: string, inputDeviceId: number, callback: Asyn
 
 **替代接口：** [activateCooperate](arkts-distributedservice-cooperate-activatecooperate-f-sys.md)(targetNetworkId: string, inputDeviceId: number, callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-cooperate-function activate(targetNetworkId: string, inputDeviceId: number, callback: AsyncCallback<void>): void--><!--Device-cooperate-function activate(targetNetworkId: string, inputDeviceId: number, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
 
 **系统接口：** 此接口为系统接口。
@@ -76,6 +78,8 @@ function activate(targetNetworkId: string, inputDeviceId: number): Promise<void>
 **废弃版本：** 11
 
 **替代接口：** [activateCooperate](arkts-distributedservice-cooperate-activatecooperate-f-sys.md)(targetNetworkId: string, inputDeviceId: number)
+
+<!--Device-cooperate-function activate(targetNetworkId: string, inputDeviceId: number): Promise<void>--><!--Device-cooperate-function activate(targetNetworkId: string, inputDeviceId: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
 

@@ -8,6 +8,8 @@ Defines progress bar options.
 
 **Since:** 7
 
+<!--Device-unnamed-declare interface ProgressOptions<Type extends keyof ProgressStyleMap>--><!--Device-unnamed-declare interface ProgressOptions<Type extends keyof ProgressStyleMap>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## total
@@ -29,6 +31,8 @@ Value range: (0, +∞).
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-ProgressOptions-total?: number--><!--Device-ProgressOptions-total?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -52,6 +56,8 @@ Default value: **ProgressType.Linear**
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-ProgressOptions-type?: Type--><!--Device-ProgressOptions-type?: Type-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## value
@@ -74,6 +80,8 @@ Value range: [0, total]. When the value is set less than 0, it is set to 0. When
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-ProgressOptions-value: number--><!--Device-ProgressOptions-value: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## style
@@ -93,5 +101,7 @@ Default value: **ProgressStyle.Linear**
 **Deprecated since:** 8
 
 **Substitutes:** [type](#type)
+
+<!--Device-ProgressOptions-style?: ProgressStyle--><!--Device-ProgressOptions-style?: ProgressStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

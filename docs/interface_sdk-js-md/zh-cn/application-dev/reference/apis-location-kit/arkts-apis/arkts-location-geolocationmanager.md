@@ -6,6 +6,8 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace geoLocationManager--><!--Device-unnamed-declare namespace geoLocationManager-End-->
+
 **系统能力：** 
 - API版本11+：SystemCapability.Location.Location.Core
 

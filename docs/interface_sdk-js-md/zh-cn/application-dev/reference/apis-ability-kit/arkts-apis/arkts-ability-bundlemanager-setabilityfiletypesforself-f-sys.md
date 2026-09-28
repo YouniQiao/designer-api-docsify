@@ -18,6 +18,8 @@ function setAbilityFileTypesForSelf(moduleName: string, abilityName: string, fil
 
 **需要权限：** ohos.permission.MANAGE_SELF_SKILLS
 
+<!--Device-bundleManager-function setAbilityFileTypesForSelf(moduleName: string, abilityName: string, fileTypes: Array<string>): void--><!--Device-bundleManager-function setAbilityFileTypesForSelf(moduleName: string, abilityName: string, fileTypes: Array<string>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。

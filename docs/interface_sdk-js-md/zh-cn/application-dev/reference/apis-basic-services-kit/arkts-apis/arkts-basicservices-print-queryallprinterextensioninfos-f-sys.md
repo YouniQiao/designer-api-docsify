@@ -18,6 +18,8 @@ function queryAllPrinterExtensionInfos(callback: AsyncCallback<Array<PrinterExte
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-print-function queryAllPrinterExtensionInfos(callback: AsyncCallback<Array<PrinterExtensionInfo>>): void--><!--Device-print-function queryAllPrinterExtensionInfos(callback: AsyncCallback<Array<PrinterExtensionInfo>>): void-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **系统接口：** 此接口为系统接口。
@@ -64,6 +66,8 @@ function queryAllPrinterExtensionInfos(): Promise<Array<PrinterExtensionInfo>>
 **起始版本：** 10
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
+
+<!--Device-print-function queryAllPrinterExtensionInfos(): Promise<Array<PrinterExtensionInfo>>--><!--Device-print-function queryAllPrinterExtensionInfos(): Promise<Array<PrinterExtensionInfo>>-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 

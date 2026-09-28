@@ -18,6 +18,8 @@ function getDeviceConfigs(): Array<WifiDeviceConfig>
 
 **需要权限：** ohos.permission.GET_WIFI_INFO and ohos.permission.GET_WIFI_CONFIG
 
+<!--Device-wifiManager-function getDeviceConfigs(): Array<WifiDeviceConfig>--><!--Device-wifiManager-function getDeviceConfigs(): Array<WifiDeviceConfig>-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **返回值：**

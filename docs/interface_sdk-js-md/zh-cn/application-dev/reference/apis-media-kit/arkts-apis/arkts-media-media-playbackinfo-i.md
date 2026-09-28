@@ -8,6 +8,8 @@ interface PlaybackInfo
 
 **起始版本：** 12
 
+<!--Device-media-interface PlaybackInfo--><!--Device-media-interface PlaybackInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 ## 导入模块
@@ -27,5 +29,7 @@ import { media } from '@kit.MediaKit';
 **类型：** Object
 
 **起始版本：** 12
+
+<!--Device-PlaybackInfo-[key:string]: Object--><!--Device-PlaybackInfo-[key:string]: Object-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core

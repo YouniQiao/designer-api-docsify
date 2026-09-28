@@ -10,6 +10,8 @@ Helper functions to access photos and albums.
 
 **Since:** 12
 
+<!--Device-sendablePhotoAccessHelper-interface PhotoAccessHelper extends lang.ISendable--><!--Device-sendablePhotoAccessHelper-interface PhotoAccessHelper extends lang.ISendable-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
@@ -39,6 +41,8 @@ For API versions 10 to 17, the following characters are considered invalid: . ..
 **Since:** 12
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-createAsset(displayName: string): Promise<PhotoAsset>--><!--Device-PhotoAccessHelper-createAsset(displayName: string): Promise<PhotoAsset>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -109,6 +113,8 @@ For API versions 10 to 17, the following characters are considered invalid: . ..
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-PhotoAccessHelper-createAsset(displayName: string, options: photoAccessHelper.PhotoCreateOptions): Promise<PhotoAsset>--><!--Device-PhotoAccessHelper-createAsset(displayName: string, options: photoAccessHelper.PhotoCreateOptions): Promise<PhotoAsset>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -169,6 +175,8 @@ Obtains hidden albums based on the specified display mode and retrieval options.
 **Since:** 12
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
+
+<!--Device-PhotoAccessHelper-getHiddenAlbums(mode: photoAccessHelper.HiddenPhotosDisplayMode, options?: photoAccessHelper.FetchOptions): Promise<FetchResult<Album>>--><!--Device-PhotoAccessHelper-getHiddenAlbums(mode: photoAccessHelper.HiddenPhotosDisplayMode, options?: photoAccessHelper.FetchOptions): Promise<FetchResult<Album>>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -264,6 +272,8 @@ Converts the **ValuesBucket** record to a **PhotoAsset** object.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PhotoAccessHelper-getPhotoAssets(assetsData: photoAccessHelper.ValuesBucket[]): Promise<PhotoAsset[]>--><!--Device-PhotoAccessHelper-getPhotoAssets(assetsData: photoAccessHelper.ValuesBucket[]): Promise<PhotoAsset[]>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -329,6 +339,8 @@ Query shared photo albums.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PhotoAccessHelper-getShareAlbums(options?: photoAccessHelper.FetchOptions): Promise<FetchResult<Album>>--><!--Device-PhotoAccessHelper-getShareAlbums(options?: photoAccessHelper.FetchOptions): Promise<FetchResult<Album>>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -365,6 +377,8 @@ Fetch shared photo assets.
 **Since:** 14
 
 **Required permissions:** ohos.permission.ACCESS_MEDIALIB_THUMB_DB
+
+<!--Device-PhotoAccessHelper-getSharedPhotoAssets(options: photoAccessHelper.FetchOptions): Array<SharedPhotoAsset>--><!--Device-PhotoAccessHelper-getSharedPhotoAssets(options: photoAccessHelper.FetchOptions): Array<SharedPhotoAsset>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

@@ -8,6 +8,8 @@ This module provides the capability to media enhancement
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-unnamed-declare namespace avMusicTemplate--><!--Device-unnamed-declare namespace avMusicTemplate-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## Modules to Import

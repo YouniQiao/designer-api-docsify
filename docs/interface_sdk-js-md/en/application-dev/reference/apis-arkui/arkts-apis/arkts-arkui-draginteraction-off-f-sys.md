@@ -16,6 +16,8 @@ Disables listening for dragging status changes.
 
 **Since:** 10
 
+<!--Device-dragInteraction-function off(type: 'drag', callback?: Callback<DragState>): void--><!--Device-dragInteraction-function off(type: 'drag', callback?: Callback<DragState>): void-End-->
+
 **System capability:** SystemCapability.Msdp.DeviceStatus.Drag
 
 **System API:** This is a system API.

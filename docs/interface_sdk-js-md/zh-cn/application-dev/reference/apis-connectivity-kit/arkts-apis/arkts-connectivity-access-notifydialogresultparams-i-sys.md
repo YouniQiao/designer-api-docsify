@@ -8,6 +8,8 @@ interface NotifyDialogResultParams
 
 **起始版本：** 20
 
+<!--Device-access-interface NotifyDialogResultParams--><!--Device-access-interface NotifyDialogResultParams-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ dialogResult: boolean
 
 **起始版本：** 20
 
+<!--Device-NotifyDialogResultParams-dialogResult: boolean--><!--Device-NotifyDialogResultParams-dialogResult: boolean-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ dialogType: DialogType
 **类型：** [DialogType](arkts-connectivity-access-dialogtype-e-sys.md)
 
 **起始版本：** 20
+
+<!--Device-NotifyDialogResultParams-dialogType: DialogType--><!--Device-NotifyDialogResultParams-dialogType: DialogType-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

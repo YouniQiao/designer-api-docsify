@@ -20,6 +20,8 @@ function getExternalSourceExtensionsPolicy(admin: Want): common.ManagedPolicy
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-securityManager-function getExternalSourceExtensionsPolicy(admin: Want): common.ManagedPolicy--><!--Device-securityManager-function getExternalSourceExtensionsPolicy(admin: Want): common.ManagedPolicy-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -79,6 +81,8 @@ function getExternalSourceExtensionsPolicy(admin: Want | null): common.ManagedPo
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_SECURITY
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-securityManager-function getExternalSourceExtensionsPolicy(admin: Want | null): common.ManagedPolicy--><!--Device-securityManager-function getExternalSourceExtensionsPolicy(admin: Want | null): common.ManagedPolicy-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

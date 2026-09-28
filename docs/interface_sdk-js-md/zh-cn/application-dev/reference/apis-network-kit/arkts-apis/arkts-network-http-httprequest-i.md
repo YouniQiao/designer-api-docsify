@@ -8,6 +8,8 @@ HTTP请求任务。在调用HttpRequest的方法前，需要先通过[createHttp
 
 **起始版本：** 6
 
+<!--Device-http-export interface HttpRequest--><!--Device-http-export interface HttpRequest-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块
@@ -26,7 +28,9 @@ destroy(): void
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-HttpRequest-destroy(): void--><!--Device-HttpRequest-destroy(): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -62,6 +66,8 @@ enableAutoCookie(enable: boolean): void
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HttpRequest-enableAutoCookie(enable: boolean): void--><!--Device-HttpRequest-enableAutoCookie(enable: boolean): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -109,6 +115,8 @@ off(type: "headersReceive", callback?: Callback<Object>): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-HttpRequest-off(type: "headersReceive", callback?: Callback<Object>): void--><!--Device-HttpRequest-off(type: "headersReceive", callback?: Callback<Object>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -141,6 +149,8 @@ off(type: "dataReceive", callback?: Callback<ArrayBuffer>): void
 **起始版本：** 10
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-HttpRequest-off(type: "dataReceive", callback?: Callback<ArrayBuffer>): void--><!--Device-HttpRequest-off(type: "dataReceive", callback?: Callback<ArrayBuffer>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -175,6 +185,8 @@ off(type: "dataEnd", callback?: Callback<void>): void
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
 
+<!--Device-HttpRequest-off(type: "dataEnd", callback?: Callback<void>): void--><!--Device-HttpRequest-off(type: "dataEnd", callback?: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -208,6 +220,8 @@ off(type: 'dataReceiveProgress', callback?: Callback<DataReceiveProgressInfo>): 
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
 
+<!--Device-HttpRequest-off(type: 'dataReceiveProgress', callback?: Callback<DataReceiveProgressInfo>): void--><!--Device-HttpRequest-off(type: 'dataReceiveProgress', callback?: Callback<DataReceiveProgressInfo>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -240,6 +254,8 @@ off(type: 'dataSendProgress', callback?: Callback<DataSendProgressInfo>): void
 **起始版本：** 11
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-HttpRequest-off(type: 'dataSendProgress', callback?: Callback<DataSendProgressInfo>): void--><!--Device-HttpRequest-off(type: 'dataSendProgress', callback?: Callback<DataSendProgressInfo>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -276,6 +292,8 @@ off(type: "headerReceive", callback?: AsyncCallback<Object>): void
 
 **替代接口：** [off_headersReceive](#offheadersreceive)
 
+<!--Device-HttpRequest-off(type: "headerReceive", callback?: AsyncCallback<Object>): void--><!--Device-HttpRequest-off(type: "headerReceive", callback?: AsyncCallback<Object>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -305,6 +323,8 @@ on(type: "headersReceive", callback: Callback<Object>): void
 **起始版本：** 8
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-HttpRequest-on(type: "headersReceive", callback: Callback<Object>): void--><!--Device-HttpRequest-on(type: "headersReceive", callback: Callback<Object>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -339,6 +359,8 @@ on(type: "dataReceive", callback: Callback<ArrayBuffer>): void
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
 
+<!--Device-HttpRequest-on(type: "dataReceive", callback: Callback<ArrayBuffer>): void--><!--Device-HttpRequest-on(type: "dataReceive", callback: Callback<ArrayBuffer>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -371,6 +393,8 @@ on(type: "dataEnd", callback: Callback<void>): void
 **起始版本：** 10
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-HttpRequest-on(type: "dataEnd", callback: Callback<void>): void--><!--Device-HttpRequest-on(type: "dataEnd", callback: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -405,6 +429,8 @@ on(type: 'dataReceiveProgress', callback: Callback<DataReceiveProgressInfo>): vo
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
 
+<!--Device-HttpRequest-on(type: 'dataReceiveProgress', callback: Callback<DataReceiveProgressInfo>): void--><!--Device-HttpRequest-on(type: 'dataReceiveProgress', callback: Callback<DataReceiveProgressInfo>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -437,6 +463,8 @@ on(type: 'dataSendProgress', callback: Callback<DataSendProgressInfo>): void
 **起始版本：** 11
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-HttpRequest-on(type: 'dataSendProgress', callback: Callback<DataSendProgressInfo>): void--><!--Device-HttpRequest-on(type: 'dataSendProgress', callback: Callback<DataSendProgressInfo>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -473,6 +501,8 @@ on(type: "headerReceive", callback: AsyncCallback<Object>): void
 
 **替代接口：** [on_headersReceive](#onheadersreceive)
 
+<!--Device-HttpRequest-on(type: "headerReceive", callback: AsyncCallback<Object>): void--><!--Device-HttpRequest-on(type: "headerReceive", callback: AsyncCallback<Object>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -505,6 +535,8 @@ once(type: "headersReceive", callback: Callback<Object>): void
 **起始版本：** 8
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-HttpRequest-once(type: "headersReceive", callback: Callback<Object>): void--><!--Device-HttpRequest-once(type: "headersReceive", callback: Callback<Object>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -548,7 +580,9 @@ request(url: string, callback: AsyncCallback<HttpResponse>): void
 
 **需要权限：** ohos.permission.INTERNET
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-HttpRequest-request(url: string, callback: AsyncCallback<HttpResponse>): void--><!--Device-HttpRequest-request(url: string, callback: AsyncCallback<HttpResponse>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -643,7 +677,9 @@ request(url: string, options: HttpRequestOptions, callback: AsyncCallback<HttpRe
 
 **需要权限：** ohos.permission.INTERNET
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-HttpRequest-request(url: string, options: HttpRequestOptions, callback: AsyncCallback<HttpResponse>): void--><!--Device-HttpRequest-request(url: string, options: HttpRequestOptions, callback: AsyncCallback<HttpResponse>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -762,7 +798,9 @@ request(url: string, options?: HttpRequestOptions): Promise<HttpResponse>
 
 **需要权限：** ohos.permission.INTERNET
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-HttpRequest-request(url: string, options?: HttpRequestOptions): Promise<HttpResponse>--><!--Device-HttpRequest-request(url: string, options?: HttpRequestOptions): Promise<HttpResponse>-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -865,6 +903,8 @@ requestInStream(url: string, callback: AsyncCallback<number>): void
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
 
+<!--Device-HttpRequest-requestInStream(url: string, callback: AsyncCallback<int>): void--><!--Device-HttpRequest-requestInStream(url: string, callback: AsyncCallback<int>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -944,6 +984,8 @@ requestInStream(url: string, options: HttpRequestOptions, callback: AsyncCallbac
 **需要权限：** ohos.permission.INTERNET
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-HttpRequest-requestInStream(url: string, options: HttpRequestOptions, callback: AsyncCallback<int>): void--><!--Device-HttpRequest-requestInStream(url: string, options: HttpRequestOptions, callback: AsyncCallback<int>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -1047,6 +1089,8 @@ requestInStream(url: string, options?: HttpRequestOptions): Promise<number>
 **需要权限：** ohos.permission.INTERNET
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-HttpRequest-requestInStream(url: string, options?: HttpRequestOptions): Promise<int>--><!--Device-HttpRequest-requestInStream(url: string, options?: HttpRequestOptions): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -1152,6 +1196,8 @@ requestSync(url: string, options?: HttpRequestOptions): HttpResponse
 **需要权限：** ohos.permission.INTERNET
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HttpRequest-requestSync(url: string, options?: HttpRequestOptions): HttpResponse--><!--Device-HttpRequest-requestSync(url: string, options?: HttpRequestOptions): HttpResponse-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 

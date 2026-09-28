@@ -12,6 +12,8 @@ client端类，使用client端方法之前需要创建该类的实例进行操�
 
 **替代接口：** [GattClientDevice](arkts-connectivity-bluetoothmanager-gattclientdevice-i.md)
 
+<!--Device-bluetooth-interface GattClientDevice--><!--Device-bluetooth-interface GattClientDevice-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -37,6 +39,8 @@ close(): boolean
 **替代接口：** [close](arkts-connectivity-bluetoothmanager-gattclientdevice-i.md#close)
 
 **需要权限：** ohos.permission.USE_BLUETOOTH
+
+<!--Device-GattClientDevice-close(): boolean--><!--Device-GattClientDevice-close(): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -71,6 +75,8 @@ client端发起连接远端蓝牙低功耗设备。
 
 **需要权限：** ohos.permission.USE_BLUETOOTH
 
+<!--Device-GattClientDevice-connect(): boolean--><!--Device-GattClientDevice-connect(): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **返回值：**
@@ -104,6 +110,8 @@ client端断开与远端蓝牙低功耗设备的连接。
 
 **需要权限：** ohos.permission.USE_BLUETOOTH
 
+<!--Device-GattClientDevice-disconnect(): boolean--><!--Device-GattClientDevice-disconnect(): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **返回值：**
@@ -136,6 +144,8 @@ client获取远端蓝牙低功耗设备名。
 **替代接口：** [getDeviceName](arkts-connectivity-bluetoothmanager-gattclientdevice-i.md#getdevicename)
 
 **需要权限：** ohos.permission.USE_BLUETOOTH
+
+<!--Device-GattClientDevice-getDeviceName(callback: AsyncCallback<string>): void--><!--Device-GattClientDevice-getDeviceName(callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -177,6 +187,8 @@ client获取远端蓝牙低功耗设备名。
 
 **需要权限：** ohos.permission.USE_BLUETOOTH
 
+<!--Device-GattClientDevice-getDeviceName(): Promise<string>--><!--Device-GattClientDevice-getDeviceName(): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **返回值：**
@@ -212,6 +224,8 @@ client获取远端蓝牙低功耗设备的信号强度 (Received Signal Strength
 **替代接口：** [getRssiValue](arkts-connectivity-bluetoothmanager-gattclientdevice-i.md#getrssivalue)
 
 **需要权限：** ohos.permission.USE_BLUETOOTH
+
+<!--Device-GattClientDevice-getRssiValue(callback: AsyncCallback<number>): void--><!--Device-GattClientDevice-getRssiValue(callback: AsyncCallback<number>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -254,6 +268,8 @@ client获取远端蓝牙低功耗设备的信号强度 (Received Signal Strength
 
 **需要权限：** ohos.permission.USE_BLUETOOTH
 
+<!--Device-GattClientDevice-getRssiValue(): Promise<number>--><!--Device-GattClientDevice-getRssiValue(): Promise<number>-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **返回值：**
@@ -289,6 +305,8 @@ client端获取蓝牙低功耗设备的所有服务，即服务发现 。
 **替代接口：** [getServices](arkts-connectivity-bluetoothmanager-gattclientdevice-i.md#getservices)
 
 **需要权限：** ohos.permission.USE_BLUETOOTH
+
+<!--Device-GattClientDevice-getServices(callback: AsyncCallback<Array<GattService>>): void--><!--Device-GattClientDevice-getServices(callback: AsyncCallback<Array<GattService>>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -339,6 +357,8 @@ client端获取蓝牙低功耗设备的所有服务，即服务发现。
 
 **需要权限：** ohos.permission.USE_BLUETOOTH
 
+<!--Device-GattClientDevice-getServices(): Promise<Array<GattService>>--><!--Device-GattClientDevice-getServices(): Promise<Array<GattService>>-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **返回值：**
@@ -376,6 +396,8 @@ off(type: 'BLECharacteristicChange', callback?: Callback<BLECharacteristic>): vo
 
 **需要权限：** ohos.permission.USE_BLUETOOTH
 
+<!--Device-GattClientDevice-off(type: 'BLECharacteristicChange', callback?: Callback<BLECharacteristic>): void--><!--Device-GattClientDevice-off(type: 'BLECharacteristicChange', callback?: Callback<BLECharacteristic>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -410,6 +432,8 @@ off(type: 'BLEConnectionStateChange', callback?: Callback<BLEConnectChangedState
 
 **需要权限：** ohos.permission.USE_BLUETOOTH
 
+<!--Device-GattClientDevice-off(type: 'BLEConnectionStateChange', callback?: Callback<BLEConnectChangedState>): void--><!--Device-GattClientDevice-off(type: 'BLEConnectionStateChange', callback?: Callback<BLEConnectChangedState>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -443,6 +467,8 @@ on(type: 'BLECharacteristicChange', callback: Callback<BLECharacteristic>): void
 **替代接口：** BLECharacteristicChange
 
 **需要权限：** ohos.permission.USE_BLUETOOTH
+
+<!--Device-GattClientDevice-on(type: 'BLECharacteristicChange', callback: Callback<BLECharacteristic>): void--><!--Device-GattClientDevice-on(type: 'BLECharacteristicChange', callback: Callback<BLECharacteristic>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -483,6 +509,8 @@ client端订阅蓝牙低功耗设备的连接状态变化事件。
 
 **需要权限：** ohos.permission.USE_BLUETOOTH
 
+<!--Device-GattClientDevice-on(type: 'BLEConnectionStateChange', callback: Callback<BLEConnectChangedState>): void--><!--Device-GattClientDevice-on(type: 'BLEConnectionStateChange', callback: Callback<BLEConnectChangedState>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -520,6 +548,8 @@ client端读取蓝牙低功耗设备特定服务的特征值。
 **替代接口：** [readCharacteristicValue](arkts-connectivity-bluetoothmanager-gattclientdevice-i.md#readcharacteristicvalue)
 
 **需要权限：** ohos.permission.USE_BLUETOOTH
+
+<!--Device-GattClientDevice-readCharacteristicValue(characteristic: BLECharacteristic, callback: AsyncCallback<BLECharacteristic>): void--><!--Device-GattClientDevice-readCharacteristicValue(characteristic: BLECharacteristic, callback: AsyncCallback<BLECharacteristic>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -582,6 +612,8 @@ client端读取蓝牙低功耗设备特定服务的特征值。
 
 **需要权限：** ohos.permission.USE_BLUETOOTH
 
+<!--Device-GattClientDevice-readCharacteristicValue(characteristic: BLECharacteristic): Promise<BLECharacteristic>--><!--Device-GattClientDevice-readCharacteristicValue(characteristic: BLECharacteristic): Promise<BLECharacteristic>-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -637,6 +669,8 @@ client端读取蓝牙低功耗设备特定的特征包含的描述符。
 
 **需要权限：** ohos.permission.USE_BLUETOOTH
 
+<!--Device-GattClientDevice-readDescriptorValue(descriptor: BLEDescriptor, callback: AsyncCallback<BLEDescriptor>): void--><!--Device-GattClientDevice-readDescriptorValue(descriptor: BLEDescriptor, callback: AsyncCallback<BLEDescriptor>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -688,6 +722,8 @@ client端读取蓝牙低功耗设备特定的特征包含的描述符。
 
 **需要权限：** ohos.permission.USE_BLUETOOTH
 
+<!--Device-GattClientDevice-readDescriptorValue(descriptor: BLEDescriptor): Promise<BLEDescriptor>--><!--Device-GattClientDevice-readDescriptorValue(descriptor: BLEDescriptor): Promise<BLEDescriptor>-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -733,6 +769,8 @@ client协商远端蓝牙低功耗设备的最大传输单元（Maximum Transmiss
 
 **需要权限：** ohos.permission.USE_BLUETOOTH
 
+<!--Device-GattClientDevice-setBLEMtuSize(mtu: number): boolean--><!--Device-GattClientDevice-setBLEMtuSize(mtu: number): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -771,6 +809,8 @@ setNotifyCharacteristicChanged(characteristic: BLECharacteristic, enable: boolea
 **替代接口：** [setNotifyCharacteristicChanged](arkts-connectivity-bluetoothmanager-gattclientdevice-i.md#setnotifycharacteristicchanged)
 
 **需要权限：** ohos.permission.USE_BLUETOOTH
+
+<!--Device-GattClientDevice-setNotifyCharacteristicChanged(characteristic: BLECharacteristic, enable: boolean): boolean--><!--Device-GattClientDevice-setNotifyCharacteristicChanged(characteristic: BLECharacteristic, enable: boolean): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -823,6 +863,8 @@ client端向低功耗蓝牙设备写入特定的特征值。
 **替代接口：** [writeCharacteristicValue](arkts-connectivity-bluetoothmanager-gattclientdevice-i.md#writecharacteristicvalue)
 
 **需要权限：** ohos.permission.USE_BLUETOOTH
+
+<!--Device-GattClientDevice-writeCharacteristicValue(characteristic: BLECharacteristic): boolean--><!--Device-GattClientDevice-writeCharacteristicValue(characteristic: BLECharacteristic): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -882,6 +924,8 @@ client端向低功耗蓝牙设备特定的描述符写入二进制数据。
 **替代接口：** [writeDescriptorValue](arkts-connectivity-bluetoothmanager-gattclientdevice-i.md#writedescriptorvalue)
 
 **需要权限：** ohos.permission.USE_BLUETOOTH
+
+<!--Device-GattClientDevice-writeDescriptorValue(descriptor: BLEDescriptor): boolean--><!--Device-GattClientDevice-writeDescriptorValue(descriptor: BLEDescriptor): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

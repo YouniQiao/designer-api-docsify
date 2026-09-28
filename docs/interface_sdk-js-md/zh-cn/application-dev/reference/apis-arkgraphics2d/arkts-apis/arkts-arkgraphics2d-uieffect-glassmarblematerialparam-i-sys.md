@@ -8,6 +8,8 @@ interface GlassMarbleMaterialParam
 
 **起始版本：** 26.0.1
 
+<!--Device-uiEffect-interface GlassMarbleMaterialParam--><!--Device-uiEffect-interface GlassMarbleMaterialParam-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ averageBgColor: Color
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-GlassMarbleMaterialParam-averageBgColor: Color--><!--Device-GlassMarbleMaterialParam-averageBgColor: Color-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ causticEdgeSoftness: number
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-GlassMarbleMaterialParam-causticEdgeSoftness: double--><!--Device-GlassMarbleMaterialParam-causticEdgeSoftness: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -68,6 +74,8 @@ causticOffset: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-GlassMarbleMaterialParam-causticOffset: double--><!--Device-GlassMarbleMaterialParam-causticOffset: double-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -85,6 +93,8 @@ causticOpacity: number
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-GlassMarbleMaterialParam-causticOpacity: double--><!--Device-GlassMarbleMaterialParam-causticOpacity: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -104,6 +114,8 @@ causticRadius: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-GlassMarbleMaterialParam-causticRadius: double--><!--Device-GlassMarbleMaterialParam-causticRadius: double-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -121,6 +133,8 @@ opacity: number
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-GlassMarbleMaterialParam-opacity: double--><!--Device-GlassMarbleMaterialParam-opacity: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -140,6 +154,8 @@ reflectionMap?: image.PixelMap
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-GlassMarbleMaterialParam-reflectionMap?: image.PixelMap--><!--Device-GlassMarbleMaterialParam-reflectionMap?: image.PixelMap-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -157,6 +173,8 @@ shadowEdgeSoftness: number
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-GlassMarbleMaterialParam-shadowEdgeSoftness: double--><!--Device-GlassMarbleMaterialParam-shadowEdgeSoftness: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -176,6 +194,8 @@ shadowOffset: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-GlassMarbleMaterialParam-shadowOffset: double--><!--Device-GlassMarbleMaterialParam-shadowOffset: double-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -193,6 +213,8 @@ shadowOpacity: number
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-GlassMarbleMaterialParam-shadowOpacity: double--><!--Device-GlassMarbleMaterialParam-shadowOpacity: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -212,6 +234,8 @@ shadowRadius: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-GlassMarbleMaterialParam-shadowRadius: double--><!--Device-GlassMarbleMaterialParam-shadowRadius: double-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -229,6 +253,8 @@ shapeScale: number
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-GlassMarbleMaterialParam-shapeScale: double--><!--Device-GlassMarbleMaterialParam-shapeScale: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

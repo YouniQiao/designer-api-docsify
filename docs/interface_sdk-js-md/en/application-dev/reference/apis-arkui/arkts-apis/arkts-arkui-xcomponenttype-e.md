@@ -8,6 +8,8 @@ The type of XComponent
 
 **Since:** 10
 
+<!--Device-unnamed-declare enum XComponentType--><!--Device-unnamed-declare enum XComponentType-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## SURFACE
@@ -24,6 +26,8 @@ Used for EGL/OpenGLES and media data writing, displaying developer-customized re
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-XComponentType-SURFACE--><!--Device-XComponentType-SURFACE-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## COMPONENT
@@ -32,7 +36,7 @@ Used for EGL/OpenGLES and media data writing, displaying developer-customized re
 COMPONENT
 ```
 
-Uses [XComponent](../arkts-components/arkts-arkui-xcomponent-comp.md#xcomponent) as a container component, supporting non-UI logic execution within it to dynamically load display content.
+Uses [XComponent](../arkts-components/arkts-arkui-xcomponent-comp.md) as a container component, supporting non-UI logic execution within it to dynamically load display content.
 
 **NOTE:** 
 
@@ -47,6 +51,8 @@ This API is supported since API version 10 and deprecated since API version 12. 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-XComponentType-COMPONENT--><!--Device-XComponentType-COMPONENT-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -66,6 +72,8 @@ to the display subsystem (DSS) path used by surface.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-XComponentType-TEXTURE--><!--Device-XComponentType-TEXTURE-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## NODE
@@ -84,10 +92,12 @@ This API is supported since API version 12 and deprecated since API version 20. 
 
 **Deprecated since:** 20
 
-**Substitutes:** [ContentSlot](../arkts-components/arkts-arkui-contentslot-comp.md#contentslot)
+**Substitutes:** [ContentSlot](../arkts-components/arkts-arkui-contentslot-comp.md)
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-XComponentType-NODE--><!--Device-XComponentType-NODE-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

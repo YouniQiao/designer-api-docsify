@@ -4,6 +4,8 @@
 
 **起始版本：** 7
 
+<!--Device-unnamed-declare namespace osAccount--><!--Device-unnamed-declare namespace osAccount-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 ## 导入模块

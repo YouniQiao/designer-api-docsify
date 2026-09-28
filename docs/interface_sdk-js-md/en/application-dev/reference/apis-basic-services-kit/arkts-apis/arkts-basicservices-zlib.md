@@ -4,6 +4,8 @@ The **Zip** module provides APIs for file compression and decompression.
 
 **Since:** 7
 
+<!--Device-unnamed-declare namespace zlib--><!--Device-unnamed-declare namespace zlib-End-->
+
 **System capability:** SystemCapability.BundleManager.Zlib
 
 ## Modules to Import

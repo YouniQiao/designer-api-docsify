@@ -8,6 +8,8 @@ enum DeviceBlockStatus
 
 **起始版本：** 13
 
+<!--Device-audio-enum DeviceBlockStatus--><!--Device-audio-enum DeviceBlockStatus-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 ## UNBLOCKED
@@ -20,6 +22,8 @@ UNBLOCKED = 0
 
 **起始版本：** 13
 
+<!--Device-DeviceBlockStatus-UNBLOCKED = 0--><!--Device-DeviceBlockStatus-UNBLOCKED = 0-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 ## BLOCKED
@@ -31,5 +35,7 @@ BLOCKED = 1
 音频设备被堵塞。
 
 **起始版本：** 13
+
+<!--Device-DeviceBlockStatus-BLOCKED = 1--><!--Device-DeviceBlockStatus-BLOCKED = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device

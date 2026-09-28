@@ -14,6 +14,8 @@ The static builder for building [On](arkts-test-uitest-on-c.md)object convenient
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-unnamed-declare const ON: On--><!--Device-unnamed-declare const ON: On-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Test API:** This API is used only in automated test scripts.
@@ -33,6 +35,8 @@ The static builder for building [By](arkts-test-uitest-by-c.md)object convenient
 **Deprecated since:** 9
 
 **Substitutes:** ON
+
+<!--Device-unnamed-declare const BY: By--><!--Device-unnamed-declare const BY: By-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 

@@ -16,6 +16,8 @@ function getTransientTaskInfo(): Promise<TransientTaskInfo>
 
 **起始版本：** 20
 
+<!--Device-backgroundTaskManager-function getTransientTaskInfo(): Promise<TransientTaskInfo>--><!--Device-backgroundTaskManager-function getTransientTaskInfo(): Promise<TransientTaskInfo>-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
 **返回值：**

@@ -26,6 +26,8 @@ function createAVPlayer(callback: AsyncCallback<AVPlayer>): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-media-function createAVPlayer(callback: AsyncCallback<AVPlayer>): void--><!--Device-media-function createAVPlayer(callback: AsyncCallback<AVPlayer>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVPlayer
 
 **参数：**
@@ -78,6 +80,8 @@ function createAVPlayer(): Promise<AVPlayer>
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-media-function createAVPlayer(): Promise<AVPlayer>--><!--Device-media-function createAVPlayer(): Promise<AVPlayer>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVPlayer
 

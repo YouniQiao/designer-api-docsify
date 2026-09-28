@@ -12,6 +12,8 @@ Represents the return value of the [getEvent('Scroll')](../arkts-apis/arkts-arku
 
 **Since:** 19
 
+<!--Device-unnamed-declare interface UIScrollEvent extends UIScrollableCommonEvent--><!--Device-unnamed-declare interface UIScrollEvent extends UIScrollableCommonEvent-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## setOnDidScroll
@@ -29,6 +31,8 @@ Passing **undefined** as the input parameter resets the event callback.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-UIScrollEvent-setOnDidScroll(callback: ScrollOnScrollCallback | undefined): void--><!--Device-UIScrollEvent-setOnDidScroll(callback: ScrollOnScrollCallback | undefined): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -53,6 +57,8 @@ Passing **undefined** as the input parameter resets the event callback.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-UIScrollEvent-setOnWillScroll(callback: ScrollOnWillScrollCallback | undefined): void--><!--Device-UIScrollEvent-setOnWillScroll(callback: ScrollOnWillScrollCallback | undefined): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -8,6 +8,8 @@ interface AudioPersonalizedSpatialEnabledChangeForAnyDevice
 
 **起始版本：** 26.0.0
 
+<!--Device-audio-interface AudioPersonalizedSpatialEnabledChangeForAnyDevice--><!--Device-audio-interface AudioPersonalizedSpatialEnabledChangeForAnyDevice-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ deviceDescriptor: AudioDeviceDescriptor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioPersonalizedSpatialEnabledChangeForAnyDevice-deviceDescriptor: AudioDeviceDescriptor--><!--Device-AudioPersonalizedSpatialEnabledChangeForAnyDevice-deviceDescriptor: AudioDeviceDescriptor-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ enabled: boolean
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioPersonalizedSpatialEnabledChangeForAnyDevice-enabled: boolean--><!--Device-AudioPersonalizedSpatialEnabledChangeForAnyDevice-enabled: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 

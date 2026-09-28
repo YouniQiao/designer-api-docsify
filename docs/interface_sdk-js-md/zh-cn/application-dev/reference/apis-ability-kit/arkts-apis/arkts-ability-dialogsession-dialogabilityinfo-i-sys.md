@@ -8,6 +8,8 @@ export interface DialogAbilityInfo
 
 **起始版本：** 11
 
+<!--Device-dialogSession-export interface DialogAbilityInfo--><!--Device-dialogSession-export interface DialogAbilityInfo-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ abilityIconId: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DialogAbilityInfo-abilityIconId: int--><!--Device-DialogAbilityInfo-abilityIconId: int-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ abilityLabelId: number
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DialogAbilityInfo-abilityLabelId: int--><!--Device-DialogAbilityInfo-abilityLabelId: int-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -68,6 +74,8 @@ abilityName: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DialogAbilityInfo-abilityName: string--><!--Device-DialogAbilityInfo-abilityName: string-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -85,6 +93,8 @@ appIndex: number
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DialogAbilityInfo-appIndex: int--><!--Device-DialogAbilityInfo-appIndex: int-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -104,6 +114,8 @@ bundleIconId: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DialogAbilityInfo-bundleIconId: int--><!--Device-DialogAbilityInfo-bundleIconId: int-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -121,6 +133,8 @@ bundleLabelId: number
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DialogAbilityInfo-bundleLabelId: int--><!--Device-DialogAbilityInfo-bundleLabelId: int-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -140,6 +154,8 @@ bundleName: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DialogAbilityInfo-bundleName: string--><!--Device-DialogAbilityInfo-bundleName: string-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -157,6 +173,8 @@ codePath?: string
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DialogAbilityInfo-codePath?: string--><!--Device-DialogAbilityInfo-codePath?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -182,6 +200,8 @@ installSource?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DialogAbilityInfo-installSource?: string--><!--Device-DialogAbilityInfo-installSource?: string-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -199,6 +219,8 @@ moduleName: string
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DialogAbilityInfo-moduleName: string--><!--Device-DialogAbilityInfo-moduleName: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -218,6 +240,8 @@ multiAppMode: MultiAppMode
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DialogAbilityInfo-multiAppMode: MultiAppMode--><!--Device-DialogAbilityInfo-multiAppMode: MultiAppMode-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -235,6 +259,8 @@ visible: boolean
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DialogAbilityInfo-visible: boolean--><!--Device-DialogAbilityInfo-visible: boolean-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

@@ -8,6 +8,8 @@ Wi-Fi配置信息。
 
 **起始版本：** 9
 
+<!--Device-wifiManager-interface WifiDeviceConfig--><!--Device-wifiManager-interface WifiDeviceConfig-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## 导入模块
@@ -28,7 +30,9 @@ bssid?: string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WifiDeviceConfig-bssid?: string--><!--Device-WifiDeviceConfig-bssid?: string-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -44,7 +48,9 @@ bssidType?: DeviceAddressType
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WifiDeviceConfig-bssidType?: DeviceAddressType--><!--Device-WifiDeviceConfig-bssidType?: DeviceAddressType-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -60,6 +66,8 @@ eapConfig?: WifiEapConfig
 
 **起始版本：** 10
 
+<!--Device-WifiDeviceConfig-eapConfig?: WifiEapConfig--><!--Device-WifiDeviceConfig-eapConfig?: WifiEapConfig-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## isHiddenSsid
@@ -74,6 +82,8 @@ isHiddenSsid?: boolean
 
 **起始版本：** 9
 
+<!--Device-WifiDeviceConfig-isHiddenSsid?: boolean--><!--Device-WifiDeviceConfig-isHiddenSsid?: boolean-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## netId
@@ -87,6 +97,8 @@ netId?: number
 **类型：** number
 
 **起始版本：** 22
+
+<!--Device-WifiDeviceConfig-netId?: int--><!--Device-WifiDeviceConfig-netId?: int-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -110,7 +122,9 @@ preSharedKey: string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WifiDeviceConfig-preSharedKey: string--><!--Device-WifiDeviceConfig-preSharedKey: string-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -126,7 +140,9 @@ securityType: WifiSecurityType
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WifiDeviceConfig-securityType: WifiSecurityType--><!--Device-WifiDeviceConfig-securityType: WifiSecurityType-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -144,6 +160,8 @@ showNoInternetDialog?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-WifiDeviceConfig-showNoInternetDialog?: boolean--><!--Device-WifiDeviceConfig-showNoInternetDialog?: boolean-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## ssid
@@ -158,7 +176,9 @@ ssid: string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WifiDeviceConfig-ssid: string--><!--Device-WifiDeviceConfig-ssid: string-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -173,5 +193,7 @@ WAPI身份验证协议配置。只有securityType为WIFI_SEC_TYPE_WAPI_CERT或WI
 **类型：** [WifiWapiConfig](arkts-connectivity-wifimanager-wifiwapiconfig-i.md)
 
 **起始版本：** 12
+
+<!--Device-WifiDeviceConfig-wapiConfig?: WifiWapiConfig--><!--Device-WifiDeviceConfig-wapiConfig?: WifiWapiConfig-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA

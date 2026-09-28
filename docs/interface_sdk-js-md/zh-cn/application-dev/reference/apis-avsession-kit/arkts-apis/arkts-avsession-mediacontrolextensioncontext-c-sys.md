@@ -14,6 +14,8 @@ MediaControlExtensionContext是[MediaControlExtensionAbility](arkts-avsession-ap
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-unnamed-export default class MediaControlExtensionContext extends UIExtensionContext--><!--Device-unnamed-export default class MediaControlExtensionContext extends UIExtensionContext-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **系统接口：** 此接口为系统接口。

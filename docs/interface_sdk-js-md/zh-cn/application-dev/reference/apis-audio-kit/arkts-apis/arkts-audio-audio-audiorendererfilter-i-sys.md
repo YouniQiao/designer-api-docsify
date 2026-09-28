@@ -8,6 +8,8 @@ interface AudioRendererFilter
 
 **起始版本：** 9
 
+<!--Device-audio-interface AudioRendererFilter--><!--Device-audio-interface AudioRendererFilter-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ rendererId?: number
 
 **起始版本：** 9
 
+<!--Device-AudioRendererFilter-rendererId?: int--><!--Device-AudioRendererFilter-rendererId?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **系统接口：** 此接口为系统接口。
@@ -46,6 +50,8 @@ rendererInfo?: AudioRendererInfo
 
 **起始版本：** 9
 
+<!--Device-AudioRendererFilter-rendererInfo?: AudioRendererInfo--><!--Device-AudioRendererFilter-rendererInfo?: AudioRendererInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +67,8 @@ uid?: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-AudioRendererFilter-uid?: int--><!--Device-AudioRendererFilter-uid?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 

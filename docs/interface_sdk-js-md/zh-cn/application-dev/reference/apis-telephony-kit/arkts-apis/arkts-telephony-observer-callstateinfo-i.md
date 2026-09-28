@@ -8,6 +8,8 @@ export interface CallStateInfo
 
 **起始版本：** 11
 
+<!--Device-observer-export interface CallStateInfo--><!--Device-observer-export interface CallStateInfo-End-->
+
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
 ## 导入模块
@@ -28,6 +30,8 @@ number: string
 
 **起始版本：** 11
 
+<!--Device-CallStateInfo-number: string--><!--Device-CallStateInfo-number: string-End-->
+
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
 ## state
@@ -41,5 +45,7 @@ state: CallState
 **类型：** [CallState](arkts-telephony-observer-callstate-t.md)
 
 **起始版本：** 11
+
+<!--Device-CallStateInfo-state: CallState--><!--Device-CallStateInfo-state: CallState-End-->
 
 **系统能力：** SystemCapability.Telephony.StateRegistry

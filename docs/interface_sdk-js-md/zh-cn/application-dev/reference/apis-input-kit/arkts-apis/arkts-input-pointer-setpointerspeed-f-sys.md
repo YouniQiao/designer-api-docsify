@@ -16,6 +16,8 @@ function setPointerSpeed(speed: number, callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
+<!--Device-pointer-function setPointerSpeed(speed: int, callback: AsyncCallback<void>): void--><!--Device-pointer-function setPointerSpeed(speed: int, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +79,8 @@ function setPointerSpeed(speed: number): Promise<void>
 设置鼠标移动速度，使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-pointer-function setPointerSpeed(speed: int): Promise<void>--><!--Device-pointer-function setPointerSpeed(speed: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 

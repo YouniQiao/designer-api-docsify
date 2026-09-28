@@ -22,6 +22,8 @@ Describes the parameters of the calendar picker.
 
 **Since:** 10
 
+<!--Device-unnamed-declare interface CalendarOptions--><!--Device-unnamed-declare interface CalendarOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## disabledDateRange
@@ -49,6 +51,8 @@ the disabled date range.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-CalendarOptions-disabledDateRange?: DateRange[]--><!--Device-CalendarOptions-disabledDateRange?: DateRange[]-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## end
@@ -74,6 +78,8 @@ Note: If the start date is later than the end date, both the settings of **start
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-CalendarOptions-end?: Date--><!--Device-CalendarOptions-end?: Date-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -105,6 +111,8 @@ If the value of **hintRadius** is **0.0**, the background is a rectangle with sq
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-CalendarOptions-hintRadius?: number | Resource--><!--Device-CalendarOptions-hintRadius?: number | Resource-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## selected
@@ -128,6 +136,8 @@ Value range: [Date('0001-01-01'), Date('5000-12-31')].
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-CalendarOptions-selected?: Date--><!--Device-CalendarOptions-selected?: Date-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -154,5 +164,7 @@ Note: If the start date is later than the end date, both the settings of **start
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-CalendarOptions-start?: Date--><!--Device-CalendarOptions-start?: Date-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -8,6 +8,8 @@ GNSS地理围栏请求参数。
 
 **起始版本：** 12
 
+<!--Device-geoLocationManager-export interface GnssGeofenceRequest--><!--Device-geoLocationManager-export interface GnssGeofenceRequest-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 ## 导入模块
@@ -28,6 +30,8 @@ FenceExtensionAbility名称，参见[FenceExtensionAbility](arkts-location-app-a
 
 **起始版本：** 23
 
+<!--Device-GnssGeofenceRequest-fenceExtensionAbilityName?: string--><!--Device-GnssGeofenceRequest-fenceExtensionAbilityName?: string-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 ## geofence
@@ -41,6 +45,8 @@ geofence: Geofence
 **类型：** [Geofence](arkts-location-geolocationmanager-geofence-i.md)
 
 **起始版本：** 12
+
+<!--Device-GnssGeofenceRequest-geofence: Geofence--><!--Device-GnssGeofenceRequest-geofence: Geofence-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geofence
 
@@ -56,6 +62,8 @@ geofenceTransitionCallback: AsyncCallback<GeofenceTransition>
 
 **起始版本：** 12
 
+<!--Device-GnssGeofenceRequest-geofenceTransitionCallback: AsyncCallback<GeofenceTransition>--><!--Device-GnssGeofenceRequest-geofenceTransitionCallback: AsyncCallback<GeofenceTransition>-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 ## loiterTimeMs
@@ -70,6 +78,8 @@ loiterTimeMs?: number
 
 **起始版本：** 23
 
+<!--Device-GnssGeofenceRequest-loiterTimeMs?: int--><!--Device-GnssGeofenceRequest-loiterTimeMs?: int-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 ## monitorTransitionEvents
@@ -83,6 +93,8 @@ monitorTransitionEvents: Array<GeofenceTransitionEvent>
 **类型：** Array&lt;[GeofenceTransitionEvent](arkts-location-geolocationmanager-geofencetransitionevent-e.md)&gt;
 
 **起始版本：** 12
+
+<!--Device-GnssGeofenceRequest-monitorTransitionEvents: Array<GeofenceTransitionEvent>--><!--Device-GnssGeofenceRequest-monitorTransitionEvents: Array<GeofenceTransitionEvent>-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geofence
 
@@ -99,5 +111,7 @@ monitorTransitionEvents与notifications中的顺序要一一对应，例如monit
 **类型：** Array&lt;[NotificationRequest](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md)&gt;
 
 **起始版本：** 12
+
+<!--Device-GnssGeofenceRequest-notifications?: Array<NotificationRequest>--><!--Device-GnssGeofenceRequest-notifications?: Array<NotificationRequest>-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geofence

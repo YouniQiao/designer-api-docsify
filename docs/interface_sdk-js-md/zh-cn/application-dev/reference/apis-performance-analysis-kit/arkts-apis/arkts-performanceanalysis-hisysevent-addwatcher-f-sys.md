@@ -18,6 +18,8 @@ function addWatcher(watcher: Watcher): void
 
 **需要权限：** ohos.permission.READ_DFX_SYSEVENT
 
+<!--Device-hiSysEvent-function addWatcher(watcher: Watcher): void--><!--Device-hiSysEvent-function addWatcher(watcher: Watcher): void-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 
 **系统接口：** 此接口为系统接口。

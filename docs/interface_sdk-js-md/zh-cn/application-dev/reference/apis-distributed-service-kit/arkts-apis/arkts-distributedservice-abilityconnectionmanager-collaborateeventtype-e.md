@@ -8,6 +8,8 @@ enum CollaborateEventType
 
 **起始版本：** 18
 
+<!--Device-abilityConnectionManager-enum CollaborateEventType--><!--Device-abilityConnectionManager-enum CollaborateEventType-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 ## SEND_FAILURE
@@ -22,6 +24,8 @@ SEND_FAILURE = 0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-CollaborateEventType-SEND_FAILURE = 0--><!--Device-CollaborateEventType-SEND_FAILURE = 0-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 ## COLOR_SPACE_CONVERSION_FAILURE
@@ -35,5 +39,7 @@ COLOR_SPACE_CONVERSION_FAILURE = 1
 **起始版本：** 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-CollaborateEventType-COLOR_SPACE_CONVERSION_FAILURE = 1--><!--Device-CollaborateEventType-COLOR_SPACE_CONVERSION_FAILURE = 1-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration

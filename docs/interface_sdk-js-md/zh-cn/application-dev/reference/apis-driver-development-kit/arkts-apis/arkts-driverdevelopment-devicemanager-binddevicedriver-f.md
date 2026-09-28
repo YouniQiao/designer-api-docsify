@@ -25,6 +25,8 @@ function bindDeviceDriver(deviceId: number, onDisconnect: AsyncCallback<number>,
 
 **需要权限：** ohos.permission.ACCESS_EXTENSIONAL_DEVICE_DRIVER
 
+<!--Device-deviceManager-function bindDeviceDriver(deviceId: number, onDisconnect: AsyncCallback<number>,    callback: AsyncCallback<RemoteDeviceDriver>): void--><!--Device-deviceManager-function bindDeviceDriver(deviceId: number, onDisconnect: AsyncCallback<number>,    callback: AsyncCallback<RemoteDeviceDriver>): void-End-->
+
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
 **参数：**
@@ -85,6 +87,8 @@ function bindDeviceDriver(deviceId: number, onDisconnect: AsyncCallback<number>)
 **替代接口：** [bindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-binddriverwithdeviceid-f.md)(deviceId: number, onDisconnect: AsyncCallback&lt;number&gt;)
 
 **需要权限：** ohos.permission.ACCESS_EXTENSIONAL_DEVICE_DRIVER
+
+<!--Device-deviceManager-function bindDeviceDriver(deviceId: number, onDisconnect: AsyncCallback<number>): Promise<RemoteDeviceDriver>--><!--Device-deviceManager-function bindDeviceDriver(deviceId: number, onDisconnect: AsyncCallback<number>): Promise<RemoteDeviceDriver>-End-->
 
 **系统能力：** SystemCapability.Driver.ExternalDevice
 

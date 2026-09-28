@@ -34,6 +34,8 @@ onerror接口适用于只需要捕获onmessage回调中同步异常的简单场�
 
 **起始版本：** 9
 
+<!--Device-worker-class ThreadWorker implements WorkerEventTarget--><!--Device-worker-class ThreadWorker implements WorkerEventTarget-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -53,6 +55,8 @@ addEventListener(type: string, listener: WorkerEventListener): void
 **起始版本：** 9
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ThreadWorker-addEventListener(type: string, listener: WorkerEventListener): void--><!--Device-ThreadWorker-addEventListener(type: string, listener: WorkerEventListener): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -98,6 +102,8 @@ ThreadWorker构造函数。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-ThreadWorker-constructor(scriptURL: string, options?: WorkerOptions)--><!--Device-ThreadWorker-constructor(scriptURL: string, options?: WorkerOptions)-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -137,6 +143,8 @@ dispatchEvent(event: Event): boolean
 **起始版本：** 9
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ThreadWorker-dispatchEvent(event: Event): boolean--><!--Device-ThreadWorker-dispatchEvent(event: Event): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -186,6 +194,8 @@ off(type: string, listener?: WorkerEventListener): void
 **起始版本：** 9
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ThreadWorker-off(type: string, listener?: WorkerEventListener): void--><!--Device-ThreadWorker-off(type: string, listener?: WorkerEventListener): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -243,6 +253,8 @@ on(type: string, listener: WorkerEventListener): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-ThreadWorker-on(type: string, listener: WorkerEventListener): void--><!--Device-ThreadWorker-on(type: string, listener: WorkerEventListener): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -288,6 +300,8 @@ onAllErrors?: ErrorCallback
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-ThreadWorker-onAllErrors?: ErrorCallback--><!--Device-ThreadWorker-onAllErrors?: ErrorCallback-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **错误码：**
@@ -308,6 +322,8 @@ once(type: string, listener: WorkerEventListener): void
 **起始版本：** 9
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ThreadWorker-once(type: string, listener: WorkerEventListener): void--><!--Device-ThreadWorker-once(type: string, listener: WorkerEventListener): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -352,6 +368,8 @@ onerror?: (err: ErrorEvent) => void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-ThreadWorker-onerror?: (err: ErrorEvent) => void--><!--Device-ThreadWorker-onerror?: (err: ErrorEvent) => void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -378,6 +396,8 @@ onexit?: (code: number) => void
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ThreadWorker-onexit?: (code: number) => void--><!--Device-ThreadWorker-onexit?: (code: number) => void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -406,6 +426,8 @@ onmessage?: (event: MessageEvents) => void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-ThreadWorker-onmessage?: (event: MessageEvents) => void--><!--Device-ThreadWorker-onmessage?: (event: MessageEvents) => void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -433,6 +455,8 @@ onmessageerror?: (event: MessageEvents) => void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-ThreadWorker-onmessageerror?: (event: MessageEvents) => void--><!--Device-ThreadWorker-onmessageerror?: (event: MessageEvents) => void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -459,6 +483,8 @@ postMessage(message: Object, transfer: ArrayBuffer[]): void
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ThreadWorker-postMessage(message: Object, transfer: ArrayBuffer[]): void--><!--Device-ThreadWorker-postMessage(message: Object, transfer: ArrayBuffer[]): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -565,6 +591,8 @@ postMessage(message: Object, options?: PostMessageOptions): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-ThreadWorker-postMessage(message: Object, options?: PostMessageOptions): void--><!--Device-ThreadWorker-postMessage(message: Object, options?: PostMessageOptions): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -607,6 +635,8 @@ postMessageWithSharedSendable(message: Object, transfer?: ArrayBuffer[]): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ThreadWorker-postMessageWithSharedSendable(message: Object, transfer?: ArrayBuffer[]): void--><!--Device-ThreadWorker-postMessageWithSharedSendable(message: Object, transfer?: ArrayBuffer[]): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -678,6 +708,8 @@ registerGlobalCallObject(instanceName: string, globalCallObject: Object): void
 **起始版本：** 11
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ThreadWorker-registerGlobalCallObject(instanceName: string, globalCallObject: Object): void--><!--Device-ThreadWorker-registerGlobalCallObject(instanceName: string, globalCallObject: Object): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -753,6 +785,8 @@ removeAllListener(): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-ThreadWorker-removeAllListener(): void--><!--Device-ThreadWorker-removeAllListener(): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **错误码：**
@@ -785,6 +819,8 @@ removeEventListener(type: string, callback?: WorkerEventListener): void
 **起始版本：** 9
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ThreadWorker-removeEventListener(type: string, callback?: WorkerEventListener): void--><!--Device-ThreadWorker-removeEventListener(type: string, callback?: WorkerEventListener): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -830,6 +866,8 @@ terminate(): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-ThreadWorker-terminate(): void--><!--Device-ThreadWorker-terminate(): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **错误码：**
@@ -859,6 +897,8 @@ unregisterGlobalCallObject(instanceName?: string): void
 **起始版本：** 11
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ThreadWorker-unregisterGlobalCallObject(instanceName?: string): void--><!--Device-ThreadWorker-unregisterGlobalCallObject(instanceName?: string): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

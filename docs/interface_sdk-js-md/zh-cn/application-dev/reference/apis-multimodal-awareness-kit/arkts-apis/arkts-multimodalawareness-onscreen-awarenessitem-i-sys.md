@@ -12,6 +12,8 @@ export interface AwarenessItem
 
 **起始版本：** 23
 
+<!--Device-onScreen-export interface AwarenessItem--><!--Device-onScreen-export interface AwarenessItem-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **系统接口：** 此接口为系统接口。
@@ -35,6 +37,8 @@ itemInfo: Record<string, Object>
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AwarenessItem-itemInfo: Record<string, Object>--><!--Device-AwarenessItem-itemInfo: Record<string, Object>-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 

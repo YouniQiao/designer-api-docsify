@@ -10,6 +10,8 @@ interface CameraInput
 
 **起始版本：** 10
 
+<!--Device-camera-interface CameraInput--><!--Device-camera-interface CameraInput-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
@@ -27,6 +29,8 @@ closeDelayed(time: number): Promise<void>
 Delay close camera.
 
 **起始版本：** 18
+
+<!--Device-CameraInput-closeDelayed(time: int): Promise<void>--><!--Device-CameraInput-closeDelayed(time: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -62,6 +66,8 @@ Control auxiliary.
 
 **起始版本：** 18
 
+<!--Device-CameraInput-controlAuxiliary(auxiliaryType: AuxiliaryType, auxiliaryStatus: AuxiliaryStatus): Promise<void>--><!--Device-CameraInput-controlAuxiliary(auxiliaryType: AuxiliaryType, auxiliaryStatus: AuxiliaryStatus): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -96,6 +102,8 @@ usedAsPosition(position: CameraPosition): void
 Sets the camera to be used as a camera at the specified position.
 
 **起始版本：** 19
+
+<!--Device-CameraInput-usedAsPosition(position: CameraPosition): void--><!--Device-CameraInput-usedAsPosition(position: CameraPosition): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

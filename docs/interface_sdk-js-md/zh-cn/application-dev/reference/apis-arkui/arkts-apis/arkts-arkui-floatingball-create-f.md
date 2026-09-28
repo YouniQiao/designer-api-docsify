@@ -16,6 +16,8 @@ function create(config: FloatingBallConfiguration): Promise<FloatingBallControll
 
 **起始版本：** 20
 
+<!--Device-floatingBall-function create(config: FloatingBallConfiguration): Promise<FloatingBallController>--><!--Device-floatingBall-function create(config: FloatingBallConfiguration): Promise<FloatingBallController>-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**

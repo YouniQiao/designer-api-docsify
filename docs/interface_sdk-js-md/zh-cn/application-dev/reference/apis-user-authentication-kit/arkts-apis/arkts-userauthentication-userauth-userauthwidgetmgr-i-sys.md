@@ -8,6 +8,8 @@ interface UserAuthWidgetMgr
 
 **起始版本：** 10
 
+<!--Device-userAuth-interface UserAuthWidgetMgr--><!--Device-userAuth-interface UserAuthWidgetMgr-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -27,6 +29,8 @@ off(type: 'command', callback?: IAuthWidgetCallback): void
 取消订阅来自用户认证框架的命令事件。身份认证控件通过此接口取消对用户认证框架命令的订阅。
 
 **起始版本：** 10
+
+<!--Device-UserAuthWidgetMgr-off(type: 'command', callback?: IAuthWidgetCallback): void--><!--Device-UserAuthWidgetMgr-off(type: 'command', callback?: IAuthWidgetCallback): void-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -77,6 +81,8 @@ on(type: 'command', callback: IAuthWidgetCallback): void
 订阅来自用户认证框架的命令事件。身份认证控件通过此接口订阅来自用户认证框架的命令，以便根据命令执行相应的认证操作。
 
 **起始版本：** 10
+
+<!--Device-UserAuthWidgetMgr-on(type: 'command', callback: IAuthWidgetCallback): void--><!--Device-UserAuthWidgetMgr-on(type: 'command', callback: IAuthWidgetCallback): void-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 

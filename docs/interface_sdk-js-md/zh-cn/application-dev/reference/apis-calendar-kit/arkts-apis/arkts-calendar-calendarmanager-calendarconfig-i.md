@@ -8,6 +8,8 @@ interface CalendarConfig
 
 **起始版本：** 10
 
+<!--Device-calendarManager-interface CalendarConfig--><!--Device-calendarManager-interface CalendarConfig-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 ## 导入模块
@@ -28,6 +30,8 @@ color?: number | string
 
 **起始版本：** 10
 
+<!--Device-CalendarConfig-color?: number | string--><!--Device-CalendarConfig-color?: number | string-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 ## enableReminder
@@ -41,5 +45,7 @@ enableReminder?: boolean
 **类型：** boolean
 
 **起始版本：** 10
+
+<!--Device-CalendarConfig-enableReminder?: boolean--><!--Device-CalendarConfig-enableReminder?: boolean-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData

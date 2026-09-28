@@ -18,6 +18,8 @@ function getDefaultApplicationSync(type: string, userId?: number): BundleInfo
 
 **需要权限：** ohos.permission.GET_DEFAULT_APPLICATION
 
+<!--Device-defaultAppManager-function getDefaultApplicationSync(type: string, userId?: int): BundleInfo--><!--Device-defaultAppManager-function getDefaultApplicationSync(type: string, userId?: int): BundleInfo-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.DefaultApp
 
 **系统接口：** 此接口为系统接口。

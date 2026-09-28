@@ -28,6 +28,8 @@ trace单位流量实测方法：limitSize设置为最大值500M，调用startApp
 
 **起始版本：** 12
 
+<!--Device-hidebug-function startAppTraceCapture(tags: long[], flag: TraceFlag, limitSize: int): string--><!--Device-hidebug-function startAppTraceCapture(tags: long[], flag: TraceFlag, limitSize: int): string-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **参数：**

@@ -25,6 +25,8 @@ function getProcessRunningInfos(): Promise<Array<ProcessRunningInfo>>
 
 **需要权限：** ohos.permission.GET_RUNNING_INFO
 
+<!--Device-appManager-function getProcessRunningInfos(): Promise<Array<ProcessRunningInfo>>--><!--Device-appManager-function getProcessRunningInfos(): Promise<Array<ProcessRunningInfo>>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **返回值：**
@@ -68,6 +70,8 @@ function getProcessRunningInfos(callback: AsyncCallback<Array<ProcessRunningInfo
 **替代接口：** [getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md)
 
 **需要权限：** ohos.permission.GET_RUNNING_INFO
+
+<!--Device-appManager-function getProcessRunningInfos(callback: AsyncCallback<Array<ProcessRunningInfo>>): void--><!--Device-appManager-function getProcessRunningInfos(callback: AsyncCallback<Array<ProcessRunningInfo>>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

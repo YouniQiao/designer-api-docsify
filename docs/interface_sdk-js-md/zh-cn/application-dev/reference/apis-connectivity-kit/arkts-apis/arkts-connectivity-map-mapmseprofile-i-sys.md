@@ -14,6 +14,8 @@ interface MapMseProfile extends BaseProfile
 
 **起始版本：** 11
 
+<!--Device-map-interface MapMseProfile extends BaseProfile--><!--Device-map-interface MapMseProfile extends BaseProfile-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -33,6 +35,8 @@ disconnect(deviceId: string): void
 **起始版本：** 11
 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
+
+<!--Device-MapMseProfile-disconnect(deviceId: string): void--><!--Device-MapMseProfile-disconnect(deviceId: string): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -68,6 +72,8 @@ getMessageAccessAuthorization(deviceId: string): Promise<AccessAuthorization>
 **起始版本：** 11
 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
+
+<!--Device-MapMseProfile-getMessageAccessAuthorization(deviceId: string): Promise<AccessAuthorization>--><!--Device-MapMseProfile-getMessageAccessAuthorization(deviceId: string): Promise<AccessAuthorization>-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -109,6 +115,8 @@ setMessageAccessAuthorization(deviceId: string, authorization: AccessAuthorizati
 **起始版本：** 11
 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
+
+<!--Device-MapMseProfile-setMessageAccessAuthorization(deviceId: string, authorization: AccessAuthorization): Promise<void>--><!--Device-MapMseProfile-setMessageAccessAuthorization(deviceId: string, authorization: AccessAuthorization): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

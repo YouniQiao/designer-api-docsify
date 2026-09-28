@@ -20,6 +20,8 @@ interface Sign
 
 **起始版本：** 9
 
+<!--Device-cryptoFramework-interface Sign--><!--Device-cryptoFramework-interface Sign-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Signature
 - API版本9-11：SystemCapability.Security.CryptoFramework
@@ -40,7 +42,9 @@ getSignSpec(itemType: SignSpecItem): string | number
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Sign-getSignSpec(itemType: SignSpecItem): string | int--><!--Device-Sign-getSignSpec(itemType: SignSpecItem): string | int-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Signature
@@ -93,7 +97,9 @@ init(priKey: PriKey, callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Sign-init(priKey: PriKey, callback: AsyncCallback<void>): void--><!--Device-Sign-init(priKey: PriKey, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Signature
@@ -130,7 +136,9 @@ init(priKey: PriKey): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Sign-init(priKey: PriKey): Promise<void>--><!--Device-Sign-init(priKey: PriKey): Promise<void>-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Signature
@@ -172,7 +180,9 @@ initSync(priKey: PriKey): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Sign-initSync(priKey: PriKey): void--><!--Device-Sign-initSync(priKey: PriKey): void-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Signature
 
@@ -205,6 +215,8 @@ setSignSpec(itemType: SignSpecItem, itemValue: number): void
 **起始版本：** 10
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Sign-setSignSpec(itemType: SignSpecItem, itemValue: int): void--><!--Device-Sign-setSignSpec(itemType: SignSpecItem, itemValue: int): void-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Signature
@@ -262,7 +274,9 @@ setSignSpec(itemType: SignSpecItem, itemValue: number | Uint8Array): void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Sign-setSignSpec(itemType: SignSpecItem, itemValue: int | Uint8Array): void--><!--Device-Sign-setSignSpec(itemType: SignSpecItem, itemValue: int | Uint8Array): void-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Signature
@@ -317,6 +331,8 @@ setSignSpec(itemType: SignSpecItem, itemValue: number | Uint8Array | boolean): v
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-Sign-setSignSpec(itemType: SignSpecItem, itemValue: int | Uint8Array | boolean): void--><!--Device-Sign-setSignSpec(itemType: SignSpecItem, itemValue: int | Uint8Array | boolean): void-End-->
+
 **系统能力：** SystemCapability.Security.CryptoFramework.Signature
 
 **参数：**
@@ -360,6 +376,8 @@ sign(data: DataBlob, callback: AsyncCallback<DataBlob>): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Sign-sign(data: DataBlob, callback: AsyncCallback<DataBlob>): void--><!--Device-Sign-sign(data: DataBlob, callback: AsyncCallback<DataBlob>): void-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Signature
 - API版本9-11：SystemCapability.Security.CryptoFramework
@@ -393,7 +411,9 @@ sign(data: DataBlob | null, callback: AsyncCallback<DataBlob>): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Sign-sign(data: DataBlob | null, callback: AsyncCallback<DataBlob>): void--><!--Device-Sign-sign(data: DataBlob | null, callback: AsyncCallback<DataBlob>): void-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Signature
@@ -429,6 +449,8 @@ sign(data: DataBlob): Promise<DataBlob>
 **起始版本：** 9
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Sign-sign(data: DataBlob): Promise<DataBlob>--><!--Device-Sign-sign(data: DataBlob): Promise<DataBlob>-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Signature
@@ -468,7 +490,9 @@ sign(data: DataBlob | null): Promise<DataBlob>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Sign-sign(data: DataBlob | null): Promise<DataBlob>--><!--Device-Sign-sign(data: DataBlob | null): Promise<DataBlob>-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Signature
@@ -508,7 +532,9 @@ signSync(data: DataBlob | null): DataBlob
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Sign-signSync(data: DataBlob | null): DataBlob--><!--Device-Sign-signSync(data: DataBlob | null): DataBlob-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Signature
 
@@ -754,7 +780,9 @@ update(data: DataBlob, callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Sign-update(data: DataBlob, callback: AsyncCallback<void>): void--><!--Device-Sign-update(data: DataBlob, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Signature
@@ -807,7 +835,9 @@ update(data: DataBlob): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Sign-update(data: DataBlob): Promise<void>--><!--Device-Sign-update(data: DataBlob): Promise<void>-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Signature
@@ -865,7 +895,9 @@ updateSync(data: DataBlob): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Sign-updateSync(data: DataBlob): void--><!--Device-Sign-updateSync(data: DataBlob): void-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Signature
 
@@ -897,7 +929,9 @@ readonly algName: string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Sign-readonly algName: string--><!--Device-Sign-readonly algName: string-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Signature

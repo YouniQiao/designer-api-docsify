@@ -10,6 +10,8 @@ The module provides pure type definitions for common capabilities within MDM Kit
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-unnamed-declare namespace common--><!--Device-unnamed-declare namespace common-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## Modules to Import

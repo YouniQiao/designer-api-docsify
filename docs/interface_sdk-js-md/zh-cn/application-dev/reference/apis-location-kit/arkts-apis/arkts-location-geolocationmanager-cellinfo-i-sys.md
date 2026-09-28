@@ -8,6 +8,8 @@ export interface CellInfo
 
 **起始版本：** 23
 
+<!--Device-geoLocationManager-export interface CellInfo--><!--Device-geoLocationManager-export interface CellInfo-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ additionsMap?: Map<string, string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-CellInfo-additionsMap?: Map<string, string>--><!--Device-CellInfo-additionsMap?: Map<string, string>-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ arfcn: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-CellInfo-arfcn: int--><!--Device-CellInfo-arfcn: int-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -68,6 +74,8 @@ cellId: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-CellInfo-cellId: long--><!--Device-CellInfo-cellId: long-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **系统接口：** 此接口为系统接口。
@@ -85,6 +93,8 @@ lac: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-CellInfo-lac: int--><!--Device-CellInfo-lac: int-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -104,6 +114,8 @@ mcc: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-CellInfo-mcc: int--><!--Device-CellInfo-mcc: int-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **系统接口：** 此接口为系统接口。
@@ -121,6 +133,8 @@ mnc: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-CellInfo-mnc: int--><!--Device-CellInfo-mnc: int-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -140,6 +154,8 @@ pci: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-CellInfo-pci: int--><!--Device-CellInfo-pci: int-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **系统接口：** 此接口为系统接口。
@@ -157,6 +173,8 @@ rat: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-CellInfo-rat: int--><!--Device-CellInfo-rat: int-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -176,6 +194,8 @@ signalIntensity: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-CellInfo-signalIntensity: int--><!--Device-CellInfo-signalIntensity: int-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **系统接口：** 此接口为系统接口。
@@ -194,6 +214,8 @@ tac?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-CellInfo-tac?: int--><!--Device-CellInfo-tac?: int-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **系统接口：** 此接口为系统接口。
@@ -211,6 +233,8 @@ timeSinceBoot: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-CellInfo-timeSinceBoot: long--><!--Device-CellInfo-timeSinceBoot: long-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 

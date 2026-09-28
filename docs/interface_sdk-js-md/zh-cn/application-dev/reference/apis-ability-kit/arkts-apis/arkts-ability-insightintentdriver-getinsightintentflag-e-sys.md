@@ -36,6 +36,8 @@ enum GetInsightIntentFlag
 
 **起始版本：** 20
 
+<!--Device-insightIntentDriver-enum GetInsightIntentFlag--><!--Device-insightIntentDriver-enum GetInsightIntentFlag-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +53,8 @@ GET_FULL_INSIGHT_INTENT = 0x00000001
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-GetInsightIntentFlag-GET_FULL_INSIGHT_INTENT = 0x00000001--><!--Device-GetInsightIntentFlag-GET_FULL_INSIGHT_INTENT = 0x00000001-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -68,6 +72,8 @@ GET_SUMMARY_INSIGHT_INTENT = 0x00000002
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-GetInsightIntentFlag-GET_SUMMARY_INSIGHT_INTENT = 0x00000002--><!--Device-GetInsightIntentFlag-GET_SUMMARY_INSIGHT_INTENT = 0x00000002-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -83,6 +89,8 @@ GET_ENTITY_INFO = 0x00000004
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-GetInsightIntentFlag-GET_ENTITY_INFO = 0x00000004--><!--Device-GetInsightIntentFlag-GET_ENTITY_INFO = 0x00000004-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

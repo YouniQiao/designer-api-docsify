@@ -14,6 +14,8 @@ AudioSessionManager是音频系统中的会话管理模块。本模块提供音�
 
 **起始版本：** 12
 
+<!--Device-audio-interface AudioSessionManager--><!--Device-audio-interface AudioSessionManager-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## 导入模块
@@ -32,7 +34,9 @@ activateAudioSession(strategy: AudioSessionStrategy): Promise<void>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-AudioSessionManager-activateAudioSession(strategy: AudioSessionStrategy): Promise<void>--><!--Device-AudioSessionManager-activateAudioSession(strategy: AudioSessionStrategy): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -83,6 +87,8 @@ clearSelectedMediaInputDevice(): Promise<void>
 
 **起始版本：** 21
 
+<!--Device-AudioSessionManager-clearSelectedMediaInputDevice(): Promise<void>--><!--Device-AudioSessionManager-clearSelectedMediaInputDevice(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **返回值：**
@@ -119,7 +125,9 @@ deactivateAudioSession(): Promise<void>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-AudioSessionManager-deactivateAudioSession(): Promise<void>--><!--Device-AudioSessionManager-deactivateAudioSession(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -159,6 +167,8 @@ enableMuteSuggestionWhenMixWithOthers(enable: boolean): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioSessionManager-enableMuteSuggestionWhenMixWithOthers(enable: boolean): void--><!--Device-AudioSessionManager-enableMuteSuggestionWhenMixWithOthers(enable: boolean): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **参数：**
@@ -189,6 +199,8 @@ getAvailableDevices(deviceUsage: DeviceUsage): AudioDeviceDescriptors
 获取音频可选设备列表。
 
 **起始版本：** 21
+
+<!--Device-AudioSessionManager-getAvailableDevices(deviceUsage: DeviceUsage): AudioDeviceDescriptors--><!--Device-AudioSessionManager-getAvailableDevices(deviceUsage: DeviceUsage): AudioDeviceDescriptors-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -235,6 +247,8 @@ getBluetoothAndNearlinkPreferredRecordCategory(): BluetoothAndNearlinkPreferredR
 
 **起始版本：** 21
 
+<!--Device-AudioSessionManager-getBluetoothAndNearlinkPreferredRecordCategory(): BluetoothAndNearlinkPreferredRecordCategory--><!--Device-AudioSessionManager-getBluetoothAndNearlinkPreferredRecordCategory(): BluetoothAndNearlinkPreferredRecordCategory-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **返回值：**
@@ -273,6 +287,8 @@ getDefaultOutputDevice(): DeviceType
 
 **起始版本：** 20
 
+<!--Device-AudioSessionManager-getDefaultOutputDevice(): DeviceType--><!--Device-AudioSessionManager-getDefaultOutputDevice(): DeviceType-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **返回值：**
@@ -303,6 +319,8 @@ getSelectedMediaInputDevice(): AudioDeviceDescriptor
 获得通过[selectMediaInputDevice](#selectmediainputdevice)设置的媒体输入设备。如果没有设置，返回一个deviceType属性为INVALID的设备。
 
 **起始版本：** 21
+
+<!--Device-AudioSessionManager-getSelectedMediaInputDevice(): AudioDeviceDescriptor--><!--Device-AudioSessionManager-getSelectedMediaInputDevice(): AudioDeviceDescriptor-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -342,7 +360,9 @@ isAudioSessionActivated(): boolean
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-AudioSessionManager-isAudioSessionActivated(): boolean--><!--Device-AudioSessionManager-isAudioSessionActivated(): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -370,6 +390,8 @@ isOtherMediaPlaying(): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioSessionManager-isOtherMediaPlaying(): boolean--><!--Device-AudioSessionManager-isOtherMediaPlaying(): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **返回值：**
@@ -395,6 +417,8 @@ off(type: 'audioSessionDeactivated', callback?: Callback<AudioSessionDeactivated
 **起始版本：** 12
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-AudioSessionManager-off(type: 'audioSessionDeactivated', callback?: Callback<AudioSessionDeactivatedEvent>): void--><!--Device-AudioSessionManager-off(type: 'audioSessionDeactivated', callback?: Callback<AudioSessionDeactivatedEvent>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -438,6 +462,8 @@ off(type: 'audioSessionStateChanged', callback?: Callback<AudioSessionStateChang
 
 **起始版本：** 20
 
+<!--Device-AudioSessionManager-off(type: 'audioSessionStateChanged', callback?: Callback<AudioSessionStateChangedEvent>): void--><!--Device-AudioSessionManager-off(type: 'audioSessionStateChanged', callback?: Callback<AudioSessionStateChangedEvent>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **参数：**
@@ -479,6 +505,8 @@ off(type: 'currentOutputDeviceChanged', callback?: Callback<CurrentOutputDeviceC
 取消监听当前输出设备的变化事件。
 
 **起始版本：** 20
+
+<!--Device-AudioSessionManager-off(type: 'currentOutputDeviceChanged', callback?: Callback<CurrentOutputDeviceChangedEvent>): void--><!--Device-AudioSessionManager-off(type: 'currentOutputDeviceChanged', callback?: Callback<CurrentOutputDeviceChangedEvent>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -522,6 +550,8 @@ off(type: 'availableDeviceChange', callback?: Callback<DeviceChangeAction>): voi
 
 **起始版本：** 21
 
+<!--Device-AudioSessionManager-off(type: 'availableDeviceChange', callback?: Callback<DeviceChangeAction>): void--><!--Device-AudioSessionManager-off(type: 'availableDeviceChange', callback?: Callback<DeviceChangeAction>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **参数：**
@@ -562,6 +592,8 @@ off(type: 'currentInputDeviceChanged', callback?: Callback<CurrentInputDeviceCha
 取消监听当前输入设备的变化事件。
 
 **起始版本：** 21
+
+<!--Device-AudioSessionManager-off(type: 'currentInputDeviceChanged', callback?: Callback<CurrentInputDeviceChangedEvent>): void--><!--Device-AudioSessionManager-off(type: 'currentInputDeviceChanged', callback?: Callback<CurrentInputDeviceChangedEvent>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -606,6 +638,8 @@ on(type: 'audioSessionDeactivated', callback: Callback<AudioSessionDeactivatedEv
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-AudioSessionManager-on(type: 'audioSessionDeactivated', callback: Callback<AudioSessionDeactivatedEvent>): void--><!--Device-AudioSessionManager-on(type: 'audioSessionDeactivated', callback: Callback<AudioSessionDeactivatedEvent>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **参数：**
@@ -641,6 +675,8 @@ on(type: 'audioSessionStateChanged', callback: Callback<AudioSessionStateChanged
 
 **起始版本：** 20
 
+<!--Device-AudioSessionManager-on(type: 'audioSessionStateChanged', callback: Callback<AudioSessionStateChangedEvent>): void--><!--Device-AudioSessionManager-on(type: 'audioSessionStateChanged', callback: Callback<AudioSessionStateChangedEvent>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **参数：**
@@ -675,6 +711,8 @@ on(type: 'currentOutputDeviceChanged', callback: Callback<CurrentOutputDeviceCha
 监听当前输出设备变化事件（当前输出设备发生变化时触发）。使用callback异步回调。
 
 **起始版本：** 20
+
+<!--Device-AudioSessionManager-on(type: 'currentOutputDeviceChanged', callback: Callback<CurrentOutputDeviceChangedEvent>): void--><!--Device-AudioSessionManager-on(type: 'currentOutputDeviceChanged', callback: Callback<CurrentOutputDeviceChangedEvent>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -713,6 +751,8 @@ on(type: 'availableDeviceChange', deviceUsage: DeviceUsage, callback: Callback<D
 
 **起始版本：** 21
 
+<!--Device-AudioSessionManager-on(type: 'availableDeviceChange', deviceUsage: DeviceUsage, callback: Callback<DeviceChangeAction>): void--><!--Device-AudioSessionManager-on(type: 'availableDeviceChange', deviceUsage: DeviceUsage, callback: Callback<DeviceChangeAction>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **参数：**
@@ -747,6 +787,8 @@ on(type: 'currentInputDeviceChanged', callback: Callback<CurrentInputDeviceChang
 监听当前输入设备变化事件（当前输入设备发生变化时触发）。
 
 **起始版本：** 21
+
+<!--Device-AudioSessionManager-on(type: 'currentInputDeviceChanged', callback: Callback<CurrentInputDeviceChangedEvent>): void--><!--Device-AudioSessionManager-on(type: 'currentInputDeviceChanged', callback: Callback<CurrentInputDeviceChangedEvent>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -793,6 +835,8 @@ selectMediaInputDevice(inputAudioDevice: AudioDeviceDescriptor): Promise<void>
 > - 应用可以监听[currentInputDeviceChanged](#oncurrentinputdevicechanged)事件来获得实际的输入设备。
 
 **起始版本：** 21
+
+<!--Device-AudioSessionManager-selectMediaInputDevice(inputAudioDevice: AudioDeviceDescriptor): Promise<void>--><!--Device-AudioSessionManager-selectMediaInputDevice(inputAudioDevice: AudioDeviceDescriptor): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -856,6 +900,8 @@ setAudioSessionBehavior(behavior: number): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioSessionManager-setAudioSessionBehavior(behavior: int): void--><!--Device-AudioSessionManager-setAudioSessionBehavior(behavior: int): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **参数：**
@@ -888,6 +934,8 @@ setAudioSessionScene(scene: AudioSessionScene): void
 设置音频会话场景参数。
 
 **起始版本：** 20
+
+<!--Device-AudioSessionManager-setAudioSessionScene(scene: AudioSessionScene): void--><!--Device-AudioSessionManager-setAudioSessionScene(scene: AudioSessionScene): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -928,6 +976,8 @@ setBluetoothAndNearlinkPreferredRecordCategory(category: BluetoothAndNearlinkPre
 > - 应用可以监听[currentInputDeviceChanged](#oncurrentinputdevicechanged)事件来获得实际的输入设备。
 
 **起始版本：** 21
+
+<!--Device-AudioSessionManager-setBluetoothAndNearlinkPreferredRecordCategory(category: BluetoothAndNearlinkPreferredRecordCategory): Promise<void>--><!--Device-AudioSessionManager-setBluetoothAndNearlinkPreferredRecordCategory(category: BluetoothAndNearlinkPreferredRecordCategory): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -985,6 +1035,8 @@ setCapturerMuteHint(mute: boolean): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioSessionManager-setCapturerMuteHint(mute: boolean): Promise<void>--><!--Device-AudioSessionManager-setCapturerMuteHint(mute: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **参数：**
@@ -1034,6 +1086,8 @@ setDefaultOutputDevice(deviceType: DeviceType): Promise<void>
 > - 由于AudioSessionManager是应用级设置，调用本接口设置默认音频输出设备时，会对当前应用所有适用范围内的音频流生效，且会覆盖AudioRenderer的[setDefaultOutputDevice](arkts-audio-audio-audiorenderer-i.md#setdefaultoutputdevice)接口设置的默认音频输出设备信息。
 
 **起始版本：** 20
+
+<!--Device-AudioSessionManager-setDefaultOutputDevice(deviceType: DeviceType): Promise<void>--><!--Device-AudioSessionManager-setDefaultOutputDevice(deviceType: DeviceType): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -1088,6 +1142,8 @@ setMediaOutputDevice(deviceType: DeviceType): Promise<void>
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioSessionManager-setMediaOutputDevice(deviceType: DeviceType): Promise<void>--><!--Device-AudioSessionManager-setMediaOutputDevice(deviceType: DeviceType): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 

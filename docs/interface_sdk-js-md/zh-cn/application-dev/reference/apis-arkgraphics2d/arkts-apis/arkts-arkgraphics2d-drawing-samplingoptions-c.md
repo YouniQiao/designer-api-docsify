@@ -16,6 +16,8 @@ class SamplingOptions
 
 **起始版本：** 12
 
+<!--Device-drawing-class SamplingOptions--><!--Device-drawing-class SamplingOptions-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## 导入模块
@@ -33,6 +35,8 @@ constructor()
 构造一个新的采样选项对象，[FilterMode](arkts-arkgraphics2d-drawing-filtermode-e.md)的默认值为FILTER_MODE_NEAREST。
 
 **起始版本：** 12
+
+<!--Device-SamplingOptions-constructor()--><!--Device-SamplingOptions-constructor()-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -60,6 +64,8 @@ constructor(filterMode: FilterMode)
 构造一个新的采样选项对象，可通过指定filterMode参数适配不同的图像采样场景。
 
 **起始版本：** 12
+
+<!--Device-SamplingOptions-constructor(filterMode: FilterMode)--><!--Device-SamplingOptions-constructor(filterMode: FilterMode)-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

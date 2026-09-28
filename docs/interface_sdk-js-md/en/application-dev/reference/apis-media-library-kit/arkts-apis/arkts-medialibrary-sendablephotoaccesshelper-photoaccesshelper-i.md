@@ -10,6 +10,8 @@ Helper functions to access photos and albums.
 
 **Since:** 12
 
+<!--Device-sendablePhotoAccessHelper-interface PhotoAccessHelper extends lang.ISendable--><!--Device-sendablePhotoAccessHelper-interface PhotoAccessHelper extends lang.ISendable-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
@@ -35,6 +37,8 @@ If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PhotoAccessHelper-createAsset(photoType: PhotoType, extension: string, options?: photoAccessHelper.CreateOptions): Promise<string>--><!--Device-PhotoAccessHelper-createAsset(photoType: PhotoType, extension: string, options?: photoAccessHelper.CreateOptions): Promise<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -97,6 +101,8 @@ Before the operation, ensure that the albums to obtain exist.
 **Since:** 12
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-getAlbums(options: photoAccessHelper.FetchOptions): Promise<FetchResult<Album>>--><!--Device-PhotoAccessHelper-getAlbums(options: photoAccessHelper.FetchOptions): Promise<FetchResult<Album>>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -168,6 +174,8 @@ Before the operation, ensure that the albums to obtain exist.
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-PhotoAccessHelper-getAlbums(type: AlbumType, subtype: AlbumSubtype, options?: photoAccessHelper.FetchOptions): Promise<FetchResult<Album>>--><!--Device-PhotoAccessHelper-getAlbums(type: AlbumType, subtype: AlbumSubtype, options?: photoAccessHelper.FetchOptions): Promise<FetchResult<Album>>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
@@ -236,6 +244,8 @@ Obtains image and video assets. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-PhotoAccessHelper-getAssets(options: photoAccessHelper.FetchOptions): Promise<FetchResult<PhotoAsset>>--><!--Device-PhotoAccessHelper-getAssets(options: photoAccessHelper.FetchOptions): Promise<FetchResult<PhotoAsset>>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
@@ -299,6 +309,8 @@ Obtains resources of burst photos. This API uses a promise to return the result.
 **Since:** 12
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-getBurstAssets(burstKey: string, options: photoAccessHelper.FetchOptions): Promise<FetchResult<PhotoAsset>>--><!--Device-PhotoAccessHelper-getBurstAssets(burstKey: string, options: photoAccessHelper.FetchOptions): Promise<FetchResult<PhotoAsset>>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -371,6 +383,8 @@ release(): Promise<void>
 Releases the **PhotoAccessHelper** instance. Call this method when the APIs of the **PhotoAccessHelper** instance are no longer used. This API uses a promise to return the result.
 
 **Since:** 12
+
+<!--Device-PhotoAccessHelper-release(): Promise<void>--><!--Device-PhotoAccessHelper-release(): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

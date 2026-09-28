@@ -10,6 +10,8 @@ enum CameraErrorCode
 
 **起始版本：** 10
 
+<!--Device-camera-enum CameraErrorCode--><!--Device-camera-enum CameraErrorCode-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## DEVICE_FREQUENTLY_SWITCHED
@@ -21,6 +23,8 @@ DEVICE_FREQUENTLY_SWITCHED = 7400111
 Camera frequently switched.
 
 **起始版本：** 18
+
+<!--Device-CameraErrorCode-DEVICE_FREQUENTLY_SWITCHED = 7400111--><!--Device-CameraErrorCode-DEVICE_FREQUENTLY_SWITCHED = 7400111-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -35,6 +39,8 @@ CAMERA_LENS_RETRACTED = 7400112
 Camera lens retracted.
 
 **起始版本：** 18
+
+<!--Device-CameraErrorCode-CAMERA_LENS_RETRACTED = 7400112--><!--Device-CameraErrorCode-CAMERA_LENS_RETRACTED = 7400112-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

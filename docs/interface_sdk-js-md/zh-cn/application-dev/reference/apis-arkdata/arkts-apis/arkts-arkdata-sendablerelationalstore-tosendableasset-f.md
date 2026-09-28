@@ -16,6 +16,8 @@ function toSendableAsset(asset: NonSendableAsset): Asset
 
 **起始版本：** 12
 
+<!--Device-sendableRelationalStore-function toSendableAsset(asset: NonSendableAsset): Asset--><!--Device-sendableRelationalStore-function toSendableAsset(asset: NonSendableAsset): Asset-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**

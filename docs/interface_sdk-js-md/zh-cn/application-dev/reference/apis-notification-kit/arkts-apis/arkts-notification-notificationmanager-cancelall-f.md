@@ -18,6 +18,8 @@ function cancelAll(callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
+<!--Device-notificationManager-function cancelAll(callback: AsyncCallback<void>): void--><!--Device-notificationManager-function cancelAll(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **参见：**
@@ -71,6 +73,8 @@ function cancelAll(): Promise<void>
 取消后，当前应用的所有通知将从通知中心、状态栏等位置移除，用户不再可见。适用于应用退出或用户手动清除全部通知的场景。
 
 **起始版本：** 9
+
+<!--Device-notificationManager-function cancelAll(): Promise<void>--><!--Device-notificationManager-function cancelAll(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

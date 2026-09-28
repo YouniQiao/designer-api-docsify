@@ -27,6 +27,8 @@ function addDisallowedPermissiveUsbDevices(admin: Want, usbDevices: Array<Permis
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-usbManager-function addDisallowedPermissiveUsbDevices(admin: Want, usbDevices: Array<PermissiveUsbDeviceType>): void--><!--Device-usbManager-function addDisallowedPermissiveUsbDevices(admin: Want, usbDevices: Array<PermissiveUsbDeviceType>): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**

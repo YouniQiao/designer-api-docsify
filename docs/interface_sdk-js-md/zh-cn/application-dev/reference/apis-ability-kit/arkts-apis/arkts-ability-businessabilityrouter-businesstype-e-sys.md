@@ -8,6 +8,8 @@ export enum BusinessType
 
 **起始版本：** 10
 
+<!--Device-businessAbilityRouter-export enum BusinessType--><!--Device-businessAbilityRouter-export enum BusinessType-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -22,6 +24,8 @@ SHARE = 0
 
 **起始版本：** 10
 
+<!--Device-BusinessType-SHARE = 0--><!--Device-BusinessType-SHARE = 0-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -35,6 +39,8 @@ UNSPECIFIED = 255
 标识未指定类型的Ability信息。
 
 **起始版本：** 10
+
+<!--Device-BusinessType-UNSPECIFIED = 255--><!--Device-BusinessType-UNSPECIFIED = 255-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

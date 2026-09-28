@@ -10,6 +10,8 @@ interface CameraInput
 
 **起始版本：** 10
 
+<!--Device-camera-interface CameraInput--><!--Device-camera-interface CameraInput-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
@@ -28,7 +30,9 @@ close(callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-CameraInput-close(callback: AsyncCallback<void>): void--><!--Device-CameraInput-close(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -72,7 +76,9 @@ close(): Promise<void>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-CameraInput-close(): Promise<void>--><!--Device-CameraInput-close(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -112,7 +118,9 @@ getPhysicalCameraOrientation(): number
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-CameraInput-getPhysicalCameraOrientation(): int--><!--Device-CameraInput-getPhysicalCameraOrientation(): int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -141,7 +149,9 @@ isPhysicalCameraOrientationVariable(): boolean
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-CameraInput-isPhysicalCameraOrientationVariable(): boolean--><!--Device-CameraInput-isPhysicalCameraOrientationVariable(): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -172,6 +182,8 @@ off(type: 'error', camera: CameraDevice, callback?: ErrorCallback): void
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
+<!--Device-CameraInput-off(type: 'error', camera: CameraDevice, callback?: ErrorCallback): void--><!--Device-CameraInput-off(type: 'error', camera: CameraDevice, callback?: ErrorCallback): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **参数：**
@@ -201,6 +213,8 @@ off(type: 'cameraOcclusionDetection', callback?: AsyncCallback<CameraOcclusionDe
 **起始版本：** 23
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-CameraInput-off(type: 'cameraOcclusionDetection', callback?: AsyncCallback<CameraOcclusionDetectionResult>): void--><!--Device-CameraInput-off(type: 'cameraOcclusionDetection', callback?: AsyncCallback<CameraOcclusionDetectionResult>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -258,6 +272,8 @@ on(type: 'error', camera: CameraDevice, callback: ErrorCallback): void
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
+<!--Device-CameraInput-on(type: 'error', camera: CameraDevice, callback: ErrorCallback): void--><!--Device-CameraInput-on(type: 'error', camera: CameraDevice, callback: ErrorCallback): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **参数：**
@@ -297,6 +313,8 @@ on(type: 'cameraOcclusionDetection', callback: AsyncCallback<CameraOcclusionDete
 **起始版本：** 23
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-CameraInput-on(type: 'cameraOcclusionDetection', callback: AsyncCallback<CameraOcclusionDetectionResult>): void--><!--Device-CameraInput-on(type: 'cameraOcclusionDetection', callback: AsyncCallback<CameraOcclusionDetectionResult>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -346,7 +364,9 @@ open(callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-CameraInput-open(callback: AsyncCallback<void>): void--><!--Device-CameraInput-open(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -392,7 +412,9 @@ open(): Promise<void>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-CameraInput-open(): Promise<void>--><!--Device-CameraInput-open(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -437,7 +459,9 @@ open(isSecureEnabled: boolean): Promise<bigint>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-CameraInput-open(isSecureEnabled: boolean): Promise<bigint>--><!--Device-CameraInput-open(isSecureEnabled: boolean): Promise<bigint>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -487,7 +511,9 @@ open(type: CameraConcurrentType): Promise<void>
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-CameraInput-open(type: CameraConcurrentType): Promise<void>--><!--Device-CameraInput-open(type: CameraConcurrentType): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -536,7 +562,9 @@ usePhysicalCameraOrientation(isUsed: boolean): void
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-CameraInput-usePhysicalCameraOrientation(isUsed: boolean): void--><!--Device-CameraInput-usePhysicalCameraOrientation(isUsed: boolean): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

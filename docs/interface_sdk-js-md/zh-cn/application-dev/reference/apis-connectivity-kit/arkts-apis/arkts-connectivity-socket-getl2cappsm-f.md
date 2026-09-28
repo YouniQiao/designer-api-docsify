@@ -18,6 +18,8 @@ function getL2capPsm(serverSocket: number): number
 
 **起始版本：** 20
 
+<!--Device-socket-function getL2capPsm(serverSocket: int): int--><!--Device-socket-function getL2capPsm(serverSocket: int): int-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**

@@ -16,6 +16,8 @@ export declare class ToolBarOptions extends Array<ToolBarOption>
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-unnamed-export declare class ToolBarOptions extends Array<ToolBarOption>--><!--Device-unnamed-export declare class ToolBarOptions extends Array<ToolBarOption>-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块

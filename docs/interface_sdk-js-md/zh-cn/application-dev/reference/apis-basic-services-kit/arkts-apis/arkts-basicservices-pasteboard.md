@@ -4,6 +4,8 @@
 
 **起始版本：** 6
 
+<!--Device-unnamed-declare namespace pasteboard--><!--Device-unnamed-declare namespace pasteboard-End-->
+
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
 ## 导入模块

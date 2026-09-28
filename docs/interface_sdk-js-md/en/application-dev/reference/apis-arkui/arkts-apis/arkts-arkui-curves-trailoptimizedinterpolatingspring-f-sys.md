@@ -18,6 +18,8 @@ Creates an interpolating spring curve animated from 0 to 1. The actual animation
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-curves-function trailOptimizedInterpolatingSpring(velocity: number, mass: number, stiffness: number, damping: number, trail?: TrailOptimization): ICurve--><!--Device-curves-function trailOptimizedInterpolatingSpring(velocity: number, mass: number, stiffness: number, damping: number, trail?: TrailOptimization): ICurve-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.

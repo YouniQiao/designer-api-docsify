@@ -8,6 +8,8 @@ Sets the animation playback mode.
 
 **Since:** 7
 
+<!--Device-unnamed-declare enum PlayMode--><!--Device-unnamed-declare enum PlayMode-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Normal
@@ -25,6 +27,8 @@ The animation is played forwards.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-PlayMode-Normal--><!--Device-PlayMode-Normal-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,6 +48,8 @@ The animation is played backwards.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-PlayMode-Reverse--><!--Device-PlayMode-Reverse-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Alternate
@@ -62,6 +68,8 @@ The animation is played forwards for an odd number of times (1, 3, 5...) and bac
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-PlayMode-Alternate--><!--Device-PlayMode-Alternate-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## AlternateReverse
@@ -79,5 +87,7 @@ The animation is played backwards for an odd number of times (1, 3, 5...) and fo
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-PlayMode-AlternateReverse--><!--Device-PlayMode-AlternateReverse-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

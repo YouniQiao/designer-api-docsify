@@ -18,6 +18,8 @@ export function createPluginModuleContext(context: Context, pluginBundleName: st
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-application-export function createPluginModuleContext(context: Context, pluginBundleName: string, pluginModuleName: string): Promise<Context>--><!--Device-application-export function createPluginModuleContext(context: Context, pluginBundleName: string, pluginModuleName: string): Promise<Context>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**

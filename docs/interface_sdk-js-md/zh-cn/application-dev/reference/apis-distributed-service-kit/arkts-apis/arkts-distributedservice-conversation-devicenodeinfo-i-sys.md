@@ -8,6 +8,8 @@ interface DeviceNodeInfo
 
 **起始版本：** 26.0.1
 
+<!--Device-conversation-interface DeviceNodeInfo--><!--Device-conversation-interface DeviceNodeInfo-End-->
+
 **系统能力：** SystemCapability.Communication.SoftBus.Core
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ deviceName: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DeviceNodeInfo-deviceName: string--><!--Device-DeviceNodeInfo-deviceName: string-End-->
+
 **系统能力：** SystemCapability.Communication.SoftBus.Core
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ deviceTypeId: number
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DeviceNodeInfo-deviceTypeId: int--><!--Device-DeviceNodeInfo-deviceTypeId: int-End-->
 
 **系统能力：** SystemCapability.Communication.SoftBus.Core
 
@@ -68,6 +74,8 @@ nearby: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DeviceNodeInfo-nearby: boolean--><!--Device-DeviceNodeInfo-nearby: boolean-End-->
+
 **系统能力：** SystemCapability.Communication.SoftBus.Core
 
 **系统接口：** 此接口为系统接口。
@@ -86,6 +94,8 @@ networkId: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DeviceNodeInfo-networkId: string--><!--Device-DeviceNodeInfo-networkId: string-End-->
+
 **系统能力：** SystemCapability.Communication.SoftBus.Core
 
 **系统接口：** 此接口为系统接口。
@@ -103,6 +113,8 @@ udid: string
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DeviceNodeInfo-udid: string--><!--Device-DeviceNodeInfo-udid: string-End-->
 
 **系统能力：** SystemCapability.Communication.SoftBus.Core
 

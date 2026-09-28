@@ -8,6 +8,8 @@ export interface MmsRetrieveConf
 
 **起始版本：** 8
 
+<!--Device-sms-export interface MmsRetrieveConf--><!--Device-sms-export interface MmsRetrieveConf-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ cc?: Array<MmsAddress>
 
 **起始版本：** 8
 
+<!--Device-MmsRetrieveConf-cc?: Array<MmsAddress>--><!--Device-MmsRetrieveConf-cc?: Array<MmsAddress>-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ contentType: string
 **类型：** string
 
 **起始版本：** 8
+
+<!--Device-MmsRetrieveConf-contentType: string--><!--Device-MmsRetrieveConf-contentType: string-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -62,6 +68,8 @@ date: number
 
 **起始版本：** 8
 
+<!--Device-MmsRetrieveConf-date: long--><!--Device-MmsRetrieveConf-date: long-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +85,8 @@ deliveryReport?: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-MmsRetrieveConf-deliveryReport?: int--><!--Device-MmsRetrieveConf-deliveryReport?: int-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -94,6 +104,8 @@ from?: MmsAddress
 
 **起始版本：** 8
 
+<!--Device-MmsRetrieveConf-from?: MmsAddress--><!--Device-MmsRetrieveConf-from?: MmsAddress-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -109,6 +121,8 @@ messageId: string
 **类型：** string
 
 **起始版本：** 8
+
+<!--Device-MmsRetrieveConf-messageId: string--><!--Device-MmsRetrieveConf-messageId: string-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -126,6 +140,8 @@ priority?: MmsPriorityType
 
 **起始版本：** 8
 
+<!--Device-MmsRetrieveConf-priority?: MmsPriorityType--><!--Device-MmsRetrieveConf-priority?: MmsPriorityType-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -141,6 +157,8 @@ readReport?: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-MmsRetrieveConf-readReport?: int--><!--Device-MmsRetrieveConf-readReport?: int-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -158,6 +176,8 @@ retrieveStatus?: number
 
 **起始版本：** 8
 
+<!--Device-MmsRetrieveConf-retrieveStatus?: int--><!--Device-MmsRetrieveConf-retrieveStatus?: int-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -173,6 +193,8 @@ retrieveText?: string
 **类型：** string
 
 **起始版本：** 8
+
+<!--Device-MmsRetrieveConf-retrieveText?: string--><!--Device-MmsRetrieveConf-retrieveText?: string-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -190,6 +212,8 @@ subject?: string
 
 **起始版本：** 8
 
+<!--Device-MmsRetrieveConf-subject?: string--><!--Device-MmsRetrieveConf-subject?: string-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -205,6 +229,8 @@ to: Array<MmsAddress>
 **类型：** Array&lt;[MmsAddress](arkts-telephony-sms-mmsaddress-i-sys.md)&gt;
 
 **起始版本：** 8
+
+<!--Device-MmsRetrieveConf-to: Array<MmsAddress>--><!--Device-MmsRetrieveConf-to: Array<MmsAddress>-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -222,6 +248,8 @@ transactionId: string
 
 **起始版本：** 8
 
+<!--Device-MmsRetrieveConf-transactionId: string--><!--Device-MmsRetrieveConf-transactionId: string-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -237,6 +265,8 @@ version: MmsVersionType
 **类型：** [MmsVersionType](arkts-telephony-sms-mmsversiontype-e-sys.md)
 
 **起始版本：** 8
+
+<!--Device-MmsRetrieveConf-version: MmsVersionType--><!--Device-MmsRetrieveConf-version: MmsVersionType-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 

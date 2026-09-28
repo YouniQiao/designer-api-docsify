@@ -8,6 +8,8 @@ export interface CMSignatureSpec
 
 **起始版本：** 11
 
+<!--Device-certificateManager-export interface CMSignatureSpec--><!--Device-certificateManager-export interface CMSignatureSpec-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
 
 ## 导入模块
@@ -28,6 +30,8 @@ digest?: CmKeyDigest
 
 **起始版本：** 11
 
+<!--Device-CMSignatureSpec-digest?: CmKeyDigest--><!--Device-CMSignatureSpec-digest?: CmKeyDigest-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
 
 ## padding
@@ -42,6 +46,8 @@ padding?: CmKeyPadding
 
 **起始版本：** 11
 
+<!--Device-CMSignatureSpec-padding?: CmKeyPadding--><!--Device-CMSignatureSpec-padding?: CmKeyPadding-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
 
 ## purpose
@@ -55,5 +61,7 @@ purpose: CmKeyPurpose
 **类型：** [CmKeyPurpose](arkts-devicecertificate-certificatemanager-cmkeypurpose-e.md)
 
 **起始版本：** 11
+
+<!--Device-CMSignatureSpec-purpose: CmKeyPurpose--><!--Device-CMSignatureSpec-purpose: CmKeyPurpose-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManager

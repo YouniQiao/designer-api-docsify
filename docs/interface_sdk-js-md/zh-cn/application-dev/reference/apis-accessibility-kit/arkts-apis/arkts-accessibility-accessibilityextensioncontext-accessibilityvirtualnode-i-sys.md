@@ -8,6 +8,8 @@ export declare interface AccessibilityVirtualNode
 
 **起始版本：** 26.0.0
 
+<!--Device-unnamed-export declare interface AccessibilityVirtualNode--><!--Device-unnamed-export declare interface AccessibilityVirtualNode-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -28,6 +30,8 @@ accessibilityFocused?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AccessibilityVirtualNode-accessibilityFocused?: boolean--><!--Device-AccessibilityVirtualNode-accessibilityFocused?: boolean-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -47,6 +51,8 @@ accessibilityGroup?: boolean
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AccessibilityVirtualNode-accessibilityGroup?: boolean--><!--Device-AccessibilityVirtualNode-accessibilityGroup?: boolean-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -74,6 +80,8 @@ accessibilityLevel?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AccessibilityVirtualNode-accessibilityLevel?: string--><!--Device-AccessibilityVirtualNode-accessibilityLevel?: string-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -91,6 +99,8 @@ accessibilityText?: string
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AccessibilityVirtualNode-accessibilityText?: string--><!--Device-AccessibilityVirtualNode-accessibilityText?: string-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -112,6 +122,8 @@ checkable?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AccessibilityVirtualNode-checkable?: boolean--><!--Device-AccessibilityVirtualNode-checkable?: boolean-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -132,6 +144,8 @@ checked?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AccessibilityVirtualNode-checked?: boolean--><!--Device-AccessibilityVirtualNode-checked?: boolean-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -149,6 +163,8 @@ childNodeIds?: Array<number>
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AccessibilityVirtualNode-childNodeIds?: Array<long>--><!--Device-AccessibilityVirtualNode-childNodeIds?: Array<long>-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -170,6 +186,8 @@ clickable?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AccessibilityVirtualNode-clickable?: boolean--><!--Device-AccessibilityVirtualNode-clickable?: boolean-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -187,6 +205,8 @@ customComponentType?: string
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AccessibilityVirtualNode-customComponentType?: string--><!--Device-AccessibilityVirtualNode-customComponentType?: string-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -208,6 +228,8 @@ elementId?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AccessibilityVirtualNode-elementId?: long--><!--Device-AccessibilityVirtualNode-elementId?: long-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -228,6 +250,8 @@ enabled?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AccessibilityVirtualNode-enabled?: boolean--><!--Device-AccessibilityVirtualNode-enabled?: boolean-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -246,6 +270,8 @@ parentId?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AccessibilityVirtualNode-parentId?: long--><!--Device-AccessibilityVirtualNode-parentId?: long-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -263,6 +289,8 @@ rect?: Rect
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AccessibilityVirtualNode-rect?: Rect--><!--Device-AccessibilityVirtualNode-rect?: Rect-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -284,6 +312,8 @@ selected?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AccessibilityVirtualNode-selected?: boolean--><!--Device-AccessibilityVirtualNode-selected?: boolean-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -301,6 +331,8 @@ supportedActionNames?: Array<string>
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AccessibilityVirtualNode-supportedActionNames?: Array<string>--><!--Device-AccessibilityVirtualNode-supportedActionNames?: Array<string>-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -320,6 +352,8 @@ text?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AccessibilityVirtualNode-text?: string--><!--Device-AccessibilityVirtualNode-text?: string-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -338,6 +372,8 @@ touchPosition?: TouchPosition
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AccessibilityVirtualNode-touchPosition?: TouchPosition--><!--Device-AccessibilityVirtualNode-touchPosition?: TouchPosition-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -355,6 +391,8 @@ virtualNodeId: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AccessibilityVirtualNode-virtualNodeId: long--><!--Device-AccessibilityVirtualNode-virtualNodeId: long-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 

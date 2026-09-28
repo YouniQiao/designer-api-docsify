@@ -8,6 +8,8 @@ export enum MultiAppMode
 
 **起始版本：** 12
 
+<!--Device-unnamed-export enum MultiAppMode--><!--Device-unnamed-export enum MultiAppMode-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **系统接口：** 此接口为系统接口。
@@ -23,6 +25,8 @@ NOT_SUPPORTED = 0
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MultiAppMode-NOT_SUPPORTED = 0--><!--Device-MultiAppMode-NOT_SUPPORTED = 0-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -42,6 +46,8 @@ MULTI_INSTANCE = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MultiAppMode-MULTI_INSTANCE = 1--><!--Device-MultiAppMode-MULTI_INSTANCE = 1-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **系统接口：** 此接口为系统接口。
@@ -57,6 +63,8 @@ APP_CLONE = 2
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MultiAppMode-APP_CLONE = 2--><!--Device-MultiAppMode-APP_CLONE = 2-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 

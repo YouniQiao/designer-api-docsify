@@ -8,6 +8,8 @@ enum BluetoothTransport
 
 **起始版本：** 10
 
+<!--Device-connection-enum BluetoothTransport--><!--Device-connection-enum BluetoothTransport-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## TRANSPORT_BR_EDR
@@ -21,6 +23,8 @@ TRANSPORT_BR_EDR = 0
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BluetoothTransport-TRANSPORT_BR_EDR = 0--><!--Device-BluetoothTransport-TRANSPORT_BR_EDR = 0-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -36,6 +40,8 @@ TRANSPORT_LE = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BluetoothTransport-TRANSPORT_LE = 1--><!--Device-BluetoothTransport-TRANSPORT_LE = 1-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## TRANSPORT_DUAL
@@ -50,6 +56,8 @@ TRANSPORT_DUAL = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BluetoothTransport-TRANSPORT_DUAL = 2--><!--Device-BluetoothTransport-TRANSPORT_DUAL = 2-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## TRANSPORT_UNKNOWN
@@ -63,5 +71,7 @@ TRANSPORT_UNKNOWN = 3
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BluetoothTransport-TRANSPORT_UNKNOWN = 3--><!--Device-BluetoothTransport-TRANSPORT_UNKNOWN = 3-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

@@ -8,6 +8,8 @@ LeakWatcherConfig对象类型，对象中包含多个用于内存泄漏监测的
 
 **起始版本：** 24
 
+<!--Device-jsLeakWatcher-export interface LeakWatcherConfig--><!--Device-jsLeakWatcher-export interface LeakWatcherConfig-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
 ## 导入模块
@@ -34,6 +36,8 @@ GC/Dump阶段，大于等于1时触发Dump。
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-LeakWatcherConfig-bgLeakCountThreshold?: int--><!--Device-LeakWatcherConfig-bgLeakCountThreshold?: int-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
 ## checkInterval
@@ -58,6 +62,8 @@ checkInterval?: number
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-LeakWatcherConfig-checkInterval?: int--><!--Device-LeakWatcherConfig-checkInterval?: int-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
 ## dumpHeapWaitTimeMs
@@ -79,6 +85,8 @@ GC结束后默认延迟5秒执行dump。
 **起始版本：** 24
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-LeakWatcherConfig-dumpHeapWaitTimeMs?: int--><!--Device-LeakWatcherConfig-dumpHeapWaitTimeMs?: int-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
@@ -104,6 +112,8 @@ exclusionList?: Array<string>
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-LeakWatcherConfig-exclusionList?: Array<string>--><!--Device-LeakWatcherConfig-exclusionList?: Array<string>-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
 ## fgLeakCountThreshold
@@ -124,6 +134,8 @@ GC/Dump阶段，大于等于5时触发Dump。
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-LeakWatcherConfig-fgLeakCountThreshold?: int--><!--Device-LeakWatcherConfig-fgLeakCountThreshold?: int-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
 ## maxStoredHeapDumps
@@ -142,6 +154,8 @@ maxStoredHeapDumps?: number
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-LeakWatcherConfig-maxStoredHeapDumps?: int--><!--Device-LeakWatcherConfig-maxStoredHeapDumps?: int-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
 ## monitorObjectTypes
@@ -159,6 +173,8 @@ monitorObjectTypes: MonitorObjectType
 **起始版本：** 24
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-LeakWatcherConfig-monitorObjectTypes: MonitorObjectType--><!--Device-LeakWatcherConfig-monitorObjectTypes: MonitorObjectType-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
@@ -181,5 +197,7 @@ objectUniqueIDs?: Array<number>
 **起始版本：** 24
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-LeakWatcherConfig-objectUniqueIDs?: Array<int>--><!--Device-LeakWatcherConfig-objectUniqueIDs?: Array<int>-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiChecker

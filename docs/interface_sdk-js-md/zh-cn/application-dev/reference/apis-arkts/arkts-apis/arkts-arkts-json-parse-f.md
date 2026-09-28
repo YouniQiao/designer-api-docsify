@@ -18,6 +18,8 @@ function parse(text: string, reviver?: Transformer, options?: ParseOptions): Obj
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-json-function parse(text: string, reviver?: Transformer, options?: ParseOptions): Object | null--><!--Device-json-function parse(text: string, reviver?: Transformer, options?: ParseOptions): Object | null-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**

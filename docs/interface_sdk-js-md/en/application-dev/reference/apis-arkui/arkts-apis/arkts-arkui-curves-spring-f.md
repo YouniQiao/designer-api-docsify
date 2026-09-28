@@ -20,6 +20,8 @@ Constructs a spring curve object.
 
 **Substitutes:** [springCurve](arkts-arkui-curves-springcurve-f.md)
 
+<!--Device-curves-function spring(velocity: number, mass: number, stiffness: number, damping: number): string--><!--Device-curves-function spring(velocity: number, mass: number, stiffness: number, damping: number): string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

@@ -8,6 +8,8 @@ export interface NotificationSlot
 
 **起始版本：** 7
 
+<!--Device-unnamed-export interface NotificationSlot--><!--Device-unnamed-export interface NotificationSlot-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## badgeFlag
@@ -24,6 +26,8 @@ badgeFlag?: boolean
 **类型：** boolean
 
 **起始版本：** 7
+
+<!--Device-NotificationSlot-badgeFlag?: boolean--><!--Device-NotificationSlot-badgeFlag?: boolean-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -42,6 +46,8 @@ bypassDnd?: boolean
 
 **起始版本：** 7
 
+<!--Device-NotificationSlot-bypassDnd?: boolean--><!--Device-NotificationSlot-bypassDnd?: boolean-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## desc
@@ -55,6 +61,8 @@ desc?: string
 **类型：** string
 
 **起始版本：** 7
+
+<!--Device-NotificationSlot-desc?: string--><!--Device-NotificationSlot-desc?: string-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -73,6 +81,8 @@ readonly enabled?: boolean
 
 **起始版本：** 9
 
+<!--Device-NotificationSlot-readonly enabled?: boolean--><!--Device-NotificationSlot-readonly enabled?: boolean-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## lightColor
@@ -86,6 +96,8 @@ lightColor?: number
 **类型：** number
 
 **起始版本：** 7
+
+<!--Device-NotificationSlot-lightColor?: int--><!--Device-NotificationSlot-lightColor?: int-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -104,6 +116,8 @@ lightEnabled?: boolean
 
 **起始版本：** 7
 
+<!--Device-NotificationSlot-lightEnabled?: boolean--><!--Device-NotificationSlot-lightEnabled?: boolean-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## lockscreenVisibility
@@ -117,6 +131,8 @@ lockscreenVisibility?: number
 **类型：** number
 
 **起始版本：** 7
+
+<!--Device-NotificationSlot-lockscreenVisibility?: int--><!--Device-NotificationSlot-lockscreenVisibility?: int-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -132,6 +148,8 @@ notificationLevel?: notificationManager.SlotLevel
 
 **起始版本：** 20
 
+<!--Device-NotificationSlot-notificationLevel?: notificationManager.SlotLevel--><!--Device-NotificationSlot-notificationLevel?: notificationManager.SlotLevel-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## notificationType
@@ -146,6 +164,8 @@ notificationType?: notificationManager.SlotType
 
 **起始版本：** 11
 
+<!--Device-NotificationSlot-notificationType?: notificationManager.SlotType--><!--Device-NotificationSlot-notificationType?: notificationManager.SlotType-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## sound
@@ -159,6 +179,8 @@ sound?: string
 **类型：** string
 
 **起始版本：** 7
+
+<!--Device-NotificationSlot-sound?: string--><!--Device-NotificationSlot-sound?: string-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -177,6 +199,8 @@ vibrationEnabled?: boolean
 
 **起始版本：** 7
 
+<!--Device-NotificationSlot-vibrationEnabled?: boolean--><!--Device-NotificationSlot-vibrationEnabled?: boolean-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## vibrationValues
@@ -190,6 +214,8 @@ vibrationValues?: Array<number>
 **类型：** Array&lt;number&gt;
 
 **起始版本：** 7
+
+<!--Device-NotificationSlot-vibrationValues?: Array<long>--><!--Device-NotificationSlot-vibrationValues?: Array<long>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -209,6 +235,8 @@ level?: notification.SlotLevel
 
 **替代接口：** [notificationLevel](#notificationlevel)
 
+<!--Device-NotificationSlot-level?: notification.SlotLevel--><!--Device-NotificationSlot-level?: notification.SlotLevel-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## type
@@ -226,5 +254,7 @@ type?: notification.SlotType
 **废弃版本：** 11
 
 **替代接口：** [notificationType](#notificationtype)
+
+<!--Device-NotificationSlot-type?: notification.SlotType--><!--Device-NotificationSlot-type?: notification.SlotType-End-->
 
 **系统能力：** SystemCapability.Notification.Notification

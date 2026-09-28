@@ -24,6 +24,8 @@ function enableHotspot(): void
 
 **需要权限：** ohos.permission.MANAGE_WIFI_HOTSPOT_EXT
 
+<!--Device-wifiManagerExt-function enableHotspot(): void--><!--Device-wifiManagerExt-function enableHotspot(): void-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.AP.Extension
 
 **错误码：**

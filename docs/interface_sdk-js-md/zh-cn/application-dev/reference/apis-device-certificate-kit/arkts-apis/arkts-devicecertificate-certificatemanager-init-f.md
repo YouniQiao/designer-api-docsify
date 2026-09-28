@@ -18,6 +18,8 @@ function init(authUri: string, spec: CMSignatureSpec, callback: AsyncCallback<CM
 
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER
 
+<!--Device-certificateManager-function init(authUri: string, spec: CMSignatureSpec, callback: AsyncCallback<CMHandle>): void--><!--Device-certificateManager-function init(authUri: string, spec: CMSignatureSpec, callback: AsyncCallback<CMHandle>): void-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
 
 **参数：**
@@ -76,6 +78,8 @@ function init(authUri: string, spec: CMSignatureSpec): Promise<CMHandle>
 **起始版本：** 11
 
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER
+
+<!--Device-certificateManager-function init(authUri: string, spec: CMSignatureSpec): Promise<CMHandle>--><!--Device-certificateManager-function init(authUri: string, spec: CMSignatureSpec): Promise<CMHandle>-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManager
 

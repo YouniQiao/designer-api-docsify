@@ -8,6 +8,8 @@ export interface NetStatsChangeInfo
 
 **起始版本：** 11
 
+<!--Device-statistics-export interface NetStatsChangeInfo--><!--Device-statistics-export interface NetStatsChangeInfo-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ iface: string
 
 **起始版本：** 11
 
+<!--Device-NetStatsChangeInfo-iface: string--><!--Device-NetStatsChangeInfo-iface: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ uid?: number
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-NetStatsChangeInfo-uid?: int--><!--Device-NetStatsChangeInfo-uid?: int-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 

@@ -18,6 +18,8 @@ declare function fdopenStreamSync(fd: number, mode: string): Stream
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-unnamed-declare function fdopenStreamSync(fd: number, mode: string): Stream--><!--Device-unnamed-declare function fdopenStreamSync(fd: number, mode: string): Stream-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**

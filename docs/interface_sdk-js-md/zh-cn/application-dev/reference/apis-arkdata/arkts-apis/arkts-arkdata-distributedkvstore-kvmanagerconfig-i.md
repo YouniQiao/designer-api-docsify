@@ -8,6 +8,8 @@ interface KVManagerConfig
 
 **起始版本：** 9
 
+<!--Device-distributedKVStore-interface KVManagerConfig--><!--Device-distributedKVStore-interface KVManagerConfig-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ bundleName: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-KVManagerConfig-bundleName: string--><!--Device-KVManagerConfig-bundleName: string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## context
@@ -40,7 +44,7 @@ context: BaseContext
 
 应用的上下文。
 
-FA模型的应用Context定义见Context。
+FA模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context.md)。
 
 Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md)。
 
@@ -51,6 +55,8 @@ Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-KVManagerConfig-context: BaseContext--><!--Device-KVManagerConfig-context: BaseContext-End-->
 
 **系统能力：** 
 - API版本10+：SystemCapability.DistributedDataManager.KVStore.Core if swap the area, you should close all the KV store and use the new BaseContext to create the KVManager

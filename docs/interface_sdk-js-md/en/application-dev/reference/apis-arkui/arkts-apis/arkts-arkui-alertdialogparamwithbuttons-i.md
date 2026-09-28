@@ -10,6 +10,8 @@ Inherited from [AlertDialogParam](arkts-arkui-alertdialogparam-i.md).
 
 **Since:** 7
 
+<!--Device-unnamed-declare interface AlertDialogParamWithButtons extends AlertDialogParam--><!--Device-unnamed-declare interface AlertDialogParamWithButtons extends AlertDialogParam-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## primaryButton
@@ -28,6 +30,8 @@ Information about the primary button, including the enabling status, default foc
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-AlertDialogParamWithButtons-primaryButton: AlertDialogButtonBaseOptions--><!--Device-AlertDialogParamWithButtons-primaryButton: AlertDialogButtonBaseOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## secondaryButton
@@ -45,5 +49,7 @@ Information about the secondary button, including the enabling status, default f
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AlertDialogParamWithButtons-secondaryButton: AlertDialogButtonBaseOptions--><!--Device-AlertDialogParamWithButtons-secondaryButton: AlertDialogButtonBaseOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

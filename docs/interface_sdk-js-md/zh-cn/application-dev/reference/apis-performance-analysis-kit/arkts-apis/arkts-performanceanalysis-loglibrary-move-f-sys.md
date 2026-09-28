@@ -18,6 +18,8 @@ function move(logType: string, logName: string, dest: string): Promise<void>
 
 **需要权限：** ohos.permission.WRITE_HIVIEW_SYSTEM
 
+<!--Device-logLibrary-function move(logType: string, logName: string, dest: string): Promise<void>--><!--Device-logLibrary-function move(logType: string, logName: string, dest: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.Hiview.LogLibrary
 
 **系统接口：** 此接口为系统接口。
@@ -84,6 +86,8 @@ function move(logType: string, logName: string, dest: string, callback: AsyncCal
 **起始版本：** 10
 
 **需要权限：** ohos.permission.WRITE_HIVIEW_SYSTEM
+
+<!--Device-logLibrary-function move(logType: string, logName: string, dest: string, callback: AsyncCallback<void>): void--><!--Device-logLibrary-function move(logType: string, logName: string, dest: string, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.Hiview.LogLibrary
 

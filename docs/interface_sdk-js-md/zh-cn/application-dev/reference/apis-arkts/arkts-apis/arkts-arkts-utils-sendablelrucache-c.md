@@ -10,6 +10,8 @@ SendableLruCache在缓存空间不足时，会用新数据替换近期最少使�
 
 **装饰器类型：** @Sendable
 
+<!--Device-utils-class SendableLruCache<K, V>--><!--Device-utils-class SendableLruCache<K, V>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -30,6 +32,8 @@ clear(): void
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-SendableLruCache-clear(): void--><!--Device-SendableLruCache-clear(): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## constructor
@@ -43,6 +47,8 @@ constructor(capacity?: number)
 **起始版本：** 18
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-SendableLruCache-constructor(capacity?: number)--><!--Device-SendableLruCache-constructor(capacity?: number)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -63,6 +69,8 @@ contains(key: K): boolean
 **起始版本：** 18
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-SendableLruCache-contains(key: K): boolean--><!--Device-SendableLruCache-contains(key: K): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -90,6 +98,8 @@ entries(): IterableIterator<[K, V]>
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-SendableLruCache-entries(): IterableIterator<[K, V]>--><!--Device-SendableLruCache-entries(): IterableIterator<[K, V]>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -109,6 +119,8 @@ get(key: K): V | undefined
 **起始版本：** 18
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-SendableLruCache-get(key: K): V | undefined--><!--Device-SendableLruCache-get(key: K): V | undefined-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -136,6 +148,8 @@ getCapacity(): number
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-SendableLruCache-getCapacity(): number--><!--Device-SendableLruCache-getCapacity(): number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -155,6 +169,8 @@ getCreateCount(): number
 **起始版本：** 18
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-SendableLruCache-getCreateCount(): number--><!--Device-SendableLruCache-getCreateCount(): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -176,6 +192,8 @@ getMatchCount(): number
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-SendableLruCache-getMatchCount(): number--><!--Device-SendableLruCache-getMatchCount(): number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -195,6 +213,8 @@ getMissCount(): number
 **起始版本：** 18
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-SendableLruCache-getMissCount(): number--><!--Device-SendableLruCache-getMissCount(): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -216,6 +236,8 @@ getPutCount(): number
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-SendableLruCache-getPutCount(): number--><!--Device-SendableLruCache-getPutCount(): number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -235,6 +257,8 @@ getRemoveCount(): number
 **起始版本：** 18
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-SendableLruCache-getRemoveCount(): number--><!--Device-SendableLruCache-getRemoveCount(): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -256,6 +280,8 @@ isEmpty(): boolean
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-SendableLruCache-isEmpty(): boolean--><!--Device-SendableLruCache-isEmpty(): boolean-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -276,6 +302,8 @@ keys(): K[]
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-SendableLruCache-keys(): K[]--><!--Device-SendableLruCache-keys(): K[]-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -295,6 +323,8 @@ put(key: K, value: V): V
 **起始版本：** 18
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-SendableLruCache-put(key: K, value: V): V--><!--Device-SendableLruCache-put(key: K, value: V): V-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -323,6 +353,8 @@ remove(key: K): V | undefined
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-SendableLruCache-remove(key: K): V | undefined--><!--Device-SendableLruCache-remove(key: K): V | undefined-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -349,6 +381,8 @@ toString(): string
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-SendableLruCache-toString(): string--><!--Device-SendableLruCache-toString(): string-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -369,6 +403,8 @@ updateCapacity(newCapacity: number): void
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-SendableLruCache-updateCapacity(newCapacity: number): void--><!--Device-SendableLruCache-updateCapacity(newCapacity: number): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -388,6 +424,8 @@ values(): V[]
 **起始版本：** 18
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-SendableLruCache-values(): V[]--><!--Device-SendableLruCache-values(): V[]-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -410,5 +448,7 @@ readonly length: number
 **起始版本：** 18
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-SendableLruCache-readonly length: number--><!--Device-SendableLruCache-readonly length: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

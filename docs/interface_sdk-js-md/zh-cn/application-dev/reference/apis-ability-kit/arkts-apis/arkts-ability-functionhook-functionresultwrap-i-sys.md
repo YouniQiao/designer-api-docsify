@@ -8,6 +8,8 @@ onAfterInvokeFunction的结果参数。
 
 **起始版本：** 26.0.1
 
+<!--Device-unnamed-export interface FunctionResultWrap--><!--Device-unnamed-export interface FunctionResultWrap-End-->
+
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -25,6 +27,8 @@ dmSessionId?: string
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FunctionResultWrap-dmSessionId?: string--><!--Device-FunctionResultWrap-dmSessionId?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -44,6 +48,8 @@ result: InvokeResult
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FunctionResultWrap-result: InvokeResult--><!--Device-FunctionResultWrap-result: InvokeResult-End-->
+
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +67,8 @@ toolCallId?: string
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FunctionResultWrap-toolCallId?: string--><!--Device-FunctionResultWrap-toolCallId?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 

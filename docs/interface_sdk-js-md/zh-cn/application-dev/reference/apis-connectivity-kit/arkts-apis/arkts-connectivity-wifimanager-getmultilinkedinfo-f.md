@@ -24,6 +24,8 @@ function getMultiLinkedInfo(): Array<WifiLinkedInfo>
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
+<!--Device-wifiManager-function getMultiLinkedInfo(): Array<WifiLinkedInfo>--><!--Device-wifiManager-function getMultiLinkedInfo(): Array<WifiLinkedInfo>-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **返回值：**

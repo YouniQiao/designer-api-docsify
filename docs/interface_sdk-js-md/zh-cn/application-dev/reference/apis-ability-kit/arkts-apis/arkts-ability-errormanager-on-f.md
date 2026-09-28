@@ -20,6 +20,8 @@ function on(type: 'error', observer: ErrorObserver): number
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-errorManager-function on(type: 'error', observer: ErrorObserver): number--><!--Device-errorManager-function on(type: 'error', observer: ErrorObserver): number-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -86,6 +88,8 @@ function on(type: 'loopObserver', timeout: number, observer: LoopObserver): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-errorManager-function on(type: 'loopObserver', timeout: number, observer: LoopObserver): void--><!--Device-errorManager-function on(type: 'loopObserver', timeout: number, observer: LoopObserver): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -138,6 +142,8 @@ function on(type: 'unhandledRejection', observer: UnhandledRejectionObserver): v
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-errorManager-function on(type: 'unhandledRejection', observer: UnhandledRejectionObserver): void--><!--Device-errorManager-function on(type: 'unhandledRejection', observer: UnhandledRejectionObserver): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -189,6 +195,8 @@ function on(type: 'globalUnhandledRejectionDetected', observer: GlobalObserver):
 **起始版本：** 18
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-errorManager-function on(type: 'globalUnhandledRejectionDetected', observer: GlobalObserver): void--><!--Device-errorManager-function on(type: 'globalUnhandledRejectionDetected', observer: GlobalObserver): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -251,6 +259,8 @@ function on(type: 'freeze', observer: FreezeObserver): void
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-errorManager-function on(type: 'freeze', observer: FreezeObserver): void--><!--Device-errorManager-function on(type: 'freeze', observer: FreezeObserver): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -296,6 +306,8 @@ function on(type: 'globalErrorOccurred', observer: GlobalObserver): void
 **起始版本：** 18
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-errorManager-function on(type: 'globalErrorOccurred', observer: GlobalObserver): void--><!--Device-errorManager-function on(type: 'globalErrorOccurred', observer: GlobalObserver): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

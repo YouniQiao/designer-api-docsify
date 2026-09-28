@@ -8,6 +8,8 @@ Defines parameters of a custom component, which is used to configure whether to 
 
 **Since:** 11
 
+<!--Device-unnamed-declare interface ComponentOptions--><!--Device-unnamed-declare interface ComponentOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## freezeWhenInactive
@@ -30,6 +32,8 @@ Whether the custom component supports component freezing. The value **true** ena
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
+<!--Device-ComponentOptions-freezeWhenInactive : boolean--><!--Device-ComponentOptions-freezeWhenInactive : boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## poolAccepts
@@ -49,6 +53,8 @@ List of custom component names that the global reuse pool can accept (that is, c
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
+
+<!--Device-ComponentOptions-poolAccepts?: Function[]--><!--Device-ComponentOptions-poolAccepts?: Function[]-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -71,5 +77,7 @@ Type of the global reuse pool on a custom component. This is applicable to scena
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
+
+<!--Device-ComponentOptions-reusePool?: ReusePoolOwnership--><!--Device-ComponentOptions-reusePool?: ReusePoolOwnership-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -8,6 +8,8 @@ enum ModalityType
 
 **起始版本：** 14
 
+<!--Device-window-enum ModalityType--><!--Device-window-enum ModalityType-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 ## WINDOW_MODALITY
@@ -20,7 +22,9 @@ WINDOW_MODALITY = 0
 
 **起始版本：** 14
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-ModalityType-WINDOW_MODALITY = 0--><!--Device-ModalityType-WINDOW_MODALITY = 0-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -36,6 +40,8 @@ APPLICATION_MODALITY = 1
 
 **起始版本：** 14
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-ModalityType-APPLICATION_MODALITY = 1--><!--Device-ModalityType-APPLICATION_MODALITY = 1-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager

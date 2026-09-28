@@ -22,6 +22,8 @@ function startUsingPermission(tokenID: number, permissionName: Permissions): Pro
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-privacyManager-function startUsingPermission(tokenID: int, permissionName: Permissions): Promise<void>--><!--Device-privacyManager-function startUsingPermission(tokenID: int, permissionName: Permissions): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -91,6 +93,8 @@ function startUsingPermission(
 **需要权限：** ohos.permission.PERMISSION_USED_STATS
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-privacyManager-function startUsingPermission(    tokenID: int,    permissionName: Permissions,    pid?: int,    usedType?: PermissionUsedType  ): Promise<void>--><!--Device-privacyManager-function startUsingPermission(    tokenID: int,    permissionName: Permissions,    pid?: int,    usedType?: PermissionUsedType  ): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -187,6 +191,8 @@ function startUsingPermission(
 **需要权限：** ohos.permission.PERMISSION_USED_STATS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-privacyManager-function startUsingPermission(     tokenID: int,     permissionName: Permissions,     pid?: int,     usedType?: PermissionUsedType,     options?: PermissionUsingOptions   ): Promise<void>--><!--Device-privacyManager-function startUsingPermission(     tokenID: int,     permissionName: Permissions,     pid?: int,     usedType?: PermissionUsedType,     options?: PermissionUsingOptions   ): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -285,6 +291,8 @@ function startUsingPermission(
 **需要权限：** ohos.permission.PERMISSION_USED_STATS
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-privacyManager-function startUsingPermission(    tokenID: int,    permissionName: Permissions,    callback: AsyncCallback<void>  ): void--><!--Device-privacyManager-function startUsingPermission(    tokenID: int,    permissionName: Permissions,    callback: AsyncCallback<void>  ): void-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 

@@ -12,6 +12,8 @@ The performance of an immersive material varies based on device computing power.
 
 **Since:** 26.0.0
 
+<!--Device-uiMaterial-class ImmersiveMaterial extends Material--><!--Device-uiMaterial-class ImmersiveMaterial extends Material-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -33,6 +35,8 @@ Constructs **ImmersiveMaterial**.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ImmersiveMaterial-constructor(options?: ImmersiveOptions)--><!--Device-ImmersiveMaterial-constructor(options?: ImmersiveOptions)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -12,6 +12,8 @@ globalConnect接口参数类型，ConnectOptionsCollections继承自[ConnectOpti
 
 **起始版本：** 23
 
+<!--Device-unnamed-export class ConnectOptionsCollections<T extends CollectionType<S>, S extends object> extends ConnectOptions<T>--><!--Device-unnamed-export class ConnectOptionsCollections<T extends CollectionType<S>, S extends object> extends ConnectOptions<T>-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -34,6 +36,8 @@ defaultCreator?: StorageDefaultCreator<T>
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
+<!--Device-ConnectOptionsCollections-defaultCreator?: StorageDefaultCreator<T>--><!--Device-ConnectOptionsCollections-defaultCreator?: StorageDefaultCreator<T>-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## defaultSubCreator
@@ -49,5 +53,7 @@ defaultSubCreator?: StorageDefaultCreator<S>
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-ConnectOptionsCollections-defaultSubCreator?: StorageDefaultCreator<S>--><!--Device-ConnectOptionsCollections-defaultSubCreator?: StorageDefaultCreator<S>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

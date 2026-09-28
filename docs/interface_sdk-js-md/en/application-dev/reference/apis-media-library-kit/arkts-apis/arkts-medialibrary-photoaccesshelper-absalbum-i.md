@@ -8,6 +8,8 @@ Defines the abstract interface of albums.
 
 **Since:** 10
 
+<!--Device-photoAccessHelper-interface AbsAlbum--><!--Device-photoAccessHelper-interface AbsAlbum-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
@@ -27,6 +29,8 @@ Obtains image and video assets. This API uses an asynchronous callback to return
 **Since:** 10
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-AbsAlbum-getAssets(options: FetchOptions, callback: AsyncCallback<FetchResult<PhotoAsset>>): void--><!--Device-AbsAlbum-getAssets(options: FetchOptions, callback: AsyncCallback<FetchResult<PhotoAsset>>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -91,7 +95,9 @@ Obtains image and video assets. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+
+<!--Device-AbsAlbum-getAssets(options: FetchOptions): Promise<FetchResult<PhotoAsset>>--><!--Device-AbsAlbum-getAssets(options: FetchOptions): Promise<FetchResult<PhotoAsset>>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -158,6 +164,8 @@ Name of the album. System albums are not writable, whereas user albums can be wr
 
 **Since:** 10
 
+<!--Device-AbsAlbum-albumName: string--><!--Device-AbsAlbum-albumName: string-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## albumSubtype
@@ -171,6 +179,8 @@ Subtype of the album.
 **Type:** [AlbumSubtype](arkts-medialibrary-photoaccesshelper-albumsubtype-e.md)
 
 **Since:** 10
+
+<!--Device-AbsAlbum-readonly albumSubtype: AlbumSubtype--><!--Device-AbsAlbum-readonly albumSubtype: AlbumSubtype-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -186,6 +196,8 @@ Type of the album.
 
 **Since:** 10
 
+<!--Device-AbsAlbum-readonly albumType: AlbumType--><!--Device-AbsAlbum-readonly albumType: AlbumType-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## albumUri
@@ -199,6 +211,8 @@ URI of the album.
 **Type:** string
 
 **Since:** 10
+
+<!--Device-AbsAlbum-readonly albumUri: string--><!--Device-AbsAlbum-readonly albumUri: string-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -214,6 +228,8 @@ Time when the album is changed. Unit: second, The value must be greater than or 
 
 **Since:** 23
 
+<!--Device-AbsAlbum-readonly changeTime?: long--><!--Device-AbsAlbum-readonly changeTime?: long-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## count
@@ -228,6 +244,8 @@ Number of files in the album.
 
 **Since:** 10
 
+<!--Device-AbsAlbum-readonly count: int--><!--Device-AbsAlbum-readonly count: int-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## coverUri
@@ -241,6 +259,8 @@ URI of the cover file of the album.
 **Type:** string
 
 **Since:** 10
+
+<!--Device-AbsAlbum-readonly coverUri: string--><!--Device-AbsAlbum-readonly coverUri: string-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -262,5 +282,7 @@ Albums and their virtual path values:
 **Type:** string
 
 **Since:** 23
+
+<!--Device-AbsAlbum-readonly lpath?: string--><!--Device-AbsAlbum-readonly lpath?: string-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core

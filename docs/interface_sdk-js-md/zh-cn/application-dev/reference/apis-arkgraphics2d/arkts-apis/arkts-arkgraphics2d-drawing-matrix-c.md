@@ -26,6 +26,8 @@ class Matrix
 
 **起始版本：** 12
 
+<!--Device-drawing-class Matrix--><!--Device-drawing-class Matrix-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## 导入模块
@@ -43,6 +45,8 @@ constructor()
 构造一个矩阵对象。
 
 **起始版本：** 12
+
+<!--Device-Matrix-constructor()--><!--Device-Matrix-constructor()-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -65,6 +69,8 @@ constructor(matrix: Matrix)
 拷贝一个矩阵。
 
 **起始版本：** 20
+
+<!--Device-Matrix-constructor(matrix: Matrix)--><!--Device-Matrix-constructor(matrix: Matrix)-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -93,6 +99,8 @@ getAll(): Array<number>
 
 **起始版本：** 12
 
+<!--Device-Matrix-getAll(): Array<number>--><!--Device-Matrix-getAll(): Array<number>-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
@@ -119,6 +127,8 @@ getValue(index: number): number
 获取矩阵给定索引位的值。索引范围0-8。
 
 **起始版本：** 12
+
+<!--Device-Matrix-getValue(index: int): double--><!--Device-Matrix-getValue(index: int): double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -160,6 +170,8 @@ invert(matrix: Matrix): boolean
 将矩阵matrix设置为当前矩阵的逆矩阵，并返回是否设置成功的结果。
 
 **起始版本：** 12
+
+<!--Device-Matrix-invert(matrix: Matrix): boolean--><!--Device-Matrix-invert(matrix: Matrix): boolean-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -207,6 +219,8 @@ isAffine(): boolean
 
 **起始版本：** 20
 
+<!--Device-Matrix-isAffine(): boolean--><!--Device-Matrix-isAffine(): boolean-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
@@ -235,6 +249,8 @@ isEqual(matrix: Matrix): boolean
 判断两个矩阵是否相等。
 
 **起始版本：** 12
+
+<!--Device-Matrix-isEqual(matrix: Matrix): boolean--><!--Device-Matrix-isEqual(matrix: Matrix): boolean-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -282,6 +298,8 @@ isIdentity(): boolean
 
 **起始版本：** 12
 
+<!--Device-Matrix-isIdentity(): boolean--><!--Device-Matrix-isIdentity(): boolean-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
@@ -312,6 +330,8 @@ mapPoints(src: Array<common2D.Point>): Array<common2D.Point>
 通过矩阵变换将源点数组映射到目标点数组。
 
 **起始版本：** 12
+
+<!--Device-Matrix-mapPoints(src: Array<common2D.Point>): Array<common2D.Point>--><!--Device-Matrix-mapPoints(src: Array<common2D.Point>): Array<common2D.Point>-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -358,6 +378,8 @@ mapRadius(radius: number): number
 
 **起始版本：** 20
 
+<!--Device-Matrix-mapRadius(radius: double): double--><!--Device-Matrix-mapRadius(radius: double): double-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -394,6 +416,8 @@ mapRect(dst: common2D.Rect, src: common2D.Rect): boolean
 ![mapRect](../../../reference/apis-arkgraphics2d/figures/matrix-mapRect.png)
 
 **起始版本：** 12
+
+<!--Device-Matrix-mapRect(dst: common2D.Rect, src: common2D.Rect): boolean--><!--Device-Matrix-mapRect(dst: common2D.Rect, src: common2D.Rect): boolean-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -439,6 +463,8 @@ postConcat(matrix: Matrix): void
 
 **起始版本：** 20
 
+<!--Device-Matrix-postConcat(matrix: Matrix): void--><!--Device-Matrix-postConcat(matrix: Matrix): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -475,6 +501,8 @@ postRotate(degree: number, px: number, py: number): void
 将矩阵设置为矩阵右乘围绕旋转中心点旋转degree角度的单位矩阵后得到的矩阵，即新的旋转变换在当前矩阵的变换之后应用。如果需要在当前矩阵的变换之前应用旋转变换，使用preRotate方法。
 
 **起始版本：** 12
+
+<!--Device-Matrix-postRotate(degree: double, px: double, py: double): void--><!--Device-Matrix-postRotate(degree: double, px: double, py: double): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -514,6 +542,8 @@ postScale(sx: number, sy: number, px: number, py: number): void
 将矩阵设置为矩阵右乘围绕缩放中心点按sx和sy缩放系数缩放后的单位矩阵后得到的矩阵，即新的缩放变换在当前矩阵的变换之后应用。如果需要在当前矩阵的变换之前应用缩放变换，使用preScale方法。
 
 **起始版本：** 12
+
+<!--Device-Matrix-postScale(sx: double, sy: double, px: double, py: double): void--><!--Device-Matrix-postScale(sx: double, sy: double, px: double, py: double): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -556,6 +586,8 @@ postSkew(kx: number, ky: number, px: number, py: number): void
 
 **起始版本：** 20
 
+<!--Device-Matrix-postSkew(kx: double, ky: double, px: double, py: double): void--><!--Device-Matrix-postSkew(kx: double, ky: double, px: double, py: double): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -585,6 +617,8 @@ postTranslate(dx: number, dy: number): void
 将矩阵设置为矩阵右乘平移dx和dy距离后的单位矩阵后得到的矩阵，即新的平移变换在当前矩阵的变换之后应用。如果需要在当前矩阵的变换之前应用平移变换，使用preTranslate方法。
 
 **起始版本：** 12
+
+<!--Device-Matrix-postTranslate(dx: double, dy: double): void--><!--Device-Matrix-postTranslate(dx: double, dy: double): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -623,6 +657,8 @@ preConcat(matrix: Matrix): void
 
 **起始版本：** 12
 
+<!--Device-Matrix-preConcat(matrix: Matrix): void--><!--Device-Matrix-preConcat(matrix: Matrix): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -658,6 +694,8 @@ preRotate(degree: number, px: number, py: number): void
 将矩阵设置为矩阵左乘围绕旋转中心点旋转degree角度的单位矩阵后得到的矩阵，即新的旋转变换在当前矩阵的变换之前应用。如果需要在当前矩阵的变换之后应用旋转变换，使用postRotate方法。
 
 **起始版本：** 12
+
+<!--Device-Matrix-preRotate(degree: double, px: double, py: double): void--><!--Device-Matrix-preRotate(degree: double, px: double, py: double): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -697,6 +735,8 @@ preScale(sx: number, sy: number, px: number, py: number): void
 将矩阵设置为矩阵左乘围绕缩放中心点按sx和sy缩放系数缩放后的单位矩阵后得到的矩阵，即新的缩放变换在当前矩阵的变换之前应用。如果需要在当前矩阵的变换之后应用缩放变换，使用postScale方法。
 
 **起始版本：** 12
+
+<!--Device-Matrix-preScale(sx: double, sy: double, px: double, py: double): void--><!--Device-Matrix-preScale(sx: double, sy: double, px: double, py: double): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -739,6 +779,8 @@ preSkew(kx: number, ky: number, px: number, py: number): void
 
 **起始版本：** 20
 
+<!--Device-Matrix-preSkew(kx: double, ky: double, px: double, py: double): void--><!--Device-Matrix-preSkew(kx: double, ky: double, px: double, py: double): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -768,6 +810,8 @@ preTranslate(dx: number, dy: number): void
 将矩阵设置为矩阵左乘平移dx和dy距离后的单位矩阵后得到的矩阵，即新的平移变换在当前矩阵的变换之前应用。如果需要在当前矩阵的变换之后应用平移变换，使用postTranslate方法。
 
 **起始版本：** 12
+
+<!--Device-Matrix-preTranslate(dx: double, dy: double): void--><!--Device-Matrix-preTranslate(dx: double, dy: double): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -806,6 +850,8 @@ rectStaysRect(): boolean
 
 **起始版本：** 20
 
+<!--Device-Matrix-rectStaysRect(): boolean--><!--Device-Matrix-rectStaysRect(): boolean-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
@@ -836,6 +882,8 @@ reset(): void
 
 **起始版本：** 12
 
+<!--Device-Matrix-reset(): void--><!--Device-Matrix-reset(): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **示例**
@@ -858,6 +906,8 @@ setConcat(matrixA: Matrix, matrixB: Matrix): void
 用两个矩阵的乘积更新当前矩阵，即当前矩阵 = matrixA × matrixB。
 
 **起始版本：** 20
+
+<!--Device-Matrix-setConcat(matrixA: Matrix, matrixB: Matrix): void--><!--Device-Matrix-setConcat(matrixA: Matrix, matrixB: Matrix): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -889,6 +939,8 @@ setMatrix(values: Array<number>): void
 设置矩阵对象的各项参数。
 
 **起始版本：** 12
+
+<!--Device-Matrix-setMatrix(values: Array<double>): void--><!--Device-Matrix-setMatrix(values: Array<double>): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -926,6 +978,8 @@ setMatrix(matrix: Array<number> | Matrix): void
 
 **起始版本：** 20
 
+<!--Device-Matrix-setMatrix(matrix: Array<double> | Matrix): void--><!--Device-Matrix-setMatrix(matrix: Array<double> | Matrix): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -954,6 +1008,8 @@ setPolyToPoly(src: Array<common2D.Point>, dst: Array<common2D.Point>, count: num
 将当前矩阵设置为能够将源点数组映射到目标点数组的变换矩阵。源点和目标点的个数必须大于等于0，小于等于4。
 
 **起始版本：** 12
+
+<!--Device-Matrix-setPolyToPoly(src: Array<common2D.Point>, dst: Array<common2D.Point>, count: int): boolean--><!--Device-Matrix-setPolyToPoly(src: Array<common2D.Point>, dst: Array<common2D.Point>, count: int): boolean-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -999,6 +1055,8 @@ setRectToRect(src: common2D.Rect, dst: common2D.Rect, scaleToFit: ScaleToFit): b
 将当前矩阵设置为能使源矩形映射到目标矩形的变换矩阵。
 
 **起始版本：** 12
+
+<!--Device-Matrix-setRectToRect(src: common2D.Rect, dst: common2D.Rect, scaleToFit: ScaleToFit): boolean--><!--Device-Matrix-setRectToRect(src: common2D.Rect, dst: common2D.Rect, scaleToFit: ScaleToFit): boolean-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1046,6 +1104,8 @@ setRotation(degree: number, px: number, py: number): void
 
 **起始版本：** 12
 
+<!--Device-Matrix-setRotation(degree: double, px: double, py: double): void--><!--Device-Matrix-setRotation(degree: double, px: double, py: double): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -1080,6 +1140,8 @@ setScale(sx: number, sy: number, px: number, py: number): void
 设置矩阵为单位矩阵，并围绕缩放中心点(px, py)按sx和sy进行缩放。
 
 **起始版本：** 12
+
+<!--Device-Matrix-setScale(sx: double, sy: double, px: double, py: double): void--><!--Device-Matrix-setScale(sx: double, sy: double, px: double, py: double): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1117,6 +1179,8 @@ setSinCos(sinValue: number, cosValue: number, px: number, py: number): void
 
 **起始版本：** 20
 
+<!--Device-Matrix-setSinCos(sinValue: double, cosValue: double, px: double, py: double): void--><!--Device-Matrix-setSinCos(sinValue: double, cosValue: double, px: double, py: double): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -1148,6 +1212,8 @@ setSkew(kx: number, ky: number, px: number, py: number): void
 
 **起始版本：** 20
 
+<!--Device-Matrix-setSkew(kx: double, ky: double, px: double, py: double): void--><!--Device-Matrix-setSkew(kx: double, ky: double, px: double, py: double): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -1178,6 +1244,8 @@ setTranslation(dx: number, dy: number): void
 设置矩阵为单位矩阵，并平移(dx, dy)。
 
 **起始版本：** 12
+
+<!--Device-Matrix-setTranslation(dx: double, dy: double): void--><!--Device-Matrix-setTranslation(dx: double, dy: double): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

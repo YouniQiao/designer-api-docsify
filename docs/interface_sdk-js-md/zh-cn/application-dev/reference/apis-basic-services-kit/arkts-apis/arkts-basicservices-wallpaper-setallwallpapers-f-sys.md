@@ -18,6 +18,8 @@ function setAllWallpapers(wallpaperInfos: Array<WallpaperInfo>, wallpaperType: W
 
 **需要权限：** ohos.permission.SET_WALLPAPER
 
+<!--Device-wallpaper-function setAllWallpapers(wallpaperInfos: Array<WallpaperInfo>, wallpaperType: WallpaperType): Promise<void>--><!--Device-wallpaper-function setAllWallpapers(wallpaperInfos: Array<WallpaperInfo>, wallpaperType: WallpaperType): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
 **系统接口：** 此接口为系统接口。

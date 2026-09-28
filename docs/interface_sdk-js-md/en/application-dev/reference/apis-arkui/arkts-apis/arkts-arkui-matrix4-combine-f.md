@@ -20,6 +20,8 @@ Combines the effects of two matrices to generate a new matrix object.
 
 **Substitutes:** [combine](arkts-arkui-matrix4-matrix4transit-i.md#combine)
 
+<!--Device-matrix4-function combine(options: Matrix4Transit): Matrix4Transit--><!--Device-matrix4-function combine(options: Matrix4Transit): Matrix4Transit-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

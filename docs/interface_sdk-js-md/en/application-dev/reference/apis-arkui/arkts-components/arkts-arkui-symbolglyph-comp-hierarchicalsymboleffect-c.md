@@ -10,6 +10,8 @@ Inherits from **SymbolEffect**.
 
 **Since:** 12
 
+<!--Device-unnamed-declare class HierarchicalSymbolEffect extends SymbolEffect--><!--Device-unnamed-declare class HierarchicalSymbolEffect extends SymbolEffect-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
@@ -27,6 +29,8 @@ A constructor used to create a **HierarchicalSymbolEffect** instance, which come
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-HierarchicalSymbolEffect-constructor(fillStyle?: EffectFillStyle)--><!--Device-HierarchicalSymbolEffect-constructor(fillStyle?: EffectFillStyle)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -55,5 +59,7 @@ Default value: EffectFillStyle.CUMULATIVE
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-HierarchicalSymbolEffect-fillStyle?: EffectFillStyle--><!--Device-HierarchicalSymbolEffect-fillStyle?: EffectFillStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

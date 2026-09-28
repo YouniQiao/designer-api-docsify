@@ -16,6 +16,8 @@ function set(key: string, value: string, callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
+<!--Device-systemParameterEnhance-function set(key: string, value: string, callback: AsyncCallback<void>): void--><!--Device-systemParameterEnhance-function set(key: string, value: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Startup.SystemInfo
 
 **系统接口：** 此接口为系统接口。
@@ -67,6 +69,8 @@ function set(key: string, value: string): Promise<void>
 设置系统参数key对应的值，使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-systemParameterEnhance-function set(key: string, value: string): Promise<void>--><!--Device-systemParameterEnhance-function set(key: string, value: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 

@@ -16,6 +16,8 @@ function getAppNet(callback: AsyncCallback<NetHandle>): void
 
 **起始版本：** 9
 
+<!--Device-connection-function getAppNet(callback: AsyncCallback<NetHandle>): void--><!--Device-connection-function getAppNet(callback: AsyncCallback<NetHandle>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**
@@ -59,6 +61,8 @@ function getAppNet(): Promise<NetHandle>
 获取App绑定的网络信息。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-connection-function getAppNet(): Promise<NetHandle>--><!--Device-connection-function getAppNet(): Promise<NetHandle>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 

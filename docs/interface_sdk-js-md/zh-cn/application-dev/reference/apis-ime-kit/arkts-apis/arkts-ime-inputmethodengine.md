@@ -4,7 +4,7 @@
 
 | Interface/Class | 说明 |  
 |---|---|  
-| [InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md) | 输入法能力对象，是输入法应用的核心入口。提供输入法生命周期事件订阅（绑定/解绑/键盘显示隐藏/子类型切换/安全模式变化等）、面板创建与销毁、安全模式获取等能力。通过`getInputMethodAbility()`获取实例。 |
+| InputMethodAbility | 输入法能力对象，是输入法应用的核心入口。提供输入法生命周期事件订阅（绑定/解绑/键盘显示隐藏/子类型切换/安全模式变化等）、面板创建与销毁、安全模式获取等能力。通过`getInputMethodAbility()`获取实例。 |
 
 | KeyboardDelegate | 键盘代理对象，提供物理键盘按键事件监听、光标位置变化监听、文本选择变化监听、文本内容变化监听、编辑框属性变化监听等能力。通过`getKeyboardDelegate()`获取实例。 |  
 | InputClient | 输入客户端对象，提供对编辑框的文本操作能力，包括插入文本、删除文本（前删/后删）、获取光标前后文本、移动光标、选中文本、发送功能键和扩展编辑动作、设置预览文本、发送私有数据、自定义消息通信等。通过订阅`inputStart`事件在回调中获取实例。 |
@@ -14,6 +14,8 @@
 | MessageHandler | 自定义通信对象，用于接收编辑框应用发送的自定义通信数据，并提供终止通知回调。通过`InputClient.recvMessage()`注册。 |<br> <br>输入法应用的典型使用流程涉及多个API的组合调用，核心流程为：获取InputMethodAbility实例 -&gt; 订阅inputStart事件 -&gt; 在回调中获取KeyboardController和InputClient -&gt; 创建Panel -&gt; 加载面板页面内容 -&gt; 通过InputClient操作编辑框文本 -&gt; 通过KeyboardController控制键盘显隐。
 
 **起始版本：** 8
+
+<!--Device-unnamed-declare namespace inputMethodEngine--><!--Device-unnamed-declare namespace inputMethodEngine-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 

@@ -8,6 +8,8 @@ export enum NsaState
 
 **起始版本：** 6
 
+<!--Device-radio-export enum NsaState--><!--Device-radio-export enum NsaState-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## NSA_STATE_NOT_SUPPORT
@@ -19,6 +21,8 @@ NSA_STATE_NOT_SUPPORT = 1
 设备在不支持NSA的LTE小区下处于空闲状态或连接状态。
 
 **起始版本：** 6
+
+<!--Device-NsaState-NSA_STATE_NOT_SUPPORT = 1--><!--Device-NsaState-NSA_STATE_NOT_SUPPORT = 1-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -32,6 +36,8 @@ NSA_STATE_NO_DETECT = 2
 
 **起始版本：** 6
 
+<!--Device-NsaState-NSA_STATE_NO_DETECT = 2--><!--Device-NsaState-NSA_STATE_NO_DETECT = 2-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## NSA_STATE_CONNECTED_DETECT
@@ -43,6 +49,8 @@ NSA_STATE_CONNECTED_DETECT = 3
 设备在LTE小区下连接到LTE网络支持NSA和NR覆盖检测。
 
 **起始版本：** 6
+
+<!--Device-NsaState-NSA_STATE_CONNECTED_DETECT = 3--><!--Device-NsaState-NSA_STATE_CONNECTED_DETECT = 3-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -56,6 +64,8 @@ NSA_STATE_IDLE_DETECT = 4
 
 **起始版本：** 6
 
+<!--Device-NsaState-NSA_STATE_IDLE_DETECT = 4--><!--Device-NsaState-NSA_STATE_IDLE_DETECT = 4-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## NSA_STATE_DUAL_CONNECTED
@@ -68,6 +78,8 @@ NSA_STATE_DUAL_CONNECTED = 5
 
 **起始版本：** 6
 
+<!--Device-NsaState-NSA_STATE_DUAL_CONNECTED = 5--><!--Device-NsaState-NSA_STATE_DUAL_CONNECTED = 5-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## NSA_STATE_SA_ATTACHED
@@ -79,5 +91,7 @@ NSA_STATE_SA_ATTACHED = 6
 设备在5GC附着时在NG-RAN小区下空闲或连接到NG-RAN小区。
 
 **起始版本：** 6
+
+<!--Device-NsaState-NSA_STATE_SA_ATTACHED = 6--><!--Device-NsaState-NSA_STATE_SA_ATTACHED = 6-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService

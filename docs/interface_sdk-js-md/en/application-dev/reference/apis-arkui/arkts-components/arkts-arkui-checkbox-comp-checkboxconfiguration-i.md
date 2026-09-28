@@ -10,6 +10,8 @@ You need a custom class to implement the **ContentModifier** API. Inherits from 
 
 **Since:** 12
 
+<!--Device-unnamed-declare interface CheckBoxConfiguration extends CommonConfiguration<CheckBoxConfiguration>--><!--Device-unnamed-declare interface CheckBoxConfiguration extends CommonConfiguration<CheckBoxConfiguration>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## name
@@ -27,6 +29,8 @@ Name of the check box.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-CheckBoxConfiguration-name: string--><!--Device-CheckBoxConfiguration-name: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,6 +58,8 @@ If the **select** attribute is set, the attribute value is used here.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-CheckBoxConfiguration-selected: boolean--><!--Device-CheckBoxConfiguration-selected: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## triggerChange
@@ -73,5 +79,7 @@ The value **true** indicates a change from unselected to selected, and **false**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-CheckBoxConfiguration-triggerChange: Callback<boolean>--><!--Device-CheckBoxConfiguration-triggerChange: Callback<boolean>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

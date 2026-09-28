@@ -18,6 +18,8 @@ function getConnectionProperties(netHandle: NetHandle, callback: AsyncCallback<C
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-connection-function getConnectionProperties(netHandle: NetHandle, callback: AsyncCallback<ConnectionProperties>): void--><!--Device-connection-function getConnectionProperties(netHandle: NetHandle, callback: AsyncCallback<ConnectionProperties>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**
@@ -73,6 +75,8 @@ function getConnectionProperties(netHandle: NetHandle): Promise<ConnectionProper
 **起始版本：** 8
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
+
+<!--Device-connection-function getConnectionProperties(netHandle: NetHandle): Promise<ConnectionProperties>--><!--Device-connection-function getConnectionProperties(netHandle: NetHandle): Promise<ConnectionProperties>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 

@@ -8,6 +8,8 @@ enum ControlObject
 
 **起始版本：** 15
 
+<!--Device-connection-enum ControlObject--><!--Device-connection-enum ControlObject-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -23,6 +25,8 @@ LEFT_EAR = 0
 **起始版本：** 15
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ControlObject-LEFT_EAR = 0--><!--Device-ControlObject-LEFT_EAR = 0-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -40,6 +44,8 @@ RIGHT_EAR = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ControlObject-RIGHT_EAR = 1--><!--Device-ControlObject-RIGHT_EAR = 1-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -55,6 +61,8 @@ LEFT_RIGHT_EAR = 2
 **起始版本：** 15
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ControlObject-LEFT_RIGHT_EAR = 2--><!--Device-ControlObject-LEFT_RIGHT_EAR = 2-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

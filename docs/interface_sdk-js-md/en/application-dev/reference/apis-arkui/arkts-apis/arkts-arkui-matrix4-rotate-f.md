@@ -20,6 +20,8 @@ Rotates this matrix object along the x, y, and z axes.
 
 **Substitutes:** [rotate](arkts-arkui-matrix4-matrix4transit-i.md#rotate)
 
+<!--Device-matrix4-function rotate(options: RotateOption): Matrix4Transit--><!--Device-matrix4-function rotate(options: RotateOption): Matrix4Transit-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

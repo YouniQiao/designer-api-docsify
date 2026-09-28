@@ -8,6 +8,8 @@ export interface MechEvent
 
 **起始版本：** 26.0.0
 
+<!--Device-mechanicManager-export interface MechEvent--><!--Device-mechanicManager-export interface MechEvent-End-->
+
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ event: MechEventType
 
 **起始版本：** 26.0.0
 
+<!--Device-MechEvent-event: MechEventType--><!--Device-MechEvent-event: MechEventType-End-->
+
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ mechId: number
 **类型：** number
 
 **起始版本：** 26.0.0
+
+<!--Device-MechEvent-mechId: int--><!--Device-MechEvent-mechId: int-End-->
 
 **系统能力：** SystemCapability.Mechanic.Core
 

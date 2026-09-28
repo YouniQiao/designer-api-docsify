@@ -4,6 +4,8 @@
 
 **起始版本：** 7
 
+<!--Device-unnamed-declare namespace wallpaper--><!--Device-unnamed-declare namespace wallpaper-End-->
+
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
 ## 导入模块

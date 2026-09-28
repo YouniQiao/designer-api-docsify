@@ -24,6 +24,8 @@ function getSync(key: string, def?: string): string
 
 **起始版本：** 9
 
+<!--Device-systemParameterEnhance-function getSync(key: string, def?: string): string--><!--Device-systemParameterEnhance-function getSync(key: string, def?: string): string-End-->
+
 **系统能力：** SystemCapability.Startup.SystemInfo
 
 **系统接口：** 此接口为系统接口。

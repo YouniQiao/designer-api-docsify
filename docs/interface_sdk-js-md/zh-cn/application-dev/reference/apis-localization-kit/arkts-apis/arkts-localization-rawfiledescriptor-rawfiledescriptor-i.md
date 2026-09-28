@@ -8,6 +8,8 @@ export interface RawFileDescriptor
 
 **起始版本：** 8
 
+<!--Device-unnamed-export interface RawFileDescriptor--><!--Device-unnamed-export interface RawFileDescriptor-End-->
+
 **系统能力：** SystemCapability.Global.ResourceManager
 
 ## fd
@@ -22,7 +24,9 @@ fd: number
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-RawFileDescriptor-fd: int--><!--Device-RawFileDescriptor-fd: int-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -38,7 +42,9 @@ length: number
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-RawFileDescriptor-length: long--><!--Device-RawFileDescriptor-length: long-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -54,6 +60,8 @@ offset: number
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-RawFileDescriptor-offset: long--><!--Device-RawFileDescriptor-offset: long-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager

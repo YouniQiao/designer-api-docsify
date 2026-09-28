@@ -10,6 +10,8 @@ Defines the value of the arc slider.
 
 **Decorator:** @ObservedV2
 
+<!--Device-unnamed-declare class ArcSliderValueOptions--><!--Device-unnamed-declare class ArcSliderValueOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## Modules to Import
@@ -29,6 +31,8 @@ A constructor used to create an **ArcSliderValueOptions** instance.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcSliderValueOptions-constructor(options?: ArcSliderValueOptionsConstructorOptions)--><!--Device-ArcSliderValueOptions-constructor(options?: ArcSliderValueOptionsConstructorOptions)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -66,6 +70,8 @@ If the value is not within the [min, max] range, the value of **min** or **max**
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ArcSliderValueOptions-max?: number--><!--Device-ArcSliderValueOptions-max?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## min
@@ -90,6 +96,8 @@ Default value: **0**.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ArcSliderValueOptions-min?: number--><!--Device-ArcSliderValueOptions-min?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## progress
@@ -111,5 +119,7 @@ Default value: same as the value of **min**.
 **Decorator:** @Trace
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcSliderValueOptions-progress?: number--><!--Device-ArcSliderValueOptions-progress?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle

@@ -16,6 +16,8 @@ interface WifiP2pGroupInfo
 
 **替代接口：** [WifiP2pGroupInfo](arkts-connectivity-wifimanager-wifip2pgroupinfo-i.md)
 
+<!--Device-wifi-interface WifiP2pGroupInfo--><!--Device-wifi-interface WifiP2pGroupInfo-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
 ## 导入模块
@@ -40,6 +42,8 @@ clientDevices: WifiP2pDevice[]
 
 **替代接口：** [clientDevices](arkts-connectivity-wifimanager-wifip2pgroupinfo-i.md#clientdevices)
 
+<!--Device-WifiP2pGroupInfo-clientDevices: WifiP2pDevice[]--><!--Device-WifiP2pGroupInfo-clientDevices: WifiP2pDevice[]-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
 ## frequency
@@ -57,6 +61,8 @@ frequency: number
 **废弃版本：** 9
 
 **替代接口：** [frequency](arkts-connectivity-wifimanager-wifip2pgroupinfo-i.md#frequency)
+
+<!--Device-WifiP2pGroupInfo-frequency: number--><!--Device-WifiP2pGroupInfo-frequency: number-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
@@ -76,6 +82,8 @@ goIpAddress: string
 
 **替代接口：** [goIpAddress](arkts-connectivity-wifimanager-wifip2pgroupinfo-i.md#goipaddress)
 
+<!--Device-WifiP2pGroupInfo-goIpAddress: string--><!--Device-WifiP2pGroupInfo-goIpAddress: string-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
 ## groupName
@@ -93,6 +101,8 @@ groupName: string
 **废弃版本：** 9
 
 **替代接口：** [groupName](arkts-connectivity-wifimanager-wifip2pgroupinfo-i.md#groupname)
+
+<!--Device-WifiP2pGroupInfo-groupName: string--><!--Device-WifiP2pGroupInfo-groupName: string-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
@@ -112,6 +122,8 @@ interface: string
 
 **替代接口：** [interface](arkts-connectivity-wifimanager-wifip2pgroupinfo-i.md#interface)
 
+<!--Device-WifiP2pGroupInfo-interface: string--><!--Device-WifiP2pGroupInfo-interface: string-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
 ## isP2pGo
@@ -129,6 +141,8 @@ isP2pGo: boolean
 **废弃版本：** 9
 
 **替代接口：** [isP2pGo](arkts-connectivity-wifimanager-wifip2pgroupinfo-i.md#isp2pgo)
+
+<!--Device-WifiP2pGroupInfo-isP2pGo: boolean--><!--Device-WifiP2pGroupInfo-isP2pGo: boolean-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
@@ -148,6 +162,8 @@ networkId: number
 
 **替代接口：** [networkId](arkts-connectivity-wifimanager-wifip2pgroupinfo-i.md#networkid)
 
+<!--Device-WifiP2pGroupInfo-networkId: number--><!--Device-WifiP2pGroupInfo-networkId: number-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
 ## ownerInfo
@@ -166,6 +182,8 @@ ownerInfo: WifiP2pDevice
 
 **替代接口：** [ownerInfo](arkts-connectivity-wifimanager-wifip2pgroupinfo-i.md#ownerinfo)
 
+<!--Device-WifiP2pGroupInfo-ownerInfo: WifiP2pDevice--><!--Device-WifiP2pGroupInfo-ownerInfo: WifiP2pDevice-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
 ## passphrase
@@ -183,5 +201,7 @@ passphrase: string
 **废弃版本：** 9
 
 **替代接口：** [passphrase](arkts-connectivity-wifimanager-wifip2pgroupinfo-i.md#passphrase)
+
+<!--Device-WifiP2pGroupInfo-passphrase: string--><!--Device-WifiP2pGroupInfo-passphrase: string-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P

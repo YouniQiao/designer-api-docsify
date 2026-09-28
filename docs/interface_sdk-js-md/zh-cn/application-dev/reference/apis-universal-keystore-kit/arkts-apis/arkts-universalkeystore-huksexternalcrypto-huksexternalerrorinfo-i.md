@@ -8,6 +8,8 @@ export interface HuksExternalErrorInfo
 
 **起始版本：** 26.0.0
 
+<!--Device-huksExternalCrypto-export interface HuksExternalErrorInfo--><!--Device-huksExternalCrypto-export interface HuksExternalErrorInfo-End-->
+
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
 ## 导入模块
@@ -30,6 +32,8 @@ errno: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HuksExternalErrorInfo-errno: number--><!--Device-HuksExternalErrorInfo-errno: number-End-->
+
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
 ## errorDesc
@@ -45,5 +49,7 @@ errorDesc: string
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HuksExternalErrorInfo-errorDesc: string--><!--Device-HuksExternalErrorInfo-errorDesc: string-End-->
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension

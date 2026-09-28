@@ -18,6 +18,8 @@ function getSupportedFeatures(): number
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
+<!--Device-wifiManager-function getSupportedFeatures(): long--><!--Device-wifiManager-function getSupportedFeatures(): long-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.Core
 
 **系统接口：** 此接口为系统接口。

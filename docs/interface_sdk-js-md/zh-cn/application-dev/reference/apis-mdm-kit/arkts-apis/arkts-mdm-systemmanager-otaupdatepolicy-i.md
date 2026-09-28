@@ -8,6 +8,8 @@ export interface OtaUpdatePolicy
 
 **起始版本：** 12
 
+<!--Device-systemManager-export interface OtaUpdatePolicy--><!--Device-systemManager-export interface OtaUpdatePolicy-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## 导入模块
@@ -30,6 +32,8 @@ delayUpdateTime?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OtaUpdatePolicy-delayUpdateTime?: number--><!--Device-OtaUpdatePolicy-delayUpdateTime?: number-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## disableSystemOtaUpdate
@@ -45,6 +49,8 @@ disableSystemOtaUpdate?: boolean
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-OtaUpdatePolicy-disableSystemOtaUpdate?: boolean--><!--Device-OtaUpdatePolicy-disableSystemOtaUpdate?: boolean-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -62,6 +68,8 @@ installEndTime?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OtaUpdatePolicy-installEndTime?: number--><!--Device-OtaUpdatePolicy-installEndTime?: number-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## installStartTime
@@ -77,6 +85,8 @@ installStartTime?: number
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-OtaUpdatePolicy-installStartTime?: number--><!--Device-OtaUpdatePolicy-installStartTime?: number-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -94,6 +104,8 @@ latestUpdateTime?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OtaUpdatePolicy-latestUpdateTime?: number--><!--Device-OtaUpdatePolicy-latestUpdateTime?: number-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## policyType
@@ -110,6 +122,8 @@ policyType: PolicyType
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OtaUpdatePolicy-policyType: PolicyType--><!--Device-OtaUpdatePolicy-policyType: PolicyType-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## version
@@ -125,5 +139,7 @@ version: string
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-OtaUpdatePolicy-version: string--><!--Device-OtaUpdatePolicy-version: string-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager

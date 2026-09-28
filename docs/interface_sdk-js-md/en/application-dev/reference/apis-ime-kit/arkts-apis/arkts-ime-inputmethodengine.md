@@ -6,6 +6,8 @@ The **inputMethodEngine** module is oriented to input method applications (inclu
 
 **Since:** 8
 
+<!--Device-unnamed-declare namespace inputMethodEngine--><!--Device-unnamed-declare namespace inputMethodEngine-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## Modules to Import

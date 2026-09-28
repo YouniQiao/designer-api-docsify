@@ -8,6 +8,8 @@ declare class ChildProcess
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare class ChildProcess--><!--Device-unnamed-declare class ChildProcess-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块
@@ -27,6 +29,8 @@ onStart(args?: ChildProcessArgs): void
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ChildProcess-onStart(args?: ChildProcessArgs): void--><!--Device-ChildProcess-onStart(args?: ChildProcessArgs): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

@@ -18,6 +18,8 @@ function on(type: 'mission', listener: MissionListener): number
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
+<!--Device-missionManager-function on(type: 'mission', listener: MissionListener): long--><!--Device-missionManager-function on(type: 'mission', listener: MissionListener): long-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。

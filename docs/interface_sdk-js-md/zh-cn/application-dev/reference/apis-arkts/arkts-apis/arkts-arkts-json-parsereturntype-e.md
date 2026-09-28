@@ -10,6 +10,8 @@ const enum ParseReturnType
 
 **起始版本：** 26.0.1
 
+<!--Device-json-const enum ParseReturnType--><!--Device-json-const enum ParseReturnType-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## OBJECT
@@ -26,6 +28,8 @@ OBJECT = 0
 
 **原子化服务API：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
 
+<!--Device-ParseReturnType-OBJECT = 0--><!--Device-ParseReturnType-OBJECT = 0-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## MAP
@@ -41,5 +45,7 @@ MAP = 1
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
+
+<!--Device-ParseReturnType-MAP = 1--><!--Device-ParseReturnType-MAP = 1-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

@@ -14,6 +14,8 @@ interface HandsFreeAudioGatewayProfile extends BaseProfile
 
 **替代接口：** [HandsFreeAudioGatewayProfile](arkts-connectivity-bluetoothmanager-handsfreeaudiogatewayprofile-i.md)
 
+<!--Device-bluetooth-interface HandsFreeAudioGatewayProfile extends BaseProfile--><!--Device-bluetooth-interface HandsFreeAudioGatewayProfile extends BaseProfile-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -39,6 +41,8 @@ connect(device: string): boolean
 **替代接口：** [connect](arkts-connectivity-bluetoothmanager-handsfreeaudiogatewayprofile-i.md#connect)
 
 **需要权限：** ohos.permission.DISCOVER_BLUETOOTH
+
+<!--Device-HandsFreeAudioGatewayProfile-connect(device: string): boolean--><!--Device-HandsFreeAudioGatewayProfile-connect(device: string): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -80,6 +84,8 @@ disconnect(device: string): boolean
 
 **需要权限：** ohos.permission.DISCOVER_BLUETOOTH
 
+<!--Device-HandsFreeAudioGatewayProfile-disconnect(device: string): boolean--><!--Device-HandsFreeAudioGatewayProfile-disconnect(device: string): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -118,6 +124,8 @@ off(type: 'connectionStateChange', callback?: Callback<StateChangeParam>): void
 
 **替代接口：** connectionStateChange
 
+<!--Device-HandsFreeAudioGatewayProfile-off(type: 'connectionStateChange', callback?: Callback<StateChangeParam>): void--><!--Device-HandsFreeAudioGatewayProfile-off(type: 'connectionStateChange', callback?: Callback<StateChangeParam>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -142,6 +150,8 @@ on(type: 'connectionStateChange', callback: Callback<StateChangeParam>): void
 **废弃版本：** 9
 
 **替代接口：** connectionStateChange
+
+<!--Device-HandsFreeAudioGatewayProfile-on(type: 'connectionStateChange', callback: Callback<StateChangeParam>): void--><!--Device-HandsFreeAudioGatewayProfile-on(type: 'connectionStateChange', callback: Callback<StateChangeParam>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

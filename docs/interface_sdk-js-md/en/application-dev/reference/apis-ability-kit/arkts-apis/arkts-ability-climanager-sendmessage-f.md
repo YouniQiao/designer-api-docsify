@@ -24,6 +24,8 @@ This method allows the caller to interact with a command process that is waiting
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-cliManager-function sendMessage(sessionId: string, message: string): Promise<void>--><!--Device-cliManager-function sendMessage(sessionId: string, message: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **Parameters:**

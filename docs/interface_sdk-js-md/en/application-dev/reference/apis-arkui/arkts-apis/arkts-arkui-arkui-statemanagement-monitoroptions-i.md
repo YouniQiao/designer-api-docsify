@@ -8,6 +8,8 @@ Defines the optional parameters for [addMonitor](arkts-arkui-arkui-statemanageme
 
 **Since:** 20
 
+<!--Device-unnamed-export interface MonitorOptions--><!--Device-unnamed-export interface MonitorOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -34,6 +36,8 @@ Whether to enable the wildcard capability for the current **addMonitor**. The va
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-MonitorOptions-enableWildcard?: boolean--><!--Device-MonitorOptions-enableWildcard?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## isSynchronous
@@ -53,5 +57,7 @@ Whether the current callback is a synchronous callback. The value **true** indic
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-MonitorOptions-isSynchronous?: boolean--><!--Device-MonitorOptions-isSynchronous?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

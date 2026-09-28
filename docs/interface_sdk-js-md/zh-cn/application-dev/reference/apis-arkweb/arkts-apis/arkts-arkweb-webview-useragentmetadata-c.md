@@ -8,6 +8,8 @@ UserAgentMetadata是ArkWeb框架中用于配置User-Agent Client Hints（UA客�
 
 **起始版本：** 24
 
+<!--Device-webview-class UserAgentMetadata--><!--Device-webview-class UserAgentMetadata-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## 导入模块
@@ -27,6 +29,8 @@ getArchitecture(): string
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UserAgentMetadata-getArchitecture(): string--><!--Device-UserAgentMetadata-getArchitecture(): string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -52,6 +56,8 @@ getBitness(): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UserAgentMetadata-getBitness(): string--><!--Device-UserAgentMetadata-getBitness(): string-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -75,6 +81,8 @@ getBrandVersionList(): Array<UserAgentBrandVersion>
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UserAgentMetadata-getBrandVersionList(): Array<UserAgentBrandVersion>--><!--Device-UserAgentMetadata-getBrandVersionList(): Array<UserAgentBrandVersion>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -100,6 +108,8 @@ getFormFactors(): Array<UserAgentFormFactor>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UserAgentMetadata-getFormFactors(): Array<UserAgentFormFactor>--><!--Device-UserAgentMetadata-getFormFactors(): Array<UserAgentFormFactor>-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -123,6 +133,8 @@ getFullVersion(): string
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UserAgentMetadata-getFullVersion(): string--><!--Device-UserAgentMetadata-getFullVersion(): string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -148,6 +160,8 @@ getMobile(): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UserAgentMetadata-getMobile(): boolean--><!--Device-UserAgentMetadata-getMobile(): boolean-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -171,6 +185,8 @@ getModel(): string
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UserAgentMetadata-getModel(): string--><!--Device-UserAgentMetadata-getModel(): string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -196,6 +212,8 @@ getPlatform(): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UserAgentMetadata-getPlatform(): string--><!--Device-UserAgentMetadata-getPlatform(): string-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -219,6 +237,8 @@ getPlatformVersion(): string
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UserAgentMetadata-getPlatformVersion(): string--><!--Device-UserAgentMetadata-getPlatformVersion(): string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -244,6 +264,8 @@ getWow64(): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UserAgentMetadata-getWow64(): boolean--><!--Device-UserAgentMetadata-getWow64(): boolean-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -265,6 +287,8 @@ setArchitecture(arch: string): void
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UserAgentMetadata-setArchitecture(arch: string): void--><!--Device-UserAgentMetadata-setArchitecture(arch: string): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -290,6 +314,8 @@ setBitness(bitness: string): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UserAgentMetadata-setBitness(bitness: string): void--><!--Device-UserAgentMetadata-setBitness(bitness: string): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -313,6 +339,8 @@ setBrandVersionList(brandVersionList: Array<UserAgentBrandVersion>): void
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UserAgentMetadata-setBrandVersionList(brandVersionList: Array<UserAgentBrandVersion>): void--><!--Device-UserAgentMetadata-setBrandVersionList(brandVersionList: Array<UserAgentBrandVersion>): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -338,6 +366,8 @@ setFormFactors(formFactors: Array<UserAgentFormFactor>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UserAgentMetadata-setFormFactors(formFactors: Array<UserAgentFormFactor>): void--><!--Device-UserAgentMetadata-setFormFactors(formFactors: Array<UserAgentFormFactor>): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -361,6 +391,8 @@ setFullVersion(fullVersion: string): void
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UserAgentMetadata-setFullVersion(fullVersion: string): void--><!--Device-UserAgentMetadata-setFullVersion(fullVersion: string): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -386,6 +418,8 @@ setMobile(isMobile: boolean): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UserAgentMetadata-setMobile(isMobile: boolean): void--><!--Device-UserAgentMetadata-setMobile(isMobile: boolean): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -409,6 +443,8 @@ setModel(model: string): void
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UserAgentMetadata-setModel(model: string): void--><!--Device-UserAgentMetadata-setModel(model: string): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -434,6 +470,8 @@ setPlatform(platform: string): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UserAgentMetadata-setPlatform(platform: string): void--><!--Device-UserAgentMetadata-setPlatform(platform: string): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -458,6 +496,8 @@ setPlatformVersion(platformVersion: string): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UserAgentMetadata-setPlatformVersion(platformVersion: string): void--><!--Device-UserAgentMetadata-setPlatformVersion(platformVersion: string): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -481,6 +521,8 @@ setWow64(isWow64: boolean): void
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UserAgentMetadata-setWow64(isWow64: boolean): void--><!--Device-UserAgentMetadata-setWow64(isWow64: boolean): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

@@ -9,7 +9,7 @@
 - [ImagePacker](arkts-image-image-imagepacker-i.md)类，提供将图片编码为压缩后的数据流或文件的能力。编码前需获取图片的ImageSource、PixelMap或Picture作为输入。[支持编码的图片格式](arkts-image-image-imagepacker-i.md#supportedformats)包括jpeg、webp、png、heic&lt;sup&gt;12+&lt;/sup&gt;、gif&lt;sup&gt;18+&lt;/sup&gt;。
 
 - [PixelMap](arkts-image-image-pixelmap-i.md)类，位图对象，包含像素数据以及[图片信息](arkts-image-image-imageinfo-i.md)。可用于读取或写入像素数据，进行裁剪、缩放、平移、旋转、镜像等操作，并可直接传  
-给[Image组件](../../apis-arkui/arkts-components/arkts-arkui-image-comp.md#image)用于显示。还提供了获取和设置图片色域、HDR元数据的方法。
+给[Image组件](../../apis-arkui/arkts-components/arkts-arkui-image-comp.md)用于显示。还提供了获取和设置图片色域、HDR元数据的方法。
 
 - [Picture](arkts-image-image-picture-i.md)类，多图对象，由主图、辅助图和元数据组成。其中，主图包含了主要图像信息；辅助图用于存储与主图相关的附加信息；元数据用于存储与图片相关的其他信息。Picture提供获取主图  
 、合成HDR图、获取辅助图、设置辅助图、获取元数据、设置元数据等方法。
@@ -46,6 +46,8 @@ Key可参考[PropertyKey](arkts-image-image-propertykey-e.md)。
 Image对象存储了JPEG文件。
 
 **起始版本：** 6
+
+<!--Device-unnamed-declare namespace image--><!--Device-unnamed-declare namespace image-End-->
 
 **系统能力：** 
 - API版本11+：SystemCapability.Multimedia.Image.Core

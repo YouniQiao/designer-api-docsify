@@ -18,6 +18,8 @@ function getNetworkState(slotId: number, callback: AsyncCallback<NetworkState>):
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-radio-function getNetworkState(slotId: int, callback: AsyncCallback<NetworkState>): void--><!--Device-radio-function getNetworkState(slotId: int, callback: AsyncCallback<NetworkState>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**
@@ -67,6 +69,8 @@ function getNetworkState(slotId?: number): Promise<NetworkState>
 **起始版本：** 6
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
+
+<!--Device-radio-function getNetworkState(slotId?: int): Promise<NetworkState>--><!--Device-radio-function getNetworkState(slotId?: int): Promise<NetworkState>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -122,6 +126,8 @@ function getNetworkState(callback: AsyncCallback<NetworkState>): void
 **起始版本：** 6
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
+
+<!--Device-radio-function getNetworkState(callback: AsyncCallback<NetworkState>): void--><!--Device-radio-function getNetworkState(callback: AsyncCallback<NetworkState>): void-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

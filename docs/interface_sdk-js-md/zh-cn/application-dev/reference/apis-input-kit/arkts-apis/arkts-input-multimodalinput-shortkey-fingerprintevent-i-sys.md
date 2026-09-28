@@ -8,6 +8,8 @@ export declare interface FingerprintEvent
 
 **起始版本：** 12
 
+<!--Device-unnamed-export declare interface FingerprintEvent--><!--Device-unnamed-export declare interface FingerprintEvent-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **系统接口：** 此接口为系统接口。
@@ -31,6 +33,8 @@ action: FingerprintAction
 
 **起始版本：** 12
 
+<!--Device-FingerprintEvent-action: FingerprintAction--><!--Device-FingerprintEvent-action: FingerprintAction-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **系统接口：** 此接口为系统接口。
@@ -47,6 +51,8 @@ distanceX: number
 
 **起始版本：** 12
 
+<!--Device-FingerprintEvent-distanceX: double--><!--Device-FingerprintEvent-distanceX: double-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **系统接口：** 此接口为系统接口。
@@ -62,6 +68,8 @@ distanceY: number
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-FingerprintEvent-distanceY: double--><!--Device-FingerprintEvent-distanceY: double-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 

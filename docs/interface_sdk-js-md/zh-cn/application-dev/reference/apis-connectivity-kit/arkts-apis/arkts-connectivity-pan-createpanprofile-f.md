@@ -18,6 +18,8 @@ function createPanProfile(): PanProfile
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-pan-function createPanProfile(): PanProfile--><!--Device-pan-function createPanProfile(): PanProfile-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **返回值：**

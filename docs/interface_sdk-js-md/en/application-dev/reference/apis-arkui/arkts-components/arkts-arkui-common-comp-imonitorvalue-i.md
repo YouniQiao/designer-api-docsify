@@ -8,6 +8,8 @@ Provides the specific information about the state variable changes monitored by 
 
 **Since:** 12
 
+<!--Device-unnamed-declare interface IMonitorValue<T>--><!--Device-unnamed-declare interface IMonitorValue<T>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## before
@@ -27,6 +29,8 @@ Value of the state variable before the change.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
+
+<!--Device-IMonitorValue-before: T--><!--Device-IMonitorValue-before: T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -48,6 +52,8 @@ Current value of the state variable.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-IMonitorValue-now: T--><!--Device-IMonitorValue-now: T-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## path
@@ -67,5 +73,7 @@ Path of the state variable.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
+
+<!--Device-IMonitorValue-path: string--><!--Device-IMonitorValue-path: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

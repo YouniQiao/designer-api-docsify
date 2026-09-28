@@ -6,6 +6,8 @@ This module is used to obtain business ability information of various applicatio
 
 **Since:** 10
 
+<!--Device-unnamed-declare namespace businessAbilityRouter--><!--Device-unnamed-declare namespace businessAbilityRouter-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.

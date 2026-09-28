@@ -16,6 +16,8 @@ export class ContinuousTaskRequest
 
 **起始版本：** 21
 
+<!--Device-backgroundTaskManager-export class ContinuousTaskRequest--><!--Device-backgroundTaskManager-export class ContinuousTaskRequest-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## 导入模块
@@ -38,13 +40,15 @@ checkSpecialScenarioAuth(context: Context): Promise<UserAuthResult>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ContinuousTaskRequest-checkSpecialScenarioAuth(context: Context): Promise<UserAuthResult>--><!--Device-ContinuousTaskRequest-checkSpecialScenarioAuth(context: Context): Promise<UserAuthResult>-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 应用运行的上下文。<br>FA模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-context-depr-i.md#context)。<br>Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)。<br> **说明：** Stage模型中，仅支持UIAbility申请；FA模型中，仅支持ServiceAbility申请。 |
+| context | Context | 是 | 应用运行的上下文。<br>FA模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-context-depr-i.md)。<br>Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)。<br> **说明：** Stage模型中，仅支持UIAbility申请；FA模型中，仅支持ServiceAbility申请。 |
 
 **返回值：**
 
@@ -97,6 +101,8 @@ checkSpecialScenarioAuthResult(context: Context): Promise<UserAuthResult>
 **需要权限：** ohos.permission.KEEP_BACKGROUND_RUNNING
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ContinuousTaskRequest-checkSpecialScenarioAuthResult(context: Context): Promise<UserAuthResult>--><!--Device-ContinuousTaskRequest-checkSpecialScenarioAuthResult(context: Context): Promise<UserAuthResult>-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -156,7 +162,9 @@ isModeSupported(): boolean
 
 **需要权限：** ohos.permission.KEEP_BACKGROUND_RUNNING
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-ContinuousTaskRequest-isModeSupported(): boolean--><!--Device-ContinuousTaskRequest-isModeSupported(): boolean-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -211,13 +219,15 @@ requestAuthFromUser(context: Context, callback: Callback<UserAuthResult>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ContinuousTaskRequest-requestAuthFromUser(context: Context, callback: Callback<UserAuthResult>): void--><!--Device-ContinuousTaskRequest-requestAuthFromUser(context: Context, callback: Callback<UserAuthResult>): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 应用运行的上下文。<br>FA模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-context-depr-i.md#context)。<br>Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)。<br> **说明：** Stage模型中，仅支持UIAbility申请；FA模型中，仅支持ServiceAbility申请。 |
+| context | Context | 是 | 应用运行的上下文。<br>FA模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-context-depr-i.md)。<br>Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)。<br> **说明：** Stage模型中，仅支持UIAbility申请；FA模型中，仅支持ServiceAbility申请。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UserAuthResult](arkts-backgroundtasks-backgroundtaskmanager-userauthresult-e.md)&gt; | 是 | 用户操作后，返回授权结果。 |
 
 **错误码：**
@@ -270,6 +280,8 @@ requestAuthFromUserByDialog(context: Context, callback: Callback<UserAuthResult>
 **需要权限：** ohos.permission.KEEP_BACKGROUND_RUNNING
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ContinuousTaskRequest-requestAuthFromUserByDialog(context: Context, callback: Callback<UserAuthResult>): void--><!--Device-ContinuousTaskRequest-requestAuthFromUserByDialog(context: Context, callback: Callback<UserAuthResult>): void-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -337,7 +349,9 @@ get backgroundTaskModes(): BackgroundTaskMode[]
 
 **起始版本：** 21
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-ContinuousTaskRequest-get backgroundTaskModes(): BackgroundTaskMode[]--><!--Device-ContinuousTaskRequest-get backgroundTaskModes(): BackgroundTaskMode[]-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -353,7 +367,9 @@ set backgroundTaskModes(value: BackgroundTaskMode[])
 
 **起始版本：** 21
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-ContinuousTaskRequest-set backgroundTaskModes(value: BackgroundTaskMode[])--><!--Device-ContinuousTaskRequest-set backgroundTaskModes(value: BackgroundTaskMode[])-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -371,7 +387,9 @@ get backgroundTaskSubmodes(): BackgroundTaskSubmode[]
 
 **起始版本：** 21
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-ContinuousTaskRequest-get backgroundTaskSubmodes(): BackgroundTaskSubmode[]--><!--Device-ContinuousTaskRequest-get backgroundTaskSubmodes(): BackgroundTaskSubmode[]-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -387,7 +405,9 @@ set backgroundTaskSubmodes(value: BackgroundTaskSubmode[])
 
 **起始版本：** 21
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-ContinuousTaskRequest-set backgroundTaskSubmodes(value: BackgroundTaskSubmode[])--><!--Device-ContinuousTaskRequest-set backgroundTaskSubmodes(value: BackgroundTaskSubmode[])-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -406,6 +426,8 @@ combinedTaskNotification?: boolean
 **起始版本：** 21
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-ContinuousTaskRequest-combinedTaskNotification?: boolean--><!--Device-ContinuousTaskRequest-combinedTaskNotification?: boolean-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -429,6 +451,8 @@ continuousTaskId?: number
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-ContinuousTaskRequest-continuousTaskId?: number--><!--Device-ContinuousTaskRequest-continuousTaskId?: number-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## progressInfo
@@ -449,6 +473,8 @@ progressInfo?: ProgressInfo
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ContinuousTaskRequest-progressInfo?: ProgressInfo--><!--Device-ContinuousTaskRequest-progressInfo?: ProgressInfo-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## wantAgent
@@ -465,7 +491,9 @@ get wantAgent(): WantAgent
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-ContinuousTaskRequest-get wantAgent(): WantAgent--><!--Device-ContinuousTaskRequest-get wantAgent(): WantAgent-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -479,6 +507,8 @@ set wantAgent(value: WantAgent)
 
 **起始版本：** 21
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-ContinuousTaskRequest-set wantAgent(value: WantAgent)--><!--Device-ContinuousTaskRequest-set wantAgent(value: WantAgent)-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask

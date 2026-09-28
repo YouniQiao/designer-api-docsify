@@ -16,6 +16,8 @@ function getKeyboardRepeatDelay(callback: AsyncCallback<number>): void
 
 **起始版本：** 10
 
+<!--Device-inputDevice-function getKeyboardRepeatDelay(callback: AsyncCallback<int>): void--><!--Device-inputDevice-function getKeyboardRepeatDelay(callback: AsyncCallback<int>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 **系统接口：** 此接口为系统接口。
@@ -76,6 +78,8 @@ function getKeyboardRepeatDelay(): Promise<number>
 获取键盘按键的重复时延，使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-inputDevice-function getKeyboardRepeatDelay(): Promise<int>--><!--Device-inputDevice-function getKeyboardRepeatDelay(): Promise<int>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 

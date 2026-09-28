@@ -12,6 +12,8 @@ export interface CipherRsaOptions
 
 **替代接口：** Cipher
 
+<!--Device-unnamed-export interface CipherRsaOptions--><!--Device-unnamed-export interface CipherRsaOptions-End-->
+
 **系统能力：** SystemCapability.Security.Cipher
 
 ## 导入模块
@@ -34,6 +36,8 @@ complete: () => void
 
 **替代接口：** Cipher
 
+<!--Device-CipherRsaOptions-complete: () => void--><!--Device-CipherRsaOptions-complete: () => void-End-->
+
 **系统能力：** SystemCapability.Security.Cipher
 
 ## fail
@@ -49,6 +53,8 @@ fail: (data: string, code: number) => void
 **废弃版本：** 11
 
 **替代接口：** Cipher
+
+<!--Device-CipherRsaOptions-fail: (data: string, code: number) => void--><!--Device-CipherRsaOptions-fail: (data: string, code: number) => void-End-->
 
 **系统能力：** SystemCapability.Security.Cipher
 
@@ -72,6 +78,8 @@ success: (data: CipherResponse) => void
 **废弃版本：** 11
 
 **替代接口：** Cipher
+
+<!--Device-CipherRsaOptions-success: (data: CipherResponse) => void--><!--Device-CipherRsaOptions-success: (data: CipherResponse) => void-End-->
 
 **系统能力：** SystemCapability.Security.Cipher
 
@@ -100,6 +108,8 @@ action: string
 
 **替代接口：** Cipher
 
+<!--Device-CipherRsaOptions-action: string--><!--Device-CipherRsaOptions-action: string-End-->
+
 **系统能力：** SystemCapability.Security.Cipher
 
 ## key
@@ -117,6 +127,8 @@ key: string
 **废弃版本：** 11
 
 **替代接口：** Cipher
+
+<!--Device-CipherRsaOptions-key: string--><!--Device-CipherRsaOptions-key: string-End-->
 
 **系统能力：** SystemCapability.Security.Cipher
 
@@ -136,6 +148,8 @@ text: string
 
 **替代接口：** Cipher
 
+<!--Device-CipherRsaOptions-text: string--><!--Device-CipherRsaOptions-text: string-End-->
+
 **系统能力：** SystemCapability.Security.Cipher
 
 ## transformation
@@ -153,5 +167,7 @@ RSA算法的填充项，默认为RSA/None/OAEPWithSHA256AndMGF1Padding。
 **废弃版本：** 11
 
 **替代接口：** Cipher
+
+<!--Device-CipherRsaOptions-transformation?: string--><!--Device-CipherRsaOptions-transformation?: string-End-->
 
 **系统能力：** SystemCapability.Security.Cipher

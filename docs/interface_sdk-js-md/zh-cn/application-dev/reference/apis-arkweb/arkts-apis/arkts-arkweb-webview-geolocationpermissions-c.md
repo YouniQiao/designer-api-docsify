@@ -10,6 +10,8 @@ GeolocationPermissions适用于需要主动管理Web组件地理位置权限的�
 
 **起始版本：** 9
 
+<!--Device-webview-class GeolocationPermissions--><!--Device-webview-class GeolocationPermissions-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## 导入模块
@@ -29,6 +31,8 @@ static allowGeolocation(origin: string, incognito?: boolean): void
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-GeolocationPermissions-static allowGeolocation(origin: string, incognito?: boolean): void--><!--Device-GeolocationPermissions-static allowGeolocation(origin: string, incognito?: boolean): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -88,6 +92,8 @@ static deleteAllGeolocation(incognito?: boolean): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-GeolocationPermissions-static deleteAllGeolocation(incognito?: boolean): void--><!--Device-GeolocationPermissions-static deleteAllGeolocation(incognito?: boolean): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -109,6 +115,8 @@ static deleteGeolocation(origin: string, incognito?: boolean): void
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-GeolocationPermissions-static deleteGeolocation(origin: string, incognito?: boolean): void--><!--Device-GeolocationPermissions-static deleteGeolocation(origin: string, incognito?: boolean): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -167,6 +175,8 @@ static getAccessibleGeolocation(origin: string, incognito?: boolean): Promise<bo
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-GeolocationPermissions-static getAccessibleGeolocation(origin: string, incognito?: boolean): Promise<boolean>--><!--Device-GeolocationPermissions-static getAccessibleGeolocation(origin: string, incognito?: boolean): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -239,6 +249,8 @@ static getAccessibleGeolocation(origin: string, callback: AsyncCallback<boolean>
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-GeolocationPermissions-static getAccessibleGeolocation(origin: string, callback: AsyncCallback<boolean>, incognito?: boolean): void--><!--Device-GeolocationPermissions-static getAccessibleGeolocation(origin: string, callback: AsyncCallback<boolean>, incognito?: boolean): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -303,6 +315,8 @@ static getStoredGeolocation(incognito?: boolean): Promise<Array<string>>
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-GeolocationPermissions-static getStoredGeolocation(incognito?: boolean): Promise<Array<string>>--><!--Device-GeolocationPermissions-static getStoredGeolocation(incognito?: boolean): Promise<Array<string>>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -372,6 +386,8 @@ static getStoredGeolocation(callback: AsyncCallback<Array<string>>, incognito?: 
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-GeolocationPermissions-static getStoredGeolocation(callback: AsyncCallback<Array<string>>, incognito?: boolean): void--><!--Device-GeolocationPermissions-static getStoredGeolocation(callback: AsyncCallback<Array<string>>, incognito?: boolean): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

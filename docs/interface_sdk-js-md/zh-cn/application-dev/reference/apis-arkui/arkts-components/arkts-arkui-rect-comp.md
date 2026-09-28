@@ -31,6 +31,8 @@ Use new function to create Rect. Anonymous Object Rectification.
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-RectInterface-new (    options?: RectOptions | RoundedRectOptions,  ): RectAttribute--><!--Device-RectInterface-new (    options?: RectOptions | RoundedRectOptions,  ): RectAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数:**
@@ -56,6 +58,8 @@ Rect(
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-RectInterface-(    options?: RectOptions | RoundedRectOptions,  ): RectAttribute--><!--Device-RectInterface-(    options?: RectOptions | RoundedRectOptions,  ): RectAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

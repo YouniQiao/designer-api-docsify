@@ -16,6 +16,8 @@ function setSecurityLabelSync(path: string, type: DataLevel): void
 
 **起始版本：** 9
 
+<!--Device-securityLabel-function setSecurityLabelSync(path: string, type: DataLevel): void--><!--Device-securityLabel-function setSecurityLabelSync(path: string, type: DataLevel): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**

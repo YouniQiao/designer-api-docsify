@@ -14,6 +14,8 @@ namespace param
 
 **起始版本：** 9
 
+<!--Device-hiAppEvent-namespace param--><!--Device-hiAppEvent-namespace param-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 ## 导入模块

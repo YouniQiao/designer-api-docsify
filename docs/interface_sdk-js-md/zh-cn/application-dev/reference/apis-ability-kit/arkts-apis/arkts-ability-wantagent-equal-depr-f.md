@@ -21,6 +21,8 @@ function equal(agent: WantAgent, otherAgent: WantAgent, callback: AsyncCallback<
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-wantAgent-function equal(agent: WantAgent, otherAgent: WantAgent, callback: AsyncCallback<boolean>): void--><!--Device-wantAgent-function equal(agent: WantAgent, otherAgent: WantAgent, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -105,6 +107,8 @@ function equal(agent: WantAgent, otherAgent: WantAgent): Promise<boolean>
 **替代接口：** [equal](arkts-ability-wantagent-equal-f.md)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-wantAgent-function equal(agent: WantAgent, otherAgent: WantAgent): Promise<boolean>--><!--Device-wantAgent-function equal(agent: WantAgent, otherAgent: WantAgent): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

@@ -18,6 +18,8 @@ function off(type: 'mission', listenerId: number, callback: AsyncCallback<void>)
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
+<!--Device-missionManager-function off(type: 'mission', listenerId: long, callback: AsyncCallback<void>): void--><!--Device-missionManager-function off(type: 'mission', listenerId: long, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -138,6 +140,8 @@ function off(type: 'mission', listenerId: number): Promise<void>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
+
+<!--Device-missionManager-function off(type: 'mission', listenerId: long): Promise<void>--><!--Device-missionManager-function off(type: 'mission', listenerId: long): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 

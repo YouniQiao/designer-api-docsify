@@ -10,6 +10,8 @@ enum Sort
 
 **起始版本：** 23
 
+<!--Device-avMusicTemplate-enum Sort--><!--Device-avMusicTemplate-enum Sort-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## NONE
@@ -23,6 +25,8 @@ NONE = 0
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Sort-NONE = 0--><!--Device-Sort-NONE = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -38,6 +42,8 @@ ORDER = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Sort-ORDER = 1--><!--Device-Sort-ORDER = 1-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## REVERSE_ORDER
@@ -51,5 +57,7 @@ REVERSE_ORDER = 2
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Sort-REVERSE_ORDER = 2--><!--Device-Sort-REVERSE_ORDER = 2-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate

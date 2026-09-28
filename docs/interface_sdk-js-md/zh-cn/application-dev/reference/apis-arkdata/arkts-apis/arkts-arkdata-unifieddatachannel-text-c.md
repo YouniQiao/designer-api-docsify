@@ -10,6 +10,8 @@ class Text extends UnifiedRecord
 
 **起始版本：** 10
 
+<!--Device-unifiedDataChannel-class Text extends UnifiedRecord--><!--Device-unifiedDataChannel-class Text extends UnifiedRecord-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## 导入模块
@@ -43,5 +45,7 @@ details?: Record<string, string>
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Text-details?: Record<string, string>--><!--Device-Text-details?: Record<string, string>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core

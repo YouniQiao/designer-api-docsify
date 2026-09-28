@@ -8,6 +8,8 @@ export interface DownloadableProfile
 
 **起始版本：** 18
 
+<!--Device-eSIM-export interface DownloadableProfile--><!--Device-eSIM-export interface DownloadableProfile-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 ## 导入模块
@@ -28,6 +30,8 @@ accessRules?: Array<AccessRule>
 
 **起始版本：** 18
 
+<!--Device-DownloadableProfile-accessRules?: Array<AccessRule>--><!--Device-DownloadableProfile-accessRules?: Array<AccessRule>-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 ## activationCode
@@ -41,6 +45,8 @@ activationCode: string
 **类型：** string
 
 **起始版本：** 18
+
+<!--Device-DownloadableProfile-activationCode: string--><!--Device-DownloadableProfile-activationCode: string-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
@@ -56,6 +62,8 @@ carrierName?: string
 
 **起始版本：** 18
 
+<!--Device-DownloadableProfile-carrierName?: string--><!--Device-DownloadableProfile-carrierName?: string-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 ## confirmationCode
@@ -69,5 +77,7 @@ confirmationCode?: string
 **类型：** string
 
 **起始版本：** 18
+
+<!--Device-DownloadableProfile-confirmationCode?: string--><!--Device-DownloadableProfile-confirmationCode?: string-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim

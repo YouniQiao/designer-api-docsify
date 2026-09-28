@@ -20,6 +20,8 @@ function startSyncRemoteMissions(parameter: MissionParameter, callback: AsyncCal
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-distributedMissionManager-function startSyncRemoteMissions(parameter: MissionParameter, callback: AsyncCallback<void>): void--><!--Device-distributedMissionManager-function startSyncRemoteMissions(parameter: MissionParameter, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -82,6 +84,8 @@ function startSyncRemoteMissions(parameter: MissionParameter): Promise<void>
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-distributedMissionManager-function startSyncRemoteMissions(parameter: MissionParameter): Promise<void>--><!--Device-distributedMissionManager-function startSyncRemoteMissions(parameter: MissionParameter): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 

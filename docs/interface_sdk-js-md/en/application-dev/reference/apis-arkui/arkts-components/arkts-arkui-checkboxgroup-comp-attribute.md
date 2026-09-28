@@ -12,6 +12,8 @@ In addition to the universal events, the following events are supported.
 
 **Since:** 8
 
+<!--Device-unnamed-declare class CheckboxGroupAttribute extends CommonMethod<CheckboxGroupAttribute>--><!--Device-unnamed-declare class CheckboxGroupAttribute extends CommonMethod<CheckboxGroupAttribute>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## checkboxShape
@@ -29,6 +31,8 @@ Sets the check box shape of the check box group.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-CheckboxGroupAttribute-checkboxShape(value: CheckBoxShape): CheckboxGroupAttribute--><!--Device-CheckboxGroupAttribute-checkboxShape(value: CheckBoxShape): CheckboxGroupAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -56,6 +60,8 @@ Sets the check box shape of the check box group. Compared with [checkboxShape](#
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-CheckboxGroupAttribute-checkboxShape(shape: Optional<CheckBoxShape>): CheckboxGroupAttribute--><!--Device-CheckboxGroupAttribute-checkboxShape(shape: Optional<CheckBoxShape>): CheckboxGroupAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -82,6 +88,8 @@ Customize the CheckboxGroup content area. When this attribute is set, the settin
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
+<!--Device-CheckboxGroupAttribute-contentModifier(modifier: Optional<ContentModifier<CheckBoxGroupConfiguration>>): CheckboxGroupAttribute--><!--Device-CheckboxGroupAttribute-contentModifier(modifier: Optional<ContentModifier<CheckBoxGroupConfiguration>>): CheckboxGroupAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -103,6 +111,8 @@ Sets the check mark style of the check box.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-CheckboxGroupAttribute-mark(value: MarkStyle): CheckboxGroupAttribute--><!--Device-CheckboxGroupAttribute-mark(value: MarkStyle): CheckboxGroupAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -128,6 +138,8 @@ Sets the check mark style of the check box. Compared with [mark](#mark)&lt;sup&g
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-CheckboxGroupAttribute-mark(style: Optional<MarkStyle>): CheckboxGroupAttribute--><!--Device-CheckboxGroupAttribute-mark(style: Optional<MarkStyle>): CheckboxGroupAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -151,6 +163,8 @@ Triggered when the selected status of the check box group or any check box where
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-CheckboxGroupAttribute-onChange(callback: OnCheckboxGroupChangeCallback): CheckboxGroupAttribute--><!--Device-CheckboxGroupAttribute-onChange(callback: OnCheckboxGroupChangeCallback): CheckboxGroupAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -177,6 +191,8 @@ Triggered when the selected status of the check box group or any check box where
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-CheckboxGroupAttribute-onChange(callback: Optional<OnCheckboxGroupChangeCallback>): CheckboxGroupAttribute--><!--Device-CheckboxGroupAttribute-onChange(callback: Optional<OnCheckboxGroupChangeCallback>): CheckboxGroupAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -208,6 +224,8 @@ Since API version 18, this attribute supports two-way binding through [!!](../..
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-CheckboxGroupAttribute-selectAll(value: boolean): CheckboxGroupAttribute--><!--Device-CheckboxGroupAttribute-selectAll(value: boolean): CheckboxGroupAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -238,6 +256,8 @@ This attribute supports two-way binding through [$$](../../../ui/state-managemen
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-CheckboxGroupAttribute-selectAll(isAllSelected: Optional<boolean>): CheckboxGroupAttribute--><!--Device-CheckboxGroupAttribute-selectAll(isAllSelected: Optional<boolean>): CheckboxGroupAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -261,6 +281,8 @@ Sets the color of the selected check box.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-CheckboxGroupAttribute-selectedColor(value: ResourceColor): CheckboxGroupAttribute--><!--Device-CheckboxGroupAttribute-selectedColor(value: ResourceColor): CheckboxGroupAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -288,6 +310,8 @@ Sets the color of the selected check box. Compared with [selectedColor](#selecte
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-CheckboxGroupAttribute-selectedColor(resColor: Optional<ResourceColor>): CheckboxGroupAttribute--><!--Device-CheckboxGroupAttribute-selectedColor(resColor: Optional<ResourceColor>): CheckboxGroupAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -309,6 +333,8 @@ Sets the border color of the check box when it is not selected.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-CheckboxGroupAttribute-unselectedColor(value: ResourceColor): CheckboxGroupAttribute--><!--Device-CheckboxGroupAttribute-unselectedColor(value: ResourceColor): CheckboxGroupAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -333,6 +359,8 @@ Sets the border color of the check box when it is not selected. Compared with [u
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-CheckboxGroupAttribute-unselectedColor(resColor: Optional<ResourceColor>): CheckboxGroupAttribute--><!--Device-CheckboxGroupAttribute-unselectedColor(resColor: Optional<ResourceColor>): CheckboxGroupAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

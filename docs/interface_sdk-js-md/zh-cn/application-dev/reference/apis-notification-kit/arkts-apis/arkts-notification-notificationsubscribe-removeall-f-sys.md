@@ -18,6 +18,8 @@ function removeAll(bundle: BundleOption, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationSubscribe-function removeAll(bundle: BundleOption, callback: AsyncCallback<void>): void--><!--Device-notificationSubscribe-function removeAll(bundle: BundleOption, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -74,6 +76,8 @@ function removeAll(callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationSubscribe-function removeAll(callback: AsyncCallback<void>): void--><!--Device-notificationSubscribe-function removeAll(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -124,6 +128,8 @@ function removeAll(userId: number, callback: AsyncCallback<void>): void
 **起始版本：** 9
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationSubscribe-function removeAll(userId: int, callback: AsyncCallback<void>): void--><!--Device-notificationSubscribe-function removeAll(userId: int, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -180,6 +186,8 @@ function removeAll(userId: number): Promise<void>
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationSubscribe-function removeAll(userId: int): Promise<void>--><!--Device-notificationSubscribe-function removeAll(userId: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -235,6 +243,8 @@ function removeAll(bundle?: BundleOption): Promise<void>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationSubscribe-function removeAll(bundle?: BundleOption): Promise<void>--><!--Device-notificationSubscribe-function removeAll(bundle?: BundleOption): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

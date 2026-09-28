@@ -29,6 +29,8 @@ This API only supports obtaining the information in the configuration file, and 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-font-function getUIFontConfig(): UIFontConfig--><!--Device-font-function getUIFontConfig(): UIFontConfig-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**

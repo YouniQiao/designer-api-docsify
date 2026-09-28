@@ -18,6 +18,8 @@ VideoSession继承自[Session](arkts-camera-camera-session-i.md)、[Flash](arkts
 
 **起始版本：** 11
 
+<!--Device-camera-interface VideoSession extends Session, Flash, AutoExposure, WhiteBalance, Focus, Zoom, Stabilization,    ColorManagement, ControlCenter, AutoDeviceSwitch, Macro, ManualExposure, ManualFocus, ManualIso, OIS,    Aperture--><!--Device-camera-interface VideoSession extends Session, Flash, AutoExposure, WhiteBalance, Focus, Zoom, Stabilization,    ColorManagement, ControlCenter, AutoDeviceSwitch, Macro, ManualExposure, ManualFocus, ManualIso, OIS,    Aperture-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
@@ -36,7 +38,9 @@ canPreconfig(preconfigType: PreconfigType, preconfigRatio?: PreconfigRatio): boo
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-VideoSession-canPreconfig(preconfigType: PreconfigType, preconfigRatio?: PreconfigRatio): boolean--><!--Device-VideoSession-canPreconfig(preconfigType: PreconfigType, preconfigRatio?: PreconfigRatio): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -88,6 +92,8 @@ off(type: 'error', callback?: ErrorCallback): void
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
+<!--Device-VideoSession-off(type: 'error', callback?: ErrorCallback): void--><!--Device-VideoSession-off(type: 'error', callback?: ErrorCallback): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **参数：**
@@ -116,6 +122,8 @@ off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void
 **起始版本：** 11
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-VideoSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void--><!--Device-VideoSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -146,6 +154,8 @@ off(type: 'smoothZoomInfoAvailable', callback?: AsyncCallback<SmoothZoomInfo>): 
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
+<!--Device-VideoSession-off(type: 'smoothZoomInfoAvailable', callback?: AsyncCallback<SmoothZoomInfo>): void--><!--Device-VideoSession-off(type: 'smoothZoomInfoAvailable', callback?: AsyncCallback<SmoothZoomInfo>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **参数：**
@@ -175,6 +185,8 @@ off(type: 'controlCenterEffectStatusChange', callback?: AsyncCallback<ControlCen
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-VideoSession-off(type: 'controlCenterEffectStatusChange', callback?: AsyncCallback<ControlCenterStatusInfo>): void--><!--Device-VideoSession-off(type: 'controlCenterEffectStatusChange', callback?: AsyncCallback<ControlCenterStatusInfo>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **参数：**
@@ -203,6 +215,8 @@ off(type: 'macroStatusChanged', callback?: AsyncCallback<boolean>): void
 **起始版本：** 20
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-VideoSession-off(type: 'macroStatusChanged', callback?: AsyncCallback<boolean>): void--><!--Device-VideoSession-off(type: 'macroStatusChanged', callback?: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -239,6 +253,8 @@ off(type: 'autoDeviceSwitchStatusChange', callback?: AsyncCallback<AutoDeviceSwi
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
+<!--Device-VideoSession-off(type: 'autoDeviceSwitchStatusChange', callback?: AsyncCallback<AutoDeviceSwitchStatus>): void--><!--Device-VideoSession-off(type: 'autoDeviceSwitchStatusChange', callback?: AsyncCallback<AutoDeviceSwitchStatus>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **参数：**
@@ -267,6 +283,8 @@ off(type: 'systemPressureLevelChange', callback?: AsyncCallback<SystemPressureLe
 **起始版本：** 20
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-VideoSession-off(type: 'systemPressureLevelChange', callback?: AsyncCallback<SystemPressureLevel>): void--><!--Device-VideoSession-off(type: 'systemPressureLevelChange', callback?: AsyncCallback<SystemPressureLevel>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -297,7 +315,9 @@ offExposureInfoChange(callback?: Callback<ExposureInfo>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-VideoSession-offExposureInfoChange(callback?: Callback<ExposureInfo>): void--><!--Device-VideoSession-offExposureInfoChange(callback?: Callback<ExposureInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -327,7 +347,9 @@ offIsoInfoChange(callback?: Callback<IsoInfo>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-VideoSession-offIsoInfoChange(callback?: Callback<IsoInfo>): void--><!--Device-VideoSession-offIsoInfoChange(callback?: Callback<IsoInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -369,6 +391,8 @@ on(type: 'error', callback: ErrorCallback): void
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
+<!--Device-VideoSession-on(type: 'error', callback: ErrorCallback): void--><!--Device-VideoSession-on(type: 'error', callback: ErrorCallback): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **参数：**
@@ -407,6 +431,8 @@ on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
 **起始版本：** 11
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-VideoSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void--><!--Device-VideoSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -451,6 +477,8 @@ on(type: 'smoothZoomInfoAvailable', callback: AsyncCallback<SmoothZoomInfo>): vo
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
+<!--Device-VideoSession-on(type: 'smoothZoomInfoAvailable', callback: AsyncCallback<SmoothZoomInfo>): void--><!--Device-VideoSession-on(type: 'smoothZoomInfoAvailable', callback: AsyncCallback<SmoothZoomInfo>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **参数：**
@@ -494,6 +522,8 @@ on(type: 'controlCenterEffectStatusChange', callback: AsyncCallback<ControlCente
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-VideoSession-on(type: 'controlCenterEffectStatusChange', callback: AsyncCallback<ControlCenterStatusInfo>): void--><!--Device-VideoSession-on(type: 'controlCenterEffectStatusChange', callback: AsyncCallback<ControlCenterStatusInfo>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **参数：**
@@ -532,6 +562,8 @@ on(type: 'macroStatusChanged', callback: AsyncCallback<boolean>): void
 **起始版本：** 20
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-VideoSession-on(type: 'macroStatusChanged', callback: AsyncCallback<boolean>): void--><!--Device-VideoSession-on(type: 'macroStatusChanged', callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -582,6 +614,8 @@ on(type: 'autoDeviceSwitchStatusChange', callback: AsyncCallback<AutoDeviceSwitc
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
+<!--Device-VideoSession-on(type: 'autoDeviceSwitchStatusChange', callback: AsyncCallback<AutoDeviceSwitchStatus>): void--><!--Device-VideoSession-on(type: 'autoDeviceSwitchStatusChange', callback: AsyncCallback<AutoDeviceSwitchStatus>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **参数：**
@@ -625,6 +659,8 @@ on(type: 'systemPressureLevelChange', callback: AsyncCallback<SystemPressureLeve
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-VideoSession-on(type: 'systemPressureLevelChange', callback: AsyncCallback<SystemPressureLevel>): void--><!--Device-VideoSession-on(type: 'systemPressureLevelChange', callback: AsyncCallback<SystemPressureLevel>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **参数：**
@@ -664,7 +700,9 @@ onExposureInfoChange(callback: Callback<ExposureInfo>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-VideoSession-onExposureInfoChange(callback: Callback<ExposureInfo>): void--><!--Device-VideoSession-onExposureInfoChange(callback: Callback<ExposureInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -696,7 +734,9 @@ onIsoInfoChange(callback: Callback<IsoInfo>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-VideoSession-onIsoInfoChange(callback: Callback<IsoInfo>): void--><!--Device-VideoSession-onIsoInfoChange(callback: Callback<IsoInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -728,7 +768,9 @@ preconfig(preconfigType: PreconfigType, preconfigRatio?: PreconfigRatio): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-VideoSession-preconfig(preconfigType: PreconfigType, preconfigRatio?: PreconfigRatio): void--><!--Device-VideoSession-preconfig(preconfigType: PreconfigType, preconfigRatio?: PreconfigRatio): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -778,7 +820,9 @@ setQualityPrioritization(quality: QualityPrioritization): void
 
 **起始版本：** 14
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-VideoSession-setQualityPrioritization(quality: QualityPrioritization): void--><!--Device-VideoSession-setQualityPrioritization(quality: QualityPrioritization): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

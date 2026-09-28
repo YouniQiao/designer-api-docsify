@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare namespace cameraPicker--><!--Device-unnamed-declare namespace cameraPicker-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块

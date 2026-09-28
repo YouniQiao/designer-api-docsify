@@ -8,6 +8,8 @@ FenceExtensionAbility为开发者提供的地理围栏相关的能力。
 
 **起始版本：** 14
 
+<!--Device-unnamed-export default class FenceExtensionAbility--><!--Device-unnamed-export default class FenceExtensionAbility-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 ## 导入模块
@@ -27,6 +29,8 @@ onDestroy(): void
 **起始版本：** 14
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FenceExtensionAbility-onDestroy(): void--><!--Device-FenceExtensionAbility-onDestroy(): void-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geofence
 
@@ -54,6 +58,8 @@ onFenceStatusChange(transition: geoLocationManager.GeofenceTransition, additions
 **起始版本：** 14
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FenceExtensionAbility-onFenceStatusChange(transition: geoLocationManager.GeofenceTransition, additions: Record<string, string>): void--><!--Device-FenceExtensionAbility-onFenceStatusChange(transition: geoLocationManager.GeofenceTransition, additions: Record<string, string>): void-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geofence
 
@@ -124,5 +130,7 @@ context: FenceExtensionContext
 **起始版本：** 14
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FenceExtensionAbility-context: FenceExtensionContext--><!--Device-FenceExtensionAbility-context: FenceExtensionContext-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geofence

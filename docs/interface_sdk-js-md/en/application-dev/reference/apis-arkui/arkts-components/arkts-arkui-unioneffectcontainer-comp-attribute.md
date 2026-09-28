@@ -16,6 +16,8 @@ Universal attributes are supported. The width and height can be set.
 
 **Since:** 23
 
+<!--Device-unnamed-declare class UnionEffectContainerAttribute extends CommonMethod<UnionEffectContainerAttribute>--><!--Device-unnamed-declare class UnionEffectContainerAttribute extends CommonMethod<UnionEffectContainerAttribute>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.

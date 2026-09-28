@@ -8,6 +8,8 @@ export interface Field
 
 **起始版本：** 11
 
+<!--Device-cloudExtension-export interface Field--><!--Device-cloudExtension-export interface Field-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ alias: string
 
 **起始版本：** 11
 
+<!--Device-Field-alias: string--><!--Device-Field-alias: string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ colName: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-Field-colName: string--><!--Device-Field-colName: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -62,6 +68,8 @@ nullable: boolean
 
 **起始版本：** 11
 
+<!--Device-Field-nullable: boolean--><!--Device-Field-nullable: boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
@@ -78,6 +86,8 @@ primary: boolean
 
 **起始版本：** 11
 
+<!--Device-Field-primary: boolean--><!--Device-Field-primary: boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
@@ -93,6 +103,8 @@ type: FieldType
 **类型：** [FieldType](arkts-arkdata-cloudextension-fieldtype-e-sys.md)
 
 **起始版本：** 11
+
+<!--Device-Field-type: FieldType--><!--Device-Field-type: FieldType-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 

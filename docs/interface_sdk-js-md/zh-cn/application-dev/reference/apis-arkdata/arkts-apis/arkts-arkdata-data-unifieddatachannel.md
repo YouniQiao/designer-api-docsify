@@ -10,6 +10,8 @@ UDMF处理数据时，不会解析用户数据的内容，存储路径安全性�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-unnamed-declare namespace unifiedDataChannel--><!--Device-unnamed-declare namespace unifiedDataChannel-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## 导入模块

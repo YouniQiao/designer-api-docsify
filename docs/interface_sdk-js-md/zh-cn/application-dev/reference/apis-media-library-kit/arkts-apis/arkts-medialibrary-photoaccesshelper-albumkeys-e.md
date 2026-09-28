@@ -8,6 +8,8 @@ enum AlbumKeys
 
 **起始版本：** 10
 
+<!--Device-photoAccessHelper-enum AlbumKeys--><!--Device-photoAccessHelper-enum AlbumKeys-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## URI
@@ -20,6 +22,8 @@ URI = 'uri'
 
 **起始版本：** 10
 
+<!--Device-AlbumKeys-URI = 'uri'--><!--Device-AlbumKeys-URI = 'uri'-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## ALBUM_NAME
@@ -31,6 +35,8 @@ ALBUM_NAME = 'album_name'
 相册名字。
 
 **起始版本：** 10
+
+<!--Device-AlbumKeys-ALBUM_NAME = 'album_name'--><!--Device-AlbumKeys-ALBUM_NAME = 'album_name'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -51,6 +57,8 @@ ALBUM_LPATH = 'lpath'
 
 **起始版本：** 23
 
+<!--Device-AlbumKeys-ALBUM_LPATH = 'lpath'--><!--Device-AlbumKeys-ALBUM_LPATH = 'lpath'-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## CHANGE_TIME
@@ -62,5 +70,7 @@ CHANGE_TIME = 'change_time'
 相册的更改时间（单位：秒）。
 
 **起始版本：** 23
+
+<!--Device-AlbumKeys-CHANGE_TIME = 'change_time'--><!--Device-AlbumKeys-CHANGE_TIME = 'change_time'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core

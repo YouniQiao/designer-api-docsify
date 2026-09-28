@@ -8,6 +8,8 @@ export interface ContinuableInfo
 
 **起始版本：** 10
 
+<!--Device-unnamed-export interface ContinuableInfo--><!--Device-unnamed-export interface ContinuableInfo-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -25,6 +27,8 @@ bundleName: string
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ContinuableInfo-bundleName: string--><!--Device-ContinuableInfo-bundleName: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -44,6 +48,8 @@ continueType?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ContinuableInfo-continueType?: string--><!--Device-ContinuableInfo-continueType?: string-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +67,8 @@ srcBundleName?: string
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ContinuableInfo-srcBundleName?: string--><!--Device-ContinuableInfo-srcBundleName?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -80,6 +88,8 @@ srcDeviceId: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ContinuableInfo-srcDeviceId: string--><!--Device-ContinuableInfo-srcDeviceId: string-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -97,6 +107,8 @@ targetAppIds?: Array<string>
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ContinuableInfo-targetAppIds?: Array<string>--><!--Device-ContinuableInfo-targetAppIds?: Array<string>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 

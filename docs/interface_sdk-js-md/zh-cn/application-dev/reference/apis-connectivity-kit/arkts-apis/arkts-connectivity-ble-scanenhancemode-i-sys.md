@@ -8,6 +8,8 @@ The enum of gatt characteristic write type
 
 **起始版本：** 26.0.0
 
+<!--Device-ble-interface ScanEnhanceMode--><!--Device-ble-interface ScanEnhanceMode-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ enhanceMode: EnhanceMode
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ScanEnhanceMode-enhanceMode: EnhanceMode--><!--Device-ScanEnhanceMode-enhanceMode: EnhanceMode-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ timeout: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ScanEnhanceMode-timeout: int--><!--Device-ScanEnhanceMode-timeout: int-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

@@ -20,6 +20,8 @@ function openNotificationSettingsWithResult(context: UIAbilityContext): Promise<
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-notificationManager-function openNotificationSettingsWithResult(context: UIAbilityContext): Promise<NotificationSetting>--><!--Device-notificationManager-function openNotificationSettingsWithResult(context: UIAbilityContext): Promise<NotificationSetting>-End-->
+
 **系统能力：** SystemCapability.Notification.NotificationSettings
 
 **参见：**

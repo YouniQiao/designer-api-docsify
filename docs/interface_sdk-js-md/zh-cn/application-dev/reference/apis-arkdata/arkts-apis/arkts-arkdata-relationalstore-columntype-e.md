@@ -8,6 +8,8 @@ enum ColumnType
 
 **起始版本：** 18
 
+<!--Device-relationalStore-enum ColumnType--><!--Device-relationalStore-enum ColumnType-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## NULL
@@ -19,6 +21,8 @@ NULL = 0
 表示列数据类型为NULL。
 
 **起始版本：** 18
+
+<!--Device-ColumnType-NULL = 0--><!--Device-ColumnType-NULL = 0-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -32,6 +36,8 @@ INTEGER = 1
 
 **起始版本：** 18
 
+<!--Device-ColumnType-INTEGER = 1--><!--Device-ColumnType-INTEGER = 1-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## REAL
@@ -43,6 +49,8 @@ REAL = 2
 表示列类型为浮点数。
 
 **起始版本：** 18
+
+<!--Device-ColumnType-REAL = 2--><!--Device-ColumnType-REAL = 2-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -56,6 +64,8 @@ TEXT = 3
 
 **起始版本：** 18
 
+<!--Device-ColumnType-TEXT = 3--><!--Device-ColumnType-TEXT = 3-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## BLOB
@@ -67,6 +77,8 @@ BLOB = 4
 表示列类型为Uint8Array。
 
 **起始版本：** 18
+
+<!--Device-ColumnType-BLOB = 4--><!--Device-ColumnType-BLOB = 4-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -80,6 +92,8 @@ ASSET = 5
 
 **起始版本：** 18
 
+<!--Device-ColumnType-ASSET = 5--><!--Device-ColumnType-ASSET = 5-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## ASSETS
@@ -91,6 +105,8 @@ ASSETS = 6
 表示列类型为[Assets](arkts-arkdata-relationalstore-assets-t.md)。
 
 **起始版本：** 18
+
+<!--Device-ColumnType-ASSETS = 6--><!--Device-ColumnType-ASSETS = 6-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -104,6 +120,8 @@ FLOAT_VECTOR = 7
 
 **起始版本：** 18
 
+<!--Device-ColumnType-FLOAT_VECTOR = 7--><!--Device-ColumnType-FLOAT_VECTOR = 7-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## UNLIMITED_INT
@@ -115,5 +133,7 @@ UNLIMITED_INT = 8
 表示列类型为bigint。
 
 **起始版本：** 18
+
+<!--Device-ColumnType-UNLIMITED_INT = 8--><!--Device-ColumnType-UNLIMITED_INT = 8-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core

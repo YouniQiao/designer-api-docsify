@@ -10,6 +10,8 @@ interface AudioSpatializationManager
 
 **起始版本：** 18
 
+<!--Device-audio-interface AudioSpatializationManager--><!--Device-audio-interface AudioSpatializationManager-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 ## 导入模块
@@ -31,6 +33,8 @@ downloadPersonalizedHRTF(hrtfDescriptor: AudioHRTFAnonymousDescriptor): Promise<
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioSpatializationManager-downloadPersonalizedHRTF(hrtfDescriptor: AudioHRTFAnonymousDescriptor): Promise<void>--><!--Device-AudioSpatializationManager-downloadPersonalizedHRTF(hrtfDescriptor: AudioHRTFAnonymousDescriptor): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -70,6 +74,8 @@ getCurrentSpatialAudioSourceType(): SpatialAudioSourceType
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioSpatializationManager-getCurrentSpatialAudioSourceType(): SpatialAudioSourceType--><!--Device-AudioSpatializationManager-getCurrentSpatialAudioSourceType(): SpatialAudioSourceType-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -112,6 +118,8 @@ getSpatializationSceneType(): AudioSpatializationSceneType
 
 **起始版本：** 12
 
+<!--Device-AudioSpatializationManager-getSpatializationSceneType(): AudioSpatializationSceneType--><!--Device-AudioSpatializationManager-getSpatializationSceneType(): AudioSpatializationSceneType-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -152,6 +160,8 @@ isAdaptiveSpatialRenderingEnabled(deviceDescriptor: AudioDeviceDescriptor): bool
 以同步方式查询指定设备是否开启了自适应空间音频渲染。
 
 **起始版本：** 24
+
+<!--Device-AudioSpatializationManager-isAdaptiveSpatialRenderingEnabled(deviceDescriptor: AudioDeviceDescriptor): boolean--><!--Device-AudioSpatializationManager-isAdaptiveSpatialRenderingEnabled(deviceDescriptor: AudioDeviceDescriptor): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -219,6 +229,8 @@ isHeadTrackingEnabled(deviceDescriptor: AudioDeviceDescriptor): boolean
 获取指定设备的头动跟踪是否开启，同步返回结果。
 
 **起始版本：** 12
+
+<!--Device-AudioSpatializationManager-isHeadTrackingEnabled(deviceDescriptor: AudioDeviceDescriptor): boolean--><!--Device-AudioSpatializationManager-isHeadTrackingEnabled(deviceDescriptor: AudioDeviceDescriptor): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -294,6 +306,8 @@ isHeadTrackingEnabled(): boolean
 
 **替代接口：** [isHeadTrackingEnabled](#isheadtrackingenabled)
 
+<!--Device-AudioSpatializationManager-isHeadTrackingEnabled(): boolean--><!--Device-AudioSpatializationManager-isHeadTrackingEnabled(): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -335,6 +349,8 @@ isHeadTrackingSupported(): boolean
 
 **起始版本：** 11
 
+<!--Device-AudioSpatializationManager-isHeadTrackingSupported(): boolean--><!--Device-AudioSpatializationManager-isHeadTrackingSupported(): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -375,6 +391,8 @@ isHeadTrackingSupportedForDevice(deviceDescriptor: AudioDeviceDescriptor): boole
 获取指定设备是否支持头动跟踪，同步返回结果。
 
 **起始版本：** 11
+
+<!--Device-AudioSpatializationManager-isHeadTrackingSupportedForDevice(deviceDescriptor: AudioDeviceDescriptor): boolean--><!--Device-AudioSpatializationManager-isHeadTrackingSupportedForDevice(deviceDescriptor: AudioDeviceDescriptor): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -442,6 +460,8 @@ isPersonalizedSpatializationEnabled(selectedAudioDevice: AudioDeviceDescriptor):
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioSpatializationManager-isPersonalizedSpatializationEnabled(selectedAudioDevice: AudioDeviceDescriptor): boolean--><!--Device-AudioSpatializationManager-isPersonalizedSpatializationEnabled(selectedAudioDevice: AudioDeviceDescriptor): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -477,6 +497,8 @@ isPersonalizedSpatializationSupported(): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioSpatializationManager-isPersonalizedSpatializationSupported(): boolean--><!--Device-AudioSpatializationManager-isPersonalizedSpatializationSupported(): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -504,6 +526,8 @@ isSpatializationEnabled(deviceDescriptor: AudioDeviceDescriptor): boolean
 获取指定设备的空间音频渲染是否开启，同步返回结果。
 
 **起始版本：** 12
+
+<!--Device-AudioSpatializationManager-isSpatializationEnabled(deviceDescriptor: AudioDeviceDescriptor): boolean--><!--Device-AudioSpatializationManager-isSpatializationEnabled(deviceDescriptor: AudioDeviceDescriptor): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -578,6 +602,8 @@ isSpatializationEnabled(): boolean
 
 **替代接口：** [isSpatializationEnabled](#isspatializationenabled)
 
+<!--Device-AudioSpatializationManager-isSpatializationEnabled(): boolean--><!--Device-AudioSpatializationManager-isSpatializationEnabled(): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -619,6 +645,8 @@ isSpatializationSupported(): boolean
 
 **起始版本：** 11
 
+<!--Device-AudioSpatializationManager-isSpatializationSupported(): boolean--><!--Device-AudioSpatializationManager-isSpatializationSupported(): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -658,6 +686,8 @@ isSpatializationSupportedForDevice(deviceDescriptor: AudioDeviceDescriptor): boo
 获取指定设备是否支持空间音频，同步返回结果。
 
 **起始版本：** 11
+
+<!--Device-AudioSpatializationManager-isSpatializationSupportedForDevice(deviceDescriptor: AudioDeviceDescriptor): boolean--><!--Device-AudioSpatializationManager-isSpatializationSupportedForDevice(deviceDescriptor: AudioDeviceDescriptor): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -723,6 +753,8 @@ off(type: 'spatializationEnabledChangeForAnyDevice', callback?: Callback<AudioSp
 
 **起始版本：** 12
 
+<!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChangeForAnyDevice', callback?: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChangeForAnyDevice', callback?: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -770,6 +802,8 @@ off(type: 'headTrackingEnabledChangeForAnyDevice', callback?: Callback<AudioSpat
 取消监听头动跟踪开关状态变化事件。
 
 **起始版本：** 12
+
+<!--Device-AudioSpatializationManager-off(type: 'headTrackingEnabledChangeForAnyDevice', callback?: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-off(type: 'headTrackingEnabledChangeForAnyDevice', callback?: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -828,6 +862,8 @@ off(type: 'spatializationEnabledChange', callback?: Callback<boolean>): void
 
 **替代接口：** off
 
+<!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChange', callback?: Callback<boolean>): void--><!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChange', callback?: Callback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -882,6 +918,8 @@ off(type: 'headTrackingEnabledChange', callback?: Callback<boolean>): void
 
 **替代接口：** off
 
+<!--Device-AudioSpatializationManager-off(type: 'headTrackingEnabledChange', callback?: Callback<boolean>): void--><!--Device-AudioSpatializationManager-off(type: 'headTrackingEnabledChange', callback?: Callback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -928,6 +966,8 @@ offAdaptiveSpatialRenderingEnabledChangeForAnyDevice(callback?: Callback<AudioSp
 取消订阅自适应空间音频渲染开关状态变化事件。
 
 **起始版本：** 24
+
+<!--Device-AudioSpatializationManager-offAdaptiveSpatialRenderingEnabledChangeForAnyDevice(callback?: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-offAdaptiveSpatialRenderingEnabledChangeForAnyDevice(callback?: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -978,6 +1018,8 @@ offPersonalizedSpatializationEnabledChangeForAnyDevice(
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioSpatializationManager-offPersonalizedSpatializationEnabledChangeForAnyDevice(      callback?: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void--><!--Device-AudioSpatializationManager-offPersonalizedSpatializationEnabledChangeForAnyDevice(      callback?: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -1005,6 +1047,8 @@ offSpatialAudioSourceTypeChange(callback?: Callback<SpatialAudioSourceType>): vo
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioSpatializationManager-offSpatialAudioSourceTypeChange(callback?: Callback<SpatialAudioSourceType>): void--><!--Device-AudioSpatializationManager-offSpatialAudioSourceTypeChange(callback?: Callback<SpatialAudioSourceType>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -1049,6 +1093,8 @@ on(type: 'spatializationEnabledChangeForAnyDevice', callback: Callback<AudioSpat
 
 **起始版本：** 12
 
+<!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -1088,6 +1134,8 @@ on(type: 'headTrackingEnabledChangeForAnyDevice', callback: Callback<AudioSpatia
 监听头动跟踪开关状态变化事件（当动跟踪开关状态发生变化时触发）。使用callback异步回调。
 
 **起始版本：** 12
+
+<!--Device-AudioSpatializationManager-on(type: 'headTrackingEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-on(type: 'headTrackingEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -1138,6 +1186,8 @@ on(type: 'spatializationEnabledChange', callback: Callback<boolean>): void
 
 **替代接口：** on
 
+<!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChange', callback: Callback<boolean>): void--><!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChange', callback: Callback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -1186,6 +1236,8 @@ on(type: 'headTrackingEnabledChange', callback: Callback<boolean>): void
 
 **替代接口：** on
 
+<!--Device-AudioSpatializationManager-on(type: 'headTrackingEnabledChange', callback: Callback<boolean>): void--><!--Device-AudioSpatializationManager-on(type: 'headTrackingEnabledChange', callback: Callback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -1224,6 +1276,8 @@ onAdaptiveSpatialRenderingEnabledChangeForAnyDevice(callback: Callback<AudioSpat
 订阅自适应空间音频渲染开关状态变化事件，当自适应空间音频渲染开关状态发生变化时，注册的回调将被调用。
 
 **起始版本：** 24
+
+<!--Device-AudioSpatializationManager-onAdaptiveSpatialRenderingEnabledChangeForAnyDevice(callback: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-onAdaptiveSpatialRenderingEnabledChangeForAnyDevice(callback: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -1266,6 +1320,8 @@ onPersonalizedSpatializationEnabledChangeForAnyDevice(
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioSpatializationManager-onPersonalizedSpatializationEnabledChangeForAnyDevice(      callback: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void--><!--Device-AudioSpatializationManager-onPersonalizedSpatializationEnabledChangeForAnyDevice(      callback: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -1293,6 +1349,8 @@ onSpatialAudioSourceTypeChange(callback: Callback<SpatialAudioSourceType>): void
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioSpatializationManager-onSpatialAudioSourceTypeChange(callback: Callback<SpatialAudioSourceType>): void--><!--Device-AudioSpatializationManager-onSpatialAudioSourceTypeChange(callback: Callback<SpatialAudioSourceType>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -1332,6 +1390,8 @@ setAdaptiveSpatialRenderingEnabled(deviceDescriptor: AudioDeviceDescriptor, enab
 **起始版本：** 24
 
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
+
+<!--Device-AudioSpatializationManager-setAdaptiveSpatialRenderingEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise<void>--><!--Device-AudioSpatializationManager-setAdaptiveSpatialRenderingEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -1402,6 +1462,8 @@ setHeadTrackingEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean
 **起始版本：** 12
 
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
+
+<!--Device-AudioSpatializationManager-setHeadTrackingEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise<void>--><!--Device-AudioSpatializationManager-setHeadTrackingEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -1479,6 +1541,8 @@ setHeadTrackingEnabled(enable: boolean, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
+<!--Device-AudioSpatializationManager-setHeadTrackingEnabled(enable: boolean, callback: AsyncCallback<void>): void--><!--Device-AudioSpatializationManager-setHeadTrackingEnabled(enable: boolean, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -1539,6 +1603,8 @@ setHeadTrackingEnabled(enable: boolean): Promise<void>
 
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
+<!--Device-AudioSpatializationManager-setHeadTrackingEnabled(enable: boolean): Promise<void>--><!--Device-AudioSpatializationManager-setHeadTrackingEnabled(enable: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -1593,6 +1659,8 @@ setPersonalizedSpatializationEnabled(selectedAudioDevice: AudioDeviceDescriptor,
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioSpatializationManager-setPersonalizedSpatializationEnabled(selectedAudioDevice: AudioDeviceDescriptor,      enable: boolean): Promise<void>--><!--Device-AudioSpatializationManager-setPersonalizedSpatializationEnabled(selectedAudioDevice: AudioDeviceDescriptor,      enable: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -1631,6 +1699,8 @@ setSpatializationEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boole
 **起始版本：** 12
 
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
+
+<!--Device-AudioSpatializationManager-setSpatializationEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise<void>--><!--Device-AudioSpatializationManager-setSpatializationEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -1709,6 +1779,8 @@ setSpatializationEnabled(enable: boolean, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
+<!--Device-AudioSpatializationManager-setSpatializationEnabled(enable: boolean, callback: AsyncCallback<void>): void--><!--Device-AudioSpatializationManager-setSpatializationEnabled(enable: boolean, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -1769,6 +1841,8 @@ setSpatializationEnabled(enable: boolean): Promise<void>
 
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
+<!--Device-AudioSpatializationManager-setSpatializationEnabled(enable: boolean): Promise<void>--><!--Device-AudioSpatializationManager-setSpatializationEnabled(enable: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -1820,6 +1894,8 @@ setSpatializationSceneType(spatializationSceneType: AudioSpatializationSceneType
 
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
+<!--Device-AudioSpatializationManager-setSpatializationSceneType(spatializationSceneType: AudioSpatializationSceneType): void--><!--Device-AudioSpatializationManager-setSpatializationSceneType(spatializationSceneType: AudioSpatializationSceneType): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -1865,6 +1941,8 @@ updateSpatialDeviceState(spatialDeviceState: AudioSpatialDeviceState): void
 **起始版本：** 11
 
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
+
+<!--Device-AudioSpatializationManager-updateSpatialDeviceState(spatialDeviceState: AudioSpatialDeviceState): void--><!--Device-AudioSpatializationManager-updateSpatialDeviceState(spatialDeviceState: AudioSpatialDeviceState): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 

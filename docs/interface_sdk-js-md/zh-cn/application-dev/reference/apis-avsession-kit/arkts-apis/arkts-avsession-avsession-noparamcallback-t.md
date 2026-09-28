@@ -10,4 +10,6 @@ type NoParamCallback = () => void
 
 **起始版本：** 22
 
+<!--Device-avSession-type NoParamCallback = () => void--><!--Device-avSession-type NoParamCallback = () => void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core

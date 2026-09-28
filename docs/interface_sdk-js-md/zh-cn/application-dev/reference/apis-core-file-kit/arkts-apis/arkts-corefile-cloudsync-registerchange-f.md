@@ -16,6 +16,8 @@ function registerChange(uri: string, recursion: boolean, callback: Callback<Chan
 
 **起始版本：** 12
 
+<!--Device-cloudSync-function registerChange(uri: string, recursion: boolean, callback: Callback<ChangeData>): void--><!--Device-cloudSync-function registerChange(uri: string, recursion: boolean, callback: Callback<ChangeData>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **参数：**

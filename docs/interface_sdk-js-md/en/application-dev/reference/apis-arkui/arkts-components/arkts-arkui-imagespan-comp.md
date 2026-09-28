@@ -1,6 +1,6 @@
 # ImageSpan
 
-**ImageSpan** is a child component of [Text](arkts-arkui-text-comp.md#text) and [ContainerSpan](arkts-arkui-containerspan-comp-attribute.md#containerspanattribute), used to display inline images in text. It supports setting the image alignment, scale type, loading placeholder image, and color filter, and is suitable for scenarios where images need to be embedded in text paragraphs to implement image- text layout.
+**ImageSpan** is a child component of [Text](arkts-arkui-text-comp.md) and [ContainerSpan](arkts-arkui-containerspan-comp-attribute.md#containerspanattribute), used to display inline images in text. It supports setting the image alignment, scale type, loading placeholder image, and color filter, and is suitable for scenarios where images need to be embedded in text paragraphs to implement image- text layout.
 
 > **NOTE:** 
 > 
@@ -23,6 +23,8 @@ Defines the constructor of ImageSpan.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ImageSpanInterface-(value: ResourceStr | PixelMap): ImageSpanAttribute--><!--Device-ImageSpanInterface-(value: ResourceStr | PixelMap): ImageSpanAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

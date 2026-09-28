@@ -20,6 +20,8 @@ function unsubscribeThermalLevel(callback?: AsyncCallback<void>): void
 
 **替代接口：** [unregisterThermalLevelCallback](arkts-basicservices-thermal-unregisterthermallevelcallback-f.md)
 
+<!--Device-thermal-function unsubscribeThermalLevel(callback?: AsyncCallback<void>): void--><!--Device-thermal-function unsubscribeThermalLevel(callback?: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.PowerManager.ThermalManager
 
 **参数：**

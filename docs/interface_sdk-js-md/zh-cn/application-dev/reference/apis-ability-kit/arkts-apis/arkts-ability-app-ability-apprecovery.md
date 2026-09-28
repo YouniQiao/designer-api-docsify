@@ -12,6 +12,8 @@ appRecovery模块提供了应用在故障状态下的恢复能力。
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace appRecovery--><!--Device-unnamed-declare namespace appRecovery-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块

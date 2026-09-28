@@ -8,6 +8,8 @@ TreeMap可用于存储具有关联关系的key-value键值对集合，存储元�
 
 **起始版本：** 8
 
+<!--Device-unnamed-declare class TreeMap<K, V>--><!--Device-unnamed-declare class TreeMap<K, V>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -27,6 +29,8 @@ import { TreeMap } from '@kit.ArkTS';
 **起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TreeMap-[Symbol.iterator](): IterableIterator<[K, V]>--><!--Device-TreeMap-[Symbol.iterator](): IterableIterator<[K, V]>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -93,7 +97,9 @@ clear(): void
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TreeMap-clear(): void--><!--Device-TreeMap-clear(): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -126,6 +132,8 @@ TreeMap的构造函数，支持通过比较函数使元素按照自定义规则�
 **起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TreeMap-constructor(comparator?: (firstValue: K, secondValue: K) => boolean)--><!--Device-TreeMap-constructor(comparator?: (firstValue: K, secondValue: K) => boolean)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -197,7 +205,9 @@ entries(): IterableIterator<[K, V]>
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TreeMap-entries(): IterableIterator<[K, V]>--><!--Device-TreeMap-entries(): IterableIterator<[K, V]>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -255,6 +265,8 @@ forEach(callbackFn: (value?: V, key?: K, map?: TreeMap<K, V>) => void, thisArg?:
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-TreeMap-forEach(callbackFn: (value?: V, key?: K, map?: TreeMap<K, V>) => void, thisArg?: Object): void--><!--Device-TreeMap-forEach(callbackFn: (value?: V, key?: K, map?: TreeMap<K, V>) => void, thisArg?: Object): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -308,6 +320,8 @@ get(key: K): V
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-TreeMap-get(key: K): V--><!--Device-TreeMap-get(key: K): V-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -349,7 +363,9 @@ getFirstKey(): K
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TreeMap-getFirstKey(): K--><!--Device-TreeMap-getFirstKey(): K-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -388,6 +404,8 @@ getHigherKey(key: K): K
 **起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TreeMap-getHigherKey(key: K): K--><!--Device-TreeMap-getHigherKey(key: K): K-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -432,7 +450,9 @@ getLastKey(): K
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TreeMap-getLastKey(): K--><!--Device-TreeMap-getLastKey(): K-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -471,6 +491,8 @@ getLowerKey(key: K): K
 **起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TreeMap-getLowerKey(key: K): K--><!--Device-TreeMap-getLowerKey(key: K): K-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -515,7 +537,9 @@ hasKey(key: K): boolean
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TreeMap-hasKey(key: K): boolean--><!--Device-TreeMap-hasKey(key: K): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -558,7 +582,9 @@ hasValue(value: V): boolean
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TreeMap-hasValue(value: V): boolean--><!--Device-TreeMap-hasValue(value: V): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -600,7 +626,9 @@ isEmpty(): boolean
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TreeMap-isEmpty(): boolean--><!--Device-TreeMap-isEmpty(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -635,7 +663,9 @@ keys(): IterableIterator<K>
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TreeMap-keys(): IterableIterator<K>--><!--Device-TreeMap-keys(): IterableIterator<K>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -679,6 +709,8 @@ remove(key: K): V
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-TreeMap-remove(key: K): V--><!--Device-TreeMap-remove(key: K): V-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -719,7 +751,9 @@ replace(key: K, newValue: V): boolean
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TreeMap-replace(key: K, newValue: V): boolean--><!--Device-TreeMap-replace(key: K, newValue: V): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -762,7 +796,9 @@ set(key: K, value: V): Object
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TreeMap-set(key: K, value: V): Object--><!--Device-TreeMap-set(key: K, value: V): Object-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -803,7 +839,9 @@ setAll(map: TreeMap<K, V>): void
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TreeMap-setAll(map: TreeMap<K, V>): void--><!--Device-TreeMap-setAll(map: TreeMap<K, V>): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -847,7 +885,9 @@ values(): IterableIterator<V>
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TreeMap-values(): IterableIterator<V>--><!--Device-TreeMap-values(): IterableIterator<V>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -891,5 +931,7 @@ TreeMap的元素个数。
 **起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TreeMap-length: number--><!--Device-TreeMap-length: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

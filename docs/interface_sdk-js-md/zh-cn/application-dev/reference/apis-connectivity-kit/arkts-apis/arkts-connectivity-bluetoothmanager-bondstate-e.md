@@ -14,6 +14,8 @@ enum BondState
 
 **替代接口：** [BondState](arkts-connectivity-connection-bondstate-e.md)
 
+<!--Device-bluetoothManager-enum BondState--><!--Device-bluetoothManager-enum BondState-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## BOND_STATE_INVALID
@@ -29,6 +31,8 @@ BOND_STATE_INVALID = 0
 **废弃版本：** 10
 
 **替代接口：** [BOND_STATE_INVALID](arkts-connectivity-connection-bondstate-e.md#bond_state_invalid)
+
+<!--Device-BondState-BOND_STATE_INVALID = 0--><!--Device-BondState-BOND_STATE_INVALID = 0-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -46,6 +50,8 @@ BOND_STATE_BONDING = 1
 
 **替代接口：** [BOND_STATE_BONDING](arkts-connectivity-connection-bondstate-e.md#bond_state_bonding)
 
+<!--Device-BondState-BOND_STATE_BONDING = 1--><!--Device-BondState-BOND_STATE_BONDING = 1-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## BOND_STATE_BONDED
@@ -61,5 +67,7 @@ BOND_STATE_BONDED = 2
 **废弃版本：** 10
 
 **替代接口：** [BOND_STATE_BONDED](arkts-connectivity-connection-bondstate-e.md#bond_state_bonded)
+
+<!--Device-BondState-BOND_STATE_BONDED = 2--><!--Device-BondState-BOND_STATE_BONDED = 2-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

@@ -16,4 +16,6 @@ For details about the developer guide, see [\@Env Developer Guide](../../../ui/a
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-unnamed-declare function Env<T>(key: SystemEnvKey<T> | SystemProperties): PropertyDecorator--><!--Device-unnamed-declare function Env<T>(key: SystemEnvKey<T> | SystemProperties): PropertyDecorator-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

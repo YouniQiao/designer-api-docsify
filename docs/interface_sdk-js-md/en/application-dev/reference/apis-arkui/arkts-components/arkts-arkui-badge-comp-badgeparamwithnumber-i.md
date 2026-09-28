@@ -10,6 +10,8 @@ BadgeParamWithNumber inherits from [BadgeParam](arkts-arkui-badge-comp-badgepara
 
 **Since:** 7
 
+<!--Device-unnamed-declare interface BadgeParamWithNumber extends BadgeParam--><!--Device-unnamed-declare interface BadgeParamWithNumber extends BadgeParam-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## count
@@ -34,6 +36,8 @@ Value range: [-2147483648, 2147483647]. If the value is out of range, 4294967296
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-BadgeParamWithNumber-count: number--><!--Device-BadgeParamWithNumber-count: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## maxCount
@@ -57,5 +61,7 @@ Value range: [-2147483648, 2147483647]. If the value is out of range, 4294967296
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-BadgeParamWithNumber-maxCount?: number--><!--Device-BadgeParamWithNumber-maxCount?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

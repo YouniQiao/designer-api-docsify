@@ -8,6 +8,8 @@ export interface EmergencyNumberOptions
 
 **起始版本：** 7
 
+<!--Device-call-export interface EmergencyNumberOptions--><!--Device-call-export interface EmergencyNumberOptions-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 ## 导入模块
@@ -30,5 +32,7 @@ slotId?: number
 **类型：** number
 
 **起始版本：** 7
+
+<!--Device-EmergencyNumberOptions-slotId?: int--><!--Device-EmergencyNumberOptions-slotId?: int-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager

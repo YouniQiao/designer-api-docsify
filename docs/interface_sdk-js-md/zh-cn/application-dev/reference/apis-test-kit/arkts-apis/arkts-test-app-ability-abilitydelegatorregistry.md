@@ -8,6 +8,8 @@ AbilityDelegatorRegistry是自动化测试框架使用指南模块，该模块�
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace abilityDelegatorRegistry--><!--Device-unnamed-declare namespace abilityDelegatorRegistry-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **测试接口：** 此接口仅在自动化测试脚本中使用。

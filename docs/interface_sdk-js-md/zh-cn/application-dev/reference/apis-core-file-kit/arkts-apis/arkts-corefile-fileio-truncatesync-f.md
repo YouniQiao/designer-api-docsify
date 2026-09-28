@@ -19,6 +19,8 @@ declare function truncateSync(path: string, len?: number): void
 
 **替代接口：** [truncateSync](arkts-corefile-file-fs-truncatesync-f.md)
 
+<!--Device-unnamed-declare function truncateSync(path: string, len?: number): void--><!--Device-unnamed-declare function truncateSync(path: string, len?: number): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**

@@ -8,6 +8,8 @@ export interface Calendar
 
 **起始版本：** 10
 
+<!--Device-calendarManager-export interface Calendar--><!--Device-calendarManager-export interface Calendar-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 ## 导入模块
@@ -31,6 +33,8 @@ addEvent(event: Event): Promise<number>
 - API版本10-22：N/A
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Calendar-addEvent(event: Event): Promise<number>--><!--Device-Calendar-addEvent(event: Event): Promise<number>-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -103,6 +107,8 @@ addEvent(event: Event, callback: AsyncCallback<number>): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Calendar-addEvent(event: Event, callback: AsyncCallback<number>): void--><!--Device-Calendar-addEvent(event: Event, callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 **参数：**
@@ -164,6 +170,8 @@ addEvents(events: Event[]): Promise<void>
 **需要权限：** 
 - API版本23+：ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
 - API版本10-22：N/A
+
+<!--Device-Calendar-addEvents(events: Event[]): Promise<void>--><!--Device-Calendar-addEvents(events: Event[]): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -241,6 +249,8 @@ addEvents(events: Event[], callback: AsyncCallback<void>): void
 - API版本23+：ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
 - API版本10-22：N/A
 
+<!--Device-Calendar-addEvents(events: Event[], callback: AsyncCallback<void>): void--><!--Device-Calendar-addEvents(events: Event[], callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 **参数：**
@@ -307,6 +317,8 @@ deleteEvent(id: number): Promise<void>
 删除指定id的日程，使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-Calendar-deleteEvent(id: number): Promise<void>--><!--Device-Calendar-deleteEvent(id: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -376,6 +388,8 @@ deleteEvent(id: number, callback: AsyncCallback<void>): void
 
 **原子化服务API：** 从API版本21开始，该接口支持在原子化服务中使用。
 
+<!--Device-Calendar-deleteEvent(id: number, callback: AsyncCallback<void>): void--><!--Device-Calendar-deleteEvent(id: number, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 **参数：**
@@ -436,6 +450,8 @@ deleteEvents(ids: number[]): Promise<void>
 根据日程id，批量删除日程，使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-Calendar-deleteEvents(ids: number[]): Promise<void>--><!--Device-Calendar-deleteEvents(ids: number[]): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -518,6 +534,8 @@ deleteEvents(ids: number[], callback: AsyncCallback<void>): void
 
 **原子化服务API：** 从API版本21开始，该接口支持在原子化服务中使用。
 
+<!--Device-Calendar-deleteEvents(ids: number[], callback: AsyncCallback<void>): void--><!--Device-Calendar-deleteEvents(ids: number[], callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 **参数：**
@@ -592,6 +610,8 @@ getAccount(): CalendarAccount
 
 **起始版本：** 10
 
+<!--Device-Calendar-getAccount(): CalendarAccount--><!--Device-Calendar-getAccount(): CalendarAccount-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 **返回值：**
@@ -631,6 +651,8 @@ getConfig(): CalendarConfig
 获取日历配置信息。
 
 **起始版本：** 10
+
+<!--Device-Calendar-getConfig(): CalendarConfig--><!--Device-Calendar-getConfig(): CalendarConfig-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -675,6 +697,8 @@ getEvents(eventFilter?: EventFilter, eventKey?: (keyof Event)[]): Promise<Event[
 **需要权限：** 
 - API版本23+：ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
 - API版本10-22：N/A
+
+<!--Device-Calendar-getEvents(eventFilter?: EventFilter, eventKey?: (keyof Event)[]): Promise<Event[]>--><!--Device-Calendar-getEvents(eventFilter?: EventFilter, eventKey?: (keyof Event)[]): Promise<Event[]>-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -754,6 +778,8 @@ getEvents(eventFilter: EventFilter, eventKey: (keyof Event)[], callback: AsyncCa
 **需要权限：** 
 - API版本23+：ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
 - API版本10-22：N/A
+
+<!--Device-Calendar-getEvents(eventFilter: EventFilter, eventKey: (keyof Event)[], callback: AsyncCallback<Event[]>):void--><!--Device-Calendar-getEvents(eventFilter: EventFilter, eventKey: (keyof Event)[], callback: AsyncCallback<Event[]>):void-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -844,6 +870,8 @@ getEvents(callback: AsyncCallback<Event[]>):void
 - API版本23+：ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
 - API版本10-22：N/A
 
+<!--Device-Calendar-getEvents(callback: AsyncCallback<Event[]>):void--><!--Device-Calendar-getEvents(callback: AsyncCallback<Event[]>):void-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 **参数：**
@@ -899,6 +927,8 @@ Opens the event edit page.
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-Calendar-openEventEditPage(id: number): Promise<void>--><!--Device-Calendar-openEventEditPage(id: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -988,6 +1018,8 @@ queryEventInstances(start: number, end: number, ids?: number[], eventKey?: (keyo
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-Calendar-queryEventInstances(start: number, end: number, ids?: number[], eventKey?: (keyof Event)[]): Promise<Event[]>--><!--Device-Calendar-queryEventInstances(start: number, end: number, ids?: number[], eventKey?: (keyof Event)[]): Promise<Event[]>-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 **参数：**
@@ -1062,6 +1094,8 @@ setConfig(config: CalendarConfig): Promise<void>
 
 **起始版本：** 10
 
+<!--Device-Calendar-setConfig(config: CalendarConfig): Promise<void>--><!--Device-Calendar-setConfig(config: CalendarConfig): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 **参数：**
@@ -1124,6 +1158,8 @@ setConfig(config: CalendarConfig, callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
+<!--Device-Calendar-setConfig(config: CalendarConfig, callback: AsyncCallback<void>): void--><!--Device-Calendar-setConfig(config: CalendarConfig, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 **参数：**
@@ -1180,6 +1216,8 @@ updateEvent(event: Event): Promise<void>
 更新日程，入参Event需要填写被修改日程的id，使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-Calendar-updateEvent(event: Event): Promise<void>--><!--Device-Calendar-updateEvent(event: Event): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -1249,6 +1287,8 @@ updateEvent(event: Event, callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
+<!--Device-Calendar-updateEvent(event: Event, callback: AsyncCallback<void>): void--><!--Device-Calendar-updateEvent(event: Event, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 **参数：**
@@ -1315,5 +1355,7 @@ readonly id: number
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Calendar-readonly id: number--><!--Device-Calendar-readonly id: number-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData

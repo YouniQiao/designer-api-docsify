@@ -18,6 +18,8 @@ function sendImage(sessionId: number, image: image.PixelMap, quality?: number): 
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-abilityConnectionManager-function sendImage(sessionId: int, image: image.PixelMap, quality?: int): Promise<void>--><!--Device-abilityConnectionManager-function sendImage(sessionId: int, image: image.PixelMap, quality?: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **系统接口：** 此接口为系统接口。

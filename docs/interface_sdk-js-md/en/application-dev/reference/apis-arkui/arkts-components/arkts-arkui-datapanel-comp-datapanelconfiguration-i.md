@@ -10,6 +10,8 @@ You need a custom class to implement the **ContentModifier** API. It inherits fr
 
 **Since:** 12
 
+<!--Device-unnamed-declare interface DataPanelConfiguration extends CommonConfiguration<DataPanelConfiguration>--><!--Device-unnamed-declare interface DataPanelConfiguration extends CommonConfiguration<DataPanelConfiguration>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## maxValue
@@ -34,6 +36,8 @@ If the value is less than or equal to 0, **maxValue** is set to the sum of all i
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DataPanelConfiguration-maxValue: number--><!--Device-DataPanelConfiguration-maxValue: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## values
@@ -57,5 +61,7 @@ If the array length is greater than 9, only the first nine items are used.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DataPanelConfiguration-values: number[]--><!--Device-DataPanelConfiguration-values: number[]-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

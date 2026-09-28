@@ -26,6 +26,8 @@ function getConnectOwnerUid(protocol: ProtocolType, local: NetAddress, remote: N
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-connection-function getConnectOwnerUid(protocol: ProtocolType, local: NetAddress, remote: NetAddress): Promise<int>--><!--Device-connection-function getConnectOwnerUid(protocol: ProtocolType, local: NetAddress, remote: NetAddress): Promise<int>-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**

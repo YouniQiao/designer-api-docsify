@@ -18,6 +18,8 @@ export interface LocaleOptions
 
 **替代接口：** [Intl.LocaleOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale#options)
 
+<!--Device-intl-export interface LocaleOptions--><!--Device-intl-export interface LocaleOptions-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## 导入模块
@@ -48,6 +50,8 @@ calendar?: string
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-LocaleOptions-calendar?: string--><!--Device-LocaleOptions-calendar?: string-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## caseFirst
@@ -75,6 +79,8 @@ caseFirst?: string
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-LocaleOptions-caseFirst?: string--><!--Device-LocaleOptions-caseFirst?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -130,6 +136,8 @@ collation?: string
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-LocaleOptions-collation?: string--><!--Device-LocaleOptions-collation?: string-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## hourCycle
@@ -153,6 +161,8 @@ hourCycle?: string
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-LocaleOptions-hourCycle?: string--><!--Device-LocaleOptions-hourCycle?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -178,6 +188,8 @@ numberingSystem?: string
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-LocaleOptions-numberingSystem?: string--><!--Device-LocaleOptions-numberingSystem?: string-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## numeric
@@ -199,5 +211,7 @@ true表示将数字字符视为数字进行排序处理，false表示将数字�
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-LocaleOptions-numeric?: boolean--><!--Device-LocaleOptions-numeric?: boolean-End-->
 
 **系统能力：** SystemCapability.Global.I18n

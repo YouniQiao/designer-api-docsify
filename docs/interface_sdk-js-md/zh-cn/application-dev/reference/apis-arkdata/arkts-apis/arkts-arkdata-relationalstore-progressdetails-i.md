@@ -8,6 +8,8 @@ interface ProgressDetails
 
 **起始版本：** 10
 
+<!--Device-relationalStore-interface ProgressDetails--><!--Device-relationalStore-interface ProgressDetails-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ code: ProgressCode
 
 **起始版本：** 10
 
+<!--Device-ProgressDetails-code: ProgressCode--><!--Device-ProgressDetails-code: ProgressCode-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## details
@@ -43,6 +47,8 @@ details: Record<string, TableDetails>
 **类型：** Record&lt;string, [TableDetails](arkts-arkdata-relationalstore-tabledetails-i.md)&gt;
 
 **起始版本：** 10
+
+<!--Device-ProgressDetails-details: Record<string, TableDetails>--><!--Device-ProgressDetails-details: Record<string, TableDetails>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -60,6 +66,8 @@ message?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ProgressDetails-message?: string--><!--Device-ProgressDetails-message?: string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## schedule
@@ -73,5 +81,7 @@ schedule: Progress
 **类型：** [Progress](arkts-arkdata-relationalstore-progress-e.md)
 
 **起始版本：** 10
+
+<!--Device-ProgressDetails-schedule: Progress--><!--Device-ProgressDetails-schedule: Progress-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core

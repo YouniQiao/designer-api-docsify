@@ -26,6 +26,8 @@ function getIpInfo(): IpInfo
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
+<!--Device-wifi-function getIpInfo(): IpInfo--><!--Device-wifi-function getIpInfo(): IpInfo-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **返回值：**

@@ -8,6 +8,8 @@ Function Hook拦截的参数。
 
 **起始版本：** 26.0.1
 
+<!--Device-unnamed-export interface InvokeFunctionParam--><!--Device-unnamed-export interface InvokeFunctionParam-End-->
+
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -25,6 +27,8 @@ args: Record<string, Object>
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-InvokeFunctionParam-args: Record<string, Object>--><!--Device-InvokeFunctionParam-args: Record<string, Object>-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -44,6 +48,8 @@ Function的名称。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-InvokeFunctionParam-functionName: string--><!--Device-InvokeFunctionParam-functionName: string-End-->
+
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -62,6 +68,8 @@ Function的命名空间。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-InvokeFunctionParam-functionNamespace: string--><!--Device-InvokeFunctionParam-functionNamespace: string-End-->
+
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -79,6 +87,8 @@ invokeOptions?: InvokeOptions
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-InvokeFunctionParam-invokeOptions?: InvokeOptions--><!--Device-InvokeFunctionParam-invokeOptions?: InvokeOptions-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 

@@ -10,6 +10,8 @@ interface EpisodeRange
 
 **起始版本：** 23
 
+<!--Device-avMusicTemplate-interface EpisodeRange--><!--Device-avMusicTemplate-interface EpisodeRange-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## 导入模块
@@ -32,6 +34,8 @@ end: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-EpisodeRange-end: int--><!--Device-EpisodeRange-end: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## start
@@ -47,5 +51,7 @@ start: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EpisodeRange-start: int--><!--Device-EpisodeRange-start: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate

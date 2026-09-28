@@ -22,6 +22,8 @@ function getLastLocation(callback: AsyncCallback<Location>): void
 
 **需要权限：** ohos.permission.LOCATION
 
+<!--Device-geolocation-function getLastLocation(callback: AsyncCallback<Location>): void--><!--Device-geolocation-function getLastLocation(callback: AsyncCallback<Location>): void-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **参数：**
@@ -62,6 +64,8 @@ function getLastLocation(): Promise<Location>
 **替代接口：** [getLastLocation](arkts-location-geolocationmanager-getlastlocation-f.md)
 
 **需要权限：** ohos.permission.LOCATION
+
+<!--Device-geolocation-function getLastLocation(): Promise<Location>--><!--Device-geolocation-function getLastLocation(): Promise<Location>-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 

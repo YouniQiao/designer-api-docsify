@@ -12,6 +12,8 @@ Set a new value of form info.
 
 **起始版本：** 7
 
+<!--Device-FormComponentInterface-(value: FormInfo): FormComponentAttribute--><!--Device-FormComponentInterface-(value: FormInfo): FormComponentAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。

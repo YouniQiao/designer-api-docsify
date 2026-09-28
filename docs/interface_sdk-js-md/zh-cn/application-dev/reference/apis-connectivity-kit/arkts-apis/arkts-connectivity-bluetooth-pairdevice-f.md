@@ -24,6 +24,8 @@ function pairDevice(deviceId: string): boolean
 
 **需要权限：** ohos.permission.DISCOVER_BLUETOOTH
 
+<!--Device-bluetooth-function pairDevice(deviceId: string): boolean--><!--Device-bluetooth-function pairDevice(deviceId: string): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**

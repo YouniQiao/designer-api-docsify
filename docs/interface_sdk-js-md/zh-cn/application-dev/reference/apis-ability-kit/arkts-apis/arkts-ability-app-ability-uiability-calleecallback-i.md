@@ -8,6 +8,8 @@ export interface CalleeCallback
 
 **起始版本：** 9
 
+<!--Device-unnamed-export interface CalleeCallback--><!--Device-unnamed-export interface CalleeCallback-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 ## 导入模块
@@ -27,6 +29,8 @@ import { UIAbility, Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteS
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-CalleeCallback-(indata: rpc.MessageSequence): rpc.Parcelable--><!--Device-CalleeCallback-(indata: rpc.MessageSequence): rpc.Parcelable-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 

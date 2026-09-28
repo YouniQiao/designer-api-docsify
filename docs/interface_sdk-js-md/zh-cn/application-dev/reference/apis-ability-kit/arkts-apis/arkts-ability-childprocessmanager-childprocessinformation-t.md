@@ -10,6 +10,8 @@ export type ChildProcessInformation = _ChildProcessInformation
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-childProcessManager-export type ChildProcessInformation = _ChildProcessInformation--><!--Device-childProcessManager-export type ChildProcessInformation = _ChildProcessInformation-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **类型：** _ChildProcessInformation

@@ -8,6 +8,8 @@ export interface MacAddressInfo
 
 **起始版本：** 14
 
+<!--Device-ethernet-export interface MacAddressInfo--><!--Device-ethernet-export interface MacAddressInfo-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
 ## 导入模块
@@ -28,6 +30,8 @@ iface: string
 
 **起始版本：** 14
 
+<!--Device-MacAddressInfo-iface: string--><!--Device-MacAddressInfo-iface: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
 ## macAddress
@@ -41,5 +45,7 @@ macAddress: string
 **类型：** string
 
 **起始版本：** 14
+
+<!--Device-MacAddressInfo-macAddress: string--><!--Device-MacAddressInfo-macAddress: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet

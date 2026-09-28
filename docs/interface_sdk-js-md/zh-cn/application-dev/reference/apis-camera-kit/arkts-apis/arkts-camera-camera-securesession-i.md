@@ -18,6 +18,8 @@ SecureSession继承自[Session](arkts-camera-camera-session-i.md)、[Flash](arkt
 
 **起始版本：** 12
 
+<!--Device-camera-interface SecureSession extends Session, Flash, AutoExposure, WhiteBalance, Focus, Zoom--><!--Device-camera-interface SecureSession extends Session, Flash, AutoExposure, WhiteBalance, Focus, Zoom-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
@@ -36,7 +38,9 @@ addSecureOutput(previewOutput: PreviewOutput): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-SecureSession-addSecureOutput(previewOutput: PreviewOutput): void--><!--Device-SecureSession-addSecureOutput(previewOutput: PreviewOutput): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -82,6 +86,8 @@ off(type: 'error', callback?: ErrorCallback): void
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
+<!--Device-SecureSession-off(type: 'error', callback?: ErrorCallback): void--><!--Device-SecureSession-off(type: 'error', callback?: ErrorCallback): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **参数：**
@@ -110,6 +116,8 @@ off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-SecureSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void--><!--Device-SecureSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -143,6 +151,8 @@ on(type: 'error', callback: ErrorCallback): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-SecureSession-on(type: 'error', callback: ErrorCallback): void--><!--Device-SecureSession-on(type: 'error', callback: ErrorCallback): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -182,6 +192,8 @@ on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-SecureSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void--><!--Device-SecureSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

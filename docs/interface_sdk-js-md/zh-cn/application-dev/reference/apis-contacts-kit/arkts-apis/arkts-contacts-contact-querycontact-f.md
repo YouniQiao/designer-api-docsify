@@ -22,6 +22,8 @@ function queryContact(key: string, callback: AsyncCallback<Contact>): void
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryContact(key: string, callback: AsyncCallback<Contact>): void--><!--Device-contact-function queryContact(key: string, callback: AsyncCallback<Contact>): void-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 **参数：**
@@ -61,6 +63,8 @@ function queryContact(context: Context, key: string, callback: AsyncCallback<Con
 **起始版本：** 10
 
 **需要权限：** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryContact(context: Context, key: string, callback: AsyncCallback<Contact>): void--><!--Device-contact-function queryContact(context: Context, key: string, callback: AsyncCallback<Contact>): void-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -120,6 +124,8 @@ function queryContact(key: string, holder: Holder, callback: AsyncCallback<Conta
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryContact(key: string, holder: Holder, callback: AsyncCallback<Contact>): void--><!--Device-contact-function queryContact(key: string, holder: Holder, callback: AsyncCallback<Contact>): void-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 **参数：**
@@ -164,6 +170,8 @@ function queryContact(context: Context, key: string, holder: Holder, callback: A
 **起始版本：** 10
 
 **需要权限：** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryContact(context: Context, key: string, holder: Holder, callback: AsyncCallback<Contact>): void--><!--Device-contact-function queryContact(context: Context, key: string, holder: Holder, callback: AsyncCallback<Contact>): void-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -228,6 +236,8 @@ function queryContact(key: string, attrs: ContactAttributes, callback: AsyncCall
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryContact(key: string, attrs: ContactAttributes, callback: AsyncCallback<Contact>): void--><!--Device-contact-function queryContact(key: string, attrs: ContactAttributes, callback: AsyncCallback<Contact>): void-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 **参数：**
@@ -270,6 +280,8 @@ function queryContact(context: Context, key: string, attrs: ContactAttributes, c
 **起始版本：** 10
 
 **需要权限：** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryContact(context: Context, key: string, attrs: ContactAttributes, callback: AsyncCallback<Contact>): void--><!--Device-contact-function queryContact(context: Context, key: string, attrs: ContactAttributes, callback: AsyncCallback<Contact>): void-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -332,6 +344,8 @@ function queryContact(key: string, holder: Holder, attrs: ContactAttributes, cal
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryContact(key: string, holder: Holder, attrs: ContactAttributes, callback: AsyncCallback<Contact>): void--><!--Device-contact-function queryContact(key: string, holder: Holder, attrs: ContactAttributes, callback: AsyncCallback<Contact>): void-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 **参数：**
@@ -379,6 +393,8 @@ function queryContact(context: Context, key: string, holder: Holder, attrs: Cont
 **起始版本：** 10
 
 **需要权限：** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryContact(context: Context, key: string, holder: Holder, attrs: ContactAttributes, callback: AsyncCallback<Contact>): void--><!--Device-contact-function queryContact(context: Context, key: string, holder: Holder, attrs: ContactAttributes, callback: AsyncCallback<Contact>): void-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -446,6 +462,8 @@ function queryContact(key: string, holder?: Holder, attrs?: ContactAttributes): 
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryContact(key: string, holder?: Holder, attrs?: ContactAttributes): Promise<Contact>--><!--Device-contact-function queryContact(key: string, holder?: Holder, attrs?: ContactAttributes): Promise<Contact>-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 **参数：**
@@ -494,6 +512,8 @@ function queryContact(context: Context, key: string, holder?: Holder, attrs?: Co
 **起始版本：** 10
 
 **需要权限：** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryContact(context: Context, key: string, holder?: Holder, attrs?: ContactAttributes): Promise<Contact>--><!--Device-contact-function queryContact(context: Context, key: string, holder?: Holder, attrs?: ContactAttributes): Promise<Contact>-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 

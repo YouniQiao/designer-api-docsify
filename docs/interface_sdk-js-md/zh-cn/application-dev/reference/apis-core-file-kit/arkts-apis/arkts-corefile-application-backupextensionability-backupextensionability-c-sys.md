@@ -8,6 +8,8 @@ declare class BackupExtensionAbility
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare class BackupExtensionAbility--><!--Device-unnamed-declare class BackupExtensionAbility-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 ## 导入模块
@@ -27,6 +29,8 @@ getBackupCompatibilityInfo(extInfo: string) : Promise<string>
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BackupExtensionAbility-getBackupCompatibilityInfo(extInfo: string) : Promise<string>--><!--Device-BackupExtensionAbility-getBackupCompatibilityInfo(extInfo: string) : Promise<string>-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
@@ -56,6 +60,8 @@ getBackupInfo(): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BackupExtensionAbility-getBackupInfo(): string--><!--Device-BackupExtensionAbility-getBackupInfo(): string-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +83,8 @@ getRestoreCompatibilityInfo(extInfo: string) : Promise<string>
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BackupExtensionAbility-getRestoreCompatibilityInfo(extInfo: string) : Promise<string>--><!--Device-BackupExtensionAbility-getRestoreCompatibilityInfo(extInfo: string) : Promise<string>-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 

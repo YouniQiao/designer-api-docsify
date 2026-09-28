@@ -10,6 +10,8 @@ Before calling any API in AudioManager, you must use [getAudioManager](arkts-aud
 
 **Since:** 7
 
+<!--Device-audio-interface AudioManager--><!--Device-audio-interface AudioManager-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## Modules to Import
@@ -29,6 +31,8 @@ user disable the safe media volume state.
 **Since:** 12
 
 **Required permissions:** ohos.permission.MODIFY_AUDIO_SETTINGS
+
+<!--Device-AudioManager-disableSafeMediaVolume(): Promise<void>--><!--Device-AudioManager-disableSafeMediaVolume(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -69,6 +73,8 @@ Obtains a collaborative playback management instance.
 
 **Since:** 20
 
+<!--Device-AudioManager-getCollaborativeManager(): AudioCollaborativeManager--><!--Device-AudioManager-getCollaborativeManager(): AudioCollaborativeManager-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 **System API:** This is a system API.
@@ -94,6 +100,8 @@ getEffectManager(): AudioEffectManager
 Obtains an [AudioEffectManager](arkts-audio-audio-audioeffectmanager-i-sys.md) instance.
 
 **Since:** 18
+
+<!--Device-AudioManager-getEffectManager(): AudioEffectManager--><!--Device-AudioManager-getEffectManager(): AudioEffectManager-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -128,6 +136,8 @@ getExtraParameters(mainKey: string, subKeys?: Array<string>): Promise<Record<str
 Obtains the values of a certain key. This method uses a promise to return the query result.
 
 **Since:** 11
+
+<!--Device-AudioManager-getExtraParameters(mainKey: string, subKeys?: Array<string>): Promise<Record<string, string>>--><!--Device-AudioManager-getExtraParameters(mainKey: string, subKeys?: Array<string>): Promise<Record<string, string>>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -177,6 +187,8 @@ Sets the audio scene mode to change audio strategies. This method uses an asynch
 
 **Since:** 8
 
+<!--Device-AudioManager-setAudioScene(scene: AudioScene, callback: AsyncCallback<void>): void--><!--Device-AudioManager-setAudioScene(scene: AudioScene, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Communication
 
 **System API:** This is a system API.
@@ -213,6 +225,8 @@ setAudioScene(scene: AudioScene): Promise<void>
 Sets the audio scene mode to change audio strategies. This method uses a promise to return the result.
 
 **Since:** 8
+
+<!--Device-AudioManager-setAudioScene(scene: AudioScene): Promise<void>--><!--Device-AudioManager-setAudioScene(scene: AudioScene): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Communication
 
@@ -253,6 +267,8 @@ Sets extra audio parameters. This method uses a promise to return the result.
 **Since:** 11
 
 **Required permissions:** ohos.permission.MODIFY_AUDIO_SETTINGS
+
+<!--Device-AudioManager-setExtraParameters(mainKey: string, kvpairs: Record<string, string>): Promise<void>--><!--Device-AudioManager-setExtraParameters(mainKey: string, kvpairs: Record<string, string>): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -311,6 +327,8 @@ Listens for system volume change events. This method uses a callback to get volu
 
 **Substitutes:** volumeChange
 
+<!--Device-AudioManager-on(type: 'volumeChange', callback: Callback<VolumeEvent>): void--><!--Device-AudioManager-on(type: 'volumeChange', callback: Callback<VolumeEvent>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **System API:** This is a system API.
@@ -345,6 +363,8 @@ Listens for ringer mode change events. This method uses a callback to get ringer
 **Deprecated since:** 9
 
 **Substitutes:** ringerModeChange
+
+<!--Device-AudioManager-on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void--><!--Device-AudioManager-on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Communication
 

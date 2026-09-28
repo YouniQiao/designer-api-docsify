@@ -6,6 +6,8 @@ Provides methods for managing device standby, including the methods for querying
 
 **Since:** 10
 
+<!--Device-unnamed-declare namespace deviceStandby--><!--Device-unnamed-declare namespace deviceStandby-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.DeviceStandby
 
 ## Modules to Import

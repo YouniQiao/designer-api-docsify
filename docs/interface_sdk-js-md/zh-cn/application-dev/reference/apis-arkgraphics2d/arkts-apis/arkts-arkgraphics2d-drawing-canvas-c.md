@@ -18,6 +18,8 @@ class Canvas
 
 **起始版本：** 11
 
+<!--Device-drawing-class Canvas--><!--Device-drawing-class Canvas-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## 导入模块
@@ -39,6 +41,8 @@ attachBrush(brush: Brush): void
 > 执行该方法后，若brush的效果发生改变并且开发者希望该变化在接下来的绘制动作中生效，需要再次调用本方法。
 
 **起始版本：** 11
+
+<!--Device-Canvas-attachBrush(brush: Brush): void--><!--Device-Canvas-attachBrush(brush: Brush): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -86,6 +90,8 @@ attachPen(pen: Pen): void
 
 **起始版本：** 11
 
+<!--Device-Canvas-attachPen(pen: Pen): void--><!--Device-Canvas-attachPen(pen: Pen): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -129,6 +135,8 @@ clear(color: common2D.Color): void
 
 **起始版本：** 12
 
+<!--Device-Canvas-clear(color: common2D.Color): void--><!--Device-Canvas-clear(color: common2D.Color): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -170,6 +178,8 @@ clear(color: common2D.Color | number): void
 
 **起始版本：** 18
 
+<!--Device-Canvas-clear(color: common2D.Color | int): void--><!--Device-Canvas-clear(color: common2D.Color | int): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -202,6 +212,8 @@ clipPath(path: Path, clipOp?: ClipOp, doAntiAlias?: boolean): void
 使用自定义路径对画布进行裁剪。
 
 **起始版本：** 12
+
+<!--Device-Canvas-clipPath(path: Path, clipOp?: ClipOp, doAntiAlias?: boolean): void--><!--Device-Canvas-clipPath(path: Path, clipOp?: ClipOp, doAntiAlias?: boolean): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -248,6 +260,8 @@ clipRect(rect: common2D.Rect, clipOp?: ClipOp, doAntiAlias?: boolean): void
 
 **起始版本：** 12
 
+<!--Device-Canvas-clipRect(rect: common2D.Rect, clipOp?: ClipOp, doAntiAlias?: boolean): void--><!--Device-Canvas-clipRect(rect: common2D.Rect, clipOp?: ClipOp, doAntiAlias?: boolean): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -288,6 +302,8 @@ clipRegion(region: Region, clipOp?: ClipOp): void
 在画布上裁剪一个区域。
 
 **起始版本：** 12
+
+<!--Device-Canvas-clipRegion(region: Region, clipOp?: ClipOp): void--><!--Device-Canvas-clipRegion(region: Region, clipOp?: ClipOp): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -331,6 +347,8 @@ clipRoundRect(roundRect: RoundRect, clipOp?: ClipOp, doAntiAlias?: boolean): voi
 在画布上裁剪一个圆角矩形。
 
 **起始版本：** 12
+
+<!--Device-Canvas-clipRoundRect(roundRect: RoundRect, clipOp?: ClipOp, doAntiAlias?: boolean): void--><!--Device-Canvas-clipRoundRect(roundRect: RoundRect, clipOp?: ClipOp, doAntiAlias?: boolean): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -376,6 +394,8 @@ concatMatrix(matrix: Matrix): void
 
 **起始版本：** 12
 
+<!--Device-Canvas-concatMatrix(matrix: Matrix): void--><!--Device-Canvas-concatMatrix(matrix: Matrix): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -417,7 +437,9 @@ constructor(pixelmap: image.PixelMap)
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Canvas-constructor(pixelmap: image.PixelMap)--><!--Device-Canvas-constructor(pixelmap: image.PixelMap)-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -463,6 +485,8 @@ detachBrush(): void
 
 **起始版本：** 11
 
+<!--Device-Canvas-detachBrush(): void--><!--Device-Canvas-detachBrush(): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **示例**
@@ -492,6 +516,8 @@ detachPen(): void
 将画笔与画布解绑，在画布上进行绘制时，不会再使用画笔去绘制图形形状的轮廓。本方法与[attachPen](#attachpen)配合使用，用于在完成绘制后解除画笔绑定。
 
 **起始版本：** 11
+
+<!--Device-Canvas-detachPen(): void--><!--Device-Canvas-detachPen(): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -523,6 +549,8 @@ drawArc(arc: common2D.Rect, startAngle: number, sweepAngle: number): void
 在画布上绘制圆弧，默认使用黑色填充内容。该方法允许指定起始角度、扫描角度。当扫描角度的绝对值大于360度时，则绘制椭圆。
 
 **起始版本：** 12
+
+<!--Device-Canvas-drawArc(arc: common2D.Rect, startAngle: double, sweepAngle: double): void--><!--Device-Canvas-drawArc(arc: common2D.Rect, startAngle: double, sweepAngle: double): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -571,6 +599,8 @@ drawArcWithCenter(arc: common2D.Rect, startAngle: number, sweepAngle: number, us
 
 **起始版本：** 18
 
+<!--Device-Canvas-drawArcWithCenter(arc: common2D.Rect, startAngle: double, sweepAngle: double, useCenter: boolean): void--><!--Device-Canvas-drawArcWithCenter(arc: common2D.Rect, startAngle: double, sweepAngle: double, useCenter: boolean): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -613,6 +643,8 @@ drawBackground(brush: Brush): void
 
 **起始版本：** 12
 
+<!--Device-Canvas-drawBackground(brush: Brush): void--><!--Device-Canvas-drawBackground(brush: Brush): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -653,6 +685,8 @@ drawCircle(x: number, y: number, radius: number): void
 绘制一个圆形。如果半径小于等于零，则不绘制。默认使用黑色填充内容。
 
 **起始版本：** 11
+
+<!--Device-Canvas-drawCircle(x: double, y: double, radius: double): void--><!--Device-Canvas-drawCircle(x: double, y: double, radius: double): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -698,6 +732,8 @@ drawColor(color: common2D.Color, blendMode?: BlendMode): void
 使用指定颜色并按照指定的[BlendMode](arkts-arkgraphics2d-drawing-blendmode-e.md)对画布当前裁剪区域进行填充。
 
 **起始版本：** 11
+
+<!--Device-Canvas-drawColor(color: common2D.Color, blendMode?: BlendMode): void--><!--Device-Canvas-drawColor(color: common2D.Color, blendMode?: BlendMode): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -746,6 +782,8 @@ drawColor(alpha: number, red: number, green: number, blue: number, blendMode?: B
 
 **起始版本：** 12
 
+<!--Device-Canvas-drawColor(alpha: int, red: int, green: int, blue: int, blendMode?: BlendMode): void--><!--Device-Canvas-drawColor(alpha: int, red: int, green: int, blue: int, blendMode?: BlendMode): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -790,6 +828,8 @@ drawColor(color: number, blendMode?: BlendMode): void
 
 **起始版本：** 18
 
+<!--Device-Canvas-drawColor(color: int, blendMode?: BlendMode): void--><!--Device-Canvas-drawColor(color: int, blendMode?: BlendMode): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -831,6 +871,8 @@ drawGlyphs(glyphIds: Array<number>, glyphIdOffset: number, positions: Array<comm
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Canvas-drawGlyphs(glyphIds: Array<int>, glyphIdOffset: int, positions: Array<common2D.Point>,      positionOffset: int, glyphCount: int, font: Font): void--><!--Device-Canvas-drawGlyphs(glyphIds: Array<int>, glyphIdOffset: int, positions: Array<common2D.Point>,      positionOffset: int, glyphCount: int, font: Font): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -888,6 +930,8 @@ drawImage(pixelmap: image.PixelMap, left: number, top: number, samplingOptions?:
 绘制一张图片，图片的左上角坐标为(left, top)。
 
 **起始版本：** 11
+
+<!--Device-Canvas-drawImage(pixelmap: image.PixelMap, left: double, top: double, samplingOptions?: SamplingOptions): void--><!--Device-Canvas-drawImage(pixelmap: image.PixelMap, left: double, top: double, samplingOptions?: SamplingOptions): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -956,6 +1000,8 @@ drawImageLattice(pixelmap: image.PixelMap, lattice: Lattice, dstRect: common2D.R
 偶数行和列（起始计数为0）的每个交叉点对应的网格区域保持原始尺寸不缩放，若固定网格区域的尺寸不超过目标矩形，则会在不缩放的情况下被绘制在目标矩形，反之则会按比例缩放绘制在目标矩形；在角落区域绘制后，若目标矩形中仍有未被覆盖的区域，则剩下的区域会通过拉伸或压缩来绘制，以便完全覆盖目标矩形。
 
 **起始版本：** 18
+
+<!--Device-Canvas-drawImageLattice(pixelmap: image.PixelMap, lattice: Lattice, dstRect: common2D.Rect,      filterMode: FilterMode): void--><!--Device-Canvas-drawImageLattice(pixelmap: image.PixelMap, lattice: Lattice, dstRect: common2D.Rect,      filterMode: FilterMode): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1045,6 +1091,8 @@ drawImageNine(pixelmap: image.PixelMap, center: common2D.Rect, dstRect: common2D
 
 **起始版本：** 18
 
+<!--Device-Canvas-drawImageNine(pixelmap: image.PixelMap, center: common2D.Rect, dstRect: common2D.Rect,      filterMode: FilterMode): void--><!--Device-Canvas-drawImageNine(pixelmap: image.PixelMap, center: common2D.Rect, dstRect: common2D.Rect,      filterMode: FilterMode): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -1128,6 +1176,8 @@ drawImageRect(pixelmap: image.PixelMap, dstRect: common2D.Rect, samplingOptions?
 
 **起始版本：** 12
 
+<!--Device-Canvas-drawImageRect(pixelmap: image.PixelMap, dstRect: common2D.Rect, samplingOptions?: SamplingOptions): void--><!--Device-Canvas-drawImageRect(pixelmap: image.PixelMap, dstRect: common2D.Rect, samplingOptions?: SamplingOptions): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -1193,6 +1243,8 @@ drawImageRectWithSrc(pixelmap: image.PixelMap, srcRect: common2D.Rect, dstRect: 
 将图片的指定区域绘制到画布的指定区域。
 
 **起始版本：** 12
+
+<!--Device-Canvas-drawImageRectWithSrc(pixelmap: image.PixelMap, srcRect: common2D.Rect, dstRect: common2D.Rect,      samplingOptions?: SamplingOptions, constraint?: SrcRectConstraint): void--><!--Device-Canvas-drawImageRectWithSrc(pixelmap: image.PixelMap, srcRect: common2D.Rect, dstRect: common2D.Rect,      samplingOptions?: SamplingOptions, constraint?: SrcRectConstraint): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1262,6 +1314,8 @@ drawLine(x0: number, y0: number, x1: number, y1: number): void
 
 **起始版本：** 11
 
+<!--Device-Canvas-drawLine(x0: double, y0: double, x1: double, y1: double): void--><!--Device-Canvas-drawLine(x0: double, y0: double, x1: double, y1: double): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -1308,6 +1362,8 @@ drawNestedRoundRect(outer: RoundRect, inner: RoundRect): void
 
 **起始版本：** 12
 
+<!--Device-Canvas-drawNestedRoundRect(outer: RoundRect, inner: RoundRect): void--><!--Device-Canvas-drawNestedRoundRect(outer: RoundRect, inner: RoundRect): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -1351,6 +1407,8 @@ drawOval(oval: common2D.Rect): void
 在画布上绘制一个椭圆，椭圆的形状和位置由椭圆的外切矩形给出。默认使用黑色填充内容。
 
 **起始版本：** 12
+
+<!--Device-Canvas-drawOval(oval: common2D.Rect): void--><!--Device-Canvas-drawOval(oval: common2D.Rect): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1396,6 +1454,8 @@ drawPath(path: Path): void
 绘制一个自定义路径，默认使用黑色填充内容。该路径包含了一组路径轮廓，每个路径轮廓可以是开放的或封闭的。
 
 **起始版本：** 11
+
+<!--Device-Canvas-drawPath(path: Path): void--><!--Device-Canvas-drawPath(path: Path): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1444,6 +1504,8 @@ drawPixelMapMesh(pixelmap: image.PixelMap, meshWidth: number, meshHeight: number
 在网格上绘制像素图，网格均匀分布在像素图上。（只支持画刷，使用画笔没有绘制效果。）
 
 **起始版本：** 12
+
+<!--Device-Canvas-drawPixelMapMesh(pixelmap: image.PixelMap, meshWidth: int, meshHeight: int,      vertices: Array<double>, vertOffset: int, colors: Array<int> | null, colorOffset: int): void--><!--Device-Canvas-drawPixelMapMesh(pixelmap: image.PixelMap, meshWidth: int, meshHeight: int,      vertices: Array<double>, vertOffset: int, colors: Array<int> | null, colorOffset: int): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1516,6 +1578,8 @@ drawPoint(x: number, y: number): void
 
 **起始版本：** 11
 
+<!--Device-Canvas-drawPoint(x: double, y: double): void--><!--Device-Canvas-drawPoint(x: double, y: double): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -1559,6 +1623,8 @@ drawPoints(points: Array<common2D.Point>, mode?: PointMode): void
 在画布上绘制一组点、线段或多边形。通过指定点的数组和绘制模式来决定绘制方式。
 
 **起始版本：** 12
+
+<!--Device-Canvas-drawPoints(points: Array<common2D.Point>, mode?: PointMode): void--><!--Device-Canvas-drawPoints(points: Array<common2D.Point>, mode?: PointMode): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1607,6 +1673,8 @@ drawRecordCmd(recordCmd: RecordCmd): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Canvas-drawRecordCmd(recordCmd: RecordCmd): void--><!--Device-Canvas-drawRecordCmd(recordCmd: RecordCmd): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -1646,6 +1714,8 @@ drawRect(rect: common2D.Rect): void
 绘制一个矩形，默认使用黑色填充。
 
 **起始版本：** 11
+
+<!--Device-Canvas-drawRect(rect: common2D.Rect): void--><!--Device-Canvas-drawRect(rect: common2D.Rect): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1691,6 +1761,8 @@ drawRect(left: number, top: number, right: number, bottom: number): void
 绘制一个矩形，默认使用黑色填充。性能优于[drawRect](#drawrect)接口，推荐使用本接口。
 
 **起始版本：** 12
+
+<!--Device-Canvas-drawRect(left: double, top: double, right: double, bottom: double): void--><!--Device-Canvas-drawRect(left: double, top: double, right: double, bottom: double): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1739,6 +1811,8 @@ drawRegion(region: Region): void
 
 **起始版本：** 12
 
+<!--Device-Canvas-drawRegion(region: Region): void--><!--Device-Canvas-drawRegion(region: Region): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -1784,6 +1858,8 @@ drawRoundRect(roundRect: RoundRect): void
 
 **起始版本：** 12
 
+<!--Device-Canvas-drawRoundRect(roundRect: RoundRect): void--><!--Device-Canvas-drawRoundRect(roundRect: RoundRect): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -1824,6 +1900,8 @@ drawShadow(path: Path, planeParams: common2D.Point3d, devLightPos: common2D.Poin
 绘制射灯类型阴影，使用路径描述环境光阴影的轮廓。
 
 **起始版本：** 12
+
+<!--Device-Canvas-drawShadow(path: Path, planeParams: common2D.Point3d, devLightPos: common2D.Point3d, lightRadius: double,      ambientColor: common2D.Color, spotColor: common2D.Color, flag: ShadowFlag) : void--><!--Device-Canvas-drawShadow(path: Path, planeParams: common2D.Point3d, devLightPos: common2D.Point3d, lightRadius: double,      ambientColor: common2D.Color, spotColor: common2D.Color, flag: ShadowFlag) : void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1891,6 +1969,8 @@ drawShadow(path: Path, planeParams: common2D.Point3d, devLightPos: common2D.Poin
 
 **起始版本：** 18
 
+<!--Device-Canvas-drawShadow(path: Path, planeParams: common2D.Point3d, devLightPos: common2D.Point3d, lightRadius: double,      ambientColor: common2D.Color | int, spotColor: common2D.Color | int, flag: ShadowFlag) : void--><!--Device-Canvas-drawShadow(path: Path, planeParams: common2D.Point3d, devLightPos: common2D.Point3d, lightRadius: double,      ambientColor: common2D.Color | int, spotColor: common2D.Color | int, flag: ShadowFlag) : void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -1940,6 +2020,8 @@ drawSingleCharacter(text: string, font: Font, x: number, y: number): void
 
 **起始版本：** 12
 
+<!--Device-Canvas-drawSingleCharacter(text: string, font: Font, x: double, y: double): void--><!--Device-Canvas-drawSingleCharacter(text: string, font: Font, x: double, y: double): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -1987,6 +2069,8 @@ drawSingleCharacterWithFeatures(text: string, font: Font, x: number, y: number, 
 绘制单个字符，字符带有字体特征。当前字体不支持待绘制字符时，退化到使用系统字体绘制字符。
 
 **起始版本：** 20
+
+<!--Device-Canvas-drawSingleCharacterWithFeatures(text: string, font: Font, x: double, y: double, features: Array<FontFeature>): void--><!--Device-Canvas-drawSingleCharacterWithFeatures(text: string, font: Font, x: double, y: double, features: Array<FontFeature>): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -2039,6 +2123,8 @@ drawTextBlob(blob: TextBlob, x: number, y: number): void
 
 **起始版本：** 11
 
+<!--Device-Canvas-drawTextBlob(blob: TextBlob, x: double, y: double): void--><!--Device-Canvas-drawTextBlob(blob: TextBlob, x: double, y: double): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -2087,6 +2173,8 @@ drawVertices(vertexMode: VertexMode, vertexCount: number, positions: Array<commo
 绘制顶点数组描述的三角网格。
 
 **起始版本：** 23
+
+<!--Device-Canvas-drawVertices(vertexMode: VertexMode, vertexCount: int, positions: Array<common2D.Point>,      texs: Array<common2D.Point> | null, colors: Array<int> | null, indexCount: int,      indices: Array<int> | null, mode: BlendMode): void--><!--Device-Canvas-drawVertices(vertexMode: VertexMode, vertexCount: int, positions: Array<common2D.Point>,      texs: Array<common2D.Point> | null, colors: Array<int> | null, indexCount: int,      indices: Array<int> | null, mode: BlendMode): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -2149,6 +2237,8 @@ getHeight(): number
 
 **起始版本：** 12
 
+<!--Device-Canvas-getHeight(): int--><!--Device-Canvas-getHeight(): int-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
@@ -2181,6 +2271,8 @@ getLocalClipBounds(): common2D.Rect
 获取画布裁剪区域的边界。
 
 **起始版本：** 12
+
+<!--Device-Canvas-getLocalClipBounds(): common2D.Rect--><!--Device-Canvas-getLocalClipBounds(): common2D.Rect-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -2222,6 +2314,8 @@ getSaveCount(): number
 
 **起始版本：** 12
 
+<!--Device-Canvas-getSaveCount(): int--><!--Device-Canvas-getSaveCount(): int-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
@@ -2262,6 +2356,8 @@ getTotalMatrix(): Matrix
 
 **起始版本：** 12
 
+<!--Device-Canvas-getTotalMatrix(): Matrix--><!--Device-Canvas-getTotalMatrix(): Matrix-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
@@ -2297,6 +2393,8 @@ getWidth(): number
 
 **起始版本：** 12
 
+<!--Device-Canvas-getWidth(): int--><!--Device-Canvas-getWidth(): int-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
@@ -2329,6 +2427,8 @@ isClipEmpty(): boolean
 判断画布的裁剪区域是否为空。
 
 **起始版本：** 12
+
+<!--Device-Canvas-isClipEmpty(): boolean--><!--Device-Canvas-isClipEmpty(): boolean-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -2368,6 +2468,8 @@ isOpaque(): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Canvas-isOpaque(): boolean--><!--Device-Canvas-isOpaque(): boolean-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
@@ -2403,6 +2505,8 @@ quickRejectPath(path: Path): boolean
 判断路径与画布区域是否不相交。画布区域包含边界。
 
 **起始版本：** 18
+
+<!--Device-Canvas-quickRejectPath(path: Path): boolean--><!--Device-Canvas-quickRejectPath(path: Path): boolean-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -2450,6 +2554,8 @@ quickRejectRect(rect: common2D.Rect): boolean
 
 **起始版本：** 18
 
+<!--Device-Canvas-quickRejectRect(rect: common2D.Rect): boolean--><!--Device-Canvas-quickRejectRect(rect: common2D.Rect): boolean-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -2495,6 +2601,8 @@ resetClip(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Canvas-resetClip(): void--><!--Device-Canvas-resetClip(): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **示例**
@@ -2523,6 +2631,8 @@ resetMatrix(): void
 
 **起始版本：** 12
 
+<!--Device-Canvas-resetMatrix(): void--><!--Device-Canvas-resetMatrix(): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **示例**
@@ -2549,6 +2659,8 @@ restore(): void
 恢复保存在栈顶的画布状态（画布矩阵和裁剪区域）。需要与保存接口[save](#save)或[saveLayer](#savelayer)配合使用。若栈顶状态由saveLayer保存，恢复时还会将saveLayer分配的位图绘制到画布上；若栈为空（无已保存状态），则不执行恢复操作。
 
 **起始版本：** 12
+
+<!--Device-Canvas-restore(): void--><!--Device-Canvas-restore(): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -2581,6 +2693,8 @@ restoreToCount(count: number): void
 恢复到指定深度的画布状态（画布矩阵和裁剪区域）。需要先调用[save](#save)或[saveLayer](#savelayer)保存画布状态后才能使用本接口恢复。
 
 **起始版本：** 12
+
+<!--Device-Canvas-restoreToCount(count: int): void--><!--Device-Canvas-restoreToCount(count: int): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -2632,6 +2746,8 @@ rotate(degrees: number, sx: number, sy: number) : void
 
 **起始版本：** 12
 
+<!--Device-Canvas-rotate(degrees: double, sx: double, sy: double) : void--><!--Device-Canvas-rotate(degrees: double, sx: double, sy: double) : void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -2678,6 +2794,8 @@ save(): number
 
 **起始版本：** 12
 
+<!--Device-Canvas-save(): int--><!--Device-Canvas-save(): int-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
@@ -2711,6 +2829,8 @@ saveLayer(rect?: common2D.Rect | null, brush?: Brush | null): number
 保存当前画布的矩阵和裁剪区域，并为后续绘制分配位图。需要与恢复接口[restore](#restore)配合使用，调用restore将会舍弃对矩阵和裁剪区域做的更改，并绘制位图。
 
 **起始版本：** 12
+
+<!--Device-Canvas-saveLayer(rect?: common2D.Rect | null, brush?: Brush | null): long--><!--Device-Canvas-saveLayer(rect?: common2D.Rect | null, brush?: Brush | null): long-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -2776,6 +2896,8 @@ scale(sx: number, sy: number): void
 
 **起始版本：** 12
 
+<!--Device-Canvas-scale(sx: double, sy: double): void--><!--Device-Canvas-scale(sx: double, sy: double): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -2821,6 +2943,8 @@ setMatrix(matrix: Matrix): void
 
 **起始版本：** 12
 
+<!--Device-Canvas-setMatrix(matrix: Matrix): void--><!--Device-Canvas-setMatrix(matrix: Matrix): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -2861,6 +2985,8 @@ skew(sx: number, sy: number) : void
 在当前画布矩阵（默认是单位矩阵）的基础上再叠加一个倾斜矩阵，后续绘制操作和裁剪操作的形状和位置都会自动叠加一个倾斜效果。
 
 **起始版本：** 12
+
+<!--Device-Canvas-skew(sx: double, sy: double) : void--><!--Device-Canvas-skew(sx: double, sy: double) : void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -2906,6 +3032,8 @@ translate(dx: number, dy: number): void
 在当前画布矩阵（默认是单位矩阵）的基础上再叠加一个平移矩阵，后续绘制操作和裁剪操作的形状和位置都会自动叠加一个平移效果。
 
 **起始版本：** 12
+
+<!--Device-Canvas-translate(dx: double, dy: double): void--><!--Device-Canvas-translate(dx: double, dy: double): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

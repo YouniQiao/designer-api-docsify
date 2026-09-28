@@ -20,6 +20,8 @@ function getCellularTxBytes(callback: AsyncCallback<number>): void
 
 **起始版本：** 10
 
+<!--Device-statistics-function getCellularTxBytes(callback: AsyncCallback<long>): void--><!--Device-statistics-function getCellularTxBytes(callback: AsyncCallback<long>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**
@@ -69,6 +71,8 @@ function getCellularTxBytes(): Promise<number>
 > 本接口建议在蜂窝网络处于连接状态时调用，否则会抛出2103012错误码。
 
 **起始版本：** 10
+
+<!--Device-statistics-function getCellularTxBytes(): Promise<long>--><!--Device-statistics-function getCellularTxBytes(): Promise<long>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 

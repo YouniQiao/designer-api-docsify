@@ -4,6 +4,8 @@ This module provides basic capabilities for managing system sound effects, inclu
 
 **Since:** 23
 
+<!--Device-unnamed-declare namespace systemSoundManager--><!--Device-unnamed-declare namespace systemSoundManager-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 ## Modules to Import

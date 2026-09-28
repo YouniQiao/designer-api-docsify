@@ -8,6 +8,8 @@ Defines the effect parameters used to preheat an image.
 
 **起始版本：** 11
 
+<!--Device-camera-interface SettingParam--><!--Device-camera-interface SettingParam-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ Face slimming level, which is obtained through [Beauty.getSupportedBeautyRange](
 
 **起始版本：** 11
 
+<!--Device-SettingParam-faceSlender: int--><!--Device-SettingParam-faceSlender: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -46,6 +50,8 @@ Skin smoothing level, which is obtained through [Beauty.getSupportedBeautyRange]
 
 **起始版本：** 11
 
+<!--Device-SettingParam-skinSmoothLevel: int--><!--Device-SettingParam-skinSmoothLevel: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +67,8 @@ Skin tone perfection level, which is obtained through [Beauty.getSupportedBeauty
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-SettingParam-skinTone: int--><!--Device-SettingParam-skinTone: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

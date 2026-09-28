@@ -10,6 +10,8 @@ ReactiveComponentContent is inherited from [Content](../../../reference/apis-ark
 
 **Since:** 22
 
+<!--Device-unnamed-export class ReactiveComponentContent<T extends Object[]> extends Content--><!--Device-unnamed-export class ReactiveComponentContent<T extends Object[]> extends Content-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
@@ -25,6 +27,8 @@ Constructor of ReactiveComponentContent.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-ReactiveComponentContent-constructor(uiContext: UIContext, builder: WrappedBuilder<T>, config: BuildOptions, ...args: T)--><!--Device-ReactiveComponentContent-constructor(uiContext: UIContext, builder: WrappedBuilder<T>, config: BuildOptions, ...args: T)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -122,6 +126,8 @@ Immediately releases the reference relationship between this **ReactiveComponent
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-ReactiveComponentContent-dispose(): void--><!--Device-ReactiveComponentContent-dispose(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -242,6 +248,8 @@ Updates **ReactiveComponentContent**. If the bound parameters used in the builde
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-ReactiveComponentContent-flushState(): void--><!--Device-ReactiveComponentContent-flushState(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -377,6 +385,8 @@ Sets whether the current **ReactiveComponentContent** object inherits the freeze
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-ReactiveComponentContent-inheritFreezeOptions(enabled: boolean): void--><!--Device-ReactiveComponentContent-inheritFreezeOptions(enabled: boolean): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -584,6 +594,8 @@ Queries whether the current **ReactiveComponentContent** object has released the
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-ReactiveComponentContent-isDisposed(): boolean--><!--Device-ReactiveComponentContent-isDisposed(): boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -730,6 +742,8 @@ Returns a flag indicating whether the current ReactiveComponentContent was obtai
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-ReactiveComponentContent-isTransferred(): boolean--><!--Device-ReactiveComponentContent-isTransferred(): boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -753,6 +767,8 @@ Recycles the custom component in ReactiveComponentContent. Component recycling i
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-ReactiveComponentContent-recycle(): void--><!--Device-ReactiveComponentContent-recycle(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1120,6 +1136,8 @@ Triggers component reuse for custom components under this **ReactiveComponentCon
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-ReactiveComponentContent-reuse(param?: Object): void--><!--Device-ReactiveComponentContent-reuse(param?: Object): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1145,6 +1163,8 @@ Transfers a system environment change event and triggers full update of a node, 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-ReactiveComponentContent-updateConfiguration(): void--><!--Device-ReactiveComponentContent-updateConfiguration(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

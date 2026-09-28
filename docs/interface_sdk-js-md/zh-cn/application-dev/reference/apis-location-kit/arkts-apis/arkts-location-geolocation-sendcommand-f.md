@@ -22,6 +22,8 @@ function sendCommand(command: LocationCommand, callback: AsyncCallback<boolean>)
 
 **需要权限：** ohos.permission.LOCATION
 
+<!--Device-geolocation-function sendCommand(command: LocationCommand, callback: AsyncCallback<boolean>): void--><!--Device-geolocation-function sendCommand(command: LocationCommand, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **参数：**
@@ -64,6 +66,8 @@ function sendCommand(command: LocationCommand): Promise<boolean>
 **替代接口：** [sendCommand](arkts-location-geolocationmanager-sendcommand-f.md)
 
 **需要权限：** ohos.permission.LOCATION
+
+<!--Device-geolocation-function sendCommand(command: LocationCommand): Promise<boolean>--><!--Device-geolocation-function sendCommand(command: LocationCommand): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 

@@ -1,6 +1,6 @@
 # ArkTS API<!--arkts-multimodalawarenesskit-->
 
-- [@ohos.multimodalAwareness.carAwareness](arkts-multimodalawareness-multimodalawareness-carawareness.md)
+- [@ohos.multimodalAwareness.carAwareness(车辆感知)](arkts-multimodalawareness-multimodalawareness-carawareness.md)
   - [getAllCapabilityList](arkts-multimodalawareness-carawareness-getallcapabilitylist-f.md)
   <!--Del-->
   - [getCarAwareness(系统接口)](arkts-multimodalawareness-carawareness-getcarawareness-f-sys.md)<!--DelEnd-->

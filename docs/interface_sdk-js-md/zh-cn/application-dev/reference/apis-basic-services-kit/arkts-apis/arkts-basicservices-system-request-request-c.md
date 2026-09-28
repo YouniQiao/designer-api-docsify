@@ -10,6 +10,8 @@ export default class Request
 
 **替代接口：** [request](arkts-basicservices-request-n.md)
 
+<!--Device-unnamed-export default class Request--><!--Device-unnamed-export default class Request-End-->
+
 **系统能力：** SystemCapability.MiscServices.Download
 
 ## 导入模块
@@ -31,6 +33,8 @@ static download(options: DownloadRequestOptions): void
 **废弃版本：** 9
 
 **替代接口：** [downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadfile-1)(context: BaseContext, config: DownloadConfig)
+
+<!--Device-Request-static download(options: DownloadRequestOptions): void--><!--Device-Request-static download(options: DownloadRequestOptions): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -54,6 +58,8 @@ static onDownloadComplete(options: OnDownloadCompleteOptions): void
 
 **替代接口：** show(id: string)
 
+<!--Device-Request-static onDownloadComplete(options: OnDownloadCompleteOptions): void--><!--Device-Request-static onDownloadComplete(options: OnDownloadCompleteOptions): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Download
 
 **参数：**
@@ -75,6 +81,8 @@ static upload(options: UploadRequestOptions): void
 **废弃版本：** 9
 
 **替代接口：** [uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadfile-1)(context: BaseContext, config: UploadConfig)
+
+<!--Device-Request-static upload(options: UploadRequestOptions): void--><!--Device-Request-static upload(options: UploadRequestOptions): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload
 

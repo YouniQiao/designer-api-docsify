@@ -8,6 +8,8 @@ POI(Point of Interest, 兴趣点)信息。
 
 **起始版本：** 19
 
+<!--Device-geoLocationManager-export interface Poi--><!--Device-geoLocationManager-export interface Poi-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 ## 导入模块
@@ -30,7 +32,9 @@ additionalInfo?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-Poi-additionalInfo?: string--><!--Device-Poi-additionalInfo?: string-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -46,7 +50,9 @@ address: string
 
 **起始版本：** 19
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-Poi-address: string--><!--Device-Poi-address: string-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -62,7 +68,9 @@ administrativeArea: string
 
 **起始版本：** 19
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-Poi-administrativeArea: string--><!--Device-Poi-administrativeArea: string-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -78,7 +86,9 @@ confidence: number
 
 **起始版本：** 19
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-Poi-confidence: double--><!--Device-Poi-confidence: double-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -94,7 +104,9 @@ id: string
 
 **起始版本：** 19
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-Poi-id: string--><!--Device-Poi-id: string-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -110,7 +122,9 @@ latitude: number
 
 **起始版本：** 19
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-Poi-latitude: double--><!--Device-Poi-latitude: double-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -126,7 +140,9 @@ locality: string
 
 **起始版本：** 19
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-Poi-locality: string--><!--Device-Poi-locality: string-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -142,7 +158,9 @@ longitude: number
 
 **起始版本：** 19
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-Poi-longitude: double--><!--Device-Poi-longitude: double-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -158,7 +176,9 @@ name: string
 
 **起始版本：** 19
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-Poi-name: string--><!--Device-Poi-name: string-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -174,7 +194,9 @@ subAdministrativeArea: string
 
 **起始版本：** 19
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-Poi-subAdministrativeArea: string--><!--Device-Poi-subAdministrativeArea: string-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -190,6 +212,8 @@ subLocality: string
 
 **起始版本：** 19
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-Poi-subLocality: string--><!--Device-Poi-subLocality: string-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core

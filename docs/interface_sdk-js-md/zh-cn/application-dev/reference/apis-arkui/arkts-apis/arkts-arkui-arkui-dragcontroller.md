@@ -12,6 +12,8 @@
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-unnamed-declare namespace dragController--><!--Device-unnamed-declare namespace dragController-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块

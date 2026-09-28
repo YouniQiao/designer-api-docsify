@@ -22,6 +22,8 @@ function offRangingStateChange(callback?: Callback<RangingStateChangeInfo>): voi
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ranging-function offRangingStateChange(callback?: Callback<RangingStateChangeInfo>): void--><!--Device-ranging-function offRangingStateChange(callback?: Callback<RangingStateChangeInfo>): void-End-->
+
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core
 
 **参数：**

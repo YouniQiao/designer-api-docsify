@@ -8,6 +8,8 @@ export interface QuotaPolicy
 
 **起始版本：** 10
 
+<!--Device-policy-export interface QuotaPolicy--><!--Device-policy-export interface QuotaPolicy-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ lastLimitRemind?: number
 
 **起始版本：** 10
 
+<!--Device-QuotaPolicy-lastLimitRemind?: long--><!--Device-QuotaPolicy-lastLimitRemind?: long-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ lastWarningRemind?: number
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-QuotaPolicy-lastWarningRemind?: long--><!--Device-QuotaPolicy-lastWarningRemind?: long-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -62,6 +68,8 @@ limitAction: LimitAction
 
 **起始版本：** 10
 
+<!--Device-QuotaPolicy-limitAction: LimitAction--><!--Device-QuotaPolicy-limitAction: LimitAction-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +85,8 @@ limitBytes: number
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-QuotaPolicy-limitBytes: long--><!--Device-QuotaPolicy-limitBytes: long-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -94,6 +104,8 @@ metered: boolean
 
 **起始版本：** 10
 
+<!--Device-QuotaPolicy-metered: boolean--><!--Device-QuotaPolicy-metered: boolean-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -110,6 +122,8 @@ periodDuration: string
 
 **起始版本：** 10
 
+<!--Device-QuotaPolicy-periodDuration: string--><!--Device-QuotaPolicy-periodDuration: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -125,6 +139,8 @@ warningBytes: number
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-QuotaPolicy-warningBytes: long--><!--Device-QuotaPolicy-warningBytes: long-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 

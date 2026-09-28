@@ -24,6 +24,8 @@ function enableBluetooth(): boolean
 
 **需要权限：** ohos.permission.DISCOVER_BLUETOOTH
 
+<!--Device-bluetooth-function enableBluetooth(): boolean--><!--Device-bluetooth-function enableBluetooth(): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **返回值：**

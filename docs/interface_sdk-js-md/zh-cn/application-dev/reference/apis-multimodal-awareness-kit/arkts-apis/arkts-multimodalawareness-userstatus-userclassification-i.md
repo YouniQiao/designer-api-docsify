@@ -10,6 +10,8 @@ export interface UserClassification
 
 **废弃版本：** 24
 
+<!--Device-userStatus-export interface UserClassification--><!--Device-userStatus-export interface UserClassification-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
 ## 导入模块
@@ -32,6 +34,8 @@ ageGroup?: UserAgeGroup
 
 **废弃版本：** 24
 
+<!--Device-UserClassification-ageGroup?: UserAgeGroup--><!--Device-UserClassification-ageGroup?: UserAgeGroup-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
 ## confidence
@@ -47,5 +51,7 @@ confidence?: float
 **起始版本：** 20
 
 **废弃版本：** 24
+
+<!--Device-UserClassification-confidence?: float--><!--Device-UserClassification-confidence?: float-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus

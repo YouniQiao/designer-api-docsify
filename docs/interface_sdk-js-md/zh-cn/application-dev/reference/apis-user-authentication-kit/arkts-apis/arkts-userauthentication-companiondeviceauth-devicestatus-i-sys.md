@@ -8,6 +8,8 @@ interface DeviceStatus
 
 **起始版本：** 23
 
+<!--Device-companionDeviceAuth-interface DeviceStatus--><!--Device-companionDeviceAuth-interface DeviceStatus-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ deviceKey: DeviceKey
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DeviceStatus-deviceKey: DeviceKey--><!--Device-DeviceStatus-deviceKey: DeviceKey-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
 **系统接口：** 此接口为系统接口。
@@ -50,6 +54,8 @@ deviceModelInfo: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DeviceStatus-deviceModelInfo: string--><!--Device-DeviceStatus-deviceModelInfo: string-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
 **系统接口：** 此接口为系统接口。
@@ -67,6 +73,8 @@ deviceName: string
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DeviceStatus-deviceName: string--><!--Device-DeviceStatus-deviceName: string-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
@@ -88,6 +96,8 @@ deviceSubProfileName?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DeviceStatus-deviceSubProfileName?: string--><!--Device-DeviceStatus-deviceSubProfileName?: string-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
 **系统接口：** 此接口为系统接口。
@@ -105,6 +115,8 @@ deviceUserName: string
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DeviceStatus-deviceUserName: string--><!--Device-DeviceStatus-deviceUserName: string-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
@@ -124,6 +136,8 @@ isOnline: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DeviceStatus-isOnline: boolean--><!--Device-DeviceStatus-isOnline: boolean-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
 **系统接口：** 此接口为系统接口。
@@ -141,6 +155,8 @@ supportedBusinessIds: number[]
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DeviceStatus-supportedBusinessIds: int[]--><!--Device-DeviceStatus-supportedBusinessIds: int[]-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 

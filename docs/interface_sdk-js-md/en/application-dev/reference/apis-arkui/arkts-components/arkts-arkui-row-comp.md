@@ -32,6 +32,8 @@ Creates a horizontal linear layout container. You can set the spacing between ch
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-RowInterface-(options?: RowOptions): RowAttribute--><!--Device-RowInterface-(options?: RowOptions): RowAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -62,6 +64,8 @@ Creates a horizontal linear layout container. You can set the spacing between ch
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-RowInterface-(options?: RowOptions | RowOptionsV2): RowAttribute--><!--Device-RowInterface-(options?: RowOptions | RowOptionsV2): RowAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

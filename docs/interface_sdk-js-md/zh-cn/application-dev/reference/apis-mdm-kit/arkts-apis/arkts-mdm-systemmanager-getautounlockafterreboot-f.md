@@ -20,6 +20,8 @@ function getAutoUnlockAfterReboot(admin: Want): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-systemManager-function getAutoUnlockAfterReboot(admin: Want): boolean--><!--Device-systemManager-function getAutoUnlockAfterReboot(admin: Want): boolean-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -78,6 +80,8 @@ function getAutoUnlockAfterReboot(admin: Want | null): boolean
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_SYSTEM
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-systemManager-function getAutoUnlockAfterReboot(admin: Want | null): boolean--><!--Device-systemManager-function getAutoUnlockAfterReboot(admin: Want | null): boolean-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

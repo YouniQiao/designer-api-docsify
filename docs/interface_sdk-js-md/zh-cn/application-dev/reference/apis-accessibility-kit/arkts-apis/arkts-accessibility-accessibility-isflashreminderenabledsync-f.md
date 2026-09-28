@@ -21,6 +21,8 @@ function isFlashReminderEnabledSync(): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-accessibility-function isFlashReminderEnabledSync(): boolean--><!--Device-accessibility-function isFlashReminderEnabledSync(): boolean-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **返回值：**

@@ -8,6 +8,8 @@ export interface NumberFormatOptions
 
 **起始版本：** 7
 
+<!--Device-call-export interface NumberFormatOptions--><!--Device-call-export interface NumberFormatOptions-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 ## 导入模块
@@ -27,5 +29,7 @@ countryCode?: string
 **类型：** string
 
 **起始版本：** 7
+
+<!--Device-NumberFormatOptions-countryCode?: string--><!--Device-NumberFormatOptions-countryCode?: string-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager

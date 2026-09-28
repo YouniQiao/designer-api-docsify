@@ -10,6 +10,8 @@ SOCKS5代理配置信息。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-http-type Socks5Proxy = connection.Socks5Proxy--><!--Device-http-type Socks5Proxy = connection.Socks5Proxy-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **类型：** [connection.Socks5Proxy](arkts-network-connection-socks5proxy-i.md)

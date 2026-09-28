@@ -8,6 +8,8 @@ interface BundleInfo
 
 **起始版本：** 20
 
+<!--Device-bundleManager-interface BundleInfo--><!--Device-bundleManager-interface BundleInfo-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## 导入模块
@@ -30,6 +32,8 @@ readonly appIndex: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BundleInfo-readonly appIndex: number--><!--Device-BundleInfo-readonly appIndex: number-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## appInfo
@@ -45,6 +49,8 @@ readonly appInfo: ApplicationInfo
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BundleInfo-readonly appInfo: ApplicationInfo--><!--Device-BundleInfo-readonly appInfo: ApplicationInfo-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -62,6 +68,8 @@ readonly firstInstallTime?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BundleInfo-readonly firstInstallTime?: number--><!--Device-BundleInfo-readonly firstInstallTime?: number-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## installTime
@@ -77,6 +85,8 @@ readonly installTime: number
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BundleInfo-readonly installTime: number--><!--Device-BundleInfo-readonly installTime: number-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -94,6 +104,8 @@ readonly minCompatibleVersionCode: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BundleInfo-readonly minCompatibleVersionCode: number--><!--Device-BundleInfo-readonly minCompatibleVersionCode: number-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## name
@@ -109,6 +121,8 @@ readonly name: string
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BundleInfo-readonly name: string--><!--Device-BundleInfo-readonly name: string-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -126,6 +140,8 @@ readonly signatureInfo: SignatureInfo
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BundleInfo-readonly signatureInfo: SignatureInfo--><!--Device-BundleInfo-readonly signatureInfo: SignatureInfo-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## targetVersion
@@ -141,6 +157,8 @@ readonly targetVersion: number
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BundleInfo-readonly targetVersion: number--><!--Device-BundleInfo-readonly targetVersion: number-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -158,6 +176,8 @@ readonly updateTime: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BundleInfo-readonly updateTime: number--><!--Device-BundleInfo-readonly updateTime: number-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## vendor
@@ -173,6 +193,8 @@ readonly vendor: string
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BundleInfo-readonly vendor: string--><!--Device-BundleInfo-readonly vendor: string-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -190,6 +212,8 @@ readonly versionCode: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BundleInfo-readonly versionCode: number--><!--Device-BundleInfo-readonly versionCode: number-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## versionName
@@ -205,5 +229,7 @@ readonly versionName: string
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BundleInfo-readonly versionName: string--><!--Device-BundleInfo-readonly versionName: string-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager

@@ -20,6 +20,8 @@ function getRealActiveTime(isNano: boolean, callback: AsyncCallback<number>): vo
 
 **替代接口：** [getUptime](arkts-basicservices-systemdatetime-getuptime-f.md)
 
+<!--Device-systemTime-function getRealActiveTime(isNano: boolean, callback: AsyncCallback<number>): void--><!--Device-systemTime-function getRealActiveTime(isNano: boolean, callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Time
 
 **参数：**
@@ -71,6 +73,8 @@ function getRealActiveTime(callback: AsyncCallback<number>): void
 
 **替代接口：** [getUptime](arkts-basicservices-systemdatetime-getuptime-f.md)
 
+<!--Device-systemTime-function getRealActiveTime(callback: AsyncCallback<number>): void--><!--Device-systemTime-function getRealActiveTime(callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Time
 
 **参数：**
@@ -120,6 +124,8 @@ function getRealActiveTime(isNano?: boolean): Promise<number>
 **废弃版本：** 9
 
 **替代接口：** [getUptime](arkts-basicservices-systemdatetime-getuptime-f.md)
+
+<!--Device-systemTime-function getRealActiveTime(isNano?: boolean): Promise<number>--><!--Device-systemTime-function getRealActiveTime(isNano?: boolean): Promise<number>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Time
 

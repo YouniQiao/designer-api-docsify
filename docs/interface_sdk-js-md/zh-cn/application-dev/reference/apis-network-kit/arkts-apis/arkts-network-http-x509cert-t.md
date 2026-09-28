@@ -10,6 +10,8 @@ X509证书
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-http-export type X509Cert = cert.X509Cert--><!--Device-http-export type X509Cert = cert.X509Cert-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **类型：** [cert.X509Cert](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-x509cert-i.md)

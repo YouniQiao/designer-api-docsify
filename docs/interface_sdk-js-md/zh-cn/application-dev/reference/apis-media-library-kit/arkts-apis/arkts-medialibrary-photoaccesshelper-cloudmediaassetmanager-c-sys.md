@@ -8,6 +8,8 @@ class CloudMediaAssetManager
 
 **起始版本：** 14
 
+<!--Device-photoAccessHelper-class CloudMediaAssetManager--><!--Device-photoAccessHelper-class CloudMediaAssetManager-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -29,6 +31,8 @@ cancelDownloadCloudMedia(): Promise<void>
 **起始版本：** 14
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC_MANAGER
+
+<!--Device-CloudMediaAssetManager-cancelDownloadCloudMedia(): Promise<void>--><!--Device-CloudMediaAssetManager-cancelDownloadCloudMedia(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -74,6 +78,8 @@ cancelDownloadSpecificCloudMedia(assetUris: string[] | null): Promise<void>
 **起始版本：** 21
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-CloudMediaAssetManager-cancelDownloadSpecificCloudMedia(assetUris: string[] | null): Promise<void>--><!--Device-CloudMediaAssetManager-cancelDownloadSpecificCloudMedia(assetUris: string[] | null): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -127,6 +133,8 @@ static getCloudMediaAssetManagerInstance(context: Context): CloudMediaAssetManag
 
 **起始版本：** 14
 
+<!--Device-CloudMediaAssetManager-static getCloudMediaAssetManagerInstance(context: Context): CloudMediaAssetManager--><!--Device-CloudMediaAssetManager-static getCloudMediaAssetManagerInstance(context: Context): CloudMediaAssetManager-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -178,6 +186,8 @@ getCloudMediaAssetStatus(): Promise<CloudMediaAssetStatus>
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-CloudMediaAssetManager-getCloudMediaAssetStatus(): Promise<CloudMediaAssetStatus>--><!--Device-CloudMediaAssetManager-getCloudMediaAssetStatus(): Promise<CloudMediaAssetStatus>-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -228,6 +238,8 @@ offDownloadProgressChange(callback?: Callback<CloudAssetDownloadProgressInfo>): 
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-CloudMediaAssetManager-offDownloadProgressChange(callback?: Callback<CloudAssetDownloadProgressInfo>): void--><!--Device-CloudMediaAssetManager-offDownloadProgressChange(callback?: Callback<CloudAssetDownloadProgressInfo>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -272,6 +284,8 @@ onDownloadProgressChange(callback: Callback<CloudAssetDownloadProgressInfo>): vo
 **起始版本：** 21
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-CloudMediaAssetManager-onDownloadProgressChange(callback: Callback<CloudAssetDownloadProgressInfo>): void--><!--Device-CloudMediaAssetManager-onDownloadProgressChange(callback: Callback<CloudAssetDownloadProgressInfo>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -322,6 +336,8 @@ pauseDownloadCloudMedia(): Promise<void>
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
+<!--Device-CloudMediaAssetManager-pauseDownloadCloudMedia(): Promise<void>--><!--Device-CloudMediaAssetManager-pauseDownloadCloudMedia(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -366,6 +382,8 @@ pauseDownloadSpecificCloudMedia(assetUris: string[] | null): Promise<void>
 **起始版本：** 21
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-CloudMediaAssetManager-pauseDownloadSpecificCloudMedia(assetUris: string[] | null): Promise<void>--><!--Device-CloudMediaAssetManager-pauseDownloadSpecificCloudMedia(assetUris: string[] | null): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -420,6 +438,8 @@ queryDownloadSpecificCloudMediaDetails(predicates: dataSharePredicates.DataShare
 **起始版本：** 21
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-CloudMediaAssetManager-queryDownloadSpecificCloudMediaDetails(predicates: dataSharePredicates.DataSharePredicates): Promise<CloudAssetDownloadStatus>--><!--Device-CloudMediaAssetManager-queryDownloadSpecificCloudMediaDetails(predicates: dataSharePredicates.DataSharePredicates): Promise<CloudAssetDownloadStatus>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -477,6 +497,8 @@ queryDownloadSpecificCloudMediaTaskCount(predicates: dataSharePredicates.DataSha
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-CloudMediaAssetManager-queryDownloadSpecificCloudMediaTaskCount(predicates: dataSharePredicates.DataSharePredicates): Promise<int>--><!--Device-CloudMediaAssetManager-queryDownloadSpecificCloudMediaTaskCount(predicates: dataSharePredicates.DataSharePredicates): Promise<int>-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -533,6 +555,8 @@ resumeDownloadSpecificCloudMedia(assetUris: string[] | null): Promise<void>
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-CloudMediaAssetManager-resumeDownloadSpecificCloudMedia(assetUris: string[] | null): Promise<void>--><!--Device-CloudMediaAssetManager-resumeDownloadSpecificCloudMedia(assetUris: string[] | null): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -587,6 +611,8 @@ retainCloudMediaAsset(retainType: CloudMediaRetainType): Promise<void>
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
+<!--Device-CloudMediaAssetManager-retainCloudMediaAsset(retainType: CloudMediaRetainType): Promise<void>--><!--Device-CloudMediaAssetManager-retainCloudMediaAsset(retainType: CloudMediaRetainType): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -639,6 +665,8 @@ startDownloadCloudMedia(downloadType: CloudMediaDownloadType): Promise<void>
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
+<!--Device-CloudMediaAssetManager-startDownloadCloudMedia(downloadType: CloudMediaDownloadType): Promise<void>--><!--Device-CloudMediaAssetManager-startDownloadCloudMedia(downloadType: CloudMediaDownloadType): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -690,6 +718,8 @@ startDownloadSpecificCloudMedia(assetUris: string[]): Promise<Map<string, CloudA
 **起始版本：** 21
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-CloudMediaAssetManager-startDownloadSpecificCloudMedia(assetUris: string[]): Promise<Map<string, CloudAssetDownloadCode>>--><!--Device-CloudMediaAssetManager-startDownloadSpecificCloudMedia(assetUris: string[]): Promise<Map<string, CloudAssetDownloadCode>>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

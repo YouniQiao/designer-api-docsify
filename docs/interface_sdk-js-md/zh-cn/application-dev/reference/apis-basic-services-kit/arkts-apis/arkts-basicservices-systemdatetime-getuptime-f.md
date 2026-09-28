@@ -16,6 +16,8 @@ function getUptime(timeType: TimeType, isNanoseconds?: boolean): number
 
 **起始版本：** 10
 
+<!--Device-systemDateTime-function getUptime(timeType: TimeType, isNanoseconds?: boolean): long--><!--Device-systemDateTime-function getUptime(timeType: TimeType, isNanoseconds?: boolean): long-End-->
+
 **系统能力：** SystemCapability.MiscServices.Time
 
 **参数：**

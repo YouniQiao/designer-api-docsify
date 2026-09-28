@@ -8,6 +8,8 @@ Defines the SearchButton options.
 
 **Since:** 10
 
+<!--Device-unnamed-interface SearchButtonOptions--><!--Device-unnamed-interface SearchButtonOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## autoDisable
@@ -32,6 +34,8 @@ true indicates that the button graying-out feature is enabled, and false indicat
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SearchButtonOptions-autoDisable?: Boolean--><!--Device-SearchButtonOptions-autoDisable?: Boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## fontColor
@@ -49,6 +53,8 @@ Font color of the text button. **Atomic service API:** This API is supported in 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SearchButtonOptions-fontColor?: ResourceColor--><!--Device-SearchButtonOptions-fontColor?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -69,5 +75,7 @@ Default value: follows the theme. **Atomic service API:** This API is supported 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SearchButtonOptions-fontSize?: Length--><!--Device-SearchButtonOptions-fontSize?: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

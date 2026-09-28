@@ -12,6 +12,8 @@ Defines the display order of the dialog box.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-unnamed-declare type LevelOrder = import('../api/@ohos.promptAction').LevelOrder--><!--Device-unnamed-declare type LevelOrder = import('../api/@ohos.promptAction').LevelOrder-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Type:** import('../api/@ohos.promptAction').LevelOrder

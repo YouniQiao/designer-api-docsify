@@ -8,6 +8,8 @@ interface Event
 
 **起始版本：** 10
 
+<!--Device-calendarManager-interface Event--><!--Device-calendarManager-interface Event-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 ## 导入模块
@@ -30,6 +32,8 @@ attendee?: Attendee[]
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Event-attendee?: Attendee[]--><!--Device-Event-attendee?: Attendee[]-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 ## description
@@ -45,6 +49,8 @@ description?: string
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Event-description?: string--><!--Device-Event-description?: string-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -62,6 +68,8 @@ endTime: number
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Event-endTime: number--><!--Device-Event-endTime: number-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 ## id
@@ -77,6 +85,8 @@ id?: number
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Event-id?: number--><!--Device-Event-id?: number-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -94,6 +104,8 @@ identifier?: string
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Event-identifier?: string--><!--Device-Event-identifier?: string-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 ## instanceEndTime
@@ -109,6 +121,8 @@ instanceEndTime?: number
 **起始版本：** 18
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-Event-instanceEndTime?: number--><!--Device-Event-instanceEndTime?: number-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -126,6 +140,8 @@ instanceStartTime?: number
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-Event-instanceStartTime?: number--><!--Device-Event-instanceStartTime?: number-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 ## isAllDay
@@ -141,6 +157,8 @@ isAllDay?: boolean
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Event-isAllDay?: boolean--><!--Device-Event-isAllDay?: boolean-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -158,6 +176,8 @@ isLunar?: boolean
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Event-isLunar?: boolean--><!--Device-Event-isLunar?: boolean-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 ## location
@@ -173,6 +193,8 @@ location?: Location
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Event-location?: Location--><!--Device-Event-location?: Location-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -190,6 +212,8 @@ recurrenceRule?: RecurrenceRule
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Event-recurrenceRule?: RecurrenceRule--><!--Device-Event-recurrenceRule?: RecurrenceRule-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 ## reminderTime
@@ -205,6 +229,8 @@ reminderTime?: number[]
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Event-reminderTime?: number[]--><!--Device-Event-reminderTime?: number[]-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -222,6 +248,8 @@ service?: EventService
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Event-service?: EventService--><!--Device-Event-service?: EventService-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 ## startTime
@@ -237,6 +265,8 @@ startTime: number
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Event-startTime: number--><!--Device-Event-startTime: number-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -254,6 +284,8 @@ timeZone?: string
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Event-timeZone?: string--><!--Device-Event-timeZone?: string-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 ## title
@@ -270,6 +302,8 @@ title?: string
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Event-title?: string--><!--Device-Event-title?: string-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 ## type
@@ -285,5 +319,7 @@ type: EventType
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Event-type: EventType--><!--Device-Event-type: EventType-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData

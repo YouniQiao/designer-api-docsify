@@ -16,6 +16,8 @@ BarcodeTag获取方式请参考[nfc-tag开发指南](../../../connectivity/nfc/n
 
 **起始版本：** 18
 
+<!--Device-unnamed-export interface BarcodeTag extends TagSession--><!--Device-unnamed-export interface BarcodeTag extends TagSession-End-->
+
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 ## getBarcode
@@ -30,7 +32,9 @@ getBarcode(): Promise<ArrayBuffer>
 
 **需要权限：** ohos.permission.NFC_TAG
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-BarcodeTag-getBarcode(): Promise<ArrayBuffer>--><!--Device-BarcodeTag-getBarcode(): Promise<ArrayBuffer>-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 

@@ -8,6 +8,8 @@ interface AccountManager
 
 **起始版本：** 7
 
+<!--Device-osAccount-interface AccountManager--><!--Device-osAccount-interface AccountManager-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 ## 导入模块
@@ -25,6 +27,8 @@ checkMultiOsAccountEnabled(callback: AsyncCallback<boolean>): void
 判断是否支持多系统账号。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-AccountManager-checkMultiOsAccountEnabled(callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-checkMultiOsAccountEnabled(callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -73,6 +77,8 @@ checkMultiOsAccountEnabled(): Promise<boolean>
 
 **起始版本：** 9
 
+<!--Device-AccountManager-checkMultiOsAccountEnabled(): Promise<boolean>--><!--Device-AccountManager-checkMultiOsAccountEnabled(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **返回值：**
@@ -114,6 +120,8 @@ checkOsAccountTestable(callback: AsyncCallback<boolean>): void
 检查当前系统账号是否为测试账号。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-AccountManager-checkOsAccountTestable(callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-checkOsAccountTestable(callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -162,6 +170,8 @@ checkOsAccountTestable(): Promise<boolean>
 
 **起始版本：** 9
 
+<!--Device-AccountManager-checkOsAccountTestable(): Promise<boolean>--><!--Device-AccountManager-checkOsAccountTestable(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **返回值：**
@@ -203,6 +213,8 @@ getActivatedOsAccountLocalIds(callback: AsyncCallback<Array<number>>): void
 查询当前处于激活状态的系统账号的ID列表。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-AccountManager-getActivatedOsAccountLocalIds(callback: AsyncCallback<Array<int>>): void--><!--Device-AccountManager-getActivatedOsAccountLocalIds(callback: AsyncCallback<Array<int>>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -254,6 +266,8 @@ getActivatedOsAccountLocalIds(): Promise<Array<number>>
 
 **起始版本：** 9
 
+<!--Device-AccountManager-getActivatedOsAccountLocalIds(): Promise<Array<int>>--><!--Device-AccountManager-getActivatedOsAccountLocalIds(): Promise<Array<int>>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **返回值：**
@@ -295,6 +309,8 @@ getForegroundOsAccountLocalId(): Promise<number>
 获取前台系统账号的ID。使用Promise异步回调。
 
 **起始版本：** 15
+
+<!--Device-AccountManager-getForegroundOsAccountLocalId(): Promise<int>--><!--Device-AccountManager-getForegroundOsAccountLocalId(): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -339,6 +355,8 @@ getOsAccountCount(callback: AsyncCallback<number>): void
 **起始版本：** 9
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-getOsAccountCount(callback: AsyncCallback<int>): void--><!--Device-AccountManager-getOsAccountCount(callback: AsyncCallback<int>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -390,6 +408,8 @@ getOsAccountCount(): Promise<number>
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-getOsAccountCount(): Promise<int>--><!--Device-AccountManager-getOsAccountCount(): Promise<int>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **返回值：**
@@ -434,6 +454,8 @@ getOsAccountDomainInfo(localId: number): Promise<DomainAccountInfo>
 **起始版本：** 15
 
 **需要权限：** ohos.permission.GET_DOMAIN_ACCOUNTS and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-getOsAccountDomainInfo(localId: number): Promise<DomainAccountInfo>--><!--Device-AccountManager-getOsAccountDomainInfo(localId: number): Promise<DomainAccountInfo>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -488,6 +510,8 @@ getOsAccountLocalId(callback: AsyncCallback<number>): void
 
 **起始版本：** 9
 
+<!--Device-AccountManager-getOsAccountLocalId(callback: AsyncCallback<int>): void--><!--Device-AccountManager-getOsAccountLocalId(callback: AsyncCallback<int>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
@@ -535,6 +559,8 @@ getOsAccountLocalId(): Promise<number>
 
 **起始版本：** 9
 
+<!--Device-AccountManager-getOsAccountLocalId(): Promise<int>--><!--Device-AccountManager-getOsAccountLocalId(): Promise<int>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **返回值：**
@@ -578,6 +604,8 @@ getOsAccountLocalIdForDomain(domainInfo: DomainAccountInfo, callback: AsyncCallb
 **起始版本：** 9
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-getOsAccountLocalIdForDomain(domainInfo: DomainAccountInfo, callback: AsyncCallback<int>): void--><!--Device-AccountManager-getOsAccountLocalIdForDomain(domainInfo: DomainAccountInfo, callback: AsyncCallback<int>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -633,6 +661,8 @@ getOsAccountLocalIdForDomain(domainInfo: DomainAccountInfo): Promise<number>
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-getOsAccountLocalIdForDomain(domainInfo: DomainAccountInfo): Promise<int>--><!--Device-AccountManager-getOsAccountLocalIdForDomain(domainInfo: DomainAccountInfo): Promise<int>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
@@ -685,6 +715,8 @@ getOsAccountLocalIdForSerialNumber(serialNumber: number, callback: AsyncCallback
 通过SN码查询与其关联的系统账号的账号ID。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-AccountManager-getOsAccountLocalIdForSerialNumber(serialNumber: long, callback: AsyncCallback<int>): void--><!--Device-AccountManager-getOsAccountLocalIdForSerialNumber(serialNumber: long, callback: AsyncCallback<int>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -739,6 +771,8 @@ getOsAccountLocalIdForSerialNumber(serialNumber: number): Promise<number>
 通过SN码查询与其关联的系统账号的账号ID。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-AccountManager-getOsAccountLocalIdForSerialNumber(serialNumber: long): Promise<int>--><!--Device-AccountManager-getOsAccountLocalIdForSerialNumber(serialNumber: long): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -795,6 +829,8 @@ getOsAccountLocalIdForUid(uid: number, callback: AsyncCallback<number>): void
 
 **起始版本：** 9
 
+<!--Device-AccountManager-getOsAccountLocalIdForUid(uid: int, callback: AsyncCallback<int>): void--><!--Device-AccountManager-getOsAccountLocalIdForUid(uid: int, callback: AsyncCallback<int>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
@@ -847,6 +883,8 @@ getOsAccountLocalIdForUid(uid: number): Promise<number>
 根据uid查询对应的系统账号ID。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-AccountManager-getOsAccountLocalIdForUid(uid: int): Promise<int>--><!--Device-AccountManager-getOsAccountLocalIdForUid(uid: int): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -902,6 +940,8 @@ getOsAccountLocalIdForUidSync(uid: number): number
 
 **起始版本：** 10
 
+<!--Device-AccountManager-getOsAccountLocalIdForUidSync(uid: int): int--><!--Device-AccountManager-getOsAccountLocalIdForUidSync(uid: int): int-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
@@ -956,6 +996,8 @@ getOsAccountLocalIds(): Promise<number[]>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AccountManager-getOsAccountLocalIds(): Promise<int[]>--><!--Device-AccountManager-getOsAccountLocalIds(): Promise<int[]>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **返回值：**
@@ -998,6 +1040,8 @@ getOsAccountName(): Promise<string>
 查询调用方所属系统账号的名称。使用Promise异步回调。
 
 **起始版本：** 12
+
+<!--Device-AccountManager-getOsAccountName(): Promise<string>--><!--Device-AccountManager-getOsAccountName(): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -1044,6 +1088,8 @@ getOsAccountNameByLocalId(localId: number): Promise<string>
 **需要权限：** ohos.permission.GET_LOCAL_ACCOUNT_IDENTIFIERS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AccountManager-getOsAccountNameByLocalId(localId: int): Promise<string>--><!--Device-AccountManager-getOsAccountNameByLocalId(localId: int): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -1096,6 +1142,8 @@ getOsAccountType(callback: AsyncCallback<OsAccountType>): void
 
 **起始版本：** 9
 
+<!--Device-AccountManager-getOsAccountType(callback: AsyncCallback<OsAccountType>): void--><!--Device-AccountManager-getOsAccountType(callback: AsyncCallback<OsAccountType>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
@@ -1143,6 +1191,8 @@ getOsAccountType(): Promise<OsAccountType>
 
 **起始版本：** 9
 
+<!--Device-AccountManager-getOsAccountType(): Promise<OsAccountType>--><!--Device-AccountManager-getOsAccountType(): Promise<OsAccountType>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **返回值：**
@@ -1184,6 +1234,8 @@ getSerialNumberForOsAccountLocalId(localId: number, callback: AsyncCallback<numb
 通过系统账号ID获取与该系统账号关联的SN码。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-AccountManager-getSerialNumberForOsAccountLocalId(localId: int, callback: AsyncCallback<long>): void--><!--Device-AccountManager-getSerialNumberForOsAccountLocalId(localId: int, callback: AsyncCallback<long>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -1238,6 +1290,8 @@ getSerialNumberForOsAccountLocalId(localId: number): Promise<number>
 通过系统账号ID获取与该系统账号关联的SN码。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-AccountManager-getSerialNumberForOsAccountLocalId(localId: int): Promise<long>--><!--Device-AccountManager-getSerialNumberForOsAccountLocalId(localId: int): Promise<long>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -1294,6 +1348,8 @@ isOsAccountConstraintEnabled(constraint: string): Promise<boolean>
 
 **起始版本：** 11
 
+<!--Device-AccountManager-isOsAccountConstraintEnabled(constraint: string): Promise<boolean>--><!--Device-AccountManager-isOsAccountConstraintEnabled(constraint: string): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
@@ -1346,6 +1402,8 @@ isOsAccountUnlocked(): Promise<boolean>
 
 **起始版本：** 11
 
+<!--Device-AccountManager-isOsAccountUnlocked(): Promise<boolean>--><!--Device-AccountManager-isOsAccountUnlocked(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **返回值：**
@@ -1389,6 +1447,8 @@ queryDistributedVirtualDeviceId(callback: AsyncCallback<string>): void
 **起始版本：** 9
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC or ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-queryDistributedVirtualDeviceId(callback: AsyncCallback<string>): void--><!--Device-AccountManager-queryDistributedVirtualDeviceId(callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -1440,6 +1500,8 @@ queryDistributedVirtualDeviceId(): Promise<string>
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC or ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-queryDistributedVirtualDeviceId(): Promise<string>--><!--Device-AccountManager-queryDistributedVirtualDeviceId(): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **返回值：**
@@ -1490,6 +1552,8 @@ checkOsAccountActivated(localId: number, callback: AsyncCallback<boolean>): void
 **废弃版本：** 11
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-checkOsAccountActivated(localId: number, callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-checkOsAccountActivated(localId: number, callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -1553,6 +1617,8 @@ checkOsAccountActivated(localId: number): Promise<boolean>
 **废弃版本：** 11
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-checkOsAccountActivated(localId: number): Promise<boolean>--><!--Device-AccountManager-checkOsAccountActivated(localId: number): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -1618,6 +1684,8 @@ checkOsAccountConstraintEnabled(localId: number, constraint: string, callback: A
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-checkOsAccountConstraintEnabled(localId: number, constraint: string, callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-checkOsAccountConstraintEnabled(localId: number, constraint: string, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
@@ -1682,6 +1750,8 @@ checkOsAccountConstraintEnabled(localId: number, constraint: string): Promise<bo
 **废弃版本：** 11
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-checkOsAccountConstraintEnabled(localId: number, constraint: string): Promise<boolean>--><!--Device-AccountManager-checkOsAccountConstraintEnabled(localId: number, constraint: string): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -1750,6 +1820,8 @@ checkOsAccountVerified(callback: AsyncCallback<boolean>): void
 
 **替代接口：** [isOsAccountUnlocked](#isosaccountunlocked)()
 
+<!--Device-AccountManager-checkOsAccountVerified(callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-checkOsAccountVerified(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
@@ -1805,6 +1877,8 @@ checkOsAccountVerified(): Promise<boolean>
 
 **替代接口：** [isOsAccountUnlocked](#isosaccountunlocked)()
 
+<!--Device-AccountManager-checkOsAccountVerified(): Promise<boolean>--><!--Device-AccountManager-checkOsAccountVerified(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **返回值：**
@@ -1856,6 +1930,8 @@ checkOsAccountVerified(localId: number, callback: AsyncCallback<boolean>): void
 **废弃版本：** 11
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-checkOsAccountVerified(localId: number, callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-checkOsAccountVerified(localId: number, callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -1917,6 +1993,8 @@ checkOsAccountVerified(localId: number): Promise<boolean>
 **废弃版本：** 11
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-checkOsAccountVerified(localId: number): Promise<boolean>--><!--Device-AccountManager-checkOsAccountVerified(localId: number): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -1983,6 +2061,8 @@ getCreatedOsAccountsCount(callback: AsyncCallback<number>): void
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-getCreatedOsAccountsCount(callback: AsyncCallback<number>): void--><!--Device-AccountManager-getCreatedOsAccountsCount(callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
@@ -2029,6 +2109,8 @@ getCreatedOsAccountsCount(): Promise<number>
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-getCreatedOsAccountsCount(): Promise<number>--><!--Device-AccountManager-getCreatedOsAccountsCount(): Promise<number>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **返回值：**
@@ -2069,6 +2151,8 @@ getCurrentOsAccount(callback: AsyncCallback<OsAccountInfo>): void
 **需要权限：** 
 - API版本10+：ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.GET_LOCAL_ACCOUNTS
 - API版本9：ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-getCurrentOsAccount(callback: AsyncCallback<OsAccountInfo>): void--><!--Device-AccountManager-getCurrentOsAccount(callback: AsyncCallback<OsAccountInfo>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -2127,6 +2211,8 @@ getCurrentOsAccount(): Promise<OsAccountInfo>
 - API版本10+：ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.GET_LOCAL_ACCOUNTS
 - API版本9：ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-getCurrentOsAccount(): Promise<OsAccountInfo>--><!--Device-AccountManager-getCurrentOsAccount(): Promise<OsAccountInfo>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **返回值：**
@@ -2182,6 +2268,8 @@ getDistributedVirtualDeviceId(callback: AsyncCallback<string>): void
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC or ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-getDistributedVirtualDeviceId(callback: AsyncCallback<string>): void--><!--Device-AccountManager-getDistributedVirtualDeviceId(callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
@@ -2228,6 +2316,8 @@ getDistributedVirtualDeviceId(): Promise<string>
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC or ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-getDistributedVirtualDeviceId(): Promise<string>--><!--Device-AccountManager-getDistributedVirtualDeviceId(): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **返回值：**
@@ -2266,6 +2356,8 @@ getOsAccountAllConstraints(localId: number, callback: AsyncCallback<Array<string
 **废弃版本：** 9
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-getOsAccountAllConstraints(localId: number, callback: AsyncCallback<Array<string>>): void--><!--Device-AccountManager-getOsAccountAllConstraints(localId: number, callback: AsyncCallback<Array<string>>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -2315,6 +2407,8 @@ getOsAccountAllConstraints(localId: number): Promise<Array<string>>
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-getOsAccountAllConstraints(localId: number): Promise<Array<string>>--><!--Device-AccountManager-getOsAccountAllConstraints(localId: number): Promise<Array<string>>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
@@ -2363,6 +2457,8 @@ getOsAccountConstraints(localId: number, callback: AsyncCallback<Array<string>>)
 **废弃版本：** 11
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-getOsAccountConstraints(localId: number, callback: AsyncCallback<Array<string>>): void--><!--Device-AccountManager-getOsAccountConstraints(localId: number, callback: AsyncCallback<Array<string>>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -2426,6 +2522,8 @@ getOsAccountConstraints(localId: number): Promise<Array<string>>
 **废弃版本：** 11
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-getOsAccountConstraints(localId: number): Promise<Array<string>>--><!--Device-AccountManager-getOsAccountConstraints(localId: number): Promise<Array<string>>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -2493,6 +2591,8 @@ getOsAccountLocalIdBySerialNumber(serialNumber: number, callback: AsyncCallback<
 
 **替代接口：** [getOsAccountLocalIdForSerialNumber](#getosaccountlocalidforserialnumber)(serialNumber: number, callback: AsyncCallback&lt;number&gt;)
 
+<!--Device-AccountManager-getOsAccountLocalIdBySerialNumber(serialNumber: number, callback: AsyncCallback<number>): void--><!--Device-AccountManager-getOsAccountLocalIdBySerialNumber(serialNumber: number, callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
@@ -2541,6 +2641,8 @@ getOsAccountLocalIdBySerialNumber(serialNumber: number): Promise<number>
 **废弃版本：** 9
 
 **替代接口：** [getOsAccountLocalIdForSerialNumber](#getosaccountlocalidforserialnumber)(serialNumber: number)
+
+<!--Device-AccountManager-getOsAccountLocalIdBySerialNumber(serialNumber: number): Promise<number>--><!--Device-AccountManager-getOsAccountLocalIdBySerialNumber(serialNumber: number): Promise<number>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -2594,6 +2696,8 @@ getOsAccountLocalIdFromDomain(domainInfo: DomainAccountInfo, callback: AsyncCall
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-getOsAccountLocalIdFromDomain(domainInfo: DomainAccountInfo, callback: AsyncCallback<number>): void--><!--Device-AccountManager-getOsAccountLocalIdFromDomain(domainInfo: DomainAccountInfo, callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
@@ -2643,6 +2747,8 @@ getOsAccountLocalIdFromDomain(domainInfo: DomainAccountInfo): Promise<number>
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-getOsAccountLocalIdFromDomain(domainInfo: DomainAccountInfo): Promise<number>--><!--Device-AccountManager-getOsAccountLocalIdFromDomain(domainInfo: DomainAccountInfo): Promise<number>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
@@ -2690,6 +2796,8 @@ getOsAccountLocalIdFromProcess(callback: AsyncCallback<number>): void
 
 **替代接口：** [getOsAccountLocalId](#getosaccountlocalid)(callback: AsyncCallback&lt;number&gt;)
 
+<!--Device-AccountManager-getOsAccountLocalIdFromProcess(callback: AsyncCallback<number>): void--><!--Device-AccountManager-getOsAccountLocalIdFromProcess(callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
@@ -2734,6 +2842,8 @@ getOsAccountLocalIdFromProcess(): Promise<number>
 
 **替代接口：** [getOsAccountLocalId](#getosaccountlocalid)()
 
+<!--Device-AccountManager-getOsAccountLocalIdFromProcess(): Promise<number>--><!--Device-AccountManager-getOsAccountLocalIdFromProcess(): Promise<number>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **返回值：**
@@ -2774,6 +2884,8 @@ getOsAccountLocalIdFromUid(uid: number, callback: AsyncCallback<number>): void
 **废弃版本：** 9
 
 **替代接口：** [getOsAccountLocalIdForUid](#getosaccountlocalidforuid)(uid: number, callback: AsyncCallback&lt;number&gt;)
+
+<!--Device-AccountManager-getOsAccountLocalIdFromUid(uid: number, callback: AsyncCallback<number>): void--><!--Device-AccountManager-getOsAccountLocalIdFromUid(uid: number, callback: AsyncCallback<number>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -2822,6 +2934,8 @@ getOsAccountLocalIdFromUid(uid: number): Promise<number>
 **废弃版本：** 9
 
 **替代接口：** [getOsAccountLocalIdForUid](#getosaccountlocalidforuid)(uid: number)
+
+<!--Device-AccountManager-getOsAccountLocalIdFromUid(uid: number): Promise<number>--><!--Device-AccountManager-getOsAccountLocalIdFromUid(uid: number): Promise<number>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -2872,6 +2986,8 @@ getOsAccountTypeFromProcess(callback: AsyncCallback<OsAccountType>): void
 
 **替代接口：** [getOsAccountType](#getosaccounttype)(callback: AsyncCallback&lt;OsAccountType&gt;)
 
+<!--Device-AccountManager-getOsAccountTypeFromProcess(callback: AsyncCallback<OsAccountType>): void--><!--Device-AccountManager-getOsAccountTypeFromProcess(callback: AsyncCallback<OsAccountType>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
@@ -2916,6 +3032,8 @@ getOsAccountTypeFromProcess(): Promise<OsAccountType>
 
 **替代接口：** [getOsAccountType](#getosaccounttype)()
 
+<!--Device-AccountManager-getOsAccountTypeFromProcess(): Promise<OsAccountType>--><!--Device-AccountManager-getOsAccountTypeFromProcess(): Promise<OsAccountType>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **返回值：**
@@ -2956,6 +3074,8 @@ getSerialNumberByOsAccountLocalId(localId: number, callback: AsyncCallback<numbe
 **废弃版本：** 9
 
 **替代接口：** [getSerialNumberForOsAccountLocalId](#getserialnumberforosaccountlocalid)(localId: number, callback: AsyncCallback&lt;number&gt;)
+
+<!--Device-AccountManager-getSerialNumberByOsAccountLocalId(localId: number, callback: AsyncCallback<number>): void--><!--Device-AccountManager-getSerialNumberByOsAccountLocalId(localId: number, callback: AsyncCallback<number>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -3006,6 +3126,8 @@ getSerialNumberByOsAccountLocalId(localId: number): Promise<number>
 **废弃版本：** 9
 
 **替代接口：** [getSerialNumberForOsAccountLocalId](#getserialnumberforosaccountlocalid)(localId: number)
+
+<!--Device-AccountManager-getSerialNumberByOsAccountLocalId(localId: number): Promise<number>--><!--Device-AccountManager-getSerialNumberByOsAccountLocalId(localId: number): Promise<number>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -3058,6 +3180,8 @@ isMultiOsAccountEnable(callback: AsyncCallback<boolean>): void
 
 **替代接口：** [checkMultiOsAccountEnabled](#checkmultiosaccountenabled)(callback: AsyncCallback&lt;boolean&gt;)
 
+<!--Device-AccountManager-isMultiOsAccountEnable(callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-isMultiOsAccountEnable(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
@@ -3102,6 +3226,8 @@ isMultiOsAccountEnable(): Promise<boolean>
 
 **替代接口：** [checkMultiOsAccountEnabled](#checkmultiosaccountenabled)()
 
+<!--Device-AccountManager-isMultiOsAccountEnable(): Promise<boolean>--><!--Device-AccountManager-isMultiOsAccountEnable(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **返回值：**
@@ -3140,6 +3266,8 @@ isOsAccountActived(localId: number, callback: AsyncCallback<boolean>): void
 **废弃版本：** 9
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-isOsAccountActived(localId: number, callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-isOsAccountActived(localId: number, callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -3188,6 +3316,8 @@ isOsAccountActived(localId: number): Promise<boolean>
 **废弃版本：** 9
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-isOsAccountActived(localId: number): Promise<boolean>--><!--Device-AccountManager-isOsAccountActived(localId: number): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -3238,6 +3368,8 @@ isOsAccountConstraintEnable(localId: number, constraint: string, callback: Async
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-isOsAccountConstraintEnable(localId: number, constraint: string, callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-isOsAccountConstraintEnable(localId: number, constraint: string, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
@@ -3287,6 +3419,8 @@ isOsAccountConstraintEnable(localId: number, constraint: string): Promise<boolea
 **废弃版本：** 9
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-isOsAccountConstraintEnable(localId: number, constraint: string): Promise<boolean>--><!--Device-AccountManager-isOsAccountConstraintEnable(localId: number, constraint: string): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -3343,6 +3477,8 @@ isOsAccountVerified(callback: AsyncCallback<boolean>): void
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-isOsAccountVerified(callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-isOsAccountVerified(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
@@ -3385,6 +3521,8 @@ isOsAccountVerified(localId: number, callback: AsyncCallback<boolean>): void
 **废弃版本：** 9
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-isOsAccountVerified(localId: number, callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-isOsAccountVerified(localId: number, callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -3431,6 +3569,8 @@ isOsAccountVerified(localId?: number): Promise<boolean>
 **废弃版本：** 9
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-isOsAccountVerified(localId?: number): Promise<boolean>--><!--Device-AccountManager-isOsAccountVerified(localId?: number): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -3479,6 +3619,8 @@ isTestOsAccount(callback: AsyncCallback<boolean>): void
 
 **替代接口：** [checkOsAccountTestable](#checkosaccounttestable)(callback: AsyncCallback&lt;boolean&gt;)
 
+<!--Device-AccountManager-isTestOsAccount(callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-isTestOsAccount(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
@@ -3523,6 +3665,8 @@ isTestOsAccount(): Promise<boolean>
 
 **替代接口：** [checkOsAccountTestable](#checkosaccounttestable)()
 
+<!--Device-AccountManager-isTestOsAccount(): Promise<boolean>--><!--Device-AccountManager-isTestOsAccount(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **返回值：**
@@ -3563,6 +3707,8 @@ queryActivatedOsAccountIds(callback: AsyncCallback<Array<number>>): void
 **废弃版本：** 9
 
 **替代接口：** [getActivatedOsAccountLocalIds](#getactivatedosaccountlocalids)(callback: AsyncCallback&lt;Array&lt;number&gt;&gt;)
+
+<!--Device-AccountManager-queryActivatedOsAccountIds(callback: AsyncCallback<Array<number>>): void--><!--Device-AccountManager-queryActivatedOsAccountIds(callback: AsyncCallback<Array<number>>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -3611,6 +3757,8 @@ queryActivatedOsAccountIds(): Promise<Array<number>>
 
 **替代接口：** [getActivatedOsAccountLocalIds](#getactivatedosaccountlocalids)()
 
+<!--Device-AccountManager-queryActivatedOsAccountIds(): Promise<Array<number>>--><!--Device-AccountManager-queryActivatedOsAccountIds(): Promise<Array<number>>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **返回值：**
@@ -3649,6 +3797,8 @@ queryCurrentOsAccount(callback: AsyncCallback<OsAccountInfo>): void
 **废弃版本：** 9
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-queryCurrentOsAccount(callback: AsyncCallback<OsAccountInfo>): void--><!--Device-AccountManager-queryCurrentOsAccount(callback: AsyncCallback<OsAccountInfo>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -3692,6 +3842,8 @@ queryCurrentOsAccount(): Promise<OsAccountInfo>
 **废弃版本：** 9
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-queryCurrentOsAccount(): Promise<OsAccountInfo>--><!--Device-AccountManager-queryCurrentOsAccount(): Promise<OsAccountInfo>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 

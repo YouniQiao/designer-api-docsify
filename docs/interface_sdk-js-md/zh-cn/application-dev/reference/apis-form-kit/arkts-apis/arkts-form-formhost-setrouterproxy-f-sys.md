@@ -24,6 +24,8 @@ function setRouterProxy(formIds: Array<string>, proxy: Callback<Want>, callback:
 
 **需要权限：** ohos.permission.REQUIRE_FORM
 
+<!--Device-formHost-function setRouterProxy(formIds: Array<string>, proxy: Callback<Want>, callback: AsyncCallback<void>): void--><!--Device-formHost-function setRouterProxy(formIds: Array<string>, proxy: Callback<Want>, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -122,6 +124,8 @@ function setRouterProxy(formIds: Array<string>, proxy: Callback<Want>): Promise<
 **起始版本：** 11
 
 **需要权限：** ohos.permission.REQUIRE_FORM
+
+<!--Device-formHost-function setRouterProxy(formIds: Array<string>, proxy: Callback<Want>): Promise<void>--><!--Device-formHost-function setRouterProxy(formIds: Array<string>, proxy: Callback<Want>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 

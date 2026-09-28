@@ -8,6 +8,8 @@ Sets the polymorphic style of the text box.
 
 **Since:** 10
 
+<!--Device-unnamed-declare enum TextContentStyle--><!--Device-unnamed-declare enum TextContentStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## DEFAULT
@@ -23,6 +25,8 @@ Default style. The caret width is 1.5 vp, and the caret height is subject to the
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextContentStyle-DEFAULT--><!--Device-TextContentStyle-DEFAULT-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,5 +49,7 @@ In inline mode, dragging text is not supported.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextContentStyle-INLINE--><!--Device-TextContentStyle-INLINE-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

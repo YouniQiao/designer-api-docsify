@@ -12,6 +12,8 @@ ArkTS Array断言函数类型，被Array类的'retainAll'接口使用，用来�
 
 **原子化服务API：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
 
+<!--Device-collections-type ArrayElementPredicateFn<ElementType> = (value: ElementType) => boolean--><!--Device-collections-type ArrayElementPredicateFn<ElementType> = (value: ElementType) => boolean-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**

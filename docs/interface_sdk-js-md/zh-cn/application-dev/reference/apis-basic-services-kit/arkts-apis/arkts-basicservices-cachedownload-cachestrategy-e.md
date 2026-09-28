@@ -8,6 +8,8 @@ enum CacheStrategy
 
 **起始版本：** 23
 
+<!--Device-cacheDownload-enum CacheStrategy--><!--Device-cacheDownload-enum CacheStrategy-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## FORCE
@@ -20,6 +22,8 @@ FORCE = 0
 
 **起始版本：** 23
 
+<!--Device-CacheStrategy-FORCE = 0--><!--Device-CacheStrategy-FORCE = 0-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## LAZY
@@ -31,5 +35,7 @@ LAZY = 1
 延迟更新缓存，只有当缓存不存在时才会更新。
 
 **起始版本：** 23
+
+<!--Device-CacheStrategy-LAZY = 1--><!--Device-CacheStrategy-LAZY = 1-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent

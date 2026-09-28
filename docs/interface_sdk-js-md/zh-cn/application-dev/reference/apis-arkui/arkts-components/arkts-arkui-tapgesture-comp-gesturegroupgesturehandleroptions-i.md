@@ -8,6 +8,8 @@ interface GestureGroupGestureHandlerOptions
 
 **起始版本：** 12
 
+<!--Device-unnamed-interface GestureGroupGestureHandlerOptions--><!--Device-unnamed-interface GestureGroupGestureHandlerOptions-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## gestures
@@ -30,6 +32,8 @@ gestures: GestureHandler<TapGestureHandler | LongPressGestureHandler | PanGestur
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-GestureGroupGestureHandlerOptions-gestures: GestureHandler<TapGestureHandler | LongPressGestureHandler | PanGestureHandler | SwipeGestureHandler | PinchGestureHandler | RotationGestureHandler | GestureGroupHandler>[]--><!--Device-GestureGroupGestureHandlerOptions-gestures: GestureHandler<TapGestureHandler | LongPressGestureHandler | PanGestureHandler | SwipeGestureHandler | PinchGestureHandler | RotationGestureHandler | GestureGroupHandler>[]-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## mode
@@ -49,5 +53,7 @@ mode: GestureMode
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GestureGroupGestureHandlerOptions-mode: GestureMode--><!--Device-GestureGroupGestureHandlerOptions-mode: GestureMode-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

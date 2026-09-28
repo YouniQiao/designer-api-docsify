@@ -8,6 +8,8 @@ export default interface AutoFillRect
 
 **起始版本：** 12
 
+<!--Device-unnamed-export default interface AutoFillRect--><!--Device-unnamed-export default interface AutoFillRect-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **系统接口：** 此接口为系统接口。
@@ -25,6 +27,8 @@ AutoFill表单或页面节点的高度，单位是px。
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AutoFillRect-height: double--><!--Device-AutoFillRect-height: double-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -44,6 +48,8 @@ AutoFill表单或页面节点与页面左边界的距离，单位是px。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AutoFillRect-left: double--><!--Device-AutoFillRect-left: double-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **系统接口：** 此接口为系统接口。
@@ -62,6 +68,8 @@ AutoFill表单或页面节点与页面上边界的距离，单位是px。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AutoFillRect-top: double--><!--Device-AutoFillRect-top: double-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **系统接口：** 此接口为系统接口。
@@ -79,6 +87,8 @@ AutoFill表单或页面节点的宽度，单位是px。
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AutoFillRect-width: double--><!--Device-AutoFillRect-width: double-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 

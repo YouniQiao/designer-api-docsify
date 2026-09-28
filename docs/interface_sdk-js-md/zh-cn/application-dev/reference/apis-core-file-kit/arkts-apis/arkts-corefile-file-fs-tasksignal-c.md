@@ -8,6 +8,8 @@ export class TaskSignal
 
 **起始版本：** 12
 
+<!--Device-unnamed-export class TaskSignal--><!--Device-unnamed-export class TaskSignal-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## 导入模块
@@ -25,6 +27,8 @@ cancel(): void
 取消拷贝任务。
 
 **起始版本：** 12
+
+<!--Device-TaskSignal-cancel(): void--><!--Device-TaskSignal-cancel(): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -93,6 +97,8 @@ onCancel(): Promise<string>
 **起始版本：** 12
 
 **废弃版本：** 24
+
+<!--Device-TaskSignal-onCancel(): Promise<string>--><!--Device-TaskSignal-onCancel(): Promise<string>-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

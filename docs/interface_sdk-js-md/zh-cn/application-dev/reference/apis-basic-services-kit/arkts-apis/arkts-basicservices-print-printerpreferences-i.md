@@ -8,6 +8,8 @@ interface PrinterPreferences
 
 **起始版本：** 18
 
+<!--Device-print-interface PrinterPreferences--><!--Device-print-interface PrinterPreferences-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## 导入模块
@@ -28,6 +30,8 @@ borderless?: boolean
 
 **起始版本：** 18
 
+<!--Device-PrinterPreferences-borderless?: boolean--><!--Device-PrinterPreferences-borderless?: boolean-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## defaultCollate
@@ -45,6 +49,8 @@ defaultCollate?: boolean
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PrinterPreferences-defaultCollate?: boolean--><!--Device-PrinterPreferences-defaultCollate?: boolean-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -64,6 +70,8 @@ defaultColorMode?: PrintColorMode
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PrinterPreferences-defaultColorMode?: PrintColorMode--><!--Device-PrinterPreferences-defaultColorMode?: PrintColorMode-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## defaultDuplexMode
@@ -77,6 +85,8 @@ defaultDuplexMode?: PrintDuplexMode
 **类型：** [PrintDuplexMode](arkts-basicservices-print-printduplexmode-e.md)
 
 **起始版本：** 18
+
+<!--Device-PrinterPreferences-defaultDuplexMode?: PrintDuplexMode--><!--Device-PrinterPreferences-defaultDuplexMode?: PrintDuplexMode-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -92,6 +102,8 @@ defaultMediaType?: string
 
 **起始版本：** 18
 
+<!--Device-PrinterPreferences-defaultMediaType?: string--><!--Device-PrinterPreferences-defaultMediaType?: string-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## defaultOrientation
@@ -105,6 +117,8 @@ defaultOrientation?: PrintOrientationMode
 **类型：** [PrintOrientationMode](arkts-basicservices-print-printorientationmode-e.md)
 
 **起始版本：** 18
+
+<!--Device-PrinterPreferences-defaultOrientation?: PrintOrientationMode--><!--Device-PrinterPreferences-defaultOrientation?: PrintOrientationMode-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -120,6 +134,8 @@ defaultPageSizeId?: string
 
 **起始版本：** 18
 
+<!--Device-PrinterPreferences-defaultPageSizeId?: string--><!--Device-PrinterPreferences-defaultPageSizeId?: string-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## defaultPrintQuality
@@ -133,6 +149,8 @@ defaultPrintQuality?: PrintQuality
 **类型：** [PrintQuality](arkts-basicservices-print-printquality-e.md)
 
 **起始版本：** 18
+
+<!--Device-PrinterPreferences-defaultPrintQuality?: PrintQuality--><!--Device-PrinterPreferences-defaultPrintQuality?: PrintQuality-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -152,6 +170,8 @@ defaultReverse?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PrinterPreferences-defaultReverse?: boolean--><!--Device-PrinterPreferences-defaultReverse?: boolean-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## options
@@ -165,5 +185,7 @@ options?: string
 **类型：** string
 
 **起始版本：** 18
+
+<!--Device-PrinterPreferences-options?: string--><!--Device-PrinterPreferences-options?: string-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework

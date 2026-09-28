@@ -16,6 +16,8 @@ function getScreenCaptureMonitor(): Promise<ScreenCaptureMonitor>
 
 **起始版本：** 18
 
+<!--Device-media-function getScreenCaptureMonitor(): Promise<ScreenCaptureMonitor>--><!--Device-media-function getScreenCaptureMonitor(): Promise<ScreenCaptureMonitor>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 **系统接口：** 此接口为系统接口。

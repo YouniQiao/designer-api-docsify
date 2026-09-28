@@ -10,6 +10,8 @@ export type DataItem = _HapModuleInfo.DataItem
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-bundleManager-export type DataItem = _HapModuleInfo.DataItem--><!--Device-bundleManager-export type DataItem = _HapModuleInfo.DataItem-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **类型：** [_HapModuleInfo.DataItem](arkts-ability-hapmoduleinfo-dataitem-i.md)

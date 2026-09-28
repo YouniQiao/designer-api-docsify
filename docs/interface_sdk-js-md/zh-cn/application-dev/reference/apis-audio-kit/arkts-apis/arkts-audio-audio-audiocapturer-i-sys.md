@@ -8,6 +8,8 @@ interface AudioCapturer
 
 **起始版本：** 8
 
+<!--Device-audio-interface AudioCapturer--><!--Device-audio-interface AudioCapturer-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 ## 导入模块
@@ -27,6 +29,8 @@ offReadMicInData(callback?: Callback<AudioCapturerMicInData>): void
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioCapturer-offReadMicInData(callback?: Callback<AudioCapturerMicInData>): void--><!--Device-AudioCapturer-offReadMicInData(callback?: Callback<AudioCapturerMicInData>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -64,6 +68,8 @@ onReadMicInData(callback: Callback<AudioCapturerMicInData>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioCapturer-onReadMicInData(callback: Callback<AudioCapturerMicInData>): void--><!--Device-AudioCapturer-onReadMicInData(callback: Callback<AudioCapturerMicInData>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **系统接口：** 此接口为系统接口。
@@ -90,6 +96,8 @@ setInputDeviceToAccessory(): void
 将此捕获器的默认输入设备设置为 DEVICE_TYPE_ACCESSORY。其他捕获器的设备不会受到此方法的影响。此方法只能在捕获流开始之前使用。此外，如果音频配件未连接，此方法将报告失败。调用此函数后，该捕获器的输入设备将不再受其他接口的影响。
 
 **起始版本：** 19
+
+<!--Device-AudioCapturer-setInputDeviceToAccessory(): void--><!--Device-AudioCapturer-setInputDeviceToAccessory(): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 

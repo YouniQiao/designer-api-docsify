@@ -16,6 +16,8 @@ function isImsSmsSupported(slotId: number, callback: AsyncCallback<boolean>): vo
 
 **起始版本：** 8
 
+<!--Device-sms-function isImsSmsSupported(slotId: int, callback: AsyncCallback<boolean>): void--><!--Device-sms-function isImsSmsSupported(slotId: int, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -62,6 +64,8 @@ function isImsSmsSupported(slotId: number): Promise<boolean>
 如果IMS已注册并且在IMS上支持SMS，则支持通过IMS发送SMS。使用Promise异步回调。
 
 **起始版本：** 8
+
+<!--Device-sms-function isImsSmsSupported(slotId: int): Promise<boolean>--><!--Device-sms-function isImsSmsSupported(slotId: int): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 

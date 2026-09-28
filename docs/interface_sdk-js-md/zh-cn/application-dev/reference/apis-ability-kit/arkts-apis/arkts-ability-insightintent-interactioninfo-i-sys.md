@@ -8,6 +8,8 @@ interface InteractionInfo
 
 **起始版本：** 26.0.1
 
+<!--Device-insightIntent-interface InteractionInfo--><!--Device-insightIntent-interface InteractionInfo-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -31,6 +33,8 @@ interactionUI?: InteractionUI
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-InteractionInfo-interactionUI?: InteractionUI--><!--Device-InteractionInfo-interactionUI?: InteractionUI-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

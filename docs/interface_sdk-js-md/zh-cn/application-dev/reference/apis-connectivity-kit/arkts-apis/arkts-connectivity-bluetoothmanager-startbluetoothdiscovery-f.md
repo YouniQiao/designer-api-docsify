@@ -26,6 +26,8 @@ function startBluetoothDiscovery(): void
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH
 - API版本9：ohos.permission.DISCOVER_BLUETOOTH and ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
+<!--Device-bluetoothManager-function startBluetoothDiscovery(): void--><!--Device-bluetoothManager-function startBluetoothDiscovery(): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **错误码：**

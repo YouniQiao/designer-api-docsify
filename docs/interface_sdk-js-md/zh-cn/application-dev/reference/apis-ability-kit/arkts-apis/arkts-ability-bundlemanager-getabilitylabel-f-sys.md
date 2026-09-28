@@ -20,6 +20,8 @@ function getAbilityLabel(bundleName: string, moduleName: string, abilityName: st
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
+<!--Device-bundleManager-function getAbilityLabel(bundleName: string, moduleName: string, abilityName: string, callback: AsyncCallback<string>): void--><!--Device-bundleManager-function getAbilityLabel(bundleName: string, moduleName: string, abilityName: string, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Resource
 
 **系统接口：** 此接口为系统接口。
@@ -88,6 +90,8 @@ function getAbilityLabel(bundleName: string, moduleName: string, abilityName: st
 **起始版本：** 9
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
+
+<!--Device-bundleManager-function getAbilityLabel(bundleName: string, moduleName: string, abilityName: string): Promise<string>--><!--Device-bundleManager-function getAbilityLabel(bundleName: string, moduleName: string, abilityName: string): Promise<string>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Resource
 

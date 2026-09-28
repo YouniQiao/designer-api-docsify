@@ -4,11 +4,13 @@
 declare class ScrollBarAttribute extends CommonMethod<ScrollBarAttribute>
 ```
 
-除支持[通用属性](arkts-arkui-common-comp.md#common)外，还支持以下属性：
+除支持[通用属性](arkts-arkui-common-comp.md)外，还支持以下属性：
 
 **继承/实现关系：** ScrollBarAttribute extends CommonMethod<ScrollBarAttribute>
 
 **起始版本：** 8
+
+<!--Device-unnamed-declare class ScrollBarAttribute extends CommonMethod<ScrollBarAttribute>--><!--Device-unnamed-declare class ScrollBarAttribute extends CommonMethod<ScrollBarAttribute>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,6 +36,8 @@ enableNestedScroll(enabled: Optional<boolean>)
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
+<!--Device-ScrollBarAttribute-enableNestedScroll(enabled: Optional<boolean>): ScrollBarAttribute--><!--Device-ScrollBarAttribute-enableNestedScroll(enabled: Optional<boolean>): ScrollBarAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -55,6 +59,8 @@ scrollBarColor(color: Optional<ColorMetrics>)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-ScrollBarAttribute-scrollBarColor(color: Optional<ColorMetrics>): ScrollBarAttribute--><!--Device-ScrollBarAttribute-scrollBarColor(color: Optional<ColorMetrics>): ScrollBarAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

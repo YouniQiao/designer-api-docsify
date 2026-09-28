@@ -16,6 +16,8 @@ function getUserDataDir(): Promise<string>
 
 **起始版本：** 8
 
+<!--Device-Environment-function getUserDataDir(): Promise<string>--><!--Device-Environment-function getUserDataDir(): Promise<string>-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.Environment
 
 **系统接口：** 此接口为系统接口。
@@ -46,6 +48,8 @@ function getUserDataDir(callback: AsyncCallback<string>): void
 异步方法获取公共文件根目录，使用callback异步回调。
 
 **起始版本：** 8
+
+<!--Device-Environment-function getUserDataDir(callback: AsyncCallback<string>): void--><!--Device-Environment-function getUserDataDir(callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.Environment
 

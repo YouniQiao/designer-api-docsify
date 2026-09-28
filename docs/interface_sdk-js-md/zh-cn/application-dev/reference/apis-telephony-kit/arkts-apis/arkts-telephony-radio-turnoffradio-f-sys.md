@@ -18,6 +18,8 @@ Turn off the radio service.
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-radio-function turnOffRadio(slotId: int, callback: AsyncCallback<void>): void--><!--Device-radio-function turnOffRadio(slotId: int, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -70,6 +72,8 @@ Turn off the radio service.
 **起始版本：** 7
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
+
+<!--Device-radio-function turnOffRadio(slotId?: int): Promise<void>--><!--Device-radio-function turnOffRadio(slotId?: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -126,6 +130,8 @@ Turn off the radio service.
 **起始版本：** 7
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
+
+<!--Device-radio-function turnOffRadio(callback: AsyncCallback<void>): void--><!--Device-radio-function turnOffRadio(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

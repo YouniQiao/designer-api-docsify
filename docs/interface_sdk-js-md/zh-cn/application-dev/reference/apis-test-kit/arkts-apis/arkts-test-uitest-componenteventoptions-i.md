@@ -8,6 +8,8 @@ declare interface ComponentEventOptions
 
 **起始版本：** 22
 
+<!--Device-unnamed-declare interface ComponentEventOptions--><!--Device-unnamed-declare interface ComponentEventOptions-End-->
+
 **系统能力：** SystemCapability.Test.UiTest
 
 **测试接口：** 此接口仅在自动化测试脚本中使用。
@@ -33,7 +35,9 @@ on?: On
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-ComponentEventOptions-on?: On--><!--Device-ComponentEventOptions-on?: On-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -51,7 +55,9 @@ timeout?: number
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-ComponentEventOptions-timeout?: int--><!--Device-ComponentEventOptions-timeout?: int-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 

@@ -18,6 +18,8 @@ function getConnectionPropertiesSync(netHandle: NetHandle): ConnectionProperties
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-connection-function getConnectionPropertiesSync(netHandle: NetHandle): ConnectionProperties--><!--Device-connection-function getConnectionPropertiesSync(netHandle: NetHandle): ConnectionProperties-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**

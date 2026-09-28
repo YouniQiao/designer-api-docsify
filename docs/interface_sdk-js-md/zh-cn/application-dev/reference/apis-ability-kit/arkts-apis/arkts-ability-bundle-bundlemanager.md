@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace bundleManager--><!--Device-unnamed-declare namespace bundleManager-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## 导入模块

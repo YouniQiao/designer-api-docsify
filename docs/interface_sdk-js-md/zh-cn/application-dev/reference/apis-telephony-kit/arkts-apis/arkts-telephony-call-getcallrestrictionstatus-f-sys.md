@@ -18,6 +18,8 @@ function getCallRestrictionStatus(slotId: number, type: CallRestrictionType, cal
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-call-function getCallRestrictionStatus(slotId: int, type: CallRestrictionType, callback: AsyncCallback<RestrictionStatus>): void--><!--Device-call-function getCallRestrictionStatus(slotId: int, type: CallRestrictionType, callback: AsyncCallback<RestrictionStatus>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -70,6 +72,8 @@ function getCallRestrictionStatus(slotId: number, type: CallRestrictionType): Pr
 **起始版本：** 8
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
+
+<!--Device-call-function getCallRestrictionStatus(slotId: int, type: CallRestrictionType): Promise<RestrictionStatus>--><!--Device-call-function getCallRestrictionStatus(slotId: int, type: CallRestrictionType): Promise<RestrictionStatus>-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 

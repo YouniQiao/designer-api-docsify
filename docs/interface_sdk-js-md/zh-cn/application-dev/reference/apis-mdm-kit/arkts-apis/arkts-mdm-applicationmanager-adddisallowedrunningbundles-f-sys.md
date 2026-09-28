@@ -24,6 +24,8 @@ function addDisallowedRunningBundles(admin: Want, appIds: Array<string>, callbac
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-applicationManager-function addDisallowedRunningBundles(admin: Want, appIds: Array<string>, callback: AsyncCallback<void>): void--><!--Device-applicationManager-function addDisallowedRunningBundles(admin: Want, appIds: Array<string>, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -90,6 +92,8 @@ function addDisallowedRunningBundles(admin: Want, appIds: Array<string>, userId:
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_SET_APP_RUNNING_POLICY
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-applicationManager-function addDisallowedRunningBundles(admin: Want, appIds: Array<string>, userId: number, callback: AsyncCallback<void>): void--><!--Device-applicationManager-function addDisallowedRunningBundles(admin: Want, appIds: Array<string>, userId: number, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -158,6 +162,8 @@ function addDisallowedRunningBundles(admin: Want, appIds: Array<string>, userId?
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_SET_APP_RUNNING_POLICY
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-applicationManager-function addDisallowedRunningBundles(admin: Want, appIds: Array<string>, userId?: number): Promise<void>--><!--Device-applicationManager-function addDisallowedRunningBundles(admin: Want, appIds: Array<string>, userId?: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

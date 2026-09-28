@@ -14,6 +14,8 @@ export interface GetLocationOption
 
 **需要权限：** ohos.permission.LOCATION
 
+<!--Device-unnamed-export interface GetLocationOption--><!--Device-unnamed-export interface GetLocationOption-End-->
+
 **系统能力：** SystemCapability.Location.Location.Lite
 
 ## 导入模块
@@ -38,6 +40,8 @@ complete?: () => void
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-GetLocationOption-complete?: () => void--><!--Device-GetLocationOption-complete?: () => void-End-->
+
 **系统能力：** SystemCapability.Location.Location.Lite
 
 ## fail
@@ -55,6 +59,8 @@ fail?: (data: string, code: number) => void
 **替代接口：** callback
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-GetLocationOption-fail?: (data: string, code: number) => void--><!--Device-GetLocationOption-fail?: (data: string, code: number) => void-End-->
 
 **系统能力：** SystemCapability.Location.Location.Lite
 
@@ -81,6 +87,8 @@ success?: (data: GeolocationResponse) => void
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-GetLocationOption-success?: (data: GeolocationResponse) => void--><!--Device-GetLocationOption-success?: (data: GeolocationResponse) => void-End-->
+
 **系统能力：** SystemCapability.Location.Location.Lite
 
 **参数：**
@@ -105,6 +113,8 @@ coordType?: string
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-GetLocationOption-coordType?: string--><!--Device-GetLocationOption-coordType?: string-End-->
+
 **系统能力：** SystemCapability.Location.Location.Lite
 
 ## timeout
@@ -124,5 +134,7 @@ timeout?: number
 **替代接口：** [timeoutMs](arkts-location-geolocationmanager-currentlocationrequest-i.md#timeoutms)
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-GetLocationOption-timeout?: number--><!--Device-GetLocationOption-timeout?: number-End-->
 
 **系统能力：** SystemCapability.Location.Location.Lite

@@ -11,6 +11,8 @@ interface InputMethodController
 
 **起始版本：** 6
 
+<!--Device-inputMethod-interface InputMethodController--><!--Device-inputMethod-interface InputMethodController-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## 导入模块
@@ -36,6 +38,8 @@ attach(showKeyboard: boolean, textConfig: TextConfig, callback: AsyncCallback<vo
 > [不可获焦窗口中输入框与输入法交互指南](../../../inputmethod/use-inputmethod-in-not-focusable-window.md)。
 
 **起始版本：** 10
+
+<!--Device-InputMethodController-attach(showKeyboard: boolean, textConfig: TextConfig, callback: AsyncCallback<void>): void--><!--Device-InputMethodController-attach(showKeyboard: boolean, textConfig: TextConfig, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -93,6 +97,8 @@ attach(showKeyboard: boolean, textConfig: TextConfig): Promise<void>
 > [不可获焦窗口中输入框与输入法交互指南](../../../inputmethod/use-inputmethod-in-not-focusable-window.md)。
 
 **起始版本：** 10
+
+<!--Device-InputMethodController-attach(showKeyboard: boolean, textConfig: TextConfig): Promise<void>--><!--Device-InputMethodController-attach(showKeyboard: boolean, textConfig: TextConfig): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -154,6 +160,8 @@ attach(showKeyboard: boolean, textConfig: TextConfig, requestKeyboardReason: Req
 
 **起始版本：** 15
 
+<!--Device-InputMethodController-attach(showKeyboard: boolean, textConfig: TextConfig, requestKeyboardReason: RequestKeyboardReason): Promise<void>--><!--Device-InputMethodController-attach(showKeyboard: boolean, textConfig: TextConfig, requestKeyboardReason: RequestKeyboardReason): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -212,6 +220,8 @@ attachWithUIContext(uiContext: UIContext, textConfig: TextConfig, attachOptions?
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-InputMethodController-attachWithUIContext(uiContext: UIContext, textConfig: TextConfig, attachOptions?: AttachOptions): Promise<void>--><!--Device-InputMethodController-attachWithUIContext(uiContext: UIContext, textConfig: TextConfig, attachOptions?: AttachOptions): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -268,6 +278,8 @@ changeSelection(text: string, start: number, end: number, callback: AsyncCallbac
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-changeSelection(text: string, start: int, end: int, callback: AsyncCallback<void>): void--><!--Device-InputMethodController-changeSelection(text: string, start: int, end: int, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -317,6 +329,8 @@ changeSelection(text: string, start: number, end: number): Promise<void>
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-changeSelection(text: string, start: int, end: int): Promise<void>--><!--Device-InputMethodController-changeSelection(text: string, start: int, end: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -364,6 +378,8 @@ detach(callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-detach(callback: AsyncCallback<void>): void--><!--Device-InputMethodController-detach(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -405,6 +421,8 @@ detach(): Promise<void>
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-detach(): Promise<void>--><!--Device-InputMethodController-detach(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**
@@ -444,6 +462,8 @@ discardTypingText(): Promise<void>
 > 当编辑框应用与输入法绑定成功后，才可调用该接口实现此功能。
 
 **起始版本：** 20
+
+<!--Device-InputMethodController-discardTypingText(): Promise<void>--><!--Device-InputMethodController-discardTypingText(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -487,6 +507,8 @@ hideSoftKeyboard(callback: AsyncCallback<void>): void
 **起始版本：** 9
 
 **需要权限：** ohos.permission.CONNECT_IME_ABILITY
+
+<!--Device-InputMethodController-hideSoftKeyboard(callback: AsyncCallback<void>): void--><!--Device-InputMethodController-hideSoftKeyboard(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -535,6 +557,8 @@ hideSoftKeyboard(): Promise<void>
 
 **需要权限：** ohos.permission.CONNECT_IME_ABILITY
 
+<!--Device-InputMethodController-hideSoftKeyboard(): Promise<void>--><!--Device-InputMethodController-hideSoftKeyboard(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**
@@ -579,6 +603,8 @@ hideTextInput(callback: AsyncCallback<void>): void
 > 辑状态。
 
 **起始版本：** 10
+
+<!--Device-InputMethodController-hideTextInput(callback: AsyncCallback<void>): void--><!--Device-InputMethodController-hideTextInput(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -629,6 +655,8 @@ hideTextInput(): Promise<void>
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-hideTextInput(): Promise<void>--><!--Device-InputMethodController-hideTextInput(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**
@@ -667,6 +695,8 @@ off(type: 'selectByRange', callback?: Callback<Range>): void
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-off(type: 'selectByRange', callback?: Callback<Range>): void--><!--Device-InputMethodController-off(type: 'selectByRange', callback?: Callback<Range>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -699,6 +729,8 @@ off(type: 'selectByMovement', callback?: Callback<Movement>): void
 取消订阅输入法应用按光标移动方向，选中文本事件。使用callback异步回调。
 
 **起始版本：** 10
+
+<!--Device-InputMethodController-off(type: 'selectByMovement', callback?: Callback<Movement>): void--><!--Device-InputMethodController-off(type: 'selectByMovement', callback?: Callback<Movement>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -733,6 +765,8 @@ off(type: 'insertText', callback?: (text: string) => void): void
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-off(type: 'insertText', callback?: (text: string) => void): void--><!--Device-InputMethodController-off(type: 'insertText', callback?: (text: string) => void): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -765,6 +799,8 @@ off(type: 'deleteLeft', callback?: (length: number) => void): void
 取消订阅输入法应用向左删除文本事件。
 
 **起始版本：** 10
+
+<!--Device-InputMethodController-off(type: 'deleteLeft', callback?: (length: number) => void): void--><!--Device-InputMethodController-off(type: 'deleteLeft', callback?: (length: number) => void): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -799,6 +835,8 @@ off(type: 'deleteRight', callback?: (length: number) => void): void
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-off(type: 'deleteRight', callback?: (length: number) => void): void--><!--Device-InputMethodController-off(type: 'deleteRight', callback?: (length: number) => void): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -830,6 +868,8 @@ off(type: 'sendKeyboardStatus', callback?: (keyboardStatus: KeyboardStatus) => v
 取消订阅输入法应用发送输入法软键盘状态事件。
 
 **起始版本：** 10
+
+<!--Device-InputMethodController-off(type: 'sendKeyboardStatus', callback?: (keyboardStatus: KeyboardStatus) => void): void--><!--Device-InputMethodController-off(type: 'sendKeyboardStatus', callback?: (keyboardStatus: KeyboardStatus) => void): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -864,6 +904,8 @@ off(type: 'sendFunctionKey', callback?: (functionKey: FunctionKey) => void): voi
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-off(type: 'sendFunctionKey', callback?: (functionKey: FunctionKey) => void): void--><!--Device-InputMethodController-off(type: 'sendFunctionKey', callback?: (functionKey: FunctionKey) => void): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -896,6 +938,8 @@ off(type: 'moveCursor', callback?: (direction: Direction) => void): void
 取消订阅输入法应用移动光标事件。
 
 **起始版本：** 10
+
+<!--Device-InputMethodController-off(type: 'moveCursor', callback?: (direction: Direction) => void): void--><!--Device-InputMethodController-off(type: 'moveCursor', callback?: (direction: Direction) => void): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -930,6 +974,8 @@ off(type: 'handleExtendAction', callback?: (action: ExtendAction) => void): void
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-off(type: 'handleExtendAction', callback?: (action: ExtendAction) => void): void--><!--Device-InputMethodController-off(type: 'handleExtendAction', callback?: (action: ExtendAction) => void): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -962,6 +1008,8 @@ off(type: 'getLeftTextOfCursor', callback?: (length: number) => string): void
 取消订阅输入法应用获取光标左侧指定长度文本事件。使用callback异步回调。
 
 **起始版本：** 10
+
+<!--Device-InputMethodController-off(type: 'getLeftTextOfCursor', callback?: (length: number) => string): void--><!--Device-InputMethodController-off(type: 'getLeftTextOfCursor', callback?: (length: number) => string): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -996,6 +1044,8 @@ off(type: 'getRightTextOfCursor', callback?: (length: number) => string): void
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-off(type: 'getRightTextOfCursor', callback?: (length: number) => string): void--><!--Device-InputMethodController-off(type: 'getRightTextOfCursor', callback?: (length: number) => string): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1029,6 +1079,8 @@ off(type: 'getTextIndexAtCursor', callback?: () => number): void
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-off(type: 'getTextIndexAtCursor', callback?: () => number): void--><!--Device-InputMethodController-off(type: 'getTextIndexAtCursor', callback?: () => number): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1061,6 +1113,8 @@ off(type: 'setPreviewText', callback?: SetPreviewTextCallback): void
 取消订阅输入法应用操作文本预览内容的事件。使用callback异步回调。
 
 **起始版本：** 17
+
+<!--Device-InputMethodController-off(type: 'setPreviewText', callback?: SetPreviewTextCallback): void--><!--Device-InputMethodController-off(type: 'setPreviewText', callback?: SetPreviewTextCallback): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1104,6 +1158,8 @@ off(type: 'finishTextPreview', callback?: Callback<void>): void
 取消订阅结束文本预览事件。使用callback异步回调。
 
 **起始版本：** 17
+
+<!--Device-InputMethodController-off(type: 'finishTextPreview', callback?: Callback<void>): void--><!--Device-InputMethodController-off(type: 'finishTextPreview', callback?: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1149,6 +1205,8 @@ on(type: 'selectByRange', callback: Callback<Range>): void
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-on(type: 'selectByRange', callback: Callback<Range>): void--><!--Device-InputMethodController-on(type: 'selectByRange', callback: Callback<Range>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1182,6 +1240,8 @@ on(type: 'selectByMovement', callback: Callback<Movement>): void
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-on(type: 'selectByMovement', callback: Callback<Movement>): void--><!--Device-InputMethodController-on(type: 'selectByMovement', callback: Callback<Movement>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1214,6 +1274,8 @@ on(type: 'insertText', callback: (text: string) => void): void
 订阅输入法应用插入文本事件。使用callback异步回调。
 
 **起始版本：** 10
+
+<!--Device-InputMethodController-on(type: 'insertText', callback: (text: string) => void): void--><!--Device-InputMethodController-on(type: 'insertText', callback: (text: string) => void): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1262,6 +1324,8 @@ on(type: 'deleteLeft', callback: (length: number) => void): void
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-on(type: 'deleteLeft', callback: (length: number) => void): void--><!--Device-InputMethodController-on(type: 'deleteLeft', callback: (length: number) => void): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1295,6 +1359,8 @@ on(type: 'deleteRight', callback: (length: number) => void): void
 订阅输入法应用向右删除文本事件。使用callback异步回调。
 
 **起始版本：** 10
+
+<!--Device-InputMethodController-on(type: 'deleteRight', callback: (length: number) => void): void--><!--Device-InputMethodController-on(type: 'deleteRight', callback: (length: number) => void): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1330,6 +1396,8 @@ on(type: 'sendKeyboardStatus', callback: (keyboardStatus: KeyboardStatus) => voi
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-on(type: 'sendKeyboardStatus', callback: (keyboardStatus: KeyboardStatus) => void): void--><!--Device-InputMethodController-on(type: 'sendKeyboardStatus', callback: (keyboardStatus: KeyboardStatus) => void): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1363,6 +1431,8 @@ on(type: 'sendFunctionKey', callback: (functionKey: FunctionKey) => void): void
 订阅输入法应用发送功能键事件。使用callback异步回调。
 
 **起始版本：** 10
+
+<!--Device-InputMethodController-on(type: 'sendFunctionKey', callback: (functionKey: FunctionKey) => void): void--><!--Device-InputMethodController-on(type: 'sendFunctionKey', callback: (functionKey: FunctionKey) => void): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1398,6 +1468,8 @@ on(type: 'moveCursor', callback: (direction: Direction) => void): void
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-on(type: 'moveCursor', callback: (direction: Direction) => void): void--><!--Device-InputMethodController-on(type: 'moveCursor', callback: (direction: Direction) => void): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1432,6 +1504,8 @@ on(type: 'handleExtendAction', callback: (action: ExtendAction) => void): void
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-on(type: 'handleExtendAction', callback: (action: ExtendAction) => void): void--><!--Device-InputMethodController-on(type: 'handleExtendAction', callback: (action: ExtendAction) => void): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1465,6 +1539,8 @@ on(type: 'getLeftTextOfCursor', callback: (length: number) => string): void
 订阅输入法应用获取光标左侧指定长度文本事件。使用callback异步回调。
 
 **起始版本：** 10
+
+<!--Device-InputMethodController-on(type: 'getLeftTextOfCursor', callback: (length: number) => string): void--><!--Device-InputMethodController-on(type: 'getLeftTextOfCursor', callback: (length: number) => string): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1502,6 +1578,8 @@ on(type: 'getRightTextOfCursor', callback: (length: number) => string): void
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-on(type: 'getRightTextOfCursor', callback: (length: number) => string): void--><!--Device-InputMethodController-on(type: 'getRightTextOfCursor', callback: (length: number) => string): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1537,6 +1615,8 @@ on(type: 'getTextIndexAtCursor', callback: () => number): void
 订阅输入法应用获取光标处文本索引事件。使用callback异步回调。
 
 **起始版本：** 10
+
+<!--Device-InputMethodController-on(type: 'getTextIndexAtCursor', callback: () => number): void--><!--Device-InputMethodController-on(type: 'getTextIndexAtCursor', callback: () => number): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1580,6 +1660,8 @@ on(type: 'setPreviewText', callback: SetPreviewTextCallback): void
 > 一起订阅。
 
 **起始版本：** 17
+
+<!--Device-InputMethodController-on(type: 'setPreviewText', callback: SetPreviewTextCallback): void--><!--Device-InputMethodController-on(type: 'setPreviewText', callback: SetPreviewTextCallback): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1636,6 +1718,8 @@ on(type: 'finishTextPreview', callback: Callback<void>): void
 > 一起订阅。
 
 **起始版本：** 17
+
+<!--Device-InputMethodController-on(type: 'finishTextPreview', callback: Callback<void>): void--><!--Device-InputMethodController-on(type: 'finishTextPreview', callback: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1694,6 +1778,8 @@ recvMessage(msgHandler?: MessageHandler): void
 
 **起始版本：** 15
 
+<!--Device-InputMethodController-recvMessage(msgHandler?: MessageHandler): void--><!--Device-InputMethodController-recvMessage(msgHandler?: MessageHandler): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1741,6 +1827,8 @@ sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>
 > msgId最大限制256B，msgParam最大限制128KB。
 
 **起始版本：** 15
+
+<!--Device-InputMethodController-sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>--><!--Device-InputMethodController-sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1797,6 +1885,8 @@ setCallingWindow(windowId: number, callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-setCallingWindow(windowId: int, callback: AsyncCallback<void>): void--><!--Device-InputMethodController-setCallingWindow(windowId: int, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1844,6 +1934,8 @@ setCallingWindow(windowId: number): Promise<void>
 > 将绑定到输入法的应用程序所在的窗口Id传入，此窗口可以避让输入法窗口。
 
 **起始版本：** 10
+
+<!--Device-InputMethodController-setCallingWindow(windowId: int): Promise<void>--><!--Device-InputMethodController-setCallingWindow(windowId: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1896,6 +1988,8 @@ showSoftKeyboard(callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.CONNECT_IME_ABILITY
 
+<!--Device-InputMethodController-showSoftKeyboard(callback: AsyncCallback<void>): void--><!--Device-InputMethodController-showSoftKeyboard(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1943,6 +2037,8 @@ showSoftKeyboard(): Promise<void>
 
 **需要权限：** ohos.permission.CONNECT_IME_ABILITY
 
+<!--Device-InputMethodController-showSoftKeyboard(): Promise<void>--><!--Device-InputMethodController-showSoftKeyboard(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**
@@ -1983,6 +2079,8 @@ showTextInput(callback: AsyncCallback<void>): void
 > 编辑框与输入法绑定成功后，可调用该接口拉起软键盘，进入文本编辑状态。
 
 **起始版本：** 10
+
+<!--Device-InputMethodController-showTextInput(callback: AsyncCallback<void>): void--><!--Device-InputMethodController-showTextInput(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -2029,6 +2127,8 @@ showTextInput(): Promise<void>
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-showTextInput(): Promise<void>--><!--Device-InputMethodController-showTextInput(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**
@@ -2071,6 +2171,8 @@ showTextInput(requestKeyboardReason: RequestKeyboardReason): Promise<void>
 > 编辑框与输入法绑定成功后，可调用该接口拉起软键盘，进入文本编辑状态。
 
 **起始版本：** 15
+
+<!--Device-InputMethodController-showTextInput(requestKeyboardReason: RequestKeyboardReason): Promise<void>--><!--Device-InputMethodController-showTextInput(requestKeyboardReason: RequestKeyboardReason): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -2121,6 +2223,8 @@ stopInputSession(callback: AsyncCallback<boolean>): void
 
 **起始版本：** 9
 
+<!--Device-InputMethodController-stopInputSession(callback: AsyncCallback<boolean>): void--><!--Device-InputMethodController-stopInputSession(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -2169,6 +2273,8 @@ stopInputSession(): Promise<boolean>
 
 **起始版本：** 9
 
+<!--Device-InputMethodController-stopInputSession(): Promise<boolean>--><!--Device-InputMethodController-stopInputSession(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**
@@ -2209,6 +2315,8 @@ updateAttribute(attribute: InputAttribute, callback: AsyncCallback<void>): void
 更新编辑框属性信息。使用callback异步回调。
 
 **起始版本：** 10
+
+<!--Device-InputMethodController-updateAttribute(attribute: InputAttribute, callback: AsyncCallback<void>): void--><!--Device-InputMethodController-updateAttribute(attribute: InputAttribute, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -2258,6 +2366,8 @@ updateAttribute(attribute: InputAttribute): Promise<void>
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-updateAttribute(attribute: InputAttribute): Promise<void>--><!--Device-InputMethodController-updateAttribute(attribute: InputAttribute): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -2306,6 +2416,8 @@ updateCursor(cursorInfo: CursorInfo, callback: AsyncCallback<void>): void
 > 编辑框与输入法绑定成功后，才可调用该接口更新光标信息。
 
 **起始版本：** 10
+
+<!--Device-InputMethodController-updateCursor(cursorInfo: CursorInfo, callback: AsyncCallback<void>): void--><!--Device-InputMethodController-updateCursor(cursorInfo: CursorInfo, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -2359,6 +2471,8 @@ updateCursor(cursorInfo: CursorInfo): Promise<void>
 > 编辑框与输入法绑定成功后，才可调用该接口更新光标信息。
 
 **起始版本：** 10
+
+<!--Device-InputMethodController-updateCursor(cursorInfo: CursorInfo): Promise<void>--><!--Device-InputMethodController-updateCursor(cursorInfo: CursorInfo): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -2418,6 +2532,8 @@ stopInput(callback: AsyncCallback<boolean>): void
 
 **替代接口：** [stopInputSession](#stopinputsession)
 
+<!--Device-InputMethodController-stopInput(callback: AsyncCallback<boolean>): void--><!--Device-InputMethodController-stopInput(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -2462,6 +2578,8 @@ stopInput(): Promise<boolean>
 **废弃版本：** 9
 
 **替代接口：** [stopInputSession](#stopinputsession)
+
+<!--Device-InputMethodController-stopInput(): Promise<boolean>--><!--Device-InputMethodController-stopInput(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 

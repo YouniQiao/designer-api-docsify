@@ -11,6 +11,8 @@ enum PropertyKey
 
 **起始版本：** 7
 
+<!--Device-image-enum PropertyKey--><!--Device-image-enum PropertyKey-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## BITS_PER_SAMPLE
@@ -24,6 +26,8 @@ BITS_PER_SAMPLE = 'BitsPerSample'
 **读写能力：** 可读写。
 
 **起始版本：** 7
+
+<!--Device-PropertyKey-BITS_PER_SAMPLE = 'BitsPerSample'--><!--Device-PropertyKey-BITS_PER_SAMPLE = 'BitsPerSample'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -59,6 +63,8 @@ ORIENTATION = 'Orientation'
 
 **起始版本：** 7
 
+<!--Device-PropertyKey-ORIENTATION = 'Orientation'--><!--Device-PropertyKey-ORIENTATION = 'Orientation'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## IMAGE_LENGTH
@@ -72,6 +78,8 @@ IMAGE_LENGTH = 'ImageLength'
 **读写能力：** 可读写。
 
 **起始版本：** 7
+
+<!--Device-PropertyKey-IMAGE_LENGTH = 'ImageLength'--><!--Device-PropertyKey-IMAGE_LENGTH = 'ImageLength'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -87,6 +95,8 @@ IMAGE_WIDTH = 'ImageWidth'
 
 **起始版本：** 7
 
+<!--Device-PropertyKey-IMAGE_WIDTH = 'ImageWidth'--><!--Device-PropertyKey-IMAGE_WIDTH = 'ImageWidth'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## GPS_LATITUDE
@@ -101,6 +111,8 @@ GPS_LATITUDE = 'GPSLatitude'
 
 **起始版本：** 7
 
+<!--Device-PropertyKey-GPS_LATITUDE = 'GPSLatitude'--><!--Device-PropertyKey-GPS_LATITUDE = 'GPSLatitude'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## GPS_LONGITUDE
@@ -114,6 +126,8 @@ GPS_LONGITUDE = 'GPSLongitude'
 **读写能力：** 可读写。
 
 **起始版本：** 7
+
+<!--Device-PropertyKey-GPS_LONGITUDE = 'GPSLongitude'--><!--Device-PropertyKey-GPS_LONGITUDE = 'GPSLongitude'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -133,6 +147,8 @@ GPS_LATITUDE_REF = 'GPSLatitudeRef'
 
 **起始版本：** 7
 
+<!--Device-PropertyKey-GPS_LATITUDE_REF = 'GPSLatitudeRef'--><!--Device-PropertyKey-GPS_LATITUDE_REF = 'GPSLatitudeRef'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## GPS_LONGITUDE_REF
@@ -151,6 +167,8 @@ GPS_LONGITUDE_REF = 'GPSLongitudeRef'
 
 **起始版本：** 7
 
+<!--Device-PropertyKey-GPS_LONGITUDE_REF = 'GPSLongitudeRef'--><!--Device-PropertyKey-GPS_LONGITUDE_REF = 'GPSLongitudeRef'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## DATE_TIME_ORIGINAL
@@ -165,6 +183,8 @@ DATE_TIME_ORIGINAL = 'DateTimeOriginal'
 
 **起始版本：** 9
 
+<!--Device-PropertyKey-DATE_TIME_ORIGINAL = 'DateTimeOriginal'--><!--Device-PropertyKey-DATE_TIME_ORIGINAL = 'DateTimeOriginal'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## EXPOSURE_TIME
@@ -178,6 +198,8 @@ EXPOSURE_TIME = 'ExposureTime'
 **读写能力：** 可读写。
 
 **起始版本：** 9
+
+<!--Device-PropertyKey-EXPOSURE_TIME = 'ExposureTime'--><!--Device-PropertyKey-EXPOSURE_TIME = 'ExposureTime'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -195,6 +217,8 @@ SCENE_TYPE = 'SceneType'
 
 **起始版本：** 9
 
+<!--Device-PropertyKey-SCENE_TYPE = 'SceneType'--><!--Device-PropertyKey-SCENE_TYPE = 'SceneType'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## ISO_SPEED_RATINGS
@@ -208,6 +232,8 @@ ISO感光度，例如400。
 **读写能力：** 可读写。
 
 **起始版本：** 9
+
+<!--Device-PropertyKey-ISO_SPEED_RATINGS = 'ISOSpeedRatings'--><!--Device-PropertyKey-ISO_SPEED_RATINGS = 'ISOSpeedRatings'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -223,6 +249,8 @@ F_NUMBER = 'FNumber'
 
 **起始版本：** 9
 
+<!--Device-PropertyKey-F_NUMBER = 'FNumber'--><!--Device-PropertyKey-F_NUMBER = 'FNumber'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## DATE_TIME
@@ -236,6 +264,8 @@ DATE_TIME = 'DateTime'
 **读写能力：** 可读写。
 
 **起始版本：** 10
+
+<!--Device-PropertyKey-DATE_TIME = 'DateTime'--><!--Device-PropertyKey-DATE_TIME = 'DateTime'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -251,6 +281,8 @@ GPS时间戳。
 
 **起始版本：** 10
 
+<!--Device-PropertyKey-GPS_TIME_STAMP = 'GPSTimeStamp'--><!--Device-PropertyKey-GPS_TIME_STAMP = 'GPSTimeStamp'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## GPS_DATE_STAMP
@@ -264,6 +296,8 @@ GPS日期戳。
 **读写能力：** 可读写。
 
 **起始版本：** 10
+
+<!--Device-PropertyKey-GPS_DATE_STAMP = 'GPSDateStamp'--><!--Device-PropertyKey-GPS_DATE_STAMP = 'GPSDateStamp'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -279,6 +313,8 @@ IMAGE_DESCRIPTION = 'ImageDescription'
 
 **起始版本：** 10
 
+<!--Device-PropertyKey-IMAGE_DESCRIPTION = 'ImageDescription'--><!--Device-PropertyKey-IMAGE_DESCRIPTION = 'ImageDescription'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## MAKE
@@ -292,6 +328,8 @@ MAKE = 'Make'
 **读写能力：** 可读写。
 
 **起始版本：** 10
+
+<!--Device-PropertyKey-MAKE = 'Make'--><!--Device-PropertyKey-MAKE = 'Make'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -307,6 +345,8 @@ MODEL = 'Model'
 
 **起始版本：** 10
 
+<!--Device-PropertyKey-MODEL = 'Model'--><!--Device-PropertyKey-MODEL = 'Model'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## PHOTO_MODE
@@ -320,6 +360,8 @@ PHOTO_MODE = 'PhotoMode'
 **读写能力：** 可读写。
 
 **起始版本：** 10
+
+<!--Device-PropertyKey-PHOTO_MODE = 'PhotoMode'--><!--Device-PropertyKey-PHOTO_MODE = 'PhotoMode'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -335,6 +377,8 @@ SENSITIVITY_TYPE = 'SensitivityType'
 
 **起始版本：** 10
 
+<!--Device-PropertyKey-SENSITIVITY_TYPE = 'SensitivityType'--><!--Device-PropertyKey-SENSITIVITY_TYPE = 'SensitivityType'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## STANDARD_OUTPUT_SENSITIVITY
@@ -348,6 +392,8 @@ STANDARD_OUTPUT_SENSITIVITY = 'StandardOutputSensitivity'
 **读写能力：** 可读写。
 
 **起始版本：** 10
+
+<!--Device-PropertyKey-STANDARD_OUTPUT_SENSITIVITY = 'StandardOutputSensitivity'--><!--Device-PropertyKey-STANDARD_OUTPUT_SENSITIVITY = 'StandardOutputSensitivity'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -363,6 +409,8 @@ RECOMMENDED_EXPOSURE_INDEX = 'RecommendedExposureIndex'
 
 **起始版本：** 10
 
+<!--Device-PropertyKey-RECOMMENDED_EXPOSURE_INDEX = 'RecommendedExposureIndex'--><!--Device-PropertyKey-RECOMMENDED_EXPOSURE_INDEX = 'RecommendedExposureIndex'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## ISO_SPEED
@@ -376,6 +424,8 @@ ISO速度等级。
 **读写能力：** 可读写。
 
 **起始版本：** 10
+
+<!--Device-PropertyKey-ISO_SPEED = 'ISOSpeedRatings'--><!--Device-PropertyKey-ISO_SPEED = 'ISOSpeedRatings'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -391,6 +441,8 @@ APERTURE_VALUE = 'ApertureValue'
 
 **起始版本：** 10
 
+<!--Device-PropertyKey-APERTURE_VALUE = 'ApertureValue'--><!--Device-PropertyKey-APERTURE_VALUE = 'ApertureValue'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## EXPOSURE_BIAS_VALUE
@@ -404,6 +456,8 @@ EXPOSURE_BIAS_VALUE = 'ExposureBiasValue'
 **读写能力：** 可读写。
 
 **起始版本：** 10
+
+<!--Device-PropertyKey-EXPOSURE_BIAS_VALUE = 'ExposureBiasValue'--><!--Device-PropertyKey-EXPOSURE_BIAS_VALUE = 'ExposureBiasValue'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -419,6 +473,8 @@ METERING_MODE = 'MeteringMode'
 
 **起始版本：** 10
 
+<!--Device-PropertyKey-METERING_MODE = 'MeteringMode'--><!--Device-PropertyKey-METERING_MODE = 'MeteringMode'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## LIGHT_SOURCE
@@ -432,6 +488,8 @@ LIGHT_SOURCE = 'LightSource'
 **读写能力：** 可读写。
 
 **起始版本：** 10
+
+<!--Device-PropertyKey-LIGHT_SOURCE = 'LightSource'--><!--Device-PropertyKey-LIGHT_SOURCE = 'LightSource'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -447,6 +505,8 @@ FLASH = 'Flash'
 
 **起始版本：** 10
 
+<!--Device-PropertyKey-FLASH = 'Flash'--><!--Device-PropertyKey-FLASH = 'Flash'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## FOCAL_LENGTH
@@ -460,6 +520,8 @@ FOCAL_LENGTH = 'FocalLength'
 **读写能力：** 可读写。
 
 **起始版本：** 10
+
+<!--Device-PropertyKey-FOCAL_LENGTH = 'FocalLength'--><!--Device-PropertyKey-FOCAL_LENGTH = 'FocalLength'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -475,6 +537,8 @@ USER_COMMENT = 'UserComment'
 
 **起始版本：** 10
 
+<!--Device-PropertyKey-USER_COMMENT = 'UserComment'--><!--Device-PropertyKey-USER_COMMENT = 'UserComment'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## PIXEL_X_DIMENSION
@@ -489,6 +553,8 @@ PIXEL_X_DIMENSION = 'PixelXDimension'
 
 **起始版本：** 10
 
+<!--Device-PropertyKey-PIXEL_X_DIMENSION = 'PixelXDimension'--><!--Device-PropertyKey-PIXEL_X_DIMENSION = 'PixelXDimension'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## PIXEL_Y_DIMENSION
@@ -502,6 +568,8 @@ PIXEL_Y_DIMENSION = 'PixelYDimension'
 **读写能力：** 可读写。
 
 **起始版本：** 10
+
+<!--Device-PropertyKey-PIXEL_Y_DIMENSION = 'PixelYDimension'--><!--Device-PropertyKey-PIXEL_Y_DIMENSION = 'PixelYDimension'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -521,6 +589,8 @@ WHITE_BALANCE = 'WhiteBalance'
 
 **起始版本：** 10
 
+<!--Device-PropertyKey-WHITE_BALANCE = 'WhiteBalance'--><!--Device-PropertyKey-WHITE_BALANCE = 'WhiteBalance'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## FOCAL_LENGTH_IN_35_MM_FILM
@@ -534,6 +604,8 @@ FOCAL_LENGTH_IN_35_MM_FILM = 'FocalLengthIn35mmFilm'
 **读写能力：** 可读写。
 
 **起始版本：** 10
+
+<!--Device-PropertyKey-FOCAL_LENGTH_IN_35_MM_FILM = 'FocalLengthIn35mmFilm'--><!--Device-PropertyKey-FOCAL_LENGTH_IN_35_MM_FILM = 'FocalLengthIn35mmFilm'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -549,6 +621,8 @@ CAPTURE_MODE = 'HwMnoteCaptureMode'
 
 **起始版本：** 10
 
+<!--Device-PropertyKey-CAPTURE_MODE = 'HwMnoteCaptureMode'--><!--Device-PropertyKey-CAPTURE_MODE = 'HwMnoteCaptureMode'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## PHYSICAL_APERTURE
@@ -562,6 +636,8 @@ PHYSICAL_APERTURE = 'HwMnotePhysicalAperture'
 **读写能力：** 只读。
 
 **起始版本：** 10
+
+<!--Device-PropertyKey-PHYSICAL_APERTURE = 'HwMnotePhysicalAperture'--><!--Device-PropertyKey-PHYSICAL_APERTURE = 'HwMnotePhysicalAperture'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -577,6 +653,8 @@ ROLL_ANGLE = 'HwMnoteRollAngle'
 
 **起始版本：** 11
 
+<!--Device-PropertyKey-ROLL_ANGLE = 'HwMnoteRollAngle'--><!--Device-PropertyKey-ROLL_ANGLE = 'HwMnoteRollAngle'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## PITCH_ANGLE
@@ -590,6 +668,8 @@ PITCH_ANGLE = 'HwMnotePitchAngle'
 **读写能力：** 只读。
 
 **起始版本：** 11
+
+<!--Device-PropertyKey-PITCH_ANGLE = 'HwMnotePitchAngle'--><!--Device-PropertyKey-PITCH_ANGLE = 'HwMnotePitchAngle'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -605,6 +685,8 @@ SCENE_FOOD_CONF = 'HwMnoteSceneFoodConf'
 
 **起始版本：** 11
 
+<!--Device-PropertyKey-SCENE_FOOD_CONF = 'HwMnoteSceneFoodConf'--><!--Device-PropertyKey-SCENE_FOOD_CONF = 'HwMnoteSceneFoodConf'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## SCENE_STAGE_CONF
@@ -618,6 +700,8 @@ SCENE_STAGE_CONF = 'HwMnoteSceneStageConf'
 **读写能力：** 只读。
 
 **起始版本：** 11
+
+<!--Device-PropertyKey-SCENE_STAGE_CONF = 'HwMnoteSceneStageConf'--><!--Device-PropertyKey-SCENE_STAGE_CONF = 'HwMnoteSceneStageConf'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -633,6 +717,8 @@ SCENE_BLUE_SKY_CONF = 'HwMnoteSceneBlueSkyConf'
 
 **起始版本：** 11
 
+<!--Device-PropertyKey-SCENE_BLUE_SKY_CONF = 'HwMnoteSceneBlueSkyConf'--><!--Device-PropertyKey-SCENE_BLUE_SKY_CONF = 'HwMnoteSceneBlueSkyConf'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## SCENE_GREEN_PLANT_CONF
@@ -646,6 +732,8 @@ SCENE_GREEN_PLANT_CONF = 'HwMnoteSceneGreenPlantConf'
 **读写能力：** 只读。
 
 **起始版本：** 11
+
+<!--Device-PropertyKey-SCENE_GREEN_PLANT_CONF = 'HwMnoteSceneGreenPlantConf'--><!--Device-PropertyKey-SCENE_GREEN_PLANT_CONF = 'HwMnoteSceneGreenPlantConf'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -661,6 +749,8 @@ SCENE_BEACH_CONF = 'HwMnoteSceneBeachConf'
 
 **起始版本：** 11
 
+<!--Device-PropertyKey-SCENE_BEACH_CONF = 'HwMnoteSceneBeachConf'--><!--Device-PropertyKey-SCENE_BEACH_CONF = 'HwMnoteSceneBeachConf'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## SCENE_SNOW_CONF
@@ -674,6 +764,8 @@ SCENE_SNOW_CONF = 'HwMnoteSceneSnowConf'
 **读写能力：** 只读。
 
 **起始版本：** 11
+
+<!--Device-PropertyKey-SCENE_SNOW_CONF = 'HwMnoteSceneSnowConf'--><!--Device-PropertyKey-SCENE_SNOW_CONF = 'HwMnoteSceneSnowConf'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -689,6 +781,8 @@ SCENE_SUNSET_CONF = 'HwMnoteSceneSunsetConf'
 
 **起始版本：** 11
 
+<!--Device-PropertyKey-SCENE_SUNSET_CONF = 'HwMnoteSceneSunsetConf'--><!--Device-PropertyKey-SCENE_SUNSET_CONF = 'HwMnoteSceneSunsetConf'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## SCENE_FLOWERS_CONF
@@ -702,6 +796,8 @@ SCENE_FLOWERS_CONF = 'HwMnoteSceneFlowersConf'
 **读写能力：** 只读。
 
 **起始版本：** 11
+
+<!--Device-PropertyKey-SCENE_FLOWERS_CONF = 'HwMnoteSceneFlowersConf'--><!--Device-PropertyKey-SCENE_FLOWERS_CONF = 'HwMnoteSceneFlowersConf'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -717,6 +813,8 @@ SCENE_NIGHT_CONF = 'HwMnoteSceneNightConf'
 
 **起始版本：** 11
 
+<!--Device-PropertyKey-SCENE_NIGHT_CONF = 'HwMnoteSceneNightConf'--><!--Device-PropertyKey-SCENE_NIGHT_CONF = 'HwMnoteSceneNightConf'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## SCENE_TEXT_CONF
@@ -730,6 +828,8 @@ SCENE_TEXT_CONF = 'HwMnoteSceneTextConf'
 **读写能力：** 只读。
 
 **起始版本：** 11
+
+<!--Device-PropertyKey-SCENE_TEXT_CONF = 'HwMnoteSceneTextConf'--><!--Device-PropertyKey-SCENE_TEXT_CONF = 'HwMnoteSceneTextConf'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -745,6 +845,8 @@ FACE_COUNT = 'HwMnoteFaceCount'
 
 **起始版本：** 11
 
+<!--Device-PropertyKey-FACE_COUNT = 'HwMnoteFaceCount'--><!--Device-PropertyKey-FACE_COUNT = 'HwMnoteFaceCount'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## FOCUS_MODE
@@ -758,6 +860,8 @@ FOCUS_MODE = 'HwMnoteFocusMode'
 **读写能力：** 只读。
 
 **起始版本：** 11
+
+<!--Device-PropertyKey-FOCUS_MODE = 'HwMnoteFocusMode'--><!--Device-PropertyKey-FOCUS_MODE = 'HwMnoteFocusMode'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -778,6 +882,8 @@ COMPRESSION = 'Compression'
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-COMPRESSION = 'Compression'--><!--Device-PropertyKey-COMPRESSION = 'Compression'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -807,6 +913,8 @@ PHOTOMETRIC_INTERPRETATION = 'PhotometricInterpretation'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-PHOTOMETRIC_INTERPRETATION = 'PhotometricInterpretation'--><!--Device-PropertyKey-PHOTOMETRIC_INTERPRETATION = 'PhotometricInterpretation'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## STRIP_OFFSETS
@@ -820,6 +928,8 @@ STRIP_OFFSETS = 'StripOffsets'
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-STRIP_OFFSETS = 'StripOffsets'--><!--Device-PropertyKey-STRIP_OFFSETS = 'StripOffsets'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -835,6 +945,8 @@ SAMPLES_PER_PIXEL = 'SamplesPerPixel'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-SAMPLES_PER_PIXEL = 'SamplesPerPixel'--><!--Device-PropertyKey-SAMPLES_PER_PIXEL = 'SamplesPerPixel'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## ROWS_PER_STRIP
@@ -848,6 +960,8 @@ ROWS_PER_STRIP = 'RowsPerStrip'
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-ROWS_PER_STRIP = 'RowsPerStrip'--><!--Device-PropertyKey-ROWS_PER_STRIP = 'RowsPerStrip'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -863,6 +977,8 @@ STRIP_BYTE_COUNTS = 'StripByteCounts'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-STRIP_BYTE_COUNTS = 'StripByteCounts'--><!--Device-PropertyKey-STRIP_BYTE_COUNTS = 'StripByteCounts'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## X_RESOLUTION
@@ -877,6 +993,8 @@ X_RESOLUTION = 'XResolution'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-X_RESOLUTION = 'XResolution'--><!--Device-PropertyKey-X_RESOLUTION = 'XResolution'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## Y_RESOLUTION
@@ -890,6 +1008,8 @@ Y_RESOLUTION = 'YResolution'
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-Y_RESOLUTION = 'YResolution'--><!--Device-PropertyKey-Y_RESOLUTION = 'YResolution'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -909,6 +1029,8 @@ PLANAR_CONFIGURATION = 'PlanarConfiguration'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-PLANAR_CONFIGURATION = 'PlanarConfiguration'--><!--Device-PropertyKey-PLANAR_CONFIGURATION = 'PlanarConfiguration'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## RESOLUTION_UNIT
@@ -927,6 +1049,8 @@ RESOLUTION_UNIT = 'ResolutionUnit'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-RESOLUTION_UNIT = 'ResolutionUnit'--><!--Device-PropertyKey-RESOLUTION_UNIT = 'ResolutionUnit'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## TRANSFER_FUNCTION
@@ -940,6 +1064,8 @@ TRANSFER_FUNCTION = 'TransferFunction'
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-TRANSFER_FUNCTION = 'TransferFunction'--><!--Device-PropertyKey-TRANSFER_FUNCTION = 'TransferFunction'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -955,6 +1081,8 @@ SOFTWARE = 'Software'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-SOFTWARE = 'Software'--><!--Device-PropertyKey-SOFTWARE = 'Software'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## ARTIST
@@ -968,6 +1096,8 @@ ARTIST = 'Artist'
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-ARTIST = 'Artist'--><!--Device-PropertyKey-ARTIST = 'Artist'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -983,6 +1113,8 @@ WHITE_POINT = 'WhitePoint'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-WHITE_POINT = 'WhitePoint'--><!--Device-PropertyKey-WHITE_POINT = 'WhitePoint'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## PRIMARY_CHROMATICITIES
@@ -996,6 +1128,8 @@ PRIMARY_CHROMATICITIES = 'PrimaryChromaticities'
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-PRIMARY_CHROMATICITIES = 'PrimaryChromaticities'--><!--Device-PropertyKey-PRIMARY_CHROMATICITIES = 'PrimaryChromaticities'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1011,6 +1145,8 @@ YCBCR_COEFFICIENTS = 'YCbCrCoefficients'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-YCBCR_COEFFICIENTS = 'YCbCrCoefficients'--><!--Device-PropertyKey-YCBCR_COEFFICIENTS = 'YCbCrCoefficients'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## YCBCR_SUB_SAMPLING
@@ -1024,6 +1160,8 @@ YCBCR_SUB_SAMPLING = 'YCbCrSubSampling'
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-YCBCR_SUB_SAMPLING = 'YCbCrSubSampling'--><!--Device-PropertyKey-YCBCR_SUB_SAMPLING = 'YCbCrSubSampling'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1043,6 +1181,8 @@ YCBCR_POSITIONING = 'YCbCrPositioning'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-YCBCR_POSITIONING = 'YCbCrPositioning'--><!--Device-PropertyKey-YCBCR_POSITIONING = 'YCbCrPositioning'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## REFERENCE_BLACK_WHITE
@@ -1056,6 +1196,8 @@ REFERENCE_BLACK_WHITE = 'ReferenceBlackWhite'
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-REFERENCE_BLACK_WHITE = 'ReferenceBlackWhite'--><!--Device-PropertyKey-REFERENCE_BLACK_WHITE = 'ReferenceBlackWhite'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1071,6 +1213,8 @@ COPYRIGHT = 'Copyright'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-COPYRIGHT = 'Copyright'--><!--Device-PropertyKey-COPYRIGHT = 'Copyright'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## JPEG_INTERCHANGE_FORMAT
@@ -1085,6 +1229,8 @@ JPEG压缩缩略图数据开始字节（SOI）的偏移。
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-JPEG_INTERCHANGE_FORMAT = 'JPEGInterchangeFormat'--><!--Device-PropertyKey-JPEG_INTERCHANGE_FORMAT = 'JPEGInterchangeFormat'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## JPEG_INTERCHANGE_FORMAT_LENGTH
@@ -1098,6 +1244,8 @@ JPEG压缩缩略图数据的字节数。
 **读写能力：** 只读。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-JPEG_INTERCHANGE_FORMAT_LENGTH = 'JPEGInterchangeFormatLength'--><!--Device-PropertyKey-JPEG_INTERCHANGE_FORMAT_LENGTH = 'JPEGInterchangeFormatLength'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1131,6 +1279,8 @@ EXPOSURE_PROGRAM = 'ExposureProgram'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-EXPOSURE_PROGRAM = 'ExposureProgram'--><!--Device-PropertyKey-EXPOSURE_PROGRAM = 'ExposureProgram'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## SPECTRAL_SENSITIVITY
@@ -1144,6 +1294,8 @@ SPECTRAL_SENSITIVITY = 'SpectralSensitivity'
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-SPECTRAL_SENSITIVITY = 'SpectralSensitivity'--><!--Device-PropertyKey-SPECTRAL_SENSITIVITY = 'SpectralSensitivity'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1159,6 +1311,8 @@ OECF = 'OECF'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-OECF = 'OECF'--><!--Device-PropertyKey-OECF = 'OECF'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## EXIF_VERSION
@@ -1172,6 +1326,8 @@ EXIF_VERSION = 'ExifVersion'
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-EXIF_VERSION = 'ExifVersion'--><!--Device-PropertyKey-EXIF_VERSION = 'ExifVersion'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1187,6 +1343,8 @@ DATE_TIME_DIGITIZED = 'DateTimeDigitized'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-DATE_TIME_DIGITIZED = 'DateTimeDigitized'--><!--Device-PropertyKey-DATE_TIME_DIGITIZED = 'DateTimeDigitized'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## COMPONENTS_CONFIGURATION
@@ -1200,6 +1358,8 @@ COMPONENTS_CONFIGURATION = 'ComponentsConfiguration'
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-COMPONENTS_CONFIGURATION = 'ComponentsConfiguration'--><!--Device-PropertyKey-COMPONENTS_CONFIGURATION = 'ComponentsConfiguration'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1215,6 +1375,8 @@ SHUTTER_SPEED = 'ShutterSpeedValue'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-SHUTTER_SPEED = 'ShutterSpeedValue'--><!--Device-PropertyKey-SHUTTER_SPEED = 'ShutterSpeedValue'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## BRIGHTNESS_VALUE
@@ -1228,6 +1390,8 @@ BRIGHTNESS_VALUE = 'BrightnessValue'
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-BRIGHTNESS_VALUE = 'BrightnessValue'--><!--Device-PropertyKey-BRIGHTNESS_VALUE = 'BrightnessValue'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1243,6 +1407,8 @@ MAX_APERTURE_VALUE = 'MaxApertureValue'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-MAX_APERTURE_VALUE = 'MaxApertureValue'--><!--Device-PropertyKey-MAX_APERTURE_VALUE = 'MaxApertureValue'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## SUBJECT_DISTANCE
@@ -1257,6 +1423,8 @@ SUBJECT_DISTANCE = 'SubjectDistance'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-SUBJECT_DISTANCE = 'SubjectDistance'--><!--Device-PropertyKey-SUBJECT_DISTANCE = 'SubjectDistance'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## SUBJECT_AREA
@@ -1270,6 +1438,8 @@ SUBJECT_AREA = 'SubjectArea'
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-SUBJECT_AREA = 'SubjectArea'--><!--Device-PropertyKey-SUBJECT_AREA = 'SubjectArea'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1287,6 +1457,8 @@ Exif/DCF制造商使用的标签，用于记录任何所需信息。
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-MAKER_NOTE = 'MakerNote'--><!--Device-PropertyKey-MAKER_NOTE = 'MakerNote'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## SUBSEC_TIME
@@ -1300,6 +1472,8 @@ SUBSEC_TIME = 'SubsecTime'
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-SUBSEC_TIME = 'SubsecTime'--><!--Device-PropertyKey-SUBSEC_TIME = 'SubsecTime'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1315,6 +1489,8 @@ SUBSEC_TIME_ORIGINAL = 'SubsecTimeOriginal'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-SUBSEC_TIME_ORIGINAL = 'SubsecTimeOriginal'--><!--Device-PropertyKey-SUBSEC_TIME_ORIGINAL = 'SubsecTimeOriginal'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## SUBSEC_TIME_DIGITIZED
@@ -1329,6 +1505,8 @@ SUBSEC_TIME_DIGITIZED = 'SubsecTimeDigitized'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-SUBSEC_TIME_DIGITIZED = 'SubsecTimeDigitized'--><!--Device-PropertyKey-SUBSEC_TIME_DIGITIZED = 'SubsecTimeDigitized'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## FLASHPIX_VERSION
@@ -1342,6 +1520,8 @@ FLASHPIX_VERSION = 'FlashpixVersion'
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-FLASHPIX_VERSION = 'FlashpixVersion'--><!--Device-PropertyKey-FLASHPIX_VERSION = 'FlashpixVersion'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1363,6 +1543,8 @@ COLOR_SPACE = 'ColorSpace'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-COLOR_SPACE = 'ColorSpace'--><!--Device-PropertyKey-COLOR_SPACE = 'ColorSpace'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## RELATED_SOUND_FILE
@@ -1376,6 +1558,8 @@ RELATED_SOUND_FILE = 'RelatedSoundFile'
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-RELATED_SOUND_FILE = 'RelatedSoundFile'--><!--Device-PropertyKey-RELATED_SOUND_FILE = 'RelatedSoundFile'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1391,6 +1575,8 @@ FLASH_ENERGY = 'FlashEnergy'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-FLASH_ENERGY = 'FlashEnergy'--><!--Device-PropertyKey-FLASH_ENERGY = 'FlashEnergy'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## SPATIAL_FREQUENCY_RESPONSE
@@ -1404,6 +1590,8 @@ SPATIAL_FREQUENCY_RESPONSE = 'SpatialFrequencyResponse'
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-SPATIAL_FREQUENCY_RESPONSE = 'SpatialFrequencyResponse'--><!--Device-PropertyKey-SPATIAL_FREQUENCY_RESPONSE = 'SpatialFrequencyResponse'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1419,6 +1607,8 @@ FOCAL_PLANE_X_RESOLUTION = 'FocalPlaneXResolution'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-FOCAL_PLANE_X_RESOLUTION = 'FocalPlaneXResolution'--><!--Device-PropertyKey-FOCAL_PLANE_X_RESOLUTION = 'FocalPlaneXResolution'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## FOCAL_PLANE_Y_RESOLUTION
@@ -1432,6 +1622,8 @@ FOCAL_PLANE_Y_RESOLUTION = 'FocalPlaneYResolution'
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-FOCAL_PLANE_Y_RESOLUTION = 'FocalPlaneYResolution'--><!--Device-PropertyKey-FOCAL_PLANE_Y_RESOLUTION = 'FocalPlaneYResolution'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1451,6 +1643,8 @@ FOCAL_PLANE_RESOLUTION_UNIT = 'FocalPlaneResolutionUnit'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-FOCAL_PLANE_RESOLUTION_UNIT = 'FocalPlaneResolutionUnit'--><!--Device-PropertyKey-FOCAL_PLANE_RESOLUTION_UNIT = 'FocalPlaneResolutionUnit'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## SUBJECT_LOCATION
@@ -1464,6 +1658,8 @@ SUBJECT_LOCATION = 'SubjectLocation'
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-SUBJECT_LOCATION = 'SubjectLocation'--><!--Device-PropertyKey-SUBJECT_LOCATION = 'SubjectLocation'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1479,6 +1675,8 @@ EXPOSURE_INDEX = 'ExposureIndex'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-EXPOSURE_INDEX = 'ExposureIndex'--><!--Device-PropertyKey-EXPOSURE_INDEX = 'ExposureIndex'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## SENSING_METHOD
@@ -1492,6 +1690,8 @@ SENSING_METHOD = 'SensingMethod'
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-SENSING_METHOD = 'SensingMethod'--><!--Device-PropertyKey-SENSING_METHOD = 'SensingMethod'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1507,6 +1707,8 @@ FILE_SOURCE = 'FileSource'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-FILE_SOURCE = 'FileSource'--><!--Device-PropertyKey-FILE_SOURCE = 'FileSource'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## CFA_PATTERN
@@ -1520,6 +1722,8 @@ CFA_PATTERN = 'CFAPattern'
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-CFA_PATTERN = 'CFAPattern'--><!--Device-PropertyKey-CFA_PATTERN = 'CFAPattern'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1538,6 +1742,8 @@ CUSTOM_RENDERED = 'CustomRendered'
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-CUSTOM_RENDERED = 'CustomRendered'--><!--Device-PropertyKey-CUSTOM_RENDERED = 'CustomRendered'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1559,6 +1765,8 @@ EXPOSURE_MODE = 'ExposureMode'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-EXPOSURE_MODE = 'ExposureMode'--><!--Device-PropertyKey-EXPOSURE_MODE = 'ExposureMode'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## DIGITAL_ZOOM_RATIO
@@ -1572,6 +1780,8 @@ DIGITAL_ZOOM_RATIO = 'DigitalZoomRatio'
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-DIGITAL_ZOOM_RATIO = 'DigitalZoomRatio'--><!--Device-PropertyKey-DIGITAL_ZOOM_RATIO = 'DigitalZoomRatio'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1594,6 +1804,8 @@ SCENE_CAPTURE_TYPE = 'SceneCaptureType'
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-SCENE_CAPTURE_TYPE = 'SceneCaptureType'--><!--Device-PropertyKey-SCENE_CAPTURE_TYPE = 'SceneCaptureType'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1619,6 +1831,8 @@ GAIN_CONTROL = 'GainControl'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-GAIN_CONTROL = 'GainControl'--><!--Device-PropertyKey-GAIN_CONTROL = 'GainControl'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## CONTRAST
@@ -1638,6 +1852,8 @@ CONTRAST = 'Contrast'
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-CONTRAST = 'Contrast'--><!--Device-PropertyKey-CONTRAST = 'Contrast'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1659,6 +1875,8 @@ SATURATION = 'Saturation'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-SATURATION = 'Saturation'--><!--Device-PropertyKey-SATURATION = 'Saturation'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## SHARPNESS
@@ -1679,6 +1897,8 @@ SHARPNESS = 'Sharpness'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-SHARPNESS = 'Sharpness'--><!--Device-PropertyKey-SHARPNESS = 'Sharpness'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## DEVICE_SETTING_DESCRIPTION
@@ -1692,6 +1912,8 @@ DEVICE_SETTING_DESCRIPTION = 'DeviceSettingDescription'
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-DEVICE_SETTING_DESCRIPTION = 'DeviceSettingDescription'--><!--Device-PropertyKey-DEVICE_SETTING_DESCRIPTION = 'DeviceSettingDescription'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1715,6 +1937,8 @@ SUBJECT_DISTANCE_RANGE = 'SubjectDistanceRange'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-SUBJECT_DISTANCE_RANGE = 'SubjectDistanceRange'--><!--Device-PropertyKey-SUBJECT_DISTANCE_RANGE = 'SubjectDistanceRange'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## IMAGE_UNIQUE_ID
@@ -1729,6 +1953,8 @@ IMAGE_UNIQUE_ID = 'ImageUniqueID'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-IMAGE_UNIQUE_ID = 'ImageUniqueID'--><!--Device-PropertyKey-IMAGE_UNIQUE_ID = 'ImageUniqueID'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## GPS_VERSION_ID
@@ -1742,6 +1968,8 @@ GPS信息版本号。
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-GPS_VERSION_ID = 'GPSVersionID'--><!--Device-PropertyKey-GPS_VERSION_ID = 'GPSVersionID'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1761,6 +1989,8 @@ GPS_ALTITUDE_REF = 'GPSAltitudeRef'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-GPS_ALTITUDE_REF = 'GPSAltitudeRef'--><!--Device-PropertyKey-GPS_ALTITUDE_REF = 'GPSAltitudeRef'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## GPS_ALTITUDE
@@ -1775,6 +2005,8 @@ GPS_ALTITUDE = 'GPSAltitude'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-GPS_ALTITUDE = 'GPSAltitude'--><!--Device-PropertyKey-GPS_ALTITUDE = 'GPSAltitude'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## GPS_SATELLITES
@@ -1788,6 +2020,8 @@ GPS_SATELLITES = 'GPSSatellites'
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-GPS_SATELLITES = 'GPSSatellites'--><!--Device-PropertyKey-GPS_SATELLITES = 'GPSSatellites'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1807,6 +2041,8 @@ GPS_STATUS = 'GPSStatus'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-GPS_STATUS = 'GPSStatus'--><!--Device-PropertyKey-GPS_STATUS = 'GPSStatus'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## GPS_MEASURE_MODE
@@ -1825,6 +2061,8 @@ GPS测量模式。用于表示图像拍摄时GPS定位使用的测量模式，�
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-GPS_MEASURE_MODE = 'GPSMeasureMode'--><!--Device-PropertyKey-GPS_MEASURE_MODE = 'GPSMeasureMode'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## GPS_DOP
@@ -1838,6 +2076,8 @@ GPS DOP（数据精度等级），用于表示拍摄时GPS测量结果的定位�
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-GPS_DOP = 'GPSDOP'--><!--Device-PropertyKey-GPS_DOP = 'GPSDOP'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1859,6 +2099,8 @@ GPS_SPEED_REF = 'GPSSpeedRef'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-GPS_SPEED_REF = 'GPSSpeedRef'--><!--Device-PropertyKey-GPS_SPEED_REF = 'GPSSpeedRef'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## GPS_SPEED
@@ -1872,6 +2114,8 @@ GPS接收器的移动速度。
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-GPS_SPEED = 'GPSSpeed'--><!--Device-PropertyKey-GPS_SPEED = 'GPSSpeed'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1891,6 +2135,8 @@ GPS接收机移动方向的参照，用于说明这个角度是以哪个“北�
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-GPS_TRACK_REF = 'GPSTrackRef'--><!--Device-PropertyKey-GPS_TRACK_REF = 'GPSTrackRef'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## GPS_TRACK
@@ -1904,6 +2150,8 @@ GPS接收机的移动方向。用于记录拍摄设备在拍照时的移动方�
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-GPS_TRACK = 'GPSTrack'--><!--Device-PropertyKey-GPS_TRACK = 'GPSTrack'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1923,6 +2171,8 @@ GPS_IMG_DIRECTION_REF = 'GPSImgDirectionRef'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-GPS_IMG_DIRECTION_REF = 'GPSImgDirectionRef'--><!--Device-PropertyKey-GPS_IMG_DIRECTION_REF = 'GPSImgDirectionRef'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## GPS_IMG_DIRECTION
@@ -1937,6 +2187,8 @@ GPS_IMG_DIRECTION = 'GPSImgDirection'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-GPS_IMG_DIRECTION = 'GPSImgDirection'--><!--Device-PropertyKey-GPS_IMG_DIRECTION = 'GPSImgDirection'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## GPS_MAP_DATUM
@@ -1950,6 +2202,8 @@ GPS接收器使用的大地测量数据。
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-GPS_MAP_DATUM = 'GPSMapDatum'--><!--Device-PropertyKey-GPS_MAP_DATUM = 'GPSMapDatum'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1969,6 +2223,8 @@ GPS_DEST_LATITUDE_REF = 'GPSDestLatitudeRef'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-GPS_DEST_LATITUDE_REF = 'GPSDestLatitudeRef'--><!--Device-PropertyKey-GPS_DEST_LATITUDE_REF = 'GPSDestLatitudeRef'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## GPS_DEST_LATITUDE
@@ -1982,6 +2238,8 @@ GPS_DEST_LATITUDE = 'GPSDestLatitude'
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-GPS_DEST_LATITUDE = 'GPSDestLatitude'--><!--Device-PropertyKey-GPS_DEST_LATITUDE = 'GPSDestLatitude'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2001,6 +2259,8 @@ GPS_DEST_LONGITUDE_REF = 'GPSDestLongitudeRef'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-GPS_DEST_LONGITUDE_REF = 'GPSDestLongitudeRef'--><!--Device-PropertyKey-GPS_DEST_LONGITUDE_REF = 'GPSDestLongitudeRef'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## GPS_DEST_LONGITUDE
@@ -2014,6 +2274,8 @@ GPS_DEST_LONGITUDE = 'GPSDestLongitude'
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-GPS_DEST_LONGITUDE = 'GPSDestLongitude'--><!--Device-PropertyKey-GPS_DEST_LONGITUDE = 'GPSDestLongitude'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2033,6 +2295,8 @@ GPS_DEST_BEARING_REF = 'GPSDestBearingRef'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-GPS_DEST_BEARING_REF = 'GPSDestBearingRef'--><!--Device-PropertyKey-GPS_DEST_BEARING_REF = 'GPSDestBearingRef'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## GPS_DEST_BEARING
@@ -2046,6 +2310,8 @@ GPS_DEST_BEARING = 'GPSDestBearing'
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-GPS_DEST_BEARING = 'GPSDestBearing'--><!--Device-PropertyKey-GPS_DEST_BEARING = 'GPSDestBearing'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2067,6 +2333,8 @@ GPS_DEST_DISTANCE_REF = 'GPSDestDistanceRef'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-GPS_DEST_DISTANCE_REF = 'GPSDestDistanceRef'--><!--Device-PropertyKey-GPS_DEST_DISTANCE_REF = 'GPSDestDistanceRef'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## GPS_DEST_DISTANCE
@@ -2080,6 +2348,8 @@ GPS_DEST_DISTANCE = 'GPSDestDistance'
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-GPS_DEST_DISTANCE = 'GPSDestDistance'--><!--Device-PropertyKey-GPS_DEST_DISTANCE = 'GPSDestDistance'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2095,6 +2365,8 @@ GPS_PROCESSING_METHOD = 'GPSProcessingMethod'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-GPS_PROCESSING_METHOD = 'GPSProcessingMethod'--><!--Device-PropertyKey-GPS_PROCESSING_METHOD = 'GPSProcessingMethod'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## GPS_AREA_INFORMATION
@@ -2108,6 +2380,8 @@ GPS_AREA_INFORMATION = 'GPSAreaInformation'
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-GPS_AREA_INFORMATION = 'GPSAreaInformation'--><!--Device-PropertyKey-GPS_AREA_INFORMATION = 'GPSAreaInformation'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2127,6 +2401,8 @@ GPS_DIFFERENTIAL = 'GPSDifferential'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-GPS_DIFFERENTIAL = 'GPSDifferential'--><!--Device-PropertyKey-GPS_DIFFERENTIAL = 'GPSDifferential'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## BODY_SERIAL_NUMBER
@@ -2140,6 +2416,8 @@ BODY_SERIAL_NUMBER = 'BodySerialNumber'
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-BODY_SERIAL_NUMBER = 'BodySerialNumber'--><!--Device-PropertyKey-BODY_SERIAL_NUMBER = 'BodySerialNumber'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2155,6 +2433,8 @@ CAMERA_OWNER_NAME = 'CameraOwnerName'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-CAMERA_OWNER_NAME = 'CameraOwnerName'--><!--Device-PropertyKey-CAMERA_OWNER_NAME = 'CameraOwnerName'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## COMPOSITE_IMAGE
@@ -2168,6 +2448,8 @@ COMPOSITE_IMAGE = 'CompositeImage'
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-COMPOSITE_IMAGE = 'CompositeImage'--><!--Device-PropertyKey-COMPOSITE_IMAGE = 'CompositeImage'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2183,6 +2465,8 @@ COMPRESSED_BITS_PER_PIXEL = 'CompressedBitsPerPixel'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-COMPRESSED_BITS_PER_PIXEL = 'CompressedBitsPerPixel'--><!--Device-PropertyKey-COMPRESSED_BITS_PER_PIXEL = 'CompressedBitsPerPixel'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## DNG_VERSION
@@ -2196,6 +2480,8 @@ DNG版本标签编码了符合DNG规范的四级版本号。
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-DNG_VERSION = 'DNGVersion'--><!--Device-PropertyKey-DNG_VERSION = 'DNGVersion'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2211,6 +2497,8 @@ DefaultCropSize指定了原始坐标中的最终图像大小，考虑了额外�
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-DEFAULT_CROP_SIZE = 'DefaultCropSize'--><!--Device-PropertyKey-DEFAULT_CROP_SIZE = 'DefaultCropSize'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## GAMMA
@@ -2224,6 +2512,8 @@ GAMMA = 'Gamma'
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-GAMMA = 'Gamma'--><!--Device-PropertyKey-GAMMA = 'Gamma'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2239,6 +2529,8 @@ ISO_SPEED_LATITUDE_YYY = 'ISOSpeedLatitudeyyy'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-ISO_SPEED_LATITUDE_YYY = 'ISOSpeedLatitudeyyy'--><!--Device-PropertyKey-ISO_SPEED_LATITUDE_YYY = 'ISOSpeedLatitudeyyy'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## ISO_SPEED_LATITUDE_ZZZ
@@ -2252,6 +2544,8 @@ ISO_SPEED_LATITUDE_ZZZ = 'ISOSpeedLatitudezzz'
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-ISO_SPEED_LATITUDE_ZZZ = 'ISOSpeedLatitudezzz'--><!--Device-PropertyKey-ISO_SPEED_LATITUDE_ZZZ = 'ISOSpeedLatitudezzz'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2267,6 +2561,8 @@ LENS_MAKE = 'LensMake'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-LENS_MAKE = 'LensMake'--><!--Device-PropertyKey-LENS_MAKE = 'LensMake'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## LENS_MODEL
@@ -2280,6 +2576,8 @@ LENS_MODEL = 'LensModel'
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-LENS_MODEL = 'LensModel'--><!--Device-PropertyKey-LENS_MODEL = 'LensModel'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2295,6 +2593,8 @@ LENS_SERIAL_NUMBER = 'LensSerialNumber'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-LENS_SERIAL_NUMBER = 'LensSerialNumber'--><!--Device-PropertyKey-LENS_SERIAL_NUMBER = 'LensSerialNumber'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## LENS_SPECIFICATION
@@ -2308,6 +2608,8 @@ LENS_SPECIFICATION = 'LensSpecification'
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-LENS_SPECIFICATION = 'LensSpecification'--><!--Device-PropertyKey-LENS_SPECIFICATION = 'LensSpecification'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2323,6 +2625,8 @@ NEW_SUBFILE_TYPE = 'NewSubfileType'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-NEW_SUBFILE_TYPE = 'NewSubfileType'--><!--Device-PropertyKey-NEW_SUBFILE_TYPE = 'NewSubfileType'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## OFFSET_TIME
@@ -2336,6 +2640,8 @@ OFFSET_TIME = 'OffsetTime'
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-OFFSET_TIME = 'OffsetTime'--><!--Device-PropertyKey-OFFSET_TIME = 'OffsetTime'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2351,6 +2657,8 @@ OFFSET_TIME_DIGITIZED = 'OffsetTimeDigitized'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-OFFSET_TIME_DIGITIZED = 'OffsetTimeDigitized'--><!--Device-PropertyKey-OFFSET_TIME_DIGITIZED = 'OffsetTimeDigitized'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## OFFSET_TIME_ORIGINAL
@@ -2364,6 +2672,8 @@ OFFSET_TIME_ORIGINAL = 'OffsetTimeOriginal'
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-OFFSET_TIME_ORIGINAL = 'OffsetTimeOriginal'--><!--Device-PropertyKey-OFFSET_TIME_ORIGINAL = 'OffsetTimeOriginal'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2379,6 +2689,8 @@ SOURCE_EXPOSURE_TIMES_OF_COMPOSITE_IMAGE = 'SourceExposureTimesOfCompositeImage'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-SOURCE_EXPOSURE_TIMES_OF_COMPOSITE_IMAGE = 'SourceExposureTimesOfCompositeImage'--><!--Device-PropertyKey-SOURCE_EXPOSURE_TIMES_OF_COMPOSITE_IMAGE = 'SourceExposureTimesOfCompositeImage'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## SOURCE_IMAGE_NUMBER_OF_COMPOSITE_IMAGE
@@ -2392,6 +2704,8 @@ SOURCE_IMAGE_NUMBER_OF_COMPOSITE_IMAGE = 'SourceImageNumberOfCompositeImage'
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-SOURCE_IMAGE_NUMBER_OF_COMPOSITE_IMAGE = 'SourceImageNumberOfCompositeImage'--><!--Device-PropertyKey-SOURCE_IMAGE_NUMBER_OF_COMPOSITE_IMAGE = 'SourceImageNumberOfCompositeImage'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2407,6 +2721,8 @@ SUBFILE_TYPE = 'SubfileType'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-SUBFILE_TYPE = 'SubfileType'--><!--Device-PropertyKey-SUBFILE_TYPE = 'SubfileType'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## GPS_H_POSITIONING_ERROR
@@ -2420,6 +2736,8 @@ GPS_H_POSITIONING_ERROR = 'GPSHPositioningError'
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-GPS_H_POSITIONING_ERROR = 'GPSHPositioningError'--><!--Device-PropertyKey-GPS_H_POSITIONING_ERROR = 'GPSHPositioningError'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2435,6 +2753,8 @@ PHOTOGRAPHIC_SENSITIVITY = 'PhotographicSensitivity'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-PHOTOGRAPHIC_SENSITIVITY = 'PhotographicSensitivity'--><!--Device-PropertyKey-PHOTOGRAPHIC_SENSITIVITY = 'PhotographicSensitivity'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## BURST_NUMBER
@@ -2448,6 +2768,8 @@ BURST_NUMBER = 'HwMnoteBurstNumber'
 **读写能力：** 只读。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-BURST_NUMBER = 'HwMnoteBurstNumber'--><!--Device-PropertyKey-BURST_NUMBER = 'HwMnoteBurstNumber'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2463,6 +2785,8 @@ FACE_CONF = 'HwMnoteFaceConf'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-FACE_CONF = 'HwMnoteFaceConf'--><!--Device-PropertyKey-FACE_CONF = 'HwMnoteFaceConf'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## FACE_LEYE_CENTER
@@ -2476,6 +2800,8 @@ FACE_LEYE_CENTER = 'HwMnoteFaceLeyeCenter'
 **读写能力：** 只读。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-FACE_LEYE_CENTER = 'HwMnoteFaceLeyeCenter'--><!--Device-PropertyKey-FACE_LEYE_CENTER = 'HwMnoteFaceLeyeCenter'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2491,6 +2817,8 @@ FACE_MOUTH_CENTER = 'HwMnoteFaceMouthCenter'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-FACE_MOUTH_CENTER = 'HwMnoteFaceMouthCenter'--><!--Device-PropertyKey-FACE_MOUTH_CENTER = 'HwMnoteFaceMouthCenter'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## FACE_POINTER
@@ -2504,6 +2832,8 @@ FACE_POINTER = 'HwMnoteFacePointer'
 **读写能力：** 只读。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-FACE_POINTER = 'HwMnoteFacePointer'--><!--Device-PropertyKey-FACE_POINTER = 'HwMnoteFacePointer'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2519,6 +2849,8 @@ FACE_RECT = 'HwMnoteFaceRect'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-FACE_RECT = 'HwMnoteFaceRect'--><!--Device-PropertyKey-FACE_RECT = 'HwMnoteFaceRect'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## FACE_REYE_CENTER
@@ -2532,6 +2864,8 @@ FACE_REYE_CENTER = 'HwMnoteFaceReyeCenter'
 **读写能力：** 只读。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-FACE_REYE_CENTER = 'HwMnoteFaceReyeCenter'--><!--Device-PropertyKey-FACE_REYE_CENTER = 'HwMnoteFaceReyeCenter'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2547,6 +2881,8 @@ FaceCount张人脸的笑脸分数。
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-FACE_SMILE_SCORE = 'HwMnoteFaceSmileScore'--><!--Device-PropertyKey-FACE_SMILE_SCORE = 'HwMnoteFaceSmileScore'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## FACE_VERSION
@@ -2560,6 +2896,8 @@ FACE_VERSION = 'HwMnoteFaceVersion'
 **读写能力：** 只读。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-FACE_VERSION = 'HwMnoteFaceVersion'--><!--Device-PropertyKey-FACE_VERSION = 'HwMnoteFaceVersion'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2575,6 +2913,8 @@ FRONT_CAMERA = 'HwMnoteFrontCamera'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-FRONT_CAMERA = 'HwMnoteFrontCamera'--><!--Device-PropertyKey-FRONT_CAMERA = 'HwMnoteFrontCamera'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## SCENE_POINTER
@@ -2588,6 +2928,8 @@ SCENE_POINTER = 'HwMnoteScenePointer'
 **读写能力：** 只读。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-SCENE_POINTER = 'HwMnoteScenePointer'--><!--Device-PropertyKey-SCENE_POINTER = 'HwMnoteScenePointer'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2603,6 +2945,8 @@ SCENE_VERSION = 'HwMnoteSceneVersion'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-SCENE_VERSION = 'HwMnoteSceneVersion'--><!--Device-PropertyKey-SCENE_VERSION = 'HwMnoteSceneVersion'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## IS_XMAGE_SUPPORTED
@@ -2616,6 +2960,8 @@ IS_XMAGE_SUPPORTED = 'HwMnoteIsXmageSupported'
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-IS_XMAGE_SUPPORTED = 'HwMnoteIsXmageSupported'--><!--Device-PropertyKey-IS_XMAGE_SUPPORTED = 'HwMnoteIsXmageSupported'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2631,6 +2977,8 @@ XMAGE水印模式。
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-XMAGE_MODE = 'HwMnoteXmageMode'--><!--Device-PropertyKey-XMAGE_MODE = 'HwMnoteXmageMode'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## XMAGE_LEFT
@@ -2644,6 +2992,8 @@ XMAGE_LEFT = 'HwMnoteXmageLeft'
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-XMAGE_LEFT = 'HwMnoteXmageLeft'--><!--Device-PropertyKey-XMAGE_LEFT = 'HwMnoteXmageLeft'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2659,6 +3009,8 @@ XMAGE_TOP = 'HwMnoteXmageTop'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-XMAGE_TOP = 'HwMnoteXmageTop'--><!--Device-PropertyKey-XMAGE_TOP = 'HwMnoteXmageTop'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## XMAGE_RIGHT
@@ -2672,6 +3024,8 @@ XMAGE_RIGHT = 'HwMnoteXmageRight'
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-XMAGE_RIGHT = 'HwMnoteXmageRight'--><!--Device-PropertyKey-XMAGE_RIGHT = 'HwMnoteXmageRight'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2687,6 +3041,8 @@ XMAGE_BOTTOM = 'HwMnoteXmageBottom'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-XMAGE_BOTTOM = 'HwMnoteXmageBottom'--><!--Device-PropertyKey-XMAGE_BOTTOM = 'HwMnoteXmageBottom'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## CLOUD_ENHANCEMENT_MODE
@@ -2700,6 +3056,8 @@ CLOUD_ENHANCEMENT_MODE = 'HwMnoteCloudEnhancementMode'
 **读写能力：** 可读写。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-CLOUD_ENHANCEMENT_MODE = 'HwMnoteCloudEnhancementMode'--><!--Device-PropertyKey-CLOUD_ENHANCEMENT_MODE = 'HwMnoteCloudEnhancementMode'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2715,6 +3073,8 @@ WIND_SNAPSHOT_MODE = 'HwMnoteWindSnapshotMode'
 
 **起始版本：** 12
 
+<!--Device-PropertyKey-WIND_SNAPSHOT_MODE = 'HwMnoteWindSnapshotMode'--><!--Device-PropertyKey-WIND_SNAPSHOT_MODE = 'HwMnoteWindSnapshotMode'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## GIF_LOOP_COUNT
@@ -2728,5 +3088,7 @@ GIF图片循环次数。0表示无限循环，其他值表示循环次数。
 **读写能力：** 只读。
 
 **起始版本：** 12
+
+<!--Device-PropertyKey-GIF_LOOP_COUNT = 'GIFLoopCount'--><!--Device-PropertyKey-GIF_LOOP_COUNT = 'GIFLoopCount'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core

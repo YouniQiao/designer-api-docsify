@@ -12,6 +12,8 @@ export interface Animation extends SceneResource
 
 **起始版本：** 12
 
+<!--Device-unnamed-export interface Animation extends SceneResource--><!--Device-unnamed-export interface Animation extends SceneResource-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## finish
@@ -23,6 +25,8 @@ finish(): void
 直接跳转到动画的最后，并将动画的进度设置为1。
 
 **起始版本：** 12
+
+<!--Device-Animation-finish(): void--><!--Device-Animation-finish(): void-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -53,6 +57,8 @@ onFinished(callback: Callback<void>): void
 动画播放结束时执行的回调函数，动画播放完成或者finish操作会触发这个回调。
 
 **起始版本：** 12
+
+<!--Device-Animation-onFinished(callback: Callback<void>): void--><!--Device-Animation-onFinished(callback: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -92,6 +98,8 @@ onStarted(callback: Callback<void>): void
 
 **起始版本：** 12
 
+<!--Device-Animation-onStarted(callback: Callback<void>): void--><!--Device-Animation-onStarted(callback: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **参数：**
@@ -130,6 +138,8 @@ pause(): void
 
 **起始版本：** 12
 
+<!--Device-Animation-pause(): void--><!--Device-Animation-pause(): void-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **示例**
@@ -160,6 +170,8 @@ restart(): void
 
 **起始版本：** 12
 
+<!--Device-Animation-restart(): void--><!--Device-Animation-restart(): void-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **示例**
@@ -189,6 +201,8 @@ seek(position: number): void
 将动画进度跳转到指定位置，不改变动画的播放状态（已播放仍继续播放，已暂停仍暂停）。
 
 **起始版本：** 12
+
+<!--Device-Animation-seek(position: double): void--><!--Device-Animation-seek(position: double): void-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -226,6 +240,8 @@ start(): void
 
 **起始版本：** 12
 
+<!--Device-Animation-start(): void--><!--Device-Animation-start(): void-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **示例**
@@ -255,6 +271,8 @@ stop(): void
 停止播放一个动画，并将动画的进度设置为0。
 
 **起始版本：** 12
+
+<!--Device-Animation-stop(): void--><!--Device-Animation-stop(): void-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -288,6 +306,8 @@ readonly duration: number
 
 **起始版本：** 12
 
+<!--Device-Animation-readonly duration: double--><!--Device-Animation-readonly duration: double-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## enabled
@@ -301,6 +321,8 @@ enabled: boolean
 **类型：** boolean
 
 **起始版本：** 12
+
+<!--Device-Animation-enabled: boolean--><!--Device-Animation-enabled: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -316,6 +338,8 @@ readonly progress: number
 
 **起始版本：** 12
 
+<!--Device-Animation-readonly progress: double--><!--Device-Animation-readonly progress: double-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## running
@@ -330,6 +354,8 @@ readonly running: boolean
 
 **起始版本：** 12
 
+<!--Device-Animation-readonly running: boolean--><!--Device-Animation-readonly running: boolean-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## speed
@@ -343,5 +369,7 @@ speed?: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-Animation-speed?: double--><!--Device-Animation-speed?: double-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

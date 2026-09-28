@@ -18,6 +18,8 @@ Change Pin Password.
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-sim-function alterPin(slotId: int, newPin: string, oldPin: string, callback: AsyncCallback<LockStatusResponse>): void--><!--Device-sim-function alterPin(slotId: int, newPin: string, oldPin: string, callback: AsyncCallback<LockStatusResponse>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -70,6 +72,8 @@ Change Pin Password.
 **起始版本：** 7
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
+
+<!--Device-sim-function alterPin(slotId: int, newPin: string, oldPin: string): Promise<LockStatusResponse>--><!--Device-sim-function alterPin(slotId: int, newPin: string, oldPin: string): Promise<LockStatusResponse>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

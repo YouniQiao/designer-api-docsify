@@ -8,6 +8,8 @@ interface AVMetadata
 
 **起始版本：** 11
 
+<!--Device-media-interface AVMetadata--><!--Device-media-interface AVMetadata-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 ## 导入模块
@@ -27,6 +29,8 @@ GLTF 3D模型在媒体文件中的偏移。不支持AVRecorder设置该属性。
 **类型：** string
 
 **起始版本：** 21
+
+<!--Device-AVMetadata-gltf_offset?: string--><!--Device-AVMetadata-gltf_offset?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 

@@ -8,6 +8,8 @@ interface Device
 
 **起始版本：** 10
 
+<!--Device-deviceManager-interface Device--><!--Device-deviceManager-interface Device-End-->
+
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
 ## 导入模块
@@ -28,6 +30,8 @@ busType: BusType
 
 **起始版本：** 10
 
+<!--Device-Device-busType: BusType--><!--Device-Device-busType: BusType-End-->
+
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
 ## description
@@ -42,6 +46,8 @@ description: string
 
 **起始版本：** 10
 
+<!--Device-Device-description: string--><!--Device-Device-description: string-End-->
+
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
 ## deviceId
@@ -55,5 +61,7 @@ deviceId: number
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-Device-deviceId: long--><!--Device-Device-deviceId: long-End-->
 
 **系统能力：** SystemCapability.Driver.ExternalDevice

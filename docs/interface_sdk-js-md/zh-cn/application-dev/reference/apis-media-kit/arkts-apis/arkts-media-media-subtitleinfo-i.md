@@ -8,6 +8,8 @@ interface SubtitleInfo
 
 **起始版本：** 12
 
+<!--Device-media-interface SubtitleInfo--><!--Device-media-interface SubtitleInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 ## 导入模块
@@ -28,7 +30,9 @@ duration?: number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-SubtitleInfo-duration?: int--><!--Device-SubtitleInfo-duration?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -44,7 +48,9 @@ startTime?: number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-SubtitleInfo-startTime?: int--><!--Device-SubtitleInfo-startTime?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -60,6 +66,8 @@ text?: string
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-SubtitleInfo-text?: string--><!--Device-SubtitleInfo-text?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core

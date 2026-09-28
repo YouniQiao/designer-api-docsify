@@ -18,6 +18,8 @@ function muteRinger(callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-call-function muteRinger(callback: AsyncCallback<void>): void--><!--Device-call-function muteRinger(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -68,6 +70,8 @@ function muteRinger(): Promise<void>
 **起始版本：** 8
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
+
+<!--Device-call-function muteRinger(): Promise<void>--><!--Device-call-function muteRinger(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 

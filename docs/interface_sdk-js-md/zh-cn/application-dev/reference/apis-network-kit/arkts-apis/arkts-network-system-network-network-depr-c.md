@@ -6,6 +6,8 @@ export default class Network
 
 **起始版本：** 3
 
+<!--Device-unnamed-export default class Network--><!--Device-unnamed-export default class Network-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## 导入模块
@@ -42,6 +44,8 @@ Obtains the network type.
 
 **起始版本：** 3
 
+<!--Device-Network-static getType(options?: {    /**     * Called when the network type is obtained.     * @syscap SystemCapability.Communication.NetManager.Core     * @since 3     */    success?: (data: NetworkResponse) => void;    /**     * Called when the network type fails to be obtained.     * @syscap SystemCapability.Communication.NetManager.Core     * @since 3     */    fail?: (data: any, code: number) => void;    /**     * Called when the execution is completed.     * @syscap SystemCapability.Communication.NetManager.Core     * @since 3     */    complete?: () => void;  }): void--><!--Device-Network-static getType(options?: {    /**     * Called when the network type is obtained.     * @syscap SystemCapability.Communication.NetManager.Core     * @since 3     */    success?: (data: NetworkResponse) => void;    /**     * Called when the network type fails to be obtained.     * @syscap SystemCapability.Communication.NetManager.Core     * @since 3     */    fail?: (data: any, code: number) => void;    /**     * Called when the execution is completed.     * @syscap SystemCapability.Communication.NetManager.Core     * @since 3     */    complete?: () => void;  }): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**
@@ -73,6 +77,8 @@ Listens to the network connection state. If this method is called multiple times
 
 **起始版本：** 3
 
+<!--Device-Network-static subscribe(options?: {    /**     * Called when the network connection state changes.     * @syscap SystemCapability.Communication.NetManager.Core     * @since 3     */    success?: (data: NetworkResponse) => void;    /**     * Called when the listening fails.     * @syscap SystemCapability.Communication.NetManager.Core     * @since 3     */    fail?: (data: any, code: number) => void;  }): void--><!--Device-Network-static subscribe(options?: {    /**     * Called when the network connection state changes.     * @syscap SystemCapability.Communication.NetManager.Core     * @since 3     */    success?: (data: NetworkResponse) => void;    /**     * Called when the listening fails.     * @syscap SystemCapability.Communication.NetManager.Core     * @since 3     */    fail?: (data: any, code: number) => void;  }): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**
@@ -90,5 +96,7 @@ static unsubscribe(): void
 取消监听网络连接状态。
 
 **起始版本：** 3
+
+<!--Device-Network-static unsubscribe(): void--><!--Device-Network-static unsubscribe(): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core

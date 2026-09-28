@@ -16,6 +16,8 @@ function getCallStateSync(): CallState
 
 **起始版本：** 10
 
+<!--Device-call-function getCallStateSync(): CallState--><!--Device-call-function getCallStateSync(): CallState-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **返回值：**

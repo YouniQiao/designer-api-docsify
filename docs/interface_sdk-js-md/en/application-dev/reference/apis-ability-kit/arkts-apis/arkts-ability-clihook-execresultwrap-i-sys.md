@@ -8,6 +8,8 @@ Result parameter for onAfterCallTool and onAfterCallCmd.
 
 **Since:** 26.0.1
 
+<!--Device-unnamed-export interface ExecResultWrap--><!--Device-unnamed-export interface ExecResultWrap-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **System API:** This is a system API.
@@ -25,6 +27,8 @@ Indicates the session ID of the dialog manager (DM), echoed from [ExecOptions](a
 **Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExecResultWrap-dmSessionId?: string--><!--Device-ExecResultWrap-dmSessionId?: string-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -44,6 +48,8 @@ Indicates the execution result.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExecResultWrap-execResult: ExecResult--><!--Device-ExecResultWrap-execResult: ExecResult-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **System API:** This is a system API.
@@ -61,6 +67,8 @@ Indicates the unique identifier of the tool call, echoed from [ExecOptions](arkt
 **Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExecResultWrap-toolCallId?: string--><!--Device-ExecResultWrap-toolCallId?: string-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 

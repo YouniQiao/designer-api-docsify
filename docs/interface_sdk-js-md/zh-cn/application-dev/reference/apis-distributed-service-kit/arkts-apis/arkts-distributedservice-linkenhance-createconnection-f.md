@@ -20,6 +20,8 @@ function createConnection(deviceId: string, name: string): Connection
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-linkEnhance-function createConnection(deviceId: string, name: string): Connection--><!--Device-linkEnhance-function createConnection(deviceId: string, name: string): Connection-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **参数：**

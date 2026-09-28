@@ -8,6 +8,8 @@ enum CarKeyActionType
 
 **起始版本：** 26.0.0
 
+<!--Device-connection-enum CarKeyActionType--><!--Device-connection-enum CarKeyActionType-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -24,6 +26,8 @@ CAR_KEY_ACTION_ADD = 0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-CarKeyActionType-CAR_KEY_ACTION_ADD = 0--><!--Device-CarKeyActionType-CAR_KEY_ACTION_ADD = 0-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -39,6 +43,8 @@ CAR_KEY_ACTION_DELETE = 1
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-CarKeyActionType-CAR_KEY_ACTION_DELETE = 1--><!--Device-CarKeyActionType-CAR_KEY_ACTION_DELETE = 1-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

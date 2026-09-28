@@ -12,6 +12,8 @@ export enum ContentType
 
 **替代接口：** [ContentType](arkts-notification-notificationmanager-contenttype-e.md)
 
+<!--Device-notification-export enum ContentType--><!--Device-notification-export enum ContentType-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## NOTIFICATION_CONTENT_BASIC_TEXT
@@ -27,6 +29,8 @@ NOTIFICATION_CONTENT_BASIC_TEXT
 **废弃版本：** 9
 
 **替代接口：** [NOTIFICATION_CONTENT_BASIC_TEXT](arkts-notification-notificationmanager-contenttype-e.md#notification_content_basic_text)
+
+<!--Device-ContentType-NOTIFICATION_CONTENT_BASIC_TEXT--><!--Device-ContentType-NOTIFICATION_CONTENT_BASIC_TEXT-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -44,6 +48,8 @@ NOTIFICATION_CONTENT_LONG_TEXT
 
 **替代接口：** [NOTIFICATION_CONTENT_LONG_TEXT](arkts-notification-notificationmanager-contenttype-e.md#notification_content_long_text)
 
+<!--Device-ContentType-NOTIFICATION_CONTENT_LONG_TEXT--><!--Device-ContentType-NOTIFICATION_CONTENT_LONG_TEXT-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## NOTIFICATION_CONTENT_PICTURE
@@ -59,6 +65,8 @@ NOTIFICATION_CONTENT_PICTURE
 **废弃版本：** 9
 
 **替代接口：** [NOTIFICATION_CONTENT_PICTURE](arkts-notification-notificationmanager-contenttype-e.md#notification_content_picture)
+
+<!--Device-ContentType-NOTIFICATION_CONTENT_PICTURE--><!--Device-ContentType-NOTIFICATION_CONTENT_PICTURE-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -76,6 +84,8 @@ NOTIFICATION_CONTENT_CONVERSATION
 
 **替代接口：** [NOTIFICATION_CONTENT_CONVERSATION](arkts-notification-notificationmanager-contenttype-e.md#notification_content_conversation)
 
+<!--Device-ContentType-NOTIFICATION_CONTENT_CONVERSATION--><!--Device-ContentType-NOTIFICATION_CONTENT_CONVERSATION-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## NOTIFICATION_CONTENT_MULTILINE
@@ -91,5 +101,7 @@ NOTIFICATION_CONTENT_MULTILINE
 **废弃版本：** 9
 
 **替代接口：** [NOTIFICATION_CONTENT_MULTILINE](arkts-notification-notificationmanager-contenttype-e.md#notification_content_multiline)
+
+<!--Device-ContentType-NOTIFICATION_CONTENT_MULTILINE--><!--Device-ContentType-NOTIFICATION_CONTENT_MULTILINE-End-->
 
 **系统能力：** SystemCapability.Notification.Notification

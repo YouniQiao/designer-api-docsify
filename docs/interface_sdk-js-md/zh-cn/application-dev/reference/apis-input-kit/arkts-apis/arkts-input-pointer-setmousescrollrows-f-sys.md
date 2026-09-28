@@ -16,6 +16,8 @@ function setMouseScrollRows(rows: number, callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
+<!--Device-pointer-function setMouseScrollRows(rows: int, callback: AsyncCallback<void>): void--><!--Device-pointer-function setMouseScrollRows(rows: int, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +79,8 @@ function setMouseScrollRows(rows: number): Promise<void>
 设置鼠标滚动行数，使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-pointer-function setMouseScrollRows(rows: int): Promise<void>--><!--Device-pointer-function setMouseScrollRows(rows: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 

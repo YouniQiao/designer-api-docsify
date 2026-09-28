@@ -8,6 +8,8 @@ export interface ConflictFiles
 
 **起始版本：** 10
 
+<!--Device-unnamed-export interface ConflictFiles--><!--Device-unnamed-export interface ConflictFiles-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## 导入模块
@@ -28,6 +30,8 @@ destFile: string
 
 **起始版本：** 10
 
+<!--Device-ConflictFiles-destFile: string--><!--Device-ConflictFiles-destFile: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## srcFile
@@ -41,5 +45,7 @@ srcFile: string
 **类型：** string
 
 **起始版本：** 10
+
+<!--Device-ConflictFiles-srcFile: string--><!--Device-ConflictFiles-srcFile: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO

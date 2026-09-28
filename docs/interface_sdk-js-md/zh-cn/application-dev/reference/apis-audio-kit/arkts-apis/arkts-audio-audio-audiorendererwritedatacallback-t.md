@@ -8,6 +8,8 @@ type AudioRendererWriteDataCallback = (data: ArrayBuffer) => AudioDataCallbackRe
 
 **起始版本：** 12
 
+<!--Device-audio-type AudioRendererWriteDataCallback = (data: ArrayBuffer) => AudioDataCallbackResult | void--><!--Device-audio-type AudioRendererWriteDataCallback = (data: ArrayBuffer) => AudioDataCallbackResult | void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **参数：**

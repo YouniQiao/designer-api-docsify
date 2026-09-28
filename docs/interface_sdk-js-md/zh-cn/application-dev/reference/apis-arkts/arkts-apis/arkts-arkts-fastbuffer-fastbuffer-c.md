@@ -8,6 +8,8 @@ FastBuffer对象是比Buffer性能更优的Buffer容器，用于表示固定长�
 
 **起始版本：** 20
 
+<!--Device-fastbuffer-class FastBuffer--><!--Device-fastbuffer-class FastBuffer-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -27,6 +29,8 @@ compare(target: FastBuffer | Uint8Array, targetStart?: number, targetEnd?: numbe
 **起始版本：** 20
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-FastBuffer-compare(target: FastBuffer | Uint8Array, targetStart?: number, targetEnd?: number, sourceStart?: number, sourceEnd?: number): -1 | 0 | 1--><!--Device-FastBuffer-compare(target: FastBuffer | Uint8Array, targetStart?: number, targetEnd?: number, sourceStart?: number, sourceEnd?: number): -1 | 0 | 1-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -86,6 +90,8 @@ copy(target: FastBuffer | Uint8Array, targetStart?: number, sourceStart?: number
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-FastBuffer-copy(target: FastBuffer | Uint8Array, targetStart?: number, sourceStart?: number, sourceEnd?: number): number--><!--Device-FastBuffer-copy(target: FastBuffer | Uint8Array, targetStart?: number, sourceStart?: number, sourceEnd?: number): number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -144,6 +150,8 @@ entries(): IterableIterator<[
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-FastBuffer-entries(): IterableIterator<[            number,            number        ]>--><!--Device-FastBuffer-entries(): IterableIterator<[            number,            number        ]>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -189,6 +197,8 @@ equals(otherBuffer: Uint8Array | FastBuffer): boolean
 **起始版本：** 20
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-FastBuffer-equals(otherBuffer: Uint8Array | FastBuffer): boolean--><!--Device-FastBuffer-equals(otherBuffer: Uint8Array | FastBuffer): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -236,6 +246,8 @@ fill(value: string | FastBuffer | Uint8Array | number, offset?: number, end?: nu
 **起始版本：** 20
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-FastBuffer-fill(value: string | FastBuffer | Uint8Array | number, offset?: number, end?: number, encoding?: BufferEncoding): FastBuffer--><!--Device-FastBuffer-fill(value: string | FastBuffer | Uint8Array | number, offset?: number, end?: number, encoding?: BufferEncoding): FastBuffer-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -287,6 +299,8 @@ includes(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, 
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-FastBuffer-includes(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): boolean--><!--Device-FastBuffer-includes(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): boolean-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -331,6 +345,8 @@ indexOf(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, e
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-FastBuffer-indexOf(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number--><!--Device-FastBuffer-indexOf(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -370,6 +386,8 @@ keys(): IterableIterator<number>
 **起始版本：** 20
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-FastBuffer-keys(): IterableIterator<number>--><!--Device-FastBuffer-keys(): IterableIterator<number>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -415,6 +433,8 @@ lastIndexOf(value: string | number | FastBuffer | Uint8Array, byteOffset?: numbe
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-FastBuffer-lastIndexOf(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number--><!--Device-FastBuffer-lastIndexOf(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -454,6 +474,8 @@ readBigInt64BE(offset?: number): bigint
 **起始版本：** 20
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-FastBuffer-readBigInt64BE(offset?: number): bigint--><!--Device-FastBuffer-readBigInt64BE(offset?: number): bigint-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -498,6 +520,8 @@ readBigInt64LE(offset?: number): bigint
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-FastBuffer-readBigInt64LE(offset?: number): bigint--><!--Device-FastBuffer-readBigInt64LE(offset?: number): bigint-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -540,6 +564,8 @@ readBigUInt64BE(offset?: number): bigint
 **起始版本：** 20
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-FastBuffer-readBigUInt64BE(offset?: number): bigint--><!--Device-FastBuffer-readBigUInt64BE(offset?: number): bigint-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -584,6 +610,8 @@ readBigUInt64LE(offset?: number): bigint
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-FastBuffer-readBigUInt64LE(offset?: number): bigint--><!--Device-FastBuffer-readBigUInt64LE(offset?: number): bigint-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -627,6 +655,8 @@ readDoubleBE(offset?: number): number
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-FastBuffer-readDoubleBE(offset?: number): number--><!--Device-FastBuffer-readDoubleBE(offset?: number): number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -668,6 +698,8 @@ readDoubleLE(offset?: number): number
 **起始版本：** 20
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-FastBuffer-readDoubleLE(offset?: number): number--><!--Device-FastBuffer-readDoubleLE(offset?: number): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -711,6 +743,8 @@ readFloatBE(offset?: number): number
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-FastBuffer-readFloatBE(offset?: number): number--><!--Device-FastBuffer-readFloatBE(offset?: number): number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -752,6 +786,8 @@ readFloatLE(offset?: number): number
 **起始版本：** 20
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-FastBuffer-readFloatLE(offset?: number): number--><!--Device-FastBuffer-readFloatLE(offset?: number): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -795,6 +831,8 @@ readInt16BE(offset?: number): number
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-FastBuffer-readInt16BE(offset?: number): number--><!--Device-FastBuffer-readInt16BE(offset?: number): number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -836,6 +874,8 @@ readInt16LE(offset?: number): number
 **起始版本：** 20
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-FastBuffer-readInt16LE(offset?: number): number--><!--Device-FastBuffer-readInt16LE(offset?: number): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -879,6 +919,8 @@ readInt32BE(offset?: number): number
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-FastBuffer-readInt32BE(offset?: number): number--><!--Device-FastBuffer-readInt32BE(offset?: number): number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -921,6 +963,8 @@ readInt32LE(offset?: number): number
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-FastBuffer-readInt32LE(offset?: number): number--><!--Device-FastBuffer-readInt32LE(offset?: number): number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -962,6 +1006,8 @@ readInt8(offset?: number): number
 **起始版本：** 20
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-FastBuffer-readInt8(offset?: number): number--><!--Device-FastBuffer-readInt8(offset?: number): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1007,6 +1053,8 @@ readIntBE(offset: number, byteLength: number): number
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-FastBuffer-readIntBE(offset: number, byteLength: number): number--><!--Device-FastBuffer-readIntBE(offset: number, byteLength: number): number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -1051,6 +1099,8 @@ readIntLE(offset: number, byteLength: number): number
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-FastBuffer-readIntLE(offset: number, byteLength: number): number--><!--Device-FastBuffer-readIntLE(offset: number, byteLength: number): number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -1093,6 +1143,8 @@ readUInt16BE(offset?: number): number
 **起始版本：** 20
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-FastBuffer-readUInt16BE(offset?: number): number--><!--Device-FastBuffer-readUInt16BE(offset?: number): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1138,6 +1190,8 @@ readUInt16LE(offset?: number): number
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-FastBuffer-readUInt16LE(offset?: number): number--><!--Device-FastBuffer-readUInt16LE(offset?: number): number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -1182,6 +1236,8 @@ readUInt32BE(offset?: number): number
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-FastBuffer-readUInt32BE(offset?: number): number--><!--Device-FastBuffer-readUInt32BE(offset?: number): number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -1224,6 +1280,8 @@ readUInt32LE(offset?: number): number
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-FastBuffer-readUInt32LE(offset?: number): number--><!--Device-FastBuffer-readUInt32LE(offset?: number): number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -1265,6 +1323,8 @@ readUInt8(offset?: number): number
 **起始版本：** 20
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-FastBuffer-readUInt8(offset?: number): number--><!--Device-FastBuffer-readUInt8(offset?: number): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1310,6 +1370,8 @@ readUIntBE(offset: number, byteLength: number): number
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-FastBuffer-readUIntBE(offset: number, byteLength: number): number--><!--Device-FastBuffer-readUIntBE(offset: number, byteLength: number): number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -1352,6 +1414,8 @@ readUIntLE(offset: number, byteLength: number): number
 **起始版本：** 20
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-FastBuffer-readUIntLE(offset: number, byteLength: number): number--><!--Device-FastBuffer-readUIntLE(offset: number, byteLength: number): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1396,6 +1460,8 @@ subarray(start?: number, end?: number): FastBuffer
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-FastBuffer-subarray(start?: number, end?: number): FastBuffer--><!--Device-FastBuffer-subarray(start?: number, end?: number): FastBuffer-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -1438,6 +1504,8 @@ swap16(): FastBuffer
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-FastBuffer-swap16(): FastBuffer--><!--Device-FastBuffer-swap16(): FastBuffer-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -1476,6 +1544,8 @@ swap32(): FastBuffer
 **起始版本：** 20
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-FastBuffer-swap32(): FastBuffer--><!--Device-FastBuffer-swap32(): FastBuffer-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1516,6 +1586,8 @@ swap64(): FastBuffer
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-FastBuffer-swap64(): FastBuffer--><!--Device-FastBuffer-swap64(): FastBuffer-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -1555,6 +1627,8 @@ toJSON(): Object
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-FastBuffer-toJSON(): Object--><!--Device-FastBuffer-toJSON(): Object-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -1585,6 +1659,8 @@ toString(encoding?: string, start?: number, end?: number): string
 **起始版本：** 20
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-FastBuffer-toString(encoding?: string, start?: number, end?: number): string--><!--Device-FastBuffer-toString(encoding?: string, start?: number, end?: number): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1633,6 +1709,8 @@ values(): IterableIterator<number>
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-FastBuffer-values(): IterableIterator<number>--><!--Device-FastBuffer-values(): IterableIterator<number>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -1674,6 +1752,8 @@ write(str: string, offset?: number, length?: number, encoding?: string): number
 **起始版本：** 20
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-FastBuffer-write(str: string, offset?: number, length?: number, encoding?: string): number--><!--Device-FastBuffer-write(str: string, offset?: number, length?: number, encoding?: string): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1727,6 +1807,8 @@ writeBigInt64BE(value: bigint, offset?: number): number
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-FastBuffer-writeBigInt64BE(value: bigint, offset?: number): number--><!--Device-FastBuffer-writeBigInt64BE(value: bigint, offset?: number): number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -1770,6 +1852,8 @@ writeBigInt64LE(value: bigint, offset?: number): number
 **起始版本：** 20
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-FastBuffer-writeBigInt64LE(value: bigint, offset?: number): number--><!--Device-FastBuffer-writeBigInt64LE(value: bigint, offset?: number): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1815,6 +1899,8 @@ writeBigUInt64BE(value: bigint, offset?: number): number
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-FastBuffer-writeBigUInt64BE(value: bigint, offset?: number): number--><!--Device-FastBuffer-writeBigUInt64BE(value: bigint, offset?: number): number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -1858,6 +1944,8 @@ writeBigUInt64LE(value: bigint, offset?: number): number
 **起始版本：** 20
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-FastBuffer-writeBigUInt64LE(value: bigint, offset?: number): number--><!--Device-FastBuffer-writeBigUInt64LE(value: bigint, offset?: number): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1903,6 +1991,8 @@ writeDoubleBE(value: number, offset?: number): number
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-FastBuffer-writeDoubleBE(value: number, offset?: number): number--><!--Device-FastBuffer-writeDoubleBE(value: number, offset?: number): number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -1946,6 +2036,8 @@ writeDoubleLE(value: number, offset?: number): number
 **起始版本：** 20
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-FastBuffer-writeDoubleLE(value: number, offset?: number): number--><!--Device-FastBuffer-writeDoubleLE(value: number, offset?: number): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1991,6 +2083,8 @@ writeFloatBE(value: number, offset?: number): number
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-FastBuffer-writeFloatBE(value: number, offset?: number): number--><!--Device-FastBuffer-writeFloatBE(value: number, offset?: number): number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -2034,6 +2128,8 @@ writeFloatLE(value: number, offset?: number): number
 **起始版本：** 20
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-FastBuffer-writeFloatLE(value: number, offset?: number): number--><!--Device-FastBuffer-writeFloatLE(value: number, offset?: number): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -2079,6 +2175,8 @@ writeInt16BE(value: number, offset?: number): number
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-FastBuffer-writeInt16BE(value: number, offset?: number): number--><!--Device-FastBuffer-writeInt16BE(value: number, offset?: number): number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -2122,6 +2220,8 @@ writeInt16LE(value: number, offset?: number): number
 **起始版本：** 20
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-FastBuffer-writeInt16LE(value: number, offset?: number): number--><!--Device-FastBuffer-writeInt16LE(value: number, offset?: number): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -2167,6 +2267,8 @@ writeInt32BE(value: number, offset?: number): number
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-FastBuffer-writeInt32BE(value: number, offset?: number): number--><!--Device-FastBuffer-writeInt32BE(value: number, offset?: number): number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -2211,6 +2313,8 @@ writeInt32LE(value: number, offset?: number): number
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-FastBuffer-writeInt32LE(value: number, offset?: number): number--><!--Device-FastBuffer-writeInt32LE(value: number, offset?: number): number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -2254,6 +2358,8 @@ writeInt8(value: number, offset?: number): number
 **起始版本：** 20
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-FastBuffer-writeInt8(value: number, offset?: number): number--><!--Device-FastBuffer-writeInt8(value: number, offset?: number): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -2302,6 +2408,8 @@ writeIntBE(value: number, offset: number, byteLength: number): number
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-FastBuffer-writeIntBE(value: number, offset: number, byteLength: number): number--><!--Device-FastBuffer-writeIntBE(value: number, offset: number, byteLength: number): number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -2347,6 +2455,8 @@ writeIntLE(value: number, offset: number, byteLength: number): number
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-FastBuffer-writeIntLE(value: number, offset: number, byteLength: number): number--><!--Device-FastBuffer-writeIntLE(value: number, offset: number, byteLength: number): number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -2391,6 +2501,8 @@ writeUInt16BE(value: number, offset?: number): number
 **起始版本：** 20
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-FastBuffer-writeUInt16BE(value: number, offset?: number): number--><!--Device-FastBuffer-writeUInt16BE(value: number, offset?: number): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -2439,6 +2551,8 @@ writeUInt16LE(value: number, offset?: number): number
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-FastBuffer-writeUInt16LE(value: number, offset?: number): number--><!--Device-FastBuffer-writeUInt16LE(value: number, offset?: number): number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -2486,6 +2600,8 @@ writeUInt32BE(value: number, offset?: number): number
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-FastBuffer-writeUInt32BE(value: number, offset?: number): number--><!--Device-FastBuffer-writeUInt32BE(value: number, offset?: number): number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -2530,6 +2646,8 @@ writeUInt32LE(value: number, offset?: number): number
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-FastBuffer-writeUInt32LE(value: number, offset?: number): number--><!--Device-FastBuffer-writeUInt32LE(value: number, offset?: number): number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -2573,6 +2691,8 @@ writeUInt8(value: number, offset?: number): number
 **起始版本：** 20
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-FastBuffer-writeUInt8(value: number, offset?: number): number--><!--Device-FastBuffer-writeUInt8(value: number, offset?: number): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -2627,6 +2747,8 @@ writeUIntBE(value: number, offset: number, byteLength: number): number
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-FastBuffer-writeUIntBE(value: number, offset: number, byteLength: number): number--><!--Device-FastBuffer-writeUIntBE(value: number, offset: number, byteLength: number): number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -2671,6 +2793,8 @@ writeUIntLE(value: number, offset: number, byteLength: number): number
 **起始版本：** 20
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-FastBuffer-writeUIntLE(value: number, offset: number, byteLength: number): number--><!--Device-FastBuffer-writeUIntLE(value: number, offset: number, byteLength: number): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -2719,6 +2843,8 @@ FastBuffer底层对应的ArrayBuffer对象。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-FastBuffer-buffer: ArrayBuffer--><!--Device-FastBuffer-buffer: ArrayBuffer-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## byteOffset
@@ -2735,6 +2861,8 @@ byteOffset: number
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-FastBuffer-byteOffset: number--><!--Device-FastBuffer-byteOffset: number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## length
@@ -2750,5 +2878,7 @@ FastBuffer对象的字节长度。
 **起始版本：** 20
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-FastBuffer-length: number--><!--Device-FastBuffer-length: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

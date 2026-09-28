@@ -14,6 +14,8 @@ interface ScanFilter
 
 **替代接口：** [ScanFilter](arkts-connectivity-bluetoothmanager-scanfilter-i.md)
 
+<!--Device-bluetooth-interface ScanFilter--><!--Device-bluetooth-interface ScanFilter-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -38,6 +40,8 @@ deviceId?: string
 
 **替代接口：** [deviceId](arkts-connectivity-bluetoothmanager-scanfilter-i.md#deviceid)
 
+<!--Device-ScanFilter-deviceId?: string--><!--Device-ScanFilter-deviceId?: string-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## name
@@ -56,6 +60,8 @@ name?: string
 
 **替代接口：** [name](arkts-connectivity-bluetoothmanager-scanfilter-i.md#name)
 
+<!--Device-ScanFilter-name?: string--><!--Device-ScanFilter-name?: string-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## serviceUuid
@@ -73,5 +79,7 @@ serviceUuid?: string
 **废弃版本：** 9
 
 **替代接口：** [serviceUuid](arkts-connectivity-bluetoothmanager-scanfilter-i.md#serviceuuid)
+
+<!--Device-ScanFilter-serviceUuid?: string--><!--Device-ScanFilter-serviceUuid?: string-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

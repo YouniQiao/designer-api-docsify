@@ -24,6 +24,8 @@ function sppConnect(device: string, option: SppOption, callback: AsyncCallback<n
 
 **需要权限：** ohos.permission.USE_BLUETOOTH
 
+<!--Device-bluetooth-function sppConnect(device: string, option: SppOption, callback: AsyncCallback<number>): void--><!--Device-bluetooth-function sppConnect(device: string, option: SppOption, callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**

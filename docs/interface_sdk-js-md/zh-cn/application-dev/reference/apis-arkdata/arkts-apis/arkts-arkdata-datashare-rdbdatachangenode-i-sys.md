@@ -8,6 +8,8 @@ interface RdbDataChangeNode
 
 **起始版本：** 10
 
+<!--Device-dataShare-interface RdbDataChangeNode--><!--Device-dataShare-interface RdbDataChangeNode-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ data: Array<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RdbDataChangeNode-data: Array<string>--><!--Device-RdbDataChangeNode-data: Array<string>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -50,6 +54,8 @@ templateId: TemplateId
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RdbDataChangeNode-templateId: TemplateId--><!--Device-RdbDataChangeNode-templateId: TemplateId-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -67,6 +73,8 @@ uri: string
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-RdbDataChangeNode-uri: string--><!--Device-RdbDataChangeNode-uri: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 

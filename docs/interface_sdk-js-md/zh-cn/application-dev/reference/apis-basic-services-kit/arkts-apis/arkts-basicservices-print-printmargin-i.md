@@ -8,6 +8,8 @@ interface PrintMargin
 
 **起始版本：** 24
 
+<!--Device-print-interface PrintMargin--><!--Device-print-interface PrintMargin-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## 导入模块
@@ -28,6 +30,8 @@ bottom?: number
 
 **起始版本：** 24
 
+<!--Device-PrintMargin-bottom?: int--><!--Device-PrintMargin-bottom?: int-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## left
@@ -41,6 +45,8 @@ left?: number
 **类型：** number
 
 **起始版本：** 24
+
+<!--Device-PrintMargin-left?: int--><!--Device-PrintMargin-left?: int-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -56,6 +62,8 @@ right?: number
 
 **起始版本：** 24
 
+<!--Device-PrintMargin-right?: int--><!--Device-PrintMargin-right?: int-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## top
@@ -69,5 +77,7 @@ top?: number
 **类型：** number
 
 **起始版本：** 24
+
+<!--Device-PrintMargin-top?: int--><!--Device-PrintMargin-top?: int-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework

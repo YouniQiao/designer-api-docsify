@@ -8,6 +8,8 @@ enum ShareType
 
 **起始版本：** 11
 
+<!--Device-pbap-enum ShareType--><!--Device-pbap-enum ShareType-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -21,6 +23,8 @@ SHARE_NAME_AND_PHONE_NUMBER = 0
 共享名字和号码信息。
 
 **起始版本：** 11
+
+<!--Device-ShareType-SHARE_NAME_AND_PHONE_NUMBER = 0--><!--Device-ShareType-SHARE_NAME_AND_PHONE_NUMBER = 0-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -36,6 +40,8 @@ SHARE_ALL = 1
 
 **起始版本：** 11
 
+<!--Device-ShareType-SHARE_ALL = 1--><!--Device-ShareType-SHARE_ALL = 1-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +55,8 @@ SHARE_NOTHING = 2
 不共享。
 
 **起始版本：** 11
+
+<!--Device-ShareType-SHARE_NOTHING = 2--><!--Device-ShareType-SHARE_NOTHING = 2-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

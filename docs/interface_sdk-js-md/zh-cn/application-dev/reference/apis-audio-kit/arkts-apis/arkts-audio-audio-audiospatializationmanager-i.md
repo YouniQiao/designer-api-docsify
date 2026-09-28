@@ -10,6 +10,8 @@ interface AudioSpatializationManager
 
 **起始版本：** 18
 
+<!--Device-audio-interface AudioSpatializationManager--><!--Device-audio-interface AudioSpatializationManager-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 ## 导入模块
@@ -27,6 +29,8 @@ isSpatializationEnabledForCurrentDevice(): boolean
 获取当前设备空间音频渲染是否开启。同步返回结果。
 
 **起始版本：** 18
+
+<!--Device-AudioSpatializationManager-isSpatializationEnabledForCurrentDevice(): boolean--><!--Device-AudioSpatializationManager-isSpatializationEnabledForCurrentDevice(): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -53,6 +57,8 @@ off(type: 'spatializationEnabledChangeForCurrentDevice', callback?: Callback<boo
 取消监听当前设备空间音频渲染开关状态变化事件。
 
 **起始版本：** 18
+
+<!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChangeForCurrentDevice', callback?: Callback<boolean>): void--><!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChangeForCurrentDevice', callback?: Callback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -94,6 +100,8 @@ on(type: 'spatializationEnabledChangeForCurrentDevice', callback: Callback<boole
 监听当前设备空间音频渲染开关状态变化事件。使用callback异步回调。
 
 **起始版本：** 18
+
+<!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChangeForCurrentDevice', callback: Callback<boolean>): void--><!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChangeForCurrentDevice', callback: Callback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 

@@ -18,6 +18,8 @@ function subscribe(info: NotificationExtensionSubscriptionInfo[]): Promise<void>
 
 **需要权限：** ohos.permission.SUBSCRIBE_NOTIFICATION
 
+<!--Device-notificationExtensionSubscription-function subscribe(info: NotificationExtensionSubscriptionInfo[]): Promise<void>--><!--Device-notificationExtensionSubscription-function subscribe(info: NotificationExtensionSubscriptionInfo[]): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **参见：**

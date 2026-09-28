@@ -18,6 +18,8 @@ function getSharingState(type: SharingIfaceType, callback: AsyncCallback<Sharing
 
 **需要权限：** ohos.permission.CONNECTIVITY_INTERNAL
 
+<!--Device-sharing-function getSharingState(type: SharingIfaceType, callback: AsyncCallback<SharingIfaceState>): void--><!--Device-sharing-function getSharingState(type: SharingIfaceType, callback: AsyncCallback<SharingIfaceState>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.NetSharing
 
 **系统接口：** 此接口为系统接口。
@@ -67,6 +69,8 @@ function getSharingState(type: SharingIfaceType): Promise<SharingIfaceState>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.CONNECTIVITY_INTERNAL
+
+<!--Device-sharing-function getSharingState(type: SharingIfaceType): Promise<SharingIfaceState>--><!--Device-sharing-function getSharingState(type: SharingIfaceType): Promise<SharingIfaceState>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.NetSharing
 

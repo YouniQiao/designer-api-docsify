@@ -8,6 +8,8 @@ interface GetDomainAccountInfoOptions
 
 **起始版本：** 10
 
+<!--Device-osAccount-interface GetDomainAccountInfoOptions--><!--Device-osAccount-interface GetDomainAccountInfoOptions-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ accountName: string
 
 **起始版本：** 10
 
+<!--Device-GetDomainAccountInfoOptions-accountName: string--><!--Device-GetDomainAccountInfoOptions-accountName: string-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -46,6 +50,8 @@ domain?: string
 
 **起始版本：** 10
 
+<!--Device-GetDomainAccountInfoOptions-domain?: string--><!--Device-GetDomainAccountInfoOptions-domain?: string-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +67,8 @@ serverConfigId?: string
 **类型：** string
 
 **起始版本：** 12
+
+<!--Device-GetDomainAccountInfoOptions-serverConfigId?: string--><!--Device-GetDomainAccountInfoOptions-serverConfigId?: string-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 

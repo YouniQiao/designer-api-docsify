@@ -16,6 +16,8 @@ function hasCall(callback: AsyncCallback<boolean>): void
 
 **起始版本：** 6
 
+<!--Device-call-function hasCall(callback: AsyncCallback<boolean>): void--><!--Device-call-function hasCall(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **参数：**
@@ -50,6 +52,8 @@ function hasCall(): Promise<boolean>
 判断是否存在通话。使用Promise异步回调。
 
 **起始版本：** 6
+
+<!--Device-call-function hasCall(): Promise<boolean>--><!--Device-call-function hasCall(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 

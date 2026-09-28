@@ -10,6 +10,8 @@ interface LinearAccelerometerResponse extends Response
 
 **起始版本：** 8
 
+<!--Device-sensor-interface LinearAccelerometerResponse extends Response--><!--Device-sensor-interface LinearAccelerometerResponse extends Response-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## 导入模块
@@ -30,6 +32,8 @@ x: number
 
 **起始版本：** 8
 
+<!--Device-LinearAccelerometerResponse-x: double--><!--Device-LinearAccelerometerResponse-x: double-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## y
@@ -44,6 +48,8 @@ y: number
 
 **起始版本：** 8
 
+<!--Device-LinearAccelerometerResponse-y: double--><!--Device-LinearAccelerometerResponse-y: double-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## z
@@ -57,5 +63,7 @@ z: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-LinearAccelerometerResponse-z: double--><!--Device-LinearAccelerometerResponse-z: double-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor

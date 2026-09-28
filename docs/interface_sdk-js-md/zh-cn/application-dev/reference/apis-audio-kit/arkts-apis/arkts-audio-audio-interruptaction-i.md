@@ -16,6 +16,8 @@ interface InterruptAction
 
 **替代接口：** [InterruptEvent](arkts-audio-audio-interruptevent-i.md)
 
+<!--Device-audio-interface InterruptAction--><!--Device-audio-interface InterruptAction-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 ## 导入模块
@@ -40,6 +42,8 @@ actionType: InterruptActionType
 
 **替代接口：** eventType
 
+<!--Device-InterruptAction-actionType: InterruptActionType--><!--Device-InterruptAction-actionType: InterruptActionType-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 ## activated
@@ -57,6 +61,8 @@ activated?: boolean
 **废弃版本：** 9
 
 **替代接口：** [hintType](arkts-audio-audio-interruptevent-i.md#hinttype)
+
+<!--Device-InterruptAction-activated?: boolean--><!--Device-InterruptAction-activated?: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -76,6 +82,8 @@ hint?: InterruptHint
 
 **替代接口：** [hintType](arkts-audio-audio-interruptevent-i.md#hinttype)
 
+<!--Device-InterruptAction-hint?: InterruptHint--><!--Device-InterruptAction-hint?: InterruptHint-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 ## type
@@ -93,5 +101,7 @@ type?: InterruptType
 **废弃版本：** 9
 
 **替代接口：** eventType
+
+<!--Device-InterruptAction-type?: InterruptType--><!--Device-InterruptAction-type?: InterruptType-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer

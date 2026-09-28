@@ -25,6 +25,8 @@ function installScopeFont(url: string, scope: FontScope): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-fontManager-function installScopeFont(url: string, scope: FontScope): Promise<void>--><!--Device-fontManager-function installScopeFont(url: string, scope: FontScope): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Global.FontManager
 
 **参数：**

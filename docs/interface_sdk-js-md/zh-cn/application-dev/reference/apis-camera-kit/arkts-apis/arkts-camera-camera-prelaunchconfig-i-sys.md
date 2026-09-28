@@ -8,6 +8,8 @@ Defines the camera prelaunch configuration. Currently, the configuration is used
 
 **起始版本：** 10
 
+<!--Device-camera-interface PrelaunchConfig--><!--Device-camera-interface PrelaunchConfig-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ Activation time, in minutes.
 
 **起始版本：** 11
 
+<!--Device-PrelaunchConfig-activeTime?: int--><!--Device-PrelaunchConfig-activeTime?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ Camera device.
 **类型：** [CameraDevice](arkts-camera-camera-cameradevice-i.md)
 
 **起始版本：** 10
+
+<!--Device-PrelaunchConfig-cameraDevice: CameraDevice--><!--Device-PrelaunchConfig-cameraDevice: CameraDevice-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -62,6 +68,8 @@ Type of the parameter used for prelaunch.
 
 **起始版本：** 11
 
+<!--Device-PrelaunchConfig-restoreParamType?: RestoreParamType--><!--Device-PrelaunchConfig-restoreParamType?: RestoreParamType-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +85,8 @@ Setting parameter.
 **类型：** [SettingParam](arkts-camera-camera-settingparam-i-sys.md)
 
 **起始版本：** 11
+
+<!--Device-PrelaunchConfig-settingParam?: SettingParam--><!--Device-PrelaunchConfig-settingParam?: SettingParam-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

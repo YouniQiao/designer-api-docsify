@@ -8,6 +8,8 @@ This module provides the capability to interact with system command-line interfa
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-unnamed-declare namespace cliManager--><!--Device-unnamed-declare namespace cliManager-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 ## Modules to Import

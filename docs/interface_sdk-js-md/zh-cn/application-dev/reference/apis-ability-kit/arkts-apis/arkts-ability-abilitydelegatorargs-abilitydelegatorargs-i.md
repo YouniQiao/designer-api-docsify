@@ -12,6 +12,8 @@ AbilityDelegatorArgs模块提供在应用程序执行测试用例期间，获取
 
 **起始版本：** 8
 
+<!--Device-unnamed-export interface AbilityDelegatorArgs--><!--Device-unnamed-export interface AbilityDelegatorArgs-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **测试接口：** 此接口仅在自动化测试脚本中使用。
@@ -28,7 +30,9 @@ bundleName: string
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-AbilityDelegatorArgs-bundleName: string--><!--Device-AbilityDelegatorArgs-bundleName: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -44,7 +48,9 @@ parameters: Record<string, string>
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-AbilityDelegatorArgs-parameters: Record<string, string>--><!--Device-AbilityDelegatorArgs-parameters: Record<string, string>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -60,7 +66,9 @@ testCaseNames: string
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-AbilityDelegatorArgs-testCaseNames: string--><!--Device-AbilityDelegatorArgs-testCaseNames: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -76,6 +84,8 @@ testRunnerClassName: string
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-AbilityDelegatorArgs-testRunnerClassName: string--><!--Device-AbilityDelegatorArgs-testRunnerClassName: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

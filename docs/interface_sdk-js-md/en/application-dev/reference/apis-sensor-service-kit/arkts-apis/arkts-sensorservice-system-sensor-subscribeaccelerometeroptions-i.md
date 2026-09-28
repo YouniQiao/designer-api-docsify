@@ -14,6 +14,8 @@ Sets the parameters for subscribing to the acceleration sensor, including the ca
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 
+<!--Device-unnamed-export interface subscribeAccelerometerOptions--><!--Device-unnamed-export interface subscribeAccelerometerOptions-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 ## Modules to Import
@@ -39,6 +41,8 @@ Callback invoked when an API call fails. The callback parameters are **data** of
 **Required permissions:** ohos.permission.ACCELEROMETER
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-subscribeAccelerometerOptions-fail?: (data: string, code: number) => void--><!--Device-subscribeAccelerometerOptions-fail?: (data: string, code: number) => void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
@@ -66,6 +70,8 @@ Callback function invoked when the acceleration sensor data changes. The callbac
 **Required permissions:** ohos.permission.ACCELEROMETER
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-subscribeAccelerometerOptions-success: (data: AccelerometerResponse) => void--><!--Device-subscribeAccelerometerOptions-success: (data: AccelerometerResponse) => void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
@@ -102,5 +108,7 @@ Possible values:
 **Required permissions:** ohos.permission.ACCELEROMETER
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-subscribeAccelerometerOptions-interval: string--><!--Device-subscribeAccelerometerOptions-interval: string-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite

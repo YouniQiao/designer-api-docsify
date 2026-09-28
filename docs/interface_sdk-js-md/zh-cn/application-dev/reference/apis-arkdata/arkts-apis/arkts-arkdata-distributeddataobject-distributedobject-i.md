@@ -15,6 +15,8 @@ interface DistributedObject
 
 **替代接口：** null
 
+<!--Device-distributedDataObject-interface DistributedObject--><!--Device-distributedDataObject-interface DistributedObject-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 ## 导入模块
@@ -36,6 +38,8 @@ off(type: 'change', callback?: (sessionId: string, fields: Array<string>) => voi
 **废弃版本：** 9
 
 **替代接口：** [off](arkts-arkdata-distributeddataobject-dataobject-i.md#offchange)(type: 'change', callback?: (sessionId: string, fields: Array&lt;string&gt;) =&gt; void )
+
+<!--Device-DistributedObject-off(type: 'change', callback?: (sessionId: string, fields: Array<string>) => void): void--><!--Device-DistributedObject-off(type: 'change', callback?: (sessionId: string, fields: Array<string>) => void): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -93,6 +97,8 @@ off(
 
 **替代接口：** [off](arkts-arkdata-distributeddataobject-dataobject-i.md#offstatus)( type: 'status', callback?: (sessionId: string, networkId: string, status: 'online' | 'offline') =&gt; void )
 
+<!--Device-DistributedObject-off(      type: 'status',      callback?: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void    ): void--><!--Device-DistributedObject-off(      type: 'status',      callback?: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void    ): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **参数：**
@@ -140,6 +146,8 @@ on(type: 'change', callback: (sessionId: string, fields: Array<string>) => void)
 **废弃版本：** 9
 
 **替代接口：** [on](arkts-arkdata-distributeddataobject-dataobject-i.md#onchange)(type: 'change', callback: (sessionId: string, fields: Array&lt;string&gt;) =&gt; void )
+
+<!--Device-DistributedObject-on(type: 'change', callback: (sessionId: string, fields: Array<string>) => void): void--><!--Device-DistributedObject-on(type: 'change', callback: (sessionId: string, fields: Array<string>) => void): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -194,6 +202,8 @@ on(
 
 **替代接口：** [on](arkts-arkdata-distributeddataobject-dataobject-i.md#onstatus)( type: 'status', callback: (sessionId: string, networkId: string, status: 'online' | 'offline') =&gt; void )
 
+<!--Device-DistributedObject-on(      type: 'status',      callback: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void    ): void--><!--Device-DistributedObject-on(      type: 'status',      callback: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void    ): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **参数：**
@@ -241,6 +251,8 @@ setSessionId(sessionId?: string): boolean
 **替代接口：** [setSessionId](arkts-arkdata-distributeddataobject-dataobject-i.md#setsessionid)(sessionId: string, callback: AsyncCallback&lt;void&gt;)
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DistributedObject-setSessionId(sessionId?: string): boolean--><!--Device-DistributedObject-setSessionId(sessionId?: string): boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 8
 
+<!--Device-unnamed-declare namespace thermal--><!--Device-unnamed-declare namespace thermal-End-->
+
 **系统能力：** SystemCapability.PowerManager.ThermalManager
 
 ## 导入模块

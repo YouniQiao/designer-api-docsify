@@ -16,6 +16,8 @@ function getCurrentInputMethodSubtype(): InputMethodSubtype
 
 **起始版本：** 9
 
+<!--Device-inputMethod-function getCurrentInputMethodSubtype(): InputMethodSubtype--><!--Device-inputMethod-function getCurrentInputMethodSubtype(): InputMethodSubtype-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**

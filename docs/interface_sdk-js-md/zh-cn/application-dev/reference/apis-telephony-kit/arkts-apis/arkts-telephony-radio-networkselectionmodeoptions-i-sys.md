@@ -8,6 +8,8 @@ Obtains the network selection mode option.
 
 **起始版本：** 6
 
+<!--Device-radio-export interface NetworkSelectionModeOptions--><!--Device-radio-export interface NetworkSelectionModeOptions-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ Indicates the network information.
 
 **起始版本：** 6
 
+<!--Device-NetworkSelectionModeOptions-networkInformation: NetworkInformation--><!--Device-NetworkSelectionModeOptions-networkInformation: NetworkInformation-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ Indicates whether to continue selecting the network selection mode.
 **类型：** boolean
 
 **起始版本：** 6
+
+<!--Device-NetworkSelectionModeOptions-resumeSelection: boolean--><!--Device-NetworkSelectionModeOptions-resumeSelection: boolean-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -62,6 +68,8 @@ Indicates the network search mode of the SIM card.
 
 **起始版本：** 6
 
+<!--Device-NetworkSelectionModeOptions-selectMode: NetworkSelectionMode--><!--Device-NetworkSelectionModeOptions-selectMode: NetworkSelectionMode-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +85,8 @@ Indicates the card slot index number, ranging from 0 to the maximum card slot in
 **类型：** number
 
 **起始版本：** 6
+
+<!--Device-NetworkSelectionModeOptions-slotId: int--><!--Device-NetworkSelectionModeOptions-slotId: int-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

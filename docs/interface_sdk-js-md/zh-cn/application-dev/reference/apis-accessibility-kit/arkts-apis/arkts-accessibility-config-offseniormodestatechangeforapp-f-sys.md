@@ -20,6 +20,8 @@ function offSeniorModeStateChangeForApp(callback?: Callback<AppSeniorModeInfo>):
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-config-function offSeniorModeStateChangeForApp(callback?: Callback<AppSeniorModeInfo>): void--><!--Device-config-function offSeniorModeStateChangeForApp(callback?: Callback<AppSeniorModeInfo>): void-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。

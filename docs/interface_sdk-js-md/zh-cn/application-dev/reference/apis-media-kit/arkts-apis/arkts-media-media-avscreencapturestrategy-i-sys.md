@@ -8,6 +8,8 @@ interface AVScreenCaptureStrategy
 
 **起始版本：** 20
 
+<!--Device-media-interface AVScreenCaptureStrategy--><!--Device-media-interface AVScreenCaptureStrategy-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 ## 导入模块
@@ -29,6 +31,8 @@ enableDeviceLevelCapture?: boolean
 **默认值：** false
 
 **起始版本：** 20
+
+<!--Device-AVScreenCaptureStrategy-enableDeviceLevelCapture?: boolean--><!--Device-AVScreenCaptureStrategy-enableDeviceLevelCapture?: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 

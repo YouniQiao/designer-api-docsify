@@ -32,6 +32,8 @@ You are advised to use the [getSystemFontFullNamesByType](../../apis-arkgraphics
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-font-function getSystemFontList(): Array<string>--><!--Device-font-function getSystemFontList(): Array<string>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**

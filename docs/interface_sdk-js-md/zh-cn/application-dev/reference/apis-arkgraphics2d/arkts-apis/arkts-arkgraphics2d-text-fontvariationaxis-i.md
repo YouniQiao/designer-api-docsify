@@ -8,6 +8,8 @@ interface FontVariationAxis
 
 **起始版本：** 24
 
+<!--Device-text-interface FontVariationAxis--><!--Device-text-interface FontVariationAxis-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## 导入模块
@@ -28,7 +30,9 @@ defaultValue: number
 
 **起始版本：** 24
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-FontVariationAxis-defaultValue: double--><!--Device-FontVariationAxis-defaultValue: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -44,7 +48,9 @@ flags: number
 
 **起始版本：** 24
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-FontVariationAxis-flags: int--><!--Device-FontVariationAxis-flags: int-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -60,7 +66,9 @@ key: string
 
 **起始版本：** 24
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-FontVariationAxis-key: string--><!--Device-FontVariationAxis-key: string-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -76,7 +84,9 @@ localName: string
 
 **起始版本：** 24
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-FontVariationAxis-localName: string--><!--Device-FontVariationAxis-localName: string-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -92,7 +102,9 @@ maxValue: number
 
 **起始版本：** 24
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-FontVariationAxis-maxValue: double--><!--Device-FontVariationAxis-maxValue: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -108,7 +120,9 @@ minValue: number
 
 **起始版本：** 24
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-FontVariationAxis-minValue: double--><!--Device-FontVariationAxis-minValue: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -124,6 +138,8 @@ name: string
 
 **起始版本：** 24
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-FontVariationAxis-name: string--><!--Device-FontVariationAxis-name: string-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing

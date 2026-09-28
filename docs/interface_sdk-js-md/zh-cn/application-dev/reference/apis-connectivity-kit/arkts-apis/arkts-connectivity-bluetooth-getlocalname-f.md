@@ -24,6 +24,8 @@ function getLocalName(): string
 
 **需要权限：** ohos.permission.USE_BLUETOOTH
 
+<!--Device-bluetooth-function getLocalName(): string--><!--Device-bluetooth-function getLocalName(): string-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **返回值：**

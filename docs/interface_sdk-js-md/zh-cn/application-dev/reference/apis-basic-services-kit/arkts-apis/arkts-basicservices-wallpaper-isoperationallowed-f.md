@@ -21,6 +21,8 @@ function isOperationAllowed(callback: AsyncCallback<boolean>): void
 
 **废弃版本：** 9
 
+<!--Device-wallpaper-function isOperationAllowed(callback: AsyncCallback<boolean>): void--><!--Device-wallpaper-function isOperationAllowed(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
 **参数：**
@@ -60,6 +62,8 @@ function isOperationAllowed(): Promise<boolean>
 **起始版本：** 7
 
 **废弃版本：** 9
+
+<!--Device-wallpaper-function isOperationAllowed(): Promise<boolean>--><!--Device-wallpaper-function isOperationAllowed(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 

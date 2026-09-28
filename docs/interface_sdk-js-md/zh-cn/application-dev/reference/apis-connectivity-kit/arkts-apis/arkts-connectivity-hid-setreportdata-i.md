@@ -8,6 +8,8 @@ interface SetReportData
 
 **起始版本：** 23
 
+<!--Device-hid-interface SetReportData--><!--Device-hid-interface SetReportData-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ data: Uint8Array
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SetReportData-data: Uint8Array--><!--Device-SetReportData-data: Uint8Array-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## id
@@ -46,6 +50,8 @@ id: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SetReportData-id: int--><!--Device-SetReportData-id: int-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## type
@@ -61,5 +67,7 @@ type: ReportType
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SetReportData-type: ReportType--><!--Device-SetReportData-type: ReportType-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

@@ -16,6 +16,8 @@ function createA2dpSrcProfile(): A2dpSourceProfile
 
 **起始版本：** 10
 
+<!--Device-a2dp-function createA2dpSrcProfile(): A2dpSourceProfile--><!--Device-a2dp-function createA2dpSrcProfile(): A2dpSourceProfile-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **返回值：**

@@ -17,6 +17,8 @@ export class RowLayoutAlgorithm implements LayoutAlgorithm
 
 **装饰器类型：** @ObservedV2
 
+<!--Device-unnamed-export class RowLayoutAlgorithm implements LayoutAlgorithm--><!--Device-unnamed-export class RowLayoutAlgorithm implements LayoutAlgorithm-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
@@ -34,6 +36,8 @@ constructor(option?: RowLayoutAlgorithmOptions)
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本24开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-RowLayoutAlgorithm-constructor(option?: RowLayoutAlgorithmOptions)--><!--Device-RowLayoutAlgorithm-constructor(option?: RowLayoutAlgorithmOptions)-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -71,6 +75,8 @@ public alignItems?: VerticalAlign
 
 **卡片能力：** 从API版本24开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-RowLayoutAlgorithm-public alignItems?: VerticalAlign--><!--Device-RowLayoutAlgorithm-public alignItems?: VerticalAlign-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## isReverse
@@ -96,6 +102,8 @@ public isReverse?: boolean
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本24开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-RowLayoutAlgorithm-public isReverse?: boolean--><!--Device-RowLayoutAlgorithm-public isReverse?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -123,6 +131,8 @@ public justifyContent?: FlexAlign
 
 **卡片能力：** 从API版本24开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-RowLayoutAlgorithm-public justifyContent?: FlexAlign--><!--Device-RowLayoutAlgorithm-public justifyContent?: FlexAlign-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## space
@@ -148,5 +158,7 @@ public space?: LengthMetrics
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本24开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-RowLayoutAlgorithm-public space?: LengthMetrics--><!--Device-RowLayoutAlgorithm-public space?: LengthMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

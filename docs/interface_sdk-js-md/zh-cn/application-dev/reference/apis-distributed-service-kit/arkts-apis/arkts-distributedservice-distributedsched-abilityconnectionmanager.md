@@ -6,6 +6,8 @@ abilityConnectionManager模块提供了应用协同接口管理能力。设备�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-unnamed-declare namespace abilityConnectionManager--><!--Device-unnamed-declare namespace abilityConnectionManager-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 ## 导入模块

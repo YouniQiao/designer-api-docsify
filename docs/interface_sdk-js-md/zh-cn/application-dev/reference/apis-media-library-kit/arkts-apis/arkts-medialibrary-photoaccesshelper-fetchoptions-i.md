@@ -8,6 +8,8 @@ interface FetchOptions
 
 **起始版本：** 10
 
+<!--Device-photoAccessHelper-interface FetchOptions--><!--Device-photoAccessHelper-interface FetchOptions-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
@@ -32,7 +34,9 @@ fetchColumns: Array<string>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-FetchOptions-fetchColumns: Array<string>--><!--Device-FetchOptions-fetchColumns: Array<string>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -48,6 +52,8 @@ predicates: dataSharePredicates.DataSharePredicates
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-FetchOptions-predicates: dataSharePredicates.DataSharePredicates--><!--Device-FetchOptions-predicates: dataSharePredicates.DataSharePredicates-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core

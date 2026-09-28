@@ -8,6 +8,8 @@ Dng图像元数据类，用于存储图像的元数据。
 
 **起始版本：** 24
 
+<!--Device-image-class DngMetadata--><!--Device-image-class DngMetadata-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ readonly activeArea?: number[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngMetadata-readonly activeArea?: int[]--><!--Device-DngMetadata-readonly activeArea?: int[]-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## analogBalance
@@ -45,6 +49,8 @@ readonly analogBalance?: number[]
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngMetadata-readonly analogBalance?: double[]--><!--Device-DngMetadata-readonly analogBalance?: double[]-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -62,6 +68,8 @@ readonly antiAliasStrength?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngMetadata-readonly antiAliasStrength?: double--><!--Device-DngMetadata-readonly antiAliasStrength?: double-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## asShotICCProfile
@@ -77,6 +85,8 @@ readonly asShotICCProfile?: ArrayBuffer
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngMetadata-readonly asShotICCProfile?: ArrayBuffer--><!--Device-DngMetadata-readonly asShotICCProfile?: ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -94,6 +104,8 @@ readonly asShotNeutral?: number[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngMetadata-readonly asShotNeutral?: double[]--><!--Device-DngMetadata-readonly asShotNeutral?: double[]-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## asShotPreProfileMatrix
@@ -109,6 +121,8 @@ readonly asShotPreProfileMatrix?: number[]
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngMetadata-readonly asShotPreProfileMatrix?: double[]--><!--Device-DngMetadata-readonly asShotPreProfileMatrix?: double[]-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -126,6 +140,8 @@ readonly asShotProfileName?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngMetadata-readonly asShotProfileName?: string--><!--Device-DngMetadata-readonly asShotProfileName?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## asShotWhiteXY
@@ -141,6 +157,8 @@ readonly asShotWhiteXY?: number[]
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngMetadata-readonly asShotWhiteXY?: double[]--><!--Device-DngMetadata-readonly asShotWhiteXY?: double[]-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -158,6 +176,8 @@ readonly baselineExposure?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngMetadata-readonly baselineExposure?: double--><!--Device-DngMetadata-readonly baselineExposure?: double-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## baselineExposureOffset
@@ -173,6 +193,8 @@ readonly baselineExposureOffset?: number
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngMetadata-readonly baselineExposureOffset?: double--><!--Device-DngMetadata-readonly baselineExposureOffset?: double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -190,6 +212,8 @@ readonly baselineNoise?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngMetadata-readonly baselineNoise?: double--><!--Device-DngMetadata-readonly baselineNoise?: double-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## baselineSharpness
@@ -205,6 +229,8 @@ readonly baselineSharpness?: number
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngMetadata-readonly baselineSharpness?: double--><!--Device-DngMetadata-readonly baselineSharpness?: double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -222,6 +248,8 @@ Bayer图像中两个绿色通道的分离程度。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngMetadata-readonly bayerGreenSplit?: int--><!--Device-DngMetadata-readonly bayerGreenSplit?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## bestQualityScale
@@ -237,6 +265,8 @@ readonly bestQualityScale?: number
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngMetadata-readonly bestQualityScale?: double--><!--Device-DngMetadata-readonly bestQualityScale?: double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -254,6 +284,8 @@ readonly blackLevel?: number[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngMetadata-readonly blackLevel?: double[]--><!--Device-DngMetadata-readonly blackLevel?: double[]-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## blackLevelDeltaH
@@ -269,6 +301,8 @@ readonly blackLevelDeltaH?: number[]
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngMetadata-readonly blackLevelDeltaH?: double[]--><!--Device-DngMetadata-readonly blackLevelDeltaH?: double[]-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -286,6 +320,8 @@ readonly blackLevelDeltaV?: number[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngMetadata-readonly blackLevelDeltaV?: double[]--><!--Device-DngMetadata-readonly blackLevelDeltaV?: double[]-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## blackLevelRepeatDim
@@ -301,6 +337,8 @@ readonly blackLevelRepeatDim?: number[]
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngMetadata-readonly blackLevelRepeatDim?: int[]--><!--Device-DngMetadata-readonly blackLevelRepeatDim?: int[]-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -318,6 +356,8 @@ readonly calibrationIlluminant1?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngMetadata-readonly calibrationIlluminant1?: int--><!--Device-DngMetadata-readonly calibrationIlluminant1?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## calibrationIlluminant2
@@ -333,6 +373,8 @@ readonly calibrationIlluminant2?: number
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngMetadata-readonly calibrationIlluminant2?: int--><!--Device-DngMetadata-readonly calibrationIlluminant2?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -350,6 +392,8 @@ readonly cameraCalibration1?: number[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngMetadata-readonly cameraCalibration1?: double[]--><!--Device-DngMetadata-readonly cameraCalibration1?: double[]-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## cameraCalibration2
@@ -365,6 +409,8 @@ readonly cameraCalibration2?: number[]
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngMetadata-readonly cameraCalibration2?: double[]--><!--Device-DngMetadata-readonly cameraCalibration2?: double[]-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -382,6 +428,8 @@ readonly cameraCalibrationSignature?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngMetadata-readonly cameraCalibrationSignature?: string--><!--Device-DngMetadata-readonly cameraCalibrationSignature?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## cameraSerialNumber
@@ -397,6 +445,8 @@ readonly cameraSerialNumber?: string
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngMetadata-readonly cameraSerialNumber?: string--><!--Device-DngMetadata-readonly cameraSerialNumber?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -414,6 +464,8 @@ CFA（Color Filter Array）布局类型。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngMetadata-readonly cfaLayout?: int--><!--Device-DngMetadata-readonly cfaLayout?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## cfaPlaneColor
@@ -429,6 +481,8 @@ CFA（Color Filter Array）各平面的颜色通道定义。
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngMetadata-readonly cfaPlaneColor?: int[]--><!--Device-DngMetadata-readonly cfaPlaneColor?: int[]-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -446,6 +500,8 @@ readonly chromaBlurRadius?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngMetadata-readonly chromaBlurRadius?: double--><!--Device-DngMetadata-readonly chromaBlurRadius?: double-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## colorimetricReference
@@ -461,6 +517,8 @@ readonly colorimetricReference?: number
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngMetadata-readonly colorimetricReference?: int--><!--Device-DngMetadata-readonly colorimetricReference?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -478,6 +536,8 @@ readonly colorMatrix1?: number[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngMetadata-readonly colorMatrix1?: double[]--><!--Device-DngMetadata-readonly colorMatrix1?: double[]-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## colorMatrix2
@@ -493,6 +553,8 @@ readonly colorMatrix2?: number[]
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngMetadata-readonly colorMatrix2?: double[]--><!--Device-DngMetadata-readonly colorMatrix2?: double[]-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -510,6 +572,8 @@ readonly currentICCProfile?: ArrayBuffer
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngMetadata-readonly currentICCProfile?: ArrayBuffer--><!--Device-DngMetadata-readonly currentICCProfile?: ArrayBuffer-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## currentPreProfileMatrix
@@ -525,6 +589,8 @@ readonly currentPreProfileMatrix?: number[]
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngMetadata-readonly currentPreProfileMatrix?: double[]--><!--Device-DngMetadata-readonly currentPreProfileMatrix?: double[]-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -542,6 +608,8 @@ readonly defaultBlackRender?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngMetadata-readonly defaultBlackRender?: int--><!--Device-DngMetadata-readonly defaultBlackRender?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## defaultCropOrigin
@@ -557,6 +625,8 @@ readonly defaultCropOrigin?: number[]
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngMetadata-readonly defaultCropOrigin?: double[]--><!--Device-DngMetadata-readonly defaultCropOrigin?: double[]-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -574,6 +644,8 @@ readonly defaultCropSize?: number[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngMetadata-readonly defaultCropSize?: int[]--><!--Device-DngMetadata-readonly defaultCropSize?: int[]-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## defaultScale
@@ -589,6 +661,8 @@ readonly defaultScale?: number[]
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngMetadata-readonly defaultScale?: double[]--><!--Device-DngMetadata-readonly defaultScale?: double[]-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -606,6 +680,8 @@ readonly defaultUserCrop?: number[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngMetadata-readonly defaultUserCrop?: int[]--><!--Device-DngMetadata-readonly defaultUserCrop?: int[]-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## dngBackwardVersion
@@ -621,6 +697,8 @@ DNG文件向后兼容的最低版本号。
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngMetadata-readonly dngBackwardVersion?: int[]--><!--Device-DngMetadata-readonly dngBackwardVersion?: int[]-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -638,6 +716,8 @@ readonly dngPrivateData?: ArrayBuffer
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngMetadata-readonly dngPrivateData?: ArrayBuffer--><!--Device-DngMetadata-readonly dngPrivateData?: ArrayBuffer-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## dngVersion
@@ -653,6 +733,8 @@ DNG图片的版本号。
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngMetadata-readonly dngVersion?: int[]--><!--Device-DngMetadata-readonly dngVersion?: int[]-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -670,6 +752,8 @@ readonly extraCameraProfiles?: number[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngMetadata-readonly extraCameraProfiles?: int[]--><!--Device-DngMetadata-readonly extraCameraProfiles?: int[]-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## forwardMatrix1
@@ -685,6 +769,8 @@ readonly forwardMatrix1?: number[]
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngMetadata-readonly forwardMatrix1?: double[]--><!--Device-DngMetadata-readonly forwardMatrix1?: double[]-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -702,6 +788,8 @@ readonly forwardMatrix2?: number[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngMetadata-readonly forwardMatrix2?: double[]--><!--Device-DngMetadata-readonly forwardMatrix2?: double[]-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## lensInfo
@@ -717,6 +805,8 @@ readonly lensInfo?: number[]
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngMetadata-readonly lensInfo?: double[]--><!--Device-DngMetadata-readonly lensInfo?: double[]-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -734,6 +824,8 @@ readonly linearizationTable?: number[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngMetadata-readonly linearizationTable?: int[]--><!--Device-DngMetadata-readonly linearizationTable?: int[]-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## linearResponseLimit
@@ -749,6 +841,8 @@ readonly linearResponseLimit?: number
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngMetadata-readonly linearResponseLimit?: double--><!--Device-DngMetadata-readonly linearResponseLimit?: double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -766,6 +860,8 @@ readonly localizedCameraModel?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngMetadata-readonly localizedCameraModel?: string--><!--Device-DngMetadata-readonly localizedCameraModel?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## makerNoteSafety
@@ -781,6 +877,8 @@ EXIF MakerNote是否安全可保留。true表示安全，false表示不安全。
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngMetadata-readonly makerNoteSafety?: boolean--><!--Device-DngMetadata-readonly makerNoteSafety?: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -798,6 +896,8 @@ readonly maskedAreas?: number[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngMetadata-readonly maskedAreas?: int[]--><!--Device-DngMetadata-readonly maskedAreas?: int[]-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## newRawImageDigest
@@ -813,6 +913,8 @@ readonly newRawImageDigest?: string
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngMetadata-readonly newRawImageDigest?: string--><!--Device-DngMetadata-readonly newRawImageDigest?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -830,6 +932,8 @@ readonly noiseProfile?: number[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngMetadata-readonly noiseProfile?: double[]--><!--Device-DngMetadata-readonly noiseProfile?: double[]-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## noiseReductionApplied
@@ -845,6 +949,8 @@ readonly noiseReductionApplied?: number
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngMetadata-readonly noiseReductionApplied?: double--><!--Device-DngMetadata-readonly noiseReductionApplied?: double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -862,6 +968,8 @@ readonly opcodeList1?: ArrayBuffer
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngMetadata-readonly opcodeList1?: ArrayBuffer--><!--Device-DngMetadata-readonly opcodeList1?: ArrayBuffer-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## opcodeList2
@@ -877,6 +985,8 @@ readonly opcodeList2?: ArrayBuffer
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngMetadata-readonly opcodeList2?: ArrayBuffer--><!--Device-DngMetadata-readonly opcodeList2?: ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -894,6 +1004,8 @@ readonly opcodeList3?: ArrayBuffer
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngMetadata-readonly opcodeList3?: ArrayBuffer--><!--Device-DngMetadata-readonly opcodeList3?: ArrayBuffer-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## originalBestQualityFinalSize
@@ -909,6 +1021,8 @@ readonly originalBestQualityFinalSize?: number[]
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngMetadata-readonly originalBestQualityFinalSize?: int[]--><!--Device-DngMetadata-readonly originalBestQualityFinalSize?: int[]-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -926,6 +1040,8 @@ readonly originalDefaultCropSize?: number[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngMetadata-readonly originalDefaultCropSize?: double[]--><!--Device-DngMetadata-readonly originalDefaultCropSize?: double[]-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## originalDefaultFinalSize
@@ -941,6 +1057,8 @@ readonly originalDefaultFinalSize?: number[]
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngMetadata-readonly originalDefaultFinalSize?: int[]--><!--Device-DngMetadata-readonly originalDefaultFinalSize?: int[]-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -958,6 +1076,8 @@ readonly originalRawFileData?: ArrayBuffer
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngMetadata-readonly originalRawFileData?: ArrayBuffer--><!--Device-DngMetadata-readonly originalRawFileData?: ArrayBuffer-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## originalRawFileDigest
@@ -973,6 +1093,8 @@ readonly originalRawFileDigest?: string
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngMetadata-readonly originalRawFileDigest?: string--><!--Device-DngMetadata-readonly originalRawFileDigest?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -990,6 +1112,8 @@ readonly originalRawFileName?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngMetadata-readonly originalRawFileName?: string--><!--Device-DngMetadata-readonly originalRawFileName?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## previewApplicationName
@@ -1005,6 +1129,8 @@ readonly previewApplicationName?: string
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngMetadata-readonly previewApplicationName?: string--><!--Device-DngMetadata-readonly previewApplicationName?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1022,6 +1148,8 @@ readonly previewApplicationVersion?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngMetadata-readonly previewApplicationVersion?: string--><!--Device-DngMetadata-readonly previewApplicationVersion?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## previewColorSpace
@@ -1037,6 +1165,8 @@ readonly previewColorSpace?: number
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngMetadata-readonly previewColorSpace?: int--><!--Device-DngMetadata-readonly previewColorSpace?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1054,6 +1184,8 @@ readonly previewDateTime?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngMetadata-readonly previewDateTime?: string--><!--Device-DngMetadata-readonly previewDateTime?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## previewSettingsDigest
@@ -1069,6 +1201,8 @@ readonly previewSettingsDigest?: string
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngMetadata-readonly previewSettingsDigest?: string--><!--Device-DngMetadata-readonly previewSettingsDigest?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1086,6 +1220,8 @@ readonly previewSettingsName?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngMetadata-readonly previewSettingsName?: string--><!--Device-DngMetadata-readonly previewSettingsName?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## profileCalibrationSignature
@@ -1101,6 +1237,8 @@ readonly profileCalibrationSignature?: string
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngMetadata-readonly profileCalibrationSignature?: string--><!--Device-DngMetadata-readonly profileCalibrationSignature?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1118,6 +1256,8 @@ readonly profileCopyright?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngMetadata-readonly profileCopyright?: string--><!--Device-DngMetadata-readonly profileCopyright?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## profileEmbedPolicy
@@ -1133,6 +1273,8 @@ readonly profileEmbedPolicy?: number
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngMetadata-readonly profileEmbedPolicy?: int--><!--Device-DngMetadata-readonly profileEmbedPolicy?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1150,6 +1292,8 @@ readonly profileHueSatMapData1?: number[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngMetadata-readonly profileHueSatMapData1?: double[]--><!--Device-DngMetadata-readonly profileHueSatMapData1?: double[]-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## profileHueSatMapData2
@@ -1165,6 +1309,8 @@ readonly profileHueSatMapData2?: number[]
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngMetadata-readonly profileHueSatMapData2?: double[]--><!--Device-DngMetadata-readonly profileHueSatMapData2?: double[]-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1182,6 +1328,8 @@ readonly profileHueSatMapDims?: number[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngMetadata-readonly profileHueSatMapDims?: int[]--><!--Device-DngMetadata-readonly profileHueSatMapDims?: int[]-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## profileHueSatMapEncoding
@@ -1197,6 +1345,8 @@ readonly profileHueSatMapEncoding?: number
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngMetadata-readonly profileHueSatMapEncoding?: int--><!--Device-DngMetadata-readonly profileHueSatMapEncoding?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1214,6 +1364,8 @@ readonly profileLookTableData?: number[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngMetadata-readonly profileLookTableData?: double[]--><!--Device-DngMetadata-readonly profileLookTableData?: double[]-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## profileLookTableDims
@@ -1229,6 +1381,8 @@ ProfileLookTableData的维度。
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngMetadata-readonly profileLookTableDims?: int[]--><!--Device-DngMetadata-readonly profileLookTableDims?: int[]-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1246,6 +1400,8 @@ readonly profileLookTableEncoding?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngMetadata-readonly profileLookTableEncoding?: int--><!--Device-DngMetadata-readonly profileLookTableEncoding?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## profileName
@@ -1261,6 +1417,8 @@ readonly profileName?: string
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngMetadata-readonly profileName?: string--><!--Device-DngMetadata-readonly profileName?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1278,6 +1436,8 @@ readonly profileToneCurve?: number[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngMetadata-readonly profileToneCurve?: double[]--><!--Device-DngMetadata-readonly profileToneCurve?: double[]-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## rawDataUniqueID
@@ -1293,6 +1453,8 @@ readonly rawDataUniqueID?: string
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngMetadata-readonly rawDataUniqueID?: string--><!--Device-DngMetadata-readonly rawDataUniqueID?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1310,6 +1472,8 @@ readonly rawImageDigest?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngMetadata-readonly rawImageDigest?: string--><!--Device-DngMetadata-readonly rawImageDigest?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## rawToPreviewGain
@@ -1325,6 +1489,8 @@ readonly rawToPreviewGain?: number
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngMetadata-readonly rawToPreviewGain?: double--><!--Device-DngMetadata-readonly rawToPreviewGain?: double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1342,6 +1508,8 @@ readonly reductionMatrix1?: number[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngMetadata-readonly reductionMatrix1?: double[]--><!--Device-DngMetadata-readonly reductionMatrix1?: double[]-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## reductionMatrix2
@@ -1357,6 +1525,8 @@ readonly reductionMatrix2?: number[]
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngMetadata-readonly reductionMatrix2?: double[]--><!--Device-DngMetadata-readonly reductionMatrix2?: double[]-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1374,6 +1544,8 @@ readonly rowInterleaveFactor?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngMetadata-readonly rowInterleaveFactor?: int--><!--Device-DngMetadata-readonly rowInterleaveFactor?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## shadowScale
@@ -1389,6 +1561,8 @@ readonly shadowScale?: number
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngMetadata-readonly shadowScale?: double--><!--Device-DngMetadata-readonly shadowScale?: double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1406,6 +1580,8 @@ readonly subTileBlockSize?: number[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngMetadata-readonly subTileBlockSize?: int[]--><!--Device-DngMetadata-readonly subTileBlockSize?: int[]-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## uniqueCameraModel
@@ -1422,6 +1598,8 @@ readonly uniqueCameraModel?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DngMetadata-readonly uniqueCameraModel?: string--><!--Device-DngMetadata-readonly uniqueCameraModel?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## whiteLevel
@@ -1437,5 +1615,7 @@ readonly whiteLevel?: number[]
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DngMetadata-readonly whiteLevel?: double[]--><!--Device-DngMetadata-readonly whiteLevel?: double[]-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core

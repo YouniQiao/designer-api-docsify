@@ -10,6 +10,8 @@ export default class Sensor
 
 **替代接口：** [sensor/sensor](arkts-sensorservice-sensor.md)
 
+<!--Device-unnamed-export default class Sensor--><!--Device-unnamed-export default class Sensor-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
 ## 导入模块
@@ -33,6 +35,8 @@ static getOnBodyState(options: GetOnBodyStateOptions): void
 **替代接口：** [WEAR_DETECTION](arkts-sensorservice-sensor-sensorid-e.md#wear_detection)
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-Sensor-static getOnBodyState(options: GetOnBodyStateOptions): void--><!--Device-Sensor-static getOnBodyState(options: GetOnBodyStateOptions): void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
@@ -66,6 +70,8 @@ static subscribeAccelerometer(options: subscribeAccelerometerOptions): void
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-Sensor-static subscribeAccelerometer(options: subscribeAccelerometerOptions): void--><!--Device-Sensor-static subscribeAccelerometer(options: subscribeAccelerometerOptions): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
 **参数：**
@@ -96,6 +102,8 @@ static subscribeBarometer(options: SubscribeBarometerOptions): void
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-Sensor-static subscribeBarometer(options: SubscribeBarometerOptions): void--><!--Device-Sensor-static subscribeBarometer(options: SubscribeBarometerOptions): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
 **参数：**
@@ -125,6 +133,8 @@ static subscribeCompass(options: SubscribeCompassOptions): void
 **替代接口：** [ORIENTATION](arkts-sensorservice-sensor-sensorid-e.md#orientation)
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-Sensor-static subscribeCompass(options: SubscribeCompassOptions): void--><!--Device-Sensor-static subscribeCompass(options: SubscribeCompassOptions): void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
@@ -158,6 +168,8 @@ static subscribeDeviceOrientation(options: SubscribeDeviceOrientationOptions): v
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-Sensor-static subscribeDeviceOrientation(options: SubscribeDeviceOrientationOptions): void--><!--Device-Sensor-static subscribeDeviceOrientation(options: SubscribeDeviceOrientationOptions): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
 **参数：**
@@ -189,6 +201,8 @@ static subscribeGyroscope(options: SubscribeGyroscopeOptions): void
 **需要权限：** ohos.permission.GYROSCOPE
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-Sensor-static subscribeGyroscope(options: SubscribeGyroscopeOptions): void--><!--Device-Sensor-static subscribeGyroscope(options: SubscribeGyroscopeOptions): void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
@@ -222,6 +236,8 @@ static subscribeHeartRate(options: SubscribeHeartRateOptions): void
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-Sensor-static subscribeHeartRate(options: SubscribeHeartRateOptions): void--><!--Device-Sensor-static subscribeHeartRate(options: SubscribeHeartRateOptions): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
 **参数：**
@@ -254,6 +270,8 @@ static subscribeLight(options: SubscribeLightOptions): void
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-Sensor-static subscribeLight(options: SubscribeLightOptions): void--><!--Device-Sensor-static subscribeLight(options: SubscribeLightOptions): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
 **参数：**
@@ -283,6 +301,8 @@ static subscribeOnBodyState(options: SubscribeOnBodyStateOptions): void
 **替代接口：** [on](arkts-sensorservice-sensor-on-f.md#on-44)(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback: Callback&lt;WearDetectionResponse&gt;, options?: Options)
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-Sensor-static subscribeOnBodyState(options: SubscribeOnBodyStateOptions): void--><!--Device-Sensor-static subscribeOnBodyState(options: SubscribeOnBodyStateOptions): void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
@@ -316,6 +336,8 @@ static subscribeProximity(options: SubscribeProximityOptions): void
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-Sensor-static subscribeProximity(options: SubscribeProximityOptions): void--><!--Device-Sensor-static subscribeProximity(options: SubscribeProximityOptions): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
 **参数：**
@@ -347,6 +369,8 @@ static subscribeStepCounter(options: SubscribeStepCounterOptions): void
 **需要权限：** ohos.permission.ACTIVITY_MOTION
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-Sensor-static subscribeStepCounter(options: SubscribeStepCounterOptions): void--><!--Device-Sensor-static subscribeStepCounter(options: SubscribeStepCounterOptions): void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
@@ -380,6 +404,8 @@ static unsubscribeAccelerometer(): void
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-Sensor-static unsubscribeAccelerometer(): void--><!--Device-Sensor-static unsubscribeAccelerometer(): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
 ## unsubscribeBarometer
@@ -404,6 +430,8 @@ static unsubscribeBarometer(): void
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-Sensor-static unsubscribeBarometer(): void--><!--Device-Sensor-static unsubscribeBarometer(): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
 ## unsubscribeCompass
@@ -427,6 +455,8 @@ static unsubscribeCompass(): void
 **替代接口：** [off](arkts-sensorservice-sensor-off-f.md#off-61)(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback?: Callback&lt;OrientationResponse&gt;)
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-Sensor-static unsubscribeCompass(): void--><!--Device-Sensor-static unsubscribeCompass(): void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
@@ -454,6 +484,8 @@ static unsubscribeDeviceOrientation(): void
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-Sensor-static unsubscribeDeviceOrientation(): void--><!--Device-Sensor-static unsubscribeDeviceOrientation(): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
 ## unsubscribeGyroscope
@@ -479,6 +511,8 @@ static unsubscribeGyroscope(): void
 **需要权限：** ohos.permission.GYROSCOPE
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-Sensor-static unsubscribeGyroscope(): void--><!--Device-Sensor-static unsubscribeGyroscope(): void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
@@ -506,6 +540,8 @@ static unsubscribeHeartRate(): void
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-Sensor-static unsubscribeHeartRate(): void--><!--Device-Sensor-static unsubscribeHeartRate(): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
 ## unsubscribeLight
@@ -532,6 +568,8 @@ static unsubscribeLight(): void
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-Sensor-static unsubscribeLight(): void--><!--Device-Sensor-static unsubscribeLight(): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
 ## unsubscribeOnBodyState
@@ -555,6 +593,8 @@ static unsubscribeOnBodyState(): void
 **替代接口：** [off](arkts-sensorservice-sensor-off-f.md#off-67)(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback?: Callback&lt;WearDetectionResponse&gt;)
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-Sensor-static unsubscribeOnBodyState(): void--><!--Device-Sensor-static unsubscribeOnBodyState(): void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
@@ -582,6 +622,8 @@ static unsubscribeProximity(): void
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-Sensor-static unsubscribeProximity(): void--><!--Device-Sensor-static unsubscribeProximity(): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
 ## unsubscribeStepCounter
@@ -607,5 +649,7 @@ static unsubscribeStepCounter(): void
 **需要权限：** ohos.permission.ACTIVITY_MOTION
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-Sensor-static unsubscribeStepCounter(): void--><!--Device-Sensor-static unsubscribeStepCounter(): void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite

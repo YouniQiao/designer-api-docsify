@@ -8,6 +8,8 @@ interface CameraOutputCapability
 
 **起始版本：** 10
 
+<!--Device-camera-interface CameraOutputCapability--><!--Device-camera-interface CameraOutputCapability-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
@@ -27,6 +29,8 @@ Supported depth stream profiles.
 **类型：** Array&lt;[DepthProfile](arkts-camera-camera-depthprofile-i-sys.md)&gt;
 
 **起始版本：** 13
+
+<!--Device-CameraOutputCapability-readonly depthProfiles: Array<DepthProfile>--><!--Device-CameraOutputCapability-readonly depthProfiles: Array<DepthProfile>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

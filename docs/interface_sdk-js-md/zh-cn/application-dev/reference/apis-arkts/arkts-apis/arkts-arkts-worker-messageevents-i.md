@@ -10,6 +10,8 @@ export interface MessageEvents extends Event
 
 **起始版本：** 9
 
+<!--Device-unnamed-export interface MessageEvents extends Event--><!--Device-unnamed-export interface MessageEvents extends Event-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -31,5 +33,7 @@ readonly data: any
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-MessageEvents-readonly data: any--><!--Device-MessageEvents-readonly data: any-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

@@ -14,6 +14,8 @@ export interface DeviceOrientationResponse
 
 **替代接口：** [OrientationResponse](arkts-sensorservice-sensor-orientationresponse-i.md)
 
+<!--Device-unnamed-export interface DeviceOrientationResponse--><!--Device-unnamed-export interface DeviceOrientationResponse-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
 ## 导入模块
@@ -40,6 +42,8 @@ alpha: number
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-DeviceOrientationResponse-alpha: number--><!--Device-DeviceOrientationResponse-alpha: number-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
 ## beta
@@ -60,6 +64,8 @@ beta: number
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-DeviceOrientationResponse-beta: number--><!--Device-DeviceOrientationResponse-beta: number-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
 ## gamma
@@ -79,5 +85,7 @@ gamma: number
 **替代接口：** [gamma](arkts-sensorservice-sensor-orientationresponse-i.md#gamma)
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-DeviceOrientationResponse-gamma: number--><!--Device-DeviceOrientationResponse-gamma: number-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite

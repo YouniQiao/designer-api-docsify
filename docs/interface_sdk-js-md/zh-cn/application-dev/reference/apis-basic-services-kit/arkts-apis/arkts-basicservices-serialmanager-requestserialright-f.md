@@ -19,6 +19,8 @@ function requestSerialRight(portId: number): Promise<boolean>
 
 **起始版本：** 19
 
+<!--Device-serialManager-function requestSerialRight(portId: int): Promise<boolean>--><!--Device-serialManager-function requestSerialRight(portId: int): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
 **参数：**

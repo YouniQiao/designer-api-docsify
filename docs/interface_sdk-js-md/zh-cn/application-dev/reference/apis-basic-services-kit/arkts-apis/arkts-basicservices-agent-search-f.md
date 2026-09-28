@@ -16,6 +16,8 @@ function search(callback: AsyncCallback<Array<string>>): void
 
 **起始版本：** 10
 
+<!--Device-agent-function search(callback: AsyncCallback<Array<string>>): void--><!--Device-agent-function search(callback: AsyncCallback<Array<string>>): void-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 **参数：**
@@ -43,6 +45,8 @@ function search(filter: Filter, callback: AsyncCallback<Array<string>>): void
 根据[Filter](arkts-basicservices-agent-filter-i.md)过滤条件查找任务id。使用callback异步回调。
 
 **起始版本：** 10
+
+<!--Device-agent-function search(filter: Filter, callback: AsyncCallback<Array<string>>): void--><!--Device-agent-function search(filter: Filter, callback: AsyncCallback<Array<string>>): void-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -72,6 +76,8 @@ function search(filter?: Filter): Promise<Array<string>>
 根据[Filter](arkts-basicservices-agent-filter-i.md)过滤条件查找任务id。使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-agent-function search(filter?: Filter): Promise<Array<string>>--><!--Device-agent-function search(filter?: Filter): Promise<Array<string>>-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 

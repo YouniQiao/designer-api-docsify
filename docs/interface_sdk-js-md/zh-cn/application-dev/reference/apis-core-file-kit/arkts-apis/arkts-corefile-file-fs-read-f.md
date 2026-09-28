@@ -22,6 +22,8 @@ declare function read(
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-unnamed-declare function read(  fd: number,  buffer: ArrayBuffer,  options?: ReadOptions): Promise<number>--><!--Device-unnamed-declare function read(  fd: number,  buffer: ArrayBuffer,  options?: ReadOptions): Promise<number>-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -68,6 +70,8 @@ declare function read(fd: number, buffer: ArrayBuffer, callback: AsyncCallback<n
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-unnamed-declare function read(fd: number, buffer: ArrayBuffer, callback: AsyncCallback<number>): void--><!--Device-unnamed-declare function read(fd: number, buffer: ArrayBuffer, callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -111,6 +115,8 @@ declare function read(
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-unnamed-declare function read(  fd: number,  buffer: ArrayBuffer,  options: ReadOptions,  callback: AsyncCallback<number>): void--><!--Device-unnamed-declare function read(  fd: number,  buffer: ArrayBuffer,  options: ReadOptions,  callback: AsyncCallback<number>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

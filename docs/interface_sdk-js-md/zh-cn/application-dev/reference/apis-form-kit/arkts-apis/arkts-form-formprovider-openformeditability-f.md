@@ -16,6 +16,8 @@ function openFormEditAbility(abilityName: string, formId: string, isMainPage?: b
 
 **起始版本：** 18
 
+<!--Device-formProvider-function openFormEditAbility(abilityName: string, formId: string, isMainPage?: boolean): void--><!--Device-formProvider-function openFormEditAbility(abilityName: string, formId: string, isMainPage?: boolean): void-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **参数：**

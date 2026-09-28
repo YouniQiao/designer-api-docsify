@@ -15,6 +15,8 @@ For routing management, it is recommended that you use the [Navigation](../../..
 
 **Since:** 8
 
+<!--Device-unnamed-declare namespace router--><!--Device-unnamed-declare namespace router-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import

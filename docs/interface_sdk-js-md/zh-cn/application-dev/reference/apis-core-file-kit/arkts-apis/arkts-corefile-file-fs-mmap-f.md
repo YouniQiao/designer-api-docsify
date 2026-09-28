@@ -24,6 +24,8 @@ declare function mmap(file: number | File, mode: MappingMode, offset: number, si
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-unnamed-declare function mmap(file: number | File, mode: MappingMode, offset: number, size: number): Promise<FileMapping>--><!--Device-unnamed-declare function mmap(file: number | File, mode: MappingMode, offset: number, size: number): Promise<FileMapping>-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**

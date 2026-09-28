@@ -8,6 +8,8 @@ interface ServiceProfileInfo
 
 **起始版本：** 15
 
+<!--Device-distributedDeviceManager-interface ServiceProfileInfo--><!--Device-distributedDeviceManager-interface ServiceProfileInfo-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ data?: string
 
 **起始版本：** 15
 
+<!--Device-ServiceProfileInfo-data?: string--><!--Device-ServiceProfileInfo-data?: string-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ deviceId: string
 **类型：** string
 
 **起始版本：** 15
+
+<!--Device-ServiceProfileInfo-deviceId: string--><!--Device-ServiceProfileInfo-deviceId: string-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -62,6 +68,8 @@ serviceId: string
 
 **起始版本：** 15
 
+<!--Device-ServiceProfileInfo-serviceId: string--><!--Device-ServiceProfileInfo-serviceId: string-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +85,8 @@ serviceType: string
 **类型：** string
 
 **起始版本：** 15
+
+<!--Device-ServiceProfileInfo-serviceType: string--><!--Device-ServiceProfileInfo-serviceType: string-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 

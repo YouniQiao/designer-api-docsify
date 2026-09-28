@@ -20,6 +20,8 @@ function disableLocationMock(): void
 - API版本20+：ohos.permission.MOCK_LOCATION
 - API版本9-19：N/A
 
+<!--Device-geoLocationManager-function disableLocationMock(): void--><!--Device-geoLocationManager-function disableLocationMock(): void-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **系统接口：** 此接口为系统接口。

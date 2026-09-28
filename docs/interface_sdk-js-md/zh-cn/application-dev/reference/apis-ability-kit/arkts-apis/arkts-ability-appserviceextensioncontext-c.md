@@ -16,6 +16,8 @@ AppServiceExtensionContext提供了连接、断开ServiceExtensionAbility（系�
 
 **起始版本：** 20
 
+<!--Device-unnamed-declare class AppServiceExtensionContext extends ExtensionContext--><!--Device-unnamed-declare class AppServiceExtensionContext extends ExtensionContext-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## connectServiceExtensionAbility
@@ -29,6 +31,8 @@ connectServiceExtensionAbility(want: Want, callback: ConnectOptions): number
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AppServiceExtensionContext-connectServiceExtensionAbility(want: Want, callback: ConnectOptions): long--><!--Device-AppServiceExtensionContext-connectServiceExtensionAbility(want: Want, callback: ConnectOptions): long-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -127,6 +131,8 @@ disconnectServiceExtensionAbility(connection: number): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AppServiceExtensionContext-disconnectServiceExtensionAbility(connection: long): Promise<void>--><!--Device-AppServiceExtensionContext-disconnectServiceExtensionAbility(connection: long): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -163,6 +169,8 @@ startAbility(want: Want, options?: StartOptions): Promise<void>
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AppServiceExtensionContext-startAbility(want: Want, options?: StartOptions): Promise<void>--><!--Device-AppServiceExtensionContext-startAbility(want: Want, options?: StartOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -253,6 +261,8 @@ terminateSelf(): Promise<void>
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AppServiceExtensionContext-terminateSelf(): Promise<void>--><!--Device-AppServiceExtensionContext-terminateSelf(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

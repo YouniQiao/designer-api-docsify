@@ -8,6 +8,8 @@ interface AVDownloaderManager
 
 **起始版本：** 26.0.0
 
+<!--Device-media-interface AVDownloaderManager--><!--Device-media-interface AVDownloaderManager-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 ## 导入模块
@@ -27,6 +29,8 @@ addAVDownloadTask(source: MediaSource): string
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVDownloaderManager-addAVDownloadTask(source: MediaSource): string--><!--Device-AVDownloaderManager-addAVDownloadTask(source: MediaSource): string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -66,6 +70,8 @@ allowsCellularAccess(value: boolean): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVDownloaderManager-allowsCellularAccess(value: boolean): void--><!--Device-AVDownloaderManager-allowsCellularAccess(value: boolean): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 **参数：**
@@ -94,6 +100,8 @@ getDownloadTasks(): Array<string>
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVDownloaderManager-getDownloadTasks(): Array<string>--><!--Device-AVDownloaderManager-getDownloadTasks(): Array<string>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -127,6 +135,8 @@ getTaskCacheDirectory(taskId: string): string
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVDownloaderManager-getTaskCacheDirectory(taskId: string): string--><!--Device-AVDownloaderManager-getTaskCacheDirectory(taskId: string): string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -173,6 +183,8 @@ getTaskProgress(taskId: string): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVDownloaderManager-getTaskProgress(taskId: string): double--><!--Device-AVDownloaderManager-getTaskProgress(taskId: string): double-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 **参数：**
@@ -217,6 +229,8 @@ getTaskStatus(taskId: string): AVDownloadTaskState
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVDownloaderManager-getTaskStatus(taskId: string): AVDownloadTaskState--><!--Device-AVDownloaderManager-getTaskStatus(taskId: string): AVDownloadTaskState-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -263,6 +277,8 @@ offProgressChange(callback?: OnAVDownloadProgressChangeHandle): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVDownloaderManager-offProgressChange(callback?: OnAVDownloadProgressChangeHandle): void--><!--Device-AVDownloaderManager-offProgressChange(callback?: OnAVDownloadProgressChangeHandle): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 **参数：**
@@ -292,6 +308,8 @@ offStatusChange(callback?: OnAVDownloadTaskStateHandle): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVDownloaderManager-offStatusChange(callback?: OnAVDownloadTaskStateHandle): void--><!--Device-AVDownloaderManager-offStatusChange(callback?: OnAVDownloadTaskStateHandle): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 **参数：**
@@ -320,6 +338,8 @@ onProgressChange(callback: OnAVDownloadProgressChangeHandle): void
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVDownloaderManager-onProgressChange(callback: OnAVDownloadProgressChangeHandle): void--><!--Device-AVDownloaderManager-onProgressChange(callback: OnAVDownloadProgressChangeHandle): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -352,6 +372,8 @@ onStatusChange(callback: OnAVDownloadTaskStateHandle): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVDownloaderManager-onStatusChange(callback: OnAVDownloadTaskStateHandle): void--><!--Device-AVDownloaderManager-onStatusChange(callback: OnAVDownloadTaskStateHandle): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 **参数：**
@@ -382,6 +404,8 @@ pauseDownloadTask(taskId?: string): void
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVDownloaderManager-pauseDownloadTask(taskId?: string): void--><!--Device-AVDownloaderManager-pauseDownloadTask(taskId?: string): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -422,6 +446,8 @@ release(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVDownloaderManager-release(): void--><!--Device-AVDownloaderManager-release(): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 **示例**
@@ -444,6 +470,8 @@ removeDownloadTask(taskId?: string): void
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVDownloaderManager-removeDownloadTask(taskId?: string): void--><!--Device-AVDownloaderManager-removeDownloadTask(taskId?: string): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -482,6 +510,8 @@ resumeDownloadTask(taskId?: string): void
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVDownloaderManager-resumeDownloadTask(taskId?: string): void--><!--Device-AVDownloaderManager-resumeDownloadTask(taskId?: string): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -522,6 +552,8 @@ setRequestTimeout(timeout: number): void
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVDownloaderManager-setRequestTimeout(timeout: int): void--><!--Device-AVDownloaderManager-setRequestTimeout(timeout: int): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 

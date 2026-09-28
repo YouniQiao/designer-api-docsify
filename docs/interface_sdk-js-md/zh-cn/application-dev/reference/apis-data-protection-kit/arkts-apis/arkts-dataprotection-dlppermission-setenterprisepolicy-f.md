@@ -24,6 +24,8 @@ function setEnterprisePolicy(policy: EnterprisePolicy): void
 
 **需要权限：** ohos.permission.ENTERPRISE_ACCESS_DLP_FILE
 
+<!--Device-dlpPermission-function setEnterprisePolicy(policy: EnterprisePolicy): void--><!--Device-dlpPermission-function setEnterprisePolicy(policy: EnterprisePolicy): void-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **参数：**

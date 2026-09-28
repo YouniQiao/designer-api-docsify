@@ -8,6 +8,8 @@ export interface ResumeDownloadOptions
 
 **起始版本：** 9
 
+<!--Device-update-export interface ResumeDownloadOptions--><!--Device-update-export interface ResumeDownloadOptions-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -29,6 +31,8 @@ allowNetwork: NetType
 **类型：** [NetType](arkts-basicservices-update-nettype-e-sys.md)
 
 **起始版本：** 9
+
+<!--Device-ResumeDownloadOptions-allowNetwork: NetType--><!--Device-ResumeDownloadOptions-allowNetwork: NetType-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
 

@@ -8,6 +8,8 @@ interface ControlDeviceActionParams
 
 **起始版本：** 15
 
+<!--Device-connection-interface ControlDeviceActionParams--><!--Device-connection-interface ControlDeviceActionParams-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ controlObject: ControlObject
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ControlDeviceActionParams-controlObject: ControlObject--><!--Device-ControlDeviceActionParams-controlObject: ControlObject-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ deviceId: string
 **起始版本：** 15
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ControlDeviceActionParams-deviceId: string--><!--Device-ControlDeviceActionParams-deviceId: string-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -68,6 +74,8 @@ type: ControlType
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ControlDeviceActionParams-type: ControlType--><!--Device-ControlDeviceActionParams-type: ControlType-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -85,6 +93,8 @@ typeValue: ControlTypeValue
 **起始版本：** 15
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ControlDeviceActionParams-typeValue: ControlTypeValue--><!--Device-ControlDeviceActionParams-typeValue: ControlTypeValue-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

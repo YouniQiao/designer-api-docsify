@@ -16,6 +16,8 @@ function getOneCfgFileSync(relPath: string, followMode?: FollowXMode, extra?: st
 
 **起始版本：** 11
 
+<!--Device-configPolicy-function getOneCfgFileSync(relPath: string, followMode?: FollowXMode, extra?: string): string--><!--Device-configPolicy-function getOneCfgFileSync(relPath: string, followMode?: FollowXMode, extra?: string): string-End-->
+
 **系统能力：** SystemCapability.Customization.ConfigPolicy
 
 **系统接口：** 此接口为系统接口。

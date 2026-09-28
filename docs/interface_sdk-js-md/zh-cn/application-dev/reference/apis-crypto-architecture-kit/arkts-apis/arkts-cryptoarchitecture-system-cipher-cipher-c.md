@@ -12,6 +12,8 @@ export default class Cipher
 
 **替代接口：** Cipher
 
+<!--Device-unnamed-export default class Cipher--><!--Device-unnamed-export default class Cipher-End-->
+
 **系统能力：** SystemCapability.Security.Cipher
 
 ## 导入模块
@@ -34,6 +36,8 @@ static aes(options: CipherAesOptions): void
 
 **替代接口：** Cipher
 
+<!--Device-Cipher-static aes(options: CipherAesOptions): void--><!--Device-Cipher-static aes(options: CipherAesOptions): void-End-->
+
 **系统能力：** SystemCapability.Security.Cipher
 
 **参数：**
@@ -55,6 +59,8 @@ static rsa(options: CipherRsaOptions): void
 **废弃版本：** 9
 
 **替代接口：** Cipher
+
+<!--Device-Cipher-static rsa(options: CipherRsaOptions): void--><!--Device-Cipher-static rsa(options: CipherRsaOptions): void-End-->
 
 **系统能力：** SystemCapability.Security.Cipher
 

@@ -8,6 +8,8 @@ interface InputDeviceData
 
 **起始版本：** 8
 
+<!--Device-inputDevice-interface InputDeviceData--><!--Device-inputDevice-interface InputDeviceData-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 ## 导入模块
@@ -28,6 +30,8 @@ axisRanges: Array<AxisRange>
 
 **起始版本：** 8
 
+<!--Device-InputDeviceData-axisRanges: Array<AxisRange>--><!--Device-InputDeviceData-axisRanges: Array<AxisRange>-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 ## bus
@@ -41,6 +45,8 @@ bus: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-InputDeviceData-bus: int--><!--Device-InputDeviceData-bus: int-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -58,6 +64,8 @@ readonly displayId?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-InputDeviceData-readonly displayId?: int--><!--Device-InputDeviceData-readonly displayId?: int-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 ## id
@@ -71,6 +79,8 @@ id: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-InputDeviceData-id: int--><!--Device-InputDeviceData-id: int-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -86,6 +96,8 @@ isLocal?: boolean
 
 **起始版本：** 23
 
+<!--Device-InputDeviceData-isLocal?: boolean--><!--Device-InputDeviceData-isLocal?: boolean-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 ## isVirtual
@@ -99,6 +111,8 @@ isVirtual?: boolean
 **类型：** boolean
 
 **起始版本：** 23
+
+<!--Device-InputDeviceData-isVirtual?: boolean--><!--Device-InputDeviceData-isVirtual?: boolean-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -114,6 +128,8 @@ name: string
 
 **起始版本：** 8
 
+<!--Device-InputDeviceData-name: string--><!--Device-InputDeviceData-name: string-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 ## phys
@@ -127,6 +143,8 @@ phys: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-InputDeviceData-phys: string--><!--Device-InputDeviceData-phys: string-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -142,6 +160,8 @@ product: number
 
 **起始版本：** 9
 
+<!--Device-InputDeviceData-product: int--><!--Device-InputDeviceData-product: int-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 ## sources
@@ -155,6 +175,8 @@ sources: Array<SourceType>
 **类型：** Array&lt;[SourceType](arkts-input-inputdevice-sourcetype-t.md)&gt;
 
 **起始版本：** 8
+
+<!--Device-InputDeviceData-sources: Array<SourceType>--><!--Device-InputDeviceData-sources: Array<SourceType>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -170,6 +192,8 @@ uniq: string
 
 **起始版本：** 9
 
+<!--Device-InputDeviceData-uniq: string--><!--Device-InputDeviceData-uniq: string-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 ## vendor
@@ -184,6 +208,8 @@ vendor: number
 
 **起始版本：** 9
 
+<!--Device-InputDeviceData-vendor: int--><!--Device-InputDeviceData-vendor: int-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 ## version
@@ -197,5 +223,7 @@ version: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-InputDeviceData-version: int--><!--Device-InputDeviceData-version: int-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice

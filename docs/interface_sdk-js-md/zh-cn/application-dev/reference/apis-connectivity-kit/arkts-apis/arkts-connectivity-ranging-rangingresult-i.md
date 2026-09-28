@@ -8,6 +8,8 @@ interface RangingResult
 
 **起始版本：** 26.0.0
 
+<!--Device-ranging-interface RangingResult--><!--Device-ranging-interface RangingResult-End-->
+
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ angle: RangingMeasurement
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RangingResult-angle: RangingMeasurement--><!--Device-RangingResult-angle: RangingMeasurement-End-->
+
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core
 
 ## deviceId
@@ -45,6 +49,8 @@ deviceId: string
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-RangingResult-deviceId: string--><!--Device-RangingResult-deviceId: string-End-->
 
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core
 
@@ -62,6 +68,8 @@ distance: RangingMeasurement
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RangingResult-distance: RangingMeasurement--><!--Device-RangingResult-distance: RangingMeasurement-End-->
+
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core
 
 ## rssi
@@ -77,5 +85,7 @@ rssi: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-RangingResult-rssi: int--><!--Device-RangingResult-rssi: int-End-->
 
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core

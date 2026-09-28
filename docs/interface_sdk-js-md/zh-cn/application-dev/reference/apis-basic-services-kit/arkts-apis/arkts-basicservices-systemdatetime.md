@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace systemDateTime--><!--Device-unnamed-declare namespace systemDateTime-End-->
+
 **系统能力：** SystemCapability.MiscServices.Time
 
 ## 导入模块

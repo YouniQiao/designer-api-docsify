@@ -16,6 +16,8 @@ Obtains information about all sensors on the device. This API uses an asynchrono
 
 **Since:** 9
 
+<!--Device-sensor-function getSensorList(callback: AsyncCallback<Array<Sensor>>): void--><!--Device-sensor-function getSensorList(callback: AsyncCallback<Array<Sensor>>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -66,6 +68,8 @@ function getSensorList(): Promise<Array<Sensor>>
 Obtains information about all sensors on the device. This API uses a promise to return the result.
 
 **Since:** 9
+
+<!--Device-sensor-function getSensorList(): Promise<Array<Sensor>>--><!--Device-sensor-function getSensorList(): Promise<Array<Sensor>>-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 

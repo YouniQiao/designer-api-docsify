@@ -10,6 +10,8 @@ A modal dialog box is a system-level dialog box that blocks interactions such as
 
 **Since:** 9
 
+<!--Device-unnamed-declare namespace dialogRequest--><!--Device-unnamed-declare namespace dialogRequest-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## Modules to Import

@@ -10,6 +10,8 @@ export declare interface Key
 
 **起始版本：** 9
 
+<!--Device-unnamed-export declare interface Key--><!--Device-unnamed-export declare interface Key-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## 导入模块
@@ -30,7 +32,9 @@ code: KeyCode
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Key-code: KeyCode--><!--Device-Key-code: KeyCode-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -46,7 +50,9 @@ deviceId: number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Key-deviceId: int--><!--Device-Key-deviceId: int-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -62,6 +68,8 @@ pressedTime: number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Key-pressedTime: long--><!--Device-Key-pressedTime: long-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core

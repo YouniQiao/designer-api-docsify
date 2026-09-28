@@ -8,6 +8,8 @@ interface OsAccountSubProfileManager
 
 **起始版本：** 26.0.0
 
+<!--Device-osAccount-interface OsAccountSubProfileManager--><!--Device-osAccount-interface OsAccountSubProfileManager-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -31,6 +33,8 @@ createOsAccountSubProfile(osAccountLocalId: number): Promise<OsAccountSubProfile
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-OsAccountSubProfileManager-createOsAccountSubProfile(osAccountLocalId: int): Promise<OsAccountSubProfile>--><!--Device-OsAccountSubProfileManager-createOsAccountSubProfile(osAccountLocalId: int): Promise<OsAccountSubProfile>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -95,6 +99,8 @@ deleteOsAccountSubProfile(osAccountLocalId: number, subProfileId: number): Promi
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OsAccountSubProfileManager-deleteOsAccountSubProfile(osAccountLocalId: int, subProfileId: int): Promise<void>--><!--Device-OsAccountSubProfileManager-deleteOsAccountSubProfile(osAccountLocalId: int, subProfileId: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -158,6 +164,8 @@ getOsAccountForegroundSubProfileId(): Promise<number>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OsAccountSubProfileManager-getOsAccountForegroundSubProfileId(): Promise<int>--><!--Device-OsAccountSubProfileManager-getOsAccountForegroundSubProfileId(): Promise<int>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -207,6 +215,8 @@ getOsAccountForegroundSubProfileId(osAccountLocalId: number): Promise<number>
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-OsAccountSubProfileManager-getOsAccountForegroundSubProfileId(osAccountLocalId: int): Promise<int>--><!--Device-OsAccountSubProfileManager-getOsAccountForegroundSubProfileId(osAccountLocalId: int): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -266,6 +276,8 @@ getOsAccountLocalIdForSubProfile(subProfileId: number): Promise<number>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OsAccountSubProfileManager-getOsAccountLocalIdForSubProfile(subProfileId: int): Promise<int>--><!--Device-OsAccountSubProfileManager-getOsAccountLocalIdForSubProfile(subProfileId: int): Promise<int>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -324,6 +336,8 @@ getOsAccountSubProfile(subProfileId: number): Promise<OsAccountSubProfile>
 **需要权限：** ohos.permission.GET_LOCAL_ACCOUNTS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-OsAccountSubProfileManager-getOsAccountSubProfile(subProfileId: int): Promise<OsAccountSubProfile>--><!--Device-OsAccountSubProfileManager-getOsAccountSubProfile(subProfileId: int): Promise<OsAccountSubProfile>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -387,6 +401,8 @@ getOsAccountSubProfile(osAccountLocalId: number, subProfileId: number): Promise<
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OsAccountSubProfileManager-getOsAccountSubProfile(osAccountLocalId: int, subProfileId: int): Promise<OsAccountSubProfile>--><!--Device-OsAccountSubProfileManager-getOsAccountSubProfile(osAccountLocalId: int, subProfileId: int): Promise<OsAccountSubProfile>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -449,6 +465,8 @@ getOsAccountSubProfileIds(): Promise<number[]>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OsAccountSubProfileManager-getOsAccountSubProfileIds(): Promise<int[]>--><!--Device-OsAccountSubProfileManager-getOsAccountSubProfileIds(): Promise<int[]>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -500,6 +518,8 @@ getOsAccountSubProfileIds(osAccountLocalId: number): Promise<number[]>
 **需要权限：** ohos.permission.GET_LOCAL_ACCOUNT_IDENTIFIERS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-OsAccountSubProfileManager-getOsAccountSubProfileIds(osAccountLocalId: int): Promise<int[]>--><!--Device-OsAccountSubProfileManager-getOsAccountSubProfileIds(osAccountLocalId: int): Promise<int[]>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -559,6 +579,8 @@ offOsAccountSubProfileEvent(callback?: Callback<OsAccountSubProfileEventData>): 
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OsAccountSubProfileManager-offOsAccountSubProfileEvent(callback?: Callback<OsAccountSubProfileEventData>): void--><!--Device-OsAccountSubProfileManager-offOsAccountSubProfileEvent(callback?: Callback<OsAccountSubProfileEventData>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -603,6 +625,8 @@ onOsAccountSubProfileEvent(
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-OsAccountSubProfileManager-onOsAccountSubProfileEvent(      events: OsAccountSubProfileEvent[],      callback: Callback<OsAccountSubProfileEventData>): void--><!--Device-OsAccountSubProfileManager-onOsAccountSubProfileEvent(      events: OsAccountSubProfileEvent[],      callback: Callback<OsAccountSubProfileEventData>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -655,6 +679,8 @@ switchOsAccountSubProfile(osAccountLocalId: number, subProfileId: number): Promi
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-OsAccountSubProfileManager-switchOsAccountSubProfile(osAccountLocalId: int, subProfileId: int): Promise<void>--><!--Device-OsAccountSubProfileManager-switchOsAccountSubProfile(osAccountLocalId: int, subProfileId: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 

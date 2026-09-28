@@ -8,6 +8,8 @@ declare class InsightIntentEntryExecutor<T>
 
 **起始版本：** 20
 
+<!--Device-unnamed-declare class InsightIntentEntryExecutor<T>--><!--Device-unnamed-declare class InsightIntentEntryExecutor<T>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块
@@ -28,7 +30,9 @@ onExecute(): Promise<insightIntent.IntentResult<T>>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-InsightIntentEntryExecutor-onExecute(): Promise<insightIntent.IntentResult<T>>--><!--Device-InsightIntentEntryExecutor-onExecute(): Promise<insightIntent.IntentResult<T>>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -52,7 +56,9 @@ context: InsightIntentContext
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-InsightIntentEntryExecutor-context: InsightIntentContext--><!--Device-InsightIntentEntryExecutor-context: InsightIntentContext-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -70,7 +76,9 @@ executeMode: insightIntent.ExecuteMode
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-InsightIntentEntryExecutor-executeMode: insightIntent.ExecuteMode--><!--Device-InsightIntentEntryExecutor-executeMode: insightIntent.ExecuteMode-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -88,7 +96,9 @@ uiExtensionSession?: UIExtensionContentSession
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-InsightIntentEntryExecutor-uiExtensionSession?: UIExtensionContentSession--><!--Device-InsightIntentEntryExecutor-uiExtensionSession?: UIExtensionContentSession-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -106,6 +116,8 @@ windowStage?: window.WindowStage
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-InsightIntentEntryExecutor-windowStage?: window.WindowStage--><!--Device-InsightIntentEntryExecutor-windowStage?: window.WindowStage-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

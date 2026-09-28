@@ -18,6 +18,8 @@ Sets Value.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebInterface-(value: WebOptions): WebAttribute--><!--Device-WebInterface-(value: WebOptions): WebAttribute-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -109,7 +111,7 @@ Sets Value.
 | [SslErrorEvent](arkts-arkweb-web-comp-sslerrorevent-i.md) | Callback details triggered when an SSL error occurs during resource loading by the user, including the URL, error type, and certificate chain. It is suitable for scenarios where detailed analysis of SSL errors is required, improving security issue diagnosis and troubleshooting efficiency. |
 | [UrlRegexRule](arkts-arkweb-web-comp-urlregexrule-i.md) | Defines the URL regular expression rule. |
 | [VerifyPinEvent](arkts-arkweb-web-comp-verifypinevent-i.md) | Defines the callback triggered to notify the user of PIN verification. |
-| [WebKeyboardCallbackInfo](arkts-arkweb-web-comp-webkeyboardcallbackinfo-i.md) | Input parameters of the callback used to intercept the soft keyboard started from editable elements on a web page, including [WebKeyboardController](#web) and the attributes of the editable element. It is suitable for scenarios where custom keyboard interaction is required, improving input experience customization and flexibility. |
+| [WebKeyboardCallbackInfo](arkts-arkweb-web-comp-webkeyboardcallbackinfo-i.md) | Input parameters of the callback used to intercept the soft keyboard started from editable elements on a web page, including [WebKeyboardController](arkts-arkweb-web-comp.md) and the attributes of the editable element. It is suitable for scenarios where custom keyboard interaction is required, improving input experience customization and flexibility. |
 | [WebKeyboardOptions](arkts-arkweb-web-comp-webkeyboardoptions-i.md) | Return value of the callback that intercepts the soft keyboard started from editable elements on the web page, including the keyboard type and custom keyboard. It is suitable for scenarios where controlling soft keyboard behavior is required. |
 | [WebMediaOptions](arkts-arkweb-web-comp-webmediaoptions-i.md) | Configures the media policy of the **Web** component, including the audio playback continuation validity period, audio exclusive mode, and more. It is suitable for scenarios where audio playback experience optimization and multi- instance audio management are required, improving media playback stability and user experience. |
 | [WebOptions](arkts-arkweb-web-comp-weboptions-i.md) | Defines Web options through the [API](../../../reference/apis-arkweb/arkts-basic-components-web.md#api), including the web page resource URL, controller, rendering mode, and more. |

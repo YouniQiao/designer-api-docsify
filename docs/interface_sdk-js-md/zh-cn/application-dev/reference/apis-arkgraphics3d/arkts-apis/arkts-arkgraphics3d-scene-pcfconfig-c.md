@@ -10,6 +10,8 @@ PCF（Percentage Closer Filtering，百分比邻近过滤）软阴影配置类�
 
 **起始版本：** 26.0.0
 
+<!--Device-unnamed-export declare class PCFConfig extends SoftShadowConfig--><!--Device-unnamed-export declare class PCFConfig extends SoftShadowConfig-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## shadowSampleCount
@@ -28,6 +30,8 @@ get shadowSampleCount(): number | undefined
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PCFConfig-get shadowSampleCount(): int | undefined--><!--Device-PCFConfig-get shadowSampleCount(): int | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -48,6 +52,8 @@ set shadowSampleCount(value: number | undefined)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PCFConfig-set shadowSampleCount(value: int | undefined)--><!--Device-PCFConfig-set shadowSampleCount(value: int | undefined)-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## shadowSampleRadius
@@ -66,6 +72,8 @@ get shadowSampleRadius(): number | undefined
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PCFConfig-get shadowSampleRadius(): double | undefined--><!--Device-PCFConfig-get shadowSampleRadius(): double | undefined-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ```TypeScript
@@ -83,5 +91,7 @@ set shadowSampleRadius(value: number | undefined)
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PCFConfig-set shadowSampleRadius(value: double | undefined)--><!--Device-PCFConfig-set shadowSampleRadius(value: double | undefined)-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

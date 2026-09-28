@@ -10,6 +10,8 @@ Implements imaging mode.
 
 **起始版本：** 26.0.0
 
+<!--Device-camera-interface ImagingMode extends ImagingModeQuery--><!--Device-camera-interface ImagingMode extends ImagingModeQuery-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -31,6 +33,8 @@ Gets current imaging mode.
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ImagingMode-getImagingMode(): CameraImagingMode--><!--Device-ImagingMode-getImagingMode(): CameraImagingMode-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -60,6 +64,8 @@ Sets imaging mode.
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ImagingMode-setImagingMode(mode: CameraImagingMode): void--><!--Device-ImagingMode-setImagingMode(mode: CameraImagingMode): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

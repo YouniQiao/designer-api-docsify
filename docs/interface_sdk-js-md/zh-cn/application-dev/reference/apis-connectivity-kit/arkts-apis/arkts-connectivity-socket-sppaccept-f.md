@@ -18,6 +18,8 @@ function sppAccept(serverSocket: number, callback: AsyncCallback<number>): void
 
 **起始版本：** 10
 
+<!--Device-socket-function sppAccept(serverSocket: int, callback: AsyncCallback<int>): void--><!--Device-socket-function sppAccept(serverSocket: int, callback: AsyncCallback<int>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**

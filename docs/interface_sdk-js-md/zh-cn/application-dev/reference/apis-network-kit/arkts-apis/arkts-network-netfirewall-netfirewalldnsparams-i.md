@@ -12,6 +12,8 @@ interface NetFirewallDnsParams
 
 **起始版本：** 15
 
+<!--Device-netFirewall-interface NetFirewallDnsParams--><!--Device-netFirewall-interface NetFirewallDnsParams-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 ## 导入模块
@@ -32,6 +34,8 @@ primaryDns: string
 
 **起始版本：** 15
 
+<!--Device-NetFirewallDnsParams-primaryDns: string--><!--Device-NetFirewallDnsParams-primaryDns: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 ## standbyDns
@@ -45,5 +49,7 @@ standbyDns?: string
 **类型：** string
 
 **起始版本：** 15
+
+<!--Device-NetFirewallDnsParams-standbyDns?: string--><!--Device-NetFirewallDnsParams-standbyDns?: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall

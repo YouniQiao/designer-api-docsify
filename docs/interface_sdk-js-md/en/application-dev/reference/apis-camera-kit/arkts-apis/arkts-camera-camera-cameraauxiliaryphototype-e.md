@@ -8,6 +8,8 @@ Enumerates the auxiliary photo types.
 
 **Since:** 26.0.1
 
+<!--Device-camera-enum CameraAuxiliaryPhotoType--><!--Device-camera-enum CameraAuxiliaryPhotoType-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## OXYGEN
@@ -22,7 +24,9 @@ Auxiliary photo type: oxygen photo.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.1.
+
+<!--Device-CameraAuxiliaryPhotoType-OXYGEN = 0--><!--Device-CameraAuxiliaryPhotoType-OXYGEN = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -38,6 +42,8 @@ Auxiliary photo type: pigmentation photo.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.1.
+
+<!--Device-CameraAuxiliaryPhotoType-PIGMENTATION = 1--><!--Device-CameraAuxiliaryPhotoType-PIGMENTATION = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core

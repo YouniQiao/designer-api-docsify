@@ -8,6 +8,8 @@ interface AsrProcessingController
 
 **起始版本：** 12
 
+<!--Device-audio-interface AsrProcessingController--><!--Device-audio-interface AsrProcessingController-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **系统接口：** 此接口为系统接口。
@@ -27,6 +29,8 @@ getAsrAecMode(): AsrAecMode
 获取自动语音识别（ASR）的声学回声消除（AEC）模式，同步返回结果。
 
 **起始版本：** 12
+
+<!--Device-AsrProcessingController-getAsrAecMode(): AsrAecMode--><!--Device-AsrProcessingController-getAsrAecMode(): AsrAecMode-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -61,6 +65,8 @@ getAsrNoiseSuppressionMode(): AsrNoiseSuppressionMode
 
 **起始版本：** 12
 
+<!--Device-AsrProcessingController-getAsrNoiseSuppressionMode(): AsrNoiseSuppressionMode--><!--Device-AsrProcessingController-getAsrNoiseSuppressionMode(): AsrNoiseSuppressionMode-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **系统接口：** 此接口为系统接口。
@@ -93,6 +99,8 @@ getAsrWhisperDetectionMode(): AsrWhisperDetectionMode
 获取自动语音识别（ASR）的耳语检测模式，同步返回结果。
 
 **起始版本：** 12
+
+<!--Device-AsrProcessingController-getAsrWhisperDetectionMode(): AsrWhisperDetectionMode--><!--Device-AsrProcessingController-getAsrWhisperDetectionMode(): AsrWhisperDetectionMode-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -127,6 +135,8 @@ isWhispering(): boolean
 
 **起始版本：** 12
 
+<!--Device-AsrProcessingController-isWhispering(): boolean--><!--Device-AsrProcessingController-isWhispering(): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **系统接口：** 此接口为系统接口。
@@ -159,6 +169,8 @@ setAsrAecMode(mode: AsrAecMode): boolean
 设置自动语音识别（ASR）的声学回声消除（AEC）模式，同步返回结果。
 
 **起始版本：** 12
+
+<!--Device-AsrProcessingController-setAsrAecMode(mode: AsrAecMode): boolean--><!--Device-AsrProcessingController-setAsrAecMode(mode: AsrAecMode): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -201,6 +213,8 @@ setAsrNoiseSuppressionMode(mode: AsrNoiseSuppressionMode): boolean
 
 **起始版本：** 12
 
+<!--Device-AsrProcessingController-setAsrNoiseSuppressionMode(mode: AsrNoiseSuppressionMode): boolean--><!--Device-AsrProcessingController-setAsrNoiseSuppressionMode(mode: AsrNoiseSuppressionMode): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **系统接口：** 此接口为系统接口。
@@ -241,6 +255,8 @@ setAsrVoiceControlMode(mode: AsrVoiceControlMode, enable: boolean): boolean
 设置在系统通话中上报mode及通话录音的上行通路的自动语音识别（ASR）音频通路选择。
 
 **起始版本：** 12
+
+<!--Device-AsrProcessingController-setAsrVoiceControlMode(mode: AsrVoiceControlMode, enable: boolean): boolean--><!--Device-AsrProcessingController-setAsrVoiceControlMode(mode: AsrVoiceControlMode, enable: boolean): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -284,6 +300,8 @@ setAsrVoiceMuteMode(mode: AsrVoiceMuteMode, enable: boolean): boolean
 
 **起始版本：** 12
 
+<!--Device-AsrProcessingController-setAsrVoiceMuteMode(mode: AsrVoiceMuteMode, enable: boolean): boolean--><!--Device-AsrProcessingController-setAsrVoiceMuteMode(mode: AsrVoiceMuteMode, enable: boolean): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **系统接口：** 此接口为系统接口。
@@ -325,6 +343,8 @@ setAsrWhisperDetectionMode(mode: AsrWhisperDetectionMode): boolean
 设置自动语音识别（ASR）的耳语检测模式。
 
 **起始版本：** 12
+
+<!--Device-AsrProcessingController-setAsrWhisperDetectionMode(mode: AsrWhisperDetectionMode): boolean--><!--Device-AsrProcessingController-setAsrWhisperDetectionMode(mode: AsrWhisperDetectionMode): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 

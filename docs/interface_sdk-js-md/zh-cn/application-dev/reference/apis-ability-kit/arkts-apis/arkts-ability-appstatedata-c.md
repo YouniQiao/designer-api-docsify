@@ -8,6 +8,8 @@ declare class AppStateData
 
 **起始版本：** 14
 
+<!--Device-unnamed-declare class AppStateData--><!--Device-unnamed-declare class AppStateData-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## bundleName
@@ -21,6 +23,8 @@ Bundle名称。
 **类型：** string
 
 **起始版本：** 14
+
+<!--Device-AppStateData-bundleName: string--><!--Device-AppStateData-bundleName: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -40,6 +44,8 @@ false:应用不处于悬浮窗模式。
 
 **起始版本：** 14
 
+<!--Device-AppStateData-isFloatingWindowMode: boolean--><!--Device-AppStateData-isFloatingWindowMode: boolean-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## isSplitScreenMode
@@ -57,6 +63,8 @@ false:应用不处于分屏模式。
 **类型：** boolean
 
 **起始版本：** 14
+
+<!--Device-AppStateData-isSplitScreenMode: boolean--><!--Device-AppStateData-isSplitScreenMode: boolean-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -84,6 +92,8 @@ state: number
 
 **起始版本：** 14
 
+<!--Device-AppStateData-state: int--><!--Device-AppStateData-state: int-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## uid
@@ -97,5 +107,7 @@ uid: number
 **类型：** number
 
 **起始版本：** 14
+
+<!--Device-AppStateData-uid: int--><!--Device-AppStateData-uid: int-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

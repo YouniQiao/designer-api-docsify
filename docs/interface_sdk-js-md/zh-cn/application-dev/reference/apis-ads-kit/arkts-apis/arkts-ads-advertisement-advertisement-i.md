@@ -8,6 +8,8 @@ export interface Advertisement
 
 **起始版本：** 11
 
+<!--Device-unnamed-export interface Advertisement--><!--Device-unnamed-export interface Advertisement-End-->
+
 **系统能力：** SystemCapability.Advertising.Ads
 
 ## [key:string]
@@ -25,6 +27,8 @@ export interface Advertisement
 **起始版本：** 11
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Advertisement-[key:string]: Object--><!--Device-Advertisement-[key:string]: Object-End-->
 
 **系统能力：** SystemCapability.Advertising.Ads
 
@@ -51,6 +55,8 @@ adType: number
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Advertisement-adType: number--><!--Device-Advertisement-adType: number-End-->
+
 **系统能力：** SystemCapability.Advertising.Ads
 
 ## clicked
@@ -70,6 +76,8 @@ clicked: boolean
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Advertisement-clicked: boolean--><!--Device-Advertisement-clicked: boolean-End-->
+
 **系统能力：** SystemCapability.Advertising.Ads
 
 ## rewarded
@@ -88,6 +96,8 @@ rewarded: boolean
 **起始版本：** 11
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Advertisement-rewarded: boolean--><!--Device-Advertisement-rewarded: boolean-End-->
 
 **系统能力：** SystemCapability.Advertising.Ads
 
@@ -113,6 +123,8 @@ userId: "12345"
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Advertisement-rewardVerifyConfig: Map<string, string>--><!--Device-Advertisement-rewardVerifyConfig: Map<string, string>-End-->
+
 **系统能力：** SystemCapability.Advertising.Ads
 
 **测试接口：** 此接口仅在自动化测试脚本中使用。
@@ -134,6 +146,8 @@ shown: boolean
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Advertisement-shown: boolean--><!--Device-Advertisement-shown: boolean-End-->
+
 **系统能力：** SystemCapability.Advertising.Ads
 
 ## uniqueId
@@ -149,5 +163,7 @@ uniqueId: string
 **起始版本：** 11
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Advertisement-uniqueId: string--><!--Device-Advertisement-uniqueId: string-End-->
 
 **系统能力：** SystemCapability.Advertising.Ads

@@ -12,6 +12,8 @@ export type EmbeddableUIAbilityContext = _EmbeddableUIAbilityContext.default
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-common-export type EmbeddableUIAbilityContext = _EmbeddableUIAbilityContext.default--><!--Device-common-export type EmbeddableUIAbilityContext = _EmbeddableUIAbilityContext.default-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **类型：** _EmbeddableUIAbilityContext.default

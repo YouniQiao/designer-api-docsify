@@ -10,6 +10,8 @@ PageIntentDecoratorInfo继承自[IntentDecoratorInfo](arkts-ability-app-ability-
 
 **起始版本：** 20
 
+<!--Device-unnamed-declare interface PageIntentDecoratorInfo extends IntentDecoratorInfo--><!--Device-unnamed-declare interface PageIntentDecoratorInfo extends IntentDecoratorInfo-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块
@@ -34,6 +36,8 @@ navDestinationName?: string
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-PageIntentDecoratorInfo-navDestinationName?: string--><!--Device-PageIntentDecoratorInfo-navDestinationName?: string-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## navigationId
@@ -51,6 +55,8 @@ navigationId?: string
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PageIntentDecoratorInfo-navigationId?: string--><!--Device-PageIntentDecoratorInfo-navigationId?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -70,6 +76,8 @@ pagePath: string
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-PageIntentDecoratorInfo-pagePath: string--><!--Device-PageIntentDecoratorInfo-pagePath: string-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## uiAbility
@@ -87,5 +95,7 @@ uiAbility?: string
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PageIntentDecoratorInfo-uiAbility?: string--><!--Device-PageIntentDecoratorInfo-uiAbility?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

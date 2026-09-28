@@ -8,6 +8,8 @@ class ParagraphBuilder
 
 **起始版本：** 12
 
+<!--Device-text-class ParagraphBuilder--><!--Device-text-class ParagraphBuilder-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## 导入模块
@@ -26,7 +28,9 @@ addPlaceholder(placeholderSpan: PlaceholderSpan): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-ParagraphBuilder-addPlaceholder(placeholderSpan: PlaceholderSpan): void--><!--Device-ParagraphBuilder-addPlaceholder(placeholderSpan: PlaceholderSpan): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -81,7 +85,9 @@ addSymbol(symbolId: number): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-ParagraphBuilder-addSymbol(symbolId: int): void--><!--Device-ParagraphBuilder-addSymbol(symbolId: int): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -135,7 +141,9 @@ addText(text: string): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-ParagraphBuilder-addText(text: string): void--><!--Device-ParagraphBuilder-addText(text: string): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -188,7 +196,9 @@ build(): Paragraph
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-ParagraphBuilder-build(): Paragraph--><!--Device-ParagraphBuilder-build(): Paragraph-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -242,7 +252,9 @@ buildLineTypeset(): LineTypeset
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-ParagraphBuilder-buildLineTypeset(): LineTypeset--><!--Device-ParagraphBuilder-buildLineTypeset(): LineTypeset-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -291,7 +303,9 @@ ParagraphBuilder对象的构造函数。
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-ParagraphBuilder-constructor(paragraphStyle: ParagraphStyle, fontCollection: FontCollection)--><!--Device-ParagraphBuilder-constructor(paragraphStyle: ParagraphStyle, fontCollection: FontCollection)-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -349,7 +363,9 @@ popStyle(): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-ParagraphBuilder-popStyle(): void--><!--Device-ParagraphBuilder-popStyle(): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -401,7 +417,9 @@ pushStyle(textStyle: TextStyle): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-ParagraphBuilder-pushStyle(textStyle: TextStyle): void--><!--Device-ParagraphBuilder-pushStyle(textStyle: TextStyle): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

@@ -21,6 +21,8 @@ function on(type: 'locationChange', request: LocationRequest | ContinuousLocatio
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-geoLocationManager-function on(type: 'locationChange', request: LocationRequest | ContinuousLocationRequest,      callback: Callback<Location>): void--><!--Device-geoLocationManager-function on(type: 'locationChange', request: LocationRequest | ContinuousLocationRequest,      callback: Callback<Location>): void-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **参数：**
@@ -94,6 +96,8 @@ function on(type: 'locationError', callback: Callback<LocationError>): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-geoLocationManager-function on(type: 'locationError', callback: Callback<LocationError>): void--><!--Device-geoLocationManager-function on(type: 'locationError', callback: Callback<LocationError>): void-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **参数：**
@@ -154,6 +158,8 @@ function on(type: 'locationEnabledChange', callback: Callback<boolean>): void
 
 **起始版本：** 9
 
+<!--Device-geoLocationManager-function on(type: 'locationEnabledChange', callback: Callback<boolean>): void--><!--Device-geoLocationManager-function on(type: 'locationEnabledChange', callback: Callback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **参数：**
@@ -199,6 +205,8 @@ function on(type: 'cachedGnssLocationsChange', request: CachedGnssLocationsReque
 **起始版本：** 9
 
 **需要权限：** ohos.permission.APPROXIMATELY_LOCATION
+
+<!--Device-geoLocationManager-function on(type: 'cachedGnssLocationsChange', request: CachedGnssLocationsRequest,       callback: Callback<Array<Location>>): void--><!--Device-geoLocationManager-function on(type: 'cachedGnssLocationsChange', request: CachedGnssLocationsRequest,       callback: Callback<Array<Location>>): void-End-->
 
 **系统能力：** SystemCapability.Location.Location.Gnss
 
@@ -254,6 +262,8 @@ function on(type: 'satelliteStatusChange', callback: Callback<SatelliteStatusInf
 **起始版本：** 9
 
 **需要权限：** ohos.permission.APPROXIMATELY_LOCATION
+
+<!--Device-geoLocationManager-function on(type: 'satelliteStatusChange', callback: Callback<SatelliteStatusInfo>): void--><!--Device-geoLocationManager-function on(type: 'satelliteStatusChange', callback: Callback<SatelliteStatusInfo>): void-End-->
 
 **系统能力：** SystemCapability.Location.Location.Gnss
 
@@ -334,6 +344,8 @@ function on(type: 'nmeaMessage', callback: Callback<string>): void
 
 **需要权限：** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
+<!--Device-geoLocationManager-function on(type: 'nmeaMessage', callback: Callback<string>): void--><!--Device-geoLocationManager-function on(type: 'nmeaMessage', callback: Callback<string>): void-End-->
+
 **系统能力：** SystemCapability.Location.Location.Gnss
 
 **参数：**
@@ -383,6 +395,8 @@ function on(type: 'gnssFenceStatusChange', request: GeofenceRequest, want: WantA
 **起始版本：** 9
 
 **需要权限：** ohos.permission.APPROXIMATELY_LOCATION
+
+<!--Device-geoLocationManager-function on(type: 'gnssFenceStatusChange', request: GeofenceRequest, want: WantAgent): void--><!--Device-geoLocationManager-function on(type: 'gnssFenceStatusChange', request: GeofenceRequest, want: WantAgent): void-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geofence
 
@@ -451,6 +465,8 @@ function on(type: 'countryCodeChange', callback: Callback<CountryCode>): void
 
 **起始版本：** 9
 
+<!--Device-geoLocationManager-function on(type: 'countryCodeChange', callback: Callback<CountryCode>): void--><!--Device-geoLocationManager-function on(type: 'countryCodeChange', callback: Callback<CountryCode>): void-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **参数：**
@@ -501,6 +517,8 @@ function on(type: 'bluetoothScanResultChange', callback: Callback<BluetoothScanR
 **起始版本：** 16
 
 **需要权限：** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
+
+<!--Device-geoLocationManager-function on(type: 'bluetoothScanResultChange', callback: Callback<BluetoothScanResult>): void--><!--Device-geoLocationManager-function on(type: 'bluetoothScanResultChange', callback: Callback<BluetoothScanResult>): void-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 

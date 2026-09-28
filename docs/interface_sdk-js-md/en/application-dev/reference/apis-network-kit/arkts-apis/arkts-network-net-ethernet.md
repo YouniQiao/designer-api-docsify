@@ -4,6 +4,8 @@ The **ethernet** module provides Ethernet management functions such as configuri
 
 **Since:** 9
 
+<!--Device-unnamed-declare namespace ethernet--><!--Device-unnamed-declare namespace ethernet-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
 ## Modules to Import

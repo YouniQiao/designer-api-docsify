@@ -8,6 +8,8 @@ FA模型的使用信息属性集合。
 
 **起始版本：** 9
 
+<!--Device-usageStatistics-interface HapModuleInfo--><!--Device-usageStatistics-interface HapModuleInfo-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ FA的MainAbility descriptionId。
 
 **起始版本：** 9
 
+<!--Device-HapModuleInfo-abilityDescriptionId?: long--><!--Device-HapModuleInfo-abilityDescriptionId?: long-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ FA的MainAbility iconId。
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-HapModuleInfo-abilityIconId?: long--><!--Device-HapModuleInfo-abilityIconId?: long-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -62,6 +68,8 @@ FA的MainAbility labelId。
 
 **起始版本：** 9
 
+<!--Device-HapModuleInfo-abilityLableId?: long--><!--Device-HapModuleInfo-abilityLableId?: long-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +85,8 @@ FA的MainAbility名。
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-HapModuleInfo-abilityName?: string--><!--Device-HapModuleInfo-abilityName?: string-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -94,6 +104,8 @@ FA的应用labelId。
 
 **起始版本：** 9
 
+<!--Device-HapModuleInfo-appLabelId?: long--><!--Device-HapModuleInfo-appLabelId?: long-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **系统接口：** 此接口为系统接口。
@@ -109,6 +121,8 @@ bundleName: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-HapModuleInfo-bundleName: string--><!--Device-HapModuleInfo-bundleName: string-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -126,6 +140,8 @@ FA所属的应用descriptionId。
 
 **起始版本：** 9
 
+<!--Device-HapModuleInfo-descriptionId?: long--><!--Device-HapModuleInfo-descriptionId?: long-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **系统接口：** 此接口为系统接口。
@@ -141,6 +157,8 @@ deviceId?: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-HapModuleInfo-deviceId?: string--><!--Device-HapModuleInfo-deviceId?: string-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -158,6 +176,8 @@ FA中卡片的使用记录。
 
 **起始版本：** 9
 
+<!--Device-HapModuleInfo-formRecords: Array<HapFormInfo>--><!--Device-HapModuleInfo-formRecords: Array<HapFormInfo>-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **系统接口：** 此接口为系统接口。
@@ -173,6 +193,8 @@ FA所属module的labelId。
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-HapModuleInfo-labelId?: long--><!--Device-HapModuleInfo-labelId?: long-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -190,6 +212,8 @@ FA的上一次使用时间，单位：ms。
 
 **起始版本：** 9
 
+<!--Device-HapModuleInfo-lastModuleUsedTime: long--><!--Device-HapModuleInfo-lastModuleUsedTime: long-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **系统接口：** 此接口为系统接口。
@@ -206,6 +230,8 @@ FA的启动次数。
 
 **起始版本：** 9
 
+<!--Device-HapModuleInfo-launchedCount: int--><!--Device-HapModuleInfo-launchedCount: int-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **系统接口：** 此接口为系统接口。
@@ -221,6 +247,8 @@ FA所属module名。
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-HapModuleInfo-moduleName: string--><!--Device-HapModuleInfo-moduleName: string-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 

@@ -18,6 +18,8 @@ function queryDeviceInfo(deviceId?: number): Array<Readonly<DeviceInfo>>
 
 **需要权限：** ohos.permission.ACCESS_EXTENSIONAL_DEVICE_DRIVER
 
+<!--Device-deviceManager-function queryDeviceInfo(deviceId?: long): Array<Readonly<DeviceInfo>>--><!--Device-deviceManager-function queryDeviceInfo(deviceId?: long): Array<Readonly<DeviceInfo>>-End-->
+
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
 **系统接口：** 此接口为系统接口。

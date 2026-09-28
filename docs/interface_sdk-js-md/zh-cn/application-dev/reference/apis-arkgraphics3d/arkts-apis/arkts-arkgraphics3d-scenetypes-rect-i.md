@@ -10,6 +10,8 @@ export interface Rect
 
 **起始版本：** 12
 
+<!--Device-unnamed-export interface Rect--><!--Device-unnamed-export interface Rect-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## height
@@ -23,6 +25,8 @@ height: number
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-Rect-height: double--><!--Device-Rect-height: double-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -38,6 +42,8 @@ width: number
 
 **起始版本：** 12
 
+<!--Device-Rect-width: double--><!--Device-Rect-width: double-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## x
@@ -52,6 +58,8 @@ x: number
 
 **起始版本：** 12
 
+<!--Device-Rect-x: double--><!--Device-Rect-x: double-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## y
@@ -65,5 +73,7 @@ y: number
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-Rect-y: double--><!--Device-Rect-y: double-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

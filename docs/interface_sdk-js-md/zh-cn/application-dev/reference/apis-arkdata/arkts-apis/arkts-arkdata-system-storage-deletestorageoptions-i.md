@@ -8,6 +8,8 @@ export interface DeleteStorageOptions
 
 **废弃版本：** 6
 
+<!--Device-unnamed-export interface DeleteStorageOptions--><!--Device-unnamed-export interface DeleteStorageOptions-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
 ## 导入模块
@@ -29,6 +31,8 @@ complete?: () => void
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-DeleteStorageOptions-complete?: () => void--><!--Device-DeleteStorageOptions-complete?: () => void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
 ## fail
@@ -44,6 +48,8 @@ fail?: (data: string, code: number) => void
 **废弃版本：** 6
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-DeleteStorageOptions-fail?: (data: string, code: number) => void--><!--Device-DeleteStorageOptions-fail?: (data: string, code: number) => void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
@@ -68,6 +74,8 @@ success?: () => void
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-DeleteStorageOptions-success?: () => void--><!--Device-DeleteStorageOptions-success?: () => void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
 ## key
@@ -85,5 +93,7 @@ key: string
 **废弃版本：** 6
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-DeleteStorageOptions-key: string--><!--Device-DeleteStorageOptions-key: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core.Lite

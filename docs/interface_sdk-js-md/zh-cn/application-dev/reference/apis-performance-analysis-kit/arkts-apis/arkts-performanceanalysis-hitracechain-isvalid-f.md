@@ -16,6 +16,8 @@ function isValid(id: HiTraceId): boolean
 
 **起始版本：** 8
 
+<!--Device-hiTraceChain-function isValid(id: HiTraceId): boolean--><!--Device-hiTraceChain-function isValid(id: HiTraceId): boolean-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
 
 **参数：**

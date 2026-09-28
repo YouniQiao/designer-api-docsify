@@ -8,6 +8,8 @@ formHost模块提供了卡片使用方相关接口的能力，包括对使用方
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace formHost--><!--Device-unnamed-declare namespace formHost-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。

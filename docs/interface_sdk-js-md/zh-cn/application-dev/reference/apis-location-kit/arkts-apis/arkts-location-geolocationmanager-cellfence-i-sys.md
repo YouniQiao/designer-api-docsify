@@ -8,6 +8,8 @@ CELL围栏信息。
 
 **起始版本：** 26.0.0
 
+<!--Device-geoLocationManager-export interface CellFence--><!--Device-geoLocationManager-export interface CellFence-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 **系统接口：** 此接口为系统接口。
@@ -31,6 +33,8 @@ cellInfos: Array<CellInfo>
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-CellFence-cellInfos: Array<CellInfo>--><!--Device-CellFence-cellInfos: Array<CellInfo>-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geofence
 

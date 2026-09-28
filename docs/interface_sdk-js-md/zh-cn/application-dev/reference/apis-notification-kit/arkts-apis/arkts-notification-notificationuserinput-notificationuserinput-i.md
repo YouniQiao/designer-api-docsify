@@ -8,6 +8,8 @@ export interface NotificationUserInput
 
 **起始版本：** 8
 
+<!--Device-unnamed-export interface NotificationUserInput--><!--Device-unnamed-export interface NotificationUserInput-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## inputKey
@@ -21,5 +23,7 @@ inputKey: string
 **类型：** string
 
 **起始版本：** 8
+
+<!--Device-NotificationUserInput-inputKey: string--><!--Device-NotificationUserInput-inputKey: string-End-->
 
 **系统能力：** SystemCapability.Notification.Notification

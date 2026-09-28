@@ -12,6 +12,8 @@ enum ClipOp
 
 **起始版本：** 12
 
+<!--Device-drawing-enum ClipOp--><!--Device-drawing-enum ClipOp-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## DIFFERENCE
@@ -24,6 +26,8 @@ DIFFERENCE = 0
 
 **起始版本：** 12
 
+<!--Device-ClipOp-DIFFERENCE = 0--><!--Device-ClipOp-DIFFERENCE = 0-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## INTERSECT
@@ -35,5 +39,7 @@ INTERSECT = 1
 将指定区域保留（取交集）。
 
 **起始版本：** 12
+
+<!--Device-ClipOp-INTERSECT = 1--><!--Device-ClipOp-INTERSECT = 1-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing

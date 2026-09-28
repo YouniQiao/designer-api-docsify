@@ -8,6 +8,8 @@ export enum NetworkType
 
 **起始版本：** 9
 
+<!--Device-workScheduler-export enum NetworkType--><!--Device-workScheduler-export enum NetworkType-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
 ## NETWORK_TYPE_ANY
@@ -21,6 +23,8 @@ NETWORK_TYPE_ANY = 0
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-NetworkType-NETWORK_TYPE_ANY = 0--><!--Device-NetworkType-NETWORK_TYPE_ANY = 0-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
@@ -36,6 +40,8 @@ NETWORK_TYPE_MOBILE = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-NetworkType-NETWORK_TYPE_MOBILE = 1--><!--Device-NetworkType-NETWORK_TYPE_MOBILE = 1-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
 ## NETWORK_TYPE_WIFI
@@ -49,6 +55,8 @@ NETWORK_TYPE_WIFI = 2
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-NetworkType-NETWORK_TYPE_WIFI = 2--><!--Device-NetworkType-NETWORK_TYPE_WIFI = 2-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
@@ -64,6 +72,8 @@ NETWORK_TYPE_BLUETOOTH = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-NetworkType-NETWORK_TYPE_BLUETOOTH = 3--><!--Device-NetworkType-NETWORK_TYPE_BLUETOOTH = 3-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
 ## NETWORK_TYPE_WIFI_P2P
@@ -78,6 +88,8 @@ NETWORK_TYPE_WIFI_P2P = 4
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-NetworkType-NETWORK_TYPE_WIFI_P2P = 4--><!--Device-NetworkType-NETWORK_TYPE_WIFI_P2P = 4-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
 ## NETWORK_TYPE_ETHERNET
@@ -91,5 +103,7 @@ NETWORK_TYPE_ETHERNET = 5
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-NetworkType-NETWORK_TYPE_ETHERNET = 5--><!--Device-NetworkType-NETWORK_TYPE_ETHERNET = 5-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler

@@ -16,6 +16,8 @@ function getTask(context: BaseContext, id: string, token?: string): Promise<Task
 
 **起始版本：** 11
 
+<!--Device-agent-function getTask(context: BaseContext, id: string, token?: string): Promise<Task>--><!--Device-agent-function getTask(context: BaseContext, id: string, token?: string): Promise<Task>-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 **参数：**

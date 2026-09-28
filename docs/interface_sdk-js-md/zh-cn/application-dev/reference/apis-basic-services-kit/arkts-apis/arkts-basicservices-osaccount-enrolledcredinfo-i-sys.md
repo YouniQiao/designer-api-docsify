@@ -8,6 +8,8 @@ interface EnrolledCredInfo
 
 **起始版本：** 8
 
+<!--Device-osAccount-interface EnrolledCredInfo--><!--Device-osAccount-interface EnrolledCredInfo-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ authSubType: AuthSubType
 
 **起始版本：** 8
 
+<!--Device-EnrolledCredInfo-authSubType: AuthSubType--><!--Device-EnrolledCredInfo-authSubType: AuthSubType-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ authType: AuthType
 **类型：** [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md)
 
 **起始版本：** 8
+
+<!--Device-EnrolledCredInfo-authType: AuthType--><!--Device-EnrolledCredInfo-authType: AuthType-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -62,6 +68,8 @@ credentialId: Uint8Array
 
 **起始版本：** 8
 
+<!--Device-EnrolledCredInfo-credentialId: Uint8Array--><!--Device-EnrolledCredInfo-credentialId: Uint8Array-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +85,8 @@ isAbandoned?: boolean
 **类型：** boolean
 
 **起始版本：** 20
+
+<!--Device-EnrolledCredInfo-isAbandoned?: boolean--><!--Device-EnrolledCredInfo-isAbandoned?: boolean-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -94,6 +104,8 @@ templateId: Uint8Array
 
 **起始版本：** 8
 
+<!--Device-EnrolledCredInfo-templateId: Uint8Array--><!--Device-EnrolledCredInfo-templateId: Uint8Array-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -109,6 +121,8 @@ validityPeriod?: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-EnrolledCredInfo-validityPeriod?: long--><!--Device-EnrolledCredInfo-validityPeriod?: long-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 

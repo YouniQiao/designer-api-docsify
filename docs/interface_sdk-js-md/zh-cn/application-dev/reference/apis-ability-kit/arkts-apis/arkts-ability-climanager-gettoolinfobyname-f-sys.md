@@ -20,6 +20,8 @@ function getToolInfoByName(toolName: string): Promise<ToolInfo>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-cliManager-function getToolInfoByName(toolName: string): Promise<ToolInfo>--><!--Device-cliManager-function getToolInfoByName(toolName: string): Promise<ToolInfo>-End-->
+
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 **系统接口：** 此接口为系统接口。

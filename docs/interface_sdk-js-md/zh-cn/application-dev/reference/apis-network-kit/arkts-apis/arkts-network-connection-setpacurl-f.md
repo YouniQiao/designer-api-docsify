@@ -22,6 +22,8 @@ function setPacUrl(pacUrl: string): void
 
 **需要权限：** ohos.permission.SET_PAC_URL
 
+<!--Device-connection-function setPacUrl(pacUrl: string): void--><!--Device-connection-function setPacUrl(pacUrl: string): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**

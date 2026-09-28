@@ -8,6 +8,8 @@ CLI工具会话事件类型。
 
 **起始版本：** 26.0.1
 
+<!--Device-unnamed-export enum ToolEventType--><!--Device-unnamed-export enum ToolEventType-End-->
+
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 ## STDOUT
@@ -21,6 +23,8 @@ STDOUT = 'stdout'
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ToolEventType-STDOUT = 'stdout'--><!--Device-ToolEventType-STDOUT = 'stdout'-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -36,6 +40,8 @@ STDERR = 'stderr'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ToolEventType-STDERR = 'stderr'--><!--Device-ToolEventType-STDERR = 'stderr'-End-->
+
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 ## EXIT
@@ -50,6 +56,8 @@ EXIT = 'exit'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ToolEventType-EXIT = 'exit'--><!--Device-ToolEventType-EXIT = 'exit'-End-->
+
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 ## ERROR
@@ -63,5 +71,7 @@ ERROR = 'error'
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ToolEventType-ERROR = 'error'--><!--Device-ToolEventType-ERROR = 'error'-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core

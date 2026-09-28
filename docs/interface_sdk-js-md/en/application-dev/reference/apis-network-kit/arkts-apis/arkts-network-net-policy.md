@@ -4,6 +4,8 @@ The **policy** module provides APIs for managing network policies, which allow y
 
 **Since:** 10
 
+<!--Device-unnamed-declare namespace policy--><!--Device-unnamed-declare namespace policy-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 ## Modules to Import

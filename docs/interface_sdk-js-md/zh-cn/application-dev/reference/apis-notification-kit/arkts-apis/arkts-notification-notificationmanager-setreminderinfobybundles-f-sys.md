@@ -18,6 +18,8 @@ function setReminderInfoByBundles(reminderInfos: Array<NotificationReminderInfo>
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function setReminderInfoByBundles(reminderInfos: Array<NotificationReminderInfo>) : Promise<void>--><!--Device-notificationManager-function setReminderInfoByBundles(reminderInfos: Array<NotificationReminderInfo>) : Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。

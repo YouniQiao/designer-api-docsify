@@ -10,6 +10,8 @@ LiveFormExtensionContext是[LiveFormExtensionAbility](arkts-form-app-form-livefo
 
 **起始版本：** 20
 
+<!--Device-unnamed-declare class LiveFormExtensionContext extends ExtensionContext--><!--Device-unnamed-declare class LiveFormExtensionContext extends ExtensionContext-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 ## startAbilityByLiveForm
@@ -30,7 +32,9 @@ startAbilityByLiveForm(want: Want): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-LiveFormExtensionContext-startAbilityByLiveForm(want: Want): Promise<void>--><!--Device-LiveFormExtensionContext-startAbilityByLiveForm(want: Want): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 

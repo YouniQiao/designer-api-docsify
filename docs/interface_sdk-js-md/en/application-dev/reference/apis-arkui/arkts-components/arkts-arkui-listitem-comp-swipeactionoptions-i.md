@@ -10,6 +10,8 @@ The swipe gesture works only in the list item area. If a child component is swip
 
 **Since:** 9
 
+<!--Device-unnamed-declare interface SwipeActionOptions--><!--Device-unnamed-declare interface SwipeActionOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onOffsetChange
@@ -25,6 +27,8 @@ Callback invoked when the location of the list item changes, in vp, when it is s
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SwipeActionOptions-onOffsetChange?: (offset: number) => void--><!--Device-SwipeActionOptions-onOffsetChange?: (offset: number) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,6 +54,8 @@ Scroll effect.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SwipeActionOptions-edgeEffect?: SwipeEdgeEffect--><!--Device-SwipeActionOptions-edgeEffect?: SwipeEdgeEffect-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## end
@@ -68,6 +74,8 @@ Swipe action item displayed on the right of the list item when the item is swipe
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SwipeActionOptions-end?: CustomBuilder | SwipeActionItem--><!--Device-SwipeActionOptions-end?: CustomBuilder | SwipeActionItem-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## start
@@ -85,5 +93,7 @@ Swipe action item displayed on the left of the list item when the item is swiped
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SwipeActionOptions-start?: CustomBuilder | SwipeActionItem--><!--Device-SwipeActionOptions-start?: CustomBuilder | SwipeActionItem-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

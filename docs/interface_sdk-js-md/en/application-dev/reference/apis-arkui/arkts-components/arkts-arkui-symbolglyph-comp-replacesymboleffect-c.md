@@ -10,6 +10,8 @@ Inherits from **SymbolEffect**.
 
 **Since:** 12
 
+<!--Device-unnamed-declare class ReplaceSymbolEffect extends SymbolEffect--><!--Device-unnamed-declare class ReplaceSymbolEffect extends SymbolEffect-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
@@ -27,6 +29,8 @@ A constructor used to create a **ReplaceSymbolEffect** instance, which comes wit
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-ReplaceSymbolEffect-constructor(scope?: EffectScope)--><!--Device-ReplaceSymbolEffect-constructor(scope?: EffectScope)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -53,6 +57,8 @@ A constructor used to create a **ReplaceSymbolEffect** instance, which comes wit
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 20.
+
+<!--Device-ReplaceSymbolEffect-constructor(scope?: EffectScope, replaceType?: ReplaceEffectType)--><!--Device-ReplaceSymbolEffect-constructor(scope?: EffectScope, replaceType?: ReplaceEffectType)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -83,6 +89,8 @@ Default value: ReplaceEffectType.SEQUENTIAL
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 20.
 
+<!--Device-ReplaceSymbolEffect-replaceType?: ReplaceEffectType--><!--Device-ReplaceSymbolEffect-replaceType?: ReplaceEffectType-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## scope
@@ -104,5 +112,7 @@ Default value: EffectScope.LAYER
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-ReplaceSymbolEffect-scope?: EffectScope--><!--Device-ReplaceSymbolEffect-scope?: EffectScope-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

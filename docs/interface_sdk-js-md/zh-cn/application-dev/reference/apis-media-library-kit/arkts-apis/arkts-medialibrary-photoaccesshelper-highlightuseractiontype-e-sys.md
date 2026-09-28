@@ -8,6 +8,8 @@ enum HighlightUserActionType
 
 **起始版本：** 12
 
+<!--Device-photoAccessHelper-enum HighlightUserActionType--><!--Device-photoAccessHelper-enum HighlightUserActionType-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -21,6 +23,8 @@ INSERTED_PIC_COUNT = 0
 新增图片数量类别。
 
 **起始版本：** 12
+
+<!--Device-HighlightUserActionType-INSERTED_PIC_COUNT = 0--><!--Device-HighlightUserActionType-INSERTED_PIC_COUNT = 0-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -36,6 +40,8 @@ REMOVED_PIC_COUNT = 1
 
 **起始版本：** 12
 
+<!--Device-HighlightUserActionType-REMOVED_PIC_COUNT = 1--><!--Device-HighlightUserActionType-REMOVED_PIC_COUNT = 1-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +55,8 @@ SHARED_SCREENSHOT_COUNT = 2
 分享二级界面长图次数类别。
 
 **起始版本：** 12
+
+<!--Device-HighlightUserActionType-SHARED_SCREENSHOT_COUNT = 2--><!--Device-HighlightUserActionType-SHARED_SCREENSHOT_COUNT = 2-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -64,6 +72,8 @@ SHARED_COVER_COUNT = 3
 
 **起始版本：** 12
 
+<!--Device-HighlightUserActionType-SHARED_COVER_COUNT = 3--><!--Device-HighlightUserActionType-SHARED_COVER_COUNT = 3-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +87,8 @@ RENAMED_COUNT = 4
 重命名次数类别。
 
 **起始版本：** 12
+
+<!--Device-HighlightUserActionType-RENAMED_COUNT = 4--><!--Device-HighlightUserActionType-RENAMED_COUNT = 4-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -92,6 +104,8 @@ CHANGED_COVER_COUNT = 5
 
 **起始版本：** 12
 
+<!--Device-HighlightUserActionType-CHANGED_COVER_COUNT = 5--><!--Device-HighlightUserActionType-CHANGED_COVER_COUNT = 5-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -105,6 +119,8 @@ RENDER_VIEWED_TIMES = 100
 轮播观看次数类别。
 
 **起始版本：** 12
+
+<!--Device-HighlightUserActionType-RENDER_VIEWED_TIMES = 100--><!--Device-HighlightUserActionType-RENDER_VIEWED_TIMES = 100-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -120,6 +136,8 @@ RENDER_VIEWED_DURATION = 101
 
 **起始版本：** 12
 
+<!--Device-HighlightUserActionType-RENDER_VIEWED_DURATION = 101--><!--Device-HighlightUserActionType-RENDER_VIEWED_DURATION = 101-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -134,6 +152,8 @@ ART_LAYOUT_VIEWED_TIMES = 102
 
 **起始版本：** 12
 
+<!--Device-HighlightUserActionType-ART_LAYOUT_VIEWED_TIMES = 102--><!--Device-HighlightUserActionType-ART_LAYOUT_VIEWED_TIMES = 102-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -147,6 +167,8 @@ ART_LAYOUT_VIEWED_DURATION = 103
 二级界面观看总时长类别。
 
 **起始版本：** 12
+
+<!--Device-HighlightUserActionType-ART_LAYOUT_VIEWED_DURATION = 103--><!--Device-HighlightUserActionType-ART_LAYOUT_VIEWED_DURATION = 103-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

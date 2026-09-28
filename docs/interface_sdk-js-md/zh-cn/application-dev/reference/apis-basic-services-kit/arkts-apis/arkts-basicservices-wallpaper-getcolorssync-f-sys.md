@@ -21,6 +21,8 @@ function getColorsSync(wallpaperType: WallpaperType): Array<RgbaColor>
 
 **废弃版本：** 23
 
+<!--Device-wallpaper-function getColorsSync(wallpaperType: WallpaperType): Array<RgbaColor>--><!--Device-wallpaper-function getColorsSync(wallpaperType: WallpaperType): Array<RgbaColor>-End-->
+
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
 **系统接口：** 此接口为系统接口。

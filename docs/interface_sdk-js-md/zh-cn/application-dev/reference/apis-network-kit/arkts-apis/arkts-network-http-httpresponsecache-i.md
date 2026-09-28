@@ -30,6 +30,8 @@ export interface HttpResponseCache
 
 **起始版本：** 9
 
+<!--Device-http-export interface HttpResponseCache--><!--Device-http-export interface HttpResponseCache-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块
@@ -48,7 +50,9 @@ delete(callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-HttpResponseCache-delete(callback: AsyncCallback<void>): void--><!--Device-HttpResponseCache-delete(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -96,7 +100,9 @@ delete(): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-HttpResponseCache-delete(): Promise<void>--><!--Device-HttpResponseCache-delete(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -136,7 +142,9 @@ flush(callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-HttpResponseCache-flush(callback: AsyncCallback<void>): void--><!--Device-HttpResponseCache-flush(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -184,6 +192,8 @@ flush(): Promise<void>
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-HttpResponseCache-flush(): Promise<void>--><!--Device-HttpResponseCache-flush(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 

@@ -16,6 +16,8 @@ function isImsSwitchEnabled(slotId: number, callback: AsyncCallback<boolean>): v
 
 **起始版本：** 8
 
+<!--Device-call-function isImsSwitchEnabled(slotId: int, callback: AsyncCallback<boolean>): void--><!--Device-call-function isImsSwitchEnabled(slotId: int, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -64,6 +66,8 @@ function isImsSwitchEnabled(slotId: number): Promise<boolean>
 判断Ims开关是否启用。使用Promise异步回调。
 
 **起始版本：** 8
+
+<!--Device-call-function isImsSwitchEnabled(slotId: int): Promise<boolean>--><!--Device-call-function isImsSwitchEnabled(slotId: int): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 

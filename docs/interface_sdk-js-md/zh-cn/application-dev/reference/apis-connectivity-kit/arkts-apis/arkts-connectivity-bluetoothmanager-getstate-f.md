@@ -26,6 +26,8 @@ function getState(): BluetoothState
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH
 - API版本9：ohos.permission.USE_BLUETOOTH
 
+<!--Device-bluetoothManager-function getState(): BluetoothState--><!--Device-bluetoothManager-function getState(): BluetoothState-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **返回值：**

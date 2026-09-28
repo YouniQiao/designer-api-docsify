@@ -14,6 +14,8 @@ enum EffectId
 
 **起始版本：** 8
 
+<!--Device-vibrator-enum EffectId--><!--Device-vibrator-enum EffectId-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## EFFECT_CLOCK_TIMER
@@ -25,5 +27,7 @@ EFFECT_CLOCK_TIMER = 'haptic.clock.timer'
 描述用户调整计时器时的振动效果。
 
 **起始版本：** 8
+
+<!--Device-EffectId-EFFECT_CLOCK_TIMER = 'haptic.clock.timer'--><!--Device-EffectId-EFFECT_CLOCK_TIMER = 'haptic.clock.timer'-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice

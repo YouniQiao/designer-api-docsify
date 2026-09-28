@@ -10,6 +10,8 @@ interface FileData
 
 **起始版本：** 10
 
+<!--Device-backup-interface FileData--><!--Device-backup-interface FileData-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 **系统接口：** 此接口为系统接口。
@@ -31,6 +33,8 @@ fd: number
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-FileData-fd: int--><!--Device-FileData-fd: int-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 

@@ -16,6 +16,8 @@ function notifyDataChange(accountId: string, bundleName: string): Promise<void>
 
 **起始版本：** 10
 
+<!--Device-cloudSyncManager-function notifyDataChange(accountId: string, bundleName: string): Promise<void>--><!--Device-cloudSyncManager-function notifyDataChange(accountId: string, bundleName: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 **系统接口：** 此接口为系统接口。
@@ -68,6 +70,8 @@ function notifyDataChange(accountId: string, bundleName: string, callback: Async
 
 **起始版本：** 10
 
+<!--Device-cloudSyncManager-function notifyDataChange(accountId: string, bundleName: string, callback: AsyncCallback<void>): void--><!--Device-cloudSyncManager-function notifyDataChange(accountId: string, bundleName: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 **系统接口：** 此接口为系统接口。
@@ -118,6 +122,8 @@ function notifyDataChange(userId: number, extraData: ExtraData): Promise<void>
 **起始版本：** 11
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC_MANAGER
+
+<!--Device-cloudSyncManager-function notifyDataChange(userId: int, extraData: ExtraData): Promise<void>--><!--Device-cloudSyncManager-function notifyDataChange(userId: int, extraData: ExtraData): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
@@ -173,6 +179,8 @@ function notifyDataChange(userId: number, extraData: ExtraData, callback: AsyncC
 **起始版本：** 11
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC_MANAGER
+
+<!--Device-cloudSyncManager-function notifyDataChange(userId: int, extraData: ExtraData, callback: AsyncCallback<void>): void--><!--Device-cloudSyncManager-function notifyDataChange(userId: int, extraData: ExtraData, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 

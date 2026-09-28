@@ -8,6 +8,8 @@ Creates an **Animator** object.
 
 **Since:** 6
 
+<!--Device-unnamed-export default class Animator--><!--Device-unnamed-export default class Animator-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -31,6 +33,8 @@ Creates an **AnimatorResult** object for animations. Compared with [create](#cre
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-Animator-static create(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult--><!--Device-Animator-static create(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -85,6 +89,8 @@ Creates an **AnimatorResult** object for animations.
 **Substitutes:** createAnimator
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Animator-static create(options: AnimatorOptions): AnimatorResult--><!--Device-Animator-static create(options: AnimatorOptions): AnimatorResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -143,6 +149,8 @@ Creates an animation.
 **Deprecated since:** 9
 
 **Substitutes:** create
+
+<!--Device-Animator-static createAnimator(options: AnimatorOptions): AnimatorResult--><!--Device-Animator-static createAnimator(options: AnimatorOptions): AnimatorResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

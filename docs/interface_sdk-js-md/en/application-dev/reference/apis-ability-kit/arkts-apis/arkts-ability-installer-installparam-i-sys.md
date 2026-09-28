@@ -8,6 +8,8 @@ Defines the parameters that need to be specified for bundle installation, uninst
 
 **Since:** 9
 
+<!--Device-installer-export interface InstallParam--><!--Device-installer-export interface InstallParam-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -30,6 +32,8 @@ Additional information during application installation (usually an enterprise ap
 
 **Since:** 10
 
+<!--Device-InstallParam-additionalInfo?: string--><!--Device-InstallParam-additionalInfo?: string-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -45,6 +49,8 @@ End date of crowdtesting. The default value is **-1**, indicating that no end da
 **Type:** number
 
 **Since:** 9
+
+<!--Device-InstallParam-crowdtestDeadline?: long--><!--Device-InstallParam-crowdtestDeadline?: long-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -62,6 +68,8 @@ Hash parameters. By default, no value is passed.
 
 **Since:** 9
 
+<!--Device-InstallParam-hashParams?: Array<HashParam>--><!--Device-InstallParam-hashParams?: Array<HashParam>-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -78,6 +86,8 @@ Installation flag. The value **0x00** means initial installation, **0x01** means
 
 **Since:** 9
 
+<!--Device-InstallParam-installFlag?: int--><!--Device-InstallParam-installFlag?: int-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -93,6 +103,8 @@ Whether to retain the data directory during bundle uninstall. The default value 
 **Type:** boolean
 
 **Since:** 9
+
+<!--Device-InstallParam-isKeepData?: boolean--><!--Device-InstallParam-isKeepData?: boolean-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -130,6 +142,8 @@ possesses a notarized credential when calling the installation interface. If the
 
 **Since:** 15
 
+<!--Device-InstallParam-parameters?: Array<Parameters>--><!--Device-InstallParam-parameters?: Array<Parameters>-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -145,6 +159,8 @@ Parameters of the Profile-guided Optimization (PGO) configuration file. The defa
 **Type:** Array&lt;[PGOParam](arkts-ability-installer-pgoparam-i-sys.md)&gt;
 
 **Since:** 11
+
+<!--Device-InstallParam-pgoParams?: Array<PGOParam>--><!--Device-InstallParam-pgoParams?: Array<PGOParam>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -162,6 +178,8 @@ Paths of the shared bundle files. By default, no value is passed.
 
 **Since:** 10
 
+<!--Device-InstallParam-sharedBundleDirPaths?: Array<string>--><!--Device-InstallParam-sharedBundleDirPaths?: Array<string>-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -178,6 +196,8 @@ specifiedDistributionType?: string
 
 **Since:** 10
 
+<!--Device-InstallParam-specifiedDistributionType?: string--><!--Device-InstallParam-specifiedDistributionType?: string-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -193,6 +213,8 @@ User ID. The default value is the user ID of the caller. The value must be great
 **Type:** number
 
 **Since:** 9
+
+<!--Device-InstallParam-userId?: int--><!--Device-InstallParam-userId?: int-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -215,6 +237,8 @@ Starting from API version 10, the code signature file of an application is integ
 **Since:** 10
 
 **Deprecated since:** 11
+
+<!--Device-InstallParam-verifyCodeParams?: Array<VerifyCodeParam>--><!--Device-InstallParam-verifyCodeParams?: Array<VerifyCodeParam>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 

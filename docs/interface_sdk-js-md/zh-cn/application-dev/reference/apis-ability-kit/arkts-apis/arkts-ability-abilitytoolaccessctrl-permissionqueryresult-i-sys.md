@@ -8,6 +8,8 @@ interface PermissionQueryResult
 
 **起始版本：** 26.0.0
 
+<!--Device-abilityToolAccessCtrl-interface PermissionQueryResult--><!--Device-abilityToolAccessCtrl-interface PermissionQueryResult-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 **系统接口：** 此接口为系统接口。
@@ -31,6 +33,8 @@ needDialog: boolean
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-PermissionQueryResult-needDialog: boolean--><!--Device-PermissionQueryResult-needDialog: boolean-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ permissionResults: PermissionInfo[]
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-PermissionQueryResult-permissionResults: PermissionInfo[]--><!--Device-PermissionQueryResult-permissionResults: PermissionInfo[]-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 **系统接口：** 此接口为系统接口。
@@ -66,6 +72,8 @@ ticket?: TicketInfo
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-PermissionQueryResult-ticket?: TicketInfo--><!--Device-PermissionQueryResult-ticket?: TicketInfo-End-->
 
 **系统能力：** SystemCapability.Security.Asset
 

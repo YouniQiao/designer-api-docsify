@@ -20,6 +20,8 @@ function connectDevice(addrInfo: AddressInfo, params: ConnectParam): Promise<Att
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-mechanicManager-function connectDevice(addrInfo: AddressInfo, params: ConnectParam): Promise<AttachStateChangeInfo>--><!--Device-mechanicManager-function connectDevice(addrInfo: AddressInfo, params: ConnectParam): Promise<AttachStateChangeInfo>-End-->
+
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。

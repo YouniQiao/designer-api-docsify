@@ -12,6 +12,8 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace preferences--><!--Device-unnamed-declare namespace preferences-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
 ## 导入模块

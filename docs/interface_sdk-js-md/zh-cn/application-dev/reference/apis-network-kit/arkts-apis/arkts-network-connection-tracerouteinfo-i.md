@@ -8,6 +8,8 @@ export interface TraceRouteInfo
 
 **起始版本：** 26.0.0
 
+<!--Device-connection-export interface TraceRouteInfo--><!--Device-connection-export interface TraceRouteInfo-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ address: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TraceRouteInfo-address: string--><!--Device-TraceRouteInfo-address: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## jumpNo
@@ -46,6 +50,8 @@ jumpNo: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TraceRouteInfo-jumpNo: int--><!--Device-TraceRouteInfo-jumpNo: int-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## rtt
@@ -61,5 +67,7 @@ rtt: number[]
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TraceRouteInfo-rtt: int[]--><!--Device-TraceRouteInfo-rtt: int[]-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core

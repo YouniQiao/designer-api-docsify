@@ -16,6 +16,8 @@ function hasCallSync(): boolean
 
 **起始版本：** 10
 
+<!--Device-call-function hasCallSync(): boolean--><!--Device-call-function hasCallSync(): boolean-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **返回值：**

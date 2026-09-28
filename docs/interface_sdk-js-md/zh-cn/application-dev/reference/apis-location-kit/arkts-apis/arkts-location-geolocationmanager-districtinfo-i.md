@@ -8,6 +8,8 @@ interface DistrictInfo
 
 **起始版本：** 26.0.0
 
+<!--Device-geoLocationManager-interface DistrictInfo--><!--Device-geoLocationManager-interface DistrictInfo-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 ## 导入模块
@@ -30,7 +32,9 @@ administrativeArea?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-DistrictInfo-administrativeArea?: string--><!--Device-DistrictInfo-administrativeArea?: string-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
@@ -48,7 +52,9 @@ countryCode?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-DistrictInfo-countryCode?: string--><!--Device-DistrictInfo-countryCode?: string-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
@@ -66,7 +72,9 @@ countryName?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-DistrictInfo-countryName?: string--><!--Device-DistrictInfo-countryName?: string-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
@@ -84,7 +92,9 @@ locale?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-DistrictInfo-locale?: string--><!--Device-DistrictInfo-locale?: string-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
@@ -102,7 +112,9 @@ locality?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-DistrictInfo-locality?: string--><!--Device-DistrictInfo-locality?: string-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
@@ -120,7 +132,9 @@ subAdministrativeArea?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-DistrictInfo-subAdministrativeArea?: string--><!--Device-DistrictInfo-subAdministrativeArea?: string-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
@@ -138,6 +152,8 @@ subLocality?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-DistrictInfo-subLocality?: string--><!--Device-DistrictInfo-subLocality?: string-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geocoder

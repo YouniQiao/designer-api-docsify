@@ -18,6 +18,8 @@ function setCallWaiting(slotId: number, activate: boolean, callback: AsyncCallba
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-call-function setCallWaiting(slotId: int, activate: boolean, callback: AsyncCallback<void>): void--><!--Device-call-function setCallWaiting(slotId: int, activate: boolean, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -70,6 +72,8 @@ function setCallWaiting(slotId: number, activate: boolean): Promise<void>
 **起始版本：** 7
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
+
+<!--Device-call-function setCallWaiting(slotId: int, activate: boolean): Promise<void>--><!--Device-call-function setCallWaiting(slotId: int, activate: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 

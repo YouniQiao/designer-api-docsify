@@ -8,6 +8,8 @@ Configuration information interface for PromptOptionsV2. Used to construct Promp
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export interface PromptOptionsV2Config--><!--Device-unnamed-export interface PromptOptionsV2Config-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -32,6 +34,8 @@ Text of the icon on the right of the ExceptionPromptV2. If this parameter is not
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-PromptOptionsV2Config-actionText?: ResourceStr--><!--Device-PromptOptionsV2Config-actionText?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## icon
@@ -49,6 +53,8 @@ Icon style of the ExceptionPromptV2. If this parameter is not set or is set to u
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-PromptOptionsV2Config-icon?: ResourceStr--><!--Device-PromptOptionsV2Config-icon?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -68,6 +74,8 @@ Whether the ExceptionPromptV2 is displayed. true: The exception prompt is displa
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-PromptOptionsV2Config-isShown?: boolean--><!--Device-PromptOptionsV2Config-isShown?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## marginTop
@@ -85,6 +93,8 @@ Top margin of the ExceptionPromptV2. Distance from the top to the content area o
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-PromptOptionsV2Config-marginTop: Dimension--><!--Device-PromptOptionsV2Config-marginTop: Dimension-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -104,6 +114,8 @@ Margin Type of the ExceptionPromptV2. Margin from the content area to the edge o
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-PromptOptionsV2Config-marginType: MarginTypeV2--><!--Device-PromptOptionsV2Config-marginType: MarginTypeV2-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## symbolStyle
@@ -121,6 +133,8 @@ Symbol icon style of the ExceptionPromptV2, which has higher priority than icon.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-PromptOptionsV2Config-symbolStyle?: SymbolGlyphModifier--><!--Device-PromptOptionsV2Config-symbolStyle?: SymbolGlyphModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -144,5 +158,7 @@ but the location fails to be obtained. If this parameter is not set or is set to
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-PromptOptionsV2Config-tip?: ResourceStr--><!--Device-PromptOptionsV2Config-tip?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

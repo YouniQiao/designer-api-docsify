@@ -16,6 +16,8 @@ class RoundRect
 
 **起始版本：** 12
 
+<!--Device-drawing-class RoundRect--><!--Device-drawing-class RoundRect-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## 导入模块
@@ -33,6 +35,8 @@ constructor(roundRect: RoundRect)
 拷贝一个圆角矩形。
 
 **起始版本：** 20
+
+<!--Device-RoundRect-constructor(roundRect: RoundRect)--><!--Device-RoundRect-constructor(roundRect: RoundRect)-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -63,6 +67,8 @@ constructor(rect: common2D.Rect, xRadii: number, yRadii: number)
 构造一个圆角矩形对象，当且仅当xRadii和yRadii均大于0时，圆角生效，否则只会构造一个矩形。
 
 **起始版本：** 12
+
+<!--Device-RoundRect-constructor(rect: common2D.Rect, xRadii: double, yRadii: double)--><!--Device-RoundRect-constructor(rect: common2D.Rect, xRadii: double, yRadii: double)-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -98,6 +104,8 @@ getCorner(pos: CornerPos): common2D.Point
 获取圆角矩形中指定圆角位置的圆角半径。
 
 **起始版本：** 12
+
+<!--Device-RoundRect-getCorner(pos: CornerPos): common2D.Point--><!--Device-RoundRect-getCorner(pos: CornerPos): common2D.Point-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -140,6 +148,8 @@ offset(dx: number, dy: number): void
 
 **起始版本：** 12
 
+<!--Device-RoundRect-offset(dx: double, dy: double): void--><!--Device-RoundRect-offset(dx: double, dy: double): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -173,6 +183,8 @@ setCorner(pos: CornerPos, x: number, y: number): void
 设置圆角矩形中指定圆角位置的圆角半径。
 
 **起始版本：** 12
+
+<!--Device-RoundRect-setCorner(pos: CornerPos, x: double, y: double): void--><!--Device-RoundRect-setCorner(pos: CornerPos, x: double, y: double): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

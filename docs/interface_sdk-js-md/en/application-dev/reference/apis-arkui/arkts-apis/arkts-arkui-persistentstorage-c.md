@@ -12,6 +12,8 @@ Provides the persistent storage capability for UI states. It persists selected A
 
 **Since:** 7
 
+<!--Device-unnamed-declare class PersistentStorage--><!--Device-unnamed-declare class PersistentStorage-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## deleteProp
@@ -25,6 +27,8 @@ Performs the reverse operation of [persistProp](#persistprop). It deletes the pr
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PersistentStorage-static deleteProp(key: string): void--><!--Device-PersistentStorage-static deleteProp(key: string): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -51,6 +55,8 @@ Returns an array of all persisted property names.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PersistentStorage-static keys(): Array<string>--><!--Device-PersistentStorage-static keys(): Array<string>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -89,6 +95,8 @@ According to the preceding initialization process, if the property exists in App
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-PersistentStorage-static persistProp<T>(key: string, defaultValue: T): void--><!--Device-PersistentStorage-static persistProp<T>(key: string, defaultValue: T): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -113,6 +121,8 @@ Persists multiple properties. This API is similar to [persistProp](#persistprop)
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PersistentStorage-static persistProps(props: PersistPropsOptions[]): void--><!--Device-PersistentStorage-static persistProps(props: PersistPropsOptions[]): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -144,6 +154,8 @@ Performs the reverse operation of [PersistProp](#persistprop). It deletes the pr
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-PersistentStorage-static DeleteProp(key: string): void--><!--Device-PersistentStorage-static DeleteProp(key: string): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -173,6 +185,8 @@ Returns an array of all persisted property names.
 **Substitutes:** [keys](#keys)
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-PersistentStorage-static Keys(): Array<string>--><!--Device-PersistentStorage-static Keys(): Array<string>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -215,6 +229,8 @@ According to the preceding initialization process, if the property exists in App
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-PersistentStorage-static PersistProp<T>(key: string, defaultValue: T): void--><!--Device-PersistentStorage-static PersistProp<T>(key: string, defaultValue: T): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -250,6 +266,8 @@ Persists multiple properties. This API is similar to [PersistProp](#persistprop)
 **Substitutes:** [PersistProps](#persistprops)
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-PersistentStorage-static PersistProps(    properties: {      key: string;      defaultValue: any;    }[],  ): void--><!--Device-PersistentStorage-static PersistProps(    properties: {      key: string;      defaultValue: any;    }[],  ): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

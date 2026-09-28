@@ -14,6 +14,8 @@ UIContext实例对象。
 
 **起始版本：** 10
 
+<!--Device-unnamed-export class UIContext--><!--Device-unnamed-export class UIContext-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -58,6 +60,8 @@ addLocalInputEventMonitor(eventMask: number, listener: InputEventListener): Inpu
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIContext-addLocalInputEventMonitor(eventMask: int, listener: InputEventListener): InputEventMonitor--><!--Device-UIContext-addLocalInputEventMonitor(eventMask: int, listener: InputEventListener): InputEventMonitor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -132,7 +136,7 @@ animateTo(value: AnimateParam, event: () => void): void
 > 
 > - 在组件出现和消失时，可以通过[组件内转场](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-common.md)添加动画效果。
 > 
-> - 组件内转场不支持的属性，可以参考[显式动画](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-common.md)中的[示例2](../arkts-components/arkts-arkui-common-comp.md#common)，使用animateTo实现动画执行结束后组件消失的效果。
+> - 组件内转场不支持的属性，可以参考[显式动画](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-common.md)中的[示例2](../arkts-components/arkts-arkui-common-comp.md)，使用animateTo实现动画执行结束后组件消失的效果。
 > 
 > - 某些场景下，在[状态管理V2](../../../ui/state-management/arkts-state-management-overview.md#状态管理v2)中使用animateTo动画，会产生异常效果，具体可参考：[在状态管理V2中使用animateTo动画效果异常](../../../ui/state-management/arkts-new-local.md#在状态管理v2中使用animateto动画效果异常)。
 > 
@@ -145,6 +149,8 @@ animateTo(value: AnimateParam, event: () => void): void
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIContext-animateTo(value: AnimateParam, event: () => void): void--><!--Device-UIContext-animateTo(value: AnimateParam, event: () => void): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -249,6 +255,8 @@ animateToImmediately(param: AnimateParam, processor: Callback<void>): void
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIContext-animateToImmediately(param: AnimateParam, processor: Callback<void>): void--><!--Device-UIContext-animateToImmediately(param: AnimateParam, processor: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -333,6 +341,8 @@ Bind tabs to nested scrollable container components to automatically hide tab ba
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIContext-bindTabsToNestedScrollable(tabsController: TabsController, parentScroller: Scroller, childScroller: Scroller): void--><!--Device-UIContext-bindTabsToNestedScrollable(tabsController: TabsController, parentScroller: Scroller, childScroller: Scroller): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -360,6 +370,8 @@ Bind tabs to scrollable container component to automatically hide tab bar.
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIContext-bindTabsToScrollable(tabsController: TabsController, scroller: Scroller): void--><!--Device-UIContext-bindTabsToScrollable(tabsController: TabsController, scroller: Scroller): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -484,6 +496,8 @@ closeBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>): Promise
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIContext-closeBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>): Promise<void>--><!--Device-UIContext-closeBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -614,6 +628,8 @@ constructor()
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIContext-constructor()--><!--Device-UIContext-constructor()-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **示例**
@@ -700,6 +716,8 @@ createAnimator(options: AnimatorOptions): AnimatorResult
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIContext-createAnimator(options: AnimatorOptions): AnimatorResult--><!--Device-UIContext-createAnimator(options: AnimatorOptions): AnimatorResult-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -771,6 +789,8 @@ createAnimator(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIContext-createAnimator(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult--><!--Device-UIContext-createAnimator(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -835,6 +855,8 @@ static createUIContextWithoutWindow(context: common.UIAbilityContext | common.Ex
 
 **原子化服务API：** 从API版本17开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIContext-static createUIContextWithoutWindow(context: common.UIAbilityContext | common.ExtensionContext) : UIContext | undefined--><!--Device-UIContext-static createUIContextWithoutWindow(context: common.UIAbilityContext | common.ExtensionContext) : UIContext | undefined-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -888,6 +910,8 @@ static destroyUIContextWithoutWindow(): void
 
 **原子化服务API：** 从API版本17开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIContext-static destroyUIContextWithoutWindow(): void--><!--Device-UIContext-static destroyUIContextWithoutWindow(): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **示例**
@@ -922,6 +946,8 @@ Dispach keyboard event to the frameNode with inspector key.
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIContext-dispatchKeyEvent(node: number | string, event: KeyEvent): boolean--><!--Device-UIContext-dispatchKeyEvent(node: number | string, event: KeyEvent): boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -994,6 +1020,8 @@ enableEventPassthrough(enabled: boolean, eventType: RawInputEventType): void
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIContext-enableEventPassthrough(enabled: boolean, eventType: RawInputEventType): void--><!--Device-UIContext-enableEventPassthrough(enabled: boolean, eventType: RawInputEventType): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -1033,6 +1061,8 @@ whether to enable or disable swipe to back event.
 **起始版本：** 18
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIContext-enableSwipeBack(enabled: Optional<boolean>): void--><!--Device-UIContext-enableSwipeBack(enabled: Optional<boolean>): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -1089,6 +1119,8 @@ fp2px(value: number): number
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIContext-fp2px(value: number): number--><!--Device-UIContext-fp2px(value: number): number-End-->
+
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
@@ -1140,6 +1172,8 @@ static getAllUIContexts(): UIContext[]
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIContext-static getAllUIContexts(): UIContext[]--><!--Device-UIContext-static getAllUIContexts(): UIContext[]-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1194,6 +1228,8 @@ getAtomicServiceBar(): Nullable<AtomicServiceBar>
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIContext-getAtomicServiceBar(): Nullable<AtomicServiceBar>--><!--Device-UIContext-getAtomicServiceBar(): Nullable<AtomicServiceBar>-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
@@ -1239,6 +1275,8 @@ getAttachedFrameNodeById(id: string): FrameNode | null
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIContext-getAttachedFrameNodeById(id: string): FrameNode | null--><!--Device-UIContext-getAttachedFrameNodeById(id: string): FrameNode | null-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1301,6 +1339,8 @@ static getCallingScopeUIContext(): UIContext | undefined
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIContext-static getCallingScopeUIContext(): UIContext | undefined--><!--Device-UIContext-static getCallingScopeUIContext(): UIContext | undefined-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
@@ -1354,6 +1394,8 @@ getComponentSnapshot(): ComponentSnapshot
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIContext-getComponentSnapshot(): ComponentSnapshot--><!--Device-UIContext-getComponentSnapshot(): ComponentSnapshot-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
@@ -1379,6 +1421,8 @@ get object ComponentUtils.
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIContext-getComponentUtils(): ComponentUtils--><!--Device-UIContext-getComponentUtils(): ComponentUtils-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1406,6 +1450,8 @@ Get object context menu controller.
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIContext-getContextMenuController(): ContextMenuController--><!--Device-UIContext-getContextMenuController(): ContextMenuController-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
@@ -1427,6 +1473,8 @@ Get object cursor controller.
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIContext-getCursorController(): CursorController--><!--Device-UIContext-getCursorController(): CursorController-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1454,6 +1502,8 @@ getDialogPresenter(): DialogPresenter
 
 **原子化服务API：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIContext-getDialogPresenter(): DialogPresenter--><!--Device-UIContext-getDialogPresenter(): DialogPresenter-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
@@ -1480,6 +1530,8 @@ Get DragController.
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIContext-getDragController(): DragController--><!--Device-UIContext-getDragController(): DragController-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
@@ -1505,6 +1557,8 @@ get the filtered attributes of the component tree.
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIContext-getFilteredInspectorTree(filters?: Array<string>): string--><!--Device-UIContext-getFilteredInspectorTree(filters?: Array<string>): string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1606,6 +1660,8 @@ get the filtered attributes of the component tree with the specified id and dept
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIContext-getFilteredInspectorTreeById(id: string, depth: number, filters?: Array<string>): string--><!--Device-UIContext-getFilteredInspectorTreeById(id: string, depth: number, filters?: Array<string>): string-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -1687,6 +1743,8 @@ getFocusController(): FocusController
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIContext-getFocusController(): FocusController--><!--Device-UIContext-getFocusController(): FocusController-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
@@ -1713,6 +1771,8 @@ getFont(): Font
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIContext-getFont(): Font--><!--Device-UIContext-getFont(): Font-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
@@ -1738,6 +1798,8 @@ getFrameNodeById(id: string): FrameNode | null
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIContext-getFrameNodeById(id: string): FrameNode | null--><!--Device-UIContext-getFrameNodeById(id: string): FrameNode | null-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1776,6 +1838,8 @@ getFrameNodeByUniqueId(id: number): FrameNode | null
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIContext-getFrameNodeByUniqueId(id: number): FrameNode | null--><!--Device-UIContext-getFrameNodeByUniqueId(id: number): FrameNode | null-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1827,6 +1891,8 @@ getHostContext(): Context | undefined
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIContext-getHostContext(): Context | undefined--><!--Device-UIContext-getHostContext(): Context | undefined-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
@@ -1876,6 +1942,8 @@ getId(): number
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIContext-getId(): number--><!--Device-UIContext-getId(): number-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
@@ -1914,6 +1982,8 @@ getKeyboardAvoidMode(): KeyboardAvoidMode
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIContext-getKeyboardAvoidMode(): KeyboardAvoidMode--><!--Device-UIContext-getKeyboardAvoidMode(): KeyboardAvoidMode-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1956,6 +2026,8 @@ static getLastFocusedUIContext(): UIContext | undefined
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIContext-static getLastFocusedUIContext(): UIContext | undefined--><!--Device-UIContext-static getLastFocusedUIContext(): UIContext | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2010,6 +2082,8 @@ static getLastForegroundUIContext(): UIContext | undefined
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIContext-static getLastForegroundUIContext(): UIContext | undefined--><!--Device-UIContext-static getLastForegroundUIContext(): UIContext | undefined-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
@@ -2063,6 +2137,8 @@ getMagnifier(): Magnifier
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIContext-getMagnifier(): Magnifier--><!--Device-UIContext-getMagnifier(): Magnifier-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
@@ -2088,6 +2164,8 @@ Get the max font scale.
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIContext-getMaxFontScale(): number--><!--Device-UIContext-getMaxFontScale(): number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2129,6 +2207,8 @@ getMeasureUtils(): MeasureUtils
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIContext-getMeasureUtils(): MeasureUtils--><!--Device-UIContext-getMeasureUtils(): MeasureUtils-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
@@ -2155,6 +2235,8 @@ get object mediaQuery.
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIContext-getMediaQuery(): MediaQuery--><!--Device-UIContext-getMediaQuery(): MediaQuery-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
@@ -2180,6 +2262,8 @@ Get navigation information of the frameNode with uniqueId.
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIContext-getNavigationInfoByUniqueId(id: number): observer.NavigationInfo | undefined--><!--Device-UIContext-getNavigationInfoByUniqueId(id: number): observer.NavigationInfo | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2213,6 +2297,8 @@ Obtains the OverlayManager object.
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIContext-getOverlayManager(): OverlayManager--><!--Device-UIContext-getOverlayManager(): OverlayManager-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
@@ -2239,6 +2325,8 @@ Get object OverlayManagerOptions.
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIContext-getOverlayManagerOptions(): OverlayManagerOptions--><!--Device-UIContext-getOverlayManagerOptions(): OverlayManagerOptions-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
@@ -2264,6 +2352,8 @@ getPageInfoByUniqueId(id: number): PageInfo
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIContext-getPageInfoByUniqueId(id: number): PageInfo--><!--Device-UIContext-getPageInfoByUniqueId(id: number): PageInfo-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2339,6 +2429,8 @@ getPageRootNode(): FrameNode | null
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIContext-getPageRootNode(): FrameNode | null--><!--Device-UIContext-getPageRootNode(): FrameNode | null-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2495,6 +2587,8 @@ getPixelRoundMode(): PixelRoundMode
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIContext-getPixelRoundMode(): PixelRoundMode--><!--Device-UIContext-getPixelRoundMode(): PixelRoundMode-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
@@ -2534,6 +2628,8 @@ get object PromptAction.
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIContext-getPromptAction(): PromptAction--><!--Device-UIContext-getPromptAction(): PromptAction-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
@@ -2560,6 +2656,8 @@ Obtains a Router object.
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIContext-getRouter(): Router--><!--Device-UIContext-getRouter(): Router-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
@@ -2585,6 +2683,8 @@ getSharedLocalStorage(): LocalStorage | undefined
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIContext-getSharedLocalStorage(): LocalStorage | undefined--><!--Device-UIContext-getSharedLocalStorage(): LocalStorage | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2651,6 +2751,8 @@ getSmartGestureController(): SmartGestureController
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIContext-getSmartGestureController(): SmartGestureController--><!--Device-UIContext-getSmartGestureController(): SmartGestureController-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
@@ -2676,6 +2778,8 @@ getTextMenuController(): TextMenuController
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本16开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIContext-getTextMenuController(): TextMenuController--><!--Device-UIContext-getTextMenuController(): TextMenuController-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2703,6 +2807,8 @@ getUIInspector(): UIInspector
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIContext-getUIInspector(): UIInspector--><!--Device-UIContext-getUIInspector(): UIInspector-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
@@ -2728,6 +2834,8 @@ getUIObserver(): UIObserver
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIContext-getUIObserver(): UIObserver--><!--Device-UIContext-getUIObserver(): UIObserver-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2799,6 +2907,8 @@ getWindowHeightBreakpoint(): HeightBreakpoint
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIContext-getWindowHeightBreakpoint(): HeightBreakpoint--><!--Device-UIContext-getWindowHeightBreakpoint(): HeightBreakpoint-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
@@ -2860,6 +2970,8 @@ getWindowId(): number | undefined
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIContext-getWindowId(): number | undefined--><!--Device-UIContext-getWindowId(): number | undefined-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
@@ -2910,6 +3022,8 @@ getWindowName(): string | undefined
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIContext-getWindowName(): string | undefined--><!--Device-UIContext-getWindowName(): string | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2967,6 +3081,8 @@ getWindowWidthBreakpoint(): WidthBreakpoint
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIContext-getWindowWidthBreakpoint(): WidthBreakpoint--><!--Device-UIContext-getWindowWidthBreakpoint(): WidthBreakpoint-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
@@ -3021,6 +3137,8 @@ isAvailable(): boolean
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIContext-isAvailable(): boolean--><!--Device-UIContext-isAvailable(): boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -3104,6 +3222,8 @@ isEasySplit(): boolean
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIContext-isEasySplit(): boolean--><!--Device-UIContext-isEasySplit(): boolean-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
@@ -3150,6 +3270,8 @@ Checks whether current font scale follows the system.
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIContext-isFollowingSystemFontScale(): boolean--><!--Device-UIContext-isFollowingSystemFontScale(): boolean-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
@@ -3189,6 +3311,8 @@ keyframeAnimateTo(param: KeyframeAnimateParam, keyframes: Array<KeyframeState>):
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIContext-keyframeAnimateTo(param: KeyframeAnimateParam, keyframes: Array<KeyframeState>): void--><!--Device-UIContext-keyframeAnimateTo(param: KeyframeAnimateParam, keyframes: Array<KeyframeState>): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -3281,6 +3405,8 @@ lpx2px(value: number): number
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIContext-lpx2px(value: number): number--><!--Device-UIContext-lpx2px(value: number): number-End-->
+
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
@@ -3340,6 +3466,8 @@ openBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>, sheetOpti
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIContext-openBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>, sheetOptions?: SheetOptions, targetId?: number): Promise<void>--><!--Device-UIContext-openBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>, sheetOptions?: SheetOptions, targetId?: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -3471,6 +3599,8 @@ postDelayedFrameCallback(frameCallback: FrameCallback, delayTime: number): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIContext-postDelayedFrameCallback(frameCallback: FrameCallback, delayTime: number): void--><!--Device-UIContext-postDelayedFrameCallback(frameCallback: FrameCallback, delayTime: number): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -3525,6 +3655,8 @@ postFrameCallback(frameCallback: FrameCallback): void
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIContext-postFrameCallback(frameCallback: FrameCallback): void--><!--Device-UIContext-postFrameCallback(frameCallback: FrameCallback): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -3592,6 +3724,8 @@ px2fp(value: number): number
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIContext-px2fp(value: number): number--><!--Device-UIContext-px2fp(value: number): number-End-->
+
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
@@ -3651,6 +3785,8 @@ px2lpx(value: number): number
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIContext-px2lpx(value: number): number--><!--Device-UIContext-px2lpx(value: number): number-End-->
 
 **参数：**
 
@@ -3714,6 +3850,8 @@ px2vp(value: number): number
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIContext-px2vp(value: number): number--><!--Device-UIContext-px2vp(value: number): number-End-->
+
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
@@ -3767,6 +3905,8 @@ removeLocalInputEventMonitor(monitor: InputEventMonitor): void
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIContext-removeLocalInputEventMonitor(monitor: InputEventMonitor): void--><!--Device-UIContext-removeLocalInputEventMonitor(monitor: InputEventMonitor): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -3828,6 +3968,8 @@ requireDynamicSyncScene(id: string): Array<DynamicSyncScene>
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIContext-requireDynamicSyncScene(id: string): Array<DynamicSyncScene>--><!--Device-UIContext-requireDynamicSyncScene(id: string): Array<DynamicSyncScene>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -3925,6 +4067,8 @@ static resolveUIContext(): ResolvedUIContext
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIContext-static resolveUIContext(): ResolvedUIContext--><!--Device-UIContext-static resolveUIContext(): ResolvedUIContext-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
@@ -3969,6 +4113,8 @@ runScopedTask(callback: () => void): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIContext-runScopedTask(callback: () => void): void--><!--Device-UIContext-runScopedTask(callback: () => void): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -4012,6 +4158,8 @@ setCustomKeyboardContinueFeature(feature: CustomKeyboardContinueFeature): void
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIContext-setCustomKeyboardContinueFeature(feature: CustomKeyboardContinueFeature): void--><!--Device-UIContext-setCustomKeyboardContinueFeature(feature: CustomKeyboardContinueFeature): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -4142,6 +4290,8 @@ setImageCacheCount(value: number): void
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIContext-setImageCacheCount(value: number): void--><!--Device-UIContext-setImageCacheCount(value: number): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -4189,6 +4339,8 @@ setImageRawDataCacheSize(value: number): void
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIContext-setImageRawDataCacheSize(value: number): void--><!--Device-UIContext-setImageRawDataCacheSize(value: number): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -4246,6 +4398,8 @@ setKeyboardAvoidMode(value: KeyboardAvoidMode): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIContext-setKeyboardAvoidMode(value: KeyboardAvoidMode): void--><!--Device-UIContext-setKeyboardAvoidMode(value: KeyboardAvoidMode): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -4287,6 +4441,8 @@ Init OverlayManager.
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIContext-setOverlayManagerOptions(options: OverlayManagerOptions): boolean--><!--Device-UIContext-setOverlayManagerOptions(options: OverlayManagerOptions): boolean-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -4318,6 +4474,8 @@ setPixelRoundMode(mode: PixelRoundMode): void
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIContext-setPixelRoundMode(mode: PixelRoundMode): void--><!--Device-UIContext-setPixelRoundMode(mode: PixelRoundMode): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -4359,6 +4517,8 @@ static setResourceManagerCacheMaxCountForHSP(count: number): void
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本21开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIContext-static setResourceManagerCacheMaxCountForHSP(count: number): void--><!--Device-UIContext-static setResourceManagerCacheMaxCountForHSP(count: number): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -4415,6 +4575,8 @@ setTextSelectionClearPolicy(policy: TextSelectionClearPolicy): void
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIContext-setTextSelectionClearPolicy(policy: TextSelectionClearPolicy): void--><!--Device-UIContext-setTextSelectionClearPolicy(policy: TextSelectionClearPolicy): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -4438,6 +4600,8 @@ Shows an action sheet in the given settings.
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIContext-showActionSheet(value: ActionSheetOptions): void--><!--Device-UIContext-showActionSheet(value: ActionSheetOptions): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -4515,6 +4679,8 @@ alertDialog display.
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIContext-showAlertDialog(options: AlertDialogParamWithConfirm | AlertDialogParamWithButtons | AlertDialogParamWithOptions): void--><!--Device-UIContext-showAlertDialog(options: AlertDialogParamWithConfirm | AlertDialogParamWithButtons | AlertDialogParamWithOptions): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -4573,6 +4739,8 @@ datePickerDialog display.
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIContext-showDatePickerDialog(options: DatePickerDialogOptions): void--><!--Device-UIContext-showDatePickerDialog(options: DatePickerDialogOptions): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -4648,6 +4816,8 @@ textPickerDialog display.
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIContext-showTextPickerDialog(options: TextPickerDialogOptions): void--><!--Device-UIContext-showTextPickerDialog(options: TextPickerDialogOptions): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -4728,6 +4898,8 @@ textPickerDialog display.
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIContext-showTextPickerDialog(style: TextPickerDialogOptions | TextPickerDialogOptionsExt): void--><!--Device-UIContext-showTextPickerDialog(style: TextPickerDialogOptions | TextPickerDialogOptionsExt): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -4753,6 +4925,8 @@ timePickerDialog display.
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIContext-showTimePickerDialog(options: TimePickerDialogOptions): void--><!--Device-UIContext-showTimePickerDialog(options: TimePickerDialogOptions): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -4821,6 +4995,8 @@ Unbind tabs from nested scrollable container components.
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIContext-unbindTabsFromNestedScrollable(tabsController: TabsController, parentScroller: Scroller, childScroller: Scroller): void--><!--Device-UIContext-unbindTabsFromNestedScrollable(tabsController: TabsController, parentScroller: Scroller, childScroller: Scroller): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -4848,6 +5024,8 @@ Unbind tabs from scrollable container component.
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIContext-unbindTabsFromScrollable(tabsController: TabsController, scroller: Scroller): void--><!--Device-UIContext-unbindTabsFromScrollable(tabsController: TabsController, scroller: Scroller): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -4879,6 +5057,8 @@ updateBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>, sheetOp
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIContext-updateBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>, sheetOptions: SheetOptions, partialUpdate?: boolean): Promise<void>--><!--Device-UIContext-updateBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>, sheetOptions: SheetOptions, partialUpdate?: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -5016,6 +5196,8 @@ vp2px(value: number): number
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIContext-vp2px(value: number): number--><!--Device-UIContext-vp2px(value: number): number-End-->
 
 **参数：**
 

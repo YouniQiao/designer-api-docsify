@@ -18,6 +18,8 @@ function startSharing(type: SharingIfaceType, callback: AsyncCallback<void>): vo
 
 **需要权限：** ohos.permission.CONNECTIVITY_INTERNAL
 
+<!--Device-sharing-function startSharing(type: SharingIfaceType, callback: AsyncCallback<void>): void--><!--Device-sharing-function startSharing(type: SharingIfaceType, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.NetSharing
 
 **系统接口：** 此接口为系统接口。
@@ -71,6 +73,8 @@ function startSharing(type: SharingIfaceType): Promise<void>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.CONNECTIVITY_INTERNAL
+
+<!--Device-sharing-function startSharing(type: SharingIfaceType): Promise<void>--><!--Device-sharing-function startSharing(type: SharingIfaceType): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.NetSharing
 

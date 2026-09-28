@@ -16,6 +16,8 @@ function setCustomCursorSync(windowId: number, pixelMap: image.PixelMap, focusX?
 
 **起始版本：** 11
 
+<!--Device-pointer-function setCustomCursorSync(windowId: int, pixelMap: image.PixelMap, focusX?: int, focusY?: int): void--><!--Device-pointer-function setCustomCursorSync(windowId: int, pixelMap: image.PixelMap, focusX?: int, focusY?: int): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 **参数：**

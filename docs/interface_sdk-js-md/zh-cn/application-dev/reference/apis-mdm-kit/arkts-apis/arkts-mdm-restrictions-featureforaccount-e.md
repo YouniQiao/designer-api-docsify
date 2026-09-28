@@ -8,6 +8,8 @@ enum FeatureForAccount
 
 **起始版本：** 26.0.0
 
+<!--Device-restrictions-enum FeatureForAccount--><!--Device-restrictions-enum FeatureForAccount-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## MULTI_WINDOW
@@ -21,6 +23,8 @@ MULTI_WINDOW = 0
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FeatureForAccount-MULTI_WINDOW = 0--><!--Device-FeatureForAccount-MULTI_WINDOW = 0-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -36,6 +40,8 @@ DISTRIBUTED_TRANSMISSION = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FeatureForAccount-DISTRIBUTED_TRANSMISSION = 1--><!--Device-FeatureForAccount-DISTRIBUTED_TRANSMISSION = 1-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## SUPER_HUB
@@ -49,6 +55,8 @@ SUPER_HUB = 2
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FeatureForAccount-SUPER_HUB = 2--><!--Device-FeatureForAccount-SUPER_HUB = 2-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -68,6 +76,8 @@ FINGERPRINT = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FeatureForAccount-FINGERPRINT = 3--><!--Device-FeatureForAccount-FINGERPRINT = 3-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## PRINT
@@ -82,6 +92,8 @@ PRINT = 4
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FeatureForAccount-PRINT = 4--><!--Device-FeatureForAccount-PRINT = 4-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## MTP_CLIENT
@@ -95,6 +107,8 @@ MTP客户端能力（仅包含写入），当前仅支持PC/2in1设备使用。M
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FeatureForAccount-MTP_CLIENT = 5--><!--Device-FeatureForAccount-MTP_CLIENT = 5-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -118,6 +132,8 @@ USB存储设备写入能力，当前仅支持PC/2in1企业设备使用。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FeatureForAccount-USB_STORAGE_DEVICE_WRITE = 6--><!--Device-FeatureForAccount-USB_STORAGE_DEVICE_WRITE = 6-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## DISK_RECOVERY_KEY
@@ -131,6 +147,8 @@ DISK_RECOVERY_KEY = 7
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FeatureForAccount-DISK_RECOVERY_KEY = 7--><!--Device-FeatureForAccount-DISK_RECOVERY_KEY = 7-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -146,6 +164,8 @@ superuser do，表示以超级用户执行，当前仅支持PC/2in1设备使用�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FeatureForAccount-SUDO = 8--><!--Device-FeatureForAccount-SUDO = 8-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## DISTRIBUTED_TRANSMISSION_OUTGOING
@@ -160,6 +180,8 @@ DISTRIBUTED_TRANSMISSION_OUTGOING = 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FeatureForAccount-DISTRIBUTED_TRANSMISSION_OUTGOING = 9--><!--Device-FeatureForAccount-DISTRIBUTED_TRANSMISSION_OUTGOING = 9-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## OPEN_FILE_BOOST
@@ -173,5 +195,7 @@ OPEN_FILE_BOOST = 10
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FeatureForAccount-OPEN_FILE_BOOST = 10--><!--Device-FeatureForAccount-OPEN_FILE_BOOST = 10-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager

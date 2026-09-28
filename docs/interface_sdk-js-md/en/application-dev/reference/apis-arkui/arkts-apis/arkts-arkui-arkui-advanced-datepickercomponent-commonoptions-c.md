@@ -74,6 +74,8 @@ Defines the common options of the date and time picker.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export declare class CommonOptions--><!--Device-unnamed-export declare class CommonOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -116,6 +118,8 @@ supports it.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-CommonOptions-enableHapticFeedback?: boolean--><!--Device-CommonOptions-enableHapticFeedback?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## end
@@ -141,6 +145,8 @@ When **end** is set to a valid value, **loop** does not take effect.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-CommonOptions-end?: Date--><!--Device-CommonOptions-end?: Date-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -175,6 +181,8 @@ When [start](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md) 
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-CommonOptions-loop?: boolean--><!--Device-CommonOptions-loop?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onChange
@@ -193,6 +201,8 @@ Callback triggered when a date or time is selected.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-CommonOptions-onChange?: Callback<DatePickerComponentResult>--><!--Device-CommonOptions-onChange?: Callback<DatePickerComponentResult>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onScrollStop
@@ -210,6 +220,8 @@ Callback triggered when the picker item is selected and scrolling stops.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-CommonOptions-onScrollStop?: Callback<DatePickerComponentResult>--><!--Device-CommonOptions-onScrollStop?: Callback<DatePickerComponentResult>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -237,6 +249,8 @@ In the **DateMode.MONTH_AND_DAY** mode, only the **month** and **day** fields ca
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-CommonOptions-selected?: Date--><!--Device-CommonOptions-selected?: Date-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## start
@@ -262,5 +276,7 @@ When **start** is set to a valid value, **loop** does not take effect.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-CommonOptions-start?: Date--><!--Device-CommonOptions-start?: Date-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

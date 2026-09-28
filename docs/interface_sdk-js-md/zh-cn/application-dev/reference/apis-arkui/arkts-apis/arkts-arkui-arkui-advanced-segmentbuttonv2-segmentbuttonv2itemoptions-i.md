@@ -14,6 +14,8 @@ export interface SegmentButtonV2ItemOptions
 
 **起始版本：** 18
 
+<!--Device-unnamed-export interface SegmentButtonV2ItemOptions--><!--Device-unnamed-export interface SegmentButtonV2ItemOptions-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -44,6 +46,8 @@ accessibilityDescription?: ResourceStr
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-SegmentButtonV2ItemOptions-accessibilityDescription?: ResourceStr--><!--Device-SegmentButtonV2ItemOptions-accessibilityDescription?: ResourceStr-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityLevel
@@ -68,6 +72,8 @@ accessibilityLevel?: string
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-SegmentButtonV2ItemOptions-accessibilityLevel?: string--><!--Device-SegmentButtonV2ItemOptions-accessibilityLevel?: string-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityText
@@ -91,6 +97,8 @@ accessibilityText?: ResourceStr
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-SegmentButtonV2ItemOptions-accessibilityText?: ResourceStr--><!--Device-SegmentButtonV2ItemOptions-accessibilityText?: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -118,6 +126,8 @@ true：可用；false：不可用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-SegmentButtonV2ItemOptions-enabled?: boolean--><!--Device-SegmentButtonV2ItemOptions-enabled?: boolean-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## icon
@@ -139,6 +149,8 @@ icon?: ResourceStr
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-SegmentButtonV2ItemOptions-icon?: ResourceStr--><!--Device-SegmentButtonV2ItemOptions-icon?: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -162,6 +174,8 @@ iconModifier?: ImageModifier
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-SegmentButtonV2ItemOptions-iconModifier?: ImageModifier--><!--Device-SegmentButtonV2ItemOptions-iconModifier?: ImageModifier-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## symbol
@@ -183,6 +197,8 @@ symbol?: Resource
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-SegmentButtonV2ItemOptions-symbol?: Resource--><!--Device-SegmentButtonV2ItemOptions-symbol?: Resource-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -206,6 +222,8 @@ symbolModifier?: SymbolGlyphModifier
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-SegmentButtonV2ItemOptions-symbolModifier?: SymbolGlyphModifier--><!--Device-SegmentButtonV2ItemOptions-symbolModifier?: SymbolGlyphModifier-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## text
@@ -228,6 +246,8 @@ text?: ResourceStr
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-SegmentButtonV2ItemOptions-text?: ResourceStr--><!--Device-SegmentButtonV2ItemOptions-text?: ResourceStr-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## textModifier
@@ -249,5 +269,7 @@ textModifier?: TextModifier
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-SegmentButtonV2ItemOptions-textModifier?: TextModifier--><!--Device-SegmentButtonV2ItemOptions-textModifier?: TextModifier-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

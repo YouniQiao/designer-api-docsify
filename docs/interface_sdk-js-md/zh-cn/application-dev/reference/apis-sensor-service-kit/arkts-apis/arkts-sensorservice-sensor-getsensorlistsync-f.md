@@ -16,6 +16,8 @@ function getSensorListSync(): Array<Sensor>
 
 **起始版本：** 12
 
+<!--Device-sensor-function getSensorListSync(): Array<Sensor>--><!--Device-sensor-function getSensorListSync(): Array<Sensor>-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **返回值：**

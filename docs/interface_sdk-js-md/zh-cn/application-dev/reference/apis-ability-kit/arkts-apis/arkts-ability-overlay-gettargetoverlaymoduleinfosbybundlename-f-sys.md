@@ -21,6 +21,8 @@ function getTargetOverlayModuleInfosByBundleName(targetBundleName: string,
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-overlay-function getTargetOverlayModuleInfosByBundleName(targetBundleName: string,      callback: AsyncCallback<Array<OverlayModuleInfo>>): void--><!--Device-overlay-function getTargetOverlayModuleInfosByBundleName(targetBundleName: string,      callback: AsyncCallback<Array<OverlayModuleInfo>>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Overlay
 
 **系统接口：** 此接口为系统接口。
@@ -83,6 +85,8 @@ function getTargetOverlayModuleInfosByBundleName(targetBundleName: string, modul
 **起始版本：** 10
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-overlay-function getTargetOverlayModuleInfosByBundleName(targetBundleName: string, moduleName: string, callback: AsyncCallback<Array<OverlayModuleInfo>>): void--><!--Device-overlay-function getTargetOverlayModuleInfosByBundleName(targetBundleName: string, moduleName: string, callback: AsyncCallback<Array<OverlayModuleInfo>>): void-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Overlay
 
@@ -150,6 +154,8 @@ function getTargetOverlayModuleInfosByBundleName(targetBundleName: string, modul
 **起始版本：** 10
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-overlay-function getTargetOverlayModuleInfosByBundleName(targetBundleName: string, moduleName?: string): Promise<Array<OverlayModuleInfo>>--><!--Device-overlay-function getTargetOverlayModuleInfosByBundleName(targetBundleName: string, moduleName?: string): Promise<Array<OverlayModuleInfo>>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Overlay
 

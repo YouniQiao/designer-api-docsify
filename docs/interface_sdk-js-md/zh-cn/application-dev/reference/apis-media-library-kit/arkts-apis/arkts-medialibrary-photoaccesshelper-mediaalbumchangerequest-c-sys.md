@@ -16,6 +16,8 @@ MediaAlbumChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photo
 
 **起始版本：** 11
 
+<!--Device-photoAccessHelper-class MediaAlbumChangeRequest implements MediaChangeRequest--><!--Device-photoAccessHelper-class MediaAlbumChangeRequest implements MediaChangeRequest-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
@@ -43,6 +45,8 @@ static createAlbumRequest(context: Context, name: string): MediaAlbumChangeReque
 - 相册名不允许重名。
 
 **起始版本：** 11
+
+<!--Device-MediaAlbumChangeRequest-static createAlbumRequest(context: Context, name: string): MediaAlbumChangeRequest--><!--Device-MediaAlbumChangeRequest-static createAlbumRequest(context: Context, name: string): MediaAlbumChangeRequest-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -98,6 +102,8 @@ static deleteAlbums(context: Context, albums: Array<Album>): Promise<void>
 **起始版本：** 11
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-MediaAlbumChangeRequest-static deleteAlbums(context: Context, albums: Array<Album>): Promise<void>--><!--Device-MediaAlbumChangeRequest-static deleteAlbums(context: Context, albums: Array<Album>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -162,6 +168,8 @@ static deleteAlbumsWithUri(context: Context, albumUris: Array<string>): Promise<
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-MediaAlbumChangeRequest-static deleteAlbumsWithUri(context: Context, albumUris: Array<string>): Promise<void>--><!--Device-MediaAlbumChangeRequest-static deleteAlbumsWithUri(context: Context, albumUris: Array<string>): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -215,6 +223,8 @@ deleteAssets(assets: Array<PhotoAsset>): void
 > 此操作不可逆，执行此操作后文件资源将彻底删除，请谨慎操作。
 
 **起始版本：** 11
+
+<!--Device-MediaAlbumChangeRequest-deleteAssets(assets: Array<PhotoAsset>): void--><!--Device-MediaAlbumChangeRequest-deleteAssets(assets: Array<PhotoAsset>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -287,6 +297,8 @@ deleteAssetsWithUri(assetUris: Array<string>): void
 
 **起始版本：** 19
 
+<!--Device-MediaAlbumChangeRequest-deleteAssetsWithUri(assetUris: Array<string>): void--><!--Device-MediaAlbumChangeRequest-deleteAssetsWithUri(assetUris: Array<string>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -346,6 +358,8 @@ dismiss(): void
 
 **起始版本：** 13
 
+<!--Device-MediaAlbumChangeRequest-dismiss(): void--><!--Device-MediaAlbumChangeRequest-dismiss(): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -388,6 +402,8 @@ dismissAssets(assets: Array<PhotoAsset>): void
 从该人像相册或合影相册中移除指定图片。
 
 **起始版本：** 11
+
+<!--Device-MediaAlbumChangeRequest-dismissAssets(assets: Array<PhotoAsset>): void--><!--Device-MediaAlbumChangeRequest-dismissAssets(assets: Array<PhotoAsset>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -454,6 +470,8 @@ mergeAlbum(target: Album): void
 
 **起始版本：** 11
 
+<!--Device-MediaAlbumChangeRequest-mergeAlbum(target: Album): void--><!--Device-MediaAlbumChangeRequest-mergeAlbum(target: Album): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -516,6 +534,8 @@ moveAssets(assets: Array<PhotoAsset>, targetAlbum: Album): void
 从相册中移动资产到另一个目标相册。
 
 **起始版本：** 11
+
+<!--Device-MediaAlbumChangeRequest-moveAssets(assets: Array<PhotoAsset>, targetAlbum: Album): void--><!--Device-MediaAlbumChangeRequest-moveAssets(assets: Array<PhotoAsset>, targetAlbum: Album): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -581,6 +601,8 @@ moveAssetsWithUri(assetUris: Array<string>, targetAlbum: Album): void
 把相册中的资产移动到另一个目标相册。
 
 **起始版本：** 19
+
+<!--Device-MediaAlbumChangeRequest-moveAssetsWithUri(assetUris: Array<string>, targetAlbum: Album): void--><!--Device-MediaAlbumChangeRequest-moveAssetsWithUri(assetUris: Array<string>, targetAlbum: Album): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -656,6 +678,8 @@ operateAttribute(operation: AlbumOperation): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MediaAlbumChangeRequest-operateAttribute(operation: AlbumOperation): void--><!--Device-MediaAlbumChangeRequest-operateAttribute(operation: AlbumOperation): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -726,6 +750,8 @@ placeBefore(album: Album): void
 
 **起始版本：** 11
 
+<!--Device-MediaAlbumChangeRequest-placeBefore(album: Album): void--><!--Device-MediaAlbumChangeRequest-placeBefore(album: Album): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -778,6 +804,8 @@ recoverAssets(assets: Array<PhotoAsset>): void
 从回收站中恢复指定的PhotoAsset对象数组所对应的资产。
 
 **起始版本：** 11
+
+<!--Device-MediaAlbumChangeRequest-recoverAssets(assets: Array<PhotoAsset>): void--><!--Device-MediaAlbumChangeRequest-recoverAssets(assets: Array<PhotoAsset>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -838,6 +866,8 @@ recoverAssetsWithUri(assetUris: Array<string>): void
 
 **起始版本：** 19
 
+<!--Device-MediaAlbumChangeRequest-recoverAssetsWithUri(assetUris: Array<string>): void--><!--Device-MediaAlbumChangeRequest-recoverAssetsWithUri(assetUris: Array<string>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -897,6 +927,8 @@ resetCoverUri(): void
 
 **起始版本：** 20
 
+<!--Device-MediaAlbumChangeRequest-resetCoverUri(): void--><!--Device-MediaAlbumChangeRequest-resetCoverUri(): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -947,6 +979,8 @@ setAlbumNameByFile(name: string): void
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MediaAlbumChangeRequest-setAlbumNameByFile(name: string): void--><!--Device-MediaAlbumChangeRequest-setAlbumNameByFile(name: string): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -1001,6 +1035,8 @@ setCoverUri(coverUri: string): void
 设置相册封面。
 
 **起始版本：** 11
+
+<!--Device-MediaAlbumChangeRequest-setCoverUri(coverUri: string): void--><!--Device-MediaAlbumChangeRequest-setCoverUri(coverUri: string): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -1067,6 +1103,8 @@ setDisplayLevel(displayLevel: number): void
 
 **起始版本：** 11
 
+<!--Device-MediaAlbumChangeRequest-setDisplayLevel(displayLevel: int): void--><!--Device-MediaAlbumChangeRequest-setDisplayLevel(displayLevel: int): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1124,6 +1162,8 @@ setHiddenAttribute(hiddenState: boolean, isInherited: boolean): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MediaAlbumChangeRequest-setHiddenAttribute(hiddenState: boolean, isInherited: boolean): void--><!--Device-MediaAlbumChangeRequest-setHiddenAttribute(hiddenState: boolean, isInherited: boolean): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1180,6 +1220,8 @@ setIsMe(): void
 
 **起始版本：** 11
 
+<!--Device-MediaAlbumChangeRequest-setIsMe(): void--><!--Device-MediaAlbumChangeRequest-setIsMe(): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1230,6 +1272,8 @@ static setUploadStatus(context: Context, albums: Album[], allowUpload: boolean):
 **起始版本：** 22
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-MediaAlbumChangeRequest-static setUploadStatus(context: Context, albums: Album[], allowUpload: boolean): Promise<void>--><!--Device-MediaAlbumChangeRequest-static setUploadStatus(context: Context, albums: Album[], allowUpload: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

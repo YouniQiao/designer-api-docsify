@@ -10,6 +10,8 @@ Fluorescence photo session object.
 
 **起始版本：** 13
 
+<!--Device-camera-interface FluorescencePhotoSession extends Session, AutoExposure, Focus, Zoom--><!--Device-camera-interface FluorescencePhotoSession extends Session, AutoExposure, Focus, Zoom-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -29,6 +31,8 @@ off(type: 'error', callback?: ErrorCallback): void
 Unsubscribes from error events.
 
 **起始版本：** 13
+
+<!--Device-FluorescencePhotoSession-off(type: 'error', callback?: ErrorCallback): void--><!--Device-FluorescencePhotoSession-off(type: 'error', callback?: ErrorCallback): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -57,6 +61,8 @@ Unsubscribes from focus state change event callback.
 
 **起始版本：** 13
 
+<!--Device-FluorescencePhotoSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void--><!--Device-FluorescencePhotoSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -84,6 +90,8 @@ Subscribes to error events.
 
 **起始版本：** 13
 
+<!--Device-FluorescencePhotoSession-on(type: 'error', callback: ErrorCallback): void--><!--Device-FluorescencePhotoSession-on(type: 'error', callback: ErrorCallback): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -110,6 +118,8 @@ on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
 Subscribes focus state change event callback.
 
 **起始版本：** 13
+
+<!--Device-FluorescencePhotoSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void--><!--Device-FluorescencePhotoSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

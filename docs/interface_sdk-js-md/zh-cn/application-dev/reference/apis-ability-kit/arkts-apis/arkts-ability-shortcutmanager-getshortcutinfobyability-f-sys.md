@@ -20,6 +20,8 @@ function getShortcutInfoByAbility(bundleName: string, moduleName: string, abilit
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-shortcutManager-function getShortcutInfoByAbility(bundleName: string, moduleName: string, abilityName: string, userId?: int, appIndex?: int): Array<ShortcutInfo>--><!--Device-shortcutManager-function getShortcutInfoByAbility(bundleName: string, moduleName: string, abilityName: string, userId?: int, appIndex?: int): Array<ShortcutInfo>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
 **系统接口：** 此接口为系统接口。

@@ -8,6 +8,8 @@ enum PathIteratorVerb
 
 **起始版本：** 18
 
+<!--Device-drawing-enum PathIteratorVerb--><!--Device-drawing-enum PathIteratorVerb-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## MOVE
@@ -19,6 +21,8 @@ MOVE = 0
 设置起始点。
 
 **起始版本：** 18
+
+<!--Device-PathIteratorVerb-MOVE = 0--><!--Device-PathIteratorVerb-MOVE = 0-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -32,6 +36,8 @@ LINE = 1
 
 **起始版本：** 18
 
+<!--Device-PathIteratorVerb-LINE = 1--><!--Device-PathIteratorVerb-LINE = 1-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## QUAD
@@ -43,6 +49,8 @@ QUAD = 2
 添加二阶贝塞尔圆滑曲线。
 
 **起始版本：** 18
+
+<!--Device-PathIteratorVerb-QUAD = 2--><!--Device-PathIteratorVerb-QUAD = 2-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -56,6 +64,8 @@ CONIC = 3
 
 **起始版本：** 18
 
+<!--Device-PathIteratorVerb-CONIC = 3--><!--Device-PathIteratorVerb-CONIC = 3-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## CUBIC
@@ -67,6 +77,8 @@ CUBIC = 4
 添加三阶贝塞尔圆滑曲线。
 
 **起始版本：** 18
+
+<!--Device-PathIteratorVerb-CUBIC = 4--><!--Device-PathIteratorVerb-CUBIC = 4-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -80,6 +92,8 @@ CLOSE = 5
 
 **起始版本：** 18
 
+<!--Device-PathIteratorVerb-CLOSE = 5--><!--Device-PathIteratorVerb-CLOSE = 5-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## DONE
@@ -91,5 +105,7 @@ DONE = CLOSE + 1
 路径设置完成。
 
 **起始版本：** 18
+
+<!--Device-PathIteratorVerb-DONE = CLOSE + 1--><!--Device-PathIteratorVerb-DONE = CLOSE + 1-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing

@@ -12,6 +12,8 @@ server端类，使用server端方法之前需要创建该类的实例进行操�
 
 **替代接口：** [GattServer](arkts-connectivity-bluetoothmanager-gattserver-i.md)
 
+<!--Device-bluetooth-interface GattServer--><!--Device-bluetooth-interface GattServer-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -37,6 +39,8 @@ server端添加服务。
 **替代接口：** [addService](arkts-connectivity-bluetoothmanager-gattserver-i.md#addservice)
 
 **需要权限：** ohos.permission.USE_BLUETOOTH
+
+<!--Device-GattServer-addService(service: GattService): boolean--><!--Device-GattServer-addService(service: GattService): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -106,6 +110,8 @@ close(): void
 
 **需要权限：** ohos.permission.USE_BLUETOOTH
 
+<!--Device-GattServer-close(): void--><!--Device-GattServer-close(): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **示例**
@@ -132,6 +138,8 @@ server端特征值发生变化时，主动通知已连接的client设备。
 **替代接口：** [notifyCharacteristicChanged](arkts-connectivity-bluetoothmanager-gattserver-i.md#notifycharacteristicchanged)
 
 **需要权限：** ohos.permission.USE_BLUETOOTH
+
+<!--Device-GattServer-notifyCharacteristicChanged(deviceId: string, notifyCharacteristic: NotifyCharacteristic): boolean--><!--Device-GattServer-notifyCharacteristicChanged(deviceId: string, notifyCharacteristic: NotifyCharacteristic): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -187,6 +195,8 @@ server端取消订阅特征值读请求事件。
 
 **需要权限：** ohos.permission.USE_BLUETOOTH
 
+<!--Device-GattServer-off(type: 'characteristicRead', callback?: Callback<CharacteristicReadReq>): void--><!--Device-GattServer-off(type: 'characteristicRead', callback?: Callback<CharacteristicReadReq>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -220,6 +230,8 @@ server端取消订阅特征值写请求事件。
 **替代接口：** characteristicWrite
 
 **需要权限：** ohos.permission.USE_BLUETOOTH
+
+<!--Device-GattServer-off(type: 'characteristicWrite', callback?: Callback<CharacteristicWriteReq>): void--><!--Device-GattServer-off(type: 'characteristicWrite', callback?: Callback<CharacteristicWriteReq>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -255,6 +267,8 @@ server端取消订阅描述符读请求事件。
 
 **需要权限：** ohos.permission.USE_BLUETOOTH
 
+<!--Device-GattServer-off(type: 'descriptorRead', callback?: Callback<DescriptorReadReq>): void--><!--Device-GattServer-off(type: 'descriptorRead', callback?: Callback<DescriptorReadReq>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -288,6 +302,8 @@ server端取消订阅描述符写请求事件。
 **替代接口：** descriptorWrite
 
 **需要权限：** ohos.permission.USE_BLUETOOTH
+
+<!--Device-GattServer-off(type: 'descriptorWrite', callback?: Callback<DescriptorWriteReq>): void--><!--Device-GattServer-off(type: 'descriptorWrite', callback?: Callback<DescriptorWriteReq>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -323,6 +339,8 @@ server端取消订阅BLE连接状态变化事件。
 
 **需要权限：** ohos.permission.USE_BLUETOOTH
 
+<!--Device-GattServer-off(type: 'connectStateChange', callback?: Callback<BLEConnectChangedState>): void--><!--Device-GattServer-off(type: 'connectStateChange', callback?: Callback<BLEConnectChangedState>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -356,6 +374,8 @@ server端订阅特征值读请求事件。
 **替代接口：** characteristicRead
 
 **需要权限：** ohos.permission.USE_BLUETOOTH
+
+<!--Device-GattServer-on(type: 'characteristicRead', callback: Callback<CharacteristicReadReq>): void--><!--Device-GattServer-on(type: 'characteristicRead', callback: Callback<CharacteristicReadReq>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -410,6 +430,8 @@ server端订阅特征值写请求事件。
 **替代接口：** characteristicWrite
 
 **需要权限：** ohos.permission.USE_BLUETOOTH
+
+<!--Device-GattServer-on(type: 'characteristicWrite', callback: Callback<CharacteristicWriteReq>): void--><!--Device-GattServer-on(type: 'characteristicWrite', callback: Callback<CharacteristicWriteReq>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -468,6 +490,8 @@ server端订阅描述符读请求事件。
 
 **需要权限：** ohos.permission.USE_BLUETOOTH
 
+<!--Device-GattServer-on(type: 'descriptorRead', callback: Callback<DescriptorReadReq>): void--><!--Device-GattServer-on(type: 'descriptorRead', callback: Callback<DescriptorReadReq>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -521,6 +545,8 @@ server端订阅描述符写请求事件。
 **替代接口：** descriptorWrite
 
 **需要权限：** ohos.permission.USE_BLUETOOTH
+
+<!--Device-GattServer-on(type: 'descriptorWrite', callback: Callback<DescriptorWriteReq>): void--><!--Device-GattServer-on(type: 'descriptorWrite', callback: Callback<DescriptorWriteReq>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -578,6 +604,8 @@ server端订阅BLE连接状态变化事件。
 
 **需要权限：** ohos.permission.USE_BLUETOOTH
 
+<!--Device-GattServer-on(type: 'connectStateChange', callback: Callback<BLEConnectChangedState>): void--><!--Device-GattServer-on(type: 'connectStateChange', callback: Callback<BLEConnectChangedState>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -617,6 +645,8 @@ removeService(serviceUuid: string): boolean
 
 **需要权限：** ohos.permission.USE_BLUETOOTH
 
+<!--Device-GattServer-removeService(serviceUuid: string): boolean--><!--Device-GattServer-removeService(serviceUuid: string): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -655,6 +685,8 @@ server端回复client端的读写请求。
 **替代接口：** [sendResponse](arkts-connectivity-bluetoothmanager-gattserver-i.md#sendresponse)
 
 **需要权限：** ohos.permission.USE_BLUETOOTH
+
+<!--Device-GattServer-sendResponse(serverResponse: ServerResponse): boolean--><!--Device-GattServer-sendResponse(serverResponse: ServerResponse): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -711,6 +743,8 @@ startAdvertising(setting: AdvertiseSetting, advData: AdvertiseData, advResponse?
 **替代接口：** [startAdvertising](arkts-connectivity-bluetoothmanager-gattserver-i.md#startadvertising)
 
 **需要权限：** ohos.permission.DISCOVER_BLUETOOTH
+
+<!--Device-GattServer-startAdvertising(setting: AdvertiseSetting, advData: AdvertiseData, advResponse?: AdvertiseData): void--><!--Device-GattServer-startAdvertising(setting: AdvertiseSetting, advData: AdvertiseData, advResponse?: AdvertiseData): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -786,6 +820,8 @@ stopAdvertising(): void
 **替代接口：** [stopAdvertising](arkts-connectivity-bluetoothmanager-gattserver-i.md#stopadvertising)
 
 **需要权限：** ohos.permission.DISCOVER_BLUETOOTH
+
+<!--Device-GattServer-stopAdvertising(): void--><!--Device-GattServer-stopAdvertising(): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

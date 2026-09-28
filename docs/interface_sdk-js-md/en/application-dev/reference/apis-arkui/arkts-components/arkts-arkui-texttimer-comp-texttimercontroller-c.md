@@ -14,6 +14,8 @@ textTimerController: TextTimerController = new TextTimerController();
 
 **Since:** 8
 
+<!--Device-unnamed-declare class TextTimerController--><!--Device-unnamed-declare class TextTimerController-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
@@ -29,6 +31,8 @@ A constructor used to create a **TextTimerController** object.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
+
+<!--Device-TextTimerController-constructor()--><!--Device-TextTimerController-constructor()-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,6 +50,8 @@ Pauses the timer. This API must be called after the component is created.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
+<!--Device-TextTimerController-pause()--><!--Device-TextTimerController-pause()-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## reset
@@ -62,6 +68,8 @@ Resets the timer. This API must be called after the component is created.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
+<!--Device-TextTimerController-reset()--><!--Device-TextTimerController-reset()-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## start
@@ -77,5 +85,7 @@ Starts the timer. This API must be called after the **TextTimer** component is c
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
+
+<!--Device-TextTimerController-start()--><!--Device-TextTimerController-start()-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -8,6 +8,8 @@ interface AudioCapturerMicInData
 
 **起始版本：** 24
 
+<!--Device-audio-interface AudioCapturerMicInData--><!--Device-audio-interface AudioCapturerMicInData-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ data: ArrayBuffer
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioCapturerMicInData-data: ArrayBuffer--><!--Device-AudioCapturerMicInData-data: ArrayBuffer-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **系统接口：** 此接口为系统接口。
@@ -52,6 +56,8 @@ ecData?: ArrayBuffer
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioCapturerMicInData-ecData?: ArrayBuffer--><!--Device-AudioCapturerMicInData-ecData?: ArrayBuffer-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **系统接口：** 此接口为系统接口。
@@ -69,6 +75,8 @@ micInData: ArrayBuffer
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioCapturerMicInData-micInData: ArrayBuffer--><!--Device-AudioCapturerMicInData-micInData: ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 

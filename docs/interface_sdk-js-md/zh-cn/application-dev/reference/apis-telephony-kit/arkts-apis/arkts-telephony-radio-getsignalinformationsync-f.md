@@ -16,6 +16,8 @@ function getSignalInformationSync(slotId: number): Array<SignalInformation>
 
 **起始版本：** 10
 
+<!--Device-radio-function getSignalInformationSync(slotId: int): Array<SignalInformation>--><!--Device-radio-function getSignalInformationSync(slotId: int): Array<SignalInformation>-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**

@@ -8,6 +8,8 @@ interface FileHolder
 
 **起始版本：** 16
 
+<!--Device-opp-interface FileHolder--><!--Device-opp-interface FileHolder-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ fileFd: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FileHolder-fileFd: int--><!--Device-FileHolder-fileFd: int-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ filePath: string
 **起始版本：** 16
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FileHolder-filePath: string--><!--Device-FileHolder-filePath: string-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -69,6 +75,8 @@ fileSize: number
 **起始版本：** 16
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FileHolder-fileSize: long--><!--Device-FileHolder-fileSize: long-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

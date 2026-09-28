@@ -8,6 +8,8 @@ export interface NotificationExtensionSubscriptionInfo
 
 **起始版本：** 22
 
+<!--Device-unnamed-export interface NotificationExtensionSubscriptionInfo--><!--Device-unnamed-export interface NotificationExtensionSubscriptionInfo-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## addr
@@ -22,6 +24,8 @@ addr: string
 
 **起始版本：** 22
 
+<!--Device-NotificationExtensionSubscriptionInfo-addr: string--><!--Device-NotificationExtensionSubscriptionInfo-addr: string-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## type
@@ -35,5 +39,7 @@ type: notificationExtensionSubscription.SubscribeType
 **类型：** [notificationExtensionSubscription.SubscribeType](arkts-notification-notificationextensionsubscription-subscribetype-e.md)
 
 **起始版本：** 22
+
+<!--Device-NotificationExtensionSubscriptionInfo-type: notificationExtensionSubscription.SubscribeType--><!--Device-NotificationExtensionSubscriptionInfo-type: notificationExtensionSubscription.SubscribeType-End-->
 
 **系统能力：** SystemCapability.Notification.Notification

@@ -8,6 +8,8 @@ export interface DfsListeners
 
 **起始版本：** 12
 
+<!--Device-unnamed-export interface DfsListeners--><!--Device-unnamed-export interface DfsListeners-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## 导入模块
@@ -25,6 +27,8 @@ onStatus(networkId: string, status: number): void
 事件回调类。参数由[connectDfs](arkts-corefile-file-fs-connectdfs-f.md)传入。
 
 **起始版本：** 12
+
+<!--Device-DfsListeners-onStatus(networkId: string, status: number): void--><!--Device-DfsListeners-onStatus(networkId: string, status: number): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

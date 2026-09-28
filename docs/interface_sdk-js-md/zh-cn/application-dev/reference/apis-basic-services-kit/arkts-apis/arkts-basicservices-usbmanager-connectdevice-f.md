@@ -19,6 +19,8 @@ function connectDevice(device: USBDevice): Readonly<USBDevicePipe>
 
 **起始版本：** 9
 
+<!--Device-usbManager-function connectDevice(device: USBDevice): Readonly<USBDevicePipe>--><!--Device-usbManager-function connectDevice(device: USBDevice): Readonly<USBDevicePipe>-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 **参数：**

@@ -8,6 +8,8 @@ interface TonePlayer
 
 **起始版本：** 9
 
+<!--Device-audio-interface TonePlayer--><!--Device-audio-interface TonePlayer-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
 **系统接口：** 此接口为系统接口。
@@ -27,6 +29,8 @@ load(type: ToneType, callback: AsyncCallback<void>): void
 加载DTMF音调配置。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-TonePlayer-load(type: ToneType, callback: AsyncCallback<void>): void--><!--Device-TonePlayer-load(type: ToneType, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
@@ -66,6 +70,8 @@ load(type: ToneType): Promise<void>
 
 **起始版本：** 9
 
+<!--Device-TonePlayer-load(type: ToneType): Promise<void>--><!--Device-TonePlayer-load(type: ToneType): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
 **系统接口：** 此接口为系统接口。
@@ -101,6 +107,8 @@ release(callback: AsyncCallback<void>): void
 释放与此TonePlayer对象关联的资源。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-TonePlayer-release(callback: AsyncCallback<void>): void--><!--Device-TonePlayer-release(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
@@ -139,6 +147,8 @@ release(): Promise<void>
 
 **起始版本：** 9
 
+<!--Device-TonePlayer-release(): Promise<void>--><!--Device-TonePlayer-release(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
 **系统接口：** 此接口为系统接口。
@@ -168,6 +178,8 @@ start(callback: AsyncCallback<void>): void
 启动DTMF音调播放。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-TonePlayer-start(callback: AsyncCallback<void>): void--><!--Device-TonePlayer-start(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
@@ -206,6 +218,8 @@ start(): Promise<void>
 
 **起始版本：** 9
 
+<!--Device-TonePlayer-start(): Promise<void>--><!--Device-TonePlayer-start(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
 **系统接口：** 此接口为系统接口。
@@ -235,6 +249,8 @@ stop(callback: AsyncCallback<void>): void
 停止当前正在播放的音调。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-TonePlayer-stop(callback: AsyncCallback<void>): void--><!--Device-TonePlayer-stop(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
@@ -272,6 +288,8 @@ stop(): Promise<void>
 停止当前正在播放的音调。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-TonePlayer-stop(): Promise<void>--><!--Device-TonePlayer-stop(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 

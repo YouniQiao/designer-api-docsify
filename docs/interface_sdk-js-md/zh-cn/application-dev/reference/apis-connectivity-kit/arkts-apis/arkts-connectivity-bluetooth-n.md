@@ -14,6 +14,8 @@ declare namespace bluetooth
 
 **替代接口：** bluetoothManager
 
+<!--Device-unnamed-declare namespace bluetooth--><!--Device-unnamed-declare namespace bluetooth-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块

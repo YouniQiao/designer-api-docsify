@@ -8,6 +8,8 @@ interface KeyOptions
 
 **起始版本：** 8
 
+<!--Device-inputConsumer-interface KeyOptions--><!--Device-inputConsumer-interface KeyOptions-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ finalKey: number
 
 **起始版本：** 8
 
+<!--Device-KeyOptions-finalKey: int--><!--Device-KeyOptions-finalKey: int-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ finalKeyDownDuration: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-KeyOptions-finalKeyDownDuration: int--><!--Device-KeyOptions-finalKeyDownDuration: int-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 
@@ -62,6 +68,8 @@ isFinalKeyDown: boolean
 
 **起始版本：** 8
 
+<!--Device-KeyOptions-isFinalKeyDown: boolean--><!--Device-KeyOptions-isFinalKeyDown: boolean-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 
 **系统接口：** 此接口为系统接口。
@@ -78,6 +86,8 @@ isRepeat?: boolean
 
 **起始版本：** 18
 
+<!--Device-KeyOptions-isRepeat?: boolean--><!--Device-KeyOptions-isRepeat?: boolean-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 
 **系统接口：** 此接口为系统接口。
@@ -93,6 +103,8 @@ preKeys: Array<number>
 **类型：** Array&lt;number&gt;
 
 **起始版本：** 8
+
+<!--Device-KeyOptions-preKeys: Array<int>--><!--Device-KeyOptions-preKeys: Array<int>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 
@@ -111,6 +123,8 @@ triggerType?: KeyCommandTriggerType
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-KeyOptions-triggerType?: KeyCommandTriggerType--><!--Device-KeyOptions-triggerType?: KeyCommandTriggerType-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 

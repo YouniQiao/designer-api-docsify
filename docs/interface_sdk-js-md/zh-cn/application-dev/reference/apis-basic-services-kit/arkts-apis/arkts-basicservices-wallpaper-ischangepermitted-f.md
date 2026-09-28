@@ -21,6 +21,8 @@ function isChangePermitted(callback: AsyncCallback<boolean>): void
 
 **废弃版本：** 9
 
+<!--Device-wallpaper-function isChangePermitted(callback: AsyncCallback<boolean>): void--><!--Device-wallpaper-function isChangePermitted(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
 **参数：**
@@ -60,6 +62,8 @@ function isChangePermitted(): Promise<boolean>
 **起始版本：** 7
 
 **废弃版本：** 9
+
+<!--Device-wallpaper-function isChangePermitted(): Promise<boolean>--><!--Device-wallpaper-function isChangePermitted(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 

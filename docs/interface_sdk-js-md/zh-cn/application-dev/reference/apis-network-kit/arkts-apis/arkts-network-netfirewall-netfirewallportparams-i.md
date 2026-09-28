@@ -8,6 +8,8 @@ interface NetFirewallPortParams
 
 **起始版本：** 15
 
+<!--Device-netFirewall-interface NetFirewallPortParams--><!--Device-netFirewall-interface NetFirewallPortParams-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 ## 导入模块
@@ -28,6 +30,8 @@ endPort: number
 
 **起始版本：** 15
 
+<!--Device-NetFirewallPortParams-endPort: int--><!--Device-NetFirewallPortParams-endPort: int-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 ## startPort
@@ -41,5 +45,7 @@ startPort: number
 **类型：** number
 
 **起始版本：** 15
+
+<!--Device-NetFirewallPortParams-startPort: int--><!--Device-NetFirewallPortParams-startPort: int-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall

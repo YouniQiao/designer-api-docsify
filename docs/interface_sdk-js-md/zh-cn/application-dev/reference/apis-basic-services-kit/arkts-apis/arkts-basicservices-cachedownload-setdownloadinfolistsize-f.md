@@ -20,6 +20,8 @@ function setDownloadInfoListSize(size: number): void
 
 **起始版本：** 20
 
+<!--Device-cacheDownload-function setDownloadInfoListSize(size: long): void--><!--Device-cacheDownload-function setDownloadInfoListSize(size: long): void-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 **参数：**

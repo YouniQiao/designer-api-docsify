@@ -8,6 +8,8 @@ export interface UkeyAuthDialogInfo
 
 **起始版本：** 26.0.1
 
+<!--Device-certificateManagerDialog-export interface UkeyAuthDialogInfo--><!--Device-certificateManagerDialog-export interface UkeyAuthDialogInfo-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
 ## 导入模块
@@ -30,6 +32,8 @@ Ukey认证对话框的ability名称。最大长度为256字节，且不能为空
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UkeyAuthDialogInfo-abilityName: string--><!--Device-UkeyAuthDialogInfo-abilityName: string-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
 ## abilityType
@@ -45,5 +49,7 @@ Ukey认证对话框的ability类型。
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UkeyAuthDialogInfo-abilityType: AbilityType--><!--Device-UkeyAuthDialogInfo-abilityType: AbilityType-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManagerDialog

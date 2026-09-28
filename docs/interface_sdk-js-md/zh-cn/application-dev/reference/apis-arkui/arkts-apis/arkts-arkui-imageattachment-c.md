@@ -8,6 +8,8 @@ declare class ImageAttachment
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare class ImageAttachment--><!--Device-unnamed-declare class ImageAttachment-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
@@ -23,6 +25,8 @@ constructor(value: ImageAttachmentInterface)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ImageAttachment-constructor(value: ImageAttachmentInterface)--><!--Device-ImageAttachment-constructor(value: ImageAttachmentInterface)-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -48,6 +52,8 @@ constructor(attachment: Optional<AttachmentType>)
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
 
+<!--Device-ImageAttachment-constructor(attachment: Optional<AttachmentType>)--><!--Device-ImageAttachment-constructor(attachment: Optional<AttachmentType>)-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -72,6 +78,8 @@ readonly colorFilter?: ColorFilterType
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
 
+<!--Device-ImageAttachment-readonly colorFilter?: ColorFilterType--><!--Device-ImageAttachment-readonly colorFilter?: ColorFilterType-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## layoutStyle
@@ -89,6 +97,8 @@ readonly layoutStyle?: ImageAttachmentLayoutStyle
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ImageAttachment-readonly layoutStyle?: ImageAttachmentLayoutStyle--><!--Device-ImageAttachment-readonly layoutStyle?: ImageAttachmentLayoutStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -108,6 +118,8 @@ readonly objectFit?: ImageFit
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-ImageAttachment-readonly objectFit?: ImageFit--><!--Device-ImageAttachment-readonly objectFit?: ImageFit-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## resizable
@@ -125,6 +137,8 @@ readonly resizable?: ResizableOptions
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
+
+<!--Device-ImageAttachment-readonly resizable?: ResizableOptions--><!--Device-ImageAttachment-readonly resizable?: ResizableOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -146,6 +160,8 @@ readonly size?: SizeOptions
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-ImageAttachment-readonly size?: SizeOptions--><!--Device-ImageAttachment-readonly size?: SizeOptions-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## sizeInVp
@@ -163,6 +179,8 @@ readonly sizeInVp?: SizeOptions
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本21开始，该接口支持在原子化服务中使用。
+
+<!--Device-ImageAttachment-readonly sizeInVp?: SizeOptions--><!--Device-ImageAttachment-readonly sizeInVp?: SizeOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -186,6 +204,8 @@ true：支持SVG解析新能力；false：保持原有SVG解析能力。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
+<!--Device-ImageAttachment-readonly supportSvg2?: boolean--><!--Device-ImageAttachment-readonly supportSvg2?: boolean-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## value
@@ -204,6 +224,8 @@ readonly value: PixelMap
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-ImageAttachment-readonly value: PixelMap--><!--Device-ImageAttachment-readonly value: PixelMap-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## verticalAlign
@@ -221,5 +243,7 @@ readonly verticalAlign?: ImageSpanAlignment
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ImageAttachment-readonly verticalAlign?: ImageSpanAlignment--><!--Device-ImageAttachment-readonly verticalAlign?: ImageSpanAlignment-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

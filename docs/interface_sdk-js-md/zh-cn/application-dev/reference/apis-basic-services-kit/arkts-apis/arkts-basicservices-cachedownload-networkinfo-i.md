@@ -8,6 +8,8 @@ interface NetworkInfo
 
 **起始版本：** 20
 
+<!--Device-cacheDownload-interface NetworkInfo--><!--Device-cacheDownload-interface NetworkInfo-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## 导入模块
@@ -28,6 +30,8 @@ readonly dnsServers: string[]
 
 **起始版本：** 20
 
+<!--Device-NetworkInfo-readonly dnsServers: string[]--><!--Device-NetworkInfo-readonly dnsServers: string[]-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## ip
@@ -41,5 +45,7 @@ readonly ip?: string
 **类型：** string
 
 **起始版本：** 23
+
+<!--Device-NetworkInfo-readonly ip?: string--><!--Device-NetworkInfo-readonly ip?: string-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent

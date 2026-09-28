@@ -20,6 +20,8 @@ function getCurrentInputMethod(userId?: number): InputMethodProperty
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-inputMethod-function getCurrentInputMethod(userId?: int): InputMethodProperty--><!--Device-inputMethod-function getCurrentInputMethod(userId?: int): InputMethodProperty-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **系统接口：** 此接口为系统接口。

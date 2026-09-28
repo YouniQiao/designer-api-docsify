@@ -18,6 +18,8 @@ function resetDefaultApplication(type: string, userId: number, callback: AsyncCa
 
 **需要权限：** ohos.permission.SET_DEFAULT_APPLICATION
 
+<!--Device-defaultAppManager-function resetDefaultApplication(type: string, userId: int, callback: AsyncCallback<void>) : void--><!--Device-defaultAppManager-function resetDefaultApplication(type: string, userId: int, callback: AsyncCallback<void>) : void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.DefaultApp
 
 **系统接口：** 此接口为系统接口。
@@ -91,6 +93,8 @@ function resetDefaultApplication(type: string, callback: AsyncCallback<void>) : 
 
 **需要权限：** ohos.permission.SET_DEFAULT_APPLICATION
 
+<!--Device-defaultAppManager-function resetDefaultApplication(type: string, callback: AsyncCallback<void>) : void--><!--Device-defaultAppManager-function resetDefaultApplication(type: string, callback: AsyncCallback<void>) : void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.DefaultApp
 
 **系统接口：** 此接口为系统接口。
@@ -158,6 +162,8 @@ function resetDefaultApplication(type: string, userId?: number) : Promise<void>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.SET_DEFAULT_APPLICATION
+
+<!--Device-defaultAppManager-function resetDefaultApplication(type: string, userId?: int) : Promise<void>--><!--Device-defaultAppManager-function resetDefaultApplication(type: string, userId?: int) : Promise<void>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.DefaultApp
 

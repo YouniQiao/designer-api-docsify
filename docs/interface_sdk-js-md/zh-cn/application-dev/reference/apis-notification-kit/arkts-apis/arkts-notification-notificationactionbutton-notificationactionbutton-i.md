@@ -8,6 +8,8 @@ NotificationActionButton模块定义了通知中显示的操作按钮，用于�
 
 **起始版本：** 7
 
+<!--Device-unnamed-export interface NotificationActionButton--><!--Device-unnamed-export interface NotificationActionButton-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## extras
@@ -21,6 +23,8 @@ extras?: { [key: string]: any }
 **类型：** { [key: string]: any }
 
 **起始版本：** 7
+
+<!--Device-NotificationActionButton-extras?: { [key: string]: any }--><!--Device-NotificationActionButton-extras?: { [key: string]: any }-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -36,6 +40,8 @@ title: string
 
 **起始版本：** 7
 
+<!--Device-NotificationActionButton-title: string--><!--Device-NotificationActionButton-title: string-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## userInput
@@ -50,6 +56,8 @@ userInput?: NotificationUserInput
 
 **起始版本：** 8
 
+<!--Device-NotificationActionButton-userInput?: NotificationUserInput--><!--Device-NotificationActionButton-userInput?: NotificationUserInput-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## wantAgent
@@ -63,5 +71,7 @@ wantAgent: WantAgent
 **类型：** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md)
 
 **起始版本：** 7
+
+<!--Device-NotificationActionButton-wantAgent: WantAgent--><!--Device-NotificationActionButton-wantAgent: WantAgent-End-->
 
 **系统能力：** SystemCapability.Notification.Notification

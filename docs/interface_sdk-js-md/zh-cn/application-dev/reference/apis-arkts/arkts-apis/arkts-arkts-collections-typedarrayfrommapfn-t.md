@@ -10,6 +10,8 @@ ArkTS TypedArray映射函数类型。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-collections-type TypedArrayFromMapFn<FromElementType, ToElementType> = (value: FromElementType, index: number) => ToElementType--><!--Device-collections-type TypedArrayFromMapFn<FromElementType, ToElementType> = (value: FromElementType, index: number) => ToElementType-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**

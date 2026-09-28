@@ -8,6 +8,8 @@ interface ScannerDevice
 
 **起始版本：** 20
 
+<!--Device-scan-interface ScannerDevice--><!--Device-scan-interface ScannerDevice-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## 导入模块
@@ -28,6 +30,8 @@ deviceName: string
 
 **起始版本：** 20
 
+<!--Device-ScannerDevice-deviceName: string--><!--Device-ScannerDevice-deviceName: string-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## discoveryMode
@@ -41,6 +45,8 @@ discoveryMode: ScannerDiscoveryMode
 **类型：** [ScannerDiscoveryMode](arkts-basicservices-scan-scannerdiscoverymode-e.md)
 
 **起始版本：** 20
+
+<!--Device-ScannerDevice-discoveryMode: ScannerDiscoveryMode--><!--Device-ScannerDevice-discoveryMode: ScannerDiscoveryMode-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -56,6 +62,8 @@ manufacturer: string
 
 **起始版本：** 20
 
+<!--Device-ScannerDevice-manufacturer: string--><!--Device-ScannerDevice-manufacturer: string-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## model
@@ -69,6 +77,8 @@ model: string
 **类型：** string
 
 **起始版本：** 20
+
+<!--Device-ScannerDevice-model: string--><!--Device-ScannerDevice-model: string-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -84,6 +94,8 @@ scannerId: string
 
 **起始版本：** 20
 
+<!--Device-ScannerDevice-scannerId: string--><!--Device-ScannerDevice-scannerId: string-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## uniqueId
@@ -97,5 +109,7 @@ uniqueId: string
 **类型：** string
 
 **起始版本：** 20
+
+<!--Device-ScannerDevice-uniqueId: string--><!--Device-ScannerDevice-uniqueId: string-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework

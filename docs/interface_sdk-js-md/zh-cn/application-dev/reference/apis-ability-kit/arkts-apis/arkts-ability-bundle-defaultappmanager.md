@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace defaultAppManager--><!--Device-unnamed-declare namespace defaultAppManager-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.DefaultApp
 
 ## 导入模块

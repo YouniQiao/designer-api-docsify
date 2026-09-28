@@ -18,6 +18,8 @@ function getAllCapabilityList(): Promise<Capability[]>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-carAwareness-function getAllCapabilityList(): Promise<Capability[]>--><!--Device-carAwareness-function getAllCapabilityList(): Promise<Capability[]>-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.CarAwareness
 
 **返回值：**

@@ -20,6 +20,8 @@ function requestRebuildHyperSnap(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-hyperSnapManager-function requestRebuildHyperSnap(): void--><!--Device-hyperSnapManager-function requestRebuildHyperSnap(): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **错误码：**

@@ -8,6 +8,8 @@ export interface LiveFormInfo
 
 **起始版本：** 20
 
+<!--Device-unnamed-export interface LiveFormInfo--><!--Device-unnamed-export interface LiveFormInfo-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 ## 导入模块
@@ -30,7 +32,9 @@ borderRadius: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-LiveFormInfo-borderRadius: double--><!--Device-LiveFormInfo-borderRadius: double-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -48,7 +52,9 @@ formId: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-LiveFormInfo-formId: string--><!--Device-LiveFormInfo-formId: string-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -66,6 +72,8 @@ rect: formInfo.Rect
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-LiveFormInfo-rect: formInfo.Rect--><!--Device-LiveFormInfo-rect: formInfo.Rect-End-->
 
 **系统能力：** SystemCapability.Ability.Form

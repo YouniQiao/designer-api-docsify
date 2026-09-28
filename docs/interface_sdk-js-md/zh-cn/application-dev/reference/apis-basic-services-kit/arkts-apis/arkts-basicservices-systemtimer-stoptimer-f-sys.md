@@ -16,6 +16,8 @@ function stopTimer(timer: number, callback: AsyncCallback<void>): void
 
 **起始版本：** 7
 
+<!--Device-systemTimer-function stopTimer(timer: long, callback: AsyncCallback<void>): void--><!--Device-systemTimer-function stopTimer(timer: long, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Time
 
 **系统接口：** 此接口为系统接口。
@@ -78,6 +80,8 @@ function stopTimer(timer: number): Promise<void>
 此方法用于停止定时器，并使用Promise异步回调。
 
 **起始版本：** 7
+
+<!--Device-systemTimer-function stopTimer(timer: long): Promise<void>--><!--Device-systemTimer-function stopTimer(timer: long): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Time
 

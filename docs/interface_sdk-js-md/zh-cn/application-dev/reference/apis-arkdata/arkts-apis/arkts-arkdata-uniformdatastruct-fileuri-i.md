@@ -8,6 +8,8 @@ interface FileUri
 
 **起始版本：** 15
 
+<!--Device-uniformDataStruct-interface FileUri--><!--Device-uniformDataStruct-interface FileUri-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ details?: Record<string, number | string | Uint8Array>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FileUri-details?: Record<string, int | long | double | string | Uint8Array>--><!--Device-FileUri-details?: Record<string, int | long | double | string | Uint8Array>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## fileType
@@ -46,6 +50,8 @@ fileType: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FileUri-fileType: string--><!--Device-FileUri-fileType: string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## oriUri
@@ -61,6 +67,8 @@ oriUri: string
 **起始版本：** 15
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FileUri-oriUri: string--><!--Device-FileUri-oriUri: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -80,6 +88,8 @@ readonly uniformDataType: 'general.file-uri'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FileUri-readonly uniformDataType: 'general.file-uri'--><!--Device-FileUri-readonly uniformDataType: 'general.file-uri'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## uriAuthorizationPolicies
@@ -95,5 +105,7 @@ uriAuthorizationPolicies?: Array<number>
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FileUri-uriAuthorizationPolicies?: Array<int>--><!--Device-FileUri-uriAuthorizationPolicies?: Array<int>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core

@@ -11,10 +11,12 @@ Defines the style of a badge, including the text color, size, font weight, badge
 > When `borderWidth` is greater than 0 and the colors of `borderColor` and `badgeColor` are different, the badge is
 > drawn first and then the border. Because edge pixels are anti-aliased, semi-transparent pixels are generated, and
 > border lines in the `badgeColor` color appear at the four corners. To implement such a scenario, you are advised to
-> use the [Text](arkts-arkui-text-comp.md#text) component and set [outline](arkts-arkui-common-comp-commonmethod-c.md#outline) instead
+> use the [Text](arkts-arkui-text-comp.md) component and set [outline](arkts-arkui-common-comp-commonmethod-c.md#outline) instead
 > of the Badge component.
 
 **Since:** 7
+
+<!--Device-unnamed-declare interface BadgeStyle--><!--Device-unnamed-declare interface BadgeStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -37,6 +39,8 @@ Default value: **Color.Red**
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-BadgeStyle-badgeColor?: ResourceColor--><!--Device-BadgeStyle-badgeColor?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -70,6 +74,8 @@ Value range: greater than 0. When the value is 0, the badge is not displayed. Wh
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-BadgeStyle-badgeSize?: number | ResourceStr--><!--Device-BadgeStyle-badgeSize?: number | ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## borderColor
@@ -91,6 +97,8 @@ Default value: **Color.Red**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-BadgeStyle-borderColor?: ResourceColor--><!--Device-BadgeStyle-borderColor?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -120,6 +128,8 @@ Percentage is not supported. When a percentage is set, the default value is used
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-BadgeStyle-borderWidth?: Length--><!--Device-BadgeStyle-borderWidth?: Length-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## color
@@ -141,6 +151,8 @@ Default value: **Color.White**
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-BadgeStyle-color?: ResourceColor--><!--Device-BadgeStyle-color?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -171,6 +183,8 @@ Default value: **false**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-BadgeStyle-enableAutoAvoidance?: boolean--><!--Device-BadgeStyle-enableAutoAvoidance?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -203,6 +217,8 @@ Value range: greater than 0. When the value is 0, the text is not displayed. Whe
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-BadgeStyle-fontSize?: number | ResourceStr--><!--Device-BadgeStyle-fontSize?: number | ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## fontWeight
@@ -227,6 +243,8 @@ Percentage is not supported. When a percentage is set, the default value is used
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-BadgeStyle-fontWeight?: number | FontWeight | ResourceStr--><!--Device-BadgeStyle-fontWeight?: number | FontWeight | ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## outerBorderColor
@@ -248,6 +266,8 @@ Default value: **Color.White**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-BadgeStyle-outerBorderColor?: ResourceColor--><!--Device-BadgeStyle-outerBorderColor?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -274,5 +294,7 @@ Percentage is not supported. When a percentage is set, the default value is used
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-BadgeStyle-outerBorderWidth?: LengthMetrics--><!--Device-BadgeStyle-outerBorderWidth?: LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

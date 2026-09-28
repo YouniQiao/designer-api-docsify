@@ -8,6 +8,8 @@ export type NotificationInfo = _NotificationInfo
 
 **起始版本：** 22
 
+<!--Device-notificationExtensionSubscription-export type NotificationInfo = _NotificationInfo--><!--Device-notificationExtensionSubscription-export type NotificationInfo = _NotificationInfo-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **类型：** _NotificationInfo

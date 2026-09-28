@@ -8,6 +8,8 @@ EntityInfo继承自[IntentEntityDecoratorInfo](arkts-ability-app-ability-insight
 
 **起始版本：** 20
 
+<!--Device-insightIntentDriver-interface EntityInfo--><!--Device-insightIntentDriver-interface EntityInfo-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ readonly className: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-EntityInfo-readonly className: string--><!--Device-EntityInfo-readonly className: string-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ readonly entityCategory: string
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EntityInfo-readonly entityCategory: string--><!--Device-EntityInfo-readonly entityCategory: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -68,6 +74,8 @@ readonly entityId: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-EntityInfo-readonly entityId: string--><!--Device-EntityInfo-readonly entityId: string-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -85,6 +93,8 @@ readonly isQueryable?: boolean
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EntityInfo-readonly isQueryable?: boolean--><!--Device-EntityInfo-readonly isQueryable?: boolean-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -104,6 +114,8 @@ readonly parameters: Record<string, Object>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-EntityInfo-readonly parameters: Record<string, Object>--><!--Device-EntityInfo-readonly parameters: Record<string, Object>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -122,6 +134,8 @@ readonly parentClassName: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-EntityInfo-readonly parentClassName: string--><!--Device-EntityInfo-readonly parentClassName: string-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -139,6 +153,8 @@ readonly supportedQueryProperties?: string[]
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EntityInfo-readonly supportedQueryProperties?: string[]--><!--Device-EntityInfo-readonly supportedQueryProperties?: string[]-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

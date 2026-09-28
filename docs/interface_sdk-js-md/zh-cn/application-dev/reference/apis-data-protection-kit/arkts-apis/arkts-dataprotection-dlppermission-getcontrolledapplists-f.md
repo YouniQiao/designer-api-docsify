@@ -26,6 +26,8 @@ function getControlledAppLists(): Promise<Array<string>>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-dlpPermission-function getControlledAppLists(): Promise<Array<string>>--><!--Device-dlpPermission-function getControlledAppLists(): Promise<Array<string>>-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **返回值：**

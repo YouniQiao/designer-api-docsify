@@ -16,6 +16,8 @@ function getNotificationSetting(): Promise<NotificationSetting>
 
 **起始版本：** 20
 
+<!--Device-notificationManager-function getNotificationSetting(): Promise<NotificationSetting>--><!--Device-notificationManager-function getNotificationSetting(): Promise<NotificationSetting>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **参见：**

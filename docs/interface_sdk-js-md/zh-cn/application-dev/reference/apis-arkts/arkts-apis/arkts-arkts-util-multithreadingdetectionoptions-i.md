@@ -8,6 +8,8 @@ interface MultithreadingDetectionOptions
 
 **起始版本：** 26.0.0
 
+<!--Device-util-interface MultithreadingDetectionOptions--><!--Device-util-interface MultithreadingDetectionOptions-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -30,6 +32,8 @@ abort?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MultithreadingDetectionOptions-abort?: boolean--><!--Device-MultithreadingDetectionOptions-abort?: boolean-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## frequency
@@ -46,6 +50,8 @@ frequency?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MultithreadingDetectionOptions-frequency?: number--><!--Device-MultithreadingDetectionOptions-frequency?: number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## interval
@@ -61,5 +67,7 @@ interval?: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MultithreadingDetectionOptions-interval?: number--><!--Device-MultithreadingDetectionOptions-interval?: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

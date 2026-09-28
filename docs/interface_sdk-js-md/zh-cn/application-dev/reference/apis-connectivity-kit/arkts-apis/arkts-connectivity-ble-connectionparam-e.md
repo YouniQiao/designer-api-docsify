@@ -8,6 +8,8 @@ enum ConnectionParam
 
 **起始版本：** 22
 
+<!--Device-ble-enum ConnectionParam--><!--Device-ble-enum ConnectionParam-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## LOW_POWER
@@ -22,6 +24,8 @@ LOW_POWER = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ConnectionParam-LOW_POWER = 1--><!--Device-ConnectionParam-LOW_POWER = 1-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## BALANCED
@@ -35,6 +39,8 @@ BALANCED = 2
 **起始版本：** 22
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ConnectionParam-BALANCED = 2--><!--Device-ConnectionParam-BALANCED = 2-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -51,5 +57,7 @@ HIGH = 3
 **起始版本：** 22
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ConnectionParam-HIGH = 3--><!--Device-ConnectionParam-HIGH = 3-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

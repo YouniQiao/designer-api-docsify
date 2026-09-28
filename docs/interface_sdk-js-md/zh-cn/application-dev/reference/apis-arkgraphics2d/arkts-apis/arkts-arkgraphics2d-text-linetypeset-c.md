@@ -10,6 +10,8 @@ class LineTypeset
 
 **起始版本：** 18
 
+<!--Device-text-class LineTypeset--><!--Device-text-class LineTypeset-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## 导入模块
@@ -28,7 +30,9 @@ createLine(startIndex: number, count: number): TextLine
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-LineTypeset-createLine(startIndex: int, count: int): TextLine--><!--Device-LineTypeset-createLine(startIndex: int, count: int): TextLine-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -70,7 +74,9 @@ getLineBreak(startIndex: number, width: number): number
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-LineTypeset-getLineBreak(startIndex: int, width: double): int--><!--Device-LineTypeset-getLineBreak(startIndex: int, width: double): int-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

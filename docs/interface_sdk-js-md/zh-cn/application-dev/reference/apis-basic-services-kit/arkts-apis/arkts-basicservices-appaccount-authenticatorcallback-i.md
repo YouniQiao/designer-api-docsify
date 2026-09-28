@@ -16,6 +16,8 @@ OAuth认证器回调接口。
 
 **替代接口：** [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md)
 
+<!--Device-appAccount-interface AuthenticatorCallback--><!--Device-appAccount-interface AuthenticatorCallback-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 ## 导入模块
@@ -41,6 +43,8 @@ onRequestRedirected: (request: Want) => void
 **废弃版本：** 9
 
 **替代接口：** [onRequestRedirected](arkts-basicservices-appaccount-authcallback-i.md#onrequestredirected)
+
+<!--Device-AuthenticatorCallback-onRequestRedirected: (request: Want) => void--><!--Device-AuthenticatorCallback-onRequestRedirected: (request: Want) => void-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -93,6 +97,8 @@ onResult: (code: number, result: { [key: string]: any }) => void
 **废弃版本：** 9
 
 **替代接口：** [onResult](arkts-basicservices-appaccount-authcallback-i.md#onresult)
+
+<!--Device-AuthenticatorCallback-onResult: (code: number, result: { [key: string]: any }) => void--><!--Device-AuthenticatorCallback-onResult: (code: number, result: { [key: string]: any }) => void-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 

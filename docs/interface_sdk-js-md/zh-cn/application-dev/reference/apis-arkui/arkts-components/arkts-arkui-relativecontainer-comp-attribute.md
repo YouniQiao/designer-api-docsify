@@ -12,6 +12,8 @@ declare class RelativeContainerAttribute extends CommonMethod<RelativeContainerA
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare class RelativeContainerAttribute extends CommonMethod<RelativeContainerAttribute>--><!--Device-unnamed-declare class RelativeContainerAttribute extends CommonMethod<RelativeContainerAttribute>-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## barrier
@@ -27,6 +29,8 @@ barrier(value: Array<BarrierStyle>)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-RelativeContainerAttribute-barrier(value: Array<BarrierStyle>): RelativeContainerAttribute--><!--Device-RelativeContainerAttribute-barrier(value: Array<BarrierStyle>): RelativeContainerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -52,6 +56,8 @@ barrier(barrierStyle: Array<LocalizedBarrierStyle>)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-RelativeContainerAttribute-barrier(barrierStyle: Array<LocalizedBarrierStyle>): RelativeContainerAttribute--><!--Device-RelativeContainerAttribute-barrier(barrierStyle: Array<LocalizedBarrierStyle>): RelativeContainerAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -73,6 +79,8 @@ guideLine(value: Array<GuideLineStyle>)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-RelativeContainerAttribute-guideLine(value: Array<GuideLineStyle>): RelativeContainerAttribute--><!--Device-RelativeContainerAttribute-guideLine(value: Array<GuideLineStyle>): RelativeContainerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

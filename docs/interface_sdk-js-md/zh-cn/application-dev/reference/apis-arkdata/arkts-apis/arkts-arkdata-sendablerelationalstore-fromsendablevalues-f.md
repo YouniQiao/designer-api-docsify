@@ -16,6 +16,8 @@ function fromSendableValues(values: collections.Array<ValueType>): NonSendableVa
 
 **起始版本：** 20
 
+<!--Device-sendableRelationalStore-function fromSendableValues(values: collections.Array<ValueType>): NonSendableValues--><!--Device-sendableRelationalStore-function fromSendableValues(values: collections.Array<ValueType>): NonSendableValues-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**

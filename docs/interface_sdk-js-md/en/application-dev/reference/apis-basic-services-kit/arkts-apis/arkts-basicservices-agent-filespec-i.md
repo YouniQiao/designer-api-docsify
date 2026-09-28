@@ -8,6 +8,8 @@ Provides the file information of a table item.
 
 **Since:** 10
 
+<!--Device-agent-interface FileSpec--><!--Device-agent-interface FileSpec-End-->
+
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Content type of the file. The default value is the file name extension. This opt
 
 **Since:** 18
 
+<!--Device-FileSpec-contentType?: string--><!--Device-FileSpec-contentType?: string-End-->
+
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## extras
@@ -44,6 +48,8 @@ Additional information. This parameter is not included in HTTP requests. The def
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-FileSpec-extras?: object--><!--Device-FileSpec-extras?: object-End-->
+
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## filename
@@ -58,7 +64,9 @@ File name. The default value is obtained from the file path.
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-FileSpec-filename?: string--><!--Device-FileSpec-filename?: string-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -96,7 +104,9 @@ Example: **file://media/Photo/path/to/file.img**. Only foreground tasks are supp
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-FileSpec-path: string--><!--Device-FileSpec-path: string-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -121,5 +131,7 @@ This API is deprecated since API version 18. You are advised to use **contentTyp
 **Substitutes:** [contentType](#contenttype)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-FileSpec-mimeType?: string--><!--Device-FileSpec-mimeType?: string-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent

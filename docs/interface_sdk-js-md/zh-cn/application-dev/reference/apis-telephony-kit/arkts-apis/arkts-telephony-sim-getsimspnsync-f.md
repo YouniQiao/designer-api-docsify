@@ -16,6 +16,8 @@ function getSimSpnSync(slotId: number): string
 
 **起始版本：** 10
 
+<!--Device-sim-function getSimSpnSync(slotId: int): string--><!--Device-sim-function getSimSpnSync(slotId: int): string-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**

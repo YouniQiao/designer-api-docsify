@@ -20,6 +20,8 @@ function getCpuUsage() : number
 
 **起始版本：** 9
 
+<!--Device-hidebug-function getCpuUsage() : double--><!--Device-hidebug-function getCpuUsage() : double-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **返回值：**

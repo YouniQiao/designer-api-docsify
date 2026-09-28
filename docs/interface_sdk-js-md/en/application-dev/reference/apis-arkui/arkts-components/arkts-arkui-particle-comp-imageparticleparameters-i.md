@@ -8,6 +8,8 @@ Defines the parameters for an image-like particle. @interface ImageParticleParam
 
 **Since:** 10
 
+<!--Device-unnamed-interface ImageParticleParameters--><!--Device-unnamed-interface ImageParticleParameters-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## objectFit
@@ -28,6 +30,8 @@ Image display mode.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ImageParticleParameters-objectFit?: ImageFit--><!--Device-ImageParticleParameters-objectFit?: ImageFit-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## size
@@ -45,6 +49,8 @@ Particle image size.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ImageParticleParameters-size: ParticleTuple<Dimension, Dimension>--><!--Device-ImageParticleParameters-size: ParticleTuple<Dimension, Dimension>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -67,5 +73,7 @@ If the value of src does not change, the cached resource is preferentially used.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ImageParticleParameters-src: ResourceStr--><!--Device-ImageParticleParameters-src: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

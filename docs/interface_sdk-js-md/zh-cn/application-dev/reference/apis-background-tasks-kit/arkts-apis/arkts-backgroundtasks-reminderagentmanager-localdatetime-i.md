@@ -8,6 +8,8 @@ interface LocalDateTime
 
 **起始版本：** 9
 
+<!--Device-reminderAgentManager-interface LocalDateTime--><!--Device-reminderAgentManager-interface LocalDateTime-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## 导入模块
@@ -28,6 +30,8 @@ day: number
 
 **起始版本：** 9
 
+<!--Device-LocalDateTime-day: int--><!--Device-LocalDateTime-day: int-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## hour
@@ -41,6 +45,8 @@ hour: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-LocalDateTime-hour: int--><!--Device-LocalDateTime-hour: int-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -56,6 +62,8 @@ minute: number
 
 **起始版本：** 9
 
+<!--Device-LocalDateTime-minute: int--><!--Device-LocalDateTime-minute: int-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## month
@@ -69,6 +77,8 @@ month: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-LocalDateTime-month: int--><!--Device-LocalDateTime-month: int-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -84,6 +94,8 @@ second?: number
 
 **起始版本：** 9
 
+<!--Device-LocalDateTime-second?: int--><!--Device-LocalDateTime-second?: int-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## year
@@ -97,5 +109,7 @@ year: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-LocalDateTime-year: int--><!--Device-LocalDateTime-year: int-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent

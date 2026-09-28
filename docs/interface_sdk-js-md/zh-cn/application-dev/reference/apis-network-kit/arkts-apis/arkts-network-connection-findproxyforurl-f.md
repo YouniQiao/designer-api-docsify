@@ -24,6 +24,8 @@ function findProxyForUrl(url: string): string
 
 **起始版本：** 20
 
+<!--Device-connection-function findProxyForUrl(url: string): string--><!--Device-connection-function findProxyForUrl(url: string): string-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**

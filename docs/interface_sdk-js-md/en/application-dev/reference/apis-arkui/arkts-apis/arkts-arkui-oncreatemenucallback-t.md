@@ -12,6 +12,8 @@ Triggered when the menu is created.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-unnamed-type OnCreateMenuCallback = (menuItems: Array<TextMenuItem>) => Array<TextMenuItem>--><!--Device-unnamed-type OnCreateMenuCallback = (menuItems: Array<TextMenuItem>) => Array<TextMenuItem>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

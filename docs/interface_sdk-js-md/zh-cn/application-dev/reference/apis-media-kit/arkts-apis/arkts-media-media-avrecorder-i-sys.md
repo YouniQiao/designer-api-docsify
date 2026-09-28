@@ -15,6 +15,8 @@ AVRecorder是音视频录制管理类，用于音视频录制的全流程管理�
 
 **起始版本：** 9
 
+<!--Device-media-interface AVRecorder--><!--Device-media-interface AVRecorder-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 ## 导入模块
@@ -32,6 +34,8 @@ getInputMetaSurface(type: MetaSourceType): Promise<string>
 获取指定元数据源类型的输入元数据surface。必须在prepare完成后和start之前调用。
 
 **起始版本：** 12
+
+<!--Device-AVRecorder-getInputMetaSurface(type: MetaSourceType): Promise<string>--><!--Device-AVRecorder-getInputMetaSurface(type: MetaSourceType): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -71,6 +75,8 @@ isWatermarkSupported(): Promise<boolean>
 
 **起始版本：** 13
 
+<!--Device-AVRecorder-isWatermarkSupported(): Promise<boolean>--><!--Device-AVRecorder-isWatermarkSupported(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 **系统接口：** 此接口为系统接口。
@@ -104,6 +110,8 @@ setWatermark(watermark: image.PixelMap, config: WatermarkConfig): Promise<void>
 当且仅当[prepare](arkts-media-media-avrecorder-i.md#prepare-1)事件成功触发后，且在[start](arkts-media-media-avrecorder-i.md#start)之前，才能调用setWatermark方法。
 
 **起始版本：** 13
+
+<!--Device-AVRecorder-setWatermark(watermark: image.PixelMap, config: WatermarkConfig): Promise<void>--><!--Device-AVRecorder-setWatermark(watermark: image.PixelMap, config: WatermarkConfig): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 

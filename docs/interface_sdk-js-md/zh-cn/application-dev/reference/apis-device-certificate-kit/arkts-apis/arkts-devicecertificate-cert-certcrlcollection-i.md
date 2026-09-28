@@ -8,6 +8,8 @@ interface CertCRLCollection
 
 **起始版本：** 11
 
+<!--Device-cert-interface CertCRLCollection--><!--Device-cert-interface CertCRLCollection-End-->
+
 **系统能力：** SystemCapability.Security.Cert
 
 ## 导入模块
@@ -26,7 +28,9 @@ selectCerts(param: X509CertMatchParameters): Promise<Array<X509Cert>>
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-CertCRLCollection-selectCerts(param: X509CertMatchParameters): Promise<Array<X509Cert>>--><!--Device-CertCRLCollection-selectCerts(param: X509CertMatchParameters): Promise<Array<X509Cert>>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -127,7 +131,9 @@ selectCerts(param: X509CertMatchParameters, callback: AsyncCallback<Array<X509Ce
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-CertCRLCollection-selectCerts(param: X509CertMatchParameters, callback: AsyncCallback<Array<X509Cert>>): void--><!--Device-CertCRLCollection-selectCerts(param: X509CertMatchParameters, callback: AsyncCallback<Array<X509Cert>>): void-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -221,7 +227,9 @@ selectCRLs(param: X509CRLMatchParameters): Promise<Array<X509CRL>>
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-CertCRLCollection-selectCRLs(param: X509CRLMatchParameters): Promise<Array<X509CRL>>--><!--Device-CertCRLCollection-selectCRLs(param: X509CRLMatchParameters): Promise<Array<X509CRL>>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -356,7 +364,9 @@ selectCRLs(param: X509CRLMatchParameters, callback: AsyncCallback<Array<X509CRL>
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-CertCRLCollection-selectCRLs(param: X509CRLMatchParameters, callback: AsyncCallback<Array<X509CRL>>): void--><!--Device-CertCRLCollection-selectCRLs(param: X509CRLMatchParameters, callback: AsyncCallback<Array<X509CRL>>): void-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 

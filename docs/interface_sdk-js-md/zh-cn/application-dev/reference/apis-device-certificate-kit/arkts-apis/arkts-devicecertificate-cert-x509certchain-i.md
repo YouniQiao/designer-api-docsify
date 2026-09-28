@@ -8,6 +8,8 @@ X.509证书链对象。
 
 **起始版本：** 11
 
+<!--Device-cert-interface X509CertChain--><!--Device-cert-interface X509CertChain-End-->
+
 **系统能力：** SystemCapability.Security.Cert
 
 ## 导入模块
@@ -26,7 +28,9 @@ getCertList(): Array<X509Cert>
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-X509CertChain-getCertList(): Array<X509Cert>--><!--Device-X509CertChain-getCertList(): Array<X509Cert>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -146,7 +150,9 @@ hashCode(): Uint8Array
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-X509CertChain-hashCode(): Uint8Array--><!--Device-X509CertChain-hashCode(): Uint8Array-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -276,7 +282,9 @@ toString(): string
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-X509CertChain-toString(): string--><!--Device-X509CertChain-toString(): string-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -406,7 +414,9 @@ validate(param: CertChainValidationParameters): Promise<CertChainValidationResul
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-X509CertChain-validate(param: CertChainValidationParameters): Promise<CertChainValidationResult>--><!--Device-X509CertChain-validate(param: CertChainValidationParameters): Promise<CertChainValidationResult>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -565,7 +575,9 @@ validate(param: CertChainValidationParameters, callback: AsyncCallback<CertChain
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-X509CertChain-validate(param: CertChainValidationParameters, callback: AsyncCallback<CertChainValidationResult>): void--><!--Device-X509CertChain-validate(param: CertChainValidationParameters, callback: AsyncCallback<CertChainValidationResult>): void-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 

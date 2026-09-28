@@ -26,6 +26,8 @@ function getScanInfos(): Promise<Array<WifiScanInfo>>
 
 **需要权限：** ohos.permission.GET_WIFI_INFO and (ohos.permission.GET_WIFI_PEERS_MAC or ohos.permission.LOCATION)
 
+<!--Device-wifi-function getScanInfos(): Promise<Array<WifiScanInfo>>--><!--Device-wifi-function getScanInfos(): Promise<Array<WifiScanInfo>>-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **返回值：**
@@ -78,6 +80,8 @@ function getScanInfos(callback: AsyncCallback<Array<WifiScanInfo>>): void
 **替代接口：** [getScanInfoList](arkts-connectivity-wifimanager-getscaninfolist-f.md)
 
 **需要权限：** ohos.permission.GET_WIFI_INFO and (ohos.permission.GET_WIFI_PEERS_MAC or ohos.permission.LOCATION)
+
+<!--Device-wifi-function getScanInfos(callback: AsyncCallback<Array<WifiScanInfo>>): void--><!--Device-wifi-function getScanInfos(callback: AsyncCallback<Array<WifiScanInfo>>): void-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 

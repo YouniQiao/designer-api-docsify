@@ -16,6 +16,8 @@ function createFilter(): Filter
 
 **起始版本：** 12
 
+<!--Device-uiEffect-function createFilter(): Filter--><!--Device-uiEffect-function createFilter(): Filter-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**

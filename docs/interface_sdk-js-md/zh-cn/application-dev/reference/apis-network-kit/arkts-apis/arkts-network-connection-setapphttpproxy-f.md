@@ -21,6 +21,8 @@ function setAppHttpProxy(httpProxy: HttpProxy): void
 
 **起始版本：** 11
 
+<!--Device-connection-function setAppHttpProxy(httpProxy: HttpProxy): void--><!--Device-connection-function setAppHttpProxy(httpProxy: HttpProxy): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**

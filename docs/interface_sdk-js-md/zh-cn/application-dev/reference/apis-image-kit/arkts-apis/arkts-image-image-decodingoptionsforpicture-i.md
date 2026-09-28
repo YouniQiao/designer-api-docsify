@@ -8,6 +8,8 @@ interface DecodingOptionsForPicture
 
 **起始版本：** 13
 
+<!--Device-image-interface DecodingOptionsForPicture--><!--Device-image-interface DecodingOptionsForPicture-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 ## 导入模块
@@ -30,6 +32,8 @@ desiredAuxiliaryPictures: Array<AuxiliaryPictureType>
 
 **起始版本：** 13
 
+<!--Device-DecodingOptionsForPicture-desiredAuxiliaryPictures: Array<AuxiliaryPictureType>--><!--Device-DecodingOptionsForPicture-desiredAuxiliaryPictures: Array<AuxiliaryPictureType>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 ## desiredPixelFormat
@@ -50,6 +54,8 @@ desiredPixelFormat?: PixelMapFormat
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DecodingOptionsForPicture-desiredPixelFormat?: PixelMapFormat--><!--Device-DecodingOptionsForPicture-desiredPixelFormat?: PixelMapFormat-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 ## desiredSizeForMainPixelMap
@@ -69,5 +75,7 @@ desiredSizeForMainPixelMap?: Size
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DecodingOptionsForPicture-desiredSizeForMainPixelMap?: Size--><!--Device-DecodingOptionsForPicture-desiredSizeForMainPixelMap?: Size-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource

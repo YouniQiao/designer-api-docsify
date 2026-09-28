@@ -8,6 +8,8 @@ class RecordCmdUtils
 
 **起始版本：** 26.0.1
 
+<!--Device-drawing-class RecordCmdUtils--><!--Device-drawing-class RecordCmdUtils-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## 导入模块
@@ -27,6 +29,8 @@ beginRecording(width: number, height: number): Canvas
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-RecordCmdUtils-beginRecording(width: number, height: number): Canvas--><!--Device-RecordCmdUtils-beginRecording(width: number, height: number): Canvas-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -61,6 +65,8 @@ finishRecording(): RecordCmd
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RecordCmdUtils-finishRecording(): RecordCmd--><!--Device-RecordCmdUtils-finishRecording(): RecordCmd-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
@@ -81,6 +87,8 @@ getHeight(): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RecordCmdUtils-getHeight(): int--><!--Device-RecordCmdUtils-getHeight(): int-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
@@ -100,6 +108,8 @@ getWidth(): number
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-RecordCmdUtils-getWidth(): int--><!--Device-RecordCmdUtils-getWidth(): int-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

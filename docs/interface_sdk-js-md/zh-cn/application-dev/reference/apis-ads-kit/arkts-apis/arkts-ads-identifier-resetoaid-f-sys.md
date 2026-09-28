@@ -16,6 +16,8 @@ function resetOAID(): void
 
 **起始版本：** 10
 
+<!--Device-identifier-function resetOAID(): void--><!--Device-identifier-function resetOAID(): void-End-->
+
 **系统能力：** SystemCapability.Advertising.OAID
 
 **系统接口：** 此接口为系统接口。

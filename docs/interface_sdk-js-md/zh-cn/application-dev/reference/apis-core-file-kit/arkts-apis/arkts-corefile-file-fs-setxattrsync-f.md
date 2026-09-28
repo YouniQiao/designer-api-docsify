@@ -16,6 +16,8 @@ declare function setxattrSync(path: string, key: string, value: string): void
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare function setxattrSync(path: string, key: string, value: string): void--><!--Device-unnamed-declare function setxattrSync(path: string, key: string, value: string): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**

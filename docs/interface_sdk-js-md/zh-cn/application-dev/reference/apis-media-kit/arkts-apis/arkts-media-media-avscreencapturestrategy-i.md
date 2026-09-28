@@ -8,6 +8,8 @@ interface AVScreenCaptureStrategy
 
 **起始版本：** 20
 
+<!--Device-media-interface AVScreenCaptureStrategy--><!--Device-media-interface AVScreenCaptureStrategy-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 ## 导入模块
@@ -28,6 +30,8 @@ enableBFrame?: boolean
 
 **起始版本：** 20
 
+<!--Device-AVScreenCaptureStrategy-enableBFrame?: boolean--><!--Device-AVScreenCaptureStrategy-enableBFrame?: boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 ## enablePause
@@ -44,6 +48,8 @@ enablePause?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVScreenCaptureStrategy-enablePause?: boolean--><!--Device-AVScreenCaptureStrategy-enablePause?: boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 ## keepCaptureDuringCall
@@ -59,6 +65,8 @@ keepCaptureDuringCall?: boolean
 **默认值：** {false} [Required if provided]
 
 **起始版本：** 20
+
+<!--Device-AVScreenCaptureStrategy-keepCaptureDuringCall?: boolean--><!--Device-AVScreenCaptureStrategy-keepCaptureDuringCall?: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -78,5 +86,7 @@ privacyMaskMode?: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVScreenCaptureStrategy-privacyMaskMode?: int--><!--Device-AVScreenCaptureStrategy-privacyMaskMode?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture

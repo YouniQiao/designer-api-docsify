@@ -10,7 +10,7 @@ Text组件用于显示文本内容，支持设置字体样式、文本对齐、�
 
 ## 子组件
 
-可以包含[Span](arkts-arkui-span-comp.md#span)、[ImageSpan](arkts-arkui-imagespan-comp.md#image_span)、[SymbolSpan](arkts-arkui-symbolspan-comp-attribute.md)和[ContainerSpan](arkts-arkui-containerspan-comp-attribute.md)子组件。
+可以包含[Span](arkts-arkui-span-comp.md)、[ImageSpan](arkts-arkui-imagespan-comp.md)、[SymbolSpan](arkts-arkui-symbolspan-comp-attribute.md)和[ContainerSpan](arkts-arkui-containerspan-comp-attribute.md)子组件。
 
 > **说明：** 
 > 
@@ -29,13 +29,15 @@ Text(content?: string | Resource, value?: TextOptions)
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-TextInterface-(content?: string | Resource, value?: TextOptions): TextAttribute--><!--Device-TextInterface-(content?: string | Resource, value?: TextOptions): TextAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数:**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 否 | 文本内容。当需要直接显示文本内容时传入此参数。包含子组件[Span](arkts-arkui-span-comp.md#span)或设置了[属性字符串](../arkts-apis/arkts-arkui-styledstring.md#styled_string)时，该参数不生效。<br>默认值：' '<br>**说明：** <br>显示内容的优先级：属性字符串&gt;Span&gt;Text的文本内容。 |
+| content | string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 否 | 文本内容。当需要直接显示文本内容时传入此参数。包含子组件[Span](arkts-arkui-span-comp.md)或设置了[属性字符串](../arkts-apis/arkts-arkui-styledstring.md#styled_string)时，该参数不生效。<br>默认值：' '<br>**说明：** <br>显示内容的优先级：属性字符串&gt;Span&gt;Text的文本内容。 |
 | value | [TextOptions](arkts-arkui-text-comp-textoptions-i.md) | 否 | 文本组件初始化选项，用于配置文本控制器。当需要使用TextController的功能控制文本内容和选择时，传入此参数。<br>默认值：不设置时，不使用文本控制器。<br> |
 
 ## 汇总
@@ -56,7 +58,7 @@ Text(content?: string | Resource, value?: TextOptions)
 | [MarqueeState](arkts-arkui-text-comp-marqueestate-e.md) | Marquee状态回调的返回值。 |
 | [MarqueeUpdatePolicy](arkts-arkui-text-comp-marqueeupdatepolicy-e.md) | 跑马灯组件属性更新后，跑马灯的滚动策略。 |
 | [TextResponseType](arkts-arkui-text-comp-textresponsetype-e.md) | 选择菜单的响应类型。 |
-| [TextSpanType](arkts-arkui-text-comp-textspantype-e.md) | [Span](arkts-arkui-span-comp.md#span)类型信息。 |
+| [TextSpanType](arkts-arkui-text-comp-textspantype-e.md) | [Span](arkts-arkui-span-comp.md)类型信息。 |
 
 ## 示例
 

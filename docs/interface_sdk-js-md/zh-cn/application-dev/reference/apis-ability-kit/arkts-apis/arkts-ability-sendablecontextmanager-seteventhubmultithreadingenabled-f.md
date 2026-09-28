@@ -12,7 +12,7 @@ import { sendableContextManager } from '@kit.AbilityKit';
 function setEventHubMultithreadingEnabled(context: common.Context, enabled: boolean): void
 ```
 
-设置Context中的[EventHub](arkts-ability-eventhub-c.md)是否启用跨线程通信能力。
+设置[Context](arkts-ability-context.md)中的[EventHub](arkts-ability-eventhub-c.md)是否启用跨线程通信能力。
 
 > **说明：** 
 > 
@@ -23,6 +23,8 @@ function setEventHubMultithreadingEnabled(context: common.Context, enabled: bool
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-sendableContextManager-function setEventHubMultithreadingEnabled(context: common.Context, enabled: boolean): void--><!--Device-sendableContextManager-function setEventHubMultithreadingEnabled(context: common.Context, enabled: boolean): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

@@ -18,6 +18,8 @@ function getNetQuotaPolicies(callback: AsyncCallback<Array<NetQuotaPolicy>>): vo
 
 **需要权限：** ohos.permission.MANAGE_NET_STRATEGY
 
+<!--Device-policy-function getNetQuotaPolicies(callback: AsyncCallback<Array<NetQuotaPolicy>>): void--><!--Device-policy-function getNetQuotaPolicies(callback: AsyncCallback<Array<NetQuotaPolicy>>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -64,6 +66,8 @@ function getNetQuotaPolicies(): Promise<Array<NetQuotaPolicy>>
 **起始版本：** 10
 
 **需要权限：** ohos.permission.MANAGE_NET_STRATEGY
+
+<!--Device-policy-function getNetQuotaPolicies(): Promise<Array<NetQuotaPolicy>>--><!--Device-policy-function getNetQuotaPolicies(): Promise<Array<NetQuotaPolicy>>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 

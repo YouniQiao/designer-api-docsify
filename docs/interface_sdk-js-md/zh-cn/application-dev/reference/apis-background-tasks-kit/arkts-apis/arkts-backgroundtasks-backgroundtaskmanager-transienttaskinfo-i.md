@@ -8,6 +8,8 @@ interface TransientTaskInfo
 
 **起始版本：** 20
 
+<!--Device-backgroundTaskManager-interface TransientTaskInfo--><!--Device-backgroundTaskManager-interface TransientTaskInfo-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
 ## 导入模块
@@ -28,6 +30,8 @@ remainingQuota: number
 
 **起始版本：** 20
 
+<!--Device-TransientTaskInfo-remainingQuota: int--><!--Device-TransientTaskInfo-remainingQuota: int-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
 ## transientTasks
@@ -41,5 +45,7 @@ transientTasks: DelaySuspendInfo[]
 **类型：** [DelaySuspendInfo](arkts-backgroundtasks-backgroundtaskmanager-delaysuspendinfo-i.md)[]
 
 **起始版本：** 20
+
+<!--Device-TransientTaskInfo-transientTasks: DelaySuspendInfo[]--><!--Device-TransientTaskInfo-transientTasks: DelaySuspendInfo[]-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask

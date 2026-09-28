@@ -8,6 +8,8 @@ export interface MissionDeviceInfo
 
 **起始版本：** 9
 
+<!--Device-unnamed-export interface MissionDeviceInfo--><!--Device-unnamed-export interface MissionDeviceInfo-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -27,6 +29,8 @@ deviceId: string
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MissionDeviceInfo-deviceId: string--><!--Device-MissionDeviceInfo-deviceId: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 

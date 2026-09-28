@@ -20,6 +20,8 @@ declare function moveFile(src: string, dest: string, mode?: number): Promise<voi
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare function moveFile(src: string, dest: string, mode?: number): Promise<void>--><!--Device-unnamed-declare function moveFile(src: string, dest: string, mode?: number): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -77,6 +79,8 @@ declare function moveFile(src: string, dest: string, callback: AsyncCallback<voi
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare function moveFile(src: string, dest: string, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function moveFile(src: string, dest: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -127,6 +131,8 @@ declare function moveFile(src: string, dest: string, mode: number, callback: Asy
 > 该接口不支持在分布式文件路径下操作。
 
 **起始版本：** 9
+
+<!--Device-unnamed-declare function moveFile(src: string, dest: string, mode: number, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function moveFile(src: string, dest: string, mode: number, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

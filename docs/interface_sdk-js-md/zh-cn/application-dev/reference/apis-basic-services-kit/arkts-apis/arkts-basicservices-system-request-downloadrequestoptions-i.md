@@ -10,6 +10,8 @@ export interface DownloadRequestOptions
 
 **替代接口：** [UploadConfig](arkts-basicservices-request-uploadconfig-i.md)
 
+<!--Device-unnamed-export interface DownloadRequestOptions--><!--Device-unnamed-export interface DownloadRequestOptions-End-->
+
 **系统能力：** SystemCapability.MiscServices.Download
 
 ## 导入模块
@@ -32,6 +34,8 @@ complete?: () => void
 
 **替代接口：** on
 
+<!--Device-DownloadRequestOptions-complete?: () => void--><!--Device-DownloadRequestOptions-complete?: () => void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Download
 
 ## fail
@@ -47,6 +51,8 @@ Called when downloading fails.
 **废弃版本：** 9
 
 **替代接口：** on
+
+<!--Device-DownloadRequestOptions-fail?: (data: any, code: number) => void--><!--Device-DownloadRequestOptions-fail?: (data: any, code: number) => void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -70,6 +76,8 @@ Called when the files are successfully downloaded.
 **废弃版本：** 9
 
 **替代接口：** on
+
+<!--Device-DownloadRequestOptions-success?: (data: DownloadResponse) => void--><!--Device-DownloadRequestOptions-success?: (data: DownloadResponse) => void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -95,6 +103,8 @@ Download description. The default value is the file name.
 
 **替代接口：** description
 
+<!--Device-DownloadRequestOptions-description?: string--><!--Device-DownloadRequestOptions-description?: string-End-->
+
 **系统能力：** SystemCapability.MiscServices.Download
 
 ## filename
@@ -112,6 +122,8 @@ Name of the file to downloaded. The value is obtained from the current request o
 **废弃版本：** 9
 
 **替代接口：** saveas
+
+<!--Device-DownloadRequestOptions-filename?: string--><!--Device-DownloadRequestOptions-filename?: string-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -131,6 +143,8 @@ Request header.
 
 **替代接口：** headers
 
+<!--Device-DownloadRequestOptions-header?: string--><!--Device-DownloadRequestOptions-header?: string-End-->
+
 **系统能力：** SystemCapability.MiscServices.Download
 
 ## url
@@ -148,5 +162,7 @@ Resource URL.
 **废弃版本：** 9
 
 **替代接口：** url
+
+<!--Device-DownloadRequestOptions-url: string--><!--Device-DownloadRequestOptions-url: string-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download

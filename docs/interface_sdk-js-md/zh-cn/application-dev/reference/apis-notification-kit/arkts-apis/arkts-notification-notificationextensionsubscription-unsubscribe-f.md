@@ -18,6 +18,8 @@ function unsubscribe(): Promise<void>
 
 **需要权限：** ohos.permission.SUBSCRIBE_NOTIFICATION
 
+<!--Device-notificationExtensionSubscription-function unsubscribe(): Promise<void>--><!--Device-notificationExtensionSubscription-function unsubscribe(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **参见：** [subscribe](arkts-notification-notificationextensionsubscription-subscribe-f.md) 订阅通知扩展。

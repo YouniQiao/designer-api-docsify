@@ -12,6 +12,8 @@ interface Entry
 
 **替代接口：** Entry
 
+<!--Device-distributedData-interface Entry--><!--Device-distributedData-interface Entry-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## 导入模块
@@ -35,6 +37,8 @@ key: string
 
 **替代接口：** key
 
+<!--Device-Entry-key: string--><!--Device-Entry-key: string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## value
@@ -52,5 +56,7 @@ value: Value
 **废弃版本：** 9
 
 **替代接口：** value
+
+<!--Device-Entry-value: Value--><!--Device-Entry-value: Value-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core

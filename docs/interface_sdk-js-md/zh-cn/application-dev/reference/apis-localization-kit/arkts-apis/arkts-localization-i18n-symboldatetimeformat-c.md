@@ -10,6 +10,8 @@ export class SymbolDateTimeFormat extends Intl.DateTimeFormat
 
 **起始版本：** 26.0.0
 
+<!--Device-i18n-export class SymbolDateTimeFormat extends Intl.DateTimeFormat--><!--Device-i18n-export class SymbolDateTimeFormat extends Intl.DateTimeFormat-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## 导入模块
@@ -31,6 +33,8 @@ public constructor(locale?: Intl.Locale, options?: SymbolDateTimeFormatOptions)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-SymbolDateTimeFormat-public constructor(locale?: Intl.Locale, options?: SymbolDateTimeFormatOptions)--><!--Device-SymbolDateTimeFormat-public constructor(locale?: Intl.Locale, options?: SymbolDateTimeFormatOptions)-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -73,6 +77,8 @@ public format(date?: Date | number): string
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-SymbolDateTimeFormat-public format(date?: Date | number): string--><!--Device-SymbolDateTimeFormat-public format(date?: Date | number): string-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 **参数：**
@@ -113,6 +119,8 @@ public formatRange(startDate: Date | number | bigint, endDate: Date | number | b
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-SymbolDateTimeFormat-public formatRange(startDate: Date | number | bigint, endDate: Date | number | bigint): string--><!--Device-SymbolDateTimeFormat-public formatRange(startDate: Date | number | bigint, endDate: Date | number | bigint): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -159,6 +167,8 @@ public formatRangeToParts(startDate: Date | number | bigint, endDate: Date | num
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-SymbolDateTimeFormat-public formatRangeToParts(startDate: Date | number | bigint, endDate: Date | number | bigint):      Intl.DateTimeRangeFormatPart[]--><!--Device-SymbolDateTimeFormat-public formatRangeToParts(startDate: Date | number | bigint, endDate: Date | number | bigint):      Intl.DateTimeRangeFormatPart[]-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 **参数：**
@@ -203,6 +213,8 @@ public formatToParts(date?: Date | number): Intl.DateTimeFormatPart[]
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-SymbolDateTimeFormat-public formatToParts(date?: Date | number): Intl.DateTimeFormatPart[]--><!--Device-SymbolDateTimeFormat-public formatToParts(date?: Date | number): Intl.DateTimeFormatPart[]-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 **参数：**
@@ -243,6 +255,8 @@ public parse(text: string, lenientMode: boolean): number
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-SymbolDateTimeFormat-public parse(text: string, lenientMode: boolean): number--><!--Device-SymbolDateTimeFormat-public parse(text: string, lenientMode: boolean): number-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -290,6 +304,8 @@ public resolvedOptions(): ResolvedSymbolDateTimeFormatOptions
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-SymbolDateTimeFormat-public resolvedOptions(): ResolvedSymbolDateTimeFormatOptions--><!--Device-SymbolDateTimeFormat-public resolvedOptions(): ResolvedSymbolDateTimeFormatOptions-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 

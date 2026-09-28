@@ -8,6 +8,8 @@ interface RangingCapabilitySupported
 
 **起始版本：** 26.0.0
 
+<!--Device-ranging-interface RangingCapabilitySupported--><!--Device-ranging-interface RangingCapabilitySupported-End-->
+
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core
 
 ## 导入模块
@@ -29,5 +31,7 @@ nearlinkHadm: boolean
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-RangingCapabilitySupported-nearlinkHadm: boolean--><!--Device-RangingCapabilitySupported-nearlinkHadm: boolean-End-->
 
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core

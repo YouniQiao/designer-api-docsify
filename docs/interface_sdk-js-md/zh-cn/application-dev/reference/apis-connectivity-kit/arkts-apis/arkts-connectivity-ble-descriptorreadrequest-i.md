@@ -8,6 +8,8 @@ interface DescriptorReadRequest
 
 **起始版本：** 10
 
+<!--Device-ble-interface DescriptorReadRequest--><!--Device-ble-interface DescriptorReadRequest-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -30,7 +32,9 @@ characteristicUuid: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-DescriptorReadRequest-characteristicUuid: string--><!--Device-DescriptorReadRequest-characteristicUuid: string-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -48,7 +52,9 @@ client端需要读取的描述符UUID。例如：00002902-0000-1000-8000-00805f9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-DescriptorReadRequest-descriptorUuid: string--><!--Device-DescriptorReadRequest-descriptorUuid: string-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -66,7 +72,9 @@ client端蓝牙设备地址。例如："XX:XX:XX:XX:XX:XX"。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-DescriptorReadRequest-deviceId: string--><!--Device-DescriptorReadRequest-deviceId: string-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -86,7 +94,9 @@ server端回复响应时需填写相同的offset。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-DescriptorReadRequest-offset: int--><!--Device-DescriptorReadRequest-offset: int-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -104,7 +114,9 @@ serviceUuid: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-DescriptorReadRequest-serviceUuid: string--><!--Device-DescriptorReadRequest-serviceUuid: string-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -122,6 +134,8 @@ client端读请求的标识符，server端回复时需填写相同的transId。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-DescriptorReadRequest-transId: int--><!--Device-DescriptorReadRequest-transId: int-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

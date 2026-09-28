@@ -20,6 +20,8 @@ function promiseWrapper(original: (err: Object, value: Object) => void): Object
 
 **替代接口：** [promisify](arkts-arkts-util-promisify-f.md)
 
+<!--Device-util-function promiseWrapper(original: (err: Object, value: Object) => void): Object--><!--Device-util-function promiseWrapper(original: (err: Object, value: Object) => void): Object-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**

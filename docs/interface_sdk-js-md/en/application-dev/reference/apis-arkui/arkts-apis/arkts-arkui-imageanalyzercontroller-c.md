@@ -8,6 +8,8 @@ Defines the image AI analysis controller. You can bind this object to a supporte
 
 **Since:** 12
 
+<!--Device-unnamed-declare class ImageAnalyzerController--><!--Device-unnamed-declare class ImageAnalyzerController-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
@@ -24,6 +26,8 @@ A constructor used to create an **ImageAnalyzerController** instance.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ImageAnalyzerController-constructor()--><!--Device-ImageAnalyzerController-constructor()-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## getImageAnalyzerSupportTypes
@@ -39,6 +43,8 @@ Obtains the image AI analysis types supported by the component to which this con
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ImageAnalyzerController-getImageAnalyzerSupportTypes(): ImageAnalyzerType[]--><!--Device-ImageAnalyzerController-getImageAnalyzerSupportTypes(): ImageAnalyzerType[]-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

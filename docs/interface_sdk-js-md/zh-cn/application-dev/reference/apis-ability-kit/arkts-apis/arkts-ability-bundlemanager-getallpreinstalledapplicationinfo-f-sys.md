@@ -18,6 +18,8 @@ function getAllPreinstalledApplicationInfo(): Promise<Array<PreinstalledApplicat
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-bundleManager-function getAllPreinstalledApplicationInfo(): Promise<Array<PreinstalledApplicationInfo>>--><!--Device-bundleManager-function getAllPreinstalledApplicationInfo(): Promise<Array<PreinstalledApplicationInfo>>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。

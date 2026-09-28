@@ -8,6 +8,8 @@ export interface UpdateSimMessageOptions
 
 **起始版本：** 7
 
+<!--Device-sms-export interface UpdateSimMessageOptions--><!--Device-sms-export interface UpdateSimMessageOptions-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ msgIndex: number
 
 **起始版本：** 7
 
+<!--Device-UpdateSimMessageOptions-msgIndex: int--><!--Device-UpdateSimMessageOptions-msgIndex: int-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ newStatus: SimMessageStatus
 **类型：** [SimMessageStatus](arkts-telephony-sms-simmessagestatus-e-sys.md)
 
 **起始版本：** 7
+
+<!--Device-UpdateSimMessageOptions-newStatus: SimMessageStatus--><!--Device-UpdateSimMessageOptions-newStatus: SimMessageStatus-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -62,6 +68,8 @@ pdu: string
 
 **起始版本：** 7
 
+<!--Device-UpdateSimMessageOptions-pdu: string--><!--Device-UpdateSimMessageOptions-pdu: string-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -78,6 +86,8 @@ slotId: number
 
 **起始版本：** 7
 
+<!--Device-UpdateSimMessageOptions-slotId: int--><!--Device-UpdateSimMessageOptions-slotId: int-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -93,6 +103,8 @@ smsc: string
 **类型：** string
 
 **起始版本：** 7
+
+<!--Device-UpdateSimMessageOptions-smsc: string--><!--Device-UpdateSimMessageOptions-smsc: string-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 

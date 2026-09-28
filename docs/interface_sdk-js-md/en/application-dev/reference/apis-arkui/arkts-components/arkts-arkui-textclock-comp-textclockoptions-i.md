@@ -14,6 +14,8 @@ Options used to build the **TextClock** component.
 
 **Since:** 18
 
+<!--Device-unnamed-declare interface TextClockOptions--><!--Device-unnamed-declare interface TextClockOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## controller
@@ -31,6 +33,8 @@ Binds a controller to control the state of the text clock. Pass this parameter w
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
+
+<!--Device-TextClockOptions-controller?: TextClockController--><!--Device-TextClockOptions-controller?: TextClockController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -57,5 +61,7 @@ When the value is a floating-point number in the set { 9.5, 3.5, -3.5, -4.5, -5.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
+
+<!--Device-TextClockOptions-timeZoneOffset?: number--><!--Device-TextClockOptions-timeZoneOffset?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -8,6 +8,8 @@ enum NetFirewallRuleType
 
 **起始版本：** 15
 
+<!--Device-netFirewall-enum NetFirewallRuleType--><!--Device-netFirewall-enum NetFirewallRuleType-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 ## RULE_IP
@@ -19,6 +21,8 @@ RULE_IP = 1
 IP类规则。
 
 **起始版本：** 15
+
+<!--Device-NetFirewallRuleType-RULE_IP = 1--><!--Device-NetFirewallRuleType-RULE_IP = 1-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -32,6 +36,8 @@ RULE_DOMAIN = 2
 
 **起始版本：** 15
 
+<!--Device-NetFirewallRuleType-RULE_DOMAIN = 2--><!--Device-NetFirewallRuleType-RULE_DOMAIN = 2-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 ## RULE_DNS
@@ -43,5 +49,7 @@ RULE_DNS = 3
 DNS规则。
 
 **起始版本：** 15
+
+<!--Device-NetFirewallRuleType-RULE_DNS = 3--><!--Device-NetFirewallRuleType-RULE_DNS = 3-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall

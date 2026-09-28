@@ -8,6 +8,8 @@ interface AudioRendererChangeInfo
 
 **起始版本：** 9
 
+<!--Device-audio-interface AudioRendererChangeInfo--><!--Device-audio-interface AudioRendererChangeInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 ## 导入模块
@@ -28,6 +30,8 @@ readonly deviceDescriptors: AudioDeviceDescriptors
 
 **起始版本：** 9
 
+<!--Device-AudioRendererChangeInfo-readonly deviceDescriptors: AudioDeviceDescriptors--><!--Device-AudioRendererChangeInfo-readonly deviceDescriptors: AudioDeviceDescriptors-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 ## rendererInfo
@@ -42,6 +46,8 @@ readonly rendererInfo: AudioRendererInfo
 
 **起始版本：** 9
 
+<!--Device-AudioRendererChangeInfo-readonly rendererInfo: AudioRendererInfo--><!--Device-AudioRendererChangeInfo-readonly rendererInfo: AudioRendererInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 ## streamId
@@ -55,5 +61,7 @@ readonly streamId: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-AudioRendererChangeInfo-readonly streamId: int--><!--Device-AudioRendererChangeInfo-readonly streamId: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer

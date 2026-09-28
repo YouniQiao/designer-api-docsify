@@ -8,6 +8,8 @@ TLSSocket连接。在调用TLSSocket的方法前，需要先通过[socket.constr
 
 **起始版本：** 9
 
+<!--Device-socket-export interface TLSSocket--><!--Device-socket-export interface TLSSocket-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块
@@ -31,6 +33,8 @@ bind(address: NetAddress, callback: AsyncCallback<void>): void
 **起始版本：** 9
 
 **需要权限：** ohos.permission.INTERNET
+
+<!--Device-TLSSocket-bind(address: NetAddress, callback: AsyncCallback<void>): void--><!--Device-TLSSocket-bind(address: NetAddress, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -88,6 +92,8 @@ bind(address: NetAddress): Promise<void>
 
 **需要权限：** ohos.permission.INTERNET
 
+<!--Device-TLSSocket-bind(address: NetAddress): Promise<void>--><!--Device-TLSSocket-bind(address: NetAddress): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -139,6 +145,8 @@ close(callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
+<!--Device-TLSSocket-close(callback: AsyncCallback<void>): void--><!--Device-TLSSocket-close(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -185,6 +193,8 @@ close(): Promise<void>
 
 **起始版本：** 9
 
+<!--Device-TLSSocket-close(): Promise<void>--><!--Device-TLSSocket-close(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
@@ -226,6 +236,8 @@ connect(options: TLSConnectOptions, callback: AsyncCallback<void>): void
 在TLSSocket上bind成功之后，进行通信连接，并创建和初始化TLS会话，实现建立连接过程，启动与服务器的TLS/SSL握手，实现数据传输功能，使用callback异步回调。需要注意options入参下secureOptions内的ca在API11及之前的版本为必填项，需填入服务端的ca证书(用于认证校验服务端的数字证书)，证书内容以"-----BEGIN CERTIFICATE-----"开头，以"-----END CERTIFICATE-----"结尾，自API12开始，为非必填项。
 
 **起始版本：** 9
+
+<!--Device-TLSSocket-connect(options: TLSConnectOptions, callback: AsyncCallback<void>): void--><!--Device-TLSSocket-connect(options: TLSConnectOptions, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -427,6 +439,8 @@ connect(options: TLSConnectOptions): Promise<void>
 在TLSSocket上bind成功之后，进行通信连接，并创建和初始化TLS会话，实现建立连接过程，启动与服务器的TLS/SSL握手，实现数据传输功能，该连接包括两种认证方式，单向认证与双向认证，使用Promise异步回调。需要注意options入参下secureOptions内的ca在API11及之前的版本为必填项，需填入服务端的ca证书(用于认证校验服务端的数字证书)，证书内容以"-----BEGIN CERTIFICATE-----"开头，以"-----END CERTIFICATE-----"结尾，自API12开始，为非必填项。
 
 **起始版本：** 9
+
+<!--Device-TLSSocket-connect(options: TLSConnectOptions): Promise<void>--><!--Device-TLSSocket-connect(options: TLSConnectOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -640,6 +654,8 @@ getCertificate(callback: AsyncCallback<X509CertRawData>): void
 
 **起始版本：** 9
 
+<!--Device-TLSSocket-getCertificate(callback: AsyncCallback<X509CertRawData>): void--><!--Device-TLSSocket-getCertificate(callback: AsyncCallback<X509CertRawData>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -699,6 +715,8 @@ getCertificate(): Promise<X509CertRawData>
 
 **起始版本：** 9
 
+<!--Device-TLSSocket-getCertificate(): Promise<X509CertRawData>--><!--Device-TLSSocket-getCertificate(): Promise<X509CertRawData>-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
@@ -756,6 +774,8 @@ getCipherSuite(callback: AsyncCallback<Array<string>>): void
 
 **起始版本：** 9
 
+<!--Device-TLSSocket-getCipherSuite(callback: AsyncCallback<Array<string>>): void--><!--Device-TLSSocket-getCipherSuite(callback: AsyncCallback<Array<string>>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -800,6 +820,8 @@ getCipherSuite(): Promise<Array<string>>
 在TLSSocket通信连接成功之后，获取通信双方协商后的加密套件，使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-TLSSocket-getCipherSuite(): Promise<Array<string>>--><!--Device-TLSSocket-getCipherSuite(): Promise<Array<string>>-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -846,6 +868,8 @@ getLocalAddress(): Promise<NetAddress>
 
 **起始版本：** 12
 
+<!--Device-TLSSocket-getLocalAddress(): Promise<NetAddress>--><!--Device-TLSSocket-getLocalAddress(): Promise<NetAddress>-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
@@ -885,6 +909,8 @@ getProtocol(callback: AsyncCallback<string>): void
 在TLSSocket通信连接成功之后，获取通信的协议版本，使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-TLSSocket-getProtocol(callback: AsyncCallback<string>): void--><!--Device-TLSSocket-getProtocol(callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -930,6 +956,8 @@ getProtocol(): Promise<string>
 
 **起始版本：** 9
 
+<!--Device-TLSSocket-getProtocol(): Promise<string>--><!--Device-TLSSocket-getProtocol(): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
@@ -969,6 +997,8 @@ getRemoteAddress(callback: AsyncCallback<NetAddress>): void
 在TLSSocket通信连接成功之后，获取对端Socket地址。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-TLSSocket-getRemoteAddress(callback: AsyncCallback<NetAddress>): void--><!--Device-TLSSocket-getRemoteAddress(callback: AsyncCallback<NetAddress>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -1013,6 +1043,8 @@ getRemoteAddress(): Promise<NetAddress>
 
 **起始版本：** 9
 
+<!--Device-TLSSocket-getRemoteAddress(): Promise<NetAddress>--><!--Device-TLSSocket-getRemoteAddress(): Promise<NetAddress>-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
@@ -1051,6 +1083,8 @@ getRemoteCertificate(callback: AsyncCallback<X509CertRawData>): void
 在TLSSocket通信连接成功之后，获取服务端的数字证书，使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-TLSSocket-getRemoteCertificate(callback: AsyncCallback<X509CertRawData>): void--><!--Device-TLSSocket-getRemoteCertificate(callback: AsyncCallback<X509CertRawData>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -1113,6 +1147,8 @@ getRemoteCertificate(): Promise<X509CertRawData>
 
 **起始版本：** 9
 
+<!--Device-TLSSocket-getRemoteCertificate(): Promise<X509CertRawData>--><!--Device-TLSSocket-getRemoteCertificate(): Promise<X509CertRawData>-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
@@ -1172,6 +1208,8 @@ getSignatureAlgorithms(callback: AsyncCallback<Array<string>>): void
 
 **起始版本：** 9
 
+<!--Device-TLSSocket-getSignatureAlgorithms(callback: AsyncCallback<Array<string>>): void--><!--Device-TLSSocket-getSignatureAlgorithms(callback: AsyncCallback<Array<string>>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -1214,6 +1252,8 @@ getSignatureAlgorithms(): Promise<Array<string>>
 在TLSSocket通信连接成功之后，获取通信双方协商后的签名算法，该接口只适配双向认证模式下，使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-TLSSocket-getSignatureAlgorithms(): Promise<Array<string>>--><!--Device-TLSSocket-getSignatureAlgorithms(): Promise<Array<string>>-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -1260,6 +1300,8 @@ getSocketFd(): Promise<number>
 
 **起始版本：** 16
 
+<!--Device-TLSSocket-getSocketFd(): Promise<int>--><!--Device-TLSSocket-getSocketFd(): Promise<int>-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
@@ -1299,6 +1341,8 @@ getState(callback: AsyncCallback<SocketStateBase>): void
 在TLSSocket的bind成功之后，获取TLSSocket状态。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-TLSSocket-getState(callback: AsyncCallback<SocketStateBase>): void--><!--Device-TLSSocket-getState(callback: AsyncCallback<SocketStateBase>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -1354,6 +1398,8 @@ getState(): Promise<SocketStateBase>
 
 **起始版本：** 9
 
+<!--Device-TLSSocket-getState(): Promise<SocketStateBase>--><!--Device-TLSSocket-getState(): Promise<SocketStateBase>-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
@@ -1404,6 +1450,8 @@ off(type: 'message', callback?: Callback<SocketMessageInfo>): void
 
 **起始版本：** 9
 
+<!--Device-TLSSocket-off(type: 'message', callback?: Callback<SocketMessageInfo>): void--><!--Device-TLSSocket-off(type: 'message', callback?: Callback<SocketMessageInfo>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -1452,6 +1500,8 @@ off(type: 'connect' | 'close', callback?: Callback<void>): void
 
 **起始版本：** 9
 
+<!--Device-TLSSocket-off(type: 'connect' | 'close', callback?: Callback<void>): void--><!--Device-TLSSocket-off(type: 'connect' | 'close', callback?: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -1499,6 +1549,8 @@ off(type: 'error', callback?: ErrorCallback): void
 
 **起始版本：** 9
 
+<!--Device-TLSSocket-off(type: 'error', callback?: ErrorCallback): void--><!--Device-TLSSocket-off(type: 'error', callback?: ErrorCallback): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -1542,6 +1594,8 @@ on(type: 'message', callback: Callback<SocketMessageInfo>): void
 > bind方法调用成功后，才可调用此方法。
 
 **起始版本：** 9
+
+<!--Device-TLSSocket-on(type: 'message', callback: Callback<SocketMessageInfo>): void--><!--Device-TLSSocket-on(type: 'message', callback: Callback<SocketMessageInfo>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -1603,6 +1657,8 @@ on(type: 'connect' | 'close', callback: Callback<void>): void
 
 **起始版本：** 9
 
+<!--Device-TLSSocket-on(type: 'connect' | 'close', callback: Callback<void>): void--><!--Device-TLSSocket-on(type: 'connect' | 'close', callback: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -1658,6 +1714,8 @@ on(type: 'error', callback: ErrorCallback): void
 
 **起始版本：** 9
 
+<!--Device-TLSSocket-on(type: 'error', callback: ErrorCallback): void--><!--Device-TLSSocket-on(type: 'error', callback: ErrorCallback): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -1705,6 +1763,8 @@ send(data: string | ArrayBuffer, callback: AsyncCallback<void>): void
 在TLSSocket通信连接成功之后，向服务端发送消息，使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-TLSSocket-send(data: string | ArrayBuffer, callback: AsyncCallback<void>): void--><!--Device-TLSSocket-send(data: string | ArrayBuffer, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -1754,6 +1814,8 @@ send(data: string | ArrayBuffer): Promise<void>
 
 **起始版本：** 9
 
+<!--Device-TLSSocket-send(data: string | ArrayBuffer): Promise<void>--><!--Device-TLSSocket-send(data: string | ArrayBuffer): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -1802,6 +1864,8 @@ setExtraOptions(options: TCPExtraOptions, callback: AsyncCallback<void>): void
 在TLSSocket的bind成功之后，设置TCPSocket连接的其他属性。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-TLSSocket-setExtraOptions(options: TCPExtraOptions, callback: AsyncCallback<void>): void--><!--Device-TLSSocket-setExtraOptions(options: TCPExtraOptions, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -1875,6 +1939,8 @@ setExtraOptions(options: TCPExtraOptions): Promise<void>
 在TLSSocket的bind成功之后，设置TCPSocket连接的其他属性。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-TLSSocket-setExtraOptions(options: TCPExtraOptions): Promise<void>--><!--Device-TLSSocket-setExtraOptions(options: TCPExtraOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 

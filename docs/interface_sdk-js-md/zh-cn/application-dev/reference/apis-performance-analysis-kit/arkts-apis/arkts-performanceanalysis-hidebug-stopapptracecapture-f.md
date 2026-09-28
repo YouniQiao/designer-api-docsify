@@ -18,6 +18,8 @@ function stopAppTraceCapture(): void
 
 **起始版本：** 12
 
+<!--Device-hidebug-function stopAppTraceCapture(): void--><!--Device-hidebug-function stopAppTraceCapture(): void-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **错误码：**

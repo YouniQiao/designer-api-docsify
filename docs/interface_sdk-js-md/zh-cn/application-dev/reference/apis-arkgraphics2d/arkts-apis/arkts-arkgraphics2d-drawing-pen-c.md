@@ -14,6 +14,8 @@ class Pen
 
 **起始版本：** 11
 
+<!--Device-drawing-class Pen--><!--Device-drawing-class Pen-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## 导入模块
@@ -31,6 +33,8 @@ constructor()
 构造一个新的画笔对象。
 
 **起始版本：** 12
+
+<!--Device-Pen-constructor()--><!--Device-Pen-constructor()-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -53,6 +57,8 @@ constructor(pen: Pen)
 复制构造一个新的画笔对象。
 
 **起始版本：** 12
+
+<!--Device-Pen-constructor(pen: Pen)--><!--Device-Pen-constructor(pen: Pen)-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -90,6 +96,8 @@ getAlpha(): number
 
 **起始版本：** 12
 
+<!--Device-Pen-getAlpha(): int--><!--Device-Pen-getAlpha(): int-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
@@ -116,6 +124,8 @@ getCapStyle(): CapStyle
 获取画笔的线帽样式。
 
 **起始版本：** 12
+
+<!--Device-Pen-getCapStyle(): CapStyle--><!--Device-Pen-getCapStyle(): CapStyle-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -153,6 +163,8 @@ getColor(): common2D.Color
 
 **起始版本：** 12
 
+<!--Device-Pen-getColor(): common2D.Color--><!--Device-Pen-getColor(): common2D.Color-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
@@ -181,6 +193,8 @@ getColor4f(): common2D.Color4f
 获取画笔的颜色，与[getColor](#getcolor)的区别在于返回值类型为[common2D.Color4f](arkts-arkgraphics2d-common2d-color4f-i.md)，颜色通道值为浮点数，适用于需要浮点数类型的场景。
 
 **起始版本：** 20
+
+<!--Device-Pen-getColor4f(): common2D.Color4f--><!--Device-Pen-getColor4f(): common2D.Color4f-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -212,6 +226,8 @@ getColorFilter(): ColorFilter
 
 **起始版本：** 12
 
+<!--Device-Pen-getColorFilter(): ColorFilter--><!--Device-Pen-getColorFilter(): ColorFilter-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
@@ -240,6 +256,8 @@ getFillPath(src: Path, dst: Path): boolean
 获取使用画笔绘制的源路径轮廓，并用目标路径表示。
 
 **起始版本：** 12
+
+<!--Device-Pen-getFillPath(src: Path, dst: Path): boolean--><!--Device-Pen-getFillPath(src: Path, dst: Path): boolean-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -285,6 +303,8 @@ getHexColor(): number
 
 **起始版本：** 18
 
+<!--Device-Pen-getHexColor(): int--><!--Device-Pen-getHexColor(): int-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
@@ -314,6 +334,8 @@ getJoinStyle(): JoinStyle
 获取画笔绘制转角的样式。
 
 **起始版本：** 12
+
+<!--Device-Pen-getJoinStyle(): JoinStyle--><!--Device-Pen-getJoinStyle(): JoinStyle-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -351,6 +373,8 @@ getMiterLimit(): number
 
 **起始版本：** 12
 
+<!--Device-Pen-getMiterLimit(): double--><!--Device-Pen-getMiterLimit(): double-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
@@ -377,6 +401,8 @@ getWidth(): number
 获取画笔的线宽属性，线宽描述了画笔绘制图形轮廓的宽度。
 
 **起始版本：** 12
+
+<!--Device-Pen-getWidth(): double--><!--Device-Pen-getWidth(): double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -405,6 +431,8 @@ isAntiAlias(): boolean
 
 **起始版本：** 12
 
+<!--Device-Pen-isAntiAlias(): boolean--><!--Device-Pen-isAntiAlias(): boolean-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
@@ -432,6 +460,8 @@ reset(): void
 
 **起始版本：** 12
 
+<!--Device-Pen-reset(): void--><!--Device-Pen-reset(): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **示例**
@@ -452,6 +482,8 @@ setAlpha(alpha: number): void
 设置画笔的透明度。
 
 **起始版本：** 11
+
+<!--Device-Pen-setAlpha(alpha: int): void--><!--Device-Pen-setAlpha(alpha: int): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -486,6 +518,8 @@ setAntiAlias(aa: boolean): void
 
 **起始版本：** 11
 
+<!--Device-Pen-setAntiAlias(aa: boolean): void--><!--Device-Pen-setAntiAlias(aa: boolean): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -519,6 +553,8 @@ setBlendMode(mode: BlendMode): void
 
 **起始版本：** 11
 
+<!--Device-Pen-setBlendMode(mode: BlendMode): void--><!--Device-Pen-setBlendMode(mode: BlendMode): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -551,6 +587,8 @@ setCapStyle(style: CapStyle): void
 设置画笔的线帽样式。未调用此接口设置时，系统默认的线帽样式为FLAT_CAP。
 
 **起始版本：** 12
+
+<!--Device-Pen-setCapStyle(style: CapStyle): void--><!--Device-Pen-setCapStyle(style: CapStyle): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -593,6 +631,8 @@ setColor(color: common2D.Color): void
 
 **起始版本：** 11
 
+<!--Device-Pen-setColor(color: common2D.Color): void--><!--Device-Pen-setColor(color: common2D.Color): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -628,6 +668,8 @@ setColor(alpha: number, red: number, green: number, blue: number): void
 设置画笔的颜色。性能优于[setColor](#setcolor)接口，推荐使用本接口。
 
 **起始版本：** 12
+
+<!--Device-Pen-setColor(alpha: int, red: int, green: int, blue: int): void--><!--Device-Pen-setColor(alpha: int, red: int, green: int, blue: int): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -667,6 +709,8 @@ setColor(color: number): void
 
 **起始版本：** 18
 
+<!--Device-Pen-setColor(color: int): void--><!--Device-Pen-setColor(color: int): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -693,6 +737,8 @@ setColor4f(color4f: common2D.Color4f, colorSpace: colorSpaceManager.ColorSpaceMa
 设置画笔的颜色以及标准色域，与[setColor](#setcolor)的区别在于可以单独设置色域。
 
 **起始版本：** 20
+
+<!--Device-Pen-setColor4f(color4f: common2D.Color4f, colorSpace: colorSpaceManager.ColorSpaceManager | null): void--><!--Device-Pen-setColor4f(color4f: common2D.Color4f, colorSpace: colorSpaceManager.ColorSpaceManager | null): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -723,6 +769,8 @@ setColorFilter(filter: ColorFilter | null): void
 给画笔添加额外的颜色滤波器。
 
 **起始版本：** 11
+
+<!--Device-Pen-setColorFilter(filter: ColorFilter | null): void--><!--Device-Pen-setColorFilter(filter: ColorFilter | null): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -758,6 +806,8 @@ setDither(dither: boolean): void
 
 **起始版本：** 11
 
+<!--Device-Pen-setDither(dither: boolean): void--><!--Device-Pen-setDither(dither: boolean): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -790,6 +840,8 @@ setImageFilter(filter: ImageFilter | null): void
 设置画笔的图像滤波器。
 
 **起始版本：** 12
+
+<!--Device-Pen-setImageFilter(filter: ImageFilter | null): void--><!--Device-Pen-setImageFilter(filter: ImageFilter | null): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -826,6 +878,8 @@ setJoinStyle(style: JoinStyle): void
 设置画笔绘制转角的样式。未调用此接口设置时，系统默认的转角样式为MITER_JOIN。
 
 **起始版本：** 12
+
+<!--Device-Pen-setJoinStyle(style: JoinStyle): void--><!--Device-Pen-setJoinStyle(style: JoinStyle): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -868,6 +922,8 @@ setMaskFilter(filter: MaskFilter | null): void
 
 **起始版本：** 12
 
+<!--Device-Pen-setMaskFilter(filter: MaskFilter | null): void--><!--Device-Pen-setMaskFilter(filter: MaskFilter | null): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -909,6 +965,8 @@ setMiterLimit(miter: number): void
 
 **起始版本：** 12
 
+<!--Device-Pen-setMiterLimit(miter: double): void--><!--Device-Pen-setMiterLimit(miter: double): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -941,6 +999,8 @@ setPathEffect(effect: PathEffect | null): void
 设置画笔路径效果。
 
 **起始版本：** 12
+
+<!--Device-Pen-setPathEffect(effect: PathEffect | null): void--><!--Device-Pen-setPathEffect(effect: PathEffect | null): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -984,6 +1044,8 @@ setShaderEffect(shaderEffect: ShaderEffect | null): void
 
 **起始版本：** 12
 
+<!--Device-Pen-setShaderEffect(shaderEffect: ShaderEffect | null): void--><!--Device-Pen-setShaderEffect(shaderEffect: ShaderEffect | null): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -1017,6 +1079,8 @@ setShadowLayer(shadowLayer: ShadowLayer | null): void
 设置画笔阴影层效果。当前仅在绘制文字时生效。
 
 **起始版本：** 12
+
+<!--Device-Pen-setShadowLayer(shadowLayer: ShadowLayer | null): void--><!--Device-Pen-setShadowLayer(shadowLayer: ShadowLayer | null): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1070,6 +1134,8 @@ setStrokeWidth(width: number): void
 设置画笔的线宽。0线宽被视作特殊的极细线宽，在绘制时始终会被绘制为1像素，不随画布的缩放而改变；负数线宽在实际绘制时会被视作0线宽。
 
 **起始版本：** 11
+
+<!--Device-Pen-setStrokeWidth(width: double): void--><!--Device-Pen-setStrokeWidth(width: double): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

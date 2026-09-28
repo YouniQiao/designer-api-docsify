@@ -8,6 +8,8 @@ export interface ChildProcessArgs
 
 **起始版本：** 12
 
+<!--Device-unnamed-export interface ChildProcessArgs--><!--Device-unnamed-export interface ChildProcessArgs-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ entryParams?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ChildProcessArgs-entryParams?: string--><!--Device-ChildProcessArgs-entryParams?: string-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## fds
@@ -50,6 +54,8 @@ fds?: Record<string, number>
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ChildProcessArgs-fds?: Record<string, int>--><!--Device-ChildProcessArgs-fds?: Record<string, int>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

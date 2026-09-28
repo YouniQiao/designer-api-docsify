@@ -8,6 +8,8 @@ UIExtensionAbility组件的界面操作类，提供页面加载、设置宿主�
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare class UIExtensionContentSession--><!--Device-unnamed-declare class UIExtensionContentSession-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块
@@ -27,6 +29,8 @@ getUIExtensionWindowProxy(): uiExtension.WindowProxy
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionContentSession-getUIExtensionWindowProxy(): uiExtension.WindowProxy--><!--Device-UIExtensionContentSession-getUIExtensionWindowProxy(): uiExtension.WindowProxy-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -94,6 +98,8 @@ loadContent(path: string, storage?: LocalStorage): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UIExtensionContentSession-loadContent(path: string, storage?: LocalStorage): void--><!--Device-UIExtensionContentSession-loadContent(path: string, storage?: LocalStorage): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -147,6 +153,8 @@ loadContentByName(name: string, storage?: LocalStorage): void
 **起始版本：** 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionContentSession-loadContentByName(name: string, storage?: LocalStorage): void--><!--Device-UIExtensionContentSession-loadContentByName(name: string, storage?: LocalStorage): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -235,6 +243,8 @@ setWindowPrivacyMode(isPrivacyMode: boolean): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UIExtensionContentSession-setWindowPrivacyMode(isPrivacyMode: boolean): Promise<void>--><!--Device-UIExtensionContentSession-setWindowPrivacyMode(isPrivacyMode: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -303,6 +313,8 @@ setWindowPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>): voi
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UIExtensionContentSession-setWindowPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>): void--><!--Device-UIExtensionContentSession-setWindowPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -362,6 +374,8 @@ startAbilityByType(type: string, wantParam: Record<string, Object>,
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionContentSession-startAbilityByType(type: string, wantParam: Record<string, Object>,    abilityStartCallback: AbilityStartCallback, callback: AsyncCallback<void>): void--><!--Device-UIExtensionContentSession-startAbilityByType(type: string, wantParam: Record<string, Object>,    abilityStartCallback: AbilityStartCallback, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -436,6 +450,8 @@ startAbilityByType(type: string, wantParam: Record<string, Object>,
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionContentSession-startAbilityByType(type: string, wantParam: Record<string, Object>,    abilityStartCallback: AbilityStartCallback): Promise<void>--><!--Device-UIExtensionContentSession-startAbilityByType(type: string, wantParam: Record<string, Object>,    abilityStartCallback: AbilityStartCallback): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -513,6 +529,8 @@ terminateSelf(callback: AsyncCallback<void>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UIExtensionContentSession-terminateSelf(callback: AsyncCallback<void>): void--><!--Device-UIExtensionContentSession-terminateSelf(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -575,6 +593,8 @@ terminateSelf(): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UIExtensionContentSession-terminateSelf(): Promise<void>--><!--Device-UIExtensionContentSession-terminateSelf(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **返回值：**
@@ -628,6 +648,8 @@ terminateSelfWithResult(parameter: AbilityResult, callback: AsyncCallback<void>)
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionContentSession-terminateSelfWithResult(parameter: AbilityResult, callback: AsyncCallback<void>): void--><!--Device-UIExtensionContentSession-terminateSelfWithResult(parameter: AbilityResult, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -701,6 +723,8 @@ terminateSelfWithResult(parameter: AbilityResult): Promise<void>
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionContentSession-terminateSelfWithResult(parameter: AbilityResult): Promise<void>--><!--Device-UIExtensionContentSession-terminateSelfWithResult(parameter: AbilityResult): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

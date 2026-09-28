@@ -8,6 +8,8 @@ StyledString
 
 **Since:** 12
 
+<!--Device-unnamed-declare class StyledString--><!--Device-unnamed-declare class StyledString-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
@@ -25,6 +27,8 @@ It is not supported to create it before [loadContent()](arkts-arkui-window-windo
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-StyledString-constructor(value: string | ImageAttachment | CustomSpan, styles?: Array<StyleOptions>)--><!--Device-StyledString-constructor(value: string | ImageAttachment | CustomSpan, styles?: Array<StyleOptions>)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -48,6 +52,8 @@ Checks whether this styled string is the same as another styled string.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-StyledString-equals(other: StyledString): boolean--><!--Device-StyledString-equals(other: StyledString): boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -78,6 +84,8 @@ Converts an HTML-formatted string into a styled string. HTML tags are mapped to 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-StyledString-static fromHtml(html: string): Promise<StyledString>--><!--Device-StyledString-static fromHtml(html: string): Promise<StyledString>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -114,6 +122,8 @@ Obtains the text of this styled string.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-StyledString-getString(): string--><!--Device-StyledString-getString(): string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -137,6 +147,8 @@ This API returns only styles explicitly set by the developer.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-StyledString-getStyles(start: number, length: number, styledKey?: StyledStringKey): Array<SpanStyle>--><!--Device-StyledString-getStyles(start: number, length: number, styledKey?: StyledStringKey): Array<SpanStyle>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -174,6 +186,8 @@ Obtains a substring of this styled string. The specified range must not exceed t
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-StyledString-subStyledString(start: number, length?: number): StyledString--><!--Device-StyledString-subStyledString(start: number, length?: number): StyledString-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -210,6 +224,8 @@ For details about how to use this API, see [Example 12: Implementing Conversion 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-StyledString-static toHtml(styledString: StyledString): string--><!--Device-StyledString-static toHtml(styledString: StyledString): string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -250,5 +266,7 @@ The length of **ImageAttachment** and **CustomSpan** in the styled string is cou
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-StyledString-readonly length: number--><!--Device-StyledString-readonly length: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

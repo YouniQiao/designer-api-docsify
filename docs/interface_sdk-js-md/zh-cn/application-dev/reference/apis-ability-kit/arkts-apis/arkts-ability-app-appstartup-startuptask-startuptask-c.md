@@ -16,6 +16,8 @@ declare class StartupTask
 
 **装饰器类型：** @Sendable
 
+<!--Device-unnamed-declare class StartupTask--><!--Device-unnamed-declare class StartupTask-End-->
+
 **系统能力：** SystemCapability.Ability.AppStartup
 
 ## 导入模块
@@ -35,6 +37,8 @@ init(context: AbilityStageContext): Promise<Object | void>
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-StartupTask-init(context: AbilityStageContext): Promise<Object | void>--><!--Device-StartupTask-init(context: AbilityStageContext): Promise<Object | void>-End-->
 
 **系统能力：** SystemCapability.Ability.AppStartup
 
@@ -90,6 +94,8 @@ onDependencyCompleted?(dependency: string, result: Object): void
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-StartupTask-onDependencyCompleted?(dependency: string, result: Object): void--><!--Device-StartupTask-onDependencyCompleted?(dependency: string, result: Object): void-End-->
 
 **系统能力：** SystemCapability.Ability.AppStartup
 

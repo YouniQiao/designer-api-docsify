@@ -18,6 +18,8 @@ function queryReusableAuthResult(authParam: AuthParam): Uint8Array
 
 **需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
+<!--Device-userAuth-function queryReusableAuthResult(authParam: AuthParam): Uint8Array--><!--Device-userAuth-function queryReusableAuthResult(authParam: AuthParam): Uint8Array-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 **系统接口：** 此接口为系统接口。

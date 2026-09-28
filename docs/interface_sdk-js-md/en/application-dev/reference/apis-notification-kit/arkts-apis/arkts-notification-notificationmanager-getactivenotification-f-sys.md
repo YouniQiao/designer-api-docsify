@@ -20,6 +20,8 @@ Obtains an active notification based on **hashCode**. This API uses a promise to
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-notificationManager-function getActiveNotification(hashCode: string): Promise<NotificationRequest>--><!--Device-notificationManager-function getActiveNotification(hashCode: string): Promise<NotificationRequest>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.

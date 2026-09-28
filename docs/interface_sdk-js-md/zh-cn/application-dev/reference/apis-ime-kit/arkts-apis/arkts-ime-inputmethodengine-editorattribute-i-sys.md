@@ -8,6 +8,8 @@ interface EditorAttribute
 
 **起始版本：** 8
 
+<!--Device-inputMethodEngine-interface EditorAttribute--><!--Device-inputMethodEngine-interface EditorAttribute-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## 导入模块
@@ -27,6 +29,8 @@ readonly fluidLightMode?: FluidLightMode
 **类型：** [FluidLightMode](arkts-ime-inputmethodengine-fluidlightmode-e-sys.md)
 
 **起始版本：** 20
+
+<!--Device-EditorAttribute-readonly fluidLightMode?: FluidLightMode--><!--Device-EditorAttribute-readonly fluidLightMode?: FluidLightMode-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 

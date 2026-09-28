@@ -12,6 +12,8 @@ export interface ShaderMaterial extends Material
 
 **起始版本：** 12
 
+<!--Device-unnamed-export interface ShaderMaterial extends Material--><!--Device-unnamed-export interface ShaderMaterial extends Material-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## colorShader
@@ -25,5 +27,7 @@ colorShader?: Shader
 **类型：** [Shader](arkts-arkgraphics3d-sceneresources-shader-i.md)
 
 **起始版本：** 12
+
+<!--Device-ShaderMaterial-colorShader?: Shader--><!--Device-ShaderMaterial-colorShader?: Shader-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

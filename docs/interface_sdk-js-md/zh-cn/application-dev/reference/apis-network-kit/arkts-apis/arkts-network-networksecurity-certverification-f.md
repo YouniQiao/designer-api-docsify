@@ -16,6 +16,8 @@ export function certVerification(cert: CertBlob, caCert?: CertBlob): Promise<num
 
 **起始版本：** 11
 
+<!--Device-networkSecurity-export function certVerification(cert: CertBlob, caCert?: CertBlob): Promise<int>--><!--Device-networkSecurity-export function certVerification(cert: CertBlob, caCert?: CertBlob): Promise<int>-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**

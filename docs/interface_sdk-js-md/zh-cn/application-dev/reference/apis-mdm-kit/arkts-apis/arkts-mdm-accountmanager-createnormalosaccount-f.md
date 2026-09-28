@@ -26,6 +26,8 @@ function createNormalOsAccount(admin: Want, name: string): Promise<osAccount.OsA
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-accountManager-function createNormalOsAccount(admin: Want, name: string): Promise<osAccount.OsAccountInfo>--><!--Device-accountManager-function createNormalOsAccount(admin: Want, name: string): Promise<osAccount.OsAccountInfo>-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**

@@ -16,6 +16,8 @@ function getInclination(inclinationMatrix: Array<number>, callback: AsyncCallbac
 
 **起始版本：** 9
 
+<!--Device-sensor-function getInclination(inclinationMatrix: Array<double>, callback: AsyncCallback<double>): void--><!--Device-sensor-function getInclination(inclinationMatrix: Array<double>, callback: AsyncCallback<double>): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -71,6 +73,8 @@ function getInclination(inclinationMatrix: Array<number>): Promise<number>
 根据倾斜矩阵计算地磁倾角。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-sensor-function getInclination(inclinationMatrix: Array<double>): Promise<double>--><!--Device-sensor-function getInclination(inclinationMatrix: Array<double>): Promise<double>-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 

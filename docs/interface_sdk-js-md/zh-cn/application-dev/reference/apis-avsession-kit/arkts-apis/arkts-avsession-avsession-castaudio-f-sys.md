@@ -20,6 +20,8 @@ function castAudio(session: SessionToken | 'all', audioDevices: Array<audio.Audi
 
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
 
+<!--Device-avSession-function castAudio(session: SessionToken | 'all', audioDevices: Array<audio.AudioDeviceDescriptor>, callback: AsyncCallback<void>): void--><!--Device-avSession-function castAudio(session: SessionToken | 'all', audioDevices: Array<audio.AudioDeviceDescriptor>, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 
 **系统接口：** 此接口为系统接口。
@@ -78,6 +80,8 @@ function castAudio(session: SessionToken | 'all', audioDevices: Array<audio.Audi
 **起始版本：** 9
 
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
+
+<!--Device-avSession-function castAudio(session: SessionToken | 'all', audioDevices: Array<audio.AudioDeviceDescriptor>): Promise<void>--><!--Device-avSession-function castAudio(session: SessionToken | 'all', audioDevices: Array<audio.AudioDeviceDescriptor>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 

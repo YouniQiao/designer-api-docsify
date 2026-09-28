@@ -16,6 +16,8 @@ Creates a **TLSSocket** object.
 
 **Since:** 9
 
+<!--Device-socket-function constructTLSSocketInstance(): TLSSocket--><!--Device-socket-function constructTLSSocketInstance(): TLSSocket-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
@@ -50,6 +52,8 @@ Upgrades a **TCPSocket** connection to a **TLSSocket** connection.
 > object.
 
 **Since:** 12
+
+<!--Device-socket-function constructTLSSocketInstance(tcpSocket: TCPSocket): TLSSocket--><!--Device-socket-function constructTLSSocketInstance(tcpSocket: TCPSocket): TLSSocket-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 

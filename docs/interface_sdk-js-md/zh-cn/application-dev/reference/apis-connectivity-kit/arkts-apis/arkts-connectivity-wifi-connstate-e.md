@@ -16,6 +16,8 @@ export enum ConnState
 
 **替代接口：** [ConnState](arkts-connectivity-wifimanager-connstate-e.md)
 
+<!--Device-wifi-export enum ConnState--><!--Device-wifi-export enum ConnState-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## SCANNING
@@ -31,6 +33,8 @@ SCANNING
 **废弃版本：** 9
 
 **替代接口：** [SCANNING](arkts-connectivity-wifimanager-connstate-e.md#scanning)
+
+<!--Device-ConnState-SCANNING--><!--Device-ConnState-SCANNING-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -48,6 +52,8 @@ CONNECTING
 
 **替代接口：** [CONNECTING](arkts-connectivity-wifimanager-connstate-e.md#connecting)
 
+<!--Device-ConnState-CONNECTING--><!--Device-ConnState-CONNECTING-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## AUTHENTICATING
@@ -63,6 +69,8 @@ Wi-Fi连接正在认证中。
 **废弃版本：** 9
 
 **替代接口：** [AUTHENTICATING](arkts-connectivity-wifimanager-connstate-e.md#authenticating)
+
+<!--Device-ConnState-AUTHENTICATING--><!--Device-ConnState-AUTHENTICATING-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -80,6 +88,8 @@ OBTAINING_IPADDR
 
 **替代接口：** [OBTAINING_IPADDR](arkts-connectivity-wifimanager-connstate-e.md#obtaining_ipaddr)
 
+<!--Device-ConnState-OBTAINING_IPADDR--><!--Device-ConnState-OBTAINING_IPADDR-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## CONNECTED
@@ -95,6 +105,8 @@ Wi-Fi连接已建立。
 **废弃版本：** 9
 
 **替代接口：** [CONNECTED](arkts-connectivity-wifimanager-connstate-e.md#connected)
+
+<!--Device-ConnState-CONNECTED--><!--Device-ConnState-CONNECTED-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -112,6 +124,8 @@ Wi-Fi连接正在断开。
 
 **替代接口：** [DISCONNECTING](arkts-connectivity-wifimanager-connstate-e.md#disconnecting)
 
+<!--Device-ConnState-DISCONNECTING--><!--Device-ConnState-DISCONNECTING-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## DISCONNECTED
@@ -128,6 +142,8 @@ Wi-Fi连接已断开。
 
 **替代接口：** [DISCONNECTED](arkts-connectivity-wifimanager-connstate-e.md#disconnected)
 
+<!--Device-ConnState-DISCONNECTED--><!--Device-ConnState-DISCONNECTED-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## UNKNOWN
@@ -143,5 +159,7 @@ Wi-Fi连接建立失败。
 **废弃版本：** 9
 
 **替代接口：** [UNKNOWN](arkts-connectivity-wifimanager-connstate-e.md#unknown)
+
+<!--Device-ConnState-UNKNOWN--><!--Device-ConnState-UNKNOWN-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA

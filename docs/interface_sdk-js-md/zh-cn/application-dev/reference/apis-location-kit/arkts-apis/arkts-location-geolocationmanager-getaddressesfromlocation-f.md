@@ -16,6 +16,8 @@ function getAddressesFromLocation(request: ReverseGeoCodeRequest, callback: Asyn
 
 **起始版本：** 9
 
+<!--Device-geoLocationManager-function getAddressesFromLocation(request: ReverseGeoCodeRequest, callback: AsyncCallback<Array<GeoAddress>>): void--><!--Device-geoLocationManager-function getAddressesFromLocation(request: ReverseGeoCodeRequest, callback: AsyncCallback<Array<GeoAddress>>): void-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 **参数：**
@@ -70,6 +72,8 @@ function getAddressesFromLocation(request: ReverseGeoCodeRequest): Promise<Array
 调用逆地理编码服务，将坐标转换为地理描述，使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-geoLocationManager-function getAddressesFromLocation(request: ReverseGeoCodeRequest): Promise<Array<GeoAddress>>--><!--Device-geoLocationManager-function getAddressesFromLocation(request: ReverseGeoCodeRequest): Promise<Array<GeoAddress>>-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geocoder
 

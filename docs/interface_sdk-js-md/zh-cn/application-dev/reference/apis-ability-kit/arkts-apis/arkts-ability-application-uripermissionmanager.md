@@ -4,6 +4,8 @@ URI权限管理模块。用于应用A授权/撤销授权URI给应用B。支持�
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare namespace uriPermissionManager--><!--Device-unnamed-declare namespace uriPermissionManager-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块

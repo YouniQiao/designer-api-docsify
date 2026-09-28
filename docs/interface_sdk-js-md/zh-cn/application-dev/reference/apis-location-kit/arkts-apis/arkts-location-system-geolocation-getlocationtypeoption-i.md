@@ -10,6 +10,8 @@ export interface GetLocationTypeOption
 
 **废弃版本：** 9
 
+<!--Device-unnamed-export interface GetLocationTypeOption--><!--Device-unnamed-export interface GetLocationTypeOption-End-->
+
 **系统能力：** SystemCapability.Location.Location.Lite
 
 ## 导入模块
@@ -32,6 +34,8 @@ complete?: () => void
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-GetLocationTypeOption-complete?: () => void--><!--Device-GetLocationTypeOption-complete?: () => void-End-->
+
 **系统能力：** SystemCapability.Location.Location.Lite
 
 ## fail
@@ -47,6 +51,8 @@ fail?: (data: string, code: number) => void
 **废弃版本：** 9
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-GetLocationTypeOption-fail?: (data: string, code: number) => void--><!--Device-GetLocationTypeOption-fail?: (data: string, code: number) => void-End-->
 
 **系统能力：** SystemCapability.Location.Location.Lite
 
@@ -70,6 +76,8 @@ success?: (data: GetLocationTypeResponse) => void
 **废弃版本：** 9
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-GetLocationTypeOption-success?: (data: GetLocationTypeResponse) => void--><!--Device-GetLocationTypeOption-success?: (data: GetLocationTypeResponse) => void-End-->
 
 **系统能力：** SystemCapability.Location.Location.Lite
 

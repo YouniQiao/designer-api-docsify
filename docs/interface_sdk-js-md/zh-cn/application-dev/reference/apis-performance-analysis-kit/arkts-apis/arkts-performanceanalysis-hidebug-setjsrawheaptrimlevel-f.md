@@ -23,6 +23,8 @@ function setJsRawHeapTrimLevel(level: JsRawHeapTrimLevel): void
 
 **起始版本：** 20
 
+<!--Device-hidebug-function setJsRawHeapTrimLevel(level: JsRawHeapTrimLevel): void--><!--Device-hidebug-function setJsRawHeapTrimLevel(level: JsRawHeapTrimLevel): void-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **参数：**

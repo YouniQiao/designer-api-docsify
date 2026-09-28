@@ -8,6 +8,8 @@ interface RangingParams
 
 **起始版本：** 26.0.0
 
+<!--Device-ranging-interface RangingParams--><!--Device-ranging-interface RangingParams-End-->
+
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ capabilityType: RangingTypes
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RangingParams-capabilityType: RangingTypes--><!--Device-RangingParams-capabilityType: RangingTypes-End-->
+
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core
 
 ## deviceId
@@ -45,5 +49,7 @@ deviceId: string
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-RangingParams-deviceId: string--><!--Device-RangingParams-deviceId: string-End-->
 
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core

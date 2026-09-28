@@ -8,6 +8,8 @@ IPC上下文信息，包括PID和UID、本端和对端设备ID、检查接口调
 
 **起始版本：** 23
 
+<!--Device-rpc-class CallingInfo--><!--Device-rpc-class CallingInfo-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 ## 导入模块
@@ -32,6 +34,8 @@ readonly callerPid: number
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-CallingInfo-readonly callerPid: number--><!--Device-CallingInfo-readonly callerPid: number-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 ## callerTokenId
@@ -49,6 +53,8 @@ readonly callerTokenId: number
 **起始版本：** 23
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-CallingInfo-readonly callerTokenId: number--><!--Device-CallingInfo-readonly callerTokenId: number-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -68,6 +74,8 @@ readonly callerUid: number
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-CallingInfo-readonly callerUid: number--><!--Device-CallingInfo-readonly callerUid: number-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 ## isLocalCalling
@@ -86,6 +94,8 @@ readonly isLocalCalling: boolean
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-CallingInfo-readonly isLocalCalling: boolean--><!--Device-CallingInfo-readonly isLocalCalling: boolean-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 ## localDeviceId
@@ -102,6 +112,8 @@ readonly localDeviceId: string
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-CallingInfo-readonly localDeviceId: string--><!--Device-CallingInfo-readonly localDeviceId: string-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 ## remoteDeviceId
@@ -117,5 +129,7 @@ readonly remoteDeviceId: string
 **起始版本：** 23
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-CallingInfo-readonly remoteDeviceId: string--><!--Device-CallingInfo-readonly remoteDeviceId: string-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core

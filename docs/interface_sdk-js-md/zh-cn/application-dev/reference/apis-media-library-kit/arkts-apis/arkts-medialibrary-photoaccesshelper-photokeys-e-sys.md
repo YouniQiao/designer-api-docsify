@@ -8,6 +8,8 @@ enum PhotoKeys
 
 **起始版本：** 10
 
+<!--Device-photoAccessHelper-enum PhotoKeys--><!--Device-photoAccessHelper-enum PhotoKeys-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## DATE_TRASHED
@@ -19,6 +21,8 @@ DATE_TRASHED = 'date_trashed'
 删除日期（删除文件时间距1970年1月1日的秒数值）。
 
 **起始版本：** 10
+
+<!--Device-PhotoKeys-DATE_TRASHED = 'date_trashed'--><!--Device-PhotoKeys-DATE_TRASHED = 'date_trashed'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -34,6 +38,8 @@ HIDDEN = 'hidden'
 
 **起始版本：** 10
 
+<!--Device-PhotoKeys-HIDDEN = 'hidden'--><!--Device-PhotoKeys-HIDDEN = 'hidden'-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -47,6 +53,8 @@ USER_COMMENT = 'user_comment'
 用户注释信息。
 
 **起始版本：** 10
+
+<!--Device-PhotoKeys-USER_COMMENT = 'user_comment'--><!--Device-PhotoKeys-USER_COMMENT = 'user_comment'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -62,6 +70,8 @@ CAMERA_SHOT_KEY = 'camera_shot_key'
 
 **起始版本：** 10
 
+<!--Device-PhotoKeys-CAMERA_SHOT_KEY = 'camera_shot_key'--><!--Device-PhotoKeys-CAMERA_SHOT_KEY = 'camera_shot_key'-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -75,6 +85,8 @@ DATE_YEAR = 'date_year'
 创建文件的年份。
 
 **起始版本：** 11
+
+<!--Device-PhotoKeys-DATE_YEAR = 'date_year'--><!--Device-PhotoKeys-DATE_YEAR = 'date_year'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -90,6 +102,8 @@ DATE_MONTH = 'date_month'
 
 **起始版本：** 11
 
+<!--Device-PhotoKeys-DATE_MONTH = 'date_month'--><!--Device-PhotoKeys-DATE_MONTH = 'date_month'-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -104,6 +118,8 @@ DATE_DAY = 'date_day'
 
 **起始版本：** 11
 
+<!--Device-PhotoKeys-DATE_DAY = 'date_day'--><!--Device-PhotoKeys-DATE_DAY = 'date_day'-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -117,6 +133,8 @@ PENDING = 'pending'
 pending状态。
 
 **起始版本：** 11
+
+<!--Device-PhotoKeys-PENDING = 'pending'--><!--Device-PhotoKeys-PENDING = 'pending'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -134,6 +152,8 @@ DATE_TRASHED_MS = 'date_trashed_ms'
 
 **起始版本：** 12
 
+<!--Device-PhotoKeys-DATE_TRASHED_MS = 'date_trashed_ms'--><!--Device-PhotoKeys-DATE_TRASHED_MS = 'date_trashed_ms'-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -147,6 +167,8 @@ MOVING_PHOTO_EFFECT_MODE = 'moving_photo_effect_mode'
 动态照片效果模式。
 
 **起始版本：** 12
+
+<!--Device-PhotoKeys-MOVING_PHOTO_EFFECT_MODE = 'moving_photo_effect_mode'--><!--Device-PhotoKeys-MOVING_PHOTO_EFFECT_MODE = 'moving_photo_effect_mode'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -162,6 +184,8 @@ THUMBNAIL_READY = 'thumbnail_ready'
 
 **起始版本：** 13
 
+<!--Device-PhotoKeys-THUMBNAIL_READY = 'thumbnail_ready'--><!--Device-PhotoKeys-THUMBNAIL_READY = 'thumbnail_ready'-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -175,6 +199,8 @@ CE_AVAILABLE = 'ce_available'
 云增强任务标识。
 
 **起始版本：** 13
+
+<!--Device-PhotoKeys-CE_AVAILABLE = 'ce_available'--><!--Device-PhotoKeys-CE_AVAILABLE = 'ce_available'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -190,6 +216,8 @@ SUPPORTED_WATERMARK_TYPE = 'supported_watermark_type'
 
 **起始版本：** 14
 
+<!--Device-PhotoKeys-SUPPORTED_WATERMARK_TYPE = 'supported_watermark_type'--><!--Device-PhotoKeys-SUPPORTED_WATERMARK_TYPE = 'supported_watermark_type'-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -203,6 +231,8 @@ THUMBNAIL_VISIBLE = 'thumbnail_visible'
 缩略图可见标识。
 
 **起始版本：** 14
+
+<!--Device-PhotoKeys-THUMBNAIL_VISIBLE = 'thumbnail_visible'--><!--Device-PhotoKeys-THUMBNAIL_VISIBLE = 'thumbnail_visible'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -218,6 +248,8 @@ IS_CE_AUTO = 'is_auto'
 
 **起始版本：** 18
 
+<!--Device-PhotoKeys-IS_CE_AUTO = 'is_auto'--><!--Device-PhotoKeys-IS_CE_AUTO = 'is_auto'-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -231,6 +263,8 @@ IS_RECENT_SHOW = 'is_recent_show'
 是否设置为最近显示。
 
 **起始版本：** 18
+
+<!--Device-PhotoKeys-IS_RECENT_SHOW = 'is_recent_show'--><!--Device-PhotoKeys-IS_RECENT_SHOW = 'is_recent_show'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -246,6 +280,8 @@ SUM_SIZE = 'sum(size)'
 
 **起始版本：** 19
 
+<!--Device-PhotoKeys-SUM_SIZE = 'sum(size)'--><!--Device-PhotoKeys-SUM_SIZE = 'sum(size)'-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -259,6 +295,8 @@ EXIF_ROTATE = 'exif_rotate'
 文件的旋转角度信息。
 
 **起始版本：** 21
+
+<!--Device-PhotoKeys-EXIF_ROTATE = 'exif_rotate'--><!--Device-PhotoKeys-EXIF_ROTATE = 'exif_rotate'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -274,6 +312,8 @@ HAS_APPLINK = 'has_applink'
 
 **起始版本：** 21
 
+<!--Device-PhotoKeys-HAS_APPLINK = 'has_applink'--><!--Device-PhotoKeys-HAS_APPLINK = 'has_applink'-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -287,6 +327,8 @@ APPLINK = 'applink'
 I文件记忆链接的信息。
 
 **起始版本：** 21
+
+<!--Device-PhotoKeys-APPLINK = 'applink'--><!--Device-PhotoKeys-APPLINK = 'applink'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -302,6 +344,8 @@ HDR_MODE = 'hdr_mode'
 
 **起始版本：** 22
 
+<!--Device-PhotoKeys-HDR_MODE = 'hdr_mode'--><!--Device-PhotoKeys-HDR_MODE = 'hdr_mode'-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -315,6 +359,8 @@ COMPOSITE_DISPLAY_STATUS = 'composite_display_status'
 复合图资产显示状态。
 
 **起始版本：** 23
+
+<!--Device-PhotoKeys-COMPOSITE_DISPLAY_STATUS = 'composite_display_status'--><!--Device-PhotoKeys-COMPOSITE_DISPLAY_STATUS = 'composite_display_status'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -330,6 +376,8 @@ Source type of assets, read only
 
 **起始版本：** 22
 
+<!--Device-PhotoKeys-ASSET_SOURCE_TYPE = 'file_source_type'--><!--Device-PhotoKeys-ASSET_SOURCE_TYPE = 'file_source_type'-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -343,6 +391,8 @@ FUSION_ASSET_STORAGE_PATH = 'storage_path'
 Storage path of fusion assets, read only
 
 **起始版本：** 22
+
+<!--Device-PhotoKeys-FUSION_ASSET_STORAGE_PATH = 'storage_path'--><!--Device-PhotoKeys-FUSION_ASSET_STORAGE_PATH = 'storage_path'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -358,6 +408,8 @@ CLOUD_ID = 'cloud_id'
 
 **起始版本：** 22
 
+<!--Device-PhotoKeys-CLOUD_ID = 'cloud_id'--><!--Device-PhotoKeys-CLOUD_ID = 'cloud_id'-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -371,6 +423,8 @@ EXIST_COMPATIBLE_DUPLICATE = 'exist_compatible_duplicate'
 兼容副本的状态信息。
 
 **起始版本：** 22
+
+<!--Device-PhotoKeys-EXIST_COMPATIBLE_DUPLICATE = 'exist_compatible_duplicate'--><!--Device-PhotoKeys-EXIST_COMPATIBLE_DUPLICATE = 'exist_compatible_duplicate'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -386,6 +440,8 @@ VIDEO_MODE = 'video_mode'
 
 **起始版本：** 22
 
+<!--Device-PhotoKeys-VIDEO_MODE = 'video_mode'--><!--Device-PhotoKeys-VIDEO_MODE = 'video_mode'-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -399,6 +455,8 @@ EDIT_DATA_EXIST = 'edit_data_exist'
 资产的编辑数据已存在。
 
 **起始版本：** 22
+
+<!--Device-PhotoKeys-EDIT_DATA_EXIST = 'edit_data_exist'--><!--Device-PhotoKeys-EDIT_DATA_EXIST = 'edit_data_exist'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -416,6 +474,8 @@ PACKAGE_NAME = 'package_name'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PhotoKeys-PACKAGE_NAME = 'package_name'--><!--Device-PhotoKeys-PACKAGE_NAME = 'package_name'-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -431,6 +491,8 @@ PHOTO_RISK_STATUS = 'photo_risk_status'
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PhotoKeys-PHOTO_RISK_STATUS = 'photo_risk_status'--><!--Device-PhotoKeys-PHOTO_RISK_STATUS = 'photo_risk_status'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -448,6 +510,8 @@ DATE_ADDED_YEAR = 'date_added_year'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PhotoKeys-DATE_ADDED_YEAR = 'date_added_year'--><!--Device-PhotoKeys-DATE_ADDED_YEAR = 'date_added_year'-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -463,6 +527,8 @@ DATE_ADDED_MONTH = 'date_added_month'
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PhotoKeys-DATE_ADDED_MONTH = 'date_added_month'--><!--Device-PhotoKeys-DATE_ADDED_MONTH = 'date_added_month'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -480,6 +546,8 @@ DATE_ADDED_DAY = 'date_added_day'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PhotoKeys-DATE_ADDED_DAY = 'date_added_day'--><!--Device-PhotoKeys-DATE_ADDED_DAY = 'date_added_day'-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -495,6 +563,8 @@ LIVEPHOTO_4D_STATUS = 'livephoto_4d_status'
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PhotoKeys-LIVEPHOTO_4D_STATUS = 'livephoto_4d_status'--><!--Device-PhotoKeys-LIVEPHOTO_4D_STATUS = 'livephoto_4d_status'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -512,6 +582,8 @@ UNIQUE_ID = 'unique_id'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PhotoKeys-UNIQUE_ID = 'unique_id'--><!--Device-PhotoKeys-UNIQUE_ID = 'unique_id'-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -527,6 +599,8 @@ THUMB_STATUS = 'thumb_status'
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PhotoKeys-THUMB_STATUS = 'thumb_status'--><!--Device-PhotoKeys-THUMB_STATUS = 'thumb_status'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -544,6 +618,8 @@ LCD图大小。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PhotoKeys-LCD_FILE_SIZE = 'lcd_file_size'--><!--Device-PhotoKeys-LCD_FILE_SIZE = 'lcd_file_size'-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -560,6 +636,8 @@ FILE_HIDDEN = 'file_hidden'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PhotoKeys-FILE_HIDDEN = 'file_hidden'--><!--Device-PhotoKeys-FILE_HIDDEN = 'file_hidden'-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -575,6 +653,8 @@ HIDDEN_TIME = 'hidden_time'
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PhotoKeys-HIDDEN_TIME = 'hidden_time'--><!--Device-PhotoKeys-HIDDEN_TIME = 'hidden_time'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -594,6 +674,8 @@ ATTACHMENT_SIZE = 'attachment_size'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PhotoKeys-ATTACHMENT_SIZE = 'attachment_size'--><!--Device-PhotoKeys-ATTACHMENT_SIZE = 'attachment_size'-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -609,6 +691,8 @@ SHARE_OWNER_INFO = 'share_owner_info'
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PhotoKeys-SHARE_OWNER_INFO = 'share_owner_info'--><!--Device-PhotoKeys-SHARE_OWNER_INFO = 'share_owner_info'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -626,6 +710,8 @@ SHARE_RISK_STATUS = 'share_risk_status'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PhotoKeys-SHARE_RISK_STATUS = 'share_risk_status'--><!--Device-PhotoKeys-SHARE_RISK_STATUS = 'share_risk_status'-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -641,6 +727,8 @@ SHARE_RISK_TYPE = 'share_risk_type'
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PhotoKeys-SHARE_RISK_TYPE = 'share_risk_type'--><!--Device-PhotoKeys-SHARE_RISK_TYPE = 'share_risk_type'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -658,6 +746,8 @@ PHOTO_VISIBILITY = 'photo_visibility'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PhotoKeys-PHOTO_VISIBILITY = 'photo_visibility'--><!--Device-PhotoKeys-PHOTO_VISIBILITY = 'photo_visibility'-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -673,6 +763,8 @@ SHARE_GROUP = 'share_group'
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PhotoKeys-SHARE_GROUP = 'share_group'--><!--Device-PhotoKeys-SHARE_GROUP = 'share_group'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -690,6 +782,8 @@ SHARE_DATE_DAY = 'share_date_day'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PhotoKeys-SHARE_DATE_DAY = 'share_date_day'--><!--Device-PhotoKeys-SHARE_DATE_DAY = 'share_date_day'-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -705,6 +799,8 @@ MUSIC_MASTER_MODE = 'music_master_mode'
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PhotoKeys-MUSIC_MASTER_MODE = 'music_master_mode'--><!--Device-PhotoKeys-MUSIC_MASTER_MODE = 'music_master_mode'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -722,6 +818,8 @@ LIVEPHOTO_4D_LATEST_PAIR = 'livephoto_4d_latest_pair'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PhotoKeys-LIVEPHOTO_4D_LATEST_PAIR = 'livephoto_4d_latest_pair'--><!--Device-PhotoKeys-LIVEPHOTO_4D_LATEST_PAIR = 'livephoto_4d_latest_pair'-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -738,6 +836,8 @@ LOCAL_ENHANCEMENT_ABILITY = 'local_enhancement_ability'
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-PhotoKeys-LOCAL_ENHANCEMENT_ABILITY = 'local_enhancement_ability'--><!--Device-PhotoKeys-LOCAL_ENHANCEMENT_ABILITY = 'local_enhancement_ability'-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -753,6 +853,8 @@ LOCAL_ENHANCEMENT_STATUS = 'local_enhancement_status'
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-PhotoKeys-LOCAL_ENHANCEMENT_STATUS = 'local_enhancement_status'--><!--Device-PhotoKeys-LOCAL_ENHANCEMENT_STATUS = 'local_enhancement_status'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

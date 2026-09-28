@@ -12,6 +12,8 @@ export class PluralRules
 
 **替代接口：** [Intl.PluralRules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules)
 
+<!--Device-intl-export class PluralRules--><!--Device-intl-export class PluralRules-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## 导入模块
@@ -35,6 +37,8 @@ constructor()
 **替代接口：** [Intl.PluralRules.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PluralRules-constructor()--><!--Device-PluralRules-constructor()-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -64,6 +68,8 @@ constructor(locale: string | Array<string>, options?: PluralRulesOptions)
 **替代接口：** [Intl.PluralRules.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PluralRules-constructor(locale: string | Array<string>, options?: PluralRulesOptions)--><!--Device-PluralRules-constructor(locale: string | Array<string>, options?: PluralRulesOptions)-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -98,6 +104,8 @@ select(n: number): string
 **替代接口：** [Intl.PluralRules.select](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/select)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PluralRules-select(n: double): string--><!--Device-PluralRules-select(n: double): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 

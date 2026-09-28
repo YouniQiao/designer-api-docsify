@@ -18,6 +18,8 @@ function createParallelSoundPool(maxStreams: number, audioRenderInfo: audio.Audi
 
 **起始版本：** 20
 
+<!--Device-media-function createParallelSoundPool(maxStreams: int, audioRenderInfo: audio.AudioRendererInfo): Promise<SoundPool>--><!--Device-media-function createParallelSoundPool(maxStreams: int, audioRenderInfo: audio.AudioRendererInfo): Promise<SoundPool>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 **系统接口：** 此接口为系统接口。

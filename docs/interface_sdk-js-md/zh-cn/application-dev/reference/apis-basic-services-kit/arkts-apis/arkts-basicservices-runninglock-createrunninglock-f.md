@@ -22,6 +22,8 @@ function createRunningLock(name: string, type: RunningLockType, callback: AsyncC
 
 **需要权限：** ohos.permission.RUNNING_LOCK
 
+<!--Device-runningLock-function createRunningLock(name: string, type: RunningLockType, callback: AsyncCallback<RunningLock>): void--><!--Device-runningLock-function createRunningLock(name: string, type: RunningLockType, callback: AsyncCallback<RunningLock>): void-End-->
+
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 
 **参数：**
@@ -62,6 +64,8 @@ function createRunningLock(name: string, type: RunningLockType): Promise<Running
 **替代接口：** [create](arkts-basicservices-runninglock-create-f.md)
 
 **需要权限：** ohos.permission.RUNNING_LOCK
+
+<!--Device-runningLock-function createRunningLock(name: string, type: RunningLockType): Promise<RunningLock>--><!--Device-runningLock-function createRunningLock(name: string, type: RunningLockType): Promise<RunningLock>-End-->
 
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 

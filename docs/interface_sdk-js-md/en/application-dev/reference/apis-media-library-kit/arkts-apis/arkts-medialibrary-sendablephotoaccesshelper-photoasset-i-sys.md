@@ -10,6 +10,8 @@ Provides APIs for encapsulating file asset attributes.
 
 **Since:** 12
 
+<!--Device-sendablePhotoAccessHelper-interface PhotoAsset extends lang.ISendable--><!--Device-sendablePhotoAccessHelper-interface PhotoAsset extends lang.ISendable-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
@@ -29,6 +31,8 @@ Obtains analysis data. This API uses a promise to return the result.
 **Since:** 12
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAsset-getAnalysisData(analysisType: photoAccessHelper.AnalysisType): Promise<string>--><!--Device-PhotoAsset-getAnalysisData(analysisType: photoAccessHelper.AnalysisType): Promise<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -96,6 +100,8 @@ Opens the source file and returns the FD. This API uses a promise to return the 
 **Since:** 12
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAsset-requestSource(): Promise<number>--><!--Device-PhotoAsset-requestSource(): Promise<number>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

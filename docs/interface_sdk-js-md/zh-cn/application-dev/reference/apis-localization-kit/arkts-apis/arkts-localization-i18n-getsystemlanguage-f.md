@@ -20,6 +20,8 @@ export function getSystemLanguage(): string
 
 **替代接口：** [getSystemLanguage](arkts-localization-i18n-system-c.md#getsystemlanguage)
 
+<!--Device-i18n-export function getSystemLanguage(): string--><!--Device-i18n-export function getSystemLanguage(): string-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 **返回值：**

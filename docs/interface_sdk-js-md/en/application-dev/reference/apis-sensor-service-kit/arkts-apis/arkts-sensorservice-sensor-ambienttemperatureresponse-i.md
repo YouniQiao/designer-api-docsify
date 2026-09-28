@@ -10,6 +10,8 @@ Describes the ambient temperature sensor data. It extends from [Response](arkts-
 
 **Since:** 8
 
+<!--Device-sensor-interface AmbientTemperatureResponse extends Response--><!--Device-sensor-interface AmbientTemperatureResponse extends Response-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## Modules to Import
@@ -29,5 +31,7 @@ Ambient temperature, in °C.
 **Type:** number
 
 **Since:** 8
+
+<!--Device-AmbientTemperatureResponse-temperature: double--><!--Device-AmbientTemperatureResponse-temperature: double-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor

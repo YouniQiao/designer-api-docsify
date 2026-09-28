@@ -18,6 +18,8 @@ function getAllActiveIfaces(callback: AsyncCallback<Array<string>>): void
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-ethernet-function getAllActiveIfaces(callback: AsyncCallback<Array<string>>): void--><!--Device-ethernet-function getAllActiveIfaces(callback: AsyncCallback<Array<string>>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
 **系统接口：** 此接口为系统接口。
@@ -69,6 +71,8 @@ function getAllActiveIfaces(): Promise<Array<string>>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
+
+<!--Device-ethernet-function getAllActiveIfaces(): Promise<Array<string>>--><!--Device-ethernet-function getAllActiveIfaces(): Promise<Array<string>>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 

@@ -12,6 +12,8 @@ FormProvider模块提供了卡片提供方相关接口的能力，开发者在�
 
 **替代接口：** [formProvider](arkts-form-app-form-formprovider.md)
 
+<!--Device-unnamed-declare namespace formProvider--><!--Device-unnamed-declare namespace formProvider-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 ## 导入模块

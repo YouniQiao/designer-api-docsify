@@ -4,11 +4,13 @@
 declare class SymbolGlyphAttribute extends CommonMethod<SymbolGlyphAttribute>
 ```
 
-The [universal attributes](arkts-arkui-common-comp.md#common) are supported. For text attributes, only the following attributes are supported.
+The [universal attributes](arkts-arkui-common-comp.md) are supported. For text attributes, only the following attributes are supported.
 
 **Inheritance/Implementation:** SymbolGlyphAttribute extends CommonMethod<SymbolGlyphAttribute>
 
 **Since:** 11
+
+<!--Device-unnamed-declare class SymbolGlyphAttribute extends CommonMethod<SymbolGlyphAttribute>--><!--Device-unnamed-declare class SymbolGlyphAttribute extends CommonMethod<SymbolGlyphAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -35,6 +37,8 @@ Sets the effect strategy of the **SymbolGlyph** component. If this API is not us
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-SymbolGlyphAttribute-effectStrategy(value: SymbolEffectStrategy): SymbolGlyphAttribute--><!--Device-SymbolGlyphAttribute-effectStrategy(value: SymbolEffectStrategy): SymbolGlyphAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -63,6 +67,8 @@ Sets the font color of the **SymbolGlyph** component.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-SymbolGlyphAttribute-fontColor(value: Array<ResourceColor>): SymbolGlyphAttribute--><!--Device-SymbolGlyphAttribute-fontColor(value: Array<ResourceColor>): SymbolGlyphAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -94,6 +100,8 @@ Sets the font color of the **SymbolGlyph** component. Compared with the [fontCol
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
 
+<!--Device-SymbolGlyphAttribute-fontColor(value: Array<ResourceColor | ColorMetrics> | undefined): SymbolGlyphAttribute--><!--Device-SymbolGlyphAttribute-fontColor(value: Array<ResourceColor | ColorMetrics> | undefined): SymbolGlyphAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -123,6 +131,8 @@ The display size of the icon is controlled by **fontSize**. After **width** or *
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-SymbolGlyphAttribute-fontSize(value: number | string | Resource): SymbolGlyphAttribute--><!--Device-SymbolGlyphAttribute-fontSize(value: number | string | Resource): SymbolGlyphAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -154,6 +164,8 @@ The **sys.symbol.ohos_lungs** icon does not support font weight setting.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-SymbolGlyphAttribute-fontWeight(value: number | FontWeight | string): SymbolGlyphAttribute--><!--Device-SymbolGlyphAttribute-fontWeight(value: number | FontWeight | string): SymbolGlyphAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -180,6 +192,8 @@ Sets the font weight of the symbol glyph in the **SymbolGlyph** component. It su
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
 
+<!--Device-SymbolGlyphAttribute-fontWeight(value: number | FontWeight | ResourceStr, fontWeightConfigs?: FontWeightConfigs): SymbolGlyphAttribute--><!--Device-SymbolGlyphAttribute-fontWeight(value: number | FontWeight | ResourceStr, fontWeightConfigs?: FontWeightConfigs): SymbolGlyphAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -203,6 +217,8 @@ Sets the maximum font scale factor of the SymbolGlyph component. Applicable to s
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SymbolGlyphAttribute-maxFontScale(scale: Optional<number|Resource>): SymbolGlyphAttribute--><!--Device-SymbolGlyphAttribute-maxFontScale(scale: Optional<number|Resource>): SymbolGlyphAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -224,6 +240,8 @@ Sets the minimum font scale factor of the SymbolGlyph component. Applicable to s
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SymbolGlyphAttribute-minFontScale(scale: Optional<number|Resource>): SymbolGlyphAttribute--><!--Device-SymbolGlyphAttribute-minFontScale(scale: Optional<number|Resource>): SymbolGlyphAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -253,6 +271,8 @@ Sets the rendering strategy of the **SymbolGlyph** component. If this API is not
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-SymbolGlyphAttribute-renderingStrategy(value: SymbolRenderingStrategy): SymbolGlyphAttribute--><!--Device-SymbolGlyphAttribute-renderingStrategy(value: SymbolRenderingStrategy): SymbolGlyphAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -276,6 +296,8 @@ Can be displayed as a radial gradient [RadialGradientStyle](../arkts-apis/arkts-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-SymbolGlyphAttribute-shaderStyle(shader: Array<ShaderStyle | undefined> | ShaderStyle): SymbolGlyphAttribute--><!--Device-SymbolGlyphAttribute-shaderStyle(shader: Array<ShaderStyle | undefined> | ShaderStyle): SymbolGlyphAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -306,6 +328,8 @@ Sets the effect strategy and playback state of the **SymbolGlyph** component. If
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-SymbolGlyphAttribute-symbolEffect(symbolEffect: SymbolEffect, isActive?: boolean): SymbolGlyphAttribute--><!--Device-SymbolGlyphAttribute-symbolEffect(symbolEffect: SymbolEffect, isActive?: boolean): SymbolGlyphAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -333,6 +357,8 @@ Sets the effect strategy and playback trigger of the **SymbolGlyph** component. 
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-SymbolGlyphAttribute-symbolEffect(symbolEffect: SymbolEffect, triggerValue?: number): SymbolGlyphAttribute--><!--Device-SymbolGlyphAttribute-symbolEffect(symbolEffect: SymbolEffect, triggerValue?: number): SymbolGlyphAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -357,6 +383,8 @@ Sets the shadow effect of the SymbolGlyph component. When this interface is not 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 20.
+
+<!--Device-SymbolGlyphAttribute-symbolShadow(shadow: Optional<ShadowOptions>): SymbolGlyphAttribute--><!--Device-SymbolGlyphAttribute-symbolShadow(shadow: Optional<ShadowOptions>): SymbolGlyphAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

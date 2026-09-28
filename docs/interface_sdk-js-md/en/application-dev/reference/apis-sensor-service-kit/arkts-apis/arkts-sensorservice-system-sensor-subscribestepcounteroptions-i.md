@@ -14,6 +14,8 @@ Sets the parameters for subscribing to the step counter sensor, including the ca
 
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
 
+<!--Device-unnamed-export interface SubscribeStepCounterOptions--><!--Device-unnamed-export interface SubscribeStepCounterOptions-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 ## Modules to Import
@@ -39,6 +41,8 @@ Callback invoked when an API call fails. The callback parameters are **data** of
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-SubscribeStepCounterOptions-fail?: (data: string, code: number) => void--><!--Device-SubscribeStepCounterOptions-fail?: (data: string, code: number) => void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
@@ -66,6 +70,8 @@ Callback function invoked when the step counter sensor data changes. The callbac
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-SubscribeStepCounterOptions-success: (data: StepCounterResponse) => void--><!--Device-SubscribeStepCounterOptions-success: (data: StepCounterResponse) => void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 

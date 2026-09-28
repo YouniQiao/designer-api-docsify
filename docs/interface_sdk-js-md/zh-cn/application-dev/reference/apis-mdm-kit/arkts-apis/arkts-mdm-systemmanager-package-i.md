@@ -8,6 +8,8 @@ interface Package
 
 **起始版本：** 12
 
+<!--Device-systemManager-interface Package--><!--Device-systemManager-interface Package-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## 导入模块
@@ -30,6 +32,8 @@ fd?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Package-fd?: number--><!--Device-Package-fd?: number-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## path
@@ -46,6 +50,8 @@ path: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Package-path: string--><!--Device-Package-path: string-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## type
@@ -61,5 +67,7 @@ type: PackageType
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Package-type: PackageType--><!--Device-Package-type: PackageType-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager

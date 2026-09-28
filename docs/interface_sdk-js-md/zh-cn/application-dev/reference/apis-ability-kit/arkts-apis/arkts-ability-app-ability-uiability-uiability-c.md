@@ -10,6 +10,8 @@ declare class UIAbility extends Ability
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare class UIAbility extends Ability--><!--Device-unnamed-declare class UIAbility extends Ability-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 ## 导入模块
@@ -32,7 +34,9 @@ onBackground(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbility-onBackground(): void--><!--Device-UIAbility-onBackground(): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -65,7 +69,9 @@ UIAbility生命周期回调，当UIAbility侧滑返回时触发，根据返回�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbility-onBackPressed(): boolean--><!--Device-UIAbility-onBackPressed(): boolean-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -106,6 +112,8 @@ UIAbility生命周期回调，在多设备协同场景下，协同方应用在�
 **起始版本：** 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIAbility-onCollaborate(wantParam: Record<string, Object>): AbilityConstant.CollaborateResult--><!--Device-UIAbility-onCollaborate(wantParam: Record<string, Object>): AbilityConstant.CollaborateResult-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -149,7 +157,9 @@ onContinue(wantParam: Record<string, Object>):AbilityConstant.OnContinueResult |
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbility-onContinue(wantParam: Record<string, Object>):    AbilityConstant.OnContinueResult | Promise<AbilityConstant.OnContinueResult>--><!--Device-UIAbility-onContinue(wantParam: Record<string, Object>):    AbilityConstant.OnContinueResult | Promise<AbilityConstant.OnContinueResult>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -220,7 +230,9 @@ onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbility-onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void--><!--Device-UIAbility-onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -268,6 +280,8 @@ onDestroy(): void | Promise<void>
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIAbility-onDestroy(): void | Promise<void>--><!--Device-UIAbility-onDestroy(): void | Promise<void>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **示例**
@@ -314,7 +328,9 @@ UIAbility生命周期回调，当应用从前台转到后台后触发，在[onBa
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbility-onDidBackground(): void--><!--Device-UIAbility-onDidBackground(): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -384,7 +400,9 @@ UIAbility生命周期回调，应用转到前台后触发，在[onForeground](#o
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbility-onDidForeground(): void--><!--Device-UIAbility-onDidForeground(): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -404,7 +422,9 @@ onDump(params: Array<string>): Array<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbility-onDump(params: Array<string>): Array<string>--><!--Device-UIAbility-onDump(params: Array<string>): Array<string>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -447,7 +467,9 @@ onForeground(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbility-onForeground(): void--><!--Device-UIAbility-onForeground(): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -478,7 +500,9 @@ onNewWant(want: Want, launchParam: AbilityConstant.LaunchParam): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbility-onNewWant(want: Want, launchParam: AbilityConstant.LaunchParam): void--><!--Device-UIAbility-onNewWant(want: Want, launchParam: AbilityConstant.LaunchParam): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -522,7 +546,9 @@ onPrepareToTerminate(): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbility-onPrepareToTerminate(): boolean--><!--Device-UIAbility-onPrepareToTerminate(): boolean-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -589,7 +615,9 @@ onPrepareToTerminateAsync(): Promise<boolean>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbility-onPrepareToTerminateAsync(): Promise<boolean>--><!--Device-UIAbility-onPrepareToTerminateAsync(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -634,6 +662,8 @@ onSaveState(reason: AbilityConstant.StateType, wantParam: Record<string, Object>
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIAbility-onSaveState(reason: AbilityConstant.StateType, wantParam: Record<string, Object>): AbilityConstant.OnSaveResult--><!--Device-UIAbility-onSaveState(reason: AbilityConstant.StateType, wantParam: Record<string, Object>): AbilityConstant.OnSaveResult-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **参数：**
@@ -676,6 +706,8 @@ onSaveStateAsync(stateType: AbilityConstant.StateType, wantParam: Record<string,
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbility-onSaveStateAsync(stateType: AbilityConstant.StateType, wantParam: Record<string, Object>): Promise<AbilityConstant.OnSaveResult>--><!--Device-UIAbility-onSaveStateAsync(stateType: AbilityConstant.StateType, wantParam: Record<string, Object>): Promise<AbilityConstant.OnSaveResult>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -722,6 +754,8 @@ onShare(wantParam: Record<string, Object>): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIAbility-onShare(wantParam: Record<string, Object>): void--><!--Device-UIAbility-onShare(wantParam: Record<string, Object>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **参数：**
@@ -757,7 +791,9 @@ UIAbility生命周期回调，当应用从前台转到后台前触发，在[onBa
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbility-onWillBackground(): void--><!--Device-UIAbility-onWillBackground(): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -805,7 +841,9 @@ UIAbility生命周期回调，应用转到前台前触发，在[onForeground](#o
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbility-onWillForeground(): void--><!--Device-UIAbility-onWillForeground(): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -875,7 +913,9 @@ onWindowStageCreate(windowStage: window.WindowStage): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbility-onWindowStageCreate(windowStage: window.WindowStage): void--><!--Device-UIAbility-onWindowStageCreate(windowStage: window.WindowStage): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -920,7 +960,9 @@ onWindowStageDestroy(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbility-onWindowStageDestroy(): void--><!--Device-UIAbility-onWindowStageDestroy(): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -957,7 +999,9 @@ onWindowStageRestore(windowStage: window.WindowStage): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbility-onWindowStageRestore(windowStage: window.WindowStage): void--><!--Device-UIAbility-onWindowStageRestore(windowStage: window.WindowStage): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -993,7 +1037,9 @@ onWindowStageWillDestroy(windowStage: window.WindowStage): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbility-onWindowStageWillDestroy(windowStage: window.WindowStage): void--><!--Device-UIAbility-onWindowStageWillDestroy(windowStage: window.WindowStage): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -1031,6 +1077,8 @@ callee: Callee
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UIAbility-callee: Callee--><!--Device-UIAbility-callee: Callee-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 ## context
@@ -1047,7 +1095,9 @@ UIAbility的上下文。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbility-context: UIAbilityContext--><!--Device-UIAbility-context: UIAbilityContext-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -1068,7 +1118,9 @@ lastRequestWant: Want
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbility-lastRequestWant: Want--><!--Device-UIAbility-lastRequestWant: Want-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -1086,7 +1138,9 @@ UIAbility[冷启动](../../../application-models/uiability-intra-device-interact
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbility-launchWant: Want--><!--Device-UIAbility-launchWant: Want-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -1103,5 +1157,7 @@ specifiedId?: string
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIAbility-specifiedId?: string--><!--Device-UIAbility-specifiedId?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore

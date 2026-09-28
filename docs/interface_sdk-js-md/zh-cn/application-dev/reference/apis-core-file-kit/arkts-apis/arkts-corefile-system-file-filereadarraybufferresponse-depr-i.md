@@ -10,6 +10,8 @@ export interface FileReadArrayBufferResponse
 
 **废弃版本：** 10
 
+<!--Device-unnamed-export interface FileReadArrayBufferResponse--><!--Device-unnamed-export interface FileReadArrayBufferResponse-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## 导入模块
@@ -30,5 +32,7 @@ buffer: Uint8Array
 **起始版本：** 3
 
 **废弃版本：** 10
+
+<!--Device-FileReadArrayBufferResponse-buffer: Uint8Array--><!--Device-FileReadArrayBufferResponse-buffer: Uint8Array-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite

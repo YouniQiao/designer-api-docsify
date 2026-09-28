@@ -8,6 +8,8 @@ export interface DataAbilityHelper
 
 **起始版本：** 7
 
+<!--Device-unnamed-export interface DataAbilityHelper--><!--Device-unnamed-export interface DataAbilityHelper-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 ## batchInsert
@@ -21,6 +23,8 @@ batchInsert(uri: string, valuesBuckets: Array<rdb.ValuesBucket>, callback: Async
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-DataAbilityHelper-batchInsert(uri: string, valuesBuckets: Array<rdb.ValuesBucket>, callback: AsyncCallback<number>): void--><!--Device-DataAbilityHelper-batchInsert(uri: string, valuesBuckets: Array<rdb.ValuesBucket>, callback: AsyncCallback<number>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -68,6 +72,8 @@ batchInsert(uri: string, valuesBuckets: Array<rdb.ValuesBucket>): Promise<number
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-DataAbilityHelper-batchInsert(uri: string, valuesBuckets: Array<rdb.ValuesBucket>): Promise<number>--><!--Device-DataAbilityHelper-batchInsert(uri: string, valuesBuckets: Array<rdb.ValuesBucket>): Promise<number>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **参数：**
@@ -113,6 +119,8 @@ call(uri: string, method: string, arg: string, extras: PacMap, callback: AsyncCa
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-DataAbilityHelper-call(uri: string, method: string, arg: string, extras: PacMap, callback: AsyncCallback<PacMap>): void--><!--Device-DataAbilityHelper-call(uri: string, method: string, arg: string, extras: PacMap, callback: AsyncCallback<PacMap>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **参数：**
@@ -157,6 +165,8 @@ call(uri: string, method: string, arg: string, extras: PacMap): Promise<PacMap>
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-DataAbilityHelper-call(uri: string, method: string, arg: string, extras: PacMap): Promise<PacMap>--><!--Device-DataAbilityHelper-call(uri: string, method: string, arg: string, extras: PacMap): Promise<PacMap>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -205,6 +215,8 @@ delete(uri: string, predicates: dataAbility.DataAbilityPredicates, callback: Asy
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-DataAbilityHelper-delete(uri: string, predicates: dataAbility.DataAbilityPredicates, callback: AsyncCallback<number>): void--><!--Device-DataAbilityHelper-delete(uri: string, predicates: dataAbility.DataAbilityPredicates, callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **参数：**
@@ -248,6 +260,8 @@ delete(uri: string, predicates?: dataAbility.DataAbilityPredicates): Promise<num
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-DataAbilityHelper-delete(uri: string, predicates?: dataAbility.DataAbilityPredicates): Promise<number>--><!--Device-DataAbilityHelper-delete(uri: string, predicates?: dataAbility.DataAbilityPredicates): Promise<number>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -294,6 +308,8 @@ predicates筛选条件为空，自定义数据库删除数据记录的处理逻�
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-DataAbilityHelper-delete(uri: string, callback: AsyncCallback<number>): void--><!--Device-DataAbilityHelper-delete(uri: string, callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **参数：**
@@ -332,6 +348,8 @@ denormalizeUri(uri: string, callback: AsyncCallback<string>): void
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-DataAbilityHelper-denormalizeUri(uri: string, callback: AsyncCallback<string>): void--><!--Device-DataAbilityHelper-denormalizeUri(uri: string, callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -373,6 +391,8 @@ denormalizeUri(uri: string): Promise<string>
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-DataAbilityHelper-denormalizeUri(uri: string): Promise<string>--><!--Device-DataAbilityHelper-denormalizeUri(uri: string): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -418,6 +438,8 @@ executeBatch(
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-DataAbilityHelper-executeBatch(    uri: string,    operations: Array<DataAbilityOperation>,    callback: AsyncCallback<Array<DataAbilityResult>>  ): void--><!--Device-DataAbilityHelper-executeBatch(    uri: string,    operations: Array<DataAbilityOperation>,    callback: AsyncCallback<Array<DataAbilityResult>>  ): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **参数：**
@@ -461,6 +483,8 @@ executeBatch(uri: string, operations: Array<DataAbilityOperation>): Promise<Arra
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-DataAbilityHelper-executeBatch(uri: string, operations: Array<DataAbilityOperation>): Promise<Array<DataAbilityResult>>--><!--Device-DataAbilityHelper-executeBatch(uri: string, operations: Array<DataAbilityOperation>): Promise<Array<DataAbilityResult>>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -508,6 +532,8 @@ getFileTypes(uri: string, mimeTypeFilter: string, callback: AsyncCallback<Array<
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-DataAbilityHelper-getFileTypes(uri: string, mimeTypeFilter: string, callback: AsyncCallback<Array<string>>): void--><!--Device-DataAbilityHelper-getFileTypes(uri: string, mimeTypeFilter: string, callback: AsyncCallback<Array<string>>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **参数：**
@@ -550,6 +576,8 @@ getFileTypes(uri: string, mimeTypeFilter: string): Promise<Array<string>>
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-DataAbilityHelper-getFileTypes(uri: string, mimeTypeFilter: string): Promise<Array<string>>--><!--Device-DataAbilityHelper-getFileTypes(uri: string, mimeTypeFilter: string): Promise<Array<string>>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **参数：**
@@ -590,6 +618,8 @@ getType(uri: string, callback: AsyncCallback<string>): void
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-DataAbilityHelper-getType(uri: string, callback: AsyncCallback<string>): void--><!--Device-DataAbilityHelper-getType(uri: string, callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -632,6 +662,8 @@ getType(uri: string): Promise<string>
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-DataAbilityHelper-getType(uri: string): Promise<string>--><!--Device-DataAbilityHelper-getType(uri: string): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **参数：**
@@ -671,6 +703,8 @@ insert(uri: string, valuesBucket: rdb.ValuesBucket, callback: AsyncCallback<numb
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-DataAbilityHelper-insert(uri: string, valuesBucket: rdb.ValuesBucket, callback: AsyncCallback<number>): void--><!--Device-DataAbilityHelper-insert(uri: string, valuesBucket: rdb.ValuesBucket, callback: AsyncCallback<number>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -740,6 +774,8 @@ insert(uri: string, valuesBucket: rdb.ValuesBucket): Promise<number>
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-DataAbilityHelper-insert(uri: string, valuesBucket: rdb.ValuesBucket): Promise<number>--><!--Device-DataAbilityHelper-insert(uri: string, valuesBucket: rdb.ValuesBucket): Promise<number>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **参数：**
@@ -770,6 +806,8 @@ normalizeUri(uri: string, callback: AsyncCallback<string>): void
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-DataAbilityHelper-normalizeUri(uri: string, callback: AsyncCallback<string>): void--><!--Device-DataAbilityHelper-normalizeUri(uri: string, callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -812,6 +850,8 @@ normalizeUri(uri: string): Promise<string>
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-DataAbilityHelper-normalizeUri(uri: string): Promise<string>--><!--Device-DataAbilityHelper-normalizeUri(uri: string): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **参数：**
@@ -851,6 +891,8 @@ notifyChange(uri: string, callback: AsyncCallback<void>): void
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-DataAbilityHelper-notifyChange(uri: string, callback: AsyncCallback<void>): void--><!--Device-DataAbilityHelper-notifyChange(uri: string, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -893,6 +935,8 @@ notifyChange(uri: string): Promise<void>
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-DataAbilityHelper-notifyChange(uri: string): Promise<void>--><!--Device-DataAbilityHelper-notifyChange(uri: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **参数：**
@@ -932,6 +976,8 @@ off(type: 'dataChange', uri: string, callback?: AsyncCallback<void>): void
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-DataAbilityHelper-off(type: 'dataChange', uri: string, callback?: AsyncCallback<void>): void--><!--Device-DataAbilityHelper-off(type: 'dataChange', uri: string, callback?: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -978,6 +1024,8 @@ on(type: 'dataChange', uri: string, callback: AsyncCallback<void>): void
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-DataAbilityHelper-on(type: 'dataChange', uri: string, callback: AsyncCallback<void>): void--><!--Device-DataAbilityHelper-on(type: 'dataChange', uri: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **参数：**
@@ -1018,6 +1066,8 @@ openFile(uri: string, mode: string, callback: AsyncCallback<number>): void
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-DataAbilityHelper-openFile(uri: string, mode: string, callback: AsyncCallback<number>): void--><!--Device-DataAbilityHelper-openFile(uri: string, mode: string, callback: AsyncCallback<number>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -1061,6 +1111,8 @@ openFile(uri: string, mode: string): Promise<number>
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-DataAbilityHelper-openFile(uri: string, mode: string): Promise<number>--><!--Device-DataAbilityHelper-openFile(uri: string, mode: string): Promise<number>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -1109,6 +1161,8 @@ query(
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-DataAbilityHelper-query(    uri: string,    columns: Array<string>,    predicates: dataAbility.DataAbilityPredicates,    callback: AsyncCallback<ResultSet>  ): void--><!--Device-DataAbilityHelper-query(    uri: string,    columns: Array<string>,    predicates: dataAbility.DataAbilityPredicates,    callback: AsyncCallback<ResultSet>  ): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **参数：**
@@ -1155,6 +1209,8 @@ query(uri: string, callback: AsyncCallback<ResultSet>): void
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-DataAbilityHelper-query(uri: string, callback: AsyncCallback<ResultSet>): void--><!--Device-DataAbilityHelper-query(uri: string, callback: AsyncCallback<ResultSet>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **参数：**
@@ -1195,6 +1251,8 @@ query(uri: string, columns: Array<string>, callback: AsyncCallback<ResultSet>): 
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-DataAbilityHelper-query(uri: string, columns: Array<string>, callback: AsyncCallback<ResultSet>): void--><!--Device-DataAbilityHelper-query(uri: string, columns: Array<string>, callback: AsyncCallback<ResultSet>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -1239,6 +1297,8 @@ query(uri: string, predicates: dataAbility.DataAbilityPredicates, callback: Asyn
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-DataAbilityHelper-query(uri: string, predicates: dataAbility.DataAbilityPredicates, callback: AsyncCallback<ResultSet>): void--><!--Device-DataAbilityHelper-query(uri: string, predicates: dataAbility.DataAbilityPredicates, callback: AsyncCallback<ResultSet>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **参数：**
@@ -1282,6 +1342,8 @@ query(uri: string, columns?: Array<string>, predicates?: dataAbility.DataAbility
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-DataAbilityHelper-query(uri: string, columns?: Array<string>, predicates?: dataAbility.DataAbilityPredicates): Promise<ResultSet>--><!--Device-DataAbilityHelper-query(uri: string, columns?: Array<string>, predicates?: dataAbility.DataAbilityPredicates): Promise<ResultSet>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -1332,6 +1394,8 @@ update(
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-DataAbilityHelper-update(    uri: string,    valuesBucket: rdb.ValuesBucket,    predicates: dataAbility.DataAbilityPredicates,    callback: AsyncCallback<number>  ): void--><!--Device-DataAbilityHelper-update(    uri: string,    valuesBucket: rdb.ValuesBucket,    predicates: dataAbility.DataAbilityPredicates,    callback: AsyncCallback<number>  ): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -1385,6 +1449,8 @@ update(uri: string, valuesBucket: rdb.ValuesBucket, predicates?: dataAbility.Dat
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-DataAbilityHelper-update(uri: string, valuesBucket: rdb.ValuesBucket, predicates?: dataAbility.DataAbilityPredicates): Promise<number>--><!--Device-DataAbilityHelper-update(uri: string, valuesBucket: rdb.ValuesBucket, predicates?: dataAbility.DataAbilityPredicates): Promise<number>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **参数：**
@@ -1437,6 +1503,8 @@ predicates筛选条件为空，自定义更新数据库的处理逻辑。使用c
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-DataAbilityHelper-update(uri: string, valuesBucket: rdb.ValuesBucket, callback: AsyncCallback<number>): void--><!--Device-DataAbilityHelper-update(uri: string, valuesBucket: rdb.ValuesBucket, callback: AsyncCallback<number>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 

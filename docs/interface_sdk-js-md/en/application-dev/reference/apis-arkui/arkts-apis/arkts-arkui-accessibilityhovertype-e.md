@@ -8,6 +8,8 @@ Type of accessibility hover event.
 
 **Since:** 12
 
+<!--Device-unnamed-declare enum AccessibilityHoverType--><!--Device-unnamed-declare enum AccessibilityHoverType-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## HOVER_ENTER
@@ -23,6 +25,8 @@ A finger is pressed.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AccessibilityHoverType-HOVER_ENTER = 0--><!--Device-AccessibilityHoverType-HOVER_ENTER = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,6 +44,8 @@ The touch moves.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AccessibilityHoverType-HOVER_MOVE = 1--><!--Device-AccessibilityHoverType-HOVER_MOVE = 1-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## HOVER_EXIT
@@ -56,6 +62,8 @@ A finger is lifted.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AccessibilityHoverType-HOVER_EXIT = 2--><!--Device-AccessibilityHoverType-HOVER_EXIT = 2-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## HOVER_CANCEL
@@ -71,5 +79,7 @@ The current event is interrupted and canceled.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AccessibilityHoverType-HOVER_CANCEL = 3--><!--Device-AccessibilityHoverType-HOVER_CANCEL = 3-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

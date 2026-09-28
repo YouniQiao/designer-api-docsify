@@ -20,6 +20,8 @@ function bindDriverWithDeviceId(deviceId: number, onDisconnect: AsyncCallback<nu
 
 **需要权限：** ohos.permission.ACCESS_DDK_DRIVERS
 
+<!--Device-deviceManager-function bindDriverWithDeviceId(deviceId: long, onDisconnect: AsyncCallback<long>): Promise<RemoteDeviceDriver>--><!--Device-deviceManager-function bindDriverWithDeviceId(deviceId: long, onDisconnect: AsyncCallback<long>): Promise<RemoteDeviceDriver>-End-->
+
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
 **参数：**

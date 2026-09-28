@@ -14,6 +14,8 @@ interface ServiceData
 
 **替代接口：** [ServiceData](arkts-connectivity-ble-servicedata-i.md)
 
+<!--Device-bluetoothManager-interface ServiceData--><!--Device-bluetoothManager-interface ServiceData-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -38,6 +40,8 @@ serviceUuid: string
 
 **替代接口：** [serviceUuid](arkts-connectivity-ble-servicedata-i.md#serviceuuid)
 
+<!--Device-ServiceData-serviceUuid: string--><!--Device-ServiceData-serviceUuid: string-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## serviceValue
@@ -55,5 +59,7 @@ serviceValue: ArrayBuffer
 **废弃版本：** 10
 
 **替代接口：** [serviceValue](arkts-connectivity-ble-servicedata-i.md#servicevalue)
+
+<!--Device-ServiceData-serviceValue: ArrayBuffer--><!--Device-ServiceData-serviceValue: ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

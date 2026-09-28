@@ -22,6 +22,8 @@ function releaseInterface(pipe: USBDevicePipe, iface: USBInterface): number
 
 **替代接口：** [releaseInterface](arkts-basicservices-usbmanager-releaseinterface-f.md)
 
+<!--Device-usb-function releaseInterface(pipe: USBDevicePipe, iface: USBInterface): number--><!--Device-usb-function releaseInterface(pipe: USBDevicePipe, iface: USBInterface): number-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 **参数：**

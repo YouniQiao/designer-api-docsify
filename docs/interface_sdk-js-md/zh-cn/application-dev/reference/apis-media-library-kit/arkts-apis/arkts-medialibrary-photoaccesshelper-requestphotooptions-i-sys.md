@@ -8,6 +8,8 @@ interface RequestPhotoOptions
 
 **起始版本：** 11
 
+<!--Device-photoAccessHelper-interface RequestPhotoOptions--><!--Device-photoAccessHelper-interface RequestPhotoOptions-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ requestPhotoType?: RequestPhotoType
 
 **起始版本：** 11
 
+<!--Device-RequestPhotoOptions-requestPhotoType?: RequestPhotoType--><!--Device-RequestPhotoOptions-requestPhotoType?: RequestPhotoType-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ size?: image.Size
 **类型：** [image.Size](../../apis-image-kit/arkts-apis/arkts-image-image-size-i.md)
 
 **起始版本：** 11
+
+<!--Device-RequestPhotoOptions-size?: image.Size--><!--Device-RequestPhotoOptions-size?: image.Size-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

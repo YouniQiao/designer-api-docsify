@@ -15,6 +15,8 @@
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare namespace deviceManager--><!--Device-unnamed-declare namespace deviceManager-End-->
+
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
 ## 导入模块

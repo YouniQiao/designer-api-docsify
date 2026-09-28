@@ -8,6 +8,8 @@ export interface MmsInformation
 
 **起始版本：** 8
 
+<!--Device-sms-export interface MmsInformation--><!--Device-sms-export interface MmsInformation-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ attachment?: Array<MmsAttachment>
 
 **起始版本：** 8
 
+<!--Device-MmsInformation-attachment?: Array<MmsAttachment>--><!--Device-MmsInformation-attachment?: Array<MmsAttachment>-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -46,6 +50,8 @@ messageType: MessageType
 
 **起始版本：** 8
 
+<!--Device-MmsInformation-messageType: MessageType--><!--Device-MmsInformation-messageType: MessageType-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +67,8 @@ PDU头类型
 **类型：** [MmsSendReq](arkts-telephony-sms-mmssendreq-i-sys.md) &#124; [MmsSendConf](arkts-telephony-sms-mmssendconf-i-sys.md) &#124; [MmsNotificationInd](arkts-telephony-sms-mmsnotificationind-i-sys.md) &#124; [MmsRespInd](arkts-telephony-sms-mmsrespind-i-sys.md) &#124; [MmsRetrieveConf](arkts-telephony-sms-mmsretrieveconf-i-sys.md) &#124; [MmsAcknowledgeInd](arkts-telephony-sms-mmsacknowledgeind-i-sys.md) &#124; [MmsDeliveryInd](arkts-telephony-sms-mmsdeliveryind-i-sys.md) &#124; [MmsReadOrigInd](arkts-telephony-sms-mmsreadorigind-i-sys.md) &#124; [MmsReadRecInd](arkts-telephony-sms-mmsreadrecind-i-sys.md)
 
 **起始版本：** 8
+
+<!--Device-MmsInformation-mmsType: MmsSendReq | MmsSendConf | MmsNotificationInd | MmsRespInd | MmsRetrieveConf | MmsAcknowledgeInd | MmsDeliveryInd | MmsReadOrigInd | MmsReadRecInd--><!--Device-MmsInformation-mmsType: MmsSendReq | MmsSendConf | MmsNotificationInd | MmsRespInd | MmsRetrieveConf | MmsAcknowledgeInd | MmsDeliveryInd | MmsReadOrigInd | MmsReadRecInd-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 

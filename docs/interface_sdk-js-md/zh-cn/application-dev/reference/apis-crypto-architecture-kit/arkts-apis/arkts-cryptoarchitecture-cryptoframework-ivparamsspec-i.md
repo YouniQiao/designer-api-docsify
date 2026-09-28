@@ -17,6 +17,8 @@ interface IvParamsSpec extends ParamsSpec
 
 **起始版本：** 9
 
+<!--Device-cryptoFramework-interface IvParamsSpec extends ParamsSpec--><!--Device-cryptoFramework-interface IvParamsSpec extends ParamsSpec-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Cipher
 - API版本9-11：SystemCapability.Security.CryptoFramework
@@ -43,7 +45,9 @@ iv: DataBlob
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-IvParamsSpec-iv: DataBlob--><!--Device-IvParamsSpec-iv: DataBlob-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Cipher

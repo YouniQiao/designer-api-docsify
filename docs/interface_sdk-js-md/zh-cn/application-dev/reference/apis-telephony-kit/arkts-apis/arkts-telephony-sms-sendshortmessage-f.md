@@ -18,6 +18,8 @@ function sendShortMessage(options: SendMessageOptions, callback: AsyncCallback<v
 
 **需要权限：** ohos.permission.SEND_MESSAGES
 
+<!--Device-sms-function sendShortMessage(options: SendMessageOptions, callback: AsyncCallback<void>): void--><!--Device-sms-function sendShortMessage(options: SendMessageOptions, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **参数：**
@@ -86,6 +88,8 @@ function sendShortMessage(options: SendMessageOptions): Promise<void>
 **起始版本：** 10
 
 **需要权限：** ohos.permission.SEND_MESSAGES
+
+<!--Device-sms-function sendShortMessage(options: SendMessageOptions): Promise<void>--><!--Device-sms-function sendShortMessage(options: SendMessageOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 

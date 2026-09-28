@@ -10,6 +10,8 @@ interface DeviceBlockStatusInfo
 
 **起始版本：** 13
 
+<!--Device-audio-interface DeviceBlockStatusInfo--><!--Device-audio-interface DeviceBlockStatusInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 ## 导入模块
@@ -30,6 +32,8 @@ blockStatus: DeviceBlockStatus
 
 **起始版本：** 13
 
+<!--Device-DeviceBlockStatusInfo-blockStatus: DeviceBlockStatus--><!--Device-DeviceBlockStatusInfo-blockStatus: DeviceBlockStatus-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 ## devices
@@ -43,5 +47,7 @@ devices: AudioDeviceDescriptors
 **类型：** [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)
 
 **起始版本：** 13
+
+<!--Device-DeviceBlockStatusInfo-devices: AudioDeviceDescriptors--><!--Device-DeviceBlockStatusInfo-devices: AudioDeviceDescriptors-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device

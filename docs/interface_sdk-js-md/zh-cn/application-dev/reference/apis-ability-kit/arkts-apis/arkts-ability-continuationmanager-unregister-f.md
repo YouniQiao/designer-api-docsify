@@ -22,6 +22,8 @@ function unregister(token: number, callback: AsyncCallback<void>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-continuationManager-function unregister(token: number, callback: AsyncCallback<void>): void--><!--Device-continuationManager-function unregister(token: number, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.DistributedAbilityManager
 
 **参数：**
@@ -64,6 +66,8 @@ function unregister(token: number): Promise<void>
 **替代接口：** [off](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#offdevicestatechange)(type: 'deviceStateChange', callback?: Callback&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt;)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-continuationManager-function unregister(token: number): Promise<void>--><!--Device-continuationManager-function unregister(token: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.DistributedAbilityManager
 

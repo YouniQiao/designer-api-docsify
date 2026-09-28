@@ -8,6 +8,8 @@ enum ProtocolType
 
 **起始版本：** 26.0.1
 
+<!--Device-privacyComputation-enum ProtocolType--><!--Device-privacyComputation-enum ProtocolType-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 ## PSI_PROTOCOL
@@ -24,6 +26,8 @@ PSI_PROTOCOL = 0
 
 **原子化服务API：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
 
+<!--Device-ProtocolType-PSI_PROTOCOL = 0--><!--Device-ProtocolType-PSI_PROTOCOL = 0-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 ## PIR_PROTOCOL
@@ -39,5 +43,7 @@ PIR_PROTOCOL = 1
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
+
+<!--Device-ProtocolType-PIR_PROTOCOL = 1--><!--Device-ProtocolType-PIR_PROTOCOL = 1-End-->
 
 **系统能力：** SystemCapability.Security.Asset

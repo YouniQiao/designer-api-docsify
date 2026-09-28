@@ -10,6 +10,8 @@ Represents a media asset change request.
 
 **Since:** 11
 
+<!--Device-photoAccessHelper-class MediaAssetChangeRequest implements MediaChangeRequest--><!--Device-photoAccessHelper-class MediaAssetChangeRequest implements MediaChangeRequest-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
@@ -33,6 +35,8 @@ Adds resources using **PhotoProxy** data.
 > For the same asset change request, this API cannot be repeatedly called after resources are successfully added.
 
 **Since:** 11
+
+<!--Device-MediaAssetChangeRequest-addResource(type: ResourceType, proxy: PhotoProxy): void--><!--Device-MediaAssetChangeRequest-addResource(type: ResourceType, proxy: PhotoProxy): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -91,6 +95,8 @@ Adds a resource using fileUri from file management directory
 
 **Required permissions:** ohos.permission.ACCESS_MEDIALIB_THUMB_DB
 
+<!--Device-MediaAssetChangeRequest-addResourceForPicker(type: ResourceType, fileUri: string): void--><!--Device-MediaAssetChangeRequest-addResourceForPicker(type: ResourceType, fileUri: string): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -130,6 +136,8 @@ Starting from API version 18, the following characters are considered invalid: \
 For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 
 **Since:** 11
+
+<!--Device-MediaAssetChangeRequest-static createAssetRequest(context: Context, displayName: string, options?: PhotoCreateOptions): MediaAssetChangeRequest--><!--Device-MediaAssetChangeRequest-static createAssetRequest(context: Context, displayName: string, options?: PhotoCreateOptions): MediaAssetChangeRequest-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -199,6 +207,8 @@ Permanently deletes images or videos in batches by URI. The deleted images or vi
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-MediaAssetChangeRequest-static deleteAssetsPermanentlyWithUri(context: Context, assetUris: string[]): Promise<void>--><!--Device-MediaAssetChangeRequest-static deleteAssetsPermanentlyWithUri(context: Context, assetUris: string[]): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -259,6 +269,8 @@ Deletes cloud media assets to the trash in batches. This API uses a promise to r
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-MediaAssetChangeRequest-static deleteCloudAssetsWithUri(context: Context, assetUris: string[]): Promise<void>--><!--Device-MediaAssetChangeRequest-static deleteCloudAssetsWithUri(context: Context, assetUris: string[]): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -314,6 +326,8 @@ Permanently deletes images or videos in batches. This API uses a promise to retu
 **Since:** 18
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-MediaAssetChangeRequest-static deleteLocalAssetsPermanently(context: Context, assets: Array<PhotoAsset>): Promise<void>--><!--Device-MediaAssetChangeRequest-static deleteLocalAssetsPermanently(context: Context, assets: Array<PhotoAsset>): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -380,6 +394,8 @@ Permanently deletes images or video assets in batches by URI. This API uses a pr
 **Since:** 19
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-MediaAssetChangeRequest-static deleteLocalAssetsPermanentlyWithUri(context: Context, assetUris: Array<string>): Promise<void>--><!--Device-MediaAssetChangeRequest-static deleteLocalAssetsPermanentlyWithUri(context: Context, assetUris: Array<string>): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -457,6 +473,8 @@ Deletes local media assets to the trash in batches. This API uses a promise to r
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-MediaAssetChangeRequest-static deleteLocalAssetsWithUri(context: Context, assetUris: string[]): Promise<void>--><!--Device-MediaAssetChangeRequest-static deleteLocalAssetsWithUri(context: Context, assetUris: string[]): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -505,6 +523,8 @@ setAppLinkInfo(appLink: string): void
 Sets the information about the app link association.
 
 **Since:** 21
+
+<!--Device-MediaAssetChangeRequest-setAppLinkInfo(appLink: string): void--><!--Device-MediaAssetChangeRequest-setAppLinkInfo(appLink: string): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -557,6 +577,8 @@ Sets the status of the app link association.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-MediaAssetChangeRequest-setAppLinkState(appLinkState: AppLinkState): void--><!--Device-MediaAssetChangeRequest-setAppLinkState(appLinkState: AppLinkState): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -607,6 +629,8 @@ Saves the camera edited data of an asset.
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-MediaAssetChangeRequest-setCameraEditData(editData: MediaAssetEditData): void--><!--Device-MediaAssetChangeRequest-setCameraEditData(editData: MediaAssetEditData): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -634,6 +658,8 @@ setCameraShotKey(cameraShotKey: string): void
 Sets the Key for the Ultra Snapshot feature, which allows the camera to take photos or record videos with the screen off.
 
 **Since:** 12
+
+<!--Device-MediaAssetChangeRequest-setCameraShotKey(cameraShotKey: string): void--><!--Device-MediaAssetChangeRequest-setCameraShotKey(cameraShotKey: string): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -681,6 +707,8 @@ setCompositeDisplayMode(compositeDisplayMode: CompositeDisplayMode): Promise<voi
 Sets the display mode of the composite image. This API uses a promise to return the result.
 
 **Since:** 23
+
+<!--Device-MediaAssetChangeRequest-setCompositeDisplayMode(compositeDisplayMode: CompositeDisplayMode): Promise<void>--><!--Device-MediaAssetChangeRequest-setCompositeDisplayMode(compositeDisplayMode: CompositeDisplayMode): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -740,6 +768,8 @@ setEditData(editData: MediaAssetEditData): void
 Saves the edited data of an asset.
 
 **Since:** 11
+
+<!--Device-MediaAssetChangeRequest-setEditData(editData: MediaAssetEditData): void--><!--Device-MediaAssetChangeRequest-setEditData(editData: MediaAssetEditData): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -801,6 +831,8 @@ Sets the effect of this moving photo.
 
 **Since:** 12
 
+<!--Device-MediaAssetChangeRequest-setEffectMode(mode: MovingPhotoEffectMode): void--><!--Device-MediaAssetChangeRequest-setEffectMode(mode: MovingPhotoEffectMode): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -852,6 +884,8 @@ setHasAppLink(hasAppLink: number): void
 Sets the status of the app link association.
 
 **Since:** 21
+
+<!--Device-MediaAssetChangeRequest-setHasAppLink(hasAppLink: int): void--><!--Device-MediaAssetChangeRequest-setHasAppLink(hasAppLink: int): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -906,6 +940,8 @@ setHidden(hiddenState: boolean): void
 Hides this file.
 
 **Since:** 11
+
+<!--Device-MediaAssetChangeRequest-setHidden(hiddenState: boolean): void--><!--Device-MediaAssetChangeRequest-setHidden(hiddenState: boolean): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -964,6 +1000,8 @@ set hidden state of asset.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-MediaAssetChangeRequest-setHiddenAttribute(hiddenState: boolean): void--><!--Device-MediaAssetChangeRequest-setHiddenAttribute(hiddenState: boolean): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -1021,6 +1059,8 @@ Set 4d livephoto status.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-MediaAssetChangeRequest-setLivePhoto4dStatus(status: LivePhoto4dStatus, livephoto_4d_latest_pair?: string): void--><!--Device-MediaAssetChangeRequest-setLivePhoto4dStatus(status: LivePhoto4dStatus, livephoto_4d_latest_pair?: string): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -1048,6 +1088,8 @@ setLocation(longitude: number, latitude: number): void
 Sets location information.
 
 **Since:** 11
+
+<!--Device-MediaAssetChangeRequest-setLocation(longitude: double, latitude: double): void--><!--Device-MediaAssetChangeRequest-setLocation(longitude: double, latitude: double): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -1107,6 +1149,8 @@ Saves MovingPhoto version which is used to determine what special efficacy is su
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-MediaAssetChangeRequest-setMovingPhotoVersion(version: int): void--><!--Device-MediaAssetChangeRequest-setMovingPhotoVersion(version: int): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -1161,6 +1205,8 @@ setSupportedWatermarkType(watermarkType: WatermarkType): void
 Sets the watermark type supported by photos.
 
 **Since:** 14
+
+<!--Device-MediaAssetChangeRequest-setSupportedWatermarkType(watermarkType: WatermarkType): void--><!--Device-MediaAssetChangeRequest-setSupportedWatermarkType(watermarkType: WatermarkType): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -1217,6 +1263,8 @@ set title by filemanger.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-MediaAssetChangeRequest-setTitleByFile(name: string): void--><!--Device-MediaAssetChangeRequest-setTitleByFile(name: string): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -1270,6 +1318,8 @@ setUserComment(userComment: string): void
 Sets the user comment information of this media asset.
 
 **Since:** 11
+
+<!--Device-MediaAssetChangeRequest-setUserComment(userComment: string): void--><!--Device-MediaAssetChangeRequest-setUserComment(userComment: string): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -1326,6 +1376,8 @@ setVideoEnhancementAttr(videoEnhancementType: VideoEnhancementType, photoId: str
 Set video enhancement attribute
 
 **Since:** 13
+
+<!--Device-MediaAssetChangeRequest-setVideoEnhancementAttr(videoEnhancementType: VideoEnhancementType, photoId: string): void--><!--Device-MediaAssetChangeRequest-setVideoEnhancementAttr(videoEnhancementType: VideoEnhancementType, photoId: string): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

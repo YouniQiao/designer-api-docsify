@@ -16,6 +16,8 @@ export interface SatelliteStatusInfo
 
 **需要权限：** ohos.permission.LOCATION
 
+<!--Device-geolocation-export interface SatelliteStatusInfo--><!--Device-geolocation-export interface SatelliteStatusInfo-End-->
+
 **系统能力：** SystemCapability.Location.Location.Gnss
 
 ## 导入模块
@@ -40,6 +42,8 @@ altitudes: Array<number>
 
 **替代接口：** [altitudes](arkts-location-geolocationmanager-satellitestatusinfo-i.md#altitudes)
 
+<!--Device-SatelliteStatusInfo-altitudes: Array<number>--><!--Device-SatelliteStatusInfo-altitudes: Array<number>-End-->
+
 **系统能力：** SystemCapability.Location.Location.Gnss
 
 ## azimuths
@@ -57,6 +61,8 @@ azimuths: Array<number>
 **废弃版本：** 9
 
 **替代接口：** [azimuths](arkts-location-geolocationmanager-satellitestatusinfo-i.md#azimuths)
+
+<!--Device-SatelliteStatusInfo-azimuths: Array<number>--><!--Device-SatelliteStatusInfo-azimuths: Array<number>-End-->
 
 **系统能力：** SystemCapability.Location.Location.Gnss
 
@@ -76,6 +82,8 @@ carrierFrequencies: Array<number>
 
 **替代接口：** [carrierFrequencies](arkts-location-geolocationmanager-satellitestatusinfo-i.md#carrierfrequencies)
 
+<!--Device-SatelliteStatusInfo-carrierFrequencies: Array<number>--><!--Device-SatelliteStatusInfo-carrierFrequencies: Array<number>-End-->
+
 **系统能力：** SystemCapability.Location.Location.Gnss
 
 ## carrierToNoiseDensitys
@@ -93,6 +101,8 @@ carrierToNoiseDensitys: Array<number>
 **废弃版本：** 9
 
 **替代接口：** [carrierToNoiseDensitys](arkts-location-geolocationmanager-satellitestatusinfo-i.md#carriertonoisedensitys)
+
+<!--Device-SatelliteStatusInfo-carrierToNoiseDensitys: Array<number>--><!--Device-SatelliteStatusInfo-carrierToNoiseDensitys: Array<number>-End-->
 
 **系统能力：** SystemCapability.Location.Location.Gnss
 
@@ -112,6 +122,8 @@ satelliteIds: Array<number>
 
 **替代接口：** [satelliteIds](arkts-location-geolocationmanager-satellitestatusinfo-i.md#satelliteids)
 
+<!--Device-SatelliteStatusInfo-satelliteIds: Array<number>--><!--Device-SatelliteStatusInfo-satelliteIds: Array<number>-End-->
+
 **系统能力：** SystemCapability.Location.Location.Gnss
 
 ## satellitesNumber
@@ -129,5 +141,7 @@ satellitesNumber: number
 **废弃版本：** 9
 
 **替代接口：** [satellitesNumber](arkts-location-geolocationmanager-satellitestatusinfo-i.md#satellitesnumber)
+
+<!--Device-SatelliteStatusInfo-satellitesNumber: number--><!--Device-SatelliteStatusInfo-satellitesNumber: number-End-->
 
 **系统能力：** SystemCapability.Location.Location.Gnss

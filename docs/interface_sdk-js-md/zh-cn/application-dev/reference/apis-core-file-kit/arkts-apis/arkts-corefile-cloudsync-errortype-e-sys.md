@@ -13,6 +13,8 @@ enum ErrorType
 
 **起始版本：** 12
 
+<!--Device-cloudSync-enum ErrorType--><!--Device-cloudSync-enum ErrorType-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## RESPONSE_TIME_OUT
@@ -28,6 +30,8 @@ RESPONSE_TIME_OUT = 9
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ErrorType-RESPONSE_TIME_OUT = 9--><!--Device-ErrorType-RESPONSE_TIME_OUT = 9-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -46,6 +50,8 @@ UNKNOWN_ERROR = 10
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ErrorType-UNKNOWN_ERROR = 10--><!--Device-ErrorType-UNKNOWN_ERROR = 10-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 

@@ -6,11 +6,13 @@ declare class GridAttribute extends ScrollableCommonMethod<GridAttribute>
 
 除支持[通用属性](arkts-arkui-common-comp-commonmethod-c.md)和[滚动组件通用属性](arkts-arkui-common-comp-scrollablecommonmethod-c.md)外，还支持以下属性：
 
-除支持[通用事件](arkts-arkui-common-comp.md#common)和[滚动组件通用事件](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#事件)外，还支持以下事件：
+除支持[通用事件](arkts-arkui-common-comp.md)和[滚动组件通用事件](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#事件)外，还支持以下事件：
 
 **继承/实现关系：** GridAttribute extends ScrollableCommonMethod<GridAttribute>
 
 **起始版本：** 7
+
+<!--Device-unnamed-declare class GridAttribute extends ScrollableCommonMethod<GridAttribute>--><!--Device-unnamed-declare class GridAttribute extends ScrollableCommonMethod<GridAttribute>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,6 +29,8 @@ alignItems(alignment: Optional<GridItemAlignment>)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GridAttribute-alignItems(alignment: Optional<GridItemAlignment>): GridAttribute--><!--Device-GridAttribute-alignItems(alignment: Optional<GridItemAlignment>): GridAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,6 +58,8 @@ cachedCount(value: number)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-GridAttribute-cachedCount(value: number): GridAttribute--><!--Device-GridAttribute-cachedCount(value: number): GridAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -79,6 +85,8 @@ cachedCount(count: number, show: boolean)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-GridAttribute-cachedCount(count: number, show: boolean): GridAttribute--><!--Device-GridAttribute-cachedCount(count: number, show: boolean): GridAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -110,6 +118,8 @@ cellLength(value: number)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-GridAttribute-cellLength(value: number): GridAttribute--><!--Device-GridAttribute-cellLength(value: number): GridAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -131,6 +141,8 @@ columnsGap(value: Length)
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-GridAttribute-columnsGap(value: Length): GridAttribute--><!--Device-GridAttribute-columnsGap(value: Length): GridAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -172,6 +184,8 @@ auto-fit模式和auto-stretch模式只支持track-size为一个有效列宽值�
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-GridAttribute-columnsTemplate(value: string): GridAttribute--><!--Device-GridAttribute-columnsTemplate(value: string): GridAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -202,6 +216,8 @@ columnsTemplate(value: string | ItemFillPolicy)
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
+<!--Device-GridAttribute-columnsTemplate(value: string | ItemFillPolicy): GridAttribute--><!--Device-GridAttribute-columnsTemplate(value: string | ItemFillPolicy): GridAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -224,6 +240,8 @@ edgeEffect(value: EdgeEffect, options?: EdgeEffectOptions)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-GridAttribute-edgeEffect(value: EdgeEffect, options?: EdgeEffectOptions): GridAttribute--><!--Device-GridAttribute-edgeEffect(value: EdgeEffect, options?: EdgeEffectOptions): GridAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -239,7 +257,7 @@ edgeEffect(value: EdgeEffect, options?: EdgeEffectOptions)
 editMode(value: boolean)
 ```
 
-设置Grid是否进入编辑模式，进入编辑模式可以拖拽Grid组件内部[GridItem](arkts-arkui-griditem-comp.md#griditem)。
+设置Grid是否进入编辑模式，进入编辑模式可以拖拽Grid组件内部[GridItem](arkts-arkui-griditem-comp.md)。
 
 > **说明：** 
 > 
@@ -250,6 +268,8 @@ editMode(value: boolean)
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-GridAttribute-editMode(value: boolean): GridAttribute--><!--Device-GridAttribute-editMode(value: boolean): GridAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -273,6 +293,8 @@ editModeOptions(options?: EditModeOptions)
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
+<!--Device-GridAttribute-editModeOptions(options?: EditModeOptions): GridAttribute--><!--Device-GridAttribute-editModeOptions(options?: EditModeOptions): GridAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -287,13 +309,15 @@ editModeOptions(options?: EditModeOptions)
 enableEditMode(enabled: boolean | undefined)
 ```
 
-设置Grid是否启用编辑模式，启用编辑模式后可以在Grid组件内滑动多选[GridItem](arkts-arkui-griditem-comp.md#griditem)。未通过该接口设置时，不启用编辑模式。
+设置Grid是否启用编辑模式，启用编辑模式后可以在Grid组件内滑动多选[GridItem](arkts-arkui-griditem-comp.md)。未通过该接口设置时，不启用编辑模式。
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-GridAttribute-enableEditMode(enabled: boolean | undefined): GridAttribute--><!--Device-GridAttribute-enableEditMode(enabled: boolean | undefined): GridAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -317,6 +341,8 @@ enableScrollInteraction(value: boolean)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-GridAttribute-enableScrollInteraction(value: boolean): GridAttribute--><!--Device-GridAttribute-enableScrollInteraction(value: boolean): GridAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -339,6 +365,8 @@ focusWrapMode(mode: Optional<FocusWrapMode>)
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-GridAttribute-focusWrapMode(mode: Optional<FocusWrapMode>): GridAttribute--><!--Device-GridAttribute-focusWrapMode(mode: Optional<FocusWrapMode>): GridAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -360,6 +388,8 @@ friction(value: number | Resource)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-GridAttribute-friction(value: number | Resource): GridAttribute--><!--Device-GridAttribute-friction(value: number | Resource): GridAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -386,6 +416,8 @@ layoutDirection(value: GridDirection)
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-GridAttribute-layoutDirection(value: GridDirection): GridAttribute--><!--Device-GridAttribute-layoutDirection(value: GridDirection): GridAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -418,6 +450,8 @@ maxCount(value: number)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-GridAttribute-maxCount(value: number): GridAttribute--><!--Device-GridAttribute-maxCount(value: number): GridAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -449,6 +483,8 @@ minCount(value: number)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-GridAttribute-minCount(value: number): GridAttribute--><!--Device-GridAttribute-minCount(value: number): GridAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -463,13 +499,15 @@ minCount(value: number)
 multiSelectable(value: boolean)
 ```
 
-设置是否开启鼠标框选。开启框选后，可以配合GridItem的selected属性和onSelect事件获取GridItem的选中状态，还可以通过[多态样式](arkts-arkui-common-comp.md#common)设置GridItem的选中态样式（GridItem默认无选中态样式）。
+设置是否开启鼠标框选。开启框选后，可以配合GridItem的selected属性和onSelect事件获取GridItem的选中状态，还可以通过[多态样式](arkts-arkui-common-comp.md)设置GridItem的选中态样式（GridItem默认无选中态样式）。
 
 **起始版本：** 8
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-GridAttribute-multiSelectable(value: boolean): GridAttribute--><!--Device-GridAttribute-multiSelectable(value: boolean): GridAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -493,6 +531,8 @@ nestedScroll(value: NestedScrollOptions)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-GridAttribute-nestedScroll(value: NestedScrollOptions): GridAttribute--><!--Device-GridAttribute-nestedScroll(value: NestedScrollOptions): GridAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -514,6 +554,8 @@ onEditModeChange(callback: Callback<boolean> | undefined)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-GridAttribute-onEditModeChange(callback: Callback<boolean> | undefined): GridAttribute--><!--Device-GridAttribute-onEditModeChange(callback: Callback<boolean> | undefined): GridAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -537,6 +579,8 @@ onItemDragEnter(event: (event: ItemDragInfo) => void)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-GridAttribute-onItemDragEnter(event: (event: ItemDragInfo) => void): GridAttribute--><!--Device-GridAttribute-onItemDragEnter(event: (event: ItemDragInfo) => void): GridAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -559,6 +603,8 @@ onItemDragLeave(event: (event: ItemDragInfo, itemIndex: number) => void)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-GridAttribute-onItemDragLeave(event: (event: ItemDragInfo, itemIndex: number) => void): GridAttribute--><!--Device-GridAttribute-onItemDragLeave(event: (event: ItemDragInfo, itemIndex: number) => void): GridAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -580,6 +626,8 @@ onItemDragMove(event: (event: ItemDragInfo, itemIndex: number, insertIndex: numb
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-GridAttribute-onItemDragMove(event: (event: ItemDragInfo, itemIndex: number, insertIndex: number) => void): GridAttribute--><!--Device-GridAttribute-onItemDragMove(event: (event: ItemDragInfo, itemIndex: number, insertIndex: number) => void): GridAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -611,6 +659,8 @@ onItemDragStart(event: OnItemDragStartCallback)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-GridAttribute-onItemDragStart(event: OnItemDragStartCallback): GridAttribute--><!--Device-GridAttribute-onItemDragStart(event: OnItemDragStartCallback): GridAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -637,6 +687,8 @@ onItemDrop(
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-GridAttribute-onItemDrop(    event: (event: ItemDragInfo, itemIndex: number, insertIndex: number, isSuccess: boolean) => void,  ): GridAttribute--><!--Device-GridAttribute-onItemDrop(    event: (event: ItemDragInfo, itemIndex: number, insertIndex: number, isSuccess: boolean) => void,  ): GridAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -660,6 +712,8 @@ Grid边缘效果为弹簧效果时，滑动经过末尾位置时触发一次，�
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-GridAttribute-onReachEnd(event: () => void): GridAttribute--><!--Device-GridAttribute-onReachEnd(event: () => void): GridAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -685,6 +739,8 @@ Grid初始化时会触发一次，Grid滚动到起始位置时触发一次。Gri
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-GridAttribute-onReachStart(event: () => void): GridAttribute--><!--Device-GridAttribute-onReachStart(event: () => void): GridAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -708,6 +764,8 @@ onScrollBarUpdate(event: (index: number, offset: number) => ComputedBarAttribute
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-GridAttribute-onScrollBarUpdate(event: (index: number, offset: number) => ComputedBarAttribute): GridAttribute--><!--Device-GridAttribute-onScrollBarUpdate(event: (index: number, offset: number) => ComputedBarAttribute): GridAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -743,6 +801,8 @@ onScrollFrameBegin(event: OnScrollFrameBeginCallback)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-GridAttribute-onScrollFrameBegin(event: OnScrollFrameBeginCallback): GridAttribute--><!--Device-GridAttribute-onScrollFrameBegin(event: OnScrollFrameBeginCallback): GridAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -764,6 +824,8 @@ onScrollIndex(event: (first: number, last: number) => void)
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-GridAttribute-onScrollIndex(event: (first: number, last: number) => void): GridAttribute--><!--Device-GridAttribute-onScrollIndex(event: (first: number, last: number) => void): GridAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -787,6 +849,8 @@ onScrollStart(event: () => void)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-GridAttribute-onScrollStart(event: () => void): GridAttribute--><!--Device-GridAttribute-onScrollStart(event: () => void): GridAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -809,6 +873,8 @@ onScrollStop(event: () => void)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-GridAttribute-onScrollStop(event: () => void): GridAttribute--><!--Device-GridAttribute-onScrollStop(event: () => void): GridAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -830,6 +896,8 @@ rowsGap(value: Length)
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-GridAttribute-rowsGap(value: Length): GridAttribute--><!--Device-GridAttribute-rowsGap(value: Length): GridAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -869,6 +937,8 @@ auto-fit模式和auto-stretch模式只支持track-size为一个有效行高值�
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-GridAttribute-rowsTemplate(value: string): GridAttribute--><!--Device-GridAttribute-rowsTemplate(value: string): GridAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -891,6 +961,8 @@ scrollBar(value: BarState)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-GridAttribute-scrollBar(value: BarState): GridAttribute--><!--Device-GridAttribute-scrollBar(value: BarState): GridAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -912,6 +984,8 @@ scrollBarColor(value: Color | number | string)
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-GridAttribute-scrollBarColor(value: Color | number | string): GridAttribute--><!--Device-GridAttribute-scrollBarColor(value: Color | number | string): GridAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -937,6 +1011,8 @@ scrollBarColor(color: Color | number | string | Resource)
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
+<!--Device-GridAttribute-scrollBarColor(color: Color | number | string | Resource): GridAttribute--><!--Device-GridAttribute-scrollBarColor(color: Color | number | string | Resource): GridAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -958,6 +1034,8 @@ scrollBarWidth(value: number | string)
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-GridAttribute-scrollBarWidth(value: number | string): GridAttribute--><!--Device-GridAttribute-scrollBarWidth(value: number | string): GridAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -985,6 +1063,8 @@ scrollBarWidth(value: number | string | Resource)
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-GridAttribute-scrollBarWidth(value: number | string | Resource): GridAttribute--><!--Device-GridAttribute-scrollBarWidth(value: number | string | Resource): GridAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -1011,6 +1091,8 @@ supportAnimation动画效果参考[示例5（Grid拖拽场景）](../../../refer
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-GridAttribute-supportAnimation(value: boolean): GridAttribute--><!--Device-GridAttribute-supportAnimation(value: boolean): GridAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -1033,6 +1115,8 @@ supportEmptyBranchInLazyLoading(supported: boolean | undefined)
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
+<!--Device-GridAttribute-supportEmptyBranchInLazyLoading(supported: boolean | undefined): GridAttribute--><!--Device-GridAttribute-supportEmptyBranchInLazyLoading(supported: boolean | undefined): GridAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -1054,6 +1138,8 @@ syncLoad(enable: boolean)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-GridAttribute-syncLoad(enable: boolean): GridAttribute--><!--Device-GridAttribute-syncLoad(enable: boolean): GridAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1080,6 +1166,8 @@ onScroll(event: (scrollOffset: number, scrollState: ScrollState) => void)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-GridAttribute-onScroll(event: (scrollOffset: number, scrollState: ScrollState) => void): GridAttribute--><!--Device-GridAttribute-onScroll(event: (scrollOffset: number, scrollState: ScrollState) => void): GridAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

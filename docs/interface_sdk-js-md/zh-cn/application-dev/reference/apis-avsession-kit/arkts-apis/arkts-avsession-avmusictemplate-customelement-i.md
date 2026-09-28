@@ -12,6 +12,8 @@ interface CustomElement extends OperResult
 
 **起始版本：** 23
 
+<!--Device-avMusicTemplate-interface CustomElement extends OperResult--><!--Device-avMusicTemplate-interface CustomElement extends OperResult-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## 导入模块
@@ -34,6 +36,8 @@ customCompilations?: Compilation[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-CustomElement-customCompilations?: Compilation[]--><!--Device-CustomElement-customCompilations?: Compilation[]-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## settings
@@ -49,6 +53,8 @@ settings?: SettingItem[]
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-CustomElement-settings?: SettingItem[]--><!--Device-CustomElement-settings?: SettingItem[]-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -66,6 +72,8 @@ tabs?: MediaTab[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-CustomElement-tabs?: MediaTab[]--><!--Device-CustomElement-tabs?: MediaTab[]-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## userInfo
@@ -81,5 +89,7 @@ userInfo?: UserInfo
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-CustomElement-userInfo?: UserInfo--><!--Device-CustomElement-userInfo?: UserInfo-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate

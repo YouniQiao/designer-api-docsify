@@ -18,6 +18,8 @@ function sendControlEvent(event: ControlEvent): Promise<void>
 
 **需要权限：** ohos.permission.SIMULATE_USER_INPUT
 
+<!--Device-onScreen-function sendControlEvent(event: ControlEvent): Promise<void>--><!--Device-onScreen-function sendControlEvent(event: ControlEvent): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **系统接口：** 此接口为系统接口。

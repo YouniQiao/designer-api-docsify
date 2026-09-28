@@ -16,6 +16,8 @@ function getProcessMemoryByPid(pid: number): Promise<number>
 
 **起始版本：** 10
 
+<!--Device-appManager-function getProcessMemoryByPid(pid: int): Promise<int>--><!--Device-appManager-function getProcessMemoryByPid(pid: int): Promise<int>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -73,6 +75,8 @@ function getProcessMemoryByPid(pid: number, callback: AsyncCallback<number>): vo
 通过pid查询对应进程占用的内存大小。使用callback异步回调。
 
 **起始版本：** 10
+
+<!--Device-appManager-function getProcessMemoryByPid(pid: int, callback: AsyncCallback<int>): void--><!--Device-appManager-function getProcessMemoryByPid(pid: int, callback: AsyncCallback<int>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

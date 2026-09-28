@@ -16,6 +16,8 @@ function getKeyboardRepeatRate(callback: AsyncCallback<number>): void
 
 **起始版本：** 10
 
+<!--Device-inputDevice-function getKeyboardRepeatRate(callback: AsyncCallback<int>): void--><!--Device-inputDevice-function getKeyboardRepeatRate(callback: AsyncCallback<int>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 **系统接口：** 此接口为系统接口。
@@ -76,6 +78,8 @@ function getKeyboardRepeatRate(): Promise<number>
 获取键盘按键的重复速率，使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-inputDevice-function getKeyboardRepeatRate(): Promise<int>--><!--Device-inputDevice-function getKeyboardRepeatRate(): Promise<int>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 

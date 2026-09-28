@@ -18,6 +18,8 @@ function getExtensionRunningInfos(upperLimit: number): Promise<Array<ExtensionRu
 
 **需要权限：** ohos.permission.GET_RUNNING_INFO
 
+<!--Device-abilityManager-function getExtensionRunningInfos(upperLimit: int): Promise<Array<ExtensionRunningInfo>>--><!--Device-abilityManager-function getExtensionRunningInfos(upperLimit: int): Promise<Array<ExtensionRunningInfo>>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -56,6 +58,8 @@ function getExtensionRunningInfos(upperLimit: number, callback: AsyncCallback<Ar
 **起始版本：** 9
 
 **需要权限：** ohos.permission.GET_RUNNING_INFO
+
+<!--Device-abilityManager-function getExtensionRunningInfos(upperLimit: int, callback: AsyncCallback<Array<ExtensionRunningInfo>>): void--><!--Device-abilityManager-function getExtensionRunningInfos(upperLimit: int, callback: AsyncCallback<Array<ExtensionRunningInfo>>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

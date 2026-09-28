@@ -8,6 +8,8 @@ The MediaAssetManager class is used for manipulating the read and write operatio
 
 **Since:** 11
 
+<!--Device-photoAccessHelper-class MediaAssetManager--><!--Device-photoAccessHelper-class MediaAssetManager-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
@@ -27,6 +29,8 @@ Cancels a request for the asset, the callback of which has not been triggered ye
 **Since:** 12
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-MediaAssetManager-static cancelRequest(context: Context, requestId: string): Promise<void>--><!--Device-MediaAssetManager-static cancelRequest(context: Context, requestId: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -81,7 +85,9 @@ Loads a moving photo in the application sandbox. This API uses a promise to retu
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 14.
+
+<!--Device-MediaAssetManager-static loadMovingPhoto(      context: Context,      imageFileUri: string,      videoFileUri: string    ): Promise<MovingPhoto>--><!--Device-MediaAssetManager-static loadMovingPhoto(      context: Context,      imageFileUri: string,      videoFileUri: string    ): Promise<MovingPhoto>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -136,6 +142,8 @@ Requests an image quickly. This API uses a promise to return the result.
 **Since:** 13
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-MediaAssetManager-static quickRequestImage(      context: Context,      asset: PhotoAsset,      requestOptions: RequestOptions,      dataHandler: QuickImageDataHandler<image.Picture>    ): Promise<string>--><!--Device-MediaAssetManager-static quickRequestImage(      context: Context,      asset: PhotoAsset,      requestOptions: RequestOptions,      dataHandler: QuickImageDataHandler<image.Picture>    ): Promise<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -208,6 +216,8 @@ Requests an image. This API uses a promise to return the result.
 **Since:** 11
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-MediaAssetManager-static requestImage(context: Context, asset: PhotoAsset, requestOptions: RequestOptions, dataHandler: MediaAssetDataHandler<image.ImageSource>): Promise<string>--><!--Device-MediaAssetManager-static requestImage(context: Context, asset: PhotoAsset, requestOptions: RequestOptions, dataHandler: MediaAssetDataHandler<image.ImageSource>): Promise<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -288,6 +298,8 @@ Requests image data. This API uses a promise to return the result.
 **Since:** 11
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-MediaAssetManager-static requestImageData(context: Context, asset: PhotoAsset, requestOptions: RequestOptions, dataHandler: MediaAssetDataHandler<ArrayBuffer>): Promise<string>--><!--Device-MediaAssetManager-static requestImageData(context: Context, asset: PhotoAsset, requestOptions: RequestOptions, dataHandler: MediaAssetDataHandler<ArrayBuffer>): Promise<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -373,6 +385,8 @@ Requests a moving photo object, which can be used to request the asset data of t
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-MediaAssetManager-static requestMovingPhoto(      context: Context,      asset: PhotoAsset,      requestOptions: RequestOptions,      dataHandler: MediaAssetDataHandler<MovingPhoto>    ): Promise<string>--><!--Device-MediaAssetManager-static requestMovingPhoto(      context: Context,      asset: PhotoAsset,      requestOptions: RequestOptions,      dataHandler: MediaAssetDataHandler<MovingPhoto>    ): Promise<string>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
@@ -456,6 +470,8 @@ Requests a video and saves it to the specified sandbox directory. This API uses 
 **Since:** 12
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-MediaAssetManager-static requestVideoFile(      context: Context,      asset: PhotoAsset,      requestOptions: RequestOptions,      fileUri: string,      dataHandler: MediaAssetDataHandler<boolean>    ): Promise<string>--><!--Device-MediaAssetManager-static requestVideoFile(      context: Context,      asset: PhotoAsset,      requestOptions: RequestOptions,      fileUri: string,      dataHandler: MediaAssetDataHandler<boolean>    ): Promise<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

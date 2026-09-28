@@ -16,4 +16,6 @@ For details, see [@Observed and @ObjectLink Decorators: Observing Property Chang
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-unnamed-declare const Observed: ClassDecorator--><!--Device-unnamed-declare const Observed: ClassDecorator-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

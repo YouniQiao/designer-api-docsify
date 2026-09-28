@@ -10,6 +10,8 @@ interface AVCallState
 
 **起始版本：** 11
 
+<!--Device-avSession-interface AVCallState--><!--Device-avSession-interface AVCallState-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 ## 导入模块
@@ -30,7 +32,9 @@ muted: boolean
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVCallState-muted: boolean--><!--Device-AVCallState-muted: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -46,6 +50,8 @@ state: CallState
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVCallState-state: CallState--><!--Device-AVCallState-state: CallState-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core

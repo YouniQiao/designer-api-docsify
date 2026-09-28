@@ -10,6 +10,8 @@ declare interface CheckBoxConfiguration extends CommonConfiguration<CheckBoxConf
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare interface CheckBoxConfiguration extends CommonConfiguration<CheckBoxConfiguration>--><!--Device-unnamed-declare interface CheckBoxConfiguration extends CommonConfiguration<CheckBoxConfiguration>-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## name
@@ -27,6 +29,8 @@ name: string
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-CheckBoxConfiguration-name: string--><!--Device-CheckBoxConfiguration-name: string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,6 +50,8 @@ selected: boolean
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-CheckBoxConfiguration-selected: boolean--><!--Device-CheckBoxConfiguration-selected: boolean-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## triggerChange
@@ -63,5 +69,7 @@ triggerChange: Callback<boolean>
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-CheckBoxConfiguration-triggerChange: Callback<boolean>--><!--Device-CheckBoxConfiguration-triggerChange: Callback<boolean>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

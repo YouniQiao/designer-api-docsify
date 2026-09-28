@@ -8,6 +8,8 @@ Codec MIME类型枚举。
 
 **起始版本：** 8
 
+<!--Device-media-enum CodecMimeType--><!--Device-media-enum CodecMimeType-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 ## VIDEO_H263
@@ -19,6 +21,8 @@ VIDEO_H263 = 'video/h263'
 表示视频/h263类型。
 
 **起始版本：** 8
+
+<!--Device-CodecMimeType-VIDEO_H263 = 'video/h263'--><!--Device-CodecMimeType-VIDEO_H263 = 'video/h263'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -32,7 +36,9 @@ VIDEO_AVC = 'video/avc'
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-CodecMimeType-VIDEO_AVC = 'video/avc'--><!--Device-CodecMimeType-VIDEO_AVC = 'video/avc'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -46,6 +52,8 @@ VIDEO_MPEG2 = 'video/mpeg2'
 
 **起始版本：** 8
 
+<!--Device-CodecMimeType-VIDEO_MPEG2 = 'video/mpeg2'--><!--Device-CodecMimeType-VIDEO_MPEG2 = 'video/mpeg2'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 ## VIDEO_MPEG4
@@ -57,6 +65,8 @@ VIDEO_MPEG4 = 'video/mp4v-es'
 表示视频/mpeg4类型。
 
 **起始版本：** 8
+
+<!--Device-CodecMimeType-VIDEO_MPEG4 = 'video/mp4v-es'--><!--Device-CodecMimeType-VIDEO_MPEG4 = 'video/mp4v-es'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -70,6 +80,8 @@ VIDEO_VP8 = 'video/x-vnd.on2.vp8'
 
 **起始版本：** 8
 
+<!--Device-CodecMimeType-VIDEO_VP8 = 'video/x-vnd.on2.vp8'--><!--Device-CodecMimeType-VIDEO_VP8 = 'video/x-vnd.on2.vp8'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 ## AUDIO_AAC
@@ -82,7 +94,9 @@ AUDIO_AAC = 'audio/mp4a-latm'
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-CodecMimeType-AUDIO_AAC = 'audio/mp4a-latm'--><!--Device-CodecMimeType-AUDIO_AAC = 'audio/mp4a-latm'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -96,6 +110,8 @@ AUDIO_VORBIS = 'audio/vorbis'
 
 **起始版本：** 8
 
+<!--Device-CodecMimeType-AUDIO_VORBIS = 'audio/vorbis'--><!--Device-CodecMimeType-AUDIO_VORBIS = 'audio/vorbis'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 ## AUDIO_FLAC
@@ -107,6 +123,8 @@ AUDIO_FLAC = 'audio/flac'
 表示音频/flac类型。
 
 **起始版本：** 8
+
+<!--Device-CodecMimeType-AUDIO_FLAC = 'audio/flac'--><!--Device-CodecMimeType-AUDIO_FLAC = 'audio/flac'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -120,7 +138,9 @@ VIDEO_HEVC = 'video/hevc'
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-CodecMimeType-VIDEO_HEVC = 'video/hevc'--><!--Device-CodecMimeType-VIDEO_HEVC = 'video/hevc'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -134,6 +154,8 @@ AUDIO_MP3 = 'audio/mpeg'
 
 **起始版本：** 12
 
+<!--Device-CodecMimeType-AUDIO_MP3 = 'audio/mpeg'--><!--Device-CodecMimeType-AUDIO_MP3 = 'audio/mpeg'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 ## AUDIO_G711MU
@@ -145,6 +167,8 @@ AUDIO_G711MU = 'audio/g711mu'
 表示音频/G711-mulaw类型。
 
 **起始版本：** 12
+
+<!--Device-CodecMimeType-AUDIO_G711MU = 'audio/g711mu'--><!--Device-CodecMimeType-AUDIO_G711MU = 'audio/g711mu'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -158,6 +182,8 @@ AUDIO_AMR_NB = 'audio/3gpp'
 
 **起始版本：** 18
 
+<!--Device-CodecMimeType-AUDIO_AMR_NB = 'audio/3gpp'--><!--Device-CodecMimeType-AUDIO_AMR_NB = 'audio/3gpp'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 ## AUDIO_AMR_WB
@@ -169,6 +195,8 @@ AUDIO_AMR_WB = 'audio/amr-wb'
 表示音频/amr-wb类型。
 
 **起始版本：** 18
+
+<!--Device-CodecMimeType-AUDIO_AMR_WB = 'audio/amr-wb'--><!--Device-CodecMimeType-AUDIO_AMR_WB = 'audio/amr-wb'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -183,5 +211,7 @@ AUDIO_RAW = 'audio/raw'
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-CodecMimeType-AUDIO_RAW = 'audio/raw'--><!--Device-CodecMimeType-AUDIO_RAW = 'audio/raw'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core

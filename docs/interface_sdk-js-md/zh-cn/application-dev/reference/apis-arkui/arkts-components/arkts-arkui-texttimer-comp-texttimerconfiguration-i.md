@@ -12,6 +12,8 @@ ContentModifier接口使用的TextTimer配置。
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare interface TextTimerConfiguration extends CommonConfiguration<TextTimerConfiguration>--><!--Device-unnamed-declare interface TextTimerConfiguration extends CommonConfiguration<TextTimerConfiguration>-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## count
@@ -36,6 +38,8 @@ count: number
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-TextTimerConfiguration-count: number--><!--Device-TextTimerConfiguration-count: number-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## elapsedTime
@@ -53,6 +57,8 @@ elapsedTime: number
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextTimerConfiguration-elapsedTime: number--><!--Device-TextTimerConfiguration-elapsedTime: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -78,6 +84,8 @@ true：计时器开启倒计时，例如从30秒~0秒；false：计时器开始�
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-TextTimerConfiguration-isCountDown: boolean--><!--Device-TextTimerConfiguration-isCountDown: boolean-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## started
@@ -99,6 +107,8 @@ true：开始计时；false：未开始计时。
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextTimerConfiguration-started: boolean--><!--Device-TextTimerConfiguration-started: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -127,5 +137,7 @@ startTime?: number
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextTimerConfiguration-startTime?: number--><!--Device-TextTimerConfiguration-startTime?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

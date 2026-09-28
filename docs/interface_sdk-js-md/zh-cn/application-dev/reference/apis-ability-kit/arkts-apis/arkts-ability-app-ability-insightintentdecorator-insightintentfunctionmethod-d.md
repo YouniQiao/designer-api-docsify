@@ -17,4 +17,6 @@ export declare const InsightIntentFunctionMethod: ((intentInfo: FunctionIntentDe
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-unnamed-export declare const InsightIntentFunctionMethod: ((intentInfo: FunctionIntentDecoratorInfo) => MethodDecorator)--><!--Device-unnamed-export declare const InsightIntentFunctionMethod: ((intentInfo: FunctionIntentDecoratorInfo) => MethodDecorator)-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

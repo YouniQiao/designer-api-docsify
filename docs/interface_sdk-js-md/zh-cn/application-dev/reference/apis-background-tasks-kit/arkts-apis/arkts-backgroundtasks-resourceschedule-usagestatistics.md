@@ -8,6 +8,8 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace usageStatistics--><!--Device-unnamed-declare namespace usageStatistics-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 ## 导入模块

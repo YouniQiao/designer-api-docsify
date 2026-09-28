@@ -8,6 +8,8 @@ export declare interface CustomComponentLifecycle
 
 **Since:** 23
 
+<!--Device-unnamed-export declare interface CustomComponentLifecycle--><!--Device-unnamed-export declare interface CustomComponentLifecycle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -32,6 +34,8 @@ After calling **addObserver** to register a listener, you must call [removeObser
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-CustomComponentLifecycle-addObserver(observer: CustomComponentLifecycleObserver): void--><!--Device-CustomComponentLifecycle-addObserver(observer: CustomComponentLifecycleObserver): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -53,6 +57,8 @@ The **getCurrentState** function is used to obtain the current lifecycle state o
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-CustomComponentLifecycle-getCurrentState(): CustomComponentLifecycleState--><!--Device-CustomComponentLifecycle-getCurrentState(): CustomComponentLifecycleState-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -98,6 +104,8 @@ Removes a custom component lifecycle listener. Before calling this method, you n
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-CustomComponentLifecycle-removeObserver(observer: CustomComponentLifecycleObserver): void--><!--Device-CustomComponentLifecycle-removeObserver(observer: CustomComponentLifecycleObserver): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

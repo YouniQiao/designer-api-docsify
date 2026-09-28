@@ -8,6 +8,8 @@ export interface TriggerInfo
 
 **起始版本：** 7
 
+<!--Device-unnamed-export interface TriggerInfo--><!--Device-unnamed-export interface TriggerInfo-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## startOptions
@@ -23,6 +25,8 @@ startOptions?: StartOptions
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TriggerInfo-startOptions?: StartOptions--><!--Device-TriggerInfo-startOptions?: StartOptions-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

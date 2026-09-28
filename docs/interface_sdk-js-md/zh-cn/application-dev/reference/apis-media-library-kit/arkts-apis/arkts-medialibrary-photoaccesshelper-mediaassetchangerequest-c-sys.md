@@ -16,6 +16,8 @@ MediaAssetChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photo
 
 **起始版本：** 11
 
+<!--Device-photoAccessHelper-class MediaAssetChangeRequest implements MediaChangeRequest--><!--Device-photoAccessHelper-class MediaAssetChangeRequest implements MediaChangeRequest-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
@@ -39,6 +41,8 @@ addResource(type: ResourceType, proxy: PhotoProxy): void
 > 对于同一个资产变更请求，不支持在成功添加资源后，重复调用该接口。
 
 **起始版本：** 11
+
+<!--Device-MediaAssetChangeRequest-addResource(type: ResourceType, proxy: PhotoProxy): void--><!--Device-MediaAssetChangeRequest-addResource(type: ResourceType, proxy: PhotoProxy): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -97,6 +101,8 @@ addResourceForPicker(type: ResourceType, fileUri: string): void
 
 **需要权限：** ohos.permission.ACCESS_MEDIALIB_THUMB_DB
 
+<!--Device-MediaAssetChangeRequest-addResourceForPicker(type: ResourceType, fileUri: string): void--><!--Device-MediaAssetChangeRequest-addResourceForPicker(type: ResourceType, fileUri: string): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -136,6 +142,8 @@ API18开始，非法字符包括： \ / : * ? " &lt; &gt; |
 API10-17，非法字符包括：. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 
 **起始版本：** 11
+
+<!--Device-MediaAssetChangeRequest-static createAssetRequest(context: Context, displayName: string, options?: PhotoCreateOptions): MediaAssetChangeRequest--><!--Device-MediaAssetChangeRequest-static createAssetRequest(context: Context, displayName: string, options?: PhotoCreateOptions): MediaAssetChangeRequest-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -205,6 +213,8 @@ static deleteAssetsPermanentlyWithUri(context: Context, assetUris: string[]): Pr
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MediaAssetChangeRequest-static deleteAssetsPermanentlyWithUri(context: Context, assetUris: string[]): Promise<void>--><!--Device-MediaAssetChangeRequest-static deleteAssetsPermanentlyWithUri(context: Context, assetUris: string[]): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -265,6 +275,8 @@ static deleteCloudAssetsWithUri(context: Context, assetUris: string[]): Promise<
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-MediaAssetChangeRequest-static deleteCloudAssetsWithUri(context: Context, assetUris: string[]): Promise<void>--><!--Device-MediaAssetChangeRequest-static deleteCloudAssetsWithUri(context: Context, assetUris: string[]): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -319,6 +331,8 @@ static deleteLocalAssetsPermanently(context: Context, assets: Array<PhotoAsset>)
 **起始版本：** 18
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-MediaAssetChangeRequest-static deleteLocalAssetsPermanently(context: Context, assets: Array<PhotoAsset>): Promise<void>--><!--Device-MediaAssetChangeRequest-static deleteLocalAssetsPermanently(context: Context, assets: Array<PhotoAsset>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -383,6 +397,8 @@ static deleteLocalAssetsPermanentlyWithUri(context: Context, assetUris: Array<st
 **起始版本：** 19
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-MediaAssetChangeRequest-static deleteLocalAssetsPermanentlyWithUri(context: Context, assetUris: Array<string>): Promise<void>--><!--Device-MediaAssetChangeRequest-static deleteLocalAssetsPermanentlyWithUri(context: Context, assetUris: Array<string>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -460,6 +476,8 @@ static deleteLocalAssetsWithUri(context: Context, assetUris: string[]): Promise<
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-MediaAssetChangeRequest-static deleteLocalAssetsWithUri(context: Context, assetUris: string[]): Promise<void>--><!--Device-MediaAssetChangeRequest-static deleteLocalAssetsWithUri(context: Context, assetUris: string[]): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -508,6 +526,8 @@ setAppLinkInfo(appLink: string): void
 设置文件记忆链接的信息。
 
 **起始版本：** 21
+
+<!--Device-MediaAssetChangeRequest-setAppLinkInfo(appLink: string): void--><!--Device-MediaAssetChangeRequest-setAppLinkInfo(appLink: string): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -560,6 +580,8 @@ setAppLinkState(appLinkState: AppLinkState): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MediaAssetChangeRequest-setAppLinkState(appLinkState: AppLinkState): void--><!--Device-MediaAssetChangeRequest-setAppLinkState(appLinkState: AppLinkState): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -609,6 +631,8 @@ setCameraEditData(editData: MediaAssetEditData): void
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-MediaAssetChangeRequest-setCameraEditData(editData: MediaAssetEditData): void--><!--Device-MediaAssetChangeRequest-setCameraEditData(editData: MediaAssetEditData): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -671,6 +695,8 @@ setCameraShotKey(cameraShotKey: string): void
 
 **起始版本：** 12
 
+<!--Device-MediaAssetChangeRequest-setCameraShotKey(cameraShotKey: string): void--><!--Device-MediaAssetChangeRequest-setCameraShotKey(cameraShotKey: string): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -717,6 +743,8 @@ setCompositeDisplayMode(compositeDisplayMode: CompositeDisplayMode): Promise<voi
 设置复合图的展示模式。使用Promise异步回调。
 
 **起始版本：** 23
+
+<!--Device-MediaAssetChangeRequest-setCompositeDisplayMode(compositeDisplayMode: CompositeDisplayMode): Promise<void>--><!--Device-MediaAssetChangeRequest-setCompositeDisplayMode(compositeDisplayMode: CompositeDisplayMode): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -778,6 +806,8 @@ setEditData(editData: MediaAssetEditData): void
 
 **起始版本：** 11
 
+<!--Device-MediaAssetChangeRequest-setEditData(editData: MediaAssetEditData): void--><!--Device-MediaAssetChangeRequest-setEditData(editData: MediaAssetEditData): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -838,6 +868,8 @@ setEffectMode(mode: MovingPhotoEffectMode): void
 
 **起始版本：** 12
 
+<!--Device-MediaAssetChangeRequest-setEffectMode(mode: MovingPhotoEffectMode): void--><!--Device-MediaAssetChangeRequest-setEffectMode(mode: MovingPhotoEffectMode): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -889,6 +921,8 @@ setHasAppLink(hasAppLink: number): void
 设置文件记忆链接的状态信息。
 
 **起始版本：** 21
+
+<!--Device-MediaAssetChangeRequest-setHasAppLink(hasAppLink: int): void--><!--Device-MediaAssetChangeRequest-setHasAppLink(hasAppLink: int): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -943,6 +977,8 @@ setHidden(hiddenState: boolean): void
 将文件设置为隐藏文件。
 
 **起始版本：** 11
+
+<!--Device-MediaAssetChangeRequest-setHidden(hiddenState: boolean): void--><!--Device-MediaAssetChangeRequest-setHidden(hiddenState: boolean): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -1001,6 +1037,8 @@ setHiddenAttribute(hiddenState: boolean): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MediaAssetChangeRequest-setHiddenAttribute(hiddenState: boolean): void--><!--Device-MediaAssetChangeRequest-setHiddenAttribute(hiddenState: boolean): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1058,6 +1096,8 @@ setLivePhoto4dStatus(status: LivePhoto4dStatus, livephoto_4d_latest_pair?: strin
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MediaAssetChangeRequest-setLivePhoto4dStatus(status: LivePhoto4dStatus, livephoto_4d_latest_pair?: string): void--><!--Device-MediaAssetChangeRequest-setLivePhoto4dStatus(status: LivePhoto4dStatus, livephoto_4d_latest_pair?: string): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1085,6 +1125,8 @@ setLocation(longitude: number, latitude: number): void
 设置文件的经纬度信息。
 
 **起始版本：** 11
+
+<!--Device-MediaAssetChangeRequest-setLocation(longitude: double, latitude: double): void--><!--Device-MediaAssetChangeRequest-setLocation(longitude: double, latitude: double): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -1144,6 +1186,8 @@ setMovingPhotoVersion(version: number): void
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-MediaAssetChangeRequest-setMovingPhotoVersion(version: int): void--><!--Device-MediaAssetChangeRequest-setMovingPhotoVersion(version: int): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1198,6 +1242,8 @@ setSupportedWatermarkType(watermarkType: WatermarkType): void
 设置拍照照片支持的水印类型。
 
 **起始版本：** 14
+
+<!--Device-MediaAssetChangeRequest-setSupportedWatermarkType(watermarkType: WatermarkType): void--><!--Device-MediaAssetChangeRequest-setSupportedWatermarkType(watermarkType: WatermarkType): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -1254,6 +1300,8 @@ setTitleByFile(name: string): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MediaAssetChangeRequest-setTitleByFile(name: string): void--><!--Device-MediaAssetChangeRequest-setTitleByFile(name: string): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1307,6 +1355,8 @@ setUserComment(userComment: string): void
 修改媒体资产的备注信息。
 
 **起始版本：** 11
+
+<!--Device-MediaAssetChangeRequest-setUserComment(userComment: string): void--><!--Device-MediaAssetChangeRequest-setUserComment(userComment: string): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -1363,6 +1413,8 @@ setVideoEnhancementAttr(videoEnhancementType: VideoEnhancementType, photoId: str
 设置视频的二阶段增强处理类型。
 
 **起始版本：** 13
+
+<!--Device-MediaAssetChangeRequest-setVideoEnhancementAttr(videoEnhancementType: VideoEnhancementType, photoId: string): void--><!--Device-MediaAssetChangeRequest-setVideoEnhancementAttr(videoEnhancementType: VideoEnhancementType, photoId: string): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

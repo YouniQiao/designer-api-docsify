@@ -16,6 +16,8 @@ function getDeleteSqlInfo(predicates: RdbPredicates):SqlInfo
 
 **起始版本：** 20
 
+<!--Device-relationalStore-function getDeleteSqlInfo(predicates: RdbPredicates):SqlInfo--><!--Device-relationalStore-function getDeleteSqlInfo(predicates: RdbPredicates):SqlInfo-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**

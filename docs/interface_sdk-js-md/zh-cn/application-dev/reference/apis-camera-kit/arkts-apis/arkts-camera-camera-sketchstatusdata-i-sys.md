@@ -8,6 +8,8 @@ Defines the PiP status data.
 
 **起始版本：** 11
 
+<!--Device-camera-interface SketchStatusData--><!--Device-camera-interface SketchStatusData-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ Offset of PiP.
 
 **起始版本：** 20
 
+<!--Device-SketchStatusData-centerPointOffset: Point--><!--Device-SketchStatusData-centerPointOffset: Point-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -46,6 +50,8 @@ Zoom ratio of PiP.
 
 **起始版本：** 11
 
+<!--Device-SketchStatusData-sketchRatio: double--><!--Device-SketchStatusData-sketchRatio: double-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +67,8 @@ Status of PiP. The options are 0 (stopped), 1 (started), 2 (stopping), and 3 (st
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-SketchStatusData-status: int--><!--Device-SketchStatusData-status: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

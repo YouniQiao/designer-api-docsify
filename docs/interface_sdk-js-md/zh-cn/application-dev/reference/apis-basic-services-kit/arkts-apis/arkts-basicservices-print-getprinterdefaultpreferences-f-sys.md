@@ -20,6 +20,8 @@ function getPrinterDefaultPreferences(printerId: string): Promise<PrinterPrefere
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-print-function getPrinterDefaultPreferences(printerId: string): Promise<PrinterPreferences>--><!--Device-print-function getPrinterDefaultPreferences(printerId: string): Promise<PrinterPreferences>-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **系统接口：** 此接口为系统接口。

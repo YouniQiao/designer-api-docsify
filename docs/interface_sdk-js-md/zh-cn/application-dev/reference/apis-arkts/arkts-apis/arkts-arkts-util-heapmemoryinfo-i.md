@@ -8,6 +8,8 @@ interface HeapMemoryInfo
 
 **起始版本：** 24
 
+<!--Device-util-interface HeapMemoryInfo--><!--Device-util-interface HeapMemoryInfo-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -30,6 +32,8 @@ heapObjectSize: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HeapMemoryInfo-heapObjectSize: number--><!--Device-HeapMemoryInfo-heapObjectSize: number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## heapType
@@ -45,6 +49,8 @@ heapType: string
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HeapMemoryInfo-heapType: string--><!--Device-HeapMemoryInfo-heapType: string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -62,6 +68,8 @@ threadId?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HeapMemoryInfo-threadId?: number--><!--Device-HeapMemoryInfo-threadId?: number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## threadName
@@ -77,5 +85,7 @@ threadName?: string
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HeapMemoryInfo-threadName?: string--><!--Device-HeapMemoryInfo-threadName?: string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

@@ -4,6 +4,8 @@ This module provides the capabilities of managing the system pasteboard to suppo
 
 **Since:** 6
 
+<!--Device-unnamed-declare namespace pasteboard--><!--Device-unnamed-declare namespace pasteboard-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 ## Modules to Import

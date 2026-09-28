@@ -5,7 +5,7 @@ A vertical grid layout container, used only in grid layout scenarios. The grid l
 > **NOTE:** 
 > 
 > This component is deprecated since API version 9. You are advised to use the new components
-> [GridCol](arkts-arkui-gridcol-comp.md#grid_col) and [GridRow](arkts-arkui-gridrow-comp.md#grid_row) instead.
+> [GridCol](arkts-arkui-gridcol-comp.md) and [GridRow](arkts-arkui-gridrow-comp.md) instead.
 > 
 > This component is supported since API version 7. New APIs added in later versions are marked with superscripts to
 > indicate their starting version.
@@ -27,6 +27,8 @@ Creates a vertical grid layout container.
 **Deprecated since:** 9
 
 **Substitutes:** grid_col/GridColInterface and grid_row/GridRowInterface
+
+<!--Device-GridContainerInterface-(value?: GridContainerOptions): GridContainerAttribute--><!--Device-GridContainerInterface-(value?: GridContainerOptions): GridContainerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

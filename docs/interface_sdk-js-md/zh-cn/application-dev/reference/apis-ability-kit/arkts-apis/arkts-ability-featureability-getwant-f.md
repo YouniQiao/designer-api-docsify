@@ -18,6 +18,8 @@ function getWant(callback: AsyncCallback<Want>): void
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-featureAbility-function getWant(callback: AsyncCallback<Want>): void--><!--Device-featureAbility-function getWant(callback: AsyncCallback<Want>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **参数：**
@@ -55,6 +57,8 @@ function getWant(): Promise<Want>
 **起始版本：** 6
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-featureAbility-function getWant(): Promise<Want>--><!--Device-featureAbility-function getWant(): Promise<Want>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 

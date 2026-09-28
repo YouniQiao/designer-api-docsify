@@ -16,6 +16,8 @@ type VideoPlayState = 'idle' | 'prepared' | 'playing' | 'paused' | 'stopped' | '
 
 **替代接口：** [AVPlayerState](arkts-media-media-avplayerstate-t.md)
 
+<!--Device-media-type VideoPlayState = 'idle' | 'prepared' | 'playing' | 'paused' | 'stopped' | 'error'--><!--Device-media-type VideoPlayState = 'idle' | 'prepared' | 'playing' | 'paused' | 'stopped' | 'error'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
 | 类型 | 说明 |

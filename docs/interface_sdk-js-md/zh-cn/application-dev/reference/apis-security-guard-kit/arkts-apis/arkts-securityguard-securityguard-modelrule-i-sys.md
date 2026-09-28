@@ -10,6 +10,8 @@ interface ModelRule
 
 **起始版本：** 12
 
+<!--Device-securityGuard-interface ModelRule--><!--Device-securityGuard-interface ModelRule-End-->
+
 **系统能力：** SystemCapability.Security.SecurityGuard
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ modelName: string
 
 **起始版本：** 12
 
+<!--Device-ModelRule-modelName: string--><!--Device-ModelRule-modelName: string-End-->
+
 **系统能力：** SystemCapability.Security.SecurityGuard
 
 **系统接口：** 此接口为系统接口。
@@ -47,6 +51,8 @@ param?: string
 **类型：** string
 
 **起始版本：** 12
+
+<!--Device-ModelRule-param?: string--><!--Device-ModelRule-param?: string-End-->
 
 **系统能力：** SystemCapability.Security.SecurityGuard
 

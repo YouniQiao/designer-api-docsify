@@ -16,6 +16,8 @@ function getSecurityLabelSync(path: string): string
 
 **起始版本：** 9
 
+<!--Device-securityLabel-function getSecurityLabelSync(path: string): string--><!--Device-securityLabel-function getSecurityLabelSync(path: string): string-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**

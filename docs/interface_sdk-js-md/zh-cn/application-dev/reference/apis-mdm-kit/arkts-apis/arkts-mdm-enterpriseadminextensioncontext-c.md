@@ -18,6 +18,8 @@ EnterpriseAdminExtensionContext是[EnterpriseAdminExtensionAbility](arkts-mdm-en
 
 **起始版本：** 23
 
+<!--Device-unnamed-declare class EnterpriseAdminExtensionContext extends ExtensionContext--><!--Device-unnamed-declare class EnterpriseAdminExtensionContext extends ExtensionContext-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## startAbilityByAdmin
@@ -43,6 +45,8 @@ startAbilityByAdmin(admin: Want, want: Want): Promise<void>
 **需要权限：** ohos.permission.ENTERPRISE_START_ABILITIES
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EnterpriseAdminExtensionContext-startAbilityByAdmin(admin: Want, want: Want): Promise<void>--><!--Device-EnterpriseAdminExtensionContext-startAbilityByAdmin(admin: Want, want: Want): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

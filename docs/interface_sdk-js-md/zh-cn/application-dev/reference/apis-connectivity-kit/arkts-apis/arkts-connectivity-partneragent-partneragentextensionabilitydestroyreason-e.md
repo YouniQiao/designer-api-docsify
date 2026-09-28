@@ -8,6 +8,8 @@ export enum PartnerAgentExtensionAbilityDestroyReason
 
 **起始版本：** 23
 
+<!--Device-partnerAgent-export enum PartnerAgentExtensionAbilityDestroyReason--><!--Device-partnerAgent-export enum PartnerAgentExtensionAbilityDestroyReason-End-->
+
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core
 
 ## UNKNOWN_REASON
@@ -21,6 +23,8 @@ UNKNOWN_REASON = 0
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PartnerAgentExtensionAbilityDestroyReason-UNKNOWN_REASON = 0--><!--Device-PartnerAgentExtensionAbilityDestroyReason-UNKNOWN_REASON = 0-End-->
 
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core
 
@@ -36,6 +40,8 @@ USER_CLOSED_ABILITY = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PartnerAgentExtensionAbilityDestroyReason-USER_CLOSED_ABILITY = 1--><!--Device-PartnerAgentExtensionAbilityDestroyReason-USER_CLOSED_ABILITY = 1-End-->
+
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core
 
 ## DEVICE_UNPAIRED
@@ -49,6 +55,8 @@ DEVICE_UNPAIRED = 2
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PartnerAgentExtensionAbilityDestroyReason-DEVICE_UNPAIRED = 2--><!--Device-PartnerAgentExtensionAbilityDestroyReason-DEVICE_UNPAIRED = 2-End-->
 
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core
 
@@ -64,6 +72,8 @@ DEVICE_LOST = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PartnerAgentExtensionAbilityDestroyReason-DEVICE_LOST = 3--><!--Device-PartnerAgentExtensionAbilityDestroyReason-DEVICE_LOST = 3-End-->
+
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core
 
 ## BLUETOOTH_DISABLED
@@ -77,5 +87,7 @@ BLUETOOTH_DISABLED = 4
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PartnerAgentExtensionAbilityDestroyReason-BLUETOOTH_DISABLED = 4--><!--Device-PartnerAgentExtensionAbilityDestroyReason-BLUETOOTH_DISABLED = 4-End-->
 
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core

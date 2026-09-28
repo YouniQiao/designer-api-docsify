@@ -20,6 +20,8 @@ function installUserCertificate(admin: Want, certificate: CertBlob): Promise<str
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-securityManager-function installUserCertificate(admin: Want, certificate: CertBlob): Promise<string>--><!--Device-securityManager-function installUserCertificate(admin: Want, certificate: CertBlob): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -92,6 +94,8 @@ function installUserCertificate(admin: Want, certificate: CertBlob, accountId: n
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_CERTIFICATE
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-securityManager-function installUserCertificate(admin: Want, certificate: CertBlob, accountId: number): string--><!--Device-securityManager-function installUserCertificate(admin: Want, certificate: CertBlob, accountId: number): string-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

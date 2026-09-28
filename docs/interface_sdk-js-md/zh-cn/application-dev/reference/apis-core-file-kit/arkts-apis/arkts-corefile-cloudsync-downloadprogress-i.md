@@ -8,6 +8,8 @@ interface DownloadProgress
 
 **起始版本：** 11
 
+<!--Device-cloudSync-interface DownloadProgress--><!--Device-cloudSync-interface DownloadProgress-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ error: DownloadErrorType
 
 **起始版本：** 11
 
+<!--Device-DownloadProgress-error: DownloadErrorType--><!--Device-DownloadProgress-error: DownloadErrorType-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## processed
@@ -41,6 +45,8 @@ processed: number
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-DownloadProgress-processed: long--><!--Device-DownloadProgress-processed: long-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -56,6 +62,8 @@ size: number
 
 **起始版本：** 11
 
+<!--Device-DownloadProgress-size: long--><!--Device-DownloadProgress-size: long-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## state
@@ -70,6 +78,8 @@ state: State
 
 **起始版本：** 11
 
+<!--Device-DownloadProgress-state: State--><!--Device-DownloadProgress-state: State-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## uri
@@ -83,5 +93,7 @@ uri: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-DownloadProgress-uri: string--><!--Device-DownloadProgress-uri: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core

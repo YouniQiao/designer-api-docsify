@@ -8,6 +8,8 @@ export interface WebSocketServerConfig
 
 **起始版本：** 19
 
+<!--Device-webSocket-export interface WebSocketServerConfig--><!--Device-webSocket-export interface WebSocketServerConfig-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块
@@ -28,6 +30,8 @@ maxConcurrentClientsNumber: number
 
 **起始版本：** 19
 
+<!--Device-WebSocketServerConfig-maxConcurrentClientsNumber: int--><!--Device-WebSocketServerConfig-maxConcurrentClientsNumber: int-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## maxConnectionsForOneClient
@@ -41,6 +45,8 @@ maxConnectionsForOneClient: number
 **类型：** number
 
 **起始版本：** 19
+
+<!--Device-WebSocketServerConfig-maxConnectionsForOneClient: int--><!--Device-WebSocketServerConfig-maxConnectionsForOneClient: int-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -56,6 +62,8 @@ protocol?: string
 
 **起始版本：** 19
 
+<!--Device-WebSocketServerConfig-protocol?: string--><!--Device-WebSocketServerConfig-protocol?: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## serverCert
@@ -69,6 +77,8 @@ serverCert?: ServerCert
 **类型：** [ServerCert](arkts-network-websocket-servercert-i.md)
 
 **起始版本：** 19
+
+<!--Device-WebSocketServerConfig-serverCert?: ServerCert--><!--Device-WebSocketServerConfig-serverCert?: ServerCert-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -84,6 +94,8 @@ serverIP?: string
 
 **起始版本：** 19
 
+<!--Device-WebSocketServerConfig-serverIP?: string--><!--Device-WebSocketServerConfig-serverIP?: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## serverPort
@@ -97,5 +109,7 @@ serverPort: number
 **类型：** number
 
 **起始版本：** 19
+
+<!--Device-WebSocketServerConfig-serverPort: int--><!--Device-WebSocketServerConfig-serverPort: int-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack

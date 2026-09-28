@@ -8,6 +8,8 @@ ChipV2SymbolIconConfig定义Symbol图标的属性配置。
 
 **起始版本：** 26.0.0
 
+<!--Device-unnamed-export interface ChipV2SymbolIconConfig--><!--Device-unnamed-export interface ChipV2SymbolIconConfig-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -38,6 +40,8 @@ activated?: SymbolGlyphModifier
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-ChipV2SymbolIconConfig-activated?: SymbolGlyphModifier--><!--Device-ChipV2SymbolIconConfig-activated?: SymbolGlyphModifier-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## normal
@@ -61,5 +65,7 @@ normal?: SymbolGlyphModifier
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-ChipV2SymbolIconConfig-normal?: SymbolGlyphModifier--><!--Device-ChipV2SymbolIconConfig-normal?: SymbolGlyphModifier-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

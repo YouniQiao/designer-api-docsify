@@ -22,6 +22,8 @@ function getSdkVersion(options: HuksOptions): string
 
 **废弃版本：** 11
 
+<!--Device-huks-function getSdkVersion(options: HuksOptions): string--><!--Device-huks-function getSdkVersion(options: HuksOptions): string-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Extension
 
 **参数：**

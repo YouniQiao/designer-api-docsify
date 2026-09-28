@@ -8,6 +8,8 @@ enum CloudMediaRetainType
 
 **起始版本：** 14
 
+<!--Device-photoAccessHelper-enum CloudMediaRetainType--><!--Device-photoAccessHelper-enum CloudMediaRetainType-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -22,6 +24,8 @@ RETAIN_FORCE = 0
 
 **起始版本：** 14
 
+<!--Device-CloudMediaRetainType-RETAIN_FORCE = 0--><!--Device-CloudMediaRetainType-RETAIN_FORCE = 0-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -35,6 +39,8 @@ HDC_RETAIN_FORCE = 1
 删除原文件在家庭存储设备的本地元数据和缩略图。
 
 **起始版本：** 22
+
+<!--Device-CloudMediaRetainType-HDC_RETAIN_FORCE = 1--><!--Device-CloudMediaRetainType-HDC_RETAIN_FORCE = 1-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -51,6 +57,8 @@ SHARE_RETAIN_FORCE = 2
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-CloudMediaRetainType-SHARE_RETAIN_FORCE = 2--><!--Device-CloudMediaRetainType-SHARE_RETAIN_FORCE = 2-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

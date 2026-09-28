@@ -8,6 +8,8 @@ Defines the rotation angle of the application's orientation.
 
 **Since:** 12
 
+<!--Device-unnamed-declare enum AppRotation--><!--Device-unnamed-declare enum AppRotation-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## ROTATION_0
@@ -23,6 +25,8 @@ ROTATION_0 = 0
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AppRotation-ROTATION_0 = 0--><!--Device-AppRotation-ROTATION_0 = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,6 +44,8 @@ ROTATION_90 = 1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AppRotation-ROTATION_90 = 1--><!--Device-AppRotation-ROTATION_90 = 1-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## ROTATION_180
@@ -56,6 +62,8 @@ ROTATION_180 = 2
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AppRotation-ROTATION_180 = 2--><!--Device-AppRotation-ROTATION_180 = 2-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## ROTATION_270
@@ -71,5 +79,7 @@ ROTATION_270 = 3
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AppRotation-ROTATION_270 = 3--><!--Device-AppRotation-ROTATION_270 = 3-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

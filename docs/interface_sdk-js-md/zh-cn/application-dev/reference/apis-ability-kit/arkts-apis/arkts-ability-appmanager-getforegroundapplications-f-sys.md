@@ -18,6 +18,8 @@ function getForegroundApplications(callback: AsyncCallback<Array<AppStateData>>)
 
 **需要权限：** ohos.permission.GET_RUNNING_INFO
 
+<!--Device-appManager-function getForegroundApplications(callback: AsyncCallback<Array<AppStateData>>): void--><!--Device-appManager-function getForegroundApplications(callback: AsyncCallback<Array<AppStateData>>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -74,6 +76,8 @@ function getForegroundApplications(): Promise<Array<AppStateData>>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.GET_RUNNING_INFO
+
+<!--Device-appManager-function getForegroundApplications(): Promise<Array<AppStateData>>--><!--Device-appManager-function getForegroundApplications(): Promise<Array<AppStateData>>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

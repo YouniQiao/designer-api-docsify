@@ -26,6 +26,8 @@ function startAbilityForResult(parameter: StartAbilityParameter, callback: Async
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-featureAbility-function startAbilityForResult(parameter: StartAbilityParameter, callback: AsyncCallback<AbilityResult>): void--><!--Device-featureAbility-function startAbilityForResult(parameter: StartAbilityParameter, callback: AsyncCallback<AbilityResult>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **参数：**
@@ -88,6 +90,8 @@ function startAbilityForResult(parameter: StartAbilityParameter): Promise<Abilit
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-featureAbility-function startAbilityForResult(parameter: StartAbilityParameter): Promise<AbilityResult>--><!--Device-featureAbility-function startAbilityForResult(parameter: StartAbilityParameter): Promise<AbilityResult>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 

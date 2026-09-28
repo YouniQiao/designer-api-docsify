@@ -22,6 +22,8 @@ function getProfile(profileId: ProfileId): A2dpSourceProfile | HandsFreeAudioGat
 
 **替代接口：** [getProfileInstance](arkts-connectivity-bluetoothmanager-getprofileinstance-f.md)
 
+<!--Device-bluetooth-function getProfile(profileId: ProfileId): A2dpSourceProfile | HandsFreeAudioGatewayProfile--><!--Device-bluetooth-function getProfile(profileId: ProfileId): A2dpSourceProfile | HandsFreeAudioGatewayProfile-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**

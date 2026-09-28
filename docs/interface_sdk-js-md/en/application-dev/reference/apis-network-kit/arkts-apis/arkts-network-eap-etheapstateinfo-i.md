@@ -8,6 +8,8 @@ Represents the 802.1X EAP authentication state information, delivered via the st
 
 **Since:** 26.2.0
 
+<!--Device-eap-interface EthEapStateInfo--><!--Device-eap-interface EthEapStateInfo-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 ## Modules to Import
@@ -30,6 +32,8 @@ Supplementary message, such as the failure reason. Empty on success.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-EthEapStateInfo-message?: string--><!--Device-EthEapStateInfo-message?: string-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 ## retryCount
@@ -46,6 +50,8 @@ Current retry count (resets to 0 on success). The value should be an integer.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-EthEapStateInfo-retryCount: int--><!--Device-EthEapStateInfo-retryCount: int-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 ## state
@@ -61,5 +67,7 @@ Current authentication state.
 **Since:** 26.2.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-EthEapStateInfo-state: EthEapState--><!--Device-EthEapStateInfo-state: EthEapState-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Eap

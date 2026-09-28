@@ -20,7 +20,9 @@ function emit(event: InnerEvent, data?: EventData): void
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-emitter-function emit(event: InnerEvent, data?: EventData): void--><!--Device-emitter-function emit(event: InnerEvent, data?: EventData): void-End-->
 
 **系统能力：** SystemCapability.Notification.Emitter
 
@@ -68,6 +70,8 @@ function emit(eventId: string, data?: EventData): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-emitter-function emit(eventId: string, data?: EventData): void--><!--Device-emitter-function emit(eventId: string, data?: EventData): void-End-->
+
 **系统能力：** SystemCapability.Notification.Emitter
 
 **参数：**
@@ -108,6 +112,8 @@ function emit<T>(eventId: string, data?: GenericEventData<T>): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-emitter-function emit<T>(eventId: string, data?: GenericEventData<T>): void--><!--Device-emitter-function emit<T>(eventId: string, data?: GenericEventData<T>): void-End-->
 
 **系统能力：** SystemCapability.Notification.Emitter
 
@@ -157,6 +163,8 @@ function emit(eventId: string, options: Options, data?: EventData): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-emitter-function emit(eventId: string, options: Options, data?: EventData): void--><!--Device-emitter-function emit(eventId: string, options: Options, data?: EventData): void-End-->
+
 **系统能力：** SystemCapability.Notification.Emitter
 
 **参数：**
@@ -202,6 +210,8 @@ function emit<T>(eventId: string, options: Options, data?: GenericEventData<T>):
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-emitter-function emit<T>(eventId: string, options: Options, data?: GenericEventData<T>): void--><!--Device-emitter-function emit<T>(eventId: string, options: Options, data?: GenericEventData<T>): void-End-->
 
 **系统能力：** SystemCapability.Notification.Emitter
 

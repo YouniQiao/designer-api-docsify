@@ -8,6 +8,8 @@ interface UploadTask
 
 **起始版本：** 6
 
+<!--Device-request-interface UploadTask--><!--Device-request-interface UploadTask-End-->
+
 **系统能力：** SystemCapability.MiscServices.Download
 
 ## 导入模块
@@ -31,6 +33,8 @@ delete(callback: AsyncCallback<boolean>): void
 **起始版本：** 9
 
 **需要权限：** ohos.permission.INTERNET
+
+<!--Device-UploadTask-delete(callback: AsyncCallback<boolean>): void--><!--Device-UploadTask-delete(callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload
 
@@ -76,6 +80,8 @@ delete(): Promise<boolean>
 
 **需要权限：** ohos.permission.INTERNET
 
+<!--Device-UploadTask-delete(): Promise<boolean>--><!--Device-UploadTask-delete(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.MiscServices.Upload
 
 **返回值：**
@@ -109,6 +115,8 @@ off(type: 'progress', callback?: (uploadedSize: number, totalSize: number) => vo
 取消订阅上传任务进度事件。
 
 **起始版本：** 6
+
+<!--Device-UploadTask-off(type: 'progress', callback?: (uploadedSize: long, totalSize: long) => void): void--><!--Device-UploadTask-off(type: 'progress', callback?: (uploadedSize: long, totalSize: long) => void): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload
 
@@ -152,6 +160,8 @@ off(type: 'headerReceive', callback?: (header: object) => void): void
 
 **起始版本：** 7
 
+<!--Device-UploadTask-off(type: 'headerReceive', callback?: (header: object) => void): void--><!--Device-UploadTask-off(type: 'headerReceive', callback?: (header: object) => void): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Upload
 
 **参数：**
@@ -194,6 +204,8 @@ off(type: 'complete' | 'fail', callback?: Callback<Array<TaskState>>): void
 
 **起始版本：** 9
 
+<!--Device-UploadTask-off(type: 'complete' | 'fail', callback?: Callback<Array<TaskState>>): void--><!--Device-UploadTask-off(type: 'complete' | 'fail', callback?: Callback<Array<TaskState>>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Upload
 
 **参数：**
@@ -207,7 +219,7 @@ off(type: 'complete' | 'fail', callback?: Callback<Array<TaskState>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | the parameters check fails. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
 **示例**
 
@@ -265,6 +277,8 @@ on(type: 'progress', callback: (uploadedSize: number, totalSize: number) => void
 
 **起始版本：** 6
 
+<!--Device-UploadTask-on(type: 'progress', callback: (uploadedSize: long, totalSize: long) => void): void--><!--Device-UploadTask-on(type: 'progress', callback: (uploadedSize: long, totalSize: long) => void): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Upload
 
 **参数：**
@@ -299,6 +313,8 @@ on(type: 'headerReceive', callback: (header: object) => void): void
 
 **起始版本：** 7
 
+<!--Device-UploadTask-on(type: 'headerReceive', callback: (header: object) => void): void--><!--Device-UploadTask-on(type: 'headerReceive', callback: (header: object) => void): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Upload
 
 **参数：**
@@ -332,6 +348,8 @@ on(type: 'complete' | 'fail', callback: Callback<Array<TaskState>>): void
 订阅上传任务完成或失败事件，使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-UploadTask-on(type: 'complete' | 'fail', callback: Callback<Array<TaskState>>): void--><!--Device-UploadTask-on(type: 'complete' | 'fail', callback: Callback<Array<TaskState>>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload
 
@@ -387,6 +405,8 @@ remove(callback: AsyncCallback<boolean>): void
 
 **需要权限：** ohos.permission.INTERNET
 
+<!--Device-UploadTask-remove(callback: AsyncCallback<boolean>): void--><!--Device-UploadTask-remove(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Upload
 
 **参数：**
@@ -436,6 +456,8 @@ remove(): Promise<boolean>
 **替代接口：** [delete](#delete)()
 
 **需要权限：** ohos.permission.INTERNET
+
+<!--Device-UploadTask-remove(): Promise<boolean>--><!--Device-UploadTask-remove(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload
 

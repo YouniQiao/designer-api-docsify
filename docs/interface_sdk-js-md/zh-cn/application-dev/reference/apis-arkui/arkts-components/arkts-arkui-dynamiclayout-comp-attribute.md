@@ -18,6 +18,8 @@ export declare class DynamicLayoutAttribute extends CommonMethod<DynamicLayoutAt
 
 **卡片能力：** 从API版本24开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-unnamed-export declare class DynamicLayoutAttribute extends CommonMethod<DynamicLayoutAttribute>--><!--Device-unnamed-export declare class DynamicLayoutAttribute extends CommonMethod<DynamicLayoutAttribute>-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块

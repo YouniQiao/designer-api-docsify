@@ -8,6 +8,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare namespace screenLockFileManager--><!--Device-unnamed-declare namespace screenLockFileManager-End-->
+
 **系统能力：** SystemCapability.Security.ScreenLockFileManager
 
 ## 导入模块

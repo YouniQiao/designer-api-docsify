@@ -14,6 +14,8 @@ enum BluetoothState
 
 **替代接口：** [BluetoothState](arkts-connectivity-access-bluetoothstate-e.md)
 
+<!--Device-bluetoothManager-enum BluetoothState--><!--Device-bluetoothManager-enum BluetoothState-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## STATE_OFF
@@ -29,6 +31,8 @@ STATE_OFF = 0
 **废弃版本：** 10
 
 **替代接口：** [STATE_OFF](arkts-connectivity-access-bluetoothstate-e.md#state_off)
+
+<!--Device-BluetoothState-STATE_OFF = 0--><!--Device-BluetoothState-STATE_OFF = 0-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -46,6 +50,8 @@ STATE_TURNING_ON = 1
 
 **替代接口：** [STATE_TURNING_ON](arkts-connectivity-access-bluetoothstate-e.md#state_turning_on)
 
+<!--Device-BluetoothState-STATE_TURNING_ON = 1--><!--Device-BluetoothState-STATE_TURNING_ON = 1-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## STATE_ON
@@ -61,6 +67,8 @@ STATE_ON = 2
 **废弃版本：** 10
 
 **替代接口：** [STATE_ON](arkts-connectivity-access-bluetoothstate-e.md#state_on)
+
+<!--Device-BluetoothState-STATE_ON = 2--><!--Device-BluetoothState-STATE_ON = 2-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -78,6 +86,8 @@ STATE_TURNING_OFF = 3
 
 **替代接口：** [STATE_TURNING_OFF](arkts-connectivity-access-bluetoothstate-e.md#state_turning_off)
 
+<!--Device-BluetoothState-STATE_TURNING_OFF = 3--><!--Device-BluetoothState-STATE_TURNING_OFF = 3-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## STATE_BLE_TURNING_ON
@@ -93,6 +103,8 @@ STATE_BLE_TURNING_ON = 4
 **废弃版本：** 10
 
 **替代接口：** [STATE_BLE_TURNING_ON](arkts-connectivity-access-bluetoothstate-e.md#state_ble_turning_on)
+
+<!--Device-BluetoothState-STATE_BLE_TURNING_ON = 4--><!--Device-BluetoothState-STATE_BLE_TURNING_ON = 4-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -110,6 +122,8 @@ STATE_BLE_ON = 5
 
 **替代接口：** [STATE_BLE_ON](arkts-connectivity-access-bluetoothstate-e.md#state_ble_on)
 
+<!--Device-BluetoothState-STATE_BLE_ON = 5--><!--Device-BluetoothState-STATE_BLE_ON = 5-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## STATE_BLE_TURNING_OFF
@@ -125,5 +139,7 @@ STATE_BLE_TURNING_OFF = 6
 **废弃版本：** 10
 
 **替代接口：** [STATE_BLE_TURNING_OFF](arkts-connectivity-access-bluetoothstate-e.md#state_ble_turning_off)
+
+<!--Device-BluetoothState-STATE_BLE_TURNING_OFF = 6--><!--Device-BluetoothState-STATE_BLE_TURNING_OFF = 6-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

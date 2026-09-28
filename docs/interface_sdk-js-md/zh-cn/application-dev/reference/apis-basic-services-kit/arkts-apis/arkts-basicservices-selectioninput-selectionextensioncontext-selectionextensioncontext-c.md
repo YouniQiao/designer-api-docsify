@@ -16,6 +16,8 @@ SelectionExtensionContext是[SelectionExtensionAbility](arkts-basicservices-sele
 
 **起始版本：** 24
 
+<!--Device-unnamed-declare class SelectionExtensionContext extends ExtensionContext--><!--Device-unnamed-declare class SelectionExtensionContext extends ExtensionContext-End-->
+
 **系统能力：** SystemCapability.SelectionInput.Selection
 
 ## 导入模块
@@ -35,6 +37,8 @@ startAbility(want: Want): Promise<void>
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SelectionExtensionContext-startAbility(want: Want): Promise<void>--><!--Device-SelectionExtensionContext-startAbility(want: Want): Promise<void>-End-->
 
 **系统能力：** SystemCapability.SelectionInput.Selection
 

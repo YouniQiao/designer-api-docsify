@@ -18,6 +18,8 @@ function isIdleState(bundleName: string, callback: AsyncCallback<boolean>): void
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-usageStatistics-function isIdleState(bundleName: string, callback: AsyncCallback<boolean>): void--><!--Device-usageStatistics-function isIdleState(bundleName: string, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
 **系统接口：** 此接口为系统接口。
@@ -72,6 +74,8 @@ function isIdleState(bundleName: string): Promise<boolean>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
+
+<!--Device-usageStatistics-function isIdleState(bundleName: string): Promise<boolean>--><!--Device-usageStatistics-function isIdleState(bundleName: string): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 

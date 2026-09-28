@@ -10,6 +10,8 @@ type OnAVDownloadProgressChangeHandle = (taskId: string, progress: number) => vo
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-media-type OnAVDownloadProgressChangeHandle = (taskId: string, progress: double) => void--><!--Device-media-type OnAVDownloadProgressChangeHandle = (taskId: string, progress: double) => void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 **参数：**

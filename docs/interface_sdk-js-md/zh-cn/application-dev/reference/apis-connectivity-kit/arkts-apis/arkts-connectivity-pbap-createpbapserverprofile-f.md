@@ -16,6 +16,8 @@ function createPbapServerProfile(): PbapServerProfile
 
 **起始版本：** 11
 
+<!--Device-pbap-function createPbapServerProfile(): PbapServerProfile--><!--Device-pbap-function createPbapServerProfile(): PbapServerProfile-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **返回值：**

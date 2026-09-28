@@ -8,6 +8,8 @@ Describes the text character spacing object. It is suitable for scenarios that r
 
 **Since:** 12
 
+<!--Device-unnamed-declare class LetterSpacingStyle--><!--Device-unnamed-declare class LetterSpacingStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
@@ -23,6 +25,8 @@ A constructor used to create a text letter spacing style.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LetterSpacingStyle-constructor(value: LengthMetrics)--><!--Device-LetterSpacingStyle-constructor(value: LengthMetrics)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -49,5 +53,7 @@ Unit: [vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#basic-pixel-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LetterSpacingStyle-readonly letterSpacing: number--><!--Device-LetterSpacingStyle-readonly letterSpacing: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

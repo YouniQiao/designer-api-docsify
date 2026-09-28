@@ -23,6 +23,8 @@ AlphabetIndexer(options: AlphabetIndexerOptions)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-AlphabetIndexerInterface-(options: AlphabetIndexerOptions): AlphabetIndexerAttribute--><!--Device-AlphabetIndexerInterface-(options: AlphabetIndexerOptions): AlphabetIndexerAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数:**

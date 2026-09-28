@@ -8,6 +8,8 @@ export interface NotificationRequest
 
 **起始版本：** 7
 
+<!--Device-unnamed-export interface NotificationRequest--><!--Device-unnamed-export interface NotificationRequest-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## agentBundle
@@ -21,6 +23,8 @@ readonly agentBundle?: BundleOption
 **类型：** [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md)
 
 **起始版本：** 12
+
+<!--Device-NotificationRequest-readonly agentBundle?: BundleOption--><!--Device-NotificationRequest-readonly agentBundle?: BundleOption-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -38,6 +42,8 @@ readonly appInstanceKey?: string
 
 **起始版本：** 15
 
+<!--Device-NotificationRequest-readonly appInstanceKey?: string--><!--Device-NotificationRequest-readonly appInstanceKey?: string-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -53,6 +59,8 @@ classification?: string
 **类型：** string
 
 **起始版本：** 7
+
+<!--Device-NotificationRequest-classification?: string--><!--Device-NotificationRequest-classification?: string-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -70,6 +78,8 @@ readonly deviceId?: string
 
 **起始版本：** 8
 
+<!--Device-NotificationRequest-readonly deviceId?: string--><!--Device-NotificationRequest-readonly deviceId?: string-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -85,6 +95,8 @@ extendInfo?: Record<string, Object>
 **类型：** Record&lt;string, Object&gt;
 
 **起始版本：** 20
+
+<!--Device-NotificationRequest-extendInfo?: Record<string, Object>--><!--Device-NotificationRequest-extendInfo?: Record<string, Object>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -112,6 +124,8 @@ forceDistributed?: boolean
 
 **起始版本：** 18
 
+<!--Device-NotificationRequest-forceDistributed?: boolean--><!--Device-NotificationRequest-forceDistributed?: boolean-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -129,6 +143,8 @@ groupInfo?: GroupInfo
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-NotificationRequest-groupInfo?: GroupInfo--><!--Device-NotificationRequest-groupInfo?: GroupInfo-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -154,6 +170,8 @@ isRemoveAllowed?: boolean
 **需要权限：** 
 - API版本11+：ohos.permission.SET_UNREMOVABLE_NOTIFICATION
 - API版本8-10：N/A
+
+<!--Device-NotificationRequest-isRemoveAllowed?: boolean--><!--Device-NotificationRequest-isRemoveAllowed?: boolean-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -181,6 +199,8 @@ notDistributed?: boolean
 
 **起始版本：** 18
 
+<!--Device-NotificationRequest-notDistributed?: boolean--><!--Device-NotificationRequest-notDistributed?: boolean-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -199,6 +219,8 @@ notificationControlFlags?: number
 
 **起始版本：** 12
 
+<!--Device-NotificationRequest-notificationControlFlags?: long--><!--Device-NotificationRequest-notificationControlFlags?: long-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -214,6 +236,8 @@ representativeBundle?: BundleOption
 **类型：** [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md)
 
 **起始版本：** 12
+
+<!--Device-NotificationRequest-representativeBundle?: BundleOption--><!--Device-NotificationRequest-representativeBundle?: BundleOption-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -231,6 +255,8 @@ readonly source?: number
 
 **起始版本：** 8
 
+<!--Device-NotificationRequest-readonly source?: int--><!--Device-NotificationRequest-readonly source?: int-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -247,6 +273,8 @@ trigger?:Trigger
 
 **起始版本：** 23
 
+<!--Device-NotificationRequest-trigger?:Trigger--><!--Device-NotificationRequest-trigger?:Trigger-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -262,6 +290,8 @@ unifiedGroupInfo?: UnifiedGroupInfo
 **类型：** [UnifiedGroupInfo](arkts-notification-notificationrequest-unifiedgroupinfo-i-sys.md)
 
 **起始版本：** 12
+
+<!--Device-NotificationRequest-unifiedGroupInfo?: UnifiedGroupInfo--><!--Device-NotificationRequest-unifiedGroupInfo?: UnifiedGroupInfo-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -282,6 +312,8 @@ readonly creatorInstanceKey?: number
 **废弃版本：** 15
 
 **替代接口：** [appInstanceKey](#appinstancekey)
+
+<!--Device-NotificationRequest-readonly creatorInstanceKey?: number--><!--Device-NotificationRequest-readonly creatorInstanceKey?: number-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

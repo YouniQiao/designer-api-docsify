@@ -8,6 +8,8 @@ interface OppTransferInformation
 
 **起始版本：** 16
 
+<!--Device-opp-interface OppTransferInformation--><!--Device-opp-interface OppTransferInformation-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ currentBytes: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OppTransferInformation-currentBytes: long--><!--Device-OppTransferInformation-currentBytes: long-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ currentCount: number
 **起始版本：** 16
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-OppTransferInformation-currentCount: int--><!--Device-OppTransferInformation-currentCount: int-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -68,6 +74,8 @@ direction: DirectionType
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OppTransferInformation-direction: DirectionType--><!--Device-OppTransferInformation-direction: DirectionType-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -85,6 +93,8 @@ filePath: string
 **起始版本：** 16
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-OppTransferInformation-filePath: string--><!--Device-OppTransferInformation-filePath: string-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -106,6 +116,8 @@ remoteDeviceId: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OppTransferInformation-remoteDeviceId: string--><!--Device-OppTransferInformation-remoteDeviceId: string-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -123,6 +135,8 @@ remoteDeviceName: string
 **起始版本：** 16
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-OppTransferInformation-remoteDeviceName: string--><!--Device-OppTransferInformation-remoteDeviceName: string-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -142,6 +156,8 @@ result: TransferResult
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OppTransferInformation-result: TransferResult--><!--Device-OppTransferInformation-result: TransferResult-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -159,6 +175,8 @@ status: TransferStatus
 **起始版本：** 16
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-OppTransferInformation-status: TransferStatus--><!--Device-OppTransferInformation-status: TransferStatus-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -178,6 +196,8 @@ totalBytes: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OppTransferInformation-totalBytes: long--><!--Device-OppTransferInformation-totalBytes: long-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -195,6 +215,8 @@ totalCount: number
 **起始版本：** 16
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-OppTransferInformation-totalCount: int--><!--Device-OppTransferInformation-totalCount: int-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

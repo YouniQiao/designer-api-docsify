@@ -18,7 +18,9 @@ function createKem(algNameId: KemAlgNameId): Kem
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-cryptoFramework-function createKem(algNameId: KemAlgNameId): Kem--><!--Device-cryptoFramework-function createKem(algNameId: KemAlgNameId): Kem-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Cipher
 

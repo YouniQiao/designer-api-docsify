@@ -8,6 +8,8 @@ export interface NotificationFlags
 
 **起始版本：** 8
 
+<!--Device-unnamed-export interface NotificationFlags--><!--Device-unnamed-export interface NotificationFlags-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## reminderFlags
@@ -28,6 +30,8 @@ readonly reminderFlags?: number
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-NotificationFlags-readonly reminderFlags?: long--><!--Device-NotificationFlags-readonly reminderFlags?: long-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

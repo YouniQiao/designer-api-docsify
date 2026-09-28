@@ -8,6 +8,8 @@ enum DisconnectCause
 
 **起始版本：** 12
 
+<!--Device-baseProfile-enum DisconnectCause--><!--Device-baseProfile-enum DisconnectCause-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## USER_DISCONNECT
@@ -21,6 +23,8 @@ USER_DISCONNECT = 0
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DisconnectCause-USER_DISCONNECT = 0--><!--Device-DisconnectCause-USER_DISCONNECT = 0-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -36,6 +40,8 @@ CONNECT_FROM_KEYBOARD = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DisconnectCause-CONNECT_FROM_KEYBOARD = 1--><!--Device-DisconnectCause-CONNECT_FROM_KEYBOARD = 1-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## CONNECT_FROM_MOUSE
@@ -49,6 +55,8 @@ CONNECT_FROM_MOUSE = 2
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DisconnectCause-CONNECT_FROM_MOUSE = 2--><!--Device-DisconnectCause-CONNECT_FROM_MOUSE = 2-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -64,6 +72,8 @@ CONNECT_FROM_CAR = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DisconnectCause-CONNECT_FROM_CAR = 3--><!--Device-DisconnectCause-CONNECT_FROM_CAR = 3-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## TOO_MANY_CONNECTED_DEVICES
@@ -78,6 +88,8 @@ TOO_MANY_CONNECTED_DEVICES = 4
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DisconnectCause-TOO_MANY_CONNECTED_DEVICES = 4--><!--Device-DisconnectCause-TOO_MANY_CONNECTED_DEVICES = 4-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## CONNECT_FAIL_INTERNAL
@@ -91,5 +103,7 @@ CONNECT_FAIL_INTERNAL = 5
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DisconnectCause-CONNECT_FAIL_INTERNAL = 5--><!--Device-DisconnectCause-CONNECT_FAIL_INTERNAL = 5-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

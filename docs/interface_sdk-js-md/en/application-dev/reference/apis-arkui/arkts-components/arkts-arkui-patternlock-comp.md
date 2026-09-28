@@ -4,7 +4,7 @@
 
 > **NOTE:** 
 > 
-> - If you require additional features, use [custom components](../../../ui/state-management/arkts-create-custom-components.md). For example, the custom component<!--RP1-->[CustomPatternLock](https://gitcode.com/openharmony/applications_app_samples/tree/master/code/UI/CustomPatternLock)<!--RP1End--> implements the pattern password lock feature through the [Canvas](arkts-arkui-canvas-comp.md#canvas) component, based on which you can extend the features as needed.
+> - If you require additional features, use [custom components](../../../ui/state-management/arkts-create-custom-components.md). For example, the custom component<!--RP1-->[CustomPatternLock](https://gitcode.com/openharmony/applications_app_samples/tree/master/code/UI/CustomPatternLock)<!--RP1End--> implements the pattern password lock feature through the [Canvas](arkts-arkui-canvas-comp.md) component, based on which you can extend the features as needed.
 
 ## Child Components
 
@@ -21,6 +21,8 @@ Creates a pattern lock component.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PatternLockInterface-(controller?: PatternLockController): PatternLockAttribute--><!--Device-PatternLockInterface-(controller?: PatternLockController): PatternLockAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

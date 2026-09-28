@@ -20,6 +20,8 @@ Imports a key in plaintext. This API uses an asynchronous callback to return the
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-huks-function importKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback<void>): void--><!--Device-huks-function importKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core
 - API版本9-11：SystemCapability.Security.Huks.Extension
@@ -37,7 +39,7 @@ Imports a key in plaintext. This API uses an asynchronous callback to return the
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | api is not supported |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: 1. The hardware does not support the capability. 2. The chip does not support the capability. 3. A dependent service feature is not supported. |
 | [12000001](../errorcode-huks.md#12000001-该子功能不支持特性) | algorithm mode is not supported |
 | [12000002](../errorcode-huks.md#12000002-缺少密钥算法参数) | algorithm param is missing |
 | [12000003](../errorcode-huks.md#12000003-无效的密钥算法参数) | algorithm param is invalid |
@@ -120,6 +122,8 @@ Imports a key in plaintext. This API uses a promise to return the result.
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-huks-function importKeyItem(keyAlias: string, options: HuksOptions): Promise<void>--><!--Device-huks-function importKeyItem(keyAlias: string, options: HuksOptions): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Extension
 
 **参数：**
@@ -140,7 +144,7 @@ Imports a key in plaintext. This API uses a promise to return the result.
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | api is not supported |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: 1. The hardware does not support the capability. 2. The chip does not support the capability. 3. A dependent service feature is not supported. |
 | [12000001](../errorcode-huks.md#12000001-该子功能不支持特性) | algorithm mode is not supported |
 | [12000002](../errorcode-huks.md#12000002-缺少密钥算法参数) | algorithm param is missing |
 | [12000003](../errorcode-huks.md#12000003-无效的密钥算法参数) | algorithm param is invalid |

@@ -8,6 +8,8 @@ export enum CancelReason
 
 **起始版本：** 18
 
+<!--Device-eSIM-export enum CancelReason--><!--Device-eSIM-export enum CancelReason-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -21,6 +23,8 @@ CANCEL_REASON_END_USER_REJECTION = 0
 最终用户已拒绝下载。
 
 **起始版本：** 18
+
+<!--Device-CancelReason-CANCEL_REASON_END_USER_REJECTION = 0--><!--Device-CancelReason-CANCEL_REASON_END_USER_REJECTION = 0-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
@@ -36,6 +40,8 @@ CANCEL_REASON_POSTPONED = 1
 
 **起始版本：** 18
 
+<!--Device-CancelReason-CANCEL_REASON_POSTPONED = 1--><!--Device-CancelReason-CANCEL_REASON_POSTPONED = 1-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -50,6 +56,8 @@ CANCEL_REASON_TIMEOUT = 2
 
 **起始版本：** 18
 
+<!--Device-CancelReason-CANCEL_REASON_TIMEOUT = 2--><!--Device-CancelReason-CANCEL_REASON_TIMEOUT = 2-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -63,6 +71,8 @@ CANCEL_REASON_PPR_NOT_ALLOWED = 3
 由于eUICC上的授权表或其他已安装的配置文件不允许其策略规则，因此无法安装。
 
 **起始版本：** 18
+
+<!--Device-CancelReason-CANCEL_REASON_PPR_NOT_ALLOWED = 3--><!--Device-CancelReason-CANCEL_REASON_PPR_NOT_ALLOWED = 3-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 

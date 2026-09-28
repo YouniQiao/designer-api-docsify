@@ -6,6 +6,8 @@ The distributedMissionManager module implements mission management across device
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-unnamed-declare namespace distributedMissionManager--><!--Device-unnamed-declare namespace distributedMissionManager-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
 **System API:** This is a system API.

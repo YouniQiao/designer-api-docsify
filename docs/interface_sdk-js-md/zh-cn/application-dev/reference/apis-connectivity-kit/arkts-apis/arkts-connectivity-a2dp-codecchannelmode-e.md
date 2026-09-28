@@ -8,6 +8,8 @@ enum CodecChannelMode
 
 **起始版本：** 11
 
+<!--Device-a2dp-enum CodecChannelMode--><!--Device-a2dp-enum CodecChannelMode-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## CODEC_CHANNEL_MODE_NONE
@@ -19,6 +21,8 @@ CODEC_CHANNEL_MODE_NONE = 0
 声道未知。
 
 **起始版本：** 11
+
+<!--Device-CodecChannelMode-CODEC_CHANNEL_MODE_NONE = 0--><!--Device-CodecChannelMode-CODEC_CHANNEL_MODE_NONE = 0-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -32,6 +36,8 @@ CODEC_CHANNEL_MODE_MONO = 1
 
 **起始版本：** 11
 
+<!--Device-CodecChannelMode-CODEC_CHANNEL_MODE_MONO = 1--><!--Device-CodecChannelMode-CODEC_CHANNEL_MODE_MONO = 1-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## CODEC_CHANNEL_MODE_STEREO
@@ -43,5 +49,7 @@ CODEC_CHANNEL_MODE_STEREO = 2
 双声道。
 
 **起始版本：** 11
+
+<!--Device-CodecChannelMode-CODEC_CHANNEL_MODE_STEREO = 2--><!--Device-CodecChannelMode-CODEC_CHANNEL_MODE_STEREO = 2-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

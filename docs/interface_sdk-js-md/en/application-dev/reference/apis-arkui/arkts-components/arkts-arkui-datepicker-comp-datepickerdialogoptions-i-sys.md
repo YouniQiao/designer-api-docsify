@@ -12,6 +12,8 @@ Inherited from [DatePickerOptions](arkts-arkui-datepicker-comp-datepickeroptions
 
 **Since:** 8
 
+<!--Device-unnamed-declare interface DatePickerDialogOptions extends DatePickerOptions--><!--Device-unnamed-declare interface DatePickerDialogOptions extends DatePickerOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## distortionMode
@@ -35,6 +37,8 @@ Distortion animation mode of the dialog box under the system material. This para
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DatePickerDialogOptions-distortionMode?: DistortionMode--><!--Device-DatePickerDialogOptions-distortionMode?: DistortionMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -61,6 +65,8 @@ Edge light animation mode of the dialog box under the system material. This para
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DatePickerDialogOptions-edgeLightMode?: EdgeLightMode--><!--Device-DatePickerDialogOptions-edgeLightMode?: EdgeLightMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

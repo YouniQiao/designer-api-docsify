@@ -26,6 +26,8 @@ function sendMessage(options: SendMessageOptions): void
 
 **需要权限：** ohos.permission.SEND_MESSAGES
 
+<!--Device-sms-function sendMessage(options: SendMessageOptions): void--><!--Device-sms-function sendMessage(options: SendMessageOptions): void-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **参数：**

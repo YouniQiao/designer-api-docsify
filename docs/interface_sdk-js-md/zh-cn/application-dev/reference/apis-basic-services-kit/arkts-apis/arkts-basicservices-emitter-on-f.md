@@ -16,7 +16,9 @@ function on(event: InnerEvent, callback: Callback<EventData>): void
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-emitter-function on(event: InnerEvent, callback: Callback<EventData>): void--><!--Device-emitter-function on(event: InnerEvent, callback: Callback<EventData>): void-End-->
 
 **系统能力：** SystemCapability.Notification.Emitter
 
@@ -59,6 +61,8 @@ function on(eventId: string, callback: Callback<EventData>): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-emitter-function on(eventId: string, callback: Callback<EventData>): void--><!--Device-emitter-function on(eventId: string, callback: Callback<EventData>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Emitter
 
 **参数：**
@@ -94,6 +98,8 @@ function on<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-emitter-function on<T>(eventId: string, callback: Callback<GenericEventData<T>>): void--><!--Device-emitter-function on<T>(eventId: string, callback: Callback<GenericEventData<T>>): void-End-->
 
 **系统能力：** SystemCapability.Notification.Emitter
 

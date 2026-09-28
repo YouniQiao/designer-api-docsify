@@ -18,6 +18,8 @@ function rejectCall(callId: number, options: RejectMessageOptions, callback: Asy
 
 **需要权限：** ohos.permission.ANSWER_CALL
 
+<!--Device-call-function rejectCall(callId: int, options: RejectMessageOptions, callback: AsyncCallback<void>): void--><!--Device-call-function rejectCall(callId: int, options: RejectMessageOptions, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -73,6 +75,8 @@ function rejectCall(callId?: number, options?: RejectMessageOptions): Promise<vo
 **起始版本：** 9
 
 **需要权限：** ohos.permission.ANSWER_CALL
+
+<!--Device-call-function rejectCall(callId?: int, options?: RejectMessageOptions): Promise<void>--><!--Device-call-function rejectCall(callId?: int, options?: RejectMessageOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -133,6 +137,8 @@ function rejectCall(callId: number, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.ANSWER_CALL
 
+<!--Device-call-function rejectCall(callId: int, callback: AsyncCallback<void>): void--><!--Device-call-function rejectCall(callId: int, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -184,6 +190,8 @@ function rejectCall(options: RejectMessageOptions, callback: AsyncCallback<void>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.ANSWER_CALL
+
+<!--Device-call-function rejectCall(options: RejectMessageOptions, callback: AsyncCallback<void>): void--><!--Device-call-function rejectCall(options: RejectMessageOptions, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 

@@ -30,10 +30,10 @@ Provides UI capabilities of ArkUI on the native side, such as UI component creat
 | [native_node_napi.h](capi-native-node-napi-h.md) | Declares APIs for converting <b>FrameNode</b> objects on the ArkTS side to <b>ArkUI_NodeHandle</b> objects on the native side. |
 | [styled_string.h](capi-styled-string-h.md) | Defines the text style and layout manager for the component whose {@link type} is set to **ARKUI_NODE_TEXT**<br>on the native side. |
 | [custom_span.h](capi-custom-span-h.md) | Defines enumerations and APIs related to **CustomSpan**, which is used to implement precise size measurement, layout typesetting, and drawing effects for custom spans. It supports you in implementing text and image layout, emoji embedding, custom markers, and other features in scenarios such as rich text editors, chat applications, and document applications, providing flexible custom span capabilities to help improve development efficiency and achieve richer text layout effects. |
-| [water_flow.h](capi-water-flow-h.md) | Provides WaterFlow-related type and function definitions for <b>NativeNode</b> APIs. |
-| [swiper.h](capi-swiper-h.md) | Defines a set of Swiper enum and interface. |
+| [node_water_flow.h](capi-node-water-flow-h.md) | Defines enumerations and APIs related to **WaterFlow**. |
+| [swiper.h](capi-swiper-h.md) | Defines the enumerations and APIs of the **Swiper** component for implementing scenarios such as carousel display and content navigation. It supports custom navigation indicators (dot/number types), navigation arrow styles, nested scrolling modes, mouse wheel page-turning modes, and animation modes, helping users quickly build carousel interaction experiences. |
 | [common_attributes.h](capi-common-attributes-h.md) | Defines the common property and method types for the native module. |
-| [navigation_router.h](capi-navigation-router-h.md) | Defines a set of navigation or router enum and interface. |
+| [navigation_router.h](capi-navigation-router-h.md) | Defines the enumerations related to the **NavDestination** and **Router** components. |
 | [scroll.h](capi-scroll-h.md) | Provides shared scroll-related enum definitions for <b>NativeNode</b> APIs. |
 | [list_item.h](capi-list-item-h.md) | Provides shared list item-related type and function definitions for <b>NativeNode</b> APIs. |
 | [node_grid.h](capi-node-grid-h.md) | Defines enumerations and APIs related to **Grid**. |

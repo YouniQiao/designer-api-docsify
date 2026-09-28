@@ -8,6 +8,8 @@ interface AbsAlbum
 
 **起始版本：** 10
 
+<!--Device-photoAccessHelper-interface AbsAlbum--><!--Device-photoAccessHelper-interface AbsAlbum-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
@@ -27,6 +29,8 @@ getSharedPhotoAssets(options: FetchOptions): Array<SharedPhotoAsset>
 **起始版本：** 13
 
 **需要权限：** ohos.permission.ACCESS_MEDIALIB_THUMB_DB
+
+<!--Device-AbsAlbum-getSharedPhotoAssets(options: FetchOptions): Array<SharedPhotoAsset>--><!--Device-AbsAlbum-getSharedPhotoAssets(options: FetchOptions): Array<SharedPhotoAsset>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -65,6 +69,8 @@ readonly coverUriSource?: CoverUriSource
 
 **起始版本：** 20
 
+<!--Device-AbsAlbum-readonly coverUriSource?: CoverUriSource--><!--Device-AbsAlbum-readonly coverUriSource?: CoverUriSource-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -83,6 +89,8 @@ readonly hidden?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AbsAlbum-readonly hidden?: boolean--><!--Device-AbsAlbum-readonly hidden?: boolean-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -98,6 +106,8 @@ readonly uploadStatus: boolean
 **类型：** boolean
 
 **起始版本：** 22
+
+<!--Device-AbsAlbum-readonly uploadStatus: boolean--><!--Device-AbsAlbum-readonly uploadStatus: boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

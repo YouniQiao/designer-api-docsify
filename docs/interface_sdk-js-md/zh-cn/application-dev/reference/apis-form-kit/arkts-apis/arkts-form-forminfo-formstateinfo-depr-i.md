@@ -12,6 +12,8 @@ interface FormStateInfo
 
 **替代接口：** [FormStateInfo](arkts-form-forminfo-formstateinfo-i.md)
 
+<!--Device-formInfo-interface FormStateInfo--><!--Device-formInfo-interface FormStateInfo-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 ## 导入模块
@@ -35,6 +37,8 @@ formState: FormState
 
 **替代接口：** [formState](arkts-form-forminfo-formstateinfo-i.md#formstate)
 
+<!--Device-FormStateInfo-formState: FormState--><!--Device-FormStateInfo-formState: FormState-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 ## want
@@ -52,5 +56,7 @@ want: Want
 **废弃版本：** 9
 
 **替代接口：** [want](arkts-form-forminfo-formstateinfo-i.md#want)
+
+<!--Device-FormStateInfo-want: Want--><!--Device-FormStateInfo-want: Want-End-->
 
 **系统能力：** SystemCapability.Ability.Form

@@ -8,6 +8,8 @@ declare class BackupExtensionAbility
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare class BackupExtensionAbility--><!--Device-unnamed-declare class BackupExtensionAbility-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 ## 导入模块
@@ -27,6 +29,8 @@ Extension生命周期回调，在执行备份数据时回调，由开发者实�
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BackupExtensionAbility-onBackup(): void--><!--Device-BackupExtensionAbility-onBackup(): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
@@ -51,6 +55,8 @@ onBackupEx(backupInfo: string): string | Promise<string>
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BackupExtensionAbility-onBackupEx(backupInfo: string): string | Promise<string>--><!--Device-BackupExtensionAbility-onBackupEx(backupInfo: string): string | Promise<string>-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
@@ -159,6 +165,8 @@ onProcess(): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BackupExtensionAbility-onProcess(): string--><!--Device-BackupExtensionAbility-onProcess(): string-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 **返回值：**
@@ -258,6 +266,8 @@ onRelease(scenario: number): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BackupExtensionAbility-onRelease(scenario: int): Promise<void>--><!--Device-BackupExtensionAbility-onRelease(scenario: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 **参数：**
@@ -319,6 +329,8 @@ Extension生命周期回调，在执行恢复数据时回调，由开发者提�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BackupExtensionAbility-onRestore(bundleVersion: BundleVersion): void--><!--Device-BackupExtensionAbility-onRestore(bundleVersion: BundleVersion): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 **参数：**
@@ -350,6 +362,8 @@ Extension生命周期回调，在执行恢复数据时回调，由开发者实�
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BackupExtensionAbility-onRestoreEx(bundleVersion: BundleVersion, restoreInfo: string): string | Promise<string>--><!--Device-BackupExtensionAbility-onRestoreEx(bundleVersion: BundleVersion, restoreInfo: string): string | Promise<string>-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
@@ -460,5 +474,7 @@ BackupExtensionAbility的上下文环境，继承自ExtensionContext。
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BackupExtensionAbility-context: BackupExtensionContext--><!--Device-BackupExtensionAbility-context: BackupExtensionContext-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup

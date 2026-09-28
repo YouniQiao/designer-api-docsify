@@ -12,6 +12,8 @@ type AuthEventKey = 'result' | 'tip'
 
 **废弃版本：** 11
 
+<!--Device-userAuth-type AuthEventKey = 'result' | 'tip'--><!--Device-userAuth-type AuthEventKey = 'result' | 'tip'-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 | 类型 | 说明 |

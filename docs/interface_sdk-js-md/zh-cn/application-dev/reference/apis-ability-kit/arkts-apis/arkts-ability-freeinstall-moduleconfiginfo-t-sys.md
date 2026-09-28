@@ -8,6 +8,8 @@ export type ModuleConfigInfo = _PackInfo.ModuleConfigInfo
 
 **起始版本：** 9
 
+<!--Device-freeInstall-export type ModuleConfigInfo = _PackInfo.ModuleConfigInfo--><!--Device-freeInstall-export type ModuleConfigInfo = _PackInfo.ModuleConfigInfo-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **系统接口：** 此接口为系统接口。

@@ -22,6 +22,8 @@ function unbindDevice(deviceAddress: PartnerDeviceAddress): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-partnerAgent-function unbindDevice(deviceAddress: PartnerDeviceAddress): Promise<void>--><!--Device-partnerAgent-function unbindDevice(deviceAddress: PartnerDeviceAddress): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core
 
 **参数：**

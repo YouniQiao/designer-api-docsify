@@ -8,6 +8,8 @@ export interface CCallStateInfo
 
 **起始版本：** 23
 
+<!--Device-observer-export interface CCallStateInfo--><!--Device-observer-export interface CCallStateInfo-End-->
+
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
 ## 导入模块
@@ -28,6 +30,8 @@ state: CCallState
 
 **起始版本：** 23
 
+<!--Device-CCallStateInfo-state: CCallState--><!--Device-CCallStateInfo-state: CCallState-End-->
+
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
 ## teleNumber
@@ -41,5 +45,7 @@ teleNumber: string
 **类型：** string
 
 **起始版本：** 23
+
+<!--Device-CCallStateInfo-teleNumber: string--><!--Device-CCallStateInfo-teleNumber: string-End-->
 
 **系统能力：** SystemCapability.Telephony.StateRegistry

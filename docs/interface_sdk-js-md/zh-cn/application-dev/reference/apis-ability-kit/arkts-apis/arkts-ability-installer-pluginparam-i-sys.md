@@ -8,6 +8,8 @@ export interface PluginParam
 
 **起始版本：** 19
 
+<!--Device-installer-export interface PluginParam--><!--Device-installer-export interface PluginParam-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ parameters?: Array<Parameters>
 
 **起始版本：** 19
 
+<!--Device-PluginParam-parameters?: Array<Parameters>--><!--Device-PluginParam-parameters?: Array<Parameters>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ userId?: number
 **类型：** number
 
 **起始版本：** 19
+
+<!--Device-PluginParam-userId?: int--><!--Device-PluginParam-userId?: int-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

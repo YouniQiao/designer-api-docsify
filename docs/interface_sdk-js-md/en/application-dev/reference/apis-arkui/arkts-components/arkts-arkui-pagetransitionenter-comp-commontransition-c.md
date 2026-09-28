@@ -8,6 +8,8 @@ Defines a common transition animation for page transitions.
 
 **Since:** 7
 
+<!--Device-unnamed-declare class CommonTransition<T>--><!--Device-unnamed-declare class CommonTransition<T>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
@@ -22,6 +24,8 @@ A constructor used to create a common transition animation.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-CommonTransition-constructor()--><!--Device-CommonTransition-constructor()-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## opacity
@@ -35,6 +39,8 @@ Sets the starting opacity value for entrance or the ending opacity value for exi
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-CommonTransition-opacity(value: number): T--><!--Device-CommonTransition-opacity(value: number): T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,6 +68,8 @@ Sets the scaling effect for page transitions.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-CommonTransition-scale(value: ScaleOptions): T--><!--Device-CommonTransition-scale(value: ScaleOptions): T-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -88,6 +96,8 @@ Sets the slide-in and slide-out effects for page transitions.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-CommonTransition-slide(value: SlideEffect): T--><!--Device-CommonTransition-slide(value: SlideEffect): T-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -113,6 +123,8 @@ Sets the translation effect for page transitions.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-CommonTransition-translate(value: TranslateOptions): T--><!--Device-CommonTransition-translate(value: TranslateOptions): T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

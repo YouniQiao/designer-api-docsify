@@ -8,6 +8,8 @@ TextStyleInterface
 
 **Since:** 12
 
+<!--Device-unnamed-declare interface TextStyleInterface--><!--Device-unnamed-declare interface TextStyleInterface-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## fontColor
@@ -28,6 +30,8 @@ The default value is the theme color.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TextStyleInterface-fontColor?: ResourceColor--><!--Device-TextStyleInterface-fontColor?: ResourceColor-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## fontConfigs
@@ -45,6 +49,8 @@ Font configuration. The default value inherits [FontConfigs](arkts-arkui-fontcon
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
+
+<!--Device-TextStyleInterface-fontConfigs?: FontConfigs--><!--Device-TextStyleInterface-fontConfigs?: FontConfigs-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -65,6 +71,8 @@ The default value is the theme font.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextStyleInterface-fontFamily?: ResourceStr--><!--Device-TextStyleInterface-fontFamily?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -90,6 +98,8 @@ Unit: [fp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#basic-pixel-
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TextStyleInterface-fontSize?: LengthMetrics--><!--Device-TextStyleInterface-fontSize?: LengthMetrics-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## fontStyle
@@ -110,6 +120,8 @@ Default value: **FontStyle.Normal**
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TextStyleInterface-fontStyle?: FontStyle--><!--Device-TextStyleInterface-fontStyle?: FontStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## fontVariations
@@ -127,6 +139,8 @@ Attribute of the variable font. indicating that the attribute of the variable fo
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-TextStyleInterface-fontVariations?: Array<FontVariation>--><!--Device-TextStyleInterface-fontVariations?: Array<FontVariation>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -150,6 +164,8 @@ Default value: **FontWeight.Normal**
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TextStyleInterface-fontWeight?: number | FontWeight | string--><!--Device-TextStyleInterface-fontWeight?: number | FontWeight | string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## strokeColor
@@ -170,6 +186,8 @@ The default value is the font color. If an abnormal value is set, the font color
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-TextStyleInterface-strokeColor?: ResourceColor--><!--Device-TextStyleInterface-strokeColor?: ResourceColor-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## strokeJoinStyle
@@ -189,6 +207,8 @@ Default value: **StrokeJoinStyle.MITER_JOIN**, indicating a miter join with a sh
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-TextStyleInterface-strokeJoinStyle?: StrokeJoinStyle--><!--Device-TextStyleInterface-strokeJoinStyle?: StrokeJoinStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -212,6 +232,8 @@ The default value is **0**.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-TextStyleInterface-strokeWidth?: LengthMetrics--><!--Device-TextStyleInterface-strokeWidth?: LengthMetrics-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## superscript
@@ -231,5 +253,7 @@ Default value: **SuperscriptStyle.NORMAL**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-TextStyleInterface-superscript?: SuperscriptStyle--><!--Device-TextStyleInterface-superscript?: SuperscriptStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

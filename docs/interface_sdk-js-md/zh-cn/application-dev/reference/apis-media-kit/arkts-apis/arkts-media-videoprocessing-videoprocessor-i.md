@@ -8,6 +8,8 @@ interface VideoProcessor
 
 **起始版本：** 26.0.0
 
+<!--Device-videoProcessing-interface VideoProcessor--><!--Device-videoProcessing-interface VideoProcessor-End-->
+
 **系统能力：** SystemCapability.Multimedia.VideoProcessingEngine
 
 ## 导入模块
@@ -27,6 +29,8 @@ getStatus(): Promise<VideoProcessorStatus | undefined>
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-VideoProcessor-getStatus(): Promise<VideoProcessorStatus | undefined>--><!--Device-VideoProcessor-getStatus(): Promise<VideoProcessorStatus | undefined>-End-->
 
 **系统能力：** SystemCapability.Multimedia.VideoProcessingEngine
 
@@ -53,6 +57,8 @@ offStatusChange(callback?: VideoProcessorStatusCallback): void
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-VideoProcessor-offStatusChange(callback?: VideoProcessorStatusCallback): void--><!--Device-VideoProcessor-offStatusChange(callback?: VideoProcessorStatusCallback): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.VideoProcessingEngine
 
@@ -81,6 +87,8 @@ onStatusChange(callback: VideoProcessorStatusCallback): void
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-VideoProcessor-onStatusChange(callback: VideoProcessorStatusCallback): void--><!--Device-VideoProcessor-onStatusChange(callback: VideoProcessorStatusCallback): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.VideoProcessingEngine
 

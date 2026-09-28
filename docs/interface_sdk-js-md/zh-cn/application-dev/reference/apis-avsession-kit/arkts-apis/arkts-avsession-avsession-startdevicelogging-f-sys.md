@@ -16,6 +16,8 @@ function startDeviceLogging(url: string, maxSize?: number): Promise<void>
 
 **起始版本：** 13
 
+<!--Device-avSession-function startDeviceLogging(url: string, maxSize?: int): Promise<void>--><!--Device-avSession-function startDeviceLogging(url: string, maxSize?: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **系统接口：** 此接口为系统接口。

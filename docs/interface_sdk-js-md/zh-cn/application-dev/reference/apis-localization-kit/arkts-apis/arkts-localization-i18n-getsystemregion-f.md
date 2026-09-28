@@ -20,6 +20,8 @@ export function getSystemRegion(): string
 
 **替代接口：** [getSystemRegion](arkts-localization-i18n-system-c.md#getsystemregion)
 
+<!--Device-i18n-export function getSystemRegion(): string--><!--Device-i18n-export function getSystemRegion(): string-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 **返回值：**

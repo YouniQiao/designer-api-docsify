@@ -18,6 +18,8 @@ function getId(): HiTraceId
 
 **起始版本：** 8
 
+<!--Device-hiTraceChain-function getId(): HiTraceId--><!--Device-hiTraceChain-function getId(): HiTraceId-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
 
 **返回值：**

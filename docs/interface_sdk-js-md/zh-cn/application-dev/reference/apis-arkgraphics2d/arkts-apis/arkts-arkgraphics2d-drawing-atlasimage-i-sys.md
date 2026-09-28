@@ -8,6 +8,8 @@ interface AtlasImage
 
 **起始版本：** 26.0.1
 
+<!--Device-drawing-interface AtlasImage--><!--Device-drawing-interface AtlasImage-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ atlasImage: image.PixelMap
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AtlasImage-atlasImage: image.PixelMap--><!--Device-AtlasImage-atlasImage: image.PixelMap-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -54,6 +58,8 @@ cols: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AtlasImage-cols: int--><!--Device-AtlasImage-cols: int-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -71,6 +77,8 @@ frameHeight: number
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AtlasImage-frameHeight: double--><!--Device-AtlasImage-frameHeight: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -94,6 +102,8 @@ frameIndex: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AtlasImage-frameIndex: double--><!--Device-AtlasImage-frameIndex: double-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -111,6 +121,8 @@ frameWidth: number
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AtlasImage-frameWidth: double--><!--Device-AtlasImage-frameWidth: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -130,6 +142,8 @@ mode: AtlasInterpolationMode
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AtlasImage-mode: AtlasInterpolationMode--><!--Device-AtlasImage-mode: AtlasInterpolationMode-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -147,6 +161,8 @@ padding: number
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AtlasImage-padding: double--><!--Device-AtlasImage-padding: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -170,6 +186,8 @@ rows: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AtlasImage-rows: int--><!--Device-AtlasImage-rows: int-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -191,6 +209,8 @@ totalFrame: number
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AtlasImage-totalFrame: int--><!--Device-AtlasImage-totalFrame: int-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

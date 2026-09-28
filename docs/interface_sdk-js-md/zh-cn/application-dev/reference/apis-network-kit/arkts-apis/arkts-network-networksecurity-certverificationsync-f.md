@@ -16,6 +16,8 @@ export function certVerificationSync(cert: CertBlob, caCert?: CertBlob): number
 
 **起始版本：** 11
 
+<!--Device-networkSecurity-export function certVerificationSync(cert: CertBlob, caCert?: CertBlob): int--><!--Device-networkSecurity-export function certVerificationSync(cert: CertBlob, caCert?: CertBlob): int-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**

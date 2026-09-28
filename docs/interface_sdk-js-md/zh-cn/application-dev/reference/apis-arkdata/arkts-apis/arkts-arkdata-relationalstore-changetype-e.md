@@ -8,6 +8,8 @@ enum ChangeType
 
 **起始版本：** 10
 
+<!--Device-relationalStore-enum ChangeType--><!--Device-relationalStore-enum ChangeType-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## DATA_CHANGE
@@ -24,6 +26,8 @@ DATA_CHANGE = 0
 - API版本12+：N/A
 - API版本10-11：ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-ChangeType-DATA_CHANGE = 0--><!--Device-ChangeType-DATA_CHANGE = 0-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## ASSET_CHANGE
@@ -39,5 +43,7 @@ ASSET_CHANGE = 1
 **需要权限：** 
 - API版本12+：N/A
 - API版本10-11：ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-ChangeType-ASSET_CHANGE = 1--><!--Device-ChangeType-ASSET_CHANGE = 1-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core

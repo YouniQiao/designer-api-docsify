@@ -8,6 +8,8 @@ export default class AppForegroundStateObserver
 
 **起始版本：** 11
 
+<!--Device-unnamed-export default class AppForegroundStateObserver--><!--Device-unnamed-export default class AppForegroundStateObserver-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -21,6 +23,8 @@ onAppStateChanged(appStateData: AppStateData): void
 应用启动、前后台和退出状态发生变化时，系统会触发该回调。
 
 **起始版本：** 11
+
+<!--Device-AppForegroundStateObserver-onAppStateChanged(appStateData: AppStateData): void--><!--Device-AppForegroundStateObserver-onAppStateChanged(appStateData: AppStateData): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

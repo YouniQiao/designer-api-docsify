@@ -8,6 +8,8 @@ interface DeviceInfo
 
 **起始版本：** 12
 
+<!--Device-deviceManager-interface DeviceInfo--><!--Device-deviceManager-interface DeviceInfo-End-->
+
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ deviceId: number
 
 **起始版本：** 12
 
+<!--Device-DeviceInfo-deviceId: long--><!--Device-DeviceInfo-deviceId: long-End-->
+
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
 **系统接口：** 此接口为系统接口。
@@ -46,6 +50,8 @@ driverUid?: string
 
 **起始版本：** 12
 
+<!--Device-DeviceInfo-driverUid?: string--><!--Device-DeviceInfo-driverUid?: string-End-->
+
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +67,8 @@ isDriverMatched: boolean
 **类型：** boolean
 
 **起始版本：** 12
+
+<!--Device-DeviceInfo-isDriverMatched: boolean--><!--Device-DeviceInfo-isDriverMatched: boolean-End-->
 
 **系统能力：** SystemCapability.Driver.ExternalDevice
 

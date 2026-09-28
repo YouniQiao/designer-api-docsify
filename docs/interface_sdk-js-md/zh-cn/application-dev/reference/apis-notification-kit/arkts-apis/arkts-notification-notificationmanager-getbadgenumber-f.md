@@ -18,6 +18,8 @@ function getBadgeNumber(): Promise<number>
 
 **起始版本：** 22
 
+<!--Device-notificationManager-function getBadgeNumber(): Promise<long>--><!--Device-notificationManager-function getBadgeNumber(): Promise<long>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **参见：** [setBadgeNumber](arkts-notification-notificationmanager-setbadgenumber-f.md#setbadgenumber-1) 设定角标个数。

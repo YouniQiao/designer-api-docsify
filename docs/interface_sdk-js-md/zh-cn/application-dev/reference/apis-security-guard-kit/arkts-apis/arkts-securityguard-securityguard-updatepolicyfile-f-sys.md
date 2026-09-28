@@ -18,6 +18,8 @@ function updatePolicyFile(policyFile: PolicyFile): Promise<void>
 
 **需要权限：** ohos.permission.MANAGE_SECURITY_GUARD_CONFIG
 
+<!--Device-securityGuard-function updatePolicyFile(policyFile: PolicyFile): Promise<void>--><!--Device-securityGuard-function updatePolicyFile(policyFile: PolicyFile): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Security.SecurityGuard
 
 **系统接口：** 此接口为系统接口。

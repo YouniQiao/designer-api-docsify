@@ -16,6 +16,8 @@ function hasSimCard(slotId: number, callback: AsyncCallback<boolean>): void
 
 **起始版本：** 7
 
+<!--Device-sim-function hasSimCard(slotId: int, callback: AsyncCallback<boolean>): void--><!--Device-sim-function hasSimCard(slotId: int, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**
@@ -62,6 +64,8 @@ function hasSimCard(slotId: number): Promise<boolean>
 获取指定卡槽SIM卡是否插卡。使用Promise异步回调。
 
 **起始版本：** 7
+
+<!--Device-sim-function hasSimCard(slotId: int): Promise<boolean>--><!--Device-sim-function hasSimCard(slotId: int): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

@@ -16,6 +16,8 @@ function getRule() : bigint
 
 **起始版本：** 8
 
+<!--Device-hichecker-function getRule() : bigint--><!--Device-hichecker-function getRule() : bigint-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
 **返回值：**

@@ -8,6 +8,8 @@ interface USBInterface
 
 **起始版本：** 9
 
+<!--Device-usbManager-interface USBInterface--><!--Device-usbManager-interface USBInterface-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## 导入模块
@@ -28,6 +30,8 @@ alternateSetting: number
 
 **起始版本：** 9
 
+<!--Device-USBInterface-alternateSetting: int--><!--Device-USBInterface-alternateSetting: int-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## clazz
@@ -41,6 +45,8 @@ clazz: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-USBInterface-clazz: int--><!--Device-USBInterface-clazz: int-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -56,6 +62,8 @@ endpoints: Array<USBEndpoint>
 
 **起始版本：** 9
 
+<!--Device-USBInterface-endpoints: Array<USBEndpoint>--><!--Device-USBInterface-endpoints: Array<USBEndpoint>-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## id
@@ -69,6 +77,8 @@ id: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-USBInterface-id: int--><!--Device-USBInterface-id: int-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -84,6 +94,8 @@ name: string
 
 **起始版本：** 9
 
+<!--Device-USBInterface-name: string--><!--Device-USBInterface-name: string-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## protocol
@@ -98,6 +110,8 @@ protocol: number
 
 **起始版本：** 9
 
+<!--Device-USBInterface-protocol: int--><!--Device-USBInterface-protocol: int-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## subClass
@@ -111,5 +125,7 @@ subClass: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-USBInterface-subClass: int--><!--Device-USBInterface-subClass: int-End-->
 
 **系统能力：** SystemCapability.USB.USBManager

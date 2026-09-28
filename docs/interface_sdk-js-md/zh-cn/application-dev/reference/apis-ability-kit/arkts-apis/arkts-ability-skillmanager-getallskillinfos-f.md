@@ -22,6 +22,8 @@ function getAllSkillInfos(flags: number, userId?: number): Promise<Array<SkillIn
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-skillManager-function getAllSkillInfos(flags: int, userId?: int): Promise<Array<SkillInfo>>--><!--Device-skillManager-function getAllSkillInfos(flags: int, userId?: int): Promise<Array<SkillInfo>>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **参数：**

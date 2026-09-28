@@ -26,6 +26,8 @@ function generateKey(keyAlias: string, options: HuksOptions, callback: AsyncCall
 
 **替代接口：** [generateKeyItem](arkts-universalkeystore-huks-generatekeyitem-f.md)(keyAlias: string, options: HuksOptions, callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-huks-function generateKey(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksResult>): void--><!--Device-huks-function generateKey(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksResult>): void-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Extension
 
 **参数：**
@@ -94,6 +96,8 @@ function generateKey(keyAlias: string, options: HuksOptions): Promise<HuksResult
 **废弃版本：** 9
 
 **替代接口：** [generateKeyItem](arkts-universalkeystore-huks-generatekeyitem-f.md#generatekeyitem-1)(keyAlias: string, options: HuksOptions)
+
+<!--Device-huks-function generateKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>--><!--Device-huks-function generateKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Extension
 

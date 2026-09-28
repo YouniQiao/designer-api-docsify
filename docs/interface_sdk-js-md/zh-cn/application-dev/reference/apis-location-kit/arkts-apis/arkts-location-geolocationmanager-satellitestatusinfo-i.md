@@ -8,6 +8,8 @@ export interface SatelliteStatusInfo
 
 **起始版本：** 9
 
+<!--Device-geoLocationManager-export interface SatelliteStatusInfo--><!--Device-geoLocationManager-export interface SatelliteStatusInfo-End-->
+
 **系统能力：** SystemCapability.Location.Location.Gnss
 
 ## 导入模块
@@ -28,6 +30,8 @@ altitudes: Array<number>
 
 **起始版本：** 9
 
+<!--Device-SatelliteStatusInfo-altitudes: Array<double>--><!--Device-SatelliteStatusInfo-altitudes: Array<double>-End-->
+
 **系统能力：** SystemCapability.Location.Location.Gnss
 
 ## azimuths
@@ -41,6 +45,8 @@ azimuths: Array<number>
 **类型：** Array&lt;number&gt;
 
 **起始版本：** 9
+
+<!--Device-SatelliteStatusInfo-azimuths: Array<double>--><!--Device-SatelliteStatusInfo-azimuths: Array<double>-End-->
 
 **系统能力：** SystemCapability.Location.Location.Gnss
 
@@ -56,6 +62,8 @@ carrierFrequencies: Array<number>
 
 **起始版本：** 9
 
+<!--Device-SatelliteStatusInfo-carrierFrequencies: Array<double>--><!--Device-SatelliteStatusInfo-carrierFrequencies: Array<double>-End-->
+
 **系统能力：** SystemCapability.Location.Location.Gnss
 
 ## carrierToNoiseDensitys
@@ -69,6 +77,8 @@ carrierToNoiseDensitys: Array<number>
 **类型：** Array&lt;number&gt;
 
 **起始版本：** 9
+
+<!--Device-SatelliteStatusInfo-carrierToNoiseDensitys: Array<double>--><!--Device-SatelliteStatusInfo-carrierToNoiseDensitys: Array<double>-End-->
 
 **系统能力：** SystemCapability.Location.Location.Gnss
 
@@ -86,6 +96,8 @@ satelliteAdditionalInfo?: Array<number>
 
 **起始版本：** 12
 
+<!--Device-SatelliteStatusInfo-satelliteAdditionalInfo?: Array<int>--><!--Device-SatelliteStatusInfo-satelliteAdditionalInfo?: Array<int>-End-->
+
 **系统能力：** SystemCapability.Location.Location.Gnss
 
 ## satelliteConstellation
@@ -99,6 +111,8 @@ satelliteConstellation?: Array<SatelliteConstellationCategory>
 **类型：** Array&lt;[SatelliteConstellationCategory](arkts-location-geolocationmanager-satelliteconstellationcategory-e.md)&gt;
 
 **起始版本：** 12
+
+<!--Device-SatelliteStatusInfo-satelliteConstellation?: Array<SatelliteConstellationCategory>--><!--Device-SatelliteStatusInfo-satelliteConstellation?: Array<SatelliteConstellationCategory>-End-->
 
 **系统能力：** SystemCapability.Location.Location.Gnss
 
@@ -114,6 +128,8 @@ satelliteIds: Array<number>
 
 **起始版本：** 9
 
+<!--Device-SatelliteStatusInfo-satelliteIds: Array<int>--><!--Device-SatelliteStatusInfo-satelliteIds: Array<int>-End-->
+
 **系统能力：** SystemCapability.Location.Location.Gnss
 
 ## satellitesNumber
@@ -127,5 +143,7 @@ satellitesNumber: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-SatelliteStatusInfo-satellitesNumber: int--><!--Device-SatelliteStatusInfo-satellitesNumber: int-End-->
 
 **系统能力：** SystemCapability.Location.Location.Gnss

@@ -10,6 +10,8 @@ Describes the heart rate sensor data. It extends from [Response](arkts-sensorser
 
 **Since:** 8
 
+<!--Device-sensor-interface HeartRateResponse extends Response--><!--Device-sensor-interface HeartRateResponse extends Response-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## Modules to Import
@@ -29,5 +31,7 @@ Heart rate of a user, in bpm.
 **Type:** number
 
 **Since:** 8
+
+<!--Device-HeartRateResponse-heartRate: double--><!--Device-HeartRateResponse-heartRate: double-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor

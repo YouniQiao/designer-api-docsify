@@ -1,6 +1,6 @@
 # ImageSpan
 
-ImageSpan是[Text](arkts-arkui-text-comp.md#text)、[ContainerSpan](arkts-arkui-containerspan-comp-attribute.md)组件的子组件，用于在文本中显示行内图片，支持设置图片对齐方式、缩放类型、加载占位图和颜色滤镜等，适用于需要在文本段落中嵌入图片实现图文混排的场景。
+ImageSpan是[Text](arkts-arkui-text-comp.md)、[ContainerSpan](arkts-arkui-containerspan-comp-attribute.md)组件的子组件，用于在文本中显示行内图片，支持设置图片对齐方式、缩放类型、加载占位图和颜色滤镜等，适用于需要在文本段落中嵌入图片实现图文混排的场景。
 
 > **说明：** 
 > 
@@ -23,6 +23,8 @@ ImageSpan(value: ResourceStr | PixelMap)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ImageSpanInterface-(value: ResourceStr | PixelMap): ImageSpanAttribute--><!--Device-ImageSpanInterface-(value: ResourceStr | PixelMap): ImageSpanAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

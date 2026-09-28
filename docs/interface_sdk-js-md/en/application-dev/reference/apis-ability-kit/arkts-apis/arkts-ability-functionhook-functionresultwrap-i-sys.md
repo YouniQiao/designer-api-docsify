@@ -8,6 +8,8 @@ Result parameter for onAfterInvokeFunction.
 
 **Since:** 26.0.1
 
+<!--Device-unnamed-export interface FunctionResultWrap--><!--Device-unnamed-export interface FunctionResultWrap-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **System API:** This is a system API.
@@ -25,6 +27,8 @@ Indicates the session ID of the dialog manager (DM), echoed from [InvokeOptions]
 **Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FunctionResultWrap-dmSessionId?: string--><!--Device-FunctionResultWrap-dmSessionId?: string-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -44,6 +48,8 @@ Indicates the invocation result.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FunctionResultWrap-result: InvokeResult--><!--Device-FunctionResultWrap-result: InvokeResult-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **System API:** This is a system API.
@@ -61,6 +67,8 @@ Indicates the unique identifier of the function call, echoed from [InvokeOptions
 **Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FunctionResultWrap-toolCallId?: string--><!--Device-FunctionResultWrap-toolCallId?: string-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 

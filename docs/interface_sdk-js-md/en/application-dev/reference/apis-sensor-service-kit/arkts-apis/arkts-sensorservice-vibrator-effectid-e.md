@@ -14,6 +14,8 @@ Enumerates the preset vibration effect IDs. This type is used when the [vibrator
 
 **Since:** 8
 
+<!--Device-vibrator-enum EffectId--><!--Device-vibrator-enum EffectId-End-->
+
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 ## EFFECT_CLOCK_TIMER
@@ -25,5 +27,7 @@ EFFECT_CLOCK_TIMER = 'haptic.clock.timer'
 Vibration effect when a user adjusts the timer.
 
 **Since:** 8
+
+<!--Device-EffectId-EFFECT_CLOCK_TIMER = 'haptic.clock.timer'--><!--Device-EffectId-EFFECT_CLOCK_TIMER = 'haptic.clock.timer'-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice

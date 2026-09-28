@@ -8,6 +8,8 @@ The module defines the application information.
 
 **Since:** 9
 
+<!--Device-unnamed-export interface ApplicationInfo--><!--Device-unnamed-export interface ApplicationInfo-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## accessTokenId
@@ -22,7 +24,9 @@ Access token ID of the application, which is used in the [application access con
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ApplicationInfo-readonly accessTokenId: long--><!--Device-ApplicationInfo-readonly accessTokenId: long-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -38,7 +42,9 @@ Distribution type of the application signing certificate. The options are as fol
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ApplicationInfo-readonly appDistributionType: string--><!--Device-ApplicationInfo-readonly appDistributionType: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -54,6 +60,8 @@ Index of an application clone. It takes effect only for cloned applications.
 
 **Since:** 12
 
+<!--Device-ApplicationInfo-readonly appIndex: int--><!--Device-ApplicationInfo-readonly appIndex: int-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## appProvisionType
@@ -68,7 +76,9 @@ Type of the application signing certificate file. The options are **debug** and 
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ApplicationInfo-readonly appProvisionType: string--><!--Device-ApplicationInfo-readonly appProvisionType: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -84,7 +94,9 @@ Bundle type, which can be **APP** (application) or **ATOMIC_SERVICE** (atomic se
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ApplicationInfo-readonly bundleType: bundleManager.BundleType--><!--Device-ApplicationInfo-readonly bundleType: bundleManager.BundleType-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -100,7 +112,9 @@ Whether device-cloud file synchronization is enabled for the application. **true
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-ApplicationInfo-readonly cloudFileSyncEnabled: boolean--><!--Device-ApplicationInfo-readonly cloudFileSyncEnabled: boolean-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -116,7 +130,9 @@ Whether device-cloud structured data synchronization is enabled for the applicat
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+
+<!--Device-ApplicationInfo-readonly cloudStructuredDataSyncEnabled?: boolean--><!--Device-ApplicationInfo-readonly cloudStructuredDataSyncEnabled?: boolean-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -132,7 +148,9 @@ Installation directory of the application.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ApplicationInfo-readonly codePath: string--><!--Device-ApplicationInfo-readonly codePath: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -148,7 +166,9 @@ Whether the application data is unclearable. **true** if unclearable, **false** 
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ApplicationInfo-readonly dataUnclearable: boolean--><!--Device-ApplicationInfo-readonly dataUnclearable: boolean-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -164,7 +184,9 @@ Whether the application is running in debug mode. **true** if in debug mode, **f
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ApplicationInfo-readonly debug: boolean--><!--Device-ApplicationInfo-readonly debug: boolean-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -180,7 +202,9 @@ Description of the application. It corresponds to the **description** field in t
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ApplicationInfo-readonly description: string--><!--Device-ApplicationInfo-readonly description: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -196,7 +220,9 @@ Resource ID of the application description. It is automatically generated during
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ApplicationInfo-readonly descriptionId: long--><!--Device-ApplicationInfo-readonly descriptionId: long-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -212,7 +238,9 @@ Resource information of the application description. The resource information ob
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ApplicationInfo-readonly descriptionResource: Resource--><!--Device-ApplicationInfo-readonly descriptionResource: Resource-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -228,7 +256,9 @@ Whether the application is enabled. **true** if enabled, **false** otherwise.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ApplicationInfo-readonly enabled: boolean--><!--Device-ApplicationInfo-readonly enabled: boolean-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -244,7 +274,9 @@ Application icon. It corresponds to the **icon** field in the [app.json5](../../
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ApplicationInfo-readonly icon: string--><!--Device-ApplicationInfo-readonly icon: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -260,7 +292,9 @@ Resource ID of the application icon. It is automatically generated during compil
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ApplicationInfo-readonly iconId: long--><!--Device-ApplicationInfo-readonly iconId: long-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -276,7 +310,9 @@ Resource information of the application icon. The resource information obtained 
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ApplicationInfo-readonly iconResource: Resource--><!--Device-ApplicationInfo-readonly iconResource: Resource-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -299,7 +335,9 @@ variable, subject to the actual value.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-ApplicationInfo-readonly installSource: string--><!--Device-ApplicationInfo-readonly installSource: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -315,7 +353,9 @@ Application label. It corresponds to the **label** field in the [app.json5](../.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ApplicationInfo-readonly label: string--><!--Device-ApplicationInfo-readonly label: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -331,7 +371,9 @@ Resource ID of the application label. It is automatically generated during compi
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ApplicationInfo-readonly labelId: long--><!--Device-ApplicationInfo-readonly labelId: long-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -347,7 +389,9 @@ Resource information of the application label. The resource information obtained
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ApplicationInfo-readonly labelResource: Resource--><!--Device-ApplicationInfo-readonly labelResource: Resource-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -363,7 +407,9 @@ Metadata of the application. The information can be obtained by passing in **GET
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ApplicationInfo-readonly metadataArray: Array<ModuleMetadata>--><!--Device-ApplicationInfo-readonly metadataArray: Array<ModuleMetadata>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -379,6 +425,8 @@ Multi-app mode.
 
 **Since:** 12
 
+<!--Device-ApplicationInfo-readonly multiAppMode: MultiAppMode--><!--Device-ApplicationInfo-readonly multiAppMode: MultiAppMode-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## name
@@ -393,7 +441,9 @@ Name of the application bundle. It corresponds to the **bundleName** field in th
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ApplicationInfo-readonly name: string--><!--Device-ApplicationInfo-readonly name: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -409,6 +459,8 @@ Local library file path of the application.
 
 **Since:** 12
 
+<!--Device-ApplicationInfo-readonly nativeLibraryPath: string--><!--Device-ApplicationInfo-readonly nativeLibraryPath: string-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## permissions
@@ -423,7 +475,9 @@ Permissions required for accessing the application. The permissions can be obtai
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ApplicationInfo-readonly permissions: Array<string>--><!--Device-ApplicationInfo-readonly permissions: Array<string>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -439,7 +493,9 @@ Process name.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ApplicationInfo-readonly process: string--><!--Device-ApplicationInfo-readonly process: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -455,7 +511,9 @@ Release type of the SDK used for application packing. Currently, the SDK release
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-ApplicationInfo-readonly releaseType: string--><!--Device-ApplicationInfo-readonly releaseType: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -471,7 +529,9 @@ Whether the application is removable. **true** if removable, **false** otherwise
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ApplicationInfo-readonly removable: boolean--><!--Device-ApplicationInfo-readonly removable: boolean-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -487,7 +547,9 @@ Whether the application is a system application. **true** if it is a system appl
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ApplicationInfo-readonly systemApp: boolean--><!--Device-ApplicationInfo-readonly systemApp: boolean-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -503,7 +565,9 @@ UID of the application.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ApplicationInfo-readonly uid: int--><!--Device-ApplicationInfo-readonly uid: int-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -524,5 +588,7 @@ Note: Supported since API version 9 and deprecated since API version 10. You are
 **Deprecated since:** 10
 
 **Substitutes:** [metadataArray](#metadataarray)
+
+<!--Device-ApplicationInfo-readonly metadata: Map<string, Array<Metadata>>--><!--Device-ApplicationInfo-readonly metadata: Map<string, Array<Metadata>>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core

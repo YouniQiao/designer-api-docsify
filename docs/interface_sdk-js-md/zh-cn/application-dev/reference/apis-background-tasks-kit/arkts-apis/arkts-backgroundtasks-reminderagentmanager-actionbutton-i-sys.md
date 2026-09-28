@@ -8,6 +8,8 @@ interface ActionButton
 
 **起始版本：** 9
 
+<!--Device-reminderAgentManager-interface ActionButton--><!--Device-reminderAgentManager-interface ActionButton-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## 导入模块
@@ -28,6 +30,8 @@ dataShareUpdate?: DataShareUpdate
 
 **起始版本：** 11
 
+<!--Device-ActionButton-dataShareUpdate?: DataShareUpdate--><!--Device-ActionButton-dataShareUpdate?: DataShareUpdate-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 **系统接口：** 此接口为系统接口。
@@ -43,6 +47,8 @@ wantAgent?: WantAgent
 **类型：** [WantAgent](arkts-backgroundtasks-reminderagentmanager-wantagent-i.md)
 
 **起始版本：** 10
+
+<!--Device-ActionButton-wantAgent?: WantAgent--><!--Device-ActionButton-wantAgent?: WantAgent-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 

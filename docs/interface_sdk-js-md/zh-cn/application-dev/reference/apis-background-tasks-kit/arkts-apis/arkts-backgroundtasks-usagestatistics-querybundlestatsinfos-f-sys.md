@@ -18,6 +18,8 @@ function queryBundleStatsInfos(begin: number, end: number, callback: AsyncCallba
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-usageStatistics-function queryBundleStatsInfos(begin: long, end: long, callback: AsyncCallback<BundleStatsMap>): void--><!--Device-usageStatistics-function queryBundleStatsInfos(begin: long, end: long, callback: AsyncCallback<BundleStatsMap>): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **系统接口：** 此接口为系统接口。
@@ -75,6 +77,8 @@ function queryBundleStatsInfos(begin: number, end: number): Promise<BundleStatsM
 **起始版本：** 9
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
+
+<!--Device-usageStatistics-function queryBundleStatsInfos(begin: long, end: long): Promise<BundleStatsMap>--><!--Device-usageStatistics-function queryBundleStatsInfos(begin: long, end: long): Promise<BundleStatsMap>-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 

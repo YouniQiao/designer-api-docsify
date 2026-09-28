@@ -8,6 +8,8 @@ export enum FilterOperator
 
 **起始版本：** 19
 
+<!--Device-photoAccessHelper-export enum FilterOperator--><!--Device-photoAccessHelper-export enum FilterOperator-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## EQUAL_TO
@@ -20,7 +22,9 @@ EQUAL_TO = 0
 
 **起始版本：** 19
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-FilterOperator-EQUAL_TO = 0--><!--Device-FilterOperator-EQUAL_TO = 0-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -34,7 +38,9 @@ NOT_EQUAL_TO = 1
 
 **起始版本：** 19
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-FilterOperator-NOT_EQUAL_TO = 1--><!--Device-FilterOperator-NOT_EQUAL_TO = 1-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -48,7 +54,9 @@ MORE_THAN = 2
 
 **起始版本：** 19
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-FilterOperator-MORE_THAN = 2--><!--Device-FilterOperator-MORE_THAN = 2-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -62,7 +70,9 @@ LESS_THAN = 3
 
 **起始版本：** 19
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-FilterOperator-LESS_THAN = 3--><!--Device-FilterOperator-LESS_THAN = 3-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -76,7 +86,9 @@ MORE_THAN_OR_EQUAL_TO = 4
 
 **起始版本：** 19
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-FilterOperator-MORE_THAN_OR_EQUAL_TO = 4--><!--Device-FilterOperator-MORE_THAN_OR_EQUAL_TO = 4-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -90,7 +102,9 @@ LESS_THAN_OR_EQUAL_TO = 5
 
 **起始版本：** 19
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-FilterOperator-LESS_THAN_OR_EQUAL_TO = 5--><!--Device-FilterOperator-LESS_THAN_OR_EQUAL_TO = 5-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -104,6 +118,8 @@ BETWEEN = 6
 
 **起始版本：** 19
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-FilterOperator-BETWEEN = 6--><!--Device-FilterOperator-BETWEEN = 6-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core

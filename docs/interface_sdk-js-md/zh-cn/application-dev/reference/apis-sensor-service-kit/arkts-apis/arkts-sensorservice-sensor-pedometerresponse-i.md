@@ -10,6 +10,8 @@ interface PedometerResponse extends Response
 
 **起始版本：** 8
 
+<!--Device-sensor-interface PedometerResponse extends Response--><!--Device-sensor-interface PedometerResponse extends Response-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## 导入模块
@@ -29,5 +31,7 @@ steps: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-PedometerResponse-steps: double--><!--Device-PedometerResponse-steps: double-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor

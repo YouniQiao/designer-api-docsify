@@ -12,6 +12,8 @@ Defines the callback type for the [onChange](arkts-arkui-uipickercomponent-comp-
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-unnamed-declare type OnUIPickerComponentCallback = (selectedIndex: number) => void--><!--Device-unnamed-declare type OnUIPickerComponentCallback = (selectedIndex: number) => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

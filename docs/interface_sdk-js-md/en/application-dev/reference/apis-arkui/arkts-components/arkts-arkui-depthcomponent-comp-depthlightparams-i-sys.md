@@ -8,6 +8,8 @@ Lighting parameters struct.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-declare interface DepthLightParams--><!--Device-unnamed-declare interface DepthLightParams-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -27,6 +29,8 @@ Light color.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-DepthLightParams-color: DepthColorRGB--><!--Device-DepthLightParams-color: DepthColorRGB-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -48,6 +52,8 @@ Light direction vector.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-DepthLightParams-direction: DepthVector3--><!--Device-DepthLightParams-direction: DepthVector3-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -67,6 +73,8 @@ Light intensity.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-DepthLightParams-intensity: double--><!--Device-DepthLightParams-intensity: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

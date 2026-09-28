@@ -8,6 +8,8 @@ class FieldNode
 
 **起始版本：** 9
 
+<!--Device-distributedKVStore-class FieldNode--><!--Device-distributedKVStore-class FieldNode-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 ## 导入模块
@@ -27,6 +29,8 @@ appendChild(child: FieldNode): boolean
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FieldNode-appendChild(child: FieldNode): boolean--><!--Device-FieldNode-appendChild(child: FieldNode): boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
@@ -82,6 +86,8 @@ constructor(name: string)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FieldNode-constructor(name: string)--><!--Device-FieldNode-constructor(name: string)-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 **参数：**
@@ -108,6 +114,8 @@ default: string
 
 **起始版本：** 9
 
+<!--Device-FieldNode-default: string--><!--Device-FieldNode-default: string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 ## nullable
@@ -124,6 +132,8 @@ get nullable(): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FieldNode-get nullable(): boolean--><!--Device-FieldNode-get nullable(): boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 ```TypeScript
@@ -137,6 +147,8 @@ set nullable(isnullable: boolean)
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FieldNode-set nullable(isnullable: boolean)--><!--Device-FieldNode-set nullable(isnullable: boolean)-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
@@ -154,6 +166,8 @@ get type(): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FieldNode-get type(): int--><!--Device-FieldNode-get type(): int-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 ```TypeScript
@@ -167,5 +181,7 @@ set type(type: number)
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FieldNode-set type(type: int)--><!--Device-FieldNode-set type(type: int)-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore

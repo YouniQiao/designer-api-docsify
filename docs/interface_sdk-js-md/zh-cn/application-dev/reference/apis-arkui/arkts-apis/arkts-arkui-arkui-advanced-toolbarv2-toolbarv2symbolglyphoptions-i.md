@@ -8,6 +8,8 @@ Declare the options of ToolBarV2SymbolGlyph
 
 **起始版本：** 18
 
+<!--Device-unnamed-export interface ToolBarV2SymbolGlyphOptions--><!--Device-unnamed-export interface ToolBarV2SymbolGlyphOptions-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -32,6 +34,8 @@ Modifier of toolbarV2's activated symbol.
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-ToolBarV2SymbolGlyphOptions-activated?: SymbolGlyphModifier--><!--Device-ToolBarV2SymbolGlyphOptions-activated?: SymbolGlyphModifier-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## normal
@@ -49,5 +53,7 @@ Modifier of toolbarV2's normal symbol.
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-ToolBarV2SymbolGlyphOptions-normal: SymbolGlyphModifier--><!--Device-ToolBarV2SymbolGlyphOptions-normal: SymbolGlyphModifier-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

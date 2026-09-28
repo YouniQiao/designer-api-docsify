@@ -8,6 +8,8 @@ interface FontMetrics
 
 **起始版本：** 11
 
+<!--Device-drawing-interface FontMetrics--><!--Device-drawing-interface FontMetrics-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## 导入模块
@@ -28,7 +30,9 @@ ascent: number
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-FontMetrics-ascent: double--><!--Device-FontMetrics-ascent: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -44,7 +48,9 @@ avgCharWidth?: number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-FontMetrics-avgCharWidth?: double--><!--Device-FontMetrics-avgCharWidth?: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -60,7 +66,9 @@ bottom: number
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-FontMetrics-bottom: double--><!--Device-FontMetrics-bottom: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -76,7 +84,9 @@ capHeight?: number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-FontMetrics-capHeight?: double--><!--Device-FontMetrics-capHeight?: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -92,7 +102,9 @@ descent: number
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-FontMetrics-descent: double--><!--Device-FontMetrics-descent: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -110,6 +122,8 @@ flags?: FontMetricsFlags
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
+<!--Device-FontMetrics-flags?: FontMetricsFlags--><!--Device-FontMetrics-flags?: FontMetricsFlags-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## leading
@@ -124,7 +138,9 @@ leading: number
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-FontMetrics-leading: double--><!--Device-FontMetrics-leading: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -140,7 +156,9 @@ maxCharWidth?: number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-FontMetrics-maxCharWidth?: double--><!--Device-FontMetrics-maxCharWidth?: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -156,7 +174,9 @@ strikethroughPosition?: number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-FontMetrics-strikethroughPosition?: double--><!--Device-FontMetrics-strikethroughPosition?: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -172,7 +192,9 @@ strikethroughThickness?: number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-FontMetrics-strikethroughThickness?: double--><!--Device-FontMetrics-strikethroughThickness?: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -188,7 +210,9 @@ top: number
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-FontMetrics-top: double--><!--Device-FontMetrics-top: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -204,7 +228,9 @@ underlinePosition?: number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-FontMetrics-underlinePosition?: double--><!--Device-FontMetrics-underlinePosition?: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -220,7 +246,9 @@ underlineThickness?: number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-FontMetrics-underlineThickness?: double--><!--Device-FontMetrics-underlineThickness?: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -236,7 +264,9 @@ xHeight?: number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-FontMetrics-xHeight?: double--><!--Device-FontMetrics-xHeight?: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -252,7 +282,9 @@ xMax?: number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-FontMetrics-xMax?: double--><!--Device-FontMetrics-xMax?: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -268,6 +300,8 @@ xMin?: number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-FontMetrics-xMin?: double--><!--Device-FontMetrics-xMin?: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing

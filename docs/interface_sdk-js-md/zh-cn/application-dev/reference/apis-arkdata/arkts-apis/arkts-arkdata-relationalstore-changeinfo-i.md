@@ -8,6 +8,8 @@ interface ChangeInfo
 
 **起始版本：** 10
 
+<!--Device-relationalStore-interface ChangeInfo--><!--Device-relationalStore-interface ChangeInfo-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ deleted: Array<string> | Array<number>
 
 **起始版本：** 10
 
+<!--Device-ChangeInfo-deleted: Array<string> | Array<long>--><!--Device-ChangeInfo-deleted: Array<string> | Array<long>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## inserted
@@ -41,6 +45,8 @@ inserted: Array<string> | Array<number>
 **类型：** Array&lt;string&gt; &#124; Array&lt;number&gt;
 
 **起始版本：** 10
+
+<!--Device-ChangeInfo-inserted: Array<string> | Array<long>--><!--Device-ChangeInfo-inserted: Array<string> | Array<long>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -56,6 +62,8 @@ table: string
 
 **起始版本：** 10
 
+<!--Device-ChangeInfo-table: string--><!--Device-ChangeInfo-table: string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## type
@@ -70,6 +78,8 @@ type: ChangeType
 
 **起始版本：** 10
 
+<!--Device-ChangeInfo-type: ChangeType--><!--Device-ChangeInfo-type: ChangeType-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## updated
@@ -83,5 +93,7 @@ updated: Array<string> | Array<number>
 **类型：** Array&lt;string&gt; &#124; Array&lt;number&gt;
 
 **起始版本：** 10
+
+<!--Device-ChangeInfo-updated: Array<string> | Array<long>--><!--Device-ChangeInfo-updated: Array<string> | Array<long>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core

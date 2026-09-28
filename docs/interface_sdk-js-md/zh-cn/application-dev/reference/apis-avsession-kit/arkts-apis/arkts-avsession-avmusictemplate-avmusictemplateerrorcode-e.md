@@ -10,6 +10,8 @@ enum AVMusicTemplateErrorCode
 
 **起始版本：** 23
 
+<!--Device-avMusicTemplate-enum AVMusicTemplateErrorCode--><!--Device-avMusicTemplate-enum AVMusicTemplateErrorCode-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## ERR_CODE_CREATE_AV_MUSIC_TEMPLATE_FAILED
@@ -23,6 +25,8 @@ ERR_CODE_CREATE_AV_MUSIC_TEMPLATE_FAILED = 35000001
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVMusicTemplateErrorCode-ERR_CODE_CREATE_AV_MUSIC_TEMPLATE_FAILED = 35000001--><!--Device-AVMusicTemplateErrorCode-ERR_CODE_CREATE_AV_MUSIC_TEMPLATE_FAILED = 35000001-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -38,6 +42,8 @@ ERR_CODE_CREATE_AV_MUSIC_TEMPLATE_CONTROLLER_FAILED = 35000002
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVMusicTemplateErrorCode-ERR_CODE_CREATE_AV_MUSIC_TEMPLATE_CONTROLLER_FAILED = 35000002--><!--Device-AVMusicTemplateErrorCode-ERR_CODE_CREATE_AV_MUSIC_TEMPLATE_CONTROLLER_FAILED = 35000002-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## ERR_CODE_TEMPLATE_LISTENER_NO_EXIT
@@ -51,6 +57,8 @@ ERR_CODE_TEMPLATE_LISTENER_NO_EXIT = 35000003
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVMusicTemplateErrorCode-ERR_CODE_TEMPLATE_LISTENER_NO_EXIT = 35000003--><!--Device-AVMusicTemplateErrorCode-ERR_CODE_TEMPLATE_LISTENER_NO_EXIT = 35000003-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -66,6 +74,8 @@ ERR_CODE_CONTROLLER_CALLBACK_NO_EXIT = 35000004
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVMusicTemplateErrorCode-ERR_CODE_CONTROLLER_CALLBACK_NO_EXIT = 35000004--><!--Device-AVMusicTemplateErrorCode-ERR_CODE_CONTROLLER_CALLBACK_NO_EXIT = 35000004-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## ERR_CODE_AV_MUSIC_TEMPLATE_NOT_EXIST
@@ -79,6 +89,8 @@ ERR_CODE_AV_MUSIC_TEMPLATE_NOT_EXIST = 35000005
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVMusicTemplateErrorCode-ERR_CODE_AV_MUSIC_TEMPLATE_NOT_EXIST = 35000005--><!--Device-AVMusicTemplateErrorCode-ERR_CODE_AV_MUSIC_TEMPLATE_NOT_EXIST = 35000005-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -94,6 +106,8 @@ ERR_CODE_CONTROLLER_NOT_EXIST = 35000006
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVMusicTemplateErrorCode-ERR_CODE_CONTROLLER_NOT_EXIST = 35000006--><!--Device-AVMusicTemplateErrorCode-ERR_CODE_CONTROLLER_NOT_EXIST = 35000006-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## ERR_CODE_CONTROLLER_IS_EXIST
@@ -107,6 +121,8 @@ ERR_CODE_CONTROLLER_IS_EXIST = 35000007
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVMusicTemplateErrorCode-ERR_CODE_CONTROLLER_IS_EXIST = 35000007--><!--Device-AVMusicTemplateErrorCode-ERR_CODE_CONTROLLER_IS_EXIST = 35000007-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -122,6 +138,8 @@ ERR_CODE_SERVICE_NOT_EXIST = 35000008
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVMusicTemplateErrorCode-ERR_CODE_SERVICE_NOT_EXIST = 35000008--><!--Device-AVMusicTemplateErrorCode-ERR_CODE_SERVICE_NOT_EXIST = 35000008-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## ERR_CODE_SERVICE_EXCEPTION
@@ -135,6 +153,8 @@ ERR_CODE_SERVICE_EXCEPTION = 35000009
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVMusicTemplateErrorCode-ERR_CODE_SERVICE_EXCEPTION = 35000009--><!--Device-AVMusicTemplateErrorCode-ERR_CODE_SERVICE_EXCEPTION = 35000009-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -150,6 +170,8 @@ ERR_CODE_EXCEED_MAX_DATA_SIZE = 35000010
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVMusicTemplateErrorCode-ERR_CODE_EXCEED_MAX_DATA_SIZE = 35000010--><!--Device-AVMusicTemplateErrorCode-ERR_CODE_EXCEED_MAX_DATA_SIZE = 35000010-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## ERR_CODE_WRITE_RESULT_EXCEPTION
@@ -164,6 +186,8 @@ ERR_CODE_WRITE_RESULT_EXCEPTION = 35000011
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVMusicTemplateErrorCode-ERR_CODE_WRITE_RESULT_EXCEPTION = 35000011--><!--Device-AVMusicTemplateErrorCode-ERR_CODE_WRITE_RESULT_EXCEPTION = 35000011-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## ERR_CODE_AV_MUSIC_TEMPLATE_ERROR
@@ -177,5 +201,7 @@ ERR_CODE_AV_MUSIC_TEMPLATE_ERROR = 35000012
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVMusicTemplateErrorCode-ERR_CODE_AV_MUSIC_TEMPLATE_ERROR = 35000012--><!--Device-AVMusicTemplateErrorCode-ERR_CODE_AV_MUSIC_TEMPLATE_ERROR = 35000012-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate

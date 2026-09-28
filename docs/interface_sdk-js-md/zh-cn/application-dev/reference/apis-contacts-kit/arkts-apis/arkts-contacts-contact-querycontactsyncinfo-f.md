@@ -24,6 +24,8 @@ function queryContactSyncInfo(context: Context): Promise<Array<ContactSyncInfo>>
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-contact-function queryContactSyncInfo(context: Context): Promise<Array<ContactSyncInfo>>--><!--Device-contact-function queryContactSyncInfo(context: Context): Promise<Array<ContactSyncInfo>>-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 **参数：**

@@ -8,6 +8,8 @@ enum DeviceModeDistributionPolicy
 
 **起始版本：** 26.0.1
 
+<!--Device-bundleManager-enum DeviceModeDistributionPolicy--><!--Device-bundleManager-enum DeviceModeDistributionPolicy-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -23,6 +25,8 @@ UNSPECIFIED = 0
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DeviceModeDistributionPolicy-UNSPECIFIED = 0--><!--Device-DeviceModeDistributionPolicy-UNSPECIFIED = 0-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -40,6 +44,8 @@ MAIN_ONLY = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DeviceModeDistributionPolicy-MAIN_ONLY = 1--><!--Device-DeviceModeDistributionPolicy-MAIN_ONLY = 1-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -55,6 +61,8 @@ SUB_ONLY = 2
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DeviceModeDistributionPolicy-SUB_ONLY = 2--><!--Device-DeviceModeDistributionPolicy-SUB_ONLY = 2-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -72,6 +80,8 @@ UNIVERSAL_IDENTICAL_PACKAGE = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DeviceModeDistributionPolicy-UNIVERSAL_IDENTICAL_PACKAGE = 3--><!--Device-DeviceModeDistributionPolicy-UNIVERSAL_IDENTICAL_PACKAGE = 3-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -87,6 +97,8 @@ UNIVERSAL_DIFFERENT_PACKAGE = 4
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DeviceModeDistributionPolicy-UNIVERSAL_DIFFERENT_PACKAGE = 4--><!--Device-DeviceModeDistributionPolicy-UNIVERSAL_DIFFERENT_PACKAGE = 4-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -104,6 +116,8 @@ PARTIAL_COMPATIBLE_IDENTICAL_PACKAGE = 5
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DeviceModeDistributionPolicy-PARTIAL_COMPATIBLE_IDENTICAL_PACKAGE = 5--><!--Device-DeviceModeDistributionPolicy-PARTIAL_COMPATIBLE_IDENTICAL_PACKAGE = 5-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -119,6 +133,8 @@ PARTIAL_COMPATIBLE_DIFFERENT_PACKAGE = 6
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DeviceModeDistributionPolicy-PARTIAL_COMPATIBLE_DIFFERENT_PACKAGE = 6--><!--Device-DeviceModeDistributionPolicy-PARTIAL_COMPATIBLE_DIFFERENT_PACKAGE = 6-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -136,6 +152,8 @@ FULL_COMPATIBLE_IDENTICAL_PACKAGE = 7
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DeviceModeDistributionPolicy-FULL_COMPATIBLE_IDENTICAL_PACKAGE = 7--><!--Device-DeviceModeDistributionPolicy-FULL_COMPATIBLE_IDENTICAL_PACKAGE = 7-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -151,6 +169,8 @@ FULL_COMPATIBLE_DIFFERENT_PACKAGE = 8
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DeviceModeDistributionPolicy-FULL_COMPATIBLE_DIFFERENT_PACKAGE = 8--><!--Device-DeviceModeDistributionPolicy-FULL_COMPATIBLE_DIFFERENT_PACKAGE = 8-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

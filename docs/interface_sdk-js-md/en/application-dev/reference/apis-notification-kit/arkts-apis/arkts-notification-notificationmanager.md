@@ -26,6 +26,8 @@ notification center through **getActiveNotificationCount**, and obtain the detai
 
 **Since:** 9
 
+<!--Device-unnamed-declare namespace notificationManager--><!--Device-unnamed-declare namespace notificationManager-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 ## Modules to Import

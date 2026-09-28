@@ -11,6 +11,8 @@ Inherits from [SubscribedAbstractProperty&lt;T&gt;](arkts-arkui-subscribedabstra
 
 **Since:** 7
 
+<!--Device-unnamed-declare class SyncedPropertyTwoWay<T> extends SubscribedAbstractProperty<T>  implements ISinglePropertyChangeSubscriber<T>--><!--Device-unnamed-declare class SyncedPropertyTwoWay<T> extends SubscribedAbstractProperty<T>  implements ISinglePropertyChangeSubscriber<T>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Called when the object is about to be destroyed.
 **Since:** 7
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-SyncedPropertyTwoWay-aboutToBeDeleted(unsubscribeMe?: IPropertySubscriber): void--><!--Device-SyncedPropertyTwoWay-aboutToBeDeleted(unsubscribeMe?: IPropertySubscriber): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -48,6 +52,8 @@ Constructor. When the subscription relationship is no longer needed, call [unlin
 **Since:** 7
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-SyncedPropertyTwoWay-constructor(source: SubscribedAbstractProperty<T>, subscribeMe?: IPropertySubscriber, info?: string)--><!--Device-SyncedPropertyTwoWay-constructor(source: SubscribedAbstractProperty<T>, subscribeMe?: IPropertySubscriber, info?: string)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -73,6 +79,8 @@ Obtains the current value of the property.
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-SyncedPropertyTwoWay-get(): T--><!--Device-SyncedPropertyTwoWay-get(): T-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -94,6 +102,8 @@ Notifies subscribers that the property value has changed.
 **Since:** 7
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-SyncedPropertyTwoWay-hasChanged(newValue: T): void--><!--Device-SyncedPropertyTwoWay-hasChanged(newValue: T): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -117,6 +127,8 @@ Sets a new value for the property.
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-SyncedPropertyTwoWay-set(newValue: T): void--><!--Device-SyncedPropertyTwoWay-set(newValue: T): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -138,6 +150,8 @@ Data source for the two-way synchronized property.
 **Since:** 7
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-SyncedPropertyTwoWay-private source_--><!--Device-SyncedPropertyTwoWay-private source_-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

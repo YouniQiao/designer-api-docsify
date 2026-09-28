@@ -8,6 +8,8 @@ export interface GeofenceTransition
 
 **起始版本：** 12
 
+<!--Device-geoLocationManager-export interface GeofenceTransition--><!--Device-geoLocationManager-export interface GeofenceTransition-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 ## 导入模块
@@ -30,6 +32,8 @@ beacon围栏的参数配置。仅beacon围栏使用。
 
 **起始版本：** 20
 
+<!--Device-GeofenceTransition-beaconFence?: BeaconFence--><!--Device-GeofenceTransition-beaconFence?: BeaconFence-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 ## geofenceId
@@ -44,6 +48,8 @@ geofenceId: number
 
 **起始版本：** 12
 
+<!--Device-GeofenceTransition-geofenceId: int--><!--Device-GeofenceTransition-geofenceId: int-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 ## transitionEvent
@@ -57,5 +63,7 @@ transitionEvent: GeofenceTransitionEvent
 **类型：** [GeofenceTransitionEvent](arkts-location-geolocationmanager-geofencetransitionevent-e.md)
 
 **起始版本：** 12
+
+<!--Device-GeofenceTransition-transitionEvent: GeofenceTransitionEvent--><!--Device-GeofenceTransition-transitionEvent: GeofenceTransitionEvent-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geofence

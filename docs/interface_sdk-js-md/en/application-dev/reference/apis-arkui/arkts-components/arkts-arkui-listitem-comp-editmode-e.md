@@ -14,6 +14,8 @@ Enumerates the edit modes of list items.
 
 **Deprecated since:** 9
 
+<!--Device-unnamed-declare enum EditMode--><!--Device-unnamed-declare enum EditMode-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## None
@@ -29,6 +31,8 @@ No restriction on the edit operation.
 **Deprecated since:** 9
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-EditMode-None--><!--Device-EditMode-None-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,6 +50,8 @@ Deletable.
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-EditMode-Deletable--><!--Device-EditMode-Deletable-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Movable
@@ -61,5 +67,7 @@ Movable.
 **Deprecated since:** 9
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-EditMode-Movable--><!--Device-EditMode-Movable-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

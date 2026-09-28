@@ -8,6 +8,8 @@ enum Attribute
 
 **起始版本：** 7
 
+<!--Device-contact-enum Attribute--><!--Device-contact-enum Attribute-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 ## ATTR_CONTACT_EVENT
@@ -21,6 +23,8 @@ ATTR_CONTACT_EVENT = 0
 **起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Attribute-ATTR_CONTACT_EVENT = 0--><!--Device-Attribute-ATTR_CONTACT_EVENT = 0-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -36,6 +40,8 @@ ATTR_EMAIL = 1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Attribute-ATTR_EMAIL = 1--><!--Device-Attribute-ATTR_EMAIL = 1-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 ## ATTR_GROUP_MEMBERSHIP
@@ -49,6 +55,8 @@ ATTR_GROUP_MEMBERSHIP = 2
 **起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Attribute-ATTR_GROUP_MEMBERSHIP = 2--><!--Device-Attribute-ATTR_GROUP_MEMBERSHIP = 2-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -64,6 +72,8 @@ ATTR_IM = 3
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Attribute-ATTR_IM = 3--><!--Device-Attribute-ATTR_IM = 3-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 ## ATTR_NAME
@@ -77,6 +87,8 @@ ATTR_NAME = 4
 **起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Attribute-ATTR_NAME = 4--><!--Device-Attribute-ATTR_NAME = 4-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -92,6 +104,8 @@ ATTR_NICKNAME = 5
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Attribute-ATTR_NICKNAME = 5--><!--Device-Attribute-ATTR_NICKNAME = 5-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 ## ATTR_NOTE
@@ -105,6 +119,8 @@ ATTR_NOTE = 6
 **起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Attribute-ATTR_NOTE = 6--><!--Device-Attribute-ATTR_NOTE = 6-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -120,6 +136,8 @@ ATTR_ORGANIZATION = 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Attribute-ATTR_ORGANIZATION = 7--><!--Device-Attribute-ATTR_ORGANIZATION = 7-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 ## ATTR_PHONE
@@ -133,6 +151,8 @@ ATTR_PHONE = 8
 **起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Attribute-ATTR_PHONE = 8--><!--Device-Attribute-ATTR_PHONE = 8-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -148,6 +168,8 @@ ATTR_PORTRAIT = 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Attribute-ATTR_PORTRAIT = 9--><!--Device-Attribute-ATTR_PORTRAIT = 9-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 ## ATTR_POSTAL_ADDRESS
@@ -161,6 +183,8 @@ ATTR_POSTAL_ADDRESS = 10
 **起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Attribute-ATTR_POSTAL_ADDRESS = 10--><!--Device-Attribute-ATTR_POSTAL_ADDRESS = 10-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -176,6 +200,8 @@ ATTR_RELATION = 11
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Attribute-ATTR_RELATION = 11--><!--Device-Attribute-ATTR_RELATION = 11-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 ## ATTR_SIP_ADDRESS
@@ -190,6 +216,8 @@ ATTR_SIP_ADDRESS = 12
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Attribute-ATTR_SIP_ADDRESS = 12--><!--Device-Attribute-ATTR_SIP_ADDRESS = 12-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 ## ATTR_WEBSITE
@@ -203,5 +231,7 @@ ATTR_WEBSITE = 13
 **起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Attribute-ATTR_WEBSITE = 13--><!--Device-Attribute-ATTR_WEBSITE = 13-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData

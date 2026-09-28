@@ -8,6 +8,8 @@ enum Operation
 
 **起始版本：** 26.0.0
 
+<!--Device-deviceControl-enum Operation--><!--Device-deviceControl-enum Operation-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## DISK_ERASURE
@@ -21,6 +23,8 @@ DISK_ERASURE = 0
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Operation-DISK_ERASURE = 0--><!--Device-Operation-DISK_ERASURE = 0-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -36,6 +40,8 @@ RESET_FACTORY = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Operation-RESET_FACTORY = 1--><!--Device-Operation-RESET_FACTORY = 1-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## REBOOT
@@ -49,6 +55,8 @@ REBOOT = 2
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Operation-REBOOT = 2--><!--Device-Operation-REBOOT = 2-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -64,6 +72,8 @@ SHUT_DOWN = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Operation-SHUT_DOWN = 3--><!--Device-Operation-SHUT_DOWN = 3-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## LOCK_SCREEN
@@ -77,6 +87,8 @@ LOCK_SCREEN = 4
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Operation-LOCK_SCREEN = 4--><!--Device-Operation-LOCK_SCREEN = 4-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -92,6 +104,8 @@ LOCK_DEVICE = 5
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Operation-LOCK_DEVICE = 5--><!--Device-Operation-LOCK_DEVICE = 5-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## UNLOCK_DEVICE
@@ -105,5 +119,7 @@ UNLOCK_DEVICE = 6
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Operation-UNLOCK_DEVICE = 6--><!--Device-Operation-UNLOCK_DEVICE = 6-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager

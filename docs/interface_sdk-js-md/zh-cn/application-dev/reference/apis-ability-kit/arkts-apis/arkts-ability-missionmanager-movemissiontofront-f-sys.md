@@ -18,6 +18,8 @@ function moveMissionToFront(missionId: number, callback: AsyncCallback<void>): v
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
+<!--Device-missionManager-function moveMissionToFront(missionId: int, callback: AsyncCallback<void>): void--><!--Device-missionManager-function moveMissionToFront(missionId: int, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -75,6 +77,8 @@ function moveMissionToFront(missionId: number, options: StartOptions, callback: 
 **起始版本：** 9
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
+
+<!--Device-missionManager-function moveMissionToFront(missionId: int, options: StartOptions, callback: AsyncCallback<void>): void--><!--Device-missionManager-function moveMissionToFront(missionId: int, options: StartOptions, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -134,6 +138,8 @@ function moveMissionToFront(missionId: number, options?: StartOptions): Promise<
 **起始版本：** 9
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
+
+<!--Device-missionManager-function moveMissionToFront(missionId: int, options?: StartOptions): Promise<void>--><!--Device-missionManager-function moveMissionToFront(missionId: int, options?: StartOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 

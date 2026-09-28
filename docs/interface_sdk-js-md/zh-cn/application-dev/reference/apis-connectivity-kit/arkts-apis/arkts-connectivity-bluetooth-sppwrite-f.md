@@ -22,6 +22,8 @@ function sppWrite(clientSocket: number, data: ArrayBuffer): boolean
 
 **替代接口：** [sppWrite](arkts-connectivity-bluetoothmanager-sppwrite-f.md)
 
+<!--Device-bluetooth-function sppWrite(clientSocket: number, data: ArrayBuffer): boolean--><!--Device-bluetooth-function sppWrite(clientSocket: number, data: ArrayBuffer): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**

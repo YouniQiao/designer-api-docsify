@@ -30,6 +30,8 @@ Creates a badge component based on a number.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-BadgeInterface-(value: BadgeParamWithNumber): BadgeAttribute--><!--Device-BadgeInterface-(value: BadgeParamWithNumber): BadgeAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -51,6 +53,8 @@ Creates a badge component based on a string.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-BadgeInterface-(value: BadgeParamWithString): BadgeAttribute--><!--Device-BadgeInterface-(value: BadgeParamWithString): BadgeAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

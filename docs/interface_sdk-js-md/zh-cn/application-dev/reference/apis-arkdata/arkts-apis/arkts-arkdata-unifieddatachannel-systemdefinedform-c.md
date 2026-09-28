@@ -10,6 +10,8 @@ class SystemDefinedForm extends SystemDefinedRecord
 
 **起始版本：** 10
 
+<!--Device-unifiedDataChannel-class SystemDefinedForm extends SystemDefinedRecord--><!--Device-unifiedDataChannel-class SystemDefinedForm extends SystemDefinedRecord-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## 导入模块
@@ -32,7 +34,9 @@ get abilityName(): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SystemDefinedForm-get abilityName(): string--><!--Device-SystemDefinedForm-get abilityName(): string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -48,7 +52,9 @@ set abilityName(value: string)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SystemDefinedForm-set abilityName(value: string)--><!--Device-SystemDefinedForm-set abilityName(value: string)-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -66,7 +72,9 @@ get bundleName(): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SystemDefinedForm-get bundleName(): string--><!--Device-SystemDefinedForm-get bundleName(): string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -82,7 +90,9 @@ set bundleName(value: string)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SystemDefinedForm-set bundleName(value: string)--><!--Device-SystemDefinedForm-set bundleName(value: string)-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -100,7 +110,9 @@ get formId(): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SystemDefinedForm-get formId(): int--><!--Device-SystemDefinedForm-get formId(): int-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -116,7 +128,9 @@ set formId(value: number)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SystemDefinedForm-set formId(value: int)--><!--Device-SystemDefinedForm-set formId(value: int)-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -134,7 +148,9 @@ get formName(): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SystemDefinedForm-get formName(): string--><!--Device-SystemDefinedForm-get formName(): string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -150,7 +166,9 @@ set formName(value: string)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SystemDefinedForm-set formName(value: string)--><!--Device-SystemDefinedForm-set formName(value: string)-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -168,7 +186,9 @@ get module(): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SystemDefinedForm-get module(): string--><!--Device-SystemDefinedForm-get module(): string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -184,6 +204,8 @@ set module(value: string)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SystemDefinedForm-set module(value: string)--><!--Device-SystemDefinedForm-set module(value: string)-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core

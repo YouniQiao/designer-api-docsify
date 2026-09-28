@@ -22,6 +22,8 @@ function off(type: 'streamChange', callback?: Callback<number>): void
 
 **需要权限：** ohos.permission.MANAGE_WIFI_CONNECTION
 
+<!--Device-wifi-function off(type: 'streamChange', callback?: Callback<number>): void--><!--Device-wifi-function off(type: 'streamChange', callback?: Callback<number>): void-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。
@@ -50,6 +52,8 @@ function off(type: 'hotspotStaJoin', callback?: Callback<StationInfo>): void
 
 **需要权限：** ohos.permission.MANAGE_WIFI_HOTSPOT
 
+<!--Device-wifi-function off(type: 'hotspotStaJoin', callback?: Callback<StationInfo>): void--><!--Device-wifi-function off(type: 'hotspotStaJoin', callback?: Callback<StationInfo>): void-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +81,8 @@ function off(type: 'hotspotStaLeave', callback?: Callback<StationInfo>): void
 **替代接口：** hotspotStaLeave
 
 **需要权限：** ohos.permission.MANAGE_WIFI_HOTSPOT
+
+<!--Device-wifi-function off(type: 'hotspotStaLeave', callback?: Callback<StationInfo>): void--><!--Device-wifi-function off(type: 'hotspotStaLeave', callback?: Callback<StationInfo>): void-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 

@@ -8,6 +8,8 @@ interface ParseOptions
 
 **起始版本：** 12
 
+<!--Device-json-interface ParseOptions--><!--Device-json-interface ParseOptions-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -30,6 +32,8 @@ bigIntMode: BigIntMode
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-ParseOptions-bigIntMode: BigIntMode--><!--Device-ParseOptions-bigIntMode: BigIntMode-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## parseReturnType
@@ -47,5 +51,7 @@ parseReturnType?: ParseReturnType
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
+
+<!--Device-ParseOptions-parseReturnType?: ParseReturnType--><!--Device-ParseOptions-parseReturnType?: ParseReturnType-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

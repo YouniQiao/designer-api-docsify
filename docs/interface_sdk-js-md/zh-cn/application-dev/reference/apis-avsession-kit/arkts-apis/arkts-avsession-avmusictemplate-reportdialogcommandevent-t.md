@@ -12,6 +12,8 @@ type ReportDialogCommandEvent = (type: DialogControlType, buttonInfo: DialogInfo
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-avMusicTemplate-type ReportDialogCommandEvent = (type: DialogControlType, buttonInfo: DialogInfo) => void--><!--Device-avMusicTemplate-type ReportDialogCommandEvent = (type: DialogControlType, buttonInfo: DialogInfo) => void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **参数：**

@@ -14,6 +14,8 @@ enum SubscribeType
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-rdb-enum SubscribeType--><!--Device-rdb-enum SubscribeType-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## SUBSCRIBE_TYPE_REMOTE
@@ -31,5 +33,7 @@ SUBSCRIBE_TYPE_REMOTE = 0
 **替代接口：** [SUBSCRIBE_TYPE_REMOTE](arkts-arkdata-relationalstore-subscribetype-e.md#subscribe_type_remote)
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-SubscribeType-SUBSCRIBE_TYPE_REMOTE = 0--><!--Device-SubscribeType-SUBSCRIBE_TYPE_REMOTE = 0-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core

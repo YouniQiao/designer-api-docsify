@@ -22,6 +22,8 @@ function getRemoteProfileUuids(deviceId: string, callback: AsyncCallback<Array<P
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-connection-function getRemoteProfileUuids(deviceId: string, callback: AsyncCallback<Array<ProfileUuids>>): void--><!--Device-connection-function getRemoteProfileUuids(deviceId: string, callback: AsyncCallback<Array<ProfileUuids>>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -74,6 +76,8 @@ function getRemoteProfileUuids(deviceId: string): Promise<Array<ProfileUuids>>
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-connection-function getRemoteProfileUuids(deviceId: string): Promise<Array<ProfileUuids>>--><!--Device-connection-function getRemoteProfileUuids(deviceId: string): Promise<Array<ProfileUuids>>-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

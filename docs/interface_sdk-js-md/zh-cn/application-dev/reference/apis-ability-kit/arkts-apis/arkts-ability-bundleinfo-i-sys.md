@@ -8,6 +8,8 @@ export interface BundleInfo
 
 **起始版本：** 9
 
+<!--Device-unnamed-export interface BundleInfo--><!--Device-unnamed-export interface BundleInfo-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## appSandboxPolicy
@@ -23,6 +25,8 @@ readonly appSandboxPolicy?: bundleManager.AppSandboxPolicy
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BundleInfo-readonly appSandboxPolicy?: bundleManager.AppSandboxPolicy--><!--Device-BundleInfo-readonly appSandboxPolicy?: bundleManager.AppSandboxPolicy-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -41,6 +45,8 @@ readonly deviceModeDistributionPolicy?: bundleManager.DeviceModeDistributionPoli
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BundleInfo-readonly deviceModeDistributionPolicy?: bundleManager.DeviceModeDistributionPolicy--><!--Device-BundleInfo-readonly deviceModeDistributionPolicy?: bundleManager.DeviceModeDistributionPolicy-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

@@ -17,6 +17,8 @@ Obtains the angle change between two rotation matrices. This API uses an asynchr
 
 **Since:** 9
 
+<!--Device-sensor-function getAngleVariation(currentRotationMatrix: Array<double>, preRotationMatrix: Array<double>,    callback: AsyncCallback<Array<double>>): void--><!--Device-sensor-function getAngleVariation(currentRotationMatrix: Array<double>, preRotationMatrix: Array<double>,    callback: AsyncCallback<Array<double>>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -84,6 +86,8 @@ function getAngleVariation(currentRotationMatrix: Array<number>, preRotationMatr
 Obtains the angle change between two rotation matrices. This API uses a promise to return the result.
 
 **Since:** 9
+
+<!--Device-sensor-function getAngleVariation(currentRotationMatrix: Array<double>, preRotationMatrix: Array<double>): Promise<Array<double>>--><!--Device-sensor-function getAngleVariation(currentRotationMatrix: Array<double>, preRotationMatrix: Array<double>): Promise<Array<double>>-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 

@@ -18,6 +18,8 @@ function getSharableRegexes(type: SharingIfaceType, callback: AsyncCallback<Arra
 
 **需要权限：** ohos.permission.CONNECTIVITY_INTERNAL
 
+<!--Device-sharing-function getSharableRegexes(type: SharingIfaceType, callback: AsyncCallback<Array<string>>): void--><!--Device-sharing-function getSharableRegexes(type: SharingIfaceType, callback: AsyncCallback<Array<string>>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.NetSharing
 
 **系统接口：** 此接口为系统接口。
@@ -67,6 +69,8 @@ function getSharableRegexes(type: SharingIfaceType): Promise<Array<string>>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.CONNECTIVITY_INTERNAL
+
+<!--Device-sharing-function getSharableRegexes(type: SharingIfaceType): Promise<Array<string>>--><!--Device-sharing-function getSharableRegexes(type: SharingIfaceType): Promise<Array<string>>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.NetSharing
 

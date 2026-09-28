@@ -16,6 +16,8 @@ function getVss(): bigint
 
 **起始版本：** 11
 
+<!--Device-hidebug-function getVss(): bigint--><!--Device-hidebug-function getVss(): bigint-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **返回值：**

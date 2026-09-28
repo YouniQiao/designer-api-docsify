@@ -20,6 +20,8 @@ function getAllExtBundleStats(userId: number): Promise<Array<ExtBundleStats>>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-storageStatistics-function getAllExtBundleStats(userId: int): Promise<Array<ExtBundleStats>>--><!--Device-storageStatistics-function getAllExtBundleStats(userId: int): Promise<Array<ExtBundleStats>>-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
 **系统接口：** 此接口为系统接口。

@@ -8,6 +8,8 @@ interface QueryRule
 
 **起始版本：** 9
 
+<!--Device-hiSysEvent-interface QueryRule--><!--Device-hiSysEvent-interface QueryRule-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 
 **系统接口：** 此接口为系统接口。
@@ -36,6 +38,8 @@ condition?: string
 
 **起始版本：** 10
 
+<!--Device-QueryRule-condition?: string--><!--Device-QueryRule-condition?: string-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 
 **系统接口：** 此接口为系统接口。
@@ -52,6 +56,8 @@ domain: string
 
 **起始版本：** 9
 
+<!--Device-QueryRule-domain: string--><!--Device-QueryRule-domain: string-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 
 **系统接口：** 此接口为系统接口。
@@ -67,6 +73,8 @@ names: string[]
 **类型：** string[]
 
 **起始版本：** 9
+
+<!--Device-QueryRule-names: string[]--><!--Device-QueryRule-names: string[]-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 

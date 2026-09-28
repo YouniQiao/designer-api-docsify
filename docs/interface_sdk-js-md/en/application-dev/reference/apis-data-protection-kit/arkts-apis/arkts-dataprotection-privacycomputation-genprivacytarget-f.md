@@ -19,6 +19,8 @@ Generates a privacy target for the given element. The privacy target is an encry
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.1.
 
+<!--Device-privacyComputation-function genPrivacyTarget(targetElement: TargetElement, privacyProtocol: PrivacyProtocol): Promise<Uint8Array>--><!--Device-privacyComputation-function genPrivacyTarget(targetElement: TargetElement, privacyProtocol: PrivacyProtocol): Promise<Uint8Array>-End-->
+
 **System capability:** SystemCapability.Security.Asset
 
 **Parameters:**

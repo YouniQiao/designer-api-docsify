@@ -12,7 +12,7 @@
 
 组件的宽高必须显式设置为非零有效值。
 
-不支持到达边缘后继续滚动的场景。当**UIExtensionComponent**宿主和UIExtensionAbility都支持内容滚动时，基于手势的滚动会导致**UIExtensionComponent**内外同时响应，包括但不限于[Scroll](arkts-arkui-scroll-comp.md#scroll)、[Swiper](arkts-arkui-swiper-comp.md#swiper)、[List](arkts-arkui-list-comp.md#list)、[Grid](arkts-arkui-grid-comp.md#grid)等可滚动容器。关于如何避免**UIExtensionComponent**内外同时滚动的详细信息，请参见[示例2](../../../reference/apis-arkui/arkui-ts/ts-container-ui-extension-component-sys.md#example-2-isolating-scrolling-inside-and-outside-of-uiextensioncomponent)。
+不支持到达边缘后继续滚动的场景。当**UIExtensionComponent**宿主和UIExtensionAbility都支持内容滚动时，基于手势的滚动会导致**UIExtensionComponent**内外同时响应，包括但不限于[Scroll](arkts-arkui-scroll-comp.md)、[Swiper](arkts-arkui-swiper-comp.md)、[List](arkts-arkui-list-comp.md)、[Grid](arkts-arkui-grid-comp.md)等可滚动容器。关于如何避免**UIExtensionComponent**内外同时滚动的详细信息，请参见[示例2](../../../reference/apis-arkui/arkui-ts/ts-container-ui-extension-component-sys.md#example-2-isolating-scrolling-inside-and-outside-of-uiextensioncomponent)。
 
 ## 子组件
 
@@ -32,6 +32,8 @@ UIExtensionComponent(
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionComponentInterface-(    want: import('../api/@ohos.app.ability.Want').default,    options?: UIExtensionOptions  ): UIExtensionComponentAttribute--><!--Device-UIExtensionComponentInterface-(    want: import('../api/@ohos.app.ability.Want').default,    options?: UIExtensionOptions  ): UIExtensionComponentAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

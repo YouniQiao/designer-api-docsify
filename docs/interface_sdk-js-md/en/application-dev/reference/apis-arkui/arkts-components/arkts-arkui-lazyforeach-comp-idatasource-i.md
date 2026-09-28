@@ -8,6 +8,8 @@ Defines the data source of **LazyForEach**. The developer needs to implement thi
 
 **Since:** 7
 
+<!--Device-unnamed-declare interface IDataSource--><!--Device-unnamed-declare interface IDataSource-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## getData
@@ -23,6 +25,8 @@ Obtains the data item that matches the specified index.
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-IDataSource-getData(index: number): any--><!--Device-IDataSource-getData(index: number): any-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -52,6 +56,8 @@ Registers a listener for data changes.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-IDataSource-registerDataChangeListener(listener: DataChangeListener): void--><!--Device-IDataSource-registerDataChangeListener(listener: DataChangeListener): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -74,6 +80,8 @@ Obtains the total number of data items.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-IDataSource-totalCount(): number--><!--Device-IDataSource-totalCount(): number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -95,6 +103,8 @@ Unregisters the listener for data changes.
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-IDataSource-unregisterDataChangeListener(listener: DataChangeListener): void--><!--Device-IDataSource-unregisterDataChangeListener(listener: DataChangeListener): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

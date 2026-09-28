@@ -20,6 +20,8 @@ function removeAutoStartApps(admin: Want, autoStartApps: Array<Want>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-applicationManager-function removeAutoStartApps(admin: Want, autoStartApps: Array<Want>): void--><!--Device-applicationManager-function removeAutoStartApps(admin: Want, autoStartApps: Array<Want>): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -81,6 +83,8 @@ function removeAutoStartApps(admin: Want, autoStartApps: Array<Want>, accountId:
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-applicationManager-function removeAutoStartApps(admin: Want, autoStartApps: Array<Want>, accountId: number): void--><!--Device-applicationManager-function removeAutoStartApps(admin: Want, autoStartApps: Array<Want>, accountId: number): void-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

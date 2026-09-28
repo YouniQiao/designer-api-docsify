@@ -16,6 +16,8 @@ function getDsdsMode(callback: AsyncCallback<DsdsMode>): void
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-sim-function getDsdsMode(callback: AsyncCallback<DsdsMode>): void--><!--Device-sim-function getDsdsMode(callback: AsyncCallback<DsdsMode>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -64,6 +66,8 @@ function getDsdsMode(): Promise<DsdsMode>
 **起始版本：** 11
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
+
+<!--Device-sim-function getDsdsMode(): Promise<DsdsMode>--><!--Device-sim-function getDsdsMode(): Promise<DsdsMode>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

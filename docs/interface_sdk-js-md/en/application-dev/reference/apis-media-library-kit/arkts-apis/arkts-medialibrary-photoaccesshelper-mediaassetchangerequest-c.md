@@ -10,6 +10,8 @@ Represents a media asset change request.
 
 **Since:** 11
 
+<!--Device-photoAccessHelper-class MediaAssetChangeRequest implements MediaChangeRequest--><!--Device-photoAccessHelper-class MediaAssetChangeRequest implements MediaChangeRequest-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
@@ -33,7 +35,9 @@ Adds resources from the application sandbox based on the file URI. For details a
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-MediaAssetChangeRequest-addResource(type: ResourceType, fileUri: string): void--><!--Device-MediaAssetChangeRequest-addResource(type: ResourceType, fileUri: string): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -94,7 +98,9 @@ Adds a resource using **ArrayBuffer** data.
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-MediaAssetChangeRequest-addResource(type: ResourceType, data: ArrayBuffer): void--><!--Device-MediaAssetChangeRequest-addResource(type: ResourceType, data: ArrayBuffer): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -144,7 +150,9 @@ Constructor used to initialize an asset change request.
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-MediaAssetChangeRequest-constructor(asset: PhotoAsset)--><!--Device-MediaAssetChangeRequest-constructor(asset: PhotoAsset)-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -194,6 +202,8 @@ Create an asset change request based on the file type and filename extension.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-MediaAssetChangeRequest-static createAssetRequest(context: Context, photoType: PhotoType, extension: string, options?: CreateOptions): MediaAssetChangeRequest--><!--Device-MediaAssetChangeRequest-static createAssetRequest(context: Context, photoType: PhotoType, extension: string, options?: CreateOptions): MediaAssetChangeRequest-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -258,6 +268,8 @@ For details about data source of the asset to be created, see [@ohos.file.fileur
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MediaAssetChangeRequest-static createImageAssetRequest(context: Context, fileUri: string): MediaAssetChangeRequest--><!--Device-MediaAssetChangeRequest-static createImageAssetRequest(context: Context, fileUri: string): MediaAssetChangeRequest-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Test API:** This API is used only in automated test scripts.
@@ -314,6 +326,8 @@ For details about data source of the asset to be created, see [@ohos.file.fileur
 
 **Since:** 11
 
+<!--Device-MediaAssetChangeRequest-static createVideoAssetRequest(context: Context, fileUri: string): MediaAssetChangeRequest--><!--Device-MediaAssetChangeRequest-static createVideoAssetRequest(context: Context, fileUri: string): MediaAssetChangeRequest-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Test API:** This API is used only in automated test scripts.
@@ -369,6 +383,8 @@ Deletes media assets. The deleted assets are moved to the trash. This API uses a
 **Since:** 11
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-MediaAssetChangeRequest-static deleteAssets(context: Context, assets: Array<PhotoAsset>): Promise<void>--><!--Device-MediaAssetChangeRequest-static deleteAssets(context: Context, assets: Array<PhotoAsset>): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -432,6 +448,8 @@ Deletes media assets. The deleted assets are moved to the trash. This API uses a
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-MediaAssetChangeRequest-static deleteAssets(context: Context, uriList: Array<string>): Promise<void>--><!--Device-MediaAssetChangeRequest-static deleteAssets(context: Context, uriList: Array<string>): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
@@ -491,6 +509,8 @@ Discards the photo taken by the camera.
 
 **Since:** 12
 
+<!--Device-MediaAssetChangeRequest-discardCameraPhoto(): void--><!--Device-MediaAssetChangeRequest-discardCameraPhoto(): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Error codes:**
@@ -535,6 +555,8 @@ Obtains the asset in this asset change request.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MediaAssetChangeRequest-getAsset(): PhotoAsset--><!--Device-MediaAssetChangeRequest-getAsset(): PhotoAsset-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -588,6 +610,8 @@ Obtains the handler used for writing a file to cache. This API uses a promise to
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-MediaAssetChangeRequest-getWriteCacheHandler(): Promise<int>--><!--Device-MediaAssetChangeRequest-getWriteCacheHandler(): Promise<int>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Return value:**
@@ -639,6 +663,8 @@ This interface is used to save photos taken by the camera in the photographing s
 
 **Since:** 12
 
+<!--Device-MediaAssetChangeRequest-saveCameraPhoto(): void--><!--Device-MediaAssetChangeRequest-saveCameraPhoto(): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Error codes:**
@@ -677,6 +703,8 @@ saveCameraPhoto(imageFileType: ImageFileType): void
 This API is used to specify the encoding format for saving photos taken by the camera. When a photo is taken in non-YUV format, the encoding format of the photo resource is the same as that of [CameraFormat] configured on the camera. When a photo is taken in YUV format, this API encodes the YUV object into the specified format based on [ImageFileType]. When this interface is used together with [addResource], the encoding format of the photo resource is the same as that of the resource added by [addResource].
 
 **Since:** 13
+
+<!--Device-MediaAssetChangeRequest-saveCameraPhoto(imageFileType: ImageFileType): void--><!--Device-MediaAssetChangeRequest-saveCameraPhoto(imageFileType: ImageFileType): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -724,6 +752,8 @@ setFavorite(favoriteState: boolean): void
 Favorites or unfavorites this file asset.
 
 **Since:** 26.0.0
+
+<!--Device-MediaAssetChangeRequest-setFavorite(favoriteState: boolean): void--><!--Device-MediaAssetChangeRequest-setFavorite(favoriteState: boolean): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -775,6 +805,8 @@ setOrientation(orientation: number): void
 Sets the orientation of this image.
 
 **Since:** 15
+
+<!--Device-MediaAssetChangeRequest-setOrientation(orientation: int): void--><!--Device-MediaAssetChangeRequest-setOrientation(orientation: int): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -828,7 +860,9 @@ Sets the media asset title.
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-MediaAssetChangeRequest-setTitle(title: string): void--><!--Device-MediaAssetChangeRequest-setTitle(title: string): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -887,6 +921,8 @@ A readonly member for type checking.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 23.
+
+<!--Device-MediaAssetChangeRequest-readonly comment: string--><!--Device-MediaAssetChangeRequest-readonly comment: string-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core

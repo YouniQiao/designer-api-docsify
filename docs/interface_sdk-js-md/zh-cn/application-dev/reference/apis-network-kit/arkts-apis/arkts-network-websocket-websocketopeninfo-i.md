@@ -8,6 +8,8 @@ WebSocket连接成功后的详细信息。
 
 **起始版本：** 26.0.0
 
+<!--Device-webSocket-export interface WebSocketOpenInfo--><!--Device-webSocket-export interface WebSocketOpenInfo-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块
@@ -30,6 +32,8 @@ message: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-WebSocketOpenInfo-message: string--><!--Device-WebSocketOpenInfo-message: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## protocol
@@ -46,6 +50,8 @@ protocol?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-WebSocketOpenInfo-protocol?: string--><!--Device-WebSocketOpenInfo-protocol?: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## status
@@ -61,5 +67,7 @@ status: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WebSocketOpenInfo-status: int--><!--Device-WebSocketOpenInfo-status: int-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack

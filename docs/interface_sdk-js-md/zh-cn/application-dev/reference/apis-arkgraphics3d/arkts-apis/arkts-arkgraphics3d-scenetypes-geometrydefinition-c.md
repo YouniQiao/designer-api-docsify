@@ -8,6 +8,8 @@ export declare abstract class GeometryDefinition
 
 **起始版本：** 18
 
+<!--Device-unnamed-export declare abstract class GeometryDefinition--><!--Device-unnamed-export declare abstract class GeometryDefinition-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## geometryType
@@ -21,5 +23,7 @@ get geometryType(): GeometryType
 **类型：** [GeometryType](arkts-arkgraphics3d-scenetypes-geometrytype-e.md)
 
 **起始版本：** 18
+
+<!--Device-GeometryDefinition-get geometryType(): GeometryType--><!--Device-GeometryDefinition-get geometryType(): GeometryType-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

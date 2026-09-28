@@ -30,6 +30,8 @@ function getFontWeightScale(): number
 - API版本20+：N/A
 - API版本12-19：ohos.permission.UPDATE_CONFIGURATION
 
+<!--Device-uiAppearance-function getFontWeightScale(): number--><!--Device-uiAppearance-function getFontWeightScale(): number-End-->
+
 **系统能力：** SystemCapability.ArkUI.UiAppearance
 
 **返回值：**

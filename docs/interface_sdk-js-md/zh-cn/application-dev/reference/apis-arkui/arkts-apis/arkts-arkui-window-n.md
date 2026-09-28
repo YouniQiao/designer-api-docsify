@@ -6,6 +6,8 @@ declare namespace window
 
 **起始版本：** 6
 
+<!--Device-unnamed-declare namespace window--><!--Device-unnamed-declare namespace window-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 ## 导入模块
@@ -69,7 +71,7 @@ import { window } from '@kit.ArkUI';
 | [setWaterMarkImage](arkts-arkui-window-setwatermarkimage-f-sys.md#setwatermarkimage-1) | 设置屏幕水印图片的显示状态，并设定水印的优先级。使用Promise异步回调。当priority等于0时，当前接口与[setWaterMarkImage](arkts-arkui-window-setwatermarkimage-f-sys.md#setwatermarkimage-2)等价。 |
 | [setWaterMarkImage](arkts-arkui-window-setwatermarkimage-f-sys.md#setwatermarkimage-2) | 设置屏幕水印图片显示状态。使用callback异步回调。 |
 | [setSpecificSystemWindowZIndex](arkts-arkui-window-setspecificsystemwindowzindex-f-sys.md) | 设置系统窗口的窗口层级。使用Promise异步回调。 |
-| [getTopNavDestinationName](arkts-arkui-window-gettopnavdestinationname-f-sys.md) | 获取指定的前台窗口当前栈顶[Navigation](../arkts-components/arkts-arkui-navigation-comp.md#navigation)中的[NavDestination](../arkts-components/arkts-arkui-navdestination-comp.md#nav_destination)名称，使用Promise异步回调。 |
+| [getTopNavDestinationName](arkts-arkui-window-gettopnavdestinationname-f-sys.md) | 获取指定的前台窗口当前栈顶[Navigation](../arkts-components/arkts-arkui-navigation-comp.md)中的[NavDestination](../arkts-components/arkts-arkui-navdestination-comp.md)名称，使用Promise异步回调。 |
 | [getSnapshot](arkts-arkui-window-getsnapshot-f-sys.md) | 获取指定窗口相同尺寸截图，使用Promise异步回调。若当前窗口设置为隐私模式（可通过[setWindowPrivacyMode](arkts-arkui-window-window-i.md#setwindowprivacymode-1)接口设置），截图结果为白屏。 |
 | [on](arkts-arkui-window-on-f-sys.md#onsystembartintchange) | 开启状态栏、导航栏属性变化的监听。 |
 | [off](arkts-arkui-window-off-f-sys.md#offsystembartintchange) | 关闭状态栏、导航栏属性变化的监听。 |

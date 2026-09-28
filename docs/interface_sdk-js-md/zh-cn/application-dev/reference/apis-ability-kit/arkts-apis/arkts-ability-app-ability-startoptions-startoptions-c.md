@@ -8,6 +8,8 @@ StartOptions可以作为启动UIAbility接口（例如[startAbility()](arkts-abi
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare class StartOptions--><!--Device-unnamed-declare class StartOptions-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块
@@ -30,7 +32,9 @@ completionHandler?: CompletionHandler
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-StartOptions-completionHandler?: CompletionHandler--><!--Device-StartOptions-completionHandler?: CompletionHandler-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -58,7 +62,9 @@ displayId?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-StartOptions-displayId?: long--><!--Device-StartOptions-displayId?: long-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -82,6 +88,8 @@ hideStartWindow?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-StartOptions-hideStartWindow?: boolean--><!--Device-StartOptions-hideStartWindow?: boolean-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## maxWindowHeight
@@ -101,6 +109,8 @@ maxWindowHeight?: number
 **起始版本：** 17
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-StartOptions-maxWindowHeight?: int--><!--Device-StartOptions-maxWindowHeight?: int-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -122,6 +132,8 @@ maxWindowWidth?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-StartOptions-maxWindowWidth?: int--><!--Device-StartOptions-maxWindowWidth?: int-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## minWindowHeight
@@ -142,6 +154,8 @@ minWindowHeight?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-StartOptions-minWindowHeight?: int--><!--Device-StartOptions-minWindowHeight?: int-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## minWindowWidth
@@ -161,6 +175,8 @@ minWindowWidth?: number
 **起始版本：** 17
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-StartOptions-minWindowWidth?: int--><!--Device-StartOptions-minWindowWidth?: int-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -186,6 +202,8 @@ UIAbility启动后的进程模式。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-StartOptions-processMode?: contextConstant.ProcessMode--><!--Device-StartOptions-processMode?: contextConstant.ProcessMode-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## splitRatio
@@ -201,6 +219,8 @@ splitRatio?: window.SplitRatioPreference
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-StartOptions-splitRatio?: window.SplitRatioPreference--><!--Device-StartOptions-splitRatio?: window.SplitRatioPreference-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -226,6 +246,8 @@ UIAbility启动后的可见性。当用户设置目标UIAbility为不可见时�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-StartOptions-startupVisibility?: contextConstant.StartupVisibility--><!--Device-StartOptions-startupVisibility?: contextConstant.StartupVisibility-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## startWindowBackgroundColor
@@ -247,6 +269,8 @@ startWindowBackgroundColor?: string
 **起始版本：** 14
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-StartOptions-startWindowBackgroundColor?: string--><!--Device-StartOptions-startWindowBackgroundColor?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -270,6 +294,8 @@ startWindowIcon?: image.PixelMap
 **起始版本：** 14
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-StartOptions-startWindowIcon?: image.PixelMap--><!--Device-StartOptions-startWindowIcon?: image.PixelMap-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -298,6 +324,8 @@ supportWindowModes?: Array<bundleManager.SupportWindowMode>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-StartOptions-supportWindowModes?: Array<bundleManager.SupportWindowMode>--><!--Device-StartOptions-supportWindowModes?: Array<bundleManager.SupportWindowMode>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## windowCreateParams
@@ -313,6 +341,8 @@ windowCreateParams?: window.WindowCreateParams
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-StartOptions-windowCreateParams?: window.WindowCreateParams--><!--Device-StartOptions-windowCreateParams?: window.WindowCreateParams-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -336,6 +366,8 @@ windowHeight?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-StartOptions-windowHeight?: int--><!--Device-StartOptions-windowHeight?: int-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## windowLeft
@@ -356,6 +388,8 @@ windowLeft?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-StartOptions-windowLeft?: int--><!--Device-StartOptions-windowLeft?: int-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## windowMode
@@ -371,6 +405,8 @@ windowMode?: number
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-StartOptions-windowMode?: int--><!--Device-StartOptions-windowMode?: int-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -391,6 +427,8 @@ windowTop?: number
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-StartOptions-windowTop?: int--><!--Device-StartOptions-windowTop?: int-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -413,6 +451,8 @@ windowWidth?: number
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-StartOptions-windowWidth?: int--><!--Device-StartOptions-windowWidth?: int-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -439,6 +479,8 @@ withAnimation?: boolean
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-StartOptions-withAnimation?: boolean--><!--Device-StartOptions-withAnimation?: boolean-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

@@ -8,6 +8,8 @@ Defines the application account manager, which is used to manage account informa
 
 **Since:** 7
 
+<!--Device-appAccount-interface AppAccountManager--><!--Device-appAccount-interface AppAccountManager-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 ## Modules to Import
@@ -25,6 +27,8 @@ auth(name: string, owner: string, authType: string, callback: AuthCallback): voi
 Authenticates an application account. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-auth(name: string, owner: string, authType: string, callback: AuthCallback): void--><!--Device-AppAccountManager-auth(name: string, owner: string, authType: string, callback: AuthCallback): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -113,6 +117,8 @@ Authenticates an application account. This API uses an asynchronous callback to 
 
 **Since:** 9
 
+<!--Device-AppAccountManager-auth(      name: string,      owner: string,      authType: string,      options: Record<string, Object>,      callback: AuthCallback    ): void--><!--Device-AppAccountManager-auth(      name: string,      owner: string,      authType: string,      options: Record<string, Object>,      callback: AuthCallback    ): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -196,6 +202,8 @@ Checks whether an application account has specific labels. This API uses an asyn
 
 **Since:** 9
 
+<!--Device-AppAccountManager-checkAccountLabels(name: string, owner: string, labels: Array<string>, callback: AsyncCallback<boolean>): void--><!--Device-AppAccountManager-checkAccountLabels(name: string, owner: string, labels: Array<string>, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -251,6 +259,8 @@ checkAccountLabels(name: string, owner: string, labels: Array<string>): Promise<
 Checks whether an application account has specific labels. This API uses a promise to return the result. The labels are checked by the authenticator of the target application.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-checkAccountLabels(name: string, owner: string, labels: Array<string>): Promise<boolean>--><!--Device-AppAccountManager-checkAccountLabels(name: string, owner: string, labels: Array<string>): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -309,6 +319,8 @@ Checks whether the caller can access the account data that belongs to the target
 
 **Since:** 9
 
+<!--Device-AppAccountManager-checkAppAccess(name: string, bundleName: string, callback: AsyncCallback<boolean>): void--><!--Device-AppAccountManager-checkAppAccess(name: string, bundleName: string, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -360,6 +372,8 @@ Checks whether the caller can access the account data that belongs to the target
 
 **Since:** 9
 
+<!--Device-AppAccountManager-checkAppAccess(name: string, bundleName: string): Promise<boolean>--><!--Device-AppAccountManager-checkAppAccess(name: string, bundleName: string): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -410,6 +424,8 @@ checkAuthTokenVisibility(name: string, authType: string, bundleName: string, cal
 Checks the visibility of an authorization token of the specified authentication type to an application. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-checkAuthTokenVisibility(name: string, authType: string, bundleName: string, callback: AsyncCallback<boolean>): void--><!--Device-AppAccountManager-checkAuthTokenVisibility(name: string, authType: string, bundleName: string, callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -463,6 +479,8 @@ checkAuthTokenVisibility(name: string, authType: string, bundleName: string): Pr
 Checks the visibility of an authorization token of the specified authentication type to an application. This API uses a promise to return the result.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-checkAuthTokenVisibility(name: string, authType: string, bundleName: string): Promise<boolean>--><!--Device-AppAccountManager-checkAuthTokenVisibility(name: string, authType: string, bundleName: string): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -520,6 +538,8 @@ Checks whether data synchronization is enabled for an application account. This 
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-AppAccountManager-checkDataSyncEnabled(name: string, callback: AsyncCallback<boolean>): void--><!--Device-AppAccountManager-checkDataSyncEnabled(name: string, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -572,6 +592,8 @@ Checks whether data synchronization is enabled for an application account. This 
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-AppAccountManager-checkDataSyncEnabled(name: string): Promise<boolean>--><!--Device-AppAccountManager-checkDataSyncEnabled(name: string): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -623,6 +645,8 @@ Creates an application account with the given name. This API uses an asynchronou
 
 **Since:** 9
 
+<!--Device-AppAccountManager-createAccount(name: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-createAccount(name: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -672,6 +696,8 @@ createAccount(name: string, options: CreateAccountOptions, callback: AsyncCallba
 Creates an application account with custom data. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-createAccount(name: string, options: CreateAccountOptions, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-createAccount(name: string, options: CreateAccountOptions, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -729,6 +755,8 @@ Creates an application account with custom data. This API uses a promise to retu
 
 **Since:** 9
 
+<!--Device-AppAccountManager-createAccount(name: string, options?: CreateAccountOptions): Promise<void>--><!--Device-AppAccountManager-createAccount(name: string, options?: CreateAccountOptions): Promise<void>-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -785,6 +813,8 @@ createAccountImplicitly(owner: string, callback: AuthCallback): void
 Creates an application account automatically by the authenticator based on the specified owner. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-createAccountImplicitly(owner: string, callback: AuthCallback): void--><!--Device-AppAccountManager-createAccountImplicitly(owner: string, callback: AuthCallback): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -863,6 +893,8 @@ createAccountImplicitly(owner: string, options: CreateAccountImplicitlyOptions, 
 Creates an application account automatically by the authenticator based on the specified account owner and options. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-createAccountImplicitly(owner: string, options: CreateAccountImplicitlyOptions, callback: AuthCallback): void--><!--Device-AppAccountManager-createAccountImplicitly(owner: string, options: CreateAccountImplicitlyOptions, callback: AuthCallback): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -945,6 +977,8 @@ Deletes the authorization token of the specified authentication type for an appl
 
 **Since:** 9
 
+<!--Device-AppAccountManager-deleteAuthToken(name: string, owner: string, authType: string, token: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-deleteAuthToken(name: string, owner: string, authType: string, token: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -998,6 +1032,8 @@ deleteAuthToken(name: string, owner: string, authType: string, token: string): P
 Deletes the authorization token of the specified authentication type for an application account. This API uses a promise to return the result.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-deleteAuthToken(name: string, owner: string, authType: string, token: string): Promise<void>--><!--Device-AppAccountManager-deleteAuthToken(name: string, owner: string, authType: string, token: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -1053,6 +1089,8 @@ Deletes the credential for the specified type of an application account. This AP
 
 **Since:** 9
 
+<!--Device-AppAccountManager-deleteCredential(name: string, credentialType: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-deleteCredential(name: string, credentialType: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -1103,6 +1141,8 @@ deleteCredential(name: string, credentialType: string): Promise<void>
 Deletes the credential for the specified type of an application account. This API uses a promise to return the result.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-deleteCredential(name: string, credentialType: string): Promise<void>--><!--Device-AppAccountManager-deleteCredential(name: string, credentialType: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -1156,6 +1196,8 @@ Obtains the application accounts that can be accessed by the invoker based on th
 
 **Since:** 9
 
+<!--Device-AppAccountManager-getAccountsByOwner(owner: string, callback: AsyncCallback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-getAccountsByOwner(owner: string, callback: AsyncCallback<Array<AppAccountInfo>>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -1204,6 +1246,8 @@ getAccountsByOwner(owner: string): Promise<Array<AppAccountInfo>>
 Obtains the application accounts that can be accessed by the invoker based on the application account owner. This API uses a promise to return the result. This method applies to the following accounts: <br> Accounts of this application. <br> Accounts of third-party applications. To obtain such information, <br> your application must have gained authorization from the third-party applications or <br> have gained the ohos.permission.GET_ALL_APP_ACCOUNTS permission.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-getAccountsByOwner(owner: string): Promise<Array<AppAccountInfo>>--><!--Device-AppAccountManager-getAccountsByOwner(owner: string): Promise<Array<AppAccountInfo>>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -1255,6 +1299,8 @@ Obtains information about all accessible application accounts. This API uses an 
 
 **Since:** 9
 
+<!--Device-AppAccountManager-getAllAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-getAllAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -1300,6 +1346,8 @@ getAllAccounts(): Promise<Array<AppAccountInfo>>
 Obtains information about all accessible application accounts. This API uses a promise to return the result. This method applies to the following accounts: <br> Accounts of this application. <br> Accounts of third-party applications. To obtain such information, <br> your application must have gained authorization from the third-party applications or <br> have gained the ohos.permission.GET_ALL_APP_ACCOUNTS permission.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-getAllAccounts(): Promise<Array<AppAccountInfo>>--><!--Device-AppAccountManager-getAllAccounts(): Promise<Array<AppAccountInfo>>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -1356,6 +1404,8 @@ Obtains the application accounts that can be accessed by the invoker based on th
 
 **Required permissions:** ohos.permission.GET_ALL_APP_ACCOUNTS
 
+<!--Device-AppAccountManager-getAllAccounts(owner: string, callback: AsyncCallback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-getAllAccounts(owner: string, callback: AsyncCallback<Array<AppAccountInfo>>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -1403,6 +1453,8 @@ Obtains the application accounts that can be accessed by the invoker based on th
 
 **Required permissions:** ohos.permission.GET_ALL_APP_ACCOUNTS
 
+<!--Device-AppAccountManager-getAllAccounts(owner: string): Promise<Array<AppAccountInfo>>--><!--Device-AppAccountManager-getAllAccounts(owner: string): Promise<Array<AppAccountInfo>>-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -1439,6 +1491,8 @@ getAllAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<Auth
 Obtains all tokens visible to the invoker for an application account. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-getAllAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<AuthTokenInfo>>): void--><!--Device-AppAccountManager-getAllAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<AuthTokenInfo>>): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -1491,6 +1545,8 @@ Obtains all tokens visible to the invoker for an application account. This API u
 
 **Since:** 9
 
+<!--Device-AppAccountManager-getAllAuthTokens(name: string, owner: string): Promise<Array<AuthTokenInfo>>--><!--Device-AppAccountManager-getAllAuthTokens(name: string, owner: string): Promise<Array<AuthTokenInfo>>-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -1542,6 +1598,8 @@ getAuthCallback(sessionId: string, callback: AsyncCallback<AuthCallback>): void
 Obtains the authenticator callback for an authentication session. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-getAuthCallback(sessionId: string, callback: AsyncCallback<AuthCallback>): void--><!--Device-AppAccountManager-getAuthCallback(sessionId: string, callback: AsyncCallback<AuthCallback>): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -1607,6 +1665,8 @@ getAuthCallback(sessionId: string): Promise<AuthCallback>
 Obtains the authenticator callback for an authentication session. This API uses a promise to return the result.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-getAuthCallback(sessionId: string): Promise<AuthCallback>--><!--Device-AppAccountManager-getAuthCallback(sessionId: string): Promise<AuthCallback>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -1674,6 +1734,8 @@ Obtains the authorization list of the specified authentication type for an appli
 
 **Since:** 9
 
+<!--Device-AppAccountManager-getAuthList(name: string, authType: string, callback: AsyncCallback<Array<string>>): void--><!--Device-AppAccountManager-getAuthList(name: string, authType: string, callback: AsyncCallback<Array<string>>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -1724,6 +1786,8 @@ getAuthList(name: string, authType: string): Promise<Array<string>>
 Obtains the authorization list of the specified authentication type for an application account. The authorization list contains all authorized bundles. The token authorization list is set by [setAuthTokenVisibility](#setauthtokenvisibility). This API uses a promise to return the result.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-getAuthList(name: string, authType: string): Promise<Array<string>>--><!--Device-AppAccountManager-getAuthList(name: string, authType: string): Promise<Array<string>>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -1776,6 +1840,8 @@ getAuthToken(name: string, owner: string, authType: string, callback: AsyncCallb
 Obtains the authorization token of the specified authentication type for an application account. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-getAuthToken(name: string, owner: string, authType: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getAuthToken(name: string, owner: string, authType: string, callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -1830,6 +1896,8 @@ Obtains the authorization token of the specified authentication type for an appl
 
 **Since:** 9
 
+<!--Device-AppAccountManager-getAuthToken(name: string, owner: string, authType: string): Promise<string>--><!--Device-AppAccountManager-getAuthToken(name: string, owner: string, authType: string): Promise<string>-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -1883,6 +1951,8 @@ Obtains the credential of an application account. This API uses an asynchronous 
 
 **Since:** 9
 
+<!--Device-AppAccountManager-getCredential(name: string, credentialType: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getCredential(name: string, credentialType: string, callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -1933,6 +2003,8 @@ getCredential(name: string, credentialType: string): Promise<string>
 Obtains the credential of an application account. This API uses a promise to return the result.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-getCredential(name: string, credentialType: string): Promise<string>--><!--Device-AppAccountManager-getCredential(name: string, credentialType: string): Promise<string>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -1986,6 +2058,8 @@ Obtains the custom data of an application account based on the specified key. Th
 
 **Since:** 9
 
+<!--Device-AppAccountManager-getCustomData(name: string, key: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getCustomData(name: string, key: string, callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -2036,6 +2110,8 @@ getCustomData(name: string, key: string): Promise<string>
 Obtains the custom data of an application account based on the specified key. This API uses a promise to return the result.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-getCustomData(name: string, key: string): Promise<string>--><!--Device-AppAccountManager-getCustomData(name: string, key: string): Promise<string>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -2089,6 +2165,8 @@ Obtains the custom data of an application account based on the specified key. Th
 
 **Since:** 9
 
+<!--Device-AppAccountManager-getCustomDataSync(name: string, key: string): string--><!--Device-AppAccountManager-getCustomDataSync(name: string, key: string): string-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -2137,6 +2215,8 @@ off(type: 'accountChange', callback?: Callback<Array<AppAccountInfo>>): void
 Unsubscribes from account information changes.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-off(type: 'accountChange', callback?: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-off(type: 'accountChange', callback?: Callback<Array<AppAccountInfo>>): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -2198,6 +2278,8 @@ Unsubscribes from account information changes.
 
 **Substitutes:** [off](#offaccountchange)(type: 'accountChange', callback?: Callback&lt;Array&lt;AppAccountInfo&gt;&gt;)
 
+<!--Device-AppAccountManager-off(type: 'change', callback?: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-off(type: 'change', callback?: Callback<Array<AppAccountInfo>>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -2236,6 +2318,8 @@ on(type: 'accountChange', owners: Array<string>, callback: Callback<Array<AppAcc
 Subscribes to account information changes of apps.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-on(type: 'accountChange', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-on(type: 'accountChange', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -2292,6 +2376,8 @@ Subscribes to account information changes of apps.
 
 **Substitutes:** [on](#onaccountchange)(type: 'accountChange', owners: Array&lt;string&gt;, callback: Callback&lt;Array&lt;AppAccountInfo&gt;&gt;)
 
+<!--Device-AppAccountManager-on(type: 'change', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-on(type: 'change', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -2328,6 +2414,8 @@ queryAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>
 Obtains the authenticator information of an application. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-queryAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>): void--><!--Device-AppAccountManager-queryAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -2378,6 +2466,8 @@ queryAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>
 Obtains the authenticator information of an application. This API uses a promise to return the result.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-queryAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>--><!--Device-AppAccountManager-queryAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -2430,6 +2520,8 @@ Removes an application account. This API uses an asynchronous callback to return
 
 **Since:** 9
 
+<!--Device-AppAccountManager-removeAccount(name: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-removeAccount(name: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -2478,6 +2570,8 @@ removeAccount(name: string): Promise<void>
 Removes an application account. This API uses a promise to return the result.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-removeAccount(name: string): Promise<void>--><!--Device-AppAccountManager-removeAccount(name: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -2528,6 +2622,8 @@ selectAccountsByOptions(options: SelectAccountsOptions, callback: AsyncCallback<
 Selects the accounts that can be accessed by the invoker based on the options. This API uses an asynchronous callback to return the result. If the options contain label constraints, the authenticator of the target application provides the capability of checking the labels.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-selectAccountsByOptions(options: SelectAccountsOptions, callback: AsyncCallback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-selectAccountsByOptions(options: SelectAccountsOptions, callback: AsyncCallback<Array<AppAccountInfo>>): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -2584,6 +2680,8 @@ Selects the accounts that can be accessed by the invoker based on the options. T
 
 **Since:** 9
 
+<!--Device-AppAccountManager-selectAccountsByOptions(options: SelectAccountsOptions): Promise<Array<AppAccountInfo>>--><!--Device-AppAccountManager-selectAccountsByOptions(options: SelectAccountsOptions): Promise<Array<AppAccountInfo>>-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -2638,6 +2736,8 @@ Sets the access to the data of an account for an application. This API uses an a
 
 **Since:** 9
 
+<!--Device-AppAccountManager-setAppAccess(name: string, bundleName: string, isAccessible: boolean, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setAppAccess(name: string, bundleName: string, isAccessible: boolean, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -2689,6 +2789,8 @@ setAppAccess(name: string, bundleName: string, isAccessible: boolean): Promise<v
 Sets the access to the data of an account for an application. This API uses a promise to return the result.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-setAppAccess(name: string, bundleName: string, isAccessible: boolean): Promise<void>--><!--Device-AppAccountManager-setAppAccess(name: string, bundleName: string, isAccessible: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -2743,6 +2845,8 @@ Sets the authenticator attributes of an application. This API uses an asynchrono
 
 **Since:** 9
 
+<!--Device-AppAccountManager-setAuthenticatorProperties(owner: string, callback: AuthCallback): void--><!--Device-AppAccountManager-setAuthenticatorProperties(owner: string, callback: AuthCallback): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -2796,6 +2900,8 @@ setAuthenticatorProperties(owner: string, options: SetPropertiesOptions, callbac
 Sets the authenticator attributes of an application. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-setAuthenticatorProperties(owner: string, options: SetPropertiesOptions, callback: AuthCallback): void--><!--Device-AppAccountManager-setAuthenticatorProperties(owner: string, options: SetPropertiesOptions, callback: AuthCallback): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -2853,6 +2959,8 @@ Sets an authorization token of the specific authentication type for an applicati
 
 **Since:** 9
 
+<!--Device-AppAccountManager-setAuthToken(name: string, authType: string, token: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setAuthToken(name: string, authType: string, token: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -2904,6 +3012,8 @@ setAuthToken(name: string, authType: string, token: string): Promise<void>
 Sets an authorization token of the specific authentication type for an application account. This API uses a promise to return the result.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-setAuthToken(name: string, authType: string, token: string): Promise<void>--><!--Device-AppAccountManager-setAuthToken(name: string, authType: string, token: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -2964,6 +3074,8 @@ Sets the visibility of an authorization token to an application. This API uses a
 
 **Since:** 9
 
+<!--Device-AppAccountManager-setAuthTokenVisibility(      name: string,      authType: string,      bundleName: string,      isVisible: boolean,      callback: AsyncCallback<void>    ): void--><!--Device-AppAccountManager-setAuthTokenVisibility(      name: string,      authType: string,      bundleName: string,      isVisible: boolean,      callback: AsyncCallback<void>    ): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -3018,6 +3130,8 @@ setAuthTokenVisibility(name: string, authType: string, bundleName: string, isVis
 Sets the visibility of an authorization token to an application. This API uses a promise to return the result.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-setAuthTokenVisibility(name: string, authType: string, bundleName: string, isVisible: boolean): Promise<void>--><!--Device-AppAccountManager-setAuthTokenVisibility(name: string, authType: string, bundleName: string, isVisible: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -3075,6 +3189,8 @@ Sets a credential for an application account. This API uses an asynchronous call
 
 **Since:** 9
 
+<!--Device-AppAccountManager-setCredential(name: string, credentialType: string, credential: string,                             callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setCredential(name: string, credentialType: string, credential: string,                             callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -3125,6 +3241,8 @@ setCredential(name: string, credentialType: string, credential: string): Promise
 Sets a credential for an application account. This API uses a promise to return the result.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-setCredential(name: string, credentialType: string, credential: string): Promise<void>--><!--Device-AppAccountManager-setCredential(name: string, credentialType: string, credential: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -3178,6 +3296,8 @@ Sets custom data for an application account. This API uses an asynchronous callb
 
 **Since:** 9
 
+<!--Device-AppAccountManager-setCustomData(name: string, key: string, value: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setCustomData(name: string, key: string, value: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -3229,6 +3349,8 @@ setCustomData(name: string, key: string, value: string): Promise<void>
 Sets custom data for an application account. This API uses a promise to return the result.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-setCustomData(name: string, key: string, value: string): Promise<void>--><!--Device-AppAccountManager-setCustomData(name: string, key: string, value: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -3285,6 +3407,8 @@ Sets data synchronization for an application account. This API uses an asynchron
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-AppAccountManager-setDataSyncEnabled(name: string, isEnabled: boolean, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setDataSyncEnabled(name: string, isEnabled: boolean, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -3333,6 +3457,8 @@ Sets data synchronization for an application account. This API uses a promise to
 **Since:** 9
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-AppAccountManager-setDataSyncEnabled(name: string, isEnabled: boolean): Promise<void>--><!--Device-AppAccountManager-setDataSyncEnabled(name: string, isEnabled: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -3385,6 +3511,8 @@ verifyCredential(name: string, owner: string, callback: AuthCallback): void
 Verifies the validity of a specified account credential. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-verifyCredential(name: string, owner: string, callback: AuthCallback): void--><!--Device-AppAccountManager-verifyCredential(name: string, owner: string, callback: AuthCallback): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -3441,6 +3569,8 @@ verifyCredential(name: string, owner: string, options: VerifyCredentialOptions, 
 Verifies the credential of an application account. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-verifyCredential(name: string, owner: string, options: VerifyCredentialOptions, callback: AuthCallback): void--><!--Device-AppAccountManager-verifyCredential(name: string, owner: string, options: VerifyCredentialOptions, callback: AuthCallback): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -3511,6 +3641,8 @@ Adds an application account with the given name. This API uses an asynchronous c
 
 **Substitutes:** [createAccount](#createaccount)(name: string, callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-AppAccountManager-addAccount(name: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-addAccount(name: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -3552,6 +3684,8 @@ Adds an application account name and additional information. This API uses an as
 
 **Substitutes:** [createAccount](#createaccount-1)(name: string, options: CreateAccountOptions, callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-AppAccountManager-addAccount(name: string, extraInfo: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-addAccount(name: string, extraInfo: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -3592,6 +3726,8 @@ Adds an application account name and additional information. This API uses a pro
 **Deprecated since:** 9
 
 **Substitutes:** [createAccount](#createaccount-2)(name: string, options?: CreateAccountOptions)
+
+<!--Device-AppAccountManager-addAccount(name: string, extraInfo?: string): Promise<void>--><!--Device-AppAccountManager-addAccount(name: string, extraInfo?: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -3644,6 +3780,8 @@ Adds an application account implicitly based on the specified owner. This API us
 **Deprecated since:** 9
 
 **Substitutes:** [createAccountImplicitly](#createaccountimplicitly)(owner: string, callback: AuthCallback)
+
+<!--Device-AppAccountManager-addAccountImplicitly(      owner: string,      authType: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void--><!--Device-AppAccountManager-addAccountImplicitly(      owner: string,      authType: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -3723,6 +3861,8 @@ Authenticates an application account. This API uses an asynchronous callback to 
 
 **Substitutes:** [auth](#auth)(name: string, owner: string, authType: string, callback: AuthCallback)
 
+<!--Device-AppAccountManager-authenticate(      name: string,      owner: string,      authType: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void--><!--Device-AppAccountManager-authenticate(      name: string,      owner: string,      authType: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -3798,6 +3938,8 @@ Checks whether data synchronization is enabled for an application account. This 
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-AppAccountManager-checkAppAccountSyncEnable(name: string, callback: AsyncCallback<boolean>): void--><!--Device-AppAccountManager-checkAppAccountSyncEnable(name: string, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -3843,6 +3985,8 @@ Checks whether data synchronization is enabled for an application account. This 
 **Substitutes:** [checkDataSyncEnabled](#checkdatasyncenabled-1)(name: string)
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-AppAccountManager-checkAppAccountSyncEnable(name: string): Promise<boolean>--><!--Device-AppAccountManager-checkAppAccountSyncEnable(name: string): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -3895,6 +4039,8 @@ Checks the visibility of an authorization token of the specified authentication 
 
 **Substitutes:** [checkAuthTokenVisibility](#checkauthtokenvisibility)(name: string, authType: string, bundleName: string, callback: AsyncCallback&lt;boolean&gt;)
 
+<!--Device-AppAccountManager-checkOAuthTokenVisibility(      name: string,      authType: string,      bundleName: string,      callback: AsyncCallback<boolean>    ): void--><!--Device-AppAccountManager-checkOAuthTokenVisibility(      name: string,      authType: string,      bundleName: string,      callback: AsyncCallback<boolean>    ): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -3942,6 +4088,8 @@ Checks the visibility of an authorization token of the specified authentication 
 **Deprecated since:** 9
 
 **Substitutes:** [checkAuthTokenVisibility](#checkauthtokenvisibility-1)(name: string, authType: string, bundleName: string)
+
+<!--Device-AppAccountManager-checkOAuthTokenVisibility(name: string, authType: string, bundleName: string): Promise<boolean>--><!--Device-AppAccountManager-checkOAuthTokenVisibility(name: string, authType: string, bundleName: string): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -3992,6 +4140,8 @@ Deletes an application account. This API uses an asynchronous callback to return
 
 **Substitutes:** [removeAccount](#removeaccount)(name: string, callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-AppAccountManager-deleteAccount(name: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-deleteAccount(name: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -4032,6 +4182,8 @@ Deletes an application account. This API uses a promise to return the result.
 **Deprecated since:** 9
 
 **Substitutes:** [removeAccount](#removeaccount-1)(name: string)
+
+<!--Device-AppAccountManager-deleteAccount(name: string): Promise<void>--><!--Device-AppAccountManager-deleteAccount(name: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -4078,6 +4230,8 @@ Deletes the authorization token of the specified authentication type for an appl
 **Deprecated since:** 9
 
 **Substitutes:** [deleteAuthToken](#deleteauthtoken)(name: string, owner: string, authType: string, token: string, callback: AsyncCallback&lt;void&gt;)
+
+<!--Device-AppAccountManager-deleteOAuthToken(name: string, owner: string, authType: string, token: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-deleteOAuthToken(name: string, owner: string, authType: string, token: string, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -4128,6 +4282,8 @@ Deletes the authorization token of the specified authentication type for an appl
 
 **Substitutes:** [deleteAuthToken](#deleteauthtoken-1)(name: string, owner: string, authType: string, token: string)
 
+<!--Device-AppAccountManager-deleteOAuthToken(name: string, owner: string, authType: string, token: string): Promise<void>--><!--Device-AppAccountManager-deleteOAuthToken(name: string, owner: string, authType: string, token: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -4177,6 +4333,8 @@ Disables access to the third-party application with the specified package name u
 
 **Substitutes:** [setAppAccess](#setappaccess)(name: string, bundleName: string, isAccessible: boolean, callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-AppAccountManager-disableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-disableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -4218,6 +4376,8 @@ Disables an application account from accessing an application. This API uses a p
 **Deprecated since:** 9
 
 **Substitutes:** [setAppAccess](#setappaccess-1)(name: string, bundleName: string, isAccessible: boolean)
+
+<!--Device-AppAccountManager-disableAppAccess(name: string, bundleName: string): Promise<void>--><!--Device-AppAccountManager-disableAppAccess(name: string, bundleName: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -4266,6 +4426,8 @@ Enables an application to access an application account. This API uses an asynch
 
 **Substitutes:** [setAppAccess](#setappaccess)(name: string, bundleName: string, isAccessible: boolean, callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-AppAccountManager-enableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-enableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -4311,6 +4473,8 @@ Enables an application to access an application account. This API uses a promise
 **Deprecated since:** 9
 
 **Substitutes:** [setAppAccess](#setappaccess-1)(name: string, bundleName: string, isAccessible: boolean)
+
+<!--Device-AppAccountManager-enableAppAccess(name: string, bundleName: string): Promise<void>--><!--Device-AppAccountManager-enableAppAccess(name: string, bundleName: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -4359,6 +4523,8 @@ Obtains the credential of an application account. This API uses an asynchronous 
 
 **Substitutes:** [getCredential](#getcredential)(name: string, credentialType: string, callback: AsyncCallback&lt;string&gt;)
 
+<!--Device-AppAccountManager-getAccountCredential(name: string, credentialType: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getAccountCredential(name: string, credentialType: string, callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -4404,6 +4570,8 @@ Obtains the credential of an application account. This API uses a promise to ret
 **Deprecated since:** 9
 
 **Substitutes:** [getCredential](#getcredential-1)(name: string, credentialType: string)
+
+<!--Device-AppAccountManager-getAccountCredential(name: string, credentialType: string): Promise<string>--><!--Device-AppAccountManager-getAccountCredential(name: string, credentialType: string): Promise<string>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -4452,6 +4620,8 @@ Obtains additional information of an application account. Additional information
 
 **Substitutes:** [getCustomData](#getcustomdata)(name: string, key: string, callback: AsyncCallback&lt;string&gt;)
 
+<!--Device-AppAccountManager-getAccountExtraInfo(name: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getAccountExtraInfo(name: string, callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -4495,6 +4665,8 @@ Obtains additional information of an application account. Additional information
 **Deprecated since:** 9
 
 **Substitutes:** [getCustomData](#getcustomdata-1)(name: string, key: string)
+
+<!--Device-AppAccountManager-getAccountExtraInfo(name: string): Promise<string>--><!--Device-AppAccountManager-getAccountExtraInfo(name: string): Promise<string>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -4544,6 +4716,8 @@ Obtains information about all accessible application accounts. This API uses an 
 
 **Required permissions:** ohos.permission.GET_ALL_APP_ACCOUNTS
 
+<!--Device-AppAccountManager-getAllAccessibleAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-getAllAccessibleAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -4589,6 +4763,8 @@ Obtains information about all accessible application accounts. This API uses a p
 
 **Required permissions:** ohos.permission.GET_ALL_APP_ACCOUNTS
 
+<!--Device-AppAccountManager-getAllAccessibleAccounts(): Promise<Array<AppAccountInfo>>--><!--Device-AppAccountManager-getAllAccessibleAccounts(): Promise<Array<AppAccountInfo>>-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Return value:**
@@ -4628,6 +4804,8 @@ Obtains all tokens visible to the invoker for an application account. This API u
 **Deprecated since:** 9
 
 **Substitutes:** [getAllAuthTokens](#getallauthtokens)(name: string, owner: string, callback: AsyncCallback&lt;Array&lt;AuthTokenInfo&gt;&gt;)
+
+<!--Device-AppAccountManager-getAllOAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<OAuthTokenInfo>>): void--><!--Device-AppAccountManager-getAllOAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<OAuthTokenInfo>>): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -4674,6 +4852,8 @@ Obtains all tokens visible to the invoker for an application account. This API u
 **Deprecated since:** 9
 
 **Substitutes:** [getAllAuthTokens](#getallauthtokens-1)(name: string, owner: string)
+
+<!--Device-AppAccountManager-getAllOAuthTokens(name: string, owner: string): Promise<Array<OAuthTokenInfo>>--><!--Device-AppAccountManager-getAllOAuthTokens(name: string, owner: string): Promise<Array<OAuthTokenInfo>>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -4723,6 +4903,8 @@ Obtains the associated data of an application account based on the specified key
 
 **Substitutes:** [getCustomData](#getcustomdata)(name: string, key: string, callback: AsyncCallback&lt;string&gt;)
 
+<!--Device-AppAccountManager-getAssociatedData(name: string, key: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getAssociatedData(name: string, key: string, callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -4767,6 +4949,8 @@ Obtains data to be associated with an application account. This API uses a promi
 **Deprecated since:** 9
 
 **Substitutes:** [getCustomData](#getcustomdata-1)(name: string, key: string)
+
+<!--Device-AppAccountManager-getAssociatedData(name: string, key: string): Promise<string>--><!--Device-AppAccountManager-getAssociatedData(name: string, key: string): Promise<string>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -4814,6 +4998,8 @@ Obtains the authenticator callback for an authentication session. This API uses 
 **Deprecated since:** 9
 
 **Substitutes:** [getAuthCallback](#getauthcallback)(sessionId: string, callback: AsyncCallback&lt;AuthCallback&gt;)
+
+<!--Device-AppAccountManager-getAuthenticatorCallback(sessionId: string, callback: AsyncCallback<AuthenticatorCallback>): void--><!--Device-AppAccountManager-getAuthenticatorCallback(sessionId: string, callback: AsyncCallback<AuthenticatorCallback>): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -4870,6 +5056,8 @@ Obtains the authenticator callback for an authentication session. This API uses 
 **Deprecated since:** 9
 
 **Substitutes:** [getAuthCallback](#getauthcallback-1)(sessionId: string)
+
+<!--Device-AppAccountManager-getAuthenticatorCallback(sessionId: string): Promise<AuthenticatorCallback>--><!--Device-AppAccountManager-getAuthenticatorCallback(sessionId: string): Promise<AuthenticatorCallback>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -4929,6 +5117,8 @@ Obtains the authenticator information of an application. This API uses an asynch
 
 **Substitutes:** [queryAuthenticatorInfo](#queryauthenticatorinfo)(owner: string, callback: AsyncCallback&lt;AuthenticatorInfo&gt;)
 
+<!--Device-AppAccountManager-getAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>): void--><!--Device-AppAccountManager-getAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -4973,6 +5163,8 @@ Obtains the authenticator information of an application. This API uses a promise
 **Deprecated since:** 9
 
 **Substitutes:** [queryAuthenticatorInfo](#queryauthenticatorinfo-1)(owner: string)
+
+<!--Device-AppAccountManager-getAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>--><!--Device-AppAccountManager-getAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -5021,6 +5213,8 @@ Obtains the authorization list of the specified authentication type for an appli
 
 **Substitutes:** [getAuthList](#getauthlist)(name: string, authType: string, callback: AsyncCallback&lt;Array&lt;string&gt;&gt;)
 
+<!--Device-AppAccountManager-getOAuthList(name: string, authType: string, callback: AsyncCallback<Array<string>>): void--><!--Device-AppAccountManager-getOAuthList(name: string, authType: string, callback: AsyncCallback<Array<string>>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -5065,6 +5259,8 @@ Obtains the authorization list of the specified authentication type for an appli
 **Deprecated since:** 9
 
 **Substitutes:** [getAuthList](#getauthlist-1)(name: string, authType: string)
+
+<!--Device-AppAccountManager-getOAuthList(name: string, authType: string): Promise<Array<string>>--><!--Device-AppAccountManager-getOAuthList(name: string, authType: string): Promise<Array<string>>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -5112,6 +5308,8 @@ Obtains the authorization token of the specified authentication type for an appl
 **Deprecated since:** 9
 
 **Substitutes:** [getAuthToken](#getauthtoken)(name: string, owner: string, authType: string, callback: AsyncCallback&lt;string&gt;)
+
+<!--Device-AppAccountManager-getOAuthToken(name: string, owner: string, authType: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getOAuthToken(name: string, owner: string, authType: string, callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -5161,6 +5359,8 @@ Obtains the authorization token of the specified authentication type for an appl
 
 **Substitutes:** [getAuthToken](#getauthtoken-1)(name: string, owner: string, authType: string)
 
+<!--Device-AppAccountManager-getOAuthToken(name: string, owner: string, authType: string): Promise<string>--><!--Device-AppAccountManager-getOAuthToken(name: string, owner: string, authType: string): Promise<string>-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -5209,6 +5409,8 @@ Sets a credential for an application account. This API uses an asynchronous call
 
 **Substitutes:** [setCredential](#setcredential)(name: string, credentialType: string, credential: string, callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-AppAccountManager-setAccountCredential(name: string, credentialType: string, credential: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setAccountCredential(name: string, credentialType: string, credential: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -5255,6 +5457,8 @@ Sets a credential for an application account. This API uses a promise to return 
 **Deprecated since:** 9
 
 **Substitutes:** [setCredential](#setcredential-1)(name: string, credentialType: string, credential: string)
+
+<!--Device-AppAccountManager-setAccountCredential(name: string, credentialType: string, credential: string): Promise<void>--><!--Device-AppAccountManager-setAccountCredential(name: string, credentialType: string, credential: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -5304,6 +5508,8 @@ Sets additional information for an application account. This API uses an asynchr
 
 **Substitutes:** [setCustomData](#setcustomdata)(name: string, key: string, value: string, callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-AppAccountManager-setAccountExtraInfo(name: string, extraInfo: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setAccountExtraInfo(name: string, extraInfo: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -5349,6 +5555,8 @@ Sets additional information for an application account. This API uses a promise 
 **Deprecated since:** 9
 
 **Substitutes:** [setCustomData](#setcustomdata-1)(name: string, key: string, value: string)
+
+<!--Device-AppAccountManager-setAccountExtraInfo(name: string, extraInfo: string): Promise<void>--><!--Device-AppAccountManager-setAccountExtraInfo(name: string, extraInfo: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -5399,6 +5607,8 @@ Sets data synchronization for an application account. This API uses an asynchron
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-AppAccountManager-setAppAccountSyncEnable(name: string, isEnable: boolean, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setAppAccountSyncEnable(name: string, isEnable: boolean, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -5447,6 +5657,8 @@ Sets data synchronization for an application account. This API uses a promise to
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-AppAccountManager-setAppAccountSyncEnable(name: string, isEnable: boolean): Promise<void>--><!--Device-AppAccountManager-setAppAccountSyncEnable(name: string, isEnable: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -5494,6 +5706,8 @@ Sets data to be associated with an application account. This API uses an asynchr
 
 **Substitutes:** [setCustomData](#setcustomdata)(name: string, key: string, value: string, callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-AppAccountManager-setAssociatedData(name: string, key: string, value: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setAssociatedData(name: string, key: string, value: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -5540,6 +5754,8 @@ Sets data to be associated with an application account. This API uses a promise 
 **Deprecated since:** 9
 
 **Substitutes:** [setCustomData](#setcustomdata-1)(name: string, key: string, value: string)
+
+<!--Device-AppAccountManager-setAssociatedData(name: string, key: string, value: string): Promise<void>--><!--Device-AppAccountManager-setAssociatedData(name: string, key: string, value: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -5589,6 +5805,8 @@ Sets an authorization token of the specific authentication type for an applicati
 
 **Substitutes:** [setAuthToken](#setauthtoken)(name: string, authType: string, token: string, callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-AppAccountManager-setOAuthToken(name: string, authType: string, token: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setOAuthToken(name: string, authType: string, token: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -5635,6 +5853,8 @@ Sets an authorization token of the specific authentication type for an applicati
 **Deprecated since:** 9
 
 **Substitutes:** [setAuthToken](#setauthtoken-1)(name: string, authType: string, token: string)
+
+<!--Device-AppAccountManager-setOAuthToken(name: string, authType: string, token: string): Promise<void>--><!--Device-AppAccountManager-setOAuthToken(name: string, authType: string, token: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -5690,6 +5910,8 @@ Sets the visibility of an authorization token to an application. This API uses a
 
 **Substitutes:** [setAuthTokenVisibility](#setauthtokenvisibility)( name: string, authType: string, bundleName: string, isVisible: boolean, callback: AsyncCallback&lt;void&gt; )
 
+<!--Device-AppAccountManager-setOAuthTokenVisibility(      name: string,      authType: string,      bundleName: string,      isVisible: boolean,      callback: AsyncCallback<void>    ): void--><!--Device-AppAccountManager-setOAuthTokenVisibility(      name: string,      authType: string,      bundleName: string,      isVisible: boolean,      callback: AsyncCallback<void>    ): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -5738,6 +5960,8 @@ Sets the visibility of an authorization token to an application. This API uses a
 **Deprecated since:** 9
 
 **Substitutes:** [setAuthTokenVisibility](#setauthtokenvisibility-1)(name: string, authType: string, bundleName: string, isVisible: boolean)
+
+<!--Device-AppAccountManager-setOAuthTokenVisibility(name: string, authType: string, bundleName: string, isVisible: boolean): Promise<void>--><!--Device-AppAccountManager-setOAuthTokenVisibility(name: string, authType: string, bundleName: string, isVisible: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 

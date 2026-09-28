@@ -8,6 +8,8 @@ export enum KeyStatus
 
 **起始版本：** 18
 
+<!--Device-screenLockFileManager-export enum KeyStatus--><!--Device-screenLockFileManager-export enum KeyStatus-End-->
+
 **系统能力：** SystemCapability.Security.ScreenLockFileManager
 
 ## KEY_NOT_EXIST
@@ -19,6 +21,8 @@ KEY_NOT_EXIST = -2
 密钥不存在。此状态表示应用未开启锁屏下敏感数据保护功能，或当前设备上该保护功能不可用。
 
 **起始版本：** 18
+
+<!--Device-KeyStatus-KEY_NOT_EXIST = -2--><!--Device-KeyStatus-KEY_NOT_EXIST = -2-End-->
 
 **系统能力：** SystemCapability.Security.ScreenLockFileManager
 
@@ -32,6 +36,8 @@ KEY_RELEASED = -1
 
 **起始版本：** 18
 
+<!--Device-KeyStatus-KEY_RELEASED = -1--><!--Device-KeyStatus-KEY_RELEASED = -1-End-->
+
 **系统能力：** SystemCapability.Security.ScreenLockFileManager
 
 ## KEY_EXIST
@@ -43,5 +49,7 @@ KEY_EXIST = 0
 密钥存在。此状态表示锁屏下敏感数据可以被正常操作。
 
 **起始版本：** 18
+
+<!--Device-KeyStatus-KEY_EXIST = 0--><!--Device-KeyStatus-KEY_EXIST = 0-End-->
 
 **系统能力：** SystemCapability.Security.ScreenLockFileManager

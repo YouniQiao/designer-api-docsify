@@ -16,6 +16,8 @@ export interface LocationRequest
 
 **需要权限：** ohos.permission.LOCATION
 
+<!--Device-geolocation-export interface LocationRequest--><!--Device-geolocation-export interface LocationRequest-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 ## 导入模块
@@ -40,6 +42,8 @@ distanceInterval?: number
 
 **替代接口：** [distanceInterval](arkts-location-geolocationmanager-locationrequest-i.md#distanceinterval)
 
+<!--Device-LocationRequest-distanceInterval?: number--><!--Device-LocationRequest-distanceInterval?: number-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 ## maxAccuracy
@@ -57,6 +61,8 @@ maxAccuracy?: number
 **废弃版本：** 9
 
 **替代接口：** [maxAccuracy](arkts-location-geolocationmanager-locationrequest-i.md#maxaccuracy)
+
+<!--Device-LocationRequest-maxAccuracy?: number--><!--Device-LocationRequest-maxAccuracy?: number-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -76,6 +82,8 @@ priority?: LocationRequestPriority
 
 **替代接口：** [priority](arkts-location-geolocationmanager-locationrequest-i.md#priority)
 
+<!--Device-LocationRequest-priority?: LocationRequestPriority--><!--Device-LocationRequest-priority?: LocationRequestPriority-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 ## scenario
@@ -94,6 +102,8 @@ scenario?: LocationRequestScenario
 
 **替代接口：** [scenario](arkts-location-geolocationmanager-locationrequest-i.md#scenario)
 
+<!--Device-LocationRequest-scenario?: LocationRequestScenario--><!--Device-LocationRequest-scenario?: LocationRequestScenario-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 ## timeInterval
@@ -111,5 +121,7 @@ timeInterval?: number
 **废弃版本：** 9
 
 **替代接口：** [timeInterval](arkts-location-geolocationmanager-locationrequest-i.md#timeinterval)
+
+<!--Device-LocationRequest-timeInterval?: number--><!--Device-LocationRequest-timeInterval?: number-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core

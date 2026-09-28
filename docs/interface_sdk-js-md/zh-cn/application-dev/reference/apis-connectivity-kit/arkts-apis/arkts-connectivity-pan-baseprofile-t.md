@@ -10,6 +10,8 @@ type BaseProfile = baseProfile.BaseProfile
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-pan-type BaseProfile = baseProfile.BaseProfile--><!--Device-pan-type BaseProfile = baseProfile.BaseProfile-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **类型：** [baseProfile.BaseProfile](arkts-connectivity-baseprofile-baseprofile-i.md)

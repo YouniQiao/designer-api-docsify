@@ -18,6 +18,8 @@ function importVCard(context: Context, filePath: string, accountId: number, call
 
 **需要权限：** ohos.permission.WRITE_CONTACTS and ohos.permission.READ_CONTACTS
 
+<!--Device-vcard-function importVCard(context: Context, filePath: string, accountId: int, callback: AsyncCallback<void>): void--><!--Device-vcard-function importVCard(context: Context, filePath: string, accountId: int, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**
@@ -73,6 +75,8 @@ function importVCard(context: Context, filePath: string, accountId?: number): Pr
 **起始版本：** 23
 
 **需要权限：** ohos.permission.WRITE_CONTACTS and ohos.permission.READ_CONTACTS
+
+<!--Device-vcard-function importVCard(context: Context, filePath: string, accountId?: int): Promise<void>--><!--Device-vcard-function importVCard(context: Context, filePath: string, accountId?: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -136,6 +140,8 @@ function importVCard(context: Context, filePath: string, callback: AsyncCallback
 **起始版本：** 23
 
 **需要权限：** ohos.permission.WRITE_CONTACTS and ohos.permission.READ_CONTACTS
+
+<!--Device-vcard-function importVCard(context: Context, filePath: string, callback: AsyncCallback<void>): void--><!--Device-vcard-function importVCard(context: Context, filePath: string, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

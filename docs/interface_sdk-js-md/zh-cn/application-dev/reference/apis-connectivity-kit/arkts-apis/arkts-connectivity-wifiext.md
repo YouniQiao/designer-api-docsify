@@ -8,6 +8,8 @@
 
 **起始版本：** 8
 
+<!--Device-unnamed-declare namespace wifiext--><!--Device-unnamed-declare namespace wifiext-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.AP.Extension
 
 ## 导入模块

@@ -8,6 +8,8 @@ export declare class Scene
 
 **起始版本：** 12
 
+<!--Device-unnamed-export declare class Scene--><!--Device-unnamed-export declare class Scene-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## cloneNode
@@ -19,6 +21,8 @@ cloneNode(node: Node, parent: Node, name: string): Node | null
 在当前所在场景中克隆节点，不支持跨场景克隆节点。
 
 **起始版本：** 23
+
+<!--Device-Scene-cloneNode(node: Node, parent: Node, name: string): Node | null--><!--Device-Scene-cloneNode(node: Node, parent: Node, name: string): Node | null-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -47,6 +51,8 @@ createComponent(node: Node, name: string): Promise<SceneComponent>
 在指定节点上创建新的组件，根据组件名称异步创建并附加到节点上，使用Promise异步回调。
 
 **起始版本：** 20
+
+<!--Device-Scene-createComponent(node: Node, name: string): Promise<SceneComponent>--><!--Device-Scene-createComponent(node: Node, name: string): Promise<SceneComponent>-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -97,6 +103,8 @@ destroy(): void
 
 **起始版本：** 12
 
+<!--Device-Scene-destroy(): void--><!--Device-Scene-destroy(): void-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **示例**
@@ -125,6 +133,8 @@ getComponent(node: Node, name: string): SceneComponent | null
 根据指定的组件名称，从给定节点上获取对应的组件实例。
 
 **起始版本：** 20
+
+<!--Device-Scene-getComponent(node: Node, name: string): SceneComponent | null--><!--Device-Scene-getComponent(node: Node, name: string): SceneComponent | null-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -175,6 +185,8 @@ static getDefaultRenderContext(): RenderContext | null
 
 **起始版本：** 20
 
+<!--Device-Scene-static getDefaultRenderContext(): RenderContext | null--><!--Device-Scene-static getDefaultRenderContext(): RenderContext | null-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **返回值：**
@@ -208,6 +220,8 @@ getNodeByPath(path: string, type?: NodeType): Node | null
 通过路径获取节点。
 
 **起始版本：** 12
+
+<!--Device-Scene-getNodeByPath(path: string, type?: NodeType): Node | null--><!--Device-Scene-getNodeByPath(path: string, type?: NodeType): Node | null-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -251,6 +265,8 @@ getResourceFactory(): SceneResourceFactory
 
 **起始版本：** 12
 
+<!--Device-Scene-getResourceFactory(): SceneResourceFactory--><!--Device-Scene-getResourceFactory(): SceneResourceFactory-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **返回值：**
@@ -285,6 +301,8 @@ importNode(name: string, node: Node, parent: Node | null): Node
 一般用于从其他场景导入节点。
 
 **起始版本：** 18
+
+<!--Device-Scene-importNode(name: string, node: Node, parent: Node | null): Node--><!--Device-Scene-importNode(name: string, node: Node, parent: Node | null): Node-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -336,6 +354,8 @@ importScene(name: string, scene: Scene, parent: Node | null): Node
 
 **起始版本：** 18
 
+<!--Device-Scene-importScene(name: string, scene: Scene, parent: Node | null): Node--><!--Device-Scene-importScene(name: string, scene: Scene, parent: Node | null): Node-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **参数：**
@@ -379,6 +399,8 @@ static load(uri? : ResourceStr): Promise<Scene>
 通过传入的资源路径加载资源，使用Promise异步回调。调用后，应该在Scene使用完毕时调用destroy释放资源，否则可能导致资源泄漏。
 
 **起始版本：** 12
+
+<!--Device-Scene-static load(uri? : ResourceStr): Promise<Scene>--><!--Device-Scene-static load(uri? : ResourceStr): Promise<Scene>-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -452,6 +474,8 @@ renderFrame(params?: RenderParameters): boolean
 
 **起始版本：** 15
 
+<!--Device-Scene-renderFrame(params?: RenderParameters): boolean--><!--Device-Scene-renderFrame(params?: RenderParameters): boolean-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **参数：**
@@ -496,6 +520,8 @@ get animations(): Animation[]
 
 **起始版本：** 12
 
+<!--Device-Scene-get animations(): Animation[]--><!--Device-Scene-get animations(): Animation[]-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## environment
@@ -510,6 +536,8 @@ get environment(): Environment
 
 **起始版本：** 12
 
+<!--Device-Scene-get environment(): Environment--><!--Device-Scene-get environment(): Environment-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ```TypeScript
@@ -521,6 +549,8 @@ set environment(value: Environment)
 **类型：** [Environment](arkts-arkgraphics3d-sceneresources-environment-i.md)
 
 **起始版本：** 12
+
+<!--Device-Scene-set environment(value: Environment)--><!--Device-Scene-set environment(value: Environment)-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -536,6 +566,8 @@ get renderConfiguration(): RenderConfiguration
 
 **起始版本：** 23
 
+<!--Device-Scene-get renderConfiguration(): RenderConfiguration--><!--Device-Scene-get renderConfiguration(): RenderConfiguration-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## root
@@ -549,5 +581,7 @@ get root(): Node | null
 **类型：** [Node](arkts-arkgraphics3d-scenenodes-node-i.md)
 
 **起始版本：** 12
+
+<!--Device-Scene-get root(): Node | null--><!--Device-Scene-get root(): Node | null-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

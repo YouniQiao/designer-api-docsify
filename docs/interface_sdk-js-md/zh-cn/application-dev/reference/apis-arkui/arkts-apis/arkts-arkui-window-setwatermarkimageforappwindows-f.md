@@ -16,6 +16,8 @@ function setWatermarkImageForAppWindows(pixelMap: image.PixelMap | undefined): P
 
 **起始版本：** 21
 
+<!--Device-window-function setWatermarkImageForAppWindows(pixelMap: image.PixelMap | undefined): Promise<void>--><!--Device-window-function setWatermarkImageForAppWindows(pixelMap: image.PixelMap | undefined): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**

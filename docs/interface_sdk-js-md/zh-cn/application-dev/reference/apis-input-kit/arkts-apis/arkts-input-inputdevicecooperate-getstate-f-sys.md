@@ -20,6 +20,8 @@ function getState(deviceDescriptor: string, callback: AsyncCallback<{ state: boo
 
 **替代接口：** [getCooperateSwitchState](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md)
 
+<!--Device-inputDeviceCooperate-function getState(deviceDescriptor: string, callback: AsyncCallback<{ state: boolean }>): void--><!--Device-inputDeviceCooperate-function getState(deviceDescriptor: string, callback: AsyncCallback<{ state: boolean }>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Cooperator
 
 **系统接口：** 此接口为系统接口。
@@ -85,6 +87,8 @@ function getState(deviceDescriptor: string): Promise<{ state: boolean }>
 **废弃版本：** 23
 
 **替代接口：** [getCooperateSwitchState](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md)
+
+<!--Device-inputDeviceCooperate-function getState(deviceDescriptor: string): Promise<{ state: boolean }>--><!--Device-inputDeviceCooperate-function getState(deviceDescriptor: string): Promise<{ state: boolean }>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Cooperator
 

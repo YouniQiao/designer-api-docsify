@@ -10,6 +10,8 @@ In addition to the universal attributes, the following attributes are supported 
 
 **Since:** 18
 
+<!--Device-unnamed-export declare class ArcListAttribute extends CommonMethod<ArcListAttribute>--><!--Device-unnamed-export declare class ArcListAttribute extends CommonMethod<ArcListAttribute>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## Modules to Import
@@ -29,6 +31,8 @@ Sets the number of arc list items to be preloaded (cached). In a lazy loading sc
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcListAttribute-cachedCount(count: Optional<number>): ArcListAttribute--><!--Device-ArcListAttribute-cachedCount(count: Optional<number>): ArcListAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -52,6 +56,8 @@ The list items are separated with even space, and one item animation starts afte
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ArcListAttribute-chainAnimation(enable: Optional<boolean>): ArcListAttribute--><!--Device-ArcListAttribute-chainAnimation(enable: Optional<boolean>): ArcListAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 **Parameters:**
@@ -71,6 +77,8 @@ Sets the size information of the child components of the **ArcList** component a
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcListAttribute-childrenMainSize(size: Optional<ChildrenMainSize>): ArcListAttribute--><!--Device-ArcListAttribute-childrenMainSize(size: Optional<ChildrenMainSize>): ArcListAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -92,6 +100,8 @@ Sets the crown response sensitivity.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ArcListAttribute-digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>): ArcListAttribute--><!--Device-ArcListAttribute-digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>): ArcListAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 **Parameters:**
@@ -111,6 +121,8 @@ Sets whether to enable scroll gestures.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcListAttribute-enableScrollInteraction(enable: Optional<boolean>): ArcListAttribute--><!--Device-ArcListAttribute-enableScrollInteraction(enable: Optional<boolean>): ArcListAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -132,6 +144,8 @@ Sets whether to enable the edge fading effect.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ArcListAttribute-fadingEdge(enable: Optional<boolean>): ArcListAttribute--><!--Device-ArcListAttribute-fadingEdge(enable: Optional<boolean>): ArcListAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 **Parameters:**
@@ -151,6 +165,8 @@ Sets the maximum initial speed for inertial scrolling after a fling gesture. If 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcListAttribute-flingSpeedLimit(speed: Optional<number>): ArcListAttribute--><!--Device-ArcListAttribute-flingSpeedLimit(speed: Optional<number>): ArcListAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -172,6 +188,8 @@ Sets the friction coefficient, which takes effect when manually swiping the scro
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ArcListAttribute-friction(friction: Optional<number>): ArcListAttribute--><!--Device-ArcListAttribute-friction(friction: Optional<number>): ArcListAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 **Parameters:**
@@ -191,6 +209,8 @@ Triggered when the list scrolls. The return value is the offset amount by which 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcListAttribute-onDidScroll(handler: Optional<OnScrollCallback>): ArcListAttribute--><!--Device-ArcListAttribute-onDidScroll(handler: Optional<OnScrollCallback>): ArcListAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -214,6 +234,8 @@ When the edge effect of **ArcList** is set to the spring effect, this event is t
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ArcListAttribute-onReachEnd(handler: Optional<VoidCallback>): ArcListAttribute--><!--Device-ArcListAttribute-onReachEnd(handler: Optional<VoidCallback>): ArcListAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 **Parameters:**
@@ -235,6 +257,8 @@ This event is triggered during initialization of the **ArcList** component if [i
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcListAttribute-onReachStart(handler: Optional<VoidCallback>): ArcListAttribute--><!--Device-ArcListAttribute-onReachStart(handler: Optional<VoidCallback>): ArcListAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -258,6 +282,8 @@ When the edge effect of **ArcList** is set to the spring effect, the **onScrollI
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ArcListAttribute-onScrollIndex(handler: Optional<ArcScrollIndexHandler>): ArcListAttribute--><!--Device-ArcListAttribute-onScrollIndex(handler: Optional<ArcScrollIndexHandler>): ArcListAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 **Parameters:**
@@ -277,6 +303,8 @@ Triggered when the list starts scrolling initiated by the user's finger dragging
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcListAttribute-onScrollStart(handler: Optional<VoidCallback>): ArcListAttribute--><!--Device-ArcListAttribute-onScrollStart(handler: Optional<VoidCallback>): ArcListAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -298,6 +326,8 @@ Triggered when the list stops scrolling after the user's finger leaves the scree
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ArcListAttribute-onScrollStop(handler: Optional<VoidCallback>): ArcListAttribute--><!--Device-ArcListAttribute-onScrollStop(handler: Optional<VoidCallback>): ArcListAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 **Parameters:**
@@ -317,6 +347,8 @@ Triggered before each frame during list scrolling. The callback returns the offs
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcListAttribute-onWillScroll(handler: Optional<OnWillScrollCallback>): ArcListAttribute--><!--Device-ArcListAttribute-onWillScroll(handler: Optional<OnWillScrollCallback>): ArcListAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -338,6 +370,8 @@ Sets the state of the scrollbar.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ArcListAttribute-scrollBar(status: Optional<BarState>): ArcListAttribute--><!--Device-ArcListAttribute-scrollBar(status: Optional<BarState>): ArcListAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 **Parameters:**
@@ -357,6 +391,8 @@ Sets the color of the scrollbar.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcListAttribute-scrollBarColor(color: Optional<ColorMetrics>): ArcListAttribute--><!--Device-ArcListAttribute-scrollBarColor(color: Optional<ColorMetrics>): ArcListAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -378,6 +414,8 @@ Sets the width of the **ArcList** scrollbar in the pressed state. If not set, th
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ArcListAttribute-scrollBarWidth(width: Optional<LengthMetrics>): ArcListAttribute--><!--Device-ArcListAttribute-scrollBarWidth(width: Optional<LengthMetrics>): ArcListAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 **Parameters:**
@@ -397,6 +435,8 @@ Sets the spacing between list child items.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcListAttribute-space(space: Optional<LengthMetrics>): ArcListAttribute--><!--Device-ArcListAttribute-space(space: Optional<LengthMetrics>): ArcListAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 

@@ -18,6 +18,8 @@ function createDataProxyHandle(): Promise<DataProxyHandle>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-dataShare-function createDataProxyHandle(): Promise<DataProxyHandle>--><!--Device-dataShare-function createDataProxyHandle(): Promise<DataProxyHandle>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **返回值：**

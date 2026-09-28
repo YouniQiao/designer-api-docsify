@@ -12,6 +12,8 @@ let animationOff: Config<boolean>
 
 **起始版本：** 9
 
+<!--Device-config-let animationOff: Config<boolean>--><!--Device-config-let animationOff: Config<boolean>-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -27,6 +29,8 @@ let brightnessDiscount: Config<number>
 **类型：** [Config](arkts-accessibility-config-config-i-sys.md)&lt;number&gt;
 
 **起始版本：** 9
+
+<!--Device-config-let brightnessDiscount: Config<double>--><!--Device-config-let brightnessDiscount: Config<double>-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -44,6 +48,8 @@ let captions: Config<boolean>
 
 **起始版本：** 9
 
+<!--Device-config-let captions: Config<boolean>--><!--Device-config-let captions: Config<boolean>-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -59,6 +65,8 @@ let captionsStyle: Config<accessibility.CaptionsStyle>
 **类型：** [Config](arkts-accessibility-config-config-i-sys.md)&lt;[accessibility.CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt;
 
 **起始版本：** 9
+
+<!--Device-config-let captionsStyle: Config<accessibility.CaptionsStyle>--><!--Device-config-let captionsStyle: Config<accessibility.CaptionsStyle>-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -76,6 +84,8 @@ let contentTimeout: Config<number>
 
 **起始版本：** 9
 
+<!--Device-config-let contentTimeout: Config<int>--><!--Device-config-let contentTimeout: Config<int>-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -91,6 +101,8 @@ let daltonizationColorFilter: Config<DaltonizationColorFilter>
 **类型：** [Config](arkts-accessibility-config-config-i-sys.md)&lt;[DaltonizationColorFilter](arkts-accessibility-config-daltonizationcolorfilter-t-sys.md)&gt;
 
 **起始版本：** 9
+
+<!--Device-config-let daltonizationColorFilter: Config<DaltonizationColorFilter>--><!--Device-config-let daltonizationColorFilter: Config<DaltonizationColorFilter>-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -108,6 +120,8 @@ let highContrastText: Config<boolean>
 
 **起始版本：** 9
 
+<!--Device-config-let highContrastText: Config<boolean>--><!--Device-config-let highContrastText: Config<boolean>-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -123,6 +137,8 @@ let invertColor: Config<boolean>
 **类型：** [Config](arkts-accessibility-config-config-i-sys.md)&lt;boolean&gt;
 
 **起始版本：** 9
+
+<!--Device-config-let invertColor: Config<boolean>--><!--Device-config-let invertColor: Config<boolean>-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -140,6 +156,8 @@ let mouseAutoClick: Config<number>
 
 **起始版本：** 9
 
+<!--Device-config-let mouseAutoClick: Config<int>--><!--Device-config-let mouseAutoClick: Config<int>-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -155,6 +173,8 @@ let mouseKey: Config<boolean>
 **类型：** [Config](arkts-accessibility-config-config-i-sys.md)&lt;boolean&gt;
 
 **起始版本：** 9
+
+<!--Device-config-let mouseKey: Config<boolean>--><!--Device-config-let mouseKey: Config<boolean>-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -172,6 +192,8 @@ let shortkey: Config<boolean>
 
 **起始版本：** 9
 
+<!--Device-config-let shortkey: Config<boolean>--><!--Device-config-let shortkey: Config<boolean>-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -187,6 +209,8 @@ let shortkeyTarget: Config<string>
 **类型：** [Config](arkts-accessibility-config-config-i-sys.md)&lt;string&gt;
 
 **起始版本：** 9
+
+<!--Device-config-let shortkeyTarget: Config<string>--><!--Device-config-let shortkeyTarget: Config<string>-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 

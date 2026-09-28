@@ -28,6 +28,8 @@ Obtains information about a system font based on the font name.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-font-function getFontByName(fontName: string): FontInfo--><!--Device-font-function getFontByName(fontName: string): FontInfo-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

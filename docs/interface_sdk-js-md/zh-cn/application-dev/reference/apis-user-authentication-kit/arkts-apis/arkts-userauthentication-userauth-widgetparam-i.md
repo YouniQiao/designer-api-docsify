@@ -8,6 +8,8 @@ interface WidgetParam
 
 **起始版本：** 10
 
+<!--Device-userAuth-interface WidgetParam--><!--Device-userAuth-interface WidgetParam-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 ## 导入模块
@@ -28,7 +30,9 @@ navigationButtonText?: string
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WidgetParam-navigationButtonText?: string--><!--Device-WidgetParam-navigationButtonText?: string-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -44,7 +48,9 @@ title: string
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WidgetParam-title: string--><!--Device-WidgetParam-title: string-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -62,6 +68,8 @@ uiContext?: Context
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-WidgetParam-uiContext?: Context--><!--Device-WidgetParam-uiContext?: Context-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core

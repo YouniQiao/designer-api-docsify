@@ -14,6 +14,8 @@ interface InterfaceConflictInfo
 
 **起始版本：** 26.0.1
 
+<!--Device-usbManager-interface InterfaceConflictInfo--><!--Device-usbManager-interface InterfaceConflictInfo-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## 导入模块
@@ -36,6 +38,8 @@ USB设备的总线地址。取值限定为整数。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-InterfaceConflictInfo-busNum: int--><!--Device-InterfaceConflictInfo-busNum: int-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## devAddr
@@ -52,6 +56,8 @@ USB设备的设备地址。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-InterfaceConflictInfo-devAddr: int--><!--Device-InterfaceConflictInfo-devAddr: int-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## interfaceId
@@ -67,5 +73,7 @@ interfaceId: number
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-InterfaceConflictInfo-interfaceId: int--><!--Device-InterfaceConflictInfo-interfaceId: int-End-->
 
 **系统能力：** SystemCapability.USB.USBManager

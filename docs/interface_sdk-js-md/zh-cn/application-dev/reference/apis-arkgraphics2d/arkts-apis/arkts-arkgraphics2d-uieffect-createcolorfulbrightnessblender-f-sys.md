@@ -21,6 +21,8 @@ function createColorfulBrightnessBlender(brightnessBlenderParam: BrightnessBlend
 
 **卡片能力：** 从API版本26.2.0开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-uiEffect-function createColorfulBrightnessBlender(brightnessBlenderParam: BrightnessBlenderParam,    options?: ColorfulBrightnessBlenderOptions): ColorfulBrightnessBlender--><!--Device-uiEffect-function createColorfulBrightnessBlender(brightnessBlenderParam: BrightnessBlenderParam,    options?: ColorfulBrightnessBlenderOptions): ColorfulBrightnessBlender-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。

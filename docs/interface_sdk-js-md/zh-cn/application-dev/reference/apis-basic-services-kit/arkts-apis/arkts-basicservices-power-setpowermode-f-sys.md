@@ -18,6 +18,8 @@ function setPowerMode(mode: DevicePowerMode, callback: AsyncCallback<void>): voi
 
 **需要权限：** ohos.permission.POWER_OPTIMIZATION
 
+<!--Device-power-function setPowerMode(mode: DevicePowerMode, callback: AsyncCallback<void>): void--><!--Device-power-function setPowerMode(mode: DevicePowerMode, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -64,6 +66,8 @@ function setPowerMode(mode: DevicePowerMode): Promise<void>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.POWER_OPTIMIZATION
+
+<!--Device-power-function setPowerMode(mode: DevicePowerMode): Promise<void>--><!--Device-power-function setPowerMode(mode: DevicePowerMode): Promise<void>-End-->
 
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 

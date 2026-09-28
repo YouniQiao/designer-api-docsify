@@ -12,6 +12,8 @@ interface MediaTabContent extends OperResult
 
 **起始版本：** 23
 
+<!--Device-avMusicTemplate-interface MediaTabContent extends OperResult--><!--Device-avMusicTemplate-interface MediaTabContent extends OperResult-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## 导入模块
@@ -34,6 +36,8 @@ compilations: Compilation[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MediaTabContent-compilations: Compilation[]--><!--Device-MediaTabContent-compilations: Compilation[]-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## tabId
@@ -49,5 +53,7 @@ tabId: string
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MediaTabContent-tabId: string--><!--Device-MediaTabContent-tabId: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate

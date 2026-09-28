@@ -21,6 +21,8 @@ function write(portId: number, buffer: Uint8Array, timeout?: number): Promise<nu
 
 **起始版本：** 19
 
+<!--Device-serialManager-function write(portId: int, buffer: Uint8Array, timeout?: int): Promise<int>--><!--Device-serialManager-function write(portId: int, buffer: Uint8Array, timeout?: int): Promise<int>-End-->
+
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
 **参数：**

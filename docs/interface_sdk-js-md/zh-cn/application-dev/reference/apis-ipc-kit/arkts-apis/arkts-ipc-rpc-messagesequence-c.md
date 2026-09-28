@@ -8,6 +8,8 @@ class MessageSequence
 
 **起始版本：** 9
 
+<!--Device-rpc-class MessageSequence--><!--Device-rpc-class MessageSequence-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ static closeFileDescriptor(fd: number): void
 - 关闭后不能再读写文件。
 
 **起始版本：** 9
+
+<!--Device-MessageSequence-static closeFileDescriptor(fd: int): void--><!--Device-MessageSequence-static closeFileDescriptor(fd: int): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -74,6 +78,8 @@ containFileDescriptors(): boolean
 
 **起始版本：** 9
 
+<!--Device-MessageSequence-containFileDescriptors(): boolean--><!--Device-MessageSequence-containFileDescriptors(): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -116,6 +122,8 @@ static create(): MessageSequence
 - 建议在需要IPC/RPC通信时按需创建，避免频繁创建和释放。
 
 **起始版本：** 9
+
+<!--Device-MessageSequence-static create(): MessageSequence--><!--Device-MessageSequence-static create(): MessageSequence-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -162,6 +170,8 @@ static dupFileDescriptor(fd: number): number
 - 复制后独立管理生命周期。
 
 **起始版本：** 9
+
+<!--Device-MessageSequence-static dupFileDescriptor(fd: int): int--><!--Device-MessageSequence-static dupFileDescriptor(fd: int): int-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -213,6 +223,8 @@ getCapacity(): number
 
 **起始版本：** 9
 
+<!--Device-MessageSequence-getCapacity(): int--><!--Device-MessageSequence-getCapacity(): int-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -248,6 +260,8 @@ getRawDataCapacity(): number
 获取MessageSequence可以容纳的最大原始数据量。适用于大数据传输前检查容量是否满足需求，或在处理大批量数据时预先判断数据大小的场景。
 
 **起始版本：** 9
+
+<!--Device-MessageSequence-getRawDataCapacity(): int--><!--Device-MessageSequence-getRawDataCapacity(): int-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -285,6 +299,8 @@ getReadableBytes(): number
 
 **起始版本：** 9
 
+<!--Device-MessageSequence-getReadableBytes(): int--><!--Device-MessageSequence-getReadableBytes(): int-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -321,6 +337,8 @@ getReadPosition(): number
 获取MessageSequence的读位置。
 
 **起始版本：** 9
+
+<!--Device-MessageSequence-getReadPosition(): int--><!--Device-MessageSequence-getReadPosition(): int-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -363,6 +381,8 @@ getSize(): number
 
 **起始版本：** 9
 
+<!--Device-MessageSequence-getSize(): int--><!--Device-MessageSequence-getSize(): int-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -398,6 +418,8 @@ getWritableBytes(): number
 获取MessageSequence的可写字节空间大小。
 
 **起始版本：** 9
+
+<!--Device-MessageSequence-getWritableBytes(): int--><!--Device-MessageSequence-getWritableBytes(): int-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -435,6 +457,8 @@ getWritePosition(): number
 获取MessageSequence的写位置。
 
 **起始版本：** 9
+
+<!--Device-MessageSequence-getWritePosition(): int--><!--Device-MessageSequence-getWritePosition(): int-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -476,6 +500,8 @@ readArrayBuffer(typeCode: TypeCode): ArrayBuffer
 - typeCode必须正确匹配，不匹配会导致数据异常或错误，建议根据业务类型选择合适的[TypeCode](arkts-ipc-rpc-typecode-e.md)。
 
 **起始版本：** 12
+
+<!--Device-MessageSequence-readArrayBuffer(typeCode: TypeCode): ArrayBuffer--><!--Device-MessageSequence-readArrayBuffer(typeCode: TypeCode): ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -543,6 +569,8 @@ readAshmem(): Ashmem
 
 **起始版本：** 9
 
+<!--Device-MessageSequence-readAshmem(): Ashmem--><!--Device-MessageSequence-readAshmem(): Ashmem-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -607,6 +635,8 @@ readBoolean(): boolean
 
 **起始版本：** 9
 
+<!--Device-MessageSequence-readBoolean(): boolean--><!--Device-MessageSequence-readBoolean(): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -649,6 +679,8 @@ readBooleanArray(dataIn: boolean[]): void
 从MessageSequence实例中读取布尔数组，并将其写入到创建的空数组中。
 
 **起始版本：** 9
+
+<!--Device-MessageSequence-readBooleanArray(dataIn: boolean[]): void--><!--Device-MessageSequence-readBooleanArray(dataIn: boolean[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -700,6 +732,8 @@ readBooleanArray(): boolean[]
 
 **起始版本：** 9
 
+<!--Device-MessageSequence-readBooleanArray(): boolean[]--><!--Device-MessageSequence-readBooleanArray(): boolean[]-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -746,6 +780,8 @@ readByte(): number
 
 **起始版本：** 9
 
+<!--Device-MessageSequence-readByte(): int--><!--Device-MessageSequence-readByte(): int-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -788,6 +824,8 @@ readByteArray(dataIn: number[]): void
 从MessageSequence实例中读取字节数组，并将其写入到创建的空数组中。读取后dataIn数组会被填充读取的字节数据，读指针向后移动相应字节数。
 
 **起始版本：** 9
+
+<!--Device-MessageSequence-readByteArray(dataIn: int[]): void--><!--Device-MessageSequence-readByteArray(dataIn: int[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -838,6 +876,8 @@ readByteArray(): number[]
 
 **起始版本：** 9
 
+<!--Device-MessageSequence-readByteArray(): int[]--><!--Device-MessageSequence-readByteArray(): int[]-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -883,6 +923,8 @@ readChar(): number
 
 **起始版本：** 9
 
+<!--Device-MessageSequence-readChar(): int--><!--Device-MessageSequence-readChar(): int-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -925,6 +967,8 @@ readCharArray(dataIn: number[]): void
 从MessageSequence实例中读取单个字符数组，并将其写入到创建的空数组中。
 
 **起始版本：** 9
+
+<!--Device-MessageSequence-readCharArray(dataIn: int[]): void--><!--Device-MessageSequence-readCharArray(dataIn: int[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -976,6 +1020,8 @@ readCharArray(): number[]
 
 **起始版本：** 9
 
+<!--Device-MessageSequence-readCharArray(): int[]--><!--Device-MessageSequence-readCharArray(): int[]-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -1022,6 +1068,8 @@ readDouble(): number
 
 **起始版本：** 9
 
+<!--Device-MessageSequence-readDouble(): double--><!--Device-MessageSequence-readDouble(): double-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -1064,6 +1112,8 @@ readDoubleArray(dataIn: number[]): void
 从MessageSequence实例中读取双精度浮点数组，并将其写入到创建的空数组中。
 
 **起始版本：** 9
+
+<!--Device-MessageSequence-readDoubleArray(dataIn: double[]): void--><!--Device-MessageSequence-readDoubleArray(dataIn: double[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -1111,6 +1161,8 @@ readDoubleArray(): number[]
 从MessageSequence实例中读取双精度浮点数组。由于系统内部对float类型的数据是按照double处理的，使用时对于数组所占的总字节数应按照double类型来计算。
 
 **起始版本：** 9
+
+<!--Device-MessageSequence-readDoubleArray(): double[]--><!--Device-MessageSequence-readDoubleArray(): double[]-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -1161,6 +1213,8 @@ readException(): void
 - 调用顺序：服务端处理请求 → [writeNoException](#writenoexception) → 客户端收到响应 →[readException](#readexception) - 如果服务端未调用[writeNoException](#writenoexception)，调用此方法会失败。
 
 **起始版本：** 9
+
+<!--Device-MessageSequence-readException(): void--><!--Device-MessageSequence-readException(): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -1266,6 +1320,8 @@ readFileDescriptor(): number
 
 **起始版本：** 9
 
+<!--Device-MessageSequence-readFileDescriptor(): int--><!--Device-MessageSequence-readFileDescriptor(): int-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -1312,6 +1368,8 @@ readFloat(): number
 
 **起始版本：** 9
 
+<!--Device-MessageSequence-readFloat(): double--><!--Device-MessageSequence-readFloat(): double-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -1354,6 +1412,8 @@ readFloatArray(dataIn: number[]): void
 从MessageSequence实例中读取双精度浮点数组，并将其写入到创建的空数组中。
 
 **起始版本：** 9
+
+<!--Device-MessageSequence-readFloatArray(dataIn: double[]): void--><!--Device-MessageSequence-readFloatArray(dataIn: double[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -1402,6 +1462,8 @@ readFloatArray(): number[]
 
 **起始版本：** 9
 
+<!--Device-MessageSequence-readFloatArray(): double[]--><!--Device-MessageSequence-readFloatArray(): double[]-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -1448,7 +1510,9 @@ readInt(): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-MessageSequence-readInt(): int--><!--Device-MessageSequence-readInt(): int-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -1497,6 +1561,8 @@ readIntArray(dataIn: number[]): void
 
 **起始版本：** 9
 
+<!--Device-MessageSequence-readIntArray(dataIn: int[]): void--><!--Device-MessageSequence-readIntArray(dataIn: int[]): void-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -1543,6 +1609,8 @@ readIntArray(): number[]
 从MessageSequence实例中读取整数数组。
 
 **起始版本：** 9
+
+<!--Device-MessageSequence-readIntArray(): int[]--><!--Device-MessageSequence-readIntArray(): int[]-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -1591,6 +1659,8 @@ readInterfaceToken(): string
 
 **起始版本：** 9
 
+<!--Device-MessageSequence-readInterfaceToken(): string--><!--Device-MessageSequence-readInterfaceToken(): string-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -1637,6 +1707,8 @@ readLong(): number
 
 **起始版本：** 9
 
+<!--Device-MessageSequence-readLong(): long--><!--Device-MessageSequence-readLong(): long-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -1679,6 +1751,8 @@ readLongArray(dataIn: number[]): void
 从MessageSequence实例中读取长整数数组，并将其写入到创建的空数组中。
 
 **起始版本：** 9
+
+<!--Device-MessageSequence-readLongArray(dataIn: long[]): void--><!--Device-MessageSequence-readLongArray(dataIn: long[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -1727,6 +1801,8 @@ readLongArray(): number[]
 
 **起始版本：** 9
 
+<!--Device-MessageSequence-readLongArray(): long[]--><!--Device-MessageSequence-readLongArray(): long[]-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -1774,6 +1850,8 @@ readParcelable(dataIn: Parcelable): void
 - 建议在unmarshalling中处理异常情况。
 
 **起始版本：** 9
+
+<!--Device-MessageSequence-readParcelable(dataIn: Parcelable): void--><!--Device-MessageSequence-readParcelable(dataIn: Parcelable): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -1839,6 +1917,8 @@ readParcelableArray(parcelableArray: Parcelable[]): void
 从MessageSequence实例中读取可序列化对象数组。适用于接收批量传输的多个自定义数据结构对象的场景，如读取多条业务记录、批量配置信息、多个实体对象等。
 
 **起始版本：** 9
+
+<!--Device-MessageSequence-readParcelableArray(parcelableArray: Parcelable[]): void--><!--Device-MessageSequence-readParcelableArray(parcelableArray: Parcelable[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -1913,6 +1993,8 @@ readRawDataBuffer(size: number): ArrayBuffer
 
 **起始版本：** 11
 
+<!--Device-MessageSequence-readRawDataBuffer(size: int): ArrayBuffer--><!--Device-MessageSequence-readRawDataBuffer(size: int): ArrayBuffer-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -1974,6 +2056,8 @@ readRemoteObject(): IRemoteObject
 
 **起始版本：** 9
 
+<!--Device-MessageSequence-readRemoteObject(): IRemoteObject--><!--Device-MessageSequence-readRemoteObject(): IRemoteObject-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -2032,6 +2116,8 @@ readRemoteObjectArray(objects: IRemoteObject[]): void
 - 读取失败时会抛出异常，建议使用try-catch捕获。
 
 **起始版本：** 9
+
+<!--Device-MessageSequence-readRemoteObjectArray(objects: IRemoteObject[]): void--><!--Device-MessageSequence-readRemoteObjectArray(objects: IRemoteObject[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -2092,6 +2178,8 @@ readRemoteObjectArray(): IRemoteObject[]
 
 **起始版本：** 9
 
+<!--Device-MessageSequence-readRemoteObjectArray(): IRemoteObject[]--><!--Device-MessageSequence-readRemoteObjectArray(): IRemoteObject[]-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -2149,6 +2237,8 @@ readShort(): number
 
 **起始版本：** 9
 
+<!--Device-MessageSequence-readShort(): int--><!--Device-MessageSequence-readShort(): int-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -2191,6 +2281,8 @@ readShortArray(dataIn: number[]): void
 从MessageSequence实例中读取短整数数组，并将其写入到创建的空数组中。
 
 **起始版本：** 9
+
+<!--Device-MessageSequence-readShortArray(dataIn: int[]): void--><!--Device-MessageSequence-readShortArray(dataIn: int[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -2239,6 +2331,8 @@ readShortArray(): number[]
 
 **起始版本：** 9
 
+<!--Device-MessageSequence-readShortArray(): int[]--><!--Device-MessageSequence-readShortArray(): int[]-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -2284,7 +2378,9 @@ readString(): string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-MessageSequence-readString(): string--><!--Device-MessageSequence-readString(): string-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -2333,6 +2429,8 @@ readStringArray(dataIn: string[]): void
 - 读指针向后移动相应字节数。
 
 **起始版本：** 9
+
+<!--Device-MessageSequence-readStringArray(dataIn: string[]): void--><!--Device-MessageSequence-readStringArray(dataIn: string[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -2384,6 +2482,8 @@ readStringArray(): string[]
 
 **起始版本：** 9
 
+<!--Device-MessageSequence-readStringArray(): string[]--><!--Device-MessageSequence-readStringArray(): string[]-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -2432,6 +2532,8 @@ reclaim(): void
 
 **起始版本：** 9
 
+<!--Device-MessageSequence-reclaim(): void--><!--Device-MessageSequence-reclaim(): void-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **示例**
@@ -2460,6 +2562,8 @@ rewindRead(pos: number): void
 重新偏移读取位置到指定的位置。
 
 **起始版本：** 9
+
+<!--Device-MessageSequence-rewindRead(pos: int): void--><!--Device-MessageSequence-rewindRead(pos: int): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -2509,6 +2613,8 @@ rewindWrite(pos: number): void
 
 **起始版本：** 9
 
+<!--Device-MessageSequence-rewindWrite(pos: int): void--><!--Device-MessageSequence-rewindWrite(pos: int): void-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -2555,6 +2661,8 @@ setCapacity(size: number): void
 
 **起始版本：** 9
 
+<!--Device-MessageSequence-setCapacity(size: int): void--><!--Device-MessageSequence-setCapacity(size: int): void-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -2597,6 +2705,8 @@ setSize(size: number): void
 设置MessageSequence对象中包含的数据大小。
 
 **起始版本：** 9
+
+<!--Device-MessageSequence-setSize(size: int): void--><!--Device-MessageSequence-setSize(size: int): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -2647,6 +2757,8 @@ writeArrayBuffer(buf: ArrayBuffer, typeCode: TypeCode): void
 - 必须根据实际数据类型选择正确的[TypeCode](arkts-ipc-rpc-typecode-e.md)枚举值。
 
 **起始版本：** 12
+
+<!--Device-MessageSequence-writeArrayBuffer(buf: ArrayBuffer, typeCode: TypeCode): void--><!--Device-MessageSequence-writeArrayBuffer(buf: ArrayBuffer, typeCode: TypeCode): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -2706,6 +2818,8 @@ writeAshmem(ashmem: Ashmem): void
 
 **起始版本：** 9
 
+<!--Device-MessageSequence-writeAshmem(ashmem: Ashmem): void--><!--Device-MessageSequence-writeAshmem(ashmem: Ashmem): void-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -2764,6 +2878,8 @@ writeBoolean(val: boolean): void
 
 **起始版本：** 9
 
+<!--Device-MessageSequence-writeBoolean(val: boolean): void--><!--Device-MessageSequence-writeBoolean(val: boolean): void-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -2808,6 +2924,8 @@ writeBooleanArray(booleanArray: boolean[]): void
 - 读取数组长度必须与写入数组长度一致。
 
 **起始版本：** 9
+
+<!--Device-MessageSequence-writeBooleanArray(booleanArray: boolean[]): void--><!--Device-MessageSequence-writeBooleanArray(booleanArray: boolean[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -2857,6 +2975,8 @@ writeByte(val: number): void
 
 **起始版本：** 9
 
+<!--Device-MessageSequence-writeByte(val: int): void--><!--Device-MessageSequence-writeByte(val: int): void-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -2901,6 +3021,8 @@ writeByteArray(byteArray: number[]): void
 - 读取数组长度必须与写入数组长度一致。
 
 **起始版本：** 9
+
+<!--Device-MessageSequence-writeByteArray(byteArray: int[]): void--><!--Device-MessageSequence-writeByteArray(byteArray: int[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -2949,6 +3071,8 @@ writeChar(val: number): void
 
 **起始版本：** 9
 
+<!--Device-MessageSequence-writeChar(val: int): void--><!--Device-MessageSequence-writeChar(val: int): void-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -2993,6 +3117,8 @@ writeCharArray(charArray: number[]): void
 - 读取数组长度必须与写入数组长度一致。
 
 **起始版本：** 9
+
+<!--Device-MessageSequence-writeCharArray(charArray: int[]): void--><!--Device-MessageSequence-writeCharArray(charArray: int[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -3039,6 +3165,8 @@ writeDouble(val: number): void
 
 **起始版本：** 9
 
+<!--Device-MessageSequence-writeDouble(val: double): void--><!--Device-MessageSequence-writeDouble(val: double): void-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -3083,6 +3211,8 @@ writeDoubleArray(doubleArray: number[]): void
 - 读取数组长度必须与写入数组长度一致。
 
 **起始版本：** 9
+
+<!--Device-MessageSequence-writeDoubleArray(doubleArray: double[]): void--><!--Device-MessageSequence-writeDoubleArray(doubleArray: double[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -3136,6 +3266,8 @@ writeFileDescriptor(fd: number): void
 
 **起始版本：** 9
 
+<!--Device-MessageSequence-writeFileDescriptor(fd: int): void--><!--Device-MessageSequence-writeFileDescriptor(fd: int): void-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -3181,6 +3313,8 @@ writeFloat(val: number): void
 
 **起始版本：** 9
 
+<!--Device-MessageSequence-writeFloat(val: double): void--><!--Device-MessageSequence-writeFloat(val: double): void-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -3225,6 +3359,8 @@ writeFloatArray(floatArray: number[]): void
 - 读取数组长度必须与写入数组长度一致。
 
 **起始版本：** 9
+
+<!--Device-MessageSequence-writeFloatArray(floatArray: double[]): void--><!--Device-MessageSequence-writeFloatArray(floatArray: double[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -3274,7 +3410,9 @@ writeInt(val: number): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-MessageSequence-writeInt(val: int): void--><!--Device-MessageSequence-writeInt(val: int): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -3322,6 +3460,8 @@ writeIntArray(intArray: number[]): void
 
 **起始版本：** 9
 
+<!--Device-MessageSequence-writeIntArray(intArray: int[]): void--><!--Device-MessageSequence-writeIntArray(intArray: int[]): void-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -3366,6 +3506,8 @@ writeInterfaceToken(token: string): void
 - 长度超过限制会抛出参数错误异常。
 
 **起始版本：** 9
+
+<!--Device-MessageSequence-writeInterfaceToken(token: string): void--><!--Device-MessageSequence-writeInterfaceToken(token: string): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -3413,6 +3555,8 @@ writeLong(val: number): void
 
 **起始版本：** 9
 
+<!--Device-MessageSequence-writeLong(val: long): void--><!--Device-MessageSequence-writeLong(val: long): void-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -3457,6 +3601,8 @@ writeLongArray(longArray: number[]): void
 - 读取数组长度必须与写入数组长度一致。
 
 **起始版本：** 9
+
+<!--Device-MessageSequence-writeLongArray(longArray: long[]): void--><!--Device-MessageSequence-writeLongArray(longArray: long[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -3504,6 +3650,8 @@ writeNoException(): void
 - 如果服务端未调用writeNoException()，客户端调用[readException](#readexception)会读取失败。
 
 **起始版本：** 9
+
+<!--Device-MessageSequence-writeNoException(): void--><!--Device-MessageSequence-writeNoException(): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -3563,6 +3711,8 @@ writeParcelable(val: Parcelable): void
 - 复杂对象可能占用较多缓冲区空间。
 
 **起始版本：** 9
+
+<!--Device-MessageSequence-writeParcelable(val: Parcelable): void--><!--Device-MessageSequence-writeParcelable(val: Parcelable): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -3628,6 +3778,8 @@ writeParcelableArray(parcelableArray: Parcelable[]): void
 - 读取数组长度必须与写入数组长度一致。
 
 **起始版本：** 9
+
+<!--Device-MessageSequence-writeParcelableArray(parcelableArray: Parcelable[]): void--><!--Device-MessageSequence-writeParcelableArray(parcelableArray: Parcelable[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -3700,6 +3852,8 @@ writeRawDataBuffer(rawData: ArrayBuffer, size: number): void
 
 **起始版本：** 11
 
+<!--Device-MessageSequence-writeRawDataBuffer(rawData: ArrayBuffer, size: int): void--><!--Device-MessageSequence-writeRawDataBuffer(rawData: ArrayBuffer, size: int): void-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -3752,6 +3906,8 @@ writeRemoteObject(obj: IRemoteObject): void
 - 写入的对象必须与对应的readRemoteObject方法配对使用。
 
 **起始版本：** 9
+
+<!--Device-MessageSequence-writeRemoteObject(obj: IRemoteObject): void--><!--Device-MessageSequence-writeRemoteObject(obj: IRemoteObject): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -3812,6 +3968,8 @@ writeRemoteObjectArray(objectArray: IRemoteObject[]): void
 
 **起始版本：** 9
 
+<!--Device-MessageSequence-writeRemoteObjectArray(objectArray: IRemoteObject[]): void--><!--Device-MessageSequence-writeRemoteObjectArray(objectArray: IRemoteObject[]): void-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -3870,6 +4028,8 @@ writeShort(val: number): void
 
 **起始版本：** 9
 
+<!--Device-MessageSequence-writeShort(val: int): void--><!--Device-MessageSequence-writeShort(val: int): void-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -3914,6 +4074,8 @@ writeShortArray(shortArray: number[]): void
 - 读取数组长度必须与写入数组长度一致。
 
 **起始版本：** 9
+
+<!--Device-MessageSequence-writeShortArray(shortArray: int[]): void--><!--Device-MessageSequence-writeShortArray(shortArray: int[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -3965,7 +4127,9 @@ writeString(val: string): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-MessageSequence-writeString(val: string): void--><!--Device-MessageSequence-writeString(val: string): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -4013,6 +4177,8 @@ writeStringArray(stringArray: string[]): void
 
 **起始版本：** 9
 
+<!--Device-MessageSequence-writeStringArray(stringArray: string[]): void--><!--Device-MessageSequence-writeStringArray(stringArray: string[]): void-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -4058,6 +4224,8 @@ readRawData(size: number): number[]
 **废弃版本：** 11
 
 **替代接口：** [readRawDataBuffer](#readrawdatabuffer)(size: number)
+
+<!--Device-MessageSequence-readRawData(size: number): number[]--><!--Device-MessageSequence-readRawData(size: number): number[]-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -4120,6 +4288,8 @@ writeRawData(rawData: number[], size: number): void
 **废弃版本：** 11
 
 **替代接口：** [writeRawDataBuffer](#writerawdatabuffer)(rawData: ArrayBuffer, size: number)
+
+<!--Device-MessageSequence-writeRawData(rawData: number[], size: number): void--><!--Device-MessageSequence-writeRawData(rawData: number[], size: number): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 

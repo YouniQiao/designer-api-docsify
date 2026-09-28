@@ -8,6 +8,8 @@ interface RequestOptions
 
 **起始版本：** 11
 
+<!--Device-photoAccessHelper-interface RequestOptions--><!--Device-photoAccessHelper-interface RequestOptions-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ compatibleMode?: CompatibleMode
 
 **起始版本：** 15
 
+<!--Device-RequestOptions-compatibleMode?: CompatibleMode--><!--Device-RequestOptions-compatibleMode?: CompatibleMode-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## deliveryMode
@@ -42,6 +46,8 @@ deliveryMode: DeliveryMode
 
 **起始版本：** 11
 
+<!--Device-RequestOptions-deliveryMode: DeliveryMode--><!--Device-RequestOptions-deliveryMode: DeliveryMode-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## mediaAssetProgressHandler
@@ -55,5 +61,7 @@ mediaAssetProgressHandler?: MediaAssetProgressHandler
 **类型：** [MediaAssetProgressHandler](arkts-medialibrary-photoaccesshelper-mediaassetprogresshandler-i.md)
 
 **起始版本：** 15
+
+<!--Device-RequestOptions-mediaAssetProgressHandler?: MediaAssetProgressHandler--><!--Device-RequestOptions-mediaAssetProgressHandler?: MediaAssetProgressHandler-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core

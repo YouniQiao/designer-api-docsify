@@ -38,6 +38,8 @@ Swiper(controller?: SwiperController)
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-SwiperInterface-(controller?: SwiperController): SwiperAttribute--><!--Device-SwiperInterface-(controller?: SwiperController): SwiperAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数:**

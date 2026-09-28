@@ -8,6 +8,8 @@ interface LocalFilePresentStatus
 
 **起始版本：** 23
 
+<!--Device-cloudSyncManager-interface LocalFilePresentStatus--><!--Device-cloudSyncManager-interface LocalFilePresentStatus-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ bundleName: string
 
 **起始版本：** 23
 
+<!--Device-LocalFilePresentStatus-bundleName: string--><!--Device-LocalFilePresentStatus-bundleName: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ isLocalFilePresent: boolean
 **类型：** boolean
 
 **起始版本：** 23
+
+<!--Device-LocalFilePresentStatus-isLocalFilePresent: boolean--><!--Device-LocalFilePresentStatus-isLocalFilePresent: boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 

@@ -10,6 +10,8 @@ export declare interface InputEvent
 
 **起始版本：** 9
 
+<!--Device-unnamed-export declare interface InputEvent--><!--Device-unnamed-export declare interface InputEvent-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## 导入模块
@@ -30,7 +32,9 @@ actionTime: number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-InputEvent-actionTime: long--><!--Device-InputEvent-actionTime: long-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -46,7 +50,9 @@ deviceId: number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-InputEvent-deviceId: int--><!--Device-InputEvent-deviceId: int-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -62,7 +68,9 @@ id: number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-InputEvent-id: int--><!--Device-InputEvent-id: int-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -78,7 +86,9 @@ screenId: number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-InputEvent-screenId: int--><!--Device-InputEvent-screenId: int-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -94,6 +104,8 @@ windowId: number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-InputEvent-windowId: int--><!--Device-InputEvent-windowId: int-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core

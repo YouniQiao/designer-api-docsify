@@ -8,6 +8,8 @@ Provides detailed information of text changes, including preview text.
 
 **Since:** 15
 
+<!--Device-unnamed-interface EditableTextChangeValue--><!--Device-unnamed-interface EditableTextChangeValue-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## content
@@ -25,6 +27,8 @@ Current text content.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-EditableTextChangeValue-content: string--><!--Device-EditableTextChangeValue-content: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,6 +50,8 @@ Default value: undefined.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-EditableTextChangeValue-options?: TextChangeOptions--><!--Device-EditableTextChangeValue-options?: TextChangeOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## previewText
@@ -65,5 +71,7 @@ Default value: undefined, indicating no preview text content.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-EditableTextChangeValue-previewText?: PreviewText--><!--Device-EditableTextChangeValue-previewText?: PreviewText-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

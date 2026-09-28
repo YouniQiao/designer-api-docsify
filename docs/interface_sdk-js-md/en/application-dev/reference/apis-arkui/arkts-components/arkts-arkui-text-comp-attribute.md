@@ -4,11 +4,13 @@
 declare class TextAttribute extends CommonMethod<TextAttribute>
 ```
 
-In addition to the [universal attributes](arkts-arkui-common-comp.md#common), the following attributes are supported.
+In addition to the [universal attributes](arkts-arkui-common-comp.md), the following attributes are supported.
 
 **Inheritance/Implementation:** TextAttribute extends CommonMethod<TextAttribute>
 
 **Since:** 7
+
+<!--Device-unnamed-declare class TextAttribute extends CommonMethod<TextAttribute>--><!--Device-unnamed-declare class TextAttribute extends CommonMethod<TextAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,6 +29,8 @@ A positive value moves the content upwards, while a negative value moves it down
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-TextAttribute-baselineOffset(value: number | ResourceStr): TextAttribute--><!--Device-TextAttribute-baselineOffset(value: number | ResourceStr): TextAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,7 +51,7 @@ Sets the custom selection menu. If this API is not used, the default menu type i
 
 The long-press response duration of **bindSelectionMenu** is 600 ms while that of [bindContextMenu](arkts-arkui-common-comp-commonmethod-c.md#bindcontextmenu) is 800 ms. When both are bound and their triggering methods are set to long press, **bindSelectionMenu** takes precedence.
 
-When the custom menu is too long, it is recommended that nest a [Scroll](arkts-arkui-scroll-comp.md#scroll) component inside to prevent the keyboard from being obscured.
+When the custom menu is too long, it is recommended that nest a [Scroll](arkts-arkui-scroll-comp.md) component inside to prevent the keyboard from being obscured.
 
 Since API version 26.0.0, when the text component calls this API, the image preview menu takes effect if the **menuType** attribute in **options** is set to **MenuType.PREVIEW_MENU**.
 
@@ -70,6 +74,8 @@ When [copyOption](#copyoption) is set to **CopyOptions.None**, the setting of th
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextAttribute-bindSelectionMenu(spanType: TextSpanType, content: CustomBuilder, responseType: TextResponseType,    options?: SelectionMenuOptions): TextAttribute--><!--Device-TextAttribute-bindSelectionMenu(spanType: TextSpanType, content: CustomBuilder, responseType: TextResponseType,    options?: SelectionMenuOptions): TextAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -95,6 +101,8 @@ Sets the color of the handle for the selected area in the text component. If thi
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-TextAttribute-caretColor(color: ResourceColor): TextAttribute--><!--Device-TextAttribute-caretColor(color: ResourceColor): TextAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -124,6 +132,8 @@ Sets whether to enable leading punctuation compression.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-TextAttribute-compressLeadingPunctuation(enabled: Optional<boolean>): TextAttribute--><!--Device-TextAttribute-compressLeadingPunctuation(enabled: Optional<boolean>): TextAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -146,6 +156,8 @@ Applies a transition animation to text content. The numeric flip animation is su
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-TextAttribute-contentTransition(transition: Optional<ContentTransition>): TextAttribute--><!--Device-TextAttribute-contentTransition(transition: Optional<ContentTransition>): TextAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -166,7 +178,7 @@ The features of multiple attributes depend on the settings of **copyOption**, in
 
 Since API version 20, copied text from the **Text** component includes HTML-formatted content in the pasteboard.
 
-- When the **Text** component contains child elements, only [Span](arkts-arkui-span-comp.md#span) and [ImageSpan](arkts-arkui-imagespan-comp.md#image_span) support HTML-formatted pasteboard content.  
+- When the **Text** component contains child elements, only [Span](arkts-arkui-span-comp.md) and [ImageSpan](arkts-arkui-imagespan-comp.md) support HTML-formatted pasteboard content.  
 - For styled strings, refer to [toHtml](../arkts-apis/arkts-arkui-styledstring-c.md#tohtml) for supported HTML conversion scope.
 
 When **copyOption** is set to **CopyOptions.InApp** or **CopyOptions.LocalDevice**:
@@ -185,6 +197,8 @@ Because widgets do not have the long press event, the menu will not be displayed
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-TextAttribute-copyOption(value: CopyOptions): TextAttribute--><!--Device-TextAttribute-copyOption(value: CopyOptions): TextAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -209,6 +223,8 @@ This API must be used together with [enableDataDetector](#enabledatadetector). I
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextAttribute-dataDetectorConfig(config: TextDataDetectorConfig): TextAttribute--><!--Device-TextAttribute-dataDetectorConfig(config: TextDataDetectorConfig): TextAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -251,6 +267,8 @@ Style and color of the text decorative line. If this API is not used, the defaul
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-TextAttribute-decoration(value: DecorationStyleInterface): TextAttribute--><!--Device-TextAttribute-decoration(value: DecorationStyleInterface): TextAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -274,6 +292,8 @@ If set to **true**, **draggable** must be used in conjunction with CopyOptions. 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextAttribute-draggable(value: boolean): TextAttribute--><!--Device-TextAttribute-draggable(value: boolean): TextAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -307,6 +327,8 @@ When [disableMenuItems](../arkts-apis/arkts-arkui-arkui-uicontext-textmenucontro
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TextAttribute-editMenuOptions(editMenu: EditMenuOptions): TextAttribute--><!--Device-TextAttribute-editMenuOptions(editMenu: EditMenuOptions): TextAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -333,6 +355,8 @@ The **EllipsisMode.START** and **EllipsisMode.CENTER** attributes take effect on
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TextAttribute-ellipsisMode(value: EllipsisMode): TextAttribute--><!--Device-TextAttribute-ellipsisMode(value: EllipsisMode): TextAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -354,6 +378,8 @@ Sets whether to enable automatic spacing between Chinese and Western characters.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-TextAttribute-enableAutoSpacing(enabled: Optional<boolean>): TextAttribute--><!--Device-TextAttribute-enableAutoSpacing(enabled: Optional<boolean>): TextAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -387,6 +413,8 @@ The style of detected entities is as follows: the font color is changed to blue,
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TextAttribute-enableDataDetector(enable: boolean): TextAttribute--><!--Device-TextAttribute-enableDataDetector(enable: boolean): TextAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -415,6 +443,8 @@ To enable haptic feedback, you must declare the **ohos.permission.VIBRATE** perm
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
+<!--Device-TextAttribute-enableHapticFeedback(isEnabled: boolean): TextAttribute--><!--Device-TextAttribute-enableHapticFeedback(isEnabled: boolean): TextAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -439,13 +469,15 @@ When the AI menu is active, the corresponding menu item is displayed only if the
 
 This feature is only effective when CopyOptions is set to **CopyOptions.LocalDevice** or **CopyOptions.CrossDevice**.
 
-This attribute is invalid in the cross-node selection scenario of [SelectionContainer](arkts-arkui-selectioncontainer-comp.md#ohosarkuicomponentsselectioncontainer). The corresponding AI menu item is not displayed in the text selection menu.
+This attribute is invalid in the cross-node selection scenario of [SelectionContainer](arkts-arkui-selectioncontainer-comp.md). The corresponding AI menu item is not displayed in the text selection menu.
 
 **Since:** 22
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-TextAttribute-enableSelectedDataDetector(enable: boolean | undefined): TextAttribute--><!--Device-TextAttribute-enableSelectedDataDetector(enable: boolean | undefined): TextAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -468,6 +500,8 @@ Adapts the line height to the actual text height for overlapped multi-line text.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-TextAttribute-fallbackLineSpacing(enabled: Optional<boolean>): TextAttribute--><!--Device-TextAttribute-fallbackLineSpacing(enabled: Optional<boolean>): TextAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -494,6 +528,8 @@ It is only effective for the **Text** component, not for its child components.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextAttribute-font(value: Font): TextAttribute--><!--Device-TextAttribute-font(value: Font): TextAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -523,6 +559,8 @@ It is only effective for the **Text** component, not for its child components.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-TextAttribute-font(fontValue: Font, options?: FontSettingOptions): TextAttribute--><!--Device-TextAttribute-font(fontValue: Font, options?: FontSettingOptions): TextAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -545,6 +583,8 @@ Sets the font color. If this API is not called, the default text color is **'#e6
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-TextAttribute-fontColor(value: ResourceColor): TextAttribute--><!--Device-TextAttribute-fontColor(value: ResourceColor): TextAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -571,6 +611,8 @@ Sets the font family. If this API is not called, the default font is **'HarmonyO
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-TextAttribute-fontFamily(value: string | Resource): TextAttribute--><!--Device-TextAttribute-fontFamily(value: string | Resource): TextAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -605,10 +647,10 @@ For example, the input format for monospaced clock fonts is "ss01" on.
 > the value is an integer. If the typesetting engine rounds up the value instead, the right side of the text may be
 > clipped.
 > 
-> When multiple **Text** components are placed in the [Row](arkts-arkui-row-comp.md#row) container with no specific layout or space
+> When multiple **Text** components are placed in the [Row](arkts-arkui-row-comp.md) container with no specific layout or space
 > allocation settings configured, the components are laid out based on the maximum size of the container. To make
 > sure the sum of the components' main axis sizes does not exceed the main axis size of the container, you can set
-> [layoutWeight](arkts-arkui-common-comp-commonmethod-c.md#layoutweight) or use the [flex layout](arkts-arkui-common-comp.md#common).
+> [layoutWeight](arkts-arkui-common-comp-commonmethod-c.md#layoutweight) or use the [flex layout](arkts-arkui-common-comp.md).
 > 
 > The system's default font supports the following ligatures: Th, fb, ff, fb, ffb, ffh, ffi, ffk, ffl, fh, fi, fk,
 > fl, rf, rt, rv, rx, ry. These ligatures may cause unexpected effects of spans and styled strings. Disabling the
@@ -626,6 +668,8 @@ For example, the input format for monospaced clock fonts is "ss01" on.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-TextAttribute-fontFeature(value: string): TextAttribute--><!--Device-TextAttribute-fontFeature(value: string): TextAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -653,6 +697,8 @@ Sets the text size. If this API is not called, the default font size is 16 fp. T
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-TextAttribute-fontSize(value: number | string | Resource): TextAttribute--><!--Device-TextAttribute-fontSize(value: number | string | Resource): TextAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -674,6 +720,8 @@ Sets the font style. If this API is not called, the default font style is **Font
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-TextAttribute-fontStyle(value: FontStyle): TextAttribute--><!--Device-TextAttribute-fontStyle(value: FontStyle): TextAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -699,6 +747,8 @@ Sets font variations.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.1.
 
+<!--Device-TextAttribute-fontVariations(fontVariations: Array<FontVariation>): TextAttribute--><!--Device-TextAttribute-fontVariations(fontVariations: Array<FontVariation>): TextAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -722,6 +772,8 @@ It is only effective for the **Text** component, not for its child components.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-TextAttribute-fontWeight(value: number | FontWeight | ResourceStr): TextAttribute--><!--Device-TextAttribute-fontWeight(value: number | FontWeight | ResourceStr): TextAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -751,6 +803,8 @@ It is only effective for the **Text** component, not for its child components.<!
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-TextAttribute-fontWeight(weight: number | FontWeight | ResourceStr, options?: FontSettingOptions): TextAttribute--><!--Device-TextAttribute-fontWeight(weight: number | FontWeight | ResourceStr, options?: FontSettingOptions): TextAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -778,6 +832,8 @@ Sets whether half leading is enabled. Half leading refers to splitting the leadi
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextAttribute-halfLeading(halfLeading: boolean): TextAttribute--><!--Device-TextAttribute-halfLeading(halfLeading: boolean): TextAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -810,6 +866,8 @@ is beyond the layout constraints, the text will shrink to a font size between **
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TextAttribute-heightAdaptivePolicy(value: TextHeightAdaptivePolicy): TextAttribute--><!--Device-TextAttribute-heightAdaptivePolicy(value: TextHeightAdaptivePolicy): TextAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -831,6 +889,8 @@ Sets whether to add spacing to the first and last lines to avoid text truncation
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-TextAttribute-includeFontPadding(include: Optional<boolean>): TextAttribute--><!--Device-TextAttribute-includeFontPadding(include: Optional<boolean>): TextAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -855,6 +915,8 @@ This API takes effect only when the text content contains a styled string (**Sty
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-TextAttribute-incrementalUpdatePolicy(policy: IncrementalUpdatePolicy | undefined): TextAttribute--><!--Device-TextAttribute-incrementalUpdatePolicy(policy: IncrementalUpdatePolicy | undefined): TextAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -884,6 +946,8 @@ This setting applies to every character, including those at line endings.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-TextAttribute-letterSpacing(value: number | ResourceStr): TextAttribute--><!--Device-TextAttribute-letterSpacing(value: number | ResourceStr): TextAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -905,6 +969,8 @@ Sets the line break rule. This attribute takes effect only when [wordBreak](#wor
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextAttribute-lineBreakStrategy(strategy: LineBreakStrategy): TextAttribute--><!--Device-TextAttribute-lineBreakStrategy(strategy: LineBreakStrategy): TextAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -937,6 +1003,8 @@ If the value is less than or equal to **0**, the line height is unrestricted and
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-TextAttribute-lineHeight(value: number | string | Resource): TextAttribute--><!--Device-TextAttribute-lineHeight(value: number | string | Resource): TextAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -972,6 +1040,8 @@ The line height equals the input parameter **value** multiplied by **fontHeight*
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 22.
 
+<!--Device-TextAttribute-lineHeightMultiple(value: number | undefined): TextAttribute--><!--Device-TextAttribute-lineHeightMultiple(value: number | undefined): TextAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -995,6 +1065,8 @@ If this parameter and [lineHeightMultiple](#lineheightmultiple) are set at the s
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextAttribute-lineSpacing(value: LengthMetrics): TextAttribute--><!--Device-TextAttribute-lineSpacing(value: LengthMetrics): TextAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1022,6 +1094,8 @@ If this parameter and [lineHeightMultiple](#lineheightmultiple) are set at the s
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-TextAttribute-lineSpacing(value: LengthMetrics, options?: LineSpacingOptions): TextAttribute--><!--Device-TextAttribute-lineSpacing(value: LengthMetrics, options?: LineSpacingOptions): TextAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1047,6 +1121,8 @@ The **marqueeOptions** settings take effect only when **textOverflow** is set to
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TextAttribute-marqueeOptions(options: Optional<TextMarqueeOptions>): TextAttribute--><!--Device-TextAttribute-marqueeOptions(options: Optional<TextMarqueeOptions>): TextAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1068,6 +1144,8 @@ Sets the maximum font scale factor for text.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextAttribute-maxFontScale(scale: number | Resource): TextAttribute--><!--Device-TextAttribute-maxFontScale(scale: number | Resource): TextAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1101,6 +1179,8 @@ Since API version 18, adaptive font sizing is supported on child components and 
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-TextAttribute-maxFontSize(value: number | string | Resource): TextAttribute--><!--Device-TextAttribute-maxFontSize(value: number | string | Resource): TextAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1127,6 +1207,8 @@ If **maxLineHeight** is less than **minLineHeight**, **maxLineHeight** takes eff
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 22.
 
+<!--Device-TextAttribute-maxLineHeight(value: LengthMetrics | undefined): TextAttribute--><!--Device-TextAttribute-maxLineHeight(value: LengthMetrics | undefined): TextAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1151,6 +1233,8 @@ By default, text is automatically folded. If this attribute is specified, the te
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-TextAttribute-maxLines(value: number): TextAttribute--><!--Device-TextAttribute-maxLines(value: number): TextAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1172,6 +1256,8 @@ Sets the minimum font scale factor for text.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextAttribute-minFontScale(scale: number | Resource): TextAttribute--><!--Device-TextAttribute-minFontScale(scale: number | Resource): TextAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1205,6 +1291,8 @@ Since API version 18, adaptive font sizing is supported on child components and 
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-TextAttribute-minFontSize(value: number | string | Resource): TextAttribute--><!--Device-TextAttribute-minFontSize(value: number | string | Resource): TextAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1228,6 +1316,8 @@ Sets the minimum line height of text. If the value is less than or equal to 0, t
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 22.
+
+<!--Device-TextAttribute-minLineHeight(value: LengthMetrics | undefined): TextAttribute--><!--Device-TextAttribute-minLineHeight(value: LengthMetrics | undefined): TextAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1259,6 +1349,8 @@ If [constraintSize](arkts-arkui-common-comp-commonmethod-c.md#constraintsize) is
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 22.
 
+<!--Device-TextAttribute-minLines(minLines: Optional<number>): TextAttribute--><!--Device-TextAttribute-minLines(minLines: Optional<number>): TextAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1280,6 +1372,8 @@ Called when data is copied to the pasteboard, which is displayed when the text b
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextAttribute-onCopy(callback: (value: string) => void): TextAttribute--><!--Device-TextAttribute-onCopy(callback: (value: string) => void): TextAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1303,6 +1397,8 @@ Called when the marquee animation reaches the specified state.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TextAttribute-onMarqueeStateChange(callback: Callback<MarqueeState>): TextAttribute--><!--Device-TextAttribute-onMarqueeStateChange(callback: Callback<MarqueeState>): TextAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1324,6 +1420,8 @@ Called when the text selection position changes.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextAttribute-onTextSelectionChange(callback: (selectionStart: number, selectionEnd: number) => void): TextAttribute--><!--Device-TextAttribute-onTextSelectionChange(callback: (selectionStart: number, selectionEnd: number) => void): TextAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1357,6 +1455,8 @@ Called before the copy operation is performed.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-TextAttribute-onWillCopy(callback: Callback<string, boolean>): TextAttribute--><!--Device-TextAttribute-onWillCopy(callback: Callback<string, boolean>): TextAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1387,6 +1487,8 @@ When optimizing pure space text by setting [optimizeTrailingSpace](#optimizetrai
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-TextAttribute-optimizeTrailingSpace(optimize: Optional<boolean>): TextAttribute--><!--Device-TextAttribute-optimizeTrailingSpace(optimize: Optional<boolean>): TextAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1408,6 +1510,8 @@ Orphan character optimization improves the text layout by handling the orphan ch
 **Since:** 26.0.0
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-TextAttribute-orphanCharOptimization(enabled: Optional<boolean>): TextAttribute--><!--Device-TextAttribute-orphanCharOptimization(enabled: Optional<boolean>): TextAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1433,6 +1537,8 @@ Sets whether to enable privacy mode on widgets. If this API is not called, priva
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-TextAttribute-privacySensitive(supported: boolean): TextAttribute--><!--Device-TextAttribute-privacySensitive(supported: boolean): TextAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1454,6 +1560,8 @@ Sets whether to enable hanging punctuation at line ends. Hanging punctuation is 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-TextAttribute-punctuationOverflow(enabled: Optional<boolean>): TextAttribute--><!--Device-TextAttribute-punctuationOverflow(enabled: Optional<boolean>): TextAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1477,6 +1585,8 @@ Sets the highlight color of the selected text. If opacity is not set or is set t
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-TextAttribute-selectedBackgroundColor(color: ResourceColor): TextAttribute--><!--Device-TextAttribute-selectedBackgroundColor(color: ResourceColor): TextAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1498,6 +1608,8 @@ Sets the drag preview style for selected text.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-TextAttribute-selectedDragPreviewStyle(value: SelectedDragPreviewStyle | undefined): TextAttribute--><!--Device-TextAttribute-selectedDragPreviewStyle(value: SelectedDragPreviewStyle | undefined): TextAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1533,6 +1645,8 @@ You can obtain the selection range change result through the [onTextSelectionCha
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TextAttribute-selection(selectionStart: number, selectionEnd: number): TextAttribute--><!--Device-TextAttribute-selection(selectionStart: number, selectionEnd: number): TextAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1555,6 +1669,8 @@ The text can be displayed in the [RadialGradientStyle](../arkts-apis/arkts-arkui
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-TextAttribute-shaderStyle(shader: ShaderStyle): TextAttribute--><!--Device-TextAttribute-shaderStyle(shader: ShaderStyle): TextAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1580,6 +1696,8 @@ Sets the text stroke color.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.2.0.
 
+<!--Device-TextAttribute-strokeColor(color: Optional<ResourceColor>): TextAttribute--><!--Device-TextAttribute-strokeColor(color: Optional<ResourceColor>): TextAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1601,6 +1719,8 @@ Sets the join style of the text stroke.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+<!--Device-TextAttribute-strokeJoinStyle(strokeJoinStyle: StrokeJoinStyle | undefined): TextAttribute--><!--Device-TextAttribute-strokeJoinStyle(strokeJoinStyle: StrokeJoinStyle | undefined): TextAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1626,6 +1746,8 @@ Sets the text stroke width.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.2.0.
 
+<!--Device-TextAttribute-strokeWidth(width: Optional<LengthMetrics>): TextAttribute--><!--Device-TextAttribute-strokeWidth(width: Optional<LengthMetrics>): TextAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1647,6 +1769,8 @@ Sets the indent of the text tail. If this API is not called, the default indent 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-TextAttribute-tailIndents(value: Optional<LengthMetrics | Array<LengthMetrics>>): TextAttribute--><!--Device-TextAttribute-tailIndents(value: Optional<LengthMetrics | Array<LengthMetrics>>): TextAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1688,6 +1812,8 @@ When **textAlign** is set to **TextAlign.JUSTIFY**, the [wordBreak](#wordbreak) 
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-TextAttribute-textAlign(value: TextAlign): TextAttribute--><!--Device-TextAttribute-textAlign(value: TextAlign): TextAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1709,6 +1835,8 @@ Sets the text case. If this API is not called, the default text case is **TextCa
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-TextAttribute-textCase(value: TextCase): TextAttribute--><!--Device-TextAttribute-textCase(value: TextCase): TextAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1734,6 +1862,8 @@ This API takes effect only when the height of the text content exceeds the compo
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
+<!--Device-TextAttribute-textContentAlign(textContentAlign: Optional<TextContentAlign>): TextAttribute--><!--Device-TextAttribute-textContentAlign(textContentAlign: Optional<TextContentAlign>): TextAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1756,6 +1886,8 @@ Specifies the text layout direction. If this attribute is not set, the default t
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-TextAttribute-textDirection(direction: TextDirection | undefined): TextAttribute--><!--Device-TextAttribute-textDirection(direction: TextDirection | undefined): TextAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1777,6 +1909,8 @@ Sets the indent of the first line text. If this API is not called, the default i
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextAttribute-textIndent(value: Length): TextAttribute--><!--Device-TextAttribute-textIndent(value: Length): TextAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1823,6 +1957,8 @@ images are allowed to scroll within a single line.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-TextAttribute-textOverflow(options: TextOverflowOptions): TextAttribute--><!--Device-TextAttribute-textOverflow(options: TextOverflowOptions): TextAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1846,6 +1982,8 @@ This attribute must be used in conjunction with [copyOption](#copyoption). If **
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextAttribute-textSelectable(mode: TextSelectableMode): TextAttribute--><!--Device-TextAttribute-textSelectable(mode: TextSelectableMode): TextAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1874,6 +2012,8 @@ Since API version 11, this API supports input parameters in an array to implemen
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
+
+<!--Device-TextAttribute-textShadow(value: ShadowOptions | Array<ShadowOptions>): TextAttribute--><!--Device-TextAttribute-textShadow(value: ShadowOptions | Array<ShadowOptions>): TextAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1906,6 +2046,8 @@ Sets the vertical alignment of the text. If this API is not called, the default 
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-TextAttribute-textVerticalAlign(textVerticalAlign: Optional<TextVerticalAlign>): TextAttribute--><!--Device-TextAttribute-textVerticalAlign(textVerticalAlign: Optional<TextVerticalAlign>): TextAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1931,6 +2073,8 @@ To break text by character, with the excess part displayed as an ellipsis (...),
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextAttribute-wordBreak(value: WordBreak): TextAttribute--><!--Device-TextAttribute-wordBreak(value: WordBreak): TextAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

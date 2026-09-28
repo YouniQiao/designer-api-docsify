@@ -8,6 +8,8 @@ interface DeviceClass
 
 **起始版本：** 10
 
+<!--Device-connection-interface DeviceClass--><!--Device-connection-interface DeviceClass-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ classOfDevice: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DeviceClass-classOfDevice: int--><!--Device-DeviceClass-classOfDevice: int-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## majorClass
@@ -46,6 +50,8 @@ majorClass: MajorClass
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DeviceClass-majorClass: MajorClass--><!--Device-DeviceClass-majorClass: MajorClass-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## majorMinorClass
@@ -61,5 +67,7 @@ majorMinorClass: MajorMinorClass
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DeviceClass-majorMinorClass: MajorMinorClass--><!--Device-DeviceClass-majorMinorClass: MajorMinorClass-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare namespace infraredEmitter--><!--Device-unnamed-declare namespace infraredEmitter-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InfraredEmitter
 
 ## 导入模块

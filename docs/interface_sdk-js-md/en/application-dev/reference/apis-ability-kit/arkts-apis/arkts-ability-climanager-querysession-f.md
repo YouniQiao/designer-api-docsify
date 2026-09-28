@@ -24,6 +24,8 @@ Use this method to poll the status of a background session, or to retrieve the e
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-cliManager-function querySession(sessionId: string): Promise<CliSessionInfo>--><!--Device-cliManager-function querySession(sessionId: string): Promise<CliSessionInfo>-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **Parameters:**

@@ -8,6 +8,8 @@ interface ActionButton
 
 **起始版本：** 9
 
+<!--Device-reminderAgentManager-interface ActionButton--><!--Device-reminderAgentManager-interface ActionButton-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## 导入模块
@@ -28,6 +30,8 @@ title: string
 
 **起始版本：** 9
 
+<!--Device-ActionButton-title: string--><!--Device-ActionButton-title: string-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## titleResource
@@ -42,6 +46,8 @@ titleResource?: string
 
 **起始版本：** 11
 
+<!--Device-ActionButton-titleResource?: string--><!--Device-ActionButton-titleResource?: string-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## type
@@ -55,5 +61,7 @@ type: ActionButtonType
 **类型：** [ActionButtonType](arkts-backgroundtasks-reminderagentmanager-actionbuttontype-e.md)
 
 **起始版本：** 9
+
+<!--Device-ActionButton-type: ActionButtonType--><!--Device-ActionButton-type: ActionButtonType-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent

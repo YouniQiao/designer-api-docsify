@@ -25,6 +25,8 @@ function on(type: SensorId.ACCELEROMETER, callback: Callback<AccelerometerRespon
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-sensor-function on(type: SensorId.ACCELEROMETER, callback: Callback<AccelerometerResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorId.ACCELEROMETER, callback: Callback<AccelerometerResponse>,    options?: Options): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -82,6 +84,8 @@ function on(type: SensorId.ACCELEROMETER_UNCALIBRATED, callback: Callback<Accele
 **起始版本：** 9
 
 **需要权限：** ohos.permission.ACCELEROMETER
+
+<!--Device-sensor-function on(type: SensorId.ACCELEROMETER_UNCALIBRATED, callback: Callback<AccelerometerUncalibratedResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorId.ACCELEROMETER_UNCALIBRATED, callback: Callback<AccelerometerUncalibratedResponse>,    options?: Options): void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -141,6 +145,8 @@ function on(type: SensorId.AMBIENT_LIGHT, callback: Callback<LightResponse>, opt
 
 **起始版本：** 9
 
+<!--Device-sensor-function on(type: SensorId.AMBIENT_LIGHT, callback: Callback<LightResponse>, options?: Options): void--><!--Device-sensor-function on(type: SensorId.AMBIENT_LIGHT, callback: Callback<LightResponse>, options?: Options): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -194,6 +200,8 @@ function on(type: SensorId.AMBIENT_TEMPERATURE, callback: Callback<AmbientTemper
 
 **起始版本：** 9
 
+<!--Device-sensor-function on(type: SensorId.AMBIENT_TEMPERATURE, callback: Callback<AmbientTemperatureResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorId.AMBIENT_TEMPERATURE, callback: Callback<AmbientTemperatureResponse>,    options?: Options): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -245,6 +253,8 @@ function on(type: SensorId.BAROMETER, callback: Callback<BarometerResponse>, opt
 订阅气压计传感器数据。使用callback异步回调。气压计传感器用于测量大气压强，适用于海拔估算、天气预报辅助等场景。调用后，系统会按设定频率通过callback持续上报气压数据。
 
 **起始版本：** 9
+
+<!--Device-sensor-function on(type: SensorId.BAROMETER, callback: Callback<BarometerResponse>, options?: Options): void--><!--Device-sensor-function on(type: SensorId.BAROMETER, callback: Callback<BarometerResponse>, options?: Options): void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -298,6 +308,8 @@ function on(type: SensorId.GRAVITY, callback: Callback<GravityResponse>,
 订阅重力传感器数据。使用callback异步回调。重力传感器用于测量设备在X、Y、Z三个方向上受到的重力加速度分量，适用于需要分离重力分量进行运动分析的场景，如游戏操控、运动检测。调用后，系统会按设定频率通过callback持续上报重力分量数据。
 
 **起始版本：** 9
+
+<!--Device-sensor-function on(type: SensorId.GRAVITY, callback: Callback<GravityResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorId.GRAVITY, callback: Callback<GravityResponse>,    options?: Options): void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -360,6 +372,8 @@ function on(type: SensorId.GYROSCOPE, callback: Callback<GyroscopeResponse>,
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-sensor-function on(type: SensorId.GYROSCOPE, callback: Callback<GyroscopeResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorId.GYROSCOPE, callback: Callback<GyroscopeResponse>,    options?: Options): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -417,6 +431,8 @@ function on(type: SensorId.GYROSCOPE_UNCALIBRATED, callback: Callback<GyroscopeU
 **起始版本：** 9
 
 **需要权限：** ohos.permission.GYROSCOPE
+
+<!--Device-sensor-function on(type: SensorId.GYROSCOPE_UNCALIBRATED, callback: Callback<GyroscopeUncalibratedResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorId.GYROSCOPE_UNCALIBRATED, callback: Callback<GyroscopeUncalibratedResponse>,    options?: Options): void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -476,6 +492,8 @@ function on(type: SensorId.HALL, callback: Callback<HallResponse>, options?: Opt
 
 **起始版本：** 9
 
+<!--Device-sensor-function on(type: SensorId.HALL, callback: Callback<HallResponse>, options?: Options): void--><!--Device-sensor-function on(type: SensorId.HALL, callback: Callback<HallResponse>, options?: Options): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -531,6 +549,8 @@ function on(type: SensorId.HEART_RATE, callback: Callback<HeartRateResponse>,
 
 **需要权限：** ohos.permission.READ_HEALTH_DATA
 
+<!--Device-sensor-function on(type: SensorId.HEART_RATE, callback: Callback<HeartRateResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorId.HEART_RATE, callback: Callback<HeartRateResponse>,    options?: Options): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -584,6 +604,8 @@ function on(type: SensorId.HUMIDITY, callback: Callback<HumidityResponse>,
 订阅湿度传感器数据。使用callback异步回调。湿度传感器用于测量周围环境的相对湿度，适用于环境湿度监测、智能家居联动等场景。调用后，系统会按设定频率通过callback持续上报湿度数据。
 
 **起始版本：** 9
+
+<!--Device-sensor-function on(type: SensorId.HUMIDITY, callback: Callback<HumidityResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorId.HUMIDITY, callback: Callback<HumidityResponse>,    options?: Options): void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -639,6 +661,8 @@ function on(type: SensorId.LINEAR_ACCELEROMETER, callback: Callback<LinearAccele
 **起始版本：** 9
 
 **需要权限：** ohos.permission.ACCELEROMETER
+
+<!--Device-sensor-function on(type: SensorId.LINEAR_ACCELEROMETER, callback: Callback<LinearAccelerometerResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorId.LINEAR_ACCELEROMETER, callback: Callback<LinearAccelerometerResponse>,    options?: Options): void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -696,6 +720,8 @@ function on(type: SensorId.MAGNETIC_FIELD, callback: Callback<MagneticFieldRespo
 
 **起始版本：** 9
 
+<!--Device-sensor-function on(type: SensorId.MAGNETIC_FIELD, callback: Callback<MagneticFieldResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorId.MAGNETIC_FIELD, callback: Callback<MagneticFieldResponse>,    options?: Options): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -750,6 +776,8 @@ function on(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback: Callback<Magne
 订阅未校准地磁传感器数据。使用callback异步回调。未校准地磁传感器与地磁传感器的区别在于，其上报的偏移值(biasX/biasY/biasZ)未经系统校准补偿，适用于需要获取原始磁场数据或自行实现校准算法的场景。与sensor.on('SensorId.MAGNETIC_FIELD')相比，本接口额外提供偏移值信息，适用于需要分析设备地磁校准偏差的场景。
 
 **起始版本：** 9
+
+<!--Device-sensor-function on(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback: Callback<MagneticFieldUncalibratedResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback: Callback<MagneticFieldUncalibratedResponse>,    options?: Options): void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -817,6 +845,8 @@ function on(type: SensorId.ORIENTATION, callback: Callback<OrientationResponse>,
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-sensor-function on(type: SensorId.ORIENTATION, callback: Callback<OrientationResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorId.ORIENTATION, callback: Callback<OrientationResponse>,    options?: Options): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -877,6 +907,8 @@ function on(type: SensorId.PEDOMETER, callback: Callback<PedometerResponse>, opt
 
 **需要权限：** ohos.permission.ACTIVITY_MOTION
 
+<!--Device-sensor-function on(type: SensorId.PEDOMETER, callback: Callback<PedometerResponse>, options?: Options): void--><!--Device-sensor-function on(type: SensorId.PEDOMETER, callback: Callback<PedometerResponse>, options?: Options): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -933,6 +965,8 @@ function on(type: SensorId.PEDOMETER_DETECTION, callback: Callback<PedometerDete
 
 **需要权限：** ohos.permission.ACTIVITY_MOTION
 
+<!--Device-sensor-function on(type: SensorId.PEDOMETER_DETECTION, callback: Callback<PedometerDetectionResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorId.PEDOMETER_DETECTION, callback: Callback<PedometerDetectionResponse>,    options?: Options): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -986,6 +1020,8 @@ function on(type: SensorId.PROXIMITY, callback: Callback<ProximityResponse>, opt
 
 **起始版本：** 9
 
+<!--Device-sensor-function on(type: SensorId.PROXIMITY, callback: Callback<ProximityResponse>, options?: Options): void--><!--Device-sensor-function on(type: SensorId.PROXIMITY, callback: Callback<ProximityResponse>, options?: Options): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -1038,6 +1074,8 @@ function on(type: SensorId.ROTATION_VECTOR, callback: Callback<RotationVectorRes
 订阅旋转矢量传感器数据。使用callback异步回调。旋转矢量传感器用于表示设备的姿态旋转，数据由X、Y、Z分量和标量W组成，可用于设备姿态估计、AR/VR场景等。调用后，系统会按设定频率通过callback持续上报旋转矢量数据。
 
 **起始版本：** 9
+
+<!--Device-sensor-function on(type: SensorId.ROTATION_VECTOR, callback: Callback<RotationVectorResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorId.ROTATION_VECTOR, callback: Callback<RotationVectorResponse>,    options?: Options): void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -1093,6 +1131,8 @@ function on(type: SensorId.SIGNIFICANT_MOTION, callback: Callback<SignificantMot
 
 **起始版本：** 9
 
+<!--Device-sensor-function on(type: SensorId.SIGNIFICANT_MOTION, callback: Callback<SignificantMotionResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorId.SIGNIFICANT_MOTION, callback: Callback<SignificantMotionResponse>,    options?: Options): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -1144,6 +1184,8 @@ function on(type: SensorId.WEAR_DETECTION, callback: Callback<WearDetectionRespo
 
 **起始版本：** 9
 
+<!--Device-sensor-function on(type: SensorId.WEAR_DETECTION, callback: Callback<WearDetectionResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorId.WEAR_DETECTION, callback: Callback<WearDetectionResponse>,    options?: Options): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -1194,6 +1236,8 @@ function on(type: SensorId.FUSION_PRESSURE, callback: Callback<FusionPressureRes
 订阅融合压力传感器数据。使用callback异步回调。融合压力传感器用于获取经融合算法处理的压力数据，仅适用于智能手表设备。适用于需要获取手腕压力数据的健康监测场景。调用后，系统会按设定频率通过callback持续上报融合压力数据。
 
 **起始版本：** 22
+
+<!--Device-sensor-function on(type: SensorId.FUSION_PRESSURE, callback: Callback<FusionPressureResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorId.FUSION_PRESSURE, callback: Callback<FusionPressureResponse>,    options?: Options): void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -1260,6 +1304,8 @@ function on(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback: Callback<Ac
 
 **需要权限：** ohos.permission.ACCELEROMETER
 
+<!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback: Callback<AccelerometerResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback: Callback<AccelerometerResponse>,    options?: Options): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -1309,6 +1355,8 @@ function on(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED, callback
 **替代接口：** [on](#on-3)(type: SensorId.ACCELEROMETER_UNCALIBRATED, callback: Callback&lt;AccelerometerUncalibratedResponse&gt;, options?: Options)
 
 **需要权限：** ohos.permission.ACCELEROMETER
+
+<!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED, callback: Callback<AccelerometerUncalibratedResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED, callback: Callback<AccelerometerUncalibratedResponse>,    options?: Options): void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -1361,6 +1409,8 @@ function on(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback: Callback<Li
 
 **替代接口：** [on](#on-4)(type: SensorId.AMBIENT_LIGHT, callback: Callback&lt;LightResponse&gt;, options?: Options)
 
+<!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback: Callback<LightResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback: Callback<LightResponse>,    options?: Options): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -1406,6 +1456,8 @@ function on(type: SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback: Callb
 **废弃版本：** 9
 
 **替代接口：** [on](#on-5)(type: SensorId.AMBIENT_TEMPERATURE, callback: Callback&lt;AmbientTemperatureResponse&gt;, options?: Options)
+
+<!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback: Callback<AmbientTemperatureResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback: Callback<AmbientTemperatureResponse>,    options?: Options): void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -1453,6 +1505,8 @@ function on(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback: Callback<Barome
 
 **替代接口：** [on](#on-6)(type: SensorId.BAROMETER, callback: Callback&lt;BarometerResponse&gt;, options?: Options)
 
+<!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback: Callback<BarometerResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback: Callback<BarometerResponse>,    options?: Options): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -1498,6 +1552,8 @@ function on(type: SensorType.SENSOR_TYPE_ID_GRAVITY, callback: Callback<GravityR
 **废弃版本：** 9
 
 **替代接口：** [on](#on-7)(type: SensorId.GRAVITY, callback: Callback&lt;GravityResponse&gt;, options?: Options)
+
+<!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_GRAVITY, callback: Callback<GravityResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_GRAVITY, callback: Callback<GravityResponse>,    options?: Options): void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -1549,6 +1605,8 @@ function on(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback: Callback<Gyrosc
 
 **需要权限：** ohos.permission.GYROSCOPE
 
+<!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback: Callback<GyroscopeResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback: Callback<GyroscopeResponse>,    options?: Options): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -1598,6 +1656,8 @@ function on(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED, callback: Ca
 **替代接口：** [on](#on-9)(type: SensorId.GYROSCOPE_UNCALIBRATED, callback: Callback&lt;GyroscopeUncalibratedResponse&gt;, options?: Options)
 
 **需要权限：** ohos.permission.GYROSCOPE
+
+<!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED, callback: Callback<GyroscopeUncalibratedResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED, callback: Callback<GyroscopeUncalibratedResponse>,    options?: Options): void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -1650,6 +1710,8 @@ function on(type: SensorType.SENSOR_TYPE_ID_HALL, callback: Callback<HallRespons
 
 **替代接口：** [on](#on-10)(type: SensorId.HALL, callback: Callback&lt;HallResponse&gt;, options?: Options)
 
+<!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_HALL, callback: Callback<HallResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_HALL, callback: Callback<HallResponse>,    options?: Options): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -1698,6 +1760,8 @@ function on(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback: Callback<Heart
 
 **需要权限：** ohos.permission.HEALTH_DATA
 
+<!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback: Callback<HeartRateResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback: Callback<HeartRateResponse>,    options?: Options): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -1731,6 +1795,8 @@ function on(type: SensorType.SENSOR_TYPE_ID_HUMIDITY, callback: Callback<Humidit
 **废弃版本：** 9
 
 **替代接口：** [on](#on-12)(type: SensorId.HUMIDITY, callback: Callback&lt;HumidityResponse&gt;, options?: Options)
+
+<!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_HUMIDITY, callback: Callback<HumidityResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_HUMIDITY, callback: Callback<HumidityResponse>,    options?: Options): void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -1780,6 +1846,8 @@ function on(type: SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION, callback: Callb
 
 **需要权限：** ohos.permission.ACCELEROMETER
 
+<!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION, callback: Callback<LinearAccelerometerResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION, callback: Callback<LinearAccelerometerResponse>,    options?: Options): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -1813,6 +1881,8 @@ function on(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback: Callback<M
 **废弃版本：** 9
 
 **替代接口：** [on](#on-14)(type: SensorId.MAGNETIC_FIELD, callback: Callback&lt;MagneticFieldResponse&gt;, options?: Options)
+
+<!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback: Callback<MagneticFieldResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback: Callback<MagneticFieldResponse>,    options?: Options): void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -1861,6 +1931,8 @@ function on(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callbac
 **废弃版本：** 9
 
 **替代接口：** [on](#on-15)(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback: Callback&lt;MagneticFieldUncalibratedResponse&gt;, options?: Options)
+
+<!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callback: Callback<MagneticFieldUncalibratedResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callback: Callback<MagneticFieldUncalibratedResponse>,    options?: Options): void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -1913,6 +1985,8 @@ function on(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback: Callback<Orie
 
 **替代接口：** [on](#on-16)(type: SensorId.ORIENTATION, callback: Callback&lt;OrientationResponse&gt;, options?: Options)
 
+<!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback: Callback<OrientationResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback: Callback<OrientationResponse>,    options?: Options): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -1963,6 +2037,8 @@ function on(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback: Callback<Pedome
 
 **需要权限：** ohos.permission.ACTIVITY_MOTION
 
+<!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback: Callback<PedometerResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback: Callback<PedometerResponse>,    options?: Options): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -2011,6 +2087,8 @@ function on(type: SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION, callback: Callb
 
 **需要权限：** ohos.permission.ACTIVITY_MOTION
 
+<!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION, callback: Callback<PedometerDetectionResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION, callback: Callback<PedometerDetectionResponse>,    options?: Options): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -2057,6 +2135,8 @@ function on(type: SensorType.SENSOR_TYPE_ID_PROXIMITY, callback: Callback<Proxim
 
 **替代接口：** [on](#on-19)(type: SensorId.PROXIMITY, callback: Callback&lt;ProximityResponse&gt;, options?: Options)
 
+<!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_PROXIMITY, callback: Callback<ProximityResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_PROXIMITY, callback: Callback<ProximityResponse>,    options?: Options): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -2102,6 +2182,8 @@ function on(type: SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback: Callback<
 **废弃版本：** 9
 
 **替代接口：** [on](#on-20)(type: SensorId.ROTATION_VECTOR, callback: Callback&lt;RotationVectorResponse&gt;, options?: Options)
+
+<!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback: Callback<RotationVectorResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback: Callback<RotationVectorResponse>,    options?: Options): void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -2152,6 +2234,8 @@ function on(type: SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback: Callba
 
 **替代接口：** [on](#on-21)(type: SensorId.SIGNIFICANT_MOTION, callback: Callback&lt;SignificantMotionResponse&gt;, options?: Options)
 
+<!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback: Callback<SignificantMotionResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback: Callback<SignificantMotionResponse>,    options?: Options): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -2198,6 +2282,8 @@ function on(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback: Callback<W
 
 **替代接口：** [on](#on-22)(type: SensorId.WEAR_DETECTION, callback: Callback&lt;WearDetectionResponse&gt;, options?: Options)
 
+<!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback: Callback<WearDetectionResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback: Callback<WearDetectionResponse>,    options?: Options): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -2230,6 +2316,8 @@ function on(type: 'sensorStatusChange', callback: Callback<SensorStatusEvent>): 
 监听传感器上线下线状态的变化。使用callback异步回调。适用于需要感知传感器设备动态上下线的场景，如远程传感器连接或断开时自动更新传感器列表或订阅状态。
 
 **起始版本：** 19
+
+<!--Device-sensor-function on(type: 'sensorStatusChange', callback: Callback<SensorStatusEvent>): void--><!--Device-sensor-function on(type: 'sensorStatusChange', callback: Callback<SensorStatusEvent>): void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 

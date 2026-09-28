@@ -16,6 +16,8 @@ function getRawDescriptor(pipe: USBDevicePipe): Uint8Array
 
 **起始版本：** 9
 
+<!--Device-usbManager-function getRawDescriptor(pipe: USBDevicePipe): Uint8Array--><!--Device-usbManager-function getRawDescriptor(pipe: USBDevicePipe): Uint8Array-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 **参数：**

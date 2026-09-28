@@ -18,6 +18,8 @@ function cancelAccessoryRight(accessory: USBAccessory): void
 
 **起始版本：** 14
 
+<!--Device-usbManager-function cancelAccessoryRight(accessory: USBAccessory): void--><!--Device-usbManager-function cancelAccessoryRight(accessory: USBAccessory): void-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 **参数：**

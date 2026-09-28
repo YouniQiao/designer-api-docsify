@@ -4,6 +4,8 @@ The **Display** module provides APIs for managing displays, such as obtaining in
 
 **Since:** 7
 
+<!--Device-unnamed-declare namespace display--><!--Device-unnamed-declare namespace display-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 ## Modules to Import

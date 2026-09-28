@@ -9,6 +9,8 @@
 
 **起始版本：** 20
 
+<!--Device-unnamed-declare namespace onScreen--><!--Device-unnamed-declare namespace onScreen-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 ## 导入模块

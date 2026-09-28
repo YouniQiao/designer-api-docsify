@@ -17,9 +17,11 @@ function sendAccessibilityEvent(event: EventInfo, callback: AsyncCallback<void>)
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-accessibility-function sendAccessibilityEvent(event: EventInfo, callback: AsyncCallback<void>): void--><!--Device-accessibility-function sendAccessibilityEvent(event: EventInfo, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -128,9 +130,11 @@ function sendAccessibilityEvent(event: EventInfo): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-accessibility-function sendAccessibilityEvent(event: EventInfo): Promise<void>--><!--Device-accessibility-function sendAccessibilityEvent(event: EventInfo): Promise<void>-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 

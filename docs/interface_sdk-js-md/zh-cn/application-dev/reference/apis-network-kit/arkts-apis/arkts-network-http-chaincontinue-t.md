@@ -10,6 +10,8 @@ export type ChainContinue = boolean
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
+<!--Device-http-export type ChainContinue = boolean--><!--Device-http-export type ChainContinue = boolean-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **类型：** boolean

@@ -12,6 +12,8 @@ export interface RecoverableApplicationInfo
 
 **起始版本：** 11
 
+<!--Device-unnamed-export interface RecoverableApplicationInfo--><!--Device-unnamed-export interface RecoverableApplicationInfo-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -27,6 +29,8 @@ readonly bundleName: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-RecoverableApplicationInfo-readonly bundleName: string--><!--Device-RecoverableApplicationInfo-readonly bundleName: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -44,6 +48,8 @@ readonly bundleType: bundleManager.BundleType
 
 **起始版本：** 12
 
+<!--Device-RecoverableApplicationInfo-readonly bundleType: bundleManager.BundleType--><!--Device-RecoverableApplicationInfo-readonly bundleType: bundleManager.BundleType-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -59,6 +65,8 @@ readonly codePaths: Array<string>
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 12
+
+<!--Device-RecoverableApplicationInfo-readonly codePaths: Array<string>--><!--Device-RecoverableApplicationInfo-readonly codePaths: Array<string>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -76,6 +84,8 @@ readonly iconId: number
 
 **起始版本：** 11
 
+<!--Device-RecoverableApplicationInfo-readonly iconId: long--><!--Device-RecoverableApplicationInfo-readonly iconId: long-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -91,6 +101,8 @@ readonly labelId: number
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-RecoverableApplicationInfo-readonly labelId: long--><!--Device-RecoverableApplicationInfo-readonly labelId: long-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -108,6 +120,8 @@ readonly moduleName: string
 
 **起始版本：** 11
 
+<!--Device-RecoverableApplicationInfo-readonly moduleName: string--><!--Device-RecoverableApplicationInfo-readonly moduleName: string-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -123,6 +137,8 @@ readonly systemApp: boolean
 **类型：** boolean
 
 **起始版本：** 12
+
+<!--Device-RecoverableApplicationInfo-readonly systemApp: boolean--><!--Device-RecoverableApplicationInfo-readonly systemApp: boolean-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

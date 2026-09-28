@@ -8,6 +8,8 @@ interface Panel
 
 **起始版本：** 24
 
+<!--Device-selectionManager-interface Panel--><!--Device-selectionManager-interface Panel-End-->
+
 **系统能力：** SystemCapability.SelectionInput.Selection
 
 ## 导入模块
@@ -25,6 +27,8 @@ hide(): Promise<void>
 隐藏当前划词面板，与[show](#show)搭配使用。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md)获取到Panel实例后调用。使用Promise异步回调。如不主动调用，面板在失焦时会自动隐藏。
 
 **起始版本：** 24
+
+<!--Device-Panel-hide(): Promise<void>--><!--Device-Panel-hide(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.SelectionInput.Selection
 
@@ -65,6 +69,8 @@ moveToGlobalDisplay(x: number, y: number): Promise<void>
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Panel-moveToGlobalDisplay(x: int, y: int): Promise<void>--><!--Device-Panel-moveToGlobalDisplay(x: int, y: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.SelectionInput.Selection
 
@@ -115,6 +121,8 @@ off(type: 'destroyed', callback?: Callback<void>): void
 
 **起始版本：** 24
 
+<!--Device-Panel-off(type: 'destroyed', callback?: Callback<void>): void--><!--Device-Panel-off(type: 'destroyed', callback?: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.SelectionInput.Selection
 
 **参数：**
@@ -145,6 +153,8 @@ off(type: 'hidden', callback?: Callback<void>): void
 
 **起始版本：** 24
 
+<!--Device-Panel-off(type: 'hidden', callback?: Callback<void>): void--><!--Device-Panel-off(type: 'hidden', callback?: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.SelectionInput.Selection
 
 **参数：**
@@ -174,6 +184,8 @@ on(type: 'destroyed', callback: Callback<void>): void
 订阅划词面板销毁事件，与[off('destroyed')](#offdestroyed)搭配使用。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md)获取到Panel实例后调用。
 
 **起始版本：** 24
+
+<!--Device-Panel-on(type: 'destroyed', callback: Callback<void>): void--><!--Device-Panel-on(type: 'destroyed', callback: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.SelectionInput.Selection
 
@@ -206,6 +218,8 @@ on(type: 'hidden', callback: Callback<void>): void
 订阅划词面板隐藏事件，与[off('hidden')](#offhidden)搭配使用。面板调用[hide](#hide)隐藏或失焦自动隐藏时触发该事件。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md)获取到Panel实例后调用。
 
 **起始版本：** 24
+
+<!--Device-Panel-on(type: 'hidden', callback: Callback<void>): void--><!--Device-Panel-on(type: 'hidden', callback: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.SelectionInput.Selection
 
@@ -240,6 +254,8 @@ setUiContent(path: string): Promise<void>
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Panel-setUiContent(path: string): Promise<void>--><!--Device-Panel-setUiContent(path: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.SelectionInput.Selection
 
@@ -291,6 +307,8 @@ show(): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Panel-show(): Promise<void>--><!--Device-Panel-show(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.SelectionInput.Selection
 
 **返回值：**
@@ -330,6 +348,8 @@ startMoving(): Promise<void>
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Panel-startMoving(): Promise<void>--><!--Device-Panel-startMoving(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.SelectionInput.Selection
 

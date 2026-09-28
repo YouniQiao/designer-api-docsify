@@ -18,6 +18,8 @@ function uninstallPrivateCertificate(keyUri: string, callback: AsyncCallback<voi
 
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER
 
+<!--Device-certificateManager-function uninstallPrivateCertificate(keyUri: string, callback: AsyncCallback<void>): void--><!--Device-certificateManager-function uninstallPrivateCertificate(keyUri: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
 
 **参数：**
@@ -69,6 +71,8 @@ function uninstallPrivateCertificate(keyUri: string): Promise<void>
 **起始版本：** 11
 
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER
+
+<!--Device-certificateManager-function uninstallPrivateCertificate(keyUri: string): Promise<void>--><!--Device-certificateManager-function uninstallPrivateCertificate(keyUri: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManager
 

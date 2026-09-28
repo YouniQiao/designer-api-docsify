@@ -8,6 +8,8 @@ interface AudioHapticPlayerOptions
 
 **起始版本：** 11
 
+<!--Device-audioHaptic-interface AudioHapticPlayerOptions--><!--Device-audioHaptic-interface AudioHapticPlayerOptions-End-->
+
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ muteAudio?: boolean
 
 **起始版本：** 11
 
+<!--Device-AudioHapticPlayerOptions-muteAudio?: boolean--><!--Device-AudioHapticPlayerOptions-muteAudio?: boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
 ## muteHaptics
@@ -41,5 +45,7 @@ muteHaptics?: boolean
 **类型：** boolean
 
 **起始版本：** 11
+
+<!--Device-AudioHapticPlayerOptions-muteHaptics?: boolean--><!--Device-AudioHapticPlayerOptions-muteHaptics?: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core

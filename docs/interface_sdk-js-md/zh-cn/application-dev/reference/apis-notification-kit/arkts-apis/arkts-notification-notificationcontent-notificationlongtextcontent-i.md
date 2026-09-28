@@ -18,6 +18,8 @@ export interface NotificationLongTextContent extends NotificationBasicContent
 
 **起始版本：** 7
 
+<!--Device-unnamed-export interface NotificationLongTextContent extends NotificationBasicContent--><!--Device-unnamed-export interface NotificationLongTextContent extends NotificationBasicContent-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## briefText
@@ -31,6 +33,8 @@ briefText: string
 **类型：** string
 
 **起始版本：** 7
+
+<!--Device-NotificationLongTextContent-briefText: string--><!--Device-NotificationLongTextContent-briefText: string-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -46,6 +50,8 @@ expandedTitle: string
 
 **起始版本：** 7
 
+<!--Device-NotificationLongTextContent-expandedTitle: string--><!--Device-NotificationLongTextContent-expandedTitle: string-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## longText
@@ -59,5 +65,7 @@ longText: string
 **类型：** string
 
 **起始版本：** 7
+
+<!--Device-NotificationLongTextContent-longText: string--><!--Device-NotificationLongTextContent-longText: string-End-->
 
 **系统能力：** SystemCapability.Notification.Notification

@@ -16,6 +16,8 @@ interface X509Crl
 
 **替代接口：** [X509CRL](arkts-devicecertificate-cert-x509crl-i.md)
 
+<!--Device-cert-interface X509Crl--><!--Device-cert-interface X509Crl-End-->
+
 **系统能力：** SystemCapability.Security.Cert
 
 ## 导入模块
@@ -42,6 +44,8 @@ getEncoded(callback: AsyncCallback<EncodingBlob>): void
 **废弃版本：** 11
 
 **替代接口：** getEncoded
+
+<!--Device-X509Crl-getEncoded(callback: AsyncCallback<EncodingBlob>): void--><!--Device-X509Crl-getEncoded(callback: AsyncCallback<EncodingBlob>): void-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -126,6 +130,8 @@ getEncoded(): Promise<EncodingBlob>
 
 **替代接口：** getEncoded
 
+<!--Device-X509Crl-getEncoded(): Promise<EncodingBlob>--><!--Device-X509Crl-getEncoded(): Promise<EncodingBlob>-End-->
+
 **系统能力：** SystemCapability.Security.Cert
 
 **返回值：**
@@ -203,6 +209,8 @@ getIssuerName(): DataBlob
 **废弃版本：** 11
 
 **替代接口：** getIssuerName
+
+<!--Device-X509Crl-getIssuerName(): DataBlob--><!--Device-X509Crl-getIssuerName(): DataBlob-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -285,6 +293,8 @@ getLastUpdate(): string
 
 **替代接口：** getLastUpdate
 
+<!--Device-X509Crl-getLastUpdate(): string--><!--Device-X509Crl-getLastUpdate(): string-End-->
+
 **系统能力：** SystemCapability.Security.Cert
 
 **返回值：**
@@ -366,6 +376,8 @@ getNextUpdate(): string
 
 **替代接口：** getNextUpdate
 
+<!--Device-X509Crl-getNextUpdate(): string--><!--Device-X509Crl-getNextUpdate(): string-End-->
+
 **系统能力：** SystemCapability.Security.Cert
 
 **返回值：**
@@ -446,6 +458,8 @@ getRevokedCert(serialNumber: number): X509CrlEntry
 **废弃版本：** 11
 
 **替代接口：** getRevokedCert
+
+<!--Device-X509Crl-getRevokedCert(serialNumber: number): X509CrlEntry--><!--Device-X509Crl-getRevokedCert(serialNumber: number): X509CrlEntry-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -535,6 +549,8 @@ getRevokedCerts(callback: AsyncCallback<Array<X509CrlEntry>>): void
 
 **替代接口：** getRevokedCerts
 
+<!--Device-X509Crl-getRevokedCerts(callback: AsyncCallback<Array<X509CrlEntry>>): void--><!--Device-X509Crl-getRevokedCerts(callback: AsyncCallback<Array<X509CrlEntry>>): void-End-->
+
 **系统能力：** SystemCapability.Security.Cert
 
 **参数：**
@@ -617,6 +633,8 @@ getRevokedCerts(): Promise<Array<X509CrlEntry>>
 
 **替代接口：** getRevokedCerts
 
+<!--Device-X509Crl-getRevokedCerts(): Promise<Array<X509CrlEntry>>--><!--Device-X509Crl-getRevokedCerts(): Promise<Array<X509CrlEntry>>-End-->
+
 **系统能力：** SystemCapability.Security.Cert
 
 **返回值：**
@@ -694,6 +712,8 @@ getRevokedCertWithCert(cert: X509Cert): X509CrlEntry
 **废弃版本：** 11
 
 **替代接口：** getRevokedCertWithCert
+
+<!--Device-X509Crl-getRevokedCertWithCert(cert: X509Cert): X509CrlEntry--><!--Device-X509Crl-getRevokedCertWithCert(cert: X509Cert): X509CrlEntry-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -819,6 +839,8 @@ getSignature(): DataBlob
 
 **替代接口：** getSignature
 
+<!--Device-X509Crl-getSignature(): DataBlob--><!--Device-X509Crl-getSignature(): DataBlob-End-->
+
 **系统能力：** SystemCapability.Security.Cert
 
 **返回值：**
@@ -900,6 +922,8 @@ getSignatureAlgName(): string
 **废弃版本：** 11
 
 **替代接口：** getSignatureAlgName
+
+<!--Device-X509Crl-getSignatureAlgName(): string--><!--Device-X509Crl-getSignatureAlgName(): string-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -983,6 +1007,8 @@ getSignatureAlgOid(): string
 
 **替代接口：** getSignatureAlgOid
 
+<!--Device-X509Crl-getSignatureAlgOid(): string--><!--Device-X509Crl-getSignatureAlgOid(): string-End-->
+
 **系统能力：** SystemCapability.Security.Cert
 
 **返回值：**
@@ -1064,6 +1090,8 @@ getSignatureAlgParams(): DataBlob
 **废弃版本：** 11
 
 **替代接口：** getSignatureAlgParams
+
+<!--Device-X509Crl-getSignatureAlgParams(): DataBlob--><!--Device-X509Crl-getSignatureAlgParams(): DataBlob-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -1147,6 +1175,8 @@ getTbsInfo(): DataBlob
 
 **替代接口：** [getTBSInfo](arkts-devicecertificate-cert-x509crl-i.md#gettbsinfo)
 
+<!--Device-X509Crl-getTbsInfo(): DataBlob--><!--Device-X509Crl-getTbsInfo(): DataBlob-End-->
+
 **系统能力：** SystemCapability.Security.Cert
 
 **返回值：**
@@ -1228,6 +1258,8 @@ getType(): string
 
 **替代接口：** getType
 
+<!--Device-X509Crl-getType(): string--><!--Device-X509Crl-getType(): string-End-->
+
 **系统能力：** SystemCapability.Security.Cert
 
 **返回值：**
@@ -1295,6 +1327,8 @@ getVersion(): number
 
 **替代接口：** getVersion
 
+<!--Device-X509Crl-getVersion(): number--><!--Device-X509Crl-getVersion(): number-End-->
+
 **系统能力：** SystemCapability.Security.Cert
 
 **返回值：**
@@ -1361,6 +1395,8 @@ isRevoked(cert: X509Cert): boolean
 **废弃版本：** 11
 
 **替代接口：** isRevoked
+
+<!--Device-X509Crl-isRevoked(cert: X509Cert): boolean--><!--Device-X509Crl-isRevoked(cert: X509Cert): boolean-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -1470,6 +1506,8 @@ verify(key: cryptoFramework.PubKey, callback: AsyncCallback<void>): void
 **废弃版本：** 11
 
 **替代接口：** verify
+
+<!--Device-X509Crl-verify(key: cryptoFramework.PubKey, callback: AsyncCallback<void>): void--><!--Device-X509Crl-verify(key: cryptoFramework.PubKey, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -1632,6 +1670,8 @@ verify(key: cryptoFramework.PubKey): Promise<void>
 **废弃版本：** 11
 
 **替代接口：** verify
+
+<!--Device-X509Crl-verify(key: cryptoFramework.PubKey): Promise<void>--><!--Device-X509Crl-verify(key: cryptoFramework.PubKey): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 

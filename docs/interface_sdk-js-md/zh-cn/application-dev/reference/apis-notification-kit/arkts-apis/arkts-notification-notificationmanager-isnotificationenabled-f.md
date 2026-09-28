@@ -24,6 +24,8 @@ function isNotificationEnabled(callback: AsyncCallback<boolean>): void
 - API版本11+：N/A
 - API版本9-10：ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function isNotificationEnabled(callback: AsyncCallback<boolean>): void--><!--Device-notificationManager-function isNotificationEnabled(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **参数：**
@@ -79,6 +81,8 @@ function isNotificationEnabled(): Promise<boolean>
 **需要权限：** 
 - API版本11+：N/A
 - API版本9-10：ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function isNotificationEnabled(): Promise<boolean>--><!--Device-notificationManager-function isNotificationEnabled(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

@@ -8,6 +8,8 @@ Automatic capitalization mode type. It only provides the API capability, and the
 
 **Since:** 20
 
+<!--Device-unnamed-declare enum AutoCapitalizationMode--><!--Device-unnamed-declare enum AutoCapitalizationMode-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## NONE
@@ -23,6 +25,8 @@ Default state, no automatic case conversion is performed.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-AutoCapitalizationMode-NONE = 0--><!--Device-AutoCapitalizationMode-NONE = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,6 +44,8 @@ Automatic capitalization is applied per word: The first character of each word i
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-AutoCapitalizationMode-WORDS = 1--><!--Device-AutoCapitalizationMode-WORDS = 1-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## SENTENCES
@@ -56,6 +62,8 @@ Automatic capitalization is applied per sentence: The first character of each se
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-AutoCapitalizationMode-SENTENCES = 2--><!--Device-AutoCapitalizationMode-SENTENCES = 2-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## ALL_CHARACTERS
@@ -71,5 +79,7 @@ Automatic capitalization applied to all characters.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-AutoCapitalizationMode-ALL_CHARACTERS = 3--><!--Device-AutoCapitalizationMode-ALL_CHARACTERS = 3-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

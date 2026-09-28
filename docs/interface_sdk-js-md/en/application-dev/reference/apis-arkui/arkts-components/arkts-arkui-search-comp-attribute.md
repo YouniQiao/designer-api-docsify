@@ -4,11 +4,13 @@
 declare class SearchAttribute extends CommonMethod<SearchAttribute>
 ```
 
-In addition to the [universal attributes](arkts-arkui-common-comp.md#common), the following attributes are supported:
+In addition to the [universal attributes](arkts-arkui-common-comp.md), the following attributes are supported:
 
 **Inheritance/Implementation:** SearchAttribute extends CommonMethod<SearchAttribute>
 
 **Since:** 8
+
+<!--Device-unnamed-declare class SearchAttribute extends CommonMethod<SearchAttribute>--><!--Device-unnamed-declare class SearchAttribute extends CommonMethod<SearchAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,6 +27,8 @@ Sets the text mode of the automatic capitalization mode. This API only provides 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-SearchAttribute-autoCapitalizationMode(mode: AutoCapitalizationMode): SearchAttribute--><!--Device-SearchAttribute-autoCapitalizationMode(mode: AutoCapitalizationMode): SearchAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,6 +51,8 @@ Sets the style of the clear button on the right. For details, see [Example 2: Se
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SearchAttribute-cancelButton(value: CancelButtonOptions | CancelButtonSymbolOptions): SearchAttribute--><!--Device-SearchAttribute-cancelButton(value: CancelButtonOptions | CancelButtonSymbolOptions): SearchAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -74,6 +80,8 @@ Sets the cursor style. If this API is not called, the default cursor width is 2.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SearchAttribute-caretStyle(value: CaretStyle): SearchAttribute--><!--Device-SearchAttribute-caretStyle(value: CaretStyle): SearchAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -103,6 +111,8 @@ Sets whether to compress the leading punctuation at the beginning of a line. Whe
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-SearchAttribute-compressLeadingPunctuation(enabled: Optional<boolean>): SearchAttribute--><!--Device-SearchAttribute-compressLeadingPunctuation(enabled: Optional<boolean>): SearchAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -126,6 +136,8 @@ When CopyOptions.None is set, dragging is not allowed.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SearchAttribute-copyOption(value: CopyOptions): SearchAttribute--><!--Device-SearchAttribute-copyOption(value: CopyOptions): SearchAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -167,6 +179,8 @@ Since API version 23, the custom keyboard can enable continuation through [setCu
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SearchAttribute-customKeyboard(value: CustomBuilder | ComponentContent | undefined, options?: KeyboardOptions): SearchAttribute--><!--Device-SearchAttribute-customKeyboard(value: CustomBuilder | ComponentContent | undefined, options?: KeyboardOptions): SearchAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -196,6 +210,8 @@ Sets the type, style, and color of the text decoration line. If this API is not 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SearchAttribute-decoration(value: TextDecorationOptions): SearchAttribute--><!--Device-SearchAttribute-decoration(value: TextDecorationOptions): SearchAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -217,6 +233,8 @@ Sets the divider color of the input box.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-SearchAttribute-dividerColor(color: Optional<ColorMetrics>): SearchAttribute--><!--Device-SearchAttribute-dividerColor(color: Optional<ColorMetrics>): SearchAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -242,6 +260,8 @@ When [disableMenuItems](../arkts-apis/arkts-arkui-arkui-uicontext-textmenucontro
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SearchAttribute-editMenuOptions(editMenu: EditMenuOptions): SearchAttribute--><!--Device-SearchAttribute-editMenuOptions(editMenu: EditMenuOptions): SearchAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -263,6 +283,8 @@ Sets whether to enable automatic spacing between Chinese and Western characters.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-SearchAttribute-enableAutoSpacing(enabled: Optional<boolean>): SearchAttribute--><!--Device-SearchAttribute-enableAutoSpacing(enabled: Optional<boolean>): SearchAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -288,6 +310,8 @@ When haptic feedback is enabled, you need to set the **requestPermissions** fiel
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
+<!--Device-SearchAttribute-enableHapticFeedback(isEnabled: boolean): SearchAttribute--><!--Device-SearchAttribute-enableHapticFeedback(isEnabled: boolean): SearchAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -311,6 +335,8 @@ Since API version 10, focus gain is bound to the input method by default.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SearchAttribute-enableKeyboardOnFocus(value: boolean): SearchAttribute--><!--Device-SearchAttribute-enableKeyboardOnFocus(value: boolean): SearchAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -343,6 +369,8 @@ The preview content is defined as a temporary text state, and text interception 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SearchAttribute-enablePreviewText(enable: boolean): SearchAttribute--><!--Device-SearchAttribute-enablePreviewText(enable: boolean): SearchAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -373,6 +401,8 @@ This feature takes effect only when CopyOptions is CopyOptions.LocalDevice or Co
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-SearchAttribute-enableSelectedDataDetector(enable: boolean | undefined): SearchAttribute--><!--Device-SearchAttribute-enableSelectedDataDetector(enable: boolean | undefined): SearchAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -395,6 +425,8 @@ Sets the Enter key type of the input method. If this API is not called, the defa
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SearchAttribute-enterKeyType(value: EnterKeyType): SearchAttribute--><!--Device-SearchAttribute-enterKeyType(value: EnterKeyType): SearchAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -416,6 +448,8 @@ For multi-line text stacking, supports adaptive line height based on the actual 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-SearchAttribute-fallbackLineSpacing(enabled: Optional<boolean>): SearchAttribute--><!--Device-SearchAttribute-fallbackLineSpacing(enabled: Optional<boolean>): SearchAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -442,6 +476,8 @@ Sets the font color of the input text. If this API is not called, the default fo
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SearchAttribute-fontColor(value: ResourceColor): SearchAttribute--><!--Device-SearchAttribute-fontColor(value: ResourceColor): SearchAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -473,6 +509,8 @@ For example, the input format for using monospaced digits is: "ss01" on.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SearchAttribute-fontFeature(value: string): SearchAttribute--><!--Device-SearchAttribute-fontFeature(value: string): SearchAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -495,6 +533,8 @@ Vertically centers the text within a line by evenly distributing the line spacin
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SearchAttribute-halfLeading(halfLeading: Optional<boolean>): SearchAttribute--><!--Device-SearchAttribute-halfLeading(halfLeading: Optional<boolean>): SearchAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -516,6 +556,8 @@ Sets whether to add spacing before the first line and after the last line to pre
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-SearchAttribute-includeFontPadding(include: Optional<boolean>): SearchAttribute--><!--Device-SearchAttribute-includeFontPadding(include: Optional<boolean>): SearchAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -543,6 +585,8 @@ If inputFilter is set and the input character is not an empty character, the tex
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SearchAttribute-inputFilter(value: ResourceStr, error?: Callback<string>): SearchAttribute--><!--Device-SearchAttribute-inputFilter(value: ResourceStr, error?: Callback<string>): SearchAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -565,6 +609,8 @@ Sets the keyboard style displayed when the input box is pulled up. This takes ef
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-SearchAttribute-keyboardAppearance(appearance: Optional<KeyboardAppearance>): SearchAttribute--><!--Device-SearchAttribute-keyboardAppearance(appearance: Optional<KeyboardAppearance>): SearchAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -591,6 +637,8 @@ This attribute takes effect on each character, including the character at the en
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SearchAttribute-letterSpacing(value: number | string | Resource): SearchAttribute--><!--Device-SearchAttribute-letterSpacing(value: number | string | Resource): SearchAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -621,6 +669,8 @@ Sets the line height of the text. If the value is not greater than 0, the line h
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SearchAttribute-lineHeight(value: number | string | Resource): SearchAttribute--><!--Device-SearchAttribute-lineHeight(value: number | string | Resource): SearchAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -642,6 +692,8 @@ Sets the maximum font scale of the text.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SearchAttribute-maxFontScale(scale: Optional<number|Resource>): SearchAttribute--><!--Device-SearchAttribute-maxFontScale(scale: Optional<number|Resource>): SearchAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -671,6 +723,8 @@ When maxFontSize is less than or equal to 0, or maxFontSize is less than minFont
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SearchAttribute-maxFontSize(value: number | string | Resource): SearchAttribute--><!--Device-SearchAttribute-maxFontSize(value: number | string | Resource): SearchAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -693,6 +747,8 @@ Sets the maximum number of characters that can be entered in the text. By defaul
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SearchAttribute-maxLength(value: number): SearchAttribute--><!--Device-SearchAttribute-maxLength(value: number): SearchAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -714,6 +770,8 @@ Sets the minimum font scale factor for text.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SearchAttribute-minFontScale(scale: Optional<number|Resource>): SearchAttribute--><!--Device-SearchAttribute-minFontScale(scale: Optional<number|Resource>): SearchAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -742,6 +800,8 @@ When minFontSize is less than or equal to 0, the adaptive font size does not tak
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SearchAttribute-minFontSize(value: number | string | Resource): SearchAttribute--><!--Device-SearchAttribute-minFontSize(value: number | string | Resource): SearchAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -775,6 +835,8 @@ In this callback, if a cursor operation is performed, the developer needs to adj
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SearchAttribute-onChange(callback: EditableTextOnChangeCallback): SearchAttribute--><!--Device-SearchAttribute-onChange(callback: EditableTextOnChangeCallback): SearchAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -796,6 +858,8 @@ Triggered when the text content scrolls.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SearchAttribute-onContentScroll(callback: OnContentScrollCallback): SearchAttribute--><!--Device-SearchAttribute-onContentScroll(callback: OnContentScrollCallback): SearchAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -827,6 +891,8 @@ Triggered when a copy operation is performed.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SearchAttribute-onCopy(callback: Callback<string>): SearchAttribute--><!--Device-SearchAttribute-onCopy(callback: Callback<string>): SearchAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -856,6 +922,8 @@ Triggered when a cut operation is performed.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SearchAttribute-onCut(callback: Callback<string>): SearchAttribute--><!--Device-SearchAttribute-onCut(callback: Callback<string>): SearchAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -891,6 +959,8 @@ Triggered when the deletion is complete.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SearchAttribute-onDidDelete(callback: Callback<DeleteValue>): SearchAttribute--><!--Device-SearchAttribute-onDidDelete(callback: Callback<DeleteValue>): SearchAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -923,6 +993,8 @@ Triggered when input is completed.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SearchAttribute-onDidInsert(callback: Callback<InsertValue>): SearchAttribute--><!--Device-SearchAttribute-onDidInsert(callback: Callback<InsertValue>): SearchAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -945,6 +1017,8 @@ Triggered when the input state changes. The component is in editing state when t
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SearchAttribute-onEditChange(callback: Callback<boolean>): SearchAttribute--><!--Device-SearchAttribute-onEditChange(callback: Callback<boolean>): SearchAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -965,6 +1039,8 @@ Called when a paste operation is performed.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SearchAttribute-onPaste(callback: OnPasteCallback): SearchAttribute--><!--Device-SearchAttribute-onPaste(callback: OnPasteCallback): SearchAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -984,6 +1060,8 @@ Triggered when the search icon or search button is clicked, or when the search b
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SearchAttribute-onSubmit(callback: Callback<string>): SearchAttribute--><!--Device-SearchAttribute-onSubmit(callback: Callback<string>): SearchAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1009,6 +1087,8 @@ Triggered when the search icon or search button is clicked, or when the search b
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-SearchAttribute-onSubmit(callback: SearchSubmitCallback): SearchAttribute--><!--Device-SearchAttribute-onSubmit(callback: SearchSubmitCallback): SearchAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1030,6 +1110,8 @@ Triggered when the text selection position or the cursor position in editing sta
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SearchAttribute-onTextSelectionChange(callback: OnTextSelectionChangeCallback): SearchAttribute--><!--Device-SearchAttribute-onTextSelectionChange(callback: OnTextSelectionChangeCallback): SearchAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1065,6 +1147,8 @@ IMEClient is valid only during the execution of onWillAttachIME and cannot be ca
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-SearchAttribute-onWillAttachIME(callback: Callback<IMEClient>): SearchAttribute--><!--Device-SearchAttribute-onWillAttachIME(callback: Callback<IMEClient>): SearchAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1099,6 +1183,8 @@ Triggered when the text content is about to change.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-SearchAttribute-onWillChange(callback: Callback<EditableTextChangeValue, boolean>): SearchAttribute--><!--Device-SearchAttribute-onWillChange(callback: Callback<EditableTextChangeValue, boolean>): SearchAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1131,6 +1217,8 @@ Triggered before a copy operation is performed.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-SearchAttribute-onWillCopy(callback: Callback<string, boolean>): SearchAttribute--><!--Device-SearchAttribute-onWillCopy(callback: Callback<string, boolean>): SearchAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1162,6 +1250,8 @@ Triggered before a cut operation is performed.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-SearchAttribute-onWillCut(callback: Callback<string, boolean>): SearchAttribute--><!--Device-SearchAttribute-onWillCut(callback: Callback<string, boolean>): SearchAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1197,6 +1287,8 @@ Triggered when the content is about to be deleted.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SearchAttribute-onWillDelete(callback: Callback<DeleteValue, boolean>): SearchAttribute--><!--Device-SearchAttribute-onWillDelete(callback: Callback<DeleteValue, boolean>): SearchAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1229,6 +1321,8 @@ Triggered when input is about to be inserted.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SearchAttribute-onWillInsert(callback: Callback<InsertValue, boolean>): SearchAttribute--><!--Device-SearchAttribute-onWillInsert(callback: Callback<InsertValue, boolean>): SearchAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1248,6 +1342,8 @@ Sets the text color of the placeholder. If this API is not called, the default p
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SearchAttribute-placeholderColor(value: ResourceColor): SearchAttribute--><!--Device-SearchAttribute-placeholderColor(value: ResourceColor): SearchAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1275,6 +1371,8 @@ On wearable devices, the default font size is 18fp.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SearchAttribute-placeholderFont(value?: Font): SearchAttribute--><!--Device-SearchAttribute-placeholderFont(value?: Font): SearchAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1298,6 +1396,8 @@ On Wearable devices, the default font size is 18fp.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SearchAttribute-searchButton(value: ResourceStr, option?: SearchButtonOptions): SearchAttribute--><!--Device-SearchAttribute-searchButton(value: ResourceStr, option?: SearchButtonOptions): SearchAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1324,6 +1424,8 @@ On Wearable devices, the default icon size is 16 vp.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SearchAttribute-searchIcon(value: IconOptions | SymbolGlyphModifier): SearchAttribute--><!--Device-SearchAttribute-searchIcon(value: IconOptions | SymbolGlyphModifier): SearchAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1345,6 +1447,8 @@ Sets the highlight color of the selected text. If this attribute is not used, th
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SearchAttribute-selectedBackgroundColor(value: ResourceColor): SearchAttribute--><!--Device-SearchAttribute-selectedBackgroundColor(value: ResourceColor): SearchAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1368,6 +1472,8 @@ Sets the backplane style for text dragging in the search box.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-SearchAttribute-selectedDragPreviewStyle(value: SelectedDragPreviewStyle | undefined): SearchAttribute--><!--Device-SearchAttribute-selectedDragPreviewStyle(value: SelectedDragPreviewStyle | undefined): SearchAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1389,6 +1495,8 @@ Sets whether to hide the system text selection menu. If this API is not called, 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SearchAttribute-selectionMenuHidden(value: boolean): SearchAttribute--><!--Device-SearchAttribute-selectionMenuHidden(value: boolean): SearchAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1418,6 +1526,8 @@ Sets the text shader effect, such as linear gradient and radial gradient. If thi
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-SearchAttribute-shaderStyle(shader: ShaderStyle | undefined): SearchAttribute--><!--Device-SearchAttribute-shaderStyle(shader: ShaderStyle | undefined): SearchAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1439,6 +1549,8 @@ Sets whether to prevent the back key event from being propagated upward. When se
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-SearchAttribute-stopBackPress(isStopped: Optional<boolean>): SearchAttribute--><!--Device-SearchAttribute-stopBackPress(isStopped: Optional<boolean>): SearchAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1462,6 +1574,8 @@ Sets the color of the text stroke.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-SearchAttribute-strokeColor(color: Optional<ResourceColor>): SearchAttribute--><!--Device-SearchAttribute-strokeColor(color: Optional<ResourceColor>): SearchAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1483,6 +1597,8 @@ Sets the corner style of the text stroke. This attribute takes effect only when 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-SearchAttribute-strokeJoinStyle(strokeJoinStyle: StrokeJoinStyle | undefined): SearchAttribute--><!--Device-SearchAttribute-strokeJoinStyle(strokeJoinStyle: StrokeJoinStyle | undefined): SearchAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1511,6 +1627,8 @@ Sets the width of the text stroke. If this API is not called, the default value 
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-SearchAttribute-strokeWidth(width: Optional<LengthMetrics>): SearchAttribute--><!--Device-SearchAttribute-strokeWidth(width: Optional<LengthMetrics>): SearchAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1537,6 +1655,8 @@ Sets the alignment of text in the search box. The supported alignment modes are 
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SearchAttribute-textAlign(value: TextAlign): SearchAttribute--><!--Device-SearchAttribute-textAlign(value: TextAlign): SearchAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1558,6 +1678,8 @@ Specifies the text layout direction. If this API is not called, the default text
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-SearchAttribute-textDirection(direction: TextDirection | undefined): SearchAttribute--><!--Device-SearchAttribute-textDirection(direction: TextDirection | undefined): SearchAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1585,6 +1707,8 @@ On wearable devices, the default font size is 18fp.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SearchAttribute-textFont(value?: Font): SearchAttribute--><!--Device-SearchAttribute-textFont(value?: Font): SearchAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1606,6 +1730,8 @@ Sets the indentation of the first line of text. If this API is not called, the d
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SearchAttribute-textIndent(value: Dimension): SearchAttribute--><!--Device-SearchAttribute-textIndent(value: Dimension): SearchAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1636,6 +1762,8 @@ Different SearchType values bring up the corresponding keyboard type and restric
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SearchAttribute-type(value: SearchType): SearchAttribute--><!--Device-SearchAttribute-type(value: SearchType): SearchAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

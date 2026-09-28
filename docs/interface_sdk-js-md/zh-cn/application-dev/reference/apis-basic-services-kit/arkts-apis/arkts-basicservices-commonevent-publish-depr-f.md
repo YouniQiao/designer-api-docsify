@@ -19,6 +19,8 @@ function publish(event: string, callback: AsyncCallback<void>): void
 
 **替代接口：** [publish](arkts-basicservices-commoneventmanager-publish-f.md)(event: string, callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-commonEvent-function publish(event: string, callback: AsyncCallback<void>): void--><!--Device-commonEvent-function publish(event: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **参数：**
@@ -62,6 +64,8 @@ function publish(event: string, options: CommonEventPublishData, callback: Async
 **废弃版本：** 9
 
 **替代接口：** [publish](arkts-basicservices-commoneventmanager-publish-f.md#publish-1)(event: string, options: CommonEventPublishData, callback: AsyncCallback&lt;void&gt;)
+
+<!--Device-commonEvent-function publish(event: string, options: CommonEventPublishData, callback: AsyncCallback<void>): void--><!--Device-commonEvent-function publish(event: string, options: CommonEventPublishData, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 

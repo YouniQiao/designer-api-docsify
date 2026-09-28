@@ -22,6 +22,8 @@ function revokePermission(tokenID: number): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-fileShare-function revokePermission(tokenID: int): Promise<void>--><!--Device-fileShare-function revokePermission(tokenID: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
 **系统接口：** 此接口为系统接口。
@@ -84,6 +86,8 @@ function revokePermission(tokenID: number, policies: Array<PolicyInfo>): Promise
 **需要权限：** ohos.permission.REVOKE_FILE_ACCESS_PERSIST
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-fileShare-function revokePermission(tokenID: int, policies: Array<PolicyInfo>): Promise<void>--><!--Device-fileShare-function revokePermission(tokenID: int, policies: Array<PolicyInfo>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 

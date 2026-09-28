@@ -8,6 +8,8 @@ export interface LockInfo
 
 **起始版本：** 11
 
+<!--Device-cloudExtension-export interface LockInfo--><!--Device-cloudExtension-export interface LockInfo-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ interval: number
 
 **起始版本：** 11
 
+<!--Device-LockInfo-interval: int--><!--Device-LockInfo-interval: int-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ lockId: number
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-LockInfo-lockId: int--><!--Device-LockInfo-lockId: int-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 

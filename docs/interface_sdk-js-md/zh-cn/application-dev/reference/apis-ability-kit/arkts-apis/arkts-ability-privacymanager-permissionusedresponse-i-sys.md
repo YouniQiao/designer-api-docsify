@@ -8,6 +8,8 @@ interface PermissionUsedResponse
 
 **起始版本：** 9
 
+<!--Device-privacyManager-interface PermissionUsedResponse--><!--Device-privacyManager-interface PermissionUsedResponse-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ beginTime: number
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-PermissionUsedResponse-beginTime: long--><!--Device-PermissionUsedResponse-beginTime: long-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -50,6 +54,8 @@ bundleRecords: Array<BundleUsedRecord>
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-PermissionUsedResponse-bundleRecords: Array<BundleUsedRecord>--><!--Device-PermissionUsedResponse-bundleRecords: Array<BundleUsedRecord>-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -67,6 +73,8 @@ endTime: number
 **起始版本：** 9
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-PermissionUsedResponse-endTime: long--><!--Device-PermissionUsedResponse-endTime: long-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 

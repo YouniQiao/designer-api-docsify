@@ -12,6 +12,8 @@ export interface DispatchInfo
 
 **起始版本：** 9
 
+<!--Device-unnamed-export interface DispatchInfo--><!--Device-unnamed-export interface DispatchInfo-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **系统接口：** 此接口为系统接口。
@@ -28,6 +30,8 @@ readonly dispatchAPIVersion: string
 
 **起始版本：** 9
 
+<!--Device-DispatchInfo-readonly dispatchAPIVersion: string--><!--Device-DispatchInfo-readonly dispatchAPIVersion: string-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **系统接口：** 此接口为系统接口。
@@ -43,6 +47,8 @@ dispatchInfo结构体版本信息。
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-DispatchInfo-readonly version: string--><!--Device-DispatchInfo-readonly version: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 

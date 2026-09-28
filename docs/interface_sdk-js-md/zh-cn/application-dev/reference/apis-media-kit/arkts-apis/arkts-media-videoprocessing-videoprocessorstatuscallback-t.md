@@ -10,6 +10,8 @@ type VideoProcessorStatusCallback = (status: VideoProcessorStatus) => void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-videoProcessing-type VideoProcessorStatusCallback = (status: VideoProcessorStatus) => void--><!--Device-videoProcessing-type VideoProcessorStatusCallback = (status: VideoProcessorStatus) => void-End-->
+
 **系统能力：** SystemCapability.Multimedia.VideoProcessingEngine
 
 **参数：**

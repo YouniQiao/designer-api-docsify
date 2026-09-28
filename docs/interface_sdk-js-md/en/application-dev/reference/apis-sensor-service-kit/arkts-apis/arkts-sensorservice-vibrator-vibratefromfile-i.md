@@ -8,6 +8,8 @@ Represents a custom vibration pattern. It is supported only by certain devices. 
 
 **Since:** 10
 
+<!--Device-vibrator-interface VibrateFromFile--><!--Device-vibrator-interface VibrateFromFile-End-->
+
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 ## Modules to Import
@@ -28,6 +30,8 @@ File descriptor (FD) of the vibration configuration file.
 
 **Since:** 10
 
+<!--Device-VibrateFromFile-hapticFd: HapticFileDescriptor--><!--Device-VibrateFromFile-hapticFd: HapticFileDescriptor-End-->
+
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 ## type
@@ -41,5 +45,7 @@ The value **file** means vibration according to a vibration configuration file.
 **Type:** 'file'
 
 **Since:** 10
+
+<!--Device-VibrateFromFile-type: 'file'--><!--Device-VibrateFromFile-type: 'file'-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice

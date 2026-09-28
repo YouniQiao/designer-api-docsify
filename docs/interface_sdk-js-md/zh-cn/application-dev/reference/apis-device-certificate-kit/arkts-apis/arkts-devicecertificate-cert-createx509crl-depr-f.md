@@ -25,6 +25,8 @@ function createX509Crl(inStream: EncodingBlob, callback: AsyncCallback<X509Crl>)
 
 **替代接口：** [createX509CRL](arkts-devicecertificate-cert-createx509crl-f.md)
 
+<!--Device-cert-function createX509Crl(inStream: EncodingBlob, callback: AsyncCallback<X509Crl>): void--><!--Device-cert-function createX509Crl(inStream: EncodingBlob, callback: AsyncCallback<X509Crl>): void-End-->
+
 **系统能力：** SystemCapability.Security.Cert
 
 **参数：**
@@ -102,6 +104,8 @@ function createX509Crl(inStream: EncodingBlob): Promise<X509Crl>
 **废弃版本：** 11
 
 **替代接口：** [createX509CRL](arkts-devicecertificate-cert-createx509crl-f.md)
+
+<!--Device-cert-function createX509Crl(inStream: EncodingBlob): Promise<X509Crl>--><!--Device-cert-function createX509Crl(inStream: EncodingBlob): Promise<X509Crl>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 

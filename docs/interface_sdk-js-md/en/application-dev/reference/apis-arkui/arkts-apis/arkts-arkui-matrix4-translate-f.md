@@ -20,6 +20,8 @@ Translates this matrix object along the x, y, and z axes.
 
 **Substitutes:** [translate](arkts-arkui-matrix4-matrix4transit-i.md#translate)
 
+<!--Device-matrix4-function translate(options: TranslateOption): Matrix4Transit--><!--Device-matrix4-function translate(options: TranslateOption): Matrix4Transit-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

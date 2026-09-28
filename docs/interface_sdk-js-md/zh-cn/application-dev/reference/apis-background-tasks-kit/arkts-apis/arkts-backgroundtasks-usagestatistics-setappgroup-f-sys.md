@@ -18,6 +18,8 @@ function setAppGroup(bundleName: string, newGroup: GroupType, callback: AsyncCal
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-usageStatistics-function setAppGroup(bundleName: string, newGroup: GroupType, callback: AsyncCallback<void>): void--><!--Device-usageStatistics-function setAppGroup(bundleName: string, newGroup: GroupType, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +79,8 @@ function setAppGroup(bundleName: string, newGroup: GroupType): Promise<void>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
+
+<!--Device-usageStatistics-function setAppGroup(bundleName: string, newGroup: GroupType): Promise<void>--><!--Device-usageStatistics-function setAppGroup(bundleName: string, newGroup: GroupType): Promise<void>-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 

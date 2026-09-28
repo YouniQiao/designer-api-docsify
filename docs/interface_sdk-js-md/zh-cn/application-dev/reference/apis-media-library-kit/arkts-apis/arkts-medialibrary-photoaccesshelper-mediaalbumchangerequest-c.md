@@ -16,6 +16,8 @@ MediaAlbumChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photo
 
 **起始版本：** 11
 
+<!--Device-photoAccessHelper-class MediaAlbumChangeRequest implements MediaChangeRequest--><!--Device-photoAccessHelper-class MediaAlbumChangeRequest implements MediaChangeRequest-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
@@ -33,6 +35,8 @@ addAssets(assets: Array<PhotoAsset>): void
 向相册中添加资产。
 
 **起始版本：** 11
+
+<!--Device-MediaAlbumChangeRequest-addAssets(assets: Array<PhotoAsset>): void--><!--Device-MediaAlbumChangeRequest-addAssets(assets: Array<PhotoAsset>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -89,6 +93,8 @@ constructor(album: Album)
 构造函数用于初始化新创建的对象。用于对相册进行操作。
 
 **起始版本：** 11
+
+<!--Device-MediaAlbumChangeRequest-constructor(album: Album)--><!--Device-MediaAlbumChangeRequest-constructor(album: Album)-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -147,6 +153,8 @@ getAlbum(): Album
 
 **起始版本：** 11
 
+<!--Device-MediaAlbumChangeRequest-getAlbum(): Album--><!--Device-MediaAlbumChangeRequest-getAlbum(): Album-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **返回值：**
@@ -191,6 +199,8 @@ removeAssets(assets: Array<PhotoAsset>): void
 从相册中移除资产。
 
 **起始版本：** 11
+
+<!--Device-MediaAlbumChangeRequest-removeAssets(assets: Array<PhotoAsset>): void--><!--Device-MediaAlbumChangeRequest-removeAssets(assets: Array<PhotoAsset>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -258,6 +268,8 @@ setAlbumName(name: string): void
 
 **起始版本：** 11
 
+<!--Device-MediaAlbumChangeRequest-setAlbumName(name: string): void--><!--Device-MediaAlbumChangeRequest-setAlbumName(name: string): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **参数：**
@@ -307,5 +319,7 @@ readonly comment: string
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MediaAlbumChangeRequest-readonly comment: string--><!--Device-MediaAlbumChangeRequest-readonly comment: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core

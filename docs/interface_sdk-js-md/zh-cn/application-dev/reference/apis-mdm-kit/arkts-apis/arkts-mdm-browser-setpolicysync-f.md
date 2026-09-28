@@ -20,6 +20,8 @@ function setPolicySync(admin: Want, appId: string, policyName: string, policyVal
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-browser-function setPolicySync(admin: Want, appId: string, policyName: string, policyValue: string): void--><!--Device-browser-function setPolicySync(admin: Want, appId: string, policyName: string, policyValue: string): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**

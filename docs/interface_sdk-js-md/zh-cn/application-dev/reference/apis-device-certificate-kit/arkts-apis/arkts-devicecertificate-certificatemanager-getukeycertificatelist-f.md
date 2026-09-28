@@ -20,6 +20,8 @@ function getUkeyCertificateList(ukeyProvider: string, ukeyInfo: UkeyInfo): Promi
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-certificateManager-function getUkeyCertificateList(ukeyProvider: string, ukeyInfo: UkeyInfo): Promise<CMResult>--><!--Device-certificateManager-function getUkeyCertificateList(ukeyProvider: string, ukeyInfo: UkeyInfo): Promise<CMResult>-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
 
 **参数：**

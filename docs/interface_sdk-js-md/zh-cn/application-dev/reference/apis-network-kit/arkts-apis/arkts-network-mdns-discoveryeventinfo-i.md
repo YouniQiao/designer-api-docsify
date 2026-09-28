@@ -8,6 +8,8 @@ export interface DiscoveryEventInfo
 
 **起始版本：** 11
 
+<!--Device-mdns-export interface DiscoveryEventInfo--><!--Device-mdns-export interface DiscoveryEventInfo-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.MDNS
 
 ## 导入模块
@@ -30,6 +32,8 @@ MDNS错误信息。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-DiscoveryEventInfo-errorCode?: MdnsError--><!--Device-DiscoveryEventInfo-errorCode?: MdnsError-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.MDNS
 
 ## serviceInfo
@@ -45,5 +49,7 @@ MDNS服务信息。
 **起始版本：** 11
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-DiscoveryEventInfo-serviceInfo: LocalServiceInfo--><!--Device-DiscoveryEventInfo-serviceInfo: LocalServiceInfo-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.MDNS

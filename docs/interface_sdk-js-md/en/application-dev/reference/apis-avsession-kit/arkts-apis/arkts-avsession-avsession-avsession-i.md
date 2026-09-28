@@ -8,6 +8,8 @@ AVSession object.
 
 **Since:** 10
 
+<!--Device-avSession-interface AVSession--><!--Device-avSession-interface AVSession-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 ## Modules to Import
@@ -25,6 +27,8 @@ activate(callback: AsyncCallback<void>): void
 Activate the session, indicating that the session can accept control commands
 
 **Since:** 10
+
+<!--Device-AVSession-activate(callback: AsyncCallback<void>): void--><!--Device-AVSession-activate(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -67,7 +71,9 @@ Activate the session, indicating that the session can accept control commands
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-AVSession-activate(): Promise<void>--><!--Device-AVSession-activate(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -101,6 +107,8 @@ deactivate(callback: AsyncCallback<void>): void
 Deactivate the session, indicating that the session not ready to accept control commands
 
 **Since:** 10
+
+<!--Device-AVSession-deactivate(callback: AsyncCallback<void>): void--><!--Device-AVSession-deactivate(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -143,7 +151,9 @@ Deactivate the session, indicating that the session not ready to accept control 
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-AVSession-deactivate(): Promise<void>--><!--Device-AVSession-deactivate(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -177,6 +187,8 @@ destroy(callback: AsyncCallback<void>): void
 Destroy this session, the server will clean up the session resources
 
 **Since:** 10
+
+<!--Device-AVSession-destroy(callback: AsyncCallback<void>): void--><!--Device-AVSession-destroy(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -219,7 +231,9 @@ Destroy this session, the server will clean up the session resources
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-AVSession-destroy(): Promise<void>--><!--Device-AVSession-destroy(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -255,6 +269,8 @@ Dispatch the session event of this session.
 **Since:** 10
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-AVSession-dispatchSessionEvent(event: string, args: {[key: string]: Object}, callback: AsyncCallback<void>): void--><!--Device-AVSession-dispatchSessionEvent(event: string, args: {[key: string]: Object}, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -305,6 +321,8 @@ Dispatch the session event of this session.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-dispatchSessionEvent(event: string, args: {[key: string]: Object}): Promise<void>--><!--Device-AVSession-dispatchSessionEvent(event: string, args: {[key: string]: Object}): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -349,6 +367,8 @@ Enable desktop lyric for this session.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVSession-enableDesktopLyric(enable: boolean): Promise<void>--><!--Device-AVSession-enableDesktopLyric(enable: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -391,7 +411,9 @@ Get all the current virtual display information for extended display.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-AVSession-getAllCastDisplays(): Promise<Array<CastDisplayInfo>>--><!--Device-AVSession-getAllCastDisplays(): Promise<Array<CastDisplayInfo>>-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.ExtendedDisplayCast
 
@@ -428,6 +450,8 @@ getAVCastController(callback: AsyncCallback<AVCastController>): void
 Get the cast controller when the session is casted to remote device. If the avsession is not under casting state, the controller will return null.
 
 **Since:** 10
+
+<!--Device-AVSession-getAVCastController(callback: AsyncCallback<AVCastController>): void--><!--Device-AVSession-getAVCastController(callback: AsyncCallback<AVCastController>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -474,6 +498,8 @@ Get the cast controller when the session is casted to remote device. If the avse
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-getAVCastController(): Promise<AVCastController>--><!--Device-AVSession-getAVCastController(): Promise<AVCastController>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Return value:**
@@ -508,6 +534,8 @@ getController(callback: AsyncCallback<AVSessionController>): void
 Get the current session's own controller
 
 **Since:** 10
+
+<!--Device-AVSession-getController(callback: AsyncCallback<AVSessionController>): void--><!--Device-AVSession-getController(callback: AsyncCallback<AVSessionController>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -548,7 +576,9 @@ Get the current session's own controller
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-AVSession-getController(): Promise<AVSessionController>--><!--Device-AVSession-getController(): Promise<AVSessionController>-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -584,6 +614,8 @@ Get desktop lyric state such as lock state for this session.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AVSession-getDesktopLyricState(): Promise<DesktopLyricState>--><!--Device-AVSession-getDesktopLyricState(): Promise<DesktopLyricState>-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -622,6 +654,8 @@ getOutputDevice(callback: AsyncCallback<OutputDeviceInfo>): void
 Get output device information
 
 **Since:** 10
+
+<!--Device-AVSession-getOutputDevice(callback: AsyncCallback<OutputDeviceInfo>): void--><!--Device-AVSession-getOutputDevice(callback: AsyncCallback<OutputDeviceInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -664,7 +698,9 @@ Get output device information
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-AVSession-getOutputDevice(): Promise<OutputDeviceInfo>--><!--Device-AVSession-getOutputDevice(): Promise<OutputDeviceInfo>-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -699,7 +735,9 @@ Get output device information
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-AVSession-getOutputDeviceSync(): OutputDeviceInfo--><!--Device-AVSession-getOutputDeviceSync(): OutputDeviceInfo-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -733,6 +771,8 @@ Query desktop lyric visible state for this session.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AVSession-isDesktopLyricVisible(): Promise<boolean>--><!--Device-AVSession-isDesktopLyricVisible(): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -773,6 +813,8 @@ Unregister play command callback. When canceling the callback, need to update th
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-off(type: 'play', callback?: () => void): void--><!--Device-AVSession-off(type: 'play', callback?: () => void): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -807,6 +849,8 @@ Unregister pause command callback. When canceling the callback, need to update t
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSession-off(type: 'pause', callback?: () => void): void--><!--Device-AVSession-off(type: 'pause', callback?: () => void): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -843,6 +887,8 @@ Unregister stop command callback. When canceling the callback, need to update th
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-off(type: 'stop', callback?: () => void): void--><!--Device-AVSession-off(type: 'stop', callback?: () => void): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -877,6 +923,8 @@ Unregister playNext command callback. When canceling the callback, need to updat
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSession-off(type: 'playNext', callback?: () => void): void--><!--Device-AVSession-off(type: 'playNext', callback?: () => void): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -913,6 +961,8 @@ Unregister playPrevious command callback. When canceling the callback, need to u
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-off(type: 'playPrevious', callback?: () => void): void--><!--Device-AVSession-off(type: 'playPrevious', callback?: () => void): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -947,6 +997,8 @@ Unregister fastForward command callback. When canceling the callback, need to up
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSession-off(type: 'fastForward', callback?: () => void): void--><!--Device-AVSession-off(type: 'fastForward', callback?: () => void): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -983,6 +1035,8 @@ Unregister rewind command callback. When canceling the callback, need to update 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-off(type: 'rewind', callback?: () => void): void--><!--Device-AVSession-off(type: 'rewind', callback?: () => void): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -1018,6 +1072,8 @@ Unsubscribes from playWithAssetId events.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-AVSession-off(type: 'playWithAssetId', callback?: Callback<string>): void--><!--Device-AVSession-off(type: 'playWithAssetId', callback?: Callback<string>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -1051,6 +1107,8 @@ Unregister seek command callback
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSession-off(type: 'seek', callback?: (time: long) => void): void--><!--Device-AVSession-off(type: 'seek', callback?: (time: long) => void): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -1087,6 +1145,8 @@ Unregister setSpeed command callback
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-off(type: 'setSpeed', callback?: (speed: double) => void): void--><!--Device-AVSession-off(type: 'setSpeed', callback?: (speed: double) => void): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -1121,6 +1181,8 @@ Unregister setLoopMode command callback
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSession-off(type: 'setLoopMode', callback?: (mode: LoopMode) => void): void--><!--Device-AVSession-off(type: 'setLoopMode', callback?: (mode: LoopMode) => void): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -1157,6 +1219,8 @@ Unregister setTargetLoopMode command callback
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-AVSession-off(type: 'setTargetLoopMode', callback?: Callback<LoopMode>): void--><!--Device-AVSession-off(type: 'setTargetLoopMode', callback?: Callback<LoopMode>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -1190,6 +1254,8 @@ Unregister toggle favorite command callback
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSession-off(type: 'toggleFavorite', callback?: (assetId: string) => void): void--><!--Device-AVSession-off(type: 'toggleFavorite', callback?: (assetId: string) => void): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -1226,6 +1292,8 @@ Unregister media key handling callback
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-off(type: 'handleKeyEvent', callback?: (event: KeyEvent) => void): void--><!--Device-AVSession-off(type: 'handleKeyEvent', callback?: (event: KeyEvent) => void): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -1260,6 +1328,8 @@ Unregister session output device change callback
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSession-off(type: 'outputDeviceChange', callback?: (state: ConnectionState, device: OutputDeviceInfo) => void): void--><!--Device-AVSession-off(type: 'outputDeviceChange', callback?: (state: ConnectionState, device: OutputDeviceInfo) => void): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -1298,6 +1368,8 @@ Unregister session custom command change callback
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-off(type: 'commonCommand', callback?: (command: string, args: {[key: string]: Object}) => void): void--><!--Device-AVSession-off(type: 'commonCommand', callback?: (command: string, args: {[key: string]: Object}) => void): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -1332,6 +1404,8 @@ Unregister the item to play from the playlist change callback
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSession-off(type: 'skipToQueueItem', callback?: (itemId: int) => void): void--><!--Device-AVSession-off(type: 'skipToQueueItem', callback?: (itemId: int) => void): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -1368,6 +1442,8 @@ Unregister answer command callback.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-off(type: 'answer', callback?: Callback<void>): void--><!--Device-AVSession-off(type: 'answer', callback?: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -1402,6 +1478,8 @@ Unregister hangUp command callback.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSession-off(type: 'hangUp', callback?: Callback<void>): void--><!--Device-AVSession-off(type: 'hangUp', callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -1438,6 +1516,8 @@ Unregister toggleCallMute command callback.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-off(type: 'toggleCallMute', callback?: Callback<void>): void--><!--Device-AVSession-off(type: 'toggleCallMute', callback?: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -1473,6 +1553,8 @@ Unregister listener for cast display information changed.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-off(type: 'castDisplayChange', callback?: Callback<CastDisplayInfo>): void--><!--Device-AVSession-off(type: 'castDisplayChange', callback?: Callback<CastDisplayInfo>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.ExtendedDisplayCast
 
 **Parameters:**
@@ -1507,6 +1589,8 @@ Unsubscribes from custom data changes.
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-AVSession-off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void--><!--Device-AVSession-off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -1546,6 +1630,8 @@ Unregister playFromAssetId command callback.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-off(type: 'playFromAssetId', callback?: (assetId: number) => void): void--><!--Device-AVSession-off(type: 'playFromAssetId', callback?: (assetId: number) => void): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -1580,6 +1666,8 @@ Unregister desktop lyric state changed callback.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AVSession-offDesktopLyricStateChanged(callback?: Callback<DesktopLyricState>): void--><!--Device-AVSession-offDesktopLyricStateChanged(callback?: Callback<DesktopLyricState>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -1616,6 +1704,8 @@ Unregister desktop lyric visible state change callback.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVSession-offDesktopLyricVisibilityChanged(callback?: Callback<boolean>): void--><!--Device-AVSession-offDesktopLyricVisibilityChanged(callback?: Callback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -1649,6 +1739,8 @@ Unregister fastForward command callback. When canceling the callback, need to up
 
 **Since:** 22
 
+<!--Device-AVSession-offFastForward(callback?: TwoParamCallback<long, CommandInfo>): void--><!--Device-AVSession-offFastForward(callback?: TwoParamCallback<long, CommandInfo>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -1679,6 +1771,8 @@ offPlay(callback?: Callback<CommandInfo>): void
 Unregister play command callback. When canceling the callback, need to update the supported commands list.
 
 **Since:** 22
+
+<!--Device-AVSession-offPlay(callback?: Callback<CommandInfo>): void--><!--Device-AVSession-offPlay(callback?: Callback<CommandInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -1711,6 +1805,8 @@ Unregister playNext command callback. When canceling the callback, need to updat
 
 **Since:** 22
 
+<!--Device-AVSession-offPlayNext(callback?: Callback<CommandInfo>): void--><!--Device-AVSession-offPlayNext(callback?: Callback<CommandInfo>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -1742,6 +1838,8 @@ Unregister playPrevious command callback. When canceling the callback, need to u
 
 **Since:** 22
 
+<!--Device-AVSession-offPlayPrevious(callback?: Callback<CommandInfo>): void--><!--Device-AVSession-offPlayPrevious(callback?: Callback<CommandInfo>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -1772,6 +1870,8 @@ offRewind(callback?: TwoParamCallback<number, CommandInfo>): void
 Unregister rewind command callback. When canceling the callback, need to update the supported commands list.
 
 **Since:** 22
+
+<!--Device-AVSession-offRewind(callback?: TwoParamCallback<long, CommandInfo>): void--><!--Device-AVSession-offRewind(callback?: TwoParamCallback<long, CommandInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -1805,6 +1905,8 @@ Register play command callback. As long as it is registered, it means that the a
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSession-on(type: 'play', callback: () => void): void--><!--Device-AVSession-on(type: 'play', callback: () => void): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -1843,6 +1945,8 @@ Register pause command callback. As long as it is registered, it means that the 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-on(type: 'pause', callback: () => void): void--><!--Device-AVSession-on(type: 'pause', callback: () => void): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -1879,6 +1983,8 @@ Register stop command callback. As long as it is registered, it means that the a
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSession-on(type: 'stop', callback: () => void): void--><!--Device-AVSession-on(type: 'stop', callback: () => void): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -1917,6 +2023,8 @@ Register playNext command callback. As long as it is registered, it means that t
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-on(type: 'playNext', callback: () => void): void--><!--Device-AVSession-on(type: 'playNext', callback: () => void): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -1953,6 +2061,8 @@ Register playPrevious command callback. As long as it is registered, it means th
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSession-on(type: 'playPrevious', callback: () => void): void--><!--Device-AVSession-on(type: 'playPrevious', callback: () => void): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -1991,6 +2101,8 @@ Register fastForward command callback. As long as it is registered, it means tha
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-on(type: 'fastForward', callback: (time ?: long) => void): void--><!--Device-AVSession-on(type: 'fastForward', callback: (time ?: long) => void): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -2027,6 +2139,8 @@ Register rewind command callback. As long as it is registered, it means that the
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSession-on(type: 'rewind', callback: (time ?: long) => void): void--><!--Device-AVSession-on(type: 'rewind', callback: (time ?: long) => void): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2065,6 +2179,8 @@ Subscribes to playWithAssetId events.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-AVSession-on(type: 'playWithAssetId', callback: Callback<string>): void--><!--Device-AVSession-on(type: 'playWithAssetId', callback: Callback<string>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -2101,6 +2217,8 @@ Register seek command callback
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSession-on(type: 'seek', callback: (time: long) => void): void--><!--Device-AVSession-on(type: 'seek', callback: (time: long) => void): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2139,6 +2257,8 @@ Register setSpeed command callback
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-on(type: 'setSpeed', callback: (speed: double) => void): void--><!--Device-AVSession-on(type: 'setSpeed', callback: (speed: double) => void): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -2175,6 +2295,8 @@ Register setLoopMode command callback
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSession-on(type: 'setLoopMode', callback: (mode: LoopMode) => void): void--><!--Device-AVSession-on(type: 'setLoopMode', callback: (mode: LoopMode) => void): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2213,6 +2335,8 @@ Register setTargetLoopMode command callback Application should change playmode t
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-AVSession-on(type: 'setTargetLoopMode', callback: Callback<LoopMode>): void--><!--Device-AVSession-on(type: 'setTargetLoopMode', callback: Callback<LoopMode>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -2248,6 +2372,8 @@ Register toggle favorite command callback
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSession-on(type: 'toggleFavorite', callback: (assetId: string) => void): void--><!--Device-AVSession-on(type: 'toggleFavorite', callback: (assetId: string) => void): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2285,6 +2411,8 @@ Register media key handling callback
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSession-on(type: 'handleKeyEvent', callback: (event: KeyEvent) => void): void--><!--Device-AVSession-on(type: 'handleKeyEvent', callback: (event: KeyEvent) => void): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2325,6 +2453,8 @@ Register session output device change callback
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-on(type: 'outputDeviceChange', callback: (state: ConnectionState, device: OutputDeviceInfo) => void): void--><!--Device-AVSession-on(type: 'outputDeviceChange', callback: (state: ConnectionState, device: OutputDeviceInfo) => void): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -2364,6 +2494,8 @@ Register session custom command change callback
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-on(type: 'commonCommand', callback: (command: string, args: {[key: string]: Object}) => void): void--><!--Device-AVSession-on(type: 'commonCommand', callback: (command: string, args: {[key: string]: Object}) => void): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -2400,6 +2532,8 @@ Register the item to play from the playlist change callback
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSession-on(type: 'skipToQueueItem', callback: (itemId: int) => void): void--><!--Device-AVSession-on(type: 'skipToQueueItem', callback: (itemId: int) => void): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2438,6 +2572,8 @@ Register answer command callback. As long as it is registered, it means that the
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-on(type: 'answer', callback: Callback<void>): void--><!--Device-AVSession-on(type: 'answer', callback: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -2474,6 +2610,8 @@ Register hangUp command callback. As long as it is registered, it means that the
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSession-on(type: 'hangUp', callback: Callback<void>): void--><!--Device-AVSession-on(type: 'hangUp', callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2512,6 +2650,8 @@ Register toggleCallMute command callback. As long as it is registered, it means 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-on(type: 'toggleCallMute', callback: Callback<void>): void--><!--Device-AVSession-on(type: 'toggleCallMute', callback: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -2548,6 +2688,8 @@ Register listener for cast display information changed.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSession-on(type: 'castDisplayChange', callback: Callback<CastDisplayInfo>): void--><!--Device-AVSession-on(type: 'castDisplayChange', callback: Callback<CastDisplayInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.ExtendedDisplayCast
 
@@ -2592,6 +2734,8 @@ Register listener for custom data sent from remote device.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-AVSession-on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void--><!--Device-AVSession-on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
@@ -2632,6 +2776,8 @@ Register playFromAssetId command callback. As long as it is registered, it means
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-on(type: 'playFromAssetId', callback: (assetId: number) => void): void--><!--Device-AVSession-on(type: 'playFromAssetId', callback: (assetId: number) => void): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -2668,6 +2814,8 @@ Register desktop lyric state changed callback.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AVSession-onDesktopLyricStateChanged(callback: Callback<DesktopLyricState>): void--><!--Device-AVSession-onDesktopLyricStateChanged(callback: Callback<DesktopLyricState>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2706,6 +2854,8 @@ Register desktop lyric visible state change callback.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVSession-onDesktopLyricVisibilityChanged(callback: Callback<boolean>): void--><!--Device-AVSession-onDesktopLyricVisibilityChanged(callback: Callback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -2741,6 +2891,8 @@ Register fastForward command callback. The application will receive forward time
 
 **Since:** 22
 
+<!--Device-AVSession-onFastForward(callback: TwoParamCallback<long, CommandInfo>): void--><!--Device-AVSession-onFastForward(callback: TwoParamCallback<long, CommandInfo>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -2773,6 +2925,8 @@ onPlay(callback: Callback<CommandInfo>): void
 Register play command callback. The application will receive [CommandInfo](arkts-avsession-avsession-commandinfo-i.md) from a controller.
 
 **Since:** 22
+
+<!--Device-AVSession-onPlay(callback: Callback<CommandInfo>): void--><!--Device-AVSession-onPlay(callback: Callback<CommandInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2807,6 +2961,8 @@ Register playNext command callback. The application will receive [CommandInfo](a
 
 **Since:** 22
 
+<!--Device-AVSession-onPlayNext(callback: Callback<CommandInfo>): void--><!--Device-AVSession-onPlayNext(callback: Callback<CommandInfo>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -2840,7 +2996,9 @@ Register playPrevious command callback. The application will receive [CommandInf
 
 **Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+
+<!--Device-AVSession-onPlayPrevious(callback: Callback<CommandInfo>): void--><!--Device-AVSession-onPlayPrevious(callback: Callback<CommandInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2875,6 +3033,8 @@ Register rewind command callback. The application will receive rewind time and [
 
 **Since:** 22
 
+<!--Device-AVSession-onRewind(callback: TwoParamCallback<long, CommandInfo>): void--><!--Device-AVSession-onRewind(callback: TwoParamCallback<long, CommandInfo>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -2908,7 +3068,9 @@ Sends custom data to a remote device.
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+
+<!--Device-AVSession-sendCustomData(data: Record<string, Object>): Promise<void>--><!--Device-AVSession-sendCustomData(data: Record<string, Object>): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -2948,6 +3110,8 @@ setAVCallState(state: AVCallState, callback: AsyncCallback<void>): void
 Set the call state of this session.
 
 **Since:** 11
+
+<!--Device-AVSession-setAVCallState(state: AVCallState, callback: AsyncCallback<void>): void--><!--Device-AVSession-setAVCallState(state: AVCallState, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2996,6 +3160,8 @@ Set the call state of this session.
 
 **Since:** 11
 
+<!--Device-AVSession-setAVCallState(state: AVCallState): Promise<void>--><!--Device-AVSession-setAVCallState(state: AVCallState): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -3039,6 +3205,8 @@ setAVMetadata(data: AVMetadata, callback: AsyncCallback<void>): void
 Set the metadata of this session. In addition to the required properties, users can fill in partially supported properties
 
 **Since:** 10
+
+<!--Device-AVSession-setAVMetadata(data: AVMetadata, callback: AsyncCallback<void>): void--><!--Device-AVSession-setAVMetadata(data: AVMetadata, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -3104,7 +3272,9 @@ Set the metadata of this session. In addition to the required properties, users 
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-AVSession-setAVMetadata(data: AVMetadata): Promise<void>--><!--Device-AVSession-setAVMetadata(data: AVMetadata): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -3167,6 +3337,8 @@ Set the playback state of this session.
 
 **Since:** 10
 
+<!--Device-AVSession-setAVPlaybackState(state: AVPlaybackState, callback: AsyncCallback<void>): void--><!--Device-AVSession-setAVPlaybackState(state: AVPlaybackState, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -3218,7 +3390,9 @@ Set the playback state of this session.
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-AVSession-setAVPlaybackState(state: AVPlaybackState): Promise<void>--><!--Device-AVSession-setAVPlaybackState(state: AVPlaybackState): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -3267,6 +3441,8 @@ setAVQueueItems(items: Array<AVQueueItem>, callback: AsyncCallback<void>): void
 Set the playlist of queueItem. Identifies the content of the playlist presented by this session.
 
 **Since:** 10
+
+<!--Device-AVSession-setAVQueueItems(items: Array<AVQueueItem>, callback: AsyncCallback<void>): void--><!--Device-AVSession-setAVQueueItems(items: Array<AVQueueItem>, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -3342,7 +3518,9 @@ Set the playlist of queueItem. Identifies the content of the playlist presented 
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-AVSession-setAVQueueItems(items: Array<AVQueueItem>): Promise<void>--><!--Device-AVSession-setAVQueueItems(items: Array<AVQueueItem>): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -3416,6 +3594,8 @@ Set the name of the playlist presented by this session.
 
 **Since:** 10
 
+<!--Device-AVSession-setAVQueueTitle(title: string, callback: AsyncCallback<void>): void--><!--Device-AVSession-setAVQueueTitle(title: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -3460,7 +3640,9 @@ Set the name of the playlist presented by this session.
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-AVSession-setAVQueueTitle(title: string): Promise<void>--><!--Device-AVSession-setAVQueueTitle(title: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -3505,6 +3687,8 @@ Set the background playback mode. It is recommended that you associate it with t
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVSession-setBackgroundPlayMode(mode: BackgroundPlayMode): Promise<void>--><!--Device-AVSession-setBackgroundPlayMode(mode: BackgroundPlayMode): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -3545,6 +3729,8 @@ setCallMetadata(data: CallMetadata, callback: AsyncCallback<void>): void
 Set the metadata related with current call.
 
 **Since:** 11
+
+<!--Device-AVSession-setCallMetadata(data: CallMetadata, callback: AsyncCallback<void>): void--><!--Device-AVSession-setCallMetadata(data: CallMetadata, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -3619,6 +3805,8 @@ setCallMetadata(data: CallMetadata): Promise<void>
 Set the metadata related with current call.
 
 **Since:** 11
+
+<!--Device-AVSession-setCallMetadata(data: CallMetadata): Promise<void>--><!--Device-AVSession-setCallMetadata(data: CallMetadata): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -3698,6 +3886,8 @@ Set desktop lyric state such as lock state for this session.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVSession-setDesktopLyricState(state: DesktopLyricState): Promise<void>--><!--Device-AVSession-setDesktopLyricState(state: DesktopLyricState): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -3744,6 +3934,8 @@ Set desktop lyric visible state for this session.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVSession-setDesktopLyricVisible(visible: boolean): Promise<void>--><!--Device-AVSession-setDesktopLyricVisible(visible: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -3786,6 +3978,8 @@ Set the custom media packets for this session.
 **Since:** 10
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-AVSession-setExtras(extras: {[key: string]: Object}, callback: AsyncCallback<void>): void--><!--Device-AVSession-setExtras(extras: {[key: string]: Object}, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -3834,6 +4028,8 @@ Set the custom media packets for this session.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-setExtras(extras: {[key: string]: Object}): Promise<void>--><!--Device-AVSession-setExtras(extras: {[key: string]: Object}): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -3873,6 +4069,8 @@ setLaunchAbility(ability: WantAgent, callback: AsyncCallback<void>): void
 Set the ability to start the session corresponding to
 
 **Since:** 10
+
+<!--Device-AVSession-setLaunchAbility(ability: WantAgent, callback: AsyncCallback<void>): void--><!--Device-AVSession-setLaunchAbility(ability: WantAgent, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -3948,7 +4146,9 @@ Set the ability to start the session corresponding to
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-AVSession-setLaunchAbility(ability: WantAgent): Promise<void>--><!--Device-AVSession-setLaunchAbility(ability: WantAgent): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -4024,6 +4224,8 @@ Set media control types that can be displayed on the media center.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVSession-setMediaCenterControlType(type: Array<AVMediaCenterControlType>): Promise<void>--><!--Device-AVSession-setMediaCenterControlType(type: Array<AVMediaCenterControlType>): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -4074,7 +4276,9 @@ Set supported loop modes supplied by application.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+
+<!--Device-AVSession-setSupportedLoopModes(loopModes: Array<LoopMode>): Promise<void>--><!--Device-AVSession-setSupportedLoopModes(loopModes: Array<LoopMode>): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -4125,7 +4329,9 @@ Set supported speeds supplied by application.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+
+<!--Device-AVSession-setSupportedPlaySpeeds(speeds: Array<double>): Promise<void>--><!--Device-AVSession-setSupportedPlaySpeeds(speeds: Array<double>): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -4170,6 +4376,8 @@ Stop current cast and disconnect device connection.
 
 **Since:** 10
 
+<!--Device-AVSession-stopCasting(callback: AsyncCallback<void>): void--><!--Device-AVSession-stopCasting(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
@@ -4204,7 +4412,9 @@ Stop current cast and disconnect device connection.
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-AVSession-stopCasting(): Promise<void>--><!--Device-AVSession-stopCasting(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -4240,7 +4450,9 @@ unique session Id
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-AVSession-readonly sessionId: string--><!--Device-AVSession-readonly sessionId: string-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -4256,7 +4468,9 @@ Current session tag.
 
 **Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+
+<!--Device-AVSession-readonly sessionTag: string--><!--Device-AVSession-readonly sessionTag: string-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -4272,6 +4486,8 @@ Get current session type
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-AVSession-readonly sessionType: AVSessionType--><!--Device-AVSession-readonly sessionType: AVSessionType-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core

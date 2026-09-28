@@ -14,6 +14,8 @@ controller: TextClockController = new TextClockController();
 
 **Since:** 8
 
+<!--Device-unnamed-declare class TextClockController--><!--Device-unnamed-declare class TextClockController-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
@@ -29,6 +31,8 @@ A constructor used to create a **TextClockController** instance.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
+
+<!--Device-TextClockController-constructor()--><!--Device-TextClockController-constructor()-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,6 +50,8 @@ Starts the text clock. Before using this API, bind the TextClockController to th
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
+<!--Device-TextClockController-start()--><!--Device-TextClockController-start()-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## stop
@@ -61,5 +67,7 @@ Stops the text clock. Before using this API, bind the TextClockController to the
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
+
+<!--Device-TextClockController-stop()--><!--Device-TextClockController-stop()-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

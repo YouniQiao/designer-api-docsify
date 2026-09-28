@@ -20,6 +20,8 @@ function getVisibleWindowInfo(): Promise<Array<WindowInfo>>
 - API版本18+：ohos.permission.VISIBLE_WINDOW_INFO
 - API版本12-17：N/A
 
+<!--Device-window-function getVisibleWindowInfo(): Promise<Array<WindowInfo>>--><!--Device-window-function getVisibleWindowInfo(): Promise<Array<WindowInfo>>-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **返回值：**

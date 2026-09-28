@@ -8,6 +8,8 @@ interface RunningFormInfo
 
 **起始版本：** 20
 
+<!--Device-formInfo-interface RunningFormInfo--><!--Device-formInfo-interface RunningFormInfo-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 ## 导入模块
@@ -30,6 +32,8 @@ readonly extraData?: Record<string, Object>
 
 **起始版本：** 12
 
+<!--Device-RunningFormInfo-readonly extraData?: Record<string, Object>--><!--Device-RunningFormInfo-readonly extraData?: Record<string, Object>-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ readonly formDescription: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-RunningFormInfo-readonly formDescription: string--><!--Device-RunningFormInfo-readonly formDescription: string-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -64,6 +70,8 @@ readonly formUsageState: FormUsageState
 
 **起始版本：** 11
 
+<!--Device-RunningFormInfo-readonly formUsageState: FormUsageState--><!--Device-RunningFormInfo-readonly formUsageState: FormUsageState-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -82,6 +90,8 @@ readonly hostBundleName: string
 
 **起始版本：** 10
 
+<!--Device-RunningFormInfo-readonly hostBundleName: string--><!--Device-RunningFormInfo-readonly hostBundleName: string-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -99,6 +109,8 @@ readonly visibilityType: VisibilityType
 **默认值：** -
 
 **起始版本：** 10
+
+<!--Device-RunningFormInfo-readonly visibilityType: VisibilityType--><!--Device-RunningFormInfo-readonly visibilityType: VisibilityType-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 

@@ -8,6 +8,8 @@ enum ThumbnailVisibility
 
 **起始版本：** 14
 
+<!--Device-photoAccessHelper-enum ThumbnailVisibility--><!--Device-photoAccessHelper-enum ThumbnailVisibility-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -22,6 +24,8 @@ INVISIBLE = 0
 
 **起始版本：** 14
 
+<!--Device-ThumbnailVisibility-INVISIBLE = 0--><!--Device-ThumbnailVisibility-INVISIBLE = 0-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -35,6 +39,8 @@ VISIBLE = 1
 缩略图可访问。
 
 **起始版本：** 14
+
+<!--Device-ThumbnailVisibility-VISIBLE = 1--><!--Device-ThumbnailVisibility-VISIBLE = 1-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

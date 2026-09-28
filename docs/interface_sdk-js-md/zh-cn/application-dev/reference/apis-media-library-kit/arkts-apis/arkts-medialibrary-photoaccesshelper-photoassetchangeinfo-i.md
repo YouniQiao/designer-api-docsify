@@ -8,6 +8,8 @@ interface PhotoAssetChangeInfo
 
 **起始版本：** 20
 
+<!--Device-photoAccessHelper-interface PhotoAssetChangeInfo--><!--Device-photoAccessHelper-interface PhotoAssetChangeInfo-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ albumUri: string
 
 **起始版本：** 20
 
+<!--Device-PhotoAssetChangeInfo-albumUri: string--><!--Device-PhotoAssetChangeInfo-albumUri: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## isFavorite
@@ -41,6 +45,8 @@ isFavorite: boolean
 **类型：** boolean
 
 **起始版本：** 26.0.0
+
+<!--Device-PhotoAssetChangeInfo-isFavorite: boolean--><!--Device-PhotoAssetChangeInfo-isFavorite: boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -56,6 +62,8 @@ mediaType: PhotoType
 
 **起始版本：** 20
 
+<!--Device-PhotoAssetChangeInfo-mediaType: PhotoType--><!--Device-PhotoAssetChangeInfo-mediaType: PhotoType-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## uri
@@ -69,5 +77,7 @@ uri: string
 **类型：** string
 
 **起始版本：** 20
+
+<!--Device-PhotoAssetChangeInfo-uri: string--><!--Device-PhotoAssetChangeInfo-uri: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core

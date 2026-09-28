@@ -8,6 +8,8 @@ export interface AbilityFirstFrameStateData
 
 **起始版本：** 12
 
+<!--Device-unnamed-export interface AbilityFirstFrameStateData--><!--Device-unnamed-export interface AbilityFirstFrameStateData-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -23,6 +25,8 @@ Ability名称。
 **类型：** string
 
 **起始版本：** 12
+
+<!--Device-AbilityFirstFrameStateData-abilityName: string--><!--Device-AbilityFirstFrameStateData-abilityName: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -42,6 +46,8 @@ DLP（数据防泄露）沙盒的索引。
 
 **起始版本：** 12
 
+<!--Device-AbilityFirstFrameStateData-appIndex: int--><!--Device-AbilityFirstFrameStateData-appIndex: int-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -57,6 +63,8 @@ bundleName: string
 **类型：** string
 
 **起始版本：** 12
+
+<!--Device-AbilityFirstFrameStateData-bundleName: string--><!--Device-AbilityFirstFrameStateData-bundleName: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -76,6 +84,8 @@ isColdStart: boolean
 
 **起始版本：** 12
 
+<!--Device-AbilityFirstFrameStateData-isColdStart: boolean--><!--Device-AbilityFirstFrameStateData-isColdStart: boolean-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -91,6 +101,8 @@ moduleName: string
 **类型：** string
 
 **起始版本：** 12
+
+<!--Device-AbilityFirstFrameStateData-moduleName: string--><!--Device-AbilityFirstFrameStateData-moduleName: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

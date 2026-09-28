@@ -24,6 +24,8 @@ function getPowerPolicy(admin: Want, powerScene: PowerScene): PowerPolicy
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-deviceSettings-function getPowerPolicy(admin: Want, powerScene: PowerScene): PowerPolicy--><!--Device-deviceSettings-function getPowerPolicy(admin: Want, powerScene: PowerScene): PowerPolicy-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。

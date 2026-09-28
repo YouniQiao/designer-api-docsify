@@ -22,6 +22,8 @@ function deleteContact(key: string, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.WRITE_CONTACTS
 
+<!--Device-contact-function deleteContact(key: string, callback: AsyncCallback<void>): void--><!--Device-contact-function deleteContact(key: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 **参数：**
@@ -66,6 +68,8 @@ function deleteContact(context: Context, key: string, callback: AsyncCallback<vo
 **起始版本：** 10
 
 **需要权限：** ohos.permission.WRITE_CONTACTS
+
+<!--Device-contact-function deleteContact(context: Context, key: string, callback: AsyncCallback<void>): void--><!--Device-contact-function deleteContact(context: Context, key: string, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -129,6 +133,8 @@ function deleteContact(key: string): Promise<void>
 
 **需要权限：** ohos.permission.WRITE_CONTACTS
 
+<!--Device-contact-function deleteContact(key: string): Promise<void>--><!--Device-contact-function deleteContact(key: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 **参数：**
@@ -172,6 +178,8 @@ function deleteContact(context: Context, key: string): Promise<void>
 **起始版本：** 10
 
 **需要权限：** ohos.permission.WRITE_CONTACTS
+
+<!--Device-contact-function deleteContact(context: Context, key: string): Promise<void>--><!--Device-contact-function deleteContact(context: Context, key: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 

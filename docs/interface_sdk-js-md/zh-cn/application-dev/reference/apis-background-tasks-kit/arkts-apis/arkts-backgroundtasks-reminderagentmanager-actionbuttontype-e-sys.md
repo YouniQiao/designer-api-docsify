@@ -8,6 +8,8 @@ export enum ActionButtonType
 
 **起始版本：** 9
 
+<!--Device-reminderAgentManager-export enum ActionButtonType--><!--Device-reminderAgentManager-export enum ActionButtonType-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## ACTION_BUTTON_TYPE_CUSTOM
@@ -19,6 +21,8 @@ ACTION_BUTTON_TYPE_CUSTOM = 2
 表示自定义的按钮。
 
 **起始版本：** 10
+
+<!--Device-ActionButtonType-ACTION_BUTTON_TYPE_CUSTOM = 2--><!--Device-ActionButtonType-ACTION_BUTTON_TYPE_CUSTOM = 2-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 

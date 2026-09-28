@@ -14,6 +14,8 @@ Stabilization继承自[StabilizationQuery](arkts-camera-camera-stabilizationquer
 
 **起始版本：** 11
 
+<!--Device-camera-interface Stabilization extends StabilizationQuery--><!--Device-camera-interface Stabilization extends StabilizationQuery-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
@@ -32,7 +34,9 @@ getActiveVideoStabilizationMode(): VideoStabilizationMode
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-Stabilization-getActiveVideoStabilizationMode(): VideoStabilizationMode--><!--Device-Stabilization-getActiveVideoStabilizationMode(): VideoStabilizationMode-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -76,7 +80,9 @@ setVideoStabilizationMode(mode: VideoStabilizationMode): void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-Stabilization-setVideoStabilizationMode(mode: VideoStabilizationMode): void--><!--Device-Stabilization-setVideoStabilizationMode(mode: VideoStabilizationMode): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

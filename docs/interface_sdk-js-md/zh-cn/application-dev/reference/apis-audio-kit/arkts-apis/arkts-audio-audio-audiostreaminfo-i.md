@@ -8,6 +8,8 @@ interface AudioStreamInfo
 
 **起始版本：** 8
 
+<!--Device-audio-interface AudioStreamInfo--><!--Device-audio-interface AudioStreamInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ channelLayout?: AudioChannelLayout
 
 **起始版本：** 11
 
+<!--Device-AudioStreamInfo-channelLayout?: AudioChannelLayout--><!--Device-AudioStreamInfo-channelLayout?: AudioChannelLayout-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## channels
@@ -41,6 +45,8 @@ channels: AudioChannel
 **类型：** [AudioChannel](arkts-audio-audio-audiochannel-e.md)
 
 **起始版本：** 8
+
+<!--Device-AudioStreamInfo-channels: AudioChannel--><!--Device-AudioStreamInfo-channels: AudioChannel-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -56,6 +62,8 @@ encodingType: AudioEncodingType
 
 **起始版本：** 8
 
+<!--Device-AudioStreamInfo-encodingType: AudioEncodingType--><!--Device-AudioStreamInfo-encodingType: AudioEncodingType-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## sampleFormat
@@ -69,6 +77,8 @@ sampleFormat: AudioSampleFormat
 **类型：** [AudioSampleFormat](arkts-audio-audio-audiosampleformat-e.md)
 
 **起始版本：** 8
+
+<!--Device-AudioStreamInfo-sampleFormat: AudioSampleFormat--><!--Device-AudioStreamInfo-sampleFormat: AudioSampleFormat-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -91,5 +101,7 @@ samplingRate: AudioSamplingRate | number
 
 **模型约束：** 
 - API版本26.0.0+：此接口可在Stage模型和FA模型下使用。
+
+<!--Device-AudioStreamInfo-samplingRate: AudioSamplingRate | int--><!--Device-AudioStreamInfo-samplingRate: AudioSamplingRate | int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core

@@ -18,6 +18,8 @@ function getImage(wallpaperType: WallpaperType, callback: AsyncCallback<image.Pi
 
 **需要权限：** ohos.permission.GET_WALLPAPER
 
+<!--Device-wallpaper-function getImage(wallpaperType: WallpaperType, callback: AsyncCallback<image.PixelMap>): void--><!--Device-wallpaper-function getImage(wallpaperType: WallpaperType, callback: AsyncCallback<image.PixelMap>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
 **系统接口：** 此接口为系统接口。
@@ -66,6 +68,8 @@ function getImage(wallpaperType: WallpaperType): Promise<image.PixelMap>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.GET_WALLPAPER
+
+<!--Device-wallpaper-function getImage(wallpaperType: WallpaperType): Promise<image.PixelMap>--><!--Device-wallpaper-function getImage(wallpaperType: WallpaperType): Promise<image.PixelMap>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 

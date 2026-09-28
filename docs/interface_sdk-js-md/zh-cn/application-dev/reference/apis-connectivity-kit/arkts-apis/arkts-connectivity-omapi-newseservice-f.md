@@ -22,6 +22,8 @@ function newSEService(type: 'serviceState', callback: Callback<ServiceState>): S
 
 **替代接口：** [createService](arkts-connectivity-omapi-createservice-f.md)
 
+<!--Device-omapi-function newSEService(type: 'serviceState', callback: Callback<ServiceState>): SEService--><!--Device-omapi-function newSEService(type: 'serviceState', callback: Callback<ServiceState>): SEService-End-->
+
 **系统能力：** SystemCapability.Communication.SecureElement
 
 **参数：**

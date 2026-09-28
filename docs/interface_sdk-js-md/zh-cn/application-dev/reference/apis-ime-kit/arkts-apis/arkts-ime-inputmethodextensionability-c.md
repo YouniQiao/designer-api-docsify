@@ -15,9 +15,11 @@ declare class InputMethodExtensionAbility
 
 | Class | 说明 |  
 |---|---|  
-| [InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md) | 输入法ExtensionAbility基类，提供输入法应用的生命周期管理框架。关键成员包括：`context`属性（`InputMethodExtensionContext`上下文对象）、`onCreate(want)`方法（初始化回调）、`onDestroy()`方法（销毁回调）。开发者需继承此类并重写生命周期方法。 |
+| InputMethodExtensionAbility | 输入法ExtensionAbility基类，提供输入法应用的生命周期管理框架。关键成员包括：`context`属性（`InputMethodExtensionContext`上下文对象）、`onCreate(want)`方法（初始化回调）、`onDestroy()`方法（销毁回调）。开发者需继承此类并重写生命周期方法。 |
 
 **起始版本：** 9
+
+<!--Device-unnamed-declare class InputMethodExtensionAbility--><!--Device-unnamed-declare class InputMethodExtensionAbility-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -38,6 +40,8 @@ onCreate(want: Want): void
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-InputMethodExtensionAbility-onCreate(want: Want): void--><!--Device-InputMethodExtensionAbility-onCreate(want: Want): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -96,6 +100,8 @@ onDestroy(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-InputMethodExtensionAbility-onDestroy(): void--><!--Device-InputMethodExtensionAbility-onDestroy(): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **示例**
@@ -124,5 +130,7 @@ InputMethodExtensionAbility的上下文环境，继承于ExtensionContext。
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-InputMethodExtensionAbility-context: InputMethodExtensionContext--><!--Device-InputMethodExtensionAbility-context: InputMethodExtensionContext-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework

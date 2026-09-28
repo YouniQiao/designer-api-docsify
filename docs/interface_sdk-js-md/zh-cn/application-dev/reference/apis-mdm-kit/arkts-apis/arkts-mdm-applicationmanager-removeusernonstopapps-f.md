@@ -20,6 +20,8 @@ function removeUserNonStopApps(admin: Want, applicationInstances: Array<common.A
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-applicationManager-function removeUserNonStopApps(admin: Want, applicationInstances: Array<common.ApplicationInstance>): void--><!--Device-applicationManager-function removeUserNonStopApps(admin: Want, applicationInstances: Array<common.ApplicationInstance>): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**

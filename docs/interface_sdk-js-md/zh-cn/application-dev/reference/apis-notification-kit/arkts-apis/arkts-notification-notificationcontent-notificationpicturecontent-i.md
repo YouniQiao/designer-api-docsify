@@ -18,6 +18,8 @@ export interface NotificationPictureContent extends NotificationBasicContent
 
 **起始版本：** 7
 
+<!--Device-unnamed-export interface NotificationPictureContent extends NotificationBasicContent--><!--Device-unnamed-export interface NotificationPictureContent extends NotificationBasicContent-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## briefText
@@ -31,6 +33,8 @@ briefText: string
 **类型：** string
 
 **起始版本：** 7
+
+<!--Device-NotificationPictureContent-briefText: string--><!--Device-NotificationPictureContent-briefText: string-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -46,6 +50,8 @@ expandedTitle: string
 
 **起始版本：** 7
 
+<!--Device-NotificationPictureContent-expandedTitle: string--><!--Device-NotificationPictureContent-expandedTitle: string-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## picture
@@ -59,5 +65,7 @@ picture: image.PixelMap
 **类型：** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **起始版本：** 7
+
+<!--Device-NotificationPictureContent-picture: image.PixelMap--><!--Device-NotificationPictureContent-picture: image.PixelMap-End-->
 
 **系统能力：** SystemCapability.Notification.Notification

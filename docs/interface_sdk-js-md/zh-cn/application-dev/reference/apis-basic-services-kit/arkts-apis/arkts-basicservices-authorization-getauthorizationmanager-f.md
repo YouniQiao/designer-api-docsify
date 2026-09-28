@@ -18,6 +18,8 @@ function getAuthorizationManager(): AuthorizationManager
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-authorization-function getAuthorizationManager(): AuthorizationManager--><!--Device-authorization-function getAuthorizationManager(): AuthorizationManager-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **返回值：**

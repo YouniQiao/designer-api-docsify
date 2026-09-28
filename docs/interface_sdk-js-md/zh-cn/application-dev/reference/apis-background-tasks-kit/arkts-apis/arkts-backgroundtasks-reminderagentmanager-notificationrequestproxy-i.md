@@ -8,6 +8,8 @@ interface NotificationRequestProxy
 
 **起始版本：** 26.0.0
 
+<!--Device-reminderAgentManager-interface NotificationRequestProxy--><!--Device-reminderAgentManager-interface NotificationRequestProxy-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## 导入模块
@@ -30,6 +32,8 @@ appMessageId?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-NotificationRequestProxy-appMessageId?: string--><!--Device-NotificationRequestProxy-appMessageId?: string-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## isAlertOnce
@@ -48,5 +52,7 @@ isAlertOnce?: boolean
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-NotificationRequestProxy-isAlertOnce?: boolean--><!--Device-NotificationRequestProxy-isAlertOnce?: boolean-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent

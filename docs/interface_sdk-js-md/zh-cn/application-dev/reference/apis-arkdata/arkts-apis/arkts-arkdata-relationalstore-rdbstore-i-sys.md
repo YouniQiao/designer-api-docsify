@@ -12,6 +12,8 @@ interface RdbStore
 
 **起始版本：** 9
 
+<!--Device-relationalStore-interface RdbStore--><!--Device-relationalStore-interface RdbStore-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## 导入模块
@@ -31,6 +33,8 @@ cleanDeviceDirtyData(table: string, cursor?: number): Promise<void>
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-RdbStore-cleanDeviceDirtyData(table: string, cursor?: long): Promise<void>--><!--Device-RdbStore-cleanDeviceDirtyData(table: string, cursor?: long): Promise<void>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -85,6 +89,8 @@ cloudSync(
 > 多支持指定50个资产），建议谓词中仅使用主键作为同步条件。
 
 **起始版本：** 11
+
+<!--Device-RdbStore-cloudSync(      mode: SyncMode,      predicates: RdbPredicates,      progress: Callback<ProgressDetails>,      callback: AsyncCallback<void>    ): void--><!--Device-RdbStore-cloudSync(      mode: SyncMode,      predicates: RdbPredicates,      progress: Callback<ProgressDetails>,      callback: AsyncCallback<void>    ): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -189,6 +195,8 @@ cloudSync(mode: SyncMode, predicates: RdbPredicates, progress: Callback<Progress
 
 **起始版本：** 11
 
+<!--Device-RdbStore-cloudSync(mode: SyncMode, predicates: RdbPredicates, progress: Callback<ProgressDetails>): Promise<void>--><!--Device-RdbStore-cloudSync(mode: SyncMode, predicates: RdbPredicates, progress: Callback<ProgressDetails>): Promise<void>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
 **系统接口：** 此接口为系统接口。
@@ -233,6 +241,8 @@ delete(table: string, predicates: dataSharePredicates.DataSharePredicates, callb
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-RdbStore-delete(table: string, predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<long>): void--><!--Device-RdbStore-delete(table: string, predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<long>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -315,6 +325,8 @@ delete(table: string, predicates: dataSharePredicates.DataSharePredicates): Prom
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-RdbStore-delete(table: string, predicates: dataSharePredicates.DataSharePredicates): Promise<long>--><!--Device-RdbStore-delete(table: string, predicates: dataSharePredicates.DataSharePredicates): Promise<long>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -403,6 +415,8 @@ lockCloudContainer(): Promise<number>
 
 **起始版本：** 12
 
+<!--Device-RdbStore-lockCloudContainer(): Promise<int>--><!--Device-RdbStore-lockCloudContainer(): Promise<int>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **系统接口：** 此接口为系统接口。
@@ -432,6 +446,8 @@ query(table: string, predicates: dataSharePredicates.DataSharePredicates, callba
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-RdbStore-query(table: string, predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<ResultSet>): void--><!--Device-RdbStore-query(table: string, predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<ResultSet>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -563,6 +579,8 @@ query(
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RdbStore-query(      table: string,      predicates: dataSharePredicates.DataSharePredicates,      columns: Array<string>,      callback: AsyncCallback<ResultSet>    ): void--><!--Device-RdbStore-query(      table: string,      predicates: dataSharePredicates.DataSharePredicates,      columns: Array<string>,      callback: AsyncCallback<ResultSet>    ): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **系统接口：** 此接口为系统接口。
@@ -693,6 +711,8 @@ query(
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RdbStore-query(      table: string,      predicates: dataSharePredicates.DataSharePredicates,      columns?: Array<string>    ): Promise<ResultSet>--><!--Device-RdbStore-query(      table: string,      predicates: dataSharePredicates.DataSharePredicates,      columns?: Array<string>    ): Promise<ResultSet>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **系统接口：** 此接口为系统接口。
@@ -820,6 +840,8 @@ querySharingResource(predicates: RdbPredicates, columns?: Array<string>): Promis
 
 **起始版本：** 11
 
+<!--Device-RdbStore-querySharingResource(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultSet>--><!--Device-RdbStore-querySharingResource(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultSet>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
 **系统接口：** 此接口为系统接口。
@@ -874,6 +896,8 @@ querySharingResource(predicates: RdbPredicates, callback: AsyncCallback<ResultSe
 
 **起始版本：** 11
 
+<!--Device-RdbStore-querySharingResource(predicates: RdbPredicates, callback: AsyncCallback<ResultSet>): void--><!--Device-RdbStore-querySharingResource(predicates: RdbPredicates, callback: AsyncCallback<ResultSet>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
 **系统接口：** 此接口为系统接口。
@@ -921,6 +945,8 @@ querySharingResource(predicates: RdbPredicates, columns: Array<string>, callback
 根据谓词条件匹配的数据记录查找对应记录的共享资源，返回查找到的共享资源的结果集，同时在结果集中返回谓词条件匹配的指定列名的字段值，使用callback异步回调。
 
 **起始版本：** 11
+
+<!--Device-RdbStore-querySharingResource(predicates: RdbPredicates, columns: Array<string>, callback: AsyncCallback<ResultSet>): void--><!--Device-RdbStore-querySharingResource(predicates: RdbPredicates, columns: Array<string>, callback: AsyncCallback<ResultSet>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -971,6 +997,8 @@ requestFullDataDonation(tables: Array<string>): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RdbStore-requestFullDataDonation(tables: Array<string>): Promise<void>--><!--Device-RdbStore-requestFullDataDonation(tables: Array<string>): Promise<void>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **系统接口：** 此接口为系统接口。
@@ -985,16 +1013,16 @@ requestFullDataDonation(tables: Array<string>): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 不返回任何值的Promise。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | 权限被拒绝。非系统应用试图调用系统API。 |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | 无效参数。参数超出范围或表列表为空。 |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | RdbStore或ResultSet已经关闭。 |
-| 14800043 | 数据库不支持该场景。 |
+| [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Parameter out of range or empty table list. |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
+| 14800043 | The database does not support this scenario. |
 
 <a id="restore-2"></a>
 
@@ -1007,6 +1035,8 @@ restore(): Promise<void>
 从副本关系型数据库文件恢复数据库，使用Promise异步回调。此接口仅供[HAMode](arkts-arkdata-relationalstore-hamode-e-sys.md)为MAIN_REPLICA时使用，且不支持在事务中使用。
 
 **起始版本：** 12
+
+<!--Device-RdbStore-restore(): Promise<void>--><!--Device-RdbStore-restore(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -1096,6 +1126,8 @@ retainDeviceData(retainDevices?: Record<string, Array<string>>): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RdbStore-retainDeviceData(retainDevices?: Record<string, Array<string>>): Promise<void>--><!--Device-RdbStore-retainDeviceData(retainDevices?: Record<string, Array<string>>): Promise<void>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1135,6 +1167,8 @@ unlockCloudContainer(): Promise<void>
 
 **起始版本：** 12
 
+<!--Device-RdbStore-unlockCloudContainer(): Promise<void>--><!--Device-RdbStore-unlockCloudContainer(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1169,6 +1203,8 @@ update(
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-RdbStore-update(      table: string,      values: ValuesBucket,      predicates: dataSharePredicates.DataSharePredicates,      callback: AsyncCallback<long>    ): void--><!--Device-RdbStore-update(      table: string,      values: ValuesBucket,      predicates: dataSharePredicates.DataSharePredicates,      callback: AsyncCallback<long>    ): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -1380,6 +1416,8 @@ update(table: string, values: ValuesBucket, predicates: dataSharePredicates.Data
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-RdbStore-update(table: string, values: ValuesBucket, predicates: dataSharePredicates.DataSharePredicates): Promise<long>--><!--Device-RdbStore-update(table: string, values: ValuesBucket, predicates: dataSharePredicates.DataSharePredicates): Promise<long>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -1604,6 +1642,8 @@ updateDistributedInfo(info: DistributedInfo, predicates: RdbPredicates): Promise
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-RdbStore-updateDistributedInfo(info: DistributedInfo, predicates: RdbPredicates): Promise<long>--><!--Device-RdbStore-updateDistributedInfo(info: DistributedInfo, predicates: RdbPredicates): Promise<long>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 

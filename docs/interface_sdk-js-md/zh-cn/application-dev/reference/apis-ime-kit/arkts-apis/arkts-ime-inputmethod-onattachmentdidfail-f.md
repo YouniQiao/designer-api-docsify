@@ -16,6 +16,8 @@ function onAttachmentDidFail(callback: Callback<AttachFailureReason>): void
 
 **起始版本：** 22
 
+<!--Device-inputMethod-function onAttachmentDidFail(callback: Callback<AttachFailureReason>): void--><!--Device-inputMethod-function onAttachmentDidFail(callback: Callback<AttachFailureReason>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**

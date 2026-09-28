@@ -10,6 +10,8 @@ enum PlaybackState
 
 **起始版本：** 23
 
+<!--Device-avMusicTemplate-enum PlaybackState--><!--Device-avMusicTemplate-enum PlaybackState-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## PLAYBACK_STATE_PREPARE
@@ -26,6 +28,8 @@ PLAYBACK_STATE_PREPARE = 0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PlaybackState-PLAYBACK_STATE_PREPARE = 0--><!--Device-PlaybackState-PLAYBACK_STATE_PREPARE = 0-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## PLAYBACK_STATE_PLAY
@@ -39,6 +43,8 @@ PLAYBACK_STATE_PLAY = 1
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PlaybackState-PLAYBACK_STATE_PLAY = 1--><!--Device-PlaybackState-PLAYBACK_STATE_PLAY = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -54,6 +60,8 @@ PLAYBACK_STATE_PAUSE = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PlaybackState-PLAYBACK_STATE_PAUSE = 2--><!--Device-PlaybackState-PLAYBACK_STATE_PAUSE = 2-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## PLAYBACK_STATE_STOP
@@ -67,6 +75,8 @@ PLAYBACK_STATE_STOP = 3
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PlaybackState-PLAYBACK_STATE_STOP = 3--><!--Device-PlaybackState-PLAYBACK_STATE_STOP = 3-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -82,6 +92,8 @@ PLAYBACK_STATE_COMPLETED = 4
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PlaybackState-PLAYBACK_STATE_COMPLETED = 4--><!--Device-PlaybackState-PLAYBACK_STATE_COMPLETED = 4-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## PLAYBACK_STATE_ERROR
@@ -96,6 +108,8 @@ PLAYBACK_STATE_ERROR = 5
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PlaybackState-PLAYBACK_STATE_ERROR = 5--><!--Device-PlaybackState-PLAYBACK_STATE_ERROR = 5-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## PLAYBACK_STATE_BUFFERING
@@ -109,5 +123,7 @@ PLAYBACK_STATE_BUFFERING = 6
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PlaybackState-PLAYBACK_STATE_BUFFERING = 6--><!--Device-PlaybackState-PLAYBACK_STATE_BUFFERING = 6-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate

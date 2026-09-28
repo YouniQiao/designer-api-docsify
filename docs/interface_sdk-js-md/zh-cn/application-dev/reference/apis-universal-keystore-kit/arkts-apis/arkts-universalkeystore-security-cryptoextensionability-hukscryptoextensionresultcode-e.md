@@ -8,6 +8,8 @@ export const enum HuksCryptoExtensionResultCode
 
 **起始版本：** 22
 
+<!--Device-unnamed-export const enum HuksCryptoExtensionResultCode--><!--Device-unnamed-export const enum HuksCryptoExtensionResultCode-End-->
+
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
 ## HUKS_CRYPTO_EXTENSION_ERR_EXTENSION_FAIL
@@ -24,6 +26,8 @@ HUKS_CRYPTO_EXTENSION_ERR_EXTENSION_FAIL = 34800000
 **起始版本：** 22
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HuksCryptoExtensionResultCode-HUKS_CRYPTO_EXTENSION_ERR_EXTENSION_FAIL = 34800000--><!--Device-HuksCryptoExtensionResultCode-HUKS_CRYPTO_EXTENSION_ERR_EXTENSION_FAIL = 34800000-End-->
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
@@ -42,6 +46,8 @@ UKey不存在。可能的原因：
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HuksCryptoExtensionResultCode-HUKS_CRYPTO_EXTENSION_ERR_UKEY_NOT_EXIST = 34800001--><!--Device-HuksCryptoExtensionResultCode-HUKS_CRYPTO_EXTENSION_ERR_UKEY_NOT_EXIST = 34800001-End-->
+
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
 ## HUKS_CRYPTO_EXTENSION_ERR_UKEY_DRIVER_FAIL
@@ -56,6 +62,8 @@ UKey驱动出现未知错误。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HuksCryptoExtensionResultCode-HUKS_CRYPTO_EXTENSION_ERR_UKEY_DRIVER_FAIL = 34800002--><!--Device-HuksCryptoExtensionResultCode-HUKS_CRYPTO_EXTENSION_ERR_UKEY_DRIVER_FAIL = 34800002-End-->
+
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
 ## HUKS_CRYPTO_EXTENSION_ERR_PIN_NO_AUTH
@@ -69,6 +77,8 @@ UKey PIN码未认证，需要先认证Ukey PIN码。
 **起始版本：** 22
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HuksCryptoExtensionResultCode-HUKS_CRYPTO_EXTENSION_ERR_PIN_NO_AUTH = 34800003--><!--Device-HuksCryptoExtensionResultCode-HUKS_CRYPTO_EXTENSION_ERR_PIN_NO_AUTH = 34800003-End-->
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
@@ -87,6 +97,8 @@ HUKS_CRYPTO_EXTENSION_ERR_HANDLE_NOT_EXIST = 34800004
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HuksCryptoExtensionResultCode-HUKS_CRYPTO_EXTENSION_ERR_HANDLE_NOT_EXIST = 34800004--><!--Device-HuksCryptoExtensionResultCode-HUKS_CRYPTO_EXTENSION_ERR_HANDLE_NOT_EXIST = 34800004-End-->
+
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
 ## HUKS_CRYPTO_EXTENSION_ERR_HANDLE_UNAVAILABLE
@@ -103,6 +115,8 @@ HUKS_CRYPTO_EXTENSION_ERR_HANDLE_UNAVAILABLE = 34800005
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HuksCryptoExtensionResultCode-HUKS_CRYPTO_EXTENSION_ERR_HANDLE_UNAVAILABLE = 34800005--><!--Device-HuksCryptoExtensionResultCode-HUKS_CRYPTO_EXTENSION_ERR_HANDLE_UNAVAILABLE = 34800005-End-->
+
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
 ## HUKS_CRYPTO_EXTENSION_ERR_PIN_INCORRECT
@@ -116,6 +130,8 @@ UKey PIN码错误，需要检查输入的PIN码。
 **起始版本：** 22
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HuksCryptoExtensionResultCode-HUKS_CRYPTO_EXTENSION_ERR_PIN_INCORRECT = 34800006--><!--Device-HuksCryptoExtensionResultCode-HUKS_CRYPTO_EXTENSION_ERR_PIN_INCORRECT = 34800006-End-->
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
@@ -132,5 +148,7 @@ PIN码输入错误次数过多。
 **起始版本：** 22
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HuksCryptoExtensionResultCode-HUKS_CRYPTO_EXTENSION_ERR_PIN_LOCKED = 34800007--><!--Device-HuksCryptoExtensionResultCode-HUKS_CRYPTO_EXTENSION_ERR_PIN_LOCKED = 34800007-End-->
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension

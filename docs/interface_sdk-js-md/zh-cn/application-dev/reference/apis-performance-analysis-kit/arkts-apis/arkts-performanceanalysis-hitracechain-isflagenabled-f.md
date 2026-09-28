@@ -16,6 +16,8 @@ function isFlagEnabled(id: HiTraceId, flag: HiTraceFlag): boolean
 
 **起始版本：** 8
 
+<!--Device-hiTraceChain-function isFlagEnabled(id: HiTraceId, flag: HiTraceFlag): boolean--><!--Device-hiTraceChain-function isFlagEnabled(id: HiTraceId, flag: HiTraceFlag): boolean-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
 
 **参数：**

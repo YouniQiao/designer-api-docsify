@@ -24,6 +24,8 @@ API版本26.0.0之前，需先调用[connection.pairDevice](arkts-connectivity-c
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-connection-function connectAllowedProfiles(deviceId: string, callback: AsyncCallback<void>): void--><!--Device-connection-function connectAllowedProfiles(deviceId: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -82,6 +84,8 @@ API版本26.0.0之前，需先调用[connection.pairDevice](arkts-connectivity-c
 - API版本11-15：ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-connection-function connectAllowedProfiles(deviceId: string): Promise<void>--><!--Device-connection-function connectAllowedProfiles(deviceId: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

@@ -24,6 +24,8 @@ function setHyperSnapEnabled(enableFlag: boolean): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-hyperSnapManager-function setHyperSnapEnabled(enableFlag: boolean): void--><!--Device-hyperSnapManager-function setHyperSnapEnabled(enableFlag: boolean): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**

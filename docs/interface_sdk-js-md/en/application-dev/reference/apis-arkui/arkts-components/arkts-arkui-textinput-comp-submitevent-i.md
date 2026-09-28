@@ -8,6 +8,8 @@ Defines the user submit event.
 
 **Since:** 11
 
+<!--Device-unnamed-declare interface SubmitEvent--><!--Device-unnamed-declare interface SubmitEvent-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## keepEditableState
@@ -23,6 +25,8 @@ Customizes the editing state of the input box and keeps it in the editing state 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SubmitEvent-keepEditableState(): void--><!--Device-SubmitEvent-keepEditableState(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -41,5 +45,7 @@ Text content of the input box.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SubmitEvent-text: string--><!--Device-SubmitEvent-text: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -18,6 +18,8 @@ function getHistoricalAVQueueInfos(maxSize: number, maxAppSize: number, callback
 
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
 
+<!--Device-avSession-function getHistoricalAVQueueInfos(maxSize: int, maxAppSize: int, callback: AsyncCallback<Array<Readonly<AVQueueInfo>>>): void--><!--Device-avSession-function getHistoricalAVQueueInfos(maxSize: int, maxAppSize: int, callback: AsyncCallback<Array<Readonly<AVQueueInfo>>>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +63,8 @@ function getHistoricalAVQueueInfos(maxSize: number, maxAppSize: number): Promise
 **起始版本：** 11
 
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
+
+<!--Device-avSession-function getHistoricalAVQueueInfos(maxSize: int, maxAppSize: int): Promise<Array<Readonly<AVQueueInfo>>>--><!--Device-avSession-function getHistoricalAVQueueInfos(maxSize: int, maxAppSize: int): Promise<Array<Readonly<AVQueueInfo>>>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 

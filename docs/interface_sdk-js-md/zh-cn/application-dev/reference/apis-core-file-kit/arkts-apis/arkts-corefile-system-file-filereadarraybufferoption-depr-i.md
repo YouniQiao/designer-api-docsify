@@ -10,6 +10,8 @@ export interface FileReadArrayBufferOption
 
 **废弃版本：** 10
 
+<!--Device-unnamed-export interface FileReadArrayBufferOption--><!--Device-unnamed-export interface FileReadArrayBufferOption-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## 导入模块
@@ -29,6 +31,8 @@ complete?: () => void
 
 **废弃版本：** 10
 
+<!--Device-FileReadArrayBufferOption-complete?: () => void--><!--Device-FileReadArrayBufferOption-complete?: () => void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## fail
@@ -42,6 +46,8 @@ fail?: (data: string, code: number) => void
 **起始版本：** 3
 
 **废弃版本：** 10
+
+<!--Device-FileReadArrayBufferOption-fail?: (data: string, code: number) => void--><!--Device-FileReadArrayBufferOption-fail?: (data: string, code: number) => void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -58,11 +64,13 @@ fail?: (data: string, code: number) => void
 success?: (data: FileReadArrayBufferResponse) => void
 ```
 
-接口调用成功的回调函数。返回[FileReadArrayBufferResponse](arkts-corefile-system-file-filereadarraybufferresponse-depr-i.md#filereadarraybufferresponse)。
+接口调用成功的回调函数。返回[FileReadArrayBufferResponse](arkts-corefile-system-file-filereadarraybufferresponse-depr-i.md)。
 
 **起始版本：** 3
 
 **废弃版本：** 10
+
+<!--Device-FileReadArrayBufferOption-success?: (data: FileReadArrayBufferResponse) => void--><!--Device-FileReadArrayBufferOption-success?: (data: FileReadArrayBufferResponse) => void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -86,6 +94,8 @@ length?: number
 
 **废弃版本：** 10
 
+<!--Device-FileReadArrayBufferOption-length?: number--><!--Device-FileReadArrayBufferOption-length?: number-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## position
@@ -101,6 +111,8 @@ position?: number
 **起始版本：** 3
 
 **废弃版本：** 10
+
+<!--Device-FileReadArrayBufferOption-position?: number--><!--Device-FileReadArrayBufferOption-position?: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -119,5 +131,7 @@ uri: string
 **起始版本：** 3
 
 **废弃版本：** 10
+
+<!--Device-FileReadArrayBufferOption-uri: string--><!--Device-FileReadArrayBufferOption-uri: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite

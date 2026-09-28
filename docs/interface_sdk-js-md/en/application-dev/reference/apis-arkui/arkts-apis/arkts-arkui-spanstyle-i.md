@@ -8,6 +8,8 @@ Describes the span style.
 
 **Since:** 12
 
+<!--Device-unnamed-declare interface SpanStyle--><!--Device-unnamed-declare interface SpanStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## length
@@ -25,6 +27,8 @@ Length of the styled string style.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SpanStyle-length: number--><!--Device-SpanStyle-length: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,6 +48,8 @@ Start position of the styled string style.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SpanStyle-start: number--><!--Device-SpanStyle-start: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## styledKey
@@ -62,6 +68,8 @@ Style key.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SpanStyle-styledKey: StyledStringKey--><!--Device-SpanStyle-styledKey: StyledStringKey-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## styledValue
@@ -79,5 +87,7 @@ Style object used to match the style of the styled string.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SpanStyle-styledValue: StyledStringValue--><!--Device-SpanStyle-styledValue: StyledStringValue-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

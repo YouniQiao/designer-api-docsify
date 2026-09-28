@@ -17,6 +17,8 @@
 
 **替代接口：** [relationalStore](arkts-arkdata-data-relationalstore.md)
 
+<!--Device-unnamed-declare namespace rdb--><!--Device-unnamed-declare namespace rdb-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## 导入模块

@@ -8,6 +8,8 @@ Defines the CustomSpanDrawInfo interface.
 
 **Since:** 12
 
+<!--Device-unnamed-declare interface CustomSpanDrawInfo--><!--Device-unnamed-declare interface CustomSpanDrawInfo-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## baseline
@@ -27,6 +29,8 @@ Unit: [px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#basic-pixel-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-CustomSpanDrawInfo-baseline: number--><!--Device-CustomSpanDrawInfo-baseline: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -48,6 +52,8 @@ Unit: [px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#basic-pixel-
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-CustomSpanDrawInfo-lineBottom: number--><!--Device-CustomSpanDrawInfo-lineBottom: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## lineTop
@@ -68,6 +74,8 @@ Unit: [px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#basic-pixel-
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-CustomSpanDrawInfo-lineTop: number--><!--Device-CustomSpanDrawInfo-lineTop: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## x
@@ -87,5 +95,7 @@ Unit: [px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#basic-pixel-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-CustomSpanDrawInfo-x: number--><!--Device-CustomSpanDrawInfo-x: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

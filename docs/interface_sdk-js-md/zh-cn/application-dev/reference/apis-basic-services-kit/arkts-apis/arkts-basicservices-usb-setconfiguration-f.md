@@ -22,6 +22,8 @@ function setConfiguration(pipe: USBDevicePipe, config: USBConfig): number
 
 **替代接口：** [setConfiguration](arkts-basicservices-usbmanager-setconfiguration-f.md)
 
+<!--Device-usb-function setConfiguration(pipe: USBDevicePipe, config: USBConfig): number--><!--Device-usb-function setConfiguration(pipe: USBDevicePipe, config: USBConfig): number-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 **参数：**

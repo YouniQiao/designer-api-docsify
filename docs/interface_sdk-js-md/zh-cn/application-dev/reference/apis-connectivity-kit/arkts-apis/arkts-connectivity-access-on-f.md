@@ -22,6 +22,8 @@ function on(type: 'stateChange', callback: Callback<BluetoothState>): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-access-function on(type: 'stateChange', callback: Callback<BluetoothState>): void--><!--Device-access-function on(type: 'stateChange', callback: Callback<BluetoothState>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**

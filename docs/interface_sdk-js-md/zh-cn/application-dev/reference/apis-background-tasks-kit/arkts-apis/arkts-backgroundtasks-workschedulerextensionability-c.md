@@ -8,6 +8,8 @@ declare class WorkSchedulerExtensionAbility
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare class WorkSchedulerExtensionAbility--><!--Device-unnamed-declare class WorkSchedulerExtensionAbility-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
 ## 导入模块
@@ -27,6 +29,8 @@ onWorkStart(work: workScheduler.WorkInfo): void
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WorkSchedulerExtensionAbility-onWorkStart(work: workScheduler.WorkInfo): void--><!--Device-WorkSchedulerExtensionAbility-onWorkStart(work: workScheduler.WorkInfo): void-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
@@ -61,6 +65,8 @@ onWorkStop(work: workScheduler.WorkInfo): void
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WorkSchedulerExtensionAbility-onWorkStop(work: workScheduler.WorkInfo): void--><!--Device-WorkSchedulerExtensionAbility-onWorkStop(work: workScheduler.WorkInfo): void-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
@@ -97,5 +103,7 @@ WorkSchedulerExtension的上下文环境，继承自ExtensionContext。
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WorkSchedulerExtensionAbility-context: WorkSchedulerExtensionContext--><!--Device-WorkSchedulerExtensionAbility-context: WorkSchedulerExtensionContext-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler

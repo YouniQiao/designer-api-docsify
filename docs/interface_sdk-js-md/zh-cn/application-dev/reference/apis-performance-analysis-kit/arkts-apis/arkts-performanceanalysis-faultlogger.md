@@ -12,6 +12,8 @@
 
 **替代接口：** hiAppEvent
 
+<!--Device-unnamed-declare namespace FaultLogger--><!--Device-unnamed-declare namespace FaultLogger-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
 ## 导入模块

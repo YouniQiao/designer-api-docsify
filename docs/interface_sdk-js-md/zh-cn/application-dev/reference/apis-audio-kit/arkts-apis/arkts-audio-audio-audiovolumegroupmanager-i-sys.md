@@ -8,6 +8,8 @@ interface AudioVolumeGroupManager
 
 **起始版本：** 9
 
+<!--Device-audio-interface AudioVolumeGroupManager--><!--Device-audio-interface AudioVolumeGroupManager-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 ## 导入模块
@@ -27,6 +29,8 @@ adjustSystemVolumeByStep(volumeType: AudioVolumeType, adjustType: VolumeAdjustTy
 **起始版本：** 10
 
 **需要权限：** ohos.permission.ACCESS_NOTIFICATION_POLICY
+
+<!--Device-AudioVolumeGroupManager-adjustSystemVolumeByStep(volumeType: AudioVolumeType, adjustType: VolumeAdjustType, callback: AsyncCallback<void>): void--><!--Device-AudioVolumeGroupManager-adjustSystemVolumeByStep(volumeType: AudioVolumeType, adjustType: VolumeAdjustType, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -76,6 +80,8 @@ adjustSystemVolumeByStep(volumeType: AudioVolumeType, adjustType: VolumeAdjustTy
 **起始版本：** 10
 
 **需要权限：** ohos.permission.ACCESS_NOTIFICATION_POLICY
+
+<!--Device-AudioVolumeGroupManager-adjustSystemVolumeByStep(volumeType: AudioVolumeType, adjustType: VolumeAdjustType): Promise<void>--><!--Device-AudioVolumeGroupManager-adjustSystemVolumeByStep(volumeType: AudioVolumeType, adjustType: VolumeAdjustType): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -127,6 +133,8 @@ adjustVolumeByStep(adjustType: VolumeAdjustType, callback: AsyncCallback<void>):
 
 **需要权限：** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
+<!--Device-AudioVolumeGroupManager-adjustVolumeByStep(adjustType: VolumeAdjustType, callback: AsyncCallback<void>): void--><!--Device-AudioVolumeGroupManager-adjustVolumeByStep(adjustType: VolumeAdjustType, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -176,6 +184,8 @@ adjustVolumeByStep(adjustType: VolumeAdjustType): Promise<void>
 
 **需要权限：** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
+<!--Device-AudioVolumeGroupManager-adjustVolumeByStep(adjustType: VolumeAdjustType): Promise<void>--><!--Device-AudioVolumeGroupManager-adjustVolumeByStep(adjustType: VolumeAdjustType): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -223,6 +233,8 @@ getActiveVolumeTypeSync(uid: number): AudioVolumeType
 
 **起始版本：** 13
 
+<!--Device-AudioVolumeGroupManager-getActiveVolumeTypeSync(uid: int): AudioVolumeType--><!--Device-AudioVolumeGroupManager-getActiveVolumeTypeSync(uid: int): AudioVolumeType-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -267,6 +279,8 @@ isPersistentMicMute(): boolean
 
 **需要权限：** ohos.permission.MICROPHONE_CONTROL
 
+<!--Device-AudioVolumeGroupManager-isPersistentMicMute(): boolean--><!--Device-AudioVolumeGroupManager-isPersistentMicMute(): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -301,6 +315,8 @@ mute(volumeType: AudioVolumeType, mute: boolean, callback: AsyncCallback<void>):
 **起始版本：** 9
 
 **需要权限：** ohos.permission.ACCESS_NOTIFICATION_POLICY
+
+<!--Device-AudioVolumeGroupManager-mute(volumeType: AudioVolumeType, mute: boolean, callback: AsyncCallback<void>): void--><!--Device-AudioVolumeGroupManager-mute(volumeType: AudioVolumeType, mute: boolean, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -342,6 +358,8 @@ mute(volumeType: AudioVolumeType, mute: boolean): Promise<void>
 
 **需要权限：** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
+<!--Device-AudioVolumeGroupManager-mute(volumeType: AudioVolumeType, mute: boolean): Promise<void>--><!--Device-AudioVolumeGroupManager-mute(volumeType: AudioVolumeType, mute: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -378,6 +396,8 @@ setMicMute(mute: boolean): Promise<void>
 **起始版本：** 11
 
 **需要权限：** ohos.permission.MANAGE_AUDIO_CONFIG
+
+<!--Device-AudioVolumeGroupManager-setMicMute(mute: boolean): Promise<void>--><!--Device-AudioVolumeGroupManager-setMicMute(mute: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -423,6 +443,8 @@ setMicMutePersistent(mute: boolean, type: PolicyType): Promise<void>
 **起始版本：** 12
 
 **需要权限：** ohos.permission.MICROPHONE_CONTROL
+
+<!--Device-AudioVolumeGroupManager-setMicMutePersistent(mute: boolean, type: PolicyType): Promise<void>--><!--Device-AudioVolumeGroupManager-setMicMutePersistent(mute: boolean, type: PolicyType): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -470,6 +492,8 @@ setRingerMode(mode: AudioRingMode, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
+<!--Device-AudioVolumeGroupManager-setRingerMode(mode: AudioRingMode, callback: AsyncCallback<void>): void--><!--Device-AudioVolumeGroupManager-setRingerMode(mode: AudioRingMode, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -509,6 +533,8 @@ setRingerMode(mode: AudioRingMode): Promise<void>
 
 **需要权限：** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
+<!--Device-AudioVolumeGroupManager-setRingerMode(mode: AudioRingMode): Promise<void>--><!--Device-AudioVolumeGroupManager-setRingerMode(mode: AudioRingMode): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -544,6 +570,8 @@ setVolume(volumeType: AudioVolumeType, volume: number, callback: AsyncCallback<v
 **起始版本：** 9
 
 **需要权限：** ohos.permission.ACCESS_NOTIFICATION_POLICY
+
+<!--Device-AudioVolumeGroupManager-setVolume(volumeType: AudioVolumeType, volume: int, callback: AsyncCallback<void>): void--><!--Device-AudioVolumeGroupManager-setVolume(volumeType: AudioVolumeType, volume: int, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -585,6 +613,8 @@ setVolume(volumeType: AudioVolumeType, volume: number): Promise<void>
 
 **需要权限：** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
+<!--Device-AudioVolumeGroupManager-setVolume(volumeType: AudioVolumeType, volume: int): Promise<void>--><!--Device-AudioVolumeGroupManager-setVolume(volumeType: AudioVolumeType, volume: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -621,6 +651,8 @@ setVolumeWithFlag(volumeType: AudioVolumeType, volume: number, flags: number): P
 **起始版本：** 12
 
 **需要权限：** ohos.permission.ACCESS_NOTIFICATION_POLICY
+
+<!--Device-AudioVolumeGroupManager-setVolumeWithFlag(volumeType: AudioVolumeType, volume: int, flags: int): Promise<void>--><!--Device-AudioVolumeGroupManager-setVolumeWithFlag(volumeType: AudioVolumeType, volume: int, flags: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 

@@ -8,6 +8,8 @@ export enum UserActivityScenario
 
 **起始版本：** 12
 
+<!--Device-geoLocationManager-export enum UserActivityScenario--><!--Device-geoLocationManager-export enum UserActivityScenario-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 ## NAVIGATION
@@ -24,7 +26,9 @@ NAVIGATION = 0x401
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-UserActivityScenario-NAVIGATION = 0x401--><!--Device-UserActivityScenario-NAVIGATION = 0x401-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -42,7 +46,9 @@ SPORT = 0x402
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-UserActivityScenario-SPORT = 0x402--><!--Device-UserActivityScenario-SPORT = 0x402-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -60,7 +66,9 @@ TRANSPORT = 0x403
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-UserActivityScenario-TRANSPORT = 0x403--><!--Device-UserActivityScenario-TRANSPORT = 0x403-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -78,6 +86,8 @@ DAILY_LIFE_SERVICE = 0x404
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-UserActivityScenario-DAILY_LIFE_SERVICE = 0x404--><!--Device-UserActivityScenario-DAILY_LIFE_SERVICE = 0x404-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core

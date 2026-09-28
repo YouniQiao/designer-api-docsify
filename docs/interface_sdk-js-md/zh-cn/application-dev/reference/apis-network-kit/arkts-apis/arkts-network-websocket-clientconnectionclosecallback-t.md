@@ -8,6 +8,8 @@ export type ClientConnectionCloseCallback = (clientConnection: WebSocketConnecti
 
 **起始版本：** 19
 
+<!--Device-webSocket-export type ClientConnectionCloseCallback = (clientConnection: WebSocketConnection, closeReason :CloseResult) => void--><!--Device-webSocket-export type ClientConnectionCloseCallback = (clientConnection: WebSocketConnection, closeReason :CloseResult) => void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**

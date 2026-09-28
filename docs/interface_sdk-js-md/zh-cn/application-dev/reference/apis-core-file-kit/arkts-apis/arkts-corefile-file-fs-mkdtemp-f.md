@@ -16,6 +16,8 @@ declare function mkdtemp(prefix: string): Promise<string>
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare function mkdtemp(prefix: string): Promise<string>--><!--Device-unnamed-declare function mkdtemp(prefix: string): Promise<string>-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -62,6 +64,8 @@ declare function mkdtemp(prefix: string, callback: AsyncCallback<string>): void
 创建临时目录。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-unnamed-declare function mkdtemp(prefix: string, callback: AsyncCallback<string>): void--><!--Device-unnamed-declare function mkdtemp(prefix: string, callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

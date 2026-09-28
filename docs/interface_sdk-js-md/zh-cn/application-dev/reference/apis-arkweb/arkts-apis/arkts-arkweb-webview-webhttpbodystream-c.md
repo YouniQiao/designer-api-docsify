@@ -10,6 +10,8 @@ WebHttpBodyStream与[WebSchemeHandlerRequest](arkts-arkweb-webview-webschemehand
 
 **起始版本：** 12
 
+<!--Device-webview-class WebHttpBodyStream--><!--Device-webview-class WebHttpBodyStream-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## 导入模块
@@ -29,6 +31,8 @@ getPosition(): number
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebHttpBodyStream-getPosition(): number--><!--Device-WebHttpBodyStream-getPosition(): number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -54,6 +58,8 @@ getSize(): number
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebHttpBodyStream-getSize(): number--><!--Device-WebHttpBodyStream-getSize(): number-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -77,6 +83,8 @@ initialize(): Promise<void>
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebHttpBodyStream-initialize(): Promise<void>--><!--Device-WebHttpBodyStream-initialize(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -186,6 +194,8 @@ WebHttpBodyStream是否采用分块传输。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebHttpBodyStream-isChunked(): boolean--><!--Device-WebHttpBodyStream-isChunked(): boolean-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -209,6 +219,8 @@ isEof(): boolean
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebHttpBodyStream-isEof(): boolean--><!--Device-WebHttpBodyStream-isEof(): boolean-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -234,6 +246,8 @@ isInMemory(): boolean
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebHttpBodyStream-isInMemory(): boolean--><!--Device-WebHttpBodyStream-isInMemory(): boolean-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -255,6 +269,8 @@ read(size: number): Promise<ArrayBuffer>
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebHttpBodyStream-read(size: number): Promise<ArrayBuffer>--><!--Device-WebHttpBodyStream-read(size: number): Promise<ArrayBuffer>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

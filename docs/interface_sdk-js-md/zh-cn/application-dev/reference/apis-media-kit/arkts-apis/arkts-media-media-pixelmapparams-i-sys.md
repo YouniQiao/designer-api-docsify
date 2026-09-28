@@ -8,6 +8,8 @@ interface PixelMapParams
 
 **起始版本：** 12
 
+<!--Device-media-interface PixelMapParams--><!--Device-media-interface PixelMapParams-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVImageGenerator
 
 ## 导入模块
@@ -30,6 +32,8 @@ autoFlip?: boolean
 
 **起始版本：** 21
 
+<!--Device-PixelMapParams-autoFlip?: boolean--><!--Device-PixelMapParams-autoFlip?: boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVImageGenerator
 
 **系统接口：** 此接口为系统接口。
@@ -47,6 +51,8 @@ colorFormat?: PixelFormat
 **类型：** [PixelFormat](arkts-media-media-pixelformat-e-sys.md)
 
 **起始版本：** 11
+
+<!--Device-PixelMapParams-colorFormat?: PixelFormat--><!--Device-PixelMapParams-colorFormat?: PixelFormat-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVImageGenerator
 

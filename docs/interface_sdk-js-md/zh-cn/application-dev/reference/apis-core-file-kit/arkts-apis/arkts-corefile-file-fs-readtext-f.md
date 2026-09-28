@@ -21,6 +21,8 @@ declare function readText(
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-unnamed-declare function readText(  filePath: string,  options?: ReadTextOptions): Promise<string>--><!--Device-unnamed-declare function readText(  filePath: string,  options?: ReadTextOptions): Promise<string>-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -70,6 +72,8 @@ declare function readText(filePath: string, callback: AsyncCallback<string>): vo
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-unnamed-declare function readText(filePath: string, callback: AsyncCallback<string>): void--><!--Device-unnamed-declare function readText(filePath: string, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -115,6 +119,8 @@ declare function readText(
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-unnamed-declare function readText(  filePath: string,  options: ReadTextOptions,  callback: AsyncCallback<string>): void--><!--Device-unnamed-declare function readText(  filePath: string,  options: ReadTextOptions,  callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

@@ -16,6 +16,8 @@ function getRotationMatrix(rotationVector: Array<number>, callback: AsyncCallbac
 
 **起始版本：** 9
 
+<!--Device-sensor-function getRotationMatrix(rotationVector: Array<double>, callback: AsyncCallback<Array<double>>): void--><!--Device-sensor-function getRotationMatrix(rotationVector: Array<double>, callback: AsyncCallback<Array<double>>): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -68,6 +70,8 @@ function getRotationMatrix(rotationVector: Array<number>): Promise<Array<number>
 根据旋转矢量获取旋转矩阵。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-sensor-function getRotationMatrix(rotationVector: Array<double>): Promise<Array<double>>--><!--Device-sensor-function getRotationMatrix(rotationVector: Array<double>): Promise<Array<double>>-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -126,6 +130,8 @@ function getRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>, c
 
 **起始版本：** 9
 
+<!--Device-sensor-function getRotationMatrix(gravity: Array<double>, geomagnetic: Array<double>, callback: AsyncCallback<RotationMatrixResponse>): void--><!--Device-sensor-function getRotationMatrix(gravity: Array<double>, geomagnetic: Array<double>, callback: AsyncCallback<RotationMatrixResponse>): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -178,6 +184,8 @@ function getRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>): 
 根据重力矢量和地磁矢量计算旋转矩阵。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-sensor-function getRotationMatrix(gravity: Array<double>, geomagnetic: Array<double>): Promise<RotationMatrixResponse>--><!--Device-sensor-function getRotationMatrix(gravity: Array<double>, geomagnetic: Array<double>): Promise<RotationMatrixResponse>-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 

@@ -18,6 +18,8 @@ Creates a spring animation curve. If multiple spring animations are applied to t
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-curves-function springMotion(response?: number, dampingFraction?: number, overlapDuration?: number): ICurve--><!--Device-curves-function springMotion(response?: number, dampingFraction?: number, overlapDuration?: number): ICurve-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

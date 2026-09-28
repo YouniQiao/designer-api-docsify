@@ -23,6 +23,8 @@ function reset(wallpaperType: WallpaperType, callback: AsyncCallback<void>): voi
 
 **需要权限：** ohos.permission.SET_WALLPAPER
 
+<!--Device-wallpaper-function reset(wallpaperType: WallpaperType, callback: AsyncCallback<void>): void--><!--Device-wallpaper-function reset(wallpaperType: WallpaperType, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
 **参数：**
@@ -65,6 +67,8 @@ function reset(wallpaperType: WallpaperType): Promise<void>
 **废弃版本：** 9
 
 **需要权限：** ohos.permission.SET_WALLPAPER
+
+<!--Device-wallpaper-function reset(wallpaperType: WallpaperType): Promise<void>--><!--Device-wallpaper-function reset(wallpaperType: WallpaperType): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 

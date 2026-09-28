@@ -8,6 +8,8 @@ export interface WebSocketConnection
 
 **起始版本：** 19
 
+<!--Device-webSocket-export interface WebSocketConnection--><!--Device-webSocket-export interface WebSocketConnection-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块
@@ -28,6 +30,8 @@ clientIP: string
 
 **起始版本：** 19
 
+<!--Device-WebSocketConnection-clientIP: string--><!--Device-WebSocketConnection-clientIP: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## clientPort
@@ -41,5 +45,7 @@ clientPort: number
 **类型：** number
 
 **起始版本：** 19
+
+<!--Device-WebSocketConnection-clientPort: int--><!--Device-WebSocketConnection-clientPort: int-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack

@@ -10,6 +10,8 @@ interface CsrAttribute
 
 **起始版本：** 18
 
+<!--Device-cert-interface CsrAttribute--><!--Device-cert-interface CsrAttribute-End-->
+
 **系统能力：** SystemCapability.Security.Cert
 
 ## 导入模块
@@ -30,7 +32,9 @@ PKCS #9指定的扩展类型。
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-CsrAttribute-type: string--><!--Device-CsrAttribute-type: string-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -46,6 +50,8 @@ value: string
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-CsrAttribute-value: string--><!--Device-CsrAttribute-value: string-End-->
 
 **系统能力：** SystemCapability.Security.Cert

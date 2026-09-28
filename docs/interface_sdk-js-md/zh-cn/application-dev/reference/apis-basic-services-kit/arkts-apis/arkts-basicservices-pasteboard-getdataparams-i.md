@@ -8,6 +8,8 @@ interface GetDataParams
 
 **起始版本：** 15
 
+<!--Device-pasteboard-interface GetDataParams--><!--Device-pasteboard-interface GetDataParams-End-->
+
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
 ## 导入模块
@@ -26,7 +28,9 @@ progressListener?: ProgressListener
 
 **起始版本：** 15
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-GetDataParams-progressListener?: ProgressListener--><!--Device-GetDataParams-progressListener?: ProgressListener-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -44,7 +48,9 @@ destUri?: string
 
 **起始版本：** 15
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-GetDataParams-destUri?: string--><!--Device-GetDataParams-destUri?: string-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -62,7 +68,9 @@ fileConflictOptions?: FileConflictOptions
 
 **起始版本：** 15
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-GetDataParams-fileConflictOptions?: FileConflictOptions--><!--Device-GetDataParams-fileConflictOptions?: FileConflictOptions-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -78,7 +86,9 @@ progressIndicator: ProgressIndicator
 
 **起始版本：** 15
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-GetDataParams-progressIndicator: ProgressIndicator--><!--Device-GetDataParams-progressIndicator: ProgressIndicator-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -96,6 +106,8 @@ progressSignal?: ProgressSignal
 
 **起始版本：** 15
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-GetDataParams-progressSignal?: ProgressSignal--><!--Device-GetDataParams-progressSignal?: ProgressSignal-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard

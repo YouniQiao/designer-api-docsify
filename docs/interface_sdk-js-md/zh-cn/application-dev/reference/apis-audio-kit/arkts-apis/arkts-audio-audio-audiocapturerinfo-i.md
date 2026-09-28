@@ -8,6 +8,8 @@ interface AudioCapturerInfo
 
 **起始版本：** 8
 
+<!--Device-audio-interface AudioCapturerInfo--><!--Device-audio-interface AudioCapturerInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ capturerFlags: number
 
 **起始版本：** 8
 
+<!--Device-AudioCapturerInfo-capturerFlags: int--><!--Device-AudioCapturerInfo-capturerFlags: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## source
@@ -43,5 +47,7 @@ source: SourceType
 **类型：** [SourceType](arkts-audio-audio-sourcetype-e.md)
 
 **起始版本：** 8
+
+<!--Device-AudioCapturerInfo-source: SourceType--><!--Device-AudioCapturerInfo-source: SourceType-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core

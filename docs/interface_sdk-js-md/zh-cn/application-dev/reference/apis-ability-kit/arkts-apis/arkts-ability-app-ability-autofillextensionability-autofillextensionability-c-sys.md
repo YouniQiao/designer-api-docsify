@@ -10,6 +10,8 @@ AutoFillExtensionAbility模块支持账号、密码、地址等多种数据类�
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare class AutoFillExtensionAbility extends ExtensionAbility--><!--Device-unnamed-declare class AutoFillExtensionAbility extends ExtensionAbility-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **系统接口：** 此接口为系统接口。
@@ -31,6 +33,8 @@ onBackground(): void
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AutoFillExtensionAbility-onBackground(): void--><!--Device-AutoFillExtensionAbility-onBackground(): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -61,6 +65,8 @@ AutoFillExtensionAbility创建时触发回调函数。在此方法中可进行�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AutoFillExtensionAbility-onCreate(): void--><!--Device-AutoFillExtensionAbility-onCreate(): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **系统接口：** 此接口为系统接口。
@@ -90,6 +96,8 @@ onDestroy(): void | Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AutoFillExtensionAbility-onDestroy(): void | Promise<void>--><!--Device-AutoFillExtensionAbility-onDestroy(): void | Promise<void>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **系统接口：** 此接口为系统接口。
@@ -118,6 +126,8 @@ onFillRequest(session: UIExtensionContentSession, request: FillRequest, callback
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AutoFillExtensionAbility-onFillRequest(session: UIExtensionContentSession, request: FillRequest, callback: FillRequestCallback): void--><!--Device-AutoFillExtensionAbility-onFillRequest(session: UIExtensionContentSession, request: FillRequest, callback: FillRequestCallback): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -181,6 +191,8 @@ onForeground(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AutoFillExtensionAbility-onForeground(): void--><!--Device-AutoFillExtensionAbility-onForeground(): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **系统接口：** 此接口为系统接口。
@@ -209,6 +221,8 @@ onSaveRequest(session: UIExtensionContentSession, request: SaveRequest, callback
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AutoFillExtensionAbility-onSaveRequest(session: UIExtensionContentSession, request: SaveRequest, callback: SaveRequestCallback): void--><!--Device-AutoFillExtensionAbility-onSaveRequest(session: UIExtensionContentSession, request: SaveRequest, callback: SaveRequestCallback): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -270,6 +284,8 @@ onSessionDestroy(session: UIExtensionContentSession): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AutoFillExtensionAbility-onSessionDestroy(session: UIExtensionContentSession): void--><!--Device-AutoFillExtensionAbility-onSessionDestroy(session: UIExtensionContentSession): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **系统接口：** 此接口为系统接口。
@@ -304,6 +320,8 @@ onUpdateRequest(request: UpdateRequest): void
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AutoFillExtensionAbility-onUpdateRequest(request: UpdateRequest): void--><!--Device-AutoFillExtensionAbility-onUpdateRequest(request: UpdateRequest): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -342,6 +360,8 @@ AutoFillExtension的上下文环境，继承自ExtensionContext。
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AutoFillExtensionAbility-context: AutoFillExtensionContext--><!--Device-AutoFillExtensionAbility-context: AutoFillExtensionContext-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 

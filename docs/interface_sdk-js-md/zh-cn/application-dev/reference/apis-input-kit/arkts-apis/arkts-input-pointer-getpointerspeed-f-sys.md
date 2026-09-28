@@ -16,6 +16,8 @@ function getPointerSpeed(callback: AsyncCallback<number>): void
 
 **起始版本：** 9
 
+<!--Device-pointer-function getPointerSpeed(callback: AsyncCallback<int>): void--><!--Device-pointer-function getPointerSpeed(callback: AsyncCallback<int>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 **系统接口：** 此接口为系统接口。
@@ -76,6 +78,8 @@ function getPointerSpeed(): Promise<number>
 获取当前鼠标移动速度，使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-pointer-function getPointerSpeed(): Promise<int>--><!--Device-pointer-function getPointerSpeed(): Promise<int>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 

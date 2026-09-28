@@ -14,6 +14,8 @@ DrawModifier can set the drawing methods of the mask layer (drawOverlay&lt;sup&g
 
 **Since:** 12
 
+<!--Device-unnamed-declare class DrawModifier--><!--Device-unnamed-declare class DrawModifier-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## drawBehind
@@ -29,6 +31,8 @@ Draws the content background. Override this method to implement custom content b
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DrawModifier-drawBehind?(drawContext: DrawContext): void--><!--Device-DrawModifier-drawBehind?(drawContext: DrawContext): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -56,6 +60,8 @@ Draws the content. Override this method to implement custom content drawing, whi
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DrawModifier-drawContent?(drawContext: DrawContext): void--><!--Device-DrawModifier-drawContent?(drawContext: DrawContext): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -81,6 +87,8 @@ Draws the foreground. Override this method to implement custom foreground drawin
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-DrawModifier-drawForeground(drawContext: DrawContext): void--><!--Device-DrawModifier-drawForeground(drawContext: DrawContext): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -108,6 +116,8 @@ Draws the content foreground. Override this method to implement custom content f
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DrawModifier-drawFront?(drawContext: DrawContext): void--><!--Device-DrawModifier-drawFront?(drawContext: DrawContext): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -133,6 +143,8 @@ Interface for custom drawing of the mask. If this method is overridden, custom d
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-DrawModifier-drawOverlay(drawContext: DrawContext): void--><!--Device-DrawModifier-drawOverlay(drawContext: DrawContext): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -216,6 +228,8 @@ Interface for proactively triggering redrawing. Developers do not need to and ca
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DrawModifier-invalidate(): void--><!--Device-DrawModifier-invalidate(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

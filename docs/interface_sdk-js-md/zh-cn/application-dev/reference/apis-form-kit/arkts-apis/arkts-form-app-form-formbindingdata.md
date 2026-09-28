@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace formBindingData--><!--Device-unnamed-declare namespace formBindingData-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 ## 导入模块

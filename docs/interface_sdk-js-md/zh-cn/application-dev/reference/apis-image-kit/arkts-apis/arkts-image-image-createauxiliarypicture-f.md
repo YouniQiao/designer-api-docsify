@@ -18,6 +18,8 @@ function createAuxiliaryPicture(buffer: ArrayBuffer, size: Size, type: Auxiliary
 
 **起始版本：** 13
 
+<!--Device-image-function createAuxiliaryPicture(buffer: ArrayBuffer, size: Size, type: AuxiliaryPictureType): AuxiliaryPicture--><!--Device-image-function createAuxiliaryPicture(buffer: ArrayBuffer, size: Size, type: AuxiliaryPictureType): AuxiliaryPicture-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**

@@ -4,6 +4,8 @@
 
 **起始版本：** 18
 
+<!--Device-unnamed-declare namespace metadataBinding--><!--Device-unnamed-declare namespace metadataBinding-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.MetadataBinding
 
 ## 导入模块

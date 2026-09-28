@@ -8,6 +8,8 @@ class Authenticator
 
 **起始版本：** 8
 
+<!--Device-appAccount-class Authenticator--><!--Device-appAccount-class Authenticator-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 ## 导入模块
@@ -25,6 +27,8 @@ auth(name: string, authType: string, options: Record<string, Object>, callback: 
 对应用账号进行鉴权以获取授权令牌。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-Authenticator-auth(name: string, authType: string, options: Record<string, Object>, callback: AuthCallback): void--><!--Device-Authenticator-auth(name: string, authType: string, options: Record<string, Object>, callback: AuthCallback): void-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -46,6 +50,8 @@ checkAccountLabels(name: string, labels: Array<string>, callback: AuthCallback):
 检查账号标签。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-Authenticator-checkAccountLabels(name: string, labels: Array<string>, callback: AuthCallback): void--><!--Device-Authenticator-checkAccountLabels(name: string, labels: Array<string>, callback: AuthCallback): void-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -71,6 +77,8 @@ checkAccountRemovable(name: string, callback: AuthCallback): void
 
 **起始版本：** 9
 
+<!--Device-Authenticator-checkAccountRemovable(name: string, callback: AuthCallback): void--><!--Device-Authenticator-checkAccountRemovable(name: string, callback: AuthCallback): void-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -94,6 +102,8 @@ createAccountImplicitly(options: CreateAccountImplicitlyOptions, callback: AuthC
 
 **起始版本：** 9
 
+<!--Device-Authenticator-createAccountImplicitly(options: CreateAccountImplicitlyOptions, callback: AuthCallback): void--><!--Device-Authenticator-createAccountImplicitly(options: CreateAccountImplicitlyOptions, callback: AuthCallback): void-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -112,6 +122,8 @@ getRemoteObject(): rpc.RemoteObject
 获取认证器的远程对象，不可以重载实现。
 
 **起始版本：** 9
+
+<!--Device-Authenticator-getRemoteObject(): rpc.RemoteObject--><!--Device-Authenticator-getRemoteObject(): rpc.RemoteObject-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -204,6 +216,8 @@ setProperties(options: SetPropertiesOptions, callback: AuthCallback): void
 
 **起始版本：** 9
 
+<!--Device-Authenticator-setProperties(options: SetPropertiesOptions, callback: AuthCallback): void--><!--Device-Authenticator-setProperties(options: SetPropertiesOptions, callback: AuthCallback): void-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -226,6 +240,8 @@ verifyCredential(name: string, options: VerifyCredentialOptions, callback: AuthC
 验证应用账号的凭据。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-Authenticator-verifyCredential(name: string, options: VerifyCredentialOptions, callback: AuthCallback): void--><!--Device-Authenticator-verifyCredential(name: string, options: VerifyCredentialOptions, callback: AuthCallback): void-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -264,6 +280,8 @@ addAccountImplicitly(
 
 **替代接口：** [createAccountImplicitly](#createaccountimplicitly)(options: CreateAccountImplicitlyOptions, callback: AuthCallback)
 
+<!--Device-Authenticator-addAccountImplicitly(      authType: string,      callerBundleName: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void--><!--Device-Authenticator-addAccountImplicitly(      authType: string,      callerBundleName: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -298,6 +316,8 @@ authenticate(
 **废弃版本：** 9
 
 **替代接口：** [auth](#auth)(name: string, authType: string, options: Record&lt;string, Object&gt;, callback: AuthCallback)
+
+<!--Device-Authenticator-authenticate(      name: string,      authType: string,      callerBundleName: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void--><!--Device-Authenticator-authenticate(      name: string,      authType: string,      callerBundleName: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 

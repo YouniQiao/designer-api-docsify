@@ -14,6 +14,8 @@ Defines the callback invoked when the scrollable component is released.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 20.
 
+<!--Device-unnamed-declare type OnWillStopDraggingCallback = (velocity: number) => void--><!--Device-unnamed-declare type OnWillStopDraggingCallback = (velocity: number) => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

@@ -18,6 +18,8 @@ function setAdditionalConfig(key: string, value: string): Promise<number>
 
 **需要权限：** ohos.permission.NOTIFICATION_AGENT_CONTROLLER
 
+<!--Device-notificationManager-function setAdditionalConfig(key: string, value: string): Promise<int>--><!--Device-notificationManager-function setAdditionalConfig(key: string, value: string): Promise<int>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。

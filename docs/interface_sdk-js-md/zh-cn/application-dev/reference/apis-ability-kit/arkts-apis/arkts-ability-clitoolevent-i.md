@@ -8,6 +8,8 @@ CliToolEvent用于描述CLI工具进程运行期间产生的会话事件信息�
 
 **起始版本：** 26.0.1
 
+<!--Device-unnamed-export interface CliToolEvent--><!--Device-unnamed-export interface CliToolEvent-End-->
+
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 ## data
@@ -24,6 +26,8 @@ CLI工具事件数据。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-CliToolEvent-data: string--><!--Device-CliToolEvent-data: string-End-->
+
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 ## toolEventType
@@ -39,5 +43,7 @@ CLI工具事件类型。
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-CliToolEvent-toolEventType: ToolEventType--><!--Device-CliToolEvent-toolEventType: ToolEventType-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core

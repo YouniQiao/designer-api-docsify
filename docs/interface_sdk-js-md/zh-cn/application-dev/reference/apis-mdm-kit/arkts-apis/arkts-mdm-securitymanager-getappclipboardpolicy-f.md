@@ -20,6 +20,8 @@ function getAppClipboardPolicy(admin: Want, tokenId?: number): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-securityManager-function getAppClipboardPolicy(admin: Want, tokenId?: number): string--><!--Device-securityManager-function getAppClipboardPolicy(admin: Want, tokenId?: number): string-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -82,6 +84,8 @@ function getAppClipboardPolicy(admin: Want | null, tokenId?: number): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-securityManager-function getAppClipboardPolicy(admin: Want | null, tokenId?: number): string--><!--Device-securityManager-function getAppClipboardPolicy(admin: Want | null, tokenId?: number): string-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -138,6 +142,8 @@ function getAppClipboardPolicy(admin: Want, bundleName: string, accountId: numbe
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_SECURITY
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-securityManager-function getAppClipboardPolicy(admin: Want, bundleName: string, accountId: number): string--><!--Device-securityManager-function getAppClipboardPolicy(admin: Want, bundleName: string, accountId: number): string-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -201,6 +207,8 @@ function getAppClipboardPolicy(admin: Want | null, bundleName: string, accountId
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_SECURITY
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-securityManager-function getAppClipboardPolicy(admin: Want | null, bundleName: string, accountId: number): string--><!--Device-securityManager-function getAppClipboardPolicy(admin: Want | null, bundleName: string, accountId: number): string-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

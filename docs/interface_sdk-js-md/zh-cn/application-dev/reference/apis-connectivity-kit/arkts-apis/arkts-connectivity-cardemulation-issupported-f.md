@@ -22,6 +22,8 @@ function isSupported(feature: number): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-cardEmulation-function isSupported(feature: number): boolean--><!--Device-cardEmulation-function isSupported(feature: number): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.NFC.CardEmulation
 
 **参数：**

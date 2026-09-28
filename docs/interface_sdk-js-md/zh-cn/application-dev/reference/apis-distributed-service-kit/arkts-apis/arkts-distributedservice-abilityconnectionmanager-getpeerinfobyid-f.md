@@ -18,6 +18,8 @@ function getPeerInfoById(sessionId: number): PeerInfo | undefined
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-abilityConnectionManager-function getPeerInfoById(sessionId: int): PeerInfo | undefined--><!--Device-abilityConnectionManager-function getPeerInfoById(sessionId: int): PeerInfo | undefined-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **参数：**

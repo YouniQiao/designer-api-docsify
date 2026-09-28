@@ -12,6 +12,8 @@ COMPATIBLE：选择为COMPATIBLE模式时，数据库在检查Value格式时较�
 
 **起始版本：** 9
 
+<!--Device-distributedKVStore-class Schema--><!--Device-distributedKVStore-class Schema-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 ## 导入模块
@@ -31,6 +33,8 @@ constructor()
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Schema-constructor()--><!--Device-Schema-constructor()-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
@@ -68,6 +72,8 @@ get indexes(): Array<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Schema-get indexes(): Array<string>--><!--Device-Schema-get indexes(): Array<string>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 ```TypeScript
@@ -81,6 +87,8 @@ set indexes(indexes: Array<string>)
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Schema-set indexes(indexes: Array<string>)--><!--Device-Schema-set indexes(indexes: Array<string>)-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
@@ -98,6 +106,8 @@ get mode(): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Schema-get mode(): int--><!--Device-Schema-get mode(): int-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 ```TypeScript
@@ -111,6 +121,8 @@ set mode(mode: number)
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Schema-set mode(mode: int)--><!--Device-Schema-set mode(mode: int)-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
@@ -128,6 +140,8 @@ get root(): FieldNode
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Schema-get root(): FieldNode--><!--Device-Schema-get root(): FieldNode-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 ```TypeScript
@@ -141,6 +155,8 @@ set root(root: FieldNode)
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Schema-set root(root: FieldNode)--><!--Device-Schema-set root(root: FieldNode)-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
@@ -158,6 +174,8 @@ get skip(): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Schema-get skip(): int--><!--Device-Schema-get skip(): int-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 ```TypeScript
@@ -171,5 +189,7 @@ set skip(skip: number)
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Schema-set skip(skip: int)--><!--Device-Schema-set skip(skip: int)-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore

@@ -8,6 +8,8 @@ interface RequestParam
 
 **起始版本：** 15
 
+<!--Device-netFirewall-interface RequestParam--><!--Device-netFirewall-interface RequestParam-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 ## 导入模块
@@ -28,6 +30,8 @@ orderField: NetFirewallOrderField
 
 **起始版本：** 15
 
+<!--Device-RequestParam-orderField: NetFirewallOrderField--><!--Device-RequestParam-orderField: NetFirewallOrderField-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 ## orderType
@@ -41,6 +45,8 @@ orderType: NetFirewallOrderType
 **类型：** [NetFirewallOrderType](arkts-network-netfirewall-netfirewallordertype-e.md)
 
 **起始版本：** 15
+
+<!--Device-RequestParam-orderType: NetFirewallOrderType--><!--Device-RequestParam-orderType: NetFirewallOrderType-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -56,6 +62,8 @@ page: number
 
 **起始版本：** 15
 
+<!--Device-RequestParam-page: int--><!--Device-RequestParam-page: int-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 ## pageSize
@@ -69,5 +77,7 @@ pageSize: number
 **类型：** number
 
 **起始版本：** 15
+
+<!--Device-RequestParam-pageSize: int--><!--Device-RequestParam-pageSize: int-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall

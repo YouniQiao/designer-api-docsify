@@ -8,6 +8,8 @@ export enum ConnectionStrategy
 
 **起始版本：** 10
 
+<!--Device-baseProfile-export enum ConnectionStrategy--><!--Device-baseProfile-export enum ConnectionStrategy-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -23,6 +25,8 @@ CONNECTION_STRATEGY_UNSUPPORTED = 0
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ConnectionStrategy-CONNECTION_STRATEGY_UNSUPPORTED = 0--><!--Device-ConnectionStrategy-CONNECTION_STRATEGY_UNSUPPORTED = 0-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -40,6 +44,8 @@ CONNECTION_STRATEGY_ALLOWED = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ConnectionStrategy-CONNECTION_STRATEGY_ALLOWED = 1--><!--Device-ConnectionStrategy-CONNECTION_STRATEGY_ALLOWED = 1-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -55,6 +61,8 @@ CONNECTION_STRATEGY_FORBIDDEN = 2
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ConnectionStrategy-CONNECTION_STRATEGY_FORBIDDEN = 2--><!--Device-ConnectionStrategy-CONNECTION_STRATEGY_FORBIDDEN = 2-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

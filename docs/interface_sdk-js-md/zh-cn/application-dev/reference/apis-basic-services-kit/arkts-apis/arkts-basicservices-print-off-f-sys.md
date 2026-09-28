@@ -18,6 +18,8 @@ function off(type: 'printerStateChange', callback?: Callback<boolean>): void
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-print-function off(type: 'printerStateChange', callback?: Callback<boolean>): void--><!--Device-print-function off(type: 'printerStateChange', callback?: Callback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **系统接口：** 此接口为系统接口。
@@ -60,6 +62,8 @@ function off(type: 'jobStateChange', callback?: Callback<boolean>): void
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-print-function off(type: 'jobStateChange', callback?: Callback<boolean>): void--><!--Device-print-function off(type: 'jobStateChange', callback?: Callback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **系统接口：** 此接口为系统接口。
@@ -101,6 +105,8 @@ function off(type: 'extInfoChange', callback?: Callback<boolean>): void
 **起始版本：** 10
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
+
+<!--Device-print-function off(type: 'extInfoChange', callback?: Callback<boolean>): void--><!--Device-print-function off(type: 'extInfoChange', callback?: Callback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 

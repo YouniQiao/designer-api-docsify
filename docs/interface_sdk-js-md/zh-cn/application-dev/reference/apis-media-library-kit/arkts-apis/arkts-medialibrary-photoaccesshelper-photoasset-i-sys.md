@@ -8,6 +8,8 @@ interface PhotoAsset
 
 **起始版本：** 10
 
+<!--Device-photoAccessHelper-interface PhotoAsset--><!--Device-photoAccessHelper-interface PhotoAsset-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
@@ -27,6 +29,8 @@ cancelPhotoRequest(requestId: string): void
 **起始版本：** 11
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAsset-cancelPhotoRequest(requestId: string): void--><!--Device-PhotoAsset-cancelPhotoRequest(requestId: string): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -102,6 +106,8 @@ commitEditedAsset(editData: string, uri: string, callback: AsyncCallback<void>):
 **起始版本：** 11
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-PhotoAsset-commitEditedAsset(editData: string, uri: string, callback: AsyncCallback<void>): void--><!--Device-PhotoAsset-commitEditedAsset(editData: string, uri: string, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -180,6 +186,8 @@ commitEditedAsset(editData: string, uri: string): Promise<void>
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-PhotoAsset-commitEditedAsset(editData: string, uri: string): Promise<void>--><!--Device-PhotoAsset-commitEditedAsset(editData: string, uri: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -245,6 +253,8 @@ convertImageFormat(title: string, imageFormat: SupportedImageFormat): Promise<Ph
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-PhotoAsset-convertImageFormat(title: string, imageFormat: SupportedImageFormat): Promise<PhotoAsset>--><!--Device-PhotoAsset-convertImageFormat(title: string, imageFormat: SupportedImageFormat): Promise<PhotoAsset>-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -307,6 +317,8 @@ createTemporaryCompatibleDuplicate(): Promise<void>
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-PhotoAsset-createTemporaryCompatibleDuplicate(): Promise<void>--><!--Device-PhotoAsset-createTemporaryCompatibleDuplicate(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -363,6 +375,8 @@ generateUniqueId(): Promise<string>
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-PhotoAsset-generateUniqueId(): Promise<string>--><!--Device-PhotoAsset-generateUniqueId(): Promise<string>-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -393,6 +407,8 @@ getAnalysisData(analysisType: AnalysisType): Promise<string>
 **起始版本：** 11
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAsset-getAnalysisData(analysisType: AnalysisType): Promise<string>--><!--Device-PhotoAsset-getAnalysisData(analysisType: AnalysisType): Promise<string>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -462,6 +478,8 @@ getEditData(): Promise<MediaAssetEditData>
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-PhotoAsset-getEditData(): Promise<MediaAssetEditData>--><!--Device-PhotoAsset-getEditData(): Promise<MediaAssetEditData>-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -526,6 +544,8 @@ getExif(callback: AsyncCallback<string>): void
 **起始版本：** 10
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAsset-getExif(callback: AsyncCallback<string>): void--><!--Device-PhotoAsset-getExif(callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -604,6 +624,8 @@ getExif(): Promise<string>
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-PhotoAsset-getExif(): Promise<string>--><!--Device-PhotoAsset-getExif(): Promise<string>-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -663,6 +685,8 @@ getKeyFrameThumbnail(beginFrameTimeMs: number, type: ThumbnailType): Promise<ima
 **起始版本：** 18
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAsset-getKeyFrameThumbnail(beginFrameTimeMs: long, type: ThumbnailType): Promise<image.PixelMap>--><!--Device-PhotoAsset-getKeyFrameThumbnail(beginFrameTimeMs: long, type: ThumbnailType): Promise<image.PixelMap>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -732,6 +756,8 @@ getReadOnlyFdWithCached(): Promise<number>
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-PhotoAsset-getReadOnlyFdWithCached(): Promise<int>--><!--Device-PhotoAsset-getReadOnlyFdWithCached(): Promise<int>-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -798,6 +824,8 @@ getThumbnailData(type: ThumbnailType): Promise<ArrayBuffer>
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-PhotoAsset-getThumbnailData(type: ThumbnailType): Promise<ArrayBuffer>--><!--Device-PhotoAsset-getThumbnailData(type: ThumbnailType): Promise<ArrayBuffer>-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -858,6 +886,8 @@ isEdited(callback: AsyncCallback<boolean>): void
 **起始版本：** 11
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAsset-isEdited(callback: AsyncCallback<boolean>): void--><!--Device-PhotoAsset-isEdited(callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -926,6 +956,8 @@ isEdited(): Promise<boolean>
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-PhotoAsset-isEdited(): Promise<boolean>--><!--Device-PhotoAsset-isEdited(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -987,6 +1019,8 @@ requestEditData(callback: AsyncCallback<string>): void
 **起始版本：** 11
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAsset-requestEditData(callback: AsyncCallback<string>): void--><!--Device-PhotoAsset-requestEditData(callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -1053,6 +1087,8 @@ requestEditData(): Promise<string>
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-PhotoAsset-requestEditData(): Promise<string>--><!--Device-PhotoAsset-requestEditData(): Promise<string>-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1110,6 +1146,8 @@ requestPhoto(callback: AsyncCallback<image.PixelMap>): string
 **起始版本：** 11
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAsset-requestPhoto(callback: AsyncCallback<image.PixelMap>): string--><!--Device-PhotoAsset-requestPhoto(callback: AsyncCallback<image.PixelMap>): string-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -1180,6 +1218,8 @@ requestPhoto(options: RequestPhotoOptions, callback: AsyncCallback<image.PixelMa
 **起始版本：** 11
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAsset-requestPhoto(options: RequestPhotoOptions, callback: AsyncCallback<image.PixelMap>): string--><!--Device-PhotoAsset-requestPhoto(options: RequestPhotoOptions, callback: AsyncCallback<image.PixelMap>): string-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -1256,6 +1296,8 @@ requestSource(callback: AsyncCallback<number>): void
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-PhotoAsset-requestSource(callback: AsyncCallback<int>): void--><!--Device-PhotoAsset-requestSource(callback: AsyncCallback<int>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1319,6 +1361,8 @@ requestSource(): Promise<number>
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-PhotoAsset-requestSource(): Promise<int>--><!--Device-PhotoAsset-requestSource(): Promise<int>-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1378,6 +1422,8 @@ revertToOriginal(callback: AsyncCallback<void>): void
 **起始版本：** 11
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-PhotoAsset-revertToOriginal(callback: AsyncCallback<void>): void--><!--Device-PhotoAsset-revertToOriginal(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -1446,6 +1492,8 @@ revertToOriginal(): Promise<void>
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-PhotoAsset-revertToOriginal(): Promise<void>--><!--Device-PhotoAsset-revertToOriginal(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1511,6 +1559,8 @@ setPending(pendingState: boolean, callback: AsyncCallback<void>): void
 **起始版本：** 11
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-PhotoAsset-setPending(pendingState: boolean, callback: AsyncCallback<void>): void--><!--Device-PhotoAsset-setPending(pendingState: boolean, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -1581,6 +1631,8 @@ setPending(pendingState: boolean): Promise<void>
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-PhotoAsset-setPending(pendingState: boolean): Promise<void>--><!--Device-PhotoAsset-setPending(pendingState: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1647,6 +1699,8 @@ open(mode: string, callback: AsyncCallback<number>): void
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO or ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-PhotoAsset-open(mode: string, callback: AsyncCallback<number>): void--><!--Device-PhotoAsset-open(mode: string, callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1711,6 +1765,8 @@ open(mode: string): Promise<number>
 **替代接口：** open
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO or ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-PhotoAsset-open(mode: string): Promise<number>--><!--Device-PhotoAsset-open(mode: string): Promise<number>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -1777,6 +1833,8 @@ setFavorite(favoriteState: boolean, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-PhotoAsset-setFavorite(favoriteState: boolean, callback: AsyncCallback<void>): void--><!--Device-PhotoAsset-setFavorite(favoriteState: boolean, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1841,6 +1899,8 @@ setFavorite(favoriteState: boolean): Promise<void>
 **替代接口：** [setFavorite](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md#setfavorite)
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-PhotoAsset-setFavorite(favoriteState: boolean): Promise<void>--><!--Device-PhotoAsset-setFavorite(favoriteState: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -1915,6 +1975,8 @@ setHidden(hiddenState: boolean, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-PhotoAsset-setHidden(hiddenState: boolean, callback: AsyncCallback<void>): void--><!--Device-PhotoAsset-setHidden(hiddenState: boolean, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1981,6 +2043,8 @@ setHidden(hiddenState: boolean): Promise<void>
 **替代接口：** [setHidden](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md#sethidden)
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-PhotoAsset-setHidden(hiddenState: boolean): Promise<void>--><!--Device-PhotoAsset-setHidden(hiddenState: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -2052,6 +2116,8 @@ setUserComment(userComment: string, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-PhotoAsset-setUserComment(userComment: string, callback: AsyncCallback<void>): void--><!--Device-PhotoAsset-setUserComment(userComment: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -2121,6 +2187,8 @@ setUserComment(userComment: string): Promise<void>
 **替代接口：** [setUserComment](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md#setusercomment)
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-PhotoAsset-setUserComment(userComment: string): Promise<void>--><!--Device-PhotoAsset-setUserComment(userComment: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

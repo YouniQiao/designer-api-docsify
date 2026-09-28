@@ -8,6 +8,8 @@ interface AudioRoutingManager
 
 **起始版本：** 9
 
+<!--Device-audio-interface AudioRoutingManager--><!--Device-audio-interface AudioRoutingManager-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 ## 导入模块
@@ -33,6 +35,8 @@ declareDeviceTypesCompatibility(deviceTypes: DeviceTypeArray): void
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioRoutingManager-declareDeviceTypesCompatibility(deviceTypes: DeviceTypeArray): void--><!--Device-AudioRoutingManager-declareDeviceTypesCompatibility(deviceTypes: DeviceTypeArray): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -67,6 +71,8 @@ getAvailableDevices(deviceUsage: DeviceUsage): AudioDeviceDescriptors
 获取音频可选设备列表。同步返回结果。
 
 **起始版本：** 12
+
+<!--Device-AudioRoutingManager-getAvailableDevices(deviceUsage: DeviceUsage): AudioDeviceDescriptors--><!--Device-AudioRoutingManager-getAvailableDevices(deviceUsage: DeviceUsage): AudioDeviceDescriptors-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -113,6 +119,8 @@ getDevices(deviceFlag: DeviceFlag, callback: AsyncCallback<AudioDeviceDescriptor
 
 **起始版本：** 9
 
+<!--Device-AudioRoutingManager-getDevices(deviceFlag: DeviceFlag, callback: AsyncCallback<AudioDeviceDescriptors>): void--><!--Device-AudioRoutingManager-getDevices(deviceFlag: DeviceFlag, callback: AsyncCallback<AudioDeviceDescriptors>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **参数：**
@@ -147,6 +155,8 @@ getDevices(deviceFlag: DeviceFlag): Promise<AudioDeviceDescriptors>
 获取音频设备列表。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-AudioRoutingManager-getDevices(deviceFlag: DeviceFlag): Promise<AudioDeviceDescriptors>--><!--Device-AudioRoutingManager-getDevices(deviceFlag: DeviceFlag): Promise<AudioDeviceDescriptors>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -183,6 +193,8 @@ getDevicesSync(deviceFlag: DeviceFlag): AudioDeviceDescriptors
 获取音频设备列表。同步返回结果。
 
 **起始版本：** 10
+
+<!--Device-AudioRoutingManager-getDevicesSync(deviceFlag: DeviceFlag): AudioDeviceDescriptors--><!--Device-AudioRoutingManager-getDevicesSync(deviceFlag: DeviceFlag): AudioDeviceDescriptors-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -228,6 +240,8 @@ getPreferOutputDeviceForRendererInfo(rendererInfo: AudioRendererInfo, callback: 
 根据音频信息，返回优先级最高的输出设备。使用callback异步回调。
 
 **起始版本：** 10
+
+<!--Device-AudioRoutingManager-getPreferOutputDeviceForRendererInfo(rendererInfo: AudioRendererInfo, callback: AsyncCallback<AudioDeviceDescriptors>): void--><!--Device-AudioRoutingManager-getPreferOutputDeviceForRendererInfo(rendererInfo: AudioRendererInfo, callback: AsyncCallback<AudioDeviceDescriptors>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -276,6 +290,8 @@ getPreferOutputDeviceForRendererInfo(rendererInfo: AudioRendererInfo): Promise<A
 根据音频信息，返回优先级最高的输出设备。使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-AudioRoutingManager-getPreferOutputDeviceForRendererInfo(rendererInfo: AudioRendererInfo): Promise<AudioDeviceDescriptors>--><!--Device-AudioRoutingManager-getPreferOutputDeviceForRendererInfo(rendererInfo: AudioRendererInfo): Promise<AudioDeviceDescriptors>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -326,6 +342,8 @@ getPreferredInputDeviceForCapturerInfo(capturerInfo: AudioCapturerInfo, callback
 
 **起始版本：** 10
 
+<!--Device-AudioRoutingManager-getPreferredInputDeviceForCapturerInfo(capturerInfo: AudioCapturerInfo, callback: AsyncCallback<AudioDeviceDescriptors>): void--><!--Device-AudioRoutingManager-getPreferredInputDeviceForCapturerInfo(capturerInfo: AudioCapturerInfo, callback: AsyncCallback<AudioDeviceDescriptors>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **参数：**
@@ -373,6 +391,8 @@ getPreferredInputDeviceForCapturerInfo(capturerInfo: AudioCapturerInfo): Promise
 根据音频信息，返回优先级最高的输入设备。使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-AudioRoutingManager-getPreferredInputDeviceForCapturerInfo(capturerInfo: AudioCapturerInfo): Promise<AudioDeviceDescriptors>--><!--Device-AudioRoutingManager-getPreferredInputDeviceForCapturerInfo(capturerInfo: AudioCapturerInfo): Promise<AudioDeviceDescriptors>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -422,6 +442,8 @@ getPreferredInputDeviceForCapturerInfoSync(capturerInfo: AudioCapturerInfo): Aud
 根据音频信息，返回优先级最高的输入设备。同步返回结果。
 
 **起始版本：** 10
+
+<!--Device-AudioRoutingManager-getPreferredInputDeviceForCapturerInfoSync(capturerInfo: AudioCapturerInfo): AudioDeviceDescriptors--><!--Device-AudioRoutingManager-getPreferredInputDeviceForCapturerInfoSync(capturerInfo: AudioCapturerInfo): AudioDeviceDescriptors-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -473,6 +495,8 @@ getPreferredOutputDeviceForRendererInfoSync(rendererInfo: AudioRendererInfo): Au
 
 **起始版本：** 10
 
+<!--Device-AudioRoutingManager-getPreferredOutputDeviceForRendererInfoSync(rendererInfo: AudioRendererInfo): AudioDeviceDescriptors--><!--Device-AudioRoutingManager-getPreferredOutputDeviceForRendererInfoSync(rendererInfo: AudioRendererInfo): AudioDeviceDescriptors-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **参数：**
@@ -523,6 +547,8 @@ isCommunicationDeviceActive(deviceType: CommunicationDeviceType, callback: Async
 
 **起始版本：** 9
 
+<!--Device-AudioRoutingManager-isCommunicationDeviceActive(deviceType: CommunicationDeviceType, callback: AsyncCallback<boolean>): void--><!--Device-AudioRoutingManager-isCommunicationDeviceActive(deviceType: CommunicationDeviceType, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Communication
 
 **参数：**
@@ -557,6 +583,8 @@ isCommunicationDeviceActive(deviceType: CommunicationDeviceType): Promise<boolea
 获取指定通信设备的激活状态。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-AudioRoutingManager-isCommunicationDeviceActive(deviceType: CommunicationDeviceType): Promise<boolean>--><!--Device-AudioRoutingManager-isCommunicationDeviceActive(deviceType: CommunicationDeviceType): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Communication
 
@@ -593,6 +621,8 @@ isCommunicationDeviceActiveSync(deviceType: CommunicationDeviceType): boolean
 获取指定通信设备的激活状态。同步返回结果。
 
 **起始版本：** 10
+
+<!--Device-AudioRoutingManager-isCommunicationDeviceActiveSync(deviceType: CommunicationDeviceType): boolean--><!--Device-AudioRoutingManager-isCommunicationDeviceActiveSync(deviceType: CommunicationDeviceType): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Communication
 
@@ -639,6 +669,8 @@ isMicBlockDetectionSupported():Promise<boolean>
 
 **起始版本：** 13
 
+<!--Device-AudioRoutingManager-isMicBlockDetectionSupported():Promise<boolean>--><!--Device-AudioRoutingManager-isMicBlockDetectionSupported():Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **返回值：**
@@ -668,6 +700,8 @@ off(type: 'deviceChange', callback?: Callback<DeviceChangeAction>): void
 取消监听音频设备连接状态变化事件。
 
 **起始版本：** 9
+
+<!--Device-AudioRoutingManager-off(type: 'deviceChange', callback?: Callback<DeviceChangeAction>): void--><!--Device-AudioRoutingManager-off(type: 'deviceChange', callback?: Callback<DeviceChangeAction>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -711,6 +745,8 @@ off(type: 'availableDeviceChange', callback?: Callback<DeviceChangeAction>): voi
 
 **起始版本：** 12
 
+<!--Device-AudioRoutingManager-off(type: 'availableDeviceChange', callback?: Callback<DeviceChangeAction>): void--><!--Device-AudioRoutingManager-off(type: 'availableDeviceChange', callback?: Callback<DeviceChangeAction>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **参数：**
@@ -752,6 +788,8 @@ off(type: 'preferOutputDeviceChangeForRendererInfo', callback?: Callback<AudioDe
 取消监听最高优先级输出音频设备变化事件。
 
 **起始版本：** 10
+
+<!--Device-AudioRoutingManager-off(type: 'preferOutputDeviceChangeForRendererInfo', callback?: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRoutingManager-off(type: 'preferOutputDeviceChangeForRendererInfo', callback?: Callback<AudioDeviceDescriptors>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -797,6 +835,8 @@ off(type: 'preferredInputDeviceChangeForCapturerInfo', callback?: Callback<Audio
 
 **起始版本：** 10
 
+<!--Device-AudioRoutingManager-off(type: 'preferredInputDeviceChangeForCapturerInfo', callback?: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRoutingManager-off(type: 'preferredInputDeviceChangeForCapturerInfo', callback?: Callback<AudioDeviceDescriptors>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **参数：**
@@ -841,6 +881,8 @@ off(type: 'micBlockStatusChanged', callback?: Callback<DeviceBlockStatusInfo>): 
 
 **起始版本：** 13
 
+<!--Device-AudioRoutingManager-off(type: 'micBlockStatusChanged', callback?: Callback<DeviceBlockStatusInfo>): void--><!--Device-AudioRoutingManager-off(type: 'micBlockStatusChanged', callback?: Callback<DeviceBlockStatusInfo>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **参数：**
@@ -883,6 +925,8 @@ on(type: 'deviceChange', deviceFlag: DeviceFlag, callback: Callback<DeviceChange
 
 **起始版本：** 9
 
+<!--Device-AudioRoutingManager-on(type: 'deviceChange', deviceFlag: DeviceFlag, callback: Callback<DeviceChangeAction>): void--><!--Device-AudioRoutingManager-on(type: 'deviceChange', deviceFlag: DeviceFlag, callback: Callback<DeviceChangeAction>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **参数：**
@@ -918,6 +962,8 @@ on(type: 'availableDeviceChange', deviceUsage: DeviceUsage, callback: Callback<D
 
 **起始版本：** 12
 
+<!--Device-AudioRoutingManager-on(type: 'availableDeviceChange', deviceUsage: DeviceUsage, callback: Callback<DeviceChangeAction>): void--><!--Device-AudioRoutingManager-on(type: 'availableDeviceChange', deviceUsage: DeviceUsage, callback: Callback<DeviceChangeAction>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **参数：**
@@ -952,6 +998,8 @@ on(type: 'preferOutputDeviceChangeForRendererInfo', rendererInfo: AudioRendererI
 监听最高优先级输出设备变化事件（当最高优先级输出设备发生变化时触发）。使用callback异步回调。
 
 **起始版本：** 10
+
+<!--Device-AudioRoutingManager-on(type: 'preferOutputDeviceChangeForRendererInfo', rendererInfo: AudioRendererInfo, callback: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRoutingManager-on(type: 'preferOutputDeviceChangeForRendererInfo', rendererInfo: AudioRendererInfo, callback: Callback<AudioDeviceDescriptors>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -993,6 +1041,8 @@ on(type: 'preferredInputDeviceChangeForCapturerInfo', capturerInfo: AudioCapture
 
 **起始版本：** 10
 
+<!--Device-AudioRoutingManager-on(type: 'preferredInputDeviceChangeForCapturerInfo', capturerInfo: AudioCapturerInfo, callback: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRoutingManager-on(type: 'preferredInputDeviceChangeForCapturerInfo', capturerInfo: AudioCapturerInfo, callback: Callback<AudioDeviceDescriptors>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **参数：**
@@ -1032,6 +1082,8 @@ on(type: 'micBlockStatusChanged', callback: Callback<DeviceBlockStatusInfo>): vo
 监听麦克风堵塞状态变化事件。使用callback异步回调。使用此功能前，请使用[isMicBlockDetectionSupported](#ismicblockdetectionsupported)查询设备是否支持检测。应用在使用麦克风录音时，若麦克风堵塞状态发生变化，将触发该事件。目前此检测功能仅支持麦克风位于本地设备上。
 
 **起始版本：** 13
+
+<!--Device-AudioRoutingManager-on(type: 'micBlockStatusChanged', callback: Callback<DeviceBlockStatusInfo>): void--><!--Device-AudioRoutingManager-on(type: 'micBlockStatusChanged', callback: Callback<DeviceBlockStatusInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -1075,6 +1127,8 @@ setCommunicationDevice(deviceType: CommunicationDeviceType, active: boolean, cal
 
 **起始版本：** 9
 
+<!--Device-AudioRoutingManager-setCommunicationDevice(deviceType: CommunicationDeviceType, active: boolean, callback: AsyncCallback<void>): void--><!--Device-AudioRoutingManager-setCommunicationDevice(deviceType: CommunicationDeviceType, active: boolean, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Communication
 
 **参数：**
@@ -1110,6 +1164,8 @@ setCommunicationDevice(deviceType: CommunicationDeviceType, active: boolean): Pr
 设置通信设备激活状态。使用Promise异步回调。该接口由于功能设计变化，将在后续版本废弃，不建议开发者使用。推荐开发者使用AVSession提供的[设备切换组件](../../../media/avsession/using-switch-call-devices.md)，实现通话设备切换。
 
 **起始版本：** 9
+
+<!--Device-AudioRoutingManager-setCommunicationDevice(deviceType: CommunicationDeviceType, active: boolean): Promise<void>--><!--Device-AudioRoutingManager-setCommunicationDevice(deviceType: CommunicationDeviceType, active: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Communication
 

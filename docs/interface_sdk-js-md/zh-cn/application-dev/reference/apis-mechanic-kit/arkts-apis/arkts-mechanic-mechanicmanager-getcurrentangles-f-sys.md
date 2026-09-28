@@ -16,6 +16,8 @@ function getCurrentAngles(mechId: number): EulerAngles
 
 **起始版本：** 20
 
+<!--Device-mechanicManager-function getCurrentAngles(mechId: int): EulerAngles--><!--Device-mechanicManager-function getCurrentAngles(mechId: int): EulerAngles-End-->
+
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。

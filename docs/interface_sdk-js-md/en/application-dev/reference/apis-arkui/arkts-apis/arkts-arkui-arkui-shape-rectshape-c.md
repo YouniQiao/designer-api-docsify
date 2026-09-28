@@ -12,6 +12,8 @@ This API inherits from [BaseShape](arkts-arkui-arkui-shape-baseshape-c.md).
 
 **Since:** 12
 
+<!--Device-unnamed-export declare class RectShape extends BaseShape<RectShape>--><!--Device-unnamed-export declare class RectShape extends BaseShape<RectShape>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -36,6 +38,8 @@ A constructor used to create a **RectShape** object.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-RectShape-constructor(options?: RectShapeOptions | RoundRectShapeOptions)--><!--Device-RectShape-constructor(options?: RectShapeOptions | RoundRectShapeOptions)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -59,6 +63,8 @@ Sets the radius of the rectangle border corners.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-RectShape-radius(radius: number | string | Array<number | string>): RectShape--><!--Device-RectShape-radius(radius: number | string | Array<number | string>): RectShape-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -90,6 +96,8 @@ Sets the radius height of the rectangle border corners.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-RectShape-radiusHeight(rHeight: number | string): RectShape--><!--Device-RectShape-radiusHeight(rHeight: number | string): RectShape-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -119,6 +127,8 @@ Sets the radius width of the rectangle border corners.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-RectShape-radiusWidth(rWidth: number | string): RectShape--><!--Device-RectShape-radiusWidth(rWidth: number | string): RectShape-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

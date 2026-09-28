@@ -20,6 +20,8 @@ function getDisallowedBluetoothProtocols(admin: Want, accountId: number): Array<
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-bluetoothManager-function getDisallowedBluetoothProtocols(admin: Want, accountId: number): Array<Protocol>--><!--Device-bluetoothManager-function getDisallowedBluetoothProtocols(admin: Want, accountId: number): Array<Protocol>-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -86,6 +88,8 @@ function getDisallowedBluetoothProtocols(admin: Want | null, accountId: number, 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-bluetoothManager-function getDisallowedBluetoothProtocols(admin: Want | null, accountId: number, policy: TransferPolicy): Array<Protocol>--><!--Device-bluetoothManager-function getDisallowedBluetoothProtocols(admin: Want | null, accountId: number, policy: TransferPolicy): Array<Protocol>-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

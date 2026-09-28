@@ -18,6 +18,8 @@ function getIfaceConfig(iface: string, callback: AsyncCallback<InterfaceConfigur
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-ethernet-function getIfaceConfig(iface: string, callback: AsyncCallback<InterfaceConfiguration>): void--><!--Device-ethernet-function getIfaceConfig(iface: string, callback: AsyncCallback<InterfaceConfiguration>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
 **系统接口：** 此接口为系统接口。
@@ -75,6 +77,8 @@ function getIfaceConfig(iface: string): Promise<InterfaceConfiguration>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
+
+<!--Device-ethernet-function getIfaceConfig(iface: string): Promise<InterfaceConfiguration>--><!--Device-ethernet-function getIfaceConfig(iface: string): Promise<InterfaceConfiguration>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 

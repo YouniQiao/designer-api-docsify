@@ -8,6 +8,8 @@ The **inputConsumer** module implements listening for combination key events as 
 
 **Since:** 14
 
+<!--Device-unnamed-declare namespace inputConsumer--><!--Device-unnamed-declare namespace inputConsumer-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputConsumer
 
 ## Modules to Import

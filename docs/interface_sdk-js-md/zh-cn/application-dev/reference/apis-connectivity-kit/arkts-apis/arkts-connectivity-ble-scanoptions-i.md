@@ -8,6 +8,8 @@ BLE扫描的配置参数。
 
 **起始版本：** 10
 
+<!--Device-ble-interface ScanOptions--><!--Device-ble-interface ScanOptions-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -30,7 +32,9 @@ dutyMode?: ScanDuty
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ScanOptions-dutyMode?: ScanDuty--><!--Device-ScanOptions-dutyMode?: ScanDuty-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -50,7 +54,9 @@ interval?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ScanOptions-interval?: int--><!--Device-ScanOptions-interval?: int-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -70,7 +76,9 @@ isExtended?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-ScanOptions-isExtended?: boolean--><!--Device-ScanOptions-isExtended?: boolean-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -88,7 +96,9 @@ matchMode?: MatchMode
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ScanOptions-matchMode?: MatchMode--><!--Device-ScanOptions-matchMode?: MatchMode-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -106,7 +116,9 @@ phyType?: PhyType
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ScanOptions-phyType?: PhyType--><!--Device-ScanOptions-phyType?: PhyType-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -124,6 +136,8 @@ reportMode?: ScanReportMode
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-ScanOptions-reportMode?: ScanReportMode--><!--Device-ScanOptions-reportMode?: ScanReportMode-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

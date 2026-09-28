@@ -10,6 +10,8 @@ class MediaShareAlbumChangeRequest implements MediaChangeRequest
 
 **起始版本：** 26.0.1
 
+<!--Device-photoAccessHelper-class MediaShareAlbumChangeRequest implements MediaChangeRequest--><!--Device-photoAccessHelper-class MediaShareAlbumChangeRequest implements MediaChangeRequest-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -33,6 +35,8 @@ public addShareMember(owner: string, member: string, status: ShareMemberStatus):
 **需要权限：** ohos.permission.MANAGE_SHARE_PHOTO and ohos.permission.WRITE_IMAGEVIDEO
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MediaShareAlbumChangeRequest-public addShareMember(owner: string, member: string, status: ShareMemberStatus): void--><!--Device-MediaShareAlbumChangeRequest-public addShareMember(owner: string, member: string, status: ShareMemberStatus): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -68,6 +72,8 @@ public constructor(album: Album)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MediaShareAlbumChangeRequest-public constructor(album: Album)--><!--Device-MediaShareAlbumChangeRequest-public constructor(album: Album)-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -100,6 +106,8 @@ public static createShareAlbum(context: Context, owner: string, name: string, cl
 **需要权限：** ohos.permission.MANAGE_SHARE_PHOTO and ohos.permission.WRITE_IMAGEVIDEO
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MediaShareAlbumChangeRequest-public static createShareAlbum(context: Context, owner: string, name: string, cloudId:       string, albumConfig: ValuesBucket): MediaShareAlbumChangeRequest|null--><!--Device-MediaShareAlbumChangeRequest-public static createShareAlbum(context: Context, owner: string, name: string, cloudId:       string, albumConfig: ValuesBucket): MediaShareAlbumChangeRequest|null-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -143,6 +151,8 @@ public static deleteMemberShareAlbum(context: Context, owner: string, albums: Al
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MediaShareAlbumChangeRequest-public static deleteMemberShareAlbum(context: Context, owner: string, albums: Album[]): Promise<void>--><!--Device-MediaShareAlbumChangeRequest-public static deleteMemberShareAlbum(context: Context, owner: string, albums: Album[]): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -183,6 +193,8 @@ public static deleteShareAlbum(context: Context, owner: string, albums: Album[])
 **需要权限：** ohos.permission.MANAGE_SHARE_PHOTO and ohos.permission.WRITE_IMAGEVIDEO
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MediaShareAlbumChangeRequest-public static deleteShareAlbum(context: Context, owner: string, albums: Album[]): Promise<void>--><!--Device-MediaShareAlbumChangeRequest-public static deleteShareAlbum(context: Context, owner: string, albums: Album[]): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -225,6 +237,8 @@ public static deleteShareAssets(context: Context, owner: string, assets: string[
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MediaShareAlbumChangeRequest-public static deleteShareAssets(context: Context, owner: string, assets: string[]): Promise<void>--><!--Device-MediaShareAlbumChangeRequest-public static deleteShareAssets(context: Context, owner: string, assets: string[]): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -266,6 +280,8 @@ public deleteShareMember(owner: string, member: string): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MediaShareAlbumChangeRequest-public deleteShareMember(owner: string, member: string): void--><!--Device-MediaShareAlbumChangeRequest-public deleteShareMember(owner: string, member: string): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -299,6 +315,8 @@ public static getShareAlbumMemberInfo(context: Context, owner: string,
 **需要权限：** ohos.permission.MANAGE_SHARE_PHOTO
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MediaShareAlbumChangeRequest-public static getShareAlbumMemberInfo(context: Context, owner: string,       album: Album): Promise<ShareAlbumMemberInfo>--><!--Device-MediaShareAlbumChangeRequest-public static getShareAlbumMemberInfo(context: Context, owner: string,       album: Album): Promise<ShareAlbumMemberInfo>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -341,6 +359,8 @@ public resetShareCoverUri(owner: string): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MediaShareAlbumChangeRequest-public resetShareCoverUri(owner: string): void--><!--Device-MediaShareAlbumChangeRequest-public resetShareCoverUri(owner: string): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -372,6 +392,8 @@ public setShareAlbumName(owner: string, name: string): void
 **需要权限：** ohos.permission.MANAGE_SHARE_PHOTO and ohos.permission.WRITE_IMAGEVIDEO
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MediaShareAlbumChangeRequest-public setShareAlbumName(owner: string, name: string): void--><!--Device-MediaShareAlbumChangeRequest-public setShareAlbumName(owner: string, name: string): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -406,6 +428,8 @@ public setShareCoverUri(owner: string, coverUri: string): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MediaShareAlbumChangeRequest-public setShareCoverUri(owner: string, coverUri: string): void--><!--Device-MediaShareAlbumChangeRequest-public setShareCoverUri(owner: string, coverUri: string): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -438,6 +462,8 @@ public updateShareMemberStatus(owner: string, member: string, status: ShareMembe
 **需要权限：** ohos.permission.MANAGE_SHARE_PHOTO and ohos.permission.WRITE_IMAGEVIDEO
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MediaShareAlbumChangeRequest-public updateShareMemberStatus(owner: string, member: string, status: ShareMemberStatus): void--><!--Device-MediaShareAlbumChangeRequest-public updateShareMemberStatus(owner: string, member: string, status: ShareMemberStatus): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -472,6 +498,8 @@ readonly comment: string
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MediaShareAlbumChangeRequest-readonly comment: string--><!--Device-MediaShareAlbumChangeRequest-readonly comment: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

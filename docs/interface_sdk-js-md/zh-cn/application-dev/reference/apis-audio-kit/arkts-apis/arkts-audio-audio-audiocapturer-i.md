@@ -8,6 +8,8 @@ interface AudioCapturer
 
 **起始版本：** 8
 
+<!--Device-audio-interface AudioCapturer--><!--Device-audio-interface AudioCapturer-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 ## 导入模块
@@ -25,6 +27,8 @@ getAudioStreamId(callback: AsyncCallback<number>): void
 获取音频流id。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-AudioCapturer-getAudioStreamId(callback: AsyncCallback<long>): void--><!--Device-AudioCapturer-getAudioStreamId(callback: AsyncCallback<long>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -56,6 +60,8 @@ getAudioStreamId(): Promise<number>
 
 **起始版本：** 9
 
+<!--Device-AudioCapturer-getAudioStreamId(): Promise<long>--><!--Device-AudioCapturer-getAudioStreamId(): Promise<long>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **返回值：**
@@ -85,6 +91,8 @@ getAudioStreamIdSync(): number
 获取音频流id。同步返回结果。
 
 **起始版本：** 10
+
+<!--Device-AudioCapturer-getAudioStreamIdSync(): long--><!--Device-AudioCapturer-getAudioStreamIdSync(): long-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -118,6 +126,8 @@ getAudioTime(callback: AsyncCallback<number>): void
 
 **起始版本：** 8
 
+<!--Device-AudioCapturer-getAudioTime(callback: AsyncCallback<long>): void--><!--Device-AudioCapturer-getAudioTime(callback: AsyncCallback<long>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **参数：**
@@ -148,6 +158,8 @@ getAudioTime(): Promise<number>
 
 **起始版本：** 8
 
+<!--Device-AudioCapturer-getAudioTime(): Promise<long>--><!--Device-AudioCapturer-getAudioTime(): Promise<long>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **返回值：**
@@ -177,6 +189,8 @@ getAudioTimestampInfo(): Promise<AudioTimestampInfo>
 获取输入音频流时间戳和当前数据帧位置信息。该接口可以获取到音频通道实际录制位置（framePos）以及录制到该位置时候的时间戳（timestamp），时间戳单位为纳秒（ns）。
 
 **起始版本：** 19
+
+<!--Device-AudioCapturer-getAudioTimestampInfo(): Promise<AudioTimestampInfo>--><!--Device-AudioCapturer-getAudioTimestampInfo(): Promise<AudioTimestampInfo>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -213,6 +227,8 @@ getAudioTimestampInfoSync(): AudioTimestampInfo
 获取音频流时间戳和当前数据帧位置信息。同步返回结果。
 
 **起始版本：** 19
+
+<!--Device-AudioCapturer-getAudioTimestampInfoSync(): AudioTimestampInfo--><!--Device-AudioCapturer-getAudioTimestampInfoSync(): AudioTimestampInfo-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -252,6 +268,8 @@ getAudioTimeSync(): number
 
 **起始版本：** 10
 
+<!--Device-AudioCapturer-getAudioTimeSync(): long--><!--Device-AudioCapturer-getAudioTimeSync(): long-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **返回值：**
@@ -283,6 +301,8 @@ getBufferSize(callback: AsyncCallback<number>): void
 获取采集器合理的最小缓冲区大小。使用callback异步回调。
 
 **起始版本：** 8
+
+<!--Device-AudioCapturer-getBufferSize(callback: AsyncCallback<long>): void--><!--Device-AudioCapturer-getBufferSize(callback: AsyncCallback<long>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -318,6 +338,8 @@ getBufferSize(): Promise<number>
 
 **起始版本：** 8
 
+<!--Device-AudioCapturer-getBufferSize(): Promise<long>--><!--Device-AudioCapturer-getBufferSize(): Promise<long>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **返回值：**
@@ -347,6 +369,8 @@ getBufferSizeSync(): number
 获取采集器合理的最小缓冲区大小。同步返回结果。
 
 **起始版本：** 10
+
+<!--Device-AudioCapturer-getBufferSizeSync(): long--><!--Device-AudioCapturer-getBufferSizeSync(): long-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -379,6 +403,8 @@ getCapturerInfo(callback: AsyncCallback<AudioCapturerInfo>): void
 获取音频采集器信息。使用callback异步回调。
 
 **起始版本：** 8
+
+<!--Device-AudioCapturer-getCapturerInfo(callback: AsyncCallback<AudioCapturerInfo>): void--><!--Device-AudioCapturer-getCapturerInfo(callback: AsyncCallback<AudioCapturerInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -415,6 +441,8 @@ getCapturerInfo(): Promise<AudioCapturerInfo>
 获取音频采集器信息。使用Promise异步回调。
 
 **起始版本：** 8
+
+<!--Device-AudioCapturer-getCapturerInfo(): Promise<AudioCapturerInfo>--><!--Device-AudioCapturer-getCapturerInfo(): Promise<AudioCapturerInfo>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -453,6 +481,8 @@ getCapturerInfoSync(): AudioCapturerInfo
 
 **起始版本：** 10
 
+<!--Device-AudioCapturer-getCapturerInfoSync(): AudioCapturerInfo--><!--Device-AudioCapturer-getCapturerInfoSync(): AudioCapturerInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **返回值：**
@@ -485,6 +515,8 @@ getCurrentAudioCapturerChangeInfo(): AudioCapturerChangeInfo
 获取录音流配置。同步返回结果。
 
 **起始版本：** 11
+
+<!--Device-AudioCapturer-getCurrentAudioCapturerChangeInfo(): AudioCapturerChangeInfo--><!--Device-AudioCapturer-getCurrentAudioCapturerChangeInfo(): AudioCapturerChangeInfo-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -524,6 +556,8 @@ getCurrentInputDevices(): AudioDeviceDescriptors
 
 **起始版本：** 11
 
+<!--Device-AudioCapturer-getCurrentInputDevices(): AudioDeviceDescriptors--><!--Device-AudioCapturer-getCurrentInputDevices(): AudioDeviceDescriptors-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **返回值：**
@@ -561,6 +595,8 @@ getNoiseReductionMode(): NoiseReductionMode
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioCapturer-getNoiseReductionMode(): NoiseReductionMode--><!--Device-AudioCapturer-getNoiseReductionMode(): NoiseReductionMode-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **返回值：**
@@ -585,6 +621,8 @@ getOverflowCount(): Promise<number>
 获取当前录制音频流的过载音频帧数量。使用Promise异步回调。
 
 **起始版本：** 12
+
+<!--Device-AudioCapturer-getOverflowCount(): Promise<long>--><!--Device-AudioCapturer-getOverflowCount(): Promise<long>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -615,6 +653,8 @@ getOverflowCountSync(): number
 获取当前录制音频流的过载音频帧数量。同步返回数据。
 
 **起始版本：** 12
+
+<!--Device-AudioCapturer-getOverflowCountSync(): long--><!--Device-AudioCapturer-getOverflowCountSync(): long-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -647,6 +687,8 @@ getStreamInfo(callback: AsyncCallback<AudioStreamInfo>): void
 获取音频采集器流信息。使用callback异步回调。
 
 **起始版本：** 8
+
+<!--Device-AudioCapturer-getStreamInfo(callback: AsyncCallback<AudioStreamInfo>): void--><!--Device-AudioCapturer-getStreamInfo(callback: AsyncCallback<AudioStreamInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -686,6 +728,8 @@ getStreamInfo(): Promise<AudioStreamInfo>
 
 **起始版本：** 8
 
+<!--Device-AudioCapturer-getStreamInfo(): Promise<AudioStreamInfo>--><!--Device-AudioCapturer-getStreamInfo(): Promise<AudioStreamInfo>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **返回值：**
@@ -719,6 +763,8 @@ getStreamInfoSync(): AudioStreamInfo
 获取音频采集器流信息。同步返回结果。
 
 **起始版本：** 10
+
+<!--Device-AudioCapturer-getStreamInfoSync(): AudioStreamInfo--><!--Device-AudioCapturer-getStreamInfoSync(): AudioStreamInfo-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -763,6 +809,8 @@ getSupportedNoiseReductionModes(): Array<NoiseReductionMode>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioCapturer-getSupportedNoiseReductionModes(): Array<NoiseReductionMode>--><!--Device-AudioCapturer-getSupportedNoiseReductionModes(): Array<NoiseReductionMode>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **返回值：**
@@ -801,6 +849,8 @@ off(type: 'markReach', callback?: Callback<number>): void
 
 **起始版本：** 8
 
+<!--Device-AudioCapturer-off(type: 'markReach', callback?: Callback<long>): void--><!--Device-AudioCapturer-off(type: 'markReach', callback?: Callback<long>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **参数：**
@@ -838,6 +888,8 @@ off(type: 'periodReach', callback?: Callback<number>): void
 
 **起始版本：** 8
 
+<!--Device-AudioCapturer-off(type: 'periodReach', callback?: Callback<long>): void--><!--Device-AudioCapturer-off(type: 'periodReach', callback?: Callback<long>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **参数：**
@@ -874,6 +926,8 @@ off(type: 'stateChange', callback?: Callback<AudioState>): void
 取消监听状态变化事件。使用callback异步回调。
 
 **起始版本：** 18
+
+<!--Device-AudioCapturer-off(type: 'stateChange', callback?: Callback<AudioState>): void--><!--Device-AudioCapturer-off(type: 'stateChange', callback?: Callback<AudioState>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -921,6 +975,8 @@ off(type: 'audioInterrupt'): void
 
 **起始版本：** 10
 
+<!--Device-AudioCapturer-off(type: 'audioInterrupt'): void--><!--Device-AudioCapturer-off(type: 'audioInterrupt'): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Interrupt
 
 **参数：**
@@ -951,6 +1007,8 @@ off(type: 'inputDeviceChange', callback?: Callback<AudioDeviceDescriptors>): voi
 取消监听音频输入设备更改事件。使用callback异步回调。
 
 **起始版本：** 11
+
+<!--Device-AudioCapturer-off(type: 'inputDeviceChange', callback?: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioCapturer-off(type: 'inputDeviceChange', callback?: Callback<AudioDeviceDescriptors>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -996,6 +1054,8 @@ off(type: 'audioCapturerChange', callback?: Callback<AudioCapturerChangeInfo>): 
 
 **起始版本：** 11
 
+<!--Device-AudioCapturer-off(type: 'audioCapturerChange', callback?: Callback<AudioCapturerChangeInfo>): void--><!--Device-AudioCapturer-off(type: 'audioCapturerChange', callback?: Callback<AudioCapturerChangeInfo>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **参数：**
@@ -1037,6 +1097,8 @@ off(type: 'readData', callback?: Callback<ArrayBuffer>): void
 取消监听音频数据读取回调事件。使用callback异步回调。
 
 **起始版本：** 11
+
+<!--Device-AudioCapturer-off(type: 'readData', callback?: Callback<ArrayBuffer>): void--><!--Device-AudioCapturer-off(type: 'readData', callback?: Callback<ArrayBuffer>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -1080,6 +1142,8 @@ on(type: 'markReach', frame: number, callback: Callback<number>): void
 
 **起始版本：** 8
 
+<!--Device-AudioCapturer-on(type: 'markReach', frame: long, callback: Callback<long>): void--><!--Device-AudioCapturer-on(type: 'markReach', frame: long, callback: Callback<long>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **参数：**
@@ -1110,6 +1174,8 @@ on(type: 'periodReach', frame: number, callback: Callback<number>): void
 
 **起始版本：** 8
 
+<!--Device-AudioCapturer-on(type: 'periodReach', frame: long, callback: Callback<long>): void--><!--Device-AudioCapturer-on(type: 'periodReach', frame: long, callback: Callback<long>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **参数：**
@@ -1139,6 +1205,8 @@ on(type: 'stateChange', callback: Callback<AudioState>): void
 监听状态变化事件（当AudioCapturer状态发生变化时触发）。使用callback异步回调。
 
 **起始版本：** 8
+
+<!--Device-AudioCapturer-on(type: 'stateChange', callback: Callback<AudioState>): void--><!--Device-AudioCapturer-on(type: 'stateChange', callback: Callback<AudioState>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -1171,6 +1239,8 @@ on(type: 'audioInterrupt', callback: Callback<InterruptEvent>): void
 监听音频中断事件（当音频焦点发生变化时触发）。使用callback异步回调。AudioCapturer对象在start事件时获取焦点，在pause、stop等事件时释放焦点，无需开发者主动申请。调用此方法后，如果AudioCapturer对象获取焦点失败或发生中断事件（如被其他音频打断等），会收到[InterruptEvent](arkts-audio-audio-interruptevent-i.md)。建议应用根据InterruptEvent的信息进行进一步处理。更多信息请参阅文档[音频焦点介绍](../../../media/audio/audio-playback-concurrency.md)。
 
 **起始版本：** 10
+
+<!--Device-AudioCapturer-on(type: 'audioInterrupt', callback: Callback<InterruptEvent>): void--><!--Device-AudioCapturer-on(type: 'audioInterrupt', callback: Callback<InterruptEvent>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Interrupt
 
@@ -1244,6 +1314,8 @@ on(type: 'inputDeviceChange', callback: Callback<AudioDeviceDescriptors>): void
 
 **起始版本：** 11
 
+<!--Device-AudioCapturer-on(type: 'inputDeviceChange', callback: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioCapturer-on(type: 'inputDeviceChange', callback: Callback<AudioDeviceDescriptors>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **参数：**
@@ -1280,6 +1352,8 @@ on(type: 'audioCapturerChange', callback: Callback<AudioCapturerChangeInfo>): vo
 
 **起始版本：** 11
 
+<!--Device-AudioCapturer-on(type: 'audioCapturerChange', callback: Callback<AudioCapturerChangeInfo>): void--><!--Device-AudioCapturer-on(type: 'audioCapturerChange', callback: Callback<AudioCapturerChangeInfo>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **参数：**
@@ -1313,6 +1387,8 @@ on(type: 'readData', callback: Callback<ArrayBuffer>): void
 监听音频数据读取回调事件（当需要读取音频流数据时触发）。使用callback异步回调。回调函数仅用来读取音频数据，请勿在回调函数中调用AudioCapturer相关接口。为了消除麦克风硬件设计带来的上电杂音，通常会对录音启动后的前100毫秒（ms）数据进行静音。
 
 **起始版本：** 11
+
+<!--Device-AudioCapturer-on(type: 'readData', callback: Callback<ArrayBuffer>): void--><!--Device-AudioCapturer-on(type: 'readData', callback: Callback<ArrayBuffer>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -1378,6 +1454,8 @@ release(callback: AsyncCallback<void>): void
 
 **起始版本：** 8
 
+<!--Device-AudioCapturer-release(callback: AsyncCallback<void>): void--><!--Device-AudioCapturer-release(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **参数：**
@@ -1412,6 +1490,8 @@ release(): Promise<void>
 
 **起始版本：** 8
 
+<!--Device-AudioCapturer-release(): Promise<void>--><!--Device-AudioCapturer-release(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **返回值：**
@@ -1445,6 +1525,8 @@ requestPlaybackCaptureStart(callback: Callback<PlaybackCaptureStartState>): void
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioCapturer-requestPlaybackCaptureStart(callback: Callback<PlaybackCaptureStartState>): void--><!--Device-AudioCapturer-requestPlaybackCaptureStart(callback: Callback<PlaybackCaptureStartState>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.PlaybackCapture
 
@@ -1482,6 +1564,8 @@ setIndependentAudioSessionStrategy(strategy: AudioSessionStrategy, behavior: num
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioCapturer-setIndependentAudioSessionStrategy(strategy: AudioSessionStrategy, behavior: int): void--><!--Device-AudioCapturer-setIndependentAudioSessionStrategy(strategy: AudioSessionStrategy, behavior: int): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -1528,6 +1612,8 @@ setMuteHint(mute: boolean): Promise<void>
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioCapturer-setMuteHint(mute: boolean): Promise<void>--><!--Device-AudioCapturer-setMuteHint(mute: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -1581,6 +1667,8 @@ setNoiseReductionMode(noiseReductionMode: NoiseReductionMode): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioCapturer-setNoiseReductionMode(noiseReductionMode: NoiseReductionMode): void--><!--Device-AudioCapturer-setNoiseReductionMode(noiseReductionMode: NoiseReductionMode): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **参数：**
@@ -1627,6 +1715,8 @@ setWillMuteWhenInterrupted(muteWhenInterrupted: boolean): Promise<void>
 
 **起始版本：** 20
 
+<!--Device-AudioCapturer-setWillMuteWhenInterrupted(muteWhenInterrupted: boolean): Promise<void>--><!--Device-AudioCapturer-setWillMuteWhenInterrupted(muteWhenInterrupted: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **参数：**
@@ -1669,6 +1759,8 @@ start(callback: AsyncCallback<void>): void
 
 **起始版本：** 8
 
+<!--Device-AudioCapturer-start(callback: AsyncCallback<void>): void--><!--Device-AudioCapturer-start(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **参数：**
@@ -1703,6 +1795,8 @@ start(): Promise<void>
 
 **起始版本：** 8
 
+<!--Device-AudioCapturer-start(): Promise<void>--><!--Device-AudioCapturer-start(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **返回值：**
@@ -1735,6 +1829,8 @@ stop(callback: AsyncCallback<void>): void
 停止音频采集器，停止输入音频流。使用callback异步回调。
 
 **起始版本：** 8
+
+<!--Device-AudioCapturer-stop(callback: AsyncCallback<void>): void--><!--Device-AudioCapturer-stop(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -1769,6 +1865,8 @@ stop(): Promise<void>
 停止音频采集器，停止输入音频流。使用Promise异步回调。
 
 **起始版本：** 8
+
+<!--Device-AudioCapturer-stop(): Promise<void>--><!--Device-AudioCapturer-stop(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -1810,6 +1908,8 @@ read(size: number, isBlockingRead: boolean, callback: AsyncCallback<ArrayBuffer>
 **废弃版本：** 11
 
 **替代接口：** readData
+
+<!--Device-AudioCapturer-read(size: number, isBlockingRead: boolean, callback: AsyncCallback<ArrayBuffer>): void--><!--Device-AudioCapturer-read(size: number, isBlockingRead: boolean, callback: AsyncCallback<ArrayBuffer>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -1860,6 +1960,8 @@ read(size: number, isBlockingRead: boolean): Promise<ArrayBuffer>
 
 **替代接口：** readData
 
+<!--Device-AudioCapturer-read(size: number, isBlockingRead: boolean): Promise<ArrayBuffer>--><!--Device-AudioCapturer-read(size: number, isBlockingRead: boolean): Promise<ArrayBuffer>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **参数：**
@@ -1903,5 +2005,7 @@ readonly state: AudioState
 **类型：** [AudioState](arkts-audio-audio-audiostate-e.md)
 
 **起始版本：** 8
+
+<!--Device-AudioCapturer-readonly state: AudioState--><!--Device-AudioCapturer-readonly state: AudioState-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer

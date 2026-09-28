@@ -8,6 +8,8 @@ type AccessAuthorization = constant.AccessAuthorization
 
 **起始版本：** 11
 
+<!--Device-pbap-type AccessAuthorization = constant.AccessAuthorization--><!--Device-pbap-type AccessAuthorization = constant.AccessAuthorization-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。

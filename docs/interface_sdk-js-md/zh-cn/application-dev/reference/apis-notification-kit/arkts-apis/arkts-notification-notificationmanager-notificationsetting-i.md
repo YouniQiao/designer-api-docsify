@@ -8,6 +8,8 @@ export interface NotificationSetting
 
 **起始版本：** 20
 
+<!--Device-notificationManager-export interface NotificationSetting--><!--Device-notificationManager-export interface NotificationSetting-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## 导入模块
@@ -33,6 +35,8 @@ badgeNumberEnabled?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-NotificationSetting-badgeNumberEnabled?: boolean--><!--Device-NotificationSetting-badgeNumberEnabled?: boolean-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## bannerEnabled
@@ -51,6 +55,8 @@ bannerEnabled?: boolean
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-NotificationSetting-bannerEnabled?: boolean--><!--Device-NotificationSetting-bannerEnabled?: boolean-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -71,6 +77,8 @@ lockScreenEnabled?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-NotificationSetting-lockScreenEnabled?: boolean--><!--Device-NotificationSetting-lockScreenEnabled?: boolean-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## notificationEnabled
@@ -90,6 +98,8 @@ notificationEnabled?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-NotificationSetting-notificationEnabled?: boolean--><!--Device-NotificationSetting-notificationEnabled?: boolean-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## soundEnabled
@@ -107,6 +117,8 @@ soundEnabled: boolean
 
 **起始版本：** 20
 
+<!--Device-NotificationSetting-soundEnabled: boolean--><!--Device-NotificationSetting-soundEnabled: boolean-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## vibrationEnabled
@@ -123,5 +135,7 @@ vibrationEnabled: boolean
 **类型：** boolean
 
 **起始版本：** 20
+
+<!--Device-NotificationSetting-vibrationEnabled: boolean--><!--Device-NotificationSetting-vibrationEnabled: boolean-End-->
 
 **系统能力：** SystemCapability.Notification.Notification

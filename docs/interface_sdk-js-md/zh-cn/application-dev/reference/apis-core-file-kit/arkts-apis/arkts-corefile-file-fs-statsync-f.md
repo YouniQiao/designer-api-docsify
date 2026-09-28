@@ -18,6 +18,8 @@ declare function statSync(file: string | number): Stat
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-unnamed-declare function statSync(file: string | number): Stat--><!--Device-unnamed-declare function statSync(file: string | number): Stat-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**

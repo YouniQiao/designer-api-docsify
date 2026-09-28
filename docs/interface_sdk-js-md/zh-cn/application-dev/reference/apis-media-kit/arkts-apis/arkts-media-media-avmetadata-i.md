@@ -8,6 +8,8 @@ interface AVMetadata
 
 **起始版本：** 11
 
+<!--Device-media-interface AVMetadata--><!--Device-media-interface AVMetadata-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 ## 导入模块
@@ -28,6 +30,8 @@ album?: string
 
 **起始版本：** 11
 
+<!--Device-AVMetadata-album?: string--><!--Device-AVMetadata-album?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 ## albumArtist
@@ -41,6 +45,8 @@ albumArtist?: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-AVMetadata-albumArtist?: string--><!--Device-AVMetadata-albumArtist?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -56,6 +62,8 @@ artist?: string
 
 **起始版本：** 11
 
+<!--Device-AVMetadata-artist?: string--><!--Device-AVMetadata-artist?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 ## author
@@ -69,6 +77,8 @@ author?: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-AVMetadata-author?: string--><!--Device-AVMetadata-author?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -84,6 +94,8 @@ composer?: string
 
 **起始版本：** 11
 
+<!--Device-AVMetadata-composer?: string--><!--Device-AVMetadata-composer?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 ## customInfo
@@ -97,6 +109,8 @@ customInfo?: Record<string, string>
 **类型：** Record&lt;string, string&gt;
 
 **起始版本：** 12
+
+<!--Device-AVMetadata-customInfo?: Record<string, string>--><!--Device-AVMetadata-customInfo?: Record<string, string>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -112,6 +126,8 @@ dateTime?: string
 
 **起始版本：** 11
 
+<!--Device-AVMetadata-dateTime?: string--><!--Device-AVMetadata-dateTime?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 ## dateTimeFormat
@@ -125,6 +141,8 @@ dateTimeFormat?: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-AVMetadata-dateTimeFormat?: string--><!--Device-AVMetadata-dateTimeFormat?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -140,6 +158,8 @@ description?: string
 
 **起始版本：** 23
 
+<!--Device-AVMetadata-description?: string--><!--Device-AVMetadata-description?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 ## duration
@@ -153,6 +173,8 @@ duration?: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-AVMetadata-duration?: string--><!--Device-AVMetadata-duration?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -170,6 +192,8 @@ encoder?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVMetadata-encoder?: string--><!--Device-AVMetadata-encoder?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 ## genre
@@ -183,6 +207,8 @@ genre?: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-AVMetadata-genre?: string--><!--Device-AVMetadata-genre?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -198,6 +224,8 @@ hasAudio?: string
 
 **起始版本：** 11
 
+<!--Device-AVMetadata-hasAudio?: string--><!--Device-AVMetadata-hasAudio?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 ## hasVideo
@@ -211,6 +239,8 @@ hasVideo?: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-AVMetadata-hasVideo?: string--><!--Device-AVMetadata-hasVideo?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -226,6 +256,8 @@ hdrType?: HdrType
 
 **起始版本：** 12
 
+<!--Device-AVMetadata-hdrType?: HdrType--><!--Device-AVMetadata-hdrType?: HdrType-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 ## location
@@ -239,6 +271,8 @@ location?: Location
 **类型：** [Location](arkts-media-media-location-i.md)
 
 **起始版本：** 12
+
+<!--Device-AVMetadata-location?: Location--><!--Device-AVMetadata-location?: Location-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -254,6 +288,8 @@ mimeType?: string
 
 **起始版本：** 11
 
+<!--Device-AVMetadata-mimeType?: string--><!--Device-AVMetadata-mimeType?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 ## sampleRate
@@ -267,6 +303,8 @@ sampleRate?: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-AVMetadata-sampleRate?: string--><!--Device-AVMetadata-sampleRate?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -282,6 +320,8 @@ title?: string
 
 **起始版本：** 11
 
+<!--Device-AVMetadata-title?: string--><!--Device-AVMetadata-title?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 ## trackCount
@@ -295,6 +335,8 @@ trackCount?: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-AVMetadata-trackCount?: string--><!--Device-AVMetadata-trackCount?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -310,6 +352,8 @@ tracks?: Array<MediaDescription>
 
 **起始版本：** 20
 
+<!--Device-AVMetadata-tracks?: Array<MediaDescription>--><!--Device-AVMetadata-tracks?: Array<MediaDescription>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 ## videoHeight
@@ -323,6 +367,8 @@ videoHeight?: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-AVMetadata-videoHeight?: string--><!--Device-AVMetadata-videoHeight?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -338,6 +384,8 @@ videoOrientation?: string
 
 **起始版本：** 11
 
+<!--Device-AVMetadata-videoOrientation?: string--><!--Device-AVMetadata-videoOrientation?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 ## videoWidth
@@ -351,5 +399,7 @@ videoWidth?: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-AVMetadata-videoWidth?: string--><!--Device-AVMetadata-videoWidth?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor

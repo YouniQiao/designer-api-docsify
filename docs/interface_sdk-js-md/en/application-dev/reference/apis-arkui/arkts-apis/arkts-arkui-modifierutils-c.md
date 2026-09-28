@@ -8,6 +8,8 @@ export declare class ModifierUtils
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export declare class ModifierUtils--><!--Device-unnamed-export declare class ModifierUtils-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## isInstanceOf
@@ -24,13 +26,15 @@ Checks whether a given instance is of a specified component type. For example, w
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ModifierUtils-static isInstanceOf<T extends CommonMethod<T>>(instance: T, componentName: string): boolean--><!--Device-ModifierUtils-static isInstanceOf<T extends CommonMethod<T>>(instance: T, componentName: string): boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| instance | T | Yes | Instance to check. T is the component attribute type that inherits from [universal attributes](../arkts-components/arkts-arkui-common-comp.md#common) (CommonMethod). |
+| instance | T | Yes | Instance to check. T is the component attribute type that inherits from [universal attributes](../arkts-components/arkts-arkui-common-comp.md) (CommonMethod). |
 | componentName | string | Yes | Name of the component type to check. The value is the component class name (such as 'Text' or 'Button') and must exactly match the component class name (case-sensitive). Returns **false** if an invalid or nonexistent component class name is passed in. |
 
 **Return value:**

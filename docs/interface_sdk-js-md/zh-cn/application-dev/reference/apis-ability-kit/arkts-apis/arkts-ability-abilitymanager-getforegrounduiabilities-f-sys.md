@@ -18,6 +18,8 @@ function getForegroundUIAbilities(callback: AsyncCallback<Array<AbilityStateData
 
 **需要权限：** ohos.permission.GET_RUNNING_INFO
 
+<!--Device-abilityManager-function getForegroundUIAbilities(callback: AsyncCallback<Array<AbilityStateData>>): void--><!--Device-abilityManager-function getForegroundUIAbilities(callback: AsyncCallback<Array<AbilityStateData>>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -66,6 +68,8 @@ function getForegroundUIAbilities(): Promise<Array<AbilityStateData>>
 **起始版本：** 11
 
 **需要权限：** ohos.permission.GET_RUNNING_INFO
+
+<!--Device-abilityManager-function getForegroundUIAbilities(): Promise<Array<AbilityStateData>>--><!--Device-abilityManager-function getForegroundUIAbilities(): Promise<Array<AbilityStateData>>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

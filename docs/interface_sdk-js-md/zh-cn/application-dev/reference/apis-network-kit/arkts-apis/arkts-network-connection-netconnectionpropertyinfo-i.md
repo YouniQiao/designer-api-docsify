@@ -8,6 +8,8 @@ export interface NetConnectionPropertyInfo
 
 **起始版本：** 11
 
+<!--Device-connection-export interface NetConnectionPropertyInfo--><!--Device-connection-export interface NetConnectionPropertyInfo-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ connectionProperties: ConnectionProperties
 
 **起始版本：** 11
 
+<!--Device-NetConnectionPropertyInfo-connectionProperties: ConnectionProperties--><!--Device-NetConnectionPropertyInfo-connectionProperties: ConnectionProperties-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## netHandle
@@ -41,5 +45,7 @@ netHandle: NetHandle
 **类型：** [NetHandle](arkts-network-connection-nethandle-i.md)
 
 **起始版本：** 11
+
+<!--Device-NetConnectionPropertyInfo-netHandle: NetHandle--><!--Device-NetConnectionPropertyInfo-netHandle: NetHandle-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core

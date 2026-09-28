@@ -18,6 +18,8 @@ function queryAppStatsInfos(begin: number, end: number): Promise<AppStatsMap>
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-usageStatistics-function queryAppStatsInfos(begin: long, end: long): Promise<AppStatsMap>--><!--Device-usageStatistics-function queryAppStatsInfos(begin: long, end: long): Promise<AppStatsMap>-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **系统接口：** 此接口为系统接口。

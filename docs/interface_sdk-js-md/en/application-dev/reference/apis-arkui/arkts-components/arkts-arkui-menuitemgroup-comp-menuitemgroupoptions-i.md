@@ -8,6 +8,8 @@ Describes the header and footer of the menu item group.
 
 **Since:** 9
 
+<!--Device-unnamed-declare interface MenuItemGroupOptions--><!--Device-unnamed-declare interface MenuItemGroupOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## footer
@@ -26,6 +28,8 @@ Footer of the menu item group.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-MenuItemGroupOptions-footer?: ResourceStr | CustomBuilder--><!--Device-MenuItemGroupOptions-footer?: ResourceStr | CustomBuilder-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## header
@@ -43,5 +47,7 @@ Header of the menu item group.
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-MenuItemGroupOptions-header?: ResourceStr | CustomBuilder--><!--Device-MenuItemGroupOptions-header?: ResourceStr | CustomBuilder-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -12,6 +12,8 @@ export interface Environment extends SceneResource
 
 **起始版本：** 12
 
+<!--Device-unnamed-export interface Environment extends SceneResource--><!--Device-unnamed-export interface Environment extends SceneResource-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## backgroundType
@@ -25,6 +27,8 @@ backgroundType: EnvironmentBackgroundType
 **类型：** [EnvironmentBackgroundType](arkts-arkgraphics3d-sceneresources-environmentbackgroundtype-e.md)
 
 **起始版本：** 12
+
+<!--Device-Environment-backgroundType: EnvironmentBackgroundType--><!--Device-Environment-backgroundType: EnvironmentBackgroundType-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -40,6 +44,8 @@ environmentImage?: Image | null
 
 **起始版本：** 12
 
+<!--Device-Environment-environmentImage?: Image | null--><!--Device-Environment-environmentImage?: Image | null-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## environmentMapFactor
@@ -53,6 +59,8 @@ environmentMapFactor: Vec4
 **类型：** [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md)
 
 **起始版本：** 12
+
+<!--Device-Environment-environmentMapFactor: Vec4--><!--Device-Environment-environmentMapFactor: Vec4-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -72,6 +80,8 @@ environmentRotation?: Quaternion
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Environment-environmentRotation?: Quaternion--><!--Device-Environment-environmentRotation?: Quaternion-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## indirectDiffuseFactor
@@ -85,6 +95,8 @@ indirectDiffuseFactor: Vec4
 **类型：** [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md)
 
 **起始版本：** 12
+
+<!--Device-Environment-indirectDiffuseFactor: Vec4--><!--Device-Environment-indirectDiffuseFactor: Vec4-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -100,6 +112,8 @@ indirectSpecularFactor: Vec4
 
 **起始版本：** 12
 
+<!--Device-Environment-indirectSpecularFactor: Vec4--><!--Device-Environment-indirectSpecularFactor: Vec4-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## irradianceCoefficients
@@ -114,6 +128,8 @@ irradianceCoefficients?: Vec3[]
 
 **起始版本：** 12
 
+<!--Device-Environment-irradianceCoefficients?: Vec3[]--><!--Device-Environment-irradianceCoefficients?: Vec3[]-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## radianceImage
@@ -127,5 +143,7 @@ radianceImage?: Image | null
 **类型：** [Image](arkts-arkgraphics3d-sceneresources-image-i.md) &#124; null
 
 **起始版本：** 12
+
+<!--Device-Environment-radianceImage?: Image | null--><!--Device-Environment-radianceImage?: Image | null-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

@@ -27,6 +27,8 @@ function startChildProcess(srcEntry: string, startMode: StartMode): Promise<numb
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-childProcessManager-function startChildProcess(srcEntry: string, startMode: StartMode): Promise<int>--><!--Device-childProcessManager-function startChildProcess(srcEntry: string, startMode: StartMode): Promise<int>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -108,6 +110,8 @@ function startChildProcess(srcEntry: string, startMode: StartMode, callback: Asy
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-childProcessManager-function startChildProcess(srcEntry: string, startMode: StartMode, callback: AsyncCallback<int>): void--><!--Device-childProcessManager-function startChildProcess(srcEntry: string, startMode: StartMode, callback: AsyncCallback<int>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

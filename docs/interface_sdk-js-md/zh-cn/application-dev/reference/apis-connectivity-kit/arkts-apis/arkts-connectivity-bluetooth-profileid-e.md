@@ -14,6 +14,8 @@ enum ProfileId
 
 **替代接口：** [ProfileId](arkts-connectivity-bluetoothmanager-profileid-e.md)
 
+<!--Device-bluetooth-enum ProfileId--><!--Device-bluetooth-enum ProfileId-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## PROFILE_A2DP_SOURCE
@@ -30,6 +32,8 @@ PROFILE_A2DP_SOURCE = 1
 
 **替代接口：** [PROFILE_A2DP_SOURCE](arkts-connectivity-bluetoothmanager-profileid-e.md#profile_a2dp_source)
 
+<!--Device-ProfileId-PROFILE_A2DP_SOURCE = 1--><!--Device-ProfileId-PROFILE_A2DP_SOURCE = 1-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## PROFILE_HANDS_FREE_AUDIO_GATEWAY
@@ -45,5 +49,7 @@ PROFILE_HANDS_FREE_AUDIO_GATEWAY = 4
 **废弃版本：** 9
 
 **替代接口：** [PROFILE_HANDS_FREE_AUDIO_GATEWAY](arkts-connectivity-bluetoothmanager-profileid-e.md#profile_hands_free_audio_gateway)
+
+<!--Device-ProfileId-PROFILE_HANDS_FREE_AUDIO_GATEWAY = 4--><!--Device-ProfileId-PROFILE_HANDS_FREE_AUDIO_GATEWAY = 4-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

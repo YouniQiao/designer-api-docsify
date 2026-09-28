@@ -8,6 +8,8 @@ interface AudioRoutingManager
 
 **起始版本：** 9
 
+<!--Device-audio-interface AudioRoutingManager--><!--Device-audio-interface AudioRoutingManager-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 ## 导入模块
@@ -33,6 +35,8 @@ excludeOutputDevices(usage: DeviceUsage, devices: AudioDeviceDescriptors): Promi
 **需要权限：** 
 - API版本23+：N/A
 - API版本18-22：ohos.permission.MANAGE_AUDIO_CONFIG
+
+<!--Device-AudioRoutingManager-excludeOutputDevices(usage: DeviceUsage, devices: AudioDeviceDescriptors): Promise<void>--><!--Device-AudioRoutingManager-excludeOutputDevices(usage: DeviceUsage, devices: AudioDeviceDescriptors): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -103,6 +107,8 @@ getActiveOutputDeviceDescriptors(): Promise<AudioDeviceDescriptors>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioRoutingManager-getActiveOutputDeviceDescriptors(): Promise<AudioDeviceDescriptors>--><!--Device-AudioRoutingManager-getActiveOutputDeviceDescriptors(): Promise<AudioDeviceDescriptors>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **系统接口：** 此接口为系统接口。
@@ -139,6 +145,8 @@ getExcludedDevices(usage: DeviceUsage): AudioDeviceDescriptors
 获取排除输出设备列表。
 
 **起始版本：** 18
+
+<!--Device-AudioRoutingManager-getExcludedDevices(usage: DeviceUsage): AudioDeviceDescriptors--><!--Device-AudioRoutingManager-getExcludedDevices(usage: DeviceUsage): AudioDeviceDescriptors-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -185,6 +193,8 @@ getPreferredInputDeviceByFilter(filter: AudioCapturerFilter): AudioDeviceDescrip
 根据过滤条件，查询音频输入设备，当前只能查询一个输入设备。
 
 **起始版本：** 18
+
+<!--Device-AudioRoutingManager-getPreferredInputDeviceByFilter(filter: AudioCapturerFilter): AudioDeviceDescriptors--><!--Device-AudioRoutingManager-getPreferredInputDeviceByFilter(filter: AudioCapturerFilter): AudioDeviceDescriptors-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -240,6 +250,8 @@ getPreferredOutputDeviceByFilter(filter: AudioRendererFilter): AudioDeviceDescri
 根据过滤条件，查询音频输出设备。
 
 **起始版本：** 18
+
+<!--Device-AudioRoutingManager-getPreferredOutputDeviceByFilter(filter: AudioRendererFilter): AudioDeviceDescriptors--><!--Device-AudioRoutingManager-getPreferredOutputDeviceByFilter(filter: AudioRendererFilter): AudioDeviceDescriptors-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -297,6 +309,8 @@ off(type: 'preferredOutputDeviceChangeByFilter', callback?: Callback<AudioDevice
 
 **起始版本：** 21
 
+<!--Device-AudioRoutingManager-off(type: 'preferredOutputDeviceChangeByFilter', callback?: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRoutingManager-off(type: 'preferredOutputDeviceChangeByFilter', callback?: Callback<AudioDeviceDescriptors>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **系统接口：** 此接口为系统接口。
@@ -351,6 +365,8 @@ offPreferredInputDeviceChangeByFilter(callback?: Callback<AudioDeviceDescriptors
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioRoutingManager-offPreferredInputDeviceChangeByFilter(callback?: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRoutingManager-offPreferredInputDeviceChangeByFilter(callback?: Callback<AudioDeviceDescriptors>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **系统接口：** 此接口为系统接口。
@@ -401,6 +417,8 @@ on(type: 'preferredOutputDeviceChangeByFilter', filter: AudioRendererFilter, cal
 
 **起始版本：** 21
 
+<!--Device-AudioRoutingManager-on(type: 'preferredOutputDeviceChangeByFilter', filter: AudioRendererFilter, callback: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRoutingManager-on(type: 'preferredOutputDeviceChangeByFilter', filter: AudioRendererFilter, callback: Callback<AudioDeviceDescriptors>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **系统接口：** 此接口为系统接口。
@@ -449,6 +467,8 @@ onPreferredInputDeviceChangeByFilter(filter: AudioCapturerFilter, callback: Call
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioRoutingManager-onPreferredInputDeviceChangeByFilter(filter: AudioCapturerFilter, callback: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRoutingManager-onPreferredInputDeviceChangeByFilter(filter: AudioCapturerFilter, callback: Callback<AudioDeviceDescriptors>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **系统接口：** 此接口为系统接口。
@@ -494,6 +514,8 @@ restoreOutputDeviceByFilter(filter: AudioRendererFilter): Promise<void>
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioRoutingManager-restoreOutputDeviceByFilter(filter: AudioRendererFilter): Promise<void>--><!--Device-AudioRoutingManager-restoreOutputDeviceByFilter(filter: AudioRendererFilter): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -550,6 +572,8 @@ selectInputDevice(inputAudioDevices: AudioDeviceDescriptors, callback: AsyncCall
 
 **起始版本：** 9
 
+<!--Device-AudioRoutingManager-selectInputDevice(inputAudioDevices: AudioDeviceDescriptors, callback: AsyncCallback<void>): void--><!--Device-AudioRoutingManager-selectInputDevice(inputAudioDevices: AudioDeviceDescriptors, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **系统接口：** 此接口为系统接口。
@@ -604,6 +628,8 @@ selectInputDevice(inputAudioDevices: AudioDeviceDescriptors): Promise<void>
 选择音频输入设备，当前只能选择一个输入设备。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-AudioRoutingManager-selectInputDevice(inputAudioDevices: AudioDeviceDescriptors): Promise<void>--><!--Device-AudioRoutingManager-selectInputDevice(inputAudioDevices: AudioDeviceDescriptors): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -660,6 +686,8 @@ selectInputDeviceByFilter(filter: AudioCapturerFilter, inputAudioDevices: AudioD
 根据过滤条件，选择音频输入设备，当前只能选择一个输入设备。使用Promise异步回调。
 
 **起始版本：** 18
+
+<!--Device-AudioRoutingManager-selectInputDeviceByFilter(filter: AudioCapturerFilter, inputAudioDevices: AudioDeviceDescriptors): Promise<void>--><!--Device-AudioRoutingManager-selectInputDeviceByFilter(filter: AudioCapturerFilter, inputAudioDevices: AudioDeviceDescriptors): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -735,6 +763,8 @@ selectOutputDevice(outputAudioDevices: AudioDeviceDescriptors, callback: AsyncCa
 
 **起始版本：** 9
 
+<!--Device-AudioRoutingManager-selectOutputDevice(outputAudioDevices: AudioDeviceDescriptors, callback: AsyncCallback<void>): void--><!--Device-AudioRoutingManager-selectOutputDevice(outputAudioDevices: AudioDeviceDescriptors, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **系统接口：** 此接口为系统接口。
@@ -788,6 +818,8 @@ selectOutputDevice(outputAudioDevices: AudioDeviceDescriptors): Promise<void>
 选择音频输出设备，当前只能选择一个输出设备。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-AudioRoutingManager-selectOutputDevice(outputAudioDevices: AudioDeviceDescriptors): Promise<void>--><!--Device-AudioRoutingManager-selectOutputDevice(outputAudioDevices: AudioDeviceDescriptors): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -844,6 +876,8 @@ selectOutputDeviceByFilter(filter: AudioRendererFilter, outputAudioDevices: Audi
 根据过滤条件，选择音频输出设备，当前只能选择一个输出设备。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-AudioRoutingManager-selectOutputDeviceByFilter(filter: AudioRendererFilter, outputAudioDevices: AudioDeviceDescriptors, callback: AsyncCallback<void>): void--><!--Device-AudioRoutingManager-selectOutputDeviceByFilter(filter: AudioRendererFilter, outputAudioDevices: AudioDeviceDescriptors, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -908,6 +942,8 @@ selectOutputDeviceByFilter(filter: AudioRendererFilter, outputAudioDevices: Audi
 根据过滤条件，选择音频输出设备，当前只能选择一个输出设备。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-AudioRoutingManager-selectOutputDeviceByFilter(filter: AudioRendererFilter, outputAudioDevices: AudioDeviceDescriptors): Promise<void>--><!--Device-AudioRoutingManager-selectOutputDeviceByFilter(filter: AudioRendererFilter, outputAudioDevices: AudioDeviceDescriptors): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -976,6 +1012,8 @@ selectOutputDeviceByFilter(filter: AudioRendererFilter, outputAudioDevices: Audi
 根据过滤条件和设备强选策略，选择音频输出设备，当前只能选择一个输出设备。使用Promise异步回调。
 
 **起始版本：** 21
+
+<!--Device-AudioRoutingManager-selectOutputDeviceByFilter(filter: AudioRendererFilter, outputAudioDevices: AudioDeviceDescriptors, strategy: AudioDevcieSelectStrategy): Promise<void>--><!--Device-AudioRoutingManager-selectOutputDeviceByFilter(filter: AudioRendererFilter, outputAudioDevices: AudioDeviceDescriptors, strategy: AudioDevcieSelectStrategy): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -1053,6 +1091,8 @@ unexcludeOutputDevices(usage: DeviceUsage, devices: AudioDeviceDescriptors): Pro
 - API版本23+：N/A
 - API版本18-22：ohos.permission.MANAGE_AUDIO_CONFIG
 
+<!--Device-AudioRoutingManager-unexcludeOutputDevices(usage: DeviceUsage, devices: AudioDeviceDescriptors): Promise<void>--><!--Device-AudioRoutingManager-unexcludeOutputDevices(usage: DeviceUsage, devices: AudioDeviceDescriptors): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **系统接口：** 此接口为系统接口。
@@ -1125,6 +1165,8 @@ unexcludeOutputDevices(usage: DeviceUsage): Promise<void>
 **需要权限：** 
 - API版本23+：N/A
 - API版本18-22：ohos.permission.MANAGE_AUDIO_CONFIG
+
+<!--Device-AudioRoutingManager-unexcludeOutputDevices(usage: DeviceUsage): Promise<void>--><!--Device-AudioRoutingManager-unexcludeOutputDevices(usage: DeviceUsage): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 

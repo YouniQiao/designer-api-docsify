@@ -8,6 +8,8 @@ client端调用[writeCharacteristicValueWithContext](arkts-connectivity-ble-gatt
 
 **起始版本：** 23
 
+<!--Device-ble-interface GattRspContext--><!--Device-ble-interface GattRspContext-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -31,6 +33,8 @@ timestamp: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-GattRspContext-timestamp: long--><!--Device-GattRspContext-timestamp: long-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

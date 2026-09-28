@@ -19,6 +19,8 @@ function getSimLabel(slotId: number, callback: AsyncCallback<SimLabel>): void
 
 **起始版本：** 20
 
+<!--Device-sim-function getSimLabel(slotId: int, callback: AsyncCallback<SimLabel>): void--><!--Device-sim-function getSimLabel(slotId: int, callback: AsyncCallback<SimLabel>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**
@@ -64,6 +66,8 @@ function getSimLabel(slotId: number): Promise<SimLabel>
 获取SIM卡的标签信息。使用Promise异步回调。
 
 **起始版本：** 20
+
+<!--Device-sim-function getSimLabel(slotId: int): Promise<SimLabel>--><!--Device-sim-function getSimLabel(slotId: int): Promise<SimLabel>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

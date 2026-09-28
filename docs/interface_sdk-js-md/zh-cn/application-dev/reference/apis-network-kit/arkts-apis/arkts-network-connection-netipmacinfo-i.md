@@ -8,6 +8,8 @@ IP邻居表条目信息。
 
 **起始版本：** 22
 
+<!--Device-connection-export interface NetIpMacInfo--><!--Device-connection-export interface NetIpMacInfo-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ iface: string
 
 **起始版本：** 22
 
+<!--Device-NetIpMacInfo-iface: string--><!--Device-NetIpMacInfo-iface: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## ipAddress
@@ -42,6 +46,8 @@ IP地址相关信息。
 
 **起始版本：** 22
 
+<!--Device-NetIpMacInfo-ipAddress: NetAddress--><!--Device-NetIpMacInfo-ipAddress: NetAddress-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## macAddress
@@ -55,5 +61,7 @@ MAC地址。
 **类型：** string
 
 **起始版本：** 22
+
+<!--Device-NetIpMacInfo-macAddress: string--><!--Device-NetIpMacInfo-macAddress: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core

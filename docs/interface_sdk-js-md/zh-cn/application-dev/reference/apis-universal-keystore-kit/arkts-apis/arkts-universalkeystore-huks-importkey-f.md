@@ -26,6 +26,8 @@ function importKey(keyAlias: string, options: HuksOptions, callback: AsyncCallba
 
 **替代接口：** [importKeyItem](arkts-universalkeystore-huks-importkeyitem-f.md)(keyAlias: string, options: HuksOptions, callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-huks-function importKey(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksResult>): void--><!--Device-huks-function importKey(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksResult>): void-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Extension
 
 **参数：**
@@ -105,6 +107,8 @@ function importKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>
 **废弃版本：** 9
 
 **替代接口：** [importKeyItem](arkts-universalkeystore-huks-importkeyitem-f.md#importkeyitem-1)(keyAlias: string, options: HuksOptions)
+
+<!--Device-huks-function importKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>--><!--Device-huks-function importKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Extension
 

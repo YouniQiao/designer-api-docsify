@@ -12,6 +12,8 @@ FileUri表示文件的URI，继承自uri.URI。
 
 **起始版本：** 15
 
+<!--Device-fileUri-class FileUri extends uri.URI--><!--Device-fileUri-class FileUri extends uri.URI-End-->
+
 **系统能力：** SystemCapability.FileManagement.AppFileService
 
 ## 导入模块
@@ -30,7 +32,9 @@ FileUri的构造函数，用于创建FileUri实例。
 
 **起始版本：** 15
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-FileUri-constructor(uriOrPath: string)--><!--Device-FileUri-constructor(uriOrPath: string)-End-->
 
 **系统能力：** SystemCapability.FileManagement.AppFileService
 
@@ -69,7 +73,9 @@ getFullDirectoryUri(): string
 
 **起始版本：** 15
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-FileUri-getFullDirectoryUri(): string--><!--Device-FileUri-getFullDirectoryUri(): string-End-->
 
 **系统能力：** SystemCapability.FileManagement.AppFileService
 
@@ -112,7 +118,9 @@ isRemoteUri(): boolean
 
 **起始版本：** 15
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-FileUri-isRemoteUri(): boolean--><!--Device-FileUri-isRemoteUri(): boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.AppFileService
 
@@ -153,7 +161,9 @@ get name(): string
 
 **起始版本：** 15
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-FileUri-get name(): string--><!--Device-FileUri-get name(): string-End-->
 
 **系统能力：** SystemCapability.FileManagement.AppFileService
 

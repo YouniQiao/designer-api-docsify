@@ -20,6 +20,8 @@ function getSockfdRxBytes(sockfd: number, callback: AsyncCallback<number>): void
 
 **起始版本：** 11
 
+<!--Device-statistics-function getSockfdRxBytes(sockfd: int, callback: AsyncCallback<long>): void--><!--Device-statistics-function getSockfdRxBytes(sockfd: int, callback: AsyncCallback<long>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**
@@ -70,6 +72,8 @@ function getSockfdRxBytes(sockfd: number): Promise<number>
 > 推荐在Socket连接时使用，否则Socket已经关闭后无法查询到对应流量数据。
 
 **起始版本：** 11
+
+<!--Device-statistics-function getSockfdRxBytes(sockfd: int): Promise<long>--><!--Device-statistics-function getSockfdRxBytes(sockfd: int): Promise<long>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 

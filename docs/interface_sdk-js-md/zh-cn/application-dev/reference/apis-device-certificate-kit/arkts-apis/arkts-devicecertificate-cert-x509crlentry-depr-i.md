@@ -16,6 +16,8 @@ interface X509CrlEntry
 
 **替代接口：** [X509CRLEntry](arkts-devicecertificate-cert-x509crlentry-i.md)
 
+<!--Device-cert-interface X509CrlEntry--><!--Device-cert-interface X509CrlEntry-End-->
+
 **系统能力：** SystemCapability.Security.Cert
 
 ## 导入模块
@@ -42,6 +44,8 @@ getCertIssuer(): DataBlob
 **废弃版本：** 11
 
 **替代接口：** getCertIssuer
+
+<!--Device-X509CrlEntry-getCertIssuer(): DataBlob--><!--Device-X509CrlEntry-getCertIssuer(): DataBlob-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -126,6 +130,8 @@ getEncoded(callback: AsyncCallback<EncodingBlob>): void
 **废弃版本：** 11
 
 **替代接口：** getEncoded
+
+<!--Device-X509CrlEntry-getEncoded(callback: AsyncCallback<EncodingBlob>): void--><!--Device-X509CrlEntry-getEncoded(callback: AsyncCallback<EncodingBlob>): void-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -218,6 +224,8 @@ getEncoded(): Promise<EncodingBlob>
 
 **替代接口：** getEncoded
 
+<!--Device-X509CrlEntry-getEncoded(): Promise<EncodingBlob>--><!--Device-X509CrlEntry-getEncoded(): Promise<EncodingBlob>-End-->
+
 **系统能力：** SystemCapability.Security.Cert
 
 **返回值：**
@@ -306,6 +314,8 @@ getRevocationDate(): string
 
 **替代接口：** getRevocationDate
 
+<!--Device-X509CrlEntry-getRevocationDate(): string--><!--Device-X509CrlEntry-getRevocationDate(): string-End-->
+
 **系统能力：** SystemCapability.Security.Cert
 
 **返回值：**
@@ -389,6 +399,8 @@ getSerialNumber(): number
 **废弃版本：** 11
 
 **替代接口：** getSerialNumber
+
+<!--Device-X509CrlEntry-getSerialNumber(): number--><!--Device-X509CrlEntry-getSerialNumber(): number-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 

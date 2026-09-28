@@ -8,6 +8,8 @@ export interface CredentialAbstract
 
 **起始版本：** 11
 
+<!--Device-certificateManager-export interface CredentialAbstract--><!--Device-certificateManager-export interface CredentialAbstract-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
 
 ## 导入模块
@@ -28,6 +30,8 @@ alias: string
 
 **起始版本：** 11
 
+<!--Device-CredentialAbstract-alias: string--><!--Device-CredentialAbstract-alias: string-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
 
 ## keyUri
@@ -42,6 +46,8 @@ keyUri: string
 
 **起始版本：** 11
 
+<!--Device-CredentialAbstract-keyUri: string--><!--Device-CredentialAbstract-keyUri: string-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
 
 ## type
@@ -55,5 +61,7 @@ type: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-CredentialAbstract-type: string--><!--Device-CredentialAbstract-type: string-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManager

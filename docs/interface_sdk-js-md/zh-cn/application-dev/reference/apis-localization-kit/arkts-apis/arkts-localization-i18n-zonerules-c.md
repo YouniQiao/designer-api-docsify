@@ -8,6 +8,8 @@ export class ZoneRules
 
 **起始版本：** 20
 
+<!--Device-i18n-export class ZoneRules--><!--Device-i18n-export class ZoneRules-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## 导入模块
@@ -26,7 +28,9 @@ public nextTransition(date?: number): ZoneOffsetTransition
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-ZoneRules-public nextTransition(date?: double): ZoneOffsetTransition--><!--Device-ZoneRules-public nextTransition(date?: double): ZoneOffsetTransition-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 

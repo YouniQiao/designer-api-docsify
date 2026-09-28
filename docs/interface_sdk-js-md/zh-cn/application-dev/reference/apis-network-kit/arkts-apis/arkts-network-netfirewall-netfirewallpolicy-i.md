@@ -8,6 +8,8 @@ interface NetFirewallPolicy
 
 **起始版本：** 15
 
+<!--Device-netFirewall-interface NetFirewallPolicy--><!--Device-netFirewall-interface NetFirewallPolicy-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 ## 导入模块
@@ -28,6 +30,8 @@ inAction: FirewallRuleAction
 
 **起始版本：** 15
 
+<!--Device-NetFirewallPolicy-inAction: FirewallRuleAction--><!--Device-NetFirewallPolicy-inAction: FirewallRuleAction-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 ## isOpen
@@ -42,6 +46,8 @@ isOpen: boolean
 
 **起始版本：** 15
 
+<!--Device-NetFirewallPolicy-isOpen: boolean--><!--Device-NetFirewallPolicy-isOpen: boolean-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 ## outAction
@@ -55,5 +61,7 @@ outAction: FirewallRuleAction
 **类型：** [FirewallRuleAction](arkts-network-netfirewall-firewallruleaction-e.md)
 
 **起始版本：** 15
+
+<!--Device-NetFirewallPolicy-outAction: FirewallRuleAction--><!--Device-NetFirewallPolicy-outAction: FirewallRuleAction-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall

@@ -10,6 +10,8 @@ Context is the context base class of the stage model. It is used to access appli
 
 **Since:** 9
 
+<!--Device-unnamed-declare class Context extends BaseContext--><!--Device-unnamed-declare class Context extends BaseContext-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## createModuleResourceManager
@@ -25,6 +27,8 @@ Creates a resource management object for a module.
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Context-createModuleResourceManager(bundleName: string, moduleName: string): resmgr.ResourceManager--><!--Device-Context-createModuleResourceManager(bundleName: string, moduleName: string): resmgr.ResourceManager-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -82,6 +86,8 @@ Creates a [resource manager](../../apis-localization-kit/arkts-apis/arkts-locali
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Context-createSystemHspModuleResourceManager(bundleName: string, moduleName: string): resmgr.ResourceManager--><!--Device-Context-createSystemHspModuleResourceManager(bundleName: string, moduleName: string): resmgr.ResourceManager-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -147,6 +153,8 @@ Creates the context based on the bundle name.
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Context-createBundleContext(bundleName: string): Context--><!--Device-Context-createBundleContext(bundleName: string): Context-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -214,6 +222,8 @@ Creates the context based on the bundle name and module name.
 **Substitutes:** [createModuleContext](arkts-ability-application-createmodulecontext-f.md)
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Context-createModuleContext(bundleName: string, moduleName: string): Context--><!--Device-Context-createModuleContext(bundleName: string, moduleName: string): Context-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

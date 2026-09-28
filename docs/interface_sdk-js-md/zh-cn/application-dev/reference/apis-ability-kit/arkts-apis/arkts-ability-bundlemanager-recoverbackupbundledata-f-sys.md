@@ -18,6 +18,8 @@ function recoverBackupBundleData(bundleName: string, userId: number, appIndex: n
 
 **需要权限：** ohos.permission.RECOVER_BUNDLE
 
+<!--Device-bundleManager-function recoverBackupBundleData(bundleName: string, userId: int, appIndex: int): Promise<void>--><!--Device-bundleManager-function recoverBackupBundleData(bundleName: string, userId: int, appIndex: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。

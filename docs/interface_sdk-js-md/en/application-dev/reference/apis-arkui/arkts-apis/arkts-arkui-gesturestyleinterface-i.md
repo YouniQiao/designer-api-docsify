@@ -8,6 +8,8 @@ Defines the Gesture Events.
 
 **Since:** 12
 
+<!--Device-unnamed-declare interface GestureStyleInterface--><!--Device-unnamed-declare interface GestureStyleInterface-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onClick
@@ -25,6 +27,8 @@ Click event.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GestureStyleInterface-onClick?: Callback<ClickEvent>--><!--Device-GestureStyleInterface-onClick?: Callback<ClickEvent>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,6 +48,8 @@ Long press event.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-GestureStyleInterface-onLongPress?: Callback<GestureEvent>--><!--Device-GestureStyleInterface-onLongPress?: Callback<GestureEvent>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onTouch
@@ -61,5 +67,7 @@ Touch event.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-GestureStyleInterface-onTouch?: Callback<TouchEvent>--><!--Device-GestureStyleInterface-onTouch?: Callback<TouchEvent>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

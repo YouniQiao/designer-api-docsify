@@ -17,6 +17,8 @@ function getAngleVariation(currentRotationMatrix: Array<number>, preRotationMatr
 
 **起始版本：** 9
 
+<!--Device-sensor-function getAngleVariation(currentRotationMatrix: Array<double>, preRotationMatrix: Array<double>,    callback: AsyncCallback<Array<double>>): void--><!--Device-sensor-function getAngleVariation(currentRotationMatrix: Array<double>, preRotationMatrix: Array<double>,    callback: AsyncCallback<Array<double>>): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -84,6 +86,8 @@ function getAngleVariation(currentRotationMatrix: Array<number>, preRotationMatr
 得到两个旋转矩阵之间的角度变化。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-sensor-function getAngleVariation(currentRotationMatrix: Array<double>, preRotationMatrix: Array<double>): Promise<Array<double>>--><!--Device-sensor-function getAngleVariation(currentRotationMatrix: Array<double>, preRotationMatrix: Array<double>): Promise<Array<double>>-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 

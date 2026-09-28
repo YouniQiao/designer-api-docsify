@@ -23,6 +23,8 @@ function setPortRoleTypes(portId: number, powerRole: PowerRoleType, dataRole: Da
 
 **需要权限：** ohos.permission.MANAGE_USB_CONFIG
 
+<!--Device-usbManager-function setPortRoleTypes(portId: int, powerRole: PowerRoleType, dataRole: DataRoleType): Promise<void>--><!--Device-usbManager-function setPortRoleTypes(portId: int, powerRole: PowerRoleType, dataRole: DataRoleType): Promise<void>-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 **系统接口：** 此接口为系统接口。

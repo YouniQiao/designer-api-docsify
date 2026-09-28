@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare namespace Environment--><!--Device-unnamed-declare namespace Environment-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.Environment
 
 ## 导入模块

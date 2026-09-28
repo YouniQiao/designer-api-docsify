@@ -14,6 +14,8 @@ Defines parameters of particles used by emitters.
 
 **Since:** 18
 
+<!--Device-unnamed-interface EmitterParticleOptions<PARTICLE extends ParticleType>--><!--Device-unnamed-interface EmitterParticleOptions<PARTICLE extends ParticleType>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## config
@@ -37,6 +39,8 @@ The value type of **config** is subject to the value of **type**.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-EmitterParticleOptions-config: ParticleConfigs[PARTICLE]--><!--Device-EmitterParticleOptions-config: ParticleConfigs[PARTICLE]-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## count
@@ -54,6 +58,8 @@ Number of particles. The value is greater than or equal to -1. The value **-1** 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-EmitterParticleOptions-count: number--><!--Device-EmitterParticleOptions-count: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -77,6 +83,8 @@ Note: If you do not want the animation to keep playing, you are advised not to s
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-EmitterParticleOptions-lifetime?: number--><!--Device-EmitterParticleOptions-lifetime?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## lifetimeRange
@@ -97,6 +105,8 @@ Random integer within the range of [lifetime – lifetimeRange, lifetime + lifet
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-EmitterParticleOptions-lifetimeRange?: number--><!--Device-EmitterParticleOptions-lifetimeRange?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## type
@@ -114,5 +124,7 @@ Particle type, which can be **IMAGE** or **POINT**.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-EmitterParticleOptions-type: PARTICLE--><!--Device-EmitterParticleOptions-type: PARTICLE-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -20,6 +20,8 @@ function onReceiveRttMessage(callback: Callback<RttMessageInfo>): void
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-call-function onReceiveRttMessage(callback: Callback<RttMessageInfo>): void--><!--Device-call-function onReceiveRttMessage(callback: Callback<RttMessageInfo>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。

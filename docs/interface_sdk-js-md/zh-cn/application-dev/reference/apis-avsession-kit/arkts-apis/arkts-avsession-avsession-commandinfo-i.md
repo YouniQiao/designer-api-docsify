@@ -8,6 +8,8 @@ interface CommandInfo
 
 **起始版本：** 22
 
+<!--Device-avSession-interface CommandInfo--><!--Device-avSession-interface CommandInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ callerBundleName?: string
 
 **起始版本：** 22
 
+<!--Device-CommandInfo-callerBundleName?: string--><!--Device-CommandInfo-callerBundleName?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 ## callerDeviceId
@@ -41,6 +45,8 @@ callerDeviceId?: string
 **类型：** string
 
 **起始版本：** 22
+
+<!--Device-CommandInfo-callerDeviceId?: string--><!--Device-CommandInfo-callerDeviceId?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -56,6 +62,8 @@ callerModuleName?: string
 
 **起始版本：** 22
 
+<!--Device-CommandInfo-callerModuleName?: string--><!--Device-CommandInfo-callerModuleName?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 ## callerType
@@ -69,5 +77,7 @@ callerType?: CallerType
 **类型：** [CallerType](arkts-avsession-avsession-callertype-e.md)
 
 **起始版本：** 22
+
+<!--Device-CommandInfo-callerType?: CallerType--><!--Device-CommandInfo-callerType?: CallerType-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core

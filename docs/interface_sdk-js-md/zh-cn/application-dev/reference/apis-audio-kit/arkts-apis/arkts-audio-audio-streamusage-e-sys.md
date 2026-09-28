@@ -8,6 +8,8 @@ enum StreamUsage
 
 **起始版本：** 7
 
+<!--Device-audio-enum StreamUsage--><!--Device-audio-enum StreamUsage-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## STREAM_USAGE_SYSTEM
@@ -19,6 +21,8 @@ STREAM_USAGE_SYSTEM = 9
 系统音(如屏幕锁定或按键音)。
 
 **起始版本：** 10
+
+<!--Device-StreamUsage-STREAM_USAGE_SYSTEM = 9--><!--Device-StreamUsage-STREAM_USAGE_SYSTEM = 9-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -34,6 +38,8 @@ STREAM_USAGE_DTMF = 14
 
 **起始版本：** 10
 
+<!--Device-StreamUsage-STREAM_USAGE_DTMF = 14--><!--Device-StreamUsage-STREAM_USAGE_DTMF = 14-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **系统接口：** 此接口为系统接口。
@@ -47,6 +53,8 @@ STREAM_USAGE_ENFORCED_TONE = 15
 强制音(如相机快门音)。
 
 **起始版本：** 10
+
+<!--Device-StreamUsage-STREAM_USAGE_ENFORCED_TONE = 15--><!--Device-StreamUsage-STREAM_USAGE_ENFORCED_TONE = 15-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -62,6 +70,8 @@ STREAM_USAGE_ULTRASONIC = 16
 
 **起始版本：** 10
 
+<!--Device-StreamUsage-STREAM_USAGE_ULTRASONIC = 16--><!--Device-StreamUsage-STREAM_USAGE_ULTRASONIC = 16-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **系统接口：** 此接口为系统接口。
@@ -75,6 +85,8 @@ STREAM_USAGE_VOICE_CALL_ASSISTANT = 21
 通话辅助语音。
 
 **起始版本：** 12
+
+<!--Device-StreamUsage-STREAM_USAGE_VOICE_CALL_ASSISTANT = 21--><!--Device-StreamUsage-STREAM_USAGE_VOICE_CALL_ASSISTANT = 21-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -92,6 +104,8 @@ STREAM_USAGE_ANNOUNCEMENT = 22
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-StreamUsage-STREAM_USAGE_ANNOUNCEMENT = 22--><!--Device-StreamUsage-STREAM_USAGE_ANNOUNCEMENT = 22-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **系统接口：** 此接口为系统接口。
@@ -107,6 +121,8 @@ STREAM_USAGE_EMERGENCY = 23
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-StreamUsage-STREAM_USAGE_EMERGENCY = 23--><!--Device-StreamUsage-STREAM_USAGE_EMERGENCY = 23-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -124,7 +140,9 @@ STREAM_USAGE_VOICE_ASSISTANT_SYSTEM = 27
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-StreamUsage-STREAM_USAGE_VOICE_ASSISTANT_SYSTEM = 27--><!--Device-StreamUsage-STREAM_USAGE_VOICE_ASSISTANT_SYSTEM = 27-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 

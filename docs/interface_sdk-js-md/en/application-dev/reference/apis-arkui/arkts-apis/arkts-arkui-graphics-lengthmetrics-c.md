@@ -8,6 +8,8 @@ Defines the length attribute. When the length unit is PERCENT, the value **1** i
 
 **Since:** 12
 
+<!--Device-unnamed-declare class LengthMetrics--><!--Device-unnamed-declare class LengthMetrics-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## autoRefresh
@@ -23,6 +25,8 @@ Sets whether the **LengthMetrics** object automatically updates with system conf
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-LengthMetrics-autoRefresh?(value: boolean): LengthMetrics--><!--Device-LengthMetrics-autoRefresh?(value: boolean): LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -71,6 +75,8 @@ A constructor used to create a **LengthMetrics** instance. If the **unit** param
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LengthMetrics-constructor(value: number, unit?:LengthUnit)--><!--Device-LengthMetrics-constructor(value: number, unit?:LengthUnit)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -93,6 +99,8 @@ Creates a length property in fp.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LengthMetrics-static fp(value: number): LengthMetrics--><!--Device-LengthMetrics-static fp(value: number): LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -122,6 +130,8 @@ Creates a length property in lpx.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LengthMetrics-static lpx(value: number): LengthMetrics--><!--Device-LengthMetrics-static lpx(value: number): LengthMetrics-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -149,6 +159,8 @@ Creates a length property in percent. The value **1** indicates 100%.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LengthMetrics-static percent(value: number): LengthMetrics--><!--Device-LengthMetrics-static percent(value: number): LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -178,6 +190,8 @@ Creates a length property in px.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LengthMetrics-static px(value: number): LengthMetrics--><!--Device-LengthMetrics-static px(value: number): LengthMetrics-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -205,6 +219,8 @@ Represents the length of a resource of the Resource type.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LengthMetrics-static resource(value: Resource): LengthMetrics--><!--Device-LengthMetrics-static resource(value: Resource): LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -280,6 +296,8 @@ Creates a length property in vp.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LengthMetrics-static vp(value: number): LengthMetrics--><!--Device-LengthMetrics-static vp(value: number): LengthMetrics-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -312,6 +330,8 @@ Unit of the length property. The default value is VP.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LengthMetrics-public unit: LengthUnit--><!--Device-LengthMetrics-public unit: LengthUnit-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## value
@@ -333,5 +353,7 @@ When **unit** is set to **PERCENT**, **value** indicates a percentage (1 indicat
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LengthMetrics-public value: number--><!--Device-LengthMetrics-public value: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

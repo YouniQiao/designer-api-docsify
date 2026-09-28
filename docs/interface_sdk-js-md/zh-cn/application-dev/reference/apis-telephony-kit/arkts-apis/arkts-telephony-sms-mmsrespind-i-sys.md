@@ -8,6 +8,8 @@ export interface MmsRespInd
 
 **起始版本：** 8
 
+<!--Device-sms-export interface MmsRespInd--><!--Device-sms-export interface MmsRespInd-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ reportAllowed?: ReportType
 
 **起始版本：** 8
 
+<!--Device-MmsRespInd-reportAllowed?: ReportType--><!--Device-MmsRespInd-reportAllowed?: ReportType-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ status: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-MmsRespInd-status: int--><!--Device-MmsRespInd-status: int-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -62,6 +68,8 @@ transactionId: string
 
 **起始版本：** 8
 
+<!--Device-MmsRespInd-transactionId: string--><!--Device-MmsRespInd-transactionId: string-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +85,8 @@ version: MmsVersionType
 **类型：** [MmsVersionType](arkts-telephony-sms-mmsversiontype-e-sys.md)
 
 **起始版本：** 8
+
+<!--Device-MmsRespInd-version: MmsVersionType--><!--Device-MmsRespInd-version: MmsVersionType-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 

@@ -16,6 +16,8 @@ ImageCreator类，作为图片的生产者，用于将图片写入到Surface中�
 
 **起始版本：** 9
 
+<!--Device-image-interface ImageCreator--><!--Device-image-interface ImageCreator-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageCreator
 
 ## 导入模块
@@ -33,6 +35,8 @@ dequeueImage(callback: AsyncCallback<Image>): void
 从空闲队列中获取buffer图片，用于绘制UI内容。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-ImageCreator-dequeueImage(callback: AsyncCallback<Image>): void--><!--Device-ImageCreator-dequeueImage(callback: AsyncCallback<Image>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageCreator
 
@@ -70,6 +74,8 @@ dequeueImage(): Promise<Image>
 
 **起始版本：** 9
 
+<!--Device-ImageCreator-dequeueImage(): Promise<Image>--><!--Device-ImageCreator-dequeueImage(): Promise<Image>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageCreator
 
 **返回值：**
@@ -102,6 +108,8 @@ off(type: 'imageRelease', callback?: AsyncCallback<void>): void
 
 **起始版本：** 13
 
+<!--Device-ImageCreator-off(type: 'imageRelease', callback?: AsyncCallback<void>): void--><!--Device-ImageCreator-off(type: 'imageRelease', callback?: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageCreator
 
 **参数：**
@@ -132,6 +140,8 @@ on(type: 'imageRelease', callback: AsyncCallback<void>): void
 监听imageRelease事件。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-ImageCreator-on(type: 'imageRelease', callback: AsyncCallback<void>): void--><!--Device-ImageCreator-on(type: 'imageRelease', callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageCreator
 
@@ -167,6 +177,8 @@ queueImage(image: Image, callback: AsyncCallback<void>): void
 将绘制好的图片放入队列。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-ImageCreator-queueImage(image: Image, callback: AsyncCallback<void>): void--><!--Device-ImageCreator-queueImage(image: Image, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageCreator
 
@@ -216,6 +228,8 @@ queueImage(image: Image): Promise<void>
 将绘制好的图片放入队列。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-ImageCreator-queueImage(image: Image): Promise<void>--><!--Device-ImageCreator-queueImage(image: Image): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageCreator
 
@@ -271,6 +285,8 @@ release(callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
+<!--Device-ImageCreator-release(callback: AsyncCallback<void>): void--><!--Device-ImageCreator-release(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageCreator
 
 **参数：**
@@ -311,6 +327,8 @@ release(): Promise<void>
 
 **起始版本：** 9
 
+<!--Device-ImageCreator-release(): Promise<void>--><!--Device-ImageCreator-release(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageCreator
 
 **返回值：**
@@ -345,6 +363,8 @@ readonly capacity: number
 
 **起始版本：** 9
 
+<!--Device-ImageCreator-readonly capacity: int--><!--Device-ImageCreator-readonly capacity: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageCreator
 
 ## format
@@ -358,5 +378,7 @@ readonly format: ImageFormat
 **类型：** [ImageFormat](arkts-image-image-imageformat-e.md)
 
 **起始版本：** 9
+
+<!--Device-ImageCreator-readonly format: ImageFormat--><!--Device-ImageCreator-readonly format: ImageFormat-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageCreator

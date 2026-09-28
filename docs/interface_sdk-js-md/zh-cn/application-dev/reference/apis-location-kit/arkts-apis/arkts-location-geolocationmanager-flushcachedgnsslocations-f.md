@@ -18,6 +18,8 @@ function flushCachedGnssLocations(callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.APPROXIMATELY_LOCATION
 
+<!--Device-geoLocationManager-function flushCachedGnssLocations(callback: AsyncCallback<void>): void--><!--Device-geoLocationManager-function flushCachedGnssLocations(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Location.Location.Gnss
 
 **参数：**
@@ -69,6 +71,8 @@ function flushCachedGnssLocations(): Promise<void>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.APPROXIMATELY_LOCATION
+
+<!--Device-geoLocationManager-function flushCachedGnssLocations(): Promise<void>--><!--Device-geoLocationManager-function flushCachedGnssLocations(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Location.Location.Gnss
 

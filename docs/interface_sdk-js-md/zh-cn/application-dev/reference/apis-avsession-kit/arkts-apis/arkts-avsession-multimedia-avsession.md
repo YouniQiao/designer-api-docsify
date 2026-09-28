@@ -2,6 +2,8 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace avSession--><!--Device-unnamed-declare namespace avSession-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 ## 导入模块

@@ -16,6 +16,8 @@ function decodeMms(mmsFilePathName: string | Array<number>, callback: AsyncCallb
 
 **起始版本：** 8
 
+<!--Device-sms-function decodeMms(mmsFilePathName: string | Array<int>, callback: AsyncCallback<MmsInformation>): void--><!--Device-sms-function decodeMms(mmsFilePathName: string | Array<int>, callback: AsyncCallback<MmsInformation>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -67,6 +69,8 @@ function decodeMms(mmsFilePathName: string | Array<number>): Promise<MmsInformat
 彩信解码。使用Promise异步回调。
 
 **起始版本：** 8
+
+<!--Device-sms-function decodeMms(mmsFilePathName: string | Array<int>): Promise<MmsInformation>--><!--Device-sms-function decodeMms(mmsFilePathName: string | Array<int>): Promise<MmsInformation>-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 

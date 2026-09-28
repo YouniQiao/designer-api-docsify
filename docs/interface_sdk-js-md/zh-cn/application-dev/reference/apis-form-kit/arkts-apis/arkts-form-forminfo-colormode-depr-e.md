@@ -12,6 +12,8 @@ enum ColorMode
 
 **替代接口：** [ColorMode](arkts-form-forminfo-colormode-e.md)
 
+<!--Device-formInfo-enum ColorMode--><!--Device-formInfo-enum ColorMode-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 ## MODE_AUTO
@@ -27,6 +29,8 @@ MODE_AUTO = -1
 **废弃版本：** 9
 
 **替代接口：** [MODE_AUTO](arkts-form-forminfo-colormode-e.md#mode_auto)
+
+<!--Device-ColorMode-MODE_AUTO = -1--><!--Device-ColorMode-MODE_AUTO = -1-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -44,6 +48,8 @@ MODE_DARK = 0
 
 **替代接口：** [MODE_DARK](arkts-form-forminfo-colormode-e.md#mode_dark)
 
+<!--Device-ColorMode-MODE_DARK = 0--><!--Device-ColorMode-MODE_DARK = 0-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 ## MODE_LIGHT
@@ -59,5 +65,7 @@ MODE_LIGHT = 1
 **废弃版本：** 9
 
 **替代接口：** [MODE_LIGHT](arkts-form-forminfo-colormode-e.md#mode_light)
+
+<!--Device-ColorMode-MODE_LIGHT = 1--><!--Device-ColorMode-MODE_LIGHT = 1-End-->
 
 **系统能力：** SystemCapability.Ability.Form

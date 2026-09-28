@@ -8,6 +8,8 @@ enum AsrVoiceControlMode
 
 **起始版本：** 12
 
+<!--Device-audio-enum AsrVoiceControlMode--><!--Device-audio-enum AsrVoiceControlMode-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **系统接口：** 此接口为系统接口。
@@ -21,6 +23,8 @@ AUDIO_2_VOICE_TX = 0
 仅媒体音频流生效。
 
 **起始版本：** 12
+
+<!--Device-AsrVoiceControlMode-AUDIO_2_VOICE_TX = 0--><!--Device-AsrVoiceControlMode-AUDIO_2_VOICE_TX = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -36,6 +40,8 @@ AUDIO_MIX_2_VOICE_TX = 1
 
 **起始版本：** 12
 
+<!--Device-AsrVoiceControlMode-AUDIO_MIX_2_VOICE_TX = 1--><!--Device-AsrVoiceControlMode-AUDIO_MIX_2_VOICE_TX = 1-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **系统接口：** 此接口为系统接口。
@@ -50,6 +56,8 @@ AUDIO_2_VOICE_TX_EX = 2
 
 **起始版本：** 12
 
+<!--Device-AsrVoiceControlMode-AUDIO_2_VOICE_TX_EX = 2--><!--Device-AsrVoiceControlMode-AUDIO_2_VOICE_TX_EX = 2-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **系统接口：** 此接口为系统接口。
@@ -63,6 +71,8 @@ AUDIO_MIX_2_VOICE_TX_EX = 3
 媒体音频流和MIC音频流均生效，将媒体流上报给通话录音。
 
 **起始版本：** 12
+
+<!--Device-AsrVoiceControlMode-AUDIO_MIX_2_VOICE_TX_EX = 3--><!--Device-AsrVoiceControlMode-AUDIO_MIX_2_VOICE_TX_EX = 3-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 

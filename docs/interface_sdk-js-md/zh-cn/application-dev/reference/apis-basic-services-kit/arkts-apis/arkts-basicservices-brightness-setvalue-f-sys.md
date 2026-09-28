@@ -16,6 +16,8 @@ function setValue(value: number): void
 
 **起始版本：** 7
 
+<!--Device-brightness-function setValue(value: int): void--><!--Device-brightness-function setValue(value: int): void-End-->
+
 **系统能力：** SystemCapability.PowerManager.DisplayPowerManager
 
 **系统接口：** 此接口为系统接口。
@@ -56,6 +58,8 @@ function setValue(value: number, continuous: boolean): void
 设置系统的屏幕亮度。用于连续调节亮度的场景，在连续调节亮度过程中，设置continuous为true可减少不必要的系统亮度刷新，结束时设置continuous为false恢复正常刷新模式，从而提升连续调节时的流畅度。
 
 **起始版本：** 11
+
+<!--Device-brightness-function setValue(value: int, continuous: boolean): void--><!--Device-brightness-function setValue(value: int, continuous: boolean): void-End-->
 
 **系统能力：** SystemCapability.PowerManager.DisplayPowerManager
 

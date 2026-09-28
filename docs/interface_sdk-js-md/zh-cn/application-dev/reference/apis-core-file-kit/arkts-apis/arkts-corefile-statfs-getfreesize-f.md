@@ -16,6 +16,8 @@ function getFreeSize(path: string): Promise<number>
 
 **起始版本：** 9
 
+<!--Device-statfs-function getFreeSize(path: string): Promise<long>--><!--Device-statfs-function getFreeSize(path: string): Promise<long>-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -76,6 +78,8 @@ function getFreeSize(path: string, callback: AsyncCallback<number>): void
 获取指定文件或目录所在文件系统的空闲字节数。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-statfs-function getFreeSize(path: string, callback: AsyncCallback<long>): void--><!--Device-statfs-function getFreeSize(path: string, callback: AsyncCallback<long>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

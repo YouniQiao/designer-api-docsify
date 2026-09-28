@@ -8,6 +8,8 @@ type ToneHapticsAttrsArray = Array<ToneHapticsAttrs>
 
 **起始版本：** 14
 
+<!--Device-systemSoundManager-type ToneHapticsAttrsArray = Array<ToneHapticsAttrs>--><!--Device-systemSoundManager-type ToneHapticsAttrsArray = Array<ToneHapticsAttrs>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。

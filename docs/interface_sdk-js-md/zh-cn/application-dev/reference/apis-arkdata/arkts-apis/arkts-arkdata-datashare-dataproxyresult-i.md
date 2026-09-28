@@ -8,6 +8,8 @@ interface DataProxyResult
 
 **起始版本：** 20
 
+<!--Device-dataShare-interface DataProxyResult--><!--Device-dataShare-interface DataProxyResult-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 ## 导入模块
@@ -30,6 +32,8 @@ result: DataProxyErrorCode
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataProxyResult-result: DataProxyErrorCode--><!--Device-DataProxyResult-result: DataProxyErrorCode-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 ## uri
@@ -45,5 +49,7 @@ uri: string
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataProxyResult-uri: string--><!--Device-DataProxyResult-uri: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer

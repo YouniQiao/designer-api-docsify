@@ -23,6 +23,8 @@ function getDownloadInfo(url: string): DownloadInfo | undefined
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-cacheDownload-function getDownloadInfo(url: string): DownloadInfo | undefined--><!--Device-cacheDownload-function getDownloadInfo(url: string): DownloadInfo | undefined-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 **参数：**

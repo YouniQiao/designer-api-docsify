@@ -20,6 +20,8 @@ function getSharedBundleInfo(bundleName: string,  moduleName: string, callback: 
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-bundleManager-function getSharedBundleInfo(bundleName: string,  moduleName: string, callback: AsyncCallback<Array<SharedBundleInfo>>): void--><!--Device-bundleManager-function getSharedBundleInfo(bundleName: string,  moduleName: string, callback: AsyncCallback<Array<SharedBundleInfo>>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -82,6 +84,8 @@ function getSharedBundleInfo(bundleName: string, moduleName: string): Promise<Ar
 **起始版本：** 10
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-bundleManager-function getSharedBundleInfo(bundleName: string, moduleName: string): Promise<Array<SharedBundleInfo>>--><!--Device-bundleManager-function getSharedBundleInfo(bundleName: string, moduleName: string): Promise<Array<SharedBundleInfo>>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

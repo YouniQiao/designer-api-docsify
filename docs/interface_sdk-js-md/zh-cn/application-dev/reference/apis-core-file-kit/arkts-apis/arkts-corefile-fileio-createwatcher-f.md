@@ -19,6 +19,8 @@ declare function createWatcher(filename: string, events: number, callback: Async
 
 **替代接口：** [createWatcher](arkts-corefile-file-fs-createwatcher-f.md)
 
+<!--Device-unnamed-declare function createWatcher(filename: string, events: number, callback: AsyncCallback<number>): Watcher--><!--Device-unnamed-declare function createWatcher(filename: string, events: number, callback: AsyncCallback<number>): Watcher-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**

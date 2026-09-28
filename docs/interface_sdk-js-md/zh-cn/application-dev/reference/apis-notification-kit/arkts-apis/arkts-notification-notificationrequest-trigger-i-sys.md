@@ -8,6 +8,8 @@ export interface Trigger
 
 **起始版本：** 23
 
+<!--Device-unnamed-export interface Trigger--><!--Device-unnamed-export interface Trigger-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -23,6 +25,8 @@ condition:Geofence
 **类型：** [Geofence](arkts-notification-notificationrequest-geofence-i-sys.md)
 
 **起始版本：** 23
+
+<!--Device-Trigger-condition:Geofence--><!--Device-Trigger-condition:Geofence-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -40,6 +44,8 @@ displayTime?:number
 
 **起始版本：** 23
 
+<!--Device-Trigger-displayTime?:int--><!--Device-Trigger-displayTime?:int-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -55,6 +61,8 @@ type:TriggerType
 **类型：** [TriggerType](arkts-notification-notificationrequest-triggertype-e-sys.md)
 
 **起始版本：** 23
+
+<!--Device-Trigger-type:TriggerType--><!--Device-Trigger-type:TriggerType-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

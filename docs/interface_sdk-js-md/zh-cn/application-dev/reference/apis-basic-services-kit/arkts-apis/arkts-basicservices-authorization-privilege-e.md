@@ -8,6 +8,8 @@ enum Privilege
 
 **起始版本：** 26.0.1
 
+<!--Device-authorization-enum Privilege--><!--Device-authorization-enum Privilege-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 ## PRIVILEGE_OPERATE_RAW_NET_PACKETS
@@ -21,5 +23,7 @@ PRIVILEGE_OPERATE_RAW_NET_PACKETS = 'ohos.privilege.operate_raw_net_packets'
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Privilege-PRIVILEGE_OPERATE_RAW_NET_PACKETS = 'ohos.privilege.operate_raw_net_packets'--><!--Device-Privilege-PRIVILEGE_OPERATE_RAW_NET_PACKETS = 'ohos.privilege.operate_raw_net_packets'-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount

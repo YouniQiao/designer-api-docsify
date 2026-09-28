@@ -16,7 +16,9 @@ function getSystemFontFullNamesByType(fontType: SystemFontType): Promise<Array<s
 
 **起始版本：** 14
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-text-function getSystemFontFullNamesByType(fontType: SystemFontType): Promise<Array<string>>--><!--Device-text-function getSystemFontFullNamesByType(fontType: SystemFontType): Promise<Array<string>>-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

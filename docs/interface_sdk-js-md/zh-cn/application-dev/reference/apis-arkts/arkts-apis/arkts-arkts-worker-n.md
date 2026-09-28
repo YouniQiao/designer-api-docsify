@@ -8,6 +8,8 @@ JS跨线程通信工具。
 
 **起始版本：** 7
 
+<!--Device-unnamed-declare namespace worker--><!--Device-unnamed-declare namespace worker-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块

@@ -8,6 +8,8 @@ interface AudioVolumeManager
 
 **起始版本：** 9
 
+<!--Device-audio-interface AudioVolumeManager--><!--Device-audio-interface AudioVolumeManager-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 ## 导入模块
@@ -26,7 +28,9 @@ getAppVolumePercentage(): Promise<number>
 
 **起始版本：** 19
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-AudioVolumeManager-getAppVolumePercentage(): Promise<int>--><!--Device-AudioVolumeManager-getAppVolumePercentage(): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -58,7 +62,9 @@ getMaxVolumeByStream(streamUsage: StreamUsage): number
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-AudioVolumeManager-getMaxVolumeByStream(streamUsage: StreamUsage): int--><!--Device-AudioVolumeManager-getMaxVolumeByStream(streamUsage: StreamUsage): int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -105,7 +111,9 @@ getMinVolumeByStream(streamUsage: StreamUsage): number
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-AudioVolumeManager-getMinVolumeByStream(streamUsage: StreamUsage): int--><!--Device-AudioVolumeManager-getMinVolumeByStream(streamUsage: StreamUsage): int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -152,7 +160,9 @@ getVolumeByStream(streamUsage: StreamUsage): number
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-AudioVolumeManager-getVolumeByStream(streamUsage: StreamUsage): int--><!--Device-AudioVolumeManager-getVolumeByStream(streamUsage: StreamUsage): int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -199,6 +209,8 @@ getVolumeGroupManager(groupId: number, callback: AsyncCallback<AudioVolumeGroupM
 
 **起始版本：** 9
 
+<!--Device-AudioVolumeManager-getVolumeGroupManager(groupId: int, callback: AsyncCallback<AudioVolumeGroupManager>): void--><!--Device-AudioVolumeManager-getVolumeGroupManager(groupId: int, callback: AsyncCallback<AudioVolumeGroupManager>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **参数：**
@@ -237,6 +249,8 @@ getVolumeGroupManager(groupId: number): Promise<AudioVolumeGroupManager>
 获取音频组音量管理器实例。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-AudioVolumeManager-getVolumeGroupManager(groupId: int): Promise<AudioVolumeGroupManager>--><!--Device-AudioVolumeManager-getVolumeGroupManager(groupId: int): Promise<AudioVolumeGroupManager>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -278,7 +292,9 @@ getVolumeGroupManagerSync(groupId: number): AudioVolumeGroupManager
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-AudioVolumeManager-getVolumeGroupManagerSync(groupId: int): AudioVolumeGroupManager--><!--Device-AudioVolumeManager-getVolumeGroupManagerSync(groupId: int): AudioVolumeGroupManager-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -324,6 +340,8 @@ getVolumeInUnitOfDbByStream(streamUsage: StreamUsage, volumeLevel: number, devic
 获取系统通过音频流、音量等级和设备类型计算出的音量dB值。
 
 **起始版本：** 20
+
+<!--Device-AudioVolumeManager-getVolumeInUnitOfDbByStream(streamUsage: StreamUsage, volumeLevel: int, device: DeviceType): double--><!--Device-AudioVolumeManager-getVolumeInUnitOfDbByStream(streamUsage: StreamUsage, volumeLevel: int, device: DeviceType): double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -372,6 +390,8 @@ isSystemMutedForStream(streamUsage: StreamUsage): boolean
 
 **起始版本：** 20
 
+<!--Device-AudioVolumeManager-isSystemMutedForStream(streamUsage: StreamUsage): boolean--><!--Device-AudioVolumeManager-isSystemMutedForStream(streamUsage: StreamUsage): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **参数：**
@@ -417,6 +437,8 @@ off(type: 'appVolumeChange', callback?: Callback<VolumeEvent>): void
 
 **起始版本：** 19
 
+<!--Device-AudioVolumeManager-off(type: 'appVolumeChange', callback?: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-off(type: 'appVolumeChange', callback?: Callback<VolumeEvent>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **参数：**
@@ -457,6 +479,8 @@ off(type: 'streamVolumeChange', callback?: Callback<StreamVolumeEvent>): void
 取消监听系统音频流音量变化事件。
 
 **起始版本：** 20
+
+<!--Device-AudioVolumeManager-off(type: 'streamVolumeChange', callback?: Callback<StreamVolumeEvent>): void--><!--Device-AudioVolumeManager-off(type: 'streamVolumeChange', callback?: Callback<StreamVolumeEvent>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -502,6 +526,8 @@ off(type: 'volumeChange', callback?: Callback<VolumeEvent>): void
 
 **替代接口：** streamVolumeChange
 
+<!--Device-AudioVolumeManager-off(type: 'volumeChange', callback?: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-off(type: 'volumeChange', callback?: Callback<VolumeEvent>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **参数：**
@@ -544,6 +570,8 @@ on(type: 'appVolumeChange', callback: Callback<VolumeEvent>): void
 
 **起始版本：** 19
 
+<!--Device-AudioVolumeManager-on(type: 'appVolumeChange', callback: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-on(type: 'appVolumeChange', callback: Callback<VolumeEvent>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **参数：**
@@ -576,6 +604,8 @@ on(type: 'streamVolumeChange', streamUsage: StreamUsage, callback: Callback<Stre
 监听系统音频流音量变化事件（当系统音频流音量发生变化时触发）。使用callback异步回调。
 
 **起始版本：** 20
+
+<!--Device-AudioVolumeManager-on(type: 'streamVolumeChange', streamUsage: StreamUsage, callback: Callback<StreamVolumeEvent>): void--><!--Device-AudioVolumeManager-on(type: 'streamVolumeChange', streamUsage: StreamUsage, callback: Callback<StreamVolumeEvent>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -620,6 +650,8 @@ on(type: 'volumeChange', callback: Callback<VolumeEvent>): void
 
 **替代接口：** streamVolumeChange
 
+<!--Device-AudioVolumeManager-on(type: 'volumeChange', callback: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-on(type: 'volumeChange', callback: Callback<VolumeEvent>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **参数：**
@@ -654,7 +686,9 @@ setAppVolumePercentage(volume: number): Promise<void>
 
 **起始版本：** 19
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-AudioVolumeManager-setAppVolumePercentage(volume: int): Promise<void>--><!--Device-AudioVolumeManager-setAppVolumePercentage(volume: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 

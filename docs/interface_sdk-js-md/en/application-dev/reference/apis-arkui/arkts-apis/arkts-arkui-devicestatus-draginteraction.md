@@ -8,6 +8,8 @@ The **dragInteraction** module provides the APIs to enable and disable listening
 
 **Since:** 10
 
+<!--Device-unnamed-declare namespace dragInteraction--><!--Device-unnamed-declare namespace dragInteraction-End-->
+
 **System capability:** SystemCapability.Msdp.DeviceStatus.Drag
 
 **System API:** This is a system API.

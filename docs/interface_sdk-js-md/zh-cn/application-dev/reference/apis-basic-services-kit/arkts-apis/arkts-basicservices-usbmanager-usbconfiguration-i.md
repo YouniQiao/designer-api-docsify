@@ -8,6 +8,8 @@ USB配置，一个[USBDevice](arkts-basicservices-usbmanager-usbdevice-i.md)中�
 
 **起始版本：** 9
 
+<!--Device-usbManager-interface USBConfiguration--><!--Device-usbManager-interface USBConfiguration-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## 导入模块
@@ -28,6 +30,8 @@ attributes: number
 
 **起始版本：** 9
 
+<!--Device-USBConfiguration-attributes: int--><!--Device-USBConfiguration-attributes: int-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## id
@@ -41,6 +45,8 @@ id: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-USBConfiguration-id: int--><!--Device-USBConfiguration-id: int-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -56,6 +62,8 @@ interfaces: Array<USBInterface>
 
 **起始版本：** 9
 
+<!--Device-USBConfiguration-interfaces: Array<USBInterface>--><!--Device-USBConfiguration-interfaces: Array<USBInterface>-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## isRemoteWakeup
@@ -69,6 +77,8 @@ isRemoteWakeup: boolean
 **类型：** boolean
 
 **起始版本：** 9
+
+<!--Device-USBConfiguration-isRemoteWakeup: boolean--><!--Device-USBConfiguration-isRemoteWakeup: boolean-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -84,6 +94,8 @@ isSelfPowered: boolean
 
 **起始版本：** 9
 
+<!--Device-USBConfiguration-isSelfPowered: boolean--><!--Device-USBConfiguration-isSelfPowered: boolean-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## maxPower
@@ -98,6 +110,8 @@ maxPower: number
 
 **起始版本：** 9
 
+<!--Device-USBConfiguration-maxPower: int--><!--Device-USBConfiguration-maxPower: int-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## name
@@ -111,5 +125,7 @@ name: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-USBConfiguration-name: string--><!--Device-USBConfiguration-name: string-End-->
 
 **系统能力：** SystemCapability.USB.USBManager

@@ -9,6 +9,8 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace taskpool--><!--Device-unnamed-declare namespace taskpool-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块

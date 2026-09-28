@@ -16,6 +16,8 @@ function isEmergencyPhoneNumber(phoneNumber: string, options: EmergencyNumberOpt
 
 **起始版本：** 7
 
+<!--Device-call-function isEmergencyPhoneNumber(phoneNumber: string, options: EmergencyNumberOptions, callback: AsyncCallback<boolean>): void--><!--Device-call-function isEmergencyPhoneNumber(phoneNumber: string, options: EmergencyNumberOptions, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **参数：**
@@ -63,6 +65,8 @@ function isEmergencyPhoneNumber(phoneNumber: string, options?: EmergencyNumberOp
 根据电话号码参数，判断是否是紧急电话号码。使用Promise异步回调。
 
 **起始版本：** 7
+
+<!--Device-call-function isEmergencyPhoneNumber(phoneNumber: string, options?: EmergencyNumberOptions): Promise<boolean>--><!--Device-call-function isEmergencyPhoneNumber(phoneNumber: string, options?: EmergencyNumberOptions): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -114,6 +118,8 @@ function isEmergencyPhoneNumber(phoneNumber: string, callback: AsyncCallback<boo
 判断是否是紧急电话号码。使用callback异步回调。
 
 **起始版本：** 7
+
+<!--Device-call-function isEmergencyPhoneNumber(phoneNumber: string, callback: AsyncCallback<boolean>): void--><!--Device-call-function isEmergencyPhoneNumber(phoneNumber: string, callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 

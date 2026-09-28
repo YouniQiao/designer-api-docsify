@@ -18,6 +18,8 @@ function getSandboxAppConfig(): Promise<string>
 
 **起始版本：** 11
 
+<!--Device-dlpPermission-function getSandboxAppConfig(): Promise<string>--><!--Device-dlpPermission-function getSandboxAppConfig(): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **返回值：**

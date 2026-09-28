@@ -14,6 +14,8 @@ enum PlayingState
 
 **替代接口：** [PlayingState](arkts-connectivity-bluetoothmanager-playingstate-e.md)
 
+<!--Device-bluetooth-enum PlayingState--><!--Device-bluetooth-enum PlayingState-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## STATE_NOT_PLAYING
@@ -30,6 +32,8 @@ STATE_NOT_PLAYING = 0
 
 **替代接口：** [STATE_NOT_PLAYING](arkts-connectivity-bluetoothmanager-playingstate-e.md#state_not_playing)
 
+<!--Device-PlayingState-STATE_NOT_PLAYING = 0--><!--Device-PlayingState-STATE_NOT_PLAYING = 0-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## STATE_PLAYING
@@ -45,5 +49,7 @@ STATE_PLAYING = 1
 **废弃版本：** 9
 
 **替代接口：** [STATE_PLAYING](arkts-connectivity-bluetoothmanager-playingstate-e.md#state_playing)
+
+<!--Device-PlayingState-STATE_PLAYING = 1--><!--Device-PlayingState-STATE_PLAYING = 1-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

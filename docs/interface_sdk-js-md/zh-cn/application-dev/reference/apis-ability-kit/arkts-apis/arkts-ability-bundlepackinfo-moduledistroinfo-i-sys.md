@@ -8,6 +8,8 @@ module发行版信息。
 
 **起始版本：** 9
 
+<!--Device-unnamed-export interface ModuleDistroInfo--><!--Device-unnamed-export interface ModuleDistroInfo-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **系统接口：** 此接口为系统接口。
@@ -23,6 +25,8 @@ readonly deliveryWithInstall: boolean
 **类型：** boolean
 
 **起始版本：** 9
+
+<!--Device-ModuleDistroInfo-readonly deliveryWithInstall: boolean--><!--Device-ModuleDistroInfo-readonly deliveryWithInstall: boolean-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
@@ -40,6 +44,8 @@ readonly installationFree: boolean
 
 **起始版本：** 9
 
+<!--Device-ModuleDistroInfo-readonly installationFree: boolean--><!--Device-ModuleDistroInfo-readonly installationFree: boolean-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **系统接口：** 此接口为系统接口。
@@ -56,6 +62,8 @@ module名称。
 
 **起始版本：** 9
 
+<!--Device-ModuleDistroInfo-readonly moduleName: string--><!--Device-ModuleDistroInfo-readonly moduleName: string-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **系统接口：** 此接口为系统接口。
@@ -71,6 +79,8 @@ module类型。
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-ModuleDistroInfo-readonly moduleType: string--><!--Device-ModuleDistroInfo-readonly moduleType: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 

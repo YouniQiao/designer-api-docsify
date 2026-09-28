@@ -8,6 +8,8 @@ export interface WebSocket
 
 **起始版本：** 6
 
+<!--Device-webSocket-export interface WebSocket--><!--Device-webSocket-export interface WebSocket-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块
@@ -28,7 +30,9 @@ close(callback: AsyncCallback<boolean>): void
 
 **需要权限：** ohos.permission.INTERNET
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebSocket-close(callback: AsyncCallback<boolean>): void--><!--Device-WebSocket-close(callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -75,7 +79,9 @@ close(options: WebSocketCloseOptions, callback: AsyncCallback<boolean>): void
 
 **需要权限：** ohos.permission.INTERNET
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebSocket-close(options: WebSocketCloseOptions, callback: AsyncCallback<boolean>): void--><!--Device-WebSocket-close(options: WebSocketCloseOptions, callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -129,7 +135,9 @@ close(options?: WebSocketCloseOptions): Promise<boolean>
 
 **需要权限：** ohos.permission.INTERNET
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebSocket-close(options?: WebSocketCloseOptions): Promise<boolean>--><!--Device-WebSocket-close(options?: WebSocketCloseOptions): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -192,7 +200,9 @@ connect(url: string, callback: AsyncCallback<boolean>): void
 
 **需要权限：** ohos.permission.INTERNET
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebSocket-connect(url: string, callback: AsyncCallback<boolean>): void--><!--Device-WebSocket-connect(url: string, callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -255,7 +265,9 @@ connect(url: string, options: WebSocketRequestOptions, callback: AsyncCallback<b
 
 **需要权限：** ohos.permission.INTERNET
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebSocket-connect(url: string, options: WebSocketRequestOptions, callback: AsyncCallback<boolean>): void--><!--Device-WebSocket-connect(url: string, options: WebSocketRequestOptions, callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -343,7 +355,9 @@ connect(url: string, options?: WebSocketRequestOptions): Promise<boolean>
 
 **需要权限：** ohos.permission.INTERNET
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebSocket-connect(url: string, options?: WebSocketRequestOptions): Promise<boolean>--><!--Device-WebSocket-connect(url: string, options?: WebSocketRequestOptions): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -403,6 +417,8 @@ off(type: 'open', callback?: AsyncCallback<Object>): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebSocket-off(type: 'open', callback?: AsyncCallback<Object>): void--><!--Device-WebSocket-off(type: 'open', callback?: AsyncCallback<Object>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -446,6 +462,8 @@ off(type: 'openInfo', callback?: AsyncCallback<WebSocketOpenInfo>): void
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WebSocket-off(type: 'openInfo', callback?: AsyncCallback<WebSocketOpenInfo>): void--><!--Device-WebSocket-off(type: 'openInfo', callback?: AsyncCallback<WebSocketOpenInfo>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -493,6 +511,8 @@ off(type: 'message', callback?: AsyncCallback<string | ArrayBuffer>): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebSocket-off(type: 'message', callback?: AsyncCallback<string | ArrayBuffer>): void--><!--Device-WebSocket-off(type: 'message', callback?: AsyncCallback<string | ArrayBuffer>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -526,6 +546,8 @@ off(type: 'close', callback?: AsyncCallback<CloseResult>): void
 **起始版本：** 6
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebSocket-off(type: 'close', callback?: AsyncCallback<CloseResult>): void--><!--Device-WebSocket-off(type: 'close', callback?: AsyncCallback<CloseResult>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -561,6 +583,8 @@ off(type: 'error', callback?: ErrorCallback): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebSocket-off(type: 'error', callback?: ErrorCallback): void--><!--Device-WebSocket-off(type: 'error', callback?: ErrorCallback): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -592,6 +616,8 @@ off(type: 'dataEnd', callback?: Callback<void>): void
 > 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
 
 **起始版本：** 11
+
+<!--Device-WebSocket-off(type: 'dataEnd', callback?: Callback<void>): void--><!--Device-WebSocket-off(type: 'dataEnd', callback?: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -625,6 +651,8 @@ off(type: 'headerReceive', callback?: Callback<ResponseHeaders>): void
 
 **起始版本：** 12
 
+<!--Device-WebSocket-off(type: 'headerReceive', callback?: Callback<ResponseHeaders>): void--><!--Device-WebSocket-off(type: 'headerReceive', callback?: Callback<ResponseHeaders>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -654,6 +682,8 @@ on(type: 'open', callback: AsyncCallback<Object>): void
 **起始版本：** 6
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebSocket-on(type: 'open', callback: AsyncCallback<Object>): void--><!--Device-WebSocket-on(type: 'open', callback: AsyncCallback<Object>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -696,6 +726,8 @@ on(type: 'message', callback: AsyncCallback<string | ArrayBuffer>): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebSocket-on(type: 'message', callback: AsyncCallback<string | ArrayBuffer>): void--><!--Device-WebSocket-on(type: 'message', callback: AsyncCallback<string | ArrayBuffer>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -728,6 +760,8 @@ on(type: 'openInfo', callback: AsyncCallback<WebSocketOpenInfo>): void
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WebSocket-on(type: 'openInfo', callback: AsyncCallback<WebSocketOpenInfo>): void--><!--Device-WebSocket-on(type: 'openInfo', callback: AsyncCallback<WebSocketOpenInfo>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -766,6 +800,8 @@ on(type: 'close', callback: AsyncCallback<CloseResult>): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebSocket-on(type: 'close', callback: AsyncCallback<CloseResult>): void--><!--Device-WebSocket-on(type: 'close', callback: AsyncCallback<CloseResult>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -801,6 +837,8 @@ on(type: 'error', callback: ErrorCallback): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebSocket-on(type: 'error', callback: ErrorCallback): void--><!--Device-WebSocket-on(type: 'error', callback: ErrorCallback): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -832,6 +870,8 @@ on(type: 'dataEnd', callback: Callback<void>): void
 
 **起始版本：** 11
 
+<!--Device-WebSocket-on(type: 'dataEnd', callback: Callback<void>): void--><!--Device-WebSocket-on(type: 'dataEnd', callback: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -861,6 +901,8 @@ on(type: 'headerReceive', callback: Callback<ResponseHeaders>): void
 订阅HTTP Response Header事件，使用callback异步回调。
 
 **起始版本：** 12
+
+<!--Device-WebSocket-on(type: 'headerReceive', callback: Callback<ResponseHeaders>): void--><!--Device-WebSocket-on(type: 'headerReceive', callback: Callback<ResponseHeaders>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -894,7 +936,9 @@ send(data: string | ArrayBuffer, callback: AsyncCallback<boolean>): void
 
 **需要权限：** ohos.permission.INTERNET
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebSocket-send(data: string | ArrayBuffer, callback: AsyncCallback<boolean>): void--><!--Device-WebSocket-send(data: string | ArrayBuffer, callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -957,7 +1001,9 @@ send(data: string | ArrayBuffer): Promise<boolean>
 
 **需要权限：** ohos.permission.INTERNET
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebSocket-send(data: string | ArrayBuffer): Promise<boolean>--><!--Device-WebSocket-send(data: string | ArrayBuffer): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 

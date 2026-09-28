@@ -10,6 +10,8 @@ interface InteractionModalUIExtension extends InteractionUI
 
 **起始版本：** 26.0.1
 
+<!--Device-insightIntent-interface InteractionModalUIExtension extends InteractionUI--><!--Device-insightIntent-interface InteractionModalUIExtension extends InteractionUI-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -34,6 +36,8 @@ abilityName: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-InteractionModalUIExtension-abilityName: string--><!--Device-InteractionModalUIExtension-abilityName: string-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +55,8 @@ bundleName: string
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-InteractionModalUIExtension-bundleName: string--><!--Device-InteractionModalUIExtension-bundleName: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -70,6 +76,8 @@ interactionUIType: 'MODAL_UIEXTENSION'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-InteractionModalUIExtension-interactionUIType: 'MODAL_UIEXTENSION'--><!--Device-InteractionModalUIExtension-interactionUIType: 'MODAL_UIEXTENSION'-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -87,6 +95,8 @@ moduleName: string
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-InteractionModalUIExtension-moduleName: string--><!--Device-InteractionModalUIExtension-moduleName: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -106,6 +116,8 @@ parameters: Record<string, Object>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-InteractionModalUIExtension-parameters: Record<string, Object>--><!--Device-InteractionModalUIExtension-parameters: Record<string, Object>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -124,6 +136,8 @@ UIExtension的类型。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-InteractionModalUIExtension-uiExtensionType: string--><!--Device-InteractionModalUIExtension-uiExtensionType: string-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -141,6 +155,8 @@ uri: string
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-InteractionModalUIExtension-uri: string--><!--Device-InteractionModalUIExtension-uri: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

@@ -8,6 +8,8 @@ interface PrintPageRange
 
 **起始版本：** 11
 
+<!--Device-print-interface PrintPageRange--><!--Device-print-interface PrintPageRange-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## 导入模块
@@ -28,6 +30,8 @@ endPage?: number
 
 **起始版本：** 11
 
+<!--Device-PrintPageRange-endPage?: int--><!--Device-PrintPageRange-endPage?: int-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## pages
@@ -42,6 +46,8 @@ pages?: Array<number>
 
 **起始版本：** 11
 
+<!--Device-PrintPageRange-pages?: Array<int>--><!--Device-PrintPageRange-pages?: Array<int>-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## startPage
@@ -55,5 +61,7 @@ startPage?: number
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-PrintPageRange-startPage?: int--><!--Device-PrintPageRange-startPage?: int-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework

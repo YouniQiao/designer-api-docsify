@@ -16,6 +16,8 @@ function getDeviceList(callback: AsyncCallback<Array<number>>): void
 
 **起始版本：** 9
 
+<!--Device-inputDevice-function getDeviceList(callback: AsyncCallback<Array<int>>): void--><!--Device-inputDevice-function getDeviceList(callback: AsyncCallback<Array<int>>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 **参数：**
@@ -73,6 +75,8 @@ function getDeviceList(): Promise<Array<number>>
 获取所有输入设备的ID列表，使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-inputDevice-function getDeviceList(): Promise<Array<int>>--><!--Device-inputDevice-function getDeviceList(): Promise<Array<int>>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 

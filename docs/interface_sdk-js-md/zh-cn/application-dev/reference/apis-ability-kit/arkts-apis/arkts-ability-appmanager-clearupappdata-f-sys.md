@@ -18,6 +18,8 @@ function clearUpAppData(bundleName: string, appCloneIndex?: number): Promise<voi
 
 **需要权限：** ohos.permission.CLEAN_APPLICATION_DATA
 
+<!--Device-appManager-function clearUpAppData(bundleName: string, appCloneIndex?: int): Promise<void>--><!--Device-appManager-function clearUpAppData(bundleName: string, appCloneIndex?: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。

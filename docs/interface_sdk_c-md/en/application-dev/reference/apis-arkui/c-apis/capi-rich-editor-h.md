@@ -32,6 +32,7 @@ Defines structs, enumerations, and APIs related to <b>RichEditor</b>. <b>RichEdi
 | [OH_ArkUI_TextEditorSpanType](#oh_arkui_texteditorspantype) | OH_ArkUI_TextEditorSpanType | Enumerates the span types of a custom text selection menu, which are used to identify the span type of the text selection menu in the text editor. Different span types correspond to different content structures, affecting the display and interaction behavior of the custom menu. For example, the <b>OH_ARKUI_TEXT_EDITOR_SPAN_TYPE_TEXT</b> type is used when the user selects only text content, the <b>OH_ARKUI_TEXT_EDITOR_SPAN_TYPE_MIXED</b> type is used when the selection contains mixed content such as text and images, and the <b>OH_ARKUI_TEXT_EDITOR_SPAN_TYPE_BUILDER</b> type is used when a custom menu item layout is required. |
 | [OH_ArkUI_TextEditorResponseType](#oh_arkui_texteditorresponsetype) | OH_ArkUI_TextEditorResponseType | Enumerates the response types of a custom text selection menu, which are used to identify the interaction method that triggers the menu pop-up. Different response types correspond to different user operations (such as right-click, long press, and mouse-based selection), allowing different menu content to be customized based on the response type. |
 | [OH_ArkUI_TextMenuType](#oh_arkui_textmenutype) | OH_ArkUI_TextMenuType | Enumerates text menu types, which are used to distinguish different types of pop-up menus in the text editor, including the text selection menu and the preview menu. Different menu types correspond to different interaction scenarios and menu display modes. For example, the text selection menu pops up when the user selects text and is used for text operations such as copy and delete; the preview menu pops up when the user long-presses an image and is used to trigger image content drag preview as well as copy and deletion operations. |
+| [OH_ArkUI_TextEditorType](#oh_arkui_texteditortype) | OH_ArkUI_TextEditorType | Enumerates the text editor input types. |
 
 ### Function
 
@@ -131,6 +132,34 @@ Enumerates text menu types, which are used to distinguish different types of pop
 | -- | -- |
 | OH_ARKUI_TEXT_EDITOR_SELECTION_MENU = 0 |  |
 | OH_ARKUI_TEXT_EDITOR_PREVIEW_MENU = 1 |  |
+
+### OH_ArkUI_TextEditorType
+
+```c
+enum OH_ArkUI_TextEditorType
+```
+
+**Description**
+
+Enumerates the text editor input types.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
+**Since**: 26.2.0
+
+| Enum item | Description |
+| -- | -- |
+| OH_ARKUI_TEXT_EDITOR_TYPE_NORMAL = 0 | Normal input mode.<br>**Since**: 26.2.0 |
+| OH_ARKUI_TEXT_EDITOR_TYPE_NUMBER = 2 | Number input mode.<br>**Since**: 26.2.0 |
+| OH_ARKUI_TEXT_EDITOR_TYPE_PHONE_NUMBER = 3 | Phone number input mode.<br>**Since**: 26.2.0 |
+| OH_ARKUI_TEXT_EDITOR_TYPE_EMAIL = 5 | Email address input mode.<br>**Since**: 26.2.0 |
+| OH_ARKUI_TEXT_EDITOR_TYPE_PASSWORD = 7 | Password input mode.<br>**Since**: 26.2.0 |
+| OH_ARKUI_TEXT_EDITOR_TYPE_NUMBER_PASSWORD = 8 | Numeric password input mode.<br>**Since**: 26.2.0 |
+| OH_ARKUI_TEXT_EDITOR_TYPE_SCREEN_LOCK_PASSWORD = 9 | Lock screen password input mode.<br>**Since**: 26.2.0 |
+| OH_ARKUI_TEXT_EDITOR_TYPE_USER_NAME = 10 | Username input mode.<br>**Since**: 26.2.0 |
+| OH_ARKUI_TEXT_EDITOR_TYPE_NEW_PASSWORD = 11 | New password input mode.<br>**Since**: 26.2.0 |
+| OH_ARKUI_TEXT_EDITOR_TYPE_NUMBER_DECIMAL = 12 | Number input mode with a decimal point.<br>**Since**: 26.2.0 |
+| OH_ARKUI_TEXT_EDITOR_TYPE_ONE_TIME_CODE = 14 | One time code input mode.<br>**Since**: 26.2.0 |
 
 
 ## Function description

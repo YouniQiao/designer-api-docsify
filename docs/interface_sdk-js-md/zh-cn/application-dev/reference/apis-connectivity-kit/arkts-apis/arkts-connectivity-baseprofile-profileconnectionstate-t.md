@@ -10,6 +10,8 @@ type ProfileConnectionState = constant.ProfileConnectionState
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-baseProfile-type ProfileConnectionState = constant.ProfileConnectionState--><!--Device-baseProfile-type ProfileConnectionState = constant.ProfileConnectionState-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **类型：** [constant.ProfileConnectionState](arkts-connectivity-constant-profileconnectionstate-e.md)

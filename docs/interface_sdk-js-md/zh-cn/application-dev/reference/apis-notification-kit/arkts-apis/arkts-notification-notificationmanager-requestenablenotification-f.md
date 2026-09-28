@@ -20,6 +20,8 @@ function requestEnableNotification(callback: AsyncCallback<void>): void
 
 **替代接口：** [requestEnableNotification](arkts-notification-notificationmanager-requestenablenotification-f.md)
 
+<!--Device-notificationManager-function requestEnableNotification(callback: AsyncCallback<void>): void--><!--Device-notificationManager-function requestEnableNotification(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **参数：**
@@ -74,6 +76,8 @@ function requestEnableNotification(context: UIAbilityContext, callback: AsyncCal
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-notificationManager-function requestEnableNotification(context: UIAbilityContext, callback: AsyncCallback<void>): void--><!--Device-notificationManager-function requestEnableNotification(context: UIAbilityContext, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -150,6 +154,8 @@ function requestEnableNotification(): Promise<void>
 
 **替代接口：** [requestEnableNotification](arkts-notification-notificationmanager-requestenablenotification-f.md)
 
+<!--Device-notificationManager-function requestEnableNotification(): Promise<void>--><!--Device-notificationManager-function requestEnableNotification(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **返回值：**
@@ -200,6 +206,8 @@ function requestEnableNotification(context: UIAbilityContext): Promise<void>
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-notificationManager-function requestEnableNotification(context: UIAbilityContext): Promise<void>--><!--Device-notificationManager-function requestEnableNotification(context: UIAbilityContext): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

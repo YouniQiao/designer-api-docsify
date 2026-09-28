@@ -8,6 +8,8 @@ export interface MechInfo
 
 **起始版本：** 20
 
+<!--Device-mechanicManager-export interface MechInfo--><!--Device-mechanicManager-export interface MechInfo-End-->
+
 **系统能力：** SystemCapability.Mechanic.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ mechDeviceType: MechDeviceType
 
 **起始版本：** 20
 
+<!--Device-MechInfo-mechDeviceType: MechDeviceType--><!--Device-MechInfo-mechDeviceType: MechDeviceType-End-->
+
 **系统能力：** SystemCapability.Mechanic.Core
 
 ## mechId
@@ -42,6 +46,8 @@ mechId: number
 
 **起始版本：** 20
 
+<!--Device-MechInfo-mechId: int--><!--Device-MechInfo-mechId: int-End-->
+
 **系统能力：** SystemCapability.Mechanic.Core
 
 ## mechName
@@ -55,5 +61,7 @@ mechName: string
 **类型：** string
 
 **起始版本：** 20
+
+<!--Device-MechInfo-mechName: string--><!--Device-MechInfo-mechName: string-End-->
 
 **系统能力：** SystemCapability.Mechanic.Core

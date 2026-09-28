@@ -8,6 +8,8 @@ interface ConnectOptions
 
 **起始版本：** 18
 
+<!--Device-abilityConnectionManager-interface ConnectOptions--><!--Device-abilityConnectionManager-interface ConnectOptions-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 ## 导入模块
@@ -30,6 +32,8 @@ true表示需要接收流（当本端需要从对端接收视频流时选择）�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ConnectOptions-needReceiveStream?: boolean--><!--Device-ConnectOptions-needReceiveStream?: boolean-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **系统接口：** 此接口为系统接口。
@@ -47,6 +51,8 @@ true表示需要发送流（当本端需要向对端发送视频流时选择）�
 **起始版本：** 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ConnectOptions-needSendStream?: boolean--><!--Device-ConnectOptions-needSendStream?: boolean-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 

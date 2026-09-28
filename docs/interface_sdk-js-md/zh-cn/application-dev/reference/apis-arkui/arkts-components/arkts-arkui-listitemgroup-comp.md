@@ -1,6 +1,6 @@
 # ListItemGroup
 
-该组件用来展示列表项分组，支持自定义分组头部和尾部区域、卡片样式、分割线、懒加载与预加载等能力，适用于需要对列表项进行逻辑分组展示的场景。宽度默认充满[List](arkts-arkui-list-comp.md#list)组件，必须配合List组件来使用。
+该组件用来展示列表项分组，支持自定义分组头部和尾部区域、卡片样式、分割线、懒加载与预加载等能力，适用于需要对列表项进行逻辑分组展示的场景。宽度默认充满[List](arkts-arkui-list-comp.md)组件，必须配合List组件来使用。
 
 ListItemGroup的懒加载是指组件按需加载可见区域内的子组件。相比全量加载，使用懒加载可以提升应用启动速度，减少内存消耗。ListItemGroup和[ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)、[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)、[Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)结合，懒加载能力存在差异：
 
@@ -20,7 +20,7 @@ ListItemGroup的预加载是指除了加载显示区域内的子组件外，还�
 
 > **说明：** 
 > 
-> - 该组件的父组件只能是[List](arkts-arkui-list-comp.md#list)。
+> - 该组件的父组件只能是[List](arkts-arkui-list-comp.md)。
 > 
 > - ListItemGroup组件不支持设置[通用属性aspectRatio](arkts-arkui-common-comp-commonmethod-c.md#aspectratio)。
 > 
@@ -32,7 +32,7 @@ ListItemGroup的预加载是指除了加载显示区域内的子组件外，还�
 
 ## 子组件
 
-包含[ListItem](arkts-arkui-listitem-comp.md#list_item)子组件。支持通过渲染控制类型（[if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)、[ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)、[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)和[Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)）动态生成子组件，更推荐使用LazyForEach或Repeat以优化性能。
+包含[ListItem](arkts-arkui-listitem-comp.md)子组件。支持通过渲染控制类型（[if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)、[ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)、[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)和[Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)）动态生成子组件，更推荐使用LazyForEach或Repeat以优化性能。
 
 ## ListItemGroup
 
@@ -47,6 +47,8 @@ ListItemGroup(options?: ListItemGroupOptions)
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ListItemGroupInterface-(options?: ListItemGroupOptions): ListItemGroupAttribute--><!--Device-ListItemGroupInterface-(options?: ListItemGroupOptions): ListItemGroupAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

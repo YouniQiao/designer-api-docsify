@@ -26,6 +26,8 @@ function addKeepAliveApps(admin: Want, bundleNames: Array<string>, accountId: nu
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-applicationManager-function addKeepAliveApps(admin: Want, bundleNames: Array<string>, accountId: number): void--><!--Device-applicationManager-function addKeepAliveApps(admin: Want, bundleNames: Array<string>, accountId: number): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -92,6 +94,8 @@ function addKeepAliveApps(admin: Want, bundleNames: Array<string>, accountId: nu
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-applicationManager-function addKeepAliveApps(admin: Want, bundleNames: Array<string>, accountId: number, disallowModify: boolean): void--><!--Device-applicationManager-function addKeepAliveApps(admin: Want, bundleNames: Array<string>, accountId: number, disallowModify: boolean): void-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

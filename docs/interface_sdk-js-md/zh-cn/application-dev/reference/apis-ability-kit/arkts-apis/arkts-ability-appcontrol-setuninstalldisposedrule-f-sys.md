@@ -18,6 +18,8 @@ function setUninstallDisposedRule(appIdentifier: string, rule: UninstallDisposed
 
 **需要权限：** ohos.permission.MANAGE_DISPOSED_APP_STATUS
 
+<!--Device-appControl-function setUninstallDisposedRule(appIdentifier: string, rule: UninstallDisposedRule, appIndex?: int): void--><!--Device-appControl-function setUninstallDisposedRule(appIdentifier: string, rule: UninstallDisposedRule, appIndex?: int): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 
 **系统接口：** 此接口为系统接口。

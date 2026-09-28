@@ -30,6 +30,8 @@ Toggle(options: ToggleOptions)
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-ToggleInterface-(options: ToggleOptions): ToggleAttribute--><!--Device-ToggleInterface-(options: ToggleOptions): ToggleAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数:**

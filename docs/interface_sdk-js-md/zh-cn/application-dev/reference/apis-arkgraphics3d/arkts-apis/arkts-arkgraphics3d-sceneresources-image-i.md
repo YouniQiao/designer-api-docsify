@@ -12,6 +12,8 @@ export interface Image extends SceneResource
 
 **起始版本：** 12
 
+<!--Device-unnamed-export interface Image extends SceneResource--><!--Device-unnamed-export interface Image extends SceneResource-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## height
@@ -26,6 +28,8 @@ readonly height: number
 
 **起始版本：** 12
 
+<!--Device-Image-readonly height: int--><!--Device-Image-readonly height: int-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## width
@@ -39,5 +43,7 @@ readonly width: number
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-Image-readonly width: int--><!--Device-Image-readonly width: int-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

@@ -12,6 +12,8 @@ interface KVManagerConfig
 
 **替代接口：** KVManagerConfig
 
+<!--Device-distributedData-interface KVManagerConfig--><!--Device-distributedData-interface KVManagerConfig-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## 导入模块
@@ -35,6 +37,8 @@ bundleName: string
 
 **替代接口：** bundleName
 
+<!--Device-KVManagerConfig-bundleName: string--><!--Device-KVManagerConfig-bundleName: string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## userInfo
@@ -50,5 +54,7 @@ userInfo: UserInfo
 **起始版本：** 7
 
 **废弃版本：** 9
+
+<!--Device-KVManagerConfig-userInfo: UserInfo--><!--Device-KVManagerConfig-userInfo: UserInfo-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core

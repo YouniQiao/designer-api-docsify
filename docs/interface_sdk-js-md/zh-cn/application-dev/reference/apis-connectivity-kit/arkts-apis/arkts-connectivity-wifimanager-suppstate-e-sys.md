@@ -8,6 +8,8 @@ export enum SuppState
 
 **起始版本：** 9
 
+<!--Device-wifiManager-export enum SuppState--><!--Device-wifiManager-export enum SuppState-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。
@@ -21,6 +23,8 @@ DISCONNECTED
 已断开。
 
 **起始版本：** 9
+
+<!--Device-SuppState-DISCONNECTED--><!--Device-SuppState-DISCONNECTED-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -36,6 +40,8 @@ INTERFACE_DISABLED
 
 **起始版本：** 9
 
+<!--Device-SuppState-INTERFACE_DISABLED--><!--Device-SuppState-INTERFACE_DISABLED-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +55,8 @@ INACTIVE
 未激活。
 
 **起始版本：** 9
+
+<!--Device-SuppState-INACTIVE--><!--Device-SuppState-INACTIVE-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -64,6 +72,8 @@ SCANNING
 
 **起始版本：** 9
 
+<!--Device-SuppState-SCANNING--><!--Device-SuppState-SCANNING-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +87,8 @@ AUTHENTICATING
 认证中。
 
 **起始版本：** 9
+
+<!--Device-SuppState-AUTHENTICATING--><!--Device-SuppState-AUTHENTICATING-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -92,6 +104,8 @@ ASSOCIATING
 
 **起始版本：** 9
 
+<!--Device-SuppState-ASSOCIATING--><!--Device-SuppState-ASSOCIATING-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。
@@ -105,6 +119,8 @@ ASSOCIATED
 已关联。
 
 **起始版本：** 9
+
+<!--Device-SuppState-ASSOCIATED--><!--Device-SuppState-ASSOCIATED-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -120,6 +136,8 @@ FOUR_WAY_HANDSHAKE
 
 **起始版本：** 9
 
+<!--Device-SuppState-FOUR_WAY_HANDSHAKE--><!--Device-SuppState-FOUR_WAY_HANDSHAKE-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。
@@ -133,6 +151,8 @@ GROUP_HANDSHAKE
 组握手。
 
 **起始版本：** 9
+
+<!--Device-SuppState-GROUP_HANDSHAKE--><!--Device-SuppState-GROUP_HANDSHAKE-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -148,6 +168,8 @@ COMPLETED
 
 **起始版本：** 9
 
+<!--Device-SuppState-COMPLETED--><!--Device-SuppState-COMPLETED-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。
@@ -162,6 +184,8 @@ UNINITIALIZED
 
 **起始版本：** 9
 
+<!--Device-SuppState-UNINITIALIZED--><!--Device-SuppState-UNINITIALIZED-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。
@@ -175,6 +199,8 @@ INVALID
 无效值。
 
 **起始版本：** 9
+
+<!--Device-SuppState-INVALID--><!--Device-SuppState-INVALID-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 

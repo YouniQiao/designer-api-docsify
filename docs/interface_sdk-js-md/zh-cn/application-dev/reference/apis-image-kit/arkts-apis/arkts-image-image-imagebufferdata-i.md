@@ -8,6 +8,8 @@ interface ImageBufferData
 
 **起始版本：** 23
 
+<!--Device-image-interface ImageBufferData--><!--Device-image-interface ImageBufferData-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ readonly byteBuffer: ArrayBuffer
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ImageBufferData-readonly byteBuffer: ArrayBuffer--><!--Device-ImageBufferData-readonly byteBuffer: ArrayBuffer-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## pixelStride
@@ -47,6 +51,8 @@ readonly pixelStride: number[]
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ImageBufferData-readonly pixelStride: int[]--><!--Device-ImageBufferData-readonly pixelStride: int[]-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -67,5 +73,7 @@ readonly rowStride: number[]
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ImageBufferData-readonly rowStride: int[]--><!--Device-ImageBufferData-readonly rowStride: int[]-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core

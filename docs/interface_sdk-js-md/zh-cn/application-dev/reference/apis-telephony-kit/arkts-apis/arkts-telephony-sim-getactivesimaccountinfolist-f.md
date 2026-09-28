@@ -22,6 +22,8 @@ function getActiveSimAccountInfoList(callback: AsyncCallback<Array<IccAccountInf
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-sim-function getActiveSimAccountInfoList(callback: AsyncCallback<Array<IccAccountInfo>>): void--><!--Device-sim-function getActiveSimAccountInfoList(callback: AsyncCallback<Array<IccAccountInfo>>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**
@@ -74,6 +76,8 @@ function getActiveSimAccountInfoList(): Promise<Array<IccAccountInfo>>
 **起始版本：** 10
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
+
+<!--Device-sim-function getActiveSimAccountInfoList(): Promise<Array<IccAccountInfo>>--><!--Device-sim-function getActiveSimAccountInfoList(): Promise<Array<IccAccountInfo>>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

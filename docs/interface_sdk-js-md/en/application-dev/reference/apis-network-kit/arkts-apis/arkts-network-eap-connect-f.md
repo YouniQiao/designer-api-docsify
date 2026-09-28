@@ -22,6 +22,8 @@ When **action** is **ACTION_CONNECT**, authentication is re-triggered with the s
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-eap-function connect(action: EthEapConnectAction): Promise<void>--><!--Device-eap-function connect(action: EthEapConnectAction): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 **Parameters:**

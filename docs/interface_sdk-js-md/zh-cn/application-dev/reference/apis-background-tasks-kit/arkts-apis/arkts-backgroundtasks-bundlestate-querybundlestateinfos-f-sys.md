@@ -22,6 +22,8 @@ This method queries usage information at the BY_OPTIMIZED interval by default.
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-bundleState-function queryBundleStateInfos(begin: number, end: number, callback: AsyncCallback<BundleActiveInfoResponse>): void--><!--Device-bundleState-function queryBundleStateInfos(begin: number, end: number, callback: AsyncCallback<BundleActiveInfoResponse>): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **系统接口：** 此接口为系统接口。
@@ -69,6 +71,8 @@ This method queries usage information at the BY_OPTIMIZED interval by default.
 **废弃版本：** 9
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
+
+<!--Device-bundleState-function queryBundleStateInfos(begin: number, end: number): Promise<BundleActiveInfoResponse>--><!--Device-bundleState-function queryBundleStateInfos(begin: number, end: number): Promise<BundleActiveInfoResponse>-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 

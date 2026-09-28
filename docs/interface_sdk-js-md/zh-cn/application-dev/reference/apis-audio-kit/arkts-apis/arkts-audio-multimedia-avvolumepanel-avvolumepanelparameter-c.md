@@ -8,6 +8,8 @@ export declare class AVVolumePanelParameter
 
 **起始版本：** 12
 
+<!--Device-unnamed-export declare class AVVolumePanelParameter--><!--Device-unnamed-export declare class AVVolumePanelParameter-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 ## 导入模块
@@ -37,5 +39,7 @@ position?: Position
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVVolumePanelParameter-position?: Position--><!--Device-AVVolumePanelParameter-position?: Position-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume

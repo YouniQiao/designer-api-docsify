@@ -16,6 +16,8 @@ function createCloudServiceStub(instance: CloudService): Promise<rpc.RemoteObjec
 
 **起始版本：** 11
 
+<!--Device-cloudExtension-function createCloudServiceStub(instance: CloudService): Promise<rpc.RemoteObject>--><!--Device-cloudExtension-function createCloudServiceStub(instance: CloudService): Promise<rpc.RemoteObject>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。

@@ -8,6 +8,8 @@ export interface InputAttribute
 
 **起始版本：** 10
 
+<!--Device-inputMethod-export interface InputAttribute--><!--Device-inputMethod-export interface InputAttribute-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## 导入模块
@@ -28,6 +30,8 @@ abilityName?: string
 
 **起始版本：** 20
 
+<!--Device-InputAttribute-abilityName?: string--><!--Device-InputAttribute-abilityName?: string-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## consumeKeyEvents
@@ -46,6 +50,8 @@ consumeKeyEvents?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-InputAttribute-consumeKeyEvents?: boolean--><!--Device-InputAttribute-consumeKeyEvents?: boolean-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## enterKeyType
@@ -59,6 +65,8 @@ Enter键功能类型。
 **类型：** [EnterKeyType](arkts-ime-inputmethod-enterkeytype-e.md)
 
 **起始版本：** 10
+
+<!--Device-InputAttribute-enterKeyType: EnterKeyType--><!--Device-InputAttribute-enterKeyType: EnterKeyType-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -74,6 +82,8 @@ placeholder?: string
 
 **起始版本：** 20
 
+<!--Device-InputAttribute-placeholder?: string--><!--Device-InputAttribute-placeholder?: string-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## textInputType
@@ -87,5 +97,7 @@ textInputType: TextInputType
 **类型：** [TextInputType](arkts-ime-inputmethod-textinputtype-e.md)
 
 **起始版本：** 10
+
+<!--Device-InputAttribute-textInputType: TextInputType--><!--Device-InputAttribute-textInputType: TextInputType-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework

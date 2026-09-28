@@ -8,6 +8,8 @@ export enum MmsCharSets
 
 **起始版本：** 8
 
+<!--Device-sms-export enum MmsCharSets--><!--Device-sms-export enum MmsCharSets-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -21,6 +23,8 @@ BIG5 = 0X07EA
 BIG5格式
 
 **起始版本：** 8
+
+<!--Device-MmsCharSets-BIG5 = 0X07EA--><!--Device-MmsCharSets-BIG5 = 0X07EA-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -36,6 +40,8 @@ ISO_10646_UCS_2格式
 
 **起始版本：** 8
 
+<!--Device-MmsCharSets-ISO_10646_UCS_2 = 0X03E8--><!--Device-MmsCharSets-ISO_10646_UCS_2 = 0X03E8-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +55,8 @@ ISO_8859_1 = 0X04
 ISO_8859_1格式
 
 **起始版本：** 8
+
+<!--Device-MmsCharSets-ISO_8859_1 = 0X04--><!--Device-MmsCharSets-ISO_8859_1 = 0X04-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -64,6 +72,8 @@ ISO_8859_2格式
 
 **起始版本：** 8
 
+<!--Device-MmsCharSets-ISO_8859_2 = 0X05--><!--Device-MmsCharSets-ISO_8859_2 = 0X05-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +87,8 @@ ISO_8859_3 = 0X06
 ISO_8859_3格式
 
 **起始版本：** 8
+
+<!--Device-MmsCharSets-ISO_8859_3 = 0X06--><!--Device-MmsCharSets-ISO_8859_3 = 0X06-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -92,6 +104,8 @@ ISO_8859_4格式
 
 **起始版本：** 8
 
+<!--Device-MmsCharSets-ISO_8859_4 = 0X07--><!--Device-MmsCharSets-ISO_8859_4 = 0X07-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -105,6 +119,8 @@ ISO_8859_5 = 0X08
 ISO_8859_5格式
 
 **起始版本：** 8
+
+<!--Device-MmsCharSets-ISO_8859_5 = 0X08--><!--Device-MmsCharSets-ISO_8859_5 = 0X08-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -120,6 +136,8 @@ ISO_8859_6格式
 
 **起始版本：** 8
 
+<!--Device-MmsCharSets-ISO_8859_6 = 0X09--><!--Device-MmsCharSets-ISO_8859_6 = 0X09-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -133,6 +151,8 @@ ISO_8859_7 = 0X0a
 ISO_8859_7格式
 
 **起始版本：** 8
+
+<!--Device-MmsCharSets-ISO_8859_7 = 0X0a--><!--Device-MmsCharSets-ISO_8859_7 = 0X0a-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -148,6 +168,8 @@ ISO_8859_8格式
 
 **起始版本：** 8
 
+<!--Device-MmsCharSets-ISO_8859_8 = 0X0b--><!--Device-MmsCharSets-ISO_8859_8 = 0X0b-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -161,6 +183,8 @@ ISO_8859_9 = 0X0c
 ISO_8859_9格式
 
 **起始版本：** 8
+
+<!--Device-MmsCharSets-ISO_8859_9 = 0X0c--><!--Device-MmsCharSets-ISO_8859_9 = 0X0c-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -176,6 +200,8 @@ SHIFT_JIS格式
 
 **起始版本：** 8
 
+<!--Device-MmsCharSets-SHIFT_JIS = 0X11--><!--Device-MmsCharSets-SHIFT_JIS = 0X11-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -190,6 +216,8 @@ US_ASCII格式
 
 **起始版本：** 8
 
+<!--Device-MmsCharSets-US_ASCII = 0X03--><!--Device-MmsCharSets-US_ASCII = 0X03-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -203,6 +231,8 @@ UTF_8 = 0X6A
 UTF_8格式
 
 **起始版本：** 8
+
+<!--Device-MmsCharSets-UTF_8 = 0X6A--><!--Device-MmsCharSets-UTF_8 = 0X6A-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 

@@ -8,6 +8,8 @@ interface Hyperlink
 
 **起始版本：** 12
 
+<!--Device-uniformDataStruct-interface Hyperlink--><!--Device-uniformDataStruct-interface Hyperlink-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## 导入模块
@@ -29,6 +31,8 @@ description?: string
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Hyperlink-description?: string--><!--Device-Hyperlink-description?: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -56,6 +60,8 @@ details?: Record<string, string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Hyperlink-details?: Record<string, string>--><!--Device-Hyperlink-details?: Record<string, string>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## uniformDataType
@@ -72,6 +78,8 @@ readonly uniformDataType: 'general.hyperlink'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Hyperlink-readonly uniformDataType: 'general.hyperlink'--><!--Device-Hyperlink-readonly uniformDataType: 'general.hyperlink'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## url
@@ -87,5 +95,7 @@ url: string
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Hyperlink-url: string--><!--Device-Hyperlink-url: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core

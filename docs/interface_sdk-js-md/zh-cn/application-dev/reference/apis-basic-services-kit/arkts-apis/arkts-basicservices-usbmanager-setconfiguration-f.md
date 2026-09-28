@@ -20,6 +20,8 @@ function setConfiguration(pipe: USBDevicePipe, config: USBConfiguration): number
 
 **起始版本：** 9
 
+<!--Device-usbManager-function setConfiguration(pipe: USBDevicePipe, config: USBConfiguration): int--><!--Device-usbManager-function setConfiguration(pipe: USBDevicePipe, config: USBConfiguration): int-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 **参数：**

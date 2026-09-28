@@ -22,6 +22,8 @@ function cleanBundleCacheFiles(bundleName: string, callback: AsyncCallback<void>
 
 **需要权限：** ohos.permission.REMOVE_CACHE_FILES
 
+<!--Device-bundle-function cleanBundleCacheFiles(bundleName: string, callback: AsyncCallback<void>): void--><!--Device-bundle-function cleanBundleCacheFiles(bundleName: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 **系统接口：** 此接口为系统接口。
@@ -80,6 +82,8 @@ function cleanBundleCacheFiles(bundleName: string): Promise<void>
 **替代接口：** null
 
 **需要权限：** ohos.permission.REMOVE_CACHE_FILES
+
+<!--Device-bundle-function cleanBundleCacheFiles(bundleName: string): Promise<void>--><!--Device-bundle-function cleanBundleCacheFiles(bundleName: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 

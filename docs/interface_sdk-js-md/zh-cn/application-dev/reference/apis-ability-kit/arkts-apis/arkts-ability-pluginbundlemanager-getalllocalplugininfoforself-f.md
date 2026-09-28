@@ -20,6 +20,8 @@ function getAllLocalPluginInfoForSelf(): Promise<Array<PluginBundleInfo>>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-pluginBundleManager-function getAllLocalPluginInfoForSelf(): Promise<Array<PluginBundleInfo>>--><!--Device-pluginBundleManager-function getAllLocalPluginInfoForSelf(): Promise<Array<PluginBundleInfo>>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **返回值：**

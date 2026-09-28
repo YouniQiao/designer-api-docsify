@@ -22,6 +22,8 @@ function getDevice(deviceId: number, callback: AsyncCallback<InputDeviceData>): 
 
 **替代接口：** getDeviceInfo
 
+<!--Device-inputDevice-function getDevice(deviceId: number, callback: AsyncCallback<InputDeviceData>): void--><!--Device-inputDevice-function getDevice(deviceId: number, callback: AsyncCallback<InputDeviceData>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 **参数：**
@@ -76,6 +78,8 @@ function getDevice(deviceId: number): Promise<InputDeviceData>
 **废弃版本：** 9
 
 **替代接口：** getDeviceInfo
+
+<!--Device-inputDevice-function getDevice(deviceId: number): Promise<InputDeviceData>--><!--Device-inputDevice-function getDevice(deviceId: number): Promise<InputDeviceData>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 

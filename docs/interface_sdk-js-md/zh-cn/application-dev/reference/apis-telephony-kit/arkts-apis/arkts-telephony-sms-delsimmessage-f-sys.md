@@ -18,6 +18,8 @@ function delSimMessage(slotId: number, msgIndex: number, callback: AsyncCallback
 
 **需要权限：** ohos.permission.RECEIVE_SMS and ohos.permission.SEND_MESSAGES
 
+<!--Device-sms-function delSimMessage(slotId: int, msgIndex: int, callback: AsyncCallback<void>): void--><!--Device-sms-function delSimMessage(slotId: int, msgIndex: int, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -69,6 +71,8 @@ function delSimMessage(slotId: number, msgIndex: number): Promise<void>
 **起始版本：** 7
 
 **需要权限：** ohos.permission.RECEIVE_SMS and ohos.permission.SEND_MESSAGES
+
+<!--Device-sms-function delSimMessage(slotId: int, msgIndex: int): Promise<void>--><!--Device-sms-function delSimMessage(slotId: int, msgIndex: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 

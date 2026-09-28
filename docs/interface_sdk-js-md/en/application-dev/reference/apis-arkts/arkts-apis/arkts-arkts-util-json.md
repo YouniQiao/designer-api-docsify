@@ -4,6 +4,8 @@ The JSON module provides a series of APIs for converting JSON text into JSON obj
 
 **Since:** 12
 
+<!--Device-unnamed-declare namespace json--><!--Device-unnamed-declare namespace json-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import

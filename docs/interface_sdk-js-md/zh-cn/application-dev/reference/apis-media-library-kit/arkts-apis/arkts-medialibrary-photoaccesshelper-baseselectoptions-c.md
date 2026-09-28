@@ -8,6 +8,8 @@ export class BaseSelectOptions
 
 **起始版本：** 12
 
+<!--Device-photoAccessHelper-export class BaseSelectOptions--><!--Device-photoAccessHelper-export class BaseSelectOptions-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
@@ -30,7 +32,9 @@ assetCompatibleCapability?: AssetCompatibleCapability
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-BaseSelectOptions-assetCompatibleCapability?: AssetCompatibleCapability--><!--Device-BaseSelectOptions-assetCompatibleCapability?: AssetCompatibleCapability-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -53,7 +57,9 @@ assetFilter?: Array<OperationItem>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-BaseSelectOptions-assetFilter?: Array<OperationItem>--><!--Device-BaseSelectOptions-assetFilter?: Array<OperationItem>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -71,7 +77,9 @@ autoPlayScenes?: Array<AutoPlayScene>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-BaseSelectOptions-autoPlayScenes?: Array<AutoPlayScene>--><!--Device-BaseSelectOptions-autoPlayScenes?: Array<AutoPlayScene>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -103,7 +111,9 @@ combinedMediaTypeFilter?: Array<string>
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-BaseSelectOptions-combinedMediaTypeFilter?: Array<string>--><!--Device-BaseSelectOptions-combinedMediaTypeFilter?: Array<string>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -121,7 +131,9 @@ fileSizeFilter?: FileSizeFilter
 
 **起始版本：** 19
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-BaseSelectOptions-fileSizeFilter?: FileSizeFilter--><!--Device-BaseSelectOptions-fileSizeFilter?: FileSizeFilter-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -139,7 +151,9 @@ globalMovingPhotoState?: MovingPhotoBadgeStateType
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-BaseSelectOptions-globalMovingPhotoState?: MovingPhotoBadgeStateType--><!--Device-BaseSelectOptions-globalMovingPhotoState?: MovingPhotoBadgeStateType-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -157,7 +171,9 @@ picker内宫格捏合模式。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-BaseSelectOptions-gridPinchMode?: GridPinchMode--><!--Device-BaseSelectOptions-gridPinchMode?: GridPinchMode-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -177,7 +193,9 @@ isMovingPhotoBadgeShown?: boolean
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-BaseSelectOptions-isMovingPhotoBadgeShown?: boolean--><!--Device-BaseSelectOptions-isMovingPhotoBadgeShown?: boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -193,7 +211,9 @@ isPhotoTakingSupported?: boolean
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-BaseSelectOptions-isPhotoTakingSupported?: boolean--><!--Device-BaseSelectOptions-isPhotoTakingSupported?: boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -209,7 +229,9 @@ isPreviewForSingleSelectionSupported?: boolean
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-BaseSelectOptions-isPreviewForSingleSelectionSupported?: boolean--><!--Device-BaseSelectOptions-isPreviewForSingleSelectionSupported?: boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -225,7 +247,9 @@ isSearchSupported?: boolean
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-BaseSelectOptions-isSearchSupported?: boolean--><!--Device-BaseSelectOptions-isSearchSupported?: boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -241,7 +265,9 @@ maxSelectNumber?: number
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-BaseSelectOptions-maxSelectNumber?: int--><!--Device-BaseSelectOptions-maxSelectNumber?: int-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -257,7 +283,9 @@ MIMEType?: PhotoViewMIMETypes
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-BaseSelectOptions-MIMEType?: PhotoViewMIMETypes--><!--Device-BaseSelectOptions-MIMEType?: PhotoViewMIMETypes-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -277,7 +305,9 @@ mimeTypeFilter?: MimeTypeFilter
 
 **起始版本：** 19
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-BaseSelectOptions-mimeTypeFilter?: MimeTypeFilter--><!--Device-BaseSelectOptions-mimeTypeFilter?: MimeTypeFilter-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -295,7 +325,9 @@ photoViewMimeTypeFileSizeFilters?: Array<PhotoViewMimeTypeFileSizeFilter>
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-BaseSelectOptions-photoViewMimeTypeFileSizeFilters?: Array<PhotoViewMimeTypeFileSizeFilter>--><!--Device-BaseSelectOptions-photoViewMimeTypeFileSizeFilters?: Array<PhotoViewMimeTypeFileSizeFilter>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -313,7 +345,9 @@ preferredCompatibleMode?: PreferredCompatibleMode
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-BaseSelectOptions-preferredCompatibleMode?: PreferredCompatibleMode--><!--Device-BaseSelectOptions-preferredCompatibleMode?: PreferredCompatibleMode-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -329,7 +363,9 @@ preselectedUris?: Array<string>
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-BaseSelectOptions-preselectedUris?: Array<string>--><!--Device-BaseSelectOptions-preselectedUris?: Array<string>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -345,7 +381,9 @@ recommendationOptions?: RecommendationOptions
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-BaseSelectOptions-recommendationOptions?: RecommendationOptions--><!--Device-BaseSelectOptions-recommendationOptions?: RecommendationOptions-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -363,7 +401,9 @@ showDateOnScrollbar?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-BaseSelectOptions-showDateOnScrollbar?: boolean--><!--Device-BaseSelectOptions-showDateOnScrollbar?: boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -379,7 +419,9 @@ singleSelectionMode?: SingleSelectionMode
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-BaseSelectOptions-singleSelectionMode?: SingleSelectionMode--><!--Device-BaseSelectOptions-singleSelectionMode?: SingleSelectionMode-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -397,6 +439,8 @@ videoDurationFilter?: VideoDurationFilter
 
 **起始版本：** 19
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-BaseSelectOptions-videoDurationFilter?: VideoDurationFilter--><!--Device-BaseSelectOptions-videoDurationFilter?: VideoDurationFilter-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core

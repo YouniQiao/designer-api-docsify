@@ -10,6 +10,8 @@ AppServiceExtensionAbility模块提供后台服务相关扩展能力，包括后
 
 **起始版本：** 20
 
+<!--Device-unnamed-declare class AppServiceExtensionAbility extends ExtensionAbility--><!--Device-unnamed-declare class AppServiceExtensionAbility extends ExtensionAbility-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块
@@ -33,6 +35,8 @@ onConnect(want: Want): rpc.RemoteObject
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AppServiceExtensionAbility-onConnect(want: Want): rpc.RemoteObject--><!--Device-AppServiceExtensionAbility-onConnect(want: Want): rpc.RemoteObject-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -93,6 +97,8 @@ onCreate(want: Want): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AppServiceExtensionAbility-onCreate(want: Want): void--><!--Device-AppServiceExtensionAbility-onCreate(want: Want): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -130,6 +136,8 @@ onDestroy(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AppServiceExtensionAbility-onDestroy(): void--><!--Device-AppServiceExtensionAbility-onDestroy(): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **示例**
@@ -160,6 +168,8 @@ onDisconnect(want: Want): void
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AppServiceExtensionAbility-onDisconnect(want: Want): void--><!--Device-AppServiceExtensionAbility-onDisconnect(want: Want): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -198,6 +208,8 @@ onRequest(want: Want, startId: number): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AppServiceExtensionAbility-onRequest(want: Want, startId: int): void--><!--Device-AppServiceExtensionAbility-onRequest(want: Want, startId: int): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -235,5 +247,7 @@ AppServiceExtensionAbility的上下文环境，继承自[ExtensionContext](arkts
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AppServiceExtensionAbility-context: AppServiceExtensionContext--><!--Device-AppServiceExtensionAbility-context: AppServiceExtensionContext-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

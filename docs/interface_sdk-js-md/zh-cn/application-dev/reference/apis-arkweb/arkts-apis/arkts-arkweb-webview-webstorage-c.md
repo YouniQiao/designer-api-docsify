@@ -8,6 +8,8 @@ class WebStorage
 
 **起始版本：** 9
 
+<!--Device-webview-class WebStorage--><!--Device-webview-class WebStorage-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## 导入模块
@@ -27,6 +29,8 @@ static deleteAllData(incognito?: boolean): void
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebStorage-static deleteAllData(incognito?: boolean): void--><!--Device-WebStorage-static deleteAllData(incognito?: boolean): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -83,6 +87,8 @@ static deleteOrigin(origin: string): void
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebStorage-static deleteOrigin(origin: string): void--><!--Device-WebStorage-static deleteOrigin(origin: string): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -240,6 +246,8 @@ static getOriginQuota(origin: string): Promise<number>
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebStorage-static getOriginQuota(origin: string): Promise<number>--><!--Device-WebStorage-static getOriginQuota(origin: string): Promise<number>-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -319,6 +327,8 @@ static getOriginQuota(origin: string, callback: AsyncCallback<number>): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebStorage-static getOriginQuota(origin: string, callback: AsyncCallback<number>): void--><!--Device-WebStorage-static getOriginQuota(origin: string, callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -382,6 +392,8 @@ static getOrigins(): Promise<Array<WebStorageOrigin>>
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebStorage-static getOrigins(): Promise<Array<WebStorageOrigin>>--><!--Device-WebStorage-static getOrigins(): Promise<Array<WebStorageOrigin>>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -450,6 +462,8 @@ static getOrigins(callback: AsyncCallback<Array<WebStorageOrigin>>): void
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebStorage-static getOrigins(callback: AsyncCallback<Array<WebStorageOrigin>>): void--><!--Device-WebStorage-static getOrigins(callback: AsyncCallback<Array<WebStorageOrigin>>): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -524,6 +538,8 @@ static getOriginUsage(origin: string): Promise<number>
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebStorage-static getOriginUsage(origin: string): Promise<number>--><!--Device-WebStorage-static getOriginUsage(origin: string): Promise<number>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -601,6 +617,8 @@ static getOriginUsage(origin: string, callback: AsyncCallback<number>): void
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebStorage-static getOriginUsage(origin: string, callback: AsyncCallback<number>): void--><!--Device-WebStorage-static getOriginUsage(origin: string, callback: AsyncCallback<number>): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

@@ -8,6 +8,8 @@ interface DeviceListener
 
 **起始版本：** 9
 
+<!--Device-inputDevice-interface DeviceListener--><!--Device-inputDevice-interface DeviceListener-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 ## 导入模块
@@ -28,6 +30,8 @@ deviceId: number
 
 **起始版本：** 9
 
+<!--Device-DeviceListener-deviceId: int--><!--Device-DeviceListener-deviceId: int-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 ## type
@@ -41,5 +45,7 @@ type: ChangedType
 **类型：** [ChangedType](arkts-input-inputdevice-changedtype-t.md)
 
 **起始版本：** 9
+
+<!--Device-DeviceListener-type: ChangedType--><!--Device-DeviceListener-type: ChangedType-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice

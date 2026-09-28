@@ -27,6 +27,8 @@ function setWallpaper(
 
 **需要权限：** ohos.permission.SET_WALLPAPER
 
+<!--Device-wallpaper-function setWallpaper(    source: string | image.PixelMap,    wallpaperType: WallpaperType,    callback: AsyncCallback<void>  ): void--><!--Device-wallpaper-function setWallpaper(    source: string | image.PixelMap,    wallpaperType: WallpaperType,    callback: AsyncCallback<void>  ): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
 **参数：**
@@ -93,6 +95,8 @@ function setWallpaper(source: string | image.PixelMap, wallpaperType: WallpaperT
 **废弃版本：** 9
 
 **需要权限：** ohos.permission.SET_WALLPAPER
+
+<!--Device-wallpaper-function setWallpaper(source: string | image.PixelMap, wallpaperType: WallpaperType): Promise<void>--><!--Device-wallpaper-function setWallpaper(source: string | image.PixelMap, wallpaperType: WallpaperType): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 

@@ -4,6 +4,8 @@ The inputDevice module implements input device management functions such as list
 
 **Since:** 8
 
+<!--Device-unnamed-declare namespace inputDevice--><!--Device-unnamed-declare namespace inputDevice-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
 ## Modules to Import

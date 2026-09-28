@@ -8,6 +8,8 @@ declare namespace cloudData
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare namespace cloudData--><!--Device-unnamed-declare namespace cloudData-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
 ## 导入模块

@@ -8,6 +8,8 @@ interface AVScreenCaptureRecordConfig
 
 **起始版本：** 12
 
+<!--Device-media-interface AVScreenCaptureRecordConfig--><!--Device-media-interface AVScreenCaptureRecordConfig-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 ## 导入模块
@@ -28,6 +30,8 @@ audioBitrate?: number
 
 **起始版本：** 12
 
+<!--Device-AVScreenCaptureRecordConfig-audioBitrate?: int--><!--Device-AVScreenCaptureRecordConfig-audioBitrate?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 ## audioChannelCount
@@ -41,6 +45,8 @@ audioChannelCount?: number
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-AVScreenCaptureRecordConfig-audioChannelCount?: int--><!--Device-AVScreenCaptureRecordConfig-audioChannelCount?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -56,6 +62,8 @@ audioSampleRate?: number
 
 **起始版本：** 12
 
+<!--Device-AVScreenCaptureRecordConfig-audioSampleRate?: int--><!--Device-AVScreenCaptureRecordConfig-audioSampleRate?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 ## displayId
@@ -69,6 +77,8 @@ displayId?: number
 **类型：** number
 
 **起始版本：** 15
+
+<!--Device-AVScreenCaptureRecordConfig-displayId?: int--><!--Device-AVScreenCaptureRecordConfig-displayId?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -84,6 +94,8 @@ fd: number
 
 **起始版本：** 12
 
+<!--Device-AVScreenCaptureRecordConfig-fd: int--><!--Device-AVScreenCaptureRecordConfig-fd: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 ## fillMode
@@ -97,6 +109,8 @@ fillMode?: AVScreenCaptureFillMode
 **类型：** [AVScreenCaptureFillMode](arkts-media-media-avscreencapturefillmode-e.md)
 
 **起始版本：** 18
+
+<!--Device-AVScreenCaptureRecordConfig-fillMode?: AVScreenCaptureFillMode--><!--Device-AVScreenCaptureRecordConfig-fillMode?: AVScreenCaptureFillMode-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -112,6 +126,8 @@ frameHeight?: number
 
 **起始版本：** 12
 
+<!--Device-AVScreenCaptureRecordConfig-frameHeight?: int--><!--Device-AVScreenCaptureRecordConfig-frameHeight?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 ## frameWidth
@@ -126,6 +142,8 @@ frameWidth?: number
 
 **起始版本：** 12
 
+<!--Device-AVScreenCaptureRecordConfig-frameWidth?: int--><!--Device-AVScreenCaptureRecordConfig-frameWidth?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 ## preset
@@ -139,6 +157,8 @@ preset?: AVScreenCaptureRecordPreset
 **类型：** [AVScreenCaptureRecordPreset](arkts-media-media-avscreencapturerecordpreset-e.md)
 
 **起始版本：** 12
+
+<!--Device-AVScreenCaptureRecordConfig-preset?: AVScreenCaptureRecordPreset--><!--Device-AVScreenCaptureRecordConfig-preset?: AVScreenCaptureRecordPreset-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -156,6 +176,8 @@ strategy?: AVScreenCaptureStrategy
 
 **起始版本：** 20
 
+<!--Device-AVScreenCaptureRecordConfig-strategy?: AVScreenCaptureStrategy--><!--Device-AVScreenCaptureRecordConfig-strategy?: AVScreenCaptureStrategy-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 ## videoBitrate
@@ -169,5 +191,7 @@ videoBitrate?: number
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-AVScreenCaptureRecordConfig-videoBitrate?: int--><!--Device-AVScreenCaptureRecordConfig-videoBitrate?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture

@@ -16,6 +16,8 @@ function getDnsUnicode(host: string, flag?: ConversionProcess): string
 
 **起始版本：** 23
 
+<!--Device-connection-function getDnsUnicode(host: string, flag?: ConversionProcess): string--><!--Device-connection-function getDnsUnicode(host: string, flag?: ConversionProcess): string-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**

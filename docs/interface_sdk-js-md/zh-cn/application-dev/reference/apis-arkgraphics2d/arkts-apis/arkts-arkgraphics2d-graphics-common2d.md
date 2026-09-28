@@ -8,6 +8,8 @@
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare namespace common2D--><!--Device-unnamed-declare namespace common2D-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## 导入模块

@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare namespace calendarManager--><!--Device-unnamed-declare namespace calendarManager-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 ## 导入模块

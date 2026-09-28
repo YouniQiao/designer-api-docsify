@@ -18,6 +18,8 @@ function on(type: 'streamChange', callback: Callback<number>): void
 
 **需要权限：** ohos.permission.MANAGE_WIFI_CONNECTION
 
+<!--Device-wifiManager-function on(type: 'streamChange', callback: Callback<number>): void--><!--Device-wifiManager-function on(type: 'streamChange', callback: Callback<number>): void-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +53,8 @@ function on(type: 'deviceConfigChange', callback: Callback<number>): void
 **起始版本：** 9
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
+
+<!--Device-wifiManager-function on(type: 'deviceConfigChange', callback: Callback<number>): void--><!--Device-wifiManager-function on(type: 'deviceConfigChange', callback: Callback<number>): void-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -86,6 +90,8 @@ function on(type: 'hotspotStaJoin', callback: Callback<StationInfo>): void
 
 **需要权限：** ohos.permission.MANAGE_WIFI_HOTSPOT
 
+<!--Device-wifiManager-function on(type: 'hotspotStaJoin', callback: Callback<StationInfo>): void--><!--Device-wifiManager-function on(type: 'hotspotStaJoin', callback: Callback<StationInfo>): void-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
 **系统接口：** 此接口为系统接口。
@@ -119,6 +125,8 @@ function on(type: 'hotspotStaLeave', callback: Callback<StationInfo>): void
 **起始版本：** 9
 
 **需要权限：** ohos.permission.MANAGE_WIFI_HOTSPOT
+
+<!--Device-wifiManager-function on(type: 'hotspotStaLeave', callback: Callback<StationInfo>): void--><!--Device-wifiManager-function on(type: 'hotspotStaLeave', callback: Callback<StationInfo>): void-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 

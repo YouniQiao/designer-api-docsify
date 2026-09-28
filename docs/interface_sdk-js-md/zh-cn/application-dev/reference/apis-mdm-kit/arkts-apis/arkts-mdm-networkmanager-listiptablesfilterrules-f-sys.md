@@ -20,6 +20,8 @@ function listIptablesFilterRules(admin: Want, callback: AsyncCallback<string>): 
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-networkManager-function listIptablesFilterRules(admin: Want, callback: AsyncCallback<string>): void--><!--Device-networkManager-function listIptablesFilterRules(admin: Want, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -78,6 +80,8 @@ function listIptablesFilterRules(admin: Want): Promise<string>
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_NETWORK
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-networkManager-function listIptablesFilterRules(admin: Want): Promise<string>--><!--Device-networkManager-function listIptablesFilterRules(admin: Want): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

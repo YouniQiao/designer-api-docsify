@@ -12,6 +12,8 @@ profile基类。
 
 **替代接口：** [BaseProfile](arkts-connectivity-baseprofile-baseprofile-i.md)
 
+<!--Device-bluetoothManager-interface BaseProfile--><!--Device-bluetoothManager-interface BaseProfile-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -39,6 +41,8 @@ getConnectionDevices(): Array<string>
 **需要权限：** 
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH
 - API版本9：ohos.permission.USE_BLUETOOTH
+
+<!--Device-BaseProfile-getConnectionDevices(): Array<string>--><!--Device-BaseProfile-getConnectionDevices(): Array<string>-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -90,6 +94,8 @@ getDeviceState(device: string): ProfileConnectionState
 **需要权限：** 
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH
 - API版本9：ohos.permission.USE_BLUETOOTH
+
+<!--Device-BaseProfile-getDeviceState(device: string): ProfileConnectionState--><!--Device-BaseProfile-getDeviceState(device: string): ProfileConnectionState-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

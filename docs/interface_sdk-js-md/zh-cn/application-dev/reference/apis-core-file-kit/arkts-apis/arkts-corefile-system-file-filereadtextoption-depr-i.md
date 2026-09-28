@@ -10,6 +10,8 @@ export interface FileReadTextOption
 
 **废弃版本：** 10
 
+<!--Device-unnamed-export interface FileReadTextOption--><!--Device-unnamed-export interface FileReadTextOption-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## 导入模块
@@ -29,6 +31,8 @@ complete?: () => void
 
 **废弃版本：** 10
 
+<!--Device-FileReadTextOption-complete?: () => void--><!--Device-FileReadTextOption-complete?: () => void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## fail
@@ -42,6 +46,8 @@ fail?: (data: string, code: number) => void
 **起始版本：** 3
 
 **废弃版本：** 10
+
+<!--Device-FileReadTextOption-fail?: (data: string, code: number) => void--><!--Device-FileReadTextOption-fail?: (data: string, code: number) => void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -58,11 +64,13 @@ fail?: (data: string, code: number) => void
 success?: (data: FileReadTextResponse) => void
 ```
 
-接口调用成功的回调函数。返回[FileReadTextResponse](arkts-corefile-system-file-filereadtextresponse-depr-i.md#filereadtextresponse)。
+接口调用成功的回调函数。返回[FileReadTextResponse](arkts-corefile-system-file-filereadtextresponse-depr-i.md)。
 
 **起始版本：** 3
 
 **废弃版本：** 10
+
+<!--Device-FileReadTextOption-success?: (data: FileReadTextResponse) => void--><!--Device-FileReadTextOption-success?: (data: FileReadTextResponse) => void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -86,6 +94,8 @@ encoding?: string
 
 **废弃版本：** 10
 
+<!--Device-FileReadTextOption-encoding?: string--><!--Device-FileReadTextOption-encoding?: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## length
@@ -102,6 +112,8 @@ length?: number
 
 **废弃版本：** 10
 
+<!--Device-FileReadTextOption-length?: number--><!--Device-FileReadTextOption-length?: number-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## position
@@ -117,6 +129,8 @@ position?: number
 **起始版本：** 3
 
 **废弃版本：** 10
+
+<!--Device-FileReadTextOption-position?: number--><!--Device-FileReadTextOption-position?: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -135,5 +149,7 @@ uri: string
 **起始版本：** 3
 
 **废弃版本：** 10
+
+<!--Device-FileReadTextOption-uri: string--><!--Device-FileReadTextOption-uri: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite

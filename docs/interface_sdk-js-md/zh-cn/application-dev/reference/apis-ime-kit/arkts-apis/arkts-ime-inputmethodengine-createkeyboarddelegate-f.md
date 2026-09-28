@@ -23,6 +23,8 @@ function createKeyboardDelegate(): KeyboardDelegate
 
 **替代接口：** [getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md)()
 
+<!--Device-inputMethodEngine-function createKeyboardDelegate(): KeyboardDelegate--><!--Device-inputMethodEngine-function createKeyboardDelegate(): KeyboardDelegate-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**

@@ -8,6 +8,8 @@ Contains the basic parameters for creating a Badge component.
 
 **Since:** 7
 
+<!--Device-unnamed-declare interface BadgeParam--><!--Device-unnamed-declare interface BadgeParam-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## position
@@ -36,6 +38,8 @@ When **BadgePosition** is used as an input parameter, the mirrored display is co
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-BadgeParam-position?: BadgePosition | Position--><!--Device-BadgeParam-position?: BadgePosition | Position-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## style
@@ -53,5 +57,7 @@ Style of the **Badge** component, including the text color, size, badge color, a
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-BadgeParam-style: BadgeStyle--><!--Device-BadgeParam-style: BadgeStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

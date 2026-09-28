@@ -21,6 +21,8 @@ function setAttribute(portId: number, attribute: SerialAttribute): void
 
 **起始版本：** 19
 
+<!--Device-serialManager-function setAttribute(portId: int, attribute: SerialAttribute): void--><!--Device-serialManager-function setAttribute(portId: int, attribute: SerialAttribute): void-End-->
+
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
 **参数：**

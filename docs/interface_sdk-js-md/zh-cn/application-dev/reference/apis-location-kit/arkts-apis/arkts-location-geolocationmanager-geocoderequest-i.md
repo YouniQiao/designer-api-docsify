@@ -8,6 +8,8 @@ export interface GeoCodeRequest
 
 **起始版本：** 9
 
+<!--Device-geoLocationManager-export interface GeoCodeRequest--><!--Device-geoLocationManager-export interface GeoCodeRequest-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 ## 导入模块
@@ -28,6 +30,8 @@ country?: string
 
 **起始版本：** 12
 
+<!--Device-GeoCodeRequest-country?: string--><!--Device-GeoCodeRequest-country?: string-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 ## description
@@ -41,6 +45,8 @@ description: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-GeoCodeRequest-description: string--><!--Device-GeoCodeRequest-description: string-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
@@ -56,6 +62,8 @@ locale?: string
 
 **起始版本：** 9
 
+<!--Device-GeoCodeRequest-locale?: string--><!--Device-GeoCodeRequest-locale?: string-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 ## maxItems
@@ -69,6 +77,8 @@ maxItems?: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-GeoCodeRequest-maxItems?: int--><!--Device-GeoCodeRequest-maxItems?: int-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
@@ -84,6 +94,8 @@ maxLatitude?: number
 
 **起始版本：** 9
 
+<!--Device-GeoCodeRequest-maxLatitude?: double--><!--Device-GeoCodeRequest-maxLatitude?: double-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 ## maxLongitude
@@ -97,6 +109,8 @@ maxLongitude?: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-GeoCodeRequest-maxLongitude?: double--><!--Device-GeoCodeRequest-maxLongitude?: double-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
@@ -112,6 +126,8 @@ minLatitude?: number
 
 **起始版本：** 9
 
+<!--Device-GeoCodeRequest-minLatitude?: double--><!--Device-GeoCodeRequest-minLatitude?: double-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 ## minLongitude
@@ -125,5 +141,7 @@ minLongitude?: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-GeoCodeRequest-minLongitude?: double--><!--Device-GeoCodeRequest-minLongitude?: double-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geocoder

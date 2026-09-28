@@ -21,6 +21,8 @@ function killProcessWithAccount(bundleName: string, accountId: number): Promise<
 
 **需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS and ohos.permission.CLEAN_BACKGROUND_PROCESSES
 
+<!--Device-appManager-function killProcessWithAccount(bundleName: string, accountId: number): Promise<void>--><!--Device-appManager-function killProcessWithAccount(bundleName: string, accountId: number): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -73,6 +75,8 @@ function killProcessWithAccount(bundleName: string, accountId: number, callback:
 **替代接口：** [killProcessWithAccount](arkts-ability-appmanager-killprocesswithaccount-f-sys.md)
 
 **需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS and ohos.permission.CLEAN_BACKGROUND_PROCESSES
+
+<!--Device-appManager-function killProcessWithAccount(bundleName: string, accountId: number, callback: AsyncCallback<void>): void--><!--Device-appManager-function killProcessWithAccount(bundleName: string, accountId: number, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

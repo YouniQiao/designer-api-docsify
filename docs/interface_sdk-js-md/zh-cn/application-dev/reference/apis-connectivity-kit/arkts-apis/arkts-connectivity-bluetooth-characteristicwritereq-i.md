@@ -14,6 +14,8 @@ interface CharacteristicWriteReq
 
 **替代接口：** [CharacteristicWriteRequest](arkts-connectivity-bluetoothmanager-characteristicwriterequest-i.md)
 
+<!--Device-bluetooth-interface CharacteristicWriteReq--><!--Device-bluetooth-interface CharacteristicWriteReq-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -38,6 +40,8 @@ characteristicUuid: string
 
 **替代接口：** [characteristicUuid](arkts-connectivity-bluetoothmanager-characteristicwriterequest-i.md#characteristicuuid)
 
+<!--Device-CharacteristicWriteReq-characteristicUuid: string--><!--Device-CharacteristicWriteReq-characteristicUuid: string-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## deviceId
@@ -55,6 +59,8 @@ deviceId: string
 **废弃版本：** 9
 
 **替代接口：** [deviceId](arkts-connectivity-bluetoothmanager-characteristicwriterequest-i.md#deviceid)
+
+<!--Device-CharacteristicWriteReq-deviceId: string--><!--Device-CharacteristicWriteReq-deviceId: string-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -74,6 +80,8 @@ isPrep: boolean
 
 **替代接口：** [isPrep](arkts-connectivity-bluetoothmanager-characteristicwriterequest-i.md#isprep)
 
+<!--Device-CharacteristicWriteReq-isPrep: boolean--><!--Device-CharacteristicWriteReq-isPrep: boolean-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## needRsp
@@ -91,6 +99,8 @@ needRsp: boolean
 **废弃版本：** 9
 
 **替代接口：** [needRsp](arkts-connectivity-bluetoothmanager-characteristicwriterequest-i.md#needrsp)
+
+<!--Device-CharacteristicWriteReq-needRsp: boolean--><!--Device-CharacteristicWriteReq-needRsp: boolean-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -110,6 +120,8 @@ offset: number
 
 **替代接口：** [offset](arkts-connectivity-bluetoothmanager-characteristicwriterequest-i.md#offset)
 
+<!--Device-CharacteristicWriteReq-offset: number--><!--Device-CharacteristicWriteReq-offset: number-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## serviceUuid
@@ -127,6 +139,8 @@ serviceUuid: string
 **废弃版本：** 9
 
 **替代接口：** [serviceUuid](arkts-connectivity-bluetoothmanager-characteristicwriterequest-i.md#serviceuuid)
+
+<!--Device-CharacteristicWriteReq-serviceUuid: string--><!--Device-CharacteristicWriteReq-serviceUuid: string-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -146,6 +160,8 @@ transId: number
 
 **替代接口：** [transId](arkts-connectivity-bluetoothmanager-characteristicwriterequest-i.md#transid)
 
+<!--Device-CharacteristicWriteReq-transId: number--><!--Device-CharacteristicWriteReq-transId: number-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## value
@@ -163,5 +179,7 @@ value: ArrayBuffer
 **废弃版本：** 9
 
 **替代接口：** [value](arkts-connectivity-bluetoothmanager-characteristicwriterequest-i.md#value)
+
+<!--Device-CharacteristicWriteReq-value: ArrayBuffer--><!--Device-CharacteristicWriteReq-value: ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

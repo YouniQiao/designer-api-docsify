@@ -8,6 +8,8 @@ Provides gauge options.
 
 **Since:** 18
 
+<!--Device-unnamed-interface GaugeOptions--><!--Device-unnamed-interface GaugeOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## max
@@ -37,6 +39,8 @@ Both max and min support negative numbers.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-GaugeOptions-max?: number--><!--Device-GaugeOptions-max?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -68,6 +72,8 @@ Both max and min support negative numbers.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-GaugeOptions-min?: number--><!--Device-GaugeOptions-min?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## value
@@ -93,5 +99,7 @@ When value is not within the range of min and max, min is used as the actual val
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-GaugeOptions-value: number--><!--Device-GaugeOptions-value: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

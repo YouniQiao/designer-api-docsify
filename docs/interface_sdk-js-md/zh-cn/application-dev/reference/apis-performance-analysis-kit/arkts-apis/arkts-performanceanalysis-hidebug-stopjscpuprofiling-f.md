@@ -16,6 +16,8 @@ function stopJsCpuProfiling() : void
 
 **起始版本：** 9
 
+<!--Device-hidebug-function stopJsCpuProfiling() : void--><!--Device-hidebug-function stopJsCpuProfiling() : void-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **示例**

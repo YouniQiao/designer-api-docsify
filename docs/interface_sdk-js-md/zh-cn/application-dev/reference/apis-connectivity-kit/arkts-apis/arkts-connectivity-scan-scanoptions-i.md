@@ -8,6 +8,8 @@ interface ScanOptions
 
 **起始版本：** 26.0.0
 
+<!--Device-scan-interface ScanOptions--><!--Device-scan-interface ScanOptions-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## 导入模块
@@ -30,6 +32,8 @@ duration?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ScanOptions-duration?: int--><!--Device-ScanOptions-duration?: int-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## scanMode
@@ -45,5 +49,7 @@ scanMode?: ScanMode
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ScanOptions-scanMode?: ScanMode--><!--Device-ScanOptions-scanMode?: ScanMode-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base

@@ -8,6 +8,8 @@ export interface LinkAddress
 
 **起始版本：** 8
 
+<!--Device-connection-export interface LinkAddress--><!--Device-connection-export interface LinkAddress-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ address: NetAddress
 
 **起始版本：** 8
 
+<!--Device-LinkAddress-address: NetAddress--><!--Device-LinkAddress-address: NetAddress-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## prefixLength
@@ -41,5 +45,7 @@ prefixLength: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-LinkAddress-prefixLength: int--><!--Device-LinkAddress-prefixLength: int-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core

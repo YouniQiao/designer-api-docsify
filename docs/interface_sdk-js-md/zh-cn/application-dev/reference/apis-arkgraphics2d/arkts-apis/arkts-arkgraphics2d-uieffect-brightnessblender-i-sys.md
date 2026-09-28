@@ -8,6 +8,8 @@ interface BrightnessBlender
 
 **起始版本：** 12
 
+<!--Device-uiEffect-interface BrightnessBlender--><!--Device-uiEffect-interface BrightnessBlender-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -30,7 +32,9 @@ cubicRate: number
 
 **起始版本：** 12
 
-**卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-BrightnessBlender-cubicRate: double--><!--Device-BrightnessBlender-cubicRate: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -48,7 +52,9 @@ degree: number
 
 **起始版本：** 12
 
-**卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-BrightnessBlender-degree: double--><!--Device-BrightnessBlender-degree: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -66,7 +72,9 @@ fraction: number
 
 **起始版本：** 12
 
-**卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-BrightnessBlender-fraction: double--><!--Device-BrightnessBlender-fraction: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -84,7 +92,9 @@ linearRate: number
 
 **起始版本：** 12
 
-**卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-BrightnessBlender-linearRate: double--><!--Device-BrightnessBlender-linearRate: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -102,7 +112,9 @@ negativeCoefficient: [number, number, number]
 
 **起始版本：** 12
 
-**卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-BrightnessBlender-negativeCoefficient: [double, double, double]--><!--Device-BrightnessBlender-negativeCoefficient: [double, double, double]-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -120,7 +132,9 @@ positiveCoefficient: [number, number, number]
 
 **起始版本：** 12
 
-**卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-BrightnessBlender-positiveCoefficient: [double, double, double]--><!--Device-BrightnessBlender-positiveCoefficient: [double, double, double]-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -138,7 +152,9 @@ quadraticRate: number
 
 **起始版本：** 12
 
-**卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-BrightnessBlender-quadraticRate: double--><!--Device-BrightnessBlender-quadraticRate: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -156,7 +172,9 @@ saturation: number
 
 **起始版本：** 12
 
-**卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-BrightnessBlender-saturation: double--><!--Device-BrightnessBlender-saturation: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

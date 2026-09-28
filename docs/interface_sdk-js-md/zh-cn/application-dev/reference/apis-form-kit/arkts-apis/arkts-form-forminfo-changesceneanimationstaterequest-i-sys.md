@@ -8,6 +8,8 @@ interface ChangeSceneAnimationStateRequest
 
 **起始版本：** 20
 
+<!--Device-formInfo-interface ChangeSceneAnimationStateRequest--><!--Device-formInfo-interface ChangeSceneAnimationStateRequest-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ formId: string
 
 **起始版本：** 20
 
+<!--Device-ChangeSceneAnimationStateRequest-formId: string--><!--Device-ChangeSceneAnimationStateRequest-formId: string-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ state: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-ChangeSceneAnimationStateRequest-state: int--><!--Device-ChangeSceneAnimationStateRequest-state: int-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 

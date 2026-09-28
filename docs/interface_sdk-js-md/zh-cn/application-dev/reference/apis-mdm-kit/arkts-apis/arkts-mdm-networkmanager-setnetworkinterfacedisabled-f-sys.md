@@ -24,6 +24,8 @@ function setNetworkInterfaceDisabled(admin: Want, networkInterface: string, isDi
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-networkManager-function setNetworkInterfaceDisabled(admin: Want, networkInterface: string, isDisabled: boolean, callback: AsyncCallback<void>): void--><!--Device-networkManager-function setNetworkInterfaceDisabled(admin: Want, networkInterface: string, isDisabled: boolean, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -89,6 +91,8 @@ function setNetworkInterfaceDisabled(admin: Want, networkInterface: string, isDi
 **需要权限：** ohos.permission.ENTERPRISE_SET_NETWORK
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-networkManager-function setNetworkInterfaceDisabled(admin: Want, networkInterface: string, isDisabled: boolean): Promise<void>--><!--Device-networkManager-function setNetworkInterfaceDisabled(admin: Want, networkInterface: string, isDisabled: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

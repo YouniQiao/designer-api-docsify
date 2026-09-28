@@ -24,6 +24,8 @@ function syncContacts(context: Context, mode: ContactSyncMode, progress: Contact
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-contact-function syncContacts(context: Context, mode: ContactSyncMode, progress: ContactSyncProgress, contacts: Array<Contact>): Promise<Array<int>>--><!--Device-contact-function syncContacts(context: Context, mode: ContactSyncMode, progress: ContactSyncProgress, contacts: Array<Contact>): Promise<Array<int>>-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 **参数：**

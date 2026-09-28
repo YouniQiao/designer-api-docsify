@@ -8,6 +8,8 @@ Coordinate option object, which is used to specify the transformation direction 
 
 **Since:** 8
 
+<!--Device-sensor-interface CoordinatesOptions--><!--Device-sensor-interface CoordinatesOptions-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## Modules to Import
@@ -28,6 +30,8 @@ X coordinate direction, which is used to specify the direction of the rotation m
 
 **Since:** 8
 
+<!--Device-CoordinatesOptions-x: int--><!--Device-CoordinatesOptions-x: int-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## y
@@ -41,5 +45,7 @@ Y coordinate direction, which is used to specify the direction of the rotation m
 **Type:** number
 
 **Since:** 8
+
+<!--Device-CoordinatesOptions-y: int--><!--Device-CoordinatesOptions-y: int-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor

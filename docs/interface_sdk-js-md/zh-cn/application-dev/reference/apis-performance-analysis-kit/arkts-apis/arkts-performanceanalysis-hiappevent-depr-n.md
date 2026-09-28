@@ -16,6 +16,8 @@ declare namespace hiAppEvent
 
 **替代接口：** hiAppEvent
 
+<!--Device-unnamed-declare namespace hiAppEvent--><!--Device-unnamed-declare namespace hiAppEvent-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 ## 导入模块
@@ -38,7 +40,7 @@ declare namespace hiAppEvent
 | --- | --- |
 | [write](arkts-performanceanalysis-hiappevent-write-depr-f.md#write) | 应用事件打点方法，将事件写入到当天的事件文件中，使用Promise方式作为异步回调。 |
 | [write](arkts-performanceanalysis-hiappevent-write-depr-f.md#write-1) | 应用事件打点方法，将事件写入到当天的事件文件中，使用callback方式作为异步回调。 |
-| [configure](arkts-performanceanalysis-hiappevent-configure-depr-f.md#configure) | 应用事件打点配置方法，可用于配置打点开关、文件目录存储限额大小等功能。 |
+| [configure](arkts-performanceanalysis-hiappevent-configure-depr-f.md) | 应用事件打点配置方法，可用于配置打点开关、文件目录存储限额大小等功能。 |
 
 ### 接口
 

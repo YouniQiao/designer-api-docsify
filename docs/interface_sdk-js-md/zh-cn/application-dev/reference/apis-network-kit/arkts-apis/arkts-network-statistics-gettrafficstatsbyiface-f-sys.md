@@ -18,6 +18,8 @@ function getTrafficStatsByIface(ifaceInfo: IfaceInfo, callback: AsyncCallback<Ne
 
 **需要权限：** ohos.permission.GET_NETWORK_STATS
 
+<!--Device-statistics-function getTrafficStatsByIface(ifaceInfo: IfaceInfo, callback: AsyncCallback<NetStatsInfo>): void--><!--Device-statistics-function getTrafficStatsByIface(ifaceInfo: IfaceInfo, callback: AsyncCallback<NetStatsInfo>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -92,6 +94,8 @@ function getTrafficStatsByIface(ifaceInfo: IfaceInfo): Promise<NetStatsInfo>
 **起始版本：** 10
 
 **需要权限：** ohos.permission.GET_NETWORK_STATS
+
+<!--Device-statistics-function getTrafficStatsByIface(ifaceInfo: IfaceInfo): Promise<NetStatsInfo>--><!--Device-statistics-function getTrafficStatsByIface(ifaceInfo: IfaceInfo): Promise<NetStatsInfo>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 

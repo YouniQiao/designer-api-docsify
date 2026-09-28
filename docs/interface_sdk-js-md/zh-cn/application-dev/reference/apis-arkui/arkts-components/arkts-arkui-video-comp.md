@@ -8,7 +8,7 @@ Video组件用于播放视频文件并控制其播放状态，支持播放、暂
 > <br>
 > 
 > Video组件只提供简单的视频播放功能，无法支撑复杂的视频播控场景。复杂开发场景推荐使用[AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-media-avplayer-i.md)播控API和
-> [XComponent](arkts-arkui-xcomponent-comp.md#xcomponent)组件开发。
+> [XComponent](arkts-arkui-xcomponent-comp.md)组件开发。
 > <br>
 > 
 > Video组件在使用[expandSafeArea](arkts-arkui-common-comp-commonmethod-c.md#expandsafearea)扩展安全区域时，组件视频显示内容区域不支持扩展。
@@ -32,6 +32,8 @@ Video(value: VideoOptions)
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-VideoInterface-(value: VideoOptions): VideoAttribute--><!--Device-VideoInterface-(value: VideoOptions): VideoAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

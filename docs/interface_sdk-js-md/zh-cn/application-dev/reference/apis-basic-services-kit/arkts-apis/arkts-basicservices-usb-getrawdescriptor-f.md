@@ -22,6 +22,8 @@ function getRawDescriptor(pipe: USBDevicePipe): Uint8Array
 
 **替代接口：** [getRawDescriptor](arkts-basicservices-usbmanager-getrawdescriptor-f.md)
 
+<!--Device-usb-function getRawDescriptor(pipe: USBDevicePipe): Uint8Array--><!--Device-usb-function getRawDescriptor(pipe: USBDevicePipe): Uint8Array-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 **参数：**

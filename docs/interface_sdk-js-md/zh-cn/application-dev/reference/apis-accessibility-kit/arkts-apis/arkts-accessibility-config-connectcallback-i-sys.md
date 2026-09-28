@@ -8,6 +8,8 @@ export interface ConnectCallback
 
 **起始版本：** 23
 
+<!--Device-config-export interface ConnectCallback--><!--Device-config-export interface ConnectCallback-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -29,6 +31,8 @@ onDisconnect: OnDisconnectCallback
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ConnectCallback-onDisconnect: OnDisconnectCallback--><!--Device-ConnectCallback-onDisconnect: OnDisconnectCallback-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 

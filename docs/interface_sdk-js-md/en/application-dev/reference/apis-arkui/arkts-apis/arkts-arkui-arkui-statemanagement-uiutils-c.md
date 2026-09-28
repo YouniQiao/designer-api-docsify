@@ -8,6 +8,8 @@ Provides APIs related to state management, including obtaining the original obje
 
 **Since:** 12
 
+<!--Device-unnamed-export declare class UIUtils--><!--Device-unnamed-export declare class UIUtils-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -29,6 +31,8 @@ Dynamically adds a listener to the state variable of state management V2. For de
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-UIUtils-static addMonitor(target: object, path: string | string[], monitorCallback: MonitorCallback, options?: MonitorOptions): void--><!--Device-UIUtils-static addMonitor(target: object, path: string | string[], monitorCallback: MonitorCallback, options?: MonitorOptions): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,6 +66,8 @@ Synchronously updates a specified state variable. This API receives a closure fu
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-UIUtils-static applySync<T>(task: TaskCallback): T--><!--Device-UIUtils-static applySync<T>(task: TaskCallback): T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -142,6 +148,8 @@ Determines whether a data object can be observed and returns the observation res
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-UIUtils-static canBeObserved<T extends object>(source: T): ObservedResult--><!--Device-UIUtils-static canBeObserved<T extends object>(source: T): ObservedResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -282,6 +290,8 @@ Deletes the listener added to the state variable of the state management V2 by c
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-UIUtils-static clearMonitor(target: object, path: string | string[], monitorCallback?: MonitorCallback) : void--><!--Device-UIUtils-static clearMonitor(target: object, path: string | string[], monitorCallback?: MonitorCallback) : void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -313,6 +323,8 @@ Enables V1 state variables to be observable in @ComponentV2. This API is primari
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-UIUtils-static enableV2Compatibility<T extends object>(source: T): T--><!--Device-UIUtils-static enableV2Compatibility<T extends object>(source: T): T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -383,6 +395,8 @@ Processes all state variable modifications before this API call and synchronizes
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-UIUtils-static flushUIUpdates(): void--><!--Device-UIUtils-static flushUIUpdates(): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Error codes:**
@@ -452,6 +466,8 @@ Synchronously updates all state variable modifications before this API call, inc
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-UIUtils-static flushUpdates(): void--><!--Device-UIUtils-static flushUpdates(): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Error codes:**
@@ -519,6 +535,8 @@ Obtains [CustomComponentContext](arkts-arkui-arkui-statemanagement-customcompone
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-UIUtils-static getCustomComponentContext<T extends BaseCustomComponent>(customComponent: T): CustomComponentContext--><!--Device-UIUtils-static getCustomComponentContext<T extends BaseCustomComponent>(customComponent: T): CustomComponentContext-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -608,6 +626,8 @@ Obtains the [lifecycle of a custom component](arkts-arkui-arkui-statemanagement-
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-UIUtils-static getLifecycle<T extends BaseCustomComponent>(customComponent: T): CustomComponentLifecycle--><!--Device-UIUtils-static getLifecycle<T extends BaseCustomComponent>(customComponent: T): CustomComponentLifecycle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -658,6 +678,8 @@ Obtains the original object from a proxy object wrapped by the state management 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIUtils-static getTarget<T extends object>(source: T): T--><!--Device-UIUtils-static getTarget<T extends object>(source: T): T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -712,6 +734,8 @@ Creates a read-only one-way data binding instance, which is used to construct th
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-UIUtils-static makeBinding<T>(getter: GetterCallback<T>): Binding<T>--><!--Device-UIUtils-static makeBinding<T>(getter: GetterCallback<T>): Binding<T>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -785,6 +809,8 @@ Creates a mutable two-way data binding instance, which is used to construct the 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-UIUtils-static makeBinding<T>(getter: GetterCallback<T>, setter: SetterCallback<T>): MutableBinding<T>--><!--Device-UIUtils-static makeBinding<T>(getter: GetterCallback<T>, setter: SetterCallback<T>): MutableBinding<T>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -862,6 +888,8 @@ Converts ordinary unobservable data into observable data. For details, see [make
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-UIUtils-static makeObserved<T extends object>(source: T): T--><!--Device-UIUtils-static makeObserved<T extends object>(source: T): T-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -922,6 +950,8 @@ This API can be used together with [enableV2Compatibility](#enablev2compatibilit
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-UIUtils-static makeV1Observed<T extends object>(source: T): T--><!--Device-UIUtils-static makeV1Observed<T extends object>(source: T): T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

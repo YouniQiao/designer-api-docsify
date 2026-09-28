@@ -22,4 +22,6 @@ options: Options of the **@ComponentV2** decorator. Pass this parameter for cust
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-unnamed-declare const ComponentV2: ClassDecorator & ((options: ComponentOptions) => ClassDecorator)--><!--Device-unnamed-declare const ComponentV2: ClassDecorator & ((options: ComponentOptions) => ClassDecorator)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

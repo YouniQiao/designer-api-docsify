@@ -8,6 +8,8 @@ export enum EfficiencyResourcesCpuLevel
 
 **起始版本：** 23
 
+<!--Device-backgroundTaskManager-export enum EfficiencyResourcesCpuLevel--><!--Device-backgroundTaskManager-export enum EfficiencyResourcesCpuLevel-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
 
 **系统接口：** 此接口为系统接口。
@@ -23,6 +25,8 @@ SMALL_CPU = 0
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EfficiencyResourcesCpuLevel-SMALL_CPU = 0--><!--Device-EfficiencyResourcesCpuLevel-SMALL_CPU = 0-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
 
@@ -40,6 +44,8 @@ MEDIUM_CPU = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-EfficiencyResourcesCpuLevel-MEDIUM_CPU = 1--><!--Device-EfficiencyResourcesCpuLevel-MEDIUM_CPU = 1-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
 
 **系统接口：** 此接口为系统接口。
@@ -55,6 +61,8 @@ LARGE_CPU = 2
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EfficiencyResourcesCpuLevel-LARGE_CPU = 2--><!--Device-EfficiencyResourcesCpuLevel-LARGE_CPU = 2-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
 

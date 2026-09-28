@@ -18,6 +18,8 @@ function off(type: 'applicationState', observerId: number, callback: AsyncCallba
 
 **需要权限：** ohos.permission.RUNNING_STATE_OBSERVER
 
+<!--Device-appManager-function off(type: 'applicationState', observerId: int, callback: AsyncCallback<void>): void--><!--Device-appManager-function off(type: 'applicationState', observerId: int, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -108,6 +110,8 @@ function off(type: 'applicationState', observerId: number): Promise<void>
 **起始版本：** 14
 
 **需要权限：** ohos.permission.RUNNING_STATE_OBSERVER
+
+<!--Device-appManager-function off(type: 'applicationState', observerId: int): Promise<void>--><!--Device-appManager-function off(type: 'applicationState', observerId: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

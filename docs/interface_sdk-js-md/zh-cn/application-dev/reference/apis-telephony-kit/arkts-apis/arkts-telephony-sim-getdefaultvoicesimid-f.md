@@ -16,6 +16,8 @@ function getDefaultVoiceSimId(callback: AsyncCallback<number>): void
 
 **起始版本：** 10
 
+<!--Device-sim-function getDefaultVoiceSimId(callback: AsyncCallback<int>): void--><!--Device-sim-function getDefaultVoiceSimId(callback: AsyncCallback<int>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**
@@ -63,6 +65,8 @@ function getDefaultVoiceSimId(): Promise<number>
 获取默认语音业务的SIM卡ID。使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-sim-function getDefaultVoiceSimId(): Promise<int>--><!--Device-sim-function getDefaultVoiceSimId(): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

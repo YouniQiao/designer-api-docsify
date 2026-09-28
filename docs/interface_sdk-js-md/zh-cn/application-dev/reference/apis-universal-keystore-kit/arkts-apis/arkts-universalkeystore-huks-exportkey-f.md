@@ -26,6 +26,8 @@ function exportKey(keyAlias: string, options: HuksOptions, callback: AsyncCallba
 
 **替代接口：** [exportKeyItem](arkts-universalkeystore-huks-exportkeyitem-f.md)(keyAlias: string, options: HuksOptions, callback: AsyncCallback&lt;HuksReturnResult&gt;)
 
+<!--Device-huks-function exportKey(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksResult>): void--><!--Device-huks-function exportKey(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksResult>): void-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Extension
 
 **参数：**
@@ -71,6 +73,8 @@ function exportKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>
 **废弃版本：** 9
 
 **替代接口：** [exportKeyItem](arkts-universalkeystore-huks-exportkeyitem-f.md#exportkeyitem-1)(keyAlias: string, options: HuksOptions)
+
+<!--Device-huks-function exportKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>--><!--Device-huks-function exportKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Extension
 

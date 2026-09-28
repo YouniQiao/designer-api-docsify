@@ -8,6 +8,8 @@ export type Parameter = _Parameter
 
 **起始版本：** 20
 
+<!--Device-unnamed-export type Parameter = _Parameter--><!--Device-unnamed-export type Parameter = _Parameter-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。

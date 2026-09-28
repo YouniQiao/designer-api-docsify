@@ -16,6 +16,8 @@ function getAppMemoryLimit(): MemoryLimit
 
 **起始版本：** 12
 
+<!--Device-hidebug-function getAppMemoryLimit(): MemoryLimit--><!--Device-hidebug-function getAppMemoryLimit(): MemoryLimit-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **返回值：**

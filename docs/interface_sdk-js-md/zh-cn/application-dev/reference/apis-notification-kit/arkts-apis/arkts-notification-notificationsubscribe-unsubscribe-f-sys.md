@@ -20,6 +20,8 @@ function unsubscribe(subscriber: NotificationSubscriber, callback: AsyncCallback
 - API版本20+：N/A
 - API版本9-19：ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationSubscribe-function unsubscribe(subscriber: NotificationSubscriber, callback: AsyncCallback<void>): void--><!--Device-notificationSubscribe-function unsubscribe(subscriber: NotificationSubscriber, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -79,6 +81,8 @@ function unsubscribe(subscriber: NotificationSubscriber): Promise<void>
 **需要权限：** 
 - API版本20+：N/A
 - API版本9-19：ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationSubscribe-function unsubscribe(subscriber: NotificationSubscriber): Promise<void>--><!--Device-notificationSubscribe-function unsubscribe(subscriber: NotificationSubscriber): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

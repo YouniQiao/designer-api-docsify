@@ -23,6 +23,8 @@ function startScan(): void
 
 **需要权限：** ohos.permission.SET_WIFI_INFO
 
+<!--Device-wifiManager-function startScan(): void--><!--Device-wifiManager-function startScan(): void-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **错误码：**

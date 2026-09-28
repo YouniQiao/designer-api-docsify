@@ -23,6 +23,8 @@ function acquireDataAbilityHelper(uri: string): DataAbilityHelper
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-particleAbility-function acquireDataAbilityHelper(uri: string): DataAbilityHelper--><!--Device-particleAbility-function acquireDataAbilityHelper(uri: string): DataAbilityHelper-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **参数：**

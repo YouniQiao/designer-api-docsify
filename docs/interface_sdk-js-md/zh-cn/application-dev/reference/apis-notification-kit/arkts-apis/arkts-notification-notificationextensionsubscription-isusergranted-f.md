@@ -18,6 +18,8 @@ function isUserGranted(): Promise<boolean>
 
 **需要权限：** ohos.permission.SUBSCRIBE_NOTIFICATION
 
+<!--Device-notificationExtensionSubscription-function isUserGranted(): Promise<boolean>--><!--Device-notificationExtensionSubscription-function isUserGranted(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **返回值：**

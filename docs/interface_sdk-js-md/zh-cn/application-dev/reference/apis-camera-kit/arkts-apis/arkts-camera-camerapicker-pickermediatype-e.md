@@ -8,6 +8,8 @@ enum PickerMediaType
 
 **起始版本：** 11
 
+<!--Device-cameraPicker-enum PickerMediaType--><!--Device-cameraPicker-enum PickerMediaType-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## PHOTO
@@ -20,7 +22,9 @@ PHOTO = 'photo'
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PickerMediaType-PHOTO = 'photo'--><!--Device-PickerMediaType-PHOTO = 'photo'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -34,6 +38,8 @@ VIDEO = 'video'
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PickerMediaType-VIDEO = 'video'--><!--Device-PickerMediaType-VIDEO = 'video'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core

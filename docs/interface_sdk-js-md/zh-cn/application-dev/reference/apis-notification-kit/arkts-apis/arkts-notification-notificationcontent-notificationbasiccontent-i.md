@@ -8,6 +8,8 @@ export interface NotificationBasicContent
 
 **起始版本：** 7
 
+<!--Device-unnamed-export interface NotificationBasicContent--><!--Device-unnamed-export interface NotificationBasicContent-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## additionalText
@@ -21,6 +23,8 @@ additionalText?: string
 **类型：** string
 
 **起始版本：** 7
+
+<!--Device-NotificationBasicContent-additionalText?: string--><!--Device-NotificationBasicContent-additionalText?: string-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -36,6 +40,8 @@ lockscreenPicture?: image.PixelMap
 
 **起始版本：** 12
 
+<!--Device-NotificationBasicContent-lockscreenPicture?: image.PixelMap--><!--Device-NotificationBasicContent-lockscreenPicture?: image.PixelMap-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## text
@@ -50,6 +56,8 @@ text: string
 
 **起始版本：** 7
 
+<!--Device-NotificationBasicContent-text: string--><!--Device-NotificationBasicContent-text: string-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## title
@@ -63,5 +71,7 @@ title: string
 **类型：** string
 
 **起始版本：** 7
+
+<!--Device-NotificationBasicContent-title: string--><!--Device-NotificationBasicContent-title: string-End-->
 
 **系统能力：** SystemCapability.Notification.Notification

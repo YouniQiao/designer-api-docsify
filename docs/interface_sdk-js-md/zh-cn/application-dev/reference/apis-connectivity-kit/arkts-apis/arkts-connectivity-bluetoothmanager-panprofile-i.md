@@ -16,6 +16,8 @@ interface PanProfile extends BaseProfile
 
 **替代接口：** [PanProfile](arkts-connectivity-pan-panprofile-i.md)
 
+<!--Device-bluetoothManager-interface PanProfile extends BaseProfile--><!--Device-bluetoothManager-interface PanProfile extends BaseProfile-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -43,6 +45,8 @@ off(type: 'connectionStateChange', callback?: Callback<StateChangeParam>): void
 **需要权限：** 
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH
 - API版本9：N/A
+
+<!--Device-PanProfile-off(type: 'connectionStateChange', callback?: Callback<StateChangeParam>): void--><!--Device-PanProfile-off(type: 'connectionStateChange', callback?: Callback<StateChangeParam>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -79,6 +83,8 @@ on(type: 'connectionStateChange', callback: Callback<StateChangeParam>): void
 **需要权限：** 
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH
 - API版本9：N/A
+
+<!--Device-PanProfile-on(type: 'connectionStateChange', callback: Callback<StateChangeParam>): void--><!--Device-PanProfile-on(type: 'connectionStateChange', callback: Callback<StateChangeParam>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

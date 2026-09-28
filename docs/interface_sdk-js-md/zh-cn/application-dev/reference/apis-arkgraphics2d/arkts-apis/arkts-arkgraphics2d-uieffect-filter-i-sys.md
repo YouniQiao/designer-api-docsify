@@ -8,6 +8,8 @@ Filter效果类，用于将模糊、边缘像素扩展、水波纹等效果添�
 
 **起始版本：** 12
 
+<!--Device-uiEffect-interface Filter--><!--Device-uiEffect-interface Filter-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## 导入模块
@@ -25,6 +27,8 @@ bezierWarp(controlPoints: Array<common2D.Point>): Filter
 将贝塞尔曲线变形的效果添加至组件上。该效果通过在图层边界上创建封闭的贝塞尔曲线，实现对图像的精准扭曲和形状调整。贝塞尔曲线共有四段，首尾顺次相连，每段包含一个顶点和两个切点。典型应用场景包括人脸形变特效、卡片透视变形等。
 
 **起始版本：** 20
+
+<!--Device-Filter-bezierWarp(controlPoints: Array<common2D.Point>): Filter--><!--Device-Filter-bezierWarp(controlPoints: Array<common2D.Point>): Filter-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -83,6 +87,8 @@ blurBubblesRise(param: BlurBubblesRiseEffectParam): Filter
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Filter-blurBubblesRise(param: BlurBubblesRiseEffectParam): Filter--><!--Device-Filter-blurBubblesRise(param: BlurBubblesRiseEffectParam): Filter-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -163,6 +169,8 @@ colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths:
 
 **起始版本：** 20
 
+<!--Device-Filter-colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths: Array<double>,        alphaMask?: Mask): Filter--><!--Device-Filter-colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths: Array<double>,        alphaMask?: Mask): Filter-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -230,6 +238,8 @@ contentLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightI
 为组件内容添加3D光照效果。
 
 **起始版本：** 20
+
+<!--Device-Filter-contentLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIntensity: double,      displacementMap?: Mask): Filter--><!--Device-Filter-contentLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIntensity: double,      displacementMap?: Mask): Filter-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -306,6 +316,8 @@ directionLight(direction: common2D.Point3d, color: Color, intensity: number, mas
 
 **起始版本：** 20
 
+<!--Device-Filter-directionLight(direction: common2D.Point3d, color: Color, intensity: double, mask?: Mask, factor?: double): Filter--><!--Device-Filter-directionLight(direction: common2D.Point3d, color: Color, intensity: double, mask?: Mask, factor?: double): Filter-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -380,6 +392,8 @@ displacementDistort(displacementMap: Mask, factor?: [number, number]): Filter
 
 **起始版本：** 20
 
+<!--Device-Filter-displacementDistort(displacementMap: Mask, factor?: [double, double]): Filter--><!--Device-Filter-displacementDistort(displacementMap: Mask, factor?: [double, double]): Filter-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -436,6 +450,8 @@ distort(distortionK: number): Filter
 
 **起始版本：** 13
 
+<!--Device-Filter-distort(distortionK: double): Filter--><!--Device-Filter-distort(distortionK: double): Filter-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -475,6 +491,8 @@ edgeLight(alpha: number, color?: Color, mask?: Mask, bloom?: boolean): Filter
 为组件内容检测边缘，并添加边缘高亮效果。该效果自动检测组件内容的边缘轮廓并叠加高亮描边。
 
 **起始版本：** 20
+
+<!--Device-Filter-edgeLight(alpha: double, color?: Color, mask?: Mask, bloom?: boolean): Filter--><!--Device-Filter-edgeLight(alpha: double, color?: Color, mask?: Mask, bloom?: boolean): Filter-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -536,6 +554,8 @@ flyInFlyOutEffect(degree: number, flyMode: FlyMode): Filter
 
 **起始版本：** 12
 
+<!--Device-Filter-flyInFlyOutEffect(degree: double, flyMode: FlyMode): Filter--><!--Device-Filter-flyInFlyOutEffect(degree: double, flyMode: FlyMode): Filter-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -582,6 +602,8 @@ haloBloom(tintColor: Color, bloomFactor: number, glowExposure: number): Filter
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Filter-haloBloom(tintColor: Color, bloomFactor: double, glowExposure: double): Filter--><!--Device-Filter-haloBloom(tintColor: Color, bloomFactor: double, glowExposure: double): Filter-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -641,6 +663,8 @@ heatDistortion(param: HeatDistortionEffectParam): Filter
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Filter-heatDistortion(param: HeatDistortionEffectParam): Filter--><!--Device-Filter-heatDistortion(param: HeatDistortionEffectParam): Filter-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -706,6 +730,8 @@ mapColorByBrightness(colors: Array<Color>, positions: Array<number>): Filter
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Filter-mapColorByBrightness(colors: Array<Color>, positions: Array<double>): Filter--><!--Device-Filter-mapColorByBrightness(colors: Array<Color>, positions: Array<double>): Filter-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -733,6 +759,8 @@ maskDispersion(dispersionMap: Mask, alpha: number, rFactor?: [number, number], g
 为组件内容添加由置换贴图控制的色散效果，模拟光线通过棱镜时的色散现象。典型应用场景包括炫彩特效、棱镜折射模拟等。
 
 **起始版本：** 20
+
+<!--Device-Filter-maskDispersion(dispersionMap: Mask, alpha: double, rFactor?: [double, double], gFactor?: [double, double],      bFactor?: [double, double]): Filter--><!--Device-Filter-maskDispersion(dispersionMap: Mask, alpha: double, rFactor?: [double, double], gFactor?: [double, double],      bFactor?: [double, double]): Filter-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -822,6 +850,8 @@ maskTransition(alphaMask: Mask, factor?: number, inverse?: boolean): Filter
 
 **起始版本：** 20
 
+<!--Device-Filter-maskTransition(alphaMask: Mask, factor?: double, inverse?: boolean): Filter--><!--Device-Filter-maskTransition(alphaMask: Mask, factor?: double, inverse?: boolean): Filter-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -902,6 +932,8 @@ pixelStretch(stretchSizes: Array<number>, tileMode: TileMode): Filter
 
 **起始版本：** 12
 
+<!--Device-Filter-pixelStretch(stretchSizes: Array<double>, tileMode: TileMode): Filter--><!--Device-Filter-pixelStretch(stretchSizes: Array<double>, tileMode: TileMode): Filter-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -936,6 +968,8 @@ radiusGradientBlur(radius: number, gradientParam: LinearGradientBlurOptions): Fi
 为组件内容添加半径线性渐变模糊效果。
 
 **起始版本：** 19
+
+<!--Device-Filter-radiusGradientBlur(radius: double, gradientParam: LinearGradientBlurOptions): Filter--><!--Device-Filter-radiusGradientBlur(radius: double, gradientParam: LinearGradientBlurOptions): Filter-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -999,6 +1033,8 @@ spinBlur(center: common2D.Point, angle: number, samples: number): Filter
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Filter-spinBlur(center: common2D.Point, angle: double, samples: int): Filter--><!--Device-Filter-spinBlur(center: common2D.Point, angle: double, samples: int): Filter-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -1056,6 +1092,8 @@ variableRadiusBlur(radius: number, radiusMap: Mask): Filter
 
 **起始版本：** 20
 
+<!--Device-Filter-variableRadiusBlur(radius: double, radiusMap: Mask): Filter--><!--Device-Filter-variableRadiusBlur(radius: double, radiusMap: Mask): Filter-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -1111,6 +1149,8 @@ waterRipple(progress: number, waveCount: number, x: number, y: number, rippleMod
 将水波纹效果添加至组件上。
 
 **起始版本：** 12
+
+<!--Device-Filter-waterRipple(progress: double, waveCount: int, x: double, y: double, rippleMode: WaterRippleMode): Filter--><!--Device-Filter-waterRipple(progress: double, waveCount: int, x: double, y: double, rippleMode: WaterRippleMode): Filter-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

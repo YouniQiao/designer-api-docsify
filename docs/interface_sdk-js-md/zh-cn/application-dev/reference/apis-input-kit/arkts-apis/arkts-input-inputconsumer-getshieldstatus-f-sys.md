@@ -18,6 +18,8 @@ function getShieldStatus(shieldMode: ShieldMode): boolean
 
 **需要权限：** ohos.permission.INPUT_CONTROL_DISPATCHING
 
+<!--Device-inputConsumer-function getShieldStatus(shieldMode: ShieldMode): boolean--><!--Device-inputConsumer-function getShieldStatus(shieldMode: ShieldMode): boolean-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 
 **系统接口：** 此接口为系统接口。

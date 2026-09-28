@@ -18,6 +18,8 @@ function getNetAccessPolicy(): Promise<NetAccessPolicy>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-policy-function getNetAccessPolicy(): Promise<NetAccessPolicy>--><!--Device-policy-function getNetAccessPolicy(): Promise<NetAccessPolicy>-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **返回值：**

@@ -8,6 +8,8 @@ interface AudioRendererInfo
 
 **起始版本：** 8
 
+<!--Device-audio-interface AudioRendererInfo--><!--Device-audio-interface AudioRendererInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## 导入模块
@@ -30,7 +32,9 @@ rendererFlags: number
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AudioRendererInfo-rendererFlags: int--><!--Device-AudioRendererInfo-rendererFlags: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -46,7 +50,9 @@ usage: StreamUsage
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AudioRendererInfo-usage: StreamUsage--><!--Device-AudioRendererInfo-usage: StreamUsage-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -61,6 +67,8 @@ volumeMode?: AudioVolumeMode
 **类型：** [AudioVolumeMode](arkts-audio-audio-audiovolumemode-e.md)
 
 **起始版本：** 19
+
+<!--Device-AudioRendererInfo-volumeMode?: AudioVolumeMode--><!--Device-AudioRendererInfo-volumeMode?: AudioVolumeMode-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -79,5 +87,7 @@ content?: ContentType
 **废弃版本：** 10
 
 **替代接口：** usage
+
+<!--Device-AudioRendererInfo-content?: ContentType--><!--Device-AudioRendererInfo-content?: ContentType-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core

@@ -8,6 +8,8 @@ interface AuxiliaryPictureInfo
 
 **起始版本：** 13
 
+<!--Device-image-interface AuxiliaryPictureInfo--><!--Device-image-interface AuxiliaryPictureInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ auxiliaryPictureType: AuxiliaryPictureType
 
 **起始版本：** 13
 
+<!--Device-AuxiliaryPictureInfo-auxiliaryPictureType: AuxiliaryPictureType--><!--Device-AuxiliaryPictureInfo-auxiliaryPictureType: AuxiliaryPictureType-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## colorSpace
@@ -41,6 +45,8 @@ colorSpace: colorSpaceManager.ColorSpaceManager
 **类型：** [colorSpaceManager.ColorSpaceManager](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md)
 
 **起始版本：** 13
+
+<!--Device-AuxiliaryPictureInfo-colorSpace: colorSpaceManager.ColorSpaceManager--><!--Device-AuxiliaryPictureInfo-colorSpace: colorSpaceManager.ColorSpaceManager-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -56,6 +62,8 @@ pixelFormat: PixelMapFormat
 
 **起始版本：** 13
 
+<!--Device-AuxiliaryPictureInfo-pixelFormat: PixelMapFormat--><!--Device-AuxiliaryPictureInfo-pixelFormat: PixelMapFormat-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## rowStride
@@ -70,6 +78,8 @@ rowStride: number
 
 **起始版本：** 13
 
+<!--Device-AuxiliaryPictureInfo-rowStride: int--><!--Device-AuxiliaryPictureInfo-rowStride: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## size
@@ -83,5 +93,7 @@ size: Size
 **类型：** Size
 
 **起始版本：** 13
+
+<!--Device-AuxiliaryPictureInfo-size: Size--><!--Device-AuxiliaryPictureInfo-size: Size-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core

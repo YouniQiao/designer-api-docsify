@@ -12,6 +12,8 @@ export interface ConnectionProperties
 
 **起始版本：** 8
 
+<!--Device-connection-export interface ConnectionProperties--><!--Device-connection-export interface ConnectionProperties-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## 导入模块
@@ -32,6 +34,8 @@ dnses: Array<NetAddress>
 
 **起始版本：** 8
 
+<!--Device-ConnectionProperties-dnses: Array<NetAddress>--><!--Device-ConnectionProperties-dnses: Array<NetAddress>-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## domains
@@ -46,6 +50,8 @@ domains: string
 
 **起始版本：** 8
 
+<!--Device-ConnectionProperties-domains: string--><!--Device-ConnectionProperties-domains: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## interfaceName
@@ -59,6 +65,8 @@ interfaceName: string
 **类型：** string
 
 **起始版本：** 8
+
+<!--Device-ConnectionProperties-interfaceName: string--><!--Device-ConnectionProperties-interfaceName: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -76,6 +84,8 @@ isIPv4LinkValid?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ConnectionProperties-isIPv4LinkValid?: boolean--><!--Device-ConnectionProperties-isIPv4LinkValid?: boolean-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## isIPv6LinkValid
@@ -92,6 +102,8 @@ isIPv6LinkValid?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ConnectionProperties-isIPv6LinkValid?: boolean--><!--Device-ConnectionProperties-isIPv6LinkValid?: boolean-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## linkAddresses
@@ -105,6 +117,8 @@ linkAddresses: Array<LinkAddress>
 **类型：** Array&lt;[LinkAddress](arkts-network-connection-linkaddress-i.md)&gt;
 
 **起始版本：** 8
+
+<!--Device-ConnectionProperties-linkAddresses: Array<LinkAddress>--><!--Device-ConnectionProperties-linkAddresses: Array<LinkAddress>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -120,6 +134,8 @@ mtu: number
 
 **起始版本：** 8
 
+<!--Device-ConnectionProperties-mtu: int--><!--Device-ConnectionProperties-mtu: int-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## routes
@@ -133,5 +149,7 @@ routes: Array<RouteInfo>
 **类型：** Array&lt;[RouteInfo](arkts-network-connection-routeinfo-i.md)&gt;
 
 **起始版本：** 8
+
+<!--Device-ConnectionProperties-routes: Array<RouteInfo>--><!--Device-ConnectionProperties-routes: Array<RouteInfo>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core

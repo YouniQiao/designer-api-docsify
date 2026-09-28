@@ -10,6 +10,8 @@ interface AVQueueInfo
 
 **起始版本：** 11
 
+<!--Device-avSession-interface AVQueueInfo--><!--Device-avSession-interface AVQueueInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ avQueueId: string
 
 **起始版本：** 11
 
+<!--Device-AVQueueInfo-avQueueId: string--><!--Device-AVQueueInfo-avQueueId: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **系统接口：** 此接口为系统接口。
@@ -47,6 +51,8 @@ avQueueImage: image.PixelMap | string
 **类型：** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) &#124; string
 
 **起始版本：** 11
+
+<!--Device-AVQueueInfo-avQueueImage: image.PixelMap | string--><!--Device-AVQueueInfo-avQueueImage: image.PixelMap | string-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -64,6 +70,8 @@ avQueueName: string
 
 **起始版本：** 11
 
+<!--Device-AVQueueInfo-avQueueName: string--><!--Device-AVQueueInfo-avQueueName: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **系统接口：** 此接口为系统接口。
@@ -80,6 +88,8 @@ bundleName: string
 
 **起始版本：** 11
 
+<!--Device-AVQueueInfo-bundleName: string--><!--Device-AVQueueInfo-bundleName: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **系统接口：** 此接口为系统接口。
@@ -95,6 +105,8 @@ lastPlayedTime?: number
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-AVQueueInfo-lastPlayedTime?: long--><!--Device-AVQueueInfo-lastPlayedTime?: long-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 

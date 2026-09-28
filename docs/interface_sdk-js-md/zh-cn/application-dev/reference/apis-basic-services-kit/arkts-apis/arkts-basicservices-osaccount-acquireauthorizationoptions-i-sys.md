@@ -8,6 +8,8 @@ interface AcquireAuthorizationOptions
 
 **起始版本：** 24
 
+<!--Device-osAccount-interface AcquireAuthorizationOptions--><!--Device-osAccount-interface AcquireAuthorizationOptions-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -33,6 +35,8 @@ challenge?: Uint8Array
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AcquireAuthorizationOptions-challenge?: Uint8Array--><!--Device-AcquireAuthorizationOptions-challenge?: Uint8Array-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -60,6 +64,8 @@ interactionContext?: Context
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AcquireAuthorizationOptions-interactionContext?: Context--><!--Device-AcquireAuthorizationOptions-interactionContext?: Context-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -84,6 +90,8 @@ isInteractionAllowed?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AcquireAuthorizationOptions-isInteractionAllowed?: boolean--><!--Device-AcquireAuthorizationOptions-isInteractionAllowed?: boolean-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -105,6 +113,8 @@ isReuseNeeded?: boolean
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AcquireAuthorizationOptions-isReuseNeeded?: boolean--><!--Device-AcquireAuthorizationOptions-isReuseNeeded?: boolean-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 

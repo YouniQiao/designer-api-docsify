@@ -16,4 +16,6 @@ For details, see [@Computed Decorator: Declaring Computed Properties](../../../u
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-unnamed-declare const Computed: MethodDecorator--><!--Device-unnamed-declare const Computed: MethodDecorator-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -12,6 +12,8 @@ export enum BackgroundMode
 
 **替代接口：** [BackgroundMode](arkts-backgroundtasks-backgroundtaskmanager-backgroundmode-e.md)
 
+<!--Device-backgroundTaskManager-export enum BackgroundMode--><!--Device-backgroundTaskManager-export enum BackgroundMode-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## DATA_TRANSFER
@@ -27,6 +29,8 @@ DATA_TRANSFER = 1
 **废弃版本：** 9
 
 **替代接口：** DATA_TRANSFER
+
+<!--Device-BackgroundMode-DATA_TRANSFER = 1--><!--Device-BackgroundMode-DATA_TRANSFER = 1-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -44,6 +48,8 @@ AUDIO_PLAYBACK = 2
 
 **替代接口：** AUDIO_PLAYBACK
 
+<!--Device-BackgroundMode-AUDIO_PLAYBACK = 2--><!--Device-BackgroundMode-AUDIO_PLAYBACK = 2-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## AUDIO_RECORDING
@@ -59,6 +65,8 @@ AUDIO_RECORDING = 3
 **废弃版本：** 9
 
 **替代接口：** AUDIO_RECORDING
+
+<!--Device-BackgroundMode-AUDIO_RECORDING = 3--><!--Device-BackgroundMode-AUDIO_RECORDING = 3-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -76,6 +84,8 @@ LOCATION = 4
 
 **替代接口：** LOCATION
 
+<!--Device-BackgroundMode-LOCATION = 4--><!--Device-BackgroundMode-LOCATION = 4-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## BLUETOOTH_INTERACTION
@@ -92,6 +102,8 @@ BLUETOOTH_INTERACTION = 5
 
 **替代接口：** BLUETOOTH_INTERACTION
 
+<!--Device-BackgroundMode-BLUETOOTH_INTERACTION = 5--><!--Device-BackgroundMode-BLUETOOTH_INTERACTION = 5-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## MULTI_DEVICE_CONNECTION
@@ -107,6 +119,8 @@ MULTI_DEVICE_CONNECTION = 6
 **废弃版本：** 9
 
 **替代接口：** MULTI_DEVICE_CONNECTION
+
+<!--Device-BackgroundMode-MULTI_DEVICE_CONNECTION = 6--><!--Device-BackgroundMode-MULTI_DEVICE_CONNECTION = 6-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -125,5 +139,7 @@ TASK_KEEPING = 9
 **废弃版本：** 9
 
 **替代接口：** TASK_KEEPING
+
+<!--Device-BackgroundMode-TASK_KEEPING = 9--><!--Device-BackgroundMode-TASK_KEEPING = 9-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask

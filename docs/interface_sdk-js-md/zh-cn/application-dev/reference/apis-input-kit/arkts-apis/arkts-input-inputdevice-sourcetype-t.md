@@ -8,6 +8,8 @@ type SourceType = 'keyboard' | 'mouse' | 'touchpad' | 'touchscreen' | 'joystick'
 
 **起始版本：** 9
 
+<!--Device-inputDevice-type SourceType = 'keyboard' | 'mouse' | 'touchpad' | 'touchscreen' | 'joystick' | 'trackball'--><!--Device-inputDevice-type SourceType = 'keyboard' | 'mouse' | 'touchpad' | 'touchscreen' | 'joystick' | 'trackball'-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 | 类型 | 说明 |

@@ -8,6 +8,8 @@ interface ColorPicker
 
 **起始版本：** 9
 
+<!--Device-effectKit-interface ColorPicker--><!--Device-effectKit-interface ColorPicker-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## 导入模块
@@ -26,9 +28,11 @@ getAverageColor(): Color
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-ColorPicker-getAverageColor(): Color--><!--Device-ColorPicker-getAverageColor(): Color-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -81,9 +85,11 @@ getHighestSaturationColor(): Color
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-ColorPicker-getHighestSaturationColor(): Color--><!--Device-ColorPicker-getHighestSaturationColor(): Color-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -136,9 +142,11 @@ getLargestProportionColor(): Color
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-ColorPicker-getLargestProportionColor(): Color--><!--Device-ColorPicker-getLargestProportionColor(): Color-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -191,9 +199,11 @@ getMainColor(): Promise<Color>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-ColorPicker-getMainColor(): Promise<Color>--><!--Device-ColorPicker-getMainColor(): Promise<Color>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -248,9 +258,11 @@ getMainColorSync(): Color
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-ColorPicker-getMainColorSync(): Color--><!--Device-ColorPicker-getMainColorSync(): Color-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -303,9 +315,11 @@ getTopProportionColors(colorCount: number): Array<Color | null>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-ColorPicker-getTopProportionColors(colorCount: int): Array<Color | null>--><!--Device-ColorPicker-getTopProportionColors(colorCount: int): Array<Color | null>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -368,9 +382,11 @@ isBlackOrWhiteOrGrayColor(color: number): boolean
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-ColorPicker-isBlackOrWhiteOrGrayColor(color: long): boolean--><!--Device-ColorPicker-isBlackOrWhiteOrGrayColor(color: long): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 

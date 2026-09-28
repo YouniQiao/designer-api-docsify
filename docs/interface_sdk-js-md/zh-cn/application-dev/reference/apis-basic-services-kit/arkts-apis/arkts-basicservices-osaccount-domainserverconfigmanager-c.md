@@ -8,6 +8,8 @@ class DomainServerConfigManager
 
 **起始版本：** 18
 
+<!--Device-osAccount-class DomainServerConfigManager--><!--Device-osAccount-class DomainServerConfigManager-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 ## 导入模块
@@ -27,6 +29,8 @@ static addServerConfig(parameters: Record<string, Object>): Promise<DomainServer
 **起始版本：** 18
 
 **需要权限：** ohos.permission.MANAGE_DOMAIN_ACCOUNT_SERVER_CONFIGS
+
+<!--Device-DomainServerConfigManager-static addServerConfig(parameters: Record<string, Object>): Promise<DomainServerConfig>--><!--Device-DomainServerConfigManager-static addServerConfig(parameters: Record<string, Object>): Promise<DomainServerConfig>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -83,6 +87,8 @@ static getAccountServerConfig(domainAccountInfo: DomainAccountInfo): Promise<Dom
 
 **需要权限：** ohos.permission.MANAGE_DOMAIN_ACCOUNT_SERVER_CONFIGS
 
+<!--Device-DomainServerConfigManager-static getAccountServerConfig(domainAccountInfo: DomainAccountInfo): Promise<DomainServerConfig>--><!--Device-DomainServerConfigManager-static getAccountServerConfig(domainAccountInfo: DomainAccountInfo): Promise<DomainServerConfig>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
@@ -135,6 +141,8 @@ static getAllServerConfigs(): Promise<Array<DomainServerConfig>>
 
 **需要权限：** ohos.permission.MANAGE_DOMAIN_ACCOUNT_SERVER_CONFIGS
 
+<!--Device-DomainServerConfigManager-static getAllServerConfigs(): Promise<Array<DomainServerConfig>>--><!--Device-DomainServerConfigManager-static getAllServerConfigs(): Promise<Array<DomainServerConfig>>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **返回值：**
@@ -184,6 +192,8 @@ static getServerConfig(configId: string): Promise<DomainServerConfig>
 **起始版本：** 18
 
 **需要权限：** ohos.permission.MANAGE_DOMAIN_ACCOUNT_SERVER_CONFIGS
+
+<!--Device-DomainServerConfigManager-static getServerConfig(configId: string): Promise<DomainServerConfig>--><!--Device-DomainServerConfigManager-static getServerConfig(configId: string): Promise<DomainServerConfig>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -242,6 +252,8 @@ static removeServerConfig(configId: string): Promise<void>
 
 **需要权限：** ohos.permission.MANAGE_DOMAIN_ACCOUNT_SERVER_CONFIGS
 
+<!--Device-DomainServerConfigManager-static removeServerConfig(configId: string): Promise<void>--><!--Device-DomainServerConfigManager-static removeServerConfig(configId: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
@@ -296,6 +308,8 @@ static updateServerConfig(configId: string, parameters: Record<string, Object>):
 **起始版本：** 18
 
 **需要权限：** ohos.permission.MANAGE_DOMAIN_ACCOUNT_SERVER_CONFIGS
+
+<!--Device-DomainServerConfigManager-static updateServerConfig(configId: string, parameters: Record<string, Object>): Promise<DomainServerConfig>--><!--Device-DomainServerConfigManager-static updateServerConfig(configId: string, parameters: Record<string, Object>): Promise<DomainServerConfig>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 

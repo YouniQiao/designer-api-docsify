@@ -16,6 +16,8 @@ function getTouchpadRightClickType(callback: AsyncCallback<RightClickType>): voi
 
 **起始版本：** 10
 
+<!--Device-pointer-function getTouchpadRightClickType(callback: AsyncCallback<RightClickType>): void--><!--Device-pointer-function getTouchpadRightClickType(callback: AsyncCallback<RightClickType>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 **系统接口：** 此接口为系统接口。
@@ -76,6 +78,8 @@ function getTouchpadRightClickType(): Promise<RightClickType>
 获取触控板右键菜单类型，使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-pointer-function getTouchpadRightClickType(): Promise<RightClickType>--><!--Device-pointer-function getTouchpadRightClickType(): Promise<RightClickType>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 

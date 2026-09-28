@@ -12,6 +12,8 @@ Defines the state of the custom dialog box.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-unnamed-declare type PromptActionCommonState = import('../api/@ohos.promptAction').promptAction.CommonState--><!--Device-unnamed-declare type PromptActionCommonState = import('../api/@ohos.promptAction').promptAction.CommonState-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Type:** import('../api/@ohos.promptAction').promptAction.CommonState

@@ -18,6 +18,8 @@ function unbindDriverWithDeviceId(deviceId: number): Promise<number>
 
 **需要权限：** ohos.permission.ACCESS_DDK_DRIVERS
 
+<!--Device-deviceManager-function unbindDriverWithDeviceId(deviceId: long): Promise<int>--><!--Device-deviceManager-function unbindDriverWithDeviceId(deviceId: long): Promise<int>-End-->
+
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
 **参数：**

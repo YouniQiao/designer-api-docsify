@@ -8,6 +8,8 @@ Represents the configuration options of a **Preferences** instance.
 
 **Since:** 12
 
+<!--Device-sendablePreferences-interface Options--><!--Device-sendablePreferences-interface Options-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
 ## Modules to Import
@@ -36,6 +38,8 @@ This attribute can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Options-dataGroupId?: string | null--><!--Device-Options-dataGroupId?: string | null-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
 ## name
@@ -51,5 +55,7 @@ Name of the **Preferences** instance.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Options-name: string--><!--Device-Options-name: string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core

@@ -26,6 +26,8 @@ function off(type: 'deviceSelected', token: number): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-continuationManager-function off(type: 'deviceSelected', token: number): void--><!--Device-continuationManager-function off(type: 'deviceSelected', token: number): void-End-->
+
 **系统能力：** SystemCapability.Ability.DistributedAbilityManager
 
 **参数：**
@@ -79,6 +81,8 @@ function off(type: 'deviceUnselected', token: number): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-continuationManager-function off(type: 'deviceUnselected', token: number): void--><!--Device-continuationManager-function off(type: 'deviceUnselected', token: number): void-End-->
+
 **系统能力：** SystemCapability.Ability.DistributedAbilityManager
 
 **参数：**
@@ -128,6 +132,8 @@ function off(type: 'deviceConnect', callback?: Callback<ContinuationResult>): vo
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-continuationManager-function off(type: 'deviceConnect', callback?: Callback<ContinuationResult>): void--><!--Device-continuationManager-function off(type: 'deviceConnect', callback?: Callback<ContinuationResult>): void-End-->
+
 **系统能力：** SystemCapability.Ability.DistributedAbilityManager
 
 **参数：**
@@ -165,6 +171,8 @@ function off(type: 'deviceDisconnect', callback?: Callback<string>): void
 **替代接口：** [off](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#offdevicestatechange)(type: 'deviceStateChange', callback?: Callback&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt;)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-continuationManager-function off(type: 'deviceDisconnect', callback?: Callback<string>): void--><!--Device-continuationManager-function off(type: 'deviceDisconnect', callback?: Callback<string>): void-End-->
 
 **系统能力：** SystemCapability.Ability.DistributedAbilityManager
 

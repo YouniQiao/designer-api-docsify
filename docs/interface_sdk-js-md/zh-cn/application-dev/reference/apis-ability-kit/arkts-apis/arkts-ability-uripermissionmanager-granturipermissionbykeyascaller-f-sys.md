@@ -18,6 +18,8 @@ function grantUriPermissionByKeyAsCaller(key: string, flag: wantConstant.Flags, 
 
 **需要权限：** ohos.permission.GRANT_URI_PERMISSION_AS_CALLER
 
+<!--Device-uriPermissionManager-function grantUriPermissionByKeyAsCaller(key: string, flag: wantConstant.Flags, callerTokenId: int, targetTokenId: int): Promise<void>--><!--Device-uriPermissionManager-function grantUriPermissionByKeyAsCaller(key: string, flag: wantConstant.Flags, callerTokenId: int, targetTokenId: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。

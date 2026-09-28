@@ -20,6 +20,8 @@ Get the privacy search result and the final search outcome. Decrypts the search 
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.1.
 
+<!--Device-privacyComputation-function getSearchResult(privacySearchResult: PrivacySearchResult, privacyProtocol: PrivacyProtocol):        Promise<SearchResult>--><!--Device-privacyComputation-function getSearchResult(privacySearchResult: PrivacySearchResult, privacyProtocol: PrivacyProtocol):        Promise<SearchResult>-End-->
+
 **System capability:** SystemCapability.Security.Asset
 
 **Parameters:**

@@ -8,6 +8,8 @@ Provides the scene detection and query capabilities.
 
 **起始版本：** 12
 
+<!--Device-camera-interface SceneDetectionQuery--><!--Device-camera-interface SceneDetectionQuery-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -27,6 +29,8 @@ isSceneFeatureSupported(type: SceneFeatureType): boolean
 Checks whether a scene feature is supported.
 
 **起始版本：** 12
+
+<!--Device-SceneDetectionQuery-isSceneFeatureSupported(type: SceneFeatureType): boolean--><!--Device-SceneDetectionQuery-isSceneFeatureSupported(type: SceneFeatureType): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

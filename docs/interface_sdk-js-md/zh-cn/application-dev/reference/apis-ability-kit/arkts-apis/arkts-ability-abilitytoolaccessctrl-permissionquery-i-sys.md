@@ -8,6 +8,8 @@ interface PermissionQuery
 
 **起始版本：** 26.0.0
 
+<!--Device-abilityToolAccessCtrl-interface PermissionQuery--><!--Device-abilityToolAccessCtrl-interface PermissionQuery-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 **系统接口：** 此接口为系统接口。
@@ -31,6 +33,8 @@ callerTokenId?: number
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-PermissionQuery-callerTokenId?: long--><!--Device-PermissionQuery-callerTokenId?: long-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 **系统接口：** 此接口为系统接口。
@@ -48,6 +52,8 @@ domainId?: string
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-PermissionQuery-domainId?: string--><!--Device-PermissionQuery-domainId?: string-End-->
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -67,6 +73,8 @@ needTicket?: boolean
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-PermissionQuery-needTicket?: boolean--><!--Device-PermissionQuery-needTicket?: boolean-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 **系统接口：** 此接口为系统接口。
@@ -84,6 +92,8 @@ operationInfo: OperationInfo[]
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-PermissionQuery-operationInfo: OperationInfo[]--><!--Device-PermissionQuery-operationInfo: OperationInfo[]-End-->
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -103,6 +113,8 @@ remoteInfo?: RemoteInfo
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-PermissionQuery-remoteInfo?: RemoteInfo--><!--Device-PermissionQuery-remoteInfo?: RemoteInfo-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 **系统接口：** 此接口为系统接口。
@@ -120,6 +132,8 @@ ticketExpireTimeMs?: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-PermissionQuery-ticketExpireTimeMs?: long--><!--Device-PermissionQuery-ticketExpireTimeMs?: long-End-->
 
 **系统能力：** SystemCapability.Security.Asset
 

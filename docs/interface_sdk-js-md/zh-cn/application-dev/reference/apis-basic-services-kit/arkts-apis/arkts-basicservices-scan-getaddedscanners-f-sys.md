@@ -18,6 +18,8 @@ function getAddedScanners(): Promise<ScannerDevice[]>
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-scan-function getAddedScanners(): Promise<ScannerDevice[]>--><!--Device-scan-function getAddedScanners(): Promise<ScannerDevice[]>-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **系统接口：** 此接口为系统接口。

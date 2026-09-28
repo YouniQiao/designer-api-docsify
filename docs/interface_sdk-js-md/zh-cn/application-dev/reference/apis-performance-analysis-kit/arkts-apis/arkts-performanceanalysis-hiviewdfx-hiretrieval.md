@@ -6,6 +6,8 @@
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-unnamed-declare namespace hiRetrieval--><!--Device-unnamed-declare namespace hiRetrieval-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiRetrieval
 
 ## 导入模块

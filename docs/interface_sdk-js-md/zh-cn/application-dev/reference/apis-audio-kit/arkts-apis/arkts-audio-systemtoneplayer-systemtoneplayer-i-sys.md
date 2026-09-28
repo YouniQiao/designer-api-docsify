@@ -8,6 +8,8 @@ export declare interface SystemTonePlayer
 
 **起始版本：** 11
 
+<!--Device-unnamed-export declare interface SystemTonePlayer--><!--Device-unnamed-export declare interface SystemTonePlayer-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -21,6 +23,8 @@ getAudioVolumeScale(): number
 获取当前音频音量大小，同步返回当前音量。
 
 **起始版本：** 13
+
+<!--Device-SystemTonePlayer-getAudioVolumeScale(): double--><!--Device-SystemTonePlayer-getAudioVolumeScale(): double-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -61,6 +65,8 @@ getHapticsFeature(): systemSoundManager.ToneHapticsFeature
 获取播放提示音时的振动风格，同步返回振动风格枚举值。
 
 **起始版本：** 13
+
+<!--Device-SystemTonePlayer-getHapticsFeature(): systemSoundManager.ToneHapticsFeature--><!--Device-SystemTonePlayer-getHapticsFeature(): systemSoundManager.ToneHapticsFeature-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -103,6 +109,8 @@ getSupportedHapticsFeatures(): Promise<Array<systemSoundManager.ToneHapticsFeatu
 
 **起始版本：** 13
 
+<!--Device-SystemTonePlayer-getSupportedHapticsFeatures(): Promise<Array<systemSoundManager.ToneHapticsFeature>>--><!--Device-SystemTonePlayer-getSupportedHapticsFeatures(): Promise<Array<systemSoundManager.ToneHapticsFeature>>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -139,6 +147,8 @@ getTitle(): Promise<string>
 获取提示音标题。使用Promise异步回调。
 
 **起始版本：** 11
+
+<!--Device-SystemTonePlayer-getTitle(): Promise<string>--><!--Device-SystemTonePlayer-getTitle(): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -178,6 +188,8 @@ off(type: 'playFinished', callback?: Callback<number>): void
 取消监听提示音播放完成事件。使用callback异步回调。
 
 **起始版本：** 18
+
+<!--Device-SystemTonePlayer-off(type: 'playFinished', callback?: Callback<int>): void--><!--Device-SystemTonePlayer-off(type: 'playFinished', callback?: Callback<int>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -222,6 +234,8 @@ off(type: 'error', callback?: ErrorCallback): void
 取消监听提示音播放过程中的错误事件。使用callback异步回调。
 
 **起始版本：** 18
+
+<!--Device-SystemTonePlayer-off(type: 'error', callback?: ErrorCallback): void--><!--Device-SystemTonePlayer-off(type: 'error', callback?: ErrorCallback): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -268,6 +282,8 @@ on(type: 'playFinished', streamId: number, callback: Callback<number>): void
 监听提示音播放完成事件（当提示音播放完成时触发）。使用callback异步回调。监听对象为传入的streamId对应音频流。当streamId传入0时，监听本播放器对应的所有音频流。
 
 **起始版本：** 18
+
+<!--Device-SystemTonePlayer-on(type: 'playFinished', streamId: int, callback: Callback<int>): void--><!--Device-SystemTonePlayer-on(type: 'playFinished', streamId: int, callback: Callback<int>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -318,6 +334,8 @@ on(type: 'error', callback: ErrorCallback): void
 
 **起始版本：** 18
 
+<!--Device-SystemTonePlayer-on(type: 'error', callback: ErrorCallback): void--><!--Device-SystemTonePlayer-on(type: 'error', callback: ErrorCallback): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -355,6 +373,8 @@ prepare(): Promise<void>
 准备播放提示音。使用Promise异步回调。
 
 **起始版本：** 11
+
+<!--Device-SystemTonePlayer-prepare(): Promise<void>--><!--Device-SystemTonePlayer-prepare(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -396,6 +416,8 @@ release(): Promise<void>
 
 **起始版本：** 11
 
+<!--Device-SystemTonePlayer-release(): Promise<void>--><!--Device-SystemTonePlayer-release(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -433,6 +455,8 @@ setAudioVolumeScale(scale: number): void
 设置音频音量大小，无返回结果。
 
 **起始版本：** 13
+
+<!--Device-SystemTonePlayer-setAudioVolumeScale(scale: double): void--><!--Device-SystemTonePlayer-setAudioVolumeScale(scale: double): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -477,6 +501,8 @@ setHapticsFeature(hapticsFeature: systemSoundManager.ToneHapticsFeature): void
 设置播放提示音时的振动风格。调用本接口前，应该先调用[getSupportedHapticsFeatures](#getsupportedhapticsfeatures)查询支持的振动风格，如果设置不支持的振动风格，则设置失败。
 
 **起始版本：** 13
+
+<!--Device-SystemTonePlayer-setHapticsFeature(hapticsFeature: systemSoundManager.ToneHapticsFeature): void--><!--Device-SystemTonePlayer-setHapticsFeature(hapticsFeature: systemSoundManager.ToneHapticsFeature): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -523,6 +549,8 @@ start(toneOptions?: SystemToneOptions): Promise<number>
 **起始版本：** 11
 
 **需要权限：** ohos.permission.VIBRATE
+
+<!--Device-SystemTonePlayer-start(toneOptions?: SystemToneOptions): Promise<int>--><!--Device-SystemTonePlayer-start(toneOptions?: SystemToneOptions): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -576,6 +604,8 @@ stop(id: number): Promise<void>
 停止播放提示音。使用Promise异步回调。
 
 **起始版本：** 11
+
+<!--Device-SystemTonePlayer-stop(id: int): Promise<void>--><!--Device-SystemTonePlayer-stop(id: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 

@@ -8,6 +8,8 @@ interface ScanFilter
 
 **起始版本：** 10
 
+<!--Device-ble-interface ScanFilter--><!--Device-ble-interface ScanFilter-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -33,6 +35,8 @@ irk?: Uint8Array
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ScanFilter-irk?: Uint8Array--><!--Device-ScanFilter-irk?: Uint8Array-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

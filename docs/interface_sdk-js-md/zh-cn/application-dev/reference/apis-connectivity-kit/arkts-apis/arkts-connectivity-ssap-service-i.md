@@ -8,6 +8,8 @@ interface Service
 
 **起始版本：** 26.0.0
 
+<!--Device-ssap-interface Service--><!--Device-ssap-interface Service-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## 导入模块
@@ -30,6 +32,8 @@ properties: Property[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Service-properties: Property[]--><!--Device-Service-properties: Property[]-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## serviceUuid
@@ -45,5 +49,7 @@ serviceUuid: string
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Service-serviceUuid: string--><!--Device-Service-serviceUuid: string-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base

@@ -24,6 +24,8 @@ function getBluetoothScanMode(): ScanMode
 
 **需要权限：** ohos.permission.USE_BLUETOOTH
 
+<!--Device-bluetooth-function getBluetoothScanMode(): ScanMode--><!--Device-bluetooth-function getBluetoothScanMode(): ScanMode-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **返回值：**

@@ -10,6 +10,8 @@ EntryIntentDecoratorInfo继承自[IntentDecoratorInfo](arkts-ability-app-ability
 
 **起始版本：** 20
 
+<!--Device-unnamed-declare interface EntryIntentDecoratorInfo extends IntentDecoratorInfo--><!--Device-unnamed-declare interface EntryIntentDecoratorInfo extends IntentDecoratorInfo-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块
@@ -34,6 +36,8 @@ abilityName: string
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-EntryIntentDecoratorInfo-abilityName: string--><!--Device-EntryIntentDecoratorInfo-abilityName: string-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## executeMode
@@ -51,5 +55,7 @@ The execute mode of the intent. For UIAbility, the parameter can be set to insig
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-EntryIntentDecoratorInfo-executeMode?: insightIntent.ExecuteMode[]--><!--Device-EntryIntentDecoratorInfo-executeMode?: insightIntent.ExecuteMode[]-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

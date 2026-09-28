@@ -8,6 +8,8 @@ interface DeathRecipient
 
 **起始版本：** 7
 
+<!--Device-rpc-interface DeathRecipient--><!--Device-rpc-interface DeathRecipient-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 ## 导入模块
@@ -25,6 +27,8 @@ onRemoteDied(): void
 在成功添加死亡通知订阅后，当远端对象死亡时，将自动调用本方法。
 
 **起始版本：** 7
+
+<!--Device-DeathRecipient-onRemoteDied(): void--><!--Device-DeathRecipient-onRemoteDied(): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 

@@ -4,11 +4,13 @@
 declare class CounterAttribute extends CommonMethod<CounterAttribute>
 ```
 
-In addition to the [universal attributes](arkts-arkui-common-comp.md#common), the following attributes are supported.
+In addition to the [universal attributes](arkts-arkui-common-comp.md), the following attributes are supported.
 
 **Inheritance/Implementation:** CounterAttribute extends CommonMethod<CounterAttribute>
 
 **Since:** 7
+
+<!--Device-unnamed-declare class CounterAttribute extends CommonMethod<CounterAttribute>--><!--Device-unnamed-declare class CounterAttribute extends CommonMethod<CounterAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,6 +27,8 @@ Sets whether to enable the decrement button.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-CounterAttribute-enableDec(value: boolean): CounterAttribute--><!--Device-CounterAttribute-enableDec(value: boolean): CounterAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -48,6 +52,8 @@ Sets whether to enable the increment button.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-CounterAttribute-enableInc(value: boolean): CounterAttribute--><!--Device-CounterAttribute-enableInc(value: boolean): CounterAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -70,6 +76,8 @@ Invoked when the value decreases.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-CounterAttribute-onDec(event: VoidCallback): CounterAttribute--><!--Device-CounterAttribute-onDec(event: VoidCallback): CounterAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -91,6 +99,8 @@ Invoked when the value increases.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-CounterAttribute-onInc(event: VoidCallback): CounterAttribute--><!--Device-CounterAttribute-onInc(event: VoidCallback): CounterAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

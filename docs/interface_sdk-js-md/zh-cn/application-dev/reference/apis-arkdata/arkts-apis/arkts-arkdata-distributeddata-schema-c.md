@@ -12,6 +12,8 @@ class Schema
 
 **替代接口：** Schema
 
+<!--Device-distributedData-class Schema--><!--Device-distributedData-class Schema-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 ## 导入模块
@@ -33,6 +35,8 @@ constructor()
 
 **替代接口：** constructor
 
+<!--Device-Schema-constructor()--><!--Device-Schema-constructor()-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 ## indexes
@@ -50,6 +54,8 @@ indexes: Array<string>
 **废弃版本：** 9
 
 **替代接口：** indexes
+
+<!--Device-Schema-indexes: Array<string>--><!--Device-Schema-indexes: Array<string>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
@@ -69,6 +75,8 @@ mode: number
 
 **替代接口：** mode
 
+<!--Device-Schema-mode: number--><!--Device-Schema-mode: number-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 ## root
@@ -87,6 +95,8 @@ root: FieldNode
 
 **替代接口：** root
 
+<!--Device-Schema-root: FieldNode--><!--Device-Schema-root: FieldNode-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 ## skip
@@ -104,5 +114,7 @@ Schema的跳跃大小。
 **废弃版本：** 9
 
 **替代接口：** skip
+
+<!--Device-Schema-skip: number--><!--Device-Schema-skip: number-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore

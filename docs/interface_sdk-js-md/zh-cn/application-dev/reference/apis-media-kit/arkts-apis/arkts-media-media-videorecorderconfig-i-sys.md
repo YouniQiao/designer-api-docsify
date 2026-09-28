@@ -10,6 +10,8 @@ interface VideoRecorderConfig
 
 **起始版本：** 9
 
+<!--Device-media-interface VideoRecorderConfig--><!--Device-media-interface VideoRecorderConfig-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ audioSourceType?: AudioSourceType
 
 **起始版本：** 9
 
+<!--Device-VideoRecorderConfig-audioSourceType?: AudioSourceType--><!--Device-VideoRecorderConfig-audioSourceType?: AudioSourceType-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
 **系统接口：** 此接口为系统接口。
@@ -47,6 +51,8 @@ location?: Location
 **类型：** [Location](arkts-media-media-location-i.md)
 
 **起始版本：** 9
+
+<!--Device-VideoRecorderConfig-location?: Location--><!--Device-VideoRecorderConfig-location?: Location-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
@@ -64,6 +70,8 @@ profile: VideoRecorderProfile
 
 **起始版本：** 9
 
+<!--Device-VideoRecorderConfig-profile: VideoRecorderProfile--><!--Device-VideoRecorderConfig-profile: VideoRecorderProfile-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
 **系统接口：** 此接口为系统接口。
@@ -79,6 +87,8 @@ rotation?: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-VideoRecorderConfig-rotation?: int--><!--Device-VideoRecorderConfig-rotation?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
@@ -96,6 +106,8 @@ url: string
 
 **起始版本：** 9
 
+<!--Device-VideoRecorderConfig-url: string--><!--Device-VideoRecorderConfig-url: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
 **系统接口：** 此接口为系统接口。
@@ -111,6 +123,8 @@ videoSourceType: VideoSourceType
 **类型：** [VideoSourceType](arkts-media-media-videosourcetype-e.md)
 
 **起始版本：** 9
+
+<!--Device-VideoRecorderConfig-videoSourceType: VideoSourceType--><!--Device-VideoRecorderConfig-videoSourceType: VideoSourceType-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 

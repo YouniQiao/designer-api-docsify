@@ -18,6 +18,8 @@ function on(type: 'abilityForegroundState', observer: AbilityForegroundStateObse
 
 **需要权限：** ohos.permission.RUNNING_STATE_OBSERVER
 
+<!--Device-abilityManager-function on(type: 'abilityForegroundState', observer: AbilityForegroundStateObserver): void--><!--Device-abilityManager-function on(type: 'abilityForegroundState', observer: AbilityForegroundStateObserver): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。

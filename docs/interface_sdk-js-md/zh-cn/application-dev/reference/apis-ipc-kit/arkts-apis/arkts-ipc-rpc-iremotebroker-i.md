@@ -8,6 +8,8 @@ interface IRemoteBroker
 
 **起始版本：** 7
 
+<!--Device-rpc-interface IRemoteBroker--><!--Device-rpc-interface IRemoteBroker-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 ## 导入模块
@@ -25,6 +27,8 @@ asObject(): IRemoteObject
 需派生类实现，获取代理或远端对象。
 
 **起始版本：** 7
+
+<!--Device-IRemoteBroker-asObject(): IRemoteObject--><!--Device-IRemoteBroker-asObject(): IRemoteObject-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 

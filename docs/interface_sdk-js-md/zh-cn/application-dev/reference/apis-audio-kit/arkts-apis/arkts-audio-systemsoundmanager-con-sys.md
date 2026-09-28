@@ -12,6 +12,8 @@ const TONE_CATEGORY_ALARM: number
 
 **起始版本：** 12
 
+<!--Device-systemSoundManager-const TONE_CATEGORY_ALARM: int--><!--Device-systemSoundManager-const TONE_CATEGORY_ALARM: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -27,6 +29,8 @@ const TONE_CATEGORY_CONTACTS: 16
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-systemSoundManager-const TONE_CATEGORY_CONTACTS: 16--><!--Device-systemSoundManager-const TONE_CATEGORY_CONTACTS: 16-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -44,6 +48,8 @@ const TONE_CATEGORY_NOTIFICATION: number
 
 **起始版本：** 12
 
+<!--Device-systemSoundManager-const TONE_CATEGORY_NOTIFICATION: int--><!--Device-systemSoundManager-const TONE_CATEGORY_NOTIFICATION: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -59,6 +65,8 @@ const TONE_CATEGORY_NOTIFICATION_APP: number
 **类型：** number
 
 **起始版本：** 22
+
+<!--Device-systemSoundManager-const TONE_CATEGORY_NOTIFICATION_APP: int--><!--Device-systemSoundManager-const TONE_CATEGORY_NOTIFICATION_APP: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -76,6 +84,8 @@ const TONE_CATEGORY_RINGTONE: number
 
 **起始版本：** 12
 
+<!--Device-systemSoundManager-const TONE_CATEGORY_RINGTONE: int--><!--Device-systemSoundManager-const TONE_CATEGORY_RINGTONE: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -91,6 +101,8 @@ const TONE_CATEGORY_TEXT_MESSAGE: number
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-systemSoundManager-const TONE_CATEGORY_TEXT_MESSAGE: int--><!--Device-systemSoundManager-const TONE_CATEGORY_TEXT_MESSAGE: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 

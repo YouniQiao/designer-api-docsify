@@ -18,6 +18,8 @@ function getTrafficStatsByUid(uidInfo: UidInfo, callback: AsyncCallback<NetStats
 
 **需要权限：** ohos.permission.GET_NETWORK_STATS
 
+<!--Device-statistics-function getTrafficStatsByUid(uidInfo: UidInfo, callback: AsyncCallback<NetStatsInfo>): void--><!--Device-statistics-function getTrafficStatsByUid(uidInfo: UidInfo, callback: AsyncCallback<NetStatsInfo>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -97,6 +99,8 @@ function getTrafficStatsByUid(uidInfo: UidInfo): Promise<NetStatsInfo>
 **起始版本：** 10
 
 **需要权限：** ohos.permission.GET_NETWORK_STATS
+
+<!--Device-statistics-function getTrafficStatsByUid(uidInfo: UidInfo): Promise<NetStatsInfo>--><!--Device-statistics-function getTrafficStatsByUid(uidInfo: UidInfo): Promise<NetStatsInfo>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 

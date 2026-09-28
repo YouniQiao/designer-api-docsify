@@ -18,6 +18,8 @@ function updateReminder(reminderId: number, reminderReq: ReminderRequest): Promi
 
 **需要权限：** ohos.permission.PUBLISH_AGENT_REMINDER
 
+<!--Device-reminderAgentManager-function updateReminder(reminderId: int, reminderReq: ReminderRequest): Promise<void>--><!--Device-reminderAgentManager-function updateReminder(reminderId: int, reminderReq: ReminderRequest): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 **参数：**

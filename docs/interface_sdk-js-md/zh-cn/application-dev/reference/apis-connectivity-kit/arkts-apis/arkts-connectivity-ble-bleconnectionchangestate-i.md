@@ -8,6 +8,8 @@ interface BLEConnectionChangeState
 
 **起始版本：** 10
 
+<!--Device-ble-interface BLEConnectionChangeState--><!--Device-ble-interface BLEConnectionChangeState-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -30,7 +32,9 @@ deviceId: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-BLEConnectionChangeState-deviceId: string--><!--Device-BLEConnectionChangeState-deviceId: string-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -48,7 +52,9 @@ GATT链路断连原因，仅在连接状态为 [STATE_DISCONNECTED](arkts-connec
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-BLEConnectionChangeState-reason?: GattDisconnectReason--><!--Device-BLEConnectionChangeState-reason?: GattDisconnectReason-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -66,7 +72,9 @@ GATT链路断连原因，仅在连接状态为 [STATE_DISCONNECTED](arkts-connec
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-BLEConnectionChangeState-reasonMessage?: string--><!--Device-BLEConnectionChangeState-reasonMessage?: string-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -84,6 +92,8 @@ GATT profile连接状态。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-BLEConnectionChangeState-state: ProfileConnectionState--><!--Device-BLEConnectionChangeState-state: ProfileConnectionState-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

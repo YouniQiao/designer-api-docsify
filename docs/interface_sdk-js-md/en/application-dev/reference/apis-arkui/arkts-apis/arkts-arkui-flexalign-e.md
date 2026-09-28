@@ -8,6 +8,8 @@ Sets the alignment mode of an element on the main axis of the container.
 
 **Since:** 7
 
+<!--Device-unnamed-declare enum FlexAlign--><!--Device-unnamed-declare enum FlexAlign-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Start
@@ -23,6 +25,8 @@ The child components are aligned with the start edge of the main axis. The first
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-FlexAlign-Start--><!--Device-FlexAlign-Start-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,6 +44,8 @@ The child components are aligned in the center of the main axis. The space betwe
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-FlexAlign-Center--><!--Device-FlexAlign-Center-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## End
@@ -55,6 +61,8 @@ The child components are aligned with the end edge of the main axis. The last co
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-FlexAlign-End--><!--Device-FlexAlign-End-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,6 +80,8 @@ The child components are evenly distributed along the main axis. The space betwe
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-FlexAlign-SpaceBetween--><!--Device-FlexAlign-SpaceBetween-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## SpaceAround
@@ -88,6 +98,8 @@ The child components are evenly distributed along the main axis. The space betwe
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-FlexAlign-SpaceAround--><!--Device-FlexAlign-SpaceAround-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## SpaceEvenly
@@ -103,5 +115,7 @@ The child components are evenly distributed along the main axis. The space betwe
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-FlexAlign-SpaceEvenly--><!--Device-FlexAlign-SpaceEvenly-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

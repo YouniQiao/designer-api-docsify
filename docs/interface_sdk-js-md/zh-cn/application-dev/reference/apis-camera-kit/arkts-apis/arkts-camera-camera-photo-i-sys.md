@@ -8,6 +8,8 @@ interface Photo
 
 **起始版本：** 11
 
+<!--Device-camera-interface Photo--><!--Device-camera-interface Photo-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ Depth data.
 
 **起始版本：** 13
 
+<!--Device-Photo-depthData?: DepthData--><!--Device-Photo-depthData?: DepthData-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -43,6 +47,8 @@ Raw image.
 **类型：** [image.Image](../../apis-image-kit/arkts-apis/arkts-image-image-image-i.md)
 
 **起始版本：** 12
+
+<!--Device-Photo-raw?: image.Image--><!--Device-Photo-raw?: image.Image-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

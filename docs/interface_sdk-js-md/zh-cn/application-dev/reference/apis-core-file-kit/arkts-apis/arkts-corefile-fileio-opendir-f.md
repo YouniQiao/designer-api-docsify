@@ -19,6 +19,8 @@ declare function opendir(path: string): Promise<Dir>
 
 **替代接口：** [listFile](arkts-corefile-file-fs-listfile-f.md)
 
+<!--Device-unnamed-declare function opendir(path: string): Promise<Dir>--><!--Device-unnamed-declare function opendir(path: string): Promise<Dir>-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -49,6 +51,8 @@ declare function opendir(path: string, callback: AsyncCallback<Dir>): void
 **废弃版本：** 9
 
 **替代接口：** [listFile](arkts-corefile-file-fs-listfile-f.md)
+
+<!--Device-unnamed-declare function opendir(path: string, callback: AsyncCallback<Dir>): void--><!--Device-unnamed-declare function opendir(path: string, callback: AsyncCallback<Dir>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

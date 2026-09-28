@@ -8,6 +8,8 @@ export enum HyperSnapErrorType
 
 **起始版本：** 26.0.1
 
+<!--Device-hyperSnapManager-export enum HyperSnapErrorType--><!--Device-hyperSnapManager-export enum HyperSnapErrorType-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## CREATE_SNAPSHOT
@@ -22,6 +24,8 @@ CREATE_SNAPSHOT = 0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HyperSnapErrorType-CREATE_SNAPSHOT = 0--><!--Device-HyperSnapErrorType-CREATE_SNAPSHOT = 0-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## FORK_FROM_SNAPSHOT
@@ -35,5 +39,7 @@ FORK_FROM_SNAPSHOT = 1
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HyperSnapErrorType-FORK_FROM_SNAPSHOT = 1--><!--Device-HyperSnapErrorType-FORK_FROM_SNAPSHOT = 1-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

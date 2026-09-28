@@ -14,6 +14,8 @@ Typeface类用于表示和管理字体对象。支持的字体操作包括：获
 
 **起始版本：** 11
 
+<!--Device-drawing-class Typeface--><!--Device-drawing-class Typeface-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## 导入模块
@@ -31,6 +33,8 @@ getFamilyName(): string
 获取字体的族名，即一套字体设计的名称。
 
 **起始版本：** 11
+
+<!--Device-Typeface-getFamilyName(): string--><!--Device-Typeface-getFamilyName(): string-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -60,6 +64,8 @@ isBold(): boolean
 
 **起始版本：** 23
 
+<!--Device-Typeface-isBold(): boolean--><!--Device-Typeface-isBold(): boolean-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
@@ -88,6 +94,8 @@ isItalic(): boolean
 
 **起始版本：** 23
 
+<!--Device-Typeface-isItalic(): boolean--><!--Device-Typeface-isItalic(): boolean-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
@@ -115,6 +123,8 @@ makeFromCurrent(typefaceArguments: TypefaceArguments): Typeface
 基于当前字体结合字体属性构造新的字体对象。
 
 **起始版本：** 20
+
+<!--Device-Typeface-makeFromCurrent(typefaceArguments: TypefaceArguments): Typeface--><!--Device-Typeface-makeFromCurrent(typefaceArguments: TypefaceArguments): Typeface-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -162,6 +172,8 @@ static makeFromFile(filePath: string): Typeface
 **起始版本：** 12
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Typeface-static makeFromFile(filePath: string): Typeface--><!--Device-Typeface-static makeFromFile(filePath: string): Typeface-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -214,6 +226,8 @@ static makeFromFileWithArguments(filePath: string, typefaceArguments: TypefaceAr
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
+<!--Device-Typeface-static makeFromFileWithArguments(filePath: string, typefaceArguments: TypefaceArguments): Typeface--><!--Device-Typeface-static makeFromFileWithArguments(filePath: string, typefaceArguments: TypefaceArguments): Typeface-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -261,6 +275,8 @@ static makeFromRawFile(rawfile: Resource): Typeface
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
+<!--Device-Typeface-static makeFromRawFile(rawfile: Resource): Typeface--><!--Device-Typeface-static makeFromRawFile(rawfile: Resource): Typeface-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -304,6 +320,8 @@ static makeFromRawFileWithArguments(rawfile: Resource, typefaceArguments: Typefa
 **起始版本：** 20
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Typeface-static makeFromRawFileWithArguments(rawfile: Resource, typefaceArguments: TypefaceArguments): Typeface--><!--Device-Typeface-static makeFromRawFileWithArguments(rawfile: Resource, typefaceArguments: TypefaceArguments): Typeface-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

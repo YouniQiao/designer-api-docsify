@@ -18,6 +18,8 @@ Get the version of Baseband.
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-radio-function getBasebandVersion(slotId: int, callback: AsyncCallback<string>): void--><!--Device-radio-function getBasebandVersion(slotId: int, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -70,6 +72,8 @@ Get the version of Baseband.
 **起始版本：** 10
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
+
+<!--Device-radio-function getBasebandVersion(slotId: int): Promise<string>--><!--Device-radio-function getBasebandVersion(slotId: int): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

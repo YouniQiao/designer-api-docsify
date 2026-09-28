@@ -20,6 +20,8 @@ function getAllowedPrinterIPAddressesForDevice(queryPolicy?: common.QueryPolicy)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-systemManager-function getAllowedPrinterIPAddressesForDevice(queryPolicy?: common.QueryPolicy): Array<string>--><!--Device-systemManager-function getAllowedPrinterIPAddressesForDevice(queryPolicy?: common.QueryPolicy): Array<string>-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**

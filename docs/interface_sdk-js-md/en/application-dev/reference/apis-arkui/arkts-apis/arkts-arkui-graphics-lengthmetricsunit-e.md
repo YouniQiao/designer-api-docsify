@@ -8,6 +8,8 @@ Enumerates length units.
 
 **Since:** 12
 
+<!--Device-unnamed-export enum LengthMetricsUnit--><!--Device-unnamed-export enum LengthMetricsUnit-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## DEFAULT
@@ -24,6 +26,8 @@ Length type, used to describe the length in units of the default vp.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LengthMetricsUnit-DEFAULT = 0--><!--Device-LengthMetricsUnit-DEFAULT = 0-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## PX
@@ -39,5 +43,7 @@ Length type, used to describe the length in units of px.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LengthMetricsUnit-PX = 1--><!--Device-LengthMetricsUnit-PX = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

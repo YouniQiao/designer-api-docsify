@@ -8,6 +8,8 @@ type Assets = collections.Array<Asset>
 
 **起始版本：** 12
 
+<!--Device-sendableRelationalStore-type Assets = collections.Array<Asset>--><!--Device-sendableRelationalStore-type Assets = collections.Array<Asset>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **类型：** [collections.Array](../../apis-arkts/arkts-apis/arkts-arkts-collections-array-c.md)&lt;[Asset](arkts-arkdata-sendablerelationalstore-asset-i.md)&gt;

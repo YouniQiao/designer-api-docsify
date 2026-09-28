@@ -8,6 +8,8 @@ enum DistributedType
 
 **起始版本：** 10
 
+<!--Device-relationalStore-enum DistributedType--><!--Device-relationalStore-enum DistributedType-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## DISTRIBUTED_DEVICE
@@ -19,6 +21,8 @@ DISTRIBUTED_DEVICE = 0
 表示在不同设备之间分布式的数据库表。
 
 **起始版本：** 10
+
+<!--Device-DistributedType-DISTRIBUTED_DEVICE = 0--><!--Device-DistributedType-DISTRIBUTED_DEVICE = 0-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -35,5 +39,7 @@ DISTRIBUTED_CLOUD = 1
 **需要权限：** 
 - API版本12+：N/A
 - API版本10-11：ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DistributedType-DISTRIBUTED_CLOUD = 1--><!--Device-DistributedType-DISTRIBUTED_CLOUD = 1-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client

@@ -8,6 +8,8 @@ export interface NetworkInfo
 
 **起始版本：** 22
 
+<!--Device-statistics-export interface NetworkInfo--><!--Device-statistics-export interface NetworkInfo-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ endTime: number
 
 **起始版本：** 22
 
+<!--Device-NetworkInfo-endTime: int--><!--Device-NetworkInfo-endTime: int-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## simId
@@ -44,6 +48,8 @@ SIM卡ID。默认值为uint32_t类型最大值。
 
 **起始版本：** 22
 
+<!--Device-NetworkInfo-simId?: int--><!--Device-NetworkInfo-simId?: int-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## startTime
@@ -57,6 +63,8 @@ startTime: number
 **类型：** number
 
 **起始版本：** 22
+
+<!--Device-NetworkInfo-startTime: int--><!--Device-NetworkInfo-startTime: int-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -73,5 +81,7 @@ type: NetBearType
 **类型：** [NetBearType](arkts-network-statistics-netbeartype-t.md)
 
 **起始版本：** 22
+
+<!--Device-NetworkInfo-type: NetBearType--><!--Device-NetworkInfo-type: NetBearType-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core

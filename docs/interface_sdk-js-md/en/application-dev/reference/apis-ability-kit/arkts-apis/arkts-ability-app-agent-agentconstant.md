@@ -6,6 +6,8 @@ This module provides constants for agent.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-unnamed-declare namespace agentConstant--><!--Device-unnamed-declare namespace agentConstant-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 ## Modules to Import

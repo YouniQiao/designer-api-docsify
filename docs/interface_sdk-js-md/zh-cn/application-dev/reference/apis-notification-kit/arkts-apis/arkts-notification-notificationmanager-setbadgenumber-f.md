@@ -18,6 +18,8 @@ function setBadgeNumber(badgeNumber: number, callback: AsyncCallback<void>): voi
 
 **起始版本：** 10
 
+<!--Device-notificationManager-function setBadgeNumber(badgeNumber: int, callback: AsyncCallback<void>): void--><!--Device-notificationManager-function setBadgeNumber(badgeNumber: int, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **参见：** [getActiveNotificationCount](arkts-notification-notificationmanager-getactivenotificationcount-f.md) 获取当前应用的通知数量。
@@ -70,6 +72,8 @@ function setBadgeNumber(badgeNumber: number): Promise<void>
 角标是应用桌面图标右上角显示的数字标识，用于提示用户有未处理的通知数量。设定后，桌面图标将显示对应角标数字。适用于需要在桌面图标上提示用户待处理消息数量的场景，如未读消息数、待办事项数等。
 
 **起始版本：** 10
+
+<!--Device-notificationManager-function setBadgeNumber(badgeNumber: int): Promise<void>--><!--Device-notificationManager-function setBadgeNumber(badgeNumber: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

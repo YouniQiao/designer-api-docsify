@@ -8,6 +8,8 @@ type HttpProxy = connection.HttpProxy
 
 **起始版本：** 12
 
+<!--Device-webSocket-type HttpProxy = connection.HttpProxy--><!--Device-webSocket-type HttpProxy = connection.HttpProxy-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **类型：** [connection.HttpProxy](arkts-network-connection-httpproxy-i.md)

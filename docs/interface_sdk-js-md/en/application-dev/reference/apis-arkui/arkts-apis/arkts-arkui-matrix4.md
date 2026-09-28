@@ -8,6 +8,8 @@ In Transformation, the [transform](../arkts-components/arkts-arkui-common-comp-c
 
 **Since:** 7
 
+<!--Device-unnamed-declare namespace matrix4--><!--Device-unnamed-declare namespace matrix4-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import

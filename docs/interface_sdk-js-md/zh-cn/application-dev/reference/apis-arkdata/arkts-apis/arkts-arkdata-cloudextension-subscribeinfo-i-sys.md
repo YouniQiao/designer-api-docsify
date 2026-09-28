@@ -8,6 +8,8 @@ export interface SubscribeInfo
 
 **起始版本：** 11
 
+<!--Device-cloudExtension-export interface SubscribeInfo--><!--Device-cloudExtension-export interface SubscribeInfo-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ expirationTime: number
 
 **起始版本：** 11
 
+<!--Device-SubscribeInfo-expirationTime: long--><!--Device-SubscribeInfo-expirationTime: long-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ subscribe: Record<string, Array<SubscribeId>>
 **类型：** Record&lt;string, Array&lt;[SubscribeId](arkts-arkdata-cloudextension-subscribeid-i-sys.md)&gt;&gt;
 
 **起始版本：** 11
+
+<!--Device-SubscribeInfo-subscribe: Record<string, Array<SubscribeId>>--><!--Device-SubscribeInfo-subscribe: Record<string, Array<SubscribeId>>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 

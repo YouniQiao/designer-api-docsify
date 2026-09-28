@@ -8,6 +8,8 @@ export interface RejectMessageOptions
 
 **起始版本：** 7
 
+<!--Device-call-export interface RejectMessageOptions--><!--Device-call-export interface RejectMessageOptions-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -29,6 +31,8 @@ messageContent: string
 **类型：** string
 
 **起始版本：** 7
+
+<!--Device-RejectMessageOptions-messageContent: string--><!--Device-RejectMessageOptions-messageContent: string-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 

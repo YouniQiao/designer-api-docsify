@@ -10,6 +10,8 @@ export declare interface MouseEvent extends InputEvent
 
 **起始版本：** 9
 
+<!--Device-unnamed-export declare interface MouseEvent extends InputEvent--><!--Device-unnamed-export declare interface MouseEvent extends InputEvent-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ action: Action
 
 **起始版本：** 9
 
+<!--Device-MouseEvent-action: Action--><!--Device-MouseEvent-action: Action-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## altKey
@@ -43,6 +47,8 @@ altKey: boolean
 **类型：** boolean
 
 **起始版本：** 9
+
+<!--Device-MouseEvent-altKey: boolean--><!--Device-MouseEvent-altKey: boolean-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -58,6 +64,8 @@ axes: AxisValue[]
 
 **起始版本：** 9
 
+<!--Device-MouseEvent-axes: AxisValue[]--><!--Device-MouseEvent-axes: AxisValue[]-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## button
@@ -71,6 +79,8 @@ button: Button
 **类型：** [Button](arkts-input-multimodalinput-mouseevent-button-e.md)
 
 **起始版本：** 9
+
+<!--Device-MouseEvent-button: Button--><!--Device-MouseEvent-button: Button-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -86,6 +96,8 @@ capsLock: boolean
 
 **起始版本：** 9
 
+<!--Device-MouseEvent-capsLock: boolean--><!--Device-MouseEvent-capsLock: boolean-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## ctrlKey
@@ -99,6 +111,8 @@ ctrlKey: boolean
 **类型：** boolean
 
 **起始版本：** 9
+
+<!--Device-MouseEvent-ctrlKey: boolean--><!--Device-MouseEvent-ctrlKey: boolean-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -114,6 +128,8 @@ fnKey: boolean
 
 **起始版本：** 9
 
+<!--Device-MouseEvent-fnKey: boolean--><!--Device-MouseEvent-fnKey: boolean-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## globalX
@@ -127,6 +143,8 @@ globalX?: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-MouseEvent-globalX?: int--><!--Device-MouseEvent-globalX?: int-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -142,6 +160,8 @@ globalY?: number
 
 **起始版本：** 20
 
+<!--Device-MouseEvent-globalY?: int--><!--Device-MouseEvent-globalY?: int-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## logoKey
@@ -155,6 +175,8 @@ logoKey: boolean
 **类型：** boolean
 
 **起始版本：** 9
+
+<!--Device-MouseEvent-logoKey: boolean--><!--Device-MouseEvent-logoKey: boolean-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -170,6 +192,8 @@ numLock: boolean
 
 **起始版本：** 9
 
+<!--Device-MouseEvent-numLock: boolean--><!--Device-MouseEvent-numLock: boolean-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## pressedButtons
@@ -183,6 +207,8 @@ pressedButtons: Button[]
 **类型：** [Button](arkts-input-multimodalinput-mouseevent-button-e.md)[]
 
 **起始版本：** 9
+
+<!--Device-MouseEvent-pressedButtons: Button[]--><!--Device-MouseEvent-pressedButtons: Button[]-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -198,6 +224,8 @@ pressedKeys: KeyCode[]
 
 **起始版本：** 9
 
+<!--Device-MouseEvent-pressedKeys: KeyCode[]--><!--Device-MouseEvent-pressedKeys: KeyCode[]-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## rawDeltaX
@@ -211,6 +239,8 @@ rawDeltaX: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-MouseEvent-rawDeltaX: int--><!--Device-MouseEvent-rawDeltaX: int-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -226,6 +256,8 @@ rawDeltaY: number
 
 **起始版本：** 9
 
+<!--Device-MouseEvent-rawDeltaY: int--><!--Device-MouseEvent-rawDeltaY: int-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## screenX
@@ -239,6 +271,8 @@ screenX: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-MouseEvent-screenX: int--><!--Device-MouseEvent-screenX: int-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -254,6 +288,8 @@ screenY: number
 
 **起始版本：** 9
 
+<!--Device-MouseEvent-screenY: int--><!--Device-MouseEvent-screenY: int-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## scrollLock
@@ -267,6 +303,8 @@ scrollLock: boolean
 **类型：** boolean
 
 **起始版本：** 9
+
+<!--Device-MouseEvent-scrollLock: boolean--><!--Device-MouseEvent-scrollLock: boolean-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -282,6 +320,8 @@ shiftKey: boolean
 
 **起始版本：** 9
 
+<!--Device-MouseEvent-shiftKey: boolean--><!--Device-MouseEvent-shiftKey: boolean-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## toolType
@@ -295,6 +335,8 @@ toolType: ToolType
 **类型：** [ToolType](arkts-input-multimodalinput-mouseevent-tooltype-e.md)
 
 **起始版本：** 11
+
+<!--Device-MouseEvent-toolType: ToolType--><!--Device-MouseEvent-toolType: ToolType-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -310,6 +352,8 @@ windowX: number
 
 **起始版本：** 9
 
+<!--Device-MouseEvent-windowX: int--><!--Device-MouseEvent-windowX: int-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## windowY
@@ -323,5 +367,7 @@ windowY: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-MouseEvent-windowY: int--><!--Device-MouseEvent-windowY: int-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core

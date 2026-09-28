@@ -8,6 +8,8 @@ enum AVErrorCode
 
 **起始版本：** 9
 
+<!--Device-media-enum AVErrorCode--><!--Device-media-enum AVErrorCode-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 ## AVERR_SESSION_NOT_EXIST
@@ -19,6 +21,8 @@ AVERR_SESSION_NOT_EXIST = 5400109
 表示传入的会话ID不存在。
 
 **起始版本：** 20
+
+<!--Device-AVErrorCode-AVERR_SESSION_NOT_EXIST = 5400109--><!--Device-AVErrorCode-AVERR_SESSION_NOT_EXIST = 5400109-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 

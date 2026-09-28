@@ -10,6 +10,8 @@ type ValueType = number | string | boolean
 
 **废弃版本：** 9
 
+<!--Device-storage-type ValueType = number | string | boolean--><!--Device-storage-type ValueType = number | string | boolean-End-->
+
 | 类型 | 说明 |
 | --- | --- |
 | number | 表示值类型为数字。 |

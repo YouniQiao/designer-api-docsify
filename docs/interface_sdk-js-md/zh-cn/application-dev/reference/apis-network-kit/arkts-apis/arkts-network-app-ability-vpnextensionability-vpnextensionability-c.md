@@ -10,6 +10,8 @@ VpnExtensionContext可直接作为VpnExtension的上下文环境，提供允许�
 
 **起始版本：** 11
 
+<!--Device-unnamed-export default class VpnExtensionAbility--><!--Device-unnamed-export default class VpnExtensionAbility-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块
@@ -33,6 +35,8 @@ onCreate(want: Want): void
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-VpnExtensionAbility-onCreate(want: Want): void--><!--Device-VpnExtensionAbility-onCreate(want: Want): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -67,6 +71,8 @@ onDestroy(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-VpnExtensionAbility-onDestroy(): void--><!--Device-VpnExtensionAbility-onDestroy(): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **示例**
@@ -94,5 +100,7 @@ context: VpnExtensionContext
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-VpnExtensionAbility-context: VpnExtensionContext--><!--Device-VpnExtensionAbility-context: VpnExtensionContext-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

@@ -4,13 +4,15 @@
 declare class LazyVGridLayoutAttribute extends LazyGridLayoutAttribute<LazyVGridLayoutAttribute>
 ```
 
-除支持[通用属性](arkts-arkui-common-comp.md#common)外，还支持以下属性：
+除支持[通用属性](arkts-arkui-common-comp.md)外，还支持以下属性：
 
-除支持[通用事件](arkts-arkui-common-comp.md#common)外，还支持以下事件：
+除支持[通用事件](arkts-arkui-common-comp.md)外，还支持以下事件：
 
 **继承/实现关系：** LazyVGridLayoutAttribute extends LazyGridLayoutAttribute<LazyVGridLayoutAttribute>
 
 **起始版本：** 19
+
+<!--Device-unnamed-declare class LazyVGridLayoutAttribute extends LazyGridLayoutAttribute<LazyVGridLayoutAttribute>--><!--Device-unnamed-declare class LazyVGridLayoutAttribute extends LazyGridLayoutAttribute<LazyVGridLayoutAttribute>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,6 +47,8 @@ auto-fit模式和auto-stretch模式只支持track-size为一个有效列宽值�
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-LazyVGridLayoutAttribute-columnsTemplate(value: string): LazyVGridLayoutAttribute--><!--Device-LazyVGridLayoutAttribute-columnsTemplate(value: string): LazyVGridLayoutAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

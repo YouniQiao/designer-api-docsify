@@ -20,6 +20,8 @@ function generateLocalOobData(transport: BluetoothTransport): Promise<OobData>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-connection-function generateLocalOobData(transport: BluetoothTransport): Promise<OobData>--><!--Device-connection-function generateLocalOobData(transport: BluetoothTransport): Promise<OobData>-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。

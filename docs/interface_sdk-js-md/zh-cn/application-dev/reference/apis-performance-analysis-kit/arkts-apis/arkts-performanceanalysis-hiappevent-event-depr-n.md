@@ -18,6 +18,8 @@ namespace Event
 
 **替代接口：** Event
 
+<!--Device-hiAppEvent-namespace Event--><!--Device-hiAppEvent-namespace Event-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 ## 导入模块

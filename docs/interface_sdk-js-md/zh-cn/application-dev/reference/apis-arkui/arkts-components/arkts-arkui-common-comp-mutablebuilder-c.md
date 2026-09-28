@@ -14,4 +14,6 @@ declare class MutableBuilder<Args extends Object[]> extends WrappedBuilder<Args>
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
+<!--Device-unnamed-declare class MutableBuilder<Args extends Object[]> extends WrappedBuilder<Args>--><!--Device-unnamed-declare class MutableBuilder<Args extends Object[]> extends WrappedBuilder<Args>-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

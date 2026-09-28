@@ -18,6 +18,8 @@ function getPolicyByUid(uid: number, callback: AsyncCallback<NetUidPolicy>): voi
 
 **需要权限：** ohos.permission.MANAGE_NET_STRATEGY
 
+<!--Device-policy-function getPolicyByUid(uid: int, callback: AsyncCallback<NetUidPolicy>): void--><!--Device-policy-function getPolicyByUid(uid: int, callback: AsyncCallback<NetUidPolicy>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -65,6 +67,8 @@ function getPolicyByUid(uid: number): Promise<NetUidPolicy>
 **起始版本：** 10
 
 **需要权限：** ohos.permission.MANAGE_NET_STRATEGY
+
+<!--Device-policy-function getPolicyByUid(uid: int): Promise<NetUidPolicy>--><!--Device-policy-function getPolicyByUid(uid: int): Promise<NetUidPolicy>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 

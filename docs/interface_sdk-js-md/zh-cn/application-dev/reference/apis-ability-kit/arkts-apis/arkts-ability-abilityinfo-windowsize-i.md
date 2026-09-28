@@ -10,6 +10,8 @@ export interface WindowSize
 
 **起始版本：** 9
 
+<!--Device-unnamed-export interface WindowSize--><!--Device-unnamed-export interface WindowSize-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## maxWindowHeight
@@ -24,7 +26,9 @@ readonly maxWindowHeight: number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WindowSize-readonly maxWindowHeight: long--><!--Device-WindowSize-readonly maxWindowHeight: long-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -40,7 +44,9 @@ readonly maxWindowRatio: number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WindowSize-readonly maxWindowRatio: double--><!--Device-WindowSize-readonly maxWindowRatio: double-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -56,7 +62,9 @@ readonly maxWindowWidth: number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WindowSize-readonly maxWindowWidth: long--><!--Device-WindowSize-readonly maxWindowWidth: long-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -72,7 +80,9 @@ readonly minWindowHeight: number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WindowSize-readonly minWindowHeight: long--><!--Device-WindowSize-readonly minWindowHeight: long-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -88,7 +98,9 @@ readonly minWindowRatio: number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WindowSize-readonly minWindowRatio: double--><!--Device-WindowSize-readonly minWindowRatio: double-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -104,6 +116,8 @@ readonly minWindowWidth: number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WindowSize-readonly minWindowWidth: long--><!--Device-WindowSize-readonly minWindowWidth: long-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core

@@ -8,6 +8,8 @@ interface CalendarAccount
 
 **起始版本：** 10
 
+<!--Device-calendarManager-interface CalendarAccount--><!--Device-calendarManager-interface CalendarAccount-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 ## 导入模块
@@ -30,6 +32,8 @@ displayName?: string
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-CalendarAccount-displayName?: string--><!--Device-CalendarAccount-displayName?: string-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 ## name
@@ -46,6 +50,8 @@ readonly name: string
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-CalendarAccount-readonly name: string--><!--Device-CalendarAccount-readonly name: string-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 ## type
@@ -61,5 +67,7 @@ type: CalendarType
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-CalendarAccount-type: CalendarType--><!--Device-CalendarAccount-type: CalendarType-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData

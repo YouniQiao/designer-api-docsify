@@ -28,6 +28,8 @@ declare function write(
 
 **替代接口：** [write](arkts-corefile-file-fs-write-f.md)
 
+<!--Device-unnamed-declare function write(  fd: number,  buffer: ArrayBuffer | string,  options?: {    offset?: number;    length?: number;    position?: number;    encoding?: string;  }): Promise<number>--><!--Device-unnamed-declare function write(  fd: number,  buffer: ArrayBuffer | string,  options?: {    offset?: number;    length?: number;    position?: number;    encoding?: string;  }): Promise<number>-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -60,6 +62,8 @@ declare function write(fd: number, buffer: ArrayBuffer | string, callback: Async
 **废弃版本：** 9
 
 **替代接口：** [write](arkts-corefile-file-fs-write-f.md)
+
+<!--Device-unnamed-declare function write(fd: number, buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void--><!--Device-unnamed-declare function write(fd: number, buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -97,6 +101,8 @@ declare function write(
 **废弃版本：** 9
 
 **替代接口：** [write](arkts-corefile-file-fs-write-f.md)
+
+<!--Device-unnamed-declare function write(  fd: number,  buffer: ArrayBuffer | string,  options: {    offset?: number;    length?: number;    position?: number;    encoding?: string;  },  callback: AsyncCallback<number>): void--><!--Device-unnamed-declare function write(  fd: number,  buffer: ArrayBuffer | string,  options: {    offset?: number;    length?: number;    position?: number;    encoding?: string;  },  callback: AsyncCallback<number>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

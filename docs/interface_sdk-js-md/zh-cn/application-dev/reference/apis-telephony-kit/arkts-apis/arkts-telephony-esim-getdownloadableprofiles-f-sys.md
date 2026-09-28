@@ -19,6 +19,8 @@ function getDownloadableProfiles(slotId: number, portIndex: number,
 
 **需要权限：** ohos.permission.GET_TELEPHONY_ESIM_STATE
 
+<!--Device-eSIM-function getDownloadableProfiles(slotId: int, portIndex: int,                                   forceDisableProfile: boolean): Promise<GetDownloadableProfilesResult>--><!--Device-eSIM-function getDownloadableProfiles(slotId: int, portIndex: int,                                   forceDisableProfile: boolean): Promise<GetDownloadableProfilesResult>-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。

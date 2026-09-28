@@ -25,6 +25,8 @@ MultiNavigation是一个支持分栏导航的组件，提供多层页面栈管�
 
 **装饰器类型：** @Component
 
+<!--Device-unnamed-export declare struct MultiNavigation--><!--Device-unnamed-export declare struct MultiNavigation-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -49,6 +51,8 @@ navDestination: NavDestinationBuildFunction
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
+<!--Device-MultiNavigation-navDestination: NavDestinationBuildFunction--><!--Device-MultiNavigation-navDestination: NavDestinationBuildFunction-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## onHomeShowOnTop
@@ -65,6 +69,8 @@ onHomeShowOnTop?: OnHomeShowOnTopCallback
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
+<!--Device-MultiNavigation-onHomeShowOnTop?: OnHomeShowOnTopCallback--><!--Device-MultiNavigation-onHomeShowOnTop?: OnHomeShowOnTopCallback-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## onNavigationModeChange
@@ -80,6 +86,8 @@ onNavigationModeChange?: OnNavigationModeChangeCallback
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-MultiNavigation-onNavigationModeChange?: OnNavigationModeChangeCallback--><!--Device-MultiNavigation-onNavigationModeChange?: OnNavigationModeChangeCallback-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -100,5 +108,7 @@ multiStack: MultiNavPathStack
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-MultiNavigation-multiStack: MultiNavPathStack--><!--Device-MultiNavigation-multiStack: MultiNavPathStack-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

@@ -8,6 +8,8 @@ ARGB格式的颜色描述。
 
 **起始版本：** 11
 
+<!--Device-common2D-interface Color--><!--Device-common2D-interface Color-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## 导入模块
@@ -28,7 +30,9 @@ alpha: number
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Color-alpha: int--><!--Device-Color-alpha: int-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -44,7 +48,9 @@ blue: number
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Color-blue: int--><!--Device-Color-blue: int-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -60,7 +66,9 @@ green: number
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Color-green: int--><!--Device-Color-green: int-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -76,6 +84,8 @@ red: number
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Color-red: int--><!--Device-Color-red: int-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing

@@ -21,6 +21,8 @@ function getSeniorModeStateForSelf(): Promise<boolean>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-accessibility-function getSeniorModeStateForSelf(): Promise<boolean>--><!--Device-accessibility-function getSeniorModeStateForSelf(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **返回值：**

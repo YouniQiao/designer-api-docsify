@@ -8,6 +8,8 @@ export interface NetworkSearchRealTimeResult
 
 **起始版本：** 23
 
+<!--Device-radio-export interface NetworkSearchRealTimeResult--><!--Device-radio-export interface NetworkSearchRealTimeResult-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ isFinish: boolean
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-NetworkSearchRealTimeResult-isFinish: boolean--><!--Device-NetworkSearchRealTimeResult-isFinish: boolean-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ networkInfos: Array<NetworkInformation>
 **起始版本：** 23
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-NetworkSearchRealTimeResult-networkInfos: Array<NetworkInformation>--><!--Device-NetworkSearchRealTimeResult-networkInfos: Array<NetworkInformation>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

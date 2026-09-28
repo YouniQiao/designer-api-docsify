@@ -26,6 +26,8 @@ function dial(phoneNumber: string, options: DialOptions, callback: AsyncCallback
 
 **需要权限：** ohos.permission.PLACE_CALL
 
+<!--Device-call-function dial(phoneNumber: string, options: DialOptions, callback: AsyncCallback<boolean>): void--><!--Device-call-function dial(phoneNumber: string, options: DialOptions, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **参数：**
@@ -71,6 +73,8 @@ function dial(phoneNumber: string, options?: DialOptions): Promise<boolean>
 **替代接口：** [dialCall](arkts-telephony-call-dialcall-f-sys.md)
 
 **需要权限：** ohos.permission.PLACE_CALL
+
+<!--Device-call-function dial(phoneNumber: string, options?: DialOptions): Promise<boolean>--><!--Device-call-function dial(phoneNumber: string, options?: DialOptions): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -124,6 +128,8 @@ function dial(phoneNumber: string, callback: AsyncCallback<boolean>): void
 **替代接口：** [dialCall](arkts-telephony-call-dialcall-f-sys.md)
 
 **需要权限：** ohos.permission.PLACE_CALL
+
+<!--Device-call-function dial(phoneNumber: string, callback: AsyncCallback<boolean>): void--><!--Device-call-function dial(phoneNumber: string, callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 

@@ -18,6 +18,8 @@ Creates a **ContentSlot** placeholder component for rendering components created
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ContentSlotInterface-(content: Content): ContentSlotAttribute--><!--Device-ContentSlotInterface-(content: Content): ContentSlotAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

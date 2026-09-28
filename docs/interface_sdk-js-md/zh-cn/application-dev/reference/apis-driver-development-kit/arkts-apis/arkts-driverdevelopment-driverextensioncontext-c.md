@@ -16,6 +16,8 @@ DriverExtensionContext模块提供DriverExtensionAbility实现中需要主动发
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare class DriverExtensionContext extends ExtensionContext--><!--Device-unnamed-declare class DriverExtensionContext extends ExtensionContext-End-->
+
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
 ## updateDriverState
@@ -29,6 +31,8 @@ updateDriverState(): void
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DriverExtensionContext-updateDriverState(): void--><!--Device-DriverExtensionContext-updateDriverState(): void-End-->
 
 **系统能力：** SystemCapability.Driver.ExternalDevice
 

@@ -28,6 +28,8 @@ Triggers vibration based on a specified duration. This API uses an asynchronous 
 
 **Required permissions:** ohos.permission.VIBRATE
 
+<!--Device-vibrator-function vibrate(duration: number, callback?: AsyncCallback<void>): void--><!--Device-vibrator-function vibrate(duration: number, callback?: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 **Parameters:**
@@ -76,6 +78,8 @@ Triggers vibration based on a specified duration. This API uses a promise to ret
 **Substitutes:** [startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration-1)(effect: VibrateEffect, attribute: VibrateAttribute)
 
 **Required permissions:** ohos.permission.VIBRATE
+
+<!--Device-vibrator-function vibrate(duration: number): Promise<void>--><!--Device-vibrator-function vibrate(duration: number): Promise<void>-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice
 
@@ -129,6 +133,8 @@ Triggers vibration based on a specified effect. This API uses a promise to retur
 
 **Required permissions:** ohos.permission.VIBRATE
 
+<!--Device-vibrator-function vibrate(effectId: EffectId): Promise<void>--><!--Device-vibrator-function vibrate(effectId: EffectId): Promise<void>-End-->
+
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 **Parameters:**
@@ -180,6 +186,8 @@ Triggers vibration based on a specified effect. This API uses an asynchronous ca
 **Substitutes:** [startVibration](arkts-sensorservice-vibrator-startvibration-f.md)(effect: VibrateEffect, attribute: VibrateAttribute, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.VIBRATE
+
+<!--Device-vibrator-function vibrate(effectId: EffectId, callback?: AsyncCallback<void>): void--><!--Device-vibrator-function vibrate(effectId: EffectId, callback?: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice
 

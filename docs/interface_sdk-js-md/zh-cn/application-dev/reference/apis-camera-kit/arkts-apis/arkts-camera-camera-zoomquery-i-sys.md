@@ -12,6 +12,8 @@ interface ZoomQuery
 
 **起始版本：** 12
 
+<!--Device-camera-interface ZoomQuery--><!--Device-camera-interface ZoomQuery-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
@@ -29,6 +31,8 @@ isZoomCenterPointSupported(): boolean
 Checks whether zoom center point is supported.
 
 **起始版本：** 20
+
+<!--Device-ZoomQuery-isZoomCenterPointSupported(): boolean--><!--Device-ZoomQuery-isZoomCenterPointSupported(): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

@@ -10,6 +10,8 @@ class ResultSet
 
 **起始版本：** 22
 
+<!--Device-photoAccessHelper-class ResultSet--><!--Device-photoAccessHelper-class ResultSet-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -29,6 +31,8 @@ close(): void
 关闭结果集，若不关闭可能会引起内存泄漏。
 
 **起始版本：** 22
+
+<!--Device-ResultSet-close(): void--><!--Device-ResultSet-close(): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -64,6 +68,8 @@ getRow(): ValuesBucket
 获取指定行的所有列值。
 
 **起始版本：** 22
+
+<!--Device-ResultSet-getRow(): ValuesBucket--><!--Device-ResultSet-getRow(): ValuesBucket-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -107,6 +113,8 @@ getValue(columnIndex: number): ValueType
 获取当前行中指定列的值。
 
 **起始版本：** 22
+
+<!--Device-ResultSet-getValue(columnIndex: int): ValueType--><!--Device-ResultSet-getValue(columnIndex: int): ValueType-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -158,6 +166,8 @@ goToFirstRow(): boolean
 
 **起始版本：** 22
 
+<!--Device-ResultSet-goToFirstRow(): boolean--><!--Device-ResultSet-goToFirstRow(): boolean-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -200,6 +210,8 @@ goToNextRow(): boolean
 
 **起始版本：** 22
 
+<!--Device-ResultSet-goToNextRow(): boolean--><!--Device-ResultSet-goToNextRow(): boolean-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -241,6 +253,8 @@ goToRow(position: number): boolean
 转到结果集的指定行。
 
 **起始版本：** 22
+
+<!--Device-ResultSet-goToRow(position: int): boolean--><!--Device-ResultSet-goToRow(position: int): boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -293,6 +307,8 @@ columnCount: number
 
 **起始版本：** 22
 
+<!--Device-ResultSet-columnCount: int--><!--Device-ResultSet-columnCount: int-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -308,6 +324,8 @@ isAtLastRow: boolean
 **类型：** boolean
 
 **起始版本：** 22
+
+<!--Device-ResultSet-isAtLastRow: boolean--><!--Device-ResultSet-isAtLastRow: boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -325,6 +343,8 @@ rowCount: number
 
 **起始版本：** 22
 
+<!--Device-ResultSet-rowCount: int--><!--Device-ResultSet-rowCount: int-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -340,6 +360,8 @@ rowIndex: number
 **类型：** number
 
 **起始版本：** 22
+
+<!--Device-ResultSet-rowIndex: int--><!--Device-ResultSet-rowIndex: int-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

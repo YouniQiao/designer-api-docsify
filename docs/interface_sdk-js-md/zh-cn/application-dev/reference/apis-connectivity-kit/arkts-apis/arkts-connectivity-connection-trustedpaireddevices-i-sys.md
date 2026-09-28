@@ -8,6 +8,8 @@ interface TrustedPairedDevices
 
 **起始版本：** 15
 
+<!--Device-connection-interface TrustedPairedDevices--><!--Device-connection-interface TrustedPairedDevices-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -31,6 +33,8 @@ trustedPairedDevices: Array<TrustedPairedDevice>
 **起始版本：** 15
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TrustedPairedDevices-trustedPairedDevices: Array<TrustedPairedDevice>--><!--Device-TrustedPairedDevices-trustedPairedDevices: Array<TrustedPairedDevice>-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

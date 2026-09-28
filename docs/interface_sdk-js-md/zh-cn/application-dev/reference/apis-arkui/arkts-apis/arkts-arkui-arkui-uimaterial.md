@@ -8,6 +8,8 @@
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-unnamed-declare namespace uiMaterial--><!--Device-unnamed-declare namespace uiMaterial-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -31,8 +33,8 @@ import { uiMaterial } from '@kit.ArkUI';
 
 | 名称 | 说明 |
 | --- | --- |
-| [convertToECMaterial](arkts-arkui-uimaterial-converttoecmaterial-f-sys.md) | 将一个[ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md)材质转换为适用于[EffectComponent](../arkts-components/arkts-arkui-effectcomponent-comp-sys.md#effect_component)的ImmersiveMaterial材质。与convertToECSubMaterial的区别：本方法转换后的材质适用于EffectComponent本身，且materialColor、applyShadow、interactive、lightEffect属性不会生效；convertToECSubMaterial转换后的材质适用于EffectComponent的子组件。两者通常配合使用，以实现材质效果绘制的合并优化。 |
-| [convertToECSubMaterial](arkts-arkui-uimaterial-converttoecsubmaterial-f-sys.md) | 将一个[ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md)材质转换为适用于[EffectComponent](../arkts-components/arkts-arkui-effectcomponent-comp-sys.md#effect_component)子组件的ImmersiveMaterial材质。 |
+| [convertToECMaterial](arkts-arkui-uimaterial-converttoecmaterial-f-sys.md) | 将一个[ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md)材质转换为适用于[EffectComponent](../arkts-components/arkts-arkui-effectcomponent-comp-sys.md)的ImmersiveMaterial材质。与convertToECSubMaterial的区别：本方法转换后的材质适用于EffectComponent本身，且materialColor、applyShadow、interactive、lightEffect属性不会生效；convertToECSubMaterial转换后的材质适用于EffectComponent的子组件。两者通常配合使用，以实现材质效果绘制的合并优化。 |
+| [convertToECSubMaterial](arkts-arkui-uimaterial-converttoecsubmaterial-f-sys.md) | 将一个[ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md)材质转换为适用于[EffectComponent](../arkts-components/arkts-arkui-effectcomponent-comp-sys.md)子组件的ImmersiveMaterial材质。 |
 <!--DelEnd-->
 
 ### 类

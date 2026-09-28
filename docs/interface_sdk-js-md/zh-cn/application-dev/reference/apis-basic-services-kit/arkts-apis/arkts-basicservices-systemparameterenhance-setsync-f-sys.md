@@ -24,6 +24,8 @@ function setSync(key: string, value: string): void
 
 **起始版本：** 9
 
+<!--Device-systemParameterEnhance-function setSync(key: string, value: string): void--><!--Device-systemParameterEnhance-function setSync(key: string, value: string): void-End-->
+
 **系统能力：** SystemCapability.Startup.SystemInfo
 
 **系统接口：** 此接口为系统接口。

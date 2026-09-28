@@ -18,6 +18,8 @@ function parse(text: string, reviver?: Transformer, options?: ParseOptions): ISe
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-ASON-function parse(text: string, reviver?: Transformer, options?: ParseOptions): ISendable | null--><!--Device-ASON-function parse(text: string, reviver?: Transformer, options?: ParseOptions): ISendable | null-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**

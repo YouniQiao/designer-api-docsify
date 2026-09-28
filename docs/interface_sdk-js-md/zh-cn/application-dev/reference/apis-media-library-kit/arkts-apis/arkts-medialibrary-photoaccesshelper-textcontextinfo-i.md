@@ -8,6 +8,8 @@ interface TextContextInfo
 
 **起始版本：** 12
 
+<!--Device-photoAccessHelper-interface TextContextInfo--><!--Device-photoAccessHelper-interface TextContextInfo-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ text?: string
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextContextInfo-text?: string--><!--Device-TextContextInfo-text?: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core

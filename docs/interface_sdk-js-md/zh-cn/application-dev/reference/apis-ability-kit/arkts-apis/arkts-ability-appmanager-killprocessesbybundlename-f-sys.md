@@ -20,6 +20,8 @@ function killProcessesByBundleName(bundleName: string): Promise<void>
 - API版本14+：ohos.permission.KILL_APP_PROCESSES or ohos.permission.CLEAN_BACKGROUND_PROCESSES
 - API版本9-13：ohos.permission.CLEAN_BACKGROUND_PROCESSES
 
+<!--Device-appManager-function killProcessesByBundleName(bundleName: string): Promise<void>--><!--Device-appManager-function killProcessesByBundleName(bundleName: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -82,6 +84,8 @@ function killProcessesByBundleName(bundleName: string, callback: AsyncCallback<v
 **需要权限：** 
 - API版本14+：ohos.permission.KILL_APP_PROCESSES or ohos.permission.CLEAN_BACKGROUND_PROCESSES
 - API版本9-13：ohos.permission.CLEAN_BACKGROUND_PROCESSES
+
+<!--Device-appManager-function killProcessesByBundleName(bundleName: string, callback: AsyncCallback<void>): void--><!--Device-appManager-function killProcessesByBundleName(bundleName: string, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

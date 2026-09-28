@@ -20,6 +20,8 @@ function prepare(callback: AsyncCallback<void>): void
 
 **替代接口：** [prepareCooperate](arkts-distributedservice-cooperate-preparecooperate-f-sys.md)(callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-cooperate-function prepare(callback: AsyncCallback<void>): void--><!--Device-cooperate-function prepare(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
 
 **系统接口：** 此接口为系统接口。
@@ -71,6 +73,8 @@ function prepare(): Promise<void>
 **废弃版本：** 11
 
 **替代接口：** [prepareCooperate](arkts-distributedservice-cooperate-preparecooperate-f-sys.md)()
+
+<!--Device-cooperate-function prepare(): Promise<void>--><!--Device-cooperate-function prepare(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
 

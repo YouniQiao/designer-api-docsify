@@ -8,6 +8,8 @@ declare interface CustomSpanDrawInfo
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare interface CustomSpanDrawInfo--><!--Device-unnamed-declare interface CustomSpanDrawInfo-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## baseline
@@ -27,6 +29,8 @@ baseline: number
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-CustomSpanDrawInfo-baseline: number--><!--Device-CustomSpanDrawInfo-baseline: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -48,6 +52,8 @@ lineBottom: number
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-CustomSpanDrawInfo-lineBottom: number--><!--Device-CustomSpanDrawInfo-lineBottom: number-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## lineTop
@@ -68,6 +74,8 @@ lineTop: number
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-CustomSpanDrawInfo-lineTop: number--><!--Device-CustomSpanDrawInfo-lineTop: number-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## x
@@ -87,5 +95,7 @@ x: number
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-CustomSpanDrawInfo-x: number--><!--Device-CustomSpanDrawInfo-x: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

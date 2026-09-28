@@ -20,6 +20,8 @@ function getDate(callback: AsyncCallback<Date>): void
 
 **替代接口：** new Date()
 
+<!--Device-systemDateTime-function getDate(callback: AsyncCallback<Date>): void--><!--Device-systemDateTime-function getDate(callback: AsyncCallback<Date>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Time
 
 **参数：**
@@ -69,6 +71,8 @@ function getDate(): Promise<Date>
 **废弃版本：** 10
 
 **替代接口：** new Date()
+
+<!--Device-systemDateTime-function getDate(): Promise<Date>--><!--Device-systemDateTime-function getDate(): Promise<Date>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Time
 

@@ -10,6 +10,8 @@ HashStream类是用于创建数据的哈希摘要的实用工具。由 [createHa
 
 **起始版本：** 12
 
+<!--Device-hash-class HashStream extends stream.Transform--><!--Device-hash-class HashStream extends stream.Transform-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## 导入模块
@@ -27,6 +29,8 @@ digest(): string
 计算传递给哈希处理的所有数据的摘要，返回最终的哈希值。
 
 **起始版本：** 12
+
+<!--Device-HashStream-digest(): string--><!--Device-HashStream-digest(): string-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -64,6 +68,8 @@ update(data: ArrayBuffer): void
 使用给定的数据更新哈希内容，可多次调用。每次调用的数据将被追加到已计算的哈希内容中，最终通过digest方法获取完整的哈希摘要。
 
 **起始版本：** 12
+
+<!--Device-HashStream-update(data: ArrayBuffer): void--><!--Device-HashStream-update(data: ArrayBuffer): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

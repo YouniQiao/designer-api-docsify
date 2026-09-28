@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare namespace print--><!--Device-unnamed-declare namespace print-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## 导入模块
@@ -68,8 +70,8 @@ import { print } from '@kit.BasicServicesKit';
 | [getPrinterDefaultPreferences](arkts-basicservices-print-getprinterdefaultpreferences-f-sys.md) | 按打印机ID获取默认首选项。 |
 | [getPrinterInfoById](arkts-basicservices-print-getprinterinfobyid-f-sys.md) | 根据打印机id获取打印机信息，使用Promise异步回调。 |
 | [getSharedHosts](arkts-basicservices-print-getsharedhosts-f-sys.md) | 获取所有可用的共享主机。 |
-| [notifyPrintService](arkts-basicservices-print-notifyprintservice-f-sys.md) | 将spooler关闭信息通知打印服务，使用callback异步回调。 |
-| [notifyPrintService](arkts-basicservices-print-notifyprintservice-f-sys.md) | 将spooler关闭信息通知打印服务，使用Promise异步回调。 |
+| notifyPrintService | 将spooler关闭信息通知打印服务，使用callback异步回调。 |
+| notifyPrintService | 将spooler关闭信息通知打印服务，使用Promise异步回调。 |
 | [notifyPrintServiceEvent](arkts-basicservices-print-notifyprintserviceevent-f-sys.md#notifyprintserviceevent) | 将打印应用相关事件通知打印服务，使用Promise异步回调。 |
 | [notifyPrintServiceEvent](arkts-basicservices-print-notifyprintserviceevent-f-sys.md#notifyprintserviceevent-1) | 将打印应用相关事件通知打印服务，使用Promise异步回调。 |
 | [off](arkts-basicservices-print-off-f-sys.md#offprinterstatechange) | 取消注册打印机状态变化事件回调，使用callback回调。 |

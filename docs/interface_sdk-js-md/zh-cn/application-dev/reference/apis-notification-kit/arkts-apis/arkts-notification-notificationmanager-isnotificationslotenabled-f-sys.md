@@ -18,6 +18,8 @@ function isNotificationSlotEnabled(bundle: BundleOption, type: SlotType, callbac
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function isNotificationSlotEnabled(bundle: BundleOption, type: SlotType, callback: AsyncCallback<boolean>): void--><!--Device-notificationManager-function isNotificationSlotEnabled(bundle: BundleOption, type: SlotType, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +79,8 @@ function isNotificationSlotEnabled(bundle: BundleOption, type: SlotType): Promis
 **起始版本：** 9
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function isNotificationSlotEnabled(bundle: BundleOption, type: SlotType): Promise<boolean>--><!--Device-notificationManager-function isNotificationSlotEnabled(bundle: BundleOption, type: SlotType): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

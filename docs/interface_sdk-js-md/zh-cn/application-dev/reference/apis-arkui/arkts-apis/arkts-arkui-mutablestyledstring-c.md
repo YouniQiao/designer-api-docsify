@@ -16,6 +16,8 @@ declare class MutableStyledString extends StyledString
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare class MutableStyledString extends StyledString--><!--Device-unnamed-declare class MutableStyledString extends StyledString-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## appendStyledString
@@ -31,6 +33,8 @@ appendStyledString(other: StyledString): void
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MutableStyledString-appendStyledString(other: StyledString): void--><!--Device-MutableStyledString-appendStyledString(other: StyledString): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -48,13 +52,15 @@ clearStyles(): void
 
 清除属性字符串对象的所有样式。
 
-被清空样式类型对象属性使用的是对应[Text](../arkts-components/arkts-arkui-text-comp.md#text)组件属性的设置值，若Text组件未设置值，则使用对应Text组件属性的默认值。
+被清空样式类型对象属性使用的是对应[Text](../arkts-components/arkts-arkui-text-comp.md)组件属性的设置值，若Text组件未设置值，则使用对应Text组件属性的默认值。
 
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MutableStyledString-clearStyles(): void--><!--Device-MutableStyledString-clearStyles(): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -71,6 +77,8 @@ insertString(start: number, other: string): void
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MutableStyledString-insertString(start: number, other: string): void--><!--Device-MutableStyledString-insertString(start: number, other: string): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -100,6 +108,8 @@ insertStyledString(start: number, other: StyledString): void
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MutableStyledString-insertStyledString(start: number, other: StyledString): void--><!--Device-MutableStyledString-insertStyledString(start: number, other: StyledString): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -132,6 +142,8 @@ removeString(start: number, length: number): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-MutableStyledString-removeString(start: number, length: number): void--><!--Device-MutableStyledString-removeString(start: number, length: number): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -155,7 +167,7 @@ removeStyle(start: number, length: number, styledKey: StyledStringKey): void
 
 清除指定范围内容的指定类型样式。
 
-被清空样式类型对象属性使用的是对应[Text](../arkts-components/arkts-arkui-text-comp.md#text)组件属性的设置值，若Text组件未设置值，则使用对应Text组件属性的默认值。
+被清空样式类型对象属性使用的是对应[Text](../arkts-components/arkts-arkui-text-comp.md)组件属性的设置值，若Text组件未设置值，则使用对应Text组件属性的默认值。
 
 当属性字符串中包含图片时，同样生效。
 
@@ -164,6 +176,8 @@ removeStyle(start: number, length: number, styledKey: StyledStringKey): void
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MutableStyledString-removeStyle(start: number, length: number, styledKey: StyledStringKey): void--><!--Device-MutableStyledString-removeStyle(start: number, length: number, styledKey: StyledStringKey): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -189,7 +203,7 @@ removeStyles(start: number, length: number): void
 
 清除指定范围内容的所有样式。
 
-被清空样式类型对象属性使用的是对应[Text](../arkts-components/arkts-arkui-text-comp.md#text)组件属性的设置值，若Text组件未设置值，则使用对应Text组件属性的默认值。
+被清空样式类型对象属性使用的是对应[Text](../arkts-components/arkts-arkui-text-comp.md)组件属性的设置值，若Text组件未设置值，则使用对应Text组件属性的默认值。
 
 当属性字符串中包含图片时，同样生效。
 
@@ -198,6 +212,8 @@ removeStyles(start: number, length: number): void
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MutableStyledString-removeStyles(start: number, length: number): void--><!--Device-MutableStyledString-removeStyles(start: number, length: number): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -227,6 +243,8 @@ replaceString(start: number, length: number, other: string): void
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MutableStyledString-replaceString(start: number, length: number, other: string): void--><!--Device-MutableStyledString-replaceString(start: number, length: number, other: string): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -258,6 +276,8 @@ replaceStyle(spanStyle: SpanStyle): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-MutableStyledString-replaceStyle(spanStyle: SpanStyle): void--><!--Device-MutableStyledString-replaceStyle(spanStyle: SpanStyle): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -285,6 +305,8 @@ replaceStyledString(start: number, length: number, other: StyledString): void
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MutableStyledString-replaceStyledString(start: number, length: number, other: StyledString): void--><!--Device-MutableStyledString-replaceStyledString(start: number, length: number, other: StyledString): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -315,6 +337,8 @@ setStyle(spanStyle: SpanStyle): void
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MutableStyledString-setStyle(spanStyle: SpanStyle): void--><!--Device-MutableStyledString-setStyle(spanStyle: SpanStyle): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

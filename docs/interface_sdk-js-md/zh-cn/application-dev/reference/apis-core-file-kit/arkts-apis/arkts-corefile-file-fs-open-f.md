@@ -18,6 +18,8 @@ declare function open(path: string, mode?: number): Promise<File>
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-unnamed-declare function open(path: string, mode?: number): Promise<File>--><!--Device-unnamed-declare function open(path: string, mode?: number): Promise<File>-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -80,6 +82,8 @@ declare function open(path: string, callback: AsyncCallback<File>): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-unnamed-declare function open(path: string, callback: AsyncCallback<File>): void--><!--Device-unnamed-declare function open(path: string, callback: AsyncCallback<File>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -136,6 +140,8 @@ declare function open(path: string, mode: number, callback: AsyncCallback<File>)
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-unnamed-declare function open(path: string, mode: number, callback: AsyncCallback<File>): void--><!--Device-unnamed-declare function open(path: string, mode: number, callback: AsyncCallback<File>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

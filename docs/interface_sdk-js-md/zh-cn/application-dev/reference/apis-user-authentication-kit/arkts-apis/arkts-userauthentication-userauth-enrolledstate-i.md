@@ -8,6 +8,8 @@ interface EnrolledState
 
 **起始版本：** 12
 
+<!--Device-userAuth-interface EnrolledState--><!--Device-userAuth-interface EnrolledState-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 ## 导入模块
@@ -30,7 +32,9 @@ credentialCount: number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-EnrolledState-credentialCount: int--><!--Device-EnrolledState-credentialCount: int-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -48,6 +52,8 @@ credentialDigest: number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-EnrolledState-credentialDigest: int--><!--Device-EnrolledState-credentialDigest: int-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core

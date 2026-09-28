@@ -27,6 +27,8 @@ Create TextClock component.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
+<!--Device-TextClockInterface-(options?: TextClockOptions): TextClockAttribute--><!--Device-TextClockInterface-(options?: TextClockOptions): TextClockAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

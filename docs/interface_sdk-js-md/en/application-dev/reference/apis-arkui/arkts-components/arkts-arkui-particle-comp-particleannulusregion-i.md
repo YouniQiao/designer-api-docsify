@@ -21,6 +21,8 @@ Configures the annular emitter area.
 
 **Since:** 20
 
+<!--Device-unnamed-declare interface ParticleAnnulusRegion--><!--Device-unnamed-declare interface ParticleAnnulusRegion-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## center
@@ -40,6 +42,8 @@ The coordinates of the center of the annulus
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-ParticleAnnulusRegion-center?: PositionT<LengthMetrics>--><!--Device-ParticleAnnulusRegion-center?: PositionT<LengthMetrics>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -61,6 +65,8 @@ The end angle of the annulus, in degree
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-ParticleAnnulusRegion-endAngle?: number--><!--Device-ParticleAnnulusRegion-endAngle?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## innerRadius
@@ -79,6 +85,8 @@ The inner radius of the annulus
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-ParticleAnnulusRegion-innerRadius: LengthMetrics--><!--Device-ParticleAnnulusRegion-innerRadius: LengthMetrics-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## outerRadius
@@ -96,6 +104,8 @@ The outer radius of the annulus
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-ParticleAnnulusRegion-outerRadius: LengthMetrics--><!--Device-ParticleAnnulusRegion-outerRadius: LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -116,5 +126,7 @@ The start angle of the annulus, in degree
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-ParticleAnnulusRegion-startAngle?: number--><!--Device-ParticleAnnulusRegion-startAngle?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

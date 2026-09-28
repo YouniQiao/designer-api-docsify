@@ -18,6 +18,8 @@ enum SecurityLevel
 
 **起始版本：** 9
 
+<!--Device-distributedKVStore-enum SecurityLevel--><!--Device-distributedKVStore-enum SecurityLevel-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## S1
@@ -31,6 +33,8 @@ S1
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SecurityLevel-S1--><!--Device-SecurityLevel-S1-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -46,6 +50,8 @@ S2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SecurityLevel-S2--><!--Device-SecurityLevel-S2-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## S3
@@ -60,6 +66,8 @@ S3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SecurityLevel-S3--><!--Device-SecurityLevel-S3-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## S4
@@ -73,5 +81,7 @@ S4
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SecurityLevel-S4--><!--Device-SecurityLevel-S4-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core

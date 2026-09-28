@@ -8,6 +8,8 @@ export interface AttachOptions
 
 **起始版本：** 19
 
+<!--Device-inputMethodEngine-export interface AttachOptions--><!--Device-inputMethodEngine-export interface AttachOptions-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## 导入模块
@@ -28,6 +30,8 @@ isSimpleKeyboardEnabled?: boolean
 
 **起始版本：** 20
 
+<!--Device-AttachOptions-isSimpleKeyboardEnabled?: boolean--><!--Device-AttachOptions-isSimpleKeyboardEnabled?: boolean-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## requestKeyboardReason
@@ -41,5 +45,7 @@ requestKeyboardReason?: RequestKeyboardReason
 **类型：** [RequestKeyboardReason](arkts-ime-inputmethodengine-requestkeyboardreason-e.md)
 
 **起始版本：** 19
+
+<!--Device-AttachOptions-requestKeyboardReason?: RequestKeyboardReason--><!--Device-AttachOptions-requestKeyboardReason?: RequestKeyboardReason-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework

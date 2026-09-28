@@ -8,6 +8,8 @@ Ability组件信息标志，指示需要获取的Ability组件信息的内容。
 
 **起始版本：** 20
 
+<!--Device-bundleManager-enum AbilityFlag--><!--Device-bundleManager-enum AbilityFlag-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## GET_ABILITY_INFO_DEFAULT
@@ -20,7 +22,9 @@ GET_ABILITY_INFO_DEFAULT = 0x00000000
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-AbilityFlag-GET_ABILITY_INFO_DEFAULT = 0x00000000--><!--Device-AbilityFlag-GET_ABILITY_INFO_DEFAULT = 0x00000000-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -34,7 +38,9 @@ GET_ABILITY_INFO_WITH_PERMISSION = 0x00000001
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_PERMISSION = 0x00000001--><!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_PERMISSION = 0x00000001-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -48,7 +54,9 @@ GET_ABILITY_INFO_WITH_APPLICATION = 0x00000002
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_APPLICATION = 0x00000002--><!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_APPLICATION = 0x00000002-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -62,7 +70,9 @@ GET_ABILITY_INFO_WITH_METADATA = 0x00000004
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_METADATA = 0x00000004--><!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_METADATA = 0x00000004-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -76,7 +86,9 @@ GET_ABILITY_INFO_WITH_DISABLE = 0x00000008
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_DISABLE = 0x00000008--><!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_DISABLE = 0x00000008-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -90,7 +102,9 @@ GET_ABILITY_INFO_ONLY_SYSTEM_APP = 0x00000010
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-AbilityFlag-GET_ABILITY_INFO_ONLY_SYSTEM_APP = 0x00000010--><!--Device-AbilityFlag-GET_ABILITY_INFO_ONLY_SYSTEM_APP = 0x00000010-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -104,7 +118,9 @@ GET_ABILITY_INFO_WITH_APP_LINKING = 0x00000040
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_APP_LINKING = 0x00000040--><!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_APP_LINKING = 0x00000040-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -118,6 +134,8 @@ GET_ABILITY_INFO_WITH_SKILL = 0x00000080
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_SKILL = 0x00000080--><!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_SKILL = 0x00000080-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core

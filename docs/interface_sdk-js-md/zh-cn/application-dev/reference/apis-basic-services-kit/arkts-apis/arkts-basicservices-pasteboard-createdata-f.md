@@ -16,7 +16,9 @@ function createData(mimeType: string, value: ValueType): PasteData
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-pasteboard-function createData(mimeType: string, value: ValueType): PasteData--><!--Device-pasteboard-function createData(mimeType: string, value: ValueType): PasteData-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -51,6 +53,8 @@ function createData(data: Record<string, ValueType>): PasteData
 构建一个包含多个类型数据的剪贴板内容对象，支持一次创建多个MIME类型的数据条目。调用此方法后，系统将解析Record中的多个key-value对，创建多个PasteDataRecord条目，首个MIME类型作为默认类型。非默认类型数据需通过[getData](arkts-basicservices-pasteboard-pastedatarecord-i.md#getdata)接口读取。应用需要将多种不同类型的数据(如文本、URI、HTML等)同时复制到剪贴板时，可使用此接口一次性构建包含多个MIME类型数据的剪贴板内容对象。
 
 **起始版本：** 14
+
+<!--Device-pasteboard-function createData(data: Record<string, ValueType>): PasteData--><!--Device-pasteboard-function createData(data: Record<string, ValueType>): PasteData-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 

@@ -10,6 +10,8 @@ Context模块提供了Ability或Application的上下文的基础能力，包括�
 
 **起始版本：** 6
 
+<!--Device-unnamed-export interface Context extends BaseContext--><!--Device-unnamed-export interface Context extends BaseContext-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## getAbilityInfo
@@ -23,6 +25,8 @@ getAbilityInfo(callback: AsyncCallback<AbilityInfo>): void
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-Context-getAbilityInfo(callback: AsyncCallback<AbilityInfo>): void--><!--Device-Context-getAbilityInfo(callback: AsyncCallback<AbilityInfo>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -46,6 +50,8 @@ getAbilityInfo(): Promise<AbilityInfo>
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-Context-getAbilityInfo(): Promise<AbilityInfo>--><!--Device-Context-getAbilityInfo(): Promise<AbilityInfo>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **返回值：**
@@ -66,6 +72,8 @@ getApplicationContext(): Context
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-Context-getApplicationContext(): Context--><!--Device-Context-getApplicationContext(): Context-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **返回值：**
@@ -85,6 +93,8 @@ getApplicationInfo(callback: AsyncCallback<ApplicationInfo>): void
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-Context-getApplicationInfo(callback: AsyncCallback<ApplicationInfo>): void--><!--Device-Context-getApplicationInfo(callback: AsyncCallback<ApplicationInfo>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -108,6 +118,8 @@ getApplicationInfo(): Promise<ApplicationInfo>
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-Context-getApplicationInfo(): Promise<ApplicationInfo>--><!--Device-Context-getApplicationInfo(): Promise<ApplicationInfo>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **返回值：**
@@ -127,6 +139,8 @@ getAppType(callback: AsyncCallback<string>): void
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-Context-getAppType(callback: AsyncCallback<string>): void--><!--Device-Context-getAppType(callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -150,6 +164,8 @@ getAppType(): Promise<string>
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-Context-getAppType(): Promise<string>--><!--Device-Context-getAppType(): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **返回值：**
@@ -169,6 +185,8 @@ getAppVersionInfo(callback: AsyncCallback<AppVersionInfo>): void
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-Context-getAppVersionInfo(callback: AsyncCallback<AppVersionInfo>): void--><!--Device-Context-getAppVersionInfo(callback: AsyncCallback<AppVersionInfo>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -192,6 +210,8 @@ getAppVersionInfo(): Promise<AppVersionInfo>
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-Context-getAppVersionInfo(): Promise<AppVersionInfo>--><!--Device-Context-getAppVersionInfo(): Promise<AppVersionInfo>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **返回值：**
@@ -211,6 +231,8 @@ getBundleName(callback: AsyncCallback<string>): void
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-Context-getBundleName(callback: AsyncCallback<string>): void--><!--Device-Context-getBundleName(callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -234,6 +256,8 @@ getBundleName(): Promise<string>
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-Context-getBundleName(): Promise<string>--><!--Device-Context-getBundleName(): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **返回值：**
@@ -253,6 +277,8 @@ getCacheDir(callback: AsyncCallback<string>): void
 **起始版本：** 6
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-Context-getCacheDir(callback: AsyncCallback<string>): void--><!--Device-Context-getCacheDir(callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -276,6 +302,8 @@ getCacheDir(): Promise<string>
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-Context-getCacheDir(): Promise<string>--><!--Device-Context-getCacheDir(): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **返回值：**
@@ -295,6 +323,8 @@ getCallingBundle(callback: AsyncCallback<string>): void
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-Context-getCallingBundle(callback: AsyncCallback<string>): void--><!--Device-Context-getCallingBundle(callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -318,6 +348,8 @@ getCallingBundle(): Promise<string>
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-Context-getCallingBundle(): Promise<string>--><!--Device-Context-getCallingBundle(): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **返回值：**
@@ -337,6 +369,8 @@ getDisplayOrientation(callback: AsyncCallback<bundle.DisplayOrientation>): void
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-Context-getDisplayOrientation(callback: AsyncCallback<bundle.DisplayOrientation>): void--><!--Device-Context-getDisplayOrientation(callback: AsyncCallback<bundle.DisplayOrientation>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -360,6 +394,8 @@ getDisplayOrientation(): Promise<bundle.DisplayOrientation>
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-Context-getDisplayOrientation(): Promise<bundle.DisplayOrientation>--><!--Device-Context-getDisplayOrientation(): Promise<bundle.DisplayOrientation>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **返回值：**
@@ -379,6 +415,8 @@ getElementName(callback: AsyncCallback<ElementName>): void
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-Context-getElementName(callback: AsyncCallback<ElementName>): void--><!--Device-Context-getElementName(callback: AsyncCallback<ElementName>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -402,6 +440,8 @@ getElementName(): Promise<ElementName>
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-Context-getElementName(): Promise<ElementName>--><!--Device-Context-getElementName(): Promise<ElementName>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **返回值：**
@@ -421,6 +461,8 @@ getFilesDir(callback: AsyncCallback<string>): void
 **起始版本：** 6
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-Context-getFilesDir(callback: AsyncCallback<string>): void--><!--Device-Context-getFilesDir(callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -444,6 +486,8 @@ getFilesDir(): Promise<string>
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-Context-getFilesDir(): Promise<string>--><!--Device-Context-getFilesDir(): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **返回值：**
@@ -463,6 +507,8 @@ getHapModuleInfo(callback: AsyncCallback<HapModuleInfo>): void
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-Context-getHapModuleInfo(callback: AsyncCallback<HapModuleInfo>): void--><!--Device-Context-getHapModuleInfo(callback: AsyncCallback<HapModuleInfo>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -486,6 +532,8 @@ getHapModuleInfo(): Promise<HapModuleInfo>
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-Context-getHapModuleInfo(): Promise<HapModuleInfo>--><!--Device-Context-getHapModuleInfo(): Promise<HapModuleInfo>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **返回值：**
@@ -505,6 +553,8 @@ getOrCreateDistributedDir(): Promise<string>
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-Context-getOrCreateDistributedDir(): Promise<string>--><!--Device-Context-getOrCreateDistributedDir(): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -528,6 +578,8 @@ getOrCreateDistributedDir(callback: AsyncCallback<string>): void
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-Context-getOrCreateDistributedDir(callback: AsyncCallback<string>): void--><!--Device-Context-getOrCreateDistributedDir(callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -547,6 +599,8 @@ getOrCreateLocalDir(): Promise<string>
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-Context-getOrCreateLocalDir(): Promise<string>--><!--Device-Context-getOrCreateLocalDir(): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -570,6 +624,8 @@ getOrCreateLocalDir(callback: AsyncCallback<string>): void
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-Context-getOrCreateLocalDir(callback: AsyncCallback<string>): void--><!--Device-Context-getOrCreateLocalDir(callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -589,6 +645,8 @@ getProcessInfo(callback: AsyncCallback<ProcessInfo>): void
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-Context-getProcessInfo(callback: AsyncCallback<ProcessInfo>): void--><!--Device-Context-getProcessInfo(callback: AsyncCallback<ProcessInfo>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -612,6 +670,8 @@ getProcessInfo(): Promise<ProcessInfo>
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-Context-getProcessInfo(): Promise<ProcessInfo>--><!--Device-Context-getProcessInfo(): Promise<ProcessInfo>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **返回值：**
@@ -631,6 +691,8 @@ getProcessName(callback: AsyncCallback<string>): void
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-Context-getProcessName(callback: AsyncCallback<string>): void--><!--Device-Context-getProcessName(callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -654,6 +716,8 @@ getProcessName(): Promise<string>
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-Context-getProcessName(): Promise<string>--><!--Device-Context-getProcessName(): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **返回值：**
@@ -673,6 +737,8 @@ isUpdatingConfigurations(callback: AsyncCallback<boolean>): void
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-Context-isUpdatingConfigurations(callback: AsyncCallback<boolean>): void--><!--Device-Context-isUpdatingConfigurations(callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -696,6 +762,8 @@ isUpdatingConfigurations(): Promise<boolean>
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-Context-isUpdatingConfigurations(): Promise<boolean>--><!--Device-Context-isUpdatingConfigurations(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **返回值：**
@@ -715,6 +783,8 @@ printDrawnCompleted(callback: AsyncCallback<void>): void
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-Context-printDrawnCompleted(callback: AsyncCallback<void>): void--><!--Device-Context-printDrawnCompleted(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -737,6 +807,8 @@ printDrawnCompleted(): Promise<void>
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-Context-printDrawnCompleted(): Promise<void>--><!--Device-Context-printDrawnCompleted(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -762,6 +834,8 @@ requestPermissionsFromUser(
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-Context-requestPermissionsFromUser(    permissions: Array<string>,    requestCode: number,    resultCallback: AsyncCallback<PermissionRequestResult>  ): void--><!--Device-Context-requestPermissionsFromUser(    permissions: Array<string>,    requestCode: number,    resultCallback: AsyncCallback<PermissionRequestResult>  ): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -769,7 +843,7 @@ requestPermissionsFromUser(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | permissions | Array&lt;string&gt; | 是 | 指示要请求的权限列表。此参数不能为null。 |
-| requestCode | number | 是 | 指示要传递给[PermissionRequestResult](arkts-ability-context-permissionrequestresult-depr-i.md#permissionrequestresult)的请求代码。 |
+| requestCode | number | 是 | 指示要传递给[PermissionRequestResult](arkts-ability-context-permissionrequestresult-depr-i.md)的请求代码。 |
 | resultCallback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PermissionRequestResult](arkts-ability-context-permissionrequestresult-depr-i.md)&gt; | 是 | 回调函数，返回授权结果信息。 |
 
 <a id="requestpermissionsfromuser-1"></a>
@@ -786,6 +860,8 @@ requestPermissionsFromUser(permissions: Array<string>, requestCode: number): Pro
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-Context-requestPermissionsFromUser(permissions: Array<string>, requestCode: number): Promise<PermissionRequestResult>--><!--Device-Context-requestPermissionsFromUser(permissions: Array<string>, requestCode: number): Promise<PermissionRequestResult>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -793,7 +869,7 @@ requestPermissionsFromUser(permissions: Array<string>, requestCode: number): Pro
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | permissions | Array&lt;string&gt; | 是 | 指示要请求的权限列表。此参数不能为null。 |
-| requestCode | number | 是 | 指示要传递给[PermissionRequestResult](arkts-ability-context-permissionrequestresult-depr-i.md#permissionrequestresult)的请求代码。 |
+| requestCode | number | 是 | 指示要传递给[PermissionRequestResult](arkts-ability-context-permissionrequestresult-depr-i.md)的请求代码。 |
 
 **返回值：**
 
@@ -812,6 +888,8 @@ setDisplayOrientation(orientation: bundle.DisplayOrientation, callback: AsyncCal
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-Context-setDisplayOrientation(orientation: bundle.DisplayOrientation, callback: AsyncCallback<void>): void--><!--Device-Context-setDisplayOrientation(orientation: bundle.DisplayOrientation, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -835,6 +913,8 @@ setDisplayOrientation(orientation: bundle.DisplayOrientation): Promise<void>
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-Context-setDisplayOrientation(orientation: bundle.DisplayOrientation): Promise<void>--><!--Device-Context-setDisplayOrientation(orientation: bundle.DisplayOrientation): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -861,6 +941,8 @@ verifyPermission(permission: string, options?: PermissionOptions): Promise<numbe
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-Context-verifyPermission(permission: string, options?: PermissionOptions): Promise<number>--><!--Device-Context-verifyPermission(permission: string, options?: PermissionOptions): Promise<number>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -891,6 +973,8 @@ verifyPermission(permission: string, options: PermissionOptions, callback: Async
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-Context-verifyPermission(permission: string, options: PermissionOptions, callback: AsyncCallback<number>): void--><!--Device-Context-verifyPermission(permission: string, options: PermissionOptions, callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -915,6 +999,8 @@ verifyPermission(permission: string, callback: AsyncCallback<number>): void
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-Context-verifyPermission(permission: string, callback: AsyncCallback<number>): void--><!--Device-Context-verifyPermission(permission: string, callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -937,6 +1023,8 @@ getExternalCacheDir(callback: AsyncCallback<string>): void
 **废弃版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-Context-getExternalCacheDir(callback: AsyncCallback<string>): void--><!--Device-Context-getExternalCacheDir(callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -962,6 +1050,8 @@ getExternalCacheDir(): Promise<string>
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-Context-getExternalCacheDir(): Promise<string>--><!--Device-Context-getExternalCacheDir(): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **返回值：**
@@ -983,6 +1073,8 @@ setShowOnLockScreen(show: boolean, callback: AsyncCallback<void>): void
 **废弃版本：** 9
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-Context-setShowOnLockScreen(show: boolean, callback: AsyncCallback<void>): void--><!--Device-Context-setShowOnLockScreen(show: boolean, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -1008,6 +1100,8 @@ setShowOnLockScreen(show: boolean): Promise<void>
 **废弃版本：** 9
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-Context-setShowOnLockScreen(show: boolean): Promise<void>--><!--Device-Context-setShowOnLockScreen(show: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -1039,6 +1133,8 @@ setWakeUpScreen(wakeUp: boolean, callback: AsyncCallback<void>): void
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-Context-setWakeUpScreen(wakeUp: boolean, callback: AsyncCallback<void>): void--><!--Device-Context-setWakeUpScreen(wakeUp: boolean, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -1065,6 +1161,8 @@ setWakeUpScreen(wakeUp: boolean): Promise<void>
 **替代接口：** setWakeUpScreen
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-Context-setWakeUpScreen(wakeUp: boolean): Promise<void>--><!--Device-Context-setWakeUpScreen(wakeUp: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

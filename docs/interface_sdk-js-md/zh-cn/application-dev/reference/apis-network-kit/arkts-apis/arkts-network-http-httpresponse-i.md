@@ -8,6 +8,8 @@ request方法回调函数的返回值类型。
 
 **起始版本：** 6
 
+<!--Device-http-export interface HttpResponse--><!--Device-http-export interface HttpResponse-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块
@@ -28,6 +30,8 @@ HTTP请求交互的详细信息。
 
 **起始版本：** 24
 
+<!--Device-HttpResponse-connectionExtraInfo?: ConnectionExtraInfo--><!--Device-HttpResponse-connectionExtraInfo?: ConnectionExtraInfo-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## cookies
@@ -42,7 +46,9 @@ cookies: string
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-HttpResponse-cookies: string--><!--Device-HttpResponse-cookies: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -63,7 +69,9 @@ header: Object
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-HttpResponse-header: Object--><!--Device-HttpResponse-header: Object-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -79,6 +87,8 @@ HTTP请求的各个阶段的耗时。
 
 **起始版本：** 11
 
+<!--Device-HttpResponse-performanceTiming: PerformanceTiming--><!--Device-HttpResponse-performanceTiming: PerformanceTiming-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## responseCode
@@ -93,7 +103,9 @@ responseCode: ResponseCode | number
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-HttpResponse-responseCode: ResponseCode | int--><!--Device-HttpResponse-responseCode: ResponseCode | int-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -116,7 +128,9 @@ HTTP请求根据响应头中content-type类型返回对应的响应格式内容�
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-HttpResponse-result: string | Object | ArrayBuffer--><!--Device-HttpResponse-result: string | Object | ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -132,6 +146,8 @@ resultType: HttpDataType
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-HttpResponse-resultType: HttpDataType--><!--Device-HttpResponse-resultType: HttpDataType-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack

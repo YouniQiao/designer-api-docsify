@@ -16,6 +16,8 @@ function createMessage(pdu: Array<number>, specification: string, callback: Asyn
 
 **起始版本：** 6
 
+<!--Device-sms-function createMessage(pdu: Array<int>, specification: string, callback: AsyncCallback<ShortMessage>): void--><!--Device-sms-function createMessage(pdu: Array<int>, specification: string, callback: AsyncCallback<ShortMessage>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **参数：**
@@ -66,6 +68,8 @@ function createMessage(pdu: Array<number>, specification: string): Promise<Short
 根据协议数据单元(PDU)和指定的短信协议创建短信实例。使用Promise异步回调。
 
 **起始版本：** 6
+
+<!--Device-sms-function createMessage(pdu: Array<int>, specification: string): Promise<ShortMessage>--><!--Device-sms-function createMessage(pdu: Array<int>, specification: string): Promise<ShortMessage>-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 

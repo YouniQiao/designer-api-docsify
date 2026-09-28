@@ -20,6 +20,8 @@ function createGlobalAudioLoopback(mode: AudioLoopbackMode, isController: boolea
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-audio-function createGlobalAudioLoopback(mode: AudioLoopbackMode, isController: boolean): Promise<AudioLoopback | null>--><!--Device-audio-function createGlobalAudioLoopback(mode: AudioLoopbackMode, isController: boolean): Promise<AudioLoopback | null>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **系统接口：** 此接口为系统接口。

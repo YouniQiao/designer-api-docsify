@@ -12,6 +12,8 @@ CommonScrollableMethod
 
 **Since:** 12
 
+<!--Device-unnamed-declare class ScrollableCommonMethod<T> extends CommonMethod<T>--><!--Device-unnamed-declare class ScrollableCommonMethod<T> extends CommonMethod<T>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## autoAdjustScrollBarMargin
@@ -29,6 +31,8 @@ When the automatic margin adjustment feature is enabled, the scrolling direction
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ScrollableCommonMethod-autoAdjustScrollBarMargin(enable: boolean | undefined): T--><!--Device-ScrollableCommonMethod-autoAdjustScrollBarMargin(enable: boolean | undefined): T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -60,6 +64,8 @@ When a status bar touch event is received, the scrollable component on the curre
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-ScrollableCommonMethod-backToTop(backToTop: boolean): T--><!--Device-ScrollableCommonMethod-backToTop(backToTop: boolean): T-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -82,13 +88,15 @@ clipContent(clip: ContentClipMode | RectShape): T
 
 Sets the content clipping area for this scrollable component.
 
-Since API version 26.0.0, child components within the content-layer clipping area can be displayed normally. In versions earlier than API version 26.0.0, when the content-layer clipping area of the [List](arkts-arkui-list-comp.md#list) component is larger than the component itself, child components that are completely outside the component area but within the clipping area are not displayed by default. To display them, set the **show** parameter of the **cachedCount** attribute of the component to **true**. However, because the preloaded child components set by the **cachedCount** attribute are executed only in idle time slots, flickering may occur due to untimely updates in scenarios such as component size changes and data updates.
+Since API version 26.0.0, child components within the content-layer clipping area can be displayed normally. In versions earlier than API version 26.0.0, when the content-layer clipping area of the [List](arkts-arkui-list-comp.md) component is larger than the component itself, child components that are completely outside the component area but within the clipping area are not displayed by default. To display them, set the **show** parameter of the **cachedCount** attribute of the component to **true**. However, because the preloaded child components set by the **cachedCount** attribute are executed only in idle time slots, flickering may occur due to untimely updates in scenarios such as component size changes and data updates.
 
 **Since:** 14
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-ScrollableCommonMethod-clipContent(clip: ContentClipMode | RectShape): T--><!--Device-ScrollableCommonMethod-clipContent(clip: ContentClipMode | RectShape): T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -120,6 +128,8 @@ If the combined value of contentStartOffset and contentEndOffset exceeds the scr
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-ScrollableCommonMethod-contentEndOffset(offset: number | Resource): T--><!--Device-ScrollableCommonMethod-contentEndOffset(offset: number | Resource): T-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -150,6 +160,8 @@ If the combined value of contentStartOffset and contentEndOffset exceeds the scr
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-ScrollableCommonMethod-contentStartOffset(offset: number | Resource): T--><!--Device-ScrollableCommonMethod-contentStartOffset(offset: number | Resource): T-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -172,13 +184,15 @@ digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>): T
 
 Sets the sensitivity of the digital crown's response to events.
 
-A component must have focus to receive [crown events](arkts-arkui-common-comp.md#common). Focus control can be managed using [focusable](arkts-arkui-common-comp-commonmethod-c.md#focusable), [defaultFocus](arkts-arkui-common-comp-commonmethod-c.md#defaultfocus), and [focusOnTouch](arkts-arkui-common-comp-commonmethod-c.md#focusontouch).
+A component must have focus to receive [crown events](arkts-arkui-common-comp.md). Focus control can be managed using [focusable](arkts-arkui-common-comp-commonmethod-c.md#focusable), [defaultFocus](arkts-arkui-common-comp-commonmethod-c.md#defaultfocus), and [focusOnTouch](arkts-arkui-common-comp-commonmethod-c.md#focusontouch).
 
 **Since:** 18
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ScrollableCommonMethod-digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>): T--><!--Device-ScrollableCommonMethod-digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>): T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -207,6 +221,8 @@ Sets the effect used when the scroll boundary is reached.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ScrollableCommonMethod-edgeEffect(edgeEffect: EdgeEffect, options?: EdgeEffectOptions): T--><!--Device-ScrollableCommonMethod-edgeEffect(edgeEffect: EdgeEffect, options?: EdgeEffectOptions): T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -237,6 +253,8 @@ Sets whether to support scroll gestures.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ScrollableCommonMethod-enableScrollInteraction(value: boolean): T--><!--Device-ScrollableCommonMethod-enableScrollInteraction(value: boolean): T-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -264,6 +282,8 @@ Sets whether to support scrolling by dragging with the left mouse button pressed
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ScrollableCommonMethod-enableScrollWithMouse(enabled: boolean | undefined): T--><!--Device-ScrollableCommonMethod-enableScrollWithMouse(enabled: boolean | undefined): T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -327,6 +347,8 @@ Sets whether to enable the edge fading effect and the length of the fading edge.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-ScrollableCommonMethod-fadingEdge(enabled: Optional<boolean>, options?: FadingEdgeOptions): T--><!--Device-ScrollableCommonMethod-fadingEdge(enabled: Optional<boolean>, options?: FadingEdgeOptions): T-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -366,6 +388,8 @@ Sets the maximum initial speed for inertial animation after a fling gesture.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ScrollableCommonMethod-flingSpeedLimit(speedLimit: number): T--><!--Device-ScrollableCommonMethod-flingSpeedLimit(speedLimit: number): T-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -394,6 +418,8 @@ Sets the friction coefficient. It takes effect when the scroll area is swiped ma
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ScrollableCommonMethod-friction(value: number | Resource): T--><!--Device-ScrollableCommonMethod-friction(value: number | Resource): T-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -421,6 +447,8 @@ Sets the nested scrolling mode in the forward and backward directions to impleme
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ScrollableCommonMethod-nestedScroll(value: NestedScrollOptions): T--><!--Device-ScrollableCommonMethod-nestedScroll(value: NestedScrollOptions): T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -456,6 +484,8 @@ Triggered when the scrollable component scrolls. The return value is the offset 
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-ScrollableCommonMethod-onDidScroll(handler: OnScrollCallback): T--><!--Device-ScrollableCommonMethod-onDidScroll(handler: OnScrollCallback): T-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -485,6 +515,8 @@ Called when the scrollable component stops being dragged.
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 21.
+
+<!--Device-ScrollableCommonMethod-onDidStopDragging(handler: OnDidStopDraggingCallback): T--><!--Device-ScrollableCommonMethod-onDidStopDragging(handler: OnDidStopDraggingCallback): T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -516,6 +548,8 @@ Triggered when the inertial animation of the scrollable component ends. It is no
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 21.
 
+<!--Device-ScrollableCommonMethod-onDidStopFling(handler: VoidCallback): T--><!--Device-ScrollableCommonMethod-onDidStopFling(handler: VoidCallback): T-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -546,6 +580,8 @@ Triggered once when the scrollable component is initialized and is already at th
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ScrollableCommonMethod-onReachEnd(event: () => void): T--><!--Device-ScrollableCommonMethod-onReachEnd(event: () => void): T-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -575,6 +611,8 @@ This event is triggered once when the component is initialized and once when the
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ScrollableCommonMethod-onReachStart(event: () => void): T--><!--Device-ScrollableCommonMethod-onReachStart(event: () => void): T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -610,6 +648,8 @@ operations.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ScrollableCommonMethod-onScrollStart(event: () => void): T--><!--Device-ScrollableCommonMethod-onScrollStart(event: () => void): T-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -644,6 +684,8 @@ operations.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ScrollableCommonMethod-onScrollStop(event: () => void): T--><!--Device-ScrollableCommonMethod-onScrollStop(event: () => void): T-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -666,7 +708,7 @@ onWillScroll(handler: Optional<OnWillScrollCallback>): T
 
 Triggered before the scrollable component scrolls. Comparison with [onDidScroll](#ondidscroll): **onWillScroll** is triggered before scrolling occurs and can specify the offset to be scrolled through its return value, making it suitable for scenarios where scrolling needs to be intercepted or customized; **onDidScroll **is triggered when scrolling occurs and returns the actual scroll offset and scrolling state of the current frame, making it suitable for scenarios where only the scrolling process needs to be monitored. The two can be used together.
 
-Called to return the offset to be scrolled in the current frame, the current scroll state, and the source of the scroll operation. The offset returned in the callback is the calculated offset to be scrolled, not the final actual scroll offset. You can specify the offset to be scrolled by the scrollable component through the return value of this callback. The parameter type of the [onWillScroll](arkts-arkui-scroll-comp-attribute.md#onwillscroll) API of the [Scroll](arkts-arkui-scroll-comp.md#scroll) component is [ScrollOnWillScrollCallback](arkts-arkui-scroll-comp-scrollonwillscrollcallback-t.md).
+Called to return the offset to be scrolled in the current frame, the current scroll state, and the source of the scroll operation. The offset returned in the callback is the calculated offset to be scrolled, not the final actual scroll offset. You can specify the offset to be scrolled by the scrollable component through the return value of this callback. The parameter type of the [onWillScroll](arkts-arkui-scroll-comp-attribute.md#onwillscroll) API of the [Scroll](arkts-arkui-scroll-comp.md) component is [ScrollOnWillScrollCallback](arkts-arkui-scroll-comp-scrollonwillscrollcallback-t.md).
 
 > **NOTE:** 
 > 
@@ -679,6 +721,8 @@ Called to return the offset to be scrolled in the current frame, the current scr
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ScrollableCommonMethod-onWillScroll(handler: Optional<OnWillScrollCallback>): T--><!--Device-ScrollableCommonMethod-onWillScroll(handler: Optional<OnWillScrollCallback>): T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -709,6 +753,8 @@ Triggered when the scrollable component starts to be dragged.
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 21.
+
+<!--Device-ScrollableCommonMethod-onWillStartDragging(handler: VoidCallback): T--><!--Device-ScrollableCommonMethod-onWillStartDragging(handler: VoidCallback): T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -746,6 +792,8 @@ Triggered when the scrollable component is about to initiate an inertial animati
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 21.
 
+<!--Device-ScrollableCommonMethod-onWillStartFling(handler: VoidCallback): T--><!--Device-ScrollableCommonMethod-onWillStartFling(handler: VoidCallback): T-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -776,6 +824,8 @@ Triggered when the scrollable component is released. It is not triggered for scr
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 20.
 
+<!--Device-ScrollableCommonMethod-onWillStopDragging(handler: OnWillStopDraggingCallback): T--><!--Device-ScrollableCommonMethod-onWillStopDragging(handler: OnWillStopDraggingCallback): T-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -804,6 +854,8 @@ Sets the scrollbar state.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ScrollableCommonMethod-scrollBar(barState: BarState): T--><!--Device-ScrollableCommonMethod-scrollBar(barState: BarState): T-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -831,6 +883,8 @@ Sets the scrollbar color.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ScrollableCommonMethod-scrollBarColor(color: Color | number | string): T--><!--Device-ScrollableCommonMethod-scrollBarColor(color: Color | number | string): T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -861,6 +915,8 @@ Sets the scrollbar color. Compared with [scrollBarColor&lt;sup&gt;11+&lt;/sup&gt
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-ScrollableCommonMethod-scrollBarColor(color: Color | number | string | Resource): T--><!--Device-ScrollableCommonMethod-scrollBarColor(color: Color | number | string | Resource): T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -898,6 +954,8 @@ If this API is not called, the height of the scrollbar track adapts to the heigh
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ScrollableCommonMethod-scrollBarHeight(height: LengthMetrics | undefined): T--><!--Device-ScrollableCommonMethod-scrollBarHeight(height: LengthMetrics | undefined): T-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -926,6 +984,8 @@ Sets the margin of the scrollbar. The margin is calculated based on the distance
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-ScrollableCommonMethod-scrollBarMargin(margin: ScrollBarMargin): T--><!--Device-ScrollableCommonMethod-scrollBarMargin(margin: ScrollBarMargin): T-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -953,6 +1013,8 @@ Sets the width of the scrollbar. Percentage values are not supported. After the 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ScrollableCommonMethod-scrollBarWidth(value: number | string): T--><!--Device-ScrollableCommonMethod-scrollBarWidth(value: number | string): T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -986,6 +1048,8 @@ If this API is not used, the scrollbar width is 4 vp.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ScrollableCommonMethod-scrollBarWidth(value: number | string | Resource): T--><!--Device-ScrollableCommonMethod-scrollBarWidth(value: number | string | Resource): T-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1017,6 +1081,8 @@ Triggered when the scrollable component scrolls.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ScrollableCommonMethod-onScroll(event: (scrollOffset: number, scrollState: ScrollState) => void): T--><!--Device-ScrollableCommonMethod-onScroll(event: (scrollOffset: number, scrollState: ScrollState) => void): T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

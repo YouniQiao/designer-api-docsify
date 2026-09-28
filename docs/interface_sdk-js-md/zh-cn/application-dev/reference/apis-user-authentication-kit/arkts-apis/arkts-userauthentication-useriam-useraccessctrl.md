@@ -10,6 +10,8 @@
 
 **起始版本：** 18
 
+<!--Device-unnamed-declare namespace userAccessCtrl--><!--Device-unnamed-declare namespace userAccessCtrl-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 ## 导入模块

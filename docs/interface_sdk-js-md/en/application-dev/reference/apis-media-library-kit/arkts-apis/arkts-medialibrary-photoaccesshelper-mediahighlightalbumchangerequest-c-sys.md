@@ -10,6 +10,8 @@ Provides APIs for managing the media album change request. It inherits from [Med
 
 **Since:** 21
 
+<!--Device-photoAccessHelper-class MediaHighlightAlbumChangeRequest extends MediaAnalysisAlbumChangeRequest--><!--Device-photoAccessHelper-class MediaHighlightAlbumChangeRequest extends MediaAnalysisAlbumChangeRequest-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -29,6 +31,8 @@ constructor(album: Album)
 Constructor.
 
 **Since:** 21
+
+<!--Device-MediaHighlightAlbumChangeRequest-constructor(album: Album)--><!--Device-MediaHighlightAlbumChangeRequest-constructor(album: Album)-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -83,6 +87,8 @@ Sets the specified attribute value in the highlights album.
 **Since:** 21
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-MediaHighlightAlbumChangeRequest-setHighlightAttribute(attribute: HighlightAlbumChangeAttribute, value: string): void--><!--Device-MediaHighlightAlbumChangeRequest-setHighlightAttribute(attribute: HighlightAlbumChangeAttribute, value: string): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

@@ -8,6 +8,8 @@ abstract class IRemoteObject
 
 **起始版本：** 7
 
+<!--Device-rpc-abstract class IRemoteObject--><!--Device-rpc-abstract class IRemoteObject-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 ## 导入模块
@@ -25,6 +27,8 @@ getDescriptor(): string
 获取对象的接口描述符，接口描述符为字符串。
 
 **起始版本：** 9
+
+<!--Device-IRemoteObject-getDescriptor(): string--><!--Device-IRemoteObject-getDescriptor(): string-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -49,6 +53,8 @@ getLocalInterface(descriptor: string): IRemoteBroker
 查询接口描述符的字符串。
 
 **起始版本：** 9
+
+<!--Device-IRemoteObject-getLocalInterface(descriptor: string): IRemoteBroker--><!--Device-IRemoteObject-getLocalInterface(descriptor: string): IRemoteBroker-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -80,6 +86,8 @@ isObjectDead(): boolean
 
 **起始版本：** 7
 
+<!--Device-IRemoteObject-isObjectDead(): boolean--><!--Device-IRemoteObject-isObjectDead(): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -97,6 +105,8 @@ registerDeathRecipient(recipient: DeathRecipient, flags: number): void
 注册用于接收远程对象死亡通知的回调。
 
 **起始版本：** 9
+
+<!--Device-IRemoteObject-registerDeathRecipient(recipient: DeathRecipient, flags: int): void--><!--Device-IRemoteObject-registerDeathRecipient(recipient: DeathRecipient, flags: int): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -129,6 +139,8 @@ sendMessageRequest(
 Sends a [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) message to the peer process asynchronously. <p>If options indicates the asynchronous mode, a promise will be fulfilled immediately and the reply message does not contain any content. If options indicates the synchronous mode, a promise will be fulfilled when the response to sendMessageRequest is returned, and the reply message contains the returned information.
 
 **起始版本：** 9
+
+<!--Device-IRemoteObject-sendMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption    ): Promise<RequestResult>--><!--Device-IRemoteObject-sendMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption    ): Promise<RequestResult>-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -171,6 +183,8 @@ Sends a [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) message to the pee
 
 **起始版本：** 9
 
+<!--Device-IRemoteObject-sendMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption,      callback: AsyncCallback<RequestResult>    ): void--><!--Device-IRemoteObject-sendMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption,      callback: AsyncCallback<RequestResult>    ): void-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -198,6 +212,8 @@ unregisterDeathRecipient(recipient: DeathRecipient, flags: number): void
 注销用于接收远程对象死亡通知的回调。
 
 **起始版本：** 9
+
+<!--Device-IRemoteObject-unregisterDeathRecipient(recipient: DeathRecipient, flags: int): void--><!--Device-IRemoteObject-unregisterDeathRecipient(recipient: DeathRecipient, flags: int): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -230,6 +246,8 @@ addDeathRecipient(recipient: DeathRecipient, flags: number): boolean
 
 **替代接口：** registerDeathRecipient(recipient: DeathRecipient, flags: number)
 
+<!--Device-IRemoteObject-addDeathRecipient(recipient: DeathRecipient, flags: number): boolean--><!--Device-IRemoteObject-addDeathRecipient(recipient: DeathRecipient, flags: number): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -259,6 +277,8 @@ getInterfaceDescriptor(): string
 
 **替代接口：** getDescriptor()
 
+<!--Device-IRemoteObject-getInterfaceDescriptor(): string--><!--Device-IRemoteObject-getInterfaceDescriptor(): string-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -280,6 +300,8 @@ queryLocalInterface(descriptor: string): IRemoteBroker
 **废弃版本：** 9
 
 **替代接口：** getLocalInterface(descriptor: string)
+
+<!--Device-IRemoteObject-queryLocalInterface(descriptor: string): IRemoteBroker--><!--Device-IRemoteObject-queryLocalInterface(descriptor: string): IRemoteBroker-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -309,6 +331,8 @@ removeDeathRecipient(recipient: DeathRecipient, flags: number): boolean
 
 **替代接口：** unregisterDeathRecipient(recipient: DeathRecipient, flags: number)
 
+<!--Device-IRemoteObject-removeDeathRecipient(recipient: DeathRecipient, flags: number): boolean--><!--Device-IRemoteObject-removeDeathRecipient(recipient: DeathRecipient, flags: number): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -337,6 +361,8 @@ sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: Me
 **废弃版本：** 9
 
 **替代接口：** sendMessageRequest(code: number, data: MessageSequence, reply: MessageSequence, options: MessageOption)
+
+<!--Device-IRemoteObject-sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean--><!--Device-IRemoteObject-sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -374,6 +400,8 @@ sendRequest(
 
 **替代接口：** sendMessageRequest(code: number, data: MessageSequence, reply: MessageSequence, options: MessageOption)
 
+<!--Device-IRemoteObject-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption    ): Promise<SendRequestResult>--><!--Device-IRemoteObject-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption    ): Promise<SendRequestResult>-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -410,6 +438,8 @@ sendRequest(
 **废弃版本：** 9
 
 **替代接口：** sendMessageRequest(code: number, data: MessageSequence, reply: MessageSequence, options: MessageOption, callback: AsyncCallback&lt;RequestResult&gt;)
+
+<!--Device-IRemoteObject-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption,      callback: AsyncCallback<SendRequestResult>    ): void--><!--Device-IRemoteObject-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption,      callback: AsyncCallback<SendRequestResult>    ): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 

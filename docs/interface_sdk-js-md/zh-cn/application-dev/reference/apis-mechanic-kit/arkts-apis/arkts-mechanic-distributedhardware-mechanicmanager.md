@@ -6,6 +6,8 @@
 
 **起始版本：** 20
 
+<!--Device-unnamed-declare namespace mechanicManager--><!--Device-unnamed-declare namespace mechanicManager-End-->
+
 **系统能力：** SystemCapability.Mechanic.Core
 
 ## 导入模块

@@ -18,6 +18,8 @@ function compare(buf1: FastBuffer | Uint8Array, buf2: FastBuffer | Uint8Array): 
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-fastbuffer-function compare(buf1: FastBuffer | Uint8Array, buf2: FastBuffer | Uint8Array): -1 | 0 | 1--><!--Device-fastbuffer-function compare(buf1: FastBuffer | Uint8Array, buf2: FastBuffer | Uint8Array): -1 | 0 | 1-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**

@@ -10,6 +10,8 @@ enum SensorAccuracy
 
 **起始版本：** 11
 
+<!--Device-sensor-enum SensorAccuracy--><!--Device-sensor-enum SensorAccuracy-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## ACCURACY_UNRELIABLE
@@ -22,7 +24,9 @@ ACCURACY_UNRELIABLE = 0
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SensorAccuracy-ACCURACY_UNRELIABLE = 0--><!--Device-SensorAccuracy-ACCURACY_UNRELIABLE = 0-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -36,7 +40,9 @@ ACCURACY_LOW = 1
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SensorAccuracy-ACCURACY_LOW = 1--><!--Device-SensorAccuracy-ACCURACY_LOW = 1-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -50,7 +56,9 @@ ACCURACY_MEDIUM = 2
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SensorAccuracy-ACCURACY_MEDIUM = 2--><!--Device-SensorAccuracy-ACCURACY_MEDIUM = 2-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -64,6 +72,8 @@ ACCURACY_HIGH = 3
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SensorAccuracy-ACCURACY_HIGH = 3--><!--Device-SensorAccuracy-ACCURACY_HIGH = 3-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor

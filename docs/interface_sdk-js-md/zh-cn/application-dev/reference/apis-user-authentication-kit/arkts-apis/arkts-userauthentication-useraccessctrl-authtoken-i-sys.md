@@ -8,6 +8,8 @@ interface AuthToken
 
 **起始版本：** 18
 
+<!--Device-userAccessCtrl-interface AuthToken--><!--Device-userAccessCtrl-interface AuthToken-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ authTrustLevel: userAuth.AuthTrustLevel
 
 **起始版本：** 18
 
+<!--Device-AuthToken-authTrustLevel: userAuth.AuthTrustLevel--><!--Device-AuthToken-authTrustLevel: userAuth.AuthTrustLevel-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ authType: userAuth.UserAuthType
 **类型：** [userAuth.UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md)
 
 **起始版本：** 18
+
+<!--Device-AuthToken-authType: userAuth.UserAuthType--><!--Device-AuthToken-authType: userAuth.UserAuthType-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -62,6 +68,8 @@ challenge: Uint8Array
 
 **起始版本：** 18
 
+<!--Device-AuthToken-challenge: Uint8Array--><!--Device-AuthToken-challenge: Uint8Array-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +85,8 @@ credentialId?: bigint
 **类型：** bigint
 
 **起始版本：** 18
+
+<!--Device-AuthToken-credentialId?: bigint--><!--Device-AuthToken-credentialId?: bigint-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -94,6 +104,8 @@ enrolledId?: bigint
 
 **起始版本：** 18
 
+<!--Device-AuthToken-enrolledId?: bigint--><!--Device-AuthToken-enrolledId?: bigint-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -109,6 +121,8 @@ secureUid?: bigint
 **类型：** bigint
 
 **起始版本：** 18
+
+<!--Device-AuthToken-secureUid?: bigint--><!--Device-AuthToken-secureUid?: bigint-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -126,6 +140,8 @@ AuthToken签发后经过的时间。自AuthToken签发至当前的时间间隔�
 
 **起始版本：** 18
 
+<!--Device-AuthToken-timeInterval: bigint--><!--Device-AuthToken-timeInterval: bigint-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -142,6 +158,8 @@ tokenType: AuthTokenType
 
 **起始版本：** 18
 
+<!--Device-AuthToken-tokenType: AuthTokenType--><!--Device-AuthToken-tokenType: AuthTokenType-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -157,6 +175,8 @@ userId: number
 **类型：** number
 
 **起始版本：** 18
+
+<!--Device-AuthToken-userId: int--><!--Device-AuthToken-userId: int-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 

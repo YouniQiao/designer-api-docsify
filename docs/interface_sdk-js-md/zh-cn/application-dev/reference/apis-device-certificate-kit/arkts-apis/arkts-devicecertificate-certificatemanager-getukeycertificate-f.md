@@ -18,6 +18,8 @@ function getUkeyCertificate(keyUri: string, ukeyInfo: UkeyInfo): Promise<CMResul
 
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER
 
+<!--Device-certificateManager-function getUkeyCertificate(keyUri: string, ukeyInfo: UkeyInfo): Promise<CMResult>--><!--Device-certificateManager-function getUkeyCertificate(keyUri: string, ukeyInfo: UkeyInfo): Promise<CMResult>-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
 
 **参数：**

@@ -8,6 +8,8 @@ interface Filter
 
 **起始版本：** 9
 
+<!--Device-effectKit-interface Filter--><!--Device-effectKit-interface Filter-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## 导入模块
@@ -30,9 +32,11 @@ blur(radius: number): Filter
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-Filter-blur(radius: double): Filter--><!--Device-Filter-blur(radius: double): Filter-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -130,6 +134,8 @@ blur(radius: number, tileMode: TileMode): Filter
 
 **起始版本：** 14
 
+<!--Device-Filter-blur(radius: double, tileMode: TileMode): Filter--><!--Device-Filter-blur(radius: double, tileMode: TileMode): Filter-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
@@ -221,9 +227,11 @@ brightness(bright: number): Filter
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-Filter-brightness(bright: double): Filter--><!--Device-Filter-brightness(bright: double): Filter-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -319,9 +327,11 @@ getEffectPixelMap(): Promise<image.PixelMap>
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-Filter-getEffectPixelMap(): Promise<image.PixelMap>--><!--Device-Filter-getEffectPixelMap(): Promise<image.PixelMap>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -373,9 +383,11 @@ getEffectPixelMap(useCpuRender : boolean): Promise<image.PixelMap>
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本20开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-Filter-getEffectPixelMap(useCpuRender : boolean): Promise<image.PixelMap>--><!--Device-Filter-getEffectPixelMap(useCpuRender : boolean): Promise<image.PixelMap>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -427,9 +439,11 @@ grayscale(): Filter
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-Filter-grayscale(): Filter--><!--Device-Filter-grayscale(): Filter-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -513,6 +527,8 @@ invert(): Filter
 
 **起始版本：** 12
 
+<!--Device-Filter-invert(): Filter--><!--Device-Filter-invert(): Filter-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **返回值：**
@@ -594,6 +610,8 @@ setColorMatrix(colorMatrix: Array<number>): Filter
 通过自定义颜色矩阵对图像进行颜色变换处理，将效果添加到效果链表中，返回链表的实例。常用于实现预设滤镜不支持的自定义颜色效果，如复古色调、冷暖色调调整等场景。
 
 **起始版本：** 12
+
+<!--Device-Filter-setColorMatrix(colorMatrix: Array<double>): Filter--><!--Device-Filter-setColorMatrix(colorMatrix: Array<double>): Filter-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -703,6 +721,8 @@ getPixelMap(): image.PixelMap
 **废弃版本：** 11
 
 **替代接口：** [getEffectPixelMap](#geteffectpixelmap)
+
+<!--Device-Filter-getPixelMap(): image.PixelMap--><!--Device-Filter-getPixelMap(): image.PixelMap-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 

@@ -8,6 +8,8 @@ Provides a mapping list between the original weight value of a font and the actu
 
 **Since:** 11
 
+<!--Device-font-interface UIFontAdjustInfo--><!--Device-font-interface UIFontAdjustInfo-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -34,6 +36,8 @@ The value options can be **100**, **400**, **700**, and **900**.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-UIFontAdjustInfo-to: number--><!--Device-UIFontAdjustInfo-to: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## weight
@@ -53,5 +57,7 @@ The value options can be **50**, **80**, **100**, and **200**.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIFontAdjustInfo-weight: number--><!--Device-UIFontAdjustInfo-weight: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

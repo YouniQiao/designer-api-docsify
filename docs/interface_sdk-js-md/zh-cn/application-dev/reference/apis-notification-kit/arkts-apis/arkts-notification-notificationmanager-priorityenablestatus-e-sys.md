@@ -8,6 +8,8 @@ export enum PriorityEnableStatus
 
 **起始版本：** 23
 
+<!--Device-notificationManager-export enum PriorityEnableStatus--><!--Device-notificationManager-export enum PriorityEnableStatus-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -21,6 +23,8 @@ DISABLE = 0
 应用通知的优先级开关为关闭状态。
 
 **起始版本：** 23
+
+<!--Device-PriorityEnableStatus-DISABLE = 0--><!--Device-PriorityEnableStatus-DISABLE = 0-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -36,6 +40,8 @@ ENABLE_BY_INTELLIGENT = 1
 
 **起始版本：** 23
 
+<!--Device-PriorityEnableStatus-ENABLE_BY_INTELLIGENT = 1--><!--Device-PriorityEnableStatus-ENABLE_BY_INTELLIGENT = 1-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +55,8 @@ ENABLE = 2
 应用通知的优先级开关为全部通知状态。
 
 **起始版本：** 23
+
+<!--Device-PriorityEnableStatus-ENABLE = 2--><!--Device-PriorityEnableStatus-ENABLE = 2-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

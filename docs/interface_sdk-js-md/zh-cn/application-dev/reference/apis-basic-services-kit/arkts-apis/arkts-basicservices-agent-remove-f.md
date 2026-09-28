@@ -16,7 +16,9 @@ function remove(id: string, callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-agent-function remove(id: string, callback: AsyncCallback<void>): void--><!--Device-agent-function remove(id: string, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -48,7 +50,9 @@ function remove(id: string): Promise<void>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-agent-function remove(id: string): Promise<void>--><!--Device-agent-function remove(id: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 

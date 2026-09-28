@@ -18,6 +18,8 @@ function getIpv6Info(): Ipv6Info
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
+<!--Device-wifiManager-function getIpv6Info(): Ipv6Info--><!--Device-wifiManager-function getIpv6Info(): Ipv6Info-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **返回值：**

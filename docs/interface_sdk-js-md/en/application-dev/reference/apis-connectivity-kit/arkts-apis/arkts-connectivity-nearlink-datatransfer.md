@@ -6,6 +6,8 @@ This module provides the NearLink data transfer capability, including port chann
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-unnamed-declare namespace dataTransfer--><!--Device-unnamed-declare namespace dataTransfer-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 ## Modules to Import

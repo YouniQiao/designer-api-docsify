@@ -8,6 +8,8 @@ Want匹配的Uri集合。
 
 **起始版本：** 12
 
+<!--Device-unnamed-export interface SkillUri--><!--Device-unnamed-export interface SkillUri-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## host
@@ -22,7 +24,9 @@ readonly host: string
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-SkillUri-readonly host: string--><!--Device-SkillUri-readonly host: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -38,7 +42,9 @@ readonly linkFeature: string
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-SkillUri-readonly linkFeature: string--><!--Device-SkillUri-readonly linkFeature: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -54,7 +60,9 @@ readonly maxFileSupported: number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-SkillUri-readonly maxFileSupported: int--><!--Device-SkillUri-readonly maxFileSupported: int-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -70,7 +78,9 @@ readonly path: string
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-SkillUri-readonly path: string--><!--Device-SkillUri-readonly path: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -86,7 +96,9 @@ readonly pathRegex: string
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-SkillUri-readonly pathRegex: string--><!--Device-SkillUri-readonly pathRegex: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -102,7 +114,9 @@ readonly pathStartWith: string
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-SkillUri-readonly pathStartWith: string--><!--Device-SkillUri-readonly pathStartWith: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -120,6 +134,8 @@ readonly port: number
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-SkillUri-readonly port: int--><!--Device-SkillUri-readonly port: int-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## scheme
@@ -134,7 +150,9 @@ readonly scheme: string
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-SkillUri-readonly scheme: string--><!--Device-SkillUri-readonly scheme: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -150,7 +168,9 @@ readonly type: string
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-SkillUri-readonly type: string--><!--Device-SkillUri-readonly type: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -166,6 +186,8 @@ readonly utd: string
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-SkillUri-readonly utd: string--><!--Device-SkillUri-readonly utd: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core

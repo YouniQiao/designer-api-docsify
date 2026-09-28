@@ -8,6 +8,8 @@ interface MediaKeySystemInfo
 
 **起始版本：** 11
 
+<!--Device-drm-interface MediaKeySystemInfo--><!--Device-drm-interface MediaKeySystemInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
 ## 导入模块
@@ -28,7 +30,9 @@ DRM内容保护系统专用头，包含DRM相关的元数据和初始化数据�
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MediaKeySystemInfo-pssh: Uint8Array--><!--Device-MediaKeySystemInfo-pssh: Uint8Array-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
@@ -44,6 +48,8 @@ DRM内容保护系统的唯一标识，必须为有效的UUID格式。传入无�
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MediaKeySystemInfo-uuid: string--><!--Device-MediaKeySystemInfo-uuid: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core

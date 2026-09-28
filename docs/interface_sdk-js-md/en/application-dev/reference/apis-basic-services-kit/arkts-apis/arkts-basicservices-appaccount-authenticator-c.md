@@ -8,6 +8,8 @@ Defines an authenticator.
 
 **Since:** 8
 
+<!--Device-appAccount-class Authenticator--><!--Device-appAccount-class Authenticator-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 ## Modules to Import
@@ -25,6 +27,8 @@ auth(name: string, authType: string, options: Record<string, Object>, callback: 
 Authenticates an application account. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-Authenticator-auth(name: string, authType: string, options: Record<string, Object>, callback: AuthCallback): void--><!--Device-Authenticator-auth(name: string, authType: string, options: Record<string, Object>, callback: AuthCallback): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -46,6 +50,8 @@ checkAccountLabels(name: string, labels: Array<string>, callback: AuthCallback):
 Checks the account labels. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-Authenticator-checkAccountLabels(name: string, labels: Array<string>, callback: AuthCallback): void--><!--Device-Authenticator-checkAccountLabels(name: string, labels: Array<string>, callback: AuthCallback): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -71,6 +77,8 @@ Checks whether an application account can be deleted. This API uses an asynchron
 
 **Since:** 9
 
+<!--Device-Authenticator-checkAccountRemovable(name: string, callback: AuthCallback): void--><!--Device-Authenticator-checkAccountRemovable(name: string, callback: AuthCallback): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -94,6 +102,8 @@ Creates an application account implicitly based on the specified account owner. 
 
 **Since:** 9
 
+<!--Device-Authenticator-createAccountImplicitly(options: CreateAccountImplicitlyOptions, callback: AuthCallback): void--><!--Device-Authenticator-createAccountImplicitly(options: CreateAccountImplicitlyOptions, callback: AuthCallback): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -112,6 +122,8 @@ getRemoteObject(): rpc.RemoteObject
 Obtains the remote object of an authenticator. This API cannot be overloaded.
 
 **Since:** 9
+
+<!--Device-Authenticator-getRemoteObject(): rpc.RemoteObject--><!--Device-Authenticator-getRemoteObject(): rpc.RemoteObject-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -180,6 +192,8 @@ Sets the authenticator properties. This API uses an asynchronous callback to ret
 
 **Since:** 9
 
+<!--Device-Authenticator-setProperties(options: SetPropertiesOptions, callback: AuthCallback): void--><!--Device-Authenticator-setProperties(options: SetPropertiesOptions, callback: AuthCallback): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -202,6 +216,8 @@ verifyCredential(name: string, options: VerifyCredentialOptions, callback: AuthC
 Verifies the credential of an application account. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-Authenticator-verifyCredential(name: string, options: VerifyCredentialOptions, callback: AuthCallback): void--><!--Device-Authenticator-verifyCredential(name: string, options: VerifyCredentialOptions, callback: AuthCallback): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -242,6 +258,8 @@ Adds an application account implicitly based on the specified authentication typ
 
 **Substitutes:** [createAccountImplicitly](#createaccountimplicitly)(options: CreateAccountImplicitlyOptions, callback: AuthCallback)
 
+<!--Device-Authenticator-addAccountImplicitly(      authType: string,      callerBundleName: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void--><!--Device-Authenticator-addAccountImplicitly(      authType: string,      callerBundleName: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -278,6 +296,8 @@ Authenticates an application account to obtain the OAuth token. This API uses an
 **Deprecated since:** 9
 
 **Substitutes:** [auth](#auth)(name: string, authType: string, options: Record&lt;string, Object&gt;, callback: AuthCallback)
+
+<!--Device-Authenticator-authenticate(      name: string,      authType: string,      callerBundleName: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void--><!--Device-Authenticator-authenticate(      name: string,      authType: string,      callerBundleName: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 

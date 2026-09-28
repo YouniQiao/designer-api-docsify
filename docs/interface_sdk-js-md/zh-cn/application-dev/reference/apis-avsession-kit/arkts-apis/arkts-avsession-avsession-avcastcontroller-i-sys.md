@@ -12,6 +12,8 @@ interface AVCastController
 
 **起始版本：** 10
 
+<!--Device-avSession-interface AVCastController--><!--Device-avSession-interface AVCastController-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 ## 导入模块
@@ -29,6 +31,8 @@ setDisplaySurface(surfaceId: string, callback: AsyncCallback<void>): void
 设置播放的surfaceId，在投播sink端使用。结果通过callback异步回调方式返回。
 
 **起始版本：** 10
+
+<!--Device-AVCastController-setDisplaySurface(surfaceId: string, callback: AsyncCallback<void>): void--><!--Device-AVCastController-setDisplaySurface(surfaceId: string, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -80,6 +84,8 @@ setDisplaySurface(surfaceId: string): Promise<void>
 设置播放的surfaceId，在投播sink端使用。结果通过Promise异步回调方式返回。
 
 **起始版本：** 10
+
+<!--Device-AVCastController-setDisplaySurface(surfaceId: string): Promise<void>--><!--Device-AVCastController-setDisplaySurface(surfaceId: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 

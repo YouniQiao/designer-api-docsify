@@ -10,6 +10,8 @@ interface AmbientTemperatureResponse extends Response
 
 **起始版本：** 8
 
+<!--Device-sensor-interface AmbientTemperatureResponse extends Response--><!--Device-sensor-interface AmbientTemperatureResponse extends Response-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## 导入模块
@@ -29,5 +31,7 @@ temperature: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-AmbientTemperatureResponse-temperature: double--><!--Device-AmbientTemperatureResponse-temperature: double-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor

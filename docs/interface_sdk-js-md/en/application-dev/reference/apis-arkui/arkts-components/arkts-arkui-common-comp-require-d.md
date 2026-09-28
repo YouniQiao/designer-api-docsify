@@ -14,4 +14,6 @@ The **\@Require** decorator validates whether [\@Prop](../../../ui/state-managem
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
+<!--Device-unnamed-declare const Require: PropertyDecorator--><!--Device-unnamed-declare const Require: PropertyDecorator-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

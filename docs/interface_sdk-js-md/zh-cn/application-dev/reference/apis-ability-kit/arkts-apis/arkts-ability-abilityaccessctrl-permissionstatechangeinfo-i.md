@@ -8,6 +8,8 @@ interface PermissionStateChangeInfo
 
 **起始版本：** 18
 
+<!--Device-abilityAccessCtrl-interface PermissionStateChangeInfo--><!--Device-abilityAccessCtrl-interface PermissionStateChangeInfo-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 ## 导入模块
@@ -30,7 +32,9 @@ change: PermissionStateChangeType
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-PermissionStateChangeInfo-change: PermissionStateChangeType--><!--Device-PermissionStateChangeInfo-change: PermissionStateChangeType-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -48,7 +52,9 @@ permissionName: Permissions
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-PermissionStateChangeInfo-permissionName: Permissions--><!--Device-PermissionStateChangeInfo-permissionName: Permissions-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -66,6 +72,8 @@ tokenID: number
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-PermissionStateChangeInfo-tokenID: int--><!--Device-PermissionStateChangeInfo-tokenID: int-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken

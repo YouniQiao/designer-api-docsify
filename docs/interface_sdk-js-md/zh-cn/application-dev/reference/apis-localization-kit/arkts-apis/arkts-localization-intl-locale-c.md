@@ -12,6 +12,8 @@ export class Locale
 
 **替代接口：** [Intl.Locale](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale)
 
+<!--Device-intl-export class Locale--><!--Device-intl-export class Locale-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## 导入模块
@@ -37,6 +39,8 @@ constructor()
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-Locale-constructor()--><!--Device-Locale-constructor()-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -70,6 +74,8 @@ constructor(locale: string, options?: LocaleOptions)
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-Locale-constructor(locale: string, options?: LocaleOptions)--><!--Device-Locale-constructor(locale: string, options?: LocaleOptions)-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -107,6 +113,8 @@ maximize(): Locale
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-Locale-maximize(): Locale--><!--Device-Locale-maximize(): Locale-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -152,6 +160,8 @@ minimize(): Locale
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-Locale-minimize(): Locale--><!--Device-Locale-minimize(): Locale-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 **返回值：**
@@ -196,6 +206,8 @@ toString(): string
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-Locale-toString(): string--><!--Device-Locale-toString(): string-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 **返回值：**
@@ -234,6 +246,8 @@ baseName: string
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-Locale-baseName: string--><!--Device-Locale-baseName: string-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## calendar
@@ -259,6 +273,8 @@ calendar: string
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-Locale-calendar: string--><!--Device-Locale-calendar: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -287,6 +303,8 @@ caseFirst: string
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-Locale-caseFirst: string--><!--Device-Locale-caseFirst: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -342,6 +360,8 @@ collation: string
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-Locale-collation: string--><!--Device-Locale-collation: string-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## hourCycle
@@ -368,6 +388,8 @@ hourCycle: string
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-Locale-hourCycle: string--><!--Device-Locale-hourCycle: string-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## language
@@ -389,6 +411,8 @@ language: string
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-Locale-language: string--><!--Device-Locale-language: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -414,6 +438,8 @@ numberingSystem: string
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-Locale-numberingSystem: string--><!--Device-Locale-numberingSystem: string-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## numeric
@@ -438,6 +464,8 @@ true表示对数字字符进行特殊的排序规则处理（把数字字符作�
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-Locale-numeric: boolean--><!--Device-Locale-numeric: boolean-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## region
@@ -460,6 +488,8 @@ region: string
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-Locale-region: string--><!--Device-Locale-region: string-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## script
@@ -481,5 +511,7 @@ script: string
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-Locale-script: string--><!--Device-Locale-script: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n

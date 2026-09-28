@@ -10,6 +10,8 @@ WantAgent模块封装了[Want](arkts-ability-app-ability-want-want-c.md)对象�
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace wantAgent--><!--Device-unnamed-declare namespace wantAgent-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块

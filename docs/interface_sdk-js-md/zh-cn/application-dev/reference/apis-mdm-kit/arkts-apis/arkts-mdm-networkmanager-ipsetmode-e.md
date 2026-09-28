@@ -8,6 +8,8 @@ enum IpSetMode
 
 **起始版本：** 23
 
+<!--Device-networkManager-enum IpSetMode--><!--Device-networkManager-enum IpSetMode-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## STATIC
@@ -22,6 +24,8 @@ STATIC = 0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-IpSetMode-STATIC = 0--><!--Device-IpSetMode-STATIC = 0-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## DHCP
@@ -35,5 +39,7 @@ DHCP = 1
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-IpSetMode-DHCP = 1--><!--Device-IpSetMode-DHCP = 1-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager

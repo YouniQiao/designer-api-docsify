@@ -10,6 +10,8 @@ Defines the option of ShowActionMenu.
 
 **Since:** 11
 
+<!--Device-unnamed-export interface ShowActionMenuOptions--><!--Device-unnamed-export interface ShowActionMenuOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -32,6 +34,8 @@ Called when the dialog box is closed.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ShowActionMenuOptions-complete?: () => void--><!--Device-ShowActionMenuOptions-complete?: () => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## fail
@@ -47,6 +51,8 @@ Called when the operation is cancelled.
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ShowActionMenuOptions-fail?: (errMsg: string) => void--><!--Device-ShowActionMenuOptions-fail?: (errMsg: string) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -69,6 +75,8 @@ Called when the dialog box is displayed.
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ShowActionMenuOptions-success?: (tapIndex: number, errMsg: string) => void--><!--Device-ShowActionMenuOptions-success?: (tapIndex: number, errMsg: string) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -95,6 +103,8 @@ Array of buttons in the dialog box. The array structure is {text:'button', color
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ShowActionMenuOptions-buttons: [Button, Button?, Button?, Button?, Button?, Button?]--><!--Device-ShowActionMenuOptions-buttons: [Button, Button?, Button?, Button?, Button?, Button?]-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## title
@@ -112,5 +122,7 @@ Title of the text to display.
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ShowActionMenuOptions-title?: string--><!--Device-ShowActionMenuOptions-title?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

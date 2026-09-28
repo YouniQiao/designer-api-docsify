@@ -8,6 +8,8 @@ enum SyncFolderState
 
 **起始版本：** 21
 
+<!--Device-cloudDiskManager-enum SyncFolderState--><!--Device-cloudDiskManager-enum SyncFolderState-End-->
+
 **系统能力：** SystemCapability.FileManagement.CloudDiskManager
 
 **系统接口：** 此接口为系统接口。
@@ -22,6 +24,8 @@ INACTIVE = 0
 
 **起始版本：** 21
 
+<!--Device-SyncFolderState-INACTIVE = 0--><!--Device-SyncFolderState-INACTIVE = 0-End-->
+
 **系统能力：** SystemCapability.FileManagement.CloudDiskManager
 
 **系统接口：** 此接口为系统接口。
@@ -35,6 +39,8 @@ ACTIVE = 1
 表示同步根处于激活状态。
 
 **起始版本：** 21
+
+<!--Device-SyncFolderState-ACTIVE = 1--><!--Device-SyncFolderState-ACTIVE = 1-End-->
 
 **系统能力：** SystemCapability.FileManagement.CloudDiskManager
 

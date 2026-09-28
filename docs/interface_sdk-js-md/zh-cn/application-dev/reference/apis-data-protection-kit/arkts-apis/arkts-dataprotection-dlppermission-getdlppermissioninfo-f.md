@@ -20,6 +20,8 @@ function getDLPPermissionInfo(): Promise<DLPPermissionInfo>
 
 **起始版本：** 10
 
+<!--Device-dlpPermission-function getDLPPermissionInfo(): Promise<DLPPermissionInfo>--><!--Device-dlpPermission-function getDLPPermissionInfo(): Promise<DLPPermissionInfo>-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **返回值：**
@@ -67,6 +69,8 @@ function getDLPPermissionInfo(callback: AsyncCallback<DLPPermissionInfo>): void
 在DLP沙箱中处理文件时，可根据权限信息判断当前用户可以执行哪些操作，避免调用无权限的功能。
 
 **起始版本：** 10
+
+<!--Device-dlpPermission-function getDLPPermissionInfo(callback: AsyncCallback<DLPPermissionInfo>): void--><!--Device-dlpPermission-function getDLPPermissionInfo(callback: AsyncCallback<DLPPermissionInfo>): void-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 

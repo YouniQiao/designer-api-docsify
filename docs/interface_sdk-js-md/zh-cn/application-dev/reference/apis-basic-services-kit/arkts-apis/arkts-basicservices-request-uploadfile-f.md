@@ -22,6 +22,8 @@ function uploadFile(context: BaseContext, config: UploadConfig, callback: AsyncC
 
 **需要权限：** ohos.permission.INTERNET
 
+<!--Device-request-function uploadFile(context: BaseContext, config: UploadConfig, callback: AsyncCallback<UploadTask>): void--><!--Device-request-function uploadFile(context: BaseContext, config: UploadConfig, callback: AsyncCallback<UploadTask>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Upload
 
 **参数：**
@@ -87,6 +89,8 @@ function uploadFile(context: BaseContext, config: UploadConfig): Promise<UploadT
 **起始版本：** 9
 
 **需要权限：** ohos.permission.INTERNET
+
+<!--Device-request-function uploadFile(context: BaseContext, config: UploadConfig): Promise<UploadTask>--><!--Device-request-function uploadFile(context: BaseContext, config: UploadConfig): Promise<UploadTask>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload
 

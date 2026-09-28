@@ -24,6 +24,8 @@ function reboot(admin: Want): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-deviceControl-function reboot(admin: Want): void--><!--Device-deviceControl-function reboot(admin: Want): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。

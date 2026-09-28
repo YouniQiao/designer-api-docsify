@@ -8,6 +8,8 @@ class SessionRestore
 
 **起始版本：** 10
 
+<!--Device-backup-class SessionRestore--><!--Device-backup-class SessionRestore-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 **系统接口：** 此接口为系统接口。
@@ -29,6 +31,8 @@ appendBundles(remoteCapabilitiesFd: number, bundlesToBackup: string[], infos?: s
 **起始版本：** 12
 
 **需要权限：** ohos.permission.BACKUP
+
+<!--Device-SessionRestore-appendBundles(remoteCapabilitiesFd: int, bundlesToBackup: string[], infos?: string[]): Promise<void>--><!--Device-SessionRestore-appendBundles(remoteCapabilitiesFd: int, bundlesToBackup: string[], infos?: string[]): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
@@ -167,6 +171,8 @@ appendBundles(remoteCapabilitiesFd: number, bundlesToBackup: string[], callback:
 
 **需要权限：** ohos.permission.BACKUP
 
+<!--Device-SessionRestore-appendBundles(remoteCapabilitiesFd: int, bundlesToBackup: string[], callback: AsyncCallback<void>): void--><!--Device-SessionRestore-appendBundles(remoteCapabilitiesFd: int, bundlesToBackup: string[], callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 **系统接口：** 此接口为系统接口。
@@ -276,6 +282,8 @@ cancel(bundleName: string): number
 
 **需要权限：** ohos.permission.BACKUP
 
+<!--Device-SessionRestore-cancel(bundleName: string): int--><!--Device-SessionRestore-cancel(bundleName: string): int-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 **系统接口：** 此接口为系统接口。
@@ -379,6 +387,8 @@ cleanBundleTempDir(bundleName: string): Promise<boolean>
 
 **需要权限：** ohos.permission.BACKUP
 
+<!--Device-SessionRestore-cleanBundleTempDir(bundleName: string): Promise<boolean>--><!--Device-SessionRestore-cleanBundleTempDir(bundleName: string): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 **系统接口：** 此接口为系统接口。
@@ -480,6 +490,8 @@ constructor(callbacks: GeneralCallbacks)
 
 **需要权限：** ohos.permission.BACKUP
 
+<!--Device-SessionRestore-constructor(callbacks: GeneralCallbacks)--><!--Device-SessionRestore-constructor(callbacks: GeneralCallbacks)-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 **系统接口：** 此接口为系统接口。
@@ -552,6 +564,8 @@ getApkFileHandle(path: string, fileName: string): Promise<FileData>
 **需要权限：** ohos.permission.BACKUP
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SessionRestore-getApkFileHandle(path: string, fileName: string): Promise<FileData>--><!--Device-SessionRestore-getApkFileHandle(path: string, fileName: string): Promise<FileData>-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
@@ -661,6 +675,8 @@ getCompatibilityInfo(bundleName: string, extInfo: string): Promise<string>
 
 **需要权限：** ohos.permission.BACKUP
 
+<!--Device-SessionRestore-getCompatibilityInfo(bundleName: string, extInfo: string): Promise<string>--><!--Device-SessionRestore-getCompatibilityInfo(bundleName: string, extInfo: string): Promise<string>-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 **系统接口：** 此接口为系统接口。
@@ -761,6 +777,8 @@ getFileHandle(fileMeta: FileMeta): Promise<void>
 **起始版本：** 10
 
 **需要权限：** ohos.permission.BACKUP
+
+<!--Device-SessionRestore-getFileHandle(fileMeta: FileMeta): Promise<void>--><!--Device-SessionRestore-getFileHandle(fileMeta: FileMeta): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
@@ -863,6 +881,8 @@ getFileHandle(fileMeta: FileMeta, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.BACKUP
 
+<!--Device-SessionRestore-getFileHandle(fileMeta: FileMeta, callback: AsyncCallback<void>): void--><!--Device-SessionRestore-getFileHandle(fileMeta: FileMeta, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 **系统接口：** 此接口为系统接口。
@@ -955,6 +975,8 @@ getFileHandles(fileMeta: FileMeta): Promise<void>
 **需要权限：** ohos.permission.BACKUP
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SessionRestore-getFileHandles(fileMeta: FileMeta): Promise<void>--><!--Device-SessionRestore-getFileHandles(fileMeta: FileMeta): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
@@ -1068,6 +1090,8 @@ getLocalCapabilities(): Promise<FileData>
 **起始版本：** 18
 
 **需要权限：** ohos.permission.BACKUP
+
+<!--Device-SessionRestore-getLocalCapabilities(): Promise<FileData>--><!--Device-SessionRestore-getLocalCapabilities(): Promise<FileData>-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
@@ -1232,6 +1256,8 @@ migrateFile(pathInfo: PathInfo, fileMeta: FileMeta): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SessionRestore-migrateFile(pathInfo: PathInfo, fileMeta: FileMeta): Promise<void>--><!--Device-SessionRestore-migrateFile(pathInfo: PathInfo, fileMeta: FileMeta): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 **系统接口：** 此接口为系统接口。
@@ -1347,6 +1373,8 @@ publishFile(fileMeta: FileMeta): Promise<void>
 
 **需要权限：** ohos.permission.BACKUP
 
+<!--Device-SessionRestore-publishFile(fileMeta: FileMeta): Promise<void>--><!--Device-SessionRestore-publishFile(fileMeta: FileMeta): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 **系统接口：** 此接口为系统接口。
@@ -1460,6 +1488,8 @@ publishFile(fileMeta: FileMeta, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.BACKUP
 
+<!--Device-SessionRestore-publishFile(fileMeta: FileMeta, callback: AsyncCallback<void>): void--><!--Device-SessionRestore-publishFile(fileMeta: FileMeta, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 **系统接口：** 此接口为系统接口。
@@ -1567,6 +1597,8 @@ release(): Promise<void>
 **起始版本：** 12
 
 **需要权限：** ohos.permission.BACKUP
+
+<!--Device-SessionRestore-release(): Promise<void>--><!--Device-SessionRestore-release(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 

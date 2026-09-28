@@ -8,6 +8,8 @@ export interface EnhancedPanelRect
 
 **起始版本：** 15
 
+<!--Device-inputMethodEngine-export interface EnhancedPanelRect--><!--Device-inputMethodEngine-export interface EnhancedPanelRect-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## 导入模块
@@ -30,6 +32,8 @@ fullScreenMode?: boolean
 
 **起始版本：** 15
 
+<!--Device-EnhancedPanelRect-fullScreenMode?: boolean--><!--Device-EnhancedPanelRect-fullScreenMode?: boolean-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## landscapeAvoidY
@@ -46,6 +50,8 @@ landscapeAvoidY?: number
 
 **起始版本：** 15
 
+<!--Device-EnhancedPanelRect-landscapeAvoidY?: int--><!--Device-EnhancedPanelRect-landscapeAvoidY?: int-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## landscapeInputRegion
@@ -60,6 +66,8 @@ landscapeInputRegion?: Array<window.Rect>
 
 **起始版本：** 15
 
+<!--Device-EnhancedPanelRect-landscapeInputRegion?: Array<window.Rect>--><!--Device-EnhancedPanelRect-landscapeInputRegion?: Array<window.Rect>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## landscapeRect
@@ -73,6 +81,8 @@ landscapeRect?: window.Rect
 **类型：** [window.Rect](../../apis-arkui/arkts-apis/arkts-arkui-window-rect-i.md)
 
 **起始版本：** 15
+
+<!--Device-EnhancedPanelRect-landscapeRect?: window.Rect--><!--Device-EnhancedPanelRect-landscapeRect?: window.Rect-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -90,6 +100,8 @@ portraitAvoidY?: number
 
 **起始版本：** 15
 
+<!--Device-EnhancedPanelRect-portraitAvoidY?: int--><!--Device-EnhancedPanelRect-portraitAvoidY?: int-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## portraitInputRegion
@@ -104,6 +116,8 @@ portraitInputRegion?: Array<window.Rect>
 
 **起始版本：** 15
 
+<!--Device-EnhancedPanelRect-portraitInputRegion?: Array<window.Rect>--><!--Device-EnhancedPanelRect-portraitInputRegion?: Array<window.Rect>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## portraitRect
@@ -117,5 +131,7 @@ portraitRect?: window.Rect
 **类型：** [window.Rect](../../apis-arkui/arkts-apis/arkts-arkui-window-rect-i.md)
 
 **起始版本：** 15
+
+<!--Device-EnhancedPanelRect-portraitRect?: window.Rect--><!--Device-EnhancedPanelRect-portraitRect?: window.Rect-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework

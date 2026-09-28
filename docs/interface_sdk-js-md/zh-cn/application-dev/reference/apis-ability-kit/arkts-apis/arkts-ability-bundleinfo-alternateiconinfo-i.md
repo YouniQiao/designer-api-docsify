@@ -8,6 +8,8 @@ export interface AlternateIconInfo
 
 **起始版本：** 26.0.0
 
+<!--Device-unnamed-export interface AlternateIconInfo--><!--Device-unnamed-export interface AlternateIconInfo-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## enabled
@@ -30,6 +32,8 @@ false：表示当前备用图标未启用。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AlternateIconInfo-readonly enabled: boolean--><!--Device-AlternateIconInfo-readonly enabled: boolean-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## iconId
@@ -46,6 +50,8 @@ readonly iconId: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AlternateIconInfo-readonly iconId: long--><!--Device-AlternateIconInfo-readonly iconId: long-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## iconName
@@ -61,5 +67,7 @@ readonly iconName: string
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AlternateIconInfo-readonly iconName: string--><!--Device-AlternateIconInfo-readonly iconName: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core

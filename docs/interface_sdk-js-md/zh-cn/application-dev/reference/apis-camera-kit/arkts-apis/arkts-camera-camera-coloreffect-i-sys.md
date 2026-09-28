@@ -10,6 +10,8 @@ ColorEffect extends [ColorEffectQuery](arkts-camera-camera-coloreffectquery-i-sy
 
 **起始版本：** 11
 
+<!--Device-camera-interface ColorEffect extends ColorEffectQuery--><!--Device-camera-interface ColorEffect extends ColorEffectQuery-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -29,6 +31,8 @@ getColorEffect(): ColorEffectType
 Obtains the color effect in use.
 
 **起始版本：** 11
+
+<!--Device-ColorEffect-getColorEffect(): ColorEffectType--><!--Device-ColorEffect-getColorEffect(): ColorEffectType-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -65,6 +69,8 @@ setColorEffect(type: ColorEffectType): void
 Sets a color effect. Before the setting, call [getSupportedColorEffects](arkts-camera-camera-coloreffectquery-i-sys.md#getsupportedcoloreffects) to obtain the supported color effects.
 
 **起始版本：** 11
+
+<!--Device-ColorEffect-setColorEffect(type: ColorEffectType): void--><!--Device-ColorEffect-setColorEffect(type: ColorEffectType): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

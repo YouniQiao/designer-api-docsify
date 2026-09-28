@@ -8,6 +8,8 @@ class IPCSkeleton
 
 **起始版本：** 7
 
+<!--Device-rpc-class IPCSkeleton--><!--Device-rpc-class IPCSkeleton-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 ## 导入模块
@@ -25,6 +27,8 @@ static flushCmdBuffer(object: IRemoteObject): void
 静态方法，将所有挂起的命令从指定的RemoteProxy刷新到相应的RemoteObject。建议在任何时间执行敏感操作之前调用此方法。
 
 **起始版本：** 9
+
+<!--Device-IPCSkeleton-static flushCmdBuffer(object: IRemoteObject): void--><!--Device-IPCSkeleton-static flushCmdBuffer(object: IRemoteObject): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -77,6 +81,8 @@ static getCallingDeviceID(): string
 
 **起始版本：** 7
 
+<!--Device-IPCSkeleton-static getCallingDeviceID(): string--><!--Device-IPCSkeleton-static getCallingDeviceID(): string-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -114,6 +120,8 @@ static getCallingPid(): number
 静态方法，获取调用者的PID。此方法由[RemoteObject](arkts-ipc-rpc-remoteobject-c.md)对象在IPC上下文环境（[onRemoteMessageRequest](arkts-ipc-rpc-remoteobject-c.md#onremotemessagerequest)）中调用，不在则返回本进程的PID。
 
 **起始版本：** 7
+
+<!--Device-IPCSkeleton-static getCallingPid(): int--><!--Device-IPCSkeleton-static getCallingPid(): int-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -153,6 +161,8 @@ static getCallingTokenId(): number
 
 **起始版本：** 8
 
+<!--Device-IPCSkeleton-static getCallingTokenId(): long--><!--Device-IPCSkeleton-static getCallingTokenId(): long-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -190,6 +200,8 @@ static getCallingUid(): number
 静态方法，获取调用者的UID。此方法由[RemoteObject](arkts-ipc-rpc-remoteobject-c.md)对象在IPC上下文环境（[onRemoteMessageRequest](arkts-ipc-rpc-remoteobject-c.md#onremotemessagerequest)）中调用，不在则返回本进程的UID。
 
 **起始版本：** 7
+
+<!--Device-IPCSkeleton-static getCallingUid(): int--><!--Device-IPCSkeleton-static getCallingUid(): int-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -229,6 +241,8 @@ static getContextObject(): IRemoteObject
 
 **起始版本：** 7
 
+<!--Device-IPCSkeleton-static getContextObject(): IRemoteObject--><!--Device-IPCSkeleton-static getContextObject(): IRemoteObject-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -260,6 +274,8 @@ static getLocalDeviceID(): string
 静态方法，获取本端设备ID。
 
 **起始版本：** 7
+
+<!--Device-IPCSkeleton-static getLocalDeviceID(): string--><!--Device-IPCSkeleton-static getLocalDeviceID(): string-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -299,6 +315,8 @@ static isLocalCalling(): boolean
 
 **起始版本：** 7
 
+<!--Device-IPCSkeleton-static isLocalCalling(): boolean--><!--Device-IPCSkeleton-static isLocalCalling(): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -337,6 +355,8 @@ static resetCallingIdentity(): string
 
 **起始版本：** 7
 
+<!--Device-IPCSkeleton-static resetCallingIdentity(): string--><!--Device-IPCSkeleton-static resetCallingIdentity(): string-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -374,6 +394,8 @@ static restoreCallingIdentity(identity: string): void
 静态方法，将UID和PID恢复为远程用户的UID和PID。它通常在使用resetCallingIdentity后调用，需要resetCallingIdentity返回的远程用户的UID和PID。该接口仅支持在IPC上下文（[onRemoteMessageRequest](arkts-ipc-rpc-remoteobject-c.md#onremotemessagerequest)）中使用，否则直接返回。
 
 **起始版本：** 9
+
+<!--Device-IPCSkeleton-static restoreCallingIdentity(identity: string): void--><!--Device-IPCSkeleton-static restoreCallingIdentity(identity: string): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -423,6 +445,8 @@ static flushCommands(object: IRemoteObject): number
 **废弃版本：** 9
 
 **替代接口：** [flushCmdBuffer](#flushcmdbuffer)(object: IRemoteObject)
+
+<!--Device-IPCSkeleton-static flushCommands(object: IRemoteObject): number--><!--Device-IPCSkeleton-static flushCommands(object: IRemoteObject): number-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -478,6 +502,8 @@ static setCallingIdentity(identity: string): boolean
 **废弃版本：** 9
 
 **替代接口：** [restoreCallingIdentity](#restorecallingidentity)(identity: string)
+
+<!--Device-IPCSkeleton-static setCallingIdentity(identity: string): boolean--><!--Device-IPCSkeleton-static setCallingIdentity(identity: string): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 

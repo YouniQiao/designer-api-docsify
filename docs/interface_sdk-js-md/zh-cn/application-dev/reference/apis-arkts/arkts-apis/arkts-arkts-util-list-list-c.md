@@ -8,6 +8,8 @@ List底层通过单向链表实现，每个节点有一个指向后一个元素�
 
 **起始版本：** 8
 
+<!--Device-unnamed-declare class List<T>--><!--Device-unnamed-declare class List<T>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -28,6 +30,8 @@ import { ListComparatorFn } from '@kit.ArkTS';
 **起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-List-[Symbol.iterator](): IterableIterator<T>--><!--Device-List-[Symbol.iterator](): IterableIterator<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -84,7 +88,9 @@ add(element: T): boolean
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-List-add(element: T): boolean--><!--Device-List-add(element: T): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -139,7 +145,9 @@ clear(): void
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-List-clear(): void--><!--Device-List-clear(): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -172,7 +180,9 @@ List的构造函数。
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-List-constructor()--><!--Device-List-constructor()-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -198,7 +208,9 @@ convertToArray(): Array<T>
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-List-convertToArray(): Array<T>--><!--Device-List-convertToArray(): Array<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -237,6 +249,8 @@ equal(obj: Object): boolean
 **起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-List-equal(obj: Object): boolean--><!--Device-List-equal(obj: Object): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -285,6 +299,8 @@ forEach(callbackFn: (value: T, index?: number, List?: List<T>) => void, thisArg?
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-List-forEach(callbackFn: (value: T, index?: number, List?: List<T>) => void, thisArg?: Object): void--><!--Device-List-forEach(callbackFn: (value: T, index?: number, List?: List<T>) => void, thisArg?: Object): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -328,7 +344,9 @@ get(index: number): T
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-List-get(index: int): T--><!--Device-List-get(index: int): T-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -376,7 +394,9 @@ getFirst(): T
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-List-getFirst(): T--><!--Device-List-getFirst(): T-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -415,7 +435,9 @@ getIndexOf(element: T): number
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-List-getIndexOf(element: T): int--><!--Device-List-getIndexOf(element: T): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -462,7 +484,9 @@ getLast(): T
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-List-getLast(): T--><!--Device-List-getLast(): T-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -501,7 +525,9 @@ getLastIndexOf(element: T): number
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-List-getLastIndexOf(element: T): int--><!--Device-List-getLastIndexOf(element: T): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -548,7 +574,9 @@ getSubList(fromIndex: number, toIndex: number): List<T>
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-List-getSubList(fromIndex: int, toIndex: int): List<T>--><!--Device-List-getSubList(fromIndex: int, toIndex: int): List<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -594,7 +622,9 @@ has(element: T): boolean
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-List-has(element: T): boolean--><!--Device-List-has(element: T): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -635,7 +665,9 @@ insert(element: T, index: number): void
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-List-insert(element: T, index: int): void--><!--Device-List-insert(element: T, index: int): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -673,7 +705,9 @@ isEmpty(): boolean
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-List-isEmpty(): boolean--><!--Device-List-isEmpty(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -711,7 +745,9 @@ remove(element: T): boolean
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-List-remove(element: T): boolean--><!--Device-List-remove(element: T): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -756,6 +792,8 @@ removeByIndex(index: number): T
 **起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-List-removeByIndex(index: number): T--><!--Device-List-removeByIndex(index: number): T-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -803,6 +841,8 @@ replaceAllElements(callbackFn: (value: T, index?: number, list?: List<T>) => T, 
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-List-replaceAllElements(callbackFn: (value: T, index?: number, list?: List<T>) => T, thisArg?: Object): void--><!--Device-List-replaceAllElements(callbackFn: (value: T, index?: number, list?: List<T>) => T, thisArg?: Object): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -847,7 +887,9 @@ set(index: number, element: T): T
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-List-set(index: int, element: T): T--><!--Device-List-set(index: int, element: T): T-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -893,7 +935,9 @@ sort(comparator: ListComparatorFn<T>): void
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-List-sort(comparator: ListComparatorFn<T>): void--><!--Device-List-sort(comparator: ListComparatorFn<T>): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -937,5 +981,7 @@ List的元素个数。
 **起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-List-length: number--><!--Device-List-length: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

@@ -8,6 +8,8 @@ enum AudioPlaybackCaptureMode
 
 **起始版本：** 26.0.0
 
+<!--Device-audio-enum AudioPlaybackCaptureMode--><!--Device-audio-enum AudioPlaybackCaptureMode-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.PlaybackCapture
 
 ## MODE_ONLY_VOIP
@@ -27,6 +29,8 @@ AudioCapturerOptions.playbackCaptureUid仅在此模式生效。
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioPlaybackCaptureMode-MODE_ONLY_VOIP = 0x4000--><!--Device-AudioPlaybackCaptureMode-MODE_ONLY_VOIP = 0x4000-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.PlaybackCapture
 

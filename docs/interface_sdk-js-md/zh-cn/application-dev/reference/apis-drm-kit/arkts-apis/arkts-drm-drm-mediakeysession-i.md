@@ -8,6 +8,8 @@ interface MediaKeySession
 
 **起始版本：** 11
 
+<!--Device-drm-interface MediaKeySession--><!--Device-drm-interface MediaKeySession-End-->
+
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
 ## 导入模块
@@ -26,7 +28,9 @@ checkMediaKeyStatus(): MediaKeyStatus[]
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MediaKeySession-checkMediaKeyStatus(): MediaKeyStatus[]--><!--Device-MediaKeySession-checkMediaKeyStatus(): MediaKeyStatus[]-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
@@ -63,7 +67,9 @@ clearMediaKeys(): void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MediaKeySession-clearMediaKeys(): void--><!--Device-MediaKeySession-clearMediaKeys(): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
@@ -99,7 +105,9 @@ destroy(): void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MediaKeySession-destroy(): void--><!--Device-MediaKeySession-destroy(): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
@@ -130,7 +138,9 @@ generateMediaKeyRequest(mimeType: string, initData: Uint8Array, mediaKeyType: nu
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MediaKeySession-generateMediaKeyRequest(mimeType: string, initData: Uint8Array, mediaKeyType: int, options?: OptionsData[]): Promise<MediaKeyRequest>--><!--Device-MediaKeySession-generateMediaKeyRequest(mimeType: string, initData: Uint8Array, mediaKeyType: int, options?: OptionsData[]): Promise<MediaKeyRequest>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
@@ -181,7 +191,9 @@ generateOfflineReleaseRequest(mediaKeyId: Uint8Array): Promise<Uint8Array>
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MediaKeySession-generateOfflineReleaseRequest(mediaKeyId: Uint8Array): Promise<Uint8Array>--><!--Device-MediaKeySession-generateOfflineReleaseRequest(mediaKeyId: Uint8Array): Promise<Uint8Array>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
@@ -229,7 +241,9 @@ getContentProtectionLevel(): ContentProtectionLevel
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MediaKeySession-getContentProtectionLevel(): ContentProtectionLevel--><!--Device-MediaKeySession-getContentProtectionLevel(): ContentProtectionLevel-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
@@ -271,6 +285,8 @@ off(type: 'keyRequired', callback?: (eventInfo: EventInfo) => void): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-MediaKeySession-off(type: 'keyRequired', callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-off(type: 'keyRequired', callback?: (eventInfo: EventInfo) => void): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **参数：**
@@ -308,6 +324,8 @@ off(type: 'keyExpired', callback?: (eventInfo: EventInfo) => void): void
 **起始版本：** 11
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MediaKeySession-off(type: 'keyExpired', callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-off(type: 'keyExpired', callback?: (eventInfo: EventInfo) => void): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
@@ -347,6 +365,8 @@ off(type: 'vendorDefined', callback?: (eventInfo: EventInfo) => void): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-MediaKeySession-off(type: 'vendorDefined', callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-off(type: 'vendorDefined', callback?: (eventInfo: EventInfo) => void): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **参数：**
@@ -384,6 +404,8 @@ off(type: 'expirationUpdate', callback?: (eventInfo: EventInfo) => void): void
 **起始版本：** 11
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MediaKeySession-off(type: 'expirationUpdate', callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-off(type: 'expirationUpdate', callback?: (eventInfo: EventInfo) => void): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
@@ -423,6 +445,8 @@ off(type: 'keysChange', callback?: (keyInfo: KeysInfo[], newKeyAvailable: boolea
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-MediaKeySession-off(type: 'keysChange', callback?: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void--><!--Device-MediaKeySession-off(type: 'keysChange', callback?: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **参数：**
@@ -460,6 +484,8 @@ on(type: 'keyRequired', callback: (eventInfo: EventInfo) => void): void
 **起始版本：** 11
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MediaKeySession-on(type: 'keyRequired', callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-on(type: 'keyRequired', callback: (eventInfo: EventInfo) => void): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
@@ -501,6 +527,8 @@ on(type: 'keyExpired', callback: (eventInfo: EventInfo) => void): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-MediaKeySession-on(type: 'keyExpired', callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-on(type: 'keyExpired', callback: (eventInfo: EventInfo) => void): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **参数：**
@@ -540,6 +568,8 @@ on(type: 'vendorDefined', callback: (eventInfo: EventInfo) => void): void
 **起始版本：** 11
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MediaKeySession-on(type: 'vendorDefined', callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-on(type: 'vendorDefined', callback: (eventInfo: EventInfo) => void): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
@@ -581,6 +611,8 @@ on(type: 'expirationUpdate', callback: (eventInfo: EventInfo) => void): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-MediaKeySession-on(type: 'expirationUpdate', callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-on(type: 'expirationUpdate', callback: (eventInfo: EventInfo) => void): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **参数：**
@@ -620,6 +652,8 @@ on(type: 'keysChange', callback: (keyInfo: KeysInfo[], newKeyAvailable: boolean)
 **起始版本：** 11
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MediaKeySession-on(type: 'keysChange', callback: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void--><!--Device-MediaKeySession-on(type: 'keysChange', callback: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
@@ -661,7 +695,9 @@ processMediaKeyResponse(response: Uint8Array): Promise<Uint8Array>
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MediaKeySession-processMediaKeyResponse(response: Uint8Array): Promise<Uint8Array>--><!--Device-MediaKeySession-processMediaKeyResponse(response: Uint8Array): Promise<Uint8Array>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
@@ -711,7 +747,9 @@ processOfflineReleaseResponse(mediaKeyId: Uint8Array, response: Uint8Array): Pro
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MediaKeySession-processOfflineReleaseResponse(mediaKeyId: Uint8Array, response: Uint8Array): Promise<void>--><!--Device-MediaKeySession-processOfflineReleaseResponse(mediaKeyId: Uint8Array, response: Uint8Array): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
@@ -765,7 +803,9 @@ requireSecureDecoderModule(mimeType: string): boolean
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MediaKeySession-requireSecureDecoderModule(mimeType: string): boolean--><!--Device-MediaKeySession-requireSecureDecoderModule(mimeType: string): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
@@ -809,7 +849,9 @@ restoreOfflineMediaKeys(mediaKeyId: Uint8Array): Promise<void>
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MediaKeySession-restoreOfflineMediaKeys(mediaKeyId: Uint8Array): Promise<void>--><!--Device-MediaKeySession-restoreOfflineMediaKeys(mediaKeyId: Uint8Array): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 

@@ -8,6 +8,8 @@ export interface EthernetDeviceInfos
 
 **起始版本：** 20
 
+<!--Device-ethernet-export interface EthernetDeviceInfos--><!--Device-ethernet-export interface EthernetDeviceInfos-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ connectionMode: DeviceConnectionType
 
 **起始版本：** 20
 
+<!--Device-EthernetDeviceInfos-connectionMode: DeviceConnectionType--><!--Device-EthernetDeviceInfos-connectionMode: DeviceConnectionType-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ deviceName: string
 **类型：** string
 
 **起始版本：** 20
+
+<!--Device-EthernetDeviceInfos-deviceName: string--><!--Device-EthernetDeviceInfos-deviceName: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
@@ -62,6 +68,8 @@ ifaceName: string
 
 **起始版本：** 20
 
+<!--Device-EthernetDeviceInfos-ifaceName: string--><!--Device-EthernetDeviceInfos-ifaceName: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +85,8 @@ maximumRate: string
 **类型：** string
 
 **起始版本：** 20
+
+<!--Device-EthernetDeviceInfos-maximumRate: string--><!--Device-EthernetDeviceInfos-maximumRate: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
@@ -94,6 +104,8 @@ productName: string
 
 **起始版本：** 20
 
+<!--Device-EthernetDeviceInfos-productName: string--><!--Device-EthernetDeviceInfos-productName: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
 **系统接口：** 此接口为系统接口。
@@ -110,6 +122,8 @@ supplierId: string
 
 **起始版本：** 20
 
+<!--Device-EthernetDeviceInfos-supplierId: string--><!--Device-EthernetDeviceInfos-supplierId: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
 **系统接口：** 此接口为系统接口。
@@ -125,6 +139,8 @@ supplierName: string
 **类型：** string
 
 **起始版本：** 20
+
+<!--Device-EthernetDeviceInfos-supplierName: string--><!--Device-EthernetDeviceInfos-supplierName: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 

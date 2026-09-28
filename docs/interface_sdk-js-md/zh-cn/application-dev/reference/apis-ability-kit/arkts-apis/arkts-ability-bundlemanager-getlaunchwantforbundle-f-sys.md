@@ -18,6 +18,8 @@ function getLaunchWantForBundle(bundleName: string, userId: number, callback: As
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-bundleManager-function getLaunchWantForBundle(bundleName: string, userId: int, callback: AsyncCallback<Want>): void--><!--Device-bundleManager-function getLaunchWantForBundle(bundleName: string, userId: int, callback: AsyncCallback<Want>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -80,6 +82,8 @@ function getLaunchWantForBundle(bundleName: string, callback: AsyncCallback<Want
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-bundleManager-function getLaunchWantForBundle(bundleName: string, callback: AsyncCallback<Want>): void--><!--Device-bundleManager-function getLaunchWantForBundle(bundleName: string, callback: AsyncCallback<Want>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -138,6 +142,8 @@ function getLaunchWantForBundle(bundleName: string, userId?: number): Promise<Wa
 **起始版本：** 9
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-bundleManager-function getLaunchWantForBundle(bundleName: string, userId?: int): Promise<Want>--><!--Device-bundleManager-function getLaunchWantForBundle(bundleName: string, userId?: int): Promise<Want>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

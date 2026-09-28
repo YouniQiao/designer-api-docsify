@@ -16,6 +16,8 @@ function subscribeSystemLiveView(subscriber: SystemLiveViewSubscriber): Promise<
 
 **起始版本：** 11
 
+<!--Device-notificationManager-function subscribeSystemLiveView(subscriber: SystemLiveViewSubscriber): Promise<void>--><!--Device-notificationManager-function subscribeSystemLiveView(subscriber: SystemLiveViewSubscriber): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。

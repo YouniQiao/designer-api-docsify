@@ -16,6 +16,8 @@ function sendCommand(command: LocationCommand, callback: AsyncCallback<void>): v
 
 **起始版本：** 9
 
+<!--Device-geoLocationManager-function sendCommand(command: LocationCommand, callback: AsyncCallback<void>): void--><!--Device-geoLocationManager-function sendCommand(command: LocationCommand, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **参数：**
@@ -62,6 +64,8 @@ function sendCommand(command: LocationCommand): Promise<void>
 给位置服务子系统的各个部件发送扩展命令。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-geoLocationManager-function sendCommand(command: LocationCommand): Promise<void>--><!--Device-geoLocationManager-function sendCommand(command: LocationCommand): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 

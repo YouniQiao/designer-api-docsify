@@ -8,6 +8,8 @@ Describes the style of the slider in the block direction.
 
 **Since:** 10
 
+<!--Device-unnamed-declare interface SliderBlockStyle--><!--Device-unnamed-declare interface SliderBlockStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## image
@@ -28,6 +30,8 @@ The area size for displaying the image is subject to the **blockSize** attribute
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SliderBlockStyle-image?: ResourceStr--><!--Device-SliderBlockStyle-image?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## shape
@@ -45,6 +49,8 @@ Custom shape of the slider.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SliderBlockStyle-shape?: CircleAttribute | EllipseAttribute | PathAttribute | RectAttribute--><!--Device-SliderBlockStyle-shape?: CircleAttribute | EllipseAttribute | PathAttribute | RectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -68,5 +74,7 @@ Default value: **SliderBlockType.DEFAULT**, indicating the round slider.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SliderBlockStyle-type: SliderBlockType--><!--Device-SliderBlockStyle-type: SliderBlockType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

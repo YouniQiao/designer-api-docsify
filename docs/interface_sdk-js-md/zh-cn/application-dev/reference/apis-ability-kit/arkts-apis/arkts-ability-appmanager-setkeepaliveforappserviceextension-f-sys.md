@@ -22,6 +22,8 @@ function setKeepAliveForAppServiceExtension(bundleName: string, enabled: boolean
 
 **需要权限：** ohos.permission.MANAGE_APP_KEEP_ALIVE
 
+<!--Device-appManager-function setKeepAliveForAppServiceExtension(bundleName: string, enabled: boolean): Promise<void>--><!--Device-appManager-function setKeepAliveForAppServiceExtension(bundleName: string, enabled: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。

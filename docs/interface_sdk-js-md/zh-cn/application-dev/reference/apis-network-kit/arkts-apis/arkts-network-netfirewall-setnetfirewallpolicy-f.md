@@ -22,6 +22,8 @@ function setNetFirewallPolicy(userId: number, policy: NetFirewallPolicy): Promis
 
 **需要权限：** ohos.permission.MANAGE_NET_FIREWALL
 
+<!--Device-netFirewall-function setNetFirewallPolicy(userId: int, policy: NetFirewallPolicy): Promise<void>--><!--Device-netFirewall-function setNetFirewallPolicy(userId: int, policy: NetFirewallPolicy): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 **参数：**

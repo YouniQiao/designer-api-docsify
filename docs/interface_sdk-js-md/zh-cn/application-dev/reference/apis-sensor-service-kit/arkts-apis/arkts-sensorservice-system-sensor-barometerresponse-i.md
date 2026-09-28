@@ -12,6 +12,8 @@ export interface BarometerResponse
 
 **替代接口：** [BarometerResponse](arkts-sensorservice-sensor-barometerresponse-i.md)
 
+<!--Device-unnamed-export interface BarometerResponse--><!--Device-unnamed-export interface BarometerResponse-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
 ## 导入模块
@@ -37,5 +39,7 @@ pressure: number
 **替代接口：** [pressure](arkts-sensorservice-sensor-barometerresponse-i.md#pressure)
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-BarometerResponse-pressure: number--><!--Device-BarometerResponse-pressure: number-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite

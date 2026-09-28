@@ -8,6 +8,8 @@ VPN 连接对象。在调用 VpnConnection 的方法前，需要先通过[vpn.cr
 
 **起始版本：** 10
 
+<!--Device-vpn-export interface VpnConnection--><!--Device-vpn-export interface VpnConnection-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -29,6 +31,8 @@ destroy(callback: AsyncCallback<void>): void
 **起始版本：** 10
 
 **需要权限：** ohos.permission.MANAGE_VPN
+
+<!--Device-VpnConnection-destroy(callback: AsyncCallback<void>): void--><!--Device-VpnConnection-destroy(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -89,6 +93,8 @@ destroy(): Promise<void>
 
 **需要权限：** ohos.permission.MANAGE_VPN
 
+<!--Device-VpnConnection-destroy(): Promise<void>--><!--Device-VpnConnection-destroy(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -147,6 +153,8 @@ protect(socketFd: number, callback: AsyncCallback<void>): void
 **起始版本：** 10
 
 **需要权限：** ohos.permission.MANAGE_VPN
+
+<!--Device-VpnConnection-protect(socketFd: int, callback: AsyncCallback<void>): void--><!--Device-VpnConnection-protect(socketFd: int, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -227,6 +235,8 @@ protect(socketFd: number): Promise<void>
 **起始版本：** 10
 
 **需要权限：** ohos.permission.MANAGE_VPN
+
+<!--Device-VpnConnection-protect(socketFd: int): Promise<void>--><!--Device-VpnConnection-protect(socketFd: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -313,6 +323,8 @@ setUp(config: VpnConfig, callback: AsyncCallback<number>): void
 
 **需要权限：** ohos.permission.MANAGE_VPN
 
+<!--Device-VpnConnection-setUp(config: VpnConfig, callback: AsyncCallback<int>): void--><!--Device-VpnConnection-setUp(config: VpnConfig, callback: AsyncCallback<int>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -390,6 +402,8 @@ setUp(config: VpnConfig): Promise<number>
 **起始版本：** 10
 
 **需要权限：** ohos.permission.MANAGE_VPN
+
+<!--Device-VpnConnection-setUp(config: VpnConfig): Promise<int>--><!--Device-VpnConnection-setUp(config: VpnConfig): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 

@@ -8,6 +8,8 @@ interface ColorfulBrightnessBlender
 
 **起始版本：** 26.2.0
 
+<!--Device-uiEffect-interface ColorfulBrightnessBlender--><!--Device-uiEffect-interface ColorfulBrightnessBlender-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -34,6 +36,8 @@ brightnessBlenderParam: BrightnessBlenderParam
 
 **卡片能力：** 从API版本26.2.0开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-ColorfulBrightnessBlender-brightnessBlenderParam: BrightnessBlenderParam--><!--Device-ColorfulBrightnessBlender-brightnessBlenderParam: BrightnessBlenderParam-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -53,6 +57,8 @@ options?: ColorfulBrightnessBlenderOptions
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **卡片能力：** 从API版本26.2.0开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-ColorfulBrightnessBlender-options?: ColorfulBrightnessBlenderOptions--><!--Device-ColorfulBrightnessBlender-options?: ColorfulBrightnessBlenderOptions-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

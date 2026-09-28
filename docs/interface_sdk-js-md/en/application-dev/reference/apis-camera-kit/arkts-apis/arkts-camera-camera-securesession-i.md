@@ -18,6 +18,8 @@ The security TA can verify the signature of data delivered by the server, sign i
 
 **Since:** 12
 
+<!--Device-camera-interface SecureSession extends Session, Flash, AutoExposure, WhiteBalance, Focus, Zoom--><!--Device-camera-interface SecureSession extends Session, Flash, AutoExposure, WhiteBalance, Focus, Zoom-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## Modules to Import
@@ -36,7 +38,9 @@ Marks a [PreviewOutput](arkts-camera-camera-previewoutput-i.md) stream as secure
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+
+<!--Device-SecureSession-addSecureOutput(previewOutput: PreviewOutput): void--><!--Device-SecureSession-addSecureOutput(previewOutput: PreviewOutput): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -82,6 +86,8 @@ Unsubscribes from SecureSession error events.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-SecureSession-off(type: 'error', callback?: ErrorCallback): void--><!--Device-SecureSession-off(type: 'error', callback?: ErrorCallback): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
@@ -110,6 +116,8 @@ Unsubscribes from focus state change events.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-SecureSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void--><!--Device-SecureSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -143,6 +151,8 @@ Subscribes to SecureSession error events. This API uses an asynchronous callback
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-SecureSession-on(type: 'error', callback: ErrorCallback): void--><!--Device-SecureSession-on(type: 'error', callback: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -182,6 +192,8 @@ Subscribes to focus state change events. This API uses an asynchronous callback 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-SecureSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void--><!--Device-SecureSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

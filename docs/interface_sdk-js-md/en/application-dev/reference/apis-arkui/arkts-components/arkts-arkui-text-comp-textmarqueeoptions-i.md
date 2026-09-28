@@ -8,6 +8,8 @@ Describes the initialization options of the **Marquee** component.
 
 **Since:** 18
 
+<!--Device-unnamed-declare interface TextMarqueeOptions--><!--Device-unnamed-declare interface TextMarqueeOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## delay
@@ -31,6 +33,8 @@ Unit: millisecond
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-TextMarqueeOptions-delay?: number--><!--Device-TextMarqueeOptions-delay?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -56,6 +60,8 @@ Default value: **false**
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TextMarqueeOptions-fadeout?: boolean--><!--Device-TextMarqueeOptions-fadeout?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## fromStart
@@ -78,6 +84,8 @@ Default value: **true**
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TextMarqueeOptions-fromStart?: boolean--><!--Device-TextMarqueeOptions-fromStart?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## loop
@@ -98,6 +106,8 @@ Default value: **-1**
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TextMarqueeOptions-loop?: number--><!--Device-TextMarqueeOptions-loop?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## marqueeStartPolicy
@@ -117,6 +127,8 @@ Default value: **MarqueeStartPolicy.ON_FOCUS** for TVs and **MarqueeStartPolicy.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-TextMarqueeOptions-marqueeStartPolicy?: MarqueeStartPolicy--><!--Device-TextMarqueeOptions-marqueeStartPolicy?: MarqueeStartPolicy-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -140,6 +152,8 @@ Default value: **MarqueeUpdatePolicy.DEFAULT**
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-TextMarqueeOptions-marqueeUpdatePolicy?: MarqueeUpdatePolicy--><!--Device-TextMarqueeOptions-marqueeUpdatePolicy?: MarqueeUpdatePolicy-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## spacing
@@ -162,6 +176,8 @@ Default value: 48.0vp
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-TextMarqueeOptions-spacing?: LengthMetrics--><!--Device-TextMarqueeOptions-spacing?: LengthMetrics-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## start
@@ -181,6 +197,8 @@ Whether to start the marquee.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-TextMarqueeOptions-start: boolean--><!--Device-TextMarqueeOptions-start: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -205,5 +223,7 @@ Default value: **4.0** (in vp)
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-TextMarqueeOptions-step?: number--><!--Device-TextMarqueeOptions-step?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

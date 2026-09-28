@@ -8,6 +8,8 @@ interface AudioRenderer
 
 **起始版本：** 8
 
+<!--Device-audio-interface AudioRenderer--><!--Device-audio-interface AudioRenderer-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 ## 导入模块
@@ -25,6 +27,8 @@ drain(callback: AsyncCallback<void>): void
 检查缓冲区是否已被耗尽。使用callback异步回调。
 
 **起始版本：** 8
+
+<!--Device-AudioRenderer-drain(callback: AsyncCallback<void>): void--><!--Device-AudioRenderer-drain(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -60,6 +64,8 @@ drain(): Promise<void>
 
 **起始版本：** 8
 
+<!--Device-AudioRenderer-drain(): Promise<void>--><!--Device-AudioRenderer-drain(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **返回值：**
@@ -89,6 +95,8 @@ flush(): Promise<void>
 清空缓冲区（[AudioState](arkts-audio-audio-audiostate-e.md)为STATE_RUNNING、STATE_PAUSED、STATE_STOPPED状态下可用）。使用Promise异步回调。
 
 **起始版本：** 11
+
+<!--Device-AudioRenderer-flush(): Promise<void>--><!--Device-AudioRenderer-flush(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -126,6 +134,8 @@ getAudioEffectMode(callback: AsyncCallback<AudioEffectMode>): void
 
 **起始版本：** 10
 
+<!--Device-AudioRenderer-getAudioEffectMode(callback: AsyncCallback<AudioEffectMode>): void--><!--Device-AudioRenderer-getAudioEffectMode(callback: AsyncCallback<AudioEffectMode>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **参数：**
@@ -160,6 +170,8 @@ getAudioEffectMode(): Promise<AudioEffectMode>
 
 **起始版本：** 10
 
+<!--Device-AudioRenderer-getAudioEffectMode(): Promise<AudioEffectMode>--><!--Device-AudioRenderer-getAudioEffectMode(): Promise<AudioEffectMode>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **返回值：**
@@ -189,6 +201,8 @@ getAudioStreamId(callback: AsyncCallback<number>): void
 获取音频流id。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-AudioRenderer-getAudioStreamId(callback: AsyncCallback<long>): void--><!--Device-AudioRenderer-getAudioStreamId(callback: AsyncCallback<long>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -220,6 +234,8 @@ getAudioStreamId(): Promise<number>
 
 **起始版本：** 9
 
+<!--Device-AudioRenderer-getAudioStreamId(): Promise<long>--><!--Device-AudioRenderer-getAudioStreamId(): Promise<long>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **返回值：**
@@ -249,6 +265,8 @@ getAudioStreamIdSync(): number
 获取音频流id。同步返回结果。
 
 **起始版本：** 10
+
+<!--Device-AudioRenderer-getAudioStreamIdSync(): long--><!--Device-AudioRenderer-getAudioStreamIdSync(): long-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -282,6 +300,8 @@ getAudioTime(callback: AsyncCallback<number>): void
 
 **起始版本：** 8
 
+<!--Device-AudioRenderer-getAudioTime(callback: AsyncCallback<long>): void--><!--Device-AudioRenderer-getAudioTime(callback: AsyncCallback<long>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **参数：**
@@ -311,6 +331,8 @@ getAudioTime(): Promise<number>
 获取当前播放位置的时间戳（从1970年1月1日开始），单位为纳秒。使用Promise异步回调。
 
 **起始版本：** 8
+
+<!--Device-AudioRenderer-getAudioTime(): Promise<long>--><!--Device-AudioRenderer-getAudioTime(): Promise<long>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -356,6 +378,8 @@ getAudioTimestampInfo(): Promise<AudioTimestampInfo>
 
 **起始版本：** 19
 
+<!--Device-AudioRenderer-getAudioTimestampInfo(): Promise<AudioTimestampInfo>--><!--Device-AudioRenderer-getAudioTimestampInfo(): Promise<AudioTimestampInfo>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **返回值：**
@@ -391,6 +415,8 @@ getAudioTimestampInfoSync(): AudioTimestampInfo
 获取音频流时间戳和当前数据帧位置信息。同步返回结果。
 
 **起始版本：** 19
+
+<!--Device-AudioRenderer-getAudioTimestampInfoSync(): AudioTimestampInfo--><!--Device-AudioRenderer-getAudioTimestampInfoSync(): AudioTimestampInfo-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -430,6 +456,8 @@ getAudioTimeSync(): number
 
 **起始版本：** 10
 
+<!--Device-AudioRenderer-getAudioTimeSync(): long--><!--Device-AudioRenderer-getAudioTimeSync(): long-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **返回值：**
@@ -461,6 +489,8 @@ getBufferSize(callback: AsyncCallback<number>): void
 获取音频渲染器的最小缓冲区大小。使用callback异步回调。
 
 **起始版本：** 8
+
+<!--Device-AudioRenderer-getBufferSize(callback: AsyncCallback<long>): void--><!--Device-AudioRenderer-getBufferSize(callback: AsyncCallback<long>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -499,6 +529,8 @@ getBufferSize(): Promise<number>
 
 **起始版本：** 8
 
+<!--Device-AudioRenderer-getBufferSize(): Promise<long>--><!--Device-AudioRenderer-getBufferSize(): Promise<long>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **返回值：**
@@ -531,6 +563,8 @@ getBufferSizeSync(): number
 获取音频渲染器的最小缓冲区大小。同步返回结果。
 
 **起始版本：** 10
+
+<!--Device-AudioRenderer-getBufferSizeSync(): long--><!--Device-AudioRenderer-getBufferSizeSync(): long-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -565,6 +599,8 @@ getCurrentOutputDevices(callback: AsyncCallback<AudioDeviceDescriptors>): void
 获取音频流输出设备信息。使用callback异步回调。
 
 **起始版本：** 10
+
+<!--Device-AudioRenderer-getCurrentOutputDevices(callback: AsyncCallback<AudioDeviceDescriptors>): void--><!--Device-AudioRenderer-getCurrentOutputDevices(callback: AsyncCallback<AudioDeviceDescriptors>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -609,6 +645,8 @@ getCurrentOutputDevices(): Promise<AudioDeviceDescriptors>
 
 **起始版本：** 10
 
+<!--Device-AudioRenderer-getCurrentOutputDevices(): Promise<AudioDeviceDescriptors>--><!--Device-AudioRenderer-getCurrentOutputDevices(): Promise<AudioDeviceDescriptors>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **返回值：**
@@ -647,6 +685,8 @@ getCurrentOutputDevicesSync(): AudioDeviceDescriptors
 获取音频流输出设备信息。同步返回结果。
 
 **起始版本：** 10
+
+<!--Device-AudioRenderer-getCurrentOutputDevicesSync(): AudioDeviceDescriptors--><!--Device-AudioRenderer-getCurrentOutputDevicesSync(): AudioDeviceDescriptors-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -699,6 +739,8 @@ getLatency(type: AudioLatencyType): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioRenderer-getLatency(type: AudioLatencyType): int--><!--Device-AudioRenderer-getLatency(type: AudioLatencyType): int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **参数：**
@@ -745,6 +787,8 @@ getLoudnessGain(): number
 
 **起始版本：** 20
 
+<!--Device-AudioRenderer-getLoudnessGain(): double--><!--Device-AudioRenderer-getLoudnessGain(): double-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **返回值：**
@@ -768,6 +812,8 @@ getMaxStreamVolume(callback: AsyncCallback<number>): void
 获取音频流的最大音量。使用callback异步回调。
 
 **起始版本：** 10
+
+<!--Device-AudioRenderer-getMaxStreamVolume(callback: AsyncCallback<double>): void--><!--Device-AudioRenderer-getMaxStreamVolume(callback: AsyncCallback<double>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -803,6 +849,8 @@ getMaxStreamVolume(): Promise<number>
 
 **起始版本：** 10
 
+<!--Device-AudioRenderer-getMaxStreamVolume(): Promise<double>--><!--Device-AudioRenderer-getMaxStreamVolume(): Promise<double>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **返回值：**
@@ -832,6 +880,8 @@ getMaxStreamVolumeSync(): number
 获取音频流的最大音量。同步返回结果。
 
 **起始版本：** 10
+
+<!--Device-AudioRenderer-getMaxStreamVolumeSync(): double--><!--Device-AudioRenderer-getMaxStreamVolumeSync(): double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -864,6 +914,8 @@ getMinStreamVolume(callback: AsyncCallback<number>): void
 获取音频流的最小音量。使用callback异步回调。
 
 **起始版本：** 10
+
+<!--Device-AudioRenderer-getMinStreamVolume(callback: AsyncCallback<double>): void--><!--Device-AudioRenderer-getMinStreamVolume(callback: AsyncCallback<double>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -899,6 +951,8 @@ getMinStreamVolume(): Promise<number>
 
 **起始版本：** 10
 
+<!--Device-AudioRenderer-getMinStreamVolume(): Promise<double>--><!--Device-AudioRenderer-getMinStreamVolume(): Promise<double>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **返回值：**
@@ -928,6 +982,8 @@ getMinStreamVolumeSync(): number
 获取音频流的最小音量。同步返回结果。
 
 **起始版本：** 10
+
+<!--Device-AudioRenderer-getMinStreamVolumeSync(): double--><!--Device-AudioRenderer-getMinStreamVolumeSync(): double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -960,6 +1016,8 @@ getRendererInfo(callback: AsyncCallback<AudioRendererInfo>): void
 获取当前创建的音频渲染器信息。使用callback异步回调。
 
 **起始版本：** 8
+
+<!--Device-AudioRenderer-getRendererInfo(callback: AsyncCallback<AudioRendererInfo>): void--><!--Device-AudioRenderer-getRendererInfo(callback: AsyncCallback<AudioRendererInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -995,6 +1053,8 @@ getRendererInfo(): Promise<AudioRendererInfo>
 
 **起始版本：** 8
 
+<!--Device-AudioRenderer-getRendererInfo(): Promise<AudioRendererInfo>--><!--Device-AudioRenderer-getRendererInfo(): Promise<AudioRendererInfo>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **返回值：**
@@ -1024,6 +1084,8 @@ getRendererInfoSync(): AudioRendererInfo
 获取当前创建的音频渲染器信息。同步返回结果。
 
 **起始版本：** 10
+
+<!--Device-AudioRenderer-getRendererInfoSync(): AudioRendererInfo--><!--Device-AudioRenderer-getRendererInfoSync(): AudioRendererInfo-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -1057,6 +1119,8 @@ getSilentModeAndMixWithOthers(): boolean
 
 **起始版本：** 12
 
+<!--Device-AudioRenderer-getSilentModeAndMixWithOthers(): boolean--><!--Device-AudioRenderer-getSilentModeAndMixWithOthers(): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **返回值：**
@@ -1081,6 +1145,8 @@ getSpeed(): number
 
 **起始版本：** 11
 
+<!--Device-AudioRenderer-getSpeed(): double--><!--Device-AudioRenderer-getSpeed(): double-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **返回值：**
@@ -1104,6 +1170,8 @@ getStreamInfo(callback: AsyncCallback<AudioStreamInfo>): void
 获取音频流信息。使用callback异步回调。
 
 **起始版本：** 8
+
+<!--Device-AudioRenderer-getStreamInfo(callback: AsyncCallback<AudioStreamInfo>): void--><!--Device-AudioRenderer-getStreamInfo(callback: AsyncCallback<AudioStreamInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -1139,6 +1207,8 @@ getStreamInfo(): Promise<AudioStreamInfo>
 
 **起始版本：** 8
 
+<!--Device-AudioRenderer-getStreamInfo(): Promise<AudioStreamInfo>--><!--Device-AudioRenderer-getStreamInfo(): Promise<AudioStreamInfo>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **返回值：**
@@ -1172,6 +1242,8 @@ getStreamInfoSync(): AudioStreamInfo
 获取音频流信息。同步返回结果。
 
 **起始版本：** 10
+
+<!--Device-AudioRenderer-getStreamInfoSync(): AudioStreamInfo--><!--Device-AudioRenderer-getStreamInfoSync(): AudioStreamInfo-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -1208,6 +1280,8 @@ getUnderflowCount(callback: AsyncCallback<number>): void
 
 **起始版本：** 10
 
+<!--Device-AudioRenderer-getUnderflowCount(callback: AsyncCallback<long>): void--><!--Device-AudioRenderer-getUnderflowCount(callback: AsyncCallback<long>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **参数：**
@@ -1242,6 +1316,8 @@ getUnderflowCount(): Promise<number>
 
 **起始版本：** 10
 
+<!--Device-AudioRenderer-getUnderflowCount(): Promise<long>--><!--Device-AudioRenderer-getUnderflowCount(): Promise<long>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **返回值：**
@@ -1271,6 +1347,8 @@ getUnderflowCountSync(): number
 获取当前播放音频流的欠载音频帧数量，同步返回数据。
 
 **起始版本：** 10
+
+<!--Device-AudioRenderer-getUnderflowCountSync(): long--><!--Device-AudioRenderer-getUnderflowCountSync(): long-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -1304,6 +1382,8 @@ getVolume(): number
 
 **起始版本：** 12
 
+<!--Device-AudioRenderer-getVolume(): double--><!--Device-AudioRenderer-getVolume(): double-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **返回值：**
@@ -1335,6 +1415,8 @@ off(type: 'audioInterrupt', callback?: Callback<InterruptEvent>): void
 取消监听音频中断事件。使用callback异步回调。
 
 **起始版本：** 18
+
+<!--Device-AudioRenderer-off(type: 'audioInterrupt', callback?: Callback<InterruptEvent>): void--><!--Device-AudioRenderer-off(type: 'audioInterrupt', callback?: Callback<InterruptEvent>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Interrupt
 
@@ -1424,6 +1506,8 @@ off(type: 'markReach', callback?: Callback<number>): void
 
 **起始版本：** 8
 
+<!--Device-AudioRenderer-off(type: 'markReach', callback?: Callback<long>): void--><!--Device-AudioRenderer-off(type: 'markReach', callback?: Callback<long>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **参数：**
@@ -1461,6 +1545,8 @@ off(type: 'periodReach', callback?: Callback<number>): void
 
 **起始版本：** 8
 
+<!--Device-AudioRenderer-off(type: 'periodReach', callback?: Callback<long>): void--><!--Device-AudioRenderer-off(type: 'periodReach', callback?: Callback<long>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **参数：**
@@ -1497,6 +1583,8 @@ off(type: 'stateChange', callback?: Callback<AudioState>): void
 取消监听状态变化事件。使用callback异步回调。
 
 **起始版本：** 18
+
+<!--Device-AudioRenderer-off(type: 'stateChange', callback?: Callback<AudioState>): void--><!--Device-AudioRenderer-off(type: 'stateChange', callback?: Callback<AudioState>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -1544,6 +1632,8 @@ off(type: 'outputDeviceChange', callback?: Callback<AudioDeviceDescriptors>): vo
 
 **起始版本：** 10
 
+<!--Device-AudioRenderer-off(type: 'outputDeviceChange', callback?: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRenderer-off(type: 'outputDeviceChange', callback?: Callback<AudioDeviceDescriptors>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **参数：**
@@ -1587,6 +1677,8 @@ off(type: 'outputDeviceChangeWithInfo', callback?: Callback<AudioStreamDeviceCha
 取消监听音频流输出设备变化及原因事件。使用callback异步回调。
 
 **起始版本：** 11
+
+<!--Device-AudioRenderer-off(type: 'outputDeviceChangeWithInfo', callback?: Callback<AudioStreamDeviceChangeInfo>): void--><!--Device-AudioRenderer-off(type: 'outputDeviceChangeWithInfo', callback?: Callback<AudioStreamDeviceChangeInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -1633,6 +1725,8 @@ off(type: 'writeData', callback?: AudioRendererWriteDataCallback): void
 
 **起始版本：** 11
 
+<!--Device-AudioRenderer-off(type: 'writeData', callback?: AudioRendererWriteDataCallback): void--><!--Device-AudioRenderer-off(type: 'writeData', callback?: AudioRendererWriteDataCallback): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **参数：**
@@ -1674,6 +1768,8 @@ on(type: 'audioInterrupt', callback: Callback<InterruptEvent>): void
 监听音频中断事件（当音频焦点发生变化时触发）。使用callback异步回调。AudioRenderer对象在start事件时获取焦点，在pause、stop等事件时释放焦点，无需开发者主动申请。调用此方法后，如果AudioRenderer对象获取焦点失败或发生中断事件（如被其他音频打断等），会收到[InterruptEvent](arkts-audio-audio-interruptevent-i.md)。建议应用根据InterruptEvent的信息进行进一步处理。更多信息请参阅文档[音频焦点介绍](../../../media/audio/audio-playback-concurrency.md)。
 
 **起始版本：** 9
+
+<!--Device-AudioRenderer-on(type: 'audioInterrupt', callback: Callback<InterruptEvent>): void--><!--Device-AudioRenderer-on(type: 'audioInterrupt', callback: Callback<InterruptEvent>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Interrupt
 
@@ -1758,6 +1854,8 @@ on(type: 'markReach', frame: number, callback: Callback<number>): void
 
 **起始版本：** 8
 
+<!--Device-AudioRenderer-on(type: 'markReach', frame: long, callback: Callback<long>): void--><!--Device-AudioRenderer-on(type: 'markReach', frame: long, callback: Callback<long>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **参数：**
@@ -1788,6 +1886,8 @@ on(type: 'periodReach', frame: number, callback: Callback<number>): void
 
 **起始版本：** 8
 
+<!--Device-AudioRenderer-on(type: 'periodReach', frame: long, callback: Callback<long>): void--><!--Device-AudioRenderer-on(type: 'periodReach', frame: long, callback: Callback<long>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **参数：**
@@ -1817,6 +1917,8 @@ on(type: 'stateChange', callback: Callback<AudioState>): void
 监听状态变化事件（当AudioRenderer的状态发生变化时触发）。使用callback异步回调。
 
 **起始版本：** 8
+
+<!--Device-AudioRenderer-on(type: 'stateChange', callback: Callback<AudioState>): void--><!--Device-AudioRenderer-on(type: 'stateChange', callback: Callback<AudioState>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -1849,6 +1951,8 @@ on(type: 'outputDeviceChange', callback: Callback<AudioDeviceDescriptors>): void
 监听音频输出设备变化事件（当音频输出设备发生变化时触发）。使用callback异步回调。
 
 **起始版本：** 10
+
+<!--Device-AudioRenderer-on(type: 'outputDeviceChange', callback: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRenderer-on(type: 'outputDeviceChange', callback: Callback<AudioDeviceDescriptors>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -1885,6 +1989,8 @@ on(type: 'outputDeviceChangeWithInfo', callback: Callback<AudioStreamDeviceChang
 监听音频流输出设备变化及原因事件（当音频输出设备发生变化时触发）。使用callback异步回调。
 
 **起始版本：** 11
+
+<!--Device-AudioRenderer-on(type: 'outputDeviceChangeWithInfo', callback: Callback<AudioStreamDeviceChangeInfo>): void--><!--Device-AudioRenderer-on(type: 'outputDeviceChangeWithInfo', callback: Callback<AudioStreamDeviceChangeInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -1928,6 +2034,8 @@ on(type: 'writeData', callback: AudioRendererWriteDataCallback): void
 > - 为避免音频播放启动和停止时数据不连续可能出现的杂音，系统通常会在启动和停止时对音频数据做20ms以内的淡入淡出处理。
 
 **起始版本：** 11
+
+<!--Device-AudioRenderer-on(type: 'writeData', callback: AudioRendererWriteDataCallback): void--><!--Device-AudioRenderer-on(type: 'writeData', callback: AudioRendererWriteDataCallback): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -2000,6 +2108,8 @@ pause(callback: AsyncCallback<void>): void
 
 **起始版本：** 8
 
+<!--Device-AudioRenderer-pause(callback: AsyncCallback<void>): void--><!--Device-AudioRenderer-pause(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **参数：**
@@ -2034,6 +2144,8 @@ pause(): Promise<void>
 
 **起始版本：** 8
 
+<!--Device-AudioRenderer-pause(): Promise<void>--><!--Device-AudioRenderer-pause(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **返回值：**
@@ -2063,6 +2175,8 @@ release(callback: AsyncCallback<void>): void
 释放音频渲染器。使用callback异步回调。
 
 **起始版本：** 8
+
+<!--Device-AudioRenderer-release(callback: AsyncCallback<void>): void--><!--Device-AudioRenderer-release(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -2098,6 +2212,8 @@ release(): Promise<void>
 
 **起始版本：** 8
 
+<!--Device-AudioRenderer-release(): Promise<void>--><!--Device-AudioRenderer-release(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **返回值：**
@@ -2127,6 +2243,8 @@ setAudioEffectMode(mode: AudioEffectMode, callback: AsyncCallback<void>): void
 设置当前音效模式。使用callback异步回调。
 
 **起始版本：** 10
+
+<!--Device-AudioRenderer-setAudioEffectMode(mode: AudioEffectMode, callback: AsyncCallback<void>): void--><!--Device-AudioRenderer-setAudioEffectMode(mode: AudioEffectMode, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -2169,6 +2287,8 @@ setAudioEffectMode(mode: AudioEffectMode): Promise<void>
 设置当前音效模式。使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-AudioRenderer-setAudioEffectMode(mode: AudioEffectMode): Promise<void>--><!--Device-AudioRenderer-setAudioEffectMode(mode: AudioEffectMode): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -2213,6 +2333,8 @@ setChannelBlendMode(mode: ChannelBlendMode): void
 
 **起始版本：** 11
 
+<!--Device-AudioRenderer-setChannelBlendMode(mode: ChannelBlendMode): void--><!--Device-AudioRenderer-setChannelBlendMode(mode: ChannelBlendMode): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **参数：**
@@ -2255,6 +2377,8 @@ setDefaultOutputDevice(deviceType: DeviceType): Promise<void>
 > - 本接口优先级低于AudioSessionManager的[setDefaultOutputDevice](arkts-audio-audio-audiosessionmanager-i.md#setdefaultoutputdevice)。如果使用AudioSessionManager的setDefaultOutputDevice设置了默认音频输出设备，本接口的设置将不会生效。
 
 **起始版本：** 12
+
+<!--Device-AudioRenderer-setDefaultOutputDevice(deviceType: DeviceType): Promise<void>--><!--Device-AudioRenderer-setDefaultOutputDevice(deviceType: DeviceType): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -2310,6 +2434,8 @@ setIndependentAudioSessionStrategy(strategy: AudioSessionStrategy, behavior: num
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioRenderer-setIndependentAudioSessionStrategy(strategy: AudioSessionStrategy, behavior: int): void--><!--Device-AudioRenderer-setIndependentAudioSessionStrategy(strategy: AudioSessionStrategy, behavior: int): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **参数：**
@@ -2346,6 +2472,8 @@ setInterruptMode(mode: InterruptMode, callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
+<!--Device-AudioRenderer-setInterruptMode(mode: InterruptMode, callback: AsyncCallback<void>): void--><!--Device-AudioRenderer-setInterruptMode(mode: InterruptMode, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Interrupt
 
 **参数：**
@@ -2381,6 +2509,8 @@ setInterruptMode(mode: InterruptMode): Promise<void>
 设置应用的焦点模型。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-AudioRenderer-setInterruptMode(mode: InterruptMode): Promise<void>--><!--Device-AudioRenderer-setInterruptMode(mode: InterruptMode): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Interrupt
 
@@ -2419,6 +2549,8 @@ setInterruptModeSync(mode: InterruptMode): void
 设置应用的焦点模型。同步设置。
 
 **起始版本：** 10
+
+<!--Device-AudioRenderer-setInterruptModeSync(mode: InterruptMode): void--><!--Device-AudioRenderer-setInterruptModeSync(mode: InterruptMode): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Interrupt
 
@@ -2469,6 +2601,8 @@ setLoudnessGain(loudnessGain: number): Promise<void>
 
 **起始版本：** 20
 
+<!--Device-AudioRenderer-setLoudnessGain(loudnessGain: double): Promise<void>--><!--Device-AudioRenderer-setLoudnessGain(loudnessGain: double): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **参数：**
@@ -2506,6 +2640,8 @@ setSilentModeAndMixWithOthers(on: boolean): void
 
 **起始版本：** 12
 
+<!--Device-AudioRenderer-setSilentModeAndMixWithOthers(on: boolean): void--><!--Device-AudioRenderer-setSilentModeAndMixWithOthers(on: boolean): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **参数：**
@@ -2529,6 +2665,8 @@ setSpeed(speed: number): void
 设置播放倍速。
 
 **起始版本：** 11
+
+<!--Device-AudioRenderer-setSpeed(speed: double): void--><!--Device-AudioRenderer-setSpeed(speed: double): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -2560,6 +2698,8 @@ setVolume(volume: number, callback: AsyncCallback<void>): void
 设置音频流的音量。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-AudioRenderer-setVolume(volume: double, callback: AsyncCallback<void>): void--><!--Device-AudioRenderer-setVolume(volume: double, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -2595,6 +2735,8 @@ setVolume(volume: number): Promise<void>
 设置音频流的音量。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-AudioRenderer-setVolume(volume: double): Promise<void>--><!--Device-AudioRenderer-setVolume(volume: double): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -2632,6 +2774,8 @@ setVolumeWithRamp(volume: number, duration: number): void
 
 **起始版本：** 11
 
+<!--Device-AudioRenderer-setVolumeWithRamp(volume: double, duration: int): void--><!--Device-AudioRenderer-setVolumeWithRamp(volume: double, duration: int): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **参数：**
@@ -2668,6 +2812,8 @@ start(callback: AsyncCallback<void>): void
 
 **起始版本：** 8
 
+<!--Device-AudioRenderer-start(callback: AsyncCallback<void>): void--><!--Device-AudioRenderer-start(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **参数：**
@@ -2702,6 +2848,8 @@ start(): Promise<void>
 
 **起始版本：** 8
 
+<!--Device-AudioRenderer-start(): Promise<void>--><!--Device-AudioRenderer-start(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **返回值：**
@@ -2731,6 +2879,8 @@ stop(callback: AsyncCallback<void>): void
 停止音频渲染。使用callback异步回调。
 
 **起始版本：** 8
+
+<!--Device-AudioRenderer-stop(callback: AsyncCallback<void>): void--><!--Device-AudioRenderer-stop(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -2765,6 +2915,8 @@ stop(): Promise<void>
 停止音频渲染。使用Promise异步回调。
 
 **起始版本：** 8
+
+<!--Device-AudioRenderer-stop(): Promise<void>--><!--Device-AudioRenderer-stop(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -2804,6 +2956,8 @@ getRenderRate(callback: AsyncCallback<AudioRendererRate>): void
 
 **替代接口：** [getSpeed](#getspeed)
 
+<!--Device-AudioRenderer-getRenderRate(callback: AsyncCallback<AudioRendererRate>): void--><!--Device-AudioRenderer-getRenderRate(callback: AsyncCallback<AudioRendererRate>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **参数：**
@@ -2842,6 +2996,8 @@ getRenderRate(): Promise<AudioRendererRate>
 
 **替代接口：** [getSpeed](#getspeed)
 
+<!--Device-AudioRenderer-getRenderRate(): Promise<AudioRendererRate>--><!--Device-AudioRenderer-getRenderRate(): Promise<AudioRendererRate>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **返回值：**
@@ -2879,6 +3035,8 @@ getRenderRateSync(): AudioRendererRate
 **废弃版本：** 11
 
 **替代接口：** [getSpeed](#getspeed)
+
+<!--Device-AudioRenderer-getRenderRateSync(): AudioRendererRate--><!--Device-AudioRenderer-getRenderRateSync(): AudioRendererRate-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -2919,6 +3077,8 @@ setRenderRate(rate: AudioRendererRate, callback: AsyncCallback<void>): void
 **废弃版本：** 11
 
 **替代接口：** setSpeed
+
+<!--Device-AudioRenderer-setRenderRate(rate: AudioRendererRate, callback: AsyncCallback<void>): void--><!--Device-AudioRenderer-setRenderRate(rate: AudioRendererRate, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -2963,6 +3123,8 @@ setRenderRate(rate: AudioRendererRate): Promise<void>
 
 **替代接口：** setSpeed
 
+<!--Device-AudioRenderer-setRenderRate(rate: AudioRendererRate): Promise<void>--><!--Device-AudioRenderer-setRenderRate(rate: AudioRendererRate): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **参数：**
@@ -3006,6 +3168,8 @@ write(buffer: ArrayBuffer, callback: AsyncCallback<number>): void
 **废弃版本：** 11
 
 **替代接口：** writeData
+
+<!--Device-AudioRenderer-write(buffer: ArrayBuffer, callback: AsyncCallback<number>): void--><!--Device-AudioRenderer-write(buffer: ArrayBuffer, callback: AsyncCallback<number>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -3083,6 +3247,8 @@ write(buffer: ArrayBuffer): Promise<number>
 
 **替代接口：** writeData
 
+<!--Device-AudioRenderer-write(buffer: ArrayBuffer): Promise<number>--><!--Device-AudioRenderer-write(buffer: ArrayBuffer): Promise<number>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **参数：**
@@ -3152,5 +3318,7 @@ readonly state: AudioState
 **类型：** [AudioState](arkts-audio-audio-audiostate-e.md)
 
 **起始版本：** 8
+
+<!--Device-AudioRenderer-readonly state: AudioState--><!--Device-AudioRenderer-readonly state: AudioState-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer

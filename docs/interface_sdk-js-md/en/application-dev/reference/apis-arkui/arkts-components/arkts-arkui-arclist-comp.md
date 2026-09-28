@@ -36,6 +36,8 @@ Creates an **ArcList** component instance with specified configuration options.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ArcListInterface-(options?: ArkListOptions): ArcListAttribute--><!--Device-ArcListInterface-(options?: ArkListOptions): ArcListAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 **Parameters:**
@@ -50,7 +52,7 @@ Creates an **ArcList** component instance with specified configuration options.
 
 | Name | Description |
 | --- | --- |
-| [ArcListItemInterface](arkts-arkui-arclist-comp-arclistiteminterface-i.md) | The **ArcListItem** component is used to display individual child components in an [ArcList](#ohosarkuiarclist) component and must be used in conjunction with **ArcList**. |
+| [ArcListItemInterface](arkts-arkui-arclist-comp-arclistiteminterface-i.md) | A child component used to display items in an arc list. It must be used in conjunction with [ArcList](arkts-arkui-arclist-comp.md). |
 | [ArkListOptions](arkts-arkui-arclist-comp-arklistoptions-i.md) | Provides basic parameters for creating an **ArcList** component. |
 
 ### Types

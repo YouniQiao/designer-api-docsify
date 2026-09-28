@@ -19,6 +19,8 @@ function isDistributedEnabled(callback: AsyncCallback<boolean>): void
 
 **替代接口：** [isDistributedEnabled](arkts-notification-notificationmanager-isdistributedenabled-f.md)
 
+<!--Device-notification-function isDistributedEnabled(callback: AsyncCallback<boolean>): void--><!--Device-notification-function isDistributedEnabled(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **参数：**
@@ -43,6 +45,8 @@ function isDistributedEnabled(): Promise<boolean>
 **废弃版本：** 9
 
 **替代接口：** [isDistributedEnabled](arkts-notification-notificationmanager-isdistributedenabled-f.md)
+
+<!--Device-notification-function isDistributedEnabled(): Promise<boolean>--><!--Device-notification-function isDistributedEnabled(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

@@ -8,6 +8,8 @@ enum GetPropertyType
 
 **起始版本：** 8
 
+<!--Device-osAccount-enum GetPropertyType--><!--Device-osAccount-enum GetPropertyType-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -21,6 +23,8 @@ AUTH_SUB_TYPE = 1
 指示认证凭据子类型。
 
 **起始版本：** 8
+
+<!--Device-GetPropertyType-AUTH_SUB_TYPE = 1--><!--Device-GetPropertyType-AUTH_SUB_TYPE = 1-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -36,6 +40,8 @@ REMAIN_TIMES = 2
 
 **起始版本：** 8
 
+<!--Device-GetPropertyType-REMAIN_TIMES = 2--><!--Device-GetPropertyType-REMAIN_TIMES = 2-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +55,8 @@ FREEZING_TIME = 3
 冻结时间。
 
 **起始版本：** 8
+
+<!--Device-GetPropertyType-FREEZING_TIME = 3--><!--Device-GetPropertyType-FREEZING_TIME = 3-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -64,6 +72,8 @@ ENROLLMENT_PROGRESS = 4
 
 **起始版本：** 10
 
+<!--Device-GetPropertyType-ENROLLMENT_PROGRESS = 4--><!--Device-GetPropertyType-ENROLLMENT_PROGRESS = 4-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +87,8 @@ SENSOR_INFO = 5
 传感器信息。
 
 **起始版本：** 10
+
+<!--Device-GetPropertyType-SENSOR_INFO = 5--><!--Device-GetPropertyType-SENSOR_INFO = 5-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -92,6 +104,8 @@ NEXT_PHASE_FREEZING_TIME = 6
 
 **起始版本：** 12
 
+<!--Device-GetPropertyType-NEXT_PHASE_FREEZING_TIME = 6--><!--Device-GetPropertyType-NEXT_PHASE_FREEZING_TIME = 6-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -105,6 +119,8 @@ CREDENTIAL_LENGTH = 7
 凭据长度。
 
 **起始版本：** 20
+
+<!--Device-GetPropertyType-CREDENTIAL_LENGTH = 7--><!--Device-GetPropertyType-CREDENTIAL_LENGTH = 7-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 

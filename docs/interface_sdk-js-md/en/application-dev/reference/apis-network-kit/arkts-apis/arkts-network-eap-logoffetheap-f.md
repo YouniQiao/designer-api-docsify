@@ -18,6 +18,8 @@ Revokes the EAP-authenticated state of an Ethernet NIC.
 
 **Required permissions:** ohos.permission.MANAGE_ENTERPRISE_WIFI_CONNECTION
 
+<!--Device-eap-function logOffEthEap(netId: int): void--><!--Device-eap-function logOffEthEap(netId: int): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 **Parameters:**

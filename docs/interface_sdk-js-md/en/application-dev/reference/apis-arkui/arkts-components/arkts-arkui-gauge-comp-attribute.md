@@ -4,11 +4,13 @@
 declare class GaugeAttribute extends CommonMethod<GaugeAttribute>
 ```
 
-In addition to the [universal attributes](arkts-arkui-common-comp.md#common), the following attributes are supported.
+In addition to the [universal attributes](arkts-arkui-common-comp.md), the following attributes are supported.
 
 **Inheritance/Implementation:** GaugeAttribute extends CommonMethod<GaugeAttribute>
 
 **Since:** 8
+
+<!--Device-unnamed-declare class GaugeAttribute extends CommonMethod<GaugeAttribute>--><!--Device-unnamed-declare class GaugeAttribute extends CommonMethod<GaugeAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,6 +38,8 @@ A ring of the gradient type contains a maximum of nine color segments. If there 
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-GaugeAttribute-colors(colors: ResourceColor | LinearGradient | Array<[ResourceColor | LinearGradient, number]>): GaugeAttribute--><!--Device-GaugeAttribute-colors(colors: ResourceColor | LinearGradient | Array<[ResourceColor | LinearGradient, number]>): GaugeAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -57,6 +61,8 @@ Creates a content modifier.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GaugeAttribute-contentModifier(modifier: ContentModifier<GaugeConfiguration>): GaugeAttribute--><!--Device-GaugeAttribute-contentModifier(modifier: ContentModifier<GaugeConfiguration>): GaugeAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -82,6 +88,8 @@ Sets the description of the gauge.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-GaugeAttribute-description(value: CustomBuilder): GaugeAttribute--><!--Device-GaugeAttribute-description(value: CustomBuilder): GaugeAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -103,6 +111,8 @@ Sets the end angle of the gauge. Ensure an appropriate difference between the st
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-GaugeAttribute-endAngle(angle: number): GaugeAttribute--><!--Device-GaugeAttribute-endAngle(angle: number): GaugeAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -127,6 +137,8 @@ Sets the indicator style of the gauge.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
+
+<!--Device-GaugeAttribute-indicator(value: GaugeIndicatorOptions): GaugeAttribute--><!--Device-GaugeAttribute-indicator(value: GaugeIndicatorOptions): GaugeAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -156,13 +168,15 @@ Sets whether to enable privacy mode.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-GaugeAttribute-privacySensitive(isPrivacySensitiveMode: Optional<boolean>): GaugeAttribute--><!--Device-GaugeAttribute-privacySensitive(isPrivacySensitiveMode: Optional<boolean>): GaugeAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isPrivacySensitiveMode | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;boolean&gt; | Yes | Sets privacy sensitivity. In privacy mode, the Gauge pointer points to the 0 position, the maximum and minimum value texts are masked, and the range is displayed in gray or the background color. The value **true** enables privacy sensitivity, and **false** disables it. <br>**Note:** <br>If this parameter is set to null, the content is not sensitive.<!--Del--> <br>To use Gauge in a card, set the [privacy mask](arkts-arkui-common-comp.md#common) attribute through the [FormComponent](arkts-arkui-formcomponent-comp-sys.md#form_component) component. The privacy mask takes effect only when the card is displayed.<!--DelEnd--> |
+| isPrivacySensitiveMode | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;boolean&gt; | Yes | Sets privacy sensitivity. In privacy mode, the Gauge pointer points to the 0 position, the maximum and minimum value texts are masked, and the range is displayed in gray or the background color. The value **true** enables privacy sensitivity, and **false** disables it. <br>**Note:** <br>If this parameter is set to null, the content is not sensitive.<!--Del--> <br>To use Gauge in a card, set the [privacy mask](arkts-arkui-common-comp.md) attribute through the [FormComponent](arkts-arkui-formcomponent-comp-sys.md) component. The privacy mask takes effect only when the card is displayed.<!--DelEnd--> |
 
 ## startAngle
 
@@ -177,6 +191,8 @@ Sets the start angle position. If the difference between the start angle and the
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-GaugeAttribute-startAngle(angle: number): GaugeAttribute--><!--Device-GaugeAttribute-startAngle(angle: number): GaugeAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -199,6 +215,8 @@ Sets the stroke width of the gauge.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-GaugeAttribute-strokeWidth(length: Length): GaugeAttribute--><!--Device-GaugeAttribute-strokeWidth(length: Length): GaugeAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -224,6 +242,8 @@ Sets the shadow style of the gauge.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-GaugeAttribute-trackShadow(value: GaugeShadowOptions): GaugeAttribute--><!--Device-GaugeAttribute-trackShadow(value: GaugeShadowOptions): GaugeAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -245,6 +265,8 @@ Sets the value of the gauge.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-GaugeAttribute-value(value: number): GaugeAttribute--><!--Device-GaugeAttribute-value(value: number): GaugeAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

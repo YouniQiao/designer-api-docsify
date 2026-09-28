@@ -8,6 +8,8 @@ Wi-Fi连接信息。
 
 **起始版本：** 9
 
+<!--Device-wifiManager-interface WifiLinkedInfo--><!--Device-wifiManager-interface WifiLinkedInfo-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## 导入模块
@@ -28,6 +30,8 @@ Wi-Fi接入点的频段，1表示2.4GHz；2表示5GHz。
 
 **起始版本：** 9
 
+<!--Device-WifiLinkedInfo-band: int--><!--Device-WifiLinkedInfo-band: int-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## bssid
@@ -42,7 +46,9 @@ bssid: string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WifiLinkedInfo-bssid: string--><!--Device-WifiLinkedInfo-bssid: string-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -58,6 +64,8 @@ channelWidth: WifiChannelWidth
 
 **起始版本：** 10
 
+<!--Device-WifiLinkedInfo-channelWidth: WifiChannelWidth--><!--Device-WifiLinkedInfo-channelWidth: WifiChannelWidth-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## connState
@@ -71,6 +79,8 @@ Wi-Fi连接状态。
 **类型：** [ConnState](arkts-connectivity-wifimanager-connstate-e.md)
 
 **起始版本：** 9
+
+<!--Device-WifiLinkedInfo-connState: ConnState--><!--Device-WifiLinkedInfo-connState: ConnState-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -86,7 +96,9 @@ Wi-Fi接入点的频率。
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WifiLinkedInfo-frequency: int--><!--Device-WifiLinkedInfo-frequency: int-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -105,6 +117,8 @@ Wi-Fi连接的IP地址。
 
 **起始版本：** 9
 
+<!--Device-WifiLinkedInfo-ipAddress: int--><!--Device-WifiLinkedInfo-ipAddress: int-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## isHidden
@@ -118,6 +132,8 @@ Wi-Fi接入点是否是隐藏网络，true表示是隐藏网络，false表示不
 **类型：** boolean
 
 **起始版本：** 9
+
+<!--Device-WifiLinkedInfo-isHidden: boolean--><!--Device-WifiLinkedInfo-isHidden: boolean-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -133,6 +149,8 @@ isHiLinkNetwork: boolean
 
 **起始版本：** 12
 
+<!--Device-WifiLinkedInfo-isHiLinkNetwork: boolean--><!--Device-WifiLinkedInfo-isHiLinkNetwork: boolean-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## isRestricted
@@ -146,6 +164,8 @@ Wi-Fi接入点是否限制数据量，true表示限制，false表示不限制。
 **类型：** boolean
 
 **起始版本：** 9
+
+<!--Device-WifiLinkedInfo-isRestricted: boolean--><!--Device-WifiLinkedInfo-isRestricted: boolean-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -161,6 +181,8 @@ Wi-Fi接入点的上行速度，单位Mbps。
 
 **起始版本：** 9
 
+<!--Device-WifiLinkedInfo-linkSpeed: int--><!--Device-WifiLinkedInfo-linkSpeed: int-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## macAddress
@@ -174,6 +196,8 @@ macAddress: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-WifiLinkedInfo-macAddress: string--><!--Device-WifiLinkedInfo-macAddress: string-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -189,6 +213,8 @@ MAC地址类型。0 - 随机MAC地址，1 - 设备MAC地址。
 
 **起始版本：** 9
 
+<!--Device-WifiLinkedInfo-macType: int--><!--Device-WifiLinkedInfo-macType: int-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## maxSupportedRxLinkSpeed
@@ -203,6 +229,8 @@ maxSupportedRxLinkSpeed: number
 
 **起始版本：** 10
 
+<!--Device-WifiLinkedInfo-maxSupportedRxLinkSpeed: int--><!--Device-WifiLinkedInfo-maxSupportedRxLinkSpeed: int-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## maxSupportedTxLinkSpeed
@@ -216,6 +244,8 @@ maxSupportedTxLinkSpeed: number
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-WifiLinkedInfo-maxSupportedTxLinkSpeed: int--><!--Device-WifiLinkedInfo-maxSupportedTxLinkSpeed: int-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -233,7 +263,9 @@ RSSI（Received Signal Strength Indicator，接收信号强度指示），其标
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WifiLinkedInfo-rssi: int--><!--Device-WifiLinkedInfo-rssi: int-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -249,6 +281,8 @@ Wi-Fi接入点的下行速度，单位Mbps。
 
 **起始版本：** 10
 
+<!--Device-WifiLinkedInfo-rxLinkSpeed: int--><!--Device-WifiLinkedInfo-rxLinkSpeed: int-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## ssid
@@ -263,7 +297,9 @@ ssid: string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WifiLinkedInfo-ssid: string--><!--Device-WifiLinkedInfo-ssid: string-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -279,6 +315,8 @@ supportedWifiCategory: WifiCategory
 
 **起始版本：** 12
 
+<!--Device-WifiLinkedInfo-supportedWifiCategory: WifiCategory--><!--Device-WifiLinkedInfo-supportedWifiCategory: WifiCategory-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## wifiLinkType
@@ -293,6 +331,8 @@ Wi-Fi7连接类型。
 
 **起始版本：** 18
 
+<!--Device-WifiLinkedInfo-wifiLinkType?: WifiLinkType--><!--Device-WifiLinkedInfo-wifiLinkType?: WifiLinkType-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## wifiStandard
@@ -306,5 +346,7 @@ wifiStandard: WifiStandard
 **类型：** [WifiStandard](arkts-connectivity-wifimanager-wifistandard-e.md)
 
 **起始版本：** 10
+
+<!--Device-WifiLinkedInfo-wifiStandard: WifiStandard--><!--Device-WifiLinkedInfo-wifiStandard: WifiStandard-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA

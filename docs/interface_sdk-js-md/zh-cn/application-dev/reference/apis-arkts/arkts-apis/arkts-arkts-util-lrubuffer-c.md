@@ -12,6 +12,8 @@ LruBuffer 算法在缓存空间不足时使用新数据替换最不常使用的�
 
 **替代接口：** [LRUCache](arkts-arkts-util-lrucache-c.md)
 
+<!--Device-util-class LruBuffer<K, V>--><!--Device-util-class LruBuffer<K, V>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -33,6 +35,8 @@ import { util } from '@kit.ArkTS';
 **废弃版本：** 9
 
 **替代接口：** [Symbol.iterator]
+
+<!--Device-LruBuffer-[Symbol.iterator](): IterableIterator<[K, V]>--><!--Device-LruBuffer-[Symbol.iterator](): IterableIterator<[K, V]>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -63,6 +67,8 @@ afterRemoval(isEvict: boolean, key: K, value: V, newValue: V): void
 **废弃版本：** 9
 
 **替代接口：** [afterRemoval](arkts-arkts-util-lrucache-c.md#afterremoval)
+
+<!--Device-LruBuffer-afterRemoval(isEvict: boolean, key: K, value: V, newValue: V): void--><!--Device-LruBuffer-afterRemoval(isEvict: boolean, key: K, value: V, newValue: V): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -114,6 +120,8 @@ clear(): void
 
 **替代接口：** [clear](arkts-arkts-util-lrucache-c.md#clear)
 
+<!--Device-LruBuffer-clear(): void--><!--Device-LruBuffer-clear(): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **示例**
@@ -138,6 +146,8 @@ constructor(capacity?: number)
 **废弃版本：** 9
 
 **替代接口：** constructor
+
+<!--Device-LruBuffer-constructor(capacity?: number)--><!--Device-LruBuffer-constructor(capacity?: number)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -166,6 +176,8 @@ contains(key: K): boolean
 **废弃版本：** 9
 
 **替代接口：** [contains](arkts-arkts-util-lrucache-c.md#contains)
+
+<!--Device-LruBuffer-contains(key: K): boolean--><!--Device-LruBuffer-contains(key: K): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -205,6 +217,8 @@ createDefault(key: K): V
 
 **替代接口：** [createDefault](arkts-arkts-util-lrucache-c.md#createdefault)
 
+<!--Device-LruBuffer-createDefault(key: K): V--><!--Device-LruBuffer-createDefault(key: K): V-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -240,6 +254,8 @@ entries(): IterableIterator<[K, V]>
 
 **替代接口：** [entries](arkts-arkts-util-lrucache-c.md#entries)
 
+<!--Device-LruBuffer-entries(): IterableIterator<[K, V]>--><!--Device-LruBuffer-entries(): IterableIterator<[K, V]>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -269,6 +285,8 @@ get(key: K): V | undefined
 **废弃版本：** 9
 
 **替代接口：** [get](arkts-arkts-util-lrucache-c.md#get)
+
+<!--Device-LruBuffer-get(key: K): V | undefined--><!--Device-LruBuffer-get(key: K): V | undefined-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -308,6 +326,8 @@ getCapacity(): number
 
 **替代接口：** [getCapacity](arkts-arkts-util-lrucache-c.md#getcapacity)
 
+<!--Device-LruBuffer-getCapacity(): number--><!--Device-LruBuffer-getCapacity(): number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -338,6 +358,8 @@ getCreateCount(): number
 **废弃版本：** 9
 
 **替代接口：** [getCreateCount](arkts-arkts-util-lrucache-c.md#getcreatecount)
+
+<!--Device-LruBuffer-getCreateCount(): number--><!--Device-LruBuffer-getCreateCount(): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -370,6 +392,8 @@ getMatchCount(): number
 **废弃版本：** 9
 
 **替代接口：** [getMatchCount](arkts-arkts-util-lrucache-c.md#getmatchcount)
+
+<!--Device-LruBuffer-getMatchCount(): number--><!--Device-LruBuffer-getMatchCount(): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -404,6 +428,8 @@ getMissCount(): number
 
 **替代接口：** [getMissCount](arkts-arkts-util-lrucache-c.md#getmisscount)
 
+<!--Device-LruBuffer-getMissCount(): number--><!--Device-LruBuffer-getMissCount(): number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -437,6 +463,8 @@ getPutCount(): number
 
 **替代接口：** [getPutCount](arkts-arkts-util-lrucache-c.md#getputcount)
 
+<!--Device-LruBuffer-getPutCount(): number--><!--Device-LruBuffer-getPutCount(): number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -468,6 +496,8 @@ getRemovalCount(): number
 **废弃版本：** 9
 
 **替代接口：** [getRemovalCount](arkts-arkts-util-lrucache-c.md#getremovalcount)
+
+<!--Device-LruBuffer-getRemovalCount(): number--><!--Device-LruBuffer-getRemovalCount(): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -503,6 +533,8 @@ isEmpty(): boolean
 
 **替代接口：** [isEmpty](arkts-arkts-util-lrucache-c.md#isempty)
 
+<!--Device-LruBuffer-isEmpty(): boolean--><!--Device-LruBuffer-isEmpty(): boolean-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -535,6 +567,8 @@ keys(): K[]
 
 **替代接口：** [keys](arkts-arkts-util-lrucache-c.md#keys)
 
+<!--Device-LruBuffer-keys(): K[]--><!--Device-LruBuffer-keys(): K[]-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -566,6 +600,8 @@ put(key: K, value: V): V
 **废弃版本：** 9
 
 **替代接口：** [put](arkts-arkts-util-lrucache-c.md#put)
+
+<!--Device-LruBuffer-put(key: K, value: V): V--><!--Device-LruBuffer-put(key: K, value: V): V-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -605,6 +641,8 @@ remove(key: K): V | undefined
 
 **替代接口：** [remove](arkts-arkts-util-lrucache-c.md#remove)
 
+<!--Device-LruBuffer-remove(key: K): V | undefined--><!--Device-LruBuffer-remove(key: K): V | undefined-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -643,6 +681,8 @@ toString(): string
 
 **替代接口：** [toString](arkts-arkts-util-lrucache-c.md#tostring)
 
+<!--Device-LruBuffer-toString(): string--><!--Device-LruBuffer-toString(): string-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -677,6 +717,8 @@ updateCapacity(newCapacity: number): void
 
 **替代接口：** [updateCapacity](arkts-arkts-util-lrucache-c.md#updatecapacity)
 
+<!--Device-LruBuffer-updateCapacity(newCapacity: number): void--><!--Device-LruBuffer-updateCapacity(newCapacity: number): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -705,6 +747,8 @@ values(): V[]
 **废弃版本：** 9
 
 **替代接口：** [values](arkts-arkts-util-lrucache-c.md#values)
+
+<!--Device-LruBuffer-values(): V[]--><!--Device-LruBuffer-values(): V[]-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -741,5 +785,7 @@ length: number
 **废弃版本：** 9
 
 **替代接口：** length
+
+<!--Device-LruBuffer-length: number--><!--Device-LruBuffer-length: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

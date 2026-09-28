@@ -21,6 +21,8 @@ function off(type: 'accessibilityStateChange', callback?: Callback<boolean>): vo
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-accessibility-function off(type: 'accessibilityStateChange', callback?: Callback<boolean>): void--><!--Device-accessibility-function off(type: 'accessibilityStateChange', callback?: Callback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **参数：**
@@ -78,6 +80,8 @@ function off(type: 'touchGuideStateChange', callback?: Callback<boolean>): void
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-accessibility-function off(type: 'touchGuideStateChange', callback?: Callback<boolean>): void--><!--Device-accessibility-function off(type: 'touchGuideStateChange', callback?: Callback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -137,6 +141,8 @@ function off(type: 'screenReaderStateChange', callback?: Callback<boolean>): voi
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-accessibility-function off(type: 'screenReaderStateChange', callback?: Callback<boolean>): void--><!--Device-accessibility-function off(type: 'screenReaderStateChange', callback?: Callback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **参数：**
@@ -194,6 +200,8 @@ function off(type: 'touchModeChange', callback?: Callback<string>): void
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-accessibility-function off(type: 'touchModeChange', callback?: Callback<string>): void--><!--Device-accessibility-function off(type: 'touchModeChange', callback?: Callback<string>): void-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 

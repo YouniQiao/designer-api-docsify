@@ -8,6 +8,8 @@ Defines the unique identifier for a custom menu item. It is used to identify men
 
 **Since:** 12
 
+<!--Device-unnamed-declare class TextMenuItemId--><!--Device-unnamed-declare class TextMenuItemId-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## equals
@@ -23,6 +25,8 @@ Checks whether this **TextMenuItemId** object is the same as another **TextMenuI
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextMenuItemId-equals(id: TextMenuItemId): boolean--><!--Device-TextMenuItemId-equals(id: TextMenuItemId): boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -51,6 +55,8 @@ Creates a **TextMenuItemId** object based on **id**.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextMenuItemId-static of(id: ResourceStr): TextMenuItemId--><!--Device-TextMenuItemId-static of(id: ResourceStr): TextMenuItemId-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -82,6 +88,8 @@ Navigate, a first-level menu item. Provides a jump service for the selected addr
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-TextMenuItemId-static readonly address: TextMenuItemId--><!--Device-TextMenuItemId-static readonly address: TextMenuItemId-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## AI_WRITER
@@ -99,6 +107,8 @@ static readonly AI_WRITER: TextMenuItemId
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
+
+<!--Device-TextMenuItemId-static readonly AI_WRITER: TextMenuItemId--><!--Device-TextMenuItemId-static readonly AI_WRITER: TextMenuItemId-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -118,6 +128,8 @@ static readonly askAI: TextMenuItemId
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-TextMenuItemId-static readonly askAI: TextMenuItemId--><!--Device-TextMenuItemId-static readonly askAI: TextMenuItemId-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## autoFill
@@ -126,7 +138,7 @@ static readonly askAI: TextMenuItemId
 static readonly autoFill: TextMenuItemId
 ```
 
-Auto fill, a first-level menu item. Tapping it expands the second-level menu item "Password vault". It is supported only by [Search](../arkts-components/arkts-arkui-search-comp.md#search), [TextInput](../arkts-components/arkts-arkui-textinput-comp.md#text_input), [TextArea](../arkts-components/arkts-arkui-textarea-comp.md#text_area), or [RichEditor](../arkts-components/arkts-arkui-richeditor-comp.md#rich_editor).
+Auto fill, a first-level menu item. Tapping it expands the second-level menu item "Password vault". It is supported only by [Search](../arkts-components/arkts-arkui-search-comp.md), [TextInput](../arkts-components/arkts-arkui-textinput-comp.md), [TextArea](../arkts-components/arkts-arkui-textarea-comp.md), or [RichEditor](../arkts-components/arkts-arkui-richeditor-comp.md).
 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
@@ -135,6 +147,8 @@ Auto fill, a first-level menu item. Tapping it expands the second-level menu ite
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-TextMenuItemId-static readonly autoFill: TextMenuItemId--><!--Device-TextMenuItemId-static readonly autoFill: TextMenuItemId-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -154,6 +168,8 @@ Camera input, a first-level menu item.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TextMenuItemId-static readonly CAMERA_INPUT: TextMenuItemId--><!--Device-TextMenuItemId-static readonly CAMERA_INPUT: TextMenuItemId-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## COLLABORATION_SERVICE
@@ -171,6 +187,8 @@ Collaboration service, a first-level menu item.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextMenuItemId-static readonly COLLABORATION_SERVICE: TextMenuItemId--><!--Device-TextMenuItemId-static readonly COLLABORATION_SERVICE: TextMenuItemId-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -190,6 +208,8 @@ Default copy, a first-level menu item.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TextMenuItemId-static readonly COPY: TextMenuItemId--><!--Device-TextMenuItemId-static readonly COPY: TextMenuItemId-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## CUT
@@ -207,6 +227,8 @@ Default cut, a first-level menu item.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextMenuItemId-static readonly CUT: TextMenuItemId--><!--Device-TextMenuItemId-static readonly CUT: TextMenuItemId-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -226,6 +248,8 @@ New schedule, a first-level menu item. Provides a jump service for the selected 
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-TextMenuItemId-static readonly dateTime: TextMenuItemId--><!--Device-TextMenuItemId-static readonly dateTime: TextMenuItemId-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## email
@@ -244,6 +268,8 @@ New email, a first-level menu item. Provides a jump service for the selected ema
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-TextMenuItemId-static readonly email: TextMenuItemId--><!--Device-TextMenuItemId-static readonly email: TextMenuItemId-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## passwordVault
@@ -252,7 +278,7 @@ New email, a first-level menu item. Provides a jump service for the selected ema
 static readonly passwordVault: TextMenuItemId
 ```
 
-Password vault, a second-level menu item. Tapping this menu item opens the password vault application, which provides the capability of auto-filling account and password. It is supported only by [Search](../arkts-components/arkts-arkui-search-comp.md#search), [TextInput](../arkts-components/arkts-arkui-textinput-comp.md#text_input), [TextArea](../arkts-components/arkts-arkui-textarea-comp.md#text_area), or [RichEditor](../arkts-components/arkts-arkui-richeditor-comp.md#rich_editor).
+Password vault, a second-level menu item. Tapping this menu item opens the password vault application, which provides the capability of auto-filling account and password. It is supported only by [Search](../arkts-components/arkts-arkui-search-comp.md), [TextInput](../arkts-components/arkts-arkui-textinput-comp.md), [TextArea](../arkts-components/arkts-arkui-textarea-comp.md), or [RichEditor](../arkts-components/arkts-arkui-richeditor-comp.md).
 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
@@ -261,6 +287,8 @@ Password vault, a second-level menu item. Tapping this menu item opens the passw
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-TextMenuItemId-static readonly passwordVault: TextMenuItemId--><!--Device-TextMenuItemId-static readonly passwordVault: TextMenuItemId-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -280,6 +308,8 @@ Default paste, a first-level menu item.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TextMenuItemId-static readonly PASTE: TextMenuItemId--><!--Device-TextMenuItemId-static readonly PASTE: TextMenuItemId-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## phoneNumber
@@ -297,6 +327,8 @@ Call, a first-level menu item. Provides a jump service for the selected phone nu
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-TextMenuItemId-static readonly phoneNumber: TextMenuItemId--><!--Device-TextMenuItemId-static readonly phoneNumber: TextMenuItemId-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -316,6 +348,8 @@ Search, a first-level menu item. Provides search service for the selected text a
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TextMenuItemId-static readonly SEARCH: TextMenuItemId--><!--Device-TextMenuItemId-static readonly SEARCH: TextMenuItemId-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## SELECT_ALL
@@ -333,6 +367,8 @@ Default select all, a first-level menu item.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextMenuItemId-static readonly SELECT_ALL: TextMenuItemId--><!--Device-TextMenuItemId-static readonly SELECT_ALL: TextMenuItemId-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -352,6 +388,8 @@ Share, a first-level menu item. Provides share service for the selected text and
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TextMenuItemId-static readonly SHARE: TextMenuItemId--><!--Device-TextMenuItemId-static readonly SHARE: TextMenuItemId-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## TRANSLATE
@@ -370,6 +408,8 @@ Translation, a first-level menu item. Provides translation service for the selec
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-TextMenuItemId-static readonly TRANSLATE: TextMenuItemId--><!--Device-TextMenuItemId-static readonly TRANSLATE: TextMenuItemId-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## url
@@ -387,5 +427,7 @@ Open link, a first-level menu item. Provides a jump service for the selected URL
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-TextMenuItemId-static readonly url: TextMenuItemId--><!--Device-TextMenuItemId-static readonly url: TextMenuItemId-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

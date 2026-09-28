@@ -16,6 +16,8 @@ function on(type: 'hotkeyChange', hotkeyOptions: HotkeyOptions, callback: Callba
 
 **起始版本：** 14
 
+<!--Device-inputConsumer-function on(type: 'hotkeyChange', hotkeyOptions: HotkeyOptions, callback: Callback<HotkeyOptions>): void--><!--Device-inputConsumer-function on(type: 'hotkeyChange', hotkeyOptions: HotkeyOptions, callback: Callback<HotkeyOptions>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 
 **参数：**
@@ -82,6 +84,8 @@ function on(type: 'keyPressed', options: KeyPressedConfig, callback: Callback<Ke
 订阅成功后，该按键事件的系统默认行为将被屏蔽，即不会再触发系统级的响应，如音量调节。要恢复系统响应，请使用[off](arkts-input-inputconsumer-off-f.md#offkeypressed)方法取消订阅。
 
 **起始版本：** 16
+
+<!--Device-inputConsumer-function on(type: 'keyPressed', options: KeyPressedConfig, callback: Callback<KeyEvent>): void--><!--Device-inputConsumer-function on(type: 'keyPressed', options: KeyPressedConfig, callback: Callback<KeyEvent>): void-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 

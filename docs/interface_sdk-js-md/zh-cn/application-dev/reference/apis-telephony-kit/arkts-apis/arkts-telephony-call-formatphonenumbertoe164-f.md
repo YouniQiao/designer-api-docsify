@@ -18,6 +18,8 @@ function formatPhoneNumberToE164(phoneNumber: string, countryCode: string, callb
 
 **起始版本：** 7
 
+<!--Device-call-function formatPhoneNumberToE164(phoneNumber: string, countryCode: string, callback: AsyncCallback<string>): void--><!--Device-call-function formatPhoneNumberToE164(phoneNumber: string, countryCode: string, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **参数：**
@@ -68,6 +70,8 @@ function formatPhoneNumberToE164(phoneNumber: string, countryCode: string): Prom
 支持所有国家码。
 
 **起始版本：** 7
+
+<!--Device-call-function formatPhoneNumberToE164(phoneNumber: string, countryCode: string): Promise<string>--><!--Device-call-function formatPhoneNumberToE164(phoneNumber: string, countryCode: string): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 

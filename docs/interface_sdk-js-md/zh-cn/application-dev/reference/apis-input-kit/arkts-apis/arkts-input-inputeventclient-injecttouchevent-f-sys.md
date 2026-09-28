@@ -20,6 +20,8 @@ function injectTouchEvent(touchEvent: TouchEventData): void
 - API版本12+：ohos.permission.INJECT_INPUT_EVENT
 - API版本11：N/A
 
+<!--Device-inputEventClient-function injectTouchEvent(touchEvent: TouchEventData): void--><!--Device-inputEventClient-function injectTouchEvent(touchEvent: TouchEventData): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **系统接口：** 此接口为系统接口。

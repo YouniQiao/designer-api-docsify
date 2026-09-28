@@ -18,6 +18,8 @@ Get the preferred network for the specified SIM card slot.
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-radio-function getPreferredNetwork(slotId: int, callback: AsyncCallback<PreferredNetworkMode>): void--><!--Device-radio-function getPreferredNetwork(slotId: int, callback: AsyncCallback<PreferredNetworkMode>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -70,6 +72,8 @@ Get the preferred network for the specified SIM card slot.
 **起始版本：** 8
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
+
+<!--Device-radio-function getPreferredNetwork(slotId: int): Promise<PreferredNetworkMode>--><!--Device-radio-function getPreferredNetwork(slotId: int): Promise<PreferredNetworkMode>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

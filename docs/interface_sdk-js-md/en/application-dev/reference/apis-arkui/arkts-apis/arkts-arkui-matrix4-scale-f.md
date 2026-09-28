@@ -20,6 +20,8 @@ Scales this matrix object along the x, y, and z axes.
 
 **Substitutes:** [scale](arkts-arkui-matrix4-matrix4transit-i.md#scale)
 
+<!--Device-matrix4-function scale(options: ScaleOption): Matrix4Transit--><!--Device-matrix4-function scale(options: ScaleOption): Matrix4Transit-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

@@ -8,6 +8,8 @@ export interface WatchEventListener
 
 **起始版本：** 10
 
+<!--Device-unnamed-export interface WatchEventListener--><!--Device-unnamed-export interface WatchEventListener-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## 导入模块
@@ -25,6 +27,8 @@ import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResul
 文件或目录发生变动事件时触发的回调。
 
 **起始版本：** 10
+
+<!--Device-WatchEventListener-(event: WatchEvent): void--><!--Device-WatchEventListener-(event: WatchEvent): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

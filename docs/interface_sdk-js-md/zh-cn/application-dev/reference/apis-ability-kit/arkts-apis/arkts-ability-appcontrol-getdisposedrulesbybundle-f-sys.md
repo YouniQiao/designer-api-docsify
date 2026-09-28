@@ -20,6 +20,8 @@ function getDisposedRulesByBundle(bundleName: string): Array<DisposedRuleConfigu
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-appControl-function getDisposedRulesByBundle(bundleName: string): Array<DisposedRuleConfiguration>--><!--Device-appControl-function getDisposedRulesByBundle(bundleName: string): Array<DisposedRuleConfiguration>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 
 **系统接口：** 此接口为系统接口。

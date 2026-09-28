@@ -20,6 +20,8 @@ function off(type: 'networkStateChange', callback?: Callback<NetworkState>): voi
 
 **起始版本：** 6
 
+<!--Device-observer-function off(type: 'networkStateChange', callback?: Callback<NetworkState>): void--><!--Device-observer-function off(type: 'networkStateChange', callback?: Callback<NetworkState>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
 **参数：**
@@ -65,6 +67,8 @@ function off(type: 'signalInfoChange', callback?: Callback<Array<SignalInformati
 > 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
 
 **起始版本：** 6
+
+<!--Device-observer-function off(type: 'signalInfoChange', callback?: Callback<Array<SignalInformation>>): void--><!--Device-observer-function off(type: 'signalInfoChange', callback?: Callback<Array<SignalInformation>>): void-End-->
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
@@ -114,6 +118,8 @@ function off(type: 'cellularDataConnectionStateChange', callback?: Callback<Data
 
 **起始版本：** 7
 
+<!--Device-observer-function off(type: 'cellularDataConnectionStateChange', callback?: Callback<DataConnectionStateInfo>): void--><!--Device-observer-function off(type: 'cellularDataConnectionStateChange', callback?: Callback<DataConnectionStateInfo>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
 **参数：**
@@ -159,6 +165,8 @@ function off(type: 'cellularDataFlowChange', callback?: Callback<DataFlowType>):
 > 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
 
 **起始版本：** 7
+
+<!--Device-observer-function off(type: 'cellularDataFlowChange', callback?: Callback<DataFlowType>): void--><!--Device-observer-function off(type: 'cellularDataFlowChange', callback?: Callback<DataFlowType>): void-End-->
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
@@ -208,6 +216,8 @@ function off(type: 'callStateChange', callback?: Callback<CallStateInfo>): void
 
 **起始版本：** 6
 
+<!--Device-observer-function off(type: 'callStateChange', callback?: Callback<CallStateInfo>): void--><!--Device-observer-function off(type: 'callStateChange', callback?: Callback<CallStateInfo>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
 **参数：**
@@ -253,6 +263,8 @@ function off(type: 'callStateChangeEx', callback?: Callback<TelCallState>): void
 > 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
 
 **起始版本：** 21
+
+<!--Device-observer-function off(type: 'callStateChangeEx', callback?: Callback<TelCallState>): void--><!--Device-observer-function off(type: 'callStateChangeEx', callback?: Callback<TelCallState>): void-End-->
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
@@ -300,6 +312,8 @@ function off(type: 'simStateChange', callback?: Callback<SimStateData>): void
 
 **起始版本：** 7
 
+<!--Device-observer-function off(type: 'simStateChange', callback?: Callback<SimStateData>): void--><!--Device-observer-function off(type: 'simStateChange', callback?: Callback<SimStateData>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
 **参数：**
@@ -345,6 +359,8 @@ function off(type: 'iccAccountInfoChange', callback?: Callback<void>): void
 > 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
 
 **起始版本：** 10
+
+<!--Device-observer-function off(type: 'iccAccountInfoChange', callback?: Callback<void>): void--><!--Device-observer-function off(type: 'iccAccountInfoChange', callback?: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
 

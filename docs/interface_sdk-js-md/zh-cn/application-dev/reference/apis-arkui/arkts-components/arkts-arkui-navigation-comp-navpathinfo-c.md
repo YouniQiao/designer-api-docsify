@@ -8,6 +8,8 @@ declare class NavPathInfo
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare class NavPathInfo--><!--Device-unnamed-declare class NavPathInfo-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
@@ -23,6 +25,8 @@ constructor(name: string, param: unknown, onPop?: import('../api/@ohos.base').Ca
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-NavPathInfo-constructor(name: string, param: unknown, onPop?: import('../api/@ohos.base').Callback<PopInfo>, isEntry?: boolean)--><!--Device-NavPathInfo-constructor(name: string, param: unknown, onPop?: import('../api/@ohos.base').Callback<PopInfo>, isEntry?: boolean)-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -61,6 +65,8 @@ true：NavDestination是入口页面；false：NavDestination不是入口页面�
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-NavPathInfo-isEntry?: boolean--><!--Device-NavPathInfo-isEntry?: boolean-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## name
@@ -82,6 +88,8 @@ NavDestination页面名称。该名称匹配开发者设置的路由表中的nam
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-NavPathInfo-name: string--><!--Device-NavPathInfo-name: string-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## navDestinationId
@@ -99,6 +107,8 @@ NavDestination页面唯一标识符，该id由系统默认生成且全局唯一�
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-NavPathInfo-navDestinationId?: string--><!--Device-NavPathInfo-navDestinationId?: string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -118,6 +128,8 @@ NavDestination页面触发[pop](arkts-arkui-navigation-comp-navpathstack-c.md#po
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-NavPathInfo-onPop?: import('../api/@ohos.base').Callback<PopInfo>--><!--Device-NavPathInfo-onPop?: import('../api/@ohos.base').Callback<PopInfo>-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## param
@@ -135,5 +147,7 @@ param?: unknown
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-NavPathInfo-param?: unknown--><!--Device-NavPathInfo-param?: unknown-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

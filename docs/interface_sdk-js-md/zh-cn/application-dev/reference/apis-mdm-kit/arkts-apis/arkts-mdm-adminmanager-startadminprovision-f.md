@@ -20,6 +20,8 @@ function startAdminProvision(admin: Want, type: AdminType, context: common.Conte
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-adminManager-function startAdminProvision(admin: Want, type: AdminType, context: common.Context, parameters: Record<string, string>): void--><!--Device-adminManager-function startAdminProvision(admin: Want, type: AdminType, context: common.Context, parameters: Record<string, string>): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**

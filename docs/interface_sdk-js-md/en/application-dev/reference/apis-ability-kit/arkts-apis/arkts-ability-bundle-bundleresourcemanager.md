@@ -11,6 +11,8 @@ The module provides APIs for obtaining resource information, including [BundleRe
 
 **Since:** 11
 
+<!--Device-unnamed-declare namespace bundleResourceManager--><!--Device-unnamed-declare namespace bundleResourceManager-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Resource
 
 **System API:** This is a system API.

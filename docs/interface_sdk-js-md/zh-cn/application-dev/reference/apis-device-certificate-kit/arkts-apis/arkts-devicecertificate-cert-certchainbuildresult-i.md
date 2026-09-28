@@ -8,6 +8,8 @@ interface CertChainBuildResult
 
 **起始版本：** 12
 
+<!--Device-cert-interface CertChainBuildResult--><!--Device-cert-interface CertChainBuildResult-End-->
+
 **系统能力：** SystemCapability.Security.Cert
 
 ## 导入模块
@@ -28,7 +30,9 @@ readonly certChain: X509CertChain
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-CertChainBuildResult-readonly certChain: X509CertChain--><!--Device-CertChainBuildResult-readonly certChain: X509CertChain-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -44,6 +48,8 @@ readonly validationResult: CertChainValidationResult
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-CertChainBuildResult-readonly validationResult: CertChainValidationResult--><!--Device-CertChainBuildResult-readonly validationResult: CertChainValidationResult-End-->
 
 **系统能力：** SystemCapability.Security.Cert

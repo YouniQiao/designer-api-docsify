@@ -18,6 +18,8 @@ function getLocalAddress(): string
 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.GET_BLUETOOTH_LOCAL_MAC
 
+<!--Device-access-function getLocalAddress(): string--><!--Device-access-function getLocalAddress(): string-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。

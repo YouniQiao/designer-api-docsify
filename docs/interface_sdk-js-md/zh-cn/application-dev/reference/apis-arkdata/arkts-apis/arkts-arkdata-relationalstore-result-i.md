@@ -8,6 +8,8 @@ interface Result
 
 **起始版本：** 23
 
+<!--Device-relationalStore-interface Result--><!--Device-relationalStore-interface Result-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ readonly changed: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Result-readonly changed: long--><!--Device-Result-readonly changed: long-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## resultSet
@@ -45,5 +49,7 @@ readonly resultSet: LiteResultSet
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Result-readonly resultSet: LiteResultSet--><!--Device-Result-readonly resultSet: LiteResultSet-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core

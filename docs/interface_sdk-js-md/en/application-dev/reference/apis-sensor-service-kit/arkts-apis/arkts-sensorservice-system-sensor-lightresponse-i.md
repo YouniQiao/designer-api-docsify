@@ -14,6 +14,8 @@ Callback invoked when the ambient light sensor data changes. The response object
 
 **Substitutes:** [LightResponse](arkts-sensorservice-sensor-lightresponse-i.md)
 
+<!--Device-unnamed-export interface LightResponse--><!--Device-unnamed-export interface LightResponse-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 ## Modules to Import
@@ -39,5 +41,7 @@ Ambient light intensity, in lux. Value range: The value is the actually reported
 **Substitutes:** [intensity](arkts-sensorservice-sensor-lightresponse-i.md#intensity)
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-LightResponse-intensity: number--><!--Device-LightResponse-intensity: number-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite

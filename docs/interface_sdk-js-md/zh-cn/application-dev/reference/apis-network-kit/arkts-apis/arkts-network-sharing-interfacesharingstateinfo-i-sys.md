@@ -8,6 +8,8 @@ export interface InterfaceSharingStateInfo
 
 **起始版本：** 11
 
+<!--Device-sharing-export interface InterfaceSharingStateInfo--><!--Device-sharing-export interface InterfaceSharingStateInfo-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.NetSharing
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ iface: string
 
 **起始版本：** 11
 
+<!--Device-InterfaceSharingStateInfo-iface: string--><!--Device-InterfaceSharingStateInfo-iface: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.NetSharing
 
 **系统接口：** 此接口为系统接口。
@@ -46,6 +50,8 @@ state: SharingIfaceState
 
 **起始版本：** 11
 
+<!--Device-InterfaceSharingStateInfo-state: SharingIfaceState--><!--Device-InterfaceSharingStateInfo-state: SharingIfaceState-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.NetSharing
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +67,8 @@ type: SharingIfaceType
 **类型：** [SharingIfaceType](arkts-network-sharing-sharingifacetype-e-sys.md)
 
 **起始版本：** 11
+
+<!--Device-InterfaceSharingStateInfo-type: SharingIfaceType--><!--Device-InterfaceSharingStateInfo-type: SharingIfaceType-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.NetSharing
 

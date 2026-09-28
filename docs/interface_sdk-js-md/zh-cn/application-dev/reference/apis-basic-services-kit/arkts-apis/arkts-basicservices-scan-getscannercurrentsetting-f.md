@@ -18,6 +18,8 @@ function getScannerCurrentSetting(scannerId: string, optionIndex: number): Promi
 
 **需要权限：** ohos.permission.PRINT
 
+<!--Device-scan-function getScannerCurrentSetting(scannerId: string, optionIndex: int): Promise<ScannerOptionValue>--><!--Device-scan-function getScannerCurrentSetting(scannerId: string, optionIndex: int): Promise<ScannerOptionValue>-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **参数：**

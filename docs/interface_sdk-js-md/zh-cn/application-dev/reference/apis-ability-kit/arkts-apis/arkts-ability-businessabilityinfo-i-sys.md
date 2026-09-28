@@ -10,6 +10,8 @@ export interface BusinessAbilityInfo
 
 **起始版本：** 10
 
+<!--Device-unnamed-export interface BusinessAbilityInfo--><!--Device-unnamed-export interface BusinessAbilityInfo-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -25,6 +27,8 @@ readonly applicationInfo: ApplicationInfo
 **类型：** [ApplicationInfo](arkts-ability-applicationinfo-i.md)
 
 **起始版本：** 10
+
+<!--Device-BusinessAbilityInfo-readonly applicationInfo: ApplicationInfo--><!--Device-BusinessAbilityInfo-readonly applicationInfo: ApplicationInfo-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -42,6 +46,8 @@ readonly bundleName: string
 
 **起始版本：** 10
 
+<!--Device-BusinessAbilityInfo-readonly bundleName: string--><!--Device-BusinessAbilityInfo-readonly bundleName: string-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -57,6 +63,8 @@ readonly businessType: businessAbilityRouter.BusinessType
 **类型：** [businessAbilityRouter.BusinessType](arkts-ability-businessabilityrouter-businesstype-e-sys.md)
 
 **起始版本：** 10
+
+<!--Device-BusinessAbilityInfo-readonly businessType: businessAbilityRouter.BusinessType--><!--Device-BusinessAbilityInfo-readonly businessType: businessAbilityRouter.BusinessType-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -74,6 +82,8 @@ readonly descriptionId: number
 
 **起始版本：** 10
 
+<!--Device-BusinessAbilityInfo-readonly descriptionId: int--><!--Device-BusinessAbilityInfo-readonly descriptionId: int-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -89,6 +99,8 @@ readonly iconId: number
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-BusinessAbilityInfo-readonly iconId: int--><!--Device-BusinessAbilityInfo-readonly iconId: int-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -106,6 +118,8 @@ readonly labelId: number
 
 **起始版本：** 10
 
+<!--Device-BusinessAbilityInfo-readonly labelId: int--><!--Device-BusinessAbilityInfo-readonly labelId: int-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -122,6 +136,8 @@ readonly moduleName: string
 
 **起始版本：** 10
 
+<!--Device-BusinessAbilityInfo-readonly moduleName: string--><!--Device-BusinessAbilityInfo-readonly moduleName: string-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -137,6 +153,8 @@ readonly name: string
 **类型：** string
 
 **起始版本：** 10
+
+<!--Device-BusinessAbilityInfo-readonly name: string--><!--Device-BusinessAbilityInfo-readonly name: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

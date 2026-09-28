@@ -16,6 +16,8 @@ function isSupportEffect(effectId: string, callback: AsyncCallback<boolean>): vo
 
 **起始版本：** 10
 
+<!--Device-vibrator-function isSupportEffect(effectId: string, callback: AsyncCallback<boolean>): void--><!--Device-vibrator-function isSupportEffect(effectId: string, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 **参数：**
@@ -87,6 +89,8 @@ function isSupportEffect(effectId: string): Promise<boolean>
 查询当前设备是否支持传入的预置振动效果effectId。使用promise异步回调。当开发者需要在触发预置振动前确认当前设备是否支持指定的振动效果时使用此接口。与callback版本功能一致，开发者可根据异步回调风格偏好选择使用。调用成功时Promise resolve返回boolean结果：返回true表示设备支持该effectId；返回false表示不支持，此时使用该effectId触发振动可能效果不佳或无法振动。
 
 **起始版本：** 10
+
+<!--Device-vibrator-function isSupportEffect(effectId: string): Promise<boolean>--><!--Device-vibrator-function isSupportEffect(effectId: string): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
 

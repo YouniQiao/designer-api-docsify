@@ -10,6 +10,8 @@ declare class LineAttribute extends CommonShapeMethod<LineAttribute>
 
 **起始版本：** 7
 
+<!--Device-unnamed-declare class LineAttribute extends CommonShapeMethod<LineAttribute>--><!--Device-unnamed-declare class LineAttribute extends CommonShapeMethod<LineAttribute>-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## endPoint
@@ -27,6 +29,8 @@ endPoint(value: Array<any>)
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-LineAttribute-endPoint(value: Array<any>): LineAttribute--><!--Device-LineAttribute-endPoint(value: Array<any>): LineAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -51,6 +55,8 @@ startPoint(value: Array<any>)
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-LineAttribute-startPoint(value: Array<any>): LineAttribute--><!--Device-LineAttribute-startPoint(value: Array<any>): LineAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

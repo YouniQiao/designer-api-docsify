@@ -8,6 +8,8 @@ enum RectType
 
 **起始版本：** 12
 
+<!--Device-drawing-enum RectType--><!--Device-drawing-enum RectType-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## DEFAULT
@@ -19,6 +21,8 @@ DEFAULT = 0
 将图像绘制到矩形网格中。
 
 **起始版本：** 12
+
+<!--Device-RectType-DEFAULT = 0--><!--Device-RectType-DEFAULT = 0-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -32,6 +36,8 @@ TRANSPARENT = 1
 
 **起始版本：** 12
 
+<!--Device-RectType-TRANSPARENT = 1--><!--Device-RectType-TRANSPARENT = 1-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## FIXEDCOLOR
@@ -43,5 +49,7 @@ FIXEDCOLOR = 2
 将[Lattice](arkts-arkgraphics2d-drawing-lattice-c.md)中fColors数组的颜色绘制到矩形网格中。
 
 **起始版本：** 12
+
+<!--Device-RectType-FIXEDCOLOR = 2--><!--Device-RectType-FIXEDCOLOR = 2-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing

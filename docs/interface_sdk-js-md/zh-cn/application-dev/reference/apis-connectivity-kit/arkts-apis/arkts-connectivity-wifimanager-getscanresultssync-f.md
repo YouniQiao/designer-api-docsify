@@ -22,6 +22,8 @@ function getScanResultsSync(): Array<WifiScanInfo>
 
 **需要权限：** ohos.permission.GET_WIFI_INFO and (ohos.permission.GET_WIFI_PEERS_MAC or (ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION))
 
+<!--Device-wifiManager-function getScanResultsSync(): Array<WifiScanInfo>--><!--Device-wifiManager-function getScanResultsSync(): Array<WifiScanInfo>-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **返回值：**

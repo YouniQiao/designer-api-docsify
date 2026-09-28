@@ -8,6 +8,8 @@ interface Md
 
 **起始版本：** 9
 
+<!--Device-cryptoFramework-interface Md--><!--Device-cryptoFramework-interface Md-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.MessageDigest
 - API版本9-11：SystemCapability.Security.CryptoFramework
@@ -32,7 +34,9 @@ digest(callback: AsyncCallback<DataBlob>): void
 - API版本12+：此接口可在Stage模型和FA模型下使用。
 - API版本9-11：此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Md-digest(callback: AsyncCallback<DataBlob>): void--><!--Device-Md-digest(callback: AsyncCallback<DataBlob>): void-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.MessageDigest
@@ -83,7 +87,9 @@ digest(): Promise<DataBlob>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Md-digest(): Promise<DataBlob>--><!--Device-Md-digest(): Promise<DataBlob>-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.MessageDigest
@@ -218,7 +224,9 @@ digestSync(): DataBlob
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Md-digestSync(): DataBlob--><!--Device-Md-digestSync(): DataBlob-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.MessageDigest
 
@@ -340,7 +348,9 @@ getMdLength(): number
 - API版本12+：此接口可在Stage模型和FA模型下使用。
 - API版本9-11：此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Md-getMdLength(): int--><!--Device-Md-getMdLength(): int-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.MessageDigest
@@ -386,7 +396,9 @@ squeeze(len: number): Promise<DataBlob>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-Md-squeeze(len: int): Promise<DataBlob>--><!--Device-Md-squeeze(len: int): Promise<DataBlob>-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.MessageDigest
 
@@ -429,7 +441,9 @@ squeezeSync(len: number): DataBlob
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-Md-squeezeSync(len: int): DataBlob--><!--Device-Md-squeezeSync(len: int): DataBlob-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.MessageDigest
 
@@ -473,7 +487,9 @@ update(input: DataBlob, callback: AsyncCallback<void>): void
 - API版本12+：此接口可在Stage模型和FA模型下使用。
 - API版本9-11：此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Md-update(input: DataBlob, callback: AsyncCallback<void>): void--><!--Device-Md-update(input: DataBlob, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.MessageDigest
@@ -513,7 +529,9 @@ update(input: DataBlob): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Md-update(input: DataBlob): Promise<void>--><!--Device-Md-update(input: DataBlob): Promise<void>-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.MessageDigest
@@ -558,7 +576,9 @@ updateSync(input: DataBlob): void
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Md-updateSync(input: DataBlob): void--><!--Device-Md-updateSync(input: DataBlob): void-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.MessageDigest
 
@@ -590,7 +610,9 @@ readonly algName: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Md-readonly algName: string--><!--Device-Md-readonly algName: string-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.MessageDigest

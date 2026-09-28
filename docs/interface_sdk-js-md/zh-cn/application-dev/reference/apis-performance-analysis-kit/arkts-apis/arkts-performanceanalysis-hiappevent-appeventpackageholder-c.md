@@ -8,6 +8,8 @@ class AppEventPackageHolder
 
 **起始版本：** 9
 
+<!--Device-hiAppEvent-class AppEventPackageHolder--><!--Device-hiAppEvent-class AppEventPackageHolder-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 ## 导入模块
@@ -26,7 +28,9 @@ constructor(watcherName: string)
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-AppEventPackageHolder-constructor(watcherName: string)--><!--Device-AppEventPackageHolder-constructor(watcherName: string)-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -63,7 +67,9 @@ setRow(size: number): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AppEventPackageHolder-setRow(size: int): void--><!--Device-AppEventPackageHolder-setRow(size: int): void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -99,7 +105,9 @@ setSize(size: number): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-AppEventPackageHolder-setSize(size: int): void--><!--Device-AppEventPackageHolder-setSize(size: int): void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -140,6 +148,8 @@ takeNext(): AppEventPackage
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-AppEventPackageHolder-takeNext(): AppEventPackage--><!--Device-AppEventPackageHolder-takeNext(): AppEventPackage-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 

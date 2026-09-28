@@ -16,6 +16,8 @@ export declare struct InputMethodListDialog
 
 **装饰器类型：** @CustomDialog
 
+<!--Device-unnamed-export declare struct InputMethodListDialog--><!--Device-unnamed-export declare struct InputMethodListDialog-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## 导入模块
@@ -36,6 +38,8 @@ controller: CustomDialogController
 
 **起始版本：** 11
 
+<!--Device-InputMethodListDialog-controller: CustomDialogController--><!--Device-InputMethodListDialog-controller: CustomDialogController-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## patternOptions
@@ -49,5 +53,7 @@ patternOptions?: PatternOptions
 **类型：** [PatternOptions](arkts-ime-inputmethodlist-patternoptions-i.md)
 
 **起始版本：** 11
+
+<!--Device-InputMethodListDialog-patternOptions?: PatternOptions--><!--Device-InputMethodListDialog-patternOptions?: PatternOptions-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework

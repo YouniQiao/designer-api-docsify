@@ -16,6 +16,8 @@ function isSimActive(slotId: number, callback: AsyncCallback<boolean>): void
 
 **起始版本：** 7
 
+<!--Device-sim-function isSimActive(slotId: int, callback: AsyncCallback<boolean>): void--><!--Device-sim-function isSimActive(slotId: int, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**
@@ -52,6 +54,8 @@ function isSimActive(slotId: number): Promise<boolean>
 获取指定卡槽SIM卡是否激活。使用Promise异步回调。
 
 **起始版本：** 7
+
+<!--Device-sim-function isSimActive(slotId: int): Promise<boolean>--><!--Device-sim-function isSimActive(slotId: int): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

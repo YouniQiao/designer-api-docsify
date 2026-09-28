@@ -26,6 +26,8 @@ function getDisallowedUsbDevices(admin: Want): Array<UsbDeviceType>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-usbManager-function getDisallowedUsbDevices(admin: Want): Array<UsbDeviceType>--><!--Device-usbManager-function getDisallowedUsbDevices(admin: Want): Array<UsbDeviceType>-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -90,6 +92,8 @@ function getDisallowedUsbDevices(admin: Want | null): Array<UsbDeviceType>
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_USB
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-usbManager-function getDisallowedUsbDevices(admin: Want | null): Array<UsbDeviceType>--><!--Device-usbManager-function getDisallowedUsbDevices(admin: Want | null): Array<UsbDeviceType>-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

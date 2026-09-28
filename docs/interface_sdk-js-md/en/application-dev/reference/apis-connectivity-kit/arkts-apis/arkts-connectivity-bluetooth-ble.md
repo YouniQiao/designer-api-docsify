@@ -6,6 +6,8 @@ Provides methods to operate or manage Bluetooth.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-unnamed-declare namespace ble--><!--Device-unnamed-declare namespace ble-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import

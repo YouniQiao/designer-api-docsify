@@ -29,6 +29,8 @@ VibratorInfoParam）。多马达设备场景：从API version 19开始，支持�
 
 **起始版本：** 8
 
+<!--Device-unnamed-declare namespace vibrator--><!--Device-unnamed-declare namespace vibrator-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## 导入模块

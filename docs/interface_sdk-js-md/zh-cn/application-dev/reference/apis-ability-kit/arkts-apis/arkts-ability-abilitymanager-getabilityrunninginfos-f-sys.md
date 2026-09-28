@@ -20,6 +20,8 @@ function getAbilityRunningInfos(callback: AsyncCallback<Array<AbilityRunningInfo
 
 **需要权限：** ohos.permission.GET_RUNNING_INFO
 
+<!--Device-abilityManager-function getAbilityRunningInfos(callback: AsyncCallback<Array<AbilityRunningInfo>>): void--><!--Device-abilityManager-function getAbilityRunningInfos(callback: AsyncCallback<Array<AbilityRunningInfo>>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。

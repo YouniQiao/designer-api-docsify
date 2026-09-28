@@ -18,6 +18,8 @@ function selectContacts(callback: AsyncCallback<Array<Contact>>): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-contact-function selectContacts(callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function selectContacts(callback: AsyncCallback<Array<Contact>>): void-End-->
+
 **系统能力：** SystemCapability.Applications.Contacts
 
 **参数：**
@@ -63,6 +65,8 @@ function selectContacts(): Promise<Array<Contact>>
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-contact-function selectContacts(): Promise<Array<Contact>>--><!--Device-contact-function selectContacts(): Promise<Array<Contact>>-End-->
+
 **系统能力：** SystemCapability.Applications.Contacts
 
 **返回值：**
@@ -97,6 +101,8 @@ function selectContacts(options: ContactSelectionOptions, callback: AsyncCallbac
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-contact-function selectContacts(options: ContactSelectionOptions, callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function selectContacts(options: ContactSelectionOptions, callback: AsyncCallback<Array<Contact>>): void-End-->
 
 **系统能力：** SystemCapability.Applications.Contacts
 
@@ -145,6 +151,8 @@ function selectContacts(options: ContactSelectionOptions): Promise<Array<Contact
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-contact-function selectContacts(options: ContactSelectionOptions): Promise<Array<Contact>>--><!--Device-contact-function selectContacts(options: ContactSelectionOptions): Promise<Array<Contact>>-End-->
 
 **系统能力：** SystemCapability.Applications.Contacts
 

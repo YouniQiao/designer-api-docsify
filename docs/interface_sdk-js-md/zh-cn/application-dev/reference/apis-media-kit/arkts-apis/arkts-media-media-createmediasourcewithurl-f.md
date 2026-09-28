@@ -18,6 +18,8 @@ function createMediaSourceWithUrl(url: string, headers?: Record<string, string>)
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
+<!--Device-media-function createMediaSourceWithUrl(url: string, headers?: Record<string, string>): MediaSource--><!--Device-media-function createMediaSourceWithUrl(url: string, headers?: Record<string, string>): MediaSource-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 **参数：**

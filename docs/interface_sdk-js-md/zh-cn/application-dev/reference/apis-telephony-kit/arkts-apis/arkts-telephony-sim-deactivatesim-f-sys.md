@@ -18,6 +18,8 @@ Disable SIM card in specified slot.
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-sim-function deactivateSim(slotId: int, callback: AsyncCallback<void>): void--><!--Device-sim-function deactivateSim(slotId: int, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -67,6 +69,8 @@ Disable SIM card in specified slot.
 **起始版本：** 8
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
+
+<!--Device-sim-function deactivateSim(slotId: int): Promise<void>--><!--Device-sim-function deactivateSim(slotId: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

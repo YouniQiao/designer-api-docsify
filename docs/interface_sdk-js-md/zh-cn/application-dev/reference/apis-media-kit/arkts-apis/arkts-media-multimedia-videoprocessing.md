@@ -6,6 +6,8 @@
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-unnamed-declare namespace videoProcessing--><!--Device-unnamed-declare namespace videoProcessing-End-->
+
 **系统能力：** SystemCapability.Multimedia.VideoProcessingEngine
 
 ## 导入模块

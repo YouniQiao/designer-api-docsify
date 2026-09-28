@@ -10,6 +10,8 @@ interface RootInfo
 
 **废弃版本：** 23
 
+<!--Device-fileAccess-interface RootInfo--><!--Device-fileAccess-interface RootInfo-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -37,6 +39,8 @@ listFile(filter?: Filter): FileIterator
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-RootInfo-listFile(filter?: Filter): FileIterator--><!--Device-RootInfo-listFile(filter?: Filter): FileIterator-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -140,6 +144,8 @@ scanFile(filter?: Filter): FileIterator
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-RootInfo-scanFile(filter?: Filter): FileIterator--><!--Device-RootInfo-scanFile(filter?: Filter): FileIterator-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -246,6 +252,8 @@ deviceFlags: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RootInfo-deviceFlags: number--><!--Device-RootInfo-deviceFlags: number-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -267,6 +275,8 @@ deviceType: number
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-RootInfo-deviceType: number--><!--Device-RootInfo-deviceType: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -290,6 +300,8 @@ displayName: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RootInfo-displayName: string--><!--Device-RootInfo-displayName: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -312,6 +324,8 @@ relativePath: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RootInfo-relativePath: string--><!--Device-RootInfo-relativePath: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -333,6 +347,8 @@ uri: string
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-RootInfo-uri: string--><!--Device-RootInfo-uri: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 

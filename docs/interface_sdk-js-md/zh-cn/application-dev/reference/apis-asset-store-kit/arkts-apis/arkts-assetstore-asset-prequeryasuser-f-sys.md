@@ -18,6 +18,8 @@ function preQueryAsUser(userId: number, query: AssetMap): Promise<Uint8Array>
 
 **需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
+<!--Device-asset-function preQueryAsUser(userId: number, query: AssetMap): Promise<Uint8Array>--><!--Device-asset-function preQueryAsUser(userId: number, query: AssetMap): Promise<Uint8Array>-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 **系统接口：** 此接口为系统接口。

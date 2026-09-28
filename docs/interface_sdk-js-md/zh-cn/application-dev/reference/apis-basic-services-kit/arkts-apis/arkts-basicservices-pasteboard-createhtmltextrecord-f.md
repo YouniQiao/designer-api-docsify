@@ -20,6 +20,8 @@ function createHtmlTextRecord(htmlText: string): PasteDataRecord
 
 **替代接口：** [createRecord](arkts-basicservices-pasteboard-createrecord-f.md)(mimeType: string, value: ValueType)
 
+<!--Device-pasteboard-function createHtmlTextRecord(htmlText: string): PasteDataRecord--><!--Device-pasteboard-function createHtmlTextRecord(htmlText: string): PasteDataRecord-End-->
+
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
 **参数：**

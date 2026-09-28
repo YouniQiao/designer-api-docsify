@@ -18,6 +18,8 @@ function off(type: 'sharingStateChange', callback?: Callback<boolean>): void
 
 **需要权限：** ohos.permission.CONNECTIVITY_INTERNAL
 
+<!--Device-sharing-function off(type: 'sharingStateChange', callback?: Callback<boolean>): void--><!--Device-sharing-function off(type: 'sharingStateChange', callback?: Callback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.NetSharing
 
 **系统接口：** 此接口为系统接口。
@@ -60,6 +62,8 @@ function off(type: 'interfaceSharingStateChange', callback?: Callback<InterfaceS
 
 **需要权限：** ohos.permission.CONNECTIVITY_INTERNAL
 
+<!--Device-sharing-function off(type: 'interfaceSharingStateChange', callback?: Callback<InterfaceSharingStateInfo>): void--><!--Device-sharing-function off(type: 'interfaceSharingStateChange', callback?: Callback<InterfaceSharingStateInfo>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.NetSharing
 
 **系统接口：** 此接口为系统接口。
@@ -101,6 +105,8 @@ function off(type: 'sharingUpstreamChange', callback?: Callback<NetHandle>): voi
 **起始版本：** 9
 
 **需要权限：** ohos.permission.CONNECTIVITY_INTERNAL
+
+<!--Device-sharing-function off(type: 'sharingUpstreamChange', callback?: Callback<NetHandle>): void--><!--Device-sharing-function off(type: 'sharingUpstreamChange', callback?: Callback<NetHandle>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.NetSharing
 

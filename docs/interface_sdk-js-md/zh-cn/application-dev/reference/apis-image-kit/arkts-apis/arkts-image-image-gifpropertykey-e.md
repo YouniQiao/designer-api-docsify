@@ -8,6 +8,8 @@ enum GifPropertyKey
 
 **起始版本：** 20
 
+<!--Device-image-enum GifPropertyKey--><!--Device-image-enum GifPropertyKey-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## GIF_DELAY_TIME
@@ -21,6 +23,8 @@ GIF图片钳制后的帧延迟时长。钳制范围为[100, 65535]。
 单位：毫秒（ms）。
 
 **起始版本：** 20
+
+<!--Device-GifPropertyKey-GIF_DELAY_TIME = 'GifDelayTime'--><!--Device-GifPropertyKey-GIF_DELAY_TIME = 'GifDelayTime'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -41,6 +45,8 @@ GIF图片的每帧处置方式。
 
 **起始版本：** 20
 
+<!--Device-GifPropertyKey-GIF_DISPOSAL_TYPE = 'GifDisposalType'--><!--Device-GifPropertyKey-GIF_DISPOSAL_TYPE = 'GifDisposalType'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## GIF_HAS_GLOBAL_COLOR_MAP
@@ -54,6 +60,8 @@ GIF图像是否包含全局调色板。
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-GifPropertyKey-GIF_HAS_GLOBAL_COLOR_MAP = 'GifHasGlobalColorMap'--><!--Device-GifPropertyKey-GIF_HAS_GLOBAL_COLOR_MAP = 'GifHasGlobalColorMap'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -71,6 +79,8 @@ GIF图像的画布宽度。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-GifPropertyKey-GIF_CANVAS_WIDTH = 'GifCanvasWidth'--><!--Device-GifPropertyKey-GIF_CANVAS_WIDTH = 'GifCanvasWidth'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## GIF_CANVAS_HEIGHT
@@ -86,6 +96,8 @@ GIF图像的画布高度。
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-GifPropertyKey-GIF_CANVAS_HEIGHT = 'GifCanvasHeight'--><!--Device-GifPropertyKey-GIF_CANVAS_HEIGHT = 'GifCanvasHeight'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -103,6 +115,8 @@ GIF图片循环次数。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-GifPropertyKey-GIF_LOOP_COUNT = 'GifLoopCount'--><!--Device-GifPropertyKey-GIF_LOOP_COUNT = 'GifLoopCount'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## GIF_UNCLAMPED_DELAY_TIME
@@ -118,5 +132,7 @@ GIF图片未钳制的帧延迟时间。
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-GifPropertyKey-GIF_UNCLAMPED_DELAY_TIME = 'GifUnclampedDelayTime'--><!--Device-GifPropertyKey-GIF_UNCLAMPED_DELAY_TIME = 'GifUnclampedDelayTime'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core

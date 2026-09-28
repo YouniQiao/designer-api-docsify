@@ -8,6 +8,8 @@ interface EncoderInfo
 
 **起始版本：** 11
 
+<!--Device-media-interface EncoderInfo--><!--Device-media-interface EncoderInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 ## 导入模块
@@ -28,6 +30,8 @@ bitRate?: Range
 
 **起始版本：** 11
 
+<!--Device-EncoderInfo-bitRate?: Range--><!--Device-EncoderInfo-bitRate?: Range-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 ## channels
@@ -41,6 +45,8 @@ channels?: Range
 **类型：** [Range](arkts-media-media-range-i.md)
 
 **起始版本：** 11
+
+<!--Device-EncoderInfo-channels?: Range--><!--Device-EncoderInfo-channels?: Range-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -56,6 +62,8 @@ frameRate?: Range
 
 **起始版本：** 11
 
+<!--Device-EncoderInfo-frameRate?: Range--><!--Device-EncoderInfo-frameRate?: Range-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 ## height
@@ -69,6 +77,8 @@ height?: Range
 **类型：** [Range](arkts-media-media-range-i.md)
 
 **起始版本：** 11
+
+<!--Device-EncoderInfo-height?: Range--><!--Device-EncoderInfo-height?: Range-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -84,6 +94,8 @@ mimeType: CodecMimeType
 
 **起始版本：** 11
 
+<!--Device-EncoderInfo-mimeType: CodecMimeType--><!--Device-EncoderInfo-mimeType: CodecMimeType-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 ## sampleRate
@@ -97,6 +109,8 @@ sampleRate?: Array<number>
 **类型：** Array&lt;number&gt;
 
 **起始版本：** 11
+
+<!--Device-EncoderInfo-sampleRate?: Array<int>--><!--Device-EncoderInfo-sampleRate?: Array<int>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -112,6 +126,8 @@ type: string
 
 **起始版本：** 11
 
+<!--Device-EncoderInfo-type: string--><!--Device-EncoderInfo-type: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 ## width
@@ -125,5 +141,7 @@ width?: Range
 **类型：** [Range](arkts-media-media-range-i.md)
 
 **起始版本：** 11
+
+<!--Device-EncoderInfo-width?: Range--><!--Device-EncoderInfo-width?: Range-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder

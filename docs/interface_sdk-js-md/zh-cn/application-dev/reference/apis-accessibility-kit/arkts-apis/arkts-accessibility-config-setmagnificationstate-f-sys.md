@@ -18,6 +18,8 @@ function setMagnificationState(state: boolean): void
 
 **需要权限：** ohos.permission.WRITE_ACCESSIBILITY_CONFIG
 
+<!--Device-config-function setMagnificationState(state: boolean): void--><!--Device-config-function setMagnificationState(state: boolean): void-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。

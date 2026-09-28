@@ -8,6 +8,8 @@ export interface NetCapabilityInfo
 
 **起始版本：** 10
 
+<!--Device-connection-export interface NetCapabilityInfo--><!--Device-connection-export interface NetCapabilityInfo-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## 导入模块
@@ -28,7 +30,9 @@ netCap: NetCapabilities
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-NetCapabilityInfo-netCap: NetCapabilities--><!--Device-NetCapabilityInfo-netCap: NetCapabilities-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -44,6 +48,8 @@ netHandle: NetHandle
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-NetCapabilityInfo-netHandle: NetHandle--><!--Device-NetCapabilityInfo-netHandle: NetHandle-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core

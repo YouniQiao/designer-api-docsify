@@ -34,6 +34,8 @@ export enum SelectedResult
 
 **起始版本：** 22
 
+<!--Device-abilityAccessCtrl-export enum SelectedResult--><!--Device-abilityAccessCtrl-export enum SelectedResult-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 ## REJECTED
@@ -47,6 +49,8 @@ REJECTED = -1
 **起始版本：** 22
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SelectedResult-REJECTED = -1--><!--Device-SelectedResult-REJECTED = -1-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -62,6 +66,8 @@ OPENED = 0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SelectedResult-OPENED = 0--><!--Device-SelectedResult-OPENED = 0-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 ## GRANTED
@@ -75,5 +81,7 @@ GRANTED = 1
 **起始版本：** 22
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SelectedResult-GRANTED = 1--><!--Device-SelectedResult-GRANTED = 1-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken

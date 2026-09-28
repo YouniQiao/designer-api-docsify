@@ -16,7 +16,9 @@ function getDisplayByIdSync(displayId: number): Display
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-display-function getDisplayByIdSync(displayId: long): Display--><!--Device-display-function getDisplayByIdSync(displayId: long): Display-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 

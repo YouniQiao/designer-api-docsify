@@ -8,6 +8,8 @@ export interface NotificationExtensionContent
 
 **起始版本：** 22
 
+<!--Device-unnamed-export interface NotificationExtensionContent--><!--Device-unnamed-export interface NotificationExtensionContent-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## text
@@ -22,6 +24,8 @@ text: string
 
 **起始版本：** 22
 
+<!--Device-NotificationExtensionContent-text: string--><!--Device-NotificationExtensionContent-text: string-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## title
@@ -35,5 +39,7 @@ title: string
 **类型：** string
 
 **起始版本：** 22
+
+<!--Device-NotificationExtensionContent-title: string--><!--Device-NotificationExtensionContent-title: string-End-->
 
 **系统能力：** SystemCapability.Notification.Notification

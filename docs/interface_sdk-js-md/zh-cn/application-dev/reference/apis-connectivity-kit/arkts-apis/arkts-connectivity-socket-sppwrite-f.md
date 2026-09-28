@@ -18,6 +18,8 @@ function sppWrite(clientSocket: number, data: ArrayBuffer): void
 
 **起始版本：** 10
 
+<!--Device-socket-function sppWrite(clientSocket: int, data: ArrayBuffer): void--><!--Device-socket-function sppWrite(clientSocket: int, data: ArrayBuffer): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**

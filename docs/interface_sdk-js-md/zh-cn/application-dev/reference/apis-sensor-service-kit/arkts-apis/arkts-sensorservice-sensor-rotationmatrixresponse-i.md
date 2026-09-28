@@ -8,6 +8,8 @@ interface RotationMatrixResponse
 
 **起始版本：** 8
 
+<!--Device-sensor-interface RotationMatrixResponse--><!--Device-sensor-interface RotationMatrixResponse-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## 导入模块
@@ -28,6 +30,8 @@ inclination: Array<number>
 
 **起始版本：** 8
 
+<!--Device-RotationMatrixResponse-inclination: Array<double>--><!--Device-RotationMatrixResponse-inclination: Array<double>-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## rotation
@@ -41,5 +45,7 @@ rotation: Array<number>
 **类型：** Array&lt;number&gt;
 
 **起始版本：** 8
+
+<!--Device-RotationMatrixResponse-rotation: Array<double>--><!--Device-RotationMatrixResponse-rotation: Array<double>-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor

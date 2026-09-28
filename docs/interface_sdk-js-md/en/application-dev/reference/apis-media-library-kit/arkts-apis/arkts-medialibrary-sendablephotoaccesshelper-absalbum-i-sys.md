@@ -10,6 +10,8 @@ Defines the abstract interface of albums.
 
 **Since:** 12
 
+<!--Device-sendablePhotoAccessHelper-interface AbsAlbum  extends lang.ISendable--><!--Device-sendablePhotoAccessHelper-interface AbsAlbum  extends lang.ISendable-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
@@ -29,6 +31,8 @@ Fetch shared photo assets in an album.
 **Since:** 14
 
 **Required permissions:** ohos.permission.ACCESS_MEDIALIB_THUMB_DB
+
+<!--Device-AbsAlbum-getSharedPhotoAssets(options: photoAccessHelper.FetchOptions): Array<SharedPhotoAsset>--><!--Device-AbsAlbum-getSharedPhotoAssets(options: photoAccessHelper.FetchOptions): Array<SharedPhotoAsset>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

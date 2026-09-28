@@ -8,6 +8,8 @@ interface Property
 
 **起始版本：** 26.0.0
 
+<!--Device-ssap-interface Property--><!--Device-ssap-interface Property-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## 导入模块
@@ -30,6 +32,8 @@ descriptors?: PropertyDescriptor[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Property-descriptors?: PropertyDescriptor[]--><!--Device-Property-descriptors?: PropertyDescriptor[]-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## operation
@@ -45,6 +49,8 @@ operation?: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Property-operation?: int--><!--Device-Property-operation?: int-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -62,6 +68,8 @@ propertyUuid: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Property-propertyUuid: string--><!--Device-Property-propertyUuid: string-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## serviceUuid
@@ -78,6 +86,8 @@ serviceUuid: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Property-serviceUuid: string--><!--Device-Property-serviceUuid: string-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## value
@@ -93,5 +103,7 @@ value: ArrayBuffer
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Property-value: ArrayBuffer--><!--Device-Property-value: ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base

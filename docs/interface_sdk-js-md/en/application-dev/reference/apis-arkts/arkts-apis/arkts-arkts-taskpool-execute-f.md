@@ -18,6 +18,8 @@ Places a function to be executed in the internal queue of the task pool. The fun
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-taskpool-function execute(func: Function, ...args: Object[]): Promise<Object>--><!--Device-taskpool-function execute(func: Function, ...args: Object[]): Promise<Object>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -69,6 +71,8 @@ Verifies the passed-in parameter types and return value type of a concurrent fun
 **Since:** 13
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
+
+<!--Device-taskpool-function execute<A extends Array<Object>, R>(func: (...args: A) => R | Promise<R>, ...args: A): Promise<R>--><!--Device-taskpool-function execute<A extends Array<Object>, R>(func: (...args: A) => R | Promise<R>, ...args: A): Promise<R>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -139,6 +143,8 @@ Places a task in the internal queue of the task pool. The task will not be execu
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-taskpool-function execute(task: Task, priority?: Priority): Promise<Object>--><!--Device-taskpool-function execute(task: Task, priority?: Priority): Promise<Object>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -202,6 +208,8 @@ Places the generic task in the internal queue of the task pool. The parameter ty
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
+<!--Device-taskpool-function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, priority?: Priority): Promise<R>--><!--Device-taskpool-function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, priority?: Priority): Promise<R>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -263,6 +271,8 @@ Places a task group in the internal queue of the task pool. The tasks in the tas
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-taskpool-function execute(group: TaskGroup, priority?: Priority): Promise<Object[]>--><!--Device-taskpool-function execute(group: TaskGroup, priority?: Priority): Promise<Object[]>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -329,6 +339,8 @@ Execute a concurrent task with Configs.
 **Since:** 24
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
+
+<!--Device-taskpool-function execute(task: Task, configs: Configs): Promise<Object>--><!--Device-taskpool-function execute(task: Task, configs: Configs): Promise<Object>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -483,6 +495,8 @@ Execute a concurrent generics task with Configs.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-taskpool-function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, configs: Configs): Promise<R>--><!--Device-taskpool-function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, configs: Configs): Promise<R>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -635,6 +649,8 @@ Execute a concurrent task group with Configs.
 **Since:** 24
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
+
+<!--Device-taskpool-function execute(group: TaskGroup, configs: Configs): Promise<Object[]>--><!--Device-taskpool-function execute(group: TaskGroup, configs: Configs): Promise<Object[]>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

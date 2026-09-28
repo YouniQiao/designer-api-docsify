@@ -18,6 +18,8 @@ function write(data: number[]): Promise<void>
 
 **需要权限：** ohos.permission.NFC_TAG
 
+<!--Device-connectedTag-function write(data: number[]): Promise<void>--><!--Device-connectedTag-function write(data: number[]): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.ConnectedTag
 
 **参数：**
@@ -69,6 +71,8 @@ function write(data: number[], callback: AsyncCallback<void>): void
 **起始版本：** 9
 
 **需要权限：** ohos.permission.NFC_TAG
+
+<!--Device-connectedTag-function write(data: number[], callback: AsyncCallback<void>): void--><!--Device-connectedTag-function write(data: number[], callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Communication.ConnectedTag
 

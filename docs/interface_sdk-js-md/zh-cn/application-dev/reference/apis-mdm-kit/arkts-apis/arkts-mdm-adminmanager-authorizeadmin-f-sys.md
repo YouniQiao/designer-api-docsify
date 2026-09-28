@@ -20,6 +20,8 @@ function authorizeAdmin(admin: Want, bundleName: string, callback: AsyncCallback
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-adminManager-function authorizeAdmin(admin: Want, bundleName: string, callback: AsyncCallback<void>): void--><!--Device-adminManager-function authorizeAdmin(admin: Want, bundleName: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -82,6 +84,8 @@ function authorizeAdmin(admin: Want, bundleName: string): Promise<void>
 **需要权限：** ohos.permission.MANAGE_ENTERPRISE_DEVICE_ADMIN
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-adminManager-function authorizeAdmin(admin: Want, bundleName: string): Promise<void>--><!--Device-adminManager-function authorizeAdmin(admin: Want, bundleName: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

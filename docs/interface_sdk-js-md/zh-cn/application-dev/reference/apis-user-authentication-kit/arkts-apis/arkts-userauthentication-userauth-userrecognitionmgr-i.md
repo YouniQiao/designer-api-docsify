@@ -8,6 +8,8 @@ interface UserRecognitionMgr
 
 **起始版本：** 26.0.1
 
+<!--Device-userAuth-interface UserRecognitionMgr--><!--Device-userAuth-interface UserRecognitionMgr-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 ## 导入模块
@@ -28,7 +30,9 @@ getUserRecognitionResult(): Promise<UserRecognitionResult>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
+
+<!--Device-UserRecognitionMgr-getUserRecognitionResult(): Promise<UserRecognitionResult>--><!--Device-UserRecognitionMgr-getUserRecognitionResult(): Promise<UserRecognitionResult>-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -56,7 +60,9 @@ offUserRecognitionChange(callback?: UserRecognitionResultCallback): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
+
+<!--Device-UserRecognitionMgr-offUserRecognitionChange(callback?: UserRecognitionResultCallback): void--><!--Device-UserRecognitionMgr-offUserRecognitionChange(callback?: UserRecognitionResultCallback): void-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -84,7 +90,9 @@ onUserRecognitionChange(callback: UserRecognitionResultCallback): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
+
+<!--Device-UserRecognitionMgr-onUserRecognitionChange(callback: UserRecognitionResultCallback): void--><!--Device-UserRecognitionMgr-onUserRecognitionChange(callback: UserRecognitionResultCallback): void-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 

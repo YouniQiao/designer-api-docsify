@@ -8,6 +8,8 @@ interface BundleActiveState
 
 **废弃版本：** 9
 
+<!--Device-bundleState-interface BundleActiveState--><!--Device-bundleState-interface BundleActiveState-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 ## 导入模块
@@ -30,6 +32,8 @@ The usage priority group of the application.
 
 **废弃版本：** 9
 
+<!--Device-BundleActiveState-appUsagePriorityGroup?: number--><!--Device-BundleActiveState-appUsagePriorityGroup?: number-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 ## bundleName
@@ -45,6 +49,8 @@ The bundle name.
 **起始版本：** 7
 
 **废弃版本：** 9
+
+<!--Device-BundleActiveState-bundleName?: string--><!--Device-BundleActiveState-bundleName?: string-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -62,6 +68,8 @@ The shortcut ID.
 
 **废弃版本：** 9
 
+<!--Device-BundleActiveState-indexOfLink?: string--><!--Device-BundleActiveState-indexOfLink?: string-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 ## nameOfClass
@@ -77,6 +85,8 @@ The class name.
 **起始版本：** 7
 
 **废弃版本：** 9
+
+<!--Device-BundleActiveState-nameOfClass?: string--><!--Device-BundleActiveState-nameOfClass?: string-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -94,6 +104,8 @@ The time when this state occurred, in milliseconds. <br> Unit:ms
 
 **废弃版本：** 9
 
+<!--Device-BundleActiveState-stateOccurredTime?: number--><!--Device-BundleActiveState-stateOccurredTime?: number-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 ## stateType
@@ -109,5 +121,7 @@ The state type.
 **起始版本：** 7
 
 **废弃版本：** 9
+
+<!--Device-BundleActiveState-stateType?: number--><!--Device-BundleActiveState-stateType?: number-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App

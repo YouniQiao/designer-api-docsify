@@ -8,6 +8,8 @@ Provides the custom edit menu options of **SelectionContainer**.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export interface SelectionContainerEditMenuOptions--><!--Device-unnamed-export interface SelectionContainerEditMenuOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -30,6 +32,8 @@ Triggered before the menu is displayed each time. It passes in the default menu 
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-SelectionContainerEditMenuOptions-onCreateMenu?: OnCreateMenuCallback--><!--Device-SelectionContainerEditMenuOptions-onCreateMenu?: OnCreateMenuCallback-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onMenuItemClick
@@ -46,6 +50,8 @@ Triggered when a menu item is clicked. It can intercept the default menu executi
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-SelectionContainerEditMenuOptions-onMenuItemClick?: OnMenuItemClickWithTextCallback--><!--Device-SelectionContainerEditMenuOptions-onMenuItemClick?: OnMenuItemClickWithTextCallback-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onPrepareMenu
@@ -61,5 +67,7 @@ Triggered after the selected text content changes and before the menu is display
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-SelectionContainerEditMenuOptions-onPrepareMenu?: OnPrepareMenuCallback--><!--Device-SelectionContainerEditMenuOptions-onPrepareMenu?: OnPrepareMenuCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

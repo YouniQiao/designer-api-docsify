@@ -8,6 +8,8 @@ export interface NotificationFlags
 
 **起始版本：** 8
 
+<!--Device-unnamed-export interface NotificationFlags--><!--Device-unnamed-export interface NotificationFlags-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## bannerEnabled
@@ -22,6 +24,8 @@ bannerEnabled?: NotificationFlagStatus
 
 **起始版本：** 23
 
+<!--Device-NotificationFlags-bannerEnabled?: NotificationFlagStatus--><!--Device-NotificationFlags-bannerEnabled?: NotificationFlagStatus-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## lockScreenEnabled
@@ -35,6 +39,8 @@ lockScreenEnabled?: NotificationFlagStatus
 **类型：** [NotificationFlagStatus](arkts-notification-notificationflags-notificationflagstatus-e.md)
 
 **起始版本：** 23
+
+<!--Device-NotificationFlags-lockScreenEnabled?: NotificationFlagStatus--><!--Device-NotificationFlags-lockScreenEnabled?: NotificationFlagStatus-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -52,6 +58,8 @@ soundEnabled?: NotificationFlagStatus
 
 **起始版本：** 8
 
+<!--Device-NotificationFlags-soundEnabled?: NotificationFlagStatus--><!--Device-NotificationFlags-soundEnabled?: NotificationFlagStatus-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## vibrationEnabled
@@ -67,5 +75,7 @@ vibrationEnabled?: NotificationFlagStatus
 **类型：** [NotificationFlagStatus](arkts-notification-notificationflags-notificationflagstatus-e.md)
 
 **起始版本：** 8
+
+<!--Device-NotificationFlags-vibrationEnabled?: NotificationFlagStatus--><!--Device-NotificationFlags-vibrationEnabled?: NotificationFlagStatus-End-->
 
 **系统能力：** SystemCapability.Notification.Notification

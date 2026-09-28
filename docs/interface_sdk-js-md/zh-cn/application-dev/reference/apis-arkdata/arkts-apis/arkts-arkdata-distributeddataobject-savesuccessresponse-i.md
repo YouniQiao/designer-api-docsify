@@ -8,6 +8,8 @@ interface SaveSuccessResponse
 
 **起始版本：** 9
 
+<!--Device-distributedDataObject-interface SaveSuccessResponse--><!--Device-distributedDataObject-interface SaveSuccessResponse-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 ## 导入模块
@@ -28,6 +30,8 @@ deviceId: string
 
 **起始版本：** 9
 
+<!--Device-SaveSuccessResponse-deviceId: string--><!--Device-SaveSuccessResponse-deviceId: string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 ## sessionId
@@ -42,6 +46,8 @@ sessionId: string
 
 **起始版本：** 9
 
+<!--Device-SaveSuccessResponse-sessionId: string--><!--Device-SaveSuccessResponse-sessionId: string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 ## version
@@ -55,5 +61,7 @@ version: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-SaveSuccessResponse-version: int--><!--Device-SaveSuccessResponse-version: int-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject

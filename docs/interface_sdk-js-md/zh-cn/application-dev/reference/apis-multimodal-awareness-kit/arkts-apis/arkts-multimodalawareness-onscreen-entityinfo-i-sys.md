@@ -8,6 +8,8 @@ export interface EntityInfo
 
 **起始版本：** 23
 
+<!--Device-onScreen-export interface EntityInfo--><!--Device-onScreen-export interface EntityInfo-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ entityInfo: Record<string, Object>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-EntityInfo-entityInfo: Record<string, Object>--><!--Device-EntityInfo-entityInfo: Record<string, Object>-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ entityName: string
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EntityInfo-entityName: string--><!--Device-EntityInfo-entityName: string-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 

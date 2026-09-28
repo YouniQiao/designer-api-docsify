@@ -20,6 +20,8 @@ function offKey(keyOptions: KeyOptions, callback?: KeyCommandCallback): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-inputConsumer-function offKey(keyOptions: KeyOptions, callback?: KeyCommandCallback): void--><!--Device-inputConsumer-function offKey(keyOptions: KeyOptions, callback?: KeyCommandCallback): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 
 **系统接口：** 此接口为系统接口。

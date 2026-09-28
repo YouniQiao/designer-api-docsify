@@ -8,6 +8,8 @@ interface RemoteUserAuthResults
 
 **起始版本：** 26.0.1
 
+<!--Device-abilityToolAccessCtrl-interface RemoteUserAuthResults--><!--Device-abilityToolAccessCtrl-interface RemoteUserAuthResults-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 **系统接口：** 此接口为系统接口。
@@ -31,6 +33,8 @@ permissionQuery: PermissionQuery
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-RemoteUserAuthResults-permissionQuery: PermissionQuery--><!--Device-RemoteUserAuthResults-permissionQuery: PermissionQuery-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 **系统接口：** 此接口为系统接口。
@@ -48,6 +52,8 @@ results: RemoteUserAuthItem[]
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-RemoteUserAuthResults-results: RemoteUserAuthItem[]--><!--Device-RemoteUserAuthResults-results: RemoteUserAuthItem[]-End-->
 
 **系统能力：** SystemCapability.Security.Asset
 

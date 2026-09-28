@@ -8,6 +8,8 @@ export enum RadioTechnology
 
 **起始版本：** 6
 
+<!--Device-radio-export enum RadioTechnology--><!--Device-radio-export enum RadioTechnology-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## RADIO_TECHNOLOGY_UNKNOWN
@@ -19,6 +21,8 @@ RADIO_TECHNOLOGY_UNKNOWN = 0
 未知无线接入技术(RAT)。
 
 **起始版本：** 6
+
+<!--Device-RadioTechnology-RADIO_TECHNOLOGY_UNKNOWN = 0--><!--Device-RadioTechnology-RADIO_TECHNOLOGY_UNKNOWN = 0-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -32,6 +36,8 @@ RADIO_TECHNOLOGY_GSM = 1
 
 **起始版本：** 6
 
+<!--Device-RadioTechnology-RADIO_TECHNOLOGY_GSM = 1--><!--Device-RadioTechnology-RADIO_TECHNOLOGY_GSM = 1-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## RADIO_TECHNOLOGY_1XRTT
@@ -43,6 +49,8 @@ RADIO_TECHNOLOGY_1XRTT = 2
 无线接入技术1XRTT(Single-Carrier Radio Transmission Technology)。
 
 **起始版本：** 6
+
+<!--Device-RadioTechnology-RADIO_TECHNOLOGY_1XRTT = 2--><!--Device-RadioTechnology-RADIO_TECHNOLOGY_1XRTT = 2-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -56,6 +64,8 @@ RADIO_TECHNOLOGY_WCDMA = 3
 
 **起始版本：** 6
 
+<!--Device-RadioTechnology-RADIO_TECHNOLOGY_WCDMA = 3--><!--Device-RadioTechnology-RADIO_TECHNOLOGY_WCDMA = 3-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## RADIO_TECHNOLOGY_HSPA
@@ -67,6 +77,8 @@ RADIO_TECHNOLOGY_HSPA = 4
 无线接入技术HSPA(High Speed Packet Access)。
 
 **起始版本：** 6
+
+<!--Device-RadioTechnology-RADIO_TECHNOLOGY_HSPA = 4--><!--Device-RadioTechnology-RADIO_TECHNOLOGY_HSPA = 4-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -80,6 +92,8 @@ RADIO_TECHNOLOGY_HSPAP = 5
 
 **起始版本：** 6
 
+<!--Device-RadioTechnology-RADIO_TECHNOLOGY_HSPAP = 5--><!--Device-RadioTechnology-RADIO_TECHNOLOGY_HSPAP = 5-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## RADIO_TECHNOLOGY_TD_SCDMA
@@ -91,6 +105,8 @@ RADIO_TECHNOLOGY_TD_SCDMA = 6
 无线接入技术TD_SCDMA(TimeDivision-Synchronous Code Division Multiple Access)。
 
 **起始版本：** 6
+
+<!--Device-RadioTechnology-RADIO_TECHNOLOGY_TD_SCDMA = 6--><!--Device-RadioTechnology-RADIO_TECHNOLOGY_TD_SCDMA = 6-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -104,6 +120,8 @@ RADIO_TECHNOLOGY_EVDO = 7
 
 **起始版本：** 6
 
+<!--Device-RadioTechnology-RADIO_TECHNOLOGY_EVDO = 7--><!--Device-RadioTechnology-RADIO_TECHNOLOGY_EVDO = 7-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## RADIO_TECHNOLOGY_EHRPD
@@ -115,6 +133,8 @@ RADIO_TECHNOLOGY_EHRPD = 8
 无线接入技术EHRPD(Evolved High Rate Package Data)。
 
 **起始版本：** 6
+
+<!--Device-RadioTechnology-RADIO_TECHNOLOGY_EHRPD = 8--><!--Device-RadioTechnology-RADIO_TECHNOLOGY_EHRPD = 8-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -128,6 +148,8 @@ RADIO_TECHNOLOGY_LTE = 9
 
 **起始版本：** 6
 
+<!--Device-RadioTechnology-RADIO_TECHNOLOGY_LTE = 9--><!--Device-RadioTechnology-RADIO_TECHNOLOGY_LTE = 9-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## RADIO_TECHNOLOGY_LTE_CA
@@ -139,6 +161,8 @@ RADIO_TECHNOLOGY_LTE_CA = 10
 无线接入技术LTE_CA(Long Term Evolution_Carrier Aggregation)。
 
 **起始版本：** 6
+
+<!--Device-RadioTechnology-RADIO_TECHNOLOGY_LTE_CA = 10--><!--Device-RadioTechnology-RADIO_TECHNOLOGY_LTE_CA = 10-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -152,6 +176,8 @@ RADIO_TECHNOLOGY_IWLAN = 11
 
 **起始版本：** 6
 
+<!--Device-RadioTechnology-RADIO_TECHNOLOGY_IWLAN = 11--><!--Device-RadioTechnology-RADIO_TECHNOLOGY_IWLAN = 11-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## RADIO_TECHNOLOGY_NR
@@ -163,5 +189,7 @@ RADIO_TECHNOLOGY_NR = 12
 无线接入技术NR(New Radio)。
 
 **起始版本：** 6
+
+<!--Device-RadioTechnology-RADIO_TECHNOLOGY_NR = 12--><!--Device-RadioTechnology-RADIO_TECHNOLOGY_NR = 12-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService

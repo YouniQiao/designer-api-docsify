@@ -8,6 +8,8 @@ Sets the construction options of **UnionEffectContainer**.
 
 **Since:** 23
 
+<!--Device-unnamed-declare interface UnionEffectContainerOptions--><!--Device-unnamed-declare interface UnionEffectContainerOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -27,6 +29,8 @@ Degree of union deformation of the descendant component. This parameter does not
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UnionEffectContainerOptions-spacing?: number--><!--Device-UnionEffectContainerOptions-spacing?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

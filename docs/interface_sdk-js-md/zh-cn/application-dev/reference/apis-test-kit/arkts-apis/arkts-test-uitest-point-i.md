@@ -8,6 +8,8 @@ declare interface Point
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare interface Point--><!--Device-unnamed-declare interface Point-End-->
+
 **系统能力：** SystemCapability.Test.UiTest
 
 **测试接口：** 此接口仅在自动化测试脚本中使用。
@@ -33,7 +35,9 @@ displayId?: number
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-Point-displayId?: int--><!--Device-Point-displayId?: int-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -57,7 +61,9 @@ x: number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Point-x: int--><!--Device-Point-x: int-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -81,7 +87,9 @@ y: number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Point-y: int--><!--Device-Point-y: int-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 

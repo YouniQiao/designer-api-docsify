@@ -8,6 +8,8 @@ export enum AdsorbState
 
 **起始版本：** 26.2.0
 
+<!--Device-mechanicManager-export enum AdsorbState--><!--Device-mechanicManager-export enum AdsorbState-End-->
+
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。
@@ -23,6 +25,8 @@ UNKNOWN = -1
 **起始版本：** 26.2.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AdsorbState-UNKNOWN = -1--><!--Device-AdsorbState-UNKNOWN = -1-End-->
 
 **系统能力：** SystemCapability.Mechanic.Core
 
@@ -40,6 +44,8 @@ ADSORBED = 0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AdsorbState-ADSORBED = 0--><!--Device-AdsorbState-ADSORBED = 0-End-->
+
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。
@@ -55,6 +61,8 @@ UNADSORBED = 1
 **起始版本：** 26.2.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AdsorbState-UNADSORBED = 1--><!--Device-AdsorbState-UNADSORBED = 1-End-->
 
 **系统能力：** SystemCapability.Mechanic.Core
 

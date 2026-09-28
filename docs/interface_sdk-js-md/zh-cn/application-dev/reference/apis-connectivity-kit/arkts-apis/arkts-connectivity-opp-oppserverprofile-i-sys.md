@@ -8,6 +8,8 @@ Profile类，使用opp方法之前需要创建该类的实例进行操作，通�
 
 **起始版本：** 16
 
+<!--Device-opp-interface OppServerProfile--><!--Device-opp-interface OppServerProfile-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -29,6 +31,8 @@ cancelTransfer(): Promise<void>
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-OppServerProfile-cancelTransfer(): Promise<void>--><!--Device-OppServerProfile-cancelTransfer(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -86,6 +90,8 @@ getCurrentTransferInformation(): Promise<OppTransferInformation>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OppServerProfile-getCurrentTransferInformation(): Promise<OppTransferInformation>--><!--Device-OppServerProfile-getCurrentTransferInformation(): Promise<OppTransferInformation>-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -139,6 +145,8 @@ off(type: 'transferStateChange', callback?: Callback<OppTransferInformation>): v
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OppServerProfile-off(type: 'transferStateChange', callback?: Callback<OppTransferInformation>): void--><!--Device-OppServerProfile-off(type: 'transferStateChange', callback?: Callback<OppTransferInformation>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -191,6 +199,8 @@ off(type: 'receiveIncomingFile', callback?: Callback<OppTransferInformation>): v
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-OppServerProfile-off(type: 'receiveIncomingFile', callback?: Callback<OppTransferInformation>): void--><!--Device-OppServerProfile-off(type: 'receiveIncomingFile', callback?: Callback<OppTransferInformation>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -246,6 +256,8 @@ on(type: 'transferStateChange', callback: Callback<OppTransferInformation>): voi
 - API版本16-24：ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-OppServerProfile-on(type: 'transferStateChange', callback: Callback<OppTransferInformation>): void--><!--Device-OppServerProfile-on(type: 'transferStateChange', callback: Callback<OppTransferInformation>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -311,6 +323,8 @@ on(type: 'receiveIncomingFile', callback: Callback<OppTransferInformation>): voi
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OppServerProfile-on(type: 'receiveIncomingFile', callback: Callback<OppTransferInformation>): void--><!--Device-OppServerProfile-on(type: 'receiveIncomingFile', callback: Callback<OppTransferInformation>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -371,6 +385,8 @@ sendFile(deviceId: string, fileHolds: Array<FileHolder>): Promise<void>
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-OppServerProfile-sendFile(deviceId: string, fileHolds: Array<FileHolder>): Promise<void>--><!--Device-OppServerProfile-sendFile(deviceId: string, fileHolds: Array<FileHolder>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -451,6 +467,8 @@ setIncomingFileConfirmation(accept: boolean, fileFd: number): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OppServerProfile-setIncomingFileConfirmation(accept: boolean, fileFd: int): Promise<void>--><!--Device-OppServerProfile-setIncomingFileConfirmation(accept: boolean, fileFd: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -520,6 +538,8 @@ setLastReceivedFileUri(uri: string): Promise<void>
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-OppServerProfile-setLastReceivedFileUri(uri: string): Promise<void>--><!--Device-OppServerProfile-setLastReceivedFileUri(uri: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

@@ -20,6 +20,8 @@ function getAbilityLabelSync(bundleName: string, moduleName: string, abilityName
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
+<!--Device-bundleManager-function getAbilityLabelSync(bundleName: string, moduleName: string, abilityName: string): string--><!--Device-bundleManager-function getAbilityLabelSync(bundleName: string, moduleName: string, abilityName: string): string-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Resource
 
 **系统接口：** 此接口为系统接口。

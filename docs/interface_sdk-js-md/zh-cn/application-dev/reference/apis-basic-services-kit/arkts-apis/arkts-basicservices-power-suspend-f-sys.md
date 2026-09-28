@@ -20,6 +20,8 @@ function suspend(isImmediate?: boolean): void
 - API版本19+：ohos.permission.POWER_MANAGER
 - API版本9-18：N/A
 
+<!--Device-power-function suspend(isImmediate?: boolean): void--><!--Device-power-function suspend(isImmediate?: boolean): void-End-->
+
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 
 **系统接口：** 此接口为系统接口。

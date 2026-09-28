@@ -8,6 +8,8 @@ export interface Volume
 
 **起始版本：** 9
 
+<!--Device-volumeManager-export interface Volume--><!--Device-volumeManager-export interface Volume-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ description: string
 
 **起始版本：** 9
 
+<!--Device-Volume-description: string--><!--Device-Volume-description: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ diskId: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-Volume-diskId: string--><!--Device-Volume-diskId: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Volume
 
@@ -64,6 +70,8 @@ fsType: string
 
 **起始版本：** 12
 
+<!--Device-Volume-fsType: string--><!--Device-Volume-fsType: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -79,6 +87,8 @@ id: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-Volume-id: string--><!--Device-Volume-id: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Volume
 
@@ -96,6 +106,8 @@ path: string
 
 **起始版本：** 9
 
+<!--Device-Volume-path: string--><!--Device-Volume-path: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -111,6 +123,8 @@ removable: boolean
 **类型：** boolean
 
 **起始版本：** 9
+
+<!--Device-Volume-removable: boolean--><!--Device-Volume-removable: boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Volume
 
@@ -136,6 +150,8 @@ state: number
 
 **起始版本：** 9
 
+<!--Device-Volume-state: int--><!--Device-Volume-state: int-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -151,6 +167,8 @@ uuid: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-Volume-uuid: string--><!--Device-Volume-uuid: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Volume
 

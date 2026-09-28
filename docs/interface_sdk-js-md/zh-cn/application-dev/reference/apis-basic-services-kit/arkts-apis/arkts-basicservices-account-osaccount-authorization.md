@@ -16,6 +16,8 @@
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-unnamed-declare namespace authorization--><!--Device-unnamed-declare namespace authorization-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 ## 导入模块

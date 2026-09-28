@@ -10,6 +10,8 @@ interface SessionToken
 
 **起始版本：** 9
 
+<!--Device-avSession-interface SessionToken--><!--Device-avSession-interface SessionToken-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 
 **系统接口：** 此接口为系统接口。
@@ -34,6 +36,8 @@ pid?: number
 
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
 
+<!--Device-SessionToken-pid?: long--><!--Device-SessionToken-pid?: long-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 
 **系统接口：** 此接口为系统接口。
@@ -52,6 +56,8 @@ sessionId: string
 
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
 
+<!--Device-SessionToken-sessionId: string--><!--Device-SessionToken-sessionId: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 
 **系统接口：** 此接口为系统接口。
@@ -69,6 +75,8 @@ uid?: number
 **起始版本：** 9
 
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
+
+<!--Device-SessionToken-uid?: long--><!--Device-SessionToken-uid?: long-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 

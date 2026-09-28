@@ -18,6 +18,8 @@ function getInterceptedRecords(userId: number, requestParam: RequestParam): Prom
 
 **需要权限：** ohos.permission.GET_NET_FIREWALL
 
+<!--Device-netFirewall-function getInterceptedRecords(userId: int, requestParam: RequestParam): Promise<InterceptedRecordPage>--><!--Device-netFirewall-function getInterceptedRecords(userId: int, requestParam: RequestParam): Promise<InterceptedRecordPage>-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 **系统接口：** 此接口为系统接口。

@@ -10,6 +10,8 @@ export interface UserBlowData extends UserStatusData
 
 **起始版本：** 26.0.0
 
+<!--Device-userStatus-export interface UserBlowData extends UserStatusData--><!--Device-userStatus-export interface UserBlowData extends UserStatusData-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
 **系统接口：** 此接口为系统接口。
@@ -34,6 +36,8 @@ blowDirection?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UserBlowData-blowDirection?: int--><!--Device-UserBlowData-blowDirection?: int-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +55,8 @@ emotion?: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UserBlowData-emotion?: int--><!--Device-UserBlowData-emotion?: int-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -70,6 +76,8 @@ facePosition?: number[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UserBlowData-facePosition?: double[]--><!--Device-UserBlowData-facePosition?: double[]-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
 **系统接口：** 此接口为系统接口。
@@ -87,6 +95,8 @@ gravityAcceleration?: number[]
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UserBlowData-gravityAcceleration?: double[]--><!--Device-UserBlowData-gravityAcceleration?: double[]-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -106,6 +116,8 @@ isGazeStatus?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UserBlowData-isGazeStatus?: boolean--><!--Device-UserBlowData-isGazeStatus?: boolean-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
 **系统接口：** 此接口为系统接口。
@@ -124,6 +136,8 @@ linearAcceleration?: number[][]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UserBlowData-linearAcceleration?: double[][]--><!--Device-UserBlowData-linearAcceleration?: double[][]-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
 **系统接口：** 此接口为系统接口。
@@ -141,6 +155,8 @@ strengthLevel?: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UserBlowData-strengthLevel?: int--><!--Device-UserBlowData-strengthLevel?: int-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 

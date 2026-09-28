@@ -8,6 +8,8 @@ Defines the particle property updater configs. @interface ParticlePropertyUpdate
 
 **Since:** 10
 
+<!--Device-unnamed-interface ParticlePropertyUpdaterConfigs<T>--><!--Device-unnamed-interface ParticlePropertyUpdaterConfigs<T>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## [ParticleUpdater.CURVE]
@@ -26,6 +28,8 @@ The property changes with the animation curve. The array type indicates that mul
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ParticlePropertyUpdaterConfigs-[ParticleUpdater.CURVE]: Array<ParticlePropertyAnimation<T>>--><!--Device-ParticlePropertyUpdaterConfigs-[ParticleUpdater.CURVE]: Array<ParticlePropertyAnimation<T>>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## [ParticleUpdater.NONE]
@@ -43,6 +47,8 @@ No effect of particle updater.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ParticlePropertyUpdaterConfigs-[ParticleUpdater.NONE]: void--><!--Device-ParticlePropertyUpdaterConfigs-[ParticleUpdater.NONE]: void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -73,5 +79,7 @@ For example, if the value range of **opacity** is **[0.0, 1.0]**, then if the ta
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ParticlePropertyUpdaterConfigs-[ParticleUpdater.RANDOM]: ParticleTuple<T, T>--><!--Device-ParticlePropertyUpdaterConfigs-[ParticleUpdater.RANDOM]: ParticleTuple<T, T>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

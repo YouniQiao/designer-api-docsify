@@ -8,6 +8,8 @@ export interface AdLoadListener
 
 **起始版本：** 11
 
+<!--Device-advertising-export interface AdLoadListener--><!--Device-advertising-export interface AdLoadListener-End-->
+
 **系统能力：** SystemCapability.Advertising.Ads
 
 ## 导入模块
@@ -27,6 +29,8 @@ onAdLoadFailure(errorCode: number, errorMsg: string): void
 **起始版本：** 11
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AdLoadListener-onAdLoadFailure(errorCode: number, errorMsg: string): void--><!--Device-AdLoadListener-onAdLoadFailure(errorCode: number, errorMsg: string): void-End-->
 
 **系统能力：** SystemCapability.Advertising.Ads
 
@@ -64,6 +68,8 @@ onAdLoadSuccess(ads: Array<Advertisement>): void
 **起始版本：** 11
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AdLoadListener-onAdLoadSuccess(ads: Array<Advertisement>): void--><!--Device-AdLoadListener-onAdLoadSuccess(ads: Array<Advertisement>): void-End-->
 
 **系统能力：** SystemCapability.Advertising.Ads
 

@@ -10,6 +10,8 @@ type ValueType = number | string | boolean | Array<number> | Array<string> | Arr
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-preferences-type ValueType = number | string | boolean | Array<number> | Array<string> | Array<boolean> | Uint8Array | object | bigint--><!--Device-preferences-type ValueType = number | string | boolean | Array<number> | Array<string> | Array<boolean> | Uint8Array | object | bigint-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
 | 类型 | 说明 |

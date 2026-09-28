@@ -8,6 +8,8 @@ interface VibratorStatusEvent
 
 **起始版本：** 19
 
+<!--Device-vibrator-interface VibratorStatusEvent--><!--Device-vibrator-interface VibratorStatusEvent-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## 导入模块
@@ -28,6 +30,8 @@ deviceId: number
 
 **起始版本：** 19
 
+<!--Device-VibratorStatusEvent-deviceId: int--><!--Device-VibratorStatusEvent-deviceId: int-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## isVibratorOnline
@@ -41,6 +45,8 @@ isVibratorOnline: boolean
 **类型：** boolean
 
 **起始版本：** 19
+
+<!--Device-VibratorStatusEvent-isVibratorOnline: boolean--><!--Device-VibratorStatusEvent-isVibratorOnline: boolean-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
@@ -56,6 +62,8 @@ timestamp: number
 
 **起始版本：** 19
 
+<!--Device-VibratorStatusEvent-timestamp: long--><!--Device-VibratorStatusEvent-timestamp: long-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## vibratorCount
@@ -69,5 +77,7 @@ vibratorCount: number
 **类型：** number
 
 **起始版本：** 19
+
+<!--Device-VibratorStatusEvent-vibratorCount: int--><!--Device-VibratorStatusEvent-vibratorCount: int-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice

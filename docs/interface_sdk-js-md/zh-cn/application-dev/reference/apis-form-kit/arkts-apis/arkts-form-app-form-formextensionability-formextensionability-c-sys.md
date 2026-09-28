@@ -8,6 +8,8 @@ declare class FormExtensionAbility
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare class FormExtensionAbility--><!--Device-unnamed-declare class FormExtensionAbility-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 ## 导入模块
@@ -27,6 +29,8 @@ onAcquireFormData?(formId: string): Record<string, Object>
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FormExtensionAbility-onAcquireFormData?(formId: string): Record<string, Object>--><!--Device-FormExtensionAbility-onAcquireFormData?(formId: string): Record<string, Object>-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -73,6 +77,8 @@ onShareForm?(formId: string): Record<string, Object>
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FormExtensionAbility-onShareForm?(formId: string): Record<string, Object>--><!--Device-FormExtensionAbility-onShareForm?(formId: string): Record<string, Object>-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 

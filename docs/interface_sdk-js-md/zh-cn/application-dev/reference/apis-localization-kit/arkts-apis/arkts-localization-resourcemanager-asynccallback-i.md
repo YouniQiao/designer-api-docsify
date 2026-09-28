@@ -12,6 +12,8 @@ export interface AsyncCallback<T>
 
 **替代接口：** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)
 
+<!--Device-resourceManager-export interface AsyncCallback<T>--><!--Device-resourceManager-export interface AsyncCallback<T>-End-->
+
 **系统能力：** SystemCapability.Global.ResourceManager
 
 ## 导入模块
@@ -33,6 +35,8 @@ import { resourceManager } from '@kit.LocalizationKit';
 **废弃版本：** 9
 
 **替代接口：** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)
+
+<!--Device-AsyncCallback-(err: Error, data: T): void--><!--Device-AsyncCallback-(err: Error, data: T): void-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 

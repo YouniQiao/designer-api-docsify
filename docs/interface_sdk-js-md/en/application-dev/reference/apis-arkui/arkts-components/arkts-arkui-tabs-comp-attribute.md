@@ -12,6 +12,8 @@ In addition to the universal events, the following events are supported.
 
 **Since:** 7
 
+<!--Device-unnamed-declare class TabsAttribute extends CommonMethod<TabsAttribute>--><!--Device-unnamed-declare class TabsAttribute extends CommonMethod<TabsAttribute>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## animationCurve
@@ -27,6 +29,8 @@ Sets the tab switching animation curve for the **Tabs** component. For details a
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-TabsAttribute-animationCurve(curve: Curve | ICurve): TabsAttribute--><!--Device-TabsAttribute-animationCurve(curve: Curve | ICurve): TabsAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -51,6 +55,8 @@ For details about curves unaffected by **animationDuration**, see [Interpolation
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TabsAttribute-animationDuration(value: number): TabsAttribute--><!--Device-TabsAttribute-animationDuration(value: number): TabsAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -78,6 +84,8 @@ Sets the animation mode for tab switching initiated by clicking a specific tab o
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TabsAttribute-animationMode(mode: Optional<AnimationMode>): TabsAttribute--><!--Device-TabsAttribute-animationMode(mode: Optional<AnimationMode>): TabsAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -104,6 +112,8 @@ Sets the background blur style of the tab bar.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TabsAttribute-barBackgroundBlurStyle(value: BlurStyle): TabsAttribute--><!--Device-TabsAttribute-barBackgroundBlurStyle(value: BlurStyle): TabsAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -128,6 +138,8 @@ Defines the blur style to apply between the background and content of a tab bar.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TabsAttribute-barBackgroundBlurStyle(style: BlurStyle, options: BackgroundBlurStyleOptions): TabsAttribute--><!--Device-TabsAttribute-barBackgroundBlurStyle(style: BlurStyle, options: BackgroundBlurStyleOptions): TabsAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -151,6 +163,8 @@ Sets the background color of the tab bar.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TabsAttribute-barBackgroundColor(value: ResourceColor): TabsAttribute--><!--Device-TabsAttribute-barBackgroundColor(value: ResourceColor): TabsAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -172,6 +186,8 @@ Sets the background effect of the tab bar, including the blur radius, brightness
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-TabsAttribute-barBackgroundEffect(options: BackgroundEffectOptions): TabsAttribute--><!--Device-TabsAttribute-barBackgroundEffect(options: BackgroundEffectOptions): TabsAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -195,6 +211,8 @@ Sets the display mode of the tab bar for different Tabs container sizes.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.2.0.
 
+<!--Device-TabsAttribute-barDisplayModeBreakpoint(style: Optional<TabsBreakpointType<TabBarDisplayMode>>): TabsAttribute--><!--Device-TabsAttribute-barDisplayModeBreakpoint(style: Optional<TabsBreakpointType<TabBarDisplayMode>>): TabsAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -216,6 +234,8 @@ Enable floating style for bar.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-TabsAttribute-barFloatingStyle(style: Optional<FloatingTabBarStyle>): TabsAttribute--><!--Device-TabsAttribute-barFloatingStyle(style: Optional<FloatingTabBarStyle>): TabsAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -239,6 +259,8 @@ Sets the visible area of the tab bar in grid mode. For details, see **BarGridCol
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TabsAttribute-barGridAlign(value: BarGridColumnOptions): TabsAttribute--><!--Device-TabsAttribute-barGridAlign(value: BarGridColumnOptions): TabsAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -260,6 +282,8 @@ In versions earlier than API version 14, setting **barHeight** to a fixed value 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TabsAttribute-barHeight(value: Length): TabsAttribute--><!--Device-TabsAttribute-barHeight(value: Length): TabsAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -285,6 +309,8 @@ Sets the height of the tab bar. For horizontal **Tabs** components, you can set 
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-TabsAttribute-barHeight(height: Length, noMinHeightLimit: boolean): TabsAttribute--><!--Device-TabsAttribute-barHeight(height: Length, noMinHeightLimit: boolean): TabsAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -307,6 +333,8 @@ Sets the tab bar layout mode to **BarMode.Fixed**.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TabsAttribute-barMode(value: BarMode.Fixed): TabsAttribute--><!--Device-TabsAttribute-barMode(value: BarMode.Fixed): TabsAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -332,6 +360,8 @@ Sets the tab bar layout mode to **BarMode.Scrollable**.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TabsAttribute-barMode(value: BarMode.Scrollable, options: ScrollableBarModeOptions): TabsAttribute--><!--Device-TabsAttribute-barMode(value: BarMode.Scrollable, options: ScrollableBarModeOptions): TabsAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -354,6 +384,8 @@ Sets the tab bar layout mode.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TabsAttribute-barMode(value: BarMode, options?: ScrollableBarModeOptions): TabsAttribute--><!--Device-TabsAttribute-barMode(value: BarMode, options?: ScrollableBarModeOptions): TabsAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -378,6 +410,8 @@ Sets whether the tab bar overlaps the **TabContent** component with a blurred ba
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TabsAttribute-barOverlap(value: boolean): TabsAttribute--><!--Device-TabsAttribute-barOverlap(value: boolean): TabsAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -397,6 +431,8 @@ Sets the position of the **Tabs** component.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TabsAttribute-barPosition(value: BarPosition): TabsAttribute--><!--Device-TabsAttribute-barPosition(value: BarPosition): TabsAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -420,6 +456,8 @@ Sets the display style of the tab bar.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.2.0.
 
+<!--Device-TabsAttribute-barStyle(style: Optional<TabBarStyle>): TabsAttribute--><!--Device-TabsAttribute-barStyle(style: Optional<TabBarStyle>): TabsAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -439,6 +477,8 @@ Sets the width of the tab bar. If the set value is less than 0 or greater than t
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TabsAttribute-barWidth(value: Length): TabsAttribute--><!--Device-TabsAttribute-barWidth(value: Length): TabsAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -461,6 +501,8 @@ Sets the maximum number of child components to cache and the caching mode. If th
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-TabsAttribute-cachedMaxCount(count: number, mode: TabsCacheMode): TabsAttribute--><!--Device-TabsAttribute-cachedMaxCount(count: number, mode: TabsCacheMode): TabsAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -505,6 +547,8 @@ If the **zIndex** attribute is not set for related pages, the **zIndex** values 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TabsAttribute-customContentTransition(delegate: TabsCustomContentTransitionCallback): TabsAttribute--><!--Device-TabsAttribute-customContentTransition(delegate: TabsCustomContentTransitionCallback): TabsAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -526,6 +570,8 @@ Sets the divider between the **TabBar** and **TabContent** components.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TabsAttribute-divider(value: DividerStyle | null): TabsAttribute--><!--Device-TabsAttribute-divider(value: DividerStyle | null): TabsAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -553,6 +599,8 @@ Sets the edge effect used when the boundary of the scrolling area is reached.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TabsAttribute-edgeEffect(edgeEffect: Optional<EdgeEffect>): TabsAttribute--><!--Device-TabsAttribute-edgeEffect(edgeEffect: Optional<EdgeEffect>): TabsAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -574,6 +622,8 @@ Sets whether the tabs fade out when they exceed the container width. It is recom
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TabsAttribute-fadingEdge(value: boolean): TabsAttribute--><!--Device-TabsAttribute-fadingEdge(value: boolean): TabsAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -597,6 +647,8 @@ Sets the maximum width of the sidebar tab bar. This attribute takes effect only 
 
 **Atomic service API:** This API can be used in atomic services since API version 26.2.0.
 
+<!--Device-TabsAttribute-maxSidebarWidth(value: Optional<Length>): TabsAttribute--><!--Device-TabsAttribute-maxSidebarWidth(value: Optional<Length>): TabsAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -619,6 +671,8 @@ Sets the minimum width of the content area of the **Tabs** component. This attri
 
 **Atomic service API:** This API can be used in atomic services since API version 26.2.0.
 
+<!--Device-TabsAttribute-minContentWidth(value: Optional<Length>): TabsAttribute--><!--Device-TabsAttribute-minContentWidth(value: Optional<Length>): TabsAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -640,6 +694,8 @@ Sets the minimum width of the sidebar tab bar. This attribute takes effect only 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+<!--Device-TabsAttribute-minSidebarWidth(value: Optional<Length>): TabsAttribute--><!--Device-TabsAttribute-minSidebarWidth(value: Optional<Length>): TabsAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -665,6 +721,8 @@ Sets the nested scrolling mode of the **Tabs** component and its parent componen
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-TabsAttribute-nestedScroll(value: TabsNestedScrollMode | undefined): TabsAttribute--><!--Device-TabsAttribute-nestedScroll(value: TabsNestedScrollMode | undefined): TabsAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -686,6 +744,8 @@ Triggered when the tab switching animation is completed, including cases where t
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TabsAttribute-onAnimationEnd(handler: OnTabsAnimationEndCallback): TabsAttribute--><!--Device-TabsAttribute-onAnimationEnd(handler: OnTabsAnimationEndCallback): TabsAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -709,6 +769,8 @@ Triggered when the transition animation starts. If [animationDuration](#animatio
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TabsAttribute-onAnimationStart(handler: OnTabsAnimationStartCallback): TabsAttribute--><!--Device-TabsAttribute-onAnimationStart(handler: OnTabsAnimationStartCallback): TabsAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -730,6 +792,8 @@ Triggered after the TabBar display mode changes.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+<!--Device-TabsAttribute-onBarDisplayModeChange(callback: Optional<Callback<TabBarDisplayMode>>): TabsAttribute--><!--Device-TabsAttribute-onBarDisplayModeChange(callback: Optional<Callback<TabBarDisplayMode>>): TabsAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -770,6 +834,8 @@ This event is triggered when any of the following occurs:
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TabsAttribute-onChange(event: Callback<number>): TabsAttribute--><!--Device-TabsAttribute-onChange(event: Callback<number>): TabsAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -793,6 +859,8 @@ During page scrolling, the [OnTabsContentDidScrollCallback](arkts-arkui-tabs-com
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-TabsAttribute-onContentDidScroll(handler: OnTabsContentDidScrollCallback | undefined): TabsAttribute--><!--Device-TabsAttribute-onContentDidScroll(handler: OnTabsContentDidScrollCallback | undefined): TabsAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -833,6 +901,8 @@ right arrow key on the keyboard to switch to a new page while the tab bar has fo
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TabsAttribute-onContentWillChange(handler: OnTabsContentWillChangeCallback): TabsAttribute--><!--Device-TabsAttribute-onContentWillChange(handler: OnTabsContentWillChangeCallback): TabsAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -854,6 +924,8 @@ Triggered on a frame-by-frame basis during swipe gestures for tab switching.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TabsAttribute-onGestureSwipe(handler: OnTabsGestureSwipeCallback): TabsAttribute--><!--Device-TabsAttribute-onGestureSwipe(handler: OnTabsGestureSwipeCallback): TabsAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -894,6 +966,8 @@ is called, triggering the switching animation.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TabsAttribute-onSelected(event: Callback<number>): TabsAttribute--><!--Device-TabsAttribute-onSelected(event: Callback<number>): TabsAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -915,6 +989,8 @@ Triggered when a tab is clicked.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TabsAttribute-onTabBarClick(event: Callback<number>): TabsAttribute--><!--Device-TabsAttribute-onTabBarClick(event: Callback<number>): TabsAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -948,6 +1024,8 @@ This event is triggered when any of the following occurs:
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TabsAttribute-onUnselected(event: Callback<number>): TabsAttribute--><!--Device-TabsAttribute-onUnselected(event: Callback<number>): TabsAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -970,6 +1048,8 @@ Sets the mode for flipping pages using the mouse wheel.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-TabsAttribute-pageFlipMode(mode: Optional<PageFlipMode>): TabsAttribute--><!--Device-TabsAttribute-pageFlipMode(mode: Optional<PageFlipMode>): TabsAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -989,6 +1069,8 @@ Sets whether the tabs are scrollable.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TabsAttribute-scrollable(value: boolean): TabsAttribute--><!--Device-TabsAttribute-scrollable(value: boolean): TabsAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1012,6 +1094,8 @@ Sets the background blur style of the sidebar tab bar. This attribute takes effe
 
 **Atomic service API:** This API can be used in atomic services since API version 26.2.0.
 
+<!--Device-TabsAttribute-sidebarBackgroundBlurStyle(value: Optional<BlurStyle>): TabsAttribute--><!--Device-TabsAttribute-sidebarBackgroundBlurStyle(value: Optional<BlurStyle>): TabsAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1033,6 +1117,8 @@ Sets the background color of the sidebar tab bar. This attribute takes effect on
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+<!--Device-TabsAttribute-sidebarBackgroundColor(value: Optional<ResourceColor>): TabsAttribute--><!--Device-TabsAttribute-sidebarBackgroundColor(value: Optional<ResourceColor>): TabsAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1056,6 +1142,8 @@ Sets the bottom bar content of the sidebar tab bar.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.2.0.
 
+<!--Device-TabsAttribute-sidebarBottomBar(bottomBar: Optional<ComponentContent>): TabsAttribute--><!--Device-TabsAttribute-sidebarBottomBar(bottomBar: Optional<ComponentContent>): TabsAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1077,6 +1165,8 @@ Sets the display style of the sidebar for the **Tab** component.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+<!--Device-TabsAttribute-sidebarDisplayStyle(style: Optional<TabsSidebarDisplayStyle>): TabsAttribute--><!--Device-TabsAttribute-sidebarDisplayStyle(style: Optional<TabsSidebarDisplayStyle>): TabsAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1100,6 +1190,8 @@ Sets the divider between the sidebar tab bar and the content area. This attribut
 
 **Atomic service API:** This API can be used in atomic services since API version 26.2.0.
 
+<!--Device-TabsAttribute-sidebarDivider(value: Optional<DividerStyle>): TabsAttribute--><!--Device-TabsAttribute-sidebarDivider(value: Optional<DividerStyle>): TabsAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1121,6 +1213,8 @@ Sets the footer content of the sidebar tab bar.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+<!--Device-TabsAttribute-sidebarFooter(footer: Optional<ComponentContent>): TabsAttribute--><!--Device-TabsAttribute-sidebarFooter(footer: Optional<ComponentContent>): TabsAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1144,6 +1238,8 @@ Sets the header content of the sidebar tab bar.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.2.0.
 
+<!--Device-TabsAttribute-sidebarHeader(header: Optional<ComponentContent>): TabsAttribute--><!--Device-TabsAttribute-sidebarHeader(header: Optional<ComponentContent>): TabsAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1165,6 +1261,8 @@ Sets the position of the sidebar tab bar. The sidebar tab bar position is not af
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+<!--Device-TabsAttribute-sidebarPosition(position: Optional<BarPosition>): TabsAttribute--><!--Device-TabsAttribute-sidebarPosition(position: Optional<BarPosition>): TabsAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1188,6 +1286,8 @@ Sets the search options for the sidebar tab bar.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.2.0.
 
+<!--Device-TabsAttribute-sidebarSearchable(searchOptions?: TabsSidebarSearchableOptions): TabsAttribute--><!--Device-TabsAttribute-sidebarSearchable(searchOptions?: TabsSidebarSearchableOptions): TabsAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1209,6 +1309,8 @@ Sets the selected color of the tab board in sidebar mode.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+<!--Device-TabsAttribute-sidebarSelectedBoardColor(value: Optional<ResourceColor>): TabsAttribute--><!--Device-TabsAttribute-sidebarSelectedBoardColor(value: Optional<ResourceColor>): TabsAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1232,6 +1334,8 @@ Sets the selected color of the tab icon in sidebar mode.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.2.0.
 
+<!--Device-TabsAttribute-sidebarSelectedIconColor(value: Optional<ResourceColor>): TabsAttribute--><!--Device-TabsAttribute-sidebarSelectedIconColor(value: Optional<ResourceColor>): TabsAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1253,6 +1357,8 @@ Sets the selected color of the tab text in sidebar mode.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+<!--Device-TabsAttribute-sidebarSelectedTextColor(value: Optional<ResourceColor>): TabsAttribute--><!--Device-TabsAttribute-sidebarSelectedTextColor(value: Optional<ResourceColor>): TabsAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1276,6 +1382,8 @@ Sets the unselected color of the tab icon in sidebar mode.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.2.0.
 
+<!--Device-TabsAttribute-sidebarUnselectedIconColor(value: Optional<ResourceColor>): TabsAttribute--><!--Device-TabsAttribute-sidebarUnselectedIconColor(value: Optional<ResourceColor>): TabsAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1297,6 +1405,8 @@ Sets the unselected color of the tab text in sidebar mode.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+<!--Device-TabsAttribute-sidebarUnselectedTextColor(value: Optional<ResourceColor>): TabsAttribute--><!--Device-TabsAttribute-sidebarUnselectedTextColor(value: Optional<ResourceColor>): TabsAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1320,6 +1430,8 @@ Sets the width of the sidebar tab bar. This attribute takes effect only when the
 
 **Atomic service API:** This API can be used in atomic services since API version 26.2.0.
 
+<!--Device-TabsAttribute-sidebarWidth(value: Optional<Length>): TabsAttribute--><!--Device-TabsAttribute-sidebarWidth(value: Optional<Length>): TabsAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1339,6 +1451,8 @@ Sets whether to use vertical tabs.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TabsAttribute-vertical(value: boolean): TabsAttribute--><!--Device-TabsAttribute-vertical(value: boolean): TabsAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

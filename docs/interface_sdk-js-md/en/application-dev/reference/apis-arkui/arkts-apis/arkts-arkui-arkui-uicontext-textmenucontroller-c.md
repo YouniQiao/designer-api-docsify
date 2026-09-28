@@ -15,6 +15,8 @@ The TextMenuController class is used to control the behavior of the text selecti
 
 **Since:** 16
 
+<!--Device-unnamed-export class TextMenuController--><!--Device-unnamed-export class TextMenuController-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -42,7 +44,7 @@ Disables specified system service menu items in the text selection menu. This is
 > 
 > - After this API is called, it affects the text component's API [editMenuOptions](../arkts-components/arkts-arkui-text-comp-attribute.md#editmenuoptions), and the input parameter list of its callback method [onCreateMenu](arkts-arkui-editmenuoptions-i.md#oncreatemenu) does not include the disabled menu options.
 > 
-> - Components involving the text selection menu include [Text](../arkts-components/arkts-arkui-text-comp.md#text),[TextArea](../arkts-components/arkts-arkui-textarea-comp.md#text_area), [TextInput](../arkts-components/arkts-arkui-textinput-comp.md#text_input),[Search](../arkts-components/arkts-arkui-search-comp.md#search), [RichEditor](../arkts-components/arkts-arkui-richeditor-comp.md#rich_editor), and [Web](../../apis-arkweb/arkts-components/arkts-arkweb-web-comp.md#web).
+> - Components involving the text selection menu include [Text](../arkts-components/arkts-arkui-text-comp.md),[TextArea](../arkts-components/arkts-arkui-textarea-comp.md), [TextInput](../arkts-components/arkts-arkui-textinput-comp.md),[Search](../arkts-components/arkts-arkui-search-comp.md), [RichEditor](../arkts-components/arkts-arkui-richeditor-comp.md), and [Web](../../apis-arkweb/arkts-components/arkts-arkweb-web-comp.md).
 > 
 > - System service menu items refer to menu items other than copy, cut, select all, and paste in [TextMenuItemId](arkts-arkui-textmenuitemid-c.md).
 > 
@@ -70,6 +72,8 @@ Disables specified system service menu items in the text selection menu. This is
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-TextMenuController-static disableMenuItems(items: Array<TextMenuItemId>): void--><!--Device-TextMenuController-static disableMenuItems(items: Array<TextMenuItemId>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -140,7 +144,7 @@ Disables all system service menu items in the text selection menu. This is appli
 > 
 > - After this API is called, it affects the text component's API [editMenuOptions](../arkts-components/arkts-arkui-text-comp-attribute.md#editmenuoptions), and the input parameter list of its callback method [onCreateMenu](arkts-arkui-editmenuoptions-i.md#oncreatemenu) does not include the disabled menu options.
 > 
-> - Components involving the text selection menu include [Text](../arkts-components/arkts-arkui-text-comp.md#text),[TextArea](../arkts-components/arkts-arkui-textarea-comp.md#text_area), [TextInput](../arkts-components/arkts-arkui-textinput-comp.md#text_input),[Search](../arkts-components/arkts-arkui-search-comp.md#search), [RichEditor](../arkts-components/arkts-arkui-richeditor-comp.md#rich_editor), and [Web](../../apis-arkweb/arkts-components/arkts-arkweb-web-comp.md#web).
+> - Components involving the text selection menu include [Text](../arkts-components/arkts-arkui-text-comp.md),[TextArea](../arkts-components/arkts-arkui-textarea-comp.md), [TextInput](../arkts-components/arkts-arkui-textinput-comp.md),[Search](../arkts-components/arkts-arkui-search-comp.md), [RichEditor](../arkts-components/arkts-arkui-richeditor-comp.md), and [Web](../../apis-arkweb/arkts-components/arkts-arkweb-web-comp.md).
 > 
 > - System service menu items refer to menu items other than copy, cut, select all, and paste in [TextMenuItemId](arkts-arkui-textmenuitemid-c.md).
 > 
@@ -164,6 +168,8 @@ Disables all system service menu items in the text selection menu. This is appli
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-TextMenuController-static disableSystemServiceMenuItems(disable: boolean): void--><!--Device-TextMenuController-static disableSystemServiceMenuItems(disable: boolean): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -231,6 +237,8 @@ Sets menu options. For example, when the text selection menu needs to be display
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 16.
+
+<!--Device-TextMenuController-setMenuOptions(options: TextMenuOptions): void--><!--Device-TextMenuController-setMenuOptions(options: TextMenuOptions): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

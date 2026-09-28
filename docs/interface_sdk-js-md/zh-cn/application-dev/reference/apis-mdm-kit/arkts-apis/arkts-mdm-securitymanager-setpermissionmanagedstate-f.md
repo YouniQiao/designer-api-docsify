@@ -25,6 +25,8 @@ function setPermissionManagedState(
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-securityManager-function setPermissionManagedState(    admin: Want,    applicationInstance: ApplicationInstance,    permissions: Array<string>,    managedState: PermissionManagedState  ): void--><!--Device-securityManager-function setPermissionManagedState(    admin: Want,    applicationInstance: ApplicationInstance,    permissions: Array<string>,    managedState: PermissionManagedState  ): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**

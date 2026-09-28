@@ -8,6 +8,8 @@ interface IntervalInfo
 
 **起始版本：** 11
 
+<!--Device-displaySync-interface IntervalInfo--><!--Device-displaySync-interface IntervalInfo-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -28,7 +30,9 @@ targetTimestamp: number
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-IntervalInfo-targetTimestamp: long--><!--Device-IntervalInfo-targetTimestamp: long-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,6 +48,8 @@ timestamp: number
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-IntervalInfo-timestamp: long--><!--Device-IntervalInfo-timestamp: long-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

@@ -18,6 +18,8 @@ function getAllUninstalledBundleResourceInfo(resourceFlags: number): Promise<Arr
 
 **需要权限：** ohos.permission.GET_BUNDLE_RESOURCES
 
+<!--Device-bundleResourceManager-function getAllUninstalledBundleResourceInfo(resourceFlags: int): Promise<Array<BundleResourceInfo>>--><!--Device-bundleResourceManager-function getAllUninstalledBundleResourceInfo(resourceFlags: int): Promise<Array<BundleResourceInfo>>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Resource
 
 **系统接口：** 此接口为系统接口。

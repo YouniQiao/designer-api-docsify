@@ -8,6 +8,8 @@ interface PermissionUsedRequest
 
 **起始版本：** 9
 
+<!--Device-privacyManager-interface PermissionUsedRequest--><!--Device-privacyManager-interface PermissionUsedRequest-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -34,6 +36,8 @@ beginTime?: number
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-PermissionUsedRequest-beginTime?: long--><!--Device-PermissionUsedRequest-beginTime?: long-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -53,6 +57,8 @@ bundleName?: string
 **起始版本：** 9
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-PermissionUsedRequest-bundleName?: string--><!--Device-PermissionUsedRequest-bundleName?: string-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -74,6 +80,8 @@ deviceId?: string
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-PermissionUsedRequest-deviceId?: string--><!--Device-PermissionUsedRequest-deviceId?: string-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -94,6 +102,8 @@ endTime?: number
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-PermissionUsedRequest-endTime?: long--><!--Device-PermissionUsedRequest-endTime?: long-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -111,6 +121,8 @@ flag: PermissionUsageFlag
 **起始版本：** 9
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-PermissionUsedRequest-flag: PermissionUsageFlag--><!--Device-PermissionUsedRequest-flag: PermissionUsageFlag-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -134,6 +146,8 @@ isRemote?: boolean
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-PermissionUsedRequest-isRemote?: boolean--><!--Device-PermissionUsedRequest-isRemote?: boolean-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -151,6 +165,8 @@ permissionNames?: Array<Permissions>
 **起始版本：** 9
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-PermissionUsedRequest-permissionNames?: Array<Permissions>--><!--Device-PermissionUsedRequest-permissionNames?: Array<Permissions>-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -171,6 +187,8 @@ tokenId?: number
 **起始版本：** 9
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-PermissionUsedRequest-tokenId?: int--><!--Device-PermissionUsedRequest-tokenId?: int-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 

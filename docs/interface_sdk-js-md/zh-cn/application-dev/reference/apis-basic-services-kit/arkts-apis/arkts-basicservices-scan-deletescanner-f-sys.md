@@ -18,6 +18,8 @@ function deleteScanner(uniqueId: string, discoveryMode: ScannerDiscoveryMode): P
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-scan-function deleteScanner(uniqueId: string, discoveryMode: ScannerDiscoveryMode): Promise<void>--><!--Device-scan-function deleteScanner(uniqueId: string, discoveryMode: ScannerDiscoveryMode): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **系统接口：** 此接口为系统接口。

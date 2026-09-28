@@ -8,6 +8,8 @@ interface WidgetParam
 
 **起始版本：** 10
 
+<!--Device-userAuth-interface WidgetParam--><!--Device-userAuth-interface WidgetParam-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 ## 导入模块
@@ -30,7 +32,9 @@ appWindow?: window.Window
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-WidgetParam-appWindow?: window.Window--><!--Device-WidgetParam-appWindow?: window.Window-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -49,6 +53,8 @@ windowMode?: WindowModeType
 **默认值：** WindowModeType.DIALOG_BOX
 
 **起始版本：** 10
+
+<!--Device-WidgetParam-windowMode?: WindowModeType--><!--Device-WidgetParam-windowMode?: WindowModeType-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 

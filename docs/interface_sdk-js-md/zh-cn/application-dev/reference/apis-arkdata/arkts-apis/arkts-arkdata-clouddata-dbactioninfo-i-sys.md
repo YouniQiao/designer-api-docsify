@@ -8,6 +8,8 @@ interface DBActionInfo
 
 **起始版本：** 23
 
+<!--Device-cloudData-interface DBActionInfo--><!--Device-cloudData-interface DBActionInfo-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ action: ClearAction
 
 **起始版本：** 23
 
+<!--Device-DBActionInfo-action: ClearAction--><!--Device-DBActionInfo-action: ClearAction-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ tableInfo?: Record<string, ClearAction>
 **类型：** Record&lt;string, [ClearAction](arkts-arkdata-clouddata-clearaction-e-sys.md)&gt;
 
 **起始版本：** 23
+
+<!--Device-DBActionInfo-tableInfo?: Record<string, ClearAction>--><!--Device-DBActionInfo-tableInfo?: Record<string, ClearAction>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 

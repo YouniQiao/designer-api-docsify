@@ -213,6 +213,8 @@
   - [BatteryStatsInfo(系统接口)](arkts-basicservices-batterystats-batterystatsinfo-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [ConsumptionType(系统接口)](arkts-basicservices-batterystats-consumptiontype-e-sys.md)<!--DelEnd-->
+- [@ohos.boardInfo](arkts-basicservices-boardinfo.md)
+  - [常量](arkts-basicservices-boardinfo-con.md)
 <!--Del-->
 - [@ohos.brightness(屏幕亮度)](arkts-basicservices-brightness.md)<!--DelEnd-->
   <!--Del-->

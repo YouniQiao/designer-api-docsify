@@ -8,6 +8,8 @@ interface AuthenticatorInfo
 
 **起始版本：** 8
 
+<!--Device-appAccount-interface AuthenticatorInfo--><!--Device-appAccount-interface AuthenticatorInfo-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 ## 导入模块
@@ -28,6 +30,8 @@ iconId: number
 
 **起始版本：** 8
 
+<!--Device-AuthenticatorInfo-iconId: long--><!--Device-AuthenticatorInfo-iconId: long-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 ## labelId
@@ -42,6 +46,8 @@ labelId: number
 
 **起始版本：** 8
 
+<!--Device-AuthenticatorInfo-labelId: long--><!--Device-AuthenticatorInfo-labelId: long-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 ## owner
@@ -55,5 +61,7 @@ owner: string
 **类型：** string
 
 **起始版本：** 8
+
+<!--Device-AuthenticatorInfo-owner: string--><!--Device-AuthenticatorInfo-owner: string-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount

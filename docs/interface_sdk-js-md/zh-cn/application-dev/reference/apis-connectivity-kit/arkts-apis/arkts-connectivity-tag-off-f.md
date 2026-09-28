@@ -20,6 +20,8 @@ function off(type: 'readerMode', elementName: ElementName, callback?: AsyncCallb
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-tag-function off(type: 'readerMode', elementName: ElementName, callback?: AsyncCallback<TagInfo>): void--><!--Device-tag-function off(type: 'readerMode', elementName: ElementName, callback?: AsyncCallback<TagInfo>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **参数：**
@@ -54,6 +56,8 @@ function off(type: 'readerModeWithInterval', elementName: ElementName, callback?
 **需要权限：** ohos.permission.NFC_TAG
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-tag-function off(type: 'readerModeWithInterval', elementName: ElementName, callback?: Callback<TagInfo>): void--><!--Device-tag-function off(type: 'readerModeWithInterval', elementName: ElementName, callback?: Callback<TagInfo>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 

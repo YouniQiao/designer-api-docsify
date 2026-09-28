@@ -8,6 +8,8 @@ export interface EventData
 
 **起始版本：** 7
 
+<!--Device-emitter-export interface EventData--><!--Device-emitter-export interface EventData-End-->
+
 **系统能力：** SystemCapability.Notification.Emitter
 
 ## 导入模块
@@ -29,5 +31,7 @@ data?: { [key: string]: any }
 **起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-EventData-data?: { [key: string]: any }--><!--Device-EventData-data?: { [key: string]: any }-End-->
 
 **系统能力：** SystemCapability.Notification.Emitter

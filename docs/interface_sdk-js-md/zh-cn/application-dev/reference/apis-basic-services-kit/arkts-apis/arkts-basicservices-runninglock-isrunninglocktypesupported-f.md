@@ -20,6 +20,8 @@ function isRunningLockTypeSupported(type: RunningLockType, callback: AsyncCallba
 
 **替代接口：** [isSupported](arkts-basicservices-runninglock-issupported-f.md)
 
+<!--Device-runningLock-function isRunningLockTypeSupported(type: RunningLockType, callback: AsyncCallback<boolean>): void--><!--Device-runningLock-function isRunningLockTypeSupported(type: RunningLockType, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 
 **参数：**
@@ -57,6 +59,8 @@ function isRunningLockTypeSupported(type: RunningLockType): Promise<boolean>
 **废弃版本：** 9
 
 **替代接口：** [isSupported](arkts-basicservices-runninglock-issupported-f.md)
+
+<!--Device-runningLock-function isRunningLockTypeSupported(type: RunningLockType): Promise<boolean>--><!--Device-runningLock-function isRunningLockTypeSupported(type: RunningLockType): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 

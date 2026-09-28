@@ -8,6 +8,8 @@ Provides APIs for custom user behavior recording for Gallery.
 
 **Since:** 20
 
+<!--Device-photoAccessHelper-class PhotoAssetCustomRecordManager--><!--Device-photoAccessHelper-class PhotoAssetCustomRecordManager-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -27,6 +29,8 @@ addLcdJumpCount(ids: Array<number>): Promise<Array<number>>
 Increases the value of **LcdJumpCount** by 1 for the data in the database based on **fileId** in [PhotoAssetCustomRecord](arkts-medialibrary-photoaccesshelper-photoassetcustomrecord-i-sys.md). This API uses a promise to return the result.
 
 **Since:** 20
+
+<!--Device-PhotoAssetCustomRecordManager-addLcdJumpCount(ids: Array<int>): Promise<Array<int>>--><!--Device-PhotoAssetCustomRecordManager-addLcdJumpCount(ids: Array<int>): Promise<Array<int>>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -62,6 +66,8 @@ Increases the value of **shareCount** by 1 for the data in the database based on
 
 **Since:** 20
 
+<!--Device-PhotoAssetCustomRecordManager-addShareCount(ids: Array<int>): Promise<Array<int>>--><!--Device-PhotoAssetCustomRecordManager-addShareCount(ids: Array<int>): Promise<Array<int>>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -95,6 +101,8 @@ createCustomRecords(customRecords: Array<PhotoAssetCustomRecord>): Promise<void>
 Adds custom user behavior recordings. This API uses a promise to return the result.
 
 **Since:** 20
+
+<!--Device-PhotoAssetCustomRecordManager-createCustomRecords(customRecords: Array<PhotoAssetCustomRecord>): Promise<void>--><!--Device-PhotoAssetCustomRecordManager-createCustomRecords(customRecords: Array<PhotoAssetCustomRecord>): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -149,6 +157,8 @@ Obtains an instance of custom user behavior recording for Gallery.
 
 **Since:** 20
 
+<!--Device-PhotoAssetCustomRecordManager-static getCustomRecordManagerInstance(context: Context): PhotoAssetCustomRecordManager--><!--Device-PhotoAssetCustomRecordManager-static getCustomRecordManagerInstance(context: Context): PhotoAssetCustomRecordManager-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -197,6 +207,8 @@ getCustomRecords(optionCheck: FetchOptions): Promise<FetchResult<PhotoAssetCusto
 Obtains custom user behavior recordings based on retrieval options. This API uses a promise to return the result.
 
 **Since:** 20
+
+<!--Device-PhotoAssetCustomRecordManager-getCustomRecords(optionCheck: FetchOptions): Promise<FetchResult<PhotoAssetCustomRecord>>--><!--Device-PhotoAssetCustomRecordManager-getCustomRecords(optionCheck: FetchOptions): Promise<FetchResult<PhotoAssetCustomRecord>>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -256,6 +268,8 @@ Removes custom user behavior recordings based on retrieval options. This API use
 
 **Since:** 20
 
+<!--Device-PhotoAssetCustomRecordManager-removeCustomRecords(optionCheck: FetchOptions): Promise<void>--><!--Device-PhotoAssetCustomRecordManager-removeCustomRecords(optionCheck: FetchOptions): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -312,6 +326,8 @@ setCustomRecords(customRecords: Array<PhotoAssetCustomRecord>): Promise<Array<nu
 Updates the existing database fields based on custom user behavior recordings. This API uses a promise to return the result.
 
 **Since:** 20
+
+<!--Device-PhotoAssetCustomRecordManager-setCustomRecords(customRecords: Array<PhotoAssetCustomRecord>): Promise<Array<int>>--><!--Device-PhotoAssetCustomRecordManager-setCustomRecords(customRecords: Array<PhotoAssetCustomRecord>): Promise<Array<int>>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

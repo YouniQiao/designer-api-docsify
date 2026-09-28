@@ -8,6 +8,8 @@ Defines the hash algorithms used for privacy-preserving computation.
 
 **Since:** 26.0.1
 
+<!--Device-privacyComputation-enum HashAlg--><!--Device-privacyComputation-enum HashAlg-End-->
+
 **System capability:** SystemCapability.Security.Asset
 
 ## NONE
@@ -23,6 +25,8 @@ No hash algorithm.
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.1.
+
+<!--Device-HashAlg-NONE = 0--><!--Device-HashAlg-NONE = 0-End-->
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -40,6 +44,8 @@ The SHA256 hash algorithm.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.1.
 
+<!--Device-HashAlg-SHA256 = 1--><!--Device-HashAlg-SHA256 = 1-End-->
+
 **System capability:** SystemCapability.Security.Asset
 
 ## SHA384
@@ -56,6 +62,8 @@ The SHA384 hash algorithm.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.1.
 
+<!--Device-HashAlg-SHA384 = 2--><!--Device-HashAlg-SHA384 = 2-End-->
+
 **System capability:** SystemCapability.Security.Asset
 
 ## SHA512
@@ -71,5 +79,7 @@ The SHA512 hash algorithm.
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.1.
+
+<!--Device-HashAlg-SHA512 = 3--><!--Device-HashAlg-SHA512 = 3-End-->
 
 **System capability:** SystemCapability.Security.Asset

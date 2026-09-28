@@ -23,6 +23,8 @@ function getAppNativeMemInfo(): NativeMemInfo
 
 **起始版本：** 12
 
+<!--Device-hidebug-function getAppNativeMemInfo(): NativeMemInfo--><!--Device-hidebug-function getAppNativeMemInfo(): NativeMemInfo-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **返回值：**

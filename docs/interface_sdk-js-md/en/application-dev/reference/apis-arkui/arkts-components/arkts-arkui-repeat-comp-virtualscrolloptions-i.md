@@ -8,6 +8,8 @@ Configures the expected total number of data items to be loaded in lazy loading 
 
 **Since:** 12
 
+<!--Device-unnamed-interface VirtualScrollOptions--><!--Device-unnamed-interface VirtualScrollOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onLazyLoading
@@ -37,6 +39,8 @@ the return value of **totalCount** or **onTotalCount** is greater than the data 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-VirtualScrollOptions-onLazyLoading?(index: number): void--><!--Device-VirtualScrollOptions-onLazyLoading?(index: number): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -86,6 +90,8 @@ return value.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-VirtualScrollOptions-onTotalCount?(): number--><!--Device-VirtualScrollOptions-onTotalCount?(): number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -114,6 +120,8 @@ Default value: [DEFAULT](arkts-arkui-repeat-comp-repeatmemoptstrategy-e.md)
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-VirtualScrollOptions-memoryOptimizationStrategy?: RepeatMemOptStrategy--><!--Device-VirtualScrollOptions-memoryOptimizationStrategy?: RepeatMemOptStrategy-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## reusable
@@ -139,6 +147,8 @@ Default value: **true**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-VirtualScrollOptions-reusable?: boolean--><!--Device-VirtualScrollOptions-reusable?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -173,5 +183,7 @@ In addition to the totalCount attribute, the developer can also set a custom met
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-VirtualScrollOptions-totalCount?: number--><!--Device-VirtualScrollOptions-totalCount?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

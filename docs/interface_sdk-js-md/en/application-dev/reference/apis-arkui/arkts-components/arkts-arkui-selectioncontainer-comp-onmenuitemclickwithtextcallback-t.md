@@ -12,6 +12,8 @@ Called when a menu item is tapped. It can intercept the execution of system defa
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-unnamed-export type OnMenuItemClickWithTextCallback = (menuItem: TextMenuItem, value: string) => boolean--><!--Device-unnamed-export type OnMenuItemClickWithTextCallback = (menuItem: TextMenuItem, value: string) => boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

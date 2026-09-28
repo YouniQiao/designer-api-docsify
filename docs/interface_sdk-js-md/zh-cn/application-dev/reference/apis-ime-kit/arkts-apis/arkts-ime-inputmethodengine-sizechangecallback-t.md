@@ -8,6 +8,8 @@ export type SizeChangeCallback = (size: window.Size, keyboardArea?: KeyboardArea
 
 **起始版本：** 15
 
+<!--Device-inputMethodEngine-export type SizeChangeCallback = (size: window.Size, keyboardArea?: KeyboardArea) => void--><!--Device-inputMethodEngine-export type SizeChangeCallback = (size: window.Size, keyboardArea?: KeyboardArea) => void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**

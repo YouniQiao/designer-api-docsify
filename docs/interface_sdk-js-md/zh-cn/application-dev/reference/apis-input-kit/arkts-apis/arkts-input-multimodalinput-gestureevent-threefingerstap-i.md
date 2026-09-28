@@ -8,6 +8,8 @@ export declare interface ThreeFingersTap
 
 **起始版本：** 11
 
+<!--Device-unnamed-export declare interface ThreeFingersTap--><!--Device-unnamed-export declare interface ThreeFingersTap-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## 导入模块
@@ -27,5 +29,7 @@ type: ActionType
 **类型：** [ActionType](arkts-input-multimodalinput-gestureevent-actiontype-e.md)
 
 **起始版本：** 11
+
+<!--Device-ThreeFingersTap-type: ActionType--><!--Device-ThreeFingersTap-type: ActionType-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core

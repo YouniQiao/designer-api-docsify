@@ -10,6 +10,8 @@
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare namespace PiPWindow--><!--Device-unnamed-declare namespace PiPWindow-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 ## 导入模块

@@ -12,6 +12,8 @@ Defines the callback triggered when data is moved during drag-and-drop sorting.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-unnamed-declare type OnMoveHandler = (from: number, to: number) => void--><!--Device-unnamed-declare type OnMoveHandler = (from: number, to: number) => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

@@ -8,6 +8,8 @@ export type EnabledNotificationCallbackData = _EnabledNotificationCallbackData
 
 **起始版本：** 9
 
+<!--Device-notificationSubscribe-export type EnabledNotificationCallbackData = _EnabledNotificationCallbackData--><!--Device-notificationSubscribe-export type EnabledNotificationCallbackData = _EnabledNotificationCallbackData-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。

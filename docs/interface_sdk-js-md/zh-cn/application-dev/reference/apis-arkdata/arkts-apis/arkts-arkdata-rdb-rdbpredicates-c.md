@@ -12,6 +12,8 @@ class RdbPredicates
 
 **替代接口：** [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md)
 
+<!--Device-rdb-class RdbPredicates--><!--Device-rdb-class RdbPredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## 导入模块
@@ -32,6 +34,8 @@ and(): RdbPredicates
 **废弃版本：** 9
 
 **替代接口：** [and](arkts-arkdata-relationalstore-rdbpredicates-c.md#and)
+
+<!--Device-RdbPredicates-and(): RdbPredicates--><!--Device-RdbPredicates-and(): RdbPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -63,6 +67,8 @@ beginsWith(field: string, value: string): RdbPredicates
 **废弃版本：** 9
 
 **替代接口：** [beginsWith](arkts-arkdata-relationalstore-rdbpredicates-c.md#beginswith)
+
+<!--Device-RdbPredicates-beginsWith(field: string, value: string): RdbPredicates--><!--Device-RdbPredicates-beginsWith(field: string, value: string): RdbPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -100,6 +106,8 @@ beginWrap(): RdbPredicates
 
 **替代接口：** [beginWrap](arkts-arkdata-relationalstore-rdbpredicates-c.md#beginwrap)
 
+<!--Device-RdbPredicates-beginWrap(): RdbPredicates--><!--Device-RdbPredicates-beginWrap(): RdbPredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **返回值：**
@@ -133,6 +141,8 @@ between(field: string, low: ValueType, high: ValueType): RdbPredicates
 **废弃版本：** 9
 
 **替代接口：** [between](arkts-arkdata-relationalstore-rdbpredicates-c.md#between)
+
+<!--Device-RdbPredicates-between(field: string, low: ValueType, high: ValueType): RdbPredicates--><!--Device-RdbPredicates-between(field: string, low: ValueType, high: ValueType): RdbPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -171,6 +181,8 @@ constructor(name: string)
 
 **替代接口：** [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md)
 
+<!--Device-RdbPredicates-constructor(name: string)--><!--Device-RdbPredicates-constructor(name: string)-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
@@ -198,6 +210,8 @@ contains(field: string, value: string): RdbPredicates
 **废弃版本：** 9
 
 **替代接口：** [contains](arkts-arkdata-relationalstore-rdbpredicates-c.md#contains)
+
+<!--Device-RdbPredicates-contains(field: string, value: string): RdbPredicates--><!--Device-RdbPredicates-contains(field: string, value: string): RdbPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -235,6 +249,8 @@ distinct(): RdbPredicates
 
 **替代接口：** [distinct](arkts-arkdata-relationalstore-rdbpredicates-c.md#distinct)
 
+<!--Device-RdbPredicates-distinct(): RdbPredicates--><!--Device-RdbPredicates-distinct(): RdbPredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **返回值：**
@@ -263,6 +279,8 @@ endsWith(field: string, value: string): RdbPredicates
 **废弃版本：** 9
 
 **替代接口：** [endsWith](arkts-arkdata-relationalstore-rdbpredicates-c.md#endswith)
+
+<!--Device-RdbPredicates-endsWith(field: string, value: string): RdbPredicates--><!--Device-RdbPredicates-endsWith(field: string, value: string): RdbPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -300,6 +318,8 @@ endWrap(): RdbPredicates
 
 **替代接口：** [endWrap](arkts-arkdata-relationalstore-rdbpredicates-c.md#endwrap)
 
+<!--Device-RdbPredicates-endWrap(): RdbPredicates--><!--Device-RdbPredicates-endWrap(): RdbPredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **返回值：**
@@ -333,6 +353,8 @@ equalTo(field: string, value: ValueType): RdbPredicates
 **废弃版本：** 9
 
 **替代接口：** [equalTo](arkts-arkdata-relationalstore-rdbpredicates-c.md#equalto)
+
+<!--Device-RdbPredicates-equalTo(field: string, value: ValueType): RdbPredicates--><!--Device-RdbPredicates-equalTo(field: string, value: ValueType): RdbPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -370,6 +392,8 @@ glob(field: string, value: string): RdbPredicates
 
 **替代接口：** [glob](arkts-arkdata-relationalstore-rdbpredicates-c.md#glob)
 
+<!--Device-RdbPredicates-glob(field: string, value: string): RdbPredicates--><!--Device-RdbPredicates-glob(field: string, value: string): RdbPredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
@@ -405,6 +429,8 @@ greaterThan(field: string, value: ValueType): RdbPredicates
 **废弃版本：** 9
 
 **替代接口：** [greaterThan](arkts-arkdata-relationalstore-rdbpredicates-c.md#greaterthan)
+
+<!--Device-RdbPredicates-greaterThan(field: string, value: ValueType): RdbPredicates--><!--Device-RdbPredicates-greaterThan(field: string, value: ValueType): RdbPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -442,6 +468,8 @@ greaterThanOrEqualTo(field: string, value: ValueType): RdbPredicates
 
 **替代接口：** [greaterThanOrEqualTo](arkts-arkdata-relationalstore-rdbpredicates-c.md#greaterthanorequalto)
 
+<!--Device-RdbPredicates-greaterThanOrEqualTo(field: string, value: ValueType): RdbPredicates--><!--Device-RdbPredicates-greaterThanOrEqualTo(field: string, value: ValueType): RdbPredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
@@ -478,6 +506,8 @@ groupBy(fields: Array<string>): RdbPredicates
 
 **替代接口：** [groupBy](arkts-arkdata-relationalstore-rdbpredicates-c.md#groupby)
 
+<!--Device-RdbPredicates-groupBy(fields: Array<string>): RdbPredicates--><!--Device-RdbPredicates-groupBy(fields: Array<string>): RdbPredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
@@ -512,6 +542,8 @@ in(field: string, value: Array<ValueType>): RdbPredicates
 **废弃版本：** 9
 
 **替代接口：** [in](arkts-arkdata-relationalstore-rdbpredicates-c.md#in)
+
+<!--Device-RdbPredicates-in(field: string, value: Array<ValueType>): RdbPredicates--><!--Device-RdbPredicates-in(field: string, value: Array<ValueType>): RdbPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -549,6 +581,8 @@ inAllDevices(): RdbPredicates
 
 **替代接口：** [inAllDevices](arkts-arkdata-relationalstore-rdbpredicates-c.md#inalldevices)
 
+<!--Device-RdbPredicates-inAllDevices(): RdbPredicates--><!--Device-RdbPredicates-inAllDevices(): RdbPredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **返回值：**
@@ -583,6 +617,8 @@ inDevices(devices: Array<string>): RdbPredicates
 **废弃版本：** 9
 
 **替代接口：** [inDevices](arkts-arkdata-relationalstore-rdbpredicates-c.md#indevices)
+
+<!--Device-RdbPredicates-inDevices(devices: Array<string>): RdbPredicates--><!--Device-RdbPredicates-inDevices(devices: Array<string>): RdbPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -637,6 +673,8 @@ indexedBy(field: string): RdbPredicates
 
 **替代接口：** [indexedBy](arkts-arkdata-relationalstore-rdbpredicates-c.md#indexedby)
 
+<!--Device-RdbPredicates-indexedBy(field: string): RdbPredicates--><!--Device-RdbPredicates-indexedBy(field: string): RdbPredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
@@ -671,6 +709,8 @@ isNotNull(field: string): RdbPredicates
 **废弃版本：** 9
 
 **替代接口：** [isNotNull](arkts-arkdata-relationalstore-rdbpredicates-c.md#isnotnull)
+
+<!--Device-RdbPredicates-isNotNull(field: string): RdbPredicates--><!--Device-RdbPredicates-isNotNull(field: string): RdbPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -713,6 +753,8 @@ isNull(field: string): RdbPredicates
 
 **替代接口：** [isNull](arkts-arkdata-relationalstore-rdbpredicates-c.md#isnull)
 
+<!--Device-RdbPredicates-isNull(field: string): RdbPredicates--><!--Device-RdbPredicates-isNull(field: string): RdbPredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
@@ -747,6 +789,8 @@ lessThan(field: string, value: ValueType): RdbPredicates
 **废弃版本：** 9
 
 **替代接口：** [lessThan](arkts-arkdata-relationalstore-rdbpredicates-c.md#lessthan)
+
+<!--Device-RdbPredicates-lessThan(field: string, value: ValueType): RdbPredicates--><!--Device-RdbPredicates-lessThan(field: string, value: ValueType): RdbPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -784,6 +828,8 @@ lessThanOrEqualTo(field: string, value: ValueType): RdbPredicates
 
 **替代接口：** [lessThanOrEqualTo](arkts-arkdata-relationalstore-rdbpredicates-c.md#lessthanorequalto)
 
+<!--Device-RdbPredicates-lessThanOrEqualTo(field: string, value: ValueType): RdbPredicates--><!--Device-RdbPredicates-lessThanOrEqualTo(field: string, value: ValueType): RdbPredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
@@ -819,6 +865,8 @@ like(field: string, value: string): RdbPredicates
 **废弃版本：** 9
 
 **替代接口：** [like](arkts-arkdata-relationalstore-rdbpredicates-c.md#like)
+
+<!--Device-RdbPredicates-like(field: string, value: string): RdbPredicates--><!--Device-RdbPredicates-like(field: string, value: string): RdbPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -856,6 +904,8 @@ limitAs(value: number): RdbPredicates
 
 **替代接口：** [limitAs](arkts-arkdata-relationalstore-rdbpredicates-c.md#limitas)
 
+<!--Device-RdbPredicates-limitAs(value: number): RdbPredicates--><!--Device-RdbPredicates-limitAs(value: number): RdbPredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
@@ -890,6 +940,8 @@ notBetween(field: string, low: ValueType, high: ValueType): RdbPredicates
 **废弃版本：** 9
 
 **替代接口：** [notBetween](arkts-arkdata-relationalstore-rdbpredicates-c.md#notbetween)
+
+<!--Device-RdbPredicates-notBetween(field: string, low: ValueType, high: ValueType): RdbPredicates--><!--Device-RdbPredicates-notBetween(field: string, low: ValueType, high: ValueType): RdbPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -928,6 +980,8 @@ notEqualTo(field: string, value: ValueType): RdbPredicates
 
 **替代接口：** [notEqualTo](arkts-arkdata-relationalstore-rdbpredicates-c.md#notequalto)
 
+<!--Device-RdbPredicates-notEqualTo(field: string, value: ValueType): RdbPredicates--><!--Device-RdbPredicates-notEqualTo(field: string, value: ValueType): RdbPredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
@@ -963,6 +1017,8 @@ notIn(field: string, value: Array<ValueType>): RdbPredicates
 **废弃版本：** 9
 
 **替代接口：** [notIn](arkts-arkdata-relationalstore-rdbpredicates-c.md#notin)
+
+<!--Device-RdbPredicates-notIn(field: string, value: Array<ValueType>): RdbPredicates--><!--Device-RdbPredicates-notIn(field: string, value: Array<ValueType>): RdbPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -1000,6 +1056,8 @@ offsetAs(rowOffset: number): RdbPredicates
 
 **替代接口：** [offsetAs](arkts-arkdata-relationalstore-rdbpredicates-c.md#offsetas)
 
+<!--Device-RdbPredicates-offsetAs(rowOffset: number): RdbPredicates--><!--Device-RdbPredicates-offsetAs(rowOffset: number): RdbPredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
@@ -1035,6 +1093,8 @@ or(): RdbPredicates
 
 **替代接口：** [or](arkts-arkdata-relationalstore-rdbpredicates-c.md#or)
 
+<!--Device-RdbPredicates-or(): RdbPredicates--><!--Device-RdbPredicates-or(): RdbPredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **返回值：**
@@ -1065,6 +1125,8 @@ orderByAsc(field: string): RdbPredicates
 **废弃版本：** 9
 
 **替代接口：** [orderByAsc](arkts-arkdata-relationalstore-rdbpredicates-c.md#orderbyasc)
+
+<!--Device-RdbPredicates-orderByAsc(field: string): RdbPredicates--><!--Device-RdbPredicates-orderByAsc(field: string): RdbPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -1100,6 +1162,8 @@ orderByDesc(field: string): RdbPredicates
 **废弃版本：** 9
 
 **替代接口：** [orderByDesc](arkts-arkdata-relationalstore-rdbpredicates-c.md#orderbydesc)
+
+<!--Device-RdbPredicates-orderByDesc(field: string): RdbPredicates--><!--Device-RdbPredicates-orderByDesc(field: string): RdbPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 

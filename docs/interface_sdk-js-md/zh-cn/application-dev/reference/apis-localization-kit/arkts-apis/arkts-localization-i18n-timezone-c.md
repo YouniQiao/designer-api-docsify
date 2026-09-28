@@ -8,6 +8,8 @@ export class TimeZone
 
 **起始版本：** 7
 
+<!--Device-i18n-export class TimeZone--><!--Device-i18n-export class TimeZone-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## 导入模块
@@ -29,6 +31,8 @@ static getAppDefaultTimeZone(): TimeZone
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-TimeZone-static getAppDefaultTimeZone(): TimeZone--><!--Device-TimeZone-static getAppDefaultTimeZone(): TimeZone-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -67,7 +71,9 @@ static getAvailableIDs(): Array<string>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TimeZone-static getAvailableIDs(): Array<string>--><!--Device-TimeZone-static getAvailableIDs(): Array<string>-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -96,7 +102,9 @@ static getAvailableZoneCityIDs(): Array<string>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TimeZone-static getAvailableZoneCityIDs(): Array<string>--><!--Device-TimeZone-static getAvailableZoneCityIDs(): Array<string>-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -125,7 +133,9 @@ static getCityDisplayName(cityID: string, locale: string): string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TimeZone-static getCityDisplayName(cityID: string, locale: string): string--><!--Device-TimeZone-static getCityDisplayName(cityID: string, locale: string): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -160,7 +170,9 @@ getDisplayName(locale?: string, isDST?: boolean): string
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TimeZone-getDisplayName(locale?: string, isDST?: boolean): string--><!--Device-TimeZone-getDisplayName(locale?: string, isDST?: boolean): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -196,7 +208,9 @@ getID(): string
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TimeZone-getID(): string--><!--Device-TimeZone-getID(): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -225,7 +239,9 @@ getOffset(date?: number): number
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TimeZone-getOffset(date?: double): int--><!--Device-TimeZone-getOffset(date?: double): int-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -260,7 +276,9 @@ getRawOffset(): number
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TimeZone-getRawOffset(): int--><!--Device-TimeZone-getRawOffset(): int-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -289,7 +307,9 @@ static getTimezoneFromCity(cityID: string): TimeZone
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TimeZone-static getTimezoneFromCity(cityID: string): TimeZone--><!--Device-TimeZone-static getTimezoneFromCity(cityID: string): TimeZone-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -323,7 +343,9 @@ static getTimezonesByLocation(longitude: number, latitude: number): Array<TimeZo
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TimeZone-static getTimezonesByLocation(longitude: double, latitude: double): Array<TimeZone>--><!--Device-TimeZone-static getTimezonesByLocation(longitude: double, latitude: double): Array<TimeZone>-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -371,7 +393,9 @@ public getZoneRules(): ZoneRules
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-TimeZone-public getZoneRules(): ZoneRules--><!--Device-TimeZone-public getZoneRules(): ZoneRules-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -420,6 +444,8 @@ public isDaylightSavingTime(date: Date): boolean
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-TimeZone-public isDaylightSavingTime(date: Date): boolean--><!--Device-TimeZone-public isDaylightSavingTime(date: Date): boolean-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 **参数：**
@@ -458,6 +484,8 @@ static setAppDefaultTimeZoneById(zoneID: string): void
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-TimeZone-static setAppDefaultTimeZoneById(zoneID: string): void--><!--Device-TimeZone-static setAppDefaultTimeZoneById(zoneID: string): void-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 

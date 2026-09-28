@@ -18,6 +18,8 @@ function getBundleStats(packageName: string, callback: AsyncCallback<BundleStats
 
 **需要权限：** ohos.permission.STORAGE_MANAGER
 
+<!--Device-storageStatistics-function getBundleStats(packageName: string, callback: AsyncCallback<BundleStats>, index?: int): void--><!--Device-storageStatistics-function getBundleStats(packageName: string, callback: AsyncCallback<BundleStats>, index?: int): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
 **系统接口：** 此接口为系统接口。
@@ -85,6 +87,8 @@ function getBundleStats(packageName: string, index?: number): Promise<BundleStat
 **起始版本：** 9
 
 **需要权限：** ohos.permission.STORAGE_MANAGER
+
+<!--Device-storageStatistics-function getBundleStats(packageName: string, index?: int): Promise<BundleStats>--><!--Device-storageStatistics-function getBundleStats(packageName: string, index?: int): Promise<BundleStats>-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 

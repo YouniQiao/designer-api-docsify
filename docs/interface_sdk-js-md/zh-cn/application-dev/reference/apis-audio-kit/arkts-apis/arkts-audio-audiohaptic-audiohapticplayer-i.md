@@ -8,6 +8,8 @@ interface AudioHapticPlayer
 
 **起始版本：** 11
 
+<!--Device-audioHaptic-interface AudioHapticPlayer--><!--Device-audioHaptic-interface AudioHapticPlayer-End-->
+
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
 ## 导入模块
@@ -25,6 +27,8 @@ isMuted(type: AudioHapticType): boolean
 查询该音振类型是否被静音。
 
 **起始版本：** 11
+
+<!--Device-AudioHapticPlayer-isMuted(type: AudioHapticType): boolean--><!--Device-AudioHapticPlayer-isMuted(type: AudioHapticType): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -64,6 +68,8 @@ off(type: 'endOfStream', callback?: Callback<void>): void
 
 **起始版本：** 11
 
+<!--Device-AudioHapticPlayer-off(type: 'endOfStream', callback?: Callback<void>): void--><!--Device-AudioHapticPlayer-off(type: 'endOfStream', callback?: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
 **参数：**
@@ -98,6 +104,8 @@ off(type: 'audioInterrupt', callback?: Callback<audio.InterruptEvent>): void
 取消监听音频中断事件。使用callback异步回调。
 
 **起始版本：** 11
+
+<!--Device-AudioHapticPlayer-off(type: 'audioInterrupt', callback?: Callback<audio.InterruptEvent>): void--><!--Device-AudioHapticPlayer-off(type: 'audioInterrupt', callback?: Callback<audio.InterruptEvent>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -181,6 +189,8 @@ on(type: 'endOfStream', callback: Callback<void>): void
 
 **起始版本：** 11
 
+<!--Device-AudioHapticPlayer-on(type: 'endOfStream', callback: Callback<void>): void--><!--Device-AudioHapticPlayer-on(type: 'endOfStream', callback: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
 **参数：**
@@ -207,6 +217,8 @@ on(type: 'audioInterrupt', callback: Callback<audio.InterruptEvent>): void
 监听音频中断事件（当音频焦点发生变化时触发）。使用callback异步回调。
 
 **起始版本：** 11
+
+<!--Device-AudioHapticPlayer-on(type: 'audioInterrupt', callback: Callback<audio.InterruptEvent>): void--><!--Device-AudioHapticPlayer-on(type: 'audioInterrupt', callback: Callback<audio.InterruptEvent>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -283,6 +295,8 @@ release(): Promise<void>
 
 **起始版本：** 11
 
+<!--Device-AudioHapticPlayer-release(): Promise<void>--><!--Device-AudioHapticPlayer-release(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
 **返回值：**
@@ -322,6 +336,8 @@ setLoop(loop: boolean): Promise<void>
 > 该方法需在音振播放器释放前调用。
 
 **起始版本：** 20
+
+<!--Device-AudioHapticPlayer-setLoop(loop: boolean): Promise<void>--><!--Device-AudioHapticPlayer-setLoop(loop: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -369,6 +385,8 @@ setVolume(volume: number): Promise<void>
 
 **起始版本：** 20
 
+<!--Device-AudioHapticPlayer-setVolume(volume: double): Promise<void>--><!--Device-AudioHapticPlayer-setVolume(volume: double): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
 **参数：**
@@ -413,6 +431,8 @@ start(): Promise<void>
 
 **起始版本：** 11
 
+<!--Device-AudioHapticPlayer-start(): Promise<void>--><!--Device-AudioHapticPlayer-start(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
 **返回值：**
@@ -450,6 +470,8 @@ stop(): Promise<void>
 停止播放。使用Promise异步回调。
 
 **起始版本：** 11
+
+<!--Device-AudioHapticPlayer-stop(): Promise<void>--><!--Device-AudioHapticPlayer-stop(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 

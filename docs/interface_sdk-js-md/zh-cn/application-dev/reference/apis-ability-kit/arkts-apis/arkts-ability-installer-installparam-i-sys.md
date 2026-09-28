@@ -8,6 +8,8 @@ export interface InstallParam
 
 **起始版本：** 9
 
+<!--Device-installer-export interface InstallParam--><!--Device-installer-export interface InstallParam-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ additionalInfo?: string
 
 **起始版本：** 10
 
+<!--Device-InstallParam-additionalInfo?: string--><!--Device-InstallParam-additionalInfo?: string-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ crowdtestDeadline?: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-InstallParam-crowdtestDeadline?: long--><!--Device-InstallParam-crowdtestDeadline?: long-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -62,6 +68,8 @@ hashParams?: Array<HashParam>
 
 **起始版本：** 9
 
+<!--Device-InstallParam-hashParams?: Array<HashParam>--><!--Device-InstallParam-hashParams?: Array<HashParam>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -78,6 +86,8 @@ installFlag?: number
 
 **起始版本：** 9
 
+<!--Device-InstallParam-installFlag?: int--><!--Device-InstallParam-installFlag?: int-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -93,6 +103,8 @@ isKeepData?: boolean
 **类型：** boolean
 
 **起始版本：** 9
+
+<!--Device-InstallParam-isKeepData?: boolean--><!--Device-InstallParam-isKeepData?: boolean-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -116,6 +128,8 @@ parameters?: Array<Parameters>
 
 **起始版本：** 15
 
+<!--Device-InstallParam-parameters?: Array<Parameters>--><!--Device-InstallParam-parameters?: Array<Parameters>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -131,6 +145,8 @@ PGO配置文件参数，默认值为空。
 **类型：** Array&lt;[PGOParam](arkts-ability-installer-pgoparam-i-sys.md)&gt;
 
 **起始版本：** 11
+
+<!--Device-InstallParam-pgoParams?: Array<PGOParam>--><!--Device-InstallParam-pgoParams?: Array<PGOParam>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -148,6 +164,8 @@ sharedBundleDirPaths?: Array<string>
 
 **起始版本：** 10
 
+<!--Device-InstallParam-sharedBundleDirPaths?: Array<string>--><!--Device-InstallParam-sharedBundleDirPaths?: Array<string>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -164,6 +182,8 @@ specifiedDistributionType?: string
 
 **起始版本：** 10
 
+<!--Device-InstallParam-specifiedDistributionType?: string--><!--Device-InstallParam-specifiedDistributionType?: string-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -179,6 +199,8 @@ userId?: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-InstallParam-userId?: int--><!--Device-InstallParam-userId?: int-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -201,6 +223,8 @@ verifyCodeParams?: Array<VerifyCodeParam>
 **起始版本：** 10
 
 **废弃版本：** 11
+
+<!--Device-InstallParam-verifyCodeParams?: Array<VerifyCodeParam>--><!--Device-InstallParam-verifyCodeParams?: Array<VerifyCodeParam>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

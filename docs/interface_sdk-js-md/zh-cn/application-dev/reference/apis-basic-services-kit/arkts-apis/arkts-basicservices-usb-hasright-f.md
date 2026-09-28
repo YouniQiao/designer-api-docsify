@@ -20,6 +20,8 @@ function hasRight(deviceName: string): boolean
 
 **替代接口：** [hasRight](arkts-basicservices-usbmanager-hasright-f.md)
 
+<!--Device-usb-function hasRight(deviceName: string): boolean--><!--Device-usb-function hasRight(deviceName: string): boolean-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 **参数：**

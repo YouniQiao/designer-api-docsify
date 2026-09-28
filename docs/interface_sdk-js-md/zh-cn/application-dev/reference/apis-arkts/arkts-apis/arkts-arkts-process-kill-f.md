@@ -20,6 +20,8 @@ function kill(signal: number, pid: number): boolean
 
 **替代接口：** [kill](arkts-arkts-process-processmanager-c.md#kill)
 
+<!--Device-process-function kill(signal: number, pid: number): boolean--><!--Device-process-function kill(signal: number, pid: number): boolean-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**

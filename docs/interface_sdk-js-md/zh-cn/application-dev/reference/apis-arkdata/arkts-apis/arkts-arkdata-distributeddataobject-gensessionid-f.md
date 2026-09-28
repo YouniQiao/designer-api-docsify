@@ -16,6 +16,8 @@ function genSessionId(): string
 
 **起始版本：** 8
 
+<!--Device-distributedDataObject-function genSessionId(): string--><!--Device-distributedDataObject-function genSessionId(): string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **返回值：**

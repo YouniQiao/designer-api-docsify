@@ -8,6 +8,8 @@ export interface DataConnectionStateInfo
 
 **起始版本：** 11
 
+<!--Device-observer-export interface DataConnectionStateInfo--><!--Device-observer-export interface DataConnectionStateInfo-End-->
+
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
 ## 导入模块
@@ -28,6 +30,8 @@ network: RatType
 
 **起始版本：** 11
 
+<!--Device-DataConnectionStateInfo-network: RatType--><!--Device-DataConnectionStateInfo-network: RatType-End-->
+
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
 ## state
@@ -41,5 +45,7 @@ state: DataConnectState
 **类型：** [DataConnectState](arkts-telephony-observer-dataconnectstate-t.md)
 
 **起始版本：** 11
+
+<!--Device-DataConnectionStateInfo-state: DataConnectState--><!--Device-DataConnectionStateInfo-state: DataConnectState-End-->
 
 **系统能力：** SystemCapability.Telephony.StateRegistry

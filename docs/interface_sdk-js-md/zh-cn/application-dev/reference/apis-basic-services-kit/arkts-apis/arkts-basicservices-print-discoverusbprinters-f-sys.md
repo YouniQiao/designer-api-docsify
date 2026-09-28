@@ -18,6 +18,8 @@ function discoverUsbPrinters(): Promise<Array<PrinterInformation>>
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-print-function discoverUsbPrinters(): Promise<Array<PrinterInformation>>--><!--Device-print-function discoverUsbPrinters(): Promise<Array<PrinterInformation>>-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **系统接口：** 此接口为系统接口。

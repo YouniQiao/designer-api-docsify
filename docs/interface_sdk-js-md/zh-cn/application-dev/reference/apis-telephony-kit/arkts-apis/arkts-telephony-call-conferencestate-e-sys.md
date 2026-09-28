@@ -8,6 +8,8 @@ export enum ConferenceState
 
 **起始版本：** 7
 
+<!--Device-call-export enum ConferenceState--><!--Device-call-export enum ConferenceState-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -21,6 +23,8 @@ TEL_CONFERENCE_IDLE = 0
 电话会议空闲。
 
 **起始版本：** 7
+
+<!--Device-ConferenceState-TEL_CONFERENCE_IDLE = 0--><!--Device-ConferenceState-TEL_CONFERENCE_IDLE = 0-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -36,6 +40,8 @@ TEL_CONFERENCE_ACTIVE = 1
 
 **起始版本：** 7
 
+<!--Device-ConferenceState-TEL_CONFERENCE_ACTIVE = 1--><!--Device-ConferenceState-TEL_CONFERENCE_ACTIVE = 1-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -50,6 +56,8 @@ TEL_CONFERENCE_DISCONNECTING = 2
 
 **起始版本：** 7
 
+<!--Device-ConferenceState-TEL_CONFERENCE_DISCONNECTING = 2--><!--Device-ConferenceState-TEL_CONFERENCE_DISCONNECTING = 2-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -63,6 +71,8 @@ TEL_CONFERENCE_DISCONNECTED = 3
 电话会议已断开。
 
 **起始版本：** 7
+
+<!--Device-ConferenceState-TEL_CONFERENCE_DISCONNECTED = 3--><!--Device-ConferenceState-TEL_CONFERENCE_DISCONNECTED = 3-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 

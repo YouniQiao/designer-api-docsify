@@ -12,6 +12,8 @@ export enum ExtensionAbilityType
 
 **起始版本：** 9
 
+<!--Device-bundleManager-export enum ExtensionAbilityType--><!--Device-bundleManager-export enum ExtensionAbilityType-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## FORM
@@ -24,7 +26,9 @@ FORM = 0
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ExtensionAbilityType-FORM = 0--><!--Device-ExtensionAbilityType-FORM = 0-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -38,6 +42,8 @@ WORK_SCHEDULER = 1
 
 **起始版本：** 9
 
+<!--Device-ExtensionAbilityType-WORK_SCHEDULER = 1--><!--Device-ExtensionAbilityType-WORK_SCHEDULER = 1-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## INPUT_METHOD
@@ -49,6 +55,8 @@ INPUT_METHOD = 2
 [InputMethodExtensionAbility](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodextensionability-c.md)：输入法扩展能力，用于开发输入法应用。
 
 **起始版本：** 9
+
+<!--Device-ExtensionAbilityType-INPUT_METHOD = 2--><!--Device-ExtensionAbilityType-INPUT_METHOD = 2-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -62,6 +70,8 @@ ServiceExtensionAbility：后台服务扩展能力，提供后台运行并对外
 
 **起始版本：** 9
 
+<!--Device-ExtensionAbilityType-SERVICE = 3--><!--Device-ExtensionAbilityType-SERVICE = 3-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## ACCESSIBILITY
@@ -73,6 +83,8 @@ ACCESSIBILITY = 4
 AccessibilityExtensionAbility：无障碍服务扩展能力，支持访问与操作前台界面。
 
 **起始版本：** 9
+
+<!--Device-ExtensionAbilityType-ACCESSIBILITY = 4--><!--Device-ExtensionAbilityType-ACCESSIBILITY = 4-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -86,6 +98,8 @@ DataShareExtensionAbility：数据共享扩展能力，用于对外提供数据�
 
 **起始版本：** 9
 
+<!--Device-ExtensionAbilityType-DATA_SHARE = 5--><!--Device-ExtensionAbilityType-DATA_SHARE = 5-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## FILE_SHARE
@@ -97,6 +111,8 @@ FILE_SHARE = 6
 FileShareExtensionAbility：文件共享扩展能力，用于应用间的文件分享。预留能力，仅系统应用支持。
 
 **起始版本：** 9
+
+<!--Device-ExtensionAbilityType-FILE_SHARE = 6--><!--Device-ExtensionAbilityType-FILE_SHARE = 6-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -110,6 +126,8 @@ StaticSubscriberExtensionAbility：静态广播扩展能力，用于处理静态
 
 **起始版本：** 9
 
+<!--Device-ExtensionAbilityType-STATIC_SUBSCRIBER = 7--><!--Device-ExtensionAbilityType-STATIC_SUBSCRIBER = 7-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## WALLPAPER
@@ -121,6 +139,8 @@ WALLPAPER = 8
 WallpaperExtensionAbility：壁纸扩展能力，用于实现桌面壁纸。预留能力，仅系统应用支持。
 
 **起始版本：** 9
+
+<!--Device-ExtensionAbilityType-WALLPAPER = 8--><!--Device-ExtensionAbilityType-WALLPAPER = 8-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -134,6 +154,8 @@ BACKUP = 9
 
 **起始版本：** 9
 
+<!--Device-ExtensionAbilityType-BACKUP = 9--><!--Device-ExtensionAbilityType-BACKUP = 9-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## WINDOW
@@ -145,6 +167,8 @@ WINDOW = 10
 WindowExtensionAbility：界面组合扩展能力，允许系统应用进行跨应用的界面拉起和嵌入。
 
 **起始版本：** 9
+
+<!--Device-ExtensionAbilityType-WINDOW = 10--><!--Device-ExtensionAbilityType-WINDOW = 10-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -158,6 +182,8 @@ ENTERPRISE_ADMIN = 11
 
 **起始版本：** 9
 
+<!--Device-ExtensionAbilityType-ENTERPRISE_ADMIN = 11--><!--Device-ExtensionAbilityType-ENTERPRISE_ADMIN = 11-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## THUMBNAIL
@@ -169,6 +195,8 @@ THUMBNAIL = 13
 ThumbnailExtensionAbility：文件缩略图扩展能力，用于为文件提供图标缩略图的能力。预留能力，仅系统应用支持。
 
 **起始版本：** 9
+
+<!--Device-ExtensionAbilityType-THUMBNAIL = 13--><!--Device-ExtensionAbilityType-THUMBNAIL = 13-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -182,6 +210,8 @@ PreviewExtensionAbility：文件预览扩展能力，提供文件预览的能力
 
 **起始版本：** 9
 
+<!--Device-ExtensionAbilityType-PREVIEW = 14--><!--Device-ExtensionAbilityType-PREVIEW = 14-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## PRINT
@@ -193,6 +223,8 @@ PRINT = 15
 PrintExtensionAbility：文件打印扩展能力，提供应用打印照片、文档等办公场景。仅系统应用支持。
 
 **起始版本：** 10
+
+<!--Device-ExtensionAbilityType-PRINT = 15--><!--Device-ExtensionAbilityType-PRINT = 15-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -206,6 +238,8 @@ SHARE = 16
 
 **起始版本：** 10
 
+<!--Device-ExtensionAbilityType-SHARE = 16--><!--Device-ExtensionAbilityType-SHARE = 16-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## PUSH
@@ -217,6 +251,8 @@ PUSH = 17
 PushExtensionAbility：推送扩展能力，提供推送场景化消息能力。预留能力，仅系统应用支持。
 
 **起始版本：** 10
+
+<!--Device-ExtensionAbilityType-PUSH = 17--><!--Device-ExtensionAbilityType-PUSH = 17-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -230,6 +266,8 @@ DRIVER = 18
 
 **起始版本：** 10
 
+<!--Device-ExtensionAbilityType-DRIVER = 18--><!--Device-ExtensionAbilityType-DRIVER = 18-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## ACTION
@@ -241,6 +279,8 @@ ACTION = 19
 [ActionExtensionAbility](arkts-ability-app-ability-actionextensionability-actionextensionability-c.md)：自定义服务扩展能力，为开发者提供基于UIExtension的自定义操作业务模板。
 
 **起始版本：** 10
+
+<!--Device-ExtensionAbilityType-ACTION = 19--><!--Device-ExtensionAbilityType-ACTION = 19-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -254,6 +294,8 @@ AdsServiceExtensionAbility：广告服务扩展能力，对外提供后台自定
 
 **起始版本：** 11
 
+<!--Device-ExtensionAbilityType-ADS_SERVICE = 20--><!--Device-ExtensionAbilityType-ADS_SERVICE = 20-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## EMBEDDED_UI
@@ -265,6 +307,8 @@ EMBEDDED_UI = 21
 [EmbeddedUIExtensionAbility](arkts-ability-app-ability-embeddeduiextensionability-embeddeduiextensionability-c.md)：嵌入式UI扩展能力，提供跨进程界面嵌入的能力。
 
 **起始版本：** 12
+
+<!--Device-ExtensionAbilityType-EMBEDDED_UI = 21--><!--Device-ExtensionAbilityType-EMBEDDED_UI = 21-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -278,6 +322,8 @@ InsightIntentUIExtensionAbility：为开发者提供能被小艺意图调用，�
 
 **起始版本：** 12
 
+<!--Device-ExtensionAbilityType-INSIGHT_INTENT_UI = 22--><!--Device-ExtensionAbilityType-INSIGHT_INTENT_UI = 22-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## FENCE
@@ -289,6 +335,8 @@ FENCE = 24
 [FenceExtensionAbility](../../apis-location-kit/arkts-apis/arkts-location-app-ability-fenceextensionability-fenceextensionability-c.md)：为开发者提供地理围栏相关的能力，继承自ExtensionAbility。
 
 **起始版本：** 18
+
+<!--Device-ExtensionAbilityType-FENCE = 24--><!--Device-ExtensionAbilityType-FENCE = 24-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -302,6 +350,8 @@ CallerInfoQueryExtensionAbility：为开发者提供来去电信息查询能力
 
 **起始版本：** 19
 
+<!--Device-ExtensionAbilityType-CALLER_INFO_QUERY = 25--><!--Device-ExtensionAbilityType-CALLER_INFO_QUERY = 25-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## ASSET_ACCELERATION
@@ -313,6 +363,8 @@ ASSET_ACCELERATION = 26
 AssetAccelerationExtensionAbility：资源预下载扩展能力，提供在设备闲时状态，进行后台资源预下载的能力。
 
 **起始版本：** 18
+
+<!--Device-ExtensionAbilityType-ASSET_ACCELERATION = 26--><!--Device-ExtensionAbilityType-ASSET_ACCELERATION = 26-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -326,6 +378,8 @@ FORM_EDIT = 27
 
 **起始版本：** 18
 
+<!--Device-ExtensionAbilityType-FORM_EDIT = 27--><!--Device-ExtensionAbilityType-FORM_EDIT = 27-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## DISTRIBUTED
@@ -337,6 +391,8 @@ DISTRIBUTED = 28
 [DistributedExtensionAbility](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-application-distributedextensionability-distributedextensionability-c.md)：提供分布式相关扩展能力，提供分布式创建、销毁、连接的生命周期回调。
 
 **起始版本：** 20
+
+<!--Device-ExtensionAbilityType-DISTRIBUTED = 28--><!--Device-ExtensionAbilityType-DISTRIBUTED = 28-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -350,6 +406,8 @@ APP_SERVICE = 29
 
 **起始版本：** 20
 
+<!--Device-ExtensionAbilityType-APP_SERVICE = 29--><!--Device-ExtensionAbilityType-APP_SERVICE = 29-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## LIVE_FORM
@@ -362,7 +420,9 @@ LIVE_FORM = 30
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-ExtensionAbilityType-LIVE_FORM = 30--><!--Device-ExtensionAbilityType-LIVE_FORM = 30-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -380,6 +440,8 @@ SelectionExtensionAbility：为开发者提供划词弹窗能力的ExtensionAbil
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExtensionAbilityType-SELECTION = 31--><!--Device-ExtensionAbilityType-SELECTION = 31-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## WEB_NATIVE_MESSAGING
@@ -391,6 +453,8 @@ WEB_NATIVE_MESSAGING = 32
 [WebNativeMessagingExtensionAbility](../../apis-arkweb/arkts-apis/arkts-arkweb-web-webnativemessagingextensionability-webnativemessagingextensionability-c.md)：为开发者提供Web原生消息通信能力的ExtensionAbility。
 
 **起始版本：** 21
+
+<!--Device-ExtensionAbilityType-WEB_NATIVE_MESSAGING = 32--><!--Device-ExtensionAbilityType-WEB_NATIVE_MESSAGING = 32-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -404,6 +468,8 @@ FAULT_LOG = 33
 
 **起始版本：** 21
 
+<!--Device-ExtensionAbilityType-FAULT_LOG = 33--><!--Device-ExtensionAbilityType-FAULT_LOG = 33-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## NOTIFICATION_SUBSCRIBER
@@ -416,6 +482,8 @@ NOTIFICATION_SUBSCRIBER = 34
 
 **起始版本：** 22
 
+<!--Device-ExtensionAbilityType-NOTIFICATION_SUBSCRIBER = 34--><!--Device-ExtensionAbilityType-NOTIFICATION_SUBSCRIBER = 34-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## CRYPTO
@@ -427,6 +495,8 @@ CRYPTO = 35
 [CryptoExtensionAbility](../../../security/UniversalKeystoreKit/huks-extension-ability-support-dev.md)：提供外部密钥管理扩展的相关功能。
 
 **起始版本：** 22
+
+<!--Device-ExtensionAbilityType-CRYPTO = 35--><!--Device-ExtensionAbilityType-CRYPTO = 35-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -444,6 +514,8 @@ PARTNER_AGENT = 36
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExtensionAbilityType-PARTNER_AGENT = 36--><!--Device-ExtensionAbilityType-PARTNER_AGENT = 36-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## AGENT
@@ -459,6 +531,8 @@ AGENT = 37
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExtensionAbilityType-AGENT = 37--><!--Device-ExtensionAbilityType-AGENT = 37-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -476,6 +550,8 @@ AGENT_UI = 38
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExtensionAbilityType-AGENT_UI = 38--><!--Device-ExtensionAbilityType-AGENT_UI = 38-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## MODULAR_OBJECT
@@ -490,6 +566,8 @@ MODULAR_OBJECT = 39
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExtensionAbilityType-MODULAR_OBJECT = 39--><!--Device-ExtensionAbilityType-MODULAR_OBJECT = 39-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## UNSPECIFIED
@@ -501,5 +579,7 @@ UNSPECIFIED = 255
 不指定类型<!--Del-->，配合[queryExtensionAbilityInfo接口](arkts-ability-bundlemanager-queryextensionabilityinfo-f-sys.md)可以查询所有类型的ExtensionAbility<!--DelEnd-->。
 
 **起始版本：** 9
+
+<!--Device-ExtensionAbilityType-UNSPECIFIED = 255--><!--Device-ExtensionAbilityType-UNSPECIFIED = 255-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core

@@ -8,6 +8,8 @@ UDP端口状态信息。
 
 **起始版本：** 24
 
+<!--Device-connection-export interface UdpNetPortStatesInfo--><!--Device-connection-export interface UdpNetPortStatesInfo-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ UDP网络本地IP地址。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UdpNetPortStatesInfo-udpLocalIp: string--><!--Device-UdpNetPortStatesInfo-udpLocalIp: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## udpLocalPort
@@ -45,6 +49,8 @@ UDP网络本地端口，取值范围[0, 65535]。
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UdpNetPortStatesInfo-udpLocalPort: int--><!--Device-UdpNetPortStatesInfo-udpLocalPort: int-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -62,6 +68,8 @@ udpPid: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UdpNetPortStatesInfo-udpPid: int--><!--Device-UdpNetPortStatesInfo-udpPid: int-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## udpUid
@@ -77,5 +85,7 @@ udpUid: number
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UdpNetPortStatesInfo-udpUid: int--><!--Device-UdpNetPortStatesInfo-udpUid: int-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core

@@ -12,6 +12,8 @@ Inherits from [InlineStyleOptions](arkts-arkui-arkui-advanced-counter-inlinestyl
 
 **Since:** 11
 
+<!--Device-unnamed-declare class NumberStyleOptions extends InlineStyleOptions--><!--Device-unnamed-declare class NumberStyleOptions extends InlineStyleOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -40,6 +42,8 @@ If the value is **undefined**, the default value is used.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-NumberStyleOptions-onBlurDecrease?: () => void--><!--Device-NumberStyleOptions-onBlurDecrease?: () => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onBlurIncrease
@@ -61,6 +65,8 @@ If the value is **undefined**, the default value is used.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NumberStyleOptions-onBlurIncrease?: () => void--><!--Device-NumberStyleOptions-onBlurIncrease?: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -84,6 +90,8 @@ If the value is **undefined**, the default value is used.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-NumberStyleOptions-onFocusDecrease?: () => void--><!--Device-NumberStyleOptions-onFocusDecrease?: () => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onFocusIncrease
@@ -105,6 +113,8 @@ If the value is **undefined**, the default value is used.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NumberStyleOptions-onFocusIncrease?: () => void--><!--Device-NumberStyleOptions-onFocusIncrease?: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -129,5 +139,7 @@ If the value is **undefined**, the default value is used.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NumberStyleOptions-label?: ResourceStr--><!--Device-NumberStyleOptions-label?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

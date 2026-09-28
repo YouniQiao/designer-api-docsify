@@ -18,6 +18,8 @@ function addSysVpnConfig(config: SysVpnConfig): Promise<void>
 
 **需要权限：** ohos.permission.MANAGE_VPN
 
+<!--Device-vpn-function addSysVpnConfig(config: SysVpnConfig): Promise<void>--><!--Device-vpn-function addSysVpnConfig(config: SysVpnConfig): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。

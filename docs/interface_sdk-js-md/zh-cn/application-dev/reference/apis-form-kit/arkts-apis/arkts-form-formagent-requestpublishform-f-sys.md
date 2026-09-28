@@ -18,6 +18,8 @@ function requestPublishForm(want: Want, callback: AsyncCallback<string>): void
 
 **需要权限：** ohos.permission.AGENT_REQUIRE_FORM
 
+<!--Device-formAgent-function requestPublishForm(want: Want, callback: AsyncCallback<string>): void--><!--Device-formAgent-function requestPublishForm(want: Want, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -86,6 +88,8 @@ function requestPublishForm(want: Want): Promise<string>
 **起始版本：** 11
 
 **需要权限：** ohos.permission.AGENT_REQUIRE_FORM
+
+<!--Device-formAgent-function requestPublishForm(want: Want): Promise<string>--><!--Device-formAgent-function requestPublishForm(want: Want): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 

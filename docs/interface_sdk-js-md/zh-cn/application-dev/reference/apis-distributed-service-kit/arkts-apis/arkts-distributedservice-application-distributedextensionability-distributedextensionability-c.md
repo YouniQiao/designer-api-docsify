@@ -8,6 +8,8 @@ DistributedExtensionAbility模块提供分布式相关扩展能力，提供分�
 
 **起始版本：** 20
 
+<!--Device-unnamed-declare class DistributedExtensionAbility--><!--Device-unnamed-declare class DistributedExtensionAbility-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 ## 导入模块
@@ -27,6 +29,8 @@ Extension生命周期回调，在多设备限定协同场景下，协同方应�
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DistributedExtensionAbility-onCollaborate(wantParam: Record<string, Object>): AbilityConstant.CollaborateResult--><!--Device-DistributedExtensionAbility-onCollaborate(wantParam: Record<string, Object>): AbilityConstant.CollaborateResult-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
@@ -75,6 +79,8 @@ Extension生命周期回调，在创建时回调，执行初始化业务逻辑�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DistributedExtensionAbility-onCreate(want: Want): void--><!--Device-DistributedExtensionAbility-onCreate(want: Want): void-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **参数：**
@@ -110,6 +116,8 @@ Extension生命周期回调，在销毁时回调，执行资源清理等操作�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DistributedExtensionAbility-onDestroy(): void--><!--Device-DistributedExtensionAbility-onDestroy(): void-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **示例**
@@ -137,5 +145,7 @@ DistributedExtension（协同Extension）的上下文环境，继承自Extension
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DistributedExtensionAbility-context: DistributedExtensionContext--><!--Device-DistributedExtensionAbility-context: DistributedExtensionContext-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration

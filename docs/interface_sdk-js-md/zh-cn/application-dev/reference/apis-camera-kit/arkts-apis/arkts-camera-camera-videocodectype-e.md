@@ -8,6 +8,8 @@ enum VideoCodecType
 
 **起始版本：** 13
 
+<!--Device-camera-enum VideoCodecType--><!--Device-camera-enum VideoCodecType-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## AVC
@@ -20,7 +22,9 @@ AVC = 0
 
 **起始版本：** 13
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-VideoCodecType-AVC = 0--><!--Device-VideoCodecType-AVC = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -34,6 +38,8 @@ HEVC = 1
 
 **起始版本：** 13
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-VideoCodecType-HEVC = 1--><!--Device-VideoCodecType-HEVC = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core

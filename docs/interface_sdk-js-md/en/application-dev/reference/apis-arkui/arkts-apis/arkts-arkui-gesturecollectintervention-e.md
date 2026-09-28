@@ -8,6 +8,8 @@ Enumerates the intervention types for gesture and event collection, applicable t
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-declare enum GestureCollectIntervention--><!--Device-unnamed-declare enum GestureCollectIntervention-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## CONTINUE
@@ -23,6 +25,8 @@ Continues the normal gesture and event collection flow. No intervention is perfo
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-GestureCollectIntervention-CONTINUE = 0--><!--Device-GestureCollectIntervention-CONTINUE = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,6 +44,8 @@ Discards all low-priority gestures and events to be collected. The gestures of t
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-GestureCollectIntervention-DISCARD_LOWER = 1--><!--Device-GestureCollectIntervention-DISCARD_LOWER = 1-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## DISCARD_HIGHER
@@ -55,6 +61,8 @@ Discards all collected high-priority gestures and events. The gestures of the ri
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-GestureCollectIntervention-DISCARD_HIGHER = 2--><!--Device-GestureCollectIntervention-DISCARD_HIGHER = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,6 +80,8 @@ Discards the gestures and events of the current node. The gestures and events of
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-GestureCollectIntervention-DISCARD_SELF = 3--><!--Device-GestureCollectIntervention-DISCARD_SELF = 3-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## DISCARD_LOWER_PRIORITY_SIBLINGS
@@ -87,5 +97,7 @@ Discards the gestures and events to be collected from the left sibling node. The
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-GestureCollectIntervention-DISCARD_LOWER_PRIORITY_SIBLINGS = 4--><!--Device-GestureCollectIntervention-DISCARD_LOWER_PRIORITY_SIBLINGS = 4-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -8,6 +8,8 @@ interface AVSessionDescriptor
 
 **起始版本：** 23
 
+<!--Device-avSession-interface AVSessionDescriptor--><!--Device-avSession-interface AVSessionDescriptor-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 
 ## 导入模块
@@ -30,6 +32,8 @@ outputDevice: OutputDeviceInfo
 
 **起始版本：** 9
 
+<!--Device-AVSessionDescriptor-outputDevice: OutputDeviceInfo--><!--Device-AVSessionDescriptor-outputDevice: OutputDeviceInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 
 **系统接口：** 此接口为系统接口。
@@ -47,6 +51,8 @@ userId?: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVSessionDescriptor-userId?: int--><!--Device-AVSessionDescriptor-userId?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 

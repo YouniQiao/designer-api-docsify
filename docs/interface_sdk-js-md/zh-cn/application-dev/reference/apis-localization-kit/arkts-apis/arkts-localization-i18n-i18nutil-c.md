@@ -8,6 +8,8 @@ export class I18NUtil
 
 **起始版本：** 9
 
+<!--Device-i18n-export class I18NUtil--><!--Device-i18n-export class I18NUtil-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## 导入模块
@@ -29,6 +31,8 @@ static convertCanonicalLocaleIdentifier(locale: string): string
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-I18NUtil-static convertCanonicalLocaleIdentifier(locale: string): string--><!--Device-I18NUtil-static convertCanonicalLocaleIdentifier(locale: string): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -60,7 +64,9 @@ static getBestMatchLocale(locale: string, localeList: string[]): string
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-I18NUtil-static getBestMatchLocale(locale: string, localeList: string[]): string--><!--Device-I18NUtil-static getBestMatchLocale(locale: string, localeList: string[]): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -109,7 +115,9 @@ static getDateOrder(locale: string): string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-I18NUtil-static getDateOrder(locale: string): string--><!--Device-I18NUtil-static getDateOrder(locale: string): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -145,7 +153,9 @@ static getThreeLetterLanguage(locale: string): string
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-I18NUtil-static getThreeLetterLanguage(locale: string): string--><!--Device-I18NUtil-static getThreeLetterLanguage(locale: string): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -194,7 +204,9 @@ static getThreeLetterRegion(locale: string): string
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-I18NUtil-static getThreeLetterRegion(locale: string): string--><!--Device-I18NUtil-static getThreeLetterRegion(locale: string): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -241,7 +253,9 @@ static getTimePeriodName(hour:number, locale?: string): string
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-I18NUtil-static getTimePeriodName(hour:int, locale?: string): string--><!--Device-I18NUtil-static getTimePeriodName(hour:int, locale?: string): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -291,7 +305,9 @@ static getUnicodeWrappedFilePath(path: string, delimiter?: string, locale?: Intl
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-I18NUtil-static getUnicodeWrappedFilePath(path: string, delimiter?: string, locale?: Intl.Locale): string--><!--Device-I18NUtil-static getUnicodeWrappedFilePath(path: string, delimiter?: string, locale?: Intl.Locale): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -353,6 +369,8 @@ static getUnicodeWrappedFilePath(path: string, delimiter?: string, locale?: intl
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-I18NUtil-static getUnicodeWrappedFilePath(path: string, delimiter?: string, locale?: intl.Locale): string--><!--Device-I18NUtil-static getUnicodeWrappedFilePath(path: string, delimiter?: string, locale?: intl.Locale): string-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 **参数：**
@@ -411,6 +429,8 @@ static setUnicodeWrappedBidiDirection(text: string, direction: 'RTL' | 'LTR'): s
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-I18NUtil-static setUnicodeWrappedBidiDirection(text: string, direction: 'RTL' | 'LTR'): string--><!--Device-I18NUtil-static setUnicodeWrappedBidiDirection(text: string, direction: 'RTL' | 'LTR'): string-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 **参数：**
@@ -452,7 +472,9 @@ static unitConvert(fromUnit: UnitInfo, toUnit: UnitInfo, value: number, locale: 
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-I18NUtil-static unitConvert(fromUnit: UnitInfo, toUnit: UnitInfo, value: double, locale: string, style?: string): string--><!--Device-I18NUtil-static unitConvert(fromUnit: UnitInfo, toUnit: UnitInfo, value: double, locale: string, style?: string): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 

@@ -8,6 +8,8 @@ After developers register a custom component lifecycle callback, when the lifecy
 
 **Since:** 23
 
+<!--Device-unnamed-export declare interface CustomComponentLifecycleObserver--><!--Device-unnamed-export declare interface CustomComponentLifecycleObserver-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -30,6 +32,8 @@ Called after a new instance of a custom component is created and before its **bu
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-CustomComponentLifecycleObserver-aboutToAppear?(): void--><!--Device-CustomComponentLifecycleObserver-aboutToAppear?(): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## aboutToDisappear
@@ -46,6 +50,8 @@ Executed before a custom component is destroyed. It is not recommended to modify
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-CustomComponentLifecycleObserver-aboutToDisappear?(): void--><!--Device-CustomComponentLifecycleObserver-aboutToDisappear?(): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## aboutToRecycle
@@ -61,6 +67,8 @@ After a component is recycled, the recycling operations such as resource release
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-CustomComponentLifecycleObserver-aboutToRecycle?(): void--><!--Device-CustomComponentLifecycleObserver-aboutToRecycle?(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -175,6 +183,8 @@ Called when a reusable custom component is re-added to the node tree from the ca
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-CustomComponentLifecycleObserver-aboutToReuse?(params?: Record<string, Object | undefined | null>): void--><!--Device-CustomComponentLifecycleObserver-aboutToReuse?(params?: Record<string, Object | undefined | null>): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -196,5 +206,7 @@ Called after the **build()** function of a custom component is executed. It is s
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-CustomComponentLifecycleObserver-onDidBuild?(): void--><!--Device-CustomComponentLifecycleObserver-onDidBuild?(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

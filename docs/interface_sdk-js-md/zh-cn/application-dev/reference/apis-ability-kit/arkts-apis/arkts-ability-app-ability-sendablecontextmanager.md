@@ -6,6 +6,8 @@ sendableContextManager模块提供Context与[SendableContext](arkts-ability-send
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-unnamed-declare namespace sendableContextManager--><!--Device-unnamed-declare namespace sendableContextManager-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块
@@ -25,7 +27,7 @@ import { sendableContextManager } from '@kit.AbilityKit';
 | [convertToApplicationContext](arkts-ability-sendablecontextmanager-converttoapplicationcontext-f.md) | 将SendableContext对象转换为ApplicationContext。 |
 | [convertToContext](arkts-ability-sendablecontextmanager-converttocontext-f.md) | 将SendableContext对象转换为Context。 |
 | [convertToUIAbilityContext](arkts-ability-sendablecontextmanager-converttouiabilitycontext-f.md) | 将SendableContext对象转换为UIAbilityContext。 |
-| [setEventHubMultithreadingEnabled](arkts-ability-sendablecontextmanager-seteventhubmultithreadingenabled-f.md) | 设置Context中的[EventHub](arkts-ability-eventhub-c.md)是否启用跨线程通信能力。 |
+| [setEventHubMultithreadingEnabled](arkts-ability-sendablecontextmanager-seteventhubmultithreadingenabled-f.md) | 设置[Context](arkts-ability-context.md)中的[EventHub](arkts-ability-eventhub-c.md)是否启用跨线程通信能力。 |
 
 ### 类型
 

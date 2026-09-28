@@ -16,6 +16,8 @@ function getCurrentBundleStats(callback: AsyncCallback<BundleStats>): void
 
 **起始版本：** 9
 
+<!--Device-storageStatistics-function getCurrentBundleStats(callback: AsyncCallback<BundleStats>): void--><!--Device-storageStatistics-function getCurrentBundleStats(callback: AsyncCallback<BundleStats>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
 **参数：**
@@ -58,6 +60,8 @@ function getCurrentBundleStats(): Promise<BundleStats>
 应用异步获取当前应用存储空间大小（单位为Byte），以Promise方式返回。
 
 **起始版本：** 9
+
+<!--Device-storageStatistics-function getCurrentBundleStats(): Promise<BundleStats>--><!--Device-storageStatistics-function getCurrentBundleStats(): Promise<BundleStats>-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 

@@ -18,6 +18,8 @@ function setCustomWallpaper(source: string, wallpaperType: WallpaperType, callba
 
 **需要权限：** ohos.permission.SET_WALLPAPER
 
+<!--Device-wallpaper-function setCustomWallpaper(source: string, wallpaperType: WallpaperType, callback: AsyncCallback<void>): void--><!--Device-wallpaper-function setCustomWallpaper(source: string, wallpaperType: WallpaperType, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
 **系统接口：** 此接口为系统接口。
@@ -72,6 +74,8 @@ function setCustomWallpaper(source: string, wallpaperType: WallpaperType): Promi
 **起始版本：** 10
 
 **需要权限：** ohos.permission.SET_WALLPAPER
+
+<!--Device-wallpaper-function setCustomWallpaper(source: string, wallpaperType: WallpaperType): Promise<void>--><!--Device-wallpaper-function setCustomWallpaper(source: string, wallpaperType: WallpaperType): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 

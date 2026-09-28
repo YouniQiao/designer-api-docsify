@@ -8,6 +8,8 @@ interface AudioRendererChangeInfo
 
 **起始版本：** 9
 
+<!--Device-audio-interface AudioRendererChangeInfo--><!--Device-audio-interface AudioRendererChangeInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 ## 导入模块
@@ -28,6 +30,8 @@ readonly clientUid: number
 
 **起始版本：** 9
 
+<!--Device-AudioRendererChangeInfo-readonly clientUid: int--><!--Device-AudioRendererChangeInfo-readonly clientUid: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **系统接口：** 此接口为系统接口。
@@ -43,6 +47,8 @@ readonly rendererState: AudioState
 **类型：** [AudioState](arkts-audio-audio-audiostate-e.md)
 
 **起始版本：** 9
+
+<!--Device-AudioRendererChangeInfo-readonly rendererState: AudioState--><!--Device-AudioRendererChangeInfo-readonly rendererState: AudioState-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 

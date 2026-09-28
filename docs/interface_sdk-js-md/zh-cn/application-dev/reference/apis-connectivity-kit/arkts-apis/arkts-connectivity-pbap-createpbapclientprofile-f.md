@@ -18,6 +18,8 @@ function createPbapClientProfile(): PbapClientProfile
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-pbap-function createPbapClientProfile(): PbapClientProfile--><!--Device-pbap-function createPbapClientProfile(): PbapClientProfile-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **返回值：**

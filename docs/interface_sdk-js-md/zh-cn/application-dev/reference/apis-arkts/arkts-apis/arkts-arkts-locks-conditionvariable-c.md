@@ -10,6 +10,8 @@ class ConditionVariable
 
 **装饰器类型：** @Sendable
 
+<!--Device-locks-class ConditionVariable--><!--Device-locks-class ConditionVariable-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -30,6 +32,8 @@ constructor()
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-ConditionVariable-constructor()--><!--Device-ConditionVariable-constructor()-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## notifyAll
@@ -43,6 +47,8 @@ notifyAll(): void
 **起始版本：** 18
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-ConditionVariable-notifyAll(): void--><!--Device-ConditionVariable-notifyAll(): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -58,6 +64,8 @@ notifyOne(): void
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-ConditionVariable-notifyOne(): void--><!--Device-ConditionVariable-notifyOne(): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## request
@@ -71,6 +79,8 @@ static request(name: string): ConditionVariable
 **起始版本：** 18
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-ConditionVariable-static request(name: string): ConditionVariable--><!--Device-ConditionVariable-static request(name: string): ConditionVariable-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -98,6 +108,8 @@ wait(): Promise<void>
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-ConditionVariable-wait(): Promise<void>--><!--Device-ConditionVariable-wait(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -117,6 +129,8 @@ waitFor(timeout: number): Promise<void>
 **起始版本：** 18
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-ConditionVariable-waitFor(timeout: number): Promise<void>--><!--Device-ConditionVariable-waitFor(timeout: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

@@ -12,6 +12,8 @@ Inherited from [BaseSpan](arkts-arkui-span-comp-basespan-c.md).
 
 **Since:** 7
 
+<!--Device-unnamed-declare class SpanAttribute extends BaseSpan<SpanAttribute>--><!--Device-unnamed-declare class SpanAttribute extends BaseSpan<SpanAttribute>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## decoration
@@ -27,6 +29,8 @@ Sets the text decoration line style and its color. If this API is not used, the 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-SpanAttribute-decoration(value: DecorationStyleInterface): SpanAttribute--><!--Device-SpanAttribute-decoration(value: DecorationStyleInterface): SpanAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,6 +58,8 @@ Sets the text style, covering the font size, font width, Font family, and font s
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SpanAttribute-font(value: Font): SpanAttribute--><!--Device-SpanAttribute-font(value: Font): SpanAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -78,6 +84,8 @@ Sets the text style.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-SpanAttribute-font(value: Font, fontConfigs?: FontConfigs): SpanAttribute--><!--Device-SpanAttribute-font(value: Font, fontConfigs?: FontConfigs): SpanAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -101,6 +109,8 @@ Sets the font color. If this API is not used, the default font color is '#FF1824
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-SpanAttribute-fontColor(value: ResourceColor): SpanAttribute--><!--Device-SpanAttribute-fontColor(value: ResourceColor): SpanAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -122,6 +132,8 @@ Sets the font list. If this API is not used, the default font is 'HarmonyOS Sans
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-SpanAttribute-fontFamily(value: string | Resource): SpanAttribute--><!--Device-SpanAttribute-fontFamily(value: string | Resource): SpanAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -145,6 +157,8 @@ Sets the font size. If this API is not used, the default font size is 16fp, and 
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-SpanAttribute-fontSize(value: number | string | Resource): SpanAttribute--><!--Device-SpanAttribute-fontSize(value: number | string | Resource): SpanAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -166,6 +180,8 @@ Sets the font style. If this API is not used, the default font style is FontStyl
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-SpanAttribute-fontStyle(value: FontStyle): SpanAttribute--><!--Device-SpanAttribute-fontStyle(value: FontStyle): SpanAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -190,6 +206,8 @@ Sets the attributes of a variable font. This is applicable to scenarios where va
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.1.
+
+<!--Device-SpanAttribute-fontVariations(fontVariations: Array<FontVariation>): SpanAttribute--><!--Device-SpanAttribute-fontVariations(fontVariations: Array<FontVariation>): SpanAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -217,6 +235,8 @@ Sets the font weight of the text. If the value is too large, the text may be cli
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-SpanAttribute-fontWeight(value: number | FontWeight | ResourceStr): SpanAttribute--><!--Device-SpanAttribute-fontWeight(value: number | FontWeight | ResourceStr): SpanAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -248,6 +268,8 @@ Sets the font weight of the text. If this API is not used, the default font weig
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 24.
 
+<!--Device-SpanAttribute-fontWeight(weight: number | FontWeight | ResourceStr, fontWeightConfigs?: FontWeightConfigs): SpanAttribute--><!--Device-SpanAttribute-fontWeight(weight: number | FontWeight | ResourceStr, fontWeightConfigs?: FontWeightConfigs): SpanAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -271,6 +293,8 @@ Sets the text character spacing. If the value is less than 0, the characters gat
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-SpanAttribute-letterSpacing(value: number | ResourceStr): SpanAttribute--><!--Device-SpanAttribute-letterSpacing(value: number | ResourceStr): SpanAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -292,6 +316,8 @@ Sets the line height for the text. If this API is not used, the line height is a
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SpanAttribute-lineHeight(value: Length): SpanAttribute--><!--Device-SpanAttribute-lineHeight(value: Length): SpanAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -315,6 +341,8 @@ Sets the text case. If this API is not used, the default text case is TextCase.N
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-SpanAttribute-textCase(value: TextCase): SpanAttribute--><!--Device-SpanAttribute-textCase(value: TextCase): SpanAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -336,6 +364,8 @@ Sets the text shadow effect. This API supports an array as the input parameter t
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SpanAttribute-textShadow(value: ShadowOptions | Array<ShadowOptions>): SpanAttribute--><!--Device-SpanAttribute-textShadow(value: ShadowOptions | Array<ShadowOptions>): SpanAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

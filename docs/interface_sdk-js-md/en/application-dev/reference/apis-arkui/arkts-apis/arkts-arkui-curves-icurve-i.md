@@ -8,6 +8,8 @@ Represents a curve object. Different types of curve objects can be created using
 
 **Since:** 9
 
+<!--Device-curves-interface ICurve--><!--Device-curves-interface ICurve-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -27,6 +29,8 @@ Calculates the interpolated value along the curve at the specified normalized ti
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ICurve-interpolate(fraction : number) : number--><!--Device-ICurve-interpolate(fraction : number) : number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

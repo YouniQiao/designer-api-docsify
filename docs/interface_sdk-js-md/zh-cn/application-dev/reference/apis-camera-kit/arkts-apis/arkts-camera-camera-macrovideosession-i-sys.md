@@ -13,6 +13,8 @@ Implements a macro video session, which sets the parameters of the macro video m
 
 **起始版本：** 12
 
+<!--Device-camera-interface MacroVideoSession extends Session, Flash, AutoExposure, Focus, Zoom, ColorEffect,      ManualFocus, ColorManagement--><!--Device-camera-interface MacroVideoSession extends Session, Flash, AutoExposure, Focus, Zoom, ColorEffect,      ManualFocus, ColorManagement-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ off(type: 'error', callback?: ErrorCallback): void
 Unsubscribes from HighResolutionPhotoSession error events.
 
 **起始版本：** 12
+
+<!--Device-MacroVideoSession-off(type: 'error', callback?: ErrorCallback): void--><!--Device-MacroVideoSession-off(type: 'error', callback?: ErrorCallback): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -68,6 +72,8 @@ Unsubscribes from focus state change events.
 
 **起始版本：** 12
 
+<!--Device-MacroVideoSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void--><!--Device-MacroVideoSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -103,6 +109,8 @@ Unsubscribes from smooth zoom state change events.
 
 **起始版本：** 12
 
+<!--Device-MacroVideoSession-off(type: 'smoothZoomInfoAvailable', callback?: AsyncCallback<SmoothZoomInfo>): void--><!--Device-MacroVideoSession-off(type: 'smoothZoomInfoAvailable', callback?: AsyncCallback<SmoothZoomInfo>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -137,6 +145,8 @@ on(type: 'error', callback: ErrorCallback): void
 Subscribes to HighResolutionPhotoSession error events. This API uses an asynchronous callback to return the result.
 
 **起始版本：** 12
+
+<!--Device-MacroVideoSession-on(type: 'error', callback: ErrorCallback): void--><!--Device-MacroVideoSession-on(type: 'error', callback: ErrorCallback): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -178,6 +188,8 @@ on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
 Subscribes to focus state change events. This API uses an asynchronous callback to return the result.
 
 **起始版本：** 12
+
+<!--Device-MacroVideoSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void--><!--Device-MacroVideoSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -223,6 +235,8 @@ on(type: 'smoothZoomInfoAvailable', callback: AsyncCallback<SmoothZoomInfo>): vo
 Subscribes to smooth zoom state change events. This API uses an asynchronous callback to return the result.
 
 **起始版本：** 12
+
+<!--Device-MacroVideoSession-on(type: 'smoothZoomInfoAvailable', callback: AsyncCallback<SmoothZoomInfo>): void--><!--Device-MacroVideoSession-on(type: 'smoothZoomInfoAvailable', callback: AsyncCallback<SmoothZoomInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

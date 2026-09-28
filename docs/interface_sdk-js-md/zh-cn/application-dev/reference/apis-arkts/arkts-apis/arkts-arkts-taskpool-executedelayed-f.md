@@ -24,6 +24,8 @@ function executeDelayed(delayTime: number, task: Task, priority?: Priority): Pro
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-taskpool-function executeDelayed(delayTime: number, task: Task, priority?: Priority): Promise<Object>--><!--Device-taskpool-function executeDelayed(delayTime: number, task: Task, priority?: Priority): Promise<Object>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -85,6 +87,8 @@ function executeDelayed<A extends Array<Object>, R>(delayTime: number, task: Gen
 **起始版本：** 13
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
+
+<!--Device-taskpool-function executeDelayed<A extends Array<Object>, R>(delayTime: number, task: GenericsTask<A, R>, priority?: Priority): Promise<R>--><!--Device-taskpool-function executeDelayed<A extends Array<Object>, R>(delayTime: number, task: GenericsTask<A, R>, priority?: Priority): Promise<R>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

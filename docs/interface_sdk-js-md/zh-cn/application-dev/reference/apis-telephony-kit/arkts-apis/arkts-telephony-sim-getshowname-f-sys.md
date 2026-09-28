@@ -18,6 +18,8 @@ Gets the name of the SIM card in the specified slot.
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-sim-function getShowName(slotId: int, callback: AsyncCallback<string>): void--><!--Device-sim-function getShowName(slotId: int, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -67,6 +69,8 @@ Gets the name of the SIM card in the specified slot.
 **起始版本：** 8
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
+
+<!--Device-sim-function getShowName(slotId: int): Promise<string>--><!--Device-sim-function getShowName(slotId: int): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

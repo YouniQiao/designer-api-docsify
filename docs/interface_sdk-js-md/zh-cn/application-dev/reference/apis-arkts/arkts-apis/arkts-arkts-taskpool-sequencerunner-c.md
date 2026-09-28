@@ -8,6 +8,8 @@ class SequenceRunner
 
 **起始版本：** 11
 
+<!--Device-taskpool-class SequenceRunner--><!--Device-taskpool-class SequenceRunner-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -27,6 +29,8 @@ SequenceRunner的构造函数，用于创建一个**SequenceRunner**实例。
 **起始版本：** 11
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SequenceRunner-constructor(priority?: Priority)--><!--Device-SequenceRunner-constructor(priority?: Priority)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -62,6 +66,8 @@ SequenceRunner的构造函数，用于创建一个**SequenceRunner**实例。该
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-SequenceRunner-constructor(name: string, priority?: Priority)--><!--Device-SequenceRunner-constructor(name: string, priority?: Priority)-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -94,6 +100,8 @@ execute(task: Task): Promise<Object>
 **起始版本：** 11
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SequenceRunner-execute(task: Task): Promise<Object>--><!--Device-SequenceRunner-execute(task: Task): Promise<Object>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

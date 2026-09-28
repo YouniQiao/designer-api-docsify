@@ -4,13 +4,15 @@
 declare class ImageSpanAttribute extends BaseSpan<ImageSpanAttribute>
 ```
 
-属性继承自[BaseSpan](arkts-arkui-span-comp-basespan-c.md)，通用属性方法支持[尺寸设置](arkts-arkui-common-comp.md#common)、[背景设置](arkts-arkui-common-comp.md#common)、[边框设置](arkts-arkui-common-comp.md#common)。
+属性继承自[BaseSpan](arkts-arkui-span-comp-basespan-c.md)，通用属性方法支持[尺寸设置](arkts-arkui-common-comp.md)、[背景设置](arkts-arkui-common-comp.md)、[边框设置](arkts-arkui-common-comp.md)。
 
 @extends CommonMethod&lt;ImageSpanAttribute&gt; [since 10 - 10] @extends BaseSpan&lt;ImageSpanAttribute&gt; [since 11]
 
 **继承/实现关系：** ImageSpanAttribute extends BaseSpan<ImageSpanAttribute>
 
 **起始版本：** 10
+
+<!--Device-unnamed-declare class ImageSpanAttribute extends BaseSpan<ImageSpanAttribute>--><!--Device-unnamed-declare class ImageSpanAttribute extends BaseSpan<ImageSpanAttribute>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,6 +29,8 @@ alt(value: PixelMap)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ImageSpanAttribute-alt(value: PixelMap): ImageSpanAttribute--><!--Device-ImageSpanAttribute-alt(value: PixelMap): ImageSpanAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,6 +54,8 @@ colorFilter(filter: ColorFilter | DrawingColorFilter)
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
+<!--Device-ImageSpanAttribute-colorFilter(filter: ColorFilter | DrawingColorFilter): ImageSpanAttribute--><!--Device-ImageSpanAttribute-colorFilter(filter: ColorFilter | DrawingColorFilter): ImageSpanAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -71,6 +77,8 @@ objectFit(value: ImageFit)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ImageSpanAttribute-objectFit(value: ImageFit): ImageSpanAttribute--><!--Device-ImageSpanAttribute-objectFit(value: ImageFit): ImageSpanAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -94,6 +102,8 @@ onComplete(callback: ImageCompleteCallback)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-ImageSpanAttribute-onComplete(callback: ImageCompleteCallback): ImageSpanAttribute--><!--Device-ImageSpanAttribute-onComplete(callback: ImageCompleteCallback): ImageSpanAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -115,6 +125,8 @@ onError(callback: ImageErrorCallback)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ImageSpanAttribute-onError(callback: ImageErrorCallback): ImageSpanAttribute--><!--Device-ImageSpanAttribute-onError(callback: ImageErrorCallback): ImageSpanAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -142,6 +154,8 @@ resizable(value: ResizableOptions)
 
 **原子化服务API：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
 
+<!--Device-ImageSpanAttribute-resizable(value: ResizableOptions): ImageSpanAttribute--><!--Device-ImageSpanAttribute-resizable(value: ResizableOptions): ImageSpanAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -166,6 +180,8 @@ ImageSpan组件创建后，不支持动态修改该属性的值。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
+<!--Device-ImageSpanAttribute-supportSvg2(enable: Optional<boolean>): ImageSpanAttribute--><!--Device-ImageSpanAttribute-supportSvg2(enable: Optional<boolean>): ImageSpanAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -187,6 +203,8 @@ verticalAlign(value: ImageSpanAlignment)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ImageSpanAttribute-verticalAlign(value: ImageSpanAlignment): ImageSpanAttribute--><!--Device-ImageSpanAttribute-verticalAlign(value: ImageSpanAlignment): ImageSpanAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

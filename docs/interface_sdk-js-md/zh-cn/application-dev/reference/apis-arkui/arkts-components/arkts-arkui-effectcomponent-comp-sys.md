@@ -28,6 +28,8 @@ EffectComponent()
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-EffectComponentInterface-(): EffectComponentAttribute--><!--Device-EffectComponentInterface-(): EffectComponentAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
@@ -43,6 +45,8 @@ EffectComponent(options?: EffectComponentOptions)
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EffectComponentInterface-(options?: EffectComponentOptions): EffectComponentAttribute--><!--Device-EffectComponentInterface-(options?: EffectComponentOptions): EffectComponentAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

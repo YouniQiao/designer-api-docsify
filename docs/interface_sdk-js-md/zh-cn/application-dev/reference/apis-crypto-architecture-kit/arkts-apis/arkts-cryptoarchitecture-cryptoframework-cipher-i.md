@@ -17,6 +17,8 @@ interface Cipher
 
 **起始版本：** 9
 
+<!--Device-cryptoFramework-interface Cipher--><!--Device-cryptoFramework-interface Cipher-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Cipher
 - API版本9-11：SystemCapability.Security.CryptoFramework
@@ -38,6 +40,8 @@ doFinal(data: DataBlob, callback: AsyncCallback<DataBlob>): void
 **起始版本：** 9
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Cipher-doFinal(data: DataBlob, callback: AsyncCallback<DataBlob>): void--><!--Device-Cipher-doFinal(data: DataBlob, callback: AsyncCallback<DataBlob>): void-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Cipher
@@ -186,6 +190,8 @@ authTag为末尾的16字节；CCM模式下，authTag为末尾的12字节。其�
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Cipher-doFinal(data: DataBlob | null, callback: AsyncCallback<DataBlob>): void--><!--Device-Cipher-doFinal(data: DataBlob | null, callback: AsyncCallback<DataBlob>): void-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Cipher
 - API版本10-11：SystemCapability.Security.CryptoFramework
@@ -272,6 +278,8 @@ doFinal(data: DataBlob): Promise<DataBlob>
 **起始版本：** 9
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Cipher-doFinal(data: DataBlob): Promise<DataBlob>--><!--Device-Cipher-doFinal(data: DataBlob): Promise<DataBlob>-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Cipher
@@ -427,6 +435,8 @@ doFinal(data: DataBlob | null): Promise<DataBlob>
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Cipher-doFinal(data: DataBlob | null): Promise<DataBlob>--><!--Device-Cipher-doFinal(data: DataBlob | null): Promise<DataBlob>-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Cipher
 - API版本10-11：SystemCapability.Security.CryptoFramework
@@ -525,6 +535,8 @@ doFinalSync(data: DataBlob | null): DataBlob
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Cipher-doFinalSync(data: DataBlob | null): DataBlob--><!--Device-Cipher-doFinalSync(data: DataBlob | null): DataBlob-End-->
+
 **系统能力：** SystemCapability.Security.CryptoFramework.Cipher
 
 **参数：**
@@ -606,7 +618,9 @@ getCipherSpec(itemType: CipherSpecItem): string | Uint8Array
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Cipher-getCipherSpec(itemType: CipherSpecItem): string | Uint8Array--><!--Device-Cipher-getCipherSpec(itemType: CipherSpecItem): string | Uint8Array-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Cipher
@@ -660,6 +674,8 @@ init(opMode: CryptoMode, key: Key, params: ParamsSpec, callback: AsyncCallback<v
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Cipher-init(opMode: CryptoMode, key: Key, params: ParamsSpec, callback: AsyncCallback<void>): void--><!--Device-Cipher-init(opMode: CryptoMode, key: Key, params: ParamsSpec, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Cipher
 - API版本9-11：SystemCapability.Security.CryptoFramework
@@ -697,7 +713,9 @@ init(opMode: CryptoMode, key: Key, params: ParamsSpec | null, callback: AsyncCal
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Cipher-init(opMode: CryptoMode, key: Key, params: ParamsSpec | null, callback: AsyncCallback<void>): void--><!--Device-Cipher-init(opMode: CryptoMode, key: Key, params: ParamsSpec | null, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Cipher
@@ -737,6 +755,8 @@ init(opMode: CryptoMode, key: Key, params: ParamsSpec): Promise<void>
 **起始版本：** 9
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Cipher-init(opMode: CryptoMode, key: Key, params: ParamsSpec): Promise<void>--><!--Device-Cipher-init(opMode: CryptoMode, key: Key, params: ParamsSpec): Promise<void>-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Cipher
@@ -781,7 +801,9 @@ init(opMode: CryptoMode, key: Key, params: ParamsSpec | null): Promise<void>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Cipher-init(opMode: CryptoMode, key: Key, params: ParamsSpec | null): Promise<void>--><!--Device-Cipher-init(opMode: CryptoMode, key: Key, params: ParamsSpec | null): Promise<void>-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Cipher
@@ -825,7 +847,9 @@ initSync(opMode: CryptoMode, key: Key, params: ParamsSpec | null): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Cipher-initSync(opMode: CryptoMode, key: Key, params: ParamsSpec | null): void--><!--Device-Cipher-initSync(opMode: CryptoMode, key: Key, params: ParamsSpec | null): void-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Cipher
 
@@ -857,7 +881,9 @@ setCipherSpec(itemType: CipherSpecItem, itemValue: Uint8Array): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Cipher-setCipherSpec(itemType: CipherSpecItem, itemValue: Uint8Array): void--><!--Device-Cipher-setCipherSpec(itemType: CipherSpecItem, itemValue: Uint8Array): void-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Cipher
@@ -919,6 +945,8 @@ update(data: DataBlob, callback: AsyncCallback<DataBlob>): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Cipher-update(data: DataBlob, callback: AsyncCallback<DataBlob>): void--><!--Device-Cipher-update(data: DataBlob, callback: AsyncCallback<DataBlob>): void-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Cipher
 - API版本9-11：SystemCapability.Security.CryptoFramework
@@ -969,6 +997,8 @@ update(data: DataBlob): Promise<DataBlob>
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Cipher-update(data: DataBlob): Promise<DataBlob>--><!--Device-Cipher-update(data: DataBlob): Promise<DataBlob>-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Cipher
 - API版本9-11：SystemCapability.Security.CryptoFramework
@@ -1014,6 +1044,8 @@ updateSync(data: DataBlob): DataBlob
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Cipher-updateSync(data: DataBlob): DataBlob--><!--Device-Cipher-updateSync(data: DataBlob): DataBlob-End-->
+
 **系统能力：** SystemCapability.Security.CryptoFramework.Cipher
 
 **参数：**
@@ -1050,7 +1082,9 @@ readonly algName: string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Cipher-readonly algName: string--><!--Device-Cipher-readonly algName: string-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Cipher

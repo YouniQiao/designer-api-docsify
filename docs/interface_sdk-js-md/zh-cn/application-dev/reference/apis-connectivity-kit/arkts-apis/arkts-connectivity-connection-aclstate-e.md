@@ -8,6 +8,8 @@ export enum AclState
 
 **起始版本：** 26.0.0
 
+<!--Device-connection-export enum AclState--><!--Device-connection-export enum AclState-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## STATE_CONNECTED
@@ -22,6 +24,8 @@ ACL链路已连接。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AclState-STATE_CONNECTED = 0--><!--Device-AclState-STATE_CONNECTED = 0-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## STATE_DISCONNECTED
@@ -35,5 +39,7 @@ ACL链路已断开连接。
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AclState-STATE_DISCONNECTED = 1--><!--Device-AclState-STATE_DISCONNECTED = 1-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

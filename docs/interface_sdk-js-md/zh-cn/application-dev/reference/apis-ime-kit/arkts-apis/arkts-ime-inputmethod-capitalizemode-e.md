@@ -18,6 +18,8 @@ export enum CapitalizeMode
 
 **起始版本：** 20
 
+<!--Device-inputMethod-export enum CapitalizeMode--><!--Device-inputMethod-export enum CapitalizeMode-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## NONE
@@ -29,6 +31,8 @@ NONE = 0
 不进行任何首字母大写处理。<br>使用场景：适用于无需自动大写的输入框，如密码输入、验证码输入等。
 
 **起始版本：** 20
+
+<!--Device-CapitalizeMode-NONE = 0--><!--Device-CapitalizeMode-NONE = 0-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -42,6 +46,8 @@ SENTENCES
 
 **起始版本：** 20
 
+<!--Device-CapitalizeMode-SENTENCES--><!--Device-CapitalizeMode-SENTENCES-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## WORDS
@@ -54,6 +60,8 @@ WORDS
 
 **起始版本：** 20
 
+<!--Device-CapitalizeMode-WORDS--><!--Device-CapitalizeMode-WORDS-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## CHARACTERS
@@ -65,5 +73,7 @@ CHARACTERS
 每个字母都大写。<br>使用场景：适用于全大写输入场景，如缩写词输入（如URL中的域名部分）。
 
 **起始版本：** 20
+
+<!--Device-CapitalizeMode-CHARACTERS--><!--Device-CapitalizeMode-CHARACTERS-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework

@@ -22,6 +22,8 @@ function startDeviceManager(token: number, callback: AsyncCallback<void>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-continuationManager-function startDeviceManager(token: number, callback: AsyncCallback<void>): void--><!--Device-continuationManager-function startDeviceManager(token: number, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.DistributedAbilityManager
 
 **参数：**
@@ -64,6 +66,8 @@ function startDeviceManager(token: number, options: ContinuationExtraParams, cal
 **替代接口：** [startDiscovering](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#startdiscovering)(discoverParam: { [key: string]: Object; }, filterOptions?: { [key: string]: Object; })
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-continuationManager-function startDeviceManager(token: number, options: ContinuationExtraParams, callback: AsyncCallback<void>): void--><!--Device-continuationManager-function startDeviceManager(token: number, options: ContinuationExtraParams, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Ability.DistributedAbilityManager
 
@@ -113,6 +117,8 @@ function startDeviceManager(token: number, options?: ContinuationExtraParams): P
 **替代接口：** [startDiscovering](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#startdiscovering)(discoverParam: { [key: string]: Object; }, filterOptions?: { [key: string]: Object; })
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-continuationManager-function startDeviceManager(token: number, options?: ContinuationExtraParams): Promise<void>--><!--Device-continuationManager-function startDeviceManager(token: number, options?: ContinuationExtraParams): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.DistributedAbilityManager
 

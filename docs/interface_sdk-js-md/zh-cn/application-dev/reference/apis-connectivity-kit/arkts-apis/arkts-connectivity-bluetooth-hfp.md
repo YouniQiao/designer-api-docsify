@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare namespace hfp--><!--Device-unnamed-declare namespace hfp-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块

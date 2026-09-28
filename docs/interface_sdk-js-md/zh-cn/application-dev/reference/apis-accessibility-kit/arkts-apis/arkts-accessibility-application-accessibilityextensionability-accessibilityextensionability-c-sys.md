@@ -10,6 +10,8 @@ AccessibilityExtensionAbility基于ExtensionAbility框架，提供无障碍扩�
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare class AccessibilityExtensionAbility--><!--Device-unnamed-declare class AccessibilityExtensionAbility-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## 导入模块
@@ -31,6 +33,8 @@ onAccessibilityConnect(): void
 **起始版本：** 20
 
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
+
+<!--Device-AccessibilityExtensionAbility-onAccessibilityConnect(): void--><!--Device-AccessibilityExtensionAbility-onAccessibilityConnect(): void-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -69,6 +73,8 @@ onAccessibilityDisconnect(): void
 
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
+<!--Device-AccessibilityExtensionAbility-onAccessibilityDisconnect(): void--><!--Device-AccessibilityExtensionAbility-onAccessibilityDisconnect(): void-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -103,6 +109,8 @@ onAccessibilityEventInfo(event: AccessibilityEventInfo): void
 **起始版本：** 20
 
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
+
+<!--Device-AccessibilityExtensionAbility-onAccessibilityEventInfo(event: AccessibilityEventInfo): void--><!--Device-AccessibilityExtensionAbility-onAccessibilityEventInfo(event: AccessibilityEventInfo): void-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -147,6 +155,8 @@ onAccessibilityKeyEvent(keyEvent: KeyEvent): boolean
 **起始版本：** 20
 
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
+
+<!--Device-AccessibilityExtensionAbility-onAccessibilityKeyEvent(keyEvent: KeyEvent): boolean--><!--Device-AccessibilityExtensionAbility-onAccessibilityKeyEvent(keyEvent: KeyEvent): boolean-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 

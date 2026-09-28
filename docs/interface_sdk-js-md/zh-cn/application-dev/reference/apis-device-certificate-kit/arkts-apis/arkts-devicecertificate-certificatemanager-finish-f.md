@@ -18,6 +18,8 @@ function finish(handle: Uint8Array, callback: AsyncCallback<CMResult>): void
 
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER
 
+<!--Device-certificateManager-function finish(handle: Uint8Array, callback: AsyncCallback<CMResult>): void--><!--Device-certificateManager-function finish(handle: Uint8Array, callback: AsyncCallback<CMResult>): void-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
 
 **参数：**
@@ -77,6 +79,8 @@ function finish(handle: Uint8Array, signature: Uint8Array, callback: AsyncCallba
 
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER
 
+<!--Device-certificateManager-function finish(handle: Uint8Array, signature: Uint8Array, callback: AsyncCallback<CMResult>): void--><!--Device-certificateManager-function finish(handle: Uint8Array, signature: Uint8Array, callback: AsyncCallback<CMResult>): void-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
 
 **参数：**
@@ -134,6 +138,8 @@ function finish(handle: Uint8Array, signature?: Uint8Array): Promise<CMResult>
 **起始版本：** 11
 
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER
+
+<!--Device-certificateManager-function finish(handle: Uint8Array, signature?: Uint8Array): Promise<CMResult>--><!--Device-certificateManager-function finish(handle: Uint8Array, signature?: Uint8Array): Promise<CMResult>-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManager
 

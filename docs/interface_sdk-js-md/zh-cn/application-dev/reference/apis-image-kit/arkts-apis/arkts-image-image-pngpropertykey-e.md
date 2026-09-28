@@ -31,13 +31,15 @@ enum PngPropertyKey
 | WARNING | 'PngWarning' | PNG图像的警告信息。 |  
 | Y_PIXELS_PER_METER | 'PngYPixelsPerMeter' | PNG图像Y方向每米像素数。 |  
 | GAMMA | 'PngGamma' | PNG图像的系数伽马的值。 |
-| [CHROMATICITIES](arkts-image-image-pngpropertykey-e.md) | 'PngChromaticities' | PNG图像的原色与白点色度坐标cHRM（primary chromaticities and white point）。该信息可用于与设备无关的色彩校正。 |
-| [DESCRIPTION](arkts-image-image-pngpropertykey-e.md) | 'PngDescription' | PNG图像的描述。 |
-| [TITLE](arkts-image-image-pngpropertykey-e.md) | 'PngTitle' | PNG图像的标题。 |
-| [COMMENT](arkts-image-image-pngpropertykey-e.md) | 'PngComment' | PNG图像的注释。 |
-| [DISCLAIMER](arkts-image-image-pngpropertykey-e.md) | 'PngDisclaimer' | PNG图像的免责声明。 |
+| CHROMATICITIES | 'PngChromaticities' | PNG图像的原色与白点色度坐标cHRM（primary chromaticities and white point）。该信息可用于与设备无关的色彩校正。 |
+| DESCRIPTION | 'PngDescription' | PNG图像的描述。 |
+| TITLE | 'PngTitle' | PNG图像的标题。 |
+| COMMENT | 'PngComment' | PNG图像的注释。 |
+| DISCLAIMER | 'PngDisclaimer' | PNG图像的免责声明。 |
 
 **起始版本：** 26.0.0
+
+<!--Device-image-enum PngPropertyKey--><!--Device-image-enum PngPropertyKey-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -53,6 +55,8 @@ PNG x pixels per meter.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PngPropertyKey-X_PIXELS_PER_METER = 'PngXPixelsPerMeter'--><!--Device-PngPropertyKey-X_PIXELS_PER_METER = 'PngXPixelsPerMeter'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## Y_PIXELS_PER_METER
@@ -66,6 +70,8 @@ PNG y pixels per meter.
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PngPropertyKey-Y_PIXELS_PER_METER = 'PngYPixelsPerMeter'--><!--Device-PngPropertyKey-Y_PIXELS_PER_METER = 'PngYPixelsPerMeter'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -81,6 +87,8 @@ PNG gamma.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PngPropertyKey-GAMMA = 'PngGamma'--><!--Device-PngPropertyKey-GAMMA = 'PngGamma'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## INTERLACE_TYPE
@@ -94,6 +102,8 @@ PNG interlacing mode.
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PngPropertyKey-INTERLACE_TYPE = 'PngInterlaceType'--><!--Device-PngPropertyKey-INTERLACE_TYPE = 'PngInterlaceType'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -109,6 +119,8 @@ PNG sRGB rendering intent.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PngPropertyKey-SRGB_INTENT = 'PngSRGBIntent'--><!--Device-PngPropertyKey-SRGB_INTENT = 'PngSRGBIntent'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## CHROMATICITIES
@@ -122,6 +134,8 @@ PNG color primary/white-point coordinates.
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PngPropertyKey-CHROMATICITIES = 'PngChromaticities'--><!--Device-PngPropertyKey-CHROMATICITIES = 'PngChromaticities'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -137,6 +151,8 @@ PNG title.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PngPropertyKey-TITLE = 'PngTitle'--><!--Device-PngPropertyKey-TITLE = 'PngTitle'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## DESCRIPTION
@@ -150,6 +166,8 @@ PNG description.
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PngPropertyKey-DESCRIPTION = 'PngDescription'--><!--Device-PngPropertyKey-DESCRIPTION = 'PngDescription'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -165,6 +183,8 @@ PNG comment.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PngPropertyKey-COMMENT = 'PngComment'--><!--Device-PngPropertyKey-COMMENT = 'PngComment'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## DISCLAIMER
@@ -178,6 +198,8 @@ PNG disclaimer.
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PngPropertyKey-DISCLAIMER = 'PngDisclaimer'--><!--Device-PngPropertyKey-DISCLAIMER = 'PngDisclaimer'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -193,6 +215,8 @@ PNG warning.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PngPropertyKey-WARNING = 'PngWarning'--><!--Device-PngPropertyKey-WARNING = 'PngWarning'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## AUTHOR
@@ -206,6 +230,8 @@ PNG author.
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PngPropertyKey-AUTHOR = 'PngAuthor'--><!--Device-PngPropertyKey-AUTHOR = 'PngAuthor'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -221,6 +247,8 @@ PNG copyright.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PngPropertyKey-COPYRIGHT = 'PngCopyright'--><!--Device-PngPropertyKey-COPYRIGHT = 'PngCopyright'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## CREATION_TIME
@@ -234,6 +262,8 @@ PNG creation time.
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PngPropertyKey-CREATION_TIME = 'PngCreationTime'--><!--Device-PngPropertyKey-CREATION_TIME = 'PngCreationTime'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -249,6 +279,8 @@ PNG modification time.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PngPropertyKey-MODIFICATION_TIME = 'PngModificationTime'--><!--Device-PngPropertyKey-MODIFICATION_TIME = 'PngModificationTime'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## SOFTWARE
@@ -262,5 +294,7 @@ PNG software.
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PngPropertyKey-SOFTWARE = 'PngSoftware'--><!--Device-PngPropertyKey-SOFTWARE = 'PngSoftware'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core

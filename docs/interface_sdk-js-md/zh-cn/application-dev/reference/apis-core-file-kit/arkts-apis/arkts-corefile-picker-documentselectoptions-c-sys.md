@@ -8,6 +8,8 @@ class DocumentSelectOptions
 
 **起始版本：** 9
 
+<!--Device-picker-class DocumentSelectOptions--><!--Device-picker-class DocumentSelectOptions-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 ## 导入模块
@@ -29,6 +31,8 @@ themeColor?: CustomColors
 **类型：** [CustomColors](../../apis-arkui/arkts-apis/arkts-arkui-customcolors-t.md)
 
 **起始版本：** 18
+
+<!--Device-DocumentSelectOptions-themeColor?: CustomColors--><!--Device-DocumentSelectOptions-themeColor?: CustomColors-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 

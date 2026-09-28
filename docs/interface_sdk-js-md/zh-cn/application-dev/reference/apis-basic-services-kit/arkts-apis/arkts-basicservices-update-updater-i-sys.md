@@ -21,6 +21,8 @@ export interface Updater
 
 **起始版本：** 9
 
+<!--Device-update-export interface Updater--><!--Device-update-export interface Updater-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -64,6 +66,8 @@ checkNewVersion(callback: AsyncCallback<CheckResult>): void
 **起始版本：** 9
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
+
+<!--Device-Updater-checkNewVersion(callback: AsyncCallback<CheckResult>): void--><!--Device-Updater-checkNewVersion(callback: AsyncCallback<CheckResult>): void-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -150,6 +154,8 @@ checkNewVersion(): Promise<CheckResult>
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-checkNewVersion(): Promise<CheckResult>--><!--Device-Updater-checkNewVersion(): Promise<CheckResult>-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -226,6 +232,8 @@ clearError(versionDigestInfo: VersionDigestInfo, clearOptions: ClearOptions, cal
 **起始版本：** 9
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
+
+<!--Device-Updater-clearError(versionDigestInfo: VersionDigestInfo, clearOptions: ClearOptions, callback: AsyncCallback<void>): void--><!--Device-Updater-clearError(versionDigestInfo: VersionDigestInfo, clearOptions: ClearOptions, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -319,6 +327,8 @@ clearError(versionDigestInfo: VersionDigestInfo, clearOptions: ClearOptions): Pr
 **起始版本：** 9
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
+
+<!--Device-Updater-clearError(versionDigestInfo: VersionDigestInfo, clearOptions: ClearOptions): Promise<void>--><!--Device-Updater-clearError(versionDigestInfo: VersionDigestInfo, clearOptions: ClearOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -420,6 +430,8 @@ download(
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-download(      versionDigestInfo: VersionDigestInfo,      downloadOptions: DownloadOptions,      callback: AsyncCallback<void>    ): void--><!--Device-Updater-download(      versionDigestInfo: VersionDigestInfo,      downloadOptions: DownloadOptions,      callback: AsyncCallback<void>    ): void-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -520,6 +532,8 @@ download(versionDigestInfo: VersionDigestInfo, downloadOptions: DownloadOptions)
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-download(versionDigestInfo: VersionDigestInfo, downloadOptions: DownloadOptions): Promise<void>--><!--Device-Updater-download(versionDigestInfo: VersionDigestInfo, downloadOptions: DownloadOptions): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -613,6 +627,8 @@ getCurrentVersionDescription(
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-getCurrentVersionDescription(      descriptionOptions: DescriptionOptions,      callback: AsyncCallback<Array<ComponentDescription>>    ): void--><!--Device-Updater-getCurrentVersionDescription(      descriptionOptions: DescriptionOptions,      callback: AsyncCallback<Array<ComponentDescription>>    ): void-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -693,6 +709,8 @@ getCurrentVersionDescription(descriptionOptions: DescriptionOptions): Promise<Ar
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-getCurrentVersionDescription(descriptionOptions: DescriptionOptions): Promise<Array<ComponentDescription>>--><!--Device-Updater-getCurrentVersionDescription(descriptionOptions: DescriptionOptions): Promise<Array<ComponentDescription>>-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -768,6 +786,8 @@ getCurrentVersionInfo(callback: AsyncCallback<CurrentVersionInfo>): void
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-getCurrentVersionInfo(callback: AsyncCallback<CurrentVersionInfo>): void--><!--Device-Updater-getCurrentVersionInfo(callback: AsyncCallback<CurrentVersionInfo>): void-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -838,6 +858,8 @@ getCurrentVersionInfo(): Promise<CurrentVersionInfo>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
+
+<!--Device-Updater-getCurrentVersionInfo(): Promise<CurrentVersionInfo>--><!--Device-Updater-getCurrentVersionInfo(): Promise<CurrentVersionInfo>-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -911,6 +933,8 @@ getNewVersionDescription(
 **起始版本：** 9
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
+
+<!--Device-Updater-getNewVersionDescription(      versionDigestInfo: VersionDigestInfo,      descriptionOptions: DescriptionOptions,      callback: AsyncCallback<Array<ComponentDescription>>    ): void--><!--Device-Updater-getNewVersionDescription(      versionDigestInfo: VersionDigestInfo,      descriptionOptions: DescriptionOptions,      callback: AsyncCallback<Array<ComponentDescription>>    ): void-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -1000,6 +1024,8 @@ getNewVersionDescription(
 **起始版本：** 9
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
+
+<!--Device-Updater-getNewVersionDescription(      versionDigestInfo: VersionDigestInfo,      descriptionOptions: DescriptionOptions    ): Promise<Array<ComponentDescription>>--><!--Device-Updater-getNewVersionDescription(      versionDigestInfo: VersionDigestInfo,      descriptionOptions: DescriptionOptions    ): Promise<Array<ComponentDescription>>-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -1105,6 +1131,8 @@ getNewVersionInfo(callback: AsyncCallback<NewVersionInfo>): void
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-getNewVersionInfo(callback: AsyncCallback<NewVersionInfo>): void--><!--Device-Updater-getNewVersionInfo(callback: AsyncCallback<NewVersionInfo>): void-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -1191,6 +1219,8 @@ getNewVersionInfo(): Promise<NewVersionInfo>
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-getNewVersionInfo(): Promise<NewVersionInfo>--><!--Device-Updater-getNewVersionInfo(): Promise<NewVersionInfo>-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -1266,6 +1296,8 @@ getTaskInfo(callback: AsyncCallback<TaskInfo>): void
 **起始版本：** 9
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
+
+<!--Device-Updater-getTaskInfo(callback: AsyncCallback<TaskInfo>): void--><!--Device-Updater-getTaskInfo(callback: AsyncCallback<TaskInfo>): void-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -1348,6 +1380,8 @@ getTaskInfo(): Promise<TaskInfo>
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-getTaskInfo(): Promise<TaskInfo>--><!--Device-Updater-getTaskInfo(): Promise<TaskInfo>-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -1411,6 +1445,8 @@ getUpgradePolicy(callback: AsyncCallback<UpgradePolicy>): void
 **起始版本：** 9
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
+
+<!--Device-Updater-getUpgradePolicy(callback: AsyncCallback<UpgradePolicy>): void--><!--Device-Updater-getUpgradePolicy(callback: AsyncCallback<UpgradePolicy>): void-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -1479,6 +1515,8 @@ getUpgradePolicy(): Promise<UpgradePolicy>
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-getUpgradePolicy(): Promise<UpgradePolicy>--><!--Device-Updater-getUpgradePolicy(): Promise<UpgradePolicy>-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -1545,6 +1583,8 @@ off(eventClassifyInfo: EventClassifyInfo, taskCallback?: UpgradeTaskCallback): v
 - 建议在升级流程结束后或页面销毁时调用，及时释放资源。
 
 **起始版本：** 9
+
+<!--Device-Updater-off(eventClassifyInfo: EventClassifyInfo, taskCallback?: UpgradeTaskCallback): void--><!--Device-Updater-off(eventClassifyInfo: EventClassifyInfo, taskCallback?: UpgradeTaskCallback): void-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -1621,6 +1661,8 @@ on(eventClassifyInfo: EventClassifyInfo, taskCallback: UpgradeTaskCallback): voi
 
 **起始版本：** 9
 
+<!--Device-Updater-on(eventClassifyInfo: EventClassifyInfo, taskCallback: UpgradeTaskCallback): void--><!--Device-Updater-on(eventClassifyInfo: EventClassifyInfo, taskCallback: UpgradeTaskCallback): void-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -1696,6 +1738,8 @@ pauseDownload(
 **起始版本：** 9
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
+
+<!--Device-Updater-pauseDownload(      versionDigestInfo: VersionDigestInfo,      pauseDownloadOptions: PauseDownloadOptions,      callback: AsyncCallback<void>    ): void--><!--Device-Updater-pauseDownload(      versionDigestInfo: VersionDigestInfo,      pauseDownloadOptions: PauseDownloadOptions,      callback: AsyncCallback<void>    ): void-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -1788,6 +1832,8 @@ pauseDownload(versionDigestInfo: VersionDigestInfo, pauseDownloadOptions: PauseD
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-pauseDownload(versionDigestInfo: VersionDigestInfo, pauseDownloadOptions: PauseDownloadOptions): Promise<void>--><!--Device-Updater-pauseDownload(versionDigestInfo: VersionDigestInfo, pauseDownloadOptions: PauseDownloadOptions): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -1879,6 +1925,8 @@ resumeDownload(
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-resumeDownload(      versionDigestInfo: VersionDigestInfo,      resumeDownloadOptions: ResumeDownloadOptions,      callback: AsyncCallback<void>    ): void--><!--Device-Updater-resumeDownload(      versionDigestInfo: VersionDigestInfo,      resumeDownloadOptions: ResumeDownloadOptions,      callback: AsyncCallback<void>    ): void-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -1965,6 +2013,8 @@ resumeDownload(versionDigestInfo: VersionDigestInfo, resumeDownloadOptions: Resu
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-resumeDownload(versionDigestInfo: VersionDigestInfo, resumeDownloadOptions: ResumeDownloadOptions): Promise<void>--><!--Device-Updater-resumeDownload(versionDigestInfo: VersionDigestInfo, resumeDownloadOptions: ResumeDownloadOptions): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -2048,6 +2098,8 @@ setUpgradePolicy(policy: UpgradePolicy, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-setUpgradePolicy(policy: UpgradePolicy, callback: AsyncCallback<void>): void--><!--Device-Updater-setUpgradePolicy(policy: UpgradePolicy, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -2122,6 +2174,8 @@ setUpgradePolicy(policy: UpgradePolicy): Promise<void>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
+
+<!--Device-Updater-setUpgradePolicy(policy: UpgradePolicy): Promise<void>--><!--Device-Updater-setUpgradePolicy(policy: UpgradePolicy): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -2210,6 +2264,8 @@ terminateUpgrade(callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-terminateUpgrade(callback: AsyncCallback<void>): void--><!--Device-Updater-terminateUpgrade(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -2288,6 +2344,8 @@ terminateUpgrade(): Promise<void>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
+
+<!--Device-Updater-terminateUpgrade(): Promise<void>--><!--Device-Updater-terminateUpgrade(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -2368,6 +2426,8 @@ upgrade(versionDigestInfo: VersionDigestInfo, upgradeOptions: UpgradeOptions, ca
 **起始版本：** 9
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
+
+<!--Device-Updater-upgrade(versionDigestInfo: VersionDigestInfo, upgradeOptions: UpgradeOptions, callback: AsyncCallback<void>): void--><!--Device-Updater-upgrade(versionDigestInfo: VersionDigestInfo, upgradeOptions: UpgradeOptions, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -2466,6 +2526,8 @@ upgrade(versionDigestInfo: VersionDigestInfo, upgradeOptions: UpgradeOptions): P
 **起始版本：** 9
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
+
+<!--Device-Updater-upgrade(versionDigestInfo: VersionDigestInfo, upgradeOptions: UpgradeOptions): Promise<void>--><!--Device-Updater-upgrade(versionDigestInfo: VersionDigestInfo, upgradeOptions: UpgradeOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
 

@@ -8,6 +8,8 @@ interface DistributedInfo
 
 **起始版本：** 7
 
+<!--Device-distributedAccount-interface DistributedInfo--><!--Device-distributedAccount-interface DistributedInfo-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 ## 导入模块
@@ -27,6 +29,8 @@ avatar?: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-DistributedInfo-avatar?: string--><!--Device-DistributedInfo-avatar?: string-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -50,6 +54,8 @@ event: string
 
 **起始版本：** 7
 
+<!--Device-DistributedInfo-event: string--><!--Device-DistributedInfo-event: string-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 ## id
@@ -63,6 +69,8 @@ id: string
 **类型：** string
 
 **起始版本：** 7
+
+<!--Device-DistributedInfo-id: string--><!--Device-DistributedInfo-id: string-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -78,6 +86,8 @@ name: string
 
 **起始版本：** 7
 
+<!--Device-DistributedInfo-name: string--><!--Device-DistributedInfo-name: string-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 ## nickname
@@ -91,6 +101,8 @@ nickname?: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-DistributedInfo-nickname?: string--><!--Device-DistributedInfo-nickname?: string-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -106,6 +118,8 @@ scalableData?: object
 
 **起始版本：** 8
 
+<!--Device-DistributedInfo-scalableData?: object--><!--Device-DistributedInfo-scalableData?: object-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 ## status
@@ -119,5 +133,7 @@ readonly status?: DistributedAccountStatus
 **类型：** [DistributedAccountStatus](arkts-basicservices-distributedaccount-distributedaccountstatus-e.md)
 
 **起始版本：** 10
+
+<!--Device-DistributedInfo-readonly status?: DistributedAccountStatus--><!--Device-DistributedInfo-readonly status?: DistributedAccountStatus-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount

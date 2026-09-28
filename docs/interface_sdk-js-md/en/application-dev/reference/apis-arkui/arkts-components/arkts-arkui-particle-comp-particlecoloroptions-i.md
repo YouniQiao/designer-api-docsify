@@ -14,6 +14,8 @@ The color changes randomly, with the per-second change difference being a value 
 
 **Since:** 18
 
+<!--Device-unnamed-interface ParticleColorOptions--><!--Device-unnamed-interface ParticleColorOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## a
@@ -31,6 +33,8 @@ Difference value for the alpha (transparency) channel.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ParticleColorOptions-a: ParticleTuple<number, number>--><!--Device-ParticleColorOptions-a: ParticleTuple<number, number>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,6 +54,8 @@ Difference value for the blue color channel.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ParticleColorOptions-b: ParticleTuple<number, number>--><!--Device-ParticleColorOptions-b: ParticleTuple<number, number>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## g
@@ -68,6 +74,8 @@ Difference value for the green color channel.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ParticleColorOptions-g: ParticleTuple<number, number>--><!--Device-ParticleColorOptions-g: ParticleTuple<number, number>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## r
@@ -85,5 +93,7 @@ Difference value for the red color channel.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ParticleColorOptions-r: ParticleTuple<number, number>--><!--Device-ParticleColorOptions-r: ParticleTuple<number, number>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

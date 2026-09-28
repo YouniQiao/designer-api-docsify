@@ -8,6 +8,8 @@
 
 **起始版本：** 8
 
+<!--Device-unnamed-declare namespace batteryStats--><!--Device-unnamed-declare namespace batteryStats-End-->
+
 **系统能力：** SystemCapability.PowerManager.BatteryStatistics
 
 **系统接口：** 此接口为系统接口。

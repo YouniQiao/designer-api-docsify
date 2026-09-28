@@ -22,6 +22,8 @@ function closeNfc(): boolean
 
 **需要权限：** ohos.permission.MANAGE_SECURE_SETTINGS
 
+<!--Device-nfcController-function closeNfc(): boolean--><!--Device-nfcController-function closeNfc(): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.NFC.Core
 
 **返回值：**

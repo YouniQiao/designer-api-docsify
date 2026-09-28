@@ -25,6 +25,8 @@ function contains(rule: bigint): boolean
 
 **替代接口：** [containsCheckRule](arkts-performanceanalysis-hichecker-containscheckrule-f.md)
 
+<!--Device-hichecker-function contains(rule: bigint): boolean--><!--Device-hichecker-function contains(rule: bigint): boolean-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
 **参数：**

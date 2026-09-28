@@ -8,6 +8,8 @@ interface AtManager
 
 **起始版本：** 8
 
+<!--Device-abilityAccessCtrl-interface AtManager--><!--Device-abilityAccessCtrl-interface AtManager-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 ## 导入模块
@@ -29,6 +31,8 @@ getPermissionFlags(tokenID: number, permissionName: Permissions): Promise<number
 **需要权限：** ohos.permission.GET_SENSITIVE_PERMISSIONS or ohos.permission.GRANT_SENSITIVE_PERMISSIONS or ohos.permission.REVOKE_SENSITIVE_PERMISSIONS
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-AtManager-getPermissionFlags(tokenID: int, permissionName: Permissions): Promise<int>--><!--Device-AtManager-getPermissionFlags(tokenID: int, permissionName: Permissions): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -88,6 +92,8 @@ getPermissionRequestToggleStatus(permissionName: Permissions): Promise<Permissio
 **需要权限：** ohos.permission.GET_SENSITIVE_PERMISSIONS
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-AtManager-getPermissionRequestToggleStatus(permissionName: Permissions): Promise<PermissionRequestToggleStatus>--><!--Device-AtManager-getPermissionRequestToggleStatus(permissionName: Permissions): Promise<PermissionRequestToggleStatus>-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -155,6 +161,8 @@ getPermissionRequestToggleStatus(
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AtManager-getPermissionRequestToggleStatus(      permissionName: Permissions,      subProfileId: int): Promise<PermissionRequestToggleStatus>--><!--Device-AtManager-getPermissionRequestToggleStatus(      permissionName: Permissions,      subProfileId: int): Promise<PermissionRequestToggleStatus>-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -214,6 +222,8 @@ getPermissionsStatus(tokenID: number, permissionList: Array<Permissions>): Promi
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-AtManager-getPermissionsStatus(tokenID: int, permissionList: Array<Permissions>): Promise<Array<PermissionStatus>>--><!--Device-AtManager-getPermissionsStatus(tokenID: int, permissionList: Array<Permissions>): Promise<Array<PermissionStatus>>-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -269,6 +279,8 @@ getVersion(): Promise<number>
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-AtManager-getVersion(): Promise<int>--><!--Device-AtManager-getVersion(): Promise<int>-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -313,6 +325,8 @@ grantPermission(tokenID: number, permissionName: Permissions, permissionFlags: n
 **需要权限：** ohos.permission.GRANT_SENSITIVE_PERMISSIONS
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-AtManager-grantPermission(tokenID: int, permissionName: Permissions, permissionFlags: int): Promise<void>--><!--Device-AtManager-grantPermission(tokenID: int, permissionName: Permissions, permissionFlags: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -376,6 +390,8 @@ grantUserGrantedPermission(tokenID: number, permissionName: Permissions, permiss
 **需要权限：** ohos.permission.GRANT_SENSITIVE_PERMISSIONS
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-AtManager-grantUserGrantedPermission(tokenID: int, permissionName: Permissions, permissionFlags: int): Promise<void>--><!--Device-AtManager-grantUserGrantedPermission(tokenID: int, permissionName: Permissions, permissionFlags: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -445,6 +461,8 @@ grantUserGrantedPermission(
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-AtManager-grantUserGrantedPermission(        tokenID: int,        permissionName: Permissions,        permissionFlags: int,        callback: AsyncCallback<void>    ): void--><!--Device-AtManager-grantUserGrantedPermission(        tokenID: int,        permissionName: Permissions,        permissionFlags: int,        callback: AsyncCallback<void>    ): void-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -513,6 +531,8 @@ off(
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-AtManager-off(      type: 'permissionStateChange',      tokenIDList: Array<int>,      permissionList: Array<Permissions>,      callback?: Callback<PermissionStateChangeInfo>    ): void--><!--Device-AtManager-off(      type: 'permissionStateChange',      tokenIDList: Array<int>,      permissionList: Array<Permissions>,      callback?: Callback<PermissionStateChangeInfo>    ): void-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -579,6 +599,8 @@ on(
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-AtManager-on(      type: 'permissionStateChange',      tokenIDList: Array<int>,      permissionList: Array<Permissions>,      callback: Callback<PermissionStateChangeInfo>    ): void--><!--Device-AtManager-on(      type: 'permissionStateChange',      tokenIDList: Array<int>,      permissionList: Array<Permissions>,      callback: Callback<PermissionStateChangeInfo>    ): void-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -641,6 +663,8 @@ queryStatusByPermission(
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AtManager-queryStatusByPermission(      permissionList: Array<Permissions>): Promise<Array<PermissionStatusInfo>>--><!--Device-AtManager-queryStatusByPermission(      permissionList: Array<Permissions>): Promise<Array<PermissionStatusInfo>>-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -697,6 +721,8 @@ queryStatusByTokenID(tokenIDList: Array<number>): Promise<Array<PermissionStatus
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AtManager-queryStatusByTokenID(tokenIDList: Array<int>): Promise<Array<PermissionStatusInfo>>--><!--Device-AtManager-queryStatusByTokenID(tokenIDList: Array<int>): Promise<Array<PermissionStatusInfo>>-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -751,6 +777,8 @@ requestPermissionOnApplicationSetting(tokenID: number): Promise<void>
 **起始版本：** 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AtManager-requestPermissionOnApplicationSetting(tokenID: int): Promise<void>--><!--Device-AtManager-requestPermissionOnApplicationSetting(tokenID: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -810,6 +838,8 @@ requestPermissionsFromUserWithWindowId(
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AtManager-requestPermissionsFromUserWithWindowId(        context: Context,        windowId: int,        permissionList: Array<Permissions>) : Promise<PermissionRequestResult>--><!--Device-AtManager-requestPermissionsFromUserWithWindowId(        context: Context,        windowId: int,        permissionList: Array<Permissions>) : Promise<PermissionRequestResult>-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -882,6 +912,8 @@ revokePermission(
 **需要权限：** ohos.permission.REVOKE_SENSITIVE_PERMISSIONS
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-AtManager-revokePermission(      tokenID: int,      permissionName: Permissions,      permissionFlags: int,      killProcess?: boolean): Promise<void>--><!--Device-AtManager-revokePermission(      tokenID: int,      permissionName: Permissions,      permissionFlags: int,      killProcess?: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -956,6 +988,8 @@ revokeUserGrantedPermission(tokenID: number, permissionName: Permissions, permis
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-AtManager-revokeUserGrantedPermission(tokenID: int, permissionName: Permissions, permissionFlags: int): Promise<void>--><!--Device-AtManager-revokeUserGrantedPermission(tokenID: int, permissionName: Permissions, permissionFlags: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -1024,6 +1058,8 @@ revokeUserGrantedPermission(
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-AtManager-revokeUserGrantedPermission(        tokenID: int,        permissionName: Permissions,        permissionFlags: int,        callback: AsyncCallback<void>    ): void--><!--Device-AtManager-revokeUserGrantedPermission(        tokenID: int,        permissionName: Permissions,        permissionFlags: int,        callback: AsyncCallback<void>    ): void-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -1081,6 +1117,8 @@ setPermissionRequestToggleStatus(permissionName: Permissions, status: Permission
 **需要权限：** ohos.permission.DISABLE_PERMISSION_DIALOG
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-AtManager-setPermissionRequestToggleStatus(permissionName: Permissions, status: PermissionRequestToggleStatus): Promise<void>--><!--Device-AtManager-setPermissionRequestToggleStatus(permissionName: Permissions, status: PermissionRequestToggleStatus): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -1146,6 +1184,8 @@ setPermissionRequestToggleStatus(
 **需要权限：** ohos.permission.DISABLE_PERMISSION_DIALOG
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AtManager-setPermissionRequestToggleStatus(      permissionName: Permissions,      status: PermissionRequestToggleStatus,      subProfileId: int): Promise<void>--><!--Device-AtManager-setPermissionRequestToggleStatus(      permissionName: Permissions,      status: PermissionRequestToggleStatus,      subProfileId: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 

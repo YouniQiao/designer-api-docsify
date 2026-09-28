@@ -18,6 +18,8 @@ function optimizeStorage():Promise<void>
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC
 
+<!--Device-cloudSync-function optimizeStorage():Promise<void>--><!--Device-cloudSync-function optimizeStorage():Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **系统接口：** 此接口为系统接口。

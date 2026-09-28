@@ -22,6 +22,8 @@ function getUserAuthWidgetMgr(version: number): UserAuthWidgetMgr
 
 **需要权限：** ohos.permission.SUPPORT_USER_AUTH
 
+<!--Device-userAuth-function getUserAuthWidgetMgr(version: int): UserAuthWidgetMgr--><!--Device-userAuth-function getUserAuthWidgetMgr(version: int): UserAuthWidgetMgr-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 **系统接口：** 此接口为系统接口。

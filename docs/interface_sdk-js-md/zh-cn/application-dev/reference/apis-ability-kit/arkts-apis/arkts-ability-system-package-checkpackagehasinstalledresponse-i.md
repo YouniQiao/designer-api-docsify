@@ -15,6 +15,8 @@ export interface CheckPackageHasInstalledResponse
 
 **废弃版本：** 9
 
+<!--Device-unnamed-export interface CheckPackageHasInstalledResponse--><!--Device-unnamed-export interface CheckPackageHasInstalledResponse-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## 导入模块
@@ -36,5 +38,7 @@ result: boolean
 **起始版本：** 3
 
 **废弃版本：** 9
+
+<!--Device-CheckPackageHasInstalledResponse-result: boolean--><!--Device-CheckPackageHasInstalledResponse-result: boolean-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework

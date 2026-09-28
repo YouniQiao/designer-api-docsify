@@ -8,6 +8,8 @@ export class DeviceCapability
 
 **起始版本：** 6
 
+<!--Device-resourceManager-export class DeviceCapability--><!--Device-resourceManager-export class DeviceCapability-End-->
+
 **系统能力：** SystemCapability.Global.ResourceManager
 
 ## 导入模块
@@ -28,7 +30,9 @@ deviceType: DeviceType
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-DeviceCapability-deviceType: DeviceType--><!--Device-DeviceCapability-deviceType: DeviceType-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -44,6 +48,8 @@ screenDensity: ScreenDensity
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-DeviceCapability-screenDensity: ScreenDensity--><!--Device-DeviceCapability-screenDensity: ScreenDensity-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager

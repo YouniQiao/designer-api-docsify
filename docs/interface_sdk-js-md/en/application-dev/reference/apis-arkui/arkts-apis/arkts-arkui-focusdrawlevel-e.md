@@ -8,6 +8,8 @@ Enumerates the drawing levels of the focus box for a node.
 
 **Since:** 19
 
+<!--Device-unnamed-declare enum FocusDrawLevel--><!--Device-unnamed-declare enum FocusDrawLevel-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## SELF
@@ -26,6 +28,8 @@ The focus box is drawn on the node's own layer.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 19.
 
+<!--Device-FocusDrawLevel-SELF = 0--><!--Device-FocusDrawLevel-SELF = 0-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## TOP
@@ -43,5 +47,7 @@ The focus box is drawn on the topmost layer of the current instance's z-order.
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 19.
+
+<!--Device-FocusDrawLevel-TOP = 1--><!--Device-FocusDrawLevel-TOP = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

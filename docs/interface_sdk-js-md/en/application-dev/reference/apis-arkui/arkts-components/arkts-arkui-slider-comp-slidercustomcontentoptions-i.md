@@ -8,6 +8,8 @@ Provides accessibility configuration of the slider prefix and suffix.
 
 **Since:** 20
 
+<!--Device-unnamed-interface SliderCustomContentOptions--><!--Device-unnamed-interface SliderCustomContentOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityDescription
@@ -27,6 +29,8 @@ Default value: **"Double-tap to activate"**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-SliderCustomContentOptions-accessibilityDescription?: ResourceStr--><!--Device-SliderCustomContentOptions-accessibilityDescription?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -49,6 +53,8 @@ Default value: **false**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-SliderCustomContentOptions-accessibilityGroup?: boolean--><!--Device-SliderCustomContentOptions-accessibilityGroup?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -80,6 +86,8 @@ Default value: **"auto"**
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-SliderCustomContentOptions-accessibilityLevel?: string--><!--Device-SliderCustomContentOptions-accessibilityLevel?: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityText
@@ -99,5 +107,7 @@ Default value: **""**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-SliderCustomContentOptions-accessibilityText?: ResourceStr--><!--Device-SliderCustomContentOptions-accessibilityText?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

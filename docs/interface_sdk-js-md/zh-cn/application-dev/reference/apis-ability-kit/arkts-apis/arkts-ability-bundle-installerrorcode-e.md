@@ -14,6 +14,8 @@ export enum InstallErrorCode
 
 **废弃版本：** 9
 
+<!--Device-bundle-export enum InstallErrorCode--><!--Device-bundle-export enum InstallErrorCode-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## SUCCESS
@@ -27,6 +29,8 @@ SUCCESS = 0
 **起始版本：** 7
 
 **废弃版本：** 9
+
+<!--Device-InstallErrorCode-SUCCESS = 0--><!--Device-InstallErrorCode-SUCCESS = 0-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -42,6 +46,8 @@ STATUS_INSTALL_FAILURE = 1
 
 **废弃版本：** 9
 
+<!--Device-InstallErrorCode-STATUS_INSTALL_FAILURE = 1--><!--Device-InstallErrorCode-STATUS_INSTALL_FAILURE = 1-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## STATUS_INSTALL_FAILURE_ABORTED
@@ -55,6 +61,8 @@ STATUS_INSTALL_FAILURE_ABORTED = 2
 **起始版本：** 7
 
 **废弃版本：** 9
+
+<!--Device-InstallErrorCode-STATUS_INSTALL_FAILURE_ABORTED = 2--><!--Device-InstallErrorCode-STATUS_INSTALL_FAILURE_ABORTED = 2-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -70,6 +78,8 @@ STATUS_INSTALL_FAILURE_INVALID = 3
 
 **废弃版本：** 9
 
+<!--Device-InstallErrorCode-STATUS_INSTALL_FAILURE_INVALID = 3--><!--Device-InstallErrorCode-STATUS_INSTALL_FAILURE_INVALID = 3-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## STATUS_INSTALL_FAILURE_CONFLICT
@@ -83,6 +93,8 @@ STATUS_INSTALL_FAILURE_CONFLICT = 4
 **起始版本：** 7
 
 **废弃版本：** 9
+
+<!--Device-InstallErrorCode-STATUS_INSTALL_FAILURE_CONFLICT = 4--><!--Device-InstallErrorCode-STATUS_INSTALL_FAILURE_CONFLICT = 4-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -98,6 +110,8 @@ STATUS_INSTALL_FAILURE_STORAGE = 5
 
 **废弃版本：** 9
 
+<!--Device-InstallErrorCode-STATUS_INSTALL_FAILURE_STORAGE = 5--><!--Device-InstallErrorCode-STATUS_INSTALL_FAILURE_STORAGE = 5-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## STATUS_INSTALL_FAILURE_INCOMPATIBLE
@@ -111,6 +125,8 @@ STATUS_INSTALL_FAILURE_INCOMPATIBLE = 6
 **起始版本：** 7
 
 **废弃版本：** 9
+
+<!--Device-InstallErrorCode-STATUS_INSTALL_FAILURE_INCOMPATIBLE = 6--><!--Device-InstallErrorCode-STATUS_INSTALL_FAILURE_INCOMPATIBLE = 6-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -126,6 +142,8 @@ STATUS_UNINSTALL_FAILURE = 7
 
 **废弃版本：** 9
 
+<!--Device-InstallErrorCode-STATUS_UNINSTALL_FAILURE = 7--><!--Device-InstallErrorCode-STATUS_UNINSTALL_FAILURE = 7-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## STATUS_UNINSTALL_FAILURE_BLOCKED
@@ -139,6 +157,8 @@ STATUS_UNINSTALL_FAILURE_BLOCKED = 8
 **起始版本：** 7
 
 **废弃版本：** 9
+
+<!--Device-InstallErrorCode-STATUS_UNINSTALL_FAILURE_BLOCKED = 8--><!--Device-InstallErrorCode-STATUS_UNINSTALL_FAILURE_BLOCKED = 8-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -154,6 +174,8 @@ STATUS_UNINSTALL_FAILURE_ABORTED = 9
 
 **废弃版本：** 9
 
+<!--Device-InstallErrorCode-STATUS_UNINSTALL_FAILURE_ABORTED = 9--><!--Device-InstallErrorCode-STATUS_UNINSTALL_FAILURE_ABORTED = 9-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## STATUS_UNINSTALL_FAILURE_CONFLICT
@@ -167,6 +189,8 @@ STATUS_UNINSTALL_FAILURE_CONFLICT = 10
 **起始版本：** 7
 
 **废弃版本：** 9
+
+<!--Device-InstallErrorCode-STATUS_UNINSTALL_FAILURE_CONFLICT = 10--><!--Device-InstallErrorCode-STATUS_UNINSTALL_FAILURE_CONFLICT = 10-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -182,6 +206,8 @@ STATUS_INSTALL_FAILURE_DOWNLOAD_TIMEOUT = 0x0B
 
 **废弃版本：** 9
 
+<!--Device-InstallErrorCode-STATUS_INSTALL_FAILURE_DOWNLOAD_TIMEOUT = 0x0B--><!--Device-InstallErrorCode-STATUS_INSTALL_FAILURE_DOWNLOAD_TIMEOUT = 0x0B-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## STATUS_INSTALL_FAILURE_DOWNLOAD_FAILED
@@ -195,6 +221,8 @@ STATUS_INSTALL_FAILURE_DOWNLOAD_FAILED = 0x0C
 **起始版本：** 7
 
 **废弃版本：** 9
+
+<!--Device-InstallErrorCode-STATUS_INSTALL_FAILURE_DOWNLOAD_FAILED = 0x0C--><!--Device-InstallErrorCode-STATUS_INSTALL_FAILURE_DOWNLOAD_FAILED = 0x0C-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -210,6 +238,8 @@ STATUS_RECOVER_FAILURE_INVALID = 0x0D
 
 **废弃版本：** 9
 
+<!--Device-InstallErrorCode-STATUS_RECOVER_FAILURE_INVALID = 0x0D--><!--Device-InstallErrorCode-STATUS_RECOVER_FAILURE_INVALID = 0x0D-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## STATUS_ABILITY_NOT_FOUND
@@ -223,6 +253,8 @@ STATUS_ABILITY_NOT_FOUND = 0x40
 **起始版本：** 7
 
 **废弃版本：** 9
+
+<!--Device-InstallErrorCode-STATUS_ABILITY_NOT_FOUND = 0x40--><!--Device-InstallErrorCode-STATUS_ABILITY_NOT_FOUND = 0x40-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -238,6 +270,8 @@ STATUS_BMS_SERVICE_ERROR = 0x41
 
 **废弃版本：** 9
 
+<!--Device-InstallErrorCode-STATUS_BMS_SERVICE_ERROR = 0x41--><!--Device-InstallErrorCode-STATUS_BMS_SERVICE_ERROR = 0x41-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## STATUS_FAILED_NO_SPACE_LEFT
@@ -251,6 +285,8 @@ STATUS_FAILED_NO_SPACE_LEFT = 0x42
 **起始版本：** 8
 
 **废弃版本：** 9
+
+<!--Device-InstallErrorCode-STATUS_FAILED_NO_SPACE_LEFT = 0x42--><!--Device-InstallErrorCode-STATUS_FAILED_NO_SPACE_LEFT = 0x42-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -266,6 +302,8 @@ STATUS_GRANT_REQUEST_PERMISSIONS_FAILED = 0x43
 
 **废弃版本：** 9
 
+<!--Device-InstallErrorCode-STATUS_GRANT_REQUEST_PERMISSIONS_FAILED = 0x43--><!--Device-InstallErrorCode-STATUS_GRANT_REQUEST_PERMISSIONS_FAILED = 0x43-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## STATUS_INSTALL_PERMISSION_DENIED
@@ -280,6 +318,8 @@ STATUS_INSTALL_PERMISSION_DENIED = 0x44
 
 **废弃版本：** 9
 
+<!--Device-InstallErrorCode-STATUS_INSTALL_PERMISSION_DENIED = 0x44--><!--Device-InstallErrorCode-STATUS_INSTALL_PERMISSION_DENIED = 0x44-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## STATUS_UNINSTALL_PERMISSION_DENIED
@@ -293,5 +333,7 @@ STATUS_UNINSTALL_PERMISSION_DENIED = 0x45
 **起始版本：** 8
 
 **废弃版本：** 9
+
+<!--Device-InstallErrorCode-STATUS_UNINSTALL_PERMISSION_DENIED = 0x45--><!--Device-InstallErrorCode-STATUS_UNINSTALL_PERMISSION_DENIED = 0x45-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework

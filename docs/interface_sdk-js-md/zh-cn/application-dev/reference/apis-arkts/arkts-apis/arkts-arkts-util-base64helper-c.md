@@ -8,6 +8,8 @@ class Base64Helper
 
 **起始版本：** 9
 
+<!--Device-util-class Base64Helper--><!--Device-util-class Base64Helper-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -28,6 +30,8 @@ constructor()
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Base64Helper-constructor()--><!--Device-Base64Helper-constructor()-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **示例**
@@ -47,6 +51,8 @@ decode(src: Uint8Array | string, options?: Type): Promise<Uint8Array>
 **起始版本：** 9
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Base64Helper-decode(src: Uint8Array | string, options?: Type): Promise<Uint8Array>--><!--Device-Base64Helper-decode(src: Uint8Array | string, options?: Type): Promise<Uint8Array>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -88,6 +94,8 @@ decodeSync(src: Uint8Array | string, options?: Type): Uint8Array
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Base64Helper-decodeSync(src: Uint8Array | string, options?: Type): Uint8Array--><!--Device-Base64Helper-decodeSync(src: Uint8Array | string, options?: Type): Uint8Array-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -127,6 +135,8 @@ encode(src: Uint8Array, options?: Type): Promise<Uint8Array>
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Base64Helper-encode(src: Uint8Array, options?: Type): Promise<Uint8Array>--><!--Device-Base64Helper-encode(src: Uint8Array, options?: Type): Promise<Uint8Array>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -165,6 +175,8 @@ encodeSync(src: Uint8Array, options?: Type): Uint8Array
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Base64Helper-encodeSync(src: Uint8Array, options?: Type): Uint8Array--><!--Device-Base64Helper-encodeSync(src: Uint8Array, options?: Type): Uint8Array-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -201,6 +213,8 @@ encodeToString(src: Uint8Array, options?: Type): Promise<string>
 **起始版本：** 9
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Base64Helper-encodeToString(src: Uint8Array, options?: Type): Promise<string>--><!--Device-Base64Helper-encodeToString(src: Uint8Array, options?: Type): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -244,6 +258,8 @@ encodeToStringSync(src: Uint8Array, options?: Type): string
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Base64Helper-encodeToStringSync(src: Uint8Array, options?: Type): string--><!--Device-Base64Helper-encodeToStringSync(src: Uint8Array, options?: Type): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

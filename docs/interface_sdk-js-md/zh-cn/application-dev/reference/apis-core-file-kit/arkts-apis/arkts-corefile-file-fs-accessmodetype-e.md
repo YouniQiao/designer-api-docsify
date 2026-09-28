@@ -8,6 +8,8 @@ declare enum AccessModeType
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare enum AccessModeType--><!--Device-unnamed-declare enum AccessModeType-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## EXIST
@@ -21,6 +23,8 @@ EXIST = 0
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AccessModeType-EXIST = 0--><!--Device-AccessModeType-EXIST = 0-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -36,6 +40,8 @@ WRITE = 2
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AccessModeType-WRITE = 2--><!--Device-AccessModeType-WRITE = 2-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## READ
@@ -50,6 +56,8 @@ READ = 4
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AccessModeType-READ = 4--><!--Device-AccessModeType-READ = 4-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## READ_WRITE
@@ -63,5 +71,7 @@ READ_WRITE = 6
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AccessModeType-READ_WRITE = 6--><!--Device-AccessModeType-READ_WRITE = 6-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO

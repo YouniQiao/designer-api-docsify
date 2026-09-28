@@ -8,6 +8,8 @@ export class Collator
 
 **起始版本：** 8
 
+<!--Device-intl-export class Collator--><!--Device-intl-export class Collator-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## 导入模块
@@ -27,6 +29,8 @@ compare(first: string, second: string): number
 **起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Collator-compare(first: string, second: string): int--><!--Device-Collator-compare(first: string, second: string): int-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -66,6 +70,8 @@ constructor()
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Collator-constructor()--><!--Device-Collator-constructor()-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 **示例**
@@ -90,6 +96,8 @@ constructor(locale: string | Array<string>, options?: CollatorOptions)
 **起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Collator-constructor(locale: string | Array<string>, options?: CollatorOptions)--><!--Device-Collator-constructor(locale: string | Array<string>, options?: CollatorOptions)-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -120,6 +128,8 @@ resolvedOptions(): CollatorOptions
 **起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Collator-resolvedOptions(): CollatorOptions--><!--Device-Collator-resolvedOptions(): CollatorOptions-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 

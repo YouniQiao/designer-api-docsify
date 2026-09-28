@@ -20,6 +20,8 @@ function setCurrentFunctions(funcs: FunctionType): Promise<boolean>
 
 **替代接口：** [setCurrentFunctions](arkts-basicservices-usbmanager-setcurrentfunctions-f-sys.md)
 
+<!--Device-usb-function setCurrentFunctions(funcs: FunctionType): Promise<boolean>--><!--Device-usb-function setCurrentFunctions(funcs: FunctionType): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 **系统接口：** 此接口为系统接口。

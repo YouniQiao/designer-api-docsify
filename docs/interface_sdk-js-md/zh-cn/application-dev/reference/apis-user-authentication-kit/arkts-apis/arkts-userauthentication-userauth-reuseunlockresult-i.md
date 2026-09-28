@@ -16,6 +16,8 @@ interface ReuseUnlockResult
 
 **起始版本：** 12
 
+<!--Device-userAuth-interface ReuseUnlockResult--><!--Device-userAuth-interface ReuseUnlockResult-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 ## 导入模块
@@ -40,7 +42,9 @@ reuseDuration: number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ReuseUnlockResult-reuseDuration: int--><!--Device-ReuseUnlockResult-reuseDuration: int-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -61,6 +65,8 @@ reuseMode: ReuseMode
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ReuseUnlockResult-reuseMode: ReuseMode--><!--Device-ReuseUnlockResult-reuseMode: ReuseMode-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core

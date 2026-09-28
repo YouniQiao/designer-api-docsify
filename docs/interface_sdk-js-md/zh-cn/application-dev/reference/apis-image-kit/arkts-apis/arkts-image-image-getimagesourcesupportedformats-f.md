@@ -16,6 +16,8 @@ function getImageSourceSupportedFormats(): string[]
 
 **起始版本：** 20
 
+<!--Device-image-function getImageSourceSupportedFormats(): string[]--><!--Device-image-function getImageSourceSupportedFormats(): string[]-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **返回值：**

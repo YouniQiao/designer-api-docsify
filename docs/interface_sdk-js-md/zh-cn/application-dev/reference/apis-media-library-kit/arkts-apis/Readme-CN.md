@@ -1,6 +1,6 @@
 # ArkTS API<!--arkts-medialibrarykit-->
 
-- [@ohos.file.photoAccessHelper(MediaAssetManager)](arkts-medialibrary-file-photoaccesshelper.md)
+- [@ohos.file.photoAccessHelper(访问图片、视频资源的辅助函数)](arkts-medialibrary-file-photoaccesshelper.md)
   - [getPhotoAccessHelper](arkts-medialibrary-photoaccesshelper-getphotoaccesshelper-f.md)
   <!--Del-->
   - [getPhotoAccessHelper(系统接口)](arkts-medialibrary-photoaccesshelper-getphotoaccesshelper-f-sys.md)<!--DelEnd-->

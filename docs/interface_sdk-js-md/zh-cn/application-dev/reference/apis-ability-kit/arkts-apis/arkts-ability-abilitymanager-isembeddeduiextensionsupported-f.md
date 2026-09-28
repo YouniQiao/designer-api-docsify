@@ -18,6 +18,8 @@ function isEmbeddedUIExtensionSupported(): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-abilityManager-function isEmbeddedUIExtensionSupported(): boolean--><!--Device-abilityManager-function isEmbeddedUIExtensionSupported(): boolean-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **返回值：**

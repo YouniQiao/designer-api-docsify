@@ -8,6 +8,8 @@ UiTest框架在API9中，Component类代表了UI界面上的一个控件，提�
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare class Component--><!--Device-unnamed-declare class Component-End-->
+
 **系统能力：** SystemCapability.Test.UiTest
 
 **测试接口：** 此接口仅在自动化测试脚本中使用。
@@ -29,7 +31,9 @@ clearText(): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Component-clearText(): Promise<void>--><!--Device-Component-clearText(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -71,7 +75,9 @@ click(): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Component-click(): Promise<void>--><!--Device-Component-click(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -116,7 +122,9 @@ doubleClick(): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Component-doubleClick(): Promise<void>--><!--Device-Component-doubleClick(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -158,7 +166,9 @@ dragTo(target: Component): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Component-dragTo(target: Component): Promise<void>--><!--Device-Component-dragTo(target: Component): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -212,7 +222,9 @@ getBounds(): Promise<Rect>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Component-getBounds(): Promise<Rect>--><!--Device-Component-getBounds(): Promise<Rect>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -254,7 +266,9 @@ getBoundsCenter(): Promise<Point>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Component-getBoundsCenter(): Promise<Point>--><!--Device-Component-getBoundsCenter(): Promise<Point>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -296,7 +310,9 @@ getDescription(): Promise<string>
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Component-getDescription(): Promise<string>--><!--Device-Component-getDescription(): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -338,7 +354,9 @@ getDisplayId(): Promise<number>
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-Component-getDisplayId(): Promise<int>--><!--Device-Component-getDisplayId(): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -380,7 +398,9 @@ getHint(): Promise<string>
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-Component-getHint(): Promise<string>--><!--Device-Component-getHint(): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -422,7 +442,9 @@ getId(): Promise<string>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Component-getId(): Promise<string>--><!--Device-Component-getId(): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -464,7 +486,9 @@ getOriginalText(): Promise<string>
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-Component-getOriginalText(): Promise<string>--><!--Device-Component-getOriginalText(): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -513,7 +537,9 @@ getText(): Promise<string>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Component-getText(): Promise<string>--><!--Device-Component-getText(): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -555,7 +581,9 @@ getType(): Promise<string>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Component-getType(): Promise<string>--><!--Device-Component-getType(): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -597,7 +625,9 @@ inputText(text: string): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Component-inputText(text: string): Promise<void>--><!--Device-Component-inputText(text: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -651,7 +681,9 @@ inputText(text: string, mode: InputTextMode): Promise<void>
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-Component-inputText(text: string, mode: InputTextMode): Promise<void>--><!--Device-Component-inputText(text: string, mode: InputTextMode): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -702,7 +734,9 @@ isCheckable(): Promise<boolean>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Component-isCheckable(): Promise<boolean>--><!--Device-Component-isCheckable(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -748,7 +782,9 @@ isChecked(): Promise<boolean>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Component-isChecked(): Promise<boolean>--><!--Device-Component-isChecked(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -794,7 +830,9 @@ isClickable(): Promise<boolean>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Component-isClickable(): Promise<boolean>--><!--Device-Component-isClickable(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -840,7 +878,9 @@ isEnabled(): Promise<boolean>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Component-isEnabled(): Promise<boolean>--><!--Device-Component-isEnabled(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -886,7 +926,9 @@ isFocused(): Promise<boolean>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Component-isFocused(): Promise<boolean>--><!--Device-Component-isFocused(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -932,7 +974,9 @@ isLongClickable(): Promise<boolean>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Component-isLongClickable(): Promise<boolean>--><!--Device-Component-isLongClickable(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -978,7 +1022,9 @@ isScrollable(): Promise<boolean>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Component-isScrollable(): Promise<boolean>--><!--Device-Component-isScrollable(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -1024,7 +1070,9 @@ isSelected(): Promise<boolean>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Component-isSelected(): Promise<boolean>--><!--Device-Component-isSelected(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -1070,7 +1118,9 @@ longClick(): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Component-longClick(): Promise<void>--><!--Device-Component-longClick(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -1112,7 +1162,9 @@ pinchIn(scale: number): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Component-pinchIn(scale: double): Promise<void>--><!--Device-Component-pinchIn(scale: double): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -1161,7 +1213,9 @@ pinchOut(scale: number): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Component-pinchOut(scale: double): Promise<void>--><!--Device-Component-pinchOut(scale: double): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -1211,6 +1265,8 @@ scrollSearch(on: On): Promise<Component>
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Component-scrollSearch(on: On): Promise<Component>--><!--Device-Component-scrollSearch(on: On): Promise<Component>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -1266,6 +1322,8 @@ scrollSearch(on: On, vertical?: boolean, offset?: number): Promise<Component>
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-Component-scrollSearch(on: On, vertical?: boolean, offset?: number): Promise<Component>--><!--Device-Component-scrollSearch(on: On, vertical?: boolean, offset?: number): Promise<Component>-End-->
+
 **系统能力：** SystemCapability.Test.UiTest
 
 **测试接口：** 此接口仅在自动化测试脚本中使用。
@@ -1315,7 +1373,9 @@ scrollToBottom(speed?: number): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Component-scrollToBottom(speed?: int): Promise<void>--><!--Device-Component-scrollToBottom(speed?: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -1364,7 +1424,9 @@ scrollToTop(speed?: number): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Component-scrollToTop(speed?: int): Promise<void>--><!--Device-Component-scrollToTop(speed?: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 

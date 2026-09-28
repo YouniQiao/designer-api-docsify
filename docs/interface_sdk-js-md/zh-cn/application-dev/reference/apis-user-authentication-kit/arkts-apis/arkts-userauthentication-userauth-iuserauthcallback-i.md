@@ -12,6 +12,8 @@ interface IUserAuthCallback
 
 **替代接口：** [AuthEvent](arkts-userauthentication-userauth-authevent-i.md)
 
+<!--Device-userAuth-interface IUserAuthCallback--><!--Device-userAuth-interface IUserAuthCallback-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 ## 导入模块
@@ -37,6 +39,8 @@ onAcquireInfo?: (module: number, acquire: number, extraInfo: any) => void
 **废弃版本：** 9
 
 **替代接口：** [callback](arkts-userauthentication-userauth-authevent-i.md#callback)
+
+<!--Device-IUserAuthCallback-onAcquireInfo?: (module: number, acquire: number, extraInfo: any) => void--><!--Device-IUserAuthCallback-onAcquireInfo?: (module: number, acquire: number, extraInfo: any) => void-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -95,6 +99,8 @@ extraInfo中返回冻结时间，类型为[AuthResult](arkts-userauthentication-
 **废弃版本：** 9
 
 **替代接口：** [callback](arkts-userauthentication-userauth-authevent-i.md#callback)
+
+<!--Device-IUserAuthCallback-onResult: (result: number, extraInfo: AuthResult) => void--><!--Device-IUserAuthCallback-onResult: (result: number, extraInfo: AuthResult) => void-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 

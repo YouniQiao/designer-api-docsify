@@ -8,6 +8,8 @@ export interface DownloadProfileResult
 
 **起始版本：** 18
 
+<!--Device-eSIM-export interface DownloadProfileResult--><!--Device-eSIM-export interface DownloadProfileResult-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ cardId: number
 
 **起始版本：** 18
 
+<!--Device-DownloadProfileResult-cardId: int--><!--Device-DownloadProfileResult-cardId: int-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -46,6 +50,8 @@ responseResult: ResultCode
 
 **起始版本：** 18
 
+<!--Device-DownloadProfileResult-responseResult: ResultCode--><!--Device-DownloadProfileResult-responseResult: ResultCode-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +67,8 @@ solvableErrors: SolvableErrors
 **类型：** [SolvableErrors](arkts-telephony-esim-solvableerrors-e-sys.md)
 
 **起始版本：** 18
+
+<!--Device-DownloadProfileResult-solvableErrors: SolvableErrors--><!--Device-DownloadProfileResult-solvableErrors: SolvableErrors-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 

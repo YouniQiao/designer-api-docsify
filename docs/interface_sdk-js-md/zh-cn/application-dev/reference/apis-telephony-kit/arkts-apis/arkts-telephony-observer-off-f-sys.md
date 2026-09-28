@@ -20,6 +20,8 @@ function off(type: 'cellInfoChange', callback?: Callback<Array<CellInformation>>
 
 **起始版本：** 8
 
+<!--Device-observer-function off(type: 'cellInfoChange', callback?: Callback<Array<CellInformation>>): void--><!--Device-observer-function off(type: 'cellInfoChange', callback?: Callback<Array<CellInformation>>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
 **系统接口：** 此接口为系统接口。

@@ -8,6 +8,8 @@ Provides **SystemPasteboard** APIs. Before calling any **SystemPasteboard** API,
 
 **Since:** 6
 
+<!--Device-pasteboard-interface SystemPasteboard--><!--Device-pasteboard-interface SystemPasteboard-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 ## Modules to Import
@@ -26,7 +28,9 @@ Clears the system pasteboard. This API uses an asynchronous callback to return t
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-SystemPasteboard-clearData(callback: AsyncCallback<void>): void--><!--Device-SystemPasteboard-clearData(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -69,7 +73,9 @@ Clears the system pasteboard. This API uses a promise to return the result.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-SystemPasteboard-clearData(): Promise<void>--><!--Device-SystemPasteboard-clearData(): Promise<void>-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -102,7 +108,9 @@ Clears the system pasteboard. This API returns the result synchronously.
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-SystemPasteboard-clearDataSync(): void--><!--Device-SystemPasteboard-clearDataSync(): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -133,6 +141,8 @@ detectPatterns(patterns: Array<Pattern>): Promise<Array<Pattern>>
 Detects [patterns](arkts-basicservices-pasteboard-pattern-e.md) in the system pasteboard. This API uses a promise to return the result.
 
 **Since:** 13
+
+<!--Device-SystemPasteboard-detectPatterns(patterns: Array<Pattern>): Promise<Array<Pattern>>--><!--Device-SystemPasteboard-detectPatterns(patterns: Array<Pattern>): Promise<Array<Pattern>>-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -187,7 +197,9 @@ Obtains the number of pasteboard content changes. Returns the number of pasteboa
 
 **Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
+
+<!--Device-SystemPasteboard-getChangeCount(): long--><!--Device-SystemPasteboard-getChangeCount(): long-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -227,7 +239,9 @@ While most applications must [request permissions to access the pasteboard](../.
 - API version 12 and later: ohos.permission.READ_PASTEBOARD
 - API versions 9 to 11: N/A
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-SystemPasteboard-getData(callback: AsyncCallback<PasteData>): void--><!--Device-SystemPasteboard-getData(callback: AsyncCallback<PasteData>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -281,7 +295,9 @@ While most applications must [request permissions to access the pasteboard](../.
 - API version 12 and later: ohos.permission.READ_PASTEBOARD
 - API versions 9 to 11: N/A
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-SystemPasteboard-getData(): Promise<PasteData>--><!--Device-SystemPasteboard-getData(): Promise<PasteData>-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -324,7 +340,9 @@ Obtains the name of the application that provides data.
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-SystemPasteboard-getDataSource(): string--><!--Device-SystemPasteboard-getDataSource(): string-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -370,7 +388,9 @@ While most applications must [request permissions to access the pasteboard](../.
 - API version 12 and later: ohos.permission.READ_PASTEBOARD
 - API version 11: N/A
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-SystemPasteboard-getDataSync(): PasteData--><!--Device-SystemPasteboard-getDataSync(): PasteData-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -413,7 +433,9 @@ While most applications must [request permissions to access the pasteboard](../.
 
 **Required permissions:** ohos.permission.READ_PASTEBOARD
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 15.
+
+<!--Device-SystemPasteboard-getDataWithProgress(params: GetDataParams): Promise<PasteData>--><!--Device-SystemPasteboard-getDataWithProgress(params: GetDataParams): Promise<PasteData>-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -493,7 +515,9 @@ Obtains the types of PasteData in the system pasteboard. This API uses a promise
 
 **Since:** 14
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 14.
+
+<!--Device-SystemPasteboard-getMimeTypes(): Promise<Array<string>>--><!--Device-SystemPasteboard-getMimeTypes(): Promise<Array<string>>-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -530,7 +554,9 @@ While most applications must [request permissions to access the pasteboard](../.
 
 **Required permissions:** ohos.permission.READ_PASTEBOARD
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-SystemPasteboard-getUnifiedData(): Promise<unifiedDataChannel.UnifiedData>--><!--Device-SystemPasteboard-getUnifiedData(): Promise<unifiedDataChannel.UnifiedData>-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -581,7 +607,9 @@ While most applications must [request permissions to access the pasteboard](../.
 
 **Required permissions:** ohos.permission.READ_PASTEBOARD
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-SystemPasteboard-getUnifiedDataSync(): unifiedDataChannel.UnifiedData--><!--Device-SystemPasteboard-getUnifiedDataSync(): unifiedDataChannel.UnifiedData-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -622,7 +650,9 @@ Checks whether the system pasteboard contains data. This API uses an asynchronou
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-SystemPasteboard-hasData(callback: AsyncCallback<boolean>): void--><!--Device-SystemPasteboard-hasData(callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -665,7 +695,9 @@ Checks whether the system pasteboard contains data. This API uses a promise to r
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-SystemPasteboard-hasData(): Promise<boolean>--><!--Device-SystemPasteboard-hasData(): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -698,7 +730,9 @@ Checks whether the system pasteboard contains data. This API returns the result 
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-SystemPasteboard-hasDataSync(): boolean--><!--Device-SystemPasteboard-hasDataSync(): boolean-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -736,7 +770,9 @@ Checks whether the pasteboard contains data of the specified type.
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-SystemPasteboard-hasDataType(mimeType: string): boolean--><!--Device-SystemPasteboard-hasDataType(mimeType: string): boolean-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -781,7 +817,9 @@ Checks whether the PasteData is on a remote device. Transferring data across dev
 
 **Since:** 24
 
-**Atomic service API:** This API can be used in atomic services since API version 24.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 24.
+
+<!--Device-SystemPasteboard-hasRemoteData(): boolean--><!--Device-SystemPasteboard-hasRemoteData(): boolean-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -810,7 +848,9 @@ Checks whether the data in the pasteboard is from another device.
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-SystemPasteboard-isRemoteData(): boolean--><!--Device-SystemPasteboard-isRemoteData(): boolean-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -847,6 +887,8 @@ off(type: 'update', callback?: () => void): void
 Unsubscribes the content change event of the system pasteboard.
 
 **Since:** 7
+
+<!--Device-SystemPasteboard-off(type: 'update', callback?: () => void): void--><!--Device-SystemPasteboard-off(type: 'update', callback?: () => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -886,6 +928,8 @@ Remove a callback invoked when remote pasteboard content changes.
 
 **Since:** 22
 
+<!--Device-SystemPasteboard-offRemoteUpdate(callback?: UpdateCallback): void--><!--Device-SystemPasteboard-offRemoteUpdate(callback?: UpdateCallback): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Parameters:**
@@ -913,6 +957,8 @@ on(type: 'update', callback: () => void): void
 Subscribes the content change event of the system pasteboard.
 
 **Since:** 7
+
+<!--Device-SystemPasteboard-on(type: 'update', callback: () => void): void--><!--Device-SystemPasteboard-on(type: 'update', callback: () => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -952,6 +998,8 @@ Add a callback invoked when remote pasteboard content changes.
 
 **Since:** 22
 
+<!--Device-SystemPasteboard-onRemoteUpdate(callback: UpdateCallback): void--><!--Device-SystemPasteboard-onRemoteUpdate(callback: UpdateCallback): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Parameters:**
@@ -983,6 +1031,8 @@ Deletes the global pasteable range of the application.
 **Required permissions:** 
 - API version 14 and later: ohos.permission.MANAGE_PASTEBOARD_APP_SHARE_OPTION
 - API versions 12 to 13: N/A
+
+<!--Device-SystemPasteboard-removeAppShareOptions(): void--><!--Device-SystemPasteboard-removeAppShareOptions(): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -1018,6 +1068,8 @@ Sets pasteable range of PasteData for application.
 **Required permissions:** 
 - API version 14 and later: ohos.permission.MANAGE_PASTEBOARD_APP_SHARE_OPTION
 - API versions 12 to 13: N/A
+
+<!--Device-SystemPasteboard-setAppShareOptions(shareOptions: ShareOption): void--><!--Device-SystemPasteboard-setAppShareOptions(shareOptions: ShareOption): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -1058,7 +1110,9 @@ Writes a **PasteData** object to the pasteboard. This API uses an asynchronous c
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-SystemPasteboard-setData(data: PasteData, callback: AsyncCallback<void>): void--><!--Device-SystemPasteboard-setData(data: PasteData, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -1106,7 +1160,9 @@ Writes a **PasteData** object to the system pasteboard. This API uses a promise 
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-SystemPasteboard-setData(data: PasteData): Promise<void>--><!--Device-SystemPasteboard-setData(data: PasteData): Promise<void>-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -1157,7 +1213,9 @@ Writes data to the system system pasteboard. This API returns the result synchro
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-SystemPasteboard-setDataSync(data: PasteData): void--><!--Device-SystemPasteboard-setDataSync(data: PasteData): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -1197,7 +1255,9 @@ Writes a **PasteData** object to the system pasteboard. This API uses a promise 
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-SystemPasteboard-setUnifiedData(data: unifiedDataChannel.UnifiedData): Promise<void>--><!--Device-SystemPasteboard-setUnifiedData(data: unifiedDataChannel.UnifiedData): Promise<void>-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -1258,7 +1318,9 @@ Writes data to the system pasteboard. This API returns the result synchronously.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-SystemPasteboard-setUnifiedDataSync(data: unifiedDataChannel.UnifiedData): void--><!--Device-SystemPasteboard-setUnifiedDataSync(data: unifiedDataChannel.UnifiedData): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -1319,6 +1381,8 @@ Clears the system pasteboard. This API uses an asynchronous callback to return t
 
 **Substitutes:** [clearData](#cleardata)(callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-SystemPasteboard-clear(callback: AsyncCallback<void>): void--><!--Device-SystemPasteboard-clear(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Parameters:**
@@ -1362,6 +1426,8 @@ Clears the system pasteboard. This API uses a promise to return the result.
 
 **Substitutes:** [clearData](#cleardata)()
 
+<!--Device-SystemPasteboard-clear(): Promise<void>--><!--Device-SystemPasteboard-clear(): Promise<void>-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Return value:**
@@ -1396,6 +1462,8 @@ Obtains a **PasteData** object from the pasteboard. This API uses an asynchronou
 **Deprecated since:** 9
 
 **Substitutes:** [getData](#getdata)(callback: AsyncCallback&lt;PasteData&gt;)
+
+<!--Device-SystemPasteboard-getPasteData(callback: AsyncCallback<PasteData>): void--><!--Device-SystemPasteboard-getPasteData(callback: AsyncCallback<PasteData>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -1445,6 +1513,8 @@ Obtains a **PasteData** object from the pasteboard. This API uses a promise to r
 
 **Substitutes:** [getData](#getdata)()
 
+<!--Device-SystemPasteboard-getPasteData(): Promise<PasteData>--><!--Device-SystemPasteboard-getPasteData(): Promise<PasteData>-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Return value:**
@@ -1482,6 +1552,8 @@ Checks whether the system pasteboard contains data. This API uses an asynchronou
 **Deprecated since:** 9
 
 **Substitutes:** [hasData](#hasdata)(callback: AsyncCallback&lt;boolean&gt;)
+
+<!--Device-SystemPasteboard-hasPasteData(callback: AsyncCallback<boolean>): void--><!--Device-SystemPasteboard-hasPasteData(callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -1528,6 +1600,8 @@ Checks whether the system pasteboard contains data. This API uses a promise to r
 
 **Substitutes:** [hasData](#hasdata)()
 
+<!--Device-SystemPasteboard-hasPasteData(): Promise<boolean>--><!--Device-SystemPasteboard-hasPasteData(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Return value:**
@@ -1562,6 +1636,8 @@ Writes a **PasteData** object to the system pasteboard. This API uses an asynchr
 **Deprecated since:** 9
 
 **Substitutes:** [setData](#setdata)(data: PasteData, callback: AsyncCallback&lt;void&gt;)
+
+<!--Device-SystemPasteboard-setPasteData(data: PasteData, callback: AsyncCallback<void>): void--><!--Device-SystemPasteboard-setPasteData(data: PasteData, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -1607,6 +1683,8 @@ Writes a **PasteData** object to the system pasteboard. This API uses a promise 
 **Deprecated since:** 9
 
 **Substitutes:** [setData](#setdata-1)(data: PasteData)
+
+<!--Device-SystemPasteboard-setPasteData(data: PasteData): Promise<void>--><!--Device-SystemPasteboard-setPasteData(data: PasteData): Promise<void>-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 

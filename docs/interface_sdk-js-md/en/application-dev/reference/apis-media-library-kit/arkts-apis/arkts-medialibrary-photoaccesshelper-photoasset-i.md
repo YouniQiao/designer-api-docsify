@@ -8,6 +8,8 @@ PhotoAsset provides APIs for encapsulating file asset attributes.
 
 **Since:** 10
 
+<!--Device-photoAccessHelper-interface PhotoAsset--><!--Device-photoAccessHelper-interface PhotoAsset-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
@@ -27,6 +29,8 @@ Clones a media asset. The file name can be set, but the file type cannot be chan
 **Since:** 14
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-PhotoAsset-clone(title: string): Promise<PhotoAsset>--><!--Device-PhotoAsset-clone(title: string): Promise<PhotoAsset>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -88,7 +92,9 @@ Commits the modification on the file metadata to the database. This API uses an 
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-PhotoAsset-commitModify(callback: AsyncCallback<void>): void--><!--Device-PhotoAsset-commitModify(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -154,7 +160,9 @@ Commits the modification on the file metadata to the database. This API uses a p
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-PhotoAsset-commitModify(): Promise<void>--><!--Device-PhotoAsset-commitModify(): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -219,7 +227,9 @@ Obtains a **PhotoAsset** member parameter.
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+
+<!--Device-PhotoAsset-get(member: string): MemberType--><!--Device-PhotoAsset-get(member: string): MemberType-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -280,7 +290,9 @@ Obtains the thumbnail of a file. This API uses an asynchronous callback to retur
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+
+<!--Device-PhotoAsset-getThumbnail(callback: AsyncCallback<image.PixelMap>): void--><!--Device-PhotoAsset-getThumbnail(callback: AsyncCallback<image.PixelMap>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -340,7 +352,9 @@ Obtains the file thumbnail of the given size. This API uses an asynchronous call
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+
+<!--Device-PhotoAsset-getThumbnail(size: image.Size, callback: AsyncCallback<image.PixelMap>): void--><!--Device-PhotoAsset-getThumbnail(size: image.Size, callback: AsyncCallback<image.PixelMap>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -407,7 +421,9 @@ Obtains the file thumbnail of the given size. This API uses a promise to return 
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+
+<!--Device-PhotoAsset-getThumbnail(size?: image.Size): Promise<image.PixelMap>--><!--Device-PhotoAsset-getThumbnail(size?: image.Size): Promise<image.PixelMap>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -470,6 +486,8 @@ Sets a **PhotoAsset** member parameter.
 
 **Since:** 10
 
+<!--Device-PhotoAsset-set(member: string, value: string): void--><!--Device-PhotoAsset-set(member: string, value: string): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
@@ -525,6 +543,8 @@ Closes the current file. This API uses an asynchronous callback to return the re
 **Deprecated since:** 11
 
 **Substitutes:** close
+
+<!--Device-PhotoAsset-close(fd: number, callback: AsyncCallback<void>): void--><!--Device-PhotoAsset-close(fd: number, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -590,6 +610,8 @@ Closes the current file. This API uses a promise to return the result.
 **Deprecated since:** 11
 
 **Substitutes:** close
+
+<!--Device-PhotoAsset-close(fd: number): Promise<void>--><!--Device-PhotoAsset-close(fd: number): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -658,6 +680,8 @@ The returned FD must be closed when it is not required.
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-PhotoAsset-getReadOnlyFd(callback: AsyncCallback<number>): void--><!--Device-PhotoAsset-getReadOnlyFd(callback: AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
@@ -723,6 +747,8 @@ The returned FD must be closed when it is not required.
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-PhotoAsset-getReadOnlyFd(): Promise<number>--><!--Device-PhotoAsset-getReadOnlyFd(): Promise<number>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Return value:**
@@ -787,7 +813,9 @@ File name, including the file name extension, to display. The string length rang
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+
+<!--Device-PhotoAsset-readonly displayName: string--><!--Device-PhotoAsset-readonly displayName: string-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -803,7 +831,9 @@ Type of the file.
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+
+<!--Device-PhotoAsset-readonly photoType: PhotoType--><!--Device-PhotoAsset-readonly photoType: PhotoType-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -819,6 +849,8 @@ Media asset URI, for example, **file://media/Photo/1/IMG_datetime_0001/displayNa
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-PhotoAsset-readonly uri: string--><!--Device-PhotoAsset-readonly uri: string-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core

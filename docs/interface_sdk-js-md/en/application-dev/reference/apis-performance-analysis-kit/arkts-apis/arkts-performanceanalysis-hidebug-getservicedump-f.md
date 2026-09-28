@@ -18,6 +18,8 @@ Obtains system service information.
 
 **Required permissions:** ohos.permission.DUMP
 
+<!--Device-hidebug-function getServiceDump(serviceid : int, fd : int, args : Array<string>) : void--><!--Device-hidebug-function getServiceDump(serviceid : int, fd : int, args : Array<string>) : void-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **Parameters:**

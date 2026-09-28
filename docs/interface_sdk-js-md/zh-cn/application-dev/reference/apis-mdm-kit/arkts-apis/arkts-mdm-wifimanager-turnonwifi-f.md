@@ -24,6 +24,8 @@ function turnOnWifi(admin: Want, isForce: boolean): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-wifiManager-function turnOnWifi(admin: Want, isForce: boolean): void--><!--Device-wifiManager-function turnOnWifi(admin: Want, isForce: boolean): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**

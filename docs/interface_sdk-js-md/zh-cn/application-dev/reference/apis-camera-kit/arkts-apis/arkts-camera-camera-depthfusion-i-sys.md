@@ -10,6 +10,8 @@ Depth fusion class. It inherits from [DepthFusionQuery](arkts-camera-camera-dept
 
 **起始版本：** 14
 
+<!--Device-camera-interface DepthFusion extends DepthFusionQuery--><!--Device-camera-interface DepthFusion extends DepthFusionQuery-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -29,6 +31,8 @@ enableDepthFusion(enabled: boolean): void
 Enables depth fusion.
 
 **起始版本：** 14
+
+<!--Device-DepthFusion-enableDepthFusion(enabled: boolean): void--><!--Device-DepthFusion-enableDepthFusion(enabled: boolean): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -75,6 +79,8 @@ isDepthFusionEnabled(): boolean
 Checks whether depth fusion is enabled.
 
 **起始版本：** 14
+
+<!--Device-DepthFusion-isDepthFusionEnabled(): boolean--><!--Device-DepthFusion-isDepthFusionEnabled(): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

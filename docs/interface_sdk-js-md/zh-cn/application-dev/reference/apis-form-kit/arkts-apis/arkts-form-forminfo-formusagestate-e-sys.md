@@ -8,6 +8,8 @@ enum FormUsageState
 
 **起始版本：** 11
 
+<!--Device-formInfo-enum FormUsageState--><!--Device-formInfo-enum FormUsageState-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -22,6 +24,8 @@ USED = 0
 
 **起始版本：** 11
 
+<!--Device-FormUsageState-USED = 0--><!--Device-FormUsageState-USED = 0-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -35,6 +39,8 @@ UNUSED = 1
 表示卡片未被使用。
 
 **起始版本：** 11
+
+<!--Device-FormUsageState-UNUSED = 1--><!--Device-FormUsageState-UNUSED = 1-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 

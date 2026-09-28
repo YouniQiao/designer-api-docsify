@@ -8,6 +8,8 @@ interface CreateOsAccountOptions
 
 **起始版本：** 12
 
+<!--Device-osAccount-interface CreateOsAccountOptions--><!--Device-osAccount-interface CreateOsAccountOptions-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ allowedPreinstalledBundles?: Array<string>
 
 **起始版本：** 19
 
+<!--Device-CreateOsAccountOptions-allowedPreinstalledBundles?: Array<string>--><!--Device-CreateOsAccountOptions-allowedPreinstalledBundles?: Array<string>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ disallowedPreinstalledBundles?: Array<string>
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 19
+
+<!--Device-CreateOsAccountOptions-disallowedPreinstalledBundles?: Array<string>--><!--Device-CreateOsAccountOptions-disallowedPreinstalledBundles?: Array<string>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -68,6 +74,8 @@ shortName: string
 
 **起始版本：** 12
 
+<!--Device-CreateOsAccountOptions-shortName: string--><!--Device-CreateOsAccountOptions-shortName: string-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -83,6 +91,8 @@ token?: Uint8Array
 **类型：** Uint8Array
 
 **起始版本：** 24
+
+<!--Device-CreateOsAccountOptions-token?: Uint8Array--><!--Device-CreateOsAccountOptions-token?: Uint8Array-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 

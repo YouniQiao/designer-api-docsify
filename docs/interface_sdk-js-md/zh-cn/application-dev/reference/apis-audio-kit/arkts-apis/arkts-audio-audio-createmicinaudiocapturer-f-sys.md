@@ -28,6 +28,8 @@ function createMicInAudioCapturer(config: AudioCapturerMicInConfig): Promise<Aud
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-audio-function createMicInAudioCapturer(config: AudioCapturerMicInConfig): Promise<AudioCapturer | null>--><!--Device-audio-function createMicInAudioCapturer(config: AudioCapturerMicInConfig): Promise<AudioCapturer | null>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **系统接口：** 此接口为系统接口。

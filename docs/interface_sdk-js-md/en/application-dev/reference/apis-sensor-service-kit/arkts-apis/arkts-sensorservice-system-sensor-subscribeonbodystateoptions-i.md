@@ -12,6 +12,8 @@ Sets the parameters for subscribing to the device wearing status, including the 
 
 **Substitutes:** [WEAR_DETECTION](arkts-sensorservice-sensor-sensorid-e.md#wear_detection)
 
+<!--Device-unnamed-export interface SubscribeOnBodyStateOptions--><!--Device-unnamed-export interface SubscribeOnBodyStateOptions-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 ## Modules to Import
@@ -35,6 +37,8 @@ Callback invoked when an API call fails. The callback parameters are **data** of
 **Substitutes:** [on](arkts-sensorservice-sensor-on-f.md)
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-SubscribeOnBodyStateOptions-fail?: (data: string, code: number) => void--><!--Device-SubscribeOnBodyStateOptions-fail?: (data: string, code: number) => void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
@@ -60,6 +64,8 @@ Callback invoked when the wearing state of the device that houses the sensor is 
 **Substitutes:** [on](arkts-sensorservice-sensor-on-f.md)
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-SubscribeOnBodyStateOptions-success: (data: OnBodyStateResponse) => void--><!--Device-SubscribeOnBodyStateOptions-success: (data: OnBodyStateResponse) => void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 

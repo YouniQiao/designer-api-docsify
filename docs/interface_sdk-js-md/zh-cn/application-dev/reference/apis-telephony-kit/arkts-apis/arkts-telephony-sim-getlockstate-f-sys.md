@@ -18,6 +18,8 @@ Get the lock status of the SIM card in the specified slot.
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-sim-function getLockState(slotId: int, lockType: LockType, callback: AsyncCallback<LockState>): void--><!--Device-sim-function getLockState(slotId: int, lockType: LockType, callback: AsyncCallback<LockState>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -69,6 +71,8 @@ Get the lock status of the SIM card in the specified slot.
 **起始版本：** 8
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
+
+<!--Device-sim-function getLockState(slotId: int, lockType: LockType): Promise<LockState>--><!--Device-sim-function getLockState(slotId: int, lockType: LockType): Promise<LockState>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

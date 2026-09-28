@@ -14,6 +14,8 @@ Defines the response of ShowActionMenu.
 
 **Substitutes:** [ActionMenuSuccessResponse](arkts-arkui-promptaction-actionmenusuccessresponse-i.md)
 
+<!--Device-prompt-interface ActionMenuSuccessResponse--><!--Device-prompt-interface ActionMenuSuccessResponse-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -39,5 +41,7 @@ Defines the index of data.
 **Substitutes:** [index](arkts-arkui-promptaction-actionmenusuccessresponse-i.md#index)
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-ActionMenuSuccessResponse-index: number--><!--Device-ActionMenuSuccessResponse-index: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

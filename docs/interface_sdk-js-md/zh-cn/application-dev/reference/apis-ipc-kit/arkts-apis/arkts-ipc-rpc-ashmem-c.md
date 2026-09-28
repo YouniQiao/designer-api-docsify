@@ -17,6 +17,8 @@ class Ashmem
 
 **起始版本：** 8
 
+<!--Device-rpc-class Ashmem--><!--Device-rpc-class Ashmem-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 ## 导入模块
@@ -38,6 +40,8 @@ closeAshmem(): void
 > 关闭Ashmem对象前需要先解除地址映射。
 
 **起始版本：** 8
+
+<!--Device-Ashmem-closeAshmem(): void--><!--Device-Ashmem-closeAshmem(): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -64,6 +68,8 @@ static create(name: string, size: number): Ashmem
 静态方法，根据指定的名称和大小创建Ashmem对象。
 
 **起始版本：** 9
+
+<!--Device-Ashmem-static create(name: string, size: int): Ashmem--><!--Device-Ashmem-static create(name: string, size: int): Ashmem-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -117,6 +123,8 @@ static create(ashmem: Ashmem): Ashmem
 
 **起始版本：** 9
 
+<!--Device-Ashmem-static create(ashmem: Ashmem): Ashmem--><!--Device-Ashmem-static create(ashmem: Ashmem): Ashmem-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -166,6 +174,8 @@ getAshmemSize(): number
 
 **起始版本：** 8
 
+<!--Device-Ashmem-getAshmemSize(): int--><!--Device-Ashmem-getAshmemSize(): int-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -198,6 +208,8 @@ mapReadonlyAshmem(): void
 在此进程虚拟地址空间上创建只读的共享文件映射。
 
 **起始版本：** 9
+
+<!--Device-Ashmem-mapReadonlyAshmem(): void--><!--Device-Ashmem-mapReadonlyAshmem(): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -234,6 +246,8 @@ mapReadWriteAshmem(): void
 
 **起始版本：** 9
 
+<!--Device-Ashmem-mapReadWriteAshmem(): void--><!--Device-Ashmem-mapReadWriteAshmem(): void-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **错误码：**
@@ -268,6 +282,8 @@ mapTypedAshmem(mapType: number): void
 在此进程的虚拟地址空间上创建共享文件映射，映射区域大小由此Ashmem对象指定。
 
 **起始版本：** 9
+
+<!--Device-Ashmem-mapTypedAshmem(mapType: int): void--><!--Device-Ashmem-mapTypedAshmem(mapType: int): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -314,6 +330,8 @@ readDataFromAshmem(size: number, offset: number): ArrayBuffer
 > 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](#mapreadwriteashmem)进行映射。
 
 **起始版本：** 11
+
+<!--Device-Ashmem-readDataFromAshmem(size: int, offset: int): ArrayBuffer--><!--Device-Ashmem-readDataFromAshmem(size: int, offset: int): ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -374,6 +392,8 @@ setProtectionType(protectionType: number): void
 
 **起始版本：** 9
 
+<!--Device-Ashmem-setProtectionType(protectionType: int): void--><!--Device-Ashmem-setProtectionType(protectionType: int): void-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -416,6 +436,8 @@ unmapAshmem(): void
 
 **起始版本：** 8
 
+<!--Device-Ashmem-unmapAshmem(): void--><!--Device-Ashmem-unmapAshmem(): void-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **示例**
@@ -445,6 +467,8 @@ writeDataToAshmem(buf: ArrayBuffer, size: number, offset: number): void
 > 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](#mapreadwriteashmem)进行映射。
 
 **起始版本：** 11
+
+<!--Device-Ashmem-writeDataToAshmem(buf: ArrayBuffer, size: int, offset: int): void--><!--Device-Ashmem-writeDataToAshmem(buf: ArrayBuffer, size: int, offset: int): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -501,6 +525,8 @@ static createAshmem(name: string, size: number): Ashmem
 
 **替代接口：** create()
 
+<!--Device-Ashmem-static createAshmem(name: string, size: number): Ashmem--><!--Device-Ashmem-static createAshmem(name: string, size: number): Ashmem-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -546,6 +572,8 @@ static createAshmemFromExisting(ashmem: Ashmem): Ashmem
 
 **替代接口：** create()
 
+<!--Device-Ashmem-static createAshmemFromExisting(ashmem: Ashmem): Ashmem--><!--Device-Ashmem-static createAshmemFromExisting(ashmem: Ashmem): Ashmem-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -590,6 +618,8 @@ mapAshmem(mapType: number): boolean
 
 **替代接口：** [mapTypedAshmem](#maptypedashmem)(mapType: number)
 
+<!--Device-Ashmem-mapAshmem(mapType: number): boolean--><!--Device-Ashmem-mapAshmem(mapType: number): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -633,6 +663,8 @@ mapReadAndWriteAshmem(): boolean
 
 **替代接口：** [mapReadWriteAshmem](#mapreadwriteashmem)()
 
+<!--Device-Ashmem-mapReadAndWriteAshmem(): boolean--><!--Device-Ashmem-mapReadAndWriteAshmem(): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -669,6 +701,8 @@ mapReadOnlyAshmem(): boolean
 **废弃版本：** 9
 
 **替代接口：** [mapReadonlyAshmem](#mapreadonlyashmem)()
+
+<!--Device-Ashmem-mapReadOnlyAshmem(): boolean--><!--Device-Ashmem-mapReadOnlyAshmem(): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -710,6 +744,8 @@ readAshmem(size: number, offset: number): number[]
 **废弃版本：** 11
 
 **替代接口：** [readDataFromAshmem](#readdatafromashmem)(size: number, offset: number)
+
+<!--Device-Ashmem-readAshmem(size: number, offset: number): number[]--><!--Device-Ashmem-readAshmem(size: number, offset: number): number[]-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -772,6 +808,8 @@ readFromAshmem(size: number, offset: number): number[]
 
 **替代接口：** [readDataFromAshmem](#readdatafromashmem)(size: number, offset: number)
 
+<!--Device-Ashmem-readFromAshmem(size: number, offset: number): number[]--><!--Device-Ashmem-readFromAshmem(size: number, offset: number): number[]-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -821,6 +859,8 @@ setProtection(protectionType: number): boolean
 
 **替代接口：** [setProtectionType](#setprotectiontype)(protectionType: number)
 
+<!--Device-Ashmem-setProtection(protectionType: number): boolean--><!--Device-Ashmem-setProtection(protectionType: number): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -868,6 +908,8 @@ writeAshmem(buf: number[], size: number, offset: number): void
 **废弃版本：** 11
 
 **替代接口：** [writeDataToAshmem](#writedatatoashmem)(buf: ArrayBuffer, size: number, offset: number)
+
+<!--Device-Ashmem-writeAshmem(buf: number[], size: number, offset: number): void--><!--Device-Ashmem-writeAshmem(buf: number[], size: number, offset: number): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -923,6 +965,8 @@ writeToAshmem(buf: number[], size: number, offset: number): boolean
 
 **替代接口：** [writeDataToAshmem](#writedatatoashmem)(buf: ArrayBuffer, size: number, offset: number)
 
+<!--Device-Ashmem-writeToAshmem(buf: number[], size: number, offset: number): boolean--><!--Device-Ashmem-writeToAshmem(buf: number[], size: number, offset: number): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -971,6 +1015,8 @@ static readonly PROT_EXEC: number
 
 **起始版本：** 8
 
+<!--Device-Ashmem-static readonly PROT_EXEC: number--><!--Device-Ashmem-static readonly PROT_EXEC: number-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 ## PROT_NONE
@@ -986,6 +1032,8 @@ static readonly PROT_NONE: number
 **默认值：** 0
 
 **起始版本：** 8
+
+<!--Device-Ashmem-static readonly PROT_NONE: number--><!--Device-Ashmem-static readonly PROT_NONE: number-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -1003,6 +1051,8 @@ static readonly PROT_READ: number
 
 **起始版本：** 8
 
+<!--Device-Ashmem-static readonly PROT_READ: number--><!--Device-Ashmem-static readonly PROT_READ: number-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 ## PROT_WRITE
@@ -1018,5 +1068,7 @@ static readonly PROT_WRITE: number
 **默认值：** 2
 
 **起始版本：** 8
+
+<!--Device-Ashmem-static readonly PROT_WRITE: number--><!--Device-Ashmem-static readonly PROT_WRITE: number-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core

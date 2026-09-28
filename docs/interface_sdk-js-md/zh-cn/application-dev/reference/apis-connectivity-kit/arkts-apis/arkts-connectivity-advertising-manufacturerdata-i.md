@@ -8,6 +8,8 @@ interface ManufacturerData
 
 **起始版本：** 26.0.0
 
+<!--Device-advertising-interface ManufacturerData--><!--Device-advertising-interface ManufacturerData-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## 导入模块
@@ -30,6 +32,8 @@ manufacturerData: ArrayBuffer
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ManufacturerData-manufacturerData: ArrayBuffer--><!--Device-ManufacturerData-manufacturerData: ArrayBuffer-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## manufacturerId
@@ -45,5 +49,7 @@ manufacturerId: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ManufacturerData-manufacturerId: int--><!--Device-ManufacturerData-manufacturerId: int-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base

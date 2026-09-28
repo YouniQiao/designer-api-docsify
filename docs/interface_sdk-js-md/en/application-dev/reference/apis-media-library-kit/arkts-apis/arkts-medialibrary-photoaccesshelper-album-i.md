@@ -10,6 +10,8 @@ Provides APIs to manage albums.
 
 **Since:** 10
 
+<!--Device-photoAccessHelper-interface Album extends AbsAlbum--><!--Device-photoAccessHelper-interface Album extends AbsAlbum-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
@@ -29,6 +31,8 @@ Commits the modification on the album attributes to the database. This API uses 
 **Since:** 10
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-Album-commitModify(callback: AsyncCallback<void>): void--><!--Device-Album-commitModify(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -96,6 +100,8 @@ Commits the modification on the album attributes to the database. This API uses 
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-Album-commitModify(): Promise<void>--><!--Device-Album-commitModify(): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Return value:**
@@ -162,6 +168,8 @@ Adds image and video assets to a user album. Before the operation, ensure that t
 **Substitutes:** [addAssets](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md#addassets)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-Album-addAssets(assets: Array<PhotoAsset>, callback: AsyncCallback<void>): void--><!--Device-Album-addAssets(assets: Array<PhotoAsset>, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -234,6 +242,8 @@ Adds image and video assets to a user album. Before the operation, ensure that t
 **Substitutes:** [addAssets](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md#addassets)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-Album-addAssets(assets: Array<PhotoAsset>): Promise<void>--><!--Device-Album-addAssets(assets: Array<PhotoAsset>): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -309,6 +319,8 @@ Removes image and video assets from a user album. The album and file resources m
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-Album-removeAssets(assets: Array<PhotoAsset>, callback: AsyncCallback<void>): void--><!--Device-Album-removeAssets(assets: Array<PhotoAsset>, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
@@ -380,6 +392,8 @@ Removes image and video assets from a user album. The album and file resources m
 **Substitutes:** [removeAssets](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md#removeassets)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-Album-removeAssets(assets: Array<PhotoAsset>): Promise<void>--><!--Device-Album-removeAssets(assets: Array<PhotoAsset>): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -455,6 +469,8 @@ Number of images in the album.
 
 **Since:** 11
 
+<!--Device-Album-readonly imageCount?: int--><!--Device-Album-readonly imageCount?: int-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## videoCount
@@ -468,5 +484,7 @@ Number of videos in the album.
 **Type:** number
 
 **Since:** 11
+
+<!--Device-Album-readonly videoCount?: int--><!--Device-Album-readonly videoCount?: int-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core

@@ -24,6 +24,8 @@ function getDeviceEncryptionStatus(admin: Want): DeviceEncryptionStatus
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-securityManager-function getDeviceEncryptionStatus(admin: Want): DeviceEncryptionStatus--><!--Device-securityManager-function getDeviceEncryptionStatus(admin: Want): DeviceEncryptionStatus-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。

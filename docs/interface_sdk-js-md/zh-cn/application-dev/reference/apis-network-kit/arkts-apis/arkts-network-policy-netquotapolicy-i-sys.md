@@ -8,6 +8,8 @@ export interface NetQuotaPolicy
 
 **起始版本：** 10
 
+<!--Device-policy-export interface NetQuotaPolicy--><!--Device-policy-export interface NetQuotaPolicy-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ networkMatchRule: NetworkMatchRule
 
 **起始版本：** 10
 
+<!--Device-NetQuotaPolicy-networkMatchRule: NetworkMatchRule--><!--Device-NetQuotaPolicy-networkMatchRule: NetworkMatchRule-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ quotaPolicy: QuotaPolicy
 **类型：** [QuotaPolicy](arkts-network-policy-quotapolicy-i-sys.md)
 
 **起始版本：** 10
+
+<!--Device-NetQuotaPolicy-quotaPolicy: QuotaPolicy--><!--Device-NetQuotaPolicy-quotaPolicy: QuotaPolicy-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 

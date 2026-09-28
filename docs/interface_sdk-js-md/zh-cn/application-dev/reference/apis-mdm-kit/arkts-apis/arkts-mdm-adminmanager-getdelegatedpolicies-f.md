@@ -20,6 +20,8 @@ function getDelegatedPolicies(admin: Want, bundleName: string): Array<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-adminManager-function getDelegatedPolicies(admin: Want, bundleName: string): Array<string>--><!--Device-adminManager-function getDelegatedPolicies(admin: Want, bundleName: string): Array<string>-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**

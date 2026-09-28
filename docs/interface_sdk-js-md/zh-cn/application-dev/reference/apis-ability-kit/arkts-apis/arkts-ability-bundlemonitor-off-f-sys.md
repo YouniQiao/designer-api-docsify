@@ -18,6 +18,8 @@ function off(type: BundleChangedEvent, callback?: Callback<BundleChangedInfo>): 
 
 **需要权限：** ohos.permission.LISTEN_BUNDLE_CHANGE
 
+<!--Device-bundleMonitor-function off(type: BundleChangedEvent, callback?: Callback<BundleChangedInfo>): void--><!--Device-bundleMonitor-function off(type: BundleChangedEvent, callback?: Callback<BundleChangedInfo>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。

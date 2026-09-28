@@ -21,7 +21,9 @@ function getProfileByAbility(moduleName: string, abilityName: string, metadataNa
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-bundleManager-function getProfileByAbility(moduleName: string, abilityName: string, metadataName: string, callback: AsyncCallback<Array<string>>): void--><!--Device-bundleManager-function getProfileByAbility(moduleName: string, abilityName: string, metadataName: string, callback: AsyncCallback<Array<string>>): void-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -87,7 +89,9 @@ function getProfileByAbility(moduleName: string, abilityName: string, metadataNa
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-bundleManager-function getProfileByAbility(moduleName: string, abilityName: string, metadataName?: string): Promise<Array<string>>--><!--Device-bundleManager-function getProfileByAbility(moduleName: string, abilityName: string, metadataName?: string): Promise<Array<string>>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

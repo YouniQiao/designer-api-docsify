@@ -4,6 +4,8 @@
 
 **起始版本：** 7
 
+<!--Device-unnamed-declare namespace process--><!--Device-unnamed-declare namespace process-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块

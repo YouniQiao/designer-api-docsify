@@ -20,4 +20,6 @@ aliasName: Alias, which is used as the matching identifier for bidirectional dat
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-unnamed-declare const Provider: (aliasName?: string) => PropertyDecorator--><!--Device-unnamed-declare const Provider: (aliasName?: string) => PropertyDecorator-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

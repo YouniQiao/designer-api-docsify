@@ -22,6 +22,8 @@ Queries the key of a contact based on the specified contact ID. This API uses an
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryKey(id: number, callback: AsyncCallback<string>): void--><!--Device-contact-function queryKey(id: number, callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
@@ -60,6 +62,8 @@ Queries the key of a contact based on the specified contact ID. This API uses an
 **Since:** 10
 
 **Required permissions:** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryKey(context: Context, id: number, callback: AsyncCallback<string>): void--><!--Device-contact-function queryKey(context: Context, id: number, callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -119,6 +123,8 @@ Queries the key of a contact based on the specified contact ID and holder. This 
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryKey(id: number, holder: Holder, callback: AsyncCallback<string>): void--><!--Device-contact-function queryKey(id: number, holder: Holder, callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
@@ -162,6 +168,8 @@ Queries the key of a contact based on the specified contact ID and holder. This 
 **Since:** 10
 
 **Required permissions:** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryKey(context: Context, id: number, holder: Holder, callback: AsyncCallback<string>): void--><!--Device-contact-function queryKey(context: Context, id: number, holder: Holder, callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -226,6 +234,8 @@ Queries the key of a contact based on the specified contact ID and holder. This 
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryKey(id: number, holder?: Holder): Promise<string>--><!--Device-contact-function queryKey(id: number, holder?: Holder): Promise<string>-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
@@ -270,6 +280,8 @@ Queries the key of a contact based on the specified contact ID and holder. This 
 **Since:** 10
 
 **Required permissions:** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryKey(context: Context, id: number, holder?: Holder): Promise<string>--><!--Device-contact-function queryKey(context: Context, id: number, holder?: Holder): Promise<string>-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 

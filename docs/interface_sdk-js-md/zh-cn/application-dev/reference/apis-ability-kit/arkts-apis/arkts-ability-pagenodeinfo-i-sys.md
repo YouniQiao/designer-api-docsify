@@ -8,6 +8,8 @@ export default interface PageNodeInfo
 
 **起始版本：** 11
 
+<!--Device-unnamed-export default interface PageNodeInfo--><!--Device-unnamed-export default interface PageNodeInfo-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **系统接口：** 此接口为系统接口。
@@ -25,6 +27,8 @@ autoFillType: AutoFillType
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PageNodeInfo-autoFillType: AutoFillType--><!--Device-PageNodeInfo-autoFillType: AutoFillType-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -44,6 +48,8 @@ depth: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PageNodeInfo-depth: int--><!--Device-PageNodeInfo-depth: int-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +67,8 @@ enableAutoFill: boolean
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PageNodeInfo-enableAutoFill: boolean--><!--Device-PageNodeInfo-enableAutoFill: boolean-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -80,6 +88,8 @@ The id of page node.取值限定为整数。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PageNodeInfo-id: int--><!--Device-PageNodeInfo-id: int-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **系统接口：** 此接口为系统接口。
@@ -97,6 +107,8 @@ isFocus: boolean
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PageNodeInfo-isFocus: boolean--><!--Device-PageNodeInfo-isFocus: boolean-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -116,6 +128,8 @@ metadata?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PageNodeInfo-metadata?: string--><!--Device-PageNodeInfo-metadata?: string-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **系统接口：** 此接口为系统接口。
@@ -133,6 +147,8 @@ passwordRules?: string
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PageNodeInfo-passwordRules?: string--><!--Device-PageNodeInfo-passwordRules?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -152,6 +168,8 @@ placeholder?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PageNodeInfo-placeholder?: string--><!--Device-PageNodeInfo-placeholder?: string-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **系统接口：** 此接口为系统接口。
@@ -169,6 +187,8 @@ rect: AutoFillRect
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PageNodeInfo-rect: AutoFillRect--><!--Device-PageNodeInfo-rect: AutoFillRect-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -188,6 +208,8 @@ tag: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PageNodeInfo-tag: string--><!--Device-PageNodeInfo-tag: string-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **系统接口：** 此接口为系统接口。
@@ -205,6 +227,8 @@ value: string
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PageNodeInfo-value: string--><!--Device-PageNodeInfo-value: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 

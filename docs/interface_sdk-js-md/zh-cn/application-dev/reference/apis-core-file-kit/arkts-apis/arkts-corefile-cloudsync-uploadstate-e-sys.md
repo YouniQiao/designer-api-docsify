@@ -8,6 +8,8 @@ enum UploadState
 
 **起始版本：** 26.0.0
 
+<!--Device-cloudSync-enum UploadState--><!--Device-cloudSync-enum UploadState-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **系统接口：** 此接口为系统接口。
@@ -23,6 +25,8 @@ WAITING = 0
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UploadState-WAITING = 0--><!--Device-UploadState-WAITING = 0-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -40,6 +44,8 @@ RUNNING = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UploadState-RUNNING = 1--><!--Device-UploadState-RUNNING = 1-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **系统接口：** 此接口为系统接口。
@@ -55,6 +61,8 @@ COMPLETED = 2
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UploadState-COMPLETED = 2--><!--Device-UploadState-COMPLETED = 2-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -72,6 +80,8 @@ FAILED = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UploadState-FAILED = 3--><!--Device-UploadState-FAILED = 3-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **系统接口：** 此接口为系统接口。
@@ -88,6 +98,8 @@ STOPPED = 4
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UploadState-STOPPED = 4--><!--Device-UploadState-STOPPED = 4-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **系统接口：** 此接口为系统接口。
@@ -103,6 +115,8 @@ PAUSED = 5
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UploadState-PAUSED = 5--><!--Device-UploadState-PAUSED = 5-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 

@@ -8,6 +8,8 @@ Provides basic parameters for creating an **ArcList** component.
 
 **Since:** 18
 
+<!--Device-unnamed-declare interface ArkListOptions--><!--Device-unnamed-declare interface ArkListOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## Modules to Import
@@ -30,6 +32,8 @@ Header component of **ArcList**, used to display a title or custom content at th
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ArkListOptions-header?: ComponentContent--><!--Device-ArkListOptions-header?: ComponentContent-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## initialIndex
@@ -50,6 +54,8 @@ Default value: **0**
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ArkListOptions-initialIndex?: number--><!--Device-ArkListOptions-initialIndex?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## scroller
@@ -60,12 +66,14 @@ scroller?: Scroller
 
 Controller of the scrollable component. After being bound to **ArcList**, it can be used to control the scrolling of **ArcList**. If not set, no scroll controller is bound.
 
-**Note:** It is not allowed to bind the same scroll control object with other scrollable components, such as [List](arkts-arkui-list-comp.md#list), [Grid](arkts-arkui-grid-comp.md#grid), [Scroll](arkts-arkui-scroll-comp.md#scroll), and [WaterFlow](arkts-arkui-waterflow-comp.md#water_flow).
+**Note:** It is not allowed to bind the same scroll control object with other scrollable components, such as [List](arkts-arkui-list-comp.md), [Grid](arkts-arkui-grid-comp.md), [Scroll](arkts-arkui-scroll-comp.md), and [WaterFlow](arkts-arkui-waterflow-comp.md).
 
 **Type:** [Scroller](arkts-arkui-scroll-comp-scroller-c.md)
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArkListOptions-scroller?: Scroller--><!--Device-ArkListOptions-scroller?: Scroller-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle

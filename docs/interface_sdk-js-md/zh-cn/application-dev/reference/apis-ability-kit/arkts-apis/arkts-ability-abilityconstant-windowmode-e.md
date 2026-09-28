@@ -8,6 +8,8 @@ export enum WindowMode
 
 **起始版本：** 12
 
+<!--Device-AbilityConstant-export enum WindowMode--><!--Device-AbilityConstant-export enum WindowMode-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## WINDOW_MODE_FULLSCREEN
@@ -21,6 +23,8 @@ WINDOW_MODE_FULLSCREEN = 1
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WindowMode-WINDOW_MODE_FULLSCREEN = 1--><!--Device-WindowMode-WINDOW_MODE_FULLSCREEN = 1-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -36,6 +40,8 @@ WINDOW_MODE_SPLIT_PRIMARY = 100
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-WindowMode-WINDOW_MODE_SPLIT_PRIMARY = 100--><!--Device-WindowMode-WINDOW_MODE_SPLIT_PRIMARY = 100-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## WINDOW_MODE_SPLIT_SECONDARY
@@ -50,6 +56,8 @@ WINDOW_MODE_SPLIT_SECONDARY = 101
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-WindowMode-WINDOW_MODE_SPLIT_SECONDARY = 101--><!--Device-WindowMode-WINDOW_MODE_SPLIT_SECONDARY = 101-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## WINDOW_MODE_SPLIT
@@ -63,5 +71,7 @@ WINDOW_MODE_SPLIT = 105
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WindowMode-WINDOW_MODE_SPLIT = 105--><!--Device-WindowMode-WINDOW_MODE_SPLIT = 105-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

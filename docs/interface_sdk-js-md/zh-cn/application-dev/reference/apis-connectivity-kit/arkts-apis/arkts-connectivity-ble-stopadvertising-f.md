@@ -22,7 +22,9 @@ function stopAdvertising(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ble-function stopAdvertising(): void--><!--Device-ble-function stopAdvertising(): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -64,6 +66,8 @@ function stopAdvertising(advertisingId: number, callback: AsyncCallback<void>): 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ble-function stopAdvertising(advertisingId: int, callback: AsyncCallback<void>): void--><!--Device-ble-function stopAdvertising(advertisingId: int, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -171,6 +175,8 @@ function stopAdvertising(advertisingId: number): Promise<void>
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ble-function stopAdvertising(advertisingId: int): Promise<void>--><!--Device-ble-function stopAdvertising(advertisingId: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

@@ -8,6 +8,8 @@ interface XMPTag
 
 **起始版本：** 26.0.0
 
+<!--Device-image-interface XMPTag--><!--Device-image-interface XMPTag-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ XMP标签名称。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-XMPTag-name: string--><!--Device-XMPTag-name: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## type
@@ -45,6 +49,8 @@ XMP标签类型。
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-XMPTag-type: XMPTagType--><!--Device-XMPTag-type: XMPTagType-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -62,6 +68,8 @@ XMP标签值。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-XMPTag-value?: string--><!--Device-XMPTag-value?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## xmpNamespace
@@ -77,5 +85,7 @@ XMP命名空间。
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-XMPTag-xmpNamespace: XMPNamespace--><!--Device-XMPTag-xmpNamespace: XMPNamespace-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core

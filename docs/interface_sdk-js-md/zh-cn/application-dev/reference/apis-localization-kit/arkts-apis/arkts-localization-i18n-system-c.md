@@ -8,6 +8,8 @@ export class System
 
 **起始版本：** 9
 
+<!--Device-i18n-export class System--><!--Device-i18n-export class System-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## 导入模块
@@ -26,7 +28,9 @@ static getAppPreferredLanguage(): string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-System-static getAppPreferredLanguage(): string--><!--Device-System-static getAppPreferredLanguage(): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -54,7 +58,9 @@ static getDisplayCountry(country: string, locale: string, sentenceCase?: boolean
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-System-static getDisplayCountry(country: string, locale: string, sentenceCase?: boolean): string--><!--Device-System-static getDisplayCountry(country: string, locale: string, sentenceCase?: boolean): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -103,7 +109,9 @@ static getDisplayLanguage(language: string, locale: string, sentenceCase?: boole
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-System-static getDisplayLanguage(language: string, locale: string, sentenceCase?: boolean): string--><!--Device-System-static getDisplayLanguage(language: string, locale: string, sentenceCase?: boolean): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -153,7 +161,9 @@ static getFirstDayOfWeek(): WeekDay
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-System-static getFirstDayOfWeek(): WeekDay--><!--Device-System-static getFirstDayOfWeek(): WeekDay-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -181,7 +191,9 @@ static getFirstPreferredLanguage(): string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-System-static getFirstPreferredLanguage(): string--><!--Device-System-static getFirstPreferredLanguage(): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -209,7 +221,9 @@ static getPreferredLanguageList(): Array<string>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-System-static getPreferredLanguageList(): Array<string>--><!--Device-System-static getPreferredLanguageList(): Array<string>-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -237,7 +251,9 @@ static getSimplifiedLanguage(language?: string): string
 
 **起始版本：** 15
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-System-static getSimplifiedLanguage(language?: string): string--><!--Device-System-static getSimplifiedLanguage(language?: string): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -287,7 +303,9 @@ static getSystemCountries(language: string): Array<string>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-System-static getSystemCountries(language: string): Array<string>--><!--Device-System-static getSystemCountries(language: string): Array<string>-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -335,9 +353,11 @@ static getSystemLanguage(): string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-System-static getSystemLanguage(): string--><!--Device-System-static getSystemLanguage(): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -365,7 +385,9 @@ static getSystemLanguages(): Array<string>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-System-static getSystemLanguages(): Array<string>--><!--Device-System-static getSystemLanguages(): Array<string>-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -394,7 +416,9 @@ static getSystemLocaleInstance(): Intl.Locale
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-System-static getSystemLocaleInstance(): Intl.Locale--><!--Device-System-static getSystemLocaleInstance(): Intl.Locale-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -422,7 +446,9 @@ static getSystemRegion(): string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-System-static getSystemRegion(): string--><!--Device-System-static getSystemRegion(): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -450,7 +476,9 @@ static getTemperatureName(type: TemperatureType): string
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-System-static getTemperatureName(type: TemperatureType): string--><!--Device-System-static getTemperatureName(type: TemperatureType): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -497,7 +525,9 @@ static getTemperatureType(): TemperatureType
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-System-static getTemperatureType(): TemperatureType--><!--Device-System-static getTemperatureType(): TemperatureType-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -525,7 +555,9 @@ static getUsingLocalDigit(): boolean
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-System-static getUsingLocalDigit(): boolean--><!--Device-System-static getUsingLocalDigit(): boolean-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -553,9 +585,11 @@ static is24HourClock(): boolean
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-System-static is24HourClock(): boolean--><!--Device-System-static is24HourClock(): boolean-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -583,7 +617,9 @@ static isSuggested(language: string, region?: string): boolean
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-System-static isSuggested(language: string, region?: string): boolean--><!--Device-System-static isSuggested(language: string, region?: string): boolean-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -632,7 +668,9 @@ static setAppPreferredLanguage(language: string): void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-System-static setAppPreferredLanguage(language: string): void--><!--Device-System-static setAppPreferredLanguage(language: string): void-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -680,6 +718,8 @@ static getSystemLocale(): string
 **替代接口：** [getSystemLocaleInstance](#getsystemlocaleinstance)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-System-static getSystemLocale(): string--><!--Device-System-static getSystemLocale(): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 

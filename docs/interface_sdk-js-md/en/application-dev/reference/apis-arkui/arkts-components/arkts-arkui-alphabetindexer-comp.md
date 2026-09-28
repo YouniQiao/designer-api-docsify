@@ -20,6 +20,8 @@ Creates an **AlphabetIndexer** component.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-AlphabetIndexerInterface-(options: AlphabetIndexerOptions): AlphabetIndexerAttribute--><!--Device-AlphabetIndexerInterface-(options: AlphabetIndexerOptions): AlphabetIndexerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

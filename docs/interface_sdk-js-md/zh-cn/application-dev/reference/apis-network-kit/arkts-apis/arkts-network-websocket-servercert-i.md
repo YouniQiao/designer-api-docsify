@@ -8,6 +8,8 @@ export interface ServerCert
 
 **起始版本：** 19
 
+<!--Device-webSocket-export interface ServerCert--><!--Device-webSocket-export interface ServerCert-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块
@@ -28,6 +30,8 @@ certPath: string
 
 **起始版本：** 19
 
+<!--Device-ServerCert-certPath: string--><!--Device-ServerCert-certPath: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## keyPath
@@ -41,5 +45,7 @@ keyPath: string
 **类型：** string
 
 **起始版本：** 19
+
+<!--Device-ServerCert-keyPath: string--><!--Device-ServerCert-keyPath: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack

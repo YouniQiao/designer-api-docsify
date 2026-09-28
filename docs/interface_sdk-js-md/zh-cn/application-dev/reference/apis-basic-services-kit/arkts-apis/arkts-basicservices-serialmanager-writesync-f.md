@@ -21,6 +21,8 @@ function writeSync(portId: number, buffer: Uint8Array, timeout?: number): number
 
 **起始版本：** 19
 
+<!--Device-serialManager-function writeSync(portId: int, buffer: Uint8Array, timeout?: int): int--><!--Device-serialManager-function writeSync(portId: int, buffer: Uint8Array, timeout?: int): int-End-->
+
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
 **参数：**

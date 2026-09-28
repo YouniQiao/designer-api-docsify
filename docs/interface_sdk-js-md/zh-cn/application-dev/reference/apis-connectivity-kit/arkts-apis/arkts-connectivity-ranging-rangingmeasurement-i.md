@@ -8,6 +8,8 @@ interface RangingMeasurement
 
 **起始版本：** 26.0.0
 
+<!--Device-ranging-interface RangingMeasurement--><!--Device-ranging-interface RangingMeasurement-End-->
+
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ confidence: RangingConfidence
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RangingMeasurement-confidence: RangingConfidence--><!--Device-RangingMeasurement-confidence: RangingConfidence-End-->
+
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core
 
 ## value
@@ -45,5 +49,7 @@ value: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-RangingMeasurement-value: int--><!--Device-RangingMeasurement-value: int-End-->
 
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core

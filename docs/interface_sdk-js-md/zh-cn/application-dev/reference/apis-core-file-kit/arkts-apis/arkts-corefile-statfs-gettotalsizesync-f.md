@@ -16,6 +16,8 @@ function getTotalSizeSync(path: string): number
 
 **起始版本：** 10
 
+<!--Device-statfs-function getTotalSizeSync(path: string): long--><!--Device-statfs-function getTotalSizeSync(path: string): long-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**

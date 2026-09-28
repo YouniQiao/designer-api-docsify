@@ -24,6 +24,8 @@ function setPrinterDisabled(admin: Want, disabled: boolean, callback: AsyncCallb
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-restrictions-function setPrinterDisabled(admin: Want, disabled: boolean, callback: AsyncCallback<void>): void--><!--Device-restrictions-function setPrinterDisabled(admin: Want, disabled: boolean, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -87,6 +89,8 @@ function setPrinterDisabled(admin: Want, disabled: boolean): Promise<void>
 **需要权限：** ohos.permission.ENTERPRISE_RESTRICT_POLICY
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-restrictions-function setPrinterDisabled(admin: Want, disabled: boolean): Promise<void>--><!--Device-restrictions-function setPrinterDisabled(admin: Want, disabled: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

@@ -15,6 +15,8 @@ interface ScryptSpec extends KdfSpec
 
 **起始版本：** 18
 
+<!--Device-cryptoFramework-interface ScryptSpec extends KdfSpec--><!--Device-cryptoFramework-interface ScryptSpec extends KdfSpec-End-->
+
 **系统能力：** SystemCapability.Security.CryptoFramework.Kdf
 
 ## 导入模块
@@ -35,7 +37,9 @@ keySize: number
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-ScryptSpec-keySize: int--><!--Device-ScryptSpec-keySize: int-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Kdf
 
@@ -51,7 +55,9 @@ maxMemory: number
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-ScryptSpec-maxMemory: long--><!--Device-ScryptSpec-maxMemory: long-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Kdf
 
@@ -67,7 +73,9 @@ CPU/内存开销参数，需要为正整数。
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-ScryptSpec-n: long--><!--Device-ScryptSpec-n: long-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Kdf
 
@@ -83,7 +91,9 @@ p: number
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-ScryptSpec-p: long--><!--Device-ScryptSpec-p: long-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Kdf
 
@@ -99,7 +109,9 @@ passphrase: string | Uint8Array
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-ScryptSpec-passphrase: string | Uint8Array--><!--Device-ScryptSpec-passphrase: string | Uint8Array-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Kdf
 
@@ -115,7 +127,9 @@ r: number
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-ScryptSpec-r: long--><!--Device-ScryptSpec-r: long-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Kdf
 
@@ -131,6 +145,8 @@ salt: Uint8Array
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-ScryptSpec-salt: Uint8Array--><!--Device-ScryptSpec-salt: Uint8Array-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Kdf

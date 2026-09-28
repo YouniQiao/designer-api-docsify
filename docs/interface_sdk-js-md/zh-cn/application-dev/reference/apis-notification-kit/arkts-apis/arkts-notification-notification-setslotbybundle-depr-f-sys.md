@@ -21,6 +21,8 @@ function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot, callback:
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notification-function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot, callback: AsyncCallback<void>): void--><!--Device-notification-function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +53,8 @@ function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot): Promise<
 **替代接口：** [setSlotByBundle](arkts-notification-notificationmanager-setslotbybundle-f-sys.md)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notification-function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot): Promise<void>--><!--Device-notification-function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

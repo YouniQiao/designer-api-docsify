@@ -12,6 +12,8 @@ interface Rect
 
 **起始版本：** 10
 
+<!--Device-camera-interface Rect--><!--Device-camera-interface Rect-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
@@ -32,7 +34,9 @@ height: number
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-Rect-height: double--><!--Device-Rect-height: double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -48,7 +52,9 @@ topLeftX: number
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-Rect-topLeftX: double--><!--Device-Rect-topLeftX: double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -64,7 +70,9 @@ topLeftY: number
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-Rect-topLeftY: double--><!--Device-Rect-topLeftY: double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -80,6 +88,8 @@ width: number
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-Rect-width: double--><!--Device-Rect-width: double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core

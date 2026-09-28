@@ -20,6 +20,8 @@ function isScreenLockDisabledForAccount(admin: Want): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-securityManager-function isScreenLockDisabledForAccount(admin: Want): boolean--><!--Device-securityManager-function isScreenLockDisabledForAccount(admin: Want): boolean-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**

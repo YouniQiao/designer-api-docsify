@@ -18,6 +18,8 @@ function querySecurityEvent(rules: Array<SecurityEventRule>, querier: Querier): 
 
 **需要权限：** ohos.permission.QUERY_SECURITY_EVENT
 
+<!--Device-securityGuard-function querySecurityEvent(rules: Array<SecurityEventRule>, querier: Querier): void--><!--Device-securityGuard-function querySecurityEvent(rules: Array<SecurityEventRule>, querier: Querier): void-End-->
+
 **系统能力：** SystemCapability.Security.SecurityGuard
 
 **系统接口：** 此接口为系统接口。

@@ -30,6 +30,8 @@ function getInstalledBundleStorageStats(admin: Want, bundleNames: Array<string>,
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-bundleManager-function getInstalledBundleStorageStats(admin: Want, bundleNames: Array<string>, accountId: number): Promise<Array<BundleStorageStats>>--><!--Device-bundleManager-function getInstalledBundleStorageStats(admin: Want, bundleNames: Array<string>, accountId: number): Promise<Array<BundleStorageStats>>-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**

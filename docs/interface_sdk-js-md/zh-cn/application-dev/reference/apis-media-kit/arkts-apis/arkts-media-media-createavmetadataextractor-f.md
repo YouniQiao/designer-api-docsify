@@ -16,6 +16,8 @@ function createAVMetadataExtractor(): Promise<AVMetadataExtractor>
 
 **起始版本：** 11
 
+<!--Device-media-function createAVMetadataExtractor(): Promise<AVMetadataExtractor>--><!--Device-media-function createAVMetadataExtractor(): Promise<AVMetadataExtractor>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 **返回值：**
@@ -60,6 +62,8 @@ function createAVMetadataExtractor(callback: AsyncCallback<AVMetadataExtractor>)
 创建AVMetadataExtractor实例。使用callback异步回调。
 
 **起始版本：** 11
+
+<!--Device-media-function createAVMetadataExtractor(callback: AsyncCallback<AVMetadataExtractor>): void--><!--Device-media-function createAVMetadataExtractor(callback: AsyncCallback<AVMetadataExtractor>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 

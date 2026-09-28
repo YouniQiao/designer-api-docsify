@@ -8,6 +8,8 @@ interface PrintDocumentAdapter
 
 **起始版本：** 11
 
+<!--Device-print-interface PrintDocumentAdapter--><!--Device-print-interface PrintDocumentAdapter-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## 导入模块
@@ -27,6 +29,8 @@ onJobStateChanged(jobId: string, state: PrintDocumentAdapterState): void
 **起始版本：** 11
 
 **需要权限：** ohos.permission.PRINT
+
+<!--Device-PrintDocumentAdapter-onJobStateChanged(jobId: string, state: PrintDocumentAdapterState): void--><!--Device-PrintDocumentAdapter-onJobStateChanged(jobId: string, state: PrintDocumentAdapterState): void-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -83,6 +87,8 @@ onStartLayoutWrite(jobId: string, oldAttrs: PrintAttributes, newAttrs: PrintAttr
 **起始版本：** 11
 
 **需要权限：** ohos.permission.PRINT
+
+<!--Device-PrintDocumentAdapter-onStartLayoutWrite(jobId: string, oldAttrs: PrintAttributes, newAttrs: PrintAttributes, fd: int,      writeResultCallback: (jobId: string, writeResult: PrintFileCreationState) => void): void--><!--Device-PrintDocumentAdapter-onStartLayoutWrite(jobId: string, oldAttrs: PrintAttributes, newAttrs: PrintAttributes, fd: int,      writeResultCallback: (jobId: string, writeResult: PrintFileCreationState) => void): void-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 

@@ -8,6 +8,8 @@ export enum BluetoothRawAddressType
 
 **起始版本：** 23
 
+<!--Device-common-export enum BluetoothRawAddressType--><!--Device-common-export enum BluetoothRawAddressType-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## PUBLIC
@@ -20,6 +22,8 @@ PUBLIC = 0
 
 **起始版本：** 23
 
+<!--Device-BluetoothRawAddressType-PUBLIC = 0--><!--Device-BluetoothRawAddressType-PUBLIC = 0-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## RANDOM
@@ -31,5 +35,7 @@ RANDOM = 1
 随机设备地址类型，该类型地址随机生成，包括静态随机地址和私有随机地址等子类型，可能定期变化。
 
 **起始版本：** 23
+
+<!--Device-BluetoothRawAddressType-RANDOM = 1--><!--Device-BluetoothRawAddressType-RANDOM = 1-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

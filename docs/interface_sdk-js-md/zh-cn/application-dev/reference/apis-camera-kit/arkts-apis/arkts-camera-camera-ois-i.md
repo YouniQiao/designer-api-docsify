@@ -10,6 +10,8 @@ OIS (Optical Image Stabilization) interface.
 
 **起始版本：** 24
 
+<!--Device-camera-interface OIS extends OISQuery--><!--Device-camera-interface OIS extends OISQuery-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
@@ -30,7 +32,9 @@ Sets the OIS mode.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-OIS-setOISMode(mode: OISMode): void--><!--Device-OIS-setOISMode(mode: OISMode): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -59,7 +63,9 @@ Sets custom OIS bias values for each axis.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-OIS-setOISModeCustom(pitch: double, yaw: double): void--><!--Device-OIS-setOISModeCustom(pitch: double, yaw: double): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

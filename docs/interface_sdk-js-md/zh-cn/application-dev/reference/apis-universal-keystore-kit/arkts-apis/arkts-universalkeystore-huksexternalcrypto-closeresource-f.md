@@ -20,6 +20,8 @@ function closeResource(resourceId: string, params?: HuksExternalCryptoParam[]): 
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-huksExternalCrypto-function closeResource(resourceId: string, params?: HuksExternalCryptoParam[]): Promise<void>--><!--Device-huksExternalCrypto-function closeResource(resourceId: string, params?: HuksExternalCryptoParam[]): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
 **参数：**
@@ -39,7 +41,7 @@ function closeResource(resourceId: string, params?: HuksExternalCryptoParam[]): 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | API is not supported. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: 1. The hardware does not support the capability. 2. The chip does not support the capability. 3. A dependent service feature is not supported. |
 | [12000005](../errorcode-huks.md#12000005-进程通信错误) | IPC communication failed. |
 | [12000006](../errorcode-huks.md#12000006-算法库操作失败) | Failed to call the UKey driver interface. Please check the UKey connection and driver status. |
 | [12000012](../errorcode-huks.md#12000012-外部错误) | Device environment or input parameters are abnormal. This error may occur if the process function is not found, or due to other issues. |

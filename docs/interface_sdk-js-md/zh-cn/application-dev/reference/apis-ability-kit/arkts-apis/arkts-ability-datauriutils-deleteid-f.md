@@ -16,6 +16,8 @@ function deleteId(uri: string): string
 
 **起始版本：** 9
 
+<!--Device-dataUriUtils-function deleteId(uri: string): string--><!--Device-dataUriUtils-function deleteId(uri: string): string-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**

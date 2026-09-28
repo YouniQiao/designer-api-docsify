@@ -8,6 +8,8 @@ export enum MovingPhotoBadgeStateType
 
 **起始版本：** 22
 
+<!--Device-photoAccessHelper-export enum MovingPhotoBadgeStateType--><!--Device-photoAccessHelper-export enum MovingPhotoBadgeStateType-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## NOT_MOVING_PHOTO
@@ -20,7 +22,9 @@ NOT_MOVING_PHOTO = 0
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-MovingPhotoBadgeStateType-NOT_MOVING_PHOTO = 0--><!--Device-MovingPhotoBadgeStateType-NOT_MOVING_PHOTO = 0-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -34,7 +38,9 @@ MOVING_PHOTO_ENABLED = 1
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-MovingPhotoBadgeStateType-MOVING_PHOTO_ENABLED = 1--><!--Device-MovingPhotoBadgeStateType-MOVING_PHOTO_ENABLED = 1-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -48,6 +54,8 @@ MOVING_PHOTO_DISABLED = 2
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-MovingPhotoBadgeStateType-MOVING_PHOTO_DISABLED = 2--><!--Device-MovingPhotoBadgeStateType-MOVING_PHOTO_DISABLED = 2-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core

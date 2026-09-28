@@ -8,6 +8,8 @@ interface AVRecorderConfig
 
 **起始版本：** 9
 
+<!--Device-media-interface AVRecorderConfig--><!--Device-media-interface AVRecorderConfig-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 ## 导入模块
@@ -27,6 +29,8 @@ metaSourceTypes?: Array<MetaSourceType>
 **类型：** Array&lt;[MetaSourceType](arkts-media-media-metasourcetype-e-sys.md)&gt;
 
 **起始版本：** 12
+
+<!--Device-AVRecorderConfig-metaSourceTypes?: Array<MetaSourceType>--><!--Device-AVRecorderConfig-metaSourceTypes?: Array<MetaSourceType>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 

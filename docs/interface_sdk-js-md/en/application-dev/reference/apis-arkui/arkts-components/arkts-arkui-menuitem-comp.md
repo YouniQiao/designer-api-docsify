@@ -23,6 +23,8 @@ MenuItem(value?: MenuItemOptions | CustomBuilder)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-MenuItemInterface-(value?: MenuItemOptions | CustomBuilder): MenuItemAttribute--><!--Device-MenuItemInterface-(value?: MenuItemOptions | CustomBuilder): MenuItemAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

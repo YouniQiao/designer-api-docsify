@@ -10,6 +10,8 @@ interface AudioEffectManager
 
 **起始版本：** 18
 
+<!--Device-audio-interface AudioEffectManager--><!--Device-audio-interface AudioEffectManager-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **系统接口：** 此接口为系统接口。
@@ -31,6 +33,8 @@ getAudioEffectProperty(): Array<AudioEffectProperty>
 **起始版本：** 18
 
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
+
+<!--Device-AudioEffectManager-getAudioEffectProperty(): Array<AudioEffectProperty>--><!--Device-AudioEffectManager-getAudioEffectProperty(): Array<AudioEffectProperty>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -75,6 +79,8 @@ getSupportedAudioEffectProperty(): Array<AudioEffectProperty>
 **起始版本：** 18
 
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
+
+<!--Device-AudioEffectManager-getSupportedAudioEffectProperty(): Array<AudioEffectProperty>--><!--Device-AudioEffectManager-getSupportedAudioEffectProperty(): Array<AudioEffectProperty>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -124,6 +130,8 @@ isAudioSeparationEffectSupported(): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioEffectManager-isAudioSeparationEffectSupported(): boolean--><!--Device-AudioEffectManager-isAudioSeparationEffectSupported(): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **系统接口：** 此接口为系统接口。
@@ -160,6 +168,8 @@ offAudioSeparationEffectEnabledChange(callback?: Callback<boolean>): void
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioEffectManager-offAudioSeparationEffectEnabledChange(callback?: Callback<boolean>): void--><!--Device-AudioEffectManager-offAudioSeparationEffectEnabledChange(callback?: Callback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -198,6 +208,8 @@ onAudioSeparationEffectEnabledChange(callback: Callback<boolean>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioEffectManager-onAudioSeparationEffectEnabledChange(callback: Callback<boolean>): void--><!--Device-AudioEffectManager-onAudioSeparationEffectEnabledChange(callback: Callback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **系统接口：** 此接口为系统接口。
@@ -235,6 +247,8 @@ setAudioEffectProperty(propertyArray: Array<AudioEffectProperty>): void
 **起始版本：** 18
 
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
+
+<!--Device-AudioEffectManager-setAudioEffectProperty(propertyArray: Array<AudioEffectProperty>): void--><!--Device-AudioEffectManager-setAudioEffectProperty(propertyArray: Array<AudioEffectProperty>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -290,6 +304,8 @@ setAudioSeparationEffectEnabled(enabled: boolean, uid: number, streamId?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioEffectManager-setAudioSeparationEffectEnabled(enabled: boolean, uid: int, streamId?: long): Promise<void>--><!--Device-AudioEffectManager-setAudioSeparationEffectEnabled(enabled: boolean, uid: int, streamId?: long): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **系统接口：** 此接口为系统接口。
@@ -344,6 +360,8 @@ setAudioSeparationEffectVolume(type: AudioSeparationVolumeType, volume: number):
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioEffectManager-setAudioSeparationEffectVolume(type: AudioSeparationVolumeType, volume: double): Promise<void>--><!--Device-AudioEffectManager-setAudioSeparationEffectVolume(type: AudioSeparationVolumeType, volume: double): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 

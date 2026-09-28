@@ -29,6 +29,8 @@ Attests a key. This API uses an asynchronous callback to return the result.
 - API version 11 and later: ohos.permission.ATTEST_KEY
 - API versions 9 to 10: N/A
 
+<!--Device-huks-function attestKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksReturnResult>): void--><!--Device-huks-function attestKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksReturnResult>): void-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 **Parameters:**
@@ -173,6 +175,8 @@ Attests a key. This API uses a promise to return the result.
 - API version 26 and later: ohos.permission.ATTEST_KEY or ohos.permission.ENTERPRISE_ATTEST_KEY
 - API version 11 and later: ohos.permission.ATTEST_KEY
 - API versions 9 to 10: N/A
+
+<!--Device-huks-function attestKeyItem(keyAlias: string, options: HuksOptions): Promise<HuksReturnResult>--><!--Device-huks-function attestKeyItem(keyAlias: string, options: HuksOptions): Promise<HuksReturnResult>-End-->
 
 **System capability:** SystemCapability.Security.Huks.Extension
 

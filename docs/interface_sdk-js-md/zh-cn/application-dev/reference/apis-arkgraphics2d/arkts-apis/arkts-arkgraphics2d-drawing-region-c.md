@@ -16,6 +16,8 @@ class Region
 
 **起始版本：** 12
 
+<!--Device-drawing-class Region--><!--Device-drawing-class Region-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## 导入模块
@@ -33,6 +35,8 @@ constructor()
 构造一个区域对象。
 
 **起始版本：** 20
+
+<!--Device-Region-constructor()--><!--Device-Region-constructor()-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -98,6 +102,8 @@ constructor(region: Region)
 
 **起始版本：** 20
 
+<!--Device-Region-constructor(region: Region)--><!--Device-Region-constructor(region: Region)-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -145,6 +151,8 @@ constructor(left: number, top: number, right: number, bottom: number)
 
 **起始版本：** 20
 
+<!--Device-Region-constructor(left: int, top: int, right: int, bottom: int)--><!--Device-Region-constructor(left: int, top: int, right: int, bottom: int)-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -191,6 +199,8 @@ getBoundaryPath(): Path
 
 **起始版本：** 20
 
+<!--Device-Region-getBoundaryPath(): Path--><!--Device-Region-getBoundaryPath(): Path-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
@@ -218,6 +228,8 @@ getBounds(): common2D.Rect
 
 **起始版本：** 20
 
+<!--Device-Region-getBounds(): common2D.Rect--><!--Device-Region-getBounds(): common2D.Rect-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
@@ -244,6 +256,8 @@ isComplex(): boolean
 判断当前区域是否包含多个矩形。
 
 **起始版本：** 20
+
+<!--Device-Region-isComplex(): boolean--><!--Device-Region-isComplex(): boolean-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -293,6 +307,8 @@ isEmpty(): boolean
 
 **起始版本：** 20
 
+<!--Device-Region-isEmpty(): boolean--><!--Device-Region-isEmpty(): boolean-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
@@ -340,6 +356,8 @@ isEqual(other: Region): boolean
 判断指定区域是否与当前区域相等。
 
 **起始版本：** 20
+
+<!--Device-Region-isEqual(other: Region): boolean--><!--Device-Region-isEqual(other: Region): boolean-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -396,6 +414,8 @@ isPointContained(x: number, y:number): boolean
 判断测试点是否在区域内。
 
 **起始版本：** 12
+
+<!--Device-Region-isPointContained(x: int, y:int): boolean--><!--Device-Region-isPointContained(x: int, y:int): boolean-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -460,6 +480,8 @@ isRect(): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Region-isRect(): boolean--><!--Device-Region-isRect(): boolean-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
@@ -512,6 +534,8 @@ isRegionContained(other: Region): boolean
 判断其他区域是否在当前区域内。
 
 **起始版本：** 12
+
+<!--Device-Region-isRegionContained(other: Region): boolean--><!--Device-Region-isRegionContained(other: Region): boolean-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -575,6 +599,8 @@ offset(dx: number, dy: number): void
 
 **起始版本：** 20
 
+<!--Device-Region-offset(dx: int, dy: int): void--><!--Device-Region-offset(dx: int, dy: int): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -621,6 +647,8 @@ op(region: Region, regionOp: RegionOp): boolean
 将当前区域与指定区域进行运算，并替换为运算结果。
 
 **起始版本：** 12
+
+<!--Device-Region-op(region: Region, regionOp: RegionOp): boolean--><!--Device-Region-op(region: Region, regionOp: RegionOp): boolean-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -686,6 +714,8 @@ quickContains(left: number, top: number, right: number, bottom: number): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Region-quickContains(left: int, top: int, right: int, bottom: int): boolean--><!--Device-Region-quickContains(left: int, top: int, right: int, bottom: int): boolean-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -745,6 +775,8 @@ quickReject(left: number, top: number, right: number, bottom: number): boolean
 快速判断矩形和区域是否不相交。实际上比较的是矩形和区域的外接矩形是否不相交，因此当外接矩形相交但实际区域不相交时，会返回false（即误判为相交）。
 
 **起始版本：** 12
+
+<!--Device-Region-quickReject(left: int, top: int, right: int, bottom: int): boolean--><!--Device-Region-quickReject(left: int, top: int, right: int, bottom: int): boolean-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -808,6 +840,8 @@ quickRejectRegion(region: Region): boolean
 
 **起始版本：** 20
 
+<!--Device-Region-quickRejectRegion(region: Region): boolean--><!--Device-Region-quickRejectRegion(region: Region): boolean-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -862,6 +896,8 @@ setEmpty(): void
 
 **起始版本：** 20
 
+<!--Device-Region-setEmpty(): void--><!--Device-Region-setEmpty(): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **示例**
@@ -892,6 +928,8 @@ setPath(path: Path, clip: Region): boolean
 设置一个与裁剪区域内路径轮廓相匹配的区域。
 
 **起始版本：** 12
+
+<!--Device-Region-setPath(path: Path, clip: Region): boolean--><!--Device-Region-setPath(path: Path, clip: Region): boolean-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -955,6 +993,8 @@ setRect(left: number, top: number, right: number, bottom: number): boolean
 
 **起始版本：** 12
 
+<!--Device-Region-setRect(left: int, top: int, right: int, bottom: int): boolean--><!--Device-Region-setRect(left: int, top: int, right: int, bottom: int): boolean-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -1015,6 +1055,8 @@ setRegion(region: Region): void
 设置当前区域为指定区域。
 
 **起始版本：** 20
+
+<!--Device-Region-setRegion(region: Region): void--><!--Device-Region-setRegion(region: Region): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

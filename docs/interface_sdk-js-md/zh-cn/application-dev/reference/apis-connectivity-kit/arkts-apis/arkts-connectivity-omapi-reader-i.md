@@ -8,6 +8,8 @@ Reader的实例表示该设备支持的SE，如果支持eSE、SIM和SIM2，则�
 
 **起始版本：** 10
 
+<!--Device-omapi-export interface Reader--><!--Device-omapi-export interface Reader-End-->
+
 **系统能力：** SystemCapability.Communication.SecureElement
 
 ## 导入模块
@@ -25,6 +27,8 @@ closeSessions(): void
 关闭在此Reader上打开的所有Session。所有这些Session打开的所有Channel都将关闭。
 
 **起始版本：** 10
+
+<!--Device-Reader-closeSessions(): void--><!--Device-Reader-closeSessions(): void-End-->
 
 **系统能力：** SystemCapability.Communication.SecureElement
 
@@ -77,6 +81,8 @@ getName(): string
 
 **起始版本：** 10
 
+<!--Device-Reader-getName(): string--><!--Device-Reader-getName(): string-End-->
+
 **系统能力：** SystemCapability.Communication.SecureElement
 
 **返回值：**
@@ -119,6 +125,8 @@ isSecureElementPresent(): boolean
 检查当前Reader所对应的安全单元是否可用。
 
 **起始版本：** 10
+
+<!--Device-Reader-isSecureElementPresent(): boolean--><!--Device-Reader-isSecureElementPresent(): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.SecureElement
 
@@ -163,6 +171,8 @@ openSession(): Session
 在SE Reader实例上创建连接会话，返回Session实例。在一个Reader上可能同时打开多个会话。
 
 **起始版本：** 10
+
+<!--Device-Reader-openSession(): Session--><!--Device-Reader-openSession(): Session-End-->
 
 **系统能力：** SystemCapability.Communication.SecureElement
 

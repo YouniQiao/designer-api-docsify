@@ -17,6 +17,8 @@ enum AudioEncoder
 
 **替代接口：** [CodecMimeType](arkts-media-media-codecmimetype-e.md)
 
+<!--Device-media-enum AudioEncoder--><!--Device-media-enum AudioEncoder-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
 
 ## DEFAULT
@@ -34,6 +36,8 @@ DEFAULT = 0
 **起始版本：** 6
 
 **废弃版本：** 8
+
+<!--Device-AudioEncoder-DEFAULT = 0--><!--Device-AudioEncoder-DEFAULT = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
 
@@ -55,6 +59,8 @@ AMR-NB(Adaptive Multi Rate-Narrow Band Speech Codec) 编码格式。
 
 **替代接口：** [AUDIO_AMR_NB](arkts-media-media-codecmimetype-e.md#audio_amr_nb)
 
+<!--Device-AudioEncoder-AMR_NB = 1--><!--Device-AudioEncoder-AMR_NB = 1-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
 
 ## AMR_WB
@@ -75,6 +81,8 @@ AMR-WB(Adaptive Multi Rate-Wide Band Speech Codec) 编码格式。
 
 **替代接口：** [AUDIO_AMR_WB](arkts-media-media-codecmimetype-e.md#audio_amr_wb)
 
+<!--Device-AudioEncoder-AMR_WB = 2--><!--Device-AudioEncoder-AMR_WB = 2-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
 
 ## AAC_LC
@@ -92,6 +100,8 @@ AAC-LC（Advanced Audio Coding Low Complexity）编码格式。
 **废弃版本：** 8
 
 **替代接口：** [AUDIO_AAC](arkts-media-media-codecmimetype-e.md#audio_aac)
+
+<!--Device-AudioEncoder-AAC_LC = 3--><!--Device-AudioEncoder-AAC_LC = 3-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
 
@@ -112,5 +122,7 @@ HE_AAC（High-Efficiency Advanced Audio Coding）编码格式。
 **废弃版本：** 8
 
 **替代接口：** [AUDIO_AAC](arkts-media-media-codecmimetype-e.md#audio_aac)
+
+<!--Device-AudioEncoder-HE_AAC = 4--><!--Device-AudioEncoder-HE_AAC = 4-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder

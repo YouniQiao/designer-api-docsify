@@ -18,6 +18,8 @@ function isApplicationRunning(bundleName: string): Promise<boolean>
 
 **需要权限：** ohos.permission.GET_RUNNING_INFO
 
+<!--Device-appManager-function isApplicationRunning(bundleName: string): Promise<boolean>--><!--Device-appManager-function isApplicationRunning(bundleName: string): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -72,6 +74,8 @@ function isApplicationRunning(bundleName: string, callback: AsyncCallback<boolea
 **起始版本：** 11
 
 **需要权限：** ohos.permission.GET_RUNNING_INFO
+
+<!--Device-appManager-function isApplicationRunning(bundleName: string, callback: AsyncCallback<boolean>): void--><!--Device-appManager-function isApplicationRunning(bundleName: string, callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

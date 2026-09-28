@@ -8,6 +8,8 @@ class FileSync
 
 **起始版本：** 12
 
+<!--Device-cloudSync-class FileSync--><!--Device-cloudSync-class FileSync-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## 导入模块
@@ -25,6 +27,8 @@ constructor()
 端云同步流程的构造函数，用于获取FileSync类的实例。
 
 **起始版本：** 12
+
+<!--Device-FileSync-constructor()--><!--Device-FileSync-constructor()-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -49,6 +53,8 @@ getLastSyncTime(): Promise<number>
 异步方法获取上次同步时间。使用Promise异步回调。
 
 **起始版本：** 12
+
+<!--Device-FileSync-getLastSyncTime(): Promise<long>--><!--Device-FileSync-getLastSyncTime(): Promise<long>-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -92,6 +98,8 @@ getLastSyncTime(callback: AsyncCallback<number>): void
 
 **起始版本：** 12
 
+<!--Device-FileSync-getLastSyncTime(callback: AsyncCallback<long>): void--><!--Device-FileSync-getLastSyncTime(callback: AsyncCallback<long>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **参数：**
@@ -134,6 +142,8 @@ off(event: 'progress', callback?: Callback<SyncProgress>): void
 
 **起始版本：** 12
 
+<!--Device-FileSync-off(event: 'progress', callback?: Callback<SyncProgress>): void--><!--Device-FileSync-off(event: 'progress', callback?: Callback<SyncProgress>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **参数：**
@@ -174,6 +184,8 @@ on(event: 'progress', callback: Callback<SyncProgress>): void
 
 **起始版本：** 12
 
+<!--Device-FileSync-on(event: 'progress', callback: Callback<SyncProgress>): void--><!--Device-FileSync-on(event: 'progress', callback: Callback<SyncProgress>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **参数：**
@@ -210,6 +222,8 @@ start(): Promise<void>
 异步方法启动云盘端云同步。使用Promise异步回调。
 
 **起始版本：** 12
+
+<!--Device-FileSync-start(): Promise<void>--><!--Device-FileSync-start(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -261,6 +275,8 @@ start(callback: AsyncCallback<void>): void
 
 **起始版本：** 12
 
+<!--Device-FileSync-start(callback: AsyncCallback<void>): void--><!--Device-FileSync-start(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **参数：**
@@ -307,6 +323,8 @@ stop(): Promise<void>
 
 **起始版本：** 12
 
+<!--Device-FileSync-stop(): Promise<void>--><!--Device-FileSync-stop(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **返回值：**
@@ -349,6 +367,8 @@ stop(callback: AsyncCallback<void>): void
 调用stop接口，同步流程会停止。再次调用[start](#start)接口会继续同步。
 
 **起始版本：** 12
+
+<!--Device-FileSync-stop(callback: AsyncCallback<void>): void--><!--Device-FileSync-stop(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 

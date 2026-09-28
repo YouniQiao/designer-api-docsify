@@ -8,6 +8,8 @@ UDMF已经支持的数据通路枚举类型。其主要用途是标识各种UDMF
 
 **起始版本：** 10
 
+<!--Device-unifiedDataChannel-enum Intention--><!--Device-unifiedDataChannel-enum Intention-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## DATA_HUB
@@ -24,7 +26,9 @@ DATA_HUB = 'DataHub'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Intention-DATA_HUB = 'DataHub'--><!--Device-Intention-DATA_HUB = 'DataHub'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -42,6 +46,8 @@ DRAG = 'Drag'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Intention-DRAG = 'Drag'--><!--Device-Intention-DRAG = 'Drag'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## SYSTEM_SHARE
@@ -57,6 +63,8 @@ SYSTEM_SHARE = 'SystemShare'
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Intention-SYSTEM_SHARE = 'SystemShare'--><!--Device-Intention-SYSTEM_SHARE = 'SystemShare'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -74,6 +82,8 @@ Picker类型数据通道。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Intention-PICKER = 'Picker'--><!--Device-Intention-PICKER = 'Picker'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## MENU
@@ -89,5 +99,7 @@ MENU = 'Menu'
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Intention-MENU = 'Menu'--><!--Device-Intention-MENU = 'Menu'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core

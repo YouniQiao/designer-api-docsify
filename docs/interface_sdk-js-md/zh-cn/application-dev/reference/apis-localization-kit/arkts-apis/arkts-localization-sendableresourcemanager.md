@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare namespace sendableResourceManager--><!--Device-unnamed-declare namespace sendableResourceManager-End-->
+
 **系统能力：** SystemCapability.Global.ResourceManager
 
 ## 导入模块

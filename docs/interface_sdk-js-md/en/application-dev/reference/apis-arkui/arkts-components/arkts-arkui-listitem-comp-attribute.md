@@ -10,6 +10,8 @@ In addition to the universal attributes, the following attributes are supported.
 
 **Since:** 7
 
+<!--Device-unnamed-declare class ListItemAttribute extends CommonMethod<ListItemAttribute>--><!--Device-unnamed-declare class ListItemAttribute extends CommonMethod<ListItemAttribute>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onSelect
@@ -20,7 +22,7 @@ onSelect(event: (isSelected: boolean) => void)
 
 Triggered when the selected state of the list item for multiselect changes.
 
-This callback is triggered when the outer [List](arkts-arkui-list-comp.md#list) component has [multiSelectable](arkts-arkui-list-comp-attribute.md#multiselectable) set to **true** to enable mouse box selection, and the [selectable](#selectable) attribute of the current ListItem is set to **true**.
+This callback is triggered when the outer [List](arkts-arkui-list-comp.md) component has [multiSelectable](arkts-arkui-list-comp-attribute.md#multiselectable) set to **true** to enable mouse box selection, and the [selectable](#selectable) attribute of the current ListItem is set to **true**.
 
 **Since:** 8
 
@@ -29,6 +31,8 @@ This callback is triggered when the outer [List](arkts-arkui-list-comp.md#list) 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-ListItemAttribute-onSelect(event: (isSelected: boolean) => void): ListItemAttribute--><!--Device-ListItemAttribute-onSelect(event: (isSelected: boolean) => void): ListItemAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,7 +48,7 @@ This callback is triggered when the outer [List](arkts-arkui-list-comp.md#list) 
 selectable(value: boolean)
 ```
 
-Sets whether the current **ListItem** element can be selected by mouse frame selection. This takes effect only when the parent [List](arkts-arkui-list-comp.md#list) component has [multiSelectable](arkts-arkui-list-comp-attribute.md#multiselectable) set to **true** to enable mouse frame selection.
+Sets whether the current **ListItem** element can be selected by mouse frame selection. This takes effect only when the parent [List](arkts-arkui-list-comp.md) component has [multiSelectable](arkts-arkui-list-comp-attribute.md#multiselectable) set to **true** to enable mouse frame selection.
 
 **Since:** 8
 
@@ -54,13 +58,15 @@ Sets whether the current **ListItem** element can be selected by mouse frame sel
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-ListItemAttribute-selectable(value: boolean): ListItemAttribute--><!--Device-ListItemAttribute-selectable(value: boolean): ListItemAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether the **ListItem** element can be selected by mouse frame selection. When set to **true**, it can be selected by mouse frame selection; when set to **false**, it cannot.<br>Default value: **true**<br>**Note:** This takes effect only when the outer [List](arkts-arkui-list-comp.md#list) component sets [multiSelectable](arkts-arkui-list-comp-attribute.md#multiselectable) to **true** to enable mouse frame selection. |
+| value | boolean | Yes | Whether the **ListItem** element can be selected by mouse frame selection. When set to **true**, it can be selected by mouse frame selection; when set to **false**, it cannot.<br>Default value: **true**<br>**Note:** This takes effect only when the outer [List](arkts-arkui-list-comp.md) component sets [multiSelectable](arkts-arkui-list-comp-attribute.md#multiselectable) to **true** to enable mouse frame selection. |
 
 ## selected
 
@@ -77,6 +83,8 @@ Sets whether the list item is selected. This attribute supports two-way binding 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
+
+<!--Device-ListItemAttribute-selected(value: boolean): ListItemAttribute--><!--Device-ListItemAttribute-selected(value: boolean): ListItemAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -99,6 +107,8 @@ Sets the swipe action item displayed when the list item is swiped out from the s
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ListItemAttribute-swipeAction(value: SwipeActionOptions): ListItemAttribute--><!--Device-ListItemAttribute-swipeAction(value: SwipeActionOptions): ListItemAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -126,6 +136,8 @@ Sets whether to enable edit mode, where the list item can be deleted or moved.
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-ListItemAttribute-editable(value: boolean | EditMode): ListItemAttribute--><!--Device-ListItemAttribute-editable(value: boolean | EditMode): ListItemAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -149,6 +161,8 @@ Sets the sticky effect of the list item.
 **Substitutes:** sticky
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-ListItemAttribute-sticky(value: Sticky): ListItemAttribute--><!--Device-ListItemAttribute-sticky(value: Sticky): ListItemAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

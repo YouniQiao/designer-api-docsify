@@ -22,6 +22,8 @@ function getFileDescriptor(pipe: USBDevicePipe): number
 
 **替代接口：** [getFileDescriptor](arkts-basicservices-usbmanager-getfiledescriptor-f.md)
 
+<!--Device-usb-function getFileDescriptor(pipe: USBDevicePipe): number--><!--Device-usb-function getFileDescriptor(pipe: USBDevicePipe): number-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 **参数：**

@@ -24,6 +24,8 @@ obtained from the RDB store, such as [queryWithoutRowCount](arkts-arkdata-relati
 
 **Since:** 9
 
+<!--Device-unnamed-declare namespace relationalStore--><!--Device-unnamed-declare namespace relationalStore-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## Modules to Import

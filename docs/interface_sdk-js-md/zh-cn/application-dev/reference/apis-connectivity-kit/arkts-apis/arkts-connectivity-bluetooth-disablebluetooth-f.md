@@ -24,6 +24,8 @@ function disableBluetooth(): boolean
 
 **需要权限：** ohos.permission.DISCOVER_BLUETOOTH
 
+<!--Device-bluetooth-function disableBluetooth(): boolean--><!--Device-bluetooth-function disableBluetooth(): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **返回值：**

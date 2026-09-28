@@ -8,6 +8,8 @@ interface RemoteDevice
 
 **起始版本：** 26.0.0
 
+<!--Device-remoteDevice-interface RemoteDevice--><!--Device-remoteDevice-interface RemoteDevice-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## 导入模块
@@ -29,6 +31,8 @@ cancelDevicePairing(): Promise<void>
 **需要权限：** ohos.permission.ACCESS_NEARLINK and ohos.permission.MANAGE_NEARLINK
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-RemoteDevice-cancelDevicePairing(): Promise<void>--><!--Device-RemoteDevice-cancelDevicePairing(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -63,6 +67,8 @@ connect(): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RemoteDevice-connect(): Promise<void>--><!--Device-RemoteDevice-connect(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **系统接口：** 此接口为系统接口。
@@ -95,6 +101,8 @@ disconnect(): Promise<void>
 **需要权限：** ohos.permission.ACCESS_NEARLINK and ohos.permission.MANAGE_NEARLINK
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-RemoteDevice-disconnect(): Promise<void>--><!--Device-RemoteDevice-disconnect(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -129,6 +137,8 @@ getDeviceAlias(): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RemoteDevice-getDeviceAlias(): string--><!--Device-RemoteDevice-getDeviceAlias(): string-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **系统接口：** 此接口为系统接口。
@@ -159,6 +169,8 @@ getDeviceModel(): DeviceModel
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-RemoteDevice-getDeviceModel(): DeviceModel--><!--Device-RemoteDevice-getDeviceModel(): DeviceModel-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -191,6 +203,8 @@ getRssiValue(): Promise<number>
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-RemoteDevice-getRssiValue(): Promise<int>--><!--Device-RemoteDevice-getRssiValue(): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -225,6 +239,8 @@ removePairedDevice(): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RemoteDevice-removePairedDevice(): Promise<void>--><!--Device-RemoteDevice-removePairedDevice(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **系统接口：** 此接口为系统接口。
@@ -258,6 +274,8 @@ setConnectionInterval(interval: ConnectionInterval): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RemoteDevice-setConnectionInterval(interval: ConnectionInterval): void--><!--Device-RemoteDevice-setConnectionInterval(interval: ConnectionInterval): void-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **系统接口：** 此接口为系统接口。
@@ -290,6 +308,8 @@ setDeviceAlias(alias: string): void
 **需要权限：** ohos.permission.ACCESS_NEARLINK and ohos.permission.MANAGE_NEARLINK
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-RemoteDevice-setDeviceAlias(alias: string): void--><!--Device-RemoteDevice-setDeviceAlias(alias: string): void-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -325,6 +345,8 @@ setPairingConfirmation(accept: boolean): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RemoteDevice-setPairingConfirmation(accept: boolean): void--><!--Device-RemoteDevice-setPairingConfirmation(accept: boolean): void-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **系统接口：** 此接口为系统接口。
@@ -357,6 +379,8 @@ setPairingPasscode(passcode: string): Promise<void>
 **需要权限：** ohos.permission.ACCESS_NEARLINK and ohos.permission.MANAGE_NEARLINK
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-RemoteDevice-setPairingPasscode(passcode: string): Promise<void>--><!--Device-RemoteDevice-setPairingPasscode(passcode: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -397,6 +421,8 @@ startCrediblePairing(): Promise<void>
 **需要权限：** ohos.permission.ACCESS_NEARLINK and ohos.permission.MANAGE_NEARLINK
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-RemoteDevice-startCrediblePairing(): Promise<void>--><!--Device-RemoteDevice-startCrediblePairing(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 

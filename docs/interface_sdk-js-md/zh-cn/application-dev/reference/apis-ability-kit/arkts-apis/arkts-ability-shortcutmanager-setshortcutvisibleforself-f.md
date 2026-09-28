@@ -16,6 +16,8 @@ function setShortcutVisibleForSelf(id: string, visible: boolean): Promise<void>
 
 **起始版本：** 20
 
+<!--Device-shortcutManager-function setShortcutVisibleForSelf(id: string, visible: boolean): Promise<void>--><!--Device-shortcutManager-function setShortcutVisibleForSelf(id: string, visible: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
 **参数：**

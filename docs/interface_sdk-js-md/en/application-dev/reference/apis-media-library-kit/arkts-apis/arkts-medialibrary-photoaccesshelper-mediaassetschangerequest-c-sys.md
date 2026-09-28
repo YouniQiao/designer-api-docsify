@@ -10,6 +10,8 @@ Represents a request for changing multiple assets.
 
 **Since:** 26.0.0
 
+<!--Device-photoAccessHelper-class MediaAssetsChangeRequest implements MediaChangeRequest--><!--Device-photoAccessHelper-class MediaAssetsChangeRequest implements MediaChangeRequest-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
@@ -27,6 +29,8 @@ setHidden(hiddenState: boolean): void
 Hides this file.
 
 **Since:** 11
+
+<!--Device-MediaAssetsChangeRequest-setHidden(hiddenState: boolean): void--><!--Device-MediaAssetsChangeRequest-setHidden(hiddenState: boolean): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -83,6 +87,8 @@ Sets whether this asset is displayed in the **Recent** list.
 
 **Since:** 18
 
+<!--Device-MediaAssetsChangeRequest-setIsRecentShow(isRencentShow: boolean): void--><!--Device-MediaAssetsChangeRequest-setIsRecentShow(isRencentShow: boolean): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -137,6 +143,8 @@ setUserComment(userComment: string): void
 Sets the user comment information of this media asset.
 
 **Since:** 11
+
+<!--Device-MediaAssetsChangeRequest-setUserComment(userComment: string): void--><!--Device-MediaAssetsChangeRequest-setUserComment(userComment: string): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -196,6 +204,8 @@ Used to verify the [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-med
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MediaAssetsChangeRequest-readonly comment: string--><!--Device-MediaAssetsChangeRequest-readonly comment: string-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

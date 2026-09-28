@@ -20,6 +20,8 @@ function createTouchController(): Promise<TouchController>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-inputEventClient-function createTouchController(): Promise<TouchController>--><!--Device-inputEventClient-function createTouchController(): Promise<TouchController>-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **返回值：**

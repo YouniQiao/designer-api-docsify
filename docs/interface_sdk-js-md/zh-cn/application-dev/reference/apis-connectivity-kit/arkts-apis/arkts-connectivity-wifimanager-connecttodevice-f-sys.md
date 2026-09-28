@@ -18,6 +18,8 @@ function connectToDevice(config: WifiDeviceConfig): void
 
 **需要权限：** ohos.permission.SET_WIFI_INFO and ohos.permission.SET_WIFI_CONFIG and ohos.permission.MANAGE_WIFI_CONNECTION
 
+<!--Device-wifiManager-function connectToDevice(config: WifiDeviceConfig): void--><!--Device-wifiManager-function connectToDevice(config: WifiDeviceConfig): void-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。

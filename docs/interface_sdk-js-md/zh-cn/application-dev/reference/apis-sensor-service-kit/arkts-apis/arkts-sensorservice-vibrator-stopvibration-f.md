@@ -18,6 +18,8 @@ function stopVibration(stopMode: VibratorStopMode): Promise<void>
 
 **需要权限：** ohos.permission.VIBRATE
 
+<!--Device-vibrator-function stopVibration(stopMode: VibratorStopMode): Promise<void>--><!--Device-vibrator-function stopVibration(stopMode: VibratorStopMode): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 **参数：**
@@ -131,6 +133,8 @@ function stopVibration(stopMode: VibratorStopMode, callback: AsyncCallback<void>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.VIBRATE
+
+<!--Device-vibrator-function stopVibration(stopMode: VibratorStopMode, callback: AsyncCallback<void>): void--><!--Device-vibrator-function stopVibration(stopMode: VibratorStopMode, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
@@ -251,7 +255,9 @@ function stopVibration(callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.VIBRATE
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-vibrator-function stopVibration(callback: AsyncCallback<void>): void--><!--Device-vibrator-function stopVibration(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
@@ -306,7 +312,9 @@ function stopVibration(): Promise<void>
 
 **需要权限：** ohos.permission.VIBRATE
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-vibrator-function stopVibration(): Promise<void>--><!--Device-vibrator-function stopVibration(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
@@ -356,6 +364,8 @@ function stopVibration(param?: VibratorInfoParam): Promise<void>
 **起始版本：** 19
 
 **需要权限：** ohos.permission.VIBRATE
+
+<!--Device-vibrator-function stopVibration(param?: VibratorInfoParam): Promise<void>--><!--Device-vibrator-function stopVibration(param?: VibratorInfoParam): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
 

@@ -16,6 +16,8 @@ function getPortList(): Readonly<SerialPort>[]
 
 **起始版本：** 19
 
+<!--Device-serialManager-function getPortList(): Readonly<SerialPort>[]--><!--Device-serialManager-function getPortList(): Readonly<SerialPort>[]-End-->
+
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
 **返回值：**

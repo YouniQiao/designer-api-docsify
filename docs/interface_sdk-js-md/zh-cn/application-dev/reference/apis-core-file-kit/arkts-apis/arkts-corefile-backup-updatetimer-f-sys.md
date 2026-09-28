@@ -18,6 +18,8 @@ function updateTimer(bundleName: string, timeout: number): boolean
 
 **需要权限：** ohos.permission.BACKUP
 
+<!--Device-backup-function updateTimer(bundleName: string, timeout: int): boolean--><!--Device-backup-function updateTimer(bundleName: string, timeout: int): boolean-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 **系统接口：** 此接口为系统接口。

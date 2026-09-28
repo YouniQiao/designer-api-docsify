@@ -19,6 +19,8 @@ declare function fdopenStreamSync(fd: number, mode: string): Stream
 
 **替代接口：** [fdopenStreamSync](arkts-corefile-file-fs-fdopenstreamsync-f.md)
 
+<!--Device-unnamed-declare function fdopenStreamSync(fd: number, mode: string): Stream--><!--Device-unnamed-declare function fdopenStreamSync(fd: number, mode: string): Stream-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**

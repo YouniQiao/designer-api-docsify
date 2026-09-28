@@ -18,6 +18,8 @@ function uninitialize(): void
 
 **需要权限：** ohos.permission.NFC_TAG
 
+<!--Device-connectedTag-function uninitialize(): void--><!--Device-connectedTag-function uninitialize(): void-End-->
+
 **系统能力：** SystemCapability.Communication.ConnectedTag
 
 **错误码：**

@@ -8,6 +8,8 @@ Defines the particle property lifecycle. @interface ParticlePropertyAnimation
 
 **Since:** 10
 
+<!--Device-unnamed-interface ParticlePropertyAnimation<T>--><!--Device-unnamed-interface ParticlePropertyAnimation<T>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## curve
@@ -29,6 +31,8 @@ Default value: **Curve.Linear**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ParticlePropertyAnimation-curve?: Curve | ICurve--><!--Device-ParticlePropertyAnimation-curve?: Curve | ICurve-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -52,6 +56,8 @@ Value range: [0, +∞).
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ParticlePropertyAnimation-endMillis: number--><!--Device-ParticlePropertyAnimation-endMillis: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## from
@@ -69,6 +75,8 @@ Initial value of the property. If the value is invalid, the default value will b
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ParticlePropertyAnimation-from: T--><!--Device-ParticlePropertyAnimation-from: T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -92,6 +100,8 @@ Value range: [0, +∞).
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ParticlePropertyAnimation-startMillis: number--><!--Device-ParticlePropertyAnimation-startMillis: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## to
@@ -109,5 +119,7 @@ Target value of the property. If the value is invalid, the default value will be
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ParticlePropertyAnimation-to: T--><!--Device-ParticlePropertyAnimation-to: T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -8,6 +8,8 @@ interface AuthStatusInfo
 
 **起始版本：** 10
 
+<!--Device-osAccount-interface AuthStatusInfo--><!--Device-osAccount-interface AuthStatusInfo-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ freezingTime: number
 
 **起始版本：** 10
 
+<!--Device-AuthStatusInfo-freezingTime: int--><!--Device-AuthStatusInfo-freezingTime: int-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ remainTimes: number
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-AuthStatusInfo-remainTimes: int--><!--Device-AuthStatusInfo-remainTimes: int-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 

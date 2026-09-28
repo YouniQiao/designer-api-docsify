@@ -8,6 +8,8 @@ export enum UserAuthResult
 
 **起始版本：** 22
 
+<!--Device-backgroundTaskManager-export enum UserAuthResult--><!--Device-backgroundTaskManager-export enum UserAuthResult-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## NOT_SUPPORTED
@@ -19,6 +21,8 @@ NOT_SUPPORTED = 0
 不支持。例如：申请的长时任务主类型非MODE_SPECIAL_SCENARIO_PROCESSING时，不支持申请用户授权是否能在后台长时间运行。
 
 **起始版本：** 22
+
+<!--Device-UserAuthResult-NOT_SUPPORTED = 0--><!--Device-UserAuthResult-NOT_SUPPORTED = 0-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -32,6 +36,8 @@ NOT_DETERMINED = 1
 
 **起始版本：** 22
 
+<!--Device-UserAuthResult-NOT_DETERMINED = 1--><!--Device-UserAuthResult-NOT_DETERMINED = 1-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## DENIED
@@ -43,6 +49,8 @@ DENIED = 2
 拒绝。
 
 **起始版本：** 22
+
+<!--Device-UserAuthResult-DENIED = 2--><!--Device-UserAuthResult-DENIED = 2-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -57,6 +65,8 @@ GRANTED_ONCE = 3
 **说明：** 在应用退出时该授权记录会被清除
 
 **起始版本：** 22
+
+<!--Device-UserAuthResult-GRANTED_ONCE = 3--><!--Device-UserAuthResult-GRANTED_ONCE = 3-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -75,5 +85,7 @@ GRANTED_ALWAYS = 4
 [COMMON_EVENT_PACKAGE_ADDED](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-commoneventmanager-support-e.md#common_event_package_added)、[COMMON_EVENT_PACKAGE_REMOVED](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-commoneventmanager-support-e.md#common_event_package_removed)、[COMMON_EVENT_BUNDLE_REMOVED](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-commoneventmanager-support-e.md#common_event_bundle_removed)、[COMMON_EVENT_PACKAGE_FULLY_REMOVED](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-commoneventmanager-support-e.md#common_event_package_fully_removed)、[COMMON_EVENT_PACKAGE_CHANGED](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-commoneventmanager-support-e.md#common_event_package_changed)。
 
 **起始版本：** 22
+
+<!--Device-UserAuthResult-GRANTED_ALWAYS = 4--><!--Device-UserAuthResult-GRANTED_ALWAYS = 4-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask

@@ -8,6 +8,8 @@ export interface CallTransferResult
 
 **起始版本：** 26.0.0
 
+<!--Device-call-export interface CallTransferResult--><!--Device-call-export interface CallTransferResult-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 ## 导入模块
@@ -27,6 +29,8 @@ number: string
 **类型：** string
 
 **起始版本：** 8
+
+<!--Device-CallTransferResult-number: string--><!--Device-CallTransferResult-number: string-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 

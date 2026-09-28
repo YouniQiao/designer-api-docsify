@@ -8,6 +8,8 @@ export enum DisconnectedReason
 
 **起始版本：** 8
 
+<!--Device-call-export enum DisconnectedReason--><!--Device-call-export enum DisconnectedReason-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -21,6 +23,8 @@ UNASSIGNED_NUMBER = 1
 未分配的号码(空号)。
 
 **起始版本：** 8
+
+<!--Device-DisconnectedReason-UNASSIGNED_NUMBER = 1--><!--Device-DisconnectedReason-UNASSIGNED_NUMBER = 1-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -36,6 +40,8 @@ NO_ROUTE_TO_DESTINATION = 3
 
 **起始版本：** 8
 
+<!--Device-DisconnectedReason-NO_ROUTE_TO_DESTINATION = 3--><!--Device-DisconnectedReason-NO_ROUTE_TO_DESTINATION = 3-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +55,8 @@ CHANNEL_UNACCEPTABLE = 6
 不可接受的通路。
 
 **起始版本：** 8
+
+<!--Device-DisconnectedReason-CHANNEL_UNACCEPTABLE = 6--><!--Device-DisconnectedReason-CHANNEL_UNACCEPTABLE = 6-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -64,6 +72,8 @@ OPERATOR_DETERMINED_BARRING = 8
 
 **起始版本：** 8
 
+<!--Device-DisconnectedReason-OPERATOR_DETERMINED_BARRING = 8--><!--Device-DisconnectedReason-OPERATOR_DETERMINED_BARRING = 8-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +87,8 @@ CALL_COMPLETED_ELSEWHERE = 13
 呼叫在其他地方完成。
 
 **起始版本：** 9
+
+<!--Device-DisconnectedReason-CALL_COMPLETED_ELSEWHERE = 13--><!--Device-DisconnectedReason-CALL_COMPLETED_ELSEWHERE = 13-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -92,6 +104,8 @@ NORMAL_CALL_CLEARING = 16
 
 **起始版本：** 8
 
+<!--Device-DisconnectedReason-NORMAL_CALL_CLEARING = 16--><!--Device-DisconnectedReason-NORMAL_CALL_CLEARING = 16-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -105,6 +119,8 @@ USER_BUSY = 17
 用户忙。
 
 **起始版本：** 8
+
+<!--Device-DisconnectedReason-USER_BUSY = 17--><!--Device-DisconnectedReason-USER_BUSY = 17-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -120,6 +136,8 @@ NO_USER_RESPONDING = 18
 
 **起始版本：** 8
 
+<!--Device-DisconnectedReason-NO_USER_RESPONDING = 18--><!--Device-DisconnectedReason-NO_USER_RESPONDING = 18-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -133,6 +151,8 @@ USER_ALERTING_NO_ANSWER = 19
 已有用户提醒，但无应答。
 
 **起始版本：** 8
+
+<!--Device-DisconnectedReason-USER_ALERTING_NO_ANSWER = 19--><!--Device-DisconnectedReason-USER_ALERTING_NO_ANSWER = 19-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -148,6 +168,8 @@ CALL_REJECTED = 21
 
 **起始版本：** 8
 
+<!--Device-DisconnectedReason-CALL_REJECTED = 21--><!--Device-DisconnectedReason-CALL_REJECTED = 21-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -161,6 +183,8 @@ NUMBER_CHANGED = 22
 号码改变。
 
 **起始版本：** 8
+
+<!--Device-DisconnectedReason-NUMBER_CHANGED = 22--><!--Device-DisconnectedReason-NUMBER_CHANGED = 22-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -176,6 +200,8 @@ CALL_REJECTED_DUE_TO_FEATURE_AT_THE_DESTINATION = 24
 
 **起始版本：** 9
 
+<!--Device-DisconnectedReason-CALL_REJECTED_DUE_TO_FEATURE_AT_THE_DESTINATION = 24--><!--Device-DisconnectedReason-CALL_REJECTED_DUE_TO_FEATURE_AT_THE_DESTINATION = 24-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -189,6 +215,8 @@ FAILED_PRE_EMPTION = 25
 抢占失败。
 
 **起始版本：** 9
+
+<!--Device-DisconnectedReason-FAILED_PRE_EMPTION = 25--><!--Device-DisconnectedReason-FAILED_PRE_EMPTION = 25-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -204,6 +232,8 @@ NON_SELECTED_USER_CLEARING = 26
 
 **起始版本：** 9
 
+<!--Device-DisconnectedReason-NON_SELECTED_USER_CLEARING = 26--><!--Device-DisconnectedReason-NON_SELECTED_USER_CLEARING = 26-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -217,6 +247,8 @@ DESTINATION_OUT_OF_ORDER = 27
 终点故障。
 
 **起始版本：** 8
+
+<!--Device-DisconnectedReason-DESTINATION_OUT_OF_ORDER = 27--><!--Device-DisconnectedReason-DESTINATION_OUT_OF_ORDER = 27-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -232,6 +264,8 @@ INVALID_NUMBER_FORMAT = 28
 
 **起始版本：** 8
 
+<!--Device-DisconnectedReason-INVALID_NUMBER_FORMAT = 28--><!--Device-DisconnectedReason-INVALID_NUMBER_FORMAT = 28-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -245,6 +279,8 @@ FACILITY_REJECTED = 29
 增补业务拒绝。
 
 **起始版本：** 9
+
+<!--Device-DisconnectedReason-FACILITY_REJECTED = 29--><!--Device-DisconnectedReason-FACILITY_REJECTED = 29-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -260,6 +296,8 @@ RESPONSE_TO_STATUS_ENQUIRY = 30
 
 **起始版本：** 9
 
+<!--Device-DisconnectedReason-RESPONSE_TO_STATUS_ENQUIRY = 30--><!--Device-DisconnectedReason-RESPONSE_TO_STATUS_ENQUIRY = 30-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -273,6 +311,8 @@ NORMAL_UNSPECIFIED = 31
 正常，未指定。
 
 **起始版本：** 9
+
+<!--Device-DisconnectedReason-NORMAL_UNSPECIFIED = 31--><!--Device-DisconnectedReason-NORMAL_UNSPECIFIED = 31-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -288,6 +328,8 @@ NO_CIRCUIT_CHANNEL_AVAILABLE = 34
 
 **起始版本：** 9
 
+<!--Device-DisconnectedReason-NO_CIRCUIT_CHANNEL_AVAILABLE = 34--><!--Device-DisconnectedReason-NO_CIRCUIT_CHANNEL_AVAILABLE = 34-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -301,6 +343,8 @@ NETWORK_OUT_OF_ORDER = 38
 网络故障。
 
 **起始版本：** 8
+
+<!--Device-DisconnectedReason-NETWORK_OUT_OF_ORDER = 38--><!--Device-DisconnectedReason-NETWORK_OUT_OF_ORDER = 38-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -316,6 +360,8 @@ TEMPORARY_FAILURE = 41
 
 **起始版本：** 8
 
+<!--Device-DisconnectedReason-TEMPORARY_FAILURE = 41--><!--Device-DisconnectedReason-TEMPORARY_FAILURE = 41-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -329,6 +375,8 @@ SWITCHING_EQUIPMENT_CONGESTION = 42
 交换设备拥塞。
 
 **起始版本：** 9
+
+<!--Device-DisconnectedReason-SWITCHING_EQUIPMENT_CONGESTION = 42--><!--Device-DisconnectedReason-SWITCHING_EQUIPMENT_CONGESTION = 42-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -344,6 +392,8 @@ ACCESS_INFORMATION_DISCARDED = 43
 
 **起始版本：** 9
 
+<!--Device-DisconnectedReason-ACCESS_INFORMATION_DISCARDED = 43--><!--Device-DisconnectedReason-ACCESS_INFORMATION_DISCARDED = 43-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -357,6 +407,8 @@ REQUEST_CIRCUIT_CHANNEL_NOT_AVAILABLE = 44
 请求的电路/通道不可用。
 
 **起始版本：** 9
+
+<!--Device-DisconnectedReason-REQUEST_CIRCUIT_CHANNEL_NOT_AVAILABLE = 44--><!--Device-DisconnectedReason-REQUEST_CIRCUIT_CHANNEL_NOT_AVAILABLE = 44-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -372,6 +424,8 @@ RESOURCES_UNAVAILABLE_UNSPECIFIED = 47
 
 **起始版本：** 9
 
+<!--Device-DisconnectedReason-RESOURCES_UNAVAILABLE_UNSPECIFIED = 47--><!--Device-DisconnectedReason-RESOURCES_UNAVAILABLE_UNSPECIFIED = 47-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -385,6 +439,8 @@ QUALITY_OF_SERVICE_UNAVAILABLE = 49
 服务质量不可用。
 
 **起始版本：** 9
+
+<!--Device-DisconnectedReason-QUALITY_OF_SERVICE_UNAVAILABLE = 49--><!--Device-DisconnectedReason-QUALITY_OF_SERVICE_UNAVAILABLE = 49-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -400,6 +456,8 @@ REQUESTED_FACILITY_NOT_SUBSCRIBED = 50
 
 **起始版本：** 9
 
+<!--Device-DisconnectedReason-REQUESTED_FACILITY_NOT_SUBSCRIBED = 50--><!--Device-DisconnectedReason-REQUESTED_FACILITY_NOT_SUBSCRIBED = 50-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -413,6 +471,8 @@ INCOMING_CALLS_BARRED_WITHIN_THE_CUG = 55
 CUG内禁止来电。
 
 **起始版本：** 9
+
+<!--Device-DisconnectedReason-INCOMING_CALLS_BARRED_WITHIN_THE_CUG = 55--><!--Device-DisconnectedReason-INCOMING_CALLS_BARRED_WITHIN_THE_CUG = 55-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -428,6 +488,8 @@ BEARER_CAPABILITY_NOT_AUTHORIZED = 57
 
 **起始版本：** 9
 
+<!--Device-DisconnectedReason-BEARER_CAPABILITY_NOT_AUTHORIZED = 57--><!--Device-DisconnectedReason-BEARER_CAPABILITY_NOT_AUTHORIZED = 57-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -441,6 +503,8 @@ BEARER_CAPABILITY_NOT_PRESENTLY_AVAILABLE = 58
 承载能力目前不可用。
 
 **起始版本：** 9
+
+<!--Device-DisconnectedReason-BEARER_CAPABILITY_NOT_PRESENTLY_AVAILABLE = 58--><!--Device-DisconnectedReason-BEARER_CAPABILITY_NOT_PRESENTLY_AVAILABLE = 58-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -456,6 +520,8 @@ SERVICE_OR_OPTION_NOT_AVAILABLE_UNSPECIFIED = 63
 
 **起始版本：** 9
 
+<!--Device-DisconnectedReason-SERVICE_OR_OPTION_NOT_AVAILABLE_UNSPECIFIED = 63--><!--Device-DisconnectedReason-SERVICE_OR_OPTION_NOT_AVAILABLE_UNSPECIFIED = 63-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -469,6 +535,8 @@ BEARER_SERVICE_NOT_IMPLEMENTED = 65
 未实现承载服务。
 
 **起始版本：** 9
+
+<!--Device-DisconnectedReason-BEARER_SERVICE_NOT_IMPLEMENTED = 65--><!--Device-DisconnectedReason-BEARER_SERVICE_NOT_IMPLEMENTED = 65-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -484,6 +552,8 @@ ACM大于或等于最大值。
 
 **起始版本：** 9
 
+<!--Device-DisconnectedReason-ACM_EQUALTO_OR_GREATER_THAN_THE_MAXIMUM_VALUE = 68--><!--Device-DisconnectedReason-ACM_EQUALTO_OR_GREATER_THAN_THE_MAXIMUM_VALUE = 68-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -497,6 +567,8 @@ REQUESTED_FACILITY_NOT_IMPLEMENTED = 69
 请求的设施未实施。
 
 **起始版本：** 9
+
+<!--Device-DisconnectedReason-REQUESTED_FACILITY_NOT_IMPLEMENTED = 69--><!--Device-DisconnectedReason-REQUESTED_FACILITY_NOT_IMPLEMENTED = 69-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -512,6 +584,8 @@ ONLY_RESTRICTED_DIGITAL_INFO_BEARER_CAPABILITY_IS_AVAILABLE = 70
 
 **起始版本：** 9
 
+<!--Device-DisconnectedReason-ONLY_RESTRICTED_DIGITAL_INFO_BEARER_CAPABILITY_IS_AVAILABLE = 70--><!--Device-DisconnectedReason-ONLY_RESTRICTED_DIGITAL_INFO_BEARER_CAPABILITY_IS_AVAILABLE = 70-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -525,6 +599,8 @@ SERVICE_OR_OPTION_NOT_IMPLEMENTED_UNSPECIFIED = 79
 服务或选项未实施，未指定。
 
 **起始版本：** 9
+
+<!--Device-DisconnectedReason-SERVICE_OR_OPTION_NOT_IMPLEMENTED_UNSPECIFIED = 79--><!--Device-DisconnectedReason-SERVICE_OR_OPTION_NOT_IMPLEMENTED_UNSPECIFIED = 79-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -540,6 +616,8 @@ INVALID_TRANSACTION_IDENTIFIER_VALUE = 81
 
 **起始版本：** 9
 
+<!--Device-DisconnectedReason-INVALID_TRANSACTION_IDENTIFIER_VALUE = 81--><!--Device-DisconnectedReason-INVALID_TRANSACTION_IDENTIFIER_VALUE = 81-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -553,6 +631,8 @@ USER_NOT_MEMBER_OF_CUG = 87
 用户不是CUG成员。
 
 **起始版本：** 9
+
+<!--Device-DisconnectedReason-USER_NOT_MEMBER_OF_CUG = 87--><!--Device-DisconnectedReason-USER_NOT_MEMBER_OF_CUG = 87-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -568,6 +648,8 @@ INCOMPATIBLE_DESTINATION = 88
 
 **起始版本：** 9
 
+<!--Device-DisconnectedReason-INCOMPATIBLE_DESTINATION = 88--><!--Device-DisconnectedReason-INCOMPATIBLE_DESTINATION = 88-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -581,6 +663,8 @@ INVALID_TRANSIT_NETWORK_SELECTION = 91
 选择的传输网络无效。
 
 **起始版本：** 9
+
+<!--Device-DisconnectedReason-INVALID_TRANSIT_NETWORK_SELECTION = 91--><!--Device-DisconnectedReason-INVALID_TRANSIT_NETWORK_SELECTION = 91-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -596,6 +680,8 @@ SEMANTICALLY_INCORRECT_MESSAGE = 95
 
 **起始版本：** 9
 
+<!--Device-DisconnectedReason-SEMANTICALLY_INCORRECT_MESSAGE = 95--><!--Device-DisconnectedReason-SEMANTICALLY_INCORRECT_MESSAGE = 95-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -609,6 +695,8 @@ INVALID_MANDATORY_INFORMATION = 96
 无效的强制信息。
 
 **起始版本：** 9
+
+<!--Device-DisconnectedReason-INVALID_MANDATORY_INFORMATION = 96--><!--Device-DisconnectedReason-INVALID_MANDATORY_INFORMATION = 96-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -624,6 +712,8 @@ MESSAGE_TYPE_NON_EXISTENT_OR_NOT_IMPLEMENTED = 97
 
 **起始版本：** 9
 
+<!--Device-DisconnectedReason-MESSAGE_TYPE_NON_EXISTENT_OR_NOT_IMPLEMENTED = 97--><!--Device-DisconnectedReason-MESSAGE_TYPE_NON_EXISTENT_OR_NOT_IMPLEMENTED = 97-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -637,6 +727,8 @@ MESSAGE_TYPE_NOT_COMPATIBLE_WITH_PROTOCOL_STATE = 98
 消息类型与协议状态不兼容。
 
 **起始版本：** 9
+
+<!--Device-DisconnectedReason-MESSAGE_TYPE_NOT_COMPATIBLE_WITH_PROTOCOL_STATE = 98--><!--Device-DisconnectedReason-MESSAGE_TYPE_NOT_COMPATIBLE_WITH_PROTOCOL_STATE = 98-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -652,6 +744,8 @@ IE不存在或未实现。
 
 **起始版本：** 9
 
+<!--Device-DisconnectedReason-INFORMATION_ELEMENT_NON_EXISTENT_OR_NOT_IMPLEMENTED = 99--><!--Device-DisconnectedReason-INFORMATION_ELEMENT_NON_EXISTENT_OR_NOT_IMPLEMENTED = 99-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -665,6 +759,8 @@ CONDITIONAL_IE_ERROR = 100
 条件IE错误。
 
 **起始版本：** 9
+
+<!--Device-DisconnectedReason-CONDITIONAL_IE_ERROR = 100--><!--Device-DisconnectedReason-CONDITIONAL_IE_ERROR = 100-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -680,6 +776,8 @@ MESSAGE_NOT_COMPATIBLE_WITH_PROTOCOL_STATE = 101
 
 **起始版本：** 9
 
+<!--Device-DisconnectedReason-MESSAGE_NOT_COMPATIBLE_WITH_PROTOCOL_STATE = 101--><!--Device-DisconnectedReason-MESSAGE_NOT_COMPATIBLE_WITH_PROTOCOL_STATE = 101-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -693,6 +791,8 @@ RECOVERY_ON_TIMER_EXPIRED = 102
 计时器过期时恢复计时器编号。
 
 **起始版本：** 9
+
+<!--Device-DisconnectedReason-RECOVERY_ON_TIMER_EXPIRED = 102--><!--Device-DisconnectedReason-RECOVERY_ON_TIMER_EXPIRED = 102-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -708,6 +808,8 @@ PROTOCOL_ERROR_UNSPECIFIED = 111
 
 **起始版本：** 9
 
+<!--Device-DisconnectedReason-PROTOCOL_ERROR_UNSPECIFIED = 111--><!--Device-DisconnectedReason-PROTOCOL_ERROR_UNSPECIFIED = 111-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -721,6 +823,8 @@ INTERWORKING_UNSPECIFIED = 127
 互通，未指定。
 
 **起始版本：** 9
+
+<!--Device-DisconnectedReason-INTERWORKING_UNSPECIFIED = 127--><!--Device-DisconnectedReason-INTERWORKING_UNSPECIFIED = 127-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -736,6 +840,8 @@ CALL_BARRED = 240
 
 **起始版本：** 9
 
+<!--Device-DisconnectedReason-CALL_BARRED = 240--><!--Device-DisconnectedReason-CALL_BARRED = 240-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -749,6 +855,8 @@ FDN_BLOCKED = 241
 FDN受阻。
 
 **起始版本：** 9
+
+<!--Device-DisconnectedReason-FDN_BLOCKED = 241--><!--Device-DisconnectedReason-FDN_BLOCKED = 241-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -764,6 +872,8 @@ VLR中的IMSI未知。
 
 **起始版本：** 9
 
+<!--Device-DisconnectedReason-IMSI_UNKNOWN_IN_VLR = 242--><!--Device-DisconnectedReason-IMSI_UNKNOWN_IN_VLR = 242-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -777,6 +887,8 @@ IMEI_NOT_ACCEPTED = 243
 IMEI未被接受。
 
 **起始版本：** 9
+
+<!--Device-DisconnectedReason-IMEI_NOT_ACCEPTED = 243--><!--Device-DisconnectedReason-IMEI_NOT_ACCEPTED = 243-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -792,6 +904,8 @@ DIAL_MODIFIED_TO_USSD = 244
 
 **起始版本：** 9
 
+<!--Device-DisconnectedReason-DIAL_MODIFIED_TO_USSD = 244--><!--Device-DisconnectedReason-DIAL_MODIFIED_TO_USSD = 244-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -805,6 +919,8 @@ DIAL_MODIFIED_TO_SS = 245
 拨号修改为USSD号。
 
 **起始版本：** 9
+
+<!--Device-DisconnectedReason-DIAL_MODIFIED_TO_SS = 245--><!--Device-DisconnectedReason-DIAL_MODIFIED_TO_SS = 245-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -820,6 +936,8 @@ DIAL_MODIFIED_TO_DIAL = 246
 
 **起始版本：** 9
 
+<!--Device-DisconnectedReason-DIAL_MODIFIED_TO_DIAL = 246--><!--Device-DisconnectedReason-DIAL_MODIFIED_TO_DIAL = 246-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -833,6 +951,8 @@ RADIO_OFF = 247
 无线电通讯已关闭。
 
 **起始版本：** 9
+
+<!--Device-DisconnectedReason-RADIO_OFF = 247--><!--Device-DisconnectedReason-RADIO_OFF = 247-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -848,6 +968,8 @@ OUT_OF_SERVICE = 248
 
 **起始版本：** 9
 
+<!--Device-DisconnectedReason-OUT_OF_SERVICE = 248--><!--Device-DisconnectedReason-OUT_OF_SERVICE = 248-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -861,6 +983,8 @@ NO_VALID_SIM = 249
 SIM卡无效。
 
 **起始版本：** 9
+
+<!--Device-DisconnectedReason-NO_VALID_SIM = 249--><!--Device-DisconnectedReason-NO_VALID_SIM = 249-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -876,6 +1000,8 @@ RADIO_INTERNAL_ERROR = 250
 
 **起始版本：** 9
 
+<!--Device-DisconnectedReason-RADIO_INTERNAL_ERROR = 250--><!--Device-DisconnectedReason-RADIO_INTERNAL_ERROR = 250-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -889,6 +1015,8 @@ NETWORK_RESP_TIMEOUT = 251
 网络响应超时。
 
 **起始版本：** 9
+
+<!--Device-DisconnectedReason-NETWORK_RESP_TIMEOUT = 251--><!--Device-DisconnectedReason-NETWORK_RESP_TIMEOUT = 251-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -904,6 +1032,8 @@ NETWORK_REJECT = 252
 
 **起始版本：** 9
 
+<!--Device-DisconnectedReason-NETWORK_REJECT = 252--><!--Device-DisconnectedReason-NETWORK_REJECT = 252-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -917,6 +1047,8 @@ RADIO_ACCESS_FAILURE = 253
 无线电接入故障。
 
 **起始版本：** 9
+
+<!--Device-DisconnectedReason-RADIO_ACCESS_FAILURE = 253--><!--Device-DisconnectedReason-RADIO_ACCESS_FAILURE = 253-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -932,6 +1064,8 @@ RADIO_LINK_FAILURE = 254
 
 **起始版本：** 9
 
+<!--Device-DisconnectedReason-RADIO_LINK_FAILURE = 254--><!--Device-DisconnectedReason-RADIO_LINK_FAILURE = 254-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -945,6 +1079,8 @@ RADIO_LINK_LOST = 255
 无线电链路丢失。
 
 **起始版本：** 9
+
+<!--Device-DisconnectedReason-RADIO_LINK_LOST = 255--><!--Device-DisconnectedReason-RADIO_LINK_LOST = 255-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -960,6 +1096,8 @@ RADIO_UPLINK_FAILURE = 256
 
 **起始版本：** 9
 
+<!--Device-DisconnectedReason-RADIO_UPLINK_FAILURE = 256--><!--Device-DisconnectedReason-RADIO_UPLINK_FAILURE = 256-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -973,6 +1111,8 @@ RADIO_SETUP_FAILURE = 257
 无线电通讯设置失败。
 
 **起始版本：** 9
+
+<!--Device-DisconnectedReason-RADIO_SETUP_FAILURE = 257--><!--Device-DisconnectedReason-RADIO_SETUP_FAILURE = 257-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -988,6 +1128,8 @@ RADIO_RELEASE_NORMAL = 258
 
 **起始版本：** 9
 
+<!--Device-DisconnectedReason-RADIO_RELEASE_NORMAL = 258--><!--Device-DisconnectedReason-RADIO_RELEASE_NORMAL = 258-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -1001,6 +1143,8 @@ RADIO_RELEASE_ABNORMAL = 259
 无线电释放异常。
 
 **起始版本：** 9
+
+<!--Device-DisconnectedReason-RADIO_RELEASE_ABNORMAL = 259--><!--Device-DisconnectedReason-RADIO_RELEASE_ABNORMAL = 259-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -1016,6 +1160,8 @@ ACCESS_CLASS_BLOCKED = 260
 
 **起始版本：** 9
 
+<!--Device-DisconnectedReason-ACCESS_CLASS_BLOCKED = 260--><!--Device-DisconnectedReason-ACCESS_CLASS_BLOCKED = 260-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -1029,6 +1175,8 @@ NETWORK_DETACH = 261
 网络分离。
 
 **起始版本：** 9
+
+<!--Device-DisconnectedReason-NETWORK_DETACH = 261--><!--Device-DisconnectedReason-NETWORK_DETACH = 261-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -1044,6 +1192,8 @@ INVALID_PARAMETER = 1025
 
 **起始版本：** 8
 
+<!--Device-DisconnectedReason-INVALID_PARAMETER = 1025--><!--Device-DisconnectedReason-INVALID_PARAMETER = 1025-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -1057,6 +1207,8 @@ SIM_NOT_EXIT = 1026
 SIM卡未退出。
 
 **起始版本：** 8
+
+<!--Device-DisconnectedReason-SIM_NOT_EXIT = 1026--><!--Device-DisconnectedReason-SIM_NOT_EXIT = 1026-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -1072,6 +1224,8 @@ SIM_PIN_NEED = 1027
 
 **起始版本：** 8
 
+<!--Device-DisconnectedReason-SIM_PIN_NEED = 1027--><!--Device-DisconnectedReason-SIM_PIN_NEED = 1027-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -1085,6 +1239,8 @@ CALL_NOT_ALLOW = 1029
 不允许呼叫。
 
 **起始版本：** 8
+
+<!--Device-DisconnectedReason-CALL_NOT_ALLOW = 1029--><!--Device-DisconnectedReason-CALL_NOT_ALLOW = 1029-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -1100,6 +1256,8 @@ SIM卡无效。
 
 **起始版本：** 8
 
+<!--Device-DisconnectedReason-SIM_INVALID = 1045--><!--Device-DisconnectedReason-SIM_INVALID = 1045-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -1113,6 +1271,8 @@ UNKNOWN = 1279
 未知原因。
 
 **起始版本：** 8
+
+<!--Device-DisconnectedReason-UNKNOWN = 1279--><!--Device-DisconnectedReason-UNKNOWN = 1279-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 

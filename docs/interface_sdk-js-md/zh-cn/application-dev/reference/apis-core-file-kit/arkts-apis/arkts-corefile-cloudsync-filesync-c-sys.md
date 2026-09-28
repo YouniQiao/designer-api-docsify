@@ -8,6 +8,8 @@ class FileSync
 
 **起始版本：** 12
 
+<!--Device-cloudSync-class FileSync--><!--Device-cloudSync-class FileSync-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## 导入模块
@@ -27,6 +29,8 @@ constructor(bundleName: string)
 端云同步流程的构造函数，用于获取FileSync类的实例。
 
 **起始版本：** 12
+
+<!--Device-FileSync-constructor(bundleName: string)--><!--Device-FileSync-constructor(bundleName: string)-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -64,6 +68,8 @@ getUploadList(uris: Array<string>): Promise<Array<UploadProgress>>
 **需要权限：** ohos.permission.CLOUDFILE_SYNC
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FileSync-getUploadList(uris: Array<string>): Promise<Array<UploadProgress>>--><!--Device-FileSync-getUploadList(uris: Array<string>): Promise<Array<UploadProgress>>-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -122,6 +128,8 @@ pauseUpload(uri: string): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FileSync-pauseUpload(uri: string): void--><!--Device-FileSync-pauseUpload(uri: string): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **系统接口：** 此接口为系统接口。
@@ -174,6 +182,8 @@ registerUploadProgress(callback: Callback<UploadProgress>): void
 **需要权限：** ohos.permission.CLOUDFILE_SYNC
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FileSync-registerUploadProgress(callback: Callback<UploadProgress>): void--><!--Device-FileSync-registerUploadProgress(callback: Callback<UploadProgress>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -228,6 +238,8 @@ resumeUpload(uri: string): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FileSync-resumeUpload(uri: string): void--><!--Device-FileSync-resumeUpload(uri: string): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **系统接口：** 此接口为系统接口。
@@ -280,6 +292,8 @@ unregisterUploadProgress(): void
 **需要权限：** ohos.permission.CLOUDFILE_SYNC
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FileSync-unregisterUploadProgress(): void--><!--Device-FileSync-unregisterUploadProgress(): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 

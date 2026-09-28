@@ -12,6 +12,8 @@ interface DelaySuspendInfo
 
 **替代接口：** [DelaySuspendInfo](arkts-backgroundtasks-backgroundtaskmanager-delaysuspendinfo-i.md)
 
+<!--Device-backgroundTaskManager-interface DelaySuspendInfo--><!--Device-backgroundTaskManager-interface DelaySuspendInfo-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
 ## 导入模块
@@ -37,6 +39,8 @@ actualDelayTime: number
 
 **替代接口：** DelaySuspendInfo
 
+<!--Device-DelaySuspendInfo-actualDelayTime: number--><!--Device-DelaySuspendInfo-actualDelayTime: number-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
 ## requestId
@@ -54,5 +58,7 @@ requestId: number
 **废弃版本：** 9
 
 **替代接口：** DelaySuspendInfo
+
+<!--Device-DelaySuspendInfo-requestId: number--><!--Device-DelaySuspendInfo-requestId: number-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask

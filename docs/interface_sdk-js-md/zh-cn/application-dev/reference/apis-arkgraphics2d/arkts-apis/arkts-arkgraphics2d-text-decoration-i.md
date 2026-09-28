@@ -8,6 +8,8 @@ interface Decoration
 
 **起始版本：** 12
 
+<!--Device-text-interface Decoration--><!--Device-text-interface Decoration-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## 导入模块
@@ -28,7 +30,9 @@ color?: common2D.Color
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Decoration-color?: common2D.Color--><!--Device-Decoration-color?: common2D.Color-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -44,7 +48,9 @@ decorationStyle?: TextDecorationStyle
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Decoration-decorationStyle?: TextDecorationStyle--><!--Device-Decoration-decorationStyle?: TextDecorationStyle-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -60,7 +66,9 @@ decorationThicknessScale?: number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Decoration-decorationThicknessScale?: double--><!--Device-Decoration-decorationThicknessScale?: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -76,6 +84,8 @@ textDecoration?: TextDecorationType
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Decoration-textDecoration?: TextDecorationType--><!--Device-Decoration-textDecoration?: TextDecorationType-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing

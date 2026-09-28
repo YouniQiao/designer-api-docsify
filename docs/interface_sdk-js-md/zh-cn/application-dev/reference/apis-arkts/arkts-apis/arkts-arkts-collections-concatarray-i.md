@@ -16,6 +16,8 @@ interface ConcatArray<T> extends ISendable
 
 **起始版本：** 12
 
+<!--Device-collections-interface ConcatArray<T> extends ISendable--><!--Device-collections-interface ConcatArray<T> extends ISendable-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -35,6 +37,8 @@ join(separator?: string): string
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ConcatArray-join(separator?: string): string--><!--Device-ConcatArray-join(separator?: string): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -61,6 +65,8 @@ slice(start?: number, end?: number): ConcatArray<T>
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ConcatArray-slice(start?: number, end?: number): ConcatArray<T>--><!--Device-ConcatArray-slice(start?: number, end?: number): ConcatArray<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -89,6 +95,8 @@ readonly [index: number]: T
 
 **起始版本：** 12
 
+<!--Device-ConcatArray-readonly [index: number]: T--><!--Device-ConcatArray-readonly [index: number]: T-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **错误码：**
@@ -110,5 +118,7 @@ ConcatArray的元素个数。
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ConcatArray-readonly length: number--><!--Device-ConcatArray-readonly length: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

@@ -18,6 +18,8 @@ function hasAccessoryRight(accessory: USBAccessory): boolean
 
 **起始版本：** 14
 
+<!--Device-usbManager-function hasAccessoryRight(accessory: USBAccessory): boolean--><!--Device-usbManager-function hasAccessoryRight(accessory: USBAccessory): boolean-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 **参数：**

@@ -8,6 +8,8 @@ enum CodecBitRate
 
 **起始版本：** 19
 
+<!--Device-a2dp-enum CodecBitRate--><!--Device-a2dp-enum CodecBitRate-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## CODEC_BIT_RATE_96000
@@ -19,6 +21,8 @@ CODEC_BIT_RATE_96000 = 0
 96kbps
 
 **起始版本：** 19
+
+<!--Device-CodecBitRate-CODEC_BIT_RATE_96000 = 0--><!--Device-CodecBitRate-CODEC_BIT_RATE_96000 = 0-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -32,6 +36,8 @@ CODEC_BIT_RATE_128000 = 1
 
 **起始版本：** 19
 
+<!--Device-CodecBitRate-CODEC_BIT_RATE_128000 = 1--><!--Device-CodecBitRate-CODEC_BIT_RATE_128000 = 1-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## CODEC_BIT_RATE_192000
@@ -43,6 +49,8 @@ CODEC_BIT_RATE_192000 = 2
 192kbps
 
 **起始版本：** 19
+
+<!--Device-CodecBitRate-CODEC_BIT_RATE_192000 = 2--><!--Device-CodecBitRate-CODEC_BIT_RATE_192000 = 2-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -56,6 +64,8 @@ CODEC_BIT_RATE_256000 = 3
 
 **起始版本：** 19
 
+<!--Device-CodecBitRate-CODEC_BIT_RATE_256000 = 3--><!--Device-CodecBitRate-CODEC_BIT_RATE_256000 = 3-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## CODEC_BIT_RATE_320000
@@ -67,6 +77,8 @@ CODEC_BIT_RATE_320000 = 4
 320kbps
 
 **起始版本：** 19
+
+<!--Device-CodecBitRate-CODEC_BIT_RATE_320000 = 4--><!--Device-CodecBitRate-CODEC_BIT_RATE_320000 = 4-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -80,6 +92,8 @@ CODEC_BIT_RATE_480000 = 5
 
 **起始版本：** 19
 
+<!--Device-CodecBitRate-CODEC_BIT_RATE_480000 = 5--><!--Device-CodecBitRate-CODEC_BIT_RATE_480000 = 5-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## CODEC_BIT_RATE_640000
@@ -91,6 +105,8 @@ CODEC_BIT_RATE_640000 = 6
 640kbps
 
 **起始版本：** 19
+
+<!--Device-CodecBitRate-CODEC_BIT_RATE_640000 = 6--><!--Device-CodecBitRate-CODEC_BIT_RATE_640000 = 6-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -104,6 +120,8 @@ CODEC_BIT_RATE_960000 = 7
 
 **起始版本：** 19
 
+<!--Device-CodecBitRate-CODEC_BIT_RATE_960000 = 7--><!--Device-CodecBitRate-CODEC_BIT_RATE_960000 = 7-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## CODEC_BIT_RATE_ABR
@@ -115,6 +133,8 @@ CODEC_BIT_RATE_ABR = 8
 自适应码率（根据蓝牙链路质量自动调整）。
 
 **起始版本：** 19
+
+<!--Device-CodecBitRate-CODEC_BIT_RATE_ABR = 8--><!--Device-CodecBitRate-CODEC_BIT_RATE_ABR = 8-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -128,6 +148,8 @@ CODEC_BIT_RATE_1500000 = 9
 
 **起始版本：** 21
 
+<!--Device-CodecBitRate-CODEC_BIT_RATE_1500000 = 9--><!--Device-CodecBitRate-CODEC_BIT_RATE_1500000 = 9-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## CODEC_BIT_RATE_2300000
@@ -139,5 +161,7 @@ CODEC_BIT_RATE_2300000 = 10
 2300kbps
 
 **起始版本：** 21
+
+<!--Device-CodecBitRate-CODEC_BIT_RATE_2300000 = 10--><!--Device-CodecBitRate-CODEC_BIT_RATE_2300000 = 10-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

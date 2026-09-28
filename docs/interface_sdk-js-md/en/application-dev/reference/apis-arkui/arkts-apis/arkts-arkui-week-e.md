@@ -8,6 +8,8 @@ Enumerates the days of the week.
 
 **Since:** 7
 
+<!--Device-unnamed-declare enum Week--><!--Device-unnamed-declare enum Week-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Mon
@@ -23,6 +25,8 @@ Monday.
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Week-Mon--><!--Device-Week-Mon-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,6 +44,8 @@ Tuesday.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Week-Tue--><!--Device-Week-Tue-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Wed
@@ -55,6 +61,8 @@ Wednesday.
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Week-Wed--><!--Device-Week-Wed-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,6 +80,8 @@ Thursday.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Week-Thur--><!--Device-Week-Thur-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Fri
@@ -87,6 +97,8 @@ Friday.
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Week-Fri--><!--Device-Week-Fri-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -104,6 +116,8 @@ Saturday.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Week-Sat--><!--Device-Week-Sat-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Sun
@@ -119,5 +133,7 @@ Sunday.
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Week-Sun--><!--Device-Week-Sun-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

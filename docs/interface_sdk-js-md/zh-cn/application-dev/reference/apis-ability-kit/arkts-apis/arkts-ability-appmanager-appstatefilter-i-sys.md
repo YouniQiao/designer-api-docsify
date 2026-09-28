@@ -8,6 +8,8 @@ export interface AppStateFilter
 
 **起始版本：** 21
 
+<!--Device-appManager-export interface AppStateFilter--><!--Device-appManager-export interface AppStateFilter-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -35,6 +37,8 @@ appManager.FilterAbilityStateType.FOREGROUND" ，表示同时监听Ability的创
 
 **起始版本：** 21
 
+<!--Device-AppStateFilter-abilityStateTypes?: int--><!--Device-AppStateFilter-abilityStateTypes?: int-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -55,6 +59,8 @@ appManager.FilterAppStateType.FOREGROUND" ，表示同时监听应用的创建�
 **类型：** number
 
 **起始版本：** 21
+
+<!--Device-AppStateFilter-appStateTypes?: int--><!--Device-AppStateFilter-appStateTypes?: int-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -77,6 +83,8 @@ appManager.FilterBundleType.ATOMIC_SERVICE" ，表示同时监听应用和原子
 
 **起始版本：** 21
 
+<!--Device-AppStateFilter-bundleTypes?: int--><!--Device-AppStateFilter-bundleTypes?: int-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -98,6 +106,8 @@ appManager.FilterCallback.ON_PROCESS_STATE_CHANGED" ，表示同时监听[Applic
 
 **起始版本：** 21
 
+<!--Device-AppStateFilter-callbacks?: int--><!--Device-AppStateFilter-callbacks?: int-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -118,6 +128,8 @@ appManager.FilterProcessStateType.FOREGROUND" ，表示同时监听进程的创�
 **类型：** number
 
 **起始版本：** 21
+
+<!--Device-AppStateFilter-processStateTypes?: int--><!--Device-AppStateFilter-processStateTypes?: int-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

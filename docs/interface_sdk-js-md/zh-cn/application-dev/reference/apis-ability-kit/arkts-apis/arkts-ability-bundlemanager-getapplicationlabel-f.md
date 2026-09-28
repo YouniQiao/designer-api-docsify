@@ -20,6 +20,8 @@ function getApplicationLabel(bundleName: string, appIndex: number): Promise<stri
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-bundleManager-function getApplicationLabel(bundleName: string, appIndex: int): Promise<string>--><!--Device-bundleManager-function getApplicationLabel(bundleName: string, appIndex: int): Promise<string>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Resource
 
 **参数：**

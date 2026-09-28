@@ -8,6 +8,8 @@ class Blob
 
 **起始版本：** 9
 
+<!--Device-buffer-class Blob--><!--Device-buffer-class Blob-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -26,7 +28,9 @@ arrayBuffer(): Promise<ArrayBuffer>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Blob-arrayBuffer(): Promise<ArrayBuffer>--><!--Device-Blob-arrayBuffer(): Promise<ArrayBuffer>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -62,6 +66,8 @@ constructor(sources: string[] | ArrayBuffer[] | TypedArray[] | DataView[] | Blob
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Blob-constructor(sources: string[] | ArrayBuffer[] | TypedArray[] | DataView[] | Blob[], options?: Object)--><!--Device-Blob-constructor(sources: string[] | ArrayBuffer[] | TypedArray[] | DataView[] | Blob[], options?: Object)-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -96,7 +102,9 @@ slice(start?: number, end?: number, type?: string): Blob
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Blob-slice(start?: int, end?: int, type?: string): Blob--><!--Device-Blob-slice(start?: int, end?: int, type?: string): Blob-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -135,7 +143,9 @@ text(): Promise<string>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Blob-text(): Promise<string>--><!--Device-Blob-text(): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -170,7 +180,9 @@ Blob实例的总字节大小。
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Blob-get size(): int--><!--Device-Blob-get size(): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -186,6 +198,8 @@ Blob实例的内容类型。
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Blob-get type(): string--><!--Device-Blob-get type(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

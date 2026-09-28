@@ -8,6 +8,8 @@ type GetFormRectInfoCallback = (formId: string) => Promise<formInfo.Rect>
 
 **起始版本：** 20
 
+<!--Device-formInfo-type GetFormRectInfoCallback = (formId: string) => Promise<formInfo.Rect>--><!--Device-formInfo-type GetFormRectInfoCallback = (formId: string) => Promise<formInfo.Rect>-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。

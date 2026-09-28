@@ -28,6 +28,8 @@ function queryOpenedEnterpriseDlpFiles(options?: DlpFileQueryOptions): Promise<A
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-dlpPermission-function queryOpenedEnterpriseDlpFiles(options?: DlpFileQueryOptions): Promise<Array<string>>--><!--Device-dlpPermission-function queryOpenedEnterpriseDlpFiles(options?: DlpFileQueryOptions): Promise<Array<string>>-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **参数：**

@@ -10,6 +10,8 @@ interface DataShareUpdate
 
 **起始版本：** 11
 
+<!--Device-reminderAgentManager-interface DataShareUpdate--><!--Device-reminderAgentManager-interface DataShareUpdate-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ equalTo: Record<string, number | string | boolean>
 
 **起始版本：** 11
 
+<!--Device-DataShareUpdate-equalTo: Record<string, double | string | boolean>--><!--Device-DataShareUpdate-equalTo: Record<string, double | string | boolean>-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 **系统接口：** 此接口为系统接口。
@@ -48,6 +52,8 @@ uri: string
 
 **起始版本：** 11
 
+<!--Device-DataShareUpdate-uri: string--><!--Device-DataShareUpdate-uri: string-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 **系统接口：** 此接口为系统接口。
@@ -63,6 +69,8 @@ value: ValuesBucket
 **类型：** [ValuesBucket](../../apis-arkdata/arkts-apis/arkts-arkdata-valuesbucket-t.md)
 
 **起始版本：** 11
+
+<!--Device-DataShareUpdate-value: ValuesBucket--><!--Device-DataShareUpdate-value: ValuesBucket-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 

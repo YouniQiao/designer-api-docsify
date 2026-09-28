@@ -28,7 +28,9 @@ function getDefaultNet(callback: AsyncCallback<NetHandle>): void
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-connection-function getDefaultNet(callback: AsyncCallback<NetHandle>): void--><!--Device-connection-function getDefaultNet(callback: AsyncCallback<NetHandle>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -87,7 +89,9 @@ function getDefaultNet(): Promise<NetHandle>
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-connection-function getDefaultNet(): Promise<NetHandle>--><!--Device-connection-function getDefaultNet(): Promise<NetHandle>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 

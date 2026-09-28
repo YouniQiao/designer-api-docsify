@@ -8,6 +8,8 @@ Current lifecycle status of a custom component.
 
 **Since:** 23
 
+<!--Device-unnamed-export declare enum CustomComponentLifecycleState--><!--Device-unnamed-export declare enum CustomComponentLifecycleState-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## INIT
@@ -23,6 +25,8 @@ Initial.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-CustomComponentLifecycleState-INIT = 0--><!--Device-CustomComponentLifecycleState-INIT = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,6 +44,8 @@ Appeared.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-CustomComponentLifecycleState-APPEARED = 1--><!--Device-CustomComponentLifecycleState-APPEARED = 1-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## BUILT
@@ -55,6 +61,8 @@ Built.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-CustomComponentLifecycleState-BUILT = 2--><!--Device-CustomComponentLifecycleState-BUILT = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,6 +80,8 @@ Recycled.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-CustomComponentLifecycleState-RECYCLED = 3--><!--Device-CustomComponentLifecycleState-RECYCLED = 3-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## DISAPPEARED
@@ -87,5 +97,7 @@ Disappeared.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-CustomComponentLifecycleState-DISAPPEARED = 4--><!--Device-CustomComponentLifecycleState-DISAPPEARED = 4-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

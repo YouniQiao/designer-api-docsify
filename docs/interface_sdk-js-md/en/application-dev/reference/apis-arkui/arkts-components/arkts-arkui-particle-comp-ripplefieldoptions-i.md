@@ -10,6 +10,8 @@ Defines ripple field options.
 
 **Since:** 22
 
+<!--Device-unnamed-declare interface RippleFieldOptions--><!--Device-unnamed-declare interface RippleFieldOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## amplitude
@@ -29,6 +31,8 @@ The amplitude of the ripple field. The greater the amplitude, the stronger the f
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-RippleFieldOptions-amplitude?: number--><!--Device-RippleFieldOptions-amplitude?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,6 +54,8 @@ The attenuation coefficient of the ripple field. The larger the attenuation coef
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-RippleFieldOptions-attenuation?: number--><!--Device-RippleFieldOptions-attenuation?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## center
@@ -69,6 +75,8 @@ The central point where the ripple field generates force. The top-left corner of
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-RippleFieldOptions-center?: PositionT<number>--><!--Device-RippleFieldOptions-center?: PositionT<number>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -90,6 +98,8 @@ The region influenced by the ripple field.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-RippleFieldOptions-region?: FieldRegion--><!--Device-RippleFieldOptions-region?: FieldRegion-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## wavelength
@@ -110,6 +120,8 @@ Wavelength, which is the distance over which a wave cycle changes. The larger th
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-RippleFieldOptions-wavelength?: number--><!--Device-RippleFieldOptions-wavelength?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## waveSpeed
@@ -129,5 +141,7 @@ Wave speed. The greater the wave speed, the faster the wave changes over time, a
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-RippleFieldOptions-waveSpeed?: number--><!--Device-RippleFieldOptions-waveSpeed?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

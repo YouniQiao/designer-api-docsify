@@ -20,6 +20,8 @@ function getProfileConnectionState(profileId?: ProfileId): ProfileConnectionStat
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-connection-function getProfileConnectionState(profileId?: ProfileId): ProfileConnectionState--><!--Device-connection-function getProfileConnectionState(profileId?: ProfileId): ProfileConnectionState-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**

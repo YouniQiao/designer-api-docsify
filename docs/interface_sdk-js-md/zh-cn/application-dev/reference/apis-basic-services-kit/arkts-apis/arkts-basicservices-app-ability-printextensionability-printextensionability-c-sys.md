@@ -8,6 +8,8 @@ declare class PrintExtensionAbility
 
 **起始版本：** 14
 
+<!--Device-unnamed-declare class PrintExtensionAbility--><!--Device-unnamed-declare class PrintExtensionAbility-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## 导入模块
@@ -27,6 +29,8 @@ onRequestPreview(jobInfo: print.PrintJob): string
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PrintExtensionAbility-onRequestPreview(jobInfo: print.PrintJob): string--><!--Device-PrintExtensionAbility-onRequestPreview(jobInfo: print.PrintJob): string-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 

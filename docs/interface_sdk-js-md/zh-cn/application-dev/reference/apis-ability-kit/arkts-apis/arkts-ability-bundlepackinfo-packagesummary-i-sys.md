@@ -8,6 +8,8 @@ pack.info中的包摘要信息。
 
 **起始版本：** 9
 
+<!--Device-unnamed-export interface PackageSummary--><!--Device-unnamed-export interface PackageSummary-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **系统接口：** 此接口为系统接口。
@@ -24,6 +26,8 @@ readonly app: BundleConfigInfo
 
 **起始版本：** 9
 
+<!--Device-PackageSummary-readonly app: BundleConfigInfo--><!--Device-PackageSummary-readonly app: BundleConfigInfo-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **系统接口：** 此接口为系统接口。
@@ -39,6 +43,8 @@ readonly modules: Array<ModuleConfigInfo>
 **类型：** Array&lt;[ModuleConfigInfo](arkts-ability-bundlepackinfo-moduleconfiginfo-i-sys.md)&gt;
 
 **起始版本：** 9
+
+<!--Device-PackageSummary-readonly modules: Array<ModuleConfigInfo>--><!--Device-PackageSummary-readonly modules: Array<ModuleConfigInfo>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 

@@ -8,6 +8,8 @@ export interface WindowRect
 
 **起始版本：** 10
 
+<!--Device-dialogRequest-export interface WindowRect--><!--Device-dialogRequest-export interface WindowRect-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ height: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-WindowRect-height: int--><!--Device-WindowRect-height: int-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## left
@@ -45,6 +49,8 @@ left: number
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WindowRect-left: int--><!--Device-WindowRect-left: int-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -62,6 +68,8 @@ top: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-WindowRect-top: int--><!--Device-WindowRect-top: int-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## width
@@ -77,5 +85,7 @@ width: number
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WindowRect-width: int--><!--Device-WindowRect-width: int-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

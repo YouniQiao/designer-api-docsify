@@ -11,6 +11,8 @@
 
 **起始版本：** 6
 
+<!--Device-unnamed-declare namespace deviceInfo--><!--Device-unnamed-declare namespace deviceInfo-End-->
+
 **系统能力：** SystemCapability.Startup.SystemInfo
 
 ## 导入模块

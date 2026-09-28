@@ -8,6 +8,8 @@ Knowledge Content class, used for geting related entity.
 
 **Since:** 23
 
+<!--Device-photoAccessHelper-class KnowledgeContent--><!--Device-photoAccessHelper-class KnowledgeContent-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -31,6 +33,8 @@ Get Related Entities, Smart Label
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-KnowledgeContent-static getRelatedEntity (topic: string, context: ContextMap, option?: Options): Promise<Entity[]>--><!--Device-KnowledgeContent-static getRelatedEntity (topic: string, context: ContextMap, option?: Options): Promise<Entity[]>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -73,6 +77,8 @@ Searches media assets based on the provided query. This API uses a promise to re
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-KnowledgeContent-static getSearchResult(query: SearchQuery): Promise<SearchResult>--><!--Device-KnowledgeContent-static getSearchResult(query: SearchQuery): Promise<SearchResult>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -111,6 +117,8 @@ Get Search Suggestion.
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-KnowledgeContent-static getSearchSuggestion( searchSuggestionTypes: Array<SearchSuggestionType>): Promise<Array<SearchSuggestionResult>>--><!--Device-KnowledgeContent-static getSearchSuggestion( searchSuggestionTypes: Array<SearchSuggestionType>): Promise<Array<SearchSuggestionResult>>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

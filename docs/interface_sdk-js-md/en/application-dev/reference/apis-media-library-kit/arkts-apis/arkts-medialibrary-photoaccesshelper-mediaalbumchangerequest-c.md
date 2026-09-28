@@ -10,6 +10,8 @@ Provides APIs for managing the media album change request.
 
 **Since:** 11
 
+<!--Device-photoAccessHelper-class MediaAlbumChangeRequest implements MediaChangeRequest--><!--Device-photoAccessHelper-class MediaAlbumChangeRequest implements MediaChangeRequest-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
@@ -27,6 +29,8 @@ addAssets(assets: Array<PhotoAsset>): void
 Add assets to the album.
 
 **Since:** 11
+
+<!--Device-MediaAlbumChangeRequest-addAssets(assets: Array<PhotoAsset>): void--><!--Device-MediaAlbumChangeRequest-addAssets(assets: Array<PhotoAsset>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -84,6 +88,8 @@ Constructor used to initialize a new object.
 
 **Since:** 11
 
+<!--Device-MediaAlbumChangeRequest-constructor(album: Album)--><!--Device-MediaAlbumChangeRequest-constructor(album: Album)-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
@@ -135,6 +141,8 @@ Obtains the album in the current album change request.
 
 **Since:** 11
 
+<!--Device-MediaAlbumChangeRequest-getAlbum(): Album--><!--Device-MediaAlbumChangeRequest-getAlbum(): Album-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Return value:**
@@ -179,6 +187,8 @@ removeAssets(assets: Array<PhotoAsset>): void
 Removes assets from the album.
 
 **Since:** 11
+
+<!--Device-MediaAlbumChangeRequest-removeAssets(assets: Array<PhotoAsset>): void--><!--Device-MediaAlbumChangeRequest-removeAssets(assets: Array<PhotoAsset>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -246,6 +256,8 @@ The album name must meet the following requirements:
 
 **Since:** 11
 
+<!--Device-MediaAlbumChangeRequest-setAlbumName(name: string): void--><!--Device-MediaAlbumChangeRequest-setAlbumName(name: string): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
@@ -295,5 +307,7 @@ A readonly member for type checking.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MediaAlbumChangeRequest-readonly comment: string--><!--Device-MediaAlbumChangeRequest-readonly comment: string-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core

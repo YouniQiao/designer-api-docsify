@@ -8,6 +8,8 @@ export interface PerformanceTiming
 
 **起始版本：** 11
 
+<!--Device-http-export interface PerformanceTiming--><!--Device-http-export interface PerformanceTiming-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块
@@ -28,6 +30,8 @@ dnsTiming: number
 
 **起始版本：** 11
 
+<!--Device-PerformanceTiming-dnsTiming: double--><!--Device-PerformanceTiming-dnsTiming: double-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## firstReceiveTiming
@@ -41,6 +45,8 @@ firstReceiveTiming: number
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-PerformanceTiming-firstReceiveTiming: double--><!--Device-PerformanceTiming-firstReceiveTiming: double-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -56,6 +62,8 @@ firstSendTiming: number
 
 **起始版本：** 11
 
+<!--Device-PerformanceTiming-firstSendTiming: double--><!--Device-PerformanceTiming-firstSendTiming: double-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## redirectTiming
@@ -69,6 +77,8 @@ redirectTiming: number
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-PerformanceTiming-redirectTiming: double--><!--Device-PerformanceTiming-redirectTiming: double-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -84,6 +94,8 @@ responseBodyTiming: number
 
 **起始版本：** 11
 
+<!--Device-PerformanceTiming-responseBodyTiming: double--><!--Device-PerformanceTiming-responseBodyTiming: double-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## responseHeaderTiming
@@ -97,6 +109,8 @@ responseHeaderTiming: number
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-PerformanceTiming-responseHeaderTiming: double--><!--Device-PerformanceTiming-responseHeaderTiming: double-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -112,6 +126,8 @@ tcpTiming: number
 
 **起始版本：** 11
 
+<!--Device-PerformanceTiming-tcpTiming: double--><!--Device-PerformanceTiming-tcpTiming: double-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## tlsTiming
@@ -125,6 +141,8 @@ tlsTiming: number
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-PerformanceTiming-tlsTiming: double--><!--Device-PerformanceTiming-tlsTiming: double-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -140,6 +158,8 @@ totalFinishTiming: number
 
 **起始版本：** 11
 
+<!--Device-PerformanceTiming-totalFinishTiming: double--><!--Device-PerformanceTiming-totalFinishTiming: double-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## totalTiming
@@ -153,5 +173,7 @@ totalTiming: number
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-PerformanceTiming-totalTiming: double--><!--Device-PerformanceTiming-totalTiming: double-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack

@@ -8,6 +8,8 @@ interface DownloadError
 
 **起始版本：** 23
 
+<!--Device-cacheDownload-interface DownloadError--><!--Device-cacheDownload-interface DownloadError-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## 导入模块
@@ -28,6 +30,8 @@ readonly errorCode: ErrorCode
 
 **起始版本：** 23
 
+<!--Device-DownloadError-readonly errorCode: ErrorCode--><!--Device-DownloadError-readonly errorCode: ErrorCode-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## message
@@ -41,5 +45,7 @@ readonly message: string
 **类型：** string
 
 **起始版本：** 23
+
+<!--Device-DownloadError-readonly message: string--><!--Device-DownloadError-readonly message: string-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent

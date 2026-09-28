@@ -16,6 +16,8 @@ function setBadgeNumberByBundle(bundle: BundleOption, badgeNumber: number): Prom
 
 **起始版本：** 12
 
+<!--Device-notificationManager-function setBadgeNumberByBundle(bundle: BundleOption, badgeNumber: int): Promise<void>--><!--Device-notificationManager-function setBadgeNumberByBundle(bundle: BundleOption, badgeNumber: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。

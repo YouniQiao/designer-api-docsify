@@ -12,6 +12,8 @@ interface A2dpSourceProfile extends BaseProfile
 
 **起始版本：** 10
 
+<!--Device-a2dp-interface A2dpSourceProfile extends BaseProfile--><!--Device-a2dp-interface A2dpSourceProfile extends BaseProfile-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -31,6 +33,8 @@ connect(deviceId: string): void
 **起始版本：** 10
 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
+
+<!--Device-A2dpSourceProfile-connect(deviceId: string): void--><!--Device-A2dpSourceProfile-connect(deviceId: string): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -66,6 +70,8 @@ disableAbsoluteVolume(deviceId: string): Promise<void>
 **起始版本：** 11
 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
+
+<!--Device-A2dpSourceProfile-disableAbsoluteVolume(deviceId: string): Promise<void>--><!--Device-A2dpSourceProfile-disableAbsoluteVolume(deviceId: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -109,6 +115,8 @@ disableAbsoluteVolume(deviceId: string, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
+<!--Device-A2dpSourceProfile-disableAbsoluteVolume(deviceId: string, callback: AsyncCallback<void>): void--><!--Device-A2dpSourceProfile-disableAbsoluteVolume(deviceId: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -143,6 +151,8 @@ disableAutoPlay(deviceId: string, duration: number): Promise<void>
 **起始版本：** 12
 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
+
+<!--Device-A2dpSourceProfile-disableAutoPlay(deviceId: string, duration: int): Promise<void>--><!--Device-A2dpSourceProfile-disableAutoPlay(deviceId: string, duration: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -185,6 +195,8 @@ disconnect(deviceId: string): void
 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
 
+<!--Device-A2dpSourceProfile-disconnect(deviceId: string): void--><!--Device-A2dpSourceProfile-disconnect(deviceId: string): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -219,6 +231,8 @@ enableAbsoluteVolume(deviceId: string): Promise<void>
 **起始版本：** 11
 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
+
+<!--Device-A2dpSourceProfile-enableAbsoluteVolume(deviceId: string): Promise<void>--><!--Device-A2dpSourceProfile-enableAbsoluteVolume(deviceId: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -262,6 +276,8 @@ enableAbsoluteVolume(deviceId: string, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
+<!--Device-A2dpSourceProfile-enableAbsoluteVolume(deviceId: string, callback: AsyncCallback<void>): void--><!--Device-A2dpSourceProfile-enableAbsoluteVolume(deviceId: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -296,6 +312,8 @@ enableAutoPlay(deviceId: string): Promise<void>
 **起始版本：** 12
 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
+
+<!--Device-A2dpSourceProfile-enableAutoPlay(deviceId: string): Promise<void>--><!--Device-A2dpSourceProfile-enableAutoPlay(deviceId: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -337,6 +355,8 @@ getAutoPlayDisabledDuration(deviceId: string): Promise<number>
 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
+<!--Device-A2dpSourceProfile-getAutoPlayDisabledDuration(deviceId: string): Promise<int>--><!--Device-A2dpSourceProfile-getAutoPlayDisabledDuration(deviceId: string): Promise<int>-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -376,6 +396,8 @@ getCurrentCodecInfo(deviceId: string): CodecInfo
 **起始版本：** 11
 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
+
+<!--Device-A2dpSourceProfile-getCurrentCodecInfo(deviceId: string): CodecInfo--><!--Device-A2dpSourceProfile-getCurrentCodecInfo(deviceId: string): CodecInfo-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -417,6 +439,8 @@ getCurrentFullCodecInfo(deviceId: string): CodecInfoList[]
 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
 
+<!--Device-A2dpSourceProfile-getCurrentFullCodecInfo(deviceId: string): CodecInfoList[]--><!--Device-A2dpSourceProfile-getCurrentFullCodecInfo(deviceId: string): CodecInfoList[]-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -456,6 +480,8 @@ isAbsoluteVolumeEnabled(deviceId: string): Promise<boolean>
 **起始版本：** 11
 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
+
+<!--Device-A2dpSourceProfile-isAbsoluteVolumeEnabled(deviceId: string): Promise<boolean>--><!--Device-A2dpSourceProfile-isAbsoluteVolumeEnabled(deviceId: string): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -499,6 +525,8 @@ isAbsoluteVolumeEnabled(deviceId: string, callback: AsyncCallback<boolean>): voi
 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
 
+<!--Device-A2dpSourceProfile-isAbsoluteVolumeEnabled(deviceId: string, callback: AsyncCallback<boolean>): void--><!--Device-A2dpSourceProfile-isAbsoluteVolumeEnabled(deviceId: string, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -533,6 +561,8 @@ isAbsoluteVolumeSupported(deviceId: string): Promise<boolean>
 **起始版本：** 11
 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
+
+<!--Device-A2dpSourceProfile-isAbsoluteVolumeSupported(deviceId: string): Promise<boolean>--><!--Device-A2dpSourceProfile-isAbsoluteVolumeSupported(deviceId: string): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -576,6 +606,8 @@ isAbsoluteVolumeSupported(deviceId: string, callback: AsyncCallback<boolean>): v
 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
 
+<!--Device-A2dpSourceProfile-isAbsoluteVolumeSupported(deviceId: string, callback: AsyncCallback<boolean>): void--><!--Device-A2dpSourceProfile-isAbsoluteVolumeSupported(deviceId: string, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -610,6 +642,8 @@ setCurrentCodecInfo(deviceId: string, codecInfo: CodecInfo): void
 **起始版本：** 11
 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
+
+<!--Device-A2dpSourceProfile-setCurrentCodecInfo(deviceId: string, codecInfo: CodecInfo): void--><!--Device-A2dpSourceProfile-setCurrentCodecInfo(deviceId: string, codecInfo: CodecInfo): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

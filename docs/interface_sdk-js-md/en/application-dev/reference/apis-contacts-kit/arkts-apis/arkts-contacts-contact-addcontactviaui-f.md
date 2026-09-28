@@ -18,6 +18,8 @@ Calls the API for adding a contact to open the UI. This API uses a promise to re
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-contact-function addContactViaUI(context: Context, contact: Contact): Promise<number>--><!--Device-contact-function addContactViaUI(context: Context, contact: Contact): Promise<number>-End-->
+
 **System capability:** SystemCapability.Applications.Contacts
 
 **Parameters:**

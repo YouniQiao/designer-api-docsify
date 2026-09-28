@@ -8,6 +8,8 @@ interface SyncStateChangeParam
 
 **起始版本：** 26.0.1
 
+<!--Device-pbap-interface SyncStateChangeParam--><!--Device-pbap-interface SyncStateChangeParam-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ deviceId: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SyncStateChangeParam-deviceId: string--><!--Device-SyncStateChangeParam-deviceId: string-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ state: SyncStateType
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SyncStateChangeParam-state: SyncStateType--><!--Device-SyncStateChangeParam-state: SyncStateType-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

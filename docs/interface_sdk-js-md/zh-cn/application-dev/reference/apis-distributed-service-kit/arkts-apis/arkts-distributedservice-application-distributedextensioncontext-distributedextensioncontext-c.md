@@ -10,6 +10,8 @@ declare class DistributedExtensionContext extends ExtensionContext
 
 **起始版本：** 20
 
+<!--Device-unnamed-declare class DistributedExtensionContext extends ExtensionContext--><!--Device-unnamed-declare class DistributedExtensionContext extends ExtensionContext-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 ## 导入模块
@@ -29,6 +31,8 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DistributedExtensionContext-connectServiceExtensionAbility(want: Want, options: ConnectOptions): long--><!--Device-DistributedExtensionContext-connectServiceExtensionAbility(want: Want, options: ConnectOptions): long-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
@@ -74,6 +78,8 @@ disconnectServiceExtensionAbility(connection: number): Promise<void>
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DistributedExtensionContext-disconnectServiceExtensionAbility(connection: long): Promise<void>--><!--Device-DistributedExtensionContext-disconnectServiceExtensionAbility(connection: long): Promise<void>-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 

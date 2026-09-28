@@ -16,6 +16,8 @@ function supportKeys(deviceId: number, keys: Array<KeyCode>, callback: AsyncCall
 
 **起始版本：** 9
 
+<!--Device-inputDevice-function supportKeys(deviceId: int, keys: Array<KeyCode>, callback: AsyncCallback<Array<boolean>>): void--><!--Device-inputDevice-function supportKeys(deviceId: int, keys: Array<KeyCode>, callback: AsyncCallback<Array<boolean>>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 **参数：**
@@ -76,6 +78,8 @@ function supportKeys(deviceId: number, keys: Array<KeyCode>): Promise<Array<bool
 查询指定输入设备是否支持指定按键，使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-inputDevice-function supportKeys(deviceId: int, keys: Array<KeyCode>): Promise<Array<boolean>>--><!--Device-inputDevice-function supportKeys(deviceId: int, keys: Array<KeyCode>): Promise<Array<boolean>>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 

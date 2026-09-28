@@ -10,6 +10,8 @@ export interface Aabb
 
 **起始版本：** 12
 
+<!--Device-unnamed-export interface Aabb--><!--Device-unnamed-export interface Aabb-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## aabbMax
@@ -24,6 +26,8 @@ aabbMax: Vec3
 
 **起始版本：** 12
 
+<!--Device-Aabb-aabbMax: Vec3--><!--Device-Aabb-aabbMax: Vec3-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## aabbMin
@@ -37,5 +41,7 @@ aabbMin: Vec3
 **类型：** [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)
 
 **起始版本：** 12
+
+<!--Device-Aabb-aabbMin: Vec3--><!--Device-Aabb-aabbMin: Vec3-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

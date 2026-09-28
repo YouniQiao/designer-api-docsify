@@ -12,6 +12,8 @@ export declare class SphereGeometry extends GeometryDefinition
 
 **起始版本：** 18
 
+<!--Device-unnamed-export declare class SphereGeometry extends GeometryDefinition--><!--Device-unnamed-export declare class SphereGeometry extends GeometryDefinition-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## radius
@@ -26,6 +28,8 @@ get radius(): number
 
 **起始版本：** 18
 
+<!--Device-SphereGeometry-get radius(): double--><!--Device-SphereGeometry-get radius(): double-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ```TypeScript
@@ -37,6 +41,8 @@ set radius(value: number)
 **类型：** number
 
 **起始版本：** 18
+
+<!--Device-SphereGeometry-set radius(value: double)--><!--Device-SphereGeometry-set radius(value: double)-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -52,6 +58,8 @@ get segmentCount(): number
 
 **起始版本：** 18
 
+<!--Device-SphereGeometry-get segmentCount(): int--><!--Device-SphereGeometry-get segmentCount(): int-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ```TypeScript
@@ -63,5 +71,7 @@ set segmentCount(value: number)
 **类型：** number
 
 **起始版本：** 18
+
+<!--Device-SphereGeometry-set segmentCount(value: int)--><!--Device-SphereGeometry-set segmentCount(value: int)-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

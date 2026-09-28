@@ -18,6 +18,8 @@ function init(): Promise<void>
 
 **需要权限：** ohos.permission.PRINT
 
+<!--Device-scan-function init(): Promise<void>--><!--Device-scan-function init(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **返回值：**

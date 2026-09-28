@@ -8,6 +8,8 @@ enum UserAuthTipCode
 
 **起始版本：** 20
 
+<!--Device-userAuth-enum UserAuthTipCode--><!--Device-userAuth-enum UserAuthTipCode-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 ## COMPARE_FAILURE
@@ -20,7 +22,9 @@ COMPARE_FAILURE = 1
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-UserAuthTipCode-COMPARE_FAILURE = 1--><!--Device-UserAuthTipCode-COMPARE_FAILURE = 1-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -34,7 +38,9 @@ TIMEOUT = 2
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-UserAuthTipCode-TIMEOUT = 2--><!--Device-UserAuthTipCode-TIMEOUT = 2-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -48,7 +54,9 @@ TEMPORARILY_LOCKED = 3
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-UserAuthTipCode-TEMPORARILY_LOCKED = 3--><!--Device-UserAuthTipCode-TEMPORARILY_LOCKED = 3-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -62,7 +70,9 @@ PERMANENTLY_LOCKED = 4
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-UserAuthTipCode-PERMANENTLY_LOCKED = 4--><!--Device-UserAuthTipCode-PERMANENTLY_LOCKED = 4-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -76,7 +86,9 @@ WIDGET_LOADED = 5
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-UserAuthTipCode-WIDGET_LOADED = 5--><!--Device-UserAuthTipCode-WIDGET_LOADED = 5-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -90,7 +102,9 @@ WIDGET_RELEASED = 6
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-UserAuthTipCode-WIDGET_RELEASED = 6--><!--Device-UserAuthTipCode-WIDGET_RELEASED = 6-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -104,6 +118,8 @@ COMPARE_FAILURE_WITH_FROZEN = 7
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-UserAuthTipCode-COMPARE_FAILURE_WITH_FROZEN = 7--><!--Device-UserAuthTipCode-COMPARE_FAILURE_WITH_FROZEN = 7-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core

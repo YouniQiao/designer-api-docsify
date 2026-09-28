@@ -22,6 +22,8 @@ function createAudioLoopback(mode: AudioLoopbackMode): Promise<AudioLoopback>
 - API版本27+：N/A
 - API版本20-26：ohos.permission.MICROPHONE
 
+<!--Device-audio-function createAudioLoopback(mode: AudioLoopbackMode): Promise<AudioLoopback>--><!--Device-audio-function createAudioLoopback(mode: AudioLoopbackMode): Promise<AudioLoopback>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **参数：**

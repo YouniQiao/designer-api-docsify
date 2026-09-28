@@ -10,6 +10,8 @@ interface Window
 
 **起始版本：** 6
 
+<!--Device-window-interface Window--><!--Device-window-interface Window-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 ## 导入模块
@@ -29,6 +31,8 @@ clearWindowMask(): Promise<void>
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Window-clearWindowMask(): Promise<void>--><!--Device-Window-clearWindowMask(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -87,6 +91,8 @@ clientToGlobalDisplay(winX: number, winY: number): Position
 不支持在经过显示缩放的窗口中调用，例如手机或平板设备在非自由多窗模式下的悬浮窗场景。
 
 **起始版本：** 20
+
+<!--Device-Window-clientToGlobalDisplay(winX: int, winY: int): Position--><!--Device-Window-clientToGlobalDisplay(winX: int, winY: int): Position-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -149,6 +155,8 @@ convertOrientationAndRotation(from: RotationInfoType, to: RotationInfoType, valu
 
 **起始版本：** 23
 
+<!--Device-Window-convertOrientationAndRotation(from: RotationInfoType, to: RotationInfoType, value: int): int--><!--Device-Window-convertOrientationAndRotation(from: RotationInfoType, to: RotationInfoType, value: int): int-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
@@ -199,7 +207,9 @@ createSubWindowWithOptions(name: string, options: SubWindowOptions): Promise<Win
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-createSubWindowWithOptions(name: string, options: SubWindowOptions): Promise<Window>--><!--Device-Window-createSubWindowWithOptions(name: string, options: SubWindowOptions): Promise<Window>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -258,7 +268,9 @@ destroyWindow(callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-destroyWindow(callback: AsyncCallback<void>): void--><!--Device-Window-destroyWindow(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -302,7 +314,9 @@ destroyWindow(): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-destroyWindow(): Promise<void>--><!--Device-Window-destroyWindow(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -344,7 +358,9 @@ disableLandscapeMultiWindow(): Promise<void>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-disableLandscapeMultiWindow(): Promise<void>--><!--Device-Window-disableLandscapeMultiWindow(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -404,6 +420,8 @@ enableDrag(enable: boolean): Promise<void>
 
 **起始版本：** 20
 
+<!--Device-Window-enableDrag(enable: boolean): Promise<void>--><!--Device-Window-enableDrag(enable: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
@@ -456,7 +474,9 @@ enableLandscapeMultiWindow(): Promise<void>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-enableLandscapeMultiWindow(): Promise<void>--><!--Device-Window-enableLandscapeMultiWindow(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -514,7 +534,9 @@ getDecorButtonStyle(): DecorButtonStyle
 
 **起始版本：** 14
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-getDecorButtonStyle(): DecorButtonStyle--><!--Device-Window-getDecorButtonStyle(): DecorButtonStyle-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -556,7 +578,9 @@ getGlobalRect(): Rect
 
 **起始版本：** 13
 
-**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-getGlobalRect(): Rect--><!--Device-Window-getGlobalRect(): Rect-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -600,7 +624,9 @@ getImmersiveModeEnabledState(): boolean
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-getImmersiveModeEnabledState(): boolean--><!--Device-Window-getImmersiveModeEnabledState(): boolean-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -637,7 +663,9 @@ getParentWindow(): Window
 
 **起始版本：** 19
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-getParentWindow(): Window--><!--Device-Window-getParentWindow(): Window-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -679,7 +707,9 @@ getPreferredOrientation(): Orientation
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-getPreferredOrientation(): Orientation--><!--Device-Window-getPreferredOrientation(): Orientation-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -738,7 +768,9 @@ getStatusBarProperty(): StatusBarProperty
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-getStatusBarProperty(): StatusBarProperty--><!--Device-Window-getStatusBarProperty(): StatusBarProperty-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -795,7 +827,9 @@ getSubWindowZLevel(): number
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-getSubWindowZLevel(): int--><!--Device-Window-getSubWindowZLevel(): int-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -852,7 +886,9 @@ getTitleButtonRect(): TitleButtonRect
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-getTitleButtonRect(): TitleButtonRect--><!--Device-Window-getTitleButtonRect(): TitleButtonRect-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -912,7 +948,9 @@ getUIContext() : UIContext
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-getUIContext() : UIContext--><!--Device-Window-getUIContext() : UIContext-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -992,7 +1030,9 @@ getWindowAvoidArea(type: AvoidAreaType): AvoidArea
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-getWindowAvoidArea(type: AvoidAreaType): AvoidArea--><!--Device-Window-getWindowAvoidArea(type: AvoidAreaType): AvoidArea-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -1047,6 +1087,8 @@ getWindowAvoidAreaIgnoringVisibility(type: AvoidAreaType): AvoidArea
 
 **起始版本：** 22
 
+<!--Device-Window-getWindowAvoidAreaIgnoringVisibility(type: AvoidAreaType): AvoidArea--><!--Device-Window-getWindowAvoidAreaIgnoringVisibility(type: AvoidAreaType): AvoidArea-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
@@ -1091,7 +1133,9 @@ getWindowColorSpace(): ColorSpace
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-getWindowColorSpace(): ColorSpace--><!--Device-Window-getWindowColorSpace(): ColorSpace-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -1130,7 +1174,9 @@ getWindowCornerRadius(): number
 
 **起始版本：** 17
 
-**原子化服务API：** 从API版本17开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本17开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-getWindowCornerRadius(): double--><!--Device-Window-getWindowCornerRadius(): double-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -1170,7 +1216,9 @@ getWindowDecorHeight(): number
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-getWindowDecorHeight(): int--><!--Device-Window-getWindowDecorHeight(): int-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -1210,7 +1258,9 @@ getWindowDecorVisible(): boolean
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-getWindowDecorVisible(): boolean--><!--Device-Window-getWindowDecorVisible(): boolean-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -1250,7 +1300,9 @@ getWindowDensityInfo(): WindowDensityInfo
 
 **起始版本：** 15
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-getWindowDensityInfo(): WindowDensityInfo--><!--Device-Window-getWindowDensityInfo(): WindowDensityInfo-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -1287,7 +1339,9 @@ getWindowLimits(): WindowLimits
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-getWindowLimits(): WindowLimits--><!--Device-Window-getWindowLimits(): WindowLimits-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -1326,6 +1380,8 @@ getWindowLimitsVP(): WindowLimits
 
 **起始版本：** 22
 
+<!--Device-Window-getWindowLimitsVP(): WindowLimits--><!--Device-Window-getWindowLimitsVP(): WindowLimits-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **返回值：**
@@ -1361,7 +1417,9 @@ getWindowProperties(): WindowProperties
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-getWindowProperties(): WindowProperties--><!--Device-Window-getWindowProperties(): WindowProperties-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -1399,7 +1457,9 @@ getWindowStateSnapshot(): Promise<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-getWindowStateSnapshot(): Promise<string>--><!--Device-Window-getWindowStateSnapshot(): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -1454,7 +1514,9 @@ getWindowStatus(): WindowStatusType
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-getWindowStatus(): WindowStatusType--><!--Device-Window-getWindowStatus(): WindowStatusType-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -1491,7 +1553,9 @@ getWindowSystemBarProperties(): SystemBarProperties
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-getWindowSystemBarProperties(): SystemBarProperties--><!--Device-Window-getWindowSystemBarProperties(): SystemBarProperties-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -1554,7 +1618,9 @@ getWindowTransitionAnimation(transitionType: WindowTransitionType): TransitionAn
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-getWindowTransitionAnimation(transitionType: WindowTransitionType): TransitionAnimation | undefined--><!--Device-Window-getWindowTransitionAnimation(transitionType: WindowTransitionType): TransitionAnimation | undefined-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -1623,6 +1689,8 @@ globalDisplayToClient(globalDisplayX: number, globalDisplayY: number): Position
 
 **起始版本：** 20
 
+<!--Device-Window-globalDisplayToClient(globalDisplayX: int, globalDisplayY: int): Position--><!--Device-Window-globalDisplayToClient(globalDisplayX: int, globalDisplayY: int): Position-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
@@ -1671,7 +1739,9 @@ isFloatNavigationAvoidAreaEnabled(): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-isFloatNavigationAvoidAreaEnabled(): boolean--><!--Device-Window-isFloatNavigationAvoidAreaEnabled(): boolean-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -1709,7 +1779,9 @@ isFocused(): boolean
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-isFocused(): boolean--><!--Device-Window-isFocused(): boolean-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -1746,7 +1818,9 @@ isGestureBackEnabled(): boolean
 
 **起始版本：** 13
 
-**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-isGestureBackEnabled(): boolean--><!--Device-Window-isGestureBackEnabled(): boolean-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -1807,6 +1881,8 @@ isImmersiveLayout(): boolean
 
 **起始版本：** 20
 
+<!--Device-Window-isImmersiveLayout(): boolean--><!--Device-Window-isImmersiveLayout(): boolean-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **返回值：**
@@ -1842,7 +1918,9 @@ isInFreeWindowMode(): boolean
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-isInFreeWindowMode(): boolean--><!--Device-Window-isInFreeWindowMode(): boolean-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -1877,6 +1955,8 @@ isReceiveDragEventEnabled(): boolean
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Window-isReceiveDragEventEnabled(): boolean--><!--Device-Window-isReceiveDragEventEnabled(): boolean-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -1919,6 +1999,8 @@ isSeparationTouchEnabled(): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Window-isSeparationTouchEnabled(): boolean--><!--Device-Window-isSeparationTouchEnabled(): boolean-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **返回值：**
@@ -1958,7 +2040,9 @@ isSystemAvoidAreaEnabled(): boolean
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-isSystemAvoidAreaEnabled(): boolean--><!--Device-Window-isSystemAvoidAreaEnabled(): boolean-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -2038,7 +2122,9 @@ isWindowHighlighted(): boolean
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-isWindowHighlighted(): boolean--><!--Device-Window-isWindowHighlighted(): boolean-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -2078,7 +2164,9 @@ isWindowShowing(): boolean
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-isWindowShowing(): boolean--><!--Device-Window-isWindowShowing(): boolean-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -2115,7 +2203,9 @@ isWindowSupportWideGamut(): Promise<boolean>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-isWindowSupportWideGamut(): Promise<boolean>--><!--Device-Window-isWindowSupportWideGamut(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -2156,7 +2246,9 @@ isWindowSupportWideGamut(callback: AsyncCallback<boolean>): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-isWindowSupportWideGamut(callback: AsyncCallback<boolean>): void--><!--Device-Window-isWindowSupportWideGamut(callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -2197,7 +2289,9 @@ keepKeyboardOnFocus(keepKeyboardFlag: boolean): void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-keepKeyboardOnFocus(keepKeyboardFlag: boolean): void--><!--Device-Window-keepKeyboardOnFocus(keepKeyboardFlag: boolean): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -2242,7 +2336,9 @@ loadContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>):
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-loadContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>): void--><!--Device-Window-loadContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -2297,7 +2393,9 @@ loadContent(path: string, storage: LocalStorage): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-loadContent(path: string, storage: LocalStorage): Promise<void>--><!--Device-Window-loadContent(path: string, storage: LocalStorage): Promise<void>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -2362,6 +2460,8 @@ loadContent(path: string, callback: AsyncCallback<void>): void
 
 **替代接口：** [setUIContent](#setuicontent)(path: string, callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-Window-loadContent(path: string, callback: AsyncCallback<void>): void--><!--Device-Window-loadContent(path: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **参数：**
@@ -2410,6 +2510,8 @@ loadContent(path: string): Promise<void>
 
 **替代接口：** [setUIContent](#setuicontent-1)(path: string)
 
+<!--Device-Window-loadContent(path: string): Promise<void>--><!--Device-Window-loadContent(path: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **参数：**
@@ -2453,7 +2555,9 @@ loadContentByName(name: string, storage: LocalStorage, callback: AsyncCallback<v
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-loadContentByName(name: string, storage: LocalStorage, callback: AsyncCallback<void>): void--><!--Device-Window-loadContentByName(name: string, storage: LocalStorage, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -2550,7 +2654,9 @@ loadContentByName(name: string, callback: AsyncCallback<void>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-loadContentByName(name: string, callback: AsyncCallback<void>): void--><!--Device-Window-loadContentByName(name: string, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -2628,7 +2734,9 @@ loadContentByName(name: string, storage?: LocalStorage): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-loadContentByName(name: string, storage?: LocalStorage): Promise<void>--><!--Device-Window-loadContentByName(name: string, storage?: LocalStorage): Promise<void>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -2705,7 +2813,9 @@ maximize(presentation?: MaximizePresentation): Promise<void>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-maximize(presentation?: MaximizePresentation): Promise<void>--><!--Device-Window-maximize(presentation?: MaximizePresentation): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -2776,6 +2886,8 @@ maximize(presentation?: MaximizePresentation, acrossDisplay?: boolean): Promise<
 
 **起始版本：** 22
 
+<!--Device-Window-maximize(presentation?: MaximizePresentation, acrossDisplay?: boolean): Promise<void>--><!--Device-Window-maximize(presentation?: MaximizePresentation, acrossDisplay?: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
@@ -2840,6 +2952,8 @@ maximizeWithOptions(maximizeOptions?: MaximizeOptions): Promise<void>
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Window-maximizeWithOptions(maximizeOptions?: MaximizeOptions): Promise<void>--><!--Device-Window-maximizeWithOptions(maximizeOptions?: MaximizeOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -2917,7 +3031,9 @@ minimize(callback: AsyncCallback<void>): void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-minimize(callback: AsyncCallback<void>): void--><!--Device-Window-minimize(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -2967,7 +3083,9 @@ minimize(): Promise<void>
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-minimize(): Promise<void>--><!--Device-Window-minimize(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -3020,7 +3138,9 @@ moveWindowTo(x: number, y: number): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-moveWindowTo(x: int, y: int): Promise<void>--><!--Device-Window-moveWindowTo(x: int, y: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -3086,7 +3206,9 @@ moveWindowTo(x: number, y: number, callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-moveWindowTo(x: int, y: int, callback: AsyncCallback<void>): void--><!--Device-Window-moveWindowTo(x: int, y: int, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -3149,7 +3271,9 @@ moveWindowToAsync(x: number, y: number): Promise<void>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-moveWindowToAsync(x: int, y: int): Promise<void>--><!--Device-Window-moveWindowToAsync(x: int, y: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -3221,7 +3345,9 @@ moveWindowToAsync(x: number, y: number, moveConfiguration?: MoveConfiguration): 
 
 **起始版本：** 15
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-moveWindowToAsync(x: int, y: int, moveConfiguration?: MoveConfiguration): Promise<void>--><!--Device-Window-moveWindowToAsync(x: int, y: int, moveConfiguration?: MoveConfiguration): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -3290,7 +3416,9 @@ moveWindowToGlobal(x: number, y: number): Promise<void>
 
 **起始版本：** 13
 
-**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-moveWindowToGlobal(x: int, y: int): Promise<void>--><!--Device-Window-moveWindowToGlobal(x: int, y: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -3356,7 +3484,9 @@ moveWindowToGlobal(x: number, y: number, moveConfiguration?: MoveConfiguration):
 
 **起始版本：** 15
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-moveWindowToGlobal(x: int, y: int, moveConfiguration?: MoveConfiguration): Promise<void>--><!--Device-Window-moveWindowToGlobal(x: int, y: int, moveConfiguration?: MoveConfiguration): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -3427,6 +3557,8 @@ moveWindowToGlobalDisplay(x: number, y: number): Promise<void>
 
 **起始版本：** 20
 
+<!--Device-Window-moveWindowToGlobalDisplay(x: int, y: int): Promise<void>--><!--Device-Window-moveWindowToGlobalDisplay(x: int, y: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
@@ -3482,6 +3614,8 @@ off(type: 'rotationChange',
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
+<!--Device-Window-off(type: 'rotationChange',        callback?: RotationChangeCallback<RotationChangeInfo, RotationChangeResult | void>): void--><!--Device-Window-off(type: 'rotationChange',        callback?: RotationChangeCallback<RotationChangeInfo, RotationChangeResult | void>): void-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
@@ -3529,6 +3663,8 @@ off(eventType: 'uiExtensionSecureLimitChange', callback?: Callback<boolean>): vo
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-Window-off(eventType: 'uiExtensionSecureLimitChange', callback?: Callback<boolean>): void--><!--Device-Window-off(eventType: 'uiExtensionSecureLimitChange', callback?: Callback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
@@ -3574,6 +3710,8 @@ off(type: 'frameMetricsMeasured', callback?: Callback<FrameMetrics>): void
 
 **起始版本：** 22
 
+<!--Device-Window-off(type: 'frameMetricsMeasured', callback?: Callback<FrameMetrics>): void--><!--Device-Window-off(type: 'frameMetricsMeasured', callback?: Callback<FrameMetrics>): void-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
@@ -3617,6 +3755,8 @@ off(type: 'occlusionStateChanged', callback?: Callback<OcclusionState>): void
 关闭窗口可见性状态变化事件的监听。
 
 **起始版本：** 22
+
+<!--Device-Window-off(type: 'occlusionStateChanged', callback?: Callback<OcclusionState>): void--><!--Device-Window-off(type: 'occlusionStateChanged', callback?: Callback<OcclusionState>): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -3665,6 +3805,8 @@ off(type: 'windowSizeChange', callback?: Callback<Size>): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Window-off(type: 'windowSizeChange', callback?: Callback<Size>): void--><!--Device-Window-off(type: 'windowSizeChange', callback?: Callback<Size>): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **参数：**
@@ -3709,6 +3851,8 @@ off(type: 'avoidAreaChange', callback?: Callback<AvoidAreaOptions>): void
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-off(type: 'avoidAreaChange', callback?: Callback<AvoidAreaOptions>): void--><!--Device-Window-off(type: 'avoidAreaChange', callback?: Callback<AvoidAreaOptions>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -3758,6 +3902,8 @@ off(type: 'keyboardHeightChange', callback?: Callback<number>): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Window-off(type: 'keyboardHeightChange', callback?: Callback<int>): void--><!--Device-Window-off(type: 'keyboardHeightChange', callback?: Callback<int>): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **参数：**
@@ -3803,6 +3949,8 @@ off(type: 'keyboardWillShow', callback?: Callback<KeyboardInfo>): void
 **起始版本：** 20
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-off(type: 'keyboardWillShow', callback?: Callback<KeyboardInfo>): void--><!--Device-Window-off(type: 'keyboardWillShow', callback?: Callback<KeyboardInfo>): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -3851,6 +3999,8 @@ off(type: 'keyboardDidShow', callback?: Callback<KeyboardInfo>): void
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-Window-off(type: 'keyboardDidShow', callback?: Callback<KeyboardInfo>): void--><!--Device-Window-off(type: 'keyboardDidShow', callback?: Callback<KeyboardInfo>): void-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
@@ -3896,6 +4046,8 @@ off(type: 'keyboardWillHide', callback?: Callback<KeyboardInfo>): void
 **起始版本：** 20
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-off(type: 'keyboardWillHide', callback?: Callback<KeyboardInfo>): void--><!--Device-Window-off(type: 'keyboardWillHide', callback?: Callback<KeyboardInfo>): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -3944,6 +4096,8 @@ off(type: 'keyboardDidHide', callback?: Callback<KeyboardInfo>): void
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-Window-off(type: 'keyboardDidHide', callback?: Callback<KeyboardInfo>): void--><!--Device-Window-off(type: 'keyboardDidHide', callback?: Callback<KeyboardInfo>): void-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
@@ -3990,6 +4144,8 @@ off(type: 'touchOutside', callback?: Callback<void>): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Window-off(type: 'touchOutside', callback?: Callback<void>): void--><!--Device-Window-off(type: 'touchOutside', callback?: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **参数：**
@@ -4032,6 +4188,8 @@ off(type: 'displayIdChange', callback?: Callback<number>): void
 **起始版本：** 14
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-off(type: 'displayIdChange', callback?: Callback<long>): void--><!--Device-Window-off(type: 'displayIdChange', callback?: Callback<long>): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -4079,6 +4237,8 @@ off(type: 'windowVisibilityChange', callback?: Callback<boolean>): void
 **起始版本：** 11
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-off(type: 'windowVisibilityChange', callback?: Callback<boolean>): void--><!--Device-Window-off(type: 'windowVisibilityChange', callback?: Callback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -4130,6 +4290,8 @@ off(type: 'systemDensityChange', callback?: Callback<number>): void
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
 
+<!--Device-Window-off(type: 'systemDensityChange', callback?: Callback<double>): void--><!--Device-Window-off(type: 'systemDensityChange', callback?: Callback<double>): void-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
@@ -4177,6 +4339,8 @@ off(type: 'noInteractionDetected', callback?: Callback<void>): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Window-off(type: 'noInteractionDetected', callback?: Callback<void>): void--><!--Device-Window-off(type: 'noInteractionDetected', callback?: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
@@ -4223,6 +4387,8 @@ off(type: 'screenshot', callback?: Callback<void>): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Window-off(type: 'screenshot', callback?: Callback<void>): void--><!--Device-Window-off(type: 'screenshot', callback?: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **参数：**
@@ -4263,6 +4429,8 @@ off(type: 'screenshotAppEvent', callback?: Callback<ScreenshotEventType>): void
 关闭屏幕截屏事件类型的监听。
 
 **起始版本：** 20
+
+<!--Device-Window-off(type: 'screenshotAppEvent', callback?: Callback<ScreenshotEventType>): void--><!--Device-Window-off(type: 'screenshotAppEvent', callback?: Callback<ScreenshotEventType>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -4310,6 +4478,8 @@ off(type: 'dialogTargetTouch', callback?: Callback<void>): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Window-off(type: 'dialogTargetTouch', callback?: Callback<void>): void--><!--Device-Window-off(type: 'dialogTargetTouch', callback?: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **参数：**
@@ -4352,6 +4522,8 @@ off(type: 'windowEvent', callback?: Callback<WindowEventType>): void
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-off(type: 'windowEvent', callback?: Callback<WindowEventType>): void--><!--Device-Window-off(type: 'windowEvent', callback?: Callback<WindowEventType>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -4398,6 +4570,8 @@ off(type: 'windowStatusChange', callback?: Callback<WindowStatusType>): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Window-off(type: 'windowStatusChange', callback?: Callback<WindowStatusType>): void--><!--Device-Window-off(type: 'windowStatusChange', callback?: Callback<WindowStatusType>): void-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
@@ -4439,6 +4613,8 @@ off(type: 'windowStatusDidChange', callback?: Callback<WindowStatusType>): void
 关闭窗口模式变化的监听。
 
 **起始版本：** 20
+
+<!--Device-Window-off(type: 'windowStatusDidChange', callback?: Callback<WindowStatusType>): void--><!--Device-Window-off(type: 'windowStatusDidChange', callback?: Callback<WindowStatusType>): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -4483,6 +4659,8 @@ off(type: 'subWindowClose', callback?: Callback<void>): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-off(type: 'subWindowClose', callback?: Callback<void>): void--><!--Device-Window-off(type: 'subWindowClose', callback?: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -4530,6 +4708,8 @@ off(type: 'windowWillClose', callback?: Callback<void, Promise<boolean>>): void
 **起始版本：** 15
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-off(type: 'windowWillClose', callback?: Callback<void, Promise<boolean>>): void--><!--Device-Window-off(type: 'windowWillClose', callback?: Callback<void, Promise<boolean>>): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -4593,6 +4773,8 @@ off(type: 'windowHighlightChange', callback?: Callback<boolean>): void
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
 
+<!--Device-Window-off(type: 'windowHighlightChange', callback?: Callback<boolean>): void--><!--Device-Window-off(type: 'windowHighlightChange', callback?: Callback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
@@ -4640,6 +4822,8 @@ off(type: 'windowTitleButtonRectChange', callback?: Callback<TitleButtonRect>): 
 **起始版本：** 11
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-off(type: 'windowTitleButtonRectChange', callback?: Callback<TitleButtonRect>): void--><!--Device-Window-off(type: 'windowTitleButtonRectChange', callback?: Callback<TitleButtonRect>): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -4690,6 +4874,8 @@ off(type: 'windowRectChange', callback?: Callback<RectChangeOptions>): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Window-off(type: 'windowRectChange', callback?: Callback<RectChangeOptions>): void--><!--Device-Window-off(type: 'windowRectChange', callback?: Callback<RectChangeOptions>): void-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
@@ -4734,6 +4920,8 @@ off(type: 'rectChangeInGlobalDisplay', callback?: Callback<RectChangeOptions>): 
 关闭[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)下窗口矩形（窗口位置及窗口大小）变化的监听事件。
 
 **起始版本：** 20
+
+<!--Device-Window-off(type: 'rectChangeInGlobalDisplay', callback?: Callback<RectChangeOptions>): void--><!--Device-Window-off(type: 'rectChangeInGlobalDisplay', callback?: Callback<RectChangeOptions>): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -4780,6 +4968,8 @@ off(type: 'freeWindowModeChange', callback?: Callback<boolean>): void
 **起始版本：** 22
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-off(type: 'freeWindowModeChange', callback?: Callback<boolean>): void--><!--Device-Window-off(type: 'freeWindowModeChange', callback?: Callback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -4835,6 +5025,8 @@ off(type: 'systemAvoidAreaChange', callback?: Callback<AvoidArea>): void
 
 **替代接口：** [off](#offavoidareachange)(type: 'avoidAreaChange', callback?: Callback&lt;AvoidAreaOptions&gt;)
 
+<!--Device-Window-off(type: 'systemAvoidAreaChange', callback?: Callback<AvoidArea>): void--><!--Device-Window-off(type: 'systemAvoidAreaChange', callback?: Callback<AvoidArea>): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **参数：**
@@ -4869,6 +5061,8 @@ on(type: 'rotationChange', callback: RotationChangeCallback<RotationChangeInfo, 
 **起始版本：** 19
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-on(type: 'rotationChange', callback: RotationChangeCallback<RotationChangeInfo, RotationChangeResult | void>): void--><!--Device-Window-on(type: 'rotationChange', callback: RotationChangeCallback<RotationChangeInfo, RotationChangeResult | void>): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -4973,6 +5167,8 @@ on(eventType: 'uiExtensionSecureLimitChange', callback: Callback<boolean>): void
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-Window-on(eventType: 'uiExtensionSecureLimitChange', callback: Callback<boolean>): void--><!--Device-Window-on(eventType: 'uiExtensionSecureLimitChange', callback: Callback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
@@ -5013,6 +5209,8 @@ on(type: 'frameMetricsMeasured', callback: Callback<FrameMetrics>): void
 应用注册帧率变化监听后，只有当客户端UI内容发生重绘时（如页面切换、和可响应组件交互、设置背景色和透明度等），才会触发注册的回调。但当同时使用该接口和[postFrameCallback](arkts-arkui-arkui-uicontext-uicontext-c.md#postframecallback)、[postDelayedFrameCallback](arkts-arkui-arkui-uicontext-uicontext-c.md#postdelayedframecallback)、[displaySync.on('frame')](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-displaysync-displaysync-i.md#onframe)中的任意一个时，即使无UI内容重绘，也可能触发回调。
 
 **起始版本：** 22
+
+<!--Device-Window-on(type: 'frameMetricsMeasured', callback: Callback<FrameMetrics>): void--><!--Device-Window-on(type: 'frameMetricsMeasured', callback: Callback<FrameMetrics>): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -5057,6 +5255,8 @@ on(type: 'occlusionStateChanged', callback: Callback<OcclusionState>): void
 
 **起始版本：** 22
 
+<!--Device-Window-on(type: 'occlusionStateChanged', callback: Callback<OcclusionState>): void--><!--Device-Window-on(type: 'occlusionStateChanged', callback: Callback<OcclusionState>): void-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
@@ -5098,6 +5298,8 @@ on(type: 'windowSizeChange', callback: Callback<Size>): void
 **起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-on(type: 'windowSizeChange', callback: Callback<Size>): void--><!--Device-Window-on(type: 'windowSizeChange', callback: Callback<Size>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -5152,6 +5354,8 @@ on(type: 'avoidAreaChange', callback: Callback<AvoidAreaOptions>): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Window-on(type: 'avoidAreaChange', callback: Callback<AvoidAreaOptions>): void--><!--Device-Window-on(type: 'avoidAreaChange', callback: Callback<AvoidAreaOptions>): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **参数：**
@@ -5191,6 +5395,8 @@ on(type: 'keyboardHeightChange', callback: Callback<number>): void
 **起始版本：** 7
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-on(type: 'keyboardHeightChange', callback: Callback<int>): void--><!--Device-Window-on(type: 'keyboardHeightChange', callback: Callback<int>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -5234,6 +5440,8 @@ on(type: 'keyboardWillShow', callback: Callback<KeyboardInfo>): void
 **起始版本：** 20
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-on(type: 'keyboardWillShow', callback: Callback<KeyboardInfo>): void--><!--Device-Window-on(type: 'keyboardWillShow', callback: Callback<KeyboardInfo>): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -5281,6 +5489,8 @@ on(type: 'keyboardDidShow', callback: Callback<KeyboardInfo>): void
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-Window-on(type: 'keyboardDidShow', callback: Callback<KeyboardInfo>): void--><!--Device-Window-on(type: 'keyboardDidShow', callback: Callback<KeyboardInfo>): void-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
@@ -5324,6 +5534,8 @@ on(type: 'keyboardWillHide', callback: Callback<KeyboardInfo>): void
 **起始版本：** 20
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-on(type: 'keyboardWillHide', callback: Callback<KeyboardInfo>): void--><!--Device-Window-on(type: 'keyboardWillHide', callback: Callback<KeyboardInfo>): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -5371,6 +5583,8 @@ on(type: 'keyboardDidHide', callback: Callback<KeyboardInfo>): void
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-Window-on(type: 'keyboardDidHide', callback: Callback<KeyboardInfo>): void--><!--Device-Window-on(type: 'keyboardDidHide', callback: Callback<KeyboardInfo>): void-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
@@ -5413,6 +5627,8 @@ on(type: 'touchOutside', callback: Callback<void>): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Window-on(type: 'touchOutside', callback: Callback<void>): void--><!--Device-Window-on(type: 'touchOutside', callback: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **参数：**
@@ -5451,6 +5667,8 @@ on(type: 'displayIdChange', callback: Callback<number>): void
 **起始版本：** 14
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-on(type: 'displayIdChange', callback: Callback<long>): void--><!--Device-Window-on(type: 'displayIdChange', callback: Callback<long>): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -5497,6 +5715,8 @@ on(type: 'windowVisibilityChange', callback: Callback<boolean>): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Window-on(type: 'windowVisibilityChange', callback: Callback<boolean>): void--><!--Device-Window-on(type: 'windowVisibilityChange', callback: Callback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
@@ -5540,6 +5760,8 @@ on(type: 'systemDensityChange', callback: Callback<number>): void
 **起始版本：** 15
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-on(type: 'systemDensityChange', callback: Callback<double>): void--><!--Device-Window-on(type: 'systemDensityChange', callback: Callback<double>): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -5586,6 +5808,8 @@ on(type: 'noInteractionDetected', timeout: number, callback: Callback<void>): vo
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Window-on(type: 'noInteractionDetected', timeout: number, callback: Callback<void>): void--><!--Device-Window-on(type: 'noInteractionDetected', timeout: number, callback: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
@@ -5629,6 +5853,8 @@ on(type: 'screenshot', callback: Callback<void>): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Window-on(type: 'screenshot', callback: Callback<void>): void--><!--Device-Window-on(type: 'screenshot', callback: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **参数：**
@@ -5665,6 +5891,8 @@ on(type: 'screenshotAppEvent', callback: Callback<ScreenshotEventType>): void
 开启屏幕截屏事件类型的监听。
 
 **起始版本：** 20
+
+<!--Device-Window-on(type: 'screenshotAppEvent', callback: Callback<ScreenshotEventType>): void--><!--Device-Window-on(type: 'screenshotAppEvent', callback: Callback<ScreenshotEventType>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -5707,6 +5935,8 @@ on(type: 'dialogTargetTouch', callback: Callback<void>): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Window-on(type: 'dialogTargetTouch', callback: Callback<void>): void--><!--Device-Window-on(type: 'dialogTargetTouch', callback: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **参数：**
@@ -5745,6 +5975,8 @@ on(type: 'windowEvent', callback: Callback<WindowEventType>): void
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-on(type: 'windowEvent', callback: Callback<WindowEventType>): void--><!--Device-Window-on(type: 'windowEvent', callback: Callback<WindowEventType>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -5795,6 +6027,8 @@ on(type: 'windowStatusChange', callback: Callback<WindowStatusType>): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Window-on(type: 'windowStatusChange', callback: Callback<WindowStatusType>): void--><!--Device-Window-on(type: 'windowStatusChange', callback: Callback<WindowStatusType>): void-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
@@ -5832,6 +6066,8 @@ on(type: 'windowStatusDidChange', callback: Callback<WindowStatusType>): void
 开启窗口模式变化的监听，当窗口windowStatus发生变化后进行通知（此时窗口[Rect](arkts-arkui-window-rect-i.md)属性已经完成更新）。
 
 **起始版本：** 20
+
+<!--Device-Window-on(type: 'windowStatusDidChange', callback: Callback<WindowStatusType>): void--><!--Device-Window-on(type: 'windowStatusDidChange', callback: Callback<WindowStatusType>): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -5879,6 +6115,8 @@ on(type: 'subWindowClose', callback: Callback<void>): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Window-on(type: 'subWindowClose', callback: Callback<void>): void--><!--Device-Window-on(type: 'subWindowClose', callback: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
@@ -5924,6 +6162,8 @@ on(type: 'windowWillClose', callback: Callback<void, Promise<boolean>>): void
 **起始版本：** 15
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-on(type: 'windowWillClose', callback: Callback<void, Promise<boolean>>): void--><!--Device-Window-on(type: 'windowWillClose', callback: Callback<void, Promise<boolean>>): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -5984,6 +6224,8 @@ on(type: 'windowHighlightChange', callback: Callback<boolean>): void
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
 
+<!--Device-Window-on(type: 'windowHighlightChange', callback: Callback<boolean>): void--><!--Device-Window-on(type: 'windowHighlightChange', callback: Callback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
@@ -6025,6 +6267,8 @@ on(type: 'windowTitleButtonRectChange', callback: Callback<TitleButtonRect>): vo
 **起始版本：** 11
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-on(type: 'windowTitleButtonRectChange', callback: Callback<TitleButtonRect>): void--><!--Device-Window-on(type: 'windowTitleButtonRectChange', callback: Callback<TitleButtonRect>): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -6069,6 +6313,8 @@ on(type: 'windowRectChange', callback: Callback<RectChangeOptions>): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Window-on(type: 'windowRectChange', callback: Callback<RectChangeOptions>): void--><!--Device-Window-on(type: 'windowRectChange', callback: Callback<RectChangeOptions>): void-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
@@ -6108,6 +6354,8 @@ on(type: 'rectChangeInGlobalDisplay', callback: Callback<RectChangeOptions>): vo
 开启[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)下窗口矩形（窗口位置及窗口大小）变化的监听事件。
 
 **起始版本：** 20
+
+<!--Device-Window-on(type: 'rectChangeInGlobalDisplay', callback: Callback<RectChangeOptions>): void--><!--Device-Window-on(type: 'rectChangeInGlobalDisplay', callback: Callback<RectChangeOptions>): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -6151,6 +6399,8 @@ on(type: 'freeWindowModeChange', callback: Callback<boolean>): void
 **起始版本：** 22
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-on(type: 'freeWindowModeChange', callback: Callback<boolean>): void--><!--Device-Window-on(type: 'freeWindowModeChange', callback: Callback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -6200,6 +6450,8 @@ on(type: 'systemAvoidAreaChange', callback: Callback<AvoidArea>): void
 
 **替代接口：** [on](#onavoidareachange)(type: 'avoidAreaChange', callback: Callback&lt;AvoidAreaOptions&gt;)
 
+<!--Device-Window-on(type: 'systemAvoidAreaChange', callback: Callback<AvoidArea>): void--><!--Device-Window-on(type: 'systemAvoidAreaChange', callback: Callback<AvoidArea>): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **参数：**
@@ -6230,6 +6482,8 @@ raiseToAppTop(): Promise<void>
 使用该接口需要先创建子窗口，并确保该子窗口调用[showWindow()](#showwindow)并执行完毕。
 
 **起始版本：** 14
+
+<!--Device-Window-raiseToAppTop(): Promise<void>--><!--Device-Window-raiseToAppTop(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -6288,7 +6542,9 @@ recover(): Promise<void>
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-recover(): Promise<void>--><!--Device-Window-recover(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -6350,6 +6606,8 @@ Restores the main window from full-screen, maximized, or split-screen mode to a 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Window-recover(snapshotAnimationConfig: WindowSnapshotAnimationConfig): Promise<void>--><!--Device-Window-recover(snapshotAnimationConfig: WindowSnapshotAnimationConfig): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -6422,7 +6680,9 @@ resetAspectRatio(callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-resetAspectRatio(callback: AsyncCallback<void>): void--><!--Device-Window-resetAspectRatio(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -6486,7 +6746,9 @@ resetAspectRatio(): Promise<void>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-resetAspectRatio(): Promise<void>--><!--Device-Window-resetAspectRatio(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -6560,7 +6822,9 @@ resize(width: number, height: number): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-resize(width: int, height: int): Promise<void>--><!--Device-Window-resize(width: int, height: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -6630,7 +6894,9 @@ resize(width: number, height: number, callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-resize(width: int, height: int, callback: AsyncCallback<void>): void--><!--Device-Window-resize(width: int, height: int, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -6696,7 +6962,9 @@ resizeAsync(width: number, height: number): Promise<void>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-resizeAsync(width: int, height: int): Promise<void>--><!--Device-Window-resizeAsync(width: int, height: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -6753,7 +7021,9 @@ restore(): Promise<void>
 
 **起始版本：** 14
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-restore(): Promise<void>--><!--Device-Window-restore(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -6814,6 +7084,8 @@ restoreMainWindow(wantParameters?: Record<string, Object>): Promise<void>
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Window-restoreMainWindow(wantParameters?: Record<string, Object>): Promise<void>--><!--Device-Window-restoreMainWindow(wantParameters?: Record<string, Object>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -6963,7 +7235,9 @@ setAspectRatio(ratio: number, callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setAspectRatio(ratio: double, callback: AsyncCallback<void>): void--><!--Device-Window-setAspectRatio(ratio: double, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -7036,7 +7310,9 @@ setAspectRatio(ratio: number): Promise<void>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setAspectRatio(ratio: double): Promise<void>--><!--Device-Window-setAspectRatio(ratio: double): Promise<void>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -7112,6 +7388,8 @@ setContentAspectRatio(ratio: number, isPersistent?: boolean, needUpdateRect?: bo
 
 **起始版本：** 21
 
+<!--Device-Window-setContentAspectRatio(ratio: double, isPersistent?: boolean, needUpdateRect?: boolean): Promise<void>--><!--Device-Window-setContentAspectRatio(ratio: double, isPersistent?: boolean, needUpdateRect?: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
@@ -7175,7 +7453,9 @@ setDecorButtonStyle(dectorStyle: DecorButtonStyle): void
 
 **起始版本：** 14
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setDecorButtonStyle(dectorStyle: DecorButtonStyle): void--><!--Device-Window-setDecorButtonStyle(dectorStyle: DecorButtonStyle): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -7236,7 +7516,9 @@ setDialogBackGestureEnabled(enabled: boolean): Promise<void>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setDialogBackGestureEnabled(enabled: boolean): Promise<void>--><!--Device-Window-setDialogBackGestureEnabled(enabled: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -7339,6 +7621,8 @@ setDragKeyFramePolicy(keyFramePolicy: KeyFramePolicy): Promise<KeyFramePolicy>
 
 **起始版本：** 20
 
+<!--Device-Window-setDragKeyFramePolicy(keyFramePolicy: KeyFramePolicy): Promise<KeyFramePolicy>--><!--Device-Window-setDragKeyFramePolicy(keyFramePolicy: KeyFramePolicy): Promise<KeyFramePolicy>-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
@@ -7413,7 +7697,9 @@ setExclusivelyHighlighted(exclusivelyHighlighted: boolean): Promise<void>
 
 **起始版本：** 15
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setExclusivelyHighlighted(exclusivelyHighlighted: boolean): Promise<void>--><!--Device-Window-setExclusivelyHighlighted(exclusivelyHighlighted: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -7471,7 +7757,9 @@ setFloatNavigationAvoidAreaEnabled(enabled: boolean): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setFloatNavigationAvoidAreaEnabled(enabled: boolean): Promise<void>--><!--Device-Window-setFloatNavigationAvoidAreaEnabled(enabled: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -7520,7 +7808,9 @@ setFollowParentMultiScreenPolicy(enabled: boolean): Promise<void>
 
 **起始版本：** 17
 
-**原子化服务API：** 从API版本17开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本17开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setFollowParentMultiScreenPolicy(enabled: boolean): Promise<void>--><!--Device-Window-setFollowParentMultiScreenPolicy(enabled: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -7587,7 +7877,9 @@ setFollowParentWindowLayoutEnabled(enabled: boolean): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本17开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本17开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setFollowParentWindowLayoutEnabled(enabled: boolean): Promise<void>--><!--Device-Window-setFollowParentWindowLayoutEnabled(enabled: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -7661,7 +7953,9 @@ setGestureBackEnabled(enabled: boolean): Promise<void>
 
 **起始版本：** 13
 
-**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setGestureBackEnabled(enabled: boolean): Promise<void>--><!--Device-Window-setGestureBackEnabled(enabled: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -7735,7 +8029,9 @@ setImmersiveModeEnabledState(enabled: boolean): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setImmersiveModeEnabledState(enabled: boolean): void--><!--Device-Window-setImmersiveModeEnabledState(enabled: boolean): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -7779,7 +8075,9 @@ setParentWindow(windowId: number): Promise<void>
 
 **起始版本：** 19
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setParentWindow(windowId: int): Promise<void>--><!--Device-Window-setParentWindow(windowId: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -7835,7 +8133,9 @@ setPreferredOrientation(orientation: Orientation): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setPreferredOrientation(orientation: Orientation): Promise<void>--><!--Device-Window-setPreferredOrientation(orientation: Orientation): Promise<void>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -7906,7 +8206,9 @@ setPreferredOrientation(orientation: Orientation, callback: AsyncCallback<void>)
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setPreferredOrientation(orientation: Orientation, callback: AsyncCallback<void>): void--><!--Device-Window-setPreferredOrientation(orientation: Orientation, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -7974,7 +8276,9 @@ setPreferredOrientationWithResult(orientation: Orientation): Promise<Orientation
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setPreferredOrientationWithResult(orientation: Orientation): Promise<OrientationResult>--><!--Device-Window-setPreferredOrientationWithResult(orientation: Orientation): Promise<OrientationResult>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -8048,6 +8352,8 @@ setRaiseByClickEnabled(enable: boolean): Promise<void>
 使用该接口需要先创建子窗口，并确保该子窗口调用[showWindow()](#showwindow)并执行完毕。
 
 **起始版本：** 14
+
+<!--Device-Window-setRaiseByClickEnabled(enable: boolean): Promise<void>--><!--Device-Window-setRaiseByClickEnabled(enable: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -8125,6 +8431,8 @@ setReceiveDragEventEnabled(enabled: boolean): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Window-setReceiveDragEventEnabled(enabled: boolean): Promise<void>--><!--Device-Window-setReceiveDragEventEnabled(enabled: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
@@ -8183,6 +8491,8 @@ setRelativePositionToParentWindowEnabled(enabled: boolean, anchor?: WindowAnchor
 该接口调用生效后，[setFollowParentWindowLayoutEnabled()](#setfollowparentwindowlayoutenabled)接口调用不生效。
 
 **起始版本：** 20
+
+<!--Device-Window-setRelativePositionToParentWindowEnabled(enabled: boolean, anchor?: WindowAnchor,        offsetX?: int, offsetY?: int): Promise<void>--><!--Device-Window-setRelativePositionToParentWindowEnabled(enabled: boolean, anchor?: WindowAnchor,        offsetX?: int, offsetY?: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -8254,7 +8564,9 @@ setResizeByDragEnabled(enable: boolean, callback: AsyncCallback<void>): void
 
 **起始版本：** 14
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setResizeByDragEnabled(enable: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setResizeByDragEnabled(enable: boolean, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -8303,7 +8615,9 @@ setResizeByDragEnabled(enable: boolean): Promise<void>
 
 **起始版本：** 14
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setResizeByDragEnabled(enable: boolean): Promise<void>--><!--Device-Window-setResizeByDragEnabled(enable: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -8367,6 +8681,8 @@ setSeparationTouchEnabled(enabled: boolean): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Window-setSeparationTouchEnabled(enabled: boolean): Promise<void>--><!--Device-Window-setSeparationTouchEnabled(enabled: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
@@ -8419,7 +8735,9 @@ setSpecificSystemBarEnabled(name: SpecificSystemBar, enable: boolean, enableAnim
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setSpecificSystemBarEnabled(name: SpecificSystemBar, enable: boolean, enableAnimation?: boolean): Promise<void>--><!--Device-Window-setSpecificSystemBarEnabled(name: SpecificSystemBar, enable: boolean, enableAnimation?: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -8494,7 +8812,9 @@ setStatusBarColor(color: ColorMetrics): Promise<void>
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setStatusBarColor(color: ColorMetrics): Promise<void>--><!--Device-Window-setStatusBarColor(color: ColorMetrics): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -8567,7 +8887,9 @@ setSubWindowModal(isModal: boolean): Promise<void>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setSubWindowModal(isModal: boolean): Promise<void>--><!--Device-Window-setSubWindowModal(isModal: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -8649,7 +8971,9 @@ setSubWindowModal(isModal: boolean, modalityType: ModalityType): Promise<void>
 
 **起始版本：** 14
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setSubWindowModal(isModal: boolean, modalityType: ModalityType): Promise<void>--><!--Device-Window-setSubWindowModal(isModal: boolean, modalityType: ModalityType): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -8724,7 +9048,9 @@ setSubWindowZLevel(zLevel: number): Promise<void>
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setSubWindowZLevel(zLevel: int): Promise<void>--><!--Device-Window-setSubWindowZLevel(zLevel: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -8794,7 +9120,9 @@ setSystemAvoidAreaEnabled(enabled: boolean): Promise<void>
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setSystemAvoidAreaEnabled(enabled: boolean): Promise<void>--><!--Device-Window-setSystemAvoidAreaEnabled(enabled: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -8880,7 +9208,9 @@ setTitleAndDockHoverShown(isTitleHoverShown?: boolean, isDockHoverShown?: boolea
 
 **起始版本：** 14
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setTitleAndDockHoverShown(isTitleHoverShown?: boolean, isDockHoverShown?: boolean): Promise<void>--><!--Device-Window-setTitleAndDockHoverShown(isTitleHoverShown?: boolean, isDockHoverShown?: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -8959,6 +9289,8 @@ setTouchableAreas(rects: Array<Rect>): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Window-setTouchableAreas(rects: Array<Rect>): Promise<void>--><!--Device-Window-setTouchableAreas(rects: Array<Rect>): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
@@ -9013,7 +9345,9 @@ setUIContent(path: string, callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setUIContent(path: string, callback: AsyncCallback<void>): void--><!--Device-Window-setUIContent(path: string, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -9063,7 +9397,9 @@ setUIContent(path: string): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setUIContent(path: string): Promise<void>--><!--Device-Window-setUIContent(path: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -9118,7 +9454,9 @@ Stage模型下，该接口需要在[loadContent()](#loadcontent)或[setUIContent
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setWindowBackgroundColor(color: string | ColorMetrics): void--><!--Device-Window-setWindowBackgroundColor(color: string | ColorMetrics): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -9180,7 +9518,9 @@ setWindowBrightness(brightness: number): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setWindowBrightness(brightness: double): Promise<void>--><!--Device-Window-setWindowBrightness(brightness: double): Promise<void>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -9268,7 +9608,9 @@ setWindowBrightness(brightness: number, callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setWindowBrightness(brightness: double, callback: AsyncCallback<void>): void--><!--Device-Window-setWindowBrightness(brightness: double, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -9341,7 +9683,9 @@ setWindowColorSpace(colorSpace:ColorSpace): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setWindowColorSpace(colorSpace:ColorSpace): Promise<void>--><!--Device-Window-setWindowColorSpace(colorSpace:ColorSpace): Promise<void>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -9393,7 +9737,9 @@ setWindowColorSpace(colorSpace:ColorSpace, callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setWindowColorSpace(colorSpace:ColorSpace, callback: AsyncCallback<void>): void--><!--Device-Window-setWindowColorSpace(colorSpace:ColorSpace, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -9443,6 +9789,8 @@ setWindowContainerColor(activeColor: string, inactiveColor: string): void
 **起始版本：** 20
 
 **需要权限：** ohos.permission.SET_WINDOW_TRANSPARENT
+
+<!--Device-Window-setWindowContainerColor(activeColor: string, inactiveColor: string): void--><!--Device-Window-setWindowContainerColor(activeColor: string, inactiveColor: string): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -9518,6 +9866,8 @@ setWindowContainerModalColor(activeColor: string, inactiveColor: string): void
 - API版本26+：ohos.permission.SET_WINDOW_ALPHA
 - API版本20-25：N/A
 
+<!--Device-Window-setWindowContainerModalColor(activeColor: string, inactiveColor: string): void--><!--Device-Window-setWindowContainerModalColor(activeColor: string, inactiveColor: string): void-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
@@ -9591,7 +9941,9 @@ setWindowCornerRadius(cornerRadius: number): Promise<void>
 
 **起始版本：** 17
 
-**原子化服务API：** 从API版本17开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本17开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setWindowCornerRadius(cornerRadius: double): Promise<void>--><!--Device-Window-setWindowCornerRadius(cornerRadius: double): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -9648,7 +10000,9 @@ setWindowDecorHeight(height: number): void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setWindowDecorHeight(height: int): void--><!--Device-Window-setWindowDecorHeight(height: int): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -9692,7 +10046,9 @@ setWindowDecorVisible(isVisible: boolean): void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setWindowDecorVisible(isVisible: boolean): void--><!--Device-Window-setWindowDecorVisible(isVisible: boolean): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -9748,7 +10104,9 @@ setWindowDelayRaiseOnDrag(isEnabled: boolean): void
 
 **起始版本：** 19
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setWindowDelayRaiseOnDrag(isEnabled: boolean): void--><!--Device-Window-setWindowDelayRaiseOnDrag(isEnabled: boolean): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -9787,7 +10145,9 @@ setWindowFocusable(isFocusable: boolean): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setWindowFocusable(isFocusable: boolean): Promise<void>--><!--Device-Window-setWindowFocusable(isFocusable: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -9843,7 +10203,9 @@ setWindowFocusable(isFocusable: boolean, callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setWindowFocusable(isFocusable: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setWindowFocusable(isFocusable: boolean, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -9892,7 +10254,9 @@ setWindowGrayScale(grayScale: number): Promise<void>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setWindowGrayScale(grayScale: double): Promise<void>--><!--Device-Window-setWindowGrayScale(grayScale: double): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -9956,7 +10320,9 @@ setWindowKeepScreenOn(isKeepScreenOn: boolean): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setWindowKeepScreenOn(isKeepScreenOn: boolean): Promise<void>--><!--Device-Window-setWindowKeepScreenOn(isKeepScreenOn: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -10012,7 +10378,9 @@ setWindowKeepScreenOn(isKeepScreenOn: boolean, callback: AsyncCallback<void>): v
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setWindowKeepScreenOn(isKeepScreenOn: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setWindowKeepScreenOn(isKeepScreenOn: boolean, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -10067,7 +10435,9 @@ setWindowLayoutFullScreen(isLayoutFullScreen: boolean): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setWindowLayoutFullScreen(isLayoutFullScreen: boolean): Promise<void>--><!--Device-Window-setWindowLayoutFullScreen(isLayoutFullScreen: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -10152,6 +10522,8 @@ setWindowLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<v
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Window-setWindowLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setWindowLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **参数：**
@@ -10227,7 +10599,9 @@ setWindowLimits(windowLimits: WindowLimits): Promise<WindowLimits>
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setWindowLimits(windowLimits: WindowLimits): Promise<WindowLimits>--><!--Device-Window-setWindowLimits(windowLimits: WindowLimits): Promise<WindowLimits>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -10297,7 +10671,9 @@ setWindowLimits(windowLimits: WindowLimits, isForcible: boolean): Promise<Window
 
 **起始版本：** 15
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setWindowLimits(windowLimits: WindowLimits, isForcible: boolean): Promise<WindowLimits>--><!--Device-Window-setWindowLimits(windowLimits: WindowLimits, isForcible: boolean): Promise<WindowLimits>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -10360,7 +10736,9 @@ setWindowMask(windowMask: Array<Array<number>>): Promise<void>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setWindowMask(windowMask: Array<Array<long>>): Promise<void>--><!--Device-Window-setWindowMask(windowMask: Array<Array<long>>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -10422,6 +10800,8 @@ setWindowMaskWithAlpha(windowMask: Uint8Array, maskWidth: number, maskHeight: nu
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Window-setWindowMaskWithAlpha(windowMask: Uint8Array, maskWidth: int, maskHeight: int): Promise<void>--><!--Device-Window-setWindowMaskWithAlpha(windowMask: Uint8Array, maskWidth: int, maskHeight: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -10490,7 +10870,9 @@ setWindowPrivacyMode(isPrivacyMode: boolean): Promise<void>
 
 **需要权限：** ohos.permission.PRIVACY_WINDOW
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setWindowPrivacyMode(isPrivacyMode: boolean): Promise<void>--><!--Device-Window-setWindowPrivacyMode(isPrivacyMode: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -10551,7 +10933,9 @@ setWindowPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>): voi
 
 **需要权限：** ohos.permission.PRIVACY_WINDOW
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setWindowPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setWindowPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -10600,6 +10984,8 @@ setWindowShadowEnabled(enable: boolean): Promise<void>
 **起始版本：** 20
 
 **需要权限：** ohos.permission.SET_WINDOW_TRANSPARENT
+
+<!--Device-Window-setWindowShadowEnabled(enable: boolean): Promise<void>--><!--Device-Window-setWindowShadowEnabled(enable: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -10674,7 +11060,9 @@ setWindowShadowRadius(radius: number): void
 
 **起始版本：** 17
 
-**原子化服务API：** 从API版本17开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本17开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setWindowShadowRadius(radius: double): void--><!--Device-Window-setWindowShadowRadius(radius: double): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -10717,7 +11105,9 @@ setWindowSystemBarEnable(names: Array<'status'|'navigation'>): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setWindowSystemBarEnable(names: Array<'status'|'navigation'>): Promise<void>--><!--Device-Window-setWindowSystemBarEnable(names: Array<'status'|'navigation'>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -10804,6 +11194,8 @@ setWindowSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncC
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Window-setWindowSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncCallback<void>): void--><!--Device-Window-setWindowSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **参数：**
@@ -10874,7 +11266,9 @@ setWindowSystemBarProperties(systemBarProperties: SystemBarProperties): Promise<
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setWindowSystemBarProperties(systemBarProperties: SystemBarProperties): Promise<void>--><!--Device-Window-setWindowSystemBarProperties(systemBarProperties: SystemBarProperties): Promise<void>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -10964,6 +11358,8 @@ setWindowSystemBarProperties(systemBarProperties: SystemBarProperties, callback:
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Window-setWindowSystemBarProperties(systemBarProperties: SystemBarProperties, callback: AsyncCallback<void>): void--><!--Device-Window-setWindowSystemBarProperties(systemBarProperties: SystemBarProperties, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **参数：**
@@ -11036,7 +11432,9 @@ setWindowTitle(titleName: string): Promise<void>
 
 **起始版本：** 15
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setWindowTitle(titleName: string): Promise<void>--><!--Device-Window-setWindowTitle(titleName: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -11087,7 +11485,9 @@ setWindowTitleButtonVisible(isMaximizeButtonVisible: boolean, isMinimizeButtonVi
 
 **起始版本：** 14
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setWindowTitleButtonVisible(isMaximizeButtonVisible: boolean, isMinimizeButtonVisible: boolean, isCloseButtonVisible?: boolean): void--><!--Device-Window-setWindowTitleButtonVisible(isMaximizeButtonVisible: boolean, isMinimizeButtonVisible: boolean, isCloseButtonVisible?: boolean): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -11153,7 +11553,9 @@ setWindowTitleMoveEnabled(enabled: boolean): void
 
 **起始版本：** 14
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setWindowTitleMoveEnabled(enabled: boolean): void--><!--Device-Window-setWindowTitleMoveEnabled(enabled: boolean): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -11209,7 +11611,9 @@ setWindowTopmost(isWindowTopmost: boolean): Promise<void>
 
 **需要权限：** ohos.permission.WINDOW_TOPMOST
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setWindowTopmost(isWindowTopmost: boolean): Promise<void>--><!--Device-Window-setWindowTopmost(isWindowTopmost: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -11304,7 +11708,9 @@ setWindowTouchable(isTouchable: boolean): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setWindowTouchable(isTouchable: boolean): Promise<void>--><!--Device-Window-setWindowTouchable(isTouchable: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -11360,7 +11766,9 @@ setWindowTouchable(isTouchable: boolean, callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setWindowTouchable(isTouchable: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setWindowTouchable(isTouchable: boolean, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -11413,7 +11821,9 @@ setWindowTransitionAnimation(transitionType: WindowTransitionType, animation: Tr
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-setWindowTransitionAnimation(transitionType: WindowTransitionType, animation: TransitionAnimation): Promise<void>--><!--Device-Window-setWindowTransitionAnimation(transitionType: WindowTransitionType, animation: TransitionAnimation): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -11499,7 +11909,9 @@ showWindow(callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-showWindow(callback: AsyncCallback<void>): void--><!--Device-Window-showWindow(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -11585,7 +11997,9 @@ showWindow(): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-showWindow(): Promise<void>--><!--Device-Window-showWindow(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -11672,7 +12086,9 @@ showWindow(options: ShowWindowOptions): Promise<void>
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-showWindow(options: ShowWindowOptions): Promise<void>--><!--Device-Window-showWindow(options: ShowWindowOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -11759,7 +12175,9 @@ snapshot(callback: AsyncCallback<image.PixelMap>): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-snapshot(callback: AsyncCallback<image.PixelMap>): void--><!--Device-Window-snapshot(callback: AsyncCallback<image.PixelMap>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -11804,7 +12222,9 @@ snapshot(): Promise<image.PixelMap>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-snapshot(): Promise<image.PixelMap>--><!--Device-Window-snapshot(): Promise<image.PixelMap>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -11845,7 +12265,9 @@ snapshotIgnorePrivacy(): Promise<image.PixelMap>
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-snapshotIgnorePrivacy(): Promise<image.PixelMap>--><!--Device-Window-snapshotIgnorePrivacy(): Promise<image.PixelMap>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -11888,6 +12310,8 @@ snapshotSync(): image.PixelMap
 Stage模型下，该接口需要在[loadContent()](#loadcontent)或[setUIContent()](#setuicontent)调用生效后使用。
 
 **起始版本：** 20
+
+<!--Device-Window-snapshotSync(): image.PixelMap--><!--Device-Window-snapshotSync(): image.PixelMap-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -11936,7 +12360,9 @@ startMoving(): Promise<void>
 
 **起始版本：** 14
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-startMoving(): Promise<void>--><!--Device-Window-startMoving(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -12025,7 +12451,9 @@ startMoving(offsetX: number, offsetY: number): Promise<void>
 
 **起始版本：** 15
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-startMoving(offsetX: int, offsetY: int): Promise<void>--><!--Device-Window-startMoving(offsetX: int, offsetY: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -12110,7 +12538,9 @@ stopMoving(): Promise<void>
 
 **起始版本：** 15
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-Window-stopMoving(): Promise<void>--><!--Device-Window-stopMoving(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -12177,6 +12607,8 @@ destroy(callback: AsyncCallback<void>): void
 
 **替代接口：** [destroyWindow](#destroywindow)(callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-Window-destroy(callback: AsyncCallback<void>): void--><!--Device-Window-destroy(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **参数：**
@@ -12219,6 +12651,8 @@ destroy(): Promise<void>
 **废弃版本：** 9
 
 **替代接口：** [destroyWindow](#destroywindow)()
+
+<!--Device-Window-destroy(): Promise<void>--><!--Device-Window-destroy(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -12271,6 +12705,8 @@ getAvoidArea(type: AvoidAreaType, callback: AsyncCallback<AvoidArea>): void
 **废弃版本：** 9
 
 **替代接口：** [getWindowAvoidArea](#getwindowavoidarea)
+
+<!--Device-Window-getAvoidArea(type: AvoidAreaType, callback: AsyncCallback<AvoidArea>): void--><!--Device-Window-getAvoidArea(type: AvoidAreaType, callback: AsyncCallback<AvoidArea>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -12330,6 +12766,8 @@ getAvoidArea(type: AvoidAreaType): Promise<AvoidArea>
 
 **替代接口：** [getWindowAvoidArea](#getwindowavoidarea)
 
+<!--Device-Window-getAvoidArea(type: AvoidAreaType): Promise<AvoidArea>--><!--Device-Window-getAvoidArea(type: AvoidAreaType): Promise<AvoidArea>-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **参数：**
@@ -12376,6 +12814,8 @@ getColorSpace(): Promise<ColorSpace>
 
 **替代接口：** [getWindowColorSpace](#getwindowcolorspace)
 
+<!--Device-Window-getColorSpace(): Promise<ColorSpace>--><!--Device-Window-getColorSpace(): Promise<ColorSpace>-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **返回值：**
@@ -12417,6 +12857,8 @@ getColorSpace(callback: AsyncCallback<ColorSpace>): void
 
 **替代接口：** [getWindowColorSpace](#getwindowcolorspace)
 
+<!--Device-Window-getColorSpace(callback: AsyncCallback<ColorSpace>): void--><!--Device-Window-getColorSpace(callback: AsyncCallback<ColorSpace>): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **参数：**
@@ -12457,6 +12899,8 @@ getProperties(callback: AsyncCallback<WindowProperties>): void
 **废弃版本：** 9
 
 **替代接口：** [getWindowProperties](#getwindowproperties)
+
+<!--Device-Window-getProperties(callback: AsyncCallback<WindowProperties>): void--><!--Device-Window-getProperties(callback: AsyncCallback<WindowProperties>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -12501,6 +12945,8 @@ getProperties(): Promise<WindowProperties>
 
 **替代接口：** [getWindowProperties](#getwindowproperties)
 
+<!--Device-Window-getProperties(): Promise<WindowProperties>--><!--Device-Window-getProperties(): Promise<WindowProperties>-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **返回值：**
@@ -12539,6 +12985,8 @@ isShowing(callback: AsyncCallback<boolean>): void
 **废弃版本：** 9
 
 **替代接口：** [isWindowShowing](#iswindowshowing)
+
+<!--Device-Window-isShowing(callback: AsyncCallback<boolean>): void--><!--Device-Window-isShowing(callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -12583,6 +13031,8 @@ isShowing(): Promise<boolean>
 
 **替代接口：** [isWindowShowing](#iswindowshowing)
 
+<!--Device-Window-isShowing(): Promise<boolean>--><!--Device-Window-isShowing(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **返回值：**
@@ -12622,6 +13072,8 @@ isSupportWideGamut(): Promise<boolean>
 **废弃版本：** 9
 
 **替代接口：** [isWindowSupportWideGamut](#iswindowsupportwidegamut)()
+
+<!--Device-Window-isSupportWideGamut(): Promise<boolean>--><!--Device-Window-isSupportWideGamut(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -12665,6 +13117,8 @@ isSupportWideGamut(callback: AsyncCallback<boolean>): void
 
 **替代接口：** [isWindowSupportWideGamut](#iswindowsupportwidegamut-1)(callback: AsyncCallback&lt;boolean&gt;)
 
+<!--Device-Window-isSupportWideGamut(callback: AsyncCallback<boolean>): void--><!--Device-Window-isSupportWideGamut(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **参数：**
@@ -12707,6 +13161,8 @@ moveTo(x: number, y: number): Promise<void>
 **废弃版本：** 9
 
 **替代接口：** [moveWindowTo](#movewindowto)(x: number, y: number)
+
+<!--Device-Window-moveTo(x: number, y: number): Promise<void>--><!--Device-Window-moveTo(x: number, y: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -12758,6 +13214,8 @@ moveTo(x: number, y: number, callback: AsyncCallback<void>): void
 **废弃版本：** 9
 
 **替代接口：** [moveWindowTo](#movewindowto)(x: number, y: number, callback: AsyncCallback&lt;void&gt;)
+
+<!--Device-Window-moveTo(x: number, y: number, callback: AsyncCallback<void>): void--><!--Device-Window-moveTo(x: number, y: number, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -12815,6 +13273,8 @@ resetSize(width: number, height: number): Promise<void>
 **废弃版本：** 9
 
 **替代接口：** [resize](#resize)(width: number, height: number)
+
+<!--Device-Window-resetSize(width: number, height: number): Promise<void>--><!--Device-Window-resetSize(width: number, height: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -12879,6 +13339,8 @@ resetSize(width: number, height: number, callback: AsyncCallback<void>): void
 
 **替代接口：** [resize](#resize)(width: number, height: number, callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-Window-resetSize(width: number, height: number, callback: AsyncCallback<void>): void--><!--Device-Window-resetSize(width: number, height: number, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **参数：**
@@ -12922,6 +13384,8 @@ setBackgroundColor(color: string): Promise<void>
 **废弃版本：** 9
 
 **替代接口：** [setWindowBackgroundColor](#setwindowbackgroundcolor)
+
+<!--Device-Window-setBackgroundColor(color: string): Promise<void>--><!--Device-Window-setBackgroundColor(color: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -12972,6 +13436,8 @@ setBackgroundColor(color: string, callback: AsyncCallback<void>): void
 
 **替代接口：** [setWindowBackgroundColor](#setwindowbackgroundcolor)
 
+<!--Device-Window-setBackgroundColor(color: string, callback: AsyncCallback<void>): void--><!--Device-Window-setBackgroundColor(color: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **参数：**
@@ -13017,6 +13483,8 @@ setBrightness(brightness: number): Promise<void>
 **废弃版本：** 9
 
 **替代接口：** [setWindowBrightness](#setwindowbrightness)(brightness: number)
+
+<!--Device-Window-setBrightness(brightness: number): Promise<void>--><!--Device-Window-setBrightness(brightness: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -13070,6 +13538,8 @@ setBrightness(brightness: number, callback: AsyncCallback<void>): void
 
 **替代接口：** [setWindowBrightness](#setwindowbrightness)(brightness: number, callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-Window-setBrightness(brightness: number, callback: AsyncCallback<void>): void--><!--Device-Window-setBrightness(brightness: number, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **参数：**
@@ -13113,6 +13583,8 @@ setColorSpace(colorSpace: ColorSpace): Promise<void>
 **废弃版本：** 9
 
 **替代接口：** [setWindowColorSpace](#setwindowcolorspace)(colorSpace:ColorSpace)
+
+<!--Device-Window-setColorSpace(colorSpace: ColorSpace): Promise<void>--><!--Device-Window-setColorSpace(colorSpace: ColorSpace): Promise<void>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -13163,6 +13635,8 @@ setColorSpace(colorSpace: ColorSpace, callback: AsyncCallback<void>): void
 
 **替代接口：** [setWindowColorSpace](#setwindowcolorspace-1)(colorSpace:ColorSpace, callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-Window-setColorSpace(colorSpace: ColorSpace, callback: AsyncCallback<void>): void--><!--Device-Window-setColorSpace(colorSpace: ColorSpace, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **参数：**
@@ -13198,6 +13672,8 @@ setDimBehind(dimBehindValue: number, callback: AsyncCallback<void>): void
 **起始版本：** 7
 
 **废弃版本：** 9
+
+<!--Device-Window-setDimBehind(dimBehindValue: number, callback: AsyncCallback<void>): void--><!--Device-Window-setDimBehind(dimBehindValue: number, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -13236,6 +13712,8 @@ setDimBehind(dimBehindValue: number): Promise<void>
 **起始版本：** 7
 
 **废弃版本：** 9
+
+<!--Device-Window-setDimBehind(dimBehindValue: number): Promise<void>--><!--Device-Window-setDimBehind(dimBehindValue: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -13282,6 +13760,8 @@ setFocusable(isFocusable: boolean): Promise<void>
 **废弃版本：** 9
 
 **替代接口：** [setWindowFocusable](#setwindowfocusable)(isFocusable: boolean)
+
+<!--Device-Window-setFocusable(isFocusable: boolean): Promise<void>--><!--Device-Window-setFocusable(isFocusable: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -13333,6 +13813,8 @@ setFocusable(isFocusable: boolean, callback: AsyncCallback<void>): void
 
 **替代接口：** [setWindowFocusable](#setwindowfocusable-1)(isFocusable: boolean, callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-Window-setFocusable(isFocusable: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setFocusable(isFocusable: boolean, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **参数：**
@@ -13382,6 +13864,8 @@ setFullScreen(isFullScreen: boolean, callback: AsyncCallback<void>): void
 **废弃版本：** 9
 
 **替代接口：** [setWindowSystemBarEnable](#setwindowsystembarenable-1)(names: Array&lt;'status' | 'navigation'&gt;)
+
+<!--Device-Window-setFullScreen(isFullScreen: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setFullScreen(isFullScreen: boolean, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -13453,6 +13937,8 @@ setFullScreen(isFullScreen: boolean): Promise<void>
 
 **替代接口：** [setWindowSystemBarEnable](#setwindowsystembarenable-1)(names: Array&lt;'status' | 'navigation'&gt;)
 
+<!--Device-Window-setFullScreen(isFullScreen: boolean): Promise<void>--><!--Device-Window-setFullScreen(isFullScreen: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **参数：**
@@ -13518,6 +14004,8 @@ setKeepScreenOn(isKeepScreenOn: boolean): Promise<void>
 
 **替代接口：** [setWindowKeepScreenOn](#setwindowkeepscreenon)(isKeepScreenOn: boolean)
 
+<!--Device-Window-setKeepScreenOn(isKeepScreenOn: boolean): Promise<void>--><!--Device-Window-setKeepScreenOn(isKeepScreenOn: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **参数：**
@@ -13568,6 +14056,8 @@ setKeepScreenOn(isKeepScreenOn: boolean, callback: AsyncCallback<void>): void
 
 **替代接口：** [setWindowKeepScreenOn](#setwindowkeepscreenon-1)(isKeepScreenOn: boolean, callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-Window-setKeepScreenOn(isKeepScreenOn: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setKeepScreenOn(isKeepScreenOn: boolean, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **参数：**
@@ -13615,6 +14105,8 @@ setLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<void>):
 **废弃版本：** 9
 
 **替代接口：** [setWindowLayoutFullScreen](#setwindowlayoutfullscreen-1)(isLayoutFullScreen: boolean)
+
+<!--Device-Window-setLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -13684,6 +14176,8 @@ setLayoutFullScreen(isLayoutFullScreen: boolean): Promise<void>
 
 **替代接口：** [setWindowLayoutFullScreen](#setwindowlayoutfullscreen-1)(isLayoutFullScreen: boolean)
 
+<!--Device-Window-setLayoutFullScreen(isLayoutFullScreen: boolean): Promise<void>--><!--Device-Window-setLayoutFullScreen(isLayoutFullScreen: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **参数：**
@@ -13748,6 +14242,8 @@ setOutsideTouchable(touchable: boolean): Promise<void>
 
 **废弃版本：** 9
 
+<!--Device-Window-setOutsideTouchable(touchable: boolean): Promise<void>--><!--Device-Window-setOutsideTouchable(touchable: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **参数：**
@@ -13795,6 +14291,8 @@ setOutsideTouchable(touchable: boolean, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
+<!--Device-Window-setOutsideTouchable(touchable: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setOutsideTouchable(touchable: boolean, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **参数：**
@@ -13837,6 +14335,8 @@ setPrivacyMode(isPrivacyMode: boolean): Promise<void>
 **废弃版本：** 9
 
 **替代接口：** [setWindowPrivacyMode](#setwindowprivacymode)(isPrivacyMode: boolean)
+
+<!--Device-Window-setPrivacyMode(isPrivacyMode: boolean): Promise<void>--><!--Device-Window-setPrivacyMode(isPrivacyMode: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -13888,6 +14388,8 @@ setPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>): void
 
 **替代接口：** [setWindowPrivacyMode](#setwindowprivacymode-1)(isPrivacyMode: boolean, callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-Window-setPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **参数：**
@@ -13936,6 +14438,8 @@ setSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncCallbac
 **废弃版本：** 9
 
 **替代接口：** [setWindowSystemBarEnable](#setwindowsystembarenable-1)(names: Array&lt;'status'|'navigation'&gt;)
+
+<!--Device-Window-setSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncCallback<void>): void--><!--Device-Window-setSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -14007,6 +14511,8 @@ setSystemBarEnable(names: Array<'status' | 'navigation'>): Promise<void>
 
 **替代接口：** [setWindowSystemBarEnable](#setwindowsystembarenable-1)(names: Array&lt;'status'|'navigation'&gt;)
 
+<!--Device-Window-setSystemBarEnable(names: Array<'status' | 'navigation'>): Promise<void>--><!--Device-Window-setSystemBarEnable(names: Array<'status' | 'navigation'>): Promise<void>-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **参数：**
@@ -14075,6 +14581,8 @@ setSystemBarProperties(systemBarProperties: SystemBarProperties, callback: Async
 **废弃版本：** 9
 
 **替代接口：** [setWindowSystemBarProperties](#setwindowsystembarproperties-1)(systemBarProperties: SystemBarProperties)
+
+<!--Device-Window-setSystemBarProperties(systemBarProperties: SystemBarProperties, callback: AsyncCallback<void>): void--><!--Device-Window-setSystemBarProperties(systemBarProperties: SystemBarProperties, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -14149,6 +14657,8 @@ setSystemBarProperties(systemBarProperties: SystemBarProperties): Promise<void>
 
 **替代接口：** [setWindowSystemBarProperties](#setwindowsystembarproperties-1)(systemBarProperties: SystemBarProperties)
 
+<!--Device-Window-setSystemBarProperties(systemBarProperties: SystemBarProperties): Promise<void>--><!--Device-Window-setSystemBarProperties(systemBarProperties: SystemBarProperties): Promise<void>-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **参数：**
@@ -14220,6 +14730,8 @@ setTouchable(isTouchable: boolean): Promise<void>
 
 **替代接口：** [setWindowTouchable](#setwindowtouchable)(isTouchable: boolean)
 
+<!--Device-Window-setTouchable(isTouchable: boolean): Promise<void>--><!--Device-Window-setTouchable(isTouchable: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **参数：**
@@ -14270,6 +14782,8 @@ setTouchable(isTouchable: boolean, callback: AsyncCallback<void>): void
 
 **替代接口：** [setWindowTouchable](#setwindowtouchable-1)(isTouchable: boolean, callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-Window-setTouchable(isTouchable: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setTouchable(isTouchable: boolean, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **参数：**
@@ -14314,6 +14828,8 @@ show(callback: AsyncCallback<void>): void
 
 **替代接口：** [showWindow](#showwindow)(callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-Window-show(callback: AsyncCallback<void>): void--><!--Device-Window-show(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **参数：**
@@ -14356,6 +14872,8 @@ show(): Promise<void>
 **废弃版本：** 9
 
 **替代接口：** [showWindow](#showwindow)()
+
+<!--Device-Window-show(): Promise<void>--><!--Device-Window-show(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 

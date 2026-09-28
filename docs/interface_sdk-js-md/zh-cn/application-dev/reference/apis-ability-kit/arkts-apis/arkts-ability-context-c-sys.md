@@ -10,6 +10,8 @@ Context是Stage模型的上下文基类，主要用于访问特定应用程序�
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare class Context extends BaseContext--><!--Device-unnamed-declare class Context extends BaseContext-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## createModuleResourceManager
@@ -25,6 +27,8 @@ createModuleResourceManager(bundleName: string, moduleName: string): resmgr.Reso
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Context-createModuleResourceManager(bundleName: string, moduleName: string): resmgr.ResourceManager--><!--Device-Context-createModuleResourceManager(bundleName: string, moduleName: string): resmgr.ResourceManager-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -82,6 +86,8 @@ createSystemHspModuleResourceManager(bundleName: string, moduleName: string): re
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Context-createSystemHspModuleResourceManager(bundleName: string, moduleName: string): resmgr.ResourceManager--><!--Device-Context-createSystemHspModuleResourceManager(bundleName: string, moduleName: string): resmgr.ResourceManager-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -141,6 +147,8 @@ createBundleContext(bundleName: string): Context
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Context-createBundleContext(bundleName: string): Context--><!--Device-Context-createBundleContext(bundleName: string): Context-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -202,6 +210,8 @@ createModuleContext(bundleName: string, moduleName: string): Context
 **替代接口：** [createModuleContext](arkts-ability-application-createmodulecontext-f.md)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Context-createModuleContext(bundleName: string, moduleName: string): Context--><!--Device-Context-createModuleContext(bundleName: string, moduleName: string): Context-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

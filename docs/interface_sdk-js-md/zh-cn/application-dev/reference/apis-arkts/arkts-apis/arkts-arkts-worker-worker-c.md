@@ -14,6 +14,8 @@ Worker类包含所有Worker功能。
 
 **替代接口：** [ThreadWorker](arkts-arkts-worker-threadworker-c.md)
 
+<!--Device-worker-class Worker implements EventTarget--><!--Device-worker-class Worker implements EventTarget-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -35,6 +37,8 @@ constructor(scriptURL: string, options?: WorkerOptions)
 **废弃版本：** 9
 
 **替代接口：** constructor
+
+<!--Device-Worker-constructor(scriptURL: string, options?: WorkerOptions)--><!--Device-Worker-constructor(scriptURL: string, options?: WorkerOptions)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -71,6 +75,8 @@ off(type: string, listener?: EventListener): void
 
 **替代接口：** off
 
+<!--Device-Worker-off(type: string, listener?: EventListener): void--><!--Device-Worker-off(type: string, listener?: EventListener): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -104,6 +110,8 @@ on(type: string, listener: EventListener): void
 **废弃版本：** 9
 
 **替代接口：** on
+
+<!--Device-Worker-on(type: string, listener: EventListener): void--><!--Device-Worker-on(type: string, listener: EventListener): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -140,6 +148,8 @@ once(type: string, listener: EventListener): void
 
 **替代接口：** once
 
+<!--Device-Worker-once(type: string, listener: EventListener): void--><!--Device-Worker-once(type: string, listener: EventListener): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -175,6 +185,8 @@ onerror?: (err: ErrorEvent) => void
 
 **替代接口：** onerror
 
+<!--Device-Worker-onerror?: (err: ErrorEvent) => void--><!--Device-Worker-onerror?: (err: ErrorEvent) => void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -196,6 +208,8 @@ onexit?: (code: number) => void
 **废弃版本：** 9
 
 **替代接口：** onexit
+
+<!--Device-Worker-onexit?: (code: number) => void--><!--Device-Worker-onexit?: (code: number) => void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -219,6 +233,8 @@ onmessage?: (event: MessageEvent) => void
 
 **替代接口：** onmessage
 
+<!--Device-Worker-onmessage?: (event: MessageEvent) => void--><!--Device-Worker-onmessage?: (event: MessageEvent) => void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -241,6 +257,8 @@ onmessageerror?: (event: MessageEvent) => void
 
 **替代接口：** onmessageerror
 
+<!--Device-Worker-onmessageerror?: (event: MessageEvent) => void--><!--Device-Worker-onmessageerror?: (event: MessageEvent) => void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -262,6 +280,8 @@ postMessage(message: Object, transfer: ArrayBuffer[]): void
 **废弃版本：** 9
 
 **替代接口：** postMessage
+
+<!--Device-Worker-postMessage(message: Object, transfer: ArrayBuffer[]): void--><!--Device-Worker-postMessage(message: Object, transfer: ArrayBuffer[]): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -300,6 +320,8 @@ postMessage(message: Object, options?: PostMessageOptions): void
 
 **替代接口：** postMessage
 
+<!--Device-Worker-postMessage(message: Object, options?: PostMessageOptions): void--><!--Device-Worker-postMessage(message: Object, options?: PostMessageOptions): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -336,6 +358,8 @@ terminate(): void
 **废弃版本：** 9
 
 **替代接口：** terminate
+
+<!--Device-Worker-terminate(): void--><!--Device-Worker-terminate(): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

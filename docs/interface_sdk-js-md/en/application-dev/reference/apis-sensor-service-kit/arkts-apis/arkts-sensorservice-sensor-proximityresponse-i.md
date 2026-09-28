@@ -10,6 +10,8 @@ Describes the proximity sensor data. It extends from [Response](arkts-sensorserv
 
 **Since:** 8
 
+<!--Device-sensor-interface ProximityResponse extends Response--><!--Device-sensor-interface ProximityResponse extends Response-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## Modules to Import
@@ -29,5 +31,7 @@ Proximity between the visible object and the device monitor. Value range: **0** 
 **Type:** number
 
 **Since:** 8
+
+<!--Device-ProximityResponse-distance: double--><!--Device-ProximityResponse-distance: double-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor

@@ -8,6 +8,8 @@ interface FirewallRulePage
 
 **起始版本：** 15
 
+<!--Device-netFirewall-interface FirewallRulePage--><!--Device-netFirewall-interface FirewallRulePage-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 ## 导入模块
@@ -28,6 +30,8 @@ data: Array<NetFirewallRule>
 
 **起始版本：** 15
 
+<!--Device-FirewallRulePage-data: Array<NetFirewallRule>--><!--Device-FirewallRulePage-data: Array<NetFirewallRule>-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 ## page
@@ -41,6 +45,8 @@ page: number
 **类型：** number
 
 **起始版本：** 15
+
+<!--Device-FirewallRulePage-page: int--><!--Device-FirewallRulePage-page: int-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -56,6 +62,8 @@ pageSize: number
 
 **起始版本：** 15
 
+<!--Device-FirewallRulePage-pageSize: int--><!--Device-FirewallRulePage-pageSize: int-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 ## totalPage
@@ -69,5 +77,7 @@ totalPage: number
 **类型：** number
 
 **起始版本：** 15
+
+<!--Device-FirewallRulePage-totalPage: int--><!--Device-FirewallRulePage-totalPage: int-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall

@@ -8,6 +8,8 @@ ImageSource的初始化选项。
 
 **起始版本：** 9
 
+<!--Device-image-interface SourceOptions--><!--Device-image-interface SourceOptions-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## 导入模块
@@ -33,9 +35,11 @@ sourceDensity: number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-SourceOptions-sourceDensity: int--><!--Device-SourceOptions-sourceDensity: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -51,9 +55,11 @@ sourcePixelFormat?: PixelMapFormat
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-SourceOptions-sourcePixelFormat?: PixelMapFormat--><!--Device-SourceOptions-sourcePixelFormat?: PixelMapFormat-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -69,8 +75,10 @@ sourceSize?: Size
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-SourceOptions-sourceSize?: Size--><!--Device-SourceOptions-sourceSize?: Size-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core

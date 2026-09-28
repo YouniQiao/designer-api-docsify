@@ -38,6 +38,8 @@ Creates a **Swiper** component.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
+<!--Device-SwiperInterface-(controller?: SwiperController): SwiperAttribute--><!--Device-SwiperInterface-(controller?: SwiperController): SwiperAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

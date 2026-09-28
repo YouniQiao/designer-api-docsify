@@ -24,6 +24,8 @@ function queryTraceRoute(destination: string, option?: TraceRouteOptions): Promi
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-connection-function queryTraceRoute(destination: string, option?: TraceRouteOptions): Promise<TraceRouteInfo[]>--><!--Device-connection-function queryTraceRoute(destination: string, option?: TraceRouteOptions): Promise<TraceRouteInfo[]>-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**

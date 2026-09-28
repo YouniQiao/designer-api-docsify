@@ -14,6 +14,8 @@ Provides style settings for the selected, unselected, and partially selected sta
 
 **Since:** 18
 
+<!--Device-unnamed-declare interface StarStyleOptions--><!--Device-unnamed-declare interface StarStyleOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Test API:** This API is used only in automated test scripts.
@@ -38,6 +40,8 @@ Resource configuration is supported since API version 20. For details, see [Exam
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-StarStyleOptions-backgroundUri: ResourceStr--><!--Device-StarStyleOptions-backgroundUri: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## foregroundUri
@@ -60,6 +64,8 @@ Resource configuration is supported since API version 20. For details, see [Exam
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-StarStyleOptions-foregroundUri: ResourceStr--><!--Device-StarStyleOptions-foregroundUri: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## secondaryUri
@@ -81,5 +87,7 @@ Resource configuration is supported since API version 20. For details, see [Exam
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-StarStyleOptions-secondaryUri?: ResourceStr--><!--Device-StarStyleOptions-secondaryUri?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

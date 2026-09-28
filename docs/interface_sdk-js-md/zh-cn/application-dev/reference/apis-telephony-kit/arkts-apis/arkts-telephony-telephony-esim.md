@@ -4,6 +4,8 @@ eSIM卡管理模块提供了eSIM卡管理的基础能力，包括获取指定卡
 
 **起始版本：** 18
 
+<!--Device-unnamed-declare namespace eSIM--><!--Device-unnamed-declare namespace eSIM-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 ## 导入模块

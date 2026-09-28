@@ -8,6 +8,8 @@ class LRUCache<K, V>
 
 **起始版本：** 9
 
+<!--Device-util-class LRUCache<K, V>--><!--Device-util-class LRUCache<K, V>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -27,6 +29,8 @@ import { util } from '@kit.ArkTS';
 **起始版本：** 9
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LRUCache-[Symbol.iterator](): IterableIterator<[K, V]>--><!--Device-LRUCache-[Symbol.iterator](): IterableIterator<[K, V]>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -69,6 +73,8 @@ afterRemoval(isEvict: boolean, key: K, value: V, newValue: V): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-LRUCache-afterRemoval(isEvict: boolean, key: K, value: V, newValue: V): void--><!--Device-LRUCache-afterRemoval(isEvict: boolean, key: K, value: V, newValue: V): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -91,6 +97,8 @@ clear(): void
 **起始版本：** 9
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LRUCache-clear(): void--><!--Device-LRUCache-clear(): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -120,6 +128,8 @@ constructor(capacity?: number)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-LRUCache-constructor(capacity?: number)--><!--Device-LRUCache-constructor(capacity?: number)-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -145,6 +155,8 @@ contains(key: K): boolean
 **起始版本：** 9
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LRUCache-contains(key: K): boolean--><!--Device-LRUCache-contains(key: K): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -182,6 +194,8 @@ createDefault(key: K): V
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-LRUCache-createDefault(key: K): V--><!--Device-LRUCache-createDefault(key: K): V-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -217,6 +231,8 @@ entries(): IterableIterator<[K, V]>
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-LRUCache-entries(): IterableIterator<[K, V]>--><!--Device-LRUCache-entries(): IterableIterator<[K, V]>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -251,6 +267,8 @@ get(key: K): V | undefined
 **起始版本：** 9
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LRUCache-get(key: K): V | undefined--><!--Device-LRUCache-get(key: K): V | undefined-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -288,6 +306,8 @@ getCapacity(): number
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-LRUCache-getCapacity(): number--><!--Device-LRUCache-getCapacity(): number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -316,6 +336,8 @@ getCreateCount(): number
 **起始版本：** 9
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LRUCache-getCreateCount(): number--><!--Device-LRUCache-getCreateCount(): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -359,6 +381,8 @@ getMatchCount(): number
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-LRUCache-getMatchCount(): number--><!--Device-LRUCache-getMatchCount(): number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -389,6 +413,8 @@ getMissCount(): number
 **起始版本：** 9
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LRUCache-getMissCount(): number--><!--Device-LRUCache-getMissCount(): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -421,6 +447,8 @@ getPutCount(): number
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-LRUCache-getPutCount(): number--><!--Device-LRUCache-getPutCount(): number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -450,6 +478,8 @@ getRemovalCount(): number
 **起始版本：** 9
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LRUCache-getRemovalCount(): number--><!--Device-LRUCache-getRemovalCount(): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -483,6 +513,8 @@ isEmpty(): boolean
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-LRUCache-isEmpty(): boolean--><!--Device-LRUCache-isEmpty(): boolean-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -512,6 +544,8 @@ keys(): K[]
 **起始版本：** 9
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LRUCache-keys(): K[]--><!--Device-LRUCache-keys(): K[]-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -553,6 +587,8 @@ put(key: K, value: V): V
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-LRUCache-put(key: K, value: V): V--><!--Device-LRUCache-put(key: K, value: V): V-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -588,6 +624,8 @@ remove(key: K): V | undefined
 **起始版本：** 9
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LRUCache-remove(key: K): V | undefined--><!--Device-LRUCache-remove(key: K): V | undefined-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -625,6 +663,8 @@ toString(): string
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-LRUCache-toString(): string--><!--Device-LRUCache-toString(): string-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -657,6 +697,8 @@ updateCapacity(newCapacity: number): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-LRUCache-updateCapacity(newCapacity: number): void--><!--Device-LRUCache-updateCapacity(newCapacity: number): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -683,6 +725,8 @@ values(): V[]
 **起始版本：** 9
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LRUCache-values(): V[]--><!--Device-LRUCache-values(): V[]-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -725,5 +769,7 @@ length: number
 **起始版本：** 9
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LRUCache-length: number--><!--Device-LRUCache-length: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

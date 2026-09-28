@@ -10,6 +10,8 @@ interface PiPController
 
 **起始版本：** 11
 
+<!--Device-PiPWindow-interface PiPController--><!--Device-PiPWindow-interface PiPController-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 ## 导入模块
@@ -28,7 +30,9 @@ getPiPSettingSwitch(): Promise<boolean>
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PiPController-getPiPSettingSwitch(): Promise<boolean>--><!--Device-PiPController-getPiPSettingSwitch(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -74,7 +78,9 @@ getPiPWindowInfo(): Promise<PiPWindowInfo>
 
 **起始版本：** 15
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-PiPController-getPiPWindowInfo(): Promise<PiPWindowInfo>--><!--Device-PiPController-getPiPWindowInfo(): Promise<PiPWindowInfo>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -120,7 +126,9 @@ isPiPActive(): Promise<boolean>
 
 **起始版本：** 23
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-PiPController-isPiPActive(): Promise<boolean>--><!--Device-PiPController-isPiPActive(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -167,6 +175,8 @@ off(type: 'stateChange'): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-PiPController-off(type: 'stateChange'): void--><!--Device-PiPController-off(type: 'stateChange'): void-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
@@ -194,6 +204,8 @@ off(type: 'controlPanelActionEvent'): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-PiPController-off(type: 'controlPanelActionEvent'): void--><!--Device-PiPController-off(type: 'controlPanelActionEvent'): void-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
@@ -220,6 +232,8 @@ off(type: 'controlEvent', callback?: Callback<ControlEventParam>): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PiPController-off(type: 'controlEvent', callback?: Callback<ControlEventParam>): void--><!--Device-PiPController-off(type: 'controlEvent', callback?: Callback<ControlEventParam>): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -251,6 +265,8 @@ off(type: 'pipWindowSizeChange', callback?: Callback<PiPWindowSize>): void
 **起始版本：** 15
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-PiPController-off(type: 'pipWindowSizeChange', callback?: Callback<PiPWindowSize>): void--><!--Device-PiPController-off(type: 'pipWindowSizeChange', callback?: Callback<PiPWindowSize>): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -302,6 +318,8 @@ off(type: 'activeStatusChange', callback?: Callback<boolean>): void
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
+<!--Device-PiPController-off(type: 'activeStatusChange', callback?: Callback<boolean>): void--><!--Device-PiPController-off(type: 'activeStatusChange', callback?: Callback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
@@ -332,6 +350,8 @@ on(type: 'stateChange', callback: (state: PiPState, reason: string) => void): vo
 **起始版本：** 11
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PiPController-on(type: 'stateChange', callback: (state: PiPState, reason: string) => void): void--><!--Device-PiPController-on(type: 'stateChange', callback: (state: PiPState, reason: string) => void): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -386,6 +406,8 @@ on(type: 'controlPanelActionEvent', callback: ControlPanelActionEventCallback): 
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-PiPController-on(type: 'controlPanelActionEvent', callback: ControlPanelActionEventCallback): void--><!--Device-PiPController-on(type: 'controlPanelActionEvent', callback: ControlPanelActionEventCallback): void-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
@@ -438,6 +460,8 @@ on(type: 'controlEvent', callback: Callback<ControlEventParam>): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PiPController-on(type: 'controlEvent', callback: Callback<ControlEventParam>): void--><!--Device-PiPController-on(type: 'controlEvent', callback: Callback<ControlEventParam>): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -492,6 +516,8 @@ on(type: 'pipWindowSizeChange', callback: Callback<PiPWindowSize>): void
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
 
+<!--Device-PiPController-on(type: 'pipWindowSizeChange', callback: Callback<PiPWindowSize>): void--><!--Device-PiPController-on(type: 'pipWindowSizeChange', callback: Callback<PiPWindowSize>): void-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
@@ -533,6 +559,8 @@ on(type: 'activeStatusChange', callback: Callback<boolean>): void
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
+<!--Device-PiPController-on(type: 'activeStatusChange', callback: Callback<boolean>): void--><!--Device-PiPController-on(type: 'activeStatusChange', callback: Callback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
@@ -564,7 +592,9 @@ setAutoStartEnabled(enable: boolean): void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PiPController-setAutoStartEnabled(enable: boolean): void--><!--Device-PiPController-setAutoStartEnabled(enable: boolean): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -591,7 +621,9 @@ setPiPControlEnabled(controlType: PiPControlType, enabled: boolean): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PiPController-setPiPControlEnabled(controlType: PiPControlType, enabled: boolean): void--><!--Device-PiPController-setPiPControlEnabled(controlType: PiPControlType, enabled: boolean): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -620,7 +652,9 @@ startPiP(): Promise<void>
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PiPController-startPiP(): Promise<void>--><!--Device-PiPController-startPiP(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -662,7 +696,9 @@ stopPiP(): Promise<void>
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PiPController-stopPiP(): Promise<void>--><!--Device-PiPController-stopPiP(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -701,7 +737,9 @@ updateContentNode(contentNode: typeNode.XComponent): Promise<void>
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-PiPController-updateContentNode(contentNode: typeNode.XComponent): Promise<void>--><!--Device-PiPController-updateContentNode(contentNode: typeNode.XComponent): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -749,7 +787,9 @@ updateContentSize(width: number, height: number): void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PiPController-updateContentSize(width: int, height: int): void--><!--Device-PiPController-updateContentSize(width: int, height: int): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -778,7 +818,9 @@ updatePiPControlStatus(controlType: PiPControlType, status: PiPControlStatus): v
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PiPController-updatePiPControlStatus(controlType: PiPControlType, status: PiPControlStatus): void--><!--Device-PiPController-updatePiPControlStatus(controlType: PiPControlType, status: PiPControlStatus): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 

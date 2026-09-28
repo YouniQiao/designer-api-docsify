@@ -8,6 +8,8 @@ interface BindInfo
 
 **起始版本：** 11
 
+<!--Device-distributedDataObject-interface BindInfo--><!--Device-distributedDataObject-interface BindInfo-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 ## 导入模块
@@ -28,6 +30,8 @@ assetName: string
 
 **起始版本：** 11
 
+<!--Device-BindInfo-assetName: string--><!--Device-BindInfo-assetName: string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 ## field
@@ -41,6 +45,8 @@ field: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-BindInfo-field: string--><!--Device-BindInfo-field: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -56,6 +62,8 @@ primaryKey: commonType.ValuesBucket
 
 **起始版本：** 11
 
+<!--Device-BindInfo-primaryKey: commonType.ValuesBucket--><!--Device-BindInfo-primaryKey: commonType.ValuesBucket-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 ## storeName
@@ -70,6 +78,8 @@ storeName: string
 
 **起始版本：** 11
 
+<!--Device-BindInfo-storeName: string--><!--Device-BindInfo-storeName: string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 ## tableName
@@ -83,5 +93,7 @@ tableName: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-BindInfo-tableName: string--><!--Device-BindInfo-tableName: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject

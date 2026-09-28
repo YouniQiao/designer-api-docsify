@@ -18,6 +18,8 @@ function setSandboxAppConfig(configInfo: string): Promise<void>
 
 **起始版本：** 11
 
+<!--Device-dlpPermission-function setSandboxAppConfig(configInfo: string): Promise<void>--><!--Device-dlpPermission-function setSandboxAppConfig(configInfo: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **参数：**

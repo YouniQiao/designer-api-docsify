@@ -8,6 +8,8 @@ export interface RunningMultiAppInfo
 
 **起始版本：** 12
 
+<!--Device-unnamed-export interface RunningMultiAppInfo--><!--Device-unnamed-export interface RunningMultiAppInfo-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -23,6 +25,8 @@ bundleName: string
 **类型：** string
 
 **起始版本：** 12
+
+<!--Device-RunningMultiAppInfo-bundleName: string--><!--Device-RunningMultiAppInfo-bundleName: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -40,6 +44,8 @@ mode: MultiAppMode
 
 **起始版本：** 12
 
+<!--Device-RunningMultiAppInfo-mode: MultiAppMode--><!--Device-RunningMultiAppInfo-mode: MultiAppMode-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -56,6 +62,8 @@ runningAppClones?: Array<RunningAppClone>
 
 **起始版本：** 12
 
+<!--Device-RunningMultiAppInfo-runningAppClones?: Array<RunningAppClone>--><!--Device-RunningMultiAppInfo-runningAppClones?: Array<RunningAppClone>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -71,6 +79,8 @@ runningMultiInstances?: Array<RunningMultiInstanceInfo>
 **类型：** Array&lt;[RunningMultiInstanceInfo](arkts-ability-runningmultiinstanceinfo-i-sys.md)&gt;
 
 **起始版本：** 14
+
+<!--Device-RunningMultiAppInfo-runningMultiInstances?: Array<RunningMultiInstanceInfo>--><!--Device-RunningMultiAppInfo-runningMultiInstances?: Array<RunningMultiInstanceInfo>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

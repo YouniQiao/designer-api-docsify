@@ -8,6 +8,8 @@ export type ParameterItem = _ParameterItem
 
 **起始版本：** 20
 
+<!--Device-launcherBundleManager-export type ParameterItem = _ParameterItem--><!--Device-launcherBundleManager-export type ParameterItem = _ParameterItem-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
 **类型：** _ParameterItem

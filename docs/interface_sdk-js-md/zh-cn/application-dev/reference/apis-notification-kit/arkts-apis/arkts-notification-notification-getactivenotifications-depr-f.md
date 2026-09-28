@@ -19,6 +19,8 @@ function getActiveNotifications(callback: AsyncCallback<Array<NotificationReques
 
 **替代接口：** [getActiveNotifications](arkts-notification-notificationmanager-getactivenotifications-f.md)
 
+<!--Device-notification-function getActiveNotifications(callback: AsyncCallback<Array<NotificationRequest>>): void--><!--Device-notification-function getActiveNotifications(callback: AsyncCallback<Array<NotificationRequest>>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **参数：**
@@ -43,6 +45,8 @@ function getActiveNotifications(): Promise<Array<NotificationRequest>>
 **废弃版本：** 9
 
 **替代接口：** [getActiveNotifications](arkts-notification-notificationmanager-getactivenotifications-f.md)
+
+<!--Device-notification-function getActiveNotifications(): Promise<Array<NotificationRequest>>--><!--Device-notification-function getActiveNotifications(): Promise<Array<NotificationRequest>>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

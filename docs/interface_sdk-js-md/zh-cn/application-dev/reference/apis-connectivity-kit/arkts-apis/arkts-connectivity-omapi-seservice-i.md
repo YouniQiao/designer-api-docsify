@@ -8,6 +8,8 @@ SEService表示可用于连接到系统中所有可用SE的连接（服务），
 
 **起始版本：** 10
 
+<!--Device-omapi-export interface SEService--><!--Device-omapi-export interface SEService-End-->
+
 **系统能力：** SystemCapability.Communication.SecureElement
 
 ## 导入模块
@@ -25,6 +27,8 @@ getReaders(): Reader[]
 返回可用SE Reader的数组，包含该设备上支持的所有的安全单元。
 
 **起始版本：** 10
+
+<!--Device-SEService-getReaders(): Reader[]--><!--Device-SEService-getReaders(): Reader[]-End-->
 
 **系统能力：** SystemCapability.Communication.SecureElement
 
@@ -76,6 +80,8 @@ getVersion(): string
 
 **起始版本：** 10
 
+<!--Device-SEService-getVersion(): string--><!--Device-SEService-getVersion(): string-End-->
+
 **系统能力：** SystemCapability.Communication.SecureElement
 
 **返回值：**
@@ -118,6 +124,8 @@ isConnected(): boolean
 检查SE服务是否已连接。
 
 **起始版本：** 10
+
+<!--Device-SEService-isConnected(): boolean--><!--Device-SEService-isConnected(): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.SecureElement
 
@@ -165,6 +173,8 @@ shutdown(): void
 释放该Service分配的所有SE资源。此后[isConnected](#isconnected)将返回false。
 
 **起始版本：** 10
+
+<!--Device-SEService-shutdown(): void--><!--Device-SEService-shutdown(): void-End-->
 
 **系统能力：** SystemCapability.Communication.SecureElement
 

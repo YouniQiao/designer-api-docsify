@@ -26,6 +26,8 @@ abort终止密钥操作。使用callback异步回调。
 
 **替代接口：** [abortSession](arkts-universalkeystore-huks-abortsession-f.md)(handle: number, options: HuksOptions, callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-huks-function abort(handle: number, options: HuksOptions, callback: AsyncCallback<HuksResult>): void--><!--Device-huks-function abort(handle: number, options: HuksOptions, callback: AsyncCallback<HuksResult>): void-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Extension
 
 **参数：**
@@ -151,6 +153,8 @@ abort终止密钥操作。使用Promise异步回调。
 **废弃版本：** 9
 
 **替代接口：** [abortSession](arkts-universalkeystore-huks-abortsession-f.md#abortsession-1)(handle: number, options: HuksOptions)
+
+<!--Device-huks-function abort(handle: number, options: HuksOptions): Promise<HuksResult>--><!--Device-huks-function abort(handle: number, options: HuksOptions): Promise<HuksResult>-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Extension
 

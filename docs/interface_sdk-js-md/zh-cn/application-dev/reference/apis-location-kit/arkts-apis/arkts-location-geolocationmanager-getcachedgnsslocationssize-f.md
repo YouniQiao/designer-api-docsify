@@ -18,6 +18,8 @@ function getCachedGnssLocationsSize(callback: AsyncCallback<number>): void
 
 **需要权限：** ohos.permission.APPROXIMATELY_LOCATION
 
+<!--Device-geoLocationManager-function getCachedGnssLocationsSize(callback: AsyncCallback<int>): void--><!--Device-geoLocationManager-function getCachedGnssLocationsSize(callback: AsyncCallback<int>): void-End-->
+
 **系统能力：** SystemCapability.Location.Location.Gnss
 
 **参数：**
@@ -71,6 +73,8 @@ function getCachedGnssLocationsSize(): Promise<number>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.APPROXIMATELY_LOCATION
+
+<!--Device-geoLocationManager-function getCachedGnssLocationsSize(): Promise<int>--><!--Device-geoLocationManager-function getCachedGnssLocationsSize(): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Location.Location.Gnss
 

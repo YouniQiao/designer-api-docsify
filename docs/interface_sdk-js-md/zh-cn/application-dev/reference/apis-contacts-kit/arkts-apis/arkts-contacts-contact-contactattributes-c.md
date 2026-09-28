@@ -8,6 +8,8 @@ class ContactAttributes
 
 **起始版本：** 7
 
+<!--Device-contact-class ContactAttributes--><!--Device-contact-class ContactAttributes-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 ## 导入模块
@@ -29,5 +31,7 @@ attributes: Attribute[]
 **起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ContactAttributes-attributes: Attribute[]--><!--Device-ContactAttributes-attributes: Attribute[]-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData

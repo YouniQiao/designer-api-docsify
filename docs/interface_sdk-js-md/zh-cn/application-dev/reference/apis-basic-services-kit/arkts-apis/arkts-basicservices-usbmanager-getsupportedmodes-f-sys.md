@@ -20,6 +20,8 @@ function getSupportedModes(portId: number): PortModeType
 
 **替代接口：** [getPortSupportModes](arkts-basicservices-usbmanager-getportsupportmodes-f-sys.md)(portId: number)
 
+<!--Device-usbManager-function getSupportedModes(portId: number): PortModeType--><!--Device-usbManager-function getSupportedModes(portId: number): PortModeType-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 **系统接口：** 此接口为系统接口。

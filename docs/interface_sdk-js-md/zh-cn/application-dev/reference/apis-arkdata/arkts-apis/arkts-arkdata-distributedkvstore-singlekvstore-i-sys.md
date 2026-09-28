@@ -10,6 +10,8 @@ SingleKVStore数据库实例，提供增加数据、删除数据和订阅数据�
 
 **起始版本：** 9
 
+<!--Device-distributedKVStore-interface SingleKVStore--><!--Device-distributedKVStore-interface SingleKVStore-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## 导入模块
@@ -31,6 +33,8 @@ delete(predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallb
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SingleKVStore-delete(predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<void>): void--><!--Device-SingleKVStore-delete(predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Provider
 
@@ -121,6 +125,8 @@ delete(predicates: dataSharePredicates.DataSharePredicates): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SingleKVStore-delete(predicates: dataSharePredicates.DataSharePredicates): Promise<void>--><!--Device-SingleKVStore-delete(predicates: dataSharePredicates.DataSharePredicates): Promise<void>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Provider
 
 **系统接口：** 此接口为系统接口。
@@ -164,6 +170,8 @@ getResultSet(predicates: dataSharePredicates.DataSharePredicates, callback: Asyn
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SingleKVStore-getResultSet(predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<KVStoreResultSet>): void--><!--Device-SingleKVStore-getResultSet(predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<KVStoreResultSet>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Provider
 
@@ -366,6 +374,8 @@ getResultSet(predicates: dataSharePredicates.DataSharePredicates): Promise<KVSto
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SingleKVStore-getResultSet(predicates: dataSharePredicates.DataSharePredicates): Promise<KVStoreResultSet>--><!--Device-SingleKVStore-getResultSet(predicates: dataSharePredicates.DataSharePredicates): Promise<KVStoreResultSet>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Provider
 
@@ -574,6 +584,8 @@ putBatch(value: Array<ValuesBucket>, callback: AsyncCallback<void>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SingleKVStore-putBatch(value: Array<ValuesBucket>, callback: AsyncCallback<void>): void--><!--Device-SingleKVStore-putBatch(value: Array<ValuesBucket>, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **系统接口：** 此接口为系统接口。
@@ -687,6 +699,8 @@ putBatch(value: Array<ValuesBucket>): Promise<void>
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SingleKVStore-putBatch(value: Array<ValuesBucket>): Promise<void>--><!--Device-SingleKVStore-putBatch(value: Array<ValuesBucket>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 

@@ -18,6 +18,8 @@ function on(type: 'sppRead', clientSocket: number, callback: Callback<ArrayBuffe
 
 **起始版本：** 10
 
+<!--Device-socket-function on(type: 'sppRead', clientSocket: number, callback: Callback<ArrayBuffer>): void--><!--Device-socket-function on(type: 'sppRead', clientSocket: number, callback: Callback<ArrayBuffer>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**

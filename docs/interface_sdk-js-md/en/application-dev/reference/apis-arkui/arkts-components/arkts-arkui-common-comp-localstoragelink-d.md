@@ -16,4 +16,6 @@ value: Property key name in LocalStorage, which is used to establish bidirection
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-unnamed-declare const LocalStorageLink: (value: string) => PropertyDecorator--><!--Device-unnamed-declare const LocalStorageLink: (value: string) => PropertyDecorator-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

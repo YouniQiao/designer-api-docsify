@@ -12,6 +12,8 @@ export declare interface KeyEvent extends InputEvent
 
 **起始版本：** 9
 
+<!--Device-unnamed-export declare interface KeyEvent extends InputEvent--><!--Device-unnamed-export declare interface KeyEvent extends InputEvent-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## 导入模块
@@ -32,7 +34,9 @@ action: Action
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-KeyEvent-action: Action--><!--Device-KeyEvent-action: Action-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -48,7 +52,9 @@ altKey: boolean
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-KeyEvent-altKey: boolean--><!--Device-KeyEvent-altKey: boolean-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -64,7 +70,9 @@ capsLock: boolean
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-KeyEvent-capsLock: boolean--><!--Device-KeyEvent-capsLock: boolean-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -80,7 +88,9 @@ ctrlKey: boolean
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-KeyEvent-ctrlKey: boolean--><!--Device-KeyEvent-ctrlKey: boolean-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -96,7 +106,9 @@ fnKey: boolean
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-KeyEvent-fnKey: boolean--><!--Device-KeyEvent-fnKey: boolean-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -112,7 +124,9 @@ key: Key
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-KeyEvent-key: Key--><!--Device-KeyEvent-key: Key-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -128,7 +142,9 @@ keys: Key[]
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-KeyEvent-keys: Key[]--><!--Device-KeyEvent-keys: Key[]-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -144,7 +160,9 @@ logoKey: boolean
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-KeyEvent-logoKey: boolean--><!--Device-KeyEvent-logoKey: boolean-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -160,7 +178,9 @@ numLock: boolean
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-KeyEvent-numLock: boolean--><!--Device-KeyEvent-numLock: boolean-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -176,7 +196,9 @@ scrollLock: boolean
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-KeyEvent-scrollLock: boolean--><!--Device-KeyEvent-scrollLock: boolean-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -192,7 +214,9 @@ shiftKey: boolean
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-KeyEvent-shiftKey: boolean--><!--Device-KeyEvent-shiftKey: boolean-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -208,6 +232,8 @@ unicodeChar: number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-KeyEvent-unicodeChar: int--><!--Device-KeyEvent-unicodeChar: int-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core

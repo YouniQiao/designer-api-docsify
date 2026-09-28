@@ -17,6 +17,8 @@ Create pixelmap by data buffer based on opts, the memory type used by the PixelM
 
 **起始版本：** 20
 
+<!--Device-image-function createPixelMapUsingAllocatorSync(colors: ArrayBuffer, param: InitializationOptions,    allocatorType?: AllocatorType): PixelMap--><!--Device-image-function createPixelMapUsingAllocatorSync(colors: ArrayBuffer, param: InitializationOptions,    allocatorType?: AllocatorType): PixelMap-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
@@ -80,6 +82,8 @@ function createPixelMapUsingAllocatorSync(param: InitializationOptions, allocato
 Create an empty pixelmap by data buffer based on opts, the memory type used by the PixelMap can be specified by allocatorType. By default, the system selects the memory type based on the image type, image size, platform capability, etc. When processing the PixelMap returned by this interface, please always consider the impact of stride.
 
 **起始版本：** 20
+
+<!--Device-image-function createPixelMapUsingAllocatorSync(param: InitializationOptions, allocatorType?: AllocatorType): PixelMap--><!--Device-image-function createPixelMapUsingAllocatorSync(param: InitializationOptions, allocatorType?: AllocatorType): PixelMap-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 

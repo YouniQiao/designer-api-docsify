@@ -10,6 +10,8 @@ interface RecordCmd
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-drawing-interface RecordCmd--><!--Device-drawing-interface RecordCmd-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## 导入模块

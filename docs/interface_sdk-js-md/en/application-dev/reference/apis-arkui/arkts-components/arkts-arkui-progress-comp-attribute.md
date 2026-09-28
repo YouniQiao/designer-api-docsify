@@ -5,7 +5,7 @@ declare class ProgressAttribute<Type extends keyof ProgressStyleMap = keyof Prog
   Style extends ProgressStyleMap[Type] = ProgressStyleMap[Type]> extends CommonMethod<ProgressAttribute<Type>>
 ```
 
-In addition to the [universal attributes](arkts-arkui-common-comp.md#common), the following attributes are supported.
+In addition to the [universal attributes](arkts-arkui-common-comp.md), the following attributes are supported.
 
 > **NOTE:** 
 > 
@@ -19,6 +19,8 @@ In addition to the [universal attributes](arkts-arkui-common-comp.md#common), th
 
 **Since:** 7
 
+<!--Device-unnamed-declare class ProgressAttribute<Type extends keyof ProgressStyleMap = keyof ProgressStyleMap,  Style extends ProgressStyleMap[Type] = ProgressStyleMap[Type]> extends CommonMethod<ProgressAttribute<Type>>--><!--Device-unnamed-declare class ProgressAttribute<Type extends keyof ProgressStyleMap = keyof ProgressStyleMap,  Style extends ProgressStyleMap[Type] = ProgressStyleMap[Type]> extends CommonMethod<ProgressAttribute<Type>>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## color
@@ -29,7 +31,7 @@ color(value: ResourceColor | LinearGradient)
 
 Sets the foreground color of the progress indicator.
 
-Since API version 10, LinearGradient can be used to set a gradient color for the ring style. Setting opacity is not recommended for the ring type. If opacity is required, use [DataPanel](arkts-arkui-datapanel-comp.md#data_panel).
+Since API version 10, LinearGradient can be used to set a gradient color for the ring style. Setting opacity is not recommended for the ring type. If opacity is required, use [DataPanel](arkts-arkui-datapanel-comp.md).
 
 Since API version 23, LinearGradient can be used to set the gradient color of the Linear style and Capsule style. In API version 22 and earlier, when this method is used, the default theme color is displayed.
 
@@ -38,6 +40,8 @@ Since API version 23, LinearGradient can be used to set the gradient color of th
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-ProgressAttribute-color(value: ResourceColor | LinearGradient): ProgressAttribute<Type>--><!--Device-ProgressAttribute-color(value: ResourceColor | LinearGradient): ProgressAttribute<Type>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -60,6 +64,8 @@ Creates a content modifier.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ProgressAttribute-contentModifier(modifier: ContentModifier<ProgressConfiguration>): ProgressAttribute<Type>--><!--Device-ProgressAttribute-contentModifier(modifier: ContentModifier<ProgressConfiguration>): ProgressAttribute<Type>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -89,13 +95,15 @@ Sets whether to enable privacy-sensitive mode.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-ProgressAttribute-privacySensitive(isPrivacySensitiveMode: Optional<boolean>): ProgressAttribute<Type>--><!--Device-ProgressAttribute-privacySensitive(isPrivacySensitiveMode: Optional<boolean>): ProgressAttribute<Type>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isPrivacySensitiveMode | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;boolean&gt; | Yes | Sets privacy sensitivity. In privacy mode, the progress is cleared and the text is masked. true: enables privacy sensitivity; false: disables privacy sensitivity. <br> Default value: false <br>**Note:** <br>Setting null indicates that the component is not sensitive. <!--Del--> <br>To use Progress in a card and set the [privacy mask](arkts-arkui-common-comp.md#common) attribute with the [FormComponent](arkts-arkui-formcomponent-comp-sys.md#form_component) component, the privacy mask effect is available only when the card is displayed.<!--DelEnd--> |
+| isPrivacySensitiveMode | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;boolean&gt; | Yes | Sets privacy sensitivity. In privacy mode, the progress is cleared and the text is masked. true: enables privacy sensitivity; false: disables privacy sensitivity. <br> Default value: false <br>**Note:** <br>Setting null indicates that the component is not sensitive. <!--Del--> <br>To use Progress in a card and set the [privacy mask](arkts-arkui-common-comp.md) attribute with the [FormComponent](arkts-arkui-formcomponent-comp-sys.md) component, the privacy mask effect is available only when the card is displayed.<!--DelEnd--> |
 
 ## style
 
@@ -110,6 +118,8 @@ Sets the component style.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-ProgressAttribute-style(value: Style): ProgressAttribute<Type>--><!--Device-ProgressAttribute-style(value: Style): ProgressAttribute<Type>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -132,6 +142,8 @@ Sets the current progress value. When a value less than 0 is set, it is set to 0
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-ProgressAttribute-value(value: number): ProgressAttribute<Type>--><!--Device-ProgressAttribute-value(value: number): ProgressAttribute<Type>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

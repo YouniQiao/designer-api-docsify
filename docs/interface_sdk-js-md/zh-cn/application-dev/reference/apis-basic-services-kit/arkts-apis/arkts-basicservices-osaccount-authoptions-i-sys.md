@@ -8,6 +8,8 @@ interface AuthOptions
 
 **起始版本：** 12
 
+<!--Device-osAccount-interface AuthOptions--><!--Device-osAccount-interface AuthOptions-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ accountId?: number
 
 **起始版本：** 12
 
+<!--Device-AuthOptions-accountId?: int--><!--Device-AuthOptions-accountId?: int-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -48,6 +52,8 @@ additionalInfo?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AuthOptions-additionalInfo?: string--><!--Device-AuthOptions-additionalInfo?: string-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -64,6 +70,8 @@ authIntent?: AuthIntent
 
 **起始版本：** 12
 
+<!--Device-AuthOptions-authIntent?: AuthIntent--><!--Device-AuthOptions-authIntent?: AuthIntent-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -79,6 +87,8 @@ remoteAuthOptions?: RemoteAuthOptions
 **类型：** [RemoteAuthOptions](arkts-basicservices-osaccount-remoteauthoptions-i-sys.md)
 
 **起始版本：** 12
+
+<!--Device-AuthOptions-remoteAuthOptions?: RemoteAuthOptions--><!--Device-AuthOptions-remoteAuthOptions?: RemoteAuthOptions-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 

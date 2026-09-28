@@ -14,4 +14,6 @@ declare const Param: PropertyDecorator
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-unnamed-declare const Param: PropertyDecorator--><!--Device-unnamed-declare const Param: PropertyDecorator-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -18,6 +18,8 @@ function getLauncherAbilityInfoSync(bundleName: string, userId: number): Array<L
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-launcherBundleManager-function getLauncherAbilityInfoSync(bundleName: string, userId: int): Array<LauncherAbilityInfo>--><!--Device-launcherBundleManager-function getLauncherAbilityInfoSync(bundleName: string, userId: int): Array<LauncherAbilityInfo>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
 **参数：**

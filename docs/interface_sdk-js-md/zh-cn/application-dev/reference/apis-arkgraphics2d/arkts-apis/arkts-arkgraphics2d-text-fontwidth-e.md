@@ -8,6 +8,8 @@ enum FontWidth
 
 **起始版本：** 12
 
+<!--Device-text-enum FontWidth--><!--Device-text-enum FontWidth-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## ULTRA_CONDENSED
@@ -20,7 +22,9 @@ ULTRA_CONDENSED = 1
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-FontWidth-ULTRA_CONDENSED = 1--><!--Device-FontWidth-ULTRA_CONDENSED = 1-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -34,7 +38,9 @@ EXTRA_CONDENSED = 2
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-FontWidth-EXTRA_CONDENSED = 2--><!--Device-FontWidth-EXTRA_CONDENSED = 2-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -48,7 +54,9 @@ CONDENSED = 3
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-FontWidth-CONDENSED = 3--><!--Device-FontWidth-CONDENSED = 3-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -62,7 +70,9 @@ SEMI_CONDENSED = 4
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-FontWidth-SEMI_CONDENSED = 4--><!--Device-FontWidth-SEMI_CONDENSED = 4-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -76,7 +86,9 @@ NORMAL = 5
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-FontWidth-NORMAL = 5--><!--Device-FontWidth-NORMAL = 5-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -90,7 +102,9 @@ SEMI_EXPANDED = 6
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-FontWidth-SEMI_EXPANDED = 6--><!--Device-FontWidth-SEMI_EXPANDED = 6-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -104,7 +118,9 @@ EXPANDED = 7
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-FontWidth-EXPANDED = 7--><!--Device-FontWidth-EXPANDED = 7-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -118,7 +134,9 @@ EXTRA_EXPANDED = 8
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-FontWidth-EXTRA_EXPANDED = 8--><!--Device-FontWidth-EXTRA_EXPANDED = 8-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -132,6 +150,8 @@ ULTRA_EXPANDED = 9
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-FontWidth-ULTRA_EXPANDED = 9--><!--Device-FontWidth-ULTRA_EXPANDED = 9-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing

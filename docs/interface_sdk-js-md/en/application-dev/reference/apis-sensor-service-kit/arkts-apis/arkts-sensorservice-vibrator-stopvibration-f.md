@@ -18,6 +18,8 @@ Stops vibration in the specified mode. This API uses a promise to return the res
 
 **Required permissions:** ohos.permission.VIBRATE
 
+<!--Device-vibrator-function stopVibration(stopMode: VibratorStopMode): Promise<void>--><!--Device-vibrator-function stopVibration(stopMode: VibratorStopMode): Promise<void>-End-->
+
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 **Parameters:**
@@ -131,6 +133,8 @@ Stops vibration in the specified mode. This API uses an asynchronous callback to
 **Since:** 9
 
 **Required permissions:** ohos.permission.VIBRATE
+
+<!--Device-vibrator-function stopVibration(stopMode: VibratorStopMode, callback: AsyncCallback<void>): void--><!--Device-vibrator-function stopVibration(stopMode: VibratorStopMode, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice
 
@@ -251,7 +255,9 @@ Stops vibration in all modes. This API uses an asynchronous callback to return t
 
 **Required permissions:** ohos.permission.VIBRATE
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-vibrator-function stopVibration(callback: AsyncCallback<void>): void--><!--Device-vibrator-function stopVibration(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice
 
@@ -306,7 +312,9 @@ Stops vibration in all modes. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.VIBRATE
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-vibrator-function stopVibration(): Promise<void>--><!--Device-vibrator-function stopVibration(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice
 
@@ -356,6 +364,8 @@ Stops vibration based on the specified vibrator parameters. If no parameters are
 **Since:** 19
 
 **Required permissions:** ohos.permission.VIBRATE
+
+<!--Device-vibrator-function stopVibration(param?: VibratorInfoParam): Promise<void>--><!--Device-vibrator-function stopVibration(param?: VibratorInfoParam): Promise<void>-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice
 

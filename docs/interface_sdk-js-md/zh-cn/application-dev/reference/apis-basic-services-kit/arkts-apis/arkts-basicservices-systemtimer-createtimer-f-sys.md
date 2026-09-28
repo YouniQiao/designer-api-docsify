@@ -21,6 +21,8 @@ function createTimer(options: TimerOptions, callback: AsyncCallback<number>): vo
 
 **起始版本：** 7
 
+<!--Device-systemTimer-function createTimer(options: TimerOptions, callback: AsyncCallback<long>): void--><!--Device-systemTimer-function createTimer(options: TimerOptions, callback: AsyncCallback<long>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Time
 
 **系统接口：** 此接口为系统接口。
@@ -79,6 +81,8 @@ function createTimer(options: TimerOptions): Promise<number>
 > 成内存泄漏
 
 **起始版本：** 7
+
+<!--Device-systemTimer-function createTimer(options: TimerOptions): Promise<long>--><!--Device-systemTimer-function createTimer(options: TimerOptions): Promise<long>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Time
 

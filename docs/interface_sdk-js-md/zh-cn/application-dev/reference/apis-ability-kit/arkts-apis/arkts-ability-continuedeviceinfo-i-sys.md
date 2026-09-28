@@ -8,6 +8,8 @@ export interface ContinueDeviceInfo
 
 **起始版本：** 9
 
+<!--Device-unnamed-export interface ContinueDeviceInfo--><!--Device-unnamed-export interface ContinueDeviceInfo-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -25,6 +27,8 @@ dstDeviceId: string
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ContinueDeviceInfo-dstDeviceId: string--><!--Device-ContinueDeviceInfo-dstDeviceId: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -44,6 +48,8 @@ missionId: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ContinueDeviceInfo-missionId: int--><!--Device-ContinueDeviceInfo-missionId: int-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -62,6 +68,8 @@ srcDeviceId: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ContinueDeviceInfo-srcDeviceId: string--><!--Device-ContinueDeviceInfo-srcDeviceId: string-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -79,6 +87,8 @@ wantParam: Record<string, Object>
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ContinueDeviceInfo-wantParam: Record<string, Object>--><!--Device-ContinueDeviceInfo-wantParam: Record<string, Object>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 

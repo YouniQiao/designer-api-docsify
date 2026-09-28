@@ -8,6 +8,8 @@ export interface NotificationSlot
 
 **起始版本：** 7
 
+<!--Device-unnamed-export interface NotificationSlot--><!--Device-unnamed-export interface NotificationSlot-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## authorizedStatus
@@ -24,6 +26,8 @@ readonly authorizedStatus?: number
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-NotificationSlot-readonly authorizedStatus?: int--><!--Device-NotificationSlot-readonly authorizedStatus?: int-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -47,6 +51,8 @@ readonly reminderMode?: number
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-NotificationSlot-readonly reminderMode?: int--><!--Device-NotificationSlot-readonly reminderMode?: int-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

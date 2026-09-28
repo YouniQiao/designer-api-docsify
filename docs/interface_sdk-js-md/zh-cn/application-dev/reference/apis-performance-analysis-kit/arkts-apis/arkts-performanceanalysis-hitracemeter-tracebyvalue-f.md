@@ -18,7 +18,9 @@ function traceByValue(name: string, count: number): void
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-hiTraceMeter-function traceByValue(name: string, count: long): void--><!--Device-hiTraceMeter-function traceByValue(name: string, count: long): void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
 
@@ -52,7 +54,9 @@ function traceByValue(level: HiTraceOutputLevel, name: string, count: number): v
 
 **起始版本：** 19
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-hiTraceMeter-function traceByValue(level: HiTraceOutputLevel, name: string, count: long): void--><!--Device-hiTraceMeter-function traceByValue(level: HiTraceOutputLevel, name: string, count: long): void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
 

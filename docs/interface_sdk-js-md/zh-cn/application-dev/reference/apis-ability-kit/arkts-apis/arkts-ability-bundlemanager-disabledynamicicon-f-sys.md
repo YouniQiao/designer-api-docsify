@@ -18,6 +18,8 @@ function disableDynamicIcon(bundleName: string): Promise<void>
 
 **需要权限：** ohos.permission.ACCESS_DYNAMIC_ICON
 
+<!--Device-bundleManager-function disableDynamicIcon(bundleName: string): Promise<void>--><!--Device-bundleManager-function disableDynamicIcon(bundleName: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -83,6 +85,8 @@ function disableDynamicIcon(bundleName: string, option?: BundleOptions): Promise
 **起始版本：** 20
 
 **需要权限：** ohos.permission.ACCESS_DYNAMIC_ICON or (ohos.permission.ACCESS_DYNAMIC_ICON and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS)
+
+<!--Device-bundleManager-function disableDynamicIcon(bundleName: string, option?: BundleOptions): Promise<void>--><!--Device-bundleManager-function disableDynamicIcon(bundleName: string, option?: BundleOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

@@ -8,6 +8,8 @@ enum NotifyChangeType
 
 **起始版本：** 20
 
+<!--Device-photoAccessHelper-enum NotifyChangeType--><!--Device-photoAccessHelper-enum NotifyChangeType-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## NOTIFY_CHANGE_YUV_READY
@@ -21,6 +23,8 @@ NOTIFY_CHANGE_YUV_READY = 3
 图像的清晰度、色彩准确度等质量指标可在请求图像的回调中判断：[OnDataPrepared](arkts-medialibrary-photoaccesshelper-quickimagedatahandler-i.md#ondataprepared)。
 
 **起始版本：** 23
+
+<!--Device-NotifyChangeType-NOTIFY_CHANGE_YUV_READY = 3--><!--Device-NotifyChangeType-NOTIFY_CHANGE_YUV_READY = 3-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -38,6 +42,8 @@ NOTIFY_CHANGE_ADD_ANALYSIS = 4
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-NotifyChangeType-NOTIFY_CHANGE_ADD_ANALYSIS = 4--><!--Device-NotifyChangeType-NOTIFY_CHANGE_ADD_ANALYSIS = 4-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -53,6 +59,8 @@ NOTIFY_CHANGE_REMOVE_ANALYSIS = 5
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-NotifyChangeType-NOTIFY_CHANGE_REMOVE_ANALYSIS = 5--><!--Device-NotifyChangeType-NOTIFY_CHANGE_REMOVE_ANALYSIS = 5-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

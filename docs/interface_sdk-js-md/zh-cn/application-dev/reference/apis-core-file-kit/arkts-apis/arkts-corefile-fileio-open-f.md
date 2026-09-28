@@ -19,6 +19,8 @@ declare function open(path: string, flags?: number, mode?: number): Promise<numb
 
 **替代接口：** [open](arkts-corefile-file-fs-open-f.md)
 
+<!--Device-unnamed-declare function open(path: string, flags?: number, mode?: number): Promise<number>--><!--Device-unnamed-declare function open(path: string, flags?: number, mode?: number): Promise<number>-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -52,6 +54,8 @@ declare function open(path: string, callback: AsyncCallback<number>): void
 
 **替代接口：** [open](arkts-corefile-file-fs-open-f.md)
 
+<!--Device-unnamed-declare function open(path: string, callback: AsyncCallback<number>): void--><!--Device-unnamed-declare function open(path: string, callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -77,6 +81,8 @@ declare function open(path: string, flags: number, callback: AsyncCallback<numbe
 **废弃版本：** 9
 
 **替代接口：** [open](arkts-corefile-file-fs-open-f.md)
+
+<!--Device-unnamed-declare function open(path: string, flags: number, callback: AsyncCallback<number>): void--><!--Device-unnamed-declare function open(path: string, flags: number, callback: AsyncCallback<number>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -104,6 +110,8 @@ declare function open(path: string, flags: number, mode: number, callback: Async
 **废弃版本：** 9
 
 **替代接口：** [open](arkts-corefile-file-fs-open-f.md)
+
+<!--Device-unnamed-declare function open(path: string, flags: number, mode: number, callback: AsyncCallback<number>): void--><!--Device-unnamed-declare function open(path: string, flags: number, mode: number, callback: AsyncCallback<number>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

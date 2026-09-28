@@ -10,6 +10,8 @@ ImageSource类，用于获取图片相关信息。在调用ImageSource的方法�
 
 **起始版本：** 12
 
+<!--Device-sendableImage-interface ImageSource--><!--Device-sendableImage-interface ImageSource-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 ## 导入模块
@@ -33,6 +35,8 @@ createPixelMap(options?: image.DecodingOptions): Promise<PixelMap>
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-ImageSource-createPixelMap(options?: image.DecodingOptions): Promise<PixelMap>--><!--Device-ImageSource-createPixelMap(options?: image.DecodingOptions): Promise<PixelMap>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -78,6 +82,8 @@ release(): Promise<void>
 释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 **起始版本：** 12
+
+<!--Device-ImageSource-release(): Promise<void>--><!--Device-ImageSource-release(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 

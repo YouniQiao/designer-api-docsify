@@ -20,6 +20,8 @@ function enableAbility(name: string, capability: Array<accessibility.Capability>
 
 **需要权限：** ohos.permission.WRITE_ACCESSIBILITY_CONFIG
 
+<!--Device-config-function enableAbility(name: string, capability: Array<accessibility.Capability>): Promise<void>--><!--Device-config-function enableAbility(name: string, capability: Array<accessibility.Capability>): Promise<void>-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -83,6 +85,8 @@ function enableAbility(
 **起始版本：** 9
 
 **需要权限：** ohos.permission.WRITE_ACCESSIBILITY_CONFIG
+
+<!--Device-config-function enableAbility(    name: string,    capability: Array<accessibility.Capability>,    callback: AsyncCallback<void>  ): void--><!--Device-config-function enableAbility(    name: string,    capability: Array<accessibility.Capability>,    callback: AsyncCallback<void>  ): void-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 

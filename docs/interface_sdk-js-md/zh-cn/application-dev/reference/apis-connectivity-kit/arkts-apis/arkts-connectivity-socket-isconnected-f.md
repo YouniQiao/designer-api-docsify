@@ -16,6 +16,8 @@ function isConnected(clientSocket: number): boolean
 
 **起始版本：** 22
 
+<!--Device-socket-function isConnected(clientSocket: int): boolean--><!--Device-socket-function isConnected(clientSocket: int): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**

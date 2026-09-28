@@ -18,6 +18,8 @@ function getAllAppPrivateCertificates(callback: AsyncCallback<CMResult>): void
 
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER and ohos.permission.ACCESS_CERT_MANAGER_INTERNAL
 
+<!--Device-certificateManager-function getAllAppPrivateCertificates(callback: AsyncCallback<CMResult>): void--><!--Device-certificateManager-function getAllAppPrivateCertificates(callback: AsyncCallback<CMResult>): void-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
 
 **系统接口：** 此接口为系统接口。
@@ -76,6 +78,8 @@ function getAllAppPrivateCertificates(): Promise<CMResult>
 **起始版本：** 11
 
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER and ohos.permission.ACCESS_CERT_MANAGER_INTERNAL
+
+<!--Device-certificateManager-function getAllAppPrivateCertificates(): Promise<CMResult>--><!--Device-certificateManager-function getAllAppPrivateCertificates(): Promise<CMResult>-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManager
 

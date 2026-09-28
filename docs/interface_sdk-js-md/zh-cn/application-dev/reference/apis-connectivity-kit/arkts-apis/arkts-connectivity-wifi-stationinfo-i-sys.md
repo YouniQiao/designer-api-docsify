@@ -12,6 +12,8 @@ interface StationInfo
 
 **替代接口：** [StationInfo](arkts-connectivity-wifimanager-stationinfo-i-sys.md)
 
+<!--Device-wifi-interface StationInfo--><!--Device-wifi-interface StationInfo-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
 **系统接口：** 此接口为系统接口。
@@ -38,6 +40,8 @@ IP地址。
 
 **替代接口：** [ipAddress](arkts-connectivity-wifimanager-stationinfo-i-sys.md#ipaddress)
 
+<!--Device-StationInfo-ipAddress: string--><!--Device-StationInfo-ipAddress: string-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
 **系统接口：** 此接口为系统接口。
@@ -58,6 +62,8 @@ MAC地址。
 
 **替代接口：** [macAddress](arkts-connectivity-wifimanager-stationinfo-i-sys.md#macaddress)
 
+<!--Device-StationInfo-macAddress: string--><!--Device-StationInfo-macAddress: string-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +83,8 @@ name: string
 **废弃版本：** 9
 
 **替代接口：** [name](arkts-connectivity-wifimanager-stationinfo-i-sys.md#name)
+
+<!--Device-StationInfo-name: string--><!--Device-StationInfo-name: string-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 

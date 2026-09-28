@@ -16,6 +16,8 @@ function getCurrentInputMethod(): InputMethodProperty
 
 **起始版本：** 9
 
+<!--Device-inputMethod-function getCurrentInputMethod(): InputMethodProperty--><!--Device-inputMethod-function getCurrentInputMethod(): InputMethodProperty-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**

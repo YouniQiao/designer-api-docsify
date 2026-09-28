@@ -22,6 +22,8 @@ function updateContact(contact: Contact, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.WRITE_CONTACTS
 
+<!--Device-contact-function updateContact(contact: Contact, callback: AsyncCallback<void>): void--><!--Device-contact-function updateContact(contact: Contact, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 **参数：**
@@ -71,6 +73,8 @@ function updateContact(context: Context, contact: Contact, callback: AsyncCallba
 **起始版本：** 10
 
 **需要权限：** ohos.permission.WRITE_CONTACTS
+
+<!--Device-contact-function updateContact(context: Context, contact: Contact, callback: AsyncCallback<void>): void--><!--Device-contact-function updateContact(context: Context, contact: Contact, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -142,6 +146,8 @@ function updateContact(contact: Contact, attrs: ContactAttributes, callback: Asy
 
 **需要权限：** ohos.permission.WRITE_CONTACTS
 
+<!--Device-contact-function updateContact(contact: Contact, attrs: ContactAttributes, callback: AsyncCallback<void>): void--><!--Device-contact-function updateContact(contact: Contact, attrs: ContactAttributes, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 **参数：**
@@ -195,6 +201,8 @@ function updateContact(context: Context, contact: Contact, attrs: ContactAttribu
 **起始版本：** 10
 
 **需要权限：** ohos.permission.WRITE_CONTACTS
+
+<!--Device-contact-function updateContact(context: Context, contact: Contact, attrs: ContactAttributes, callback: AsyncCallback<void>): void--><!--Device-contact-function updateContact(context: Context, contact: Contact, attrs: ContactAttributes, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -268,6 +276,8 @@ function updateContact(contact: Contact, attrs?: ContactAttributes): Promise<voi
 
 **需要权限：** ohos.permission.WRITE_CONTACTS
 
+<!--Device-contact-function updateContact(contact: Contact, attrs?: ContactAttributes): Promise<void>--><!--Device-contact-function updateContact(contact: Contact, attrs?: ContactAttributes): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 **参数：**
@@ -321,6 +331,8 @@ function updateContact(context: Context, contact: Contact, attrs?: ContactAttrib
 **起始版本：** 10
 
 **需要权限：** ohos.permission.WRITE_CONTACTS
+
+<!--Device-contact-function updateContact(context: Context, contact: Contact, attrs?: ContactAttributes): Promise<void>--><!--Device-contact-function updateContact(context: Context, contact: Contact, attrs?: ContactAttributes): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 

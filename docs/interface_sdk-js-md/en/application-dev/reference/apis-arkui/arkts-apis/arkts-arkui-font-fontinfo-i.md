@@ -8,6 +8,8 @@ Information about the system font.
 
 **Since:** 10
 
+<!--Device-font-interface FontInfo--><!--Device-font-interface FontInfo-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -32,6 +34,8 @@ Family of the system font.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-FontInfo-family: string--><!--Device-FontInfo-family: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## fullName
@@ -49,6 +53,8 @@ Name of the system font.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-FontInfo-fullName: string--><!--Device-FontInfo-fullName: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,6 +78,8 @@ The value **true** indicates an italic font, and **false** indicates a non-itali
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-FontInfo-italic: boolean--><!--Device-FontInfo-italic: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## monoSpace
@@ -94,6 +102,8 @@ The value **true** indicates a monospaced font, and **false** indicates a non-mo
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-FontInfo-monoSpace: boolean--><!--Device-FontInfo-monoSpace: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## path
@@ -111,6 +121,8 @@ File path of the system font.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-FontInfo-path: string--><!--Device-FontInfo-path: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -130,6 +142,8 @@ PostScript name of the system font.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-FontInfo-postScriptName: string--><!--Device-FontInfo-postScriptName: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## subfamily
@@ -147,6 +161,8 @@ Subfamily of the system font.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-FontInfo-subfamily: string--><!--Device-FontInfo-subfamily: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -170,6 +186,8 @@ The value **true** indicates that symbolic fonts are supported, and **false** in
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-FontInfo-symbolic: boolean--><!--Device-FontInfo-symbolic: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## weight
@@ -190,6 +208,8 @@ Value range: [100, 900], with an interval of 100, corresponding to the values in
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-FontInfo-weight: number--><!--Device-FontInfo-weight: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## width
@@ -209,5 +229,7 @@ Value range: [1, 9], with an interval of 1, corresponding to the values in [Font
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-FontInfo-width: number--><!--Device-FontInfo-width: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

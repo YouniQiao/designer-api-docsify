@@ -10,6 +10,8 @@ Provides the scene detection capability. It inherits from [SceneDetectionQuery](
 
 **起始版本：** 12
 
+<!--Device-camera-interface SceneDetection extends SceneDetectionQuery--><!--Device-camera-interface SceneDetection extends SceneDetectionQuery-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -29,6 +31,8 @@ enableSceneFeature(type: SceneFeatureType, enabled: boolean): void
 Enables or disables a scene feature. This API must be called after [SceneFeatureDetectionResult](arkts-camera-camera-scenefeaturedetectionresult-i-sys.md) of the corresponding scene feature is received.
 
 **起始版本：** 12
+
+<!--Device-SceneDetection-enableSceneFeature(type: SceneFeatureType, enabled: boolean): void--><!--Device-SceneDetection-enableSceneFeature(type: SceneFeatureType, enabled: boolean): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

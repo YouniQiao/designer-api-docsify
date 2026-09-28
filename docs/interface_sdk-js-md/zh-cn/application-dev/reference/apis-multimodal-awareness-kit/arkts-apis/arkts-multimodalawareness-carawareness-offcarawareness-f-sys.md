@@ -19,6 +19,8 @@ function offCarAwareness(capability: Capability, callback?: Callback<CarAwarenes
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-carAwareness-function offCarAwareness(capability: Capability, callback?: Callback<CarAwarenessInfo[]>, options?:  CarAwarenessOptions): void--><!--Device-carAwareness-function offCarAwareness(capability: Capability, callback?: Callback<CarAwarenessInfo[]>, options?:  CarAwarenessOptions): void-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.CarAwareness
 
 **系统接口：** 此接口为系统接口。

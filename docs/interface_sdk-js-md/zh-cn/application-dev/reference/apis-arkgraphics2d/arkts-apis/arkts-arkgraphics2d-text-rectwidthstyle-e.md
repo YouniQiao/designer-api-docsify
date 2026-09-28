@@ -8,6 +8,8 @@ enum RectWidthStyle
 
 **起始版本：** 12
 
+<!--Device-text-enum RectWidthStyle--><!--Device-text-enum RectWidthStyle-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## TIGHT
@@ -20,7 +22,9 @@ TIGHT = 0
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-RectWidthStyle-TIGHT = 0--><!--Device-RectWidthStyle-TIGHT = 0-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -34,6 +38,8 @@ MAX = 1
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-RectWidthStyle-MAX = 1--><!--Device-RectWidthStyle-MAX = 1-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing

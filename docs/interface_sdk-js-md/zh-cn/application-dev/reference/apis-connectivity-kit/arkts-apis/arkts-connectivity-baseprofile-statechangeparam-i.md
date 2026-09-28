@@ -8,6 +8,8 @@ export interface StateChangeParam
 
 **起始版本：** 10
 
+<!--Device-baseProfile-export interface StateChangeParam--><!--Device-baseProfile-export interface StateChangeParam-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ Profile断开连接的原因。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-StateChangeParam-cause: DisconnectCause--><!--Device-StateChangeParam-cause: DisconnectCause-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## deviceId
@@ -45,6 +49,8 @@ deviceId: string
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-StateChangeParam-deviceId: string--><!--Device-StateChangeParam-deviceId: string-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -62,6 +68,8 @@ role?: PanRole
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-StateChangeParam-role?: PanRole--><!--Device-StateChangeParam-role?: PanRole-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## state
@@ -77,5 +85,7 @@ Profile连接状态。
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-StateChangeParam-state: ProfileConnectionState--><!--Device-StateChangeParam-state: ProfileConnectionState-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

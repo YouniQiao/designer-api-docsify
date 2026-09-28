@@ -10,6 +10,8 @@ export interface MissionCallback
 
 **起始版本：** 9
 
+<!--Device-unnamed-export interface MissionCallback--><!--Device-unnamed-export interface MissionCallback-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -27,6 +29,8 @@ notifyMissionsChanged是任务监听的callback函数，用于通知任务变化
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MissionCallback-notifyMissionsChanged: NotifyMissionsChangedCallback--><!--Device-MissionCallback-notifyMissionsChanged: NotifyMissionsChangedCallback-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -75,6 +79,8 @@ notifyNetDisconnect是任务监听的callback函数，用于通知断开连接�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MissionCallback-notifyNetDisconnect: NotifyNetDisconnectCallback--><!--Device-MissionCallback-notifyNetDisconnect: NotifyNetDisconnectCallback-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -121,6 +127,8 @@ notifySnapshot是任务监听的callback函数，用于通知任务快照变化�
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MissionCallback-notifySnapshot: NotifySnapshotCallback--><!--Device-MissionCallback-notifySnapshot: NotifySnapshotCallback-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 

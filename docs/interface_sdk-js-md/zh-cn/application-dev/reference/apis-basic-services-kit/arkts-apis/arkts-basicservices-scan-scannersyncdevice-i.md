@@ -8,6 +8,8 @@ interface ScannerSyncDevice
 
 **起始版本：** 20
 
+<!--Device-scan-interface ScannerSyncDevice--><!--Device-scan-interface ScannerSyncDevice-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## 导入模块
@@ -28,6 +30,8 @@ discoveryMode: ScannerDiscoveryMode
 
 **起始版本：** 20
 
+<!--Device-ScannerSyncDevice-discoveryMode: ScannerDiscoveryMode--><!--Device-ScannerSyncDevice-discoveryMode: ScannerDiscoveryMode-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## oldScannerId
@@ -41,6 +45,8 @@ oldScannerId?: string
 **类型：** string
 
 **起始版本：** 20
+
+<!--Device-ScannerSyncDevice-oldScannerId?: string--><!--Device-ScannerSyncDevice-oldScannerId?: string-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -56,6 +62,8 @@ scannerId: string
 
 **起始版本：** 20
 
+<!--Device-ScannerSyncDevice-scannerId: string--><!--Device-ScannerSyncDevice-scannerId: string-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## syncMode
@@ -70,6 +78,8 @@ syncMode: ScannerSyncMode
 
 **起始版本：** 20
 
+<!--Device-ScannerSyncDevice-syncMode: ScannerSyncMode--><!--Device-ScannerSyncDevice-syncMode: ScannerSyncMode-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## uniqueId
@@ -83,5 +93,7 @@ uniqueId: string
 **类型：** string
 
 **起始版本：** 20
+
+<!--Device-ScannerSyncDevice-uniqueId: string--><!--Device-ScannerSyncDevice-uniqueId: string-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework

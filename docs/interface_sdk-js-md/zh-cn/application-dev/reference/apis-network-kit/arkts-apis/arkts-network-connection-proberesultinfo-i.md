@@ -8,6 +8,8 @@ export interface ProbeResultInfo
 
 **起始版本：** 26.0.0
 
+<!--Device-connection-export interface ProbeResultInfo--><!--Device-connection-export interface ProbeResultInfo-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ lossRate: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ProbeResultInfo-lossRate: int--><!--Device-ProbeResultInfo-lossRate: int-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## rtt
@@ -45,5 +49,7 @@ rtt: number[]
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ProbeResultInfo-rtt: int[]--><!--Device-ProbeResultInfo-rtt: int[]-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core

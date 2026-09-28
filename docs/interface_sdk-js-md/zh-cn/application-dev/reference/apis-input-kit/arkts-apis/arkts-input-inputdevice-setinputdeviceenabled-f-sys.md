@@ -18,6 +18,8 @@ function setInputDeviceEnabled(deviceId: number, enabled: boolean): Promise<void
 
 **需要权限：** ohos.permission.INPUT_DEVICE_CONTROLLER
 
+<!--Device-inputDevice-function setInputDeviceEnabled(deviceId: int, enabled: boolean): Promise<void>--><!--Device-inputDevice-function setInputDeviceEnabled(deviceId: int, enabled: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 **系统接口：** 此接口为系统接口。

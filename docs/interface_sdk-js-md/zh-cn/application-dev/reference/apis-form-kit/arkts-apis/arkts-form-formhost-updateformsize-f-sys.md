@@ -18,6 +18,8 @@ function updateFormSize(formId: string, newDimension: formInfo.FormDimension, ne
 
 **需要权限：** ohos.permission.REQUIRE_FORM
 
+<!--Device-formHost-function updateFormSize(formId: string, newDimension: formInfo.FormDimension, newRect: formInfo.Rect): void--><!--Device-formHost-function updateFormSize(formId: string, newDimension: formInfo.FormDimension, newRect: formInfo.Rect): void-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。

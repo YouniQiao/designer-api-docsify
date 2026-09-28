@@ -18,6 +18,8 @@ function queryBundleEvents(begin: number, end: number, callback: AsyncCallback<A
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-usageStatistics-function queryBundleEvents(begin: long, end: long, callback: AsyncCallback<Array<BundleEvents>>): void--><!--Device-usageStatistics-function queryBundleEvents(begin: long, end: long, callback: AsyncCallback<Array<BundleEvents>>): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **系统接口：** 此接口为系统接口。
@@ -78,6 +80,8 @@ function queryBundleEvents(begin: number, end: number): Promise<Array<BundleEven
 **起始版本：** 9
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
+
+<!--Device-usageStatistics-function queryBundleEvents(begin: long, end: long): Promise<Array<BundleEvents>>--><!--Device-usageStatistics-function queryBundleEvents(begin: long, end: long): Promise<Array<BundleEvents>>-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -144,6 +148,8 @@ function queryBundleEvents(begin: number, end: number, maxNum: number): Promise<
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-usageStatistics-function queryBundleEvents(begin: long, end: long, maxNum: int): Promise<Array<BundleEvents>>--><!--Device-usageStatistics-function queryBundleEvents(begin: long, end: long, maxNum: int): Promise<Array<BundleEvents>>-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 

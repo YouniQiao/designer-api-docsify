@@ -16,6 +16,8 @@ huks Handle结构体。
 
 **替代接口：** null
 
+<!--Device-huks-export interface HuksHandle--><!--Device-huks-export interface HuksHandle-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Extension
 
 ## 导入模块
@@ -40,6 +42,8 @@ errorCode: number
 
 **废弃版本：** 9
 
+<!--Device-HuksHandle-errorCode: number--><!--Device-HuksHandle-errorCode: number-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Extension
 
 ## handle
@@ -58,6 +62,8 @@ handle: number
 
 **废弃版本：** 9
 
+<!--Device-HuksHandle-handle: number--><!--Device-HuksHandle-handle: number-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Extension
 
 ## token
@@ -75,5 +81,7 @@ token?: Uint8Array
 **起始版本：** 8
 
 **废弃版本：** 9
+
+<!--Device-HuksHandle-token?: Uint8Array--><!--Device-HuksHandle-token?: Uint8Array-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Extension

@@ -18,6 +18,8 @@ function isSupportDoNotDisturbMode(callback: AsyncCallback<boolean>): void
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function isSupportDoNotDisturbMode(callback: AsyncCallback<boolean>): void--><!--Device-notificationManager-function isSupportDoNotDisturbMode(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -70,6 +72,8 @@ function isSupportDoNotDisturbMode(): Promise<boolean>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function isSupportDoNotDisturbMode(): Promise<boolean>--><!--Device-notificationManager-function isSupportDoNotDisturbMode(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

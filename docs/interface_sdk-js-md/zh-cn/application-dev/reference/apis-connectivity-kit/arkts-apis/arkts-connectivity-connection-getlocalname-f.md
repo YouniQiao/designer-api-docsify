@@ -20,6 +20,8 @@ function getLocalName(): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-connection-function getLocalName(): string--><!--Device-connection-function getLocalName(): string-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **返回值：**

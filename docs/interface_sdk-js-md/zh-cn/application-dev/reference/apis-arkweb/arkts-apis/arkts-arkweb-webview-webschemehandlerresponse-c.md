@@ -10,6 +10,8 @@ WebSchemeHandlerResponse与WebResourceHandler配合使用：开发者构造WebSc
 
 **起始版本：** 12
 
+<!--Device-webview-class WebSchemeHandlerResponse--><!--Device-webview-class WebSchemeHandlerResponse-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## 导入模块
@@ -29,6 +31,8 @@ Response的构造函数。
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebSchemeHandlerResponse-constructor()--><!--Device-WebSchemeHandlerResponse-constructor()-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -88,6 +92,8 @@ getCustomErrorCode(): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-WebSchemeHandlerResponse-getCustomErrorCode(): number--><!--Device-WebSchemeHandlerResponse-getCustomErrorCode(): number-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -112,6 +118,8 @@ getEncoding(): string
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebSchemeHandlerResponse-getEncoding(): string--><!--Device-WebSchemeHandlerResponse-getEncoding(): string-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -135,6 +143,8 @@ getHeaderByName(name: string): string
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebSchemeHandlerResponse-getHeaderByName(name: string): string--><!--Device-WebSchemeHandlerResponse-getHeaderByName(name: string): string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -166,6 +176,8 @@ getMimeType(): string
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebSchemeHandlerResponse-getMimeType(): string--><!--Device-WebSchemeHandlerResponse-getMimeType(): string-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -189,6 +201,8 @@ getNetErrorCode(): WebNetErrorList
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebSchemeHandlerResponse-getNetErrorCode(): WebNetErrorList--><!--Device-WebSchemeHandlerResponse-getNetErrorCode(): WebNetErrorList-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -214,6 +228,8 @@ getStatus(): number
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebSchemeHandlerResponse-getStatus(): number--><!--Device-WebSchemeHandlerResponse-getStatus(): number-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -237,6 +253,8 @@ getStatusText(): string
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebSchemeHandlerResponse-getStatusText(): string--><!--Device-WebSchemeHandlerResponse-getStatusText(): string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -264,6 +282,8 @@ getUrl(): string
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebSchemeHandlerResponse-getUrl(): string--><!--Device-WebSchemeHandlerResponse-getUrl(): string-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -288,6 +308,8 @@ setCustomErrorCode(customErrorCode: number): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-WebSchemeHandlerResponse-setCustomErrorCode(customErrorCode: number): void--><!--Device-WebSchemeHandlerResponse-setCustomErrorCode(customErrorCode: number): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -311,6 +333,8 @@ setEncoding(encoding: string): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebSchemeHandlerResponse-setEncoding(encoding: string): void--><!--Device-WebSchemeHandlerResponse-setEncoding(encoding: string): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -341,6 +365,8 @@ setHeaderByName(name: string, value: string, overwrite: boolean): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebSchemeHandlerResponse-setHeaderByName(name: string, value: string, overwrite: boolean): void--><!--Device-WebSchemeHandlerResponse-setHeaderByName(name: string, value: string, overwrite: boolean): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -374,6 +400,8 @@ setMimeType(type: string): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebSchemeHandlerResponse-setMimeType(type: string): void--><!--Device-WebSchemeHandlerResponse-setMimeType(type: string): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -403,6 +431,8 @@ setNetErrorCode(code: WebNetErrorList): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebSchemeHandlerResponse-setNetErrorCode(code: WebNetErrorList): void--><!--Device-WebSchemeHandlerResponse-setNetErrorCode(code: WebNetErrorList): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -434,6 +464,8 @@ setStatus(code: number): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebSchemeHandlerResponse-setStatus(code: number): void--><!--Device-WebSchemeHandlerResponse-setStatus(code: number): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -464,6 +496,8 @@ setStatusText(text: string): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebSchemeHandlerResponse-setStatusText(text: string): void--><!--Device-WebSchemeHandlerResponse-setStatusText(text: string): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -493,6 +527,8 @@ setUrl(url: string): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebSchemeHandlerResponse-setUrl(url: string): void--><!--Device-WebSchemeHandlerResponse-setUrl(url: string): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

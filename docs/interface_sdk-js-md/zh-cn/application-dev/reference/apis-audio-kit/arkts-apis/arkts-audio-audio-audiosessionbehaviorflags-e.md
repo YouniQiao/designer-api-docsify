@@ -8,6 +8,8 @@ enum AudioSessionBehaviorFlags
 
 **起始版本：** 24
 
+<!--Device-audio-enum AudioSessionBehaviorFlags--><!--Device-audio-enum AudioSessionBehaviorFlags-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## DEFAULT_BEHAVIOR
@@ -21,6 +23,8 @@ DEFAULT_BEHAVIOR = 0x00000000
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioSessionBehaviorFlags-DEFAULT_BEHAVIOR = 0x00000000--><!--Device-AudioSessionBehaviorFlags-DEFAULT_BEHAVIOR = 0x00000000-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -44,6 +48,8 @@ MUTE_WHEN_INTERRUPTED = 0x00000002
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioSessionBehaviorFlags-MUTE_WHEN_INTERRUPTED = 0x00000002--><!--Device-AudioSessionBehaviorFlags-MUTE_WHEN_INTERRUPTED = 0x00000002-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## PAUSE_WHEN_INTERRUPTED
@@ -65,5 +71,7 @@ PAUSE_WHEN_INTERRUPTED = 0x00000004
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioSessionBehaviorFlags-PAUSE_WHEN_INTERRUPTED = 0x00000004--><!--Device-AudioSessionBehaviorFlags-PAUSE_WHEN_INTERRUPTED = 0x00000004-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core

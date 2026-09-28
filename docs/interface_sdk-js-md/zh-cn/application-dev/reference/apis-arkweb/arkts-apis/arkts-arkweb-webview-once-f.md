@@ -20,6 +20,8 @@ function once(type: string, callback: Callback<void>): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-webview-function once(type: string, callback: Callback<void>): void--><!--Device-webview-function once(type: string, callback: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**

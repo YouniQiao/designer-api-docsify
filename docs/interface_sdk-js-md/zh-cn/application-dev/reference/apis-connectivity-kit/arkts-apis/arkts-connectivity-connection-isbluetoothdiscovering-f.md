@@ -20,6 +20,8 @@ function isBluetoothDiscovering(): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-connection-function isBluetoothDiscovering(): boolean--><!--Device-connection-function isBluetoothDiscovering(): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **返回值：**

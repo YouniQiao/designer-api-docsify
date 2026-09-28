@@ -20,6 +20,8 @@ function uninstallScopeFont(url: string): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-fontManager-function uninstallScopeFont(url: string): Promise<void>--><!--Device-fontManager-function uninstallScopeFont(url: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Global.FontManager
 
 **参数：**

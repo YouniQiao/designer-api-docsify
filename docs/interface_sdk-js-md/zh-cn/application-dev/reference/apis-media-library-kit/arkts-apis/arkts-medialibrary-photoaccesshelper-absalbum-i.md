@@ -8,6 +8,8 @@ interface AbsAlbum
 
 **起始版本：** 10
 
+<!--Device-photoAccessHelper-interface AbsAlbum--><!--Device-photoAccessHelper-interface AbsAlbum-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
@@ -27,6 +29,8 @@ getAssets(options: FetchOptions, callback: AsyncCallback<FetchResult<PhotoAsset>
 **起始版本：** 10
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-AbsAlbum-getAssets(options: FetchOptions, callback: AsyncCallback<FetchResult<PhotoAsset>>): void--><!--Device-AbsAlbum-getAssets(options: FetchOptions, callback: AsyncCallback<FetchResult<PhotoAsset>>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -91,7 +95,9 @@ getAssets(options: FetchOptions): Promise<FetchResult<PhotoAsset>>
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-AbsAlbum-getAssets(options: FetchOptions): Promise<FetchResult<PhotoAsset>>--><!--Device-AbsAlbum-getAssets(options: FetchOptions): Promise<FetchResult<PhotoAsset>>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -158,6 +164,8 @@ albumName: string
 
 **起始版本：** 10
 
+<!--Device-AbsAlbum-albumName: string--><!--Device-AbsAlbum-albumName: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## albumSubtype
@@ -171,6 +179,8 @@ readonly albumSubtype: AlbumSubtype
 **类型：** [AlbumSubtype](arkts-medialibrary-photoaccesshelper-albumsubtype-e.md)
 
 **起始版本：** 10
+
+<!--Device-AbsAlbum-readonly albumSubtype: AlbumSubtype--><!--Device-AbsAlbum-readonly albumSubtype: AlbumSubtype-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -186,6 +196,8 @@ readonly albumType: AlbumType
 
 **起始版本：** 10
 
+<!--Device-AbsAlbum-readonly albumType: AlbumType--><!--Device-AbsAlbum-readonly albumType: AlbumType-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## albumUri
@@ -199,6 +211,8 @@ readonly albumUri: string
 **类型：** string
 
 **起始版本：** 10
+
+<!--Device-AbsAlbum-readonly albumUri: string--><!--Device-AbsAlbum-readonly albumUri: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -214,6 +228,8 @@ readonly changeTime?: number
 
 **起始版本：** 23
 
+<!--Device-AbsAlbum-readonly changeTime?: long--><!--Device-AbsAlbum-readonly changeTime?: long-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## count
@@ -228,6 +244,8 @@ readonly count: number
 
 **起始版本：** 10
 
+<!--Device-AbsAlbum-readonly count: int--><!--Device-AbsAlbum-readonly count: int-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## coverUri
@@ -241,6 +259,8 @@ readonly coverUri: string
 **类型：** string
 
 **起始版本：** 10
+
+<!--Device-AbsAlbum-readonly coverUri: string--><!--Device-AbsAlbum-readonly coverUri: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -262,5 +282,7 @@ readonly lpath?: string
 **类型：** string
 
 **起始版本：** 23
+
+<!--Device-AbsAlbum-readonly lpath?: string--><!--Device-AbsAlbum-readonly lpath?: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core

@@ -8,6 +8,8 @@ interface SetOsAccountTypeOptions
 
 **起始版本：** 24
 
+<!--Device-osAccount-interface SetOsAccountTypeOptions--><!--Device-osAccount-interface SetOsAccountTypeOptions-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -29,6 +31,8 @@ token?: Uint8Array
 **类型：** Uint8Array
 
 **起始版本：** 24
+
+<!--Device-SetOsAccountTypeOptions-token?: Uint8Array--><!--Device-SetOsAccountTypeOptions-token?: Uint8Array-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 

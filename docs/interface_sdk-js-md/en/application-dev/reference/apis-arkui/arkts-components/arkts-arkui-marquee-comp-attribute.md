@@ -4,11 +4,13 @@
 declare class MarqueeAttribute extends CommonMethod<MarqueeAttribute>
 ```
 
-In addition to the [universal attributes](arkts-arkui-common-comp.md#common), the following attributes are supported.
+In addition to the [universal attributes](arkts-arkui-common-comp.md), the following attributes are supported.
 
 **Inheritance/Implementation:** MarqueeAttribute extends CommonMethod<MarqueeAttribute>
 
 **Since:** 8
+
+<!--Device-unnamed-declare class MarqueeAttribute extends CommonMethod<MarqueeAttribute>--><!--Device-unnamed-declare class MarqueeAttribute extends CommonMethod<MarqueeAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,6 +27,8 @@ Sets whether to allow text scaling. If this API is not called, text scaling is n
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-MarqueeAttribute-allowScale(value: boolean): MarqueeAttribute--><!--Device-MarqueeAttribute-allowScale(value: boolean): MarqueeAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -48,6 +52,8 @@ Sets the font color. If this API is not called, the default font color is '#e618
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-MarqueeAttribute-fontColor(value: ResourceColor): MarqueeAttribute--><!--Device-MarqueeAttribute-fontColor(value: ResourceColor): MarqueeAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -69,6 +75,8 @@ Sets the font family.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-MarqueeAttribute-fontFamily(value: string | Resource): MarqueeAttribute--><!--Device-MarqueeAttribute-fontFamily(value: string | Resource): MarqueeAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -92,6 +100,8 @@ Sets the text size.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-MarqueeAttribute-fontSize(value: Length): MarqueeAttribute--><!--Device-MarqueeAttribute-fontSize(value: Length): MarqueeAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -113,6 +123,8 @@ Sets the font weight of the text. If the value is set too large, the text may be
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-MarqueeAttribute-fontWeight(value: number | FontWeight | string): MarqueeAttribute--><!--Device-MarqueeAttribute-fontWeight(value: number | FontWeight | string): MarqueeAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -143,6 +155,8 @@ position and continue scrolling when the content is dynamically updated, such as
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MarqueeAttribute-marqueeUpdateStrategy(value: MarqueeUpdateStrategy): MarqueeAttribute--><!--Device-MarqueeAttribute-marqueeUpdateStrategy(value: MarqueeUpdateStrategy): MarqueeAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -164,6 +178,8 @@ Triggered when a complete scrolling cycle is completed. If the loop count is not
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-MarqueeAttribute-onBounce(event: () => void): MarqueeAttribute--><!--Device-MarqueeAttribute-onBounce(event: () => void): MarqueeAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -187,6 +203,8 @@ Triggered when the marquee has finished the number of scrolling times set by the
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-MarqueeAttribute-onFinish(event: () => void): MarqueeAttribute--><!--Device-MarqueeAttribute-onFinish(event: () => void): MarqueeAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -208,6 +226,8 @@ Triggered when the marquee text changes or starts scrolling.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-MarqueeAttribute-onStart(event: () => void): MarqueeAttribute--><!--Device-MarqueeAttribute-onStart(event: () => void): MarqueeAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -234,6 +254,8 @@ When the marquee stops, it restarts the loop from the beginning. This does not i
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
+
+<!--Device-MarqueeAttribute-onStop(event: Callback<void> | undefined): MarqueeAttribute--><!--Device-MarqueeAttribute-onStop(event: Callback<void> | undefined): MarqueeAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

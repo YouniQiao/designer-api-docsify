@@ -16,6 +16,8 @@ function getAccessoryList(): Array<Readonly<USBAccessory>>
 
 **起始版本：** 14
 
+<!--Device-usbManager-function getAccessoryList(): Array<Readonly<USBAccessory>>--><!--Device-usbManager-function getAccessoryList(): Array<Readonly<USBAccessory>>-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 **返回值：**

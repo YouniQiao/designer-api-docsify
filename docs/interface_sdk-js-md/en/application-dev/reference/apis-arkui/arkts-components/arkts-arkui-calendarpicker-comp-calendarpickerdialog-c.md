@@ -8,6 +8,8 @@ Tapping a date opens a calendar picker dialog, where you can select a date. It i
 
 **Since:** 10
 
+<!--Device-unnamed-declare class CalendarPickerDialog--><!--Device-unnamed-declare class CalendarPickerDialog-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## show
@@ -23,6 +25,8 @@ Displays a calendar picker dialog box for the user to select a date.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-CalendarPickerDialog-static show(options?: CalendarDialogOptions): void--><!--Device-CalendarPickerDialog-static show(options?: CalendarDialogOptions): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

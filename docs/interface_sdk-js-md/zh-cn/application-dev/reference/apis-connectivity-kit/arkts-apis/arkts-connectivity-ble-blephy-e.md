@@ -8,6 +8,8 @@ enum BlePhy
 
 **起始版本：** 23
 
+<!--Device-ble-enum BlePhy--><!--Device-ble-enum BlePhy-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## BLE_PHY_1M
@@ -21,6 +23,8 @@ BLE_PHY_1M = 1
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BlePhy-BLE_PHY_1M = 1--><!--Device-BlePhy-BLE_PHY_1M = 1-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -36,6 +40,8 @@ BLE_PHY_2M = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BlePhy-BLE_PHY_2M = 2--><!--Device-BlePhy-BLE_PHY_2M = 2-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## BLE_PHY_CODED
@@ -49,5 +55,7 @@ CODED物理通道类型，适用于低速但覆盖范围广的场景。
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BlePhy-BLE_PHY_CODED = 3--><!--Device-BlePhy-BLE_PHY_CODED = 3-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

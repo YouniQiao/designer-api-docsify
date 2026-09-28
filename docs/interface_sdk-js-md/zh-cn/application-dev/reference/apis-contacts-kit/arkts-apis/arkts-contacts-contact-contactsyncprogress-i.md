@@ -10,6 +10,8 @@ interface ContactSyncProgress
 
 **起始版本：** 26.0.0
 
+<!--Device-contact-interface ContactSyncProgress--><!--Device-contact-interface ContactSyncProgress-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 ## 导入模块
@@ -36,6 +38,8 @@ currentBatch: number
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-ContactSyncProgress-currentBatch: int--><!--Device-ContactSyncProgress-currentBatch: int-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 ## syncId
@@ -56,6 +60,8 @@ syncId: number
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-ContactSyncProgress-syncId: int--><!--Device-ContactSyncProgress-syncId: int-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 ## totalBatches
@@ -73,5 +79,7 @@ totalBatches: number
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-ContactSyncProgress-totalBatches: int--><!--Device-ContactSyncProgress-totalBatches: int-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData

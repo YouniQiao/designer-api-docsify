@@ -26,6 +26,8 @@ If an event callback was already provided in [ExecCmdOptions](arkts-ability-clim
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-cliManager-function subscribeSession(sessionId: string, callback: ToolEventCallback): Promise<void>--><!--Device-cliManager-function subscribeSession(sessionId: string, callback: ToolEventCallback): Promise<void>-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **Parameters:**

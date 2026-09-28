@@ -18,6 +18,8 @@ function removeStickyCommonEvent(event: string, callback: AsyncCallback<void>): 
 
 **需要权限：** ohos.permission.COMMONEVENT_STICKY
 
+<!--Device-commonEventManager-function removeStickyCommonEvent(event: string, callback: AsyncCallback<void>): void--><!--Device-commonEventManager-function removeStickyCommonEvent(event: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **系统接口：** 此接口为系统接口。
@@ -68,6 +70,8 @@ function removeStickyCommonEvent(event: string): Promise<void>
 **起始版本：** 10
 
 **需要权限：** ohos.permission.COMMONEVENT_STICKY
+
+<!--Device-commonEventManager-function removeStickyCommonEvent(event: string): Promise<void>--><!--Device-commonEventManager-function removeStickyCommonEvent(event: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 

@@ -8,6 +8,8 @@ enum DeviceLogEventCode
 
 **起始版本：** 13
 
+<!--Device-avSession-enum DeviceLogEventCode--><!--Device-avSession-enum DeviceLogEventCode-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **系统接口：** 此接口为系统接口。
@@ -22,6 +24,8 @@ DEVICE_LOG_FULL = 1
 
 **起始版本：** 13
 
+<!--Device-DeviceLogEventCode-DEVICE_LOG_FULL = 1--><!--Device-DeviceLogEventCode-DEVICE_LOG_FULL = 1-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **系统接口：** 此接口为系统接口。
@@ -35,6 +39,8 @@ DEVICE_LOG_EXCEPTION = 2
 日志写入异常。
 
 **起始版本：** 13
+
+<!--Device-DeviceLogEventCode-DEVICE_LOG_EXCEPTION = 2--><!--Device-DeviceLogEventCode-DEVICE_LOG_EXCEPTION = 2-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 

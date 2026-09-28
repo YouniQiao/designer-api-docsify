@@ -8,6 +8,8 @@ Kiosk模式的特征。
 
 **起始版本：** 20
 
+<!--Device-applicationManager-enum KioskFeature--><!--Device-applicationManager-enum KioskFeature-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## ALLOW_NOTIFICATION_CENTER
@@ -21,6 +23,8 @@ ALLOW_NOTIFICATION_CENTER = 1
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-KioskFeature-ALLOW_NOTIFICATION_CENTER = 1--><!--Device-KioskFeature-ALLOW_NOTIFICATION_CENTER = 1-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -36,6 +40,8 @@ ALLOW_CONTROL_CENTER = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-KioskFeature-ALLOW_CONTROL_CENTER = 2--><!--Device-KioskFeature-ALLOW_CONTROL_CENTER = 2-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## ALLOW_GESTURE_CONTROL
@@ -50,6 +56,8 @@ ALLOW_GESTURE_CONTROL = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-KioskFeature-ALLOW_GESTURE_CONTROL = 3--><!--Device-KioskFeature-ALLOW_GESTURE_CONTROL = 3-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## ALLOW_SIDE_DOCK
@@ -63,5 +71,7 @@ ALLOW_SIDE_DOCK = 4
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-KioskFeature-ALLOW_SIDE_DOCK = 4--><!--Device-KioskFeature-ALLOW_SIDE_DOCK = 4-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager

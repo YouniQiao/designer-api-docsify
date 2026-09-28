@@ -8,6 +8,8 @@ export interface LoopObserver
 
 **起始版本：** 12
 
+<!--Device-unnamed-export interface LoopObserver--><!--Device-unnamed-export interface LoopObserver-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## onLoopTimeOut
@@ -21,6 +23,8 @@ onLoopTimeOut?(timeout: number): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LoopObserver-onLoopTimeOut?(timeout: int): void--><!--Device-LoopObserver-onLoopTimeOut?(timeout: int): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

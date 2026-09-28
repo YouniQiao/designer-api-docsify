@@ -23,6 +23,8 @@ function updateForm(
 
 **替代接口：** [updateForm](arkts-form-formprovider-updateform-f.md)
 
+<!--Device-formProvider-function updateForm(    formId: string,    formBindingData: formBindingData.FormBindingData,    callback: AsyncCallback<void>  ): void--><!--Device-formProvider-function updateForm(    formId: string,    formBindingData: formBindingData.FormBindingData,    callback: AsyncCallback<void>  ): void-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **参数：**
@@ -69,6 +71,8 @@ function updateForm(formId: string, formBindingData: formBindingData.FormBinding
 **废弃版本：** 9
 
 **替代接口：** [updateForm](arkts-form-formprovider-updateform-f.md)
+
+<!--Device-formProvider-function updateForm(formId: string, formBindingData: formBindingData.FormBindingData): Promise<void>--><!--Device-formProvider-function updateForm(formId: string, formBindingData: formBindingData.FormBindingData): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 

@@ -18,6 +18,8 @@ export default interface InputMethodSubtype
 
 **起始版本：** 9
 
+<!--Device-unnamed-export default interface InputMethodSubtype--><!--Device-unnamed-export default interface InputMethodSubtype-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## 导入模块
@@ -38,6 +40,8 @@ extra?: object
 
 **起始版本：** 9
 
+<!--Device-InputMethodSubtype-extra?: object--><!--Device-InputMethodSubtype-extra?: object-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## icon
@@ -51,6 +55,8 @@ readonly icon?: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-InputMethodSubtype-readonly icon?: string--><!--Device-InputMethodSubtype-readonly icon?: string-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -66,6 +72,8 @@ readonly iconId?: number
 
 **起始版本：** 9
 
+<!--Device-InputMethodSubtype-readonly iconId?: double--><!--Device-InputMethodSubtype-readonly iconId?: double-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## id
@@ -79,6 +87,8 @@ readonly id: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-InputMethodSubtype-readonly id: string--><!--Device-InputMethodSubtype-readonly id: string-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -94,6 +104,8 @@ readonly label?: string
 
 **起始版本：** 9
 
+<!--Device-InputMethodSubtype-readonly label?: string--><!--Device-InputMethodSubtype-readonly label?: string-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## labelId
@@ -107,6 +119,8 @@ readonly labelId?: number
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-InputMethodSubtype-readonly labelId?: double--><!--Device-InputMethodSubtype-readonly labelId?: double-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -122,6 +136,8 @@ readonly language: string
 
 **起始版本：** 9
 
+<!--Device-InputMethodSubtype-readonly language: string--><!--Device-InputMethodSubtype-readonly language: string-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## locale
@@ -135,6 +151,8 @@ readonly locale: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-InputMethodSubtype-readonly locale: string--><!--Device-InputMethodSubtype-readonly locale: string-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -150,6 +168,8 @@ readonly mode?: 'upper' | 'lower'
 
 **起始版本：** 9
 
+<!--Device-InputMethodSubtype-readonly mode?: 'upper' | 'lower'--><!--Device-InputMethodSubtype-readonly mode?: 'upper' | 'lower'-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## name
@@ -163,5 +183,7 @@ readonly name: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-InputMethodSubtype-readonly name: string--><!--Device-InputMethodSubtype-readonly name: string-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework

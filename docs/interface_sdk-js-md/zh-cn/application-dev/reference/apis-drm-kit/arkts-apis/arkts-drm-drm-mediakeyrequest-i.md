@@ -8,6 +8,8 @@ interface MediaKeyRequest
 
 **起始版本：** 11
 
+<!--Device-drm-interface MediaKeyRequest--><!--Device-drm-interface MediaKeyRequest-End-->
+
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
 ## 导入模块
@@ -28,7 +30,9 @@ data: Uint8Array
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MediaKeyRequest-data: Uint8Array--><!--Device-MediaKeyRequest-data: Uint8Array-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
@@ -44,7 +48,9 @@ defaultURL: string
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MediaKeyRequest-defaultURL: string--><!--Device-MediaKeyRequest-defaultURL: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
@@ -60,6 +66,8 @@ mediaKeyRequestType: MediaKeyRequestType
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MediaKeyRequest-mediaKeyRequestType: MediaKeyRequestType--><!--Device-MediaKeyRequest-mediaKeyRequestType: MediaKeyRequestType-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core

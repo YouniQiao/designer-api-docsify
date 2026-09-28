@@ -8,6 +8,8 @@ The **cooperate** module implements screen hopping for two or more networked dev
 
 **Since:** 10
 
+<!--Device-unnamed-declare namespace cooperate--><!--Device-unnamed-declare namespace cooperate-End-->
+
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 
 **System API:** This is a system API.

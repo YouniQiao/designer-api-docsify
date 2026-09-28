@@ -16,6 +16,8 @@ function getValidReminders(callback: AsyncCallback<Array<ReminderRequest>>): voi
 
 **起始版本：** 9
 
+<!--Device-reminderAgentManager-function getValidReminders(callback: AsyncCallback<Array<ReminderRequest>>): void--><!--Device-reminderAgentManager-function getValidReminders(callback: AsyncCallback<Array<ReminderRequest>>): void-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 **参数：**
@@ -78,6 +80,8 @@ function getValidReminders(): Promise<Array<ReminderRequest>>
 获取当前应用设置的所有[有效（未过期）的代理提醒](../../../task-management/agent-powered-reminder.md#约束与限制)。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-reminderAgentManager-function getValidReminders(): Promise<Array<ReminderRequest>>--><!--Device-reminderAgentManager-function getValidReminders(): Promise<Array<ReminderRequest>>-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 

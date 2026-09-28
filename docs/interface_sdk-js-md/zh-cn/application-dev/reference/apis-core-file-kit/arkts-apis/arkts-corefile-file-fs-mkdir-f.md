@@ -18,6 +18,8 @@ declare function mkdir(path: string): Promise<void>
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-unnamed-declare function mkdir(path: string): Promise<void>--><!--Device-unnamed-declare function mkdir(path: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -66,6 +68,8 @@ declare function mkdir(path: string, recursion: boolean): Promise<void>
 **起始版本：** 11
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-unnamed-declare function mkdir(path: string, recursion: boolean): Promise<void>--><!--Device-unnamed-declare function mkdir(path: string, recursion: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -117,6 +121,8 @@ declare function mkdir(path: string, callback: AsyncCallback<void>): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-unnamed-declare function mkdir(path: string, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function mkdir(path: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -160,6 +166,8 @@ declare function mkdir(path: string, recursion: boolean, callback: AsyncCallback
 **起始版本：** 11
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-unnamed-declare function mkdir(path: string, recursion: boolean, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function mkdir(path: string, recursion: boolean, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

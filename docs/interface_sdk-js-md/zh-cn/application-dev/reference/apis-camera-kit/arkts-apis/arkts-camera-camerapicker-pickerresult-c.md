@@ -8,6 +8,8 @@ class PickerResult
 
 **起始版本：** 11
 
+<!--Device-cameraPicker-class PickerResult--><!--Device-cameraPicker-class PickerResult-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
@@ -28,7 +30,9 @@ mediaType: PickerMediaType
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PickerResult-mediaType: PickerMediaType--><!--Device-PickerResult-mediaType: PickerMediaType-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -44,7 +48,9 @@ resultCode: number
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PickerResult-resultCode: int--><!--Device-PickerResult-resultCode: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -60,6 +66,8 @@ resultUri: string
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PickerResult-resultUri: string--><!--Device-PickerResult-resultUri: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core

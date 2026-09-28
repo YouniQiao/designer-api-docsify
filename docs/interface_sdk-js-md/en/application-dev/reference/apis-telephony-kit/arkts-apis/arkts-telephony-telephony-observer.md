@@ -4,6 +4,8 @@ The **observer** module provides event subscription management functions. You ca
 
 **Since:** 6
 
+<!--Device-unnamed-declare namespace observer--><!--Device-unnamed-declare namespace observer-End-->
+
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 ## Modules to Import

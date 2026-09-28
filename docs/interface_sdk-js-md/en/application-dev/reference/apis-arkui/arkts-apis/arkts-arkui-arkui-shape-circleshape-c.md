@@ -12,6 +12,8 @@ This API inherits from [BaseShape](arkts-arkui-arkui-shape-baseshape-c.md).
 
 **Since:** 12
 
+<!--Device-unnamed-export declare class CircleShape extends BaseShape<CircleShape>--><!--Device-unnamed-export declare class CircleShape extends BaseShape<CircleShape>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -35,6 +37,8 @@ A constructor used to create a **CircleShape** object.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-CircleShape-constructor(options?: ShapeSize)--><!--Device-CircleShape-constructor(options?: ShapeSize)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

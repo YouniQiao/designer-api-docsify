@@ -8,6 +8,8 @@ type ModifyTime = Map<PRIKeyType, UTCTime>
 
 **起始版本：** 10
 
+<!--Device-relationalStore-type ModifyTime = Map<PRIKeyType, UTCTime>--><!--Device-relationalStore-type ModifyTime = Map<PRIKeyType, UTCTime>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **类型：** Map&lt;[PRIKeyType](arkts-arkdata-relationalstore-prikeytype-t.md), [UTCTime](arkts-arkdata-relationalstore-utctime-t.md)&gt;

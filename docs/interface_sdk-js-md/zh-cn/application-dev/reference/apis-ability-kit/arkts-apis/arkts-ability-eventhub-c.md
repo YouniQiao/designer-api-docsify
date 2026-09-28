@@ -8,6 +8,8 @@ EventHub是系统提供的基于发布-订阅模式实现的事件通信机制�
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare class EventHub--><!--Device-unnamed-declare class EventHub-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## emit
@@ -23,6 +25,8 @@ emit(event: string, ...args: Object[]): void
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-EventHub-emit(event: string, ...args: Object[]): void--><!--Device-EventHub-emit(event: string, ...args: Object[]): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -89,7 +93,9 @@ off(event: string, callback?: Function): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-EventHub-off(event: string, callback?: Function): void--><!--Device-EventHub-off(event: string, callback?: Function): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -153,7 +159,9 @@ on(event: string, callback: Function): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-EventHub-on(event: string, callback: Function): void--><!--Device-EventHub-on(event: string, callback: Function): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

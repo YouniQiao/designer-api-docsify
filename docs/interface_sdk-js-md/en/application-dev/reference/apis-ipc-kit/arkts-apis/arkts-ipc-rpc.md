@@ -6,6 +6,8 @@ This module supports return of error codes since API version 9.
 
 **Since:** 7
 
+<!--Device-unnamed-declare namespace rpc--><!--Device-unnamed-declare namespace rpc-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 ## Modules to Import

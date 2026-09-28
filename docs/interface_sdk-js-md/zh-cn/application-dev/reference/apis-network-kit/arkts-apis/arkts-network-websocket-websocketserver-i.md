@@ -8,6 +8,8 @@ export interface WebSocketServer
 
 **起始版本：** 19
 
+<!--Device-webSocket-export interface WebSocketServer--><!--Device-webSocket-export interface WebSocketServer-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块
@@ -27,6 +29,8 @@ close(connection: WebSocketConnection, options?: webSocket.WebSocketCloseOptions
 **起始版本：** 19
 
 **需要权限：** ohos.permission.INTERNET
+
+<!--Device-WebSocketServer-close(connection: WebSocketConnection, options?: webSocket.WebSocketCloseOptions): Promise<boolean>--><!--Device-WebSocketServer-close(connection: WebSocketConnection, options?: webSocket.WebSocketCloseOptions): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -102,6 +106,8 @@ listAllConnections(): WebSocketConnection[]
 
 **需要权限：** ohos.permission.INTERNET
 
+<!--Device-WebSocketServer-listAllConnections(): WebSocketConnection[]--><!--Device-WebSocketServer-listAllConnections(): WebSocketConnection[]-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
@@ -170,6 +176,8 @@ off(type: 'connect', callback?: Callback<WebSocketConnection>): void
 
 **起始版本：** 19
 
+<!--Device-WebSocketServer-off(type: 'connect', callback?: Callback<WebSocketConnection>): void--><!--Device-WebSocketServer-off(type: 'connect', callback?: Callback<WebSocketConnection>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -202,6 +210,8 @@ off(type: 'messageReceive', callback?: Callback<WebSocketMessage>): void
 > 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
 
 **起始版本：** 19
+
+<!--Device-WebSocketServer-off(type: 'messageReceive', callback?: Callback<WebSocketMessage>): void--><!--Device-WebSocketServer-off(type: 'messageReceive', callback?: Callback<WebSocketMessage>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -236,6 +246,8 @@ off(type: 'close', callback?: ClientConnectionCloseCallback): void
 
 **起始版本：** 19
 
+<!--Device-WebSocketServer-off(type: 'close', callback?: ClientConnectionCloseCallback): void--><!--Device-WebSocketServer-off(type: 'close', callback?: ClientConnectionCloseCallback): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -269,6 +281,8 @@ off(type: 'error', callback?: ErrorCallback): void
 
 **起始版本：** 19
 
+<!--Device-WebSocketServer-off(type: 'error', callback?: ErrorCallback): void--><!--Device-WebSocketServer-off(type: 'error', callback?: ErrorCallback): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -297,6 +311,8 @@ on(type: 'connect', callback: Callback<WebSocketConnection>): void
 订阅WebSocketServer的连接事件（客户端与服务端建链成功），使用callback异步回调。
 
 **起始版本：** 19
+
+<!--Device-WebSocketServer-on(type: 'connect', callback: Callback<WebSocketConnection>): void--><!--Device-WebSocketServer-on(type: 'connect', callback: Callback<WebSocketConnection>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -329,6 +345,8 @@ on(type: 'messageReceive', callback: Callback<WebSocketMessage>): void
 
 **起始版本：** 19
 
+<!--Device-WebSocketServer-on(type: 'messageReceive', callback: Callback<WebSocketMessage>): void--><!--Device-WebSocketServer-on(type: 'messageReceive', callback: Callback<WebSocketMessage>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -360,6 +378,8 @@ on(type: 'close', callback: ClientConnectionCloseCallback): void
 
 **起始版本：** 19
 
+<!--Device-WebSocketServer-on(type: 'close', callback: ClientConnectionCloseCallback): void--><!--Device-WebSocketServer-on(type: 'close', callback: ClientConnectionCloseCallback): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -390,6 +410,8 @@ on(type: 'error', callback: ErrorCallback): void
 订阅WebSocketServer的Error事件，使用callback异步回调。
 
 **起始版本：** 19
+
+<!--Device-WebSocketServer-on(type: 'error', callback: ErrorCallback): void--><!--Device-WebSocketServer-on(type: 'error', callback: ErrorCallback): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -427,6 +449,8 @@ send(data: string | ArrayBuffer, connection: WebSocketConnection): Promise<boole
 **起始版本：** 19
 
 **需要权限：** ohos.permission.INTERNET
+
+<!--Device-WebSocketServer-send(data: string | ArrayBuffer, connection: WebSocketConnection): Promise<boolean>--><!--Device-WebSocketServer-send(data: string | ArrayBuffer, connection: WebSocketConnection): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -505,6 +529,8 @@ start(config: WebSocketServerConfig): Promise<boolean>
 
 **需要权限：** ohos.permission.INTERNET
 
+<!--Device-WebSocketServer-start(config: WebSocketServerConfig): Promise<boolean>--><!--Device-WebSocketServer-start(config: WebSocketServerConfig): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -566,6 +592,8 @@ stop(): Promise<boolean>
 **起始版本：** 19
 
 **需要权限：** ohos.permission.INTERNET
+
+<!--Device-WebSocketServer-stop(): Promise<boolean>--><!--Device-WebSocketServer-stop(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 

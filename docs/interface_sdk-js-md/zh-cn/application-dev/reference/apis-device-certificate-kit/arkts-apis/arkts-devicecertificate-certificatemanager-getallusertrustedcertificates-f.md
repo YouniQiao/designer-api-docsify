@@ -18,6 +18,8 @@ function getAllUserTrustedCertificates(): Promise<CMResult>
 
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER
 
+<!--Device-certificateManager-function getAllUserTrustedCertificates(): Promise<CMResult>--><!--Device-certificateManager-function getAllUserTrustedCertificates(): Promise<CMResult>-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
 
 **返回值：**
@@ -72,6 +74,8 @@ function getAllUserTrustedCertificates(scope: CertScope): Promise<CMResult>
 **起始版本：** 18
 
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER
+
+<!--Device-certificateManager-function getAllUserTrustedCertificates(scope: CertScope): Promise<CMResult>--><!--Device-certificateManager-function getAllUserTrustedCertificates(scope: CertScope): Promise<CMResult>-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManager
 

@@ -8,6 +8,8 @@ export enum HuksUserAuthMode
 
 **起始版本：** 12
 
+<!--Device-huks-export enum HuksUserAuthMode--><!--Device-huks-export enum HuksUserAuthMode-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Extension
 
 ## HUKS_USER_AUTH_MODE_LOCAL
@@ -22,6 +24,8 @@ HUKS_USER_AUTH_MODE_LOCAL = 0
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-HuksUserAuthMode-HUKS_USER_AUTH_MODE_LOCAL = 0--><!--Device-HuksUserAuthMode-HUKS_USER_AUTH_MODE_LOCAL = 0-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Extension
 
 ## HUKS_USER_AUTH_MODE_COAUTH
@@ -35,5 +39,7 @@ HUKS_USER_AUTH_MODE_COAUTH = 1
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HuksUserAuthMode-HUKS_USER_AUTH_MODE_COAUTH = 1--><!--Device-HuksUserAuthMode-HUKS_USER_AUTH_MODE_COAUTH = 1-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Extension

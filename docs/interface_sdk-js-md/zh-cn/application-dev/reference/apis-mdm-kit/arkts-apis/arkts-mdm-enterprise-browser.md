@@ -10,6 +10,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare namespace browser--><!--Device-unnamed-declare namespace browser-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## 导入模块

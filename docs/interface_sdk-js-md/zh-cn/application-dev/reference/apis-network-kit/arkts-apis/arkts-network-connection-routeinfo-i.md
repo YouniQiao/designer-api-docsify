@@ -8,6 +8,8 @@ export interface RouteInfo
 
 **起始版本：** 8
 
+<!--Device-connection-export interface RouteInfo--><!--Device-connection-export interface RouteInfo-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ destination: LinkAddress
 
 **起始版本：** 8
 
+<!--Device-RouteInfo-destination: LinkAddress--><!--Device-RouteInfo-destination: LinkAddress-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## gateway
@@ -41,6 +45,8 @@ gateway: NetAddress
 **类型：** [NetAddress](arkts-network-connection-netaddress-i.md)
 
 **起始版本：** 8
+
+<!--Device-RouteInfo-gateway: NetAddress--><!--Device-RouteInfo-gateway: NetAddress-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -56,6 +62,8 @@ hasGateway: boolean
 
 **起始版本：** 8
 
+<!--Device-RouteInfo-hasGateway: boolean--><!--Device-RouteInfo-hasGateway: boolean-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## interface
@@ -69,6 +77,8 @@ interface: string
 **类型：** string
 
 **起始版本：** 8
+
+<!--Device-RouteInfo-interface: string--><!--Device-RouteInfo-interface: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -86,6 +96,8 @@ isDefaultRoute: boolean
 
 **起始版本：** 8
 
+<!--Device-RouteInfo-isDefaultRoute: boolean--><!--Device-RouteInfo-isDefaultRoute: boolean-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## isExcludedRoute
@@ -99,5 +111,7 @@ isExcludedRoute?: boolean
 **类型：** boolean
 
 **起始版本：** 20
+
+<!--Device-RouteInfo-isExcludedRoute?: boolean--><!--Device-RouteInfo-isExcludedRoute?: boolean-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core

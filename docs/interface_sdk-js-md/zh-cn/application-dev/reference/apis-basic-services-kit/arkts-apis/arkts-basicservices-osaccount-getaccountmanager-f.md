@@ -16,6 +16,8 @@ function getAccountManager(): AccountManager
 
 **起始版本：** 7
 
+<!--Device-osAccount-function getAccountManager(): AccountManager--><!--Device-osAccount-function getAccountManager(): AccountManager-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **返回值：**

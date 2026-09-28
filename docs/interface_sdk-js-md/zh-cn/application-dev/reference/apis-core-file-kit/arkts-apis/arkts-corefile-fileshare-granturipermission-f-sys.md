@@ -23,6 +23,8 @@ function grantUriPermission(
 
 **需要权限：** ohos.permission.WRITE_MEDIA
 
+<!--Device-fileShare-function grantUriPermission(    uri: string,    bundleName: string,    flag: wantConstant.Flags,    callback: AsyncCallback<void>  ): void--><!--Device-fileShare-function grantUriPermission(    uri: string,    bundleName: string,    flag: wantConstant.Flags,    callback: AsyncCallback<void>  ): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.AppFileService
 
 **系统接口：** 此接口为系统接口。
@@ -84,6 +86,8 @@ function grantUriPermission(uri: string, bundleName: string, flag: wantConstant.
 **起始版本：** 9
 
 **需要权限：** ohos.permission.WRITE_MEDIA
+
+<!--Device-fileShare-function grantUriPermission(uri: string, bundleName: string, flag: wantConstant.Flags): Promise<void>--><!--Device-fileShare-function grantUriPermission(uri: string, bundleName: string, flag: wantConstant.Flags): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.AppFileService
 
@@ -149,6 +153,8 @@ function grantUriPermission(policies: Array<PolicyInfo>, targetBundleName: strin
 **起始版本：** 20
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
+
+<!--Device-fileShare-function grantUriPermission(policies: Array<PolicyInfo>, targetBundleName: string, appCloneIndex: int): Promise<void>--><!--Device-fileShare-function grantUriPermission(policies: Array<PolicyInfo>, targetBundleName: string, appCloneIndex: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 

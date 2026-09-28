@@ -8,6 +8,8 @@ enum AudioStreamDeviceChangeReason
 
 **起始版本：** 11
 
+<!--Device-audio-enum AudioStreamDeviceChangeReason--><!--Device-audio-enum AudioStreamDeviceChangeReason-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 ## REASON_UNKNOWN
@@ -22,7 +24,9 @@ REASON_UNKNOWN = 0
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AudioStreamDeviceChangeReason-REASON_UNKNOWN = 0--><!--Device-AudioStreamDeviceChangeReason-REASON_UNKNOWN = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -38,7 +42,9 @@ REASON_NEW_DEVICE_AVAILABLE = 1
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AudioStreamDeviceChangeReason-REASON_NEW_DEVICE_AVAILABLE = 1--><!--Device-AudioStreamDeviceChangeReason-REASON_NEW_DEVICE_AVAILABLE = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -54,7 +60,9 @@ REASON_OLD_DEVICE_UNAVAILABLE = 2
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AudioStreamDeviceChangeReason-REASON_OLD_DEVICE_UNAVAILABLE = 2--><!--Device-AudioStreamDeviceChangeReason-REASON_OLD_DEVICE_UNAVAILABLE = 2-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -70,7 +78,9 @@ REASON_OVERRODE = 3
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AudioStreamDeviceChangeReason-REASON_OVERRODE = 3--><!--Device-AudioStreamDeviceChangeReason-REASON_OVERRODE = 3-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -84,6 +94,8 @@ REASON_SESSION_ACTIVATED = 4
 
 **起始版本：** 20
 
+<!--Device-AudioStreamDeviceChangeReason-REASON_SESSION_ACTIVATED = 4--><!--Device-AudioStreamDeviceChangeReason-REASON_SESSION_ACTIVATED = 4-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 ## REASON_STREAM_PRIORITY_CHANGED
@@ -95,5 +107,7 @@ REASON_STREAM_PRIORITY_CHANGED = 5
 更高优先级的音频流出现导致的系统设备切换。
 
 **起始版本：** 20
+
+<!--Device-AudioStreamDeviceChangeReason-REASON_STREAM_PRIORITY_CHANGED = 5--><!--Device-AudioStreamDeviceChangeReason-REASON_STREAM_PRIORITY_CHANGED = 5-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device

@@ -8,6 +8,8 @@ NativeMediaPlayerBridge 是[CreateNativeMediaPlayerCallback](arkts-arkweb-webvie
 
 **起始版本：** 12
 
+<!--Device-webview-interface NativeMediaPlayerBridge--><!--Device-webview-interface NativeMediaPlayerBridge-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ enterFullscreen(): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-NativeMediaPlayerBridge-enterFullscreen(): void--><!--Device-NativeMediaPlayerBridge-enterFullscreen(): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **示例**
@@ -45,6 +49,8 @@ exitFullscreen(): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-NativeMediaPlayerBridge-exitFullscreen(): void--><!--Device-NativeMediaPlayerBridge-exitFullscreen(): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -64,6 +70,8 @@ pause(): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-NativeMediaPlayerBridge-pause(): void--><!--Device-NativeMediaPlayerBridge-pause(): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **示例**
@@ -81,6 +89,8 @@ play(): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-NativeMediaPlayerBridge-play(): void--><!--Device-NativeMediaPlayerBridge-play(): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -100,6 +110,8 @@ release(): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-NativeMediaPlayerBridge-release(): void--><!--Device-NativeMediaPlayerBridge-release(): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **示例**
@@ -115,6 +127,8 @@ resumePlayer?(): void
 通知应用重建播放器，并恢复播放器的状态信息。仅与 suspendPlayer 成对出现。
 
 **起始版本：** 12
+
+<!--Device-NativeMediaPlayerBridge-resumePlayer?(): void--><!--Device-NativeMediaPlayerBridge-resumePlayer?(): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -133,6 +147,8 @@ seek(targetTime: number): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-NativeMediaPlayerBridge-seek(targetTime: number): void--><!--Device-NativeMediaPlayerBridge-seek(targetTime: number): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -158,6 +174,8 @@ setMuted(muted: boolean): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-NativeMediaPlayerBridge-setMuted(muted: boolean): void--><!--Device-NativeMediaPlayerBridge-setMuted(muted: boolean): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -181,6 +199,8 @@ setPlaybackRate(playbackRate: number): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-NativeMediaPlayerBridge-setPlaybackRate(playbackRate: number): void--><!--Device-NativeMediaPlayerBridge-setPlaybackRate(playbackRate: number): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -206,6 +226,8 @@ setVolume(volume: number): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-NativeMediaPlayerBridge-setVolume(volume: number): void--><!--Device-NativeMediaPlayerBridge-setVolume(volume: number): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -227,6 +249,8 @@ suspendPlayer?(type: SuspendType): void
 通知应用销毁播放器，并保存播放器的状态信息。仅与 resumePlayer 成对出现。
 
 **起始版本：** 12
+
+<!--Device-NativeMediaPlayerBridge-suspendPlayer?(type: SuspendType): void--><!--Device-NativeMediaPlayerBridge-suspendPlayer?(type: SuspendType): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -251,6 +275,8 @@ updateRect(x: number, y: number, width: number, height: number): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-NativeMediaPlayerBridge-updateRect(x: number, y: number, width: number, height: number): void--><!--Device-NativeMediaPlayerBridge-updateRect(x: number, y: number, width: number, height: number): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

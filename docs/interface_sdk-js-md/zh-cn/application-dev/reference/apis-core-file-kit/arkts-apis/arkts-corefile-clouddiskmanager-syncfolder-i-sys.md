@@ -8,6 +8,8 @@ interface SyncFolder
 
 **起始版本：** 21
 
+<!--Device-cloudDiskManager-interface SyncFolder--><!--Device-cloudDiskManager-interface SyncFolder-End-->
+
 **系统能力：** SystemCapability.FileManagement.CloudDiskManager
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ bundleName: string
 
 **起始版本：** 21
 
+<!--Device-SyncFolder-bundleName: string--><!--Device-SyncFolder-bundleName: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.CloudDiskManager
 
 **系统接口：** 此接口为系统接口。
@@ -46,6 +50,8 @@ customAlias?: string
 
 **起始版本：** 21
 
+<!--Device-SyncFolder-customAlias?: string--><!--Device-SyncFolder-customAlias?: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.CloudDiskManager
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +67,8 @@ displayNameResId?: number
 **类型：** number
 
 **起始版本：** 21
+
+<!--Device-SyncFolder-displayNameResId?: int--><!--Device-SyncFolder-displayNameResId?: int-End-->
 
 **系统能力：** SystemCapability.FileManagement.CloudDiskManager
 
@@ -80,6 +88,8 @@ isSupportPlaceHolder?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SyncFolder-isSupportPlaceHolder?: boolean--><!--Device-SyncFolder-isSupportPlaceHolder?: boolean-End-->
+
 **系统能力：** SystemCapability.FileManagement.CloudDiskManager
 
 **系统接口：** 此接口为系统接口。
@@ -96,6 +106,8 @@ path: string
 
 **起始版本：** 21
 
+<!--Device-SyncFolder-path: string--><!--Device-SyncFolder-path: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.CloudDiskManager
 
 **系统接口：** 此接口为系统接口。
@@ -111,6 +123,8 @@ state: SyncFolderState
 **类型：** [SyncFolderState](arkts-corefile-clouddiskmanager-syncfolderstate-e-sys.md)
 
 **起始版本：** 21
+
+<!--Device-SyncFolder-state: SyncFolderState--><!--Device-SyncFolder-state: SyncFolderState-End-->
 
 **系统能力：** SystemCapability.FileManagement.CloudDiskManager
 

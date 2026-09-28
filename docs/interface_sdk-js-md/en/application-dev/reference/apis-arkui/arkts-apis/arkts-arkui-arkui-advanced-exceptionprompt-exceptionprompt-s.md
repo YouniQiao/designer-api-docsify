@@ -10,6 +10,8 @@ Declare struct ExceptionPrompt higher-order component.
 
 **Decorator:** @Component
 
+<!--Device-unnamed-export declare struct ExceptionPrompt--><!--Device-unnamed-export declare struct ExceptionPrompt-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -32,6 +34,8 @@ The build function is a member function that must return an ArkTS component type
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ExceptionPrompt-build(): void--><!--Device-ExceptionPrompt-build(): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onActionTextClick
@@ -48,6 +52,8 @@ Callback when click the icon button.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ExceptionPrompt-onActionTextClick?: () => void--><!--Device-ExceptionPrompt-onActionTextClick?: () => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onTipClick
@@ -63,6 +69,8 @@ Callback when clicking the text on the left.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ExceptionPrompt-onTipClick?: () => void--><!--Device-ExceptionPrompt-onTipClick?: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -81,5 +89,7 @@ Configuration information of ExceptionPrompt.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ExceptionPrompt-options: PromptOptions--><!--Device-ExceptionPrompt-options: PromptOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

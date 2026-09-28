@@ -8,6 +8,8 @@ enum StopBits
 
 **起始版本：** 19
 
+<!--Device-serialManager-enum StopBits--><!--Device-serialManager-enum StopBits-End-->
+
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
 ## STOPBIT_1
@@ -20,6 +22,8 @@ STOPBIT_1 = 0
 
 **起始版本：** 19
 
+<!--Device-StopBits-STOPBIT_1 = 0--><!--Device-StopBits-STOPBIT_1 = 0-End-->
+
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
 ## STOPBIT_2
@@ -31,5 +35,7 @@ STOPBIT_2 = 1
 表示停止位宽为2比特。
 
 **起始版本：** 19
+
+<!--Device-StopBits-STOPBIT_2 = 1--><!--Device-StopBits-STOPBIT_2 = 1-End-->
 
 **系统能力：** SystemCapability.USB.USBManager.Serial

@@ -12,6 +12,8 @@ declare interface Stat
 
 **替代接口：** [Stat](arkts-corefile-file-fs-stat-i.md)
 
+<!--Device-unnamed-declare interface Stat--><!--Device-unnamed-declare interface Stat-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## 导入模块
@@ -32,6 +34,8 @@ isBlockDevice(): boolean
 **废弃版本：** 9
 
 **替代接口：** [isBlockDevice](arkts-corefile-file-fs-stat-i.md#isblockdevice)
+
+<!--Device-Stat-isBlockDevice(): boolean--><!--Device-Stat-isBlockDevice(): boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -62,6 +66,8 @@ isCharacterDevice(): boolean
 
 **替代接口：** [isCharacterDevice](arkts-corefile-file-fs-stat-i.md#ischaracterdevice)
 
+<!--Device-Stat-isCharacterDevice(): boolean--><!--Device-Stat-isCharacterDevice(): boolean-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
@@ -90,6 +96,8 @@ isDirectory(): boolean
 **废弃版本：** 9
 
 **替代接口：** [isDirectory](arkts-corefile-file-fs-stat-i.md#isdirectory)
+
+<!--Device-Stat-isDirectory(): boolean--><!--Device-Stat-isDirectory(): boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -120,6 +128,8 @@ isFIFO(): boolean
 
 **替代接口：** [isFIFO](arkts-corefile-file-fs-stat-i.md#isfifo)
 
+<!--Device-Stat-isFIFO(): boolean--><!--Device-Stat-isFIFO(): boolean-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
@@ -148,6 +158,8 @@ isFile(): boolean
 **废弃版本：** 9
 
 **替代接口：** [isFile](arkts-corefile-file-fs-stat-i.md#isfile)
+
+<!--Device-Stat-isFile(): boolean--><!--Device-Stat-isFile(): boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -178,6 +190,8 @@ isSocket(): boolean
 
 **替代接口：** [isSocket](arkts-corefile-file-fs-stat-i.md#issocket)
 
+<!--Device-Stat-isSocket(): boolean--><!--Device-Stat-isSocket(): boolean-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
@@ -206,6 +220,8 @@ isSymbolicLink(): boolean
 **废弃版本：** 9
 
 **替代接口：** [isSymbolicLink](arkts-corefile-file-fs-stat-i.md#issymboliclink)
+
+<!--Device-Stat-isSymbolicLink(): boolean--><!--Device-Stat-isSymbolicLink(): boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -238,6 +254,8 @@ readonly atime: number
 
 **替代接口：** [atime](arkts-corefile-file-fs-stat-i.md#atime)
 
+<!--Device-Stat-readonly atime: number--><!--Device-Stat-readonly atime: number-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## blocks
@@ -253,6 +271,8 @@ readonly blocks: number
 **起始版本：** 6
 
 **废弃版本：** 9
+
+<!--Device-Stat-readonly blocks: number--><!--Device-Stat-readonly blocks: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -272,6 +292,8 @@ readonly ctime: number
 
 **替代接口：** [ctime](arkts-corefile-file-fs-stat-i.md#ctime)
 
+<!--Device-Stat-readonly ctime: number--><!--Device-Stat-readonly ctime: number-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## dev
@@ -287,6 +309,8 @@ readonly dev: number
 **起始版本：** 6
 
 **废弃版本：** 9
+
+<!--Device-Stat-readonly dev: number--><!--Device-Stat-readonly dev: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -306,6 +330,8 @@ readonly gid: number
 
 **替代接口：** [gid](arkts-corefile-file-fs-stat-i.md#gid)
 
+<!--Device-Stat-readonly gid: number--><!--Device-Stat-readonly gid: number-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## ino
@@ -323,6 +349,8 @@ readonly ino: number
 **废弃版本：** 9
 
 **替代接口：** ino
+
+<!--Device-Stat-readonly ino: number--><!--Device-Stat-readonly ino: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -362,6 +390,8 @@ readonly mode: number
 
 **替代接口：** [mode](arkts-corefile-file-fs-stat-i.md#mode)
 
+<!--Device-Stat-readonly mode: number--><!--Device-Stat-readonly mode: number-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## mtime
@@ -380,6 +410,8 @@ readonly mtime: number
 
 **替代接口：** [mtime](arkts-corefile-file-fs-stat-i.md#mtime)
 
+<!--Device-Stat-readonly mtime: number--><!--Device-Stat-readonly mtime: number-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## nlink
@@ -396,6 +428,8 @@ readonly nlink: number
 
 **废弃版本：** 9
 
+<!--Device-Stat-readonly nlink: number--><!--Device-Stat-readonly nlink: number-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## rdev
@@ -411,6 +445,8 @@ readonly rdev: number
 **起始版本：** 6
 
 **废弃版本：** 9
+
+<!--Device-Stat-readonly rdev: number--><!--Device-Stat-readonly rdev: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -430,6 +466,8 @@ readonly size: number
 
 **替代接口：** [size](arkts-corefile-file-fs-stat-i.md#size)
 
+<!--Device-Stat-readonly size: number--><!--Device-Stat-readonly size: number-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## uid
@@ -447,5 +485,7 @@ readonly uid: number
 **废弃版本：** 9
 
 **替代接口：** [uid](arkts-corefile-file-fs-stat-i.md#uid)
+
+<!--Device-Stat-readonly uid: number--><!--Device-Stat-readonly uid: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO

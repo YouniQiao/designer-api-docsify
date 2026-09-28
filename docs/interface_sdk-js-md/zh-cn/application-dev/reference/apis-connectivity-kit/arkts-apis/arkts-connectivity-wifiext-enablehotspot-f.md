@@ -26,6 +26,8 @@ function enableHotspot(): boolean
 
 **需要权限：** ohos.permission.MANAGE_WIFI_HOTSPOT_EXT
 
+<!--Device-wifiext-function enableHotspot(): boolean--><!--Device-wifiext-function enableHotspot(): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.AP.Extension
 
 **返回值：**

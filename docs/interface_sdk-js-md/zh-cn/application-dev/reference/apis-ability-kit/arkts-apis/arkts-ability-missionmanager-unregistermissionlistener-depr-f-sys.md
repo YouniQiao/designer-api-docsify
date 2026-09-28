@@ -21,6 +21,8 @@ function unregisterMissionListener(listenerId: number, callback: AsyncCallback<v
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
+<!--Device-missionManager-function unregisterMissionListener(listenerId: number, callback: AsyncCallback<void>): void--><!--Device-missionManager-function unregisterMissionListener(listenerId: number, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -88,6 +90,8 @@ function unregisterMissionListener(listenerId: number): Promise<void>
 **替代接口：** [off](arkts-ability-missionmanager-off-f-sys.md)
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
+
+<!--Device-missionManager-function unregisterMissionListener(listenerId: number): Promise<void>--><!--Device-missionManager-function unregisterMissionListener(listenerId: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 

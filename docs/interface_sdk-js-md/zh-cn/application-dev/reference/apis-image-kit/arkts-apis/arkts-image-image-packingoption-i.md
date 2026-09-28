@@ -8,6 +8,8 @@ interface PackingOption
 
 **起始版本：** 6
 
+<!--Device-image-interface PackingOption--><!--Device-image-interface PackingOption-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
 ## 导入模块
@@ -36,6 +38,8 @@ PNG、WebP等支持透明度的格式会忽略此参数。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PackingOption-backgroundColor?: int--><!--Device-PackingOption-backgroundColor?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
 ## bufferSize
@@ -50,7 +54,9 @@ bufferSize?: number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-PackingOption-bufferSize?: int--><!--Device-PackingOption-bufferSize?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
@@ -65,6 +71,8 @@ desiredDynamicRange?: PackingDynamicRange
 **类型：** [PackingDynamicRange](arkts-image-image-packingdynamicrange-e.md)
 
 **起始版本：** 12
+
+<!--Device-PackingOption-desiredDynamicRange?: PackingDynamicRange--><!--Device-PackingOption-desiredDynamicRange?: PackingDynamicRange-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
@@ -86,7 +94,9 @@ format: string
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-PackingOption-format: string--><!--Device-PackingOption-format: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
@@ -110,6 +120,8 @@ maxEmbedThumbnailDimension?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PackingOption-maxEmbedThumbnailDimension?: int--><!--Device-PackingOption-maxEmbedThumbnailDimension?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
 ## needsPackGPS
@@ -128,6 +140,8 @@ true表示保留GPS信息，不进行隐私处理。false表示移除GPS信息�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PackingOption-needsPackGPS?: boolean--><!--Device-PackingOption-needsPackGPS?: boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
 ## needsPackProperties
@@ -141,6 +155,8 @@ needsPackProperties?: boolean
 **类型：** boolean
 
 **起始版本：** 12
+
+<!--Device-PackingOption-needsPackProperties?: boolean--><!--Device-PackingOption-needsPackProperties?: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
@@ -161,7 +177,9 @@ quality: number
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-PackingOption-quality: int--><!--Device-PackingOption-quality: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
@@ -194,6 +212,8 @@ sizeLimit?: PackingSizeLimit
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PackingOption-sizeLimit?: PackingSizeLimit--><!--Device-PackingOption-sizeLimit?: PackingSizeLimit-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
 ## tiffPackingOptions
@@ -209,5 +229,7 @@ TIFF图像编码选项。
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PackingOption-tiffPackingOptions?: PackingOptionsForTiff--><!--Device-PackingOption-tiffPackingOptions?: PackingOptionsForTiff-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker

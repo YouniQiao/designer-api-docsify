@@ -8,6 +8,8 @@ Rom收益
 
 **起始版本：** 26.2.0
 
+<!--Device-photoAccessHelper-interface CleanupSize--><!--Device-photoAccessHelper-interface CleanupSize-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ intervalIndex: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-CleanupSize-intervalIndex: int--><!--Device-CleanupSize-intervalIndex: int-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ Rom收益。单位为：字节。取值限定为整数。
 **起始版本：** 26.2.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-CleanupSize-revenue: int--><!--Device-CleanupSize-revenue: int-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

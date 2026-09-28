@@ -28,6 +28,8 @@ Creates a child component in the **WaterFlow** layout.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-FlowItemInterface-(): FlowItemAttribute--><!--Device-FlowItemInterface-(): FlowItemAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Summary

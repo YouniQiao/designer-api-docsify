@@ -8,6 +8,8 @@ interface AudioVolumeManager
 
 **起始版本：** 9
 
+<!--Device-audio-interface AudioVolumeManager--><!--Device-audio-interface AudioVolumeManager-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 ## 导入模块
@@ -27,6 +29,8 @@ forceVolumeKeyControlType(volumeType: AudioVolumeType, duration: number): void
 **起始版本：** 20
 
 **需要权限：** ohos.permission.MODIFY_AUDIO_SETTINGS
+
+<!--Device-AudioVolumeManager-forceVolumeKeyControlType(volumeType: AudioVolumeType, duration: int): void--><!--Device-AudioVolumeManager-forceVolumeKeyControlType(volumeType: AudioVolumeType, duration: int): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -79,6 +83,8 @@ getActiveStreamsVolumeInfo(): ActiveStreamsVolumeInfoArray
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioVolumeManager-getActiveStreamsVolumeInfo(): ActiveStreamsVolumeInfoArray--><!--Device-AudioVolumeManager-getActiveStreamsVolumeInfo(): ActiveStreamsVolumeInfoArray-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -107,6 +113,8 @@ getAppVolumePercentageForUid(uid: number): Promise<number>
 **起始版本：** 19
 
 **需要权限：** ohos.permission.MANAGE_AUDIO_CONFIG
+
+<!--Device-AudioVolumeManager-getAppVolumePercentageForUid(uid: int): Promise<int>--><!--Device-AudioVolumeManager-getAppVolumePercentageForUid(uid: int): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -152,6 +160,8 @@ getAudioVolumeTypeByStreamUsage(streamUsage: StreamUsage): AudioVolumeType
 
 **起始版本：** 20
 
+<!--Device-AudioVolumeManager-getAudioVolumeTypeByStreamUsage(streamUsage: StreamUsage): AudioVolumeType--><!--Device-AudioVolumeManager-getAudioVolumeTypeByStreamUsage(streamUsage: StreamUsage): AudioVolumeType-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -184,6 +194,8 @@ getMaxSystemVolume(volumeType: AudioVolumeType): number
 获取最大系统音量。
 
 **起始版本：** 20
+
+<!--Device-AudioVolumeManager-getMaxSystemVolume(volumeType: AudioVolumeType): int--><!--Device-AudioVolumeManager-getMaxSystemVolume(volumeType: AudioVolumeType): int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -218,6 +230,8 @@ getMinSystemVolume(volumeType: AudioVolumeType): number
 
 **起始版本：** 20
 
+<!--Device-AudioVolumeManager-getMinSystemVolume(volumeType: AudioVolumeType): int--><!--Device-AudioVolumeManager-getMinSystemVolume(volumeType: AudioVolumeType): int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -250,6 +264,8 @@ getMinSystemVolumePercentage(volumeType: AudioVolumeType): number
 获取指定流的最小音量百分比。
 
 **起始版本：** 23
+
+<!--Device-AudioVolumeManager-getMinSystemVolumePercentage(volumeType: AudioVolumeType): int--><!--Device-AudioVolumeManager-getMinSystemVolumePercentage(volumeType: AudioVolumeType): int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -296,6 +312,8 @@ getStreamUsagesByVolumeType(volumeType: AudioVolumeType): StreamUsageArray
 
 **起始版本：** 20
 
+<!--Device-AudioVolumeManager-getStreamUsagesByVolumeType(volumeType: AudioVolumeType): StreamUsageArray--><!--Device-AudioVolumeManager-getStreamUsagesByVolumeType(volumeType: AudioVolumeType): StreamUsageArray-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -329,6 +347,8 @@ getSupportedAudioVolumeTypes(): Array<Readonly<AudioVolumeType>>
 
 **起始版本：** 20
 
+<!--Device-AudioVolumeManager-getSupportedAudioVolumeTypes(): Array<Readonly<AudioVolumeType>>--><!--Device-AudioVolumeManager-getSupportedAudioVolumeTypes(): Array<Readonly<AudioVolumeType>>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -354,6 +374,8 @@ getSystemVolume(volumeType: AudioVolumeType): number
 获取系统音量。
 
 **起始版本：** 20
+
+<!--Device-AudioVolumeManager-getSystemVolume(volumeType: AudioVolumeType): int--><!--Device-AudioVolumeManager-getSystemVolume(volumeType: AudioVolumeType): int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -387,6 +409,8 @@ getSystemVolumeByUid(volumeType: AudioVolumeType, callingUid: number): number
 获取特定uid应用中的流媒体数量。
 
 **起始版本：** 20
+
+<!--Device-AudioVolumeManager-getSystemVolumeByUid(volumeType: AudioVolumeType, callingUid: int): int--><!--Device-AudioVolumeManager-getSystemVolumeByUid(volumeType: AudioVolumeType, callingUid: int): int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -422,6 +446,8 @@ getSystemVolumePercentage(volumeType: AudioVolumeType): number
 获取指定流的音量百分比。
 
 **起始版本：** 23
+
+<!--Device-AudioVolumeManager-getSystemVolumePercentage(volumeType: AudioVolumeType): int--><!--Device-AudioVolumeManager-getSystemVolumePercentage(volumeType: AudioVolumeType): int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -468,6 +494,8 @@ getVolumeGroupInfos(networkId: string, callback: AsyncCallback<VolumeGroupInfos>
 
 **起始版本：** 9
 
+<!--Device-AudioVolumeManager-getVolumeGroupInfos(networkId: string, callback: AsyncCallback<VolumeGroupInfos>): void--><!--Device-AudioVolumeManager-getVolumeGroupInfos(networkId: string, callback: AsyncCallback<VolumeGroupInfos>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -505,6 +533,8 @@ getVolumeGroupInfos(networkId: string): Promise<VolumeGroupInfos>
 
 **起始版本：** 9
 
+<!--Device-AudioVolumeManager-getVolumeGroupInfos(networkId: string): Promise<VolumeGroupInfos>--><!--Device-AudioVolumeManager-getVolumeGroupInfos(networkId: string): Promise<VolumeGroupInfos>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -539,6 +569,8 @@ getVolumeGroupInfosSync(networkId: string): VolumeGroupInfos
 获取音量组信息列表，同步返回结果。
 
 **起始版本：** 10
+
+<!--Device-AudioVolumeManager-getVolumeGroupInfosSync(networkId: string): VolumeGroupInfos--><!--Device-AudioVolumeManager-getVolumeGroupInfosSync(networkId: string): VolumeGroupInfos-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -587,6 +619,8 @@ getVolumeInUnitOfDb(volumeType: AudioVolumeType, volumeLevel: number, device: De
 
 **起始版本：** 20
 
+<!--Device-AudioVolumeManager-getVolumeInUnitOfDb(volumeType: AudioVolumeType, volumeLevel: int, device: DeviceType): double--><!--Device-AudioVolumeManager-getVolumeInUnitOfDb(volumeType: AudioVolumeType, volumeLevel: int, device: DeviceType): double-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -627,6 +661,8 @@ isAppVolumeMutedForUid(uid: number, owned: boolean): Promise<boolean>
 **起始版本：** 19
 
 **需要权限：** ohos.permission.MANAGE_AUDIO_CONFIG
+
+<!--Device-AudioVolumeManager-isAppVolumeMutedForUid(uid: int, owned: boolean): Promise<boolean>--><!--Device-AudioVolumeManager-isAppVolumeMutedForUid(uid: int, owned: boolean): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -673,6 +709,8 @@ isSystemMuted(volumeType: AudioVolumeType): boolean
 
 **起始版本：** 20
 
+<!--Device-AudioVolumeManager-isSystemMuted(volumeType: AudioVolumeType): boolean--><!--Device-AudioVolumeManager-isSystemMuted(volumeType: AudioVolumeType): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -707,6 +745,8 @@ off(type: 'appVolumeChangeForUid', callback?: Callback<VolumeEvent>): void
 **起始版本：** 19
 
 **需要权限：** ohos.permission.MANAGE_AUDIO_CONFIG
+
+<!--Device-AudioVolumeManager-off(type: 'appVolumeChangeForUid', callback?: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-off(type: 'appVolumeChangeForUid', callback?: Callback<VolumeEvent>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -755,6 +795,8 @@ off(type: 'activeVolumeTypeChange', callback?: Callback<AudioVolumeType>): void
 
 **起始版本：** 20
 
+<!--Device-AudioVolumeManager-off(type: 'activeVolumeTypeChange', callback?: Callback<AudioVolumeType>): void--><!--Device-AudioVolumeManager-off(type: 'activeVolumeTypeChange', callback?: Callback<AudioVolumeType>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -798,6 +840,8 @@ off(type: 'systemVolumeChange', callback?: Callback<VolumeEvent>): void
 取消监听系统音量变化事件。
 
 **起始版本：** 20
+
+<!--Device-AudioVolumeManager-off(type: 'systemVolumeChange', callback?: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-off(type: 'systemVolumeChange', callback?: Callback<VolumeEvent>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -845,6 +889,8 @@ offSystemVolumeChangeByFilter(callback?: Callback<VolumeEvent>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioVolumeManager-offSystemVolumeChangeByFilter(callback?: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-offSystemVolumeChangeByFilter(callback?: Callback<VolumeEvent>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -871,6 +917,8 @@ offVolumePercentageChange(callback?: Callback<VolumeEvent>): void
 取消订阅系统音量变化事件。
 
 **起始版本：** 23
+
+<!--Device-AudioVolumeManager-offVolumePercentageChange(callback?: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-offVolumePercentageChange(callback?: Callback<VolumeEvent>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -920,6 +968,8 @@ on(type: 'appVolumeChangeForUid', uid: number, callback: Callback<VolumeEvent>):
 
 **需要权限：** ohos.permission.MANAGE_AUDIO_CONFIG
 
+<!--Device-AudioVolumeManager-on(type: 'appVolumeChangeForUid', uid: int, callback: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-on(type: 'appVolumeChangeForUid', uid: int, callback: Callback<VolumeEvent>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -962,6 +1012,8 @@ on(type: 'activeVolumeTypeChange', callback: Callback<AudioVolumeType>): void
 
 **起始版本：** 20
 
+<!--Device-AudioVolumeManager-on(type: 'activeVolumeTypeChange', callback: Callback<AudioVolumeType>): void--><!--Device-AudioVolumeManager-on(type: 'activeVolumeTypeChange', callback: Callback<AudioVolumeType>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -997,6 +1049,8 @@ on(type: 'systemVolumeChange', callback: Callback<VolumeEvent>): void
 监听系统音量变化事件（当系统音量发生变化时触发）。使用callback异步回调。
 
 **起始版本：** 20
+
+<!--Device-AudioVolumeManager-on(type: 'systemVolumeChange', callback: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-on(type: 'systemVolumeChange', callback: Callback<VolumeEvent>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -1036,6 +1090,8 @@ onSystemVolumeChangeByFilter(filter: SystemVolumeFilter, callback: Callback<Volu
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioVolumeManager-onSystemVolumeChangeByFilter(filter: SystemVolumeFilter, callback: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-onSystemVolumeChangeByFilter(filter: SystemVolumeFilter, callback: Callback<VolumeEvent>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -1063,6 +1119,8 @@ onVolumePercentageChange(callback: Callback<VolumeEvent>): void
 监听系统音量百分比变化事件。使用callback异步回调。
 
 **起始版本：** 23
+
+<!--Device-AudioVolumeManager-onVolumePercentageChange(callback: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-onVolumePercentageChange(callback: Callback<VolumeEvent>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -1103,6 +1161,8 @@ setAppVolumeMutedForUid(uid: number, muted: boolean): Promise<void>
 **起始版本：** 19
 
 **需要权限：** ohos.permission.MANAGE_AUDIO_CONFIG
+
+<!--Device-AudioVolumeManager-setAppVolumeMutedForUid(uid: int, muted: boolean): Promise<void>--><!--Device-AudioVolumeManager-setAppVolumeMutedForUid(uid: int, muted: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -1152,6 +1212,8 @@ setAppVolumePercentageForUid(uid: number, volume: number): Promise<void>
 
 **需要权限：** ohos.permission.MANAGE_AUDIO_CONFIG
 
+<!--Device-AudioVolumeManager-setAppVolumePercentageForUid(uid: int, volume: int): Promise<void>--><!--Device-AudioVolumeManager-setAppVolumePercentageForUid(uid: int, volume: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -1200,6 +1262,8 @@ setSystemVolumeByUid(volumeType: AudioVolumeType, volume: number, callingUid: nu
 **起始版本：** 20
 
 **需要权限：** ohos.permission.ACCESS_NOTIFICATION_POLICY
+
+<!--Device-AudioVolumeManager-setSystemVolumeByUid(volumeType: AudioVolumeType, volume: int, callingUid: int): Promise<void>--><!--Device-AudioVolumeManager-setSystemVolumeByUid(volumeType: AudioVolumeType, volume: int, callingUid: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -1251,6 +1315,8 @@ setSystemVolumePercentage(volumeType: AudioVolumeType, percentage: number): Prom
 **起始版本：** 23
 
 **需要权限：** ohos.permission.MANAGE_AUDIO_CONFIG
+
+<!--Device-AudioVolumeManager-setSystemVolumePercentage(volumeType: AudioVolumeType, percentage: int): Promise<void>--><!--Device-AudioVolumeManager-setSystemVolumePercentage(volumeType: AudioVolumeType, percentage: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -1305,6 +1371,8 @@ setVoipCapturerMuteForUid(uid: number, streamId: number, muted: boolean): Promis
 **需要权限：** ohos.permission.MUTE_VOIP_CAPTURE
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioVolumeManager-setVoipCapturerMuteForUid(uid: int, streamId: long, muted: boolean): Promise<void>--><!--Device-AudioVolumeManager-setVoipCapturerMuteForUid(uid: int, streamId: long, muted: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -1367,6 +1435,8 @@ setVoipRendererMuteForUid(uid: number, streamId: number, muted: boolean): Promis
 **需要权限：** ohos.permission.MUTE_VOIP_PLAYBACK
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioVolumeManager-setVoipRendererMuteForUid(uid: int, streamId: long, muted: boolean): Promise<void>--><!--Device-AudioVolumeManager-setVoipRendererMuteForUid(uid: int, streamId: long, muted: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 

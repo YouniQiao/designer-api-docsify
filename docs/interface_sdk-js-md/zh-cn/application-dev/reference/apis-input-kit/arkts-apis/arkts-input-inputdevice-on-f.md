@@ -16,6 +16,8 @@ function on(type: 'change', listener: Callback<DeviceListener>): void
 
 **起始版本：** 9
 
+<!--Device-inputDevice-function on(type: 'change', listener: Callback<DeviceListener>): void--><!--Device-inputDevice-function on(type: 'change', listener: Callback<DeviceListener>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 **参数：**

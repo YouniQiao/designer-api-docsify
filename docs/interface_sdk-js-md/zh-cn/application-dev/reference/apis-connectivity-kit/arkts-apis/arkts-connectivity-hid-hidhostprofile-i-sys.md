@@ -10,6 +10,8 @@ HidHostProfile类提供蓝牙HID设备的连接和断开等管理功能，适用
 
 **起始版本：** 10
 
+<!--Device-hid-interface HidHostProfile extends BaseProfile--><!--Device-hid-interface HidHostProfile extends BaseProfile-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -29,6 +31,8 @@ connect(deviceId: string): void
 **起始版本：** 10
 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
+
+<!--Device-HidHostProfile-connect(deviceId: string): void--><!--Device-HidHostProfile-connect(deviceId: string): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -76,6 +80,8 @@ disconnect(deviceId: string): void
 **起始版本：** 10
 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
+
+<!--Device-HidHostProfile-disconnect(deviceId: string): void--><!--Device-HidHostProfile-disconnect(deviceId: string): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

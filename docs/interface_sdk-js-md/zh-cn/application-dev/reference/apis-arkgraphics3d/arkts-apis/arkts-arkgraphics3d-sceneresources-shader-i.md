@@ -12,6 +12,8 @@ export interface Shader extends SceneResource
 
 **起始版本：** 12
 
+<!--Device-unnamed-export interface Shader extends SceneResource--><!--Device-unnamed-export interface Shader extends SceneResource-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## setShaderInputs
@@ -25,6 +27,8 @@ setShaderInputs(inputs: Record<string, number | Vec2 | Vec3 | Vec4 | Image>): vo
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Shader-setShaderInputs(inputs: Record<string, double | Vec2 | Vec3 | Vec4 | Image>): void--><!--Device-Shader-setShaderInputs(inputs: Record<string, double | Vec2 | Vec3 | Vec4 | Image>): void-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -84,5 +88,7 @@ readonly inputs: Record<string, number | Vec2 | Vec3 | Vec4 | Image>
 **类型：** Record&lt;string, number &#124; [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md) &#124; [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md) &#124; [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md) &#124; [Image](arkts-arkgraphics3d-sceneresources-image-i.md)&gt;
 
 **起始版本：** 12
+
+<!--Device-Shader-readonly inputs: Record<string, double | Vec2 | Vec3 | Vec4 | Image>--><!--Device-Shader-readonly inputs: Record<string, double | Vec2 | Vec3 | Vec4 | Image>-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

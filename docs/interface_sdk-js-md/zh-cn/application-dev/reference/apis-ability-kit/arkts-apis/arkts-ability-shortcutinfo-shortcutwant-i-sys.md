@@ -8,6 +8,8 @@ export interface ShortcutWant
 
 **起始版本：** 20
 
+<!--Device-unnamed-export interface ShortcutWant--><!--Device-unnamed-export interface ShortcutWant-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
 ## action
@@ -23,6 +25,8 @@ action?: string
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ShortcutWant-action?: string--><!--Device-ShortcutWant-action?: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
@@ -42,6 +46,8 @@ flags?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ShortcutWant-flags?: int--><!--Device-ShortcutWant-flags?: int-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
 **系统接口：** 此接口为系统接口。
@@ -59,6 +65,8 @@ uri?: string
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ShortcutWant-uri?: string--><!--Device-ShortcutWant-uri?: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 

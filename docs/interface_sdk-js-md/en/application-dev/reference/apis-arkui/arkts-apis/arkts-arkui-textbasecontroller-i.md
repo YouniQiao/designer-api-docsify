@@ -8,6 +8,8 @@ Defines a text selection controller.
 
 **Since:** 12
 
+<!--Device-unnamed-declare interface TextBaseController--><!--Device-unnamed-declare interface TextBaseController-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## closeSelectionMenu
@@ -24,6 +26,8 @@ Closes the custom or default text selection menu.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TextBaseController-closeSelectionMenu(): void--><!--Device-TextBaseController-closeSelectionMenu(): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## getLayoutManager
@@ -39,6 +43,8 @@ Obtains a **LayoutManager** object.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextBaseController-getLayoutManager(): LayoutManager--><!--Device-TextBaseController-getLayoutManager(): LayoutManager-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -77,6 +83,8 @@ unchanged.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextBaseController-setSelection(selectionStart: number, selectionEnd: number, options?: SelectionOptions): void--><!--Device-TextBaseController-setSelection(selectionStart: number, selectionEnd: number, options?: SelectionOptions): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

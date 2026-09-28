@@ -8,6 +8,8 @@ interface AudioCapturerMicInConfig
 
 **起始版本：** 23
 
+<!--Device-audio-interface AudioCapturerMicInConfig--><!--Device-audio-interface AudioCapturerMicInConfig-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ capturerInfo: AudioCapturerInfo
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioCapturerMicInConfig-capturerInfo: AudioCapturerInfo--><!--Device-AudioCapturerMicInConfig-capturerInfo: AudioCapturerInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **系统接口：** 此接口为系统接口。
@@ -52,6 +56,8 @@ ecStreamInfo?: AudioStreamInfo
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioCapturerMicInConfig-ecStreamInfo?: AudioStreamInfo--><!--Device-AudioCapturerMicInConfig-ecStreamInfo?: AudioStreamInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **系统接口：** 此接口为系统接口。
@@ -69,6 +75,8 @@ micInStreamInfo: AudioStreamInfo
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioCapturerMicInConfig-micInStreamInfo: AudioStreamInfo--><!--Device-AudioCapturerMicInConfig-micInStreamInfo: AudioStreamInfo-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -98,6 +106,8 @@ preferredInputDevice?: AudioDeviceDescriptor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioCapturerMicInConfig-preferredInputDevice?: AudioDeviceDescriptor--><!--Device-AudioCapturerMicInConfig-preferredInputDevice?: AudioDeviceDescriptor-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **系统接口：** 此接口为系统接口。
@@ -115,6 +125,8 @@ processedStreamInfo?: AudioStreamInfo
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioCapturerMicInConfig-processedStreamInfo?: AudioStreamInfo--><!--Device-AudioCapturerMicInConfig-processedStreamInfo?: AudioStreamInfo-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 

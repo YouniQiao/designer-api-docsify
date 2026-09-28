@@ -21,6 +21,8 @@ function removeAll(bundle: BundleOption, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notification-function removeAll(bundle: BundleOption, callback: AsyncCallback<void>): void--><!--Device-notification-function removeAll(bundle: BundleOption, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +53,8 @@ function removeAll(callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notification-function removeAll(callback: AsyncCallback<void>): void--><!--Device-notification-function removeAll(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -79,6 +83,8 @@ function removeAll(userId: number, callback: AsyncCallback<void>): void
 **替代接口：** [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notification-function removeAll(userId: number, callback: AsyncCallback<void>): void--><!--Device-notification-function removeAll(userId: number, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -109,6 +115,8 @@ function removeAll(userId: number): Promise<void>
 **替代接口：** [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notification-function removeAll(userId: number): Promise<void>--><!--Device-notification-function removeAll(userId: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -144,6 +152,8 @@ function removeAll(bundle?: BundleOption): Promise<void>
 **替代接口：** [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notification-function removeAll(bundle?: BundleOption): Promise<void>--><!--Device-notification-function removeAll(bundle?: BundleOption): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

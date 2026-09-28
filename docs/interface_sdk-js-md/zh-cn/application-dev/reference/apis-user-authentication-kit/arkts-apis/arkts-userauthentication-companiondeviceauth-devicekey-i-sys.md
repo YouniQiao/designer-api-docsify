@@ -8,6 +8,8 @@ interface DeviceKey
 
 **起始版本：** 23
 
+<!--Device-companionDeviceAuth-interface DeviceKey--><!--Device-companionDeviceAuth-interface DeviceKey-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ deviceId: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DeviceKey-deviceId: string--><!--Device-DeviceKey-deviceId: string-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ deviceIdType: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DeviceKey-deviceIdType: int--><!--Device-DeviceKey-deviceIdType: int-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
@@ -70,6 +76,8 @@ deviceSubProfileId?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DeviceKey-deviceSubProfileId?: int--><!--Device-DeviceKey-deviceSubProfileId?: int-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
 **系统接口：** 此接口为系统接口。
@@ -87,6 +95,8 @@ deviceUserId: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DeviceKey-deviceUserId: int--><!--Device-DeviceKey-deviceUserId: int-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 

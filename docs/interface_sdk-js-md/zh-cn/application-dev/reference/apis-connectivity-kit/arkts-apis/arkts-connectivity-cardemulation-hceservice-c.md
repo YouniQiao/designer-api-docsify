@@ -8,6 +8,8 @@ export class HceService
 
 **起始版本：** 8
 
+<!--Device-cardEmulation-export class HceService--><!--Device-cardEmulation-export class HceService-End-->
+
 **系统能力：** SystemCapability.Communication.NFC.CardEmulation
 
 ## 导入模块
@@ -31,6 +33,8 @@ off(type: 'hceCmd', callback?: AsyncCallback<number[]>): void
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-HceService-off(type: 'hceCmd', callback?: AsyncCallback<int[]>): void--><!--Device-HceService-off(type: 'hceCmd', callback?: AsyncCallback<int[]>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.CardEmulation
 
@@ -98,6 +102,8 @@ on(type: 'hceCmd', callback: AsyncCallback<number[]>): void
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HceService-on(type: 'hceCmd', callback: AsyncCallback<int[]>): void--><!--Device-HceService-on(type: 'hceCmd', callback: AsyncCallback<int[]>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.CardEmulation
 
@@ -208,7 +214,9 @@ start(elementName: ElementName, aidList: string[]): void
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HceService-start(elementName: ElementName, aidList: string[]): void--><!--Device-HceService-start(elementName: ElementName, aidList: string[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.CardEmulation
 
@@ -242,7 +250,9 @@ stop(elementName: ElementName): void
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HceService-stop(elementName: ElementName): void--><!--Device-HceService-stop(elementName: ElementName): void-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.CardEmulation
 
@@ -275,7 +285,9 @@ transmit(response: number[]): Promise<void>
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HceService-transmit(response: int[]): Promise<void>--><!--Device-HceService-transmit(response: int[]): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.CardEmulation
 
@@ -350,7 +362,9 @@ transmit(response: number[], callback: AsyncCallback<void>): void
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HceService-transmit(response: int[], callback: AsyncCallback<void>): void--><!--Device-HceService-transmit(response: int[], callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.CardEmulation
 
@@ -427,6 +441,8 @@ sendResponse(responseApdu: number[]): void
 **需要权限：** ohos.permission.NFC_CARD_EMULATION
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HceService-sendResponse(responseApdu: number[]): void--><!--Device-HceService-sendResponse(responseApdu: number[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.CardEmulation
 
@@ -525,6 +541,8 @@ startHCE(aidList: string[]): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HceService-startHCE(aidList: string[]): boolean--><!--Device-HceService-startHCE(aidList: string[]): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.NFC.CardEmulation
 
 **参数：**
@@ -620,6 +638,8 @@ stopHCE(): boolean
 **需要权限：** ohos.permission.NFC_CARD_EMULATION
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HceService-stopHCE(): boolean--><!--Device-HceService-stopHCE(): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.CardEmulation
 

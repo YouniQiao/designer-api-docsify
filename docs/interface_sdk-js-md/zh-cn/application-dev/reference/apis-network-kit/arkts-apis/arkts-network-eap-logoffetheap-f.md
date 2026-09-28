@@ -18,6 +18,8 @@ function logOffEthEap(netId: number): void
 
 **需要权限：** ohos.permission.MANAGE_ENTERPRISE_WIFI_CONNECTION
 
+<!--Device-eap-function logOffEthEap(netId: int): void--><!--Device-eap-function logOffEthEap(netId: int): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
 **参数：**

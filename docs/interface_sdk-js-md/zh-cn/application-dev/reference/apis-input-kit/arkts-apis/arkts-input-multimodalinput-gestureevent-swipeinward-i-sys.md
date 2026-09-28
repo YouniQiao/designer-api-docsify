@@ -8,6 +8,8 @@ export declare interface SwipeInward
 
 **起始版本：** 12
 
+<!--Device-unnamed-export declare interface SwipeInward--><!--Device-unnamed-export declare interface SwipeInward-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ type: ActionType
 
 **起始版本：** 12
 
+<!--Device-SwipeInward-type: ActionType--><!--Device-SwipeInward-type: ActionType-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **系统接口：** 此接口为系统接口。
@@ -46,6 +50,8 @@ x: number
 
 **起始版本：** 12
 
+<!--Device-SwipeInward-x: int--><!--Device-SwipeInward-x: int-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +67,8 @@ y: number
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-SwipeInward-y: int--><!--Device-SwipeInward-y: int-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 

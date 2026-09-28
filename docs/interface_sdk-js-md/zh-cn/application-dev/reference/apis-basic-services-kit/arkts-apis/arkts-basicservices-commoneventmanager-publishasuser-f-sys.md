@@ -16,6 +16,8 @@ function publishAsUser(event: string, userId: number, callback: AsyncCallback<vo
 
 **起始版本：** 9
 
+<!--Device-commonEventManager-function publishAsUser(event: string, userId: int, callback: AsyncCallback<void>): void--><!--Device-commonEventManager-function publishAsUser(event: string, userId: int, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **系统接口：** 此接口为系统接口。
@@ -79,6 +81,8 @@ function publishAsUser(
 向指定用户发布公共事件并指定发布信息。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-commonEventManager-function publishAsUser(    event: string,    userId: int,    options: CommonEventPublishData,    callback: AsyncCallback<void>  ): void--><!--Device-commonEventManager-function publishAsUser(    event: string,    userId: int,    options: CommonEventPublishData,    callback: AsyncCallback<void>  ): void-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 

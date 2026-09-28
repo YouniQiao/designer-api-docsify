@@ -18,6 +18,8 @@ function exit(): Promise<void>
 
 **需要权限：** ohos.permission.PRINT
 
+<!--Device-scan-function exit(): Promise<void>--><!--Device-scan-function exit(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **返回值：**

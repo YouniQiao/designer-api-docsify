@@ -18,6 +18,8 @@ function on(type: 'scanDeviceFound', callback: Callback<ScannerDevice>): void
 
 **需要权限：** ohos.permission.PRINT
 
+<!--Device-scan-function on(type: 'scanDeviceFound', callback: Callback<ScannerDevice>): void--><!--Device-scan-function on(type: 'scanDeviceFound', callback: Callback<ScannerDevice>): void-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **参数：**
@@ -55,6 +57,8 @@ function on(type: 'scanDeviceSync', callback: Callback<ScannerSyncDevice>): void
 **起始版本：** 20
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
+
+<!--Device-scan-function on(type: 'scanDeviceSync', callback: Callback<ScannerSyncDevice>): void--><!--Device-scan-function on(type: 'scanDeviceSync', callback: Callback<ScannerSyncDevice>): void-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 

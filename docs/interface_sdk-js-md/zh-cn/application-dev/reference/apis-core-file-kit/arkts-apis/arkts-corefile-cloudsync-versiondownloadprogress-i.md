@@ -8,6 +8,8 @@ interface VersionDownloadProgress
 
 **起始版本：** 20
 
+<!--Device-cloudSync-interface VersionDownloadProgress--><!--Device-cloudSync-interface VersionDownloadProgress-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ errType: DownloadErrorType
 
 **起始版本：** 20
 
+<!--Device-VersionDownloadProgress-errType: DownloadErrorType--><!--Device-VersionDownloadProgress-errType: DownloadErrorType-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## progress
@@ -42,6 +46,8 @@ progress: number
 
 **起始版本：** 20
 
+<!--Device-VersionDownloadProgress-progress: int--><!--Device-VersionDownloadProgress-progress: int-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## state
@@ -55,5 +61,7 @@ state: State
 **类型：** [State](arkts-corefile-cloudsync-state-e.md)
 
 **起始版本：** 20
+
+<!--Device-VersionDownloadProgress-state: State--><!--Device-VersionDownloadProgress-state: State-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core

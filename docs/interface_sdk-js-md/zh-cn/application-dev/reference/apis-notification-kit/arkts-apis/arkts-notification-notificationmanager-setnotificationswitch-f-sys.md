@@ -20,6 +20,8 @@ function setNotificationSwitch(switchName: string, switchState: boolean, userId:
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-notificationManager-function setNotificationSwitch(switchName: string, switchState: boolean, userId: int): Promise<void>--><!--Device-notificationManager-function setNotificationSwitch(switchName: string, switchState: boolean, userId: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。

@@ -41,6 +41,8 @@ Create a **Tabs** container.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TabsInterface-(options?: TabsOptions): TabsAttribute--><!--Device-TabsInterface-(options?: TabsOptions): TabsAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

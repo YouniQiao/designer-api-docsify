@@ -16,6 +16,8 @@ declare function createWriteStream(path: string, options?: WriteStreamOptions): 
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare function createWriteStream(path: string, options?: WriteStreamOptions): WriteStream--><!--Device-unnamed-declare function createWriteStream(path: string, options?: WriteStreamOptions): WriteStream-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**

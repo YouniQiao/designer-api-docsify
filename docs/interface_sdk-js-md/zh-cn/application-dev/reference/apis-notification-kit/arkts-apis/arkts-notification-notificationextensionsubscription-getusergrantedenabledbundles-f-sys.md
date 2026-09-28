@@ -18,6 +18,8 @@ function getUserGrantedEnabledBundles(targetBundle: BundleOption): Promise<Bundl
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationExtensionSubscription-function getUserGrantedEnabledBundles(targetBundle: BundleOption): Promise<BundleOption[]>--><!--Device-notificationExtensionSubscription-function getUserGrantedEnabledBundles(targetBundle: BundleOption): Promise<BundleOption[]>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。

@@ -20,6 +20,8 @@ function getEnvironmentVar(name: string): string
 
 **替代接口：** [getEnvironmentVar](arkts-arkts-process-processmanager-c.md#getenvironmentvar)
 
+<!--Device-process-function getEnvironmentVar(name: string): string--><!--Device-process-function getEnvironmentVar(name: string): string-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**

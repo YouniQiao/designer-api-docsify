@@ -8,6 +8,8 @@ StartOptions可以作为启动UIAbility接口（例如[startAbility()](arkts-abi
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare class StartOptions--><!--Device-unnamed-declare class StartOptions-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块
@@ -35,6 +37,8 @@ windowFocused?: boolean
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-StartOptions-windowFocused?: boolean--><!--Device-StartOptions-windowFocused?: boolean-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

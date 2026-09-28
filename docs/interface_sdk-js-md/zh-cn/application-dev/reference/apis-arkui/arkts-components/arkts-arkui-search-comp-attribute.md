@@ -4,11 +4,13 @@
 declare class SearchAttribute extends CommonMethod<SearchAttribute>
 ```
 
-除支持[通用属性](arkts-arkui-common-comp.md#common)外，还支持以下属性：
+除支持[通用属性](arkts-arkui-common-comp.md)外，还支持以下属性：
 
 **继承/实现关系：** SearchAttribute extends CommonMethod<SearchAttribute>
 
 **起始版本：** 8
+
+<!--Device-unnamed-declare class SearchAttribute extends CommonMethod<SearchAttribute>--><!--Device-unnamed-declare class SearchAttribute extends CommonMethod<SearchAttribute>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,6 +27,8 @@ autoCapitalizationMode(mode: AutoCapitalizationMode)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-SearchAttribute-autoCapitalizationMode(mode: AutoCapitalizationMode): SearchAttribute--><!--Device-SearchAttribute-autoCapitalizationMode(mode: AutoCapitalizationMode): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,6 +51,8 @@ cancelButton(value: CancelButtonOptions | CancelButtonSymbolOptions)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SearchAttribute-cancelButton(value: CancelButtonOptions | CancelButtonSymbolOptions): SearchAttribute--><!--Device-SearchAttribute-cancelButton(value: CancelButtonOptions | CancelButtonSymbolOptions): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -73,6 +79,8 @@ caretStyle(value: CaretStyle)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SearchAttribute-caretStyle(value: CaretStyle): SearchAttribute--><!--Device-SearchAttribute-caretStyle(value: CaretStyle): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -102,6 +110,8 @@ compressLeadingPunctuation(enabled: Optional<boolean>)
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
+<!--Device-SearchAttribute-compressLeadingPunctuation(enabled: Optional<boolean>): SearchAttribute--><!--Device-SearchAttribute-compressLeadingPunctuation(enabled: Optional<boolean>): SearchAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -125,6 +135,8 @@ copyOption(value: CopyOptions)
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SearchAttribute-copyOption(value: CopyOptions): SearchAttribute--><!--Device-SearchAttribute-copyOption(value: CopyOptions): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -166,6 +178,8 @@ customKeyboard(value: CustomBuilder | ComponentContent | undefined, options?: Ke
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-SearchAttribute-customKeyboard(value: CustomBuilder | ComponentContent | undefined, options?: KeyboardOptions): SearchAttribute--><!--Device-SearchAttribute-customKeyboard(value: CustomBuilder | ComponentContent | undefined, options?: KeyboardOptions): SearchAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -195,6 +209,8 @@ decoration(value: TextDecorationOptions)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-SearchAttribute-decoration(value: TextDecorationOptions): SearchAttribute--><!--Device-SearchAttribute-decoration(value: TextDecorationOptions): SearchAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -216,6 +232,8 @@ dividerColor(color: Optional<ColorMetrics>)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-SearchAttribute-dividerColor(color: Optional<ColorMetrics>): SearchAttribute--><!--Device-SearchAttribute-dividerColor(color: Optional<ColorMetrics>): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -241,6 +259,8 @@ editMenuOptions(editMenu: EditMenuOptions)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-SearchAttribute-editMenuOptions(editMenu: EditMenuOptions): SearchAttribute--><!--Device-SearchAttribute-editMenuOptions(editMenu: EditMenuOptions): SearchAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -262,6 +282,8 @@ enableAutoSpacing(enabled: Optional<boolean>)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-SearchAttribute-enableAutoSpacing(enabled: Optional<boolean>): SearchAttribute--><!--Device-SearchAttribute-enableAutoSpacing(enabled: Optional<boolean>): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -287,6 +309,8 @@ enableHapticFeedback(isEnabled: boolean)
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
+<!--Device-SearchAttribute-enableHapticFeedback(isEnabled: boolean): SearchAttribute--><!--Device-SearchAttribute-enableHapticFeedback(isEnabled: boolean): SearchAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -310,6 +334,8 @@ enableKeyboardOnFocus(value: boolean)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SearchAttribute-enableKeyboardOnFocus(value: boolean): SearchAttribute--><!--Device-SearchAttribute-enableKeyboardOnFocus(value: boolean): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -338,6 +364,8 @@ enablePreviewText(enable: boolean)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-SearchAttribute-enablePreviewText(enable: boolean): SearchAttribute--><!--Device-SearchAttribute-enablePreviewText(enable: boolean): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -369,6 +397,8 @@ AI菜单生效时，选中范围内需包括且仅包括一个完整的AI实体�
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
+<!--Device-SearchAttribute-enableSelectedDataDetector(enable: boolean | undefined): SearchAttribute--><!--Device-SearchAttribute-enableSelectedDataDetector(enable: boolean | undefined): SearchAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -391,6 +421,8 @@ enterKeyType(value: EnterKeyType)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-SearchAttribute-enterKeyType(value: EnterKeyType): SearchAttribute--><!--Device-SearchAttribute-enterKeyType(value: EnterKeyType): SearchAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -412,6 +444,8 @@ fallbackLineSpacing(enabled: Optional<boolean>)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-SearchAttribute-fallbackLineSpacing(enabled: Optional<boolean>): SearchAttribute--><!--Device-SearchAttribute-fallbackLineSpacing(enabled: Optional<boolean>): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -438,6 +472,8 @@ fontColor(value: ResourceColor)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SearchAttribute-fontColor(value: ResourceColor): SearchAttribute--><!--Device-SearchAttribute-fontColor(value: ResourceColor): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -469,6 +505,8 @@ fontFeature(value: string)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-SearchAttribute-fontFeature(value: string): SearchAttribute--><!--Device-SearchAttribute-fontFeature(value: string): SearchAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -491,6 +529,8 @@ halfLeading(halfLeading: Optional<boolean>)
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-SearchAttribute-halfLeading(halfLeading: Optional<boolean>): SearchAttribute--><!--Device-SearchAttribute-halfLeading(halfLeading: Optional<boolean>): SearchAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -512,6 +552,8 @@ includeFontPadding(include: Optional<boolean>)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-SearchAttribute-includeFontPadding(include: Optional<boolean>): SearchAttribute--><!--Device-SearchAttribute-includeFontPadding(include: Optional<boolean>): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -539,6 +581,8 @@ inputFilter(value: ResourceStr, error?: Callback<string>)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-SearchAttribute-inputFilter(value: ResourceStr, error?: Callback<string>): SearchAttribute--><!--Device-SearchAttribute-inputFilter(value: ResourceStr, error?: Callback<string>): SearchAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -561,6 +605,8 @@ keyboardAppearance(appearance: Optional<KeyboardAppearance>)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-SearchAttribute-keyboardAppearance(appearance: Optional<KeyboardAppearance>): SearchAttribute--><!--Device-SearchAttribute-keyboardAppearance(appearance: Optional<KeyboardAppearance>): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -588,6 +634,8 @@ letterSpacing(value: number | string | Resource)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-SearchAttribute-letterSpacing(value: number | string | Resource): SearchAttribute--><!--Device-SearchAttribute-letterSpacing(value: number | string | Resource): SearchAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -614,6 +662,8 @@ lineHeight(value: number | string | Resource)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-SearchAttribute-lineHeight(value: number | string | Resource): SearchAttribute--><!--Device-SearchAttribute-lineHeight(value: number | string | Resource): SearchAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -635,6 +685,8 @@ maxFontScale(scale: Optional<number|Resource>)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-SearchAttribute-maxFontScale(scale: Optional<number|Resource>): SearchAttribute--><!--Device-SearchAttribute-maxFontScale(scale: Optional<number|Resource>): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -664,6 +716,8 @@ maxFontSize小于等于0或者maxFontSize小于minFontSize时，自适应字号�
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-SearchAttribute-maxFontSize(value: number | string | Resource): SearchAttribute--><!--Device-SearchAttribute-maxFontSize(value: number | string | Resource): SearchAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -686,6 +740,8 @@ maxLength(value: number)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-SearchAttribute-maxLength(value: number): SearchAttribute--><!--Device-SearchAttribute-maxLength(value: number): SearchAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -707,6 +763,8 @@ minFontScale(scale: Optional<number|Resource>)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-SearchAttribute-minFontScale(scale: Optional<number|Resource>): SearchAttribute--><!--Device-SearchAttribute-minFontScale(scale: Optional<number|Resource>): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -735,6 +793,8 @@ minFontSize小于或等于0时，自适应字号不生效，此时按照[textFon
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-SearchAttribute-minFontSize(value: number | string | Resource): SearchAttribute--><!--Device-SearchAttribute-minFontSize(value: number | string | Resource): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -768,6 +828,8 @@ onChange(callback: EditableTextOnChangeCallback)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-SearchAttribute-onChange(callback: EditableTextOnChangeCallback): SearchAttribute--><!--Device-SearchAttribute-onChange(callback: EditableTextOnChangeCallback): SearchAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -789,6 +851,8 @@ onContentScroll(callback: OnContentScrollCallback)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SearchAttribute-onContentScroll(callback: OnContentScrollCallback): SearchAttribute--><!--Device-SearchAttribute-onContentScroll(callback: OnContentScrollCallback): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -820,6 +884,8 @@ onCopy(callback: Callback<string>)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-SearchAttribute-onCopy(callback: Callback<string>): SearchAttribute--><!--Device-SearchAttribute-onCopy(callback: Callback<string>): SearchAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -849,6 +915,8 @@ onCut(callback: Callback<string>)
 **起始版本：** 8
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SearchAttribute-onCut(callback: Callback<string>): SearchAttribute--><!--Device-SearchAttribute-onCut(callback: Callback<string>): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -884,6 +952,8 @@ onDidDelete(callback: Callback<DeleteValue>)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-SearchAttribute-onDidDelete(callback: Callback<DeleteValue>): SearchAttribute--><!--Device-SearchAttribute-onDidDelete(callback: Callback<DeleteValue>): SearchAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -916,6 +986,8 @@ onDidInsert(callback: Callback<InsertValue>)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-SearchAttribute-onDidInsert(callback: Callback<InsertValue>): SearchAttribute--><!--Device-SearchAttribute-onDidInsert(callback: Callback<InsertValue>): SearchAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -938,6 +1010,8 @@ onEditChange(callback: Callback<boolean>)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-SearchAttribute-onEditChange(callback: Callback<boolean>): SearchAttribute--><!--Device-SearchAttribute-onEditChange(callback: Callback<boolean>): SearchAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -958,6 +1032,8 @@ onPaste(callback: OnPasteCallback)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-SearchAttribute-onPaste(callback: OnPasteCallback): SearchAttribute--><!--Device-SearchAttribute-onPaste(callback: OnPasteCallback): SearchAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -977,6 +1053,8 @@ onSubmit(callback: Callback<string>)
 **起始版本：** 8
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SearchAttribute-onSubmit(callback: Callback<string>): SearchAttribute--><!--Device-SearchAttribute-onSubmit(callback: Callback<string>): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1002,6 +1080,8 @@ onSubmit(callback: SearchSubmitCallback)
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
+<!--Device-SearchAttribute-onSubmit(callback: SearchSubmitCallback): SearchAttribute--><!--Device-SearchAttribute-onSubmit(callback: SearchSubmitCallback): SearchAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -1023,6 +1103,8 @@ onTextSelectionChange(callback: OnTextSelectionChangeCallback)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SearchAttribute-onTextSelectionChange(callback: OnTextSelectionChangeCallback): SearchAttribute--><!--Device-SearchAttribute-onTextSelectionChange(callback: OnTextSelectionChangeCallback): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1058,6 +1140,8 @@ IMEClient仅在onWillAttachIME执行期间有效，不可进行异步调用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-SearchAttribute-onWillAttachIME(callback: Callback<IMEClient>): SearchAttribute--><!--Device-SearchAttribute-onWillAttachIME(callback: Callback<IMEClient>): SearchAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -1092,6 +1176,8 @@ onWillChange(callback: Callback<EditableTextChangeValue, boolean>)
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
 
+<!--Device-SearchAttribute-onWillChange(callback: Callback<EditableTextChangeValue, boolean>): SearchAttribute--><!--Device-SearchAttribute-onWillChange(callback: Callback<EditableTextChangeValue, boolean>): SearchAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -1124,6 +1210,8 @@ onWillCopy(callback: Callback<string, boolean>)
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-SearchAttribute-onWillCopy(callback: Callback<string, boolean>): SearchAttribute--><!--Device-SearchAttribute-onWillCopy(callback: Callback<string, boolean>): SearchAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -1155,6 +1243,8 @@ onWillCut(callback: Callback<string, boolean>)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-SearchAttribute-onWillCut(callback: Callback<string, boolean>): SearchAttribute--><!--Device-SearchAttribute-onWillCut(callback: Callback<string, boolean>): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1190,6 +1280,8 @@ onWillDelete(callback: Callback<DeleteValue, boolean>)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-SearchAttribute-onWillDelete(callback: Callback<DeleteValue, boolean>): SearchAttribute--><!--Device-SearchAttribute-onWillDelete(callback: Callback<DeleteValue, boolean>): SearchAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -1222,6 +1314,8 @@ onWillInsert(callback: Callback<InsertValue, boolean>)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-SearchAttribute-onWillInsert(callback: Callback<InsertValue, boolean>): SearchAttribute--><!--Device-SearchAttribute-onWillInsert(callback: Callback<InsertValue, boolean>): SearchAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -1241,6 +1335,8 @@ placeholderColor(value: ResourceColor)
 **起始版本：** 8
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SearchAttribute-placeholderColor(value: ResourceColor): SearchAttribute--><!--Device-SearchAttribute-placeholderColor(value: ResourceColor): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1268,6 +1364,8 @@ Wearable设备上默认字体大小为18fp。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-SearchAttribute-placeholderFont(value?: Font): SearchAttribute--><!--Device-SearchAttribute-placeholderFont(value?: Font): SearchAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -1291,6 +1389,8 @@ Wearable设备上默认字体大小为18fp。
 **起始版本：** 8
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SearchAttribute-searchButton(value: ResourceStr, option?: SearchButtonOptions): SearchAttribute--><!--Device-SearchAttribute-searchButton(value: ResourceStr, option?: SearchButtonOptions): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1317,6 +1417,8 @@ Wearable设备上默认图标大小为16vp。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-SearchAttribute-searchIcon(value: IconOptions | SymbolGlyphModifier): SearchAttribute--><!--Device-SearchAttribute-searchIcon(value: IconOptions | SymbolGlyphModifier): SearchAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -1338,6 +1440,8 @@ selectedBackgroundColor(value: ResourceColor)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-SearchAttribute-selectedBackgroundColor(value: ResourceColor): SearchAttribute--><!--Device-SearchAttribute-selectedBackgroundColor(value: ResourceColor): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1361,6 +1465,8 @@ selectedDragPreviewStyle(value: SelectedDragPreviewStyle | undefined)
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
+<!--Device-SearchAttribute-selectedDragPreviewStyle(value: SelectedDragPreviewStyle | undefined): SearchAttribute--><!--Device-SearchAttribute-selectedDragPreviewStyle(value: SelectedDragPreviewStyle | undefined): SearchAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -1382,6 +1488,8 @@ selectionMenuHidden(value: boolean)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SearchAttribute-selectionMenuHidden(value: boolean): SearchAttribute--><!--Device-SearchAttribute-selectionMenuHidden(value: boolean): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1411,6 +1519,8 @@ shaderStyle(shader: ShaderStyle | undefined)
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-SearchAttribute-shaderStyle(shader: ShaderStyle | undefined): SearchAttribute--><!--Device-SearchAttribute-shaderStyle(shader: ShaderStyle | undefined): SearchAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -1432,6 +1542,8 @@ stopBackPress(isStopped: Optional<boolean>)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-SearchAttribute-stopBackPress(isStopped: Optional<boolean>): SearchAttribute--><!--Device-SearchAttribute-stopBackPress(isStopped: Optional<boolean>): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1455,6 +1567,8 @@ strokeColor(color: Optional<ResourceColor>)
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-SearchAttribute-strokeColor(color: Optional<ResourceColor>): SearchAttribute--><!--Device-SearchAttribute-strokeColor(color: Optional<ResourceColor>): SearchAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -1476,6 +1590,8 @@ strokeJoinStyle(strokeJoinStyle: StrokeJoinStyle | undefined)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-SearchAttribute-strokeJoinStyle(strokeJoinStyle: StrokeJoinStyle | undefined): SearchAttribute--><!--Device-SearchAttribute-strokeJoinStyle(strokeJoinStyle: StrokeJoinStyle | undefined): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1503,6 +1619,8 @@ strokeWidth(width: Optional<LengthMetrics>)
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-SearchAttribute-strokeWidth(width: Optional<LengthMetrics>): SearchAttribute--><!--Device-SearchAttribute-strokeWidth(width: Optional<LengthMetrics>): SearchAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -1527,6 +1645,8 @@ textAlign(value: TextAlign)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-SearchAttribute-textAlign(value: TextAlign): SearchAttribute--><!--Device-SearchAttribute-textAlign(value: TextAlign): SearchAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -1548,6 +1668,8 @@ textDirection(direction: TextDirection | undefined)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-SearchAttribute-textDirection(direction: TextDirection | undefined): SearchAttribute--><!--Device-SearchAttribute-textDirection(direction: TextDirection | undefined): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1575,6 +1697,8 @@ Wearable设备上默认字体大小为18fp。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-SearchAttribute-textFont(value?: Font): SearchAttribute--><!--Device-SearchAttribute-textFont(value?: Font): SearchAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -1596,6 +1720,8 @@ textIndent(value: Dimension)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-SearchAttribute-textIndent(value: Dimension): SearchAttribute--><!--Device-SearchAttribute-textIndent(value: Dimension): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1624,6 +1750,8 @@ type(value: SearchType)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-SearchAttribute-type(value: SearchType): SearchAttribute--><!--Device-SearchAttribute-type(value: SearchType): SearchAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

@@ -14,6 +14,8 @@ Defines the ownership type of the global reuse pool.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-unnamed-declare type ReusePoolOwnership = 'shared' | 'perInstance'--><!--Device-unnamed-declare type ReusePoolOwnership = 'shared' | 'perInstance'-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 | Type | Description |

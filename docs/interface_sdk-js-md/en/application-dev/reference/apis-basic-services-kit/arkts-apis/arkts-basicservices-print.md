@@ -4,6 +4,8 @@ The **print** module provides APIs for basic print operations.
 
 **Since:** 10
 
+<!--Device-unnamed-declare namespace print--><!--Device-unnamed-declare namespace print-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## Modules to Import
@@ -68,8 +70,8 @@ import { print } from '@kit.BasicServicesKit';
 | [getPrinterDefaultPreferences](arkts-basicservices-print-getprinterdefaultpreferences-f-sys.md) | Get default preferences by printer ID. |
 | [getPrinterInfoById](arkts-basicservices-print-getprinterinfobyid-f-sys.md) | Obtains printer information based on the printer ID. This API uses a promise to return the result. |
 | [getSharedHosts](arkts-basicservices-print-getsharedhosts-f-sys.md) | Get all available shared hosts. |
-| [notifyPrintService](arkts-basicservices-print-notifyprintservice-f-sys.md) | Notifies the print service of the spooler shutdown information. This API uses an asynchronous callback to return the result. |
-| [notifyPrintService](arkts-basicservices-print-notifyprintservice-f-sys.md) | Notifies the print service of the spooler shutdown information. This API uses a promise to return the result. |
+| notifyPrintService | Notifies the print service of the spooler shutdown information. This API uses an asynchronous callback to return the result. |
+| notifyPrintService | Notifies the print service of the spooler shutdown information. This API uses a promise to return the result. |
 | [notifyPrintServiceEvent](arkts-basicservices-print-notifyprintserviceevent-f-sys.md#notifyprintserviceevent) | Notifies the print service of the print application events. This API uses a promise to return the result. |
 | [notifyPrintServiceEvent](arkts-basicservices-print-notifyprintserviceevent-f-sys.md#notifyprintserviceevent-1) | Notifies the print service of the print application events. This API uses a promise to return the result. |
 | [off](arkts-basicservices-print-off-f-sys.md#offprinterstatechange) | Unregisters the listener for printer state change events. This API uses a callback to return the result. |

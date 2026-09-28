@@ -8,6 +8,8 @@ InputMethodSetting提供输入法配置与查询能力，面向前台应用提�
 
 **起始版本：** 8
 
+<!--Device-inputMethod-interface InputMethodSetting--><!--Device-inputMethod-interface InputMethodSetting-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## 导入模块
@@ -27,6 +29,8 @@ enableInputMethod(bundleName: string, extensionName: string, enabledState: Enabl
 **起始版本：** 20
 
 **需要权限：** ohos.permission.CONNECT_IME_ABILITY
+
+<!--Device-InputMethodSetting-enableInputMethod(bundleName: string, extensionName: string, enabledState: EnabledState): Promise<void>--><!--Device-InputMethodSetting-enableInputMethod(bundleName: string, extensionName: string, enabledState: EnabledState): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -102,6 +106,8 @@ enableInputMethod(
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-InputMethodSetting-enableInputMethod(      bundleName: string, extensionName: string, enabledState: EnabledState, userId?: int): Promise<void>--><!--Device-InputMethodSetting-enableInputMethod(      bundleName: string, extensionName: string, enabledState: EnabledState, userId?: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **系统接口：** 此接口为系统接口。
@@ -160,6 +166,8 @@ getAllInputMethodsSync(userId?: number): Array<InputMethodProperty>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-InputMethodSetting-getAllInputMethodsSync(userId?: int): Array<InputMethodProperty>--><!--Device-InputMethodSetting-getAllInputMethodsSync(userId?: int): Array<InputMethodProperty>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **系统接口：** 此接口为系统接口。
@@ -212,6 +220,8 @@ getCursorInfo(userId?: number): CursorInfo
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-InputMethodSetting-getCursorInfo(userId?: int): CursorInfo--><!--Device-InputMethodSetting-getCursorInfo(userId?: int): CursorInfo-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -266,6 +276,8 @@ getDefaultInputMethodAbility(): InputMethodProperty
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-InputMethodSetting-getDefaultInputMethodAbility(): InputMethodProperty--><!--Device-InputMethodSetting-getDefaultInputMethodAbility(): InputMethodProperty-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **系统接口：** 此接口为系统接口。
@@ -315,6 +327,8 @@ getInputMethodsSync(enable: boolean, userId?: number): Array<InputMethodProperty
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-InputMethodSetting-getInputMethodsSync(enable: boolean, userId?: int): Array<InputMethodProperty>--><!--Device-InputMethodSetting-getInputMethodsSync(enable: boolean, userId?: int): Array<InputMethodProperty>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -370,6 +384,8 @@ getInputMethodSubtypes(bundleName: string, userId?: number): Array<InputMethodSu
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-InputMethodSetting-getInputMethodSubtypes(bundleName: string, userId?: int): Array<InputMethodSubtype>--><!--Device-InputMethodSetting-getInputMethodSubtypes(bundleName: string, userId?: int): Array<InputMethodSubtype>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **系统接口：** 此接口为系统接口。
@@ -423,6 +439,8 @@ isPanelShown(panelInfo: PanelInfo): boolean
 查询指定类型的输入法面板是否处于显示状态。
 
 **起始版本：** 11
+
+<!--Device-InputMethodSetting-isPanelShown(panelInfo: PanelInfo): boolean--><!--Device-InputMethodSetting-isPanelShown(panelInfo: PanelInfo): boolean-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -480,6 +498,8 @@ isPanelShown(panelInfo: PanelInfo, displayId: number): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-InputMethodSetting-isPanelShown(panelInfo: PanelInfo, displayId: long): boolean--><!--Device-InputMethodSetting-isPanelShown(panelInfo: PanelInfo, displayId: long): boolean-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **系统接口：** 此接口为系统接口。
@@ -533,6 +553,8 @@ off(type: 'imeShow', callback?: (info: Array<InputWindowInfo>) => void): void
 
 **起始版本：** 10
 
+<!--Device-InputMethodSetting-off(type: 'imeShow', callback?: (info: Array<InputWindowInfo>) => void): void--><!--Device-InputMethodSetting-off(type: 'imeShow', callback?: (info: Array<InputWindowInfo>) => void): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **系统接口：** 此接口为系统接口。
@@ -559,6 +581,8 @@ off(type: 'imeHide', callback?: (info: Array<InputWindowInfo>) => void): void
 取消订阅输入法[Panel](arkts-ime-inputmethodengine-panel-i.md)固定态软键盘隐藏事件。
 
 **起始版本：** 10
+
+<!--Device-InputMethodSetting-off(type: 'imeHide', callback?: (info: Array<InputWindowInfo>) => void): void--><!--Device-InputMethodSetting-off(type: 'imeHide', callback?: (info: Array<InputWindowInfo>) => void): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -588,6 +612,8 @@ offImeChangeWithUserId(callback?: ImeChangeWithUserIdCallback): void
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-InputMethodSetting-offImeChangeWithUserId(callback?: ImeChangeWithUserIdCallback): void--><!--Device-InputMethodSetting-offImeChangeWithUserId(callback?: ImeChangeWithUserIdCallback): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -620,6 +646,8 @@ on(type: 'imeShow', callback: (info: Array<InputWindowInfo>) => void): void
 订阅输入法[Panel](arkts-ime-inputmethodengine-panel-i.md)固定态软键盘显示事件。使用callback异步回调。<br> <br>配对调用：<br> <br>- 调用on('imeShow')订阅事件后，必须在使用完毕时调用对应的off('imeShow')取消订阅。<br>- 取消订阅时可以传入callback参数取消指定回调，或不传参数取消type对应的所有回调。<br>- 不取消订阅可能导致回调事件持续触发和内存泄漏。
 
 **起始版本：** 10
+
+<!--Device-InputMethodSetting-on(type: 'imeShow', callback: (info: Array<InputWindowInfo>) => void): void--><!--Device-InputMethodSetting-on(type: 'imeShow', callback: (info: Array<InputWindowInfo>) => void): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -655,6 +683,8 @@ on(type: 'imeHide', callback: (info: Array<InputWindowInfo>) => void): void
 订阅输入法[Panel](arkts-ime-inputmethodengine-panel-i.md)固定态软键盘隐藏事件。使用callback异步回调。<br> <br>配对调用：<br> <br>- 调用on('imeHide')订阅事件后，必须在使用完毕时调用对应的off('imeHide')取消订阅。<br>- 取消订阅时可以传入callback参数取消指定回调，或不传参数取消type对应的所有回调。<br>- 不取消订阅可能导致回调事件持续触发和内存泄漏。
 
 **起始版本：** 10
+
+<!--Device-InputMethodSetting-on(type: 'imeHide', callback: (info: Array<InputWindowInfo>) => void): void--><!--Device-InputMethodSetting-on(type: 'imeHide', callback: (info: Array<InputWindowInfo>) => void): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -692,6 +722,8 @@ onImeChangeWithUserId(callback: ImeChangeWithUserIdCallback): void
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-InputMethodSetting-onImeChangeWithUserId(callback: ImeChangeWithUserIdCallback): void--><!--Device-InputMethodSetting-onImeChangeWithUserId(callback: ImeChangeWithUserIdCallback): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 

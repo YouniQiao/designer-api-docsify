@@ -16,6 +16,8 @@ function getSimStateSync(slotId: number): SimState
 
 **起始版本：** 10
 
+<!--Device-sim-function getSimStateSync(slotId: int): SimState--><!--Device-sim-function getSimStateSync(slotId: int): SimState-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**

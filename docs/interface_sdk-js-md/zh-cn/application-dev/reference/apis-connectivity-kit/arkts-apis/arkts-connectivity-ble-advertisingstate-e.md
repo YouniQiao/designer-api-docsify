@@ -8,6 +8,8 @@ enum AdvertisingState
 
 **起始版本：** 11
 
+<!--Device-ble-enum AdvertisingState--><!--Device-ble-enum AdvertisingState-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## STARTED
@@ -21,6 +23,8 @@ STARTED = 1
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AdvertisingState-STARTED = 1--><!--Device-AdvertisingState-STARTED = 1-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -36,6 +40,8 @@ ENABLED = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AdvertisingState-ENABLED = 2--><!--Device-AdvertisingState-ENABLED = 2-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## DISABLED
@@ -50,6 +56,8 @@ DISABLED = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AdvertisingState-DISABLED = 3--><!--Device-AdvertisingState-DISABLED = 3-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## STOPPED
@@ -63,5 +71,7 @@ STOPPED = 4
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AdvertisingState-STOPPED = 4--><!--Device-AdvertisingState-STOPPED = 4-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

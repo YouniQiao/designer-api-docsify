@@ -12,6 +12,8 @@ interface DHCommonParamsSpec extends AsyKeySpec
 
 **起始版本：** 11
 
+<!--Device-cryptoFramework-interface DHCommonParamsSpec extends AsyKeySpec--><!--Device-cryptoFramework-interface DHCommonParamsSpec extends AsyKeySpec-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
 - API版本11：SystemCapability.Security.CryptoFramework
@@ -34,7 +36,9 @@ DH算法中的参数g。
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-DHCommonParamsSpec-g: bigint--><!--Device-DHCommonParamsSpec-g: bigint-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -52,7 +56,9 @@ DH算法中私钥长度，单位为bits。
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-DHCommonParamsSpec-l: int--><!--Device-DHCommonParamsSpec-l: int-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -70,7 +76,9 @@ p: bigint
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-DHCommonParamsSpec-p: bigint--><!--Device-DHCommonParamsSpec-p: bigint-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey

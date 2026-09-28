@@ -8,6 +8,8 @@ interface PhotoCreationSource
 
 **起始版本：** 18
 
+<!--Device-photoAccessHelper-interface PhotoCreationSource--><!--Device-photoAccessHelper-interface PhotoCreationSource-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ appId?: string
 
 **起始版本：** 18
 
+<!--Device-PhotoCreationSource-appId?: string--><!--Device-PhotoCreationSource-appId?: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ appName?: string
 **类型：** string
 
 **起始版本：** 18
+
+<!--Device-PhotoCreationSource-appName?: string--><!--Device-PhotoCreationSource-appName?: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -62,6 +68,8 @@ bundleName?: string
 
 **起始版本：** 18
 
+<!--Device-PhotoCreationSource-bundleName?: string--><!--Device-PhotoCreationSource-bundleName?: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +85,8 @@ tokenId?: number
 **类型：** number
 
 **起始版本：** 18
+
+<!--Device-PhotoCreationSource-tokenId?: long--><!--Device-PhotoCreationSource-tokenId?: long-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

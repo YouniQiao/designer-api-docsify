@@ -8,6 +8,8 @@ HUKS所管理的密钥可以由应用导入或者由应用调用HUKS接口生成
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-unnamed-declare namespace huks--><!--Device-unnamed-declare namespace huks-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Core
 
 ## 导入模块

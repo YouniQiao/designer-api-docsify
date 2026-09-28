@@ -8,6 +8,8 @@ export declare class Scene
 
 **起始版本：** 12
 
+<!--Device-unnamed-export declare class Scene--><!--Device-unnamed-export declare class Scene-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 <a id="load-1"></a>
@@ -23,6 +25,8 @@ static load(uri: ResourceStr, param: SceneLoadParams):Promise<Scene>
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Scene-static load(uri: ResourceStr, param: SceneLoadParams):Promise<Scene>--><!--Device-Scene-static load(uri: ResourceStr, param: SceneLoadParams):Promise<Scene>-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 

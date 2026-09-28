@@ -18,6 +18,8 @@ Get the international mobile subscriber ID.
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-sim-function getIMSI(slotId: int, callback: AsyncCallback<string>): void--><!--Device-sim-function getIMSI(slotId: int, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -67,6 +69,8 @@ Get the international mobile subscriber ID.
 **起始版本：** 6
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
+
+<!--Device-sim-function getIMSI(slotId: int): Promise<string>--><!--Device-sim-function getIMSI(slotId: int): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

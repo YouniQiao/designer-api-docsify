@@ -21,6 +21,8 @@ function isOpenAccessibility(callback: AsyncCallback<boolean>): void
 
 **替代接口：** [isOpenAccessibilitySync](arkts-accessibility-accessibility-isopenaccessibilitysync-f.md)
 
+<!--Device-accessibility-function isOpenAccessibility(callback: AsyncCallback<boolean>): void--><!--Device-accessibility-function isOpenAccessibility(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **参数：**
@@ -60,6 +62,8 @@ function isOpenAccessibility(): Promise<boolean>
 **废弃版本：** 10
 
 **替代接口：** [isOpenAccessibilitySync](arkts-accessibility-accessibility-isopenaccessibilitysync-f.md)
+
+<!--Device-accessibility-function isOpenAccessibility(): Promise<boolean>--><!--Device-accessibility-function isOpenAccessibility(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 

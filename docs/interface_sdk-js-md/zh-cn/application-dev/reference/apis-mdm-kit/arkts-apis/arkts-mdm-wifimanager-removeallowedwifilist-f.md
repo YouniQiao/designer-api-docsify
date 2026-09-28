@@ -20,6 +20,8 @@ function removeAllowedWifiList(admin: Want, list: Array<WifiAccessInfo>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-wifiManager-function removeAllowedWifiList(admin: Want, list: Array<WifiAccessInfo>): void--><!--Device-wifiManager-function removeAllowedWifiList(admin: Want, list: Array<WifiAccessInfo>): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**

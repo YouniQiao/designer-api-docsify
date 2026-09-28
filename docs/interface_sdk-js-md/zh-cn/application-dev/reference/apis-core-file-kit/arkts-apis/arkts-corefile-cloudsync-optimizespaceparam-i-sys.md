@@ -8,6 +8,8 @@ interface OptimizeSpaceParam
 
 **起始版本：** 17
 
+<!--Device-cloudSync-interface OptimizeSpaceParam--><!--Device-cloudSync-interface OptimizeSpaceParam-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ agingDays: number
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC
 
+<!--Device-OptimizeSpaceParam-agingDays: int--><!--Device-OptimizeSpaceParam-agingDays: int-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ totalSize:number
 **起始版本：** 17
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC
+
+<!--Device-OptimizeSpaceParam-totalSize:long--><!--Device-OptimizeSpaceParam-totalSize:long-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 

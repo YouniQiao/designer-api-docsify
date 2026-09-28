@@ -12,6 +12,8 @@ interface ConvertOptions
 
 **起始版本：** 8
 
+<!--Device-xml-interface ConvertOptions--><!--Device-xml-interface ConvertOptions-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -34,6 +36,8 @@ attributesKey: string
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-ConvertOptions-attributesKey: string--><!--Device-ConvertOptions-attributesKey: string-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## cdataKey
@@ -49,6 +53,8 @@ cdataKey: string
 **起始版本：** 8
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ConvertOptions-cdataKey: string--><!--Device-ConvertOptions-cdataKey: string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -66,6 +72,8 @@ commentKey: string
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-ConvertOptions-commentKey: string--><!--Device-ConvertOptions-commentKey: string-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## declarationKey
@@ -81,6 +89,8 @@ declarationKey: string
 **起始版本：** 8
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ConvertOptions-declarationKey: string--><!--Device-ConvertOptions-declarationKey: string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -98,6 +108,8 @@ doctypeKey: string
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-ConvertOptions-doctypeKey: string--><!--Device-ConvertOptions-doctypeKey: string-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## elementsKey
@@ -113,6 +125,8 @@ elementsKey: string
 **起始版本：** 8
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ConvertOptions-elementsKey: string--><!--Device-ConvertOptions-elementsKey: string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -130,6 +144,8 @@ ignoreAttributes?: boolean
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-ConvertOptions-ignoreAttributes?: boolean--><!--Device-ConvertOptions-ignoreAttributes?: boolean-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## ignoreCDATA
@@ -145,6 +161,8 @@ ignoreCDATA?: boolean
 **起始版本：** 8
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ConvertOptions-ignoreCDATA?: boolean--><!--Device-ConvertOptions-ignoreCDATA?: boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -162,6 +180,8 @@ ignoreComment?: boolean
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-ConvertOptions-ignoreComment?: boolean--><!--Device-ConvertOptions-ignoreComment?: boolean-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## ignoreDeclaration
@@ -177,6 +197,8 @@ ignoreDeclaration?: boolean
 **起始版本：** 8
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ConvertOptions-ignoreDeclaration?: boolean--><!--Device-ConvertOptions-ignoreDeclaration?: boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -194,6 +216,8 @@ ignoreDoctype?: boolean
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-ConvertOptions-ignoreDoctype?: boolean--><!--Device-ConvertOptions-ignoreDoctype?: boolean-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## ignoreInstruction
@@ -209,6 +233,8 @@ ignoreInstruction?: boolean
 **起始版本：** 8
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ConvertOptions-ignoreInstruction?: boolean--><!--Device-ConvertOptions-ignoreInstruction?: boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -226,6 +252,8 @@ ignoreText?: boolean
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-ConvertOptions-ignoreText?: boolean--><!--Device-ConvertOptions-ignoreText?: boolean-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## instructionKey
@@ -241,6 +269,8 @@ instructionKey: string
 **起始版本：** 8
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ConvertOptions-instructionKey: string--><!--Device-ConvertOptions-instructionKey: string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -258,6 +288,8 @@ nameKey: string
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-ConvertOptions-nameKey: string--><!--Device-ConvertOptions-nameKey: string-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## parentKey
@@ -273,6 +305,8 @@ parentKey: string
 **起始版本：** 8
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ConvertOptions-parentKey: string--><!--Device-ConvertOptions-parentKey: string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -290,6 +324,8 @@ textKey: string
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-ConvertOptions-textKey: string--><!--Device-ConvertOptions-textKey: string-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## trim
@@ -306,6 +342,8 @@ trim: boolean
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-ConvertOptions-trim: boolean--><!--Device-ConvertOptions-trim: boolean-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## typeKey
@@ -321,5 +359,7 @@ typeKey: string
 **起始版本：** 8
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ConvertOptions-typeKey: string--><!--Device-ConvertOptions-typeKey: string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

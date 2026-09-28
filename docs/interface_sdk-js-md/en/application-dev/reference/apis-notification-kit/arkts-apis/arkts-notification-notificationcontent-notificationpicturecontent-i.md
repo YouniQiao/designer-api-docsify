@@ -18,6 +18,8 @@ Describes the picture-attached notification. This API is inherited from Notifica
 
 **Since:** 7
 
+<!--Device-unnamed-export interface NotificationPictureContent extends NotificationBasicContent--><!--Device-unnamed-export interface NotificationPictureContent extends NotificationBasicContent-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 ## briefText
@@ -31,6 +33,8 @@ Notification summary content, which is a summary of the notification content and
 **Type:** string
 
 **Since:** 7
+
+<!--Device-NotificationPictureContent-briefText: string--><!--Device-NotificationPictureContent-briefText: string-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -46,6 +50,8 @@ Title when the notification is expanded. It cannot be an empty string. The size 
 
 **Since:** 7
 
+<!--Device-NotificationPictureContent-expandedTitle: string--><!--Device-NotificationPictureContent-expandedTitle: string-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 ## picture
@@ -59,5 +65,7 @@ Right icon displayed after notification expansion. The total bytes of the image 
 **Type:** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **Since:** 7
+
+<!--Device-NotificationPictureContent-picture: image.PixelMap--><!--Device-NotificationPictureContent-picture: image.PixelMap-End-->
 
 **System capability:** SystemCapability.Notification.Notification

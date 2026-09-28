@@ -8,6 +8,8 @@ export interface NetCapabilities
 
 **起始版本：** 8
 
+<!--Device-connection-export interface NetCapabilities--><!--Device-connection-export interface NetCapabilities-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## 导入模块
@@ -28,7 +30,9 @@ bearerTypes: Array<NetBearType>
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-NetCapabilities-bearerTypes: Array<NetBearType>--><!--Device-NetCapabilities-bearerTypes: Array<NetBearType>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -44,6 +48,8 @@ linkDownBandwidthKbps?: number
 
 **起始版本：** 8
 
+<!--Device-NetCapabilities-linkDownBandwidthKbps?: int--><!--Device-NetCapabilities-linkDownBandwidthKbps?: int-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## linkUpBandwidthKbps
@@ -57,6 +63,8 @@ linkUpBandwidthKbps?: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-NetCapabilities-linkUpBandwidthKbps?: int--><!--Device-NetCapabilities-linkUpBandwidthKbps?: int-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -72,6 +80,8 @@ networkCap?: Array<NetCap>
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-NetCapabilities-networkCap?: Array<NetCap>--><!--Device-NetCapabilities-networkCap?: Array<NetCap>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core

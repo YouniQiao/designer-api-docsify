@@ -22,6 +22,8 @@ Queries state data of the current bundle within a specified period.
 
 **废弃版本：** 9
 
+<!--Device-bundleState-function queryCurrentBundleActiveStates(    begin: number,    end: number,    callback: AsyncCallback<Array<BundleActiveState>>  ): void--><!--Device-bundleState-function queryCurrentBundleActiveStates(    begin: number,    end: number,    callback: AsyncCallback<Array<BundleActiveState>>  ): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **参数：**
@@ -65,6 +67,8 @@ Queries state data of the current bundle within a specified period.
 **起始版本：** 7
 
 **废弃版本：** 9
+
+<!--Device-bundleState-function queryCurrentBundleActiveStates(begin: number, end: number): Promise<Array<BundleActiveState>>--><!--Device-bundleState-function queryCurrentBundleActiveStates(begin: number, end: number): Promise<Array<BundleActiveState>>-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 

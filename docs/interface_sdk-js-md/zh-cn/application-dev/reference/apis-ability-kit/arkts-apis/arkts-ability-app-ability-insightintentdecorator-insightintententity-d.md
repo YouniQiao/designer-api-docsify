@@ -12,4 +12,6 @@ export declare const InsightIntentEntity: ((intentEntityInfo: IntentEntityDecora
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-unnamed-export declare const InsightIntentEntity: ((intentEntityInfo: IntentEntityDecoratorInfo) => ClassDecorator)--><!--Device-unnamed-export declare const InsightIntentEntity: ((intentEntityInfo: IntentEntityDecoratorInfo) => ClassDecorator)-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

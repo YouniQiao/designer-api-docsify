@@ -6,6 +6,8 @@
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-unnamed-declare namespace scriptManager--><!--Device-unnamed-declare namespace scriptManager-End-->
+
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 ## 导入模块

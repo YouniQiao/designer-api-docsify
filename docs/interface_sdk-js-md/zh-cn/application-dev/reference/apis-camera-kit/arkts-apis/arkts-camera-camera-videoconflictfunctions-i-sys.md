@@ -10,6 +10,8 @@ Video Conflict Functions object.
 
 **起始版本：** 13
 
+<!--Device-camera-interface VideoConflictFunctions extends ZoomQuery, MacroQuery--><!--Device-camera-interface VideoConflictFunctions extends ZoomQuery, MacroQuery-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。

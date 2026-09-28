@@ -16,6 +16,8 @@ function setTouchpadPinchSwitch(state: boolean, callback: AsyncCallback<void>): 
 
 **起始版本：** 10
 
+<!--Device-pointer-function setTouchpadPinchSwitch(state: boolean, callback: AsyncCallback<void>): void--><!--Device-pointer-function setTouchpadPinchSwitch(state: boolean, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +79,8 @@ function setTouchpadPinchSwitch(state: boolean): Promise<void>
 设置触控板双指捏合功能开关，使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-pointer-function setTouchpadPinchSwitch(state: boolean): Promise<void>--><!--Device-pointer-function setTouchpadPinchSwitch(state: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 

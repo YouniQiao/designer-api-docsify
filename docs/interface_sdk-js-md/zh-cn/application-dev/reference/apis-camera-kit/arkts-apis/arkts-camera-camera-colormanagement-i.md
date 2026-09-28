@@ -12,6 +12,8 @@ ColorManagement继承自[ColorManagementQuery](arkts-camera-camera-colormanageme
 
 **起始版本：** 12
 
+<!--Device-camera-interface ColorManagement extends ColorManagementQuery--><!--Device-camera-interface ColorManagement extends ColorManagementQuery-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
@@ -30,7 +32,9 @@ getActiveColorSpace(): colorSpaceManager.ColorSpace
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-ColorManagement-getActiveColorSpace(): colorSpaceManager.ColorSpace--><!--Device-ColorManagement-getActiveColorSpace(): colorSpaceManager.ColorSpace-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -109,7 +113,9 @@ CAMERA_FORMAT_YCBCR_P010时，色彩空间默认为BT2020_HLG。
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-ColorManagement-setColorSpace(colorSpace: colorSpaceManager.ColorSpace): void--><!--Device-ColorManagement-setColorSpace(colorSpace: colorSpaceManager.ColorSpace): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

@@ -10,6 +10,8 @@
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare namespace bundleResourceManager--><!--Device-unnamed-declare namespace bundleResourceManager-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Resource
 
 **系统接口：** 此接口为系统接口。

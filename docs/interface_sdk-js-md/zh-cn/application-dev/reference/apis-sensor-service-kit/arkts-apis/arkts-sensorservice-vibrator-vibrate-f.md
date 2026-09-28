@@ -28,6 +28,8 @@ function vibrate(duration: number, callback?: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.VIBRATE
 
+<!--Device-vibrator-function vibrate(duration: number, callback?: AsyncCallback<void>): void--><!--Device-vibrator-function vibrate(duration: number, callback?: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 **参数：**
@@ -75,6 +77,8 @@ function vibrate(duration: number): Promise<void>
 **替代接口：** [startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration-1)(effect: VibrateEffect, attribute: VibrateAttribute)
 
 **需要权限：** ohos.permission.VIBRATE
+
+<!--Device-vibrator-function vibrate(duration: number): Promise<void>--><!--Device-vibrator-function vibrate(duration: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
@@ -127,6 +131,8 @@ function vibrate(effectId: EffectId): Promise<void>
 
 **需要权限：** ohos.permission.VIBRATE
 
+<!--Device-vibrator-function vibrate(effectId: EffectId): Promise<void>--><!--Device-vibrator-function vibrate(effectId: EffectId): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 **参数：**
@@ -178,6 +184,8 @@ function vibrate(effectId: EffectId, callback?: AsyncCallback<void>): void
 **替代接口：** [startVibration](arkts-sensorservice-vibrator-startvibration-f.md)(effect: VibrateEffect, attribute: VibrateAttribute, callback: AsyncCallback&lt;void&gt;)
 
 **需要权限：** ohos.permission.VIBRATE
+
+<!--Device-vibrator-function vibrate(effectId: EffectId, callback?: AsyncCallback<void>): void--><!--Device-vibrator-function vibrate(effectId: EffectId, callback?: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
 

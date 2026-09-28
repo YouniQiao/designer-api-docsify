@@ -8,6 +8,8 @@
 
 **替代接口：** notificationSubscribe/notificationSubscribe
 
+<!--Device-unnamed-declare namespace notification--><!--Device-unnamed-declare namespace notification-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## 导入模块

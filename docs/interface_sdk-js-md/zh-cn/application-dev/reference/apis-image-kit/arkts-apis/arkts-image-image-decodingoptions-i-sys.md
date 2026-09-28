@@ -8,6 +8,8 @@ interface DecodingOptions
 
 **起始版本：** 7
 
+<!--Device-image-interface DecodingOptions--><!--Device-image-interface DecodingOptions-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 ## 导入模块
@@ -27,6 +29,8 @@ resolutionQuality?: ResolutionQuality
 **类型：** [ResolutionQuality](arkts-image-image-resolutionquality-e-sys.md)
 
 **起始版本：** 12
+
+<!--Device-DecodingOptions-resolutionQuality?: ResolutionQuality--><!--Device-DecodingOptions-resolutionQuality?: ResolutionQuality-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 

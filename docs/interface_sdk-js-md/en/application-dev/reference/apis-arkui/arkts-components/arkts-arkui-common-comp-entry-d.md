@@ -16,4 +16,6 @@ In a single UI page, only one custom component decorated by \@Entry is allowed a
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-unnamed-declare const Entry: ClassDecorator & ((options?: LocalStorage | EntryOptions) => ClassDecorator)--><!--Device-unnamed-declare const Entry: ClassDecorator & ((options?: LocalStorage | EntryOptions) => ClassDecorator)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

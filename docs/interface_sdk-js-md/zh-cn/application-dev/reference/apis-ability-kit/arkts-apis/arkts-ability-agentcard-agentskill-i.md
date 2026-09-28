@@ -10,6 +10,8 @@ export interface AgentSkill
 
 **起始版本：** 24
 
+<!--Device-unnamed-export interface AgentSkill--><!--Device-unnamed-export interface AgentSkill-End-->
+
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 ## description
@@ -26,7 +28,9 @@ AgentSkill的详细描述。应清晰说明该技能的具体功能、适用场�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-AgentSkill-description: string--><!--Device-AgentSkill-description: string-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -44,7 +48,9 @@ AgentSkill可以处理的示例提示或使用场景。提供具体的示例可�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-AgentSkill-examples?: Array<string>--><!--Device-AgentSkill-examples?: Array<string>-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -62,7 +68,9 @@ AgentSkill的扩展配置项。用于存储技能级别的自定义扩展配置�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-AgentSkill-extension?: string--><!--Device-AgentSkill-extension?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -80,7 +88,9 @@ AgentSkill的唯一标识符，在一个AgentCard中必须唯一。建议使用�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-AgentSkill-id: string--><!--Device-AgentSkill-id: string-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -98,7 +108,9 @@ AgentSkill支持的输入模式。使用MIME类型格式定义，例如["text/pl
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-AgentSkill-inputModes?: Array<string>--><!--Device-AgentSkill-inputModes?: Array<string>-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -116,7 +128,9 @@ AgentSkill的名称。用于在UI界面中展示，例如"Route Planning"（路�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-AgentSkill-name: string--><!--Device-AgentSkill-name: string-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -134,7 +148,9 @@ AgentSkill支持的输出模式。使用MIME类型格式定义，例如["text/pl
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-AgentSkill-outputModes?: Array<string>--><!--Device-AgentSkill-outputModes?: Array<string>-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -152,6 +168,8 @@ tags: Array<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-AgentSkill-tags: Array<string>--><!--Device-AgentSkill-tags: Array<string>-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core

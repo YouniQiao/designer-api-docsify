@@ -20,6 +20,8 @@ function setPowerConfig(sceneName: string, value: string): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-power-function setPowerConfig(sceneName: string, value: string): void--><!--Device-power-function setPowerConfig(sceneName: string, value: string): void-End-->
+
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 
 **系统接口：** 此接口为系统接口。

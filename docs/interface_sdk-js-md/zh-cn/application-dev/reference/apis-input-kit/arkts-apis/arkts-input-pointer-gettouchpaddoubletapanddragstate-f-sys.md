@@ -16,6 +16,8 @@ function getTouchpadDoubleTapAndDragState(callback: AsyncCallback<boolean>): voi
 
 **起始版本：** 14
 
+<!--Device-pointer-function getTouchpadDoubleTapAndDragState(callback: AsyncCallback<boolean>): void--><!--Device-pointer-function getTouchpadDoubleTapAndDragState(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 **系统接口：** 此接口为系统接口。
@@ -76,6 +78,8 @@ function getTouchpadDoubleTapAndDragState(): Promise<boolean>
 获取触控板双击拖拽开关的开启状态，使用Promise异步回调。
 
 **起始版本：** 14
+
+<!--Device-pointer-function getTouchpadDoubleTapAndDragState(): Promise<boolean>--><!--Device-pointer-function getTouchpadDoubleTapAndDragState(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 

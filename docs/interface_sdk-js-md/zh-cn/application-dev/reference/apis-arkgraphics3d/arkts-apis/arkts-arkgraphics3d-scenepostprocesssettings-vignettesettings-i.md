@@ -10,6 +10,8 @@ export interface VignetteSettings
 
 **起始版本：** 22
 
+<!--Device-unnamed-export interface VignetteSettings--><!--Device-unnamed-export interface VignetteSettings-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## intensity
@@ -26,6 +28,8 @@ intensity?: number
 
 **起始版本：** 22
 
+<!--Device-VignetteSettings-intensity?: double--><!--Device-VignetteSettings-intensity?: double-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## roundness
@@ -41,5 +45,7 @@ roundness?: number
 **默认值：** sqrt(0.5)
 
 **起始版本：** 22
+
+<!--Device-VignetteSettings-roundness?: double--><!--Device-VignetteSettings-roundness?: double-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

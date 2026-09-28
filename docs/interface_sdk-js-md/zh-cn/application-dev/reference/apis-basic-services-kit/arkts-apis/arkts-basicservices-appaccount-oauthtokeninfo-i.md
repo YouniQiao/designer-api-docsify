@@ -16,6 +16,8 @@ interface OAuthTokenInfo
 
 **替代接口：** [AuthTokenInfo](arkts-basicservices-appaccount-authtokeninfo-i.md)
 
+<!--Device-appAccount-interface OAuthTokenInfo--><!--Device-appAccount-interface OAuthTokenInfo-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 ## 导入模块
@@ -40,6 +42,8 @@ authType: string
 
 **替代接口：** [authType](arkts-basicservices-appaccount-authtokeninfo-i.md#authtype)
 
+<!--Device-OAuthTokenInfo-authType: string--><!--Device-OAuthTokenInfo-authType: string-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 ## token
@@ -57,5 +61,7 @@ token: string
 **废弃版本：** 9
 
 **替代接口：** [token](arkts-basicservices-appaccount-authtokeninfo-i.md#token)
+
+<!--Device-OAuthTokenInfo-token: string--><!--Device-OAuthTokenInfo-token: string-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount

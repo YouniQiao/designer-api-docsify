@@ -18,6 +18,8 @@ function getSupportedPowerMode(): Promise<Array<PowerMode>>
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
+<!--Device-wifiManagerExt-function getSupportedPowerMode(): Promise<Array<PowerMode>>--><!--Device-wifiManagerExt-function getSupportedPowerMode(): Promise<Array<PowerMode>>-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.AP.Extension
 
 **返回值：**
@@ -62,6 +64,8 @@ function getSupportedPowerMode(callback: AsyncCallback<Array<PowerMode>>): void
 **起始版本：** 9
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
+
+<!--Device-wifiManagerExt-function getSupportedPowerMode(callback: AsyncCallback<Array<PowerMode>>): void--><!--Device-wifiManagerExt-function getSupportedPowerMode(callback: AsyncCallback<Array<PowerMode>>): void-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.AP.Extension
 

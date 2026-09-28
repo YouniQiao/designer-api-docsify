@@ -8,6 +8,8 @@ enum CastDisplayState
 
 **起始版本：** 12
 
+<!--Device-avSession-enum CastDisplayState--><!--Device-avSession-enum CastDisplayState-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.ExtendedDisplayCast
 
 ## STATE_OFF
@@ -20,7 +22,9 @@ STATE_OFF = 1
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-CastDisplayState-STATE_OFF = 1--><!--Device-CastDisplayState-STATE_OFF = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.ExtendedDisplayCast
 
@@ -34,6 +38,8 @@ STATE_ON = 2
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-CastDisplayState-STATE_ON = 2--><!--Device-CastDisplayState-STATE_ON = 2-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.ExtendedDisplayCast

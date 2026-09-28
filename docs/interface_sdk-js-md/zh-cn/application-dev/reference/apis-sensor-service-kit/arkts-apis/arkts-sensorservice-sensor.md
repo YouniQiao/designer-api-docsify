@@ -26,6 +26,8 @@ sensor.on与sensor.once的区别：
 
 **起始版本：** 8
 
+<!--Device-unnamed-declare namespace sensor--><!--Device-unnamed-declare namespace sensor-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## 导入模块

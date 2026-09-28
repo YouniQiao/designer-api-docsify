@@ -8,6 +8,8 @@ interface AdvertisingData
 
 **起始版本：** 26.0.0
 
+<!--Device-advertising-interface AdvertisingData--><!--Device-advertising-interface AdvertisingData-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## 导入模块
@@ -30,6 +32,8 @@ includeDeviceName?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AdvertisingData-includeDeviceName?: boolean--><!--Device-AdvertisingData-includeDeviceName?: boolean-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## manufacturerData
@@ -45,6 +49,8 @@ manufacturerData?: ManufacturerData[]
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AdvertisingData-manufacturerData?: ManufacturerData[]--><!--Device-AdvertisingData-manufacturerData?: ManufacturerData[]-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -62,6 +68,8 @@ serviceData?: ServiceData[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AdvertisingData-serviceData?: ServiceData[]--><!--Device-AdvertisingData-serviceData?: ServiceData[]-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## serviceUuids
@@ -77,5 +85,7 @@ serviceUuids?: string[]
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AdvertisingData-serviceUuids?: string[]--><!--Device-AdvertisingData-serviceUuids?: string[]-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base

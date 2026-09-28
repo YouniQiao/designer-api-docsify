@@ -4,6 +4,8 @@ The **inputEventClient** module provides the capability of injecting key, mouse/
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-declare namespace inputEventClient--><!--Device-unnamed-declare namespace inputEventClient-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
 
 ## Modules to Import

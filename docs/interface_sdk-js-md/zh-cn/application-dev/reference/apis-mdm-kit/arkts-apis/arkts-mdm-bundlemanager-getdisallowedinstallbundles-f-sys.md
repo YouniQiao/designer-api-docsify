@@ -24,6 +24,8 @@ function getDisallowedInstallBundles(admin: Want, callback: AsyncCallback<Array<
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-bundleManager-function getDisallowedInstallBundles(admin: Want, callback: AsyncCallback<Array<string>>): void--><!--Device-bundleManager-function getDisallowedInstallBundles(admin: Want, callback: AsyncCallback<Array<string>>): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -86,6 +88,8 @@ function getDisallowedInstallBundles(admin: Want, userId: number, callback: Asyn
 **需要权限：** ohos.permission.ENTERPRISE_SET_BUNDLE_INSTALL_POLICY
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-bundleManager-function getDisallowedInstallBundles(admin: Want, userId: number, callback: AsyncCallback<Array<string>>): void--><!--Device-bundleManager-function getDisallowedInstallBundles(admin: Want, userId: number, callback: AsyncCallback<Array<string>>): void-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -150,6 +154,8 @@ function getDisallowedInstallBundles(admin: Want, userId?: number): Promise<Arra
 **需要权限：** ohos.permission.ENTERPRISE_SET_BUNDLE_INSTALL_POLICY
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-bundleManager-function getDisallowedInstallBundles(admin: Want, userId?: number): Promise<Array<string>>--><!--Device-bundleManager-function getDisallowedInstallBundles(admin: Want, userId?: number): Promise<Array<string>>-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

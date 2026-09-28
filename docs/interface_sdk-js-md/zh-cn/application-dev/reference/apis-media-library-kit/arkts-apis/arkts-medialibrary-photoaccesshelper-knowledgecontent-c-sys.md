@@ -8,6 +8,8 @@ class KnowledgeContent
 
 **起始版本：** 23
 
+<!--Device-photoAccessHelper-class KnowledgeContent--><!--Device-photoAccessHelper-class KnowledgeContent-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -31,6 +33,8 @@ static getRelatedEntity (topic: string, context: ContextMap, option?: Options): 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-KnowledgeContent-static getRelatedEntity (topic: string, context: ContextMap, option?: Options): Promise<Entity[]>--><!--Device-KnowledgeContent-static getRelatedEntity (topic: string, context: ContextMap, option?: Options): Promise<Entity[]>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -73,6 +77,8 @@ static getSearchResult(query: SearchQuery): Promise<SearchResult>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-KnowledgeContent-static getSearchResult(query: SearchQuery): Promise<SearchResult>--><!--Device-KnowledgeContent-static getSearchResult(query: SearchQuery): Promise<SearchResult>-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -111,6 +117,8 @@ static getSearchSuggestion( searchSuggestionTypes: Array<SearchSuggestionType>):
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-KnowledgeContent-static getSearchSuggestion( searchSuggestionTypes: Array<SearchSuggestionType>): Promise<Array<SearchSuggestionResult>>--><!--Device-KnowledgeContent-static getSearchSuggestion( searchSuggestionTypes: Array<SearchSuggestionType>): Promise<Array<SearchSuggestionResult>>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

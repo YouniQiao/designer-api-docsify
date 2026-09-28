@@ -13,6 +13,8 @@ This module applies to the following scenarios:
 
 **Since:** 6
 
+<!--Device-unnamed-declare namespace userAuth--><!--Device-unnamed-declare namespace userAuth-End-->
+
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 ## Modules to Import

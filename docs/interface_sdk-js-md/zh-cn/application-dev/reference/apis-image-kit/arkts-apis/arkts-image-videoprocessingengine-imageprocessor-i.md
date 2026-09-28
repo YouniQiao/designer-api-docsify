@@ -8,6 +8,8 @@ interface ImageProcessor
 
 **起始版本：** 18
 
+<!--Device-videoProcessingEngine-interface ImageProcessor--><!--Device-videoProcessingEngine-interface ImageProcessor-End-->
+
 **系统能力：** SystemCapability.Multimedia.VideoProcessingEngine
 
 ## 导入模块
@@ -26,7 +28,9 @@ enhanceDetail(sourceImage: image.PixelMap, width: number, height: number, level?
 
 **起始版本：** 18
 
-**卡片能力：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-ImageProcessor-enhanceDetail(sourceImage: image.PixelMap, width: int, height: int, level?: QualityLevel): Promise<image.PixelMap>--><!--Device-ImageProcessor-enhanceDetail(sourceImage: image.PixelMap, width: int, height: int, level?: QualityLevel): Promise<image.PixelMap>-End-->
 
 **系统能力：** SystemCapability.Multimedia.VideoProcessingEngine
 
@@ -79,7 +83,9 @@ enhanceDetail(sourceImage: image.PixelMap, scale: number, level?: QualityLevel):
 
 **起始版本：** 18
 
-**卡片能力：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-ImageProcessor-enhanceDetail(sourceImage: image.PixelMap, scale: double, level?: QualityLevel): Promise<image.PixelMap>--><!--Device-ImageProcessor-enhanceDetail(sourceImage: image.PixelMap, scale: double, level?: QualityLevel): Promise<image.PixelMap>-End-->
 
 **系统能力：** SystemCapability.Multimedia.VideoProcessingEngine
 
@@ -129,7 +135,9 @@ enhanceDetailSync(sourceImage: image.PixelMap, width: number, height: number, le
 
 **起始版本：** 18
 
-**卡片能力：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-ImageProcessor-enhanceDetailSync(sourceImage: image.PixelMap, width: int, height: int, level?: QualityLevel): image.PixelMap--><!--Device-ImageProcessor-enhanceDetailSync(sourceImage: image.PixelMap, width: int, height: int, level?: QualityLevel): image.PixelMap-End-->
 
 **系统能力：** SystemCapability.Multimedia.VideoProcessingEngine
 
@@ -183,7 +191,9 @@ enhanceDetailSync(sourceImage: image.PixelMap, scale: number, level?: QualityLev
 
 **起始版本：** 18
 
-**卡片能力：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-ImageProcessor-enhanceDetailSync(sourceImage: image.PixelMap, scale: double, level?: QualityLevel): image.PixelMap--><!--Device-ImageProcessor-enhanceDetailSync(sourceImage: image.PixelMap, scale: double, level?: QualityLevel): image.PixelMap-End-->
 
 **系统能力：** SystemCapability.Multimedia.VideoProcessingEngine
 

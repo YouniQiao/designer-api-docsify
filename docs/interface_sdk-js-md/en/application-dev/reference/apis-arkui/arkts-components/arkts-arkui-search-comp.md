@@ -6,7 +6,7 @@ The search box component supports configuration of the search icon, clear button
 > 
 > - This component is supported since API version 8. New APIs of later versions are marked with a superscript to indicate their earliest version.
 > 
-> - This component supports only a single text style. To implement a rich text style, use the [RichEditor](arkts-arkui-richeditor-comp.md#rich_editor) component.
+> - This component supports only a single text style. To implement a rich text style, use the [RichEditor](arkts-arkui-richeditor-comp.md) component.
 > 
 > - To set whether to clear text selection and handles when touching outside the text component, use the [setTextSelectionClearPolicy](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#settextselectionclearpolicy) API.
 
@@ -25,6 +25,8 @@ Defines the constructor of Search.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SearchInterface-(options?: SearchOptions): SearchAttribute--><!--Device-SearchInterface-(options?: SearchOptions): SearchAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

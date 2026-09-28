@@ -20,6 +20,8 @@ function completeArkTSScriptInApp(context: Context, requestCode: string, result:
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-scriptManager-function completeArkTSScriptInApp(context: Context, requestCode: string, result: ExecuteResult): Promise<void>--><!--Device-scriptManager-function completeArkTSScriptInApp(context: Context, requestCode: string, result: ExecuteResult): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 **参数：**

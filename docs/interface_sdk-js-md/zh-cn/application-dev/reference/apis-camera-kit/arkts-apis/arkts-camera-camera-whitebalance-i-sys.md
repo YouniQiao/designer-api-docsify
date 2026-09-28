@@ -12,6 +12,8 @@ WhiteBalance继承自[WhiteBalanceQuery](arkts-camera-camera-whitebalancequery-i
 
 **起始版本：** 20
 
+<!--Device-camera-interface WhiteBalance extends WhiteBalanceQuery--><!--Device-camera-interface WhiteBalance extends WhiteBalanceQuery-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
@@ -31,6 +33,8 @@ Gets RGB white balance gain values.
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WhiteBalance-getWhiteBalanceGains(): WhiteBalanceGains--><!--Device-WhiteBalance-getWhiteBalanceGains(): WhiteBalanceGains-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -60,6 +64,8 @@ Sets RGB white balance gain values.
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WhiteBalance-setWhiteBalanceGains(gains: WhiteBalanceGains): void--><!--Device-WhiteBalance-setWhiteBalanceGains(gains: WhiteBalanceGains): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

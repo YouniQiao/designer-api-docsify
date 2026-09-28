@@ -8,6 +8,8 @@ interface Photo
 
 **起始版本：** 11
 
+<!--Device-camera-interface Photo--><!--Device-camera-interface Photo-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
@@ -26,7 +28,9 @@ Releases output resources. This API uses a promise to return the result.
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-Photo-release(): Promise<void>--><!--Device-Photo-release(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -56,6 +60,8 @@ Full-quality image.
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-Photo-main: image.Image--><!--Device-Photo-main: image.Image-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core

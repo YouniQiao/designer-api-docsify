@@ -8,6 +8,8 @@ export enum BackgroundSubMode
 
 **起始版本：** 16
 
+<!--Device-backgroundTaskManager-export enum BackgroundSubMode--><!--Device-backgroundTaskManager-export enum BackgroundSubMode-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## CAR_KEY
@@ -24,5 +26,7 @@ CAR_KEY = 1
 2. 不支持通过[updateBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md)接口更新为此类型长时任务。
 
 **起始版本：** 16
+
+<!--Device-BackgroundSubMode-CAR_KEY = 1--><!--Device-BackgroundSubMode-CAR_KEY = 1-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask

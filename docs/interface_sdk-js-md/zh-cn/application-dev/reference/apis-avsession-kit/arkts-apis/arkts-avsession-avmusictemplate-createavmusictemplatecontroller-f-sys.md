@@ -20,6 +20,8 @@ function createAVMusicTemplateController(sessionId: string): AVMusicTemplateCont
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-avMusicTemplate-function createAVMusicTemplateController(sessionId: string): AVMusicTemplateController--><!--Device-avMusicTemplate-function createAVMusicTemplateController(sessionId: string): AVMusicTemplateController-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **系统接口：** 此接口为系统接口。

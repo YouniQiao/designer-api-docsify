@@ -8,6 +8,8 @@ Provides encoding and decoding for Base64 and Base64URL. The Base64 encoding tab
 
 **Since:** 9
 
+<!--Device-util-class Base64Helper--><!--Device-util-class Base64Helper-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
@@ -28,6 +30,8 @@ A constructor used to create a **Base64Helper** instance.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Base64Helper-constructor()--><!--Device-Base64Helper-constructor()-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Examples**
@@ -47,6 +51,8 @@ Decodes the input content into a Uint8Array object. This API uses a promise to r
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Base64Helper-decode(src: Uint8Array | string, options?: Type): Promise<Uint8Array>--><!--Device-Base64Helper-decode(src: Uint8Array | string, options?: Type): Promise<Uint8Array>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -88,6 +94,8 @@ Decodes a string into a Uint8Array object. This API returns the result synchrono
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Base64Helper-decodeSync(src: Uint8Array | string, options?: Type): Uint8Array--><!--Device-Base64Helper-decodeSync(src: Uint8Array | string, options?: Type): Uint8Array-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -127,6 +135,8 @@ Encodes the input content into a Uint8Array object. This API uses a promise to r
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Base64Helper-encode(src: Uint8Array, options?: Type): Promise<Uint8Array>--><!--Device-Base64Helper-encode(src: Uint8Array, options?: Type): Promise<Uint8Array>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -165,6 +175,8 @@ Encodes the input content into a Uint8Array object.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Base64Helper-encodeSync(src: Uint8Array, options?: Type): Uint8Array--><!--Device-Base64Helper-encodeSync(src: Uint8Array, options?: Type): Uint8Array-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -201,6 +213,8 @@ Encodes the input content into a string. This API uses a promise to return the r
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Base64Helper-encodeToString(src: Uint8Array, options?: Type): Promise<string>--><!--Device-Base64Helper-encodeToString(src: Uint8Array, options?: Type): Promise<string>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -244,6 +258,8 @@ Performs Base64 encoding on the input Uint8Array byte array and returns a string
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Base64Helper-encodeToStringSync(src: Uint8Array, options?: Type): string--><!--Device-Base64Helper-encodeToStringSync(src: Uint8Array, options?: Type): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

@@ -8,6 +8,8 @@ export interface Range
 
 **起始版本：** 10
 
+<!--Device-inputMethodEngine-export interface Range--><!--Device-inputMethodEngine-export interface Range-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## 导入模块
@@ -28,6 +30,8 @@ end: number
 
 **起始版本：** 10
 
+<!--Device-Range-end: int--><!--Device-Range-end: int-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## start
@@ -41,5 +45,7 @@ start: number
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-Range-start: int--><!--Device-Range-start: int-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework

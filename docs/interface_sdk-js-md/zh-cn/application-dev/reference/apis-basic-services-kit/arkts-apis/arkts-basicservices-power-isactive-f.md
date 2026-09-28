@@ -19,6 +19,8 @@ function isActive(): boolean
 
 **起始版本：** 9
 
+<!--Device-power-function isActive(): boolean--><!--Device-power-function isActive(): boolean-End-->
+
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 
 **返回值：**

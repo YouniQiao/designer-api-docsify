@@ -8,6 +8,8 @@ Defines the mapping between progress indicators and styles.
 
 **Since:** 10
 
+<!--Device-unnamed-declare interface ProgressStyleMap--><!--Device-unnamed-declare interface ProgressStyleMap-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## [ProgressType.Capsule]
@@ -25,6 +27,8 @@ Capsule progress indicator style.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ProgressStyleMap-[ProgressType.Capsule]: CapsuleStyleOptions | ProgressStyleOptions--><!--Device-ProgressStyleMap-[ProgressType.Capsule]: CapsuleStyleOptions | ProgressStyleOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,6 +48,8 @@ Eclipse progress indicator style.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ProgressStyleMap-[ProgressType.Eclipse]: EclipseStyleOptions | ProgressStyleOptions--><!--Device-ProgressStyleMap-[ProgressType.Eclipse]: EclipseStyleOptions | ProgressStyleOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## [ProgressType.Linear]
@@ -61,6 +67,8 @@ Linear progress indicator style.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ProgressStyleMap-[ProgressType.Linear]: LinearStyleOptions | ProgressStyleOptions--><!--Device-ProgressStyleMap-[ProgressType.Linear]: LinearStyleOptions | ProgressStyleOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -80,6 +88,8 @@ Ring progress indicator style.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ProgressStyleMap-[ProgressType.Ring]: RingStyleOptions | ProgressStyleOptions--><!--Device-ProgressStyleMap-[ProgressType.Ring]: RingStyleOptions | ProgressStyleOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## [ProgressType.ScaleRing]
@@ -97,5 +107,7 @@ ScaleRing progress indicator style.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ProgressStyleMap-[ProgressType.ScaleRing]: ScaleRingStyleOptions | ProgressStyleOptions--><!--Device-ProgressStyleMap-[ProgressType.ScaleRing]: ScaleRingStyleOptions | ProgressStyleOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -12,6 +12,8 @@ You need a custom class to implement the **ContentModifier** API.
 
 **Since:** 12
 
+<!--Device-unnamed-declare interface TextTimerConfiguration extends CommonConfiguration<TextTimerConfiguration>--><!--Device-unnamed-declare interface TextTimerConfiguration extends CommonConfiguration<TextTimerConfiguration>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## count
@@ -36,6 +38,8 @@ Value Range: (0, 86400000), that is, no more than 24 hours. If the value is out 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TextTimerConfiguration-count: number--><!--Device-TextTimerConfiguration-count: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## elapsedTime
@@ -53,6 +57,8 @@ Elapsed time of the timer, in the minimum unit of the configured format.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextTimerConfiguration-elapsedTime: number--><!--Device-TextTimerConfiguration-elapsedTime: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -78,6 +84,8 @@ Default Value: false
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TextTimerConfiguration-isCountDown: boolean--><!--Device-TextTimerConfiguration-isCountDown: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## started
@@ -99,6 +107,8 @@ Default Value: false
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextTimerConfiguration-started: boolean--><!--Device-TextTimerConfiguration-started: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -127,5 +137,7 @@ When the value is negative, the timer starts counting from the negative value, p
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-TextTimerConfiguration-startTime?: number--><!--Device-TextTimerConfiguration-startTime?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

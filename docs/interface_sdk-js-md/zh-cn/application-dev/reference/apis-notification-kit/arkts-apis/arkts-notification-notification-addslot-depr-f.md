@@ -21,6 +21,8 @@ function addSlot(type: SlotType, callback: AsyncCallback<void>): void
 
 **替代接口：** [addSlot](arkts-notification-notificationmanager-addslot-f.md)
 
+<!--Device-notification-function addSlot(type: SlotType, callback: AsyncCallback<void>): void--><!--Device-notification-function addSlot(type: SlotType, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **参数：**
@@ -46,6 +48,8 @@ function addSlot(type: SlotType): Promise<void>
 **废弃版本：** 9
 
 **替代接口：** [addSlot](arkts-notification-notificationmanager-addslot-f.md)
+
+<!--Device-notification-function addSlot(type: SlotType): Promise<void>--><!--Device-notification-function addSlot(type: SlotType): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

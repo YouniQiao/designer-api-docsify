@@ -17,6 +17,8 @@ Inherits from the [StyledString](arkts-arkui-styledstring-c.md) class.
 
 **Since:** 12
 
+<!--Device-unnamed-declare class MutableStyledString extends StyledString--><!--Device-unnamed-declare class MutableStyledString extends StyledString-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## appendStyledString
@@ -32,6 +34,8 @@ Appends a styled string.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MutableStyledString-appendStyledString(other: StyledString): void--><!--Device-MutableStyledString-appendStyledString(other: StyledString): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -49,13 +53,15 @@ clearStyles(): void
 
 Removes all styles of this styled string.
 
-After a style is removed, the value set for the corresponding style attribute in the [Text](../arkts-components/arkts-arkui-text-comp.md#text) component is used. If the value is not set, the default value is used.
+After a style is removed, the value set for the corresponding style attribute in the [Text](../arkts-components/arkts-arkui-text-comp.md) component is used. If the value is not set, the default value is used.
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MutableStyledString-clearStyles(): void--><!--Device-MutableStyledString-clearStyles(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,6 +78,8 @@ Inserts a string.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MutableStyledString-insertString(start: number, other: string): void--><!--Device-MutableStyledString-insertString(start: number, other: string): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -101,6 +109,8 @@ Inserts a new styled string at the specified position.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MutableStyledString-insertStyledString(start: number, other: StyledString): void--><!--Device-MutableStyledString-insertStyledString(start: number, other: StyledString): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -133,6 +143,8 @@ This API equally works when the styled string contains an image or [CustomSpan](
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MutableStyledString-removeString(start: number, length: number): void--><!--Device-MutableStyledString-removeString(start: number, length: number): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -156,7 +168,7 @@ removeStyle(start: number, length: number, styledKey: StyledStringKey): void
 
 Removes the style for the specified range of this styled string.
 
-After a style is removed, the value set for the corresponding style attribute in the [Text](../arkts-components/arkts-arkui-text-comp.md#text) component is used. If the value is not set, the default value is used.
+After a style is removed, the value set for the corresponding style attribute in the [Text](../arkts-components/arkts-arkui-text-comp.md) component is used. If the value is not set, the default value is used.
 
 This API equally works when the styled string contains an image.
 
@@ -165,6 +177,8 @@ This API equally works when the styled string contains an image.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MutableStyledString-removeStyle(start: number, length: number, styledKey: StyledStringKey): void--><!--Device-MutableStyledString-removeStyle(start: number, length: number, styledKey: StyledStringKey): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -190,7 +204,7 @@ removeStyles(start: number, length: number): void
 
 Removes all styles for the specified range of this styled string.
 
-After a style is removed, the value set for the corresponding style attribute in the [Text](../arkts-components/arkts-arkui-text-comp.md#text) component is used. If the value is not set, the default value is used.
+After a style is removed, the value set for the corresponding style attribute in the [Text](../arkts-components/arkts-arkui-text-comp.md) component is used. If the value is not set, the default value is used.
 
 This API equally works when the styled string contains an image.
 
@@ -199,6 +213,8 @@ This API equally works when the styled string contains an image.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MutableStyledString-removeStyles(start: number, length: number): void--><!--Device-MutableStyledString-removeStyles(start: number, length: number): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -228,6 +244,8 @@ Replaces the string in the specified range of this styled string.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MutableStyledString-replaceString(start: number, length: number, other: string): void--><!--Device-MutableStyledString-replaceString(start: number, length: number, other: string): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -259,6 +277,8 @@ Replaces the style in the specified range of this styled string.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MutableStyledString-replaceStyle(spanStyle: SpanStyle): void--><!--Device-MutableStyledString-replaceStyle(spanStyle: SpanStyle): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -286,6 +306,8 @@ Replaces the styled string in the specified range.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MutableStyledString-replaceStyledString(start: number, length: number, other: StyledString): void--><!--Device-MutableStyledString-replaceStyledString(start: number, length: number, other: StyledString): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -316,6 +338,8 @@ Sets a new style for the specified range of this styled string.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MutableStyledString-setStyle(spanStyle: SpanStyle): void--><!--Device-MutableStyledString-setStyle(spanStyle: SpanStyle): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

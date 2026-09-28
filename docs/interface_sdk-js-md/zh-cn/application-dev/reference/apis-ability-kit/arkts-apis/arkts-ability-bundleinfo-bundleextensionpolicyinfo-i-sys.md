@@ -8,6 +8,8 @@ export interface BundleExtensionPolicyInfo
 
 **起始版本：** 26.0.1
 
+<!--Device-unnamed-export interface BundleExtensionPolicyInfo--><!--Device-unnamed-export interface BundleExtensionPolicyInfo-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -25,6 +27,8 @@ readonly appIndex: number
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BundleExtensionPolicyInfo-readonly appIndex: int--><!--Device-BundleExtensionPolicyInfo-readonly appIndex: int-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -44,6 +48,8 @@ readonly appSandboxPolicy: bundleManager.AppSandboxPolicy
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BundleExtensionPolicyInfo-readonly appSandboxPolicy: bundleManager.AppSandboxPolicy--><!--Device-BundleExtensionPolicyInfo-readonly appSandboxPolicy: bundleManager.AppSandboxPolicy-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -62,6 +68,8 @@ readonly bundleName: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BundleExtensionPolicyInfo-readonly bundleName: string--><!--Device-BundleExtensionPolicyInfo-readonly bundleName: string-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -79,6 +87,8 @@ readonly deviceModeDistributionPolicy: bundleManager.DeviceModeDistributionPolic
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BundleExtensionPolicyInfo-readonly deviceModeDistributionPolicy: bundleManager.DeviceModeDistributionPolicy--><!--Device-BundleExtensionPolicyInfo-readonly deviceModeDistributionPolicy: bundleManager.DeviceModeDistributionPolicy-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

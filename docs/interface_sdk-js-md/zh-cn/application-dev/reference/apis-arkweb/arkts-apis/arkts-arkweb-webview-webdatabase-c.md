@@ -8,6 +8,8 @@ Web组件数据库管理对象。
 
 **起始版本：** 9
 
+<!--Device-webview-class WebDataBase--><!--Device-webview-class WebDataBase-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## 导入模块
@@ -27,6 +29,8 @@ static deleteHttpAuthCredentials(): void
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebDataBase-static deleteHttpAuthCredentials(): void--><!--Device-WebDataBase-static deleteHttpAuthCredentials(): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -69,6 +73,8 @@ static existHttpAuthCredentials(): boolean
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebDataBase-static existHttpAuthCredentials(): boolean--><!--Device-WebDataBase-static existHttpAuthCredentials(): boolean-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -121,6 +127,8 @@ static getHttpAuthCredentials(host: string, realm: string): Array<string>
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebDataBase-static getHttpAuthCredentials(host: string, realm: string): Array<string>--><!--Device-WebDataBase-static getHttpAuthCredentials(host: string, realm: string): Array<string>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -186,6 +194,8 @@ static saveHttpAuthCredentials(host: string, realm: string, username: string, pa
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebDataBase-static saveHttpAuthCredentials(host: string, realm: string, username: string, password: string): void--><!--Device-WebDataBase-static saveHttpAuthCredentials(host: string, realm: string, username: string, password: string): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

@@ -8,6 +8,8 @@ enum PlaybackSpeed
 
 **起始版本：** 8
 
+<!--Device-media-enum PlaybackSpeed--><!--Device-media-enum PlaybackSpeed-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
 ## SPEED_FORWARD_0_75_X
@@ -20,7 +22,9 @@ SPEED_FORWARD_0_75_X = 0
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PlaybackSpeed-SPEED_FORWARD_0_75_X = 0--><!--Device-PlaybackSpeed-SPEED_FORWARD_0_75_X = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
@@ -34,7 +38,9 @@ SPEED_FORWARD_1_00_X = 1
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PlaybackSpeed-SPEED_FORWARD_1_00_X = 1--><!--Device-PlaybackSpeed-SPEED_FORWARD_1_00_X = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
@@ -48,7 +54,9 @@ SPEED_FORWARD_1_25_X = 2
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PlaybackSpeed-SPEED_FORWARD_1_25_X = 2--><!--Device-PlaybackSpeed-SPEED_FORWARD_1_25_X = 2-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
@@ -62,7 +70,9 @@ SPEED_FORWARD_1_75_X = 3
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PlaybackSpeed-SPEED_FORWARD_1_75_X = 3--><!--Device-PlaybackSpeed-SPEED_FORWARD_1_75_X = 3-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
@@ -76,7 +86,9 @@ SPEED_FORWARD_2_00_X = 4
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PlaybackSpeed-SPEED_FORWARD_2_00_X = 4--><!--Device-PlaybackSpeed-SPEED_FORWARD_2_00_X = 4-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
@@ -90,7 +102,9 @@ SPEED_FORWARD_0_50_X = 5
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PlaybackSpeed-SPEED_FORWARD_0_50_X = 5--><!--Device-PlaybackSpeed-SPEED_FORWARD_0_50_X = 5-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
@@ -104,7 +118,9 @@ SPEED_FORWARD_1_50_X = 6
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PlaybackSpeed-SPEED_FORWARD_1_50_X = 6--><!--Device-PlaybackSpeed-SPEED_FORWARD_1_50_X = 6-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
@@ -118,7 +134,9 @@ SPEED_FORWARD_3_00_X = 7
 
 **起始版本：** 13
 
-**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+
+<!--Device-PlaybackSpeed-SPEED_FORWARD_3_00_X = 7--><!--Device-PlaybackSpeed-SPEED_FORWARD_3_00_X = 7-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
@@ -132,7 +150,9 @@ SPEED_FORWARD_0_25_X = 8
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PlaybackSpeed-SPEED_FORWARD_0_25_X = 8--><!--Device-PlaybackSpeed-SPEED_FORWARD_0_25_X = 8-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
@@ -146,6 +166,8 @@ SPEED_FORWARD_0_125_X = 9
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PlaybackSpeed-SPEED_FORWARD_0_125_X = 9--><!--Device-PlaybackSpeed-SPEED_FORWARD_0_125_X = 9-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer

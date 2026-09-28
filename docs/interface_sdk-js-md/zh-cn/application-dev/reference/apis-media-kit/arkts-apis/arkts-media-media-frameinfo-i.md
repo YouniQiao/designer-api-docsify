@@ -8,6 +8,8 @@ interface FrameInfo
 
 **起始版本：** 23
 
+<!--Device-media-interface FrameInfo--><!--Device-media-interface FrameInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 ## 导入模块
@@ -30,6 +32,8 @@ actualTimeUs?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FrameInfo-actualTimeUs?: long--><!--Device-FrameInfo-actualTimeUs?: long-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 ## image
@@ -45,6 +49,8 @@ image?: image.PixelMap
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FrameInfo-image?: image.PixelMap--><!--Device-FrameInfo-image?: image.PixelMap-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -62,6 +68,8 @@ requestedTimeUs: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FrameInfo-requestedTimeUs: long--><!--Device-FrameInfo-requestedTimeUs: long-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 ## result
@@ -77,5 +85,7 @@ result: FetchResult
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FrameInfo-result: FetchResult--><!--Device-FrameInfo-result: FetchResult-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor

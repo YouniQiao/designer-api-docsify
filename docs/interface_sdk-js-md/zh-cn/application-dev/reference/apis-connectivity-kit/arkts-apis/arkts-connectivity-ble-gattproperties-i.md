@@ -8,6 +8,8 @@ interface GattProperties
 
 **起始版本：** 10
 
+<!--Device-ble-interface GattProperties--><!--Device-ble-interface GattProperties-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -32,7 +34,9 @@ true表示支持，且该特征值权限[GattPermissions](arkts-connectivity-ble
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-GattProperties-authenticatedSignedWrite?: boolean--><!--Device-GattProperties-authenticatedSignedWrite?: boolean-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -52,7 +56,9 @@ true表示支持，server端可将特征值内容以[ServiceData](arkts-connecti
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-GattProperties-broadcast?: boolean--><!--Device-GattProperties-broadcast?: boolean-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -72,7 +78,9 @@ true表示存在扩展属性，即该特征值关联了特征值扩展属性描�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-GattProperties-extendedProperties?: boolean--><!--Device-GattProperties-extendedProperties?: boolean-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -92,7 +100,9 @@ true表示支持，对端设备需要回复确认，false表示不支持。默�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GattProperties-indicate?: boolean--><!--Device-GattProperties-indicate?: boolean-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -112,7 +122,9 @@ true表示支持，且对端设备不需要回复确认，false表示不支持�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GattProperties-notify?: boolean--><!--Device-GattProperties-notify?: boolean-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -132,7 +144,9 @@ true表示支持，false表示不支持。默认值为true。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GattProperties-read?: boolean--><!--Device-GattProperties-read?: boolean-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -152,7 +166,9 @@ true表示支持，且被写入时需要回复对端设备，false表示不支�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GattProperties-write?: boolean--><!--Device-GattProperties-write?: boolean-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -172,6 +188,8 @@ true表示支持，且被写入时无需回复对端设备，false表示不支�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GattProperties-writeNoResponse?: boolean--><!--Device-GattProperties-writeNoResponse?: boolean-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

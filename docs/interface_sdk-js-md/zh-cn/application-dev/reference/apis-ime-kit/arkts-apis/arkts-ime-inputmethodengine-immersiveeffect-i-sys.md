@@ -8,6 +8,8 @@ interface ImmersiveEffect
 
 **起始版本：** 20
 
+<!--Device-inputMethodEngine-interface ImmersiveEffect--><!--Device-inputMethodEngine-interface ImmersiveEffect-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## 导入模块
@@ -29,6 +31,8 @@ fluidLightMode?: FluidLightMode
 **类型：** [FluidLightMode](arkts-ime-inputmethodengine-fluidlightmode-e-sys.md)
 
 **起始版本：** 20
+
+<!--Device-ImmersiveEffect-fluidLightMode?: FluidLightMode--><!--Device-ImmersiveEffect-fluidLightMode?: FluidLightMode-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 

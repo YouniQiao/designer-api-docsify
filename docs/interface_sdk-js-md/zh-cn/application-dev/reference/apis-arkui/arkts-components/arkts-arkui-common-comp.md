@@ -18,6 +18,8 @@ Common()
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-CommonInterface-(): CommonAttribute--><!--Device-CommonInterface-(): CommonAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 汇总
@@ -267,7 +269,7 @@ Common()
 | [OnMoveHandler](arkts-arkui-common-comp-onmovehandler-t.md) | 定义数据源拖拽回调。 |
 | [OnNeedSoftkeyboardCallback](arkts-arkui-common-comp-onneedsoftkeyboardcallback-t.md) | 当绑定该方法的组件判断是否需要键盘时，将触发此回调。前提条件：组件需可获焦，否则本接口不生效。 |
 | [OnScrollCallback](arkts-arkui-common-comp-onscrollcallback-t.md) | 滚动组件滑动时触发的回调。 |
-| [OnVisibleIndexesChangeCallback](arkts-arkui-common-comp-onvisibleindexeschangecallback-t.md) | 懒加载布局容器[LazyColumnLayout](arkts-arkui-lazycolumnlayout-comp-attribute.md#lazycolumnlayout)、[LazyVGridLayout](arkts-arkui-lazyvgridlayout-comp.md#lazy_grid_layout)、[LazyVWaterFlowLayout](arkts-arkui-lazyvwaterflowlayout-comp.md#lazyvwaterflowlayout)所显示的子组件索引发生变化时的回调类型。 |
+| [OnVisibleIndexesChangeCallback](arkts-arkui-common-comp-onvisibleindexeschangecallback-t.md) | 懒加载布局容器[LazyColumnLayout](arkts-arkui-lazycolumnlayout-comp-attribute.md#lazycolumnlayout)、[LazyVGridLayout](arkts-arkui-lazyvgridlayout-comp.md)、[LazyVWaterFlowLayout](arkts-arkui-lazyvwaterflowlayout-comp.md)所显示的子组件索引发生变化时的回调类型。 |
 | [OnWillScrollCallback](arkts-arkui-common-comp-onwillscrollcallback-t.md) | Called before scroll to allow developer to control real offset the Scrollable can scroll. |
 | [OnWillStopDraggingCallback](arkts-arkui-common-comp-onwillstopdraggingcallback-t.md) | 滚动组件划动离手时触发的回调。 |
 | [Optional](arkts-arkui-common-comp-optional-t.md) | 定义可选类型，其值可以是undefined。 |
@@ -16735,9 +16737,9 @@ struct FatherControlChild {
 
 ### 示例1（设置跟手变形拖拽动画）
 
-该示例通过设置[dragAnimationType](#属性)为FOLLOW_HAND_MORPH实现跟手变形拖拽动画效果，并在拖拽结束时通过[executeFollowHandMorphDropAnimation](arkts-arkui-common-comp-dragevent-i-sys.md#executefollowhandmorphdropanimation)执行自定义落位动效。
+该示例通过设置[dragAnimationType](#common)为FOLLOW_HAND_MORPH实现跟手变形拖拽动画效果，并在拖拽结束时通过[executeFollowHandMorphDropAnimation](arkts-arkui-common-comp-dragevent-i-sys.md#executefollowhandmorphdropanimation)执行自定义落位动效。
 
-从API版本26.0.0开始，新增[dragAnimationType](#属性)属性、[executeFollowHandMorphDropAnimation](arkts-arkui-common-comp-dragevent-i-sys.md#executefollowhandmorphdropanimation)方法、[interruptFollowHandMorphDropAnimation](../arkts-apis/arkts-arkui-arkui-uicontext-dragcontroller-c-sys.md#interruptfollowhandmorphdropanimation)方法。
+从API版本26.0.0开始，新增[dragAnimationType](#common)属性、[executeFollowHandMorphDropAnimation](arkts-arkui-common-comp-dragevent-i-sys.md#executefollowhandmorphdropanimation)方法、[interruptFollowHandMorphDropAnimation](../arkts-apis/arkts-arkui-arkui-uicontext-dragcontroller-c-sys.md#interruptfollowhandmorphdropanimation)方法。
 
 ```TypeScript
 // xxx.ets
@@ -19121,7 +19123,7 @@ struct VideoExample {
 
 ### 示例8（拖拽自动隐藏指定组件）
 
-该示例通过DragEvent的[autoHideComponentUniqueIds](#属性)属性，在拖拽成功发起后自动隐藏指定组件。
+该示例通过DragEvent的[autoHideComponentUniqueIds](#common)属性，在拖拽成功发起后自动隐藏指定组件。
 
 从API版本26.0.0开始，DragEvent新增autoHideComponentUniqueIds属性。
 

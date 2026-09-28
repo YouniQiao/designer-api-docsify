@@ -8,6 +8,8 @@ export class AutoPlayScene
 
 **起始版本：** 23
 
+<!--Device-photoAccessHelper-export class AutoPlayScene--><!--Device-photoAccessHelper-export class AutoPlayScene-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
@@ -30,7 +32,9 @@ playMode: PlayMode
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-AutoPlayScene-playMode: PlayMode--><!--Device-AutoPlayScene-playMode: PlayMode-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -48,6 +52,8 @@ sceneType: SceneType
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-AutoPlayScene-sceneType: SceneType--><!--Device-AutoPlayScene-sceneType: SceneType-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core

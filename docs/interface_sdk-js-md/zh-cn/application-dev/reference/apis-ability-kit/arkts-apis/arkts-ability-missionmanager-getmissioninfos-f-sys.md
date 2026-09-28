@@ -18,6 +18,8 @@ function getMissionInfos(deviceId: string, numMax: number, callback: AsyncCallba
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
+<!--Device-missionManager-function getMissionInfos(deviceId: string, numMax: int, callback: AsyncCallback<Array<MissionInfo>>): void--><!--Device-missionManager-function getMissionInfos(deviceId: string, numMax: int, callback: AsyncCallback<Array<MissionInfo>>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -75,6 +77,8 @@ function getMissionInfos(deviceId: string, numMax: number): Promise<Array<Missio
 **起始版本：** 9
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
+
+<!--Device-missionManager-function getMissionInfos(deviceId: string, numMax: int): Promise<Array<MissionInfo>>--><!--Device-missionManager-function getMissionInfos(deviceId: string, numMax: int): Promise<Array<MissionInfo>>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 

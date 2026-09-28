@@ -14,6 +14,8 @@ interface ScanFilter
 
 **替代接口：** [ScanFilter](arkts-connectivity-ble-scanfilter-i.md)
 
+<!--Device-bluetoothManager-interface ScanFilter--><!--Device-bluetoothManager-interface ScanFilter-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -38,6 +40,8 @@ deviceId?: string
 
 **替代接口：** [deviceId](arkts-connectivity-ble-scanfilter-i.md#deviceid)
 
+<!--Device-ScanFilter-deviceId?: string--><!--Device-ScanFilter-deviceId?: string-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## manufactureData
@@ -55,6 +59,8 @@ manufactureData?: ArrayBuffer
 **废弃版本：** 10
 
 **替代接口：** [manufactureData](arkts-connectivity-ble-scanfilter-i.md#manufacturedata)
+
+<!--Device-ScanFilter-manufactureData?: ArrayBuffer--><!--Device-ScanFilter-manufactureData?: ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -74,6 +80,8 @@ manufactureDataMask?: ArrayBuffer
 
 **替代接口：** [manufactureDataMask](arkts-connectivity-ble-scanfilter-i.md#manufacturedatamask)
 
+<!--Device-ScanFilter-manufactureDataMask?: ArrayBuffer--><!--Device-ScanFilter-manufactureDataMask?: ArrayBuffer-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## manufactureId
@@ -91,6 +99,8 @@ manufactureId?: number
 **废弃版本：** 10
 
 **替代接口：** [manufactureId](arkts-connectivity-ble-scanfilter-i.md#manufactureid)
+
+<!--Device-ScanFilter-manufactureId?: number--><!--Device-ScanFilter-manufactureId?: number-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -110,6 +120,8 @@ name?: string
 
 **替代接口：** [name](arkts-connectivity-ble-scanfilter-i.md#name)
 
+<!--Device-ScanFilter-name?: string--><!--Device-ScanFilter-name?: string-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## serviceData
@@ -127,6 +139,8 @@ serviceData?: ArrayBuffer
 **废弃版本：** 10
 
 **替代接口：** [serviceData](arkts-connectivity-ble-scanfilter-i.md#servicedata)
+
+<!--Device-ScanFilter-serviceData?: ArrayBuffer--><!--Device-ScanFilter-serviceData?: ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -146,6 +160,8 @@ serviceDataMask?: ArrayBuffer
 
 **替代接口：** [serviceDataMask](arkts-connectivity-ble-scanfilter-i.md#servicedatamask)
 
+<!--Device-ScanFilter-serviceDataMask?: ArrayBuffer--><!--Device-ScanFilter-serviceDataMask?: ArrayBuffer-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## serviceSolicitationUuid
@@ -163,6 +179,8 @@ serviceSolicitationUuid?: string
 **废弃版本：** 10
 
 **替代接口：** [serviceSolicitationUuid](arkts-connectivity-ble-scanfilter-i.md#servicesolicitationuuid)
+
+<!--Device-ScanFilter-serviceSolicitationUuid?: string--><!--Device-ScanFilter-serviceSolicitationUuid?: string-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -182,6 +200,8 @@ serviceSolicitationUuidMask?: string
 
 **替代接口：** [serviceSolicitationUuidMask](arkts-connectivity-ble-scanfilter-i.md#servicesolicitationuuidmask)
 
+<!--Device-ScanFilter-serviceSolicitationUuidMask?: string--><!--Device-ScanFilter-serviceSolicitationUuidMask?: string-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## serviceUuid
@@ -200,6 +220,8 @@ serviceUuid?: string
 
 **替代接口：** [serviceUuid](arkts-connectivity-ble-scanfilter-i.md#serviceuuid)
 
+<!--Device-ScanFilter-serviceUuid?: string--><!--Device-ScanFilter-serviceUuid?: string-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## serviceUuidMask
@@ -217,5 +239,7 @@ serviceUuidMask?: string
 **废弃版本：** 10
 
 **替代接口：** [serviceUuidMask](arkts-connectivity-ble-scanfilter-i.md#serviceuuidmask)
+
+<!--Device-ScanFilter-serviceUuidMask?: string--><!--Device-ScanFilter-serviceUuidMask?: string-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

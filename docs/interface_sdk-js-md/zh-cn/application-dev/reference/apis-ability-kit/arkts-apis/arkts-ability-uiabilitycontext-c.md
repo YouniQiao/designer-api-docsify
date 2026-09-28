@@ -4,11 +4,13 @@
 declare class UIAbilityContext extends Context
 ```
 
-UIAbilityContext是需要保存状态的[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)所对应的context，继承自Context，提供UIAbility的相关配置信息以及操作UIAbility和ServiceExtensionAbility的方法，如启动UIAbility，停止当前UIAbilityContext所属的UIAbility，启动、停止、连接、断开连接ServiceExtensionAbility等。
+UIAbilityContext是需要保存状态的[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)所对应的context，继承自[Context](arkts-ability-context.md)，提供UIAbility的相关配置信息以及操作UIAbility和ServiceExtensionAbility的方法，如启动UIAbility，停止当前UIAbilityContext所属的UIAbility，启动、停止、连接、断开连接ServiceExtensionAbility等。
 
 **继承/实现关系：** UIAbilityContext extends [Context](arkts-ability-context-c.md)
 
 **起始版本：** 9
+
+<!--Device-unnamed-declare class UIAbilityContext extends Context--><!--Device-unnamed-declare class UIAbilityContext extends Context-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -24,7 +26,9 @@ backToCallerAbilityWithResult(abilityResult: AbilityResult, requestCode: string)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbilityContext-backToCallerAbilityWithResult(abilityResult: AbilityResult, requestCode: string): Promise<void>--><!--Device-UIAbilityContext-backToCallerAbilityWithResult(abilityResult: AbilityResult, requestCode: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -72,6 +76,8 @@ connectAppServiceExtensionAbility(want: Want, callback: ConnectOptions): number
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIAbilityContext-connectAppServiceExtensionAbility(want: Want, callback: ConnectOptions): long--><!--Device-UIAbilityContext-connectAppServiceExtensionAbility(want: Want, callback: ConnectOptions): long-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -162,6 +168,8 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): number
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIAbilityContext-connectServiceExtensionAbility(want: Want, options: ConnectOptions): long--><!--Device-UIAbilityContext-connectServiceExtensionAbility(want: Want, options: ConnectOptions): long-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -255,7 +263,9 @@ connectUIServiceExtensionAbility(want: Want, callback: UIServiceExtensionConnect
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbilityContext-connectUIServiceExtensionAbility(want: Want, callback: UIServiceExtensionConnectCallback) : Promise<UIServiceProxy>--><!--Device-UIAbilityContext-connectUIServiceExtensionAbility(want: Want, callback: UIServiceExtensionConnectCallback) : Promise<UIServiceProxy>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -367,6 +377,8 @@ disconnectAppServiceExtensionAbility(connection: number): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UIAbilityContext-disconnectAppServiceExtensionAbility(connection: long): Promise<void>--><!--Device-UIAbilityContext-disconnectAppServiceExtensionAbility(connection: long): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -435,6 +447,8 @@ disconnectServiceExtensionAbility(connection: number, callback: AsyncCallback<vo
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UIAbilityContext-disconnectServiceExtensionAbility(connection: long, callback: AsyncCallback<void>): void--><!--Device-UIAbilityContext-disconnectServiceExtensionAbility(connection: long, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -501,6 +515,8 @@ disconnectServiceExtensionAbility(connection: number): Promise<void>
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIAbilityContext-disconnectServiceExtensionAbility(connection: long): Promise<void>--><!--Device-UIAbilityContext-disconnectServiceExtensionAbility(connection: long): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -574,7 +590,9 @@ disconnectUIServiceExtensionAbility(proxy: UIServiceProxy): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbilityContext-disconnectUIServiceExtensionAbility(proxy: UIServiceProxy): Promise<void>--><!--Device-UIAbilityContext-disconnectUIServiceExtensionAbility(proxy: UIServiceProxy): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -668,6 +686,8 @@ hideAbility(): Promise<void>
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIAbilityContext-hideAbility(): Promise<void>--><!--Device-UIAbilityContext-hideAbility(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -771,7 +791,9 @@ isTerminating(): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbilityContext-isTerminating(): boolean--><!--Device-UIAbilityContext-isTerminating(): boolean-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -812,7 +834,9 @@ moveAbilityToBackground(): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbilityContext-moveAbilityToBackground(): Promise<void>--><!--Device-UIAbilityContext-moveAbilityToBackground(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -887,7 +911,9 @@ openAtomicService(appId: string, options?: AtomicServiceOptions): Promise<Abilit
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbilityContext-openAtomicService(appId: string, options?: AtomicServiceOptions): Promise<AbilityResult>--><!--Device-UIAbilityContext-openAtomicService(appId: string, options?: AtomicServiceOptions): Promise<AbilityResult>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -974,7 +1000,9 @@ openLink(link: string, options?: OpenLinkOptions, callback?: AsyncCallback<Abili
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbilityContext-openLink(link: string, options?: OpenLinkOptions, callback?: AsyncCallback<AbilityResult>): Promise<void>--><!--Device-UIAbilityContext-openLink(link: string, options?: OpenLinkOptions, callback?: AsyncCallback<AbilityResult>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -1077,7 +1105,9 @@ reportDrawnCompleted(callback: AsyncCallback<void>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbilityContext-reportDrawnCompleted(callback: AsyncCallback<void>): void--><!--Device-UIAbilityContext-reportDrawnCompleted(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -1145,6 +1175,8 @@ requestDialogService(want: Want, result: AsyncCallback<dialogRequest.RequestResu
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIAbilityContext-requestDialogService(want: Want, result: AsyncCallback<dialogRequest.RequestResult>): void--><!--Device-UIAbilityContext-requestDialogService(want: Want, result: AsyncCallback<dialogRequest.RequestResult>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -1228,6 +1260,8 @@ requestDialogService(want: Want): Promise<dialogRequest.RequestResult>
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIAbilityContext-requestDialogService(want: Want): Promise<dialogRequest.RequestResult>--><!--Device-UIAbilityContext-requestDialogService(want: Want): Promise<dialogRequest.RequestResult>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -1323,7 +1357,9 @@ restartApp(want: Want): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbilityContext-restartApp(want: Want): Promise<void>--><!--Device-UIAbilityContext-restartApp(want: Want): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -1403,7 +1439,9 @@ restoreWindowStage(localStorage: LocalStorage): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbilityContext-restoreWindowStage(localStorage: LocalStorage): void--><!--Device-UIAbilityContext-restoreWindowStage(localStorage: LocalStorage): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -1447,6 +1485,8 @@ setAbilityInstanceInfo(label: string, icon: image.PixelMap): Promise<void>
 **需要权限：** ohos.permission.SET_ABILITY_INSTANCE_INFO
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIAbilityContext-setAbilityInstanceInfo(label: string, icon: image.PixelMap): Promise<void>--><!--Device-UIAbilityContext-setAbilityInstanceInfo(label: string, icon: image.PixelMap): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -1536,6 +1576,8 @@ setAbilityInstanceInfo(label: string, icon: image.PixelMap, groupId: string): Pr
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UIAbilityContext-setAbilityInstanceInfo(label: string, icon: image.PixelMap, groupId: string): Promise<void>--><!--Device-UIAbilityContext-setAbilityInstanceInfo(label: string, icon: image.PixelMap, groupId: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -1585,7 +1627,9 @@ setColorMode(colorMode: ConfigurationConstant.ColorMode): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbilityContext-setColorMode(colorMode: ConfigurationConstant.ColorMode): void--><!--Device-UIAbilityContext-setColorMode(colorMode: ConfigurationConstant.ColorMode): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -1635,7 +1679,9 @@ setMissionContinueState(state: AbilityConstant.ContinueState, callback: AsyncCal
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbilityContext-setMissionContinueState(state: AbilityConstant.ContinueState, callback: AsyncCallback<void>): void--><!--Device-UIAbilityContext-setMissionContinueState(state: AbilityConstant.ContinueState, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -1693,7 +1739,9 @@ setMissionContinueState(state: AbilityConstant.ContinueState): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbilityContext-setMissionContinueState(state: AbilityConstant.ContinueState): Promise<void>--><!--Device-UIAbilityContext-setMissionContinueState(state: AbilityConstant.ContinueState): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -1746,7 +1794,9 @@ setMissionLabel(label: string, callback: AsyncCallback<void>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbilityContext-setMissionLabel(label: string, callback: AsyncCallback<void>): void--><!--Device-UIAbilityContext-setMissionLabel(label: string, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -1798,7 +1848,9 @@ setMissionLabel(label: string): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbilityContext-setMissionLabel(label: string): Promise<void>--><!--Device-UIAbilityContext-setMissionLabel(label: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -1860,6 +1912,8 @@ setMissionWindowIcon(windowIcon: image.PixelMap): Promise<void>
 **起始版本：** 22
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIAbilityContext-setMissionWindowIcon(windowIcon: image.PixelMap): Promise<void>--><!--Device-UIAbilityContext-setMissionWindowIcon(windowIcon: image.PixelMap): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -1936,7 +1990,9 @@ setOnNewWantSkipScenarios(scenarios: number): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbilityContext-setOnNewWantSkipScenarios(scenarios: int): Promise<void>--><!--Device-UIAbilityContext-setOnNewWantSkipScenarios(scenarios: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -2001,7 +2057,9 @@ setRestoreEnabled(enabled: boolean): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbilityContext-setRestoreEnabled(enabled: boolean): void--><!--Device-UIAbilityContext-setRestoreEnabled(enabled: boolean): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -2049,6 +2107,8 @@ showAbility(): Promise<void>
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIAbilityContext-showAbility(): Promise<void>--><!--Device-UIAbilityContext-showAbility(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -2156,7 +2216,9 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbilityContext-startAbility(want: Want, callback: AsyncCallback<void>): void--><!--Device-UIAbilityContext-startAbility(want: Want, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -2251,7 +2313,9 @@ startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): 
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbilityContext-startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): void--><!--Device-UIAbilityContext-startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -2355,7 +2419,9 @@ startAbility(want: Want, options?: StartOptions): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbilityContext-startAbility(want: Want, options?: StartOptions): Promise<void>--><!--Device-UIAbilityContext-startAbility(want: Want, options?: StartOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -2474,6 +2540,8 @@ startAbilityByCall(want: Want): Promise<Caller>
 - API版本9-10：ohos.permission.ABILITY_BACKGROUND_COMMUNICATION
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIAbilityContext-startAbilityByCall(want: Want): Promise<Caller>--><!--Device-UIAbilityContext-startAbilityByCall(want: Want): Promise<Caller>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -2658,6 +2726,8 @@ startAbilityByType(type: string, wantParam: Record<string, Object>,
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-UIAbilityContext-startAbilityByType(type: string, wantParam: Record<string, Object>,    abilityStartCallback: AbilityStartCallback, callback: AsyncCallback<void>): void--><!--Device-UIAbilityContext-startAbilityByType(type: string, wantParam: Record<string, Object>,    abilityStartCallback: AbilityStartCallback, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -2727,6 +2797,8 @@ startAbilityByType(type: string, wantParam: Record<string, Object>,
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbilityContext-startAbilityByType(type: string, wantParam: Record<string, Object>,    abilityStartCallback: AbilityStartCallback): Promise<void>--><!--Device-UIAbilityContext-startAbilityByType(type: string, wantParam: Record<string, Object>,    abilityStartCallback: AbilityStartCallback): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -2806,7 +2878,9 @@ startAbilityForResult(want: Want, callback: AsyncCallback<AbilityResult>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbilityContext-startAbilityForResult(want: Want, callback: AsyncCallback<AbilityResult>): void--><!--Device-UIAbilityContext-startAbilityForResult(want: Want, callback: AsyncCallback<AbilityResult>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -2907,7 +2981,9 @@ startAbilityForResult(want: Want, options: StartOptions, callback: AsyncCallback
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbilityContext-startAbilityForResult(want: Want, options: StartOptions, callback: AsyncCallback<AbilityResult>): void--><!--Device-UIAbilityContext-startAbilityForResult(want: Want, options: StartOptions, callback: AsyncCallback<AbilityResult>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -3012,7 +3088,9 @@ startAbilityForResult(want: Want, options?: StartOptions): Promise<AbilityResult
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbilityContext-startAbilityForResult(want: Want, options?: StartOptions): Promise<AbilityResult>--><!--Device-UIAbilityContext-startAbilityForResult(want: Want, options?: StartOptions): Promise<AbilityResult>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -3118,6 +3196,8 @@ startAppServiceExtensionAbility(want: Want): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UIAbilityContext-startAppServiceExtensionAbility(want: Want): Promise<void>--><!--Device-UIAbilityContext-startAppServiceExtensionAbility(want: Want): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -3214,6 +3294,8 @@ startSelfUIAbilityInCurrentProcess(want: Want, specifiedFlag: string, options?: 
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UIAbilityContext-startSelfUIAbilityInCurrentProcess(want: Want, specifiedFlag: string, options?: StartOptions): Promise<void>--><!--Device-UIAbilityContext-startSelfUIAbilityInCurrentProcess(want: Want, specifiedFlag: string, options?: StartOptions): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -3296,7 +3378,9 @@ startUIServiceExtensionAbility(want: Want): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbilityContext-startUIServiceExtensionAbility(want: Want): Promise<void>--><!--Device-UIAbilityContext-startUIServiceExtensionAbility(want: Want): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -3389,6 +3473,8 @@ stopAppServiceExtensionAbility(want: Want): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UIAbilityContext-stopAppServiceExtensionAbility(want: Want): Promise<void>--><!--Device-UIAbilityContext-stopAppServiceExtensionAbility(want: Want): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -3469,7 +3555,9 @@ terminateSelf(callback: AsyncCallback<void>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbilityContext-terminateSelf(callback: AsyncCallback<void>): void--><!--Device-UIAbilityContext-terminateSelf(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -3557,7 +3645,9 @@ terminateSelf(): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbilityContext-terminateSelf(): Promise<void>--><!--Device-UIAbilityContext-terminateSelf(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -3642,7 +3732,9 @@ terminateSelfWithResult(parameter: AbilityResult, callback: AsyncCallback<void>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbilityContext-terminateSelfWithResult(parameter: AbilityResult, callback: AsyncCallback<void>): void--><!--Device-UIAbilityContext-terminateSelfWithResult(parameter: AbilityResult, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -3724,7 +3816,9 @@ terminateSelfWithResult(parameter: AbilityResult): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbilityContext-terminateSelfWithResult(parameter: AbilityResult): Promise<void>--><!--Device-UIAbilityContext-terminateSelfWithResult(parameter: AbilityResult): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -3806,7 +3900,9 @@ UIAbility的相关信息。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbilityContext-abilityInfo: AbilityInfo--><!--Device-UIAbilityContext-abilityInfo: AbilityInfo-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -3824,7 +3920,9 @@ config: Configuration
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbilityContext-config: Configuration--><!--Device-UIAbilityContext-config: Configuration-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -3842,7 +3940,9 @@ currentHapModuleInfo: HapModuleInfo
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbilityContext-currentHapModuleInfo: HapModuleInfo--><!--Device-UIAbilityContext-currentHapModuleInfo: HapModuleInfo-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -3860,6 +3960,8 @@ windowStage: window.WindowStage
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIAbilityContext-windowStage: window.WindowStage--><!--Device-UIAbilityContext-windowStage: window.WindowStage-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

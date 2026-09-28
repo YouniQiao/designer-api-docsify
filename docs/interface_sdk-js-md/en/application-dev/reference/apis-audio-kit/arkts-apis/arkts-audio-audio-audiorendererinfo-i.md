@@ -8,6 +8,8 @@ Describes audio renderer information.
 
 **Since:** 8
 
+<!--Device-audio-interface AudioRendererInfo--><!--Device-audio-interface AudioRendererInfo-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## Modules to Import
@@ -30,7 +32,9 @@ Set this parameter to **0**.
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-AudioRendererInfo-rendererFlags: int--><!--Device-AudioRendererInfo-rendererFlags: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -46,7 +50,9 @@ Audio stream usage.
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-AudioRendererInfo-usage: StreamUsage--><!--Device-AudioRendererInfo-usage: StreamUsage-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -61,6 +67,8 @@ Audio volume mode config. If volumeMode is set to [APP_INDIVIDUAL](arkts-audio-a
 **Type:** [AudioVolumeMode](arkts-audio-audio-audiovolumemode-e.md)
 
 **Since:** 19
+
+<!--Device-AudioRendererInfo-volumeMode?: AudioVolumeMode--><!--Device-AudioRendererInfo-volumeMode?: AudioVolumeMode-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -79,5 +87,7 @@ Audio content type.
 **Deprecated since:** 10
 
 **Substitutes:** usage
+
+<!--Device-AudioRendererInfo-content?: ContentType--><!--Device-AudioRendererInfo-content?: ContentType-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core

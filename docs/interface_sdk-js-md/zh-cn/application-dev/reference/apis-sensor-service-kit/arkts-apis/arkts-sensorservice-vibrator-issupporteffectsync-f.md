@@ -16,6 +16,8 @@ function isSupportEffectSync(effectId: string): boolean
 
 **起始版本：** 12
 
+<!--Device-vibrator-function isSupportEffectSync(effectId: string): boolean--><!--Device-vibrator-function isSupportEffectSync(effectId: string): boolean-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 **参数：**

@@ -8,6 +8,8 @@ interface ConnectSettings
 
 **起始版本：** 26.0.0
 
+<!--Device-wifiManager-interface ConnectSettings--><!--Device-wifiManager-interface ConnectSettings-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## 导入模块
@@ -30,7 +32,9 @@ addNetworkToSystem?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-ConnectSettings-addNetworkToSystem?: boolean--><!--Device-ConnectSettings-addNetworkToSystem?: boolean-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -48,7 +52,9 @@ networkId: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-ConnectSettings-networkId: int--><!--Device-ConnectSettings-networkId: int-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -66,7 +72,9 @@ userActionTimeout?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-ConnectSettings-userActionTimeout?: int--><!--Device-ConnectSettings-userActionTimeout?: int-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -84,6 +92,8 @@ withUserAction?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-ConnectSettings-withUserAction?: boolean--><!--Device-ConnectSettings-withUserAction?: boolean-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA

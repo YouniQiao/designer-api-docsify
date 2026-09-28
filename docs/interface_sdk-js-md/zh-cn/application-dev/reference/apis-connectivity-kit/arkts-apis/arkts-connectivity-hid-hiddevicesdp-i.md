@@ -8,6 +8,8 @@ interface HidDeviceSdp
 
 **起始版本：** 23
 
+<!--Device-hid-interface HidDeviceSdp--><!--Device-hid-interface HidDeviceSdp-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ HID设备的描述信息，要求长度范围：[1, 50]，单位：Byte。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HidDeviceSdp-description: string--><!--Device-HidDeviceSdp-description: string-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## descriptors
@@ -45,6 +49,8 @@ descriptors: Uint8Array
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HidDeviceSdp-descriptors: Uint8Array--><!--Device-HidDeviceSdp-descriptors: Uint8Array-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -62,6 +68,8 @@ HID设备的名称，要求长度范围：[1, 50]，单位：Byte。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HidDeviceSdp-name: string--><!--Device-HidDeviceSdp-name: string-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## provider
@@ -78,6 +86,8 @@ provider: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HidDeviceSdp-provider: string--><!--Device-HidDeviceSdp-provider: string-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## subclass
@@ -93,5 +103,7 @@ subclass: Subclass
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HidDeviceSdp-subclass: Subclass--><!--Device-HidDeviceSdp-subclass: Subclass-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

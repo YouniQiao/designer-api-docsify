@@ -16,6 +16,8 @@ function once(activity: ActivityType, callback: Callback<ActivityResponse>): voi
 
 **起始版本：** 9
 
+<!--Device-stationary-function once(activity: ActivityType, callback: Callback<ActivityResponse>): void--><!--Device-stationary-function once(activity: ActivityType, callback: Callback<ActivityResponse>): void-End-->
+
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Stationary
 
 **参数：**

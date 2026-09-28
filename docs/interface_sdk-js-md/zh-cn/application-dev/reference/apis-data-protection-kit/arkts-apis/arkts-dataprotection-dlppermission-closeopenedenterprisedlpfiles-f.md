@@ -26,6 +26,8 @@ function closeOpenedEnterpriseDlpFiles(options?: DlpFileQueryOptions): Promise<v
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-dlpPermission-function closeOpenedEnterpriseDlpFiles(options?: DlpFileQueryOptions): Promise<void>--><!--Device-dlpPermission-function closeOpenedEnterpriseDlpFiles(options?: DlpFileQueryOptions): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **参数：**

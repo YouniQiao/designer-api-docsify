@@ -20,6 +20,8 @@ function addHiddenSettingsMenu(admin: Want, menusToHidden: Array<SettingsMenu>):
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-deviceSettings-function addHiddenSettingsMenu(admin: Want, menusToHidden: Array<SettingsMenu>): void--><!--Device-deviceSettings-function addHiddenSettingsMenu(admin: Want, menusToHidden: Array<SettingsMenu>): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**

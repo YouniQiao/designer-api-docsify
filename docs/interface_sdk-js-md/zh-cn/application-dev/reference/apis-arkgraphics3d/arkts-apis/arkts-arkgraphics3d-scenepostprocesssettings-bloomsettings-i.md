@@ -10,6 +10,8 @@ export interface BloomSettings
 
 **起始版本：** 18
 
+<!--Device-unnamed-export interface BloomSettings--><!--Device-unnamed-export interface BloomSettings-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## scaleFactor
@@ -23,6 +25,8 @@ scaleFactor?: number
 **类型：** number
 
 **起始版本：** 18
+
+<!--Device-BloomSettings-scaleFactor?: double--><!--Device-BloomSettings-scaleFactor?: double-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -38,6 +42,8 @@ scatter?: number
 
 **起始版本：** 18
 
+<!--Device-BloomSettings-scatter?: double--><!--Device-BloomSettings-scatter?: double-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## thresholdHard
@@ -52,6 +58,8 @@ thresholdHard?: number
 
 **起始版本：** 18
 
+<!--Device-BloomSettings-thresholdHard?: double--><!--Device-BloomSettings-thresholdHard?: double-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## thresholdSoft
@@ -65,5 +73,7 @@ thresholdSoft?: number
 **类型：** number
 
 **起始版本：** 18
+
+<!--Device-BloomSettings-thresholdSoft?: double--><!--Device-BloomSettings-thresholdSoft?: double-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

@@ -10,6 +10,8 @@ export interface Morpher
 
 **起始版本：** 20
 
+<!--Device-unnamed-export interface Morpher--><!--Device-unnamed-export interface Morpher-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## targets
@@ -23,5 +25,7 @@ readonly targets: Record<string, number>
 **类型：** Record&lt;string, number&gt;
 
 **起始版本：** 20
+
+<!--Device-Morpher-readonly targets: Record<string, double>--><!--Device-Morpher-readonly targets: Record<string, double>-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

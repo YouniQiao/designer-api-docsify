@@ -8,6 +8,8 @@ interface WifiP2pDevice
 
 **起始版本：** 9
 
+<!--Device-wifiManager-interface WifiP2pDevice--><!--Device-wifiManager-interface WifiP2pDevice-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
 ## 导入模块
@@ -28,6 +30,8 @@ deviceAddress: string
 
 **起始版本：** 9
 
+<!--Device-WifiP2pDevice-deviceAddress: string--><!--Device-WifiP2pDevice-deviceAddress: string-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
 ## deviceAddressType
@@ -41,6 +45,8 @@ deviceAddressType?: DeviceAddressType
 **类型：** [DeviceAddressType](arkts-connectivity-wifimanager-deviceaddresstype-e.md)
 
 **起始版本：** 10
+
+<!--Device-WifiP2pDevice-deviceAddressType?: DeviceAddressType--><!--Device-WifiP2pDevice-deviceAddressType?: DeviceAddressType-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
@@ -56,6 +62,8 @@ deviceName: string
 
 **起始版本：** 9
 
+<!--Device-WifiP2pDevice-deviceName: string--><!--Device-WifiP2pDevice-deviceName: string-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
 ## deviceStatus
@@ -69,6 +77,8 @@ deviceStatus: P2pDeviceStatus
 **类型：** [P2pDeviceStatus](arkts-connectivity-wifimanager-p2pdevicestatus-e.md)
 
 **起始版本：** 9
+
+<!--Device-WifiP2pDevice-deviceStatus: P2pDeviceStatus--><!--Device-WifiP2pDevice-deviceStatus: P2pDeviceStatus-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
@@ -84,6 +94,8 @@ groupCapabilities: number
 
 **起始版本：** 9
 
+<!--Device-WifiP2pDevice-groupCapabilities: int--><!--Device-WifiP2pDevice-groupCapabilities: int-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
 ## primaryDeviceType
@@ -97,5 +109,7 @@ primaryDeviceType: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-WifiP2pDevice-primaryDeviceType: string--><!--Device-WifiP2pDevice-primaryDeviceType: string-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P

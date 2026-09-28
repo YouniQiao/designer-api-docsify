@@ -8,6 +8,8 @@ enum UnbondCause
 
 **起始版本：** 12
 
+<!--Device-connection-enum UnbondCause--><!--Device-connection-enum UnbondCause-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## USER_REMOVED
@@ -21,6 +23,8 @@ USER_REMOVED = 0
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UnbondCause-USER_REMOVED = 0--><!--Device-UnbondCause-USER_REMOVED = 0-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -36,6 +40,8 @@ REMOTE_DEVICE_DOWN = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UnbondCause-REMOTE_DEVICE_DOWN = 1--><!--Device-UnbondCause-REMOTE_DEVICE_DOWN = 1-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## AUTH_FAILURE
@@ -49,6 +55,8 @@ AUTH_FAILURE = 2
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UnbondCause-AUTH_FAILURE = 2--><!--Device-UnbondCause-AUTH_FAILURE = 2-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -64,6 +72,8 @@ AUTH_REJECTED = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UnbondCause-AUTH_REJECTED = 3--><!--Device-UnbondCause-AUTH_REJECTED = 3-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## INTERNAL_ERROR
@@ -77,5 +87,7 @@ INTERNAL_ERROR = 4
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UnbondCause-INTERNAL_ERROR = 4--><!--Device-UnbondCause-INTERNAL_ERROR = 4-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

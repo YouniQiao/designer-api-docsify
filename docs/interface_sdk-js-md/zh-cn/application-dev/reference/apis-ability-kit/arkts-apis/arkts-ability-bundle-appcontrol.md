@@ -8,6 +8,8 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace appControl--><!--Device-unnamed-declare namespace appControl-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 
 **系统接口：** 此接口为系统接口。

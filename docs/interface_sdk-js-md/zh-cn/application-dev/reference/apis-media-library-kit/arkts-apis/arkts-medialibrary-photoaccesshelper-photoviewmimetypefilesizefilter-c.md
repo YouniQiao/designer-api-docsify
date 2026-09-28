@@ -8,6 +8,8 @@ class PhotoViewMimeTypeFileSizeFilter
 
 **起始版本：** 20
 
+<!--Device-photoAccessHelper-class PhotoViewMimeTypeFileSizeFilter--><!--Device-photoAccessHelper-class PhotoViewMimeTypeFileSizeFilter-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
@@ -28,7 +30,9 @@ photoViewMimeType: PhotoViewMIMETypes
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PhotoViewMimeTypeFileSizeFilter-photoViewMimeType: PhotoViewMIMETypes--><!--Device-PhotoViewMimeTypeFileSizeFilter-photoViewMimeType: PhotoViewMIMETypes-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -44,6 +48,8 @@ sizeFilter: FileSizeFilter
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PhotoViewMimeTypeFileSizeFilter-sizeFilter: FileSizeFilter--><!--Device-PhotoViewMimeTypeFileSizeFilter-sizeFilter: FileSizeFilter-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core

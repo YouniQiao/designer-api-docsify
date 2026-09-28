@@ -22,6 +22,8 @@ function writeNdefTag(data: string): Promise<void>
 
 **需要权限：** ohos.permission.NFC_TAG
 
+<!--Device-connectedTag-function writeNdefTag(data: string): Promise<void>--><!--Device-connectedTag-function writeNdefTag(data: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.ConnectedTag
 
 **参数：**
@@ -68,6 +70,8 @@ function writeNdefTag(data: string, callback: AsyncCallback<void>): void
 **替代接口：** [write](arkts-connectivity-connectedtag-write-f.md)
 
 **需要权限：** ohos.permission.NFC_TAG
+
+<!--Device-connectedTag-function writeNdefTag(data: string, callback: AsyncCallback<void>): void--><!--Device-connectedTag-function writeNdefTag(data: string, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Communication.ConnectedTag
 

@@ -8,6 +8,8 @@ export interface PanelInfo
 
 **起始版本：** 24
 
+<!--Device-unnamed-export interface PanelInfo--><!--Device-unnamed-export interface PanelInfo-End-->
+
 **系统能力：** SystemCapability.SelectionInput.Selection
 
 ## 导入模块
@@ -30,6 +32,8 @@ height: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PanelInfo-height: int--><!--Device-PanelInfo-height: int-End-->
+
 **系统能力：** SystemCapability.SelectionInput.Selection
 
 ## panelType
@@ -48,6 +52,8 @@ panelType: PanelType
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PanelInfo-panelType: PanelType--><!--Device-PanelInfo-panelType: PanelType-End-->
+
 **系统能力：** SystemCapability.SelectionInput.Selection
 
 ## width
@@ -63,6 +69,8 @@ width: number
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PanelInfo-width: int--><!--Device-PanelInfo-width: int-End-->
 
 **系统能力：** SystemCapability.SelectionInput.Selection
 
@@ -80,6 +88,8 @@ x: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PanelInfo-x: int--><!--Device-PanelInfo-x: int-End-->
+
 **系统能力：** SystemCapability.SelectionInput.Selection
 
 ## y
@@ -95,5 +105,7 @@ y: number
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PanelInfo-y: int--><!--Device-PanelInfo-y: int-End-->
 
 **系统能力：** SystemCapability.SelectionInput.Selection

@@ -21,6 +21,8 @@ function notifyVisibleForms(formIds: Array<string>, callback: AsyncCallback<void
 
 **需要权限：** ohos.permission.REQUIRE_FORM
 
+<!--Device-formHost-function notifyVisibleForms(formIds: Array<string>, callback: AsyncCallback<void>): void--><!--Device-formHost-function notifyVisibleForms(formIds: Array<string>, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -63,6 +65,8 @@ function notifyVisibleForms(formIds: Array<string>): Promise<void>
 **替代接口：** [notifyVisibleForms](arkts-form-formhost-notifyvisibleforms-f-sys.md)
 
 **需要权限：** ohos.permission.REQUIRE_FORM
+
+<!--Device-formHost-function notifyVisibleForms(formIds: Array<string>): Promise<void>--><!--Device-formHost-function notifyVisibleForms(formIds: Array<string>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 

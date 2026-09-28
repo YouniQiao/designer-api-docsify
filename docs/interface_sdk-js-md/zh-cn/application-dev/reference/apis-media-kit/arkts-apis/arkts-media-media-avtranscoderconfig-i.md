@@ -8,6 +8,8 @@ interface AVTranscoderConfig
 
 **起始版本：** 12
 
+<!--Device-media-interface AVTranscoderConfig--><!--Device-media-interface AVTranscoderConfig-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVTranscoder
 
 ## 导入模块
@@ -28,7 +30,9 @@ audioBitrate?: number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVTranscoderConfig-audioBitrate?: int--><!--Device-AVTranscoderConfig-audioBitrate?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVTranscoder
 
@@ -44,7 +48,9 @@ audioCodec?: CodecMimeType
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVTranscoderConfig-audioCodec?: CodecMimeType--><!--Device-AVTranscoderConfig-audioCodec?: CodecMimeType-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVTranscoder
 
@@ -62,7 +68,9 @@ audioCodecV2?: CodecMimeType
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVTranscoderConfig-audioCodecV2?: CodecMimeType--><!--Device-AVTranscoderConfig-audioCodecV2?: CodecMimeType-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVTranscoder
 
@@ -78,7 +86,9 @@ enableBFrame?: boolean
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVTranscoderConfig-enableBFrame?: boolean--><!--Device-AVTranscoderConfig-enableBFrame?: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVTranscoder
 
@@ -94,7 +104,9 @@ fileFormat: ContainerFormatType
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVTranscoderConfig-fileFormat: ContainerFormatType--><!--Device-AVTranscoderConfig-fileFormat: ContainerFormatType-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVTranscoder
 
@@ -110,7 +122,9 @@ videoBitrate?: number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVTranscoderConfig-videoBitrate?: int--><!--Device-AVTranscoderConfig-videoBitrate?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVTranscoder
 
@@ -126,7 +140,9 @@ videoCodec?: CodecMimeType
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVTranscoderConfig-videoCodec?: CodecMimeType--><!--Device-AVTranscoderConfig-videoCodec?: CodecMimeType-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVTranscoder
 
@@ -142,7 +158,9 @@ videoFrameHeight?: number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVTranscoderConfig-videoFrameHeight?: int--><!--Device-AVTranscoderConfig-videoFrameHeight?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVTranscoder
 
@@ -158,6 +176,8 @@ videoFrameWidth?: number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVTranscoderConfig-videoFrameWidth?: int--><!--Device-AVTranscoderConfig-videoFrameWidth?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVTranscoder

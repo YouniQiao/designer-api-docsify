@@ -8,6 +8,8 @@ Describes the parameters of the ring style.
 
 **Since:** 12
 
+<!--Device-unnamed-declare interface CircleStyleOptions--><!--Device-unnamed-declare interface CircleStyleOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## color
@@ -27,6 +29,8 @@ Default value: '#33182431' (dark gray, 20% opacity).
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-CircleStyleOptions-color?: ResourceColor--><!--Device-CircleStyleOptions-color?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,6 +54,8 @@ Default value: false.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-CircleStyleOptions-enableForeground?: boolean--><!--Device-CircleStyleOptions-enableForeground?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## enableWaveEffect
@@ -72,6 +78,8 @@ Default value: true.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-CircleStyleOptions-enableWaveEffect?: boolean--><!--Device-CircleStyleOptions-enableWaveEffect?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## radius
@@ -93,5 +101,7 @@ Value range: greater than 0.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-CircleStyleOptions-radius?: LengthMetrics--><!--Device-CircleStyleOptions-radius?: LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

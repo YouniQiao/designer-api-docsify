@@ -2,6 +2,8 @@
 
 **Since:** 9
 
+<!--Device-unnamed-declare namespace avSession--><!--Device-unnamed-declare namespace avSession-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 ## Modules to Import

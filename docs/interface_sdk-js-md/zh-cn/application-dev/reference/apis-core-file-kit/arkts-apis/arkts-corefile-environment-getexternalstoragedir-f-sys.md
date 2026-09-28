@@ -18,6 +18,8 @@ function getExternalStorageDir(): string
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-Environment-function getExternalStorageDir(): string--><!--Device-Environment-function getExternalStorageDir(): string-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.Environment.FolderObtain
 
 **系统接口：** 此接口为系统接口。

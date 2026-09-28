@@ -19,6 +19,8 @@ declare function lstatSync(path: string): Stat
 
 **替代接口：** [lstatSync](arkts-corefile-file-fs-lstatsync-f.md)
 
+<!--Device-unnamed-declare function lstatSync(path: string): Stat--><!--Device-unnamed-declare function lstatSync(path: string): Stat-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**

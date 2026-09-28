@@ -8,6 +8,8 @@ interface Method
 
 **起始版本：** 26.0.0
 
+<!--Device-ssap-interface Method--><!--Device-ssap-interface Method-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ methodUuid: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Method-methodUuid: string--><!--Device-Method-methodUuid: string-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ parameter?: ArrayBuffer
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Method-parameter?: ArrayBuffer--><!--Device-Method-parameter?: ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -68,6 +74,8 @@ result?: ArrayBuffer
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Method-result?: ArrayBuffer--><!--Device-Method-result?: ArrayBuffer-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **系统接口：** 此接口为系统接口。
@@ -85,6 +93,8 @@ serviceUuid: string
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Method-serviceUuid: string--><!--Device-Method-serviceUuid: string-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 

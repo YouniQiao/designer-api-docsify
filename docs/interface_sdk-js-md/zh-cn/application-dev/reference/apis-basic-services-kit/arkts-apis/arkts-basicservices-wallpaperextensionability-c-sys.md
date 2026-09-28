@@ -13,6 +13,8 @@ WallpaperExtensionAbility为壁纸扩展模块，提供应用生命周期回调�
 
 **废弃版本：** 23
 
+<!--Device-unnamed-declare class WallpaperExtensionAbility--><!--Device-unnamed-declare class WallpaperExtensionAbility-End-->
+
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
 **系统接口：** 此接口为系统接口。
@@ -39,6 +41,8 @@ onCreate(want: object): void
 **废弃版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WallpaperExtensionAbility-onCreate(want: object): void--><!--Device-WallpaperExtensionAbility-onCreate(want: object): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
@@ -80,6 +84,8 @@ onDestroy(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-WallpaperExtensionAbility-onDestroy(): void--><!--Device-WallpaperExtensionAbility-onDestroy(): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
 **系统接口：** 此接口为系统接口。
@@ -112,6 +118,8 @@ onWallpaperChange(wallpaperType: number): void
 **废弃版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WallpaperExtensionAbility-onWallpaperChange(wallpaperType: number): void--><!--Device-WallpaperExtensionAbility-onWallpaperChange(wallpaperType: number): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 

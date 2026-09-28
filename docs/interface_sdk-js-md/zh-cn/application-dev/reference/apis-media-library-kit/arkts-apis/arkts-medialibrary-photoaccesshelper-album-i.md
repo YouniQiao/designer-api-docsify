@@ -10,6 +10,8 @@ interface Album extends AbsAlbum
 
 **起始版本：** 10
 
+<!--Device-photoAccessHelper-interface Album extends AbsAlbum--><!--Device-photoAccessHelper-interface Album extends AbsAlbum-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
@@ -29,6 +31,8 @@ commitModify(callback: AsyncCallback<void>): void
 **起始版本：** 10
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-Album-commitModify(callback: AsyncCallback<void>): void--><!--Device-Album-commitModify(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -95,6 +99,8 @@ commitModify(): Promise<void>
 **起始版本：** 10
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-Album-commitModify(): Promise<void>--><!--Device-Album-commitModify(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -163,6 +169,8 @@ addAssets(assets: Array<PhotoAsset>, callback: AsyncCallback<void>): void
 **替代接口：** [addAssets](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md#addassets)
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-Album-addAssets(assets: Array<PhotoAsset>, callback: AsyncCallback<void>): void--><!--Device-Album-addAssets(assets: Array<PhotoAsset>, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -235,6 +243,8 @@ addAssets(assets: Array<PhotoAsset>): Promise<void>
 **替代接口：** [addAssets](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md#addassets)
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-Album-addAssets(assets: Array<PhotoAsset>): Promise<void>--><!--Device-Album-addAssets(assets: Array<PhotoAsset>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -311,6 +321,8 @@ removeAssets(assets: Array<PhotoAsset>, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-Album-removeAssets(assets: Array<PhotoAsset>, callback: AsyncCallback<void>): void--><!--Device-Album-removeAssets(assets: Array<PhotoAsset>, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **参数：**
@@ -382,6 +394,8 @@ removeAssets(assets: Array<PhotoAsset>): Promise<void>
 **替代接口：** [removeAssets](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md#removeassets)
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-Album-removeAssets(assets: Array<PhotoAsset>): Promise<void>--><!--Device-Album-removeAssets(assets: Array<PhotoAsset>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -458,6 +472,8 @@ readonly imageCount?: number
 
 **起始版本：** 11
 
+<!--Device-Album-readonly imageCount?: int--><!--Device-Album-readonly imageCount?: int-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## videoCount
@@ -471,5 +487,7 @@ readonly videoCount?: number
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-Album-readonly videoCount?: int--><!--Device-Album-readonly videoCount?: int-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core

@@ -8,6 +8,8 @@ export enum ClipboardPolicy
 
 **起始版本：** 12
 
+<!--Device-securityManager-export enum ClipboardPolicy--><!--Device-securityManager-export enum ClipboardPolicy-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## DEFAULT
@@ -21,6 +23,8 @@ DEFAULT = 0
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ClipboardPolicy-DEFAULT = 0--><!--Device-ClipboardPolicy-DEFAULT = 0-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -36,6 +40,8 @@ IN_APP = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ClipboardPolicy-IN_APP = 1--><!--Device-ClipboardPolicy-IN_APP = 1-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## LOCAL_DEVICE
@@ -50,6 +56,8 @@ LOCAL_DEVICE = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ClipboardPolicy-LOCAL_DEVICE = 2--><!--Device-ClipboardPolicy-LOCAL_DEVICE = 2-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## CROSS_DEVICE
@@ -63,5 +71,7 @@ CROSS_DEVICE = 3
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ClipboardPolicy-CROSS_DEVICE = 3--><!--Device-ClipboardPolicy-CROSS_DEVICE = 3-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager

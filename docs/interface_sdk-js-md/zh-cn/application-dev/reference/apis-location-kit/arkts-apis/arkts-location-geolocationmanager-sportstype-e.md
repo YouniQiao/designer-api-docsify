@@ -8,6 +8,8 @@ export enum SportsType
 
 **起始版本：** 18
 
+<!--Device-geoLocationManager-export enum SportsType--><!--Device-geoLocationManager-export enum SportsType-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 ## RUNNING
@@ -20,7 +22,9 @@ RUNNING = 1
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-SportsType-RUNNING = 1--><!--Device-SportsType-RUNNING = 1-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -34,7 +38,9 @@ WALKING = 2
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-SportsType-WALKING = 2--><!--Device-SportsType-WALKING = 2-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -48,7 +54,9 @@ CYCLING = 3
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-SportsType-CYCLING = 3--><!--Device-SportsType-CYCLING = 3-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -64,6 +72,8 @@ SKIING = 4
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-SportsType-SKIING = 4--><!--Device-SportsType-SKIING = 4-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core

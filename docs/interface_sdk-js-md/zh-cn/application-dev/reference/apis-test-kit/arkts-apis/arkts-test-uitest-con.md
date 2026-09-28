@@ -14,6 +14,8 @@ declare const ON: On
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-unnamed-declare const ON: On--><!--Device-unnamed-declare const ON: On-End-->
+
 **系统能力：** SystemCapability.Test.UiTest
 
 **测试接口：** 此接口仅在自动化测试脚本中使用。
@@ -33,6 +35,8 @@ declare const BY: By
 **废弃版本：** 9
 
 **替代接口：** ON
+
+<!--Device-unnamed-declare const BY: By--><!--Device-unnamed-declare const BY: By-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 

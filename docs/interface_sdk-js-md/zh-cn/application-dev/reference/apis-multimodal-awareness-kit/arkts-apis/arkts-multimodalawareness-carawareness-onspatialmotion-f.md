@@ -20,6 +20,8 @@ function onSpatialMotion(callback: Callback<SpatialMotionInfo>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-carAwareness-function onSpatialMotion(callback: Callback<SpatialMotionInfo>): void--><!--Device-carAwareness-function onSpatialMotion(callback: Callback<SpatialMotionInfo>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.CarAwareness
 
 **参数：**

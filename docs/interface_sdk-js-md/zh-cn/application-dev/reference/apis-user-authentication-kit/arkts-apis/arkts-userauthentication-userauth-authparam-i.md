@@ -8,6 +8,8 @@ interface AuthParam
 
 **起始版本：** 10
 
+<!--Device-userAuth-interface AuthParam--><!--Device-userAuth-interface AuthParam-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 ## 导入模块
@@ -35,7 +37,9 @@ authTrustLevel: AuthTrustLevel
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AuthParam-authTrustLevel: AuthTrustLevel--><!--Device-AuthParam-authTrustLevel: AuthTrustLevel-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -51,7 +55,9 @@ authType: UserAuthType[]
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AuthParam-authType: UserAuthType[]--><!--Device-AuthParam-authType: UserAuthType[]-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -67,7 +73,9 @@ challenge: Uint8Array
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AuthParam-challenge: Uint8Array--><!--Device-AuthParam-challenge: Uint8Array-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -83,7 +91,9 @@ reuseUnlockResult?: ReuseUnlockResult
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AuthParam-reuseUnlockResult?: ReuseUnlockResult--><!--Device-AuthParam-reuseUnlockResult?: ReuseUnlockResult-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -102,6 +112,8 @@ skipLockedBiometricAuth?: boolean
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-AuthParam-skipLockedBiometricAuth?: boolean--><!--Device-AuthParam-skipLockedBiometricAuth?: boolean-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core

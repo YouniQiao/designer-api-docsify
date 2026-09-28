@@ -8,6 +8,8 @@ interface StationInfo
 
 **起始版本：** 9
 
+<!--Device-wifiManager-interface StationInfo--><!--Device-wifiManager-interface StationInfo-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ IP地址。
 
 **起始版本：** 9
 
+<!--Device-StationInfo-ipAddress: string--><!--Device-StationInfo-ipAddress: string-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ MAC地址。
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-StationInfo-macAddress: string--><!--Device-StationInfo-macAddress: string-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
@@ -62,6 +68,8 @@ MAC地址类型。
 
 **起始版本：** 10
 
+<!--Device-StationInfo-macAddressType?: DeviceAddressType--><!--Device-StationInfo-macAddressType?: DeviceAddressType-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +85,8 @@ name: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-StationInfo-name: string--><!--Device-StationInfo-name: string-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 

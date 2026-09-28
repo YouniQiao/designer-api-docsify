@@ -8,6 +8,8 @@ interface FusionAssetsInfo
 
 **起始版本：** 22
 
+<!--Device-photoAccessHelper-interface FusionAssetsInfo--><!--Device-photoAccessHelper-interface FusionAssetsInfo-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ assetsCount: number
 
 **起始版本：** 22
 
+<!--Device-FusionAssetsInfo-assetsCount: int--><!--Device-FusionAssetsInfo-assetsCount: int-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -46,6 +50,8 @@ assetsPath: string
 
 **起始版本：** 22
 
+<!--Device-FusionAssetsInfo-assetsPath: string--><!--Device-FusionAssetsInfo-assetsPath: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +67,8 @@ assetsType: FusionAssetType
 **类型：** [FusionAssetType](arkts-medialibrary-photoaccesshelper-fusionassettype-e-sys.md)
 
 **起始版本：** 22
+
+<!--Device-FusionAssetsInfo-assetsType: FusionAssetType--><!--Device-FusionAssetsInfo-assetsType: FusionAssetType-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

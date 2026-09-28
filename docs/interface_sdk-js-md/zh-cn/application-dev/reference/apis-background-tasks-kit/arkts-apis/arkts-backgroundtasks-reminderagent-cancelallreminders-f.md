@@ -20,6 +20,8 @@ function cancelAllReminders(callback: AsyncCallback<void>): void
 
 **替代接口：** [cancelAllReminders](arkts-backgroundtasks-reminderagentmanager-cancelallreminders-f.md)
 
+<!--Device-reminderAgent-function cancelAllReminders(callback: AsyncCallback<void>): void--><!--Device-reminderAgent-function cancelAllReminders(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 **参数：**
@@ -55,6 +57,8 @@ function cancelAllReminders(): Promise<void>
 **废弃版本：** 9
 
 **替代接口：** [cancelAllReminders](arkts-backgroundtasks-reminderagentmanager-cancelallreminders-f.md)
+
+<!--Device-reminderAgent-function cancelAllReminders(): Promise<void>--><!--Device-reminderAgent-function cancelAllReminders(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 

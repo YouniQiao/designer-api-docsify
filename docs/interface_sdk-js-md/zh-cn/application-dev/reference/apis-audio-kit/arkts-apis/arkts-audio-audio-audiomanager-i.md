@@ -8,6 +8,8 @@ interface AudioManager
 
 **起始版本：** 7
 
+<!--Device-audio-interface AudioManager--><!--Device-audio-interface AudioManager-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## 导入模块
@@ -25,6 +27,8 @@ getAudioScene(callback: AsyncCallback<AudioScene>): void
 获取音频场景模式。使用callback异步回调。
 
 **起始版本：** 8
+
+<!--Device-AudioManager-getAudioScene(callback: AsyncCallback<AudioScene>): void--><!--Device-AudioManager-getAudioScene(callback: AsyncCallback<AudioScene>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Communication
 
@@ -60,6 +64,8 @@ getAudioScene(): Promise<AudioScene>
 
 **起始版本：** 8
 
+<!--Device-AudioManager-getAudioScene(): Promise<AudioScene>--><!--Device-AudioManager-getAudioScene(): Promise<AudioScene>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Communication
 
 **返回值：**
@@ -89,6 +95,8 @@ getAudioSceneSync(): AudioScene
 获取音频场景模式。同步返回结果。
 
 **起始版本：** 10
+
+<!--Device-AudioManager-getAudioSceneSync(): AudioScene--><!--Device-AudioManager-getAudioSceneSync(): AudioScene-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Communication
 
@@ -124,6 +132,8 @@ getDebuggingManager(): AudioDebuggingManager
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioManager-getDebuggingManager(): AudioDebuggingManager--><!--Device-AudioManager-getDebuggingManager(): AudioDebuggingManager-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **返回值：**
@@ -149,6 +159,8 @@ getDeviceEnhanceManager(): AudioDeviceEnhanceManager
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioManager-getDeviceEnhanceManager(): AudioDeviceEnhanceManager--><!--Device-AudioManager-getDeviceEnhanceManager(): AudioDeviceEnhanceManager-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.DeviceEnhance
 
@@ -176,6 +188,8 @@ getRecordingManager(): AudioRecordingManager
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioManager-getRecordingManager(): AudioRecordingManager--><!--Device-AudioManager-getRecordingManager(): AudioRecordingManager-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **返回值：**
@@ -199,6 +213,8 @@ getRoutingManager(): AudioRoutingManager
 获取音频路由管理器。
 
 **起始版本：** 9
+
+<!--Device-AudioManager-getRoutingManager(): AudioRoutingManager--><!--Device-AudioManager-getRoutingManager(): AudioRoutingManager-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -224,7 +240,9 @@ getSessionManager(): AudioSessionManager
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-AudioManager-getSessionManager(): AudioSessionManager--><!--Device-AudioManager-getSessionManager(): AudioSessionManager-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -250,6 +268,8 @@ getSpatializationManager(): AudioSpatializationManager
 
 **起始版本：** 18
 
+<!--Device-AudioManager-getSpatializationManager(): AudioSpatializationManager--><!--Device-AudioManager-getSpatializationManager(): AudioSpatializationManager-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **返回值：**
@@ -273,6 +293,8 @@ getStreamManager(): AudioStreamManager
 获取音频流管理器。
 
 **起始版本：** 9
+
+<!--Device-AudioManager-getStreamManager(): AudioStreamManager--><!--Device-AudioManager-getStreamManager(): AudioStreamManager-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -298,7 +320,9 @@ getVolumeManager(): AudioVolumeManager
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-AudioManager-getVolumeManager(): AudioVolumeManager--><!--Device-AudioManager-getVolumeManager(): AudioVolumeManager-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -323,6 +347,8 @@ off(type: 'audioSceneChange', callback?: Callback<AudioScene>): void
 取消监听音频场景变化事件。
 
 **起始版本：** 20
+
+<!--Device-AudioManager-off(type: 'audioSceneChange', callback?: Callback<AudioScene>): void--><!--Device-AudioManager-off(type: 'audioSceneChange', callback?: Callback<AudioScene>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Communication
 
@@ -367,6 +393,8 @@ off(type: 'deviceChange', callback?: Callback<DeviceChangeAction>): void
 **废弃版本：** 9
 
 **替代接口：** deviceChange
+
+<!--Device-AudioManager-off(type: 'deviceChange', callback?: Callback<DeviceChangeAction>): void--><!--Device-AudioManager-off(type: 'deviceChange', callback?: Callback<DeviceChangeAction>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -413,6 +441,8 @@ off(type: 'interrupt', interrupt: AudioInterrupt, callback?: Callback<InterruptA
 
 **替代接口：** audioInterrupt
 
+<!--Device-AudioManager-off(type: 'interrupt', interrupt: AudioInterrupt, callback?: Callback<InterruptAction>): void--><!--Device-AudioManager-off(type: 'interrupt', interrupt: AudioInterrupt, callback?: Callback<InterruptAction>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **参数：**
@@ -457,6 +487,8 @@ on(type: 'audioSceneChange', callback: Callback<AudioScene>): void
 
 **起始版本：** 20
 
+<!--Device-AudioManager-on(type: 'audioSceneChange', callback: Callback<AudioScene>): void--><!--Device-AudioManager-on(type: 'audioSceneChange', callback: Callback<AudioScene>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Communication
 
 **参数：**
@@ -493,6 +525,8 @@ on(type: 'deviceChange', callback: Callback<DeviceChangeAction>): void
 
 **替代接口：** deviceChange
 
+<!--Device-AudioManager-on(type: 'deviceChange', callback: Callback<DeviceChangeAction>): void--><!--Device-AudioManager-on(type: 'deviceChange', callback: Callback<DeviceChangeAction>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **参数：**
@@ -528,6 +562,8 @@ on(type: 'interrupt', interrupt: AudioInterrupt, callback: Callback<InterruptAct
 **废弃版本：** 11
 
 **替代接口：** audioInterrupt
+
+<!--Device-AudioManager-on(type: 'interrupt', interrupt: AudioInterrupt, callback: Callback<InterruptAction>): void--><!--Device-AudioManager-on(type: 'interrupt', interrupt: AudioInterrupt, callback: Callback<InterruptAction>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -571,6 +607,8 @@ getAudioParameter(key: string, callback: AsyncCallback<string>): void
 
 **废弃版本：** 11
 
+<!--Device-AudioManager-getAudioParameter(key: string, callback: AsyncCallback<string>): void--><!--Device-AudioManager-getAudioParameter(key: string, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **参数：**
@@ -611,6 +649,8 @@ getAudioParameter(key: string): Promise<string>
 **起始版本：** 7
 
 **废弃版本：** 11
+
+<!--Device-AudioManager-getAudioParameter(key: string): Promise<string>--><!--Device-AudioManager-getAudioParameter(key: string): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -658,6 +698,8 @@ getDevices(deviceFlag: DeviceFlag, callback: AsyncCallback<AudioDeviceDescriptor
 
 **替代接口：** getDevices
 
+<!--Device-AudioManager-getDevices(deviceFlag: DeviceFlag, callback: AsyncCallback<AudioDeviceDescriptors>): void--><!--Device-AudioManager-getDevices(deviceFlag: DeviceFlag, callback: AsyncCallback<AudioDeviceDescriptors>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **参数：**
@@ -702,6 +744,8 @@ getDevices(deviceFlag: DeviceFlag): Promise<AudioDeviceDescriptors>
 **废弃版本：** 9
 
 **替代接口：** getDevices
+
+<!--Device-AudioManager-getDevices(deviceFlag: DeviceFlag): Promise<AudioDeviceDescriptors>--><!--Device-AudioManager-getDevices(deviceFlag: DeviceFlag): Promise<AudioDeviceDescriptors>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -750,6 +794,8 @@ getMaxVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void
 
 **替代接口：** getMaxVolume
 
+<!--Device-AudioManager-getMaxVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void--><!--Device-AudioManager-getMaxVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **参数：**
@@ -795,6 +841,8 @@ getMaxVolume(volumeType: AudioVolumeType): Promise<number>
 **废弃版本：** 9
 
 **替代接口：** getMaxVolume
+
+<!--Device-AudioManager-getMaxVolume(volumeType: AudioVolumeType): Promise<number>--><!--Device-AudioManager-getMaxVolume(volumeType: AudioVolumeType): Promise<number>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -843,6 +891,8 @@ getMinVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void
 
 **替代接口：** getMinVolume
 
+<!--Device-AudioManager-getMinVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void--><!--Device-AudioManager-getMinVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **参数：**
@@ -888,6 +938,8 @@ getMinVolume(volumeType: AudioVolumeType): Promise<number>
 **废弃版本：** 9
 
 **替代接口：** getMinVolume
+
+<!--Device-AudioManager-getMinVolume(volumeType: AudioVolumeType): Promise<number>--><!--Device-AudioManager-getMinVolume(volumeType: AudioVolumeType): Promise<number>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -935,6 +987,8 @@ getRingerMode(callback: AsyncCallback<AudioRingMode>): void
 
 **替代接口：** getRingerMode
 
+<!--Device-AudioManager-getRingerMode(callback: AsyncCallback<AudioRingMode>): void--><!--Device-AudioManager-getRingerMode(callback: AsyncCallback<AudioRingMode>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Communication
 
 **参数：**
@@ -979,6 +1033,8 @@ getRingerMode(): Promise<AudioRingMode>
 
 **替代接口：** getRingerMode
 
+<!--Device-AudioManager-getRingerMode(): Promise<AudioRingMode>--><!--Device-AudioManager-getRingerMode(): Promise<AudioRingMode>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Communication
 
 **返回值：**
@@ -1019,6 +1075,8 @@ getVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void
 **废弃版本：** 9
 
 **替代接口：** getVolume
+
+<!--Device-AudioManager-getVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void--><!--Device-AudioManager-getVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -1065,6 +1123,8 @@ getVolume(volumeType: AudioVolumeType): Promise<number>
 **废弃版本：** 9
 
 **替代接口：** getVolume
+
+<!--Device-AudioManager-getVolume(volumeType: AudioVolumeType): Promise<number>--><!--Device-AudioManager-getVolume(volumeType: AudioVolumeType): Promise<number>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -1113,6 +1173,8 @@ isActive(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void
 
 **替代接口：** isActive
 
+<!--Device-AudioManager-isActive(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void--><!--Device-AudioManager-isActive(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **参数：**
@@ -1158,6 +1220,8 @@ isActive(volumeType: AudioVolumeType): Promise<boolean>
 **废弃版本：** 9
 
 **替代接口：** isActive
+
+<!--Device-AudioManager-isActive(volumeType: AudioVolumeType): Promise<boolean>--><!--Device-AudioManager-isActive(volumeType: AudioVolumeType): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -1205,6 +1269,8 @@ isDeviceActive(deviceType: ActiveDeviceType, callback: AsyncCallback<boolean>): 
 
 **替代接口：** [isCommunicationDeviceActive](arkts-audio-audio-audioroutingmanager-i.md#iscommunicationdeviceactive)
 
+<!--Device-AudioManager-isDeviceActive(deviceType: ActiveDeviceType, callback: AsyncCallback<boolean>): void--><!--Device-AudioManager-isDeviceActive(deviceType: ActiveDeviceType, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **参数：**
@@ -1249,6 +1315,8 @@ isDeviceActive(deviceType: ActiveDeviceType): Promise<boolean>
 **废弃版本：** 9
 
 **替代接口：** [isCommunicationDeviceActive](arkts-audio-audio-audioroutingmanager-i.md#iscommunicationdeviceactive)
+
+<!--Device-AudioManager-isDeviceActive(deviceType: ActiveDeviceType): Promise<boolean>--><!--Device-AudioManager-isDeviceActive(deviceType: ActiveDeviceType): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -1298,6 +1366,8 @@ isMicrophoneMute(callback: AsyncCallback<boolean>): void
 
 **需要权限：** ohos.permission.MICROPHONE
 
+<!--Device-AudioManager-isMicrophoneMute(callback: AsyncCallback<boolean>): void--><!--Device-AudioManager-isMicrophoneMute(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **参数：**
@@ -1344,6 +1414,8 @@ isMicrophoneMute(): Promise<boolean>
 
 **需要权限：** ohos.permission.MICROPHONE
 
+<!--Device-AudioManager-isMicrophoneMute(): Promise<boolean>--><!--Device-AudioManager-isMicrophoneMute(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **返回值：**
@@ -1384,6 +1456,8 @@ isMute(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void
 **废弃版本：** 9
 
 **替代接口：** isMute
+
+<!--Device-AudioManager-isMute(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void--><!--Device-AudioManager-isMute(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -1431,6 +1505,8 @@ isMute(volumeType: AudioVolumeType): Promise<boolean>
 
 **替代接口：** isMute
 
+<!--Device-AudioManager-isMute(volumeType: AudioVolumeType): Promise<boolean>--><!--Device-AudioManager-isMute(volumeType: AudioVolumeType): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **参数：**
@@ -1475,6 +1551,8 @@ mute(volumeType: AudioVolumeType, mute: boolean, callback: AsyncCallback<void>):
 
 **替代接口：** [AVVolumePanel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md)
 
+<!--Device-AudioManager-mute(volumeType: AudioVolumeType, mute: boolean, callback: AsyncCallback<void>): void--><!--Device-AudioManager-mute(volumeType: AudioVolumeType, mute: boolean, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **参数：**
@@ -1518,6 +1596,8 @@ mute(volumeType: AudioVolumeType, mute: boolean): Promise<void>
 **废弃版本：** 9
 
 **替代接口：** [AVVolumePanel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md)
+
+<!--Device-AudioManager-mute(volumeType: AudioVolumeType, mute: boolean): Promise<void>--><!--Device-AudioManager-mute(volumeType: AudioVolumeType, mute: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -1564,6 +1644,8 @@ setAudioParameter(key: string, value: string, callback: AsyncCallback<void>): vo
 
 **需要权限：** ohos.permission.MODIFY_AUDIO_SETTINGS
 
+<!--Device-AudioManager-setAudioParameter(key: string, value: string, callback: AsyncCallback<void>): void--><!--Device-AudioManager-setAudioParameter(key: string, value: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **参数：**
@@ -1607,6 +1689,8 @@ setAudioParameter(key: string, value: string): Promise<void>
 **废弃版本：** 11
 
 **需要权限：** ohos.permission.MODIFY_AUDIO_SETTINGS
+
+<!--Device-AudioManager-setAudioParameter(key: string, value: string): Promise<void>--><!--Device-AudioManager-setAudioParameter(key: string, value: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -1655,6 +1739,8 @@ setDeviceActive(deviceType: ActiveDeviceType, active: boolean, callback: AsyncCa
 
 **替代接口：** [setCommunicationDevice](arkts-audio-audio-audioroutingmanager-i.md#setcommunicationdevice)
 
+<!--Device-AudioManager-setDeviceActive(deviceType: ActiveDeviceType, active: boolean, callback: AsyncCallback<void>): void--><!--Device-AudioManager-setDeviceActive(deviceType: ActiveDeviceType, active: boolean, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **参数：**
@@ -1701,6 +1787,8 @@ setDeviceActive(deviceType: ActiveDeviceType, active: boolean): Promise<void>
 
 **替代接口：** [setCommunicationDevice](arkts-audio-audio-audioroutingmanager-i.md#setcommunicationdevice)
 
+<!--Device-AudioManager-setDeviceActive(deviceType: ActiveDeviceType, active: boolean): Promise<void>--><!--Device-AudioManager-setDeviceActive(deviceType: ActiveDeviceType, active: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **参数：**
@@ -1746,6 +1834,8 @@ setMicrophoneMute(mute: boolean, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.MICROPHONE
 
+<!--Device-AudioManager-setMicrophoneMute(mute: boolean, callback: AsyncCallback<void>): void--><!--Device-AudioManager-setMicrophoneMute(mute: boolean, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **参数：**
@@ -1788,6 +1878,8 @@ setMicrophoneMute(mute: boolean): Promise<void>
 **废弃版本：** 9
 
 **需要权限：** ohos.permission.MICROPHONE
+
+<!--Device-AudioManager-setMicrophoneMute(mute: boolean): Promise<void>--><!--Device-AudioManager-setMicrophoneMute(mute: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -1833,6 +1925,8 @@ setRingerMode(mode: AudioRingMode, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
+<!--Device-AudioManager-setRingerMode(mode: AudioRingMode, callback: AsyncCallback<void>): void--><!--Device-AudioManager-setRingerMode(mode: AudioRingMode, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Communication
 
 **参数：**
@@ -1875,6 +1969,8 @@ setRingerMode(mode: AudioRingMode): Promise<void>
 **废弃版本：** 9
 
 **需要权限：** ohos.permission.ACCESS_NOTIFICATION_POLICY
+
+<!--Device-AudioManager-setRingerMode(mode: AudioRingMode): Promise<void>--><!--Device-AudioManager-setRingerMode(mode: AudioRingMode): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Communication
 
@@ -1922,6 +2018,8 @@ setVolume(volumeType: AudioVolumeType, volume: number, callback: AsyncCallback<v
 
 **需要权限：** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
+<!--Device-AudioManager-setVolume(volumeType: AudioVolumeType, volume: number, callback: AsyncCallback<void>): void--><!--Device-AudioManager-setVolume(volumeType: AudioVolumeType, volume: number, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **参数：**
@@ -1967,6 +2065,8 @@ setVolume(volumeType: AudioVolumeType, volume: number): Promise<void>
 **替代接口：** [AVVolumePanel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md)
 
 **需要权限：** ohos.permission.ACCESS_NOTIFICATION_POLICY
+
+<!--Device-AudioManager-setVolume(volumeType: AudioVolumeType, volume: number): Promise<void>--><!--Device-AudioManager-setVolume(volumeType: AudioVolumeType, volume: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 

@@ -18,6 +18,8 @@ function isHotspotActive(): boolean
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
+<!--Device-wifiManager-function isHotspotActive(): boolean--><!--Device-wifiManager-function isHotspotActive(): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
 **返回值：**

@@ -16,6 +16,8 @@ function getCallIdListForConference(callId: number, callback: AsyncCallback<Arra
 
 **起始版本：** 7
 
+<!--Device-call-function getCallIdListForConference(callId: int, callback: AsyncCallback<Array<string>>): void--><!--Device-call-function getCallIdListForConference(callId: int, callback: AsyncCallback<Array<string>>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -64,6 +66,8 @@ function getCallIdListForConference(callId: number): Promise<Array<string>>
 获取会议的呼叫Id列表。使用Promise异步回调。
 
 **起始版本：** 7
+
+<!--Device-call-function getCallIdListForConference(callId: int): Promise<Array<string>>--><!--Device-call-function getCallIdListForConference(callId: int): Promise<Array<string>>-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 

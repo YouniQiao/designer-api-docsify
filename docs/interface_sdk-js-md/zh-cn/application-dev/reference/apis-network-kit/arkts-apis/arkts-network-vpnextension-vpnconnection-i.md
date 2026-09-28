@@ -8,6 +8,8 @@ VPN连接对象。在调用VpnConnection的方法前，需要先通过vpnExt.cre
 
 **起始版本：** 11
 
+<!--Device-vpnExtension-export interface VpnConnection--><!--Device-vpnExtension-export interface VpnConnection-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 ## 导入模块
@@ -27,6 +29,8 @@ addRoute(routes: RouteInfo[], vpnId?: string): Promise<void>
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-VpnConnection-addRoute(routes: RouteInfo[], vpnId?: string): Promise<void>--><!--Device-VpnConnection-addRoute(routes: RouteInfo[], vpnId?: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -65,6 +69,8 @@ create(config: VpnConfig): Promise<number>
 > [destroy(vpnId: string)](#destroy-1)接口销毁启动的VPN网络，并执行资源清理等操作。
 
 **起始版本：** 11
+
+<!--Device-VpnConnection-create(config: VpnConfig): Promise<int>--><!--Device-VpnConnection-create(config: VpnConfig): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -182,6 +188,8 @@ delRoute(routes: RouteInfo[], vpnId?: string): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-VpnConnection-delRoute(routes: RouteInfo[], vpnId?: string): Promise<void>--><!--Device-VpnConnection-delRoute(routes: RouteInfo[], vpnId?: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **参数：**
@@ -214,6 +222,8 @@ destroy(): Promise<void>
 销毁启动的VPN网络。使用Promise异步回调。
 
 **起始版本：** 11
+
+<!--Device-VpnConnection-destroy(): Promise<void>--><!--Device-VpnConnection-destroy(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -263,6 +273,8 @@ destroy(vpnId: string): Promise<void>
 根据vpnId销毁指定的VPN网络。使用Promise异步回调。
 
 **起始版本：** 20
+
+<!--Device-VpnConnection-destroy(vpnId: string): Promise<void>--><!--Device-VpnConnection-destroy(vpnId: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -322,6 +334,8 @@ generateVpnId(): Promise<string>
 
 **起始版本：** 20
 
+<!--Device-VpnConnection-generateVpnId(): Promise<string>--><!--Device-VpnConnection-generateVpnId(): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **返回值：**
@@ -366,6 +380,8 @@ protect(socketFd: number): Promise<void>
 保护套接字不受VPN连接影响，通过该套接字发送的数据将直接基于物理网络收发，因此其流量不会通过VPN转发。使用Promise方式作为异步方法。
 
 **起始版本：** 11
+
+<!--Device-VpnConnection-protect(socketFd: int): Promise<void>--><!--Device-VpnConnection-protect(socketFd: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -432,6 +448,8 @@ protectProcessNet(): Promise<void>
 保护应用进程不受VPN连接影响，被保护的进程直接基于物理网络收发数据，流量不通过VPN转发。使用Promise异步回调。
 
 **起始版本：** 22
+
+<!--Device-VpnConnection-protectProcessNet(): Promise<void>--><!--Device-VpnConnection-protectProcessNet(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 

@@ -10,6 +10,8 @@ type DeleteFormsCallback = (formIds: Array<string>) => void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-formInfo-type DeleteFormsCallback = (formIds: Array<string>) => void--><!--Device-formInfo-type DeleteFormsCallback = (formIds: Array<string>) => void-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。

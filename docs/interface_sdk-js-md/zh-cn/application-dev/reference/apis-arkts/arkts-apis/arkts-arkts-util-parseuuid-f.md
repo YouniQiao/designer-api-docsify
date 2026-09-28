@@ -18,6 +18,8 @@ function parseUUID(uuid: string): Uint8Array
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-util-function parseUUID(uuid: string): Uint8Array--><!--Device-util-function parseUUID(uuid: string): Uint8Array-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**

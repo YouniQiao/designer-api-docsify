@@ -18,6 +18,8 @@ function isFeatureSupported(feature: ManagedFeature): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-common-function isFeatureSupported(feature: ManagedFeature): boolean--><!--Device-common-function isFeatureSupported(feature: ManagedFeature): boolean-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**

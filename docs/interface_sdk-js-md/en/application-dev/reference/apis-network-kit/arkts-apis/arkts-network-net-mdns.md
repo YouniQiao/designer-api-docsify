@@ -4,6 +4,8 @@ Multicast DNS (MDNS) provides functions such as adding, removing, discovering, a
 
 **Since:** 10
 
+<!--Device-unnamed-declare namespace mdns--><!--Device-unnamed-declare namespace mdns-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.MDNS
 
 ## Modules to Import

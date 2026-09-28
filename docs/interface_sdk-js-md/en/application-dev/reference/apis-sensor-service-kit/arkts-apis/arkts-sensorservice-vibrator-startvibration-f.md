@@ -20,7 +20,9 @@ Starts vibration based on a specified effect and attribute. This API uses an asy
 
 **Required permissions:** ohos.permission.VIBRATE
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-vibrator-function startVibration(effect: VibrateEffect, attribute: VibrateAttribute, callback: AsyncCallback<void>): void--><!--Device-vibrator-function startVibration(effect: VibrateEffect, attribute: VibrateAttribute, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice
 
@@ -181,7 +183,9 @@ Starts vibration based on a specified effect and attribute. This API uses a prom
 
 **Required permissions:** ohos.permission.VIBRATE
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-vibrator-function startVibration(effect: VibrateEffect, attribute: VibrateAttribute): Promise<void>--><!--Device-vibrator-function startVibration(effect: VibrateEffect, attribute: VibrateAttribute): Promise<void>-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice
 

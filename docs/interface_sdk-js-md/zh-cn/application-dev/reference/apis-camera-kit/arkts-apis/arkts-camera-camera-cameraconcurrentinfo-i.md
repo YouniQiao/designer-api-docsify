@@ -8,6 +8,8 @@ interface CameraConcurrentInfo
 
 **起始版本：** 18
 
+<!--Device-camera-interface CameraConcurrentInfo--><!--Device-camera-interface CameraConcurrentInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
@@ -28,7 +30,9 @@ readonly device: CameraDevice
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-CameraConcurrentInfo-readonly device: CameraDevice--><!--Device-CameraConcurrentInfo-readonly device: CameraDevice-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -44,7 +48,9 @@ readonly modes: Array<SceneMode>
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-CameraConcurrentInfo-readonly modes: Array<SceneMode>--><!--Device-CameraConcurrentInfo-readonly modes: Array<SceneMode>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -60,7 +66,9 @@ readonly outputCapabilities: Array<CameraOutputCapability>
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-CameraConcurrentInfo-readonly outputCapabilities: Array<CameraOutputCapability>--><!--Device-CameraConcurrentInfo-readonly outputCapabilities: Array<CameraOutputCapability>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -76,6 +84,8 @@ readonly type: CameraConcurrentType
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-CameraConcurrentInfo-readonly type: CameraConcurrentType--><!--Device-CameraConcurrentInfo-readonly type: CameraConcurrentType-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core

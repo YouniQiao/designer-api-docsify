@@ -12,6 +12,8 @@ Represents the return value of the [getEvent('Grid')](../arkts-apis/arkts-arkui-
 
 **Since:** 19
 
+<!--Device-unnamed-declare interface UIGridEvent extends UIScrollableCommonEvent--><!--Device-unnamed-declare interface UIGridEvent extends UIScrollableCommonEvent-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## setOnDidScroll
@@ -29,6 +31,8 @@ If the input parameter is **undefined**, the event callback is reset.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-UIGridEvent-setOnDidScroll(callback: OnScrollCallback | undefined): void--><!--Device-UIGridEvent-setOnDidScroll(callback: OnScrollCallback | undefined): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,6 +58,8 @@ If the input parameter is **undefined**, the event callback is reset.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-UIGridEvent-setOnScrollIndex(callback: OnGridScrollIndexCallback | undefined): void--><!--Device-UIGridEvent-setOnScrollIndex(callback: OnGridScrollIndexCallback | undefined): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -77,6 +83,8 @@ If the input parameter is **undefined**, the event callback is reset.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-UIGridEvent-setOnWillScroll(callback: OnWillScrollCallback | undefined): void--><!--Device-UIGridEvent-setOnWillScroll(callback: OnWillScrollCallback | undefined): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

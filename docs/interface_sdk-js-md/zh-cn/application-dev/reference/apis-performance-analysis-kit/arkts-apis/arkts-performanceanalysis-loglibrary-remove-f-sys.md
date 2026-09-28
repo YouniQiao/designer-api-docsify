@@ -18,6 +18,8 @@ function remove(logType: string, logName: string): void
 
 **需要权限：** ohos.permission.WRITE_HIVIEW_SYSTEM
 
+<!--Device-logLibrary-function remove(logType: string, logName: string): void--><!--Device-logLibrary-function remove(logType: string, logName: string): void-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.Hiview.LogLibrary
 
 **系统接口：** 此接口为系统接口。

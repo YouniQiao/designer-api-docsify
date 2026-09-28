@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace pointer--><!--Device-unnamed-declare namespace pointer-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## 导入模块

@@ -8,6 +8,8 @@ export interface NumberOptions
 
 **起始版本：** 6
 
+<!--Device-intl-export interface NumberOptions--><!--Device-intl-export interface NumberOptions-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## 导入模块
@@ -34,6 +36,8 @@ compactDisplay?: string
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-NumberOptions-compactDisplay?: string--><!--Device-NumberOptions-compactDisplay?: string-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## currency
@@ -51,6 +55,8 @@ currency?: string
 **起始版本：** 6
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-NumberOptions-currency?: string--><!--Device-NumberOptions-currency?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -72,6 +78,8 @@ currencyDisplay?: string
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-NumberOptions-currencyDisplay?: string--><!--Device-NumberOptions-currencyDisplay?: string-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## currencySign
@@ -92,6 +100,8 @@ currencySign?: string
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-NumberOptions-currencySign?: string--><!--Device-NumberOptions-currencySign?: string-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## locale
@@ -110,6 +120,8 @@ locale?: string
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-NumberOptions-locale?: string--><!--Device-NumberOptions-locale?: string-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## localeMatcher
@@ -127,6 +139,8 @@ localeMatcher?: string
 **起始版本：** 6
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-NumberOptions-localeMatcher?: string--><!--Device-NumberOptions-localeMatcher?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -148,6 +162,8 @@ maximumFractionDigits?: number
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-NumberOptions-maximumFractionDigits?: int--><!--Device-NumberOptions-maximumFractionDigits?: int-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## maximumSignificantDigits
@@ -167,6 +183,8 @@ maximumSignificantDigits?: number
 **起始版本：** 6
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-NumberOptions-maximumSignificantDigits?: int--><!--Device-NumberOptions-maximumSignificantDigits?: int-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -188,6 +206,8 @@ minimumFractionDigits?: number
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-NumberOptions-minimumFractionDigits?: int--><!--Device-NumberOptions-minimumFractionDigits?: int-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## minimumIntegerDigits
@@ -207,6 +227,8 @@ minimumIntegerDigits?: number
 **起始版本：** 6
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-NumberOptions-minimumIntegerDigits?: int--><!--Device-NumberOptions-minimumIntegerDigits?: int-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -228,6 +250,8 @@ minimumSignificantDigits?: number
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-NumberOptions-minimumSignificantDigits?: int--><!--Device-NumberOptions-minimumSignificantDigits?: int-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## notation
@@ -247,6 +271,8 @@ notation?: string
 **起始版本：** 6
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-NumberOptions-notation?: string--><!--Device-NumberOptions-notation?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -268,6 +294,8 @@ numberingSystem?: string
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-NumberOptions-numberingSystem?: string--><!--Device-NumberOptions-numberingSystem?: string-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## roundingIncrement
@@ -285,6 +313,8 @@ roundingIncrement?: number
 **起始版本：** 18
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-NumberOptions-roundingIncrement?: int--><!--Device-NumberOptions-roundingIncrement?: int-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -322,6 +352,8 @@ roundingMode?: string
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-NumberOptions-roundingMode?: string--><!--Device-NumberOptions-roundingMode?: string-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## roundingPriority
@@ -339,6 +371,8 @@ roundingPriority?: string
 **起始版本：** 18
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-NumberOptions-roundingPriority?: string--><!--Device-NumberOptions-roundingPriority?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -366,6 +400,8 @@ signDisplay?: string
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-NumberOptions-signDisplay?: string--><!--Device-NumberOptions-signDisplay?: string-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## style
@@ -384,6 +420,8 @@ style?: string
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-NumberOptions-style?: string--><!--Device-NumberOptions-style?: string-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## unit
@@ -401,6 +439,8 @@ unit?: string
 **起始版本：** 6
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-NumberOptions-unit?: string--><!--Device-NumberOptions-unit?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -422,6 +462,8 @@ unitDisplay?: string
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-NumberOptions-unitDisplay?: string--><!--Device-NumberOptions-unitDisplay?: string-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## unitUsage
@@ -442,6 +484,8 @@ unitUsage?: string
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-NumberOptions-unitUsage?: string--><!--Device-NumberOptions-unitUsage?: string-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## useGrouping
@@ -461,5 +505,7 @@ true表示分组显示，false表示不分组显示。
 **起始版本：** 6
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-NumberOptions-useGrouping?: boolean--><!--Device-NumberOptions-useGrouping?: boolean-End-->
 
 **系统能力：** SystemCapability.Global.I18n

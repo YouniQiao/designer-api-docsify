@@ -4,6 +4,8 @@
 
 **起始版本：** 8
 
+<!--Device-unnamed-declare namespace connectedTag--><!--Device-unnamed-declare namespace connectedTag-End-->
+
 **系统能力：** SystemCapability.Communication.ConnectedTag
 
 ## 导入模块

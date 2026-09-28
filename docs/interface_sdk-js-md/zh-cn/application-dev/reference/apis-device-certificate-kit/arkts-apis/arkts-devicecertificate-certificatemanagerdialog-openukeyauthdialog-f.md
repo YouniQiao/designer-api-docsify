@@ -20,6 +20,8 @@ function openUkeyAuthDialog(context: common.Context, ukeyAuthRequest: UkeyAuthRe
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-certificateManagerDialog-function openUkeyAuthDialog(context: common.Context, ukeyAuthRequest: UkeyAuthRequest): Promise<void>--><!--Device-certificateManagerDialog-function openUkeyAuthDialog(context: common.Context, ukeyAuthRequest: UkeyAuthRequest): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
 **参数：**

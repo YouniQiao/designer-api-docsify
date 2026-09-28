@@ -47,6 +47,8 @@ this.context.startAbility(targetWant);
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare class InputMethodExtensionContext extends ExtensionContext--><!--Device-unnamed-declare class InputMethodExtensionContext extends ExtensionContext-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## 导入模块
@@ -66,6 +68,8 @@ destroy(callback: AsyncCallback<void>): void
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-InputMethodExtensionContext-destroy(callback: AsyncCallback<void>): void--><!--Device-InputMethodExtensionContext-destroy(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -113,6 +117,8 @@ destroy(): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-InputMethodExtensionContext-destroy(): Promise<void>--><!--Device-InputMethodExtensionContext-destroy(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**
@@ -154,6 +160,8 @@ startAbility(want: Want): Promise<void>
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-InputMethodExtensionContext-startAbility(want: Want): Promise<void>--><!--Device-InputMethodExtensionContext-startAbility(want: Want): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 

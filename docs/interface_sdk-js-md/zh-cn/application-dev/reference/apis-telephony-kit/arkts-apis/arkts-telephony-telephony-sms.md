@@ -4,6 +4,8 @@
 
 **起始版本：** 6
 
+<!--Device-unnamed-declare namespace sms--><!--Device-unnamed-declare namespace sms-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 ## 导入模块

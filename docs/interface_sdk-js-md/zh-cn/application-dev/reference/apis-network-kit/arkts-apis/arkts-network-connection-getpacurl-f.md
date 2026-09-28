@@ -16,6 +16,8 @@ function getPacUrl(): string
 
 **起始版本：** 15
 
+<!--Device-connection-function getPacUrl(): string--><!--Device-connection-function getPacUrl(): string-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **返回值：**

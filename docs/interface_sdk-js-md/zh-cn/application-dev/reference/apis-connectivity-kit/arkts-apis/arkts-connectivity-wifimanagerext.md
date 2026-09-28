@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace wifiManagerExt--><!--Device-unnamed-declare namespace wifiManagerExt-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.AP.Extension
 
 ## 导入模块

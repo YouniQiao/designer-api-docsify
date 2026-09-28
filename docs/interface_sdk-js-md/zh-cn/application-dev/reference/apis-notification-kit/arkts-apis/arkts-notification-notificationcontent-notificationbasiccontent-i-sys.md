@@ -8,6 +8,8 @@ export interface NotificationBasicContent
 
 **起始版本：** 7
 
+<!--Device-unnamed-export interface NotificationBasicContent--><!--Device-unnamed-export interface NotificationBasicContent-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## structuredText
@@ -21,6 +23,8 @@ structuredText?: Map<string, string>
 **类型：** Map&lt;string, string&gt;
 
 **起始版本：** 21
+
+<!--Device-NotificationBasicContent-structuredText?: Map<string, string>--><!--Device-NotificationBasicContent-structuredText?: Map<string, string>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

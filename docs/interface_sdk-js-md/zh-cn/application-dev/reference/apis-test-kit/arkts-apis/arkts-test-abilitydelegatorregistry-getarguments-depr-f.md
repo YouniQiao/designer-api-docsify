@@ -19,6 +19,8 @@ function getArguments(): AbilityDelegatorArgs
 
 **替代接口：** [getArguments](arkts-test-abilitydelegatorregistry-getarguments-f.md)
 
+<!--Device-abilityDelegatorRegistry-function getArguments(): AbilityDelegatorArgs--><!--Device-abilityDelegatorRegistry-function getArguments(): AbilityDelegatorArgs-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **返回值：**

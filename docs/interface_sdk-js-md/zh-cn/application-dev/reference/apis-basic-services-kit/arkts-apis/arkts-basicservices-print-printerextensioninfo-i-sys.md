@@ -8,6 +8,8 @@ interface PrinterExtensionInfo
 
 **起始版本：** 10
 
+<!--Device-print-interface PrinterExtensionInfo--><!--Device-print-interface PrinterExtensionInfo-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ extensionId: string
 
 **起始版本：** 10
 
+<!--Device-PrinterExtensionInfo-extensionId: string--><!--Device-PrinterExtensionInfo-extensionId: string-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ vendorIcon: number
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-PrinterExtensionInfo-vendorIcon: int--><!--Device-PrinterExtensionInfo-vendorIcon: int-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -62,6 +68,8 @@ vendorId: string
 
 **起始版本：** 10
 
+<!--Device-PrinterExtensionInfo-vendorId: string--><!--Device-PrinterExtensionInfo-vendorId: string-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **系统接口：** 此接口为系统接口。
@@ -78,6 +86,8 @@ vendorName: string
 
 **起始版本：** 10
 
+<!--Device-PrinterExtensionInfo-vendorName: string--><!--Device-PrinterExtensionInfo-vendorName: string-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **系统接口：** 此接口为系统接口。
@@ -93,6 +103,8 @@ version: string
 **类型：** string
 
 **起始版本：** 10
+
+<!--Device-PrinterExtensionInfo-version: string--><!--Device-PrinterExtensionInfo-version: string-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 

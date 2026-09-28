@@ -8,6 +8,8 @@ The network connection management module provides basic network management capab
 
 **Since:** 8
 
+<!--Device-unnamed-declare namespace connection--><!--Device-unnamed-declare namespace connection-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 ## Modules to Import

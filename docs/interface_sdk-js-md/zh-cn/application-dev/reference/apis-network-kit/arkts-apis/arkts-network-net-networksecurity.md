@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare namespace networkSecurity--><!--Device-unnamed-declare namespace networkSecurity-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块

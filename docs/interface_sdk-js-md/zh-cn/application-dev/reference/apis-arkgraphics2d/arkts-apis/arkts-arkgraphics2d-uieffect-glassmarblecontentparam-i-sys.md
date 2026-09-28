@@ -8,6 +8,8 @@ interface GlassMarbleContentParam
 
 **起始版本：** 26.0.1
 
+<!--Device-uiEffect-interface GlassMarbleContentParam--><!--Device-uiEffect-interface GlassMarbleContentParam-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ contentDispersion: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-GlassMarbleContentParam-contentDispersion: double--><!--Device-GlassMarbleContentParam-contentDispersion: double-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ contentMask: Mask
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-GlassMarbleContentParam-contentMask: Mask--><!--Device-GlassMarbleContentParam-contentMask: Mask-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -68,6 +74,8 @@ contentSaturation: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-GlassMarbleContentParam-contentSaturation: double--><!--Device-GlassMarbleContentParam-contentSaturation: double-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -86,6 +94,8 @@ contentScale: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-GlassMarbleContentParam-contentScale: double--><!--Device-GlassMarbleContentParam-contentScale: double-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -103,6 +113,8 @@ contentTintColor: Color
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-GlassMarbleContentParam-contentTintColor: Color--><!--Device-GlassMarbleContentParam-contentTintColor: Color-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

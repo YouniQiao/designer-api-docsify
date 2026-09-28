@@ -26,6 +26,8 @@ function isConnected(): boolean
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
+<!--Device-wifi-function isConnected(): boolean--><!--Device-wifi-function isConnected(): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **返回值：**

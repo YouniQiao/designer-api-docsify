@@ -14,6 +14,8 @@ Picture类，一些包含特殊信息的图片可以解码为Picture（也可以
 
 **起始版本：** 13
 
+<!--Device-image-interface Picture--><!--Device-image-interface Picture-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## 导入模块
@@ -31,6 +33,8 @@ getAuxiliaryPicture(type: AuxiliaryPictureType): AuxiliaryPicture | null
 根据类型获取辅助图。
 
 **起始版本：** 13
+
+<!--Device-Picture-getAuxiliaryPicture(type: AuxiliaryPictureType): AuxiliaryPicture | null--><!--Device-Picture-getAuxiliaryPicture(type: AuxiliaryPictureType): AuxiliaryPicture | null-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -72,6 +76,8 @@ getGainmapPixelmap(): PixelMap | null
 获取增益图的pixelmap。
 
 **起始版本：** 13
+
+<!--Device-Picture-getGainmapPixelmap(): PixelMap | null--><!--Device-Picture-getGainmapPixelmap(): PixelMap | null-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -118,6 +124,8 @@ getHdrComposedPixelmap(): Promise<PixelMap>
 合成HDR图并获取HDR图的pixelmap。使用Promise异步回调。
 
 **起始版本：** 13
+
+<!--Device-Picture-getHdrComposedPixelmap(): Promise<PixelMap>--><!--Device-Picture-getHdrComposedPixelmap(): Promise<PixelMap>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -171,6 +179,8 @@ getHdrComposedPixelmapWithOptions(options?: HdrComposeOptions): Promise<PixelMap
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Picture-getHdrComposedPixelmapWithOptions(options?: HdrComposeOptions): Promise<PixelMap | undefined>--><!--Device-Picture-getHdrComposedPixelmapWithOptions(options?: HdrComposeOptions): Promise<PixelMap | undefined>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -234,6 +244,8 @@ getMainPixelmap(): PixelMap
 
 **起始版本：** 13
 
+<!--Device-Picture-getMainPixelmap(): PixelMap--><!--Device-Picture-getMainPixelmap(): PixelMap-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **返回值：**
@@ -275,6 +287,8 @@ getMetadata(metadataType: MetadataType): Promise<Metadata>
 获取主图的元数据。使用Promise异步回调。
 
 **起始版本：** 13
+
+<!--Device-Picture-getMetadata(metadataType: MetadataType): Promise<Metadata>--><!--Device-Picture-getMetadata(metadataType: MetadataType): Promise<Metadata>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -329,6 +343,8 @@ hdrComposeToMainPixelmap(): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Picture-hdrComposeToMainPixelmap(): Promise<void>--><!--Device-Picture-hdrComposeToMainPixelmap(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **返回值：**
@@ -372,6 +388,8 @@ marshalling(sequence: rpc.MessageSequence): void
 将picture序列化后写入MessageSequence。
 
 **起始版本：** 13
+
+<!--Device-Picture-marshalling(sequence: rpc.MessageSequence): void--><!--Device-Picture-marshalling(sequence: rpc.MessageSequence): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -449,6 +467,8 @@ release(): void
 
 **起始版本：** 13
 
+<!--Device-Picture-release(): void--><!--Device-Picture-release(): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **示例**
@@ -478,6 +498,8 @@ setAuxiliaryPicture(type: AuxiliaryPictureType, auxiliaryPicture: AuxiliaryPictu
 设置辅助图。
 
 **起始版本：** 13
+
+<!--Device-Picture-setAuxiliaryPicture(type: AuxiliaryPictureType, auxiliaryPicture: AuxiliaryPicture): void--><!--Device-Picture-setAuxiliaryPicture(type: AuxiliaryPictureType, auxiliaryPicture: AuxiliaryPicture): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -534,6 +556,8 @@ setMainPixelmap(pixelmap: PixelMap): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Picture-setMainPixelmap(pixelmap: PixelMap): void--><!--Device-Picture-setMainPixelmap(pixelmap: PixelMap): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
@@ -575,6 +599,8 @@ setMetadata(metadataType: MetadataType, metadata: Metadata): Promise<void>
 设置主图的元数据。使用Promise异步回调。
 
 **起始版本：** 13
+
+<!--Device-Picture-setMetadata(metadataType: MetadataType, metadata: Metadata): Promise<void>--><!--Device-Picture-setMetadata(metadataType: MetadataType, metadata: Metadata): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 

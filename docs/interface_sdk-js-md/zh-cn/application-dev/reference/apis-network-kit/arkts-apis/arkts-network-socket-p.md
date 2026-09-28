@@ -14,4 +14,6 @@ export import NetAddress = connection.NetAddress
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-socket-export import NetAddress = connection.NetAddress--><!--Device-socket-export import NetAddress = connection.NetAddress-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack

@@ -4,13 +4,15 @@
 declare class ImageSpanAttribute extends BaseSpan<ImageSpanAttribute>
 ```
 
-The attributes inherit from [BaseSpan](arkts-arkui-span-comp-basespan-c.md). Among the universal attributes, [size](arkts-arkui-common-comp.md#common), [background](arkts-arkui-common-comp.md#common), and [border](arkts-arkui-common-comp.md#common) are supported.
+The attributes inherit from [BaseSpan](arkts-arkui-span-comp-basespan-c.md). Among the universal attributes, [size](arkts-arkui-common-comp.md), [background](arkts-arkui-common-comp.md), and [border](arkts-arkui-common-comp.md) are supported.
 
 @extends CommonMethod&lt;ImageSpanAttribute&gt; [since 10 - 10] @extends BaseSpan&lt;ImageSpanAttribute&gt; [since 11]
 
 **Inheritance/Implementation:** ImageSpanAttribute extends BaseSpan<ImageSpanAttribute>
 
 **Since:** 10
+
+<!--Device-unnamed-declare class ImageSpanAttribute extends BaseSpan<ImageSpanAttribute>--><!--Device-unnamed-declare class ImageSpanAttribute extends BaseSpan<ImageSpanAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,6 +29,8 @@ Sets the placeholder image displayed during image loading. If this API is not us
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ImageSpanAttribute-alt(value: PixelMap): ImageSpanAttribute--><!--Device-ImageSpanAttribute-alt(value: PixelMap): ImageSpanAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,6 +54,8 @@ Sets the color filter for the image.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-ImageSpanAttribute-colorFilter(filter: ColorFilter | DrawingColorFilter): ImageSpanAttribute--><!--Device-ImageSpanAttribute-colorFilter(filter: ColorFilter | DrawingColorFilter): ImageSpanAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -71,6 +77,8 @@ Sets the scale type of the image. It is suitable for controlling how the image i
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ImageSpanAttribute-objectFit(value: ImageFit): ImageSpanAttribute--><!--Device-ImageSpanAttribute-objectFit(value: ImageFit): ImageSpanAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -94,6 +102,8 @@ Triggered when the image is successfully loaded or decoded. The size of the load
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ImageSpanAttribute-onComplete(callback: ImageCompleteCallback): ImageSpanAttribute--><!--Device-ImageSpanAttribute-onComplete(callback: ImageCompleteCallback): ImageSpanAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -115,6 +125,8 @@ Triggered when an error occurs during image loading.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ImageSpanAttribute-onError(callback: ImageErrorCallback): ImageSpanAttribute--><!--Device-ImageSpanAttribute-onError(callback: ImageErrorCallback): ImageSpanAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -142,6 +154,8 @@ When the parameter type of the component is an animated image, [AnimatedDrawable
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.1.
 
+<!--Device-ImageSpanAttribute-resizable(value: ResizableOptions): ImageSpanAttribute--><!--Device-ImageSpanAttribute-resizable(value: ResizableOptions): ImageSpanAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -166,6 +180,8 @@ After the **ImageSpan** component is created, the value of this attribute cannot
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-ImageSpanAttribute-supportSvg2(enable: Optional<boolean>): ImageSpanAttribute--><!--Device-ImageSpanAttribute-supportSvg2(enable: Optional<boolean>): ImageSpanAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -187,6 +203,8 @@ Sets the alignment of the image based on the line height. It is suitable for adj
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ImageSpanAttribute-verticalAlign(value: ImageSpanAlignment): ImageSpanAttribute--><!--Device-ImageSpanAttribute-verticalAlign(value: ImageSpanAlignment): ImageSpanAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

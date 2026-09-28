@@ -18,6 +18,8 @@ Creates a spring animation curve. If multiple spring animations are applied to t
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-curves-function trailOptimizedSpringMotion(response?: number, dampingFraction?: number, overlapDuration?: number, trail?: TrailOptimization): ICurve--><!--Device-curves-function trailOptimizedSpringMotion(response?: number, dampingFraction?: number, overlapDuration?: number, trail?: TrailOptimization): ICurve-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.

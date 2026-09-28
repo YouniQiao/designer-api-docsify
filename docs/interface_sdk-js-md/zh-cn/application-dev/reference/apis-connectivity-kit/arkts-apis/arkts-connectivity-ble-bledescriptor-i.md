@@ -8,6 +8,8 @@ GATT描述符结构定义，是特征值[BLECharacteristic](arkts-connectivity-b
 
 **起始版本：** 10
 
+<!--Device-ble-interface BLEDescriptor--><!--Device-ble-interface BLEDescriptor-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -30,7 +32,9 @@ characteristicUuid: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-BLEDescriptor-characteristicUuid: string--><!--Device-BLEDescriptor-characteristicUuid: string-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -48,7 +52,9 @@ descriptorHandle?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-BLEDescriptor-descriptorHandle?: int--><!--Device-BLEDescriptor-descriptorHandle?: int-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -66,7 +72,9 @@ descriptorUuid: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-BLEDescriptor-descriptorUuid: string--><!--Device-BLEDescriptor-descriptorUuid: string-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -84,7 +92,9 @@ descriptorValue: ArrayBuffer
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-BLEDescriptor-descriptorValue: ArrayBuffer--><!--Device-BLEDescriptor-descriptorValue: ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -102,7 +112,9 @@ permissions?: GattPermissions
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-BLEDescriptor-permissions?: GattPermissions--><!--Device-BLEDescriptor-permissions?: GattPermissions-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -120,6 +132,8 @@ serviceUuid: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-BLEDescriptor-serviceUuid: string--><!--Device-BLEDescriptor-serviceUuid: string-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

@@ -8,6 +8,8 @@ A class object that functions as a thumbnail proxy.
 
 **起始版本：** 11
 
+<!--Device-camera-interface DeferredPhotoProxy--><!--Device-camera-interface DeferredPhotoProxy-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -27,6 +29,8 @@ getThumbnail(): Promise<image.PixelMap>
 Obtains the PixelMap of a thumbnail. This API uses a promise to return the result.
 
 **起始版本：** 11
+
+<!--Device-DeferredPhotoProxy-getThumbnail(): Promise<image.PixelMap>--><!--Device-DeferredPhotoProxy-getThumbnail(): Promise<image.PixelMap>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -65,6 +69,8 @@ release(): Promise<void>
 Releases depth data output resources. This API uses a promise to return the result.
 
 **起始版本：** 11
+
+<!--Device-DeferredPhotoProxy-release(): Promise<void>--><!--Device-DeferredPhotoProxy-release(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

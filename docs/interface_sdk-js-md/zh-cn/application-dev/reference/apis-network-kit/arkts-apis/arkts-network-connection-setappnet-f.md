@@ -18,6 +18,8 @@ function setAppNet(netHandle: NetHandle, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.INTERNET
 
+<!--Device-connection-function setAppNet(netHandle: NetHandle, callback: AsyncCallback<void>): void--><!--Device-connection-function setAppNet(netHandle: NetHandle, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**
@@ -102,6 +104,8 @@ function setAppNet(netHandle: NetHandle): Promise<void>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.INTERNET
+
+<!--Device-connection-function setAppNet(netHandle: NetHandle): Promise<void>--><!--Device-connection-function setAppNet(netHandle: NetHandle): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 

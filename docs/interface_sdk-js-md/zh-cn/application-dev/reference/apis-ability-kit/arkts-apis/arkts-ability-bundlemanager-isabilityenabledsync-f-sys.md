@@ -16,6 +16,8 @@ function isAbilityEnabledSync(info: AbilityInfo): boolean
 
 **起始版本：** 10
 
+<!--Device-bundleManager-function isAbilityEnabledSync(info: AbilityInfo): boolean--><!--Device-bundleManager-function isAbilityEnabledSync(info: AbilityInfo): boolean-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。

@@ -8,6 +8,8 @@ interface AcbStateParam
 
 **起始版本：** 26.0.0
 
+<!--Device-remoteDevice-interface AcbStateParam--><!--Device-remoteDevice-interface AcbStateParam-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## 导入模块
@@ -30,6 +32,8 @@ address: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AcbStateParam-address: string--><!--Device-AcbStateParam-address: string-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## state
@@ -45,5 +49,7 @@ state: AcbState
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AcbStateParam-state: AcbState--><!--Device-AcbStateParam-state: AcbState-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base

@@ -18,6 +18,8 @@ function clearCustomDnsRules(callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.INTERNET
 
+<!--Device-connection-function clearCustomDnsRules(callback: AsyncCallback<void>): void--><!--Device-connection-function clearCustomDnsRules(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**
@@ -65,6 +67,8 @@ function clearCustomDnsRules(): Promise<void>
 **起始版本：** 11
 
 **需要权限：** ohos.permission.INTERNET
+
+<!--Device-connection-function clearCustomDnsRules(): Promise<void>--><!--Device-connection-function clearCustomDnsRules(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 

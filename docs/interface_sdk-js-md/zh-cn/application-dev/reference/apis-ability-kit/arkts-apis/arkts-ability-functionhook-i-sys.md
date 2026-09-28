@@ -10,6 +10,8 @@ Hook对象可实现可选方法的任意子集。仅已实现的方法会被调�
 
 **起始版本：** 26.0.1
 
+<!--Device-unnamed-export interface FunctionHook--><!--Device-unnamed-export interface FunctionHook-End-->
+
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -25,6 +27,8 @@ Function调用后调用。返回的对象将替换原始结果。
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FunctionHook-onAfterInvokeFunction?(param: FunctionResultWrap): FunctionResultWrap--><!--Device-FunctionHook-onAfterInvokeFunction?(param: FunctionResultWrap): FunctionResultWrap-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -53,6 +57,8 @@ Function调用前调用。返回的对象将替换原始参数。
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FunctionHook-onBeforeInvokeFunction?(param: InvokeFunctionParam): InvokeFunctionParam--><!--Device-FunctionHook-onBeforeInvokeFunction?(param: InvokeFunctionParam): InvokeFunctionParam-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 

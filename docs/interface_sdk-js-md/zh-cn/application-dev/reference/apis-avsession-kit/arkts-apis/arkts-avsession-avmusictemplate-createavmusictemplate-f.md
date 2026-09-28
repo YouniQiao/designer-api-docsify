@@ -18,6 +18,8 @@ function createAVMusicTemplate(accessType: AVMusicTemplateType): AVMusicTemplate
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-avMusicTemplate-function createAVMusicTemplate(accessType: AVMusicTemplateType): AVMusicTemplate--><!--Device-avMusicTemplate-function createAVMusicTemplate(accessType: AVMusicTemplateType): AVMusicTemplate-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **参数：**

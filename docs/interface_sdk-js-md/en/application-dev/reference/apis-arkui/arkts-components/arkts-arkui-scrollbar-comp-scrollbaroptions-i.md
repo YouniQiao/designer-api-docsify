@@ -18,6 +18,8 @@ Parameters of the **ScrollBar** component.
 
 **Since:** 8
 
+<!--Device-unnamed-declare interface ScrollBarOptions--><!--Device-unnamed-declare interface ScrollBarOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## direction
@@ -35,6 +37,8 @@ Scrollbar direction in which scrollable components scroll.<br>Default value: **S
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ScrollBarOptions-direction?: ScrollBarDirection--><!--Device-ScrollBarOptions-direction?: ScrollBarDirection-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,6 +58,8 @@ Scroller, which can be bound to scrollable components for scrolling control.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ScrollBarOptions-scroller: Scroller--><!--Device-ScrollBarOptions-scroller: Scroller-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## state
@@ -71,5 +77,7 @@ Scrollbar state.<br>Default value: **BarState.Auto**
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ScrollBarOptions-state?: BarState--><!--Device-ScrollBarOptions-state?: BarState-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

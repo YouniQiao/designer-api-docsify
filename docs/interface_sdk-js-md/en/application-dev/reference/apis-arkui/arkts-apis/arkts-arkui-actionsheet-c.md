@@ -10,6 +10,8 @@ declare class ActionSheet
 
 **Substitutes:** [showActionSheet](arkts-arkui-arkui-uicontext-uicontext-c.md#showactionsheet)
 
+<!--Device-unnamed-declare class ActionSheet--><!--Device-unnamed-declare class ActionSheet-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## show
@@ -35,6 +37,8 @@ Shows an action sheet in the given settings.
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ActionSheet-static show(value: ActionSheetOptions)--><!--Device-ActionSheet-static show(value: ActionSheetOptions)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

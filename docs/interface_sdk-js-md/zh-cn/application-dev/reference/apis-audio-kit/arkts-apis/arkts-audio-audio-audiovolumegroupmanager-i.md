@@ -8,6 +8,8 @@ interface AudioVolumeGroupManager
 
 **起始版本：** 9
 
+<!--Device-audio-interface AudioVolumeGroupManager--><!--Device-audio-interface AudioVolumeGroupManager-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 ## 导入模块
@@ -25,6 +27,8 @@ getMaxAmplitudeForInputDevice(inputDevice: AudioDeviceDescriptor): Promise<numbe
 获取输入设备音频流的最大电平值，取值范围为[0, 1]。使用Promise异步回调。
 
 **起始版本：** 12
+
+<!--Device-AudioVolumeGroupManager-getMaxAmplitudeForInputDevice(inputDevice: AudioDeviceDescriptor): Promise<double>--><!--Device-AudioVolumeGroupManager-getMaxAmplitudeForInputDevice(inputDevice: AudioDeviceDescriptor): Promise<double>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -79,6 +83,8 @@ getMaxAmplitudeForOutputDevice(outputDevice: AudioDeviceDescriptor): Promise<num
 
 **起始版本：** 12
 
+<!--Device-AudioVolumeGroupManager-getMaxAmplitudeForOutputDevice(outputDevice: AudioDeviceDescriptor): Promise<double>--><!--Device-AudioVolumeGroupManager-getMaxAmplitudeForOutputDevice(outputDevice: AudioDeviceDescriptor): Promise<double>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **参数：**
@@ -132,6 +138,8 @@ getRingerMode(callback: AsyncCallback<AudioRingMode>): void
 
 **起始版本：** 9
 
+<!--Device-AudioVolumeGroupManager-getRingerMode(callback: AsyncCallback<AudioRingMode>): void--><!--Device-AudioVolumeGroupManager-getRingerMode(callback: AsyncCallback<AudioRingMode>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **参数：**
@@ -166,6 +174,8 @@ getRingerMode(): Promise<AudioRingMode>
 
 **起始版本：** 9
 
+<!--Device-AudioVolumeGroupManager-getRingerMode(): Promise<AudioRingMode>--><!--Device-AudioVolumeGroupManager-getRingerMode(): Promise<AudioRingMode>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **返回值：**
@@ -195,6 +205,8 @@ getRingerModeSync(): AudioRingMode
 获取铃声模式。同步返回结果。
 
 **起始版本：** 10
+
+<!--Device-AudioVolumeGroupManager-getRingerModeSync(): AudioRingMode--><!--Device-AudioVolumeGroupManager-getRingerModeSync(): AudioRingMode-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -227,6 +239,8 @@ isMicrophoneMute(callback: AsyncCallback<boolean>): void
 获取麦克风静音状态。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-AudioVolumeGroupManager-isMicrophoneMute(callback: AsyncCallback<boolean>): void--><!--Device-AudioVolumeGroupManager-isMicrophoneMute(callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -262,6 +276,8 @@ isMicrophoneMute(): Promise<boolean>
 
 **起始版本：** 9
 
+<!--Device-AudioVolumeGroupManager-isMicrophoneMute(): Promise<boolean>--><!--Device-AudioVolumeGroupManager-isMicrophoneMute(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **返回值：**
@@ -291,6 +307,8 @@ isMicrophoneMuteSync(): boolean
 获取麦克风静音状态。同步返回结果。
 
 **起始版本：** 10
+
+<!--Device-AudioVolumeGroupManager-isMicrophoneMuteSync(): boolean--><!--Device-AudioVolumeGroupManager-isMicrophoneMuteSync(): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -324,6 +342,8 @@ isVolumeUnadjustable(): boolean
 
 **起始版本：** 10
 
+<!--Device-AudioVolumeGroupManager-isVolumeUnadjustable(): boolean--><!--Device-AudioVolumeGroupManager-isVolumeUnadjustable(): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **返回值：**
@@ -348,6 +368,8 @@ off(type: 'ringerModeChange', callback?: Callback<AudioRingMode>): void
 取消监听铃声模式变化事件。
 
 **起始版本：** 18
+
+<!--Device-AudioVolumeGroupManager-off(type: 'ringerModeChange', callback?: Callback<AudioRingMode>): void--><!--Device-AudioVolumeGroupManager-off(type: 'ringerModeChange', callback?: Callback<AudioRingMode>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -389,6 +411,8 @@ off(type: 'micStateChange', callback?: Callback<MicStateChangeEvent>): void
 取消监听系统麦克风状态更改事件。
 
 **起始版本：** 12
+
+<!--Device-AudioVolumeGroupManager-off(type: 'micStateChange', callback?: Callback<MicStateChangeEvent>): void--><!--Device-AudioVolumeGroupManager-off(type: 'micStateChange', callback?: Callback<MicStateChangeEvent>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -432,6 +456,8 @@ on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void
 
 **起始版本：** 9
 
+<!--Device-AudioVolumeGroupManager-on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void--><!--Device-AudioVolumeGroupManager-on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **参数：**
@@ -465,6 +491,8 @@ on(type: 'micStateChange', callback: Callback<MicStateChangeEvent>): void
 监听系统麦克风状态更改事件（当检测到系统麦克风状态发生改变时触发）。使用callback异步回调。目前此订阅接口在单进程多AudioManager实例的使用场景下，仅最后一个实例的订阅生效，其他实例的订阅会被覆盖（即使最后一个实例没有进行订阅）。因此，推荐使用单一AudioManager实例进行开发。
 
 **起始版本：** 9
+
+<!--Device-AudioVolumeGroupManager-on(type: 'micStateChange', callback: Callback<MicStateChangeEvent>): void--><!--Device-AudioVolumeGroupManager-on(type: 'micStateChange', callback: Callback<MicStateChangeEvent>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -508,6 +536,8 @@ getMaxVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void
 **废弃版本：** 20
 
 **替代接口：** [getMaxVolumeByStream](arkts-audio-audio-audiovolumemanager-i.md#getmaxvolumebystream)
+
+<!--Device-AudioVolumeGroupManager-getMaxVolume(volumeType: AudioVolumeType, callback: AsyncCallback<int>): void--><!--Device-AudioVolumeGroupManager-getMaxVolume(volumeType: AudioVolumeType, callback: AsyncCallback<int>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -553,6 +583,8 @@ getMaxVolume(volumeType: AudioVolumeType): Promise<number>
 
 **替代接口：** [getMaxVolumeByStream](arkts-audio-audio-audiovolumemanager-i.md#getmaxvolumebystream)
 
+<!--Device-AudioVolumeGroupManager-getMaxVolume(volumeType: AudioVolumeType): Promise<int>--><!--Device-AudioVolumeGroupManager-getMaxVolume(volumeType: AudioVolumeType): Promise<int>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **参数：**
@@ -597,6 +629,8 @@ getMaxVolumeSync(volumeType: AudioVolumeType): number
 **废弃版本：** 20
 
 **替代接口：** [getMaxVolumeByStream](arkts-audio-audio-audiovolumemanager-i.md#getmaxvolumebystream)
+
+<!--Device-AudioVolumeGroupManager-getMaxVolumeSync(volumeType: AudioVolumeType): int--><!--Device-AudioVolumeGroupManager-getMaxVolumeSync(volumeType: AudioVolumeType): int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -652,6 +686,8 @@ getMinVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void
 
 **替代接口：** [getMinVolumeByStream](arkts-audio-audio-audiovolumemanager-i.md#getminvolumebystream)
 
+<!--Device-AudioVolumeGroupManager-getMinVolume(volumeType: AudioVolumeType, callback: AsyncCallback<int>): void--><!--Device-AudioVolumeGroupManager-getMinVolume(volumeType: AudioVolumeType, callback: AsyncCallback<int>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **参数：**
@@ -695,6 +731,8 @@ getMinVolume(volumeType: AudioVolumeType): Promise<number>
 **废弃版本：** 20
 
 **替代接口：** [getMinVolumeByStream](arkts-audio-audio-audiovolumemanager-i.md#getminvolumebystream)
+
+<!--Device-AudioVolumeGroupManager-getMinVolume(volumeType: AudioVolumeType): Promise<int>--><!--Device-AudioVolumeGroupManager-getMinVolume(volumeType: AudioVolumeType): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -740,6 +778,8 @@ getMinVolumeSync(volumeType: AudioVolumeType): number
 **废弃版本：** 20
 
 **替代接口：** [getMinVolumeByStream](arkts-audio-audio-audiovolumemanager-i.md#getminvolumebystream)
+
+<!--Device-AudioVolumeGroupManager-getMinVolumeSync(volumeType: AudioVolumeType): int--><!--Device-AudioVolumeGroupManager-getMinVolumeSync(volumeType: AudioVolumeType): int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -796,6 +836,8 @@ getSystemVolumeInDb(volumeType: AudioVolumeType, volumeLevel: number, device: De
 
 **替代接口：** [getVolumeInUnitOfDbByStream](arkts-audio-audio-audiovolumemanager-i.md#getvolumeinunitofdbbystream)
 
+<!--Device-AudioVolumeGroupManager-getSystemVolumeInDb(volumeType: AudioVolumeType, volumeLevel: int, device: DeviceType, callback: AsyncCallback<double>): void--><!--Device-AudioVolumeGroupManager-getSystemVolumeInDb(volumeType: AudioVolumeType, volumeLevel: int, device: DeviceType, callback: AsyncCallback<double>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **参数：**
@@ -850,6 +892,8 @@ getSystemVolumeInDb(volumeType: AudioVolumeType, volumeLevel: number, device: De
 **废弃版本：** 20
 
 **替代接口：** [getVolumeInUnitOfDbByStream](arkts-audio-audio-audiovolumemanager-i.md#getvolumeinunitofdbbystream)
+
+<!--Device-AudioVolumeGroupManager-getSystemVolumeInDb(volumeType: AudioVolumeType, volumeLevel: int, device: DeviceType): Promise<double>--><!--Device-AudioVolumeGroupManager-getSystemVolumeInDb(volumeType: AudioVolumeType, volumeLevel: int, device: DeviceType): Promise<double>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -907,6 +951,8 @@ getSystemVolumeInDbSync(volumeType: AudioVolumeType, volumeLevel: number, device
 
 **替代接口：** [getVolumeInUnitOfDbByStream](arkts-audio-audio-audiovolumemanager-i.md#getvolumeinunitofdbbystream)
 
+<!--Device-AudioVolumeGroupManager-getSystemVolumeInDbSync(volumeType: AudioVolumeType, volumeLevel: int, device: DeviceType): double--><!--Device-AudioVolumeGroupManager-getSystemVolumeInDbSync(volumeType: AudioVolumeType, volumeLevel: int, device: DeviceType): double-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **参数：**
@@ -963,6 +1009,8 @@ getVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void
 
 **替代接口：** [getVolumeByStream](arkts-audio-audio-audiovolumemanager-i.md#getvolumebystream)
 
+<!--Device-AudioVolumeGroupManager-getVolume(volumeType: AudioVolumeType, callback: AsyncCallback<int>): void--><!--Device-AudioVolumeGroupManager-getVolume(volumeType: AudioVolumeType, callback: AsyncCallback<int>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **参数：**
@@ -1006,6 +1054,8 @@ getVolume(volumeType: AudioVolumeType): Promise<number>
 **废弃版本：** 20
 
 **替代接口：** [getVolumeByStream](arkts-audio-audio-audiovolumemanager-i.md#getvolumebystream)
+
+<!--Device-AudioVolumeGroupManager-getVolume(volumeType: AudioVolumeType): Promise<int>--><!--Device-AudioVolumeGroupManager-getVolume(volumeType: AudioVolumeType): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -1051,6 +1101,8 @@ getVolumeSync(volumeType: AudioVolumeType): number
 **废弃版本：** 20
 
 **替代接口：** [getVolumeByStream](arkts-audio-audio-audiovolumemanager-i.md#getvolumebystream)
+
+<!--Device-AudioVolumeGroupManager-getVolumeSync(volumeType: AudioVolumeType): int--><!--Device-AudioVolumeGroupManager-getVolumeSync(volumeType: AudioVolumeType): int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -1106,6 +1158,8 @@ isMute(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void
 
 **替代接口：** [isSystemMutedForStream](arkts-audio-audio-audiovolumemanager-i.md#issystemmutedforstream)
 
+<!--Device-AudioVolumeGroupManager-isMute(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void--><!--Device-AudioVolumeGroupManager-isMute(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **参数：**
@@ -1149,6 +1203,8 @@ isMute(volumeType: AudioVolumeType): Promise<boolean>
 **废弃版本：** 20
 
 **替代接口：** [isSystemMutedForStream](arkts-audio-audio-audiovolumemanager-i.md#issystemmutedforstream)
+
+<!--Device-AudioVolumeGroupManager-isMute(volumeType: AudioVolumeType): Promise<boolean>--><!--Device-AudioVolumeGroupManager-isMute(volumeType: AudioVolumeType): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -1194,6 +1250,8 @@ isMuteSync(volumeType: AudioVolumeType): boolean
 **废弃版本：** 20
 
 **替代接口：** [isSystemMutedForStream](arkts-audio-audio-audiovolumemanager-i.md#issystemmutedforstream)
+
+<!--Device-AudioVolumeGroupManager-isMuteSync(volumeType: AudioVolumeType): boolean--><!--Device-AudioVolumeGroupManager-isMuteSync(volumeType: AudioVolumeType): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -1248,6 +1306,8 @@ setMicrophoneMute(mute: boolean, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.MANAGE_AUDIO_CONFIG
 
+<!--Device-AudioVolumeGroupManager-setMicrophoneMute(mute: boolean, callback: AsyncCallback<void>): void--><!--Device-AudioVolumeGroupManager-setMicrophoneMute(mute: boolean, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **参数：**
@@ -1290,6 +1350,8 @@ setMicrophoneMute(mute: boolean): Promise<void>
 **废弃版本：** 11
 
 **需要权限：** ohos.permission.MANAGE_AUDIO_CONFIG
+
+<!--Device-AudioVolumeGroupManager-setMicrophoneMute(mute: boolean): Promise<void>--><!--Device-AudioVolumeGroupManager-setMicrophoneMute(mute: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 

@@ -22,6 +22,8 @@ function startAbility(parameter: StartAbilityParameter, callback: AsyncCallback<
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-particleAbility-function startAbility(parameter: StartAbilityParameter, callback: AsyncCallback<void>): void--><!--Device-particleAbility-function startAbility(parameter: StartAbilityParameter, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **参数：**
@@ -78,6 +80,8 @@ function startAbility(parameter: StartAbilityParameter): Promise<void>
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-particleAbility-function startAbility(parameter: StartAbilityParameter): Promise<void>--><!--Device-particleAbility-function startAbility(parameter: StartAbilityParameter): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 

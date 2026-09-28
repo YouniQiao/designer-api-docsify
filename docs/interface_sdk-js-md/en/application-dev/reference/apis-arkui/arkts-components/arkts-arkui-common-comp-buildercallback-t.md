@@ -12,6 +12,8 @@ declare type BuilderCallback<Args extends Object[] = any[]> = (...args: Args) =>
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-unnamed-declare type BuilderCallback<Args extends Object[] = any[]> = (...args: Args) => void--><!--Device-unnamed-declare type BuilderCallback<Args extends Object[] = any[]> = (...args: Args) => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

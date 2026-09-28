@@ -8,6 +8,8 @@ interface AVDataSrcDescriptor
 
 **起始版本：** 10
 
+<!--Device-media-interface AVDataSrcDescriptor--><!--Device-media-interface AVDataSrcDescriptor-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVPlayer
 
 ## 导入模块
@@ -26,7 +28,9 @@ callback: (buffer: ArrayBuffer, length: number, pos?: number) => number
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVDataSrcDescriptor-callback: (buffer: ArrayBuffer, length: long, pos?: long) => int--><!--Device-AVDataSrcDescriptor-callback: (buffer: ArrayBuffer, length: long, pos?: long) => int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -50,6 +54,8 @@ fileSize: number
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVDataSrcDescriptor-fileSize: long--><!--Device-AVDataSrcDescriptor-fileSize: long-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVPlayer

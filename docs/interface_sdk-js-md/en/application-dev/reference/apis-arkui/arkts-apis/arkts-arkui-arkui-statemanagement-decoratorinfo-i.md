@@ -8,6 +8,8 @@ Defines the decorator and component information associated with the observable o
 
 **Since:** 23
 
+<!--Device-unnamed-export interface DecoratorInfo--><!--Device-unnamed-export interface DecoratorInfo-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -32,6 +34,8 @@ Decorator name. For a V1 object, the value is the name of the decorator associat
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-DecoratorInfo-decoratorName: string--><!--Device-DecoratorInfo-decoratorName: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## dependentInfo
@@ -49,6 +53,8 @@ Information about the component that uses the observable object. If the object i
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-DecoratorInfo-dependentInfo: Array<ElementInfo>--><!--Device-DecoratorInfo-dependentInfo: Array<ElementInfo>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -68,6 +74,8 @@ Component ID. For a V1 object, the component ID is returned. <br> **If a V1 obje
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-DecoratorInfo-owningComponentId: number--><!--Device-DecoratorInfo-owningComponentId: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## owningComponentOrClassName
@@ -86,6 +94,8 @@ Component or object name. For a V1 object, the component name is returned. <br> 
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-DecoratorInfo-owningComponentOrClassName: string--><!--Device-DecoratorInfo-owningComponentOrClassName: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## stateVariableName
@@ -103,5 +113,7 @@ Name of the attribute decorated by the decorator.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-DecoratorInfo-stateVariableName: string--><!--Device-DecoratorInfo-stateVariableName: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

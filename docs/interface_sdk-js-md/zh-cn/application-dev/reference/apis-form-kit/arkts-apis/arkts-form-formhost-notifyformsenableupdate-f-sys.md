@@ -22,6 +22,8 @@ function notifyFormsEnableUpdate(
 
 **需要权限：** ohos.permission.REQUIRE_FORM
 
+<!--Device-formHost-function notifyFormsEnableUpdate(    formIds: Array<string>,    isEnableUpdate: boolean,    callback: AsyncCallback<void>  ): void--><!--Device-formHost-function notifyFormsEnableUpdate(    formIds: Array<string>,    isEnableUpdate: boolean,    callback: AsyncCallback<void>  ): void-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -78,6 +80,8 @@ function notifyFormsEnableUpdate(formIds: Array<string>, isEnableUpdate: boolean
 **起始版本：** 9
 
 **需要权限：** ohos.permission.REQUIRE_FORM
+
+<!--Device-formHost-function notifyFormsEnableUpdate(formIds: Array<string>, isEnableUpdate: boolean): Promise<void>--><!--Device-formHost-function notifyFormsEnableUpdate(formIds: Array<string>, isEnableUpdate: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 

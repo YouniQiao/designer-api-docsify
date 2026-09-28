@@ -8,6 +8,8 @@ export type BadgeNumberCallbackData = _BadgeNumberCallbackData
 
 **起始版本：** 11
 
+<!--Device-notificationSubscribe-export type BadgeNumberCallbackData = _BadgeNumberCallbackData--><!--Device-notificationSubscribe-export type BadgeNumberCallbackData = _BadgeNumberCallbackData-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。

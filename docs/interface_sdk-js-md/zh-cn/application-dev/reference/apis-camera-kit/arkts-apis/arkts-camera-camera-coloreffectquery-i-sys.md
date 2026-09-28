@@ -8,6 +8,8 @@ Provides the API to obtain the color effects supported.
 
 **起始版本：** 12
 
+<!--Device-camera-interface ColorEffectQuery--><!--Device-camera-interface ColorEffectQuery-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -27,6 +29,8 @@ getSupportedColorEffects(): Array<ColorEffectType>
 Obtains the supported color effects.
 
 **起始版本：** 11
+
+<!--Device-ColorEffectQuery-getSupportedColorEffects(): Array<ColorEffectType>--><!--Device-ColorEffectQuery-getSupportedColorEffects(): Array<ColorEffectType>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

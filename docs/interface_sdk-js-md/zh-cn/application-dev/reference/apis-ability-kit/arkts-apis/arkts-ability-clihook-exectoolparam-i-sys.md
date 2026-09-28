@@ -8,6 +8,8 @@ Hook拦截的工具执行参数。
 
 **起始版本：** 26.0.1
 
+<!--Device-unnamed-export interface ExecToolParam--><!--Device-unnamed-export interface ExecToolParam-End-->
+
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -25,6 +27,8 @@ args: Record<string, Object>
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExecToolParam-args: Record<string, Object>--><!--Device-ExecToolParam-args: Record<string, Object>-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -44,6 +48,8 @@ challenge: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExecToolParam-challenge: string--><!--Device-ExecToolParam-challenge: string-End-->
+
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +67,8 @@ execOptions?: ExecOptions
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExecToolParam-execOptions?: ExecOptions--><!--Device-ExecToolParam-execOptions?: ExecOptions-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -80,6 +88,8 @@ subCommand: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExecToolParam-subCommand: string--><!--Device-ExecToolParam-subCommand: string-End-->
+
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -97,6 +107,8 @@ toolName: string
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExecToolParam-toolName: string--><!--Device-ExecToolParam-toolName: string-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 

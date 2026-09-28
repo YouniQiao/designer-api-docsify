@@ -14,6 +14,8 @@ interface X963KdfSpec extends KdfSpec
 
 **起始版本：** 22
 
+<!--Device-cryptoFramework-interface X963KdfSpec extends KdfSpec--><!--Device-cryptoFramework-interface X963KdfSpec extends KdfSpec-End-->
+
 **系统能力：** SystemCapability.Security.CryptoFramework.Kdf
 
 ## 导入模块
@@ -34,7 +36,9 @@ info: Uint8Array
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-X963KdfSpec-info: Uint8Array--><!--Device-X963KdfSpec-info: Uint8Array-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Kdf
 
@@ -50,7 +54,9 @@ key: string | Uint8Array
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-X963KdfSpec-key: string | Uint8Array--><!--Device-X963KdfSpec-key: string | Uint8Array-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Kdf
 
@@ -66,6 +72,8 @@ keySize: number
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-X963KdfSpec-keySize: int--><!--Device-X963KdfSpec-keySize: int-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Kdf

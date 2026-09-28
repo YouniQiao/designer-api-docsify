@@ -16,6 +16,8 @@ function containsCheckRule(rule: bigint) : boolean
 
 **起始版本：** 9
 
+<!--Device-hichecker-function containsCheckRule(rule: bigint) : boolean--><!--Device-hichecker-function containsCheckRule(rule: bigint) : boolean-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
 **参数：**

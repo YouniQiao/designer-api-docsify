@@ -8,6 +8,8 @@ enum MetadataObjectType
 
 **起始版本：** 10
 
+<!--Device-camera-enum MetadataObjectType--><!--Device-camera-enum MetadataObjectType-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## TEXT_DETECTION
@@ -21,6 +23,8 @@ Text detection type.
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MetadataObjectType-TEXT_DETECTION = 9--><!--Device-MetadataObjectType-TEXT_DETECTION = 9-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

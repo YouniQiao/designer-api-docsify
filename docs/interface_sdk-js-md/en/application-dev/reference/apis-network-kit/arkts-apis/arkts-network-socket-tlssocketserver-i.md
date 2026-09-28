@@ -8,6 +8,8 @@ Defines a TLS socket server connection. Before calling TLSSocketServer APIs, you
 
 **Since:** 10
 
+<!--Device-socket-export interface TLSSocketServer--><!--Device-socket-export interface TLSSocketServer-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import
@@ -33,6 +35,8 @@ Stops listening for events of the **TLSSocketServer** object and releases the po
 **Since:** 20
 
 **Required permissions:** ohos.permission.INTERNET
+
+<!--Device-TLSSocketServer-close(): Promise<void>--><!--Device-TLSSocketServer-close(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -101,6 +105,8 @@ Obtains the local digital certificate after a **TLSSocketServer** connection is 
 > This API can be called only after **listen** is successfully called.
 
 **Since:** 10
+
+<!--Device-TLSSocketServer-getCertificate(callback: AsyncCallback<X509CertRawData>): void--><!--Device-TLSSocketServer-getCertificate(callback: AsyncCallback<X509CertRawData>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -217,6 +223,8 @@ Obtains the local digital certificate after a **TLSSocketServer** connection is 
 
 **Since:** 10
 
+<!--Device-TLSSocketServer-getCertificate(): Promise<X509CertRawData>--><!--Device-TLSSocketServer-getCertificate(): Promise<X509CertRawData>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
@@ -329,6 +337,8 @@ Obtains the local socket address of a **TLSSocketServer** connection. This API u
 
 **Since:** 12
 
+<!--Device-TLSSocketServer-getLocalAddress(): Promise<NetAddress>--><!--Device-TLSSocketServer-getLocalAddress(): Promise<NetAddress>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
@@ -372,6 +382,8 @@ Obtains the communication protocol version after a **TLSSocketServer** connectio
 > This API can be called only after **listen** is successfully called.
 
 **Since:** 10
+
+<!--Device-TLSSocketServer-getProtocol(callback: AsyncCallback<string>): void--><!--Device-TLSSocketServer-getProtocol(callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -445,6 +457,8 @@ Obtains the communication protocol version after a **TLSSocketServer** connectio
 > This API can be called only after **listen** is successfully called.
 
 **Since:** 10
+
+<!--Device-TLSSocketServer-getProtocol(): Promise<string>--><!--Device-TLSSocketServer-getProtocol(): Promise<string>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -520,6 +534,8 @@ Obtains the file descriptor bound to the TLSSocketServer listening port. This AP
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-TLSSocketServer-getSocketFd(): Promise<int>--><!--Device-TLSSocketServer-getSocketFd(): Promise<int>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
@@ -585,6 +601,8 @@ Obtains the status of the TLS socket server connection upon successful listening
 > This API can be called only after **listen** is successfully called.
 
 **Since:** 10
+
+<!--Device-TLSSocketServer-getState(callback: AsyncCallback<SocketStateBase>): void--><!--Device-TLSSocketServer-getState(callback: AsyncCallback<SocketStateBase>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -658,6 +676,8 @@ Obtains the status of the TLS socket server connection upon successful listening
 
 **Since:** 10
 
+<!--Device-TLSSocketServer-getState(): Promise<SocketStateBase>--><!--Device-TLSSocketServer-getState(): Promise<SocketStateBase>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
@@ -726,6 +746,8 @@ Listens for client connections after **bind** is successfully called to bind the
 **Since:** 10
 
 **Required permissions:** ohos.permission.INTERNET
+
+<!--Device-TLSSocketServer-listen(options: TLSConnectOptions, callback: AsyncCallback<void>): void--><!--Device-TLSSocketServer-listen(options: TLSConnectOptions, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -798,6 +820,8 @@ Listens for client connections after **bind** is successfully called to bind the
 **Since:** 10
 
 **Required permissions:** ohos.permission.INTERNET
+
+<!--Device-TLSSocketServer-listen(options: TLSConnectOptions): Promise<void>--><!--Device-TLSSocketServer-listen(options: TLSConnectOptions): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -881,6 +905,8 @@ Unsubscribes from **connect** events of the **TLSSocketServer** object. This API
 
 **Since:** 10
 
+<!--Device-TLSSocketServer-off(type: 'connect', callback?: Callback<TLSSocketConnection>): void--><!--Device-TLSSocketServer-off(type: 'connect', callback?: Callback<TLSSocketConnection>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -954,6 +980,8 @@ Unsubscribes from **error** events of the **TLSSocketServer** object. This API u
 
 **Since:** 10
 
+<!--Device-TLSSocketServer-off(type: 'error', callback?: ErrorCallback): void--><!--Device-TLSSocketServer-off(type: 'error', callback?: ErrorCallback): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -1024,6 +1052,8 @@ Subscribes to TLS socket server connection events. This API uses an asynchronous
 
 **Since:** 10
 
+<!--Device-TLSSocketServer-on(type: 'connect', callback: Callback<TLSSocketConnection>): void--><!--Device-TLSSocketServer-on(type: 'connect', callback: Callback<TLSSocketConnection>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -1089,6 +1119,8 @@ Subscribes to **error** events of the **TLSSocketServer** object. This API uses 
 
 **Since:** 10
 
+<!--Device-TLSSocketServer-on(type: 'error', callback: ErrorCallback): void--><!--Device-TLSSocketServer-on(type: 'error', callback: ErrorCallback): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -1153,6 +1185,8 @@ Sets other properties of the **TLSSocketServer** object after **listen** is succ
 > This API can be called only after **listen** is successfully called.
 
 **Since:** 10
+
+<!--Device-TLSSocketServer-setExtraOptions(options: TCPExtraOptions, callback: AsyncCallback<void>): void--><!--Device-TLSSocketServer-setExtraOptions(options: TCPExtraOptions, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -1242,6 +1276,8 @@ Sets other properties of the **TLSSocketServer** object after **listen** is succ
 > This API can be called only after **listen** is successfully called.
 
 **Since:** 10
+
+<!--Device-TLSSocketServer-setExtraOptions(options: TCPExtraOptions): Promise<void>--><!--Device-TLSSocketServer-setExtraOptions(options: TCPExtraOptions): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 

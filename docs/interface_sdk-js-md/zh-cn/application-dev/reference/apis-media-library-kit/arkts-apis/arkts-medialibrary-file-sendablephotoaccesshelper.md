@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare namespace sendablePhotoAccessHelper--><!--Device-unnamed-declare namespace sendablePhotoAccessHelper-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块

@@ -8,6 +8,8 @@ VCard版本类型。
 
 **起始版本：** 23
 
+<!--Device-vcard-export enum VCardType--><!--Device-vcard-export enum VCardType-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## VERSION_21
@@ -19,6 +21,8 @@ VERSION_21 = 0
 VCard2.1版本。
 
 **起始版本：** 23
+
+<!--Device-VCardType-VERSION_21 = 0--><!--Device-VCardType-VERSION_21 = 0-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -32,6 +36,8 @@ VCard3.0版本。
 
 **起始版本：** 23
 
+<!--Device-VCardType-VERSION_30 = 1--><!--Device-VCardType-VERSION_30 = 1-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## VERSION_40
@@ -43,5 +49,7 @@ VERSION_40 = 2
 VCard4.0版本。
 
 **起始版本：** 23
+
+<!--Device-VCardType-VERSION_40 = 2--><!--Device-VCardType-VERSION_40 = 2-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService

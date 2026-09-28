@@ -12,6 +12,8 @@ interface QuickImageDataHandler<T>
 
 **起始版本：** 13
 
+<!--Device-photoAccessHelper-interface QuickImageDataHandler<T>--><!--Device-photoAccessHelper-interface QuickImageDataHandler<T>-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
@@ -35,6 +37,8 @@ map支持返回的信息：
 | 'quality' | 图片质量。高质量为'high'，低质量为'low'。 |
 
 **起始版本：** 13
+
+<!--Device-QuickImageDataHandler-onDataPrepared(data: T, imageSource: image.ImageSource, map: Map<string, string>): void--><!--Device-QuickImageDataHandler-onDataPrepared(data: T, imageSource: image.ImageSource, map: Map<string, string>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

@@ -4,6 +4,8 @@ The **notificationSubscribe** module provides APIs for notification subscription
 
 **Since:** 9
 
+<!--Device-unnamed-declare namespace notificationSubscribe--><!--Device-unnamed-declare namespace notificationSubscribe-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.

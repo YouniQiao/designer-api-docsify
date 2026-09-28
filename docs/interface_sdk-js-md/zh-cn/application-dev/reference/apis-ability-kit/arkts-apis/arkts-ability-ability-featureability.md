@@ -6,6 +6,8 @@ FeatureAbility模块提供与用户进行交互的Ability的能力，包括启�
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-unnamed-declare namespace featureAbility--><!--Device-unnamed-declare namespace featureAbility-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 ## 导入模块

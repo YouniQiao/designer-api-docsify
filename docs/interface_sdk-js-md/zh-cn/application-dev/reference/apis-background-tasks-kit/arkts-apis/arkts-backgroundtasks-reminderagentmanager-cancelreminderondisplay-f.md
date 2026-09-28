@@ -16,6 +16,8 @@ function cancelReminderOnDisplay(reminderId: number): Promise<void>
 
 **起始版本：** 23
 
+<!--Device-reminderAgentManager-function cancelReminderOnDisplay(reminderId: int): Promise<void>--><!--Device-reminderAgentManager-function cancelReminderOnDisplay(reminderId: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 **参数：**

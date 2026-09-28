@@ -18,6 +18,8 @@ function getCountryCode(): string
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
+<!--Device-wifiManager-function getCountryCode(): string--><!--Device-wifiManager-function getCountryCode(): string-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.Core
 
 **返回值：**

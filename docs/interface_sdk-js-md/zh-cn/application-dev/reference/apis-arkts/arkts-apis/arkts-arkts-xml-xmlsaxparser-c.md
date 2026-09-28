@@ -12,6 +12,8 @@ XmlSAXParser类用于以流式方式解析XML文本。适用于需要边读取�
 
 **起始版本：** 24
 
+<!--Device-xml-class XmlSAXParser--><!--Device-xml-class XmlSAXParser-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -36,7 +38,9 @@ constructor(inputStream: stream.Readable, encoding?: string)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-XmlSAXParser-constructor(inputStream: stream.Readable, encoding?: string)--><!--Device-XmlSAXParser-constructor(inputStream: stream.Readable, encoding?: string)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -85,7 +89,9 @@ parse(xmlSAXHandler: XmlSAXHandler): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-XmlSAXParser-parse(xmlSAXHandler: XmlSAXHandler): void--><!--Device-XmlSAXParser-parse(xmlSAXHandler: XmlSAXHandler): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

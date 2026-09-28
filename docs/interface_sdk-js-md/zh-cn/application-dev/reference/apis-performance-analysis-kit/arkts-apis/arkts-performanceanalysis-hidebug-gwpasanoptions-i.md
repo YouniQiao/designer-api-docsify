@@ -8,6 +8,8 @@ GWP-ASan配置项。可用于配置是否使能、采样频率，以及最大分
 
 **起始版本：** 20
 
+<!--Device-hidebug-interface GwpAsanOptions--><!--Device-hidebug-interface GwpAsanOptions-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 ## 导入模块
@@ -31,6 +33,8 @@ false：1/128概率使能GWP-ASan。
 **类型：** boolean
 
 **起始版本：** 20
+
+<!--Device-GwpAsanOptions-alwaysEnabled?: boolean--><!--Device-GwpAsanOptions-alwaysEnabled?: boolean-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -56,6 +60,8 @@ false：当GWP-ASan以100%概率开启时，应用以不可恢复模式运行。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-GwpAsanOptions-isRecover?: boolean--><!--Device-GwpAsanOptions-isRecover?: boolean-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 ## maxSimutaneousAllocations
@@ -76,6 +82,8 @@ maxSimutaneousAllocations?: number
 
 **起始版本：** 20
 
+<!--Device-GwpAsanOptions-maxSimutaneousAllocations?: int--><!--Device-GwpAsanOptions-maxSimutaneousAllocations?: int-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 ## sampleRate
@@ -93,5 +101,7 @@ GWP-ASan采样频率，默认值为2500，需要传入大于0的正整数，若�
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-GwpAsanOptions-sampleRate?: int--><!--Device-GwpAsanOptions-sampleRate?: int-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug

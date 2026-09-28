@@ -8,6 +8,8 @@ TCPSocket连接的参数。
 
 **起始版本：** 7
 
+<!--Device-socket-export interface TCPConnectOptions--><!--Device-socket-export interface TCPConnectOptions-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块
@@ -28,6 +30,8 @@ address: NetAddress
 
 **起始版本：** 7
 
+<!--Device-TCPConnectOptions-address: NetAddress--><!--Device-TCPConnectOptions-address: NetAddress-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## proxy
@@ -42,6 +46,8 @@ proxy?: ProxyOptions
 
 **起始版本：** 18
 
+<!--Device-TCPConnectOptions-proxy?: ProxyOptions--><!--Device-TCPConnectOptions-proxy?: ProxyOptions-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## timeout
@@ -55,5 +61,7 @@ timeout?: number
 **类型：** number
 
 **起始版本：** 7
+
+<!--Device-TCPConnectOptions-timeout?: int--><!--Device-TCPConnectOptions-timeout?: int-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack

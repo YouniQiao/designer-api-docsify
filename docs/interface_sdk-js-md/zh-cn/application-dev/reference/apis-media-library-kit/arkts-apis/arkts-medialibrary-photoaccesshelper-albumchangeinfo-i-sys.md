@@ -8,6 +8,8 @@ interface AlbumChangeInfo
 
 **起始版本：** 20
 
+<!--Device-photoAccessHelper-interface AlbumChangeInfo--><!--Device-photoAccessHelper-interface AlbumChangeInfo-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ albumOrder?: number
 
 **起始版本：** 23
 
+<!--Device-AlbumChangeInfo-albumOrder?: int--><!--Device-AlbumChangeInfo-albumOrder?: int-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -43,6 +47,8 @@ coverInfo?: PhotoAssetChangeInfo
 **类型：** [PhotoAssetChangeInfo](arkts-medialibrary-photoaccesshelper-photoassetchangeinfo-i.md)
 
 **起始版本：** 20
+
+<!--Device-AlbumChangeInfo-coverInfo?: PhotoAssetChangeInfo--><!--Device-AlbumChangeInfo-coverInfo?: PhotoAssetChangeInfo-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -62,6 +68,8 @@ hidden?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AlbumChangeInfo-hidden?: boolean--><!--Device-AlbumChangeInfo-hidden?: boolean-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +85,8 @@ hiddenCount: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-AlbumChangeInfo-hiddenCount: int--><!--Device-AlbumChangeInfo-hiddenCount: int-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -94,6 +104,8 @@ hiddenCoverInfo?: PhotoAssetChangeInfo
 
 **起始版本：** 20
 
+<!--Device-AlbumChangeInfo-hiddenCoverInfo?: PhotoAssetChangeInfo--><!--Device-AlbumChangeInfo-hiddenCoverInfo?: PhotoAssetChangeInfo-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -109,6 +121,8 @@ hiddenCoverUri: string
 **类型：** string
 
 **起始版本：** 20
+
+<!--Device-AlbumChangeInfo-hiddenCoverUri: string--><!--Device-AlbumChangeInfo-hiddenCoverUri: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -126,6 +140,8 @@ isCoverChanged: boolean
 
 **起始版本：** 20
 
+<!--Device-AlbumChangeInfo-isCoverChanged: boolean--><!--Device-AlbumChangeInfo-isCoverChanged: boolean-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -141,6 +157,8 @@ isHiddenCoverChanged: boolean
 **类型：** boolean
 
 **起始版本：** 20
+
+<!--Device-AlbumChangeInfo-isHiddenCoverChanged: boolean--><!--Device-AlbumChangeInfo-isHiddenCoverChanged: boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -160,6 +178,8 @@ lpath?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AlbumChangeInfo-lpath?: string--><!--Device-AlbumChangeInfo-lpath?: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -175,6 +195,8 @@ orderSection?: number
 **类型：** number
 
 **起始版本：** 23
+
+<!--Device-AlbumChangeInfo-orderSection?: int--><!--Device-AlbumChangeInfo-orderSection?: int-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -193,6 +215,8 @@ shareRiskStatus?: ShareAlbumRiskStatus
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AlbumChangeInfo-shareRiskStatus?: ShareAlbumRiskStatus--><!--Device-AlbumChangeInfo-shareRiskStatus?: ShareAlbumRiskStatus-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

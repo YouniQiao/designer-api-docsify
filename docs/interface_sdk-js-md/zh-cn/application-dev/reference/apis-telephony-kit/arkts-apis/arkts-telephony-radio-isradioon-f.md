@@ -18,6 +18,8 @@ function isRadioOn(slotId: number, callback: AsyncCallback<boolean>): void
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-radio-function isRadioOn(slotId: int, callback: AsyncCallback<boolean>): void--><!--Device-radio-function isRadioOn(slotId: int, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**
@@ -67,6 +69,8 @@ function isRadioOn(slotId?: number): Promise<boolean>
 **起始版本：** 7
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
+
+<!--Device-radio-function isRadioOn(slotId?: int): Promise<boolean>--><!--Device-radio-function isRadioOn(slotId?: int): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -120,6 +124,8 @@ function isRadioOn(callback: AsyncCallback<boolean>): void
 **起始版本：** 7
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
+
+<!--Device-radio-function isRadioOn(callback: AsyncCallback<boolean>): void--><!--Device-radio-function isRadioOn(callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

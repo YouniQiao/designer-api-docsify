@@ -22,6 +22,8 @@ Configures the resource release strategy and memory optimization strategy of **L
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-declare interface LazyForEachOptions--><!--Device-unnamed-declare interface LazyForEachOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## customComponentFreezeMode
@@ -41,6 +43,8 @@ Whether to enable custom component freezing. It takes effect only when a custom 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-LazyForEachOptions-customComponentFreezeMode?: LazyForEachCustomComponentFreezeMode--><!--Device-LazyForEachOptions-customComponentFreezeMode?: LazyForEachCustomComponentFreezeMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,6 +66,8 @@ Default value: [DEFAULT](arkts-arkui-lazyforeach-comp-lazyforeachmemoptstrategy-
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-LazyForEachOptions-memoryOptimizationStrategy?: LazyForEachMemOptStrategy--><!--Device-LazyForEachOptions-memoryOptimizationStrategy?: LazyForEachMemOptStrategy-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## releaseStrategy
@@ -81,5 +87,7 @@ Resource release strategy for **LazyForEach**. Default value: [BATCH](arkts-arku
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-LazyForEachOptions-releaseStrategy?: LazyForEachReleaseStrategy--><!--Device-LazyForEachOptions-releaseStrategy?: LazyForEachReleaseStrategy-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

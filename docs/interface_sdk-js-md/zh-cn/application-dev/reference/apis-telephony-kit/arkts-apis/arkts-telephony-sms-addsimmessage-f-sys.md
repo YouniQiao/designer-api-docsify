@@ -18,6 +18,8 @@ function addSimMessage(options: SimMessageOptions, callback: AsyncCallback<void>
 
 **需要权限：** ohos.permission.RECEIVE_SMS and ohos.permission.SEND_MESSAGES
 
+<!--Device-sms-function addSimMessage(options: SimMessageOptions, callback: AsyncCallback<void>): void--><!--Device-sms-function addSimMessage(options: SimMessageOptions, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -72,6 +74,8 @@ function addSimMessage(options: SimMessageOptions): Promise<void>
 **起始版本：** 7
 
 **需要权限：** ohos.permission.RECEIVE_SMS and ohos.permission.SEND_MESSAGES
+
+<!--Device-sms-function addSimMessage(options: SimMessageOptions): Promise<void>--><!--Device-sms-function addSimMessage(options: SimMessageOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 

@@ -4,6 +4,8 @@ The calendarManager module provides APIs for calendar and event management, incl
 
 **Since:** 10
 
+<!--Device-unnamed-declare namespace calendarManager--><!--Device-unnamed-declare namespace calendarManager-End-->
+
 **System capability:** SystemCapability.Applications.CalendarData
 
 ## Modules to Import

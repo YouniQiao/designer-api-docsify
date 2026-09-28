@@ -18,6 +18,8 @@ function getMaxTransmitDataSize(clientSocket: number): number
 
 **起始版本：** 22
 
+<!--Device-socket-function getMaxTransmitDataSize(clientSocket: int): int--><!--Device-socket-function getMaxTransmitDataSize(clientSocket: int): int-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**

@@ -6,7 +6,7 @@ The **CalendarPicker** component provides a drop-down calendar window for users 
 > 
 > - This component is supported since API version 10. Newly added APIs will be marked with a superscript to indicate their
 > 
-> - This component supports [WithTheme](arkts-arkui-withtheme-comp.md#with_themedefines-withtheme-component) since API version 26.0.0.
+> - This component supports [WithTheme](arkts-arkui-withtheme-comp.md) since API version 26.0.0.
 
 ## Child Components
 
@@ -25,6 +25,8 @@ Creates a calendar picker.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-CalendarPickerInterface-(options?: CalendarOptions): CalendarPickerAttribute--><!--Device-CalendarPickerInterface-(options?: CalendarOptions): CalendarPickerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

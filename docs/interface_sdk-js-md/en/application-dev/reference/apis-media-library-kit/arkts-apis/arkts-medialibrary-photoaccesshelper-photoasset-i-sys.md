@@ -8,6 +8,8 @@ PhotoAsset provides APIs for encapsulating file asset attributes.
 
 **Since:** 10
 
+<!--Device-photoAccessHelper-interface PhotoAsset--><!--Device-photoAccessHelper-interface PhotoAsset-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
@@ -27,6 +29,8 @@ Cancels a task for obtaining media thumbnails.
 **Since:** 11
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAsset-cancelPhotoRequest(requestId: string): void--><!--Device-PhotoAsset-cancelPhotoRequest(requestId: string): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -102,6 +106,8 @@ The edited file is transferred to the media library based on the URI, which is *
 **Since:** 11
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-PhotoAsset-commitEditedAsset(editData: string, uri: string, callback: AsyncCallback<void>): void--><!--Device-PhotoAsset-commitEditedAsset(editData: string, uri: string, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -180,6 +186,8 @@ The edited file is transferred to the media library based on the URI, which is *
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-PhotoAsset-commitEditedAsset(editData: string, uri: string): Promise<void>--><!--Device-PhotoAsset-commitEditedAsset(editData: string, uri: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -245,6 +253,8 @@ Duplicates an image within the same album (either user-created or application-sp
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-PhotoAsset-convertImageFormat(title: string, imageFormat: SupportedImageFormat): Promise<PhotoAsset>--><!--Device-PhotoAsset-convertImageFormat(title: string, imageFormat: SupportedImageFormat): Promise<PhotoAsset>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -307,6 +317,8 @@ Creates a JPEG-compatible copy for a third-party application that does not suppo
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-PhotoAsset-createTemporaryCompatibleDuplicate(): Promise<void>--><!--Device-PhotoAsset-createTemporaryCompatibleDuplicate(): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -363,6 +375,8 @@ Used to generate and return the UNIQUE_ID of the asset. This UNIQUE_ID stores th
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-PhotoAsset-generateUniqueId(): Promise<string>--><!--Device-PhotoAsset-generateUniqueId(): Promise<string>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -393,6 +407,8 @@ Obtains analysis data. This API uses a promise to return the result.
 **Since:** 11
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAsset-getAnalysisData(analysisType: AnalysisType): Promise<string>--><!--Device-PhotoAsset-getAnalysisData(analysisType: AnalysisType): Promise<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -462,6 +478,8 @@ If the asset has never been edited, an empty string is returned.
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-PhotoAsset-getEditData(): Promise<MediaAssetEditData>--><!--Device-PhotoAsset-getEditData(): Promise<MediaAssetEditData>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -526,6 +544,8 @@ The Exif data obtained are provided by the [image](../../apis-image-kit/arkts-ap
 **Since:** 10
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAsset-getExif(callback: AsyncCallback<string>): void--><!--Device-PhotoAsset-getExif(callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -604,6 +624,8 @@ The Exif data obtained are provided by the [image](../../apis-image-kit/arkts-ap
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-PhotoAsset-getExif(): Promise<string>--><!--Device-PhotoAsset-getExif(): Promise<string>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -663,6 +685,8 @@ Obtains the thumbnail of the specified type for the key frame. This API uses a p
 **Since:** 18
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAsset-getKeyFrameThumbnail(beginFrameTimeMs: long, type: ThumbnailType): Promise<image.PixelMap>--><!--Device-PhotoAsset-getKeyFrameThumbnail(beginFrameTimeMs: long, type: ThumbnailType): Promise<image.PixelMap>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -733,6 +757,8 @@ Open the file and cache it in the gallery sandbox when streaming video from the 
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-PhotoAsset-getReadOnlyFdWithCached(): Promise<int>--><!--Device-PhotoAsset-getReadOnlyFdWithCached(): Promise<int>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -763,6 +789,8 @@ Obtains the ArrayBuffer of a file thumbnail by specifying its type. This API use
 **Since:** 18
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAsset-getThumbnailData(type: ThumbnailType): Promise<ArrayBuffer>--><!--Device-PhotoAsset-getThumbnailData(type: ThumbnailType): Promise<ArrayBuffer>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -824,6 +852,8 @@ Checks whether this image or video asset is edited. This API uses an asynchronou
 **Since:** 11
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAsset-isEdited(callback: AsyncCallback<boolean>): void--><!--Device-PhotoAsset-isEdited(callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -892,6 +922,8 @@ Checks whether this image or video asset is edited. This API uses a promise to r
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-PhotoAsset-isEdited(): Promise<boolean>--><!--Device-PhotoAsset-isEdited(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -953,6 +985,8 @@ If the asset has never been edited, an empty string is returned.
 **Since:** 11
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAsset-requestEditData(callback: AsyncCallback<string>): void--><!--Device-PhotoAsset-requestEditData(callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -1019,6 +1053,8 @@ If the asset has never been edited, an empty string is returned.
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-PhotoAsset-requestEditData(): Promise<string>--><!--Device-PhotoAsset-requestEditData(): Promise<string>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -1076,6 +1112,8 @@ The size of a quick thumbnail is 128 x 128, and the size of a quality thumbnail 
 **Since:** 11
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAsset-requestPhoto(callback: AsyncCallback<image.PixelMap>): string--><!--Device-PhotoAsset-requestPhoto(callback: AsyncCallback<image.PixelMap>): string-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -1146,6 +1184,8 @@ Obtains the thumbnails of an asset based on the specified options. This API uses
 **Since:** 11
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAsset-requestPhoto(options: RequestPhotoOptions, callback: AsyncCallback<image.PixelMap>): string--><!--Device-PhotoAsset-requestPhoto(options: RequestPhotoOptions, callback: AsyncCallback<image.PixelMap>): string-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -1222,6 +1262,8 @@ Opens the source file and returns the FD. This API uses an asynchronous callback
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-PhotoAsset-requestSource(callback: AsyncCallback<int>): void--><!--Device-PhotoAsset-requestSource(callback: AsyncCallback<int>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -1285,6 +1327,8 @@ Opens the source file and returns the FD. This API uses a promise to return the 
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-PhotoAsset-requestSource(): Promise<int>--><!--Device-PhotoAsset-requestSource(): Promise<int>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -1345,6 +1389,8 @@ Reverts to the state of the file before being edited. This API uses an asynchron
 **Since:** 11
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-PhotoAsset-revertToOriginal(callback: AsyncCallback<void>): void--><!--Device-PhotoAsset-revertToOriginal(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -1414,6 +1460,8 @@ Reverts to the state of the file before being edited. This API uses a promise to
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-PhotoAsset-revertToOriginal(): Promise<void>--><!--Device-PhotoAsset-revertToOriginal(): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -1480,6 +1528,8 @@ The pending state can be removed only through **setPending(false)**. You can use
 **Since:** 11
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-PhotoAsset-setPending(pendingState: boolean, callback: AsyncCallback<void>): void--><!--Device-PhotoAsset-setPending(pendingState: boolean, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -1551,6 +1601,8 @@ The pending state can be removed only through **setPending(false)**. You can use
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-PhotoAsset-setPending(pendingState: boolean): Promise<void>--><!--Device-PhotoAsset-setPending(pendingState: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -1618,6 +1670,8 @@ The returned FD must be closed when it is not required.
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO or ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-PhotoAsset-open(mode: string, callback: AsyncCallback<number>): void--><!--Device-PhotoAsset-open(mode: string, callback: AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -1684,6 +1738,8 @@ The returned FD must be closed when it is not required.
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO or ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-PhotoAsset-open(mode: string): Promise<number>--><!--Device-PhotoAsset-open(mode: string): Promise<number>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -1749,6 +1805,8 @@ Favorites or unfavorites this file asset. This API uses an asynchronous callback
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-PhotoAsset-setFavorite(favoriteState: boolean, callback: AsyncCallback<void>): void--><!--Device-PhotoAsset-setFavorite(favoriteState: boolean, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -1813,6 +1871,8 @@ Favorites or unfavorites this file asset. This API uses a promise to return the 
 **Substitutes:** [setFavorite](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md#setfavorite)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-PhotoAsset-setFavorite(favoriteState: boolean): Promise<void>--><!--Device-PhotoAsset-setFavorite(favoriteState: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -1887,6 +1947,8 @@ Private files are stored in the private album. After obtaining private files fro
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-PhotoAsset-setHidden(hiddenState: boolean, callback: AsyncCallback<void>): void--><!--Device-PhotoAsset-setHidden(hiddenState: boolean, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -1953,6 +2015,8 @@ Private files are stored in the private album. After obtaining private files fro
 **Substitutes:** [setHidden](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md#sethidden)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-PhotoAsset-setHidden(hiddenState: boolean): Promise<void>--><!--Device-PhotoAsset-setHidden(hiddenState: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -2024,6 +2088,8 @@ Sets user comment information of an image or video. This API uses an asynchronou
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-PhotoAsset-setUserComment(userComment: string, callback: AsyncCallback<void>): void--><!--Device-PhotoAsset-setUserComment(userComment: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -2093,6 +2159,8 @@ Sets user comment information of an image or video. This API uses a promise to r
 **Substitutes:** [setUserComment](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md#setusercomment)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-PhotoAsset-setUserComment(userComment: string): Promise<void>--><!--Device-PhotoAsset-setUserComment(userComment: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

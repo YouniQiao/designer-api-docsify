@@ -20,6 +20,8 @@ function openInstallCertificateDialog(context: common.Context, certType: Certifi
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-certificateManagerDialog-function openInstallCertificateDialog(context: common.Context, certType: CertificateType, certScope: CertificateScope, cert: Uint8Array): Promise<string>--><!--Device-certificateManagerDialog-function openInstallCertificateDialog(context: common.Context, certType: CertificateType, certScope: CertificateScope, cert: Uint8Array): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
 **参数：**

@@ -10,6 +10,8 @@ Universal attributes are not supported. This component supports the attributes l
 
 **Since:** 10
 
+<!--Device-unnamed-declare class SaveButtonAttribute extends SecurityComponentMethod<SaveButtonAttribute>--><!--Device-unnamed-declare class SaveButtonAttribute extends SecurityComponentMethod<SaveButtonAttribute>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## iconBorderRadius
@@ -27,6 +29,8 @@ Sets the corner radius of the icon of the **SaveButton** component.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-SaveButtonAttribute-iconBorderRadius(radius: Dimension | BorderRadiuses): SaveButtonAttribute--><!--Device-SaveButtonAttribute-iconBorderRadius(radius: Dimension | BorderRadiuses): SaveButtonAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,6 +54,8 @@ Sets the icon size of the **SaveButton** component.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-SaveButtonAttribute-iconSize(size: Dimension | SizeOptions): SaveButtonAttribute--><!--Device-SaveButtonAttribute-iconSize(size: Dimension | SizeOptions): SaveButtonAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -64,13 +70,15 @@ Sets the icon size of the **SaveButton** component.
 onClick(event: SaveButtonCallback)
 ```
 
-Triggered when the **SaveButton** component is clicked. When a user clicks the save button for the first time, an authorization dialog box is displayed. If the user allows authorization, the app obtains temporary access to media library APIs. For details about the authorization duration, see the description of the [SaveButton](arkts-arkui-savebutton-comp.md#savebutton) constructor. Authorization fails if the user declines authorization or closes the dialog box.
+Triggered when the **SaveButton** component is clicked. When a user clicks the save button for the first time, an authorization dialog box is displayed. If the user allows authorization, the app obtains temporary access to media library APIs. For details about the authorization duration, see the description of the [SaveButton](arkts-arkui-savebutton-comp.md) constructor. Authorization fails if the user declines authorization or closes the dialog box.
 
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SaveButtonAttribute-onClick(event: SaveButtonCallback): SaveButtonAttribute--><!--Device-SaveButtonAttribute-onClick(event: SaveButtonCallback): SaveButtonAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -96,13 +104,15 @@ Sets the icon of the **SaveButton** component.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-SaveButtonAttribute-setIcon(icon: Resource): SaveButtonAttribute--><!--Device-SaveButtonAttribute-setIcon(icon: Resource): SaveButtonAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| icon | [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Custom icon resource information. Only data sources of the Resource type are supported. <br>Images in the following formats are supported: PNG, JPG, JPEG, BMP, SVG, WebP, GIF, and HEIF. For details about the supported image formats, see [Image](arkts-arkui-image-comp.md#image). If the resource is not an image resource or the format is not supported, the icon is displayed as blank. <br>Since API version 26.0.0, data sources of the Resource type in Symbol format are supported. <br>If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, the custom icon does not take effect and the save button uses the default style. |
+| icon | [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Custom icon resource information. Only data sources of the Resource type are supported. <br>Images in the following formats are supported: PNG, JPG, JPEG, BMP, SVG, WebP, GIF, and HEIF. For details about the supported image formats, see [Image](arkts-arkui-image-comp.md). If the resource is not an image resource or the format is not supported, the icon is displayed as blank. <br>Since API version 26.0.0, data sources of the Resource type in Symbol format are supported. <br>If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, the custom icon does not take effect and the save button uses the default style. |
 
 ## setText
 
@@ -119,6 +129,8 @@ Sets the text of the **SaveButton** component.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-SaveButtonAttribute-setText(text: string | Resource): SaveButtonAttribute--><!--Device-SaveButtonAttribute-setText(text: string | Resource): SaveButtonAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -143,6 +155,8 @@ Sets the press effect of the **SaveButton** component.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-SaveButtonAttribute-stateEffect(enabled: boolean): SaveButtonAttribute--><!--Device-SaveButtonAttribute-stateEffect(enabled: boolean): SaveButtonAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -172,6 +186,8 @@ style icon resource (i.e., **$r('sys.symbol.*xxx*')**).
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-SaveButtonAttribute-symbolFontWeight(fontWeight: number | FontWeight | string | Resource): SaveButtonAttribute--><!--Device-SaveButtonAttribute-symbolFontWeight(fontWeight: number | FontWeight | string | Resource): SaveButtonAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -200,6 +216,8 @@ style icon resource (i.e., **$r('sys.symbol.xxx')**).
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-SaveButtonAttribute-symbolIconColor(color: Array<ResourceColor>): SaveButtonAttribute--><!--Device-SaveButtonAttribute-symbolIconColor(color: Array<ResourceColor>): SaveButtonAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -231,6 +249,8 @@ rendering strategy determines how the color array is applied.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-SaveButtonAttribute-symbolRenderingStrategy(strategy: SymbolRenderingStrategy): SaveButtonAttribute--><!--Device-SaveButtonAttribute-symbolRenderingStrategy(strategy: SymbolRenderingStrategy): SaveButtonAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -252,6 +272,8 @@ Sets the user authorization cancellation event for the **SaveButton** component.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
+
+<!--Device-SaveButtonAttribute-userCancelEvent(enabled: boolean): SaveButtonAttribute--><!--Device-SaveButtonAttribute-userCancelEvent(enabled: boolean): SaveButtonAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

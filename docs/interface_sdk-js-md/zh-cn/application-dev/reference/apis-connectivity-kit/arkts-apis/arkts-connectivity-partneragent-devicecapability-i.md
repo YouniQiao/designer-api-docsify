@@ -8,6 +8,8 @@ interface DeviceCapability
 
 **起始版本：** 23
 
+<!--Device-partnerAgent-interface DeviceCapability--><!--Device-partnerAgent-interface DeviceCapability-End-->
+
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core
 
 ## 导入模块
@@ -34,6 +36,8 @@ supportBleAdvertiser?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DeviceCapability-supportBleAdvertiser?: boolean--><!--Device-DeviceCapability-supportBleAdvertiser?: boolean-End-->
+
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core
 
 ## supportBR
@@ -49,5 +53,7 @@ supportBR?: boolean
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DeviceCapability-supportBR?: boolean--><!--Device-DeviceCapability-supportBR?: boolean-End-->
 
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core

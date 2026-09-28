@@ -8,6 +8,8 @@ USB配件信息。
 
 **起始版本：** 14
 
+<!--Device-usbManager-interface USBAccessory--><!--Device-usbManager-interface USBAccessory-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## 导入模块
@@ -28,6 +30,8 @@ description: string
 
 **起始版本：** 14
 
+<!--Device-USBAccessory-description: string--><!--Device-USBAccessory-description: string-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## manufacturer
@@ -41,6 +45,8 @@ manufacturer: string
 **类型：** string
 
 **起始版本：** 14
+
+<!--Device-USBAccessory-manufacturer: string--><!--Device-USBAccessory-manufacturer: string-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -56,6 +62,8 @@ product: string
 
 **起始版本：** 14
 
+<!--Device-USBAccessory-product: string--><!--Device-USBAccessory-product: string-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## serialNumber
@@ -70,6 +78,8 @@ serialNumber: string
 
 **起始版本：** 14
 
+<!--Device-USBAccessory-serialNumber: string--><!--Device-USBAccessory-serialNumber: string-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## version
@@ -83,5 +93,7 @@ version: string
 **类型：** string
 
 **起始版本：** 14
+
+<!--Device-USBAccessory-version: string--><!--Device-USBAccessory-version: string-End-->
 
 **系统能力：** SystemCapability.USB.USBManager

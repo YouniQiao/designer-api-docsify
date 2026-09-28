@@ -5,11 +5,11 @@ The **Grid** component consists of cells formed by rows and columns. You can spe
 > **NOTE:** 
 > 
 > The component has been bound with gestures to implement functions such as follow-up scrolling. If you need to add
-> custom gestures, refer to [Gesture Blocking Enhancement](arkts-arkui-common-comp.md#common).
+> custom gestures, refer to [Gesture Blocking Enhancement](arkts-arkui-common-comp.md).
 
 ## Child Components
 
-Child components are limited to [GridItem](arkts-arkui-griditem-comp.md#griditem) and custom components. When using custom components inside **Grid**, it is recommended to wrap the custom component with a **GridItem** as the top-level container. Setting attributes or event methods directly on custom components is not recommended.
+Child components are limited to [GridItem](arkts-arkui-griditem-comp.md) and custom components. When using custom components inside **Grid**, it is recommended to wrap the custom component with a **GridItem** as the top-level container. Setting attributes or event methods directly on custom components is not recommended.
 
 Child components can be dynamically generated using rendering control types [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md), [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md), [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md), and [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md). **LazyForEach** or **Repeat** is recommended to optimize performance.
 
@@ -62,13 +62,15 @@ Creates a **Grid** component.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-GridInterface-(scroller?: Scroller, layoutOptions?: GridLayoutOptions): GridAttribute--><!--Device-GridInterface-(scroller?: Scroller, layoutOptions?: GridLayoutOptions): GridAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scroller | [Scroller](arkts-arkui-scroll-comp-scroller-c.md) | No | Controller of the scrollable component. It is used to bind to the scrollable component. If it is not set, no external controller is bound, and the component manages the scrolling behavior by itself.<br>**NOTE:** <br>It is not allowed to bind the same scroll control object to other scrollable components, such as [ArcList](arkts-arkui-arclist-comp.md#ohosarkuiarclist), [List](arkts-arkui-list-comp.md#list), [Grid](#grid), [Scroll](arkts-arkui-scroll-comp.md#scroll), and [WaterFlow](arkts-arkui-waterflow-comp.md#water_flow). |
+| scroller | [Scroller](arkts-arkui-scroll-comp-scroller-c.md) | No | Controller of the scrollable component. It is used to bind to the scrollable component. If it is not set, no external controller is bound, and the component manages the scrolling behavior by itself.<br>**NOTE:** <br>It is not allowed to bind the same scroll control object to other scrollable components, such as [ArcList](arkts-arkui-arclist-comp.md), [List](arkts-arkui-list-comp.md), [Grid](arkts-arkui-grid-comp.md), [Scroll](arkts-arkui-scroll-comp.md), and [WaterFlow](arkts-arkui-waterflow-comp.md). |
 | layoutOptions | [GridLayoutOptions](arkts-arkui-grid-comp-gridlayoutoptions-i.md) | No | Grid layout options, used to configure layout information such as **GridItem** spanning rows and columns. If it is not passed in, the **Grid** performs layout based on regular attributes such as **rowsTemplate** and **columnsTemplate** and the attributes of **GridItem** itself, without enabling the layout options provided by **GridLayoutOptions**.<br> |
 
 ## Summary

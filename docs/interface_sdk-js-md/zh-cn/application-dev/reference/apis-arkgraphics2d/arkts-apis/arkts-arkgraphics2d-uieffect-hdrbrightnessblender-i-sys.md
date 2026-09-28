@@ -10,6 +10,8 @@ interface HdrBrightnessBlender extends BrightnessBlender
 
 **起始版本：** 20
 
+<!--Device-uiEffect-interface HdrBrightnessBlender extends BrightnessBlender--><!--Device-uiEffect-interface HdrBrightnessBlender extends BrightnessBlender-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。

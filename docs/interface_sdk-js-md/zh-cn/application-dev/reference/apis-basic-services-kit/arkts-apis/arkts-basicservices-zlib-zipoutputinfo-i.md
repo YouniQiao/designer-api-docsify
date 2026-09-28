@@ -8,6 +8,8 @@ interface ZipOutputInfo
 
 **起始版本：** 12
 
+<!--Device-zlib-interface ZipOutputInfo--><!--Device-zlib-interface ZipOutputInfo-End-->
+
 **系统能力：** SystemCapability.BundleManager.Zlib
 
 ## 导入模块
@@ -28,7 +30,9 @@ destLen: number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ZipOutputInfo-destLen: long--><!--Device-ZipOutputInfo-destLen: long-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -44,6 +48,8 @@ status: ReturnStatus
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ZipOutputInfo-status: ReturnStatus--><!--Device-ZipOutputInfo-status: ReturnStatus-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib

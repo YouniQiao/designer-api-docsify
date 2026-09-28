@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare namespace jsLeakWatcher--><!--Device-unnamed-declare namespace jsLeakWatcher-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
 ## 导入模块

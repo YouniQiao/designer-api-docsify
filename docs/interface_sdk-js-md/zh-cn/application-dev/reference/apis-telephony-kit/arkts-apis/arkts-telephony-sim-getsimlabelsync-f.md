@@ -16,6 +16,8 @@ function getSimLabelSync(slotId: number): SimLabel
 
 **起始版本：** 20
 
+<!--Device-sim-function getSimLabelSync(slotId: int): SimLabel--><!--Device-sim-function getSimLabelSync(slotId: int): SimLabel-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**

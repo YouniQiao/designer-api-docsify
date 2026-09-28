@@ -8,6 +8,8 @@ export enum ContinuousTaskDetailedCancelReason
 
 **起始版本：** 26.0.0
 
+<!--Device-backgroundTaskManager-export enum ContinuousTaskDetailedCancelReason--><!--Device-backgroundTaskManager-export enum ContinuousTaskDetailedCancelReason-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## USER_CANCEL_REMOVE_NOTIFICATION
@@ -22,6 +24,8 @@ USER_CANCEL_REMOVE_NOTIFICATION = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ContinuousTaskDetailedCancelReason-USER_CANCEL_REMOVE_NOTIFICATION = 3--><!--Device-ContinuousTaskDetailedCancelReason-USER_CANCEL_REMOVE_NOTIFICATION = 3-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## SYSTEM_CANCEL_DATA_TRANSFER_LOW_SPEED
@@ -35,6 +39,8 @@ SYSTEM_CANCEL_DATA_TRANSFER_LOW_SPEED = 4
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ContinuousTaskDetailedCancelReason-SYSTEM_CANCEL_DATA_TRANSFER_LOW_SPEED = 4--><!--Device-ContinuousTaskDetailedCancelReason-SYSTEM_CANCEL_DATA_TRANSFER_LOW_SPEED = 4-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -52,6 +58,8 @@ SYSTEM_CANCEL_AUDIO_PLAYBACK_NOT_RUNNING = 6
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ContinuousTaskDetailedCancelReason-SYSTEM_CANCEL_AUDIO_PLAYBACK_NOT_RUNNING = 6--><!--Device-ContinuousTaskDetailedCancelReason-SYSTEM_CANCEL_AUDIO_PLAYBACK_NOT_RUNNING = 6-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## SYSTEM_CANCEL_AUDIO_RECORDING_NOT_RUNNING
@@ -65,6 +73,8 @@ SYSTEM_CANCEL_AUDIO_RECORDING_NOT_RUNNING = 7
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ContinuousTaskDetailedCancelReason-SYSTEM_CANCEL_AUDIO_RECORDING_NOT_RUNNING = 7--><!--Device-ContinuousTaskDetailedCancelReason-SYSTEM_CANCEL_AUDIO_RECORDING_NOT_RUNNING = 7-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -80,6 +90,8 @@ SYSTEM_CANCEL_NOT_USE_LOCATION = 8
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ContinuousTaskDetailedCancelReason-SYSTEM_CANCEL_NOT_USE_LOCATION = 8--><!--Device-ContinuousTaskDetailedCancelReason-SYSTEM_CANCEL_NOT_USE_LOCATION = 8-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## SYSTEM_CANCEL_NOT_USE_BLUETOOTH
@@ -93,6 +105,8 @@ SYSTEM_CANCEL_NOT_USE_BLUETOOTH = 9
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ContinuousTaskDetailedCancelReason-SYSTEM_CANCEL_NOT_USE_BLUETOOTH = 9--><!--Device-ContinuousTaskDetailedCancelReason-SYSTEM_CANCEL_NOT_USE_BLUETOOTH = 9-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -108,6 +122,8 @@ SYSTEM_CANCEL_NOT_USE_MULTI_DEVICE = 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ContinuousTaskDetailedCancelReason-SYSTEM_CANCEL_NOT_USE_MULTI_DEVICE = 10--><!--Device-ContinuousTaskDetailedCancelReason-SYSTEM_CANCEL_NOT_USE_MULTI_DEVICE = 10-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## SYSTEM_CANCEL_USE_ILLEGALLY
@@ -121,6 +137,8 @@ SYSTEM_CANCEL_USE_ILLEGALLY = 11
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ContinuousTaskDetailedCancelReason-SYSTEM_CANCEL_USE_ILLEGALLY = 11--><!--Device-ContinuousTaskDetailedCancelReason-SYSTEM_CANCEL_USE_ILLEGALLY = 11-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -136,6 +154,8 @@ SYSTEM_CANCEL_DATA_TRANSFER_NOT_UPDATE = 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ContinuousTaskDetailedCancelReason-SYSTEM_CANCEL_DATA_TRANSFER_NOT_UPDATE = 12--><!--Device-ContinuousTaskDetailedCancelReason-SYSTEM_CANCEL_DATA_TRANSFER_NOT_UPDATE = 12-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## SYSTEM_CANCEL_VOIP_NOT_RUNNING
@@ -149,6 +169,8 @@ SYSTEM_CANCEL_VOIP_NOT_RUNNING = 13
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ContinuousTaskDetailedCancelReason-SYSTEM_CANCEL_VOIP_NOT_RUNNING = 13--><!--Device-ContinuousTaskDetailedCancelReason-SYSTEM_CANCEL_VOIP_NOT_RUNNING = 13-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -164,6 +186,8 @@ SYSTEM_CANCEL_USER_UNAUTHORIZED = 14
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ContinuousTaskDetailedCancelReason-SYSTEM_CANCEL_USER_UNAUTHORIZED = 14--><!--Device-ContinuousTaskDetailedCancelReason-SYSTEM_CANCEL_USER_UNAUTHORIZED = 14-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## SYSTEM_CANCEL_NOT_USE_NEARLINK
@@ -178,6 +202,8 @@ SYSTEM_CANCEL_NOT_USE_NEARLINK = 15
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ContinuousTaskDetailedCancelReason-SYSTEM_CANCEL_NOT_USE_NEARLINK = 15--><!--Device-ContinuousTaskDetailedCancelReason-SYSTEM_CANCEL_NOT_USE_NEARLINK = 15-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## SYSTEM_CANCEL_NOT_USE_USB
@@ -191,5 +217,7 @@ SYSTEM_CANCEL_NOT_USE_USB = 16
 **起始版本：** 26.2.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ContinuousTaskDetailedCancelReason-SYSTEM_CANCEL_NOT_USE_USB = 16--><!--Device-ContinuousTaskDetailedCancelReason-SYSTEM_CANCEL_NOT_USE_USB = 16-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask

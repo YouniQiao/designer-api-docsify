@@ -8,6 +8,8 @@ export interface ReadingScreenPermissionStatus
 
 **起始版本：** 23
 
+<!--Device-onScreen-export interface ReadingScreenPermissionStatus--><!--Device-onScreen-export interface ReadingScreenPermissionStatus-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ readingCode?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ReadingScreenPermissionStatus-readingCode?: int--><!--Device-ReadingScreenPermissionStatus-readingCode?: int-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **系统接口：** 此接口为系统接口。
@@ -53,6 +57,8 @@ readingState: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ReadingScreenPermissionStatus-readingState: int--><!--Device-ReadingScreenPermissionStatus-readingState: int-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 

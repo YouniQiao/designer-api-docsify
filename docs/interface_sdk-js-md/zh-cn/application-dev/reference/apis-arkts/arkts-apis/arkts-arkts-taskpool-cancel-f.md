@@ -23,6 +23,8 @@ function cancel(task: Task): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-taskpool-function cancel(task: Task): void--><!--Device-taskpool-function cancel(task: Task): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -134,6 +136,8 @@ function cancel(group: TaskGroup): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-taskpool-function cancel(group: TaskGroup): void--><!--Device-taskpool-function cancel(group: TaskGroup): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -208,6 +212,8 @@ function cancel(taskId: number): void
 **起始版本：** 18
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-taskpool-function cancel(taskId: number): void--><!--Device-taskpool-function cancel(taskId: number): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

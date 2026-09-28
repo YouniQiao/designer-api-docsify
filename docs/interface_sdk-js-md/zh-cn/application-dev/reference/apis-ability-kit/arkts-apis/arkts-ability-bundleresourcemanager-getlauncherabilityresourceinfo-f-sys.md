@@ -18,6 +18,8 @@ function getLauncherAbilityResourceInfo(bundleName: string, resourceFlags?: numb
 
 **需要权限：** ohos.permission.GET_BUNDLE_RESOURCES
 
+<!--Device-bundleResourceManager-function getLauncherAbilityResourceInfo(bundleName: string, resourceFlags?: int): Array<LauncherAbilityResourceInfo>--><!--Device-bundleResourceManager-function getLauncherAbilityResourceInfo(bundleName: string, resourceFlags?: int): Array<LauncherAbilityResourceInfo>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Resource
 
 **系统接口：** 此接口为系统接口。
@@ -95,6 +97,8 @@ function getLauncherAbilityResourceInfo(bundleName: string, resourceFlags?: numb
 **起始版本：** 12
 
 **需要权限：** ohos.permission.GET_BUNDLE_RESOURCES
+
+<!--Device-bundleResourceManager-function getLauncherAbilityResourceInfo(bundleName: string, resourceFlags?: int, appIndex?: int): Array<LauncherAbilityResourceInfo>--><!--Device-bundleResourceManager-function getLauncherAbilityResourceInfo(bundleName: string, resourceFlags?: int, appIndex?: int): Array<LauncherAbilityResourceInfo>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Resource
 

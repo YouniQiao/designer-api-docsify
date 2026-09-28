@@ -8,6 +8,8 @@ interface AVPlaybackState
 
 **起始版本：** 10
 
+<!--Device-avSession-interface AVPlaybackState--><!--Device-avSession-interface AVPlaybackState-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 ## 导入模块
@@ -28,7 +30,9 @@ activeItemId?: number
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVPlaybackState-activeItemId?: int--><!--Device-AVPlaybackState-activeItemId?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -44,7 +48,9 @@ bufferedTime?: number
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVPlaybackState-bufferedTime?: long--><!--Device-AVPlaybackState-bufferedTime?: long-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -59,6 +65,8 @@ duration?: number
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-AVPlaybackState-duration?: int--><!--Device-AVPlaybackState-duration?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -78,6 +86,8 @@ extras?: {[key: string]: Object}
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVPlaybackState-extras?: {[key: string]: Object}--><!--Device-AVPlaybackState-extras?: {[key: string]: Object}-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 ## isFavorite
@@ -92,7 +102,9 @@ isFavorite?: boolean
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVPlaybackState-isFavorite?: boolean--><!--Device-AVPlaybackState-isFavorite?: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -108,7 +120,9 @@ loopMode?: LoopMode
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVPlaybackState-loopMode?: LoopMode--><!--Device-AVPlaybackState-loopMode?: LoopMode-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -124,7 +138,9 @@ maxVolume?: number
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVPlaybackState-maxVolume?: int--><!--Device-AVPlaybackState-maxVolume?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -140,7 +156,9 @@ muted?: boolean
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVPlaybackState-muted?: boolean--><!--Device-AVPlaybackState-muted?: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -156,7 +174,9 @@ position?: PlaybackPosition
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVPlaybackState-position?: PlaybackPosition--><!--Device-AVPlaybackState-position?: PlaybackPosition-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -172,7 +192,9 @@ speed?: number
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVPlaybackState-speed?: double--><!--Device-AVPlaybackState-speed?: double-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -188,7 +210,9 @@ state?: PlaybackState
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVPlaybackState-state?: PlaybackState--><!--Device-AVPlaybackState-state?: PlaybackState-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -204,7 +228,9 @@ videoHeight?: number
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVPlaybackState-videoHeight?: int--><!--Device-AVPlaybackState-videoHeight?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -220,7 +246,9 @@ videoWidth?: number
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVPlaybackState-videoWidth?: int--><!--Device-AVPlaybackState-videoWidth?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -236,6 +264,8 @@ volume?: number
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVPlaybackState-volume?: int--><!--Device-AVPlaybackState-volume?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core

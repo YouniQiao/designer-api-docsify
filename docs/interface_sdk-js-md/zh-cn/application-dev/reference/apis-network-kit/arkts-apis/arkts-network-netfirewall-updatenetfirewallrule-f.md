@@ -18,6 +18,8 @@ function updateNetFirewallRule(rule: NetFirewallRule): Promise<void>
 
 **需要权限：** ohos.permission.MANAGE_NET_FIREWALL
 
+<!--Device-netFirewall-function updateNetFirewallRule(rule: NetFirewallRule): Promise<void>--><!--Device-netFirewall-function updateNetFirewallRule(rule: NetFirewallRule): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 **参数：**

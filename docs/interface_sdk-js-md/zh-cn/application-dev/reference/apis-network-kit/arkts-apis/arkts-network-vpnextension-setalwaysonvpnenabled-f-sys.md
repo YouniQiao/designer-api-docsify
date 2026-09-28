@@ -20,6 +20,8 @@ function setAlwaysOnVpnEnabled(enable: boolean, bundleName: string): Promise<voi
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-vpnExtension-function setAlwaysOnVpnEnabled(enable: boolean, bundleName: string): Promise<void>--><!--Device-vpnExtension-function setAlwaysOnVpnEnabled(enable: boolean, bundleName: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。

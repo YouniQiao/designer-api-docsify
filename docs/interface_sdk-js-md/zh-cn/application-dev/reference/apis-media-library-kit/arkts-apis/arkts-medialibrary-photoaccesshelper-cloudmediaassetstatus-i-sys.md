@@ -8,6 +8,8 @@ interface CloudMediaAssetStatus
 
 **起始版本：** 14
 
+<!--Device-photoAccessHelper-interface CloudMediaAssetStatus--><!--Device-photoAccessHelper-interface CloudMediaAssetStatus-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ readonly errorCode: CloudMediaTaskPauseCause
 
 **起始版本：** 14
 
+<!--Device-CloudMediaAssetStatus-readonly errorCode: CloudMediaTaskPauseCause--><!--Device-CloudMediaAssetStatus-readonly errorCode: CloudMediaTaskPauseCause-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -46,6 +50,8 @@ readonly taskInfo: string
 
 **起始版本：** 14
 
+<!--Device-CloudMediaAssetStatus-readonly taskInfo: string--><!--Device-CloudMediaAssetStatus-readonly taskInfo: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +67,8 @@ readonly taskStatus: CloudMediaAssetTaskStatus
 **类型：** [CloudMediaAssetTaskStatus](arkts-medialibrary-photoaccesshelper-cloudmediaassettaskstatus-e-sys.md)
 
 **起始版本：** 14
+
+<!--Device-CloudMediaAssetStatus-readonly taskStatus: CloudMediaAssetTaskStatus--><!--Device-CloudMediaAssetStatus-readonly taskStatus: CloudMediaAssetTaskStatus-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

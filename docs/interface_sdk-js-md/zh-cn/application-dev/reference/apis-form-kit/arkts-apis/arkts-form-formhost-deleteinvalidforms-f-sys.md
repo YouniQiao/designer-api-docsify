@@ -18,6 +18,8 @@ function deleteInvalidForms(formIds: Array<string>, callback: AsyncCallback<numb
 
 **需要权限：** ohos.permission.REQUIRE_FORM
 
+<!--Device-formHost-function deleteInvalidForms(formIds: Array<string>, callback: AsyncCallback<int>): void--><!--Device-formHost-function deleteInvalidForms(formIds: Array<string>, callback: AsyncCallback<int>): void-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -73,6 +75,8 @@ function deleteInvalidForms(formIds: Array<string>): Promise<number>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.REQUIRE_FORM
+
+<!--Device-formHost-function deleteInvalidForms(formIds: Array<string>): Promise<int>--><!--Device-formHost-function deleteInvalidForms(formIds: Array<string>): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 

@@ -8,6 +8,8 @@ export interface AdvancedMeasureFormatOptions
 
 **起始版本：** 23
 
+<!--Device-i18n-export interface AdvancedMeasureFormatOptions--><!--Device-i18n-export interface AdvancedMeasureFormatOptions-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## 导入模块
@@ -30,6 +32,8 @@ unitUsage?: UnitUsage
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-AdvancedMeasureFormatOptions-unitUsage?: UnitUsage--><!--Device-AdvancedMeasureFormatOptions-unitUsage?: UnitUsage-End-->
 
 **系统能力：** SystemCapability.Global.I18n

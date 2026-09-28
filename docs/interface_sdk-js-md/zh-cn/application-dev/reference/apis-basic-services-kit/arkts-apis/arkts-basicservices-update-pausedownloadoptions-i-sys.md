@@ -8,6 +8,8 @@ export interface PauseDownloadOptions
 
 **起始版本：** 9
 
+<!--Device-update-export interface PauseDownloadOptions--><!--Device-update-export interface PauseDownloadOptions-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -33,6 +35,8 @@ true表示允许自动恢复，系统可能自动恢复下载；false表示不�
 **类型：** boolean
 
 **起始版本：** 9
+
+<!--Device-PauseDownloadOptions-isAllowAutoResume: boolean--><!--Device-PauseDownloadOptions-isAllowAutoResume: boolean-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
 

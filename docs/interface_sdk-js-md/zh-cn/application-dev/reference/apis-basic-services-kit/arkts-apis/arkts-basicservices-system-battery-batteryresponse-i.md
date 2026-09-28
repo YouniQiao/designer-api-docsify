@@ -10,6 +10,8 @@ export interface BatteryResponse
 
 **废弃版本：** 6
 
+<!--Device-unnamed-export interface BatteryResponse--><!--Device-unnamed-export interface BatteryResponse-End-->
+
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Lite
 
 ## 导入模块
@@ -38,6 +40,8 @@ charging: boolean
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-BatteryResponse-charging: boolean--><!--Device-BatteryResponse-charging: boolean-End-->
+
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Lite
 
 ## level
@@ -59,5 +63,7 @@ level: number
 **替代接口：** [batterySOC](arkts-basicservices-batteryinfo-con.md#batterysoc)
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-BatteryResponse-level: number--><!--Device-BatteryResponse-level: number-End-->
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Lite

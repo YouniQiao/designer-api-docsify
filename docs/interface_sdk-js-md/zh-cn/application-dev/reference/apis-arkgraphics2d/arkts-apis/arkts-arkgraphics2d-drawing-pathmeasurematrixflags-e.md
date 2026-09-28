@@ -8,6 +8,8 @@ enum PathMeasureMatrixFlags
 
 **起始版本：** 12
 
+<!--Device-drawing-enum PathMeasureMatrixFlags--><!--Device-drawing-enum PathMeasureMatrixFlags-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## GET_POSITION_MATRIX
@@ -19,6 +21,8 @@ GET_POSITION_MATRIX = 0
 获取位置信息对应的矩阵。
 
 **起始版本：** 12
+
+<!--Device-PathMeasureMatrixFlags-GET_POSITION_MATRIX = 0--><!--Device-PathMeasureMatrixFlags-GET_POSITION_MATRIX = 0-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -32,6 +36,8 @@ GET_TANGENT_MATRIX = 1
 
 **起始版本：** 12
 
+<!--Device-PathMeasureMatrixFlags-GET_TANGENT_MATRIX = 1--><!--Device-PathMeasureMatrixFlags-GET_TANGENT_MATRIX = 1-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## GET_POSITION_AND_TANGENT_MATRIX
@@ -43,5 +49,7 @@ GET_POSITION_AND_TANGENT_MATRIX = 2
 获取位置和切线信息对应的矩阵。
 
 **起始版本：** 12
+
+<!--Device-PathMeasureMatrixFlags-GET_POSITION_AND_TANGENT_MATRIX = 2--><!--Device-PathMeasureMatrixFlags-GET_POSITION_AND_TANGENT_MATRIX = 2-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing

@@ -22,6 +22,8 @@ Any field change triggers one auto-auth cycle unless the feature is disabled or 
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-eap-function setEthEapConfig(config: EthEapConfig): void--><!--Device-eap-function setEthEapConfig(config: EthEapConfig): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 **Parameters:**

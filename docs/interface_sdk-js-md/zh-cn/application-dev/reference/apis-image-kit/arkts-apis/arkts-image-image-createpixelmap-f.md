@@ -18,6 +18,8 @@ Starting from API 26.0.0, it is recommended to use [createPixelMapFromPixels](ar
 
 **起始版本：** 10
 
+<!--Device-image-function createPixelMap(colors: ArrayBuffer, options: InitializationOptions, callback: AsyncCallback<PixelMap>): void--><!--Device-image-function createPixelMap(colors: ArrayBuffer, options: InitializationOptions, callback: AsyncCallback<PixelMap>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
@@ -65,6 +67,8 @@ Create pixelmap by data buffer.
 Starting from API 26.0.0, it is recommended to use [createPixelMapFromPixels](arkts-image-image-createpixelmapfrompixels-f.md) instead for better exception handling capabilities.
 
 **起始版本：** 10
+
+<!--Device-image-function createPixelMap(colors: ArrayBuffer, options: InitializationOptions): Promise<PixelMap>--><!--Device-image-function createPixelMap(colors: ArrayBuffer, options: InitializationOptions): Promise<PixelMap>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 

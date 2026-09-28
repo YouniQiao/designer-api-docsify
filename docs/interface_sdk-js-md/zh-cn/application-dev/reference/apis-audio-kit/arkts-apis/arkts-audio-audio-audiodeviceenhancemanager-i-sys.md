@@ -12,6 +12,8 @@ interface AudioDeviceEnhanceManager
 
 **起始版本：** 26.0.0
 
+<!--Device-audio-interface AudioDeviceEnhanceManager--><!--Device-audio-interface AudioDeviceEnhanceManager-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.DeviceEnhance
 
 ## 导入模块
@@ -31,6 +33,8 @@ getSoundCardInfo(): Promise<SoundCardInfo>
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioDeviceEnhanceManager-getSoundCardInfo(): Promise<SoundCardInfo>--><!--Device-AudioDeviceEnhanceManager-getSoundCardInfo(): Promise<SoundCardInfo>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.DeviceEnhance
 

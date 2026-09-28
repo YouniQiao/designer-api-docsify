@@ -12,6 +12,8 @@ XmlDynamicSerializer类用于动态生成XML字符串。当无法确定XML内容
 
 **起始版本：** 23
 
+<!--Device-xml-class XmlDynamicSerializer--><!--Device-xml-class XmlDynamicSerializer-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -34,7 +36,9 @@ addEmptyElement(name: string): void
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-XmlDynamicSerializer-addEmptyElement(name: string): void--><!--Device-XmlDynamicSerializer-addEmptyElement(name: string): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -48,8 +52,8 @@ addEmptyElement(name: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) | xml累计长度超过上限100000。 |
-| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) | 不能为空字符串。 |
+| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) | The cumulative length of xml has exceeded the upper limit 100000. |
+| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) | Cannot be an empty string. |
 
 **示例**
 
@@ -74,7 +78,9 @@ constructor(encoding?: string)
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-XmlDynamicSerializer-constructor(encoding?: string)--><!--Device-XmlDynamicSerializer-constructor(encoding?: string)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -88,7 +94,7 @@ constructor(encoding?: string)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200066](../errorcode-utils.md#10200066-编码格式错误) | 编码格式错误，目前仅支持utf-8。 |
+| [10200066](../errorcode-utils.md#10200066-编码格式错误) | Incorrect encoding format, only support utf-8. |
 
 **示例**
 
@@ -110,7 +116,9 @@ endElement(): void
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-XmlDynamicSerializer-endElement(): void--><!--Device-XmlDynamicSerializer-endElement(): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -118,8 +126,8 @@ endElement(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) | xml累计长度超过上限100000。 |
-| [10200065](../errorcode-utils.md#10200065-元素开始标记与元素结束标记未匹配使用) | startElement和endElement不匹配。 |
+| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) | The cumulative length of xml has exceeded the upper limit 100000. |
+| [10200065](../errorcode-utils.md#10200065-元素开始标记与元素结束标记未匹配使用) | There is no match between the startElement and the endElement. |
 
 **示例**
 
@@ -146,7 +154,9 @@ getOutput(): ArrayBuffer
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-XmlDynamicSerializer-getOutput(): ArrayBuffer--><!--Device-XmlDynamicSerializer-getOutput(): ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -185,7 +195,9 @@ setAttributes(name: string, value: string): void
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-XmlDynamicSerializer-setAttributes(name: string, value: string): void--><!--Device-XmlDynamicSerializer-setAttributes(name: string, value: string): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -200,9 +212,9 @@ setAttributes(name: string, value: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) | xml累计长度超过上限100000。 |
-| [10200063](../errorcode-utils.md#10200063-xml文件声明或属性位置设置错误) | xml位置非法。 |
-| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) | 不能为空字符串。 |
+| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) | The cumulative length of xml has exceeded the upper limit 100000. |
+| [10200063](../errorcode-utils.md#10200063-xml文件声明或属性位置设置错误) | Illegal position for xml. |
+| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) | Cannot be an empty string. |
 
 **示例**
 
@@ -233,7 +245,9 @@ setCdata(text: string): void
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-XmlDynamicSerializer-setCdata(text: string): void--><!--Device-XmlDynamicSerializer-setCdata(text: string): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -247,8 +261,8 @@ setCdata(text: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) | xml累计长度超过上限100000。 |
-| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) | 不能为空字符串。 |
+| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) | The cumulative length of xml has exceeded the upper limit 100000. |
+| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) | Cannot be an empty string. |
 
 **示例**
 
@@ -273,7 +287,9 @@ setComment(text: string): void
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-XmlDynamicSerializer-setComment(text: string): void--><!--Device-XmlDynamicSerializer-setComment(text: string): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -287,8 +303,8 @@ setComment(text: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) | xml累计长度超过上限100000。 |
-| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) | 不能为空字符串。 |
+| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) | The cumulative length of xml has exceeded the upper limit 100000. |
+| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) | Cannot be an empty string. |
 
 **示例**
 
@@ -313,7 +329,9 @@ setDeclaration(): void
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-XmlDynamicSerializer-setDeclaration(): void--><!--Device-XmlDynamicSerializer-setDeclaration(): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -321,8 +339,8 @@ setDeclaration(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) | xml累计长度超过上限100000。 |
-| [10200063](../errorcode-utils.md#10200063-xml文件声明或属性位置设置错误) | xml位置非法。 |
+| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) | The cumulative length of xml has exceeded the upper limit 100000. |
+| [10200063](../errorcode-utils.md#10200063-xml文件声明或属性位置设置错误) | Illegal position for xml. |
 
 **示例**
 
@@ -347,7 +365,9 @@ setDocType(text: string): void
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-XmlDynamicSerializer-setDocType(text: string): void--><!--Device-XmlDynamicSerializer-setDocType(text: string): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -361,8 +381,8 @@ setDocType(text: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) | xml累计长度超过上限100000。 |
-| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) | 不能为空字符串。 |
+| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) | The cumulative length of xml has exceeded the upper limit 100000. |
+| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) | Cannot be an empty string. |
 
 **示例**
 
@@ -394,7 +414,9 @@ setNamespace(prefix: string, namespace: string): void
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-XmlDynamicSerializer-setNamespace(prefix: string, namespace: string): void--><!--Device-XmlDynamicSerializer-setNamespace(prefix: string, namespace: string): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -409,8 +431,8 @@ setNamespace(prefix: string, namespace: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) | xml累计长度超过上限100000。 |
-| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) | 不能为空字符串。 |
+| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) | The cumulative length of xml has exceeded the upper limit 100000. |
+| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) | Cannot be an empty string. |
 
 **示例**
 
@@ -442,7 +464,9 @@ setText(text: string): void
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-XmlDynamicSerializer-setText(text: string): void--><!--Device-XmlDynamicSerializer-setText(text: string): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -456,8 +480,8 @@ setText(text: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) | xml累计长度超过上限100000。 |
-| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) | 不能为空字符串。 |
+| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) | The cumulative length of xml has exceeded the upper limit 100000. |
+| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) | Cannot be an empty string. |
 
 **示例**
 
@@ -491,7 +515,9 @@ startElement(name: string): void
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-XmlDynamicSerializer-startElement(name: string): void--><!--Device-XmlDynamicSerializer-startElement(name: string): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -505,8 +531,8 @@ startElement(name: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) | xml累计长度超过上限100000。 |
-| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) | 不能为空字符串。 |
+| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) | The cumulative length of xml has exceeded the upper limit 100000. |
+| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) | Cannot be an empty string. |
 
 **示例**
 

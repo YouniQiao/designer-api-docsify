@@ -10,6 +10,8 @@ export declare interface TouchEvent extends InputEvent
 
 **起始版本：** 9
 
+<!--Device-unnamed-export declare interface TouchEvent extends InputEvent--><!--Device-unnamed-export declare interface TouchEvent extends InputEvent-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ action: Action
 
 **起始版本：** 9
 
+<!--Device-TouchEvent-action: Action--><!--Device-TouchEvent-action: Action-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## sourceType
@@ -43,6 +47,8 @@ sourceType: SourceType
 **类型：** [SourceType](arkts-input-multimodalinput-touchevent-sourcetype-e.md)
 
 **起始版本：** 9
+
+<!--Device-TouchEvent-sourceType: SourceType--><!--Device-TouchEvent-sourceType: SourceType-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -58,6 +64,8 @@ touch: Touch
 
 **起始版本：** 9
 
+<!--Device-TouchEvent-touch: Touch--><!--Device-TouchEvent-touch: Touch-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## touches
@@ -71,5 +79,7 @@ touches: Touch[]
 **类型：** [Touch](arkts-input-multimodalinput-touchevent-touch-i.md)[]
 
 **起始版本：** 9
+
+<!--Device-TouchEvent-touches: Touch[]--><!--Device-TouchEvent-touches: Touch[]-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core

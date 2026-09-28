@@ -22,6 +22,8 @@ function publish(request: NotificationRequest, userId: number, callback: AsyncCa
 - API版本18+：ohos.permission.NOTIFICATION_CONTROLLER or ohos.permission.SEND_NOTIFICATION_CROSS_USER
 - API版本9-17：ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function publish(request: NotificationRequest, userId: int, callback: AsyncCallback<void>): void--><!--Device-notificationManager-function publish(request: NotificationRequest, userId: int, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -107,6 +109,8 @@ function publish(request: NotificationRequest, userId: number): Promise<void>
 **需要权限：** 
 - API版本18+：ohos.permission.NOTIFICATION_CONTROLLER or ohos.permission.SEND_NOTIFICATION_CROSS_USER
 - API版本9-17：ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function publish(request: NotificationRequest, userId: int): Promise<void>--><!--Device-notificationManager-function publish(request: NotificationRequest, userId: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

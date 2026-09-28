@@ -16,6 +16,8 @@ Starts the VM profiling method. **startJsCpuProfiling(filename: string)** and **
 
 **Since:** 9
 
+<!--Device-hidebug-function startJsCpuProfiling(filename : string) : void--><!--Device-hidebug-function startJsCpuProfiling(filename : string) : void-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **Parameters:**

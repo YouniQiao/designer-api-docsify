@@ -16,6 +16,8 @@ function getBatteryStats(): Promise<Array<BatteryStatsInfo>>
 
 **起始版本：** 8
 
+<!--Device-batteryStats-function getBatteryStats(): Promise<Array<BatteryStatsInfo>>--><!--Device-batteryStats-function getBatteryStats(): Promise<Array<BatteryStatsInfo>>-End-->
+
 **系统能力：** SystemCapability.PowerManager.BatteryStatistics
 
 **系统接口：** 此接口为系统接口。
@@ -57,6 +59,8 @@ function getBatteryStats(callback: AsyncCallback<Array<BatteryStatsInfo>>): void
 获取耗电信息列表，用于电池监控应用查看各应用及硬件的耗电情况。使用callback异步回调。
 
 **起始版本：** 8
+
+<!--Device-batteryStats-function getBatteryStats(callback: AsyncCallback<Array<BatteryStatsInfo>>): void--><!--Device-batteryStats-function getBatteryStats(callback: AsyncCallback<Array<BatteryStatsInfo>>): void-End-->
 
 **系统能力：** SystemCapability.PowerManager.BatteryStatistics
 

@@ -18,6 +18,8 @@ function getSysVpnConfigList(): Promise<Array<SysVpnConfig>>
 
 **需要权限：** ohos.permission.MANAGE_VPN
 
+<!--Device-vpn-function getSysVpnConfigList(): Promise<Array<SysVpnConfig>>--><!--Device-vpn-function getSysVpnConfigList(): Promise<Array<SysVpnConfig>>-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。

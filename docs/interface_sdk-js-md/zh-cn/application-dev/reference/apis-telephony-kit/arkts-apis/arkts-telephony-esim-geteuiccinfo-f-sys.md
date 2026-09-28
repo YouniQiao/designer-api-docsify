@@ -18,6 +18,8 @@ function getEuiccInfo(slotId: number): Promise<EuiccInfo>
 
 **需要权限：** ohos.permission.GET_TELEPHONY_ESIM_STATE
 
+<!--Device-eSIM-function getEuiccInfo(slotId: int): Promise<EuiccInfo>--><!--Device-eSIM-function getEuiccInfo(slotId: int): Promise<EuiccInfo>-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。

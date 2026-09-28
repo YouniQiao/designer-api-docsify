@@ -18,6 +18,8 @@ function setAbilityEnabled(info: AbilityInfo, appIndex: number, isEnabled: boole
 
 **需要权限：** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
 
+<!--Device-bundleManager-function setAbilityEnabled(info: AbilityInfo, appIndex: int, isEnabled: boolean): Promise<void>--><!--Device-bundleManager-function setAbilityEnabled(info: AbilityInfo, appIndex: int, isEnabled: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -96,6 +98,8 @@ function setAbilityEnabled(info: AbilityInfo, isEnabled: boolean, callback: Asyn
 
 **需要权限：** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
 
+<!--Device-bundleManager-function setAbilityEnabled(info: AbilityInfo, isEnabled: boolean, callback: AsyncCallback<void>): void--><!--Device-bundleManager-function setAbilityEnabled(info: AbilityInfo, isEnabled: boolean, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -168,6 +172,8 @@ function setAbilityEnabled(info: AbilityInfo, isEnabled: boolean): Promise<void>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
+
+<!--Device-bundleManager-function setAbilityEnabled(info: AbilityInfo, isEnabled: boolean): Promise<void>--><!--Device-bundleManager-function setAbilityEnabled(info: AbilityInfo, isEnabled: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

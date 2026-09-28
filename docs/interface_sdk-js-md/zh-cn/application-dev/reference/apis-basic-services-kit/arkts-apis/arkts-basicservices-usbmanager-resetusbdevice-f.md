@@ -24,6 +24,8 @@ function resetUsbDevice(pipe: USBDevicePipe): boolean
 
 **起始版本：** 20
 
+<!--Device-usbManager-function resetUsbDevice(pipe: USBDevicePipe): boolean--><!--Device-usbManager-function resetUsbDevice(pipe: USBDevicePipe): boolean-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 **参数：**

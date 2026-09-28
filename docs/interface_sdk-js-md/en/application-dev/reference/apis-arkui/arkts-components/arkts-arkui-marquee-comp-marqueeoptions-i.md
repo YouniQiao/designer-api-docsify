@@ -14,6 +14,8 @@ Describes the initialization options of the **Marquee** component.
 
 **Since:** 18
 
+<!--Device-unnamed-interface MarqueeOptions--><!--Device-unnamed-interface MarqueeOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## delay
@@ -33,6 +35,8 @@ Sets the delay between two rounds of scrolling. +∞). A value less than 0 is eq
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
+
+<!--Device-MarqueeOptions-delay?: number--><!--Device-MarqueeOptions-delay?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -58,6 +62,8 @@ Default Value: true
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-MarqueeOptions-fromStart?: boolean--><!--Device-MarqueeOptions-fromStart?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -86,6 +92,8 @@ On ArkTS widgets, this parameter scrolls only once when visible regardless of th
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-MarqueeOptions-loop?: number--><!--Device-MarqueeOptions-loop?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## spacing
@@ -108,6 +116,8 @@ Default Value: width of the Marquee component.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-MarqueeOptions-spacing?: LengthMetrics--><!--Device-MarqueeOptions-spacing?: LengthMetrics-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## src
@@ -125,6 +135,8 @@ Text to be scrolled.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-MarqueeOptions-src: string--><!--Device-MarqueeOptions-src: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -149,6 +161,8 @@ When the loop parameter is set to a finite number greater than 0 and playback is
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-MarqueeOptions-start: boolean--><!--Device-MarqueeOptions-start: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -176,5 +190,7 @@ Unit: [vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#basic-pixel-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-MarqueeOptions-step?: number--><!--Device-MarqueeOptions-step?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

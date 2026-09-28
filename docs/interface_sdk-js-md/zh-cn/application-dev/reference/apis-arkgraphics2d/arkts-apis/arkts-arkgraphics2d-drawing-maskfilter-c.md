@@ -16,6 +16,8 @@ class MaskFilter
 
 **起始版本：** 12
 
+<!--Device-drawing-class MaskFilter--><!--Device-drawing-class MaskFilter-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## 导入模块
@@ -33,6 +35,8 @@ static createBlurMaskFilter(blurType: BlurType, sigma: number): MaskFilter
 创建具有模糊效果的蒙版滤镜。
 
 **起始版本：** 12
+
+<!--Device-MaskFilter-static createBlurMaskFilter(blurType: BlurType, sigma: number): MaskFilter--><!--Device-MaskFilter-static createBlurMaskFilter(blurType: BlurType, sigma: number): MaskFilter-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

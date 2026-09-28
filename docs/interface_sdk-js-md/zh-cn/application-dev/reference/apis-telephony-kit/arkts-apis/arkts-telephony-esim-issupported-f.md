@@ -16,6 +16,8 @@ function isSupported(slotId: number): boolean
 
 **起始版本：** 18
 
+<!--Device-eSIM-function isSupported(slotId: int): boolean--><!--Device-eSIM-function isSupported(slotId: int): boolean-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **参数：**

@@ -8,6 +8,8 @@ ExtensionRunningInfo模块封装了Extension运行的相关信息，可以通过
 
 **起始版本：** 9
 
+<!--Device-unnamed-export interface ExtensionRunningInfo--><!--Device-unnamed-export interface ExtensionRunningInfo-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -25,6 +27,8 @@ clientPackage: Array<String>
 **默认值：** All package names under the current process
 
 **起始版本：** 9
+
+<!--Device-ExtensionRunningInfo-clientPackage: Array<String>--><!--Device-ExtensionRunningInfo-clientPackage: Array<String>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -44,6 +48,8 @@ Extension信息。
 
 **起始版本：** 9
 
+<!--Device-ExtensionRunningInfo-extension: ElementName--><!--Device-ExtensionRunningInfo-extension: ElementName-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +67,8 @@ pid: number
 **默认值：** process id
 
 **起始版本：** 9
+
+<!--Device-ExtensionRunningInfo-pid: int--><!--Device-ExtensionRunningInfo-pid: int-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -80,6 +88,8 @@ processName: string
 
 **起始版本：** 9
 
+<!--Device-ExtensionRunningInfo-processName: string--><!--Device-ExtensionRunningInfo-processName: string-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -97,6 +107,8 @@ Extension被启动时的时间戳。
 **默认值：** ability start time
 
 **起始版本：** 9
+
+<!--Device-ExtensionRunningInfo-startTime: long--><!--Device-ExtensionRunningInfo-startTime: long-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -116,6 +128,8 @@ Extension类型。
 
 **起始版本：** 9
 
+<!--Device-ExtensionRunningInfo-type: bundle.ExtensionAbilityType--><!--Device-ExtensionRunningInfo-type: bundle.ExtensionAbilityType-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -133,6 +147,8 @@ uid: number
 **默认值：** user id
 
 **起始版本：** 9
+
+<!--Device-ExtensionRunningInfo-uid: int--><!--Device-ExtensionRunningInfo-uid: int-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

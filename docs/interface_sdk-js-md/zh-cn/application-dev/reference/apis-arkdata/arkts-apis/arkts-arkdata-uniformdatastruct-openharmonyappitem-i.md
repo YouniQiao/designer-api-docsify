@@ -8,6 +8,8 @@ interface OpenHarmonyAppItem
 
 **起始版本：** 12
 
+<!--Device-uniformDataStruct-interface OpenHarmonyAppItem--><!--Device-uniformDataStruct-interface OpenHarmonyAppItem-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ abilityName: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OpenHarmonyAppItem-abilityName: string--><!--Device-OpenHarmonyAppItem-abilityName: string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## appIconId
@@ -45,6 +49,8 @@ appIconId: string
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-OpenHarmonyAppItem-appIconId: string--><!--Device-OpenHarmonyAppItem-appIconId: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -62,6 +68,8 @@ appId: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OpenHarmonyAppItem-appId: string--><!--Device-OpenHarmonyAppItem-appId: string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## appLabelId
@@ -77,6 +85,8 @@ appLabelId: string
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-OpenHarmonyAppItem-appLabelId: string--><!--Device-OpenHarmonyAppItem-appLabelId: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -94,6 +104,8 @@ appName: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OpenHarmonyAppItem-appName: string--><!--Device-OpenHarmonyAppItem-appName: string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## bundleName
@@ -109,6 +121,8 @@ bundleName: string
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-OpenHarmonyAppItem-bundleName: string--><!--Device-OpenHarmonyAppItem-bundleName: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -126,6 +140,8 @@ details?: Record<string, number | string | Uint8Array>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OpenHarmonyAppItem-details?: Record<string, int | long | double | string | Uint8Array>--><!--Device-OpenHarmonyAppItem-details?: Record<string, int | long | double | string | Uint8Array>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## uniformDataType
@@ -141,5 +157,7 @@ readonly uniformDataType: 'openharmony.app-item'
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-OpenHarmonyAppItem-readonly uniformDataType: 'openharmony.app-item'--><!--Device-OpenHarmonyAppItem-readonly uniformDataType: 'openharmony.app-item'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core

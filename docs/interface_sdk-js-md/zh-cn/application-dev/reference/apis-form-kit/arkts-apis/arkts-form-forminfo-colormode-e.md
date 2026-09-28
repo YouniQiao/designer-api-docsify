@@ -14,6 +14,8 @@ enum ColorMode
 
 **废弃版本：** 20
 
+<!--Device-formInfo-enum ColorMode--><!--Device-formInfo-enum ColorMode-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 ## MODE_AUTO
@@ -29,6 +31,8 @@ MODE_AUTO = -1
 **废弃版本：** 20
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ColorMode-MODE_AUTO = -1--><!--Device-ColorMode-MODE_AUTO = -1-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -46,6 +50,8 @@ MODE_DARK = 0
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-ColorMode-MODE_DARK = 0--><!--Device-ColorMode-MODE_DARK = 0-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 ## MODE_LIGHT
@@ -61,5 +67,7 @@ MODE_LIGHT = 1
 **废弃版本：** 20
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ColorMode-MODE_LIGHT = 1--><!--Device-ColorMode-MODE_LIGHT = 1-End-->
 
 **系统能力：** SystemCapability.Ability.Form

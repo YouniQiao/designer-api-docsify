@@ -8,6 +8,8 @@ enum ControlType
 
 **起始版本：** 15
 
+<!--Device-connection-enum ControlType--><!--Device-connection-enum ControlType-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -23,6 +25,8 @@ PLAY = 0
 **起始版本：** 15
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ControlType-PLAY = 0--><!--Device-ControlType-PLAY = 0-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -40,6 +44,8 @@ VIBRATE = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ControlType-VIBRATE = 1--><!--Device-ControlType-VIBRATE = 1-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -55,6 +61,8 @@ FLASH = 2
 **起始版本：** 15
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ControlType-FLASH = 2--><!--Device-ControlType-FLASH = 2-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -72,6 +80,8 @@ LOCK = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ControlType-LOCK = 3--><!--Device-ControlType-LOCK = 3-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -87,6 +97,8 @@ ERASE = 4
 **起始版本：** 15
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ControlType-ERASE = 4--><!--Device-ControlType-ERASE = 4-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

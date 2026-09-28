@@ -8,6 +8,8 @@ interface PixelMap
 
 **起始版本：** 15
 
+<!--Device-uniformDataStruct-interface PixelMap--><!--Device-uniformDataStruct-interface PixelMap-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ details?: Record<string, number | string | Uint8Array>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PixelMap-details?: Record<string, int | long | double | string | Uint8Array>--><!--Device-PixelMap-details?: Record<string, int | long | double | string | Uint8Array>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## pixelMap
@@ -46,6 +50,8 @@ pixelMap: image.PixelMap
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PixelMap-pixelMap: image.PixelMap--><!--Device-PixelMap-pixelMap: image.PixelMap-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## uniformDataType
@@ -61,5 +67,7 @@ readonly uniformDataType: 'openharmony.pixel-map'
 **起始版本：** 15
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PixelMap-readonly uniformDataType: 'openharmony.pixel-map'--><!--Device-PixelMap-readonly uniformDataType: 'openharmony.pixel-map'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core

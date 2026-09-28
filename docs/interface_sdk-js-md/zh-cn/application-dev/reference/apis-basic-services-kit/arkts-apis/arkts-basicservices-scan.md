@@ -8,6 +8,8 @@
 
 **起始版本：** 20
 
+<!--Device-unnamed-declare namespace scan--><!--Device-unnamed-declare namespace scan-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## 导入模块

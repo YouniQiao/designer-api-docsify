@@ -18,6 +18,8 @@ function hasDefaultNet(callback: AsyncCallback<boolean>): void
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-connection-function hasDefaultNet(callback: AsyncCallback<boolean>): void--><!--Device-connection-function hasDefaultNet(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**
@@ -61,6 +63,8 @@ function hasDefaultNet(): Promise<boolean>
 **起始版本：** 8
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
+
+<!--Device-connection-function hasDefaultNet(): Promise<boolean>--><!--Device-connection-function hasDefaultNet(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 

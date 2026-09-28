@@ -8,6 +8,8 @@ interface PeerInfo
 
 **起始版本：** 18
 
+<!--Device-abilityConnectionManager-interface PeerInfo--><!--Device-abilityConnectionManager-interface PeerInfo-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 ## 导入模块
@@ -30,6 +32,8 @@ abilityName: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PeerInfo-abilityName: string--><!--Device-PeerInfo-abilityName: string-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 ## bundleName
@@ -45,6 +49,8 @@ bundleName: string
 **起始版本：** 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PeerInfo-bundleName: string--><!--Device-PeerInfo-bundleName: string-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
@@ -62,6 +68,8 @@ deviceId: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PeerInfo-deviceId: string--><!--Device-PeerInfo-deviceId: string-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 ## moduleName
@@ -78,6 +86,8 @@ moduleName: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PeerInfo-moduleName: string--><!--Device-PeerInfo-moduleName: string-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 ## serviceName
@@ -93,5 +103,7 @@ serviceName?: string
 **起始版本：** 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PeerInfo-serviceName?: string--><!--Device-PeerInfo-serviceName?: string-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration

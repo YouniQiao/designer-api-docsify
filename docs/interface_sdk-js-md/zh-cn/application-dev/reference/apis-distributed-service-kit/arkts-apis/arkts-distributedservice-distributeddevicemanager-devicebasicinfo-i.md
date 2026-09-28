@@ -8,6 +8,8 @@ interface DeviceBasicInfo
 
 **起始版本：** 10
 
+<!--Device-distributedDeviceManager-interface DeviceBasicInfo--><!--Device-distributedDeviceManager-interface DeviceBasicInfo-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 ## 导入模块
@@ -28,6 +30,8 @@ deviceId: string
 
 **起始版本：** 10
 
+<!--Device-DeviceBasicInfo-deviceId: string--><!--Device-DeviceBasicInfo-deviceId: string-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 ## deviceName
@@ -41,6 +45,8 @@ deviceName: string
 **类型：** string
 
 **起始版本：** 10
+
+<!--Device-DeviceBasicInfo-deviceName: string--><!--Device-DeviceBasicInfo-deviceName: string-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -56,6 +62,8 @@ deviceType: string
 
 **起始版本：** 10
 
+<!--Device-DeviceBasicInfo-deviceType: string--><!--Device-DeviceBasicInfo-deviceType: string-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 ## networkId
@@ -69,5 +77,7 @@ networkId?: string
 **类型：** string
 
 **起始版本：** 10
+
+<!--Device-DeviceBasicInfo-networkId?: string--><!--Device-DeviceBasicInfo-networkId?: string-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager

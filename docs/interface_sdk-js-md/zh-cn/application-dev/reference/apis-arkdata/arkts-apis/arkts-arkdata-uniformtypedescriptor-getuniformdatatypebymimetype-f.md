@@ -18,6 +18,8 @@ function getUniformDataTypeByMIMEType(mimeType: string, belongsTo?: string): str
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-uniformTypeDescriptor-function getUniformDataTypeByMIMEType(mimeType: string, belongsTo?: string): string--><!--Device-uniformTypeDescriptor-function getUniformDataTypeByMIMEType(mimeType: string, belongsTo?: string): string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 **参数：**

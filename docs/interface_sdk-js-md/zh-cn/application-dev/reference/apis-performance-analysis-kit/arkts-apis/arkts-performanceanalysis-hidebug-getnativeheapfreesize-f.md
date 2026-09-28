@@ -16,6 +16,8 @@ function getNativeHeapFreeSize() : bigint
 
 **起始版本：** 8
 
+<!--Device-hidebug-function getNativeHeapFreeSize() : bigint--><!--Device-hidebug-function getNativeHeapFreeSize() : bigint-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **返回值：**

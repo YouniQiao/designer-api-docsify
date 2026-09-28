@@ -10,6 +10,8 @@ type BluetoothAddress = common.BluetoothAddress
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-connection-type BluetoothAddress = common.BluetoothAddress--><!--Device-connection-type BluetoothAddress = common.BluetoothAddress-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **类型：** [common.BluetoothAddress](arkts-connectivity-common-bluetoothaddress-i.md)

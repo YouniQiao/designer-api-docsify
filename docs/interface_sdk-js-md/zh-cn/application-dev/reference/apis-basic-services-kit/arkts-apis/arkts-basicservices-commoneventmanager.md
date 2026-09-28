@@ -38,6 +38,8 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace commonEventManager--><!--Device-unnamed-declare namespace commonEventManager-End-->
+
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## 导入模块

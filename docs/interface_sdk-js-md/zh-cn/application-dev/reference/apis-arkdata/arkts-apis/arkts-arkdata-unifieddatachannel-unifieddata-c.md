@@ -8,6 +8,8 @@ class UnifiedData
 
 **起始版本：** 10
 
+<!--Device-unifiedDataChannel-class UnifiedData--><!--Device-unifiedDataChannel-class UnifiedData-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## 导入模块
@@ -28,7 +30,9 @@ addRecord(record: UnifiedRecord): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UnifiedData-addRecord(record: UnifiedRecord): void--><!--Device-UnifiedData-addRecord(record: UnifiedRecord): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -78,7 +82,9 @@ constructor(record: UnifiedRecord)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UnifiedData-constructor(record: UnifiedRecord)--><!--Device-UnifiedData-constructor(record: UnifiedRecord)-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -121,7 +127,9 @@ constructor()
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-UnifiedData-constructor()--><!--Device-UnifiedData-constructor()-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -143,7 +151,9 @@ getRecords(): Array<UnifiedRecord>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UnifiedData-getRecords(): Array<UnifiedRecord>--><!--Device-UnifiedData-getRecords(): Array<UnifiedRecord>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -200,7 +210,9 @@ getTypes(): Array<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-UnifiedData-getTypes(): Array<string>--><!--Device-UnifiedData-getTypes(): Array<string>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -248,7 +260,9 @@ hasType(type: string): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-UnifiedData-hasType(type: string): boolean--><!--Device-UnifiedData-hasType(type: string): boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -309,7 +323,9 @@ get properties(): UnifiedDataProperties
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-UnifiedData-get properties(): UnifiedDataProperties--><!--Device-UnifiedData-get properties(): UnifiedDataProperties-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -325,6 +341,8 @@ set properties(value: UnifiedDataProperties)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-UnifiedData-set properties(value: UnifiedDataProperties)--><!--Device-UnifiedData-set properties(value: UnifiedDataProperties)-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core

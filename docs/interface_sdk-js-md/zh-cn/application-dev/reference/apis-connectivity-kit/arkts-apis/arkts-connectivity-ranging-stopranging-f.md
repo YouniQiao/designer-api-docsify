@@ -28,6 +28,8 @@ function stopRanging(callback: Callback<RangingResult>, params?: RangingParams):
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ranging-function stopRanging(callback: Callback<RangingResult>, params?: RangingParams): void--><!--Device-ranging-function stopRanging(callback: Callback<RangingResult>, params?: RangingParams): void-End-->
+
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core
 
 **参数：**

@@ -16,6 +16,8 @@ function getDefaultSmsSimId(callback: AsyncCallback<number>): void
 
 **起始版本：** 10
 
+<!--Device-sms-function getDefaultSmsSimId(callback: AsyncCallback<int>): void--><!--Device-sms-function getDefaultSmsSimId(callback: AsyncCallback<int>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **参数：**
@@ -63,6 +65,8 @@ function getDefaultSmsSimId(): Promise<number>
 获取发送短信的默认SIM卡ID。使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-sms-function getDefaultSmsSimId(): Promise<int>--><!--Device-sms-function getDefaultSmsSimId(): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 

@@ -41,6 +41,8 @@ This module enables users to quickly troubleshoot, free up storage space, and pr
 
 **Since:** 9
 
+<!--Device-unnamed-declare namespace update--><!--Device-unnamed-declare namespace update-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.

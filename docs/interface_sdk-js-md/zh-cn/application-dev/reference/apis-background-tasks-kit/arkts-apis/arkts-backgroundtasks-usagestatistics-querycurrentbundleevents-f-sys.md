@@ -16,6 +16,8 @@ function queryCurrentBundleEvents(begin: number, end: number, callback: AsyncCal
 
 **起始版本：** 9
 
+<!--Device-usageStatistics-function queryCurrentBundleEvents(begin: long, end: long, callback: AsyncCallback<Array<BundleEvents>>): void--><!--Device-usageStatistics-function queryCurrentBundleEvents(begin: long, end: long, callback: AsyncCallback<Array<BundleEvents>>): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **系统接口：** 此接口为系统接口。
@@ -73,6 +75,8 @@ function queryCurrentBundleEvents(begin: number, end: number): Promise<Array<Bun
 通过指定起始和结束时间段内，查询当前应用的事件集合，使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-usageStatistics-function queryCurrentBundleEvents(begin: long, end: long): Promise<Array<BundleEvents>>--><!--Device-usageStatistics-function queryCurrentBundleEvents(begin: long, end: long): Promise<Array<BundleEvents>>-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -136,6 +140,8 @@ function queryCurrentBundleEvents(begin: number, end: number, maxNum: number): P
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-usageStatistics-function queryCurrentBundleEvents(begin: long, end: long, maxNum: int): Promise<Array<BundleEvents>>--><!--Device-usageStatistics-function queryCurrentBundleEvents(begin: long, end: long, maxNum: int): Promise<Array<BundleEvents>>-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 

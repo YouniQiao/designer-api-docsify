@@ -8,6 +8,8 @@ Describes the parameters of the selected item indicator style.
 
 **Since:** 22
 
+<!--Device-unnamed-declare interface PickerIndicatorStyle--><!--Device-unnamed-declare interface PickerIndicatorStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## backgroundColor
@@ -33,6 +35,8 @@ This attribute takes effect when **type** is **PickerIndicatorType.BACKGROUND**.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-PickerIndicatorStyle-backgroundColor?: ResourceColor--><!--Device-PickerIndicatorStyle-backgroundColor?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -67,6 +71,8 @@ separately.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-PickerIndicatorStyle-borderRadius?: LengthMetrics | BorderRadiuses | LocalizedBorderRadiuses--><!--Device-PickerIndicatorStyle-borderRadius?: LengthMetrics | BorderRadiuses | LocalizedBorderRadiuses-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## dividerColor
@@ -92,6 +98,8 @@ This attribute takes effect when type is **PickerIndicatorType.DIVIDER**.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-PickerIndicatorStyle-dividerColor?: ResourceColor--><!--Device-PickerIndicatorStyle-dividerColor?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -123,6 +131,8 @@ This attribute takes effect when **type** is **PickerIndicatorType.DIVIDER**.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-PickerIndicatorStyle-endMargin?: LengthMetrics--><!--Device-PickerIndicatorStyle-endMargin?: LengthMetrics-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## startMargin
@@ -152,6 +162,8 @@ This attribute takes effect when **type** is **PickerIndicatorType.DIVIDER**.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-PickerIndicatorStyle-startMargin?: LengthMetrics--><!--Device-PickerIndicatorStyle-startMargin?: LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -185,6 +197,8 @@ Value range: [0, half of the selected item height]. When **strokeWidth** is less
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-PickerIndicatorStyle-strokeWidth?: LengthMetrics--><!--Device-PickerIndicatorStyle-strokeWidth?: LengthMetrics-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## type
@@ -208,5 +222,7 @@ When the value of **type** is a decimal, the value rounded down is used; when th
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-PickerIndicatorStyle-type: PickerIndicatorType--><!--Device-PickerIndicatorStyle-type: PickerIndicatorType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

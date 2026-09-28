@@ -10,6 +10,8 @@ GATT客户端类，提供了和服务端进行连接和数据传输等操作方�
 
 **起始版本：** 10
 
+<!--Device-ble-interface GattClientDevice--><!--Device-ble-interface GattClientDevice-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -32,7 +34,9 @@ close(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GattClientDevice-close(): void--><!--Device-GattClientDevice-close(): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -74,7 +78,9 @@ client端主动发起和server蓝牙设备的GATT协议连接。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GattClientDevice-connect(): void--><!--Device-GattClientDevice-connect(): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -116,7 +122,9 @@ client可通过订阅[on('BLEConnectionStateChange')](#onbleconnectionstatechang
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GattClientDevice-disconnect(): void--><!--Device-GattClientDevice-disconnect(): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -155,6 +163,8 @@ getConnectedState(): ProfileConnectionState
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-GattClientDevice-getConnectedState(): ProfileConnectionState--><!--Device-GattClientDevice-getConnectedState(): ProfileConnectionState-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -202,7 +212,9 @@ client获取server端设备名称。使用Callback异步回调。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GattClientDevice-getDeviceName(callback: AsyncCallback<string>): void--><!--Device-GattClientDevice-getDeviceName(callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -264,7 +276,9 @@ client获取server端设备名称。使用Promise异步回调。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GattClientDevice-getDeviceName(): Promise<string>--><!--Device-GattClientDevice-getDeviceName(): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -324,7 +338,9 @@ client端获取GATT连接链路信号强度 (Received Signal Strength Indication
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GattClientDevice-getRssiValue(callback: AsyncCallback<int>): void--><!--Device-GattClientDevice-getRssiValue(callback: AsyncCallback<int>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -380,7 +396,9 @@ client端获取GATT连接链路信号强度 (Received Signal Strength Indication
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GattClientDevice-getRssiValue(): Promise<int>--><!--Device-GattClientDevice-getRssiValue(): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -444,7 +462,9 @@ setCharacteristicChangeIndication
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GattClientDevice-getServices(callback: AsyncCallback<Array<GattService>>): void--><!--Device-GattClientDevice-getServices(callback: AsyncCallback<Array<GattService>>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -515,7 +535,9 @@ client端获取server端支持的所有服务能力，即服务发现流程。�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GattClientDevice-getServices(): Promise<Array<GattService>>--><!--Device-GattClientDevice-getServices(): Promise<Array<GattService>>-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -574,6 +596,8 @@ client端取消订阅server端特征值变化事件。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-GattClientDevice-off(type: 'BLECharacteristicChange', callback?: Callback<BLECharacteristic>): void--><!--Device-GattClientDevice-off(type: 'BLECharacteristicChange', callback?: Callback<BLECharacteristic>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -618,6 +642,8 @@ client端取消订阅GATT profile协议的连接状态变化事件。
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GattClientDevice-off(type: 'BLEConnectionStateChange', callback?: Callback<BLEConnectionChangeState>): void--><!--Device-GattClientDevice-off(type: 'BLEConnectionStateChange', callback?: Callback<BLEConnectionChangeState>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -664,6 +690,8 @@ client端取消订阅MTU（最大传输单元）大小变更事件。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-GattClientDevice-off(type: 'BLEMtuChange', callback?: Callback<int>): void--><!--Device-GattClientDevice-off(type: 'BLEMtuChange', callback?: Callback<int>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -708,6 +736,8 @@ client端设备取消订阅server端设备服务变化的通知事件。
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-GattClientDevice-off(type: 'serviceChange', callback?: Callback<void>): void--><!--Device-GattClientDevice-off(type: 'serviceChange', callback?: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -756,6 +786,8 @@ offBlePhyUpdate(callback?: Callback<PhyValue>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-GattClientDevice-offBlePhyUpdate(callback?: Callback<PhyValue>): void--><!--Device-GattClientDevice-offBlePhyUpdate(callback?: Callback<PhyValue>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -802,6 +834,8 @@ client端订阅server端特征值变化事件。使用Callback异步回调。
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GattClientDevice-on(type: 'BLECharacteristicChange', callback: Callback<BLECharacteristic>): void--><!--Device-GattClientDevice-on(type: 'BLECharacteristicChange', callback: Callback<BLECharacteristic>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -853,6 +887,8 @@ client端订阅GATT profile协议的连接状态变化事件。使用Callback异
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-GattClientDevice-on(type: 'BLEConnectionStateChange', callback: Callback<BLEConnectionChangeState>): void--><!--Device-GattClientDevice-on(type: 'BLEConnectionStateChange', callback: Callback<BLEConnectionChangeState>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -902,6 +938,8 @@ client端订阅MTU（最大传输单元）大小变更事件。使用Callback异
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-GattClientDevice-on(type: 'BLEMtuChange', callback: Callback<int>): void--><!--Device-GattClientDevice-on(type: 'BLEMtuChange', callback: Callback<int>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -948,6 +986,8 @@ client端设备订阅server端设备服务变化的通知事件，使用Callback
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-GattClientDevice-on(type: 'serviceChange', callback: Callback<void>): void--><!--Device-GattClientDevice-on(type: 'serviceChange', callback: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -996,6 +1036,8 @@ onBlePhyUpdate(callback: Callback<PhyValue>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-GattClientDevice-onBlePhyUpdate(callback: Callback<PhyValue>): void--><!--Device-GattClientDevice-onBlePhyUpdate(callback: Callback<PhyValue>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -1041,7 +1083,9 @@ client端从指定的server端特征值读取数据。使用Callback异步回调
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GattClientDevice-readCharacteristicValue(characteristic: BLECharacteristic, callback: AsyncCallback<BLECharacteristic>): void--><!--Device-GattClientDevice-readCharacteristicValue(characteristic: BLECharacteristic, callback: AsyncCallback<BLECharacteristic>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -1122,7 +1166,9 @@ client端从指定的server端特征值读取数据。使用Promise异步回调�
 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GattClientDevice-readCharacteristicValue(characteristic: BLECharacteristic): Promise<BLECharacteristic>--><!--Device-GattClientDevice-readCharacteristicValue(characteristic: BLECharacteristic): Promise<BLECharacteristic>-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -1197,7 +1243,9 @@ client端从指定的server端描述符读取数据。使用Callback异步回调
 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GattClientDevice-readDescriptorValue(descriptor: BLEDescriptor, callback: AsyncCallback<BLEDescriptor>): void--><!--Device-GattClientDevice-readDescriptorValue(descriptor: BLEDescriptor, callback: AsyncCallback<BLEDescriptor>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -1271,7 +1319,9 @@ client端从指定的server端描述符读取数据。使用Promise异步回调�
 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GattClientDevice-readDescriptorValue(descriptor: BLEDescriptor): Promise<BLEDescriptor>--><!--Device-GattClientDevice-readDescriptorValue(descriptor: BLEDescriptor): Promise<BLEDescriptor>-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -1341,6 +1391,8 @@ readPhy(): Promise<PhyValue>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-GattClientDevice-readPhy(): Promise<PhyValue>--><!--Device-GattClientDevice-readPhy(): Promise<PhyValue>-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **返回值：**
@@ -1388,7 +1440,9 @@ client端同server端协商MTU（最大传输单元）大小。与[setBLEMtuSize
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-GattClientDevice-setBLEMtu(mtu: int): Promise<int>--><!--Device-GattClientDevice-setBLEMtu(mtu: int): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -1443,7 +1497,9 @@ client端同server端协商MTU（最大传输单元）大小。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GattClientDevice-setBLEMtuSize(mtu: int): void--><!--Device-GattClientDevice-setBLEMtuSize(mtu: int): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -1495,7 +1551,9 @@ client端启用或者禁用接收server端特征值内容变更指示的能力�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GattClientDevice-setCharacteristicChangeIndication(      characteristic: BLECharacteristic,      enable: boolean,      callback: AsyncCallback<void>    ): void--><!--Device-GattClientDevice-setCharacteristicChangeIndication(      characteristic: BLECharacteristic,      enable: boolean,      callback: AsyncCallback<void>    ): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -1567,7 +1625,9 @@ client端启用或者禁用接收server端特征值内容变更指示的能力�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GattClientDevice-setCharacteristicChangeIndication(characteristic: BLECharacteristic, enable: boolean): Promise<void>--><!--Device-GattClientDevice-setCharacteristicChangeIndication(characteristic: BLECharacteristic, enable: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -1640,7 +1700,9 @@ client端启用或者禁用接收server端特征值内容变更通知的能力�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GattClientDevice-setCharacteristicChangeNotification(      characteristic: BLECharacteristic,      enable: boolean,      callback: AsyncCallback<void>    ): void--><!--Device-GattClientDevice-setCharacteristicChangeNotification(      characteristic: BLECharacteristic,      enable: boolean,      callback: AsyncCallback<void>    ): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -1712,7 +1774,9 @@ client端启用或者禁用接收server端特征值内容变更通知的能力�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GattClientDevice-setCharacteristicChangeNotification(characteristic: BLECharacteristic, enable: boolean): Promise<void>--><!--Device-GattClientDevice-setCharacteristicChangeNotification(characteristic: BLECharacteristic, enable: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -1781,6 +1845,8 @@ client端设置连接链路的物理通道类型。使用Promise异步回调。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-GattClientDevice-setPhy(phyValue: PhyValue): Promise<void>--><!--Device-GattClientDevice-setPhy(phyValue: PhyValue): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -1835,6 +1901,8 @@ updateConnectionParam(param: ConnectionParam): Promise<void>
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-GattClientDevice-updateConnectionParam(param: ConnectionParam): Promise<void>--><!--Device-GattClientDevice-updateConnectionParam(param: ConnectionParam): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -1893,7 +1961,9 @@ client端向指定的server端特征值写入数据。使用Callback异步回调
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GattClientDevice-writeCharacteristicValue(      characteristic: BLECharacteristic,      writeType: GattWriteType,      callback: AsyncCallback<void>    ): void--><!--Device-GattClientDevice-writeCharacteristicValue(      characteristic: BLECharacteristic,      writeType: GattWriteType,      callback: AsyncCallback<void>    ): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -1973,7 +2043,9 @@ client端向指定的server端特征值写入数据。使用Promise异步回调�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GattClientDevice-writeCharacteristicValue(characteristic: BLECharacteristic, writeType: GattWriteType): Promise<void>--><!--Device-GattClientDevice-writeCharacteristicValue(characteristic: BLECharacteristic, writeType: GattWriteType): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -2050,7 +2122,9 @@ client端向指定的server端描述符写入数据。使用Callback异步回调
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GattClientDevice-writeDescriptorValue(descriptor: BLEDescriptor, callback: AsyncCallback<void>): void--><!--Device-GattClientDevice-writeDescriptorValue(descriptor: BLEDescriptor, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -2123,7 +2197,9 @@ client端向指定的server端描述符写入数据。使用Promise异步回调�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GattClientDevice-writeDescriptorValue(descriptor: BLEDescriptor): Promise<void>--><!--Device-GattClientDevice-writeDescriptorValue(descriptor: BLEDescriptor): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

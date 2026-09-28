@@ -18,6 +18,8 @@ export interface NotificationMultiLineContent extends NotificationBasicContent
 
 **起始版本：** 7
 
+<!--Device-unnamed-export interface NotificationMultiLineContent extends NotificationBasicContent--><!--Device-unnamed-export interface NotificationMultiLineContent extends NotificationBasicContent-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## lineWantAgents
@@ -33,6 +35,8 @@ lineWantAgents?: Array<WantAgent>
 **起始版本：** 20
 
 **需要权限：** ohos.permission.NOTIFICATION_AGENT_CONTROLLER
+
+<!--Device-NotificationMultiLineContent-lineWantAgents?: Array<WantAgent>--><!--Device-NotificationMultiLineContent-lineWantAgents?: Array<WantAgent>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

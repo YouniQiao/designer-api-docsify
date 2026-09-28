@@ -8,6 +8,8 @@ enum EncodingBaseFormat
 
 **起始版本：** 18
 
+<!--Device-cert-enum EncodingBaseFormat--><!--Device-cert-enum EncodingBaseFormat-End-->
+
 **系统能力：** SystemCapability.Security.Cert
 
 ## PEM
@@ -20,7 +22,9 @@ PEM格式。
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-EncodingBaseFormat-PEM = 0--><!--Device-EncodingBaseFormat-PEM = 0-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -34,6 +38,8 @@ DER格式。
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-EncodingBaseFormat-DER = 1--><!--Device-EncodingBaseFormat-DER = 1-End-->
 
 **系统能力：** SystemCapability.Security.Cert

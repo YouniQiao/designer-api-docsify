@@ -14,6 +14,8 @@ export enum LocationRequestScenario
 
 **需要权限：** ohos.permission.LOCATION @enum { number }
 
+<!--Device-geolocation-export enum LocationRequestScenario--><!--Device-geolocation-export enum LocationRequestScenario-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 ## UNSET
@@ -29,6 +31,8 @@ UNSET = 0x300
 **废弃版本：** 9
 
 **替代接口：** [UNSET](arkts-location-geolocationmanager-locationrequestscenario-e.md#unset)
+
+<!--Device-LocationRequestScenario-UNSET = 0x300--><!--Device-LocationRequestScenario-UNSET = 0x300-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -46,6 +50,8 @@ NAVIGATION
 
 **替代接口：** [NAVIGATION](arkts-location-geolocationmanager-locationrequestscenario-e.md#navigation)
 
+<!--Device-LocationRequestScenario-NAVIGATION--><!--Device-LocationRequestScenario-NAVIGATION-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 ## TRAJECTORY_TRACKING
@@ -61,6 +67,8 @@ TRAJECTORY_TRACKING
 **废弃版本：** 9
 
 **替代接口：** [TRAJECTORY_TRACKING](arkts-location-geolocationmanager-locationrequestscenario-e.md#trajectory_tracking)
+
+<!--Device-LocationRequestScenario-TRAJECTORY_TRACKING--><!--Device-LocationRequestScenario-TRAJECTORY_TRACKING-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -78,6 +86,8 @@ CAR_HAILING
 
 **替代接口：** [CAR_HAILING](arkts-location-geolocationmanager-locationrequestscenario-e.md#car_hailing)
 
+<!--Device-LocationRequestScenario-CAR_HAILING--><!--Device-LocationRequestScenario-CAR_HAILING-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 ## DAILY_LIFE_SERVICE
@@ -94,6 +104,8 @@ DAILY_LIFE_SERVICE
 
 **替代接口：** [DAILY_LIFE_SERVICE](arkts-location-geolocationmanager-locationrequestscenario-e.md#daily_life_service)
 
+<!--Device-LocationRequestScenario-DAILY_LIFE_SERVICE--><!--Device-LocationRequestScenario-DAILY_LIFE_SERVICE-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 ## NO_POWER
@@ -109,5 +121,7 @@ NO_POWER
 **废弃版本：** 9
 
 **替代接口：** [NO_POWER](arkts-location-geolocationmanager-locationrequestscenario-e.md#no_power)
+
+<!--Device-LocationRequestScenario-NO_POWER--><!--Device-LocationRequestScenario-NO_POWER-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core

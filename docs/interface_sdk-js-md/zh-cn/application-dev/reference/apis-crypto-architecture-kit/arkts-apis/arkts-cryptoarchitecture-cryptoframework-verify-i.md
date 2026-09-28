@@ -18,6 +18,8 @@ interface Verify
 
 **起始版本：** 9
 
+<!--Device-cryptoFramework-interface Verify--><!--Device-cryptoFramework-interface Verify-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Signature
 - API版本9-11：SystemCapability.Security.CryptoFramework
@@ -38,7 +40,9 @@ getVerifySpec(itemType: SignSpecItem): string | number
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Verify-getVerifySpec(itemType: SignSpecItem): string | int--><!--Device-Verify-getVerifySpec(itemType: SignSpecItem): string | int-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Signature
@@ -89,7 +93,9 @@ init(pubKey: PubKey, callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Verify-init(pubKey: PubKey, callback: AsyncCallback<void>): void--><!--Device-Verify-init(pubKey: PubKey, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Signature
@@ -124,7 +130,9 @@ init(pubKey: PubKey): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Verify-init(pubKey: PubKey): Promise<void>--><!--Device-Verify-init(pubKey: PubKey): Promise<void>-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Signature
@@ -164,7 +172,9 @@ initSync(pubKey: PubKey): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Verify-initSync(pubKey: PubKey): void--><!--Device-Verify-initSync(pubKey: PubKey): void-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Signature
 
@@ -198,7 +208,9 @@ recover(signatureData: DataBlob): Promise<DataBlob | null>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Verify-recover(signatureData: DataBlob): Promise<DataBlob | null>--><!--Device-Verify-recover(signatureData: DataBlob): Promise<DataBlob | null>-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Signature
 
@@ -318,7 +330,9 @@ recoverSync(signatureData: DataBlob): DataBlob | null
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Verify-recoverSync(signatureData: DataBlob): DataBlob | null--><!--Device-Verify-recoverSync(signatureData: DataBlob): DataBlob | null-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Signature
 
@@ -359,6 +373,8 @@ setVerifySpec(itemType: SignSpecItem, itemValue: number): void
 **起始版本：** 10
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Verify-setVerifySpec(itemType: SignSpecItem, itemValue: int): void--><!--Device-Verify-setVerifySpec(itemType: SignSpecItem, itemValue: int): void-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Signature
@@ -418,7 +434,9 @@ setVerifySpec(itemType: SignSpecItem, itemValue: number | Uint8Array): void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Verify-setVerifySpec(itemType: SignSpecItem, itemValue: int | Uint8Array): void--><!--Device-Verify-setVerifySpec(itemType: SignSpecItem, itemValue: int | Uint8Array): void-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Signature
@@ -474,6 +492,8 @@ setVerifySpec(itemType: SignSpecItem, itemValue: number | Uint8Array | boolean):
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-Verify-setVerifySpec(itemType: SignSpecItem, itemValue: int | Uint8Array | boolean): void--><!--Device-Verify-setVerifySpec(itemType: SignSpecItem, itemValue: int | Uint8Array | boolean): void-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Signature
 
@@ -536,7 +556,9 @@ update(data: DataBlob, callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Verify-update(data: DataBlob, callback: AsyncCallback<void>): void--><!--Device-Verify-update(data: DataBlob, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Signature
@@ -589,7 +611,9 @@ update(data: DataBlob): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Verify-update(data: DataBlob): Promise<void>--><!--Device-Verify-update(data: DataBlob): Promise<void>-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Signature
@@ -647,7 +671,9 @@ updateSync(data: DataBlob): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Verify-updateSync(data: DataBlob): void--><!--Device-Verify-updateSync(data: DataBlob): void-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Signature
 
@@ -678,6 +704,8 @@ verify(data: DataBlob, signatureData: DataBlob, callback: AsyncCallback<boolean>
 **起始版本：** 9
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Verify-verify(data: DataBlob, signatureData: DataBlob, callback: AsyncCallback<boolean>): void--><!--Device-Verify-verify(data: DataBlob, signatureData: DataBlob, callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Signature
@@ -713,7 +741,9 @@ verify(data: DataBlob | null, signatureData: DataBlob, callback: AsyncCallback<b
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Verify-verify(data: DataBlob | null, signatureData: DataBlob, callback: AsyncCallback<boolean>): void--><!--Device-Verify-verify(data: DataBlob | null, signatureData: DataBlob, callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Signature
@@ -750,6 +780,8 @@ verify(data: DataBlob, signatureData: DataBlob): Promise<boolean>
 **起始版本：** 9
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Verify-verify(data: DataBlob, signatureData: DataBlob): Promise<boolean>--><!--Device-Verify-verify(data: DataBlob, signatureData: DataBlob): Promise<boolean>-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Signature
@@ -790,7 +822,9 @@ verify(data: DataBlob | null, signatureData: DataBlob): Promise<boolean>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Verify-verify(data: DataBlob | null, signatureData: DataBlob): Promise<boolean>--><!--Device-Verify-verify(data: DataBlob | null, signatureData: DataBlob): Promise<boolean>-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Signature
@@ -831,7 +865,9 @@ verifySync(data: DataBlob | null, signatureData: DataBlob): boolean
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Verify-verifySync(data: DataBlob | null, signatureData: DataBlob): boolean--><!--Device-Verify-verifySync(data: DataBlob | null, signatureData: DataBlob): boolean-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Signature
 
@@ -1092,7 +1128,9 @@ readonly algName: string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Verify-readonly algName: string--><!--Device-Verify-readonly algName: string-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Signature

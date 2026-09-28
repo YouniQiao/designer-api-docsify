@@ -18,6 +18,8 @@ function isConcurrent(func: Function): boolean
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-taskpool-function isConcurrent(func: Function): boolean--><!--Device-taskpool-function isConcurrent(func: Function): boolean-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**

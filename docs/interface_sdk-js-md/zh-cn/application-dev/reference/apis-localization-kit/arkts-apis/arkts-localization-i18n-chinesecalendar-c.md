@@ -10,6 +10,8 @@ export class ChineseCalendar extends Calendar
 
 **起始版本：** 26.0.0
 
+<!--Device-i18n-export class ChineseCalendar extends Calendar--><!--Device-i18n-export class ChineseCalendar extends Calendar-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## 导入模块
@@ -31,6 +33,8 @@ public static checkLeapMonth(gregorianYear: number, cyclicalYear: number, month:
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-ChineseCalendar-public static checkLeapMonth(gregorianYear: int, cyclicalYear: int, month: int): boolean--><!--Device-ChineseCalendar-public static checkLeapMonth(gregorianYear: int, cyclicalYear: int, month: int): boolean-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -73,6 +77,8 @@ public setChineseCalendarTime(chineseCalendarTime: ChineseCalendarTime): void
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-ChineseCalendar-public setChineseCalendarTime(chineseCalendarTime: ChineseCalendarTime): void--><!--Device-ChineseCalendar-public setChineseCalendarTime(chineseCalendarTime: ChineseCalendarTime): void-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 

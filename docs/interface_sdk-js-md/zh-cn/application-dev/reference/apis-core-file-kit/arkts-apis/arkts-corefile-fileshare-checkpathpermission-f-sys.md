@@ -18,6 +18,8 @@ function checkPathPermission(tokenID: number, policies: Array<PathPolicyInfo>, p
 
 **需要权限：** ohos.permission.CHECK_SANDBOX_POLICY
 
+<!--Device-fileShare-function checkPathPermission(tokenID: int, policies: Array<PathPolicyInfo>, policyType: PolicyType): Promise<Array<boolean>>--><!--Device-fileShare-function checkPathPermission(tokenID: int, policies: Array<PathPolicyInfo>, policyType: PolicyType): Promise<Array<boolean>>-End-->
+
 **系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
 **系统接口：** 此接口为系统接口。

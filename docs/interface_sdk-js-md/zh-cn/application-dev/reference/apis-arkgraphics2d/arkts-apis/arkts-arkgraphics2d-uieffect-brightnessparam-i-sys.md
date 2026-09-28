@@ -8,6 +8,8 @@ interface BrightnessParam
 
 **起始版本：** 22
 
+<!--Device-uiEffect-interface BrightnessParam--><!--Device-uiEffect-interface BrightnessParam-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ cubicCoeff : number
 
 **起始版本：** 22
 
+<!--Device-BrightnessParam-cubicCoeff : double--><!--Device-BrightnessParam-cubicCoeff : double-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ fraction : number
 **类型：** number
 
 **起始版本：** 22
+
+<!--Device-BrightnessParam-fraction : double--><!--Device-BrightnessParam-fraction : double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -62,6 +68,8 @@ lightUpDegree : number
 
 **起始版本：** 22
 
+<!--Device-BrightnessParam-lightUpDegree : double--><!--Device-BrightnessParam-lightUpDegree : double-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +85,8 @@ negRgb : [number, number, number]
 **类型：** [number, number, number]
 
 **起始版本：** 22
+
+<!--Device-BrightnessParam-negRgb : [double, double, double]--><!--Device-BrightnessParam-negRgb : [double, double, double]-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -94,6 +104,8 @@ posRgb : [number, number, number]
 
 **起始版本：** 22
 
+<!--Device-BrightnessParam-posRgb : [double, double, double]--><!--Device-BrightnessParam-posRgb : [double, double, double]-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -109,6 +121,8 @@ quadCoeff : number
 **类型：** number
 
 **起始版本：** 22
+
+<!--Device-BrightnessParam-quadCoeff : double--><!--Device-BrightnessParam-quadCoeff : double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -126,6 +140,8 @@ rate : number
 
 **起始版本：** 22
 
+<!--Device-BrightnessParam-rate : double--><!--Device-BrightnessParam-rate : double-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -141,6 +157,8 @@ saturation : number
 **类型：** number
 
 **起始版本：** 22
+
+<!--Device-BrightnessParam-saturation : double--><!--Device-BrightnessParam-saturation : double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

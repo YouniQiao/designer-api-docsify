@@ -20,6 +20,8 @@ function setGlobalProxyForAccount(admin: Want, httpProxy: connection.HttpProxy, 
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-networkManager-function setGlobalProxyForAccount(admin: Want, httpProxy: connection.HttpProxy, accountId: number): void--><!--Device-networkManager-function setGlobalProxyForAccount(admin: Want, httpProxy: connection.HttpProxy, accountId: number): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**

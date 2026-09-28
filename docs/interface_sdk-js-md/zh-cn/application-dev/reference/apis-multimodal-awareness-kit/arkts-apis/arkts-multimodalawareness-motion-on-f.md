@@ -22,6 +22,8 @@ function on(type: 'operatingHandChanged', callback: Callback<OperatingHandStatus
 - API版本20+：ohos.permission.ACTIVITY_MOTION 或 ohos.permission.DETECT_GESTURE
 - API版本15-19：ohos.permission.ACTIVITY_MOTION
 
+<!--Device-motion-function on(type: 'operatingHandChanged', callback: Callback<OperatingHandStatus>): void--><!--Device-motion-function on(type: 'operatingHandChanged', callback: Callback<OperatingHandStatus>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.Motion
 
 **参数：**
@@ -72,6 +74,8 @@ function on(type: 'holdingHandChanged', callback: Callback<HoldingHandStatus>): 
 **起始版本：** 20
 
 **需要权限：** ohos.permission.DETECT_GESTURE
+
+<!--Device-motion-function on(type: 'holdingHandChanged', callback: Callback<HoldingHandStatus>): void--><!--Device-motion-function on(type: 'holdingHandChanged', callback: Callback<HoldingHandStatus>): void-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.Motion
 

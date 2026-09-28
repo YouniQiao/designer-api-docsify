@@ -22,6 +22,8 @@ function off(type: 'locationChange', callback?: Callback<Location>): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-geoLocationManager-function off(type: 'locationChange', callback?: Callback<Location>): void--><!--Device-geoLocationManager-function off(type: 'locationChange', callback?: Callback<Location>): void-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **参数：**
@@ -79,6 +81,8 @@ function off(type: 'locationError', callback?: Callback<LocationError>): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-geoLocationManager-function off(type: 'locationError', callback?: Callback<LocationError>): void--><!--Device-geoLocationManager-function off(type: 'locationError', callback?: Callback<LocationError>): void-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **参数：**
@@ -123,6 +127,8 @@ function off(type: 'locationEnabledChange', callback?: Callback<boolean>): void
 取消订阅位置服务状态变化。
 
 **起始版本：** 9
+
+<!--Device-geoLocationManager-function off(type: 'locationEnabledChange', callback?: Callback<boolean>): void--><!--Device-geoLocationManager-function off(type: 'locationEnabledChange', callback?: Callback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -169,6 +175,8 @@ function off(type: 'cachedGnssLocationsChange', callback?: Callback<Array<Locati
 **起始版本：** 9
 
 **需要权限：** ohos.permission.APPROXIMATELY_LOCATION
+
+<!--Device-geoLocationManager-function off(type: 'cachedGnssLocationsChange', callback?: Callback<Array<Location>>): void--><!--Device-geoLocationManager-function off(type: 'cachedGnssLocationsChange', callback?: Callback<Array<Location>>): void-End-->
 
 **系统能力：** SystemCapability.Location.Location.Gnss
 
@@ -225,6 +233,8 @@ function off(type: 'satelliteStatusChange', callback?: Callback<SatelliteStatusI
 
 **需要权限：** ohos.permission.APPROXIMATELY_LOCATION
 
+<!--Device-geoLocationManager-function off(type: 'satelliteStatusChange', callback?: Callback<SatelliteStatusInfo>): void--><!--Device-geoLocationManager-function off(type: 'satelliteStatusChange', callback?: Callback<SatelliteStatusInfo>): void-End-->
+
 **系统能力：** SystemCapability.Location.Location.Gnss
 
 **参数：**
@@ -274,6 +284,8 @@ function off(type: 'nmeaMessage', callback?: Callback<string>): void
 **起始版本：** 9
 
 **需要权限：** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
+
+<!--Device-geoLocationManager-function off(type: 'nmeaMessage', callback?: Callback<string>): void--><!--Device-geoLocationManager-function off(type: 'nmeaMessage', callback?: Callback<string>): void-End-->
 
 **系统能力：** SystemCapability.Location.Location.Gnss
 
@@ -327,6 +339,8 @@ function off(type: 'gnssFenceStatusChange', request: GeofenceRequest, want: Want
 **需要权限：** 
 - API版本25+：N/A
 - API版本9-24：ohos.permission.APPROXIMATELY_LOCATION
+
+<!--Device-geoLocationManager-function off(type: 'gnssFenceStatusChange', request: GeofenceRequest, want: WantAgent): void--><!--Device-geoLocationManager-function off(type: 'gnssFenceStatusChange', request: GeofenceRequest, want: WantAgent): void-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geofence
 
@@ -396,6 +410,8 @@ function off(type: 'countryCodeChange', callback?: Callback<CountryCode>): void
 
 **起始版本：** 9
 
+<!--Device-geoLocationManager-function off(type: 'countryCodeChange', callback?: Callback<CountryCode>): void--><!--Device-geoLocationManager-function off(type: 'countryCodeChange', callback?: Callback<CountryCode>): void-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **参数：**
@@ -443,6 +459,8 @@ function off(type: 'bluetoothScanResultChange', callback?: Callback<BluetoothSca
 **起始版本：** 16
 
 **需要权限：** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
+
+<!--Device-geoLocationManager-function off(type: 'bluetoothScanResultChange', callback?: Callback<BluetoothScanResult>): void--><!--Device-geoLocationManager-function off(type: 'bluetoothScanResultChange', callback?: Callback<BluetoothScanResult>): void-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 

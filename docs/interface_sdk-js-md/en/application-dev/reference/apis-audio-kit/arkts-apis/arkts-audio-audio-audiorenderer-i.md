@@ -14,6 +14,8 @@ Before calling any API in AudioRenderer, you must use [createAudioRenderer](arkt
 
 **Since:** 8
 
+<!--Device-audio-interface AudioRenderer--><!--Device-audio-interface AudioRenderer-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 ## Modules to Import
@@ -31,6 +33,8 @@ drain(callback: AsyncCallback<void>): void
 Drains the playback buffer. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
+
+<!--Device-AudioRenderer-drain(callback: AsyncCallback<void>): void--><!--Device-AudioRenderer-drain(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -66,6 +70,8 @@ Drains the playback buffer. This API uses a promise to return the result.
 
 **Since:** 8
 
+<!--Device-AudioRenderer-drain(): Promise<void>--><!--Device-AudioRenderer-drain(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Return value:**
@@ -95,6 +101,8 @@ flush(): Promise<void>
 Flushes the buffer. This API is available when [AudioState](arkts-audio-audio-audiostate-e.md) is **STATE_RUNNING**, **STATE_PAUSED**, or **STATE_STOPPED**. This API uses a promise to return the result.
 
 **Since:** 11
+
+<!--Device-AudioRenderer-flush(): Promise<void>--><!--Device-AudioRenderer-flush(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -132,6 +140,8 @@ Obtains the audio effect mode in use. This API uses an asynchronous callback to 
 
 **Since:** 10
 
+<!--Device-AudioRenderer-getAudioEffectMode(callback: AsyncCallback<AudioEffectMode>): void--><!--Device-AudioRenderer-getAudioEffectMode(callback: AsyncCallback<AudioEffectMode>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Parameters:**
@@ -166,6 +176,8 @@ Obtains the audio effect mode in use. This API uses a promise to return the resu
 
 **Since:** 10
 
+<!--Device-AudioRenderer-getAudioEffectMode(): Promise<AudioEffectMode>--><!--Device-AudioRenderer-getAudioEffectMode(): Promise<AudioEffectMode>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Return value:**
@@ -195,6 +207,8 @@ getAudioStreamId(callback: AsyncCallback<number>): void
 Obtains the stream ID of this audio renderer. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-AudioRenderer-getAudioStreamId(callback: AsyncCallback<long>): void--><!--Device-AudioRenderer-getAudioStreamId(callback: AsyncCallback<long>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -226,6 +240,8 @@ Obtains the stream ID of this audio renderer. This API uses a promise to return 
 
 **Since:** 9
 
+<!--Device-AudioRenderer-getAudioStreamId(): Promise<long>--><!--Device-AudioRenderer-getAudioStreamId(): Promise<long>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Return value:**
@@ -255,6 +271,8 @@ getAudioStreamIdSync(): number
 Obtains the stream ID of this audio renderer. This API returns the result synchronously.
 
 **Since:** 10
+
+<!--Device-AudioRenderer-getAudioStreamIdSync(): long--><!--Device-AudioRenderer-getAudioStreamIdSync(): long-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -288,6 +306,8 @@ Obtains the timestamp of the current playback position, measured in nanoseconds 
 
 **Since:** 8
 
+<!--Device-AudioRenderer-getAudioTime(callback: AsyncCallback<long>): void--><!--Device-AudioRenderer-getAudioTime(callback: AsyncCallback<long>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Parameters:**
@@ -317,6 +337,8 @@ getAudioTime(): Promise<number>
 Obtains the timestamp of the current playback position, measured in nanoseconds from the Unix epoch (January 1, 1970). This API uses a promise to return the result.
 
 **Since:** 8
+
+<!--Device-AudioRenderer-getAudioTime(): Promise<long>--><!--Device-AudioRenderer-getAudioTime(): Promise<long>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -353,6 +375,8 @@ Note that when the actual playback position (**framePosition**) is 0, the timest
 Additionally, changes in the audio stream route, such as switching devices or output types, will reset the playback position, whereas the timestamp keeps increasing. You are advised to call this API to obtain the corresponding value only when the actual playback position and timestamp are stable. This API adapts to the speed adjustment interface. For example, if the playback speed is set to 2x, the rate at which the playback position increases is also twice the normal speed.
 
 **Since:** 19
+
+<!--Device-AudioRenderer-getAudioTimestampInfo(): Promise<AudioTimestampInfo>--><!--Device-AudioRenderer-getAudioTimestampInfo(): Promise<AudioTimestampInfo>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -396,6 +420,8 @@ Additionally, changes in the audio stream route, such as switching devices or ou
 
 **Since:** 19
 
+<!--Device-AudioRenderer-getAudioTimestampInfoSync(): AudioTimestampInfo--><!--Device-AudioRenderer-getAudioTimestampInfoSync(): AudioTimestampInfo-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Return value:**
@@ -434,6 +460,8 @@ Obtains the timestamp of the current playback position, measured in nanoseconds 
 
 **Since:** 10
 
+<!--Device-AudioRenderer-getAudioTimeSync(): long--><!--Device-AudioRenderer-getAudioTimeSync(): long-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Return value:**
@@ -465,6 +493,8 @@ getBufferSize(callback: AsyncCallback<number>): void
 Obtains a reasonable minimum buffer size in bytes for rendering. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
+
+<!--Device-AudioRenderer-getBufferSize(callback: AsyncCallback<long>): void--><!--Device-AudioRenderer-getBufferSize(callback: AsyncCallback<long>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -503,6 +533,8 @@ Obtains a reasonable minimum buffer size in bytes for rendering. This API uses a
 
 **Since:** 8
 
+<!--Device-AudioRenderer-getBufferSize(): Promise<long>--><!--Device-AudioRenderer-getBufferSize(): Promise<long>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Return value:**
@@ -535,6 +567,8 @@ getBufferSizeSync(): number
 Obtains a reasonable minimum buffer size in bytes for rendering. This API returns the result synchronously.
 
 **Since:** 10
+
+<!--Device-AudioRenderer-getBufferSizeSync(): long--><!--Device-AudioRenderer-getBufferSizeSync(): long-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -569,6 +603,8 @@ getCurrentOutputDevices(callback: AsyncCallback<AudioDeviceDescriptors>): void
 Obtains the output device information of the audio stream. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
+
+<!--Device-AudioRenderer-getCurrentOutputDevices(callback: AsyncCallback<AudioDeviceDescriptors>): void--><!--Device-AudioRenderer-getCurrentOutputDevices(callback: AsyncCallback<AudioDeviceDescriptors>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -613,6 +649,8 @@ Obtains the output device information of the audio stream. This API uses a promi
 
 **Since:** 10
 
+<!--Device-AudioRenderer-getCurrentOutputDevices(): Promise<AudioDeviceDescriptors>--><!--Device-AudioRenderer-getCurrentOutputDevices(): Promise<AudioDeviceDescriptors>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 **Return value:**
@@ -651,6 +689,8 @@ getCurrentOutputDevicesSync(): AudioDeviceDescriptors
 Obtains the output device information of the audio stream. This API returns the result synchronously.
 
 **Since:** 10
+
+<!--Device-AudioRenderer-getCurrentOutputDevicesSync(): AudioDeviceDescriptors--><!--Device-AudioRenderer-getCurrentOutputDevicesSync(): AudioDeviceDescriptors-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -703,6 +743,8 @@ Obtains the estimated latency of the current audio route.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AudioRenderer-getLatency(type: AudioLatencyType): int--><!--Device-AudioRenderer-getLatency(type: AudioLatencyType): int-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Parameters:**
@@ -749,6 +791,8 @@ Gets loudness gain of this stream.
 
 **Since:** 20
 
+<!--Device-AudioRenderer-getLoudnessGain(): double--><!--Device-AudioRenderer-getLoudnessGain(): double-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Return value:**
@@ -772,6 +816,8 @@ getMaxStreamVolume(callback: AsyncCallback<number>): void
 Obtains the maximum volume of the audio stream. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
+
+<!--Device-AudioRenderer-getMaxStreamVolume(callback: AsyncCallback<double>): void--><!--Device-AudioRenderer-getMaxStreamVolume(callback: AsyncCallback<double>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -807,6 +853,8 @@ Obtains the maximum volume of the audio stream. This API uses a promise to retur
 
 **Since:** 10
 
+<!--Device-AudioRenderer-getMaxStreamVolume(): Promise<double>--><!--Device-AudioRenderer-getMaxStreamVolume(): Promise<double>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Return value:**
@@ -836,6 +884,8 @@ getMaxStreamVolumeSync(): number
 Obtains the maximum volume of the audio stream. This API returns the result synchronously.
 
 **Since:** 10
+
+<!--Device-AudioRenderer-getMaxStreamVolumeSync(): double--><!--Device-AudioRenderer-getMaxStreamVolumeSync(): double-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -868,6 +918,8 @@ getMinStreamVolume(callback: AsyncCallback<number>): void
 Obtains the minimum volume of the audio stream. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
+
+<!--Device-AudioRenderer-getMinStreamVolume(callback: AsyncCallback<double>): void--><!--Device-AudioRenderer-getMinStreamVolume(callback: AsyncCallback<double>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -903,6 +955,8 @@ Obtains the minimum volume of the audio stream. This API uses a promise to retur
 
 **Since:** 10
 
+<!--Device-AudioRenderer-getMinStreamVolume(): Promise<double>--><!--Device-AudioRenderer-getMinStreamVolume(): Promise<double>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Return value:**
@@ -932,6 +986,8 @@ getMinStreamVolumeSync(): number
 Obtains the minimum volume of the audio stream. This API returns the result synchronously.
 
 **Since:** 10
+
+<!--Device-AudioRenderer-getMinStreamVolumeSync(): double--><!--Device-AudioRenderer-getMinStreamVolumeSync(): double-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -964,6 +1020,8 @@ getRendererInfo(callback: AsyncCallback<AudioRendererInfo>): void
 Obtains the information about this audio renderer. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
+
+<!--Device-AudioRenderer-getRendererInfo(callback: AsyncCallback<AudioRendererInfo>): void--><!--Device-AudioRenderer-getRendererInfo(callback: AsyncCallback<AudioRendererInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -999,6 +1057,8 @@ Obtains the information about this audio renderer. This API uses a promise to re
 
 **Since:** 8
 
+<!--Device-AudioRenderer-getRendererInfo(): Promise<AudioRendererInfo>--><!--Device-AudioRenderer-getRendererInfo(): Promise<AudioRendererInfo>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Return value:**
@@ -1028,6 +1088,8 @@ getRendererInfoSync(): AudioRendererInfo
 Obtains the information about this audio renderer. This API returns the result synchronously.
 
 **Since:** 10
+
+<!--Device-AudioRenderer-getRendererInfoSync(): AudioRendererInfo--><!--Device-AudioRenderer-getRendererInfoSync(): AudioRendererInfo-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -1061,6 +1123,8 @@ Obtains the silent mode in concurrent playback for the audio stream.
 
 **Since:** 12
 
+<!--Device-AudioRenderer-getSilentModeAndMixWithOthers(): boolean--><!--Device-AudioRenderer-getSilentModeAndMixWithOthers(): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Return value:**
@@ -1085,6 +1149,8 @@ Obtains the playback speed.
 
 **Since:** 11
 
+<!--Device-AudioRenderer-getSpeed(): double--><!--Device-AudioRenderer-getSpeed(): double-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Return value:**
@@ -1108,6 +1174,8 @@ getStreamInfo(callback: AsyncCallback<AudioStreamInfo>): void
 Obtains the stream information of this audio renderer. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
+
+<!--Device-AudioRenderer-getStreamInfo(callback: AsyncCallback<AudioStreamInfo>): void--><!--Device-AudioRenderer-getStreamInfo(callback: AsyncCallback<AudioStreamInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -1143,6 +1211,8 @@ Obtains the stream information of this audio renderer. This API uses a promise t
 
 **Since:** 8
 
+<!--Device-AudioRenderer-getStreamInfo(): Promise<AudioStreamInfo>--><!--Device-AudioRenderer-getStreamInfo(): Promise<AudioStreamInfo>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Return value:**
@@ -1176,6 +1246,8 @@ getStreamInfoSync(): AudioStreamInfo
 Obtains the stream information of this audio renderer. This API returns the result synchronously.
 
 **Since:** 10
+
+<!--Device-AudioRenderer-getStreamInfoSync(): AudioStreamInfo--><!--Device-AudioRenderer-getStreamInfoSync(): AudioStreamInfo-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -1212,6 +1284,8 @@ Obtains the number of underflow audio frames in the audio stream that is being p
 
 **Since:** 10
 
+<!--Device-AudioRenderer-getUnderflowCount(callback: AsyncCallback<long>): void--><!--Device-AudioRenderer-getUnderflowCount(callback: AsyncCallback<long>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Parameters:**
@@ -1246,6 +1320,8 @@ Obtains the number of underflow audio frames in the audio stream that is being p
 
 **Since:** 10
 
+<!--Device-AudioRenderer-getUnderflowCount(): Promise<long>--><!--Device-AudioRenderer-getUnderflowCount(): Promise<long>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Return value:**
@@ -1275,6 +1351,8 @@ getUnderflowCountSync(): number
 Obtains the number of underflow audio frames in the audio stream that is being played. This API returns the result synchronously.
 
 **Since:** 10
+
+<!--Device-AudioRenderer-getUnderflowCountSync(): long--><!--Device-AudioRenderer-getUnderflowCountSync(): long-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -1308,6 +1386,8 @@ Obtains the volume of the audio stream. This API returns the result synchronousl
 
 **Since:** 12
 
+<!--Device-AudioRenderer-getVolume(): double--><!--Device-AudioRenderer-getVolume(): double-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Return value:**
@@ -1339,6 +1419,8 @@ off(type: 'audioInterrupt', callback?: Callback<InterruptEvent>): void
 Unsubscribes from the audio interruption event. This API uses an asynchronous callback to return the result.
 
 **Since:** 18
+
+<!--Device-AudioRenderer-off(type: 'audioInterrupt', callback?: Callback<InterruptEvent>): void--><!--Device-AudioRenderer-off(type: 'audioInterrupt', callback?: Callback<InterruptEvent>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Interrupt
 
@@ -1428,6 +1510,8 @@ Unsubscribes from the mark reached event. This API uses an asynchronous callback
 
 **Since:** 8
 
+<!--Device-AudioRenderer-off(type: 'markReach', callback?: Callback<long>): void--><!--Device-AudioRenderer-off(type: 'markReach', callback?: Callback<long>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Parameters:**
@@ -1465,6 +1549,8 @@ Unsubscribes from the period reached event. This API uses an asynchronous callba
 
 **Since:** 8
 
+<!--Device-AudioRenderer-off(type: 'periodReach', callback?: Callback<long>): void--><!--Device-AudioRenderer-off(type: 'periodReach', callback?: Callback<long>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Parameters:**
@@ -1501,6 +1587,8 @@ off(type: 'stateChange', callback?: Callback<AudioState>): void
 Unsubscribes from the audio renderer state change event. This API uses an asynchronous callback to return the result.
 
 **Since:** 18
+
+<!--Device-AudioRenderer-off(type: 'stateChange', callback?: Callback<AudioState>): void--><!--Device-AudioRenderer-off(type: 'stateChange', callback?: Callback<AudioState>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -1548,6 +1636,8 @@ Unsubscribes from the audio output device change event. This API uses an asynchr
 
 **Since:** 10
 
+<!--Device-AudioRenderer-off(type: 'outputDeviceChange', callback?: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRenderer-off(type: 'outputDeviceChange', callback?: Callback<AudioDeviceDescriptors>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 **Parameters:**
@@ -1591,6 +1681,8 @@ off(type: 'outputDeviceChangeWithInfo', callback?: Callback<AudioStreamDeviceCha
 Unsubscribes from the change event of audio output devices and reasons. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
+
+<!--Device-AudioRenderer-off(type: 'outputDeviceChangeWithInfo', callback?: Callback<AudioStreamDeviceChangeInfo>): void--><!--Device-AudioRenderer-off(type: 'outputDeviceChangeWithInfo', callback?: Callback<AudioStreamDeviceChangeInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -1637,6 +1729,8 @@ Unsubscribes from the audio data write event. This API uses an asynchronous call
 
 **Since:** 11
 
+<!--Device-AudioRenderer-off(type: 'writeData', callback?: AudioRendererWriteDataCallback): void--><!--Device-AudioRenderer-off(type: 'writeData', callback?: AudioRendererWriteDataCallback): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Parameters:**
@@ -1682,6 +1776,8 @@ The AudioRenderer instance proactively gains the focus when the **start** event 
 After this API is called, an [InterruptEvent](arkts-audio-audio-interruptevent-i.md) is received when the AudioRenderer instance fails to obtain the focus or an audio interruption event occurs (for example, the audio stream is interrupted by others). It is recommended that the application perform further processing based on the **InterruptEvent** information. For details, see [Introduction to Audio Focus](../../../media/audio/audio-playback-concurrency.md).
 
 **Since:** 9
+
+<!--Device-AudioRenderer-on(type: 'audioInterrupt', callback: Callback<InterruptEvent>): void--><!--Device-AudioRenderer-on(type: 'audioInterrupt', callback: Callback<InterruptEvent>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Interrupt
 
@@ -1768,6 +1864,8 @@ For example, if **frame** is set to **100**, the callback is invoked when the nu
 
 **Since:** 8
 
+<!--Device-AudioRenderer-on(type: 'markReach', frame: long, callback: Callback<long>): void--><!--Device-AudioRenderer-on(type: 'markReach', frame: long, callback: Callback<long>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Parameters:**
@@ -1800,6 +1898,8 @@ For example, if **frame** is set to **10**, the callback is invoked each time 10
 
 **Since:** 8
 
+<!--Device-AudioRenderer-on(type: 'periodReach', frame: long, callback: Callback<long>): void--><!--Device-AudioRenderer-on(type: 'periodReach', frame: long, callback: Callback<long>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Parameters:**
@@ -1829,6 +1929,8 @@ on(type: 'stateChange', callback: Callback<AudioState>): void
 Subscribes to the audio renderer state change event, which is triggered when the state of the audio renderer is changed. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
+
+<!--Device-AudioRenderer-on(type: 'stateChange', callback: Callback<AudioState>): void--><!--Device-AudioRenderer-on(type: 'stateChange', callback: Callback<AudioState>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -1861,6 +1963,8 @@ on(type: 'outputDeviceChange', callback: Callback<AudioDeviceDescriptors>): void
 Subscribes to the audio output device change event, which is triggered when an audio output device is changed. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
+
+<!--Device-AudioRenderer-on(type: 'outputDeviceChange', callback: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRenderer-on(type: 'outputDeviceChange', callback: Callback<AudioDeviceDescriptors>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -1897,6 +2001,8 @@ on(type: 'outputDeviceChangeWithInfo', callback: Callback<AudioStreamDeviceChang
 Subscribes to the change event of audio output devices and reasons, which is triggered when an audio output device is changed, and the change reason is reported. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
+
+<!--Device-AudioRenderer-on(type: 'outputDeviceChangeWithInfo', callback: Callback<AudioStreamDeviceChangeInfo>): void--><!--Device-AudioRenderer-on(type: 'outputDeviceChangeWithInfo', callback: Callback<AudioStreamDeviceChangeInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -1936,6 +2042,8 @@ Subscribes to the audio data write event, which is triggered when audio data nee
 The callback function is used only to write audio data. Do not call AudioRenderer APIs in it.
 
 **Since:** 11
+
+<!--Device-AudioRenderer-on(type: 'writeData', callback: AudioRendererWriteDataCallback): void--><!--Device-AudioRenderer-on(type: 'writeData', callback: AudioRendererWriteDataCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -2008,6 +2116,8 @@ Pauses this audio renderer. This API uses an asynchronous callback to return the
 
 **Since:** 8
 
+<!--Device-AudioRenderer-pause(callback: AsyncCallback<void>): void--><!--Device-AudioRenderer-pause(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Parameters:**
@@ -2042,6 +2152,8 @@ Pauses this audio renderer. This API uses a promise to return the result.
 
 **Since:** 8
 
+<!--Device-AudioRenderer-pause(): Promise<void>--><!--Device-AudioRenderer-pause(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Return value:**
@@ -2071,6 +2183,8 @@ release(callback: AsyncCallback<void>): void
 Releases the renderer. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
+
+<!--Device-AudioRenderer-release(callback: AsyncCallback<void>): void--><!--Device-AudioRenderer-release(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -2106,6 +2220,8 @@ Releases the renderer. This API uses a promise to return the result.
 
 **Since:** 8
 
+<!--Device-AudioRenderer-release(): Promise<void>--><!--Device-AudioRenderer-release(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Return value:**
@@ -2135,6 +2251,8 @@ setAudioEffectMode(mode: AudioEffectMode, callback: AsyncCallback<void>): void
 Sets an audio effect mode. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
+
+<!--Device-AudioRenderer-setAudioEffectMode(mode: AudioEffectMode, callback: AsyncCallback<void>): void--><!--Device-AudioRenderer-setAudioEffectMode(mode: AudioEffectMode, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -2177,6 +2295,8 @@ setAudioEffectMode(mode: AudioEffectMode): Promise<void>
 Sets an audio effect mode. This API uses a promise to return the result.
 
 **Since:** 10
+
+<!--Device-AudioRenderer-setAudioEffectMode(mode: AudioEffectMode): Promise<void>--><!--Device-AudioRenderer-setAudioEffectMode(mode: AudioEffectMode): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -2221,6 +2341,8 @@ Sets the audio channel blending mode. This API returns the result synchronously.
 
 **Since:** 11
 
+<!--Device-AudioRenderer-setChannelBlendMode(mode: ChannelBlendMode): void--><!--Device-AudioRenderer-setChannelBlendMode(mode: ChannelBlendMode): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Parameters:**
@@ -2255,6 +2377,8 @@ setDefaultOutputDevice(deviceType: DeviceType): Promise<void>
 Temporarily changes the current audio device This function applies on audiorenderers whose StreamUsage are STREAM_USAGE_VOICE_COMMUNICATION/STREAM_USAGE_VIDEO_COMMUNICATION/STREAM_USAGE_VOICE_MESSAGE. Setting the device will only takes effect if no other accessory such as headphones are in use
 
 **Since:** 12
+
+<!--Device-AudioRenderer-setDefaultOutputDevice(deviceType: DeviceType): Promise<void>--><!--Device-AudioRenderer-setDefaultOutputDevice(deviceType: DeviceType): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -2311,6 +2435,8 @@ Sets the independent audio session strategy and behavior parameters.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AudioRenderer-setIndependentAudioSessionStrategy(strategy: AudioSessionStrategy, behavior: int): void--><!--Device-AudioRenderer-setIndependentAudioSessionStrategy(strategy: AudioSessionStrategy, behavior: int): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Parameters:**
@@ -2347,6 +2473,8 @@ Sets the audio interruption mode for the application. This API uses an asynchron
 
 **Since:** 9
 
+<!--Device-AudioRenderer-setInterruptMode(mode: InterruptMode, callback: AsyncCallback<void>): void--><!--Device-AudioRenderer-setInterruptMode(mode: InterruptMode, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Interrupt
 
 **Parameters:**
@@ -2382,6 +2510,8 @@ setInterruptMode(mode: InterruptMode): Promise<void>
 Sets the audio interruption mode for the application. This API uses a promise to return the result.
 
 **Since:** 9
+
+<!--Device-AudioRenderer-setInterruptMode(mode: InterruptMode): Promise<void>--><!--Device-AudioRenderer-setInterruptMode(mode: InterruptMode): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Interrupt
 
@@ -2420,6 +2550,8 @@ setInterruptModeSync(mode: InterruptMode): void
 Sets the audio interruption mode for the application. This API returns the result synchronously.
 
 **Since:** 10
+
+<!--Device-AudioRenderer-setInterruptModeSync(mode: InterruptMode): void--><!--Device-AudioRenderer-setInterruptModeSync(mode: InterruptMode): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Interrupt
 
@@ -2460,6 +2592,8 @@ Sets the loudness gain of this stream. The default loudness gain is 0.0dB. The s
 
 **Since:** 20
 
+<!--Device-AudioRenderer-setLoudnessGain(loudnessGain: double): Promise<void>--><!--Device-AudioRenderer-setLoudnessGain(loudnessGain: double): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Parameters:**
@@ -2499,6 +2633,8 @@ If the silent mode in concurrent playback is enabled, the system mutes the audio
 
 **Since:** 12
 
+<!--Device-AudioRenderer-setSilentModeAndMixWithOthers(on: boolean): void--><!--Device-AudioRenderer-setSilentModeAndMixWithOthers(on: boolean): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Parameters:**
@@ -2522,6 +2658,8 @@ setSpeed(speed: number): void
 Sets the playback speed.
 
 **Since:** 11
+
+<!--Device-AudioRenderer-setSpeed(speed: double): void--><!--Device-AudioRenderer-setSpeed(speed: double): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -2553,6 +2691,8 @@ setVolume(volume: number, callback: AsyncCallback<void>): void
 Sets the volume for the audio stream. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-AudioRenderer-setVolume(volume: double, callback: AsyncCallback<void>): void--><!--Device-AudioRenderer-setVolume(volume: double, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -2588,6 +2728,8 @@ setVolume(volume: number): Promise<void>
 Sets the volume for the audio stream. This API uses a promise to return the result.
 
 **Since:** 9
+
+<!--Device-AudioRenderer-setVolume(volume: double): Promise<void>--><!--Device-AudioRenderer-setVolume(volume: double): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -2625,6 +2767,8 @@ Sets a volume ramp. This API returns the result synchronously.
 
 **Since:** 11
 
+<!--Device-AudioRenderer-setVolumeWithRamp(volume: double, duration: int): void--><!--Device-AudioRenderer-setVolumeWithRamp(volume: double, duration: int): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Parameters:**
@@ -2661,6 +2805,8 @@ Starts this audio renderer. This API uses an asynchronous callback to return the
 
 **Since:** 8
 
+<!--Device-AudioRenderer-start(callback: AsyncCallback<void>): void--><!--Device-AudioRenderer-start(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Parameters:**
@@ -2695,6 +2841,8 @@ Starts this audio renderer. This API uses a promise to return the result.
 
 **Since:** 8
 
+<!--Device-AudioRenderer-start(): Promise<void>--><!--Device-AudioRenderer-start(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Return value:**
@@ -2724,6 +2872,8 @@ stop(callback: AsyncCallback<void>): void
 Stops this audio renderer. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
+
+<!--Device-AudioRenderer-stop(callback: AsyncCallback<void>): void--><!--Device-AudioRenderer-stop(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -2759,6 +2909,8 @@ Stops this audio renderer. This API uses a promise to return the result.
 
 **Since:** 8
 
+<!--Device-AudioRenderer-stop(): Promise<void>--><!--Device-AudioRenderer-stop(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Return value:**
@@ -2792,6 +2944,8 @@ Obtains the audio renderer rate. This API uses an asynchronous callback to retur
 **Deprecated since:** 11
 
 **Substitutes:** [getSpeed](#getspeed)
+
+<!--Device-AudioRenderer-getRenderRate(callback: AsyncCallback<AudioRendererRate>): void--><!--Device-AudioRenderer-getRenderRate(callback: AsyncCallback<AudioRendererRate>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -2827,6 +2981,8 @@ Obtains the audio renderer rate. This API uses a promise to return the result.
 
 **Substitutes:** [getSpeed](#getspeed)
 
+<!--Device-AudioRenderer-getRenderRate(): Promise<AudioRendererRate>--><!--Device-AudioRenderer-getRenderRate(): Promise<AudioRendererRate>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Return value:**
@@ -2860,6 +3016,8 @@ Obtains the audio renderer rate. This API returns the result synchronously.
 **Deprecated since:** 11
 
 **Substitutes:** [getSpeed](#getspeed)
+
+<!--Device-AudioRenderer-getRenderRateSync(): AudioRendererRate--><!--Device-AudioRenderer-getRenderRateSync(): AudioRendererRate-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -2896,6 +3054,8 @@ Sets the render rate. This API uses an asynchronous callback to return the resul
 **Deprecated since:** 11
 
 **Substitutes:** setSpeed
+
+<!--Device-AudioRenderer-setRenderRate(rate: AudioRendererRate, callback: AsyncCallback<void>): void--><!--Device-AudioRenderer-setRenderRate(rate: AudioRendererRate, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -2936,6 +3096,8 @@ Sets the render rate. This API uses a promise to return the result.
 
 **Substitutes:** setSpeed
 
+<!--Device-AudioRenderer-setRenderRate(rate: AudioRendererRate): Promise<void>--><!--Device-AudioRenderer-setRenderRate(rate: AudioRendererRate): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Parameters:**
@@ -2975,6 +3137,8 @@ Writes the buffer. This API uses an asynchronous callback to return the result.
 **Deprecated since:** 11
 
 **Substitutes:** writeData
+
+<!--Device-AudioRenderer-write(buffer: ArrayBuffer, callback: AsyncCallback<number>): void--><!--Device-AudioRenderer-write(buffer: ArrayBuffer, callback: AsyncCallback<number>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -3048,6 +3212,8 @@ Writes the buffer. This API uses a promise to return the result.
 
 **Substitutes:** writeData
 
+<!--Device-AudioRenderer-write(buffer: ArrayBuffer): Promise<number>--><!--Device-AudioRenderer-write(buffer: ArrayBuffer): Promise<number>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Parameters:**
@@ -3117,5 +3283,7 @@ Audio renderer state.
 **Type:** [AudioState](arkts-audio-audio-audiostate-e.md)
 
 **Since:** 8
+
+<!--Device-AudioRenderer-readonly state: AudioState--><!--Device-AudioRenderer-readonly state: AudioState-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer

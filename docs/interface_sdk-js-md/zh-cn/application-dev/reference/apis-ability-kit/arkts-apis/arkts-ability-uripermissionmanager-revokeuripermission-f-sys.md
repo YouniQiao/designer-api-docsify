@@ -26,6 +26,8 @@ function revokeUriPermission(uri: string, targetBundleName: string, callback: As
 - API版本12+：N/A
 - API版本10-11：ohos.permission.PROXY_AUTHORIZATION_URI
 
+<!--Device-uriPermissionManager-function revokeUriPermission(uri: string, targetBundleName: string, callback: AsyncCallback<number>): void--><!--Device-uriPermissionManager-function revokeUriPermission(uri: string, targetBundleName: string, callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -89,6 +91,8 @@ function revokeUriPermission(uri: string, targetBundleName: string): Promise<num
 **需要权限：** 
 - API版本12+：N/A
 - API版本10-11：ohos.permission.PROXY_AUTHORIZATION_URI
+
+<!--Device-uriPermissionManager-function revokeUriPermission(uri: string, targetBundleName: string): Promise<number>--><!--Device-uriPermissionManager-function revokeUriPermission(uri: string, targetBundleName: string): Promise<number>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -156,6 +160,8 @@ function revokeUriPermission(uri: string, targetBundleName: string, appCloneInde
 > - 因URI处理涉及编解码，传入的URI需要使用[getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md)接口获取。对于应用自行拼接的URI，系统无法保证其功能。
 
 **起始版本：** 14
+
+<!--Device-uriPermissionManager-function revokeUriPermission(uri: string, targetBundleName: string, appCloneIndex: int): Promise<void>--><!--Device-uriPermissionManager-function revokeUriPermission(uri: string, targetBundleName: string, appCloneIndex: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

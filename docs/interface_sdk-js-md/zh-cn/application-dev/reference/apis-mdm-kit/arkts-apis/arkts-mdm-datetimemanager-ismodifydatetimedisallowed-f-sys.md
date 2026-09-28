@@ -24,6 +24,8 @@ function isModifyDateTimeDisallowed(admin: Want, callback: AsyncCallback<boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-dateTimeManager-function isModifyDateTimeDisallowed(admin: Want, callback: AsyncCallback<boolean>): void--><!--Device-dateTimeManager-function isModifyDateTimeDisallowed(admin: Want, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -86,6 +88,8 @@ function isModifyDateTimeDisallowed(admin: Want): Promise<boolean>
 **需要权限：** ohos.permission.ENTERPRISE_SET_DATETIME
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-dateTimeManager-function isModifyDateTimeDisallowed(admin: Want): Promise<boolean>--><!--Device-dateTimeManager-function isModifyDateTimeDisallowed(admin: Want): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

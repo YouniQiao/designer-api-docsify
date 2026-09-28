@@ -19,6 +19,8 @@ declare namespace innerBundleManager
 
 **替代接口：** [launcherBundleManager](arkts-ability-bundle-launcherbundlemanager.md)
 
+<!--Device-unnamed-declare namespace innerBundleManager--><!--Device-unnamed-declare namespace innerBundleManager-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 **系统接口：** 此接口为系统接口。

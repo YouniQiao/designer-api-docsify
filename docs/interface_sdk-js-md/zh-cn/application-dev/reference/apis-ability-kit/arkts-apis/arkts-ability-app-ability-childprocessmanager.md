@@ -23,6 +23,8 @@ childProcessManager模块提供子进程管理能力，支持子进程创建和�
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare namespace childProcessManager--><!--Device-unnamed-declare namespace childProcessManager-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块

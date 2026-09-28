@@ -14,6 +14,8 @@ Before API version 26.0.0, if the first placeholder in a styled string paragraph
 
 **Since:** 12
 
+<!--Device-unnamed-declare class ParagraphStyle--><!--Device-unnamed-declare class ParagraphStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
@@ -29,6 +31,8 @@ A constructor used to create a text paragraph style.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ParagraphStyle-constructor(value?: ParagraphStyleInterface)--><!--Device-ParagraphStyle-constructor(value?: ParagraphStyleInterface)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -56,6 +60,8 @@ When the return value is of the number type, the unit is vp.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ParagraphStyle-readonly leadingMargin?: number | LeadingMarginPlaceholder--><!--Device-ParagraphStyle-readonly leadingMargin?: number | LeadingMarginPlaceholder-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## leadingMarginSpan
@@ -73,6 +79,8 @@ Custom indent information of the styled string text paragraph.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-ParagraphStyle-readonly leadingMarginSpan?: LeadingMarginSpan--><!--Device-ParagraphStyle-readonly leadingMarginSpan?: LeadingMarginSpan-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -93,6 +101,8 @@ Value range: [0, INT32_MAX]. A negative value means no limit.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ParagraphStyle-readonly maxLines?: number--><!--Device-ParagraphStyle-readonly maxLines?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -116,6 +126,8 @@ It must be used together with **maxLines**; setting it alone does not take effec
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ParagraphStyle-readonly overflow?: TextOverflow--><!--Device-ParagraphStyle-readonly overflow?: TextOverflow-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## paragraphSpacing
@@ -135,6 +147,8 @@ Unit: [vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#basic-pixel-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-ParagraphStyle-readonly paragraphSpacing?: number--><!--Device-ParagraphStyle-readonly paragraphSpacing?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -156,6 +170,8 @@ Text shader effect.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ParagraphStyle-readonly shaderStyle?: ShaderStyle--><!--Device-ParagraphStyle-readonly shaderStyle?: ShaderStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## tailIndents
@@ -173,6 +189,8 @@ Tail indent distance of the styled string text paragraph. INT32_MAX] The value *
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ParagraphStyle-readonly tailIndents?: Array<number>--><!--Device-ParagraphStyle-readonly tailIndents?: Array<number>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -194,6 +212,8 @@ Horizontal alignment of the styled string text paragraph.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ParagraphStyle-readonly textAlign?: TextAlign--><!--Device-ParagraphStyle-readonly textAlign?: TextAlign-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## textDirection
@@ -212,6 +232,8 @@ Text direction.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-ParagraphStyle-readonly textDirection?: TextDirection--><!--Device-ParagraphStyle-readonly textDirection?: TextDirection-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## textIndent
@@ -229,6 +251,8 @@ First-line text indent of the styled string text paragraph. Unit: [vp](../../../
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ParagraphStyle-readonly textIndent?: number--><!--Device-ParagraphStyle-readonly textIndent?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -250,6 +274,8 @@ The effect differs only when the same font size is used in a paragraph and the l
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-ParagraphStyle-readonly textVerticalAlign?: TextVerticalAlign--><!--Device-ParagraphStyle-readonly textVerticalAlign?: TextVerticalAlign-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## wordBreak
@@ -267,5 +293,7 @@ Line break rule of the styled string text paragraph.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ParagraphStyle-readonly wordBreak?: WordBreak--><!--Device-ParagraphStyle-readonly wordBreak?: WordBreak-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

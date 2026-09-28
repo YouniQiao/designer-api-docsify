@@ -12,6 +12,8 @@ interface TextEmbedding
 
 **起始版本：** 15
 
+<!--Device-intelligence-interface TextEmbedding--><!--Device-intelligence-interface TextEmbedding-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
 ## 导入模块
@@ -31,6 +33,8 @@ getEmbedding(text: string): Promise<Array<number>>
 该接口需先调用[loadModel](#loadmodel)加载嵌入模型，加载成功后调用getEmbedding。
 
 **起始版本：** 15
+
+<!--Device-TextEmbedding-getEmbedding(text: string): Promise<Array<double>>--><!--Device-TextEmbedding-getEmbedding(text: string): Promise<Array<double>>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
@@ -88,6 +92,8 @@ getEmbedding(batchTexts: Array<string>): Promise<Array<Array<number>>>
 该接口需先调用[loadModel](#loadmodel)加载嵌入模型，加载成功后调用getEmbedding。
 
 **起始版本：** 15
+
+<!--Device-TextEmbedding-getEmbedding(batchTexts: Array<string>): Promise<Array<Array<double>>>--><!--Device-TextEmbedding-getEmbedding(batchTexts: Array<string>): Promise<Array<Array<double>>>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
@@ -147,6 +153,8 @@ loadModel(): Promise<void>
 
 **起始版本：** 15
 
+<!--Device-TextEmbedding-loadModel(): Promise<void>--><!--Device-TextEmbedding-loadModel(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
 **返回值：**
@@ -186,6 +194,8 @@ releaseModel(): Promise<void>
 释放文本嵌入模型。使用Promise异步回调。
 
 **起始版本：** 15
+
+<!--Device-TextEmbedding-releaseModel(): Promise<void>--><!--Device-TextEmbedding-releaseModel(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataIntelligence.Core
 

@@ -22,6 +22,8 @@ function openNfc(): boolean
 
 **需要权限：** ohos.permission.MANAGE_SECURE_SETTINGS
 
+<!--Device-nfcController-function openNfc(): boolean--><!--Device-nfcController-function openNfc(): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.NFC.Core
 
 **返回值：**

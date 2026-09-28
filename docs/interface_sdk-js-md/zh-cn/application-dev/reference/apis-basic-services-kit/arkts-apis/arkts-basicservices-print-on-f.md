@@ -18,6 +18,8 @@ function on(type: 'printerChange', callback: PrinterChangeCallback): void
 
 **需要权限：** ohos.permission.PRINT
 
+<!--Device-print-function on(type: 'printerChange', callback: PrinterChangeCallback): void--><!--Device-print-function on(type: 'printerChange', callback: PrinterChangeCallback): void-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **参数：**

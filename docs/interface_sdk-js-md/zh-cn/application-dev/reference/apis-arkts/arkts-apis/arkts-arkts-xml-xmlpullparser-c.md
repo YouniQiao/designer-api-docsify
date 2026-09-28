@@ -8,6 +8,8 @@ XmlPullParser接口用于解析现有的XML文件，适用于对XML文本进行�
 
 **起始版本：** 8
 
+<!--Device-xml-class XmlPullParser--><!--Device-xml-class XmlPullParser-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -26,7 +28,9 @@ constructor(buffer: ArrayBuffer | DataView, encoding?: string)
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-XmlPullParser-constructor(buffer: ArrayBuffer | DataView, encoding?: string)--><!--Device-XmlPullParser-constructor(buffer: ArrayBuffer | DataView, encoding?: string)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -58,7 +62,9 @@ parseXml(option: ParseOptions): void
 
 **起始版本：** 14
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-XmlPullParser-parseXml(option: ParseOptions): void--><!--Device-XmlPullParser-parseXml(option: ParseOptions): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -83,6 +89,8 @@ parse(option: ParseOptions): void
 **替代接口：** [parseXml](#parsexml)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-XmlPullParser-parse(option: ParseOptions): void--><!--Device-XmlPullParser-parse(option: ParseOptions): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

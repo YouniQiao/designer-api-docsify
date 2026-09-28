@@ -18,6 +18,8 @@ Set the index number of the main SIM card slot.
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-radio-function setPrimarySlotId(slotId: int, callback: AsyncCallback<void>): void--><!--Device-radio-function setPrimarySlotId(slotId: int, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -71,6 +73,8 @@ Set the index number of the main SIM card slot.
 **起始版本：** 8
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
+
+<!--Device-radio-function setPrimarySlotId(slotId: int): Promise<void>--><!--Device-radio-function setPrimarySlotId(slotId: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

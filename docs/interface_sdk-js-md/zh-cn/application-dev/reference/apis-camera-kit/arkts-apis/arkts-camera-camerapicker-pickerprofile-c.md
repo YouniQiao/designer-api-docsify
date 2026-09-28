@@ -8,6 +8,8 @@ class PickerProfile
 
 **起始版本：** 11
 
+<!--Device-cameraPicker-class PickerProfile--><!--Device-cameraPicker-class PickerProfile-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
@@ -28,7 +30,9 @@ cameraPosition: camera.CameraPosition
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PickerProfile-cameraPosition: camera.CameraPosition--><!--Device-PickerProfile-cameraPosition: camera.CameraPosition-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -44,7 +48,9 @@ saveUri?: string
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PickerProfile-saveUri?: string--><!--Device-PickerProfile-saveUri?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -60,6 +66,8 @@ videoDuration?: number
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PickerProfile-videoDuration?: int--><!--Device-PickerProfile-videoDuration?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core

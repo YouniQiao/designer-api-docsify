@@ -8,6 +8,8 @@ interface ScannerParameter
 
 **起始版本：** 20
 
+<!--Device-scan-interface ScannerParameter--><!--Device-scan-interface ScannerParameter-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## 导入模块
@@ -28,6 +30,8 @@ optionConstraintInt?: number[]
 
 **起始版本：** 20
 
+<!--Device-ScannerParameter-optionConstraintInt?: int[]--><!--Device-ScannerParameter-optionConstraintInt?: int[]-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## optionConstraintRange
@@ -41,6 +45,8 @@ optionConstraintRange?: Range
 **类型：** [Range](arkts-basicservices-scan-range-i.md)
 
 **起始版本：** 20
+
+<!--Device-ScannerParameter-optionConstraintRange?: Range--><!--Device-ScannerParameter-optionConstraintRange?: Range-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -56,6 +62,8 @@ optionConstraintString?: string[]
 
 **起始版本：** 20
 
+<!--Device-ScannerParameter-optionConstraintString?: string[]--><!--Device-ScannerParameter-optionConstraintString?: string[]-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## optionConstraintType
@@ -69,6 +77,8 @@ optionConstraintType: ConstraintType
 **类型：** [ConstraintType](arkts-basicservices-scan-constrainttype-e.md)
 
 **起始版本：** 20
+
+<!--Device-ScannerParameter-optionConstraintType: ConstraintType--><!--Device-ScannerParameter-optionConstraintType: ConstraintType-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -84,6 +94,8 @@ optionDesc: string
 
 **起始版本：** 20
 
+<!--Device-ScannerParameter-optionDesc: string--><!--Device-ScannerParameter-optionDesc: string-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## optionIndex
@@ -97,6 +109,8 @@ optionIndex: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-ScannerParameter-optionIndex: int--><!--Device-ScannerParameter-optionIndex: int-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -112,6 +126,8 @@ optionName: string
 
 **起始版本：** 20
 
+<!--Device-ScannerParameter-optionName: string--><!--Device-ScannerParameter-optionName: string-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## optionTitle
@@ -125,6 +141,8 @@ optionTitle: string
 **类型：** string
 
 **起始版本：** 20
+
+<!--Device-ScannerParameter-optionTitle: string--><!--Device-ScannerParameter-optionTitle: string-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -140,6 +158,8 @@ optionType: OptionValueType
 
 **起始版本：** 20
 
+<!--Device-ScannerParameter-optionType: OptionValueType--><!--Device-ScannerParameter-optionType: OptionValueType-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## optionUnit
@@ -153,5 +173,7 @@ optionUnit: PhysicalUnit
 **类型：** [PhysicalUnit](arkts-basicservices-scan-physicalunit-e.md)
 
 **起始版本：** 20
+
+<!--Device-ScannerParameter-optionUnit: PhysicalUnit--><!--Device-ScannerParameter-optionUnit: PhysicalUnit-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework

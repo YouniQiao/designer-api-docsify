@@ -8,6 +8,8 @@ Wi-Fi连接信息。
 
 **起始版本：** 9
 
+<!--Device-wifiManager-interface WifiLinkedInfo--><!--Device-wifiManager-interface WifiLinkedInfo-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## 导入模块
@@ -30,6 +32,8 @@ chload: number
 
 **起始版本：** 9
 
+<!--Device-WifiLinkedInfo-chload: int--><!--Device-WifiLinkedInfo-chload: int-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。
@@ -47,6 +51,8 @@ isHiLinkProNetwork?: boolean
 **类型：** boolean
 
 **起始版本：** 20
+
+<!--Device-WifiLinkedInfo-isHiLinkProNetwork?: boolean--><!--Device-WifiLinkedInfo-isHiLinkProNetwork?: boolean-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -66,6 +72,8 @@ networkId: number
 
 **起始版本：** 9
 
+<!--Device-WifiLinkedInfo-networkId: int--><!--Device-WifiLinkedInfo-networkId: int-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。
@@ -84,6 +92,8 @@ snr: number
 
 **起始版本：** 9
 
+<!--Device-WifiLinkedInfo-snr: int--><!--Device-WifiLinkedInfo-snr: int-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。
@@ -101,6 +111,8 @@ suppState: SuppState
 **类型：** [SuppState](arkts-connectivity-wifimanager-suppstate-e-sys.md)
 
 **起始版本：** 9
+
+<!--Device-WifiLinkedInfo-suppState: SuppState--><!--Device-WifiLinkedInfo-suppState: SuppState-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -121,6 +133,8 @@ wifiTxRxValid?: boolean
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WifiLinkedInfo-wifiTxRxValid?: boolean--><!--Device-WifiLinkedInfo-wifiTxRxValid?: boolean-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 

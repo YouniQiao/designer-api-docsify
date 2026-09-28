@@ -16,6 +16,8 @@ controller: TextAreaController = new TextAreaController();
 
 **Since:** 8
 
+<!--Device-unnamed-declare class TextAreaController extends TextContentControllerBase--><!--Device-unnamed-declare class TextAreaController extends TextContentControllerBase-End-->
+
 **System capability:** 
 - API version 10 and later: SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,6 +32,8 @@ Sets the position of the input cursor.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextAreaController-caretPosition(value: number): void--><!--Device-TextAreaController-caretPosition(value: number): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -51,6 +55,8 @@ Constructor of TextAreaController.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TextAreaController-constructor()--><!--Device-TextAreaController-constructor()-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## setTextSelection
@@ -66,6 +72,8 @@ Sets the text selection area and highlights it when the component is focused. Th
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextAreaController-setTextSelection(selectionStart: number, selectionEnd: number, options?: SelectionOptions): void--><!--Device-TextAreaController-setTextSelection(selectionStart: number, selectionEnd: number, options?: SelectionOptions): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -90,5 +98,7 @@ Exits the editing state.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextAreaController-stopEditing(): void--><!--Device-TextAreaController-stopEditing(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

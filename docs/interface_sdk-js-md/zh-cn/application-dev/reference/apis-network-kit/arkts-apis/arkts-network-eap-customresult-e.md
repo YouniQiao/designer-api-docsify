@@ -10,6 +10,8 @@ enum CustomResult
 
 **起始版本：** 20
 
+<!--Device-eap-enum CustomResult--><!--Device-eap-enum CustomResult-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
 ## RESULT_FAIL
@@ -21,6 +23,8 @@ RESULT_FAIL = 0
 认证流程结束，结果失败。
 
 **起始版本：** 20
+
+<!--Device-CustomResult-RESULT_FAIL = 0--><!--Device-CustomResult-RESULT_FAIL = 0-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
@@ -34,6 +38,8 @@ RESULT_NEXT = 1
 
 **起始版本：** 20
 
+<!--Device-CustomResult-RESULT_NEXT = 1--><!--Device-CustomResult-RESULT_NEXT = 1-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
 ## RESULT_FINISH
@@ -45,5 +51,7 @@ RESULT_FINISH = 2
 校验结束且成功
 
 **起始版本：** 20
+
+<!--Device-CustomResult-RESULT_FINISH = 2--><!--Device-CustomResult-RESULT_FINISH = 2-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap

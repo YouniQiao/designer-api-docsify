@@ -16,6 +16,8 @@ interface AVPlayer
 
 **起始版本：** 9
 
+<!--Device-media-interface AVPlayer--><!--Device-media-interface AVPlayer-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVPlayer
 
 ## 导入模块
@@ -36,7 +38,9 @@ enableCameraPostprocessing(): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVPlayer-enableCameraPostprocessing(): Promise<void>--><!--Device-AVPlayer-enableCameraPostprocessing(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -69,6 +73,8 @@ forceLoadVideo(force: boolean): Promise<void>
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVPlayer-forceLoadVideo(force: boolean): Promise<void>--><!--Device-AVPlayer-forceLoadVideo(force: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -113,6 +119,8 @@ getCurrentTrack(trackType: MediaType): Promise<number>
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVPlayer-getCurrentTrack(trackType: MediaType): Promise<int>--><!--Device-AVPlayer-getCurrentTrack(trackType: MediaType): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -173,6 +181,8 @@ enableStartFrameRateOpt?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVPlayer-enableStartFrameRateOpt?: boolean--><!--Device-AVPlayer-enableStartFrameRateOpt?: boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVPlayer
 
 **系统接口：** 此接口为系统接口。
@@ -190,6 +200,8 @@ privacyType?: audio.AudioPrivacyType
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVPlayer-privacyType?: audio.AudioPrivacyType--><!--Device-AVPlayer-privacyType?: audio.AudioPrivacyType-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVPlayer
 

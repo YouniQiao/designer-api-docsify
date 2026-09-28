@@ -11,6 +11,8 @@ enum PropertyKey
 
 **起始版本：** 7
 
+<!--Device-image-enum PropertyKey--><!--Device-image-enum PropertyKey-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## XTSTYLE_TEMPLATE_NAME
@@ -24,6 +26,8 @@ XTSTYLE_TEMPLATE_NAME = 'HwMnoteXtStyleTemplateName'
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PropertyKey-XTSTYLE_TEMPLATE_NAME = 'HwMnoteXtStyleTemplateName'--><!--Device-PropertyKey-XTSTYLE_TEMPLATE_NAME = 'HwMnoteXtStyleTemplateName'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -41,6 +45,8 @@ XTSTYLE_CUSTOM_LIGHT_AND_SHADOW = 'HwMnoteXtStyleCustomLightAndShadow'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PropertyKey-XTSTYLE_CUSTOM_LIGHT_AND_SHADOW = 'HwMnoteXtStyleCustomLightAndShadow'--><!--Device-PropertyKey-XTSTYLE_CUSTOM_LIGHT_AND_SHADOW = 'HwMnoteXtStyleCustomLightAndShadow'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **系统接口：** 此接口为系统接口。
@@ -56,6 +62,8 @@ XTSTYLE_CUSTOM_SATURATION = 'HwMnoteXtStyleCustomSaturation'
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PropertyKey-XTSTYLE_CUSTOM_SATURATION = 'HwMnoteXtStyleCustomSaturation'--><!--Device-PropertyKey-XTSTYLE_CUSTOM_SATURATION = 'HwMnoteXtStyleCustomSaturation'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -73,6 +81,8 @@ XTSTYLE_CUSTOM_HUE = 'HwMnoteXtStyleCustomHue'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PropertyKey-XTSTYLE_CUSTOM_HUE = 'HwMnoteXtStyleCustomHue'--><!--Device-PropertyKey-XTSTYLE_CUSTOM_HUE = 'HwMnoteXtStyleCustomHue'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **系统接口：** 此接口为系统接口。
@@ -88,6 +98,8 @@ XTSTYLE_EXPOSURE_PARAM = 'HwMnoteXtStyleExposureParam'
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PropertyKey-XTSTYLE_EXPOSURE_PARAM = 'HwMnoteXtStyleExposureParam'--><!--Device-PropertyKey-XTSTYLE_EXPOSURE_PARAM = 'HwMnoteXtStyleExposureParam'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 

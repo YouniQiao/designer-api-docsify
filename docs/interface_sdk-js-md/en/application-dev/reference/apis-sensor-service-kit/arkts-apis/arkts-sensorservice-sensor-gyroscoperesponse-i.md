@@ -12,6 +12,8 @@ Describes the gyroscope sensor data. It extends from [Response](arkts-sensorserv
 
 **Since:** 8
 
+<!--Device-sensor-interface GyroscopeResponse extends Response--><!--Device-sensor-interface GyroscopeResponse extends Response-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## Modules to Import
@@ -32,7 +34,9 @@ Rotational angular velocity of the x-axis. in rad/s. The value is equal to the r
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-GyroscopeResponse-x: double--><!--Device-GyroscopeResponse-x: double-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -48,7 +52,9 @@ Rotational angular velocity of the y-axis. in rad/s. The value is equal to the r
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-GyroscopeResponse-y: double--><!--Device-GyroscopeResponse-y: double-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -64,6 +70,8 @@ Rotational angular velocity of the z-axis. in rad/s. The value is equal to the r
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-GyroscopeResponse-z: double--><!--Device-GyroscopeResponse-z: double-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor

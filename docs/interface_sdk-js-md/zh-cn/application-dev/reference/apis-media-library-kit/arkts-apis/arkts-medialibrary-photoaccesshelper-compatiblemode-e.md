@@ -8,6 +8,8 @@ enum CompatibleMode
 
 **起始版本：** 15
 
+<!--Device-photoAccessHelper-enum CompatibleMode--><!--Device-photoAccessHelper-enum CompatibleMode-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## ORIGINAL_FORMAT_MODE
@@ -20,6 +22,8 @@ ORIGINAL_FORMAT_MODE = 0
 
 **起始版本：** 15
 
+<!--Device-CompatibleMode-ORIGINAL_FORMAT_MODE = 0--><!--Device-CompatibleMode-ORIGINAL_FORMAT_MODE = 0-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## COMPATIBLE_FORMAT_MODE
@@ -31,5 +35,7 @@ COMPATIBLE_FORMAT_MODE = 1
 兼容模式，从HDR视频资源转换为SDR视频资源。
 
 **起始版本：** 15
+
+<!--Device-CompatibleMode-COMPATIBLE_FORMAT_MODE = 1--><!--Device-CompatibleMode-COMPATIBLE_FORMAT_MODE = 1-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core

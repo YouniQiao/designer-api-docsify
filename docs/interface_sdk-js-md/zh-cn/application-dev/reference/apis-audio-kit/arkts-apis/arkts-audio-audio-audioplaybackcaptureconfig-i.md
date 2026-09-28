@@ -17,6 +17,8 @@ interface AudioPlaybackCaptureConfig
 
 **替代接口：** OH_AVScreenCapture in native interface.
 
+<!--Device-audio-interface AudioPlaybackCaptureConfig--><!--Device-audio-interface AudioPlaybackCaptureConfig-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.PlaybackCapture
 
 ## 导入模块
@@ -40,5 +42,7 @@ filterOptions: CaptureFilterOptions
 **废弃版本：** 12
 
 **替代接口：** OH_AVScreenCapture in native interface.
+
+<!--Device-AudioPlaybackCaptureConfig-filterOptions: CaptureFilterOptions--><!--Device-AudioPlaybackCaptureConfig-filterOptions: CaptureFilterOptions-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.PlaybackCapture

@@ -8,6 +8,8 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace installer--><!--Device-unnamed-declare namespace installer-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。

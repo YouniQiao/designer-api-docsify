@@ -8,6 +8,8 @@ declare class BaselineOffsetStyle
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare class BaselineOffsetStyle--><!--Device-unnamed-declare class BaselineOffsetStyle-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
@@ -23,6 +25,8 @@ constructor(value: LengthMetrics)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-BaselineOffsetStyle-constructor(value: LengthMetrics)--><!--Device-BaselineOffsetStyle-constructor(value: LengthMetrics)-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -49,5 +53,7 @@ readonly baselineOffset: number
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-BaselineOffsetStyle-readonly baselineOffset: number--><!--Device-BaselineOffsetStyle-readonly baselineOffset: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

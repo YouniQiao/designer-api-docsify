@@ -8,6 +8,8 @@ interface HotspotConfig
 
 **起始版本：** 9
 
+<!--Device-wifiManager-interface HotspotConfig--><!--Device-wifiManager-interface HotspotConfig-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ band: number
 
 **起始版本：** 9
 
+<!--Device-HotspotConfig-band: int--><!--Device-HotspotConfig-band: int-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ channel?: number
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-HotspotConfig-channel?: int--><!--Device-HotspotConfig-channel?: int-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
@@ -62,6 +68,8 @@ DHCP服务器的IP地址。
 
 **起始版本：** 10
 
+<!--Device-HotspotConfig-ipAddress?: string--><!--Device-HotspotConfig-ipAddress?: string-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +85,8 @@ maxConn: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-HotspotConfig-maxConn: int--><!--Device-HotspotConfig-maxConn: int-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
@@ -94,6 +104,8 @@ preSharedKey: string
 
 **起始版本：** 9
 
+<!--Device-HotspotConfig-preSharedKey: string--><!--Device-HotspotConfig-preSharedKey: string-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
 **系统接口：** 此接口为系统接口。
@@ -110,6 +122,8 @@ securityType: WifiSecurityType
 
 **起始版本：** 9
 
+<!--Device-HotspotConfig-securityType: WifiSecurityType--><!--Device-HotspotConfig-securityType: WifiSecurityType-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
 **系统接口：** 此接口为系统接口。
@@ -125,6 +139,8 @@ ssid: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-HotspotConfig-ssid: string--><!--Device-HotspotConfig-ssid: string-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 

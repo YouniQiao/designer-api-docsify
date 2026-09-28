@@ -8,6 +8,8 @@ Options用于指定在压缩或解压Zip文件时的选项。
 
 **起始版本：** 7
 
+<!--Device-zlib-interface Options--><!--Device-zlib-interface Options-End-->
+
 **系统能力：** SystemCapability.BundleManager.Zlib
 
 ## 导入模块
@@ -28,7 +30,9 @@ level?: CompressLevel
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Options-level?: CompressLevel--><!--Device-Options-level?: CompressLevel-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -44,7 +48,9 @@ memLevel?: MemLevel
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Options-memLevel?: MemLevel--><!--Device-Options-memLevel?: MemLevel-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -60,7 +66,9 @@ parallel?: ParallelStrategy
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-Options-parallel?: ParallelStrategy--><!--Device-Options-parallel?: ParallelStrategy-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -76,7 +84,9 @@ pathSeparatorStrategy?: PathSeparatorStrategy
 
 **起始版本：** 21
 
-**原子化服务API：** 从API版本21开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本21开始，该接口支持在原子化服务中使用。
+
+<!--Device-Options-pathSeparatorStrategy?: PathSeparatorStrategy--><!--Device-Options-pathSeparatorStrategy?: PathSeparatorStrategy-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -92,6 +102,8 @@ strategy?: CompressStrategy
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Options-strategy?: CompressStrategy--><!--Device-Options-strategy?: CompressStrategy-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib

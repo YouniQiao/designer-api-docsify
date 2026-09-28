@@ -14,6 +14,8 @@ enum State
 
 **起始版本：** 10
 
+<!--Device-taskpool-enum State--><!--Device-taskpool-enum State-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## WAITING
@@ -27,6 +29,8 @@ WAITING = 1
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-State-WAITING = 1--><!--Device-State-WAITING = 1-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -42,6 +46,8 @@ RUNNING = 2
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-State-RUNNING = 2--><!--Device-State-RUNNING = 2-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## CANCELED
@@ -55,5 +61,7 @@ CANCELED = 3
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-State-CANCELED = 3--><!--Device-State-CANCELED = 3-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

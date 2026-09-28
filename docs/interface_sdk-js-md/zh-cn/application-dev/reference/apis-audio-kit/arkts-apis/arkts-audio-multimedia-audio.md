@@ -9,6 +9,8 @@
 
 **起始版本：** 7
 
+<!--Device-unnamed-declare namespace audio--><!--Device-unnamed-declare namespace audio-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Multimedia.Audio.Core
 

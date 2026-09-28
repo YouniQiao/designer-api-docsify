@@ -34,6 +34,8 @@ export const enum UriPermission
 
 **起始版本：** 26.0.0
 
+<!--Device-unifiedDataChannel-export const enum UriPermission--><!--Device-unifiedDataChannel-export const enum UriPermission-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## NONE
@@ -48,7 +50,9 @@ NONE = 0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-UriPermission-NONE = 0--><!--Device-UriPermission-NONE = 0-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -64,7 +68,9 @@ READ = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-UriPermission-READ = 1--><!--Device-UriPermission-READ = 1-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -80,7 +86,9 @@ WRITE = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-UriPermission-WRITE = 2--><!--Device-UriPermission-WRITE = 2-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -96,6 +104,8 @@ PERSIST = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-UriPermission-PERSIST = 3--><!--Device-UriPermission-PERSIST = 3-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core

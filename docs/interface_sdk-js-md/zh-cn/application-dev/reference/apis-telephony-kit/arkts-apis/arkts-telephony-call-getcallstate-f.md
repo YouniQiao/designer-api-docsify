@@ -16,6 +16,8 @@ function getCallState(callback: AsyncCallback<CallState>): void
 
 **起始版本：** 6
 
+<!--Device-call-function getCallState(callback: AsyncCallback<CallState>): void--><!--Device-call-function getCallState(callback: AsyncCallback<CallState>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **参数：**
@@ -50,6 +52,8 @@ function getCallState(): Promise<CallState>
 获取当前通话状态。使用Promise异步回调。
 
 **起始版本：** 6
+
+<!--Device-call-function getCallState(): Promise<CallState>--><!--Device-call-function getCallState(): Promise<CallState>-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 

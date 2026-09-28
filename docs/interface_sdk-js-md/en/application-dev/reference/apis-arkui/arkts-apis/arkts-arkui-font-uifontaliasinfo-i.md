@@ -8,6 +8,8 @@ Defines font alias configuration information.
 
 **Since:** 11
 
+<!--Device-font-interface UIFontAliasInfo--><!--Device-font-interface UIFontAliasInfo-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -32,6 +34,8 @@ Alias name.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-UIFontAliasInfo-name: string--><!--Device-UIFontAliasInfo-name: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## weight
@@ -51,5 +55,7 @@ The value options can be **0**, **100**, **400**, **700**, and **900**.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIFontAliasInfo-weight: number--><!--Device-UIFontAliasInfo-weight: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -16,6 +16,8 @@ function getSetting(): InputMethodSetting
 
 **起始版本：** 9
 
+<!--Device-inputMethod-function getSetting(): InputMethodSetting--><!--Device-inputMethod-function getSetting(): InputMethodSetting-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**

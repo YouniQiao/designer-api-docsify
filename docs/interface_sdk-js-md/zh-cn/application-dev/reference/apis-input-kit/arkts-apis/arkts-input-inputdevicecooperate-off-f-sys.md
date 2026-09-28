@@ -20,6 +20,8 @@ function off(type: 'cooperation', callback?: AsyncCallback<void>): void
 
 **替代接口：** [off](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-off-f-sys.md)
 
+<!--Device-inputDeviceCooperate-function off(type: 'cooperation', callback?: AsyncCallback<void>): void--><!--Device-inputDeviceCooperate-function off(type: 'cooperation', callback?: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Cooperator
 
 **系统接口：** 此接口为系统接口。

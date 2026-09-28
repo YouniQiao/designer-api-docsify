@@ -16,6 +16,8 @@ function notifyMetadataBindingEvent(bundleName: string): Promise<string>
 
 **起始版本：** 18
 
+<!--Device-metadataBinding-function notifyMetadataBindingEvent(bundleName: string): Promise<string>--><!--Device-metadataBinding-function notifyMetadataBindingEvent(bundleName: string): Promise<string>-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.MetadataBinding
 
 **系统接口：** 此接口为系统接口。

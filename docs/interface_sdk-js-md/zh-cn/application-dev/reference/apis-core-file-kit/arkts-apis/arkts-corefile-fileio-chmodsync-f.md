@@ -17,6 +17,8 @@ declare function chmodSync(path: string, mode: number): void
 
 **废弃版本：** 9
 
+<!--Device-unnamed-declare function chmodSync(path: string, mode: number): void--><!--Device-unnamed-declare function chmodSync(path: string, mode: number): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**

@@ -16,6 +16,8 @@ function getISOCountryCodeForSim(slotId: number, callback: AsyncCallback<string>
 
 **起始版本：** 6
 
+<!--Device-sim-function getISOCountryCodeForSim(slotId: int, callback: AsyncCallback<string>): void--><!--Device-sim-function getISOCountryCodeForSim(slotId: int, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**
@@ -63,6 +65,8 @@ function getISOCountryCodeForSim(slotId: number): Promise<string>
 获取指定卡槽SIM卡的ISO国家码。使用Promise异步回调。
 
 **起始版本：** 6
+
+<!--Device-sim-function getISOCountryCodeForSim(slotId: int): Promise<string>--><!--Device-sim-function getISOCountryCodeForSim(slotId: int): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

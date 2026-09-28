@@ -4,6 +4,8 @@ Provides methods to accessing bluetooth audio related capabilities.
 
 **Since:** 10
 
+<!--Device-unnamed-declare namespace a2dp--><!--Device-unnamed-declare namespace a2dp-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import

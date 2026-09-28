@@ -10,6 +10,8 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace faceAuth--><!--Device-unnamed-declare namespace faceAuth-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.FaceAuth
 
 ## 导入模块

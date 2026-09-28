@@ -10,6 +10,8 @@ This module provides capabilities such as registering custom fonts and obtaining
 
 **Since:** 9
 
+<!--Device-unnamed-declare namespace font--><!--Device-unnamed-declare namespace font-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import

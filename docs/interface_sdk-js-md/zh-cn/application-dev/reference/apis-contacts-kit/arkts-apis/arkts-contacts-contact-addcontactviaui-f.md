@@ -18,6 +18,8 @@ function addContactViaUI(context: Context, contact: Contact): Promise<number>
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
 
+<!--Device-contact-function addContactViaUI(context: Context, contact: Contact): Promise<number>--><!--Device-contact-function addContactViaUI(context: Context, contact: Contact): Promise<number>-End-->
+
 **系统能力：** SystemCapability.Applications.Contacts
 
 **参数：**

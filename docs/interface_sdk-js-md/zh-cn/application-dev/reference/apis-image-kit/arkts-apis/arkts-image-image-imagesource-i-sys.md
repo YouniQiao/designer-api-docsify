@@ -14,6 +14,8 @@ ImageSource的所有方法均不支持并发调用。
 
 **起始版本：** 6
 
+<!--Device-image-interface ImageSource--><!--Device-image-interface ImageSource-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 ## 导入模块
@@ -39,6 +41,8 @@ createWideGamutSdrPixelMap(): Promise<PixelMap>
 > - 对带有3通道GainMap的HDR图片源，解码其基础图（SDR图），并将输出SDR图的色域扩展为[ColorSpace](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspace-e.md).DISPLAY_BT2020_SRGB。
 
 **起始版本：** 20
+
+<!--Device-ImageSource-createWideGamutSdrPixelMap(): Promise<PixelMap>--><!--Device-ImageSource-createWideGamutSdrPixelMap(): Promise<PixelMap>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -106,6 +110,8 @@ isJpegProgressive(): Promise<boolean>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ImageSource-isJpegProgressive(): Promise<boolean>--><!--Device-ImageSource-isJpegProgressive(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **系统接口：** 此接口为系统接口。
@@ -157,6 +163,8 @@ Exif属性中除"JPEGInterchangeFormat"/"JPEGInterchangeFormatLength"/"GIFLoopCo
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ImageSource-modifyImageAllProperties(records: Record<string, string|null>): Promise<void>--><!--Device-ImageSource-modifyImageAllProperties(records: Record<string, string|null>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 

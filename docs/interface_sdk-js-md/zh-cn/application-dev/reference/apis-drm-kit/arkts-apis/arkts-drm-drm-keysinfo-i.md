@@ -8,6 +8,8 @@ interface KeysInfo
 
 **起始版本：** 11
 
+<!--Device-drm-interface KeysInfo--><!--Device-drm-interface KeysInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
 ## 导入模块
@@ -28,7 +30,9 @@ keyId: Uint8Array
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-KeysInfo-keyId: Uint8Array--><!--Device-KeysInfo-keyId: Uint8Array-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
@@ -44,6 +48,8 @@ value: string
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-KeysInfo-value: string--><!--Device-KeysInfo-value: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core

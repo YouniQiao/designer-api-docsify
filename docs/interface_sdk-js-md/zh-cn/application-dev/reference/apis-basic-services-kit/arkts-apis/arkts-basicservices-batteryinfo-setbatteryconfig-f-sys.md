@@ -16,6 +16,8 @@ function setBatteryConfig(sceneName: string, sceneValue: string): number
 
 **起始版本：** 11
 
+<!--Device-batteryInfo-function setBatteryConfig(sceneName: string, sceneValue: string): number--><!--Device-batteryInfo-function setBatteryConfig(sceneName: string, sceneValue: string): number-End-->
+
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
 **系统接口：** 此接口为系统接口。

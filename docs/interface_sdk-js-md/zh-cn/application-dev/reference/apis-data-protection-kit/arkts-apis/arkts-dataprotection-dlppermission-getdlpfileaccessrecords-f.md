@@ -18,6 +18,8 @@ function getDLPFileAccessRecords(): Promise<Array<AccessedDLPFileInfo>>
 
 **起始版本：** 10
 
+<!--Device-dlpPermission-function getDLPFileAccessRecords(): Promise<Array<AccessedDLPFileInfo>>--><!--Device-dlpPermission-function getDLPFileAccessRecords(): Promise<Array<AccessedDLPFileInfo>>-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **返回值：**
@@ -61,6 +63,8 @@ function getDLPFileAccessRecords(callback: AsyncCallback<Array<AccessedDLPFileIn
 该接口用于获取最近访问的DLP文件记录列表，便于审计追踪和文件使用情况管理。
 
 **起始版本：** 10
+
+<!--Device-dlpPermission-function getDLPFileAccessRecords(callback: AsyncCallback<Array<AccessedDLPFileInfo>>): void--><!--Device-dlpPermission-function getDLPFileAccessRecords(callback: AsyncCallback<Array<AccessedDLPFileInfo>>): void-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 

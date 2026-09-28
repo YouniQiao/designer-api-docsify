@@ -16,6 +16,8 @@ function getDefaultCellularDataSimId(): number
 
 **起始版本：** 10
 
+<!--Device-data-function getDefaultCellularDataSimId(): int--><!--Device-data-function getDefaultCellularDataSimId(): int-End-->
+
 **系统能力：** SystemCapability.Telephony.CellularData
 
 **返回值：**

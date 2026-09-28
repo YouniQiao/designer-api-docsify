@@ -8,6 +8,8 @@ export class OperationItem
 
 **起始版本：** 22
 
+<!--Device-photoAccessHelper-export class OperationItem--><!--Device-photoAccessHelper-export class OperationItem-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
@@ -36,7 +38,9 @@ field?: PhotoKeys
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-OperationItem-field?: PhotoKeys--><!--Device-OperationItem-field?: PhotoKeys-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -54,7 +58,9 @@ operationType: OperationType
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-OperationItem-operationType: OperationType--><!--Device-OperationItem-operationType: OperationType-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -76,6 +82,8 @@ value?: Array<OperationValueType>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-OperationItem-value?: Array<OperationValueType>--><!--Device-OperationItem-value?: Array<OperationValueType>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core

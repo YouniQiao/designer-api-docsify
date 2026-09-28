@@ -12,6 +12,8 @@ export interface NotificationButton
 
 **起始版本：** 11
 
+<!--Device-unnamed-export interface NotificationButton--><!--Device-unnamed-export interface NotificationButton-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## icons
@@ -25,6 +27,8 @@ icons?: Array<image.PixelMap>
 **类型：** Array&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt;
 
 **起始版本：** 11
+
+<!--Device-NotificationButton-icons?: Array<image.PixelMap>--><!--Device-NotificationButton-icons?: Array<image.PixelMap>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -40,6 +44,8 @@ iconsResource?: Array<Resource>
 
 **起始版本：** 12
 
+<!--Device-NotificationButton-iconsResource?: Array<Resource>--><!--Device-NotificationButton-iconsResource?: Array<Resource>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## names
@@ -53,5 +59,7 @@ names?: Array<string>
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 11
+
+<!--Device-NotificationButton-names?: Array<string>--><!--Device-NotificationButton-names?: Array<string>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification

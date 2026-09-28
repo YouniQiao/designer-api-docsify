@@ -8,6 +8,8 @@ declare namespace lang
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare namespace lang--><!--Device-unnamed-declare namespace lang-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块

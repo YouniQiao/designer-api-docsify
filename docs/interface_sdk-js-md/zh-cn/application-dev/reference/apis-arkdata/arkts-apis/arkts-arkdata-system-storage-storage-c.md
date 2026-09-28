@@ -8,6 +8,8 @@ export default class Storage
 
 **废弃版本：** 6
 
+<!--Device-unnamed-export default class Storage--><!--Device-unnamed-export default class Storage-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
 ## 导入模块
@@ -30,6 +32,8 @@ static clear(options?: ClearStorageOptions): void
 **替代接口：** clear
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-Storage-static clear(options?: ClearStorageOptions): void--><!--Device-Storage-static clear(options?: ClearStorageOptions): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
@@ -55,6 +59,8 @@ static delete(options: DeleteStorageOptions): void
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-Storage-static delete(options: DeleteStorageOptions): void--><!--Device-Storage-static delete(options: DeleteStorageOptions): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
 **参数：**
@@ -79,6 +85,8 @@ static get(options: GetStorageOptions): void
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-Storage-static get(options: GetStorageOptions): void--><!--Device-Storage-static get(options: GetStorageOptions): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
 **参数：**
@@ -100,6 +108,8 @@ static set(options: SetStorageOptions): void
 **废弃版本：** 6
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-Storage-static set(options: SetStorageOptions): void--><!--Device-Storage-static set(options: SetStorageOptions): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 

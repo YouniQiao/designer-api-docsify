@@ -8,6 +8,8 @@ Enumerates the slider states.
 
 **Since:** 7
 
+<!--Device-unnamed-declare enum SliderChangeMode--><!--Device-unnamed-declare enum SliderChangeMode-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Begin
@@ -26,6 +28,8 @@ The user touches or clicks the thumb.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-SliderChangeMode-Begin--><!--Device-SliderChangeMode-Begin-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Moving
@@ -43,6 +47,8 @@ The user is dragging the slider.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-SliderChangeMode-Moving--><!--Device-SliderChangeMode-Moving-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -66,6 +72,8 @@ The trigger occurs when an invalid value is restored to the default value, that 
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-SliderChangeMode-End--><!--Device-SliderChangeMode-End-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Click
@@ -83,5 +91,7 @@ The user moves the thumb by touching or clicking the track.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-SliderChangeMode-Click--><!--Device-SliderChangeMode-Click-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

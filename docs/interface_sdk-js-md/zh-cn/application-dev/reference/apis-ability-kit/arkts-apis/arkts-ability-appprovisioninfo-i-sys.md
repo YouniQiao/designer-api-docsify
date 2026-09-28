@@ -8,6 +8,8 @@ export interface AppProvisionInfo
 
 **起始版本：** 10
 
+<!--Device-unnamed-export interface AppProvisionInfo--><!--Device-unnamed-export interface AppProvisionInfo-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -23,6 +25,8 @@ readonly apl: string
 **类型：** string
 
 **起始版本：** 10
+
+<!--Device-AppProvisionInfo-readonly apl: string--><!--Device-AppProvisionInfo-readonly apl: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -40,6 +44,8 @@ readonly appDistributionType: string
 
 **起始版本：** 10
 
+<!--Device-AppProvisionInfo-readonly appDistributionType: string--><!--Device-AppProvisionInfo-readonly appDistributionType: string-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -55,6 +61,8 @@ readonly appIdentifier: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-AppProvisionInfo-readonly appIdentifier: string--><!--Device-AppProvisionInfo-readonly appIdentifier: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -72,6 +80,8 @@ readonly bundleName?: string
 
 **起始版本：** 23
 
+<!--Device-AppProvisionInfo-readonly bundleName?: string--><!--Device-AppProvisionInfo-readonly bundleName?: string-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -87,6 +97,8 @@ readonly certificate: string
 **类型：** string
 
 **起始版本：** 10
+
+<!--Device-AppProvisionInfo-readonly certificate: string--><!--Device-AppProvisionInfo-readonly certificate: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -104,6 +116,8 @@ readonly developerId: string
 
 **起始版本：** 10
 
+<!--Device-AppProvisionInfo-readonly developerId: string--><!--Device-AppProvisionInfo-readonly developerId: string-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -119,6 +133,8 @@ readonly issuer: string
 **类型：** string
 
 **起始版本：** 10
+
+<!--Device-AppProvisionInfo-readonly issuer: string--><!--Device-AppProvisionInfo-readonly issuer: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -136,6 +152,8 @@ readonly organization: string
 
 **起始版本：** 12
 
+<!--Device-AppProvisionInfo-readonly organization: string--><!--Device-AppProvisionInfo-readonly organization: string-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -151,6 +169,8 @@ readonly type: string
 **类型：** string
 
 **起始版本：** 10
+
+<!--Device-AppProvisionInfo-readonly type: string--><!--Device-AppProvisionInfo-readonly type: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -168,6 +188,8 @@ readonly uuid: string
 
 **起始版本：** 10
 
+<!--Device-AppProvisionInfo-readonly uuid: string--><!--Device-AppProvisionInfo-readonly uuid: string-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -183,6 +205,8 @@ readonly validity: Validity
 **类型：** [Validity](arkts-ability-appprovisioninfo-validity-i-sys.md)
 
 **起始版本：** 10
+
+<!--Device-AppProvisionInfo-readonly validity: Validity--><!--Device-AppProvisionInfo-readonly validity: Validity-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -200,6 +224,8 @@ readonly versionCode: number
 
 **起始版本：** 10
 
+<!--Device-AppProvisionInfo-readonly versionCode: long--><!--Device-AppProvisionInfo-readonly versionCode: long-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -215,6 +241,8 @@ readonly versionName: string
 **类型：** string
 
 **起始版本：** 10
+
+<!--Device-AppProvisionInfo-readonly versionName: string--><!--Device-AppProvisionInfo-readonly versionName: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

@@ -12,6 +12,8 @@
 
 **需要权限：** ohos.permission.LOCATION
 
+<!--Device-unnamed-declare namespace geolocation--><!--Device-unnamed-declare namespace geolocation-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 ## 导入模块

@@ -22,6 +22,8 @@ function obtainAllWorks(callback: AsyncCallback<void>): Array<WorkInfo>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-workScheduler-function obtainAllWorks(callback: AsyncCallback<void>): Array<WorkInfo>--><!--Device-workScheduler-function obtainAllWorks(callback: AsyncCallback<void>): Array<WorkInfo>-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
 **参数：**
@@ -86,6 +88,8 @@ function obtainAllWorks(callback: AsyncCallback<Array<WorkInfo>>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-workScheduler-function obtainAllWorks(callback: AsyncCallback<Array<WorkInfo>>): void--><!--Device-workScheduler-function obtainAllWorks(callback: AsyncCallback<Array<WorkInfo>>): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
 **参数：**
@@ -132,6 +136,8 @@ function obtainAllWorks(): Promise<Array<WorkInfo>>
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-workScheduler-function obtainAllWorks(): Promise<Array<WorkInfo>>--><!--Device-workScheduler-function obtainAllWorks(): Promise<Array<WorkInfo>>-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 

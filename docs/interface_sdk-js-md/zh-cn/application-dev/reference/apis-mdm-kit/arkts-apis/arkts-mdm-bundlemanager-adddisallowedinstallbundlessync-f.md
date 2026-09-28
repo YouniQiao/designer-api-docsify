@@ -20,6 +20,8 @@ function addDisallowedInstallBundlesSync(admin: Want, appIds: Array<string>, acc
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-bundleManager-function addDisallowedInstallBundlesSync(admin: Want, appIds: Array<string>, accountId?: number): void--><!--Device-bundleManager-function addDisallowedInstallBundlesSync(admin: Want, appIds: Array<string>, accountId?: number): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**

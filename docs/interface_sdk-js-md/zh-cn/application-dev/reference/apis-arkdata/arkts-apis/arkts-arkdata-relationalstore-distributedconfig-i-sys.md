@@ -8,6 +8,8 @@ interface DistributedConfig
 
 **起始版本：** 10
 
+<!--Device-relationalStore-interface DistributedConfig--><!--Device-relationalStore-interface DistributedConfig-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## 导入模块
@@ -31,6 +33,8 @@ references?: Array<Reference>
 **类型：** Array&lt;[Reference](arkts-arkdata-relationalstore-reference-i-sys.md)&gt;
 
 **起始版本：** 11
+
+<!--Device-DistributedConfig-references?: Array<Reference>--><!--Device-DistributedConfig-references?: Array<Reference>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 

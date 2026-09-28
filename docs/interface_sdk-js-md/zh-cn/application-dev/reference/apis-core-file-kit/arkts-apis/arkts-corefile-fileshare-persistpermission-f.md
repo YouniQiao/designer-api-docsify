@@ -18,6 +18,8 @@ function persistPermission(policies: Array<PolicyInfo>): Promise<void>
 
 **需要权限：** ohos.permission.FILE_ACCESS_PERSIST
 
+<!--Device-fileShare-function persistPermission(policies: Array<PolicyInfo>): Promise<void>--><!--Device-fileShare-function persistPermission(policies: Array<PolicyInfo>): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
 **参数：**

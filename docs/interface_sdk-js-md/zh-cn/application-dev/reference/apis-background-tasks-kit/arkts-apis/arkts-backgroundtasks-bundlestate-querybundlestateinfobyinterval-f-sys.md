@@ -25,6 +25,8 @@ Queries usage information about each bundle within a specified period at a speci
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-bundleState-function queryBundleStateInfoByInterval(    byInterval: IntervalType,    begin: number,    end: number,    callback: AsyncCallback<Array<BundleStateInfo>>  ): void--><!--Device-bundleState-function queryBundleStateInfoByInterval(    byInterval: IntervalType,    begin: number,    end: number,    callback: AsyncCallback<Array<BundleStateInfo>>  ): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +79,8 @@ Queries usage information about each bundle within a specified period at a speci
 **废弃版本：** 9
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
+
+<!--Device-bundleState-function queryBundleStateInfoByInterval(    byInterval: IntervalType,    begin: number,    end: number  ): Promise<Array<BundleStateInfo>>--><!--Device-bundleState-function queryBundleStateInfoByInterval(    byInterval: IntervalType,    begin: number,    end: number  ): Promise<Array<BundleStateInfo>>-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 

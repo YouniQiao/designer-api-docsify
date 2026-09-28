@@ -12,4 +12,6 @@ After a custom component transitions from the inactive state to the active state
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-unnamed-export declare const ComponentActive: MethodDecorator--><!--Device-unnamed-export declare const ComponentActive: MethodDecorator-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -22,6 +22,8 @@ function offRefueling(callback?: Callback<RefuelingInfo>): void
 
 **原子化服务API：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
 
+<!--Device-carAwareness-function offRefueling(callback?: Callback<RefuelingInfo>): void--><!--Device-carAwareness-function offRefueling(callback?: Callback<RefuelingInfo>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.CarAwareness
 
 **参数：**

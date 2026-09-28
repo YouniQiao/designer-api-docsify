@@ -18,6 +18,8 @@ function exportSysEvents(queryArg: QueryArg, rules: QueryRule[]): number
 
 **需要权限：** ohos.permission.READ_DFX_SYSEVENT
 
+<!--Device-hiSysEvent-function exportSysEvents(queryArg: QueryArg, rules: QueryRule[]): long--><!--Device-hiSysEvent-function exportSysEvents(queryArg: QueryArg, rules: QueryRule[]): long-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 
 **系统接口：** 此接口为系统接口。

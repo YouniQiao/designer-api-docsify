@@ -8,6 +8,8 @@ Indicates the type of IMS service.
 
 **起始版本：** 9
 
+<!--Device-radio-export enum ImsServiceType--><!--Device-radio-export enum ImsServiceType-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -21,6 +23,8 @@ TYPE_VOICE = 0
 Indicates voice service.
 
 **起始版本：** 9
+
+<!--Device-ImsServiceType-TYPE_VOICE = 0--><!--Device-ImsServiceType-TYPE_VOICE = 0-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -36,6 +40,8 @@ Indicates video service.
 
 **起始版本：** 9
 
+<!--Device-ImsServiceType-TYPE_VIDEO = 1--><!--Device-ImsServiceType-TYPE_VIDEO = 1-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -50,6 +56,8 @@ Indicates UT service.
 
 **起始版本：** 9
 
+<!--Device-ImsServiceType-TYPE_UT = 2--><!--Device-ImsServiceType-TYPE_UT = 2-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -63,6 +71,8 @@ TYPE_SMS = 3
 Indicates SMS service.
 
 **起始版本：** 9
+
+<!--Device-ImsServiceType-TYPE_SMS = 3--><!--Device-ImsServiceType-TYPE_SMS = 3-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

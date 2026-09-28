@@ -20,6 +20,8 @@ function startScan(filters: ScanFilters[] | null, options?: ScanOptions): Promis
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-scan-function startScan(filters: ScanFilters[] | null, options?: ScanOptions): Promise<void>--><!--Device-scan-function startScan(filters: ScanFilters[] | null, options?: ScanOptions): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **参数：**

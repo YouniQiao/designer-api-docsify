@@ -8,6 +8,8 @@ type ChangedType = 'add' | 'remove'
 
 **起始版本：** 9
 
+<!--Device-inputDevice-type ChangedType = 'add' | 'remove'--><!--Device-inputDevice-type ChangedType = 'add' | 'remove'-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 | 类型 | 说明 |

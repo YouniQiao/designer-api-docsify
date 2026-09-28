@@ -8,6 +8,8 @@ enum SyncType
 
 **起始版本：** 11
 
+<!--Device-asset-enum SyncType--><!--Device-asset-enum SyncType-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 ## NEVER
@@ -21,6 +23,8 @@ NEVER = 0
 **起始版本：** 11
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-SyncType-NEVER = 0--><!--Device-SyncType-NEVER = 0-End-->
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -38,6 +42,8 @@ THIS_DEVICE = 1 << 0
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
+<!--Device-SyncType-THIS_DEVICE = 1 << 0--><!--Device-SyncType-THIS_DEVICE = 1 << 0-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 ## TRUSTED_DEVICE
@@ -51,6 +57,8 @@ TRUSTED_DEVICE = 1 << 1
 **起始版本：** 11
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-SyncType-TRUSTED_DEVICE = 1 << 1--><!--Device-SyncType-TRUSTED_DEVICE = 1 << 1-End-->
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -67,5 +75,7 @@ TRUSTED_ACCOUNT = 1 << 2
 **起始版本：** 12
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-SyncType-TRUSTED_ACCOUNT = 1 << 2--><!--Device-SyncType-TRUSTED_ACCOUNT = 1 << 2-End-->
 
 **系统能力：** SystemCapability.Security.Asset

@@ -10,6 +10,8 @@ This module provides the capability to manage and invoke Functions, including qu
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-unnamed-declare namespace functionManager--><!--Device-unnamed-declare namespace functionManager-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **System API:** This is a system API.

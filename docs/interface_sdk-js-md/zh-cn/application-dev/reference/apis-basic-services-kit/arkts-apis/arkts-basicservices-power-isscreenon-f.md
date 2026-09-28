@@ -20,6 +20,8 @@ function isScreenOn(callback: AsyncCallback<boolean>): void
 
 **替代接口：** [isActive](arkts-basicservices-power-isactive-f.md)
 
+<!--Device-power-function isScreenOn(callback: AsyncCallback<boolean>): void--><!--Device-power-function isScreenOn(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 
 **参数：**
@@ -56,6 +58,8 @@ function isScreenOn(): Promise<boolean>
 **废弃版本：** 9
 
 **替代接口：** [isActive](arkts-basicservices-power-isactive-f.md)
+
+<!--Device-power-function isScreenOn(): Promise<boolean>--><!--Device-power-function isScreenOn(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 

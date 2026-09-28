@@ -16,6 +16,8 @@ function getOperatorNameSync(slotId: number): string
 
 **起始版本：** 10
 
+<!--Device-radio-function getOperatorNameSync(slotId: int): string--><!--Device-radio-function getOperatorNameSync(slotId: int): string-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**

@@ -4,6 +4,8 @@
 
 **起始版本：** 22
 
+<!--Device-unnamed-declare namespace notificationExtensionSubscription--><!--Device-unnamed-declare namespace notificationExtensionSubscription-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## 导入模块

@@ -19,6 +19,8 @@ function getTotalBytes(path: string, callback: AsyncCallback<number>): void
 
 **替代接口：** getTotalBytes
 
+<!--Device-Statfs-function getTotalBytes(path: string, callback: AsyncCallback<number>): void--><!--Device-Statfs-function getTotalBytes(path: string, callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -60,6 +62,8 @@ function getTotalBytes(path: string): Promise<number>
 **废弃版本：** 9
 
 **替代接口：** getTotalBytes
+
+<!--Device-Statfs-function getTotalBytes(path: string): Promise<number>--><!--Device-Statfs-function getTotalBytes(path: string): Promise<number>-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

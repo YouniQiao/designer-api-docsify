@@ -16,6 +16,8 @@ export interface CachedGnssLocationsRequest
 
 **需要权限：** ohos.permission.LOCATION
 
+<!--Device-geolocation-export interface CachedGnssLocationsRequest--><!--Device-geolocation-export interface CachedGnssLocationsRequest-End-->
+
 **系统能力：** SystemCapability.Location.Location.Gnss
 
 ## 导入模块
@@ -40,6 +42,8 @@ reportingPeriodSec: number
 
 **替代接口：** [reportingPeriodSec](arkts-location-geolocationmanager-cachedgnsslocationsrequest-i.md#reportingperiodsec)
 
+<!--Device-CachedGnssLocationsRequest-reportingPeriodSec: number--><!--Device-CachedGnssLocationsRequest-reportingPeriodSec: number-End-->
+
 **系统能力：** SystemCapability.Location.Location.Gnss
 
 ## wakeUpCacheQueueFull
@@ -57,5 +61,7 @@ GNSS芯片底层缓存队列满之后是否主动唤醒AP芯片。true表示GNSS
 **废弃版本：** 9
 
 **替代接口：** [wakeUpCacheQueueFull](arkts-location-geolocationmanager-cachedgnsslocationsrequest-i.md#wakeupcachequeuefull)
+
+<!--Device-CachedGnssLocationsRequest-wakeUpCacheQueueFull: boolean--><!--Device-CachedGnssLocationsRequest-wakeUpCacheQueueFull: boolean-End-->
 
 **系统能力：** SystemCapability.Location.Location.Gnss

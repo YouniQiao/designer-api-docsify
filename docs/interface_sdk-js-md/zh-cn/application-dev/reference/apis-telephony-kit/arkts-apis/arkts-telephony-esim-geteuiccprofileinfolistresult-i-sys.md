@@ -8,6 +8,8 @@ export interface GetEuiccProfileInfoListResult
 
 **起始版本：** 18
 
+<!--Device-eSIM-export interface GetEuiccProfileInfoListResult--><!--Device-eSIM-export interface GetEuiccProfileInfoListResult-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ eUICC是否可移除。true表示可移除，false表示不可移除。
 
 **起始版本：** 18
 
+<!--Device-GetEuiccProfileInfoListResult-isRemovable: boolean--><!--Device-GetEuiccProfileInfoListResult-isRemovable: boolean-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -46,6 +50,8 @@ profiles: Array<EuiccProfile>
 
 **起始版本：** 18
 
+<!--Device-GetEuiccProfileInfoListResult-profiles: Array<EuiccProfile>--><!--Device-GetEuiccProfileInfoListResult-profiles: Array<EuiccProfile>-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +67,8 @@ responseResult: ResultCode
 **类型：** [ResultCode](arkts-telephony-esim-resultcode-e-sys.md)
 
 **起始版本：** 18
+
+<!--Device-GetEuiccProfileInfoListResult-responseResult: ResultCode--><!--Device-GetEuiccProfileInfoListResult-responseResult: ResultCode-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 

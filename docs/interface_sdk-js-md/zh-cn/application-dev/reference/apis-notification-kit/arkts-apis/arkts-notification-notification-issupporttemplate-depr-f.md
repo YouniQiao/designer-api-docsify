@@ -19,6 +19,8 @@ function isSupportTemplate(templateName: string, callback: AsyncCallback<boolean
 
 **替代接口：** [isSupportTemplate](arkts-notification-notificationmanager-issupporttemplate-f.md)
 
+<!--Device-notification-function isSupportTemplate(templateName: string, callback: AsyncCallback<boolean>): void--><!--Device-notification-function isSupportTemplate(templateName: string, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **参数：**
@@ -44,6 +46,8 @@ function isSupportTemplate(templateName: string): Promise<boolean>
 **废弃版本：** 9
 
 **替代接口：** [isSupportTemplate](arkts-notification-notificationmanager-issupporttemplate-f.md)
+
+<!--Device-notification-function isSupportTemplate(templateName: string): Promise<boolean>--><!--Device-notification-function isSupportTemplate(templateName: string): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

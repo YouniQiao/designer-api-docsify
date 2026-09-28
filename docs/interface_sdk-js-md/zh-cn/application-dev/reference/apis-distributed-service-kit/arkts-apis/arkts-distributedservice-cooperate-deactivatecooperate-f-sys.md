@@ -18,6 +18,8 @@ function deactivateCooperate(isUnchained: boolean, callback: AsyncCallback<void>
 
 **需要权限：** ohos.permission.COOPERATE_MANAGER
 
+<!--Device-cooperate-function deactivateCooperate(isUnchained: boolean, callback: AsyncCallback<void>): void--><!--Device-cooperate-function deactivateCooperate(isUnchained: boolean, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
 
 **系统接口：** 此接口为系统接口。
@@ -69,6 +71,8 @@ function deactivateCooperate(isUnchained: boolean): Promise<void>
 **起始版本：** 11
 
 **需要权限：** ohos.permission.COOPERATE_MANAGER
+
+<!--Device-cooperate-function deactivateCooperate(isUnchained: boolean): Promise<void>--><!--Device-cooperate-function deactivateCooperate(isUnchained: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
 

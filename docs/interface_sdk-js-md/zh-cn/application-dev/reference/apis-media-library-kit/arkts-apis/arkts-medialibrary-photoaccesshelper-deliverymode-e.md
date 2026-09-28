@@ -10,6 +10,8 @@ enum DeliveryMode
 
 **起始版本：** 11
 
+<!--Device-photoAccessHelper-enum DeliveryMode--><!--Device-photoAccessHelper-enum DeliveryMode-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## FAST_MODE
@@ -24,6 +26,8 @@ FAST_MODE = 0
 
 **起始版本：** 11
 
+<!--Device-DeliveryMode-FAST_MODE = 0--><!--Device-DeliveryMode-FAST_MODE = 0-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## HIGH_QUALITY_MODE
@@ -37,6 +41,8 @@ HIGH_QUALITY_MODE = 1
 针对分段式拍照或视频场景，若当前存在高质量图或视频，则立即返回高质量图或视频的请求结果回调；若当前存在低质量图或视频，则申请高质量图或视频的生成任务，待高质量图或视频生成后，返回高质量图或视频的请求结果回调。
 
 **起始版本：** 11
+
+<!--Device-DeliveryMode-HIGH_QUALITY_MODE = 1--><!--Device-DeliveryMode-HIGH_QUALITY_MODE = 1-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -54,5 +60,7 @@ BALANCE_MODE = 2
 则立即返回低质量视频的请求结果回调。
 
 **起始版本：** 11
+
+<!--Device-DeliveryMode-BALANCE_MODE = 2--><!--Device-DeliveryMode-BALANCE_MODE = 2-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core

@@ -16,6 +16,8 @@ export interface CustomizeData
 
 **替代接口：** [Metadata](arkts-ability-metadata-i.md)
 
+<!--Device-unnamed-export interface CustomizeData--><!--Device-unnamed-export interface CustomizeData-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## extra
@@ -35,6 +37,8 @@ extra: string
 **废弃版本：** 9
 
 **替代接口：** resource
+
+<!--Device-CustomizeData-extra: string--><!--Device-CustomizeData-extra: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -56,6 +60,8 @@ name: string
 
 **替代接口：** name
 
+<!--Device-CustomizeData-name: string--><!--Device-CustomizeData-name: string-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## value
@@ -75,5 +81,7 @@ value: string
 **废弃版本：** 9
 
 **替代接口：** value
+
+<!--Device-CustomizeData-value: string--><!--Device-CustomizeData-value: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework

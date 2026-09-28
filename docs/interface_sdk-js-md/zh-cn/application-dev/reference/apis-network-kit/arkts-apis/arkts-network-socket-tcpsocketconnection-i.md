@@ -12,6 +12,8 @@ TCPSocketConnection连接，即TCPSocket客户端与服务端的连接。在调�
 
 **起始版本：** 10
 
+<!--Device-socket-export interface TCPSocketConnection--><!--Device-socket-export interface TCPSocketConnection-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块
@@ -31,6 +33,8 @@ close(callback: AsyncCallback<void>): void
 **起始版本：** 10
 
 **需要权限：** ohos.permission.INTERNET
+
+<!--Device-TCPSocketConnection-close(callback: AsyncCallback<void>): void--><!--Device-TCPSocketConnection-close(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -81,6 +85,8 @@ close(): Promise<void>
 
 **需要权限：** ohos.permission.INTERNET
 
+<!--Device-TCPSocketConnection-close(): Promise<void>--><!--Device-TCPSocketConnection-close(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
@@ -121,6 +127,8 @@ getLocalAddress(): Promise<NetAddress>
 获取TCPSocketConnection连接的本地Socket地址。使用Promise异步回调。
 
 **起始版本：** 12
+
+<!--Device-TCPSocketConnection-getLocalAddress(): Promise<NetAddress>--><!--Device-TCPSocketConnection-getLocalAddress(): Promise<NetAddress>-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -193,6 +201,8 @@ getRemoteAddress(callback: AsyncCallback<NetAddress>): void
 
 **需要权限：** ohos.permission.INTERNET
 
+<!--Device-TCPSocketConnection-getRemoteAddress(callback: AsyncCallback<NetAddress>): void--><!--Device-TCPSocketConnection-getRemoteAddress(callback: AsyncCallback<NetAddress>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -246,6 +256,8 @@ getRemoteAddress(): Promise<NetAddress>
 
 **需要权限：** ohos.permission.INTERNET
 
+<!--Device-TCPSocketConnection-getRemoteAddress(): Promise<NetAddress>--><!--Device-TCPSocketConnection-getRemoteAddress(): Promise<NetAddress>-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
@@ -298,6 +310,8 @@ getSocketFd(): Promise<number>
 
 **需要权限：** ohos.permission.INTERNET
 
+<!--Device-TCPSocketConnection-getSocketFd(): Promise<int>--><!--Device-TCPSocketConnection-getSocketFd(): Promise<int>-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
@@ -346,6 +360,8 @@ off(type: 'message', callback?: Callback<SocketMessageInfo>): void
 取消订阅TCPSocketConnection连接的接收消息事件。使用callback异步回调。
 
 **起始版本：** 10
+
+<!--Device-TCPSocketConnection-off(type: 'message', callback?: Callback<SocketMessageInfo>): void--><!--Device-TCPSocketConnection-off(type: 'message', callback?: Callback<SocketMessageInfo>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -398,6 +414,8 @@ off(type: 'close', callback?: Callback<void>): void
 
 **起始版本：** 10
 
+<!--Device-TCPSocketConnection-off(type: 'close', callback?: Callback<void>): void--><!--Device-TCPSocketConnection-off(type: 'close', callback?: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -439,6 +457,8 @@ off(type: 'error', callback?: ErrorCallback): void
 取消订阅TCPSocketConnection连接的error事件。使用callback异步回调。
 
 **起始版本：** 10
+
+<!--Device-TCPSocketConnection-off(type: 'error', callback?: ErrorCallback): void--><!--Device-TCPSocketConnection-off(type: 'error', callback?: ErrorCallback): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -482,6 +502,8 @@ on(type: 'message', callback: Callback<SocketMessageInfo>): void
 订阅TCPSocketConnection连接的接收消息事件。使用callback异步回调。
 
 **起始版本：** 10
+
+<!--Device-TCPSocketConnection-on(type: 'message', callback: Callback<SocketMessageInfo>): void--><!--Device-TCPSocketConnection-on(type: 'message', callback: Callback<SocketMessageInfo>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -531,6 +553,8 @@ on(type: 'close', callback: Callback<void>): void
 
 **起始版本：** 10
 
+<!--Device-TCPSocketConnection-on(type: 'close', callback: Callback<void>): void--><!--Device-TCPSocketConnection-on(type: 'close', callback: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -569,6 +593,8 @@ on(type: 'error', callback: ErrorCallback): void
 订阅TCPSocketConnection连接的error事件。使用callback异步回调。
 
 **起始版本：** 10
+
+<!--Device-TCPSocketConnection-on(type: 'error', callback: ErrorCallback): void--><!--Device-TCPSocketConnection-on(type: 'error', callback: ErrorCallback): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -614,6 +640,8 @@ send(options: TCPSendOptions, callback: AsyncCallback<void>): void
 **起始版本：** 10
 
 **需要权限：** ohos.permission.INTERNET
+
+<!--Device-TCPSocketConnection-send(options: TCPSendOptions, callback: AsyncCallback<void>): void--><!--Device-TCPSocketConnection-send(options: TCPSendOptions, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -666,6 +694,8 @@ send(options: TCPSendOptions): Promise<void>
 **起始版本：** 10
 
 **需要权限：** ohos.permission.INTERNET
+
+<!--Device-TCPSocketConnection-send(options: TCPSendOptions): Promise<void>--><!--Device-TCPSocketConnection-send(options: TCPSendOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -720,5 +750,7 @@ clientId: number
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-TCPSocketConnection-clientId: int--><!--Device-TCPSocketConnection-clientId: int-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack

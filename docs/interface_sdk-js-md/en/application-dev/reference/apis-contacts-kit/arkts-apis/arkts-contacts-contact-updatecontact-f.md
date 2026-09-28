@@ -22,6 +22,8 @@ Updates a contact. This API uses an asynchronous callback to return the result.
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
+<!--Device-contact-function updateContact(contact: Contact, callback: AsyncCallback<void>): void--><!--Device-contact-function updateContact(contact: Contact, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
@@ -73,6 +75,8 @@ Updates a contact. This API uses an asynchronous callback to return the result.
 **Since:** 10
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS
+
+<!--Device-contact-function updateContact(context: Context, contact: Contact, callback: AsyncCallback<void>): void--><!--Device-contact-function updateContact(context: Context, contact: Contact, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -144,6 +148,8 @@ Updates a contact. (The contact attribute list can be imported.) This API uses a
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
+<!--Device-contact-function updateContact(contact: Contact, attrs: ContactAttributes, callback: AsyncCallback<void>): void--><!--Device-contact-function updateContact(contact: Contact, attrs: ContactAttributes, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
@@ -197,6 +203,8 @@ Updates a contact. (The contact attribute list can be imported.) This API uses a
 **Since:** 10
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS
+
+<!--Device-contact-function updateContact(context: Context, contact: Contact, attrs: ContactAttributes, callback: AsyncCallback<void>): void--><!--Device-contact-function updateContact(context: Context, contact: Contact, attrs: ContactAttributes, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -270,6 +278,8 @@ Updates a contact. (The contact attribute list can be imported.) This API uses a
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
+<!--Device-contact-function updateContact(contact: Contact, attrs?: ContactAttributes): Promise<void>--><!--Device-contact-function updateContact(contact: Contact, attrs?: ContactAttributes): Promise<void>-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
@@ -323,6 +333,8 @@ Updates a contact. (The contact attribute list can be imported.) This API uses a
 **Since:** 10
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS
+
+<!--Device-contact-function updateContact(context: Context, contact: Contact, attrs?: ContactAttributes): Promise<void>--><!--Device-contact-function updateContact(context: Context, contact: Contact, attrs?: ContactAttributes): Promise<void>-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 

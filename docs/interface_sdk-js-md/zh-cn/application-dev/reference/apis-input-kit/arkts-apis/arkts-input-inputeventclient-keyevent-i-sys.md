@@ -8,6 +8,8 @@ interface KeyEvent
 
 **起始版本：** 8
 
+<!--Device-inputEventClient-interface KeyEvent--><!--Device-inputEventClient-interface KeyEvent-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ displayId? : number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-KeyEvent-displayId? : int--><!--Device-KeyEvent-displayId? : int-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ true表示可以被拦截，false表示不可被拦截。
 **类型：** boolean
 
 **起始版本：** 8
+
+<!--Device-KeyEvent-isIntercepted: boolean--><!--Device-KeyEvent-isIntercepted: boolean-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
@@ -68,6 +74,8 @@ true表示按键按下，false表示按键抬起。
 
 **起始版本：** 8
 
+<!--Device-KeyEvent-isPressed: boolean--><!--Device-KeyEvent-isPressed: boolean-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **系统接口：** 此接口为系统接口。
@@ -84,6 +92,8 @@ keyCode: number
 
 **起始版本：** 8
 
+<!--Device-KeyEvent-keyCode: int--><!--Device-KeyEvent-keyCode: int-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **系统接口：** 此接口为系统接口。
@@ -99,6 +109,8 @@ keyDownDuration: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-KeyEvent-keyDownDuration: int--><!--Device-KeyEvent-keyDownDuration: int-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 

@@ -11,6 +11,8 @@ export declare class BoidsSimWorld
 
 **起始版本：** 26.0.0
 
+<!--Device-unnamed-export declare class BoidsSimWorld--><!--Device-unnamed-export declare class BoidsSimWorld-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **系统接口：** 此接口为系统接口。
@@ -26,6 +28,8 @@ addBoidsSimComponent(node: Node, param: BoidsSimParameters): void
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BoidsSimWorld-addBoidsSimComponent(node: Node, param: BoidsSimParameters): void--><!--Device-BoidsSimWorld-addBoidsSimComponent(node: Node, param: BoidsSimParameters): void-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -76,6 +80,8 @@ addBoidsSimGravityComponent(node: Node, param: BoidsSimGravityParameters): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BoidsSimWorld-addBoidsSimGravityComponent(node: Node, param: BoidsSimGravityParameters): void--><!--Device-BoidsSimWorld-addBoidsSimGravityComponent(node: Node, param: BoidsSimGravityParameters): void-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **系统接口：** 此接口为系统接口。
@@ -119,6 +125,8 @@ addBoidsSimRepulsionComponent(node: Node, param: BoidsSimRepulsionParameters): v
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BoidsSimWorld-addBoidsSimRepulsionComponent(node: Node, param: BoidsSimRepulsionParameters): void--><!--Device-BoidsSimWorld-addBoidsSimRepulsionComponent(node: Node, param: BoidsSimRepulsionParameters): void-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -164,6 +172,8 @@ getBoidsSimComponent(node: Node): BoidsSimParameters | null
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BoidsSimWorld-getBoidsSimComponent(node: Node): BoidsSimParameters | null--><!--Device-BoidsSimWorld-getBoidsSimComponent(node: Node): BoidsSimParameters | null-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **系统接口：** 此接口为系统接口。
@@ -204,6 +214,8 @@ getBoidsSimGravityComponent(node: Node): BoidsSimGravityParameters | null
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BoidsSimWorld-getBoidsSimGravityComponent(node: Node): BoidsSimGravityParameters | null--><!--Device-BoidsSimWorld-getBoidsSimGravityComponent(node: Node): BoidsSimGravityParameters | null-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -246,6 +258,8 @@ getBoidsSimRepulsionComponent(node: Node): BoidsSimRepulsionParameters | null
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BoidsSimWorld-getBoidsSimRepulsionComponent(node: Node): BoidsSimRepulsionParameters | null--><!--Device-BoidsSimWorld-getBoidsSimRepulsionComponent(node: Node): BoidsSimRepulsionParameters | null-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **系统接口：** 此接口为系统接口。
@@ -287,6 +301,8 @@ pause(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BoidsSimWorld-pause(): void--><!--Device-BoidsSimWorld-pause(): void-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **系统接口：** 此接口为系统接口。
@@ -313,6 +329,8 @@ play(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BoidsSimWorld-play(): void--><!--Device-BoidsSimWorld-play(): void-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **系统接口：** 此接口为系统接口。
@@ -338,6 +356,8 @@ removeBoidsSimComponent(node: Node): void
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BoidsSimWorld-removeBoidsSimComponent(node: Node): void--><!--Device-BoidsSimWorld-removeBoidsSimComponent(node: Node): void-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -371,6 +391,8 @@ removeBoidsSimGravityComponent(node: Node): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BoidsSimWorld-removeBoidsSimGravityComponent(node: Node): void--><!--Device-BoidsSimWorld-removeBoidsSimGravityComponent(node: Node): void-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **系统接口：** 此接口为系统接口。
@@ -403,6 +425,8 @@ removeBoidsSimRepulsionComponent(node: Node): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BoidsSimWorld-removeBoidsSimRepulsionComponent(node: Node): void--><!--Device-BoidsSimWorld-removeBoidsSimRepulsionComponent(node: Node): void-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **系统接口：** 此接口为系统接口。
@@ -434,6 +458,8 @@ setBoidsSimComponent(node: Node, param: BoidsSimParameters): void
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BoidsSimWorld-setBoidsSimComponent(node: Node, param: BoidsSimParameters): void--><!--Device-BoidsSimWorld-setBoidsSimComponent(node: Node, param: BoidsSimParameters): void-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -474,6 +500,8 @@ setBoidsSimGravityComponent(node: Node, param: BoidsSimGravityParameters): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BoidsSimWorld-setBoidsSimGravityComponent(node: Node, param: BoidsSimGravityParameters): void--><!--Device-BoidsSimWorld-setBoidsSimGravityComponent(node: Node, param: BoidsSimGravityParameters): void-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **系统接口：** 此接口为系统接口。
@@ -507,6 +535,8 @@ setBoidsSimRepulsionComponent(node: Node, param: BoidsSimRepulsionParameters): v
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BoidsSimWorld-setBoidsSimRepulsionComponent(node: Node, param: BoidsSimRepulsionParameters): void--><!--Device-BoidsSimWorld-setBoidsSimRepulsionComponent(node: Node, param: BoidsSimRepulsionParameters): void-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -542,6 +572,8 @@ stop(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BoidsSimWorld-stop(): void--><!--Device-BoidsSimWorld-stop(): void-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **系统接口：** 此接口为系统接口。
@@ -569,6 +601,8 @@ get isPlaying(): boolean
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BoidsSimWorld-get isPlaying(): boolean--><!--Device-BoidsSimWorld-get isPlaying(): boolean-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 

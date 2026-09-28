@@ -6,6 +6,8 @@ declare class DataShareExtensionAbility
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare class DataShareExtensionAbility--><!--Device-unnamed-declare class DataShareExtensionAbility-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Provider
 
 **系统接口：** 此接口为系统接口。
@@ -27,6 +29,8 @@ batchInsert?(uri: string, valueBuckets: Array<ValuesBucket>, callback: AsyncCall
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareExtensionAbility-batchInsert?(uri: string, valueBuckets: Array<ValuesBucket>, callback: AsyncCallback<number>): void--><!--Device-DataShareExtensionAbility-batchInsert?(uri: string, valueBuckets: Array<ValuesBucket>, callback: AsyncCallback<number>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Provider
 
@@ -77,6 +81,8 @@ batchUpdate?(
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareExtensionAbility-batchUpdate?(    operations: Record<string, Array<UpdateOperation>>,    callback: AsyncCallback<Record<string, Array<number>>>  ): void--><!--Device-DataShareExtensionAbility-batchUpdate?(    operations: Record<string, Array<UpdateOperation>>,    callback: AsyncCallback<Record<string, Array<number>>>  ): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Provider
 
@@ -135,6 +141,8 @@ delete?(uri: string, predicates: dataSharePredicates.DataSharePredicates, callba
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareExtensionAbility-delete?(uri: string, predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<number>): void--><!--Device-DataShareExtensionAbility-delete?(uri: string, predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Provider
 
 **系统接口：** 此接口为系统接口。
@@ -181,6 +189,8 @@ denormalizeUri?(uri: string, callback: AsyncCallback<string>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareExtensionAbility-denormalizeUri?(uri: string, callback: AsyncCallback<string>): void--><!--Device-DataShareExtensionAbility-denormalizeUri?(uri: string, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Provider
 
 **系统接口：** 此接口为系统接口。
@@ -224,6 +234,8 @@ insert?(uri: string, valueBucket: ValuesBucket, callback: AsyncCallback<number>)
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareExtensionAbility-insert?(uri: string, valueBucket: ValuesBucket, callback: AsyncCallback<number>): void--><!--Device-DataShareExtensionAbility-insert?(uri: string, valueBucket: ValuesBucket, callback: AsyncCallback<number>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Provider
 
@@ -273,6 +285,8 @@ normalizeUri?(uri: string, callback: AsyncCallback<string>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareExtensionAbility-normalizeUri?(uri: string, callback: AsyncCallback<string>): void--><!--Device-DataShareExtensionAbility-normalizeUri?(uri: string, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Provider
 
 **系统接口：** 此接口为系统接口。
@@ -316,6 +330,8 @@ DataShare客户端连接DataShareExtensionAbility服务端时，服务端回调�
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareExtensionAbility-onCreate?(want: Want, callback: AsyncCallback<void>): void--><!--Device-DataShareExtensionAbility-onCreate?(want: Want, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Provider
 
@@ -377,6 +393,8 @@ query?(
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareExtensionAbility-query?(    uri: string,    predicates: dataSharePredicates.DataSharePredicates,    columns: Array<string>,    callback: AsyncCallback<Object>  ): void--><!--Device-DataShareExtensionAbility-query?(    uri: string,    predicates: dataSharePredicates.DataSharePredicates,    columns: Array<string>,    callback: AsyncCallback<Object>  ): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Provider
 
 **系统接口：** 此接口为系统接口。
@@ -432,6 +450,8 @@ update?(
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareExtensionAbility-update?(    uri: string,    predicates: dataSharePredicates.DataSharePredicates,    valueBucket: ValuesBucket,    callback: AsyncCallback<number>  ): void--><!--Device-DataShareExtensionAbility-update?(    uri: string,    predicates: dataSharePredicates.DataSharePredicates,    valueBucket: ValuesBucket,    callback: AsyncCallback<number>  ): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Provider
 
 **系统接口：** 此接口为系统接口。
@@ -480,6 +500,8 @@ context: ExtensionContext
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareExtensionAbility-context: ExtensionContext--><!--Device-DataShareExtensionAbility-context: ExtensionContext-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Provider
 

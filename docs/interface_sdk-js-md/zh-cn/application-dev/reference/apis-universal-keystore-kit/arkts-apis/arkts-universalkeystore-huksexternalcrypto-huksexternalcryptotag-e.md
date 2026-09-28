@@ -8,6 +8,8 @@ export enum HuksExternalCryptoTag
 
 **起始版本：** 22
 
+<!--Device-huksExternalCrypto-export enum HuksExternalCryptoTag--><!--Device-huksExternalCrypto-export enum HuksExternalCryptoTag-End-->
+
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
 ## HUKS_EXT_CRYPTO_TAG_UKEY_PIN
@@ -19,6 +21,8 @@ HUKS_EXT_CRYPTO_TAG_UKEY_PIN = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYP
 表示PIN码的TAG。
 
 **起始版本：** 22
+
+<!--Device-HuksExternalCryptoTag-HUKS_EXT_CRYPTO_TAG_UKEY_PIN = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_BYTES | 200001--><!--Device-HuksExternalCryptoTag-HUKS_EXT_CRYPTO_TAG_UKEY_PIN = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_BYTES | 200001-End-->
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
@@ -32,6 +36,8 @@ HUKS_EXT_CRYPTO_TAG_ABILITY_NAME = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG
 
 **起始版本：** 22
 
+<!--Device-HuksExternalCryptoTag-HUKS_EXT_CRYPTO_TAG_ABILITY_NAME = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_BYTES | 200002--><!--Device-HuksExternalCryptoTag-HUKS_EXT_CRYPTO_TAG_ABILITY_NAME = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_BYTES | 200002-End-->
+
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
 ## HUKS_EXT_CRYPTO_TAG_EXTRA_DATA
@@ -43,6 +49,8 @@ HUKS_EXT_CRYPTO_TAG_EXTRA_DATA = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_T
 外部数据，在通用查询场景，表示返回的数据。
 
 **起始版本：** 22
+
+<!--Device-HuksExternalCryptoTag-HUKS_EXT_CRYPTO_TAG_EXTRA_DATA = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_BYTES | 200003--><!--Device-HuksExternalCryptoTag-HUKS_EXT_CRYPTO_TAG_EXTRA_DATA = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_BYTES | 200003-End-->
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
@@ -56,6 +64,8 @@ HUKS_EXT_CRYPTO_TAG_UID = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_INT
 
 **起始版本：** 22
 
+<!--Device-HuksExternalCryptoTag-HUKS_EXT_CRYPTO_TAG_UID = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_INT | 200004--><!--Device-HuksExternalCryptoTag-HUKS_EXT_CRYPTO_TAG_UID = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_INT | 200004-End-->
+
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
 ## HUKS_EXT_CRYPTO_TAG_PURPOSE
@@ -67,6 +77,8 @@ HUKS_EXT_CRYPTO_TAG_PURPOSE = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE
 表示证书链对应密钥的使用类型，具体类型详见[CertificatePurpose定义](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-certificatemanager-certificatepurpose-e.md)。
 
 **起始版本：** 22
+
+<!--Device-HuksExternalCryptoTag-HUKS_EXT_CRYPTO_TAG_PURPOSE = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_INT | 200005--><!--Device-HuksExternalCryptoTag-HUKS_EXT_CRYPTO_TAG_PURPOSE = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_INT | 200005-End-->
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
@@ -83,6 +95,8 @@ HUKS_EXT_CRYPTO_TAG_RESOURCE_INFO = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TA
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HuksExternalCryptoTag-HUKS_EXT_CRYPTO_TAG_RESOURCE_INFO = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_BYTES | 200007--><!--Device-HuksExternalCryptoTag-HUKS_EXT_CRYPTO_TAG_RESOURCE_INFO = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_BYTES | 200007-End-->
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
@@ -108,6 +122,8 @@ HUKS_EXT_CRYPTO_TAG_ABILITY_NAME中的JSON列表由多个JSON对象组成，每�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HuksExternalCryptoTag-HUKS_EXT_CRYPTO_TAG_ABILITY_INFO = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_BYTES | 200008--><!--Device-HuksExternalCryptoTag-HUKS_EXT_CRYPTO_TAG_ABILITY_INFO = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_BYTES | 200008-End-->
+
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
 ## HUKS_EXT_CRYPTO_TAG_BUNDLE_NAME
@@ -123,5 +139,7 @@ HUKS_EXT_CRYPTO_TAG_BUNDLE_NAME = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HuksExternalCryptoTag-HUKS_EXT_CRYPTO_TAG_BUNDLE_NAME = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_BYTES | 200009--><!--Device-HuksExternalCryptoTag-HUKS_EXT_CRYPTO_TAG_BUNDLE_NAME = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_BYTES | 200009-End-->
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension

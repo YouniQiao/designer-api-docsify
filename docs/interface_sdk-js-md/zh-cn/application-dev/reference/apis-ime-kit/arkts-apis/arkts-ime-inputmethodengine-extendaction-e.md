@@ -8,6 +8,8 @@ export enum ExtendAction
 
 **起始版本：** 10
 
+<!--Device-inputMethodEngine-export enum ExtendAction--><!--Device-inputMethodEngine-export enum ExtendAction-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## SELECT_ALL
@@ -19,6 +21,8 @@ SELECT_ALL = 0
 全选。
 
 **起始版本：** 10
+
+<!--Device-ExtendAction-SELECT_ALL = 0--><!--Device-ExtendAction-SELECT_ALL = 0-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -32,6 +36,8 @@ CUT = 3
 
 **起始版本：** 10
 
+<!--Device-ExtendAction-CUT = 3--><!--Device-ExtendAction-CUT = 3-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## COPY
@@ -44,6 +50,8 @@ COPY = 4
 
 **起始版本：** 10
 
+<!--Device-ExtendAction-COPY = 4--><!--Device-ExtendAction-COPY = 4-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## PASTE
@@ -55,5 +63,7 @@ PASTE = 5
 粘贴。
 
 **起始版本：** 10
+
+<!--Device-ExtendAction-PASTE = 5--><!--Device-ExtendAction-PASTE = 5-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework

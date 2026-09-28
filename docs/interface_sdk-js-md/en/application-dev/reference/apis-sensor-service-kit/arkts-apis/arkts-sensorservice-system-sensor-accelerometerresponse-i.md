@@ -14,6 +14,8 @@ Callback invoked when the acceleration sensor data changes. The callback returns
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 
+<!--Device-unnamed-export interface AccelerometerResponse--><!--Device-unnamed-export interface AccelerometerResponse-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 ## Modules to Import
@@ -42,6 +44,8 @@ Acceleration along the x-axis of the device, in m/s². Value range: The value is
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-AccelerometerResponse-x: number--><!--Device-AccelerometerResponse-x: number-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 ## y
@@ -64,6 +68,8 @@ Acceleration along the y-axis of the device, in m/s². Value range: The value is
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-AccelerometerResponse-y: number--><!--Device-AccelerometerResponse-y: number-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 ## z
@@ -85,5 +91,7 @@ Acceleration along the z-axis of the device, in m/s². Value range: The value is
 **Required permissions:** ohos.permission.ACCELEROMETER
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-AccelerometerResponse-z: number--><!--Device-AccelerometerResponse-z: number-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite

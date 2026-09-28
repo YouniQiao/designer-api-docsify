@@ -10,6 +10,8 @@ export enum UserAgeGroup
 
 **废弃版本：** 24
 
+<!--Device-userStatus-export enum UserAgeGroup--><!--Device-userStatus-export enum UserAgeGroup-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
 ## OTHERS
@@ -24,6 +26,8 @@ OTHERS = 0
 
 **废弃版本：** 24
 
+<!--Device-UserAgeGroup-OTHERS = 0--><!--Device-UserAgeGroup-OTHERS = 0-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
 ## CHILD
@@ -37,5 +41,7 @@ CHILD = 1
 **起始版本：** 20
 
 **废弃版本：** 24
+
+<!--Device-UserAgeGroup-CHILD = 1--><!--Device-UserAgeGroup-CHILD = 1-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus

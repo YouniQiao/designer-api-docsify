@@ -20,6 +20,8 @@ function addPrinter(printerName: string, uri: string, ppdName?: string, options?
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-print-function addPrinter(printerName: string, uri: string, ppdName?: string, options?: string): Promise<boolean>--><!--Device-print-function addPrinter(printerName: string, uri: string, ppdName?: string, options?: string): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **参数：**

@@ -10,6 +10,8 @@ enum DisplayTag
 
 **起始版本：** 11
 
+<!--Device-avSession-enum DisplayTag--><!--Device-avSession-enum DisplayTag-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 ## TAG_AUDIO_VIVID
@@ -19,5 +21,7 @@ TAG_AUDIO_VIVID = 1
 ```
 
 **起始版本：** 11
+
+<!--Device-DisplayTag-TAG_AUDIO_VIVID = 1--><!--Device-DisplayTag-TAG_AUDIO_VIVID = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core

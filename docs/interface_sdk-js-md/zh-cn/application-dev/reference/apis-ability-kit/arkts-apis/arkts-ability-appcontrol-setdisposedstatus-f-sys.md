@@ -18,6 +18,8 @@ function setDisposedStatus(appId: string, disposedWant: Want, callback: AsyncCal
 
 **需要权限：** ohos.permission.MANAGE_DISPOSED_APP_STATUS
 
+<!--Device-appControl-function setDisposedStatus(appId: string, disposedWant: Want, callback: AsyncCallback<void>): void--><!--Device-appControl-function setDisposedStatus(appId: string, disposedWant: Want, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 
 **系统接口：** 此接口为系统接口。
@@ -79,6 +81,8 @@ function setDisposedStatus(appId: string, disposedWant: Want): Promise<void>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.MANAGE_DISPOSED_APP_STATUS
+
+<!--Device-appControl-function setDisposedStatus(appId: string, disposedWant: Want): Promise<void>--><!--Device-appControl-function setDisposedStatus(appId: string, disposedWant: Want): Promise<void>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 

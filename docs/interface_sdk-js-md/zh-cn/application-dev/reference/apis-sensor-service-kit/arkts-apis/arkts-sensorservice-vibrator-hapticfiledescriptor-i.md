@@ -10,6 +10,8 @@ interface HapticFileDescriptor
 
 **起始版本：** 10
 
+<!--Device-vibrator-interface HapticFileDescriptor--><!--Device-vibrator-interface HapticFileDescriptor-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## 导入模块
@@ -30,6 +32,8 @@ fd: number
 
 **起始版本：** 10
 
+<!--Device-HapticFileDescriptor-fd: int--><!--Device-HapticFileDescriptor-fd: int-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## length
@@ -44,6 +48,8 @@ length?: number
 
 **起始版本：** 10
 
+<!--Device-HapticFileDescriptor-length?: long--><!--Device-HapticFileDescriptor-length?: long-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## offset
@@ -57,5 +63,7 @@ offset?: number
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-HapticFileDescriptor-offset?: long--><!--Device-HapticFileDescriptor-offset?: long-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice

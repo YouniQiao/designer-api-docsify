@@ -8,6 +8,8 @@ export interface Policy
 
 **起始版本：** 21
 
+<!--Device-identifySensitiveContent-export interface Policy--><!--Device-identifySensitiveContent-export interface Policy-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## 导入模块
@@ -28,6 +30,8 @@ keywords: Array<string>
 
 **起始版本：** 21
 
+<!--Device-Policy-keywords: Array<string>--><!--Device-Policy-keywords: Array<string>-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## regex
@@ -42,6 +46,8 @@ regex: string
 
 **起始版本：** 21
 
+<!--Device-Policy-regex: string--><!--Device-Policy-regex: string-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## sensitiveLabel
@@ -55,5 +61,7 @@ sensitiveLabel: string
 **类型：** string
 
 **起始版本：** 21
+
+<!--Device-Policy-sensitiveLabel: string--><!--Device-Policy-sensitiveLabel: string-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention

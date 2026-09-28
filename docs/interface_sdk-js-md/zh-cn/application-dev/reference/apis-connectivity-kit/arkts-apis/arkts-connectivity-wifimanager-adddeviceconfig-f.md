@@ -18,6 +18,8 @@ function addDeviceConfig(config: WifiDeviceConfig): Promise<number>
 
 **需要权限：** ohos.permission.SET_WIFI_INFO and ohos.permission.SET_WIFI_CONFIG
 
+<!--Device-wifiManager-function addDeviceConfig(config: WifiDeviceConfig): Promise<int>--><!--Device-wifiManager-function addDeviceConfig(config: WifiDeviceConfig): Promise<int>-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **参数：**
@@ -77,6 +79,8 @@ function addDeviceConfig(config: WifiDeviceConfig, callback: AsyncCallback<numbe
 **起始版本：** 15
 
 **需要权限：** ohos.permission.SET_WIFI_INFO and ohos.permission.SET_WIFI_CONFIG
+
+<!--Device-wifiManager-function addDeviceConfig(config: WifiDeviceConfig, callback: AsyncCallback<int>): void--><!--Device-wifiManager-function addDeviceConfig(config: WifiDeviceConfig, callback: AsyncCallback<int>): void-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 

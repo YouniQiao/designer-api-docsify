@@ -10,6 +10,8 @@ export interface Vec4
 
 **起始版本：** 12
 
+<!--Device-unnamed-export interface Vec4--><!--Device-unnamed-export interface Vec4-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## w
@@ -23,6 +25,8 @@ w轴分量，取值范围是实数。
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-Vec4-w: double--><!--Device-Vec4-w: double-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -38,6 +42,8 @@ x轴分量，取值范围是实数。
 
 **起始版本：** 12
 
+<!--Device-Vec4-x: double--><!--Device-Vec4-x: double-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## y
@@ -52,6 +58,8 @@ y轴分量，取值范围是实数。
 
 **起始版本：** 12
 
+<!--Device-Vec4-y: double--><!--Device-Vec4-y: double-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## z
@@ -65,5 +73,7 @@ z轴分量，取值范围是实数。
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-Vec4-z: double--><!--Device-Vec4-z: double-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

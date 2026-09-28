@@ -34,6 +34,8 @@ Navigation()
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-NavigationInterface-(): NavigationAttribute--><!--Device-NavigationInterface-(): NavigationAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## Navigation
@@ -50,6 +52,8 @@ Navigation(pathInfos: NavPathStack)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-NavigationInterface-(pathInfos: NavPathStack): NavigationAttribute--><!--Device-NavigationInterface-(pathInfos: NavPathStack): NavigationAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数:**
@@ -64,13 +68,15 @@ Navigation(pathInfos: NavPathStack)
 Navigation(pathInfos: NavPathStack, homeDestination: HomePathInfo)
 ```
 
-绑定路由栈到Navigation组件，指定一个NavDestination作为Navigation的导航页（主页），适用于使用[NavPathStack](arkts-arkui-navigation-comp-navpathstack-c.md)配合[navDestination](arkts-arkui-navigation-comp-attribute.md#navdestination)属性或者系统路由表进行页面路由。使用示例参考[示例16（Navigation使用NavDestination作为导航页）](arkts-arkui-navdestination-comp.md#nav_destination)。
+绑定路由栈到Navigation组件，指定一个NavDestination作为Navigation的导航页（主页），适用于使用[NavPathStack](arkts-arkui-navigation-comp-navpathstack-c.md)配合[navDestination](arkts-arkui-navigation-comp-attribute.md#navdestination)属性或者系统路由表进行页面路由。使用示例参考[示例16（Navigation使用NavDestination作为导航页）](arkts-arkui-navdestination-comp.md)。
 
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-NavigationInterface-(pathInfos: NavPathStack, homeDestination: HomePathInfo): NavigationAttribute--><!--Device-NavigationInterface-(pathInfos: NavPathStack, homeDestination: HomePathInfo): NavigationAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

@@ -8,6 +8,8 @@ declare class Indicator<T>
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare class Indicator<T>--><!--Device-unnamed-declare class Indicator<T>-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## bottom
@@ -25,6 +27,8 @@ bottom(value: Length): T
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-Indicator-bottom(value: Length): T--><!--Device-Indicator-bottom(value: Length): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -58,6 +62,8 @@ bottom(bottom: LengthMetrics | Length, ignoreSize: boolean): T
 
 **卡片能力：** 从API版本19开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-Indicator-bottom(bottom: LengthMetrics | Length, ignoreSize: boolean): T--><!--Device-Indicator-bottom(bottom: LengthMetrics | Length, ignoreSize: boolean): T-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -89,6 +95,8 @@ static digit(): DigitIndicator
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-Indicator-static digit(): DigitIndicator--><!--Device-Indicator-static digit(): DigitIndicator-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
@@ -113,6 +121,8 @@ static dot(): DotIndicator
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-Indicator-static dot(): DotIndicator--><!--Device-Indicator-static dot(): DotIndicator-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
@@ -136,6 +146,8 @@ end(value: LengthMetrics): T
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-Indicator-end(value: LengthMetrics): T--><!--Device-Indicator-end(value: LengthMetrics): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -167,6 +179,8 @@ left(value: Length): T
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-Indicator-left(value: Length): T--><!--Device-Indicator-left(value: Length): T-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -196,6 +210,8 @@ right(value: Length): T
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-Indicator-right(value: Length): T--><!--Device-Indicator-right(value: Length): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -227,6 +243,8 @@ start(value: LengthMetrics): T
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-Indicator-start(value: LengthMetrics): T--><!--Device-Indicator-start(value: LengthMetrics): T-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -256,6 +274,8 @@ top(value: Length): T
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-Indicator-top(value: Length): T--><!--Device-Indicator-top(value: Length): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

@@ -8,6 +8,8 @@ export interface CloudService
 
 **起始版本：** 11
 
+<!--Device-cloudExtension-export interface CloudService--><!--Device-cloudExtension-export interface CloudService-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
@@ -27,6 +29,8 @@ connectAssetLoader(bundleName: string, database: Database): Promise<rpc.RemoteOb
 系统内部通过该接口获取[AssetLoader](arkts-arkdata-cloudextension-assetloader-i-sys.md)的[RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md)对象，可以通过[createAssetLoaderStub](arkts-arkdata-cloudextension-createassetloaderstub-f-sys.md)接口进行创建，使用Promise异步回调。
 
 **起始版本：** 11
+
+<!--Device-CloudService-connectAssetLoader(bundleName: string, database: Database): Promise<rpc.RemoteObject>--><!--Device-CloudService-connectAssetLoader(bundleName: string, database: Database): Promise<rpc.RemoteObject>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -74,6 +78,8 @@ connectDB(bundleName: string, database: Database): Promise<rpc.RemoteObject>
 
 **起始版本：** 11
 
+<!--Device-CloudService-connectDB(bundleName: string, database: Database): Promise<rpc.RemoteObject>--><!--Device-CloudService-connectDB(bundleName: string, database: Database): Promise<rpc.RemoteObject>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
@@ -119,6 +125,8 @@ connectShareCenter(userId: number, bundleName: string): Promise<rpc.RemoteObject
 系统内部通过该接口获取[ShareCenter](arkts-arkdata-cloudextension-sharecenter-i-sys.md)的[RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md)对象，可以通过[createShareServiceStub](arkts-arkdata-cloudextension-createshareservicestub-f-sys.md)接口进行创建，使用Promise异步回调。
 
 **起始版本：** 11
+
+<!--Device-CloudService-connectShareCenter(userId: int, bundleName: string): Promise<rpc.RemoteObject>--><!--Device-CloudService-connectShareCenter(userId: int, bundleName: string): Promise<rpc.RemoteObject>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -166,6 +174,8 @@ getAppBriefInfo(): Promise<Record<string, AppBriefInfo>>
 
 **起始版本：** 11
 
+<!--Device-CloudService-getAppBriefInfo(): Promise<Record<string, AppBriefInfo>>--><!--Device-CloudService-getAppBriefInfo(): Promise<Record<string, AppBriefInfo>>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
@@ -207,6 +217,8 @@ getAppSchema(bundleName: string): Promise<Result<AppSchema>>
 获取应用Schema（数据库模式）信息。使用Promise异步回调。
 
 **起始版本：** 11
+
+<!--Device-CloudService-getAppSchema(bundleName: string): Promise<Result<AppSchema>>--><!--Device-CloudService-getAppSchema(bundleName: string): Promise<Result<AppSchema>>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -257,6 +269,8 @@ getServiceInfo(): Promise<ServiceInfo>
 
 **起始版本：** 11
 
+<!--Device-CloudService-getServiceInfo(): Promise<ServiceInfo>--><!--Device-CloudService-getServiceInfo(): Promise<ServiceInfo>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
@@ -304,6 +318,8 @@ subscribe(
 订阅云数据库的变化通知。使用Promise异步回调。
 
 **起始版本：** 11
+
+<!--Device-CloudService-subscribe(      subInfo: Record<string, Array<Database>>,      expirationTime: long    ): Promise<Result<SubscribeInfo>>--><!--Device-CloudService-subscribe(      subInfo: Record<string, Array<Database>>,      expirationTime: long    ): Promise<Result<SubscribeInfo>>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -354,6 +370,8 @@ unsubscribe(unsubscribeInfo: Record<string, Array<string>>): Promise<number>
 取消已订阅的云数据变化通知。使用Promise异步回调。
 
 **起始版本：** 11
+
+<!--Device-CloudService-unsubscribe(unsubscribeInfo: Record<string, Array<string>>): Promise<int>--><!--Device-CloudService-unsubscribe(unsubscribeInfo: Record<string, Array<string>>): Promise<int>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 

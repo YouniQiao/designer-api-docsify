@@ -8,6 +8,8 @@ enum SaveOccasionFlag
 
 **起始版本：** 9
 
+<!--Device-appRecovery-enum SaveOccasionFlag--><!--Device-appRecovery-enum SaveOccasionFlag-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## SAVE_WHEN_ERROR
@@ -20,7 +22,9 @@ SAVE_WHEN_ERROR = 0x0001
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SaveOccasionFlag-SAVE_WHEN_ERROR = 0x0001--><!--Device-SaveOccasionFlag-SAVE_WHEN_ERROR = 0x0001-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -34,6 +38,8 @@ SAVE_WHEN_BACKGROUND = 0x0002
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SaveOccasionFlag-SAVE_WHEN_BACKGROUND = 0x0002--><!--Device-SaveOccasionFlag-SAVE_WHEN_BACKGROUND = 0x0002-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

@@ -12,6 +12,8 @@ Callback function response object after the compass data changes, including the 
 
 **Substitutes:** [OrientationResponse](arkts-sensorservice-sensor-orientationresponse-i.md)
 
+<!--Device-unnamed-export interface CompassResponse--><!--Device-unnamed-export interface CompassResponse-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 ## Modules to Import
@@ -37,5 +39,7 @@ Direction of the device, in degrees. The value range is [0, 360). The value **0*
 **Substitutes:** [alpha](arkts-sensorservice-sensor-orientationresponse-i.md#alpha)
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-CompassResponse-direction: number--><!--Device-CompassResponse-direction: number-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite

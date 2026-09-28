@@ -20,6 +20,8 @@ function getPreferencesSync(context: Context, options: Options): Preferences
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-sendablePreferences-function getPreferencesSync(context: Context, options: Options): Preferences--><!--Device-sendablePreferences-function getPreferencesSync(context: Context, options: Options): Preferences-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
 **参数：**

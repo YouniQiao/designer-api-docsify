@@ -18,6 +18,8 @@ function clean(accountId: string, appActions: Record<string, Action>): Promise<v
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
+<!--Device-cloudSyncManager-function clean(accountId: string, appActions: Record<string, Action>): Promise<void>--><!--Device-cloudSyncManager-function clean(accountId: string, appActions: Record<string, Action>): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 **系统接口：** 此接口为系统接口。
@@ -74,6 +76,8 @@ function clean(accountId: string, appActions: Record<string, Action>, callback: 
 **起始版本：** 10
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC_MANAGER
+
+<!--Device-cloudSyncManager-function clean(accountId: string, appActions: Record<string, Action>, callback: AsyncCallback<void>): void--><!--Device-cloudSyncManager-function clean(accountId: string, appActions: Record<string, Action>, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 

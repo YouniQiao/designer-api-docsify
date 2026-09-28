@@ -4,11 +4,13 @@
 declare class TextClockAttribute extends CommonMethod<TextClockAttribute>
 ```
 
-除支持[通用属性](arkts-arkui-common-comp.md#common)外，还支持以下属性：
+除支持[通用属性](arkts-arkui-common-comp.md)外，还支持以下属性：
 
 **继承/实现关系：** TextClockAttribute extends CommonMethod<TextClockAttribute>
 
 **起始版本：** 8
+
+<!--Device-unnamed-declare class TextClockAttribute extends CommonMethod<TextClockAttribute>--><!--Device-unnamed-declare class TextClockAttribute extends CommonMethod<TextClockAttribute>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,6 +27,8 @@ contentModifier(modifier: ContentModifier<TextClockConfiguration>)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextClockAttribute-contentModifier(modifier: ContentModifier<TextClockConfiguration>): TextClockAttribute--><!--Device-TextClockAttribute-contentModifier(modifier: ContentModifier<TextClockConfiguration>): TextClockAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,6 +54,8 @@ dateTimeOptions(dateTimeOptions: Optional<DateTimeOptions>)
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-TextClockAttribute-dateTimeOptions(dateTimeOptions: Optional<DateTimeOptions>): TextClockAttribute--><!--Device-TextClockAttribute-dateTimeOptions(dateTimeOptions: Optional<DateTimeOptions>): TextClockAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -72,6 +78,8 @@ fontColor(value: ResourceColor)
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-TextClockAttribute-fontColor(value: ResourceColor): TextClockAttribute--><!--Device-TextClockAttribute-fontColor(value: ResourceColor): TextClockAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -93,6 +101,8 @@ fontFamily(value: ResourceStr)
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-TextClockAttribute-fontFamily(value: ResourceStr): TextClockAttribute--><!--Device-TextClockAttribute-fontFamily(value: ResourceStr): TextClockAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -126,6 +136,8 @@ fontFeature(value: string)
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-TextClockAttribute-fontFeature(value: string): TextClockAttribute--><!--Device-TextClockAttribute-fontFeature(value: string): TextClockAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -147,6 +159,8 @@ fontSize(value: Length)
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-TextClockAttribute-fontSize(value: Length): TextClockAttribute--><!--Device-TextClockAttribute-fontSize(value: Length): TextClockAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -170,6 +184,8 @@ fontStyle(value: FontStyle)
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-TextClockAttribute-fontStyle(value: FontStyle): TextClockAttribute--><!--Device-TextClockAttribute-fontStyle(value: FontStyle): TextClockAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -191,6 +207,8 @@ fontWeight(value: number | FontWeight | string)
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-TextClockAttribute-fontWeight(value: number | FontWeight | string): TextClockAttribute--><!--Device-TextClockAttribute-fontWeight(value: number | FontWeight | string): TextClockAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -284,6 +302,8 @@ a：上午/下午（当设置小时制式为H时，该参数不生效）
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-TextClockAttribute-format(value: ResourceStr): TextClockAttribute--><!--Device-TextClockAttribute-format(value: ResourceStr): TextClockAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -312,6 +332,8 @@ onDateChange(event: (value: number) => void)
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-TextClockAttribute-onDateChange(event: (value: number) => void): TextClockAttribute--><!--Device-TextClockAttribute-onDateChange(event: (value: number) => void): TextClockAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -335,6 +357,8 @@ textShadow(value: ShadowOptions | Array<ShadowOptions>)
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-TextClockAttribute-textShadow(value: ShadowOptions | Array<ShadowOptions>): TextClockAttribute--><!--Device-TextClockAttribute-textShadow(value: ShadowOptions | Array<ShadowOptions>): TextClockAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

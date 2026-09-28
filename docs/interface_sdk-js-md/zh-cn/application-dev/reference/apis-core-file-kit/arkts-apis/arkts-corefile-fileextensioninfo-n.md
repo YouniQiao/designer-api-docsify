@@ -10,6 +10,8 @@ declare namespace fileExtensionInfo
 
 **废弃版本：** 23
 
+<!--Device-unnamed-declare namespace fileExtensionInfo--><!--Device-unnamed-declare namespace fileExtensionInfo-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。

@@ -20,6 +20,8 @@ function getDefaultApplicationCandidates(type: ApplicationType, abilityFlags: nu
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-defaultAppManager-function getDefaultApplicationCandidates(type: ApplicationType, abilityFlags: int, userId?: int): Promise<Array<AbilityInfo>>--><!--Device-defaultAppManager-function getDefaultApplicationCandidates(type: ApplicationType, abilityFlags: int, userId?: int): Promise<Array<AbilityInfo>>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.DefaultApp
 
 **系统接口：** 此接口为系统接口。

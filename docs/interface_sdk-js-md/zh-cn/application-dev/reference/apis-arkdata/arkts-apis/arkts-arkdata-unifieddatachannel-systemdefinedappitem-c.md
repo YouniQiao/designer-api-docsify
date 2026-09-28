@@ -10,6 +10,8 @@ class SystemDefinedAppItem extends SystemDefinedRecord
 
 **起始版本：** 10
 
+<!--Device-unifiedDataChannel-class SystemDefinedAppItem extends SystemDefinedRecord--><!--Device-unifiedDataChannel-class SystemDefinedAppItem extends SystemDefinedRecord-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## 导入模块
@@ -32,7 +34,9 @@ get abilityName(): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SystemDefinedAppItem-get abilityName(): string--><!--Device-SystemDefinedAppItem-get abilityName(): string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -48,7 +52,9 @@ set abilityName(value: string)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SystemDefinedAppItem-set abilityName(value: string)--><!--Device-SystemDefinedAppItem-set abilityName(value: string)-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -66,7 +72,9 @@ get appIconId(): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SystemDefinedAppItem-get appIconId(): string--><!--Device-SystemDefinedAppItem-get appIconId(): string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -82,7 +90,9 @@ set appIconId(value: string)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SystemDefinedAppItem-set appIconId(value: string)--><!--Device-SystemDefinedAppItem-set appIconId(value: string)-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -100,7 +110,9 @@ get appId(): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SystemDefinedAppItem-get appId(): string--><!--Device-SystemDefinedAppItem-get appId(): string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -116,7 +128,9 @@ set appId(value: string)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SystemDefinedAppItem-set appId(value: string)--><!--Device-SystemDefinedAppItem-set appId(value: string)-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -134,7 +148,9 @@ get appLabelId(): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SystemDefinedAppItem-get appLabelId(): string--><!--Device-SystemDefinedAppItem-get appLabelId(): string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -150,7 +166,9 @@ set appLabelId(value: string)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SystemDefinedAppItem-set appLabelId(value: string)--><!--Device-SystemDefinedAppItem-set appLabelId(value: string)-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -168,7 +186,9 @@ get appName(): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SystemDefinedAppItem-get appName(): string--><!--Device-SystemDefinedAppItem-get appName(): string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -184,7 +204,9 @@ set appName(value: string)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SystemDefinedAppItem-set appName(value: string)--><!--Device-SystemDefinedAppItem-set appName(value: string)-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -202,7 +224,9 @@ get bundleName(): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SystemDefinedAppItem-get bundleName(): string--><!--Device-SystemDefinedAppItem-get bundleName(): string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -218,6 +242,8 @@ set bundleName(value: string)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SystemDefinedAppItem-set bundleName(value: string)--><!--Device-SystemDefinedAppItem-set bundleName(value: string)-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core

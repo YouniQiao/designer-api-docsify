@@ -14,6 +14,8 @@ Provides button style configuration for the dialog box.
 
 **Since:** 18
 
+<!--Device-unnamed-interface ActionSheetButtonOptions--><!--Device-unnamed-interface ActionSheetButtonOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## action
@@ -29,6 +31,8 @@ Callback invoked when the button is selected.
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ActionSheetButtonOptions-action: VoidCallback--><!--Device-ActionSheetButtonOptions-action: VoidCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -52,6 +56,8 @@ Default value: **false**
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ActionSheetButtonOptions-defaultFocus?: boolean--><!--Device-ActionSheetButtonOptions-defaultFocus?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## enabled
@@ -73,6 +79,8 @@ Default value: **true**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ActionSheetButtonOptions-enabled?: boolean--><!--Device-ActionSheetButtonOptions-enabled?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -96,6 +104,8 @@ Default value: **DialogButtonStyle.DEFAULT**
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ActionSheetButtonOptions-style?: DialogButtonStyle--><!--Device-ActionSheetButtonOptions-style?: DialogButtonStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## value
@@ -115,5 +125,7 @@ If the text is too long to display, it is truncated with an ellipsis (...).
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ActionSheetButtonOptions-value: string | Resource--><!--Device-ActionSheetButtonOptions-value: string | Resource-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -8,6 +8,8 @@ Defines the horizontal layout direction of elements.
 
 **Since:** 7
 
+<!--Device-unnamed-declare enum Direction--><!--Device-unnamed-declare enum Direction-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Ltr
@@ -25,6 +27,8 @@ Components are arranged from left to right.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-Direction-Ltr--><!--Device-Direction-Ltr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,6 +48,8 @@ Components are arranged from right to left.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-Direction-Rtl--><!--Device-Direction-Rtl-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Auto
@@ -61,5 +67,7 @@ The default layout direction is used.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-Direction-Auto--><!--Device-Direction-Auto-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -18,6 +18,8 @@ Creates a step curve.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-curves-function stepsCurve(count: number, end: boolean): ICurve--><!--Device-curves-function stepsCurve(count: number, end: boolean): ICurve-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

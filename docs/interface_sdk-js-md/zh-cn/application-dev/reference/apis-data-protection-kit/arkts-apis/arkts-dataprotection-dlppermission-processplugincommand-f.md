@@ -20,6 +20,8 @@ function processPluginCommand(code: PluginCmd, message: string): Promise<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-dlpPermission-function processPluginCommand(code: PluginCmd, message: string): Promise<string>--><!--Device-dlpPermission-function processPluginCommand(code: PluginCmd, message: string): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **参数：**

@@ -20,6 +20,8 @@ function addSlot(type: SlotType, callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
+<!--Device-notificationManager-function addSlot(type: SlotType, callback: AsyncCallback<void>): void--><!--Device-notificationManager-function addSlot(type: SlotType, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **参见：**
@@ -77,6 +79,8 @@ function addSlot(type: SlotType): Promise<void>
 通知渠道NotificationSlot定义了通知的提醒方式（如提示音、振动、横幅等）和级别。发布通知前，应用需先创建对应类型的通知渠道，或者发布通知时系统将自动创建对应类型的通知渠道。同一类型的通知渠道只能创建一个。
 
 **起始版本：** 9
+
+<!--Device-notificationManager-function addSlot(type: SlotType): Promise<void>--><!--Device-notificationManager-function addSlot(type: SlotType): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

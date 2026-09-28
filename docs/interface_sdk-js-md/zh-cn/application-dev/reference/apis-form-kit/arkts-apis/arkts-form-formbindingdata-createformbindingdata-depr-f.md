@@ -19,6 +19,8 @@ function createFormBindingData(obj?: Object | string): FormBindingData
 
 **替代接口：** [createFormBindingData](arkts-form-formbindingdata-createformbindingdata-f.md)
 
+<!--Device-formBindingData-function createFormBindingData(obj?: Object | string): FormBindingData--><!--Device-formBindingData-function createFormBindingData(obj?: Object | string): FormBindingData-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **参数：**

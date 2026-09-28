@@ -8,6 +8,8 @@ enum HmacAlgo
 
 **起始版本：** 14
 
+<!--Device-relationalStore-enum HmacAlgo--><!--Device-relationalStore-enum HmacAlgo-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## SHA1
@@ -19,6 +21,8 @@ SHA1 = 0
 HMAC_SHA1算法。
 
 **起始版本：** 14
+
+<!--Device-HmacAlgo-SHA1 = 0--><!--Device-HmacAlgo-SHA1 = 0-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -32,6 +36,8 @@ HMAC_SHA256算法。
 
 **起始版本：** 14
 
+<!--Device-HmacAlgo-SHA256 = 1--><!--Device-HmacAlgo-SHA256 = 1-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## SHA512
@@ -43,5 +49,7 @@ SHA512 = 2
 HMAC_SHA512算法。
 
 **起始版本：** 14
+
+<!--Device-HmacAlgo-SHA512 = 2--><!--Device-HmacAlgo-SHA512 = 2-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core

@@ -18,6 +18,8 @@ function getAllLauncherAbilityInfo(userId: number, callback: AsyncCallback<Array
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-launcherBundleManager-function getAllLauncherAbilityInfo(userId: int, callback: AsyncCallback<Array<LauncherAbilityInfo>>) : void--><!--Device-launcherBundleManager-function getAllLauncherAbilityInfo(userId: int, callback: AsyncCallback<Array<LauncherAbilityInfo>>) : void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
 **系统接口：** 此接口为系统接口。
@@ -75,6 +77,8 @@ function getAllLauncherAbilityInfo(userId: number) : Promise<Array<LauncherAbili
 **起始版本：** 9
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-launcherBundleManager-function getAllLauncherAbilityInfo(userId: int) : Promise<Array<LauncherAbilityInfo>>--><!--Device-launcherBundleManager-function getAllLauncherAbilityInfo(userId: int) : Promise<Array<LauncherAbilityInfo>>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 

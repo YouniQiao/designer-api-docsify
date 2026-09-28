@@ -13,6 +13,8 @@ enabling combined processing of multiple image effects through chained calls.
 
 **Since:** 9
 
+<!--Device-unnamed-declare namespace effectKit--><!--Device-unnamed-declare namespace effectKit-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## Modules to Import

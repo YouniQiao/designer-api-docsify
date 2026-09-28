@@ -16,6 +16,8 @@ function removeCheckRule(rule: bigint) : void
 
 **起始版本：** 9
 
+<!--Device-hichecker-function removeCheckRule(rule: bigint) : void--><!--Device-hichecker-function removeCheckRule(rule: bigint) : void-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
 **参数：**

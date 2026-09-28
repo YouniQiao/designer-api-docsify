@@ -8,6 +8,8 @@ Defines the parameter type for **globalConnect**.
 
 **Since:** 18
 
+<!--Device-unnamed-export class ConnectOptions<T extends object>--><!--Device-unnamed-export class ConnectOptions<T extends object>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -30,6 +32,8 @@ Default constructor. You are advised to pass this parameter. If **globalConnect*
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ConnectOptions-defaultCreator?: StorageDefaultCreator<T>--><!--Device-ConnectOptions-defaultCreator?: StorageDefaultCreator<T>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## areaMode
@@ -47,6 +51,8 @@ Encryption level, ranging from EL1 to EL5 (corresponding to the value from 0 to 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ConnectOptions-areaMode?: contextConstant.AreaMode--><!--Device-ConnectOptions-areaMode?: contextConstant.AreaMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -66,6 +72,8 @@ Ignore read-only properties. When valuie is false, error will be throen when des
 
 **Atomic service API:** This API can be used in atomic services since API version 26.2.0.
 
+<!--Device-ConnectOptions-ignoreReadOnlyProperties?: boolean--><!--Device-ConnectOptions-ignoreReadOnlyProperties?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## key
@@ -84,6 +92,8 @@ Input key. If no value is passed in, the type name is used as the key.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ConnectOptions-key?: string--><!--Device-ConnectOptions-key?: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## type
@@ -101,5 +111,7 @@ Specified type.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ConnectOptions-type: TypeConstructorWithArgs<T>--><!--Device-ConnectOptions-type: TypeConstructorWithArgs<T>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

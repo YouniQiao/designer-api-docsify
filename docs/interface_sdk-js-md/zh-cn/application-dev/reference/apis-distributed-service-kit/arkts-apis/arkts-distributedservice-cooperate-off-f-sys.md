@@ -20,6 +20,8 @@ function off(type: 'cooperate', callback?: Callback<void>): void
 
 **替代接口：** [off](arkts-distributedservice-cooperate-off-f-sys.md)(type: 'cooperateMessage', callback?: Callback&lt;CooperateMessage&gt;)
 
+<!--Device-cooperate-function off(type: 'cooperate', callback?: Callback<void>): void--><!--Device-cooperate-function off(type: 'cooperate', callback?: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
 
 **系统接口：** 此接口为系统接口。
@@ -92,6 +94,8 @@ function off(type: 'cooperateMessage', callback?: Callback<CooperateMessage>): v
 
 **需要权限：** ohos.permission.COOPERATE_MANAGER
 
+<!--Device-cooperate-function off(type: 'cooperateMessage', callback?: Callback<CooperateMessage>): void--><!--Device-cooperate-function off(type: 'cooperateMessage', callback?: Callback<CooperateMessage>): void-End-->
+
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
 
 **系统接口：** 此接口为系统接口。
@@ -161,6 +165,8 @@ function off(type: 'cooperateMouse', networkId: string, callback?: Callback<Mous
 **起始版本：** 12
 
 **需要权限：** ohos.permission.COOPERATE_MANAGER
+
+<!--Device-cooperate-function off(type: 'cooperateMouse', networkId: string, callback?: Callback<MouseLocation>): void--><!--Device-cooperate-function off(type: 'cooperateMouse', networkId: string, callback?: Callback<MouseLocation>): void-End-->
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
 

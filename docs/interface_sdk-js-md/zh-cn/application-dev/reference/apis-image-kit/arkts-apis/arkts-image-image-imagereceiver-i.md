@@ -18,6 +18,8 @@ ImageReceiver类，用于获取组件surface id、接收最新的图片和读取
 
 **起始版本：** 9
 
+<!--Device-image-interface ImageReceiver--><!--Device-image-interface ImageReceiver-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
 ## 导入模块
@@ -35,6 +37,8 @@ getReceivingSurfaceId(callback: AsyncCallback<string>): void
 用于获取一个surface id供Camera或其他组件使用。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-ImageReceiver-getReceivingSurfaceId(callback: AsyncCallback<string>): void--><!--Device-ImageReceiver-getReceivingSurfaceId(callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
@@ -72,6 +76,8 @@ getReceivingSurfaceId(): Promise<string>
 
 **起始版本：** 9
 
+<!--Device-ImageReceiver-getReceivingSurfaceId(): Promise<string>--><!--Device-ImageReceiver-getReceivingSurfaceId(): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
 **返回值：**
@@ -104,6 +110,8 @@ off(type: 'imageArrival', callback?: AsyncCallback<void>): void
 
 **起始版本：** 13
 
+<!--Device-ImageReceiver-off(type: 'imageArrival', callback?: AsyncCallback<void>): void--><!--Device-ImageReceiver-off(type: 'imageArrival', callback?: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
 **参数：**
@@ -134,6 +142,8 @@ on(type: 'imageArrival', callback: AsyncCallback<void>): void
 接收图片时注册回调。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-ImageReceiver-on(type: 'imageArrival', callback: AsyncCallback<void>): void--><!--Device-ImageReceiver-on(type: 'imageArrival', callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
@@ -175,6 +185,8 @@ readLatestImage(callback: AsyncCallback<Image>): void
 > [release](arkts-image-image-image-i.md#release)方法释放，释放后才可以继续接收新的数据。
 
 **起始版本：** 9
+
+<!--Device-ImageReceiver-readLatestImage(callback: AsyncCallback<Image>): void--><!--Device-ImageReceiver-readLatestImage(callback: AsyncCallback<Image>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
@@ -231,6 +243,8 @@ readLatestImage(): Promise<Image>
 
 **起始版本：** 9
 
+<!--Device-ImageReceiver-readLatestImage(): Promise<Image>--><!--Device-ImageReceiver-readLatestImage(): Promise<Image>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
 **返回值：**
@@ -281,6 +295,8 @@ readNextImage(callback: AsyncCallback<Image>): void
 > [release](arkts-image-image-image-i.md#release)方法释放，释放后才可以继续接收新的数据。
 
 **起始版本：** 9
+
+<!--Device-ImageReceiver-readNextImage(callback: AsyncCallback<Image>): void--><!--Device-ImageReceiver-readNextImage(callback: AsyncCallback<Image>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
@@ -337,6 +353,8 @@ readNextImage(): Promise<Image>
 
 **起始版本：** 9
 
+<!--Device-ImageReceiver-readNextImage(): Promise<Image>--><!--Device-ImageReceiver-readNextImage(): Promise<Image>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
 **返回值：**
@@ -386,6 +404,8 @@ release(callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
+<!--Device-ImageReceiver-release(callback: AsyncCallback<void>): void--><!--Device-ImageReceiver-release(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
 **参数：**
@@ -426,6 +446,8 @@ release(): Promise<void>
 
 **起始版本：** 9
 
+<!--Device-ImageReceiver-release(): Promise<void>--><!--Device-ImageReceiver-release(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
 **返回值：**
@@ -461,6 +483,8 @@ setMemoryName(name: string): void
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ImageReceiver-setMemoryName(name: string): void--><!--Device-ImageReceiver-setMemoryName(name: string): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
@@ -516,6 +540,8 @@ readonly capacity: number
 
 **起始版本：** 9
 
+<!--Device-ImageReceiver-readonly capacity: int--><!--Device-ImageReceiver-readonly capacity: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
 ## format
@@ -530,6 +556,8 @@ readonly format: ImageFormat
 
 **起始版本：** 9
 
+<!--Device-ImageReceiver-readonly format: ImageFormat--><!--Device-ImageReceiver-readonly format: ImageFormat-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
 ## size
@@ -543,5 +571,7 @@ readonly size: Size
 **类型：** Size
 
 **起始版本：** 9
+
+<!--Device-ImageReceiver-readonly size: Size--><!--Device-ImageReceiver-readonly size: Size-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver

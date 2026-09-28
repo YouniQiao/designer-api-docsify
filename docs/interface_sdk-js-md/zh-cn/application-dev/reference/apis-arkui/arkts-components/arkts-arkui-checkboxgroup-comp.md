@@ -26,6 +26,8 @@ CheckboxGroup(options?: CheckboxGroupOptions)
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-CheckboxGroupInterface-(options?: CheckboxGroupOptions): CheckboxGroupAttribute--><!--Device-CheckboxGroupInterface-(options?: CheckboxGroupOptions): CheckboxGroupAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数:**

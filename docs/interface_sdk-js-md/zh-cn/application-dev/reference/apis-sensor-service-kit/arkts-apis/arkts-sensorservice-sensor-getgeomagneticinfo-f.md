@@ -16,6 +16,8 @@ function getGeomagneticInfo(locationOptions: LocationOptions, timeMillis: number
 
 **起始版本：** 9
 
+<!--Device-sensor-function getGeomagneticInfo(locationOptions: LocationOptions, timeMillis: long, callback: AsyncCallback<GeomagneticResponse>): void--><!--Device-sensor-function getGeomagneticInfo(locationOptions: LocationOptions, timeMillis: long, callback: AsyncCallback<GeomagneticResponse>): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -73,6 +75,8 @@ function getGeomagneticInfo(locationOptions: LocationOptions, timeMillis: number
 获取某时刻地球上特定位置的地磁场信息。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-sensor-function getGeomagneticInfo(locationOptions: LocationOptions, timeMillis: long): Promise<GeomagneticResponse>--><!--Device-sensor-function getGeomagneticInfo(locationOptions: LocationOptions, timeMillis: long): Promise<GeomagneticResponse>-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 

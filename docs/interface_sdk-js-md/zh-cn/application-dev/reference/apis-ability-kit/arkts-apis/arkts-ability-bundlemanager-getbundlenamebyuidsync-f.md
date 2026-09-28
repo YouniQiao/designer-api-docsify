@@ -18,6 +18,8 @@ function getBundleNameByUidSync(uid: number): string
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
+<!--Device-bundleManager-function getBundleNameByUidSync(uid: int): string--><!--Device-bundleManager-function getBundleNameByUidSync(uid: int): string-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **参数：**

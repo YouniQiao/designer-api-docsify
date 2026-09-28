@@ -4,6 +4,8 @@ The HiLog subsystem allows your applications or services to output logs based on
 
 **Since:** 7
 
+<!--Device-unnamed-declare namespace hilog--><!--Device-unnamed-declare namespace hilog-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiLog
 
 ## Modules to Import

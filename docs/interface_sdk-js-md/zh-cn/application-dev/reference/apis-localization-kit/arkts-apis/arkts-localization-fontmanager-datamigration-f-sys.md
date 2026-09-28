@@ -18,6 +18,8 @@ function dataMigration(callback: DataMigrationCallback): number
 
 **需要权限：** ohos.permission.UPDATE_FONT
 
+<!--Device-fontManager-function dataMigration(callback: DataMigrationCallback): int--><!--Device-fontManager-function dataMigration(callback: DataMigrationCallback): int-End-->
+
 **系统能力：** SystemCapability.Global.FontManager
 
 **系统接口：** 此接口为系统接口。

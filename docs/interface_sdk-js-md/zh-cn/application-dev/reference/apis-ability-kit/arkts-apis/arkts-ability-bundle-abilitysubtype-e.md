@@ -15,6 +15,8 @@ Ability组件的子类型。
 
 **废弃版本：** 9
 
+<!--Device-bundle-export enum AbilitySubType--><!--Device-bundle-export enum AbilitySubType-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## UNSPECIFIED
@@ -29,6 +31,8 @@ UNSPECIFIED = 0
 
 **废弃版本：** 9
 
+<!--Device-AbilitySubType-UNSPECIFIED = 0--><!--Device-AbilitySubType-UNSPECIFIED = 0-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## CA
@@ -42,5 +46,7 @@ CA = 1
 **起始版本：** 7
 
 **废弃版本：** 9
+
+<!--Device-AbilitySubType-CA = 1--><!--Device-AbilitySubType-CA = 1-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework

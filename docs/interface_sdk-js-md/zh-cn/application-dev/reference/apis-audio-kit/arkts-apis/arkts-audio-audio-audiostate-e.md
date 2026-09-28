@@ -8,6 +8,8 @@ enum AudioState
 
 **起始版本：** 8
 
+<!--Device-audio-enum AudioState--><!--Device-audio-enum AudioState-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## STATE_INVALID
@@ -19,6 +21,8 @@ STATE_INVALID = -1
 无效状态。
 
 **起始版本：** 8
+
+<!--Device-AudioState-STATE_INVALID = -1--><!--Device-AudioState-STATE_INVALID = -1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -32,6 +36,8 @@ STATE_NEW = 0
 
 **起始版本：** 8
 
+<!--Device-AudioState-STATE_NEW = 0--><!--Device-AudioState-STATE_NEW = 0-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## STATE_PREPARED
@@ -43,6 +49,8 @@ STATE_PREPARED = 1
 准备状态。
 
 **起始版本：** 8
+
+<!--Device-AudioState-STATE_PREPARED = 1--><!--Device-AudioState-STATE_PREPARED = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -56,6 +64,8 @@ STATE_RUNNING = 2
 
 **起始版本：** 8
 
+<!--Device-AudioState-STATE_RUNNING = 2--><!--Device-AudioState-STATE_RUNNING = 2-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## STATE_STOPPED
@@ -67,6 +77,8 @@ STATE_STOPPED = 3
 停止状态。
 
 **起始版本：** 8
+
+<!--Device-AudioState-STATE_STOPPED = 3--><!--Device-AudioState-STATE_STOPPED = 3-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -80,6 +92,8 @@ STATE_RELEASED = 4
 
 **起始版本：** 8
 
+<!--Device-AudioState-STATE_RELEASED = 4--><!--Device-AudioState-STATE_RELEASED = 4-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## STATE_PAUSED
@@ -91,5 +105,7 @@ STATE_PAUSED = 5
 暂停状态。
 
 **起始版本：** 8
+
+<!--Device-AudioState-STATE_PAUSED = 5--><!--Device-AudioState-STATE_PAUSED = 5-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core

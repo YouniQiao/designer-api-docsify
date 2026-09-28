@@ -14,6 +14,8 @@ const abiList: string
 
 **起始版本：** 6
 
+<!--Device-deviceInfo-const abiList: string--><!--Device-deviceInfo-const abiList: string-End-->
+
 **系统能力：** SystemCapability.Startup.SystemInfo
 
 ## bootCount
@@ -29,6 +31,8 @@ const bootCount: number
 **类型：** number
 
 **起始版本：** 21
+
+<!--Device-deviceInfo-const bootCount: number--><!--Device-deviceInfo-const bootCount: number-End-->
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -46,6 +50,8 @@ Bootloader版本号，用于标识设备启动引导程序的版本信息。
 
 **起始版本：** 6
 
+<!--Device-deviceInfo-const bootloaderVersion: string--><!--Device-deviceInfo-const bootloaderVersion: string-End-->
+
 **系统能力：** SystemCapability.Startup.SystemInfo
 
 ## brand
@@ -61,6 +67,8 @@ const brand: string
 **起始版本：** 6
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-deviceInfo-const brand: string--><!--Device-deviceInfo-const brand: string-End-->
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -78,6 +86,8 @@ const buildHost: string
 
 **起始版本：** 6
 
+<!--Device-deviceInfo-const buildHost: string--><!--Device-deviceInfo-const buildHost: string-End-->
+
 **系统能力：** SystemCapability.Startup.SystemInfo
 
 ## buildRootHash
@@ -93,6 +103,8 @@ const buildRootHash: string
 **类型：** string
 
 **起始版本：** 6
+
+<!--Device-deviceInfo-const buildRootHash: string--><!--Device-deviceInfo-const buildRootHash: string-End-->
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -110,6 +122,8 @@ const buildTime: string
 
 **起始版本：** 6
 
+<!--Device-deviceInfo-const buildTime: string--><!--Device-deviceInfo-const buildTime: string-End-->
+
 **系统能力：** SystemCapability.Startup.SystemInfo
 
 ## buildType
@@ -125,6 +139,8 @@ const buildType: string
 **类型：** string
 
 **起始版本：** 6
+
+<!--Device-deviceInfo-const buildType: string--><!--Device-deviceInfo-const buildType: string-End-->
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -142,6 +158,8 @@ const buildUser: string
 
 **起始版本：** 6
 
+<!--Device-deviceInfo-const buildUser: string--><!--Device-deviceInfo-const buildUser: string-End-->
+
 **系统能力：** SystemCapability.Startup.SystemInfo
 
 ## buildVersion
@@ -157,6 +175,8 @@ Build版本号，标识编译构建的版本号，值为osFullName中的第四�
 **类型：** number
 
 **起始版本：** 6
+
+<!--Device-deviceInfo-const buildVersion: number--><!--Device-deviceInfo-const buildVersion: number-End-->
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -176,6 +196,8 @@ const chipType: string
 
 **起始版本：** 21
 
+<!--Device-deviceInfo-const chipType: string--><!--Device-deviceInfo-const chipType: string-End-->
+
 **系统能力：** SystemCapability.Startup.SystemInfo
 
 ## deviceColor
@@ -194,6 +216,8 @@ const deviceColor: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-deviceInfo-const deviceColor: string--><!--Device-deviceInfo-const deviceColor: string-End-->
+
 **系统能力：** SystemCapability.Startup.SystemInfo
 
 ## deviceType
@@ -211,6 +235,8 @@ const deviceType: string
 **起始版本：** 6
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-deviceInfo-const deviceType: string--><!--Device-deviceInfo-const deviceType: string-End-->
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -234,6 +260,8 @@ const diskSN: string
 
 **需要权限：** ohos.permission.ACCESS_DISK_PHY_INFO
 
+<!--Device-deviceInfo-const diskSN: string--><!--Device-deviceInfo-const diskSN: string-End-->
+
 **系统能力：** SystemCapability.Startup.SystemInfo
 
 ## displayVersion
@@ -249,6 +277,8 @@ const displayVersion: string
 **类型：** string
 
 **起始版本：** 6
+
+<!--Device-deviceInfo-const displayVersion: string--><!--Device-deviceInfo-const displayVersion: string-End-->
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -266,6 +296,8 @@ const distributionOSApiName: string
 
 **起始版本：** 13
 
+<!--Device-deviceInfo-const distributionOSApiName: string--><!--Device-deviceInfo-const distributionOSApiName: string-End-->
+
 **系统能力：** SystemCapability.Startup.SystemInfo
 
 ## distributionOSApiVersion
@@ -281,6 +313,8 @@ const distributionOSApiVersion: number
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-deviceInfo-const distributionOSApiVersion: number--><!--Device-deviceInfo-const distributionOSApiVersion: number-End-->
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -298,6 +332,8 @@ const distributionOSName: string
 
 **起始版本：** 10
 
+<!--Device-deviceInfo-const distributionOSName: string--><!--Device-deviceInfo-const distributionOSName: string-End-->
+
 **系统能力：** SystemCapability.Startup.SystemInfo
 
 ## distributionOSReleaseType
@@ -313,6 +349,8 @@ const distributionOSReleaseType: string
 **类型：** string
 
 **起始版本：** 10
+
+<!--Device-deviceInfo-const distributionOSReleaseType: string--><!--Device-deviceInfo-const distributionOSReleaseType: string-End-->
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -330,6 +368,8 @@ const distributionOSVersion: string
 
 **起始版本：** 10
 
+<!--Device-deviceInfo-const distributionOSVersion: string--><!--Device-deviceInfo-const distributionOSVersion: string-End-->
+
 **系统能力：** SystemCapability.Startup.SystemInfo
 
 ## featureVersion
@@ -345,6 +385,8 @@ Feature版本号，标识规划的新特性版本，值为osFullName中的第三
 **类型：** number
 
 **起始版本：** 6
+
+<!--Device-deviceInfo-const featureVersion: number--><!--Device-deviceInfo-const featureVersion: number-End-->
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -362,6 +404,8 @@ const firstApiVersion: number
 
 **起始版本：** 6
 
+<!--Device-deviceInfo-const firstApiVersion: number--><!--Device-deviceInfo-const firstApiVersion: number-End-->
+
 **系统能力：** SystemCapability.Startup.SystemInfo
 
 ## hardwareModel
@@ -377,6 +421,8 @@ const hardwareModel: string
 **类型：** string
 
 **起始版本：** 6
+
+<!--Device-deviceInfo-const hardwareModel: string--><!--Device-deviceInfo-const hardwareModel: string-End-->
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -394,6 +440,8 @@ const incrementalVersion: string
 
 **起始版本：** 6
 
+<!--Device-deviceInfo-const incrementalVersion: string--><!--Device-deviceInfo-const incrementalVersion: string-End-->
+
 **系统能力：** SystemCapability.Startup.SystemInfo
 
 ## majorVersion
@@ -410,6 +458,8 @@ Major版本号，随主版本更新增加，值为osFullName中的第一位数�
 
 **起始版本：** 6
 
+<!--Device-deviceInfo-const majorVersion: number--><!--Device-deviceInfo-const majorVersion: number-End-->
+
 **系统能力：** SystemCapability.Startup.SystemInfo
 
 ## manufacture
@@ -423,6 +473,8 @@ const manufacture: string
 **类型：** string
 
 **起始版本：** 6
+
+<!--Device-deviceInfo-const manufacture: string--><!--Device-deviceInfo-const manufacture: string-End-->
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -439,6 +491,8 @@ const marketName: string
 **类型：** string
 
 **起始版本：** 6
+
+<!--Device-deviceInfo-const marketName: string--><!--Device-deviceInfo-const marketName: string-End-->
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -476,6 +530,8 @@ ODID（Open Developer Identifier，开发者匿名设备标识符）。
 
 **起始版本：** 12
 
+<!--Device-deviceInfo-const ODID: string--><!--Device-deviceInfo-const ODID: string-End-->
+
 **系统能力：** SystemCapability.Startup.SystemInfo
 
 ## osFullName
@@ -493,6 +549,8 @@ const osFullName: string
 **起始版本：** 6
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-deviceInfo-const osFullName: string--><!--Device-deviceInfo-const osFullName: string-End-->
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -516,6 +574,8 @@ const osReleaseType: string
 
 **起始版本：** 6
 
+<!--Device-deviceInfo-const osReleaseType: string--><!--Device-deviceInfo-const osReleaseType: string-End-->
+
 **系统能力：** SystemCapability.Startup.SystemInfo
 
 ## performanceClass
@@ -533,6 +593,8 @@ const performanceClass: PerformanceClassLevel
 **类型：** [PerformanceClassLevel](arkts-basicservices-deviceinfo-performanceclasslevel-e.md)
 
 **起始版本：** 19
+
+<!--Device-deviceInfo-const performanceClass: PerformanceClassLevel--><!--Device-deviceInfo-const performanceClass: PerformanceClassLevel-End-->
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -552,6 +614,8 @@ const productModel: string
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-deviceInfo-const productModel: string--><!--Device-deviceInfo-const productModel: string-End-->
+
 **系统能力：** SystemCapability.Startup.SystemInfo
 
 ## productModelAlias
@@ -570,6 +634,8 @@ const productModelAlias: string
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
+<!--Device-deviceInfo-const productModelAlias: string--><!--Device-deviceInfo-const productModelAlias: string-End-->
+
 **系统能力：** SystemCapability.Startup.SystemInfo
 
 ## productSeries
@@ -585,6 +651,8 @@ const productSeries: string
 **类型：** string
 
 **起始版本：** 6
+
+<!--Device-deviceInfo-const productSeries: string--><!--Device-deviceInfo-const productSeries: string-End-->
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -603,6 +671,8 @@ const sdkApiVersion: number
 **起始版本：** 6
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-deviceInfo-const sdkApiVersion: number--><!--Device-deviceInfo-const sdkApiVersion: number-End-->
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -624,6 +694,8 @@ const sdkMinorApiVersion: number
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-deviceInfo-const sdkMinorApiVersion: number--><!--Device-deviceInfo-const sdkMinorApiVersion: number-End-->
+
 **系统能力：** SystemCapability.Startup.SystemInfo
 
 ## sdkPatchApiVersion
@@ -644,6 +716,8 @@ const sdkPatchApiVersion: number
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-deviceInfo-const sdkPatchApiVersion: number--><!--Device-deviceInfo-const sdkPatchApiVersion: number-End-->
+
 **系统能力：** SystemCapability.Startup.SystemInfo
 
 ## securityPatchTag
@@ -660,6 +734,8 @@ const securityPatchTag: string
 
 **起始版本：** 6
 
+<!--Device-deviceInfo-const securityPatchTag: string--><!--Device-deviceInfo-const securityPatchTag: string-End-->
+
 **系统能力：** SystemCapability.Startup.SystemInfo
 
 ## seniorVersion
@@ -675,6 +751,8 @@ Senior版本号，随局部架构、重大特性增加，值为osFullName中的�
 **类型：** number
 
 **起始版本：** 6
+
+<!--Device-deviceInfo-const seniorVersion: number--><!--Device-deviceInfo-const seniorVersion: number-End-->
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -698,6 +776,8 @@ const serial: string
 
 **需要权限：** ohos.permission.sec.ACCESS_UDID
 
+<!--Device-deviceInfo-const serial: string--><!--Device-deviceInfo-const serial: string-End-->
+
 **系统能力：** SystemCapability.Startup.SystemInfo
 
 ## softwareModel
@@ -713,6 +793,8 @@ const softwareModel: string
 **类型：** string
 
 **起始版本：** 6
+
+<!--Device-deviceInfo-const softwareModel: string--><!--Device-deviceInfo-const softwareModel: string-End-->
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -736,6 +818,8 @@ const udid: string
 
 **需要权限：** ohos.permission.sec.ACCESS_UDID
 
+<!--Device-deviceInfo-const udid: string--><!--Device-deviceInfo-const udid: string-End-->
+
 **系统能力：** SystemCapability.Startup.SystemInfo
 
 ## versionId
@@ -749,6 +833,8 @@ const versionId: string
 **类型：** string
 
 **起始版本：** 6
+
+<!--Device-deviceInfo-const versionId: string--><!--Device-deviceInfo-const versionId: string-End-->
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -771,5 +857,7 @@ const hardwareProfile: string
 **起始版本：** 6
 
 **废弃版本：** 9
+
+<!--Device-deviceInfo-const hardwareProfile: string--><!--Device-deviceInfo-const hardwareProfile: string-End-->
 
 **系统能力：** SystemCapability.Startup.SystemInfo

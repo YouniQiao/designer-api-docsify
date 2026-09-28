@@ -18,6 +18,8 @@ function updateRemindPolicy(netType: NetBearType, simId: string, remindType: Rem
 
 **需要权限：** ohos.permission.MANAGE_NET_STRATEGY
 
+<!--Device-policy-function updateRemindPolicy(netType: NetBearType, simId: string, remindType: RemindType, callback: AsyncCallback<void>): void--><!--Device-policy-function updateRemindPolicy(netType: NetBearType, simId: string, remindType: RemindType, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -72,6 +74,8 @@ function updateRemindPolicy(netType: NetBearType, simId: string, remindType: Rem
 **起始版本：** 10
 
 **需要权限：** ohos.permission.MANAGE_NET_STRATEGY
+
+<!--Device-policy-function updateRemindPolicy(netType: NetBearType, simId: string, remindType: RemindType): Promise<void>--><!--Device-policy-function updateRemindPolicy(netType: NetBearType, simId: string, remindType: RemindType): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 

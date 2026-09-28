@@ -8,6 +8,8 @@ interface PropertyReadRequest
 
 **起始版本：** 26.0.0
 
+<!--Device-ssap-interface PropertyReadRequest--><!--Device-ssap-interface PropertyReadRequest-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## 导入模块
@@ -30,6 +32,8 @@ address: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PropertyReadRequest-address: string--><!--Device-PropertyReadRequest-address: string-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## propertyUuid
@@ -45,6 +49,8 @@ propertyUuid: string
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PropertyReadRequest-propertyUuid: string--><!--Device-PropertyReadRequest-propertyUuid: string-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -62,6 +68,8 @@ requestId: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PropertyReadRequest-requestId: int--><!--Device-PropertyReadRequest-requestId: int-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## serviceUuid
@@ -77,5 +85,7 @@ serviceUuid: string
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PropertyReadRequest-serviceUuid: string--><!--Device-PropertyReadRequest-serviceUuid: string-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base

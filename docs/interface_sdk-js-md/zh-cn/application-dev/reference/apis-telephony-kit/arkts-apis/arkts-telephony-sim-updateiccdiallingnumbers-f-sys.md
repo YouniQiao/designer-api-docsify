@@ -18,6 +18,8 @@ Update dialing number information on SIM card.
 
 **需要权限：** ohos.permission.WRITE_CONTACTS
 
+<!--Device-sim-function updateIccDiallingNumbers(slotId: int, type: ContactType, diallingNumbers: DiallingNumbersInfo, callback: AsyncCallback<void>): void--><!--Device-sim-function updateIccDiallingNumbers(slotId: int, type: ContactType, diallingNumbers: DiallingNumbersInfo, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -76,6 +78,8 @@ Update dialing number information on SIM card.
 **起始版本：** 8
 
 **需要权限：** ohos.permission.WRITE_CONTACTS
+
+<!--Device-sim-function updateIccDiallingNumbers(slotId: int, type: ContactType, diallingNumbers: DiallingNumbersInfo): Promise<void>--><!--Device-sim-function updateIccDiallingNumbers(slotId: int, type: ContactType, diallingNumbers: DiallingNumbersInfo): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

@@ -15,6 +15,8 @@ Defines the data change listener, used to notify the **LazyForEach** component t
 
 **Since:** 7
 
+<!--Device-unnamed-declare interface DataChangeListener--><!--Device-unnamed-declare interface DataChangeListener-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onDataAdd
@@ -34,6 +36,8 @@ Invoked when data is added to the position indicated by the specified index.
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DataChangeListener-onDataAdd(index: number): void--><!--Device-DataChangeListener-onDataAdd(index: number): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -60,6 +64,8 @@ Notifies components that the data at the **index** position has changed. Called 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DataChangeListener-onDataChange(index: number): void--><!--Device-DataChangeListener-onDataChange(index: number): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -88,6 +94,8 @@ Invoked when data is deleted from the position indicated by the specified index.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DataChangeListener-onDataDelete(index: number): void--><!--Device-DataChangeListener-onDataDelete(index: number): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -114,6 +122,8 @@ Invoked when data is moved, that is, when data is swapped between the **from** a
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DataChangeListener-onDataMove(from: number, to: number): void--><!--Device-DataChangeListener-onDataMove(from: number, to: number): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -142,6 +152,8 @@ Invoked when all data is reloaded. For data items whose key remains unchanged, t
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DataChangeListener-onDataReloaded(): void--><!--Device-DataChangeListener-onDataReloaded(): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 <a id="ondatareloaded-1"></a>
@@ -165,6 +177,8 @@ When reuse of old child components during the update is not allowed, data items 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.1.
+
+<!--Device-DataChangeListener-onDataReloaded(reuseImmediately: boolean): void--><!--Device-DataChangeListener-onDataReloaded(reuseImmediately: boolean): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -197,6 +211,8 @@ Invoked when data is processed in batches to notify the component of refreshing.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DataChangeListener-onDatasetChange(dataOperations: DataOperation[]): void--><!--Device-DataChangeListener-onDatasetChange(dataOperations: DataOperation[]): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -225,6 +241,8 @@ Invoked when data is added to the position indicated by the specified index.
 **Substitutes:** [onDataAdd](#ondataadd)
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-DataChangeListener-onDataAdded(index: number): void--><!--Device-DataChangeListener-onDataAdded(index: number): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -255,6 +273,8 @@ Invoked when data in the position indicated by the specified index is changed.
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-DataChangeListener-onDataChanged(index: number): void--><!--Device-DataChangeListener-onDataChanged(index: number): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -283,6 +303,8 @@ Invoked when data is deleted from the position indicated by the specified index.
 **Substitutes:** [onDataDelete](#ondatadelete)
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-DataChangeListener-onDataDeleted(index: number): void--><!--Device-DataChangeListener-onDataDeleted(index: number): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -313,6 +335,8 @@ Invoked when data is moved, that is, when data is swapped between the **from** a
 **Substitutes:** [onDataMove](#ondatamove)
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-DataChangeListener-onDataMoved(from: number, to: number): void--><!--Device-DataChangeListener-onDataMoved(from: number, to: number): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

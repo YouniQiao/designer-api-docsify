@@ -8,6 +8,8 @@ Enumerates column count policies for different [breakpoints](../../../ui/arkts-l
 
 **Since:** 22
 
+<!--Device-unnamed-declare enum PresetFillType--><!--Device-unnamed-declare enum PresetFillType-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## BREAKPOINT_DEFAULT
@@ -26,6 +28,8 @@ For **Grid**, **WaterFlow**, and **LazyVWaterFlowLayout** components: displays 2
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-PresetFillType-BREAKPOINT_DEFAULT = 0--><!--Device-PresetFillType-BREAKPOINT_DEFAULT = 0-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## BREAKPOINT_SM1MD2LG3
@@ -42,6 +46,8 @@ Displays 1 column when the component width falls within the sm and smaller break
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-PresetFillType-BREAKPOINT_SM1MD2LG3 = 1--><!--Device-PresetFillType-BREAKPOINT_SM1MD2LG3 = 1-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## BREAKPOINT_SM2MD3LG5
@@ -57,5 +63,7 @@ Displays 2 columns when the component width falls within the sm and smaller brea
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-PresetFillType-BREAKPOINT_SM2MD3LG5 = 2--><!--Device-PresetFillType-BREAKPOINT_SM2MD3LG5 = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

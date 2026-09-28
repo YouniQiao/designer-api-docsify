@@ -12,6 +12,8 @@ interface VideoRecorder
 
 **起始版本：** 9
 
+<!--Device-media-interface VideoRecorder--><!--Device-media-interface VideoRecorder-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
 **系统接口：** 此接口为系统接口。
@@ -31,6 +33,8 @@ getInputSurface(callback: AsyncCallback<string>): void
 获得录制需要的surface。使用callback异步回调。开发者从此surface中获取surfaceBuffer，填入相应的数据。应当注意，填入的视频数据需要携带时间戳（单位ns），buffersize。时间戳的起始时间请以系统启动时间为基准。只能在[prepare()](#prepare)接口调用后调用。
 
 **起始版本：** 9
+
+<!--Device-VideoRecorder-getInputSurface(callback: AsyncCallback<string>): void--><!--Device-VideoRecorder-getInputSurface(callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
@@ -80,6 +84,8 @@ getInputSurface(): Promise<string>
 
 **起始版本：** 9
 
+<!--Device-VideoRecorder-getInputSurface(): Promise<string>--><!--Device-VideoRecorder-getInputSurface(): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
 **系统接口：** 此接口为系统接口。
@@ -124,6 +130,8 @@ on(type: 'error', callback: ErrorCallback): void
 
 **起始版本：** 9
 
+<!--Device-VideoRecorder-on(type: 'error', callback: ErrorCallback): void--><!--Device-VideoRecorder-on(type: 'error', callback: ErrorCallback): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
 **系统接口：** 此接口为系统接口。
@@ -166,6 +174,8 @@ pause(callback: AsyncCallback<void>): void
 在[start()](#start)后调用。可以通过调用[resume()](#resume)接口来恢复录制。
 
 **起始版本：** 9
+
+<!--Device-VideoRecorder-pause(callback: AsyncCallback<void>): void--><!--Device-VideoRecorder-pause(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
@@ -215,6 +225,8 @@ pause(): Promise<void>
 
 **起始版本：** 9
 
+<!--Device-VideoRecorder-pause(): Promise<void>--><!--Device-VideoRecorder-pause(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
 **系统接口：** 此接口为系统接口。
@@ -258,6 +270,8 @@ prepare(config: VideoRecorderConfig, callback: AsyncCallback<void>): void
 **起始版本：** 9
 
 **需要权限：** ohos.permission.MICROPHONE
+
+<!--Device-VideoRecorder-prepare(config: VideoRecorderConfig, callback: AsyncCallback<void>): void--><!--Device-VideoRecorder-prepare(config: VideoRecorderConfig, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
@@ -332,6 +346,8 @@ prepare(config: VideoRecorderConfig): Promise<void>
 
 **需要权限：** ohos.permission.MICROPHONE
 
+<!--Device-VideoRecorder-prepare(config: VideoRecorderConfig): Promise<void>--><!--Device-VideoRecorder-prepare(config: VideoRecorderConfig): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
 **系统接口：** 此接口为系统接口。
@@ -404,6 +420,8 @@ release(callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
+<!--Device-VideoRecorder-release(callback: AsyncCallback<void>): void--><!--Device-VideoRecorder-release(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
 **系统接口：** 此接口为系统接口。
@@ -448,6 +466,8 @@ release(): Promise<void>
 
 **起始版本：** 9
 
+<!--Device-VideoRecorder-release(): Promise<void>--><!--Device-VideoRecorder-release(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
 **系统接口：** 此接口为系统接口。
@@ -489,6 +509,8 @@ reset(callback: AsyncCallback<void>): void
 需要重新调用[prepare()](#prepare)和[getInputSurface()](#getinputsurface)接口才能重新录制。
 
 **起始版本：** 9
+
+<!--Device-VideoRecorder-reset(callback: AsyncCallback<void>): void--><!--Device-VideoRecorder-reset(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
@@ -537,6 +559,8 @@ reset(): Promise<void>
 
 **起始版本：** 9
 
+<!--Device-VideoRecorder-reset(): Promise<void>--><!--Device-VideoRecorder-reset(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
 **系统接口：** 此接口为系统接口。
@@ -577,6 +601,8 @@ resume(callback: AsyncCallback<void>): void
 恢复视频录制。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-VideoRecorder-resume(callback: AsyncCallback<void>): void--><!--Device-VideoRecorder-resume(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
@@ -624,6 +650,8 @@ resume(): Promise<void>
 
 **起始版本：** 9
 
+<!--Device-VideoRecorder-resume(): Promise<void>--><!--Device-VideoRecorder-resume(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
 **系统接口：** 此接口为系统接口。
@@ -667,6 +695,8 @@ start(callback: AsyncCallback<void>): void
 在[prepare()](#prepare)和[getInputSurface()](#getinputsurface)后调用，需要依赖数据源先给surface传递数据。
 
 **起始版本：** 9
+
+<!--Device-VideoRecorder-start(callback: AsyncCallback<void>): void--><!--Device-VideoRecorder-start(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
@@ -716,6 +746,8 @@ start(): Promise<void>
 
 **起始版本：** 9
 
+<!--Device-VideoRecorder-start(): Promise<void>--><!--Device-VideoRecorder-start(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
 **系统接口：** 此接口为系统接口。
@@ -759,6 +791,8 @@ stop(callback: AsyncCallback<void>): void
 需要重新调用[prepare()](#prepare)和[getInputSurface()](#getinputsurface)接口才能重新录制。
 
 **起始版本：** 9
+
+<!--Device-VideoRecorder-stop(callback: AsyncCallback<void>): void--><!--Device-VideoRecorder-stop(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
@@ -808,6 +842,8 @@ stop(): Promise<void>
 
 **起始版本：** 9
 
+<!--Device-VideoRecorder-stop(): Promise<void>--><!--Device-VideoRecorder-stop(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
 **系统接口：** 此接口为系统接口。
@@ -851,6 +887,8 @@ readonly state: VideoRecordState
 **类型：** [VideoRecordState](arkts-media-media-videorecordstate-t-sys.md)
 
 **起始版本：** 9
+
+<!--Device-VideoRecorder-readonly state: VideoRecordState--><!--Device-VideoRecorder-readonly state: VideoRecordState-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 

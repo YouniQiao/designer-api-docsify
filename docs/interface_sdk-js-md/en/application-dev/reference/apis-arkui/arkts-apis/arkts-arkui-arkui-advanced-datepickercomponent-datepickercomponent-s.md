@@ -14,6 +14,8 @@ None
 
 **Decorator:** @Component
 
+<!--Device-unnamed-export declare struct DatePickerComponent--><!--Device-unnamed-export declare struct DatePickerComponent-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -39,5 +41,7 @@ Options of the date and time picker component.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-DatePickerComponent-options: DatePickerComponentOptions--><!--Device-DatePickerComponent-options: DatePickerComponentOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

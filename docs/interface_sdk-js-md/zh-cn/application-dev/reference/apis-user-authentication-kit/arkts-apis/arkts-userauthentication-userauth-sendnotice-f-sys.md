@@ -18,6 +18,8 @@ function sendNotice(noticeType: NoticeType, eventData: string): void
 
 **需要权限：** ohos.permission.SUPPORT_USER_AUTH
 
+<!--Device-userAuth-function sendNotice(noticeType: NoticeType, eventData: string): void--><!--Device-userAuth-function sendNotice(noticeType: NoticeType, eventData: string): void-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 **系统接口：** 此接口为系统接口。

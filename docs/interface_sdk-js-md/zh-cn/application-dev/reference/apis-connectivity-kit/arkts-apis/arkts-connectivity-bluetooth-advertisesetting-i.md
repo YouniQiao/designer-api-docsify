@@ -14,6 +14,8 @@ interface AdvertiseSetting
 
 **替代接口：** [AdvertiseSetting](arkts-connectivity-bluetoothmanager-advertisesetting-i.md)
 
+<!--Device-bluetooth-interface AdvertiseSetting--><!--Device-bluetooth-interface AdvertiseSetting-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -38,6 +40,8 @@ connectable?: boolean
 
 **替代接口：** [connectable](arkts-connectivity-bluetoothmanager-advertisesetting-i.md#connectable)
 
+<!--Device-AdvertiseSetting-connectable?: boolean--><!--Device-AdvertiseSetting-connectable?: boolean-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## interval
@@ -56,6 +60,8 @@ interval?: number
 
 **替代接口：** [interval](arkts-connectivity-bluetoothmanager-advertisesetting-i.md#interval)
 
+<!--Device-AdvertiseSetting-interval?: number--><!--Device-AdvertiseSetting-interval?: number-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## txPower
@@ -73,5 +79,7 @@ txPower?: number
 **废弃版本：** 9
 
 **替代接口：** [txPower](arkts-connectivity-bluetoothmanager-advertisesetting-i.md#txpower)
+
+<!--Device-AdvertiseSetting-txPower?: number--><!--Device-AdvertiseSetting-txPower?: number-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

@@ -8,6 +8,8 @@ enum FontWeight
 
 **起始版本：** 12
 
+<!--Device-text-enum FontWeight--><!--Device-text-enum FontWeight-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## W100
@@ -20,7 +22,9 @@ W100 = 0
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-FontWeight-W100 = 0--><!--Device-FontWeight-W100 = 0-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -34,7 +38,9 @@ W200 = 1
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-FontWeight-W200 = 1--><!--Device-FontWeight-W200 = 1-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -48,7 +54,9 @@ W300 = 2
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-FontWeight-W300 = 2--><!--Device-FontWeight-W300 = 2-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -62,7 +70,9 @@ W400 = 3
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-FontWeight-W400 = 3--><!--Device-FontWeight-W400 = 3-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -76,7 +86,9 @@ W500 = 4
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-FontWeight-W500 = 4--><!--Device-FontWeight-W500 = 4-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -90,7 +102,9 @@ W600 = 5
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-FontWeight-W600 = 5--><!--Device-FontWeight-W600 = 5-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -104,7 +118,9 @@ W700 = 6
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-FontWeight-W700 = 6--><!--Device-FontWeight-W700 = 6-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -118,7 +134,9 @@ W800 = 7
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-FontWeight-W800 = 7--><!--Device-FontWeight-W800 = 7-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -132,6 +150,8 @@ W900 = 8
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-FontWeight-W900 = 8--><!--Device-FontWeight-W900 = 8-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing

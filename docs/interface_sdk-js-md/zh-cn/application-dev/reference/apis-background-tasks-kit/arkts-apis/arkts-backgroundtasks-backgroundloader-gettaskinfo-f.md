@@ -20,6 +20,8 @@ function getTaskInfo(taskId: number): Promise<TaskInfo>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-backgroundLoader-function getTaskInfo(taskId: int): Promise<TaskInfo>--><!--Device-backgroundLoader-function getTaskInfo(taskId: int): Promise<TaskInfo>-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
 **参数：**

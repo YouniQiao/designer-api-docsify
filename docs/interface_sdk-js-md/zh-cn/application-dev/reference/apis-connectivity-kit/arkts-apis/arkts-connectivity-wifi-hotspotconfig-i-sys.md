@@ -12,6 +12,8 @@ interface HotspotConfig
 
 **替代接口：** [HotspotConfig](arkts-connectivity-wifimanager-hotspotconfig-i-sys.md)
 
+<!--Device-wifi-interface HotspotConfig--><!--Device-wifi-interface HotspotConfig-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
 **系统接口：** 此接口为系统接口。
@@ -38,6 +40,8 @@ band: number
 
 **替代接口：** [band](arkts-connectivity-wifimanager-hotspotconfig-i-sys.md#band)
 
+<!--Device-HotspotConfig-band: number--><!--Device-HotspotConfig-band: number-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
 **系统接口：** 此接口为系统接口。
@@ -57,6 +61,8 @@ maxConn: number
 **废弃版本：** 9
 
 **替代接口：** [maxConn](arkts-connectivity-wifimanager-hotspotconfig-i-sys.md#maxconn)
+
+<!--Device-HotspotConfig-maxConn: number--><!--Device-HotspotConfig-maxConn: number-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
@@ -78,6 +84,8 @@ preSharedKey: string
 
 **替代接口：** [preSharedKey](arkts-connectivity-wifimanager-hotspotconfig-i-sys.md#presharedkey)
 
+<!--Device-HotspotConfig-preSharedKey: string--><!--Device-HotspotConfig-preSharedKey: string-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
 **系统接口：** 此接口为系统接口。
@@ -98,6 +106,8 @@ securityType: WifiSecurityType
 
 **替代接口：** [securityType](arkts-connectivity-wifimanager-hotspotconfig-i-sys.md#securitytype)
 
+<!--Device-HotspotConfig-securityType: WifiSecurityType--><!--Device-HotspotConfig-securityType: WifiSecurityType-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
 **系统接口：** 此接口为系统接口。
@@ -117,6 +127,8 @@ ssid: string
 **废弃版本：** 9
 
 **替代接口：** [ssid](arkts-connectivity-wifimanager-hotspotconfig-i-sys.md#ssid)
+
+<!--Device-HotspotConfig-ssid: string--><!--Device-HotspotConfig-ssid: string-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 

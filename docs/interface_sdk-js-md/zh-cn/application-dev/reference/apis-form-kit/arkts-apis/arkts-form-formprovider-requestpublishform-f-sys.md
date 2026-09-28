@@ -20,6 +20,8 @@ function requestPublishForm(
 
 **起始版本：** 9
 
+<!--Device-formProvider-function requestPublishForm(    want: Want,    formBindingData: formBindingData.FormBindingData,    callback: AsyncCallback<string>  ): void--><!--Device-formProvider-function requestPublishForm(    want: Want,    formBindingData: formBindingData.FormBindingData,    callback: AsyncCallback<string>  ): void-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -92,6 +94,8 @@ function requestPublishForm(want: Want, callback: AsyncCallback<string>): void
 
 **起始版本：** 9
 
+<!--Device-formProvider-function requestPublishForm(want: Want, callback: AsyncCallback<string>): void--><!--Device-formProvider-function requestPublishForm(want: Want, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -157,6 +161,8 @@ function requestPublishForm(want: Want, formBindingData?: formBindingData.FormBi
 请求发布一张卡片到使用方。使用方通常为桌面，使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-formProvider-function requestPublishForm(want: Want, formBindingData?: formBindingData.FormBindingData): Promise<string>--><!--Device-formProvider-function requestPublishForm(want: Want, formBindingData?: formBindingData.FormBindingData): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 

@@ -16,6 +16,8 @@ function getNetworkSelectionMode(slotId: number, callback: AsyncCallback<Network
 
 **起始版本：** 6
 
+<!--Device-radio-function getNetworkSelectionMode(slotId: int, callback: AsyncCallback<NetworkSelectionMode>): void--><!--Device-radio-function getNetworkSelectionMode(slotId: int, callback: AsyncCallback<NetworkSelectionMode>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**
@@ -62,6 +64,8 @@ function getNetworkSelectionMode(slotId: number): Promise<NetworkSelectionMode>
 获取当前选网模式。使用Promise异步回调。
 
 **起始版本：** 6
+
+<!--Device-radio-function getNetworkSelectionMode(slotId: int): Promise<NetworkSelectionMode>--><!--Device-radio-function getNetworkSelectionMode(slotId: int): Promise<NetworkSelectionMode>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

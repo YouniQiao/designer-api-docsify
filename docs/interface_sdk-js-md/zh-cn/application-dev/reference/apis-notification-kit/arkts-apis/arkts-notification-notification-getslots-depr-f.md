@@ -19,6 +19,8 @@ function getSlots(callback: AsyncCallback<Array<NotificationSlot>>): void
 
 **替代接口：** [getSlots](arkts-notification-notificationmanager-getslots-f.md)
 
+<!--Device-notification-function getSlots(callback: AsyncCallback<Array<NotificationSlot>>): void--><!--Device-notification-function getSlots(callback: AsyncCallback<Array<NotificationSlot>>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **参数：**
@@ -43,6 +45,8 @@ function getSlots(): Promise<Array<NotificationSlot>>
 **废弃版本：** 9
 
 **替代接口：** [getSlots](arkts-notification-notificationmanager-getslots-f.md)
+
+<!--Device-notification-function getSlots(): Promise<Array<NotificationSlot>>--><!--Device-notification-function getSlots(): Promise<Array<NotificationSlot>>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

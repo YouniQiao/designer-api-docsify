@@ -8,6 +8,8 @@ enum AudioEncodingType
 
 **起始版本：** 8
 
+<!--Device-audio-enum AudioEncodingType--><!--Device-audio-enum AudioEncodingType-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## ENCODING_TYPE_INVALID
@@ -20,7 +22,9 @@ ENCODING_TYPE_INVALID = -1
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AudioEncodingType-ENCODING_TYPE_INVALID = -1--><!--Device-AudioEncodingType-ENCODING_TYPE_INVALID = -1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -34,6 +38,8 @@ PCM编码。
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AudioEncodingType-ENCODING_TYPE_RAW = 0--><!--Device-AudioEncodingType-ENCODING_TYPE_RAW = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core

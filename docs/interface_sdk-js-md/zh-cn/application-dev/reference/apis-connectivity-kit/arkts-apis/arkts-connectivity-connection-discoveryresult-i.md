@@ -8,6 +8,8 @@ interface DiscoveryResult
 
 **起始版本：** 18
 
+<!--Device-connection-interface DiscoveryResult--><!--Device-connection-interface DiscoveryResult-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ deviceClass: DeviceClass
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DiscoveryResult-deviceClass: DeviceClass--><!--Device-DiscoveryResult-deviceClass: DeviceClass-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## deviceId
@@ -50,6 +54,8 @@ deviceId: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DiscoveryResult-deviceId: string--><!--Device-DiscoveryResult-deviceId: string-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## deviceName
@@ -66,6 +72,8 @@ deviceName: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DiscoveryResult-deviceName: string--><!--Device-DiscoveryResult-deviceName: string-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## rssi
@@ -81,5 +89,7 @@ rssi: number
 **起始版本：** 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DiscoveryResult-rssi: int--><!--Device-DiscoveryResult-rssi: int-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

@@ -8,6 +8,8 @@ interface ScanReport
 
 **起始版本：** 15
 
+<!--Device-ble-interface ScanReport--><!--Device-ble-interface ScanReport-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -30,7 +32,9 @@ reportType: ScanReportType
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-ScanReport-reportType: ScanReportType--><!--Device-ScanReport-reportType: ScanReportType-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -48,6 +52,8 @@ scanResult: Array<ScanResult>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-ScanReport-scanResult: Array<ScanResult>--><!--Device-ScanReport-scanResult: Array<ScanResult>-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

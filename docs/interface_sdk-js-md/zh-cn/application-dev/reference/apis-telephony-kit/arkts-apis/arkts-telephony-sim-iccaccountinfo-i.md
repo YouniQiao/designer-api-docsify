@@ -8,6 +8,8 @@ Icc账户信息。
 
 **起始版本：** 10
 
+<!--Device-sim-export interface IccAccountInfo--><!--Device-sim-export interface IccAccountInfo-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## 导入模块
@@ -28,6 +30,8 @@ ICCID号码。
 
 **起始版本：** 10
 
+<!--Device-IccAccountInfo-iccId: string--><!--Device-IccAccountInfo-iccId: string-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## isActive
@@ -44,6 +48,8 @@ isActive: boolean
 **类型：** boolean
 
 **起始版本：** 10
+
+<!--Device-IccAccountInfo-isActive: boolean--><!--Device-IccAccountInfo-isActive: boolean-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -62,6 +68,8 @@ isEsim: boolean
 
 **起始版本：** 10
 
+<!--Device-IccAccountInfo-isEsim: boolean--><!--Device-IccAccountInfo-isEsim: boolean-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## showName
@@ -75,6 +83,8 @@ SIM卡显示名称。
 **类型：** string
 
 **起始版本：** 10
+
+<!--Device-IccAccountInfo-showName: string--><!--Device-IccAccountInfo-showName: string-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -90,6 +100,8 @@ SIM卡显示号码。
 
 **起始版本：** 10
 
+<!--Device-IccAccountInfo-showNumber: string--><!--Device-IccAccountInfo-showNumber: string-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## simId
@@ -104,6 +116,8 @@ SIM卡ID。
 
 **起始版本：** 10
 
+<!--Device-IccAccountInfo-simId: int--><!--Device-IccAccountInfo-simId: int-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## slotIndex
@@ -117,5 +131,7 @@ slotIndex: number
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-IccAccountInfo-slotIndex: int--><!--Device-IccAccountInfo-slotIndex: int-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService

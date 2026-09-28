@@ -8,6 +8,8 @@ A background API for persistent storage, which provides data persistence capabil
 
 **Since:** 7
 
+<!--Device-unnamed-declare class Storage--><!--Device-unnamed-declare class Storage-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -24,6 +26,8 @@ Clears all stored data.
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-Storage-clear(): void--><!--Device-Storage-clear(): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -39,6 +43,8 @@ A constructor for creating a **Storage** instance.
 **Since:** 7
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-Storage-constructor(needCrossThread?: boolean, file?: string)--><!--Device-Storage-constructor(needCrossThread?: boolean, file?: string)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -63,6 +69,8 @@ Deletes the stored data corresponding to the specified key.
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-Storage-delete(key: string): void--><!--Device-Storage-delete(key: string): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -84,6 +92,8 @@ Reads the stored data corresponding to the specified key from the disk.
 **Since:** 7
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-Storage-get(key: string): string | undefined--><!--Device-Storage-get(key: string): string | undefined-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -112,6 +122,8 @@ Stores the data corresponding to the specified key persistently to the disk.
 **Since:** 7
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-Storage-set(key: string, val: any): void--><!--Device-Storage-set(key: string, val: any): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

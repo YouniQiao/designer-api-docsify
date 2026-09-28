@@ -8,6 +8,8 @@ interface AtManager
 
 **起始版本：** 8
 
+<!--Device-abilityAccessCtrl-interface AtManager--><!--Device-abilityAccessCtrl-interface AtManager-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 ## 导入模块
@@ -30,7 +32,9 @@ checkAccessToken(tokenID: number, permissionName: Permissions): Promise<GrantSta
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-AtManager-checkAccessToken(tokenID: int, permissionName: Permissions): Promise<GrantStatus>--><!--Device-AtManager-checkAccessToken(tokenID: int, permissionName: Permissions): Promise<GrantStatus>-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -92,7 +96,9 @@ checkAccessTokenSync(tokenID: number, permissionName: Permissions): GrantStatus
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-AtManager-checkAccessTokenSync(tokenID: int, permissionName: Permissions): GrantStatus--><!--Device-AtManager-checkAccessTokenSync(tokenID: int, permissionName: Permissions): GrantStatus-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -148,7 +154,9 @@ getSelfPermissionStatus(permissionName: Permissions): PermissionStatus
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-AtManager-getSelfPermissionStatus(permissionName: Permissions): PermissionStatus--><!--Device-AtManager-getSelfPermissionStatus(permissionName: Permissions): PermissionStatus-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -213,6 +221,8 @@ off(
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-AtManager-off(      type: 'selfPermissionStateChange',      permissionList: Array<Permissions>,      callback?: Callback<PermissionStateChangeInfo>    ): void--><!--Device-AtManager-off(      type: 'selfPermissionStateChange',      permissionList: Array<Permissions>,      callback?: Callback<PermissionStateChangeInfo>    ): void-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **参数：**
@@ -276,6 +286,8 @@ on(
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-AtManager-on(      type: 'selfPermissionStateChange',      permissionList: Array<Permissions>,      callback: Callback<PermissionStateChangeInfo>    ): void--><!--Device-AtManager-on(      type: 'selfPermissionStateChange',      permissionList: Array<Permissions>,      callback: Callback<PermissionStateChangeInfo>    ): void-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **参数：**
@@ -331,6 +343,8 @@ openPermissionOnSetting(context: Context, permission: Permissions): Promise<Sele
 **起始版本：** 22
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AtManager-openPermissionOnSetting(context: Context, permission: Permissions): Promise<SelectedResult>--><!--Device-AtManager-openPermissionOnSetting(context: Context, permission: Permissions): Promise<SelectedResult>-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -397,7 +411,9 @@ requestGlobalSwitch(context: Context, type: SwitchType): Promise<boolean>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AtManager-requestGlobalSwitch(context: Context, type: SwitchType): Promise<boolean>--><!--Device-AtManager-requestGlobalSwitch(context: Context, type: SwitchType): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -465,7 +481,9 @@ requestPermissionOnSetting(context: Context, permissionList: Array<Permissions>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AtManager-requestPermissionOnSetting(context: Context, permissionList: Array<Permissions>): Promise<Array<GrantStatus>>--><!--Device-AtManager-requestPermissionOnSetting(context: Context, permissionList: Array<Permissions>): Promise<Array<GrantStatus>>-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -535,7 +553,9 @@ requestPermissionsFromUser(context: Context, permissionList: Array<Permissions>,
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AtManager-requestPermissionsFromUser(context: Context, permissionList: Array<Permissions>, requestCallback: AsyncCallback<PermissionRequestResult>) : void--><!--Device-AtManager-requestPermissionsFromUser(context: Context, permissionList: Array<Permissions>, requestCallback: AsyncCallback<PermissionRequestResult>) : void-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -603,7 +623,9 @@ requestPermissionsFromUser(context: Context, permissionList: Array<Permissions>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-AtManager-requestPermissionsFromUser(context: Context, permissionList: Array<Permissions>) : Promise<PermissionRequestResult>--><!--Device-AtManager-requestPermissionsFromUser(context: Context, permissionList: Array<Permissions>) : Promise<PermissionRequestResult>-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -671,6 +693,8 @@ verifyAccessToken(tokenID: number, permissionName: Permissions): Promise<GrantSt
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-AtManager-verifyAccessToken(tokenID: int, permissionName: Permissions): Promise<GrantStatus>--><!--Device-AtManager-verifyAccessToken(tokenID: int, permissionName: Permissions): Promise<GrantStatus>-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **参数：**
@@ -729,6 +753,8 @@ verifyAccessToken(tokenID: number, permissionName: string): Promise<GrantStatus>
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-AtManager-verifyAccessToken(tokenID: number, permissionName: string): Promise<GrantStatus>--><!--Device-AtManager-verifyAccessToken(tokenID: number, permissionName: string): Promise<GrantStatus>-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **参数：**
@@ -781,6 +807,8 @@ verifyAccessTokenSync(tokenID: number, permissionName: Permissions): GrantStatus
 **起始版本：** 9
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-AtManager-verifyAccessTokenSync(tokenID: int, permissionName: Permissions): GrantStatus--><!--Device-AtManager-verifyAccessTokenSync(tokenID: int, permissionName: Permissions): GrantStatus-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 

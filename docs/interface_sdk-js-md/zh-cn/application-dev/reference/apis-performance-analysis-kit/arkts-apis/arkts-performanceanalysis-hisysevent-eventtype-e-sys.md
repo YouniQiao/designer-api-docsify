@@ -8,6 +8,8 @@ enum EventType
 
 **起始版本：** 9
 
+<!--Device-hiSysEvent-enum EventType--><!--Device-hiSysEvent-enum EventType-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 
 **系统接口：** 此接口为系统接口。
@@ -21,6 +23,8 @@ FAULT = 1
 错误事件类型。
 
 **起始版本：** 9
+
+<!--Device-EventType-FAULT = 1--><!--Device-EventType-FAULT = 1-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 
@@ -36,6 +40,8 @@ STATISTIC = 2
 
 **起始版本：** 9
 
+<!--Device-EventType-STATISTIC = 2--><!--Device-EventType-STATISTIC = 2-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 
 **系统接口：** 此接口为系统接口。
@@ -50,6 +56,8 @@ SECURITY = 3
 
 **起始版本：** 9
 
+<!--Device-EventType-SECURITY = 3--><!--Device-EventType-SECURITY = 3-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 
 **系统接口：** 此接口为系统接口。
@@ -63,6 +71,8 @@ BEHAVIOR = 4
 用户行为事件类型。
 
 **起始版本：** 9
+
+<!--Device-EventType-BEHAVIOR = 4--><!--Device-EventType-BEHAVIOR = 4-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 

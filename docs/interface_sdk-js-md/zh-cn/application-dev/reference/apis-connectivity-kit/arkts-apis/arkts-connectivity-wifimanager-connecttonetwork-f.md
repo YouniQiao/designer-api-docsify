@@ -18,6 +18,8 @@ function connectToNetwork(networkId: number): void
 
 **需要权限：** ohos.permission.MANAGE_WIFI_CONNECTION or ohos.permission.MANAGE_ENTERPRISE_WIFI_CONNECTION
 
+<!--Device-wifiManager-function connectToNetwork(networkId: int): void--><!--Device-wifiManager-function connectToNetwork(networkId: int): void-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **参数：**

@@ -8,6 +8,8 @@ enum OsAccountType
 
 **起始版本：** 7
 
+<!--Device-osAccount-enum OsAccountType--><!--Device-osAccount-enum OsAccountType-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 ## PRIVATE
@@ -21,6 +23,8 @@ PRIVATE = 1024
 此接口为系统接口。
 
 **起始版本：** 12
+
+<!--Device-OsAccountType-PRIVATE = 1024--><!--Device-OsAccountType-PRIVATE = 1024-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 

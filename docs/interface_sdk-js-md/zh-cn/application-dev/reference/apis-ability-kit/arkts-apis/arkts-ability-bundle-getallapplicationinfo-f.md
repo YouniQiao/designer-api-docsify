@@ -21,6 +21,8 @@ function getAllApplicationInfo(bundleFlags: number,
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-bundle-function getAllApplicationInfo(bundleFlags: number,    userId: number, callback: AsyncCallback<Array<ApplicationInfo>>): void--><!--Device-bundle-function getAllApplicationInfo(bundleFlags: number,    userId: number, callback: AsyncCallback<Array<ApplicationInfo>>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 **参数：**
@@ -65,6 +67,8 @@ function getAllApplicationInfo(bundleFlags: number, callback: AsyncCallback<Arra
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-bundle-function getAllApplicationInfo(bundleFlags: number, callback: AsyncCallback<Array<ApplicationInfo>>): void--><!--Device-bundle-function getAllApplicationInfo(bundleFlags: number, callback: AsyncCallback<Array<ApplicationInfo>>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 **参数：**
@@ -106,6 +110,8 @@ function getAllApplicationInfo(bundleFlags: number, userId?: number): Promise<Ar
 **废弃版本：** 9
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-bundle-function getAllApplicationInfo(bundleFlags: number, userId?: number): Promise<Array<ApplicationInfo>>--><!--Device-bundle-function getAllApplicationInfo(bundleFlags: number, userId?: number): Promise<Array<ApplicationInfo>>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 

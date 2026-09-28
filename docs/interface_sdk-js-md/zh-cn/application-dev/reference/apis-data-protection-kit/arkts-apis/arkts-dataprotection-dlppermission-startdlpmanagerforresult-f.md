@@ -24,6 +24,8 @@ function startDLPManagerForResult(context: common.UIAbilityContext, want: Want):
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-dlpPermission-function startDLPManagerForResult(context: common.UIAbilityContext, want: Want): Promise<DLPManagerResult>--><!--Device-dlpPermission-function startDLPManagerForResult(context: common.UIAbilityContext, want: Want): Promise<DLPManagerResult>-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **参数：**
@@ -92,6 +94,8 @@ function startDLPManagerForResult(context: common.Context, want: Want, window: w
 **起始版本：** 26.2.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-dlpPermission-function startDLPManagerForResult(context: common.Context, want: Want, window: window.Window): Promise<DLPManagerResult>--><!--Device-dlpPermission-function startDLPManagerForResult(context: common.Context, want: Want, window: window.Window): Promise<DLPManagerResult>-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 

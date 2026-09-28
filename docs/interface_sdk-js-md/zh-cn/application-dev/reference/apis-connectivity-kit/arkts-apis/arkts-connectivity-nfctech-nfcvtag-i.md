@@ -16,6 +16,8 @@ NfcVTag获取方式请参考[nfc-tag开发指南](../../../connectivity/nfc/nfc-
 
 **起始版本：** 7
 
+<!--Device-unnamed-export interface NfcVTag extends TagSession--><!--Device-unnamed-export interface NfcVTag extends TagSession-End-->
+
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 ## getDsfId
@@ -28,7 +30,9 @@ getDsfId(): number
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-NfcVTag-getDsfId(): int--><!--Device-NfcVTag-getDsfId(): int-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -58,7 +62,9 @@ getResponseFlags(): number
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-NfcVTag-getResponseFlags(): int--><!--Device-NfcVTag-getResponseFlags(): int-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 

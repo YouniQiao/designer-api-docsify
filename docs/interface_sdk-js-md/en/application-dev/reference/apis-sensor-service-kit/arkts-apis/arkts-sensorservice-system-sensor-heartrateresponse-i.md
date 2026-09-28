@@ -14,6 +14,8 @@ Defines a response object of the callback function after the heart rate sensor d
 
 **Required permissions:** ohos.permission.READ_HEALTH_DATA
 
+<!--Device-unnamed-export interface HeartRateResponse--><!--Device-unnamed-export interface HeartRateResponse-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 ## Modules to Import
@@ -41,5 +43,7 @@ Heart rate, in bpm. Value range: The value is the actually reported physical qua
 **Required permissions:** ohos.permission.READ_HEALTH_DATA
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-HeartRateResponse-heartRate: number--><!--Device-HeartRateResponse-heartRate: number-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite

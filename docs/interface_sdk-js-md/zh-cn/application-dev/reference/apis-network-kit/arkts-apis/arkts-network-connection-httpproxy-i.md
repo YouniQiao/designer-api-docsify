@@ -8,6 +8,8 @@ export interface HttpProxy
 
 **起始版本：** 10
 
+<!--Device-connection-export interface HttpProxy--><!--Device-connection-export interface HttpProxy-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## 导入模块
@@ -46,7 +48,9 @@ exclusionList: Array<string>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-HttpProxy-exclusionList: Array<string>--><!--Device-HttpProxy-exclusionList: Array<string>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -62,7 +66,9 @@ host: string
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-HttpProxy-host: string--><!--Device-HttpProxy-host: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -80,6 +86,8 @@ password?: string
 
 **起始版本：** 12
 
+<!--Device-HttpProxy-password?: string--><!--Device-HttpProxy-password?: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## port
@@ -94,7 +102,9 @@ port: number
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-HttpProxy-port: int--><!--Device-HttpProxy-port: int-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -111,5 +121,7 @@ username?: string
 **类型：** string
 
 **起始版本：** 12
+
+<!--Device-HttpProxy-username?: string--><!--Device-HttpProxy-username?: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core

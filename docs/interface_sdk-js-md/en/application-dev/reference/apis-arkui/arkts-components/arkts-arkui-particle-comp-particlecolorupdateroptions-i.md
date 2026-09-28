@@ -14,6 +14,8 @@ How the color property is updated.
 
 **Since:** 18
 
+<!--Device-unnamed-interface ParticleColorUpdaterOptions<UPDATER extends ParticleUpdater>--><!--Device-unnamed-interface ParticleColorUpdaterOptions<UPDATER extends ParticleUpdater>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## config
@@ -45,6 +47,8 @@ When **type** is set to **ParticleUpdater.RANDOM** or **ParticleUpdater.CURVE**,
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ParticleColorUpdaterOptions-config: ParticleColorPropertyUpdaterConfigs[UPDATER]--><!--Device-ParticleColorUpdaterOptions-config: ParticleColorPropertyUpdaterConfigs[UPDATER]-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## type
@@ -64,5 +68,7 @@ The default value of **type** is **ParticleUpdater.NONE**.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ParticleColorUpdaterOptions-type: UPDATER--><!--Device-ParticleColorUpdaterOptions-type: UPDATER-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

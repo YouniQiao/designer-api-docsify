@@ -24,6 +24,8 @@ function upload(config: UploadConfig, callback: AsyncCallback<UploadTask>): void
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-request-function upload(config: UploadConfig, callback: AsyncCallback<UploadTask>): void--><!--Device-request-function upload(config: UploadConfig, callback: AsyncCallback<UploadTask>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Upload
 
 **参数：**
@@ -79,6 +81,8 @@ function upload(config: UploadConfig): Promise<UploadTask>
 **需要权限：** ohos.permission.INTERNET
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-request-function upload(config: UploadConfig): Promise<UploadTask>--><!--Device-request-function upload(config: UploadConfig): Promise<UploadTask>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload
 

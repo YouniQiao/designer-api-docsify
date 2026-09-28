@@ -8,6 +8,8 @@ HTTP服务器身份验证。
 
 **起始版本：** 18
 
+<!--Device-http-export interface ServerAuthentication--><!--Device-http-export interface ServerAuthentication-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块
@@ -28,7 +30,9 @@ authenticationType?: AuthenticationType
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-ServerAuthentication-authenticationType?: AuthenticationType--><!--Device-ServerAuthentication-authenticationType?: AuthenticationType-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -44,6 +48,8 @@ credential: Credential
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-ServerAuthentication-credential: Credential--><!--Device-ServerAuthentication-credential: Credential-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack

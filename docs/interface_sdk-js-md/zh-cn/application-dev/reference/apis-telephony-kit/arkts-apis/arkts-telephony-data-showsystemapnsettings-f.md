@@ -24,6 +24,8 @@ function showSystemApnSettings(context: Context): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-data-function showSystemApnSettings(context: Context): Promise<void>--><!--Device-data-function showSystemApnSettings(context: Context): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Telephony.CellularData
 
 **参数：**

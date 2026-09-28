@@ -10,6 +10,8 @@ Inherits from [TextPickerOptions](arkts-arkui-textpicker-comp-textpickeroptions-
 
 **Since:** 20
 
+<!--Device-unnamed-declare interface TextPickerDialogOptionsExt extends TextPickerOptions--><!--Device-unnamed-declare interface TextPickerDialogOptionsExt extends TextPickerOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## distortionMode
@@ -33,6 +35,8 @@ Distortion animation mode of the dialog box under system materials. This paramet
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-TextPickerDialogOptionsExt-distortionMode?: DistortionMode--><!--Device-TextPickerDialogOptionsExt-distortionMode?: DistortionMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -59,6 +63,8 @@ Edge light animation mode of the dialog box under system materials. This paramet
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-TextPickerDialogOptionsExt-edgeLightMode?: EdgeLightMode--><!--Device-TextPickerDialogOptionsExt-edgeLightMode?: EdgeLightMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

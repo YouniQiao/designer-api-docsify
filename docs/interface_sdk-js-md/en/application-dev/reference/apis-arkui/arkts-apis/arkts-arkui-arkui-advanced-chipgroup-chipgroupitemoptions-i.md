@@ -20,6 +20,8 @@ Defines the specific attributes of individual chips.
 
 **Since:** 12
 
+<!--Device-unnamed-export interface ChipGroupItemOptions--><!--Device-unnamed-export interface ChipGroupItemOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -47,6 +49,8 @@ If the value is **undefined**, the default value is used.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-ChipGroupItemOptions-accessibilityDescription?: ResourceStr--><!--Device-ChipGroupItemOptions-accessibilityDescription?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -82,6 +86,8 @@ If the value is **undefined**, the default value is used.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-ChipGroupItemOptions-accessibilityLevel?: string--><!--Device-ChipGroupItemOptions-accessibilityLevel?: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## allowClose
@@ -110,6 +116,8 @@ If the value is **undefined**, the default value is used.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ChipGroupItemOptions-allowClose?: boolean--><!--Device-ChipGroupItemOptions-allowClose?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## closeOptions
@@ -132,6 +140,8 @@ If the value is **undefined**, the default value is used.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-ChipGroupItemOptions-closeOptions?: CloseOptions--><!--Device-ChipGroupItemOptions-closeOptions?: CloseOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## label
@@ -149,6 +159,8 @@ Text content and style displayed on the chip.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ChipGroupItemOptions-label: LabelOptions--><!--Device-ChipGroupItemOptions-label: LabelOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -172,6 +184,8 @@ If the value is **undefined**, the default value is used.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ChipGroupItemOptions-prefixIcon?: IconOptions--><!--Device-ChipGroupItemOptions-prefixIcon?: IconOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## prefixSymbol
@@ -193,6 +207,8 @@ If the value is **undefined**, the default value is used.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ChipGroupItemOptions-prefixSymbol?: ChipSymbolGlyphOptions--><!--Device-ChipGroupItemOptions-prefixSymbol?: ChipSymbolGlyphOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -217,6 +233,8 @@ If the value is **undefined**, the default value is used.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-ChipGroupItemOptions-suffixImageIcon?: SuffixImageIconOptions--><!--Device-ChipGroupItemOptions-suffixImageIcon?: SuffixImageIconOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -243,6 +261,8 @@ If the value is **undefined**, the default value is used.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ChipGroupItemOptions-suffixSymbol?: ChipSymbolGlyphOptions--><!--Device-ChipGroupItemOptions-suffixSymbol?: ChipSymbolGlyphOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## suffixSymbolOptions
@@ -264,6 +284,8 @@ If the value is **undefined**, the default value is used.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-ChipGroupItemOptions-suffixSymbolOptions?: ChipSuffixSymbolGlyphOptions--><!--Device-ChipGroupItemOptions-suffixSymbolOptions?: ChipSuffixSymbolGlyphOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -292,5 +314,7 @@ If the value is **undefined**, the default value is used.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ChipGroupItemOptions-suffixIcon?: IconOptions--><!--Device-ChipGroupItemOptions-suffixIcon?: IconOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

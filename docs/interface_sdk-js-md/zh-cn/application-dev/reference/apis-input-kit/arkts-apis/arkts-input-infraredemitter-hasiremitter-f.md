@@ -18,6 +18,8 @@ function hasIrEmitter(): Promise<boolean>
 
 **需要权限：** ohos.permission.MANAGE_INPUT_INFRARED_EMITTER
 
+<!--Device-infraredEmitter-function hasIrEmitter(): Promise<boolean>--><!--Device-infraredEmitter-function hasIrEmitter(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InfraredEmitter
 
 **返回值：**

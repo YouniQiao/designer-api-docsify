@@ -8,6 +8,8 @@ interface DownloadInfo
 
 **起始版本：** 7
 
+<!--Device-request-interface DownloadInfo--><!--Device-request-interface DownloadInfo-End-->
+
 **系统能力：** SystemCapability.MiscServices.Download
 
 ## 导入模块
@@ -28,6 +30,8 @@ description: string
 
 **起始版本：** 7
 
+<!--Device-DownloadInfo-description: string--><!--Device-DownloadInfo-description: string-End-->
+
 **系统能力：** SystemCapability.MiscServices.Download
 
 ## downloadedBytes
@@ -41,6 +45,8 @@ downloadedBytes: number
 **类型：** number
 
 **起始版本：** 7
+
+<!--Device-DownloadInfo-downloadedBytes: long--><!--Device-DownloadInfo-downloadedBytes: long-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -56,6 +62,8 @@ downloadId: number
 
 **起始版本：** 7
 
+<!--Device-DownloadInfo-downloadId: long--><!--Device-DownloadInfo-downloadId: long-End-->
+
 **系统能力：** SystemCapability.MiscServices.Download
 
 ## downloadTitle
@@ -69,6 +77,8 @@ downloadTitle: string
 **类型：** string
 
 **起始版本：** 7
+
+<!--Device-DownloadInfo-downloadTitle: string--><!--Device-DownloadInfo-downloadTitle: string-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -84,6 +94,8 @@ downloadTotalBytes: number
 
 **起始版本：** 7
 
+<!--Device-DownloadInfo-downloadTotalBytes: long--><!--Device-DownloadInfo-downloadTotalBytes: long-End-->
+
 **系统能力：** SystemCapability.MiscServices.Download
 
 ## failedReason
@@ -97,6 +109,8 @@ failedReason: number
 **类型：** number
 
 **起始版本：** 7
+
+<!--Device-DownloadInfo-failedReason: int--><!--Device-DownloadInfo-failedReason: int-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -112,6 +126,8 @@ fileName: string
 
 **起始版本：** 7
 
+<!--Device-DownloadInfo-fileName: string--><!--Device-DownloadInfo-fileName: string-End-->
+
 **系统能力：** SystemCapability.MiscServices.Download
 
 ## filePath
@@ -125,6 +141,8 @@ filePath: string
 **类型：** string
 
 **起始版本：** 7
+
+<!--Device-DownloadInfo-filePath: string--><!--Device-DownloadInfo-filePath: string-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -140,6 +158,8 @@ pausedReason: number
 
 **起始版本：** 7
 
+<!--Device-DownloadInfo-pausedReason: int--><!--Device-DownloadInfo-pausedReason: int-End-->
+
 **系统能力：** SystemCapability.MiscServices.Download
 
 ## status
@@ -154,6 +174,8 @@ status: number
 
 **起始版本：** 7
 
+<!--Device-DownloadInfo-status: int--><!--Device-DownloadInfo-status: int-End-->
+
 **系统能力：** SystemCapability.MiscServices.Download
 
 ## targetURI
@@ -167,5 +189,7 @@ targetURI: string
 **类型：** string
 
 **起始版本：** 7
+
+<!--Device-DownloadInfo-targetURI: string--><!--Device-DownloadInfo-targetURI: string-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download

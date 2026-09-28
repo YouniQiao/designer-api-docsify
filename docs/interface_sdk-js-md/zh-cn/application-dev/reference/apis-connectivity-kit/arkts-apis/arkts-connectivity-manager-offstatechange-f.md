@@ -18,6 +18,8 @@ function offStateChange(callback?: Callback<NearlinkState>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-manager-function offStateChange(callback?: Callback<NearlinkState>): void--><!--Device-manager-function offStateChange(callback?: Callback<NearlinkState>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **参数：**

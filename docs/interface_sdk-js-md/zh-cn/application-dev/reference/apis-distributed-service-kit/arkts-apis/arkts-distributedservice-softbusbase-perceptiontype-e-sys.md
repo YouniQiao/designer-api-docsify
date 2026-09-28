@@ -8,6 +8,8 @@ export enum PerceptionType
 
 **起始版本：** 26.0.1
 
+<!--Device-softbusBase-export enum PerceptionType--><!--Device-softbusBase-export enum PerceptionType-End-->
+
 **系统能力：** SystemCapability.Communication.SoftBus.Core
 
 **系统接口：** 此接口为系统接口。
@@ -23,6 +25,8 @@ PERCEPTION_TYPE_COLLABORATIVE_WAKE = 0
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PerceptionType-PERCEPTION_TYPE_COLLABORATIVE_WAKE = 0--><!--Device-PerceptionType-PERCEPTION_TYPE_COLLABORATIVE_WAKE = 0-End-->
 
 **系统能力：** SystemCapability.Communication.SoftBus.Core
 

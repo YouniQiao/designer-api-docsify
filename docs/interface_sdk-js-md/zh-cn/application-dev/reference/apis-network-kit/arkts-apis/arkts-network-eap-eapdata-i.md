@@ -10,6 +10,8 @@ EAP信息。
 
 **起始版本：** 20
 
+<!--Device-eap-interface EapData--><!--Device-eap-interface EapData-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
 ## 导入模块
@@ -30,6 +32,8 @@ bufferLen: number
 
 **起始版本：** 20
 
+<!--Device-EapData-bufferLen: int--><!--Device-EapData-bufferLen: int-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
 ## eapBuffer
@@ -44,6 +48,8 @@ eapBuffer: Uint8Array
 
 **起始版本：** 20
 
+<!--Device-EapData-eapBuffer: Uint8Array--><!--Device-EapData-eapBuffer: Uint8Array-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
 ## msgId
@@ -57,5 +63,7 @@ msgId: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-EapData-msgId: int--><!--Device-EapData-msgId: int-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap

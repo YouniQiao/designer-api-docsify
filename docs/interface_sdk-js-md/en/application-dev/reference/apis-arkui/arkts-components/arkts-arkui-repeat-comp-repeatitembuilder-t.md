@@ -12,6 +12,8 @@ Defines builder function to render one template type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-unnamed-declare type RepeatItemBuilder<T> = (repeatItem: RepeatItem<T>) => void--><!--Device-unnamed-declare type RepeatItemBuilder<T> = (repeatItem: RepeatItem<T>) => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

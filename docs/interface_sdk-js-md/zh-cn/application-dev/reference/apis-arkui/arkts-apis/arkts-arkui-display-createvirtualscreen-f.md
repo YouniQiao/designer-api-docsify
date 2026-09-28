@@ -18,6 +18,8 @@ function createVirtualScreen(config: VirtualScreenConfig): Promise<number>
 
 **需要权限：** ohos.permission.ACCESS_VIRTUAL_SCREEN
 
+<!--Device-display-function createVirtualScreen(config: VirtualScreenConfig): Promise<long>--><!--Device-display-function createVirtualScreen(config: VirtualScreenConfig): Promise<long>-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**

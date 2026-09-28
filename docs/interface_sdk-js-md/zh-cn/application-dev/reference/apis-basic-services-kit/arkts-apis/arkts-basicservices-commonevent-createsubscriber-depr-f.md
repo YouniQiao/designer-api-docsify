@@ -22,6 +22,8 @@ function createSubscriber(
 
 **替代接口：** [createSubscriber](arkts-basicservices-commoneventmanager-createsubscriber-f.md)( subscribeInfo: CommonEventSubscribeInfo, callback: AsyncCallback&lt;CommonEventSubscriber&gt; )
 
+<!--Device-commonEvent-function createSubscriber(    subscribeInfo: CommonEventSubscribeInfo,    callback: AsyncCallback<CommonEventSubscriber>  ): void--><!--Device-commonEvent-function createSubscriber(    subscribeInfo: CommonEventSubscribeInfo,    callback: AsyncCallback<CommonEventSubscriber>  ): void-End-->
+
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **参数：**
@@ -74,6 +76,8 @@ function createSubscriber(subscribeInfo: CommonEventSubscribeInfo): Promise<Comm
 **废弃版本：** 9
 
 **替代接口：** [createSubscriber](arkts-basicservices-commoneventmanager-createsubscriber-f.md#createsubscriber-1)(subscribeInfo: CommonEventSubscribeInfo)
+
+<!--Device-commonEvent-function createSubscriber(subscribeInfo: CommonEventSubscribeInfo): Promise<CommonEventSubscriber>--><!--Device-commonEvent-function createSubscriber(subscribeInfo: CommonEventSubscribeInfo): Promise<CommonEventSubscriber>-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 

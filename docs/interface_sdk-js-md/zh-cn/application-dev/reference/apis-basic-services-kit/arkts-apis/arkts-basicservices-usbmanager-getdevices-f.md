@@ -20,6 +20,8 @@ function getDevices(): Array<Readonly<USBDevice>>
 
 **起始版本：** 9
 
+<!--Device-usbManager-function getDevices(): Array<Readonly<USBDevice>>--><!--Device-usbManager-function getDevices(): Array<Readonly<USBDevice>>-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 **返回值：**

@@ -25,6 +25,8 @@ Execute a drag event.
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-dragController-function executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: DragInfo,    callback: AsyncCallback<DragEventParam>): void--><!--Device-dragController-function executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: DragInfo,    callback: AsyncCallback<DragEventParam>): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -151,6 +153,8 @@ function executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: DragInfo): 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-dragController-function executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: DragInfo): Promise<DragEventParam>--><!--Device-dragController-function executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: DragInfo): Promise<DragEventParam>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

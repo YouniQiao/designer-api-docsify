@@ -43,6 +43,8 @@ must request the corresponding permissions first.
 
 **Since:** 8
 
+<!--Device-unnamed-declare namespace sensor--><!--Device-unnamed-declare namespace sensor-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## Modules to Import

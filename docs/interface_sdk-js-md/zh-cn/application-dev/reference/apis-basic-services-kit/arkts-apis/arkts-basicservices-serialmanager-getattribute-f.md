@@ -21,6 +21,8 @@ function getAttribute(portId: number): Readonly<SerialAttribute>
 
 **起始版本：** 19
 
+<!--Device-serialManager-function getAttribute(portId: int): Readonly<SerialAttribute>--><!--Device-serialManager-function getAttribute(portId: int): Readonly<SerialAttribute>-End-->
+
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
 **参数：**

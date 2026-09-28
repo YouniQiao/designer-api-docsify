@@ -8,6 +8,8 @@ type TouchEventReceiver = (touchEvent: TouchEvent) => boolean
 
 **起始版本：** 7
 
+<!--Device-inputMonitor-type TouchEventReceiver = (touchEvent: TouchEvent) => boolean--><!--Device-inputMonitor-type TouchEventReceiver = (touchEvent: TouchEvent) => boolean-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **系统接口：** 此接口为系统接口。

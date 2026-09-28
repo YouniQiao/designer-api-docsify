@@ -10,6 +10,8 @@ Provides APIs to manage albums.
 
 **Since:** 12
 
+<!--Device-sendablePhotoAccessHelper-interface Album extends AbsAlbum--><!--Device-sendablePhotoAccessHelper-interface Album extends AbsAlbum-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
@@ -29,6 +31,8 @@ Obtains the face identifier on the cover of a portrait album or group photo albu
 **Since:** 13
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-Album-getFaceId(): Promise<string>--><!--Device-Album-getFaceId(): Promise<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

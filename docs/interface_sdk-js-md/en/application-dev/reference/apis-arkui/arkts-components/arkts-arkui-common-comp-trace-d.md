@@ -18,4 +18,6 @@ Declares an observable property. **@Trace** must be used together with **@Observ
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-unnamed-declare const Trace: PropertyDecorator--><!--Device-unnamed-declare const Trace: PropertyDecorator-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

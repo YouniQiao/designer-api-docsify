@@ -8,6 +8,8 @@ Describes the aperture information.
 
 **起始版本：** 12
 
+<!--Device-camera-interface ApertureInfo--><!--Device-camera-interface ApertureInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -29,6 +31,8 @@ Aperture.
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-ApertureInfo-readonly aperture?: double--><!--Device-ApertureInfo-readonly aperture?: double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

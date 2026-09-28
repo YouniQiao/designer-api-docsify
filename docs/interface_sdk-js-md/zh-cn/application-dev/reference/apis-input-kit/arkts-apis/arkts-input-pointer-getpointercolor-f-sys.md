@@ -16,6 +16,8 @@ function getPointerColor(callback: AsyncCallback<number>): void
 
 **起始版本：** 10
 
+<!--Device-pointer-function getPointerColor(callback: AsyncCallback<int>): void--><!--Device-pointer-function getPointerColor(callback: AsyncCallback<int>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 **系统接口：** 此接口为系统接口。
@@ -76,6 +78,8 @@ function getPointerColor(): Promise<number>
 获取当前鼠标光标颜色，使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-pointer-function getPointerColor(): Promise<int>--><!--Device-pointer-function getPointerColor(): Promise<int>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 

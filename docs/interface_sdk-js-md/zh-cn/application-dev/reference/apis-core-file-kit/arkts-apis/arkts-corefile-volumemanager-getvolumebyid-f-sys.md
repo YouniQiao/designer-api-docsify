@@ -18,6 +18,8 @@ function getVolumeById(volumeId: string, callback: AsyncCallback<Volume>): void
 
 **需要权限：** ohos.permission.STORAGE_MANAGER
 
+<!--Device-volumeManager-function getVolumeById(volumeId: string, callback: AsyncCallback<Volume>): void--><!--Device-volumeManager-function getVolumeById(volumeId: string, callback: AsyncCallback<Volume>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -54,6 +56,8 @@ function getVolumeById(volumeId: string): Promise<Volume>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.STORAGE_MANAGER
+
+<!--Device-volumeManager-function getVolumeById(volumeId: string): Promise<Volume>--><!--Device-volumeManager-function getVolumeById(volumeId: string): Promise<Volume>-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Volume
 

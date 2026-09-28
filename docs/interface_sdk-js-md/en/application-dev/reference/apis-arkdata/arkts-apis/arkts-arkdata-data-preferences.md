@@ -9,6 +9,8 @@ The **Preferences** module provides APIs for processing data in the form of key-
 
 **Since:** 9
 
+<!--Device-unnamed-declare namespace preferences--><!--Device-unnamed-declare namespace preferences-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core @name preferences
 
 ## Modules to Import

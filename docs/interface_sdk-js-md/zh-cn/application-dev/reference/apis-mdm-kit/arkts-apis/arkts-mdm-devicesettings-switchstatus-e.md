@@ -8,6 +8,8 @@ enum SwitchStatus
 
 **起始版本：** 26.0.0
 
+<!--Device-deviceSettings-enum SwitchStatus--><!--Device-deviceSettings-enum SwitchStatus-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## ON
@@ -21,6 +23,8 @@ ON = 0
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SwitchStatus-ON = 0--><!--Device-SwitchStatus-ON = 0-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -36,6 +40,8 @@ OFF = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SwitchStatus-OFF = 1--><!--Device-SwitchStatus-OFF = 1-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## FORCE_ON
@@ -49,5 +55,7 @@ FORCE_ON = 2
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SwitchStatus-FORCE_ON = 2--><!--Device-SwitchStatus-FORCE_ON = 2-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager

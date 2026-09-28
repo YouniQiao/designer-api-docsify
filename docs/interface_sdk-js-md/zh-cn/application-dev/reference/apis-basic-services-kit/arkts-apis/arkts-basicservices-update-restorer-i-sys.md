@@ -23,6 +23,8 @@ export interface Restorer
 
 **起始版本：** 9
 
+<!--Device-update-export interface Restorer--><!--Device-update-export interface Restorer-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -64,6 +66,8 @@ deepFactoryReset(factoryResetStrategy: FactoryResetStrategy): Promise<void>
 **需要权限：** ohos.permission.FACTORY_RESET
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Restorer-deepFactoryReset(factoryResetStrategy: FactoryResetStrategy): Promise<void>--><!--Device-Restorer-deepFactoryReset(factoryResetStrategy: FactoryResetStrategy): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -138,6 +142,8 @@ factoryReset(callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.FACTORY_RESET
 
+<!--Device-Restorer-factoryReset(callback: AsyncCallback<void>): void--><!--Device-Restorer-factoryReset(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -206,6 +212,8 @@ factoryReset(): Promise<void>
 
 **需要权限：** ohos.permission.FACTORY_RESET
 
+<!--Device-Restorer-factoryReset(): Promise<void>--><!--Device-Restorer-factoryReset(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -271,6 +279,8 @@ forceFactoryReset(): Promise<void>
 
 **需要权限：** ohos.permission.FORCE_FACTORY_RESET
 
+<!--Device-Restorer-forceFactoryReset(): Promise<void>--><!--Device-Restorer-forceFactoryReset(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -335,6 +345,8 @@ getDeepFactoryResetInfo(factoryResetStrategy: FactoryResetStrategy): Promise<Fac
 **需要权限：** ohos.permission.FACTORY_RESET
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Restorer-getDeepFactoryResetInfo(factoryResetStrategy: FactoryResetStrategy): Promise<FactoryResetInfo>--><!--Device-Restorer-getDeepFactoryResetInfo(factoryResetStrategy: FactoryResetStrategy): Promise<FactoryResetInfo>-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
 

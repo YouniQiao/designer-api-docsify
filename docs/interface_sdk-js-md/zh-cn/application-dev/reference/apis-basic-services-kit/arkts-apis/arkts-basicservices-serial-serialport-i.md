@@ -8,6 +8,8 @@ interface SerialPort
 
 **起始版本：** 26.0.0
 
+<!--Device-serial-interface SerialPort--><!--Device-serial-interface SerialPort-End-->
+
 **系统能力：** SystemCapability.BusManager.Serial
 
 ## 导入模块
@@ -31,6 +33,8 @@ close(): Promise<void>
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SerialPort-close(): Promise<void>--><!--Device-SerialPort-close(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.BusManager.Serial
 
@@ -81,6 +85,8 @@ drain(): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SerialPort-drain(): Promise<void>--><!--Device-SerialPort-drain(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.BusManager.Serial
 
 **返回值：**
@@ -127,6 +133,8 @@ flush(): Promise<void>
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SerialPort-flush(): Promise<void>--><!--Device-SerialPort-flush(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.BusManager.Serial
 
@@ -176,6 +184,8 @@ getCts(): Promise<boolean>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SerialPort-getCts(): Promise<boolean>--><!--Device-SerialPort-getCts(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.BusManager.Serial
 
 **返回值：**
@@ -216,6 +226,8 @@ getDsr(): Promise<boolean>
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SerialPort-getDsr(): Promise<boolean>--><!--Device-SerialPort-getDsr(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.BusManager.Serial
 
@@ -261,6 +273,8 @@ offDataRead(callback?: Callback<Uint8Array>): void
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SerialPort-offDataRead(callback?: Callback<Uint8Array>): void--><!--Device-SerialPort-offDataRead(callback?: Callback<Uint8Array>): void-End-->
 
 **系统能力：** SystemCapability.BusManager.Serial
 
@@ -311,6 +325,8 @@ offDisconnect(callback?: Callback<void>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SerialPort-offDisconnect(callback?: Callback<void>): void--><!--Device-SerialPort-offDisconnect(callback?: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.BusManager.Serial
 
 **参数：**
@@ -360,6 +376,8 @@ onDataRead(callback: Callback<Uint8Array>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SerialPort-onDataRead(callback: Callback<Uint8Array>): void--><!--Device-SerialPort-onDataRead(callback: Callback<Uint8Array>): void-End-->
+
 **系统能力：** SystemCapability.BusManager.Serial
 
 **参数：**
@@ -406,6 +424,8 @@ onDisconnect(callback: Callback<void>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SerialPort-onDisconnect(callback: Callback<void>): void--><!--Device-SerialPort-onDisconnect(callback: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.BusManager.Serial
 
 **参数：**
@@ -446,6 +466,8 @@ open(config?: SerialConfigs): Promise<void>
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SerialPort-open(config?: SerialConfigs): Promise<void>--><!--Device-SerialPort-open(config?: SerialConfigs): Promise<void>-End-->
 
 **系统能力：** SystemCapability.BusManager.Serial
 
@@ -509,6 +531,8 @@ sendBrk(): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SerialPort-sendBrk(): Promise<void>--><!--Device-SerialPort-sendBrk(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.BusManager.Serial
 
 **返回值：**
@@ -549,6 +573,8 @@ setDtr(enable: boolean): Promise<void>
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SerialPort-setDtr(enable: boolean): Promise<void>--><!--Device-SerialPort-setDtr(enable: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.BusManager.Serial
 
@@ -603,6 +629,8 @@ setRts(enable: boolean): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SerialPort-setRts(enable: boolean): Promise<void>--><!--Device-SerialPort-setRts(enable: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.BusManager.Serial
 
 **参数：**
@@ -653,6 +681,8 @@ write(data: Uint8Array, timeout?: number): Promise<number>
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SerialPort-write(data: Uint8Array, timeout?: int): Promise<int>--><!--Device-SerialPort-write(data: Uint8Array, timeout?: int): Promise<int>-End-->
 
 **系统能力：** SystemCapability.BusManager.Serial
 
@@ -707,5 +737,7 @@ readonly portInfo: SerialPortInfo
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SerialPort-readonly portInfo: SerialPortInfo--><!--Device-SerialPort-readonly portInfo: SerialPortInfo-End-->
 
 **系统能力：** SystemCapability.BusManager.Serial

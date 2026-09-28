@@ -12,6 +12,8 @@ interface ImageEmbedding
 
 **起始版本：** 15
 
+<!--Device-intelligence-interface ImageEmbedding--><!--Device-intelligence-interface ImageEmbedding-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
 ## 导入模块
@@ -31,6 +33,8 @@ getEmbedding(image: Image): Promise<Array<number>>
 该接口需先调用[loadModel](arkts-arkdata-intelligence-textembedding-i.md#loadmodel)加载嵌入模型，加载成功后调用getEmbedding。
 
 **起始版本：** 15
+
+<!--Device-ImageEmbedding-getEmbedding(image: Image): Promise<Array<double>>--><!--Device-ImageEmbedding-getEmbedding(image: Image): Promise<Array<double>>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
@@ -89,6 +93,8 @@ loadModel(): Promise<void>
 
 **起始版本：** 15
 
+<!--Device-ImageEmbedding-loadModel(): Promise<void>--><!--Device-ImageEmbedding-loadModel(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
 **返回值：**
@@ -128,6 +134,8 @@ releaseModel(): Promise<void>
 释放图像嵌入模型。使用Promise异步回调。
 
 **起始版本：** 15
+
+<!--Device-ImageEmbedding-releaseModel(): Promise<void>--><!--Device-ImageEmbedding-releaseModel(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataIntelligence.Core
 

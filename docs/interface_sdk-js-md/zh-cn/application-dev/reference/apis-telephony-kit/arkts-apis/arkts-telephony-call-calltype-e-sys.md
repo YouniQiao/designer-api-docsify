@@ -8,6 +8,8 @@ export enum CallType
 
 **起始版本：** 7
 
+<!--Device-call-export enum CallType--><!--Device-call-export enum CallType-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -21,6 +23,8 @@ TYPE_CS = 0
 CS通话。
 
 **起始版本：** 7
+
+<!--Device-CallType-TYPE_CS = 0--><!--Device-CallType-TYPE_CS = 0-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -36,6 +40,8 @@ IMS通话。
 
 **起始版本：** 7
 
+<!--Device-CallType-TYPE_IMS = 1--><!--Device-CallType-TYPE_IMS = 1-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +55,8 @@ TYPE_OTT = 2
 OTT通话。
 
 **起始版本：** 7
+
+<!--Device-CallType-TYPE_OTT = 2--><!--Device-CallType-TYPE_OTT = 2-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -64,6 +72,8 @@ TYPE_ERR_CALL = 3
 
 **起始版本：** 7
 
+<!--Device-CallType-TYPE_ERR_CALL = 3--><!--Device-CallType-TYPE_ERR_CALL = 3-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +87,8 @@ TYPE_VOIP = 4
 VoIP通话。
 
 **起始版本：** 11
+
+<!--Device-CallType-TYPE_VOIP = 4--><!--Device-CallType-TYPE_VOIP = 4-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -95,6 +107,8 @@ XCALL通话。
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-CallType-TYPE_XCALL = 5--><!--Device-CallType-TYPE_XCALL = 5-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 

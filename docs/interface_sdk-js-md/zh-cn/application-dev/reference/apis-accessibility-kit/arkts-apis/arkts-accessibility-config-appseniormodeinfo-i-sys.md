@@ -8,6 +8,8 @@ interface AppSeniorModeInfo
 
 **起始版本：** 26.0.0
 
+<!--Device-config-interface AppSeniorModeInfo--><!--Device-config-interface AppSeniorModeInfo-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ appIndex?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AppSeniorModeInfo-appIndex?: int--><!--Device-AppSeniorModeInfo-appIndex?: int-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -50,6 +54,8 @@ bundleName: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AppSeniorModeInfo-bundleName: string--><!--Device-AppSeniorModeInfo-bundleName: string-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -67,6 +73,8 @@ seniorModeState: boolean
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AppSeniorModeInfo-seniorModeState: boolean--><!--Device-AppSeniorModeInfo-seniorModeState: boolean-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 

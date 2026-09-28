@@ -8,6 +8,8 @@ export interface AppBriefInfo
 
 **起始版本：** 11
 
+<!--Device-cloudExtension-export interface AppBriefInfo--><!--Device-cloudExtension-export interface AppBriefInfo-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ appId: string
 
 **起始版本：** 11
 
+<!--Device-AppBriefInfo-appId: string--><!--Device-AppBriefInfo-appId: string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ bundleName: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-AppBriefInfo-bundleName: string--><!--Device-AppBriefInfo-bundleName: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -62,6 +68,8 @@ cloudSwitch: boolean
 
 **起始版本：** 11
 
+<!--Device-AppBriefInfo-cloudSwitch: boolean--><!--Device-AppBriefInfo-cloudSwitch: boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +85,8 @@ instanceId: number
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-AppBriefInfo-instanceId: int--><!--Device-AppBriefInfo-instanceId: int-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 

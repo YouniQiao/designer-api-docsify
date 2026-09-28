@@ -22,6 +22,8 @@ function getBundleInstaller(callback: AsyncCallback<BundleInstaller>): void
 
 **需要权限：** ohos.permission.INSTALL_BUNDLE
 
+<!--Device-bundle-function getBundleInstaller(callback: AsyncCallback<BundleInstaller>): void--><!--Device-bundle-function getBundleInstaller(callback: AsyncCallback<BundleInstaller>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 **系统接口：** 此接口为系统接口。
@@ -75,6 +77,8 @@ function getBundleInstaller(): Promise<BundleInstaller>
 **替代接口：** null
 
 **需要权限：** ohos.permission.INSTALL_BUNDLE
+
+<!--Device-bundle-function getBundleInstaller(): Promise<BundleInstaller>--><!--Device-bundle-function getBundleInstaller(): Promise<BundleInstaller>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 

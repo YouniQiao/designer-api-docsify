@@ -20,6 +20,8 @@ function getCurrentInputMethodSubtype(userId?: number): InputMethodSubtype
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-inputMethod-function getCurrentInputMethodSubtype(userId?: int): InputMethodSubtype--><!--Device-inputMethod-function getCurrentInputMethodSubtype(userId?: int): InputMethodSubtype-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **系统接口：** 此接口为系统接口。

@@ -26,6 +26,8 @@ function getConnectedBLEDevices(): Array<string>
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH
 - API版本9：ohos.permission.USE_BLUETOOTH
 
+<!--Device-BLE-function getConnectedBLEDevices(): Array<string>--><!--Device-BLE-function getConnectedBLEDevices(): Array<string>-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **返回值：**

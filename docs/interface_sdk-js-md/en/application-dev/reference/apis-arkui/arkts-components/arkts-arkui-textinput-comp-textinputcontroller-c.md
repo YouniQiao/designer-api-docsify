@@ -16,6 +16,8 @@ controller: TextInputController = new TextInputController();
 
 **Since:** 8
 
+<!--Device-unnamed-declare class TextInputController extends TextContentControllerBase--><!--Device-unnamed-declare class TextInputController extends TextContentControllerBase-End-->
+
 **System capability:** 
 - API version 10 and later: SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,6 +32,8 @@ Sets the position of the input cursor. If the value is less than 0, it is set to
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextInputController-caretPosition(value: number): void--><!--Device-TextInputController-caretPosition(value: number): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -51,6 +55,8 @@ Constructor of TextInputController.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TextInputController-constructor()--><!--Device-TextInputController-constructor()-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## setTextSelection
@@ -66,6 +72,8 @@ Sets the text selection region and highlights it.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextInputController-setTextSelection(selectionStart: number, selectionEnd: number, options?: SelectionOptions): void--><!--Device-TextInputController-setTextSelection(selectionStart: number, selectionEnd: number, options?: SelectionOptions): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -90,5 +98,7 @@ Exits the editing state.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextInputController-stopEditing(): void--><!--Device-TextInputController-stopEditing(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

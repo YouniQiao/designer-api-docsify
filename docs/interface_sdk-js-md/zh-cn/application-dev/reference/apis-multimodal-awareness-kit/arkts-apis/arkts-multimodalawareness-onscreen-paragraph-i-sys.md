@@ -8,6 +8,8 @@ export interface Paragraph
 
 **起始版本：** 20
 
+<!--Device-onScreen-export interface Paragraph--><!--Device-onScreen-export interface Paragraph-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ chapterId?: number
 
 **起始版本：** 20
 
+<!--Device-Paragraph-chapterId?: int--><!--Device-Paragraph-chapterId?: int-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ hookId?: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-Paragraph-hookId?: long--><!--Device-Paragraph-hookId?: long-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -62,6 +68,8 @@ text?: string
 
 **起始版本：** 20
 
+<!--Device-Paragraph-text?: string--><!--Device-Paragraph-text?: string-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +85,8 @@ title?: string
 **类型：** string
 
 **起始版本：** 20
+
+<!--Device-Paragraph-title?: string--><!--Device-Paragraph-title?: string-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 

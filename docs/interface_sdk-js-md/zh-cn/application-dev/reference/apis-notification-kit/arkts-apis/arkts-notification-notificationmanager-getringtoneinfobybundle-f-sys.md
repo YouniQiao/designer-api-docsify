@@ -18,6 +18,8 @@ function getRingtoneInfoByBundle(bundle: BundleOption): Promise<RingtoneInfo>
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function getRingtoneInfoByBundle(bundle: BundleOption): Promise<RingtoneInfo>--><!--Device-notificationManager-function getRingtoneInfoByBundle(bundle: BundleOption): Promise<RingtoneInfo>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。

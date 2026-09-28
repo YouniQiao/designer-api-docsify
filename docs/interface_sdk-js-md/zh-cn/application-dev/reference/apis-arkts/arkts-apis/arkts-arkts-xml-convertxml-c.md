@@ -8,6 +8,8 @@ ConvertXML类提供将XML文本转换为JavaScript对象的能力。推荐使用
 
 **起始版本：** 8
 
+<!--Device-xml-class ConvertXML--><!--Device-xml-class ConvertXML-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -35,6 +37,8 @@ fastConvertToJSObject(xml: string, options?: ConvertOptions): Object
 **起始版本：** 14
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-ConvertXML-fastConvertToJSObject(xml: string, options?: ConvertOptions): Object--><!--Device-ConvertXML-fastConvertToJSObject(xml: string, options?: ConvertOptions): Object-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -116,6 +120,8 @@ largeConvertToJSObject(xml: string, options?: ConvertOptions): Object
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-ConvertXML-largeConvertToJSObject(xml: string, options?: ConvertOptions): Object--><!--Device-ConvertXML-largeConvertToJSObject(xml: string, options?: ConvertOptions): Object-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -207,6 +213,8 @@ convert(xml: string, options?: ConvertOptions): Object
 
 **替代接口：** [fastConvertToJSObject](#fastconverttojsobject)
 
+<!--Device-ConvertXML-convert(xml: string, options?: ConvertOptions): Object--><!--Device-ConvertXML-convert(xml: string, options?: ConvertOptions): Object-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -278,6 +286,8 @@ convertToJSObject(xml: string, options?: ConvertOptions): Object
 **替代接口：** [fastConvertToJSObject](#fastconverttojsobject)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ConvertXML-convertToJSObject(xml: string, options?: ConvertOptions): Object--><!--Device-ConvertXML-convertToJSObject(xml: string, options?: ConvertOptions): Object-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

@@ -4,13 +4,15 @@
 declare class DataPanelAttribute extends CommonMethod<DataPanelAttribute>
 ```
 
-In addition to the [universal attributes](arkts-arkui-common-comp.md#common), the following attributes are supported.
+In addition to the [universal attributes](arkts-arkui-common-comp.md), the following attributes are supported.
 
 @extends CommonMethod [since 7 - 10] @extends CommonMethod&lt;DataPanelAttribute&gt; [since 11]
 
 **Inheritance/Implementation:** DataPanelAttribute extends CommonMethod<DataPanelAttribute>
 
 **Since:** 7
+
+<!--Device-unnamed-declare class DataPanelAttribute extends CommonMethod<DataPanelAttribute>--><!--Device-unnamed-declare class DataPanelAttribute extends CommonMethod<DataPanelAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,6 +29,8 @@ Sets whether to disable the rotation and shadow effects for the data proportion 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-DataPanelAttribute-closeEffect(value: boolean): DataPanelAttribute--><!--Device-DataPanelAttribute-closeEffect(value: boolean): DataPanelAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,6 +54,8 @@ Creates a content modifier.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DataPanelAttribute-contentModifier(modifier: ContentModifier<DataPanelConfiguration>): DataPanelAttribute--><!--Device-DataPanelAttribute-contentModifier(modifier: ContentModifier<DataPanelConfiguration>): DataPanelAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -71,6 +77,8 @@ Sets the stroke width of the border. This attribute does not take effect when th
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DataPanelAttribute-strokeWidth(value: Length): DataPanelAttribute--><!--Device-DataPanelAttribute-strokeWidth(value: Length): DataPanelAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -94,6 +102,8 @@ Sets the background color.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DataPanelAttribute-trackBackgroundColor(value: ResourceColor): DataPanelAttribute--><!--Device-DataPanelAttribute-trackBackgroundColor(value: ResourceColor): DataPanelAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -116,6 +126,8 @@ Sets the shadow style. If this attribute is set, the shadow effect is controlled
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DataPanelAttribute-trackShadow(value: DataPanelShadowOptions): DataPanelAttribute--><!--Device-DataPanelAttribute-trackShadow(value: DataPanelShadowOptions): DataPanelAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -137,6 +149,8 @@ Sets an array of data segment colors.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DataPanelAttribute-valueColors(value: Array<ResourceColor | LinearGradient>): DataPanelAttribute--><!--Device-DataPanelAttribute-valueColors(value: Array<ResourceColor | LinearGradient>): DataPanelAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

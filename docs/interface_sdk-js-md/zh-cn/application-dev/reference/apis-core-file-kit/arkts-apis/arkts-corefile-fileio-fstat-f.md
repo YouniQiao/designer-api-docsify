@@ -19,6 +19,8 @@ declare function fstat(fd: number): Promise<Stat>
 
 **替代接口：** [stat](arkts-corefile-file-fs-stat-f.md)
 
+<!--Device-unnamed-declare function fstat(fd: number): Promise<Stat>--><!--Device-unnamed-declare function fstat(fd: number): Promise<Stat>-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -49,6 +51,8 @@ declare function fstat(fd: number, callback: AsyncCallback<Stat>): void
 **废弃版本：** 9
 
 **替代接口：** [stat](arkts-corefile-file-fs-stat-f.md)
+
+<!--Device-unnamed-declare function fstat(fd: number, callback: AsyncCallback<Stat>): void--><!--Device-unnamed-declare function fstat(fd: number, callback: AsyncCallback<Stat>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

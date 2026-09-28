@@ -8,6 +8,8 @@ export interface Callee
 
 **起始版本：** 9
 
+<!--Device-unnamed-export interface Callee--><!--Device-unnamed-export interface Callee-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 ## 导入模块
@@ -27,6 +29,8 @@ off(method: string): void
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Callee-off(method: string): void--><!--Device-Callee-off(method: string): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -75,6 +79,8 @@ on(method: string, callback: CalleeCallback): void
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Callee-on(method: string, callback: CalleeCallback): void--><!--Device-Callee-on(method: string, callback: CalleeCallback): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 

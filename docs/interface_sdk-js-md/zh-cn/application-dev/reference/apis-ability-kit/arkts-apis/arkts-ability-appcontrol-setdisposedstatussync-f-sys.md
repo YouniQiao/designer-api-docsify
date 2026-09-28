@@ -18,6 +18,8 @@ function setDisposedStatusSync(appId: string, disposedWant: Want): void
 
 **需要权限：** ohos.permission.MANAGE_DISPOSED_APP_STATUS
 
+<!--Device-appControl-function setDisposedStatusSync(appId: string, disposedWant: Want): void--><!--Device-appControl-function setDisposedStatusSync(appId: string, disposedWant: Want): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 
 **系统接口：** 此接口为系统接口。

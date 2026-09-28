@@ -8,6 +8,8 @@ Enumerates the slow-motion states.
 
 **起始版本：** 12
 
+<!--Device-camera-enum SlowMotionStatus--><!--Device-camera-enum SlowMotionStatus-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -21,6 +23,8 @@ DISABLED = 0
 Disabled.
 
 **起始版本：** 12
+
+<!--Device-SlowMotionStatus-DISABLED = 0--><!--Device-SlowMotionStatus-DISABLED = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -36,6 +40,8 @@ Ready.
 
 **起始版本：** 12
 
+<!--Device-SlowMotionStatus-READY = 1--><!--Device-SlowMotionStatus-READY = 1-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +55,8 @@ VIDEO_START = 2
 Video start.
 
 **起始版本：** 12
+
+<!--Device-SlowMotionStatus-VIDEO_START = 2--><!--Device-SlowMotionStatus-VIDEO_START = 2-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -64,6 +72,8 @@ Video complete.
 
 **起始版本：** 12
 
+<!--Device-SlowMotionStatus-VIDEO_DONE = 3--><!--Device-SlowMotionStatus-VIDEO_DONE = 3-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +87,8 @@ FINISHED = 4
 Finished.
 
 **起始版本：** 12
+
+<!--Device-SlowMotionStatus-FINISHED = 4--><!--Device-SlowMotionStatus-FINISHED = 4-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

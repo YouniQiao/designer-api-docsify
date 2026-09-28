@@ -18,6 +18,8 @@ Obtains the MSISDN of the SIM card in a specified slot. The MSISDN is recorded i
 
 **需要权限：** ohos.permission.GET_PHONE_NUMBERS
 
+<!--Device-sim-function getSimTelephoneNumber(slotId: int, callback: AsyncCallback<string>): void--><!--Device-sim-function getSimTelephoneNumber(slotId: int, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -67,6 +69,8 @@ Obtains the MSISDN of the SIM card in a specified slot. The MSISDN is recorded i
 **起始版本：** 8
 
 **需要权限：** ohos.permission.GET_PHONE_NUMBERS
+
+<!--Device-sim-function getSimTelephoneNumber(slotId: int): Promise<string>--><!--Device-sim-function getSimTelephoneNumber(slotId: int): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

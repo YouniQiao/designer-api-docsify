@@ -20,6 +20,8 @@ function notifyDialogResult(notifyDialogResultParams: NotifyDialogResultParams):
 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
+<!--Device-access-function notifyDialogResult(notifyDialogResultParams: NotifyDialogResultParams): Promise<void>--><!--Device-access-function notifyDialogResult(notifyDialogResultParams: NotifyDialogResultParams): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。

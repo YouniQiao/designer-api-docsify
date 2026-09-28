@@ -1,6 +1,6 @@
 # Span
 
-As a child component of [Text](arkts-arkui-text-comp.md#text) and [ContainerSpan](arkts-arkui-containerspan-comp-attribute.md#containerspanattribute), it is used to display inline text and supports fine-grained settings of the font, color, size, and other styles of the text. It is suitable for scenarios where different styles are mixed in the same line of text, such as text in different font colors, and adding decorative lines or shadow effects.
+As a child component of [Text](arkts-arkui-text-comp.md) and [ContainerSpan](arkts-arkui-containerspan-comp-attribute.md#containerspanattribute), it is used to display inline text and supports fine-grained settings of the font, color, size, and other styles of the text. It is suitable for scenarios where different styles are mixed in the same line of text, such as text in different font colors, and adding decorative lines or shadow effects.
 
 > **NOTE:** 
 > 
@@ -8,11 +8,11 @@ As a child component of [Text](arkts-arkui-text-comp.md#text) and [ContainerSpan
 > 
 > - Since API version 10, this component supports inheriting the attributes of the parent **Text** component. That is, if a child component does not set an attribute but the parent component does, the child component inherits the attribute set by the parent component. The attributes that can be inherited include only: fontColor, fontSize,fontStyle, fontWeight, decoration, letterSpacing, textCase, fontFamily, and textShadow.
 > 
-> - It supports the [accessibility attribute](arkts-arkui-common-comp.md#common) ([accessibilityText](arkts-arkui-common-comp-commonmethod-c.md#accessibilitytext)), [component identifier](arkts-arkui-common-comp.md#common) ([id](arkts-arkui-common-comp-commonmethod-c.md#id) and [key](arkts-arkui-common-comp-commonmethod-c.md#key)), and [color inversion disabling](arkts-arkui-common-comp.md#common) ([allowForceDark](arkts-arkui-common-comp-commonmethod-c.md#allowforcedark)) among the [universal attributes](arkts-arkui-common-comp.md#common), but does not support other universal attributes. To set other universal attributes, use [Text](arkts-arkui-text-comp.md#text), or use [CustomSpan](../arkts-apis/arkts-arkui-customspan-c.md) in [styled strings](../arkts-apis/arkts-arkui-styledstring.md#styled_string) to draw them by yourself.
+> - It supports the [accessibility attribute](arkts-arkui-common-comp.md) ([accessibilityText](arkts-arkui-common-comp-commonmethod-c.md#accessibilitytext)), [component identifier](arkts-arkui-common-comp.md) ([id](arkts-arkui-common-comp-commonmethod-c.md#id) and [key](arkts-arkui-common-comp-commonmethod-c.md#key)), and [color inversion disabling](arkts-arkui-common-comp.md) ([allowForceDark](arkts-arkui-common-comp-commonmethod-c.md#allowforcedark)) among the [universal attributes](arkts-arkui-common-comp.md), but does not support other universal attributes. To set other universal attributes, use [Text](arkts-arkui-text-comp.md), or use [CustomSpan](../arkts-apis/arkts-arkui-customspan-c.md) in [styled strings](../arkts-apis/arkts-arkui-styledstring.md#styled_string) to draw them by yourself.
 > 
 > - [accessibilityText](arkts-arkui-common-comp-commonmethod-c.md#accessibilitytext) takes effect only when the [onClick](arkts-arkui-common-comp-commonmethod-c.md#onclick) event is set for **Span**. The configured text is reflected only in the inline link pop-up recognized by the accessibility service. During direct announcement, the content of **Span** is still announced, and it is not replaced by the text configured in accessibilityText.
 > 
-> - Among the [universal events](arkts-arkui-common-comp.md#common), only the click event [onClick](arkts-arkui-common-comp-commonmethod-c.md#onclick) and the hover event [onHover](arkts-arkui-common-comp-commonmethod-c.md#onhover) are supported.
+> - Among the [universal events](arkts-arkui-common-comp.md), only the click event [onClick](arkts-arkui-common-comp-commonmethod-c.md#onclick) and the hover event [onHover](arkts-arkui-common-comp-commonmethod-c.md#onhover) are supported.
 
 ## Child Components
 
@@ -31,6 +31,8 @@ Defines the constructor of Span.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-SpanInterface-(value: string | Resource): SpanAttribute--><!--Device-SpanInterface-(value: string | Resource): SpanAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

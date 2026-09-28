@@ -8,6 +8,8 @@ class FileVersion
 
 **起始版本：** 20
 
+<!--Device-cloudSync-class FileVersion--><!--Device-cloudSync-class FileVersion-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## 导入模块
@@ -25,6 +27,8 @@ clearFileConflict(uri: string): Promise<void>
 清除本地文件版本冲突标志。如果产生冲突，本地解决冲突后需要调用此方法来清除冲突标记，后续才可以触发自动同步机制，和云上保持一致。使用Promise异步回调。
 
 **起始版本：** 20
+
+<!--Device-FileVersion-clearFileConflict(uri: string): Promise<void>--><!--Device-FileVersion-clearFileConflict(uri: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -87,6 +91,8 @@ A constructor used to create a FileVersion object.
 
 **起始版本：** 20
 
+<!--Device-FileVersion-constructor()--><!--Device-FileVersion-constructor()-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **错误码：**
@@ -110,6 +116,8 @@ downloadHistoryVersion(uri: string, versionId: string, callback: Callback<Versio
 根据版本号获取指定文件的某一版本的文件内容。用户通过版本号指定云上某一版本，将其下载到本地临时存储路径，临时文件由应用自行决定是否替换原始文件，也可以选择保留或直接删除。callback返回文件下载进度，Promise返回历史版本临时文件的URI。
 
 **起始版本：** 20
+
+<!--Device-FileVersion-downloadHistoryVersion(uri: string, versionId: string, callback: Callback<VersionDownloadProgress>): Promise<string>--><!--Device-FileVersion-downloadHistoryVersion(uri: string, versionId: string, callback: Callback<VersionDownloadProgress>): Promise<string>-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -183,6 +191,8 @@ getHistoryVersionList(uri: string, versionNumLimit: number): Promise<Array<Histo
 
 **起始版本：** 20
 
+<!--Device-FileVersion-getHistoryVersionList(uri: string, versionNumLimit: int): Promise<Array<HistoryVersion>>--><!--Device-FileVersion-getHistoryVersionList(uri: string, versionNumLimit: int): Promise<Array<HistoryVersion>>-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **参数：**
@@ -244,6 +254,8 @@ isFileConflict(uri: string): Promise<boolean>
 
 **起始版本：** 20
 
+<!--Device-FileVersion-isFileConflict(uri: string): Promise<boolean>--><!--Device-FileVersion-isFileConflict(uri: string): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **参数：**
@@ -297,6 +309,8 @@ replaceFileWithHistoryVersion(originalUri: string, versionUri: string): Promise<
 提供使用历史版本文件替换本地文件的能力。在替换前，需要调用[downloadHistoryVersion](#downloadhistoryversion)方法对选择的历史版本进行下载并拿到versionUri；直接调用此接口或者versionUri非法会产生异常；替换完成后会删除临时存储文件。使用Promise异步回调。
 
 **起始版本：** 20
+
+<!--Device-FileVersion-replaceFileWithHistoryVersion(originalUri: string, versionUri: string): Promise<void>--><!--Device-FileVersion-replaceFileWithHistoryVersion(originalUri: string, versionUri: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 

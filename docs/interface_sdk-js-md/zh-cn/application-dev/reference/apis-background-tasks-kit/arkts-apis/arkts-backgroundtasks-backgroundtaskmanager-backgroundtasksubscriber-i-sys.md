@@ -8,6 +8,8 @@ export interface BackgroundTaskSubscriber
 
 **起始版本：** 23
 
+<!--Device-backgroundTaskManager-export interface BackgroundTaskSubscriber--><!--Device-backgroundTaskManager-export interface BackgroundTaskSubscriber-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 **系统接口：** 此接口为系统接口。
@@ -29,6 +31,8 @@ onContinuousTaskStart(info: ContinuousTaskInfo): void
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BackgroundTaskSubscriber-onContinuousTaskStart(info: ContinuousTaskInfo): void--><!--Device-BackgroundTaskSubscriber-onContinuousTaskStart(info: ContinuousTaskInfo): void-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -70,6 +74,8 @@ onContinuousTaskStop(info: ContinuousTaskInfo): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BackgroundTaskSubscriber-onContinuousTaskStop(info: ContinuousTaskInfo): void--><!--Device-BackgroundTaskSubscriber-onContinuousTaskStop(info: ContinuousTaskInfo): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 **系统接口：** 此接口为系统接口。
@@ -109,6 +115,8 @@ onContinuousTaskUpdate(info: ContinuousTaskInfo): void
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BackgroundTaskSubscriber-onContinuousTaskUpdate(info: ContinuousTaskInfo): void--><!--Device-BackgroundTaskSubscriber-onContinuousTaskUpdate(info: ContinuousTaskInfo): void-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 

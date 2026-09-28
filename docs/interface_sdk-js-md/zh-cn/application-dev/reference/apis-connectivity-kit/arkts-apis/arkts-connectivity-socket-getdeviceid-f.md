@@ -16,6 +16,8 @@ function getDeviceId(clientSocket: number): string
 
 **起始版本：** 17
 
+<!--Device-socket-function getDeviceId(clientSocket: int): string--><!--Device-socket-function getDeviceId(clientSocket: int): string-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**

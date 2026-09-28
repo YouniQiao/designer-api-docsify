@@ -24,6 +24,8 @@ function addOsAccount(admin: Want, name: string, type: osAccount.OsAccountType):
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-accountManager-function addOsAccount(admin: Want, name: string, type: osAccount.OsAccountType): osAccount.OsAccountInfo--><!--Device-accountManager-function addOsAccount(admin: Want, name: string, type: osAccount.OsAccountType): osAccount.OsAccountInfo-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。

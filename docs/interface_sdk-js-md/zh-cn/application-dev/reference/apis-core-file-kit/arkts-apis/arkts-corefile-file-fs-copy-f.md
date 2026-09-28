@@ -20,6 +20,8 @@ declare function copy(srcUri: string, destUri: string, options?: CopyOptions): P
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare function copy(srcUri: string, destUri: string, options?: CopyOptions): Promise<void>--><!--Device-unnamed-declare function copy(srcUri: string, destUri: string, options?: CopyOptions): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -84,6 +86,8 @@ declare function copy(srcUri: string, destUri: string, callback: AsyncCallback<v
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare function copy(srcUri: string, destUri: string, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function copy(srcUri: string, destUri: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -140,6 +144,8 @@ declare function copy(srcUri: string, destUri: string, options: CopyOptions, cal
 跨端拷贝时，最多同时存在10个拷贝任务；单次拷贝的文件数量不得超过500个。
 
 **起始版本：** 11
+
+<!--Device-unnamed-declare function copy(srcUri: string, destUri: string, options: CopyOptions, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function copy(srcUri: string, destUri: string, options: CopyOptions, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

@@ -8,6 +8,8 @@ Indicates the contact types.
 
 **起始版本：** 8
 
+<!--Device-sim-export enum ContactType--><!--Device-sim-export enum ContactType-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -22,6 +24,8 @@ Indicates the common contact number.
 
 **起始版本：** 8
 
+<!--Device-ContactType-GENERAL_CONTACT = 1--><!--Device-ContactType-GENERAL_CONTACT = 1-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -35,6 +39,8 @@ FIXED_DIALING = 2
 Indicates the fixed dialing number.
 
 **起始版本：** 8
+
+<!--Device-ContactType-FIXED_DIALING = 2--><!--Device-ContactType-FIXED_DIALING = 2-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -51,6 +57,8 @@ SDN_DIALING = 3
 **起始版本：** 24
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-ContactType-SDN_DIALING = 3--><!--Device-ContactType-SDN_DIALING = 3-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

@@ -10,6 +10,8 @@ interface MediaEntity
 
 **起始版本：** 23
 
+<!--Device-avMusicTemplate-interface MediaEntity--><!--Device-avMusicTemplate-interface MediaEntity-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## 导入模块
@@ -32,6 +34,8 @@ desc?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MediaEntity-desc?: string--><!--Device-MediaEntity-desc?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## imageUrl
@@ -47,6 +51,8 @@ imageUrl: string
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MediaEntity-imageUrl: string--><!--Device-MediaEntity-imageUrl: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -64,6 +70,8 @@ mediaId: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MediaEntity-mediaId: string--><!--Device-MediaEntity-mediaId: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## mediaType
@@ -79,6 +87,8 @@ mediaType: EntityType
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MediaEntity-mediaType: EntityType--><!--Device-MediaEntity-mediaType: EntityType-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -96,6 +106,8 @@ parentId: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MediaEntity-parentId: string--><!--Device-MediaEntity-parentId: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## parentMediaType
@@ -111,6 +123,8 @@ parentMediaType: EntityType
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MediaEntity-parentMediaType: EntityType--><!--Device-MediaEntity-parentMediaType: EntityType-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -128,6 +142,8 @@ playState: PlaybackState
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MediaEntity-playState: PlaybackState--><!--Device-MediaEntity-playState: PlaybackState-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## title
@@ -143,5 +159,7 @@ title: string
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MediaEntity-title: string--><!--Device-MediaEntity-title: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate

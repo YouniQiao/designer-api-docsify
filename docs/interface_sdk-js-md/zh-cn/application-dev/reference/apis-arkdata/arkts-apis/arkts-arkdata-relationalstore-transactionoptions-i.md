@@ -8,6 +8,8 @@ interface TransactionOptions
 
 **起始版本：** 14
 
+<!--Device-relationalStore-interface TransactionOptions--><!--Device-relationalStore-interface TransactionOptions-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## 导入模块
@@ -27,5 +29,7 @@ transactionType?: TransactionType
 **类型：** [TransactionType](arkts-arkdata-relationalstore-transactiontype-e.md)
 
 **起始版本：** 14
+
+<!--Device-TransactionOptions-transactionType?: TransactionType--><!--Device-TransactionOptions-transactionType?: TransactionType-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core

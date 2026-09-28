@@ -10,6 +10,8 @@ UIServiceExtensionAbility提供浮窗组件相关扩展能力，继承自[Extens
 
 **起始版本：** 14
 
+<!--Device-unnamed-declare class UIServiceExtensionAbility extends ExtensionAbility--><!--Device-unnamed-declare class UIServiceExtensionAbility extends ExtensionAbility-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -31,6 +33,8 @@ UIServiceExtension生命周期回调。如果是[connectUIServiceExtensionAbilit
 **起始版本：** 14
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIServiceExtensionAbility-onConnect(want: Want, proxy: UIServiceHostProxy): void--><!--Device-UIServiceExtensionAbility-onConnect(want: Want, proxy: UIServiceHostProxy): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -67,6 +71,8 @@ onCreate(want: Want): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UIServiceExtensionAbility-onCreate(want: Want): void--><!--Device-UIServiceExtensionAbility-onCreate(want: Want): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -101,6 +107,8 @@ onData(proxy: UIServiceHostProxy, data: Record<string, Object>): void
 **起始版本：** 14
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIServiceExtensionAbility-onData(proxy: UIServiceHostProxy, data: Record<string, Object>): void--><!--Device-UIServiceExtensionAbility-onData(proxy: UIServiceHostProxy, data: Record<string, Object>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -137,6 +145,8 @@ UIServiceExtension销毁时回调，执行资源清理等操作。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UIServiceExtensionAbility-onDestroy(): void--><!--Device-UIServiceExtensionAbility-onDestroy(): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -164,6 +174,8 @@ onDisconnect(want: Want, proxy: UIServiceHostProxy): void
 **起始版本：** 14
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIServiceExtensionAbility-onDisconnect(want: Want, proxy: UIServiceHostProxy): void--><!--Device-UIServiceExtensionAbility-onDisconnect(want: Want, proxy: UIServiceHostProxy): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -200,6 +212,8 @@ onRequest(want: Want, startId: number): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UIServiceExtensionAbility-onRequest(want: Want, startId: int): void--><!--Device-UIServiceExtensionAbility-onRequest(want: Want, startId: int): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -235,6 +249,8 @@ UIServiceExtension创建后回调。UIServiceExtension服务创建窗口成功�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UIServiceExtensionAbility-onWindowDidCreate(window: window.Window): void--><!--Device-UIServiceExtensionAbility-onWindowDidCreate(window: window.Window): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -269,6 +285,8 @@ UIServiceExtension窗体创建前的回调。前台应用把要创建windows的�
 **起始版本：** 14
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIServiceExtensionAbility-onWindowWillCreate(config: window.ExtensionWindowConfig): void--><!--Device-UIServiceExtensionAbility-onWindowWillCreate(config: window.ExtensionWindowConfig): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -306,6 +324,8 @@ UIServiceExtension的上下文环境，继承自[ExtensionContext](arkts-ability
 **起始版本：** 14
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIServiceExtensionAbility-context: UIServiceExtensionContext--><!--Device-UIServiceExtensionAbility-context: UIServiceExtensionContext-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

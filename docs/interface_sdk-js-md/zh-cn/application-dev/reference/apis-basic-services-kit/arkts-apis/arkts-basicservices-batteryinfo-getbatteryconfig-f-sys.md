@@ -16,6 +16,8 @@ function getBatteryConfig(sceneName: string): string
 
 **起始版本：** 11
 
+<!--Device-batteryInfo-function getBatteryConfig(sceneName: string): string--><!--Device-batteryInfo-function getBatteryConfig(sceneName: string): string-End-->
+
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
 **系统接口：** 此接口为系统接口。

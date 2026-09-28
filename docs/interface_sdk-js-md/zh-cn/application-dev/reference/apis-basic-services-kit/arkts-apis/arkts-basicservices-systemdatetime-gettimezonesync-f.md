@@ -16,6 +16,8 @@ function getTimezoneSync(): string
 
 **起始版本：** 10
 
+<!--Device-systemDateTime-function getTimezoneSync(): string--><!--Device-systemDateTime-function getTimezoneSync(): string-End-->
+
 **系统能力：** SystemCapability.MiscServices.Time
 
 **返回值：**

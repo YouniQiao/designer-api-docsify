@@ -12,6 +12,8 @@ enum FeatureType
 
 **替代接口：** [hasHceCapability](arkts-connectivity-cardemulation-hashcecapability-f.md)
 
+<!--Device-cardEmulation-enum FeatureType--><!--Device-cardEmulation-enum FeatureType-End-->
+
 **系统能力：** SystemCapability.Communication.NFC.CardEmulation
 
 ## HCE
@@ -29,6 +31,8 @@ HCE 卡模拟。
 **替代接口：** [hasHceCapability](arkts-connectivity-cardemulation-hashcecapability-f.md)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FeatureType-HCE = 0--><!--Device-FeatureType-HCE = 0-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.CardEmulation
 
@@ -48,6 +52,8 @@ SIM 卡模拟。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FeatureType-UICC = 1--><!--Device-FeatureType-UICC = 1-End-->
+
 **系统能力：** SystemCapability.Communication.NFC.CardEmulation
 
 ## ESE
@@ -65,5 +71,7 @@ ESE 卡模拟。
 **替代接口：** [hasHceCapability](arkts-connectivity-cardemulation-hashcecapability-f.md)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FeatureType-ESE = 2--><!--Device-FeatureType-ESE = 2-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.CardEmulation

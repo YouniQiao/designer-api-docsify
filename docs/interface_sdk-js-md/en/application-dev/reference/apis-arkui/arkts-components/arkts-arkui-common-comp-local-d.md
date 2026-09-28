@@ -16,4 +16,6 @@ For details, see [@Local Decorator: Representing the Internal State of Component
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-unnamed-declare const Local: PropertyDecorator--><!--Device-unnamed-declare const Local: PropertyDecorator-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

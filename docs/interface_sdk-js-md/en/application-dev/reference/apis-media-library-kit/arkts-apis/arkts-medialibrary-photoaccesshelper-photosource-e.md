@@ -8,6 +8,8 @@ Enumerates the sources of the image or video data.
 
 **Since:** 20
 
+<!--Device-photoAccessHelper-export enum PhotoSource--><!--Device-photoAccessHelper-export enum PhotoSource-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## ALL
@@ -20,7 +22,9 @@ Images and videos from all sources.
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+
+<!--Device-PhotoSource-ALL = 0--><!--Device-PhotoSource-ALL = 0-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -34,7 +38,9 @@ Image or video taken by the camera.
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+
+<!--Device-PhotoSource-CAMERA = 1--><!--Device-PhotoSource-CAMERA = 1-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -48,6 +54,8 @@ Screenshot or screen capture video.
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+
+<!--Device-PhotoSource-SCREENSHOT = 2--><!--Device-PhotoSource-SCREENSHOT = 2-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core

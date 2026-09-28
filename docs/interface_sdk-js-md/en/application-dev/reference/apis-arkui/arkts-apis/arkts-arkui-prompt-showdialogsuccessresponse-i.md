@@ -14,6 +14,8 @@ Defines the response of ShowDialog.
 
 **Substitutes:** [ShowDialogSuccessResponse](arkts-arkui-promptaction-showdialogsuccessresponse-i.md)
 
+<!--Device-prompt-interface ShowDialogSuccessResponse--><!--Device-prompt-interface ShowDialogSuccessResponse-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -39,5 +41,7 @@ Defines the index of data.
 **Substitutes:** [index](arkts-arkui-promptaction-showdialogsuccessresponse-i.md#index)
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-ShowDialogSuccessResponse-index: number--><!--Device-ShowDialogSuccessResponse-index: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -21,6 +21,8 @@ function isAudioMonoEnabledSync(): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-accessibility-function isAudioMonoEnabledSync(): boolean--><!--Device-accessibility-function isAudioMonoEnabledSync(): boolean-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **返回值：**

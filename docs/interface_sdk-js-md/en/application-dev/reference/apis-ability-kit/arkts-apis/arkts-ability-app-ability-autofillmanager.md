@@ -8,6 +8,8 @@ Unlike the system's auto-save feature that triggers during page transitions, thi
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-unnamed-declare namespace autoFillManager--><!--Device-unnamed-declare namespace autoFillManager-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 ## Modules to Import

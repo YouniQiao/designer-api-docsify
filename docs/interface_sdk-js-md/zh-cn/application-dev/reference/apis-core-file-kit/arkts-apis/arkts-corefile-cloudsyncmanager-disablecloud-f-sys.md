@@ -18,6 +18,8 @@ function disableCloud(accountId: string): Promise<void>
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
+<!--Device-cloudSyncManager-function disableCloud(accountId: string): Promise<void>--><!--Device-cloudSyncManager-function disableCloud(accountId: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 **系统接口：** 此接口为系统接口。
@@ -69,6 +71,8 @@ function disableCloud(accountId: string, callback: AsyncCallback<void>): void
 **起始版本：** 10
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC_MANAGER
+
+<!--Device-cloudSyncManager-function disableCloud(accountId: string, callback: AsyncCallback<void>): void--><!--Device-cloudSyncManager-function disableCloud(accountId: string, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 

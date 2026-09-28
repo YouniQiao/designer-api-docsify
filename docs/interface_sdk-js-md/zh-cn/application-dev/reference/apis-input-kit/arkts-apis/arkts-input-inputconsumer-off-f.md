@@ -16,6 +16,8 @@ function off(type: 'hotkeyChange', hotkeyOptions: HotkeyOptions, callback?: Call
 
 **起始版本：** 14
 
+<!--Device-inputConsumer-function off(type: 'hotkeyChange', hotkeyOptions: HotkeyOptions, callback?: Callback<HotkeyOptions>): void--><!--Device-inputConsumer-function off(type: 'hotkeyChange', hotkeyOptions: HotkeyOptions, callback?: Callback<HotkeyOptions>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 
 **参数：**
@@ -111,6 +113,8 @@ function off(type: 'keyPressed', callback?: Callback<KeyEvent>): void
 取消对'keyPressed'事件的订阅，使用callback异步回调。调用该方法后，被屏蔽的系统按键默认行为将恢复，即系统对音量调节等默认响应将恢复。
 
 **起始版本：** 16
+
+<!--Device-inputConsumer-function off(type: 'keyPressed', callback?: Callback<KeyEvent>): void--><!--Device-inputConsumer-function off(type: 'keyPressed', callback?: Callback<KeyEvent>): void-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 

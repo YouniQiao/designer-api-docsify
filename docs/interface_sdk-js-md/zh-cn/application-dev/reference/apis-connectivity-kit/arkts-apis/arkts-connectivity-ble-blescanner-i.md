@@ -10,6 +10,8 @@ BLE扫描类，提供了扫描相关的操作方法。
 
 **起始版本：** 15
 
+<!--Device-ble-interface BleScanner--><!--Device-ble-interface BleScanner-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -35,6 +37,8 @@ off(type: 'BLEDeviceFind', callback?: Callback<ScanReport>): void
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-BleScanner-off(type: 'BLEDeviceFind', callback?: Callback<ScanReport>): void--><!--Device-BleScanner-off(type: 'BLEDeviceFind', callback?: Callback<ScanReport>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -90,6 +94,8 @@ on(type: 'BLEDeviceFind', callback: Callback<ScanReport>): void
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
 
+<!--Device-BleScanner-on(type: 'BLEDeviceFind', callback: Callback<ScanReport>): void--><!--Device-BleScanner-on(type: 'BLEDeviceFind', callback: Callback<ScanReport>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -141,6 +147,8 @@ startScan(filters: Array<ScanFilter>, options?: ScanOptions): Promise<void>
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-BleScanner-startScan(filters: Array<ScanFilter>, options?: ScanOptions): Promise<void>--><!--Device-BleScanner-startScan(filters: Array<ScanFilter>, options?: ScanOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -215,7 +223,9 @@ stopScan(): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-BleScanner-stopScan(): Promise<void>--><!--Device-BleScanner-stopScan(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

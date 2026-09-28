@@ -14,6 +14,8 @@ enum ProfileConnectionState
 
 **替代接口：** [ProfileConnectionState](arkts-connectivity-constant-profileconnectionstate-e.md)
 
+<!--Device-bluetoothManager-enum ProfileConnectionState--><!--Device-bluetoothManager-enum ProfileConnectionState-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## STATE_DISCONNECTED
@@ -29,6 +31,8 @@ STATE_DISCONNECTED = 0
 **废弃版本：** 10
 
 **替代接口：** [STATE_DISCONNECTED](arkts-connectivity-constant-profileconnectionstate-e.md#state_disconnected)
+
+<!--Device-ProfileConnectionState-STATE_DISCONNECTED = 0--><!--Device-ProfileConnectionState-STATE_DISCONNECTED = 0-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -46,6 +50,8 @@ STATE_CONNECTING = 1
 
 **替代接口：** [STATE_CONNECTING](arkts-connectivity-constant-profileconnectionstate-e.md#state_connecting)
 
+<!--Device-ProfileConnectionState-STATE_CONNECTING = 1--><!--Device-ProfileConnectionState-STATE_CONNECTING = 1-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## STATE_CONNECTED
@@ -62,6 +68,8 @@ STATE_CONNECTED = 2
 
 **替代接口：** [STATE_CONNECTED](arkts-connectivity-constant-profileconnectionstate-e.md#state_connected)
 
+<!--Device-ProfileConnectionState-STATE_CONNECTED = 2--><!--Device-ProfileConnectionState-STATE_CONNECTED = 2-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## STATE_DISCONNECTING
@@ -77,5 +85,7 @@ STATE_DISCONNECTING = 3
 **废弃版本：** 10
 
 **替代接口：** [STATE_DISCONNECTING](arkts-connectivity-constant-profileconnectionstate-e.md#state_disconnecting)
+
+<!--Device-ProfileConnectionState-STATE_DISCONNECTING = 3--><!--Device-ProfileConnectionState-STATE_DISCONNECTING = 3-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

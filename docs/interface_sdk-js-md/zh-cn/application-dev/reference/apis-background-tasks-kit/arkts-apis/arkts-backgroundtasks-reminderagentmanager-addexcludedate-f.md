@@ -18,6 +18,8 @@ function addExcludeDate(reminderId: number, date: Date): Promise<void>
 
 **需要权限：** ohos.permission.PUBLISH_AGENT_REMINDER
 
+<!--Device-reminderAgentManager-function addExcludeDate(reminderId: int, date: Date): Promise<void>--><!--Device-reminderAgentManager-function addExcludeDate(reminderId: int, date: Date): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 **参数：**

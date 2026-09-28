@@ -19,6 +19,8 @@ declare function closeSync(fd: number): void
 
 **替代接口：** [closeSync](arkts-corefile-file-fs-closesync-f.md)
 
+<!--Device-unnamed-declare function closeSync(fd: number): void--><!--Device-unnamed-declare function closeSync(fd: number): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**

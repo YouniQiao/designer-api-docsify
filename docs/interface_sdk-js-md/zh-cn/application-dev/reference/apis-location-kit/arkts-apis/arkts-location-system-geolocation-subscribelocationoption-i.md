@@ -14,6 +14,8 @@ export interface SubscribeLocationOption
 
 **需要权限：** ohos.permission.LOCATION
 
+<!--Device-unnamed-export interface SubscribeLocationOption--><!--Device-unnamed-export interface SubscribeLocationOption-End-->
+
 **系统能力：** SystemCapability.Location.Location.Lite
 
 ## 导入模块
@@ -35,6 +37,8 @@ fail?: (data: string, code: number) => void
 **废弃版本：** 9
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-SubscribeLocationOption-fail?: (data: string, code: number) => void--><!--Device-SubscribeLocationOption-fail?: (data: string, code: number) => void-End-->
 
 **系统能力：** SystemCapability.Location.Location.Lite
 
@@ -59,6 +63,8 @@ success: (data: GeolocationResponse) => void
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-SubscribeLocationOption-success: (data: GeolocationResponse) => void--><!--Device-SubscribeLocationOption-success: (data: GeolocationResponse) => void-End-->
+
 **系统能力：** SystemCapability.Location.Location.Lite
 
 **参数：**
@@ -82,5 +88,7 @@ coordType?: string
 **废弃版本：** 9
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-SubscribeLocationOption-coordType?: string--><!--Device-SubscribeLocationOption-coordType?: string-End-->
 
 **系统能力：** SystemCapability.Location.Location.Lite

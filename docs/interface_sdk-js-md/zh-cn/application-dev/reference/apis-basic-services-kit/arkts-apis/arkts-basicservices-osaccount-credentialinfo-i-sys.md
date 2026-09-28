@@ -8,6 +8,8 @@ interface CredentialInfo
 
 **起始版本：** 8
 
+<!--Device-osAccount-interface CredentialInfo--><!--Device-osAccount-interface CredentialInfo-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ accountId?: number
 
 **起始版本：** 12
 
+<!--Device-CredentialInfo-accountId?: int--><!--Device-CredentialInfo-accountId?: int-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ additionalInfo?: string
 **类型：** string
 
 **起始版本：** 23
+
+<!--Device-CredentialInfo-additionalInfo?: string--><!--Device-CredentialInfo-additionalInfo?: string-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -62,6 +68,8 @@ credSubType: AuthSubType
 
 **起始版本：** 8
 
+<!--Device-CredentialInfo-credSubType: AuthSubType--><!--Device-CredentialInfo-credSubType: AuthSubType-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -78,6 +86,8 @@ credType: AuthType
 
 **起始版本：** 8
 
+<!--Device-CredentialInfo-credType: AuthType--><!--Device-CredentialInfo-credType: AuthType-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -93,6 +103,8 @@ token: Uint8Array
 **类型：** Uint8Array
 
 **起始版本：** 8
+
+<!--Device-CredentialInfo-token: Uint8Array--><!--Device-CredentialInfo-token: Uint8Array-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 

@@ -10,6 +10,8 @@ Ability信息。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-bundleManager-export type AbilityInfo = _AbilityInfo.AbilityInfo--><!--Device-bundleManager-export type AbilityInfo = _AbilityInfo.AbilityInfo-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **类型：** [_AbilityInfo.AbilityInfo](arkts-ability-abilityinfo-i.md)

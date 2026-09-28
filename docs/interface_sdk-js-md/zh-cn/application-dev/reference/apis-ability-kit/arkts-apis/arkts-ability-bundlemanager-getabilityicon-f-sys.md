@@ -30,6 +30,8 @@ function getAbilityIcon(bundleName: string, moduleName: string, abilityName: str
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
+<!--Device-bundleManager-function getAbilityIcon(bundleName: string, moduleName: string, abilityName: string, callback: AsyncCallback<image.PixelMap>): void--><!--Device-bundleManager-function getAbilityIcon(bundleName: string, moduleName: string, abilityName: string, callback: AsyncCallback<image.PixelMap>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Resource
 
 **系统接口：** 此接口为系统接口。
@@ -106,6 +108,8 @@ function getAbilityIcon(bundleName: string, moduleName: string, abilityName: str
 **替代接口：** [getMediaContent](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-resourcemanager-i.md#getmediacontent)
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
+
+<!--Device-bundleManager-function getAbilityIcon(bundleName: string, moduleName: string, abilityName: string): Promise<image.PixelMap>--><!--Device-bundleManager-function getAbilityIcon(bundleName: string, moduleName: string, abilityName: string): Promise<image.PixelMap>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Resource
 

@@ -8,6 +8,8 @@ Ability启动原因，该类型为枚举，可配合UIAbility的[onCreate(want, 
 
 **起始版本：** 9
 
+<!--Device-AbilityConstant-export enum LaunchReason--><!--Device-AbilityConstant-export enum LaunchReason-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## UNKNOWN
@@ -22,7 +24,9 @@ UNKNOWN = 0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-LaunchReason-UNKNOWN = 0--><!--Device-LaunchReason-UNKNOWN = 0-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -38,7 +42,9 @@ START_ABILITY = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-LaunchReason-START_ABILITY = 1--><!--Device-LaunchReason-START_ABILITY = 1-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -54,7 +60,9 @@ CALL = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-LaunchReason-CALL = 2--><!--Device-LaunchReason-CALL = 2-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -70,7 +78,9 @@ CONTINUATION = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-LaunchReason-CONTINUATION = 3--><!--Device-LaunchReason-CONTINUATION = 3-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -86,7 +96,9 @@ APP_RECOVERY = 4
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-LaunchReason-APP_RECOVERY = 4--><!--Device-LaunchReason-APP_RECOVERY = 4-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -102,7 +114,9 @@ SHARE = 5
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-LaunchReason-SHARE = 5--><!--Device-LaunchReason-SHARE = 5-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -118,6 +132,8 @@ AUTO_STARTUP = 8
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-LaunchReason-AUTO_STARTUP = 8--><!--Device-LaunchReason-AUTO_STARTUP = 8-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## INSIGHT_INTENT
@@ -132,7 +148,9 @@ INSIGHT_INTENT = 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-LaunchReason-INSIGHT_INTENT = 9--><!--Device-LaunchReason-INSIGHT_INTENT = 9-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -148,7 +166,9 @@ PREPARE_CONTINUATION = 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LaunchReason-PREPARE_CONTINUATION = 10--><!--Device-LaunchReason-PREPARE_CONTINUATION = 10-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -164,6 +184,8 @@ PRELOAD = 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-LaunchReason-PRELOAD = 11--><!--Device-LaunchReason-PRELOAD = 11-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

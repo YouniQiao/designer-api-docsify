@@ -8,6 +8,8 @@ Tabs组件的控制器，用于控制Tabs组件进行页签切换。不支持一
 
 **起始版本：** 7
 
+<!--Device-unnamed-declare class TabsController--><!--Device-unnamed-declare class TabsController-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## changeIndex
@@ -21,6 +23,8 @@ changeIndex(value: number): void
 **起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-TabsController-changeIndex(value: number): void--><!--Device-TabsController-changeIndex(value: number): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -41,6 +45,8 @@ TabsController的构造函数。
 **起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-TabsController-constructor()--><!--Device-TabsController-constructor()-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -65,6 +71,8 @@ preloadItems(indices: Optional<Array<number>>): Promise<void>
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TabsController-preloadItems(indices: Optional<Array<number>>): Promise<void>--><!--Device-TabsController-preloadItems(indices: Optional<Array<number>>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -108,6 +116,8 @@ setTabBarOpacity(opacity: number): void
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
+<!--Device-TabsController-setTabBarOpacity(opacity: number): void--><!--Device-TabsController-setTabBarOpacity(opacity: number): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -137,6 +147,8 @@ setTabBarTranslate(translate: TranslateOptions): void
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
+
+<!--Device-TabsController-setTabBarTranslate(translate: TranslateOptions): void--><!--Device-TabsController-setTabBarTranslate(translate: TranslateOptions): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

@@ -25,6 +25,8 @@ function createAudioPlayer(): AudioPlayer
 
 **替代接口：** [createAVPlayer](arkts-media-media-createavplayer-f.md)(callback: AsyncCallback&lt;AVPlayer&gt;)
 
+<!--Device-media-function createAudioPlayer(): AudioPlayer--><!--Device-media-function createAudioPlayer(): AudioPlayer-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
 **返回值：**

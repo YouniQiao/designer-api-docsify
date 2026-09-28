@@ -20,6 +20,8 @@ function getNfcVTag(tagInfo: TagInfo): NfcVTag
 
 **替代接口：** [getNfcV](arkts-connectivity-tag-getnfcv-f.md)
 
+<!--Device-tag-function getNfcVTag(tagInfo: TagInfo): NfcVTag--><!--Device-tag-function getNfcVTag(tagInfo: TagInfo): NfcVTag-End-->
+
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **参数：**

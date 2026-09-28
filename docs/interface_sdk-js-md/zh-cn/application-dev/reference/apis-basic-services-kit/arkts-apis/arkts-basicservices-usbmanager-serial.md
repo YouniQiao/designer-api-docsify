@@ -11,6 +11,8 @@
 
 **起始版本：** 19
 
+<!--Device-unnamed-declare namespace serialManager--><!--Device-unnamed-declare namespace serialManager-End-->
+
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
 ## 导入模块

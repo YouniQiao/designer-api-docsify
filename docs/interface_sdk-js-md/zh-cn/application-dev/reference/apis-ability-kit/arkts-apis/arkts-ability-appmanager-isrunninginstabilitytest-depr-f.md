@@ -23,6 +23,8 @@ function isRunningInStabilityTest(callback: AsyncCallback<boolean>): void
 
 **替代接口：** [isRunningInStabilityTest](arkts-ability-appmanager-isrunninginstabilitytest-f.md)
 
+<!--Device-appManager-function isRunningInStabilityTest(callback: AsyncCallback<boolean>): void--><!--Device-appManager-function isRunningInStabilityTest(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -65,6 +67,8 @@ function isRunningInStabilityTest(): Promise<boolean>
 **废弃版本：** 9
 
 **替代接口：** [isRunningInStabilityTest](arkts-ability-appmanager-isrunninginstabilitytest-f.md)
+
+<!--Device-appManager-function isRunningInStabilityTest(): Promise<boolean>--><!--Device-appManager-function isRunningInStabilityTest(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

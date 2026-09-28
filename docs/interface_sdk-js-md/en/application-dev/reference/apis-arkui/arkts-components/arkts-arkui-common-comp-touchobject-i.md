@@ -8,6 +8,8 @@ Type of the touch event.
 
 **Since:** 7
 
+<!--Device-unnamed-declare interface TouchObject--><!--Device-unnamed-declare interface TouchObject-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## getCurrentLocalPosition
@@ -23,6 +25,8 @@ Gets the coordinates of the top-left corner of the current component based on it
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-TouchObject-getCurrentLocalPosition?(): Coordinate2D--><!--Device-TouchObject-getCurrentLocalPosition?(): Coordinate2D-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,6 +54,8 @@ Unit: vp.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TouchObject-displayX: number--><!--Device-TouchObject-displayX: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## displayY
@@ -69,6 +75,8 @@ Unit: vp.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TouchObject-displayY: number--><!--Device-TouchObject-displayY: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -92,6 +100,8 @@ Value range: (-∞, +∞).
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-TouchObject-globalDisplayX?: number--><!--Device-TouchObject-globalDisplayX?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## globalDisplayY
@@ -114,6 +124,8 @@ Value range: (-∞, +∞).
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-TouchObject-globalDisplayY?: number--><!--Device-TouchObject-globalDisplayY?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## hand
@@ -131,6 +143,8 @@ Whether the event was triggered by a left-hand or right-hand tap.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-TouchObject-hand?: InteractionHand--><!--Device-TouchObject-hand?: InteractionHand-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -152,6 +166,8 @@ Unit: vp.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-TouchObject-height?: number--><!--Device-TouchObject-height?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## id
@@ -167,6 +183,8 @@ Unique identifier of a finger.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TouchObject-id: number--><!--Device-TouchObject-id: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -188,6 +206,8 @@ Unit: ns
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-TouchObject-pressedTime?: number--><!--Device-TouchObject-pressedTime?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## pressure
@@ -208,6 +228,8 @@ Value range: [0, 65535), where higher values indicate stronger pressure.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-TouchObject-pressure?: number--><!--Device-TouchObject-pressure?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## type
@@ -223,6 +245,8 @@ Type of the touch event.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TouchObject-type: TouchType--><!--Device-TouchObject-type: TouchType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -244,6 +268,8 @@ Unit: vp.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-TouchObject-width?: number--><!--Device-TouchObject-width?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## windowX
@@ -263,6 +289,8 @@ Unit: vp.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TouchObject-windowX: number--><!--Device-TouchObject-windowX: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -284,6 +312,8 @@ Unit: vp.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TouchObject-windowY: number--><!--Device-TouchObject-windowY: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## x
@@ -302,6 +332,8 @@ Unit: vp.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TouchObject-x: number--><!--Device-TouchObject-x: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## y
@@ -319,6 +351,8 @@ Unit: vp.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TouchObject-y: number--><!--Device-TouchObject-y: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -342,6 +376,8 @@ Note: This API is supported since API version 7 and deprecated since API version
 
 **Substitutes:** [windowX](#windowx)
 
+<!--Device-TouchObject-screenX: number--><!--Device-TouchObject-screenX: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## screenY
@@ -363,5 +399,7 @@ Note: This API is supported since API version 7 and deprecated since API version
 **Deprecated since:** 10
 
 **Substitutes:** [windowY](#windowy)
+
+<!--Device-TouchObject-screenY: number--><!--Device-TouchObject-screenY: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

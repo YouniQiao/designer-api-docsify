@@ -16,6 +16,8 @@ controller: SearchController = new SearchController();
 
 **Since:** 8
 
+<!--Device-unnamed-declare class SearchController extends TextContentControllerBase--><!--Device-unnamed-declare class SearchController extends TextContentControllerBase-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## caretPosition
@@ -29,6 +31,8 @@ Sets the position of the input cursor.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SearchController-caretPosition(value: number): void--><!--Device-SearchController-caretPosition(value: number): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -49,6 +53,8 @@ Constructor of SearchController.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SearchController-constructor()--><!--Device-SearchController-constructor()-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -74,6 +80,8 @@ When the component is in focus, this API is called to set the text selection are
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SearchController-setTextSelection(selectionStart: number, selectionEnd: number, options?: SelectionOptions): void--><!--Device-SearchController-setTextSelection(selectionStart: number, selectionEnd: number, options?: SelectionOptions): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -97,5 +105,7 @@ Exits the editing state.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SearchController-stopEditing(): void--><!--Device-SearchController-stopEditing(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

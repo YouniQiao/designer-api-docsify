@@ -12,4 +12,6 @@ The function decorated by **\@ComponentDisappear** is executed before a custom c
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-unnamed-export declare const ComponentDisappear: MethodDecorator--><!--Device-unnamed-export declare const ComponentDisappear: MethodDecorator-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

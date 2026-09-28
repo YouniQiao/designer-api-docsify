@@ -16,6 +16,8 @@ function setPointerSpeedSync(speed: number): void
 
 **起始版本：** 10
 
+<!--Device-pointer-function setPointerSpeedSync(speed: int): void--><!--Device-pointer-function setPointerSpeedSync(speed: int): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 **系统接口：** 此接口为系统接口。

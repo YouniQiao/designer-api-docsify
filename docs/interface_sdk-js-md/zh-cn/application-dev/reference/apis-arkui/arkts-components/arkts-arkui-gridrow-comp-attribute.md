@@ -12,6 +12,8 @@ declare class GridRowAttribute extends CommonMethod<GridRowAttribute>
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare class GridRowAttribute extends CommonMethod<GridRowAttribute>--><!--Device-unnamed-declare class GridRowAttribute extends CommonMethod<GridRowAttribute>-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## alignItems
@@ -29,6 +31,8 @@ alignItems(value: ItemAlign)
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-GridRowAttribute-alignItems(value: ItemAlign): GridRowAttribute--><!--Device-GridRowAttribute-alignItems(value: ItemAlign): GridRowAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -55,6 +59,8 @@ onBreakpointChange(callback: (breakpoints: string) => void)
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-GridRowAttribute-onBreakpointChange(callback: (breakpoints: string) => void): GridRowAttribute--><!--Device-GridRowAttribute-onBreakpointChange(callback: (breakpoints: string) => void): GridRowAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

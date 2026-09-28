@@ -16,6 +16,8 @@ Obtains the maximum continuous rotation duration of a mechanical device.
 
 **起始版本：** 20
 
+<!--Device-mechanicManager-function getMaxRotationTime(mechId: int): int--><!--Device-mechanicManager-function getMaxRotationTime(mechId: int): int-End-->
+
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。

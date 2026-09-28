@@ -8,6 +8,8 @@ interface Range
 
 **起始版本：** 11
 
+<!--Device-media-interface Range--><!--Device-media-interface Range-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 ## 导入模块
@@ -28,6 +30,8 @@ max: number
 
 **起始版本：** 11
 
+<!--Device-Range-max: int--><!--Device-Range-max: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 ## min
@@ -41,5 +45,7 @@ min: number
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-Range-min: int--><!--Device-Range-min: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder

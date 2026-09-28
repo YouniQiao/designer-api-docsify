@@ -12,6 +12,8 @@ Scope 接口用于描述字段的有效范围。
 
 **替代接口：** [ScopeHelper](arkts-arkts-util-scopehelper-c.md)
 
+<!--Device-util-class Scope--><!--Device-util-class Scope-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -33,6 +35,8 @@ clamp(value: ScopeType): ScopeType
 **废弃版本：** 9
 
 **替代接口：** [clamp](arkts-arkts-util-scopehelper-c.md#clamp)
+
+<!--Device-Scope-clamp(value: ScopeType): ScopeType--><!--Device-Scope-clamp(value: ScopeType): ScopeType-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -94,6 +98,8 @@ constructor(lowerObj: ScopeType, upperObj: ScopeType)
 
 **替代接口：** constructor
 
+<!--Device-Scope-constructor(lowerObj: ScopeType, upperObj: ScopeType)--><!--Device-Scope-constructor(lowerObj: ScopeType, upperObj: ScopeType)-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -146,6 +152,8 @@ contains(value: ScopeType): boolean
 **废弃版本：** 9
 
 **替代接口：** contains
+
+<!--Device-Scope-contains(value: ScopeType): boolean--><!--Device-Scope-contains(value: ScopeType): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -209,6 +217,8 @@ contains(range: Scope): boolean
 
 **替代接口：** contains
 
+<!--Device-Scope-contains(range: Scope): boolean--><!--Device-Scope-contains(range: Scope): boolean-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -270,6 +280,8 @@ expand(lowerObj: ScopeType, upperObj: ScopeType): Scope
 **废弃版本：** 9
 
 **替代接口：** expand
+
+<!--Device-Scope-expand(lowerObj: ScopeType, upperObj: ScopeType): Scope--><!--Device-Scope-expand(lowerObj: ScopeType, upperObj: ScopeType): Scope-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -335,6 +347,8 @@ expand(range: Scope): Scope
 
 **替代接口：** expand
 
+<!--Device-Scope-expand(range: Scope): Scope--><!--Device-Scope-expand(range: Scope): Scope-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -399,6 +413,8 @@ expand(value: ScopeType): Scope
 
 **替代接口：** expand
 
+<!--Device-Scope-expand(value: ScopeType): Scope--><!--Device-Scope-expand(value: ScopeType): Scope-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -459,6 +475,8 @@ getLower(): ScopeType
 
 **替代接口：** [getLower](arkts-arkts-util-scopehelper-c.md#getlower)
 
+<!--Device-Scope-getLower(): ScopeType--><!--Device-Scope-getLower(): ScopeType-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -512,6 +530,8 @@ getUpper(): ScopeType
 
 **替代接口：** [getUpper](arkts-arkts-util-scopehelper-c.md#getupper)
 
+<!--Device-Scope-getUpper(): ScopeType--><!--Device-Scope-getUpper(): ScopeType-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -564,6 +584,8 @@ intersect(range: Scope): Scope
 **废弃版本：** 9
 
 **替代接口：** intersect
+
+<!--Device-Scope-intersect(range: Scope): Scope--><!--Device-Scope-intersect(range: Scope): Scope-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -629,6 +651,8 @@ intersect(lowerObj: ScopeType, upperObj: ScopeType): Scope
 
 **替代接口：** intersect
 
+<!--Device-Scope-intersect(lowerObj: ScopeType, upperObj: ScopeType): Scope--><!--Device-Scope-intersect(lowerObj: ScopeType, upperObj: ScopeType): Scope-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -690,6 +714,8 @@ toString(): string
 **废弃版本：** 9
 
 **替代接口：** toString
+
+<!--Device-Scope-toString(): string--><!--Device-Scope-toString(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

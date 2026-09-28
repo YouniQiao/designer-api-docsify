@@ -8,6 +8,8 @@ export declare interface TouchGestureEvent
 
 **起始版本：** 18
 
+<!--Device-unnamed-export declare interface TouchGestureEvent--><!--Device-unnamed-export declare interface TouchGestureEvent-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ action: TouchGestureAction
 
 **起始版本：** 18
 
+<!--Device-TouchGestureEvent-action: TouchGestureAction--><!--Device-TouchGestureEvent-action: TouchGestureAction-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ touches: Touch[]
 **类型：** [Touch](arkts-input-multimodalinput-touchevent-touch-i.md)[]
 
 **起始版本：** 18
+
+<!--Device-TouchGestureEvent-touches: Touch[]--><!--Device-TouchGestureEvent-touches: Touch[]-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 

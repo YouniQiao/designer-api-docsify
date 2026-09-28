@@ -8,6 +8,8 @@ export namespace sharing
 
 **起始版本：** 11
 
+<!--Device-cloudData-export namespace sharing--><!--Device-cloudData-export namespace sharing-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
 **系统接口：** 此接口为系统接口。

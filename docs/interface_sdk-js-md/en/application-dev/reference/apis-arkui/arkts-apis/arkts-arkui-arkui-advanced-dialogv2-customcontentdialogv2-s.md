@@ -12,6 +12,8 @@ Declare custom content dialog
 
 **Decorator:** @ComponentV2
 
+<!--Device-unnamed-export declare struct CustomContentDialogV2--><!--Device-unnamed-export declare struct CustomContentDialogV2-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -36,6 +38,8 @@ Sets the CustomContentDialogV2 buttons.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-CustomContentDialogV2-buttons?: AdvancedDialogV2Button[]--><!--Device-CustomContentDialogV2-buttons?: AdvancedDialogV2Button[]-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## contentAreaPadding
@@ -53,6 +57,8 @@ Sets the CustomContentDialogV2 content area padding.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-CustomContentDialogV2-contentAreaPadding?: LocalizedPadding--><!--Device-CustomContentDialogV2-contentAreaPadding?: LocalizedPadding-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -74,6 +80,8 @@ Sets the CustomContentDialogV2 content.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-CustomContentDialogV2-contentBuilder: CustomBuilder--><!--Device-CustomContentDialogV2-contentBuilder: CustomBuilder-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## primaryTitle
@@ -92,6 +100,8 @@ Sets the CustomContentDialogV2 title.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-CustomContentDialogV2-primaryTitle?: ResourceStr--><!--Device-CustomContentDialogV2-primaryTitle?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## secondaryTitle
@@ -109,5 +119,7 @@ Sets the CustomContentDialogV2 secondary title.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-CustomContentDialogV2-secondaryTitle?: ResourceStr--><!--Device-CustomContentDialogV2-secondaryTitle?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

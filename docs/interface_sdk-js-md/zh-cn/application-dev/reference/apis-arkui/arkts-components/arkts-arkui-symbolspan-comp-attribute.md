@@ -4,11 +4,13 @@
 declare class SymbolSpanAttribute extends CommonMethod<SymbolSpanAttribute>
 ```
 
-不支持[通用属性](arkts-arkui-common-comp.md#common)，支持以下属性：
+不支持[通用属性](arkts-arkui-common-comp.md)，支持以下属性：
 
 **继承/实现关系：** SymbolSpanAttribute extends CommonMethod<SymbolSpanAttribute>
 
 **起始版本：** 11
+
+<!--Device-unnamed-declare class SymbolSpanAttribute extends CommonMethod<SymbolSpanAttribute>--><!--Device-unnamed-declare class SymbolSpanAttribute extends CommonMethod<SymbolSpanAttribute>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,6 +27,8 @@ attributeModifier(modifier: AttributeModifier<SymbolSpanAttribute>)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-SymbolSpanAttribute-attributeModifier(modifier: AttributeModifier<SymbolSpanAttribute>): SymbolSpanAttribute--><!--Device-SymbolSpanAttribute-attributeModifier(modifier: AttributeModifier<SymbolSpanAttribute>): SymbolSpanAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -58,6 +62,8 @@ NONE表示无动效，适用于静态展示场景；SCALE表示整体缩放动�
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-SymbolSpanAttribute-effectStrategy(value: SymbolEffectStrategy): SymbolSpanAttribute--><!--Device-SymbolSpanAttribute-effectStrategy(value: SymbolEffectStrategy): SymbolSpanAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -86,6 +92,8 @@ fontColor(value: Array<ResourceColor>)
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-SymbolSpanAttribute-fontColor(value: Array<ResourceColor>): SymbolSpanAttribute--><!--Device-SymbolSpanAttribute-fontColor(value: Array<ResourceColor>): SymbolSpanAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -113,6 +121,8 @@ fontSize(value: number | string | Resource)
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-SymbolSpanAttribute-fontSize(value: number | string | Resource): SymbolSpanAttribute--><!--Device-SymbolSpanAttribute-fontSize(value: number | string | Resource): SymbolSpanAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -144,6 +154,8 @@ sys.symbol.ohos_lungs图标不支持设置fontWeight。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-SymbolSpanAttribute-fontWeight(value: number | FontWeight | string): SymbolSpanAttribute--><!--Device-SymbolSpanAttribute-fontWeight(value: number | FontWeight | string): SymbolSpanAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -171,6 +183,8 @@ sys.symbol.ohos_lungs图标不支持设置fontWeight。
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-SymbolSpanAttribute-fontWeight(value: number | FontWeight | ResourceStr, fontWeightConfigs?: FontWeightConfigs): SymbolSpanAttribute--><!--Device-SymbolSpanAttribute-fontWeight(value: number | FontWeight | ResourceStr, fontWeightConfigs?: FontWeightConfigs): SymbolSpanAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -202,6 +216,8 @@ SINGLE表示单色渲染，适用于需要统一颜色的图标显示场景；MU
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-SymbolSpanAttribute-renderingStrategy(value: SymbolRenderingStrategy): SymbolSpanAttribute--><!--Device-SymbolSpanAttribute-renderingStrategy(value: SymbolRenderingStrategy): SymbolSpanAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

@@ -8,6 +8,8 @@ export enum VideoMode
 
 **起始版本：** 22
 
+<!--Device-photoAccessHelper-export enum VideoMode--><!--Device-photoAccessHelper-export enum VideoMode-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## DEFAULT
@@ -22,6 +24,8 @@ DEFAULT = 0
 
 **起始版本：** 22
 
+<!--Device-VideoMode-DEFAULT = 0--><!--Device-VideoMode-DEFAULT = 0-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## LOG_VIDEO
@@ -33,5 +37,7 @@ LOG_VIDEO = 1
 log模式视频的文件类型。
 
 **起始版本：** 22
+
+<!--Device-VideoMode-LOG_VIDEO = 1--><!--Device-VideoMode-LOG_VIDEO = 1-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core

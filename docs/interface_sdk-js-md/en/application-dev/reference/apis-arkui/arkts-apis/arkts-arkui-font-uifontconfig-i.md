@@ -8,6 +8,8 @@ UI font configuration of the system.
 
 **Since:** 11
 
+<!--Device-font-interface UIFontConfig--><!--Device-font-interface UIFontConfig-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -32,6 +34,8 @@ List of system fallback font groups, used to specify the fallback fonts to use w
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-UIFontConfig-fallbackGroups: Array<UIFontFallbackGroupInfo>--><!--Device-UIFontConfig-fallbackGroups: Array<UIFontFallbackGroupInfo>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## fontDir
@@ -50,6 +54,8 @@ List of paths where the system font files are located. Each array element is an 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-UIFontConfig-fontDir: Array<string>--><!--Device-UIFontConfig-fontDir: Array<string>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## generic
@@ -67,5 +73,7 @@ List of generic font families supported by the system.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIFontConfig-generic: Array<UIFontGenericInfo>--><!--Device-UIFontConfig-generic: Array<UIFontGenericInfo>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

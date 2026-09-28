@@ -20,6 +20,8 @@ function getIncomingCallPolicyNumbers(admin: Want, policy: adminManager.Policy):
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-telephonyManager-function getIncomingCallPolicyNumbers(admin: Want, policy: adminManager.Policy): Array<string>--><!--Device-telephonyManager-function getIncomingCallPolicyNumbers(admin: Want, policy: adminManager.Policy): Array<string>-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -83,6 +85,8 @@ function getIncomingCallPolicyNumbers(admin: Want | null, policy: adminManager.P
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_TELEPHONY
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-telephonyManager-function getIncomingCallPolicyNumbers(admin: Want | null, policy: adminManager.Policy): Array<string>--><!--Device-telephonyManager-function getIncomingCallPolicyNumbers(admin: Want | null, policy: adminManager.Policy): Array<string>-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

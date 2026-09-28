@@ -19,6 +19,8 @@ function off(type: 'connect', sessionId: number,
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-abilityConnectionManager-function off(type: 'connect', sessionId: number,        callback?: Callback<EventCallbackInfo>): void--><!--Device-abilityConnectionManager-function off(type: 'connect', sessionId: number,        callback?: Callback<EventCallbackInfo>): void-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **参数：**
@@ -58,6 +60,8 @@ function off(type: 'disconnect', sessionId: number,
 **起始版本：** 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-abilityConnectionManager-function off(type: 'disconnect', sessionId: number,        callback?: Callback<EventCallbackInfo>): void--><!--Device-abilityConnectionManager-function off(type: 'disconnect', sessionId: number,        callback?: Callback<EventCallbackInfo>): void-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
@@ -100,6 +104,8 @@ function off(type: 'receiveMessage', sessionId: number,
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-abilityConnectionManager-function off(type: 'receiveMessage', sessionId: number,        callback?: Callback<EventCallbackInfo>): void--><!--Device-abilityConnectionManager-function off(type: 'receiveMessage', sessionId: number,        callback?: Callback<EventCallbackInfo>): void-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **参数：**
@@ -140,6 +146,8 @@ function off(type: 'receiveData', sessionId: number,
 **起始版本：** 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-abilityConnectionManager-function off(type: 'receiveData', sessionId: number,        callback?: Callback<EventCallbackInfo>): void--><!--Device-abilityConnectionManager-function off(type: 'receiveData', sessionId: number,        callback?: Callback<EventCallbackInfo>): void-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 

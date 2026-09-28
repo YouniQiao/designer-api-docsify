@@ -8,6 +8,8 @@ interface Config<T>
 
 **起始版本：** 9
 
+<!--Device-config-interface Config<T>--><!--Device-config-interface Config<T>-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -27,6 +29,8 @@ get(): Promise<T>
 获取属性。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-Config-get(): Promise<T>--><!--Device-Config-get(): Promise<T>-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -69,6 +73,8 @@ get(callback: AsyncCallback<T>): void
 获取属性。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-Config-get(callback: AsyncCallback<T>): void--><!--Device-Config-get(callback: AsyncCallback<T>): void-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -113,6 +119,8 @@ off(callback?: Callback<T>): void
 
 **需要权限：** ohos.permission.READ_ACCESSIBILITY_CONFIG
 
+<!--Device-Config-off(callback?: Callback<T>): void--><!--Device-Config-off(callback?: Callback<T>): void-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -156,6 +164,8 @@ on(callback: Callback<T>): void
 
 **需要权限：** ohos.permission.READ_ACCESSIBILITY_CONFIG
 
+<!--Device-Config-on(callback: Callback<T>): void--><!--Device-Config-on(callback: Callback<T>): void-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -195,6 +205,8 @@ set(value: T): Promise<void>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.WRITE_ACCESSIBILITY_CONFIG
+
+<!--Device-Config-set(value: T): Promise<void>--><!--Device-Config-set(value: T): Promise<void>-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -248,6 +260,8 @@ set(value: T, callback: AsyncCallback<void>): void
 **起始版本：** 9
 
 **需要权限：** ohos.permission.WRITE_ACCESSIBILITY_CONFIG
+
+<!--Device-Config-set(value: T, callback: AsyncCallback<void>): void--><!--Device-Config-set(value: T, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 

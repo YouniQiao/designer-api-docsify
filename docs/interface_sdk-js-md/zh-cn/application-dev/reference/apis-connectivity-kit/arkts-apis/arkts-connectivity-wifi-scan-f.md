@@ -26,6 +26,8 @@ function scan(): boolean
 
 **需要权限：** ohos.permission.SET_WIFI_INFO and ohos.permission.LOCATION
 
+<!--Device-wifi-function scan(): boolean--><!--Device-wifi-function scan(): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **返回值：**

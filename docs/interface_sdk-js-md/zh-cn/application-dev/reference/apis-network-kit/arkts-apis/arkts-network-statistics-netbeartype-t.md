@@ -8,6 +8,8 @@ type NetBearType = connection.NetBearType
 
 **起始版本：** 12
 
+<!--Device-statistics-type NetBearType = connection.NetBearType--><!--Device-statistics-type NetBearType = connection.NetBearType-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **类型：** [connection.NetBearType](arkts-network-connection-netbeartype-e.md)

@@ -19,6 +19,8 @@ Get the network capability state according to the specified capability type.
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-radio-function getNetworkCapability(slotId: int, type: NetworkCapabilityType,    callback: AsyncCallback<NetworkCapabilityState>): void--><!--Device-radio-function getNetworkCapability(slotId: int, type: NetworkCapabilityType,    callback: AsyncCallback<NetworkCapabilityState>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -73,6 +75,8 @@ Get the network capability state according to the specified capability type.
 **起始版本：** 10
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
+
+<!--Device-radio-function getNetworkCapability(slotId: int, type: NetworkCapabilityType): Promise<NetworkCapabilityState>--><!--Device-radio-function getNetworkCapability(slotId: int, type: NetworkCapabilityType): Promise<NetworkCapabilityState>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

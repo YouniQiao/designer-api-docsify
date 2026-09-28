@@ -8,6 +8,8 @@ interface FileSpec
 
 **起始版本：** 10
 
+<!--Device-agent-interface FileSpec--><!--Device-agent-interface FileSpec-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## 导入模块
@@ -28,6 +30,8 @@ contentType?: string
 
 **起始版本：** 18
 
+<!--Device-FileSpec-contentType?: string--><!--Device-FileSpec-contentType?: string-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## extras
@@ -44,6 +48,8 @@ extras?: object
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-FileSpec-extras?: object--><!--Device-FileSpec-extras?: object-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## filename
@@ -58,7 +64,9 @@ filename?: string
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-FileSpec-filename?: string--><!--Device-FileSpec-filename?: string-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -94,7 +102,9 @@ path: string
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-FileSpec-path: string--><!--Device-FileSpec-path: string-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -119,5 +129,7 @@ mimeType?: string
 **替代接口：** [contentType](#contenttype)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-FileSpec-mimeType?: string--><!--Device-FileSpec-mimeType?: string-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent

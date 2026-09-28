@@ -8,6 +8,8 @@ interface Server
 
 **起始版本：** 20
 
+<!--Device-linkEnhance-interface Server--><!--Device-linkEnhance-interface Server-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 ## 导入模块
@@ -29,6 +31,8 @@ close(): void
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Server-close(): void--><!--Device-Server-close(): void-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
@@ -72,6 +76,8 @@ off(type: 'connectionAccepted', callback?: Callback<Connection>): void
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Server-off(type: 'connectionAccepted', callback?: Callback<Connection>): void--><!--Device-Server-off(type: 'connectionAccepted', callback?: Callback<Connection>): void-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
@@ -130,6 +136,8 @@ off(type: 'serverStopped', callback?: Callback<number>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Server-off(type: 'serverStopped', callback?: Callback<number>): void--><!--Device-Server-off(type: 'serverStopped', callback?: Callback<number>): void-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **参数：**
@@ -186,6 +194,8 @@ on(type: 'connectionAccepted', callback: Callback<Connection>): void
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Server-on(type: 'connectionAccepted', callback: Callback<Connection>): void--><!--Device-Server-on(type: 'connectionAccepted', callback: Callback<Connection>): void-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
@@ -244,6 +254,8 @@ on(type: 'serverStopped', callback: Callback<number>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Server-on(type: 'serverStopped', callback: Callback<number>): void--><!--Device-Server-on(type: 'serverStopped', callback: Callback<number>): void-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **参数：**
@@ -301,6 +313,8 @@ start(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Server-start(): void--><!--Device-Server-start(): void-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **错误码：**
@@ -344,6 +358,8 @@ stop(): void
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Server-stop(): void--><!--Device-Server-stop(): void-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 

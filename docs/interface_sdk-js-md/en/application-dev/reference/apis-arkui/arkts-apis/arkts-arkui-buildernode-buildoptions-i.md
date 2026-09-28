@@ -8,6 +8,8 @@ Defines the optional build options.
 
 **Since:** 12
 
+<!--Device-unnamed-export interface BuildOptions--><!--Device-unnamed-export interface BuildOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## enableProvideConsumeCrossing
@@ -32,6 +34,8 @@ Default value: **false**.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-BuildOptions-enableProvideConsumeCrossing?: boolean--><!--Device-BuildOptions-enableProvideConsumeCrossing?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## localStorage
@@ -51,6 +55,8 @@ Default value: **null**.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-BuildOptions-localStorage?: LocalStorage--><!--Device-BuildOptions-localStorage?: LocalStorage-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -73,5 +79,7 @@ Default value: **false**.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-BuildOptions-nestingBuilderSupported?: boolean--><!--Device-BuildOptions-nestingBuilderSupported?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

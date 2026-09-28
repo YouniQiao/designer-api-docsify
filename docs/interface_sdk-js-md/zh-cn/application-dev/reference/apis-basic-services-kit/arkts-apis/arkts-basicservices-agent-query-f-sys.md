@@ -18,6 +18,8 @@ Queries specified task details. Creates a group based on GroupConfig
 
 **需要权限：** ohos.permission.DOWNLOAD_SESSION_MANAGER or ohos.permission.UPLOAD_SESSION_MANAGER
 
+<!--Device-agent-function query(id: string, callback: AsyncCallback<TaskInfo>): void--><!--Device-agent-function query(id: string, callback: AsyncCallback<TaskInfo>): void-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 **系统接口：** 此接口为系统接口。
@@ -53,6 +55,8 @@ Queries specified task details.
 **起始版本：** 10
 
 **需要权限：** ohos.permission.DOWNLOAD_SESSION_MANAGER or ohos.permission.UPLOAD_SESSION_MANAGER
+
+<!--Device-agent-function query(id: string): Promise<TaskInfo>--><!--Device-agent-function query(id: string): Promise<TaskInfo>-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 

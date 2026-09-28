@@ -8,6 +8,8 @@ export interface BusinessType
 
 **起始版本：** 9
 
+<!--Device-update-export interface BusinessType--><!--Device-update-export interface BusinessType-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -36,6 +38,8 @@ subType: BusinessSubType
 
 **起始版本：** 9
 
+<!--Device-BusinessType-subType: BusinessSubType--><!--Device-BusinessType-subType: BusinessSubType-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -57,6 +61,8 @@ vendor: BusinessVendor
 **类型：** [BusinessVendor](arkts-basicservices-update-businessvendor-e-sys.md)
 
 **起始版本：** 9
+
+<!--Device-BusinessType-vendor: BusinessVendor--><!--Device-BusinessType-vendor: BusinessVendor-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
 

@@ -8,6 +8,8 @@ export interface BundleStats
 
 **起始版本：** 9
 
+<!--Device-storageStatistics-export interface BundleStats--><!--Device-storageStatistics-export interface BundleStats-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
 ## 导入模块
@@ -28,6 +30,8 @@ appSize: number
 
 **起始版本：** 9
 
+<!--Device-BundleStats-appSize: long--><!--Device-BundleStats-appSize: long-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
 ## cacheSize
@@ -42,6 +46,8 @@ cacheSize: number
 
 **起始版本：** 9
 
+<!--Device-BundleStats-cacheSize: long--><!--Device-BundleStats-cacheSize: long-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
 ## dataSize
@@ -55,5 +61,7 @@ dataSize: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-BundleStats-dataSize: long--><!--Device-BundleStats-dataSize: long-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics

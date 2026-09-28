@@ -18,6 +18,8 @@ Inherits from [CalendarOptions](arkts-arkui-calendarpicker-comp-calendaroptions-
 
 **Since:** 10
 
+<!--Device-unnamed-declare interface CalendarDialogOptions extends CalendarOptions--><!--Device-unnamed-declare interface CalendarDialogOptions extends CalendarOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onCancel
@@ -33,6 +35,8 @@ Callback invoked when the **Cancel** button in the dialog box is tapped.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-CalendarDialogOptions-onCancel?: VoidCallback--><!--Device-CalendarDialogOptions-onCancel?: VoidCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -73,6 +77,8 @@ box fully disappears.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-CalendarDialogOptions-onDidAppear?: VoidCallback--><!--Device-CalendarDialogOptions-onDidAppear?: VoidCallback-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onDidDisappear
@@ -96,6 +102,8 @@ Event callback after the dialog box disappears.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-CalendarDialogOptions-onDidDisappear?: VoidCallback--><!--Device-CalendarDialogOptions-onDidDisappear?: VoidCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -123,6 +131,8 @@ dialog box is shown again.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-CalendarDialogOptions-onWillAppear?: VoidCallback--><!--Device-CalendarDialogOptions-onWillAppear?: VoidCallback-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onWillDisappear
@@ -149,6 +159,8 @@ take effect before **onDidAppear**.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-CalendarDialogOptions-onWillDisappear?: VoidCallback--><!--Device-CalendarDialogOptions-onWillDisappear?: VoidCallback-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## acceptButtonStyle
@@ -173,6 +185,8 @@ the button style is set to the rounded rectangle ROUNDED_RECTANGLE, in the care 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-CalendarDialogOptions-acceptButtonStyle?: PickerDialogButtonStyle--><!--Device-CalendarDialogOptions-acceptButtonStyle?: PickerDialogButtonStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -200,6 +214,8 @@ Set this parameter to **BlurStyle.NONE** to disable the background blur. When **
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-CalendarDialogOptions-backgroundBlurStyle?: BlurStyle--><!--Device-CalendarDialogOptions-backgroundBlurStyle?: BlurStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## backgroundBlurStyleOptions
@@ -221,6 +237,8 @@ When not set, the default effect of **backgroundBlurStyle (BlurStyle.COMPONENT_U
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-CalendarDialogOptions-backgroundBlurStyleOptions?: BackgroundBlurStyleOptions--><!--Device-CalendarDialogOptions-backgroundBlurStyleOptions?: BackgroundBlurStyleOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -248,6 +266,8 @@ When **backgroundColor** is set to a non-transparent color, **backgroundBlurStyl
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-CalendarDialogOptions-backgroundColor?: ResourceColor--><!--Device-CalendarDialogOptions-backgroundColor?: ResourceColor-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## backgroundEffect
@@ -269,6 +289,8 @@ When not set, this parameter does not take effect, and the dialog box background
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-CalendarDialogOptions-backgroundEffect?: BackgroundEffectOptions--><!--Device-CalendarDialogOptions-backgroundEffect?: BackgroundEffectOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -294,6 +316,8 @@ the button style is set to the rounded rectangle ROUNDED_RECTANGLE, in the care 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-CalendarDialogOptions-cancelButtonStyle?: PickerDialogButtonStyle--><!--Device-CalendarDialogOptions-cancelButtonStyle?: PickerDialogButtonStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -322,6 +346,8 @@ Default value: **false**
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-CalendarDialogOptions-enableHoverMode?: boolean--><!--Device-CalendarDialogOptions-enableHoverMode?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## hoverModeArea
@@ -343,6 +369,8 @@ Default value: **HoverModeAreaType.BOTTOM_SCREEN**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-CalendarDialogOptions-hoverModeArea?: HoverModeAreaType--><!--Device-CalendarDialogOptions-hoverModeArea?: HoverModeAreaType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -369,6 +397,8 @@ Default value: **false**
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-CalendarDialogOptions-markToday?: boolean--><!--Device-CalendarDialogOptions-markToday?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onAccept
@@ -388,6 +418,8 @@ The parameter of the callback indicates the selected date.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-CalendarDialogOptions-onAccept?: Callback<Date>--><!--Device-CalendarDialogOptions-onAccept?: Callback<Date>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -409,6 +441,8 @@ The parameter of the callback indicates the selected date.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-CalendarDialogOptions-onChange?: Callback<Date>--><!--Device-CalendarDialogOptions-onChange?: Callback<Date>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## shadow
@@ -428,6 +462,8 @@ On 2-in-1 devices, in the default scenario, the focused shadow value is **Shadow
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-CalendarDialogOptions-shadow?: ShadowOptions | ShadowStyle--><!--Device-CalendarDialogOptions-shadow?: ShadowOptions | ShadowStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -453,5 +489,7 @@ and shadow style. This API affects the background color [backgroundColor](arkts-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-CalendarDialogOptions-systemMaterial?: SystemUiMaterial--><!--Device-CalendarDialogOptions-systemMaterial?: SystemUiMaterial-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

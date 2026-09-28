@@ -13,6 +13,8 @@ Selects whether to enable custom component freezing.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-declare enum LazyForEachCustomComponentFreezeMode--><!--Device-unnamed-declare enum LazyForEachCustomComponentFreezeMode-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## AUTO
@@ -28,6 +30,8 @@ Follows the **metadata** settings in the **module.json5** configuration file.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-LazyForEachCustomComponentFreezeMode-AUTO = 0--><!--Device-LazyForEachCustomComponentFreezeMode-AUTO = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,6 +49,8 @@ Does not enable custom component freezing.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-LazyForEachCustomComponentFreezeMode-DISABLED = 1--><!--Device-LazyForEachCustomComponentFreezeMode-DISABLED = 1-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## ENABLED
@@ -60,5 +66,7 @@ Enables custom component freezing.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-LazyForEachCustomComponentFreezeMode-ENABLED = 2--><!--Device-LazyForEachCustomComponentFreezeMode-ENABLED = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

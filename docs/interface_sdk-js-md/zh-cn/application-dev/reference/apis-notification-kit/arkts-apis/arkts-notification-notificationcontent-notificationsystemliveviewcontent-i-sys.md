@@ -14,6 +14,8 @@ export interface NotificationSystemLiveViewContent extends NotificationBasicCont
 
 **起始版本：** 11
 
+<!--Device-unnamed-export interface NotificationSystemLiveViewContent extends NotificationBasicContent--><!--Device-unnamed-export interface NotificationSystemLiveViewContent extends NotificationBasicContent-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## cardButtons
@@ -27,6 +29,8 @@ cardButtons?: Array<NotificationIconButton>
 **类型：** Array&lt;[NotificationIconButton](arkts-notification-notificationcontent-notificationiconbutton-i-sys.md)&gt;
 
 **起始版本：** 18
+
+<!--Device-NotificationSystemLiveViewContent-cardButtons?: Array<NotificationIconButton>--><!--Device-NotificationSystemLiveViewContent-cardButtons?: Array<NotificationIconButton>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -43,6 +47,8 @@ liveViewType?: LiveViewTypes
 **类型：** [LiveViewTypes](arkts-notification-notificationcontent-liveviewtypes-e-sys.md)
 
 **起始版本：** 18
+
+<!--Device-NotificationSystemLiveViewContent-liveViewType?: LiveViewTypes--><!--Device-NotificationSystemLiveViewContent-liveViewType?: LiveViewTypes-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

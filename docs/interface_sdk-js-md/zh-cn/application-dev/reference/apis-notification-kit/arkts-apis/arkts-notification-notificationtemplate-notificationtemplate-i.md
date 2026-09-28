@@ -13,6 +13,8 @@ export interface NotificationTemplate
 
 **起始版本：** 8
 
+<!--Device-unnamed-export interface NotificationTemplate--><!--Device-unnamed-export interface NotificationTemplate-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## data
@@ -32,6 +34,8 @@ data: Record<string, Object>
 
 **起始版本：** 8
 
+<!--Device-NotificationTemplate-data: Record<string, Object>--><!--Device-NotificationTemplate-data: Record<string, Object>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## name
@@ -45,5 +49,7 @@ name: string
 **类型：** string
 
 **起始版本：** 8
+
+<!--Device-NotificationTemplate-name: string--><!--Device-NotificationTemplate-name: string-End-->
 
 **系统能力：** SystemCapability.Notification.Notification

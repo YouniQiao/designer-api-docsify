@@ -10,6 +10,8 @@ Provides APIs to manage albums.
 
 **Since:** 10
 
+<!--Device-photoAccessHelper-interface Album extends AbsAlbum--><!--Device-photoAccessHelper-interface Album extends AbsAlbum-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
@@ -31,6 +33,8 @@ Gets album attribute info.
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Album-getAttribute(attrs: AlbumAttribute[]): Promise<Record<AlbumAttribute, AlbumAttributeInfo>>--><!--Device-Album-getAttribute(attrs: AlbumAttribute[]): Promise<Record<AlbumAttribute, AlbumAttributeInfo>>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -109,6 +113,8 @@ Obtains the face identifier on the cover of a portrait album or group photo albu
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-Album-getFaceId(): Promise<string>--><!--Device-Album-getFaceId(): Promise<string>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -180,6 +186,8 @@ Obtains fusion assets information.
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-Album-getFusionAssetsInfo(): Promise<FusionAssetsInfo[]>--><!--Device-Album-getFusionAssetsInfo(): Promise<FusionAssetsInfo[]>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -209,6 +217,8 @@ Obtains portrait album assets that meet filter criteria.
 **Since:** 22
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-Album-getSelectedAssets(optionCheck: FetchOptions, filter?: string): Promise<FetchResult<PhotoAsset>>--><!--Device-Album-getSelectedAssets(optionCheck: FetchOptions, filter?: string): Promise<FetchResult<PhotoAsset>>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -315,6 +325,8 @@ Deletes image or video assets from the trash. Before the operation, ensure that 
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-Album-deleteAssets(assets: Array<PhotoAsset>, callback: AsyncCallback<void>): void--><!--Device-Album-deleteAssets(assets: Array<PhotoAsset>, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -391,6 +403,8 @@ Deletes image or video assets from the trash. Before the operation, ensure that 
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-Album-deleteAssets(assets: Array<PhotoAsset>): Promise<void>--><!--Device-Album-deleteAssets(assets: Array<PhotoAsset>): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -464,6 +478,8 @@ Recovers image or video assets from the trash. Before the operation, ensure that
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-Album-recoverAssets(assets: Array<PhotoAsset>, callback: AsyncCallback<void>): void--><!--Device-Album-recoverAssets(assets: Array<PhotoAsset>, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -534,6 +550,8 @@ Recovers image or video assets from the trash. Before the operation, ensure that
 **Substitutes:** [recoverAssets](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c-sys.md#recoverassets)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-Album-recoverAssets(assets: Array<PhotoAsset>): Promise<void>--><!--Device-Album-recoverAssets(assets: Array<PhotoAsset>): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -608,6 +626,8 @@ Sets the cover of the user album. This API uses an asynchronous callback to retu
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-Album-setCoverUri(uri: string, callback: AsyncCallback<void>): void--><!--Device-Album-setCoverUri(uri: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -678,6 +698,8 @@ Sets the cover of the user album. This API uses a promise to return the result.
 **Substitutes:** [setCoverUri](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c-sys.md#setcoveruri)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-Album-setCoverUri(uri: string): Promise<void>--><!--Device-Album-setCoverUri(uri: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -751,6 +773,8 @@ CloudId of album.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Album-readonly cloudId?: string--><!--Device-Album-readonly cloudId?: string-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -767,6 +791,8 @@ Time when the album was added.
 
 **Since:** 18
 
+<!--Device-Album-readonly dateAdded?: long--><!--Device-Album-readonly dateAdded?: long-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -782,6 +808,8 @@ Time when the album was modified.
 **Type:** number
 
 **Since:** 18
+
+<!--Device-Album-readonly dateModified?: long--><!--Device-Album-readonly dateModified?: long-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -801,6 +829,8 @@ The owner of share album.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Album-readonly shareAlbumOwner?: string--><!--Device-Album-readonly shareAlbumOwner?: string-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -819,6 +849,8 @@ Risk status of share album.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Album-readonly shareRiskStatus?: ShareAlbumRiskStatus--><!--Device-Album-readonly shareRiskStatus?: ShareAlbumRiskStatus-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -836,6 +868,8 @@ Risk type of share album.
 **Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Album-readonly shareRiskType?: string--><!--Device-Album-readonly shareRiskType?: string-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

@@ -8,6 +8,8 @@ AbilityStateData是Ability状态信息的数据结构。使用[on](arkts-ability
 
 **起始版本：** 14
 
+<!--Device-unnamed-declare class AbilityStateData--><!--Device-unnamed-declare class AbilityStateData-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## abilityName
@@ -21,6 +23,8 @@ Ability名称。
 **类型：** string
 
 **起始版本：** 14
+
+<!--Device-AbilityStateData-abilityName: string--><!--Device-AbilityStateData-abilityName: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -36,6 +40,8 @@ abilityType: number
 
 **起始版本：** 14
 
+<!--Device-AbilityStateData-abilityType: int--><!--Device-AbilityStateData-abilityType: int-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## appCloneIndex
@@ -49,6 +55,8 @@ appCloneIndex?: number
 **类型：** number
 
 **起始版本：** 14
+
+<!--Device-AbilityStateData-appCloneIndex?: int--><!--Device-AbilityStateData-appCloneIndex?: int-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -64,6 +72,8 @@ bundleName: string
 
 **起始版本：** 14
 
+<!--Device-AbilityStateData-bundleName: string--><!--Device-AbilityStateData-bundleName: string-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## callerBundleName
@@ -77,6 +87,8 @@ Ability创建时的拉起方Bundle名称。
 **类型：** string
 
 **起始版本：** 23
+
+<!--Device-AbilityStateData-callerBundleName?: string--><!--Device-AbilityStateData-callerBundleName?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -96,6 +108,8 @@ false: 不是原子化服务。
 
 **起始版本：** 14
 
+<!--Device-AbilityStateData-isAtomicService: boolean--><!--Device-AbilityStateData-isAtomicService: boolean-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## moduleName
@@ -110,6 +124,8 @@ Ability所属的模块名称。
 
 **起始版本：** 14
 
+<!--Device-AbilityStateData-moduleName: string--><!--Device-AbilityStateData-moduleName: string-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## pid
@@ -123,6 +139,8 @@ pid: number
 **类型：** number
 
 **起始版本：** 14
+
+<!--Device-AbilityStateData-pid: int--><!--Device-AbilityStateData-pid: int-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -141,6 +159,8 @@ Ability状态。
 
 **起始版本：** 14
 
+<!--Device-AbilityStateData-state: int--><!--Device-AbilityStateData-state: int-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## uid
@@ -154,5 +174,7 @@ uid: number
 **类型：** number
 
 **起始版本：** 14
+
+<!--Device-AbilityStateData-uid: int--><!--Device-AbilityStateData-uid: int-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

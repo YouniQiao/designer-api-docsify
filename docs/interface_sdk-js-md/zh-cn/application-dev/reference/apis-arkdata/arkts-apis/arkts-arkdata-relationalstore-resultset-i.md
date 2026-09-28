@@ -12,6 +12,8 @@ ResultSet实例不会实时刷新。使用结果集后，如果数据库中的�
 
 **起始版本：** 9
 
+<!--Device-relationalStore-interface ResultSet--><!--Device-relationalStore-interface ResultSet-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## 导入模块
@@ -29,6 +31,8 @@ close(): void
 关闭结果集，若不关闭可能会引起FD（File Descriptor）泄漏和内存泄漏。
 
 **起始版本：** 9
+
+<!--Device-ResultSet-close(): void--><!--Device-ResultSet-close(): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -50,6 +54,8 @@ getAsset(columnIndex: number): Asset
 以[Asset](arkts-arkdata-relationalstore-asset-i.md)形式获取当前行中指定列的值，如果当前列的数据类型为Asset类型，会以Asset类型返回指定值，如果当前列中的值为null时，会返回null，其他类型则抛出错误码14800000。
 
 **起始版本：** 10
+
+<!--Device-ResultSet-getAsset(columnIndex: int): Asset--><!--Device-ResultSet-getAsset(columnIndex: int): Asset-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -108,6 +114,8 @@ getAssets(columnIndex: number): Assets
 
 **起始版本：** 10
 
+<!--Device-ResultSet-getAssets(columnIndex: int): Assets--><!--Device-ResultSet-getAssets(columnIndex: int): Assets-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
@@ -165,6 +173,8 @@ getBlob(columnIndex: number): Uint8Array
 
 **起始版本：** 9
 
+<!--Device-ResultSet-getBlob(columnIndex: int): Uint8Array--><!--Device-ResultSet-getBlob(columnIndex: int): Uint8Array-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
@@ -221,6 +231,8 @@ getColumnIndex(columnName: string): number
 根据指定的列名获取列索引。
 
 **起始版本：** 9
+
+<!--Device-ResultSet-getColumnIndex(columnName: string): int--><!--Device-ResultSet-getColumnIndex(columnName: string): int-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -281,6 +293,8 @@ getColumnName(columnIndex: number): string
 根据指定的列索引获取列名。
 
 **起始版本：** 9
+
+<!--Device-ResultSet-getColumnName(columnIndex: int): string--><!--Device-ResultSet-getColumnName(columnIndex: int): string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -345,6 +359,8 @@ getColumnNames(): Array<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ResultSet-getColumnNames(): Array<string>--><!--Device-ResultSet-getColumnNames(): Array<string>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **返回值：**
@@ -390,6 +406,8 @@ getColumnType(columnIdentifier: number | string): Promise<ColumnType>
 根据指定的列索引或列名称获取列数据类型，使用Promise异步回调。
 
 **起始版本：** 18
+
+<!--Device-ResultSet-getColumnType(columnIdentifier: int | string): Promise<ColumnType>--><!--Device-ResultSet-getColumnType(columnIdentifier: int | string): Promise<ColumnType>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -456,6 +474,8 @@ getColumnTypeSync(columnIdentifier: number | string): ColumnType
 根据指定的列索引或列名称获取列数据类型。
 
 **起始版本：** 18
+
+<!--Device-ResultSet-getColumnTypeSync(columnIdentifier: int | string): ColumnType--><!--Device-ResultSet-getColumnTypeSync(columnIdentifier: int | string): ColumnType-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -525,6 +545,8 @@ getCurrentRowData(): RowData
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ResultSet-getCurrentRowData(): RowData--><!--Device-ResultSet-getCurrentRowData(): RowData-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **返回值：**
@@ -572,6 +594,8 @@ getDouble(columnIndex: number): number
 以double形式获取当前行中指定列的值，如果当前列的数据类型为INTEGER、DOUBLE、TEXT、BLOB类型，会转成double类型返回指定值，如果该列内容为空时，会返回0.0，其他类型则抛出错误码14800000。
 
 **起始版本：** 9
+
+<!--Device-ResultSet-getDouble(columnIndex: int): double--><!--Device-ResultSet-getDouble(columnIndex: int): double-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -636,6 +660,8 @@ getLong(columnIndex: number): number
 
 **起始版本：** 9
 
+<!--Device-ResultSet-getLong(columnIndex: int): long--><!--Device-ResultSet-getLong(columnIndex: int): long-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
@@ -699,6 +725,8 @@ getRow(): ValuesBucket
 
 **起始版本：** 11
 
+<!--Device-ResultSet-getRow(): ValuesBucket--><!--Device-ResultSet-getRow(): ValuesBucket-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **返回值：**
@@ -748,6 +776,8 @@ getRows(maxCount: number, position?: number): Promise<Array<ValuesBucket>>
 从结果集中获取指定数量的数据，使用Promise异步回调。禁止与[ResultSet](arkts-arkdata-relationalstore-resultset-i.md)的其他接口并发调用，否则获取的数据可能非预期。
 
 **起始版本：** 18
+
+<!--Device-ResultSet-getRows(maxCount: int, position?: int): Promise<Array<ValuesBucket>>--><!--Device-ResultSet-getRows(maxCount: int, position?: int): Promise<Array<ValuesBucket>>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -826,6 +856,8 @@ getRowsData(maxCount: number, position?: number): Promise<RowsData>
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ResultSet-getRowsData(maxCount: int, position?: int): Promise<RowsData>--><!--Device-ResultSet-getRowsData(maxCount: int, position?: int): Promise<RowsData>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -908,6 +940,8 @@ getSendableRow(): sendableRelationalStore.ValuesBucket
 获取当前行数据的sendable形式，用于跨线程传递。
 
 **起始版本：** 12
+
+<!--Device-ResultSet-getSendableRow(): sendableRelationalStore.ValuesBucket--><!--Device-ResultSet-getSendableRow(): sendableRelationalStore.ValuesBucket-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -999,6 +1033,8 @@ getString(columnIndex: number): string
 
 **起始版本：** 9
 
+<!--Device-ResultSet-getString(columnIndex: int): string--><!--Device-ResultSet-getString(columnIndex: int): string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
@@ -1055,6 +1091,8 @@ getValue(columnIndex: number): ValueType
 获取当前行中指定列的值，如果值类型是ValueType中指定的任意类型，返回指定类型的值，否则抛出错误码14800000。如果值类型为INTEGER，值大于 Number.MAX_SAFE_INTEGER 或小于Number.MIN_SAFE_INTEGER 且不希望丢失精度，建议使用[getString](#getstring)接口获取。
 
 **起始版本：** 12
+
+<!--Device-ResultSet-getValue(columnIndex: int): ValueType--><!--Device-ResultSet-getValue(columnIndex: int): ValueType-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -1119,6 +1157,8 @@ goTo(offset: number): boolean
 
 **起始版本：** 9
 
+<!--Device-ResultSet-goTo(offset: int): boolean--><!--Device-ResultSet-goTo(offset: int): boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
@@ -1176,6 +1216,8 @@ goToFirstRow(): boolean
 
 **起始版本：** 9
 
+<!--Device-ResultSet-goToFirstRow(): boolean--><!--Device-ResultSet-goToFirstRow(): boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **返回值：**
@@ -1225,6 +1267,8 @@ goToLastRow(): boolean
 转到结果集的最后一行。
 
 **起始版本：** 9
+
+<!--Device-ResultSet-goToLastRow(): boolean--><!--Device-ResultSet-goToLastRow(): boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -1276,6 +1320,8 @@ goToNextRow(): boolean
 
 **起始版本：** 9
 
+<!--Device-ResultSet-goToNextRow(): boolean--><!--Device-ResultSet-goToNextRow(): boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **返回值：**
@@ -1326,6 +1372,8 @@ goToPreviousRow(): boolean
 
 **起始版本：** 9
 
+<!--Device-ResultSet-goToPreviousRow(): boolean--><!--Device-ResultSet-goToPreviousRow(): boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **返回值：**
@@ -1375,6 +1423,8 @@ goToRow(position: number): boolean
 转到结果集的指定行。
 
 **起始版本：** 9
+
+<!--Device-ResultSet-goToRow(position: int): boolean--><!--Device-ResultSet-goToRow(position: int): boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -1432,6 +1482,8 @@ isColumnNull(columnIndex: number): boolean
 检查当前行中指定列的值是否为null。
 
 **起始版本：** 9
+
+<!--Device-ResultSet-isColumnNull(columnIndex: int): boolean--><!--Device-ResultSet-isColumnNull(columnIndex: int): boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -1500,6 +1552,8 @@ columnCount: int
 
 **起始版本：** 9
 
+<!--Device-ResultSet-columnCount: int--><!--Device-ResultSet-columnCount: int-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## columnNames
@@ -1515,6 +1569,8 @@ columnNames: Array\&lt;string\&gt;
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 9
+
+<!--Device-ResultSet-columnNames: Array<string>--><!--Device-ResultSet-columnNames: Array<string>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -1532,6 +1588,8 @@ isAtFirstRow: boolean
 
 **起始版本：** 9
 
+<!--Device-ResultSet-isAtFirstRow: boolean--><!--Device-ResultSet-isAtFirstRow: boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## isAtLastRow
@@ -1547,6 +1605,8 @@ isAtLastRow: boolean
 **类型：** boolean
 
 **起始版本：** 9
+
+<!--Device-ResultSet-isAtLastRow: boolean--><!--Device-ResultSet-isAtLastRow: boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -1564,6 +1624,8 @@ isClosed: boolean
 
 **起始版本：** 9
 
+<!--Device-ResultSet-isClosed: boolean--><!--Device-ResultSet-isClosed: boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## isEnded
@@ -1579,6 +1641,8 @@ isEnded: boolean
 **类型：** boolean
 
 **起始版本：** 9
+
+<!--Device-ResultSet-isEnded: boolean--><!--Device-ResultSet-isEnded: boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -1596,6 +1660,8 @@ isStarted: boolean
 
 **起始版本：** 9
 
+<!--Device-ResultSet-isStarted: boolean--><!--Device-ResultSet-isStarted: boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## rowCount
@@ -1612,6 +1678,8 @@ rowCount: int
 
 **起始版本：** 9
 
+<!--Device-ResultSet-rowCount: int--><!--Device-ResultSet-rowCount: int-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## rowIndex
@@ -1627,5 +1695,7 @@ rowIndex: int
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-ResultSet-rowIndex: int--><!--Device-ResultSet-rowIndex: int-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core

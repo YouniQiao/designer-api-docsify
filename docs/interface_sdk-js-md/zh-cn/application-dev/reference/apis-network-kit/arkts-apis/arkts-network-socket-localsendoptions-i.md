@@ -8,6 +8,8 @@ LocalSocket发送请求的参数。
 
 **起始版本：** 11
 
+<!--Device-socket-export interface LocalSendOptions--><!--Device-socket-export interface LocalSendOptions-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块
@@ -28,6 +30,8 @@ data: string | ArrayBuffer
 
 **起始版本：** 11
 
+<!--Device-LocalSendOptions-data: string | ArrayBuffer--><!--Device-LocalSendOptions-data: string | ArrayBuffer-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## encoding
@@ -41,5 +45,7 @@ encoding?: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-LocalSendOptions-encoding?: string--><!--Device-LocalSendOptions-encoding?: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack

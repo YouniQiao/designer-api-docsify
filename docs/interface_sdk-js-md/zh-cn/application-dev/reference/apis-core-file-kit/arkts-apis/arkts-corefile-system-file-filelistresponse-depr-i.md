@@ -10,6 +10,8 @@ export interface FileListResponse
 
 **废弃版本：** 10
 
+<!--Device-unnamed-export interface FileListResponse--><!--Device-unnamed-export interface FileListResponse-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## 导入模块
@@ -30,5 +32,7 @@ fileList: Array<FileResponse>
 **起始版本：** 3
 
 **废弃版本：** 10
+
+<!--Device-FileListResponse-fileList: Array<FileResponse>--><!--Device-FileListResponse-fileList: Array<FileResponse>-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite

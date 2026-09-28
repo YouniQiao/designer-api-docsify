@@ -8,6 +8,8 @@ CompletionHandlerForAtomicService提供了[onAtomicServiceRequestSuccess](#onato
 
 **起始版本：** 20
 
+<!--Device-unnamed-declare class CompletionHandlerForAtomicService--><!--Device-unnamed-declare class CompletionHandlerForAtomicService-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块
@@ -29,6 +31,8 @@ onAtomicServiceRequestFailure(appId: string, failureCode: FailureCode, failureMe
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-CompletionHandlerForAtomicService-onAtomicServiceRequestFailure(appId: string, failureCode: FailureCode, failureMessage: string): void--><!--Device-CompletionHandlerForAtomicService-onAtomicServiceRequestFailure(appId: string, failureCode: FailureCode, failureMessage: string): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -57,6 +61,8 @@ onAtomicServiceRequestSuccess(appId: string): void
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-CompletionHandlerForAtomicService-onAtomicServiceRequestSuccess(appId: string): void--><!--Device-CompletionHandlerForAtomicService-onAtomicServiceRequestSuccess(appId: string): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

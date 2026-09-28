@@ -8,6 +8,8 @@ interface HidDeviceQos
 
 **起始版本：** 23
 
+<!--Device-hid-interface HidDeviceQos--><!--Device-hid-interface HidDeviceQos-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ delayVariation?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HidDeviceQos-delayVariation?: int--><!--Device-HidDeviceQos-delayVariation?: int-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## latency
@@ -45,6 +49,8 @@ latency?: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HidDeviceQos-latency?: int--><!--Device-HidDeviceQos-latency?: int-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -62,6 +68,8 @@ peakBandwidth?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HidDeviceQos-peakBandwidth?: int--><!--Device-HidDeviceQos-peakBandwidth?: int-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## serviceType
@@ -77,6 +85,8 @@ serviceType?: ServiceType
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HidDeviceQos-serviceType?: ServiceType--><!--Device-HidDeviceQos-serviceType?: ServiceType-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -94,6 +104,8 @@ tokenBucketSize?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HidDeviceQos-tokenBucketSize?: int--><!--Device-HidDeviceQos-tokenBucketSize?: int-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## tokenRate
@@ -109,5 +121,7 @@ tokenRate?: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HidDeviceQos-tokenRate?: int--><!--Device-HidDeviceQos-tokenRate?: int-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

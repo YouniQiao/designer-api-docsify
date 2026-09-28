@@ -16,6 +16,8 @@ function getLevel(): Promise<SystemLoadLevel>
 
 **起始版本：** 12
 
+<!--Device-systemLoad-function getLevel(): Promise<SystemLoadLevel>--><!--Device-systemLoad-function getLevel(): Promise<SystemLoadLevel>-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.SystemLoad
 
 **返回值：**

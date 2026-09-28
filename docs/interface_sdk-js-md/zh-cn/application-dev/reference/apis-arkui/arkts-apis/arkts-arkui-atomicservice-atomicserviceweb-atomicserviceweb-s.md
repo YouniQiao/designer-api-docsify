@@ -16,6 +16,8 @@ export declare struct AtomicServiceWeb
 
 **装饰器类型：** @Component
 
+<!--Device-unnamed-export declare struct AtomicServiceWeb--><!--Device-unnamed-export declare struct AtomicServiceWeb-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -36,6 +38,8 @@ onLoadIntercept?: OnLoadInterceptCallback
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AtomicServiceWeb-onLoadIntercept?: OnLoadInterceptCallback--><!--Device-AtomicServiceWeb-onLoadIntercept?: OnLoadInterceptCallback-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## controller
@@ -53,6 +57,8 @@ controller: AtomicServiceWebController
 **装饰器类型：** @ObjectLink
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AtomicServiceWeb-controller: AtomicServiceWebController--><!--Device-AtomicServiceWeb-controller: AtomicServiceWebController-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,6 +78,8 @@ darkMode?: WebDarkMode
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AtomicServiceWeb-darkMode?: WebDarkMode--><!--Device-AtomicServiceWeb-darkMode?: WebDarkMode-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## forceDarkAccess
@@ -89,6 +97,8 @@ forceDarkAccess?: boolean
 **装饰器类型：** @Prop
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AtomicServiceWeb-forceDarkAccess?: boolean--><!--Device-AtomicServiceWeb-forceDarkAccess?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -108,6 +118,8 @@ mixedMode?: MixedMode
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AtomicServiceWeb-mixedMode?: MixedMode--><!--Device-AtomicServiceWeb-mixedMode?: MixedMode-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## navPathStack
@@ -123,6 +135,8 @@ navPathStack?: NavPathStack
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AtomicServiceWeb-navPathStack?: NavPathStack--><!--Device-AtomicServiceWeb-navPathStack?: NavPathStack-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -142,6 +156,8 @@ nestedScroll?: NestedScrollOptions | NestedScrollOptionsExt
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
 
+<!--Device-AtomicServiceWeb-nestedScroll?: NestedScrollOptions | NestedScrollOptionsExt--><!--Device-AtomicServiceWeb-nestedScroll?: NestedScrollOptions | NestedScrollOptionsExt-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## onControllerAttached
@@ -157,6 +173,8 @@ onControllerAttached?: Callback<void>
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AtomicServiceWeb-onControllerAttached?: Callback<void>--><!--Device-AtomicServiceWeb-onControllerAttached?: Callback<void>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -174,6 +192,8 @@ onErrorReceive?: Callback<OnErrorReceiveEvent>
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AtomicServiceWeb-onErrorReceive?: Callback<OnErrorReceiveEvent>--><!--Device-AtomicServiceWeb-onErrorReceive?: Callback<OnErrorReceiveEvent>-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## onHttpErrorReceive
@@ -189,6 +209,8 @@ onHttpErrorReceive?: Callback<OnHttpErrorReceiveEvent>
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AtomicServiceWeb-onHttpErrorReceive?: Callback<OnHttpErrorReceiveEvent>--><!--Device-AtomicServiceWeb-onHttpErrorReceive?: Callback<OnHttpErrorReceiveEvent>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -206,6 +228,8 @@ H5页面通过JS SDK的postMessage()发送消息后，Web组件对应的页面�
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AtomicServiceWeb-onMessage?: Callback<OnMessageEvent>--><!--Device-AtomicServiceWeb-onMessage?: Callback<OnMessageEvent>-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## onPageBegin
@@ -221,6 +245,8 @@ onPageBegin?: Callback<OnPageBeginEvent>
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AtomicServiceWeb-onPageBegin?: Callback<OnPageBeginEvent>--><!--Device-AtomicServiceWeb-onPageBegin?: Callback<OnPageBeginEvent>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -238,6 +264,8 @@ onPageEnd?: Callback<OnPageEndEvent>
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AtomicServiceWeb-onPageEnd?: Callback<OnPageEndEvent>--><!--Device-AtomicServiceWeb-onPageEnd?: Callback<OnPageEndEvent>-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## onProgressChange
@@ -254,6 +282,8 @@ onProgressChange?: Callback<OnProgressChangeEvent>
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AtomicServiceWeb-onProgressChange?: Callback<OnProgressChangeEvent>--><!--Device-AtomicServiceWeb-onProgressChange?: Callback<OnProgressChangeEvent>-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## src
@@ -269,5 +299,7 @@ src: ResourceStr
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AtomicServiceWeb-src: ResourceStr--><!--Device-AtomicServiceWeb-src: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

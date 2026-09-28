@@ -8,6 +8,8 @@ interface PublishFormCrossDeviceResult
 
 **起始版本：** 26.0.1
 
+<!--Device-formInfo-interface PublishFormCrossDeviceResult--><!--Device-formInfo-interface PublishFormCrossDeviceResult-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -31,6 +33,8 @@ formId: string
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PublishFormCrossDeviceResult-formId: string--><!--Device-PublishFormCrossDeviceResult-formId: string-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 

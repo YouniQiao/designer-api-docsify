@@ -22,6 +22,8 @@ Obtains a PhotoAccessHelper instance for the specified user, letting you access 
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-photoAccessHelper-function getPhotoAccessHelper(context: Context, userId: int): PhotoAccessHelper--><!--Device-photoAccessHelper-function getPhotoAccessHelper(context: Context, userId: int): PhotoAccessHelper-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.

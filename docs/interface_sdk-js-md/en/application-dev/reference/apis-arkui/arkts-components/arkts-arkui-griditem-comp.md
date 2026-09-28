@@ -4,7 +4,7 @@ The **GridItem** component provides a single item in a grid.
 
 > **NOTE:** 
 > 
-> * This component can be used only as a child of [Grid](arkts-arkui-grid-comp.md#grid).
+> * This component can be used only as a child of [Grid](arkts-arkui-grid-comp.md).
 > 
 > * When this component is used with [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md), its child components are created when it is created. When this component is used with [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md) or [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md), or when the parent component is
 > **Grid**, its child components are created when it is laid out.
@@ -34,6 +34,8 @@ Creates a **GridItem** component.
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-GridItemInterface-(value?: GridItemOptions): GridItemAttribute--><!--Device-GridItemInterface-(value?: GridItemOptions): GridItemAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

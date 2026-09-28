@@ -8,6 +8,8 @@ Enumerates the swipe action menu display directions for **ListItem** components.
 
 **Since:** 21
 
+<!--Device-unnamed-declare enum ListItemSwipeActionDirection--><!--Device-unnamed-declare enum ListItemSwipeActionDirection-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## START
@@ -24,6 +26,8 @@ For vertical lists: left side in LTR mode, right side in RTL mode. For horizonta
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
+<!--Device-ListItemSwipeActionDirection-START = 0--><!--Device-ListItemSwipeActionDirection-START = 0-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## END
@@ -39,5 +43,7 @@ For vertical lists: right side in LTR mode, left side in RTL mode. For horizonta
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
+
+<!--Device-ListItemSwipeActionDirection-END = 1--><!--Device-ListItemSwipeActionDirection-END = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

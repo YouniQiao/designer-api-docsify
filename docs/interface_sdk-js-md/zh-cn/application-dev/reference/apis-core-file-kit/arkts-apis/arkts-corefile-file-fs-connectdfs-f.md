@@ -18,6 +18,8 @@ declare function connectDfs(networkId: string, listeners: DfsListeners): Promise
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-unnamed-declare function connectDfs(networkId: string, listeners: DfsListeners): Promise<void>--><!--Device-unnamed-declare function connectDfs(networkId: string, listeners: DfsListeners): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**

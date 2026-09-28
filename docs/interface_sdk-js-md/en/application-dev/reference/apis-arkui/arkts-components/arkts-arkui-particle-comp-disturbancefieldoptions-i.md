@@ -10,6 +10,8 @@ Defines particle disturbance Field params.
 
 **Since:** 12
 
+<!--Device-unnamed-declare interface DisturbanceFieldOptions--><!--Device-unnamed-declare interface DisturbanceFieldOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## feather
@@ -31,6 +33,8 @@ Default value: **0**.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DisturbanceFieldOptions-feather?: number--><!--Device-DisturbanceFieldOptions-feather?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,6 +58,8 @@ Default value: **1**.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DisturbanceFieldOptions-noiseAmplitude?: number--><!--Device-DisturbanceFieldOptions-noiseAmplitude?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## noiseFrequency
@@ -76,6 +82,8 @@ Default value: **1**.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DisturbanceFieldOptions-noiseFrequency?: number--><!--Device-DisturbanceFieldOptions-noiseFrequency?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## noiseScale
@@ -97,6 +105,8 @@ Default value: **1**.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DisturbanceFieldOptions-noiseScale?: number--><!--Device-DisturbanceFieldOptions-noiseScale?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -122,6 +132,8 @@ Value range of **x** and **y**: (-∞, +∞).
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DisturbanceFieldOptions-position?: PositionT<number>--><!--Device-DisturbanceFieldOptions-position?: PositionT<number>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## shape
@@ -143,6 +155,8 @@ Default value: **DisturbanceFieldShape.RECT**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DisturbanceFieldOptions-shape?: DisturbanceFieldShape--><!--Device-DisturbanceFieldOptions-shape?: DisturbanceFieldShape-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -168,6 +182,8 @@ Value range of **width** and **height**: [0, +∞).
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DisturbanceFieldOptions-size?: SizeT<number>--><!--Device-DisturbanceFieldOptions-size?: SizeT<number>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## strength
@@ -189,5 +205,7 @@ Value range: (-∞, +∞).
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DisturbanceFieldOptions-strength?: number--><!--Device-DisturbanceFieldOptions-strength?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

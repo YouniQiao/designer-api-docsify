@@ -18,6 +18,8 @@ function setDefaultApplication(type: string, elementName: ElementName, userId: n
 
 **需要权限：** ohos.permission.SET_DEFAULT_APPLICATION
 
+<!--Device-defaultAppManager-function setDefaultApplication(type: string, elementName: ElementName, userId: int, callback: AsyncCallback<void>) : void--><!--Device-defaultAppManager-function setDefaultApplication(type: string, elementName: ElementName, userId: int, callback: AsyncCallback<void>) : void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.DefaultApp
 
 **系统接口：** 此接口为系统接口。
@@ -104,6 +106,8 @@ function setDefaultApplication(type: string, elementName: ElementName, callback:
 
 **需要权限：** ohos.permission.SET_DEFAULT_APPLICATION
 
+<!--Device-defaultAppManager-function setDefaultApplication(type: string, elementName: ElementName, callback: AsyncCallback<void>) : void--><!--Device-defaultAppManager-function setDefaultApplication(type: string, elementName: ElementName, callback: AsyncCallback<void>) : void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.DefaultApp
 
 **系统接口：** 此接口为系统接口。
@@ -186,6 +190,8 @@ function setDefaultApplication(type: string, elementName: ElementName, userId?: 
 **起始版本：** 9
 
 **需要权限：** ohos.permission.SET_DEFAULT_APPLICATION
+
+<!--Device-defaultAppManager-function setDefaultApplication(type: string, elementName: ElementName, userId?: int) : Promise<void>--><!--Device-defaultAppManager-function setDefaultApplication(type: string, elementName: ElementName, userId?: int) : Promise<void>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.DefaultApp
 

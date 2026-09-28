@@ -4,13 +4,15 @@
 declare class TextPickerAttribute extends CommonMethod<TextPickerAttribute>
 ```
 
-In addition to the [universal attributes](arkts-arkui-common-comp.md#common), the following attributes are supported.
+In addition to the [universal attributes](arkts-arkui-common-comp.md), the following attributes are supported.
 
-In addition to the [universal events](arkts-arkui-common-comp.md#common), the following events are supported.
+In addition to the [universal events](arkts-arkui-common-comp.md), the following events are supported.
 
 **Inheritance/Implementation:** TextPickerAttribute extends CommonMethod<TextPickerAttribute>
 
 **Since:** 8
+
+<!--Device-unnamed-declare class TextPickerAttribute extends CommonMethod<TextPickerAttribute>--><!--Device-unnamed-declare class TextPickerAttribute extends CommonMethod<TextPickerAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,6 +29,8 @@ Sets whether to enable loop scrolling.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextPickerAttribute-canLoop(value: boolean): TextPickerAttribute--><!--Device-TextPickerAttribute-canLoop(value: boolean): TextPickerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -52,6 +56,8 @@ Sets whether to enable loop scrolling. Compared with [canLoop&lt;sup&gt;10+&lt;/
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TextPickerAttribute-canLoop(isLoop: Optional<boolean>): TextPickerAttribute--><!--Device-TextPickerAttribute-canLoop(isLoop: Optional<boolean>): TextPickerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -73,6 +79,8 @@ Sets the height of the picker items.
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextPickerAttribute-defaultPickerItemHeight(value: number | string): TextPickerAttribute--><!--Device-TextPickerAttribute-defaultPickerItemHeight(value: number | string): TextPickerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -98,6 +106,8 @@ Sets the height of the picker items. Compared with [defaultPickerItemHeight](#de
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TextPickerAttribute-defaultPickerItemHeight(height: Optional<number | string>): TextPickerAttribute--><!--Device-TextPickerAttribute-defaultPickerItemHeight(height: Optional<number | string>): TextPickerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -120,13 +130,15 @@ Sets the text style of the items when the text style change animation during the
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-TextPickerAttribute-defaultTextStyle(style: TextPickerTextStyle): TextPickerAttribute--><!--Device-TextPickerAttribute-defaultTextStyle(style: TextPickerTextStyle): TextPickerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [TextPickerTextStyle](arkts-arkui-textpicker-comp-textpickertextstyle-i.md) | Yes | Text style of each item when the text style change animation during the sliding process is disabled. <br>Default value: same as the default value of the [Text](arkts-arkui-text-comp.md#text) component. |
+| style | [TextPickerTextStyle](arkts-arkui-textpicker-comp-textpickertextstyle-i.md) | Yes | Text style of each item when the text style change animation during the sliding process is disabled. <br>Default value: same as the default value of the [Text](arkts-arkui-text-comp.md) component. |
 
 ## digitalCrownSensitivity
 
@@ -141,6 +153,8 @@ Sets the sensitivity to the digital crown rotation.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-TextPickerAttribute-digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>): TextPickerAttribute--><!--Device-TextPickerAttribute-digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>): TextPickerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -164,13 +178,15 @@ Sets whether to disable the animation effect of text style changes during scroll
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-TextPickerAttribute-disableTextStyleAnimation(disabled: boolean): TextPickerAttribute--><!--Device-TextPickerAttribute-disableTextStyleAnimation(disabled: boolean): TextPickerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| disabled | boolean | Yes | Whether to disable the animation of text style changes during scrolling. <br>- true: Disables the animation of text style changes. <br>- false: Does not disable the animation of text style changes. <br>Default value: false <br>**Note:** <br>When set to true, there is no animation of font size, font weight, or font color changes during scrolling, and the text is displayed in the style set by [defaultTextStyle](#defaulttextstyle). If [defaultTextStyle](#defaulttextstyle) is not set, the default style of the [Text](arkts-arkui-text-comp.md#text) component is used. When set to false, the system default animation of text style changes during scrolling is used. |
+| disabled | boolean | Yes | Whether to disable the animation of text style changes during scrolling. <br>- true: Disables the animation of text style changes. <br>- false: Does not disable the animation of text style changes. <br>Default value: false <br>**Note:** <br>When set to true, there is no animation of font size, font weight, or font color changes during scrolling, and the text is displayed in the style set by [defaultTextStyle](#defaulttextstyle). If [defaultTextStyle](#defaulttextstyle) is not set, the default style of the [Text](arkts-arkui-text-comp.md) component is used. When set to false, the system default animation of text style changes during scrolling is used. |
 
 ## disappearTextStyle
 
@@ -185,6 +201,8 @@ Sets the text color, font size, and font weight of edge items (the second item a
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextPickerAttribute-disappearTextStyle(value: PickerTextStyle): TextPickerAttribute--><!--Device-TextPickerAttribute-disappearTextStyle(value: PickerTextStyle): TextPickerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -210,6 +228,8 @@ Sets the text color, font size, and font weight of edge items (the second item a
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TextPickerAttribute-disappearTextStyle(style: Optional<PickerTextStyle>): TextPickerAttribute--><!--Device-TextPickerAttribute-disappearTextStyle(style: Optional<PickerTextStyle>): TextPickerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -234,6 +254,8 @@ Sets the text color, font size, font weight, maximum font size, minimum font siz
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-TextPickerAttribute-disappearTextStyle(style: Optional<PickerTextStyle | TextPickerTextStyle>): TextPickerAttribute--><!--Device-TextPickerAttribute-disappearTextStyle(style: Optional<PickerTextStyle | TextPickerTextStyle>): TextPickerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -257,6 +279,8 @@ If the sum of **startMargin** and **endMargin** in [DividerOptions](arkts-arkui-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextPickerAttribute-divider(value: DividerOptions | null): TextPickerAttribute--><!--Device-TextPickerAttribute-divider(value: DividerOptions | null): TextPickerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -284,6 +308,8 @@ If the sum of **startMargin** and **endMargin** in [DividerOptions](arkts-arkui-
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TextPickerAttribute-divider(textDivider: Optional<DividerOptions | null>): TextPickerAttribute--><!--Device-TextPickerAttribute-divider(textDivider: Optional<DividerOptions | null>): TextPickerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -306,6 +332,8 @@ Sets whether to enable haptic feedback.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TextPickerAttribute-enableHapticFeedback(enable: Optional<boolean>): TextPickerAttribute--><!--Device-TextPickerAttribute-enableHapticFeedback(enable: Optional<boolean>): TextPickerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -327,6 +355,8 @@ Sets the height of the fade effect applied to the top and bottom edges of the co
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextPickerAttribute-gradientHeight(value: Dimension): TextPickerAttribute--><!--Device-TextPickerAttribute-gradientHeight(value: Dimension): TextPickerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -352,6 +382,8 @@ Sets the height of the fade effect applied to the top and bottom edges of the co
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TextPickerAttribute-gradientHeight(height: Optional<Dimension>): TextPickerAttribute--><!--Device-TextPickerAttribute-gradientHeight(height: Optional<Dimension>): TextPickerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -375,6 +407,8 @@ This callback is triggered only after the scroll animation completes. To obtain 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextPickerAttribute-onChange(callback: (value: string | string[], index: number | number[]) => void): TextPickerAttribute--><!--Device-TextPickerAttribute-onChange(callback: (value: string | string[], index: number | number[]) => void): TextPickerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -401,6 +435,8 @@ This callback is triggered only after the scroll animation completes. To obtain 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-TextPickerAttribute-onChange(callback: Optional<OnTextPickerChangeCallback>): TextPickerAttribute--><!--Device-TextPickerAttribute-onChange(callback: Optional<OnTextPickerChangeCallback>): TextPickerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -434,6 +470,8 @@ Triggered when an option enters the selection zone during text picker scrolling 
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TextPickerAttribute-onEnterSelectedArea(callback: TextPickerEnterSelectedAreaCallback): TextPickerAttribute--><!--Device-TextPickerAttribute-onEnterSelectedArea(callback: TextPickerEnterSelectedAreaCallback): TextPickerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -463,6 +501,8 @@ If the scrolling is initiated by a gesture, this event is triggered when the fin
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-TextPickerAttribute-onScrollStop(callback: TextPickerScrollStopCallback): TextPickerAttribute--><!--Device-TextPickerAttribute-onScrollStop(callback: TextPickerScrollStopCallback): TextPickerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -496,6 +536,8 @@ If the scrolling is initiated by a gesture, this event is triggered when the fin
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TextPickerAttribute-onScrollStop(callback: Optional<TextPickerScrollStopCallback>): TextPickerAttribute--><!--Device-TextPickerAttribute-onScrollStop(callback: Optional<TextPickerScrollStopCallback>): TextPickerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -518,6 +560,8 @@ Sets the background style of selected items.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-TextPickerAttribute-selectedBackgroundStyle(style: Optional<PickerBackgroundStyle>): TextPickerAttribute--><!--Device-TextPickerAttribute-selectedBackgroundStyle(style: Optional<PickerBackgroundStyle>): TextPickerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -539,6 +583,8 @@ Sets the index of the selected item or items in the data list. This setting take
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextPickerAttribute-selectedIndex(value: number | number[]): TextPickerAttribute--><!--Device-TextPickerAttribute-selectedIndex(value: number | number[]): TextPickerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -564,6 +610,8 @@ Sets the index of the selected item or items in the data list. This setting take
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TextPickerAttribute-selectedIndex(index: Optional<number | number[]>): TextPickerAttribute--><!--Device-TextPickerAttribute-selectedIndex(index: Optional<number | number[]>): TextPickerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -585,6 +633,8 @@ Sets the text color, font size, and font weight of the selected item.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextPickerAttribute-selectedTextStyle(value: PickerTextStyle): TextPickerAttribute--><!--Device-TextPickerAttribute-selectedTextStyle(value: PickerTextStyle): TextPickerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -610,6 +660,8 @@ Sets the text color, font size, and font weight of the selected item. Compared w
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TextPickerAttribute-selectedTextStyle(style: Optional<PickerTextStyle>): TextPickerAttribute--><!--Device-TextPickerAttribute-selectedTextStyle(style: Optional<PickerTextStyle>): TextPickerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -634,6 +686,8 @@ Sets the text color, font size, font weight, maximum font size, minimum font siz
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-TextPickerAttribute-selectedTextStyle(style: Optional<PickerTextStyle | TextPickerTextStyle>): TextPickerAttribute--><!--Device-TextPickerAttribute-selectedTextStyle(style: Optional<PickerTextStyle | TextPickerTextStyle>): TextPickerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -655,6 +709,8 @@ Sets the text color, font size, and font weight of candidate items (the first it
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextPickerAttribute-textStyle(value: PickerTextStyle): TextPickerAttribute--><!--Device-TextPickerAttribute-textStyle(value: PickerTextStyle): TextPickerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -680,6 +736,8 @@ Sets the text color, font size, and font weight of candidate items (the first it
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TextPickerAttribute-textStyle(style: Optional<PickerTextStyle>): TextPickerAttribute--><!--Device-TextPickerAttribute-textStyle(style: Optional<PickerTextStyle>): TextPickerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -704,6 +762,8 @@ Sets the text color, font size, font weight, maximum font size, minimum font siz
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-TextPickerAttribute-textStyle(style: Optional<PickerTextStyle | TextPickerTextStyle>): TextPickerAttribute--><!--Device-TextPickerAttribute-textStyle(style: Optional<PickerTextStyle | TextPickerTextStyle>): TextPickerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -718,7 +778,7 @@ Sets the text color, font size, font weight, maximum font size, minimum font siz
 onAccept(callback: (value: string, index: number) => void)
 ```
 
-Triggered when the OK button in the dialog box is clicked. This event can be triggered only in the [text picker dialog box](arkts-arkui-textpicker-comp.md#text_picker).
+Triggered when the OK button in the dialog box is clicked. This event can be triggered only in the [text picker dialog box](arkts-arkui-textpicker-comp.md).
 
 > **NOTE:** 
 > 
@@ -730,6 +790,8 @@ Triggered when the OK button in the dialog box is clicked. This event can be tri
 **Deprecated since:** 10
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-TextPickerAttribute-onAccept(callback: (value: string, index: number) => void): TextPickerAttribute--><!--Device-TextPickerAttribute-onAccept(callback: (value: string, index: number) => void): TextPickerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -745,7 +807,7 @@ Triggered when the OK button in the dialog box is clicked. This event can be tri
 onCancel(callback: () => void)
 ```
 
-Triggered when the cancel button in the dialog box is clicked. This event can be triggered only in the [text picker dialog box](arkts-arkui-textpicker-comp.md#text_picker).
+Triggered when the cancel button in the dialog box is clicked. This event can be triggered only in the [text picker dialog box](arkts-arkui-textpicker-comp.md).
 
 > **NOTE:** 
 > 
@@ -757,6 +819,8 @@ Triggered when the cancel button in the dialog box is clicked. This event can be
 **Deprecated since:** 10
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-TextPickerAttribute-onCancel(callback: () => void): TextPickerAttribute--><!--Device-TextPickerAttribute-onCancel(callback: () => void): TextPickerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

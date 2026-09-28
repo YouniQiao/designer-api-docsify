@@ -18,6 +18,8 @@ function cancel(id: number, callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
+<!--Device-notificationManager-function cancel(id: int, callback: AsyncCallback<void>): void--><!--Device-notificationManager-function cancel(id: int, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **参见：**
@@ -75,6 +77,8 @@ function cancel(id: number, label: string, callback: AsyncCallback<void>): void
 取消后，对应的通知将从通知中心、状态栏等位置移除，用户不再可见。适用于需要精确取消某一条带有特定标签的通知的场景。与仅传入通知ID的notificationManager.cancel(id, callback)相比，此接口额外传入label参数，可精确取消同一ID，不同标签的通知。
 
 **起始版本：** 9
+
+<!--Device-notificationManager-function cancel(id: int, label: string, callback: AsyncCallback<void>): void--><!--Device-notificationManager-function cancel(id: int, label: string, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -134,6 +138,8 @@ function cancel(id: number, label?: string): Promise<void>
 取消后，对应的通知将从通知中心、状态栏等位置移除，用户不再可见。
 
 **起始版本：** 9
+
+<!--Device-notificationManager-function cancel(id: int, label?: string): Promise<void>--><!--Device-notificationManager-function cancel(id: int, label?: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

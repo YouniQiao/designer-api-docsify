@@ -8,6 +8,8 @@ enum PhotoKeys
 
 **起始版本：** 10
 
+<!--Device-photoAccessHelper-enum PhotoKeys--><!--Device-photoAccessHelper-enum PhotoKeys-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## URI
@@ -24,7 +26,9 @@ URI = 'uri'
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PhotoKeys-URI = 'uri'--><!--Device-PhotoKeys-URI = 'uri'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -38,7 +42,9 @@ PHOTO_TYPE = 'media_type'
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PhotoKeys-PHOTO_TYPE = 'media_type'--><!--Device-PhotoKeys-PHOTO_TYPE = 'media_type'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -56,7 +62,9 @@ DISPLAY_NAME = 'display_name'
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PhotoKeys-DISPLAY_NAME = 'display_name'--><!--Device-PhotoKeys-DISPLAY_NAME = 'display_name'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -70,7 +78,9 @@ SIZE = 'size'
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PhotoKeys-SIZE = 'size'--><!--Device-PhotoKeys-SIZE = 'size'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -84,7 +94,9 @@ DATE_ADDED = 'date_added'
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PhotoKeys-DATE_ADDED = 'date_added'--><!--Device-PhotoKeys-DATE_ADDED = 'date_added'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -98,7 +110,9 @@ DATE_MODIFIED = 'date_modified'
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PhotoKeys-DATE_MODIFIED = 'date_modified'--><!--Device-PhotoKeys-DATE_MODIFIED = 'date_modified'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -112,7 +126,9 @@ DURATION = 'duration'
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PhotoKeys-DURATION = 'duration'--><!--Device-PhotoKeys-DURATION = 'duration'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -126,7 +142,9 @@ WIDTH = 'width'
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PhotoKeys-WIDTH = 'width'--><!--Device-PhotoKeys-WIDTH = 'width'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -140,7 +158,9 @@ HEIGHT = 'height'
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PhotoKeys-HEIGHT = 'height'--><!--Device-PhotoKeys-HEIGHT = 'height'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -154,7 +174,9 @@ DATE_TAKEN = 'date_taken'
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PhotoKeys-DATE_TAKEN = 'date_taken'--><!--Device-PhotoKeys-DATE_TAKEN = 'date_taken'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -168,7 +190,9 @@ ORIENTATION = 'orientation'
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PhotoKeys-ORIENTATION = 'orientation'--><!--Device-PhotoKeys-ORIENTATION = 'orientation'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -182,7 +206,9 @@ FAVORITE = 'is_favorite'
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PhotoKeys-FAVORITE = 'is_favorite'--><!--Device-PhotoKeys-FAVORITE = 'is_favorite'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -196,7 +222,9 @@ TITLE = 'title'
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PhotoKeys-TITLE = 'title'--><!--Device-PhotoKeys-TITLE = 'title'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -210,7 +238,9 @@ POSITION = 'position'
 
 **起始版本：** 16
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PhotoKeys-POSITION = 'position'--><!--Device-PhotoKeys-POSITION = 'position'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -228,7 +258,9 @@ DATE_ADDED_MS = 'date_added_ms'
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PhotoKeys-DATE_ADDED_MS = 'date_added_ms'--><!--Device-PhotoKeys-DATE_ADDED_MS = 'date_added_ms'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -246,7 +278,9 @@ DATE_MODIFIED_MS = 'date_modified_ms'
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PhotoKeys-DATE_MODIFIED_MS = 'date_modified_ms'--><!--Device-PhotoKeys-DATE_MODIFIED_MS = 'date_modified_ms'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -260,7 +294,9 @@ PHOTO_SUBTYPE = 'subtype'
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PhotoKeys-PHOTO_SUBTYPE = 'subtype'--><!--Device-PhotoKeys-PHOTO_SUBTYPE = 'subtype'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -274,7 +310,9 @@ DYNAMIC_RANGE_TYPE = 'dynamic_range_type'
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PhotoKeys-DYNAMIC_RANGE_TYPE = 'dynamic_range_type'--><!--Device-PhotoKeys-DYNAMIC_RANGE_TYPE = 'dynamic_range_type'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -288,7 +326,9 @@ COVER_POSITION = 'cover_position'
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PhotoKeys-COVER_POSITION = 'cover_position'--><!--Device-PhotoKeys-COVER_POSITION = 'cover_position'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -302,7 +342,9 @@ BURST_KEY = 'burst_key'
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PhotoKeys-BURST_KEY = 'burst_key'--><!--Device-PhotoKeys-BURST_KEY = 'burst_key'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -316,7 +358,9 @@ LCD图片的宽高，值为width:height拼接而成的字符串。
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PhotoKeys-LCD_SIZE = 'lcd_size'--><!--Device-PhotoKeys-LCD_SIZE = 'lcd_size'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -330,7 +374,9 @@ THUMB图片的宽高，值为width:height拼接而成的字符串。
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PhotoKeys-THM_SIZE = 'thm_size'--><!--Device-PhotoKeys-THM_SIZE = 'thm_size'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -344,7 +390,9 @@ DETAIL_TIME = 'detail_time'
 
 **起始版本：** 13
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PhotoKeys-DETAIL_TIME = 'detail_time'--><!--Device-PhotoKeys-DETAIL_TIME = 'detail_time'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -358,7 +406,9 @@ DATE_TAKEN_MS  = 'date_taken_ms'
 
 **起始版本：** 13
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PhotoKeys-DATE_TAKEN_MS  = 'date_taken_ms'--><!--Device-PhotoKeys-DATE_TAKEN_MS  = 'date_taken_ms'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -372,6 +422,8 @@ OWNER_ALBUM_ID = 'owner_album_id'
 
 **起始版本：** 22
 
+<!--Device-PhotoKeys-OWNER_ALBUM_ID = 'owner_album_id'--><!--Device-PhotoKeys-OWNER_ALBUM_ID = 'owner_album_id'-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## MEDIA_SUFFIX
@@ -384,6 +436,8 @@ MEDIA_SUFFIX = 'media_suffix'
 
 **起始版本：** 18
 
+<!--Device-PhotoKeys-MEDIA_SUFFIX = 'media_suffix'--><!--Device-PhotoKeys-MEDIA_SUFFIX = 'media_suffix'-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## CHANGE_TIME
@@ -395,6 +449,8 @@ CHANGE_TIME = 'change_time'
 照片的更改时间（单位：秒）。
 
 **起始版本：** 23
+
+<!--Device-PhotoKeys-CHANGE_TIME = 'change_time'--><!--Device-PhotoKeys-CHANGE_TIME = 'change_time'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -411,6 +467,8 @@ ASPECT_RATIO = 'aspect_ratio'
 **起始版本：** 22
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PhotoKeys-ASPECT_RATIO = 'aspect_ratio'--><!--Device-PhotoKeys-ASPECT_RATIO = 'aspect_ratio'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -430,5 +488,7 @@ LOCAL_ASSET_SIZE = 'local_asset_size'
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PhotoKeys-LOCAL_ASSET_SIZE = 'local_asset_size'--><!--Device-PhotoKeys-LOCAL_ASSET_SIZE = 'local_asset_size'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core

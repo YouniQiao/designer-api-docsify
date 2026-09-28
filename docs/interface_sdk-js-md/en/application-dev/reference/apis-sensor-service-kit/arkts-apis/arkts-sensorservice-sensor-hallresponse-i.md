@@ -10,6 +10,8 @@ Describes the Hall effect sensor data. It extends from [Response](arkts-sensorse
 
 **Since:** 8
 
+<!--Device-sensor-interface HallResponse extends Response--><!--Device-sensor-interface HallResponse extends Response-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## Modules to Import
@@ -29,5 +31,7 @@ Hall effect status, indicating whether there is a magnetic force around the devi
 **Type:** number
 
 **Since:** 8
+
+<!--Device-HallResponse-status: double--><!--Device-HallResponse-status: double-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor

@@ -26,6 +26,8 @@ function getCurrentGroup(): Promise<WifiP2pGroupInfo>
 
 **需要权限：** ohos.permission.GET_WIFI_INFO and ohos.permission.LOCATION
 
+<!--Device-wifi-function getCurrentGroup(): Promise<WifiP2pGroupInfo>--><!--Device-wifi-function getCurrentGroup(): Promise<WifiP2pGroupInfo>-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
 **返回值：**
@@ -74,6 +76,8 @@ function getCurrentGroup(callback: AsyncCallback<WifiP2pGroupInfo>): void
 **替代接口：** [getCurrentGroup](arkts-connectivity-wifimanager-getcurrentgroup-f.md)
 
 **需要权限：** ohos.permission.GET_WIFI_INFO and ohos.permission.LOCATION
+
+<!--Device-wifi-function getCurrentGroup(callback: AsyncCallback<WifiP2pGroupInfo>): void--><!--Device-wifi-function getCurrentGroup(callback: AsyncCallback<WifiP2pGroupInfo>): void-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 

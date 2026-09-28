@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare namespace cloudSync--><!--Device-unnamed-declare namespace cloudSync-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## 导入模块

@@ -18,6 +18,8 @@ function createKVManager(config: KVManagerConfig): KVManager
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-distributedKVStore-function createKVManager(config: KVManagerConfig): KVManager--><!--Device-distributedKVStore-function createKVManager(config: KVManagerConfig): KVManager-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **参数：**

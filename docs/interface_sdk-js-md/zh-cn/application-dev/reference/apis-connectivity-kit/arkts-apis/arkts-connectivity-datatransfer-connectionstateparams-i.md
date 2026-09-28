@@ -8,6 +8,8 @@ interface ConnectionStateParams
 
 **起始版本：** 26.0.0
 
+<!--Device-dataTransfer-interface ConnectionStateParams--><!--Device-dataTransfer-interface ConnectionStateParams-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## 导入模块
@@ -30,6 +32,8 @@ address: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ConnectionStateParams-address: string--><!--Device-ConnectionStateParams-address: string-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## uuid
@@ -45,5 +49,7 @@ uuid: string
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ConnectionStateParams-uuid: string--><!--Device-ConnectionStateParams-uuid: string-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base

@@ -8,6 +8,8 @@ type NetHandle = connection.NetHandle
 
 **起始版本：** 9
 
+<!--Device-sharing-type NetHandle = connection.NetHandle--><!--Device-sharing-type NetHandle = connection.NetHandle-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **类型：** [connection.NetHandle](arkts-network-connection-nethandle-i.md)

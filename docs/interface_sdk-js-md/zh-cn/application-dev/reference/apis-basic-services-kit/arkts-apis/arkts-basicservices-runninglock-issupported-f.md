@@ -16,6 +16,8 @@ function isSupported(type: RunningLockType): boolean
 
 **起始版本：** 9
 
+<!--Device-runningLock-function isSupported(type: RunningLockType): boolean--><!--Device-runningLock-function isSupported(type: RunningLockType): boolean-End-->
+
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 
 **参数：**

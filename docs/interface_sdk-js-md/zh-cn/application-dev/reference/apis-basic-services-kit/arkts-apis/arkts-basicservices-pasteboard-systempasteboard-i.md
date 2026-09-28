@@ -8,6 +8,8 @@ interface SystemPasteboard
 
 **起始版本：** 6
 
+<!--Device-pasteboard-interface SystemPasteboard--><!--Device-pasteboard-interface SystemPasteboard-End-->
+
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
 ## 导入模块
@@ -26,7 +28,9 @@ clearData(callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SystemPasteboard-clearData(callback: AsyncCallback<void>): void--><!--Device-SystemPasteboard-clearData(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -69,7 +73,9 @@ clearData(): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SystemPasteboard-clearData(): Promise<void>--><!--Device-SystemPasteboard-clearData(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -102,7 +108,9 @@ clearDataSync(): void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SystemPasteboard-clearDataSync(): void--><!--Device-SystemPasteboard-clearDataSync(): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -133,6 +141,8 @@ detectPatterns(patterns: Array<Pattern>): Promise<Array<Pattern>>
 检测**本地**剪贴板中存在的[Pattern](arkts-basicservices-pasteboard-pattern-e.md)模式，使用Promise异步回调。本地剪贴板指当前设备上的剪贴板数据，不包括跨设备传输的远端剪贴板数据。适用于应用在粘贴数据前需要检测剪贴板内容是否包含特定类型的数据(如URL、邮箱、电话号码等)，以便进行相应处理或提供智能提示的场景。
 
 **起始版本：** 13
+
+<!--Device-SystemPasteboard-detectPatterns(patterns: Array<Pattern>): Promise<Array<Pattern>>--><!--Device-SystemPasteboard-detectPatterns(patterns: Array<Pattern>): Promise<Array<Pattern>>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -187,7 +197,9 @@ getChangeCount(): number
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-SystemPasteboard-getChangeCount(): long--><!--Device-SystemPasteboard-getChangeCount(): long-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -227,7 +239,9 @@ getData(callback: AsyncCallback<PasteData>): void
 - API版本12+：ohos.permission.READ_PASTEBOARD
 - API版本9-11：N/A
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SystemPasteboard-getData(callback: AsyncCallback<PasteData>): void--><!--Device-SystemPasteboard-getData(callback: AsyncCallback<PasteData>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -281,7 +295,9 @@ getData(): Promise<PasteData>
 - API版本12+：ohos.permission.READ_PASTEBOARD
 - API版本9-11：N/A
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SystemPasteboard-getData(): Promise<PasteData>--><!--Device-SystemPasteboard-getData(): Promise<PasteData>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -324,7 +340,9 @@ getDataSource(): string
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SystemPasteboard-getDataSource(): string--><!--Device-SystemPasteboard-getDataSource(): string-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -368,7 +386,9 @@ getDataSync(): PasteData
 - API版本12+：ohos.permission.READ_PASTEBOARD
 - API版本11：N/A
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SystemPasteboard-getDataSync(): PasteData--><!--Device-SystemPasteboard-getDataSync(): PasteData-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -411,7 +431,9 @@ getDataWithProgress(params: GetDataParams): Promise<PasteData>
 
 **需要权限：** ohos.permission.READ_PASTEBOARD
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-SystemPasteboard-getDataWithProgress(params: GetDataParams): Promise<PasteData>--><!--Device-SystemPasteboard-getDataWithProgress(params: GetDataParams): Promise<PasteData>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -491,7 +513,9 @@ getMimeTypes(): Promise<Array<string>>
 
 **起始版本：** 14
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-SystemPasteboard-getMimeTypes(): Promise<Array<string>>--><!--Device-SystemPasteboard-getMimeTypes(): Promise<Array<string>>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -528,7 +552,9 @@ getUnifiedData(): Promise<unifiedDataChannel.UnifiedData>
 
 **需要权限：** ohos.permission.READ_PASTEBOARD
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-SystemPasteboard-getUnifiedData(): Promise<unifiedDataChannel.UnifiedData>--><!--Device-SystemPasteboard-getUnifiedData(): Promise<unifiedDataChannel.UnifiedData>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -579,7 +605,9 @@ getUnifiedDataSync(): unifiedDataChannel.UnifiedData
 
 **需要权限：** ohos.permission.READ_PASTEBOARD
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-SystemPasteboard-getUnifiedDataSync(): unifiedDataChannel.UnifiedData--><!--Device-SystemPasteboard-getUnifiedDataSync(): unifiedDataChannel.UnifiedData-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -620,7 +648,9 @@ hasData(callback: AsyncCallback<boolean>): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SystemPasteboard-hasData(callback: AsyncCallback<boolean>): void--><!--Device-SystemPasteboard-hasData(callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -663,7 +693,9 @@ hasData(): Promise<boolean>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SystemPasteboard-hasData(): Promise<boolean>--><!--Device-SystemPasteboard-hasData(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -696,7 +728,9 @@ hasDataSync(): boolean
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SystemPasteboard-hasDataSync(): boolean--><!--Device-SystemPasteboard-hasDataSync(): boolean-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -734,7 +768,9 @@ hasDataType(mimeType: string): boolean
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SystemPasteboard-hasDataType(mimeType: string): boolean--><!--Device-SystemPasteboard-hasDataType(mimeType: string): boolean-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -779,7 +815,9 @@ hasRemoteData(): boolean
 
 **起始版本：** 24
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-SystemPasteboard-hasRemoteData(): boolean--><!--Device-SystemPasteboard-hasRemoteData(): boolean-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -808,7 +846,9 @@ isRemoteData(): boolean
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SystemPasteboard-isRemoteData(): boolean--><!--Device-SystemPasteboard-isRemoteData(): boolean-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -849,6 +889,8 @@ off(type: 'update', callback?: () => void): void
 - 如果callback参数未填，清除本应用的所有监听回调；否则清除指定监听回调。
 
 **起始版本：** 7
+
+<!--Device-SystemPasteboard-off(type: 'update', callback?: () => void): void--><!--Device-SystemPasteboard-off(type: 'update', callback?: () => void): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -892,6 +934,8 @@ offRemoteUpdate(callback?: UpdateCallback): void
 
 **起始版本：** 22
 
+<!--Device-SystemPasteboard-offRemoteUpdate(callback?: UpdateCallback): void--><!--Device-SystemPasteboard-offRemoteUpdate(callback?: UpdateCallback): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
 **参数：**
@@ -923,6 +967,8 @@ on(type: 'update', callback: () => void): void
 - 建议在组件/页面销毁时取消订阅。
 
 **起始版本：** 7
+
+<!--Device-SystemPasteboard-on(type: 'update', callback: () => void): void--><!--Device-SystemPasteboard-on(type: 'update', callback: () => void): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -966,6 +1012,8 @@ onRemoteUpdate(callback: UpdateCallback): void
 
 **起始版本：** 22
 
+<!--Device-SystemPasteboard-onRemoteUpdate(callback: UpdateCallback): void--><!--Device-SystemPasteboard-onRemoteUpdate(callback: UpdateCallback): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
 **参数：**
@@ -1001,6 +1049,8 @@ removeAppShareOptions(): void
 **需要权限：** 
 - API版本14+：ohos.permission.MANAGE_PASTEBOARD_APP_SHARE_OPTION
 - API版本12-13：N/A
+
+<!--Device-SystemPasteboard-removeAppShareOptions(): void--><!--Device-SystemPasteboard-removeAppShareOptions(): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -1041,6 +1091,8 @@ setAppShareOptions(shareOptions: ShareOption): void
 - API版本14+：ohos.permission.MANAGE_PASTEBOARD_APP_SHARE_OPTION
 - API版本12-13：N/A
 
+<!--Device-SystemPasteboard-setAppShareOptions(shareOptions: ShareOption): void--><!--Device-SystemPasteboard-setAppShareOptions(shareOptions: ShareOption): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
 **参数：**
@@ -1080,7 +1132,9 @@ setData(data: PasteData, callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SystemPasteboard-setData(data: PasteData, callback: AsyncCallback<void>): void--><!--Device-SystemPasteboard-setData(data: PasteData, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -1128,7 +1182,9 @@ setData(data: PasteData): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SystemPasteboard-setData(data: PasteData): Promise<void>--><!--Device-SystemPasteboard-setData(data: PasteData): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -1179,7 +1235,9 @@ setDataSync(data: PasteData): void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SystemPasteboard-setDataSync(data: PasteData): void--><!--Device-SystemPasteboard-setDataSync(data: PasteData): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -1219,7 +1277,9 @@ setUnifiedData(data: unifiedDataChannel.UnifiedData): Promise<void>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-SystemPasteboard-setUnifiedData(data: unifiedDataChannel.UnifiedData): Promise<void>--><!--Device-SystemPasteboard-setUnifiedData(data: unifiedDataChannel.UnifiedData): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -1280,7 +1340,9 @@ setUnifiedDataSync(data: unifiedDataChannel.UnifiedData): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-SystemPasteboard-setUnifiedDataSync(data: unifiedDataChannel.UnifiedData): void--><!--Device-SystemPasteboard-setUnifiedDataSync(data: unifiedDataChannel.UnifiedData): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -1341,6 +1403,8 @@ clear(callback: AsyncCallback<void>): void
 
 **替代接口：** [clearData](#cleardata)(callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-SystemPasteboard-clear(callback: AsyncCallback<void>): void--><!--Device-SystemPasteboard-clear(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
 **参数：**
@@ -1384,6 +1448,8 @@ clear(): Promise<void>
 
 **替代接口：** [clearData](#cleardata)()
 
+<!--Device-SystemPasteboard-clear(): Promise<void>--><!--Device-SystemPasteboard-clear(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
 **返回值：**
@@ -1418,6 +1484,8 @@ getPasteData(callback: AsyncCallback<PasteData>): void
 **废弃版本：** 9
 
 **替代接口：** [getData](#getdata)(callback: AsyncCallback&lt;PasteData&gt;)
+
+<!--Device-SystemPasteboard-getPasteData(callback: AsyncCallback<PasteData>): void--><!--Device-SystemPasteboard-getPasteData(callback: AsyncCallback<PasteData>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -1467,6 +1535,8 @@ getPasteData(): Promise<PasteData>
 
 **替代接口：** [getData](#getdata)()
 
+<!--Device-SystemPasteboard-getPasteData(): Promise<PasteData>--><!--Device-SystemPasteboard-getPasteData(): Promise<PasteData>-End-->
+
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
 **返回值：**
@@ -1504,6 +1574,8 @@ hasPasteData(callback: AsyncCallback<boolean>): void
 **废弃版本：** 9
 
 **替代接口：** [hasData](#hasdata)(callback: AsyncCallback&lt;boolean&gt;)
+
+<!--Device-SystemPasteboard-hasPasteData(callback: AsyncCallback<boolean>): void--><!--Device-SystemPasteboard-hasPasteData(callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -1550,6 +1622,8 @@ hasPasteData(): Promise<boolean>
 
 **替代接口：** [hasData](#hasdata)()
 
+<!--Device-SystemPasteboard-hasPasteData(): Promise<boolean>--><!--Device-SystemPasteboard-hasPasteData(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
 **返回值：**
@@ -1584,6 +1658,8 @@ setPasteData(data: PasteData, callback: AsyncCallback<void>): void
 **废弃版本：** 9
 
 **替代接口：** [setData](#setdata)(data: PasteData, callback: AsyncCallback&lt;void&gt;)
+
+<!--Device-SystemPasteboard-setPasteData(data: PasteData, callback: AsyncCallback<void>): void--><!--Device-SystemPasteboard-setPasteData(data: PasteData, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -1629,6 +1705,8 @@ setPasteData(data: PasteData): Promise<void>
 **废弃版本：** 9
 
 **替代接口：** [setData](#setdata-1)(data: PasteData)
+
+<!--Device-SystemPasteboard-setPasteData(data: PasteData): Promise<void>--><!--Device-SystemPasteboard-setPasteData(data: PasteData): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 

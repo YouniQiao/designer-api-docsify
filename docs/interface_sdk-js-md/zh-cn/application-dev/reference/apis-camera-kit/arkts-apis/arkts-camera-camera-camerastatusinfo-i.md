@@ -8,6 +8,8 @@ interface CameraStatusInfo
 
 **起始版本：** 10
 
+<!--Device-camera-interface CameraStatusInfo--><!--Device-camera-interface CameraStatusInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
@@ -28,7 +30,9 @@ camera: CameraDevice
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-CameraStatusInfo-camera: CameraDevice--><!--Device-CameraStatusInfo-camera: CameraDevice-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -44,6 +48,8 @@ status: CameraStatus
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-CameraStatusInfo-status: CameraStatus--><!--Device-CameraStatusInfo-status: CameraStatus-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core

@@ -20,6 +20,8 @@ function switchInputMethod(bundleName: string, subtypeId?: string): Promise<void
 
 **需要权限：** ohos.permission.CONNECT_IME_ABILITY
 
+<!--Device-inputMethod-function switchInputMethod(bundleName: string, subtypeId?: string): Promise<void>--><!--Device-inputMethod-function switchInputMethod(bundleName: string, subtypeId?: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **系统接口：** 此接口为系统接口。

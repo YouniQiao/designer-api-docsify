@@ -8,6 +8,8 @@ class HighlightAlbum
 
 **起始版本：** 12
 
+<!--Device-photoAccessHelper-class HighlightAlbum--><!--Device-photoAccessHelper-class HighlightAlbum-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -27,6 +29,8 @@ constructor(album: Album)
 构造函数。
 
 **起始版本：** 12
+
+<!--Device-HighlightAlbum-constructor(album: Album)--><!--Device-HighlightAlbum-constructor(album: Album)-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -77,6 +81,8 @@ static deleteHighlightAlbums(context: Context, albums: Array<Album>): Promise<nu
 **起始版本：** 18
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-HighlightAlbum-static deleteHighlightAlbums(context: Context, albums: Array<Album>): Promise<int>--><!--Device-HighlightAlbum-static deleteHighlightAlbums(context: Context, albums: Array<Album>): Promise<int>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -145,6 +151,8 @@ getHighlightAlbumInfo(type: HighlightAlbumInfoType): Promise<string>
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-HighlightAlbum-getHighlightAlbumInfo(type: HighlightAlbumInfoType): Promise<string>--><!--Device-HighlightAlbum-getHighlightAlbumInfo(type: HighlightAlbumInfoType): Promise<string>-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -211,6 +219,8 @@ getHighlightResource(resourceUri: string): Promise<ArrayBuffer>
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-HighlightAlbum-getHighlightResource(resourceUri: string): Promise<ArrayBuffer>--><!--Device-HighlightAlbum-getHighlightResource(resourceUri: string): Promise<ArrayBuffer>-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -274,6 +284,8 @@ setHighlightUserActionData(type: HighlightUserActionType, actionData: number): P
 **起始版本：** 12
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-HighlightAlbum-setHighlightUserActionData(type: HighlightUserActionType, actionData: int): Promise<void>--><!--Device-HighlightAlbum-setHighlightUserActionData(type: HighlightUserActionType, actionData: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -347,6 +359,8 @@ setSubTitle(subTitle: string): Promise<void>
 **起始版本：** 18
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-HighlightAlbum-setSubTitle(subTitle: string): Promise<void>--><!--Device-HighlightAlbum-setSubTitle(subTitle: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

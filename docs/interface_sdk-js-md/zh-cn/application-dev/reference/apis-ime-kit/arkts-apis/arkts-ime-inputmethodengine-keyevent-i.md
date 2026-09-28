@@ -8,6 +8,8 @@ interface KeyEvent
 
 **起始版本：** 8
 
+<!--Device-inputMethodEngine-interface KeyEvent--><!--Device-inputMethodEngine-interface KeyEvent-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## 导入模块
@@ -28,6 +30,8 @@ readonly keyAction: number
 
 **起始版本：** 8
 
+<!--Device-KeyEvent-readonly keyAction: int--><!--Device-KeyEvent-readonly keyAction: int-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## keyCode
@@ -41,5 +45,7 @@ readonly keyCode: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-KeyEvent-readonly keyCode: int--><!--Device-KeyEvent-readonly keyCode: int-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework

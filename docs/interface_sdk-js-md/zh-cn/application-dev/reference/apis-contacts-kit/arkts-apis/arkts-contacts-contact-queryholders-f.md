@@ -22,6 +22,8 @@ function queryHolders(callback: AsyncCallback<Array<Holder>>): void
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryHolders(callback: AsyncCallback<Array<Holder>>): void--><!--Device-contact-function queryHolders(callback: AsyncCallback<Array<Holder>>): void-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 **参数：**
@@ -59,6 +61,8 @@ function queryHolders(context: Context, callback: AsyncCallback<Array<Holder>>):
 **起始版本：** 10
 
 **需要权限：** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryHolders(context: Context, callback: AsyncCallback<Array<Holder>>): void--><!--Device-contact-function queryHolders(context: Context, callback: AsyncCallback<Array<Holder>>): void-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -117,6 +121,8 @@ function queryHolders(): Promise<Array<Holder>>
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryHolders(): Promise<Array<Holder>>--><!--Device-contact-function queryHolders(): Promise<Array<Holder>>-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 **返回值：**
@@ -150,6 +156,8 @@ function queryHolders(context: Context): Promise<Array<Holder>>
 **起始版本：** 10
 
 **需要权限：** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryHolders(context: Context): Promise<Array<Holder>>--><!--Device-contact-function queryHolders(context: Context): Promise<Array<Holder>>-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 

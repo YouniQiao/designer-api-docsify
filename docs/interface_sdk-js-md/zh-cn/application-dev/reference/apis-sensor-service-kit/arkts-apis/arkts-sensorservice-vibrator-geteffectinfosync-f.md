@@ -16,6 +16,8 @@ function getEffectInfoSync(effectId: string, param?: VibratorInfoParam): EffectI
 
 **起始版本：** 19
 
+<!--Device-vibrator-function getEffectInfoSync(effectId: string, param?: VibratorInfoParam): EffectInfo--><!--Device-vibrator-function getEffectInfoSync(effectId: string, param?: VibratorInfoParam): EffectInfo-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 **参数：**

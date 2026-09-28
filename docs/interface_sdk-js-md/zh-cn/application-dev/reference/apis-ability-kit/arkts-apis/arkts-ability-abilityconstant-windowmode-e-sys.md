@@ -8,6 +8,8 @@ export enum WindowMode
 
 **起始版本：** 12
 
+<!--Device-AbilityConstant-export enum WindowMode--><!--Device-AbilityConstant-export enum WindowMode-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## WINDOW_MODE_UNDEFINED
@@ -21,6 +23,8 @@ WINDOW_MODE_UNDEFINED = 0
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WindowMode-WINDOW_MODE_UNDEFINED = 0--><!--Device-WindowMode-WINDOW_MODE_UNDEFINED = 0-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -37,6 +41,8 @@ WINDOW_MODE_FLOATING = 102
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WindowMode-WINDOW_MODE_FLOATING = 102--><!--Device-WindowMode-WINDOW_MODE_FLOATING = 102-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

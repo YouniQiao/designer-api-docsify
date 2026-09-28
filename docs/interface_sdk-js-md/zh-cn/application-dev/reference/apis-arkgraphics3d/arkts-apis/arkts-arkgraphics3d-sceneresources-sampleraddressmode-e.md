@@ -10,6 +10,8 @@ export enum SamplerAddressMode
 
 **起始版本：** 20
 
+<!--Device-unnamed-export enum SamplerAddressMode--><!--Device-unnamed-export enum SamplerAddressMode-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## REPEAT
@@ -21,6 +23,8 @@ REPEAT = 0
 纹理坐标超出范围时，纹理会重复平铺。
 
 **起始版本：** 20
+
+<!--Device-SamplerAddressMode-REPEAT = 0--><!--Device-SamplerAddressMode-REPEAT = 0-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -34,6 +38,8 @@ MIRRORED_REPEAT = 1
 
 **起始版本：** 20
 
+<!--Device-SamplerAddressMode-MIRRORED_REPEAT = 1--><!--Device-SamplerAddressMode-MIRRORED_REPEAT = 1-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## CLAMP_TO_EDGE
@@ -45,5 +51,7 @@ CLAMP_TO_EDGE = 2
 纹理坐标超出范围时，贴图边缘像素会被拉伸延伸。
 
 **起始版本：** 20
+
+<!--Device-SamplerAddressMode-CLAMP_TO_EDGE = 2--><!--Device-SamplerAddressMode-CLAMP_TO_EDGE = 2-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

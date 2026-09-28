@@ -8,6 +8,8 @@ export enum TemperatureType
 
 **起始版本：** 18
 
+<!--Device-i18n-export enum TemperatureType--><!--Device-i18n-export enum TemperatureType-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## CELSIUS
@@ -20,7 +22,9 @@ CELSIUS = 1
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-TemperatureType-CELSIUS = 1--><!--Device-TemperatureType-CELSIUS = 1-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -34,7 +38,9 @@ FAHRENHEIT = 2
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-TemperatureType-FAHRENHEIT = 2--><!--Device-TemperatureType-FAHRENHEIT = 2-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -48,6 +54,8 @@ KELVIN = 3
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-TemperatureType-KELVIN = 3--><!--Device-TemperatureType-KELVIN = 3-End-->
 
 **系统能力：** SystemCapability.Global.I18n

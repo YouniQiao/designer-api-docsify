@@ -12,6 +12,8 @@ The **drawable.json** file is located under **entry/src/main/resources/base/medi
 
 **Since:** 10
 
+<!--Device-unnamed-export class LayeredDrawableDescriptor extends DrawableDescriptor--><!--Device-unnamed-export class LayeredDrawableDescriptor extends DrawableDescriptor-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -38,6 +40,8 @@ A constructor used to create a **LayeredDrawableDescriptor** object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LayeredDrawableDescriptor-constructor(    foreground?: DrawableDescriptor,    background?: DrawableDescriptor,    mask?: DrawableDescriptor  )--><!--Device-LayeredDrawableDescriptor-constructor(    foreground?: DrawableDescriptor,    background?: DrawableDescriptor,    mask?: DrawableDescriptor  )-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -61,6 +65,8 @@ Obtains the **DrawableDescriptor** object of the background.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-LayeredDrawableDescriptor-getBackground(): DrawableDescriptor--><!--Device-LayeredDrawableDescriptor-getBackground(): DrawableDescriptor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -128,6 +134,8 @@ Obtains the **DrawableDescriptor** object of the foreground.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-LayeredDrawableDescriptor-getForeground(): DrawableDescriptor--><!--Device-LayeredDrawableDescriptor-getForeground(): DrawableDescriptor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -201,6 +209,8 @@ Obtains the **DrawableDescriptor** object of the mask.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-LayeredDrawableDescriptor-getMask(): DrawableDescriptor--><!--Device-LayeredDrawableDescriptor-getMask(): DrawableDescriptor-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -268,6 +278,8 @@ Obtains the built-in clipping path parameters of the system. It is a static meth
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-LayeredDrawableDescriptor-static getMaskClipPath(): string--><!--Device-LayeredDrawableDescriptor-static getMaskClipPath(): string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -315,6 +327,8 @@ Sets the blend mode of **LayeredDrawableDescriptor**. If this API is called for 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-LayeredDrawableDescriptor-setBlendMode(mode: drawing.BlendMode): void--><!--Device-LayeredDrawableDescriptor-setBlendMode(mode: drawing.BlendMode): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

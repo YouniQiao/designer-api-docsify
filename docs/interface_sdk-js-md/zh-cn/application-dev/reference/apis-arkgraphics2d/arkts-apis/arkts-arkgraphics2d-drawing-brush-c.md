@@ -16,6 +16,8 @@ class Brush
 
 **起始版本：** 11
 
+<!--Device-drawing-class Brush--><!--Device-drawing-class Brush-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## 导入模块
@@ -33,6 +35,8 @@ constructor()
 构造一个新的画刷对象。默认配置：新建画刷默认抗锯齿关闭、混合模式为SRC_OVER，且未设置颜色滤波器、蒙版滤波器、着色器效果、阴影层效果和图像滤波器。
 
 **起始版本：** 12
+
+<!--Device-Brush-constructor()--><!--Device-Brush-constructor()-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -55,6 +59,8 @@ constructor(brush: Brush)
 复制构造一个新的画刷对象。
 
 **起始版本：** 12
+
+<!--Device-Brush-constructor(brush: Brush)--><!--Device-Brush-constructor(brush: Brush)-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -91,6 +97,8 @@ getAlpha(): number
 
 **起始版本：** 12
 
+<!--Device-Brush-getAlpha(): int--><!--Device-Brush-getAlpha(): int-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
@@ -117,6 +125,8 @@ getColor(): common2D.Color
 获取画刷的颜色。
 
 **起始版本：** 12
+
+<!--Device-Brush-getColor(): common2D.Color--><!--Device-Brush-getColor(): common2D.Color-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -146,6 +156,8 @@ getColor4f(): common2D.Color4f
 获取画刷的颜色，与[getColor](#getcolor)的区别是返回值类型为浮点数，适用于需要浮点数类型的场景。
 
 **起始版本：** 20
+
+<!--Device-Brush-getColor4f(): common2D.Color4f--><!--Device-Brush-getColor4f(): common2D.Color4f-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -177,6 +189,8 @@ getColorFilter(): ColorFilter
 
 **起始版本：** 12
 
+<!--Device-Brush-getColorFilter(): ColorFilter--><!--Device-Brush-getColorFilter(): ColorFilter-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
@@ -205,6 +219,8 @@ getHexColor(): number
 获取画刷颜色的16进制ARGB格式值。与[getColor](#getcolor)的区别是返回值类型为16进制ARGB格式的32位无符号整数。
 
 **起始版本：** 18
+
+<!--Device-Brush-getHexColor(): int--><!--Device-Brush-getHexColor(): int-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -236,6 +252,8 @@ isAntiAlias(): boolean
 
 **起始版本：** 12
 
+<!--Device-Brush-isAntiAlias(): boolean--><!--Device-Brush-isAntiAlias(): boolean-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
@@ -263,6 +281,8 @@ reset(): void
 
 **起始版本：** 12
 
+<!--Device-Brush-reset(): void--><!--Device-Brush-reset(): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **示例**
@@ -283,6 +303,8 @@ setAlpha(alpha: number): void
 设置画刷的透明度。调用setAlpha后，渲染时以setAlpha设置的透明度为准，覆盖setColor中Color对象的alpha通道值。
 
 **起始版本：** 11
+
+<!--Device-Brush-setAlpha(alpha: int): void--><!--Device-Brush-setAlpha(alpha: int): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -317,6 +339,8 @@ setAntiAlias(aa: boolean): void
 
 **起始版本：** 11
 
+<!--Device-Brush-setAntiAlias(aa: boolean): void--><!--Device-Brush-setAntiAlias(aa: boolean): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -350,6 +374,8 @@ setBlendMode(mode: BlendMode): void
 
 **起始版本：** 11
 
+<!--Device-Brush-setBlendMode(mode: BlendMode): void--><!--Device-Brush-setBlendMode(mode: BlendMode): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -382,6 +408,8 @@ setColor(color: common2D.Color): void
 设置画刷的颜色。设置的颜色将作为图形填充的基础颜色，在未设置ShaderEffect时以该颜色进行渲染填充。
 
 **起始版本：** 11
+
+<!--Device-Brush-setColor(color: common2D.Color): void--><!--Device-Brush-setColor(color: common2D.Color): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -418,6 +446,8 @@ setColor(alpha: number, red: number, green: number, blue: number): void
 设置画刷的颜色。性能优于[setColor](#setcolor)接口，推荐使用本接口。
 
 **起始版本：** 12
+
+<!--Device-Brush-setColor(alpha: int, red: int, green: int, blue: int): void--><!--Device-Brush-setColor(alpha: int, red: int, green: int, blue: int): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -457,6 +487,8 @@ setColor(color: number): void
 
 **起始版本：** 18
 
+<!--Device-Brush-setColor(color: int): void--><!--Device-Brush-setColor(color: int): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -490,6 +522,8 @@ setColor4f(color4f: common2D.Color4f, colorSpace: colorSpaceManager.ColorSpaceMa
 
 **起始版本：** 20
 
+<!--Device-Brush-setColor4f(color4f: common2D.Color4f, colorSpace: colorSpaceManager.ColorSpaceManager | null): void--><!--Device-Brush-setColor4f(color4f: common2D.Color4f, colorSpace: colorSpaceManager.ColorSpaceManager | null): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -519,6 +553,8 @@ setColorFilter(filter: ColorFilter | null): void
 设置画刷的颜色滤波器。
 
 **起始版本：** 11
+
+<!--Device-Brush-setColorFilter(filter: ColorFilter | null): void--><!--Device-Brush-setColorFilter(filter: ColorFilter | null): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -554,6 +590,8 @@ setImageFilter(filter: ImageFilter | null): void
 
 **起始版本：** 12
 
+<!--Device-Brush-setImageFilter(filter: ImageFilter | null): void--><!--Device-Brush-setImageFilter(filter: ImageFilter | null): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -588,6 +626,8 @@ setMaskFilter(filter: MaskFilter | null): void
 设置画刷的蒙版滤波器。
 
 **起始版本：** 12
+
+<!--Device-Brush-setMaskFilter(filter: MaskFilter | null): void--><!--Device-Brush-setMaskFilter(filter: MaskFilter | null): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -628,6 +668,8 @@ setShaderEffect(shaderEffect: ShaderEffect | null): void
 
 **起始版本：** 12
 
+<!--Device-Brush-setShaderEffect(shaderEffect: ShaderEffect | null): void--><!--Device-Brush-setShaderEffect(shaderEffect: ShaderEffect | null): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -661,6 +703,8 @@ setShadowLayer(shadowLayer: ShadowLayer | null): void
 设置画刷的阴影层效果。当前仅在通过Canvas的[drawTextBlob](arkts-arkgraphics2d-drawing-canvas-c.md#drawtextblob)等方法绘制文字时生效。
 
 **起始版本：** 12
+
+<!--Device-Brush-setShadowLayer(shadowLayer: ShadowLayer | null): void--><!--Device-Brush-setShadowLayer(shadowLayer: ShadowLayer | null): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

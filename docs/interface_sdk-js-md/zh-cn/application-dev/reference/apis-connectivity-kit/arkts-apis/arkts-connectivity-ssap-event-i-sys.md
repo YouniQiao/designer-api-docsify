@@ -8,6 +8,8 @@ interface Event
 
 **起始版本：** 26.0.0
 
+<!--Device-ssap-interface Event--><!--Device-ssap-interface Event-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ eventUuid: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Event-eventUuid: string--><!--Device-Event-eventUuid: string-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **系统接口：** 此接口为系统接口。
@@ -50,6 +54,8 @@ parameter?: ArrayBuffer
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Event-parameter?: ArrayBuffer--><!--Device-Event-parameter?: ArrayBuffer-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **系统接口：** 此接口为系统接口。
@@ -67,6 +73,8 @@ serviceUuid: string
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Event-serviceUuid: string--><!--Device-Event-serviceUuid: string-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 

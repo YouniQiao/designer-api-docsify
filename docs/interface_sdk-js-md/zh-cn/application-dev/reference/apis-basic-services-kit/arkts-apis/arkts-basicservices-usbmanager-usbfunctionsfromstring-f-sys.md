@@ -20,6 +20,8 @@ function usbFunctionsFromString(funcs: string): number
 
 **替代接口：** [getFunctionsFromString](arkts-basicservices-usbmanager-getfunctionsfromstring-f-sys.md)(funcs: string)
 
+<!--Device-usbManager-function usbFunctionsFromString(funcs: string): number--><!--Device-usbManager-function usbFunctionsFromString(funcs: string): number-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 **系统接口：** 此接口为系统接口。

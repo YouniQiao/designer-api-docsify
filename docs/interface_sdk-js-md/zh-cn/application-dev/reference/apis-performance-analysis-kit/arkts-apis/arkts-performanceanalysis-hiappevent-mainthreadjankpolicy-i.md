@@ -8,6 +8,8 @@ interface MainThreadJankPolicy
 
 **起始版本：** 22
 
+<!--Device-hiAppEvent-interface MainThreadJankPolicy--><!--Device-hiAppEvent-interface MainThreadJankPolicy-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 ## 导入模块
@@ -34,7 +36,9 @@ false：达到设置的采样次数时停止采样。
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-MainThreadJankPolicy-autoStopSampling?: boolean--><!--Device-MainThreadJankPolicy-autoStopSampling?: boolean-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -50,7 +54,9 @@ ignoreStartupTime?: number
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-MainThreadJankPolicy-ignoreStartupTime?: int--><!--Device-MainThreadJankPolicy-ignoreStartupTime?: int-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -77,7 +83,9 @@ logType=2：仅采集trace。
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-MainThreadJankPolicy-logType?: int--><!--Device-MainThreadJankPolicy-logType?: int-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -97,7 +105,9 @@ reportTimesPerApp?: number
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-MainThreadJankPolicy-reportTimesPerApp?: int--><!--Device-MainThreadJankPolicy-reportTimesPerApp?: int-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -121,7 +131,9 @@ sampleCount?: number
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-MainThreadJankPolicy-sampleCount?: int--><!--Device-MainThreadJankPolicy-sampleCount?: int-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -137,6 +149,8 @@ sampleInterval?: number
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-MainThreadJankPolicy-sampleInterval?: int--><!--Device-MainThreadJankPolicy-sampleInterval?: int-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent

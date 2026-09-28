@@ -34,6 +34,8 @@ function registerProvider(providerName: string, params: Array<HuksExternalCrypto
 
 **需要权限：** ohos.permission.CRYPTO_EXTENSION_REGISTER
 
+<!--Device-huksExternalCrypto-function registerProvider(providerName: string, params: Array<HuksExternalCryptoParam>): Promise<void>--><!--Device-huksExternalCrypto-function registerProvider(providerName: string, params: Array<HuksExternalCryptoParam>): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
 **参数：**
@@ -53,8 +55,8 @@ function registerProvider(providerName: string, params: Array<HuksExternalCrypto
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | check permission failed. |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | api is not supported. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed: call the registerProvider API, missing Permission: ohos.permission.CRYPTO_EXTENSION_REGISTER. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: 1. The hardware does not support the capability. 2. The chip does not support the capability. 3. A dependent service feature is not supported. |
 | [12000002](../errorcode-huks.md#12000002-缺少密钥算法参数) | the ability name param is missing. |
 | [12000005](../errorcode-huks.md#12000005-进程通信错误) | IPC communication failed. |
 | [12000014](../errorcode-huks.md#12000014-内存不足) | memory is insufficient. |

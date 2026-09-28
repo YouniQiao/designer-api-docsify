@@ -15,6 +15,8 @@ declare class SelectionExtensionAbility
 
 **起始版本：** 24
 
+<!--Device-unnamed-declare class SelectionExtensionAbility--><!--Device-unnamed-declare class SelectionExtensionAbility-End-->
+
 **系统能力：** SystemCapability.SelectionInput.Selection
 
 ## 导入模块
@@ -34,6 +36,8 @@ onConnect(want: Want): rpc.RemoteObject
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SelectionExtensionAbility-onConnect(want: Want): rpc.RemoteObject--><!--Device-SelectionExtensionAbility-onConnect(want: Want): rpc.RemoteObject-End-->
 
 **系统能力：** SystemCapability.SelectionInput.Selection
 
@@ -98,6 +102,8 @@ onDisconnect(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SelectionExtensionAbility-onDisconnect(): void--><!--Device-SelectionExtensionAbility-onDisconnect(): void-End-->
+
 **系统能力：** SystemCapability.SelectionInput.Selection
 
 **示例**
@@ -129,5 +135,7 @@ SelectionExtensionAbility的上下文环境，继承自[ExtensionContext](../../
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SelectionExtensionAbility-context: SelectionExtensionContext--><!--Device-SelectionExtensionAbility-context: SelectionExtensionContext-End-->
 
 **系统能力：** SystemCapability.SelectionInput.Selection

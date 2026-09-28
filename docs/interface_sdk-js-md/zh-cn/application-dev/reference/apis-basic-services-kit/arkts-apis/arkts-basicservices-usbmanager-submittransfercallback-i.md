@@ -8,6 +8,8 @@ USB异步传输回调。
 
 **起始版本：** 18
 
+<!--Device-usbManager-interface SubmitTransferCallback--><!--Device-usbManager-interface SubmitTransferCallback-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## 导入模块
@@ -28,6 +30,8 @@ actualLength: number
 
 **起始版本：** 18
 
+<!--Device-SubmitTransferCallback-actualLength: int--><!--Device-SubmitTransferCallback-actualLength: int-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## isoPacketDescs
@@ -42,6 +46,8 @@ isoPacketDescs: Array<Readonly<UsbIsoPacketDescriptor>>
 
 **起始版本：** 18
 
+<!--Device-SubmitTransferCallback-isoPacketDescs: Array<Readonly<UsbIsoPacketDescriptor>>--><!--Device-SubmitTransferCallback-isoPacketDescs: Array<Readonly<UsbIsoPacketDescriptor>>-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## status
@@ -55,5 +61,7 @@ status: UsbTransferStatus
 **类型：** [UsbTransferStatus](arkts-basicservices-usbmanager-usbtransferstatus-e.md)
 
 **起始版本：** 18
+
+<!--Device-SubmitTransferCallback-status: UsbTransferStatus--><!--Device-SubmitTransferCallback-status: UsbTransferStatus-End-->
 
 **系统能力：** SystemCapability.USB.USBManager

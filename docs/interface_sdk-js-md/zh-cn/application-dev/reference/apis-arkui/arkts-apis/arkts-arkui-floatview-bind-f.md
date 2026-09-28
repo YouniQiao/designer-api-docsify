@@ -29,6 +29,8 @@ function bind(floatViewController: FloatViewController, floatingBallController: 
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-floatView-function bind(floatViewController: FloatViewController, floatingBallController: floatingBall.FloatingBallController,    floatingBallParams: floatingBall.FloatingBallParams): Promise<void>--><!--Device-floatView-function bind(floatViewController: FloatViewController, floatingBallController: floatingBall.FloatingBallController,    floatingBallParams: floatingBall.FloatingBallParams): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**

@@ -18,6 +18,8 @@ function getStatsTotalBytes(callback: AsyncCallback<number>): void
 
 **需要权限：** ohos.permission.CONNECTIVITY_INTERNAL
 
+<!--Device-sharing-function getStatsTotalBytes(callback: AsyncCallback<int>): void--><!--Device-sharing-function getStatsTotalBytes(callback: AsyncCallback<int>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.NetSharing
 
 **系统接口：** 此接口为系统接口。
@@ -64,6 +66,8 @@ function getStatsTotalBytes(): Promise<number>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.CONNECTIVITY_INTERNAL
+
+<!--Device-sharing-function getStatsTotalBytes(): Promise<int>--><!--Device-sharing-function getStatsTotalBytes(): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.NetSharing
 

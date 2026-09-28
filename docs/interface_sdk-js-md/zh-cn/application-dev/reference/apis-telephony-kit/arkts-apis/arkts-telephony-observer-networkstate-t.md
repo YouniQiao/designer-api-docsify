@@ -8,6 +8,8 @@ type NetworkState = radio.NetworkState
 
 **起始版本：** 6
 
+<!--Device-observer-type NetworkState = radio.NetworkState--><!--Device-observer-type NetworkState = radio.NetworkState-End-->
+
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
 **类型：** [radio.NetworkState](arkts-telephony-radio-networkstate-i.md)

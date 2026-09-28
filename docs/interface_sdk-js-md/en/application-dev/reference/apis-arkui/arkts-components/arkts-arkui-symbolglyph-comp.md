@@ -26,6 +26,8 @@ Defines the constructor of SymbolGlyph.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-SymbolGlyphInterface-(value?: Resource): SymbolGlyphAttribute--><!--Device-SymbolGlyphInterface-(value?: Resource): SymbolGlyphAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

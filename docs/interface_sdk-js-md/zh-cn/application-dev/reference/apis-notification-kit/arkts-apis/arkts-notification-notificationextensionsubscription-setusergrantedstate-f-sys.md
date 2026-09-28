@@ -18,6 +18,8 @@ function setUserGrantedState(targetBundle: BundleOption, enabled: boolean): Prom
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationExtensionSubscription-function setUserGrantedState(targetBundle: BundleOption, enabled: boolean): Promise<void>--><!--Device-notificationExtensionSubscription-function setUserGrantedState(targetBundle: BundleOption, enabled: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。

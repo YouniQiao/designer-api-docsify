@@ -26,13 +26,15 @@ function zipFile(inFile: string, outFile: string, options: Options): Promise<voi
 
 **替代接口：** [compressFile](arkts-basicservices-zlib-compressfile-f.md)(inFile: string, outFile: string, options: Options, callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-zlib-function zipFile(inFile: string, outFile: string, options: Options): Promise<void>--><!--Device-zlib-function zipFile(inFile: string, outFile: string, options: Options): Promise<void>-End-->
+
 **系统能力：** SystemCapability.BundleManager.Zlib
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| inFile | string | 是 | 指定压缩的文件夹路径或者文件路径，路径必须为沙箱路径，沙箱路径可以通过context获取，可参考FA模型，Stage模型。 |
+| inFile | string | 是 | 指定压缩的文件夹路径或者文件路径，路径必须为沙箱路径，沙箱路径可以通过context获取，可参考[FA模型](../../apis-ability-kit/arkts-apis/arkts-ability-context.md)，[Stage模型](../../apis-ability-kit/arkts-apis/arkts-ability-context.md)。 |
 | outFile | string | 是 | 指定压缩结果的文件路径（文件的扩展名zip）。 |
 | options | [Options](arkts-basicservices-zlib-options-i.md) | 是 | 压缩的可选参数。 |
 

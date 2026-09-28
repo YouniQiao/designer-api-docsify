@@ -19,6 +19,8 @@ function subscribe(subscriber: CommonEventSubscriber, callback: AsyncCallback<Co
 
 **替代接口：** [subscribe](arkts-basicservices-commoneventmanager-subscribe-f.md)
 
+<!--Device-commonEvent-function subscribe(subscriber: CommonEventSubscriber, callback: AsyncCallback<CommonEventData>): void--><!--Device-commonEvent-function subscribe(subscriber: CommonEventSubscriber, callback: AsyncCallback<CommonEventData>): void-End-->
+
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **参数：**

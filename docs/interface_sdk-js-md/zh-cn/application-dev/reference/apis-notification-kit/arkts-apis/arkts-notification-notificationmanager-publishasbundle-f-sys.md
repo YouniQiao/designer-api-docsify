@@ -23,6 +23,8 @@ function publishAsBundle(
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
 
+<!--Device-notificationManager-function publishAsBundle(    request: NotificationRequest,    representativeBundle: string,    userId: int,    callback: AsyncCallback<void>  ): void--><!--Device-notificationManager-function publishAsBundle(    request: NotificationRequest,    representativeBundle: string,    userId: int,    callback: AsyncCallback<void>  ): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -109,6 +111,8 @@ function publishAsBundle(request: NotificationRequest, representativeBundle: str
 **起始版本：** 9
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
+
+<!--Device-notificationManager-function publishAsBundle(request: NotificationRequest, representativeBundle: string, userId: int): Promise<void>--><!--Device-notificationManager-function publishAsBundle(request: NotificationRequest, representativeBundle: string, userId: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -197,6 +201,8 @@ function publishAsBundle(representativeBundle: BundleOption, request: Notificati
 **起始版本：** 12
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
+
+<!--Device-notificationManager-function publishAsBundle(representativeBundle: BundleOption, request: NotificationRequest): Promise<void>--><!--Device-notificationManager-function publishAsBundle(representativeBundle: BundleOption, request: NotificationRequest): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

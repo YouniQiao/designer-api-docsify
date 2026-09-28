@@ -20,6 +20,8 @@ function requestEnableLocation(callback: AsyncCallback<boolean>): void
 
 **需要权限：** ohos.permission.LOCATION
 
+<!--Device-geolocation-function requestEnableLocation(callback: AsyncCallback<boolean>): void--><!--Device-geolocation-function requestEnableLocation(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **参数：**
@@ -58,6 +60,8 @@ function requestEnableLocation(): Promise<boolean>
 **废弃版本：** 9
 
 **需要权限：** ohos.permission.LOCATION
+
+<!--Device-geolocation-function requestEnableLocation(): Promise<boolean>--><!--Device-geolocation-function requestEnableLocation(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 

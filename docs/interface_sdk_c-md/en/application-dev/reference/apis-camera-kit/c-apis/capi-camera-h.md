@@ -79,6 +79,7 @@ Defines the basic APIs of the camera.
 | [Camera_HostDeviceType](#camera_hostdevicetype) | Camera_HostDeviceType | Enum for remote camera device type. |
 | [Camera_FoldStatus](#camera_foldstatus) | Camera_FoldStatus | Enumerates the fold statuses. |
 | [Camera_QualityPrioritization](#camera_qualityprioritization) | Camera_QualityPrioritization | Enum for quality prioritization. |
+| [OH_Camera_AuxiliaryPhotoType](#oh_camera_auxiliaryphototype) | OH_Camera_AuxiliaryPhotoType | Enumerates the camera auxiliary photo types for skin analysis. Use these types to specify the detection target when capturing auxiliary photos for skin health assessment. |
 | [Camera_ConcurrentType](#camera_concurrenttype) | Camera_ConcurrentType | Enum for camera concurrent type. |
 | [Camera_PhotoQualityPrioritization](#camera_photoqualityprioritization) | Camera_PhotoQualityPrioritization | Enumerates the photo quality prioritization strategies. |
 | [Camera_ControlCenterEffectType](#camera_controlcentereffecttype) | Camera_ControlCenterEffectType | Enumerates the effect types of a camera controller. |
@@ -125,6 +126,8 @@ Enumerates the camera error codes.
 | CAMERA_ERROR_OPTIONAL_PROPERTY_NOT_EXIST = 7400113 |  |
 | CAMERA_SERVICE_FATAL_ERROR = 7400201 | The camera service is abnormal, for example, no camera permission, camera service restart, or abnormal cross- process invocation. |
 | CAMERA_ERROR_CAPABILITY_NOT_SUPPORTED = 7400114 |  |
+| CAMERA_ERROR_UNSUPPORTED_MULTI_CAMERA_COMBINATION = 7400115 | The multiple cameras combination isn't supported. This error is returned when attempting to use an unsupported combination of multiple cameras due to hardware limitations or driver constraints. Consider using a different camera combination or check the device's supported camera configurations.<br>**Since**: 26.0.1 |
+| CAMERA_ERROR_PARAM_OUT_OF_RANGE = 7400116 | The parameter is out of range. This error is returned when a parameter value exceeds the valid range, such as ISO, exposure time, or focus distance. Check the parameter constraints in the API documentation and ensure the value is within the supported range for the current camera configuration.<br>**Since**: 26.0.1 |
 
 ### Camera_Status
 
@@ -689,6 +692,25 @@ Enum for quality prioritization.
 | -- | -- |
 | HIGH_QUALITY = 0 | Hight quality priority. |
 | POWER_BALANCE = 1 | Power balance priority. |
+
+### OH_Camera_AuxiliaryPhotoType
+
+```c
+enum OH_Camera_AuxiliaryPhotoType
+```
+
+**Description**
+
+Enumerates the camera auxiliary photo types for skin analysis. Use these types to specify the detection target when capturing auxiliary photos for skin health assessment.
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
+**Since**: 26.0.1
+
+| Enum item | Description |
+| -- | -- |
+| OH_CAMERA_AUXILIARY_PHOTO_TYPE_OXYGEN = 0 | Auxiliary photo type oxygen.<br>**Since**: 26.0.1 |
+| OH_CAMERA_AUXILIARY_PHOTO_TYPE_PIGMENTATION = 1 | Auxiliary photo type pigmentation.<br>**Since**: 26.0.1 |
 
 ### Camera_ConcurrentType
 

@@ -6,6 +6,8 @@ You can use the methods defined in this class to query the usage history and sta
 
 **Since:** 9
 
+<!--Device-unnamed-declare namespace usageStatistics--><!--Device-unnamed-declare namespace usageStatistics-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 ## Modules to Import

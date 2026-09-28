@@ -8,6 +8,8 @@ interface UploadConfig
 
 **起始版本：** 6
 
+<!--Device-request-interface UploadConfig--><!--Device-request-interface UploadConfig-End-->
+
 **系统能力：** SystemCapability.MiscServices.Upload
 
 ## 导入模块
@@ -28,6 +30,8 @@ begins?: number
 
 **起始版本：** 11
 
+<!--Device-UploadConfig-begins?: long--><!--Device-UploadConfig-begins?: long-End-->
+
 **系统能力：** SystemCapability.MiscServices.Upload
 
 ## data
@@ -41,6 +45,8 @@ data: Array<RequestData>
 **类型：** Array&lt;[RequestData](arkts-basicservices-request-requestdata-i.md)&gt;
 
 **起始版本：** 6
+
+<!--Device-UploadConfig-data: Array<RequestData>--><!--Device-UploadConfig-data: Array<RequestData>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload
 
@@ -56,6 +62,8 @@ ends?: number
 
 **起始版本：** 11
 
+<!--Device-UploadConfig-ends?: long--><!--Device-UploadConfig-ends?: long-End-->
+
 **系统能力：** SystemCapability.MiscServices.Upload
 
 ## files
@@ -69,6 +77,8 @@ files: Array<File>
 **类型：** Array&lt;[File](arkts-basicservices-request-file-i.md)&gt;
 
 **起始版本：** 6
+
+<!--Device-UploadConfig-files: Array<File>--><!--Device-UploadConfig-files: Array<File>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload
 
@@ -84,6 +94,8 @@ header: Object
 
 **起始版本：** 6
 
+<!--Device-UploadConfig-header: Object--><!--Device-UploadConfig-header: Object-End-->
+
 **系统能力：** SystemCapability.MiscServices.Upload
 
 ## index
@@ -97,6 +109,8 @@ index?: number
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-UploadConfig-index?: int--><!--Device-UploadConfig-index?: int-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload
 
@@ -112,6 +126,8 @@ HTTP请求方法：POST、PUT，缺省为POST。使用POST新增资源，使用P
 
 **起始版本：** 6
 
+<!--Device-UploadConfig-method: string--><!--Device-UploadConfig-method: string-End-->
+
 **系统能力：** SystemCapability.MiscServices.Upload
 
 ## url
@@ -125,5 +141,7 @@ url: string
 **类型：** string
 
 **起始版本：** 6
+
+<!--Device-UploadConfig-url: string--><!--Device-UploadConfig-url: string-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload

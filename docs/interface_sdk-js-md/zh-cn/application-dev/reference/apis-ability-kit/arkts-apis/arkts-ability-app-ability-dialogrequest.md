@@ -10,6 +10,8 @@ dialogRequest模块用于处理模态弹框的能力，包括获取RequestInfo�
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace dialogRequest--><!--Device-unnamed-declare namespace dialogRequest-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块

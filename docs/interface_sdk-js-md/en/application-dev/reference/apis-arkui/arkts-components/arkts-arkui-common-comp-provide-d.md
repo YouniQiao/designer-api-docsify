@@ -18,4 +18,6 @@ value: Used to set an alias or used as an alias that can be overridden. <br> If 
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-unnamed-declare const Provide: PropertyDecorator & ((value: string | ProvideOptions) => PropertyDecorator)--><!--Device-unnamed-declare const Provide: PropertyDecorator & ((value: string | ProvideOptions) => PropertyDecorator)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

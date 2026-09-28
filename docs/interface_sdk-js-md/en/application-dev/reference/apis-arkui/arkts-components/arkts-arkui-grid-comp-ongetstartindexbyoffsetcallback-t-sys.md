@@ -10,6 +10,8 @@ Calculates the start line position of the current page based on the total offset
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-unnamed-declare type OnGetStartIndexByOffsetCallback = (totalOffset: double) => StartLineInfo--><!--Device-unnamed-declare type OnGetStartIndexByOffsetCallback = (totalOffset: double) => StartLineInfo-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.

@@ -16,6 +16,8 @@ function isFunctionKeyEnabled(functionKey: FunctionKey): Promise<boolean>
 
 **起始版本：** 15
 
+<!--Device-inputDevice-function isFunctionKeyEnabled(functionKey: FunctionKey): Promise<boolean>--><!--Device-inputDevice-function isFunctionKeyEnabled(functionKey: FunctionKey): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 **参数：**

@@ -18,6 +18,8 @@ function getSubscribeInfo(): Promise<NotificationExtensionSubscriptionInfo[]>
 
 **需要权限：** ohos.permission.SUBSCRIBE_NOTIFICATION
 
+<!--Device-notificationExtensionSubscription-function getSubscribeInfo(): Promise<NotificationExtensionSubscriptionInfo[]>--><!--Device-notificationExtensionSubscription-function getSubscribeInfo(): Promise<NotificationExtensionSubscriptionInfo[]>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **参见：** [subscribe](arkts-notification-notificationextensionsubscription-subscribe-f.md) 订阅通知扩展。

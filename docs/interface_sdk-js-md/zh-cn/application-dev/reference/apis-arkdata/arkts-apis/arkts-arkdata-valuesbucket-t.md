@@ -10,6 +10,8 @@ export type ValuesBucket = Record<string, ValueType | Uint8Array | null>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-unnamed-export type ValuesBucket = Record<string, ValueType | Uint8Array | null>--><!--Device-unnamed-export type ValuesBucket = Record<string, ValueType | Uint8Array | null>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **类型：** Record&lt;string, [ValueType](arkts-arkdata-valuetype-t.md) | Uint8Array | null&gt;

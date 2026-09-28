@@ -8,6 +8,8 @@ UIExtensionAbility组件的界面操作类，提供页面加载、设置宿主�
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare class UIExtensionContentSession--><!--Device-unnamed-declare class UIExtensionContentSession-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块
@@ -27,6 +29,8 @@ getUIExtensionHostWindowProxy(): uiExtensionHost.UIExtensionHostWindowProxy
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionContentSession-getUIExtensionHostWindowProxy(): uiExtensionHost.UIExtensionHostWindowProxy--><!--Device-UIExtensionContentSession-getUIExtensionHostWindowProxy(): uiExtensionHost.UIExtensionHostWindowProxy-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -103,6 +107,8 @@ sendData(data: Record<string, Object>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UIExtensionContentSession-sendData(data: Record<string, Object>): void--><!--Device-UIExtensionContentSession-sendData(data: Record<string, Object>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -167,6 +173,8 @@ setReceiveDataCallback(callback: (data: Record<string, Object>) => void): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UIExtensionContentSession-setReceiveDataCallback(callback: (data: Record<string, Object>) => void): void--><!--Device-UIExtensionContentSession-setReceiveDataCallback(callback: (data: Record<string, Object>) => void): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -223,6 +231,8 @@ setReceiveDataForResultCallback(callback: (data: Record<string, Object>) => Reco
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionContentSession-setReceiveDataForResultCallback(callback: (data: Record<string, Object>) => Record<string, Object>): void--><!--Device-UIExtensionContentSession-setReceiveDataForResultCallback(callback: (data: Record<string, Object>) => Record<string, Object>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -281,6 +291,8 @@ setWindowBackgroundColor(color: string): void
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionContentSession-setWindowBackgroundColor(color: string): void--><!--Device-UIExtensionContentSession-setWindowBackgroundColor(color: string): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -346,6 +358,8 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionContentSession-startAbility(want: Want, callback: AsyncCallback<void>): void--><!--Device-UIExtensionContentSession-startAbility(want: Want, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -423,6 +437,8 @@ startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): 
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionContentSession-startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): void--><!--Device-UIExtensionContentSession-startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -504,6 +520,8 @@ startAbility(want: Want, options?: StartOptions): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UIExtensionContentSession-startAbility(want: Want, options?: StartOptions): Promise<void>--><!--Device-UIExtensionContentSession-startAbility(want: Want, options?: StartOptions): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -583,6 +601,8 @@ startAbilityAsCaller(want: Want, callback: AsyncCallback<void>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UIExtensionContentSession-startAbilityAsCaller(want: Want, callback: AsyncCallback<void>): void--><!--Device-UIExtensionContentSession-startAbilityAsCaller(want: Want, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -658,6 +678,8 @@ startAbilityAsCaller(want: Want, options: StartOptions, callback: AsyncCallback<
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionContentSession-startAbilityAsCaller(want: Want, options: StartOptions, callback: AsyncCallback<void>): void--><!--Device-UIExtensionContentSession-startAbilityAsCaller(want: Want, options: StartOptions, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -737,6 +759,8 @@ startAbilityAsCaller(want: Want, options?: StartOptions): Promise<void>
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionContentSession-startAbilityAsCaller(want: Want, options?: StartOptions): Promise<void>--><!--Device-UIExtensionContentSession-startAbilityAsCaller(want: Want, options?: StartOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -832,6 +856,8 @@ startAbilityForResult(want: Want, callback: AsyncCallback<AbilityResult>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UIExtensionContentSession-startAbilityForResult(want: Want, callback: AsyncCallback<AbilityResult>): void--><!--Device-UIExtensionContentSession-startAbilityForResult(want: Want, callback: AsyncCallback<AbilityResult>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -912,6 +938,8 @@ startAbilityForResult(want: Want, options: StartOptions, callback: AsyncCallback
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionContentSession-startAbilityForResult(want: Want, options: StartOptions, callback: AsyncCallback<AbilityResult>): void--><!--Device-UIExtensionContentSession-startAbilityForResult(want: Want, options: StartOptions, callback: AsyncCallback<AbilityResult>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -996,6 +1024,8 @@ startAbilityForResult(want: Want, options?: StartOptions): Promise<AbilityResult
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionContentSession-startAbilityForResult(want: Want, options?: StartOptions): Promise<AbilityResult>--><!--Device-UIExtensionContentSession-startAbilityForResult(want: Want, options?: StartOptions): Promise<AbilityResult>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

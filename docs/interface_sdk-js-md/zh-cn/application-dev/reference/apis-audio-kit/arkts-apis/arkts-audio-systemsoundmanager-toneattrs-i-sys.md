@@ -8,6 +8,8 @@ interface ToneAttrs
 
 **起始版本：** 12
 
+<!--Device-systemSoundManager-interface ToneAttrs--><!--Device-systemSoundManager-interface ToneAttrs-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -27,6 +29,8 @@ getCategory(): number
 获取铃声类别。
 
 **起始版本：** 12
+
+<!--Device-ToneAttrs-getCategory(): int--><!--Device-ToneAttrs-getCategory(): int-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -60,6 +64,8 @@ getCustomizedType(): ToneCustomizedType
 
 **起始版本：** 12
 
+<!--Device-ToneAttrs-getCustomizedType(): ToneCustomizedType--><!--Device-ToneAttrs-getCustomizedType(): ToneCustomizedType-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -91,6 +97,8 @@ getFileName(): string
 获取铃声文件名。
 
 **起始版本：** 12
+
+<!--Device-ToneAttrs-getFileName(): string--><!--Device-ToneAttrs-getFileName(): string-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -124,6 +132,8 @@ getMediaType():MediaType
 
 **起始版本：** 20
 
+<!--Device-ToneAttrs-getMediaType():MediaType--><!--Device-ToneAttrs-getMediaType():MediaType-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -156,6 +166,8 @@ getTitle(): string
 
 **起始版本：** 12
 
+<!--Device-ToneAttrs-getTitle(): string--><!--Device-ToneAttrs-getTitle(): string-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -187,6 +199,8 @@ getUri(): string
 获取铃声资源路径。
 
 **起始版本：** 12
+
+<!--Device-ToneAttrs-getUri(): string--><!--Device-ToneAttrs-getUri(): string-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -221,6 +235,8 @@ setCategory(category: number): void
 设置铃声类别。
 
 **起始版本：** 12
+
+<!--Device-ToneAttrs-setCategory(category: int): void--><!--Device-ToneAttrs-setCategory(category: int): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -257,6 +273,8 @@ setFileName(name: string): void
 
 **起始版本：** 12
 
+<!--Device-ToneAttrs-setFileName(name: string): void--><!--Device-ToneAttrs-setFileName(name: string): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -292,6 +310,8 @@ setMediaType(type:MediaType):void
 
 **起始版本：** 20
 
+<!--Device-ToneAttrs-setMediaType(type:MediaType):void--><!--Device-ToneAttrs-setMediaType(type:MediaType):void-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -325,6 +345,8 @@ setTitle(title: string): void
 设置铃声标题。
 
 **起始版本：** 12
+
+<!--Device-ToneAttrs-setTitle(title: string): void--><!--Device-ToneAttrs-setTitle(title: string): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 

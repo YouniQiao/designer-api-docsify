@@ -21,6 +21,8 @@ function updatePrintJobState(jobId: string, state: PrintJobState, subState: Prin
 - API版本24+：ohos.permission.MANAGE_PRINT_JOB or ohos.permission.ENTERPRISE_MANAGE_PRINT
 - API版本10-23：ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-print-function updatePrintJobState(jobId: string, state: PrintJobState, subState: PrintJobSubState,    callback: AsyncCallback<void>): void--><!--Device-print-function updatePrintJobState(jobId: string, state: PrintJobState, subState: PrintJobSubState,    callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **参数：**
@@ -75,6 +77,8 @@ function updatePrintJobState(jobId: string, state: PrintJobState, subState: Prin
 **需要权限：** 
 - API版本24+：ohos.permission.MANAGE_PRINT_JOB or ohos.permission.ENTERPRISE_MANAGE_PRINT
 - API版本10-23：ohos.permission.MANAGE_PRINT_JOB
+
+<!--Device-print-function updatePrintJobState(jobId: string, state: PrintJobState, subState: PrintJobSubState): Promise<void>--><!--Device-print-function updatePrintJobState(jobId: string, state: PrintJobState, subState: PrintJobSubState): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 

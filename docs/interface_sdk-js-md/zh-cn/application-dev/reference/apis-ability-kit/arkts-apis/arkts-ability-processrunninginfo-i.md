@@ -4,7 +4,7 @@
 export interface ProcessRunningInfo
 ```
 
-运行进程信息，可以通过appManager中[getProcessRunningInfos](arkts-ability-appmanager-getprocessrunninginfos-depr-f.md#getprocessrunninginfos)方法来获取运行进程信息。
+运行进程信息，可以通过appManager中[getProcessRunningInfos](arkts-ability-appmanager-getprocessrunninginfos-depr-f.md)方法来获取运行进程信息。
 
 > **说明：** 
 > 
@@ -22,6 +22,8 @@ import appManager from '@ohos.application.appManager';
 **废弃版本：** 9
 
 **替代接口：** [ProcessInformation/ProcessInformation](arkts-ability-processinformation-i.md)
+
+<!--Device-unnamed-export interface ProcessRunningInfo--><!--Device-unnamed-export interface ProcessRunningInfo-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -41,6 +43,8 @@ bundleNames: Array<string>
 
 **替代接口：** [bundleNames](arkts-ability-processinformation-i.md#bundlenames)
 
+<!--Device-ProcessRunningInfo-bundleNames: Array<string>--><!--Device-ProcessRunningInfo-bundleNames: Array<string>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 ## pid
@@ -58,6 +62,8 @@ pid: number
 **废弃版本：** 9
 
 **替代接口：** [pid](arkts-ability-processinformation-i.md#pid)
+
+<!--Device-ProcessRunningInfo-pid: number--><!--Device-ProcessRunningInfo-pid: number-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -77,6 +83,8 @@ processName: string
 
 **替代接口：** [processName](arkts-ability-processinformation-i.md#processname)
 
+<!--Device-ProcessRunningInfo-processName: string--><!--Device-ProcessRunningInfo-processName: string-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 ## uid
@@ -94,5 +102,7 @@ uid: number
 **废弃版本：** 9
 
 **替代接口：** [uid](arkts-ability-processinformation-i.md#uid)
+
+<!--Device-ProcessRunningInfo-uid: number--><!--Device-ProcessRunningInfo-uid: number-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission

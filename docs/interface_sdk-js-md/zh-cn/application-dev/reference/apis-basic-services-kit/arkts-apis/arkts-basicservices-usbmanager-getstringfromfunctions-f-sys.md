@@ -18,6 +18,8 @@ function getStringFromFunctions(funcs: FunctionType): string
 
 **需要权限：** ohos.permission.MANAGE_USB_CONFIG
 
+<!--Device-usbManager-function getStringFromFunctions(funcs: FunctionType): string--><!--Device-usbManager-function getStringFromFunctions(funcs: FunctionType): string-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 **系统接口：** 此接口为系统接口。

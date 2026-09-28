@@ -8,6 +8,8 @@ enum ExposureMeteringMode
 
 **起始版本：** 24
 
+<!--Device-camera-enum ExposureMeteringMode--><!--Device-camera-enum ExposureMeteringMode-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## CENTER_HIGHLIGHT_WEIGHTED
@@ -21,6 +23,8 @@ Center-weighted and highlight metering mode. This mode focuses on the highlight 
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExposureMeteringMode-CENTER_HIGHLIGHT_WEIGHTED = 3--><!--Device-ExposureMeteringMode-CENTER_HIGHLIGHT_WEIGHTED = 3-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

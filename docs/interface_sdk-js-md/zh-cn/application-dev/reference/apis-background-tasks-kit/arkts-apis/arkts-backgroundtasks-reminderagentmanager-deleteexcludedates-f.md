@@ -18,6 +18,8 @@ function deleteExcludeDates(reminderId: number): Promise<void>
 
 **需要权限：** ohos.permission.PUBLISH_AGENT_REMINDER
 
+<!--Device-reminderAgentManager-function deleteExcludeDates(reminderId: int): Promise<void>--><!--Device-reminderAgentManager-function deleteExcludeDates(reminderId: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 **参数：**

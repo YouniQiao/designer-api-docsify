@@ -8,6 +8,8 @@ interface TaskInfo
 
 **起始版本：** 10
 
+<!--Device-agent-interface TaskInfo--><!--Device-agent-interface TaskInfo-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## 导入模块
@@ -31,6 +33,8 @@ readonly action: Action
 
 **起始版本：** 10
 
+<!--Device-TaskInfo-readonly action: Action--><!--Device-TaskInfo-readonly action: Action-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## ctime
@@ -46,6 +50,8 @@ readonly ctime: number
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-TaskInfo-readonly ctime: long--><!--Device-TaskInfo-readonly ctime: long-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -63,6 +69,8 @@ readonly data?: string | Array<FormItem>
 
 **起始版本：** 10
 
+<!--Device-TaskInfo-readonly data?: string | Array<FormItem>--><!--Device-TaskInfo-readonly data?: string | Array<FormItem>-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## description
@@ -76,6 +84,8 @@ readonly description: string
 **类型：** string
 
 **起始版本：** 10
+
+<!--Device-TaskInfo-readonly description: string--><!--Device-TaskInfo-readonly description: string-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -91,6 +101,8 @@ readonly extras?: object
 
 **起始版本：** 10
 
+<!--Device-TaskInfo-readonly extras?: object--><!--Device-TaskInfo-readonly extras?: object-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## faults
@@ -104,6 +116,8 @@ readonly faults: Faults
 **类型：** [Faults](arkts-basicservices-agent-faults-e.md)
 
 **起始版本：** 10
+
+<!--Device-TaskInfo-readonly faults: Faults--><!--Device-TaskInfo-readonly faults: Faults-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -122,6 +136,8 @@ readonly gauge: boolean
 
 **起始版本：** 10
 
+<!--Device-TaskInfo-readonly gauge: boolean--><!--Device-TaskInfo-readonly gauge: boolean-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## mimeType
@@ -135,6 +151,8 @@ readonly mimeType: string
 **类型：** string
 
 **起始版本：** 10
+
+<!--Device-TaskInfo-readonly mimeType: string--><!--Device-TaskInfo-readonly mimeType: string-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -153,6 +171,8 @@ readonly mode: Mode
 
 **起始版本：** 10
 
+<!--Device-TaskInfo-readonly mode: Mode--><!--Device-TaskInfo-readonly mode: Mode-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## mtime
@@ -166,6 +186,8 @@ readonly mtime: number
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-TaskInfo-readonly mtime: long--><!--Device-TaskInfo-readonly mtime: long-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -181,6 +203,8 @@ readonly priority: number
 
 **起始版本：** 11
 
+<!--Device-TaskInfo-readonly priority: int--><!--Device-TaskInfo-readonly priority: int-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## progress
@@ -195,6 +219,8 @@ readonly progress: Progress
 
 **起始版本：** 10
 
+<!--Device-TaskInfo-readonly progress: Progress--><!--Device-TaskInfo-readonly progress: Progress-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## reason
@@ -208,6 +234,8 @@ readonly reason: string
 **类型：** string
 
 **起始版本：** 10
+
+<!--Device-TaskInfo-readonly reason: string--><!--Device-TaskInfo-readonly reason: string-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -226,6 +254,8 @@ readonly retry: boolean
 
 **起始版本：** 10
 
+<!--Device-TaskInfo-readonly retry: boolean--><!--Device-TaskInfo-readonly retry: boolean-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## saveas
@@ -239,6 +269,8 @@ readonly saveas?: string
 **类型：** string
 
 **起始版本：** 10
+
+<!--Device-TaskInfo-readonly saveas?: string--><!--Device-TaskInfo-readonly saveas?: string-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -254,6 +286,8 @@ readonly tid: string
 
 **起始版本：** 10
 
+<!--Device-TaskInfo-readonly tid: string--><!--Device-TaskInfo-readonly tid: string-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## title
@@ -268,6 +302,8 @@ readonly title: string
 
 **起始版本：** 10
 
+<!--Device-TaskInfo-readonly title: string--><!--Device-TaskInfo-readonly title: string-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## tries
@@ -281,6 +317,8 @@ readonly tries: number
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-TaskInfo-readonly tries: int--><!--Device-TaskInfo-readonly tries: int-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -297,5 +335,7 @@ readonly url?: string
 **类型：** string
 
 **起始版本：** 10
+
+<!--Device-TaskInfo-readonly url?: string--><!--Device-TaskInfo-readonly url?: string-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent

@@ -27,6 +27,8 @@ function stop(stopMode: VibratorStopMode): Promise<void>
 
 **需要权限：** ohos.permission.VIBRATE
 
+<!--Device-vibrator-function stop(stopMode: VibratorStopMode): Promise<void>--><!--Device-vibrator-function stop(stopMode: VibratorStopMode): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 **参数：**
@@ -87,6 +89,8 @@ function stop(stopMode: VibratorStopMode, callback?: AsyncCallback<void>): void
 **替代接口：** [stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration-1)(stopMode: VibratorStopMode, callback: AsyncCallback&lt;void&gt;)
 
 **需要权限：** ohos.permission.VIBRATE
+
+<!--Device-vibrator-function stop(stopMode: VibratorStopMode, callback?: AsyncCallback<void>): void--><!--Device-vibrator-function stop(stopMode: VibratorStopMode, callback?: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
 

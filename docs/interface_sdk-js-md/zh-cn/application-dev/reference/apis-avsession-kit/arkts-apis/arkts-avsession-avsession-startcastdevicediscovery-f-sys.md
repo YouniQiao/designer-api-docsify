@@ -16,6 +16,8 @@ function startCastDeviceDiscovery(callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
+<!--Device-avSession-function startCastDeviceDiscovery(callback: AsyncCallback<void>): void--><!--Device-avSession-function startCastDeviceDiscovery(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **系统接口：** 此接口为系统接口。
@@ -52,6 +54,8 @@ function startCastDeviceDiscovery(filter: number, callback: AsyncCallback<void>)
 指定过滤条件，开始设备搜索发现。结果通过callback异步回调方式返回。
 
 **起始版本：** 10
+
+<!--Device-avSession-function startCastDeviceDiscovery(filter: int, callback: AsyncCallback<void>): void--><!--Device-avSession-function startCastDeviceDiscovery(filter: int, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -92,6 +96,8 @@ function startCastDeviceDiscovery(filter?: number, drmSchemes?: Array<string>): 
 开始设备搜索发现。结果通过Promise异步回调方式返回。
 
 **起始版本：** 10
+
+<!--Device-avSession-function startCastDeviceDiscovery(filter?: int, drmSchemes?: Array<string>): Promise<void>--><!--Device-avSession-function startCastDeviceDiscovery(filter?: int, drmSchemes?: Array<string>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 

@@ -16,6 +16,8 @@ function getGeofenceSupportedCoordTypes(): Array<CoordinateSystemType>
 
 **起始版本：** 12
 
+<!--Device-geoLocationManager-function getGeofenceSupportedCoordTypes(): Array<CoordinateSystemType>--><!--Device-geoLocationManager-function getGeofenceSupportedCoordTypes(): Array<CoordinateSystemType>-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 **返回值：**

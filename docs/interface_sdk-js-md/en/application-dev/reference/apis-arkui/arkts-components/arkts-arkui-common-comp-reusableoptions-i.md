@@ -10,6 +10,8 @@ Defines the parameters of a reusable custom component, which are used to configu
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-declare interface ReusableOptions--><!--Device-unnamed-declare interface ReusableOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## memoryOptimizationStrategy
@@ -29,5 +31,7 @@ Memory optimization strategy for reusable custom components. This parameter is s
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ReusableOptions-memoryOptimizationStrategy?: ReusableMemOptStrategy--><!--Device-ReusableOptions-memoryOptimizationStrategy?: ReusableMemOptStrategy-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -13,6 +13,8 @@ enum SecurityLevel
 
 **起始版本：** 9
 
+<!--Device-relationalStore-enum SecurityLevel--><!--Device-relationalStore-enum SecurityLevel-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## S1
@@ -24,6 +26,8 @@ S1 = 1
 表示数据库的安全级别为低级别，当数据泄露时会产生较低影响。例如，包含壁纸等系统数据的数据库。
 
 **起始版本：** 9
+
+<!--Device-SecurityLevel-S1 = 1--><!--Device-SecurityLevel-S1 = 1-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -37,6 +41,8 @@ S2 = 2
 
 **起始版本：** 9
 
+<!--Device-SecurityLevel-S2 = 2--><!--Device-SecurityLevel-S2 = 2-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## S3
@@ -49,6 +55,8 @@ S3 = 3
 
 **起始版本：** 9
 
+<!--Device-SecurityLevel-S3 = 3--><!--Device-SecurityLevel-S3 = 3-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## S4
@@ -60,5 +68,7 @@ S4 = 4
 表示数据库的安全级别为关键级别，当数据泄露时会产生严重影响。例如，包含认证凭据、财务数据等信息的数据库。
 
 **起始版本：** 9
+
+<!--Device-SecurityLevel-S4 = 4--><!--Device-SecurityLevel-S4 = 4-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core

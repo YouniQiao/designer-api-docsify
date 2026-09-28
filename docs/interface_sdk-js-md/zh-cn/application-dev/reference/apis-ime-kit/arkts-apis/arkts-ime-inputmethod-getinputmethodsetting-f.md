@@ -20,6 +20,8 @@ function getInputMethodSetting(): InputMethodSetting
 
 **替代接口：** [getSetting](arkts-ime-inputmethod-getsetting-f.md)
 
+<!--Device-inputMethod-function getInputMethodSetting(): InputMethodSetting--><!--Device-inputMethod-function getInputMethodSetting(): InputMethodSetting-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**

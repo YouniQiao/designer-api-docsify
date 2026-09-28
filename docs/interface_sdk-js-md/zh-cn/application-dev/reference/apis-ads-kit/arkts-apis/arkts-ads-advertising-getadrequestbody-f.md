@@ -16,6 +16,8 @@ function getAdRequestBody(adParams: AdRequestParams[], adOptions: AdOptions): Pr
 
 **起始版本：** 12
 
+<!--Device-advertising-function getAdRequestBody(adParams: AdRequestParams[], adOptions: AdOptions): Promise<string>--><!--Device-advertising-function getAdRequestBody(adParams: AdRequestParams[], adOptions: AdOptions): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Advertising.Ads
 
 **参数：**

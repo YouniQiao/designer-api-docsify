@@ -8,6 +8,8 @@ export interface CallTransferInfo
 
 **起始版本：** 8
 
+<!--Device-call-export interface CallTransferInfo--><!--Device-call-export interface CallTransferInfo-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ endHour?: number
 
 **起始版本：** 9
 
+<!--Device-CallTransferInfo-endHour?: int--><!--Device-CallTransferInfo-endHour?: int-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ endMinute?: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-CallTransferInfo-endMinute?: int--><!--Device-CallTransferInfo-endMinute?: int-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -62,6 +68,8 @@ settingType: CallTransferSettingType
 
 **起始版本：** 8
 
+<!--Device-CallTransferInfo-settingType: CallTransferSettingType--><!--Device-CallTransferInfo-settingType: CallTransferSettingType-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +85,8 @@ startHour?: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-CallTransferInfo-startHour?: int--><!--Device-CallTransferInfo-startHour?: int-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -94,6 +104,8 @@ startMinute?: number
 
 **起始版本：** 9
 
+<!--Device-CallTransferInfo-startMinute?: int--><!--Device-CallTransferInfo-startMinute?: int-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -110,6 +122,8 @@ transferNum: string
 
 **起始版本：** 8
 
+<!--Device-CallTransferInfo-transferNum: string--><!--Device-CallTransferInfo-transferNum: string-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -125,6 +139,8 @@ type: CallTransferType
 **类型：** [CallTransferType](arkts-telephony-call-calltransfertype-e.md)
 
 **起始版本：** 8
+
+<!--Device-CallTransferInfo-type: CallTransferType--><!--Device-CallTransferInfo-type: CallTransferType-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 

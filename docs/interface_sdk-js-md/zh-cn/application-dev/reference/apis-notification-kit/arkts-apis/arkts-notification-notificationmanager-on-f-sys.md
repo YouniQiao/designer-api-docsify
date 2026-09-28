@@ -20,6 +20,8 @@ function on(type: 'checkNotification', callback: (checkInfo: NotificationCheckIn
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
 
+<!--Device-notificationManager-function on(type: 'checkNotification', callback: (checkInfo: NotificationCheckInfo) => NotificationCheckResult): void--><!--Device-notificationManager-function on(type: 'checkNotification', callback: (checkInfo: NotificationCheckInfo) => NotificationCheckResult): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -76,6 +78,8 @@ function on(type: 'checkNotification', checkRequest: NotificationCheckRequest,
 **起始版本：** 11
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
+
+<!--Device-notificationManager-function on(type: 'checkNotification', checkRequest: NotificationCheckRequest,    callback: (checkInfo: NotificationCheckInfo) => Promise<NotificationCheckResult>): void--><!--Device-notificationManager-function on(type: 'checkNotification', checkRequest: NotificationCheckRequest,    callback: (checkInfo: NotificationCheckInfo) => Promise<NotificationCheckResult>): void-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

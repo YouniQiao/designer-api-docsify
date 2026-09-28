@@ -8,6 +8,8 @@ enum RenderTarget
 
 **起始版本：** 22
 
+<!--Device-audio-enum RenderTarget--><!--Device-audio-enum RenderTarget-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **系统接口：** 此接口为系统接口。
@@ -24,6 +26,8 @@ PLAYBACK = 0
 
 **起始版本：** 22
 
+<!--Device-RenderTarget-PLAYBACK = 0--><!--Device-RenderTarget-PLAYBACK = 0-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **系统接口：** 此接口为系统接口。
@@ -39,6 +43,8 @@ INJECT_TO_VOICE_COMMUNICATION_CAPTURE = 1
 在此模式下，当录音流的source type为[SourceType](arkts-apis-audio-e.md#sourcetype8).SOURCE_TYPE_VOICE_COMMUNICATION，audio scene为[AudioScene](arkts-apis-audio-e.md#audioscene).AUDIO_SCENE_VOICE_CHAT时，音频渲染器的输出将被注入到VoIP录音流上。
 
 **起始版本：** 22
+
+<!--Device-RenderTarget-INJECT_TO_VOICE_COMMUNICATION_CAPTURE = 1--><!--Device-RenderTarget-INJECT_TO_VOICE_COMMUNICATION_CAPTURE = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 

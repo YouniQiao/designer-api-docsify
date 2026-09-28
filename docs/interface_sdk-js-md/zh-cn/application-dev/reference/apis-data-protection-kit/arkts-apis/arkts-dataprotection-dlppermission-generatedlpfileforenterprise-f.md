@@ -24,6 +24,8 @@ function generateDlpFileForEnterprise(plaintextFd: number, dlpFd: number, proper
 
 **需要权限：** ohos.permission.ENTERPRISE_ACCESS_DLP_FILE
 
+<!--Device-dlpPermission-function generateDlpFileForEnterprise(plaintextFd: number, dlpFd: number, property: DLPProperty, customProperty: CustomProperty): Promise<void>--><!--Device-dlpPermission-function generateDlpFileForEnterprise(plaintextFd: number, dlpFd: number, property: DLPProperty, customProperty: CustomProperty): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **参数：**

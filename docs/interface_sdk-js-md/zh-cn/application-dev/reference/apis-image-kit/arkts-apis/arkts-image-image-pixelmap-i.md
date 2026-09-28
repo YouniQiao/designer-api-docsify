@@ -8,6 +8,8 @@ The **PixelMap** class provides APIs to read or write image data and obtain imag
 
 **起始版本：** 7
 
+<!--Device-image-interface PixelMap--><!--Device-image-interface PixelMap-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## 导入模块
@@ -25,6 +27,8 @@ applyColorSpace(targetColorSpace: colorSpaceManager.ColorSpaceManager, callback:
 Performs color space conversion (CSC) on the image pixel color based on a given color space. This API uses an asynchronous callback to return the result.
 
 **起始版本：** 11
+
+<!--Device-PixelMap-applyColorSpace(targetColorSpace: colorSpaceManager.ColorSpaceManager, callback: AsyncCallback<void>): void--><!--Device-PixelMap-applyColorSpace(targetColorSpace: colorSpaceManager.ColorSpaceManager, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -74,6 +78,8 @@ applyColorSpace(targetColorSpace: colorSpaceManager.ColorSpaceManager): Promise<
 Performs Color Space Converters (CSC) on the image pixel color based on a given color space. This API uses a promise to return the result.
 
 **起始版本：** 11
+
+<!--Device-PixelMap-applyColorSpace(targetColorSpace: colorSpaceManager.ColorSpaceManager): Promise<void>--><!--Device-PixelMap-applyColorSpace(targetColorSpace: colorSpaceManager.ColorSpaceManager): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -127,9 +133,11 @@ Crops the PixelMap.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-applyCrop(region: Region): Promise<void>--><!--Device-PixelMap-applyCrop(region: Region): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -194,9 +202,11 @@ Crops the PixelMap.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-applyCropSync(region: Region): void--><!--Device-PixelMap-applyCropSync(region: Region): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -255,9 +265,11 @@ Flips the PixelMap in the horizontal and/or vertical directions.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-applyFlip(horizontal: boolean, vertical: boolean): Promise<void>--><!--Device-PixelMap-applyFlip(horizontal: boolean, vertical: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -315,9 +327,11 @@ Flips the PixelMap in the horizontal and/or vertical directions.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-applyFlipSync(horizontal: boolean, vertical: boolean): void--><!--Device-PixelMap-applyFlipSync(horizontal: boolean, vertical: boolean): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -371,9 +385,11 @@ Note: YUV format PixelMaps only support rotation angles that are multiples of 90
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-applyRotate(angle: double): Promise<void>--><!--Device-PixelMap-applyRotate(angle: double): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -431,9 +447,11 @@ Note: YUV format PixelMaps only support rotation angles that are multiples of 90
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-applyRotateSync(angle: double): void--><!--Device-PixelMap-applyRotateSync(angle: double): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -483,9 +501,11 @@ Scales the PixelMap in the horizontal and/or vertical dimensions.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-applyScale(x: double, y: double, level?: AntiAliasingLevel): Promise<void>--><!--Device-PixelMap-applyScale(x: double, y: double, level?: AntiAliasingLevel): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -544,9 +564,11 @@ Scales the PixelMap in the horizontal and/or vertical dimensions.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-applyScaleSync(x: double, y: double, level?: AntiAliasingLevel): void--><!--Device-PixelMap-applyScaleSync(x: double, y: double, level?: AntiAliasingLevel): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -599,9 +621,11 @@ Repositions the PixelMap in the horizontal and/or vertical directions.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-applyTranslate(x: double, y: double): Promise<void>--><!--Device-PixelMap-applyTranslate(x: double, y: double): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -659,9 +683,11 @@ Repositions the PixelMap in the horizontal and/or vertical directions.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-applyTranslateSync(x: double, y: double): void--><!--Device-PixelMap-applyTranslateSync(x: double, y: double): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -711,6 +737,8 @@ Copies this PixelMap object. This API uses a promise to return the result.
 
 **起始版本：** 18
 
+<!--Device-PixelMap-clone(): Promise<PixelMap>--><!--Device-PixelMap-clone(): Promise<PixelMap>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **返回值：**
@@ -752,6 +780,8 @@ cloneSync(): PixelMap
 Copies this PixelMap object. This API returns the result synchronously.
 
 **起始版本：** 18
+
+<!--Device-PixelMap-cloneSync(): PixelMap--><!--Device-PixelMap-cloneSync(): PixelMap-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -796,6 +826,8 @@ convertPixelFormat(targetPixelFormat: PixelMapFormat): Promise<void>
 The method is used for the transformation of the image formats. Pixel data will be changed by calling this method.
 
 **起始版本：** 12
+
+<!--Device-PixelMap-convertPixelFormat(targetPixelFormat: PixelMapFormat): Promise<void>--><!--Device-PixelMap-convertPixelFormat(targetPixelFormat: PixelMapFormat): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -849,9 +881,11 @@ Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMap](#extra
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-createAlphaPixelmap(): Promise<PixelMap>--><!--Device-PixelMap-createAlphaPixelmap(): Promise<PixelMap>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -889,9 +923,11 @@ Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMap](#extra
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-createAlphaPixelmap(callback: AsyncCallback<PixelMap>): void--><!--Device-PixelMap-createAlphaPixelmap(callback: AsyncCallback<PixelMap>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -929,7 +965,9 @@ Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMapSync](#e
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PixelMap-createAlphaPixelmapSync(): PixelMap--><!--Device-PixelMap-createAlphaPixelmapSync(): PixelMap-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -975,6 +1013,8 @@ createCroppedAndScaledPixelMap(region: Region, x: number, y: number, level?: Ant
 Creates an image that has been cropped and resized based on the specified cropping area, scale factors of the width and height, and anti-aliasing level. This API uses a promise to return the result.
 
 **起始版本：** 22
+
+<!--Device-PixelMap-createCroppedAndScaledPixelMap(region: Region, x: double, y: double, level?: AntiAliasingLevel): Promise<PixelMap>--><!--Device-PixelMap-createCroppedAndScaledPixelMap(region: Region, x: double, y: double, level?: AntiAliasingLevel): Promise<PixelMap>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1036,6 +1076,8 @@ Creates an image that has been cropped and resized based on the specified croppi
 
 **起始版本：** 22
 
+<!--Device-PixelMap-createCroppedAndScaledPixelMapSync(region: Region, x: double, y: double, level?: AntiAliasingLevel): PixelMap--><!--Device-PixelMap-createCroppedAndScaledPixelMapSync(region: Region, x: double, y: double, level?: AntiAliasingLevel): PixelMap-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
@@ -1096,6 +1138,8 @@ Creates an image that has been resized based on the specified anti-aliasing leve
 
 **起始版本：** 18
 
+<!--Device-PixelMap-createScaledPixelMap(x: double, y: double, level?: AntiAliasingLevel): Promise<PixelMap>--><!--Device-PixelMap-createScaledPixelMap(x: double, y: double, level?: AntiAliasingLevel): Promise<PixelMap>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
@@ -1144,6 +1188,8 @@ createScaledPixelMapSync(x: number, y: number, level?: AntiAliasingLevel): Pixel
 Creates an image that has been resized based on the specified anti-aliasing level and the scale factors of the width and height. This API returns the result synchronously.
 
 **起始版本：** 18
+
+<!--Device-PixelMap-createScaledPixelMapSync(x: double, y: double, level?: AntiAliasingLevel): PixelMap--><!--Device-PixelMap-createScaledPixelMapSync(x: double, y: double, level?: AntiAliasingLevel): PixelMap-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1198,9 +1244,11 @@ Starting from API 26.0.0, it is recommended to use [applyCrop](#applycrop) inste
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-crop(region: Region, callback: AsyncCallback<void>): void--><!--Device-PixelMap-crop(region: Region, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1242,9 +1290,11 @@ Starting from API 26.0.0, it is recommended to use [applyCrop](#applycrop) inste
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-crop(region: Region): Promise<void>--><!--Device-PixelMap-crop(region: Region): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1287,7 +1337,9 @@ Starting from API 26.0.0, it is recommended to use [applyCropSync](#applycropsyn
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PixelMap-cropSync(region: Region): void--><!--Device-PixelMap-cropSync(region: Region): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1333,9 +1385,11 @@ Extracts the alpha channel from the current PixelMap to create a new ALPHA_U8 fo
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-extractAlphaPixelMap(): Promise<PixelMap>--><!--Device-PixelMap-extractAlphaPixelMap(): Promise<PixelMap>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1383,9 +1437,11 @@ Extracts the alpha channel from the current PixelMap to create a new ALPHA_U8 fo
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-extractAlphaPixelMapSync(): PixelMap--><!--Device-PixelMap-extractAlphaPixelMapSync(): PixelMap-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1433,9 +1489,11 @@ Starting from API 26.0.0, it is recommended to use [applyFlip](#applyflip) inste
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-flip(horizontal: boolean, vertical: boolean, callback: AsyncCallback<void>): void--><!--Device-PixelMap-flip(horizontal: boolean, vertical: boolean, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1479,9 +1537,11 @@ Starting from API 26.0.0, it is recommended to use [applyFlip](#applyflip) inste
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-flip(horizontal: boolean, vertical: boolean): Promise<void>--><!--Device-PixelMap-flip(horizontal: boolean, vertical: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1526,7 +1586,9 @@ Starting from API 26.0.0, it is recommended to use [applyFlipSync](#applyflipsyn
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PixelMap-flipSync(horizontal: boolean, vertical: boolean): void--><!--Device-PixelMap-flipSync(horizontal: boolean, vertical: boolean): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1572,9 +1634,11 @@ Obtains the number of bytes per row of this image. Unit: bytes.
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-getBytesNumberPerRow(): int--><!--Device-PixelMap-getBytesNumberPerRow(): int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1601,6 +1665,8 @@ getColorSpace(): colorSpaceManager.ColorSpaceManager
 Obtains the color space of this image.
 
 **起始版本：** 10
+
+<!--Device-PixelMap-getColorSpace(): colorSpaceManager.ColorSpaceManager--><!--Device-PixelMap-getColorSpace(): colorSpaceManager.ColorSpaceManager-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1644,9 +1710,11 @@ Obtains the pixel density of this image. Unit: ppi (pixels/inch)
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-getDensity(): int--><!--Device-PixelMap-getDensity(): int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1674,9 +1742,11 @@ Obtains the image information of a PixelMap. This API uses a promise to return t
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-getImageInfo(): Promise<ImageInfo>--><!--Device-PixelMap-getImageInfo(): Promise<ImageInfo>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1712,9 +1782,11 @@ Obtains the image information. This API uses an asynchronous callback to return 
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-getImageInfo(callback: AsyncCallback<ImageInfo>): void--><!--Device-PixelMap-getImageInfo(callback: AsyncCallback<ImageInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1750,9 +1822,11 @@ Obtains the image information. This API returns the result synchronously.
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-getImageInfoSync(): ImageInfo--><!--Device-PixelMap-getImageInfoSync(): ImageInfo-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -1793,6 +1867,8 @@ getMetadata(key: HdrMetadataKey): HdrMetadataValue
 Obtains the value of the metadata with a given key in this PixelMap.
 
 **起始版本：** 12
+
+<!--Device-PixelMap-getMetadata(key: HdrMetadataKey): HdrMetadataValue--><!--Device-PixelMap-getMetadata(key: HdrMetadataKey): HdrMetadataValue-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1855,9 +1931,11 @@ Obtains the total number of bytes of this image. Unit: bytes.
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-getPixelBytesNumber(): int--><!--Device-PixelMap-getPixelBytesNumber(): int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1884,6 +1962,8 @@ getUniqueId(): number
 Obtains the unique ID of this PixelMap.
 
 **起始版本：** 22
+
+<!--Device-PixelMap-getUniqueId(): int--><!--Device-PixelMap-getUniqueId(): int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1930,6 +2010,8 @@ Checks whether this PixelMap object is released. If released, any attempt to acc
 
 **起始版本：** 22
 
+<!--Device-PixelMap-isReleased(): boolean--><!--Device-PixelMap-isReleased(): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **返回值：**
@@ -1949,6 +2031,8 @@ marshalling(sequence: rpc.MessageSequence): void
 Marshals this PixelMap object and writes it to a MessageSequence object.
 
 **起始版本：** 10
+
+<!--Device-PixelMap-marshalling(sequence: rpc.MessageSequence): void--><!--Device-PixelMap-marshalling(sequence: rpc.MessageSequence): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2032,9 +2116,11 @@ Starting from API 26.0.0, it is recommended to use [setOpacity](#setopacity) ins
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-opacity(rate: double, callback: AsyncCallback<void>): void--><!--Device-PixelMap-opacity(rate: double, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2076,9 +2162,11 @@ Starting from API 26.0.0, it is recommended to use [setOpacity](#setopacity) ins
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-opacity(rate: double): Promise<void>--><!--Device-PixelMap-opacity(rate: double): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2121,7 +2209,9 @@ Starting from API 26.0.0, it is recommended to use [setOpacitySync](#setopacitys
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PixelMap-opacitySync(rate: double): void--><!--Device-PixelMap-opacitySync(rate: double): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2167,9 +2257,11 @@ Reads all the pixel data from the PixelMap and writes the data to a buffer. The 
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-readAllPixelsToBuffer(dst: ArrayBuffer): Promise<void>--><!--Device-PixelMap-readAllPixelsToBuffer(dst: ArrayBuffer): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2225,9 +2317,11 @@ Reads all the pixel data from the PixelMap and writes the data to a buffer. The 
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-readAllPixelsToBufferSync(dst: ArrayBuffer): void--><!--Device-PixelMap-readAllPixelsToBufferSync(dst: ArrayBuffer): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2277,9 +2371,11 @@ Starting from API 26.0.0, it is recommended to use [readPixelsToArea](#readpixel
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-readPixels(area: PositionArea): Promise<void>--><!--Device-PixelMap-readPixels(area: PositionArea): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2345,9 +2441,11 @@ Starting from API 26.0.0, it is recommended to use [readPixelsToArea](#readpixel
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-readPixels(area: PositionArea, callback: AsyncCallback<void>): void--><!--Device-PixelMap-readPixels(area: PositionArea, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2410,7 +2508,9 @@ Starting from API 26.0.0, it is recommended to use [readPixelsToAreaSync](#readp
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PixelMap-readPixelsSync(area: PositionArea): void--><!--Device-PixelMap-readPixelsSync(area: PositionArea): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2461,9 +2561,11 @@ Reads pixel data from a certain area of the PixelMap to a buffer. The resulting 
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-readPixelsToArea(area: PositionArea): Promise<void>--><!--Device-PixelMap-readPixelsToArea(area: PositionArea): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2551,9 +2653,11 @@ Reads pixel data from a certain area of the PixelMap to a buffer. The resulting 
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-readPixelsToAreaSync(area: PositionArea): void--><!--Device-PixelMap-readPixelsToAreaSync(area: PositionArea): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2635,9 +2739,11 @@ Starting from API 26.0.0, it is recommended to use [readAllPixelsToBuffer](#read
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-readPixelsToBuffer(dst: ArrayBuffer): Promise<void>--><!--Device-PixelMap-readPixelsToBuffer(dst: ArrayBuffer): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2682,9 +2788,11 @@ Starting from API 26.0.0, it is recommended to use [readAllPixelsToBuffer](#read
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-readPixelsToBuffer(dst: ArrayBuffer, callback: AsyncCallback<void>): void--><!--Device-PixelMap-readPixelsToBuffer(dst: ArrayBuffer, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2724,9 +2832,11 @@ Starting from API 26.0.0, it is recommended to use [readAllPixelsToBufferSync](#
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-readPixelsToBufferSync(dst: ArrayBuffer): void--><!--Device-PixelMap-readPixelsToBufferSync(dst: ArrayBuffer): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2775,9 +2885,11 @@ Releases this PixelMap instance. After the release, any attempt to access the in
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-release(callback: AsyncCallback<void>): void--><!--Device-PixelMap-release(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2820,9 +2932,11 @@ Releases this PixelMap instance. After the release, any attempt to access the in
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-release(): Promise<void>--><!--Device-PixelMap-release(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2858,9 +2972,11 @@ Starting from API 26.0.0, it is recommended to use [applyRotate](#applyrotate) i
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-rotate(angle: double, callback: AsyncCallback<void>): void--><!--Device-PixelMap-rotate(angle: double, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2902,9 +3018,11 @@ Starting from API 26.0.0, it is recommended to use [applyRotate](#applyrotate) i
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-rotate(angle: double): Promise<void>--><!--Device-PixelMap-rotate(angle: double): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2947,7 +3065,9 @@ Starting from API 26.0.0, it is recommended to use [applyRotateSync](#applyrotat
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PixelMap-rotateSync(angle: double): void--><!--Device-PixelMap-rotateSync(angle: double): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2993,9 +3113,11 @@ Starting from API 26.0.0, it is recommended to use [applyScale](#applyscale) ins
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-scale(x: double, y: double, callback: AsyncCallback<void>): void--><!--Device-PixelMap-scale(x: double, y: double, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -3039,9 +3161,11 @@ Starting from API 26.0.0, it is recommended to use [applyScale](#applyscale) ins
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-scale(x: double, y: double): Promise<void>--><!--Device-PixelMap-scale(x: double, y: double): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -3088,9 +3212,11 @@ Starting from API 26.0.0, it is recommended to use [applyScale](#applyscale) ins
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-scale(x: double, y: double, level: AntiAliasingLevel): Promise<void>--><!--Device-PixelMap-scale(x: double, y: double, level: AntiAliasingLevel): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -3143,7 +3269,9 @@ Starting from API 26.0.0, it is recommended to use [applyScaleSync](#applyscales
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PixelMap-scaleSync(x: double, y: double): void--><!--Device-PixelMap-scaleSync(x: double, y: double): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -3193,7 +3321,9 @@ Starting from API 26.0.0, it is recommended to use [applyScaleSync](#applyscales
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PixelMap-scaleSync(x: double, y: double, level: AntiAliasingLevel): void--><!--Device-PixelMap-scaleSync(x: double, y: double, level: AntiAliasingLevel): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -3242,6 +3372,8 @@ This method is only used to set the colorspace property of pixelmap, while all p
 
 **起始版本：** 12
 
+<!--Device-PixelMap-setColorSpace(colorSpace: colorSpaceManager.ColorSpaceManager): void--><!--Device-PixelMap-setColorSpace(colorSpace: colorSpaceManager.ColorSpaceManager): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
@@ -3286,6 +3418,8 @@ Sets a memory name for this PixelMap.
 
 **起始版本：** 13
 
+<!--Device-PixelMap-setMemoryNameSync(name: string): void--><!--Device-PixelMap-setMemoryNameSync(name: string): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
@@ -3327,6 +3461,8 @@ setMetadata(key: HdrMetadataKey, value: HdrMetadataValue): Promise<void>
 Sets the value for the metadata with a given key in this PixelMap. This API uses a promise to return the result.
 
 **起始版本：** 12
+
+<!--Device-PixelMap-setMetadata(key: HdrMetadataKey, value: HdrMetadataValue): Promise<void>--><!--Device-PixelMap-setMetadata(key: HdrMetadataKey, value: HdrMetadataValue): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -3388,9 +3524,11 @@ Sets opacity of the PixelMap. Every pixel will be set to the same opacity value.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-setOpacity(value: double): Promise<void>--><!--Device-PixelMap-setOpacity(value: double): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -3446,9 +3584,11 @@ Sets opacity of the PixelMap. Every pixel will be set to the same opacity value.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-setOpacitySync(value: double): void--><!--Device-PixelMap-setOpacitySync(value: double): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -3495,6 +3635,8 @@ setTransferDetached(detached: boolean): void
 Sets whether to detach from the original thread when this PixelMap is transmitted across threads. This API applies to the scenario where the PixelMap needs to be released immediately.
 
 **起始版本：** 12
+
+<!--Device-PixelMap-setTransferDetached(detached: boolean): void--><!--Device-PixelMap-setTransferDetached(detached: boolean): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -3570,6 +3712,8 @@ Convert pixelmap to standard dynamic range.
 
 **起始版本：** 12
 
+<!--Device-PixelMap-toSdr(): Promise<void>--><!--Device-PixelMap-toSdr(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **返回值：**
@@ -3623,9 +3767,11 @@ Starting from API 26.0.0, it is recommended to use [applyTranslate](#applytransl
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-translate(x: double, y: double, callback: AsyncCallback<void>): void--><!--Device-PixelMap-translate(x: double, y: double, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -3669,9 +3815,11 @@ Starting from API 26.0.0, it is recommended to use [applyTranslate](#applytransl
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-translate(x: double, y: double): Promise<void>--><!--Device-PixelMap-translate(x: double, y: double): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -3716,7 +3864,9 @@ Starting from API 26.0.0, it is recommended to use [applyTranslateSync](#applytr
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PixelMap-translateSync(x: double, y: double): void--><!--Device-PixelMap-translateSync(x: double, y: double): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -3761,6 +3911,8 @@ unmarshalling(sequence: rpc.MessageSequence): Promise<PixelMap>
 Unmarshals a MessageSequence object to obtain a PixelMap object. To create a PixelMap object in synchronous mode, use [createPixelMapFromParcel](arkts-image-image-createpixelmapfromparcel-f.md).
 
 **起始版本：** 10
+
+<!--Device-PixelMap-unmarshalling(sequence: rpc.MessageSequence): Promise<PixelMap>--><!--Device-PixelMap-unmarshalling(sequence: rpc.MessageSequence): Promise<PixelMap>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -3851,9 +4003,11 @@ Reads the pixel data from a buffer and writes the data to the PixelMap. The sour
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-writeAllPixelsFromBuffer(src: ArrayBuffer): Promise<void>--><!--Device-PixelMap-writeAllPixelsFromBuffer(src: ArrayBuffer): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -3918,9 +4072,11 @@ Reads the pixel data from a buffer and writes the data to the PixelMap. The sour
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-writeAllPixelsFromBufferSync(src: ArrayBuffer): void--><!--Device-PixelMap-writeAllPixelsFromBufferSync(src: ArrayBuffer): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -3979,9 +4135,11 @@ Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBuffer](#w
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-writeBufferToPixels(src: ArrayBuffer): Promise<void>--><!--Device-PixelMap-writeBufferToPixels(src: ArrayBuffer): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -4030,9 +4188,11 @@ Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBuffer](#w
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-writeBufferToPixels(src: ArrayBuffer, callback: AsyncCallback<void>): void--><!--Device-PixelMap-writeBufferToPixels(src: ArrayBuffer, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -4076,7 +4236,9 @@ Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBufferSync
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PixelMap-writeBufferToPixelsSync(src: ArrayBuffer): void--><!--Device-PixelMap-writeBufferToPixelsSync(src: ArrayBuffer): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -4126,9 +4288,11 @@ Starting from API 26.0.0, it is recommended to use [writePixelsFromArea](#writep
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-writePixels(area: PositionArea): Promise<void>--><!--Device-PixelMap-writePixels(area: PositionArea): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -4200,9 +4364,11 @@ Starting from API 26.0.0, it is recommended to use [writePixelsFromArea](#writep
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-writePixels(area: PositionArea, callback: AsyncCallback<void>): void--><!--Device-PixelMap-writePixels(area: PositionArea, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -4271,9 +4437,11 @@ Writes data from a buffer to a certain area of the PixelMap. The source data mus
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-writePixelsFromArea(area: PositionArea): Promise<void>--><!--Device-PixelMap-writePixelsFromArea(area: PositionArea): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -4376,9 +4544,11 @@ Writes data from a buffer to a certain area of the PixelMap. The source data mus
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-writePixelsFromAreaSync(area: PositionArea): void--><!--Device-PixelMap-writePixelsFromAreaSync(area: PositionArea): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -4475,9 +4645,11 @@ Starting from API 26.0.0, it is recommended to use [writePixelsFromAreaSync](#wr
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-writePixelsSync(area: PositionArea): void--><!--Device-PixelMap-writePixelsSync(area: PositionArea): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -4532,9 +4704,11 @@ Whether the image pixels are editable. **true** if editable, **false** otherwise
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PixelMap-readonly isEditable: boolean--><!--Device-PixelMap-readonly isEditable: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -4549,5 +4723,7 @@ Whether the row data of the image is memory aligned. The value **true** means th
 **类型：** boolean
 
 **起始版本：** 11
+
+<!--Device-PixelMap-readonly isStrideAlignment: boolean--><!--Device-PixelMap-readonly isStrideAlignment: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core

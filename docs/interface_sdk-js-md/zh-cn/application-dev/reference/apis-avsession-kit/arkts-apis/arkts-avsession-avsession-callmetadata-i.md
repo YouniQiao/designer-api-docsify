@@ -10,6 +10,8 @@ interface CallMetadata
 
 **起始版本：** 11
 
+<!--Device-avSession-interface CallMetadata--><!--Device-avSession-interface CallMetadata-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 ## 导入模块
@@ -30,7 +32,9 @@ avatar?: image.PixelMap
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-CallMetadata-avatar?: image.PixelMap--><!--Device-CallMetadata-avatar?: image.PixelMap-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -46,7 +50,9 @@ name?: string
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-CallMetadata-name?: string--><!--Device-CallMetadata-name?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -62,6 +68,8 @@ phoneNumber?: string
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-CallMetadata-phoneNumber?: string--><!--Device-CallMetadata-phoneNumber?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core

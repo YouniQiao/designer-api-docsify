@@ -25,6 +25,8 @@ function addCustomDnsRule(host: string, ip: Array<string>, callback: AsyncCallba
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
 
+<!--Device-connection-function addCustomDnsRule(host: string, ip: Array<string>, callback: AsyncCallback<void>): void--><!--Device-connection-function addCustomDnsRule(host: string, ip: Array<string>, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**
@@ -81,6 +83,8 @@ function addCustomDnsRule(host: string, ip: Array<string>): Promise<void>
 **需要权限：** ohos.permission.INTERNET
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-connection-function addCustomDnsRule(host: string, ip: Array<string>): Promise<void>--><!--Device-connection-function addCustomDnsRule(host: string, ip: Array<string>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 

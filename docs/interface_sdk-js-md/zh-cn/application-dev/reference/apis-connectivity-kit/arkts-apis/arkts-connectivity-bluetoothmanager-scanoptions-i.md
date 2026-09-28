@@ -14,6 +14,8 @@ interface ScanOptions
 
 **替代接口：** [ScanOptions](arkts-connectivity-ble-scanoptions-i.md)
 
+<!--Device-bluetoothManager-interface ScanOptions--><!--Device-bluetoothManager-interface ScanOptions-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -38,6 +40,8 @@ dutyMode?: ScanDuty
 
 **替代接口：** [dutyMode](arkts-connectivity-ble-scanoptions-i.md#dutymode)
 
+<!--Device-ScanOptions-dutyMode?: ScanDuty--><!--Device-ScanOptions-dutyMode?: ScanDuty-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## interval
@@ -56,6 +60,8 @@ interval?: number
 
 **替代接口：** [interval](arkts-connectivity-ble-scanoptions-i.md#interval)
 
+<!--Device-ScanOptions-interval?: number--><!--Device-ScanOptions-interval?: number-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## matchMode
@@ -73,5 +79,7 @@ matchMode?: MatchMode
 **废弃版本：** 10
 
 **替代接口：** [matchMode](arkts-connectivity-ble-scanoptions-i.md#matchmode)
+
+<!--Device-ScanOptions-matchMode?: MatchMode--><!--Device-ScanOptions-matchMode?: MatchMode-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

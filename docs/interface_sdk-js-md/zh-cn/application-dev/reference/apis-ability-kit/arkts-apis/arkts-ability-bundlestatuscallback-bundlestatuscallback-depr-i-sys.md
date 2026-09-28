@@ -21,6 +21,8 @@ export interface BundleStatusCallback
 
 **需要权限：** ohos.permission.LISTEN_BUNDLE_CHANGE
 
+<!--Device-unnamed-export interface BundleStatusCallback--><!--Device-unnamed-export interface BundleStatusCallback-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 **系统接口：** 此接口为系统接口。
@@ -40,6 +42,8 @@ add: (bundleName: string, userId: number) => void
 **替代接口：** [BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md)
 
 **需要权限：** ohos.permission.LISTEN_BUNDLE_CHANGE
+
+<!--Device-BundleStatusCallback-add: (bundleName: string, userId: number) => void--><!--Device-BundleStatusCallback-add: (bundleName: string, userId: number) => void-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -68,6 +72,8 @@ remove: (bundleName: string, userId: number) => void
 
 **需要权限：** ohos.permission.LISTEN_BUNDLE_CHANGE
 
+<!--Device-BundleStatusCallback-remove: (bundleName: string, userId: number) => void--><!--Device-BundleStatusCallback-remove: (bundleName: string, userId: number) => void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 **系统接口：** 此接口为系统接口。
@@ -94,6 +100,8 @@ update: (bundleName: string, userId: number) => void
 **替代接口：** [BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md)
 
 **需要权限：** ohos.permission.LISTEN_BUNDLE_CHANGE
+
+<!--Device-BundleStatusCallback-update: (bundleName: string, userId: number) => void--><!--Device-BundleStatusCallback-update: (bundleName: string, userId: number) => void-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 

@@ -24,6 +24,8 @@ function removeDockApp(admin: Want, bundleName: string, abilityName: string): vo
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-applicationManager-function removeDockApp(admin: Want, bundleName: string, abilityName: string): void--><!--Device-applicationManager-function removeDockApp(admin: Want, bundleName: string, abilityName: string): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**

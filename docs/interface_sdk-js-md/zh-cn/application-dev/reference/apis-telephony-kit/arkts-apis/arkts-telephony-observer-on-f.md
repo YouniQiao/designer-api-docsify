@@ -18,6 +18,8 @@ function on(type: 'networkStateChange', callback: Callback<NetworkState>): void
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-observer-function on(type: 'networkStateChange', callback: Callback<NetworkState>): void--><!--Device-observer-function on(type: 'networkStateChange', callback: Callback<NetworkState>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
 **参数：**
@@ -62,6 +64,8 @@ function on(type: 'networkStateChange', options: ObserverOptions, callback: Call
 **起始版本：** 6
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
+
+<!--Device-observer-function on(type: 'networkStateChange', options: ObserverOptions, callback: Callback<NetworkState>): void--><!--Device-observer-function on(type: 'networkStateChange', options: ObserverOptions, callback: Callback<NetworkState>): void-End-->
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
@@ -108,6 +112,8 @@ function on(type: 'signalInfoChange', callback: Callback<Array<SignalInformation
 
 **起始版本：** 6
 
+<!--Device-observer-function on(type: 'signalInfoChange', callback: Callback<Array<SignalInformation>>): void--><!--Device-observer-function on(type: 'signalInfoChange', callback: Callback<Array<SignalInformation>>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
 **参数：**
@@ -147,6 +153,8 @@ function on(type: 'signalInfoChange', options: ObserverOptions, callback: Callba
 订阅指定卡槽位的信号状态变化事件，使用callback方式作为异步方法。
 
 **起始版本：** 6
+
+<!--Device-observer-function on(type: 'signalInfoChange', options: ObserverOptions, callback: Callback<Array<SignalInformation>>): void--><!--Device-observer-function on(type: 'signalInfoChange', options: ObserverOptions, callback: Callback<Array<SignalInformation>>): void-End-->
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
@@ -192,6 +200,8 @@ function on(type: 'cellularDataConnectionStateChange', callback: Callback<DataCo
 
 **起始版本：** 7
 
+<!--Device-observer-function on(type: 'cellularDataConnectionStateChange', callback: Callback<DataConnectionStateInfo>): void--><!--Device-observer-function on(type: 'cellularDataConnectionStateChange', callback: Callback<DataConnectionStateInfo>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
 **参数：**
@@ -230,6 +240,8 @@ function on(type: 'cellularDataConnectionStateChange', options: ObserverOptions,
 订阅指定卡槽位的蜂窝数据链路连接状态，使用callback方式作为异步方法。
 
 **起始版本：** 7
+
+<!--Device-observer-function on(type: 'cellularDataConnectionStateChange', options: ObserverOptions,              callback: Callback<DataConnectionStateInfo>): void--><!--Device-observer-function on(type: 'cellularDataConnectionStateChange', options: ObserverOptions,              callback: Callback<DataConnectionStateInfo>): void-End-->
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
@@ -273,6 +285,8 @@ function on(type: 'cellularDataFlowChange', callback: Callback<DataFlowType>): v
 
 **起始版本：** 7
 
+<!--Device-observer-function on(type: 'cellularDataFlowChange', callback: Callback<DataFlowType>): void--><!--Device-observer-function on(type: 'cellularDataFlowChange', callback: Callback<DataFlowType>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
 **参数：**
@@ -312,6 +326,8 @@ function on(type: 'cellularDataFlowChange', options: ObserverOptions, callback: 
 订阅指定卡槽位的蜂窝数据业务的上下行数据流状态，使用callback方式作为异步方法。
 
 **起始版本：** 7
+
+<!--Device-observer-function on(type: 'cellularDataFlowChange', options: ObserverOptions, callback: Callback<DataFlowType>): void--><!--Device-observer-function on(type: 'cellularDataFlowChange', options: ObserverOptions, callback: Callback<DataFlowType>): void-End-->
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
@@ -357,6 +373,8 @@ function on(type: 'callStateChange', callback: Callback<CallStateInfo>): void
 
 **起始版本：** 6
 
+<!--Device-observer-function on(type: 'callStateChange', callback: Callback<CallStateInfo>): void--><!--Device-observer-function on(type: 'callStateChange', callback: Callback<CallStateInfo>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
 **参数：**
@@ -394,6 +412,8 @@ function on(type: 'callStateChange', options: ObserverOptions, callback: Callbac
 订阅通话状态变化事件，使用callback方式作为异步方法。
 
 **起始版本：** 6
+
+<!--Device-observer-function on(type: 'callStateChange', options: ObserverOptions, callback: Callback<CallStateInfo>): void--><!--Device-observer-function on(type: 'callStateChange', options: ObserverOptions, callback: Callback<CallStateInfo>): void-End-->
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
@@ -436,6 +456,8 @@ function on(type: 'callStateChangeEx', callback: Callback<TelCallState>, options
 订阅通话状态变化拓展事件，使用callback方式作为异步方法。
 
 **起始版本：** 21
+
+<!--Device-observer-function on(type: 'callStateChangeEx', callback: Callback<TelCallState>, options?: ObserverOptions): void--><!--Device-observer-function on(type: 'callStateChangeEx', callback: Callback<TelCallState>, options?: ObserverOptions): void-End-->
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
@@ -495,6 +517,8 @@ function on(type: 'simStateChange', callback: Callback<SimStateData>): void
 
 **起始版本：** 7
 
+<!--Device-observer-function on(type: 'simStateChange', callback: Callback<SimStateData>): void--><!--Device-observer-function on(type: 'simStateChange', callback: Callback<SimStateData>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
 **参数：**
@@ -532,6 +556,8 @@ function on(type: 'simStateChange', options: ObserverOptions, callback: Callback
 订阅指定卡槽位的sim状态更改事件，使用callback方式作为异步方法。
 
 **起始版本：** 7
+
+<!--Device-observer-function on(type: 'simStateChange', options: ObserverOptions, callback: Callback<SimStateData>): void--><!--Device-observer-function on(type: 'simStateChange', options: ObserverOptions, callback: Callback<SimStateData>): void-End-->
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
@@ -574,6 +600,8 @@ function on(type: 'iccAccountInfoChange', callback: Callback<void>): void
 订阅卡帐户变化事件，使用callback方式作为异步方法。
 
 **起始版本：** 10
+
+<!--Device-observer-function on(type: 'iccAccountInfoChange', callback: Callback<void>): void--><!--Device-observer-function on(type: 'iccAccountInfoChange', callback: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
 

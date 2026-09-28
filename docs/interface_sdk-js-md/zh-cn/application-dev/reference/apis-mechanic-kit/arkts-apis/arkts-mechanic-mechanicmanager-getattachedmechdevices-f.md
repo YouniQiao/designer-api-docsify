@@ -16,6 +16,8 @@ function getAttachedMechDevices(): MechInfo[]
 
 **起始版本：** 20
 
+<!--Device-mechanicManager-function getAttachedMechDevices(): MechInfo[]--><!--Device-mechanicManager-function getAttachedMechDevices(): MechInfo[]-End-->
+
 **系统能力：** SystemCapability.Mechanic.Core
 
 **返回值：**

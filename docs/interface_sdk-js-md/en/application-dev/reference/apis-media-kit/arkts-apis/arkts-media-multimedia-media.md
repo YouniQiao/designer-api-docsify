@@ -4,6 +4,8 @@ The multimedia subsystem provides a set of simple and easy-to-use APIs for you t
 
 **Since:** 6
 
+<!--Device-unnamed-declare namespace media--><!--Device-unnamed-declare namespace media-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Multimedia.Media.Core
 

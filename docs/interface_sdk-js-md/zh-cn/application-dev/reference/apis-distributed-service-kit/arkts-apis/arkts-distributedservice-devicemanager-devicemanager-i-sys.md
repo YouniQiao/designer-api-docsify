@@ -12,6 +12,8 @@ interface DeviceManager
 
 **替代接口：** [DeviceManager](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md)
 
+<!--Device-deviceManager-interface DeviceManager--><!--Device-deviceManager-interface DeviceManager-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 ## 导入模块
@@ -39,6 +41,8 @@ authenticateDevice(
 **替代接口：** [bindTarget](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#bindtarget)(deviceId: string, bindParam: { [key: string]: Object; }, callback: AsyncCallback&lt;{deviceId: string;}&gt;)
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
+
+<!--Device-DeviceManager-authenticateDevice(      deviceInfo: DeviceInfo,      authParam: AuthParam,      callback: AsyncCallback<{ deviceId: string, pinToken?: number }>    ): void--><!--Device-DeviceManager-authenticateDevice(      deviceInfo: DeviceInfo,      authParam: AuthParam,      callback: AsyncCallback<{ deviceId: string, pinToken?: number }>    ): void-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -140,6 +144,8 @@ deleteCredential(queryInfo: string, callback: AsyncCallback<{ resultInfo: string
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-deleteCredential(queryInfo: string, callback: AsyncCallback<{ resultInfo: string }>): void--><!--Device-DeviceManager-deleteCredential(queryInfo: string, callback: AsyncCallback<{ resultInfo: string }>): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -212,6 +218,8 @@ getDeviceInfo(networkId: string, callback: AsyncCallback<DeviceInfo>): void
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-getDeviceInfo(networkId: string, callback: AsyncCallback<DeviceInfo>): void--><!--Device-DeviceManager-getDeviceInfo(networkId: string, callback: AsyncCallback<DeviceInfo>): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -272,6 +280,8 @@ getDeviceInfo(networkId: string): Promise<DeviceInfo>
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-getDeviceInfo(networkId: string): Promise<DeviceInfo>--><!--Device-DeviceManager-getDeviceInfo(networkId: string): Promise<DeviceInfo>-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -327,6 +337,8 @@ getLocalDeviceInfo(callback: AsyncCallback<DeviceInfo>): void
 **替代接口：** [getLocalDeviceNetworkId](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getlocaldevicenetworkid)
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
+
+<!--Device-DeviceManager-getLocalDeviceInfo(callback: AsyncCallback<DeviceInfo>): void--><!--Device-DeviceManager-getLocalDeviceInfo(callback: AsyncCallback<DeviceInfo>): void-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -386,6 +398,8 @@ getLocalDeviceInfo(): Promise<DeviceInfo>
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-getLocalDeviceInfo(): Promise<DeviceInfo>--><!--Device-DeviceManager-getLocalDeviceInfo(): Promise<DeviceInfo>-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -432,6 +446,8 @@ getLocalDeviceInfoSync(): DeviceInfo
 **替代接口：** [getLocalDeviceNetworkId](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getlocaldevicenetworkid)
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
+
+<!--Device-DeviceManager-getLocalDeviceInfoSync(): DeviceInfo--><!--Device-DeviceManager-getLocalDeviceInfoSync(): DeviceInfo-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -482,6 +498,8 @@ getTrustedDeviceList(callback: AsyncCallback<Array<DeviceInfo>>): void
 **替代接口：** [getAvailableDeviceList](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelist)(callback: AsyncCallback&lt;Array&lt;DeviceBasicInfo&gt;&gt;)
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
+
+<!--Device-DeviceManager-getTrustedDeviceList(callback: AsyncCallback<Array<DeviceInfo>>): void--><!--Device-DeviceManager-getTrustedDeviceList(callback: AsyncCallback<Array<DeviceInfo>>): void-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -540,6 +558,8 @@ getTrustedDeviceList(): Promise<Array<DeviceInfo>>
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-getTrustedDeviceList(): Promise<Array<DeviceInfo>>--><!--Device-DeviceManager-getTrustedDeviceList(): Promise<Array<DeviceInfo>>-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -586,6 +606,8 @@ getTrustedDeviceListSync(): Array<DeviceInfo>
 **替代接口：** [getAvailableDeviceListSync](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
+
+<!--Device-DeviceManager-getTrustedDeviceListSync(): Array<DeviceInfo>--><!--Device-DeviceManager-getTrustedDeviceListSync(): Array<DeviceInfo>-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -636,6 +658,8 @@ getTrustedDeviceListSync(isRefresh: boolean): Array<DeviceInfo>
 **废弃版本：** 11
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
+
+<!--Device-DeviceManager-getTrustedDeviceListSync(isRefresh: boolean): Array<DeviceInfo>--><!--Device-DeviceManager-getTrustedDeviceListSync(isRefresh: boolean): Array<DeviceInfo>-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -691,6 +715,8 @@ importCredential(credentialInfo: string, callback: AsyncCallback<{ resultInfo: s
 **废弃版本：** 11
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
+
+<!--Device-DeviceManager-importCredential(credentialInfo: string, callback: AsyncCallback<{ resultInfo: string }>): void--><!--Device-DeviceManager-importCredential(credentialInfo: string, callback: AsyncCallback<{ resultInfo: string }>): void-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -793,6 +819,8 @@ off(type: 'uiStateChange', callback?: Callback<{ param: string }>): void
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-off(type: 'uiStateChange', callback?: Callback<{ param: string }>): void--><!--Device-DeviceManager-off(type: 'uiStateChange', callback?: Callback<{ param: string }>): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -841,6 +869,8 @@ off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChangeAc
 **替代接口：** [off](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#offdevicestatechange)(type: 'deviceStateChange', callback?: Callback&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt;)
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
+
+<!--Device-DeviceManager-off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChangeAction, device: DeviceInfo }>): void--><!--Device-DeviceManager-off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChangeAction, device: DeviceInfo }>): void-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -906,6 +936,8 @@ off(type: 'deviceFound', callback?: Callback<{ subscribeId: number, device: Devi
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-off(type: 'deviceFound', callback?: Callback<{ subscribeId: number, device: DeviceInfo }>): void--><!--Device-DeviceManager-off(type: 'deviceFound', callback?: Callback<{ subscribeId: number, device: DeviceInfo }>): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -970,6 +1002,8 @@ off(type: 'discoverFail', callback?: Callback<{ subscribeId: number, reason: num
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-off(type: 'discoverFail', callback?: Callback<{ subscribeId: number, reason: number }>): void--><!--Device-DeviceManager-off(type: 'discoverFail', callback?: Callback<{ subscribeId: number, reason: number }>): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -1024,6 +1058,8 @@ off(type: 'publishSuccess', callback?: Callback<{ publishId: number }>): void
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-off(type: 'publishSuccess', callback?: Callback<{ publishId: number }>): void--><!--Device-DeviceManager-off(type: 'publishSuccess', callback?: Callback<{ publishId: number }>): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -1076,6 +1112,8 @@ off(type: 'publishFail', callback?: Callback<{ publishId: number, reason: number
 **废弃版本：** 11
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
+
+<!--Device-DeviceManager-off(type: 'publishFail', callback?: Callback<{ publishId: number, reason: number }>): void--><!--Device-DeviceManager-off(type: 'publishFail', callback?: Callback<{ publishId: number, reason: number }>): void-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -1133,6 +1171,8 @@ off(type: 'serviceDie', callback?: () => void): void
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-off(type: 'serviceDie', callback?: () => void): void--><!--Device-DeviceManager-off(type: 'serviceDie', callback?: () => void): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -1183,6 +1223,8 @@ ui状态变更回调。
 **替代接口：** [on](arkts-distributedservice-distributeddevicemanager-devicemanager-i-sys.md#onreplyresult)(type: 'replyResult', callback: Callback&lt;{ param: string; }&gt;)
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
+
+<!--Device-DeviceManager-on(type: 'uiStateChange', callback: Callback<{ param: string }>): void--><!--Device-DeviceManager-on(type: 'uiStateChange', callback: Callback<{ param: string }>): void-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -1245,6 +1287,8 @@ on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChangeActi
 **替代接口：** [on](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#ondevicestatechange)(type: 'deviceStateChange', callback: Callback&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt;)
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
+
+<!--Device-DeviceManager-on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChangeAction, device: DeviceInfo }>): void--><!--Device-DeviceManager-on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChangeAction, device: DeviceInfo }>): void-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -1310,6 +1354,8 @@ on(type: 'deviceFound', callback: Callback<{ subscribeId: number, device: Device
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-on(type: 'deviceFound', callback: Callback<{ subscribeId: number, device: DeviceInfo }>): void--><!--Device-DeviceManager-on(type: 'deviceFound', callback: Callback<{ subscribeId: number, device: DeviceInfo }>): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -1374,6 +1420,8 @@ on(type: 'discoverFail', callback: Callback<{ subscribeId: number, reason: numbe
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-on(type: 'discoverFail', callback: Callback<{ subscribeId: number, reason: number }>): void--><!--Device-DeviceManager-on(type: 'discoverFail', callback: Callback<{ subscribeId: number, reason: number }>): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -1428,6 +1476,8 @@ on(type: 'publishSuccess', callback: Callback<{ publishId: number }>): void
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-on(type: 'publishSuccess', callback: Callback<{ publishId: number }>): void--><!--Device-DeviceManager-on(type: 'publishSuccess', callback: Callback<{ publishId: number }>): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -1480,6 +1530,8 @@ on(type: 'publishFail', callback: Callback<{ publishId: number, reason: number }
 **废弃版本：** 11
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
+
+<!--Device-DeviceManager-on(type: 'publishFail', callback: Callback<{ publishId: number, reason: number }>): void--><!--Device-DeviceManager-on(type: 'publishFail', callback: Callback<{ publishId: number, reason: number }>): void-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -1537,6 +1589,8 @@ on(type: 'serviceDie', callback: () => void): void
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-on(type: 'serviceDie', callback: () => void): void--><!--Device-DeviceManager-on(type: 'serviceDie', callback: () => void): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -1585,6 +1639,8 @@ publishDeviceDiscovery(publishInfo: PublishInfo): void
 **废弃版本：** 11
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
+
+<!--Device-DeviceManager-publishDeviceDiscovery(publishInfo: PublishInfo): void--><!--Device-DeviceManager-publishDeviceDiscovery(publishInfo: PublishInfo): void-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -1653,6 +1709,8 @@ release(): void
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-release(): void--><!--Device-DeviceManager-release(): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -1693,6 +1751,8 @@ requestCredentialRegisterInfo(requestInfo: string, callback: AsyncCallback<{ reg
 **废弃版本：** 11
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
+
+<!--Device-DeviceManager-requestCredentialRegisterInfo(requestInfo: string, callback: AsyncCallback<{ registerInfo: string }>): void--><!--Device-DeviceManager-requestCredentialRegisterInfo(requestInfo: string, callback: AsyncCallback<{ registerInfo: string }>): void-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -1763,6 +1823,8 @@ setUserOperation(operateAction: number, params: string): void
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-setUserOperation(operateAction: number, params: string): void--><!--Device-DeviceManager-setUserOperation(operateAction: number, params: string): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -1821,6 +1883,8 @@ startDeviceDiscovery(subscribeInfo: SubscribeInfo): void
 **替代接口：** [startDiscovering](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#startdiscovering)(discoverParam: { [key: string]: Object; }, filterOptions?: { [key: string]: Object; })
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
+
+<!--Device-DeviceManager-startDeviceDiscovery(subscribeInfo: SubscribeInfo): void--><!--Device-DeviceManager-startDeviceDiscovery(subscribeInfo: SubscribeInfo): void-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -1895,6 +1959,8 @@ startDeviceDiscovery(subscribeInfo: SubscribeInfo, filterOptions?: string): void
 **替代接口：** [startDiscovering](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#startdiscovering)(discoverParam: { [key: string]: Object; }, filterOptions?: { [key: string]: Object; })
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
+
+<!--Device-DeviceManager-startDeviceDiscovery(subscribeInfo: SubscribeInfo, filterOptions?: string): void--><!--Device-DeviceManager-startDeviceDiscovery(subscribeInfo: SubscribeInfo, filterOptions?: string): void-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -1991,6 +2057,8 @@ stopDeviceDiscovery(subscribeId: number): void
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-stopDeviceDiscovery(subscribeId: number): void--><!--Device-DeviceManager-stopDeviceDiscovery(subscribeId: number): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -2042,6 +2110,8 @@ unAuthenticateDevice(deviceInfo: DeviceInfo): void
 **替代接口：** [unbindTarget](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#unbindtarget)
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
+
+<!--Device-DeviceManager-unAuthenticateDevice(deviceInfo: DeviceInfo): void--><!--Device-DeviceManager-unAuthenticateDevice(deviceInfo: DeviceInfo): void-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -2107,6 +2177,8 @@ unPublishDeviceDiscovery(publishId: number): void
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-unPublishDeviceDiscovery(publishId: number): void--><!--Device-DeviceManager-unPublishDeviceDiscovery(publishId: number): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -2156,6 +2228,8 @@ verifyAuthInfo(authInfo: AuthInfo, callback: AsyncCallback<{ deviceId: string, l
 **废弃版本：** 11
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
+
+<!--Device-DeviceManager-verifyAuthInfo(authInfo: AuthInfo, callback: AsyncCallback<{ deviceId: string, level: number }>): void--><!--Device-DeviceManager-verifyAuthInfo(authInfo: AuthInfo, callback: AsyncCallback<{ deviceId: string, level: number }>): void-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 

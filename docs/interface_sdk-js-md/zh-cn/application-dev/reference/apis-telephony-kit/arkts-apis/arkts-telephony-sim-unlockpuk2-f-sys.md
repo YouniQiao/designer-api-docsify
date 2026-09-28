@@ -18,6 +18,8 @@ Unlock the SIM card password in the specified card slot.
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-sim-function unlockPuk2(slotId: int, newPin2: string, puk2: string, callback: AsyncCallback<LockStatusResponse>): void--><!--Device-sim-function unlockPuk2(slotId: int, newPin2: string, puk2: string, callback: AsyncCallback<LockStatusResponse>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -72,6 +74,8 @@ Unlock the SIM card password in the specified card slot.
 **起始版本：** 8
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
+
+<!--Device-sim-function unlockPuk2(slotId: int, newPin2: string, puk2: string): Promise<LockStatusResponse>--><!--Device-sim-function unlockPuk2(slotId: int, newPin2: string, puk2: string): Promise<LockStatusResponse>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

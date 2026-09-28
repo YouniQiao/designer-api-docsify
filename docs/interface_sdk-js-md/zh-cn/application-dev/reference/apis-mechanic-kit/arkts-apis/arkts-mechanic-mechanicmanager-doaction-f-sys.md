@@ -16,6 +16,8 @@ function doAction(mechId: number, actionType: ActionType): Promise<Result>
 
 **起始版本：** 26.0.0
 
+<!--Device-mechanicManager-function doAction(mechId: int, actionType: ActionType): Promise<Result>--><!--Device-mechanicManager-function doAction(mechId: int, actionType: ActionType): Promise<Result>-End-->
+
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。

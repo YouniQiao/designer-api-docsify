@@ -5,7 +5,7 @@
 > **NOTE:** 
 > 
 > This component is deprecated since API version 10. You are advised to use
-> [UIExtensionComponent](arkts-arkui-uiextensioncomponent-comp-sys.md#ui_extension_componentsystem-api) instead.
+> [UIExtensionComponent](arkts-arkui-uiextensioncomponent-comp-sys.md) instead.
 > 
 > The APIs provided by this component are system APIs.
 
@@ -36,6 +36,8 @@ Construct the ability component. Called when the ability component is used.
 **Deprecated since:** 10
 
 **Substitutes:** [UIExtensionComponentInterface](arkts-arkui-uiextensioncomponent-comp-sys.md#uiextensioncomponentinterface)
+
+<!--Device-AbilityComponentInterface-(value: { want: import('../api/@ohos.app.ability.Want').default }): AbilityComponentAttribute--><!--Device-AbilityComponentInterface-(value: { want: import('../api/@ohos.app.ability.Want').default }): AbilityComponentAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

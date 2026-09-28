@@ -8,6 +8,8 @@ Creates a date picker based on the specified date range and displays it in a dia
 
 **Since:** 8
 
+<!--Device-unnamed-declare class DatePickerDialog--><!--Device-unnamed-declare class DatePickerDialog-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## show
@@ -34,6 +36,8 @@ Shows a date picker dialog box.
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DatePickerDialog-static show(options?: DatePickerDialogOptions)--><!--Device-DatePickerDialog-static show(options?: DatePickerDialogOptions)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

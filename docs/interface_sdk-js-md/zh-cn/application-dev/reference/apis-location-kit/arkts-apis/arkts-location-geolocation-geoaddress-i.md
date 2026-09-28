@@ -16,6 +16,8 @@ export interface GeoAddress
 
 **需要权限：** ohos.permission.LOCATION
 
+<!--Device-geolocation-export interface GeoAddress--><!--Device-geolocation-export interface GeoAddress-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 ## 导入模块
@@ -42,6 +44,8 @@ addressUrl?: string
 
 **需要权限：** ohos.permission.LOCATION
 
+<!--Device-GeoAddress-addressUrl?: string--><!--Device-GeoAddress-addressUrl?: string-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 ## administrativeArea
@@ -61,6 +65,8 @@ administrativeArea?: string
 **替代接口：** [administrativeArea](arkts-location-geolocationmanager-geoaddress-i.md#administrativearea)
 
 **需要权限：** ohos.permission.LOCATION
+
+<!--Device-GeoAddress-administrativeArea?: string--><!--Device-GeoAddress-administrativeArea?: string-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
@@ -82,6 +88,8 @@ countryCode?: string
 
 **需要权限：** ohos.permission.LOCATION
 
+<!--Device-GeoAddress-countryCode?: string--><!--Device-GeoAddress-countryCode?: string-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 ## countryName
@@ -101,6 +109,8 @@ countryName?: string
 **替代接口：** [countryName](arkts-location-geolocationmanager-geoaddress-i.md#countryname)
 
 **需要权限：** ohos.permission.LOCATION
+
+<!--Device-GeoAddress-countryName?: string--><!--Device-GeoAddress-countryName?: string-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
@@ -122,6 +132,8 @@ descriptions?: Array<string>
 
 **需要权限：** ohos.permission.LOCATION
 
+<!--Device-GeoAddress-descriptions?: Array<string>--><!--Device-GeoAddress-descriptions?: Array<string>-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 ## descriptionsSize
@@ -141,6 +153,8 @@ descriptionsSize?: number
 **替代接口：** [descriptionsSize](arkts-location-geolocationmanager-geoaddress-i.md#descriptionssize)
 
 **需要权限：** ohos.permission.LOCATION
+
+<!--Device-GeoAddress-descriptionsSize?: number--><!--Device-GeoAddress-descriptionsSize?: number-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
@@ -162,6 +176,8 @@ latitude?: number
 
 **需要权限：** ohos.permission.LOCATION
 
+<!--Device-GeoAddress-latitude?: number--><!--Device-GeoAddress-latitude?: number-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 ## locale
@@ -181,6 +197,8 @@ locale?: string
 **替代接口：** [locale](arkts-location-geolocationmanager-geoaddress-i.md#locale)
 
 **需要权限：** ohos.permission.LOCATION
+
+<!--Device-GeoAddress-locale?: string--><!--Device-GeoAddress-locale?: string-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
@@ -202,6 +220,8 @@ locality?: string
 
 **需要权限：** ohos.permission.LOCATION
 
+<!--Device-GeoAddress-locality?: string--><!--Device-GeoAddress-locality?: string-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 ## longitude
@@ -221,6 +241,8 @@ longitude?: number
 **替代接口：** [longitude](arkts-location-geolocationmanager-geoaddress-i.md#longitude)
 
 **需要权限：** ohos.permission.LOCATION
+
+<!--Device-GeoAddress-longitude?: number--><!--Device-GeoAddress-longitude?: number-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
@@ -242,6 +264,8 @@ phoneNumber?: string
 
 **需要权限：** ohos.permission.LOCATION
 
+<!--Device-GeoAddress-phoneNumber?: string--><!--Device-GeoAddress-phoneNumber?: string-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 ## placeName
@@ -261,6 +285,8 @@ placeName?: string
 **替代接口：** [placeName](arkts-location-geolocationmanager-geoaddress-i.md#placename)
 
 **需要权限：** ohos.permission.LOCATION
+
+<!--Device-GeoAddress-placeName?: string--><!--Device-GeoAddress-placeName?: string-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
@@ -282,6 +308,8 @@ postalCode?: string
 
 **需要权限：** ohos.permission.LOCATION
 
+<!--Device-GeoAddress-postalCode?: string--><!--Device-GeoAddress-postalCode?: string-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 ## premises
@@ -301,6 +329,8 @@ premises?: string
 **替代接口：** [premises](arkts-location-geolocationmanager-geoaddress-i.md#premises)
 
 **需要权限：** ohos.permission.LOCATION
+
+<!--Device-GeoAddress-premises?: string--><!--Device-GeoAddress-premises?: string-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
@@ -322,6 +352,8 @@ roadName?: string
 
 **需要权限：** ohos.permission.LOCATION
 
+<!--Device-GeoAddress-roadName?: string--><!--Device-GeoAddress-roadName?: string-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 ## subAdministrativeArea
@@ -341,6 +373,8 @@ subAdministrativeArea?: string
 **替代接口：** [subAdministrativeArea](arkts-location-geolocationmanager-geoaddress-i.md#subadministrativearea)
 
 **需要权限：** ohos.permission.LOCATION
+
+<!--Device-GeoAddress-subAdministrativeArea?: string--><!--Device-GeoAddress-subAdministrativeArea?: string-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
@@ -362,6 +396,8 @@ subLocality?: string
 
 **需要权限：** ohos.permission.LOCATION
 
+<!--Device-GeoAddress-subLocality?: string--><!--Device-GeoAddress-subLocality?: string-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 ## subRoadName
@@ -381,5 +417,7 @@ subRoadName?: string
 **替代接口：** [subRoadName](arkts-location-geolocationmanager-geoaddress-i.md#subroadname)
 
 **需要权限：** ohos.permission.LOCATION
+
+<!--Device-GeoAddress-subRoadName?: string--><!--Device-GeoAddress-subRoadName?: string-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geocoder

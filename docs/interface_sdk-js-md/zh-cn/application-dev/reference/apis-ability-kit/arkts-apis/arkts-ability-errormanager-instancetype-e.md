@@ -8,6 +8,8 @@ export enum InstanceType
 
 **起始版本：** 18
 
+<!--Device-errorManager-export enum InstanceType--><!--Device-errorManager-export enum InstanceType-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 ## TASKPOOL
@@ -21,6 +23,8 @@ TASKPOOL = 2
 **起始版本：** 18
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-InstanceType-TASKPOOL = 2--><!--Device-InstanceType-TASKPOOL = 2-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -36,6 +40,8 @@ WORKER = 1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-InstanceType-WORKER = 1--><!--Device-InstanceType-WORKER = 1-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 ## MAIN
@@ -50,6 +56,8 @@ MAIN = 0
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-InstanceType-MAIN = 0--><!--Device-InstanceType-MAIN = 0-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 ## CUSTOM
@@ -63,5 +71,7 @@ CUSTOM = 3
 **起始版本：** 18
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-InstanceType-CUSTOM = 3--><!--Device-InstanceType-CUSTOM = 3-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore

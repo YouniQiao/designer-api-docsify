@@ -10,6 +10,8 @@ export interface SysVpnConfig extends VpnConfig
 
 **起始版本：** 12
 
+<!--Device-vpn-export interface SysVpnConfig extends VpnConfig--><!--Device-vpn-export interface SysVpnConfig extends VpnConfig-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ forwardingRoutes?: string
 
 **起始版本：** 12
 
+<!--Device-SysVpnConfig-forwardingRoutes?: string--><!--Device-SysVpnConfig-forwardingRoutes?: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -48,6 +52,8 @@ VPN接口的地址数组
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SysVpnConfig-localAddresses?: Array<LinkAddress>--><!--Device-SysVpnConfig-localAddresses?: Array<LinkAddress>-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +67,8 @@ password?: string
 **类型：** string
 
 **起始版本：** 12
+
+<!--Device-SysVpnConfig-password?: string--><!--Device-SysVpnConfig-password?: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -78,6 +86,8 @@ The p12 cert data for the ipsec VPN network.
 
 **起始版本：** 20
 
+<!--Device-SysVpnConfig-pkcs12FileData?: Uint8Array--><!--Device-SysVpnConfig-pkcs12FileData?: Uint8Array-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -93,6 +103,8 @@ The p12 cert password for the ipsec VPN network.
 **类型：** string
 
 **起始版本：** 20
+
+<!--Device-SysVpnConfig-pkcs12Password?: string--><!--Device-SysVpnConfig-pkcs12Password?: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -110,6 +122,8 @@ The array of addresses for remote server.
 
 **起始版本：** 20
 
+<!--Device-SysVpnConfig-remoteAddresses?: Array<string>--><!--Device-SysVpnConfig-remoteAddresses?: Array<string>-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -123,6 +137,8 @@ saveLogin?: boolean
 **类型：** boolean
 
 **起始版本：** 12
+
+<!--Device-SysVpnConfig-saveLogin?: boolean--><!--Device-SysVpnConfig-saveLogin?: boolean-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -140,6 +156,8 @@ The system user id for the VPN network.
 
 **起始版本：** 12
 
+<!--Device-SysVpnConfig-userId?: int--><!--Device-SysVpnConfig-userId?: int-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -153,6 +171,8 @@ userName?: string
 **类型：** string
 
 **起始版本：** 12
+
+<!--Device-SysVpnConfig-userName?: string--><!--Device-SysVpnConfig-userName?: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -168,6 +188,8 @@ vpnId?: string
 
 **起始版本：** 12
 
+<!--Device-SysVpnConfig-vpnId?: string--><!--Device-SysVpnConfig-vpnId?: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -182,6 +204,8 @@ vpnName?: string
 
 **起始版本：** 12
 
+<!--Device-SysVpnConfig-vpnName?: string--><!--Device-SysVpnConfig-vpnName?: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -195,6 +219,8 @@ vpnType?: SysVpnType
 **类型：** [SysVpnType](arkts-network-vpn-sysvpntype-e-sys.md)
 
 **起始版本：** 12
+
+<!--Device-SysVpnConfig-vpnType?: SysVpnType--><!--Device-SysVpnConfig-vpnType?: SysVpnType-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 

@@ -22,6 +22,8 @@ Toggle(options: ToggleOptions)
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-ToggleInterface-(options: ToggleOptions): ToggleAttribute--><!--Device-ToggleInterface-(options: ToggleOptions): ToggleAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

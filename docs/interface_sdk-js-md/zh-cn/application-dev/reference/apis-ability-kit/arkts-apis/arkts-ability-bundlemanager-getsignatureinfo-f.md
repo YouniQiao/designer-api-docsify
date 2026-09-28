@@ -18,6 +18,8 @@ function getSignatureInfo(uid: number): SignatureInfo
 
 **需要权限：** ohos.permission.GET_SIGNATURE_INFO
 
+<!--Device-bundleManager-function getSignatureInfo(uid: int): SignatureInfo--><!--Device-bundleManager-function getSignatureInfo(uid: int): SignatureInfo-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **参数：**

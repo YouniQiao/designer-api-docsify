@@ -8,6 +8,8 @@ export interface ClientCert
 
 **起始版本：** 11
 
+<!--Device-webSocket-export interface ClientCert--><!--Device-webSocket-export interface ClientCert-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块
@@ -28,6 +30,8 @@ certPath: string
 
 **起始版本：** 11
 
+<!--Device-ClientCert-certPath: string--><!--Device-ClientCert-certPath: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## keyPassword
@@ -42,6 +46,8 @@ keyPassword?: string
 
 **起始版本：** 11
 
+<!--Device-ClientCert-keyPassword?: string--><!--Device-ClientCert-keyPassword?: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## keyPath
@@ -55,5 +61,7 @@ keyPath: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-ClientCert-keyPath: string--><!--Device-ClientCert-keyPath: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack

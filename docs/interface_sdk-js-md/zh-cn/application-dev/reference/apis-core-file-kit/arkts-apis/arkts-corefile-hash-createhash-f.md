@@ -20,6 +20,8 @@ function createHash(algorithm: string): HashStream
 
 **起始版本：** 12
 
+<!--Device-hash-function createHash(algorithm: string): HashStream--><!--Device-hash-function createHash(algorithm: string): HashStream-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**

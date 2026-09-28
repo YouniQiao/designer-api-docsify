@@ -10,7 +10,7 @@ The **Text** component is used to display text content. It supports the configur
 
 ## Child Components
 
-This component can contain the [Span](arkts-arkui-span-comp.md#span), [ImageSpan](arkts-arkui-imagespan-comp.md#image_span), [SymbolSpan](arkts-arkui-symbolspan-comp-attribute.md#symbolspanattribute), and [ContainerSpan](arkts-arkui-containerspan-comp-attribute.md#containerspanattribute) child components.
+This component can contain the [Span](arkts-arkui-span-comp.md), [ImageSpan](arkts-arkui-imagespan-comp.md), [SymbolSpan](arkts-arkui-symbolspan-comp-attribute.md#symbolspanattribute), and [ContainerSpan](arkts-arkui-containerspan-comp-attribute.md#containerspanattribute) child components.
 
 > **NOTE:** 
 > 
@@ -31,13 +31,15 @@ Defines the constructor of Text.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-TextInterface-(content?: string | Resource, value?: TextOptions): TextAttribute--><!--Device-TextInterface-(content?: string | Resource, value?: TextOptions): TextAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | No | Plain text. This parameter is required when the text content needs to be directly displayed. This parameter does not take effect when the subcomponent [Span](arkts-arkui-span-comp.md#span) is contained or the [styled string](../arkts-apis/arkts-arkui-styledstring.md#styled_string) is set. <br>Default value: **' '** <br>**NOTE:** <br>Priority of displayed content: Styled string &gt; Content of the **Span** component &gt; Text content of the **Text** component. |
+| content | string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | No | Plain text. This parameter is required when the text content needs to be directly displayed. This parameter does not take effect when the subcomponent [Span](arkts-arkui-span-comp.md) is contained or the [styled string](../arkts-apis/arkts-arkui-styledstring.md#styled_string) is set. <br>Default value: **' '** <br>**NOTE:** <br>Priority of displayed content: Styled string &gt; Content of the **Span** component &gt; Text content of the **Text** component. |
 | value | [TextOptions](arkts-arkui-text-comp-textoptions-i.md) | No | Text component initialization option, which is used to configure the text controller. This parameter is required when the **TextController** feature needs to be used to control the text content and selection.<br>Default value: If this parameter is not set, the text controller is not used. <br> |
 
 ## Summary
@@ -58,7 +60,7 @@ Defines the constructor of Text.
 | [MarqueeState](arkts-arkui-text-comp-marqueestate-e.md) | Enumerates the return values of the marquee state callback. |
 | [MarqueeUpdatePolicy](arkts-arkui-text-comp-marqueeupdatepolicy-e.md) | Sets the scrolling policy of the marquee after its attributes are updated. |
 | [TextResponseType](arkts-arkui-text-comp-textresponsetype-e.md) | Response type of the menu. |
-| [TextSpanType](arkts-arkui-text-comp-textspantype-e.md) | Provides the [span](arkts-arkui-span-comp.md#span) type information. |
+| [TextSpanType](arkts-arkui-text-comp-textspantype-e.md) | Provides the [span](arkts-arkui-span-comp.md) type information. |
 
 ## Examples
 

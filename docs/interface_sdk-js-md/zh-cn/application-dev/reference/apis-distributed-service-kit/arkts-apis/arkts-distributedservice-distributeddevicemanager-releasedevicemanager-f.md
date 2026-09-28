@@ -16,6 +16,8 @@ function releaseDeviceManager(deviceManager: DeviceManager): void
 
 **起始版本：** 10
 
+<!--Device-distributedDeviceManager-function releaseDeviceManager(deviceManager: DeviceManager): void--><!--Device-distributedDeviceManager-function releaseDeviceManager(deviceManager: DeviceManager): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **参数：**

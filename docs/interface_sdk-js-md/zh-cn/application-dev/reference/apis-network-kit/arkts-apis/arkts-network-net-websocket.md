@@ -8,6 +8,8 @@
 
 **起始版本：** 6
 
+<!--Device-unnamed-declare namespace webSocket--><!--Device-unnamed-declare namespace webSocket-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块

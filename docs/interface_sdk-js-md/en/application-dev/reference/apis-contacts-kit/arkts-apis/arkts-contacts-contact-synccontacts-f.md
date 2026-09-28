@@ -24,6 +24,8 @@ A maximum of 400 contacts can be synchronized at a time. The caller must be runn
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-contact-function syncContacts(context: Context, mode: ContactSyncMode, progress: ContactSyncProgress, contacts: Array<Contact>): Promise<Array<int>>--><!--Device-contact-function syncContacts(context: Context, mode: ContactSyncMode, progress: ContactSyncProgress, contacts: Array<Contact>): Promise<Array<int>>-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**

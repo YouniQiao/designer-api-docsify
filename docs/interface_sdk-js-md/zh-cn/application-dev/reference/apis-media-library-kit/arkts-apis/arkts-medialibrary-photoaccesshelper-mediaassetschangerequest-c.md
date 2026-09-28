@@ -10,6 +10,8 @@ class MediaAssetsChangeRequest implements MediaChangeRequest
 
 **起始版本：** 26.0.0
 
+<!--Device-photoAccessHelper-class MediaAssetsChangeRequest implements MediaChangeRequest--><!--Device-photoAccessHelper-class MediaAssetsChangeRequest implements MediaChangeRequest-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
@@ -27,6 +29,8 @@ constructor(assets: Array<PhotoAsset>)
 构造函数。用于初始化批量资产变更请求。
 
 **起始版本：** 26.0.0
+
+<!--Device-MediaAssetsChangeRequest-constructor(assets: Array<PhotoAsset>)--><!--Device-MediaAssetsChangeRequest-constructor(assets: Array<PhotoAsset>)-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -51,6 +55,8 @@ setFavorite(favoriteState: boolean): void
 批量将文件设置为收藏文件。
 
 **起始版本：** 26.0.0
+
+<!--Device-MediaAssetsChangeRequest-setFavorite(favoriteState: boolean): void--><!--Device-MediaAssetsChangeRequest-setFavorite(favoriteState: boolean): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

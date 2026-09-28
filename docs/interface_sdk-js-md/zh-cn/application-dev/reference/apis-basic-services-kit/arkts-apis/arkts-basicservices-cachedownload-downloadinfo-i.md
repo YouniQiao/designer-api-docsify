@@ -8,6 +8,8 @@ interface DownloadInfo
 
 **起始版本：** 20
 
+<!--Device-cacheDownload-interface DownloadInfo--><!--Device-cacheDownload-interface DownloadInfo-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## 导入模块
@@ -28,6 +30,8 @@ readonly network: NetworkInfo
 
 **起始版本：** 20
 
+<!--Device-DownloadInfo-readonly network: NetworkInfo--><!--Device-DownloadInfo-readonly network: NetworkInfo-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## performance
@@ -42,6 +46,8 @@ readonly performance: PerformanceInfo
 
 **起始版本：** 20
 
+<!--Device-DownloadInfo-readonly performance: PerformanceInfo--><!--Device-DownloadInfo-readonly performance: PerformanceInfo-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## resource
@@ -55,5 +61,7 @@ readonly resource: ResourceInfo
 **类型：** [ResourceInfo](arkts-basicservices-cachedownload-resourceinfo-i.md)
 
 **起始版本：** 20
+
+<!--Device-DownloadInfo-readonly resource: ResourceInfo--><!--Device-DownloadInfo-readonly resource: ResourceInfo-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent

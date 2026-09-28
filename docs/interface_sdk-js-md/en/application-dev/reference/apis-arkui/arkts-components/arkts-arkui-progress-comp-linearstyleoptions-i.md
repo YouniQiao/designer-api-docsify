@@ -12,6 +12,8 @@ Inherits from [ScanEffectOptions](arkts-arkui-progress-comp-scaneffectoptions-i.
 
 **Since:** 10
 
+<!--Device-unnamed-declare interface LinearStyleOptions extends ScanEffectOptions, CommonProgressStyleOptions--><!--Device-unnamed-declare interface LinearStyleOptions extends ScanEffectOptions, CommonProgressStyleOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## strokeRadius
@@ -36,6 +38,8 @@ If the value exceeds the value range, the default value is used.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-LinearStyleOptions-strokeRadius?: PX | VP | LPX | Resource--><!--Device-LinearStyleOptions-strokeRadius?: PX | VP | LPX | Resource-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## strokeWidth
@@ -59,5 +63,7 @@ If the value exceeds the value range or an invalid value is set, the default val
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-LinearStyleOptions-strokeWidth?: Length--><!--Device-LinearStyleOptions-strokeWidth?: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

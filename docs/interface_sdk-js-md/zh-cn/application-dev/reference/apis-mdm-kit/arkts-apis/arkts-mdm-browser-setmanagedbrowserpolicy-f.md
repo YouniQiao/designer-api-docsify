@@ -24,6 +24,8 @@ function setManagedBrowserPolicy(admin: Want, bundleName: string, policyName: st
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-browser-function setManagedBrowserPolicy(admin: Want, bundleName: string, policyName: string, policyValue: string): void--><!--Device-browser-function setManagedBrowserPolicy(admin: Want, bundleName: string, policyName: string, policyValue: string): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**

@@ -8,6 +8,8 @@
 
 **起始版本：** 15
 
+<!--Device-unnamed-declare namespace keyManager--><!--Device-unnamed-declare namespace keyManager-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Encryption
 
 ## 导入模块

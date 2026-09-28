@@ -16,6 +16,8 @@ Creates a image PixelMap from sendable image PixelMap.
 
 **起始版本：** 12
 
+<!--Device-sendableImage-function convertToPixelMap(pixelmap: PixelMap): image.PixelMap--><!--Device-sendableImage-function convertToPixelMap(pixelmap: PixelMap): image.PixelMap-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**

@@ -16,6 +16,8 @@ function getIntervalSinceLastInput(): Promise<number>
 
 **起始版本：** 14
 
+<!--Device-inputDevice-function getIntervalSinceLastInput(): Promise<long>--><!--Device-inputDevice-function getIntervalSinceLastInput(): Promise<long>-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 **返回值：**

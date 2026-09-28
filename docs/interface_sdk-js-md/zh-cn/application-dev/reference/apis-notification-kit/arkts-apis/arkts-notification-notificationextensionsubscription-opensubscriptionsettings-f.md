@@ -18,6 +18,8 @@ function openSubscriptionSettings(context: UIAbilityContext): Promise<void>
 
 **需要权限：** ohos.permission.SUBSCRIBE_NOTIFICATION
 
+<!--Device-notificationExtensionSubscription-function openSubscriptionSettings(context: UIAbilityContext): Promise<void>--><!--Device-notificationExtensionSubscription-function openSubscriptionSettings(context: UIAbilityContext): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **参数：**

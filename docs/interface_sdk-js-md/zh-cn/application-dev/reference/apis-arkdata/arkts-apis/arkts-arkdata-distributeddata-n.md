@@ -26,6 +26,8 @@ declare namespace distributedData
 
 **替代接口：** [distributedKVStore](arkts-arkdata-data-distributedkvstore.md)
 
+<!--Device-unnamed-declare namespace distributedData--><!--Device-unnamed-declare namespace distributedData-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 ## 导入模块

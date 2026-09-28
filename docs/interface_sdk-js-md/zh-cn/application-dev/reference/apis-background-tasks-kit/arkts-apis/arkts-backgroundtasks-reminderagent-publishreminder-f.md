@@ -12,7 +12,7 @@ import { reminderAgent } from '@kit.BackgroundTasksKit';
 function publishReminder(reminderReq: ReminderRequest, callback: AsyncCallback<number>): void
 ```
 
-发布一个后台代理提醒，使用回调的方式实现异步调用，该方法需要申请通知弹窗权限[Notification.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notification-requestenablenotification-depr-f.md#requestenablenotification)后才能调用。
+发布一个后台代理提醒，使用回调的方式实现异步调用，该方法需要申请通知弹窗权限[Notification.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notification-requestenablenotification-depr-f.md)后才能调用。
 
 **起始版本：** 7
 
@@ -21,6 +21,8 @@ function publishReminder(reminderReq: ReminderRequest, callback: AsyncCallback<n
 **替代接口：** [publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md)
 
 **需要权限：** ohos.permission.PUBLISH_AGENT_REMINDER
+
+<!--Device-reminderAgent-function publishReminder(reminderReq: ReminderRequest, callback: AsyncCallback<number>): void--><!--Device-reminderAgent-function publishReminder(reminderReq: ReminderRequest, callback: AsyncCallback<number>): void-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -56,7 +58,7 @@ reminderAgent.publishReminder(timer, (err: BusinessError, reminderId: number) =>
 function publishReminder(reminderReq: ReminderRequest): Promise<number>
 ```
 
-发布一个后台代理提醒，使用Promise方式实现异步调用，该方法需要申请通知弹窗权限[Notification.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notification-requestenablenotification-depr-f.md#requestenablenotification)后才能调用。
+发布一个后台代理提醒，使用Promise方式实现异步调用，该方法需要申请通知弹窗权限[Notification.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notification-requestenablenotification-depr-f.md)后才能调用。
 
 **起始版本：** 7
 
@@ -65,6 +67,8 @@ function publishReminder(reminderReq: ReminderRequest): Promise<number>
 **替代接口：** [publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md)
 
 **需要权限：** ohos.permission.PUBLISH_AGENT_REMINDER
+
+<!--Device-reminderAgent-function publishReminder(reminderReq: ReminderRequest): Promise<number>--><!--Device-reminderAgent-function publishReminder(reminderReq: ReminderRequest): Promise<number>-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 

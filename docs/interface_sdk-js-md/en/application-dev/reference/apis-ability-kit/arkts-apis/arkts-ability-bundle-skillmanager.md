@@ -8,6 +8,8 @@ This module provides skill query capabilities for applications.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-unnamed-declare namespace skillManager--><!--Device-unnamed-declare namespace skillManager-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## Modules to Import

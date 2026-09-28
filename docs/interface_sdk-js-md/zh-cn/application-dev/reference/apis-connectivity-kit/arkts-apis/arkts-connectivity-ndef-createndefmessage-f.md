@@ -18,6 +18,8 @@ function createNdefMessage(data: number[]): NdefMessage
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-ndef-function createNdefMessage(data: int[]): NdefMessage--><!--Device-ndef-function createNdefMessage(data: int[]): NdefMessage-End-->
+
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 **参数：**
@@ -52,6 +54,8 @@ function createNdefMessage(ndefRecords: NdefRecord[]): NdefMessage
 **起始版本：** 9
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ndef-function createNdefMessage(ndefRecords: NdefRecord[]): NdefMessage--><!--Device-ndef-function createNdefMessage(ndefRecords: NdefRecord[]): NdefMessage-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 

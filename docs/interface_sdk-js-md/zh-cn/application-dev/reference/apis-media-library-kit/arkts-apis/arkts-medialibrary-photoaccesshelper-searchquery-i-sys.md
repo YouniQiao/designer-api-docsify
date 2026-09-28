@@ -8,6 +8,8 @@ interface SearchQuery
 
 **起始版本：** 26.0.1
 
+<!--Device-photoAccessHelper-interface SearchQuery--><!--Device-photoAccessHelper-interface SearchQuery-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ offset: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SearchQuery-offset: int--><!--Device-SearchQuery-offset: int-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -50,6 +54,8 @@ queryString: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SearchQuery-queryString: string--><!--Device-SearchQuery-queryString: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -67,6 +73,8 @@ size: number
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SearchQuery-size: int--><!--Device-SearchQuery-size: int-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

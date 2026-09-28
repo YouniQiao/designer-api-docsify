@@ -20,6 +20,8 @@ export interface LocalUpdater
 
 **起始版本：** 9
 
+<!--Device-update-export interface LocalUpdater--><!--Device-update-export interface LocalUpdater-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -54,6 +56,8 @@ applyNewVersion(upgradeFiles: Array<UpgradeFile>, callback: AsyncCallback<void>)
 **起始版本：** 9
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
+
+<!--Device-LocalUpdater-applyNewVersion(upgradeFiles: Array<UpgradeFile>, callback: AsyncCallback<void>): void--><!--Device-LocalUpdater-applyNewVersion(upgradeFiles: Array<UpgradeFile>, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -128,6 +132,8 @@ applyNewVersion(upgradeFiles: Array<UpgradeFile>): Promise<void>
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-LocalUpdater-applyNewVersion(upgradeFiles: Array<UpgradeFile>): Promise<void>--><!--Device-LocalUpdater-applyNewVersion(upgradeFiles: Array<UpgradeFile>): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -199,6 +205,8 @@ off(eventClassifyInfo: EventClassifyInfo, taskCallback?: UpgradeTaskCallback): v
 
 **起始版本：** 9
 
+<!--Device-LocalUpdater-off(eventClassifyInfo: EventClassifyInfo, taskCallback?: UpgradeTaskCallback): void--><!--Device-LocalUpdater-off(eventClassifyInfo: EventClassifyInfo, taskCallback?: UpgradeTaskCallback): void-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -264,6 +272,8 @@ on(eventClassifyInfo: EventClassifyInfo, taskCallback: UpgradeTaskCallback): voi
 - 在操作完成或收到最终事件后取消监听。
 
 **起始版本：** 9
+
+<!--Device-LocalUpdater-on(eventClassifyInfo: EventClassifyInfo, taskCallback: UpgradeTaskCallback): void--><!--Device-LocalUpdater-on(eventClassifyInfo: EventClassifyInfo, taskCallback: UpgradeTaskCallback): void-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -332,6 +342,8 @@ verifyUpgradePackage(upgradeFile: UpgradeFile, certsFile: string, callback: Asyn
 **起始版本：** 9
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
+
+<!--Device-LocalUpdater-verifyUpgradePackage(upgradeFile: UpgradeFile, certsFile: string, callback: AsyncCallback<void>): void--><!--Device-LocalUpdater-verifyUpgradePackage(upgradeFile: UpgradeFile, certsFile: string, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -409,6 +421,8 @@ verifyUpgradePackage(upgradeFile: UpgradeFile, certsFile: string): Promise<void>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
+
+<!--Device-LocalUpdater-verifyUpgradePackage(upgradeFile: UpgradeFile, certsFile: string): Promise<void>--><!--Device-LocalUpdater-verifyUpgradePackage(upgradeFile: UpgradeFile, certsFile: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
 

@@ -16,6 +16,8 @@ function getDefaultVoiceSlotId(callback: AsyncCallback<number>): void
 
 **起始版本：** 7
 
+<!--Device-sim-function getDefaultVoiceSlotId(callback: AsyncCallback<int>): void--><!--Device-sim-function getDefaultVoiceSlotId(callback: AsyncCallback<int>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**
@@ -51,6 +53,8 @@ function getDefaultVoiceSlotId(): Promise<number>
 获取默认语音业务的卡槽ID。使用Promise异步回调。
 
 **起始版本：** 7
+
+<!--Device-sim-function getDefaultVoiceSlotId(): Promise<int>--><!--Device-sim-function getDefaultVoiceSlotId(): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

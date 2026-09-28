@@ -20,6 +20,8 @@ function setValueForAccount(admin: Want, item: SettingsItem, accountId: number, 
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-deviceSettings-function setValueForAccount(admin: Want, item: SettingsItem, accountId: number, value: string): void--><!--Device-deviceSettings-function setValueForAccount(admin: Want, item: SettingsItem, accountId: number, value: string): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**

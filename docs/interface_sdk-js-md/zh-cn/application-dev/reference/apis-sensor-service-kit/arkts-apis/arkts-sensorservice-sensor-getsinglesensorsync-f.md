@@ -16,6 +16,8 @@ function getSingleSensorSync(type: SensorId): Sensor
 
 **起始版本：** 12
 
+<!--Device-sensor-function getSingleSensorSync(type: SensorId): Sensor--><!--Device-sensor-function getSingleSensorSync(type: SensorId): Sensor-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**

@@ -20,6 +20,8 @@ function onConnectionStateChange(callback: Callback<ConnectionStateParam>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-remoteDevice-function onConnectionStateChange(callback: Callback<ConnectionStateParam>): void--><!--Device-remoteDevice-function onConnectionStateChange(callback: Callback<ConnectionStateParam>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **参数：**

@@ -28,6 +28,8 @@ function getSync(key: string, def?: string): string
 
 **替代接口：** getSync
 
+<!--Device-systemParameter-function getSync(key: string, def?: string): string--><!--Device-systemParameter-function getSync(key: string, def?: string): string-End-->
+
 **系统能力：** SystemCapability.Startup.SystemInfo
 
 **系统接口：** 此接口为系统接口。

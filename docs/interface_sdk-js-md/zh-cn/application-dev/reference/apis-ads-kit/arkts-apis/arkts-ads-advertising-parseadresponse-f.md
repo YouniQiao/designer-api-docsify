@@ -16,6 +16,8 @@ function parseAdResponse(adResponse: string, listener: MultiSlotsAdLoadListener,
 
 **起始版本：** 12
 
+<!--Device-advertising-function parseAdResponse(adResponse: string, listener: MultiSlotsAdLoadListener, context: common.UIAbilityContext): void--><!--Device-advertising-function parseAdResponse(adResponse: string, listener: MultiSlotsAdLoadListener, context: common.UIAbilityContext): void-End-->
+
 **系统能力：** SystemCapability.Advertising.Ads
 
 **参数：**

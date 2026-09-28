@@ -16,6 +16,8 @@ function getTextEmbeddingModel(config: ModelConfig): Promise<TextEmbedding>
 
 **起始版本：** 15
 
+<!--Device-intelligence-function getTextEmbeddingModel(config: ModelConfig): Promise<TextEmbedding>--><!--Device-intelligence-function getTextEmbeddingModel(config: ModelConfig): Promise<TextEmbedding>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
 **参数：**

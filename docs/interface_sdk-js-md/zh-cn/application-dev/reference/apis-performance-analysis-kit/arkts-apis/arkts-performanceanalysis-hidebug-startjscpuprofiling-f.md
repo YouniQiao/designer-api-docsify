@@ -16,6 +16,8 @@ function startJsCpuProfiling(filename : string) : void
 
 **起始版本：** 9
 
+<!--Device-hidebug-function startJsCpuProfiling(filename : string) : void--><!--Device-hidebug-function startJsCpuProfiling(filename : string) : void-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **参数：**

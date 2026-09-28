@@ -18,6 +18,8 @@ function exportVCard(context: Context, predicates: dataSharePredicates.DataShare
 
 **需要权限：** ohos.permission.WRITE_CONTACTS and ohos.permission.READ_CONTACTS
 
+<!--Device-vcard-function exportVCard(context: Context, predicates: dataSharePredicates.DataSharePredicates, options: VCardBuilderOptions, callback: AsyncCallback<string>): void--><!--Device-vcard-function exportVCard(context: Context, predicates: dataSharePredicates.DataSharePredicates, options: VCardBuilderOptions, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**
@@ -78,6 +80,8 @@ function exportVCard(context: Context, predicates: dataSharePredicates.DataShare
 **起始版本：** 23
 
 **需要权限：** ohos.permission.WRITE_CONTACTS and ohos.permission.READ_CONTACTS
+
+<!--Device-vcard-function exportVCard(context: Context, predicates: dataSharePredicates.DataSharePredicates, options?: VCardBuilderOptions): Promise<string>--><!--Device-vcard-function exportVCard(context: Context, predicates: dataSharePredicates.DataSharePredicates, options?: VCardBuilderOptions): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -146,6 +150,8 @@ function exportVCard(context: Context, predicates: dataSharePredicates.DataShare
 **起始版本：** 23
 
 **需要权限：** ohos.permission.WRITE_CONTACTS and ohos.permission.READ_CONTACTS
+
+<!--Device-vcard-function exportVCard(context: Context, predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<string>): void--><!--Device-vcard-function exportVCard(context: Context, predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

@@ -18,6 +18,8 @@ function getKeepAliveBundles(type: KeepAliveAppType, userId?: number): Promise<A
 
 **需要权限：** ohos.permission.MANAGE_APP_KEEP_ALIVE
 
+<!--Device-appManager-function getKeepAliveBundles(type: KeepAliveAppType, userId?: int): Promise<Array<KeepAliveBundleInfo>>--><!--Device-appManager-function getKeepAliveBundles(type: KeepAliveAppType, userId?: int): Promise<Array<KeepAliveBundleInfo>>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。

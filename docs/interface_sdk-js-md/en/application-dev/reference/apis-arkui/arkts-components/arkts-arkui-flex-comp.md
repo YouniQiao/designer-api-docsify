@@ -6,9 +6,9 @@ For details, see [Flex Layout](../../../ui/arkts-layout-development-flex-layout.
 
 > **NOTE:** 
 > 
-> - The **Flex** component involves a secondary layout process during rendering. Therefore, in scenarios with strict performance requirements, you are advised to use [Column](arkts-arkui-column-comp.md#column) or [Row](arkts-arkui-row-comp.md#row) instead. For best practices, see the layout optimization guide - Proper Use of Layout Components.
+> - The **Flex** component involves a secondary layout process during rendering. Therefore, in scenarios with strict performance requirements, you are advised to use [Column](arkts-arkui-column-comp.md) or [Row](arkts-arkui-row-comp.md) instead. For best practices, see the layout optimization guide - Proper Use of Layout Components.
 > 
-> - When the main axis length of the **Flex** component is not set, it fills the parent container by default. If a child component with [position](arkts-arkui-common-comp-commonmethod-c.md#position) set is included, the **Flex** component will not fill the parent container. When the main axis length of the [Column](arkts-arkui-column-comp.md#column) or [Row](arkts-arkui-row-comp.md#row) component is not set, it follows the child node size by default.
+> - When the main axis length of the **Flex** component is not set, it fills the parent container by default. If a child component with [position](arkts-arkui-common-comp-commonmethod-c.md#position) set is included, the **Flex** component will not fill the parent container. When the main axis length of the [Column](arkts-arkui-column-comp.md) or [Row](arkts-arkui-row-comp.md) component is not set, it follows the child node size by default.
 > 
 > - When the **Flex**, **Column**, or **Row** component has no child nodes and no width or height is set, the default width and height are **-1**.
 > 
@@ -31,6 +31,8 @@ Creates a **Flex** layout container for arranging and aligning child components 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-FlexInterface-(value?: FlexOptions): FlexAttribute--><!--Device-FlexInterface-(value?: FlexOptions): FlexAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -20,6 +20,8 @@ Creates an interpolating spring curve animated from 0 to 1. The actual animation
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-curves-function interpolatingSpring(velocity: number, mass: number, stiffness: number, damping: number): ICurve--><!--Device-curves-function interpolatingSpring(velocity: number, mass: number, stiffness: number, damping: number): ICurve-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

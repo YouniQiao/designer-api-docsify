@@ -14,6 +14,8 @@ interface BLEConnectChangedState
 
 **替代接口：** [BLEConnectionChangeState](arkts-connectivity-ble-bleconnectionchangestate-i.md)
 
+<!--Device-bluetoothManager-interface BLEConnectChangedState--><!--Device-bluetoothManager-interface BLEConnectChangedState-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -38,6 +40,8 @@ deviceId: string
 
 **替代接口：** [deviceId](arkts-connectivity-ble-bleconnectionchangestate-i.md#deviceid)
 
+<!--Device-BLEConnectChangedState-deviceId: string--><!--Device-BLEConnectChangedState-deviceId: string-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## state
@@ -55,5 +59,7 @@ state: ProfileConnectionState
 **废弃版本：** 10
 
 **替代接口：** [state](arkts-connectivity-ble-bleconnectionchangestate-i.md#state)
+
+<!--Device-BLEConnectChangedState-state: ProfileConnectionState--><!--Device-BLEConnectChangedState-state: ProfileConnectionState-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

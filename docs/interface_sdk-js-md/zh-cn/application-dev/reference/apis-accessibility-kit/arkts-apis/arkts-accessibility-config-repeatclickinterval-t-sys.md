@@ -10,6 +10,8 @@ type RepeatClickInterval = 'Shortest' | 'Short' | 'Medium' | 'Long' | 'Longest'
 
 **起始版本：** 11
 
+<!--Device-config-type RepeatClickInterval = 'Shortest' | 'Short' | 'Medium' | 'Long' | 'Longest'--><!--Device-config-type RepeatClickInterval = 'Shortest' | 'Short' | 'Medium' | 'Long' | 'Longest'-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。

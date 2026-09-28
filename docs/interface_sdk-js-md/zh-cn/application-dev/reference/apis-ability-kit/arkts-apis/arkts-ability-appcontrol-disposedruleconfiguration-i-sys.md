@@ -8,6 +8,8 @@ export interface DisposedRuleConfiguration
 
 **起始版本：** 20
 
+<!--Device-appControl-export interface DisposedRuleConfiguration--><!--Device-appControl-export interface DisposedRuleConfiguration-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 
 **系统接口：** 此接口为系统接口。
@@ -36,6 +38,8 @@ appId是应用的唯一标识，由应用Bundle名称和签名信息决定，获
 
 **起始版本：** 20
 
+<!--Device-DisposedRuleConfiguration-appId: string--><!--Device-DisposedRuleConfiguration-appId: string-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 
 **系统接口：** 此接口为系统接口。
@@ -54,6 +58,8 @@ appIndex为0时，表示设置主应用的拦截规则。appIndex大于0时，�
 
 **起始版本：** 20
 
+<!--Device-DisposedRuleConfiguration-appIndex: int--><!--Device-DisposedRuleConfiguration-appIndex: int-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 
 **系统接口：** 此接口为系统接口。
@@ -69,6 +75,8 @@ disposedRule: DisposedRule
 **类型：** [DisposedRule](arkts-ability-appcontrol-disposedrule-i-sys.md)
 
 **起始版本：** 20
+
+<!--Device-DisposedRuleConfiguration-disposedRule: DisposedRule--><!--Device-DisposedRuleConfiguration-disposedRule: DisposedRule-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 

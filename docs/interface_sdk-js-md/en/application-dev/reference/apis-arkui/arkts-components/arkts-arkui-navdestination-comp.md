@@ -37,6 +37,8 @@ Creates the root container for a subpage in Navigation.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-NavDestinationInterface-(): NavDestinationAttribute--><!--Device-NavDestinationInterface-(): NavDestinationAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Summary

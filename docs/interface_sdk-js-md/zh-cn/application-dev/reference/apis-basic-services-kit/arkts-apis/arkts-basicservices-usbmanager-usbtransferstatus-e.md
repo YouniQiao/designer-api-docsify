@@ -8,6 +8,8 @@ export enum UsbTransferStatus
 
 **起始版本：** 18
 
+<!--Device-usbManager-export enum UsbTransferStatus--><!--Device-usbManager-export enum UsbTransferStatus-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## TRANSFER_COMPLETED
@@ -19,6 +21,8 @@ TRANSFER_COMPLETED = 0
 传输完成。
 
 **起始版本：** 18
+
+<!--Device-UsbTransferStatus-TRANSFER_COMPLETED = 0--><!--Device-UsbTransferStatus-TRANSFER_COMPLETED = 0-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -32,6 +36,8 @@ TRANSFER_ERROR = 1
 
 **起始版本：** 18
 
+<!--Device-UsbTransferStatus-TRANSFER_ERROR = 1--><!--Device-UsbTransferStatus-TRANSFER_ERROR = 1-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## TRANSFER_TIMED_OUT
@@ -43,6 +49,8 @@ TRANSFER_TIMED_OUT = 2
 传输超时。
 
 **起始版本：** 18
+
+<!--Device-UsbTransferStatus-TRANSFER_TIMED_OUT = 2--><!--Device-UsbTransferStatus-TRANSFER_TIMED_OUT = 2-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -56,6 +64,8 @@ TRANSFER_CANCELED = 3
 
 **起始版本：** 18
 
+<!--Device-UsbTransferStatus-TRANSFER_CANCELED = 3--><!--Device-UsbTransferStatus-TRANSFER_CANCELED = 3-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## TRANSFER_STALL
@@ -67,6 +77,8 @@ TRANSFER_STALL = 4
 检测到暂停（批量/中断端点）。
 
 **起始版本：** 18
+
+<!--Device-UsbTransferStatus-TRANSFER_STALL = 4--><!--Device-UsbTransferStatus-TRANSFER_STALL = 4-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -80,6 +92,8 @@ TRANSFER_NO_DEVICE = 5
 
 **起始版本：** 18
 
+<!--Device-UsbTransferStatus-TRANSFER_NO_DEVICE = 5--><!--Device-UsbTransferStatus-TRANSFER_NO_DEVICE = 5-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## TRANSFER_OVERFLOW
@@ -91,5 +105,7 @@ TRANSFER_OVERFLOW = 6
 设备发送的数据比请求的多。
 
 **起始版本：** 18
+
+<!--Device-UsbTransferStatus-TRANSFER_OVERFLOW = 6--><!--Device-UsbTransferStatus-TRANSFER_OVERFLOW = 6-End-->
 
 **系统能力：** SystemCapability.USB.USBManager

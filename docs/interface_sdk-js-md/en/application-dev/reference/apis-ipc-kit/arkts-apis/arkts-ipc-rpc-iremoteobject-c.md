@@ -8,6 +8,8 @@ Provides methods to query or obtain interface descriptors, add or delete death n
 
 **Since:** 7
 
+<!--Device-rpc-abstract class IRemoteObject--><!--Device-rpc-abstract class IRemoteObject-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 ## Modules to Import
@@ -25,6 +27,8 @@ getDescriptor(): string
 Obtains the interface descriptor (which is a string) of this object.
 
 **Since:** 9
+
+<!--Device-IRemoteObject-getDescriptor(): string--><!--Device-IRemoteObject-getDescriptor(): string-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -49,6 +53,8 @@ getLocalInterface(descriptor: string): IRemoteBroker
 Obtains the string of the interface descriptor.
 
 **Since:** 9
+
+<!--Device-IRemoteObject-getLocalInterface(descriptor: string): IRemoteBroker--><!--Device-IRemoteObject-getLocalInterface(descriptor: string): IRemoteBroker-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -80,6 +86,8 @@ Checks whether this object is dead.
 
 **Since:** 7
 
+<!--Device-IRemoteObject-isObjectDead(): boolean--><!--Device-IRemoteObject-isObjectDead(): boolean-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -97,6 +105,8 @@ registerDeathRecipient(recipient: DeathRecipient, flags: number): void
 Registers a callback for receiving death notifications of the remote object.
 
 **Since:** 9
+
+<!--Device-IRemoteObject-registerDeathRecipient(recipient: DeathRecipient, flags: int): void--><!--Device-IRemoteObject-registerDeathRecipient(recipient: DeathRecipient, flags: int): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -129,6 +139,8 @@ sendMessageRequest(
 Sends a **MessageSequence** message to the remote process in synchronous or asynchronous mode. If the asynchronous mode is set in **options**, the response result is returned immediately and **reply** is empty. The specific response needs to be obtained from the callback on the service side. If the synchronous mode is set in **options**, the response result is returned when **sendMessageRequest** returns, and **reply** contains the response content. This API returns the result asynchronously through a promise.
 
 **Since:** 9
+
+<!--Device-IRemoteObject-sendMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption    ): Promise<RequestResult>--><!--Device-IRemoteObject-sendMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption    ): Promise<RequestResult>-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -171,6 +183,8 @@ Sends a **MessageSequence** message to the remote process in synchronous or asyn
 
 **Since:** 9
 
+<!--Device-IRemoteObject-sendMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption,      callback: AsyncCallback<RequestResult>    ): void--><!--Device-IRemoteObject-sendMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption,      callback: AsyncCallback<RequestResult>    ): void-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
@@ -198,6 +212,8 @@ unregisterDeathRecipient(recipient: DeathRecipient, flags: number): void
 Unregisters from the callback used to receive death notifications of the remote object.
 
 **Since:** 9
+
+<!--Device-IRemoteObject-unregisterDeathRecipient(recipient: DeathRecipient, flags: int): void--><!--Device-IRemoteObject-unregisterDeathRecipient(recipient: DeathRecipient, flags: int): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -230,6 +246,8 @@ Adds a callback for receiving death notifications of the remote object.
 
 **Substitutes:** registerDeathRecipient(recipient: DeathRecipient, flags: number)
 
+<!--Device-IRemoteObject-addDeathRecipient(recipient: DeathRecipient, flags: number): boolean--><!--Device-IRemoteObject-addDeathRecipient(recipient: DeathRecipient, flags: number): boolean-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
@@ -259,6 +277,8 @@ Obtains the interface descriptor (which is a string) of this object.
 
 **Substitutes:** getDescriptor()
 
+<!--Device-IRemoteObject-getInterfaceDescriptor(): string--><!--Device-IRemoteObject-getInterfaceDescriptor(): string-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -280,6 +300,8 @@ Obtains the string of the interface descriptor.
 **Deprecated since:** 9
 
 **Substitutes:** getLocalInterface(descriptor: string)
+
+<!--Device-IRemoteObject-queryLocalInterface(descriptor: string): IRemoteBroker--><!--Device-IRemoteObject-queryLocalInterface(descriptor: string): IRemoteBroker-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -309,6 +331,8 @@ Removes the callback used to receive death notifications of the remote object.
 
 **Substitutes:** unregisterDeathRecipient(recipient: DeathRecipient, flags: number)
 
+<!--Device-IRemoteObject-removeDeathRecipient(recipient: DeathRecipient, flags: number): boolean--><!--Device-IRemoteObject-removeDeathRecipient(recipient: DeathRecipient, flags: number): boolean-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
@@ -337,6 +361,8 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 **Deprecated since:** 9
 
 **Substitutes:** sendMessageRequest(code: number, data: MessageSequence, reply: MessageSequence, options: MessageOption)
+
+<!--Device-IRemoteObject-sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean--><!--Device-IRemoteObject-sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -376,6 +402,8 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 
 **Substitutes:** sendMessageRequest(code: number, data: MessageSequence, reply: MessageSequence, options: MessageOption)
 
+<!--Device-IRemoteObject-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption    ): Promise<SendRequestResult>--><!--Device-IRemoteObject-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption    ): Promise<SendRequestResult>-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
@@ -414,6 +442,8 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 **Deprecated since:** 9
 
 **Substitutes:** sendMessageRequest(code: number, data: MessageSequence, reply: MessageSequence, options: MessageOption, callback: AsyncCallback&lt;RequestResult&gt;)
+
+<!--Device-IRemoteObject-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption,      callback: AsyncCallback<SendRequestResult>    ): void--><!--Device-IRemoteObject-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption,      callback: AsyncCallback<SendRequestResult>    ): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 

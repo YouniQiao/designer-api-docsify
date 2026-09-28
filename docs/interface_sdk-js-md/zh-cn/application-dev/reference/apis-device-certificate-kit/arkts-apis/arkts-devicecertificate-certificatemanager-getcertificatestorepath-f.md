@@ -16,6 +16,8 @@ function getCertificateStorePath(property: CertStoreProperty): string
 
 **起始版本：** 18
 
+<!--Device-certificateManager-function getCertificateStorePath(property: CertStoreProperty): string--><!--Device-certificateManager-function getCertificateStorePath(property: CertStoreProperty): string-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
 
 **参数：**

@@ -22,6 +22,8 @@ Constructor parameters
 
 **Substitutes:** (value: { id: string; type: XComponentType; libraryname?: string; controller?: XComponentController })
 
+<!--Device-XComponentInterface-(value: { id: string; type: string; libraryname?: string; controller?: XComponentController }): XComponentAttribute--><!--Device-XComponentInterface-(value: { id: string; type: string; libraryname?: string; controller?: XComponentController }): XComponentAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -46,6 +48,8 @@ This API is deprecated since API version 12. You are advised to use [XComponent(
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-XComponentInterface-(value: { id: string; type: XComponentType; libraryname?: string; controller?: XComponentController }): XComponentAttribute--><!--Device-XComponentInterface-(value: { id: string; type: XComponentType; libraryname?: string; controller?: XComponentController }): XComponentAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -68,6 +72,8 @@ Creates an **XComponent** component, allowing you to obtain the **SurfaceId** va
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-XComponentInterface-(options: XComponentOptions): XComponentAttribute--><!--Device-XComponentInterface-(options: XComponentOptions): XComponentAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -89,6 +95,8 @@ Obtains an **XComponent** node instance on the native side, and registers the li
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-XComponentInterface-(params: NativeXComponentParameters): XComponentAttribute--><!--Device-XComponentInterface-(params: NativeXComponentParameters): XComponentAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

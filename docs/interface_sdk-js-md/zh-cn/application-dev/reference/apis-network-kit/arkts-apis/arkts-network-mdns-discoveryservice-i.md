@@ -8,6 +8,8 @@ export interface DiscoveryService
 
 **起始版本：** 10
 
+<!--Device-mdns-export interface DiscoveryService--><!--Device-mdns-export interface DiscoveryService-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.MDNS
 
 ## 导入模块
@@ -27,6 +29,8 @@ off(type: 'discoveryStart', callback?: Callback<DiscoveryEventInfo>): void
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-DiscoveryService-off(type: 'discoveryStart', callback?: Callback<DiscoveryEventInfo>): void--><!--Device-DiscoveryService-off(type: 'discoveryStart', callback?: Callback<DiscoveryEventInfo>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.MDNS
 
@@ -77,6 +81,8 @@ off(type: 'discoveryStop', callback?: Callback<DiscoveryEventInfo>): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-DiscoveryService-off(type: 'discoveryStop', callback?: Callback<DiscoveryEventInfo>): void--><!--Device-DiscoveryService-off(type: 'discoveryStop', callback?: Callback<DiscoveryEventInfo>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.MDNS
 
 **参数：**
@@ -125,6 +131,8 @@ off(type: 'serviceFound', callback?: Callback<LocalServiceInfo>): void
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-DiscoveryService-off(type: 'serviceFound', callback?: Callback<LocalServiceInfo>): void--><!--Device-DiscoveryService-off(type: 'serviceFound', callback?: Callback<LocalServiceInfo>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.MDNS
 
@@ -178,6 +186,8 @@ off(type: 'serviceLost', callback?: Callback<LocalServiceInfo>): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-DiscoveryService-off(type: 'serviceLost', callback?: Callback<LocalServiceInfo>): void--><!--Device-DiscoveryService-off(type: 'serviceLost', callback?: Callback<LocalServiceInfo>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.MDNS
 
 **参数：**
@@ -227,6 +237,8 @@ on(type: 'discoveryStart', callback: Callback<DiscoveryEventInfo>): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-DiscoveryService-on(type: 'discoveryStart', callback: Callback<DiscoveryEventInfo>): void--><!--Device-DiscoveryService-on(type: 'discoveryStart', callback: Callback<DiscoveryEventInfo>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.MDNS
 
 **参数：**
@@ -272,6 +284,8 @@ on(type: 'discoveryStop', callback: Callback<DiscoveryEventInfo>): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-DiscoveryService-on(type: 'discoveryStop', callback: Callback<DiscoveryEventInfo>): void--><!--Device-DiscoveryService-on(type: 'discoveryStop', callback: Callback<DiscoveryEventInfo>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.MDNS
 
 **参数：**
@@ -316,6 +330,8 @@ on(type: 'serviceFound', callback: Callback<LocalServiceInfo>): void
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-DiscoveryService-on(type: 'serviceFound', callback: Callback<LocalServiceInfo>): void--><!--Device-DiscoveryService-on(type: 'serviceFound', callback: Callback<LocalServiceInfo>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.MDNS
 
@@ -365,6 +381,8 @@ on(type: 'serviceLost', callback: Callback<LocalServiceInfo>): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-DiscoveryService-on(type: 'serviceLost', callback: Callback<LocalServiceInfo>): void--><!--Device-DiscoveryService-on(type: 'serviceLost', callback: Callback<LocalServiceInfo>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.MDNS
 
 **参数：**
@@ -410,6 +428,8 @@ startSearchingMDNS(): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-DiscoveryService-startSearchingMDNS(): void--><!--Device-DiscoveryService-startSearchingMDNS(): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.MDNS
 
 **示例**
@@ -443,6 +463,8 @@ stopSearchingMDNS(): void
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-DiscoveryService-stopSearchingMDNS(): void--><!--Device-DiscoveryService-stopSearchingMDNS(): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.MDNS
 

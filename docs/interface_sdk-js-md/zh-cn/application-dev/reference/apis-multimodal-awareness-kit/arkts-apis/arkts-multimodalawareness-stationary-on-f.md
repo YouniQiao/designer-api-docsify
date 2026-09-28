@@ -16,6 +16,8 @@ function on(activity: ActivityType, event: ActivityEvent, reportLatencyNs: numbe
 
 **起始版本：** 9
 
+<!--Device-stationary-function on(activity: ActivityType, event: ActivityEvent, reportLatencyNs: number, callback: Callback<ActivityResponse>): void--><!--Device-stationary-function on(activity: ActivityType, event: ActivityEvent, reportLatencyNs: number, callback: Callback<ActivityResponse>): void-End-->
+
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Stationary
 
 **参数：**

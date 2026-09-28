@@ -18,6 +18,8 @@ function getSelfManagedBrowserPolicyVersion(): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-browser-function getSelfManagedBrowserPolicyVersion(): string--><!--Device-browser-function getSelfManagedBrowserPolicyVersion(): string-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **返回值：**

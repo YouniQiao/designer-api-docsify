@@ -20,6 +20,8 @@ function hibernate(clearMemory: boolean): void
 - API版本19+：ohos.permission.POWER_MANAGER
 - API版本12-18：N/A
 
+<!--Device-power-function hibernate(clearMemory: boolean): void--><!--Device-power-function hibernate(clearMemory: boolean): void-End-->
+
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 
 **系统接口：** 此接口为系统接口。

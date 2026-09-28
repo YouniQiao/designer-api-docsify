@@ -8,6 +8,8 @@ class Readable
 
 **起始版本：** 12
 
+<!--Device-stream-class Readable--><!--Device-stream-class Readable-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -26,7 +28,9 @@ constructor()
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Readable-constructor()--><!--Device-Readable-constructor()-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -48,7 +52,9 @@ constructor(options: ReadableOptions)
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Readable-constructor(options: ReadableOptions)--><!--Device-Readable-constructor(options: ReadableOptions)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -77,7 +83,9 @@ doInitialize(callback: Function): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Readable-doInitialize(callback: Function): void--><!--Device-Readable-doInitialize(callback: Function): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -115,7 +123,9 @@ doRead(size: number): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Readable-doRead(size: int): void--><!--Device-Readable-doRead(size: int): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -153,7 +163,9 @@ isPaused(): boolean
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Readable-isPaused(): boolean--><!--Device-Readable-isPaused(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -192,6 +204,8 @@ off(event: string, callback?: Callback<emitter.EventData>): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Readable-off(event: string, callback?: Callback<emitter.EventData>): void--><!--Device-Readable-off(event: string, callback?: Callback<emitter.EventData>): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -239,6 +253,8 @@ on(event: string, callback: Callback<emitter.EventData>): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Readable-on(event: string, callback: Callback<emitter.EventData>): void--><!--Device-Readable-on(event: string, callback: Callback<emitter.EventData>): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -278,7 +294,9 @@ pause(): Readable
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Readable-pause(): Readable--><!--Device-Readable-pause(): Readable-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -315,7 +333,9 @@ pipe(destination: Writable, options?: Object): Writable
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Readable-pipe(destination: Writable, options?: Object): Writable--><!--Device-Readable-pipe(destination: Writable, options?: Object): Writable-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -372,7 +392,9 @@ push(chunk: Uint8Array | string | undefined | null, encoding?: string): boolean
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Readable-push(chunk: Uint8Array | string | undefined | null, encoding?: string): boolean--><!--Device-Readable-push(chunk: Uint8Array | string | undefined | null, encoding?: string): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -418,6 +440,8 @@ read(size?: number): string | null
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Readable-read(size?: number): string | null--><!--Device-Readable-read(size?: number): string | null-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -468,7 +492,9 @@ resume(): Readable
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Readable-resume(): Readable--><!--Device-Readable-resume(): Readable-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -505,7 +531,9 @@ setEncoding(encoding?: string): boolean
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Readable-setEncoding(encoding?: string): boolean--><!--Device-Readable-setEncoding(encoding?: string): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -548,7 +576,9 @@ unpipe(destination?: Writable): Readable
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Readable-unpipe(destination?: Writable): Readable--><!--Device-Readable-unpipe(destination?: Writable): Readable-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -610,7 +640,9 @@ get readable(): boolean
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Readable-get readable(): boolean--><!--Device-Readable-get readable(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -626,7 +658,9 @@ get readableEncoding(): string | null
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Readable-get readableEncoding(): string | null--><!--Device-Readable-get readableEncoding(): string | null-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -642,7 +676,9 @@ get readableEnded(): boolean
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Readable-get readableEnded(): boolean--><!--Device-Readable-get readableEnded(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -658,7 +694,9 @@ get readableFlowing(): boolean | null
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Readable-get readableFlowing(): boolean | null--><!--Device-Readable-get readableFlowing(): boolean | null-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -674,7 +712,9 @@ get readableHighWatermark(): number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Readable-get readableHighWatermark(): int--><!--Device-Readable-get readableHighWatermark(): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -690,7 +730,9 @@ get readableLength(): number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Readable-get readableLength(): int--><!--Device-Readable-get readableLength(): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -706,6 +748,8 @@ get readableObjectMode(): boolean
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Readable-get readableObjectMode(): boolean--><!--Device-Readable-get readableObjectMode(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

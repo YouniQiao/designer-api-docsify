@@ -8,6 +8,8 @@ class TaskInfo
 
 **起始版本：** 10
 
+<!--Device-taskpool-class TaskInfo--><!--Device-taskpool-class TaskInfo-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -30,6 +32,8 @@ duration?: number
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-TaskInfo-duration?: number--><!--Device-TaskInfo-duration?: number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## name
@@ -45,6 +49,8 @@ name: string
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TaskInfo-name: string--><!--Device-TaskInfo-name: string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -64,6 +70,8 @@ state: State
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-TaskInfo-state: State--><!--Device-TaskInfo-state: State-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## taskId
@@ -81,5 +89,7 @@ taskId: number
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-TaskInfo-taskId: number--><!--Device-TaskInfo-taskId: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

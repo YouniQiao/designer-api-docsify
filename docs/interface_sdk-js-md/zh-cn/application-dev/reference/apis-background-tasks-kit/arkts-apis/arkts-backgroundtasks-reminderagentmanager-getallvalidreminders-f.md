@@ -18,6 +18,8 @@ function getAllValidReminders(): Promise<Array<ReminderInfo>>
 
 **需要权限：** ohos.permission.PUBLISH_AGENT_REMINDER
 
+<!--Device-reminderAgentManager-function getAllValidReminders(): Promise<Array<ReminderInfo>>--><!--Device-reminderAgentManager-function getAllValidReminders(): Promise<Array<ReminderInfo>>-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 **返回值：**

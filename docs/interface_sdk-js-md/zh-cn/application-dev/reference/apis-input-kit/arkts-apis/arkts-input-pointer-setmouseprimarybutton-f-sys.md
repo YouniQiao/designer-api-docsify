@@ -16,6 +16,8 @@ function setMousePrimaryButton(primary: PrimaryButton, callback: AsyncCallback<v
 
 **起始版本：** 10
 
+<!--Device-pointer-function setMousePrimaryButton(primary: PrimaryButton, callback: AsyncCallback<void>): void--><!--Device-pointer-function setMousePrimaryButton(primary: PrimaryButton, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +79,8 @@ function setMousePrimaryButton(primary: PrimaryButton): Promise<void>
 设置鼠标主键，使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-pointer-function setMousePrimaryButton(primary: PrimaryButton): Promise<void>--><!--Device-pointer-function setMousePrimaryButton(primary: PrimaryButton): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 

@@ -12,6 +12,8 @@ Sets the parameters for subscribing to the compass sensor, including the callbac
 
 **Substitutes:** [ORIENTATION](arkts-sensorservice-sensor-sensorid-e.md#orientation)
 
+<!--Device-unnamed-export interface SubscribeCompassOptions--><!--Device-unnamed-export interface SubscribeCompassOptions-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 ## Modules to Import
@@ -35,6 +37,8 @@ Callback invoked when an API call fails. The callback parameters are **data** of
 **Substitutes:** [on](arkts-sensorservice-sensor-on-f.md)
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-SubscribeCompassOptions-fail?: (data: string, code: number) => void--><!--Device-SubscribeCompassOptions-fail?: (data: string, code: number) => void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
@@ -60,6 +64,8 @@ Callback invoked when the compass sensor data changes. The callback parameter is
 **Substitutes:** [on](arkts-sensorservice-sensor-on-f.md)
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-SubscribeCompassOptions-success: (data: CompassResponse) => void--><!--Device-SubscribeCompassOptions-success: (data: CompassResponse) => void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 

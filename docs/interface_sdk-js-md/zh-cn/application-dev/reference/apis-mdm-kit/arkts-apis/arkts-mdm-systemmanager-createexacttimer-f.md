@@ -25,6 +25,8 @@ function createExactTimer(config: ExactTimerConfig): Promise<number>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-systemManager-function createExactTimer(config: ExactTimerConfig): Promise<number>--><!--Device-systemManager-function createExactTimer(config: ExactTimerConfig): Promise<number>-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**

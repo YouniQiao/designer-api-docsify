@@ -8,6 +8,8 @@ interface CodecInfoList
 
 **起始版本：** 19
 
+<!--Device-a2dp-interface CodecInfoList--><!--Device-a2dp-interface CodecInfoList-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ codecBitRateArray: CodecBitRate[]
 
 **起始版本：** 19
 
+<!--Device-CodecInfoList-codecBitRateArray: CodecBitRate[]--><!--Device-CodecInfoList-codecBitRateArray: CodecBitRate[]-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## codecBitsPerSampleArray
@@ -41,6 +45,8 @@ codecBitsPerSampleArray: CodecBitsPerSample[]
 **类型：** [CodecBitsPerSample](arkts-connectivity-a2dp-codecbitspersample-e.md)[]
 
 **起始版本：** 19
+
+<!--Device-CodecInfoList-codecBitsPerSampleArray: CodecBitsPerSample[]--><!--Device-CodecInfoList-codecBitsPerSampleArray: CodecBitsPerSample[]-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -56,6 +62,8 @@ codecChannelModeArray: CodecChannelMode[]
 
 **起始版本：** 19
 
+<!--Device-CodecInfoList-codecChannelModeArray: CodecChannelMode[]--><!--Device-CodecInfoList-codecChannelModeArray: CodecChannelMode[]-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## codecFrameLengthArray
@@ -69,6 +77,8 @@ codecFrameLengthArray: CodecFrameLength[]
 **类型：** [CodecFrameLength](arkts-connectivity-a2dp-codecframelength-e.md)[]
 
 **起始版本：** 19
+
+<!--Device-CodecInfoList-codecFrameLengthArray: CodecFrameLength[]--><!--Device-CodecInfoList-codecFrameLengthArray: CodecFrameLength[]-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -84,6 +94,8 @@ codecSampleRateArray: CodecSampleRate[]
 
 **起始版本：** 19
 
+<!--Device-CodecInfoList-codecSampleRateArray: CodecSampleRate[]--><!--Device-CodecInfoList-codecSampleRateArray: CodecSampleRate[]-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## codecType
@@ -97,5 +109,7 @@ codecType: CodecType
 **类型：** [CodecType](arkts-connectivity-a2dp-codectype-e.md)
 
 **起始版本：** 19
+
+<!--Device-CodecInfoList-codecType: CodecType--><!--Device-CodecInfoList-codecType: CodecType-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

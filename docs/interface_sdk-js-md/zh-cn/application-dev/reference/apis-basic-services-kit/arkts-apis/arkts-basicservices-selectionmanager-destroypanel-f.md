@@ -18,6 +18,8 @@ function destroyPanel(panel: Panel): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-selectionManager-function destroyPanel(panel: Panel): Promise<void>--><!--Device-selectionManager-function destroyPanel(panel: Panel): Promise<void>-End-->
+
 **系统能力：** SystemCapability.SelectionInput.Selection
 
 **参数：**

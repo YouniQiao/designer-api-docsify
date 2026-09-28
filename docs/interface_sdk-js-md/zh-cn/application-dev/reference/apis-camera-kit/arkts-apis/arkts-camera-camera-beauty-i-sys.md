@@ -10,6 +10,8 @@ Beauty extends [BeautyQuery](arkts-camera-camera-beautyquery-i-sys.md) Provides 
 
 **起始版本：** 11
 
+<!--Device-camera-interface Beauty extends BeautyQuery--><!--Device-camera-interface Beauty extends BeautyQuery-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -29,6 +31,8 @@ getBeauty(type: BeautyType): number
 Obtains the level of the beauty type in use.
 
 **起始版本：** 11
+
+<!--Device-Beauty-getBeauty(type: BeautyType): int--><!--Device-Beauty-getBeauty(type: BeautyType): int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -82,6 +86,8 @@ Sets a beauty type and its level. Beauty mode is turned off only when all the [b
 
 **起始版本：** 11
 
+<!--Device-Beauty-setBeauty(type: BeautyType, value: int): void--><!--Device-Beauty-setBeauty(type: BeautyType, value: int): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -125,6 +131,8 @@ setPortraitThemeType(type: PortraitThemeType): void
 Sets a portrait theme type for a camera device.
 
 **起始版本：** 14
+
+<!--Device-Beauty-setPortraitThemeType(type: PortraitThemeType): void--><!--Device-Beauty-setPortraitThemeType(type: PortraitThemeType): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

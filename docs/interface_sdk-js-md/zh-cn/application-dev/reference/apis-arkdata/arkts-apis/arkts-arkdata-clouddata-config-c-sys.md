@@ -8,6 +8,8 @@ class Config
 
 **起始版本：** 10
 
+<!--Device-cloudData-class Config--><!--Device-cloudData-class Config-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **系统接口：** 此接口为系统接口。
@@ -34,6 +36,8 @@ static batchQueryLastSyncInfo(
 **需要权限：** ohos.permission.CLOUDDATA_CONFIG
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Config-static batchQueryLastSyncInfo(        accountId: string,        bundleInfos: Array<BundleInfo>    ): Promise<Record<string, Record<string, SyncInfo>>>--><!--Device-Config-static batchQueryLastSyncInfo(        accountId: string,        bundleInfos: Array<BundleInfo>    ): Promise<Record<string, Record<string, SyncInfo>>>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -101,6 +105,8 @@ static changeAppCloudSwitch(
 
 **需要权限：** ohos.permission.CLOUDDATA_CONFIG
 
+<!--Device-Config-static changeAppCloudSwitch(      accountId: string,      bundleName: string,      status: boolean,      callback: AsyncCallback<void>    ): void--><!--Device-Config-static changeAppCloudSwitch(      accountId: string,      bundleName: string,      status: boolean,      callback: AsyncCallback<void>    ): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **系统接口：** 此接口为系统接口。
@@ -157,6 +163,8 @@ static changeAppCloudSwitch(accountId: string, bundleName: string, status: boole
 **起始版本：** 10
 
 **需要权限：** ohos.permission.CLOUDDATA_CONFIG
+
+<!--Device-Config-static changeAppCloudSwitch(accountId: string, bundleName: string, status: boolean): Promise<void>--><!--Device-Config-static changeAppCloudSwitch(accountId: string, bundleName: string, status: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -224,6 +232,8 @@ static changeAppCloudSwitch(
 **需要权限：** ohos.permission.CLOUDDATA_CONFIG
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Config-static changeAppCloudSwitch(      accountId: string,      bundleName: string,      status: boolean,      config?: SwitchConfig    ): Promise<void>--><!--Device-Config-static changeAppCloudSwitch(      accountId: string,      bundleName: string,      status: boolean,      config?: SwitchConfig    ): Promise<void>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -298,6 +308,8 @@ static clear(
 
 **需要权限：** ohos.permission.CLOUDDATA_CONFIG
 
+<!--Device-Config-static clear(      accountId: string,      appActions: Record<string, ClearAction>,      callback: AsyncCallback<void>    ): void--><!--Device-Config-static clear(      accountId: string,      appActions: Record<string, ClearAction>,      callback: AsyncCallback<void>    ): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **系统接口：** 此接口为系统接口。
@@ -357,6 +369,8 @@ static clear(accountId: string, appActions: Record<string, ClearAction>): Promis
 **起始版本：** 10
 
 **需要权限：** ohos.permission.CLOUDDATA_CONFIG
+
+<!--Device-Config-static clear(accountId: string, appActions: Record<string, ClearAction>): Promise<void>--><!--Device-Config-static clear(accountId: string, appActions: Record<string, ClearAction>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -426,6 +440,8 @@ static clear(
 **需要权限：** ohos.permission.CLOUDDATA_CONFIG
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Config-static clear(      accountId: string,      appActions: Record<string, ClearAction>,      config?: Record<string, ClearConfig>    ): Promise<void>--><!--Device-Config-static clear(      accountId: string,      appActions: Record<string, ClearAction>,      config?: Record<string, ClearConfig>    ): Promise<void>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -506,6 +522,8 @@ static cloudSync(
 
 **需要权限：** ohos.permission.CLOUDDATA_CONFIG
 
+<!--Device-Config-static cloudSync(      bundleName: string,      storeId: string,      mode: relationalStore.SyncMode,      progress: Callback<relationalStore.ProgressDetails>    ): Promise<void>--><!--Device-Config-static cloudSync(      bundleName: string,      storeId: string,      mode: relationalStore.SyncMode,      progress: Callback<relationalStore.ProgressDetails>    ): Promise<void>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **系统接口：** 此接口为系统接口。
@@ -571,6 +589,8 @@ static cloudSyncEx(
 **需要权限：** ohos.permission.CLOUDDATA_CONFIG
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Config-static cloudSyncEx(        bundleInfo: BundleInfo,        config: relationalStore.CloudSyncConfig,        progress: Callback<relationalStore.ProgressDetails>    ): Promise<void>--><!--Device-Config-static cloudSyncEx(        bundleInfo: BundleInfo,        config: relationalStore.CloudSyncConfig,        progress: Callback<relationalStore.ProgressDetails>    ): Promise<void>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -641,6 +661,8 @@ static disableCloud(accountId: string, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.CLOUDDATA_CONFIG
 
+<!--Device-Config-static disableCloud(accountId: string, callback: AsyncCallback<void>): void--><!--Device-Config-static disableCloud(accountId: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **系统接口：** 此接口为系统接口。
@@ -694,6 +716,8 @@ static disableCloud(accountId: string): Promise<void>
 **起始版本：** 10
 
 **需要权限：** ohos.permission.CLOUDDATA_CONFIG
+
+<!--Device-Config-static disableCloud(accountId: string): Promise<void>--><!--Device-Config-static disableCloud(accountId: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -754,6 +778,8 @@ static enableCloud(
 
 **需要权限：** ohos.permission.CLOUDDATA_CONFIG
 
+<!--Device-Config-static enableCloud(      accountId: string,      switches: Record<string, boolean>,      callback: AsyncCallback<void>    ): void--><!--Device-Config-static enableCloud(      accountId: string,      switches: Record<string, boolean>,      callback: AsyncCallback<void>    ): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **系统接口：** 此接口为系统接口。
@@ -809,6 +835,8 @@ static enableCloud(accountId: string, switches: Record<string, boolean>): Promis
 **起始版本：** 10
 
 **需要权限：** ohos.permission.CLOUDDATA_CONFIG
+
+<!--Device-Config-static enableCloud(accountId: string, switches: Record<string, boolean>): Promise<void>--><!--Device-Config-static enableCloud(accountId: string, switches: Record<string, boolean>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -866,6 +894,8 @@ static notifyDataChange(extInfo: ExtraData, userId?: number): Promise<void>
 **起始版本：** 11
 
 **需要权限：** ohos.permission.CLOUDDATA_CONFIG
+
+<!--Device-Config-static notifyDataChange(extInfo: ExtraData, userId?: int): Promise<void>--><!--Device-Config-static notifyDataChange(extInfo: ExtraData, userId?: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -929,6 +959,8 @@ static notifyDataChange(extInfo: ExtraData, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.CLOUDDATA_CONFIG
 
+<!--Device-Config-static notifyDataChange(extInfo: ExtraData, callback: AsyncCallback<void>): void--><!--Device-Config-static notifyDataChange(extInfo: ExtraData, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **系统接口：** 此接口为系统接口。
@@ -985,6 +1017,8 @@ static notifyDataChange(extInfo: ExtraData, userId: number, callback: AsyncCallb
 **起始版本：** 11
 
 **需要权限：** ohos.permission.CLOUDDATA_CONFIG
+
+<!--Device-Config-static notifyDataChange(extInfo: ExtraData, userId: int, callback: AsyncCallback<void>): void--><!--Device-Config-static notifyDataChange(extInfo: ExtraData, userId: int, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -1045,6 +1079,8 @@ static notifyDataChange(accountId: string, bundleName: string): Promise<void>
 
 **需要权限：** ohos.permission.CLOUDDATA_CONFIG
 
+<!--Device-Config-static notifyDataChange(accountId: string, bundleName: string): Promise<void>--><!--Device-Config-static notifyDataChange(accountId: string, bundleName: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
@@ -1104,6 +1140,8 @@ static notifyDataChange(accountId: string, bundleName: string, callback: AsyncCa
 
 **需要权限：** ohos.permission.CLOUDDATA_CONFIG
 
+<!--Device-Config-static notifyDataChange(accountId: string, bundleName: string, callback: AsyncCallback<void>): void--><!--Device-Config-static notifyDataChange(accountId: string, bundleName: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
@@ -1162,6 +1200,8 @@ static offSyncInfoChanged(
 **需要权限：** ohos.permission.CLOUDDATA_CONFIG
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Config-static offSyncInfoChanged(        bundleInfos: Array<BundleInfo>,        progress?: Callback<Record<string, Record<string, SyncInfo>>>    ): void--><!--Device-Config-static offSyncInfoChanged(        bundleInfos: Array<BundleInfo>,        progress?: Callback<Record<string, Record<string, SyncInfo>>>    ): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -1239,6 +1279,8 @@ static onSyncInfoChanged(
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Config-static onSyncInfoChanged(        bundleInfos: Array<BundleInfo>,        progress: Callback<Record<string, Record<string, SyncInfo>>>    ): void--><!--Device-Config-static onSyncInfoChanged(        bundleInfos: Array<BundleInfo>,        progress: Callback<Record<string, Record<string, SyncInfo>>>    ): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **系统接口：** 此接口为系统接口。
@@ -1294,6 +1336,8 @@ static queryLastSyncInfo(
 **起始版本：** 12
 
 **需要权限：** ohos.permission.CLOUDDATA_CONFIG
+
+<!--Device-Config-static queryLastSyncInfo(        accountId: string,        bundleName: string,        storeId?: string    ): Promise<Record<string, SyncInfo>>--><!--Device-Config-static queryLastSyncInfo(        accountId: string,        bundleName: string,        storeId?: string    ): Promise<Record<string, SyncInfo>>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -1358,6 +1402,8 @@ static queryStatistics(
 
 **需要权限：** ohos.permission.CLOUDDATA_CONFIG
 
+<!--Device-Config-static queryStatistics(        accountId: string,        bundleName: string,        storeId?: string    ): Promise<Record<string, Array<StatisticInfo>>>--><!--Device-Config-static queryStatistics(        accountId: string,        bundleName: string,        storeId?: string    ): Promise<Record<string, Array<StatisticInfo>>>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **系统接口：** 此接口为系统接口。
@@ -1413,6 +1459,8 @@ static setGlobalCloudStrategy(strategy: StrategyType, param?: Array<commonType.V
 
 **需要权限：** ohos.permission.CLOUDDATA_CONFIG
 
+<!--Device-Config-static setGlobalCloudStrategy(strategy: StrategyType, param?: Array<commonType.ValueType>): Promise<void>--><!--Device-Config-static setGlobalCloudStrategy(strategy: StrategyType, param?: Array<commonType.ValueType>): Promise<void>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **系统接口：** 此接口为系统接口。
@@ -1464,6 +1512,8 @@ static stopCloudSync(bundleInfos: Array<BundleInfo>): Promise<void>
 **需要权限：** ohos.permission.CLOUDDATA_CONFIG
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Config-static stopCloudSync(bundleInfos: Array<BundleInfo>): Promise<void>--><!--Device-Config-static stopCloudSync(bundleInfos: Array<BundleInfo>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 

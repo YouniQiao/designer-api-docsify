@@ -8,6 +8,8 @@ export interface PageContent
 
 **起始版本：** 20
 
+<!--Device-onScreen-export interface PageContent--><!--Device-onScreen-export interface PageContent-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ bundleName: string
 
 **起始版本：** 20
 
+<!--Device-PageContent-bundleName: string--><!--Device-PageContent-bundleName: string-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ content?: string
 **类型：** string
 
 **起始版本：** 20
+
+<!--Device-PageContent-content?: string--><!--Device-PageContent-content?: string-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -62,6 +68,8 @@ pageLink?: string
 
 **起始版本：** 20
 
+<!--Device-PageContent-pageLink?: string--><!--Device-PageContent-pageLink?: string-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +85,8 @@ paragraphs?: Paragraph[]
 **类型：** [Paragraph](arkts-multimodalawareness-onscreen-paragraph-i-sys.md)[]
 
 **起始版本：** 20
+
+<!--Device-PageContent-paragraphs?: Paragraph[]--><!--Device-PageContent-paragraphs?: Paragraph[]-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -94,6 +104,8 @@ scenario?: Scenario
 
 **起始版本：** 20
 
+<!--Device-PageContent-scenario?: Scenario--><!--Device-PageContent-scenario?: Scenario-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **系统接口：** 此接口为系统接口。
@@ -109,6 +121,8 @@ sessionId: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-PageContent-sessionId: long--><!--Device-PageContent-sessionId: long-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -126,6 +140,8 @@ title?: string
 
 **起始版本：** 20
 
+<!--Device-PageContent-title?: string--><!--Device-PageContent-title?: string-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **系统接口：** 此接口为系统接口。
@@ -141,6 +157,8 @@ windowId: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-PageContent-windowId: int--><!--Device-PageContent-windowId: int-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 

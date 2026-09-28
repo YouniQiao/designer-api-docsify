@@ -12,6 +12,8 @@ interface AVSession
 
 **起始版本：** 10
 
+<!--Device-avSession-interface AVSession--><!--Device-avSession-interface AVSession-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 ## 导入模块
@@ -29,6 +31,8 @@ activate(callback: AsyncCallback<void>): void
 激活会话，激活后可正常使用会话。结果通过callback异步回调方式返回。
 
 **起始版本：** 10
+
+<!--Device-AVSession-activate(callback: AsyncCallback<void>): void--><!--Device-AVSession-activate(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -71,7 +75,9 @@ activate(): Promise<void>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVSession-activate(): Promise<void>--><!--Device-AVSession-activate(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -107,6 +113,8 @@ deactivate(callback: AsyncCallback<void>): void
 禁用当前会话的功能，可通过[activate](#activate)恢复。
 
 **起始版本：** 10
+
+<!--Device-AVSession-deactivate(callback: AsyncCallback<void>): void--><!--Device-AVSession-deactivate(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -149,7 +157,9 @@ deactivate(): Promise<void>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVSession-deactivate(): Promise<void>--><!--Device-AVSession-deactivate(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -183,6 +193,8 @@ destroy(callback: AsyncCallback<void>): void
 销毁当前会话，使当前会话完全失效。结果通过callback异步回调方式返回。
 
 **起始版本：** 10
+
+<!--Device-AVSession-destroy(callback: AsyncCallback<void>): void--><!--Device-AVSession-destroy(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -225,7 +237,9 @@ destroy(): Promise<void>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVSession-destroy(): Promise<void>--><!--Device-AVSession-destroy(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -261,6 +275,8 @@ dispatchSessionEvent(event: string, args: {[key: string]: Object}, callback: Asy
 **起始版本：** 10
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-AVSession-dispatchSessionEvent(event: string, args: {[key: string]: Object}, callback: AsyncCallback<void>): void--><!--Device-AVSession-dispatchSessionEvent(event: string, args: {[key: string]: Object}, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -311,6 +327,8 @@ dispatchSessionEvent(event: string, args: {[key: string]: Object}): Promise<void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVSession-dispatchSessionEvent(event: string, args: {[key: string]: Object}): Promise<void>--><!--Device-AVSession-dispatchSessionEvent(event: string, args: {[key: string]: Object}): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **参数：**
@@ -355,6 +373,8 @@ enableDesktopLyric(enable: boolean): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVSession-enableDesktopLyric(enable: boolean): Promise<void>--><!--Device-AVSession-enableDesktopLyric(enable: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **参数：**
@@ -397,7 +417,9 @@ getAllCastDisplays(): Promise<Array<CastDisplayInfo>>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVSession-getAllCastDisplays(): Promise<Array<CastDisplayInfo>>--><!--Device-AVSession-getAllCastDisplays(): Promise<Array<CastDisplayInfo>>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.ExtendedDisplayCast
 
@@ -434,6 +456,8 @@ getAVCastController(callback: AsyncCallback<AVCastController>): void
 设备建立连接后，获取投播控制器。结果通过callback异步回调方式返回。如果 avsession 未处于投播状态，则控制器将返回 null。
 
 **起始版本：** 10
+
+<!--Device-AVSession-getAVCastController(callback: AsyncCallback<AVCastController>): void--><!--Device-AVSession-getAVCastController(callback: AsyncCallback<AVCastController>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -480,6 +504,8 @@ getAVCastController(): Promise<AVCastController>
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVSession-getAVCastController(): Promise<AVCastController>--><!--Device-AVSession-getAVCastController(): Promise<AVCastController>-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **返回值：**
@@ -514,6 +540,8 @@ getController(callback: AsyncCallback<AVSessionController>): void
 获取本会话相应的控制器。结果通过callback异步回调方式返回。
 
 **起始版本：** 10
+
+<!--Device-AVSession-getController(callback: AsyncCallback<AVSessionController>): void--><!--Device-AVSession-getController(callback: AsyncCallback<AVSessionController>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -554,7 +582,9 @@ getController(): Promise<AVSessionController>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVSession-getController(): Promise<AVSessionController>--><!--Device-AVSession-getController(): Promise<AVSessionController>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -590,6 +620,8 @@ getDesktopLyricState(): Promise<DesktopLyricState>
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVSession-getDesktopLyricState(): Promise<DesktopLyricState>--><!--Device-AVSession-getDesktopLyricState(): Promise<DesktopLyricState>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -628,6 +660,8 @@ getOutputDevice(callback: AsyncCallback<OutputDeviceInfo>): void
 通过会话获取播放设备相关信息。结果通过callback异步回调方式返回。
 
 **起始版本：** 10
+
+<!--Device-AVSession-getOutputDevice(callback: AsyncCallback<OutputDeviceInfo>): void--><!--Device-AVSession-getOutputDevice(callback: AsyncCallback<OutputDeviceInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -670,7 +704,9 @@ getOutputDevice(): Promise<OutputDeviceInfo>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVSession-getOutputDevice(): Promise<OutputDeviceInfo>--><!--Device-AVSession-getOutputDevice(): Promise<OutputDeviceInfo>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -705,7 +741,9 @@ getOutputDeviceSync(): OutputDeviceInfo
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVSession-getOutputDeviceSync(): OutputDeviceInfo--><!--Device-AVSession-getOutputDeviceSync(): OutputDeviceInfo-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -739,6 +777,8 @@ isDesktopLyricVisible(): Promise<boolean>
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVSession-isDesktopLyricVisible(): Promise<boolean>--><!--Device-AVSession-isDesktopLyricVisible(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -779,6 +819,8 @@ off(type: 'play', callback?: () => void): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVSession-off(type: 'play', callback?: () => void): void--><!--Device-AVSession-off(type: 'play', callback?: () => void): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **参数：**
@@ -813,6 +855,8 @@ off(type: 'pause', callback?: () => void): void
 **起始版本：** 10
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVSession-off(type: 'pause', callback?: () => void): void--><!--Device-AVSession-off(type: 'pause', callback?: () => void): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -849,6 +893,8 @@ off(type: 'stop', callback?: () => void): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVSession-off(type: 'stop', callback?: () => void): void--><!--Device-AVSession-off(type: 'stop', callback?: () => void): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **参数：**
@@ -883,6 +929,8 @@ off(type: 'playNext', callback?: () => void): void
 **起始版本：** 10
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVSession-off(type: 'playNext', callback?: () => void): void--><!--Device-AVSession-off(type: 'playNext', callback?: () => void): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -919,6 +967,8 @@ off(type: 'playPrevious', callback?: () => void): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVSession-off(type: 'playPrevious', callback?: () => void): void--><!--Device-AVSession-off(type: 'playPrevious', callback?: () => void): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **参数：**
@@ -953,6 +1003,8 @@ off(type: 'fastForward', callback?: () => void): void
 **起始版本：** 10
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVSession-off(type: 'fastForward', callback?: () => void): void--><!--Device-AVSession-off(type: 'fastForward', callback?: () => void): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -989,6 +1041,8 @@ off(type: 'rewind', callback?: () => void): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVSession-off(type: 'rewind', callback?: () => void): void--><!--Device-AVSession-off(type: 'rewind', callback?: () => void): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **参数：**
@@ -1024,6 +1078,8 @@ off(type: 'playWithAssetId', callback?: Callback<string>): void
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVSession-off(type: 'playWithAssetId', callback?: Callback<string>): void--><!--Device-AVSession-off(type: 'playWithAssetId', callback?: Callback<string>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **参数：**
@@ -1057,6 +1113,8 @@ off(type: 'seek', callback?: (time: number) => void): void
 **起始版本：** 10
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVSession-off(type: 'seek', callback?: (time: long) => void): void--><!--Device-AVSession-off(type: 'seek', callback?: (time: long) => void): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -1093,6 +1151,8 @@ off(type: 'setSpeed', callback?: (speed: number) => void): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVSession-off(type: 'setSpeed', callback?: (speed: double) => void): void--><!--Device-AVSession-off(type: 'setSpeed', callback?: (speed: double) => void): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **参数：**
@@ -1127,6 +1187,8 @@ off(type: 'setLoopMode', callback?: (mode: LoopMode) => void): void
 **起始版本：** 10
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVSession-off(type: 'setLoopMode', callback?: (mode: LoopMode) => void): void--><!--Device-AVSession-off(type: 'setLoopMode', callback?: (mode: LoopMode) => void): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -1163,6 +1225,8 @@ off(type: 'setTargetLoopMode', callback?: Callback<LoopMode>): void
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVSession-off(type: 'setTargetLoopMode', callback?: Callback<LoopMode>): void--><!--Device-AVSession-off(type: 'setTargetLoopMode', callback?: Callback<LoopMode>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **参数：**
@@ -1196,6 +1260,8 @@ off(type: 'toggleFavorite', callback?: (assetId: string) => void): void
 **起始版本：** 10
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVSession-off(type: 'toggleFavorite', callback?: (assetId: string) => void): void--><!--Device-AVSession-off(type: 'toggleFavorite', callback?: (assetId: string) => void): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -1232,6 +1298,8 @@ off(type: 'handleKeyEvent', callback?: (event: KeyEvent) => void): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVSession-off(type: 'handleKeyEvent', callback?: (event: KeyEvent) => void): void--><!--Device-AVSession-off(type: 'handleKeyEvent', callback?: (event: KeyEvent) => void): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **参数：**
@@ -1266,6 +1334,8 @@ off(type: 'outputDeviceChange', callback?: (state: ConnectionState, device: Outp
 **起始版本：** 10
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVSession-off(type: 'outputDeviceChange', callback?: (state: ConnectionState, device: OutputDeviceInfo) => void): void--><!--Device-AVSession-off(type: 'outputDeviceChange', callback?: (state: ConnectionState, device: OutputDeviceInfo) => void): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -1304,6 +1374,8 @@ off(type: 'commonCommand', callback?: (command: string, args: {[key: string]: Ob
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVSession-off(type: 'commonCommand', callback?: (command: string, args: {[key: string]: Object}) => void): void--><!--Device-AVSession-off(type: 'commonCommand', callback?: (command: string, args: {[key: string]: Object}) => void): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **参数：**
@@ -1338,6 +1410,8 @@ off(type: 'skipToQueueItem', callback?: (itemId: number) => void): void
 **起始版本：** 10
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVSession-off(type: 'skipToQueueItem', callback?: (itemId: int) => void): void--><!--Device-AVSession-off(type: 'skipToQueueItem', callback?: (itemId: int) => void): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -1374,6 +1448,8 @@ off(type: 'answer', callback?: Callback<void>): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVSession-off(type: 'answer', callback?: Callback<void>): void--><!--Device-AVSession-off(type: 'answer', callback?: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **参数：**
@@ -1408,6 +1484,8 @@ off(type: 'hangUp', callback?: Callback<void>): void
 **起始版本：** 11
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVSession-off(type: 'hangUp', callback?: Callback<void>): void--><!--Device-AVSession-off(type: 'hangUp', callback?: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -1444,6 +1522,8 @@ off(type: 'toggleCallMute', callback?: Callback<void>): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVSession-off(type: 'toggleCallMute', callback?: Callback<void>): void--><!--Device-AVSession-off(type: 'toggleCallMute', callback?: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **参数：**
@@ -1479,6 +1559,8 @@ off(type: 'castDisplayChange', callback?: Callback<CastDisplayInfo>): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVSession-off(type: 'castDisplayChange', callback?: Callback<CastDisplayInfo>): void--><!--Device-AVSession-off(type: 'castDisplayChange', callback?: Callback<CastDisplayInfo>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.ExtendedDisplayCast
 
 **参数：**
@@ -1513,6 +1595,8 @@ Unsubscribes from custom data changes.
 **起始版本：** 20
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVSession-off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void--><!--Device-AVSession-off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -1558,6 +1642,8 @@ off(type: 'playFromAssetId', callback?: (assetId: number) => void): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVSession-off(type: 'playFromAssetId', callback?: (assetId: number) => void): void--><!--Device-AVSession-off(type: 'playFromAssetId', callback?: (assetId: number) => void): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **参数：**
@@ -1592,6 +1678,8 @@ offDesktopLyricStateChanged(callback?: Callback<DesktopLyricState>): void
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVSession-offDesktopLyricStateChanged(callback?: Callback<DesktopLyricState>): void--><!--Device-AVSession-offDesktopLyricStateChanged(callback?: Callback<DesktopLyricState>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -1628,6 +1716,8 @@ offDesktopLyricVisibilityChanged(callback?: Callback<boolean>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVSession-offDesktopLyricVisibilityChanged(callback?: Callback<boolean>): void--><!--Device-AVSession-offDesktopLyricVisibilityChanged(callback?: Callback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **参数：**
@@ -1663,6 +1753,8 @@ offFastForward(callback?: TwoParamCallback<number, CommandInfo>): void
 
 **起始版本：** 22
 
+<!--Device-AVSession-offFastForward(callback?: TwoParamCallback<long, CommandInfo>): void--><!--Device-AVSession-offFastForward(callback?: TwoParamCallback<long, CommandInfo>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **参数：**
@@ -1695,6 +1787,8 @@ offPlay(callback?: Callback<CommandInfo>): void
 指定callback，取消对应监听；未指定callback，则取消所有事件监听。
 
 **起始版本：** 22
+
+<!--Device-AVSession-offPlay(callback?: Callback<CommandInfo>): void--><!--Device-AVSession-offPlay(callback?: Callback<CommandInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -1729,6 +1823,8 @@ offPlayNext(callback?: Callback<CommandInfo>): void
 
 **起始版本：** 22
 
+<!--Device-AVSession-offPlayNext(callback?: Callback<CommandInfo>): void--><!--Device-AVSession-offPlayNext(callback?: Callback<CommandInfo>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **参数：**
@@ -1762,6 +1858,8 @@ offPlayPrevious(callback?: Callback<CommandInfo>): void
 
 **起始版本：** 22
 
+<!--Device-AVSession-offPlayPrevious(callback?: Callback<CommandInfo>): void--><!--Device-AVSession-offPlayPrevious(callback?: Callback<CommandInfo>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **参数：**
@@ -1794,6 +1892,8 @@ offRewind(callback?: TwoParamCallback<number, CommandInfo>): void
 指定callback，取消对应监听；未指定callback，则取消所有事件监听。
 
 **起始版本：** 22
+
+<!--Device-AVSession-offRewind(callback?: TwoParamCallback<long, CommandInfo>): void--><!--Device-AVSession-offRewind(callback?: TwoParamCallback<long, CommandInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -1829,6 +1929,8 @@ on(type: 'play', callback: () => void): void
 **起始版本：** 10
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVSession-on(type: 'play', callback: () => void): void--><!--Device-AVSession-on(type: 'play', callback: () => void): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -1869,6 +1971,8 @@ on(type: 'pause', callback: () => void): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVSession-on(type: 'pause', callback: () => void): void--><!--Device-AVSession-on(type: 'pause', callback: () => void): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **参数：**
@@ -1907,6 +2011,8 @@ on(type: 'stop', callback: () => void): void
 **起始版本：** 10
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVSession-on(type: 'stop', callback: () => void): void--><!--Device-AVSession-on(type: 'stop', callback: () => void): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -1947,6 +2053,8 @@ on(type: 'playNext', callback: () => void): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVSession-on(type: 'playNext', callback: () => void): void--><!--Device-AVSession-on(type: 'playNext', callback: () => void): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **参数：**
@@ -1985,6 +2093,8 @@ on(type: 'playPrevious', callback: () => void): void
 **起始版本：** 10
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVSession-on(type: 'playPrevious', callback: () => void): void--><!--Device-AVSession-on(type: 'playPrevious', callback: () => void): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -2025,6 +2135,8 @@ on(type: 'fastForward', callback: (time ?: number) => void): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVSession-on(type: 'fastForward', callback: (time ?: long) => void): void--><!--Device-AVSession-on(type: 'fastForward', callback: (time ?: long) => void): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **参数：**
@@ -2063,6 +2175,8 @@ on(type: 'rewind', callback: (time ?: number) => void): void
 **起始版本：** 10
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVSession-on(type: 'rewind', callback: (time ?: long) => void): void--><!--Device-AVSession-on(type: 'rewind', callback: (time ?: long) => void): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -2103,6 +2217,8 @@ on(type: 'playWithAssetId', callback: Callback<string>): void
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVSession-on(type: 'playWithAssetId', callback: Callback<string>): void--><!--Device-AVSession-on(type: 'playWithAssetId', callback: Callback<string>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **参数：**
@@ -2141,6 +2257,8 @@ on(type: 'seek', callback: (time: number) => void): void
 **起始版本：** 10
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVSession-on(type: 'seek', callback: (time: long) => void): void--><!--Device-AVSession-on(type: 'seek', callback: (time: long) => void): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -2181,6 +2299,8 @@ on(type: 'setSpeed', callback: (speed: number) => void): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVSession-on(type: 'setSpeed', callback: (speed: double) => void): void--><!--Device-AVSession-on(type: 'setSpeed', callback: (speed: double) => void): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **参数：**
@@ -2219,6 +2339,8 @@ on(type: 'setLoopMode', callback: (mode: LoopMode) => void): void
 **起始版本：** 10
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVSession-on(type: 'setLoopMode', callback: (mode: LoopMode) => void): void--><!--Device-AVSession-on(type: 'setLoopMode', callback: (mode: LoopMode) => void): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -2259,6 +2381,8 @@ on(type: 'setTargetLoopMode', callback: Callback<LoopMode>): void
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVSession-on(type: 'setTargetLoopMode', callback: Callback<LoopMode>): void--><!--Device-AVSession-on(type: 'setTargetLoopMode', callback: Callback<LoopMode>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **参数：**
@@ -2296,6 +2420,8 @@ on(type: 'toggleFavorite', callback: (assetId: string) => void): void
 **起始版本：** 10
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVSession-on(type: 'toggleFavorite', callback: (assetId: string) => void): void--><!--Device-AVSession-on(type: 'toggleFavorite', callback: (assetId: string) => void): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -2335,6 +2461,8 @@ on(type: 'handleKeyEvent', callback: (event: KeyEvent) => void): void
 **起始版本：** 10
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVSession-on(type: 'handleKeyEvent', callback: (event: KeyEvent) => void): void--><!--Device-AVSession-on(type: 'handleKeyEvent', callback: (event: KeyEvent) => void): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -2377,6 +2505,8 @@ on(type: 'outputDeviceChange', callback: (state: ConnectionState, device: Output
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVSession-on(type: 'outputDeviceChange', callback: (state: ConnectionState, device: OutputDeviceInfo) => void): void--><!--Device-AVSession-on(type: 'outputDeviceChange', callback: (state: ConnectionState, device: OutputDeviceInfo) => void): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **参数：**
@@ -2418,6 +2548,8 @@ on(type: 'commonCommand', callback: (command: string, args: {[key: string]: Obje
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVSession-on(type: 'commonCommand', callback: (command: string, args: {[key: string]: Object}) => void): void--><!--Device-AVSession-on(type: 'commonCommand', callback: (command: string, args: {[key: string]: Object}) => void): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **参数：**
@@ -2456,6 +2588,8 @@ on(type: 'skipToQueueItem', callback: (itemId: number) => void): void
 **起始版本：** 10
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVSession-on(type: 'skipToQueueItem', callback: (itemId: int) => void): void--><!--Device-AVSession-on(type: 'skipToQueueItem', callback: (itemId: int) => void): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -2496,6 +2630,8 @@ on(type: 'answer', callback: Callback<void>): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVSession-on(type: 'answer', callback: Callback<void>): void--><!--Device-AVSession-on(type: 'answer', callback: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **参数：**
@@ -2534,6 +2670,8 @@ on(type: 'hangUp', callback: Callback<void>): void
 **起始版本：** 11
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVSession-on(type: 'hangUp', callback: Callback<void>): void--><!--Device-AVSession-on(type: 'hangUp', callback: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -2574,6 +2712,8 @@ on(type: 'toggleCallMute', callback: Callback<void>): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVSession-on(type: 'toggleCallMute', callback: Callback<void>): void--><!--Device-AVSession-on(type: 'toggleCallMute', callback: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **参数：**
@@ -2612,6 +2752,8 @@ on(type: 'castDisplayChange', callback: Callback<CastDisplayInfo>): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVSession-on(type: 'castDisplayChange', callback: Callback<CastDisplayInfo>): void--><!--Device-AVSession-on(type: 'castDisplayChange', callback: Callback<CastDisplayInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.ExtendedDisplayCast
 
@@ -2655,6 +2797,8 @@ on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void
 **起始版本：** 20
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVSession-on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void--><!--Device-AVSession-on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -2702,6 +2846,8 @@ on(type: 'playFromAssetId', callback: (assetId: number) => void): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVSession-on(type: 'playFromAssetId', callback: (assetId: number) => void): void--><!--Device-AVSession-on(type: 'playFromAssetId', callback: (assetId: number) => void): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **参数：**
@@ -2738,6 +2884,8 @@ onDesktopLyricStateChanged(callback: Callback<DesktopLyricState>): void
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVSession-onDesktopLyricStateChanged(callback: Callback<DesktopLyricState>): void--><!--Device-AVSession-onDesktopLyricStateChanged(callback: Callback<DesktopLyricState>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -2776,6 +2924,8 @@ onDesktopLyricVisibilityChanged(callback: Callback<boolean>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVSession-onDesktopLyricVisibilityChanged(callback: Callback<boolean>): void--><!--Device-AVSession-onDesktopLyricVisibilityChanged(callback: Callback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **参数：**
@@ -2813,6 +2963,8 @@ onFastForward(callback: TwoParamCallback<number, CommandInfo>): void
 
 **起始版本：** 22
 
+<!--Device-AVSession-onFastForward(callback: TwoParamCallback<long, CommandInfo>): void--><!--Device-AVSession-onFastForward(callback: TwoParamCallback<long, CommandInfo>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **参数：**
@@ -2847,6 +2999,8 @@ onPlay(callback: Callback<CommandInfo>): void
 应用将通过回调接收控制器发送的[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)信息。
 
 **起始版本：** 22
+
+<!--Device-AVSession-onPlay(callback: Callback<CommandInfo>): void--><!--Device-AVSession-onPlay(callback: Callback<CommandInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -2883,6 +3037,8 @@ onPlayNext(callback: Callback<CommandInfo>): void
 
 **起始版本：** 22
 
+<!--Device-AVSession-onPlayNext(callback: Callback<CommandInfo>): void--><!--Device-AVSession-onPlayNext(callback: Callback<CommandInfo>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **参数：**
@@ -2918,7 +3074,9 @@ onPlayPrevious(callback: Callback<CommandInfo>): void
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVSession-onPlayPrevious(callback: Callback<CommandInfo>): void--><!--Device-AVSession-onPlayPrevious(callback: Callback<CommandInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -2955,6 +3113,8 @@ onRewind(callback: TwoParamCallback<number, CommandInfo>): void
 
 **起始版本：** 22
 
+<!--Device-AVSession-onRewind(callback: TwoParamCallback<long, CommandInfo>): void--><!--Device-AVSession-onRewind(callback: TwoParamCallback<long, CommandInfo>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **参数：**
@@ -2988,7 +3148,9 @@ sendCustomData(data: Record<string, Object>): Promise<void>
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVSession-sendCustomData(data: Record<string, Object>): Promise<void>--><!--Device-AVSession-sendCustomData(data: Record<string, Object>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -3028,6 +3190,8 @@ setAVCallState(state: AVCallState, callback: AsyncCallback<void>): void
 设置通话状态。结果通过callback异步回调方式返回。
 
 **起始版本：** 11
+
+<!--Device-AVSession-setAVCallState(state: AVCallState, callback: AsyncCallback<void>): void--><!--Device-AVSession-setAVCallState(state: AVCallState, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -3076,6 +3240,8 @@ setAVCallState(state: AVCallState): Promise<void>
 
 **起始版本：** 11
 
+<!--Device-AVSession-setAVCallState(state: AVCallState): Promise<void>--><!--Device-AVSession-setAVCallState(state: AVCallState): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **参数：**
@@ -3119,6 +3285,8 @@ setAVMetadata(data: AVMetadata, callback: AsyncCallback<void>): void
 设置会话元数据。结果通过callback异步回调方式返回。
 
 **起始版本：** 10
+
+<!--Device-AVSession-setAVMetadata(data: AVMetadata, callback: AsyncCallback<void>): void--><!--Device-AVSession-setAVMetadata(data: AVMetadata, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -3184,7 +3352,9 @@ setAVMetadata(data: AVMetadata): Promise<void>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVSession-setAVMetadata(data: AVMetadata): Promise<void>--><!--Device-AVSession-setAVMetadata(data: AVMetadata): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -3247,6 +3417,8 @@ setAVPlaybackState(state: AVPlaybackState, callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
+<!--Device-AVSession-setAVPlaybackState(state: AVPlaybackState, callback: AsyncCallback<void>): void--><!--Device-AVSession-setAVPlaybackState(state: AVPlaybackState, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **参数：**
@@ -3298,7 +3470,9 @@ setAVPlaybackState(state: AVPlaybackState): Promise<void>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVSession-setAVPlaybackState(state: AVPlaybackState): Promise<void>--><!--Device-AVSession-setAVPlaybackState(state: AVPlaybackState): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -3347,6 +3521,8 @@ setAVQueueItems(items: Array<AVQueueItem>, callback: AsyncCallback<void>): void
 设置媒体播放列表。结果通过callback异步回调方式返回。
 
 **起始版本：** 10
+
+<!--Device-AVSession-setAVQueueItems(items: Array<AVQueueItem>, callback: AsyncCallback<void>): void--><!--Device-AVSession-setAVQueueItems(items: Array<AVQueueItem>, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -3422,7 +3598,9 @@ setAVQueueItems(items: Array<AVQueueItem>): Promise<void>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVSession-setAVQueueItems(items: Array<AVQueueItem>): Promise<void>--><!--Device-AVSession-setAVQueueItems(items: Array<AVQueueItem>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -3496,6 +3674,8 @@ setAVQueueTitle(title: string, callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
+<!--Device-AVSession-setAVQueueTitle(title: string, callback: AsyncCallback<void>): void--><!--Device-AVSession-setAVQueueTitle(title: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **参数：**
@@ -3540,7 +3720,9 @@ setAVQueueTitle(title: string): Promise<void>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVSession-setAVQueueTitle(title: string): Promise<void>--><!--Device-AVSession-setAVQueueTitle(title: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -3587,6 +3769,8 @@ setBackgroundPlayMode(mode: BackgroundPlayMode): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVSession-setBackgroundPlayMode(mode: BackgroundPlayMode): Promise<void>--><!--Device-AVSession-setBackgroundPlayMode(mode: BackgroundPlayMode): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **参数：**
@@ -3626,6 +3810,8 @@ setCallMetadata(data: CallMetadata, callback: AsyncCallback<void>): void
 设置通话会话元数据。结果通过callback异步回调方式返回。
 
 **起始版本：** 11
+
+<!--Device-AVSession-setCallMetadata(data: CallMetadata, callback: AsyncCallback<void>): void--><!--Device-AVSession-setCallMetadata(data: CallMetadata, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -3700,6 +3886,8 @@ setCallMetadata(data: CallMetadata): Promise<void>
 设置通话会话元数据。结果通过Promise异步回调方式返回。
 
 **起始版本：** 11
+
+<!--Device-AVSession-setCallMetadata(data: CallMetadata): Promise<void>--><!--Device-AVSession-setCallMetadata(data: CallMetadata): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -3779,6 +3967,8 @@ setDesktopLyricState(state: DesktopLyricState): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVSession-setDesktopLyricState(state: DesktopLyricState): Promise<void>--><!--Device-AVSession-setDesktopLyricState(state: DesktopLyricState): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **参数：**
@@ -3825,6 +4015,8 @@ setDesktopLyricVisible(visible: boolean): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVSession-setDesktopLyricVisible(visible: boolean): Promise<void>--><!--Device-AVSession-setDesktopLyricVisible(visible: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **参数：**
@@ -3867,6 +4059,8 @@ setExtras(extras: {[key: string]: Object}, callback: AsyncCallback<void>): void
 **起始版本：** 10
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-AVSession-setExtras(extras: {[key: string]: Object}, callback: AsyncCallback<void>): void--><!--Device-AVSession-setExtras(extras: {[key: string]: Object}, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -3915,6 +4109,8 @@ setExtras(extras: {[key: string]: Object}): Promise<void>
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVSession-setExtras(extras: {[key: string]: Object}): Promise<void>--><!--Device-AVSession-setExtras(extras: {[key: string]: Object}): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **参数：**
@@ -3956,6 +4152,8 @@ setLaunchAbility(ability: WantAgent, callback: AsyncCallback<void>): void
 通过点击播控组件可以跳转到对应的播放界面，默认跳转到[avSession.createAVSession](arkts-avsession-avsession-createavsession-f.md)接口传入的context所属的UIAbility界面。
 
 **起始版本：** 10
+
+<!--Device-AVSession-setLaunchAbility(ability: WantAgent, callback: AsyncCallback<void>): void--><!--Device-AVSession-setLaunchAbility(ability: WantAgent, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -4033,7 +4231,9 @@ setLaunchAbility(ability: WantAgent): Promise<void>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVSession-setLaunchAbility(ability: WantAgent): Promise<void>--><!--Device-AVSession-setLaunchAbility(ability: WantAgent): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -4111,6 +4311,8 @@ setMediaCenterControlType(type: Array<AVMediaCenterControlType>): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVSession-setMediaCenterControlType(type: Array<AVMediaCenterControlType>): Promise<void>--><!--Device-AVSession-setMediaCenterControlType(type: Array<AVMediaCenterControlType>): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **参数：**
@@ -4161,7 +4363,9 @@ setSupportedLoopModes(loopModes: Array<LoopMode>): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVSession-setSupportedLoopModes(loopModes: Array<LoopMode>): Promise<void>--><!--Device-AVSession-setSupportedLoopModes(loopModes: Array<LoopMode>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -4212,7 +4416,9 @@ setSupportedPlaySpeeds(speeds: Array<number>): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVSession-setSupportedPlaySpeeds(speeds: Array<double>): Promise<void>--><!--Device-AVSession-setSupportedPlaySpeeds(speeds: Array<double>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -4257,6 +4463,8 @@ stopCasting(callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
+<!--Device-AVSession-stopCasting(callback: AsyncCallback<void>): void--><!--Device-AVSession-stopCasting(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **参数：**
@@ -4291,7 +4499,9 @@ stopCasting(): Promise<void>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVSession-stopCasting(): Promise<void>--><!--Device-AVSession-stopCasting(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -4327,7 +4537,9 @@ AVSession对象唯一的会话标识。
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVSession-readonly sessionId: string--><!--Device-AVSession-readonly sessionId: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -4343,7 +4555,9 @@ AVSession会话的自定义标签信息。
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVSession-readonly sessionTag: string--><!--Device-AVSession-readonly sessionTag: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -4359,6 +4573,8 @@ AVSession会话类型。
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVSession-readonly sessionType: AVSessionType--><!--Device-AVSession-readonly sessionType: AVSessionType-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core

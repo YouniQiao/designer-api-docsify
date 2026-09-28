@@ -8,6 +8,8 @@ enum KdfAlgo
 
 **起始版本：** 14
 
+<!--Device-relationalStore-enum KdfAlgo--><!--Device-relationalStore-enum KdfAlgo-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## KDF_SHA1
@@ -19,6 +21,8 @@ KDF_SHA1 = 0
 PBKDF2_HMAC_SHA1算法。
 
 **起始版本：** 14
+
+<!--Device-KdfAlgo-KDF_SHA1 = 0--><!--Device-KdfAlgo-KDF_SHA1 = 0-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -32,6 +36,8 @@ PBKDF2_HMAC_SHA256算法。
 
 **起始版本：** 14
 
+<!--Device-KdfAlgo-KDF_SHA256 = 1--><!--Device-KdfAlgo-KDF_SHA256 = 1-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## KDF_SHA512
@@ -43,5 +49,7 @@ KDF_SHA512 = 2
 PBKDF2_HMAC_SHA512算法。
 
 **起始版本：** 14
+
+<!--Device-KdfAlgo-KDF_SHA512 = 2--><!--Device-KdfAlgo-KDF_SHA512 = 2-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core

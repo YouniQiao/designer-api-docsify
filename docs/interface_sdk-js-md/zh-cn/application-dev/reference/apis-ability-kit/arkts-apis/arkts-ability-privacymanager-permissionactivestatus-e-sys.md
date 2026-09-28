@@ -8,6 +8,8 @@ enum PermissionActiveStatus
 
 **起始版本：** 9
 
+<!--Device-privacyManager-enum PermissionActiveStatus--><!--Device-privacyManager-enum PermissionActiveStatus-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -23,6 +25,8 @@ PERM_INACTIVE = 0
 **起始版本：** 9
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-PermissionActiveStatus-PERM_INACTIVE = 0--><!--Device-PermissionActiveStatus-PERM_INACTIVE = 0-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -40,6 +44,8 @@ PERM_ACTIVE_IN_FOREGROUND = 1
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-PermissionActiveStatus-PERM_ACTIVE_IN_FOREGROUND = 1--><!--Device-PermissionActiveStatus-PERM_ACTIVE_IN_FOREGROUND = 1-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -55,6 +61,8 @@ PERM_ACTIVE_IN_BACKGROUND = 2
 **起始版本：** 9
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-PermissionActiveStatus-PERM_ACTIVE_IN_BACKGROUND = 2--><!--Device-PermissionActiveStatus-PERM_ACTIVE_IN_BACKGROUND = 2-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 

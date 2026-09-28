@@ -8,6 +8,8 @@ HTML类型数据，用于描述超文本标记语言数据。创建HTML对象后
 
 **起始版本：** 12
 
+<!--Device-uniformDataStruct-interface HTML--><!--Device-uniformDataStruct-interface HTML-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## 导入模块
@@ -40,6 +42,8 @@ details?: Record<string, string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HTML-details?: Record<string, string>--><!--Device-HTML-details?: Record<string, string>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## htmlContent
@@ -55,6 +59,8 @@ HTML格式的内容文本，支持标准HTML标签。可以是完整的HTML文�
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HTML-htmlContent: string--><!--Device-HTML-htmlContent: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -72,6 +78,8 @@ plainContent?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HTML-plainContent?: string--><!--Device-HTML-plainContent?: string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## uniformDataType
@@ -88,6 +96,8 @@ readonly uniformDataType: 'general.html'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HTML-readonly uniformDataType: 'general.html'--><!--Device-HTML-readonly uniformDataType: 'general.html'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## uriAuthorizationPolicies
@@ -103,5 +113,7 @@ uriAuthorizationPolicies?: Array<number>
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HTML-uriAuthorizationPolicies?: Array<int>--><!--Device-HTML-uriAuthorizationPolicies?: Array<int>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core

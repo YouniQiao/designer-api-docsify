@@ -20,6 +20,8 @@ function connectPrinterByIdAndPpd(printerId: string, protocol: string, ppdName: 
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-print-function connectPrinterByIdAndPpd(printerId: string, protocol: string, ppdName: string): Promise<void>--><!--Device-print-function connectPrinterByIdAndPpd(printerId: string, protocol: string, ppdName: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **系统接口：** 此接口为系统接口。

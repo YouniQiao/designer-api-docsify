@@ -14,6 +14,8 @@ interface MediaElement extends MediaEntity
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-avMusicTemplate-interface MediaElement extends MediaEntity--><!--Device-avMusicTemplate-interface MediaElement extends MediaEntity-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## 导入模块

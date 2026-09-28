@@ -12,6 +12,8 @@ Zoom继承自[ZoomQuery](arkts-camera-camera-zoomquery-i.md)。
 
 **起始版本：** 11
 
+<!--Device-camera-interface Zoom extends ZoomQuery--><!--Device-camera-interface Zoom extends ZoomQuery-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
@@ -29,6 +31,8 @@ getZoomCenterPoint(): Point
 Gets zoom center point.
 
 **起始版本：** 20
+
+<!--Device-Zoom-getZoomCenterPoint(): Point--><!--Device-Zoom-getZoomCenterPoint(): Point-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -56,6 +60,8 @@ prepareZoom(): void
 Instructs the bottom layer to prepare for zooming, for example, powering on the sensor.
 
 **起始版本：** 11
+
+<!--Device-Zoom-prepareZoom(): void--><!--Device-Zoom-prepareZoom(): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -94,6 +100,8 @@ Sets zoom center point.
 
 **起始版本：** 20
 
+<!--Device-Zoom-setZoomCenterPoint(point: Point): void--><!--Device-Zoom-setZoomCenterPoint(point: Point): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -120,6 +128,8 @@ unprepareZoom(): void
 Instructs the bottom layer to unprepare for zooming.
 
 **起始版本：** 11
+
+<!--Device-Zoom-unprepareZoom(): void--><!--Device-Zoom-unprepareZoom(): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

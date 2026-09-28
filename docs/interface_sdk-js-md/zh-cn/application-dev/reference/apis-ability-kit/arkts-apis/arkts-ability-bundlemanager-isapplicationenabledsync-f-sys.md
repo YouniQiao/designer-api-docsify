@@ -16,6 +16,8 @@ function isApplicationEnabledSync(bundleName: string): boolean
 
 **起始版本：** 10
 
+<!--Device-bundleManager-function isApplicationEnabledSync(bundleName: string): boolean--><!--Device-bundleManager-function isApplicationEnabledSync(bundleName: string): boolean-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。

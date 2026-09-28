@@ -8,6 +8,8 @@ export enum AccessAuthorization
 
 **起始版本：** 11
 
+<!--Device-constant-export enum AccessAuthorization--><!--Device-constant-export enum AccessAuthorization-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -21,6 +23,8 @@ UNKNOWN = 0
 未知。
 
 **起始版本：** 11
+
+<!--Device-AccessAuthorization-UNKNOWN = 0--><!--Device-AccessAuthorization-UNKNOWN = 0-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -36,6 +40,8 @@ ALLOWED = 1
 
 **起始版本：** 11
 
+<!--Device-AccessAuthorization-ALLOWED = 1--><!--Device-AccessAuthorization-ALLOWED = 1-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +55,8 @@ REJECTED = 2
 拒绝。
 
 **起始版本：** 11
+
+<!--Device-AccessAuthorization-REJECTED = 2--><!--Device-AccessAuthorization-REJECTED = 2-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

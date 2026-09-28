@@ -8,6 +8,8 @@ interface RangingStateChangeInfo
 
 **起始版本：** 26.0.0
 
+<!--Device-ranging-interface RangingStateChangeInfo--><!--Device-ranging-interface RangingStateChangeInfo-End-->
+
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ cause: RangingStoppedCause
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RangingStateChangeInfo-cause: RangingStoppedCause--><!--Device-RangingStateChangeInfo-cause: RangingStoppedCause-End-->
+
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core
 
 ## deviceId
@@ -45,6 +49,8 @@ deviceId?: string
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-RangingStateChangeInfo-deviceId?: string--><!--Device-RangingStateChangeInfo-deviceId?: string-End-->
 
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core
 
@@ -62,6 +68,8 @@ handle?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RangingStateChangeInfo-handle?: int--><!--Device-RangingStateChangeInfo-handle?: int-End-->
+
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core
 
 ## state
@@ -77,5 +85,7 @@ state: RangingState
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-RangingStateChangeInfo-state: RangingState--><!--Device-RangingStateChangeInfo-state: RangingState-End-->
 
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core

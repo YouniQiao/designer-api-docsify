@@ -32,6 +32,8 @@ Creates a vertical linear layout container. You can set the spacing between chil
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-ColumnInterface-(options?: ColumnOptions): ColumnAttribute--><!--Device-ColumnInterface-(options?: ColumnOptions): ColumnAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -62,6 +64,8 @@ Creates a vertical linear layout container. You can set the spacing between chil
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-ColumnInterface-(options?: ColumnOptions | ColumnOptionsV2): ColumnAttribute--><!--Device-ColumnInterface-(options?: ColumnOptions | ColumnOptionsV2): ColumnAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

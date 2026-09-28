@@ -8,6 +8,8 @@ enum WifiDetailState
 
 **起始版本：** 12
 
+<!--Device-wifiManager-enum WifiDetailState--><!--Device-wifiManager-enum WifiDetailState-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。
@@ -21,6 +23,8 @@ UNKNOWN = -1
 未指定。
 
 **起始版本：** 12
+
+<!--Device-WifiDetailState-UNKNOWN = -1--><!--Device-WifiDetailState-UNKNOWN = -1-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -36,6 +40,8 @@ INACTIVE = 0
 
 **起始版本：** 12
 
+<!--Device-WifiDetailState-INACTIVE = 0--><!--Device-WifiDetailState-INACTIVE = 0-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +55,8 @@ ACTIVATED = 1
 已激活。
 
 **起始版本：** 12
+
+<!--Device-WifiDetailState-ACTIVATED = 1--><!--Device-WifiDetailState-ACTIVATED = 1-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -64,6 +72,8 @@ ACTIVATING = 2
 
 **起始版本：** 12
 
+<!--Device-WifiDetailState-ACTIVATING = 2--><!--Device-WifiDetailState-ACTIVATING = 2-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +87,8 @@ DEACTIVATING = 3
 关闭中。
 
 **起始版本：** 12
+
+<!--Device-WifiDetailState-DEACTIVATING = 3--><!--Device-WifiDetailState-DEACTIVATING = 3-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -92,6 +104,8 @@ SEMI_ACTIVATING = 4
 
 **起始版本：** 12
 
+<!--Device-WifiDetailState-SEMI_ACTIVATING = 4--><!--Device-WifiDetailState-SEMI_ACTIVATING = 4-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。
@@ -105,6 +119,8 @@ SEMI_ACTIVE = 5
 已半关闭。
 
 **起始版本：** 12
+
+<!--Device-WifiDetailState-SEMI_ACTIVE = 5--><!--Device-WifiDetailState-SEMI_ACTIVE = 5-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 

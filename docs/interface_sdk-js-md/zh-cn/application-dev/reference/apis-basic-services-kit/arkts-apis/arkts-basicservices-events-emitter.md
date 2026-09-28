@@ -19,6 +19,8 @@
 
 **起始版本：** 7
 
+<!--Device-unnamed-declare namespace emitter--><!--Device-unnamed-declare namespace emitter-End-->
+
 **系统能力：** SystemCapability.Notification.Emitter
 
 ## 导入模块

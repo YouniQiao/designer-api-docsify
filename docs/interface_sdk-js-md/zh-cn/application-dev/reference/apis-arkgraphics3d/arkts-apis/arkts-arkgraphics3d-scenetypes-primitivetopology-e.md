@@ -10,6 +10,8 @@ export enum PrimitiveTopology
 
 **起始版本：** 18
 
+<!--Device-unnamed-export enum PrimitiveTopology--><!--Device-unnamed-export enum PrimitiveTopology-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## TRIANGLE_LIST
@@ -22,6 +24,8 @@ TRIANGLE_LIST = 0
 
 **起始版本：** 18
 
+<!--Device-PrimitiveTopology-TRIANGLE_LIST = 0--><!--Device-PrimitiveTopology-TRIANGLE_LIST = 0-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## TRIANGLE_STRIP
@@ -33,5 +37,7 @@ TRIANGLE_STRIP = 1
 每个顶点和前一个三角形的一条边构成新的三角形。
 
 **起始版本：** 18
+
+<!--Device-PrimitiveTopology-TRIANGLE_STRIP = 1--><!--Device-PrimitiveTopology-TRIANGLE_STRIP = 1-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

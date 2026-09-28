@@ -8,6 +8,8 @@ type DataObserver = (sessionId: string, fields: Array<string>) => void
 
 **起始版本：** 20
 
+<!--Device-distributedDataObject-type DataObserver = (sessionId: string, fields: Array<string>) => void--><!--Device-distributedDataObject-type DataObserver = (sessionId: string, fields: Array<string>) => void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **参数：**

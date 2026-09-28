@@ -8,6 +8,8 @@ export interface SpeedParams
 
 **起始版本：** 26.0.0
 
+<!--Device-mechanicManager-export interface SpeedParams--><!--Device-mechanicManager-export interface SpeedParams-End-->
+
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ angle: number
 
 **起始版本：** 26.0.0
 
+<!--Device-SpeedParams-angle: double--><!--Device-SpeedParams-angle: double-End-->
+
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。
@@ -46,6 +50,8 @@ mode?: MarchingMode
 
 **起始版本：** 26.0.0
 
+<!--Device-SpeedParams-mode?: MarchingMode--><!--Device-SpeedParams-mode?: MarchingMode-End-->
+
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +67,8 @@ speed: number
 **类型：** number
 
 **起始版本：** 26.0.0
+
+<!--Device-SpeedParams-speed: int--><!--Device-SpeedParams-speed: int-End-->
 
 **系统能力：** SystemCapability.Mechanic.Core
 

@@ -8,6 +8,8 @@ interface AudioRecordingManager
 
 **起始版本：** 26.0.0
 
+<!--Device-audio-interface AudioRecordingManager--><!--Device-audio-interface AudioRecordingManager-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 ## 导入模块
@@ -35,6 +37,8 @@ enableSystemRecordController(show: boolean, config: SystemRecordControllerConfig
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioRecordingManager-enableSystemRecordController(show: boolean, config: SystemRecordControllerConfig): Promise<void>--><!--Device-AudioRecordingManager-enableSystemRecordController(show: boolean, config: SystemRecordControllerConfig): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 

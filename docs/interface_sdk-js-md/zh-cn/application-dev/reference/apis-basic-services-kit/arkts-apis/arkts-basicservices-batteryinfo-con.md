@@ -12,6 +12,8 @@ const batteryCapacityLevel: BatteryCapacityLevel
 
 **起始版本：** 9
 
+<!--Device-batteryInfo-const batteryCapacityLevel: BatteryCapacityLevel--><!--Device-batteryInfo-const batteryCapacityLevel: BatteryCapacityLevel-End-->
+
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
 ## batterySOC
@@ -28,6 +30,8 @@ const batterySOC: number
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-batteryInfo-const batterySOC: number--><!--Device-batteryInfo-const batterySOC: number-End-->
+
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
 ## batteryTemperature
@@ -41,6 +45,8 @@ const batteryTemperature: number
 **类型：** number
 
 **起始版本：** 6
+
+<!--Device-batteryInfo-const batteryTemperature: number--><!--Device-batteryInfo-const batteryTemperature: number-End-->
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -58,6 +64,8 @@ const chargingStatus: BatteryChargeState
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-batteryInfo-const chargingStatus: BatteryChargeState--><!--Device-batteryInfo-const chargingStatus: BatteryChargeState-End-->
+
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
 ## healthStatus
@@ -71,6 +79,8 @@ const healthStatus: BatteryHealthState
 **类型：** [BatteryHealthState](arkts-basicservices-batteryinfo-batteryhealthstate-e.md)
 
 **起始版本：** 6
+
+<!--Device-batteryInfo-const healthStatus: BatteryHealthState--><!--Device-batteryInfo-const healthStatus: BatteryHealthState-End-->
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -86,6 +96,8 @@ const isBatteryPresent: boolean
 
 **起始版本：** 7
 
+<!--Device-batteryInfo-const isBatteryPresent: boolean--><!--Device-batteryInfo-const isBatteryPresent: boolean-End-->
+
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
 ## nowCurrent
@@ -99,6 +111,8 @@ const nowCurrent: number
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-batteryInfo-const nowCurrent: number--><!--Device-batteryInfo-const nowCurrent: number-End-->
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -114,6 +128,8 @@ const pluggedType: BatteryPluggedType
 
 **起始版本：** 6
 
+<!--Device-batteryInfo-const pluggedType: BatteryPluggedType--><!--Device-batteryInfo-const pluggedType: BatteryPluggedType-End-->
+
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
 ## technology
@@ -128,6 +144,8 @@ const technology: string
 
 **起始版本：** 6
 
+<!--Device-batteryInfo-const technology: string--><!--Device-batteryInfo-const technology: string-End-->
+
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
 ## voltage
@@ -141,5 +159,7 @@ const voltage: number
 **类型：** number
 
 **起始版本：** 6
+
+<!--Device-batteryInfo-const voltage: number--><!--Device-batteryInfo-const voltage: number-End-->
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core

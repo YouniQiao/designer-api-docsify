@@ -10,6 +10,8 @@ interface AudioCapabilities
 
 **起始版本：** 20
 
+<!--Device-avSession-interface AudioCapabilities--><!--Device-avSession-interface AudioCapabilities-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 ## 导入模块
@@ -30,6 +32,8 @@ readonly streamInfos: Array<audio.AudioStreamInfo>
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-AudioCapabilities-readonly streamInfos: Array<audio.AudioStreamInfo>--><!--Device-AudioCapabilities-readonly streamInfos: Array<audio.AudioStreamInfo>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast

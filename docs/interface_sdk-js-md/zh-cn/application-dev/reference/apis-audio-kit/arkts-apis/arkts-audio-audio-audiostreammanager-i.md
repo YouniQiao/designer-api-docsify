@@ -12,6 +12,8 @@ AudioStreamManager是音频系统中的音频流管理模块。本模块提供�
 
 **起始版本：** 9
 
+<!--Device-audio-interface AudioStreamManager--><!--Device-audio-interface AudioStreamManager-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## 导入模块
@@ -29,6 +31,8 @@ getAudioEffectInfoArray(usage: StreamUsage, callback: AsyncCallback<AudioEffectI
 获取当前音效模式的信息。使用callback异步回调。
 
 **起始版本：** 10
+
+<!--Device-AudioStreamManager-getAudioEffectInfoArray(usage: StreamUsage, callback: AsyncCallback<AudioEffectInfoArray>): void--><!--Device-AudioStreamManager-getAudioEffectInfoArray(usage: StreamUsage, callback: AsyncCallback<AudioEffectInfoArray>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -72,6 +76,8 @@ getAudioEffectInfoArray(usage: StreamUsage): Promise<AudioEffectInfoArray>
 
 **起始版本：** 10
 
+<!--Device-AudioStreamManager-getAudioEffectInfoArray(usage: StreamUsage): Promise<AudioEffectInfoArray>--><!--Device-AudioStreamManager-getAudioEffectInfoArray(usage: StreamUsage): Promise<AudioEffectInfoArray>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **参数：**
@@ -114,6 +120,8 @@ getAudioEffectInfoArraySync(usage: StreamUsage): AudioEffectInfoArray
 获取当前音效模式的信息。同步返回结果。
 
 **起始版本：** 10
+
+<!--Device-AudioStreamManager-getAudioEffectInfoArraySync(usage: StreamUsage): AudioEffectInfoArray--><!--Device-AudioStreamManager-getAudioEffectInfoArraySync(usage: StreamUsage): AudioEffectInfoArray-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -164,6 +172,8 @@ getCurrentAudioCapturerInfoArray(callback: AsyncCallback<AudioCapturerChangeInfo
 
 **起始版本：** 9
 
+<!--Device-AudioStreamManager-getCurrentAudioCapturerInfoArray(callback: AsyncCallback<AudioCapturerChangeInfoArray>): void--><!--Device-AudioStreamManager-getCurrentAudioCapturerInfoArray(callback: AsyncCallback<AudioCapturerChangeInfoArray>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **参数：**
@@ -202,6 +212,8 @@ getCurrentAudioCapturerInfoArray(): Promise<AudioCapturerChangeInfoArray>
 
 **起始版本：** 9
 
+<!--Device-AudioStreamManager-getCurrentAudioCapturerInfoArray(): Promise<AudioCapturerChangeInfoArray>--><!--Device-AudioStreamManager-getCurrentAudioCapturerInfoArray(): Promise<AudioCapturerChangeInfoArray>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **返回值：**
@@ -235,6 +247,8 @@ getCurrentAudioCapturerInfoArraySync(): AudioCapturerChangeInfoArray
 > 该接口返回的音频采集器信息，可能包含系统内部音频录制流，如语音唤醒、蜂窝通话等。
 
 **起始版本：** 10
+
+<!--Device-AudioStreamManager-getCurrentAudioCapturerInfoArraySync(): AudioCapturerChangeInfoArray--><!--Device-AudioStreamManager-getCurrentAudioCapturerInfoArraySync(): AudioCapturerChangeInfoArray-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -271,6 +285,8 @@ getCurrentAudioRendererInfoArray(callback: AsyncCallback<AudioRendererChangeInfo
 > 该接口返回的音频渲染器信息，可能包含系统内部音频播放流，如蜂窝通话、超声波等。
 
 **起始版本：** 9
+
+<!--Device-AudioStreamManager-getCurrentAudioRendererInfoArray(callback: AsyncCallback<AudioRendererChangeInfoArray>): void--><!--Device-AudioStreamManager-getCurrentAudioRendererInfoArray(callback: AsyncCallback<AudioRendererChangeInfoArray>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -310,6 +326,8 @@ getCurrentAudioRendererInfoArray(): Promise<AudioRendererChangeInfoArray>
 
 **起始版本：** 9
 
+<!--Device-AudioStreamManager-getCurrentAudioRendererInfoArray(): Promise<AudioRendererChangeInfoArray>--><!--Device-AudioStreamManager-getCurrentAudioRendererInfoArray(): Promise<AudioRendererChangeInfoArray>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **返回值：**
@@ -344,6 +362,8 @@ getCurrentAudioRendererInfoArraySync(): AudioRendererChangeInfoArray
 
 **起始版本：** 10
 
+<!--Device-AudioStreamManager-getCurrentAudioRendererInfoArraySync(): AudioRendererChangeInfoArray--><!--Device-AudioStreamManager-getCurrentAudioRendererInfoArraySync(): AudioRendererChangeInfoArray-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **返回值：**
@@ -375,6 +395,8 @@ isAcousticEchoCancelerSupported(sourceType: SourceType): boolean
 查询指定的音源类型是否支持回声消除。
 
 **起始版本：** 20
+
+<!--Device-AudioStreamManager-isAcousticEchoCancelerSupported(sourceType: SourceType): boolean--><!--Device-AudioStreamManager-isAcousticEchoCancelerSupported(sourceType: SourceType): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -419,6 +441,8 @@ isAudioLoopbackSupported(mode: AudioLoopbackMode): boolean
 查询当前系统是否支持指定的音频返听模式。
 
 **起始版本：** 20
+
+<!--Device-AudioStreamManager-isAudioLoopbackSupported(mode: AudioLoopbackMode): boolean--><!--Device-AudioStreamManager-isAudioLoopbackSupported(mode: AudioLoopbackMode): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -465,6 +489,8 @@ isDirectPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): bool
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioStreamManager-isDirectPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boolean--><!--Device-AudioStreamManager-isDirectPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -515,6 +541,8 @@ isFastPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boolea
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioStreamManager-isFastPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boolean--><!--Device-AudioStreamManager-isFastPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **参数：**
@@ -564,6 +592,8 @@ isFastRecordingSupported(streamInfo: AudioStreamInfo, source: SourceType): boole
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioStreamManager-isFastRecordingSupported(streamInfo: AudioStreamInfo, source: SourceType): boolean--><!--Device-AudioStreamManager-isFastRecordingSupported(streamInfo: AudioStreamInfo, source: SourceType): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **参数：**
@@ -611,6 +641,8 @@ isIntelligentNoiseReductionEnabledForCurrentDevice(sourceType: SourceType): bool
 
 **起始版本：** 21
 
+<!--Device-AudioStreamManager-isIntelligentNoiseReductionEnabledForCurrentDevice(sourceType: SourceType): boolean--><!--Device-AudioStreamManager-isIntelligentNoiseReductionEnabledForCurrentDevice(sourceType: SourceType): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **参数：**
@@ -656,6 +688,8 @@ isMultichannelPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage)
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioStreamManager-isMultichannelPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boolean--><!--Device-AudioStreamManager-isMultichannelPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -706,6 +740,8 @@ isOffloadPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boo
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioStreamManager-isOffloadPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boolean--><!--Device-AudioStreamManager-isOffloadPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **参数：**
@@ -752,6 +788,8 @@ isRecordingAvailable(capturerInfo: AudioCapturerInfo): boolean
 检查传入的音频采集器信息中音源类型的录制是否可以启动成功。
 
 **起始版本：** 20
+
+<!--Device-AudioStreamManager-isRecordingAvailable(capturerInfo: AudioCapturerInfo): boolean--><!--Device-AudioStreamManager-isRecordingAvailable(capturerInfo: AudioCapturerInfo): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -821,6 +859,8 @@ isStreamActive(streamUsage: StreamUsage): boolean
 
 **起始版本：** 20
 
+<!--Device-AudioStreamManager-isStreamActive(streamUsage: StreamUsage): boolean--><!--Device-AudioStreamManager-isStreamActive(streamUsage: StreamUsage): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **参数：**
@@ -869,6 +909,8 @@ off(type: 'audioRendererChange', callback?: Callback<AudioRendererChangeInfoArra
 
 **起始版本：** 9
 
+<!--Device-AudioStreamManager-off(type: 'audioRendererChange', callback?: Callback<AudioRendererChangeInfoArray>): void--><!--Device-AudioStreamManager-off(type: 'audioRendererChange', callback?: Callback<AudioRendererChangeInfoArray>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **参数：**
@@ -911,6 +953,8 @@ off(type: 'audioCapturerChange', callback?: Callback<AudioCapturerChangeInfoArra
 > 该接口返回的音频采集器信息，可能包含系统内部音频录制流，如语音唤醒、蜂窝通话等。
 
 **起始版本：** 9
+
+<!--Device-AudioStreamManager-off(type: 'audioCapturerChange', callback?: Callback<AudioCapturerChangeInfoArray>): void--><!--Device-AudioStreamManager-off(type: 'audioCapturerChange', callback?: Callback<AudioCapturerChangeInfoArray>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -955,6 +999,8 @@ on(type: 'audioRendererChange', callback: Callback<AudioRendererChangeInfoArray>
 
 **起始版本：** 9
 
+<!--Device-AudioStreamManager-on(type: 'audioRendererChange', callback: Callback<AudioRendererChangeInfoArray>): void--><!--Device-AudioStreamManager-on(type: 'audioRendererChange', callback: Callback<AudioRendererChangeInfoArray>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **参数：**
@@ -992,6 +1038,8 @@ on(type: 'audioCapturerChange', callback: Callback<AudioCapturerChangeInfoArray>
 > 该接口返回的音频采集器信息，可能包含系统内部音频录制流，如语音唤醒、蜂窝通话等。
 
 **起始版本：** 9
+
+<!--Device-AudioStreamManager-on(type: 'audioCapturerChange', callback: Callback<AudioCapturerChangeInfoArray>): void--><!--Device-AudioStreamManager-on(type: 'audioCapturerChange', callback: Callback<AudioCapturerChangeInfoArray>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -1039,6 +1087,8 @@ isActive(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void
 **废弃版本：** 20
 
 **替代接口：** [isStreamActive](#isstreamactive)
+
+<!--Device-AudioStreamManager-isActive(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void--><!--Device-AudioStreamManager-isActive(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -1088,6 +1138,8 @@ isActive(volumeType: AudioVolumeType): Promise<boolean>
 
 **替代接口：** [isStreamActive](#isstreamactive)
 
+<!--Device-AudioStreamManager-isActive(volumeType: AudioVolumeType): Promise<boolean>--><!--Device-AudioStreamManager-isActive(volumeType: AudioVolumeType): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **参数：**
@@ -1136,6 +1188,8 @@ isActiveSync(volumeType: AudioVolumeType): boolean
 **废弃版本：** 20
 
 **替代接口：** [isStreamActive](#isstreamactive)
+
+<!--Device-AudioStreamManager-isActiveSync(volumeType: AudioVolumeType): boolean--><!--Device-AudioStreamManager-isActiveSync(volumeType: AudioVolumeType): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 

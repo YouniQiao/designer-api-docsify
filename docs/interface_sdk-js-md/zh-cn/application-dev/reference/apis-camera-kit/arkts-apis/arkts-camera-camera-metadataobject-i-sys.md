@@ -8,6 +8,8 @@ interface MetadataObject
 
 **起始版本：** 10
 
+<!--Device-camera-interface MetadataObject--><!--Device-camera-interface MetadataObject-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ Confidence of the detection, with a value range of [0, 1].
 
 **起始版本：** 13
 
+<!--Device-MetadataObject-readonly confidence: double--><!--Device-MetadataObject-readonly confidence: double-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -43,6 +47,8 @@ Metadata object ID.
 **类型：** number
 
 **起始版本：** 13
+
+<!--Device-MetadataObject-readonly objectId: int--><!--Device-MetadataObject-readonly objectId: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

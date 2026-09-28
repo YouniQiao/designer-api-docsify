@@ -8,6 +8,8 @@ enum AudioLatencyType
 
 **起始版本：** 23
 
+<!--Device-audio-enum AudioLatencyType--><!--Device-audio-enum AudioLatencyType-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## LATENCY_TYPE_ALL
@@ -21,6 +23,8 @@ LATENCY_TYPE_ALL = 0
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioLatencyType-LATENCY_TYPE_ALL = 0--><!--Device-AudioLatencyType-LATENCY_TYPE_ALL = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -36,6 +40,8 @@ LATENCY_TYPE_SOFTWARE = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioLatencyType-LATENCY_TYPE_SOFTWARE = 1--><!--Device-AudioLatencyType-LATENCY_TYPE_SOFTWARE = 1-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## LATENCY_TYPE_HARDWARE
@@ -49,5 +55,7 @@ LATENCY_TYPE_HARDWARE = 2
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioLatencyType-LATENCY_TYPE_HARDWARE = 2--><!--Device-AudioLatencyType-LATENCY_TYPE_HARDWARE = 2-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core

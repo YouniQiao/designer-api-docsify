@@ -8,6 +8,8 @@ Effect suggestion status
 
 **起始版本：** 12
 
+<!--Device-camera-class EffectSuggestionStatus--><!--Device-camera-class EffectSuggestionStatus-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ Effect Suggestion type status.
 
 **起始版本：** 12
 
+<!--Device-EffectSuggestionStatus-status: boolean--><!--Device-EffectSuggestionStatus-status: boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ Effect Suggestion type.
 **类型：** [EffectSuggestionType](arkts-camera-camera-effectsuggestiontype-e-sys.md)
 
 **起始版本：** 12
+
+<!--Device-EffectSuggestionStatus-type: EffectSuggestionType--><!--Device-EffectSuggestionStatus-type: EffectSuggestionType-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

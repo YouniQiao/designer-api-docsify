@@ -8,6 +8,8 @@ interface HiRetrievalConfig
 
 **起始版本：** 26.0.0
 
+<!--Device-hiRetrieval-interface HiRetrievalConfig--><!--Device-hiRetrieval-interface HiRetrievalConfig-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiRetrieval
 
 ## 导入模块
@@ -30,7 +32,9 @@ deviceModel: string
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-HiRetrievalConfig-deviceModel: string--><!--Device-HiRetrievalConfig-deviceModel: string-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiRetrieval
 
@@ -48,7 +52,9 @@ deviceType: string
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-HiRetrievalConfig-deviceType: string--><!--Device-HiRetrievalConfig-deviceType: string-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiRetrieval
 
@@ -66,6 +72,8 @@ userType: string
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-HiRetrievalConfig-userType: string--><!--Device-HiRetrievalConfig-userType: string-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiRetrieval

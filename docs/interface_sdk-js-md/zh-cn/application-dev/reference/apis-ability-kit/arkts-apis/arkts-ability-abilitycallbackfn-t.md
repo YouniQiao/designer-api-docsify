@@ -12,6 +12,8 @@ type AbilityCallbackFn = (ability: any) => void
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-unnamed-type AbilityCallbackFn = (ability: any) => void--><!--Device-unnamed-type AbilityCallbackFn = (ability: any) => void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **参数：**

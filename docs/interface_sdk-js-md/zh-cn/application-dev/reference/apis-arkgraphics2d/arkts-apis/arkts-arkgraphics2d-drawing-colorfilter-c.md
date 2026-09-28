@@ -14,6 +14,8 @@ class ColorFilter
 
 **起始版本：** 11
 
+<!--Device-drawing-class ColorFilter--><!--Device-drawing-class ColorFilter-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## 导入模块
@@ -31,6 +33,8 @@ static createBlendModeColorFilter(color: common2D.Color, mode: BlendMode): Color
 创建指定的颜色和混合模式的颜色滤波器。
 
 **起始版本：** 11
+
+<!--Device-ColorFilter-static createBlendModeColorFilter(color: common2D.Color, mode: BlendMode): ColorFilter--><!--Device-ColorFilter-static createBlendModeColorFilter(color: common2D.Color, mode: BlendMode): ColorFilter-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -74,6 +78,8 @@ static createBlendModeColorFilter(color: common2D.Color | number, mode: BlendMod
 
 **起始版本：** 18
 
+<!--Device-ColorFilter-static createBlendModeColorFilter(color: common2D.Color | number, mode: BlendMode): ColorFilter--><!--Device-ColorFilter-static createBlendModeColorFilter(color: common2D.Color | number, mode: BlendMode): ColorFilter-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -112,6 +118,8 @@ static createComposeColorFilter(outer: ColorFilter, inner: ColorFilter): ColorFi
 创建一个先应用inner进行滤波，再应用outer进行滤波的组合颜色滤波器。
 
 **起始版本：** 11
+
+<!--Device-ColorFilter-static createComposeColorFilter(outer: ColorFilter, inner: ColorFilter): ColorFilter--><!--Device-ColorFilter-static createComposeColorFilter(outer: ColorFilter, inner: ColorFilter): ColorFilter-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -155,6 +163,8 @@ static createLightingColorFilter(mutColor: common2D.Color | number, addColor: co
 
 **起始版本：** 20
 
+<!--Device-ColorFilter-static createLightingColorFilter(mutColor: common2D.Color | number, addColor: common2D.Color | number): ColorFilter--><!--Device-ColorFilter-static createLightingColorFilter(mutColor: common2D.Color | number, addColor: common2D.Color | number): ColorFilter-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -189,6 +199,8 @@ static createLinearToSRGBGamma(): ColorFilter
 
 **起始版本：** 11
 
+<!--Device-ColorFilter-static createLinearToSRGBGamma(): ColorFilter--><!--Device-ColorFilter-static createLinearToSRGBGamma(): ColorFilter-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
@@ -215,6 +227,8 @@ static createLumaColorFilter(): ColorFilter
 
 **起始版本：** 11
 
+<!--Device-ColorFilter-static createLumaColorFilter(): ColorFilter--><!--Device-ColorFilter-static createLumaColorFilter(): ColorFilter-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
@@ -240,6 +254,8 @@ static createMatrixColorFilter(matrix: Array<number>): ColorFilter
 创建颜色滤波器，通过4×5颜色矩阵变换颜色。
 
 **起始版本：** 12
+
+<!--Device-ColorFilter-static createMatrixColorFilter(matrix: Array<double>): ColorFilter--><!--Device-ColorFilter-static createMatrixColorFilter(matrix: Array<double>): ColorFilter-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -284,6 +300,8 @@ static createSRGBGammaToLinear(): ColorFilter
 创建一个从SRGB颜色空间转换到线性颜色空间的颜色滤波器。
 
 **起始版本：** 11
+
+<!--Device-ColorFilter-static createSRGBGammaToLinear(): ColorFilter--><!--Device-ColorFilter-static createSRGBGammaToLinear(): ColorFilter-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

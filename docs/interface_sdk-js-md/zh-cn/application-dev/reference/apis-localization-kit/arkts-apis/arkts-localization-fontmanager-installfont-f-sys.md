@@ -22,6 +22,8 @@ function installFont(path: string): Promise<number>
 
 **需要权限：** ohos.permission.UPDATE_FONT
 
+<!--Device-fontManager-function installFont(path: string): Promise<int>--><!--Device-fontManager-function installFont(path: string): Promise<int>-End-->
+
 **系统能力：** SystemCapability.Global.FontManager
 
 **系统接口：** 此接口为系统接口。

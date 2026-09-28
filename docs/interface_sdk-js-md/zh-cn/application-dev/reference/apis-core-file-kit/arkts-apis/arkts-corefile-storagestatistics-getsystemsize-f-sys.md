@@ -18,6 +18,8 @@ function getSystemSize(callback: AsyncCallback<number>): void
 
 **需要权限：** ohos.permission.STORAGE_MANAGER
 
+<!--Device-storageStatistics-function getSystemSize(callback: AsyncCallback<long>): void--><!--Device-storageStatistics-function getSystemSize(callback: AsyncCallback<long>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
 **系统接口：** 此接口为系统接口。
@@ -67,6 +69,8 @@ function getSystemSize(): Promise<number>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.STORAGE_MANAGER
+
+<!--Device-storageStatistics-function getSystemSize(): Promise<long>--><!--Device-storageStatistics-function getSystemSize(): Promise<long>-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 

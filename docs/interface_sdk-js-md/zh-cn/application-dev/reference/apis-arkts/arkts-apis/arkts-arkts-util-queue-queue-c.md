@@ -8,6 +8,8 @@ Queue遵循先进先出原则：在尾部增加元素，在头部删除元素。
 
 **起始版本：** 8
 
+<!--Device-unnamed-declare class Queue<T>--><!--Device-unnamed-declare class Queue<T>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -27,6 +29,8 @@ import { Queue } from '@kit.ArkTS';
 **起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Queue-[Symbol.iterator](): IterableIterator<T>--><!--Device-Queue-[Symbol.iterator](): IterableIterator<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -85,7 +89,9 @@ add(element: T): boolean
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Queue-add(element: T): boolean--><!--Device-Queue-add(element: T): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -136,7 +142,9 @@ Queue的构造函数，创建一个新的Queue实例，初始长度为0。Queue�
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Queue-constructor()--><!--Device-Queue-constructor()-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -165,6 +173,8 @@ forEach(callbackFn: (value: T, index?: number, Queue?: Queue<T>) => void, thisAr
 **起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Queue-forEach(callbackFn: (value: T, index?: number, Queue?: Queue<T>) => void, thisArg?: Object): void--><!--Device-Queue-forEach(callbackFn: (value: T, index?: number, Queue?: Queue<T>) => void, thisArg?: Object): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -209,7 +219,9 @@ getFirst(): T
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Queue-getFirst(): T--><!--Device-Queue-getFirst(): T-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -249,7 +261,9 @@ pop(): T
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Queue-pop(): T--><!--Device-Queue-pop(): T-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -293,5 +307,7 @@ Queue的元素个数。
 **起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Queue-length: number--><!--Device-Queue-length: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

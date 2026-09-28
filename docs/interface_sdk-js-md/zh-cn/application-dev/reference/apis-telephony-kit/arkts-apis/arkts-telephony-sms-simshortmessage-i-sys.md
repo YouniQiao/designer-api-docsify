@@ -8,6 +8,8 @@ SIM卡短消息。
 
 **起始版本：** 7
 
+<!--Device-sms-export interface SimShortMessage--><!--Device-sms-export interface SimShortMessage-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ SIM卡索引
 
 **起始版本：** 7
 
+<!--Device-SimShortMessage-indexOnSim: int--><!--Device-SimShortMessage-indexOnSim: int-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -46,6 +50,8 @@ shortMessage: ShortMessage
 
 **起始版本：** 7
 
+<!--Device-SimShortMessage-shortMessage: ShortMessage--><!--Device-SimShortMessage-shortMessage: ShortMessage-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +67,8 @@ SIM卡消息状态
 **类型：** [SimMessageStatus](arkts-telephony-sms-simmessagestatus-e-sys.md)
 
 **起始版本：** 7
+
+<!--Device-SimShortMessage-simMessageStatus: SimMessageStatus--><!--Device-SimShortMessage-simMessageStatus: SimMessageStatus-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 

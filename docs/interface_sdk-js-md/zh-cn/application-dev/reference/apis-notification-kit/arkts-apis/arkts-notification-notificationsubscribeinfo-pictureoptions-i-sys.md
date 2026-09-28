@@ -8,6 +8,8 @@ export interface PictureOptions
 
 **起始版本：** 26.0.0
 
+<!--Device-unnamed-export interface PictureOptions--><!--Device-unnamed-export interface PictureOptions-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -25,6 +27,8 @@ preparseLiveViewPicList?: string[]
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PictureOptions-preparseLiveViewPicList?: string[]--><!--Device-PictureOptions-preparseLiveViewPicList?: string[]-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

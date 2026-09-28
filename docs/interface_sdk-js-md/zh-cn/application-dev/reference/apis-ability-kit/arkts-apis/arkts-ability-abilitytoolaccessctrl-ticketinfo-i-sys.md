@@ -8,6 +8,8 @@ interface TicketInfo
 
 **起始版本：** 26.0.0
 
+<!--Device-abilityToolAccessCtrl-interface TicketInfo--><!--Device-abilityToolAccessCtrl-interface TicketInfo-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 **系统接口：** 此接口为系统接口。
@@ -31,6 +33,8 @@ challenge: string
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-TicketInfo-challenge: string--><!--Device-TicketInfo-challenge: string-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ message: string
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-TicketInfo-message: string--><!--Device-TicketInfo-message: string-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 **系统接口：** 此接口为系统接口。
@@ -66,6 +72,8 @@ ticket: string
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-TicketInfo-ticket: string--><!--Device-TicketInfo-ticket: string-End-->
 
 **系统能力：** SystemCapability.Security.Asset
 

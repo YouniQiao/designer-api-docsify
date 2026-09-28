@@ -646,7 +646,7 @@ OH_AVErrCode OH_AVPlayer_GetPlaybackRate(OH_AVPlayer *player, float *rate)
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | 如果成功获取当前播放器的播放速率，返回[AV_ERR_OK](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode)；  否则返回{@link native_averrors.h}中定义的错误码。 |
+| OH_AVErrCode | 如果成功获取当前播放器的播放速率，返回[AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode)；  否则返回{@link native_averrors.h}中定义的错误码。 |
 
 ### OH_AVPlayer_SetAudioRendererInfo()
 

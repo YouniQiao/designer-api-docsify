@@ -16,6 +16,8 @@ function getRotationAxesStatus(mechId: number): RotationAxesStatus
 
 **起始版本：** 20
 
+<!--Device-mechanicManager-function getRotationAxesStatus(mechId: int): RotationAxesStatus--><!--Device-mechanicManager-function getRotationAxesStatus(mechId: int): RotationAxesStatus-End-->
+
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。

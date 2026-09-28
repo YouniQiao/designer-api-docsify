@@ -14,12 +14,12 @@ The **UIPickerComponent** container is a component used to implement user select
 > 
 > - The **UIPickerComponent** container currently does not support smartwatch devices. You can obtain the device type through **deviceInfo.deviceType** to determine whether the device is a smartwatch.
 > 
-> - This component supports [WithTheme](arkts-arkui-withtheme-comp.md#with_themedefines-withtheme-component) since API version 26.0.0.
+> - This component supports [WithTheme](arkts-arkui-withtheme-comp.md) since API version 26.0.0.
 
 ## Child Components
 
 - Multiple child components are supported.  
-- Supported child component types: [Text](arkts-arkui-text-comp.md#text), [Image](arkts-arkui-image-comp.md#image), [Row](arkts-arkui-row-comp.md#row), and [SymbolGlyph](arkts-arkui-symbolglyph-comp.md#symbolglyph).  
+- Supported child component types: [Text](arkts-arkui-text-comp.md), [Image](arkts-arkui-image-comp.md), [Row](arkts-arkui-row-comp.md), and [SymbolGlyph](arkts-arkui-symbolglyph-comp.md).  
 - Supported rendering control types: [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md) and [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md).
 
 > **NOTE:** 
@@ -49,6 +49,8 @@ Creates a **UIPickerComponent** container. The selected item is determined by th
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-UIPickerComponentInterface-(options?: UIPickerComponentOptions): UIPickerComponentAttribute--><!--Device-UIPickerComponentInterface-(options?: UIPickerComponentOptions): UIPickerComponentAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

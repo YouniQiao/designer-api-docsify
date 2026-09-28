@@ -8,6 +8,8 @@ Describes the object returned after the callback is triggered when an image is s
 
 **Since:** 12
 
+<!--Device-unnamed-declare interface ImageLoadResult--><!--Device-unnamed-declare interface ImageLoadResult-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## componentHeight
@@ -28,6 +30,8 @@ Unit: [px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#basic-pixel-
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ImageLoadResult-componentHeight: number--><!--Device-ImageLoadResult-componentHeight: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## componentWidth
@@ -47,6 +51,8 @@ Unit: [px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#basic-pixel-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ImageLoadResult-componentWidth: number--><!--Device-ImageLoadResult-componentWidth: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,6 +78,8 @@ Valid only when loadingStatus returns 1.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ImageLoadResult-contentHeight: number--><!--Device-ImageLoadResult-contentHeight: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## contentOffsetX
@@ -95,6 +103,8 @@ Valid only when loadingStatus returns 1.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ImageLoadResult-contentOffsetX: number--><!--Device-ImageLoadResult-contentOffsetX: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -120,6 +130,8 @@ Valid only when loadingStatus returns 1.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ImageLoadResult-contentOffsetY: number--><!--Device-ImageLoadResult-contentOffsetY: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## contentWidth
@@ -144,6 +156,8 @@ Valid only when loadingStatus returns 1.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ImageLoadResult-contentWidth: number--><!--Device-ImageLoadResult-contentWidth: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## height
@@ -163,6 +177,8 @@ Unit: [px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#basic-pixel-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ImageLoadResult-height: number--><!--Device-ImageLoadResult-height: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -186,6 +202,8 @@ When the returned status value is 0, it indicates image data load success. When 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ImageLoadResult-loadingStatus: number--><!--Device-ImageLoadResult-loadingStatus: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## width
@@ -205,5 +223,7 @@ Unit: [px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#basic-pixel-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ImageLoadResult-width: number--><!--Device-ImageLoadResult-width: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

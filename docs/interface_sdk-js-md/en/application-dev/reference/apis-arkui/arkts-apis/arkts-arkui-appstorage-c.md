@@ -17,6 +17,8 @@ AppStorage is the global UI state storage center bound to applications. It is cr
 
 **Since:** 7
 
+<!--Device-unnamed-declare class AppStorage--><!--Device-unnamed-declare class AppStorage-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## clear
@@ -32,6 +34,8 @@ For details about the subscriber, see [delete](#delete).
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AppStorage-static clear(): boolean--><!--Device-AppStorage-static clear(): boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -78,6 +82,8 @@ To delete these subscribers:
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-AppStorage-static delete(propName: string): boolean--><!--Device-AppStorage-static delete(propName: string): boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -115,6 +121,8 @@ Obtains the value of the property corresponding to **propName** from [AppStorage
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-AppStorage-static get<T>(propName: string): T | undefined--><!--Device-AppStorage-static get<T>(propName: string): T | undefined-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -148,6 +156,8 @@ Checks whether the property corresponding to **propName** exists in [AppStorage]
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-AppStorage-static has(propName: string): boolean--><!--Device-AppStorage-static has(propName: string): boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -180,6 +190,8 @@ Obtains all property names in [AppStorage](../../../ui/state-management/arkts-ap
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-AppStorage-static keys(): IterableIterator<string>--><!--Device-AppStorage-static keys(): IterableIterator<string>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -208,6 +220,8 @@ If the given property does not exist in AppStorage, **undefined** is returned.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AppStorage-static link<T>(propName: string): SubscribedAbstractProperty<T>--><!--Device-AppStorage-static link<T>(propName: string): SubscribedAbstractProperty<T>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -243,6 +257,8 @@ Establishes a one-way data binding with the property corresponding to **propName
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AppStorage-static prop<T>(propName: string): SubscribedAbstractProperty<T>--><!--Device-AppStorage-static prop<T>(propName: string): SubscribedAbstractProperty<T>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -281,6 +297,8 @@ This API is basically the same as [link](#link), except that it does not require
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AppStorage-static ref<T>(propName: string): AbstractProperty<T> | undefined--><!--Device-AppStorage-static ref<T>(propName: string): AbstractProperty<T> | undefined-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -315,6 +333,8 @@ Sets the value of the property corresponding to **propName** in [AppStorage](../
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AppStorage-static set<T>(propName: string, newValue: T): boolean--><!--Device-AppStorage-static set<T>(propName: string, newValue: T): boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -351,6 +371,8 @@ Similar to the [link](#link) API, establishes a two-way data binding with the pr
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-AppStorage-static setAndLink<T>(propName: string, defaultValue: T): SubscribedAbstractProperty<T>--><!--Device-AppStorage-static setAndLink<T>(propName: string, defaultValue: T): SubscribedAbstractProperty<T>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -385,6 +407,8 @@ Similar to the [prop](#prop) API, establishes a one-way data binding with the pr
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AppStorage-static setAndProp<T>(propName: string, defaultValue: T): SubscribedAbstractProperty<T>--><!--Device-AppStorage-static setAndProp<T>(propName: string, defaultValue: T): SubscribedAbstractProperty<T>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -421,6 +445,8 @@ This API is basically the same as [setAndLink](#setandlink), except that it does
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AppStorage-static setAndRef<T>(propName: string, defaultValue: T): AbstractProperty<T>--><!--Device-AppStorage-static setAndRef<T>(propName: string, defaultValue: T): AbstractProperty<T>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -459,6 +485,8 @@ If **propName** does not exist, this API creates it with the value of **newValue
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-AppStorage-static setOrCreate<T>(propName: string, newValue: T): void--><!--Device-AppStorage-static setOrCreate<T>(propName: string, newValue: T): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -485,6 +513,8 @@ Obtains the number of properties in [AppStorage](../../../ui/state-management/ar
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AppStorage-static size(): number--><!--Device-AppStorage-static size(): number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -518,6 +548,8 @@ For details about the subscriber, see [delete](#delete).
 **Substitutes:** [clear](#clear)
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-AppStorage-static Clear(): boolean--><!--Device-AppStorage-static Clear(): boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -553,6 +585,8 @@ Subscribers include properties bound using [Link](#link) and [Prop](#prop) APIs,
 **Substitutes:** [delete](#delete)
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-AppStorage-static Delete(propName: string): boolean--><!--Device-AppStorage-static Delete(propName: string): boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -595,6 +629,8 @@ Obtains the value of the property corresponding to **propName** from [AppStorage
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-AppStorage-static Get<T>(propName: string): T | undefined--><!--Device-AppStorage-static Get<T>(propName: string): T | undefined-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -632,6 +668,8 @@ Checks whether the property corresponding to **propName** exists in [AppStorage]
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-AppStorage-static Has(propName: string): boolean--><!--Device-AppStorage-static Has(propName: string): boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -665,6 +703,8 @@ Checks whether the property corresponding to **propName** in [AppStorage](../../
 **Deprecated since:** 10
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-AppStorage-static IsMutable(propName: string): boolean--><!--Device-AppStorage-static IsMutable(propName: string): boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -703,6 +743,8 @@ Obtains all property names in [AppStorage](../../../ui/state-management/arkts-ap
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-AppStorage-static Keys(): IterableIterator<string>--><!--Device-AppStorage-static Keys(): IterableIterator<string>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -737,6 +779,8 @@ If the given property does not exist in AppStorage, **undefined** is returned.
 **Substitutes:** [link](#link)
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-AppStorage-static Link(propName: string): any--><!--Device-AppStorage-static Link(propName: string): any-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -781,6 +825,8 @@ Establishes a one-way data binding with the property corresponding to **propName
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-AppStorage-static Prop(propName: string): any--><!--Device-AppStorage-static Prop(propName: string): any-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -819,6 +865,8 @@ Sets the value of the property corresponding to **propName** in [AppStorage](../
 **Substitutes:** [set](#set)
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-AppStorage-static Set<T>(propName: string, newValue: T): boolean--><!--Device-AppStorage-static Set<T>(propName: string, newValue: T): boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -859,6 +907,8 @@ Similar to the [Link](#link) API, establishes a two-way data binding with the pr
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-AppStorage-static SetAndLink<T>(propName: string, defaultValue: T): SubscribedAbstractProperty<T>--><!--Device-AppStorage-static SetAndLink<T>(propName: string, defaultValue: T): SubscribedAbstractProperty<T>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -898,6 +948,8 @@ Similar to the [Prop](#prop) API, establishes a one-way data binding with the pr
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-AppStorage-static SetAndProp<S>(propName: string, defaultValue: S): SubscribedAbstractProperty<S>--><!--Device-AppStorage-static SetAndProp<S>(propName: string, defaultValue: S): SubscribedAbstractProperty<S>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -936,6 +988,8 @@ Sets the value of the property corresponding to **propName** in [AppStorage](../
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-AppStorage-static SetOrCreate<T>(propName: string, newValue: T): void--><!--Device-AppStorage-static SetOrCreate<T>(propName: string, newValue: T): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -967,6 +1021,8 @@ Obtains the number of properties in [AppStorage](../../../ui/state-management/ar
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-AppStorage-static Size(): number--><!--Device-AppStorage-static Size(): number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -997,6 +1053,8 @@ Deletes all properties from [AppStorage](../../../ui/state-management/arkts-apps
 **Substitutes:** [Clear](#clear)
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-AppStorage-static staticClear(): boolean--><!--Device-AppStorage-static staticClear(): boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

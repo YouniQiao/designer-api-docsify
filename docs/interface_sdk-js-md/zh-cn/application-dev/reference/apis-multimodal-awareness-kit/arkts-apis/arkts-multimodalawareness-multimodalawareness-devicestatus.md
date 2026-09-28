@@ -4,6 +4,8 @@
 
 **起始版本：** 18
 
+<!--Device-unnamed-declare namespace deviceStatus--><!--Device-unnamed-declare namespace deviceStatus-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.DeviceStatus
 
 ## 导入模块

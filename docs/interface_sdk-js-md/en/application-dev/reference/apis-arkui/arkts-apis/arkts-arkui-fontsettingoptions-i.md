@@ -8,6 +8,8 @@ Defines font setting options.
 
 **Since:** 12
 
+<!--Device-unnamed-declare interface FontSettingOptions--><!--Device-unnamed-declare interface FontSettingOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## enableVariableFontWeight
@@ -33,5 +35,7 @@ Default value: **false**
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-FontSettingOptions-enableVariableFontWeight?: boolean--><!--Device-FontSettingOptions-enableVariableFontWeight?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

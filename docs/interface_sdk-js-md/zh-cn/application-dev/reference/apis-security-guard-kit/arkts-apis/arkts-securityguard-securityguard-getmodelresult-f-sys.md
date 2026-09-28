@@ -18,6 +18,8 @@ function getModelResult(rule: ModelRule): Promise<ModelResult>
 
 **需要权限：** ohos.permission.QUERY_SECURITY_MODEL_RESULT
 
+<!--Device-securityGuard-function getModelResult(rule: ModelRule): Promise<ModelResult>--><!--Device-securityGuard-function getModelResult(rule: ModelRule): Promise<ModelResult>-End-->
+
 **系统能力：** SystemCapability.Security.SecurityGuard
 
 **系统接口：** 此接口为系统接口。

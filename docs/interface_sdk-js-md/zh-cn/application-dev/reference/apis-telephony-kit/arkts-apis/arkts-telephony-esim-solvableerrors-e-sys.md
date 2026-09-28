@@ -8,6 +8,8 @@ export enum SolvableErrors
 
 **起始版本：** 18
 
+<!--Device-eSIM-export enum SolvableErrors--><!--Device-eSIM-export enum SolvableErrors-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -22,6 +24,8 @@ SOLVABLE_ERROR_NEED_CONFIRMATION_CODE = 1 << 0
 
 **起始版本：** 18
 
+<!--Device-SolvableErrors-SOLVABLE_ERROR_NEED_CONFIRMATION_CODE = 1 << 0--><!--Device-SolvableErrors-SOLVABLE_ERROR_NEED_CONFIRMATION_CODE = 1 << 0-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -35,6 +39,8 @@ SOLVABLE_ERROR_NEED_POLICY_RULE = 1 << 1
 下载过程需要用户同意才能允许配置文件策略规则。
 
 **起始版本：** 18
+
+<!--Device-SolvableErrors-SOLVABLE_ERROR_NEED_POLICY_RULE = 1 << 1--><!--Device-SolvableErrors-SOLVABLE_ERROR_NEED_POLICY_RULE = 1 << 1-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 

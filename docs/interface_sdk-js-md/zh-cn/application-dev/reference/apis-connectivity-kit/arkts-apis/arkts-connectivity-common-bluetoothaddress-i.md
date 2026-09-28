@@ -8,6 +8,8 @@ export interface BluetoothAddress
 
 **起始版本：** 21
 
+<!--Device-common-export interface BluetoothAddress--><!--Device-common-export interface BluetoothAddress-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ address: string
 
 **起始版本：** 21
 
+<!--Device-BluetoothAddress-address: string--><!--Device-BluetoothAddress-address: string-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## addressType
@@ -42,6 +46,8 @@ addressType: BluetoothAddressType
 
 **起始版本：** 21
 
+<!--Device-BluetoothAddress-addressType: BluetoothAddressType--><!--Device-BluetoothAddress-addressType: BluetoothAddressType-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## rawAddressType
@@ -55,5 +61,7 @@ rawAddressType?: BluetoothRawAddressType
 **类型：** [BluetoothRawAddressType](arkts-connectivity-common-bluetoothrawaddresstype-e.md)
 
 **起始版本：** 23
+
+<!--Device-BluetoothAddress-rawAddressType?: BluetoothRawAddressType--><!--Device-BluetoothAddress-rawAddressType?: BluetoothRawAddressType-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

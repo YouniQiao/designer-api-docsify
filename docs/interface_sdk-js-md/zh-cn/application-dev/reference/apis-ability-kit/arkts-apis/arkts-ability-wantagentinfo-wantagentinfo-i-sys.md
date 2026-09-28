@@ -8,6 +8,8 @@ WantAgentInfo用于定义触发WantAgent所需要的信息，可以作为[getWan
 
 **起始版本：** 7
 
+<!--Device-unnamed-export interface WantAgentInfo--><!--Device-unnamed-export interface WantAgentInfo-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## userId
@@ -23,6 +25,8 @@ userId?: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WantAgentInfo-userId?: int--><!--Device-WantAgentInfo-userId?: int-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

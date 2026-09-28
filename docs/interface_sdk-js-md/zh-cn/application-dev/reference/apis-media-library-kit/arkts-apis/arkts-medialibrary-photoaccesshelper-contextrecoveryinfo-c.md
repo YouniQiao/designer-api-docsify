@@ -8,6 +8,8 @@ export class ContextRecoveryInfo
 
 **起始版本：** 21
 
+<!--Device-photoAccessHelper-export class ContextRecoveryInfo--><!--Device-photoAccessHelper-export class ContextRecoveryInfo-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
@@ -35,7 +37,9 @@ albumUri对应媒体库中相册的uri。
 
 **起始版本：** 21
 
-**原子化服务API：** 从API版本21开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本21开始，该接口支持在原子化服务中使用。
+
+<!--Device-ContextRecoveryInfo-albumUri: string--><!--Device-ContextRecoveryInfo-albumUri: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -51,7 +55,9 @@ displayName: string
 
 **起始版本：** 21
 
-**原子化服务API：** 从API版本21开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本21开始，该接口支持在原子化服务中使用。
+
+<!--Device-ContextRecoveryInfo-displayName: string--><!--Device-ContextRecoveryInfo-displayName: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -69,7 +75,9 @@ fileSize?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-ContextRecoveryInfo-fileSize?: int--><!--Device-ContextRecoveryInfo-fileSize?: int-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -87,7 +95,9 @@ gridLevel?: GridLevel
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-ContextRecoveryInfo-gridLevel?: GridLevel--><!--Device-ContextRecoveryInfo-gridLevel?: GridLevel-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -105,7 +115,9 @@ recommendationType: number
 
 **起始版本：** 21
 
-**原子化服务API：** 从API版本21开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本21开始，该接口支持在原子化服务中使用。
+
+<!--Device-ContextRecoveryInfo-recommendationType: int--><!--Device-ContextRecoveryInfo-recommendationType: int-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -123,7 +135,9 @@ selectedRecommendationType: number
 
 **起始版本：** 21
 
-**原子化服务API：** 从API版本21开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本21开始，该接口支持在原子化服务中使用。
+
+<!--Device-ContextRecoveryInfo-selectedRecommendationType: int--><!--Device-ContextRecoveryInfo-selectedRecommendationType: int-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -141,7 +155,9 @@ sortRule?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-ContextRecoveryInfo-sortRule?: string--><!--Device-ContextRecoveryInfo-sortRule?: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -161,7 +177,9 @@ time: number
 
 **起始版本：** 21
 
-**原子化服务API：** 从API版本21开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本21开始，该接口支持在原子化服务中使用。
+
+<!--Device-ContextRecoveryInfo-time: long--><!--Device-ContextRecoveryInfo-time: long-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -179,6 +197,8 @@ version: number
 
 **起始版本：** 21
 
-**原子化服务API：** 从API版本21开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本21开始，该接口支持在原子化服务中使用。
+
+<!--Device-ContextRecoveryInfo-version: int--><!--Device-ContextRecoveryInfo-version: int-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core

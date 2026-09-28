@@ -8,6 +8,8 @@ interface AuthorizationManager
 
 **起始版本：** 26.0.1
 
+<!--Device-authorization-interface AuthorizationManager--><!--Device-authorization-interface AuthorizationManager-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 ## 导入模块
@@ -27,6 +29,8 @@ hasAuthorization(privilege: Privilege): Promise<boolean>
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AuthorizationManager-hasAuthorization(privilege: Privilege): Promise<boolean>--><!--Device-AuthorizationManager-hasAuthorization(privilege: Privilege): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -63,6 +67,8 @@ requestAuthorization(privilege: Privilege, context: UIAbilityContext): Promise<A
 **需要权限：** ohos.permission.REQUEST_LOCAL_ACCOUNT_AUTHORIZATION
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AuthorizationManager-requestAuthorization(privilege: Privilege, context: UIAbilityContext): Promise<AuthorizationResult>--><!--Device-AuthorizationManager-requestAuthorization(privilege: Privilege, context: UIAbilityContext): Promise<AuthorizationResult>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 

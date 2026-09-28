@@ -14,6 +14,8 @@ interface NotifyCharacteristic
 
 **替代接口：** [NotifyCharacteristic](arkts-connectivity-bluetoothmanager-notifycharacteristic-i.md)
 
+<!--Device-bluetooth-interface NotifyCharacteristic--><!--Device-bluetooth-interface NotifyCharacteristic-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -38,6 +40,8 @@ characteristicUuid: string
 
 **替代接口：** [characteristicUuid](arkts-connectivity-bluetoothmanager-notifycharacteristic-i.md#characteristicuuid)
 
+<!--Device-NotifyCharacteristic-characteristicUuid: string--><!--Device-NotifyCharacteristic-characteristicUuid: string-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## characteristicValue
@@ -55,6 +59,8 @@ characteristicValue: ArrayBuffer
 **废弃版本：** 9
 
 **替代接口：** [characteristicValue](arkts-connectivity-bluetoothmanager-notifycharacteristic-i.md#characteristicvalue)
+
+<!--Device-NotifyCharacteristic-characteristicValue: ArrayBuffer--><!--Device-NotifyCharacteristic-characteristicValue: ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -74,6 +80,8 @@ confirm: boolean
 
 **替代接口：** [confirm](arkts-connectivity-bluetoothmanager-notifycharacteristic-i.md#confirm)
 
+<!--Device-NotifyCharacteristic-confirm: boolean--><!--Device-NotifyCharacteristic-confirm: boolean-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## serviceUuid
@@ -91,5 +99,7 @@ serviceUuid: string
 **废弃版本：** 9
 
 **替代接口：** [serviceUuid](arkts-connectivity-bluetoothmanager-notifycharacteristic-i.md#serviceuuid)
+
+<!--Device-NotifyCharacteristic-serviceUuid: string--><!--Device-NotifyCharacteristic-serviceUuid: string-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

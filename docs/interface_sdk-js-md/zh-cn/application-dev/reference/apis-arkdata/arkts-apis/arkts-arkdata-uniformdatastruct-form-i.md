@@ -8,6 +8,8 @@ interface Form
 
 **起始版本：** 15
 
+<!--Device-uniformDataStruct-interface Form--><!--Device-uniformDataStruct-interface Form-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ abilityName: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Form-abilityName: string--><!--Device-Form-abilityName: string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## bundleName
@@ -45,6 +49,8 @@ bundleName: string
 **起始版本：** 15
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Form-bundleName: string--><!--Device-Form-bundleName: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -62,6 +68,8 @@ details?: Record<string, number | string | Uint8Array>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Form-details?: Record<string, int | long | double | string | Uint8Array>--><!--Device-Form-details?: Record<string, int | long | double | string | Uint8Array>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## formId
@@ -77,6 +85,8 @@ formId: number
 **起始版本：** 15
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Form-formId: int--><!--Device-Form-formId: int-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -94,6 +104,8 @@ formName: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Form-formName: string--><!--Device-Form-formName: string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## module
@@ -110,6 +122,8 @@ module: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Form-module: string--><!--Device-Form-module: string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## uniformDataType
@@ -125,5 +139,7 @@ readonly uniformDataType: 'openharmony.form'
 **起始版本：** 15
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Form-readonly uniformDataType: 'openharmony.form'--><!--Device-Form-readonly uniformDataType: 'openharmony.form'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core

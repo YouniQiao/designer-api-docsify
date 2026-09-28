@@ -16,6 +16,8 @@ function getAppNativeMemInfoAsync(): Promise<NativeMemInfo>
 
 **起始版本：** 20
 
+<!--Device-hidebug-function getAppNativeMemInfoAsync(): Promise<NativeMemInfo>--><!--Device-hidebug-function getAppNativeMemInfoAsync(): Promise<NativeMemInfo>-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **返回值：**

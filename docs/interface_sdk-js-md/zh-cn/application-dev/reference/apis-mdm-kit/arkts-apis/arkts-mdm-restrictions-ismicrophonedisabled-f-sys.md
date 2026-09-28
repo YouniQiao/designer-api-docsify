@@ -24,6 +24,8 @@ function isMicrophoneDisabled(admin: Want): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-restrictions-function isMicrophoneDisabled(admin: Want): boolean--><!--Device-restrictions-function isMicrophoneDisabled(admin: Want): boolean-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。

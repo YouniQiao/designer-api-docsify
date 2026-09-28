@@ -8,6 +8,8 @@ enum WaterRippleMode
 
 **起始版本：** 12
 
+<!--Device-uiEffect-enum WaterRippleMode--><!--Device-uiEffect-enum WaterRippleMode-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -21,6 +23,8 @@ SMALL2MEDIUM_RECV = 0
 手机碰2in1设备（接收端）。
 
 **起始版本：** 12
+
+<!--Device-WaterRippleMode-SMALL2MEDIUM_RECV = 0--><!--Device-WaterRippleMode-SMALL2MEDIUM_RECV = 0-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -36,6 +40,8 @@ SMALL2MEDIUM_SEND = 1
 
 **起始版本：** 12
 
+<!--Device-WaterRippleMode-SMALL2MEDIUM_SEND = 1--><!--Device-WaterRippleMode-SMALL2MEDIUM_SEND = 1-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -50,6 +56,8 @@ SMALL2SMALL = 2
 
 **起始版本：** 12
 
+<!--Device-WaterRippleMode-SMALL2SMALL = 2--><!--Device-WaterRippleMode-SMALL2SMALL = 2-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -63,6 +71,8 @@ MINI_RECV = 3
 2in1设备与其它设备共享（键鼠共享场景）。
 
 **起始版本：** 17
+
+<!--Device-WaterRippleMode-MINI_RECV = 3--><!--Device-WaterRippleMode-MINI_RECV = 3-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

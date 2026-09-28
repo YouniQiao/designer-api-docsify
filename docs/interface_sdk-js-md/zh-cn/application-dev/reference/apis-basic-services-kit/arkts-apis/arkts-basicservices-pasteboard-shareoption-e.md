@@ -8,6 +8,8 @@ enum ShareOption
 
 **起始版本：** 9
 
+<!--Device-pasteboard-enum ShareOption--><!--Device-pasteboard-enum ShareOption-End-->
+
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
 ## INAPP
@@ -20,7 +22,9 @@ INAPP = 0
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ShareOption-INAPP = 0--><!--Device-ShareOption-INAPP = 0-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -34,7 +38,9 @@ LOCALDEVICE = 1
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ShareOption-LOCALDEVICE = 1--><!--Device-ShareOption-LOCALDEVICE = 1-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -53,5 +59,7 @@ CROSSDEVICE = 2
 **废弃版本：** 12
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ShareOption-CROSSDEVICE = 2--><!--Device-ShareOption-CROSSDEVICE = 2-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard

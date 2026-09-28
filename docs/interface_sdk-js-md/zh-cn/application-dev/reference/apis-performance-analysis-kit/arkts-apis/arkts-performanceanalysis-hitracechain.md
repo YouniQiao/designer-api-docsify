@@ -4,6 +4,8 @@
 
 **起始版本：** 8
 
+<!--Device-unnamed-declare namespace hiTraceChain--><!--Device-unnamed-declare namespace hiTraceChain-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
 
 ## 导入模块

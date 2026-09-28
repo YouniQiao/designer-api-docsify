@@ -8,6 +8,8 @@ interface KeyboardController
 
 **起始版本：** 8
 
+<!--Device-inputMethodEngine-interface KeyboardController--><!--Device-inputMethodEngine-interface KeyboardController-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## 导入模块
@@ -25,6 +27,8 @@ exitCurrentInputType(callback: AsyncCallback<void>): void
 退出当前输入类型，仅支持系统配置的默认输入法应用调用。使用callback异步回调。
 
 **起始版本：** 11
+
+<!--Device-KeyboardController-exitCurrentInputType(callback: AsyncCallback<void>): void--><!--Device-KeyboardController-exitCurrentInputType(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -67,6 +71,8 @@ exitCurrentInputType(): Promise<void>
 
 **起始版本：** 11
 
+<!--Device-KeyboardController-exitCurrentInputType(): Promise<void>--><!--Device-KeyboardController-exitCurrentInputType(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**
@@ -103,6 +109,8 @@ hide(callback: AsyncCallback<void>): void
 隐藏输入法。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-KeyboardController-hide(callback: AsyncCallback<void>): void--><!--Device-KeyboardController-hide(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -143,6 +151,8 @@ hide(): Promise<void>
 隐藏输入法。使用promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-KeyboardController-hide(): Promise<void>--><!--Device-KeyboardController-hide(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -187,6 +197,8 @@ hideKeyboard(callback: AsyncCallback<void>): void
 
 **替代接口：** [hide](#hide)(callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-KeyboardController-hideKeyboard(callback: AsyncCallback<void>): void--><!--Device-KeyboardController-hideKeyboard(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -227,6 +239,8 @@ hideKeyboard(): Promise<void>
 **废弃版本：** 9
 
 **替代接口：** [hide](#hide)()
+
+<!--Device-KeyboardController-hideKeyboard(): Promise<void>--><!--Device-KeyboardController-hideKeyboard(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 

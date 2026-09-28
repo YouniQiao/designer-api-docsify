@@ -10,6 +10,8 @@ interface PbapServerProfile extends BaseProfile
 
 **起始版本：** 11
 
+<!--Device-pbap-interface PbapServerProfile extends BaseProfile--><!--Device-pbap-interface PbapServerProfile extends BaseProfile-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -29,6 +31,8 @@ disconnect(deviceId: string): void
 **起始版本：** 11
 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
+
+<!--Device-PbapServerProfile-disconnect(deviceId: string): void--><!--Device-PbapServerProfile-disconnect(deviceId: string): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -76,6 +80,8 @@ getPhoneBookAccessAuthorization(deviceId: string, callback: AsyncCallback<Access
 **起始版本：** 11
 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
+
+<!--Device-PbapServerProfile-getPhoneBookAccessAuthorization(deviceId: string, callback: AsyncCallback<AccessAuthorization>): void--><!--Device-PbapServerProfile-getPhoneBookAccessAuthorization(deviceId: string, callback: AsyncCallback<AccessAuthorization>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -128,6 +134,8 @@ getPhoneBookAccessAuthorization(deviceId: string): Promise<AccessAuthorization>
 **起始版本：** 11
 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
+
+<!--Device-PbapServerProfile-getPhoneBookAccessAuthorization(deviceId: string): Promise<AccessAuthorization>--><!--Device-PbapServerProfile-getPhoneBookAccessAuthorization(deviceId: string): Promise<AccessAuthorization>-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -184,6 +192,8 @@ getShareType(deviceId: string, callback: AsyncCallback<ShareType>): void
 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
+<!--Device-PbapServerProfile-getShareType(deviceId: string, callback: AsyncCallback<ShareType>): void--><!--Device-PbapServerProfile-getShareType(deviceId: string, callback: AsyncCallback<ShareType>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -235,6 +245,8 @@ getShareType(deviceId: string): Promise<ShareType>
 **起始版本：** 11
 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
+
+<!--Device-PbapServerProfile-getShareType(deviceId: string): Promise<ShareType>--><!--Device-PbapServerProfile-getShareType(deviceId: string): Promise<ShareType>-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -295,6 +307,8 @@ setPhoneBookAccessAuthorization(
 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
+<!--Device-PbapServerProfile-setPhoneBookAccessAuthorization(      deviceId: string,      authorization: AccessAuthorization,      callback: AsyncCallback<void>    ): void--><!--Device-PbapServerProfile-setPhoneBookAccessAuthorization(      deviceId: string,      authorization: AccessAuthorization,      callback: AsyncCallback<void>    ): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -347,6 +361,8 @@ setPhoneBookAccessAuthorization(deviceId: string, authorization: AccessAuthoriza
 **起始版本：** 11
 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
+
+<!--Device-PbapServerProfile-setPhoneBookAccessAuthorization(deviceId: string, authorization: AccessAuthorization): Promise<void>--><!--Device-PbapServerProfile-setPhoneBookAccessAuthorization(deviceId: string, authorization: AccessAuthorization): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -404,6 +420,8 @@ setShareType(deviceId: string, type: ShareType, callback: AsyncCallback<void>): 
 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
+<!--Device-PbapServerProfile-setShareType(deviceId: string, type: ShareType, callback: AsyncCallback<void>): void--><!--Device-PbapServerProfile-setShareType(deviceId: string, type: ShareType, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -456,6 +474,8 @@ setShareType(deviceId: string, type: ShareType): Promise<void>
 **起始版本：** 11
 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
+
+<!--Device-PbapServerProfile-setShareType(deviceId: string, type: ShareType): Promise<void>--><!--Device-PbapServerProfile-setShareType(deviceId: string, type: ShareType): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

@@ -10,6 +10,8 @@ interface AVCastPickerOptions
 
 **起始版本：** 14
 
+<!--Device-avSession-interface AVCastPickerOptions--><!--Device-avSession-interface AVCastPickerOptions-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 ## 导入模块
@@ -30,6 +32,8 @@ menuPosition?: MenuPosition
 
 **起始版本：** 22
 
+<!--Device-AVCastPickerOptions-menuPosition?: MenuPosition--><!--Device-AVCastPickerOptions-menuPosition?: MenuPosition-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 ## pickerStyle
@@ -43,6 +47,8 @@ pickerStyle?: AVCastPickerStyle
 **类型：** [AVCastPickerStyle](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstyle-e.md)
 
 **起始版本：** 22
+
+<!--Device-AVCastPickerOptions-pickerStyle?: AVCastPickerStyle--><!--Device-AVCastPickerOptions-pickerStyle?: AVCastPickerStyle-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -60,6 +66,8 @@ sessionType?: AVSessionType
 
 **起始版本：** 14
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVCastPickerOptions-sessionType?: AVSessionType--><!--Device-AVCastPickerOptions-sessionType?: AVSessionType-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast

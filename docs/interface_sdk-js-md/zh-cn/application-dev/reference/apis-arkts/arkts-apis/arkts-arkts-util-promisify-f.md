@@ -18,6 +18,8 @@ function promisify(original: (err: Object, value: Object) => void): Function
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-util-function promisify(original: (err: Object, value: Object) => void): Function--><!--Device-util-function promisify(original: (err: Object, value: Object) => void): Function-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**

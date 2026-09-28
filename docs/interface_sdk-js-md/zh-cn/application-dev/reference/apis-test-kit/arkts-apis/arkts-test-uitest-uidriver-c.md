@@ -16,6 +16,8 @@ UiDriver类为uitest测试框架的总入口，提供控件匹配/查找，按�
 
 **替代接口：** [Driver](arkts-test-uitest-driver-c.md)
 
+<!--Device-unnamed-declare class UiDriver--><!--Device-unnamed-declare class UiDriver-End-->
+
 **系统能力：** SystemCapability.Test.UiTest
 
 **测试接口：** 此接口仅在自动化测试脚本中使用。
@@ -45,6 +47,8 @@ assertComponentExist(by: By): Promise<void>
 **废弃版本：** 9
 
 **替代接口：** [assertComponentExist](arkts-test-uitest-driver-c.md#assertcomponentexist)
+
+<!--Device-UiDriver-assertComponentExist(by: By): Promise<void>--><!--Device-UiDriver-assertComponentExist(by: By): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -100,6 +104,8 @@ UiDriver对象采取如下操作：在目标坐标点单击。使用Promise异�
 
 **替代接口：** [click](arkts-test-uitest-component-c.md#click)
 
+<!--Device-UiDriver-click(x: number, y: number): Promise<void>--><!--Device-UiDriver-click(x: number, y: number): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Test.UiTest
 
 **测试接口：** 此接口仅在自动化测试脚本中使用。
@@ -147,6 +153,8 @@ static create(): UiDriver
 
 **替代接口：** [create](arkts-test-uitest-driver-c.md#create)
 
+<!--Device-UiDriver-static create(): UiDriver--><!--Device-UiDriver-static create(): UiDriver-End-->
+
 **系统能力：** SystemCapability.Test.UiTest
 
 **测试接口：** 此接口仅在自动化测试脚本中使用。
@@ -185,6 +193,8 @@ UiDriver对象在给定的时间内延时。使用Promise异步回调。
 **废弃版本：** 9
 
 **替代接口：** [delayMs](arkts-test-uitest-driver-c.md#delayms)
+
+<!--Device-UiDriver-delayMs(duration: number): Promise<void>--><!--Device-UiDriver-delayMs(duration: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -231,6 +241,8 @@ UiDriver对象采取如下操作：在目标坐标点双击。使用Promise异�
 **废弃版本：** 9
 
 **替代接口：** [doubleClick](arkts-test-uitest-component-c.md#doubleclick)
+
+<!--Device-UiDriver-doubleClick(x: number, y: number): Promise<void>--><!--Device-UiDriver-doubleClick(x: number, y: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -279,6 +291,8 @@ findComponent(by: By): Promise<UiComponent>
 
 **替代接口：** [findComponent](arkts-test-uitest-driver-c.md#findcomponent)(on: On)
 
+<!--Device-UiDriver-findComponent(by: By): Promise<UiComponent>--><!--Device-UiDriver-findComponent(by: By): Promise<UiComponent>-End-->
+
 **系统能力：** SystemCapability.Test.UiTest
 
 **测试接口：** 此接口仅在自动化测试脚本中使用。
@@ -325,6 +339,8 @@ findComponents(by: By): Promise<Array<UiComponent>>
 
 **替代接口：** [findComponents](arkts-test-uitest-driver-c.md#findcomponents)(on: On)
 
+<!--Device-UiDriver-findComponents(by: By): Promise<Array<UiComponent>>--><!--Device-UiDriver-findComponents(by: By): Promise<Array<UiComponent>>-End-->
+
 **系统能力：** SystemCapability.Test.UiTest
 
 **测试接口：** 此接口仅在自动化测试脚本中使用。
@@ -370,6 +386,8 @@ UiDriver对象采取如下操作：在目标坐标点长按下鼠标左键。使
 **废弃版本：** 9
 
 **替代接口：** [longClick](arkts-test-uitest-component-c.md#longclick)
+
+<!--Device-UiDriver-longClick(x: number, y: number): Promise<void>--><!--Device-UiDriver-longClick(x: number, y: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -418,6 +436,8 @@ UiDriver对象进行点击BACK键的操作。使用Promise异步回调。
 
 **替代接口：** [pressBack](arkts-test-uitest-driver-c.md#pressback)()
 
+<!--Device-UiDriver-pressBack(): Promise<void>--><!--Device-UiDriver-pressBack(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Test.UiTest
 
 **测试接口：** 此接口仅在自动化测试脚本中使用。
@@ -457,6 +477,8 @@ UiDriver对象采取如下操作：捕获当前屏幕，并保存为PNG格式的
 **废弃版本：** 9
 
 **替代接口：** [screenCap](arkts-test-uitest-driver-c.md#screencap)(savePath: string)
+
+<!--Device-UiDriver-screenCap(savePath: string): Promise<boolean>--><!--Device-UiDriver-screenCap(savePath: string): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -503,6 +525,8 @@ UiDriver对象采取如下操作：从给出的起始坐标点滑向给出的目
 **废弃版本：** 9
 
 **替代接口：** [swipe](arkts-test-uitest-driver-c.md#swipe)
+
+<!--Device-UiDriver-swipe(startx: number, starty: number, endx: number, endy: number): Promise<void>--><!--Device-UiDriver-swipe(startx: number, starty: number, endx: number, endy: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -552,6 +576,8 @@ UiDriver对象采取如下操作：通过key值找到对应键并点击。使用
 **废弃版本：** 9
 
 **替代接口：** [triggerKey](arkts-test-uitest-driver-c.md#triggerkey)(keyCode: number)
+
+<!--Device-UiDriver-triggerKey(keyCode: number): Promise<void>--><!--Device-UiDriver-triggerKey(keyCode: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 

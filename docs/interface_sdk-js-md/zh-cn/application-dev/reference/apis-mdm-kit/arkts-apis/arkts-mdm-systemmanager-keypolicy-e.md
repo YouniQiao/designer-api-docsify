@@ -8,6 +8,8 @@ enum KeyPolicy
 
 **起始版本：** 23
 
+<!--Device-systemManager-enum KeyPolicy--><!--Device-systemManager-enum KeyPolicy-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## INTERCEPTION
@@ -22,6 +24,8 @@ INTERCEPTION = 0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-KeyPolicy-INTERCEPTION = 0--><!--Device-KeyPolicy-INTERCEPTION = 0-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## CUSTOM
@@ -35,5 +39,7 @@ CUSTOM = 1
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-KeyPolicy-CUSTOM = 1--><!--Device-KeyPolicy-CUSTOM = 1-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager

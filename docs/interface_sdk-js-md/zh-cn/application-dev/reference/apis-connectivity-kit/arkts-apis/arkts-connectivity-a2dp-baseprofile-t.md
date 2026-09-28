@@ -8,6 +8,8 @@ type BaseProfile = baseProfile.BaseProfile
 
 **起始版本：** 10
 
+<!--Device-a2dp-type BaseProfile = baseProfile.BaseProfile--><!--Device-a2dp-type BaseProfile = baseProfile.BaseProfile-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **类型：** [baseProfile.BaseProfile](arkts-connectivity-baseprofile-baseprofile-i.md)

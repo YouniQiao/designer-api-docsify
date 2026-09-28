@@ -8,6 +8,8 @@
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare namespace policy--><!--Device-unnamed-declare namespace policy-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## 导入模块

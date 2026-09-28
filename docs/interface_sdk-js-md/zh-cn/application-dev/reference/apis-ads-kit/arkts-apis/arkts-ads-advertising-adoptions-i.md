@@ -8,6 +8,8 @@ export interface AdOptions
 
 **起始版本：** 11
 
+<!--Device-advertising-export interface AdOptions--><!--Device-advertising-export interface AdOptions-End-->
+
 **系统能力：** SystemCapability.Advertising.Ads
 
 ## 导入模块
@@ -32,6 +34,8 @@ import { advertising } from '@kit.AdsKit';
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AdOptions-[key: string]: number | boolean | string | undefined--><!--Device-AdOptions-[key: string]: number | boolean | string | undefined-End-->
+
 **系统能力：** SystemCapability.Advertising.Ads
 
 ## adContentClassification
@@ -51,6 +55,8 @@ W：3+，所有受众。PI：7+，家长指导。J：12+，青少年。A：16+/1
 **起始版本：** 11
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AdOptions-adContentClassification?: string--><!--Device-AdOptions-adContentClassification?: string-End-->
 
 **系统能力：** SystemCapability.Advertising.Ads
 
@@ -72,6 +78,8 @@ nonPersonalizedAd?: number
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AdOptions-nonPersonalizedAd?: number--><!--Device-AdOptions-nonPersonalizedAd?: number-End-->
+
 **系统能力：** SystemCapability.Advertising.Ads
 
 ## tagForChildProtection
@@ -91,5 +99,7 @@ tagForChildProtection?: number
 **起始版本：** 11
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AdOptions-tagForChildProtection?: number--><!--Device-AdOptions-tagForChildProtection?: number-End-->
 
 **系统能力：** SystemCapability.Advertising.Ads

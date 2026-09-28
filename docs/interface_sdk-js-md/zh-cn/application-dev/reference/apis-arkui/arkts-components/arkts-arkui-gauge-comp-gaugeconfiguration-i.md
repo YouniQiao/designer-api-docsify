@@ -10,6 +10,8 @@ declare interface GaugeConfiguration extends CommonConfiguration<GaugeConfigurat
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare interface GaugeConfiguration extends CommonConfiguration<GaugeConfiguration>--><!--Device-unnamed-declare interface GaugeConfiguration extends CommonConfiguration<GaugeConfiguration>-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## max
@@ -27,6 +29,8 @@ max: number
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GaugeConfiguration-max: number--><!--Device-GaugeConfiguration-max: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,6 +50,8 @@ min: number
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-GaugeConfiguration-min: number--><!--Device-GaugeConfiguration-min: number-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## value
@@ -63,5 +69,7 @@ value: number
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GaugeConfiguration-value: number--><!--Device-GaugeConfiguration-value: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

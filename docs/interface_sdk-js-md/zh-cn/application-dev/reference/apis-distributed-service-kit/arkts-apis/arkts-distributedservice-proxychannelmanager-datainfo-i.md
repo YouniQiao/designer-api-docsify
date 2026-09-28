@@ -8,6 +8,8 @@ interface DataInfo
 
 **起始版本：** 20
 
+<!--Device-proxyChannelManager-interface DataInfo--><!--Device-proxyChannelManager-interface DataInfo-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 ## 导入模块
@@ -30,6 +32,8 @@ channelId: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataInfo-channelId: int--><!--Device-DataInfo-channelId: int-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 ## data
@@ -45,5 +49,7 @@ data: ArrayBuffer
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataInfo-data: ArrayBuffer--><!--Device-DataInfo-data: ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration

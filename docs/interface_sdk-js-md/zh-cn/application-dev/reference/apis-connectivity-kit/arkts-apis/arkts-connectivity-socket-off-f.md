@@ -18,6 +18,8 @@ function off(type: 'sppRead', clientSocket: number, callback?: Callback<ArrayBuf
 
 **起始版本：** 10
 
+<!--Device-socket-function off(type: 'sppRead', clientSocket: number, callback?: Callback<ArrayBuffer>): void--><!--Device-socket-function off(type: 'sppRead', clientSocket: number, callback?: Callback<ArrayBuffer>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**

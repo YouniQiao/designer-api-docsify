@@ -8,6 +8,8 @@ NativeMediaPlayerHandler 是[CreateNativeMediaPlayerCallback](arkts-arkweb-webvi
 
 **起始版本：** 12
 
+<!--Device-webview-interface NativeMediaPlayerHandler--><!--Device-webview-interface NativeMediaPlayerHandler-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## 导入模块
@@ -27,6 +29,8 @@ handleBufferedEndTimeChanged(bufferedEndTime: number): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-NativeMediaPlayerHandler-handleBufferedEndTimeChanged(bufferedEndTime: number): void--><!--Device-NativeMediaPlayerHandler-handleBufferedEndTimeChanged(bufferedEndTime: number): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -52,6 +56,8 @@ handleDurationChanged(duration: number): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-NativeMediaPlayerHandler-handleDurationChanged(duration: number): void--><!--Device-NativeMediaPlayerHandler-handleDurationChanged(duration: number): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -76,6 +82,8 @@ handleEnded(): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-NativeMediaPlayerHandler-handleEnded(): void--><!--Device-NativeMediaPlayerHandler-handleEnded(): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **示例**
@@ -93,6 +101,8 @@ handleError(error: MediaError, errorMessage: string): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-NativeMediaPlayerHandler-handleError(error: MediaError, errorMessage: string): void--><!--Device-NativeMediaPlayerHandler-handleError(error: MediaError, errorMessage: string): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -119,6 +129,8 @@ handleFullscreenChanged(fullscreen: boolean): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-NativeMediaPlayerHandler-handleFullscreenChanged(fullscreen: boolean): void--><!--Device-NativeMediaPlayerHandler-handleFullscreenChanged(fullscreen: boolean): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -142,6 +154,8 @@ handleMutedChanged(muted: boolean): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-NativeMediaPlayerHandler-handleMutedChanged(muted: boolean): void--><!--Device-NativeMediaPlayerHandler-handleMutedChanged(muted: boolean): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -167,6 +181,8 @@ handleNetworkStateChanged(state: NetworkState): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-NativeMediaPlayerHandler-handleNetworkStateChanged(state: NetworkState): void--><!--Device-NativeMediaPlayerHandler-handleNetworkStateChanged(state: NetworkState): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -190,6 +206,8 @@ handlePlaybackRateChanged(playbackRate: number): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-NativeMediaPlayerHandler-handlePlaybackRateChanged(playbackRate: number): void--><!--Device-NativeMediaPlayerHandler-handlePlaybackRateChanged(playbackRate: number): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -215,6 +233,8 @@ handleReadyStateChanged(state: ReadyState): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-NativeMediaPlayerHandler-handleReadyStateChanged(state: ReadyState): void--><!--Device-NativeMediaPlayerHandler-handleReadyStateChanged(state: ReadyState): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -239,6 +259,8 @@ handleSeekFinished(): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-NativeMediaPlayerHandler-handleSeekFinished(): void--><!--Device-NativeMediaPlayerHandler-handleSeekFinished(): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **示例**
@@ -257,6 +279,8 @@ handleSeeking(): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-NativeMediaPlayerHandler-handleSeeking(): void--><!--Device-NativeMediaPlayerHandler-handleSeeking(): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **示例**
@@ -274,6 +298,8 @@ handleStatusChanged(status: PlaybackStatus): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-NativeMediaPlayerHandler-handleStatusChanged(status: PlaybackStatus): void--><!--Device-NativeMediaPlayerHandler-handleStatusChanged(status: PlaybackStatus): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -299,6 +325,8 @@ handleTimeUpdate(currentPlayTime: number): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-NativeMediaPlayerHandler-handleTimeUpdate(currentPlayTime: number): void--><!--Device-NativeMediaPlayerHandler-handleTimeUpdate(currentPlayTime: number): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -323,6 +351,8 @@ handleVideoSizeChanged(width: number, height: number): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-NativeMediaPlayerHandler-handleVideoSizeChanged(width: number, height: number): void--><!--Device-NativeMediaPlayerHandler-handleVideoSizeChanged(width: number, height: number): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -345,6 +375,8 @@ handleVolumeChanged(volume: number): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-NativeMediaPlayerHandler-handleVolumeChanged(volume: number): void--><!--Device-NativeMediaPlayerHandler-handleVolumeChanged(volume: number): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

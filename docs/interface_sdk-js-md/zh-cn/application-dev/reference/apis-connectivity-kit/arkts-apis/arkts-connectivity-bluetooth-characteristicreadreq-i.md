@@ -14,6 +14,8 @@ interface CharacteristicReadReq
 
 **替代接口：** [CharacteristicReadRequest](arkts-connectivity-bluetoothmanager-characteristicreadrequest-i.md)
 
+<!--Device-bluetooth-interface CharacteristicReadReq--><!--Device-bluetooth-interface CharacteristicReadReq-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -38,6 +40,8 @@ characteristicUuid: string
 
 **替代接口：** [characteristicUuid](arkts-connectivity-bluetoothmanager-characteristicreadrequest-i.md#characteristicuuid)
 
+<!--Device-CharacteristicReadReq-characteristicUuid: string--><!--Device-CharacteristicReadReq-characteristicUuid: string-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## deviceId
@@ -55,6 +59,8 @@ deviceId: string
 **废弃版本：** 9
 
 **替代接口：** [deviceId](arkts-connectivity-bluetoothmanager-characteristicreadrequest-i.md#deviceid)
+
+<!--Device-CharacteristicReadReq-deviceId: string--><!--Device-CharacteristicReadReq-deviceId: string-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -74,6 +80,8 @@ offset: number
 
 **替代接口：** [offset](arkts-connectivity-bluetoothmanager-characteristicreadrequest-i.md#offset)
 
+<!--Device-CharacteristicReadReq-offset: number--><!--Device-CharacteristicReadReq-offset: number-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## serviceUuid
@@ -92,6 +100,8 @@ serviceUuid: string
 
 **替代接口：** [serviceUuid](arkts-connectivity-bluetoothmanager-characteristicreadrequest-i.md#serviceuuid)
 
+<!--Device-CharacteristicReadReq-serviceUuid: string--><!--Device-CharacteristicReadReq-serviceUuid: string-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## transId
@@ -109,5 +119,7 @@ transId: number
 **废弃版本：** 9
 
 **替代接口：** [transId](arkts-connectivity-bluetoothmanager-characteristicreadrequest-i.md#transid)
+
+<!--Device-CharacteristicReadReq-transId: number--><!--Device-CharacteristicReadReq-transId: number-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

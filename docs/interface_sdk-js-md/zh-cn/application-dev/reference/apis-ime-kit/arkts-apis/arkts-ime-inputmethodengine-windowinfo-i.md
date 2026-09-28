@@ -8,6 +8,8 @@ export interface WindowInfo
 
 **起始版本：** 12
 
+<!--Device-inputMethodEngine-export interface WindowInfo--><!--Device-inputMethodEngine-export interface WindowInfo-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## 导入模块
@@ -28,6 +30,8 @@ rect: window.Rect
 
 **起始版本：** 12
 
+<!--Device-WindowInfo-rect: window.Rect--><!--Device-WindowInfo-rect: window.Rect-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## status
@@ -41,5 +45,7 @@ status: window.WindowStatusType
 **类型：** [window.WindowStatusType](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstatustype-e.md)
 
 **起始版本：** 12
+
+<!--Device-WindowInfo-status: window.WindowStatusType--><!--Device-WindowInfo-status: window.WindowStatusType-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework

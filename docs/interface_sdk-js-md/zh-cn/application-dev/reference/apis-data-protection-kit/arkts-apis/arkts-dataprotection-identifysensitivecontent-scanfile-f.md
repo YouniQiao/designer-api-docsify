@@ -18,6 +18,8 @@ function scanFile(filePath: string, identifyPolicies: Array<Policy>): Promise<Ar
 
 **需要权限：** ohos.permission.ENTERPRISE_DATA_IDENTIFY_FILE
 
+<!--Device-identifySensitiveContent-function scanFile(filePath: string, identifyPolicies: Array<Policy>): Promise<Array<MatchResult>>--><!--Device-identifySensitiveContent-function scanFile(filePath: string, identifyPolicies: Array<Policy>): Promise<Array<MatchResult>>-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **参数：**

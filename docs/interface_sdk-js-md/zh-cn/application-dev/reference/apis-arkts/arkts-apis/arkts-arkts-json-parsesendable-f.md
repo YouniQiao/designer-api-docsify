@@ -22,6 +22,8 @@ function parseSendable(text: string, reviver?: SendableTransformer, options?: Pa
 
 **原子化服务API：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
 
+<!--Device-json-function parseSendable(text: string, reviver?: SendableTransformer, options?: ParseOptions): ISendable | null--><!--Device-json-function parseSendable(text: string, reviver?: SendableTransformer, options?: ParseOptions): ISendable | null-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**

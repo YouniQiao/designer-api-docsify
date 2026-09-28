@@ -10,6 +10,8 @@ AccessibilityExtensionAbility基于ExtensionAbility框架，提供无障碍扩�
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare class AccessibilityExtensionAbility--><!--Device-unnamed-declare class AccessibilityExtensionAbility-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## 导入模块
@@ -29,6 +31,8 @@ onAccessibilityEvent(event: AccessibilityEvent): void
 **起始版本：** 9
 
 **废弃版本：** 12
+
+<!--Device-AccessibilityExtensionAbility-onAccessibilityEvent(event: AccessibilityEvent): void--><!--Device-AccessibilityExtensionAbility-onAccessibilityEvent(event: AccessibilityEvent): void-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -65,6 +69,8 @@ onConnect(): void
 
 **废弃版本：** 12
 
+<!--Device-AccessibilityExtensionAbility-onConnect(): void--><!--Device-AccessibilityExtensionAbility-onConnect(): void-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **示例**
@@ -91,6 +97,8 @@ onDisconnect(): void
 
 **废弃版本：** 12
 
+<!--Device-AccessibilityExtensionAbility-onDisconnect(): void--><!--Device-AccessibilityExtensionAbility-onDisconnect(): void-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **示例**
@@ -116,6 +124,8 @@ onKeyEvent(keyEvent: KeyEvent): boolean
 **起始版本：** 9
 
 **废弃版本：** 12
+
+<!--Device-AccessibilityExtensionAbility-onKeyEvent(keyEvent: KeyEvent): boolean--><!--Device-AccessibilityExtensionAbility-onKeyEvent(keyEvent: KeyEvent): boolean-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -160,5 +170,7 @@ context: AccessibilityExtensionContext
 **类型：** [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-t.md)
 
 **起始版本：** 9
+
+<!--Device-AccessibilityExtensionAbility-context: AccessibilityExtensionContext--><!--Device-AccessibilityExtensionAbility-context: AccessibilityExtensionContext-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core

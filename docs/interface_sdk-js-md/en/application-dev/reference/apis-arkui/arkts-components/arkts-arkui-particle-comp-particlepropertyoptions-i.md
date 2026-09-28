@@ -8,6 +8,8 @@ Defines the particle property Options. @interface ParticlePropertyOptions
 
 **Since:** 10
 
+<!--Device-unnamed-interface ParticlePropertyOptions<TYPE, UPDATER extends ParticleUpdater>--><!--Device-unnamed-interface ParticlePropertyOptions<TYPE, UPDATER extends ParticleUpdater>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## range
@@ -40,6 +42,8 @@ The default value varies by property:
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ParticlePropertyOptions-range: ParticleTuple<TYPE, TYPE>--><!--Device-ParticlePropertyOptions-range: ParticleTuple<TYPE, TYPE>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## updater
@@ -68,5 +72,7 @@ The default value of **type** is **ParticleUpdater.NONE**.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ParticlePropertyOptions-updater?: ParticleUpdaterOptions<TYPE, UPDATER>--><!--Device-ParticlePropertyOptions-updater?: ParticleUpdaterOptions<TYPE, UPDATER>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

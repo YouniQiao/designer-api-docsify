@@ -12,6 +12,8 @@ export interface PermissionDef
 
 **起始版本：** 9
 
+<!--Device-unnamed-export interface PermissionDef--><!--Device-unnamed-export interface PermissionDef-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -27,6 +29,8 @@ readonly descriptionId: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-PermissionDef-readonly descriptionId: long--><!--Device-PermissionDef-readonly descriptionId: long-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -44,6 +48,8 @@ readonly grantMode: number
 
 **起始版本：** 9
 
+<!--Device-PermissionDef-readonly grantMode: int--><!--Device-PermissionDef-readonly grantMode: int-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -60,6 +66,8 @@ readonly labelId: number
 
 **起始版本：** 9
 
+<!--Device-PermissionDef-readonly labelId: long--><!--Device-PermissionDef-readonly labelId: long-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -75,6 +83,8 @@ readonly permissionName: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-PermissionDef-readonly permissionName: string--><!--Device-PermissionDef-readonly permissionName: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

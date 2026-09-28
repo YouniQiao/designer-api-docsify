@@ -18,6 +18,8 @@ function answerCall(callId: number, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.ANSWER_CALL
 
+<!--Device-call-function answerCall(callId: int, callback: AsyncCallback<void>): void--><!--Device-call-function answerCall(callId: int, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -69,6 +71,8 @@ function answerCall(callId?: number): Promise<void>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.ANSWER_CALL
+
+<!--Device-call-function answerCall(callId?: int): Promise<void>--><!--Device-call-function answerCall(callId?: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -124,6 +128,8 @@ function answerCall(videoState: VideoStateType, callId: number): Promise<void>
 **起始版本：** 11
 
 **需要权限：** ohos.permission.ANSWER_CALL
+
+<!--Device-call-function answerCall(videoState: VideoStateType, callId: int): Promise<void>--><!--Device-call-function answerCall(videoState: VideoStateType, callId: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -182,6 +188,8 @@ function answerCall(videoState: VideoStateType, callId: number, isRtt: boolean):
 **需要权限：** ohos.permission.ANSWER_CALL
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-call-function answerCall(videoState: VideoStateType, callId: int, isRtt: boolean): Promise<void>--><!--Device-call-function answerCall(videoState: VideoStateType, callId: int, isRtt: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 

@@ -18,6 +18,8 @@ function getRadioTechSync(slotId: number): NetworkRadioTech
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-radio-function getRadioTechSync(slotId: int): NetworkRadioTech--><!--Device-radio-function getRadioTechSync(slotId: int): NetworkRadioTech-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**

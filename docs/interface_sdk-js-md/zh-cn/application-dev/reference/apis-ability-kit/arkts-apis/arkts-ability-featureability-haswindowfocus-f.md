@@ -18,6 +18,8 @@ function hasWindowFocus(callback: AsyncCallback<boolean>): void
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-featureAbility-function hasWindowFocus(callback: AsyncCallback<boolean>): void--><!--Device-featureAbility-function hasWindowFocus(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **参数：**
@@ -55,6 +57,8 @@ function hasWindowFocus(): Promise<boolean>
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-featureAbility-function hasWindowFocus(): Promise<boolean>--><!--Device-featureAbility-function hasWindowFocus(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 

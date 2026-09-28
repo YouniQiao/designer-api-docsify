@@ -16,6 +16,8 @@ function getPrimarySlotId(callback: AsyncCallback<number>): void
 
 **起始版本：** 7
 
+<!--Device-radio-function getPrimarySlotId(callback: AsyncCallback<int>): void--><!--Device-radio-function getPrimarySlotId(callback: AsyncCallback<int>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**
@@ -60,6 +62,8 @@ function getPrimarySlotId(): Promise<number>
 获取主卡所在卡槽的索引号。使用Promise异步回调。
 
 **起始版本：** 7
+
+<!--Device-radio-function getPrimarySlotId(): Promise<int>--><!--Device-radio-function getPrimarySlotId(): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

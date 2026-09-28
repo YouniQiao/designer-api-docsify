@@ -4,15 +4,15 @@ The **SelectionContainer** component provides cross-node text selection, copying
 
 > **NOTE:** 
 > 
-> - The text content returned by the selected text related callbacks in this component is concatenated in the top-to-bottom display order of the [Text](arkts-arkui-text-comp.md#text) components.
+> - The text content returned by the selected text related callbacks in this component is concatenated in the top-to-bottom display order of the [Text](arkts-arkui-text-comp.md) components.
 > 
-> - By default, this component uses the [Stack](arkts-arkui-stack-comp.md#stack) layout. If other container layout requirements exist, place a container component in **SelectionContainer**.
+> - By default, this component uses the [Stack](arkts-arkui-stack-comp.md) layout. If other container layout requirements exist, place a container component in **SelectionContainer**.
 > 
 > - When text is selected in **SelectionContainer**, the magnifier is not displayed, and [getMagnifier](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#getmagnifier) cannot be used to proactively set the magnifier.
 > 
 > - Dragging is not supported when text is selected in **SelectionContainer**.
 > 
-> - Text under the [Repeat](arkts-arkui-repeat-comp.md#repeat) component in **SelectionContainer** does not support cross-node selection.
+> - Text under the [Repeat](arkts-arkui-repeat-comp.md) component in **SelectionContainer** does not support cross-node selection.
 > 
 > - Only the text content in **Text** components participates in cross-node selection and text concatenation.
 
@@ -33,6 +33,8 @@ Initial configuration options of the component.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-SelectionContainerInterface-(value?: SelectionContainerOptions): SelectionContainerAttribute--><!--Device-SelectionContainerInterface-(value?: SelectionContainerOptions): SelectionContainerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

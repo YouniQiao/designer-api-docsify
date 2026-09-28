@@ -24,6 +24,8 @@ function setDateTime(admin: Want, time: number, callback: AsyncCallback<void>): 
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-dateTimeManager-function setDateTime(admin: Want, time: number, callback: AsyncCallback<void>): void--><!--Device-dateTimeManager-function setDateTime(admin: Want, time: number, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -88,6 +90,8 @@ function setDateTime(admin: Want, time: number): Promise<void>
 **需要权限：** ohos.permission.ENTERPRISE_SET_DATETIME
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-dateTimeManager-function setDateTime(admin: Want, time: number): Promise<void>--><!--Device-dateTimeManager-function setDateTime(admin: Want, time: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

@@ -8,6 +8,8 @@ interface TimerOptions
 
 **起始版本：** 7
 
+<!--Device-systemTimer-interface TimerOptions--><!--Device-systemTimer-interface TimerOptions-End-->
+
 **系统能力：** SystemCapability.MiscServices.Time
 
 **系统接口：** 此接口为系统接口。
@@ -29,6 +31,8 @@ callback?: () => void
 默认值为空。
 
 **起始版本：** 7
+
+<!--Device-TimerOptions-callback?: () => void--><!--Device-TimerOptions-callback?: () => void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Time
 
@@ -52,6 +56,8 @@ true为重启后恢复，false为重启后不恢复。
 
 **起始版本：** 15
 
+<!--Device-TimerOptions-autoRestore?: boolean--><!--Device-TimerOptions-autoRestore?: boolean-End-->
+
 **系统能力：** SystemCapability.MiscServices.Time
 
 **系统接口：** 此接口为系统接口。
@@ -74,6 +80,8 @@ interval?: number
 
 **起始版本：** 7
 
+<!--Device-TimerOptions-interval?: long--><!--Device-TimerOptions-interval?: long-End-->
+
 **系统能力：** SystemCapability.MiscServices.Time
 
 **系统接口：** 此接口为系统接口。
@@ -94,6 +102,8 @@ name?: string
 
 **起始版本：** 15
 
+<!--Device-TimerOptions-name?: string--><!--Device-TimerOptions-name?: string-End-->
+
 **系统能力：** SystemCapability.MiscServices.Time
 
 **系统接口：** 此接口为系统接口。
@@ -109,6 +119,8 @@ repeat: boolean
 **类型：** boolean
 
 **起始版本：** 7
+
+<!--Device-TimerOptions-repeat: boolean--><!--Device-TimerOptions-repeat: boolean-End-->
 
 **系统能力：** SystemCapability.MiscServices.Time
 
@@ -134,6 +146,8 @@ type: number
 
 **起始版本：** 7
 
+<!--Device-TimerOptions-type: int--><!--Device-TimerOptions-type: int-End-->
+
 **系统能力：** SystemCapability.MiscServices.Time
 
 **系统接口：** 此接口为系统接口。
@@ -151,6 +165,8 @@ wantAgent?: WantAgent
 **类型：** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)
 
 **起始版本：** 7
+
+<!--Device-TimerOptions-wantAgent?: WantAgent--><!--Device-TimerOptions-wantAgent?: WantAgent-End-->
 
 **系统能力：** SystemCapability.MiscServices.Time
 

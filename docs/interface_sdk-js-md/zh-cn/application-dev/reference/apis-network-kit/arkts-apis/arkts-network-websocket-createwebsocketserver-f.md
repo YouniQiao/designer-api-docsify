@@ -20,6 +20,8 @@ function createWebSocketServer(): WebSocketServer
 
 **起始版本：** 19
 
+<!--Device-webSocket-function createWebSocketServer(): WebSocketServer--><!--Device-webSocket-function createWebSocketServer(): WebSocketServer-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**

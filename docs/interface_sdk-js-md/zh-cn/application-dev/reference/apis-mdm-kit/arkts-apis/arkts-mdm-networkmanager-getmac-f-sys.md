@@ -24,6 +24,8 @@ function getMac(admin: Want, networkInterface: string, callback: AsyncCallback<s
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-networkManager-function getMac(admin: Want, networkInterface: string, callback: AsyncCallback<string>): void--><!--Device-networkManager-function getMac(admin: Want, networkInterface: string, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -88,6 +90,8 @@ function getMac(admin: Want, networkInterface: string): Promise<string>
 **需要权限：** ohos.permission.ENTERPRISE_GET_NETWORK_INFO
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-networkManager-function getMac(admin: Want, networkInterface: string): Promise<string>--><!--Device-networkManager-function getMac(admin: Want, networkInterface: string): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

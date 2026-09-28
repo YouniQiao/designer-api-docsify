@@ -16,6 +16,8 @@ function createVideoRecorder(callback: AsyncCallback<VideoRecorder>): void
 
 **起始版本：** 9
 
+<!--Device-media-function createVideoRecorder(callback: AsyncCallback<VideoRecorder>): void--><!--Device-media-function createVideoRecorder(callback: AsyncCallback<VideoRecorder>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +63,8 @@ function createVideoRecorder(): Promise<VideoRecorder>
 创建视频录制实例（一台设备只允许创建一个录制实例）。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-media-function createVideoRecorder(): Promise<VideoRecorder>--><!--Device-media-function createVideoRecorder(): Promise<VideoRecorder>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 

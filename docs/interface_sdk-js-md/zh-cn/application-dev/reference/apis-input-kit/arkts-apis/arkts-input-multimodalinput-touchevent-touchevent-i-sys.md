@@ -10,6 +10,8 @@ export declare interface TouchEvent extends InputEvent
 
 **起始版本：** 9
 
+<!--Device-unnamed-export declare interface TouchEvent extends InputEvent--><!--Device-unnamed-export declare interface TouchEvent extends InputEvent-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ fixedMode?: FixedMode
 
 **起始版本：** 19
 
+<!--Device-TouchEvent-fixedMode?: FixedMode--><!--Device-TouchEvent-fixedMode?: FixedMode-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ isInject?: boolean
 **类型：** boolean
 
 **起始版本：** 20
+
+<!--Device-TouchEvent-isInject?: boolean--><!--Device-TouchEvent-isInject?: boolean-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 

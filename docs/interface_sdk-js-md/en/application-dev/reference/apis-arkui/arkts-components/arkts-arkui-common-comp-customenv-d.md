@@ -18,4 +18,6 @@ A variable decorated by **\@CustomEnv** reads the environment variable value cor
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-unnamed-declare function CustomEnv<T>(key: CustomEnvKey<T>): PropertyDecorator--><!--Device-unnamed-declare function CustomEnv<T>(key: CustomEnvKey<T>): PropertyDecorator-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -18,6 +18,8 @@ function isCellularDataRoamingEnabled(slotId: number, callback: AsyncCallback<bo
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-data-function isCellularDataRoamingEnabled(slotId: int, callback: AsyncCallback<boolean>): void--><!--Device-data-function isCellularDataRoamingEnabled(slotId: int, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CellularData
 
 **参数：**
@@ -67,6 +69,8 @@ function isCellularDataRoamingEnabled(slotId: number): Promise<boolean>
 **起始版本：** 7
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
+
+<!--Device-data-function isCellularDataRoamingEnabled(slotId: int): Promise<boolean>--><!--Device-data-function isCellularDataRoamingEnabled(slotId: int): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Telephony.CellularData
 

@@ -8,6 +8,8 @@ class DocumentSelectOptions
 
 **起始版本：** 9
 
+<!--Device-picker-class DocumentSelectOptions--><!--Device-picker-class DocumentSelectOptions-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 ## 导入模块
@@ -32,6 +34,8 @@ allowsMulFolderSelection?: boolean
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-DocumentSelectOptions-allowsMulFolderSelection?: boolean--><!--Device-DocumentSelectOptions-allowsMulFolderSelection?: boolean-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService.FolderSelection
 
 ## authMode
@@ -50,6 +54,8 @@ authMode?: boolean
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-DocumentSelectOptions-authMode?: boolean--><!--Device-DocumentSelectOptions-authMode?: boolean-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService.FolderSelection
 
 ## defaultFilePathUri
@@ -65,6 +71,8 @@ defaultFilePathUri?: string
 **起始版本：** 10
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-DocumentSelectOptions-defaultFilePathUri?: string--><!--Device-DocumentSelectOptions-defaultFilePathUri?: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -86,6 +94,8 @@ fileSuffixFilters?: Array<string>
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-DocumentSelectOptions-fileSuffixFilters?: Array<string>--><!--Device-DocumentSelectOptions-fileSuffixFilters?: Array<string>-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 ## isEncryptionSupported
@@ -101,6 +111,8 @@ isEncryptionSupported?: boolean
 **起始版本：** 19
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-DocumentSelectOptions-isEncryptionSupported?: boolean--><!--Device-DocumentSelectOptions-isEncryptionSupported?: boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -124,6 +136,8 @@ API version 23及之后的版本取消目录选择数量的限制。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-DocumentSelectOptions-maxSelectNumber?: number--><!--Device-DocumentSelectOptions-maxSelectNumber?: number-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 ## mergeMode
@@ -141,6 +155,8 @@ mergeMode?: MergeTypeMode
 **起始版本：** 15
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-DocumentSelectOptions-mergeMode?: MergeTypeMode--><!--Device-DocumentSelectOptions-mergeMode?: MergeTypeMode-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -160,6 +176,8 @@ multiAuthMode?: boolean
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
 
+<!--Device-DocumentSelectOptions-multiAuthMode?: boolean--><!--Device-DocumentSelectOptions-multiAuthMode?: boolean-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 ## multiUriArray
@@ -178,6 +196,8 @@ multiUriArray?: Array<string>
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
 
+<!--Device-DocumentSelectOptions-multiUriArray?: Array<string>--><!--Device-DocumentSelectOptions-multiUriArray?: Array<string>-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 ## selectMode
@@ -193,5 +213,7 @@ Picker选择的文档类型，默认值是FILE(文件类型)。
 **起始版本：** 11
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-DocumentSelectOptions-selectMode?: DocumentSelectMode--><!--Device-DocumentSelectOptions-selectMode?: DocumentSelectMode-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService.FolderSelection

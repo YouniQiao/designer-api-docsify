@@ -18,6 +18,8 @@ function isNearLinkSupported(): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-manager-function isNearLinkSupported(): boolean--><!--Device-manager-function isNearLinkSupported(): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **返回值：**

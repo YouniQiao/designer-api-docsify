@@ -10,6 +10,8 @@ Provides persistent storage for UI states. This API is inherited from [AppStorag
 
 **Since:** 12
 
+<!--Device-unnamed-export declare class PersistenceV2 extends AppStorageV2--><!--Device-unnamed-export declare class PersistenceV2 extends AppStorageV2-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -55,6 +57,8 @@ Stores key-value pair data on the application disk. If the given key already exi
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-PersistenceV2-static globalConnect<T extends object>(    type: ConnectOptions<T>  ): T | undefined--><!--Device-PersistenceV2-static globalConnect<T extends object>(    type: ConnectOptions<T>  ): T | undefined-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -138,6 +142,8 @@ Stores key-value pair data on the application disk. Supports the persistence of 
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-PersistenceV2-static globalConnect<T extends CollectionType<S>, S extends object>(    type: ConnectOptionsCollections<T, S> | ConnectOptions<T>  ): T | undefined--><!--Device-PersistenceV2-static globalConnect<T extends CollectionType<S>, S extends object>(    type: ConnectOptionsCollections<T, S> | ConnectOptions<T>  ): T | undefined-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -169,6 +175,8 @@ Registers a callback invoked when persistence fails.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PersistenceV2-static notifyOnError(callback: PersistenceErrorCallback | undefined): void--><!--Device-PersistenceV2-static notifyOnError(callback: PersistenceErrorCallback | undefined): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -209,6 +217,8 @@ Persists the specified key-value pair data once.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PersistenceV2-static save<T>(keyOrType: string | TypeConstructorWithArgs<T>): void--><!--Device-PersistenceV2-static save<T>(keyOrType: string | TypeConstructorWithArgs<T>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

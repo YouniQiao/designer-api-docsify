@@ -18,6 +18,8 @@ function setVirtualScreenSurface(screenId: number, surfaceId: string): Promise<v
 
 **需要权限：** ohos.permission.ACCESS_VIRTUAL_SCREEN
 
+<!--Device-display-function setVirtualScreenSurface(screenId: long, surfaceId: string): Promise<void>--><!--Device-display-function setVirtualScreenSurface(screenId: long, surfaceId: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**

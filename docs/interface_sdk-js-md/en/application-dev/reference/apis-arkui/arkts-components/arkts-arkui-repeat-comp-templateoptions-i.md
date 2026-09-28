@@ -18,6 +18,8 @@ When **cachedCount** is set to the maximum number of nodes in the display area o
 
 **Since:** 12
 
+<!--Device-unnamed-interface TemplateOptions--><!--Device-unnamed-interface TemplateOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## cachedCount
@@ -35,5 +37,7 @@ Maximum number of child component nodes that can be cached in the cache pool of 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TemplateOptions-cachedCount?: number--><!--Device-TemplateOptions-cachedCount?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

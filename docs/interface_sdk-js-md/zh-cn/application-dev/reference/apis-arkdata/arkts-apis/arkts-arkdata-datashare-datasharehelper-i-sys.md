@@ -8,6 +8,8 @@ DataShare管理工具实例，可使用此实例访问或管理服务端的数�
 
 **起始版本：** 9
 
+<!--Device-dataShare-interface DataShareHelper--><!--Device-dataShare-interface DataShareHelper-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -29,6 +31,8 @@ addTemplate(uri: string, subscriberId: string, template: Template): void
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareHelper-addTemplate(uri: string, subscriberId: string, template: Template): void--><!--Device-DataShareHelper-addTemplate(uri: string, subscriberId: string, template: Template): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -84,6 +88,8 @@ batchInsert(uri: string, values: Array<ValuesBucket>, callback: AsyncCallback<nu
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareHelper-batchInsert(uri: string, values: Array<ValuesBucket>, callback: AsyncCallback<int>): void--><!--Device-DataShareHelper-batchInsert(uri: string, values: Array<ValuesBucket>, callback: AsyncCallback<int>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -147,6 +153,8 @@ batchInsert(uri: string, values: Array<ValuesBucket>): Promise<number>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareHelper-batchInsert(uri: string, values: Array<ValuesBucket>): Promise<int>--><!--Device-DataShareHelper-batchInsert(uri: string, values: Array<ValuesBucket>): Promise<int>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -209,6 +217,8 @@ batchUpdate(operations: Record<string, Array<UpdateOperation>>): Promise<Record<
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareHelper-batchUpdate(operations: Record<string, Array<UpdateOperation>>): Promise<Record<string, Array<int>>>--><!--Device-DataShareHelper-batchUpdate(operations: Record<string, Array<UpdateOperation>>): Promise<Record<string, Array<int>>>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -305,6 +315,8 @@ close(): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareHelper-close(): Promise<void>--><!--Device-DataShareHelper-close(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -341,6 +353,8 @@ delete(uri: string, predicates: dataSharePredicates.DataSharePredicates, callbac
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareHelper-delete(uri: string, predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<int>): void--><!--Device-DataShareHelper-delete(uri: string, predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<int>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -401,6 +415,8 @@ delete(uri: string, predicates: dataSharePredicates.DataSharePredicates): Promis
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareHelper-delete(uri: string, predicates: dataSharePredicates.DataSharePredicates): Promise<int>--><!--Device-DataShareHelper-delete(uri: string, predicates: dataSharePredicates.DataSharePredicates): Promise<int>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -463,6 +479,8 @@ delTemplate(uri: string, subscriberId: string): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareHelper-delTemplate(uri: string, subscriberId: string): void--><!--Device-DataShareHelper-delTemplate(uri: string, subscriberId: string): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -517,6 +535,8 @@ denormalizeUri(uri: string, callback: AsyncCallback<string>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareHelper-denormalizeUri(uri: string, callback: AsyncCallback<string>): void--><!--Device-DataShareHelper-denormalizeUri(uri: string, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -566,6 +586,8 @@ denormalizeUri(uri: string): Promise<string>
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareHelper-denormalizeUri(uri: string): Promise<string>--><!--Device-DataShareHelper-denormalizeUri(uri: string): Promise<string>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -618,6 +640,8 @@ getPublishedData(bundleName: string, callback: AsyncCallback<Array<PublishedItem
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareHelper-getPublishedData(bundleName: string, callback: AsyncCallback<Array<PublishedItem>>): void--><!--Device-DataShareHelper-getPublishedData(bundleName: string, callback: AsyncCallback<Array<PublishedItem>>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -665,6 +689,8 @@ getPublishedData(bundleName: string): Promise<Array<PublishedItem>>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareHelper-getPublishedData(bundleName: string): Promise<Array<PublishedItem>>--><!--Device-DataShareHelper-getPublishedData(bundleName: string): Promise<Array<PublishedItem>>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -709,6 +735,8 @@ insert(uri: string, value: ValuesBucket, callback: AsyncCallback<number>): void
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareHelper-insert(uri: string, value: ValuesBucket, callback: AsyncCallback<int>): void--><!--Device-DataShareHelper-insert(uri: string, value: ValuesBucket, callback: AsyncCallback<int>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -778,6 +806,8 @@ insert(uri: string, value: ValuesBucket): Promise<number>
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareHelper-insert(uri: string, value: ValuesBucket): Promise<int>--><!--Device-DataShareHelper-insert(uri: string, value: ValuesBucket): Promise<int>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -849,6 +879,8 @@ normalizeUri(uri: string, callback: AsyncCallback<string>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareHelper-normalizeUri(uri: string, callback: AsyncCallback<string>): void--><!--Device-DataShareHelper-normalizeUri(uri: string, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -898,6 +930,8 @@ normalizeUri(uri: string): Promise<string>
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareHelper-normalizeUri(uri: string): Promise<string>--><!--Device-DataShareHelper-normalizeUri(uri: string): Promise<string>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -950,6 +984,8 @@ notifyChange(uri: string, callback: AsyncCallback<void>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareHelper-notifyChange(uri: string, callback: AsyncCallback<void>): void--><!--Device-DataShareHelper-notifyChange(uri: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -993,6 +1029,8 @@ notifyChange(uri: string): Promise<void>
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareHelper-notifyChange(uri: string): Promise<void>--><!--Device-DataShareHelper-notifyChange(uri: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -1040,6 +1078,8 @@ notifyChange(data: ChangeInfo): Promise<void>
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareHelper-notifyChange(data: ChangeInfo): Promise<void>--><!--Device-DataShareHelper-notifyChange(data: ChangeInfo): Promise<void>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -1095,6 +1135,8 @@ off(type: 'dataChange', uri: string, callback?: AsyncCallback<void>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareHelper-off(type: 'dataChange', uri: string, callback?: AsyncCallback<void>): void--><!--Device-DataShareHelper-off(type: 'dataChange', uri: string, callback?: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -1141,6 +1183,8 @@ off(event: 'dataChange', type:SubscriptionType, uri: string, callback?: AsyncCal
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareHelper-off(event: 'dataChange', type:SubscriptionType, uri: string, callback?: AsyncCallback<ChangeInfo>): void--><!--Device-DataShareHelper-off(event: 'dataChange', type:SubscriptionType, uri: string, callback?: AsyncCallback<ChangeInfo>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -1197,6 +1241,8 @@ off(
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareHelper-off(       type: 'rdbDataChange',       uris: Array<string>,       templateId: TemplateId,       callback?: AsyncCallback<RdbDataChangeNode>     ): Array<OperationResult>--><!--Device-DataShareHelper-off(       type: 'rdbDataChange',       uris: Array<string>,       templateId: TemplateId,       callback?: AsyncCallback<RdbDataChangeNode>     ): Array<OperationResult>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -1250,6 +1296,8 @@ off(
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareHelper-off(       type: 'publishedDataChange',       uris: Array<string>,       subscriberId: string,       callback?: AsyncCallback<PublishedDataChangeNode>     ): Array<OperationResult>--><!--Device-DataShareHelper-off(       type: 'publishedDataChange',       uris: Array<string>,       subscriberId: string,       callback?: AsyncCallback<PublishedDataChangeNode>     ): Array<OperationResult>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -1307,6 +1355,8 @@ on(type: 'dataChange', uri: string, callback: AsyncCallback<void>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareHelper-on(type: 'dataChange', uri: string, callback: AsyncCallback<void>): void--><!--Device-DataShareHelper-on(type: 'dataChange', uri: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -1354,6 +1404,8 @@ on(event: 'dataChange', type:SubscriptionType, uri: string, callback: AsyncCallb
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareHelper-on(event: 'dataChange', type:SubscriptionType, uri: string, callback: AsyncCallback<ChangeInfo>): void--><!--Device-DataShareHelper-on(event: 'dataChange', type:SubscriptionType, uri: string, callback: AsyncCallback<ChangeInfo>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -1407,6 +1459,8 @@ on(
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareHelper-on(       type: 'rdbDataChange',       uris: Array<string>,       templateId: TemplateId,       callback: AsyncCallback<RdbDataChangeNode>     ): Array<OperationResult>--><!--Device-DataShareHelper-on(       type: 'rdbDataChange',       uris: Array<string>,       templateId: TemplateId,       callback: AsyncCallback<RdbDataChangeNode>     ): Array<OperationResult>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -1477,6 +1531,8 @@ on(
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareHelper-on(       type: 'publishedDataChange',       uris: Array<string>,       subscriberId: string,       callback: AsyncCallback<PublishedDataChangeNode>     ): Array<OperationResult>--><!--Device-DataShareHelper-on(       type: 'publishedDataChange',       uris: Array<string>,       subscriberId: string,       callback: AsyncCallback<PublishedDataChangeNode>     ): Array<OperationResult>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -1546,6 +1602,8 @@ publish(
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareHelper-publish(       data: Array<PublishedItem>,       bundleName: string,       version: int,       callback: AsyncCallback<Array<OperationResult>>     ): void--><!--Device-DataShareHelper-publish(       data: Array<PublishedItem>,       bundleName: string,       version: int,       callback: AsyncCallback<Array<OperationResult>>     ): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -1607,6 +1665,8 @@ publish(
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareHelper-publish(       data: Array<PublishedItem>,       bundleName: string,       callback: AsyncCallback<Array<OperationResult>>     ): void--><!--Device-DataShareHelper-publish(       data: Array<PublishedItem>,       bundleName: string,       callback: AsyncCallback<Array<OperationResult>>     ): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -1658,6 +1718,8 @@ publish(data: Array<PublishedItem>, bundleName: string, version?: number): Promi
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareHelper-publish(data: Array<PublishedItem>, bundleName: string, version?: int): Promise<Array<OperationResult>>--><!--Device-DataShareHelper-publish(data: Array<PublishedItem>, bundleName: string, version?: int): Promise<Array<OperationResult>>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -1714,6 +1776,8 @@ query(
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareHelper-query(       uri: string,       predicates: dataSharePredicates.DataSharePredicates,       columns: Array<string>,       callback: AsyncCallback<DataShareResultSet>     ): void--><!--Device-DataShareHelper-query(       uri: string,       predicates: dataSharePredicates.DataSharePredicates,       columns: Array<string>,       callback: AsyncCallback<DataShareResultSet>     ): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -1780,6 +1844,8 @@ query(
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareHelper-query(       uri: string,       predicates: dataSharePredicates.DataSharePredicates,       columns: Array<string>     ): Promise<DataShareResultSet>--><!--Device-DataShareHelper-query(       uri: string,       predicates: dataSharePredicates.DataSharePredicates,       columns: Array<string>     ): Promise<DataShareResultSet>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -1848,6 +1914,8 @@ update(
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareHelper-update(       uri: string,       predicates: dataSharePredicates.DataSharePredicates,       value: ValuesBucket,       callback: AsyncCallback<int>     ): void--><!--Device-DataShareHelper-update(       uri: string,       predicates: dataSharePredicates.DataSharePredicates,       value: ValuesBucket,       callback: AsyncCallback<int>     ): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -1920,6 +1988,8 @@ update(uri: string, predicates: dataSharePredicates.DataSharePredicates, value: 
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareHelper-update(uri: string, predicates: dataSharePredicates.DataSharePredicates, value: ValuesBucket): Promise<int>--><!--Device-DataShareHelper-update(uri: string, predicates: dataSharePredicates.DataSharePredicates, value: ValuesBucket): Promise<int>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 

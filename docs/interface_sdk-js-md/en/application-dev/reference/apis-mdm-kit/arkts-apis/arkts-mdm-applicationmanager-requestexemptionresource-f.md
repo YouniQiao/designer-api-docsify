@@ -22,6 +22,8 @@ The exemption is time-limited. When the specified duration expires, the system a
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-applicationManager-function requestExemptionResource(resourceType: StandbyResourceType, bundleName: string, duration: number): void--><!--Device-applicationManager-function requestExemptionResource(resourceType: StandbyResourceType, bundleName: string, duration: number): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**

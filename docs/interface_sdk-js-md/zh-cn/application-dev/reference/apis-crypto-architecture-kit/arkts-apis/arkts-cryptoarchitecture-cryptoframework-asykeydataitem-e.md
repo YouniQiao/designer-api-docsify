@@ -8,6 +8,8 @@ enum AsyKeyDataItem
 
 **起始版本：** 26.0.0
 
+<!--Device-cryptoFramework-enum AsyKeyDataItem--><!--Device-cryptoFramework-enum AsyKeyDataItem-End-->
+
 **系统能力：** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
 ## ML_DSA_PRIVATE_SEED
@@ -22,7 +24,9 @@ ML-DSA私钥的私有种子。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-AsyKeyDataItem-ML_DSA_PRIVATE_SEED = 0--><!--Device-AsyKeyDataItem-ML_DSA_PRIVATE_SEED = 0-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
@@ -38,7 +42,9 @@ ML-DSA私钥的原始私钥数据。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-AsyKeyDataItem-ML_DSA_PRIVATE_RAW = 1--><!--Device-AsyKeyDataItem-ML_DSA_PRIVATE_RAW = 1-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
@@ -54,7 +60,9 @@ ML-DSA公钥的原始公钥数据。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-AsyKeyDataItem-ML_DSA_PUBLIC_RAW = 2--><!--Device-AsyKeyDataItem-ML_DSA_PUBLIC_RAW = 2-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
@@ -70,7 +78,9 @@ ML-KEM私钥的私有种子。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-AsyKeyDataItem-ML_KEM_PRIVATE_SEED = 3--><!--Device-AsyKeyDataItem-ML_KEM_PRIVATE_SEED = 3-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
@@ -86,7 +96,9 @@ ML-KEM私钥的原始私钥数据。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-AsyKeyDataItem-ML_KEM_PRIVATE_RAW = 4--><!--Device-AsyKeyDataItem-ML_KEM_PRIVATE_RAW = 4-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
@@ -102,7 +114,9 @@ ML-KEM公钥的原始公钥数据。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-AsyKeyDataItem-ML_KEM_PUBLIC_RAW = 5--><!--Device-AsyKeyDataItem-ML_KEM_PUBLIC_RAW = 5-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
@@ -118,7 +132,9 @@ EC_PRIVATE_K = 6
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-AsyKeyDataItem-EC_PRIVATE_K = 6--><!--Device-AsyKeyDataItem-EC_PRIVATE_K = 6-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
@@ -134,7 +150,9 @@ EC_PRIVATE_04_X_Y_K = 7
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-AsyKeyDataItem-EC_PRIVATE_04_X_Y_K = 7--><!--Device-AsyKeyDataItem-EC_PRIVATE_04_X_Y_K = 7-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
@@ -150,7 +168,9 @@ EC_PUBLIC_X_Y = 8
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-AsyKeyDataItem-EC_PUBLIC_X_Y = 8--><!--Device-AsyKeyDataItem-EC_PUBLIC_X_Y = 8-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
@@ -166,7 +186,9 @@ EC_PUBLIC_04_X_Y = 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-AsyKeyDataItem-EC_PUBLIC_04_X_Y = 9--><!--Device-AsyKeyDataItem-EC_PUBLIC_04_X_Y = 9-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
@@ -182,6 +204,8 @@ EC_PUBLIC_COMPRESS_X = 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-AsyKeyDataItem-EC_PUBLIC_COMPRESS_X = 10--><!--Device-AsyKeyDataItem-EC_PUBLIC_COMPRESS_X = 10-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Key.AsymKey

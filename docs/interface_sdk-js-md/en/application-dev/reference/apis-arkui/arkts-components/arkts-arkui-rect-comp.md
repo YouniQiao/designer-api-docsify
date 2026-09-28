@@ -30,6 +30,8 @@ Draws a rectangle. After being called, it creates a **Rect** object, for which a
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-RectInterface-new (    options?: RectOptions | RoundedRectOptions,  ): RectAttribute--><!--Device-RectInterface-new (    options?: RectOptions | RoundedRectOptions,  ): RectAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -55,6 +57,8 @@ Draws a rectangle. After being called, it creates a **Rect** object, for which a
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-RectInterface-(    options?: RectOptions | RoundedRectOptions,  ): RectAttribute--><!--Device-RectInterface-(    options?: RectOptions | RoundedRectOptions,  ): RectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

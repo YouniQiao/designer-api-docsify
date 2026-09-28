@@ -8,6 +8,8 @@ HashSet是一种非线性容器，用于存储不重复的元素集合，支持�
 
 **起始版本：** 8
 
+<!--Device-unnamed-declare class HashSet<T>--><!--Device-unnamed-declare class HashSet<T>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -30,6 +32,8 @@ import { HashSet } from '@kit.ArkTS';
 **起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HashSet-[Symbol.iterator](): IterableIterator<T>--><!--Device-HashSet-[Symbol.iterator](): IterableIterator<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -92,7 +96,9 @@ add(value: T): boolean
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HashSet-add(value: T): boolean--><!--Device-HashSet-add(value: T): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -134,7 +140,9 @@ clear(): void
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HashSet-clear(): void--><!--Device-HashSet-clear(): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -166,7 +174,9 @@ HashSet的构造函数，用于创建一个空的HashSet实例。
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HashSet-constructor()--><!--Device-HashSet-constructor()-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -195,7 +205,9 @@ entries(): IterableIterator<[T, T]>
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HashSet-entries(): IterableIterator<[T, T]>--><!--Device-HashSet-entries(): IterableIterator<[T, T]>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -254,6 +266,8 @@ forEach(callbackFn: (value?: T, key?: T, set?: HashSet<T>) => void, thisArg?: Ob
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-HashSet-forEach(callbackFn: (value?: T, key?: T, set?: HashSet<T>) => void, thisArg?: Object): void--><!--Device-HashSet-forEach(callbackFn: (value?: T, key?: T, set?: HashSet<T>) => void, thisArg?: Object): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -304,7 +318,9 @@ has(value: T): boolean
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HashSet-has(value: T): boolean--><!--Device-HashSet-has(value: T): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -346,7 +362,9 @@ isEmpty(): boolean
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HashSet-isEmpty(): boolean--><!--Device-HashSet-isEmpty(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -381,7 +399,9 @@ remove(value: T): boolean
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HashSet-remove(value: T): boolean--><!--Device-HashSet-remove(value: T): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -427,7 +447,9 @@ values(): IterableIterator<T>
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HashSet-values(): IterableIterator<T>--><!--Device-HashSet-values(): IterableIterator<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -471,5 +493,7 @@ HashSet的元素个数。
 **起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HashSet-length: number--><!--Device-HashSet-length: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

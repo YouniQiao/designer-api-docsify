@@ -8,6 +8,8 @@ interface EthEapProfile
 
 **起始版本：** 20
 
+<!--Device-eap-interface EthEapProfile--><!--Device-eap-interface EthEapProfile-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
 ## 导入模块
@@ -28,6 +30,8 @@ altSubjectMatch: string
 
 **起始版本：** 20
 
+<!--Device-EthEapProfile-altSubjectMatch: string--><!--Device-EthEapProfile-altSubjectMatch: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
 ## anonymousIdentity
@@ -41,6 +45,8 @@ anonymousIdentity: string
 **类型：** string
 
 **起始版本：** 20
+
+<!--Device-EthEapProfile-anonymousIdentity: string--><!--Device-EthEapProfile-anonymousIdentity: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
@@ -56,6 +62,8 @@ CA证书别名。
 
 **起始版本：** 20
 
+<!--Device-EthEapProfile-caCertAliases: string--><!--Device-EthEapProfile-caCertAliases: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
 ## caPath
@@ -69,6 +77,8 @@ CA证书路径。
 **类型：** string
 
 **起始版本：** 20
+
+<!--Device-EthEapProfile-caPath: string--><!--Device-EthEapProfile-caPath: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
@@ -84,6 +94,8 @@ CA证书内容。
 
 **起始版本：** 20
 
+<!--Device-EthEapProfile-certEntry: Uint8Array--><!--Device-EthEapProfile-certEntry: Uint8Array-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
 ## certPassword
@@ -97,6 +109,8 @@ CA证书密码。
 **类型：** string
 
 **起始版本：** 20
+
+<!--Device-EthEapProfile-certPassword: string--><!--Device-EthEapProfile-certPassword: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
@@ -112,6 +126,8 @@ clientCertAliases: string
 
 **起始版本：** 20
 
+<!--Device-EthEapProfile-clientCertAliases: string--><!--Device-EthEapProfile-clientCertAliases: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
 ## domainSuffixMatch
@@ -125,6 +141,8 @@ domainSuffixMatch: string
 **类型：** string
 
 **起始版本：** 20
+
+<!--Device-EthEapProfile-domainSuffixMatch: string--><!--Device-EthEapProfile-domainSuffixMatch: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
@@ -140,6 +158,8 @@ AP认证方式。
 
 **起始版本：** 20
 
+<!--Device-EthEapProfile-eapMethod: EapMethod--><!--Device-EthEapProfile-eapMethod: EapMethod-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
 ## eapSubId
@@ -153,6 +173,8 @@ SIM卡的子ID。
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-EthEapProfile-eapSubId: int--><!--Device-EthEapProfile-eapSubId: int-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
@@ -168,6 +190,8 @@ identity: string
 
 **起始版本：** 20
 
+<!--Device-EthEapProfile-identity: string--><!--Device-EthEapProfile-identity: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
 ## password
@@ -181,6 +205,8 @@ Password
 **类型：** string
 
 **起始版本：** 20
+
+<!--Device-EthEapProfile-password: string--><!--Device-EthEapProfile-password: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
@@ -196,6 +222,8 @@ phase2Method: Phase2Method
 
 **起始版本：** 20
 
+<!--Device-EthEapProfile-phase2Method: Phase2Method--><!--Device-EthEapProfile-phase2Method: Phase2Method-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
 ## plmn
@@ -210,6 +238,8 @@ plmn: string
 
 **起始版本：** 20
 
+<!--Device-EthEapProfile-plmn: string--><!--Device-EthEapProfile-plmn: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
 ## realm
@@ -223,5 +253,7 @@ realm: string
 **类型：** string
 
 **起始版本：** 20
+
+<!--Device-EthEapProfile-realm: string--><!--Device-EthEapProfile-realm: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap

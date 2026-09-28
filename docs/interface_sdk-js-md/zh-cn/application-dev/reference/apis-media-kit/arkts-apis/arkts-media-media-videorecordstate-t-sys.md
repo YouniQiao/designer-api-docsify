@@ -8,6 +8,8 @@ type VideoRecordState = 'idle' | 'prepared' | 'playing' | 'paused' | 'stopped' |
 
 **起始版本：** 9
 
+<!--Device-media-type VideoRecordState = 'idle' | 'prepared' | 'playing' | 'paused' | 'stopped' | 'error'--><!--Device-media-type VideoRecordState = 'idle' | 'prepared' | 'playing' | 'paused' | 'stopped' | 'error'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
 **系统接口：** 此接口为系统接口。

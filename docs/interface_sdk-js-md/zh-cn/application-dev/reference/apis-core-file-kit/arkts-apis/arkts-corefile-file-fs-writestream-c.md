@@ -10,6 +10,8 @@ declare class WriteStream extends stream.Writable
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare class WriteStream extends stream.Writable--><!--Device-unnamed-declare class WriteStream extends stream.Writable-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## 导入模块
@@ -27,6 +29,8 @@ close(): void
 关闭可写流。
 
 **起始版本：** 12
+
+<!--Device-WriteStream-close(): void--><!--Device-WriteStream-close(): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -59,6 +63,8 @@ constructor()
 
 **起始版本：** 12
 
+<!--Device-WriteStream-constructor()--><!--Device-WriteStream-constructor()-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## seek
@@ -70,6 +76,8 @@ seek(offset: number, whence?: WhenceType): number
 调整可写流的偏移指针位置。
 
 **起始版本：** 12
+
+<!--Device-WriteStream-seek(offset: number, whence?: WhenceType): number--><!--Device-WriteStream-seek(offset: number, whence?: WhenceType): number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -117,6 +125,8 @@ readonly bytesWritten: number
 
 **起始版本：** 12
 
+<!--Device-WriteStream-readonly bytesWritten: number--><!--Device-WriteStream-readonly bytesWritten: number-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **错误码：**
@@ -136,6 +146,8 @@ readonly path: string
 **类型：** string
 
 **起始版本：** 12
+
+<!--Device-WriteStream-readonly path: string--><!--Device-WriteStream-readonly path: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

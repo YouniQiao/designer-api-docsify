@@ -18,6 +18,8 @@ function getAllApplicationInfo(appFlags: number, callback: AsyncCallback<Array<A
 
 **需要权限：** ohos.permission.GET_INSTALLED_BUNDLE_LIST
 
+<!--Device-bundleManager-function getAllApplicationInfo(appFlags: int, callback: AsyncCallback<Array<ApplicationInfo>>): void--><!--Device-bundleManager-function getAllApplicationInfo(appFlags: int, callback: AsyncCallback<Array<ApplicationInfo>>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -75,6 +77,8 @@ function getAllApplicationInfo(appFlags: number,
 **起始版本：** 9
 
 **需要权限：** ohos.permission.GET_INSTALLED_BUNDLE_LIST
+
+<!--Device-bundleManager-function getAllApplicationInfo(appFlags: int,    userId: int, callback: AsyncCallback<Array<ApplicationInfo>>): void--><!--Device-bundleManager-function getAllApplicationInfo(appFlags: int,    userId: int, callback: AsyncCallback<Array<ApplicationInfo>>): void-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -135,6 +139,8 @@ function getAllApplicationInfo(appFlags: number, userId?: number): Promise<Array
 **起始版本：** 9
 
 **需要权限：** ohos.permission.GET_INSTALLED_BUNDLE_LIST
+
+<!--Device-bundleManager-function getAllApplicationInfo(appFlags: int, userId?: int): Promise<Array<ApplicationInfo>>--><!--Device-bundleManager-function getAllApplicationInfo(appFlags: int, userId?: int): Promise<Array<ApplicationInfo>>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

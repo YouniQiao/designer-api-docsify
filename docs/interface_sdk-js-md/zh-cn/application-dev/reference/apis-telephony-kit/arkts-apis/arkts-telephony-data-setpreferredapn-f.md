@@ -22,6 +22,8 @@ function setPreferredApn(apnId: number): Promise<boolean>
 
 **需要权限：** ohos.permission.MANAGE_APN_SETTING
 
+<!--Device-data-function setPreferredApn(apnId: int): Promise<boolean>--><!--Device-data-function setPreferredApn(apnId: int): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Telephony.CellularData
 
 **参数：**

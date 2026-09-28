@@ -14,6 +14,8 @@ interface Storage
 
 **替代接口：** preferences
 
+<!--Device-storage-interface Storage--><!--Device-storage-interface Storage-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
 ## 导入模块
@@ -34,6 +36,8 @@ clear(callback: AsyncCallback<void>): void
 **废弃版本：** 9
 
 **替代接口：** clear
+
+<!--Device-Storage-clear(callback: AsyncCallback<void>): void--><!--Device-Storage-clear(callback: AsyncCallback<void>): void-End-->
 
 **参数：**
 
@@ -69,6 +73,8 @@ clear(): Promise<void>
 
 **替代接口：** clear
 
+<!--Device-Storage-clear(): Promise<void>--><!--Device-Storage-clear(): Promise<void>-End-->
+
 **返回值：**
 
 | 类型 | 说明 |
@@ -100,6 +106,8 @@ clearSync(): void
 
 **替代接口：** clear
 
+<!--Device-Storage-clearSync(): void--><!--Device-Storage-clearSync(): void-End-->
+
 **示例**
 
 ```TypeScript
@@ -119,6 +127,8 @@ delete(key: string, callback: AsyncCallback<void>): void
 **废弃版本：** 9
 
 **替代接口：** delete
+
+<!--Device-Storage-delete(key: string, callback: AsyncCallback<void>): void--><!--Device-Storage-delete(key: string, callback: AsyncCallback<void>): void-End-->
 
 **参数：**
 
@@ -154,6 +164,8 @@ delete(key: string): Promise<void>
 **废弃版本：** 9
 
 **替代接口：** delete
+
+<!--Device-Storage-delete(key: string): Promise<void>--><!--Device-Storage-delete(key: string): Promise<void>-End-->
 
 **参数：**
 
@@ -192,6 +204,8 @@ deleteSync(key: string): void
 
 **替代接口：** delete
 
+<!--Device-Storage-deleteSync(key: string): void--><!--Device-Storage-deleteSync(key: string): void-End-->
+
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
@@ -217,6 +231,8 @@ flush(callback: AsyncCallback<void>): void
 **废弃版本：** 9
 
 **替代接口：** flush
+
+<!--Device-Storage-flush(callback: AsyncCallback<void>): void--><!--Device-Storage-flush(callback: AsyncCallback<void>): void-End-->
 
 **参数：**
 
@@ -252,6 +268,8 @@ flush(): Promise<void>
 
 **替代接口：** flush
 
+<!--Device-Storage-flush(): Promise<void>--><!--Device-Storage-flush(): Promise<void>-End-->
+
 **返回值：**
 
 | 类型 | 说明 |
@@ -283,6 +301,8 @@ flushSync(): void
 
 **替代接口：** flush
 
+<!--Device-Storage-flushSync(): void--><!--Device-Storage-flushSync(): void-End-->
+
 **示例**
 
 ```TypeScript
@@ -302,6 +322,8 @@ get(key: string, defValue: ValueType, callback: AsyncCallback<ValueType>): void
 **废弃版本：** 9
 
 **替代接口：** get
+
+<!--Device-Storage-get(key: string, defValue: ValueType, callback: AsyncCallback<ValueType>): void--><!--Device-Storage-get(key: string, defValue: ValueType, callback: AsyncCallback<ValueType>): void-End-->
 
 **参数：**
 
@@ -338,6 +360,8 @@ get(key: string, defValue: ValueType): Promise<ValueType>
 **废弃版本：** 9
 
 **替代接口：** get
+
+<!--Device-Storage-get(key: string, defValue: ValueType): Promise<ValueType>--><!--Device-Storage-get(key: string, defValue: ValueType): Promise<ValueType>-End-->
 
 **参数：**
 
@@ -377,6 +401,8 @@ getSync(key: string, defValue: ValueType): ValueType
 
 **替代接口：** get
 
+<!--Device-Storage-getSync(key: string, defValue: ValueType): ValueType--><!--Device-Storage-getSync(key: string, defValue: ValueType): ValueType-End-->
+
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
@@ -410,6 +436,8 @@ has(key: string, callback: AsyncCallback<boolean>): boolean
 **废弃版本：** 9
 
 **替代接口：** has
+
+<!--Device-Storage-has(key: string, callback: AsyncCallback<boolean>): boolean--><!--Device-Storage-has(key: string, callback: AsyncCallback<boolean>): boolean-End-->
 
 **参数：**
 
@@ -454,6 +482,8 @@ has(key: string): Promise<boolean>
 
 **替代接口：** has
 
+<!--Device-Storage-has(key: string): Promise<boolean>--><!--Device-Storage-has(key: string): Promise<boolean>-End-->
+
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
@@ -493,6 +523,8 @@ hasSync(key: string): boolean
 
 **替代接口：** has
 
+<!--Device-Storage-hasSync(key: string): boolean--><!--Device-Storage-hasSync(key: string): boolean-End-->
+
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
@@ -528,6 +560,8 @@ off(type: 'change', callback: Callback<StorageObserver>): void
 
 **替代接口：** off
 
+<!--Device-Storage-off(type: 'change', callback: Callback<StorageObserver>): void--><!--Device-Storage-off(type: 'change', callback: Callback<StorageObserver>): void-End-->
+
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
@@ -557,6 +591,8 @@ on(type: 'change', callback: Callback<StorageObserver>): void
 **废弃版本：** 9
 
 **替代接口：** on
+
+<!--Device-Storage-on(type: 'change', callback: Callback<StorageObserver>): void--><!--Device-Storage-on(type: 'change', callback: Callback<StorageObserver>): void-End-->
 
 **参数：**
 
@@ -589,6 +625,8 @@ put(key: string, value: ValueType, callback: AsyncCallback<void>): void
 **废弃版本：** 9
 
 **替代接口：** put
+
+<!--Device-Storage-put(key: string, value: ValueType, callback: AsyncCallback<void>): void--><!--Device-Storage-put(key: string, value: ValueType, callback: AsyncCallback<void>): void-End-->
 
 **参数：**
 
@@ -625,6 +663,8 @@ put(key: string, value: ValueType): Promise<void>
 **废弃版本：** 9
 
 **替代接口：** put
+
+<!--Device-Storage-put(key: string, value: ValueType): Promise<void>--><!--Device-Storage-put(key: string, value: ValueType): Promise<void>-End-->
 
 **参数：**
 
@@ -663,6 +703,8 @@ putSync(key: string, value: ValueType): void
 **废弃版本：** 9
 
 **替代接口：** put
+
+<!--Device-Storage-putSync(key: string, value: ValueType): void--><!--Device-Storage-putSync(key: string, value: ValueType): void-End-->
 
 **参数：**
 

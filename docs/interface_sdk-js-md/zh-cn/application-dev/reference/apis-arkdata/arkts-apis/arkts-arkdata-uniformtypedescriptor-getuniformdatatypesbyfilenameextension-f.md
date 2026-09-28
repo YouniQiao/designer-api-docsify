@@ -18,6 +18,8 @@ function getUniformDataTypesByFilenameExtension(filenameExtension: string, belon
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-uniformTypeDescriptor-function getUniformDataTypesByFilenameExtension(filenameExtension: string, belongsTo?: string): Array<string>--><!--Device-uniformTypeDescriptor-function getUniformDataTypesByFilenameExtension(filenameExtension: string, belongsTo?: string): Array<string>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 **参数：**

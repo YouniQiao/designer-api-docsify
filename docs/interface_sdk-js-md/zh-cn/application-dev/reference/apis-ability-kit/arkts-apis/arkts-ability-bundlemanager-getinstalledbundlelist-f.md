@@ -20,6 +20,8 @@ function getInstalledBundleList(bundleFlags: number): Promise<Array<BundleInfo>>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-bundleManager-function getInstalledBundleList(bundleFlags: int): Promise<Array<BundleInfo>>--><!--Device-bundleManager-function getInstalledBundleList(bundleFlags: int): Promise<Array<BundleInfo>>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **参数：**

@@ -8,6 +8,8 @@ export interface UpgradeFile
 
 **起始版本：** 9
 
+<!--Device-update-export interface UpgradeFile--><!--Device-update-export interface UpgradeFile-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ filePath: string
 
 **起始版本：** 9
 
+<!--Device-UpgradeFile-filePath: string--><!--Device-UpgradeFile-filePath: string-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ fileType: ComponentType
 **类型：** [ComponentType](arkts-basicservices-update-componenttype-e-sys.md)
 
 **起始版本：** 9
+
+<!--Device-UpgradeFile-fileType: ComponentType--><!--Device-UpgradeFile-fileType: ComponentType-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
 

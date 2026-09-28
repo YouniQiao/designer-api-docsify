@@ -10,6 +10,8 @@ declare struct ContentFormCard
 
 **装饰器类型：** @Component
 
+<!--Device-unnamed-declare struct ContentFormCard--><!--Device-unnamed-declare struct ContentFormCard-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## 导入模块
@@ -32,6 +34,8 @@ contentFormData: uniformDataStruct.ContentForm
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ContentFormCard-contentFormData: uniformDataStruct.ContentForm--><!--Device-ContentFormCard-contentFormData: uniformDataStruct.ContentForm-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## formHeight
@@ -49,6 +53,8 @@ formHeight?: number
 **装饰器类型：** @Prop
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ContentFormCard-formHeight?: double--><!--Device-ContentFormCard-formHeight?: double-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -68,6 +74,8 @@ formType: FormType
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ContentFormCard-formType: FormType--><!--Device-ContentFormCard-formType: FormType-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## formWidth
@@ -86,6 +94,8 @@ formWidth?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ContentFormCard-formWidth?: double--><!--Device-ContentFormCard-formWidth?: double-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## handleOnClick
@@ -101,5 +111,7 @@ handleOnClick?: Function
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ContentFormCard-handleOnClick?: Function--><!--Device-ContentFormCard-handleOnClick?: Function-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core

@@ -8,6 +8,8 @@ interface Color
 
 **起始版本：** 9
 
+<!--Device-effectKit-interface Color--><!--Device-effectKit-interface Color-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## 导入模块
@@ -28,9 +30,11 @@ alpha: number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-Color-alpha: int--><!--Device-Color-alpha: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -46,9 +50,11 @@ blue: number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-Color-blue: int--><!--Device-Color-blue: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -64,9 +70,11 @@ green: number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-Color-green: int--><!--Device-Color-green: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -82,8 +90,10 @@ red: number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-Color-red: int--><!--Device-Color-red: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core

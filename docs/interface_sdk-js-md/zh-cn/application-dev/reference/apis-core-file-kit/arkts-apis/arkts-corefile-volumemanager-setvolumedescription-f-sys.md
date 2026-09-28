@@ -18,6 +18,8 @@ function setVolumeDescription(uuid: string, description: string, callback: Async
 
 **需要权限：** ohos.permission.MOUNT_UNMOUNT_MANAGER
 
+<!--Device-volumeManager-function setVolumeDescription(uuid: string, description: string, callback: AsyncCallback<void>): void--><!--Device-volumeManager-function setVolumeDescription(uuid: string, description: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -57,6 +59,8 @@ function setVolumeDescription(uuid: string, description: string): Promise<void>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.MOUNT_UNMOUNT_MANAGER
+
+<!--Device-volumeManager-function setVolumeDescription(uuid: string, description: string): Promise<void>--><!--Device-volumeManager-function setVolumeDescription(uuid: string, description: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Volume
 

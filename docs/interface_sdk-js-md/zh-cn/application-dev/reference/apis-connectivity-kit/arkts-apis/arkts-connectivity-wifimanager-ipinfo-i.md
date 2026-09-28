@@ -8,6 +8,8 @@ IPV4信息。
 
 **起始版本：** 9
 
+<!--Device-wifiManager-interface IpInfo--><!--Device-wifiManager-interface IpInfo-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## 导入模块
@@ -28,6 +30,8 @@ gateway: number
 
 **起始版本：** 9
 
+<!--Device-IpInfo-gateway: int--><!--Device-IpInfo-gateway: int-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## ipAddress
@@ -41,6 +45,8 @@ IP地址。（ipAddress值为number类型，需要转换为IP常用格式，具�
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-IpInfo-ipAddress: int--><!--Device-IpInfo-ipAddress: int-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -56,6 +62,8 @@ IP地址租用时长，单位：秒。
 
 **起始版本：** 9
 
+<!--Device-IpInfo-leaseDuration: int--><!--Device-IpInfo-leaseDuration: int-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## netmask
@@ -69,6 +77,8 @@ netmask: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-IpInfo-netmask: int--><!--Device-IpInfo-netmask: int-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -84,6 +94,8 @@ primaryDns: number
 
 **起始版本：** 9
 
+<!--Device-IpInfo-primaryDns: int--><!--Device-IpInfo-primaryDns: int-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## secondDns
@@ -98,6 +110,8 @@ secondDns: number
 
 **起始版本：** 9
 
+<!--Device-IpInfo-secondDns: int--><!--Device-IpInfo-secondDns: int-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## serverIp
@@ -111,5 +125,7 @@ DHCP服务端IP地址。
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-IpInfo-serverIp: int--><!--Device-IpInfo-serverIp: int-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA

@@ -8,6 +8,8 @@ On the WebSocket server: Use the [createWebSocketServer](arkts-network-websocket
 
 **Since:** 6
 
+<!--Device-unnamed-declare namespace webSocket--><!--Device-unnamed-declare namespace webSocket-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import

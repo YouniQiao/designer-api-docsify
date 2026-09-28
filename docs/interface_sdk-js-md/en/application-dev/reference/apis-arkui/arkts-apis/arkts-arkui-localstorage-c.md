@@ -17,6 +17,8 @@ A page-level UI state storage. The parameters received through the [@Entry](../.
 
 **Since:** 9
 
+<!--Device-unnamed-declare class LocalStorage--><!--Device-unnamed-declare class LocalStorage-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## clear
@@ -36,6 +38,8 @@ For details about the subscriber, see [delete](#delete).
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-LocalStorage-clear(): boolean--><!--Device-LocalStorage-clear(): boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -68,6 +72,8 @@ Creates a [LocalStorage](../../../ui/state-management/arkts-localstorage.md) ins
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-LocalStorage-constructor(initializingProperties?: Object)--><!--Device-LocalStorage-constructor(initializingProperties?: Object)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -116,6 +122,8 @@ of **SubscribedAbstractProperty** returned by **link**, **prop**, **setAndLink**
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-LocalStorage-delete(propName: string): boolean--><!--Device-LocalStorage-delete(propName: string): boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -158,6 +166,8 @@ Obtains the value of the property corresponding to **propName** from [LocalStora
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-LocalStorage-get<T>(propName: string): T | undefined--><!--Device-LocalStorage-get<T>(propName: string): T | undefined-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -195,6 +205,8 @@ Checks whether the property corresponding to **propName** exists in [LocalStorag
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-LocalStorage-has(propName: string): boolean--><!--Device-LocalStorage-has(propName: string): boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -234,6 +246,8 @@ Obtains all property names in [LocalStorage](../../../ui/state-management/arkts-
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-LocalStorage-keys(): IterableIterator<string>--><!--Device-LocalStorage-keys(): IterableIterator<string>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -267,6 +281,8 @@ If the given property does not exist in LocalStorage, **undefined** is returned.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-LocalStorage-link<T>(propName: string): SubscribedAbstractProperty<T>--><!--Device-LocalStorage-link<T>(propName: string): SubscribedAbstractProperty<T>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -308,6 +324,8 @@ Establishes a one-way data binding with the property corresponding to propName i
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-LocalStorage-prop<S>(propName: string): SubscribedAbstractProperty<S>--><!--Device-LocalStorage-prop<S>(propName: string): SubscribedAbstractProperty<S>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -345,6 +363,8 @@ This API is basically the same as [link](#link), except that it does not require
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LocalStorage-public ref<T>(propName: string): AbstractProperty<T> | undefined--><!--Device-LocalStorage-public ref<T>(propName: string): AbstractProperty<T> | undefined-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -386,6 +406,8 @@ Sets the value of the property corresponding to **propName** in [LocalStorage](.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-LocalStorage-set<T>(propName: string, newValue: T): boolean--><!--Device-LocalStorage-set<T>(propName: string, newValue: T): boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -425,6 +447,8 @@ Similar to the [link](#link) API, establishes a two-way data binding with the pr
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-LocalStorage-setAndLink<T>(propName: string, defaultValue: T): SubscribedAbstractProperty<T>--><!--Device-LocalStorage-setAndLink<T>(propName: string, defaultValue: T): SubscribedAbstractProperty<T>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -466,6 +490,8 @@ Similar to the [prop](#prop) API, establishes a one-way data binding with the pr
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-LocalStorage-setAndProp<S>(propName: string, defaultValue: S): SubscribedAbstractProperty<S>--><!--Device-LocalStorage-setAndProp<S>(propName: string, defaultValue: S): SubscribedAbstractProperty<S>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -502,6 +528,8 @@ This API is basically the same as [setAndLink](#setandlink), except that it does
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LocalStorage-public setAndRef<T>(propName: string, defaultValue: T): AbstractProperty<T>--><!--Device-LocalStorage-public setAndRef<T>(propName: string, defaultValue: T): AbstractProperty<T>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -545,6 +573,8 @@ If **propName** does not exist, this API creates it with the value of **newValue
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-LocalStorage-setOrCreate<T>(propName: string, newValue: T): boolean--><!--Device-LocalStorage-setOrCreate<T>(propName: string, newValue: T): boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -586,6 +616,8 @@ Obtains the number of properties in [LocalStorage](../../../ui/state-management/
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-LocalStorage-size(): number--><!--Device-LocalStorage-size(): number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -619,6 +651,8 @@ Obtains the [LocalStorage](../../../ui/state-management/arkts-localstorage.md) i
 **Model restriction:** This API can be used only in the stage model.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-LocalStorage-static GetShared(): LocalStorage--><!--Device-LocalStorage-static GetShared(): LocalStorage-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -659,6 +693,8 @@ Obtains the [LocalStorage](../../../ui/state-management/arkts-localstorage.md) i
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
+
+<!--Device-LocalStorage-static getShared(): LocalStorage--><!--Device-LocalStorage-static getShared(): LocalStorage-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

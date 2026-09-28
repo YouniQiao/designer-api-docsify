@@ -4,9 +4,11 @@
 declare interface TextDataDetectorConfig
 ```
 
-This configuration is only available for the [Text](../arkts-components/arkts-arkui-text-comp.md#text) and [RichEditor](../arkts-components/arkts-arkui-richeditor-comp.md#rich_editor) components.
+This configuration is only available for the [Text](../arkts-components/arkts-arkui-text-comp.md) and [RichEditor](../arkts-components/arkts-arkui-richeditor-comp.md) components.
 
 **Since:** 11
+
+<!--Device-unnamed-declare interface TextDataDetectorConfig--><!--Device-unnamed-declare interface TextDataDetectorConfig-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,6 +29,8 @@ Default value: **'#ff0a59f7'**, which indicates blue (with 100% opacity).
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextDataDetectorConfig-color?: ResourceColor--><!--Device-TextDataDetectorConfig-color?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -58,6 +62,8 @@ Default value:
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TextDataDetectorConfig-decoration?: DecorationStyleInterface--><!--Device-TextDataDetectorConfig-decoration?: DecorationStyleInterface-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## enablePreviewMenu
@@ -82,6 +88,8 @@ The actual device types supported by this API (phones and tablets) are fewer tha
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-TextDataDetectorConfig-enablePreviewMenu?: boolean--><!--Device-TextDataDetectorConfig-enablePreviewMenu?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onDetectResultUpdate
@@ -102,6 +110,8 @@ Default value: **undefined**, which means the callback is not triggered.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TextDataDetectorConfig-onDetectResultUpdate?: Callback<string>--><!--Device-TextDataDetectorConfig-onDetectResultUpdate?: Callback<string>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## types
@@ -119,5 +129,7 @@ Sets the entity types for text recognition. When **types** is set to **null** or
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextDataDetectorConfig-types: TextDataDetectorType[]--><!--Device-TextDataDetectorConfig-types: TextDataDetectorType[]-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

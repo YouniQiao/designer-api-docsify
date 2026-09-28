@@ -18,6 +18,8 @@ function restartPrintJob(jobId: string): Promise<void>
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-print-function restartPrintJob(jobId: string): Promise<void>--><!--Device-print-function restartPrintJob(jobId: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **系统接口：** 此接口为系统接口。

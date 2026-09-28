@@ -10,6 +10,8 @@ export enum CullMode
 
 **起始版本：** 20
 
+<!--Device-unnamed-export enum CullMode--><!--Device-unnamed-export enum CullMode-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## NONE
@@ -21,6 +23,8 @@ NONE = 0
 禁用剔除。
 
 **起始版本：** 20
+
+<!--Device-CullMode-NONE = 0--><!--Device-CullMode-NONE = 0-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -34,6 +38,8 @@ FRONT = 1
 
 **起始版本：** 20
 
+<!--Device-CullMode-FRONT = 1--><!--Device-CullMode-FRONT = 1-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## BACK
@@ -45,5 +51,7 @@ BACK = 2
 剔除背面几何面片。
 
 **起始版本：** 20
+
+<!--Device-CullMode-BACK = 2--><!--Device-CullMode-BACK = 2-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

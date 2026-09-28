@@ -8,6 +8,8 @@ export interface DisposedRule
 
 **起始版本：** 11
 
+<!--Device-appControl-export interface DisposedRule--><!--Device-appControl-export interface DisposedRule-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ componentType: ComponentType
 
 **起始版本：** 11
 
+<!--Device-DisposedRule-componentType: ComponentType--><!--Device-DisposedRule-componentType: ComponentType-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ controlType: ControlType
 **类型：** [ControlType](arkts-ability-appcontrol-controltype-e-sys.md)
 
 **起始版本：** 11
+
+<!--Device-DisposedRule-controlType: ControlType--><!--Device-DisposedRule-controlType: ControlType-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 
@@ -62,6 +68,8 @@ disposedType: DisposedType
 
 **起始版本：** 11
 
+<!--Device-DisposedRule-disposedType: DisposedType--><!--Device-DisposedRule-disposedType: DisposedType-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +85,8 @@ elementList: Array<ElementName>
 **类型：** Array&lt;[ElementName](arkts-ability-elementname-i.md)&gt;
 
 **起始版本：** 11
+
+<!--Device-DisposedRule-elementList: Array<ElementName>--><!--Device-DisposedRule-elementList: Array<ElementName>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 
@@ -94,6 +104,8 @@ priority: number
 
 **起始版本：** 11
 
+<!--Device-DisposedRule-priority: int--><!--Device-DisposedRule-priority: int-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 
 **系统接口：** 此接口为系统接口。
@@ -109,6 +121,8 @@ want: Want
 **类型：** [Want](arkts-ability-app-ability-want-want-c.md)
 
 **起始版本：** 11
+
+<!--Device-DisposedRule-want: Want--><!--Device-DisposedRule-want: Want-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 

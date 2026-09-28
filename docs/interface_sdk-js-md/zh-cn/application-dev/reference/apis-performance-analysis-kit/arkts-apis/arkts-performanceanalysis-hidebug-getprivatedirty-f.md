@@ -21,6 +21,8 @@ function getPrivateDirty() : bigint
 
 **起始版本：** 9
 
+<!--Device-hidebug-function getPrivateDirty() : bigint--><!--Device-hidebug-function getPrivateDirty() : bigint-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **返回值：**

@@ -8,6 +8,8 @@ export interface AppVersionInfo
 
 **起始版本：** 7
 
+<!--Device-unnamed-export interface AppVersionInfo--><!--Device-unnamed-export interface AppVersionInfo-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## appName
@@ -28,6 +30,8 @@ readonly appName: string
 - API版本12+：此接口仅可在FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-AppVersionInfo-readonly appName: string--><!--Device-AppVersionInfo-readonly appName: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -50,6 +54,8 @@ readonly versionCode: number
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-AppVersionInfo-readonly versionCode: number--><!--Device-AppVersionInfo-readonly versionCode: number-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## versionName
@@ -70,5 +76,7 @@ readonly versionName: string
 - API版本12+：此接口仅可在FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-AppVersionInfo-readonly versionName: string--><!--Device-AppVersionInfo-readonly versionName: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

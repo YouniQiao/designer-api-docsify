@@ -8,6 +8,8 @@ class UserIdentityManager
 
 **起始版本：** 8
 
+<!--Device-osAccount-class UserIdentityManager--><!--Device-osAccount-class UserIdentityManager-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -29,6 +31,8 @@ addCredential(credentialInfo: CredentialInfo, callback: IIdmCallback): void
 **起始版本：** 8
 
 **需要权限：** ohos.permission.MANAGE_USER_IDM
+
+<!--Device-UserIdentityManager-addCredential(credentialInfo: CredentialInfo, callback: IIdmCallback): void--><!--Device-UserIdentityManager-addCredential(credentialInfo: CredentialInfo, callback: IIdmCallback): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -107,6 +111,8 @@ cancel(challenge: Uint8Array): void
 
 **需要权限：** ohos.permission.MANAGE_USER_IDM
 
+<!--Device-UserIdentityManager-cancel(challenge: Uint8Array): void--><!--Device-UserIdentityManager-cancel(challenge: Uint8Array): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -154,6 +160,8 @@ closeSession(accountId?: number): void
 
 **需要权限：** ohos.permission.MANAGE_USER_IDM
 
+<!--Device-UserIdentityManager-closeSession(accountId?: int): void--><!--Device-UserIdentityManager-closeSession(accountId?: int): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -193,6 +201,8 @@ constructor()
 
 **起始版本：** 8
 
+<!--Device-UserIdentityManager-constructor()--><!--Device-UserIdentityManager-constructor()-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -220,6 +230,8 @@ delCred(credentialId: Uint8Array, token: Uint8Array, callback: IIdmCallback): vo
 **起始版本：** 8
 
 **需要权限：** ohos.permission.MANAGE_USER_IDM
+
+<!--Device-UserIdentityManager-delCred(credentialId: Uint8Array, token: Uint8Array, callback: IIdmCallback): void--><!--Device-UserIdentityManager-delCred(credentialId: Uint8Array, token: Uint8Array, callback: IIdmCallback): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -278,6 +290,8 @@ delUser(token: Uint8Array, callback: IIdmCallback): void
 
 **需要权限：** ohos.permission.MANAGE_USER_IDM
 
+<!--Device-UserIdentityManager-delUser(token: Uint8Array, callback: IIdmCallback): void--><!--Device-UserIdentityManager-delUser(token: Uint8Array, callback: IIdmCallback): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -331,6 +345,8 @@ getAuthInfo(callback: AsyncCallback<Array<EnrolledCredInfo>>): void
 
 **需要权限：** ohos.permission.USE_USER_IDM
 
+<!--Device-UserIdentityManager-getAuthInfo(callback: AsyncCallback<Array<EnrolledCredInfo>>): void--><!--Device-UserIdentityManager-getAuthInfo(callback: AsyncCallback<Array<EnrolledCredInfo>>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -383,6 +399,8 @@ getAuthInfo(authType: AuthType, callback: AsyncCallback<Array<EnrolledCredInfo>>
 **起始版本：** 8
 
 **需要权限：** ohos.permission.USE_USER_IDM
+
+<!--Device-UserIdentityManager-getAuthInfo(authType: AuthType, callback: AsyncCallback<Array<EnrolledCredInfo>>): void--><!--Device-UserIdentityManager-getAuthInfo(authType: AuthType, callback: AsyncCallback<Array<EnrolledCredInfo>>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -439,6 +457,8 @@ getAuthInfo(authType: AuthType): Promise<Array<EnrolledCredInfo>>
 **起始版本：** 8
 
 **需要权限：** ohos.permission.USE_USER_IDM
+
+<!--Device-UserIdentityManager-getAuthInfo(authType: AuthType): Promise<Array<EnrolledCredInfo>>--><!--Device-UserIdentityManager-getAuthInfo(authType: AuthType): Promise<Array<EnrolledCredInfo>>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -497,6 +517,8 @@ getAuthInfo(options?: GetAuthInfoOptions): Promise<Array<EnrolledCredInfo>>
 **起始版本：** 12
 
 **需要权限：** ohos.permission.USE_USER_IDM
+
+<!--Device-UserIdentityManager-getAuthInfo(options?: GetAuthInfoOptions): Promise<Array<EnrolledCredInfo>>--><!--Device-UserIdentityManager-getAuthInfo(options?: GetAuthInfoOptions): Promise<Array<EnrolledCredInfo>>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -559,6 +581,8 @@ getEnrolledId(authType: AuthType, accountId?: number): Promise<Uint8Array>
 
 **需要权限：** ohos.permission.USE_USER_IDM
 
+<!--Device-UserIdentityManager-getEnrolledId(authType: AuthType, accountId?: int): Promise<Uint8Array>--><!--Device-UserIdentityManager-getEnrolledId(authType: AuthType, accountId?: int): Promise<Uint8Array>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -620,6 +644,8 @@ offCredentialChanged(callback?: Callback<CredentialChangeInfo>): void
 **起始版本：** 23
 
 **需要权限：** ohos.permission.USE_USER_IDM
+
+<!--Device-UserIdentityManager-offCredentialChanged(callback?: Callback<CredentialChangeInfo>): void--><!--Device-UserIdentityManager-offCredentialChanged(callback?: Callback<CredentialChangeInfo>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -685,6 +711,8 @@ onCredentialChanged(credentialTypes: AuthType[], callback: Callback<CredentialCh
 
 **需要权限：** ohos.permission.USE_USER_IDM
 
+<!--Device-UserIdentityManager-onCredentialChanged(credentialTypes: AuthType[], callback: Callback<CredentialChangeInfo>): void--><!--Device-UserIdentityManager-onCredentialChanged(credentialTypes: AuthType[], callback: Callback<CredentialChangeInfo>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -744,6 +772,8 @@ openSession(callback: AsyncCallback<Uint8Array>): void
 
 **需要权限：** ohos.permission.MANAGE_USER_IDM
 
+<!--Device-UserIdentityManager-openSession(callback: AsyncCallback<Uint8Array>): void--><!--Device-UserIdentityManager-openSession(callback: AsyncCallback<Uint8Array>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -796,6 +826,8 @@ openSession(accountId?: number): Promise<Uint8Array>
 **起始版本：** 8
 
 **需要权限：** ohos.permission.MANAGE_USER_IDM
+
+<!--Device-UserIdentityManager-openSession(accountId?: int): Promise<Uint8Array>--><!--Device-UserIdentityManager-openSession(accountId?: int): Promise<Uint8Array>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -853,6 +885,8 @@ updateCredential(credentialInfo: CredentialInfo, callback: IIdmCallback): void
 **起始版本：** 8
 
 **需要权限：** ohos.permission.MANAGE_USER_IDM
+
+<!--Device-UserIdentityManager-updateCredential(credentialInfo: CredentialInfo, callback: IIdmCallback): void--><!--Device-UserIdentityManager-updateCredential(credentialInfo: CredentialInfo, callback: IIdmCallback): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 

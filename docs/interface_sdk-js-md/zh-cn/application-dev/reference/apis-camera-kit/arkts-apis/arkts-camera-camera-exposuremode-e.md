@@ -8,6 +8,8 @@ enum ExposureMode
 
 **起始版本：** 10
 
+<!--Device-camera-enum ExposureMode--><!--Device-camera-enum ExposureMode-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## EXPOSURE_MODE_UNSPECIFIED
@@ -22,7 +24,9 @@ EXPOSURE_MODE_UNSPECIFIED = -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-ExposureMode-EXPOSURE_MODE_UNSPECIFIED = -1--><!--Device-ExposureMode-EXPOSURE_MODE_UNSPECIFIED = -1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -38,7 +42,9 @@ EXPOSURE_MODE_LOCKED = 0
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-ExposureMode-EXPOSURE_MODE_LOCKED = 0--><!--Device-ExposureMode-EXPOSURE_MODE_LOCKED = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -54,7 +60,9 @@ EXPOSURE_MODE_AUTO = 1
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-ExposureMode-EXPOSURE_MODE_AUTO = 1--><!--Device-ExposureMode-EXPOSURE_MODE_AUTO = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -70,7 +78,9 @@ EXPOSURE_MODE_CONTINUOUS_AUTO = 2
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-ExposureMode-EXPOSURE_MODE_CONTINUOUS_AUTO = 2--><!--Device-ExposureMode-EXPOSURE_MODE_CONTINUOUS_AUTO = 2-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -86,6 +96,8 @@ EXPOSURE_MODE_MANUAL = 3
 
 **起始版本：** 24
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-ExposureMode-EXPOSURE_MODE_MANUAL = 3--><!--Device-ExposureMode-EXPOSURE_MODE_MANUAL = 3-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core

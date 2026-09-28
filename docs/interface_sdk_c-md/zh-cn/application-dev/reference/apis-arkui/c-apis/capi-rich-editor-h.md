@@ -32,6 +32,7 @@
 | [OH_ArkUI_TextEditorSpanType](#oh_arkui_texteditorspantype) | OH_ArkUI_TextEditorSpanType | 自定义文本选择菜单span类型枚举，用于标识文本编辑器中文本选择菜单的span类型。不同span类型对应不同的内容结构，影响自定义菜单的显示和交互行为。 例如，当用户选中纯文本内容时使用OH_ARKUI_TEXT_EDITOR_SPAN_TYPE_TEXT类型，选中包含图文等混合内容时使用OH_ARKUI_TEXT_EDITOR_SPAN_TYPE_MIXED类型， 需要自定义菜单项布局时使用OH_ARKUI_TEXT_EDITOR_SPAN_TYPE_BUILDER类型。 |
 | [OH_ArkUI_TextEditorResponseType](#oh_arkui_texteditorresponsetype) | OH_ArkUI_TextEditorResponseType | 自定义文本选择菜单响应类型枚举，用于标识触发菜单弹出的交互方式。不同响应类型对应不同的用户操作（如右键点击、长按、鼠标选中），可根据响应类型定制不同的菜单内容。 |
 | [OH_ArkUI_TextMenuType](#oh_arkui_textmenutype) | OH_ArkUI_TextMenuType | 文本菜单类型枚举，用于区分文本编辑器中不同类型的弹出菜单，包括文本选择菜单和预览菜单。 不同菜单类型分别对应不同的交互场景和菜单展示方式。例如，文本选择菜单在用户选中文字时弹出，用于复制、删除等文本操作； 预览菜单在用户长按图片时弹出，用于触发图片内容拖拽预览以及复制、删除等操作。 |
+| [OH_ArkUI_TextEditorType](#oh_arkui_texteditortype) | OH_ArkUI_TextEditorType | 文本编辑器输入类型枚举，用于指定文本编辑器的输入模式。 |
 
 ### 函数
 
@@ -131,6 +132,34 @@ enum OH_ArkUI_TextMenuType
 | -- | -- |
 | OH_ARKUI_TEXT_EDITOR_SELECTION_MENU = 0 |  |
 | OH_ARKUI_TEXT_EDITOR_PREVIEW_MENU = 1 |  |
+
+### OH_ArkUI_TextEditorType
+
+```c
+enum OH_ArkUI_TextEditorType
+```
+
+**描述：**
+
+文本编辑器输入类型枚举，用于指定文本编辑器的输入模式。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**起始版本：** 26.2.0
+
+| 枚举项 | 描述 |
+| -- | -- |
+| OH_ARKUI_TEXT_EDITOR_TYPE_NORMAL = 0 | 普通输入模式。<br>**起始版本：** 26.2.0 |
+| OH_ARKUI_TEXT_EDITOR_TYPE_NUMBER = 2 | 数字输入模式。<br>**起始版本：** 26.2.0 |
+| OH_ARKUI_TEXT_EDITOR_TYPE_PHONE_NUMBER = 3 | 电话号码输入模式。<br>**起始版本：** 26.2.0 |
+| OH_ARKUI_TEXT_EDITOR_TYPE_EMAIL = 5 | 邮箱地址输入模式。<br>**起始版本：** 26.2.0 |
+| OH_ARKUI_TEXT_EDITOR_TYPE_PASSWORD = 7 | 密码输入模式。<br>**起始版本：** 26.2.0 |
+| OH_ARKUI_TEXT_EDITOR_TYPE_NUMBER_PASSWORD = 8 | 数字密码输入模式。<br>**起始版本：** 26.2.0 |
+| OH_ARKUI_TEXT_EDITOR_TYPE_SCREEN_LOCK_PASSWORD = 9 | 锁屏密码输入模式。<br>**起始版本：** 26.2.0 |
+| OH_ARKUI_TEXT_EDITOR_TYPE_USER_NAME = 10 | 用户名输入模式。<br>**起始版本：** 26.2.0 |
+| OH_ARKUI_TEXT_EDITOR_TYPE_NEW_PASSWORD = 11 | 新密码输入模式。<br>**起始版本：** 26.2.0 |
+| OH_ARKUI_TEXT_EDITOR_TYPE_NUMBER_DECIMAL = 12 | 带小数点的数字输入模式。<br>**起始版本：** 26.2.0 |
+| OH_ARKUI_TEXT_EDITOR_TYPE_ONE_TIME_CODE = 14 | 一次性验证码输入模式。<br>**起始版本：** 26.2.0 |
 
 
 ## 函数说明

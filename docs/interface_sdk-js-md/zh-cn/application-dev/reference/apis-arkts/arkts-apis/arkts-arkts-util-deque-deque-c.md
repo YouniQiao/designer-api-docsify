@@ -8,6 +8,8 @@ Deque（double-ended queue）基于循环队列的数据结构实现，支持两
 
 **起始版本：** 8
 
+<!--Device-unnamed-declare class Deque<T>--><!--Device-unnamed-declare class Deque<T>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -27,6 +29,8 @@ import { Deque } from '@kit.ArkTS';
 **起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Deque-[Symbol.iterator](): IterableIterator<T>--><!--Device-Deque-[Symbol.iterator](): IterableIterator<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -89,7 +93,9 @@ Deque的构造函数，用于创建一个基于循环队列数据结构的空Deq
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Deque-constructor()--><!--Device-Deque-constructor()-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -117,6 +123,8 @@ forEach(callbackFn: (value: T, index?: number, deque?: Deque<T>) => void, thisAr
 **起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Deque-forEach(callbackFn: (value: T, index?: number, deque?: Deque<T>) => void, thisArg?: Object): void--><!--Device-Deque-forEach(callbackFn: (value: T, index?: number, deque?: Deque<T>) => void, thisArg?: Object): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -164,7 +172,9 @@ getFirst(): T
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Deque-getFirst(): T--><!--Device-Deque-getFirst(): T-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -205,7 +215,9 @@ getLast(): T
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Deque-getLast(): T--><!--Device-Deque-getLast(): T-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -246,7 +258,9 @@ has(element: T): boolean
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Deque-has(element: T): boolean--><!--Device-Deque-has(element: T): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -290,7 +304,9 @@ insertEnd(element: T): void
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Deque-insertEnd(element: T): void--><!--Device-Deque-insertEnd(element: T): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -338,7 +354,9 @@ insertFront(element: T): void
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Deque-insertFront(element: T): void--><!--Device-Deque-insertFront(element: T): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -386,7 +404,9 @@ popFirst(): T
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Deque-popFirst(): T--><!--Device-Deque-popFirst(): T-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -428,7 +448,9 @@ popLast(): T
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Deque-popLast(): T--><!--Device-Deque-popLast(): T-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -473,5 +495,7 @@ Deque的元素个数。
 **起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Deque-length: number--><!--Device-Deque-length: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

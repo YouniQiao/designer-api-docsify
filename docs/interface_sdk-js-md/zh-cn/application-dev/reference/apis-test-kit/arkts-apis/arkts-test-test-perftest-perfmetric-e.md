@@ -41,6 +41,8 @@ declare enum PerfMetric
 
 **起始版本：** 20
 
+<!--Device-unnamed-declare enum PerfMetric--><!--Device-unnamed-declare enum PerfMetric-End-->
+
 **系统能力：** SystemCapability.Test.PerfTest
 
 **测试接口：** 此接口仅在自动化测试脚本中使用。
@@ -55,7 +57,9 @@ DURATION = 0
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PerfMetric-DURATION = 0--><!--Device-PerfMetric-DURATION = 0-End-->
 
 **系统能力：** SystemCapability.Test.PerfTest
 
@@ -71,7 +75,9 @@ CPU_LOAD = 1
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PerfMetric-CPU_LOAD = 1--><!--Device-PerfMetric-CPU_LOAD = 1-End-->
 
 **系统能力：** SystemCapability.Test.PerfTest
 
@@ -87,7 +93,9 @@ CPU_USAGE = 2
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PerfMetric-CPU_USAGE = 2--><!--Device-PerfMetric-CPU_USAGE = 2-End-->
 
 **系统能力：** SystemCapability.Test.PerfTest
 
@@ -103,7 +111,9 @@ MEMORY_RSS = 3
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PerfMetric-MEMORY_RSS = 3--><!--Device-PerfMetric-MEMORY_RSS = 3-End-->
 
 **系统能力：** SystemCapability.Test.PerfTest
 
@@ -119,7 +129,9 @@ MEMORY_PSS = 4
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PerfMetric-MEMORY_PSS = 4--><!--Device-PerfMetric-MEMORY_PSS = 4-End-->
 
 **系统能力：** SystemCapability.Test.PerfTest
 
@@ -135,7 +147,9 @@ APP_START_RESPONSE_TIME = 5
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PerfMetric-APP_START_RESPONSE_TIME = 5--><!--Device-PerfMetric-APP_START_RESPONSE_TIME = 5-End-->
 
 **系统能力：** SystemCapability.Test.PerfTest
 
@@ -151,7 +165,9 @@ APP_START_COMPLETE_TIME = 6
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PerfMetric-APP_START_COMPLETE_TIME = 6--><!--Device-PerfMetric-APP_START_COMPLETE_TIME = 6-End-->
 
 **系统能力：** SystemCapability.Test.PerfTest
 
@@ -167,7 +183,9 @@ PAGE_SWITCH_COMPLETE_TIME = 7
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PerfMetric-PAGE_SWITCH_COMPLETE_TIME = 7--><!--Device-PerfMetric-PAGE_SWITCH_COMPLETE_TIME = 7-End-->
 
 **系统能力：** SystemCapability.Test.PerfTest
 
@@ -183,7 +201,9 @@ LIST_SWIPE_FPS = 8
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PerfMetric-LIST_SWIPE_FPS = 8--><!--Device-PerfMetric-LIST_SWIPE_FPS = 8-End-->
 
 **系统能力：** SystemCapability.Test.PerfTest
 

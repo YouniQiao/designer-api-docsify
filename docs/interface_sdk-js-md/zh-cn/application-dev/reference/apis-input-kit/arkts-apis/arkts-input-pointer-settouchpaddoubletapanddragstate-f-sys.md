@@ -16,6 +16,8 @@ function setTouchpadDoubleTapAndDragState(isOpen: boolean, callback: AsyncCallba
 
 **起始版本：** 14
 
+<!--Device-pointer-function setTouchpadDoubleTapAndDragState(isOpen: boolean, callback: AsyncCallback<void>): void--><!--Device-pointer-function setTouchpadDoubleTapAndDragState(isOpen: boolean, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +79,8 @@ function setTouchpadDoubleTapAndDragState(isOpen: boolean): Promise<void>
 设置触控板双击拖拽开关状态，使用Promise异步回调。
 
 **起始版本：** 14
+
+<!--Device-pointer-function setTouchpadDoubleTapAndDragState(isOpen: boolean): Promise<void>--><!--Device-pointer-function setTouchpadDoubleTapAndDragState(isOpen: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 

@@ -10,6 +10,8 @@ This module provides APIs for querying terminal device information, including th
 
 **Since:** 6
 
+<!--Device-unnamed-declare namespace deviceInfo--><!--Device-unnamed-declare namespace deviceInfo-End-->
+
 **System capability:** SystemCapability.Startup.SystemInfo
 
 ## Modules to Import

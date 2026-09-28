@@ -12,6 +12,8 @@ Inherits from [ScanEffectOptions](arkts-arkui-progress-comp-scaneffectoptions-i.
 
 **Since:** 10
 
+<!--Device-unnamed-declare interface CapsuleStyleOptions extends ScanEffectOptions, CommonProgressStyleOptions--><!--Device-unnamed-declare interface CapsuleStyleOptions extends ScanEffectOptions, CommonProgressStyleOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## borderColor
@@ -35,6 +37,8 @@ API version 11 and later: '#33007dff'
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-CapsuleStyleOptions-borderColor?: ResourceColor--><!--Device-CapsuleStyleOptions-borderColor?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -60,6 +64,8 @@ An invalid value is handled as the default value.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-CapsuleStyleOptions-borderRadius?: LengthMetrics--><!--Device-CapsuleStyleOptions-borderRadius?: LengthMetrics-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## borderWidth
@@ -84,6 +90,8 @@ A value out of range or an invalid value is handled as the default value.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-CapsuleStyleOptions-borderWidth?: Length--><!--Device-CapsuleStyleOptions-borderWidth?: Length-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## content
@@ -106,6 +114,8 @@ Since API version 20, the Resource type is supported.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-CapsuleStyleOptions-content?: ResourceStr--><!--Device-CapsuleStyleOptions-content?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## font
@@ -120,7 +130,7 @@ Default value:
 
 Text size (percentage setting not supported): 12fp
 
-Other text parameters follow the theme values of the [Text](arkts-arkui-text-comp.md#text) component.
+Other text parameters follow the theme values of the [Text](arkts-arkui-text-comp.md) component.
 
 **Type:** Font
 
@@ -129,6 +139,8 @@ Other text parameters follow the theme values of the [Text](arkts-arkui-text-com
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-CapsuleStyleOptions-font?: Font--><!--Device-CapsuleStyleOptions-font?: Font-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -149,6 +161,8 @@ Default value: '#ff182431'
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-CapsuleStyleOptions-fontColor?: ResourceColor--><!--Device-CapsuleStyleOptions-fontColor?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -173,5 +187,7 @@ Default value: false
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-CapsuleStyleOptions-showDefaultPercentage?: boolean--><!--Device-CapsuleStyleOptions-showDefaultPercentage?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

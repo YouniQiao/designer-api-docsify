@@ -22,6 +22,8 @@ function createVpnConnection(context: VpnExtensionContext): VpnConnection
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-vpnExtension-function createVpnConnection(context: VpnExtensionContext): VpnConnection--><!--Device-vpnExtension-function createVpnConnection(context: VpnExtensionContext): VpnConnection-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **参数：**

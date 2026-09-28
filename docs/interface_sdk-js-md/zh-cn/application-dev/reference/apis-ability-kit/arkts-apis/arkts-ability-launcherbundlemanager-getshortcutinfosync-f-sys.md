@@ -20,6 +20,8 @@ function getShortcutInfoSync(bundleName: string): Array<ShortcutInfo>
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
+<!--Device-launcherBundleManager-function getShortcutInfoSync(bundleName: string): Array<ShortcutInfo>--><!--Device-launcherBundleManager-function getShortcutInfoSync(bundleName: string): Array<ShortcutInfo>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
 **系统接口：** 此接口为系统接口。
@@ -79,6 +81,8 @@ function getShortcutInfoSync(bundleName: string, userId: number): Array<Shortcut
 **起始版本：** 13
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
+
+<!--Device-launcherBundleManager-function getShortcutInfoSync(bundleName: string, userId: int): Array<ShortcutInfo>--><!--Device-launcherBundleManager-function getShortcutInfoSync(bundleName: string, userId: int): Array<ShortcutInfo>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 

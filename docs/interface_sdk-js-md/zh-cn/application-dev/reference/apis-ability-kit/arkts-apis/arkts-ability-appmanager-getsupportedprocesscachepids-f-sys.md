@@ -24,6 +24,8 @@ function getSupportedProcessCachePids(bundleName : string): Promise<Array<number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-appManager-function getSupportedProcessCachePids(bundleName : string): Promise<Array<int>>--><!--Device-appManager-function getSupportedProcessCachePids(bundleName : string): Promise<Array<int>>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。

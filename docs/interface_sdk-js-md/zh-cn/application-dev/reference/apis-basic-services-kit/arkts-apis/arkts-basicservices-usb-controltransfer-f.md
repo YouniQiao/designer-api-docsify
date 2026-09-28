@@ -22,6 +22,8 @@ function controlTransfer(pipe: USBDevicePipe, controlparam: USBControlParams, ti
 
 **替代接口：** [controlTransfer](arkts-basicservices-usbmanager-controltransfer-f.md)
 
+<!--Device-usb-function controlTransfer(pipe: USBDevicePipe, controlparam: USBControlParams, timeout?: number): Promise<number>--><!--Device-usb-function controlTransfer(pipe: USBDevicePipe, controlparam: USBControlParams, timeout?: number): Promise<number>-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 **参数：**

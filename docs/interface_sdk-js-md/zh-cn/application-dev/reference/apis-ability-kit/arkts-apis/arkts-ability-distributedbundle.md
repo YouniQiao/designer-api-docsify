@@ -15,6 +15,8 @@
 
 **替代接口：** [distributedBundleManager](arkts-ability-bundle-distributedbundlemanager.md)
 
+<!--Device-unnamed-declare namespace distributedBundle--><!--Device-unnamed-declare namespace distributedBundle-End-->
+
 **系统能力：** SystemCapability.BundleManager.DistributedBundleFramework
 
 **系统接口：** 此接口为系统接口。

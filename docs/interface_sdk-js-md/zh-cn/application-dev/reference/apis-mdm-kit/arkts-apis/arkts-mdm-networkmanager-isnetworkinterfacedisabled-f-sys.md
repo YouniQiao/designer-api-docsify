@@ -24,6 +24,8 @@ function isNetworkInterfaceDisabled(admin: Want, networkInterface: string, callb
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-networkManager-function isNetworkInterfaceDisabled(admin: Want, networkInterface: string, callback: AsyncCallback<boolean>): void--><!--Device-networkManager-function isNetworkInterfaceDisabled(admin: Want, networkInterface: string, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -88,6 +90,8 @@ function isNetworkInterfaceDisabled(admin: Want, networkInterface: string): Prom
 **需要权限：** ohos.permission.ENTERPRISE_GET_NETWORK_INFO
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-networkManager-function isNetworkInterfaceDisabled(admin: Want, networkInterface: string): Promise<boolean>--><!--Device-networkManager-function isNetworkInterfaceDisabled(admin: Want, networkInterface: string): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

@@ -8,6 +8,8 @@ Defines the IPC context, including the PID and UID, local and remote device IDs,
 
 **Since:** 23
 
+<!--Device-rpc-class CallingInfo--><!--Device-rpc-class CallingInfo-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 ## Modules to Import
@@ -32,6 +34,8 @@ PID of the caller, which is valid only in the IPC scenario.
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-CallingInfo-readonly callerPid: number--><!--Device-CallingInfo-readonly callerPid: number-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 ## callerTokenId
@@ -49,6 +53,8 @@ Token ID of the caller, which is valid only in the IPC scenario.
 **Since:** 23
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-CallingInfo-readonly callerTokenId: number--><!--Device-CallingInfo-readonly callerTokenId: number-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -68,6 +74,8 @@ UID of the caller, which is valid only in the IPC scenario.
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-CallingInfo-readonly callerUid: number--><!--Device-CallingInfo-readonly callerUid: number-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 ## isLocalCalling
@@ -86,6 +94,8 @@ Whether the peer end of the current communication is a process on the local devi
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-CallingInfo-readonly isLocalCalling: boolean--><!--Device-CallingInfo-readonly isLocalCalling: boolean-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 ## localDeviceId
@@ -102,6 +112,8 @@ Local device ID. This parameter is valid only in RPC scenarios.
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-CallingInfo-readonly localDeviceId: string--><!--Device-CallingInfo-readonly localDeviceId: string-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 ## remoteDeviceId
@@ -117,5 +129,7 @@ Remote device ID. This parameter is valid only in RPC scenarios.
 **Since:** 23
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-CallingInfo-readonly remoteDeviceId: string--><!--Device-CallingInfo-readonly remoteDeviceId: string-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core

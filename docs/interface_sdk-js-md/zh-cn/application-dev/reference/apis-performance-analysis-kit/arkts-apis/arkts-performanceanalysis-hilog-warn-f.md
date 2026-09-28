@@ -18,6 +18,8 @@ function warn(domain: number, tag: string, format: string, ...args: any[]): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-hilog-function warn(domain: number, tag: string, format: string, ...args: any[]): void--><!--Device-hilog-function warn(domain: number, tag: string, format: string, ...args: any[]): void-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiLog
 
 **参数：**

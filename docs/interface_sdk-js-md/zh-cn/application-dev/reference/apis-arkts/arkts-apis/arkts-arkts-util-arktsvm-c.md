@@ -8,6 +8,8 @@ class ArkTSVM
 
 **起始版本：** 23
 
+<!--Device-util-class ArkTSVM--><!--Device-util-class ArkTSVM-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -27,6 +29,8 @@ static enableLocalHandleDetection(): void
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ArkTSVM-static enableLocalHandleDetection(): void--><!--Device-ArkTSVM-static enableLocalHandleDetection(): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -123,6 +127,8 @@ static getAllVMHeapMemoryInfo(): Promise<HeapMemoryInfo[]>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ArkTSVM-static getAllVMHeapMemoryInfo(): Promise<HeapMemoryInfo[]>--><!--Device-ArkTSVM-static getAllVMHeapMemoryInfo(): Promise<HeapMemoryInfo[]>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -171,6 +177,8 @@ static getGlobalHandleCount(): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ArkTSVM-static getGlobalHandleCount(): number--><!--Device-ArkTSVM-static getGlobalHandleCount(): number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -192,6 +200,8 @@ static offVMHeapMemoryPressure(): void
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ArkTSVM-static offVMHeapMemoryPressure(): void--><!--Device-ArkTSVM-static offVMHeapMemoryPressure(): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -216,6 +226,8 @@ NOTE:无法保证在 OOM（内存溢出）前一定会触发该回调。
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ArkTSVM-static onVMHeapMemoryPressure(callback: Callback<string>, heapMemoryThreshold: HeapMemoryThreshold): boolean--><!--Device-ArkTSVM-static onVMHeapMemoryPressure(callback: Callback<string>, heapMemoryThreshold: HeapMemoryThreshold): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -263,6 +275,8 @@ static setMultithreadingDetectionEnabled(enabled: boolean, options?: Multithread
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ArkTSVM-static setMultithreadingDetectionEnabled(enabled: boolean, options?: MultithreadingDetectionOptions):void--><!--Device-ArkTSVM-static setMultithreadingDetectionEnabled(enabled: boolean, options?: MultithreadingDetectionOptions):void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -306,6 +320,8 @@ static setTrackGlobalRef(enable: boolean): void
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ArkTSVM-static setTrackGlobalRef(enable: boolean): void--><!--Device-ArkTSVM-static setTrackGlobalRef(enable: boolean): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

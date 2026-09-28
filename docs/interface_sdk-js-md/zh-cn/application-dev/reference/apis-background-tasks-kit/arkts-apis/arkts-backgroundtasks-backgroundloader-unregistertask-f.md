@@ -20,6 +20,8 @@ function unregisterTask(taskInfo: TaskInfo): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-backgroundLoader-function unregisterTask(taskInfo: TaskInfo): void--><!--Device-backgroundLoader-function unregisterTask(taskInfo: TaskInfo): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
 **参数：**

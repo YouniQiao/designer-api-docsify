@@ -10,6 +10,8 @@ Rotation execution results.
 
 **起始版本：** 20
 
+<!--Device-mechanicManager-export enum Result--><!--Device-mechanicManager-export enum Result-End-->
+
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。
@@ -23,6 +25,8 @@ COMPLETED = 0
 Rotation completed.
 
 **起始版本：** 20
+
+<!--Device-Result-COMPLETED = 0--><!--Device-Result-COMPLETED = 0-End-->
 
 **系统能力：** SystemCapability.Mechanic.Core
 
@@ -38,6 +42,8 @@ Rotation was interrupted.
 
 **起始版本：** 20
 
+<!--Device-Result-INTERRUPTED = 1--><!--Device-Result-INTERRUPTED = 1-End-->
+
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +57,8 @@ LIMITED = 2
 Device reached limitation.
 
 **起始版本：** 20
+
+<!--Device-Result-LIMITED = 2--><!--Device-Result-LIMITED = 2-End-->
 
 **系统能力：** SystemCapability.Mechanic.Core
 
@@ -66,6 +74,8 @@ Rotation time out.
 
 **起始版本：** 20
 
+<!--Device-Result-TIMEOUT = 3--><!--Device-Result-TIMEOUT = 3-End-->
+
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。
@@ -79,6 +89,8 @@ TERMINATE_OBSTACLE  = 4
 障碍物导致终止
 
 **起始版本：** 26.0.0
+
+<!--Device-Result-TERMINATE_OBSTACLE  = 4--><!--Device-Result-TERMINATE_OBSTACLE  = 4-End-->
 
 **系统能力：** SystemCapability.Mechanic.Core
 
@@ -94,6 +106,8 @@ TERMINATE_CLIFF = 5
 
 **起始版本：** 26.0.0
 
+<!--Device-Result-TERMINATE_CLIFF = 5--><!--Device-Result-TERMINATE_CLIFF = 5-End-->
+
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。
@@ -107,6 +121,8 @@ SYSTEM_ERROR = 100
 Rotation failed due to system error.
 
 **起始版本：** 20
+
+<!--Device-Result-SYSTEM_ERROR = 100--><!--Device-Result-SYSTEM_ERROR = 100-End-->
 
 **系统能力：** SystemCapability.Mechanic.Core
 

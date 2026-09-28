@@ -26,6 +26,8 @@ function setDevicePairingConfirmation(device: string, accept: boolean): void
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 - API版本9：ohos.permission.MANAGE_BLUETOOTH
 
+<!--Device-bluetoothManager-function setDevicePairingConfirmation(device: string, accept: boolean): void--><!--Device-bluetoothManager-function setDevicePairingConfirmation(device: string, accept: boolean): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**

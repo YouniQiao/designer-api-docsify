@@ -16,6 +16,8 @@ function isSystemReady(callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
+<!--Device-formHost-function isSystemReady(callback: AsyncCallback<void>): void--><!--Device-formHost-function isSystemReady(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -62,6 +64,8 @@ function isSystemReady(): Promise<void>
 检查系统是否准备好。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-formHost-function isSystemReady(): Promise<void>--><!--Device-formHost-function isSystemReady(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 

@@ -14,6 +14,8 @@ interface BondStateParam
 
 **替代接口：** [BondStateParam](arkts-connectivity-connection-bondstateparam-i.md)
 
+<!--Device-bluetoothManager-interface BondStateParam--><!--Device-bluetoothManager-interface BondStateParam-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -38,6 +40,8 @@ deviceId: string
 
 **替代接口：** [deviceId](arkts-connectivity-connection-bondstateparam-i.md#deviceid)
 
+<!--Device-BondStateParam-deviceId: string--><!--Device-BondStateParam-deviceId: string-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## state
@@ -55,5 +59,7 @@ state: BondState
 **废弃版本：** 10
 
 **替代接口：** [state](arkts-connectivity-connection-bondstateparam-i.md#state)
+
+<!--Device-BondStateParam-state: BondState--><!--Device-BondStateParam-state: BondState-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

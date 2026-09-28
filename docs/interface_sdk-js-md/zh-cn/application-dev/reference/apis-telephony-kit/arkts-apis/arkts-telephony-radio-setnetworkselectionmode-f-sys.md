@@ -18,6 +18,8 @@ Set the current network selection mode.
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-radio-function setNetworkSelectionMode(options: NetworkSelectionModeOptions, callback: AsyncCallback<void>): void--><!--Device-radio-function setNetworkSelectionMode(options: NetworkSelectionModeOptions, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -81,6 +83,8 @@ Set the current network selection mode.
 **起始版本：** 6
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
+
+<!--Device-radio-function setNetworkSelectionMode(options: NetworkSelectionModeOptions): Promise<void>--><!--Device-radio-function setNetworkSelectionMode(options: NetworkSelectionModeOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

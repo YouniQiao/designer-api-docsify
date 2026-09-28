@@ -24,7 +24,9 @@ function createWindow(config: Configuration, callback: AsyncCallback<Window>): v
 - API版本12+：ohos.permission.SYSTEM_FLOAT_WINDOW
 - API版本9-11：N/A
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-window-function createWindow(config: Configuration, callback: AsyncCallback<Window>): void--><!--Device-window-function createWindow(config: Configuration, callback: AsyncCallback<Window>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -103,7 +105,9 @@ function createWindow(config: Configuration): Promise<Window>
 - API版本12+：ohos.permission.SYSTEM_FLOAT_WINDOW
 - API版本9-11：N/A
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-window-function createWindow(config: Configuration): Promise<Window>--><!--Device-window-function createWindow(config: Configuration): Promise<Window>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 

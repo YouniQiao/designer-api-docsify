@@ -22,6 +22,8 @@ function isAppRunning(bundleName: string, appCloneIndex?: number): Promise<boole
 
 **需要权限：** ohos.permission.GET_RUNNING_INFO
 
+<!--Device-appManager-function isAppRunning(bundleName: string, appCloneIndex?: int): Promise<boolean>--><!--Device-appManager-function isAppRunning(bundleName: string, appCloneIndex?: int): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**

@@ -18,6 +18,8 @@ Get network search information.
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-radio-function getNetworkSearchInformation(slotId: int, callback: AsyncCallback<NetworkSearchResult>): void--><!--Device-radio-function getNetworkSearchInformation(slotId: int, callback: AsyncCallback<NetworkSearchResult>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -69,6 +71,8 @@ Get network search information.
 **起始版本：** 6
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
+
+<!--Device-radio-function getNetworkSearchInformation(slotId: int): Promise<NetworkSearchResult>--><!--Device-radio-function getNetworkSearchInformation(slotId: int): Promise<NetworkSearchResult>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

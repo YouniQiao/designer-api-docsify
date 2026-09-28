@@ -8,6 +8,8 @@ export interface PluginModuleInfo
 
 **起始版本：** 26.0.0
 
+<!--Device-unnamed-export interface PluginModuleInfo--><!--Device-unnamed-export interface PluginModuleInfo-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## description
@@ -21,6 +23,8 @@ readonly description: string
 **类型：** string
 
 **起始版本：** 26.0.0
+
+<!--Device-PluginModuleInfo-readonly description: string--><!--Device-PluginModuleInfo-readonly description: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -36,6 +40,8 @@ readonly descriptionId: number
 
 **起始版本：** 26.0.0
 
+<!--Device-PluginModuleInfo-readonly descriptionId: long--><!--Device-PluginModuleInfo-readonly descriptionId: long-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## moduleName
@@ -49,5 +55,7 @@ readonly moduleName: string
 **类型：** string
 
 **起始版本：** 26.0.0
+
+<!--Device-PluginModuleInfo-readonly moduleName: string--><!--Device-PluginModuleInfo-readonly moduleName: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core

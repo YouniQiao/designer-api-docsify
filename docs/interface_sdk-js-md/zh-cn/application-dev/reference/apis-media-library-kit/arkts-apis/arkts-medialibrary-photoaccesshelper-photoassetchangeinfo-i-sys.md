@@ -8,6 +8,8 @@ interface PhotoAssetChangeInfo
 
 **起始版本：** 20
 
+<!--Device-photoAccessHelper-interface PhotoAssetChangeInfo--><!--Device-photoAccessHelper-interface PhotoAssetChangeInfo-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ albumChangeInfos?: AlbumChangeInfo[] | null
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PhotoAssetChangeInfo-albumChangeInfos?: AlbumChangeInfo[] | null--><!--Device-PhotoAssetChangeInfo-albumChangeInfos?: AlbumChangeInfo[] | null-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -48,6 +52,8 @@ assetSourceType?: AssetSourceType
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PhotoAssetChangeInfo-assetSourceType?: AssetSourceType--><!--Device-PhotoAssetChangeInfo-assetSourceType?: AssetSourceType-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -64,6 +70,8 @@ dateAddedMs: number
 
 **起始版本：** 20
 
+<!--Device-PhotoAssetChangeInfo-dateAddedMs: long--><!--Device-PhotoAssetChangeInfo-dateAddedMs: long-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -79,6 +87,8 @@ dateDay: string
 **类型：** string
 
 **起始版本：** 20
+
+<!--Device-PhotoAssetChangeInfo-dateDay: string--><!--Device-PhotoAssetChangeInfo-dateDay: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -100,6 +110,8 @@ dateModifiedMs?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PhotoAssetChangeInfo-dateModifiedMs?: long--><!--Device-PhotoAssetChangeInfo-dateModifiedMs?: long-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -115,6 +127,8 @@ dateTakenMs: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-PhotoAssetChangeInfo-dateTakenMs: long--><!--Device-PhotoAssetChangeInfo-dateTakenMs: long-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -132,6 +146,8 @@ dateTrashedMs: number
 
 **起始版本：** 20
 
+<!--Device-PhotoAssetChangeInfo-dateTrashedMs: long--><!--Device-PhotoAssetChangeInfo-dateTrashedMs: long-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -148,6 +164,8 @@ displayName?: string
 
 **起始版本：** 23
 
+<!--Device-PhotoAssetChangeInfo-displayName?: string--><!--Device-PhotoAssetChangeInfo-displayName?: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -163,6 +181,8 @@ fileId: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-PhotoAssetChangeInfo-fileId: int--><!--Device-PhotoAssetChangeInfo-fileId: int-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -184,6 +204,8 @@ hiddenTime?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PhotoAssetChangeInfo-hiddenTime?: long--><!--Device-PhotoAssetChangeInfo-hiddenTime?: long-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -199,6 +221,8 @@ isHidden: boolean
 **类型：** boolean
 
 **起始版本：** 20
+
+<!--Device-PhotoAssetChangeInfo-isHidden: boolean--><!--Device-PhotoAssetChangeInfo-isHidden: boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -218,6 +242,8 @@ photoVisibility?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PhotoAssetChangeInfo-photoVisibility?: int--><!--Device-PhotoAssetChangeInfo-photoVisibility?: int-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -233,6 +259,8 @@ position?: PositionType
 **类型：** [PositionType](arkts-medialibrary-photoaccesshelper-positiontype-e.md)
 
 **起始版本：** 23
+
+<!--Device-PhotoAssetChangeInfo-position?: PositionType--><!--Device-PhotoAssetChangeInfo-position?: PositionType-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -252,6 +280,8 @@ shareDateDay?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PhotoAssetChangeInfo-shareDateDay?: int--><!--Device-PhotoAssetChangeInfo-shareDateDay?: int-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -269,6 +299,8 @@ shareGroup?: number
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PhotoAssetChangeInfo-shareGroup?: long--><!--Device-PhotoAssetChangeInfo-shareGroup?: long-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -288,6 +320,8 @@ shareRiskStatus?: ShareAlbumRiskStatus
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PhotoAssetChangeInfo-shareRiskStatus?: ShareAlbumRiskStatus--><!--Device-PhotoAssetChangeInfo-shareRiskStatus?: ShareAlbumRiskStatus-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -303,6 +337,8 @@ size?: number
 **类型：** number
 
 **起始版本：** 23
+
+<!--Device-PhotoAssetChangeInfo-size?: long--><!--Device-PhotoAssetChangeInfo-size?: long-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -320,6 +356,8 @@ strongAssociation: StrongAssociationType
 
 **起始版本：** 20
 
+<!--Device-PhotoAssetChangeInfo-strongAssociation: StrongAssociationType--><!--Device-PhotoAssetChangeInfo-strongAssociation: StrongAssociationType-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -335,6 +373,8 @@ thumbnailVisible: ThumbnailVisibility
 **类型：** [ThumbnailVisibility](arkts-medialibrary-photoaccesshelper-thumbnailvisibility-e-sys.md)
 
 **起始版本：** 20
+
+<!--Device-PhotoAssetChangeInfo-thumbnailVisible: ThumbnailVisibility--><!--Device-PhotoAssetChangeInfo-thumbnailVisible: ThumbnailVisibility-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

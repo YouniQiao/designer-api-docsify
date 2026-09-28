@@ -8,6 +8,8 @@ ThemeControl将自定义Theme应用于App组件内，实现App组件风格跟随
 
 **起始版本：** 12
 
+<!--Device-unnamed-export declare class ThemeControl--><!--Device-unnamed-export declare class ThemeControl-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -29,6 +31,8 @@ static setDefaultTheme(theme: CustomTheme): void
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ThemeControl-static setDefaultTheme(theme: CustomTheme): void--><!--Device-ThemeControl-static setDefaultTheme(theme: CustomTheme): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

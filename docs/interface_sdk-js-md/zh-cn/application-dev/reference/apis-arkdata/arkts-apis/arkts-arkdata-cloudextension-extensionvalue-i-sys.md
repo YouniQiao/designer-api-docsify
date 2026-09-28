@@ -8,6 +8,8 @@ export interface ExtensionValue
 
 **起始版本：** 11
 
+<!--Device-cloudExtension-export interface ExtensionValue--><!--Device-cloudExtension-export interface ExtensionValue-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ readonly createTime: number
 
 **起始版本：** 11
 
+<!--Device-ExtensionValue-readonly createTime: long--><!--Device-ExtensionValue-readonly createTime: long-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ readonly id: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-ExtensionValue-readonly id: string--><!--Device-ExtensionValue-readonly id: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -62,6 +68,8 @@ readonly modifyTime: number
 
 **起始版本：** 11
 
+<!--Device-ExtensionValue-readonly modifyTime: long--><!--Device-ExtensionValue-readonly modifyTime: long-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +85,8 @@ readonly operation: Flag
 **类型：** [Flag](arkts-arkdata-cloudextension-flag-e-sys.md)
 
 **起始版本：** 11
+
+<!--Device-ExtensionValue-readonly operation: Flag--><!--Device-ExtensionValue-readonly operation: Flag-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 

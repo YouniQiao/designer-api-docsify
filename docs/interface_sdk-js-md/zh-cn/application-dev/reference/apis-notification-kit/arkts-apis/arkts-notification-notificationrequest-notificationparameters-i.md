@@ -8,6 +8,8 @@ export interface NotificationParameters
 
 **起始版本：** 24
 
+<!--Device-unnamed-export interface NotificationParameters--><!--Device-unnamed-export interface NotificationParameters-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## wantAction
@@ -23,6 +25,8 @@ wantAction?:string
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-NotificationParameters-wantAction?:string--><!--Device-NotificationParameters-wantAction?:string-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -40,6 +44,8 @@ wantParameters?:Record<string, Object>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-NotificationParameters-wantParameters?:Record<string, Object>--><!--Device-NotificationParameters-wantParameters?:Record<string, Object>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## wantUri
@@ -55,5 +61,7 @@ wantUri?:string
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-NotificationParameters-wantUri?:string--><!--Device-NotificationParameters-wantUri?:string-End-->
 
 **系统能力：** SystemCapability.Notification.Notification

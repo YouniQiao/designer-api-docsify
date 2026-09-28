@@ -10,6 +10,8 @@ export interface RequestFile
 
 **替代接口：** [File](arkts-basicservices-request-file-i.md)
 
+<!--Device-unnamed-export interface RequestFile--><!--Device-unnamed-export interface RequestFile-End-->
+
 **系统能力：** SystemCapability.MiscServices.Upload
 
 ## 导入模块
@@ -34,6 +36,8 @@ multipart 提交时，请求头中的文件名。
 
 **替代接口：** filename
 
+<!--Device-RequestFile-filename?: string--><!--Device-RequestFile-filename?: string-End-->
+
 **系统能力：** SystemCapability.MiscServices.Upload
 
 ## name
@@ -51,6 +55,8 @@ multipart 提交时，表单项目的名称，缺省为file。
 **废弃版本：** 9
 
 **替代接口：** name
+
+<!--Device-RequestFile-name?: string--><!--Device-RequestFile-name?: string-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload
 
@@ -70,6 +76,8 @@ type?: string
 
 **替代接口：** contentType
 
+<!--Device-RequestFile-type?: string--><!--Device-RequestFile-type?: string-End-->
+
 **系统能力：** SystemCapability.MiscServices.Upload
 
 ## uri
@@ -87,5 +95,7 @@ uri: string
 **废弃版本：** 9
 
 **替代接口：** path
+
+<!--Device-RequestFile-uri: string--><!--Device-RequestFile-uri: string-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload

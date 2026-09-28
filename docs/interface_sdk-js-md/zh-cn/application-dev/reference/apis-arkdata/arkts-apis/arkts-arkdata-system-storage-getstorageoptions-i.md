@@ -8,6 +8,8 @@ export interface GetStorageOptions
 
 **废弃版本：** 6
 
+<!--Device-unnamed-export interface GetStorageOptions--><!--Device-unnamed-export interface GetStorageOptions-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
 ## 导入模块
@@ -29,6 +31,8 @@ complete?: () => void
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-GetStorageOptions-complete?: () => void--><!--Device-GetStorageOptions-complete?: () => void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
 ## fail
@@ -44,6 +48,8 @@ fail?: (data: string, code: number) => void
 **废弃版本：** 6
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-GetStorageOptions-fail?: (data: string, code: number) => void--><!--Device-GetStorageOptions-fail?: (data: string, code: number) => void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
@@ -67,6 +73,8 @@ success?: (data: any) => void
 **废弃版本：** 6
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-GetStorageOptions-success?: (data: any) => void--><!--Device-GetStorageOptions-success?: (data: any) => void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
@@ -92,6 +100,8 @@ key不存在则返回的默认值。
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-GetStorageOptions-default?: string--><!--Device-GetStorageOptions-default?: string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
 ## key
@@ -109,5 +119,7 @@ key: string
 **废弃版本：** 6
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-GetStorageOptions-key: string--><!--Device-GetStorageOptions-key: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core.Lite

@@ -8,6 +8,8 @@ Enumerates the search input box types.
 
 **Since:** 11
 
+<!--Device-unnamed-declare enum SearchType--><!--Device-unnamed-declare enum SearchType-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## NORMAL
@@ -24,6 +26,8 @@ Basic input mode with no special restrictions.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SearchType-NORMAL = 0--><!--Device-SearchType-NORMAL = 0-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## NUMBER
@@ -39,6 +43,8 @@ Pure number input mode.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SearchType-NUMBER = 2--><!--Device-SearchType-NUMBER = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -58,6 +64,8 @@ Supports digits, spaces, +, -, *, #, (, and ), with no length limit.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SearchType-PHONE_NUMBER = 3--><!--Device-SearchType-PHONE_NUMBER = 3-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## EMAIL
@@ -75,6 +83,8 @@ Supports digits, letters, underscores, decimal points, !, #, $, %, &, ', *, +, -
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SearchType-EMAIL = 5--><!--Device-SearchType-EMAIL = 5-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -94,6 +104,8 @@ Supports digits and a decimal point (only one decimal point is allowed).
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SearchType-NUMBER_DECIMAL = 12--><!--Device-SearchType-NUMBER_DECIMAL = 12-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## URL
@@ -110,6 +122,8 @@ URL input mode with no special restrictions.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SearchType-URL = 13--><!--Device-SearchType-URL = 13-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## ONE_TIME_CODE
@@ -125,5 +139,7 @@ Verification code input mode with no special restrictions. In this mode, the sys
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-SearchType-ONE_TIME_CODE = 14--><!--Device-SearchType-ONE_TIME_CODE = 14-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

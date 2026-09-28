@@ -8,6 +8,8 @@ export declare interface OnHttpErrorReceiveEvent
 
 **起始版本：** 12
 
+<!--Device-unnamed-export declare interface OnHttpErrorReceiveEvent--><!--Device-unnamed-export declare interface OnHttpErrorReceiveEvent-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -30,6 +32,8 @@ request: WebResourceRequest
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-OnHttpErrorReceiveEvent-request: WebResourceRequest--><!--Device-OnHttpErrorReceiveEvent-request: WebResourceRequest-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## response
@@ -45,5 +49,7 @@ response: WebResourceResponse
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-OnHttpErrorReceiveEvent-response: WebResourceResponse--><!--Device-OnHttpErrorReceiveEvent-response: WebResourceResponse-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

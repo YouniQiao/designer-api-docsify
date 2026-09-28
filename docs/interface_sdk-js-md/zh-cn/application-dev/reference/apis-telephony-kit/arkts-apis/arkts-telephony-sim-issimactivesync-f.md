@@ -16,6 +16,8 @@ function isSimActiveSync(slotId: number): boolean
 
 **起始版本：** 10
 
+<!--Device-sim-function isSimActiveSync(slotId: int): boolean--><!--Device-sim-function isSimActiveSync(slotId: int): boolean-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**

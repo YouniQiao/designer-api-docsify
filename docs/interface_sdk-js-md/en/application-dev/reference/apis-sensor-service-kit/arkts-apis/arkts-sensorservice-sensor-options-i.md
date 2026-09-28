@@ -10,6 +10,8 @@ Sets the sensor reporting frequency and sensor selection parameters.
 
 **Since:** 8
 
+<!--Device-sensor-interface Options--><!--Device-sensor-interface Options-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## Modules to Import
@@ -30,7 +32,9 @@ Sets the interval for reporting sensor data. Default value: 200,000,000 ns (200 
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-Options-interval?: long | SensorFrequency--><!--Device-Options-interval?: long | SensorFrequency-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -46,6 +50,8 @@ The sensor transfers the settings parameter, which can specify **deviceId** and 
 
 **Since:** 19
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+
+<!--Device-Options-sensorInfoParam?: SensorInfoParam--><!--Device-Options-sensorInfoParam?: SensorInfoParam-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor

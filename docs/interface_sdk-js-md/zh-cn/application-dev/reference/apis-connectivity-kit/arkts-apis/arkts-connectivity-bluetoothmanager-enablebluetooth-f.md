@@ -26,6 +26,8 @@ function enableBluetooth(): void
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH
 - API版本9：ohos.permission.DISCOVER_BLUETOOTH
 
+<!--Device-bluetoothManager-function enableBluetooth(): void--><!--Device-bluetoothManager-function enableBluetooth(): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **错误码：**

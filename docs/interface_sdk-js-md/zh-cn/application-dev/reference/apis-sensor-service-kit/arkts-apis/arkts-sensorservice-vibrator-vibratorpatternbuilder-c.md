@@ -8,6 +8,8 @@ class VibratorPatternBuilder
 
 **起始版本：** 18
 
+<!--Device-vibrator-class VibratorPatternBuilder--><!--Device-vibrator-class VibratorPatternBuilder-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## 导入模块
@@ -25,6 +27,8 @@ addContinuousEvent(time: number, duration: number, options?: ContinuousParam): V
 添加长振事件的方法。添加后使用build (#build18)方法生成VibratorPattern (#vibratorpattern18)对象。用于在自定义振动序列中添加一段持续振动事件，适用于需要持续振动反馈的场景（如引擎振动、拉弓振动等）。返回VibratorPatternBuilder对象，支持链式调用addContinuousEvent或addTransientEvent继续添加振动事件
 
 **起始版本：** 18
+
+<!--Device-VibratorPatternBuilder-addContinuousEvent(time: int, duration: int, options?: ContinuousParam): VibratorPatternBuilder--><!--Device-VibratorPatternBuilder-addContinuousEvent(time: int, duration: int, options?: ContinuousParam): VibratorPatternBuilder-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
@@ -94,6 +98,8 @@ addTransientEvent(time: number, options?: TransientParam): VibratorPatternBuilde
 
 **起始版本：** 18
 
+<!--Device-VibratorPatternBuilder-addTransientEvent(time: int, options?: TransientParam): VibratorPatternBuilder--><!--Device-VibratorPatternBuilder-addTransientEvent(time: int, options?: TransientParam): VibratorPatternBuilder-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 **参数：**
@@ -146,6 +152,8 @@ build(): VibratorPattern
 构造组合短事件或长事件的振动序列的方法。适用于需要将自定义振动事件组合为振动序列后，通过[VibrateFromPattern](arkts-sensorservice-vibrator-vibratefrompattern-i.md)触发马达振动的场景。需先通过[addContinuousEvent](#addcontinuousevent)或[addTransientEvent](#addtransientevent)添加振动事件后，再调用本方法生成VibratorPattern对象。返回VibratorPattern对象，包含振动序列的起始时间和振动事件数组。该对象可作为VibrateFromPattern的pattern参数传入[startVibration](arkts-sensorservice-vibrator-startvibration-f.md)接口触发振动。需先通过[addContinuousEvent](#addcontinuousevent)或[addTransientEvent](#addtransientevent)添加至少一个振动事件后调用本方法，否则生成的VibratorPattern为空序列。
 
 **起始版本：** 18
+
+<!--Device-VibratorPatternBuilder-build(): VibratorPattern--><!--Device-VibratorPatternBuilder-build(): VibratorPattern-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
 

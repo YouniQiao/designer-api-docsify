@@ -8,6 +8,8 @@ interface NotifyDescription
 
 **起始版本：** 12
 
+<!--Device-systemManager-interface NotifyDescription--><!--Device-systemManager-interface NotifyDescription-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## 导入模块
@@ -30,6 +32,8 @@ installTips?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-NotifyDescription-installTips?: string--><!--Device-NotifyDescription-installTips?: string-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## installTipsDetail
@@ -45,5 +49,7 @@ installTipsDetail?: string
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-NotifyDescription-installTipsDetail?: string--><!--Device-NotifyDescription-installTipsDetail?: string-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager

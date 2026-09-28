@@ -8,6 +8,8 @@ Alignment mode of the dialog box.
 
 **Since:** 18
 
+<!--Device-unnamed-interface ActionSheetOffset--><!--Device-unnamed-interface ActionSheetOffset-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## dx
@@ -32,6 +34,8 @@ If the unit is not specified, the default unit vp is used, in which case **'10'*
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ActionSheetOffset-dx: number | string | Resource--><!--Device-ActionSheetOffset-dx: number | string | Resource-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## dy
@@ -55,5 +59,7 @@ If the unit is not specified, the default unit vp is used, in which case **'10'*
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ActionSheetOffset-dy: number | string | Resource--><!--Device-ActionSheetOffset-dy: number | string | Resource-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -14,6 +14,8 @@ declare namespace tag
 
 **起始版本：** 7
 
+<!--Device-unnamed-declare namespace tag--><!--Device-unnamed-declare namespace tag-End-->
+
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 ## 导入模块

@@ -8,6 +8,8 @@ ProxyConfig是ArkWeb框架中用于配置网络代理规则的类，配合[Proxy
 
 **起始版本：** 15
 
+<!--Device-webview-class ProxyConfig--><!--Device-webview-class ProxyConfig-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ bypassHostnamesWithoutPeriod(): void
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
+<!--Device-ProxyConfig-bypassHostnamesWithoutPeriod(): void--><!--Device-ProxyConfig-bypassHostnamesWithoutPeriod(): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **示例**
@@ -46,6 +50,8 @@ clearImplicitRules(): void
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
+<!--Device-ProxyConfig-clearImplicitRules(): void--><!--Device-ProxyConfig-clearImplicitRules(): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **示例**
@@ -63,6 +69,8 @@ enableReverseBypass(reverse: boolean): void
 **起始版本：** 15
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-ProxyConfig-enableReverseBypass(reverse: boolean): void--><!--Device-ProxyConfig-enableReverseBypass(reverse: boolean): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -94,6 +102,8 @@ getBypassRules(): Array<string>
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
+<!--Device-ProxyConfig-getBypassRules(): Array<string>--><!--Device-ProxyConfig-getBypassRules(): Array<string>-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -118,6 +128,8 @@ getProxyRules(): Array<ProxyRule>
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
+<!--Device-ProxyConfig-getProxyRules(): Array<ProxyRule>--><!--Device-ProxyConfig-getProxyRules(): Array<ProxyRule>-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -141,6 +153,8 @@ insertBypassRule(bypassRule: string): void
 **起始版本：** 15
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-ProxyConfig-insertBypassRule(bypassRule: string): void--><!--Device-ProxyConfig-insertBypassRule(bypassRule: string): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -175,6 +189,8 @@ insertDirectRule(schemeFilter?: ProxySchemeFilter): void
 **起始版本：** 15
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-ProxyConfig-insertDirectRule(schemeFilter?: ProxySchemeFilter): void--><!--Device-ProxyConfig-insertDirectRule(schemeFilter?: ProxySchemeFilter): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -224,6 +240,8 @@ host是带括号的IPv6字面量、IPv4字面量或由点分隔的一个或多�
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
+<!--Device-ProxyConfig-insertProxyRule(proxyRule: string, schemeFilter?: ProxySchemeFilter): void--><!--Device-ProxyConfig-insertProxyRule(proxyRule: string, schemeFilter?: ProxySchemeFilter): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -254,6 +272,8 @@ isReverseBypassEnabled(): boolean
 **起始版本：** 15
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-ProxyConfig-isReverseBypassEnabled(): boolean--><!--Device-ProxyConfig-isReverseBypassEnabled(): boolean-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

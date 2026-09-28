@@ -20,6 +20,8 @@ function requestRight(deviceName: string): Promise<boolean>
 
 **替代接口：** [requestRight](arkts-basicservices-usbmanager-requestright-f.md)
 
+<!--Device-usb-function requestRight(deviceName: string): Promise<boolean>--><!--Device-usb-function requestRight(deviceName: string): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 **参数：**

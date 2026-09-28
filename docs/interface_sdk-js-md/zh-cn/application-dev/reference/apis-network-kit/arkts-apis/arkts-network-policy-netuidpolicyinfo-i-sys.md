@@ -8,6 +8,8 @@ export interface NetUidPolicyInfo
 
 **起始版本：** 11
 
+<!--Device-policy-export interface NetUidPolicyInfo--><!--Device-policy-export interface NetUidPolicyInfo-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ UID指定了在后台模式下网络访问的策略。
 
 **起始版本：** 11
 
+<!--Device-NetUidPolicyInfo-policy: NetUidPolicy--><!--Device-NetUidPolicyInfo-policy: NetUidPolicy-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ uid: number
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-NetUidPolicyInfo-uid: int--><!--Device-NetUidPolicyInfo-uid: int-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 

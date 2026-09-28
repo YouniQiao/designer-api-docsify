@@ -12,6 +12,8 @@ enum SecurityLevel
 
 **替代接口：** SecurityLevel
 
+<!--Device-distributedData-enum SecurityLevel--><!--Device-distributedData-enum SecurityLevel-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## NO_LEVEL
@@ -26,6 +28,8 @@ NO_LEVEL = 0
 
 **废弃版本：** 9
 
+<!--Device-SecurityLevel-NO_LEVEL = 0--><!--Device-SecurityLevel-NO_LEVEL = 0-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 ## S0
@@ -39,6 +43,8 @@ S0 = 1
 **起始版本：** 7
 
 **废弃版本：** 9
+
+<!--Device-SecurityLevel-S0 = 1--><!--Device-SecurityLevel-S0 = 1-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -56,6 +62,8 @@ S1 = 2
 
 **替代接口：** S1
 
+<!--Device-SecurityLevel-S1 = 2--><!--Device-SecurityLevel-S1 = 2-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## S2
@@ -71,6 +79,8 @@ S2 = 3
 **废弃版本：** 9
 
 **替代接口：** S2
+
+<!--Device-SecurityLevel-S2 = 3--><!--Device-SecurityLevel-S2 = 3-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -88,6 +98,8 @@ S3 = 5
 
 **替代接口：** S3
 
+<!--Device-SecurityLevel-S3 = 5--><!--Device-SecurityLevel-S3 = 5-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## S4
@@ -103,5 +115,7 @@ S4 = 6
 **废弃版本：** 9
 
 **替代接口：** S4
+
+<!--Device-SecurityLevel-S4 = 6--><!--Device-SecurityLevel-S4 = 6-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core

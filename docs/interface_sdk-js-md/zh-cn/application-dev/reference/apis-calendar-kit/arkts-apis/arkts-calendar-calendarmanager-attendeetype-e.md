@@ -8,6 +8,8 @@ export enum AttendeeType
 
 **起始版本：** 18
 
+<!--Device-calendarManager-export enum AttendeeType--><!--Device-calendarManager-export enum AttendeeType-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 ## REQUIRED
@@ -21,6 +23,8 @@ REQUIRED = 1
 **起始版本：** 18
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-AttendeeType-REQUIRED = 1--><!--Device-AttendeeType-REQUIRED = 1-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -36,6 +40,8 @@ OPTIONAL = 2
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-AttendeeType-OPTIONAL = 2--><!--Device-AttendeeType-OPTIONAL = 2-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 ## RESOURCE
@@ -49,5 +55,7 @@ RESOURCE = 3
 **起始版本：** 18
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-AttendeeType-RESOURCE = 3--><!--Device-AttendeeType-RESOURCE = 3-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData

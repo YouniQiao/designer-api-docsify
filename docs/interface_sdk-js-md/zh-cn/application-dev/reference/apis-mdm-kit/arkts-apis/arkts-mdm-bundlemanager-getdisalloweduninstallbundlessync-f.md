@@ -20,6 +20,8 @@ function getDisallowedUninstallBundlesSync(admin: Want, accountId?: number): Arr
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-bundleManager-function getDisallowedUninstallBundlesSync(admin: Want, accountId?: number): Array<string>--><!--Device-bundleManager-function getDisallowedUninstallBundlesSync(admin: Want, accountId?: number): Array<string>-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -81,6 +83,8 @@ function getDisallowedUninstallBundlesSync(admin: Want | null, accountId?: numbe
 **需要权限：** ohos.permission.ENTERPRISE_SET_BUNDLE_INSTALL_POLICY
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-bundleManager-function getDisallowedUninstallBundlesSync(admin: Want | null, accountId?: number): Array<string>--><!--Device-bundleManager-function getDisallowedUninstallBundlesSync(admin: Want | null, accountId?: number): Array<string>-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

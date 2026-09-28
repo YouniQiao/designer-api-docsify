@@ -8,6 +8,8 @@ enum RangingStoppedCause
 
 **起始版本：** 26.0.0
 
+<!--Device-ranging-enum RangingStoppedCause--><!--Device-ranging-enum RangingStoppedCause-End-->
+
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core
 
 ## NO_ERROR
@@ -21,6 +23,8 @@ NO_ERROR = 0
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-RangingStoppedCause-NO_ERROR = 0--><!--Device-RangingStoppedCause-NO_ERROR = 0-End-->
 
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core
 
@@ -36,6 +40,8 @@ INTERNAL_ERROR = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RangingStoppedCause-INTERNAL_ERROR = 1--><!--Device-RangingStoppedCause-INTERNAL_ERROR = 1-End-->
+
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core
 
 ## BUSINESS_CONFLICT
@@ -50,6 +56,8 @@ BUSINESS_CONFLICT = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RangingStoppedCause-BUSINESS_CONFLICT = 2--><!--Device-RangingStoppedCause-BUSINESS_CONFLICT = 2-End-->
+
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core
 
 ## BACKGROUND_PAUSED
@@ -63,5 +71,7 @@ BACKGROUND_PAUSED = 3
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-RangingStoppedCause-BACKGROUND_PAUSED = 3--><!--Device-RangingStoppedCause-BACKGROUND_PAUSED = 3-End-->
 
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core

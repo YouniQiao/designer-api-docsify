@@ -8,6 +8,8 @@ class TextEncoder
 
 **起始版本：** 7
 
+<!--Device-util-class TextEncoder--><!--Device-util-class TextEncoder-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -27,6 +29,8 @@ constructor()
 **起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextEncoder-constructor()--><!--Device-TextEncoder-constructor()-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -49,6 +53,8 @@ constructor(encoding?: string)
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextEncoder-constructor(encoding?: string)--><!--Device-TextEncoder-constructor(encoding?: string)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -75,6 +81,8 @@ static create(encoding?: string): TextEncoder
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextEncoder-static create(encoding?: string): TextEncoder--><!--Device-TextEncoder-static create(encoding?: string): TextEncoder-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -107,6 +115,8 @@ encodeInto(input?: string): Uint8Array
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextEncoder-encodeInto(input?: string): Uint8Array--><!--Device-TextEncoder-encodeInto(input?: string): Uint8Array-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -147,6 +157,8 @@ encodeInto(input: string, dest: Uint8Array): { read: number; written: number }
 
 **替代接口：** [encodeIntoUint8Array](#encodeintouint8array)
 
+<!--Device-TextEncoder-encodeInto(input: string, dest: Uint8Array): { read: number; written: number }--><!--Device-TextEncoder-encodeInto(input: string, dest: Uint8Array): { read: number; written: number }-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -184,6 +196,8 @@ encodeIntoUint8Array(input: string, dest: Uint8Array): EncodeIntoUint8ArrayInfo
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextEncoder-encodeIntoUint8Array(input: string, dest: Uint8Array): EncodeIntoUint8ArrayInfo--><!--Device-TextEncoder-encodeIntoUint8Array(input: string, dest: Uint8Array): EncodeIntoUint8ArrayInfo-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -230,6 +244,8 @@ encode(input?: string): Uint8Array
 
 **替代接口：** [encodeInto](#encodeinto)
 
+<!--Device-TextEncoder-encode(input?: string): Uint8Array--><!--Device-TextEncoder-encode(input?: string): Uint8Array-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -266,5 +282,7 @@ readonly encoding = 'utf-8'
 **起始版本：** 7
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextEncoder-readonly encoding = 'utf-8'--><!--Device-TextEncoder-readonly encoding = 'utf-8'-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

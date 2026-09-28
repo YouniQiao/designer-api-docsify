@@ -8,6 +8,8 @@ export class SystemLocaleManager
 
 **起始版本：** 10
 
+<!--Device-i18n-export class SystemLocaleManager--><!--Device-i18n-export class SystemLocaleManager-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 **系统接口：** 此接口为系统接口。
@@ -27,6 +29,8 @@ constructor()
 创建SystemLocaleManager对象。
 
 **起始版本：** 10
+
+<!--Device-SystemLocaleManager-constructor()--><!--Device-SystemLocaleManager-constructor()-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -55,6 +59,8 @@ getLanguageInfoArray(languages: Array<string>, options?: SortOptions): Array<Loc
 获取排序后的语言信息列表。
 
 **起始版本：** 10
+
+<!--Device-SystemLocaleManager-getLanguageInfoArray(languages: Array<string>, options?: SortOptions): Array<LocaleItem>--><!--Device-SystemLocaleManager-getLanguageInfoArray(languages: Array<string>, options?: SortOptions): Array<LocaleItem>-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -110,6 +116,8 @@ getRegionInfoArray(regions: Array<string>, options?: SortOptions): Array<LocaleI
 
 **起始版本：** 10
 
+<!--Device-SystemLocaleManager-getRegionInfoArray(regions: Array<string>, options?: SortOptions): Array<LocaleItem>--><!--Device-SystemLocaleManager-getRegionInfoArray(regions: Array<string>, options?: SortOptions): Array<LocaleItem>-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 **系统接口：** 此接口为系统接口。
@@ -163,6 +171,8 @@ static getTimeZoneCityItemArray(): Array<TimeZoneCityItem>
 获取排序后的时区城市组合信息列表。
 
 **起始版本：** 10
+
+<!--Device-SystemLocaleManager-static getTimeZoneCityItemArray(): Array<TimeZoneCityItem>--><!--Device-SystemLocaleManager-static getTimeZoneCityItemArray(): Array<TimeZoneCityItem>-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 

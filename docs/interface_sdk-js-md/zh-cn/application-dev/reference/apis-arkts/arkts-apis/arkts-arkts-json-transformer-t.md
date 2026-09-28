@@ -10,6 +10,8 @@ type Transformer = (this: Object, key: string, value: Object) => Object | undefi
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-json-type Transformer = (this: Object, key: string, value: Object) => Object | undefined | null--><!--Device-json-type Transformer = (this: Object, key: string, value: Object) => Object | undefined | null-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**

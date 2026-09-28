@@ -8,6 +8,8 @@ declare enum DisplayRotation
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare enum DisplayRotation--><!--Device-unnamed-declare enum DisplayRotation-End-->
+
 **系统能力：** SystemCapability.Test.UiTest
 
 **测试接口：** 此接口仅在自动化测试脚本中使用。
@@ -22,7 +24,9 @@ ROTATION_0 = 0
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-DisplayRotation-ROTATION_0 = 0--><!--Device-DisplayRotation-ROTATION_0 = 0-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -38,7 +42,9 @@ ROTATION_90 = 1
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-DisplayRotation-ROTATION_90 = 1--><!--Device-DisplayRotation-ROTATION_90 = 1-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -54,7 +60,9 @@ ROTATION_180 = 2
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-DisplayRotation-ROTATION_180 = 2--><!--Device-DisplayRotation-ROTATION_180 = 2-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -70,7 +78,9 @@ ROTATION_270 = 3
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-DisplayRotation-ROTATION_270 = 3--><!--Device-DisplayRotation-ROTATION_270 = 3-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 

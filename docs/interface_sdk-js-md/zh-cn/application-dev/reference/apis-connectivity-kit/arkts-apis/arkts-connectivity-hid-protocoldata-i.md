@@ -8,6 +8,8 @@ interface ProtocolData
 
 **起始版本：** 23
 
+<!--Device-hid-interface ProtocolData--><!--Device-hid-interface ProtocolData-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -29,5 +31,7 @@ protocol: ProtocolType
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ProtocolData-protocol: ProtocolType--><!--Device-ProtocolData-protocol: ProtocolType-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

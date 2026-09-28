@@ -8,6 +8,8 @@ Provides information about the drag event.
 
 **Since:** 7
 
+<!--Device-unnamed-declare interface DragEvent--><!--Device-unnamed-declare interface DragEvent-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## executeDropAnimation
@@ -23,6 +25,8 @@ Sets the execution function of the custom drop animation. This parameter is vali
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-DragEvent-executeDropAnimation(customDropAnimation: Callback<void>): void--><!--Device-DragEvent-executeDropAnimation(customDropAnimation: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,6 +49,8 @@ Obtains drag-related data.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DragEvent-getData(): UnifiedData--><!--Device-DragEvent-getData(): UnifiedData-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -75,6 +81,8 @@ Obtains the ID of the screen where the current drag event occurs. This API is no
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-DragEvent-getDisplayId(): number--><!--Device-DragEvent-getDisplayId(): number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -96,6 +104,8 @@ Obtains the x-coordinate of the drag point relative to the upper left corner of 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DragEvent-getDisplayX(): number--><!--Device-DragEvent-getDisplayX(): number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -119,6 +129,8 @@ Obtains the y-coordinate of the drag point relative to the upper left corner of 
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DragEvent-getDisplayY(): number--><!--Device-DragEvent-getDisplayY(): number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -140,6 +152,8 @@ Obtains the package name of the drag source application.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-DragEvent-getDragSource(): string--><!--Device-DragEvent-getDragSource(): string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -163,6 +177,8 @@ Obtains the x-coordinate of the drag point relative to the upper left corner of 
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-DragEvent-getGlobalDisplayX(): number--><!--Device-DragEvent-getGlobalDisplayX(): number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -185,6 +201,8 @@ Obtains the y-coordinate of the drag point relative to the upper left corner of 
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-DragEvent-getGlobalDisplayY(): number--><!--Device-DragEvent-getGlobalDisplayY(): number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -206,6 +224,8 @@ Obtains the pressed status of modifier keys.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
+
+<!--Device-DragEvent-getModifierKeyState?(keys: Array<string>): boolean--><!--Device-DragEvent-getModifierKeyState?(keys: Array<string>): boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -241,6 +261,8 @@ Obtains the position of the drag preview relative to the current window and the 
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DragEvent-getPreviewRect(): Rectangle--><!--Device-DragEvent-getPreviewRect(): Rectangle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -262,6 +284,8 @@ Obtains the drag result.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DragEvent-getResult(): DragResult--><!--Device-DragEvent-getResult(): DragResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -285,6 +309,8 @@ Obtains a summary of drag data, including data type and size information. In a d
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DragEvent-getSummary(): Summary--><!--Device-DragEvent-getSummary(): Summary-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -306,6 +332,8 @@ Obtains the dragging velocity along the main axis.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DragEvent-getVelocity(): number--><!--Device-DragEvent-getVelocity(): number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -329,6 +357,8 @@ Obtains the dragging velocity along the x-axis.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DragEvent-getVelocityX(): number--><!--Device-DragEvent-getVelocityX(): number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -350,6 +380,8 @@ Obtains the dragging velocity along the y-axis.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DragEvent-getVelocityY(): number--><!--Device-DragEvent-getVelocityY(): number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -373,6 +405,8 @@ Obtains the x-coordinate of the drag point relative to the upper left corner of 
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DragEvent-getWindowX(): number--><!--Device-DragEvent-getWindowX(): number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -394,6 +428,8 @@ Obtains the y-coordinate of the drag point relative to the upper left corner of 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DragEvent-getWindowY(): number--><!--Device-DragEvent-getWindowY(): number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -417,6 +453,8 @@ Checks whether the drag operation is cross-device.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-DragEvent-isRemote(): boolean--><!--Device-DragEvent-isRemote(): boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -438,6 +476,8 @@ Sets drag-related data in **DragEvent**.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DragEvent-setData(unifiedData: UnifiedData): void--><!--Device-DragEvent-setData(unifiedData: UnifiedData): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -461,6 +501,8 @@ Sets the parameters for deferred data loading from the drag source. This API pro
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-DragEvent-setDataLoadParams(dataLoadParams: DataLoadParams): void--><!--Device-DragEvent-setDataLoadParams(dataLoadParams: DataLoadParams): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -483,6 +525,8 @@ Sets the drag result in **DragEvent**.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DragEvent-setResult(dragResult: DragResult): void--><!--Device-DragEvent-setResult(dragResult: DragResult): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -504,6 +548,8 @@ Asynchronously obtains drag data and notifies you of the current data synchroniz
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-DragEvent-startDataLoading(options: DataSyncOptions): string--><!--Device-DragEvent-startDataLoading(options: DataSyncOptions): string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -542,6 +588,8 @@ Obtains the x-coordinate of the drag point relative to the upper left corner of 
 
 **Substitutes:** [getWindowX](#getwindowx)
 
+<!--Device-DragEvent-getX(): number--><!--Device-DragEvent-getX(): number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -565,6 +613,8 @@ Obtains the y-coordinate of the drag point relative to the upper left corner of 
 **Deprecated since:** 10
 
 **Substitutes:** [getWindowY](#getwindowy)
+
+<!--Device-DragEvent-getY(): number--><!--Device-DragEvent-getY(): number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -590,6 +640,8 @@ Set the uniqueId or uniqueId array of components that need to be automatically h
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-DragEvent-autoHideComponentUniqueIds?: int | int[]--><!--Device-DragEvent-autoHideComponentUniqueIds?: int | int[]-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## dragBehavior
@@ -611,6 +663,8 @@ Default value: **DragBehavior.COPY**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DragEvent-dragBehavior: DragBehavior--><!--Device-DragEvent-dragBehavior: DragBehavior-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -637,5 +691,7 @@ Default value: **false**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DragEvent-useCustomDropAnimation: boolean--><!--Device-DragEvent-useCustomDropAnimation: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

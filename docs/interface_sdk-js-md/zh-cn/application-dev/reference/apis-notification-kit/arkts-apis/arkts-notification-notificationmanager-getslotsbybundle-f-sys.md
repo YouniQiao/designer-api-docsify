@@ -18,6 +18,8 @@ function getSlotsByBundle(bundle: BundleOption, callback: AsyncCallback<Array<No
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function getSlotsByBundle(bundle: BundleOption, callback: AsyncCallback<Array<NotificationSlot>>): void--><!--Device-notificationManager-function getSlotsByBundle(bundle: BundleOption, callback: AsyncCallback<Array<NotificationSlot>>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -74,6 +76,8 @@ function getSlotsByBundle(bundle: BundleOption): Promise<Array<NotificationSlot>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function getSlotsByBundle(bundle: BundleOption): Promise<Array<NotificationSlot>>--><!--Device-notificationManager-function getSlotsByBundle(bundle: BundleOption): Promise<Array<NotificationSlot>>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

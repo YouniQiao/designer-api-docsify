@@ -18,6 +18,8 @@ function addGnssGeofence(fenceRequest: GnssGeofenceRequest): Promise<number>
 
 **需要权限：** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
+<!--Device-geoLocationManager-function addGnssGeofence(fenceRequest: GnssGeofenceRequest): Promise<int>--><!--Device-geoLocationManager-function addGnssGeofence(fenceRequest: GnssGeofenceRequest): Promise<int>-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 **参数：**

@@ -8,6 +8,8 @@ InputClient是输入法客户端对象，代表当前绑定到输入法应用的
 
 **起始版本：** 9
 
+<!--Device-inputMethodEngine-interface InputClient--><!--Device-inputMethodEngine-interface InputClient-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## 导入模块
@@ -25,6 +27,8 @@ deleteBackward(length: number, callback: AsyncCallback<boolean>): void
 删除光标后固定长度的文本。使用callback异步回调。<br> <br>使用场景：实现删除键功能、删除光标后的字符、快速修正输入、实现自定义删除逻辑等。<br> <br>使用后效果：成功时返回true，编辑框中光标后指定长度的文本被删除。
 
 **起始版本：** 9
+
+<!--Device-InputClient-deleteBackward(length: int, callback: AsyncCallback<boolean>): void--><!--Device-InputClient-deleteBackward(length: int, callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -73,6 +77,8 @@ deleteBackward(length: number): Promise<boolean>
 删除光标后固定长度的文本。使用promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-InputClient-deleteBackward(length: int): Promise<boolean>--><!--Device-InputClient-deleteBackward(length: int): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -127,6 +133,8 @@ deleteBackwardSync(length: number): void
 
 **起始版本：** 10
 
+<!--Device-InputClient-deleteBackwardSync(length: int): void--><!--Device-InputClient-deleteBackwardSync(length: int): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -159,6 +167,8 @@ deleteForward(length: number, callback: AsyncCallback<boolean>): void
 删除光标前固定长度的文本。使用callback异步回调。<br> <br>使用场景：实现退格键功能、逐字删除输入、删除错误的输入、实现自定义删除逻辑等。<br> <br>使用后效果：成功时返回true，编辑框中光标前指定长度的文本被删除。
 
 **起始版本：** 9
+
+<!--Device-InputClient-deleteForward(length: int, callback: AsyncCallback<boolean>): void--><!--Device-InputClient-deleteForward(length: int, callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -207,6 +217,8 @@ deleteForward(length: number): Promise<boolean>
 删除光标前固定长度的文本。使用promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-InputClient-deleteForward(length: int): Promise<boolean>--><!--Device-InputClient-deleteForward(length: int): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -262,6 +274,8 @@ deleteForwardSync(length: number): void
 
 **起始版本：** 10
 
+<!--Device-InputClient-deleteForwardSync(length: int): void--><!--Device-InputClient-deleteForwardSync(length: int): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -297,6 +311,8 @@ finishTextPreview(): Promise<void>
 > 若当前输入框已有预上屏状态文本，调用此接口后，预上屏内容将被系统正式上屏。
 
 **起始版本：** 12
+
+<!--Device-InputClient-finishTextPreview(): Promise<void>--><!--Device-InputClient-finishTextPreview(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -341,6 +357,8 @@ finishTextPreviewSync(): void
 
 **起始版本：** 12
 
+<!--Device-InputClient-finishTextPreviewSync(): void--><!--Device-InputClient-finishTextPreviewSync(): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **错误码：**
@@ -365,6 +383,8 @@ getAttachOptions(): AttachOptions
 获取绑定输入法时的附加选项。
 
 **起始版本：** 19
+
+<!--Device-InputClient-getAttachOptions(): AttachOptions--><!--Device-InputClient-getAttachOptions(): AttachOptions-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -396,6 +416,8 @@ getBackward(length: number, callback: AsyncCallback<string>): void
 获取光标后固定长度的文本。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-InputClient-getBackward(length: int, callback: AsyncCallback<string>): void--><!--Device-InputClient-getBackward(length: int, callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -440,6 +462,8 @@ getBackward(length: number): Promise<string>
 获取光标后固定长度的文本。使用promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-InputClient-getBackward(length: int): Promise<string>--><!--Device-InputClient-getBackward(length: int): Promise<string>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -490,6 +514,8 @@ getBackwardSync(length: number): string
 
 **起始版本：** 10
 
+<!--Device-InputClient-getBackwardSync(length: int): string--><!--Device-InputClient-getBackwardSync(length: int): string-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -533,6 +559,8 @@ getCallingWindowInfo(): Promise<WindowInfo>
 
 **起始版本：** 12
 
+<!--Device-InputClient-getCallingWindowInfo(): Promise<WindowInfo>--><!--Device-InputClient-getCallingWindowInfo(): Promise<WindowInfo>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**
@@ -572,6 +600,8 @@ getEditorAttribute(callback: AsyncCallback<EditorAttribute>): void
 
 **起始版本：** 9
 
+<!--Device-InputClient-getEditorAttribute(callback: AsyncCallback<EditorAttribute>): void--><!--Device-InputClient-getEditorAttribute(callback: AsyncCallback<EditorAttribute>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -610,6 +640,8 @@ getEditorAttribute(): Promise<EditorAttribute>
 获取编辑框属性值。使用promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-InputClient-getEditorAttribute(): Promise<EditorAttribute>--><!--Device-InputClient-getEditorAttribute(): Promise<EditorAttribute>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -653,6 +685,8 @@ getEditorAttributeSync(): EditorAttribute
 
 **起始版本：** 10
 
+<!--Device-InputClient-getEditorAttributeSync(): EditorAttribute--><!--Device-InputClient-getEditorAttributeSync(): EditorAttribute-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**
@@ -684,6 +718,8 @@ getForward(length: number, callback: AsyncCallback<string>): void
 获取光标前固定长度的文本。使用callback异步回调。<br> <br>使用场景：分析已输入文本内容以提供智能补全建议、检查文本格式、实现文本预测功能、实现文本语义分析等。使用后效果：成功时返回光标前指定长度的文本字符串，输入法应用可据此更新候选词或输入建议。
 
 **起始版本：** 9
+
+<!--Device-InputClient-getForward(length: int, callback: AsyncCallback<string>): void--><!--Device-InputClient-getForward(length: int, callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -728,6 +764,8 @@ getForward(length: number): Promise<string>
 获取光标前固定长度的文本。使用promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-InputClient-getForward(length: int): Promise<string>--><!--Device-InputClient-getForward(length: int): Promise<string>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -778,6 +816,8 @@ getForwardSync(length: number): string
 
 **起始版本：** 10
 
+<!--Device-InputClient-getForwardSync(length: int): string--><!--Device-InputClient-getForwardSync(length: int): string-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -817,6 +857,8 @@ getTextIndexAtCursor(callback: AsyncCallback<number>): void
 获取光标所在处的文本索引。使用callback异步回调。
 
 **起始版本：** 10
+
+<!--Device-InputClient-getTextIndexAtCursor(callback: AsyncCallback<int>): void--><!--Device-InputClient-getTextIndexAtCursor(callback: AsyncCallback<int>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -859,6 +901,8 @@ getTextIndexAtCursor(): Promise<number>
 
 **起始版本：** 10
 
+<!--Device-InputClient-getTextIndexAtCursor(): Promise<int>--><!--Device-InputClient-getTextIndexAtCursor(): Promise<int>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**
@@ -900,6 +944,8 @@ getTextIndexAtCursorSync(): number
 
 **起始版本：** 10
 
+<!--Device-InputClient-getTextIndexAtCursorSync(): int--><!--Device-InputClient-getTextIndexAtCursorSync(): int-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**
@@ -931,6 +977,8 @@ insertText(text: string, callback: AsyncCallback<boolean>): void
 插入文本。使用callback异步回调。<br> <br>使用场景：插入候选词、插入特殊符号、实现文本自动补全、快速插入常用短语等。<br> <br>使用后效果：成功时返回true，文本已插入到编辑框光标位置。
 
 **起始版本：** 9
+
+<!--Device-InputClient-insertText(text: string, callback: AsyncCallback<boolean>): void--><!--Device-InputClient-insertText(text: string, callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -979,6 +1027,8 @@ insertText(text: string): Promise<boolean>
 插入文本。使用promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-InputClient-insertText(text: string): Promise<boolean>--><!--Device-InputClient-insertText(text: string): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1032,6 +1082,8 @@ insertTextSync(text: string): void
 
 **起始版本：** 10
 
+<!--Device-InputClient-insertTextSync(text: string): void--><!--Device-InputClient-insertTextSync(text: string): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1063,6 +1115,8 @@ moveCursor(direction: number, callback: AsyncCallback<void>): void
 移动光标。使用callback异步回调。<br> <br>使用场景：实现光标移动到特定位置、实现上下左右移动光标功能、实现快速定位、实现自定义光标控制等。<br> <br>使用后效果：成功时编辑框中的光标按指定方向移动一步。direction取值，1为上移，2为下移，3为左移，4为右移。
 
 **起始版本：** 9
+
+<!--Device-InputClient-moveCursor(direction: int, callback: AsyncCallback<void>): void--><!--Device-InputClient-moveCursor(direction: int, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1105,6 +1159,8 @@ moveCursor(direction: number): Promise<void>
 移动光标。使用promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-InputClient-moveCursor(direction: int): Promise<void>--><!--Device-InputClient-moveCursor(direction: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1153,6 +1209,8 @@ moveCursorSync(direction: number): void
 
 **起始版本：** 10
 
+<!--Device-InputClient-moveCursorSync(direction: int): void--><!--Device-InputClient-moveCursorSync(direction: int): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1183,6 +1241,8 @@ off(type: 'attachOptionsDidChange', callback?: Callback<AttachOptions>): void
 取消订阅绑定输入法时的附加选项变更事件。使用callback异步回调。
 
 **起始版本：** 19
+
+<!--Device-InputClient-off(type: 'attachOptionsDidChange', callback?: Callback<AttachOptions>): void--><!--Device-InputClient-off(type: 'attachOptionsDidChange', callback?: Callback<AttachOptions>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1216,6 +1276,8 @@ on(type: 'attachOptionsDidChange', callback: Callback<AttachOptions>): void
 订阅绑定输入法时的附加选项变更事件。使用callback异步回调。
 
 **起始版本：** 19
+
+<!--Device-InputClient-on(type: 'attachOptionsDidChange', callback: Callback<AttachOptions>): void--><!--Device-InputClient-on(type: 'attachOptionsDidChange', callback: Callback<AttachOptions>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1266,6 +1328,8 @@ recvMessage(msgHandler?: MessageHandler): void
 
 **起始版本：** 15
 
+<!--Device-InputClient-recvMessage(msgHandler?: MessageHandler): void--><!--Device-InputClient-recvMessage(msgHandler?: MessageHandler): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1310,6 +1374,8 @@ selectByMovement(movement: Movement, callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
+<!--Device-InputClient-selectByMovement(movement: Movement, callback: AsyncCallback<void>): void--><!--Device-InputClient-selectByMovement(movement: Movement, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1353,6 +1419,8 @@ selectByMovement(movement: Movement): Promise<void>
 根据光标移动方向选中文本。使用promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-InputClient-selectByMovement(movement: Movement): Promise<void>--><!--Device-InputClient-selectByMovement(movement: Movement): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1403,6 +1471,8 @@ selectByMovementSync(movement: Movement): void
 
 **起始版本：** 10
 
+<!--Device-InputClient-selectByMovementSync(movement: Movement): void--><!--Device-InputClient-selectByMovementSync(movement: Movement): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1435,6 +1505,8 @@ selectByRange(range: Range, callback: AsyncCallback<void>): void
 根据索引范围选中文本。使用callback异步回调。
 
 **起始版本：** 10
+
+<!--Device-InputClient-selectByRange(range: Range, callback: AsyncCallback<void>): void--><!--Device-InputClient-selectByRange(range: Range, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1480,6 +1552,8 @@ selectByRange(range: Range): Promise<void>
 根据索引范围选中文本。使用promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-InputClient-selectByRange(range: Range): Promise<void>--><!--Device-InputClient-selectByRange(range: Range): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1532,6 +1606,8 @@ selectByRangeSync(range: Range): void
 
 **起始版本：** 10
 
+<!--Device-InputClient-selectByRangeSync(range: Range): void--><!--Device-InputClient-selectByRangeSync(range: Range): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1574,6 +1650,8 @@ sendExtendAction(action: ExtendAction, callback: AsyncCallback<void>): void
 > 权限。
 
 **起始版本：** 10
+
+<!--Device-InputClient-sendExtendAction(action: ExtendAction, callback: AsyncCallback<void>): void--><!--Device-InputClient-sendExtendAction(action: ExtendAction, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1627,6 +1705,8 @@ sendExtendAction(action: ExtendAction): Promise<void>
 
 **起始版本：** 10
 
+<!--Device-InputClient-sendExtendAction(action: ExtendAction): Promise<void>--><!--Device-InputClient-sendExtendAction(action: ExtendAction): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1670,6 +1750,8 @@ sendKeyFunction(action: number, callback: AsyncCallback<boolean>): void
 发送功能键。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-InputClient-sendKeyFunction(action: int, callback: AsyncCallback<boolean>): void--><!--Device-InputClient-sendKeyFunction(action: int, callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1718,6 +1800,8 @@ sendKeyFunction(action: number): Promise<boolean>
 发送功能键。使用promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-InputClient-sendKeyFunction(action: int): Promise<boolean>--><!--Device-InputClient-sendKeyFunction(action: int): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1771,6 +1855,8 @@ sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>
 > msgId最大限制256B，msgParam最大限制128KB。
 
 **起始版本：** 15
+
+<!--Device-InputClient-sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>--><!--Device-InputClient-sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1827,6 +1913,8 @@ sendPrivateCommand(commandData: Record<string, CommandDataType>): Promise<void>
 
 **起始版本：** 12
 
+<!--Device-InputClient-sendPrivateCommand(commandData: Record<string, CommandDataType>): Promise<void>--><!--Device-InputClient-sendPrivateCommand(commandData: Record<string, CommandDataType>): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1880,6 +1968,8 @@ setPreviewText(text: string, range: Range): Promise<void>
 
 **起始版本：** 12
 
+<!--Device-InputClient-setPreviewText(text: string, range: Range): Promise<void>--><!--Device-InputClient-setPreviewText(text: string, range: Range): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1930,6 +2020,8 @@ setPreviewTextSync(text: string, range: Range): void
 > 同步接口阻塞主线程，容易影响UI交互，需谨慎使用。建议优先使用对应的异步接口[setPreviewText](#setpreviewtext)。
 
 **起始版本：** 12
+
+<!--Device-InputClient-setPreviewTextSync(text: string, range: Range): void--><!--Device-InputClient-setPreviewTextSync(text: string, range: Range): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 

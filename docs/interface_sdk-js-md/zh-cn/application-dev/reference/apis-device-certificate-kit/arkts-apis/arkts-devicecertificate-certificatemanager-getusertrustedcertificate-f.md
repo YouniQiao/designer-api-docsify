@@ -18,6 +18,8 @@ function getUserTrustedCertificate(certUri: string): Promise<CMResult>
 
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER
 
+<!--Device-certificateManager-function getUserTrustedCertificate(certUri: string): Promise<CMResult>--><!--Device-certificateManager-function getUserTrustedCertificate(certUri: string): Promise<CMResult>-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
 
 **参数：**

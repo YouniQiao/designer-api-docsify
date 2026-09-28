@@ -12,6 +12,8 @@ interface Album extends MediaEntity
 
 **起始版本：** 23
 
+<!--Device-avMusicTemplate-interface Album extends MediaEntity--><!--Device-avMusicTemplate-interface Album extends MediaEntity-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## 导入模块
@@ -34,6 +36,8 @@ episodeCounts?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Album-episodeCounts?: string--><!--Device-Album-episodeCounts?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## favSubscribeData
@@ -49,6 +53,8 @@ favSubscribeData: FavoriteData
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Album-favSubscribeData: FavoriteData--><!--Device-Album-favSubscribeData: FavoriteData-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -66,6 +72,8 @@ playCounts: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Album-playCounts: string--><!--Device-Album-playCounts: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## singer
@@ -81,5 +89,7 @@ singer: string
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Album-singer: string--><!--Device-Album-singer: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate

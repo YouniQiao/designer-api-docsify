@@ -8,6 +8,8 @@ export interface DataSendProgressInfo
 
 **起始版本：** 11
 
+<!--Device-http-export interface DataSendProgressInfo--><!--Device-http-export interface DataSendProgressInfo-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块
@@ -30,6 +32,8 @@ sendSize: number
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
 
+<!--Device-DataSendProgressInfo-sendSize: int--><!--Device-DataSendProgressInfo-sendSize: int-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## totalSize
@@ -45,5 +49,7 @@ totalSize: number
 **起始版本：** 11
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-DataSendProgressInfo-totalSize: int--><!--Device-DataSendProgressInfo-totalSize: int-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack

@@ -16,6 +16,8 @@ PIN码认证。使用Promise异步回调。
 
 **起始版本：** 22
 
+<!--Device-huksExternalCrypto-function authUkeyPin(resourceId: string, params: Array<HuksExternalCryptoParam>): Promise<void>--><!--Device-huksExternalCrypto-function authUkeyPin(resourceId: string, params: Array<HuksExternalCryptoParam>): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
 **系统接口：** 此接口为系统接口。
@@ -38,7 +40,7 @@ PIN码认证。使用Promise异步回调。
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | The caller is not a system application and is not allowed to use system applications. |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | api is not supported. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: 1. The hardware does not support the capability. 2. The chip does not support the capability. 3. A dependent service feature is not supported. |
 | [12000005](../errorcode-huks.md#12000005-进程通信错误) | IPC communication failed. |
 | [12000006](../errorcode-huks.md#12000006-算法库操作失败) | the UKey driver operation failed. |
 | [12000011](../errorcode-huks.md#12000011-目标对象不存在) | queried entity does not exist. |

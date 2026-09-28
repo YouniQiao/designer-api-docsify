@@ -8,6 +8,8 @@ interface ChannelStateInfo
 
 **起始版本：** 20
 
+<!--Device-proxyChannelManager-interface ChannelStateInfo--><!--Device-proxyChannelManager-interface ChannelStateInfo-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 ## 导入模块
@@ -30,6 +32,8 @@ channelId: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ChannelStateInfo-channelId: int--><!--Device-ChannelStateInfo-channelId: int-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 ## state
@@ -45,5 +49,7 @@ state: ChannelState
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ChannelStateInfo-state: ChannelState--><!--Device-ChannelStateInfo-state: ChannelState-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration

@@ -8,6 +8,8 @@ interface AddPermissionUsedRecordOptions
 
 **起始版本：** 12
 
+<!--Device-privacyManager-interface AddPermissionUsedRecordOptions--><!--Device-privacyManager-interface AddPermissionUsedRecordOptions-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ enhancedIdentity?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AddPermissionUsedRecordOptions-enhancedIdentity?: string--><!--Device-AddPermissionUsedRecordOptions-enhancedIdentity?: string-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +55,8 @@ usedType?: PermissionUsedType
 **起始版本：** 12
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-AddPermissionUsedRecordOptions-usedType?: PermissionUsedType--><!--Device-AddPermissionUsedRecordOptions-usedType?: PermissionUsedType-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 

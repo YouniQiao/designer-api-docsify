@@ -8,6 +8,8 @@ class DataSharePredicates
 
 **起始版本：** 10
 
+<!--Device-dataSharePredicates-class DataSharePredicates--><!--Device-dataSharePredicates-class DataSharePredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 ## 导入模块
@@ -27,6 +29,8 @@ beginsWith(field: string, value: string): DataSharePredicates
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataSharePredicates-beginsWith(field: string, value: string): DataSharePredicates--><!--Device-DataSharePredicates-beginsWith(field: string, value: string): DataSharePredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -64,6 +68,8 @@ contains(field: string, value: string): DataSharePredicates
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataSharePredicates-contains(field: string, value: string): DataSharePredicates--><!--Device-DataSharePredicates-contains(field: string, value: string): DataSharePredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **系统接口：** 此接口为系统接口。
@@ -100,6 +106,8 @@ distinct(): DataSharePredicates
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataSharePredicates-distinct(): DataSharePredicates--><!--Device-DataSharePredicates-distinct(): DataSharePredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **系统接口：** 此接口为系统接口。
@@ -128,6 +136,8 @@ endsWith(field: string, value: string): DataSharePredicates
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataSharePredicates-endsWith(field: string, value: string): DataSharePredicates--><!--Device-DataSharePredicates-endsWith(field: string, value: string): DataSharePredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -165,6 +175,8 @@ glob(field: string, value: string): DataSharePredicates
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataSharePredicates-glob(field: string, value: string): DataSharePredicates--><!--Device-DataSharePredicates-glob(field: string, value: string): DataSharePredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **系统接口：** 此接口为系统接口。
@@ -201,6 +213,8 @@ groupBy(fields: Array<string>): DataSharePredicates
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataSharePredicates-groupBy(fields: Array<string>): DataSharePredicates--><!--Device-DataSharePredicates-groupBy(fields: Array<string>): DataSharePredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **系统接口：** 此接口为系统接口。
@@ -235,6 +249,8 @@ indexedBy(field: string): DataSharePredicates
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataSharePredicates-indexedBy(field: string): DataSharePredicates--><!--Device-DataSharePredicates-indexedBy(field: string): DataSharePredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -271,6 +287,8 @@ inKeys(keys: Array<string>): DataSharePredicates
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataSharePredicates-inKeys(keys: Array<string>): DataSharePredicates--><!--Device-DataSharePredicates-inKeys(keys: Array<string>): DataSharePredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **系统接口：** 此接口为系统接口。
@@ -305,6 +323,8 @@ isNotNull(field: string): DataSharePredicates
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataSharePredicates-isNotNull(field: string): DataSharePredicates--><!--Device-DataSharePredicates-isNotNull(field: string): DataSharePredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -341,6 +361,8 @@ isNull(field: string): DataSharePredicates
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataSharePredicates-isNull(field: string): DataSharePredicates--><!--Device-DataSharePredicates-isNull(field: string): DataSharePredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **系统接口：** 此接口为系统接口。
@@ -376,6 +398,8 @@ prefixKey(prefix: string): DataSharePredicates
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataSharePredicates-prefixKey(prefix: string): DataSharePredicates--><!--Device-DataSharePredicates-prefixKey(prefix: string): DataSharePredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **系统接口：** 此接口为系统接口。
@@ -410,6 +434,8 @@ unlike(field: string, value: string): DataSharePredicates
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataSharePredicates-unlike(field: string, value: string): DataSharePredicates--><!--Device-DataSharePredicates-unlike(field: string, value: string): DataSharePredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 

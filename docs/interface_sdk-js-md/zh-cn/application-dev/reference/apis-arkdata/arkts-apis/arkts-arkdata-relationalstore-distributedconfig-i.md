@@ -8,6 +8,8 @@ interface DistributedConfig
 
 **起始版本：** 10
 
+<!--Device-relationalStore-interface DistributedConfig--><!--Device-relationalStore-interface DistributedConfig-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ assetConflictPolicy?: AssetConflictPolicy
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DistributedConfig-assetConflictPolicy?: AssetConflictPolicy--><!--Device-DistributedConfig-assetConflictPolicy?: AssetConflictPolicy-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## assetDownloadOnDemand
@@ -45,6 +49,8 @@ assetDownloadOnDemand?: boolean
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DistributedConfig-assetDownloadOnDemand?: boolean--><!--Device-DistributedConfig-assetDownloadOnDemand?: boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -62,6 +68,8 @@ assetTempPath?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DistributedConfig-assetTempPath?: string--><!--Device-DistributedConfig-assetTempPath?: string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## asyncDownloadAsset
@@ -76,6 +84,8 @@ asyncDownloadAsset?: boolean
 
 **起始版本：** 18
 
+<!--Device-DistributedConfig-asyncDownloadAsset?: boolean--><!--Device-DistributedConfig-asyncDownloadAsset?: boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## autoSync
@@ -89,6 +99,8 @@ autoSync: boolean
 **类型：** boolean
 
 **起始版本：** 10
+
+<!--Device-DistributedConfig-autoSync: boolean--><!--Device-DistributedConfig-autoSync: boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -106,6 +118,8 @@ autoSyncSwitch?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DistributedConfig-autoSyncSwitch?: boolean--><!--Device-DistributedConfig-autoSyncSwitch?: boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## enableCloud
@@ -120,6 +134,8 @@ enableCloud?: boolean
 
 **起始版本：** 18
 
+<!--Device-DistributedConfig-enableCloud?: boolean--><!--Device-DistributedConfig-enableCloud?: boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## tableType
@@ -133,5 +149,7 @@ tableType?: DistributedTableType
 **类型：** [DistributedTableType](arkts-arkdata-relationalstore-distributedtabletype-e.md)
 
 **起始版本：** 23
+
+<!--Device-DistributedConfig-tableType?: DistributedTableType--><!--Device-DistributedConfig-tableType?: DistributedTableType-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core

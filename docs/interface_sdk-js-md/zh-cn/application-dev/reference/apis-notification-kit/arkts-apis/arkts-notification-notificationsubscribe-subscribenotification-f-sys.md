@@ -20,6 +20,8 @@ function subscribeNotification(subscriber: NotificationSubscriber): Promise<void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-notificationSubscribe-function subscribeNotification(subscriber: NotificationSubscriber): Promise<void>--><!--Device-notificationSubscribe-function subscribeNotification(subscriber: NotificationSubscriber): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -80,6 +82,8 @@ function subscribeNotification(subscriber: NotificationSubscriber, info: Notific
 **需要权限：** ohos.permission.NOTIFICATION_SYSTEM_SUBSCRIBER
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-notificationSubscribe-function subscribeNotification(subscriber: NotificationSubscriber, info: NotificationSubscribeInfo): Promise<void>--><!--Device-notificationSubscribe-function subscribeNotification(subscriber: NotificationSubscriber, info: NotificationSubscribeInfo): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

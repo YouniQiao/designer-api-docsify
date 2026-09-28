@@ -16,6 +16,8 @@ function setTouchpadSwipeSwitch(state: boolean, callback: AsyncCallback<void>): 
 
 **起始版本：** 10
 
+<!--Device-pointer-function setTouchpadSwipeSwitch(state: boolean, callback: AsyncCallback<void>): void--><!--Device-pointer-function setTouchpadSwipeSwitch(state: boolean, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +79,8 @@ function setTouchpadSwipeSwitch(state: boolean): Promise<void>
 设置触控板多指滑动功能开关，使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-pointer-function setTouchpadSwipeSwitch(state: boolean): Promise<void>--><!--Device-pointer-function setTouchpadSwipeSwitch(state: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 

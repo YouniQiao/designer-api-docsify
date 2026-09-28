@@ -27,6 +27,8 @@ function uninstall(admin: Want, bundleName: string, userId?: number, isKeepData?
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-bundleManager-function uninstall(admin: Want, bundleName: string, userId?: number, isKeepData?: boolean): Promise<void>--><!--Device-bundleManager-function uninstall(admin: Want, bundleName: string, userId?: number, isKeepData?: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**

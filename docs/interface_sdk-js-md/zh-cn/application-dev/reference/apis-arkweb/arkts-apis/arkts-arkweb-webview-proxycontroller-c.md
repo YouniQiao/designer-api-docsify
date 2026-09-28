@@ -10,6 +10,8 @@ ProxyController提供两个核心方法：applyProxyOverride用于应用代理�
 
 **起始版本：** 15
 
+<!--Device-webview-class ProxyController--><!--Device-webview-class ProxyController-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## 导入模块
@@ -29,6 +31,8 @@ static applyProxyOverride(proxyConfig: ProxyConfig, callback: OnProxyConfigChang
 **起始版本：** 15
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-ProxyController-static applyProxyOverride(proxyConfig: ProxyConfig, callback: OnProxyConfigChangeCallback): void--><!--Device-ProxyController-static applyProxyOverride(proxyConfig: ProxyConfig, callback: OnProxyConfigChangeCallback): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -60,6 +64,8 @@ static removeProxyOverride(callback: OnProxyConfigChangeCallback): void
 **起始版本：** 15
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-ProxyController-static removeProxyOverride(callback: OnProxyConfigChangeCallback): void--><!--Device-ProxyController-static removeProxyOverride(callback: OnProxyConfigChangeCallback): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

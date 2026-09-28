@@ -8,6 +8,8 @@ Defines the content for single-column picker options.
 
 **Since:** 10
 
+<!--Device-unnamed-declare interface TextPickerRangeContent--><!--Device-unnamed-declare interface TextPickerRangeContent-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## icon
@@ -25,6 +27,8 @@ Image resource. When **icon** is of the string type, it indicates the path of th
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextPickerRangeContent-icon: string | Resource--><!--Device-TextPickerRangeContent-icon: string | Resource-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -52,5 +56,7 @@ Default value: empty string
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextPickerRangeContent-text?: string | Resource--><!--Device-TextPickerRangeContent-text?: string | Resource-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

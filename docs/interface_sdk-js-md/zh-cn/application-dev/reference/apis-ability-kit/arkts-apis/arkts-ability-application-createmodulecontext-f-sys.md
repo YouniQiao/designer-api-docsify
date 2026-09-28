@@ -28,6 +28,8 @@ export function createModuleContext(context: Context, bundleName: string, module
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-application-export function createModuleContext(context: Context, bundleName: string, moduleName: string): Promise<Context>--><!--Device-application-export function createModuleContext(context: Context, bundleName: string, moduleName: string): Promise<Context>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。

@@ -10,6 +10,8 @@ export type AccessibilityVirtualNode = _AccessibilityVirtualNode
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-unnamed-export type AccessibilityVirtualNode = _AccessibilityVirtualNode--><!--Device-unnamed-export type AccessibilityVirtualNode = _AccessibilityVirtualNode-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。

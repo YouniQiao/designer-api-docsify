@@ -22,6 +22,8 @@ function uninstallDLPSandbox(bundleName: string, userId: number, appIndex: numbe
 
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
 
+<!--Device-dlpPermission-function uninstallDLPSandbox(bundleName: string, userId: number, appIndex: number): Promise<void>--><!--Device-dlpPermission-function uninstallDLPSandbox(bundleName: string, userId: number, appIndex: number): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **系统接口：** 此接口为系统接口。
@@ -84,6 +86,8 @@ function uninstallDLPSandbox(bundleName: string, userId: number, appIndex: numbe
 **起始版本：** 10
 
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
+
+<!--Device-dlpPermission-function uninstallDLPSandbox(bundleName: string, userId: number, appIndex: number, callback: AsyncCallback<void>): void--><!--Device-dlpPermission-function uninstallDLPSandbox(bundleName: string, userId: number, appIndex: number, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 

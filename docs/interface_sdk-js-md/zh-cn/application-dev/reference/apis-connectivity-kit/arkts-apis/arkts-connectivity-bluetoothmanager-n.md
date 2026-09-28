@@ -12,6 +12,8 @@ declare namespace bluetoothManager
 
 **废弃版本：** 10
 
+<!--Device-unnamed-declare namespace bluetoothManager--><!--Device-unnamed-declare namespace bluetoothManager-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块

@@ -8,6 +8,8 @@ enum AuthorizationResultCode
 
 **起始版本：** 26.0.1
 
+<!--Device-authorization-enum AuthorizationResultCode--><!--Device-authorization-enum AuthorizationResultCode-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 ## AUTHORIZATION_GRANTED
@@ -21,6 +23,8 @@ AUTHORIZATION_GRANTED = 0
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AuthorizationResultCode-AUTHORIZATION_GRANTED = 0--><!--Device-AuthorizationResultCode-AUTHORIZATION_GRANTED = 0-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -43,6 +47,8 @@ AUTHORIZATION_CANCELED = 12300301
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AuthorizationResultCode-AUTHORIZATION_CANCELED = 12300301--><!--Device-AuthorizationResultCode-AUTHORIZATION_CANCELED = 12300301-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 ## AUTHORIZATION_DENIED
@@ -64,6 +70,8 @@ AUTHORIZATION_DENIED = 12300303
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AuthorizationResultCode-AUTHORIZATION_DENIED = 12300303--><!--Device-AuthorizationResultCode-AUTHORIZATION_DENIED = 12300303-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 ## AUTHORIZATION_NOT_SUPPORTED
@@ -82,5 +90,7 @@ AUTHORIZATION_NOT_SUPPORTED = 12300305
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AuthorizationResultCode-AUTHORIZATION_NOT_SUPPORTED = 12300305--><!--Device-AuthorizationResultCode-AUTHORIZATION_NOT_SUPPORTED = 12300305-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount

@@ -22,6 +22,8 @@ function getSkillInfos(bundleName: string, flags: number, userId?: number): Prom
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-skillManager-function getSkillInfos(bundleName: string, flags: int, userId?: int): Promise<Array<SkillInfo>>--><!--Device-skillManager-function getSkillInfos(bundleName: string, flags: int, userId?: int): Promise<Array<SkillInfo>>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **参数：**

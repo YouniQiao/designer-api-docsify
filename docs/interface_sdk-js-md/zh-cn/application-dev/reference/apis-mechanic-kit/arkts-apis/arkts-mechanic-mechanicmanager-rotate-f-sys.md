@@ -16,6 +16,8 @@ function rotate(mechId: number, angles: RotationAngles, duration: number): Promi
 
 **起始版本：** 20
 
+<!--Device-mechanicManager-function rotate(mechId: int, angles: RotationAngles, duration: int): Promise<Result>--><!--Device-mechanicManager-function rotate(mechId: int, angles: RotationAngles, duration: int): Promise<Result>-End-->
+
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。

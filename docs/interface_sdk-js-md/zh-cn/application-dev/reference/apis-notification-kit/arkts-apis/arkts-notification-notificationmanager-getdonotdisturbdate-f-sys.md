@@ -18,6 +18,8 @@ function getDoNotDisturbDate(callback: AsyncCallback<DoNotDisturbDate>): void
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function getDoNotDisturbDate(callback: AsyncCallback<DoNotDisturbDate>): void--><!--Device-notificationManager-function getDoNotDisturbDate(callback: AsyncCallback<DoNotDisturbDate>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -72,6 +74,8 @@ function getDoNotDisturbDate(): Promise<DoNotDisturbDate>
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function getDoNotDisturbDate(): Promise<DoNotDisturbDate>--><!--Device-notificationManager-function getDoNotDisturbDate(): Promise<DoNotDisturbDate>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -120,6 +124,8 @@ function getDoNotDisturbDate(userId: number, callback: AsyncCallback<DoNotDistur
 **起始版本：** 9
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function getDoNotDisturbDate(userId: int, callback: AsyncCallback<DoNotDisturbDate>): void--><!--Device-notificationManager-function getDoNotDisturbDate(userId: int, callback: AsyncCallback<DoNotDisturbDate>): void-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -179,6 +185,8 @@ function getDoNotDisturbDate(userId: number): Promise<DoNotDisturbDate>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function getDoNotDisturbDate(userId: int): Promise<DoNotDisturbDate>--><!--Device-notificationManager-function getDoNotDisturbDate(userId: int): Promise<DoNotDisturbDate>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

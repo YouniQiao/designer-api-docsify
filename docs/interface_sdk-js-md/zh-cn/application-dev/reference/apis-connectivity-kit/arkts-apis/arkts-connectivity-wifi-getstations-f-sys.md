@@ -22,6 +22,8 @@ function getStations(): Array<StationInfo>
 
 **需要权限：** ohos.permission.GET_WIFI_INFO and ohos.permission.LOCATION and ohos.permission.MANAGE_WIFI_HOTSPOT
 
+<!--Device-wifi-function getStations(): Array<StationInfo>--><!--Device-wifi-function getStations(): Array<StationInfo>-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
 **系统接口：** 此接口为系统接口。

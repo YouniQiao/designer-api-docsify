@@ -22,6 +22,8 @@ Queries a contact based on the specified phone number. This API uses an asynchro
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryContactsByPhoneNumber(phoneNumber: string, callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function queryContactsByPhoneNumber(phoneNumber: string, callback: AsyncCallback<Array<Contact>>): void-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
@@ -61,6 +63,8 @@ Queries a contact based on the specified phone number. This API uses an asynchro
 **Since:** 10
 
 **Required permissions:** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryContactsByPhoneNumber(context: Context, phoneNumber: string, callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function queryContactsByPhoneNumber(context: Context, phoneNumber: string, callback: AsyncCallback<Array<Contact>>): void-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -120,6 +124,8 @@ Queries a contact based on the specified phone number and holder. This API uses 
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryContactsByPhoneNumber(phoneNumber: string, holder: Holder, callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function queryContactsByPhoneNumber(phoneNumber: string, holder: Holder, callback: AsyncCallback<Array<Contact>>): void-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
@@ -164,6 +170,8 @@ Queries a contact based on the specified phone number and holder. This API uses 
 **Since:** 10
 
 **Required permissions:** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryContactsByPhoneNumber(context: Context, phoneNumber: string, holder: Holder, callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function queryContactsByPhoneNumber(context: Context, phoneNumber: string, holder: Holder, callback: AsyncCallback<Array<Contact>>): void-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -228,6 +236,8 @@ Queries a contact based on the specified phone number and attributes. This API u
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryContactsByPhoneNumber(phoneNumber: string, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function queryContactsByPhoneNumber(phoneNumber: string, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
@@ -269,6 +279,8 @@ Queries a contact based on the specified phone number and attributes. This API u
 **Since:** 10
 
 **Required permissions:** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryContactsByPhoneNumber(context: Context, phoneNumber: string, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function queryContactsByPhoneNumber(context: Context, phoneNumber: string, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -331,6 +343,8 @@ Queries a contact based on the specified phone number, holder, and attributes. T
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryContactsByPhoneNumber(phoneNumber: string, holder: Holder, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function queryContactsByPhoneNumber(phoneNumber: string, holder: Holder, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
@@ -378,6 +392,8 @@ Queries a contact based on the specified phone number, holder, and attributes. T
 **Since:** 10
 
 **Required permissions:** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryContactsByPhoneNumber(context: Context, phoneNumber: string, holder: Holder, attrs: ContactAttributes,    callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function queryContactsByPhoneNumber(context: Context, phoneNumber: string, holder: Holder, attrs: ContactAttributes,    callback: AsyncCallback<Array<Contact>>): void-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -445,6 +461,8 @@ Queries a contact based on the specified phone number, holder, and attributes. T
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryContactsByPhoneNumber(phoneNumber: string, holder?: Holder, attrs?: ContactAttributes): Promise<Array<Contact>>--><!--Device-contact-function queryContactsByPhoneNumber(phoneNumber: string, holder?: Holder, attrs?: ContactAttributes): Promise<Array<Contact>>-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
@@ -492,6 +510,8 @@ Queries a contact based on the specified phone number, holder, and attributes. T
 **Since:** 10
 
 **Required permissions:** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryContactsByPhoneNumber(context: Context, phoneNumber: string, holder?: Holder, attrs?: ContactAttributes): Promise<Array<Contact>>--><!--Device-contact-function queryContactsByPhoneNumber(context: Context, phoneNumber: string, holder?: Holder, attrs?: ContactAttributes): Promise<Array<Contact>>-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 

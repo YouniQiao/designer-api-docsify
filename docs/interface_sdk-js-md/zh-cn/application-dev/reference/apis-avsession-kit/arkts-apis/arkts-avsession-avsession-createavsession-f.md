@@ -20,6 +20,8 @@ function createAVSession(context: Context, tag: string, type: AVSessionType, cal
 
 **起始版本：** 10
 
+<!--Device-avSession-function createAVSession(context: Context, tag: string, type: AVSessionType, callback: AsyncCallback<AVSession>): void--><!--Device-avSession-function createAVSession(context: Context, tag: string, type: AVSessionType, callback: AsyncCallback<AVSession>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **参数：**
@@ -92,7 +94,9 @@ function createAVSession(context: Context, tag: string, type: AVSessionType): Pr
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-avSession-function createAVSession(context: Context, tag: string, type: AVSessionType): Promise<AVSession>--><!--Device-avSession-function createAVSession(context: Context, tag: string, type: AVSessionType): Promise<AVSession>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 

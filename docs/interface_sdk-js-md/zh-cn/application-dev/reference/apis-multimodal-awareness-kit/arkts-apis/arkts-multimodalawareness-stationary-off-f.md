@@ -16,6 +16,8 @@ function off(activity: ActivityType, event: ActivityEvent, callback?: Callback<A
 
 **起始版本：** 9
 
+<!--Device-stationary-function off(activity: ActivityType, event: ActivityEvent, callback?: Callback<ActivityResponse>): void--><!--Device-stationary-function off(activity: ActivityType, event: ActivityEvent, callback?: Callback<ActivityResponse>): void-End-->
+
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Stationary
 
 **参数：**

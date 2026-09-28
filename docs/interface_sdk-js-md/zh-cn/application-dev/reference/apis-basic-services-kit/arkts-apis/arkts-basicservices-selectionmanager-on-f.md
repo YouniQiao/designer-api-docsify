@@ -16,6 +16,8 @@ function on(type: 'selectionCompleted', callback: Callback<SelectionInfo>): void
 
 **起始版本：** 24
 
+<!--Device-selectionManager-function on(type: 'selectionCompleted', callback: Callback<SelectionInfo>): void--><!--Device-selectionManager-function on(type: 'selectionCompleted', callback: Callback<SelectionInfo>): void-End-->
+
 **系统能力：** SystemCapability.SelectionInput.Selection
 
 **参数：**

@@ -8,6 +8,8 @@ type ClickResponseTime = 'Short' | 'Medium' | 'Long'
 
 **起始版本：** 11
 
+<!--Device-config-type ClickResponseTime = 'Short' | 'Medium' | 'Long'--><!--Device-config-type ClickResponseTime = 'Short' | 'Medium' | 'Long'-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。

@@ -8,6 +8,8 @@ Provides APIs for querying the color retention type supported by the device.
 
 **起始版本：** 15
 
+<!--Device-camera-interface ColorReservationQuery--><!--Device-camera-interface ColorReservationQuery-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -27,6 +29,8 @@ getSupportedColorReservationTypes(): Array<ColorReservationType>
 Obtains the supported color reservation types.
 
 **起始版本：** 15
+
+<!--Device-ColorReservationQuery-getSupportedColorReservationTypes(): Array<ColorReservationType>--><!--Device-ColorReservationQuery-getSupportedColorReservationTypes(): Array<ColorReservationType>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

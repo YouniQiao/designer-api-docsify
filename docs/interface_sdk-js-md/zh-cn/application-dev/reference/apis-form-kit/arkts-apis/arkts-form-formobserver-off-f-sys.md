@@ -18,6 +18,8 @@ function off(type: 'formAdd', hostBundleName?: string, observerCallback?: Callba
 
 **需要权限：** ohos.permission.OBSERVE_FORM_RUNNING
 
+<!--Device-formObserver-function off(type: 'formAdd', hostBundleName?: string, observerCallback?: Callback<formInfo.RunningFormInfo>): void--><!--Device-formObserver-function off(type: 'formAdd', hostBundleName?: string, observerCallback?: Callback<formInfo.RunningFormInfo>): void-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -63,6 +65,8 @@ function off(type: 'formRemove', hostBundleName?: string, observerCallback?: Cal
 **起始版本：** 10
 
 **需要权限：** ohos.permission.OBSERVE_FORM_RUNNING
+
+<!--Device-formObserver-function off(type: 'formRemove', hostBundleName?: string, observerCallback?: Callback<formInfo.RunningFormInfo>): void--><!--Device-formObserver-function off(type: 'formRemove', hostBundleName?: string, observerCallback?: Callback<formInfo.RunningFormInfo>): void-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -113,6 +117,8 @@ function off(
 **起始版本：** 10
 
 **需要权限：** ohos.permission.OBSERVE_FORM_RUNNING
+
+<!--Device-formObserver-function off(    type: 'notifyVisible',    hostBundleName?: string,    observerCallback?: Callback<Array<formInfo.RunningFormInfo>>  ): void--><!--Device-formObserver-function off(    type: 'notifyVisible',    hostBundleName?: string,    observerCallback?: Callback<Array<formInfo.RunningFormInfo>>  ): void-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -166,6 +172,8 @@ function off(
 
 **需要权限：** ohos.permission.OBSERVE_FORM_RUNNING
 
+<!--Device-formObserver-function off(    type: 'notifyInvisible',    hostBundleName?: string,    observerCallback?: Callback<Array<formInfo.RunningFormInfo>>  ): void--><!--Device-formObserver-function off(    type: 'notifyInvisible',    hostBundleName?: string,    observerCallback?: Callback<Array<formInfo.RunningFormInfo>>  ): void-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -214,6 +222,8 @@ function off(type: 'router', hostBundleName?: string, observerCallback?: Callbac
 
 **需要权限：** ohos.permission.OBSERVE_FORM_RUNNING
 
+<!--Device-formObserver-function off(type: 'router', hostBundleName?: string, observerCallback?: Callback<formInfo.RunningFormInfo>): void--><!--Device-formObserver-function off(type: 'router', hostBundleName?: string, observerCallback?: Callback<formInfo.RunningFormInfo>): void-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -258,6 +268,8 @@ function off(type: 'message', hostBundleName?: string, observerCallback?: Callba
 
 **需要权限：** ohos.permission.OBSERVE_FORM_RUNNING
 
+<!--Device-formObserver-function off(type: 'message', hostBundleName?: string, observerCallback?: Callback<formInfo.RunningFormInfo>): void--><!--Device-formObserver-function off(type: 'message', hostBundleName?: string, observerCallback?: Callback<formInfo.RunningFormInfo>): void-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -301,6 +313,8 @@ function off(type: 'call', hostBundleName?: string, observerCallback?: Callback<
 **起始版本：** 11
 
 **需要权限：** ohos.permission.OBSERVE_FORM_RUNNING
+
+<!--Device-formObserver-function off(type: 'call', hostBundleName?: string, observerCallback?: Callback<formInfo.RunningFormInfo>): void--><!--Device-formObserver-function off(type: 'call', hostBundleName?: string, observerCallback?: Callback<formInfo.RunningFormInfo>): void-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 

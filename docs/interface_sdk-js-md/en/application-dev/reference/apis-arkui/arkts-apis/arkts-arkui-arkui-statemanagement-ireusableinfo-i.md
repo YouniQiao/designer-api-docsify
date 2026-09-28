@@ -8,6 +8,8 @@ The **IReusableInfo** API provides information about the current number and maxi
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export declare interface IReusableInfo--><!--Device-unnamed-export declare interface IReusableInfo-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -32,6 +34,8 @@ Number of components currently recycled in the pool. If **reuseId** is specified
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-IReusableInfo-readonly count: number--><!--Device-IReusableInfo-readonly count: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## maxCount
@@ -50,6 +54,8 @@ Maximum number of components that can be recycled in the pool. If **reuseId** is
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-IReusableInfo-maxCount: number--><!--Device-IReusableInfo-maxCount: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## reuseId
@@ -67,5 +73,7 @@ Reuse ID specified when a component is recycled. If the component is not recycle
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-IReusableInfo-readonly reuseId?: string--><!--Device-IReusableInfo-readonly reuseId?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

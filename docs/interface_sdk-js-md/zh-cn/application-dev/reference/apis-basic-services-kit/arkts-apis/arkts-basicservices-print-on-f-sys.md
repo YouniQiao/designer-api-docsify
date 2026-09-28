@@ -18,6 +18,8 @@ function on(type: 'printerStateChange', callback: (state: PrinterState, info: Pr
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-print-function on(type: 'printerStateChange', callback: (state: PrinterState, info: PrinterInfo) => void): void--><!--Device-print-function on(type: 'printerStateChange', callback: (state: PrinterState, info: PrinterInfo) => void): void-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **系统接口：** 此接口为系统接口。
@@ -66,6 +68,8 @@ function on(type: 'jobStateChange', callback: (state: PrintJobState, job: PrintJ
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-print-function on(type: 'jobStateChange', callback: (state: PrintJobState, job: PrintJob) => void): void--><!--Device-print-function on(type: 'jobStateChange', callback: (state: PrintJobState, job: PrintJob) => void): void-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **系统接口：** 此接口为系统接口。
@@ -107,6 +111,8 @@ function on(type: 'extInfoChange', callback: (extensionId: string, info: string)
 **起始版本：** 10
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
+
+<!--Device-print-function on(type: 'extInfoChange', callback: (extensionId: string, info: string) => void): void--><!--Device-print-function on(type: 'extInfoChange', callback: (extensionId: string, info: string) => void): void-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 

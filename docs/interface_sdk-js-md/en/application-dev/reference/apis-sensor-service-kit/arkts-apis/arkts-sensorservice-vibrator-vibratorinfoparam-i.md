@@ -8,6 +8,8 @@ Defines the vibrator parameters. If **VibratorInfoParam** is left unspecified, a
 
 **Since:** 19
 
+<!--Device-vibrator-interface VibratorInfoParam--><!--Device-vibrator-interface VibratorInfoParam-End-->
+
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Device ID. The default value is **-1**, indicating the local device. Since API v
 
 **Since:** 19
 
+<!--Device-VibratorInfoParam-deviceId?: int--><!--Device-VibratorInfoParam-deviceId?: int-End-->
+
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 ## vibratorId
@@ -41,5 +45,7 @@ Vibrator ID. The default value is **0**, which indicates all vibrators of the lo
 **Type:** number
 
 **Since:** 19
+
+<!--Device-VibratorInfoParam-vibratorId?: int--><!--Device-VibratorInfoParam-vibratorId?: int-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice

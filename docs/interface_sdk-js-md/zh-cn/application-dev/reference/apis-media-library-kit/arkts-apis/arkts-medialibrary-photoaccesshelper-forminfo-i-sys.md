@@ -8,6 +8,8 @@ interface FormInfo
 
 **起始版本：** 11
 
+<!--Device-photoAccessHelper-interface FormInfo--><!--Device-photoAccessHelper-interface FormInfo-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ formId: string
 
 **起始版本：** 11
 
+<!--Device-FormInfo-formId: string--><!--Device-FormInfo-formId: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ uri: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-FormInfo-uri: string--><!--Device-FormInfo-uri: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

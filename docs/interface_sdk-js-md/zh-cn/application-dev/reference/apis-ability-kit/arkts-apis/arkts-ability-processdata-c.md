@@ -18,6 +18,8 @@ import { appManager } from '@kit.AbilityKit';
 
 **起始版本：** 14
 
+<!--Device-unnamed-declare class ProcessData--><!--Device-unnamed-declare class ProcessData-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## bundleName
@@ -31,6 +33,8 @@ bundleName: string
 **类型：** string
 
 **起始版本：** 14
+
+<!--Device-ProcessData-bundleName: string--><!--Device-ProcessData-bundleName: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -46,6 +50,8 @@ isContinuousTask: boolean
 
 **起始版本：** 14
 
+<!--Device-ProcessData-isContinuousTask: boolean--><!--Device-ProcessData-isContinuousTask: boolean-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## isKeepAlive
@@ -60,6 +66,8 @@ isKeepAlive: boolean
 
 **起始版本：** 14
 
+<!--Device-ProcessData-isKeepAlive: boolean--><!--Device-ProcessData-isKeepAlive: boolean-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## pid
@@ -73,6 +81,8 @@ pid: number
 **类型：** number
 
 **起始版本：** 14
+
+<!--Device-ProcessData-pid: int--><!--Device-ProcessData-pid: int-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -98,6 +108,8 @@ state: number
 
 **起始版本：** 14
 
+<!--Device-ProcessData-state: int--><!--Device-ProcessData-state: int-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## uid
@@ -111,5 +123,7 @@ uid: number
 **类型：** number
 
 **起始版本：** 14
+
+<!--Device-ProcessData-uid: int--><!--Device-ProcessData-uid: int-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

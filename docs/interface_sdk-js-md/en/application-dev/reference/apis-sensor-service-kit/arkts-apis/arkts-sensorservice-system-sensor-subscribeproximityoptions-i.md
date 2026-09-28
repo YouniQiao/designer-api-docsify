@@ -14,6 +14,8 @@ Sets the parameters for subscribing to the distance sensor, including the callba
 
 **Substitutes:** [PROXIMITY](arkts-sensorservice-sensor-sensorid-e.md#proximity)
 
+<!--Device-unnamed-export interface SubscribeProximityOptions--><!--Device-unnamed-export interface SubscribeProximityOptions-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 ## Modules to Import
@@ -37,6 +39,8 @@ Callback invoked when an API call fails. The callback parameters are **data** of
 **Substitutes:** [on](arkts-sensorservice-sensor-on-f.md)
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-SubscribeProximityOptions-fail?: (data: string, code: number) => void--><!--Device-SubscribeProximityOptions-fail?: (data: string, code: number) => void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
@@ -62,6 +66,8 @@ Callback function invoked when the proximity sensor data changes. The callback p
 **Substitutes:** [on](arkts-sensorservice-sensor-on-f.md)
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-SubscribeProximityOptions-success: (data: ProximityResponse) => void--><!--Device-SubscribeProximityOptions-success: (data: ProximityResponse) => void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 

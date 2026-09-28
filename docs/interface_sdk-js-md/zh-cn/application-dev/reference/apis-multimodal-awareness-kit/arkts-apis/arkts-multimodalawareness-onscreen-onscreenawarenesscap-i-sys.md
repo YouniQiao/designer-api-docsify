@@ -26,7 +26,7 @@ export interface OnscreenAwarenessCap
 |QuickSnap|获取单次截屏信息。使用规格：仅在capture接口使用，capList仅传递"QuickSnap"时生效，其他使用接口均返回401错误码。|
 |UiTree|获取页面内JSON树信息。起始版本：26.0.0|
 |InjectEvent|注入事件。起始版本：26.0.0|
-| [CollectStrategy](arkts-multimodalawareness-onscreen-collectstrategy-e-sys.md) |获取屏幕采集策略。起始版本：26.0.0|
+|CollectStrategy|获取屏幕采集策略。起始版本：26.0.0|
 
 * groupId支持能力列表<br>按业务场景预设的一组能力集合。可统一订阅业务场景，如下：
 
@@ -39,6 +39,8 @@ export interface OnscreenAwarenessCap
 |CeliaMemory|Article|获取阅读场景的感知信息。|
 
 **起始版本：** 23
+
+<!--Device-onScreen-export interface OnscreenAwarenessCap--><!--Device-onScreen-export interface OnscreenAwarenessCap-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -64,6 +66,8 @@ capList?: string[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OnscreenAwarenessCap-capList?: string[]--><!--Device-OnscreenAwarenessCap-capList?: string[]-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **系统接口：** 此接口为系统接口。
@@ -81,6 +85,8 @@ groupId?: string
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-OnscreenAwarenessCap-groupId?: string--><!--Device-OnscreenAwarenessCap-groupId?: string-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 

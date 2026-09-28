@@ -16,6 +16,8 @@ function getSecurityLabel(path: string): Promise<string>
 
 **起始版本：** 9
 
+<!--Device-securityLabel-function getSecurityLabel(path: string): Promise<string>--><!--Device-securityLabel-function getSecurityLabel(path: string): Promise<string>-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -67,6 +69,8 @@ function getSecurityLabel(path: string, callback: AsyncCallback<string>): void
 获取文件或目录的数据安全等级。若未设置过数据安全等级则默认返回“s3”。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-securityLabel-function getSecurityLabel(path: string, callback: AsyncCallback<string>): void--><!--Device-securityLabel-function getSecurityLabel(path: string, callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

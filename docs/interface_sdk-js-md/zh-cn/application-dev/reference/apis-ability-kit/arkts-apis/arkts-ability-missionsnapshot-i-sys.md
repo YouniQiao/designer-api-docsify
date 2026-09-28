@@ -8,6 +8,8 @@ export interface MissionSnapshot
 
 **起始版本：** 8
 
+<!--Device-unnamed-export interface MissionSnapshot--><!--Device-unnamed-export interface MissionSnapshot-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -24,6 +26,8 @@ ability: ElementName
 
 **起始版本：** 8
 
+<!--Device-MissionSnapshot-ability: ElementName--><!--Device-MissionSnapshot-ability: ElementName-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -39,6 +43,8 @@ snapshot: image.PixelMap
 **类型：** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **起始版本：** 8
+
+<!--Device-MissionSnapshot-snapshot: image.PixelMap--><!--Device-MissionSnapshot-snapshot: image.PixelMap-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 

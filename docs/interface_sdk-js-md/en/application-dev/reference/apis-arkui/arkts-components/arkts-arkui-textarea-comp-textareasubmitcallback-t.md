@@ -12,6 +12,8 @@ Called when the Enter key on the soft keyboard is pressed.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-unnamed-declare type TextAreaSubmitCallback = (enterKeyType: EnterKeyType, event?: SubmitEvent) => void--><!--Device-unnamed-declare type TextAreaSubmitCallback = (enterKeyType: EnterKeyType, event?: SubmitEvent) => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

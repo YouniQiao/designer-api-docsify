@@ -10,6 +10,8 @@ type ProfileUuids = constant.ProfileUuids
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-connection-type ProfileUuids = constant.ProfileUuids--><!--Device-connection-type ProfileUuids = constant.ProfileUuids-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **类型：** [constant.ProfileUuids](arkts-connectivity-constant-profileuuids-e.md)

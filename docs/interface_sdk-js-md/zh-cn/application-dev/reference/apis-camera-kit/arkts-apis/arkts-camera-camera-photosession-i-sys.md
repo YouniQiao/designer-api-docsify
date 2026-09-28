@@ -17,6 +17,8 @@ PhotoSession继承自[Session](arkts-camera-camera-session-i.md)、[Flash](arkts
 
 **起始版本：** 11
 
+<!--Device-camera-interface PhotoSession extends Session, Flash, AutoExposure, WhiteBalance, Focus, Zoom, ColorManagement,      AutoDeviceSwitch, Macro, ManualExposure, ManualFocus, ManualIso, OIS, Aperture--><!--Device-camera-interface PhotoSession extends Session, Flash, AutoExposure, WhiteBalance, Focus, Zoom, ColorManagement,      AutoDeviceSwitch, Macro, ManualExposure, ManualFocus, ManualIso, OIS, Aperture-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
@@ -34,6 +36,8 @@ getSessionConflictFunctions(): Array<PhotoConflictFunctions>
 Gets session conflict functions.
 
 **起始版本：** 13
+
+<!--Device-PhotoSession-getSessionConflictFunctions(): Array<PhotoConflictFunctions>--><!--Device-PhotoSession-getSessionConflictFunctions(): Array<PhotoConflictFunctions>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -60,6 +64,8 @@ getSessionFunctions(outputCapability: CameraOutputCapability): Array<PhotoFuncti
 Gets session functions.
 
 **起始版本：** 13
+
+<!--Device-PhotoSession-getSessionFunctions(outputCapability: CameraOutputCapability): Array<PhotoFunctions>--><!--Device-PhotoSession-getSessionFunctions(outputCapability: CameraOutputCapability): Array<PhotoFunctions>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -93,6 +99,8 @@ off(type: 'featureDetection', featureType: SceneFeatureType, callback?: AsyncCal
 Unsubscribe from camera feature detection status change events.
 
 **起始版本：** 12
+
+<!--Device-PhotoSession-off(type: 'featureDetection', featureType: SceneFeatureType, callback?: AsyncCallback<SceneFeatureDetectionResult>): void--><!--Device-PhotoSession-off(type: 'featureDetection', featureType: SceneFeatureType, callback?: AsyncCallback<SceneFeatureDetectionResult>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -130,6 +138,8 @@ Unsubscribes from effect suggestion event callback.
 
 **起始版本：** 12
 
+<!--Device-PhotoSession-off(type: 'effectSuggestionChange', callback?: AsyncCallback<EffectSuggestionType>): void--><!--Device-PhotoSession-off(type: 'effectSuggestionChange', callback?: AsyncCallback<EffectSuggestionType>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -150,6 +160,8 @@ off(type: 'lcdFlashStatus', callback?: AsyncCallback<LcdFlashStatus>): void
 Unsubscribes from LCD flash status change events.
 
 **起始版本：** 13
+
+<!--Device-PhotoSession-off(type: 'lcdFlashStatus', callback?: AsyncCallback<LcdFlashStatus>): void--><!--Device-PhotoSession-off(type: 'lcdFlashStatus', callback?: AsyncCallback<LcdFlashStatus>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -185,6 +197,8 @@ on(type: 'featureDetection', featureType: SceneFeatureType, callback: AsyncCallb
 Subscribe to scene feature detection status change events. This API uses an asynchronous callback to return the result.
 
 **起始版本：** 12
+
+<!--Device-PhotoSession-on(type: 'featureDetection', featureType: SceneFeatureType, callback: AsyncCallback<SceneFeatureDetectionResult>): void--><!--Device-PhotoSession-on(type: 'featureDetection', featureType: SceneFeatureType, callback: AsyncCallback<SceneFeatureDetectionResult>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -233,6 +247,8 @@ Subscribes to effect suggestion event callback.
 
 **起始版本：** 12
 
+<!--Device-PhotoSession-on(type: 'effectSuggestionChange', callback: AsyncCallback<EffectSuggestionType>): void--><!--Device-PhotoSession-on(type: 'effectSuggestionChange', callback: AsyncCallback<EffectSuggestionType>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -253,6 +269,8 @@ on(type: 'lcdFlashStatus', callback: AsyncCallback<LcdFlashStatus>): void
 Subscribes to LCD flash status change events. This API uses an asynchronous callback to return the result.
 
 **起始版本：** 13
+
+<!--Device-PhotoSession-on(type: 'lcdFlashStatus', callback: AsyncCallback<LcdFlashStatus>): void--><!--Device-PhotoSession-on(type: 'lcdFlashStatus', callback: AsyncCallback<LcdFlashStatus>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

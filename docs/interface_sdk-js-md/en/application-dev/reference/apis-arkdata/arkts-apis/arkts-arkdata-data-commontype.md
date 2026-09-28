@@ -4,6 +4,8 @@ The commonType module defines common data types in data management.
 
 **Since:** 11
 
+<!--Device-unnamed-declare namespace commonType--><!--Device-unnamed-declare namespace commonType-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CommonType
 
 ## Modules to Import

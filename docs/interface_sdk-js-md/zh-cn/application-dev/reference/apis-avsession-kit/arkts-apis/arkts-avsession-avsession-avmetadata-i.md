@@ -8,6 +8,8 @@ interface AVMetadata
 
 **起始版本：** 10
 
+<!--Device-avSession-interface AVMetadata--><!--Device-avSession-interface AVMetadata-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 ## 导入模块
@@ -28,7 +30,9 @@ album?: string
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVMetadata-album?: string--><!--Device-AVMetadata-album?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -44,7 +48,9 @@ artist?: string
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVMetadata-artist?: string--><!--Device-AVMetadata-artist?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -64,7 +70,9 @@ assetId: string
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVMetadata-assetId: string--><!--Device-AVMetadata-assetId: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -80,7 +88,9 @@ author?: string
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVMetadata-author?: string--><!--Device-AVMetadata-author?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -95,6 +105,8 @@ avQueueId?: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-AVMetadata-avQueueId?: string--><!--Device-AVMetadata-avQueueId?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -115,6 +127,8 @@ avQueueImage?: image.PixelMap | string
 
 **起始版本：** 11
 
+<!--Device-AVMetadata-avQueueImage?: image.PixelMap | string--><!--Device-AVMetadata-avQueueImage?: image.PixelMap | string-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 ## avQueueName
@@ -128,6 +142,8 @@ avQueueName?: string
 **类型：** string
 
 **起始版本：** 12
+
+<!--Device-AVMetadata-avQueueName?: string--><!--Device-AVMetadata-avQueueName?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -143,6 +159,8 @@ readonly bundleIcon?: image.PixelMap
 
 **起始版本：** 18
 
+<!--Device-AVMetadata-readonly bundleIcon?: image.PixelMap--><!--Device-AVMetadata-readonly bundleIcon?: image.PixelMap-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 ## composer
@@ -156,6 +174,8 @@ composer?: string
 **类型：** string
 
 **起始版本：** 10
+
+<!--Device-AVMetadata-composer?: string--><!--Device-AVMetadata-composer?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -171,7 +191,9 @@ description?: string
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVMetadata-description?: string--><!--Device-AVMetadata-description?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -187,6 +209,8 @@ displayTags?: number
 
 **起始版本：** 11
 
+<!--Device-AVMetadata-displayTags?: int--><!--Device-AVMetadata-displayTags?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 ## drmSchemes
@@ -200,6 +224,8 @@ drmSchemes?: Array<string>
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 12
+
+<!--Device-AVMetadata-drmSchemes?: Array<string>--><!--Device-AVMetadata-drmSchemes?: Array<string>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -215,7 +241,9 @@ duration?: number
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVMetadata-duration?: long--><!--Device-AVMetadata-duration?: long-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -239,6 +267,8 @@ fastForwardSkipIntervals?: SkipIntervals
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVMetadata-fastForwardSkipIntervals?: SkipIntervals--><!--Device-AVMetadata-fastForwardSkipIntervals?: SkipIntervals-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 ## filter
@@ -253,7 +283,9 @@ filter?: number
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVMetadata-filter?: int--><!--Device-AVMetadata-filter?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -273,6 +305,8 @@ lyric?: string
 
 **起始版本：** 10
 
+<!--Device-AVMetadata-lyric?: string--><!--Device-AVMetadata-lyric?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 ## mediaImage
@@ -290,7 +324,9 @@ mediaImage?: image.PixelMap | string
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVMetadata-mediaImage?: image.PixelMap | string--><!--Device-AVMetadata-mediaImage?: image.PixelMap | string-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -306,7 +342,9 @@ nextAssetId?: string
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVMetadata-nextAssetId?: string--><!--Device-AVMetadata-nextAssetId?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -322,7 +360,9 @@ previousAssetId?: string
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVMetadata-previousAssetId?: string--><!--Device-AVMetadata-previousAssetId?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -337,6 +377,8 @@ publishDate?: Date
 **类型：** Date
 
 **起始版本：** 10
+
+<!--Device-AVMetadata-publishDate?: Date--><!--Device-AVMetadata-publishDate?: Date-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -360,6 +402,8 @@ rewindSkipIntervals?: SkipIntervals
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVMetadata-rewindSkipIntervals?: SkipIntervals--><!--Device-AVMetadata-rewindSkipIntervals?: SkipIntervals-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 ## singleLyricText
@@ -376,7 +420,9 @@ singleLyricText?: string
 
 **起始版本：** 17
 
-**原子化服务API：** 从API版本17开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本17开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVMetadata-singleLyricText?: string--><!--Device-AVMetadata-singleLyricText?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -392,6 +438,8 @@ skipIntervals?: SkipIntervals
 
 **起始版本：** 11
 
+<!--Device-AVMetadata-skipIntervals?: SkipIntervals--><!--Device-AVMetadata-skipIntervals?: SkipIntervals-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 ## subtitle
@@ -406,7 +454,9 @@ subtitle?: string
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVMetadata-subtitle?: string--><!--Device-AVMetadata-subtitle?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -422,7 +472,9 @@ title?: string
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVMetadata-title?: string--><!--Device-AVMetadata-title?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -438,6 +490,8 @@ writer?: string
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVMetadata-writer?: string--><!--Device-AVMetadata-writer?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core

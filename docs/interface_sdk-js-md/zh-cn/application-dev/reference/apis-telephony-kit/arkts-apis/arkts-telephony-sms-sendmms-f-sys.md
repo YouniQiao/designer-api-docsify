@@ -18,6 +18,8 @@ function sendMms(context: Context, mmsParams: MmsParams, callback: AsyncCallback
 
 **需要权限：** ohos.permission.SEND_MESSAGES
 
+<!--Device-sms-function sendMms(context: Context, mmsParams: MmsParams, callback: AsyncCallback<void>): void--><!--Device-sms-function sendMms(context: Context, mmsParams: MmsParams, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -26,7 +28,7 @@ function sendMms(context: Context, mmsParams: MmsParams, callback: AsyncCallback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 应用上下文。<br>FA模型的应用Context定义见Context。<br>Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md)。 |
+| context | Context | 是 | 应用上下文。<br>FA模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context.md)。<br>Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md)。 |
 | mmsParams | [MmsParams](arkts-telephony-sms-mmsparams-i-sys.md) | 是 | 发送彩信的参数和回调，参考[MmsParams](arkts-telephony-sms-mmsparams-i-sys.md)。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 发送彩信的回调函数。 |
 
@@ -133,6 +135,8 @@ function sendMms(context: Context, mmsParams: MmsParams): Promise<void>
 
 **需要权限：** ohos.permission.SEND_MESSAGES
 
+<!--Device-sms-function sendMms(context: Context, mmsParams: MmsParams): Promise<void>--><!--Device-sms-function sendMms(context: Context, mmsParams: MmsParams): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -141,7 +145,7 @@ function sendMms(context: Context, mmsParams: MmsParams): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 应用上下文。<br>FA模型的应用Context定义见Context。<br>Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md)。 |
+| context | Context | 是 | 应用上下文。<br>FA模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context.md)。<br>Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md)。 |
 | mmsParams | [MmsParams](arkts-telephony-sms-mmsparams-i-sys.md) | 是 | 发送彩信的参数和回调，参考[MmsParams](arkts-telephony-sms-mmsparams-i-sys.md)。 |
 
 **返回值：**

@@ -10,6 +10,8 @@ USB设备类型信息。
 
 **起始版本：** 14
 
+<!--Device-usbManager-export interface UsbDeviceType--><!--Device-usbManager-export interface UsbDeviceType-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## 导入模块
@@ -36,6 +38,8 @@ baseClass: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UsbDeviceType-baseClass: number--><!--Device-UsbDeviceType-baseClass: number-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## descriptor
@@ -55,6 +59,8 @@ USB描述符。
 **起始版本：** 14
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UsbDeviceType-descriptor: Descriptor--><!--Device-UsbDeviceType-descriptor: Descriptor-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -76,6 +82,8 @@ protocol: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UsbDeviceType-protocol: number--><!--Device-UsbDeviceType-protocol: number-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## subClass
@@ -95,5 +103,7 @@ subClass: number
 **起始版本：** 14
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UsbDeviceType-subClass: number--><!--Device-UsbDeviceType-subClass: number-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager

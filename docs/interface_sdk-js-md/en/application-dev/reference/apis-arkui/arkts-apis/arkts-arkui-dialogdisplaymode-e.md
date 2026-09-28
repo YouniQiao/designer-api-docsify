@@ -8,6 +8,8 @@ Enumerates the display modes of the dialog box in the subwindow.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-declare enum DialogDisplayMode--><!--Device-unnamed-declare enum DialogDisplayMode-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## SCREEN_BASED
@@ -24,6 +26,8 @@ The dialog box is displayed in the center of the screen.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-DialogDisplayMode-SCREEN_BASED = 0--><!--Device-DialogDisplayMode-SCREEN_BASED = 0-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## WINDOW_BASED
@@ -39,5 +43,7 @@ The dialog box is displayed in the center of the application window.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-DialogDisplayMode-WINDOW_BASED = 1--><!--Device-DialogDisplayMode-WINDOW_BASED = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

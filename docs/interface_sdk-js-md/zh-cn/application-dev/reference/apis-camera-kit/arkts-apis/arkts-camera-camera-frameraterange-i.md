@@ -8,6 +8,8 @@ interface FrameRateRange
 
 **起始版本：** 10
 
+<!--Device-camera-interface FrameRateRange--><!--Device-camera-interface FrameRateRange-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
@@ -28,7 +30,9 @@ readonly max: number
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-FrameRateRange-readonly max: int--><!--Device-FrameRateRange-readonly max: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -44,6 +48,8 @@ readonly min: number
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-FrameRateRange-readonly min: int--><!--Device-FrameRateRange-readonly min: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core

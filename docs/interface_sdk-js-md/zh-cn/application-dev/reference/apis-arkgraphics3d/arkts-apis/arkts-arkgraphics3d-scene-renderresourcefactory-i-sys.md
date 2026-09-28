@@ -10,6 +10,8 @@ export interface RenderResourceFactory
 
 **起始版本：** 20
 
+<!--Device-unnamed-export interface RenderResourceFactory--><!--Device-unnamed-export interface RenderResourceFactory-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 <a id="createscene-1"></a>
@@ -25,6 +27,8 @@ createScene(uri: ResourceStr, param: SceneLoadParams): Promise<Scene>
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-RenderResourceFactory-createScene(uri: ResourceStr, param: SceneLoadParams): Promise<Scene>--><!--Device-RenderResourceFactory-createScene(uri: ResourceStr, param: SceneLoadParams): Promise<Scene>-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 

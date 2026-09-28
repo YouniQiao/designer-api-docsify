@@ -10,6 +10,8 @@ export interface AgentExtensionConnectCallback
 
 **起始版本：** 24
 
+<!--Device-unnamed-export interface AgentExtensionConnectCallback--><!--Device-unnamed-export interface AgentExtensionConnectCallback-End-->
+
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -25,6 +27,8 @@ onAuth(handshakeData: string): void
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AgentExtensionConnectCallback-onAuth(handshakeData: string): void--><!--Device-AgentExtensionConnectCallback-onAuth(handshakeData: string): void-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -48,6 +52,8 @@ onData(data: string): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AgentExtensionConnectCallback-onData(data: string): void--><!--Device-AgentExtensionConnectCallback-onData(data: string): void-End-->
+
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -69,6 +75,8 @@ onDisconnect(): void
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AgentExtensionConnectCallback-onDisconnect(): void--><!--Device-AgentExtensionConnectCallback-onDisconnect(): void-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 

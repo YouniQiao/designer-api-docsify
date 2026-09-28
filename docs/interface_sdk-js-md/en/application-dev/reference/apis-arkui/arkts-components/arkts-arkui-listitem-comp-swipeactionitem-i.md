@@ -10,6 +10,8 @@ When used as a **start** swipe-out item, it is displayed on the left of the **Li
 
 **Since:** 10
 
+<!--Device-unnamed-declare interface SwipeActionItem--><!--Device-unnamed-declare interface SwipeActionItem-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onAction
@@ -25,6 +27,8 @@ Callback invoked when the list item is released while in the delete area.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SwipeActionItem-onAction?: () => void--><!--Device-SwipeActionItem-onAction?: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,6 +46,8 @@ Callback invoked each time the list item enters the delete area.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SwipeActionItem-onEnterActionArea?: () => void--><!--Device-SwipeActionItem-onEnterActionArea?: () => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onExitActionArea
@@ -58,6 +64,8 @@ Callback invoked each time the list item exits the delete area.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SwipeActionItem-onExitActionArea?: () => void--><!--Device-SwipeActionItem-onExitActionArea?: () => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onStateChange
@@ -73,6 +81,8 @@ Callback invoked when the swipe state of the list item changes.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SwipeActionItem-onStateChange?: (state: SwipeActionState) => void--><!--Device-SwipeActionItem-onStateChange?: (state: SwipeActionState) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -100,6 +110,8 @@ Swipe distance threshold for deleting the list item. This threshold applies afte
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SwipeActionItem-actionAreaDistance?: Length--><!--Device-SwipeActionItem-actionAreaDistance?: Length-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## builder
@@ -118,6 +130,8 @@ Swipe action item displayed when the list item is swiped left or right (in verti
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SwipeActionItem-builder?: CustomBuilder--><!--Device-SwipeActionItem-builder?: CustomBuilder-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## builderComponent
@@ -135,5 +149,7 @@ Swipe action item displayed when the list item is swiped left or right (in verti
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SwipeActionItem-builderComponent?: ComponentContent--><!--Device-SwipeActionItem-builderComponent?: ComponentContent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

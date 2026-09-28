@@ -15,6 +15,8 @@
 
 **替代接口：** [distributedDeviceManager](arkts-distributedservice-distributeddevicemanager.md)
 
+<!--Device-unnamed-declare namespace deviceManager--><!--Device-unnamed-declare namespace deviceManager-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 ## 导入模块

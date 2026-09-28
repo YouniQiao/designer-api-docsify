@@ -25,6 +25,8 @@ Subscribes to data of the acceleration sensor. This API uses an asynchronous cal
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-sensor-function on(type: SensorId.ACCELEROMETER, callback: Callback<AccelerometerResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorId.ACCELEROMETER, callback: Callback<AccelerometerResponse>,    options?: Options): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -82,6 +84,8 @@ Subscribes to data of the uncalibrated acceleration sensor. This API uses an asy
 **Since:** 9
 
 **Required permissions:** ohos.permission.ACCELEROMETER
+
+<!--Device-sensor-function on(type: SensorId.ACCELEROMETER_UNCALIBRATED, callback: Callback<AccelerometerUncalibratedResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorId.ACCELEROMETER_UNCALIBRATED, callback: Callback<AccelerometerUncalibratedResponse>,    options?: Options): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -141,6 +145,8 @@ Subscribes to data of the ambient light sensor. This API uses an asynchronous ca
 
 **Since:** 9
 
+<!--Device-sensor-function on(type: SensorId.AMBIENT_LIGHT, callback: Callback<LightResponse>, options?: Options): void--><!--Device-sensor-function on(type: SensorId.AMBIENT_LIGHT, callback: Callback<LightResponse>, options?: Options): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -194,6 +200,8 @@ Subscribes to data of the ambient temperature sensor. This API uses an asynchron
 
 **Since:** 9
 
+<!--Device-sensor-function on(type: SensorId.AMBIENT_TEMPERATURE, callback: Callback<AmbientTemperatureResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorId.AMBIENT_TEMPERATURE, callback: Callback<AmbientTemperatureResponse>,    options?: Options): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -245,6 +253,8 @@ function on(type: SensorId.BAROMETER, callback: Callback<BarometerResponse>, opt
 Subscribes to data of the barometer sensor. This API uses an asynchronous callback to return the result. The barometric pressure sensor is used to measure atmospheric pressure. It is applicable to scenarios such as altitude estimation and weather forecast assistance. After this method is called, the system continuously reports barometric pressure data at the specified frequency through the callback.
 
 **Since:** 9
+
+<!--Device-sensor-function on(type: SensorId.BAROMETER, callback: Callback<BarometerResponse>, options?: Options): void--><!--Device-sensor-function on(type: SensorId.BAROMETER, callback: Callback<BarometerResponse>, options?: Options): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -298,6 +308,8 @@ function on(type: SensorId.GRAVITY, callback: Callback<GravityResponse>,
 Subscribes to data of the gravity sensor. This API uses an asynchronous callback to return the result. The gravity sensor measures the gravity acceleration components of the device along the x, y, and z axes. It is applicable to scenarios where the gravity component needs to be separated for motion analysis, such as game control and motion detection. After this method is called, the system continuously reports gravity component data at the specified frequency through the callback.
 
 **Since:** 9
+
+<!--Device-sensor-function on(type: SensorId.GRAVITY, callback: Callback<GravityResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorId.GRAVITY, callback: Callback<GravityResponse>,    options?: Options): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -360,6 +372,8 @@ Subscribes to data of the gyroscope sensor. This API uses an asynchronous callba
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-sensor-function on(type: SensorId.GYROSCOPE, callback: Callback<GyroscopeResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorId.GYROSCOPE, callback: Callback<GyroscopeResponse>,    options?: Options): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -417,6 +431,8 @@ Subscribes to data of the uncalibrated gyroscope sensor. This API uses an asynch
 **Since:** 9
 
 **Required permissions:** ohos.permission.GYROSCOPE
+
+<!--Device-sensor-function on(type: SensorId.GYROSCOPE_UNCALIBRATED, callback: Callback<GyroscopeUncalibratedResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorId.GYROSCOPE_UNCALIBRATED, callback: Callback<GyroscopeUncalibratedResponse>,    options?: Options): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -476,6 +492,8 @@ Subscribes to data of the Hall effect sensor. This API uses an asynchronous call
 
 **Since:** 9
 
+<!--Device-sensor-function on(type: SensorId.HALL, callback: Callback<HallResponse>, options?: Options): void--><!--Device-sensor-function on(type: SensorId.HALL, callback: Callback<HallResponse>, options?: Options): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -531,6 +549,8 @@ Subscribes to data of the heart rate sensor. This API uses an asynchronous callb
 
 **Required permissions:** ohos.permission.READ_HEALTH_DATA
 
+<!--Device-sensor-function on(type: SensorId.HEART_RATE, callback: Callback<HeartRateResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorId.HEART_RATE, callback: Callback<HeartRateResponse>,    options?: Options): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -584,6 +604,8 @@ function on(type: SensorId.HUMIDITY, callback: Callback<HumidityResponse>,
 Subscribes to data of the humidity sensor. This API uses an asynchronous callback to return the result. The humidity sensor is used to measure the relative humidity of the surrounding environment. It is applicable to scenarios such as ambient humidity monitoring and collaboration with other smart home devices. After this method is called, the system continuously reports humidity data at the specified frequency through the callback.
 
 **Since:** 9
+
+<!--Device-sensor-function on(type: SensorId.HUMIDITY, callback: Callback<HumidityResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorId.HUMIDITY, callback: Callback<HumidityResponse>,    options?: Options): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -639,6 +661,8 @@ Subscribes to data of the linear acceleration sensor. This API uses an asynchron
 **Since:** 9
 
 **Required permissions:** ohos.permission.ACCELEROMETER
+
+<!--Device-sensor-function on(type: SensorId.LINEAR_ACCELEROMETER, callback: Callback<LinearAccelerometerResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorId.LINEAR_ACCELEROMETER, callback: Callback<LinearAccelerometerResponse>,    options?: Options): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -696,6 +720,8 @@ Subscribes to data of the magnetic field sensor. This API uses an asynchronous c
 
 **Since:** 9
 
+<!--Device-sensor-function on(type: SensorId.MAGNETIC_FIELD, callback: Callback<MagneticFieldResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorId.MAGNETIC_FIELD, callback: Callback<MagneticFieldResponse>,    options?: Options): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -750,6 +776,8 @@ function on(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback: Callback<Magne
 Subscribes to data of the uncalibrated magnetic field sensor. This API uses an asynchronous callback to return the result. The difference between the uncalibrated magnetic field sensor and the magnetic field sensor is that the **biasX**, **biasY**, and **biasZ** values reported by the uncalibrated magnetic field sensor are not calibrated by the system. This sensor is suitable for scenarios where raw magnetic field data is required or a custom calibration algorithm is implemented. Compared with **sensor.on('SensorId.MAGNETIC_FIELD')**, this API provides the bias information, which is suitable for scenarios where the geomagnetic calibration deviation of the device needs to be analyzed.
 
 **Since:** 9
+
+<!--Device-sensor-function on(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback: Callback<MagneticFieldUncalibratedResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback: Callback<MagneticFieldUncalibratedResponse>,    options?: Options): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -819,6 +847,8 @@ Subscribes to data of the orientation sensor. This API uses an asynchronous call
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-sensor-function on(type: SensorId.ORIENTATION, callback: Callback<OrientationResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorId.ORIENTATION, callback: Callback<OrientationResponse>,    options?: Options): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -880,6 +910,8 @@ Subscribes to data of the pedometer sensor. This API uses an asynchronous callba
 
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
 
+<!--Device-sensor-function on(type: SensorId.PEDOMETER, callback: Callback<PedometerResponse>, options?: Options): void--><!--Device-sensor-function on(type: SensorId.PEDOMETER, callback: Callback<PedometerResponse>, options?: Options): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -936,6 +968,8 @@ Subscribes to data of the pedometer detection sensor. This API uses an asynchron
 
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
 
+<!--Device-sensor-function on(type: SensorId.PEDOMETER_DETECTION, callback: Callback<PedometerDetectionResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorId.PEDOMETER_DETECTION, callback: Callback<PedometerDetectionResponse>,    options?: Options): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -989,6 +1023,8 @@ Subscribes to data of the proximity sensor. This API uses an asynchronous callba
 
 **Since:** 9
 
+<!--Device-sensor-function on(type: SensorId.PROXIMITY, callback: Callback<ProximityResponse>, options?: Options): void--><!--Device-sensor-function on(type: SensorId.PROXIMITY, callback: Callback<ProximityResponse>, options?: Options): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -1041,6 +1077,8 @@ function on(type: SensorId.ROTATION_VECTOR, callback: Callback<RotationVectorRes
 Subscribes to data of the rotation vector sensor. This API uses an asynchronous callback to return the result. The rotation vector sensor is used to indicate the orientation of a device. The data consists of the X, Y, and Z components and the scalar W, and can be used for device orientation estimation and AR/VR scenarios. After this method is called, the system continuously reports rotation vector data at the specified frequency through the callback.
 
 **Since:** 9
+
+<!--Device-sensor-function on(type: SensorId.ROTATION_VECTOR, callback: Callback<RotationVectorResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorId.ROTATION_VECTOR, callback: Callback<RotationVectorResponse>,    options?: Options): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -1096,6 +1134,8 @@ Subscribes to significant motion sensor data to detect significant motion events
 
 **Since:** 9
 
+<!--Device-sensor-function on(type: SensorId.SIGNIFICANT_MOTION, callback: Callback<SignificantMotionResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorId.SIGNIFICANT_MOTION, callback: Callback<SignificantMotionResponse>,    options?: Options): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -1147,6 +1187,8 @@ Subscribes to data of the wear detection sensor. This API uses an asynchronous c
 
 **Since:** 9
 
+<!--Device-sensor-function on(type: SensorId.WEAR_DETECTION, callback: Callback<WearDetectionResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorId.WEAR_DETECTION, callback: Callback<WearDetectionResponse>,    options?: Options): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -1197,6 +1239,8 @@ function on(type: SensorId.FUSION_PRESSURE, callback: Callback<FusionPressureRes
 Subscribes to the fused pressure sensor data. This API uses an asynchronous callback to return the result. The fused pressure sensor is used to obtain pressure data processed by the fusion algorithm. It applies only to smart watches. This is applicable to health monitoring scenarios where wrist pressure data needs to be obtained. After this method is called, the system continuously reports acceleration data at the specified frequency through the callback.
 
 **Since:** 22
+
+<!--Device-sensor-function on(type: SensorId.FUSION_PRESSURE, callback: Callback<FusionPressureResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorId.FUSION_PRESSURE, callback: Callback<FusionPressureResponse>,    options?: Options): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -1263,6 +1307,8 @@ Subscribes to data changes of the acceleration sensor. This API uses an asynchro
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 
+<!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback: Callback<AccelerometerResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback: Callback<AccelerometerResponse>,    options?: Options): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -1312,6 +1358,8 @@ Subscribes to data changes of the uncalibrated acceleration sensor. This API use
 **Substitutes:** [on](#on-3)(type: SensorId.ACCELEROMETER_UNCALIBRATED, callback: Callback&lt;AccelerometerUncalibratedResponse&gt;, options?: Options)
 
 **Required permissions:** ohos.permission.ACCELEROMETER
+
+<!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED, callback: Callback<AccelerometerUncalibratedResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED, callback: Callback<AccelerometerUncalibratedResponse>,    options?: Options): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -1364,6 +1412,8 @@ Subscribes to data changes of the ambient light sensor. This API uses an asynchr
 
 **Substitutes:** [on](#on-4)(type: SensorId.AMBIENT_LIGHT, callback: Callback&lt;LightResponse&gt;, options?: Options)
 
+<!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback: Callback<LightResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback: Callback<LightResponse>,    options?: Options): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -1409,6 +1459,8 @@ Subscribes to data changes of the ambient temperature sensor. This API uses an a
 **Deprecated since:** 9
 
 **Substitutes:** [on](#on-5)(type: SensorId.AMBIENT_TEMPERATURE, callback: Callback&lt;AmbientTemperatureResponse&gt;, options?: Options)
+
+<!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback: Callback<AmbientTemperatureResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback: Callback<AmbientTemperatureResponse>,    options?: Options): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -1456,6 +1508,8 @@ Subscribes to data changes of the barometer sensor. This API uses an asynchronou
 
 **Substitutes:** [on](#on-6)(type: SensorId.BAROMETER, callback: Callback&lt;BarometerResponse&gt;, options?: Options)
 
+<!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback: Callback<BarometerResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback: Callback<BarometerResponse>,    options?: Options): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -1501,6 +1555,8 @@ Subscribes to data changes of the gravity sensor. This API uses an asynchronous 
 **Deprecated since:** 9
 
 **Substitutes:** [on](#on-7)(type: SensorId.GRAVITY, callback: Callback&lt;GravityResponse&gt;, options?: Options)
+
+<!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_GRAVITY, callback: Callback<GravityResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_GRAVITY, callback: Callback<GravityResponse>,    options?: Options): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -1552,6 +1608,8 @@ Subscribes to data changes of the gyroscope sensor. This API uses an asynchronou
 
 **Required permissions:** ohos.permission.GYROSCOPE
 
+<!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback: Callback<GyroscopeResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback: Callback<GyroscopeResponse>,    options?: Options): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -1601,6 +1659,8 @@ Subscribes to data changes of the uncalibrated gyroscope sensor. This API uses a
 **Substitutes:** [on](#on-9)(type: SensorId.GYROSCOPE_UNCALIBRATED, callback: Callback&lt;GyroscopeUncalibratedResponse&gt;, options?: Options)
 
 **Required permissions:** ohos.permission.GYROSCOPE
+
+<!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED, callback: Callback<GyroscopeUncalibratedResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED, callback: Callback<GyroscopeUncalibratedResponse>,    options?: Options): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -1653,6 +1713,8 @@ Subscribes to data changes of the Hall effect sensor. This API uses an asynchron
 
 **Substitutes:** [on](#on-10)(type: SensorId.HALL, callback: Callback&lt;HallResponse&gt;, options?: Options)
 
+<!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_HALL, callback: Callback<HallResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_HALL, callback: Callback<HallResponse>,    options?: Options): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -1701,6 +1763,8 @@ Subscribes to data changes of the heart rate sensor. This API uses an asynchrono
 
 **Required permissions:** ohos.permission.HEALTH_DATA
 
+<!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback: Callback<HeartRateResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback: Callback<HeartRateResponse>,    options?: Options): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -1734,6 +1798,8 @@ Subscribes to data changes of the humidity sensor. This API uses an asynchronous
 **Deprecated since:** 9
 
 **Substitutes:** [on](#on-12)(type: SensorId.HUMIDITY, callback: Callback&lt;HumidityResponse&gt;, options?: Options)
+
+<!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_HUMIDITY, callback: Callback<HumidityResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_HUMIDITY, callback: Callback<HumidityResponse>,    options?: Options): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -1783,6 +1849,8 @@ Subscribes to data changes of the linear acceleration sensor. This API uses an a
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 
+<!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION, callback: Callback<LinearAccelerometerResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION, callback: Callback<LinearAccelerometerResponse>,    options?: Options): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -1816,6 +1884,8 @@ Subscribes to data changes of the magnetic field sensor. This API uses an asynch
 **Deprecated since:** 9
 
 **Substitutes:** [on](#on-14)(type: SensorId.MAGNETIC_FIELD, callback: Callback&lt;MagneticFieldResponse&gt;, options?: Options)
+
+<!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback: Callback<MagneticFieldResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback: Callback<MagneticFieldResponse>,    options?: Options): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -1864,6 +1934,8 @@ Subscribes to data changes of the uncalibrated magnetic field sensor. This API u
 **Deprecated since:** 9
 
 **Substitutes:** [on](#on-15)(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback: Callback&lt;MagneticFieldUncalibratedResponse&gt;, options?: Options)
+
+<!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callback: Callback<MagneticFieldUncalibratedResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callback: Callback<MagneticFieldUncalibratedResponse>,    options?: Options): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -1916,6 +1988,8 @@ Subscribes to data changes of the orientation sensor. This API uses an asynchron
 
 **Substitutes:** [on](#on-16)(type: SensorId.ORIENTATION, callback: Callback&lt;OrientationResponse&gt;, options?: Options)
 
+<!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback: Callback<OrientationResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback: Callback<OrientationResponse>,    options?: Options): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -1966,6 +2040,8 @@ Subscribes to data changes of the pedometer sensor. This API uses an asynchronou
 
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
 
+<!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback: Callback<PedometerResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback: Callback<PedometerResponse>,    options?: Options): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -2014,6 +2090,8 @@ Subscribes to data changes of the pedometer detection sensor. This API uses an a
 
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
 
+<!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION, callback: Callback<PedometerDetectionResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION, callback: Callback<PedometerDetectionResponse>,    options?: Options): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -2060,6 +2138,8 @@ Subscribes to data changes of the proximity sensor. This API uses an asynchronou
 
 **Substitutes:** [on](#on-19)(type: SensorId.PROXIMITY, callback: Callback&lt;ProximityResponse&gt;, options?: Options)
 
+<!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_PROXIMITY, callback: Callback<ProximityResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_PROXIMITY, callback: Callback<ProximityResponse>,    options?: Options): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -2105,6 +2185,8 @@ Subscribes to data changes of the rotation vector sensor. This API uses an async
 **Deprecated since:** 9
 
 **Substitutes:** [on](#on-20)(type: SensorId.ROTATION_VECTOR, callback: Callback&lt;RotationVectorResponse&gt;, options?: Options)
+
+<!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback: Callback<RotationVectorResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback: Callback<RotationVectorResponse>,    options?: Options): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -2155,6 +2237,8 @@ Subscribes to data changes of the significant motion sensor. This API uses an as
 
 **Substitutes:** [on](#on-21)(type: SensorId.SIGNIFICANT_MOTION, callback: Callback&lt;SignificantMotionResponse&gt;, options?: Options)
 
+<!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback: Callback<SignificantMotionResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback: Callback<SignificantMotionResponse>,    options?: Options): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -2201,6 +2285,8 @@ Subscribes to data changes of the wear detection sensor. This API uses an asynch
 
 **Substitutes:** [on](#on-22)(type: SensorId.WEAR_DETECTION, callback: Callback&lt;WearDetectionResponse&gt;, options?: Options)
 
+<!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback: Callback<WearDetectionResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback: Callback<WearDetectionResponse>,    options?: Options): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -2233,6 +2319,8 @@ function on(type: 'sensorStatusChange', callback: Callback<SensorStatusEvent>): 
 Listens for sensor status changes. This API uses an asynchronous callback to return the result. This API is applicable to scenarios where sensor status changes need to be detected, for example, when a remote sensor is connected or disconnected, the sensor list or subscription status needs to be automatically updated.
 
 **Since:** 19
+
+<!--Device-sensor-function on(type: 'sensorStatusChange', callback: Callback<SensorStatusEvent>): void--><!--Device-sensor-function on(type: 'sensorStatusChange', callback: Callback<SensorStatusEvent>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 

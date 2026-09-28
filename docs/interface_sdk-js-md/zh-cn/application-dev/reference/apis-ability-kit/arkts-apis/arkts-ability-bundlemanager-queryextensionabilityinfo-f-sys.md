@@ -21,6 +21,8 @@ function queryExtensionAbilityInfo(want: Want, extensionAbilityType: ExtensionAb
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
+<!--Device-bundleManager-function queryExtensionAbilityInfo(want: Want, extensionAbilityType: ExtensionAbilityType,      extensionAbilityFlags: int, callback: AsyncCallback<Array<ExtensionAbilityInfo>>): void--><!--Device-bundleManager-function queryExtensionAbilityInfo(want: Want, extensionAbilityType: ExtensionAbilityType,      extensionAbilityFlags: int, callback: AsyncCallback<Array<ExtensionAbilityInfo>>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -90,6 +92,8 @@ function queryExtensionAbilityInfo(want: Want, extensionAbilityType: ExtensionAb
 **起始版本：** 9
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
+
+<!--Device-bundleManager-function queryExtensionAbilityInfo(want: Want, extensionAbilityType: ExtensionAbilityType, extensionAbilityFlags: int, userId: int, callback: AsyncCallback<Array<ExtensionAbilityInfo>>): void--><!--Device-bundleManager-function queryExtensionAbilityInfo(want: Want, extensionAbilityType: ExtensionAbilityType, extensionAbilityFlags: int, userId: int, callback: AsyncCallback<Array<ExtensionAbilityInfo>>): void-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -163,6 +167,8 @@ function queryExtensionAbilityInfo(want: Want, extensionAbilityType: ExtensionAb
 **起始版本：** 9
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
+
+<!--Device-bundleManager-function queryExtensionAbilityInfo(want: Want, extensionAbilityType: ExtensionAbilityType, extensionAbilityFlags: int, userId?: int): Promise<Array<ExtensionAbilityInfo>>--><!--Device-bundleManager-function queryExtensionAbilityInfo(want: Want, extensionAbilityType: ExtensionAbilityType, extensionAbilityFlags: int, userId?: int): Promise<Array<ExtensionAbilityInfo>>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

@@ -10,6 +10,8 @@ MulticastSocket连接。在调用MulticastSocket的方法前，需要先通过[s
 
 **起始版本：** 11
 
+<!--Device-socket-export interface MulticastSocket extends UDPSocket--><!--Device-socket-export interface MulticastSocket extends UDPSocket-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块
@@ -35,6 +37,8 @@ addMembership(multicastAddress: NetAddress, callback: AsyncCallback<void>): void
 **起始版本：** 11
 
 **需要权限：** ohos.permission.INTERNET
+
+<!--Device-MulticastSocket-addMembership(multicastAddress: NetAddress, callback: AsyncCallback<void>): void--><!--Device-MulticastSocket-addMembership(multicastAddress: NetAddress, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -93,6 +97,8 @@ addMembership(multicastAddress: NetAddress): Promise<void>
 **起始版本：** 11
 
 **需要权限：** ohos.permission.INTERNET
+
+<!--Device-MulticastSocket-addMembership(multicastAddress: NetAddress): Promise<void>--><!--Device-MulticastSocket-addMembership(multicastAddress: NetAddress): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -154,6 +160,8 @@ dropMembership(multicastAddress: NetAddress, callback: AsyncCallback<void>): voi
 
 **需要权限：** ohos.permission.INTERNET
 
+<!--Device-MulticastSocket-dropMembership(multicastAddress: NetAddress, callback: AsyncCallback<void>): void--><!--Device-MulticastSocket-dropMembership(multicastAddress: NetAddress, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -212,6 +220,8 @@ dropMembership(multicastAddress: NetAddress): Promise<void>
 **起始版本：** 11
 
 **需要权限：** ohos.permission.INTERNET
+
+<!--Device-MulticastSocket-dropMembership(multicastAddress: NetAddress): Promise<void>--><!--Device-MulticastSocket-dropMembership(multicastAddress: NetAddress): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -273,6 +283,8 @@ getLoopbackMode(callback: AsyncCallback<boolean>): void
 
 **起始版本：** 11
 
+<!--Device-MulticastSocket-getLoopbackMode(callback: AsyncCallback<boolean>): void--><!--Device-MulticastSocket-getLoopbackMode(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -325,6 +337,8 @@ getLoopbackMode(): Promise<boolean>
 
 **起始版本：** 11
 
+<!--Device-MulticastSocket-getLoopbackMode(): Promise<boolean>--><!--Device-MulticastSocket-getLoopbackMode(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
@@ -374,6 +388,8 @@ getMulticastTTL(callback: AsyncCallback<number>): void
 > 之后，调用此接口才有效。
 
 **起始版本：** 11
+
+<!--Device-MulticastSocket-getMulticastTTL(callback: AsyncCallback<int>): void--><!--Device-MulticastSocket-getMulticastTTL(callback: AsyncCallback<int>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -429,6 +445,8 @@ getMulticastTTL(): Promise<number>
 
 **起始版本：** 11
 
+<!--Device-MulticastSocket-getMulticastTTL(): Promise<int>--><!--Device-MulticastSocket-getMulticastTTL(): Promise<int>-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
@@ -478,6 +496,8 @@ getSocketFd(): Promise<number>
 **需要权限：** ohos.permission.INTERNET
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MulticastSocket-getSocketFd(): Promise<int>--><!--Device-MulticastSocket-getSocketFd(): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -537,6 +557,8 @@ setLoopbackMode(flag: boolean, callback: AsyncCallback<void>): void
 
 **起始版本：** 11
 
+<!--Device-MulticastSocket-setLoopbackMode(flag: boolean, callback: AsyncCallback<void>): void--><!--Device-MulticastSocket-setLoopbackMode(flag: boolean, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -589,6 +611,8 @@ setLoopbackMode(flag: boolean): Promise<void>
 > 之后，调用此接口才有效。
 
 **起始版本：** 11
+
+<!--Device-MulticastSocket-setLoopbackMode(flag: boolean): Promise<void>--><!--Device-MulticastSocket-setLoopbackMode(flag: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -645,6 +669,8 @@ setMulticastTTL(ttl: number, callback: AsyncCallback<void>): void
 > 之后，调用此接口才有效。
 
 **起始版本：** 11
+
+<!--Device-MulticastSocket-setMulticastTTL(ttl: int, callback: AsyncCallback<void>): void--><!--Device-MulticastSocket-setMulticastTTL(ttl: int, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -703,6 +729,8 @@ setMulticastTTL(ttl: number): Promise<void>
 
 **起始版本：** 11
 
+<!--Device-MulticastSocket-setMulticastTTL(ttl: int): Promise<void>--><!--Device-MulticastSocket-setMulticastTTL(ttl: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -756,6 +784,8 @@ setReuseAddress(reuse: boolean): void
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MulticastSocket-setReuseAddress(reuse: boolean): void--><!--Device-MulticastSocket-setReuseAddress(reuse: boolean): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 

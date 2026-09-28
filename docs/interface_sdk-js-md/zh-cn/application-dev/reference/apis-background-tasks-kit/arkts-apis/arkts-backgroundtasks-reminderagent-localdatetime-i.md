@@ -12,6 +12,8 @@ interface LocalDateTime
 
 **替代接口：** [LocalDateTime](arkts-backgroundtasks-reminderagentmanager-localdatetime-i.md)
 
+<!--Device-reminderAgent-interface LocalDateTime--><!--Device-reminderAgent-interface LocalDateTime-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## 导入模块
@@ -36,6 +38,8 @@ day: number
 
 **替代接口：** [day](arkts-backgroundtasks-reminderagentmanager-localdatetime-i.md#day)
 
+<!--Device-LocalDateTime-day: number--><!--Device-LocalDateTime-day: number-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## hour
@@ -53,6 +57,8 @@ hour: number
 **废弃版本：** 9
 
 **替代接口：** [hour](arkts-backgroundtasks-reminderagentmanager-localdatetime-i.md#hour)
+
+<!--Device-LocalDateTime-hour: number--><!--Device-LocalDateTime-hour: number-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -72,6 +78,8 @@ minute: number
 
 **替代接口：** [minute](arkts-backgroundtasks-reminderagentmanager-localdatetime-i.md#minute)
 
+<!--Device-LocalDateTime-minute: number--><!--Device-LocalDateTime-minute: number-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## month
@@ -89,6 +97,8 @@ month: number
 **废弃版本：** 9
 
 **替代接口：** [month](arkts-backgroundtasks-reminderagentmanager-localdatetime-i.md#month)
+
+<!--Device-LocalDateTime-month: number--><!--Device-LocalDateTime-month: number-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -108,6 +118,8 @@ second?: number
 
 **替代接口：** [second](arkts-backgroundtasks-reminderagentmanager-localdatetime-i.md#second)
 
+<!--Device-LocalDateTime-second?: number--><!--Device-LocalDateTime-second?: number-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## year
@@ -125,5 +137,7 @@ year: number
 **废弃版本：** 9
 
 **替代接口：** [year](arkts-backgroundtasks-reminderagentmanager-localdatetime-i.md#year)
+
+<!--Device-LocalDateTime-year: number--><!--Device-LocalDateTime-year: number-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent

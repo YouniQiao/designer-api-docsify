@@ -16,6 +16,8 @@ function createAVImageGenerator(): Promise<AVImageGenerator>
 
 **起始版本：** 12
 
+<!--Device-media-function createAVImageGenerator(): Promise<AVImageGenerator>--><!--Device-media-function createAVImageGenerator(): Promise<AVImageGenerator>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVImageGenerator
 
 **返回值：**
@@ -60,6 +62,8 @@ function createAVImageGenerator(callback: AsyncCallback<AVImageGenerator>): void
 创建AVImageGenerator实例。使用callback异步回调。
 
 **起始版本：** 12
+
+<!--Device-media-function createAVImageGenerator(callback: AsyncCallback<AVImageGenerator>): void--><!--Device-media-function createAVImageGenerator(callback: AsyncCallback<AVImageGenerator>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVImageGenerator
 

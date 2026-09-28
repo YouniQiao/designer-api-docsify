@@ -8,6 +8,8 @@ enum ResourceType
 
 **起始版本：** 11
 
+<!--Device-photoAccessHelper-enum ResourceType--><!--Device-photoAccessHelper-enum ResourceType-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## PHOTO_PROXY
@@ -19,6 +21,8 @@ PHOTO_PROXY = 3
 表示照片代理资源。
 
 **起始版本：** 11
+
+<!--Device-ResourceType-PHOTO_PROXY = 3--><!--Device-ResourceType-PHOTO_PROXY = 3-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -34,6 +38,8 @@ PRIVATE_MOVING_PHOTO_RESOURCE = 4
 
 **起始版本：** 13
 
+<!--Device-ResourceType-PRIVATE_MOVING_PHOTO_RESOURCE = 4--><!--Device-ResourceType-PRIVATE_MOVING_PHOTO_RESOURCE = 4-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -47,6 +53,8 @@ PRIVATE_MOVING_PHOTO_METADATA = 5
 表示私有动态照片元数据资源。
 
 **起始版本：** 18
+
+<!--Device-ResourceType-PRIVATE_MOVING_PHOTO_METADATA = 5--><!--Device-ResourceType-PRIVATE_MOVING_PHOTO_METADATA = 5-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

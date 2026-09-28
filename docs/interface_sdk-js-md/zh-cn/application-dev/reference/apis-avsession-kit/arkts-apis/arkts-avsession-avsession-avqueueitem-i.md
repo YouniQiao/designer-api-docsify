@@ -8,6 +8,8 @@ interface AVQueueItem
 
 **起始版本：** 10
 
+<!--Device-avSession-interface AVQueueItem--><!--Device-avSession-interface AVQueueItem-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 ## 导入模块
@@ -28,7 +30,9 @@ description?: AVMediaDescription
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVQueueItem-description?: AVMediaDescription--><!--Device-AVQueueItem-description?: AVMediaDescription-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -44,6 +48,8 @@ itemId: number
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVQueueItem-itemId: int--><!--Device-AVQueueItem-itemId: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core

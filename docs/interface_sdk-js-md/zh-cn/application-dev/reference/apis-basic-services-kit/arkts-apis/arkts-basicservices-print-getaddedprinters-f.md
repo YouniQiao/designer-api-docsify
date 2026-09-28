@@ -18,6 +18,8 @@ function getAddedPrinters(): Promise<Array<string>>
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB or ohos.permission.PRINT
 
+<!--Device-print-function getAddedPrinters(): Promise<Array<string>>--><!--Device-print-function getAddedPrinters(): Promise<Array<string>>-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **返回值：**

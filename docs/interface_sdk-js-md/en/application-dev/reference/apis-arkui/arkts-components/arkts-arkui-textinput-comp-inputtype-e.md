@@ -8,6 +8,8 @@ Type of the single-line text input box.
 
 **Since:** 7
 
+<!--Device-unnamed-declare enum InputType--><!--Device-unnamed-declare enum InputType-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Normal
@@ -23,6 +25,8 @@ The inline input style supports only the InputType.Normal type.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-InputType-Normal--><!--Device-InputType-Normal-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,6 +44,8 @@ Negative numbers and decimals are not supported.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-InputType-Number--><!--Device-InputType-Number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## PhoneNumber
@@ -56,6 +62,8 @@ Supports digits, spaces, +, -, *, #, (, and ), with no length limit.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-InputType-PhoneNumber--><!--Device-InputType-PhoneNumber-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Email
@@ -71,6 +79,8 @@ Supports digits, letters, underscores, decimal points, !, #, $, %, &, ', ", *, +
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-InputType-Email--><!--Device-InputType-Email-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -94,6 +104,8 @@ When the password vault is enabled, auto-save and auto-fill of the username and 
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-InputType-Password--><!--Device-InputType-Password-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## NUMBER_PASSWORD
@@ -116,6 +128,8 @@ In password input mode, [decoration](arkts-arkui-textinput-comp-attribute.md#dec
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-InputType-NUMBER_PASSWORD = 8--><!--Device-InputType-NUMBER_PASSWORD = 8-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## USER_NAME
@@ -133,6 +147,8 @@ When the password vault is enabled, auto-save and auto-fill of the username are 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-InputType-USER_NAME = 10--><!--Device-InputType-USER_NAME = 10-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -156,6 +172,8 @@ In password input mode, [decoration](arkts-arkui-textinput-comp-attribute.md#dec
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-InputType-NEW_PASSWORD = 11--><!--Device-InputType-NEW_PASSWORD = 11-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## NUMBER_DECIMAL
@@ -174,6 +192,8 @@ Supports digits and a decimal point (only one decimal point is allowed). Negativ
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-InputType-NUMBER_DECIMAL = 12--><!--Device-InputType-NUMBER_DECIMAL = 12-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## URL
@@ -190,6 +210,8 @@ Input mode with a URL, with no special restrictions.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-InputType-URL = 13--><!--Device-InputType-URL = 13-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## ONE_TIME_CODE
@@ -205,5 +227,7 @@ Verification code input mode with no special restrictions. In this mode, the sys
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-InputType-ONE_TIME_CODE = 14--><!--Device-InputType-ONE_TIME_CODE = 14-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

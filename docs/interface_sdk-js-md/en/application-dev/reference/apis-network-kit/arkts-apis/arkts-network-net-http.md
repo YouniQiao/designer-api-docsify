@@ -4,6 +4,8 @@ The **http** module provides APIs for implementing HTTP data request capabilitie
 
 **Since:** 6
 
+<!--Device-unnamed-declare namespace http--><!--Device-unnamed-declare namespace http-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import

@@ -16,7 +16,9 @@ function getOriginalSize(compressedFile: string): Promise<number>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-zlib-function getOriginalSize(compressedFile: string): Promise<long>--><!--Device-zlib-function getOriginalSize(compressedFile: string): Promise<long>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -24,7 +26,7 @@ function getOriginalSize(compressedFile: string): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| compressedFile | string | 是 | 指定的压缩文件的文件路径，只支持zip格式压缩文件。文件路径必须为沙箱路径，沙箱路径可以通过context获取，可参考FA模型，Stage模型。 |
+| compressedFile | string | 是 | 指定的压缩文件的文件路径，只支持zip格式压缩文件。文件路径必须为沙箱路径，沙箱路径可以通过context获取，可参考[FA模型](../../apis-ability-kit/arkts-apis/arkts-ability-context.md)，[Stage模型](../../apis-ability-kit/arkts-apis/arkts-ability-context.md)。 |
 
 **返回值：**
 

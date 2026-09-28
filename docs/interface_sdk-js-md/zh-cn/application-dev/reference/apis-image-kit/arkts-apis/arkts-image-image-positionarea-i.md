@@ -8,6 +8,8 @@ interface PositionArea
 
 **起始版本：** 7
 
+<!--Device-image-interface PositionArea--><!--Device-image-interface PositionArea-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## 导入模块
@@ -28,9 +30,11 @@ offset: number
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PositionArea-offset: int--><!--Device-PositionArea-offset: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -46,9 +50,11 @@ pixels: ArrayBuffer
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PositionArea-pixels: ArrayBuffer--><!--Device-PositionArea-pixels: ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -64,9 +70,11 @@ region: Region
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PositionArea-region: Region--><!--Device-PositionArea-region: Region-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -82,8 +90,10 @@ stride: number
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PositionArea-stride: int--><!--Device-PositionArea-stride: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core

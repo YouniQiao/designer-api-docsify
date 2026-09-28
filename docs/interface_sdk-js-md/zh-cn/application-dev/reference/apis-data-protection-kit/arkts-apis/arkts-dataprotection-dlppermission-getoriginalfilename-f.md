@@ -18,6 +18,8 @@ function getOriginalFileName(fileName: string): string
 
 **起始版本：** 10
 
+<!--Device-dlpPermission-function getOriginalFileName(fileName: string): string--><!--Device-dlpPermission-function getOriginalFileName(fileName: string): string-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **参数：**

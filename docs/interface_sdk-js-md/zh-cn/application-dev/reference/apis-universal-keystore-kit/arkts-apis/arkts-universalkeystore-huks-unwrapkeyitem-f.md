@@ -26,6 +26,8 @@ function unwrapKeyItem(keyAlias: string, params: HuksOptions, wrappedKey: Uint8A
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-huks-function unwrapKeyItem(keyAlias: string, params: HuksOptions, wrappedKey: Uint8Array): Promise<HuksReturnResult>--><!--Device-huks-function unwrapKeyItem(keyAlias: string, params: HuksOptions, wrappedKey: Uint8Array): Promise<HuksReturnResult>-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Core
 
 **参数：**
@@ -46,8 +48,8 @@ function unwrapKeyItem(keyAlias: string, params: HuksOptions, wrappedKey: Uint8A
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | The application permissions are insufficient, possibly because the ohos.permission.ACCESS_SE_KEY permission is missing.<br>**适用版本：** 26.0.0+ |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | api is not supported |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed: call the unwrapKeyItem API, missing Permission: ohos.permission.ACCESS_SE_KEY.<br>**适用版本：** 26.0.0+ |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: 1. The hardware does not support the capability. 2. The chip does not support the capability. 3. A dependent service feature is not supported. |
 | [12000004](../errorcode-huks.md#12000004-文件错误) | operating file failed |
 | [12000005](../errorcode-huks.md#12000005-进程通信错误) | IPC communication failed |
 | [12000012](../errorcode-huks.md#12000012-外部错误) | Device environment or input parameter abnormal |

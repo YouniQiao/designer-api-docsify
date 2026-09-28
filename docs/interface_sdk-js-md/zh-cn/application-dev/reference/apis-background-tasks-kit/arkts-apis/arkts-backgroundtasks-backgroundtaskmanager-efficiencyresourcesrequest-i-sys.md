@@ -8,6 +8,8 @@ export interface EfficiencyResourcesRequest
 
 **起始版本：** 9
 
+<!--Device-backgroundTaskManager-export interface EfficiencyResourcesRequest--><!--Device-backgroundTaskManager-export interface EfficiencyResourcesRequest-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ cpuLevel?: EfficiencyResourcesCpuLevel
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-EfficiencyResourcesRequest-cpuLevel?: EfficiencyResourcesCpuLevel--><!--Device-EfficiencyResourcesRequest-cpuLevel?: EfficiencyResourcesCpuLevel-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
 
 **系统接口：** 此接口为系统接口。
@@ -50,6 +54,8 @@ isApply: boolean
 **类型：** boolean
 
 **起始版本：** 9
+
+<!--Device-EfficiencyResourcesRequest-isApply: boolean--><!--Device-EfficiencyResourcesRequest-isApply: boolean-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
 
@@ -70,6 +76,8 @@ isPersist?: boolean
 
 **起始版本：** 9
 
+<!--Device-EfficiencyResourcesRequest-isPersist?: boolean--><!--Device-EfficiencyResourcesRequest-isPersist?: boolean-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
 
 **系统接口：** 此接口为系统接口。
@@ -89,6 +97,8 @@ isProcess?: boolean
 
 **起始版本：** 9
 
+<!--Device-EfficiencyResourcesRequest-isProcess?: boolean--><!--Device-EfficiencyResourcesRequest-isProcess?: boolean-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
 
 **系统接口：** 此接口为系统接口。
@@ -104,6 +114,8 @@ reason: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-EfficiencyResourcesRequest-reason: string--><!--Device-EfficiencyResourcesRequest-reason: string-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
 
@@ -121,6 +133,8 @@ resourceTypes: number
 
 **起始版本：** 9
 
+<!--Device-EfficiencyResourcesRequest-resourceTypes: int--><!--Device-EfficiencyResourcesRequest-resourceTypes: int-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
 
 **系统接口：** 此接口为系统接口。
@@ -136,6 +150,8 @@ timeOut: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-EfficiencyResourcesRequest-timeOut: int--><!--Device-EfficiencyResourcesRequest-timeOut: int-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
 

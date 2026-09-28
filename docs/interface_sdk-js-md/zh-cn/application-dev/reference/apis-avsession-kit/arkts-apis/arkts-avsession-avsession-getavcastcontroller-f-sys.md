@@ -20,6 +20,8 @@ function getAVCastController(sessionId: string, callback: AsyncCallback<AVCastCo
 
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
 
+<!--Device-avSession-function getAVCastController(sessionId: string, callback: AsyncCallback<AVCastController>): void--><!--Device-avSession-function getAVCastController(sessionId: string, callback: AsyncCallback<AVCastController>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **系统接口：** 此接口为系统接口。
@@ -93,6 +95,8 @@ function getAVCastController(sessionId: string): Promise<AVCastController>
 **起始版本：** 10
 
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
+
+<!--Device-avSession-function getAVCastController(sessionId: string): Promise<AVCastController>--><!--Device-avSession-function getAVCastController(sessionId: string): Promise<AVCastController>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 

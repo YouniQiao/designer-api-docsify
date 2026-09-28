@@ -8,6 +8,8 @@ export interface PanelRect
 
 **起始版本：** 12
 
+<!--Device-inputMethodEngine-export interface PanelRect--><!--Device-inputMethodEngine-export interface PanelRect-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## 导入模块
@@ -28,6 +30,8 @@ landscapeRect: window.Rect
 
 **起始版本：** 12
 
+<!--Device-PanelRect-landscapeRect: window.Rect--><!--Device-PanelRect-landscapeRect: window.Rect-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## portraitRect
@@ -41,5 +45,7 @@ portraitRect: window.Rect
 **类型：** [window.Rect](../../apis-arkui/arkts-apis/arkts-arkui-window-rect-i.md)
 
 **起始版本：** 12
+
+<!--Device-PanelRect-portraitRect: window.Rect--><!--Device-PanelRect-portraitRect: window.Rect-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework

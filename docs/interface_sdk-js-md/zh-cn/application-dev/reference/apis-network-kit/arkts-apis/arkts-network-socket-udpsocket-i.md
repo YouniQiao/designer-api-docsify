@@ -8,6 +8,8 @@ UDPSocket连接。在调用UDPSocket的方法前，需要先通过[socket.constr
 
 **起始版本：** 7
 
+<!--Device-socket-export interface UDPSocket--><!--Device-socket-export interface UDPSocket-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块
@@ -27,6 +29,8 @@ bind(address: NetAddress, callback: AsyncCallback<void>): void
 **起始版本：** 7
 
 **需要权限：** ohos.permission.INTERNET
+
+<!--Device-UDPSocket-bind(address: NetAddress, callback: AsyncCallback<void>): void--><!--Device-UDPSocket-bind(address: NetAddress, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -77,6 +81,8 @@ bind(address: NetAddress): Promise<void>
 **起始版本：** 7
 
 **需要权限：** ohos.permission.INTERNET
+
+<!--Device-UDPSocket-bind(address: NetAddress): Promise<void>--><!--Device-UDPSocket-bind(address: NetAddress): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -129,6 +135,8 @@ close(callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.INTERNET
 
+<!--Device-UDPSocket-close(callback: AsyncCallback<void>): void--><!--Device-UDPSocket-close(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -173,6 +181,8 @@ close(): Promise<void>
 
 **需要权限：** ohos.permission.INTERNET
 
+<!--Device-UDPSocket-close(): Promise<void>--><!--Device-UDPSocket-close(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
@@ -214,6 +224,8 @@ getLocalAddress(): Promise<NetAddress>
 > bind方法调用成功后，才可调用此方法。
 
 **起始版本：** 12
+
+<!--Device-UDPSocket-getLocalAddress(): Promise<NetAddress>--><!--Device-UDPSocket-getLocalAddress(): Promise<NetAddress>-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -275,6 +287,8 @@ getSocketFd(): Promise<number>
 
 **需要权限：** ohos.permission.INTERNET
 
+<!--Device-UDPSocket-getSocketFd(): Promise<int>--><!--Device-UDPSocket-getSocketFd(): Promise<int>-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
@@ -328,6 +342,8 @@ getState(callback: AsyncCallback<SocketStateBase>): void
 **起始版本：** 7
 
 **需要权限：** ohos.permission.INTERNET
+
+<!--Device-UDPSocket-getState(callback: AsyncCallback<SocketStateBase>): void--><!--Device-UDPSocket-getState(callback: AsyncCallback<SocketStateBase>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -388,6 +404,8 @@ getState(): Promise<SocketStateBase>
 
 **需要权限：** ohos.permission.INTERNET
 
+<!--Device-UDPSocket-getState(): Promise<SocketStateBase>--><!--Device-UDPSocket-getState(): Promise<SocketStateBase>-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
@@ -437,6 +455,8 @@ off(type: 'message', callback?: Callback<SocketMessageInfo>): void
 
 **起始版本：** 7
 
+<!--Device-UDPSocket-off(type: 'message', callback?: Callback<SocketMessageInfo>): void--><!--Device-UDPSocket-off(type: 'message', callback?: Callback<SocketMessageInfo>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -480,6 +500,8 @@ off(type: 'listening' | 'close', callback?: Callback<void>): void
 
 **起始版本：** 7
 
+<!--Device-UDPSocket-off(type: 'listening' | 'close', callback?: Callback<void>): void--><!--Device-UDPSocket-off(type: 'listening' | 'close', callback?: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -522,6 +544,8 @@ off(type: 'error', callback?: ErrorCallback): void
 
 **起始版本：** 7
 
+<!--Device-UDPSocket-off(type: 'error', callback?: ErrorCallback): void--><!--Device-UDPSocket-off(type: 'error', callback?: ErrorCallback): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -556,6 +580,8 @@ on(type: 'message', callback: Callback<SocketMessageInfo>): void
 订阅UDPSocket连接的接收消息事件。使用callback异步回调。
 
 **起始版本：** 7
+
+<!--Device-UDPSocket-on(type: 'message', callback: Callback<SocketMessageInfo>): void--><!--Device-UDPSocket-on(type: 'message', callback: Callback<SocketMessageInfo>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -597,6 +623,8 @@ on(type: 'listening' | 'close', callback: Callback<void>): void
 
 **起始版本：** 7
 
+<!--Device-UDPSocket-on(type: 'listening' | 'close', callback: Callback<void>): void--><!--Device-UDPSocket-on(type: 'listening' | 'close', callback: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -630,6 +658,8 @@ on(type: 'error', callback: ErrorCallback): void
 订阅UDPSocket连接的error事件。使用callback异步回调。
 
 **起始版本：** 7
+
+<!--Device-UDPSocket-on(type: 'error', callback: ErrorCallback): void--><!--Device-UDPSocket-on(type: 'error', callback: ErrorCallback): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -665,6 +695,8 @@ send(options: UDPSendOptions, callback: AsyncCallback<void>): void
 **起始版本：** 7
 
 **需要权限：** ohos.permission.INTERNET
+
+<!--Device-UDPSocket-send(options: UDPSendOptions, callback: AsyncCallback<void>): void--><!--Device-UDPSocket-send(options: UDPSendOptions, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -787,6 +819,8 @@ send(options: UDPSendOptions): Promise<void>
 
 **需要权限：** ohos.permission.INTERNET
 
+<!--Device-UDPSocket-send(options: UDPSendOptions): Promise<void>--><!--Device-UDPSocket-send(options: UDPSendOptions): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -907,6 +941,8 @@ setExtraOptions(options: UDPExtraOptions, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.INTERNET
 
+<!--Device-UDPSocket-setExtraOptions(options: UDPExtraOptions, callback: AsyncCallback<void>): void--><!--Device-UDPSocket-setExtraOptions(options: UDPExtraOptions, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -975,6 +1011,8 @@ setExtraOptions(options: UDPExtraOptions): Promise<void>
 **起始版本：** 7
 
 **需要权限：** ohos.permission.INTERNET
+
+<!--Device-UDPSocket-setExtraOptions(options: UDPExtraOptions): Promise<void>--><!--Device-UDPSocket-setExtraOptions(options: UDPExtraOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 

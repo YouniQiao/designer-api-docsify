@@ -8,6 +8,8 @@ enum PrintJobState
 
 **起始版本：** 14
 
+<!--Device-print-enum PrintJobState--><!--Device-print-enum PrintJobState-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## PRINT_JOB_PREPARE
@@ -19,6 +21,8 @@ PRINT_JOB_PREPARE = 0
 表示打印任务的初始状态。
 
 **起始版本：** 14
+
+<!--Device-PrintJobState-PRINT_JOB_PREPARE = 0--><!--Device-PrintJobState-PRINT_JOB_PREPARE = 0-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -32,6 +36,8 @@ PRINT_JOB_QUEUED = 1
 
 **起始版本：** 14
 
+<!--Device-PrintJobState-PRINT_JOB_QUEUED = 1--><!--Device-PrintJobState-PRINT_JOB_QUEUED = 1-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## PRINT_JOB_RUNNING
@@ -43,6 +49,8 @@ PRINT_JOB_RUNNING = 2
 表示执行打印任务。
 
 **起始版本：** 14
+
+<!--Device-PrintJobState-PRINT_JOB_RUNNING = 2--><!--Device-PrintJobState-PRINT_JOB_RUNNING = 2-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -56,6 +64,8 @@ PRINT_JOB_BLOCKED = 3
 
 **起始版本：** 14
 
+<!--Device-PrintJobState-PRINT_JOB_BLOCKED = 3--><!--Device-PrintJobState-PRINT_JOB_BLOCKED = 3-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## PRINT_JOB_COMPLETED
@@ -67,5 +77,7 @@ PRINT_JOB_COMPLETED = 4
 表示打印任务完成。
 
 **起始版本：** 14
+
+<!--Device-PrintJobState-PRINT_JOB_COMPLETED = 4--><!--Device-PrintJobState-PRINT_JOB_COMPLETED = 4-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework

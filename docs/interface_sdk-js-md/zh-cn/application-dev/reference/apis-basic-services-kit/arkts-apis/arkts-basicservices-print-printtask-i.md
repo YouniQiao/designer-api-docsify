@@ -8,6 +8,8 @@ interface PrintTask
 
 **起始版本：** 10
 
+<!--Device-print-interface PrintTask--><!--Device-print-interface PrintTask-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## 导入模块
@@ -27,6 +29,8 @@ off(type: 'block', callback?: Callback<void>): void
 **起始版本：** 10
 
 **需要权限：** ohos.permission.PRINT
+
+<!--Device-PrintTask-off(type: 'block', callback?: Callback<void>): void--><!--Device-PrintTask-off(type: 'block', callback?: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -91,6 +95,8 @@ off(type: 'succeed', callback?: Callback<void>): void
 
 **需要权限：** ohos.permission.PRINT
 
+<!--Device-PrintTask-off(type: 'succeed', callback?: Callback<void>): void--><!--Device-PrintTask-off(type: 'succeed', callback?: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **参数：**
@@ -153,6 +159,8 @@ off(type: 'fail', callback?: Callback<void>): void
 **起始版本：** 10
 
 **需要权限：** ohos.permission.PRINT
+
+<!--Device-PrintTask-off(type: 'fail', callback?: Callback<void>): void--><!--Device-PrintTask-off(type: 'fail', callback?: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -217,6 +225,8 @@ off(type: 'cancel', callback?: Callback<void>): void
 
 **需要权限：** ohos.permission.PRINT
 
+<!--Device-PrintTask-off(type: 'cancel', callback?: Callback<void>): void--><!--Device-PrintTask-off(type: 'cancel', callback?: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **参数：**
@@ -279,6 +289,8 @@ on(type: 'block', callback: Callback<void>): void
 **起始版本：** 10
 
 **需要权限：** ohos.permission.PRINT
+
+<!--Device-PrintTask-on(type: 'block', callback: Callback<void>): void--><!--Device-PrintTask-on(type: 'block', callback: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -343,6 +355,8 @@ on(type: 'succeed', callback: Callback<void>): void
 
 **需要权限：** ohos.permission.PRINT
 
+<!--Device-PrintTask-on(type: 'succeed', callback: Callback<void>): void--><!--Device-PrintTask-on(type: 'succeed', callback: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **参数：**
@@ -406,6 +420,8 @@ on(type: 'fail', callback: Callback<void>): void
 
 **需要权限：** ohos.permission.PRINT
 
+<!--Device-PrintTask-on(type: 'fail', callback: Callback<void>): void--><!--Device-PrintTask-on(type: 'fail', callback: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **参数：**
@@ -468,6 +484,8 @@ on(type: 'cancel', callback: Callback<void>): void
 **起始版本：** 10
 
 **需要权限：** ohos.permission.PRINT
+
+<!--Device-PrintTask-on(type: 'cancel', callback: Callback<void>): void--><!--Device-PrintTask-on(type: 'cancel', callback: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 

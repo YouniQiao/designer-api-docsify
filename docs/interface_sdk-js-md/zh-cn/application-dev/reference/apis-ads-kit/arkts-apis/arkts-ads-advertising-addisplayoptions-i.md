@@ -8,6 +8,8 @@ export interface AdDisplayOptions
 
 **起始版本：** 11
 
+<!--Device-advertising-export interface AdDisplayOptions--><!--Device-advertising-export interface AdDisplayOptions-End-->
+
 **系统能力：** SystemCapability.Advertising.Ads
 
 ## 导入模块
@@ -34,6 +36,8 @@ import { advertising } from '@kit.AdsKit';
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AdDisplayOptions-[key: string]: number | boolean | string | undefined--><!--Device-AdDisplayOptions-[key: string]: number | boolean | string | undefined-End-->
+
 **系统能力：** SystemCapability.Advertising.Ads
 
 ## audioFocusType
@@ -55,6 +59,8 @@ audioFocusType?: number
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AdDisplayOptions-audioFocusType?: number--><!--Device-AdDisplayOptions-audioFocusType?: number-End-->
+
 **系统能力：** SystemCapability.Advertising.Ads
 
 ## customData
@@ -70,6 +76,8 @@ customData?: string
 **起始版本：** 11
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AdDisplayOptions-customData?: string--><!--Device-AdDisplayOptions-customData?: string-End-->
 
 **系统能力：** SystemCapability.Advertising.Ads
 
@@ -92,6 +100,8 @@ mute?: boolean
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AdDisplayOptions-mute?: boolean--><!--Device-AdDisplayOptions-mute?: boolean-End-->
+
 **系统能力：** SystemCapability.Advertising.Ads
 
 ## useMobileDataReminder
@@ -112,6 +122,8 @@ useMobileDataReminder?: boolean
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AdDisplayOptions-useMobileDataReminder?: boolean--><!--Device-AdDisplayOptions-useMobileDataReminder?: boolean-End-->
+
 **系统能力：** SystemCapability.Advertising.Ads
 
 ## userId
@@ -127,5 +139,7 @@ userId?: string
 **起始版本：** 11
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AdDisplayOptions-userId?: string--><!--Device-AdDisplayOptions-userId?: string-End-->
 
 **系统能力：** SystemCapability.Advertising.Ads

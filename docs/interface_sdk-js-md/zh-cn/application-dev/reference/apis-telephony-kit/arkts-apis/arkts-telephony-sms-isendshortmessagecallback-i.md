@@ -8,6 +8,8 @@ export interface ISendShortMessageCallback
 
 **起始版本：** 6
 
+<!--Device-sms-export interface ISendShortMessageCallback--><!--Device-sms-export interface ISendShortMessageCallback-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 ## 导入模块
@@ -32,6 +34,8 @@ isLastPart: boolean
 
 **起始版本：** 6
 
+<!--Device-ISendShortMessageCallback-isLastPart: boolean--><!--Device-ISendShortMessageCallback-isLastPart: boolean-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 ## result
@@ -46,6 +50,8 @@ result: SendSmsResult
 
 **起始版本：** 6
 
+<!--Device-ISendShortMessageCallback-result: SendSmsResult--><!--Device-ISendShortMessageCallback-result: SendSmsResult-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 ## url
@@ -59,5 +65,7 @@ url: string
 **类型：** string
 
 **起始版本：** 6
+
+<!--Device-ISendShortMessageCallback-url: string--><!--Device-ISendShortMessageCallback-url: string-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms

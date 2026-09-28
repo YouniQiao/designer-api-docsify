@@ -18,6 +18,8 @@ function getEnterpriseInfo(admin: Want, callback: AsyncCallback<EnterpriseInfo>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-adminManager-function getEnterpriseInfo(admin: Want, callback: AsyncCallback<EnterpriseInfo>): void--><!--Device-adminManager-function getEnterpriseInfo(admin: Want, callback: AsyncCallback<EnterpriseInfo>): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -72,6 +74,8 @@ function getEnterpriseInfo(admin: Want): Promise<EnterpriseInfo>
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-adminManager-function getEnterpriseInfo(admin: Want): Promise<EnterpriseInfo>--><!--Device-adminManager-function getEnterpriseInfo(admin: Want): Promise<EnterpriseInfo>-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

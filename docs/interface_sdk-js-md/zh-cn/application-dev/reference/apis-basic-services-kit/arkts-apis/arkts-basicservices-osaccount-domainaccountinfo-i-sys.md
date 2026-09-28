@@ -8,6 +8,8 @@ interface DomainAccountInfo
 
 **起始版本：** 8
 
+<!--Device-osAccount-interface DomainAccountInfo--><!--Device-osAccount-interface DomainAccountInfo-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 ## 导入模块
@@ -30,6 +32,8 @@ accountId?: string
 
 **起始版本：** 10
 
+<!--Device-DomainAccountInfo-accountId?: string--><!--Device-DomainAccountInfo-accountId?: string-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -47,6 +51,8 @@ isAuthenticated?: boolean
 **类型：** boolean
 
 **起始版本：** 11
+
+<!--Device-DomainAccountInfo-isAuthenticated?: boolean--><!--Device-DomainAccountInfo-isAuthenticated?: boolean-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 

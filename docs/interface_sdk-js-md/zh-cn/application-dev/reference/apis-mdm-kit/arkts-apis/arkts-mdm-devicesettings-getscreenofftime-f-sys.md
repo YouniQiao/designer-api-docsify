@@ -24,6 +24,8 @@ function getScreenOffTime(admin: Want, callback: AsyncCallback<number>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-deviceSettings-function getScreenOffTime(admin: Want, callback: AsyncCallback<number>): void--><!--Device-deviceSettings-function getScreenOffTime(admin: Want, callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -86,6 +88,8 @@ function getScreenOffTime(admin: Want): Promise<number>
 **需要权限：** ohos.permission.ENTERPRISE_GET_SETTINGS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-deviceSettings-function getScreenOffTime(admin: Want): Promise<number>--><!--Device-deviceSettings-function getScreenOffTime(admin: Want): Promise<number>-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

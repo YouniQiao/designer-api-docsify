@@ -8,6 +8,8 @@ export enum TextInputType
 
 **起始版本：** 10
 
+<!--Device-inputMethod-export enum TextInputType--><!--Device-inputMethod-export enum TextInputType-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## NONE
@@ -19,6 +21,8 @@ NONE = -1
 NONE。<br> <br>使用场景：当编辑框不希望指定特定输入类型时使用，输入法将使用默认键盘布局。
 
 **起始版本：** 10
+
+<!--Device-TextInputType-NONE = -1--><!--Device-TextInputType-NONE = -1-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -32,6 +36,8 @@ TEXT = 0
 
 **起始版本：** 10
 
+<!--Device-TextInputType-TEXT = 0--><!--Device-TextInputType-TEXT = 0-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## MULTILINE
@@ -43,6 +49,8 @@ MULTILINE
 多行类型。<br> <br>使用场景：适用于需要多行文本输入的场景，如长文本编辑、评论框等。
 
 **起始版本：** 10
+
+<!--Device-TextInputType-MULTILINE--><!--Device-TextInputType-MULTILINE-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -56,6 +64,8 @@ NUMBER
 
 **起始版本：** 10
 
+<!--Device-TextInputType-NUMBER--><!--Device-TextInputType-NUMBER-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## PHONE
@@ -67,6 +77,8 @@ PHONE
 电话号码类型。<br> <br>使用场景：适用于电话号码输入框，输入法显示电话号码键盘（包含数字和常用电话符号）。
 
 **起始版本：** 10
+
+<!--Device-TextInputType-PHONE--><!--Device-TextInputType-PHONE-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -80,6 +92,8 @@ DATETIME
 
 **起始版本：** 10
 
+<!--Device-TextInputType-DATETIME--><!--Device-TextInputType-DATETIME-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## EMAIL_ADDRESS
@@ -91,6 +105,8 @@ EMAIL_ADDRESS
 邮箱地址类型。<br> <br>使用场景：适用于邮箱输入框，输入法键盘会突出显示"@""."等常用邮箱符号。
 
 **起始版本：** 10
+
+<!--Device-TextInputType-EMAIL_ADDRESS--><!--Device-TextInputType-EMAIL_ADDRESS-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -104,6 +120,8 @@ URL
 
 **起始版本：** 10
 
+<!--Device-TextInputType-URL--><!--Device-TextInputType-URL-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## VISIBLE_PASSWORD
@@ -115,6 +133,8 @@ VISIBLE_PASSWORD
 密码类型。<br> <br>使用场景：适用于密码输入框，输入法显示可见密码键盘，不进行自动建议。
 
 **起始版本：** 10
+
+<!--Device-TextInputType-VISIBLE_PASSWORD--><!--Device-TextInputType-VISIBLE_PASSWORD-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -128,6 +148,8 @@ NUMBER_PASSWORD
 
 **起始版本：** 11
 
+<!--Device-TextInputType-NUMBER_PASSWORD--><!--Device-TextInputType-NUMBER_PASSWORD-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## SCREEN_LOCK_PASSWORD
@@ -139,6 +161,8 @@ SCREEN_LOCK_PASSWORD
 锁屏密码类型。<br> <br>使用场景：适用于锁屏界面的密码输入框。
 
 **起始版本：** 20
+
+<!--Device-TextInputType-SCREEN_LOCK_PASSWORD--><!--Device-TextInputType-SCREEN_LOCK_PASSWORD-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -152,6 +176,8 @@ USER_NAME
 
 **起始版本：** 20
 
+<!--Device-TextInputType-USER_NAME--><!--Device-TextInputType-USER_NAME-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## NEW_PASSWORD
@@ -163,6 +189,8 @@ NEW_PASSWORD
 新密码类型。<br> <br>使用场景：适用于设置新密码的输入框，输入法可提供密码强度提示。
 
 **起始版本：** 20
+
+<!--Device-TextInputType-NEW_PASSWORD--><!--Device-TextInputType-NEW_PASSWORD-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -176,6 +204,8 @@ NUMBER_DECIMAL
 
 **起始版本：** 20
 
+<!--Device-TextInputType-NUMBER_DECIMAL--><!--Device-TextInputType-NUMBER_DECIMAL-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## ONE_TIME_CODE
@@ -187,5 +217,7 @@ ONE_TIME_CODE
 验证码类型。<br> <br>使用场景：适用于验证码输入框，输入法可优化验证码输入体验。
 
 **起始版本：** 20
+
+<!--Device-TextInputType-ONE_TIME_CODE--><!--Device-TextInputType-ONE_TIME_CODE-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework

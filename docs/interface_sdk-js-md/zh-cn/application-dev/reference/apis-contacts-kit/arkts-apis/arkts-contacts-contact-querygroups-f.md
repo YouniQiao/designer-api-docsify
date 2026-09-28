@@ -22,6 +22,8 @@ function queryGroups(callback: AsyncCallback<Array<Group>>): void
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryGroups(callback: AsyncCallback<Array<Group>>): void--><!--Device-contact-function queryGroups(callback: AsyncCallback<Array<Group>>): void-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 **参数：**
@@ -59,6 +61,8 @@ function queryGroups(context: Context, callback: AsyncCallback<Array<Group>>): v
 **起始版本：** 10
 
 **需要权限：** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryGroups(context: Context, callback: AsyncCallback<Array<Group>>): void--><!--Device-contact-function queryGroups(context: Context, callback: AsyncCallback<Array<Group>>): void-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -117,6 +121,8 @@ function queryGroups(holder: Holder, callback: AsyncCallback<Array<Group>>): voi
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryGroups(holder: Holder, callback: AsyncCallback<Array<Group>>): void--><!--Device-contact-function queryGroups(holder: Holder, callback: AsyncCallback<Array<Group>>): void-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 **参数：**
@@ -159,6 +165,8 @@ function queryGroups(context: Context, holder: Holder, callback: AsyncCallback<A
 **起始版本：** 10
 
 **需要权限：** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryGroups(context: Context, holder: Holder, callback: AsyncCallback<Array<Group>>): void--><!--Device-contact-function queryGroups(context: Context, holder: Holder, callback: AsyncCallback<Array<Group>>): void-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -222,6 +230,8 @@ function queryGroups(holder?: Holder): Promise<Array<Group>>
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryGroups(holder?: Holder): Promise<Array<Group>>--><!--Device-contact-function queryGroups(holder?: Holder): Promise<Array<Group>>-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 **参数：**
@@ -265,6 +275,8 @@ function queryGroups(context: Context, holder?: Holder): Promise<Array<Group>>
 **起始版本：** 10
 
 **需要权限：** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryGroups(context: Context, holder?: Holder): Promise<Array<Group>>--><!--Device-contact-function queryGroups(context: Context, holder?: Holder): Promise<Array<Group>>-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 

@@ -8,6 +8,8 @@ interface DomainPlugin
 
 **起始版本：** 9
 
+<!--Device-osAccount-interface DomainPlugin--><!--Device-osAccount-interface DomainPlugin-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -27,6 +29,8 @@ auth(domainAccountInfo: DomainAccountInfo, credential: Uint8Array, callback: IUs
 认证指定的域账号。
 
 **起始版本：** 9
+
+<!--Device-DomainPlugin-auth(domainAccountInfo: DomainAccountInfo, credential: Uint8Array, callback: IUserAuthCallback): void--><!--Device-DomainPlugin-auth(domainAccountInfo: DomainAccountInfo, credential: Uint8Array, callback: IUserAuthCallback): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -100,6 +104,8 @@ authWithPopup(domainAccountInfo: DomainAccountInfo, callback: IUserAuthCallback)
 
 **起始版本：** 10
 
+<!--Device-DomainPlugin-authWithPopup(domainAccountInfo: DomainAccountInfo, callback: IUserAuthCallback): void--><!--Device-DomainPlugin-authWithPopup(domainAccountInfo: DomainAccountInfo, callback: IUserAuthCallback): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -155,6 +161,8 @@ authWithToken(domainAccountInfo: DomainAccountInfo, token: Uint8Array, callback:
 使用授权令牌认证指定的域账号。
 
 **起始版本：** 10
+
+<!--Device-DomainPlugin-authWithToken(domainAccountInfo: DomainAccountInfo, token: Uint8Array, callback: IUserAuthCallback): void--><!--Device-DomainPlugin-authWithToken(domainAccountInfo: DomainAccountInfo, token: Uint8Array, callback: IUserAuthCallback): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -213,6 +221,8 @@ bindAccount(domainAccountInfo: DomainAccountInfo, localId: number, callback: Asy
 
 **起始版本：** 10
 
+<!--Device-DomainPlugin-bindAccount(domainAccountInfo: DomainAccountInfo, localId: number, callback: AsyncCallback<void>): void--><!--Device-DomainPlugin-bindAccount(domainAccountInfo: DomainAccountInfo, localId: number, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -270,6 +280,8 @@ getAccessToken(options: GetDomainAccessTokenOptions, callback: AsyncCallback<Uin
 
 **起始版本：** 10
 
+<!--Device-DomainPlugin-getAccessToken(options: GetDomainAccessTokenOptions, callback: AsyncCallback<Uint8Array>): void--><!--Device-DomainPlugin-getAccessToken(options: GetDomainAccessTokenOptions, callback: AsyncCallback<Uint8Array>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -326,6 +338,8 @@ getAccountInfo(options: GetDomainAccountInfoPluginOptions, callback: AsyncCallba
 查询指定域账号的信息。使用callback异步回调。
 
 **起始版本：** 10
+
+<!--Device-DomainPlugin-getAccountInfo(options: GetDomainAccountInfoPluginOptions, callback: AsyncCallback<DomainAccountInfo>): void--><!--Device-DomainPlugin-getAccountInfo(options: GetDomainAccountInfoPluginOptions, callback: AsyncCallback<DomainAccountInfo>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -387,6 +401,8 @@ getAuthStatusInfo(domainAccountInfo: DomainAccountInfo, callback: AsyncCallback<
 查询指定域账号的认证状态信息。
 
 **起始版本：** 10
+
+<!--Device-DomainPlugin-getAuthStatusInfo(domainAccountInfo: DomainAccountInfo, callback: AsyncCallback<AuthStatusInfo>): void--><!--Device-DomainPlugin-getAuthStatusInfo(domainAccountInfo: DomainAccountInfo, callback: AsyncCallback<AuthStatusInfo>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -450,6 +466,8 @@ isAccountTokenValid(
 
 **起始版本：** 10
 
+<!--Device-DomainPlugin-isAccountTokenValid(      domainAccountInfo: DomainAccountInfo,      token: Uint8Array,      callback: AsyncCallback<boolean>    ): void--><!--Device-DomainPlugin-isAccountTokenValid(      domainAccountInfo: DomainAccountInfo,      token: Uint8Array,      callback: AsyncCallback<boolean>    ): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -506,6 +524,8 @@ unbindAccount(domainAccountInfo: DomainAccountInfo, callback: AsyncCallback<void
 解绑指定的域账号。
 
 **起始版本：** 10
+
+<!--Device-DomainPlugin-unbindAccount(domainAccountInfo: DomainAccountInfo, callback: AsyncCallback<void>): void--><!--Device-DomainPlugin-unbindAccount(domainAccountInfo: DomainAccountInfo, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 

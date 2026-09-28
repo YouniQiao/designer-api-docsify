@@ -8,6 +8,8 @@ interface CaptionsManager
 
 **起始版本：** 8
 
+<!--Device-accessibility-interface CaptionsManager--><!--Device-accessibility-interface CaptionsManager-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Hearing
 
 ## 导入模块
@@ -28,6 +30,8 @@ off(type: 'enableChange', callback?: Callback<boolean>): void
 **起始版本：** 8
 
 **废弃版本：** 12
+
+<!--Device-CaptionsManager-off(type: 'enableChange', callback?: Callback<boolean>): void--><!--Device-CaptionsManager-off(type: 'enableChange', callback?: Callback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Hearing
 
@@ -85,6 +89,8 @@ off(type: 'styleChange', callback?: Callback<CaptionsStyle>): void
 **起始版本：** 8
 
 **废弃版本：** 12
+
+<!--Device-CaptionsManager-off(type: 'styleChange', callback?: Callback<CaptionsStyle>): void--><!--Device-CaptionsManager-off(type: 'styleChange', callback?: Callback<CaptionsStyle>): void-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Hearing
 
@@ -149,6 +155,8 @@ on(type: 'enableChange', callback: Callback<boolean>): void
 
 **废弃版本：** 12
 
+<!--Device-CaptionsManager-on(type: 'enableChange', callback: Callback<boolean>): void--><!--Device-CaptionsManager-on(type: 'enableChange', callback: Callback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Hearing
 
 **参数：**
@@ -207,6 +215,8 @@ on(type: 'styleChange', callback: Callback<CaptionsStyle>): void
 
 **废弃版本：** 12
 
+<!--Device-CaptionsManager-on(type: 'styleChange', callback: Callback<CaptionsStyle>): void--><!--Device-CaptionsManager-on(type: 'styleChange', callback: Callback<CaptionsStyle>): void-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Hearing
 
 **参数：**
@@ -259,9 +269,11 @@ enabled: boolean
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CaptionsManager-enabled: boolean--><!--Device-CaptionsManager-enabled: boolean-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Hearing
 
@@ -277,8 +289,10 @@ style: CaptionsStyle
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CaptionsManager-style: CaptionsStyle--><!--Device-CaptionsManager-style: CaptionsStyle-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Hearing

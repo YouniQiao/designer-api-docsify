@@ -16,6 +16,8 @@ function getOrientation(rotationMatrix: Array<number>, callback: AsyncCallback<A
 
 **起始版本：** 9
 
+<!--Device-sensor-function getOrientation(rotationMatrix: Array<double>, callback: AsyncCallback<Array<double>>): void--><!--Device-sensor-function getOrientation(rotationMatrix: Array<double>, callback: AsyncCallback<Array<double>>): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -75,6 +77,8 @@ function getOrientation(rotationMatrix: Array<number>): Promise<Array<number>>
 根据旋转矩阵计算设备的方向。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-sensor-function getOrientation(rotationMatrix: Array<double>): Promise<Array<double>>--><!--Device-sensor-function getOrientation(rotationMatrix: Array<double>): Promise<Array<double>>-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 

@@ -8,6 +8,8 @@ interface CertificatePinning
 
 **起始版本：** 12
 
+<!--Device-http-interface CertificatePinning--><!--Device-http-interface CertificatePinning-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块
@@ -28,6 +30,8 @@ hashAlgorithm: 'SHA-256'
 
 **起始版本：** 12
 
+<!--Device-CertificatePinning-hashAlgorithm: 'SHA-256'--><!--Device-CertificatePinning-hashAlgorithm: 'SHA-256'-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## publicKeyHash
@@ -41,5 +45,7 @@ publicKeyHash: string
 **类型：** string
 
 **起始版本：** 12
+
+<!--Device-CertificatePinning-publicKeyHash: string--><!--Device-CertificatePinning-publicKeyHash: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack

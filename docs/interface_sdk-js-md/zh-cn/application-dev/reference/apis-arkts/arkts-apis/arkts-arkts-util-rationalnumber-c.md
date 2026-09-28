@@ -8,6 +8,8 @@ class RationalNumber
 
 **起始版本：** 8
 
+<!--Device-util-class RationalNumber--><!--Device-util-class RationalNumber-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -27,6 +29,8 @@ compare(another: RationalNumber): number
 **起始版本：** 9
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-RationalNumber-compare(another: RationalNumber): number--><!--Device-RationalNumber-compare(another: RationalNumber): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -66,6 +70,8 @@ constructor()
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-RationalNumber-constructor()--><!--Device-RationalNumber-constructor()-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **示例**
@@ -87,6 +93,8 @@ constructor(numerator: number, denominator: number)
 **废弃版本：** 9
 
 **替代接口：** [parseRationalNumber](#parserationalnumber)
+
+<!--Device-RationalNumber-constructor(numerator: number, denominator: number)--><!--Device-RationalNumber-constructor(numerator: number, denominator: number)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -120,6 +128,8 @@ static createRationalFromString(rationalString: string): RationalNumber
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-RationalNumber-static createRationalFromString(rationalString: string): RationalNumber--><!--Device-RationalNumber-static createRationalFromString(rationalString: string): RationalNumber-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -151,6 +161,8 @@ equals(obj: Object): boolean
 **起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-RationalNumber-equals(obj: Object): boolean--><!--Device-RationalNumber-equals(obj: Object): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -203,6 +215,8 @@ static getCommonFactor(number1: number, number2: number): number
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-RationalNumber-static getCommonFactor(number1: number, number2: number): number--><!--Device-RationalNumber-static getCommonFactor(number1: number, number2: number): number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -237,6 +251,8 @@ getDenominator(): number
 **起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-RationalNumber-getDenominator(): number--><!--Device-RationalNumber-getDenominator(): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -276,6 +292,8 @@ getNumerator(): number
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-RationalNumber-getNumerator(): number--><!--Device-RationalNumber-getNumerator(): number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -313,6 +331,8 @@ isFinite(): boolean
 **起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-RationalNumber-isFinite(): boolean--><!--Device-RationalNumber-isFinite(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -352,6 +372,8 @@ isNaN(): boolean
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-RationalNumber-isNaN(): boolean--><!--Device-RationalNumber-isNaN(): boolean-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -389,6 +411,8 @@ isZero(): boolean
 **起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-RationalNumber-isZero(): boolean--><!--Device-RationalNumber-isZero(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -433,6 +457,8 @@ static parseRationalNumber(numerator: number, denominator: number): RationalNumb
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-RationalNumber-static parseRationalNumber(numerator: number, denominator: number): RationalNumber--><!--Device-RationalNumber-static parseRationalNumber(numerator: number, denominator: number): RationalNumber-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -465,6 +491,8 @@ toString(): string
 **起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-RationalNumber-toString(): string--><!--Device-RationalNumber-toString(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -503,6 +531,8 @@ valueOf(): number
 **起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-RationalNumber-valueOf(): number--><!--Device-RationalNumber-valueOf(): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -544,6 +574,8 @@ compareTo(another: RationalNumber): number
 
 **替代接口：** compare
 
+<!--Device-RationalNumber-compareTo(another: RationalNumber): number--><!--Device-RationalNumber-compareTo(another: RationalNumber): number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -581,6 +613,8 @@ static getCommonDivisor(number1: number, number2: number): number
 **废弃版本：** 9
 
 **替代接口：** [getCommonFactor](#getcommonfactor)
+
+<!--Device-RationalNumber-static getCommonDivisor(number1: number, number2: number): number--><!--Device-RationalNumber-static getCommonDivisor(number1: number, number2: number): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

@@ -6,6 +6,8 @@ As a part of the Unified Data Management Framework (UDMF), the **unifiedDataChan
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-unnamed-declare namespace unifiedDataChannel--><!--Device-unnamed-declare namespace unifiedDataChannel-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## Modules to Import

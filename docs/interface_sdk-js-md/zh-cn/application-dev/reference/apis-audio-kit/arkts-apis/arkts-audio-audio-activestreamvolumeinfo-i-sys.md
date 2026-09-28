@@ -10,6 +10,8 @@ interface ActiveStreamVolumeInfo
 
 **起始版本：** 24
 
+<!--Device-audio-interface ActiveStreamVolumeInfo--><!--Device-audio-interface ActiveStreamVolumeInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -34,6 +36,8 @@ appVolume: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ActiveStreamVolumeInfo-appVolume: int--><!--Device-ActiveStreamVolumeInfo-appVolume: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -52,6 +56,8 @@ clientUid: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ActiveStreamVolumeInfo-clientUid: int--><!--Device-ActiveStreamVolumeInfo-clientUid: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -69,6 +75,8 @@ volumeType: AudioVolumeType
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ActiveStreamVolumeInfo-volumeType: AudioVolumeType--><!--Device-ActiveStreamVolumeInfo-volumeType: AudioVolumeType-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 

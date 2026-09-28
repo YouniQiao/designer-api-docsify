@@ -26,6 +26,8 @@ Queries the network route tracing information. This API uses a promise to return
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-connection-function queryTraceRoute(destination: string, option?: TraceRouteOptions): Promise<TraceRouteInfo[]>--><!--Device-connection-function queryTraceRoute(destination: string, option?: TraceRouteOptions): Promise<TraceRouteInfo[]>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Parameters:**

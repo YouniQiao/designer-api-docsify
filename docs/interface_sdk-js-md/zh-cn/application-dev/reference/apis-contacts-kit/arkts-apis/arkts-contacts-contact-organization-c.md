@@ -8,6 +8,8 @@ class Organization
 
 **起始版本：** 7
 
+<!--Device-contact-class Organization--><!--Device-contact-class Organization-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 ## 导入模块
@@ -30,6 +32,8 @@ name: string
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Organization-name: string--><!--Device-Organization-name: string-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 ## title
@@ -45,5 +49,7 @@ title?: string
 **起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Organization-title?: string--><!--Device-Organization-title?: string-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData

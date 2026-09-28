@@ -8,6 +8,8 @@ export enum ErrorCode
 
 **起始版本：** 7
 
+<!--Device-featureAbility-export enum ErrorCode--><!--Device-featureAbility-export enum ErrorCode-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 ## NO_ERROR
@@ -21,6 +23,8 @@ NO_ERROR = 0
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-ErrorCode-NO_ERROR = 0--><!--Device-ErrorCode-NO_ERROR = 0-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -36,6 +40,8 @@ INVALID_PARAMETER = -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-ErrorCode-INVALID_PARAMETER = -1--><!--Device-ErrorCode-INVALID_PARAMETER = -1-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 ## ABILITY_NOT_FOUND
@@ -50,6 +56,8 @@ ABILITY_NOT_FOUND = -2
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-ErrorCode-ABILITY_NOT_FOUND = -2--><!--Device-ErrorCode-ABILITY_NOT_FOUND = -2-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 ## PERMISSION_DENY
@@ -63,5 +71,7 @@ PERMISSION_DENY = -3
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-ErrorCode-PERMISSION_DENY = -3--><!--Device-ErrorCode-PERMISSION_DENY = -3-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel

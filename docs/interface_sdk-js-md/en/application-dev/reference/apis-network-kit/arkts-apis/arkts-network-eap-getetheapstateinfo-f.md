@@ -20,6 +20,8 @@ Queries the current 802.1X EAP authentication state information.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-eap-function getEthEapStateInfo(): EthEapStateInfo--><!--Device-eap-function getEthEapStateInfo(): EthEapStateInfo-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 **Return value:**

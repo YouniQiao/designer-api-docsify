@@ -18,6 +18,8 @@ function updateNetwork(config: WifiDeviceConfig): number
 
 **需要权限：** ohos.permission.SET_WIFI_INFO and ohos.permission.SET_WIFI_CONFIG
 
+<!--Device-wifiManager-function updateNetwork(config: WifiDeviceConfig): int--><!--Device-wifiManager-function updateNetwork(config: WifiDeviceConfig): int-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。

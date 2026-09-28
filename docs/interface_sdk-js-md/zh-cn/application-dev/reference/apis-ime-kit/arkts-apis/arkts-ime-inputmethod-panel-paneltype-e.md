@@ -8,6 +8,8 @@ export enum PanelType
 
 **起始版本：** 11
 
+<!--Device-unnamed-export enum PanelType--><!--Device-unnamed-export enum PanelType-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## SOFT_KEYBOARD
@@ -20,6 +22,8 @@ SOFT_KEYBOARD = 0
 
 **起始版本：** 11
 
+<!--Device-PanelType-SOFT_KEYBOARD = 0--><!--Device-PanelType-SOFT_KEYBOARD = 0-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## STATUS_BAR
@@ -31,5 +35,7 @@ STATUS_BAR
 状态栏类型。
 
 **起始版本：** 11
+
+<!--Device-PanelType-STATUS_BAR--><!--Device-PanelType-STATUS_BAR-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework

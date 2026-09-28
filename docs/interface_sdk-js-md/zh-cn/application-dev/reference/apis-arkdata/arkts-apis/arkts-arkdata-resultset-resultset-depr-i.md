@@ -16,6 +16,8 @@ export interface ResultSet
 
 **替代接口：** [relationalStore](arkts-arkdata-data-relationalstore.md)
 
+<!--Device-unnamed-export interface ResultSet--><!--Device-unnamed-export interface ResultSet-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## close
@@ -31,6 +33,8 @@ close(): void
 **废弃版本：** 9
 
 **替代接口：** close
+
+<!--Device-ResultSet-close(): void--><!--Device-ResultSet-close(): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -59,6 +63,8 @@ getBlob(columnIndex: number): Uint8Array
 **废弃版本：** 9
 
 **替代接口：** getBlob
+
+<!--Device-ResultSet-getBlob(columnIndex: number): Uint8Array--><!--Device-ResultSet-getBlob(columnIndex: number): Uint8Array-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -93,6 +99,8 @@ getColumnIndex(columnName: string): number
 **废弃版本：** 9
 
 **替代接口：** getColumnIndex
+
+<!--Device-ResultSet-getColumnIndex(columnName: string): number--><!--Device-ResultSet-getColumnIndex(columnName: string): number-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -134,6 +142,8 @@ getColumnName(columnIndex: number): string
 
 **替代接口：** getColumnName
 
+<!--Device-ResultSet-getColumnName(columnIndex: number): string--><!--Device-ResultSet-getColumnName(columnIndex: number): string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
@@ -170,6 +180,8 @@ getDouble(columnIndex: number): number
 
 **替代接口：** getDouble
 
+<!--Device-ResultSet-getDouble(columnIndex: number): number--><!--Device-ResultSet-getDouble(columnIndex: number): number-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
@@ -203,6 +215,8 @@ getLong(columnIndex: number): number
 **废弃版本：** 9
 
 **替代接口：** getLong
+
+<!--Device-ResultSet-getLong(columnIndex: number): number--><!--Device-ResultSet-getLong(columnIndex: number): number-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -238,6 +252,8 @@ getString(columnIndex: number): string
 
 **替代接口：** getString
 
+<!--Device-ResultSet-getString(columnIndex: number): string--><!--Device-ResultSet-getString(columnIndex: number): string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
@@ -271,6 +287,8 @@ goTo(offset: number): boolean
 **废弃版本：** 9
 
 **替代接口：** goTo
+
+<!--Device-ResultSet-goTo(offset: number): boolean--><!--Device-ResultSet-goTo(offset: number): boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -313,6 +331,8 @@ goToFirstRow(): boolean
 
 **替代接口：** goToFirstRow
 
+<!--Device-ResultSet-goToFirstRow(): boolean--><!--Device-ResultSet-goToFirstRow(): boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **返回值：**
@@ -347,6 +367,8 @@ goToLastRow(): boolean
 **废弃版本：** 9
 
 **替代接口：** goToLastRow
+
+<!--Device-ResultSet-goToLastRow(): boolean--><!--Device-ResultSet-goToLastRow(): boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -383,6 +405,8 @@ goToNextRow(): boolean
 
 **替代接口：** goToNextRow
 
+<!--Device-ResultSet-goToNextRow(): boolean--><!--Device-ResultSet-goToNextRow(): boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **返回值：**
@@ -418,6 +442,8 @@ goToPreviousRow(): boolean
 
 **替代接口：** goToPreviousRow
 
+<!--Device-ResultSet-goToPreviousRow(): boolean--><!--Device-ResultSet-goToPreviousRow(): boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **返回值：**
@@ -452,6 +478,8 @@ goToRow(position: number): boolean
 **废弃版本：** 9
 
 **替代接口：** goToRow
+
+<!--Device-ResultSet-goToRow(position: number): boolean--><!--Device-ResultSet-goToRow(position: number): boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -494,6 +522,8 @@ isColumnNull(columnIndex: number): boolean
 
 **替代接口：** isColumnNull
 
+<!--Device-ResultSet-isColumnNull(columnIndex: number): boolean--><!--Device-ResultSet-isColumnNull(columnIndex: number): boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
@@ -532,6 +562,8 @@ columnCount: number
 
 **替代接口：** columnCount
 
+<!--Device-ResultSet-columnCount: number--><!--Device-ResultSet-columnCount: number-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## columnNames
@@ -551,6 +583,8 @@ columnNames: Array&lt;string&gt;
 **废弃版本：** 9
 
 **替代接口：** columnNames
+
+<!--Device-ResultSet-columnNames: Array<string>--><!--Device-ResultSet-columnNames: Array<string>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -572,6 +606,8 @@ isAtFirstRow: boolean
 
 **替代接口：** isAtFirstRow
 
+<!--Device-ResultSet-isAtFirstRow: boolean--><!--Device-ResultSet-isAtFirstRow: boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## isAtLastRow
@@ -591,6 +627,8 @@ isAtLastRow: boolean
 **废弃版本：** 9
 
 **替代接口：** isAtLastRow
+
+<!--Device-ResultSet-isAtLastRow: boolean--><!--Device-ResultSet-isAtLastRow: boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -612,6 +650,8 @@ isClosed: boolean
 
 **替代接口：** isClosed
 
+<!--Device-ResultSet-isClosed: boolean--><!--Device-ResultSet-isClosed: boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## isEnded
@@ -631,6 +671,8 @@ isEnded: boolean
 **废弃版本：** 9
 
 **替代接口：** isEnded
+
+<!--Device-ResultSet-isEnded: boolean--><!--Device-ResultSet-isEnded: boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -652,6 +694,8 @@ isStarted: boolean
 
 **替代接口：** isStarted
 
+<!--Device-ResultSet-isStarted: boolean--><!--Device-ResultSet-isStarted: boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## rowCount
@@ -672,6 +716,8 @@ rowCount: number
 
 **替代接口：** rowCount
 
+<!--Device-ResultSet-rowCount: number--><!--Device-ResultSet-rowCount: number-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## rowIndex
@@ -691,5 +737,7 @@ rowIndex: number
 **废弃版本：** 9
 
 **替代接口：** rowIndex
+
+<!--Device-ResultSet-rowIndex: number--><!--Device-ResultSet-rowIndex: number-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core

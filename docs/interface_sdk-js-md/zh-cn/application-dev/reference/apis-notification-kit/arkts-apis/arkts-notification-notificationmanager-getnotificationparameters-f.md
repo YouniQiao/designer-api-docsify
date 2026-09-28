@@ -18,6 +18,8 @@ function getNotificationParameters(id: number, label?: string): Promise<Notifica
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-notificationManager-function getNotificationParameters(id: number, label?: string): Promise<NotificationParameters>--><!--Device-notificationManager-function getNotificationParameters(id: number, label?: string): Promise<NotificationParameters>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **参数：**

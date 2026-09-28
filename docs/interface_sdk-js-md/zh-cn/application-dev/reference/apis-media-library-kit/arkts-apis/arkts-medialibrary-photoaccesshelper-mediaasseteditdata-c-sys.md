@@ -8,6 +8,8 @@ class MediaAssetEditData
 
 **起始版本：** 11
 
+<!--Device-photoAccessHelper-class MediaAssetEditData--><!--Device-photoAccessHelper-class MediaAssetEditData-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -27,6 +29,8 @@ constructor(compatibleFormat: string, formatVersion: string)
 构造函数。
 
 **起始版本：** 11
+
+<!--Device-MediaAssetEditData-constructor(compatibleFormat: string, formatVersion: string)--><!--Device-MediaAssetEditData-constructor(compatibleFormat: string, formatVersion: string)-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -65,6 +69,8 @@ compatibleFormat: string
 
 **起始版本：** 11
 
+<!--Device-MediaAssetEditData-compatibleFormat: string--><!--Device-MediaAssetEditData-compatibleFormat: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -81,6 +87,8 @@ data: string
 
 **起始版本：** 11
 
+<!--Device-MediaAssetEditData-data: string--><!--Device-MediaAssetEditData-data: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -96,6 +104,8 @@ formatVersion: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-MediaAssetEditData-formatVersion: string--><!--Device-MediaAssetEditData-formatVersion: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

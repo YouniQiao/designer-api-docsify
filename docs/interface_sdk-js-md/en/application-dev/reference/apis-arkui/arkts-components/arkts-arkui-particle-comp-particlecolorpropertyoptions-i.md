@@ -8,6 +8,8 @@ Defines the particle color property updater configs which can support generics. 
 
 **Since:** 10
 
+<!--Device-unnamed-interface ParticleColorPropertyOptions<UPDATER extends ParticleUpdater>--><!--Device-unnamed-interface ParticleColorPropertyOptions<UPDATER extends ParticleUpdater>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## distributionType
@@ -30,6 +32,8 @@ Default value: **DistributionType.UNIFORM**
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ParticleColorPropertyOptions-distributionType?: DistributionType--><!--Device-ParticleColorPropertyOptions-distributionType?: DistributionType-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## range
@@ -49,6 +53,8 @@ Default value: range:[Color.White,Color.White]
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ParticleColorPropertyOptions-range: ParticleTuple<ResourceColor, ResourceColor>--><!--Device-ParticleColorPropertyOptions-range: ParticleTuple<ResourceColor, ResourceColor>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -82,5 +88,7 @@ When **type** is set to **ParticleUpdater.RANDOM** or **ParticleUpdater.CURVE**,
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ParticleColorPropertyOptions-updater?: ParticleColorUpdaterOptions<UPDATER>--><!--Device-ParticleColorPropertyOptions-updater?: ParticleColorUpdaterOptions<UPDATER>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

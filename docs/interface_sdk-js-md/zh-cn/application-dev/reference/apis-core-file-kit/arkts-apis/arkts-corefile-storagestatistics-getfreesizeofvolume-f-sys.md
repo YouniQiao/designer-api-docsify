@@ -18,6 +18,8 @@ function getFreeSizeOfVolume(volumeUuid: string, callback: AsyncCallback<number>
 
 **需要权限：** ohos.permission.STORAGE_MANAGER
 
+<!--Device-storageStatistics-function getFreeSizeOfVolume(volumeUuid: string, callback: AsyncCallback<long>): void--><!--Device-storageStatistics-function getFreeSizeOfVolume(volumeUuid: string, callback: AsyncCallback<long>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
 **系统接口：** 此接口为系统接口。
@@ -79,6 +81,8 @@ function getFreeSizeOfVolume(volumeUuid: string): Promise<number>
 **起始版本：** 8
 
 **需要权限：** ohos.permission.STORAGE_MANAGER
+
+<!--Device-storageStatistics-function getFreeSizeOfVolume(volumeUuid: string): Promise<long>--><!--Device-storageStatistics-function getFreeSizeOfVolume(volumeUuid: string): Promise<long>-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 

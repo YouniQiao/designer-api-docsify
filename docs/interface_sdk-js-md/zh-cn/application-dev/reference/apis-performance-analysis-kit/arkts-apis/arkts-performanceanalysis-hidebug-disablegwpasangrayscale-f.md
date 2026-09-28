@@ -21,6 +21,8 @@ function disableGwpAsanGrayscale(): void
 
 **起始版本：** 20
 
+<!--Device-hidebug-function disableGwpAsanGrayscale(): void--><!--Device-hidebug-function disableGwpAsanGrayscale(): void-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **示例**

@@ -22,6 +22,8 @@ function exit(code: number): void
 
 **替代接口：** [exit](arkts-arkts-process-processmanager-c.md#exit)
 
+<!--Device-process-function exit(code: number): void--><!--Device-process-function exit(code: number): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**

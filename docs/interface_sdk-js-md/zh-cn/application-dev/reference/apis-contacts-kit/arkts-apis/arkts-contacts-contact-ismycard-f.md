@@ -22,6 +22,8 @@ function isMyCard(id: number, callback: AsyncCallback<boolean>): void
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function isMyCard(id: number, callback: AsyncCallback<boolean>): void--><!--Device-contact-function isMyCard(id: number, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 **参数：**
@@ -61,6 +63,8 @@ function isMyCard(context: Context, id: number, callback: AsyncCallback<boolean>
 **起始版本：** 10
 
 **需要权限：** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function isMyCard(context: Context, id: number, callback: AsyncCallback<boolean>): void--><!--Device-contact-function isMyCard(context: Context, id: number, callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -120,6 +124,8 @@ function isMyCard(id: number): Promise<boolean>
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function isMyCard(id: number): Promise<boolean>--><!--Device-contact-function isMyCard(id: number): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 **参数：**
@@ -160,6 +166,8 @@ function isMyCard(context: Context, id: number): Promise<boolean>
 **起始版本：** 10
 
 **需要权限：** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function isMyCard(context: Context, id: number): Promise<boolean>--><!--Device-contact-function isMyCard(context: Context, id: number): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 

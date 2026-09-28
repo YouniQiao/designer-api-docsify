@@ -20,6 +20,8 @@ function convertUuid(uuid: string): string
 
 **起始版本：** 22
 
+<!--Device-access-function convertUuid(uuid: string): string--><!--Device-access-function convertUuid(uuid: string): string-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**

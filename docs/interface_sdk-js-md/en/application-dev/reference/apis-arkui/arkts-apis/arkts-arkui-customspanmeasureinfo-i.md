@@ -8,6 +8,8 @@ Defines the CustomSpanMeasureInfo interface.
 
 **Since:** 12
 
+<!--Device-unnamed-declare interface CustomSpanMeasureInfo--><!--Device-unnamed-declare interface CustomSpanMeasureInfo-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## fontSize
@@ -27,6 +29,8 @@ Unit: [fp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#basic-pixel-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-CustomSpanMeasureInfo-fontSize: number--><!--Device-CustomSpanMeasureInfo-fontSize: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,6 +54,8 @@ When the value is **null** or **undefined**, it indicates that the parent compon
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-CustomSpanMeasureInfo-layoutPolicy?: LayoutPolicy--><!--Device-CustomSpanMeasureInfo-layoutPolicy?: LayoutPolicy-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## maxWidth
@@ -71,5 +77,7 @@ Unit: [px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#basic-pixel-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-CustomSpanMeasureInfo-maxWidth?: number--><!--Device-CustomSpanMeasureInfo-maxWidth?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

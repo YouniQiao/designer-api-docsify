@@ -8,6 +8,8 @@ LinearGradient class
 
 **Since:** 10
 
+<!--Device-unnamed-declare class LinearGradient--><!--Device-unnamed-declare class LinearGradient-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
@@ -23,6 +25,8 @@ Describes the linear gradient.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-LinearGradient-constructor(colorStops: ColorStop[])--><!--Device-LinearGradient-constructor(colorStops: ColorStop[])-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

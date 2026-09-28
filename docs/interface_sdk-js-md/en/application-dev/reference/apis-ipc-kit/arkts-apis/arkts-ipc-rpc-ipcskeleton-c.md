@@ -8,6 +8,8 @@ Obtains IPC context, including the UID and PID, local and remote device IDs, and
 
 **Since:** 7
 
+<!--Device-rpc-class IPCSkeleton--><!--Device-rpc-class IPCSkeleton-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 ## Modules to Import
@@ -25,6 +27,8 @@ static flushCmdBuffer(object: IRemoteObject): void
 Flushes all suspended commands from the specified **RemoteProxy** to the corresponding **RemoteObject**. This API is a static method. You are advised to call this API before performing any sensitive operation.
 
 **Since:** 9
+
+<!--Device-IPCSkeleton-static flushCmdBuffer(object: IRemoteObject): void--><!--Device-IPCSkeleton-static flushCmdBuffer(object: IRemoteObject): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -77,6 +81,8 @@ Obtains the ID of the device hosting the caller's process. This API is a static 
 
 **Since:** 7
 
+<!--Device-IPCSkeleton-static getCallingDeviceID(): string--><!--Device-IPCSkeleton-static getCallingDeviceID(): string-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -114,6 +120,8 @@ static getCallingPid(): number
 Obtains the PID of the caller. This API is a static method, which is called by the [RemoteObject](arkts-ipc-rpc-remoteobject-c.md) object in the IPC context [onRemoteMessageRequest](arkts-ipc-rpc-remoteobject-c.md#onremotemessagerequest). If the method is not called in the IPC context, the PID of the current process is returned.
 
 **Since:** 7
+
+<!--Device-IPCSkeleton-static getCallingPid(): int--><!--Device-IPCSkeleton-static getCallingPid(): int-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -153,6 +161,8 @@ Obtains the caller's token ID, which is used to verify the caller identity.
 
 **Since:** 8
 
+<!--Device-IPCSkeleton-static getCallingTokenId(): long--><!--Device-IPCSkeleton-static getCallingTokenId(): long-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -190,6 +200,8 @@ static getCallingUid(): number
 Obtains the UID of the caller. This API is a static method, which is called by the [RemoteObject](arkts-ipc-rpc-remoteobject-c.md) object in the IPC context [onRemoteMessageRequest](arkts-ipc-rpc-remoteobject-c.md#onremotemessagerequest). If the method is not called in the IPC context, the UID of the current process is returned.
 
 **Since:** 7
+
+<!--Device-IPCSkeleton-static getCallingUid(): int--><!--Device-IPCSkeleton-static getCallingUid(): int-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -229,6 +241,8 @@ Obtains the system service manager (SAMGR) object. This method is static method.
 
 **Since:** 7
 
+<!--Device-IPCSkeleton-static getContextObject(): IRemoteObject--><!--Device-IPCSkeleton-static getContextObject(): IRemoteObject-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -260,6 +274,8 @@ static getLocalDeviceID(): string
 Obtains the local device ID. This API is a static method.
 
 **Since:** 7
+
+<!--Device-IPCSkeleton-static getLocalDeviceID(): string--><!--Device-IPCSkeleton-static getLocalDeviceID(): string-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -299,6 +315,8 @@ Checks whether the peer process is a process of the local device. This API is a 
 
 **Since:** 7
 
+<!--Device-IPCSkeleton-static isLocalCalling(): boolean--><!--Device-IPCSkeleton-static isLocalCalling(): boolean-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -337,6 +355,8 @@ Resets the UID and PID of the remote user to those of the local user. This API i
 
 **Since:** 7
 
+<!--Device-IPCSkeleton-static resetCallingIdentity(): string--><!--Device-IPCSkeleton-static resetCallingIdentity(): string-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -374,6 +394,8 @@ static restoreCallingIdentity(identity: string): void
 Restores the UID and PID to those of the remote user. This API is a static method. It is usually called after **resetCallingIdentity**, and the UID and PID of the remote user returned by **resetCallingIdentity** are required. This API is supported only in the IPC context [onRemoteMessageRequest](arkts-ipc-rpc-remoteobject-c.md#onremotemessagerequest); otherwise, it returns directly.
 
 **Since:** 9
+
+<!--Device-IPCSkeleton-static restoreCallingIdentity(identity: string): void--><!--Device-IPCSkeleton-static restoreCallingIdentity(identity: string): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -423,6 +445,8 @@ Flushes all suspended commands from the specified **RemoteProxy** to the corresp
 **Deprecated since:** 9
 
 **Substitutes:** [flushCmdBuffer](#flushcmdbuffer)(object: IRemoteObject)
+
+<!--Device-IPCSkeleton-static flushCommands(object: IRemoteObject): number--><!--Device-IPCSkeleton-static flushCommands(object: IRemoteObject): number-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -478,6 +502,8 @@ Sets the UID and PID to those of the remote user. This API is a static method. I
 **Deprecated since:** 9
 
 **Substitutes:** [restoreCallingIdentity](#restorecallingidentity)(identity: string)
+
+<!--Device-IPCSkeleton-static setCallingIdentity(identity: string): boolean--><!--Device-IPCSkeleton-static setCallingIdentity(identity: string): boolean-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 

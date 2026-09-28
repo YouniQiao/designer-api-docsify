@@ -18,6 +18,8 @@ Register session destroy callback
 
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES_FOR_PUBLIC
 
+<!--Device-avSession-function onSessionDestroy(callback: Callback<AVSessionDescriptor>): void--><!--Device-avSession-function onSessionDestroy(callback: Callback<AVSessionDescriptor>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 
 **参数：**

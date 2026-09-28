@@ -8,6 +8,8 @@ interface ResourceInfo
 
 **起始版本：** 20
 
+<!--Device-cacheDownload-interface ResourceInfo--><!--Device-cacheDownload-interface ResourceInfo-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## 导入模块
@@ -27,5 +29,7 @@ readonly size: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-ResourceInfo-readonly size: long--><!--Device-ResourceInfo-readonly size: long-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent

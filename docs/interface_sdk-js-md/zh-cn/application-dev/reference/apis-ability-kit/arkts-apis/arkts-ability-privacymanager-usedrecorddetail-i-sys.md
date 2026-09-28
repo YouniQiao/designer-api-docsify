@@ -8,6 +8,8 @@ interface UsedRecordDetail
 
 **起始版本：** 9
 
+<!--Device-privacyManager-interface UsedRecordDetail--><!--Device-privacyManager-interface UsedRecordDetail-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ accessDuration: number
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-UsedRecordDetail-accessDuration: long--><!--Device-UsedRecordDetail-accessDuration: long-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +55,8 @@ count?: number
 **起始版本：** 11
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-UsedRecordDetail-count?: int--><!--Device-UsedRecordDetail-count?: int-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -75,6 +81,8 @@ lockScreenStatus?: number
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-UsedRecordDetail-lockScreenStatus?: int--><!--Device-UsedRecordDetail-lockScreenStatus?: int-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -93,6 +101,8 @@ status: number
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-UsedRecordDetail-status: int--><!--Device-UsedRecordDetail-status: int-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -110,6 +120,8 @@ timestamp: number
 **起始版本：** 9
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-UsedRecordDetail-timestamp: long--><!--Device-UsedRecordDetail-timestamp: long-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -130,6 +142,8 @@ usedType?: PermissionUsedType
 **起始版本：** 12
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-UsedRecordDetail-usedType?: PermissionUsedType--><!--Device-UsedRecordDetail-usedType?: PermissionUsedType-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 

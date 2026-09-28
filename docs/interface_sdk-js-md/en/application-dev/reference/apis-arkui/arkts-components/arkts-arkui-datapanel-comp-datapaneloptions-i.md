@@ -8,6 +8,8 @@ Defines data panel configuration options.
 
 **Since:** 7
 
+<!--Device-unnamed-declare interface DataPanelOptions--><!--Device-unnamed-declare interface DataPanelOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## max
@@ -29,6 +31,8 @@ Default Value: **100**
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-DataPanelOptions-max?: number--><!--Device-DataPanelOptions-max?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -52,6 +56,8 @@ If not passed, the default value is **DataPanelType.Circle**.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-DataPanelOptions-type?: DataPanelType--><!--Device-DataPanelOptions-type?: DataPanelType-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## values
@@ -69,5 +75,7 @@ Data value list. The array length range is [0, 9]. If more than nine values are 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-DataPanelOptions-values: number[]--><!--Device-DataPanelOptions-values: number[]-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

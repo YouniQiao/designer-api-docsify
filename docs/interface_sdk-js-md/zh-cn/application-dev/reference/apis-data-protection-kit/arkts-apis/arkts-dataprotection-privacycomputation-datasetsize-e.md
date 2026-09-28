@@ -8,6 +8,8 @@ enum DataSetSize
 
 **起始版本：** 26.0.1
 
+<!--Device-privacyComputation-enum DataSetSize--><!--Device-privacyComputation-enum DataSetSize-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 ## SIZE_128
@@ -23,6 +25,8 @@ SIZE_128 = 0
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
+
+<!--Device-DataSetSize-SIZE_128 = 0--><!--Device-DataSetSize-SIZE_128 = 0-End-->
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -40,6 +44,8 @@ SIZE_256 = 1
 
 **原子化服务API：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
 
+<!--Device-DataSetSize-SIZE_256 = 1--><!--Device-DataSetSize-SIZE_256 = 1-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 ## SIZE_512
@@ -55,5 +61,7 @@ SIZE_512 = 2
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
+
+<!--Device-DataSetSize-SIZE_512 = 2--><!--Device-DataSetSize-SIZE_512 = 2-End-->
 
 **系统能力：** SystemCapability.Security.Asset

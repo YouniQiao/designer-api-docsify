@@ -21,6 +21,8 @@ function getSlotsByBundle(bundle: BundleOption, callback: AsyncCallback<Array<No
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notification-function getSlotsByBundle(bundle: BundleOption, callback: AsyncCallback<Array<NotificationSlot>>): void--><!--Device-notification-function getSlotsByBundle(bundle: BundleOption, callback: AsyncCallback<Array<NotificationSlot>>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -50,6 +52,8 @@ function getSlotsByBundle(bundle: BundleOption): Promise<Array<NotificationSlot>
 **替代接口：** [getSlotsByBundle](arkts-notification-notificationmanager-getslotsbybundle-f-sys.md)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notification-function getSlotsByBundle(bundle: BundleOption): Promise<Array<NotificationSlot>>--><!--Device-notification-function getSlotsByBundle(bundle: BundleOption): Promise<Array<NotificationSlot>>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

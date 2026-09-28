@@ -14,6 +14,8 @@ interface CmacSpec extends MacSpec
 
 **起始版本：** 18
 
+<!--Device-cryptoFramework-interface CmacSpec extends MacSpec--><!--Device-cryptoFramework-interface CmacSpec extends MacSpec-End-->
+
 **系统能力：** SystemCapability.Security.CryptoFramework.Mac
 
 ## 导入模块
@@ -34,6 +36,8 @@ CMAC使用的对称密码算法名。
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-CmacSpec-cipherName: string--><!--Device-CmacSpec-cipherName: string-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Mac

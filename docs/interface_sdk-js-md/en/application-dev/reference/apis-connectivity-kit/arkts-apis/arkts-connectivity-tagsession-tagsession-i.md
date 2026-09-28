@@ -15,6 +15,8 @@ The **tagSession** module provides common APIs for establishing connections and 
 
 **Since:** 7
 
+<!--Device-unnamed-export interface TagSession--><!--Device-unnamed-export interface TagSession-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 ## connect
@@ -29,7 +31,9 @@ Connects to this tag. Call this API to set up a connection before reading data f
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-TagSession-connect(): void--><!--Device-TagSession-connect(): void-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -69,7 +73,9 @@ Obtains the maximum length of the data that can be sent to this tag.
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-TagSession-getMaxTransmitSize(): int--><!--Device-TagSession-getMaxTransmitSize(): int-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -115,7 +121,9 @@ Obtains the timeout period for sending data to this tag, in milliseconds.
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-TagSession-getTimeout(): int--><!--Device-TagSession-getTimeout(): int-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -159,7 +167,9 @@ Checks whether the tag is connected. If you receive a message indicating that th
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-TagSession-isConnected(): boolean--><!--Device-TagSession-isConnected(): boolean-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -203,7 +213,9 @@ Resets the connection to this tag.
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-TagSession-resetConnection(): void--><!--Device-TagSession-resetConnection(): void-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -243,7 +255,9 @@ Sets the maximum time allowed for sending data to this tag, in ms.
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-TagSession-setTimeout(timeout: int): void--><!--Device-TagSession-setTimeout(timeout: int): void-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -291,7 +305,9 @@ Sends data to the tag. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-TagSession-transmit(data: int[]): Promise<int[]>--><!--Device-TagSession-transmit(data: int[]): Promise<int[]>-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -365,7 +381,9 @@ Sends data to the tag. This API uses an asynchronous callback to return the resu
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-TagSession-transmit(data: int[], callback: AsyncCallback<int[]>): void--><!--Device-TagSession-transmit(data: int[], callback: AsyncCallback<int[]>): void-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -442,6 +460,8 @@ Connects to this tag. Call this API to set up a connection before reading data f
 
 **Required permissions:** ohos.permission.NFC_TAG
 
+<!--Device-TagSession-connectTag(): boolean--><!--Device-TagSession-connectTag(): boolean-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Return value:**
@@ -482,6 +502,8 @@ Obtains the maximum length of the data that can be sent to this tag.
 **Substitutes:** [getMaxTransmitSize](#getmaxtransmitsize)
 
 **Required permissions:** ohos.permission.NFC_TAG
+
+<!--Device-TagSession-getMaxSendLength(): number--><!--Device-TagSession-getMaxSendLength(): number-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -524,6 +546,8 @@ Obtains the timeout period for sending data to this tag, in milliseconds.
 
 **Required permissions:** ohos.permission.NFC_TAG
 
+<!--Device-TagSession-getSendDataTimeout(): number--><!--Device-TagSession-getSendDataTimeout(): number-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Return value:**
@@ -565,6 +589,8 @@ Obtains the **tagInfo** object provided by the NFC service when the tag is dispa
 
 **Required permissions:** ohos.permission.NFC_TAG
 
+<!--Device-TagSession-getTagInfo(): tag.TagInfo--><!--Device-TagSession-getTagInfo(): tag.TagInfo-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Return value:**
@@ -603,6 +629,8 @@ Checks whether the tag is connected.
 **Deprecated since:** 9
 
 **Substitutes:** isConnected
+
+<!--Device-TagSession-isTagConnected(): boolean--><!--Device-TagSession-isTagConnected(): boolean-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -645,6 +673,8 @@ Resets the connection to this tag.
 
 **Required permissions:** ohos.permission.NFC_TAG
 
+<!--Device-TagSession-reset(): void--><!--Device-TagSession-reset(): void-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Examples**
@@ -678,6 +708,8 @@ Sends data to the tag. This API uses a promise to return the result.
 **Substitutes:** transmit
 
 **Required permissions:** ohos.permission.NFC_TAG
+
+<!--Device-TagSession-sendData(data: number[]): Promise<number[]>--><!--Device-TagSession-sendData(data: number[]): Promise<number[]>-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -743,6 +775,8 @@ Sends data to the tag. This API uses an asynchronous callback to return the resu
 
 **Required permissions:** ohos.permission.NFC_TAG
 
+<!--Device-TagSession-sendData(data: number[], callback: AsyncCallback<number[]>): void--><!--Device-TagSession-sendData(data: number[], callback: AsyncCallback<number[]>): void-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Parameters:**
@@ -800,6 +834,8 @@ Sets the maximum time allowed for sending data to this tag, in ms.
 **Substitutes:** setTimeout
 
 **Required permissions:** ohos.permission.NFC_TAG
+
+<!--Device-TagSession-setSendDataTimeout(timeout: number): boolean--><!--Device-TagSession-setSendDataTimeout(timeout: number): boolean-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 

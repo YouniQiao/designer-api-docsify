@@ -16,6 +16,8 @@ function getKeyboardTypeSync(deviceId: number): KeyboardType
 
 **起始版本：** 10
 
+<!--Device-inputDevice-function getKeyboardTypeSync(deviceId: int): KeyboardType--><!--Device-inputDevice-function getKeyboardTypeSync(deviceId: int): KeyboardType-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 **参数：**

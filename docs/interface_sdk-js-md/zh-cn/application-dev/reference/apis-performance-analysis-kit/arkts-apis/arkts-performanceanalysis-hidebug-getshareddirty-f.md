@@ -21,6 +21,8 @@ function getSharedDirty() : bigint
 
 **起始版本：** 8
 
+<!--Device-hidebug-function getSharedDirty() : bigint--><!--Device-hidebug-function getSharedDirty() : bigint-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **返回值：**

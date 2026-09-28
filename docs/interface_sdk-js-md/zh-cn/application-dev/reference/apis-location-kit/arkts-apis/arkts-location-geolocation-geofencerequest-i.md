@@ -16,6 +16,8 @@ export interface GeofenceRequest
 
 **需要权限：** ohos.permission.LOCATION
 
+<!--Device-geolocation-export interface GeofenceRequest--><!--Device-geolocation-export interface GeofenceRequest-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 ## 导入模块
@@ -40,6 +42,8 @@ geofence: Geofence
 
 **替代接口：** [geofence](arkts-location-geolocationmanager-geofencerequest-i.md#geofence)
 
+<!--Device-GeofenceRequest-geofence: Geofence--><!--Device-GeofenceRequest-geofence: Geofence-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 ## priority
@@ -58,6 +62,8 @@ priority: LocationRequestPriority
 
 **替代接口：** priority
 
+<!--Device-GeofenceRequest-priority: LocationRequestPriority--><!--Device-GeofenceRequest-priority: LocationRequestPriority-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 ## scenario
@@ -75,5 +81,7 @@ scenario: LocationRequestScenario
 **废弃版本：** 9
 
 **替代接口：** [scenario](arkts-location-geolocationmanager-geofencerequest-i.md#scenario)
+
+<!--Device-GeofenceRequest-scenario: LocationRequestScenario--><!--Device-GeofenceRequest-scenario: LocationRequestScenario-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geofence

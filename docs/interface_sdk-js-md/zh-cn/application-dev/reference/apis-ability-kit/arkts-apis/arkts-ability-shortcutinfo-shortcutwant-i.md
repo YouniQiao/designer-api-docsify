@@ -8,6 +8,8 @@ export interface ShortcutWant
 
 **起始版本：** 20
 
+<!--Device-unnamed-export interface ShortcutWant--><!--Device-unnamed-export interface ShortcutWant-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
 ## parameters
@@ -21,6 +23,8 @@ parameters?: Array<ParameterItem>
 **类型：** Array&lt;[ParameterItem](arkts-ability-shortcutinfo-parameteritem-i.md)&gt;
 
 **起始版本：** 20
+
+<!--Device-ShortcutWant-parameters?: Array<ParameterItem>--><!--Device-ShortcutWant-parameters?: Array<ParameterItem>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
@@ -36,6 +40,8 @@ targetAbility: string
 
 **起始版本：** 20
 
+<!--Device-ShortcutWant-targetAbility: string--><!--Device-ShortcutWant-targetAbility: string-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
 ## targetBundle
@@ -50,6 +56,8 @@ targetBundle: string
 
 **起始版本：** 20
 
+<!--Device-ShortcutWant-targetBundle: string--><!--Device-ShortcutWant-targetBundle: string-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
 ## targetModule
@@ -63,5 +71,7 @@ targetModule?: string
 **类型：** string
 
 **起始版本：** 20
+
+<!--Device-ShortcutWant-targetModule?: string--><!--Device-ShortcutWant-targetModule?: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher

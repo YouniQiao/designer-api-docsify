@@ -8,6 +8,8 @@ enum AuthTrustLevel
 
 **起始版本：** 8
 
+<!--Device-osAccount-enum AuthTrustLevel--><!--Device-osAccount-enum AuthTrustLevel-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -21,6 +23,8 @@ ATL1 = 10000
 信任级别 1。
 
 **起始版本：** 8
+
+<!--Device-AuthTrustLevel-ATL1 = 10000--><!--Device-AuthTrustLevel-ATL1 = 10000-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -36,6 +40,8 @@ ATL2 = 20000
 
 **起始版本：** 8
 
+<!--Device-AuthTrustLevel-ATL2 = 20000--><!--Device-AuthTrustLevel-ATL2 = 20000-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -50,6 +56,8 @@ ATL3 = 30000
 
 **起始版本：** 8
 
+<!--Device-AuthTrustLevel-ATL3 = 30000--><!--Device-AuthTrustLevel-ATL3 = 30000-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -63,6 +71,8 @@ ATL4 = 40000
 信任级别 4。
 
 **起始版本：** 8
+
+<!--Device-AuthTrustLevel-ATL4 = 40000--><!--Device-AuthTrustLevel-ATL4 = 40000-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 

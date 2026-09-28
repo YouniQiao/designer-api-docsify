@@ -18,6 +18,8 @@ Inherits from [CalendarOptions](arkts-arkui-calendarpicker-comp-calendaroptions-
 
 **Since:** 10
 
+<!--Device-unnamed-declare interface CalendarDialogOptions extends CalendarOptions--><!--Device-unnamed-declare interface CalendarDialogOptions extends CalendarOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## distortionMode
@@ -41,6 +43,8 @@ Note: When the value is **DISTORTION_AUTO**, the [ImmersiveMaterial](../arkts-ap
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-CalendarDialogOptions-distortionMode?: DistortionMode--><!--Device-CalendarDialogOptions-distortionMode?: DistortionMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -67,6 +71,8 @@ Note: When the value is **EDGELIGHT_AUTO**, the [ImmersiveMaterial](../arkts-api
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-CalendarDialogOptions-edgeLightMode?: EdgeLightMode--><!--Device-CalendarDialogOptions-edgeLightMode?: EdgeLightMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

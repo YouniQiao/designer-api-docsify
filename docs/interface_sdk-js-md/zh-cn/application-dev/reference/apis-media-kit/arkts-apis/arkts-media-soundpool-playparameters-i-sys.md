@@ -10,6 +10,8 @@ export interface PlayParameters
 
 **起始版本：** 10
 
+<!--Device-unnamed-export interface PlayParameters--><!--Device-unnamed-export interface PlayParameters-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 ## parallelPlayFlag
@@ -27,6 +29,8 @@ true：不抢占音频焦点，和其他正在播放的音频一起并行播放�
 **类型：** boolean
 
 **起始版本：** 10
+
+<!--Device-PlayParameters-parallelPlayFlag?: boolean--><!--Device-PlayParameters-parallelPlayFlag?: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 

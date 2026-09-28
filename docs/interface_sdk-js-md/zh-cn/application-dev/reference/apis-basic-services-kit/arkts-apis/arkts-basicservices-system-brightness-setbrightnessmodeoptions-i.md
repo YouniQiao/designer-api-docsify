@@ -10,6 +10,8 @@ export interface SetBrightnessModeOptions
 
 **废弃版本：** 7
 
+<!--Device-unnamed-export interface SetBrightnessModeOptions--><!--Device-unnamed-export interface SetBrightnessModeOptions-End-->
+
 **系统能力：** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
 ## 导入模块
@@ -32,6 +34,8 @@ complete?: () => void
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-SetBrightnessModeOptions-complete?: () => void--><!--Device-SetBrightnessModeOptions-complete?: () => void-End-->
+
 **系统能力：** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
 ## fail
@@ -47,6 +51,8 @@ fail?: (data: string, code: number) => void
 **废弃版本：** 7
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-SetBrightnessModeOptions-fail?: (data: string, code: number) => void--><!--Device-SetBrightnessModeOptions-fail?: (data: string, code: number) => void-End-->
 
 **系统能力：** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
@@ -71,6 +77,8 @@ success?: () => void
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-SetBrightnessModeOptions-success?: () => void--><!--Device-SetBrightnessModeOptions-success?: () => void-End-->
+
 **系统能力：** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
 ## mode
@@ -88,5 +96,7 @@ mode: number
 **废弃版本：** 7
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-SetBrightnessModeOptions-mode: number--><!--Device-SetBrightnessModeOptions-mode: number-End-->
 
 **系统能力：** SystemCapability.PowerManager.DisplayPowerManager.Lite

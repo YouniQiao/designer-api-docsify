@@ -18,6 +18,8 @@ function isIfaceActive(iface: string, callback: AsyncCallback<number>): void
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-ethernet-function isIfaceActive(iface: string, callback: AsyncCallback<int>): void--><!--Device-ethernet-function isIfaceActive(iface: string, callback: AsyncCallback<int>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
 **系统接口：** 此接口为系统接口。
@@ -70,6 +72,8 @@ function isIfaceActive(iface: string): Promise<number>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
+
+<!--Device-ethernet-function isIfaceActive(iface: string): Promise<int>--><!--Device-ethernet-function isIfaceActive(iface: string): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 

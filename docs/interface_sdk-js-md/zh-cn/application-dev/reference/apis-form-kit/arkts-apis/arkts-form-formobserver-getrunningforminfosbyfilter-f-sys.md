@@ -22,6 +22,8 @@ function getRunningFormInfosByFilter(
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-formObserver-function getRunningFormInfosByFilter(    formProviderFilter: formInfo.FormProviderFilter  ): Promise<Array<formInfo.RunningFormInfo>>--><!--Device-formObserver-function getRunningFormInfosByFilter(    formProviderFilter: formInfo.FormProviderFilter  ): Promise<Array<formInfo.RunningFormInfo>>-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -96,6 +98,8 @@ function getRunningFormInfosByFilter(
 **需要权限：** ohos.permission.OBSERVE_FORM_RUNNING
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-formObserver-function getRunningFormInfosByFilter(    formProviderFilter: formInfo.FormProviderFilter,    callback: AsyncCallback<Array<formInfo.RunningFormInfo>>  ): void--><!--Device-formObserver-function getRunningFormInfosByFilter(    formProviderFilter: formInfo.FormProviderFilter,    callback: AsyncCallback<Array<formInfo.RunningFormInfo>>  ): void-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 

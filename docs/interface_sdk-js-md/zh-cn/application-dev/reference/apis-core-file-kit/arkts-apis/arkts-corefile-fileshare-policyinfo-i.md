@@ -10,6 +10,8 @@ export interface PolicyInfo
 
 **起始版本：** 11
 
+<!--Device-fileShare-export interface PolicyInfo--><!--Device-fileShare-export interface PolicyInfo-End-->
+
 **系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
 ## 导入模块
@@ -30,6 +32,8 @@ operationMode: number
 
 **起始版本：** 11
 
+<!--Device-PolicyInfo-operationMode: int--><!--Device-PolicyInfo-operationMode: int-End-->
+
 **系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
 ## uri
@@ -43,5 +47,7 @@ uri: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-PolicyInfo-uri: string--><!--Device-PolicyInfo-uri: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization

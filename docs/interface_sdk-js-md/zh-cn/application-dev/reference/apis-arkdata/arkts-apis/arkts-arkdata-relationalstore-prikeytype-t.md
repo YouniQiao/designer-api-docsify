@@ -10,6 +10,8 @@ type PRIKeyType = number | number | string
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-relationalStore-type PRIKeyType = long | double | string--><!--Device-relationalStore-type PRIKeyType = long | double | string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 | 类型 | 说明 |

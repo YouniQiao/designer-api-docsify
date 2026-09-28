@@ -4,7 +4,7 @@
 export class NodeContent extends Content
 ```
 
-**NodeContent** is a manager for [ContentSlot](../arkts-components/arkts-arkui-contentslot-comp.md#content_slot) provided by ArkUI. It manages the FrameNode node content mounted on **ContentSlot**, and supports dynamic addition and removal of FrameNodes. It is applicable to scenarios where FrameNode node content needs to be dynamically managed through **ContentSlot**, for example, dynamically adding or removing custom FrameNodes such as text and images based on user interactions.
+**NodeContent** is a manager for [ContentSlot](../arkts-components/arkts-arkui-contentslot-comp.md) provided by ArkUI. It manages the FrameNode node content mounted on **ContentSlot**, and supports dynamic addition and removal of FrameNodes. It is applicable to scenarios where FrameNode node content needs to be dynamically managed through **ContentSlot**, for example, dynamically adding or removing custom FrameNodes such as text and images based on user interactions.
 
 > **NOTE:** 
 > 
@@ -13,6 +13,8 @@ export class NodeContent extends Content
 **Inheritance/Implementation:** NodeContent extends [Content](arkts-arkui-content-c.md)
 
 **Since:** 12
+
+<!--Device-unnamed-export class NodeContent extends Content--><!--Device-unnamed-export class NodeContent extends Content-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -29,6 +31,8 @@ Adds a FrameNode to **NodeContent**. After being added, the FrameNode is rendere
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NodeContent-addFrameNode(node: FrameNode): void--><!--Device-NodeContent-addFrameNode(node: FrameNode): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -57,6 +61,8 @@ A constructor used to create a **NodeContent** object.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NodeContent-constructor()--><!--Device-NodeContent-constructor()-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -97,6 +103,8 @@ Removes a FrameNode from **NodeContent**. After being removed, the FrameNode is 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NodeContent-removeFrameNode(node: FrameNode): void--><!--Device-NodeContent-removeFrameNode(node: FrameNode): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

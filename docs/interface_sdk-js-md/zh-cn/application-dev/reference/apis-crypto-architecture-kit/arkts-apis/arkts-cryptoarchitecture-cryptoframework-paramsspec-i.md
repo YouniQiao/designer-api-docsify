@@ -21,6 +21,8 @@ interface ParamsSpec
 
 **起始版本：** 9
 
+<!--Device-cryptoFramework-interface ParamsSpec--><!--Device-cryptoFramework-interface ParamsSpec-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Cipher
 - API版本9-11：SystemCapability.Security.CryptoFramework
@@ -48,7 +50,9 @@ algName: string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ParamsSpec-algName: string--><!--Device-ParamsSpec-algName: string-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Cipher

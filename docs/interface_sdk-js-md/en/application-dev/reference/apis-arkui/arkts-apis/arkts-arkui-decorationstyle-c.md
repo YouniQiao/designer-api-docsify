@@ -8,6 +8,8 @@ Describes the text decorative line style.
 
 **Since:** 12
 
+<!--Device-unnamed-declare class DecorationStyle--><!--Device-unnamed-declare class DecorationStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
@@ -23,6 +25,8 @@ A constructor used to create a text decoration line style. If this API is not us
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DecorationStyle-constructor(value: DecorationStyleInterface)--><!--Device-DecorationStyle-constructor(value: DecorationStyleInterface)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,6 +51,8 @@ A constructor used to create a text decoration line style, with additional confi
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-DecorationStyle-constructor(value: DecorationStyleInterface, options?: DecorationOptions)--><!--Device-DecorationStyle-constructor(value: DecorationStyleInterface, options?: DecorationOptions)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -73,6 +79,8 @@ Color of the text decoration line of the styled string.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DecorationStyle-readonly color?: ResourceColor--><!--Device-DecorationStyle-readonly color?: ResourceColor-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## options
@@ -90,6 +98,8 @@ Additional configuration options of the text decoration line style of the styled
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-DecorationStyle-readonly options?: DecorationOptions--><!--Device-DecorationStyle-readonly options?: DecorationOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -109,6 +119,8 @@ Style of the text decoration line of the styled string.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DecorationStyle-readonly style?: TextDecorationStyle--><!--Device-DecorationStyle-readonly style?: TextDecorationStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## thicknessScale
@@ -127,6 +139,8 @@ Scale value of the text decoration line thickness of the styled string.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-DecorationStyle-readonly thicknessScale?: number--><!--Device-DecorationStyle-readonly thicknessScale?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## type
@@ -144,5 +158,7 @@ Type of the text decoration line of the styled string.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DecorationStyle-readonly type: TextDecorationType--><!--Device-DecorationStyle-readonly type: TextDecorationType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

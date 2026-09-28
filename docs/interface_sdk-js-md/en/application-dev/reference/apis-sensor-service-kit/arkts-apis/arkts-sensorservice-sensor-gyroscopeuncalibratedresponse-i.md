@@ -10,6 +10,8 @@ Describes the uncalibrated gyroscope sensor data. It extends from [Response](ark
 
 **Since:** 8
 
+<!--Device-sensor-interface GyroscopeUncalibratedResponse extends Response--><!--Device-sensor-interface GyroscopeUncalibratedResponse extends Response-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## Modules to Import
@@ -30,6 +32,8 @@ Uncalibrated rotational angular velocity bias (estimated angular velocity bias) 
 
 **Since:** 8
 
+<!--Device-GyroscopeUncalibratedResponse-biasX: double--><!--Device-GyroscopeUncalibratedResponse-biasX: double-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## biasY
@@ -43,6 +47,8 @@ Uncalibrated rotational angular velocity bias (estimated angular velocity bias) 
 **Type:** number
 
 **Since:** 8
+
+<!--Device-GyroscopeUncalibratedResponse-biasY: double--><!--Device-GyroscopeUncalibratedResponse-biasY: double-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -58,6 +64,8 @@ Uncalibrated rotational angular velocity bias (estimated angular velocity bias) 
 
 **Since:** 8
 
+<!--Device-GyroscopeUncalibratedResponse-biasZ: double--><!--Device-GyroscopeUncalibratedResponse-biasZ: double-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## x
@@ -71,6 +79,8 @@ Uncalibrated rotational angular velocity of the x-axis, in rad/s.
 **Type:** number
 
 **Since:** 8
+
+<!--Device-GyroscopeUncalibratedResponse-x: double--><!--Device-GyroscopeUncalibratedResponse-x: double-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -86,6 +96,8 @@ Uncalibrated rotational angular velocity of the y-axis, in rad/s.
 
 **Since:** 8
 
+<!--Device-GyroscopeUncalibratedResponse-y: double--><!--Device-GyroscopeUncalibratedResponse-y: double-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## z
@@ -99,5 +111,7 @@ Uncalibrated rotational angular velocity of the z-axis, in rad/s.
 **Type:** number
 
 **Since:** 8
+
+<!--Device-GyroscopeUncalibratedResponse-z: double--><!--Device-GyroscopeUncalibratedResponse-z: double-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor

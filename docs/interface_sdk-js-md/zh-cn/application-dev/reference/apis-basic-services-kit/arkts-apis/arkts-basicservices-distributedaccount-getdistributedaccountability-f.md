@@ -16,6 +16,8 @@ function getDistributedAccountAbility(): DistributedAccountAbility
 
 **起始版本：** 7
 
+<!--Device-distributedAccount-function getDistributedAccountAbility(): DistributedAccountAbility--><!--Device-distributedAccount-function getDistributedAccountAbility(): DistributedAccountAbility-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **返回值：**

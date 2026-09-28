@@ -8,6 +8,8 @@ interface TableDetails
 
 **起始版本：** 10
 
+<!--Device-relationalStore-interface TableDetails--><!--Device-relationalStore-interface TableDetails-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ download: Statistic
 
 **起始版本：** 10
 
+<!--Device-TableDetails-download: Statistic--><!--Device-TableDetails-download: Statistic-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## upload
@@ -41,5 +45,7 @@ upload: Statistic
 **类型：** [Statistic](arkts-arkdata-relationalstore-statistic-i.md)
 
 **起始版本：** 10
+
+<!--Device-TableDetails-upload: Statistic--><!--Device-TableDetails-upload: Statistic-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core

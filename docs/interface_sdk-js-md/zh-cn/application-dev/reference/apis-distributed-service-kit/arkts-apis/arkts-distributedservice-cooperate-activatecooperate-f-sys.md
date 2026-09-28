@@ -18,6 +18,8 @@ function activateCooperate(targetNetworkId: string, inputDeviceId: number, callb
 
 **需要权限：** ohos.permission.COOPERATE_MANAGER
 
+<!--Device-cooperate-function activateCooperate(targetNetworkId: string, inputDeviceId: int, callback: AsyncCallback<void>): void--><!--Device-cooperate-function activateCooperate(targetNetworkId: string, inputDeviceId: int, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
 
 **系统接口：** 此接口为系统接口。
@@ -73,6 +75,8 @@ function activateCooperate(targetNetworkId: string, inputDeviceId: number): Prom
 **起始版本：** 11
 
 **需要权限：** ohos.permission.COOPERATE_MANAGER
+
+<!--Device-cooperate-function activateCooperate(targetNetworkId: string, inputDeviceId: int): Promise<void>--><!--Device-cooperate-function activateCooperate(targetNetworkId: string, inputDeviceId: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
 

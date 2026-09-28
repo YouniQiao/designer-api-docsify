@@ -8,6 +8,8 @@ The **userFileManager** module provides user data management capabilities, inclu
 
 **Substitutes:** [photoAccessHelper](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photoaccesshelper.md)
 
+<!--Device-unnamed-declare namespace userFileManager--><!--Device-unnamed-declare namespace userFileManager-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.

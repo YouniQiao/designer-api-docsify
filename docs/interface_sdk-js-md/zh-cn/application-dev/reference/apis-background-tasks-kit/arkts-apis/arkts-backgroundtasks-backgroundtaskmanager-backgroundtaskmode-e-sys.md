@@ -12,6 +12,8 @@ export enum BackgroundTaskMode
 
 **起始版本：** 21
 
+<!--Device-backgroundTaskManager-export enum BackgroundTaskMode--><!--Device-backgroundTaskManager-export enum BackgroundTaskMode-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## MODE_ALLOW_WIFI_AWARE
@@ -23,6 +25,8 @@ MODE_ALLOW_WIFI_AWARE = 7
 WLAN相关业务。
 
 **起始版本：** 21
+
+<!--Device-BackgroundTaskMode-MODE_ALLOW_WIFI_AWARE = 7--><!--Device-BackgroundTaskMode-MODE_ALLOW_WIFI_AWARE = 7-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 

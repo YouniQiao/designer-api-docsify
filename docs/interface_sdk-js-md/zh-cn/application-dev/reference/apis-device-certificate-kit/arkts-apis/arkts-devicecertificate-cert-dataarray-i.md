@@ -8,6 +8,8 @@ interface DataArray
 
 **起始版本：** 9
 
+<!--Device-cert-interface DataArray--><!--Device-cert-interface DataArray-End-->
+
 **系统能力：** SystemCapability.Security.Cert
 
 ## 导入模块
@@ -28,6 +30,8 @@ data: Array<Uint8Array>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-DataArray-data: Array<Uint8Array>--><!--Device-DataArray-data: Array<Uint8Array>-End-->
 
 **系统能力：** SystemCapability.Security.Cert

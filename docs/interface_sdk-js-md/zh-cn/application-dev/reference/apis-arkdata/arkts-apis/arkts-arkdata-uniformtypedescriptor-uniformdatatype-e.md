@@ -10,6 +10,8 @@ enum UniformDataType
 
 **起始版本：** 10
 
+<!--Device-uniformTypeDescriptor-enum UniformDataType--><!--Device-uniformTypeDescriptor-enum UniformDataType-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## ENTITY
@@ -23,6 +25,8 @@ ENTITY = 'general.entity'
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-ENTITY = 'general.entity'--><!--Device-UniformDataType-ENTITY = 'general.entity'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -38,6 +42,8 @@ OBJECT = 'general.object'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-OBJECT = 'general.object'--><!--Device-UniformDataType-OBJECT = 'general.object'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## COMPOSITE_OBJECT
@@ -51,6 +57,8 @@ COMPOSITE_OBJECT = 'general.composite-object'
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-COMPOSITE_OBJECT = 'general.composite-object'--><!--Device-UniformDataType-COMPOSITE_OBJECT = 'general.composite-object'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -66,7 +74,9 @@ TEXT = 'general.text'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UniformDataType-TEXT = 'general.text'--><!--Device-UniformDataType-TEXT = 'general.text'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -82,7 +92,9 @@ PLAIN_TEXT = 'general.plain-text'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UniformDataType-PLAIN_TEXT = 'general.plain-text'--><!--Device-UniformDataType-PLAIN_TEXT = 'general.plain-text'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -98,7 +110,9 @@ HTML文本类型，归属类型为TEXT。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UniformDataType-HTML = 'general.html'--><!--Device-UniformDataType-HTML = 'general.html'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -114,7 +128,9 @@ HYPERLINK = 'general.hyperlink'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UniformDataType-HYPERLINK = 'general.hyperlink'--><!--Device-UniformDataType-HYPERLINK = 'general.hyperlink'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -130,6 +146,8 @@ XML文本类型，归属类型为TEXT。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-XML = 'general.xml'--><!--Device-UniformDataType-XML = 'general.xml'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## XHTML
@@ -143,6 +161,8 @@ XHTML文本类型，归属类型为XML。
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-XHTML = 'general.xhtml'--><!--Device-UniformDataType-XHTML = 'general.xhtml'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -158,6 +178,8 @@ RSS文本类型，归属类型为XML。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-RSS = 'general.rss'--><!--Device-UniformDataType-RSS = 'general.rss'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## SMIL
@@ -171,6 +193,8 @@ SMIL = 'com.real.smil'
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-SMIL = 'com.real.smil'--><!--Device-UniformDataType-SMIL = 'com.real.smil'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -186,6 +210,8 @@ SOURCE_CODE = 'general.source-code'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-SOURCE_CODE = 'general.source-code'--><!--Device-UniformDataType-SOURCE_CODE = 'general.source-code'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## SCRIPT
@@ -199,6 +225,8 @@ SCRIPT = 'general.script'
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-SCRIPT = 'general.script'--><!--Device-UniformDataType-SCRIPT = 'general.script'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -214,6 +242,8 @@ shell脚本类型，归属类型为SCRIPT。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-SHELL_SCRIPT = 'general.shell-script'--><!--Device-UniformDataType-SHELL_SCRIPT = 'general.shell-script'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## CSH_SCRIPT
@@ -227,6 +257,8 @@ C-shell脚本类型，归属类型为SHELL_SCRIPT。
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-CSH_SCRIPT = 'general.csh-script'--><!--Device-UniformDataType-CSH_SCRIPT = 'general.csh-script'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -242,6 +274,8 @@ Perl脚本类型，归属类型为SHELL_SCRIPT。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-PERL_SCRIPT = 'general.perl-script'--><!--Device-UniformDataType-PERL_SCRIPT = 'general.perl-script'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## PHP_SCRIPT
@@ -255,6 +289,8 @@ PHP脚本类型，归属类型为SHELL_SCRIPT。
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-PHP_SCRIPT = 'general.php-script'--><!--Device-UniformDataType-PHP_SCRIPT = 'general.php-script'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -270,6 +306,8 @@ Python脚本类型，归属类型为SHELL_SCRIPT。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-PYTHON_SCRIPT = 'general.python-script'--><!--Device-UniformDataType-PYTHON_SCRIPT = 'general.python-script'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## RUBY_SCRIPT
@@ -283,6 +321,8 @@ Ruby脚本类型，归属类型为SHELL_SCRIPT。
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-RUBY_SCRIPT = 'general.ruby-script'--><!--Device-UniformDataType-RUBY_SCRIPT = 'general.ruby-script'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -298,6 +338,8 @@ TypeScript源代码类型，归属类型为SOURCE_CODE。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-TYPE_SCRIPT = 'general.type-script'--><!--Device-UniformDataType-TYPE_SCRIPT = 'general.type-script'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## JAVA_SCRIPT
@@ -311,6 +353,8 @@ JavaScript源代码类型，归属类型为SOURCE_CODE。
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-JAVA_SCRIPT = 'general.java-script'--><!--Device-UniformDataType-JAVA_SCRIPT = 'general.java-script'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -326,6 +370,8 @@ CSS样式表类型，归属类型为SCRIPT。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-CSS = 'general.css'--><!--Device-UniformDataType-CSS = 'general.css'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## C_HEADER
@@ -339,6 +385,8 @@ C头文件类型，归属类型为SOURCE_CODE。
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-C_HEADER = 'general.c-header'--><!--Device-UniformDataType-C_HEADER = 'general.c-header'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -354,6 +402,8 @@ C源代码类型，归属类型为SOURCE_CODE。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-C_SOURCE = 'general.c-source'--><!--Device-UniformDataType-C_SOURCE = 'general.c-source'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## C_PLUS_PLUS_HEADER
@@ -367,6 +417,8 @@ C++头文件类型，归属类型为SOURCE_CODE。
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-C_PLUS_PLUS_HEADER = 'general.c-plus-plus-header'--><!--Device-UniformDataType-C_PLUS_PLUS_HEADER = 'general.c-plus-plus-header'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -382,6 +434,8 @@ C++源代码类型，归属类型为SOURCE_CODE。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-C_PLUS_PLUS_SOURCE = 'general.c-plus-plus-source'--><!--Device-UniformDataType-C_PLUS_PLUS_SOURCE = 'general.c-plus-plus-source'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## JAVA_SOURCE
@@ -395,6 +449,8 @@ Java源代码类型，归属类型为SOURCE_CODE。
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-JAVA_SOURCE = 'general.java-source'--><!--Device-UniformDataType-JAVA_SOURCE = 'general.java-source'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -410,6 +466,8 @@ TEX源代码类型，归属类型为SOURCE_CODE。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-TEX = 'general.tex'--><!--Device-UniformDataType-TEX = 'general.tex'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## MARKDOWN
@@ -423,6 +481,8 @@ MARKDOWN = 'general.markdown'
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-MARKDOWN = 'general.markdown'--><!--Device-UniformDataType-MARKDOWN = 'general.markdown'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -438,6 +498,8 @@ ASCII文本类型，归属类型为TEXT。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-ASC_TEXT = 'general.asc-text'--><!--Device-UniformDataType-ASC_TEXT = 'general.asc-text'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## RICH_TEXT
@@ -451,6 +513,8 @@ RICH_TEXT = 'general.rich-text'
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-RICH_TEXT = 'general.rich-text'--><!--Device-UniformDataType-RICH_TEXT = 'general.rich-text'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -466,6 +530,8 @@ DELIMITED_VALUES_TEXT = 'general.delimited-values-text'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-DELIMITED_VALUES_TEXT = 'general.delimited-values-text'--><!--Device-UniformDataType-DELIMITED_VALUES_TEXT = 'general.delimited-values-text'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## COMMA_SEPARATED_VALUES_TEXT
@@ -479,6 +545,8 @@ CSV文本类型，归属类型为DELIMITED_VALUES_TEXT。
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-COMMA_SEPARATED_VALUES_TEXT = 'general.comma-separated-values-text'--><!--Device-UniformDataType-COMMA_SEPARATED_VALUES_TEXT = 'general.comma-separated-values-text'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -494,6 +562,8 @@ TSV文本类型，归属类型为DELIMITED_VALUES_TEXT。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-TAB_SEPARATED_VALUES_TEXT = 'general.tab-separated-values-text'--><!--Device-UniformDataType-TAB_SEPARATED_VALUES_TEXT = 'general.tab-separated-values-text'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## EBOOK
@@ -507,6 +577,8 @@ EBOOK = 'general.ebook'
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-EBOOK = 'general.ebook'--><!--Device-UniformDataType-EBOOK = 'general.ebook'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -522,6 +594,8 @@ EPUB = 'general.epub'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-EPUB = 'general.epub'--><!--Device-UniformDataType-EPUB = 'general.epub'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## AZW
@@ -535,6 +609,8 @@ AZW电子书文件格式类型，归属类型为EBOOK。
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-AZW = 'com.amazon.azw'--><!--Device-UniformDataType-AZW = 'com.amazon.azw'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -550,6 +626,8 @@ AZW3电子书文件格式类型，归属类型为EBOOK。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-AZW3 = 'com.amazon.azw3'--><!--Device-UniformDataType-AZW3 = 'com.amazon.azw3'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## KFX
@@ -563,6 +641,8 @@ KFX电子书文件格式类型，归属类型为EBOOK。
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-KFX = 'com.amazon.kfx'--><!--Device-UniformDataType-KFX = 'com.amazon.kfx'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -578,6 +658,8 @@ MOBI电子书文件格式类型，归属类型为EBOOK。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-MOBI = 'com.amazon.mobi'--><!--Device-UniformDataType-MOBI = 'com.amazon.mobi'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## MEDIA
@@ -591,6 +673,8 @@ MEDIA = 'general.media'
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-MEDIA = 'general.media'--><!--Device-UniformDataType-MEDIA = 'general.media'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -606,7 +690,9 @@ IMAGE = 'general.image'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UniformDataType-IMAGE = 'general.image'--><!--Device-UniformDataType-IMAGE = 'general.image'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -622,6 +708,8 @@ JPEG图片类型，归属类型为IMAGE。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-JPEG = 'general.jpeg'--><!--Device-UniformDataType-JPEG = 'general.jpeg'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## PNG
@@ -635,6 +723,8 @@ PNG图片类型，归属类型为IMAGE。
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-PNG = 'general.png'--><!--Device-UniformDataType-PNG = 'general.png'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -650,6 +740,8 @@ RAW_IMAGE = 'general.raw-image'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-RAW_IMAGE = 'general.raw-image'--><!--Device-UniformDataType-RAW_IMAGE = 'general.raw-image'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## TIFF
@@ -663,6 +755,8 @@ TIFF图片类型，归属类型为IMAGE。
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-TIFF = 'general.tiff'--><!--Device-UniformDataType-TIFF = 'general.tiff'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -678,6 +772,8 @@ WINDOWS位图图像类型，归属类型为IMAGE。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-BMP = 'com.microsoft.bmp'--><!--Device-UniformDataType-BMP = 'com.microsoft.bmp'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## ICO
@@ -691,6 +787,8 @@ WINDOWS图标图像类型，归属类型为IMAGE。
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-ICO = 'com.microsoft.ico'--><!--Device-UniformDataType-ICO = 'com.microsoft.ico'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -706,6 +804,8 @@ Adobe Photoshop图片类型，归属类型为IMAGE。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-PHOTOSHOP_IMAGE = 'com.adobe.photoshop-image'--><!--Device-UniformDataType-PHOTOSHOP_IMAGE = 'com.adobe.photoshop-image'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## AI_IMAGE
@@ -719,6 +819,8 @@ Adobe Illustrator图片类型，归属类型为IMAGE。
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-AI_IMAGE = 'com.adobe.illustrator.ai-image'--><!--Device-UniformDataType-AI_IMAGE = 'com.adobe.illustrator.ai-image'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -734,6 +836,8 @@ FAX = 'general.fax'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-FAX = 'general.fax'--><!--Device-UniformDataType-FAX = 'general.fax'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## JFX_FAX
@@ -747,6 +851,8 @@ J2 jConnect传真文件类型，归属类型为FAX。
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-JFX_FAX = 'com.j2.jfx-fax'--><!--Device-UniformDataType-JFX_FAX = 'com.j2.jfx-fax'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -762,6 +868,8 @@ EFX_FAX = 'com.js.efx-fax'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-EFX_FAX = 'com.js.efx-fax'--><!--Device-UniformDataType-EFX_FAX = 'com.js.efx-fax'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## XBITMAP_IMAGE
@@ -775,6 +883,8 @@ X Window系统（X11）中使用的位图图像格式，归属类型为IMAGE。
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-XBITMAP_IMAGE = 'general.xbitmap-image'--><!--Device-UniformDataType-XBITMAP_IMAGE = 'general.xbitmap-image'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -790,6 +900,8 @@ GIF图像类型，归属类型为IMAGE。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-GIF = 'general.gif'--><!--Device-UniformDataType-GIF = 'general.gif'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## TGA_IMAGE
@@ -803,6 +915,8 @@ TGA_IMAGE = 'com.truevision.tga-image'
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-TGA_IMAGE = 'com.truevision.tga-image'--><!--Device-UniformDataType-TGA_IMAGE = 'com.truevision.tga-image'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -818,6 +932,8 @@ SGI_IMAGE = 'com.sgi.sgi-image'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-SGI_IMAGE = 'com.sgi.sgi-image'--><!--Device-UniformDataType-SGI_IMAGE = 'com.sgi.sgi-image'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## OPENEXR_IMAGE
@@ -831,6 +947,8 @@ OPENEXR_IMAGE = 'com.ilm.openexr-image'
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-OPENEXR_IMAGE = 'com.ilm.openexr-image'--><!--Device-UniformDataType-OPENEXR_IMAGE = 'com.ilm.openexr-image'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -846,6 +964,8 @@ FlashPix 图像文件类型，归属类型为IMAGE。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-FLASHPIX_IMAGE = 'com.kodak.flashpix.image'--><!--Device-UniformDataType-FLASHPIX_IMAGE = 'com.kodak.flashpix.image'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## WORD_DOC
@@ -859,6 +979,8 @@ Microsoft Word数据类型，归属类型为COMPOSITE_OBJECT。
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-WORD_DOC = 'com.microsoft.word.doc'--><!--Device-UniformDataType-WORD_DOC = 'com.microsoft.word.doc'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -874,6 +996,8 @@ Microsoft Excel数据类型，归属类型为COMPOSITE_OBJECT。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-EXCEL = 'com.microsoft.excel.xls'--><!--Device-UniformDataType-EXCEL = 'com.microsoft.excel.xls'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## PPT
@@ -887,6 +1011,8 @@ Microsoft PowerPoint演示文稿类型，归属类型为COMPOSITE_OBJECT。
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-PPT = 'com.microsoft.powerpoint.ppt'--><!--Device-UniformDataType-PPT = 'com.microsoft.powerpoint.ppt'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -902,6 +1028,8 @@ Microsoft Word模板类型，归属类型为COMPOSITE_OBJECT。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-WORD_DOT = 'com.microsoft.word.dot'--><!--Device-UniformDataType-WORD_DOT = 'com.microsoft.word.dot'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## POWERPOINT_PPS
@@ -915,6 +1043,8 @@ Microsoft PowerPoint演示文稿幻灯片放映类型，归属类型为COMPOSITE
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-POWERPOINT_PPS = 'com.microsoft.powerpoint.pps'--><!--Device-UniformDataType-POWERPOINT_PPS = 'com.microsoft.powerpoint.pps'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -930,6 +1060,8 @@ Microsoft PowerPoint演示文稿模板类型，归属类型为COMPOSITE_OBJECT�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-POWERPOINT_POT = 'com.microsoft.powerpoint.pot'--><!--Device-UniformDataType-POWERPOINT_POT = 'com.microsoft.powerpoint.pot'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## EXCEL_XLT
@@ -943,6 +1075,8 @@ Microsoft Excel模板类型，归属类型为COMPOSITE_OBJECT。
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-EXCEL_XLT = 'com.microsoft.excel.xlt'--><!--Device-UniformDataType-EXCEL_XLT = 'com.microsoft.excel.xlt'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -958,6 +1092,8 @@ Microsoft Visio数据类型，归属类型为COMPOSITE_OBJECT。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-VISIO_VSD = 'com.microsoft.visio.vsd'--><!--Device-UniformDataType-VISIO_VSD = 'com.microsoft.visio.vsd'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## PDF
@@ -971,6 +1107,8 @@ PDF数据类型，归属类型为COMPOSITE_OBJECT。
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-PDF = 'com.adobe.pdf'--><!--Device-UniformDataType-PDF = 'com.adobe.pdf'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -986,6 +1124,8 @@ PostScript数据类型，归属类型为COMPOSITE_OBJECT。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-POSTSCRIPT = 'com.adobe.postscript'--><!--Device-UniformDataType-POSTSCRIPT = 'com.adobe.postscript'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## ENCAPSULATED_POSTSCRIPT
@@ -999,6 +1139,8 @@ Encapsulated PostScript类型，归属类型为POSTSCRIPT。
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-ENCAPSULATED_POSTSCRIPT = 'com.adobe.encapsulated-postscript'--><!--Device-UniformDataType-ENCAPSULATED_POSTSCRIPT = 'com.adobe.encapsulated-postscript'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -1014,7 +1156,9 @@ VIDEO = 'general.video'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UniformDataType-VIDEO = 'general.video'--><!--Device-UniformDataType-VIDEO = 'general.video'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -1030,6 +1174,8 @@ AVI视频类型，归属类型为VIDEO。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-AVI = 'general.avi'--><!--Device-UniformDataType-AVI = 'general.avi'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## MPEG
@@ -1043,6 +1189,8 @@ MPEG-1或MPEG-2视频类型，归属类型为VIDEO。
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-MPEG = 'general.mpeg'--><!--Device-UniformDataType-MPEG = 'general.mpeg'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -1058,6 +1206,8 @@ MPEG-4视频类型，归属类型为VIDEO。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-MPEG4 = 'general.mpeg-4'--><!--Device-UniformDataType-MPEG4 = 'general.mpeg-4'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## VIDEO_3GPP
@@ -1071,6 +1221,8 @@ VIDEO_3GPP = 'general.3gpp'
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-VIDEO_3GPP = 'general.3gpp'--><!--Device-UniformDataType-VIDEO_3GPP = 'general.3gpp'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -1086,6 +1238,8 @@ VIDEO_3GPP2 = 'general.3gpp2'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-VIDEO_3GPP2 = 'general.3gpp2'--><!--Device-UniformDataType-VIDEO_3GPP2 = 'general.3gpp2'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## TS
@@ -1099,6 +1253,8 @@ MPEG-TS类型，归属类型为VIDEO。
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-TS = 'general.ts'--><!--Device-UniformDataType-TS = 'general.ts'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -1114,6 +1270,8 @@ MPEG视频播放列表文件类型，归属类型为VIDEO。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-MPEGURL_VIDEO = 'general.mpegurl-video'--><!--Device-UniformDataType-MPEGURL_VIDEO = 'general.mpegurl-video'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## WINDOWS_MEDIA_WM
@@ -1127,6 +1285,8 @@ WINDOWS WM视频类型，归属类型为VIDEO。
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-WINDOWS_MEDIA_WM = 'com.microsoft.windows-media-wm'--><!--Device-UniformDataType-WINDOWS_MEDIA_WM = 'com.microsoft.windows-media-wm'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -1142,6 +1302,8 @@ WINDOWS WMV视频类型，归属类型为VIDEO。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-WINDOWS_MEDIA_WMV = 'com.microsoft.windows-media-wmv'--><!--Device-UniformDataType-WINDOWS_MEDIA_WMV = 'com.microsoft.windows-media-wmv'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## WINDOWS_MEDIA_WMP
@@ -1155,6 +1317,8 @@ WINDOWS WMP视频类型，归属类型为VIDEO。
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-WINDOWS_MEDIA_WMP = 'com.microsoft.windows-media-wmp'--><!--Device-UniformDataType-WINDOWS_MEDIA_WMP = 'com.microsoft.windows-media-wmp'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -1170,6 +1334,8 @@ WINDOWS WVX视频类型，归属类型为VIDEO。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-WINDOWS_MEDIA_WVX = 'com.microsoft.windows-media-wvx'--><!--Device-UniformDataType-WINDOWS_MEDIA_WVX = 'com.microsoft.windows-media-wvx'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## WINDOWS_MEDIA_WMX
@@ -1183,6 +1349,8 @@ WINDOWS WMX视频类型，归属类型为VIDEO。
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-WINDOWS_MEDIA_WMX = 'com.microsoft.windows-media-wmx'--><!--Device-UniformDataType-WINDOWS_MEDIA_WMX = 'com.microsoft.windows-media-wmx'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -1198,6 +1366,8 @@ REALMEDIA = 'com.real.realmedia'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-REALMEDIA = 'com.real.realmedia'--><!--Device-UniformDataType-REALMEDIA = 'com.real.realmedia'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## MATROSKA_VIDEO
@@ -1211,6 +1381,8 @@ MKV视频类型，归属类型为VIDEO。
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-MATROSKA_VIDEO = 'org.matroska.mkv'--><!--Device-UniformDataType-MATROSKA_VIDEO = 'org.matroska.mkv'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -1226,6 +1398,8 @@ FLASH视频类型，归属类型为VIDEO。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-FLASH = 'com.adobe.flash'--><!--Device-UniformDataType-FLASH = 'com.adobe.flash'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## AUDIO
@@ -1240,7 +1414,9 @@ AUDIO = 'general.audio'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UniformDataType-AUDIO = 'general.audio'--><!--Device-UniformDataType-AUDIO = 'general.audio'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -1256,6 +1432,8 @@ AAC音频类型，归属类型为AUDIO。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-AAC = 'general.aac'--><!--Device-UniformDataType-AAC = 'general.aac'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## AIFF
@@ -1269,6 +1447,8 @@ AIFF音频类型，归属类型为AUDIO。
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-AIFF = 'general.aiff'--><!--Device-UniformDataType-AIFF = 'general.aiff'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -1284,6 +1464,8 @@ ALAC音频类型，归属类型为AUDIO。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-ALAC = 'general.alac'--><!--Device-UniformDataType-ALAC = 'general.alac'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## FLAC
@@ -1297,6 +1479,8 @@ FLAC音频类型，归属类型为AUDIO。
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-FLAC = 'general.flac'--><!--Device-UniformDataType-FLAC = 'general.flac'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -1312,6 +1496,8 @@ MP3音频类型，归属类型为AUDIO。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-MP3 = 'general.mp3'--><!--Device-UniformDataType-MP3 = 'general.mp3'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## OGG
@@ -1325,6 +1511,8 @@ OGG音频类型，归属类型为AUDIO。
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-OGG = 'general.ogg'--><!--Device-UniformDataType-OGG = 'general.ogg'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -1340,6 +1528,8 @@ PCM音频类型，归属类型为AUDIO。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-PCM = 'general.pcm'--><!--Device-UniformDataType-PCM = 'general.pcm'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## WINDOWS_MEDIA_WMA
@@ -1353,6 +1543,8 @@ WINDOWS WMA音频类型，归属类型为AUDIO。
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-WINDOWS_MEDIA_WMA = 'com.microsoft.windows-media-wma'--><!--Device-UniformDataType-WINDOWS_MEDIA_WMA = 'com.microsoft.windows-media-wma'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -1368,6 +1560,8 @@ WINDOWS波形音频类型，归属类型为AUDIO。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-WAVEFORM_AUDIO = 'com.microsoft.waveform-audio'--><!--Device-UniformDataType-WAVEFORM_AUDIO = 'com.microsoft.waveform-audio'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## WINDOWS_MEDIA_WAX
@@ -1381,6 +1575,8 @@ WINDOWS WAX音频类型，归属类型为AUDIO。
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-WINDOWS_MEDIA_WAX = 'com.microsoft.windows-media-wax'--><!--Device-UniformDataType-WINDOWS_MEDIA_WAX = 'com.microsoft.windows-media-wax'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -1396,6 +1592,8 @@ Au数据格式，归属类型为AUDIO。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-AU_AUDIO = 'general.au-audio'--><!--Device-UniformDataType-AU_AUDIO = 'general.au-audio'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## AIFC_AUDIO
@@ -1409,6 +1607,8 @@ AIFC_AUDIO = 'general.aifc-audio'
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-AIFC_AUDIO = 'general.aifc-audio'--><!--Device-UniformDataType-AIFC_AUDIO = 'general.aifc-audio'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -1424,6 +1624,8 @@ MPEG音频播放列表文件类型，归属类型为AUDIO。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-MPEGURL_AUDIO = 'general.mpegurl-audio'--><!--Device-UniformDataType-MPEGURL_AUDIO = 'general.mpegurl-audio'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## MPEG_4_AUDIO
@@ -1437,6 +1639,8 @@ MPEG-4音频类型，归属类型为AUDIO。
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-MPEG_4_AUDIO = 'general.mpeg-4-audio'--><!--Device-UniformDataType-MPEG_4_AUDIO = 'general.mpeg-4-audio'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -1452,6 +1656,8 @@ MP2音频类型，归属类型为AUDIO。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-MP2 = 'general.mp2'--><!--Device-UniformDataType-MP2 = 'general.mp2'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## MPEG_AUDIO
@@ -1465,6 +1671,8 @@ MPEG音频类型，归属类型为AUDIO。
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-MPEG_AUDIO = 'general.mpeg-audio'--><!--Device-UniformDataType-MPEG_AUDIO = 'general.mpeg-audio'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -1480,6 +1688,8 @@ ULAW音频类型，归属类型为AUDIO。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-ULAW_AUDIO = 'general.ulaw-audio'--><!--Device-UniformDataType-ULAW_AUDIO = 'general.ulaw-audio'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## SD2_AUDIO
@@ -1493,6 +1703,8 @@ SD2_AUDIO = 'com.digidesign.sd2-audio'
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-SD2_AUDIO = 'com.digidesign.sd2-audio'--><!--Device-UniformDataType-SD2_AUDIO = 'com.digidesign.sd2-audio'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -1508,6 +1720,8 @@ RealMedia音频类型，归属类型为AUDIO。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-REALAUDIO = 'com.real.realaudio'--><!--Device-UniformDataType-REALAUDIO = 'com.real.realaudio'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## MATROSKA_AUDIO
@@ -1521,6 +1735,8 @@ MKA音频类型，归属类型为AUDIO。
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-MATROSKA_AUDIO = 'org.matroska.mka'--><!--Device-UniformDataType-MATROSKA_AUDIO = 'org.matroska.mka'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -1536,7 +1752,9 @@ FILE = 'general.file'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UniformDataType-FILE = 'general.file'--><!--Device-UniformDataType-FILE = 'general.file'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -1552,6 +1770,8 @@ DIRECTORY = 'general.directory'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-DIRECTORY = 'general.directory'--><!--Device-UniformDataType-DIRECTORY = 'general.directory'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## FOLDER
@@ -1566,7 +1786,9 @@ FOLDER = 'general.folder'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UniformDataType-FOLDER = 'general.folder'--><!--Device-UniformDataType-FOLDER = 'general.folder'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -1582,6 +1804,8 @@ SYMLINK = 'general.symlink'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-SYMLINK = 'general.symlink'--><!--Device-UniformDataType-SYMLINK = 'general.symlink'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## ARCHIVE
@@ -1595,6 +1819,8 @@ ARCHIVE = 'general.archive'
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-ARCHIVE = 'general.archive'--><!--Device-UniformDataType-ARCHIVE = 'general.archive'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -1610,6 +1836,8 @@ BZ2存档文件类型，归属类型为ARCHIVE。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-BZ2_ARCHIVE = 'general.bz2-archive'--><!--Device-UniformDataType-BZ2_ARCHIVE = 'general.bz2-archive'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## OPG
@@ -1623,6 +1851,8 @@ OPG存档文件类型，归属类型为ARCHIVE。
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-OPG = 'general.opg'--><!--Device-UniformDataType-OPG = 'general.opg'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -1638,6 +1868,8 @@ TAR压缩文件类型，归属类型为TAR_ARCHIVE。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-TAZ_ARCHIVE = 'general.taz-archive'--><!--Device-UniformDataType-TAZ_ARCHIVE = 'general.taz-archive'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## WEB_ARCHIVE
@@ -1651,6 +1883,8 @@ MHTML网页归档文件类型，归属类型为ARCHIVE。
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-WEB_ARCHIVE = 'general.web-archive'--><!--Device-UniformDataType-WEB_ARCHIVE = 'general.web-archive'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -1666,6 +1900,8 @@ DISK_IMAGE = 'general.disk-image'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-DISK_IMAGE = 'general.disk-image'--><!--Device-UniformDataType-DISK_IMAGE = 'general.disk-image'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## ISO
@@ -1679,6 +1915,8 @@ ISO = 'general.iso'
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-ISO = 'general.iso'--><!--Device-UniformDataType-ISO = 'general.iso'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -1694,6 +1932,8 @@ TAR存档文件类型，归属类型为ARCHIVE。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-TAR_ARCHIVE = 'general.tar-archive'--><!--Device-UniformDataType-TAR_ARCHIVE = 'general.tar-archive'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## ZIP_ARCHIVE
@@ -1707,6 +1947,8 @@ ZIP存档文件类型，归属类型为ARCHIVE。
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-ZIP_ARCHIVE = 'general.zip-archive'--><!--Device-UniformDataType-ZIP_ARCHIVE = 'general.zip-archive'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -1722,6 +1964,8 @@ JAVA存档文件类型，归属类型为ARCHIVE和EXECUTABLE。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-JAVA_ARCHIVE = 'com.sun.java-archive'--><!--Device-UniformDataType-JAVA_ARCHIVE = 'com.sun.java-archive'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## GNU_TAR_ARCHIVE
@@ -1735,6 +1979,8 @@ GNU存档文件类型，归属类型为ARCHIVE。
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-GNU_TAR_ARCHIVE = 'org.gnu.gnu-tar-archive'--><!--Device-UniformDataType-GNU_TAR_ARCHIVE = 'org.gnu.gnu-tar-archive'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -1750,6 +1996,8 @@ GZIP存档文件类型，归属类型为ARCHIVE。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-GNU_ZIP_ARCHIVE = 'org.gnu.gnu-zip-archive'--><!--Device-UniformDataType-GNU_ZIP_ARCHIVE = 'org.gnu.gnu-zip-archive'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## GNU_ZIP_TAR_ARCHIVE
@@ -1763,6 +2011,8 @@ GZIP TAR存档文件类型，归属类型为ARCHIVE。
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-GNU_ZIP_TAR_ARCHIVE = 'org.gnu.gnu-zip-tar-archive'--><!--Device-UniformDataType-GNU_ZIP_TAR_ARCHIVE = 'org.gnu.gnu-zip-tar-archive'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -1778,6 +2028,8 @@ OPENXML = 'org.openxmlformats.openxml'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-OPENXML = 'org.openxmlformats.openxml'--><!--Device-UniformDataType-OPENXML = 'org.openxmlformats.openxml'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## WORDPROCESSINGML_DOCUMENT
@@ -1791,6 +2043,8 @@ WORDPROCESSINGML_DOCUMENT = 'org.openxmlformats.wordprocessingml.document'
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-WORDPROCESSINGML_DOCUMENT = 'org.openxmlformats.wordprocessingml.document'--><!--Device-UniformDataType-WORDPROCESSINGML_DOCUMENT = 'org.openxmlformats.wordprocessingml.document'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -1806,6 +2060,8 @@ SPREADSHEETML_SHEET = 'org.openxmlformats.spreadsheetml.sheet'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-SPREADSHEETML_SHEET = 'org.openxmlformats.spreadsheetml.sheet'--><!--Device-UniformDataType-SPREADSHEETML_SHEET = 'org.openxmlformats.spreadsheetml.sheet'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## PRESENTATIONML_PRESENTATION
@@ -1819,6 +2075,8 @@ PRESENTATIONML_PRESENTATION = 'org.openxmlformats.presentationml.presentation'
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-PRESENTATIONML_PRESENTATION = 'org.openxmlformats.presentationml.presentation'--><!--Device-UniformDataType-PRESENTATIONML_PRESENTATION = 'org.openxmlformats.presentationml.presentation'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -1834,6 +2092,8 @@ DRAWINGML_VISIO = 'org.openxmlformats.drawingml.visio'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-DRAWINGML_VISIO = 'org.openxmlformats.drawingml.visio'--><!--Device-UniformDataType-DRAWINGML_VISIO = 'org.openxmlformats.drawingml.visio'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## DRAWINGML_TEMPLATE
@@ -1847,6 +2107,8 @@ DRAWINGML_TEMPLATE = 'org.openxmlformats.drawingml.template'
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-DRAWINGML_TEMPLATE = 'org.openxmlformats.drawingml.template'--><!--Device-UniformDataType-DRAWINGML_TEMPLATE = 'org.openxmlformats.drawingml.template'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -1862,6 +2124,8 @@ WORDPROCESSINGML_TEMPLATE = 'org.openxmlformats.wordprocessingml.template'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-WORDPROCESSINGML_TEMPLATE = 'org.openxmlformats.wordprocessingml.template'--><!--Device-UniformDataType-WORDPROCESSINGML_TEMPLATE = 'org.openxmlformats.wordprocessingml.template'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## PRESENTATIONML_TEMPLATE
@@ -1875,6 +2139,8 @@ PRESENTATIONML_TEMPLATE = 'org.openxmlformats.presentationml.template'
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-PRESENTATIONML_TEMPLATE = 'org.openxmlformats.presentationml.template'--><!--Device-UniformDataType-PRESENTATIONML_TEMPLATE = 'org.openxmlformats.presentationml.template'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -1890,6 +2156,8 @@ PRESENTATIONML_SLIDESHOW = 'org.openxmlformats.presentationml.slideshow'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-PRESENTATIONML_SLIDESHOW = 'org.openxmlformats.presentationml.slideshow'--><!--Device-UniformDataType-PRESENTATIONML_SLIDESHOW = 'org.openxmlformats.presentationml.slideshow'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## SPREADSHEETML_TEMPLATE
@@ -1903,6 +2171,8 @@ SPREADSHEETML_TEMPLATE = 'org.openxmlformats.spreadsheetml.template'
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-SPREADSHEETML_TEMPLATE = 'org.openxmlformats.spreadsheetml.template'--><!--Device-UniformDataType-SPREADSHEETML_TEMPLATE = 'org.openxmlformats.spreadsheetml.template'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -1918,6 +2188,8 @@ Office应用程序的开源文档类型，归属类型为ARCHIVE。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-OPENDOCUMENT = 'org.oasis.opendocument'--><!--Device-UniformDataType-OPENDOCUMENT = 'org.oasis.opendocument'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## OPENDOCUMENT_TEXT
@@ -1931,6 +2203,8 @@ OPENDOCUMENT_TEXT = 'org.oasis.opendocument.text'
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-OPENDOCUMENT_TEXT = 'org.oasis.opendocument.text'--><!--Device-UniformDataType-OPENDOCUMENT_TEXT = 'org.oasis.opendocument.text'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -1946,6 +2220,8 @@ OPENDOCUMENT_SPREADSHEET = 'org.oasis.opendocument.spreadsheet'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-OPENDOCUMENT_SPREADSHEET = 'org.oasis.opendocument.spreadsheet'--><!--Device-UniformDataType-OPENDOCUMENT_SPREADSHEET = 'org.oasis.opendocument.spreadsheet'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## OPENDOCUMENT_PRESENTATION
@@ -1959,6 +2235,8 @@ OPENDOCUMENT_PRESENTATION = 'org.oasis.opendocument.presentation'
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-OPENDOCUMENT_PRESENTATION = 'org.oasis.opendocument.presentation'--><!--Device-UniformDataType-OPENDOCUMENT_PRESENTATION = 'org.oasis.opendocument.presentation'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -1974,6 +2252,8 @@ OPENDOCUMENT_GRAPHICS = 'org.oasis.opendocument.graphics'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-OPENDOCUMENT_GRAPHICS = 'org.oasis.opendocument.graphics'--><!--Device-UniformDataType-OPENDOCUMENT_GRAPHICS = 'org.oasis.opendocument.graphics'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## OPENDOCUMENT_FORMULA
@@ -1987,6 +2267,8 @@ OPENDOCUMENT_FORMULA = 'org.oasis.opendocument.formula'
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-OPENDOCUMENT_FORMULA = 'org.oasis.opendocument.formula'--><!--Device-UniformDataType-OPENDOCUMENT_FORMULA = 'org.oasis.opendocument.formula'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -2002,6 +2284,8 @@ Stuffit压缩格式类型（Stuffit archive），归属类型为ARCHIVE。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-STUFFIT_ARCHIVE = 'com.allume.stuffit-archive'--><!--Device-UniformDataType-STUFFIT_ARCHIVE = 'com.allume.stuffit-archive'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## RAR_ARCHIVE
@@ -2015,6 +2299,8 @@ WinRAR压缩格式类型，归属类型为ARCHIVE。
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-RAR_ARCHIVE = 'com.rarlab.rar-archive'--><!--Device-UniformDataType-RAR_ARCHIVE = 'com.rarlab.rar-archive'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -2030,6 +2316,8 @@ SEVEN_ZIP_ARCHIVE = 'org.7-zip.7-zip-archive'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-SEVEN_ZIP_ARCHIVE = 'org.7-zip.7-zip-archive'--><!--Device-UniformDataType-SEVEN_ZIP_ARCHIVE = 'org.7-zip.7-zip-archive'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## CALENDAR
@@ -2043,6 +2331,8 @@ CALENDAR = 'general.calendar'
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-CALENDAR = 'general.calendar'--><!--Device-UniformDataType-CALENDAR = 'general.calendar'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -2058,6 +2348,8 @@ VCalendar日历数据类型，归属类型为CALENDAR和TEXT。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-VCS = 'general.vcs'--><!--Device-UniformDataType-VCS = 'general.vcs'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## ICS
@@ -2071,6 +2363,8 @@ ICalendar日历数据类型，归属类型为CALENDAR和TEXT。
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-ICS = 'general.ics'--><!--Device-UniformDataType-ICS = 'general.ics'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -2086,6 +2380,8 @@ CONTACT = 'general.contact'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-CONTACT = 'general.contact'--><!--Device-UniformDataType-CONTACT = 'general.contact'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## DATABASE
@@ -2099,6 +2395,8 @@ DATABASE = 'general.database'
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-DATABASE = 'general.database'--><!--Device-UniformDataType-DATABASE = 'general.database'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -2114,6 +2412,8 @@ MESSAGE = 'general.message'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-MESSAGE = 'general.message'--><!--Device-UniformDataType-MESSAGE = 'general.message'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## EXECUTABLE
@@ -2127,6 +2427,8 @@ EXECUTABLE = 'general.executable'
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-EXECUTABLE = 'general.executable'--><!--Device-UniformDataType-EXECUTABLE = 'general.executable'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -2142,6 +2444,8 @@ Microsoft Windows应用程序类型，归属类型为EXECUTABLE。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-PORTABLE_EXECUTABLE = 'com.microsoft.portable-executable'--><!--Device-UniformDataType-PORTABLE_EXECUTABLE = 'com.microsoft.portable-executable'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## SUN_JAVA_CLASS
@@ -2155,6 +2459,8 @@ Java类文件类型，归属类型为EXECUTABLE。
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-SUN_JAVA_CLASS = 'com.sun.java-class'--><!--Device-UniformDataType-SUN_JAVA_CLASS = 'com.sun.java-class'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -2170,6 +2476,8 @@ VCARD = 'general.vcard'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-VCARD = 'general.vcard'--><!--Device-UniformDataType-VCARD = 'general.vcard'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## NAVIGATION
@@ -2183,6 +2491,8 @@ NAVIGATION = 'general.navigation'
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-NAVIGATION = 'general.navigation'--><!--Device-UniformDataType-NAVIGATION = 'general.navigation'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -2198,6 +2508,8 @@ LOCATION = 'general.location'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-LOCATION = 'general.location'--><!--Device-UniformDataType-LOCATION = 'general.location'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## FONT
@@ -2211,6 +2523,8 @@ FONT = 'general.font'
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-FONT = 'general.font'--><!--Device-UniformDataType-FONT = 'general.font'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -2226,6 +2540,8 @@ TrueType字体类型，归属类型为FONT。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-TRUETYPE_FONT = 'general.truetype-font'--><!--Device-UniformDataType-TRUETYPE_FONT = 'general.truetype-font'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## TRUETYPE_COLLECTION_FONT
@@ -2239,6 +2555,8 @@ TrueType collection字体类型，归属类型为FONT。
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-TRUETYPE_COLLECTION_FONT = 'general.truetype-collection-font'--><!--Device-UniformDataType-TRUETYPE_COLLECTION_FONT = 'general.truetype-collection-font'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -2254,6 +2572,8 @@ OpenType 字体类型，归属类型为FONT。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-OPENTYPE_FONT = 'general.opentype-font'--><!--Device-UniformDataType-OPENTYPE_FONT = 'general.opentype-font'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## POSTSCRIPT_FONT
@@ -2267,6 +2587,8 @@ PostScript 字体类型，归属类型为FONT。
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-POSTSCRIPT_FONT = 'com.adobe.postscript-font'--><!--Device-UniformDataType-POSTSCRIPT_FONT = 'com.adobe.postscript-font'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -2282,6 +2604,8 @@ PostScript Font Binary字体类型，归属类型为FONT。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-POSTSCRIPT_PFB_FONT = 'com.adobe.postscript-pfb-font'--><!--Device-UniformDataType-POSTSCRIPT_PFB_FONT = 'com.adobe.postscript-pfb-font'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## POSTSCRIPT_PFA_FONT
@@ -2295,6 +2619,8 @@ Adobe Type 1 字体类型，归属类型为FONT。
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-POSTSCRIPT_PFA_FONT = 'com.adobe.postscript-pfa-font'--><!--Device-UniformDataType-POSTSCRIPT_PFA_FONT = 'com.adobe.postscript-pfa-font'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -2310,7 +2636,9 @@ OPENHARMONY_FORM = 'openharmony.form'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UniformDataType-OPENHARMONY_FORM = 'openharmony.form'--><!--Device-UniformDataType-OPENHARMONY_FORM = 'openharmony.form'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -2326,7 +2654,9 @@ OPENHARMONY_APP_ITEM = 'openharmony.app-item'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UniformDataType-OPENHARMONY_APP_ITEM = 'openharmony.app-item'--><!--Device-UniformDataType-OPENHARMONY_APP_ITEM = 'openharmony.app-item'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -2342,7 +2672,9 @@ OPENHARMONY_PIXEL_MAP = 'openharmony.pixel-map'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UniformDataType-OPENHARMONY_PIXEL_MAP = 'openharmony.pixel-map'--><!--Device-UniformDataType-OPENHARMONY_PIXEL_MAP = 'openharmony.pixel-map'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -2358,6 +2690,8 @@ OPENHARMONY_ATOMIC_SERVICE = 'openharmony.atomic-service'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-OPENHARMONY_ATOMIC_SERVICE = 'openharmony.atomic-service'--><!--Device-UniformDataType-OPENHARMONY_ATOMIC_SERVICE = 'openharmony.atomic-service'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## OPENHARMONY_PACKAGE
@@ -2371,6 +2705,8 @@ OPENHARMONY_PACKAGE = 'openharmony.package'
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-OPENHARMONY_PACKAGE = 'openharmony.package'--><!--Device-UniformDataType-OPENHARMONY_PACKAGE = 'openharmony.package'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -2386,6 +2722,8 @@ OPENHARMONY_HAP = 'openharmony.hap'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-OPENHARMONY_HAP = 'openharmony.hap'--><!--Device-UniformDataType-OPENHARMONY_HAP = 'openharmony.hap'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## OPENHARMONY_HDOC
@@ -2399,6 +2737,8 @@ OPENHARMONY_HDOC = 'openharmony.hdoc'
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-OPENHARMONY_HDOC = 'openharmony.hdoc'--><!--Device-UniformDataType-OPENHARMONY_HDOC = 'openharmony.hdoc'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -2414,6 +2754,8 @@ OPENHARMONY_HINOTE = 'openharmony.hinote'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-OPENHARMONY_HINOTE = 'openharmony.hinote'--><!--Device-UniformDataType-OPENHARMONY_HINOTE = 'openharmony.hinote'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## OPENHARMONY_STYLED_STRING
@@ -2427,6 +2769,8 @@ OPENHARMONY_STYLED_STRING = 'openharmony.styled-string'
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-OPENHARMONY_STYLED_STRING = 'openharmony.styled-string'--><!--Device-UniformDataType-OPENHARMONY_STYLED_STRING = 'openharmony.styled-string'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -2442,6 +2786,8 @@ OPENHARMONY_WANT = 'openharmony.want'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-OPENHARMONY_WANT = 'openharmony.want'--><!--Device-UniformDataType-OPENHARMONY_WANT = 'openharmony.want'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## OFD
@@ -2455,6 +2801,8 @@ OFD = 'general.ofd'
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-OFD = 'general.ofd'--><!--Device-UniformDataType-OFD = 'general.ofd'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -2470,6 +2818,8 @@ CAD = 'general.cad'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-CAD = 'general.cad'--><!--Device-UniformDataType-CAD = 'general.cad'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## OCTET_STREAM
@@ -2483,6 +2833,8 @@ OCTET_STREAM = 'general.octet-stream'
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-OCTET_STREAM = 'general.octet-stream'--><!--Device-UniformDataType-OCTET_STREAM = 'general.octet-stream'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -2498,6 +2850,8 @@ FILE_URI = 'general.file-uri'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UniformDataType-FILE_URI = 'general.file-uri'--><!--Device-UniformDataType-FILE_URI = 'general.file-uri'-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## CONTENT_FORM
@@ -2511,5 +2865,7 @@ CONTENT_FORM = 'general.content-form'
 **起始版本：** 15
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UniformDataType-CONTENT_FORM = 'general.content-form'--><!--Device-UniformDataType-CONTENT_FORM = 'general.content-form'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core

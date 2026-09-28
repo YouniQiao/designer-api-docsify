@@ -8,6 +8,8 @@ ReactiveBuilderNode支持通过无状态的UI方法[@Builder](../../../ui/state-
 
 **起始版本：** 22
 
+<!--Device-unnamed-export class ReactiveBuilderNode<Args extends Object[]>--><!--Device-unnamed-export class ReactiveBuilderNode<Args extends Object[]>-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## build
@@ -35,6 +37,8 @@ build(builder: WrappedBuilder<Args>, config: BuildOptions, ...args: Args): void
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-ReactiveBuilderNode-build(builder: WrappedBuilder<Args>, config: BuildOptions, ...args: Args): void--><!--Device-ReactiveBuilderNode-build(builder: WrappedBuilder<Args>, config: BuildOptions, ...args: Args): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -119,6 +123,8 @@ constructor(uiContext: UIContext, options?: RenderOptions)
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
+<!--Device-ReactiveBuilderNode-constructor(uiContext: UIContext, options?: RenderOptions)--><!--Device-ReactiveBuilderNode-constructor(uiContext: UIContext, options?: RenderOptions)-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -146,6 +152,8 @@ dispose(): void
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-ReactiveBuilderNode-dispose(): void--><!--Device-ReactiveBuilderNode-dispose(): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -260,6 +268,8 @@ flushState(): void
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
+<!--Device-ReactiveBuilderNode-flushState(): void--><!--Device-ReactiveBuilderNode-flushState(): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **示例**
@@ -373,6 +383,8 @@ getFrameNode(): FrameNode | null
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-ReactiveBuilderNode-getFrameNode(): FrameNode | null--><!--Device-ReactiveBuilderNode-getFrameNode(): FrameNode | null-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -495,6 +507,8 @@ inheritFreezeOptions(enabled: boolean): void
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-ReactiveBuilderNode-inheritFreezeOptions(enabled: boolean): void--><!--Device-ReactiveBuilderNode-inheritFreezeOptions(enabled: boolean): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -747,6 +761,8 @@ isDisposed(): boolean
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
+<!--Device-ReactiveBuilderNode-isDisposed(): boolean--><!--Device-ReactiveBuilderNode-isDisposed(): boolean-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
@@ -914,6 +930,8 @@ offsetA为builderNode相对于父组件的偏移，offsetB为命中位置相对�
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
+<!--Device-ReactiveBuilderNode-postInputEvent(event: InputEventType): boolean--><!--Device-ReactiveBuilderNode-postInputEvent(event: InputEventType): boolean-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -968,6 +986,8 @@ postInputEventWithStrategy(event: InputEventType, competitionStrategy?: Competit
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
 
+<!--Device-ReactiveBuilderNode-postInputEventWithStrategy(event: InputEventType, competitionStrategy?: CompetitionStrategy): boolean--><!--Device-ReactiveBuilderNode-postInputEventWithStrategy(event: InputEventType, competitionStrategy?: CompetitionStrategy): boolean-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -1010,6 +1030,8 @@ offsetA为builderNode相对于父组件的偏移量，可以通过FrameNode中�
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-ReactiveBuilderNode-postTouchEvent(event: TouchEvent): boolean--><!--Device-ReactiveBuilderNode-postTouchEvent(event: TouchEvent): boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1134,6 +1156,8 @@ ReactiveBuilderNode通过[reuse](#reuse)和recycle完成其内外自定义组件
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-ReactiveBuilderNode-recycle(): void--><!--Device-ReactiveBuilderNode-recycle(): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1530,6 +1554,8 @@ ReactiveBuilderNode通过reuse和[recycle](#recycle)完成其内外自定义组�
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
+<!--Device-ReactiveBuilderNode-reuse(param?: Object): void--><!--Device-ReactiveBuilderNode-reuse(param?: Object): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -1555,6 +1581,8 @@ updateConfiguration(): void
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-ReactiveBuilderNode-updateConfiguration(): void--><!--Device-ReactiveBuilderNode-updateConfiguration(): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

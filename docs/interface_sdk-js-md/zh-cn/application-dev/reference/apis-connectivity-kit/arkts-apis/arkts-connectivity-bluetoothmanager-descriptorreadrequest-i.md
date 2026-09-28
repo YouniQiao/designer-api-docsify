@@ -14,6 +14,8 @@ interface DescriptorReadRequest
 
 **替代接口：** [DescriptorReadRequest](arkts-connectivity-ble-descriptorreadrequest-i.md)
 
+<!--Device-bluetoothManager-interface DescriptorReadRequest--><!--Device-bluetoothManager-interface DescriptorReadRequest-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -38,6 +40,8 @@ characteristicUuid: string
 
 **替代接口：** [characteristicUuid](arkts-connectivity-ble-descriptorreadrequest-i.md#characteristicuuid)
 
+<!--Device-DescriptorReadRequest-characteristicUuid: string--><!--Device-DescriptorReadRequest-characteristicUuid: string-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## descriptorUuid
@@ -55,6 +59,8 @@ descriptorUuid: string
 **废弃版本：** 10
 
 **替代接口：** [descriptorUuid](arkts-connectivity-ble-descriptorreadrequest-i.md#descriptoruuid)
+
+<!--Device-DescriptorReadRequest-descriptorUuid: string--><!--Device-DescriptorReadRequest-descriptorUuid: string-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -74,6 +80,8 @@ deviceId: string
 
 **替代接口：** [deviceId](arkts-connectivity-ble-descriptorreadrequest-i.md#deviceid)
 
+<!--Device-DescriptorReadRequest-deviceId: string--><!--Device-DescriptorReadRequest-deviceId: string-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## offset
@@ -91,6 +99,8 @@ offset: number
 **废弃版本：** 10
 
 **替代接口：** [offset](arkts-connectivity-ble-descriptorreadrequest-i.md#offset)
+
+<!--Device-DescriptorReadRequest-offset: number--><!--Device-DescriptorReadRequest-offset: number-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -110,6 +120,8 @@ serviceUuid: string
 
 **替代接口：** [serviceUuid](arkts-connectivity-ble-descriptorreadrequest-i.md#serviceuuid)
 
+<!--Device-DescriptorReadRequest-serviceUuid: string--><!--Device-DescriptorReadRequest-serviceUuid: string-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## transId
@@ -127,5 +139,7 @@ transId: number
 **废弃版本：** 10
 
 **替代接口：** [transId](arkts-connectivity-ble-descriptorreadrequest-i.md#transid)
+
+<!--Device-DescriptorReadRequest-transId: number--><!--Device-DescriptorReadRequest-transId: number-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

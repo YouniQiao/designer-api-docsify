@@ -18,6 +18,8 @@ function isNotificationEnabled(bundle: BundleOption, callback: AsyncCallback<boo
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function isNotificationEnabled(bundle: BundleOption, callback: AsyncCallback<boolean>): void--><!--Device-notificationManager-function isNotificationEnabled(bundle: BundleOption, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -75,6 +77,8 @@ function isNotificationEnabled(bundle: BundleOption): Promise<boolean>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function isNotificationEnabled(bundle: BundleOption): Promise<boolean>--><!--Device-notificationManager-function isNotificationEnabled(bundle: BundleOption): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -134,6 +138,8 @@ function isNotificationEnabled(userId: number, callback: AsyncCallback<boolean>)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function isNotificationEnabled(userId: int, callback: AsyncCallback<boolean>): void--><!--Device-notificationManager-function isNotificationEnabled(userId: int, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -190,6 +196,8 @@ function isNotificationEnabled(userId: number): Promise<boolean>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function isNotificationEnabled(userId: int): Promise<boolean>--><!--Device-notificationManager-function isNotificationEnabled(userId: int): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

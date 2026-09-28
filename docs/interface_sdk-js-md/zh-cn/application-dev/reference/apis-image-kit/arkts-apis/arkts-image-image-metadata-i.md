@@ -12,6 +12,8 @@ Metadata类，用于存储图像的元数据。目前支持的元数据类型可
 
 **起始版本：** 13
 
+<!--Device-image-interface Metadata--><!--Device-image-interface Metadata-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## 导入模块
@@ -29,6 +31,8 @@ clone(): Promise<Metadata>
 对元数据进行克隆。使用Promise异步回调。
 
 **起始版本：** 13
+
+<!--Device-Metadata-clone(): Promise<Metadata>--><!--Device-Metadata-clone(): Promise<Metadata>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -78,6 +82,8 @@ getAllProperties(): Promise<Record<string, string | null>>
 如要查询属性值信息请参考[PropertyKey](arkts-image-image-propertykey-e.md)、[FragmentMapPropertyKey](arkts-image-image-fragmentmappropertykey-e.md)、[GifPropertyKey](arkts-image-image-gifpropertykey-e.md)和[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md)。
 
 **起始版本：** 13
+
+<!--Device-Metadata-getAllProperties(): Promise<Record<string, string | null>>--><!--Device-Metadata-getAllProperties(): Promise<Record<string, string | null>>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -129,6 +135,8 @@ getBlob(): Promise<ArrayBuffer>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Metadata-getBlob(): Promise<ArrayBuffer>--><!--Device-Metadata-getBlob(): Promise<ArrayBuffer>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **返回值：**
@@ -175,6 +183,8 @@ getProperties(key: Array<string>): Promise<Record<string, string | null>>
 如要查询属性值信息请参考[PropertyKey](arkts-image-image-propertykey-e.md)、[FragmentMapPropertyKey](arkts-image-image-fragmentmappropertykey-e.md)、[GifPropertyKey](arkts-image-image-gifpropertykey-e.md)和[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md)。
 
 **起始版本：** 13
+
+<!--Device-Metadata-getProperties(key: Array<string>): Promise<Record<string, string | null>>--><!--Device-Metadata-getProperties(key: Array<string>): Promise<Record<string, string | null>>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -236,6 +246,8 @@ setBlob(blob: ArrayBuffer): Promise<void>
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Metadata-setBlob(blob: ArrayBuffer): Promise<void>--><!--Device-Metadata-setBlob(blob: ArrayBuffer): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -300,6 +312,8 @@ setProperties(records: Record<string, string | null>): Promise<void>
 如要查询属性值信息请参考[PropertyKey](arkts-image-image-propertykey-e.md)、[FragmentMapPropertyKey](arkts-image-image-fragmentmappropertykey-e.md)、[GifPropertyKey](arkts-image-image-gifpropertykey-e.md)和[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md)。
 
 **起始版本：** 13
+
+<!--Device-Metadata-setProperties(records: Record<string, string | null>): Promise<void>--><!--Device-Metadata-setProperties(records: Record<string, string | null>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 

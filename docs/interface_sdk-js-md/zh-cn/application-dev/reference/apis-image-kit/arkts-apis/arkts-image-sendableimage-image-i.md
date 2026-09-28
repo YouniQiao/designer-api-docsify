@@ -12,6 +12,8 @@ interface Image extends lang.ISendable
 
 **起始版本：** 12
 
+<!--Device-sendableImage-interface Image extends lang.ISendable--><!--Device-sendableImage-interface Image extends lang.ISendable-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## 导入模块
@@ -29,6 +31,8 @@ getComponent(componentType: image.ComponentType): Promise<image.Component>
 根据图像的组件类型从图像中获取组件缓存。使用Promise异步回调。getComponent是线程不安全的。
 
 **起始版本：** 12
+
+<!--Device-Image-getComponent(componentType: image.ComponentType): Promise<image.Component>--><!--Device-Image-getComponent(componentType: image.ComponentType): Promise<image.Component>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -82,6 +86,8 @@ release(): Promise<void>
 
 **起始版本：** 12
 
+<!--Device-Image-release(): Promise<void>--><!--Device-Image-release(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **返回值：**
@@ -124,6 +130,8 @@ clipRect: Region
 
 **起始版本：** 12
 
+<!--Device-Image-clipRect: Region--><!--Device-Image-clipRect: Region-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## format
@@ -137,6 +145,8 @@ readonly format: number
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-Image-readonly format: number--><!--Device-Image-readonly format: number-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -160,6 +170,8 @@ Image对象所存储的数据是预览流还是拍照流，取决于应用将rec
 
 **起始版本：** 12
 
+<!--Device-Image-readonly size: Size--><!--Device-Image-readonly size: Size-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## timestamp
@@ -173,5 +185,7 @@ readonly timestamp: number
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-Image-readonly timestamp: number--><!--Device-Image-readonly timestamp: number-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core

@@ -39,6 +39,8 @@ The **RelativeContainer** component is a container component used for relative l
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-RelativeContainerInterface-(): RelativeContainerAttribute--><!--Device-RelativeContainerInterface-(): RelativeContainerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Summary

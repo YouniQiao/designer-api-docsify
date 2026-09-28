@@ -18,6 +18,8 @@ function cancelRetentionState(docUris: Array<string>): Promise<void>
 
 **起始版本：** 10
 
+<!--Device-dlpPermission-function cancelRetentionState(docUris: Array<string>): Promise<void>--><!--Device-dlpPermission-function cancelRetentionState(docUris: Array<string>): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **参数：**
@@ -68,6 +70,8 @@ function cancelRetentionState(docUris: Array<string>, callback: AsyncCallback<vo
 该接口用于取消沙箱保留状态，恢复默认行为以释放系统资源，适用于不再频繁访问DLP文件的场景。
 
 **起始版本：** 10
+
+<!--Device-dlpPermission-function cancelRetentionState(docUris: Array<string>, callback: AsyncCallback<void>): void--><!--Device-dlpPermission-function cancelRetentionState(docUris: Array<string>, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 

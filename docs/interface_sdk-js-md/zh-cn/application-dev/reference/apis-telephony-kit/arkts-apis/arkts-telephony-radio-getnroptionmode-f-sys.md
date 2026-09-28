@@ -16,6 +16,8 @@ Get the option mode of NR.
 
 **起始版本：** 10
 
+<!--Device-radio-function getNROptionMode(slotId: int, callback: AsyncCallback<NROptionMode>): void--><!--Device-radio-function getNROptionMode(slotId: int, callback: AsyncCallback<NROptionMode>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -65,6 +67,8 @@ function getNROptionMode(slotId: number): Promise<NROptionMode>
 Get the option mode of NR.
 
 **起始版本：** 10
+
+<!--Device-radio-function getNROptionMode(slotId: int): Promise<NROptionMode>--><!--Device-radio-function getNROptionMode(slotId: int): Promise<NROptionMode>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

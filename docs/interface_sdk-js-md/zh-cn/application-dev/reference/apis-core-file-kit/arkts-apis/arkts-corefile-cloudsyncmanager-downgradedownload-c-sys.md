@@ -10,6 +10,8 @@ class DowngradeDownload
 
 **起始版本：** 20
 
+<!--Device-cloudSyncManager-class DowngradeDownload--><!--Device-cloudSyncManager-class DowngradeDownload-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 **系统接口：** 此接口为系统接口。
@@ -31,6 +33,8 @@ constructor(bundleName: string)
 **起始版本：** 20
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC_MANAGER
+
+<!--Device-DowngradeDownload-constructor(bundleName: string)--><!--Device-DowngradeDownload-constructor(bundleName: string)-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
@@ -76,6 +80,8 @@ getCloudFileInfo(): Promise<CloudFileInfo>
 **起始版本：** 20
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC_MANAGER
+
+<!--Device-DowngradeDownload-getCloudFileInfo(): Promise<CloudFileInfo>--><!--Device-DowngradeDownload-getCloudFileInfo(): Promise<CloudFileInfo>-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
@@ -124,6 +130,8 @@ startDownload(callback: Callback<DownloadProgress>): Promise<void>
 **起始版本：** 20
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC_MANAGER
+
+<!--Device-DowngradeDownload-startDownload(callback: Callback<DownloadProgress>): Promise<void>--><!--Device-DowngradeDownload-startDownload(callback: Callback<DownloadProgress>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
@@ -191,6 +199,8 @@ startTransfer(targetUri: string, callback: Callback<TransferProgress>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DowngradeDownload-startTransfer(targetUri: string, callback: Callback<TransferProgress>): void--><!--Device-DowngradeDownload-startTransfer(targetUri: string, callback: Callback<TransferProgress>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 **系统接口：** 此接口为系统接口。
@@ -242,6 +252,8 @@ stopDownload(): Promise<void>
 **起始版本：** 20
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC_MANAGER
+
+<!--Device-DowngradeDownload-stopDownload(): Promise<void>--><!--Device-DowngradeDownload-stopDownload(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 

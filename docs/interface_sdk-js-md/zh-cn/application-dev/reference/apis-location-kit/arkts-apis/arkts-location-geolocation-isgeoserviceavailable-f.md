@@ -22,6 +22,8 @@ function isGeoServiceAvailable(callback: AsyncCallback<boolean>): void
 
 **需要权限：** ohos.permission.LOCATION
 
+<!--Device-geolocation-function isGeoServiceAvailable(callback: AsyncCallback<boolean>): void--><!--Device-geolocation-function isGeoServiceAvailable(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 **参数：**
@@ -62,6 +64,8 @@ function isGeoServiceAvailable(): Promise<boolean>
 **替代接口：** [isGeocoderAvailable](arkts-location-geolocationmanager-isgeocoderavailable-f.md)
 
 **需要权限：** ohos.permission.LOCATION
+
+<!--Device-geolocation-function isGeoServiceAvailable(): Promise<boolean>--><!--Device-geolocation-function isGeoServiceAvailable(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geocoder
 

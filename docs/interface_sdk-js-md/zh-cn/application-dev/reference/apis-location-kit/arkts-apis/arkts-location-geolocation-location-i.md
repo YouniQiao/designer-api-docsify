@@ -16,6 +16,8 @@ export interface Location
 
 **需要权限：** ohos.permission.LOCATION
 
+<!--Device-geolocation-export interface Location--><!--Device-geolocation-export interface Location-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 ## 导入模块
@@ -42,6 +44,8 @@ accuracy: number
 
 **需要权限：** ohos.permission.LOCATION
 
+<!--Device-Location-accuracy: number--><!--Device-Location-accuracy: number-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 ## additions
@@ -61,6 +65,8 @@ additions?: Array<string>
 **替代接口：** [additions](arkts-location-geolocationmanager-location-i.md#additions)
 
 **需要权限：** ohos.permission.LOCATION
+
+<!--Device-Location-additions?: Array<string>--><!--Device-Location-additions?: Array<string>-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -82,6 +88,8 @@ additionSize?: number
 
 **需要权限：** ohos.permission.LOCATION
 
+<!--Device-Location-additionSize?: number--><!--Device-Location-additionSize?: number-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 ## altitude
@@ -101,6 +109,8 @@ altitude: number
 **替代接口：** [altitude](arkts-location-geolocationmanager-location-i.md#altitude)
 
 **需要权限：** ohos.permission.LOCATION
+
+<!--Device-Location-altitude: number--><!--Device-Location-altitude: number-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -122,6 +132,8 @@ direction: number
 
 **需要权限：** ohos.permission.LOCATION
 
+<!--Device-Location-direction: number--><!--Device-Location-direction: number-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 ## latitude
@@ -141,6 +153,8 @@ latitude: number
 **替代接口：** [latitude](arkts-location-geolocationmanager-location-i.md#latitude)
 
 **需要权限：** ohos.permission.LOCATION
+
+<!--Device-Location-latitude: number--><!--Device-Location-latitude: number-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -162,6 +176,8 @@ longitude: number
 
 **需要权限：** ohos.permission.LOCATION
 
+<!--Device-Location-longitude: number--><!--Device-Location-longitude: number-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 ## speed
@@ -181,6 +197,8 @@ speed: number
 **替代接口：** [speed](arkts-location-geolocationmanager-location-i.md#speed)
 
 **需要权限：** ohos.permission.LOCATION
+
+<!--Device-Location-speed: number--><!--Device-Location-speed: number-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -202,6 +220,8 @@ timeSinceBoot: number
 
 **需要权限：** ohos.permission.LOCATION
 
+<!--Device-Location-timeSinceBoot: number--><!--Device-Location-timeSinceBoot: number-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 ## timeStamp
@@ -221,5 +241,7 @@ timeStamp: number
 **替代接口：** [timeStamp](arkts-location-geolocationmanager-location-i.md#timestamp)
 
 **需要权限：** ohos.permission.LOCATION
+
+<!--Device-Location-timeStamp: number--><!--Device-Location-timeStamp: number-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core

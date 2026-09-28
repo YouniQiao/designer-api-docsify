@@ -14,6 +14,8 @@ interface GattService
 
 **替代接口：** [GattService](arkts-connectivity-ble-gattservice-i.md)
 
+<!--Device-bluetoothManager-interface GattService--><!--Device-bluetoothManager-interface GattService-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -38,6 +40,8 @@ characteristics: Array<BLECharacteristic>
 
 **替代接口：** [characteristics](arkts-connectivity-ble-gattservice-i.md#characteristics)
 
+<!--Device-GattService-characteristics: Array<BLECharacteristic>--><!--Device-GattService-characteristics: Array<BLECharacteristic>-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## includeServices
@@ -55,6 +59,8 @@ includeServices?: Array<GattService>
 **废弃版本：** 10
 
 **替代接口：** [includeServices](arkts-connectivity-ble-gattservice-i.md#includeservices)
+
+<!--Device-GattService-includeServices?: Array<GattService>--><!--Device-GattService-includeServices?: Array<GattService>-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -74,6 +80,8 @@ isPrimary: boolean
 
 **替代接口：** [isPrimary](arkts-connectivity-ble-gattservice-i.md#isprimary)
 
+<!--Device-GattService-isPrimary: boolean--><!--Device-GattService-isPrimary: boolean-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## serviceUuid
@@ -91,5 +99,7 @@ serviceUuid: string
 **废弃版本：** 10
 
 **替代接口：** [serviceUuid](arkts-connectivity-ble-gattservice-i.md#serviceuuid)
+
+<!--Device-GattService-serviceUuid: string--><!--Device-GattService-serviceUuid: string-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

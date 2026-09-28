@@ -4,6 +4,8 @@
 
 **起始版本：** 6
 
+<!--Device-unnamed-declare namespace batteryInfo--><!--Device-unnamed-declare namespace batteryInfo-End-->
+
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
 ## 导入模块

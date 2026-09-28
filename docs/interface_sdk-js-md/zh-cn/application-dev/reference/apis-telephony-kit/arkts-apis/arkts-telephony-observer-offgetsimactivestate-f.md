@@ -20,6 +20,8 @@ function offGetSimActiveState(callback?: Callback<boolean>): void
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-observer-function offGetSimActiveState(callback?: Callback<boolean>): void--><!--Device-observer-function offGetSimActiveState(callback?: Callback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
 **参数：**

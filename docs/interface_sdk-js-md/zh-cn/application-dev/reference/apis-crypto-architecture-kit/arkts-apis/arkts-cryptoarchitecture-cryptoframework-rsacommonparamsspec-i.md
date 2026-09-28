@@ -12,6 +12,8 @@ interface RSACommonParamsSpec extends AsyKeySpec
 
 **起始版本：** 10
 
+<!--Device-cryptoFramework-interface RSACommonParamsSpec extends AsyKeySpec--><!--Device-cryptoFramework-interface RSACommonParamsSpec extends AsyKeySpec-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
 - API版本10-11：SystemCapability.Security.CryptoFramework
@@ -34,7 +36,9 @@ n: bigint
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-RSACommonParamsSpec-n: bigint--><!--Device-RSACommonParamsSpec-n: bigint-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey

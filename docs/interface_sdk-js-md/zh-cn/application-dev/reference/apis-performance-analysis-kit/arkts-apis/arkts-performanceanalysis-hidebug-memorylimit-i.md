@@ -8,6 +8,8 @@ interface MemoryLimit
 
 **起始版本：** 12
 
+<!--Device-hidebug-interface MemoryLimit--><!--Device-hidebug-interface MemoryLimit-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 ## 导入模块
@@ -26,6 +28,8 @@ rssLimit: bigint
 
 **起始版本：** 12
 
+<!--Device-MemoryLimit-rssLimit: bigint--><!--Device-MemoryLimit-rssLimit: bigint-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 ## vmHeapLimit
@@ -37,6 +41,8 @@ vmHeapLimit: bigint
 **类型：** bigint
 
 **起始版本：** 12
+
+<!--Device-MemoryLimit-vmHeapLimit: bigint--><!--Device-MemoryLimit-vmHeapLimit: bigint-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -50,6 +56,8 @@ vmTotalHeapSize: bigint
 
 **起始版本：** 12
 
+<!--Device-MemoryLimit-vmTotalHeapSize: bigint--><!--Device-MemoryLimit-vmTotalHeapSize: bigint-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 ## vssLimit
@@ -61,5 +69,7 @@ vssLimit: bigint
 **类型：** bigint
 
 **起始版本：** 12
+
+<!--Device-MemoryLimit-vssLimit: bigint--><!--Device-MemoryLimit-vssLimit: bigint-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug

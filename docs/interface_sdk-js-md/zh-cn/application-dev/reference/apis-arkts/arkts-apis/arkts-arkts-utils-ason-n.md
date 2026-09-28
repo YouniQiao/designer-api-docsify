@@ -8,6 +8,8 @@ namespace ASON
 
 **起始版本：** 12
 
+<!--Device-utils-namespace ASON--><!--Device-utils-namespace ASON-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块

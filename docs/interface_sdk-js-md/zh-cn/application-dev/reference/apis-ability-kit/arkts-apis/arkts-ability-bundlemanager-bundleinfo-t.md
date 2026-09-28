@@ -10,6 +10,8 @@ export type BundleInfo = _BundleInfo.BundleInfo
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-bundleManager-export type BundleInfo = _BundleInfo.BundleInfo--><!--Device-bundleManager-export type BundleInfo = _BundleInfo.BundleInfo-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **类型：** [_BundleInfo.BundleInfo](arkts-ability-bundleinfo-i.md)

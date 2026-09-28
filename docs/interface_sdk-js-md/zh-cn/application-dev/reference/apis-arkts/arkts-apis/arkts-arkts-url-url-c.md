@@ -8,6 +8,8 @@ class URL
 
 **起始版本：** 7
 
+<!--Device-url-class URL--><!--Device-url-class URL-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -28,7 +30,9 @@ URL的无参构造函数，不建议直接调用。请使用parseURL方法创建
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-URL-constructor()--><!--Device-URL-constructor()-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -62,6 +66,8 @@ URL的构造函数。与parseURL方法功能相同，但parseURL为静态工厂�
 **废弃版本：** 9
 
 **替代接口：** [parseURL](#parseurl)
+
+<!--Device-URL-constructor(url: string, base?: string | URL)--><!--Device-URL-constructor(url: string, base?: string | URL)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -105,7 +111,9 @@ static parseURL(url: string, base?: string | URL): URL
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-URL-static parseURL(url: string, base?: string | URL): URL--><!--Device-URL-static parseURL(url: string, base?: string | URL): URL-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -155,7 +163,9 @@ toJSON(): string
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-URL-toJSON(): string--><!--Device-URL-toJSON(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -184,7 +194,9 @@ toString(): string
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-URL-toString(): string--><!--Device-URL-toString(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -215,6 +227,8 @@ hash: string
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-URL-hash: string--><!--Device-URL-hash: string-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## host
@@ -230,6 +244,8 @@ host: string
 **起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-URL-host: string--><!--Device-URL-host: string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -247,6 +263,8 @@ hostname: string
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-URL-hostname: string--><!--Device-URL-hostname: string-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## href
@@ -262,6 +280,8 @@ href: string
 **起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-URL-href: string--><!--Device-URL-href: string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -279,6 +299,8 @@ readonly origin: string
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-URL-readonly origin: string--><!--Device-URL-readonly origin: string-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## params
@@ -294,6 +316,8 @@ readonly params: URLParams
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-URL-readonly params: URLParams--><!--Device-URL-readonly params: URLParams-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -311,6 +335,8 @@ password: string
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-URL-password: string--><!--Device-URL-password: string-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## pathname
@@ -326,6 +352,8 @@ pathname: string
 **起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-URL-pathname: string--><!--Device-URL-pathname: string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -348,6 +376,8 @@ port: string
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-URL-port: string--><!--Device-URL-port: string-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## protocol
@@ -363,6 +393,8 @@ protocol: string
 **起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-URL-protocol: string--><!--Device-URL-protocol: string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -380,6 +412,8 @@ search: string
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-URL-search: string--><!--Device-URL-search: string-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## username
@@ -395,6 +429,8 @@ username: string
 **起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-URL-username: string--><!--Device-URL-username: string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -413,5 +449,7 @@ readonly searchParams: URLSearchParams
 **废弃版本：** 9
 
 **替代接口：** params
+
+<!--Device-URL-readonly searchParams: URLSearchParams--><!--Device-URL-readonly searchParams: URLSearchParams-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

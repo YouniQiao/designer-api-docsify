@@ -22,6 +22,8 @@ function disableAdvertising(advertisingDisableParams: AdvertisingDisableParams, 
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ble-function disableAdvertising(advertisingDisableParams: AdvertisingDisableParams, callback: AsyncCallback<void>): void--><!--Device-ble-function disableAdvertising(advertisingDisableParams: AdvertisingDisableParams, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -134,6 +136,8 @@ function disableAdvertising(advertisingDisableParams: AdvertisingDisableParams):
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ble-function disableAdvertising(advertisingDisableParams: AdvertisingDisableParams): Promise<void>--><!--Device-ble-function disableAdvertising(advertisingDisableParams: AdvertisingDisableParams): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

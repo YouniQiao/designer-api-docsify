@@ -8,6 +8,8 @@ enum FusionAssetType
 
 **起始版本：** 22
 
+<!--Device-photoAccessHelper-enum FusionAssetType--><!--Device-photoAccessHelper-enum FusionAssetType-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## COMPATIBLE_ASSET
@@ -19,6 +21,8 @@ COMPATIBLE_ASSET = 0
 兼容资产
 
 **起始版本：** 22
+
+<!--Device-FusionAssetType-COMPATIBLE_ASSET = 0--><!--Device-FusionAssetType-COMPATIBLE_ASSET = 0-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

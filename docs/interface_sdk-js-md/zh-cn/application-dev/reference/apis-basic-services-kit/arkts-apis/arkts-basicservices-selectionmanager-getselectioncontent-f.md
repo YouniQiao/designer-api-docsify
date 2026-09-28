@@ -16,6 +16,8 @@ function getSelectionContent(): Promise<string>
 
 **起始版本：** 24
 
+<!--Device-selectionManager-function getSelectionContent(): Promise<string>--><!--Device-selectionManager-function getSelectionContent(): Promise<string>-End-->
+
 **系统能力：** SystemCapability.SelectionInput.Selection
 
 **返回值：**

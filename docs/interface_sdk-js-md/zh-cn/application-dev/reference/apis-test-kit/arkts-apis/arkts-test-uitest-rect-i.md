@@ -8,6 +8,8 @@ declare interface Rect
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare interface Rect--><!--Device-unnamed-declare interface Rect-End-->
+
 **系统能力：** SystemCapability.Test.UiTest
 
 **测试接口：** 此接口仅在自动化测试脚本中使用。
@@ -37,7 +39,9 @@ bottom: number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Rect-bottom: int--><!--Device-Rect-bottom: int-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -57,7 +61,9 @@ displayId?: number
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-Rect-displayId?: int--><!--Device-Rect-displayId?: int-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -81,7 +87,9 @@ left: number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Rect-left: int--><!--Device-Rect-left: int-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -105,7 +113,9 @@ right: number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Rect-right: int--><!--Device-Rect-right: int-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -129,7 +139,9 @@ top: number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Rect-top: int--><!--Device-Rect-top: int-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 

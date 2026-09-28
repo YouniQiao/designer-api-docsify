@@ -8,6 +8,8 @@ Provides the custom drawing information.
 
 **Since:** 22
 
+<!--Device-unnamed-declare interface LeadingMarginSpanDrawInfo--><!--Device-unnamed-declare interface LeadingMarginSpanDrawInfo-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## baseline
@@ -25,6 +27,8 @@ Distance between the baseline of the current line and the top edge of the compon
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-LeadingMarginSpanDrawInfo-baseline: number--><!--Device-LeadingMarginSpanDrawInfo-baseline: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,6 +48,8 @@ Distance between the bottom of the line and the top edge of the component. Unit:
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-LeadingMarginSpanDrawInfo-bottom: number--><!--Device-LeadingMarginSpanDrawInfo-bottom: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## direction
@@ -62,6 +68,8 @@ Direction of the text content.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-LeadingMarginSpanDrawInfo-direction: TextDirection--><!--Device-LeadingMarginSpanDrawInfo-direction: TextDirection-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## end
@@ -79,6 +87,8 @@ End index of the current line. Value range: greater than or equal to 0.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-LeadingMarginSpanDrawInfo-end: number--><!--Device-LeadingMarginSpanDrawInfo-end: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -100,6 +110,8 @@ Whether the current line is the first line of the paragraph.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-LeadingMarginSpanDrawInfo-first: boolean--><!--Device-LeadingMarginSpanDrawInfo-first: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## start
@@ -117,6 +129,8 @@ Start index of the current line. Value range: greater than or equal to 0.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-LeadingMarginSpanDrawInfo-start: number--><!--Device-LeadingMarginSpanDrawInfo-start: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -136,6 +150,8 @@ Distance between the top of the line and the top edge of the component. Unit: [p
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-LeadingMarginSpanDrawInfo-top: number--><!--Device-LeadingMarginSpanDrawInfo-top: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## x
@@ -153,5 +169,7 @@ Horizontal offset of the current line relative to the component. When **directio
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-LeadingMarginSpanDrawInfo-x: number--><!--Device-LeadingMarginSpanDrawInfo-x: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

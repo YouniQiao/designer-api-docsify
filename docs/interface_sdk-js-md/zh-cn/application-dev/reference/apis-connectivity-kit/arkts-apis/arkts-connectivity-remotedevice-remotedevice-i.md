@@ -8,6 +8,8 @@ interface RemoteDevice
 
 **起始版本：** 26.0.0
 
+<!--Device-remoteDevice-interface RemoteDevice--><!--Device-remoteDevice-interface RemoteDevice-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## 导入模块
@@ -29,6 +31,8 @@ getAcbState(): AcbState
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-RemoteDevice-getAcbState(): AcbState--><!--Device-RemoteDevice-getAcbState(): AcbState-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -60,6 +64,8 @@ getConnectionState(): ConnectionState
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RemoteDevice-getConnectionState(): ConnectionState--><!--Device-RemoteDevice-getConnectionState(): ConnectionState-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **返回值：**
@@ -89,6 +95,8 @@ getDeviceClass(): DeviceClass
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-RemoteDevice-getDeviceClass(): DeviceClass--><!--Device-RemoteDevice-getDeviceClass(): DeviceClass-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -120,6 +128,8 @@ getDeviceInformation(): DeviceInformation
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RemoteDevice-getDeviceInformation(): DeviceInformation--><!--Device-RemoteDevice-getDeviceInformation(): DeviceInformation-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **返回值：**
@@ -149,6 +159,8 @@ getDeviceName(): string
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-RemoteDevice-getDeviceName(): string--><!--Device-RemoteDevice-getDeviceName(): string-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -180,6 +192,8 @@ getPairingState(): PairingState
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RemoteDevice-getPairingState(): PairingState--><!--Device-RemoteDevice-getPairingState(): PairingState-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **返回值：**
@@ -209,6 +223,8 @@ startPairing(): Promise<void>
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-RemoteDevice-startPairing(): Promise<void>--><!--Device-RemoteDevice-startPairing(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 

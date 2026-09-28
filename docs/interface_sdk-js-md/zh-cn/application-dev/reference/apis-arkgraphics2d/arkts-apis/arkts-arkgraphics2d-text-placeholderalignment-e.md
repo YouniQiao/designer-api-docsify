@@ -16,6 +16,8 @@ enum PlaceholderAlignment
 
 **起始版本：** 12
 
+<!--Device-text-enum PlaceholderAlignment--><!--Device-text-enum PlaceholderAlignment-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## OFFSET_AT_BASELINE
@@ -28,7 +30,9 @@ OFFSET_AT_BASELINE = 0
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-PlaceholderAlignment-OFFSET_AT_BASELINE = 0--><!--Device-PlaceholderAlignment-OFFSET_AT_BASELINE = 0-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -42,7 +46,9 @@ ABOVE_BASELINE = 1
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-PlaceholderAlignment-ABOVE_BASELINE = 1--><!--Device-PlaceholderAlignment-ABOVE_BASELINE = 1-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -56,7 +62,9 @@ BELOW_BASELINE = 2
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-PlaceholderAlignment-BELOW_BASELINE = 2--><!--Device-PlaceholderAlignment-BELOW_BASELINE = 2-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -70,7 +78,9 @@ TOP_OF_ROW_BOX = 3
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-PlaceholderAlignment-TOP_OF_ROW_BOX = 3--><!--Device-PlaceholderAlignment-TOP_OF_ROW_BOX = 3-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -84,7 +94,9 @@ BOTTOM_OF_ROW_BOX = 4
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-PlaceholderAlignment-BOTTOM_OF_ROW_BOX = 4--><!--Device-PlaceholderAlignment-BOTTOM_OF_ROW_BOX = 4-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -98,7 +110,9 @@ CENTER_OF_ROW_BOX = 5
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-PlaceholderAlignment-CENTER_OF_ROW_BOX = 5--><!--Device-PlaceholderAlignment-CENTER_OF_ROW_BOX = 5-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -112,6 +126,8 @@ FOLLOW_PARAGRAPH = 6
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-PlaceholderAlignment-FOLLOW_PARAGRAPH = 6--><!--Device-PlaceholderAlignment-FOLLOW_PARAGRAPH = 6-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing

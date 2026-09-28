@@ -12,6 +12,8 @@ interface CpuUsageHighPolicy
 
 **起始版本：** 22
 
+<!--Device-hiAppEvent-interface CpuUsageHighPolicy--><!--Device-hiAppEvent-interface CpuUsageHighPolicy-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 ## 导入模块
@@ -34,7 +36,9 @@ backgroundLoadThreshold?: number
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-CpuUsageHighPolicy-backgroundLoadThreshold?: int--><!--Device-CpuUsageHighPolicy-backgroundLoadThreshold?: int-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -52,7 +56,9 @@ foregroundLoadThreshold?: number
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-CpuUsageHighPolicy-foregroundLoadThreshold?: int--><!--Device-CpuUsageHighPolicy-foregroundLoadThreshold?: int-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -82,7 +88,9 @@ Release版本应用，阈值范围：[0, 20]。
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-CpuUsageHighPolicy-perfLogCaptureCount?: int--><!--Device-CpuUsageHighPolicy-perfLogCaptureCount?: int-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -100,7 +108,9 @@ threadLoadInterval?: number
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-CpuUsageHighPolicy-threadLoadInterval?: int--><!--Device-CpuUsageHighPolicy-threadLoadInterval?: int-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -116,6 +126,8 @@ threadLoadThreshold?: number
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-CpuUsageHighPolicy-threadLoadThreshold?: int--><!--Device-CpuUsageHighPolicy-threadLoadThreshold?: int-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent

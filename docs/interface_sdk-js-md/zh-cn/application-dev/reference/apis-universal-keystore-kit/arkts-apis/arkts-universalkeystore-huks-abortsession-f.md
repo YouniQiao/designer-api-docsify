@@ -20,6 +20,8 @@ abortSession终止密钥操作。使用callback异步回调。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-huks-function abortSession(handle: number, options: HuksOptions, callback: AsyncCallback<void>): void--><!--Device-huks-function abortSession(handle: number, options: HuksOptions, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Core
 
 **参数：**
@@ -35,7 +37,7 @@ abortSession终止密钥操作。使用callback异步回调。
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | api is not supported |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: 1. The hardware does not support the capability. 2. The chip does not support the capability. 3. A dependent service feature is not supported. |
 | [12000004](../errorcode-huks.md#12000004-文件错误) | operating file failed |
 | [12000005](../errorcode-huks.md#12000005-进程通信错误) | IPC communication failed |
 | [12000006](../errorcode-huks.md#12000006-算法库操作失败) | error occurred in crypto engine or UKey driver |
@@ -441,6 +443,8 @@ abortSession终止密钥操作。使用Promise异步回调。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-huks-function abortSession(handle: number, options: HuksOptions): Promise<void>--><!--Device-huks-function abortSession(handle: number, options: HuksOptions): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Extension
 
 **参数：**
@@ -461,7 +465,7 @@ abortSession终止密钥操作。使用Promise异步回调。
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | api is not supported |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: 1. The hardware does not support the capability. 2. The chip does not support the capability. 3. A dependent service feature is not supported. |
 | [12000004](../errorcode-huks.md#12000004-文件错误) | operating file failed |
 | [12000005](../errorcode-huks.md#12000005-进程通信错误) | IPC communication failed |
 | [12000006](../errorcode-huks.md#12000006-算法库操作失败) | error occurred in crypto engine or UKey driver |

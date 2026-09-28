@@ -8,6 +8,8 @@ Represents the edited media asset data.
 
 **Since:** 11
 
+<!--Device-photoAccessHelper-class MediaAssetEditData--><!--Device-photoAccessHelper-class MediaAssetEditData-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -27,6 +29,8 @@ constructor(compatibleFormat: string, formatVersion: string)
 Constructor.
 
 **Since:** 11
+
+<!--Device-MediaAssetEditData-constructor(compatibleFormat: string, formatVersion: string)--><!--Device-MediaAssetEditData-constructor(compatibleFormat: string, formatVersion: string)-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -65,6 +69,8 @@ Format of the edited data.
 
 **Since:** 11
 
+<!--Device-MediaAssetEditData-compatibleFormat: string--><!--Device-MediaAssetEditData-compatibleFormat: string-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -81,6 +87,8 @@ Content edited.
 
 **Since:** 11
 
+<!--Device-MediaAssetEditData-data: string--><!--Device-MediaAssetEditData-data: string-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -96,6 +104,8 @@ Version of the data format.
 **Type:** string
 
 **Since:** 11
+
+<!--Device-MediaAssetEditData-formatVersion: string--><!--Device-MediaAssetEditData-formatVersion: string-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 6
 
+<!--Device-unnamed-declare namespace http--><!--Device-unnamed-declare namespace http-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块

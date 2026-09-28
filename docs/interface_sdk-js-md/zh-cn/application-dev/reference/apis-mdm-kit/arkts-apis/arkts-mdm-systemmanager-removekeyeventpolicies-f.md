@@ -20,6 +20,8 @@ function removeKeyEventPolicies(admin: Want, keyCodes: Array<KeyCode>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-systemManager-function removeKeyEventPolicies(admin: Want, keyCodes: Array<KeyCode>): void--><!--Device-systemManager-function removeKeyEventPolicies(admin: Want, keyCodes: Array<KeyCode>): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**

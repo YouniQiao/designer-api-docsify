@@ -10,6 +10,8 @@ type WindowStageCallbackFn = (ability: any, windowStage: window.WindowStage) => 
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-unnamed-type WindowStageCallbackFn = (ability: any, windowStage: window.WindowStage) => void--><!--Device-unnamed-type WindowStageCallbackFn = (ability: any, windowStage: window.WindowStage) => void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **参数：**

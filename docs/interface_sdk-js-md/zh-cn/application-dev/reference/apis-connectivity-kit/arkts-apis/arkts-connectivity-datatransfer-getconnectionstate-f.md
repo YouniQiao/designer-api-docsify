@@ -20,6 +20,8 @@ function getConnectionState(params: ConnectionStateParams): ConnectionState
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-dataTransfer-function getConnectionState(params: ConnectionStateParams): ConnectionState--><!--Device-dataTransfer-function getConnectionState(params: ConnectionStateParams): ConnectionState-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **参数：**

@@ -10,6 +10,8 @@ interface AccelerometerUncalibratedResponse extends Response
 
 **起始版本：** 8
 
+<!--Device-sensor-interface AccelerometerUncalibratedResponse extends Response--><!--Device-sensor-interface AccelerometerUncalibratedResponse extends Response-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## 导入模块
@@ -30,6 +32,8 @@ biasX: number
 
 **起始版本：** 8
 
+<!--Device-AccelerometerUncalibratedResponse-biasX: double--><!--Device-AccelerometerUncalibratedResponse-biasX: double-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## biasY
@@ -43,6 +47,8 @@ biasY: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-AccelerometerUncalibratedResponse-biasY: double--><!--Device-AccelerometerUncalibratedResponse-biasY: double-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -58,6 +64,8 @@ biasZ: number
 
 **起始版本：** 8
 
+<!--Device-AccelerometerUncalibratedResponse-biasZ: double--><!--Device-AccelerometerUncalibratedResponse-biasZ: double-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## x
@@ -71,6 +79,8 @@ x: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-AccelerometerUncalibratedResponse-x: double--><!--Device-AccelerometerUncalibratedResponse-x: double-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -86,6 +96,8 @@ y: number
 
 **起始版本：** 8
 
+<!--Device-AccelerometerUncalibratedResponse-y: double--><!--Device-AccelerometerUncalibratedResponse-y: double-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## z
@@ -99,5 +111,7 @@ z: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-AccelerometerUncalibratedResponse-z: double--><!--Device-AccelerometerUncalibratedResponse-z: double-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor

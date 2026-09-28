@@ -8,6 +8,8 @@ interface SystemPanelInsets
 
 **起始版本：** 21
 
+<!--Device-inputMethodEngine-interface SystemPanelInsets--><!--Device-inputMethodEngine-interface SystemPanelInsets-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## 导入模块
@@ -28,6 +30,8 @@ readonly bottom: number
 
 **起始版本：** 21
 
+<!--Device-SystemPanelInsets-readonly bottom: int--><!--Device-SystemPanelInsets-readonly bottom: int-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## left
@@ -42,6 +46,8 @@ readonly left: number
 
 **起始版本：** 21
 
+<!--Device-SystemPanelInsets-readonly left: int--><!--Device-SystemPanelInsets-readonly left: int-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## right
@@ -55,5 +61,7 @@ readonly right: number
 **类型：** number
 
 **起始版本：** 21
+
+<!--Device-SystemPanelInsets-readonly right: int--><!--Device-SystemPanelInsets-readonly right: int-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework

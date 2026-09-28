@@ -18,6 +18,8 @@ function updateSimMessage(options: UpdateSimMessageOptions, callback: AsyncCallb
 
 **需要权限：** ohos.permission.RECEIVE_SMS and ohos.permission.SEND_MESSAGES
 
+<!--Device-sms-function updateSimMessage(options: UpdateSimMessageOptions, callback: AsyncCallback<void>): void--><!--Device-sms-function updateSimMessage(options: UpdateSimMessageOptions, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -73,6 +75,8 @@ function updateSimMessage(options: UpdateSimMessageOptions): Promise<void>
 **起始版本：** 7
 
 **需要权限：** ohos.permission.RECEIVE_SMS and ohos.permission.SEND_MESSAGES
+
+<!--Device-sms-function updateSimMessage(options: UpdateSimMessageOptions): Promise<void>--><!--Device-sms-function updateSimMessage(options: UpdateSimMessageOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 

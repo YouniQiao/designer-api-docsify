@@ -8,6 +8,8 @@ export interface BluetoothScanResult
 
 **起始版本：** 16
 
+<!--Device-geoLocationManager-export interface BluetoothScanResult--><!--Device-geoLocationManager-export interface BluetoothScanResult-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ connectable: boolean
 
 **起始版本：** 16
 
+<!--Device-BluetoothScanResult-connectable: boolean--><!--Device-BluetoothScanResult-connectable: boolean-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 ## data
@@ -41,6 +45,8 @@ data?: ArrayBuffer
 **类型：** ArrayBuffer
 
 **起始版本：** 16
+
+<!--Device-BluetoothScanResult-data?: ArrayBuffer--><!--Device-BluetoothScanResult-data?: ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -56,6 +62,8 @@ deviceId: string
 
 **起始版本：** 16
 
+<!--Device-BluetoothScanResult-deviceId: string--><!--Device-BluetoothScanResult-deviceId: string-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 ## deviceName
@@ -70,6 +78,8 @@ deviceName: string
 
 **起始版本：** 16
 
+<!--Device-BluetoothScanResult-deviceName: string--><!--Device-BluetoothScanResult-deviceName: string-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 ## rssi
@@ -83,5 +93,7 @@ rssi: number
 **类型：** number
 
 **起始版本：** 16
+
+<!--Device-BluetoothScanResult-rssi: int--><!--Device-BluetoothScanResult-rssi: int-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core

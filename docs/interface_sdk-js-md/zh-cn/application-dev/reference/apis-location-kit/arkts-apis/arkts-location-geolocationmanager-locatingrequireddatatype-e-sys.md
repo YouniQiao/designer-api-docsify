@@ -8,6 +8,8 @@ export enum LocatingRequiredDataType
 
 **起始版本：** 10
 
+<!--Device-geoLocationManager-export enum LocatingRequiredDataType--><!--Device-geoLocationManager-export enum LocatingRequiredDataType-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **系统接口：** 此接口为系统接口。
@@ -21,6 +23,8 @@ WIFI = 1
 表示WiFi扫描信息。
 
 **起始版本：** 10
+
+<!--Device-LocatingRequiredDataType-WIFI = 1--><!--Device-LocatingRequiredDataType-WIFI = 1-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -36,6 +40,8 @@ BLUETOOTH = 2
 
 **起始版本：** 10
 
+<!--Device-LocatingRequiredDataType-BLUETOOTH = 2--><!--Device-LocatingRequiredDataType-BLUETOOTH = 2-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +55,8 @@ CELLULAR = 3
 表示蜂窝小区信息。
 
 **起始版本：** 23
+
+<!--Device-LocatingRequiredDataType-CELLULAR = 3--><!--Device-LocatingRequiredDataType-CELLULAR = 3-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 

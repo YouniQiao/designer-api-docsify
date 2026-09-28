@@ -10,6 +10,8 @@ type MajorClass = constant.MajorClass
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-connection-type MajorClass = constant.MajorClass--><!--Device-connection-type MajorClass = constant.MajorClass-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **类型：** [constant.MajorClass](arkts-connectivity-constant-majorclass-e.md)

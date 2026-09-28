@@ -8,6 +8,8 @@ export interface MmsAddress
 
 **起始版本：** 8
 
+<!--Device-sms-export interface MmsAddress--><!--Device-sms-export interface MmsAddress-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ address: string
 
 **起始版本：** 8
 
+<!--Device-MmsAddress-address: string--><!--Device-MmsAddress-address: string-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ charset: MmsCharSets
 **类型：** [MmsCharSets](arkts-telephony-sms-mmscharsets-e-sys.md)
 
 **起始版本：** 8
+
+<!--Device-MmsAddress-charset: MmsCharSets--><!--Device-MmsAddress-charset: MmsCharSets-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 

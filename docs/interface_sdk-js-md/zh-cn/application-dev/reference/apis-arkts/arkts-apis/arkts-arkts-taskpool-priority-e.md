@@ -8,6 +8,8 @@ enum Priority
 
 **起始版本：** 9
 
+<!--Device-taskpool-enum Priority--><!--Device-taskpool-enum Priority-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## HIGH
@@ -23,6 +25,8 @@ HIGH = 0
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Priority-HIGH = 0--><!--Device-Priority-HIGH = 0-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -40,6 +44,8 @@ MEDIUM = 1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Priority-MEDIUM = 1--><!--Device-Priority-MEDIUM = 1-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## LOW
@@ -56,6 +62,8 @@ LOW = 2
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Priority-LOW = 2--><!--Device-Priority-LOW = 2-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## IDLE
@@ -71,5 +79,7 @@ IDLE = 3
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Priority-IDLE = 3--><!--Device-Priority-IDLE = 3-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

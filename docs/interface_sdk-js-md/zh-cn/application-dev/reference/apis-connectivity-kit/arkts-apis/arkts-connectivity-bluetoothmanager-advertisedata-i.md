@@ -14,6 +14,8 @@ interface AdvertiseData
 
 **替代接口：** [AdvertiseData](arkts-connectivity-ble-advertisedata-i.md)
 
+<!--Device-bluetoothManager-interface AdvertiseData--><!--Device-bluetoothManager-interface AdvertiseData-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -38,6 +40,8 @@ manufactureData: Array<ManufactureData>
 
 **替代接口：** [manufactureData](arkts-connectivity-ble-advertisedata-i.md#manufacturedata)
 
+<!--Device-AdvertiseData-manufactureData: Array<ManufactureData>--><!--Device-AdvertiseData-manufactureData: Array<ManufactureData>-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## serviceData
@@ -56,6 +60,8 @@ serviceData: Array<ServiceData>
 
 **替代接口：** [serviceData](arkts-connectivity-ble-advertisedata-i.md#servicedata)
 
+<!--Device-AdvertiseData-serviceData: Array<ServiceData>--><!--Device-AdvertiseData-serviceData: Array<ServiceData>-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## serviceUuids
@@ -73,5 +79,7 @@ serviceUuids: Array<string>
 **废弃版本：** 10
 
 **替代接口：** [serviceUuids](arkts-connectivity-ble-advertisedata-i.md#serviceuuids)
+
+<!--Device-AdvertiseData-serviceUuids: Array<string>--><!--Device-AdvertiseData-serviceUuids: Array<string>-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

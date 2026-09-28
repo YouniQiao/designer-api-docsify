@@ -8,6 +8,8 @@ Enumerates the memory optimization strategies of **LazyForEach**.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-declare enum LazyForEachMemOptStrategy--><!--Device-unnamed-declare enum LazyForEachMemOptStrategy-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## DEFAULT
@@ -23,6 +25,8 @@ No memory optimization strategy.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-LazyForEachMemOptStrategy-DEFAULT = 0--><!--Device-LazyForEachMemOptStrategy-DEFAULT = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,5 +49,7 @@ Releasing and restoring nodes triggers the [custom component lifecycle](../../..
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-LazyForEachMemOptStrategy-ENABLE_AUTO_CACHE_OPTIMIZATION = 1 << 0--><!--Device-LazyForEachMemOptStrategy-ENABLE_AUTO_CACHE_OPTIMIZATION = 1 << 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

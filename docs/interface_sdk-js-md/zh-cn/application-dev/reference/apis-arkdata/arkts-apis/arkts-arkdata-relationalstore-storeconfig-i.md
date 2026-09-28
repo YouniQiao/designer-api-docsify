@@ -8,6 +8,8 @@ interface StoreConfig
 
 **起始版本：** 9
 
+<!--Device-relationalStore-interface StoreConfig--><!--Device-relationalStore-interface StoreConfig-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## 导入模块
@@ -34,6 +36,8 @@ false：不自动删除。
 
 **起始版本：** 12
 
+<!--Device-StoreConfig-allowRebuild?: boolean--><!--Device-StoreConfig-allowRebuild?: boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## autoCleanDirtyData
@@ -51,6 +55,8 @@ autoCleanDirtyData?: boolean
 **类型：** boolean
 
 **起始版本：** 11
+
+<!--Device-StoreConfig-autoCleanDirtyData?: boolean--><!--Device-StoreConfig-autoCleanDirtyData?: boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -72,6 +78,8 @@ cryptoParam?: CryptoParam
 
 **起始版本：** 14
 
+<!--Device-StoreConfig-cryptoParam?: CryptoParam--><!--Device-StoreConfig-cryptoParam?: CryptoParam-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## customDir
@@ -89,6 +97,8 @@ customDir?: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-StoreConfig-customDir?: string--><!--Device-StoreConfig-customDir?: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -110,6 +120,8 @@ dataGroupId?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-StoreConfig-dataGroupId?: string--><!--Device-StoreConfig-dataGroupId?: string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## enableSemanticIndex
@@ -123,6 +135,8 @@ enableSemanticIndex?: boolean
 **类型：** boolean
 
 **起始版本：** 20
+
+<!--Device-StoreConfig-enableSemanticIndex?: boolean--><!--Device-StoreConfig-enableSemanticIndex?: boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -141,6 +155,8 @@ false：非加密。
 **类型：** boolean
 
 **起始版本：** 9
+
+<!--Device-StoreConfig-encrypt?: boolean--><!--Device-StoreConfig-encrypt?: boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -162,6 +178,8 @@ false：允许对数据库进行读写操作。
 
 **起始版本：** 12
 
+<!--Device-StoreConfig-isReadOnly?: boolean--><!--Device-StoreConfig-isReadOnly?: boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## name
@@ -175,6 +193,8 @@ name: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-StoreConfig-name: string--><!--Device-StoreConfig-name: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -192,6 +212,8 @@ persist?: boolean
 
 **起始版本：** 18
 
+<!--Device-StoreConfig-persist?: boolean--><!--Device-StoreConfig-persist?: boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## pluginLibs
@@ -205,6 +227,8 @@ pluginLibs?: Array<string>
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 12
+
+<!--Device-StoreConfig-pluginLibs?: Array<string>--><!--Device-StoreConfig-pluginLibs?: Array<string>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -222,6 +246,8 @@ rootDir?: string
 
 **起始版本：** 18
 
+<!--Device-StoreConfig-rootDir?: string--><!--Device-StoreConfig-rootDir?: string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## securityLevel
@@ -235,6 +261,8 @@ securityLevel: SecurityLevel
 **类型：** [SecurityLevel](arkts-arkdata-relationalstore-securitylevel-e.md)
 
 **起始版本：** 9
+
+<!--Device-StoreConfig-securityLevel: SecurityLevel--><!--Device-StoreConfig-securityLevel: SecurityLevel-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -254,6 +282,8 @@ tokenizer?: Tokenizer
 
 **起始版本：** 17
 
+<!--Device-StoreConfig-tokenizer?: Tokenizer--><!--Device-StoreConfig-tokenizer?: Tokenizer-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## vector
@@ -271,5 +301,7 @@ vector?: boolean
 **类型：** boolean
 
 **起始版本：** 18
+
+<!--Device-StoreConfig-vector?: boolean--><!--Device-StoreConfig-vector?: boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core

@@ -8,6 +8,8 @@ Socket套接字的基础属性。
 
 **起始版本：** 7
 
+<!--Device-socket-export interface ExtraOptionsBase--><!--Device-socket-export interface ExtraOptionsBase-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块
@@ -28,6 +30,8 @@ receiveBufferSize?: number
 
 **起始版本：** 7
 
+<!--Device-ExtraOptionsBase-receiveBufferSize?: int--><!--Device-ExtraOptionsBase-receiveBufferSize?: int-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## reuseAddress
@@ -41,6 +45,8 @@ reuseAddress?: boolean
 **类型：** boolean
 
 **起始版本：** 7
+
+<!--Device-ExtraOptionsBase-reuseAddress?: boolean--><!--Device-ExtraOptionsBase-reuseAddress?: boolean-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -56,6 +62,8 @@ sendBufferSize?: number
 
 **起始版本：** 7
 
+<!--Device-ExtraOptionsBase-sendBufferSize?: int--><!--Device-ExtraOptionsBase-sendBufferSize?: int-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## socketTimeout
@@ -69,5 +77,7 @@ socketTimeout?: number
 **类型：** number
 
 **起始版本：** 7
+
+<!--Device-ExtraOptionsBase-socketTimeout?: int--><!--Device-ExtraOptionsBase-socketTimeout?: int-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack

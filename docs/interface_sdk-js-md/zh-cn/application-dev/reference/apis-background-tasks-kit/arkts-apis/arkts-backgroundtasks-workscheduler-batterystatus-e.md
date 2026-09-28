@@ -8,6 +8,8 @@ export enum BatteryStatus
 
 **起始版本：** 9
 
+<!--Device-workScheduler-export enum BatteryStatus--><!--Device-workScheduler-export enum BatteryStatus-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
 ## BATTERY_STATUS_LOW
@@ -21,6 +23,8 @@ BATTERY_STATUS_LOW = 0
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BatteryStatus-BATTERY_STATUS_LOW = 0--><!--Device-BatteryStatus-BATTERY_STATUS_LOW = 0-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
@@ -36,6 +40,8 @@ BATTERY_STATUS_OKAY = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BatteryStatus-BATTERY_STATUS_OKAY = 1--><!--Device-BatteryStatus-BATTERY_STATUS_OKAY = 1-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
 ## BATTERY_STATUS_LOW_OR_OKAY
@@ -49,5 +55,7 @@ BATTERY_STATUS_LOW_OR_OKAY = 2
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BatteryStatus-BATTERY_STATUS_LOW_OR_OKAY = 2--><!--Device-BatteryStatus-BATTERY_STATUS_LOW_OR_OKAY = 2-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler

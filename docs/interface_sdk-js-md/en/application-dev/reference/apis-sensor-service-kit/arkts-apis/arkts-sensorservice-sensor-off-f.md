@@ -24,6 +24,8 @@ Unsubscribes from data of the acceleration sensor. Call this method to cancel th
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-sensor-function off(type: SensorId.ACCELEROMETER, callback?: Callback<AccelerometerResponse>): void--><!--Device-sensor-function off(type: SensorId.ACCELEROMETER, callback?: Callback<AccelerometerResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -86,6 +88,8 @@ Unsubscribes from data of the acceleration sensor. Call this method to cancel th
 **Required permissions:** ohos.permission.ACCELEROMETER
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-sensor-function off(type: SensorId.ACCELEROMETER, sensorInfoParam?: SensorInfoParam, callback?: Callback<AccelerometerResponse>): void--><!--Device-sensor-function off(type: SensorId.ACCELEROMETER, sensorInfoParam?: SensorInfoParam, callback?: Callback<AccelerometerResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -179,6 +183,8 @@ Unsubscribes from data of the uncalibrated acceleration sensor. Call this method
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 
+<!--Device-sensor-function off(type: SensorId.ACCELEROMETER_UNCALIBRATED, callback?: Callback<AccelerometerUncalibratedResponse>): void--><!--Device-sensor-function off(type: SensorId.ACCELEROMETER_UNCALIBRATED, callback?: Callback<AccelerometerUncalibratedResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -237,6 +243,8 @@ Unsubscribes from data of the uncalibrated acceleration sensor. Call this method
 **Since:** 19
 
 **Required permissions:** ohos.permission.ACCELEROMETER
+
+<!--Device-sensor-function off(type: SensorId.ACCELEROMETER_UNCALIBRATED, sensorInfoParam?: SensorInfoParam, callback?: Callback<AccelerometerUncalibratedResponse>): void--><!--Device-sensor-function off(type: SensorId.ACCELEROMETER_UNCALIBRATED, sensorInfoParam?: SensorInfoParam, callback?: Callback<AccelerometerUncalibratedResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -328,6 +336,8 @@ Unsubscribes from data of the ambient light sensor. When the ambient light senso
 
 **Since:** 9
 
+<!--Device-sensor-function off(type: SensorId.AMBIENT_LIGHT, callback?: Callback<LightResponse>): void--><!--Device-sensor-function off(type: SensorId.AMBIENT_LIGHT, callback?: Callback<LightResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -383,6 +393,8 @@ function off(type: SensorId.AMBIENT_LIGHT, sensorInfoParam?: SensorInfoParam, ca
 Unsubscribes from data of the ambient light sensor. When the ambient light sensor data is no longer needed, call this method to cancel the subscription. The **off** API for canceling subscription and the **on** API for subscription must be used in pairs.
 
 **Since:** 19
+
+<!--Device-sensor-function off(type: SensorId.AMBIENT_LIGHT, sensorInfoParam?: SensorInfoParam, callback?: Callback<LightResponse>): void--><!--Device-sensor-function off(type: SensorId.AMBIENT_LIGHT, sensorInfoParam?: SensorInfoParam, callback?: Callback<LightResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -473,6 +485,8 @@ Unsubscribes from data of the ambient temperature sensor. When the ambient tempe
 
 **Since:** 9
 
+<!--Device-sensor-function off(type: SensorId.AMBIENT_TEMPERATURE, callback?: Callback<AmbientTemperatureResponse>): void--><!--Device-sensor-function off(type: SensorId.AMBIENT_TEMPERATURE, callback?: Callback<AmbientTemperatureResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -528,6 +542,8 @@ function off(type: SensorId.AMBIENT_TEMPERATURE, sensorInfoParam?: SensorInfoPar
 Unsubscribes from data of the ambient temperature sensor. When the ambient temperature sensor data is no longer needed, call this API to cancel the subscription. The **off** API for canceling subscription and the **on** API for subscription must be used in pairs.
 
 **Since:** 19
+
+<!--Device-sensor-function off(type: SensorId.AMBIENT_TEMPERATURE, sensorInfoParam?: SensorInfoParam, callback?: Callback<AmbientTemperatureResponse>): void--><!--Device-sensor-function off(type: SensorId.AMBIENT_TEMPERATURE, sensorInfoParam?: SensorInfoParam, callback?: Callback<AmbientTemperatureResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -618,6 +634,8 @@ Unsubscribes from data of the barometer sensor. Call this method to cancel the s
 
 **Since:** 9
 
+<!--Device-sensor-function off(type: SensorId.BAROMETER, callback?: Callback<BarometerResponse>): void--><!--Device-sensor-function off(type: SensorId.BAROMETER, callback?: Callback<BarometerResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -673,6 +691,8 @@ function off(type: SensorId.BAROMETER, sensorInfoParam?: SensorInfoParam, callba
 Unsubscribes from data of the barometer sensor. Call this method to cancel the subscription when the barometric pressure sensor data is no longer needed. The **off** API for canceling subscription and the **on** API for subscription must be used in pairs.
 
 **Since:** 19
+
+<!--Device-sensor-function off(type: SensorId.BAROMETER, sensorInfoParam?: SensorInfoParam, callback?: Callback<BarometerResponse>): void--><!--Device-sensor-function off(type: SensorId.BAROMETER, sensorInfoParam?: SensorInfoParam, callback?: Callback<BarometerResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -763,6 +783,8 @@ Unsubscribes from data of the gravity sensor. When the gravity sensor data is no
 
 **Since:** 9
 
+<!--Device-sensor-function off(type: SensorId.GRAVITY, callback?: Callback<GravityResponse>): void--><!--Device-sensor-function off(type: SensorId.GRAVITY, callback?: Callback<GravityResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -818,6 +840,8 @@ function off(type: SensorId.GRAVITY, sensorInfoParam?: SensorInfoParam, callback
 Unsubscribes from data of the gravity sensor. When the gravity sensor data is no longer needed, call this method to cancel the subscription. The **off** API for canceling subscription and the **on** API for subscription must be used in pairs.
 
 **Since:** 19
+
+<!--Device-sensor-function off(type: SensorId.GRAVITY, sensorInfoParam?: SensorInfoParam, callback?: Callback<GravityResponse>): void--><!--Device-sensor-function off(type: SensorId.GRAVITY, sensorInfoParam?: SensorInfoParam, callback?: Callback<GravityResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -914,6 +938,8 @@ Unsubscribes from data of the gyroscope sensor. Call this method to cancel the s
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-sensor-function off(type: SensorId.GYROSCOPE, callback?: Callback<GyroscopeResponse>): void--><!--Device-sensor-function off(type: SensorId.GYROSCOPE, callback?: Callback<GyroscopeResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -976,6 +1002,8 @@ Unsubscribes from data of the gyroscope sensor. This API is called to cancel the
 **Required permissions:** ohos.permission.GYROSCOPE
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-sensor-function off(type: SensorId.GYROSCOPE, sensorInfoParam?: SensorInfoParam, callback?: Callback<GyroscopeResponse>): void--><!--Device-sensor-function off(type: SensorId.GYROSCOPE, sensorInfoParam?: SensorInfoParam, callback?: Callback<GyroscopeResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -1069,6 +1097,8 @@ Unsubscribes from data of the uncalibrated gyroscope sensor. When the uncalibrat
 
 **Required permissions:** ohos.permission.GYROSCOPE
 
+<!--Device-sensor-function off(type: SensorId.GYROSCOPE_UNCALIBRATED, callback?: Callback<GyroscopeUncalibratedResponse>): void--><!--Device-sensor-function off(type: SensorId.GYROSCOPE_UNCALIBRATED, callback?: Callback<GyroscopeUncalibratedResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -1127,6 +1157,8 @@ Unsubscribes from data of the uncalibrated gyroscope sensor.
 **Since:** 19
 
 **Required permissions:** ohos.permission.GYROSCOPE
+
+<!--Device-sensor-function off(type: SensorId.GYROSCOPE_UNCALIBRATED, sensorInfoParam?: SensorInfoParam, callback?: Callback<GyroscopeUncalibratedResponse>): void--><!--Device-sensor-function off(type: SensorId.GYROSCOPE_UNCALIBRATED, sensorInfoParam?: SensorInfoParam, callback?: Callback<GyroscopeUncalibratedResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -1218,6 +1250,8 @@ Unsubscribes from data of the Hall effect sensor. Call this API when you no long
 
 **Since:** 9
 
+<!--Device-sensor-function off(type: SensorId.HALL, callback?: Callback<HallResponse>): void--><!--Device-sensor-function off(type: SensorId.HALL, callback?: Callback<HallResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -1273,6 +1307,8 @@ function off(type: SensorId.HALL, sensorInfoParam?: SensorInfoParam, callback?: 
 Unsubscribes from data of the Hall effect sensor. Call this method to unsubscribe from the Hall effect sensor data when it is no longer needed. The **off** API for canceling subscription and the **on** API for subscription must be used in pairs.
 
 **Since:** 19
+
+<!--Device-sensor-function off(type: SensorId.HALL, sensorInfoParam?: SensorInfoParam, callback?: Callback<HallResponse>): void--><!--Device-sensor-function off(type: SensorId.HALL, sensorInfoParam?: SensorInfoParam, callback?: Callback<HallResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -1365,6 +1401,8 @@ Unsubscribes from data of the heart rate sensor. Call this method to cancel the 
 
 **Required permissions:** ohos.permission.READ_HEALTH_DATA
 
+<!--Device-sensor-function off(type: SensorId.HEART_RATE, callback?: Callback<HeartRateResponse>): void--><!--Device-sensor-function off(type: SensorId.HEART_RATE, callback?: Callback<HeartRateResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -1423,6 +1461,8 @@ Unsubscribes from data of the heart rate sensor. Call this method to cancel the 
 **Since:** 19
 
 **Required permissions:** ohos.permission.READ_HEALTH_DATA
+
+<!--Device-sensor-function off(type: SensorId.HEART_RATE, sensorInfoParam?: SensorInfoParam, callback?: Callback<HeartRateResponse>): void--><!--Device-sensor-function off(type: SensorId.HEART_RATE, sensorInfoParam?: SensorInfoParam, callback?: Callback<HeartRateResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -1514,6 +1554,8 @@ Unsubscribes from data of the humidity sensor. When the humidity sensor data is 
 
 **Since:** 9
 
+<!--Device-sensor-function off(type: SensorId.HUMIDITY, callback?: Callback<HumidityResponse>): void--><!--Device-sensor-function off(type: SensorId.HUMIDITY, callback?: Callback<HumidityResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -1569,6 +1611,8 @@ function off(type: SensorId.HUMIDITY, sensorInfoParam?: SensorInfoParam, callbac
 Unsubscribes from data of the humidity sensor. When the humidity sensor data is no longer needed, call this API to cancel the subscription. The **off** API for canceling subscription and the **on** API for subscription must be used in pairs.
 
 **Since:** 19
+
+<!--Device-sensor-function off(type: SensorId.HUMIDITY, sensorInfoParam?: SensorInfoParam, callback?: Callback<HumidityResponse>): void--><!--Device-sensor-function off(type: SensorId.HUMIDITY, sensorInfoParam?: SensorInfoParam, callback?: Callback<HumidityResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -1661,6 +1705,8 @@ Unsubscribes from data of the linear acceleration sensor. Call this method to ca
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 
+<!--Device-sensor-function off(type: SensorId.LINEAR_ACCELEROMETER, callback?: Callback<LinearAccelerometerResponse>): void--><!--Device-sensor-function off(type: SensorId.LINEAR_ACCELEROMETER, callback?: Callback<LinearAccelerometerResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -1719,6 +1765,8 @@ Unsubscribes from data of the linear acceleration sensor. Call this method to ca
 **Since:** 19
 
 **Required permissions:** ohos.permission.ACCELEROMETER
+
+<!--Device-sensor-function off(type: SensorId.LINEAR_ACCELEROMETER, sensorInfoParam?: SensorInfoParam, callback?: Callback<LinearAccelerometerResponse>): void--><!--Device-sensor-function off(type: SensorId.LINEAR_ACCELEROMETER, sensorInfoParam?: SensorInfoParam, callback?: Callback<LinearAccelerometerResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -1810,6 +1858,8 @@ Unsubscribes from data of the magnetic field sensor. When the magnetic field sen
 
 **Since:** 9
 
+<!--Device-sensor-function off(type: SensorId.MAGNETIC_FIELD, callback?: Callback<MagneticFieldResponse>): void--><!--Device-sensor-function off(type: SensorId.MAGNETIC_FIELD, callback?: Callback<MagneticFieldResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -1865,6 +1915,8 @@ function off(type: SensorId.MAGNETIC_FIELD, sensorInfoParam?: SensorInfoParam, c
 Unsubscribes from data of the magnetic field sensor. When the magnetic field sensor data is no longer needed, call this method to cancel the subscription. The **off** API for canceling subscription and the **on** API for subscription must be used in pairs.
 
 **Since:** 19
+
+<!--Device-sensor-function off(type: SensorId.MAGNETIC_FIELD, sensorInfoParam?: SensorInfoParam, callback?: Callback<MagneticFieldResponse>): void--><!--Device-sensor-function off(type: SensorId.MAGNETIC_FIELD, sensorInfoParam?: SensorInfoParam, callback?: Callback<MagneticFieldResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -1955,6 +2007,8 @@ Unsubscribes from data of the uncalibrated magnetic field sensor. When the uncal
 
 **Since:** 9
 
+<!--Device-sensor-function off(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback?: Callback<MagneticFieldUncalibratedResponse>): void--><!--Device-sensor-function off(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback?: Callback<MagneticFieldUncalibratedResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -2010,6 +2064,8 @@ function off(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, sensorInfoParam?: Senso
 Unsubscribes from data of the uncalibrated magnetic field sensor. When the uncalibrated magnetic field sensor data is no longer needed, call this method to cancel the subscription. The **off** API for canceling subscription and the **on** API for subscription must be used in pairs.
 
 **Since:** 19
+
+<!--Device-sensor-function off(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, sensorInfoParam?: SensorInfoParam, callback?: Callback<MagneticFieldUncalibratedResponse>): void--><!--Device-sensor-function off(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, sensorInfoParam?: SensorInfoParam, callback?: Callback<MagneticFieldUncalibratedResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -2104,6 +2160,8 @@ Unsubscribes from data of the orientation sensor. Call this method to unsubscrib
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-sensor-function off(type: SensorId.ORIENTATION, callback?: Callback<OrientationResponse>): void--><!--Device-sensor-function off(type: SensorId.ORIENTATION, callback?: Callback<OrientationResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -2163,6 +2221,8 @@ Unsubscribes from data of the orientation sensor. Call this method to unsubscrib
 **Since:** 19
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-sensor-function off(type: SensorId.ORIENTATION, sensorInfoParam?: SensorInfoParam, callback?: Callback<OrientationResponse>): void--><!--Device-sensor-function off(type: SensorId.ORIENTATION, sensorInfoParam?: SensorInfoParam, callback?: Callback<OrientationResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -2255,6 +2315,8 @@ Unsubscribes from data of the pedometer sensor. Call this method to cancel the s
 
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
 
+<!--Device-sensor-function off(type: SensorId.PEDOMETER, callback?: Callback<PedometerResponse>): void--><!--Device-sensor-function off(type: SensorId.PEDOMETER, callback?: Callback<PedometerResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -2313,6 +2375,8 @@ Unsubscribes from data of the pedometer sensor. When the pedometer sensor data i
 **Since:** 19
 
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
+
+<!--Device-sensor-function off(type: SensorId.PEDOMETER, sensorInfoParam?: SensorInfoParam, callback?: Callback<PedometerResponse>): void--><!--Device-sensor-function off(type: SensorId.PEDOMETER, sensorInfoParam?: SensorInfoParam, callback?: Callback<PedometerResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -2406,6 +2470,8 @@ Unsubscribes from data of the pedometer detection sensor. Call this method when 
 
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
 
+<!--Device-sensor-function off(type: SensorId.PEDOMETER_DETECTION, callback?: Callback<PedometerDetectionResponse>): void--><!--Device-sensor-function off(type: SensorId.PEDOMETER_DETECTION, callback?: Callback<PedometerDetectionResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -2464,6 +2530,8 @@ Unsubscribes from data of the pedometer detection sensor. Call this method when 
 **Since:** 19
 
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
+
+<!--Device-sensor-function off(type: SensorId.PEDOMETER_DETECTION, sensorInfoParam?: SensorInfoParam, callback?: Callback<PedometerDetectionResponse>): void--><!--Device-sensor-function off(type: SensorId.PEDOMETER_DETECTION, sensorInfoParam?: SensorInfoParam, callback?: Callback<PedometerDetectionResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -2555,6 +2623,8 @@ Unsubscribes from data of the proximity sensor. When the proximity sensor data i
 
 **Since:** 9
 
+<!--Device-sensor-function off(type: SensorId.PROXIMITY, callback?: Callback<ProximityResponse>): void--><!--Device-sensor-function off(type: SensorId.PROXIMITY, callback?: Callback<ProximityResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -2610,6 +2680,8 @@ function off(type: SensorId.PROXIMITY, sensorInfoParam?: SensorInfoParam, callba
 Unsubscribes from data of the proximity sensor. When the proximity sensor data is no longer needed, call this method to cancel the subscription. The **off** API for canceling subscription and the **on** API for subscription must be used in pairs.
 
 **Since:** 19
+
+<!--Device-sensor-function off(type: SensorId.PROXIMITY, sensorInfoParam?: SensorInfoParam, callback?: Callback<ProximityResponse>): void--><!--Device-sensor-function off(type: SensorId.PROXIMITY, sensorInfoParam?: SensorInfoParam, callback?: Callback<ProximityResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -2700,6 +2772,8 @@ Unsubscribes from data of the rotation vector sensor. Call this method to cancel
 
 **Since:** 9
 
+<!--Device-sensor-function off(type: SensorId.ROTATION_VECTOR, callback?: Callback<RotationVectorResponse>): void--><!--Device-sensor-function off(type: SensorId.ROTATION_VECTOR, callback?: Callback<RotationVectorResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -2755,6 +2829,8 @@ function off(type: SensorId.ROTATION_VECTOR, sensorInfoParam?: SensorInfoParam, 
 Unsubscribes from data of the rotation vector sensor. Call this method to cancel the subscription when the rotation vector sensor data is no longer needed. The **off** API for canceling subscription and the **on** API for subscription must be used in pairs.
 
 **Since:** 19
+
+<!--Device-sensor-function off(type: SensorId.ROTATION_VECTOR, sensorInfoParam?: SensorInfoParam, callback?: Callback<RotationVectorResponse>): void--><!--Device-sensor-function off(type: SensorId.ROTATION_VECTOR, sensorInfoParam?: SensorInfoParam, callback?: Callback<RotationVectorResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -2845,6 +2921,8 @@ Unsubscribes from significant motion sensor data. Call this API to unsubscribe f
 
 **Since:** 9
 
+<!--Device-sensor-function off(type: SensorId.SIGNIFICANT_MOTION, callback?: Callback<SignificantMotionResponse>): void--><!--Device-sensor-function off(type: SensorId.SIGNIFICANT_MOTION, callback?: Callback<SignificantMotionResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -2900,6 +2978,8 @@ function off(type: SensorId.SIGNIFICANT_MOTION, sensorInfoParam?: SensorInfoPara
 Unsubscribes from significant motion sensor data. Call this API to unsubscribe from significant motion sensor data when it is no longer needed. The **off** API for canceling subscription and the **on** API for subscription must be used in pairs.
 
 **Since:** 19
+
+<!--Device-sensor-function off(type: SensorId.SIGNIFICANT_MOTION, sensorInfoParam?: SensorInfoParam, callback?: Callback<SignificantMotionResponse>): void--><!--Device-sensor-function off(type: SensorId.SIGNIFICANT_MOTION, sensorInfoParam?: SensorInfoParam, callback?: Callback<SignificantMotionResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -2990,6 +3070,8 @@ Unsubscribes from data of the wear detection sensor. Call this method to unsubsc
 
 **Since:** 9
 
+<!--Device-sensor-function off(type: SensorId.WEAR_DETECTION, callback?: Callback<WearDetectionResponse>): void--><!--Device-sensor-function off(type: SensorId.WEAR_DETECTION, callback?: Callback<WearDetectionResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -3045,6 +3127,8 @@ function off(type: SensorId.FUSION_PRESSURE, sensorInfoParam?: SensorInfoParam, 
 Unsubscribes from the fused pressure sensor data. Call this method to cancel the subscription when the fused pressure sensor data is no longer needed. The **off** API for canceling subscription and the **on** API for subscription must be used in pairs.
 
 **Since:** 22
+
+<!--Device-sensor-function off(type: SensorId.FUSION_PRESSURE, sensorInfoParam?: SensorInfoParam, callback?: Callback<FusionPressureResponse>): void--><!--Device-sensor-function off(type: SensorId.FUSION_PRESSURE, sensorInfoParam?: SensorInfoParam, callback?: Callback<FusionPressureResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -3135,6 +3219,8 @@ function off(type: SensorId.WEAR_DETECTION, sensorInfoParam?: SensorInfoParam, c
 Unsubscribes from data of the wear detection sensor. Call this method to unsubscribe from data of the wear detection sensor when the data is no longer needed. The **off** API for canceling subscription and the **on** API for subscription must be used in pairs.
 
 **Since:** 19
+
+<!--Device-sensor-function off(type: SensorId.WEAR_DETECTION, sensorInfoParam?: SensorInfoParam, callback?: Callback<WearDetectionResponse>): void--><!--Device-sensor-function off(type: SensorId.WEAR_DETECTION, sensorInfoParam?: SensorInfoParam, callback?: Callback<WearDetectionResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -3237,6 +3323,8 @@ Unsubscribes from data of the acceleration sensor. The **off** API for canceling
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 
+<!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback?: Callback<AccelerometerResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback?: Callback<AccelerometerResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -3285,6 +3373,8 @@ Unsubscribes from data of the uncalibrated acceleration sensor. The **off** API 
 **Substitutes:** [off](#off-6)(type: SensorId.ACCELEROMETER_UNCALIBRATED, callback?: Callback&lt;AccelerometerUncalibratedResponse&gt;)
 
 **Required permissions:** ohos.permission.ACCELEROMETER
+
+<!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED,    callback?: Callback<AccelerometerUncalibratedResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED,    callback?: Callback<AccelerometerUncalibratedResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -3335,6 +3425,8 @@ Unsubscribes from data of the ambient light sensor. The **off** API for cancelin
 
 **Substitutes:** [off](#off-8)(type: SensorId.AMBIENT_LIGHT, callback?: Callback&lt;LightResponse&gt;)
 
+<!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback?: Callback<LightResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback?: Callback<LightResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -3378,6 +3470,8 @@ Unsubscribes from data of the ambient temperature sensor. The **off** API for ca
 **Deprecated since:** 9
 
 **Substitutes:** [off](#off-10)(type: SensorId.AMBIENT_TEMPERATURE, callback?: Callback&lt;AmbientTemperatureResponse&gt;)
+
+<!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback?: Callback<AmbientTemperatureResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback?: Callback<AmbientTemperatureResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -3423,6 +3517,8 @@ Unsubscribes from data of the barometer sensor. The **off** API for canceling su
 
 **Substitutes:** [off](#off-12)(type: SensorId.BAROMETER, callback?: Callback&lt;BarometerResponse&gt;)
 
+<!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback?: Callback<BarometerResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback?: Callback<BarometerResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -3466,6 +3562,8 @@ Unsubscribes from data of the gravity sensor. The **off** API for canceling subs
 **Deprecated since:** 9
 
 **Substitutes:** [off](#off-14)(type: SensorId.GRAVITY, callback?: Callback&lt;GravityResponse&gt;)
+
+<!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_GRAVITY, callback?: Callback<GravityResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_GRAVITY, callback?: Callback<GravityResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -3515,6 +3613,8 @@ Unsubscribes from data of the gyroscope sensor. The **off** API for canceling su
 
 **Required permissions:** ohos.permission.GYROSCOPE
 
+<!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback?: Callback<GyroscopeResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback?: Callback<GyroscopeResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -3563,6 +3663,8 @@ Unsubscribes from data of the uncalibrated gyroscope sensor. The **off** API for
 
 **Required permissions:** ohos.permission.GYROSCOPE
 
+<!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED, callback?: Callback<GyroscopeUncalibratedResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED, callback?: Callback<GyroscopeUncalibratedResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -3608,6 +3710,8 @@ Unsubscribes from data of the Hall effect sensor. The **off** API for canceling 
 **Deprecated since:** 9
 
 **Substitutes:** [off](#off-20)(type: SensorId.HALL, callback?: Callback&lt;HallResponse&gt;)
+
+<!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_HALL, callback?: Callback<HallResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_HALL, callback?: Callback<HallResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -3655,6 +3759,8 @@ Unsubscribes from data of the heart rate sensor. The **off** API for canceling s
 
 **Required permissions:** ohos.permission.HEALTH_DATA
 
+<!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback?: Callback<HeartRateResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback?: Callback<HeartRateResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -3698,6 +3804,8 @@ Unsubscribes from data of the humidity sensor. The **off** API for canceling sub
 **Deprecated since:** 9
 
 **Substitutes:** [off](#off-24)(type: SensorId.HUMIDITY, callback?: Callback&lt;HumidityResponse&gt;)
+
+<!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_HUMIDITY, callback?: Callback<HumidityResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_HUMIDITY, callback?: Callback<HumidityResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -3745,6 +3853,8 @@ Unsubscribes from data of the linear acceleration sensor. The **off** API for ca
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 
+<!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION, callback?: Callback<LinearAccelerometerResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION, callback?: Callback<LinearAccelerometerResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -3791,6 +3901,8 @@ Unsubscribes from data of the magnetic field sensor. The **off** API for canceli
 
 **Substitutes:** [off](#off-28)(type: SensorId.MAGNETIC_FIELD, callback?: Callback&lt;MagneticFieldResponse&gt;)
 
+<!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback?: Callback<MagneticFieldResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback?: Callback<MagneticFieldResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -3836,6 +3948,8 @@ Unsubscribes from data of the uncalibrated magnetic field sensor. The **off** AP
 **Deprecated since:** 9
 
 **Substitutes:** [off](#off-30)(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback?: Callback&lt;MagneticFieldUncalibratedResponse&gt;)
+
+<!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callback?: Callback<MagneticFieldUncalibratedResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callback?: Callback<MagneticFieldUncalibratedResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -3886,6 +4000,8 @@ Unsubscribes from data of the orientation sensor. The **off** API for canceling 
 
 **Substitutes:** [off](#off-32)(type: SensorId.ORIENTATION, callback?: Callback&lt;OrientationResponse&gt;)
 
+<!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback?: Callback<OrientationResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback?: Callback<OrientationResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -3934,6 +4050,8 @@ Unsubscribes from data of the pedometer sensor. The **off** API for canceling su
 
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
 
+<!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback?: Callback<PedometerResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback?: Callback<PedometerResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -3980,6 +4098,8 @@ Unsubscribes from data of the pedometer detection sensor. The **off** API for ca
 
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
 
+<!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION, callback?: Callback<PedometerDetectionResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION, callback?: Callback<PedometerDetectionResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -4024,6 +4144,8 @@ Unsubscribes from data of the proximity sensor. The **off** API for canceling su
 
 **Substitutes:** [off](#off-38)(type: SensorId.PROXIMITY, callback?: Callback&lt;ProximityResponse&gt;)
 
+<!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_PROXIMITY, callback?: Callback<ProximityResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_PROXIMITY, callback?: Callback<ProximityResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -4067,6 +4189,8 @@ Unsubscribes from data of the rotation vector sensor. The **off** API for cancel
 **Deprecated since:** 9
 
 **Substitutes:** [off](#off-40)(type: SensorId.ROTATION_VECTOR, callback?: Callback&lt;RotationVectorResponse&gt;)
+
+<!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback?: Callback<RotationVectorResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback?: Callback<RotationVectorResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -4115,6 +4239,8 @@ Unsubscribes from significant motion sensor data. The **off** API for canceling 
 
 **Substitutes:** [off](#off-42)(type: SensorId.SIGNIFICANT_MOTION, callback?: Callback&lt;SignificantMotionResponse&gt;)
 
+<!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback?: Callback<SignificantMotionResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback?: Callback<SignificantMotionResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -4159,6 +4285,8 @@ Unsubscribes from data of the wear detection sensor. The **off** API for canceli
 
 **Substitutes:** [off](#off-44)(type: SensorId.WEAR_DETECTION, callback?: Callback&lt;WearDetectionResponse&gt;)
 
+<!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback?: Callback<WearDetectionResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback?: Callback<WearDetectionResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -4190,6 +4318,8 @@ function off(type: 'sensorStatusChange', callback?: Callback<SensorStatusEvent>)
 Disables listening for sensor status changes. Call this API when you no longer need to detect sensor status changes. The **off** API for canceling subscription and the **on** API for subscription must be used in pairs.
 
 **Since:** 19
+
+<!--Device-sensor-function off(type: 'sensorStatusChange', callback?: Callback<SensorStatusEvent>): void--><!--Device-sensor-function off(type: 'sensorStatusChange', callback?: Callback<SensorStatusEvent>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 

@@ -8,6 +8,8 @@ Provides APIs to compare rational numbers and obtain numerators and denominators
 
 **Since:** 8
 
+<!--Device-util-class RationalNumber--><!--Device-util-class RationalNumber-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
@@ -27,6 +29,8 @@ Compares the current RationalNumber object to the given object.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-RationalNumber-compare(another: RationalNumber): number--><!--Device-RationalNumber-compare(another: RationalNumber): number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -66,6 +70,8 @@ A constructor used to create a **RationalNumber** object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-RationalNumber-constructor()--><!--Device-RationalNumber-constructor()-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Examples**
@@ -87,6 +93,8 @@ A constructor used to create a **RationalNumber** object.
 **Deprecated since:** 9
 
 **Substitutes:** [parseRationalNumber](#parserationalnumber)
+
+<!--Device-RationalNumber-constructor(numerator: number, denominator: number)--><!--Device-RationalNumber-constructor(numerator: number, denominator: number)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -121,6 +129,8 @@ Creates a **RationalNumber** object based on the given string.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-RationalNumber-static createRationalFromString(rationalString: string): RationalNumber--><!--Device-RationalNumber-static createRationalFromString(rationalString: string): RationalNumber-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -152,6 +162,8 @@ Checks whether this **RationalNumber** object equals the given object.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-RationalNumber-equals(obj: Object): boolean--><!--Device-RationalNumber-equals(obj: Object): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -204,6 +216,8 @@ Obtains the greatest common divisor of two specified integers.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-RationalNumber-static getCommonFactor(number1: number, number2: number): number--><!--Device-RationalNumber-static getCommonFactor(number1: number, number2: number): number-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -238,6 +252,8 @@ Obtains the denominator of this **RationalNumber** object.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-RationalNumber-getDenominator(): number--><!--Device-RationalNumber-getDenominator(): number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -277,6 +293,8 @@ Obtains the numerator of this **RationalNumber** object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-RationalNumber-getNumerator(): number--><!--Device-RationalNumber-getNumerator(): number-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
@@ -314,6 +332,8 @@ Checks whether this **RationalNumber** object represents a finite value.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-RationalNumber-isFinite(): boolean--><!--Device-RationalNumber-isFinite(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -353,6 +373,8 @@ Checks whether this **RationalNumber** object is a Not a Number (NaN).
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-RationalNumber-isNaN(): boolean--><!--Device-RationalNumber-isNaN(): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
@@ -390,6 +412,8 @@ Checks whether this **RationalNumber** object is **0**.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-RationalNumber-isZero(): boolean--><!--Device-RationalNumber-isZero(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -435,6 +459,8 @@ Creates a **RationalNumber** instance with a given numerator and denominator.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-RationalNumber-static parseRationalNumber(numerator: number, denominator: number): RationalNumber--><!--Device-RationalNumber-static parseRationalNumber(numerator: number, denominator: number): RationalNumber-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -467,6 +493,8 @@ Obtains the string representation of this **RationalNumber** object.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-RationalNumber-toString(): string--><!--Device-RationalNumber-toString(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -505,6 +533,8 @@ Obtains the integer or floating-point value of this **RationalNumber** object.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-RationalNumber-valueOf(): number--><!--Device-RationalNumber-valueOf(): number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -546,6 +576,8 @@ Compares the current RationalNumber object to the given object.
 
 **Substitutes:** compare
 
+<!--Device-RationalNumber-compareTo(another: RationalNumber): number--><!--Device-RationalNumber-compareTo(another: RationalNumber): number-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -583,6 +615,8 @@ Obtains the greatest common divisor of two specified integers.
 **Deprecated since:** 9
 
 **Substitutes:** [getCommonFactor](#getcommonfactor)
+
+<!--Device-RationalNumber-static getCommonDivisor(number1: number, number2: number): number--><!--Device-RationalNumber-static getCommonDivisor(number1: number, number2: number): number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

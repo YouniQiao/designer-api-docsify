@@ -8,6 +8,8 @@ interface ActiveChangeResponse
 
 **起始版本：** 9
 
+<!--Device-privacyManager-interface ActiveChangeResponse--><!--Device-privacyManager-interface ActiveChangeResponse-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ activeStatus: PermissionActiveStatus
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-ActiveChangeResponse-activeStatus: PermissionActiveStatus--><!--Device-ActiveChangeResponse-activeStatus: PermissionActiveStatus-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -52,6 +56,8 @@ callingTokenId?: number
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-ActiveChangeResponse-callingTokenId?: int--><!--Device-ActiveChangeResponse-callingTokenId?: int-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -69,6 +75,8 @@ deviceId: string
 **起始版本：** 9
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-ActiveChangeResponse-deviceId: string--><!--Device-ActiveChangeResponse-deviceId: string-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -88,6 +96,8 @@ enhancedIdentity?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ActiveChangeResponse-enhancedIdentity?: string--><!--Device-ActiveChangeResponse-enhancedIdentity?: string-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -106,6 +116,8 @@ permissionName: Permissions
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-ActiveChangeResponse-permissionName: Permissions--><!--Device-ActiveChangeResponse-permissionName: Permissions-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -123,6 +135,8 @@ tokenId: number
 **起始版本：** 9
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-ActiveChangeResponse-tokenId: int--><!--Device-ActiveChangeResponse-tokenId: int-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -143,6 +157,8 @@ usedType?: PermissionUsedType
 **起始版本：** 18
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-ActiveChangeResponse-usedType?: PermissionUsedType--><!--Device-ActiveChangeResponse-usedType?: PermissionUsedType-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 

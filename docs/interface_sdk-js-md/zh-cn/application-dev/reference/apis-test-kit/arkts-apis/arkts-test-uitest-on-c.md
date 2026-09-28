@@ -18,6 +18,8 @@ On类提供的所有API均为同步接口，建议使用者通过静态构造器
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare class On--><!--Device-unnamed-declare class On-End-->
+
 **系统能力：** SystemCapability.Test.UiTest
 
 **测试接口：** 此接口仅在自动化测试脚本中使用。
@@ -41,7 +43,9 @@ afterComponent(com: Component): On
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-On-afterComponent(com: Component): On--><!--Device-On-afterComponent(com: Component): On-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -90,7 +94,9 @@ beforeComponent(com: Component): On
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-On-beforeComponent(com: Component): On--><!--Device-On-beforeComponent(com: Component): On-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -137,7 +143,9 @@ belongingDisplay(displayId: number): On
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-On-belongingDisplay(displayId: int): On--><!--Device-On-belongingDisplay(displayId: int): On-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -180,7 +188,9 @@ checkable(b?: boolean): On
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-On-checkable(b?: boolean): On--><!--Device-On-checkable(b?: boolean): On-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -223,7 +233,9 @@ checked(b?: boolean): On
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-On-checked(b?: boolean): On--><!--Device-On-checked(b?: boolean): On-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -266,7 +278,9 @@ clickable(b?: boolean): On
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-On-clickable(b?: boolean): On--><!--Device-On-clickable(b?: boolean): On-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -309,7 +323,9 @@ description(val: string, pattern?: MatchPattern): On
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-On-description(val: string, pattern?: MatchPattern): On--><!--Device-On-description(val: string, pattern?: MatchPattern): On-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -353,7 +369,9 @@ enabled(b?: boolean): On
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-On-enabled(b?: boolean): On--><!--Device-On-enabled(b?: boolean): On-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -396,7 +414,9 @@ focused(b?: boolean): On
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-On-focused(b?: boolean): On--><!--Device-On-focused(b?: boolean): On-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -439,7 +459,9 @@ hint(val: string, pattern?: MatchPattern): On
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-On-hint(val: string, pattern?: MatchPattern): On--><!--Device-On-hint(val: string, pattern?: MatchPattern): On-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -483,7 +505,9 @@ id(id: string): On
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-On-id(id: string): On--><!--Device-On-id(id: string): On-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -528,7 +552,9 @@ id(id: string, pattern: MatchPattern): On
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-On-id(id: string, pattern: MatchPattern): On--><!--Device-On-id(id: string, pattern: MatchPattern): On-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -572,7 +598,9 @@ inWindow(bundleName: string): On
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-On-inWindow(bundleName: string): On--><!--Device-On-inWindow(bundleName: string): On-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -615,7 +643,9 @@ isAfter(on: On): On
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-On-isAfter(on: On): On--><!--Device-On-isAfter(on: On): On-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -659,7 +689,9 @@ isBefore(on: On): On
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-On-isBefore(on: On): On--><!--Device-On-isBefore(on: On): On-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -703,7 +735,9 @@ longClickable(b?: boolean): On
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-On-longClickable(b?: boolean): On--><!--Device-On-longClickable(b?: boolean): On-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -752,7 +786,9 @@ originalText(text: string, pattern?: MatchPattern): On
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-On-originalText(text: string, pattern?: MatchPattern): On--><!--Device-On-originalText(text: string, pattern?: MatchPattern): On-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -796,7 +832,9 @@ scrollable(b?: boolean): On
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-On-scrollable(b?: boolean): On--><!--Device-On-scrollable(b?: boolean): On-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -839,7 +877,9 @@ selected(b?: boolean): On
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-On-selected(b?: boolean): On--><!--Device-On-selected(b?: boolean): On-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -888,7 +928,9 @@ text(txt: string, pattern?: MatchPattern): On
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-On-text(txt: string, pattern?: MatchPattern): On--><!--Device-On-text(txt: string, pattern?: MatchPattern): On-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -932,7 +974,9 @@ type(tp: string): On
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-On-type(tp: string): On--><!--Device-On-type(tp: string): On-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -977,7 +1021,9 @@ type(tp: string, pattern: MatchPattern): On
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-On-type(tp: string, pattern: MatchPattern): On--><!--Device-On-type(tp: string, pattern: MatchPattern): On-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -1021,7 +1067,9 @@ within(on: On): On
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-On-within(on: On): On--><!--Device-On-within(on: On): On-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -1067,7 +1115,9 @@ withinComponent(com: Component): On
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-On-withinComponent(com: Component): On--><!--Device-On-withinComponent(com: Component): On-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 

@@ -10,6 +10,8 @@ interface SplitConfig
 
 **起始版本：** 15
 
+<!--Device-intelligence-interface SplitConfig--><!--Device-intelligence-interface SplitConfig-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ overlapRatio: number
 
 **起始版本：** 15
 
+<!--Device-SplitConfig-overlapRatio: double--><!--Device-SplitConfig-overlapRatio: double-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
 ## size
@@ -43,5 +47,7 @@ size: number
 **类型：** number
 
 **起始版本：** 15
+
+<!--Device-SplitConfig-size: int--><!--Device-SplitConfig-size: int-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataIntelligence.Core

@@ -18,6 +18,8 @@ function createPictureFromParcel(sequence: rpc.MessageSequence): Picture
 
 **起始版本：** 13
 
+<!--Device-image-function createPictureFromParcel(sequence: rpc.MessageSequence): Picture--><!--Device-image-function createPictureFromParcel(sequence: rpc.MessageSequence): Picture-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**

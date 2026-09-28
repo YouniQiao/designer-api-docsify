@@ -20,6 +20,8 @@ function startDiscoverPrinter(extensionList: Array<string>, callback: AsyncCallb
 - API版本20+：ohos.permission.MANAGE_PRINT_JOB or ohos.permission.PRINT
 - API版本10-19：ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-print-function startDiscoverPrinter(extensionList: Array<string>, callback: AsyncCallback<void>): void--><!--Device-print-function startDiscoverPrinter(extensionList: Array<string>, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **参数：**
@@ -71,6 +73,8 @@ function startDiscoverPrinter(extensionList: Array<string>): Promise<void>
 **需要权限：** 
 - API版本20+：ohos.permission.MANAGE_PRINT_JOB or ohos.permission.PRINT
 - API版本10-19：ohos.permission.MANAGE_PRINT_JOB
+
+<!--Device-print-function startDiscoverPrinter(extensionList: Array<string>): Promise<void>--><!--Device-print-function startDiscoverPrinter(extensionList: Array<string>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 

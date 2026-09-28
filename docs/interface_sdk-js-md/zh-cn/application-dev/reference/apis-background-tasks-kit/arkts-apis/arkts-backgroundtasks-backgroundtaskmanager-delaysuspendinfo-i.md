@@ -8,6 +8,8 @@ interface DelaySuspendInfo
 
 **起始版本：** 9
 
+<!--Device-backgroundTaskManager-interface DelaySuspendInfo--><!--Device-backgroundTaskManager-interface DelaySuspendInfo-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
 ## 导入模块
@@ -30,6 +32,8 @@ actualDelayTime: number
 
 **起始版本：** 9
 
+<!--Device-DelaySuspendInfo-actualDelayTime: int--><!--Device-DelaySuspendInfo-actualDelayTime: int-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
 ## requestId
@@ -43,5 +47,7 @@ requestId: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-DelaySuspendInfo-requestId: int--><!--Device-DelaySuspendInfo-requestId: int-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask

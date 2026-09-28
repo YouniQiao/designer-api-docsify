@@ -12,6 +12,8 @@ interface StabilizationQuery
 
 **起始版本：** 12
 
+<!--Device-camera-interface StabilizationQuery--><!--Device-camera-interface StabilizationQuery-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
@@ -30,7 +32,9 @@ isVideoStabilizationModeSupported(vsMode: VideoStabilizationMode): boolean
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-StabilizationQuery-isVideoStabilizationModeSupported(vsMode: VideoStabilizationMode): boolean--><!--Device-StabilizationQuery-isVideoStabilizationModeSupported(vsMode: VideoStabilizationMode): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

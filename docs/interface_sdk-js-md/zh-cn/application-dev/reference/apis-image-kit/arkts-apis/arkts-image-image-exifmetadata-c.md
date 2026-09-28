@@ -12,6 +12,8 @@ Exif（Exchangeable image file format）元数据。
 
 **起始版本：** 23
 
+<!--Device-image-class ExifMetadata implements Metadata--><!--Device-image-class ExifMetadata implements Metadata-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## 导入模块
@@ -31,6 +33,8 @@ clone(): Promise<ExifMetadata>
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-clone(): Promise<ExifMetadata>--><!--Device-ExifMetadata-clone(): Promise<ExifMetadata>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -82,6 +86,8 @@ static createInstance(): ExifMetadata
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-static createInstance(): ExifMetadata--><!--Device-ExifMetadata-static createInstance(): ExifMetadata-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **返回值：**
@@ -112,6 +118,8 @@ getAllProperties(): Promise<Record<string, string | null>>
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-getAllProperties(): Promise<Record<string, string | null>>--><!--Device-ExifMetadata-getAllProperties(): Promise<Record<string, string | null>>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -163,6 +171,8 @@ getBlob(): Promise<ArrayBuffer>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-getBlob(): Promise<ArrayBuffer>--><!--Device-ExifMetadata-getBlob(): Promise<ArrayBuffer>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **返回值：**
@@ -209,6 +219,8 @@ getProperties(key: Array<string>): Promise<Record<string, string | null>>
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-getProperties(key: Array<string>): Promise<Record<string, string | null>>--><!--Device-ExifMetadata-getProperties(key: Array<string>): Promise<Record<string, string | null>>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -270,6 +282,8 @@ setBlob(blob: ArrayBuffer): Promise<void>
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-setBlob(blob: ArrayBuffer): Promise<void>--><!--Device-ExifMetadata-setBlob(blob: ArrayBuffer): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -334,6 +348,8 @@ setProperties(records: Record<string, string | null>): Promise<void>
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-setProperties(records: Record<string, string | null>): Promise<void>--><!--Device-ExifMetadata-setProperties(records: Record<string, string | null>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -402,6 +418,8 @@ apertureValue?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-apertureValue?: double--><!--Device-ExifMetadata-apertureValue?: double-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## artist
@@ -417,6 +435,8 @@ artist?: string
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-artist?: string--><!--Device-ExifMetadata-artist?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -434,6 +454,8 @@ bitsPerSample?: number[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-bitsPerSample?: int[]--><!--Device-ExifMetadata-bitsPerSample?: int[]-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## bodySerialNumber
@@ -449,6 +471,8 @@ bodySerialNumber?: string
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-bodySerialNumber?: string--><!--Device-ExifMetadata-bodySerialNumber?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -466,6 +490,8 @@ brightnessValue?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-brightnessValue?: double--><!--Device-ExifMetadata-brightnessValue?: double-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## cameraOwnerName
@@ -481,6 +507,8 @@ cameraOwnerName?: string
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-cameraOwnerName?: string--><!--Device-ExifMetadata-cameraOwnerName?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -498,6 +526,8 @@ cfaPattern?: ArrayBuffer
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-cfaPattern?: ArrayBuffer--><!--Device-ExifMetadata-cfaPattern?: ArrayBuffer-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## colorSpace
@@ -513,6 +543,8 @@ colorSpace?: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-colorSpace?: int--><!--Device-ExifMetadata-colorSpace?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -530,6 +562,8 @@ componentsConfiguration?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-componentsConfiguration?: string--><!--Device-ExifMetadata-componentsConfiguration?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## compositeImage
@@ -545,6 +579,8 @@ compositeImage?: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-compositeImage?: int--><!--Device-ExifMetadata-compositeImage?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -562,6 +598,8 @@ compressedBitsPerPixel?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-compressedBitsPerPixel?: double--><!--Device-ExifMetadata-compressedBitsPerPixel?: double-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## compression
@@ -577,6 +615,8 @@ compression?: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-compression?: int--><!--Device-ExifMetadata-compression?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -594,6 +634,8 @@ contrast?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-contrast?: int--><!--Device-ExifMetadata-contrast?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## copyright
@@ -610,6 +652,8 @@ copyright?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-copyright?: string--><!--Device-ExifMetadata-copyright?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## customRendered
@@ -625,6 +669,8 @@ customRendered?: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-customRendered?: int--><!--Device-ExifMetadata-customRendered?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -644,6 +690,8 @@ dateTime?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-dateTime?: string--><!--Device-ExifMetadata-dateTime?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## dateTimeDigitized
@@ -661,6 +709,8 @@ dateTimeDigitized?: string
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-dateTimeDigitized?: string--><!--Device-ExifMetadata-dateTimeDigitized?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -680,6 +730,8 @@ dateTimeOriginal?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-dateTimeOriginal?: string--><!--Device-ExifMetadata-dateTimeOriginal?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## deviceSettingDescription
@@ -695,6 +747,8 @@ deviceSettingDescription?: ArrayBuffer
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-deviceSettingDescription?: ArrayBuffer--><!--Device-ExifMetadata-deviceSettingDescription?: ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -712,6 +766,8 @@ digitalZoomRatio?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-digitalZoomRatio?: double--><!--Device-ExifMetadata-digitalZoomRatio?: double-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## exifVersion
@@ -727,6 +783,8 @@ exifVersion?: string
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-exifVersion?: string--><!--Device-ExifMetadata-exifVersion?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -744,6 +802,8 @@ exposureBiasValue?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-exposureBiasValue?: double--><!--Device-ExifMetadata-exposureBiasValue?: double-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## exposureIndex
@@ -759,6 +819,8 @@ exposureIndex?: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-exposureIndex?: double--><!--Device-ExifMetadata-exposureIndex?: double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -776,6 +838,8 @@ exposureMode?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-exposureMode?: int--><!--Device-ExifMetadata-exposureMode?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## exposureProgram
@@ -791,6 +855,8 @@ exposureProgram?: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-exposureProgram?: int--><!--Device-ExifMetadata-exposureProgram?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -808,6 +874,8 @@ exposureTime?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-exposureTime?: double--><!--Device-ExifMetadata-exposureTime?: double-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## fileSource
@@ -823,6 +891,8 @@ fileSource?: ArrayBuffer
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-fileSource?: ArrayBuffer--><!--Device-ExifMetadata-fileSource?: ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -840,6 +910,8 @@ flash?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-flash?: int--><!--Device-ExifMetadata-flash?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## flashEnergy
@@ -855,6 +927,8 @@ flashEnergy?: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-flashEnergy?: double--><!--Device-ExifMetadata-flashEnergy?: double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -872,6 +946,8 @@ FPXR（FlashPix Extension Resource）支持的FlashPix格式版本，用于增�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-flashpixVersion?: string--><!--Device-ExifMetadata-flashpixVersion?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## fNumber
@@ -887,6 +963,8 @@ fNumber?: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-fNumber?: double--><!--Device-ExifMetadata-fNumber?: double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -904,6 +982,8 @@ focalLength?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-focalLength?: double--><!--Device-ExifMetadata-focalLength?: double-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## focalLengthIn35mmFilm
@@ -919,6 +999,8 @@ focalLengthIn35mmFilm?: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-focalLengthIn35mmFilm?: int--><!--Device-ExifMetadata-focalLengthIn35mmFilm?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -936,6 +1018,8 @@ FocalPlaneXResolution和FocalPlaneYResolution的测量单位。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-focalPlaneResolutionUnit?: int--><!--Device-ExifMetadata-focalPlaneResolutionUnit?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## focalPlaneXResolution
@@ -951,6 +1035,8 @@ focalPlaneXResolution?: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-focalPlaneXResolution?: double--><!--Device-ExifMetadata-focalPlaneXResolution?: double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -968,6 +1054,8 @@ focalPlaneYResolution?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-focalPlaneYResolution?: double--><!--Device-ExifMetadata-focalPlaneYResolution?: double-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## gainControl
@@ -983,6 +1071,8 @@ gainControl?: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-gainControl?: int--><!--Device-ExifMetadata-gainControl?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1000,6 +1090,8 @@ gamma?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-gamma?: double--><!--Device-ExifMetadata-gamma?: double-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## gpsAltitude
@@ -1015,6 +1107,8 @@ gpsAltitude?: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-gpsAltitude?: double--><!--Device-ExifMetadata-gpsAltitude?: double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1032,6 +1126,8 @@ gpsAltitudeRef?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-gpsAltitudeRef?: int--><!--Device-ExifMetadata-gpsAltitudeRef?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## gpsAreaInformation
@@ -1047,6 +1143,8 @@ GPS区域名称的字符串。
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-gpsAreaInformation?: string--><!--Device-ExifMetadata-gpsAreaInformation?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1064,6 +1162,8 @@ GPS日期戳。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-gpsDateStamp?: string--><!--Device-ExifMetadata-gpsDateStamp?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## gpsDestBearing
@@ -1079,6 +1179,8 @@ gpsDestBearing?: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-gpsDestBearing?: double--><!--Device-ExifMetadata-gpsDestBearing?: double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1096,6 +1198,8 @@ gpsDestBearingRef?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-gpsDestBearingRef?: string--><!--Device-ExifMetadata-gpsDestBearingRef?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## gpsDestDistance
@@ -1111,6 +1215,8 @@ gpsDestDistance?: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-gpsDestDistance?: double--><!--Device-ExifMetadata-gpsDestDistance?: double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1128,6 +1234,8 @@ gpsDestDistanceRef?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-gpsDestDistanceRef?: string--><!--Device-ExifMetadata-gpsDestDistanceRef?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## gpsDestLatitude
@@ -1143,6 +1251,8 @@ gpsDestLatitude?: number[]
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-gpsDestLatitude?: double[]--><!--Device-ExifMetadata-gpsDestLatitude?: double[]-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1160,6 +1270,8 @@ gpsDestLatitudeRef?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-gpsDestLatitudeRef?: string--><!--Device-ExifMetadata-gpsDestLatitudeRef?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## gpsDestLongitude
@@ -1175,6 +1287,8 @@ gpsDestLongitude?: number[]
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-gpsDestLongitude?: double[]--><!--Device-ExifMetadata-gpsDestLongitude?: double[]-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1192,6 +1306,8 @@ gpsDestLongitudeRef?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-gpsDestLongitudeRef?: string--><!--Device-ExifMetadata-gpsDestLongitudeRef?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## gpsDifferential
@@ -1207,6 +1323,8 @@ gpsDifferential?: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-gpsDifferential?: int--><!--Device-ExifMetadata-gpsDifferential?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1224,6 +1342,8 @@ GPS数据精度DOP精度衰减因子（Dilution of Precision）。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-gpsDop?: double--><!--Device-ExifMetadata-gpsDop?: double-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## gpsHPositioningError
@@ -1239,6 +1359,8 @@ gpsHPositioningError?: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-gpsHPositioningError?: double--><!--Device-ExifMetadata-gpsHPositioningError?: double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1256,6 +1378,8 @@ gpsImgDirection?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-gpsImgDirection?: double--><!--Device-ExifMetadata-gpsImgDirection?: double-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## gpsImgDirectionRef
@@ -1271,6 +1395,8 @@ gpsImgDirectionRef?: string
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-gpsImgDirectionRef?: string--><!--Device-ExifMetadata-gpsImgDirectionRef?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1292,6 +1418,8 @@ GPS纬度。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-gpsLatitude?: double[]--><!--Device-ExifMetadata-gpsLatitude?: double[]-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## gpsLatitudeRef
@@ -1307,6 +1435,8 @@ GPS纬度参考。例如，N表示北纬，S表示南纬。
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-gpsLatitudeRef?: string--><!--Device-ExifMetadata-gpsLatitudeRef?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1328,6 +1458,8 @@ GPS经度。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-gpsLongitude?: double[]--><!--Device-ExifMetadata-gpsLongitude?: double[]-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## gpsLongitudeRef
@@ -1343,6 +1475,8 @@ GPS经度参考。例如，E表示东经，W表示西经。
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-gpsLongitudeRef?: string--><!--Device-ExifMetadata-gpsLongitudeRef?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1360,6 +1494,8 @@ GPS接收机使用的大地测量数据。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-gpsMapDatum?: string--><!--Device-ExifMetadata-gpsMapDatum?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## gpsMeasureMode
@@ -1375,6 +1511,8 @@ GPS测量模式。
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-gpsMeasureMode?: string--><!--Device-ExifMetadata-gpsMeasureMode?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1392,6 +1530,8 @@ gpsProcessingMethod?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-gpsProcessingMethod?: string--><!--Device-ExifMetadata-gpsProcessingMethod?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## gpsSatellites
@@ -1407,6 +1547,8 @@ gpsSatellites?: string
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-gpsSatellites?: string--><!--Device-ExifMetadata-gpsSatellites?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1424,6 +1566,8 @@ GPS接收器移动的速度。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-gpsSpeed?: double--><!--Device-ExifMetadata-gpsSpeed?: double-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## gpsSpeedRef
@@ -1439,6 +1583,8 @@ GPS接收器移动速度的单位。
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-gpsSpeedRef?: string--><!--Device-ExifMetadata-gpsSpeedRef?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1456,6 +1602,8 @@ gpsStatus?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-gpsStatus?: string--><!--Device-ExifMetadata-gpsStatus?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## gpsTimestamp
@@ -1471,6 +1619,8 @@ GPS时间戳。
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-gpsTimestamp?: double[]--><!--Device-ExifMetadata-gpsTimestamp?: double[]-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1488,6 +1638,8 @@ GPS接收器移动的方向。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-gpsTrack?: double--><!--Device-ExifMetadata-gpsTrack?: double-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## gpsTrackRef
@@ -1503,6 +1655,8 @@ gpsTrackRef?: string
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-gpsTrackRef?: string--><!--Device-ExifMetadata-gpsTrackRef?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1520,6 +1674,8 @@ GPS信息的格式版本标识符。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-gpsVersionID?: int[]--><!--Device-ExifMetadata-gpsVersionID?: int[]-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## imageDescription
@@ -1535,6 +1691,8 @@ imageDescription?: string
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-imageDescription?: string--><!--Device-ExifMetadata-imageDescription?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1552,6 +1710,8 @@ imageLength?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-imageLength?: int--><!--Device-ExifMetadata-imageLength?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## imageUniqueId
@@ -1567,6 +1727,8 @@ imageUniqueId?: string
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-imageUniqueId?: string--><!--Device-ExifMetadata-imageUniqueId?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1584,6 +1746,8 @@ imageWidth?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-imageWidth?: int--><!--Device-ExifMetadata-imageWidth?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## isoSpeedLatitudeyyy
@@ -1599,6 +1763,8 @@ isoSpeedLatitudeyyy?: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-isoSpeedLatitudeyyy?: int--><!--Device-ExifMetadata-isoSpeedLatitudeyyy?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1616,6 +1782,8 @@ isoSpeedLatitudezzz?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-isoSpeedLatitudezzz?: int--><!--Device-ExifMetadata-isoSpeedLatitudezzz?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## isoSpeedRatings
@@ -1631,6 +1799,8 @@ ISO 12232中指定的相机或输入设备的ISO速度和ISO纬度。
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-isoSpeedRatings?: int--><!--Device-ExifMetadata-isoSpeedRatings?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1648,6 +1818,8 @@ JPEG交换格式比特流的SOI（Start of Image）标记。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-jpegInterchangeFormat?: int--><!--Device-ExifMetadata-jpegInterchangeFormat?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## jpegInterchangeFormatLength
@@ -1663,6 +1835,8 @@ JPEG流的字节数。
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-jpegInterchangeFormatLength?: int--><!--Device-ExifMetadata-jpegInterchangeFormatLength?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1680,6 +1854,8 @@ lensMake?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-lensMake?: string--><!--Device-ExifMetadata-lensMake?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## lensModel
@@ -1695,6 +1871,8 @@ lensModel?: string
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-lensModel?: string--><!--Device-ExifMetadata-lensModel?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1712,6 +1890,8 @@ lensSerialNumber?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-lensSerialNumber?: string--><!--Device-ExifMetadata-lensSerialNumber?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## lensSpecification
@@ -1727,6 +1907,8 @@ lensSpecification?: number[]
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-lensSpecification?: double[]--><!--Device-ExifMetadata-lensSpecification?: double[]-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1744,6 +1926,8 @@ lightSource?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-lightSource?: int--><!--Device-ExifMetadata-lightSource?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## make
@@ -1759,6 +1943,8 @@ make?: string
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-make?: string--><!--Device-ExifMetadata-make?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1776,6 +1962,8 @@ Exif/相机文件系统设计规则DCF（Design rule for Camera File system）�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-makerNote?: ArrayBuffer--><!--Device-ExifMetadata-makerNote?: ArrayBuffer-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## maxApertureValue
@@ -1791,6 +1979,8 @@ maxApertureValue?: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-maxApertureValue?: double--><!--Device-ExifMetadata-maxApertureValue?: double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1808,6 +1998,8 @@ meteringMode?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-meteringMode?: int--><!--Device-ExifMetadata-meteringMode?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## model
@@ -1823,6 +2015,8 @@ model?: string
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-model?: string--><!--Device-ExifMetadata-model?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1840,6 +2034,8 @@ newSubfileType?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-newSubfileType?: int--><!--Device-ExifMetadata-newSubfileType?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## oecf
@@ -1855,6 +2051,8 @@ ISO 14524中规定的光电转换函数（OECF）。
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-oecf?: ArrayBuffer--><!--Device-ExifMetadata-oecf?: ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1872,6 +2070,8 @@ offsetTime?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-offsetTime?: string--><!--Device-ExifMetadata-offsetTime?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## offsetTimeDigitized
@@ -1887,6 +2087,8 @@ offsetTimeDigitized?: string
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-offsetTimeDigitized?: string--><!--Device-ExifMetadata-offsetTimeDigitized?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1904,6 +2106,8 @@ offsetTimeOriginal?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-offsetTimeOriginal?: string--><!--Device-ExifMetadata-offsetTimeOriginal?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## orientation
@@ -1919,6 +2123,8 @@ orientation?: Orientation
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-orientation?: Orientation--><!--Device-ExifMetadata-orientation?: Orientation-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1936,6 +2142,8 @@ photographicSensitivity?: number[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-photographicSensitivity?: int[]--><!--Device-ExifMetadata-photographicSensitivity?: int[]-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## photometricInterpretation
@@ -1951,6 +2159,8 @@ photometricInterpretation?: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-photometricInterpretation?: int--><!--Device-ExifMetadata-photometricInterpretation?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1968,6 +2178,8 @@ photoMode?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-photoMode?: int--><!--Device-ExifMetadata-photoMode?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## pixelXDimension
@@ -1983,6 +2195,8 @@ pixelXDimension?: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-pixelXDimension?: int--><!--Device-ExifMetadata-pixelXDimension?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2000,6 +2214,8 @@ pixelYDimension?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-pixelYDimension?: int--><!--Device-ExifMetadata-pixelYDimension?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## planarConfiguration
@@ -2015,6 +2231,8 @@ planarConfiguration?: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-planarConfiguration?: int--><!--Device-ExifMetadata-planarConfiguration?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2032,6 +2250,8 @@ primaryChromaticities?: number[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-primaryChromaticities?: double[]--><!--Device-ExifMetadata-primaryChromaticities?: double[]-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## recommendedExposureIndex
@@ -2047,6 +2267,8 @@ recommendedExposureIndex?: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-recommendedExposureIndex?: int--><!--Device-ExifMetadata-recommendedExposureIndex?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2064,6 +2286,8 @@ referenceBlackWhite?: number[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-referenceBlackWhite?: double[]--><!--Device-ExifMetadata-referenceBlackWhite?: double[]-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## relatedSoundFile
@@ -2079,6 +2303,8 @@ relatedSoundFile?: string
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-relatedSoundFile?: string--><!--Device-ExifMetadata-relatedSoundFile?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2096,6 +2322,8 @@ resolutionUnit?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-resolutionUnit?: int--><!--Device-ExifMetadata-resolutionUnit?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## rowsPerStrip
@@ -2111,6 +2339,8 @@ rowsPerStrip?: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-rowsPerStrip?: int--><!--Device-ExifMetadata-rowsPerStrip?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2132,6 +2362,8 @@ samplesPerPixel?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-samplesPerPixel?: int--><!--Device-ExifMetadata-samplesPerPixel?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## saturation
@@ -2147,6 +2379,8 @@ saturation?: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-saturation?: int--><!--Device-ExifMetadata-saturation?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2164,6 +2398,8 @@ sceneCaptureType?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-sceneCaptureType?: int--><!--Device-ExifMetadata-sceneCaptureType?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## sceneType
@@ -2179,6 +2415,8 @@ sceneType?: ArrayBuffer
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-sceneType?: ArrayBuffer--><!--Device-ExifMetadata-sceneType?: ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2196,6 +2434,8 @@ sensingMethod?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-sensingMethod?: int--><!--Device-ExifMetadata-sensingMethod?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## sensitivityType
@@ -2211,6 +2451,8 @@ sensitivityType?: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-sensitivityType?: int--><!--Device-ExifMetadata-sensitivityType?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2228,6 +2470,8 @@ sharpness?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-sharpness?: int--><!--Device-ExifMetadata-sharpness?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## shutterSpeedValue
@@ -2243,6 +2487,8 @@ shutterSpeedValue?: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-shutterSpeedValue?: double--><!--Device-ExifMetadata-shutterSpeedValue?: double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2260,6 +2506,8 @@ software?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-software?: string--><!--Device-ExifMetadata-software?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## sourceExposureTimesOfCompositeImage
@@ -2275,6 +2523,8 @@ sourceExposureTimesOfCompositeImage?: ArrayBuffer
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-sourceExposureTimesOfCompositeImage?: ArrayBuffer--><!--Device-ExifMetadata-sourceExposureTimesOfCompositeImage?: ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2292,6 +2542,8 @@ sourceImageNumberOfCompositeImage?: number[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-sourceImageNumberOfCompositeImage?: int[]--><!--Device-ExifMetadata-sourceImageNumberOfCompositeImage?: int[]-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## spatialFrequencyResponse
@@ -2307,6 +2559,8 @@ spatialFrequencyResponse?: ArrayBuffer
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-spatialFrequencyResponse?: ArrayBuffer--><!--Device-ExifMetadata-spatialFrequencyResponse?: ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2324,6 +2578,8 @@ spectralSensitivity?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-spectralSensitivity?: string--><!--Device-ExifMetadata-spectralSensitivity?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## standardOutputSensitivity
@@ -2340,6 +2596,8 @@ standardOutputSensitivity?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-standardOutputSensitivity?: int--><!--Device-ExifMetadata-standardOutputSensitivity?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## stripByteCounts
@@ -2355,6 +2613,8 @@ stripByteCounts?: number[]
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-stripByteCounts?: int[]--><!--Device-ExifMetadata-stripByteCounts?: int[]-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2376,6 +2636,8 @@ stripOffsets?: number[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-stripOffsets?: int[]--><!--Device-ExifMetadata-stripOffsets?: int[]-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## subfileType
@@ -2391,6 +2653,8 @@ subfileType?: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-subfileType?: int--><!--Device-ExifMetadata-subfileType?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2408,6 +2672,8 @@ subjectArea?: number[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-subjectArea?: int[]--><!--Device-ExifMetadata-subjectArea?: int[]-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## subjectDistance
@@ -2423,6 +2689,8 @@ subjectDistance?: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-subjectDistance?: double--><!--Device-ExifMetadata-subjectDistance?: double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2440,6 +2708,8 @@ subjectDistanceRange?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-subjectDistanceRange?: int--><!--Device-ExifMetadata-subjectDistanceRange?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## subjectLocation
@@ -2455,6 +2725,8 @@ subjectLocation?: number[]
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-subjectLocation?: int[]--><!--Device-ExifMetadata-subjectLocation?: int[]-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2472,6 +2744,8 @@ subsecTime?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-subsecTime?: string--><!--Device-ExifMetadata-subsecTime?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## subsecTimeDigitized
@@ -2487,6 +2761,8 @@ subsecTimeDigitized?: string
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-subsecTimeDigitized?: string--><!--Device-ExifMetadata-subsecTimeDigitized?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2504,6 +2780,8 @@ subsecTimeOriginal?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-subsecTimeOriginal?: string--><!--Device-ExifMetadata-subsecTimeOriginal?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## transferFunction
@@ -2519,6 +2797,8 @@ transferFunction?: string
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-transferFunction?: string--><!--Device-ExifMetadata-transferFunction?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2536,6 +2816,8 @@ userComment?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-userComment?: string--><!--Device-ExifMetadata-userComment?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## whiteBalance
@@ -2551,6 +2833,8 @@ whiteBalance?: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-whiteBalance?: int--><!--Device-ExifMetadata-whiteBalance?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2568,6 +2852,8 @@ whitePoint?: number[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-whitePoint?: double[]--><!--Device-ExifMetadata-whitePoint?: double[]-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## xResolution
@@ -2583,6 +2869,8 @@ xResolution?: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-xResolution?: double--><!--Device-ExifMetadata-xResolution?: double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2600,6 +2888,8 @@ yCbCrCoefficients?: number[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-yCbCrCoefficients?: double[]--><!--Device-ExifMetadata-yCbCrCoefficients?: double[]-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## yCbCrPositioning
@@ -2615,6 +2905,8 @@ yCbCrPositioning?: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-yCbCrPositioning?: int--><!--Device-ExifMetadata-yCbCrPositioning?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2632,6 +2924,8 @@ yCbCrSubSampling?: number[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExifMetadata-yCbCrSubSampling?: int[]--><!--Device-ExifMetadata-yCbCrSubSampling?: int[]-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## yResolution
@@ -2647,5 +2941,7 @@ yResolution?: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExifMetadata-yResolution?: double--><!--Device-ExifMetadata-yResolution?: double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core

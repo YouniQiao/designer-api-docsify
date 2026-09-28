@@ -8,6 +8,8 @@ type TwoParamCallback<T, G> = (data1: T, data2: G) => void
 
 **起始版本：** 22
 
+<!--Device-avSession-type TwoParamCallback<T, G> = (data1: T, data2: G) => void--><!--Device-avSession-type TwoParamCallback<T, G> = (data1: T, data2: G) => void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **参数：**

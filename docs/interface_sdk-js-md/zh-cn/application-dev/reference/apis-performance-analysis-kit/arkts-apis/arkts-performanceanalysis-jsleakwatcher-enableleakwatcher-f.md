@@ -25,6 +25,8 @@ function enableLeakWatcher(isEnabled: boolean, configs: Array<string>, callback:
 
 **起始版本：** 20
 
+<!--Device-jsLeakWatcher-function enableLeakWatcher(isEnabled: boolean, configs: Array<string>, callback: Callback<Array<string>>): void--><!--Device-jsLeakWatcher-function enableLeakWatcher(isEnabled: boolean, configs: Array<string>, callback: Callback<Array<string>>): void-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
 **参数：**
@@ -82,6 +84,8 @@ function enableLeakWatcher(isEnabled: boolean, configs: LeakWatcherConfig, callb
 **起始版本：** 24
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-jsLeakWatcher-function enableLeakWatcher(isEnabled: boolean, configs: LeakWatcherConfig, callback: Callback<Array<string>>): void--><!--Device-jsLeakWatcher-function enableLeakWatcher(isEnabled: boolean, configs: LeakWatcherConfig, callback: Callback<Array<string>>): void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 

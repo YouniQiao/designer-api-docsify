@@ -14,6 +14,8 @@ interface ManufactureData
 
 **替代接口：** [ManufactureData](arkts-connectivity-bluetoothmanager-manufacturedata-i.md)
 
+<!--Device-bluetooth-interface ManufactureData--><!--Device-bluetooth-interface ManufactureData-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -38,6 +40,8 @@ manufactureId: number
 
 **替代接口：** [manufactureId](arkts-connectivity-bluetoothmanager-manufacturedata-i.md#manufactureid)
 
+<!--Device-ManufactureData-manufactureId: number--><!--Device-ManufactureData-manufactureId: number-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## manufactureValue
@@ -55,5 +59,7 @@ manufactureValue: ArrayBuffer
 **废弃版本：** 9
 
 **替代接口：** [manufactureValue](arkts-connectivity-bluetoothmanager-manufacturedata-i.md#manufacturevalue)
+
+<!--Device-ManufactureData-manufactureValue: ArrayBuffer--><!--Device-ManufactureData-manufactureValue: ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

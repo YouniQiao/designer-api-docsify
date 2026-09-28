@@ -24,6 +24,8 @@ function disableUsb(admin: Want, disable: boolean): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-usbManager-function disableUsb(admin: Want, disable: boolean): void--><!--Device-usbManager-function disableUsb(admin: Want, disable: boolean): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。

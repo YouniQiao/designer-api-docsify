@@ -18,6 +18,8 @@ function requestAccessoryRight(accessory: USBAccessory): Promise<boolean>
 
 **起始版本：** 14
 
+<!--Device-usbManager-function requestAccessoryRight(accessory: USBAccessory): Promise<boolean>--><!--Device-usbManager-function requestAccessoryRight(accessory: USBAccessory): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 **参数：**

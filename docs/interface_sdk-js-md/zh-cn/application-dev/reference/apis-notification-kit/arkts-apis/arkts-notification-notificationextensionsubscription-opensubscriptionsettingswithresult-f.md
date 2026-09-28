@@ -20,6 +20,8 @@ function openSubscriptionSettingsWithResult(context: UIAbilityContext): Promise<
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-notificationExtensionSubscription-function openSubscriptionSettingsWithResult(context: UIAbilityContext): Promise<UserGrantSetting>--><!--Device-notificationExtensionSubscription-function openSubscriptionSettingsWithResult(context: UIAbilityContext): Promise<UserGrantSetting>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **参数：**

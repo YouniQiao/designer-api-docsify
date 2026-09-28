@@ -8,6 +8,8 @@ export interface DistributedBundleEnableInfo
 
 **起始版本：** 20
 
+<!--Device-notificationManager-export interface DistributedBundleEnableInfo--><!--Device-notificationManager-export interface DistributedBundleEnableInfo-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ bundleName: string
 
 **起始版本：** 20
 
+<!--Device-DistributedBundleEnableInfo-bundleName: string--><!--Device-DistributedBundleEnableInfo-bundleName: string-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -46,6 +50,8 @@ enable?: boolean
 
 **起始版本：** 20
 
+<!--Device-DistributedBundleEnableInfo-enable?: boolean--><!--Device-DistributedBundleEnableInfo-enable?: boolean-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +67,8 @@ uid: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-DistributedBundleEnableInfo-uid: int--><!--Device-DistributedBundleEnableInfo-uid: int-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

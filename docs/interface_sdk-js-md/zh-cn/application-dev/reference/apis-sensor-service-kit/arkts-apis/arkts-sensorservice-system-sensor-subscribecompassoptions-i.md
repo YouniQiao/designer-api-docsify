@@ -12,6 +12,8 @@ export interface SubscribeCompassOptions
 
 **替代接口：** [ORIENTATION](arkts-sensorservice-sensor-sensorid-e.md#orientation)
 
+<!--Device-unnamed-export interface SubscribeCompassOptions--><!--Device-unnamed-export interface SubscribeCompassOptions-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
 ## 导入模块
@@ -35,6 +37,8 @@ fail?: (data: string, code: number) => void
 **替代接口：** [on](arkts-sensorservice-sensor-on-f.md)
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-SubscribeCompassOptions-fail?: (data: string, code: number) => void--><!--Device-SubscribeCompassOptions-fail?: (data: string, code: number) => void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
@@ -60,6 +64,8 @@ success: (data: CompassResponse) => void
 **替代接口：** [on](arkts-sensorservice-sensor-on-f.md)
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-SubscribeCompassOptions-success: (data: CompassResponse) => void--><!--Device-SubscribeCompassOptions-success: (data: CompassResponse) => void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 

@@ -8,6 +8,8 @@ export enum StartupScene
 
 **起始版本：** 24
 
+<!--Device-common-export enum StartupScene--><!--Device-common-export enum StartupScene-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## USER_SETUP
@@ -21,6 +23,8 @@ USER_SETUP = 0
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-StartupScene-USER_SETUP = 0--><!--Device-StartupScene-USER_SETUP = 0-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -36,6 +40,8 @@ OTA升级完成场景。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-StartupScene-OTA = 1--><!--Device-StartupScene-OTA = 1-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## DEVICE_PROVISION
@@ -49,5 +55,7 @@ DEVICE_PROVISION = 2
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-StartupScene-DEVICE_PROVISION = 2--><!--Device-StartupScene-DEVICE_PROVISION = 2-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager

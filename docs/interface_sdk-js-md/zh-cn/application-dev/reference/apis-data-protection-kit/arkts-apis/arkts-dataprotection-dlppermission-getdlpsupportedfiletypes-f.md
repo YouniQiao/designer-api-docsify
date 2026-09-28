@@ -18,6 +18,8 @@ function getDLPSupportedFileTypes(): Promise<Array<string>>
 
 **起始版本：** 10
 
+<!--Device-dlpPermission-function getDLPSupportedFileTypes(): Promise<Array<string>>--><!--Device-dlpPermission-function getDLPSupportedFileTypes(): Promise<Array<string>>-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **返回值：**
@@ -60,6 +62,8 @@ function getDLPSupportedFileTypes(callback: AsyncCallback<Array<string>>): void
 该接口用于获取支持DLP权限管理的文件类型列表，以便决定当前文件是否可以进行加密。
 
 **起始版本：** 10
+
+<!--Device-dlpPermission-function getDLPSupportedFileTypes(callback: AsyncCallback<Array<string>>): void--><!--Device-dlpPermission-function getDLPSupportedFileTypes(callback: AsyncCallback<Array<string>>): void-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 

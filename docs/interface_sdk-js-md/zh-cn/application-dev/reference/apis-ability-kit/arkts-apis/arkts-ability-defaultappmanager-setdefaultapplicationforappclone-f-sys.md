@@ -18,6 +18,8 @@ function setDefaultApplicationForAppClone(type: string, elementName: ElementName
 
 **需要权限：** ohos.permission.SET_DEFAULT_APPLICATION or (ohos.permission.SET_DEFAULT_APPLICATION and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS)
 
+<!--Device-defaultAppManager-function setDefaultApplicationForAppClone(type: string, elementName: ElementName, appIndex: int, userId?: int): void--><!--Device-defaultAppManager-function setDefaultApplicationForAppClone(type: string, elementName: ElementName, appIndex: int, userId?: int): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.DefaultApp
 
 **系统接口：** 此接口为系统接口。

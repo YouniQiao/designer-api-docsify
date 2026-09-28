@@ -12,6 +12,8 @@ export interface UnlitShadowAlphaMaterial extends Material
 
 **起始版本：** 23
 
+<!--Device-unnamed-export interface UnlitShadowAlphaMaterial extends Material--><!--Device-unnamed-export interface UnlitShadowAlphaMaterial extends Material-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **系统接口：** 此接口为系统接口。
@@ -29,6 +31,8 @@ baseColor: MaterialProperty
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UnlitShadowAlphaMaterial-baseColor: MaterialProperty--><!--Device-UnlitShadowAlphaMaterial-baseColor: MaterialProperty-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 

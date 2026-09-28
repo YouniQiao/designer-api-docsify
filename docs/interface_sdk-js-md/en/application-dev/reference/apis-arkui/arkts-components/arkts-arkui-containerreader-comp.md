@@ -8,7 +8,7 @@
 > 
 > - Container breakpoints determine height and width breakpoint values based on the component's own actual size and breakpoint threshold array. The component size and breakpoint information only apply to the current component and its child components. Multiple containers on the same page can have their own independent breakpoint states.
 > 
-> - The size of the **ContainerReader** component is determined by its parent container and its own layout, and is not affected by its child components. Layout specifications under different parent containers: when the parent container is [Flex](arkts-arkui-flex-comp.md#flex), [Column](arkts-arkui-column-comp.md#column), or [Row](arkts-arkui-row-comp.md#row), the remaining space of **ContainerReader** is filled; when the parent container is of other types, the parent container is filled.
+> - The size of the **ContainerReader** component is determined by its parent container and its own layout, and is not affected by its child components. Layout specifications under different parent containers: when the parent container is [Flex](arkts-arkui-flex-comp.md), [Column](arkts-arkui-column-comp.md), or [Row](arkts-arkui-row-comp.md), the remaining space of **ContainerReader** is filled; when the parent container is of other types, the parent container is filled.
 > 
 > - The parameters of the **ContainerReader** API must use state variables combined with the two-way binding ([!! syntax](../../../ui/state-management/arkts-new-binding.md)) so that the frontend is promptly notified to refresh the UI when the backend calculates size changes.
 > 
@@ -33,6 +33,8 @@ Creates a **ContainerReader** component and configures container reader paramete
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
+
+<!--Device-ContainerReaderInterface-(value: ContainerReaderInfo): ContainerReaderAttribute--><!--Device-ContainerReaderInterface-(value: ContainerReaderInfo): ContainerReaderAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

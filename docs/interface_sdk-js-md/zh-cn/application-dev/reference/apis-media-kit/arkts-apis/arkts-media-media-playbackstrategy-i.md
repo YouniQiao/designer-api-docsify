@@ -8,6 +8,8 @@ interface PlaybackStrategy
 
 **起始版本：** 12
 
+<!--Device-media-interface PlaybackStrategy--><!--Device-media-interface PlaybackStrategy-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 ## 导入模块
@@ -28,7 +30,9 @@ enableSuperResolution?: boolean
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-PlaybackStrategy-enableSuperResolution?: boolean--><!--Device-PlaybackStrategy-enableSuperResolution?: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -44,7 +48,9 @@ keepDecodingOnMute?: boolean
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PlaybackStrategy-keepDecodingOnMute?: boolean--><!--Device-PlaybackStrategy-keepDecodingOnMute?: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -60,6 +66,8 @@ mutedMediaType?: MediaType
 
 **起始版本：** 12
 
+<!--Device-PlaybackStrategy-mutedMediaType?: MediaType--><!--Device-PlaybackStrategy-mutedMediaType?: MediaType-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 ## preferredAudioLanguage
@@ -74,7 +82,9 @@ preferredAudioLanguage?: string
 
 **起始版本：** 13
 
-**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+
+<!--Device-PlaybackStrategy-preferredAudioLanguage?: string--><!--Device-PlaybackStrategy-preferredAudioLanguage?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -92,7 +102,9 @@ preferredBufferDuration?: number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PlaybackStrategy-preferredBufferDuration?: int--><!--Device-PlaybackStrategy-preferredBufferDuration?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -108,7 +120,9 @@ preferredBufferDurationForPlaying?: number
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-PlaybackStrategy-preferredBufferDurationForPlaying?: double--><!--Device-PlaybackStrategy-preferredBufferDurationForPlaying?: double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -124,7 +138,9 @@ preferredHdr?: boolean
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PlaybackStrategy-preferredHdr?: boolean--><!--Device-PlaybackStrategy-preferredHdr?: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -140,7 +156,9 @@ preferredHeight?: number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PlaybackStrategy-preferredHeight?: int--><!--Device-PlaybackStrategy-preferredHeight?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -156,7 +174,9 @@ preferredSubtitleLanguage?: string
 
 **起始版本：** 13
 
-**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+
+<!--Device-PlaybackStrategy-preferredSubtitleLanguage?: string--><!--Device-PlaybackStrategy-preferredSubtitleLanguage?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -172,7 +192,9 @@ preferredWidth?: number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PlaybackStrategy-preferredWidth?: int--><!--Device-PlaybackStrategy-preferredWidth?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -188,7 +210,9 @@ prepare时显示首帧。
 
 **起始版本：** 17
 
-**原子化服务API：** 从API版本17开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本17开始，该接口支持在原子化服务中使用。
+
+<!--Device-PlaybackStrategy-showFirstFrameOnPrepare?: boolean--><!--Device-PlaybackStrategy-showFirstFrameOnPrepare?: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -204,6 +228,8 @@ thresholdForAutoQuickPlay?: number
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-PlaybackStrategy-thresholdForAutoQuickPlay?: double--><!--Device-PlaybackStrategy-thresholdForAutoQuickPlay?: double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core

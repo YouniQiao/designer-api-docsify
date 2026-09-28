@@ -12,6 +12,8 @@ export interface Geometry extends Node
 
 **起始版本：** 12
 
+<!--Device-unnamed-export interface Geometry extends Node--><!--Device-unnamed-export interface Geometry extends Node-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## mesh
@@ -26,6 +28,8 @@ readonly mesh: Mesh
 
 **起始版本：** 12
 
+<!--Device-Geometry-readonly mesh: Mesh--><!--Device-Geometry-readonly mesh: Mesh-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## morpher
@@ -39,5 +43,7 @@ readonly morpher?: Morpher
 **类型：** [Morpher](arkts-arkgraphics3d-sceneresources-morpher-i.md)
 
 **起始版本：** 20
+
+<!--Device-Geometry-readonly morpher?: Morpher--><!--Device-Geometry-readonly morpher?: Morpher-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

@@ -16,6 +16,8 @@ function createMapMseProfile(): MapMseProfile
 
 **起始版本：** 11
 
+<!--Device-map-function createMapMseProfile(): MapMseProfile--><!--Device-map-function createMapMseProfile(): MapMseProfile-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **返回值：**

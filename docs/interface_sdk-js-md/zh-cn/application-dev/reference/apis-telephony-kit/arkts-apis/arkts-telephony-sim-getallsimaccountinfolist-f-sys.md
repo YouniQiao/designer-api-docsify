@@ -18,6 +18,8 @@ Get the list of all SIM card account information.
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-sim-function getAllSimAccountInfoList(callback: AsyncCallback<Array<IccAccountInfo>>): void--><!--Device-sim-function getAllSimAccountInfoList(callback: AsyncCallback<Array<IccAccountInfo>>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -65,6 +67,8 @@ Get the list of all SIM card account information.
 **起始版本：** 20
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
+
+<!--Device-sim-function getAllSimAccountInfoList(): Promise<Array<IccAccountInfo>>--><!--Device-sim-function getAllSimAccountInfoList(): Promise<Array<IccAccountInfo>>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

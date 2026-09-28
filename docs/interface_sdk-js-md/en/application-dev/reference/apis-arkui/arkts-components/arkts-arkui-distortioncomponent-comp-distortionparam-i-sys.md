@@ -16,6 +16,8 @@ Defines the spatial distortion parameters.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-declare interface DistortionParam--><!--Device-unnamed-declare interface DistortionParam-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -40,6 +42,8 @@ Recommended value range for x, y, z, and w: **[-1, 1]**
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DistortionParam-barrelDistortion: Vector4--><!--Device-DistortionParam-barrelDistortion: Vector4-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -57,6 +61,8 @@ Coordinates of the bottom-left corner.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DistortionParam-bottomLeft: Vector2--><!--Device-DistortionParam-bottomLeft: Vector2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -76,6 +82,8 @@ Coordinates of the bottom-right corner.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DistortionParam-bottomRight: Vector2--><!--Device-DistortionParam-bottomRight: Vector2-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -94,6 +102,8 @@ Coordinates of the top-left corner.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DistortionParam-topLeft: Vector2--><!--Device-DistortionParam-topLeft: Vector2-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -111,6 +121,8 @@ Coordinates of the top-right corner.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DistortionParam-topRight: Vector2--><!--Device-DistortionParam-topRight: Vector2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -18,6 +18,8 @@ function getAutoStartupStatusForSelf(): Promise<boolean>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-autoStartupManager-function getAutoStartupStatusForSelf(): Promise<boolean>--><!--Device-autoStartupManager-function getAutoStartupStatusForSelf(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **返回值：**

@@ -20,6 +20,8 @@ Obtains the metadata of an app with a specified bundle name on a specified remot
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-distributedBundleManager-function getRemoteMetadata(deviceId: string, bundleName: string): Promise<Array<ModuleMetadata>>--><!--Device-distributedBundleManager-function getRemoteMetadata(deviceId: string, bundleName: string): Promise<Array<ModuleMetadata>>-End-->
+
 **System capability:** SystemCapability.BundleManager.DistributedBundleFramework
 
 **System API:** This is a system API.

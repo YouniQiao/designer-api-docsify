@@ -8,6 +8,8 @@ enum ServiceType
 
 **起始版本：** 23
 
+<!--Device-hid-enum ServiceType--><!--Device-hid-enum ServiceType-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## SERVICE_NO_TRAFFIC
@@ -21,6 +23,8 @@ SERVICE_NO_TRAFFIC = 0
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ServiceType-SERVICE_NO_TRAFFIC = 0--><!--Device-ServiceType-SERVICE_NO_TRAFFIC = 0-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -36,6 +40,8 @@ SERVICE_BEST_EFFORT = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ServiceType-SERVICE_BEST_EFFORT = 1--><!--Device-ServiceType-SERVICE_BEST_EFFORT = 1-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## SERVICE_GUARANTEED
@@ -49,5 +55,7 @@ SERVICE_GUARANTEED = 2
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ServiceType-SERVICE_GUARANTEED = 2--><!--Device-ServiceType-SERVICE_GUARANTEED = 2-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

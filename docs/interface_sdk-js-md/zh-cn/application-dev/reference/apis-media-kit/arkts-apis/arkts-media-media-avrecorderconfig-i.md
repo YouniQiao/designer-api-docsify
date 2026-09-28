@@ -8,6 +8,8 @@ interface AVRecorderConfig
 
 **起始版本：** 9
 
+<!--Device-media-interface AVRecorderConfig--><!--Device-media-interface AVRecorderConfig-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 ## 导入模块
@@ -28,7 +30,9 @@ audioSourceType?: AudioSourceType
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVRecorderConfig-audioSourceType?: AudioSourceType--><!--Device-AVRecorderConfig-audioSourceType?: AudioSourceType-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -44,6 +48,8 @@ fileGenerationMode?: FileGenerationMode
 
 **起始版本：** 12
 
+<!--Device-AVRecorderConfig-fileGenerationMode?: FileGenerationMode--><!--Device-AVRecorderConfig-fileGenerationMode?: FileGenerationMode-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 ## maxDuration
@@ -57,6 +63,8 @@ maxDuration?: number
 **类型：** number
 
 **起始版本：** 18
+
+<!--Device-AVRecorderConfig-maxDuration?: int--><!--Device-AVRecorderConfig-maxDuration?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -72,6 +80,8 @@ metadata?: AVMetadata
 
 **起始版本：** 12
 
+<!--Device-AVRecorderConfig-metadata?: AVMetadata--><!--Device-AVRecorderConfig-metadata?: AVMetadata-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 ## profile
@@ -86,7 +96,9 @@ profile: AVRecorderProfile
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVRecorderConfig-profile: AVRecorderProfile--><!--Device-AVRecorderConfig-profile: AVRecorderProfile-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -102,7 +114,9 @@ url: string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVRecorderConfig-url: string--><!--Device-AVRecorderConfig-url: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -117,6 +131,8 @@ videoSourceType?: VideoSourceType
 **类型：** [VideoSourceType](arkts-media-media-videosourcetype-e.md)
 
 **起始版本：** 9
+
+<!--Device-AVRecorderConfig-videoSourceType?: VideoSourceType--><!--Device-AVRecorderConfig-videoSourceType?: VideoSourceType-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -136,6 +152,8 @@ location?: Location
 
 **替代接口：** [location](arkts-media-media-avmetadata-i.md#location)
 
+<!--Device-AVRecorderConfig-location?: Location--><!--Device-AVRecorderConfig-location?: Location-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 ## rotation
@@ -153,5 +171,7 @@ rotation?: number
 **废弃版本：** 12
 
 **替代接口：** [videoOrientation](arkts-media-media-avmetadata-i.md#videoorientation)
+
+<!--Device-AVRecorderConfig-rotation?: number--><!--Device-AVRecorderConfig-rotation?: number-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder

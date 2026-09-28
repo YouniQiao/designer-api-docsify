@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace wifiManager--><!--Device-unnamed-declare namespace wifiManager-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Communication.WiFi.STA
 

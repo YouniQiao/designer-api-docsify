@@ -8,6 +8,8 @@ Describes the size of a shape.
 
 **Since:** 12
 
+<!--Device-unnamed-interface ShapeSize--><!--Device-unnamed-interface ShapeSize-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -40,6 +42,8 @@ If the value is invalid, 0 vp is used.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-ShapeSize-height?: number | string--><!--Device-ShapeSize-height?: number | string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## width
@@ -65,5 +69,7 @@ If the value is invalid, 0 vp is used.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-ShapeSize-width?: number | string--><!--Device-ShapeSize-width?: number | string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

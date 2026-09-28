@@ -8,6 +8,8 @@ interface DecodingOptionsForThumbnail
 
 **起始版本：** 26.0.0
 
+<!--Device-image-interface DecodingOptionsForThumbnail--><!--Device-image-interface DecodingOptionsForThumbnail-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 ## 导入模块
@@ -32,6 +34,8 @@ generateThumbnailIfAbsent?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DecodingOptionsForThumbnail-generateThumbnailIfAbsent?: boolean--><!--Device-DecodingOptionsForThumbnail-generateThumbnailIfAbsent?: boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 ## maxGeneratedPixelDimension
@@ -53,5 +57,7 @@ maxGeneratedPixelDimension?: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DecodingOptionsForThumbnail-maxGeneratedPixelDimension?: int--><!--Device-DecodingOptionsForThumbnail-maxGeneratedPixelDimension?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource

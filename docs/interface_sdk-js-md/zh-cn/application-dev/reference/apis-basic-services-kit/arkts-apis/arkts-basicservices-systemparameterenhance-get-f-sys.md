@@ -16,6 +16,8 @@ function get(key: string, callback: AsyncCallback<string>): void
 
 **起始版本：** 9
 
+<!--Device-systemParameterEnhance-function get(key: string, callback: AsyncCallback<string>): void--><!--Device-systemParameterEnhance-function get(key: string, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.Startup.SystemInfo
 
 **系统接口：** 此接口为系统接口。
@@ -66,6 +68,8 @@ function get(key: string, def: string, callback: AsyncCallback<string>): void
 获取系统参数key对应的值，使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-systemParameterEnhance-function get(key: string, def: string, callback: AsyncCallback<string>): void--><!--Device-systemParameterEnhance-function get(key: string, def: string, callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -118,6 +122,8 @@ function get(key: string, def?: string): Promise<string>
 获取系统参数key对应的值，使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-systemParameterEnhance-function get(key: string, def?: string): Promise<string>--><!--Device-systemParameterEnhance-function get(key: string, def?: string): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 

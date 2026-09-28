@@ -16,6 +16,8 @@ function getSystemMemInfo(): SystemMemInfo
 
 **起始版本：** 12
 
+<!--Device-hidebug-function getSystemMemInfo(): SystemMemInfo--><!--Device-hidebug-function getSystemMemInfo(): SystemMemInfo-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **返回值：**

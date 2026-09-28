@@ -8,6 +8,8 @@ export interface WebSocketRequestOptions
 
 **起始版本：** 6
 
+<!--Device-webSocket-export interface WebSocketRequestOptions--><!--Device-webSocket-export interface WebSocketRequestOptions-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块
@@ -28,6 +30,8 @@ caPath?: string
 
 **起始版本：** 11
 
+<!--Device-WebSocketRequestOptions-caPath?: string--><!--Device-WebSocketRequestOptions-caPath?: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## clientCert
@@ -41,6 +45,8 @@ clientCert?: ClientCert
 **类型：** [ClientCert](arkts-network-websocket-clientcert-i.md)
 
 **起始版本：** 11
+
+<!--Device-WebSocketRequestOptions-clientCert?: ClientCert--><!--Device-WebSocketRequestOptions-clientCert?: ClientCert-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -58,6 +64,8 @@ header?: Object
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebSocketRequestOptions-header?: Object--><!--Device-WebSocketRequestOptions-header?: Object-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## minSupportTlsProtocol
@@ -74,6 +82,8 @@ minSupportTlsProtocol?: TlsProtocol
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-WebSocketRequestOptions-minSupportTlsProtocol?: TlsProtocol--><!--Device-WebSocketRequestOptions-minSupportTlsProtocol?: TlsProtocol-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## pingInterval
@@ -87,6 +97,8 @@ pingInterval?: number
 **类型：** number
 
 **起始版本：** 21
+
+<!--Device-WebSocketRequestOptions-pingInterval?: int--><!--Device-WebSocketRequestOptions-pingInterval?: int-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -102,6 +114,8 @@ pongTimeout?: number
 
 **起始版本：** 21
 
+<!--Device-WebSocketRequestOptions-pongTimeout?: int--><!--Device-WebSocketRequestOptions-pongTimeout?: int-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## protocol
@@ -115,6 +129,8 @@ protocol?: string
 **类型：** string
 
 **起始版本：** 12
+
+<!--Device-WebSocketRequestOptions-protocol?: string--><!--Device-WebSocketRequestOptions-protocol?: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -130,6 +146,8 @@ proxy?: ProxyConfiguration
 
 **起始版本：** 12
 
+<!--Device-WebSocketRequestOptions-proxy?: ProxyConfiguration--><!--Device-WebSocketRequestOptions-proxy?: ProxyConfiguration-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## skipServerCertVerification
@@ -143,6 +161,8 @@ skipServerCertVerification?: boolean
 **类型：** boolean
 
 **起始版本：** 20
+
+<!--Device-WebSocketRequestOptions-skipServerCertVerification?: boolean--><!--Device-WebSocketRequestOptions-skipServerCertVerification?: boolean-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -159,5 +179,7 @@ supportOriginPort?: boolean
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WebSocketRequestOptions-supportOriginPort?: boolean--><!--Device-WebSocketRequestOptions-supportOriginPort?: boolean-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack

@@ -8,6 +8,8 @@ export enum ErrorCode
 
 **起始版本：** 7
 
+<!--Device-particleAbility-export enum ErrorCode--><!--Device-particleAbility-export enum ErrorCode-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 ## INVALID_PARAMETER
@@ -21,5 +23,7 @@ INVALID_PARAMETER = -1
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-ErrorCode-INVALID_PARAMETER = -1--><!--Device-ErrorCode-INVALID_PARAMETER = -1-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel

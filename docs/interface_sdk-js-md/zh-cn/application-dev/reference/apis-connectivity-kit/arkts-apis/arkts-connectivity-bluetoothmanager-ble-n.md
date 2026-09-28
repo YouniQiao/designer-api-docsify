@@ -12,6 +12,8 @@ BLE模块提供了对蓝牙操作和管理的方法。
 
 **替代接口：** [ble/ble](arkts-connectivity-bluetooth-ble.md)
 
+<!--Device-bluetoothManager-namespace BLE--><!--Device-bluetoothManager-namespace BLE-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块

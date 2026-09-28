@@ -8,6 +8,8 @@ enum KeyUsageType
 
 **起始版本：** 12
 
+<!--Device-cert-enum KeyUsageType--><!--Device-cert-enum KeyUsageType-End-->
+
 **系统能力：** SystemCapability.Security.Cert
 
 ## KEYUSAGE_DIGITAL_SIGNATURE
@@ -20,7 +22,9 @@ KEYUSAGE_DIGITAL_SIGNATURE = 0
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-KeyUsageType-KEYUSAGE_DIGITAL_SIGNATURE = 0--><!--Device-KeyUsageType-KEYUSAGE_DIGITAL_SIGNATURE = 0-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -34,7 +38,9 @@ KEYUSAGE_NON_REPUDIATION = 1
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-KeyUsageType-KEYUSAGE_NON_REPUDIATION = 1--><!--Device-KeyUsageType-KEYUSAGE_NON_REPUDIATION = 1-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -48,7 +54,9 @@ KEYUSAGE_KEY_ENCIPHERMENT = 2
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-KeyUsageType-KEYUSAGE_KEY_ENCIPHERMENT = 2--><!--Device-KeyUsageType-KEYUSAGE_KEY_ENCIPHERMENT = 2-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -62,7 +70,9 @@ KEYUSAGE_DATA_ENCIPHERMENT = 3
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-KeyUsageType-KEYUSAGE_DATA_ENCIPHERMENT = 3--><!--Device-KeyUsageType-KEYUSAGE_DATA_ENCIPHERMENT = 3-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -76,7 +86,9 @@ KEYUSAGE_KEY_AGREEMENT = 4
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-KeyUsageType-KEYUSAGE_KEY_AGREEMENT = 4--><!--Device-KeyUsageType-KEYUSAGE_KEY_AGREEMENT = 4-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -90,7 +102,9 @@ KEYUSAGE_KEY_CERT_SIGN = 5
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-KeyUsageType-KEYUSAGE_KEY_CERT_SIGN = 5--><!--Device-KeyUsageType-KEYUSAGE_KEY_CERT_SIGN = 5-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -104,7 +118,9 @@ KEYUSAGE_CRL_SIGN = 6
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-KeyUsageType-KEYUSAGE_CRL_SIGN = 6--><!--Device-KeyUsageType-KEYUSAGE_CRL_SIGN = 6-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -118,7 +134,9 @@ KEYUSAGE_ENCIPHER_ONLY = 7
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-KeyUsageType-KEYUSAGE_ENCIPHER_ONLY = 7--><!--Device-KeyUsageType-KEYUSAGE_ENCIPHER_ONLY = 7-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -132,6 +150,8 @@ KEYUSAGE_DECIPHER_ONLY = 8
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-KeyUsageType-KEYUSAGE_DECIPHER_ONLY = 8--><!--Device-KeyUsageType-KEYUSAGE_DECIPHER_ONLY = 8-End-->
 
 **系统能力：** SystemCapability.Security.Cert

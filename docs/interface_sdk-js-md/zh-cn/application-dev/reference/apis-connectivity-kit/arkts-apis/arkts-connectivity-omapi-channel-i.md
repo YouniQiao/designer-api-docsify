@@ -8,6 +8,8 @@ Channel的实例表示在某个Session实例上创建通道，可能为基础通
 
 **起始版本：** 10
 
+<!--Device-omapi-export interface Channel--><!--Device-omapi-export interface Channel-End-->
+
 **系统能力：** SystemCapability.Communication.SecureElement
 
 ## 导入模块
@@ -25,6 +27,8 @@ close(): void
 关闭Channel。
 
 **起始版本：** 10
+
+<!--Device-Channel-close(): void--><!--Device-Channel-close(): void-End-->
 
 **系统能力：** SystemCapability.Communication.SecureElement
 
@@ -59,6 +63,8 @@ getSelectResponse(): number[]
 获取SELECT Applet时的响应数据，包含状态字。
 
 **起始版本：** 10
+
+<!--Device-Channel-getSelectResponse(): number[]--><!--Device-Channel-getSelectResponse(): number[]-End-->
 
 **系统能力：** SystemCapability.Communication.SecureElement
 
@@ -100,6 +106,8 @@ getSession(): Session
 获取打开该Channel的Session对象。
 
 **起始版本：** 10
+
+<!--Device-Channel-getSession(): Session--><!--Device-Channel-getSession(): Session-End-->
 
 **系统能力：** SystemCapability.Communication.SecureElement
 
@@ -143,6 +151,8 @@ isBasicChannel(): boolean
 
 **起始版本：** 10
 
+<!--Device-Channel-isBasicChannel(): boolean--><!--Device-Channel-isBasicChannel(): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.SecureElement
 
 **返回值：**
@@ -184,6 +194,8 @@ isClosed(): boolean
 
 **起始版本：** 10
 
+<!--Device-Channel-isClosed(): boolean--><!--Device-Channel-isClosed(): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.SecureElement
 
 **返回值：**
@@ -224,6 +236,8 @@ transmit(command: number[]): Promise<number[]>
 向SE发送APDU数据，数据符合ISO/IEC 7816规范。使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-Channel-transmit(command: number[]): Promise<number[]>--><!--Device-Channel-transmit(command: number[]): Promise<number[]>-End-->
 
 **系统能力：** SystemCapability.Communication.SecureElement
 
@@ -282,6 +296,8 @@ transmit(command: number[], callback: AsyncCallback<number[]>): void
 向SE发送APDU数据，数据符合ISO/IEC 7816规范。使用callback异步回调。
 
 **起始版本：** 10
+
+<!--Device-Channel-transmit(command: number[], callback: AsyncCallback<number[]>): void--><!--Device-Channel-transmit(command: number[], callback: AsyncCallback<number[]>): void-End-->
 
 **系统能力：** SystemCapability.Communication.SecureElement
 

@@ -8,6 +8,8 @@ interface MediaLibraryAvailability
 
 **起始版本：** 26.0.0
 
+<!--Device-photoAccessHelper-interface MediaLibraryAvailability--><!--Device-photoAccessHelper-interface MediaLibraryAvailability-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ availabilityStatus: AvailabilityStatus
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MediaLibraryAvailability-availabilityStatus: AvailabilityStatus--><!--Device-MediaLibraryAvailability-availabilityStatus: AvailabilityStatus-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## unavailabilityReason
@@ -45,5 +49,7 @@ unavailabilityReason: string
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MediaLibraryAvailability-unavailabilityReason: string--><!--Device-MediaLibraryAvailability-unavailabilityReason: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core

@@ -8,6 +8,8 @@ interface Filter
 
 **起始版本：** 9
 
+<!--Device-effectKit-interface Filter--><!--Device-effectKit-interface Filter-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ ellipticalGradientBlur(blurRadius: number, center: EllipticalMaskCenter,
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Filter-ellipticalGradientBlur(blurRadius: double, center: EllipticalMaskCenter,      maskRadius: EllipticalMaskRadius, fractionStops: FractionStop[]): Filter--><!--Device-Filter-ellipticalGradientBlur(blurRadius: double, center: EllipticalMaskCenter,      maskRadius: EllipticalMaskRadius, fractionStops: FractionStop[]): Filter-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 

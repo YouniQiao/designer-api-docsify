@@ -16,6 +16,8 @@ function isApplicationEnabled(bundleName: string, appIndex: number): Promise<boo
 
 **起始版本：** 12
 
+<!--Device-bundleManager-function isApplicationEnabled(bundleName: string, appIndex: int): Promise<boolean>--><!--Device-bundleManager-function isApplicationEnabled(bundleName: string, appIndex: int): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -76,6 +78,8 @@ function isApplicationEnabled(bundleName: string, callback: AsyncCallback<boolea
 
 **起始版本：** 9
 
+<!--Device-bundleManager-function isApplicationEnabled(bundleName: string, callback: AsyncCallback<boolean>): void--><!--Device-bundleManager-function isApplicationEnabled(bundleName: string, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -130,6 +134,8 @@ function isApplicationEnabled(bundleName: string): Promise<boolean>
 获取指定应用的禁用或使能状态。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-bundleManager-function isApplicationEnabled(bundleName: string): Promise<boolean>--><!--Device-bundleManager-function isApplicationEnabled(bundleName: string): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

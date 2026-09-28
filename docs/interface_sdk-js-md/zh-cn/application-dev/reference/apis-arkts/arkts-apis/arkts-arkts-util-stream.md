@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare namespace stream--><!--Device-unnamed-declare namespace stream-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块

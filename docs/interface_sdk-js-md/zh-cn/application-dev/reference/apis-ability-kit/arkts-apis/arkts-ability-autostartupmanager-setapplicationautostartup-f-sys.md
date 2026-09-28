@@ -20,6 +20,8 @@ function setApplicationAutoStartup(info: AutoStartupInfo, callback: AsyncCallbac
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-autoStartupManager-function setApplicationAutoStartup(info: AutoStartupInfo, callback: AsyncCallback<void>): void--><!--Device-autoStartupManager-function setApplicationAutoStartup(info: AutoStartupInfo, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -58,6 +60,8 @@ function setApplicationAutoStartup(info: AutoStartupInfo): Promise<void>
 **需要权限：** ohos.permission.MANAGE_APP_BOOT
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-autoStartupManager-function setApplicationAutoStartup(info: AutoStartupInfo): Promise<void>--><!--Device-autoStartupManager-function setApplicationAutoStartup(info: AutoStartupInfo): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

@@ -16,6 +16,8 @@ function usbControlTransfer(pipe: USBDevicePipe, requestparam: USBDeviceRequestP
 
 **起始版本：** 12
 
+<!--Device-usbManager-function usbControlTransfer(pipe: USBDevicePipe, requestparam: USBDeviceRequestParams, timeout?: int): Promise<int>--><!--Device-usbManager-function usbControlTransfer(pipe: USBDevicePipe, requestparam: USBDeviceRequestParams, timeout?: int): Promise<int>-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 **参数：**

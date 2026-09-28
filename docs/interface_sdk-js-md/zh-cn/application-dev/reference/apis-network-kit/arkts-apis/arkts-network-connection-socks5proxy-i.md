@@ -8,6 +8,8 @@ SOCKS5代理配置信息。
 
 **起始版本：** 26.0.0
 
+<!--Device-connection-export interface Socks5Proxy--><!--Device-connection-export interface Socks5Proxy-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## 导入模块
@@ -31,6 +33,8 @@ dnsStrategy?: Socks5DnsStrategy
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Socks5Proxy-dnsStrategy?: Socks5DnsStrategy--><!--Device-Socks5Proxy-dnsStrategy?: Socks5DnsStrategy-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -66,6 +70,8 @@ exclusionList?: Array<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Socks5Proxy-exclusionList?: Array<string>--><!--Device-Socks5Proxy-exclusionList?: Array<string>-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## host
@@ -83,6 +89,8 @@ host: string
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Socks5Proxy-host: string--><!--Device-Socks5Proxy-host: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -102,6 +110,8 @@ password?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Socks5Proxy-password?: string--><!--Device-Socks5Proxy-password?: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## port
@@ -120,6 +130,8 @@ port: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Socks5Proxy-port: int--><!--Device-Socks5Proxy-port: int-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## username
@@ -137,5 +149,7 @@ username?: string
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Socks5Proxy-username?: string--><!--Device-Socks5Proxy-username?: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core

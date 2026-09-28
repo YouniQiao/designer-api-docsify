@@ -18,6 +18,8 @@ function getLocalCapabilities(): Promise<FileData>
 
 **需要权限：** ohos.permission.BACKUP
 
+<!--Device-backup-function getLocalCapabilities(): Promise<FileData>--><!--Device-backup-function getLocalCapabilities(): Promise<FileData>-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 **系统接口：** 此接口为系统接口。
@@ -90,6 +92,8 @@ function getLocalCapabilities(callback: AsyncCallback<FileData>): void
 **起始版本：** 10
 
 **需要权限：** ohos.permission.BACKUP
+
+<!--Device-backup-function getLocalCapabilities(callback: AsyncCallback<FileData>): void--><!--Device-backup-function getLocalCapabilities(callback: AsyncCallback<FileData>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
@@ -166,6 +170,8 @@ function getLocalCapabilities(dataList: Array<IncrementalBackupTime>): Promise<F
 **起始版本：** 12
 
 **需要权限：** ohos.permission.BACKUP
+
+<!--Device-backup-function getLocalCapabilities(dataList: Array<IncrementalBackupTime>): Promise<FileData>--><!--Device-backup-function getLocalCapabilities(dataList: Array<IncrementalBackupTime>): Promise<FileData>-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 

@@ -8,6 +8,8 @@ LightWeightMap可用于存储具有关联关系的key-value键值对，其中key
 
 **起始版本：** 8
 
+<!--Device-unnamed-declare class LightWeightMap<K, V>--><!--Device-unnamed-declare class LightWeightMap<K, V>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -27,6 +29,8 @@ import { LightWeightMap } from '@kit.ArkTS';
 **起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LightWeightMap-[Symbol.iterator](): IterableIterator<[K, V]>--><!--Device-LightWeightMap-[Symbol.iterator](): IterableIterator<[K, V]>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -94,7 +98,9 @@ clear(): void
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LightWeightMap-clear(): void--><!--Device-LightWeightMap-clear(): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -125,7 +131,9 @@ LightWeightMap的构造函数，创建一个空的LightWeightMap实例。
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LightWeightMap-constructor()--><!--Device-LightWeightMap-constructor()-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -151,7 +159,9 @@ entries(): IterableIterator<[K, V]>
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LightWeightMap-entries(): IterableIterator<[K, V]>--><!--Device-LightWeightMap-entries(): IterableIterator<[K, V]>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -205,6 +215,8 @@ forEach(callbackFn: (value?: V, key?: K, map?: LightWeightMap<K, V>) => void, th
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-LightWeightMap-forEach(callbackFn: (value?: V, key?: K, map?: LightWeightMap<K, V>) => void, thisArg?: Object): void--><!--Device-LightWeightMap-forEach(callbackFn: (value?: V, key?: K, map?: LightWeightMap<K, V>) => void, thisArg?: Object): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -256,6 +268,8 @@ get(key: K): V
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-LightWeightMap-get(key: K): V--><!--Device-LightWeightMap-get(key: K): V-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -296,7 +310,9 @@ getIndexOfKey(key: K): number
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LightWeightMap-getIndexOfKey(key: K): int--><!--Device-LightWeightMap-getIndexOfKey(key: K): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -338,7 +354,9 @@ getIndexOfValue(value: V): number
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LightWeightMap-getIndexOfValue(value: V): int--><!--Device-LightWeightMap-getIndexOfValue(value: V): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -381,6 +399,8 @@ getKeyAt(index: number): K
 **起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LightWeightMap-getKeyAt(index: number): K--><!--Device-LightWeightMap-getKeyAt(index: number): K-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -425,6 +445,8 @@ getValueAt(index: number): V
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-LightWeightMap-getValueAt(index: number): V--><!--Device-LightWeightMap-getValueAt(index: number): V-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -466,7 +488,9 @@ hasAll(map: LightWeightMap<K, V>): boolean
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LightWeightMap-hasAll(map: LightWeightMap<K, V>): boolean--><!--Device-LightWeightMap-hasAll(map: LightWeightMap<K, V>): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -510,7 +534,9 @@ hasKey(key: K): boolean
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LightWeightMap-hasKey(key: K): boolean--><!--Device-LightWeightMap-hasKey(key: K): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -551,7 +577,9 @@ hasValue(value: V): boolean
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LightWeightMap-hasValue(value: V): boolean--><!--Device-LightWeightMap-hasValue(value: V): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -592,7 +620,9 @@ increaseCapacityTo(minimumCapacity: number): void
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LightWeightMap-increaseCapacityTo(minimumCapacity: int): void--><!--Device-LightWeightMap-increaseCapacityTo(minimumCapacity: int): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -625,7 +655,9 @@ isEmpty(): boolean
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LightWeightMap-isEmpty(): boolean--><!--Device-LightWeightMap-isEmpty(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -659,7 +691,9 @@ keys(): IterableIterator<K>
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LightWeightMap-keys(): IterableIterator<K>--><!--Device-LightWeightMap-keys(): IterableIterator<K>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -702,6 +736,8 @@ remove(key: K): V
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-LightWeightMap-remove(key: K): V--><!--Device-LightWeightMap-remove(key: K): V-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -741,7 +777,9 @@ removeAt(index: number): boolean
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LightWeightMap-removeAt(index: int): boolean--><!--Device-LightWeightMap-removeAt(index: int): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -783,7 +821,9 @@ set(key: K, value: V): Object
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LightWeightMap-set(key: K, value: V): Object--><!--Device-LightWeightMap-set(key: K, value: V): Object-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -824,7 +864,9 @@ setAll(map: LightWeightMap<K, V>): void
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LightWeightMap-setAll(map: LightWeightMap<K, V>): void--><!--Device-LightWeightMap-setAll(map: LightWeightMap<K, V>): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -862,7 +904,9 @@ setValueAt(index: number, newValue: V): boolean
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LightWeightMap-setValueAt(index: int, newValue: V): boolean--><!--Device-LightWeightMap-setValueAt(index: int, newValue: V): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -906,7 +950,9 @@ toString(): String
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LightWeightMap-toString(): String--><!--Device-LightWeightMap-toString(): String-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -942,7 +988,9 @@ values(): IterableIterator<V>
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LightWeightMap-values(): IterableIterator<V>--><!--Device-LightWeightMap-values(): IterableIterator<V>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -986,5 +1034,7 @@ LightWeightMap的元素个数。
 **起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LightWeightMap-length: number--><!--Device-LightWeightMap-length: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

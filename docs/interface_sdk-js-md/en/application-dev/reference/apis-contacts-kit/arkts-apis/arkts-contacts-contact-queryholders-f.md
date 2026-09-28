@@ -22,6 +22,8 @@ Queries all applications that have created contacts. This API uses an asynchrono
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryHolders(callback: AsyncCallback<Array<Holder>>): void--><!--Device-contact-function queryHolders(callback: AsyncCallback<Array<Holder>>): void-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
@@ -59,6 +61,8 @@ Queries all applications that have created contacts. This API uses an asynchrono
 **Since:** 10
 
 **Required permissions:** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryHolders(context: Context, callback: AsyncCallback<Array<Holder>>): void--><!--Device-contact-function queryHolders(context: Context, callback: AsyncCallback<Array<Holder>>): void-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -117,6 +121,8 @@ Queries all applications that have created contacts. This API uses a promise to 
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryHolders(): Promise<Array<Holder>>--><!--Device-contact-function queryHolders(): Promise<Array<Holder>>-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Return value:**
@@ -150,6 +156,8 @@ Queries all applications that have created contacts. This API uses a promise to 
 **Since:** 10
 
 **Required permissions:** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryHolders(context: Context): Promise<Array<Holder>>--><!--Device-contact-function queryHolders(context: Context): Promise<Array<Holder>>-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 

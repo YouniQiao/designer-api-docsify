@@ -10,6 +10,8 @@ export interface FileWriteArrayBufferOption
 
 **废弃版本：** 10
 
+<!--Device-unnamed-export interface FileWriteArrayBufferOption--><!--Device-unnamed-export interface FileWriteArrayBufferOption-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## 导入模块
@@ -29,6 +31,8 @@ complete?: () => void
 
 **废弃版本：** 10
 
+<!--Device-FileWriteArrayBufferOption-complete?: () => void--><!--Device-FileWriteArrayBufferOption-complete?: () => void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## fail
@@ -42,6 +46,8 @@ fail?: (data: string, code: number) => void
 **起始版本：** 3
 
 **废弃版本：** 10
+
+<!--Device-FileWriteArrayBufferOption-fail?: (data: string, code: number) => void--><!--Device-FileWriteArrayBufferOption-fail?: (data: string, code: number) => void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -64,6 +70,8 @@ success?: () => void
 
 **废弃版本：** 10
 
+<!--Device-FileWriteArrayBufferOption-success?: () => void--><!--Device-FileWriteArrayBufferOption-success?: () => void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## append
@@ -79,6 +87,8 @@ append?: boolean
 **起始版本：** 3
 
 **废弃版本：** 10
+
+<!--Device-FileWriteArrayBufferOption-append?: boolean--><!--Device-FileWriteArrayBufferOption-append?: boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -96,6 +106,8 @@ buffer: Uint8Array
 
 **废弃版本：** 10
 
+<!--Device-FileWriteArrayBufferOption-buffer: Uint8Array--><!--Device-FileWriteArrayBufferOption-buffer: Uint8Array-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## position
@@ -111,6 +123,8 @@ position?: number
 **起始版本：** 3
 
 **废弃版本：** 10
+
+<!--Device-FileWriteArrayBufferOption-position?: number--><!--Device-FileWriteArrayBufferOption-position?: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -129,5 +143,7 @@ uri: string
 **起始版本：** 3
 
 **废弃版本：** 10
+
+<!--Device-FileWriteArrayBufferOption-uri: string--><!--Device-FileWriteArrayBufferOption-uri: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite

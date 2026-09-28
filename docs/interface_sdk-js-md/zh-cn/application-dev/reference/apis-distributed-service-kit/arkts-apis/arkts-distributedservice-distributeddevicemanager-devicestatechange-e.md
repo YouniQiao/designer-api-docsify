@@ -8,6 +8,8 @@ enum DeviceStateChange
 
 **起始版本：** 10
 
+<!--Device-distributedDeviceManager-enum DeviceStateChange--><!--Device-distributedDeviceManager-enum DeviceStateChange-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 ## UNKNOWN
@@ -19,6 +21,8 @@ UNKNOWN = 0
 设备物理上线，此时状态未知，在状态更改为可用之前，分布式业务无法使用。
 
 **起始版本：** 10
+
+<!--Device-DeviceStateChange-UNKNOWN = 0--><!--Device-DeviceStateChange-UNKNOWN = 0-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -32,6 +36,8 @@ AVAILABLE = 1
 
 **起始版本：** 10
 
+<!--Device-DeviceStateChange-AVAILABLE = 1--><!--Device-DeviceStateChange-AVAILABLE = 1-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 ## UNAVAILABLE
@@ -43,5 +49,7 @@ UNAVAILABLE = 2
 设备物理下线，此时状态未知。
 
 **起始版本：** 10
+
+<!--Device-DeviceStateChange-UNAVAILABLE = 2--><!--Device-DeviceStateChange-UNAVAILABLE = 2-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager

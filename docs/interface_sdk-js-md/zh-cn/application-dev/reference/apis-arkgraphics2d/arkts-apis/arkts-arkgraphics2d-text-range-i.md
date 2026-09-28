@@ -8,6 +8,8 @@ interface Range
 
 **起始版本：** 12
 
+<!--Device-text-interface Range--><!--Device-text-interface Range-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## 导入模块
@@ -28,7 +30,9 @@ end: number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Range-end: int--><!--Device-Range-end: int-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -44,6 +48,8 @@ start: number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Range-start: int--><!--Device-Range-start: int-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing

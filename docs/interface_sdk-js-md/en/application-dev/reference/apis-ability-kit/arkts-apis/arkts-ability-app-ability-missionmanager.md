@@ -4,6 +4,8 @@ The missionManager module provides APIs to lock, unlock, and clear missions, and
 
 **Since:** 9
 
+<!--Device-unnamed-declare namespace missionManager--><!--Device-unnamed-declare namespace missionManager-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
 **System API:** This is a system API.

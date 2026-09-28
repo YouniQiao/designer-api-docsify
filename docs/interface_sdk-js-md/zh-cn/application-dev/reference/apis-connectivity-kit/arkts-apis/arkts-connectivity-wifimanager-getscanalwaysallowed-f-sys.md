@@ -18,6 +18,8 @@ function getScanAlwaysAllowed(): boolean
 
 **需要权限：** ohos.permission.GET_WIFI_INFO and ohos.permission.GET_WIFI_CONFIG
 
+<!--Device-wifiManager-function getScanAlwaysAllowed(): boolean--><!--Device-wifiManager-function getScanAlwaysAllowed(): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。

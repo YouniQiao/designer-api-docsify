@@ -8,6 +8,8 @@ enum LivePhoto4dStatus
 
 **起始版本：** 24
 
+<!--Device-photoAccessHelper-enum LivePhoto4dStatus--><!--Device-photoAccessHelper-enum LivePhoto4dStatus-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -23,6 +25,8 @@ UNIDENTIFIED = 0
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-LivePhoto4dStatus-UNIDENTIFIED = 0--><!--Device-LivePhoto4dStatus-UNIDENTIFIED = 0-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -40,6 +44,8 @@ UNSUPPORTED = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-LivePhoto4dStatus-UNSUPPORTED = 1--><!--Device-LivePhoto4dStatus-UNSUPPORTED = 1-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -55,6 +61,8 @@ SUPPORTED = 2
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-LivePhoto4dStatus-SUPPORTED = 2--><!--Device-LivePhoto4dStatus-SUPPORTED = 2-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -72,6 +80,8 @@ USED = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-LivePhoto4dStatus-USED = 3--><!--Device-LivePhoto4dStatus-USED = 3-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -87,6 +97,8 @@ LIVEPHOTO_4D = 4
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-LivePhoto4dStatus-LIVEPHOTO_4D = 4--><!--Device-LivePhoto4dStatus-LIVEPHOTO_4D = 4-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -104,6 +116,8 @@ LEFT_ROTATE = 5
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-LivePhoto4dStatus-LEFT_ROTATE = 5--><!--Device-LivePhoto4dStatus-LEFT_ROTATE = 5-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -119,6 +133,8 @@ UP_ROTATE = 6
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-LivePhoto4dStatus-UP_ROTATE = 6--><!--Device-LivePhoto4dStatus-UP_ROTATE = 6-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -136,6 +152,8 @@ ZOOM_OUT = 7
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-LivePhoto4dStatus-ZOOM_OUT = 7--><!--Device-LivePhoto4dStatus-ZOOM_OUT = 7-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -152,6 +170,8 @@ HITCHCOCK = 8
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-LivePhoto4dStatus-HITCHCOCK = 8--><!--Device-LivePhoto4dStatus-HITCHCOCK = 8-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -167,6 +187,8 @@ GRAMMY = 9
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-LivePhoto4dStatus-GRAMMY = 9--><!--Device-LivePhoto4dStatus-GRAMMY = 9-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

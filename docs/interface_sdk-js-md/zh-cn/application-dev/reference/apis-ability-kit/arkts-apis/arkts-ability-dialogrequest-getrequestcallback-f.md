@@ -21,6 +21,8 @@ function getRequestCallback(want: Want): RequestCallback
 
 **起始版本：** 9
 
+<!--Device-dialogRequest-function getRequestCallback(want: Want): RequestCallback--><!--Device-dialogRequest-function getRequestCallback(want: Want): RequestCallback-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**

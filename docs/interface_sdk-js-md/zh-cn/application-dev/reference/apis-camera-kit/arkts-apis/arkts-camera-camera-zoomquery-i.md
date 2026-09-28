@@ -12,6 +12,8 @@ interface ZoomQuery
 
 **起始版本：** 12
 
+<!--Device-camera-interface ZoomQuery--><!--Device-camera-interface ZoomQuery-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
@@ -32,7 +34,9 @@ getRAWCaptureZoomRatioRange(): Array<number>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-ZoomQuery-getRAWCaptureZoomRatioRange(): Array<double>--><!--Device-ZoomQuery-getRAWCaptureZoomRatioRange(): Array<double>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -77,7 +81,9 @@ getZoomPointInfos(): Array<ZoomPointInfo>
 
 **起始版本：** 26.0.0
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-ZoomQuery-getZoomPointInfos(): Array<ZoomPointInfo>--><!--Device-ZoomQuery-getZoomPointInfos(): Array<ZoomPointInfo>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -122,7 +128,9 @@ getZoomRatioRange(): Array<number>
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-ZoomQuery-getZoomRatioRange(): Array<double>--><!--Device-ZoomQuery-getZoomRatioRange(): Array<double>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

@@ -8,6 +8,8 @@ export interface RunningMultiInstanceInfo
 
 **起始版本：** 14
 
+<!--Device-unnamed-export interface RunningMultiInstanceInfo--><!--Device-unnamed-export interface RunningMultiInstanceInfo-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -23,6 +25,8 @@ instanceKey: string
 **类型：** string
 
 **起始版本：** 14
+
+<!--Device-RunningMultiInstanceInfo-instanceKey: string--><!--Device-RunningMultiInstanceInfo-instanceKey: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -40,6 +44,8 @@ pids: Array<number>
 
 **起始版本：** 14
 
+<!--Device-RunningMultiInstanceInfo-pids: Array<int>--><!--Device-RunningMultiInstanceInfo-pids: Array<int>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -55,6 +61,8 @@ uid: number
 **类型：** number
 
 **起始版本：** 14
+
+<!--Device-RunningMultiInstanceInfo-uid: int--><!--Device-RunningMultiInstanceInfo-uid: int-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

@@ -10,6 +10,8 @@ The continuationManager module provides the continuation/collaboration managemen
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-unnamed-declare namespace continuationManager--><!--Device-unnamed-declare namespace continuationManager-End-->
+
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
 
 ## Modules to Import

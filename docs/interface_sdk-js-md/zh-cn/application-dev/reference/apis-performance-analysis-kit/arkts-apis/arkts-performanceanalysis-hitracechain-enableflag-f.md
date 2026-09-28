@@ -16,6 +16,8 @@ function enableFlag(id: HiTraceId, flag: HiTraceFlag): void
 
 **起始版本：** 8
 
+<!--Device-hiTraceChain-function enableFlag(id: HiTraceId, flag: HiTraceFlag): void--><!--Device-hiTraceChain-function enableFlag(id: HiTraceId, flag: HiTraceFlag): void-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
 
 **参数：**

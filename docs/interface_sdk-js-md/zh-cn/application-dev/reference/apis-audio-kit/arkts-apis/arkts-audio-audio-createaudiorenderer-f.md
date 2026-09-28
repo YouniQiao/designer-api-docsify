@@ -16,6 +16,8 @@ function createAudioRenderer(options: AudioRendererOptions, callback: AsyncCallb
 
 **起始版本：** 8
 
+<!--Device-audio-function createAudioRenderer(options: AudioRendererOptions, callback: AsyncCallback<AudioRenderer>): void--><!--Device-audio-function createAudioRenderer(options: AudioRendererOptions, callback: AsyncCallback<AudioRenderer>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **参数：**
@@ -71,6 +73,8 @@ function createAudioRenderer(options: AudioRendererOptions): Promise<AudioRender
 创建音频渲染器。使用Promise异步回调。
 
 **起始版本：** 8
+
+<!--Device-audio-function createAudioRenderer(options: AudioRendererOptions): Promise<AudioRenderer>--><!--Device-audio-function createAudioRenderer(options: AudioRendererOptions): Promise<AudioRenderer>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 

@@ -14,6 +14,8 @@ export enum LocationPrivacyType
 
 **需要权限：** ohos.permission.LOCATION @enum { number }
 
+<!--Device-geolocation-export enum LocationPrivacyType--><!--Device-geolocation-export enum LocationPrivacyType-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 ## OTHERS
@@ -29,6 +31,8 @@ OTHERS = 0
 **废弃版本：** 9
 
 **替代接口：** [OTHERS](arkts-location-geolocationmanager-locationprivacytype-e-sys.md#others)
+
+<!--Device-LocationPrivacyType-OTHERS = 0--><!--Device-LocationPrivacyType-OTHERS = 0-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -46,6 +50,8 @@ STARTUP
 
 **替代接口：** [STARTUP](arkts-location-geolocationmanager-locationprivacytype-e-sys.md#startup)
 
+<!--Device-LocationPrivacyType-STARTUP--><!--Device-LocationPrivacyType-STARTUP-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 ## CORE_LOCATION
@@ -61,5 +67,7 @@ CORE_LOCATION
 **废弃版本：** 9
 
 **替代接口：** [CORE_LOCATION](arkts-location-geolocationmanager-locationprivacytype-e-sys.md#core_location)
+
+<!--Device-LocationPrivacyType-CORE_LOCATION--><!--Device-LocationPrivacyType-CORE_LOCATION-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core

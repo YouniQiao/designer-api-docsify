@@ -18,6 +18,8 @@ function getCarAwareness(capability: Capability, options?: CarAwarenessOptions):
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-carAwareness-function getCarAwareness(capability: Capability, options?: CarAwarenessOptions): Promise<CarAwarenessInfo[]>--><!--Device-carAwareness-function getCarAwareness(capability: Capability, options?: CarAwarenessOptions): Promise<CarAwarenessInfo[]>-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.CarAwareness
 
 **系统接口：** 此接口为系统接口。

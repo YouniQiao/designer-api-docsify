@@ -18,6 +18,8 @@ function partition(diskId: string, type: number, callback: AsyncCallback<void>):
 
 **需要权限：** ohos.permission.MOUNT_FORMAT_MANAGER
 
+<!--Device-volumeManager-function partition(diskId: string, type: int, callback: AsyncCallback<void>): void--><!--Device-volumeManager-function partition(diskId: string, type: int, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -55,6 +57,8 @@ function partition(diskId: string, type: number): Promise<void>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.MOUNT_FORMAT_MANAGER
+
+<!--Device-volumeManager-function partition(diskId: string, type: int): Promise<void>--><!--Device-volumeManager-function partition(diskId: string, type: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Volume
 

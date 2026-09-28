@@ -19,6 +19,8 @@ function setMemoryCacheSize(bytes: number): void
 
 **起始版本：** 18
 
+<!--Device-cacheDownload-function setMemoryCacheSize(bytes: long): void--><!--Device-cacheDownload-function setMemoryCacheSize(bytes: long): void-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 **参数：**

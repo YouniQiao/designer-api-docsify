@@ -16,6 +16,8 @@ Obtains the device direction based on the rotation matrix. This API uses an asyn
 
 **Since:** 9
 
+<!--Device-sensor-function getOrientation(rotationMatrix: Array<double>, callback: AsyncCallback<Array<double>>): void--><!--Device-sensor-function getOrientation(rotationMatrix: Array<double>, callback: AsyncCallback<Array<double>>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -75,6 +77,8 @@ function getOrientation(rotationMatrix: Array<number>): Promise<Array<number>>
 Obtains the device direction based on the rotation matrix. This API uses a promise to return the result.
 
 **Since:** 9
+
+<!--Device-sensor-function getOrientation(rotationMatrix: Array<double>): Promise<Array<double>>--><!--Device-sensor-function getOrientation(rotationMatrix: Array<double>): Promise<Array<double>>-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 

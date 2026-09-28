@@ -12,6 +12,8 @@ Inherited from [DatePickerOptions](arkts-arkui-datepicker-comp-datepickeroptions
 
 **Since:** 8
 
+<!--Device-unnamed-declare interface DatePickerDialogOptions extends DatePickerOptions--><!--Device-unnamed-declare interface DatePickerDialogOptions extends DatePickerOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onCancel
@@ -27,6 +29,8 @@ Triggered when the "Cancel" button in the dialog box is tapped. Callback signatu
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DatePickerDialogOptions-onCancel?: VoidCallback--><!--Device-DatePickerDialogOptions-onCancel?: VoidCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -57,6 +61,8 @@ effect before **onDidAppear**.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DatePickerDialogOptions-onDidAppear?: VoidCallback--><!--Device-DatePickerDialogOptions-onDidAppear?: VoidCallback-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onDidDisappear
@@ -84,6 +90,8 @@ effect before **onDidAppear**.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DatePickerDialogOptions-onDidDisappear?: VoidCallback--><!--Device-DatePickerDialogOptions-onDidDisappear?: VoidCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -116,6 +124,8 @@ callbacks are not triggered.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DatePickerDialogOptions-onWillAppear?: VoidCallback--><!--Device-DatePickerDialogOptions-onWillAppear?: VoidCallback-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onWillDisappear
@@ -144,6 +154,8 @@ effect before **onDidAppear**.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DatePickerDialogOptions-onWillDisappear?: VoidCallback--><!--Device-DatePickerDialogOptions-onWillDisappear?: VoidCallback-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onAccept
@@ -165,6 +177,8 @@ Supported since API version 8 and deprecated since API version 10. Use **onDateA
 **Substitutes:** onDateAccept
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-DatePickerDialogOptions-onAccept?: (value: DatePickerResult) => void--><!--Device-DatePickerDialogOptions-onAccept?: (value: DatePickerResult) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -193,6 +207,8 @@ Supported since API version 8 and deprecated since API version 10. Use onDateCha
 **Substitutes:** onDateChange
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-DatePickerDialogOptions-onChange?: (value: DatePickerResult) => void--><!--Device-DatePickerDialogOptions-onChange?: (value: DatePickerResult) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -225,6 +241,8 @@ button style is set to the rounded rectangle ROUNDED_RECTANGLE, the button is st
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DatePickerDialogOptions-acceptButtonStyle?: PickerDialogButtonStyle--><!--Device-DatePickerDialogOptions-acceptButtonStyle?: PickerDialogButtonStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## alignment
@@ -247,6 +265,8 @@ Default value: **DialogAlignment.Default**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DatePickerDialogOptions-alignment?: DialogAlignment--><!--Device-DatePickerDialogOptions-alignment?: DialogAlignment-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -274,6 +294,8 @@ Set this parameter to **BlurStyle.NONE** to disable the background blur. When **
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DatePickerDialogOptions-backgroundBlurStyle?: BlurStyle--><!--Device-DatePickerDialogOptions-backgroundBlurStyle?: BlurStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## backgroundBlurStyleOptions
@@ -295,6 +317,8 @@ When not set, the default effect of **backgroundBlurStyle (BlurStyle.COMPONENT_U
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-DatePickerDialogOptions-backgroundBlurStyleOptions?: BackgroundBlurStyleOptions--><!--Device-DatePickerDialogOptions-backgroundBlurStyleOptions?: BackgroundBlurStyleOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -322,6 +346,8 @@ When **backgroundColor** is set to a non-transparent color, **backgroundBlurStyl
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DatePickerDialogOptions-backgroundColor?: ResourceColor--><!--Device-DatePickerDialogOptions-backgroundColor?: ResourceColor-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## backgroundEffect
@@ -343,6 +369,8 @@ When not set, this parameter does not take effect, and the dialog box background
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-DatePickerDialogOptions-backgroundEffect?: BackgroundEffectOptions--><!--Device-DatePickerDialogOptions-backgroundEffect?: BackgroundEffectOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -368,6 +396,8 @@ button style is set to the rounded rectangle ROUNDED_RECTANGLE, the button is st
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DatePickerDialogOptions-cancelButtonStyle?: PickerDialogButtonStyle--><!--Device-DatePickerDialogOptions-cancelButtonStyle?: PickerDialogButtonStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -396,6 +426,8 @@ Default value: **true**
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-DatePickerDialogOptions-canLoop?: boolean--><!--Device-DatePickerDialogOptions-canLoop?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## dateTimeOptions
@@ -421,6 +453,8 @@ Default value:
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DatePickerDialogOptions-dateTimeOptions?: DateTimeOptions--><!--Device-DatePickerDialogOptions-dateTimeOptions?: DateTimeOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -459,6 +493,8 @@ weight: FontWeight.Regular
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DatePickerDialogOptions-disappearTextStyle?: PickerTextStyle--><!--Device-DatePickerDialogOptions-disappearTextStyle?: PickerTextStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## enableHapticFeedback
@@ -494,6 +530,8 @@ supports it.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-DatePickerDialogOptions-enableHapticFeedback?: boolean--><!--Device-DatePickerDialogOptions-enableHapticFeedback?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## enableHoverMode
@@ -519,6 +557,8 @@ Default value: **false**
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-DatePickerDialogOptions-enableHoverMode?: boolean--><!--Device-DatePickerDialogOptions-enableHoverMode?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## hoverModeArea
@@ -540,6 +580,8 @@ Default value: **HoverModeAreaType.BOTTOM_SCREEN**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-DatePickerDialogOptions-hoverModeArea?: HoverModeAreaType--><!--Device-DatePickerDialogOptions-hoverModeArea?: HoverModeAreaType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -571,6 +613,8 @@ This attribute takes effect only in the Simplified Chinese and Traditional Chine
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DatePickerDialogOptions-lunar?: boolean--><!--Device-DatePickerDialogOptions-lunar?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## lunarSwitch
@@ -600,6 +644,8 @@ After the switch is turned on, it takes effect only in the Simplified Chinese an
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DatePickerDialogOptions-lunarSwitch?: boolean--><!--Device-DatePickerDialogOptions-lunarSwitch?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -631,6 +677,8 @@ strokeColor: Color.White
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-DatePickerDialogOptions-lunarSwitchStyle?: LunarSwitchStyle--><!--Device-DatePickerDialogOptions-lunarSwitchStyle?: LunarSwitchStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## maskRect
@@ -653,6 +701,8 @@ Default value: **{ x: 0, y: 0, width: '100%', height: '100%' }**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DatePickerDialogOptions-maskRect?: Rectangle--><!--Device-DatePickerDialogOptions-maskRect?: Rectangle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -677,6 +727,8 @@ Default value: **{ dx: 0 , dy: 0 }**
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DatePickerDialogOptions-offset?: Offset--><!--Device-DatePickerDialogOptions-offset?: Offset-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onDateAccept
@@ -699,6 +751,8 @@ When **showTime** is set to **true**, the hour and minute in **value** are those
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DatePickerDialogOptions-onDateAccept?: Callback<Date>--><!--Device-DatePickerDialogOptions-onDateAccept?: Callback<Date>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onDateChange
@@ -720,6 +774,8 @@ When **showTime** is set to **true**, the hour and minute in value are those sel
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DatePickerDialogOptions-onDateChange?: Callback<Date>--><!--Device-DatePickerDialogOptions-onDateChange?: Callback<Date>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -758,6 +814,8 @@ weight: FontWeight.Medium
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DatePickerDialogOptions-selectedTextStyle?: PickerTextStyle--><!--Device-DatePickerDialogOptions-selectedTextStyle?: PickerTextStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## shadow
@@ -777,6 +835,8 @@ On 2-in-1 devices, in the default scenario, the focused shadow value is **Shadow
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DatePickerDialogOptions-shadow?: ShadowOptions | ShadowStyle--><!--Device-DatePickerDialogOptions-shadow?: ShadowOptions | ShadowStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -811,6 +871,8 @@ the year, month, and day columns.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DatePickerDialogOptions-showTime?: boolean--><!--Device-DatePickerDialogOptions-showTime?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## systemMaterial
@@ -834,6 +896,8 @@ System material of the dialog box.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-DatePickerDialogOptions-systemMaterial?: SystemUiMaterial--><!--Device-DatePickerDialogOptions-systemMaterial?: SystemUiMaterial-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -872,6 +936,8 @@ weight: FontWeight.Regular
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DatePickerDialogOptions-textStyle?: PickerTextStyle--><!--Device-DatePickerDialogOptions-textStyle?: PickerTextStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## useMilitaryTime
@@ -901,5 +967,7 @@ When the displayed time picker uses the 12-hour format, the AM and PM indicators
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DatePickerDialogOptions-useMilitaryTime?: boolean--><!--Device-DatePickerDialogOptions-useMilitaryTime?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

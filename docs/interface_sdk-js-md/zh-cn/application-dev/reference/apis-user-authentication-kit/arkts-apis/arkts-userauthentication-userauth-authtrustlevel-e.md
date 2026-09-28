@@ -10,6 +10,8 @@ enum AuthTrustLevel
 
 **起始版本：** 8
 
+<!--Device-userAuth-enum AuthTrustLevel--><!--Device-userAuth-enum AuthTrustLevel-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 ## ATL1
@@ -22,7 +24,9 @@ ATL1 = 10000
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AuthTrustLevel-ATL1 = 10000--><!--Device-AuthTrustLevel-ATL1 = 10000-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -36,7 +40,9 @@ ATL2 = 20000
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AuthTrustLevel-ATL2 = 20000--><!--Device-AuthTrustLevel-ATL2 = 20000-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -50,7 +56,9 @@ ATL3 = 30000
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AuthTrustLevel-ATL3 = 30000--><!--Device-AuthTrustLevel-ATL3 = 30000-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -64,6 +72,8 @@ ATL4 = 40000
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AuthTrustLevel-ATL4 = 40000--><!--Device-AuthTrustLevel-ATL4 = 40000-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core

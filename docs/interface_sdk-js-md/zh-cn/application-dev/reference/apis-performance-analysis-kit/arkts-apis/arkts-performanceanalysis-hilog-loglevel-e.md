@@ -8,6 +8,8 @@ enum LogLevel
 
 **起始版本：** 7
 
+<!--Device-hilog-enum LogLevel--><!--Device-hilog-enum LogLevel-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiLog
 
 ## DEBUG
@@ -20,7 +22,9 @@ DEBUG = 3
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-LogLevel-DEBUG = 3--><!--Device-LogLevel-DEBUG = 3-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiLog
 
@@ -38,7 +42,9 @@ INFO = 4
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-LogLevel-INFO = 4--><!--Device-LogLevel-INFO = 4-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiLog
 
@@ -52,7 +58,9 @@ WARN = 5
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-LogLevel-WARN = 5--><!--Device-LogLevel-WARN = 5-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiLog
 
@@ -66,7 +74,9 @@ ERROR = 6
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-LogLevel-ERROR = 6--><!--Device-LogLevel-ERROR = 6-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiLog
 
@@ -80,6 +90,8 @@ FATAL = 7
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-LogLevel-FATAL = 7--><!--Device-LogLevel-FATAL = 7-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiLog

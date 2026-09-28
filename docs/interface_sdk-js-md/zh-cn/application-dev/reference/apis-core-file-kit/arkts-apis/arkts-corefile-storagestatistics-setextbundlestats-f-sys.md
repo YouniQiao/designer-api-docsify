@@ -24,6 +24,8 @@ function setExtBundleStats(userId: number, stats: ExtBundleStats): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-storageStatistics-function setExtBundleStats(userId: int, stats: ExtBundleStats): Promise<void>--><!--Device-storageStatistics-function setExtBundleStats(userId: int, stats: ExtBundleStats): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
 **系统接口：** 此接口为系统接口。

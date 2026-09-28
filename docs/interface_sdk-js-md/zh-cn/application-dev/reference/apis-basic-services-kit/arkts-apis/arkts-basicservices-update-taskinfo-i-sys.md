@@ -8,6 +8,8 @@ export interface TaskInfo
 
 **起始版本：** 9
 
+<!--Device-update-export interface TaskInfo--><!--Device-update-export interface TaskInfo-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ existTask: boolean
 
 **起始版本：** 9
 
+<!--Device-TaskInfo-existTask: boolean--><!--Device-TaskInfo-existTask: boolean-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -47,6 +51,8 @@ taskBody: TaskBody
 **类型：** [TaskBody](arkts-basicservices-update-taskbody-i-sys.md)
 
 **起始版本：** 9
+
+<!--Device-TaskInfo-taskBody: TaskBody--><!--Device-TaskInfo-taskBody: TaskBody-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
 

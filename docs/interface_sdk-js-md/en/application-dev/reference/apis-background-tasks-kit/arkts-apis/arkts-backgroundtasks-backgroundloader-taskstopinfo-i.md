@@ -8,6 +8,8 @@ Represents the background load task stop information, which is used to ON_STOP f
 
 **Since:** 26.2.0
 
+<!--Device-backgroundLoader-export interface TaskStopInfo--><!--Device-backgroundLoader-export interface TaskStopInfo-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
 ## Modules to Import
@@ -30,6 +32,8 @@ Ability name in the bundle.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-TaskStopInfo-abilityName: string--><!--Device-TaskStopInfo-abilityName: string-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
 ## stopCode
@@ -45,6 +49,8 @@ Stop code.
 **Since:** 26.2.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-TaskStopInfo-stopCode: StopCode--><!--Device-TaskStopInfo-stopCode: StopCode-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
@@ -62,6 +68,8 @@ Stop message.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-TaskStopInfo-stopMessage: string--><!--Device-TaskStopInfo-stopMessage: string-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
 ## taskId
@@ -77,5 +85,7 @@ Id of the background load task.
 **Since:** 26.2.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-TaskStopInfo-taskId: int--><!--Device-TaskStopInfo-taskId: int-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler

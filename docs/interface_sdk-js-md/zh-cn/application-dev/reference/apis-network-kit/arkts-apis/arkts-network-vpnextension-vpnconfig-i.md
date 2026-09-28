@@ -8,6 +8,8 @@ export interface VpnConfig
 
 **起始版本：** 11
 
+<!--Device-vpnExtension-export interface VpnConfig--><!--Device-vpnExtension-export interface VpnConfig-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 ## 导入模块
@@ -28,6 +30,8 @@ VPN虚拟网卡的IP地址。API version 23之前，最多支持64个IP地址；
 
 **起始版本：** 11
 
+<!--Device-VpnConfig-addresses: Array<LinkAddress>--><!--Device-VpnConfig-addresses: Array<LinkAddress>-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 ## blockedApplications
@@ -44,6 +48,8 @@ blockedApplications?: Array<string>
 
 **起始版本：** 11
 
+<!--Device-VpnConfig-blockedApplications?: Array<string>--><!--Device-VpnConfig-blockedApplications?: Array<string>-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 ## dnsAddresses
@@ -57,6 +63,8 @@ DNS服务器地址信息。当配置DNS服务器地址后，VPN启动状态下�
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 11
+
+<!--Device-VpnConfig-dnsAddresses?: Array<string>--><!--Device-VpnConfig-dnsAddresses?: Array<string>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -72,6 +80,8 @@ isBlocking?: boolean
 
 **起始版本：** 11
 
+<!--Device-VpnConfig-isBlocking?: boolean--><!--Device-VpnConfig-isBlocking?: boolean-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 ## isInternal
@@ -85,6 +95,8 @@ isInternal?: boolean
 **类型：** boolean
 
 **起始版本：** 11
+
+<!--Device-VpnConfig-isInternal?: boolean--><!--Device-VpnConfig-isInternal?: boolean-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -102,6 +114,8 @@ isIPv4Accepted?: boolean
 
 **起始版本：** 11
 
+<!--Device-VpnConfig-isIPv4Accepted?: boolean--><!--Device-VpnConfig-isIPv4Accepted?: boolean-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 ## isIPv6Accepted
@@ -118,6 +132,8 @@ isIPv6Accepted?: boolean
 
 **起始版本：** 11
 
+<!--Device-VpnConfig-isIPv6Accepted?: boolean--><!--Device-VpnConfig-isIPv6Accepted?: boolean-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 ## mtu
@@ -131,6 +147,8 @@ mtu?: number
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-VpnConfig-mtu?: int--><!--Device-VpnConfig-mtu?: int-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -146,6 +164,8 @@ VPN虚拟网卡的路由信息（API version 23前最多可配置1024条路由�
 
 **起始版本：** 11
 
+<!--Device-VpnConfig-routes?: Array<RouteInfo>--><!--Device-VpnConfig-routes?: Array<RouteInfo>-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 ## searchDomains
@@ -159,6 +179,8 @@ DNS的搜索域列表。
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 11
+
+<!--Device-VpnConfig-searchDomains?: Array<string>--><!--Device-VpnConfig-searchDomains?: Array<string>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -176,6 +198,8 @@ trustedApplications?: Array<string>
 
 **起始版本：** 11
 
+<!--Device-VpnConfig-trustedApplications?: Array<string>--><!--Device-VpnConfig-trustedApplications?: Array<string>-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 ## vpnId
@@ -189,5 +213,7 @@ VPN唯一标识。
 **类型：** string
 
 **起始版本：** 20
+
+<!--Device-VpnConfig-vpnId?: string--><!--Device-VpnConfig-vpnId?: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn

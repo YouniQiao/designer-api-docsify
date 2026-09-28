@@ -12,6 +12,8 @@
 
 **替代接口：** [hiTraceMeter](../../apis-performance-analysis-kit/arkts-apis/arkts-performanceanalysis-hitracemeter.md)
 
+<!--Device-unnamed-declare namespace bytrace--><!--Device-unnamed-declare namespace bytrace-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
 
 ## 导入模块

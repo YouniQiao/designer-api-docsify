@@ -10,6 +10,8 @@ interface FileInfo
 
 **废弃版本：** 23
 
+<!--Device-fileAccess-interface FileInfo--><!--Device-fileAccess-interface FileInfo-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -37,6 +39,8 @@ listFile(filter?: Filter): FileIterator
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FileInfo-listFile(filter?: Filter): FileIterator--><!--Device-FileInfo-listFile(filter?: Filter): FileIterator-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -140,6 +144,8 @@ scanFile(filter?: Filter): FileIterator
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FileInfo-scanFile(filter?: Filter): FileIterator--><!--Device-FileInfo-scanFile(filter?: Filter): FileIterator-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -246,6 +252,8 @@ fileName: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FileInfo-fileName: string--><!--Device-FileInfo-fileName: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -267,6 +275,8 @@ mimeType: string
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FileInfo-mimeType: string--><!--Device-FileInfo-mimeType: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -290,6 +300,8 @@ mode: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FileInfo-mode: number--><!--Device-FileInfo-mode: number-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -311,6 +323,8 @@ mtime: number
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FileInfo-mtime: number--><!--Device-FileInfo-mtime: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -334,6 +348,8 @@ relativePath: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FileInfo-relativePath: string--><!--Device-FileInfo-relativePath: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -356,6 +372,8 @@ size: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FileInfo-size: number--><!--Device-FileInfo-size: number-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -377,6 +395,8 @@ uri: string
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FileInfo-uri: string--><!--Device-FileInfo-uri: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 

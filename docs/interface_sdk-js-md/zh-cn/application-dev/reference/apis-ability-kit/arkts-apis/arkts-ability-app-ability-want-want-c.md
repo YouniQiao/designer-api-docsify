@@ -8,6 +8,8 @@ Want是对象间信息传递的载体，可以用于应用组件间的信息传�
 
 **起始版本：** 9
 
+<!--Device-unnamed-export default class Want--><!--Device-unnamed-export default class Want-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityBase
 
 ## 导入模块
@@ -28,7 +30,9 @@ abilityName?: string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Want-abilityName?: string--><!--Device-Want-abilityName?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -44,7 +48,9 @@ action?: string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Want-action?: string--><!--Device-Want-action?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -60,7 +66,9 @@ bundleName?: string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Want-bundleName?: string--><!--Device-Want-bundleName?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -76,7 +84,9 @@ deviceId?: string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Want-deviceId?: string--><!--Device-Want-deviceId?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -92,7 +102,9 @@ entities?: Array<string>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Want-entities?: Array<string>--><!--Device-Want-entities?: Array<string>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -110,7 +122,9 @@ readonly fds?: Record<string, number>
 
 **起始版本：** 15
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-Want-readonly fds?: Record<string, int>--><!--Device-Want-readonly fds?: Record<string, int>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -128,7 +142,9 @@ flags?: number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Want-flags?: int--><!--Device-Want-flags?: int-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -148,7 +164,9 @@ moduleName?: string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Want-moduleName?: string--><!--Device-Want-moduleName?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -199,6 +217,8 @@ parameters的Value值仅支持基本数据类型：String、Number、Boolean、O
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Want-parameters?: Record<string, Object>--><!--Device-Want-parameters?: Record<string, Object>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityBase
 
 ## type
@@ -213,7 +233,9 @@ type?: string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Want-type?: string--><!--Device-Want-type?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -229,7 +251,9 @@ uri?: string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Want-uri?: string--><!--Device-Want-uri?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 

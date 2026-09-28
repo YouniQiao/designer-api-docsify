@@ -20,6 +20,8 @@ function isNfcAvailable(): boolean
 
 **替代接口：** [canIUse](../../apis-arkui/arkts-apis/arkts-arkui-global-caniuse-f.md)("SystemCapability.Communication.NFC.Core")
 
+<!--Device-nfcController-function isNfcAvailable(): boolean--><!--Device-nfcController-function isNfcAvailable(): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.NFC.Core
 
 **返回值：**

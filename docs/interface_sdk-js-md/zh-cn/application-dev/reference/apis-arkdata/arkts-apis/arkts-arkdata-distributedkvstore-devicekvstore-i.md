@@ -16,6 +16,8 @@ interface DeviceKVStore extends SingleKVStore
 
 **起始版本：** 9
 
+<!--Device-distributedKVStore-interface DeviceKVStore extends SingleKVStore--><!--Device-distributedKVStore-interface DeviceKVStore extends SingleKVStore-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 ## 导入模块
@@ -35,6 +37,8 @@ get(key: string, callback: AsyncCallback<boolean | string | number | Uint8Array>
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DeviceKVStore-get(key: string, callback: AsyncCallback<boolean | string | long | double | Uint8Array>): void--><!--Device-DeviceKVStore-get(key: string, callback: AsyncCallback<boolean | string | long | double | Uint8Array>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -173,6 +177,8 @@ get(key: string): Promise<boolean | string | number | Uint8Array>
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DeviceKVStore-get(key: string): Promise<boolean | string | long | double | Uint8Array>--><!--Device-DeviceKVStore-get(key: string): Promise<boolean | string | long | double | Uint8Array>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -326,6 +332,8 @@ get(deviceId: string, key: string, callback: AsyncCallback<boolean | string | nu
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DeviceKVStore-get(deviceId: string, key: string, callback: AsyncCallback<boolean | string | long | double | Uint8Array>): void--><!--Device-DeviceKVStore-get(deviceId: string, key: string, callback: AsyncCallback<boolean | string | long | double | Uint8Array>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 **参数：**
@@ -474,6 +482,8 @@ get(deviceId: string, key: string): Promise<boolean | string | number | Uint8Arr
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DeviceKVStore-get(deviceId: string, key: string): Promise<boolean | string | long | double | Uint8Array>--><!--Device-DeviceKVStore-get(deviceId: string, key: string): Promise<boolean | string | long | double | Uint8Array>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 **参数：**
@@ -616,6 +626,8 @@ getEntries(keyPrefix: string, callback: AsyncCallback<Entry[]>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DeviceKVStore-getEntries(keyPrefix: string, callback: AsyncCallback<Entry[]>): void--><!--Device-DeviceKVStore-getEntries(keyPrefix: string, callback: AsyncCallback<Entry[]>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **参数：**
@@ -689,6 +701,8 @@ getEntries(keyPrefix: string): Promise<Entry[]>
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DeviceKVStore-getEntries(keyPrefix: string): Promise<Entry[]>--><!--Device-DeviceKVStore-getEntries(keyPrefix: string): Promise<Entry[]>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -772,6 +786,8 @@ getEntries(deviceId: string, keyPrefix: string, callback: AsyncCallback<Entry[]>
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DeviceKVStore-getEntries(deviceId: string, keyPrefix: string, callback: AsyncCallback<Entry[]>): void--><!--Device-DeviceKVStore-getEntries(deviceId: string, keyPrefix: string, callback: AsyncCallback<Entry[]>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
@@ -857,6 +873,8 @@ getEntries(deviceId: string, keyPrefix: string): Promise<Entry[]>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DeviceKVStore-getEntries(deviceId: string, keyPrefix: string): Promise<Entry[]>--><!--Device-DeviceKVStore-getEntries(deviceId: string, keyPrefix: string): Promise<Entry[]>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 **参数：**
@@ -935,6 +953,8 @@ getEntries(query: Query, callback: AsyncCallback<Entry[]>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DeviceKVStore-getEntries(query: Query, callback: AsyncCallback<Entry[]>): void--><!--Device-DeviceKVStore-getEntries(query: Query, callback: AsyncCallback<Entry[]>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **参数：**
@@ -1011,6 +1031,8 @@ getEntries(query: Query): Promise<Entry[]>
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DeviceKVStore-getEntries(query: Query): Promise<Entry[]>--><!--Device-DeviceKVStore-getEntries(query: Query): Promise<Entry[]>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -1097,6 +1119,8 @@ getEntries(deviceId: string, query: Query, callback: AsyncCallback<Entry[]>): vo
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DeviceKVStore-getEntries(deviceId: string, query: Query, callback: AsyncCallback<Entry[]>): void--><!--Device-DeviceKVStore-getEntries(deviceId: string, query: Query, callback: AsyncCallback<Entry[]>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
@@ -1187,6 +1211,8 @@ getEntries(deviceId: string, query: Query): Promise<Entry[]>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DeviceKVStore-getEntries(deviceId: string, query: Query): Promise<Entry[]>--><!--Device-DeviceKVStore-getEntries(deviceId: string, query: Query): Promise<Entry[]>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 **参数：**
@@ -1263,6 +1289,8 @@ getResultSet(keyPrefix: string, callback: AsyncCallback<KVStoreResultSet>): void
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DeviceKVStore-getResultSet(keyPrefix: string, callback: AsyncCallback<KVStoreResultSet>): void--><!--Device-DeviceKVStore-getResultSet(keyPrefix: string, callback: AsyncCallback<KVStoreResultSet>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -1346,6 +1374,8 @@ getResultSet(keyPrefix: string): Promise<KVStoreResultSet>
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DeviceKVStore-getResultSet(keyPrefix: string): Promise<KVStoreResultSet>--><!--Device-DeviceKVStore-getResultSet(keyPrefix: string): Promise<KVStoreResultSet>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -1436,6 +1466,8 @@ getResultSet(deviceId: string, keyPrefix: string, callback: AsyncCallback<KVStor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DeviceKVStore-getResultSet(deviceId: string, keyPrefix: string, callback: AsyncCallback<KVStoreResultSet>): void--><!--Device-DeviceKVStore-getResultSet(deviceId: string, keyPrefix: string, callback: AsyncCallback<KVStoreResultSet>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 **参数：**
@@ -1508,6 +1540,8 @@ getResultSet(deviceId: string, keyPrefix: string): Promise<KVStoreResultSet>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DeviceKVStore-getResultSet(deviceId: string, keyPrefix: string): Promise<KVStoreResultSet>--><!--Device-DeviceKVStore-getResultSet(deviceId: string, keyPrefix: string): Promise<KVStoreResultSet>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 **参数：**
@@ -1571,6 +1605,8 @@ getResultSet(query: Query, callback: AsyncCallback<KVStoreResultSet>): void
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DeviceKVStore-getResultSet(query: Query, callback: AsyncCallback<KVStoreResultSet>): void--><!--Device-DeviceKVStore-getResultSet(query: Query, callback: AsyncCallback<KVStoreResultSet>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -1657,6 +1693,8 @@ getResultSet(query: Query): Promise<KVStoreResultSet>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DeviceKVStore-getResultSet(query: Query): Promise<KVStoreResultSet>--><!--Device-DeviceKVStore-getResultSet(query: Query): Promise<KVStoreResultSet>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **参数：**
@@ -1740,6 +1778,8 @@ getResultSet(deviceId: string, query: Query, callback: AsyncCallback<KVStoreResu
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DeviceKVStore-getResultSet(deviceId: string, query: Query, callback: AsyncCallback<KVStoreResultSet>): void--><!--Device-DeviceKVStore-getResultSet(deviceId: string, query: Query, callback: AsyncCallback<KVStoreResultSet>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
@@ -1836,6 +1876,8 @@ getResultSet(deviceId: string, query: Query): Promise<KVStoreResultSet>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DeviceKVStore-getResultSet(deviceId: string, query: Query): Promise<KVStoreResultSet>--><!--Device-DeviceKVStore-getResultSet(deviceId: string, query: Query): Promise<KVStoreResultSet>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 **参数：**
@@ -1922,6 +1964,8 @@ getResultSize(query: Query, callback: AsyncCallback<number>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DeviceKVStore-getResultSize(query: Query, callback: AsyncCallback<int>): void--><!--Device-DeviceKVStore-getResultSize(query: Query, callback: AsyncCallback<int>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **参数：**
@@ -1995,6 +2039,8 @@ getResultSize(query: Query): Promise<number>
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DeviceKVStore-getResultSize(query: Query): Promise<int>--><!--Device-DeviceKVStore-getResultSize(query: Query): Promise<int>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -2077,6 +2123,8 @@ getResultSize(deviceId: string, query: Query, callback: AsyncCallback<number>): 
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DeviceKVStore-getResultSize(deviceId: string, query: Query, callback: AsyncCallback<int>): void--><!--Device-DeviceKVStore-getResultSize(deviceId: string, query: Query, callback: AsyncCallback<int>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
@@ -2161,6 +2209,8 @@ getResultSize(deviceId: string, query: Query): Promise<number>
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DeviceKVStore-getResultSize(deviceId: string, query: Query): Promise<int>--><!--Device-DeviceKVStore-getResultSize(deviceId: string, query: Query): Promise<int>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 

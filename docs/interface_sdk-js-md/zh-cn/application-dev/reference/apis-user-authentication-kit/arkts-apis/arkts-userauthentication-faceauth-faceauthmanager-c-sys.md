@@ -8,6 +8,8 @@ class FaceAuthManager
 
 **起始版本：** 9
 
+<!--Device-faceAuth-class FaceAuthManager--><!--Device-faceAuth-class FaceAuthManager-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.FaceAuth
 
 **系统接口：** 此接口为系统接口。
@@ -27,6 +29,8 @@ constructor()
 用于创建人脸认证管理器对象。
 
 **起始版本：** 9
+
+<!--Device-FaceAuthManager-constructor()--><!--Device-FaceAuthManager-constructor()-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.FaceAuth
 
@@ -52,6 +56,8 @@ setSurfaceId(surfaceId: string): void
 
 **需要权限：** ohos.permission.MANAGE_USER_IDM
 
+<!--Device-FaceAuthManager-setSurfaceId(surfaceId: string): void--><!--Device-FaceAuthManager-setSurfaceId(surfaceId: string): void-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.FaceAuth
 
 **系统接口：** 此接口为系统接口。
@@ -60,7 +66,7 @@ setSurfaceId(surfaceId: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| surfaceId | string | 是 | [XComponent](../../apis-arkui/arkts-components/arkts-arkui-xcomponent-comp.md#xcomponent)持有Surface的ID。用于在人脸录入过程中显示人脸预览画面。<br>**说明：** 需在XComponent完成初始化后，通过[getXComponentSurfaceId](../../apis-arkui/arkts-components/arkts-arkui-xcomponent-comp-xcomponentcontroller-c.md#getxcomponentsurfaceid)方法获取有效的surfaceId，若传入无效的surfaceId可能导致预览画面无法正常显示或接口调用失败。 |
+| surfaceId | string | 是 | [XComponent](../../apis-arkui/arkts-components/arkts-arkui-xcomponent-comp.md)持有Surface的ID。用于在人脸录入过程中显示人脸预览画面。<br>**说明：** 需在XComponent完成初始化后，通过[getXComponentSurfaceId](../../apis-arkui/arkts-components/arkts-arkui-xcomponent-comp-xcomponentcontroller-c.md#getxcomponentsurfaceid)方法获取有效的surfaceId，若传入无效的surfaceId可能导致预览画面无法正常显示或接口调用失败。 |
 
 **错误码：**
 

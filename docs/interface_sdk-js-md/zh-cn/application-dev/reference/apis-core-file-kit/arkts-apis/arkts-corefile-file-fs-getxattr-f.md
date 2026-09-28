@@ -16,6 +16,8 @@ declare function getxattr(path: string, key: string): Promise<string>
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare function getxattr(path: string, key: string): Promise<string>--><!--Device-unnamed-declare function getxattr(path: string, key: string): Promise<string>-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**

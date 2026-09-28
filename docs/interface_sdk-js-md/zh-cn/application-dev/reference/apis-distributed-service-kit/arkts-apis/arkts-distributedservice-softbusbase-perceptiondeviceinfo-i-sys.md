@@ -8,6 +8,8 @@ export interface PerceptionDeviceInfo
 
 **起始版本：** 26.0.1
 
+<!--Device-softbusBase-export interface PerceptionDeviceInfo--><!--Device-softbusBase-export interface PerceptionDeviceInfo-End-->
+
 **系统能力：** SystemCapability.Communication.SoftBus.Core
 
 **系统接口：** 此接口为系统接口。
@@ -31,6 +33,8 @@ customData: ArrayBuffer
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PerceptionDeviceInfo-customData: ArrayBuffer--><!--Device-PerceptionDeviceInfo-customData: ArrayBuffer-End-->
+
 **系统能力：** SystemCapability.Communication.SoftBus.Core
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ deviceId: ArrayBuffer
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PerceptionDeviceInfo-deviceId: ArrayBuffer--><!--Device-PerceptionDeviceInfo-deviceId: ArrayBuffer-End-->
+
 **系统能力：** SystemCapability.Communication.SoftBus.Core
 
 **系统接口：** 此接口为系统接口。
@@ -66,6 +72,8 @@ deviceType: number
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PerceptionDeviceInfo-deviceType: int--><!--Device-PerceptionDeviceInfo-deviceType: int-End-->
 
 **系统能力：** SystemCapability.Communication.SoftBus.Core
 

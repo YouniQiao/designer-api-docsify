@@ -18,6 +18,8 @@ function updatePrinterState(printerId: string, state: PrinterState, callback: As
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-print-function updatePrinterState(printerId: string, state: PrinterState, callback: AsyncCallback<void>): void--><!--Device-print-function updatePrinterState(printerId: string, state: PrinterState, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **系统接口：** 此接口为系统接口。
@@ -69,6 +71,8 @@ function updatePrinterState(printerId: string, state: PrinterState): Promise<voi
 **起始版本：** 10
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
+
+<!--Device-print-function updatePrinterState(printerId: string, state: PrinterState): Promise<void>--><!--Device-print-function updatePrinterState(printerId: string, state: PrinterState): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 

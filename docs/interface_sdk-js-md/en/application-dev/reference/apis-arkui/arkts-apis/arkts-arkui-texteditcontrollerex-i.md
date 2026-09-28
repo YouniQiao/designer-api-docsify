@@ -12,6 +12,8 @@ Inherits [TextBaseController](arkts-arkui-textbasecontroller-i.md).
 
 **Since:** 12
 
+<!--Device-unnamed-declare interface TextEditControllerEx extends TextBaseController--><!--Device-unnamed-declare interface TextEditControllerEx extends TextBaseController-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## getCaretOffset
@@ -27,6 +29,8 @@ Obtains the current position of the caret.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextEditControllerEx-getCaretOffset(): number--><!--Device-TextEditControllerEx-getCaretOffset(): number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,6 +54,8 @@ Obtains the preview text.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TextEditControllerEx-getPreviewText?(): PreviewText--><!--Device-TextEditControllerEx-getPreviewText?(): PreviewText-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -72,6 +78,8 @@ Obtains the editing status of the rich text.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TextEditControllerEx-isEditing(): boolean--><!--Device-TextEditControllerEx-isEditing(): boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -93,6 +101,8 @@ Sets the offset of the caret.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextEditControllerEx-setCaretOffset(offset: number): boolean--><!--Device-TextEditControllerEx-setCaretOffset(offset: number): boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -121,5 +131,7 @@ Stops editing.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextEditControllerEx-stopEditing(): void--><!--Device-TextEditControllerEx-stopEditing(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

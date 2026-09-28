@@ -23,6 +23,8 @@ function installPrivateCertificate(
 
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER
 
+<!--Device-certificateManager-function installPrivateCertificate(    keystore: Uint8Array,    keystorePwd: string,    certAlias: string,    callback: AsyncCallback<CMResult>  ): void--><!--Device-certificateManager-function installPrivateCertificate(    keystore: Uint8Array,    keystorePwd: string,    certAlias: string,    callback: AsyncCallback<CMResult>  ): void-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
 
 **参数：**
@@ -82,6 +84,8 @@ function installPrivateCertificate(keystore: Uint8Array, keystorePwd: string, ce
 **起始版本：** 11
 
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER
+
+<!--Device-certificateManager-function installPrivateCertificate(keystore: Uint8Array, keystorePwd: string, certAlias: string): Promise<CMResult>--><!--Device-certificateManager-function installPrivateCertificate(keystore: Uint8Array, keystorePwd: string, certAlias: string): Promise<CMResult>-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManager
 
@@ -147,6 +151,8 @@ function installPrivateCertificate(keystore: Uint8Array, keystorePwd: string, ce
 **起始版本：** 18
 
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER
+
+<!--Device-certificateManager-function installPrivateCertificate(keystore: Uint8Array, keystorePwd: string, certAlias: string, level: AuthStorageLevel): Promise<CMResult>--><!--Device-certificateManager-function installPrivateCertificate(keystore: Uint8Array, keystorePwd: string, certAlias: string, level: AuthStorageLevel): Promise<CMResult>-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManager
 

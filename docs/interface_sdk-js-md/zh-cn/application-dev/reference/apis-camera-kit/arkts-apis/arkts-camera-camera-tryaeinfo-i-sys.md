@@ -8,6 +8,8 @@ Describes the Try AE parameters. Try AE indicates that the hardware reports the 
 
 **起始版本：** 12
 
+<!--Device-camera-interface TryAEInfo--><!--Device-camera-interface TryAEInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ Timelapse capture interval.
 
 **起始版本：** 12
 
+<!--Device-TryAEInfo-readonly captureInterval?: int--><!--Device-TryAEInfo-readonly captureInterval?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ Determine whether try AE is done.
 **类型：** boolean
 
 **起始版本：** 12
+
+<!--Device-TryAEInfo-readonly isTryAEDone: boolean--><!--Device-TryAEInfo-readonly isTryAEDone: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -62,6 +68,8 @@ Determine whether AE hint is needed.
 
 **起始版本：** 12
 
+<!--Device-TryAEInfo-readonly isTryAEHintNeeded?: boolean--><!--Device-TryAEInfo-readonly isTryAEHintNeeded?: boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +85,8 @@ Timelapse preview type.
 **类型：** [TimeLapsePreviewType](arkts-camera-camera-timelapsepreviewtype-e-sys.md)
 
 **起始版本：** 12
+
+<!--Device-TryAEInfo-readonly previewType?: TimeLapsePreviewType--><!--Device-TryAEInfo-readonly previewType?: TimeLapsePreviewType-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

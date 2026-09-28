@@ -8,6 +8,8 @@ interface BatteryInfo
 
 **起始版本：** 26.0.0
 
+<!--Device-bas-interface BatteryInfo--><!--Device-bas-interface BatteryInfo-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ batteryLevel: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BatteryInfo-batteryLevel: int--><!--Device-BatteryInfo-batteryLevel: int-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ deviceId: BluetoothAddress
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BatteryInfo-deviceId: BluetoothAddress--><!--Device-BatteryInfo-deviceId: BluetoothAddress-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

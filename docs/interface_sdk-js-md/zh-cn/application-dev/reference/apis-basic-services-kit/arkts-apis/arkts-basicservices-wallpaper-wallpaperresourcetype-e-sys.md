@@ -8,6 +8,8 @@ enum WallpaperResourceType
 
 **起始版本：** 10
 
+<!--Device-wallpaper-enum WallpaperResourceType--><!--Device-wallpaper-enum WallpaperResourceType-End-->
+
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
 **系统接口：** 此接口为系统接口。
@@ -21,6 +23,8 @@ DEFAULT
 默认为图片资源。
 
 **起始版本：** 10
+
+<!--Device-WallpaperResourceType-DEFAULT--><!--Device-WallpaperResourceType-DEFAULT-End-->
 
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
@@ -36,6 +40,8 @@ PICTURE
 
 **起始版本：** 10
 
+<!--Device-WallpaperResourceType-PICTURE--><!--Device-WallpaperResourceType-PICTURE-End-->
+
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
 **系统接口：** 此接口为系统接口。
@@ -50,6 +56,8 @@ VIDEO
 
 **起始版本：** 10
 
+<!--Device-WallpaperResourceType-VIDEO--><!--Device-WallpaperResourceType-VIDEO-End-->
+
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
 **系统接口：** 此接口为系统接口。
@@ -63,6 +71,8 @@ PACKAGE
 包资源。
 
 **起始版本：** 10
+
+<!--Device-WallpaperResourceType-PACKAGE--><!--Device-WallpaperResourceType-PACKAGE-End-->
 
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 

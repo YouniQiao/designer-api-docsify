@@ -8,6 +8,8 @@ interface ExecuteResult
 
 **起始版本：** 11
 
+<!--Device-insightIntent-interface ExecuteResult--><!--Device-insightIntent-interface ExecuteResult-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块
@@ -29,6 +31,8 @@ interactionInfo?: InteractionInfo
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExecuteResult-interactionInfo?: InteractionInfo--><!--Device-ExecuteResult-interactionInfo?: InteractionInfo-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

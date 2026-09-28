@@ -8,6 +8,8 @@ WarpedRingParam 用于指定光环的半径、宽度、变化量、旋转、3D �
 
 **起始版本：** 26.0.1
 
+<!--Device-uiEffect-interface WarpedRingParam--><!--Device-uiEffect-interface WarpedRingParam-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ baseHalfWidth: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-WarpedRingParam-baseHalfWidth: double--><!--Device-WarpedRingParam-baseHalfWidth: double-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ noiseEvolution: number
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WarpedRingParam-noiseEvolution: double--><!--Device-WarpedRingParam-noiseEvolution: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -68,6 +74,8 @@ radius: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-WarpedRingParam-radius: double--><!--Device-WarpedRingParam-radius: double-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -85,6 +93,8 @@ rotate3DProgress: number
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WarpedRingParam-rotate3DProgress: double--><!--Device-WarpedRingParam-rotate3DProgress: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -104,6 +114,8 @@ rotateAngle: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-WarpedRingParam-rotateAngle: double--><!--Device-WarpedRingParam-rotateAngle: double-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -121,6 +133,8 @@ widthVariation: number
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WarpedRingParam-widthVariation: double--><!--Device-WarpedRingParam-widthVariation: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

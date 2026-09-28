@@ -22,6 +22,8 @@ function reportNetConnected(netHandle: NetHandle, callback: AsyncCallback<void>)
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO and ohos.permission.INTERNET
 
+<!--Device-connection-function reportNetConnected(netHandle: NetHandle, callback: AsyncCallback<void>): void--><!--Device-connection-function reportNetConnected(netHandle: NetHandle, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**
@@ -68,6 +70,8 @@ function reportNetConnected(netHandle: NetHandle): Promise<void>
 **起始版本：** 8
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO and ohos.permission.INTERNET
+
+<!--Device-connection-function reportNetConnected(netHandle: NetHandle): Promise<void>--><!--Device-connection-function reportNetConnected(netHandle: NetHandle): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 

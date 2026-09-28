@@ -10,6 +10,8 @@ interface SubscribeInfo
 
 **废弃版本：** 11
 
+<!--Device-deviceManager-interface SubscribeInfo--><!--Device-deviceManager-interface SubscribeInfo-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -34,6 +36,8 @@ capability: SubscribeCap
 
 **废弃版本：** 11
 
+<!--Device-SubscribeInfo-capability: SubscribeCap--><!--Device-SubscribeInfo-capability: SubscribeCap-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +55,8 @@ freq: ExchangeFreq
 **起始版本：** 7
 
 **废弃版本：** 11
+
+<!--Device-SubscribeInfo-freq: ExchangeFreq--><!--Device-SubscribeInfo-freq: ExchangeFreq-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -70,6 +76,8 @@ isSameAccount: boolean
 
 **废弃版本：** 11
 
+<!--Device-SubscribeInfo-isSameAccount: boolean--><!--Device-SubscribeInfo-isSameAccount: boolean-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -87,6 +95,8 @@ isWakeRemote: boolean
 **起始版本：** 7
 
 **废弃版本：** 11
+
+<!--Device-SubscribeInfo-isWakeRemote: boolean--><!--Device-SubscribeInfo-isWakeRemote: boolean-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -106,6 +116,8 @@ medium: ExchangeMedium
 
 **废弃版本：** 11
 
+<!--Device-SubscribeInfo-medium: ExchangeMedium--><!--Device-SubscribeInfo-medium: ExchangeMedium-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -124,6 +136,8 @@ mode: DiscoverMode
 
 **废弃版本：** 11
 
+<!--Device-SubscribeInfo-mode: DiscoverMode--><!--Device-SubscribeInfo-mode: DiscoverMode-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -141,6 +155,8 @@ subscribeId: number
 **起始版本：** 7
 
 **废弃版本：** 11
+
+<!--Device-SubscribeInfo-subscribeId: number--><!--Device-SubscribeInfo-subscribeId: number-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 

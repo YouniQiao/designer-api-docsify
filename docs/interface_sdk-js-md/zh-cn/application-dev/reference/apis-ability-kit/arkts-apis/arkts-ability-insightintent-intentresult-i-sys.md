@@ -8,6 +8,8 @@ interface IntentResult<T>
 
 **起始版本：** 20
 
+<!--Device-insightIntent-interface IntentResult<T>--><!--Device-insightIntent-interface IntentResult<T>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块
@@ -29,6 +31,8 @@ interactionInfo?: InteractionInfo
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-IntentResult-interactionInfo?: InteractionInfo--><!--Device-IntentResult-interactionInfo?: InteractionInfo-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

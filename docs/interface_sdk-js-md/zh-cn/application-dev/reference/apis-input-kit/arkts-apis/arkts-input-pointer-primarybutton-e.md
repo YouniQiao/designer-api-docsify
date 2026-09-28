@@ -8,6 +8,8 @@ enum PrimaryButton
 
 **起始版本：** 10
 
+<!--Device-pointer-enum PrimaryButton--><!--Device-pointer-enum PrimaryButton-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## LEFT
@@ -20,6 +22,8 @@ LEFT = 0
 
 **起始版本：** 10
 
+<!--Device-PrimaryButton-LEFT = 0--><!--Device-PrimaryButton-LEFT = 0-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## RIGHT
@@ -31,5 +35,7 @@ RIGHT = 1
 鼠标右键。
 
 **起始版本：** 10
+
+<!--Device-PrimaryButton-RIGHT = 1--><!--Device-PrimaryButton-RIGHT = 1-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer

@@ -20,6 +20,8 @@ function acquireFormData(formId: string, callback: AsyncCallback<Record<string, 
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-formHost-function acquireFormData(formId: string, callback: AsyncCallback<Record<string, Object>>): void--><!--Device-formHost-function acquireFormData(formId: string, callback: AsyncCallback<Record<string, Object>>): void-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -78,6 +80,8 @@ function acquireFormData(formId: string): Promise<Record<string, Object>>
 **需要权限：** ohos.permission.REQUIRE_FORM
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-formHost-function acquireFormData(formId: string): Promise<Record<string, Object>>--><!--Device-formHost-function acquireFormData(formId: string): Promise<Record<string, Object>>-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 

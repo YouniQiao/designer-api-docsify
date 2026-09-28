@@ -12,6 +12,8 @@ export interface SubscribeBarometerOptions
 
 **替代接口：** [BAROMETER](arkts-sensorservice-sensor-sensorid-e.md#barometer)
 
+<!--Device-unnamed-export interface SubscribeBarometerOptions--><!--Device-unnamed-export interface SubscribeBarometerOptions-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
 ## 导入模块
@@ -35,6 +37,8 @@ fail?: (data: string, code: number) => void
 **替代接口：** [on](arkts-sensorservice-sensor-on-f.md)
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-SubscribeBarometerOptions-fail?: (data: string, code: number) => void--><!--Device-SubscribeBarometerOptions-fail?: (data: string, code: number) => void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
@@ -60,6 +64,8 @@ success: (data: BarometerResponse) => void
 **替代接口：** [on](arkts-sensorservice-sensor-on-f.md)
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-SubscribeBarometerOptions-success: (data: BarometerResponse) => void--><!--Device-SubscribeBarometerOptions-success: (data: BarometerResponse) => void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 

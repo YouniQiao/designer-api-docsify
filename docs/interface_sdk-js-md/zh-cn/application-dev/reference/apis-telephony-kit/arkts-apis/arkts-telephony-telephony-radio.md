@@ -4,6 +4,8 @@
 
 **起始版本：** 6
 
+<!--Device-unnamed-declare namespace radio--><!--Device-unnamed-declare namespace radio-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## 导入模块

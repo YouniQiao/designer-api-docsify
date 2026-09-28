@@ -8,6 +8,8 @@ enum CornerPos
 
 **起始版本：** 12
 
+<!--Device-drawing-enum CornerPos--><!--Device-drawing-enum CornerPos-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## TOP_LEFT_POS
@@ -19,6 +21,8 @@ TOP_LEFT_POS = 0
 左上角圆角位置。
 
 **起始版本：** 12
+
+<!--Device-CornerPos-TOP_LEFT_POS = 0--><!--Device-CornerPos-TOP_LEFT_POS = 0-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -32,6 +36,8 @@ TOP_RIGHT_POS = 1
 
 **起始版本：** 12
 
+<!--Device-CornerPos-TOP_RIGHT_POS = 1--><!--Device-CornerPos-TOP_RIGHT_POS = 1-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## BOTTOM_RIGHT_POS
@@ -44,6 +50,8 @@ BOTTOM_RIGHT_POS = 2
 
 **起始版本：** 12
 
+<!--Device-CornerPos-BOTTOM_RIGHT_POS = 2--><!--Device-CornerPos-BOTTOM_RIGHT_POS = 2-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## BOTTOM_LEFT_POS
@@ -55,5 +63,7 @@ BOTTOM_LEFT_POS = 3
 左下角圆角位置。
 
 **起始版本：** 12
+
+<!--Device-CornerPos-BOTTOM_LEFT_POS = 3--><!--Device-CornerPos-BOTTOM_LEFT_POS = 3-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing

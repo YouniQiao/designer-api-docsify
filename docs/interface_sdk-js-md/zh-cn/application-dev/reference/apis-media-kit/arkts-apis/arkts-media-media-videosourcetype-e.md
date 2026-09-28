@@ -8,6 +8,8 @@ enum VideoSourceType
 
 **起始版本：** 9
 
+<!--Device-media-enum VideoSourceType--><!--Device-media-enum VideoSourceType-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 ## VIDEO_SOURCE_TYPE_SURFACE_YUV
@@ -20,6 +22,8 @@ VIDEO_SOURCE_TYPE_SURFACE_YUV = 0
 
 **起始版本：** 9
 
+<!--Device-VideoSourceType-VIDEO_SOURCE_TYPE_SURFACE_YUV = 0--><!--Device-VideoSourceType-VIDEO_SOURCE_TYPE_SURFACE_YUV = 0-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 ## VIDEO_SOURCE_TYPE_SURFACE_ES
@@ -31,5 +35,7 @@ VIDEO_SOURCE_TYPE_SURFACE_ES = 1
 输入surface中携带的是ES data。
 
 **起始版本：** 9
+
+<!--Device-VideoSourceType-VIDEO_SOURCE_TYPE_SURFACE_ES = 1--><!--Device-VideoSourceType-VIDEO_SOURCE_TYPE_SURFACE_ES = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder

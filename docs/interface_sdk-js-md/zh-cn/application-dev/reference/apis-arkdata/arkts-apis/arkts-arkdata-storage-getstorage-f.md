@@ -19,6 +19,8 @@ function getStorage(path: string, callback: AsyncCallback<Storage>): void
 
 **替代接口：** getPreferences
 
+<!--Device-storage-function getStorage(path: string, callback: AsyncCallback<Storage>): void--><!--Device-storage-function getStorage(path: string, callback: AsyncCallback<Storage>): void-End-->
+
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
@@ -42,6 +44,8 @@ function getStorage(path: string): Promise<Storage>
 **废弃版本：** 9
 
 **替代接口：** getPreferences
+
+<!--Device-storage-function getStorage(path: string): Promise<Storage>--><!--Device-storage-function getStorage(path: string): Promise<Storage>-End-->
 
 **参数：**
 

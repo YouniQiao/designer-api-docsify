@@ -8,6 +8,8 @@ interface LocalEnhancementTaskState
 
 **起始版本：** 26.0.1
 
+<!--Device-photoAccessHelper-interface LocalEnhancementTaskState--><!--Device-photoAccessHelper-interface LocalEnhancementTaskState-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -31,6 +33,8 @@ progress: number
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-LocalEnhancementTaskState-progress: int--><!--Device-LocalEnhancementTaskState-progress: int-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

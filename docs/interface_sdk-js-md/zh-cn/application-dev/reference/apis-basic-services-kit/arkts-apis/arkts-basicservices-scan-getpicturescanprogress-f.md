@@ -18,6 +18,8 @@ function getPictureScanProgress(scannerId: string): Promise<PictureScanProgress>
 
 **需要权限：** ohos.permission.PRINT
 
+<!--Device-scan-function getPictureScanProgress(scannerId: string): Promise<PictureScanProgress>--><!--Device-scan-function getPictureScanProgress(scannerId: string): Promise<PictureScanProgress>-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **参数：**

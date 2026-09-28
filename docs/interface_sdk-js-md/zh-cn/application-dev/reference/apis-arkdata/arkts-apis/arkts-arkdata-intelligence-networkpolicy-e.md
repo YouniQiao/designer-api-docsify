@@ -8,6 +8,8 @@ enum NetworkPolicy
 
 **起始版本：** 26.0.0
 
+<!--Device-intelligence-enum NetworkPolicy--><!--Device-intelligence-enum NetworkPolicy-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
 ## WIFI_ONLY
@@ -22,6 +24,8 @@ WIFI_ONLY = 0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-NetworkPolicy-WIFI_ONLY = 0--><!--Device-NetworkPolicy-WIFI_ONLY = 0-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
 ## WIFI_AND_CELLULAR
@@ -35,5 +39,7 @@ WIFI_AND_CELLULAR = 1
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-NetworkPolicy-WIFI_AND_CELLULAR = 1--><!--Device-NetworkPolicy-WIFI_AND_CELLULAR = 1-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataIntelligence.Core

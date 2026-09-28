@@ -8,6 +8,8 @@ Defines the ImageAttachmentInterface.
 
 **Since:** 12
 
+<!--Device-unnamed-declare interface ImageAttachmentInterface--><!--Device-unnamed-declare interface ImageAttachmentInterface-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## colorFilter
@@ -26,6 +28,8 @@ Color filter effect of the image in the styled string. If this parameter is not 
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-ImageAttachmentInterface-colorFilter?: ColorFilterType--><!--Device-ImageAttachmentInterface-colorFilter?: ColorFilterType-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## layoutStyle
@@ -43,6 +47,8 @@ Image layout. If this parameter is not passed, the default layout is used (the m
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ImageAttachmentInterface-layoutStyle?: ImageAttachmentLayoutStyle--><!--Device-ImageAttachmentInterface-layoutStyle?: ImageAttachmentLayoutStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,6 +70,8 @@ Default value: **ImageFit.Cover**
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ImageAttachmentInterface-objectFit?: ImageFit--><!--Device-ImageAttachmentInterface-objectFit?: ImageFit-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## resizable
@@ -81,6 +89,8 @@ Resizable image options of the styled string.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.1.
+
+<!--Device-ImageAttachmentInterface-resizable?: ResizableOptions--><!--Device-ImageAttachmentInterface-resizable?: ResizableOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -102,6 +112,8 @@ The default value of size is related to the value of **objectFit**. Different **
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ImageAttachmentInterface-size?: SizeOptions--><!--Device-ImageAttachmentInterface-size?: SizeOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## value
@@ -119,6 +131,8 @@ Image data source.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ImageAttachmentInterface-value: PixelMap--><!--Device-ImageAttachmentInterface-value: PixelMap-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -139,5 +153,7 @@ Default value: **ImageSpanAlignment.BOTTOM**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ImageAttachmentInterface-verticalAlign?: ImageSpanAlignment--><!--Device-ImageAttachmentInterface-verticalAlign?: ImageSpanAlignment-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

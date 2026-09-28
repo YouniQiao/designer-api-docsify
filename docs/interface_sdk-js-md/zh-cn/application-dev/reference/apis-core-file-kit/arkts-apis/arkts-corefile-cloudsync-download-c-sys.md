@@ -8,6 +8,8 @@ class Download
 
 **起始版本：** 10
 
+<!--Device-cloudSync-class Download--><!--Device-cloudSync-class Download-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **系统接口：** 此接口为系统接口。
@@ -27,6 +29,8 @@ constructor()
 云文件下载流程的构造函数，用于获取Download类的实例。
 
 **起始版本：** 10
+
+<!--Device-Download-constructor()--><!--Device-Download-constructor()-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -49,6 +53,8 @@ off(evt: 'progress', callback: (pg: DownloadProgress) => void): void
 **起始版本：** 10
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC
+
+<!--Device-Download-off(evt: 'progress', callback: (pg: DownloadProgress) => void): void--><!--Device-Download-off(evt: 'progress', callback: (pg: DownloadProgress) => void): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -98,6 +104,8 @@ off(evt: 'progress'): void
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC
 
+<!--Device-Download-off(evt: 'progress'): void--><!--Device-Download-off(evt: 'progress'): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **系统接口：** 此接口为系统接口。
@@ -141,6 +149,8 @@ on(evt: 'progress', callback: (pg: DownloadProgress) => void): void
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC
 
+<!--Device-Download-on(evt: 'progress', callback: (pg: DownloadProgress) => void): void--><!--Device-Download-on(evt: 'progress', callback: (pg: DownloadProgress) => void): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **系统接口：** 此接口为系统接口。
@@ -182,6 +192,8 @@ start(uri: string): Promise<void>
 **起始版本：** 10
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC
+
+<!--Device-Download-start(uri: string): Promise<void>--><!--Device-Download-start(uri: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -242,6 +254,8 @@ start(uri: string, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC
 
+<!--Device-Download-start(uri: string, callback: AsyncCallback<void>): void--><!--Device-Download-start(uri: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **系统接口：** 此接口为系统接口。
@@ -295,6 +309,8 @@ stop(uri: string): Promise<void>
 **起始版本：** 10
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC
+
+<!--Device-Download-stop(uri: string): Promise<void>--><!--Device-Download-stop(uri: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -352,6 +368,8 @@ stop(uri: string, callback: AsyncCallback<void>): void
 **起始版本：** 10
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC
+
+<!--Device-Download-stop(uri: string, callback: AsyncCallback<void>): void--><!--Device-Download-stop(uri: string, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 

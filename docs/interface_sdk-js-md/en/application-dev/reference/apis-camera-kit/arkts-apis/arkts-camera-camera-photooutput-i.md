@@ -10,6 +10,8 @@ PhotoOutput implements output information used in a photo session. It inherits f
 
 **Since:** 10
 
+<!--Device-camera-interface PhotoOutput extends CameraOutput--><!--Device-camera-interface PhotoOutput extends CameraOutput-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## Modules to Import
@@ -28,7 +30,9 @@ Captures a photo with the default photo capture parameters. This API uses an asy
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+
+<!--Device-PhotoOutput-capture(callback: AsyncCallback<void>): void--><!--Device-PhotoOutput-capture(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -73,7 +77,9 @@ Captures a photo with the default photo capture parameters. This API uses a prom
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+
+<!--Device-PhotoOutput-capture(): Promise<void>--><!--Device-PhotoOutput-capture(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -116,7 +122,9 @@ Captures a photo with the specified photo capture parameters. This API uses an a
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+
+<!--Device-PhotoOutput-capture(setting: PhotoCaptureSetting, callback: AsyncCallback<void>): void--><!--Device-PhotoOutput-capture(setting: PhotoCaptureSetting, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -174,7 +182,9 @@ Captures a photo with the specified photo capture parameters. This API uses a pr
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+
+<!--Device-PhotoOutput-capture(setting: PhotoCaptureSetting): Promise<void>--><!--Device-PhotoOutput-capture(setting: PhotoCaptureSetting): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -235,7 +245,9 @@ Enables or disables automatic extended gain map delivery.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+
+<!--Device-PhotoOutput-enableAutoExtendedGainmapDelivery(enabled: boolean): void--><!--Device-PhotoOutput-enableAutoExtendedGainmapDelivery(enabled: boolean): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -282,7 +294,9 @@ Before calling this API, check whether moving photo capture is supported by call
 
 **Since:** 13
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+
+<!--Device-PhotoOutput-enableMirror(enabled: boolean): void--><!--Device-PhotoOutput-enableMirror(enabled: boolean): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -328,7 +342,9 @@ Enables or disables the feature of taking moving photos.
 
 **Required permissions:** ohos.permission.MICROPHONE
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+
+<!--Device-PhotoOutput-enableMovingPhoto(enabled: boolean): void--><!--Device-PhotoOutput-enableMovingPhoto(enabled: boolean): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -372,7 +388,9 @@ Obtains the profile that takes effect currently.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+
+<!--Device-PhotoOutput-getActiveProfile(): Profile--><!--Device-PhotoOutput-getActiveProfile(): Profile-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -423,7 +441,9 @@ natural orientation. For example, the rear camera sensor of a bar-type phone is 
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+
+<!--Device-PhotoOutput-getPhotoRotation(deviceDegree?: int): ImageRotation--><!--Device-PhotoOutput-getPhotoRotation(deviceDegree?: int): ImageRotation-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -488,7 +508,9 @@ Obtains the supported video codec types of moving photos.
 
 **Since:** 13
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+
+<!--Device-PhotoOutput-getSupportedMovingPhotoVideoCodecTypes(): Array<VideoCodecType>--><!--Device-PhotoOutput-getSupportedMovingPhotoVideoCodecTypes(): Array<VideoCodecType>-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -525,7 +547,9 @@ Check if the automatic auxiliary photo delivery is supported.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.1.
+
+<!--Device-PhotoOutput-isAutoAuxiliaryPhotoDeliverySupported(auxPhotoType: CameraAuxiliaryPhotoType): boolean--><!--Device-PhotoOutput-isAutoAuxiliaryPhotoDeliverySupported(auxPhotoType: CameraAuxiliaryPhotoType): boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -559,7 +583,9 @@ Checks whether automatic extended gain map delivery is supported.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+
+<!--Device-PhotoOutput-isAutoExtendedGainmapDeliverySupported(): boolean--><!--Device-PhotoOutput-isAutoExtendedGainmapDeliverySupported(): boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -598,7 +624,9 @@ Checks whether mirror photography is supported.
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+
+<!--Device-PhotoOutput-isMirrorSupported(): boolean--><!--Device-PhotoOutput-isMirrorSupported(): boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -627,7 +655,9 @@ Checks whether taking moving photos is supported.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+
+<!--Device-PhotoOutput-isMovingPhotoSupported(): boolean--><!--Device-PhotoOutput-isMovingPhotoSupported(): boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -671,7 +701,9 @@ Checks whether the specified photo quality prioritization strategy is supported.
 
 **Since:** 21
 
-**Atomic service API:** This API can be used in atomic services since API version 21.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 21.
+
+<!--Device-PhotoOutput-isPhotoQualityPrioritizationSupported(qualityPrioritization: PhotoQualityPrioritization): boolean--><!--Device-PhotoOutput-isPhotoQualityPrioritizationSupported(qualityPrioritization: PhotoQualityPrioritization): boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -725,6 +757,8 @@ Unsubscribes from the events of returning available photos.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-PhotoOutput-off(type: 'photoAvailable', callback?: AsyncCallback<Photo>): void--><!--Device-PhotoOutput-off(type: 'photoAvailable', callback?: AsyncCallback<Photo>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
@@ -765,6 +799,8 @@ Unsubscribes from photo asset available events.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-PhotoOutput-off(type: 'photoAssetAvailable', callback?: AsyncCallback<photoAccessHelper.PhotoAsset>): void--><!--Device-PhotoOutput-off(type: 'photoAssetAvailable', callback?: AsyncCallback<photoAccessHelper.PhotoAsset>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
@@ -793,6 +829,8 @@ Unsubscribes from capture start events.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-PhotoOutput-off(type: 'captureStartWithInfo', callback?: AsyncCallback<CaptureStartInfo>): void--><!--Device-PhotoOutput-off(type: 'captureStartWithInfo', callback?: AsyncCallback<CaptureStartInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -825,6 +863,8 @@ Unsubscribes from frame shutter events.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-PhotoOutput-off(type: 'frameShutter', callback?: AsyncCallback<FrameShutterInfo>): void--><!--Device-PhotoOutput-off(type: 'frameShutter', callback?: AsyncCallback<FrameShutterInfo>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
@@ -853,6 +893,8 @@ Unsubscribes from frame shutter end events.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-PhotoOutput-off(type: 'frameShutterEnd', callback?: AsyncCallback<FrameShutterEndInfo>): void--><!--Device-PhotoOutput-off(type: 'frameShutterEnd', callback?: AsyncCallback<FrameShutterEndInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -883,6 +925,8 @@ Unsubscribes from capture end events.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-PhotoOutput-off(type: 'captureEnd', callback?: AsyncCallback<CaptureEndInfo>): void--><!--Device-PhotoOutput-off(type: 'captureEnd', callback?: AsyncCallback<CaptureEndInfo>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
@@ -911,6 +955,8 @@ Unsubscribes from capture ready events.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-PhotoOutput-off(type: 'captureReady', callback?: AsyncCallback<void>): void--><!--Device-PhotoOutput-off(type: 'captureReady', callback?: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -941,6 +987,8 @@ Unsubscribes from estimated capture duration events.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-PhotoOutput-off(type: 'estimatedCaptureDuration', callback?: AsyncCallback<double>): void--><!--Device-PhotoOutput-off(type: 'estimatedCaptureDuration', callback?: AsyncCallback<double>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
@@ -969,6 +1017,8 @@ Unsubscribes from PhotoOutput error events.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-PhotoOutput-off(type: 'error', callback?: ErrorCallback): void--><!--Device-PhotoOutput-off(type: 'error', callback?: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -1005,6 +1055,8 @@ Unsubscribes from capture start events.
 
 **Substitutes:** [off](#offcapturestartwithinfo)(type: 'captureStartWithInfo', callback?: AsyncCallback&lt;CaptureStartInfo&gt;)
 
+<!--Device-PhotoOutput-off(type: 'captureStart', callback?: AsyncCallback<number>): void--><!--Device-PhotoOutput-off(type: 'captureStart', callback?: AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
@@ -1034,7 +1086,9 @@ Unsubscribes from the events of returning full-quality images and uncompressed i
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 23.
+
+<!--Device-PhotoOutput-offCapturePhotoAvailable(callback?: Callback<CapturePhoto>): void--><!--Device-PhotoOutput-offCapturePhotoAvailable(callback?: Callback<CapturePhoto>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -1074,6 +1128,8 @@ Subscribes to the events of returning available photos. This API uses an asynchr
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-PhotoOutput-on(type: 'photoAvailable', callback: AsyncCallback<Photo>): void--><!--Device-PhotoOutput-on(type: 'photoAvailable', callback: AsyncCallback<Photo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -1120,6 +1176,8 @@ Subscribes to photo asset available events. This API uses an asynchronous callba
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-PhotoOutput-on(type: 'photoAssetAvailable', callback: AsyncCallback<photoAccessHelper.PhotoAsset>): void--><!--Device-PhotoOutput-on(type: 'photoAssetAvailable', callback: AsyncCallback<photoAccessHelper.PhotoAsset>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
@@ -1165,6 +1223,8 @@ Subscribes to capture start events. This API uses an asynchronous callback to re
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-PhotoOutput-on(type: 'captureStartWithInfo', callback: AsyncCallback<CaptureStartInfo>): void--><!--Device-PhotoOutput-on(type: 'captureStartWithInfo', callback: AsyncCallback<CaptureStartInfo>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
@@ -1203,6 +1263,8 @@ Subscribes to frame shutter events. This API uses an asynchronous callback to re
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-PhotoOutput-on(type: 'frameShutter', callback: AsyncCallback<FrameShutterInfo>): void--><!--Device-PhotoOutput-on(type: 'frameShutter', callback: AsyncCallback<FrameShutterInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -1248,6 +1310,8 @@ Subscribes to frame shutter end events. This API uses an asynchronous callback t
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-PhotoOutput-on(type: 'frameShutterEnd', callback: AsyncCallback<FrameShutterEndInfo>): void--><!--Device-PhotoOutput-on(type: 'frameShutterEnd', callback: AsyncCallback<FrameShutterEndInfo>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
@@ -1290,6 +1354,8 @@ Subscribes to capture end events. This API uses an asynchronous callback to retu
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-PhotoOutput-on(type: 'captureEnd', callback: AsyncCallback<CaptureEndInfo>): void--><!--Device-PhotoOutput-on(type: 'captureEnd', callback: AsyncCallback<CaptureEndInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -1335,6 +1401,8 @@ Subscribes to capture ready events. This API uses an asynchronous callback to re
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-PhotoOutput-on(type: 'captureReady', callback: AsyncCallback<void>): void--><!--Device-PhotoOutput-on(type: 'captureReady', callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
@@ -1377,6 +1445,8 @@ Subscribes to estimated capture duration events. This API uses an asynchronous c
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-PhotoOutput-on(type: 'estimatedCaptureDuration', callback: AsyncCallback<double>): void--><!--Device-PhotoOutput-on(type: 'estimatedCaptureDuration', callback: AsyncCallback<double>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -1421,6 +1491,8 @@ Subscribes to PhotoOutput error events. This API uses an asynchronous callback t
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-PhotoOutput-on(type: 'error', callback: ErrorCallback): void--><!--Device-PhotoOutput-on(type: 'error', callback: ErrorCallback): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
@@ -1461,6 +1533,8 @@ Subscribes to capture start events. This API uses an asynchronous callback to re
 **Deprecated since:** 11
 
 **Substitutes:** [on](#oncapturestartwithinfo)(type: 'captureStartWithInfo', callback: AsyncCallback&lt;CaptureStartInfo&gt;)
+
+<!--Device-PhotoOutput-on(type: 'captureStart', callback: AsyncCallback<number>): void--><!--Device-PhotoOutput-on(type: 'captureStart', callback: AsyncCallback<number>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -1507,7 +1581,9 @@ Subscribes to the events of returning full-quality images and uncompressed image
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 23.
+
+<!--Device-PhotoOutput-onCapturePhotoAvailable(callback: Callback<CapturePhoto>): void--><!--Device-PhotoOutput-onCapturePhotoAvailable(callback: Callback<CapturePhoto>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -1544,7 +1620,9 @@ Enable or disable auto auxiliary photo delivery.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.1.
+
+<!--Device-PhotoOutput-setAutoAuxiliaryPhotosDeliveryEnabled(auxPhotoTypes: CameraAuxiliaryPhotoType[], enable: boolean): void--><!--Device-PhotoOutput-setAutoAuxiliaryPhotosDeliveryEnabled(auxPhotoTypes: CameraAuxiliaryPhotoType[], enable: boolean): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -1573,7 +1651,9 @@ Sets a video codec type for moving photos.
 
 **Since:** 13
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+
+<!--Device-PhotoOutput-setMovingPhotoVideoCodecType(codecType: VideoCodecType): void--><!--Device-PhotoOutput-setMovingPhotoVideoCodecType(codecType: VideoCodecType): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -1609,7 +1689,9 @@ Before setting the strategy, you can call [isPhotoQualityPrioritizationSupported
 
 **Since:** 21
 
-**Atomic service API:** This API can be used in atomic services since API version 21.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 21.
+
+<!--Device-PhotoOutput-setPhotoQualityPrioritization(qualityPrioritization: PhotoQualityPrioritization): void--><!--Device-PhotoOutput-setPhotoQualityPrioritization(qualityPrioritization: PhotoQualityPrioritization): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

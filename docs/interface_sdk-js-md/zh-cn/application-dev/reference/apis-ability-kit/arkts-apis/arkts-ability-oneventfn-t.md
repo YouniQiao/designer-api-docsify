@@ -10,6 +10,8 @@ type OnEventFn = (event: CliToolEvent) => void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-unnamed-type OnEventFn = (event: CliToolEvent) => void--><!--Device-unnamed-type OnEventFn = (event: CliToolEvent) => void-End-->
+
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 **参数：**

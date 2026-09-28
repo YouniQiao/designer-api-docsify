@@ -10,6 +10,8 @@ interface SettingItem
 
 **起始版本：** 23
 
+<!--Device-avMusicTemplate-interface SettingItem--><!--Device-avMusicTemplate-interface SettingItem-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## 导入模块
@@ -32,6 +34,8 @@ desc: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SettingItem-desc: string--><!--Device-SettingItem-desc: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## id
@@ -47,6 +51,8 @@ id: string
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SettingItem-id: string--><!--Device-SettingItem-id: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -66,6 +72,8 @@ mediaId: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SettingItem-mediaId: string--><!--Device-SettingItem-mediaId: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## settingType
@@ -81,6 +89,8 @@ settingType?: SettingType
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SettingItem-settingType?: SettingType--><!--Device-SettingItem-settingType?: SettingType-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -102,6 +112,8 @@ settingValue?: string | boolean | SettingContent[] | WantAgent
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SettingItem-settingValue?: string | boolean | SettingContent[] | WantAgent--><!--Device-SettingItem-settingValue?: string | boolean | SettingContent[] | WantAgent-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## title
@@ -117,5 +129,7 @@ title: string
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SettingItem-title: string--><!--Device-SettingItem-title: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate

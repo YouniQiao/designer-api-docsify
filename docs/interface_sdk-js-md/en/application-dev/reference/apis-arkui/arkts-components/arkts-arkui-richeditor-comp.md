@@ -6,7 +6,7 @@
 > 
 > - This component is supported since API version 10. Newly added content in later versions is marked with a superscript to indicate the version in which it was introduced.
 > 
-> - This component supports [WithTheme](arkts-arkui-withtheme-comp.md#with_themedefines-withtheme-component) since API version 26.0.0.
+> - This component supports [WithTheme](arkts-arkui-withtheme-comp.md) since API version 26.0.0.
 
 ## Child Components
 
@@ -25,6 +25,8 @@ Called when create RichEditor.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-RichEditorInterface-(value: RichEditorOptions): RichEditorAttribute--><!--Device-RichEditorInterface-(value: RichEditorOptions): RichEditorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,6 +49,8 @@ Called when create RichEditor.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-RichEditorInterface-(options: RichEditorStyledStringOptions): RichEditorAttribute--><!--Device-RichEditorInterface-(options: RichEditorStyledStringOptions): RichEditorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

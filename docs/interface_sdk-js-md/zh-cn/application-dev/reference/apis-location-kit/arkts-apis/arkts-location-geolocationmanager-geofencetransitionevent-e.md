@@ -8,6 +8,8 @@ export enum GeofenceTransitionEvent
 
 **起始版本：** 12
 
+<!--Device-geoLocationManager-export enum GeofenceTransitionEvent--><!--Device-geoLocationManager-export enum GeofenceTransitionEvent-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 ## GEOFENCE_TRANSITION_EVENT_ENTER
@@ -19,6 +21,8 @@ GEOFENCE_TRANSITION_EVENT_ENTER = 1
 该事件表示设备从地理围栏外进入地理围栏内。
 
 **起始版本：** 12
+
+<!--Device-GeofenceTransitionEvent-GEOFENCE_TRANSITION_EVENT_ENTER = 1--><!--Device-GeofenceTransitionEvent-GEOFENCE_TRANSITION_EVENT_ENTER = 1-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geofence
 
@@ -32,6 +36,8 @@ GEOFENCE_TRANSITION_EVENT_EXIT = 2
 
 **起始版本：** 12
 
+<!--Device-GeofenceTransitionEvent-GEOFENCE_TRANSITION_EVENT_EXIT = 2--><!--Device-GeofenceTransitionEvent-GEOFENCE_TRANSITION_EVENT_EXIT = 2-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 ## GEOFENCE_TRANSITION_EVENT_DWELL
@@ -43,5 +49,7 @@ GEOFENCE_TRANSITION_EVENT_DWELL = 4
 该事件表示设备在地理围栏范围内，且持续徘徊超过10秒。
 
 **起始版本：** 12
+
+<!--Device-GeofenceTransitionEvent-GEOFENCE_TRANSITION_EVENT_DWELL = 4--><!--Device-GeofenceTransitionEvent-GEOFENCE_TRANSITION_EVENT_DWELL = 4-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geofence

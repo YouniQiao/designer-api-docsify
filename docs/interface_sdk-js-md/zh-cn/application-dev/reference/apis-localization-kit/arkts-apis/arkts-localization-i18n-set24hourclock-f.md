@@ -22,6 +22,8 @@ export function set24HourClock(option: boolean): boolean
 
 **需要权限：** ohos.permission.UPDATE_CONFIGURATION
 
+<!--Device-i18n-export function set24HourClock(option: boolean): boolean--><!--Device-i18n-export function set24HourClock(option: boolean): boolean-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 **参数：**

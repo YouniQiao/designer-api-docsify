@@ -8,6 +8,8 @@ export interface UkeyInfo
 
 **起始版本：** 22
 
+<!--Device-certificateManager-export interface UkeyInfo--><!--Device-certificateManager-export interface UkeyInfo-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
 
 ## 导入模块
@@ -27,5 +29,7 @@ certPurpose?: CertificatePurpose
 **类型：** [CertificatePurpose](arkts-devicecertificate-certificatemanager-certificatepurpose-e.md)
 
 **起始版本：** 22
+
+<!--Device-UkeyInfo-certPurpose?: CertificatePurpose--><!--Device-UkeyInfo-certPurpose?: CertificatePurpose-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManager

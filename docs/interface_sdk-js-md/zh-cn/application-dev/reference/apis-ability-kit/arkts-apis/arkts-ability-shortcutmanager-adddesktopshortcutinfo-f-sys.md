@@ -18,6 +18,8 @@ function addDesktopShortcutInfo(shortcutInfo: ShortcutInfo, userId: number): Pro
 
 **需要权限：** ohos.permission.MANAGE_SHORTCUTS
 
+<!--Device-shortcutManager-function addDesktopShortcutInfo(shortcutInfo: ShortcutInfo, userId: int): Promise<void>--><!--Device-shortcutManager-function addDesktopShortcutInfo(shortcutInfo: ShortcutInfo, userId: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
 **系统接口：** 此接口为系统接口。

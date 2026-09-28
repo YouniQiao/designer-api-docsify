@@ -16,6 +16,8 @@ function getStorageDataDir(): Promise<string>
 
 **起始版本：** 8
 
+<!--Device-Environment-function getStorageDataDir(): Promise<string>--><!--Device-Environment-function getStorageDataDir(): Promise<string>-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.Environment
 
 **系统接口：** 此接口为系统接口。
@@ -46,6 +48,8 @@ function getStorageDataDir(callback: AsyncCallback<string>): void
 异步方法获取内存存储根目录，使用callback异步回调。
 
 **起始版本：** 8
+
+<!--Device-Environment-function getStorageDataDir(callback: AsyncCallback<string>): void--><!--Device-Environment-function getStorageDataDir(callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.Environment
 

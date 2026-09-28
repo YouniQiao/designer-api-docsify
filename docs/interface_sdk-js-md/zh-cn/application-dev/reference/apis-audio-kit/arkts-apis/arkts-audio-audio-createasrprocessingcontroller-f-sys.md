@@ -16,6 +16,8 @@ function createAsrProcessingController(audioCapturer: AudioCapturer): AsrProcess
 
 **起始版本：** 12
 
+<!--Device-audio-function createAsrProcessingController(audioCapturer: AudioCapturer): AsrProcessingController--><!--Device-audio-function createAsrProcessingController(audioCapturer: AudioCapturer): AsrProcessingController-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **系统接口：** 此接口为系统接口。
@@ -87,6 +89,8 @@ function createAsrProcessingController(audioCapturer: AudioCapturer): AsrProcess
 获取自动语音识别（ASR）处理控制器。
 
 **起始版本：** 12
+
+<!--Device-audio-function createAsrProcessingController(audioCapturer: AudioCapturer): AsrProcessingController | null--><!--Device-audio-function createAsrProcessingController(audioCapturer: AudioCapturer): AsrProcessingController | null-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 

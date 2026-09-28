@@ -14,6 +14,8 @@ Generates an **edgeWidths** object with the specified edge width for all edges.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-unnamed-export function edgeWidths(all: number): Edges<number>--><!--Device-unnamed-export function edgeWidths(all: number): Edges<number>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

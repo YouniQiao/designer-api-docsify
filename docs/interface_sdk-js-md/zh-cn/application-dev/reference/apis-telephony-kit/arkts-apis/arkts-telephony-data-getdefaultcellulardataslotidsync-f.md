@@ -16,6 +16,8 @@ function getDefaultCellularDataSlotIdSync(): number
 
 **起始版本：** 9
 
+<!--Device-data-function getDefaultCellularDataSlotIdSync(): int--><!--Device-data-function getDefaultCellularDataSlotIdSync(): int-End-->
+
 **系统能力：** SystemCapability.Telephony.CellularData
 
 **返回值：**

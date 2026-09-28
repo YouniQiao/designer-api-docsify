@@ -8,6 +8,8 @@ export interface HttpRequestOptions
 
 **起始版本：** 6
 
+<!--Device-http-export interface HttpRequestOptions--><!--Device-http-export interface HttpRequestOptions-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块
@@ -27,6 +29,8 @@ addressFamily?: AddressFamily
 **类型：** [AddressFamily](arkts-network-http-addressfamily-e.md)
 
 **起始版本：** 15
+
+<!--Device-HttpRequestOptions-addressFamily?: AddressFamily--><!--Device-HttpRequestOptions-addressFamily?: AddressFamily-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -48,6 +52,8 @@ HTTP请求体内容。设置该字段后，框架会优先将该字段作为请�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HttpRequestOptions-body?: string | Object | ArrayBuffer--><!--Device-HttpRequestOptions-body?: string | Object | ArrayBuffer-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## caData
@@ -65,6 +71,8 @@ caData?: string
 **起始版本：** 20
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-HttpRequestOptions-caData?: string--><!--Device-HttpRequestOptions-caData?: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -84,6 +92,8 @@ caPath?: string
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-HttpRequestOptions-caPath?: string--><!--Device-HttpRequestOptions-caPath?: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## certificatePinning
@@ -98,6 +108,8 @@ certificatePinning?: CertificatePinning[]
 
 **起始版本：** 12
 
+<!--Device-HttpRequestOptions-certificatePinning?: CertificatePinning | CertificatePinning[]--><!--Device-HttpRequestOptions-certificatePinning?: CertificatePinning | CertificatePinning[]-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## clientCert
@@ -111,6 +123,8 @@ clientCert?: ClientCert
 **类型：** [ClientCert](arkts-network-http-clientcert-i.md)
 
 **起始版本：** 11
+
+<!--Device-HttpRequestOptions-clientCert?: ClientCert--><!--Device-HttpRequestOptions-clientCert?: ClientCert-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -128,6 +142,8 @@ clientEncCert?: ClientCert
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-HttpRequestOptions-clientEncCert?: ClientCert--><!--Device-HttpRequestOptions-clientEncCert?: ClientCert-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## connectTimeout
@@ -142,7 +158,9 @@ connectTimeout?: number
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-HttpRequestOptions-connectTimeout?: int--><!--Device-HttpRequestOptions-connectTimeout?: int-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -162,6 +180,8 @@ customMethod?: string
 
 **起始版本：** 23
 
+<!--Device-HttpRequestOptions-customMethod?: string--><!--Device-HttpRequestOptions-customMethod?: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## dnsOverHttps
@@ -177,6 +197,8 @@ dnsOverHttps?: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-HttpRequestOptions-dnsOverHttps?: string--><!--Device-HttpRequestOptions-dnsOverHttps?: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -195,6 +217,8 @@ dnsServers?: Array<string>
 
 **起始版本：** 11
 
+<!--Device-HttpRequestOptions-dnsServers?: Array<string>--><!--Device-HttpRequestOptions-dnsServers?: Array<string>-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## enablePartialChain
@@ -211,6 +235,8 @@ enablePartialChain?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HttpRequestOptions-enablePartialChain?: boolean--><!--Device-HttpRequestOptions-enablePartialChain?: boolean-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## expectDataType
@@ -225,7 +251,9 @@ expectDataType?: HttpDataType
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-HttpRequestOptions-expectDataType?: HttpDataType--><!--Device-HttpRequestOptions-expectDataType?: HttpDataType-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -261,7 +289,9 @@ extraData?: string | Object | ArrayBuffer
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-HttpRequestOptions-extraData?: string | Object | ArrayBuffer--><!--Device-HttpRequestOptions-extraData?: string | Object | ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -281,7 +311,9 @@ header字段支持JSON格式如 [完整示例](../../../reference/apis-network-k
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-HttpRequestOptions-header?: Object--><!--Device-HttpRequestOptions-header?: Object-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -301,6 +333,8 @@ inactivityMs?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HttpRequestOptions-inactivityMs?: int--><!--Device-HttpRequestOptions-inactivityMs?: int-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## maxLimit
@@ -316,6 +350,8 @@ maxLimit?: number
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-HttpRequestOptions-maxLimit?: int--><!--Device-HttpRequestOptions-maxLimit?: int-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -334,6 +370,8 @@ maxRedirects?: number
 
 **起始版本：** 23
 
+<!--Device-HttpRequestOptions-maxRedirects?: int--><!--Device-HttpRequestOptions-maxRedirects?: int-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## method
@@ -348,7 +386,9 @@ method?: RequestMethod
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-HttpRequestOptions-method?: RequestMethod--><!--Device-HttpRequestOptions-method?: RequestMethod-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -364,6 +404,8 @@ multiFormDataList?: Array<MultiFormData>
 
 **起始版本：** 11
 
+<!--Device-HttpRequestOptions-multiFormDataList?: Array<MultiFormData>--><!--Device-HttpRequestOptions-multiFormDataList?: Array<MultiFormData>-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## pathPreference
@@ -377,6 +419,8 @@ pathPreference?: PathPreference
 **类型：** [PathPreference](arkts-network-http-pathpreference-t.md)
 
 **起始版本：** 23
+
+<!--Device-HttpRequestOptions-pathPreference?: PathPreference--><!--Device-HttpRequestOptions-pathPreference?: PathPreference-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -392,7 +436,9 @@ HTTP/HTTPS请求并发优先级，值越大优先级越高，范围[1,1000]，�
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-HttpRequestOptions-priority?: int--><!--Device-HttpRequestOptions-priority?: int-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -414,6 +460,8 @@ queryParams?: string | QueryParamObject
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HttpRequestOptions-queryParams?: string | QueryParamObject--><!--Device-HttpRequestOptions-queryParams?: string | QueryParamObject-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## readTimeout
@@ -430,7 +478,9 @@ readTimeout?: number
 
 **起始版本：** 6
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-HttpRequestOptions-readTimeout?: int--><!--Device-HttpRequestOptions-readTimeout?: int-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -447,6 +497,8 @@ remoteValidation?: RemoteValidation
 **起始版本：** 18
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-HttpRequestOptions-remoteValidation?: RemoteValidation--><!--Device-HttpRequestOptions-remoteValidation?: RemoteValidation-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -465,6 +517,8 @@ resumeFrom?: number
 
 **起始版本：** 11
 
+<!--Device-HttpRequestOptions-resumeFrom?: long--><!--Device-HttpRequestOptions-resumeFrom?: long-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## resumeTo
@@ -481,6 +535,8 @@ resumeTo?: number
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-HttpRequestOptions-resumeTo?: long--><!--Device-HttpRequestOptions-resumeTo?: long-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -500,6 +556,8 @@ HTTP请求是否复用连接。默认值为true，表示复用已有的连接；
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HttpRequestOptions-reuseConnections?: boolean--><!--Device-HttpRequestOptions-reuseConnections?: boolean-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## serverAuthentication
@@ -515,6 +573,8 @@ serverAuthentication?: ServerAuthentication
 **起始版本：** 18
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-HttpRequestOptions-serverAuthentication?: ServerAuthentication--><!--Device-HttpRequestOptions-serverAuthentication?: ServerAuthentication-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -532,6 +592,8 @@ sniHostName?: string
 
 **起始版本：** 23
 
+<!--Device-HttpRequestOptions-sniHostName?: string--><!--Device-HttpRequestOptions-sniHostName?: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## sslType
@@ -547,6 +609,8 @@ sslType?: SslType
 **起始版本：** 20
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-HttpRequestOptions-sslType?: SslType--><!--Device-HttpRequestOptions-sslType?: SslType-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -564,6 +628,8 @@ TLS配置。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-HttpRequestOptions-tlsOptions?: TlsOptions--><!--Device-HttpRequestOptions-tlsOptions?: TlsOptions-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## usingCache
@@ -578,7 +644,9 @@ usingCache?: boolean
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-HttpRequestOptions-usingCache?: boolean--><!--Device-HttpRequestOptions-usingCache?: boolean-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -594,7 +662,9 @@ HTTP请求使用的协议版本。未指定时，由系统自动协商最适合�
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-HttpRequestOptions-usingProtocol?: HttpProtocol--><!--Device-HttpRequestOptions-usingProtocol?: HttpProtocol-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -614,7 +684,9 @@ HTTP代理配置，该项不配置时默认使用系统代理。
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-HttpRequestOptions-usingProxy?: boolean | HttpProxy--><!--Device-HttpRequestOptions-usingProxy?: boolean | HttpProxy-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -633,5 +705,7 @@ SOCKS5代理配置，该项不配置时不启动SOCKS5代理。
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HttpRequestOptions-usingSocks5Proxy?: Socks5Proxy--><!--Device-HttpRequestOptions-usingSocks5Proxy?: Socks5Proxy-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack

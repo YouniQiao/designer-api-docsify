@@ -18,6 +18,8 @@ function getDistributedDeviceList(): Promise<Array<string>>
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function getDistributedDeviceList(): Promise<Array<string>>--><!--Device-notificationManager-function getDistributedDeviceList(): Promise<Array<string>>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。

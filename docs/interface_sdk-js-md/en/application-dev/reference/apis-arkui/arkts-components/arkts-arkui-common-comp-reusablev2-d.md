@@ -20,4 +20,6 @@ options: Configuration parameters of the reusable custom component, used to conf
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-unnamed-declare const ReusableV2: ClassDecorator & ((options: ReusableOptions) => ClassDecorator)--><!--Device-unnamed-declare const ReusableV2: ClassDecorator & ((options: ReusableOptions) => ClassDecorator)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

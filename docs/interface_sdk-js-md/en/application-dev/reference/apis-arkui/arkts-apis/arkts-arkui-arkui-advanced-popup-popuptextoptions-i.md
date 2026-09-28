@@ -8,6 +8,8 @@ Provides text style settings.
 
 **Since:** 11
 
+<!--Device-unnamed-export interface PopupTextOptions--><!--Device-unnamed-export interface PopupTextOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -34,6 +36,8 @@ Default value: **$r('sys.color.ohos_id_color_text_secondary')**
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PopupTextOptions-fontColor?: ResourceColor--><!--Device-PopupTextOptions-fontColor?: ResourceColor-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## fontSize
@@ -57,6 +61,8 @@ Value range of number values: (0, +∞)
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PopupTextOptions-fontSize?: number | string | Resource--><!--Device-PopupTextOptions-fontSize?: number | string | Resource-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -82,6 +88,8 @@ Default value: **FontWeight.Regular**
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PopupTextOptions-fontWeight?: number | FontWeight | string--><!--Device-PopupTextOptions-fontWeight?: number | FontWeight | string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## text
@@ -99,5 +107,7 @@ Text content.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PopupTextOptions-text: ResourceStr--><!--Device-PopupTextOptions-text: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

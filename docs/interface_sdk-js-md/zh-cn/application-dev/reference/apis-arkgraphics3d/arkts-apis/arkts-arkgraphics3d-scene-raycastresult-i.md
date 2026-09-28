@@ -10,6 +10,8 @@ export interface RaycastResult
 
 **起始版本：** 20
 
+<!--Device-unnamed-export interface RaycastResult--><!--Device-unnamed-export interface RaycastResult-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## centerDistance
@@ -23,6 +25,8 @@ centerDistance: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-RaycastResult-centerDistance: double--><!--Device-RaycastResult-centerDistance: double-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -38,6 +42,8 @@ hitPosition: Position3
 
 **起始版本：** 20
 
+<!--Device-RaycastResult-hitPosition: Position3--><!--Device-RaycastResult-hitPosition: Position3-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## node
@@ -51,5 +57,7 @@ node: Node
 **类型：** [Node](arkts-arkgraphics3d-scenenodes-node-i.md)
 
 **起始版本：** 20
+
+<!--Device-RaycastResult-node: Node--><!--Device-RaycastResult-node: Node-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

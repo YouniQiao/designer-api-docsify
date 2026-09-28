@@ -14,6 +14,8 @@ Font类用于描述字型绘制时所使用的属性（如大小、字体、粗�
 
 **起始版本：** 11
 
+<!--Device-drawing-class Font--><!--Device-drawing-class Font-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## 导入模块
@@ -32,7 +34,9 @@ countText(text: string): number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Font-countText(text: string): int--><!--Device-Font-countText(text: string): int-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -75,6 +79,8 @@ createPathForGlyph(index: number): Path
 **起始版本：** 18
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Font-createPathForGlyph(index: number): Path--><!--Device-Font-createPathForGlyph(index: number): Path-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -121,7 +127,9 @@ enableEmbolden(isEmbolden: boolean): void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Font-enableEmbolden(isEmbolden: boolean): void--><!--Device-Font-enableEmbolden(isEmbolden: boolean): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -156,7 +164,9 @@ enableLinearMetrics(isLinearMetrics: boolean): void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Font-enableLinearMetrics(isLinearMetrics: boolean): void--><!--Device-Font-enableLinearMetrics(isLinearMetrics: boolean): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -191,7 +201,9 @@ enableSubpixel(isSubpixel: boolean): void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Font-enableSubpixel(isSubpixel: boolean): void--><!--Device-Font-enableSubpixel(isSubpixel: boolean): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -227,6 +239,8 @@ getBounds(glyphs: Array<number>): Array<common2D.Rect>
 **起始版本：** 18
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Font-getBounds(glyphs: Array<number>): Array<common2D.Rect>--><!--Device-Font-getBounds(glyphs: Array<number>): Array<common2D.Rect>-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -269,6 +283,8 @@ getEdging(): FontEdging
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
+<!--Device-Font-getEdging(): FontEdging--><!--Device-Font-getEdging(): FontEdging-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
@@ -297,6 +313,8 @@ getHinting(): FontHinting
 **起始版本：** 12
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Font-getHinting(): FontHinting--><!--Device-Font-getHinting(): FontHinting-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -327,6 +345,8 @@ getMetrics(): FontMetrics
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
+<!--Device-Font-getMetrics(): FontMetrics--><!--Device-Font-getMetrics(): FontMetrics-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
@@ -354,7 +374,9 @@ getScaleX(): number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Font-getScaleX(): double--><!--Device-Font-getScaleX(): double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -384,7 +406,9 @@ getSize(): number
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Font-getSize(): double--><!--Device-Font-getSize(): double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -414,7 +438,9 @@ getSkewX(): number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Font-getSkewX(): double--><!--Device-Font-getSkewX(): double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -445,6 +471,8 @@ getTextPath(text: string, byteLength: number, x: number, y: number): Path
 **起始版本：** 18
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Font-getTextPath(text: string, byteLength: number, x: number, y: number): Path--><!--Device-Font-getTextPath(text: string, byteLength: number, x: number, y: number): Path-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -501,6 +529,8 @@ getTextPathWithFallback(text: string, byteLength: number, x: number, y: number):
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Font-getTextPathWithFallback(text: string, byteLength: number, x: number, y: number): Path--><!--Device-Font-getTextPathWithFallback(text: string, byteLength: number, x: number, y: number): Path-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -553,6 +583,8 @@ getTypeface(): Typeface
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
+<!--Device-Font-getTypeface(): Typeface--><!--Device-Font-getTypeface(): Typeface-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
@@ -581,6 +613,8 @@ getWidths(glyphs: Array<number>): Array<number>
 **起始版本：** 12
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Font-getWidths(glyphs: Array<number>): Array<number>--><!--Device-Font-getWidths(glyphs: Array<number>): Array<number>-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -626,7 +660,9 @@ isBaselineSnap(): boolean
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Font-isBaselineSnap(): boolean--><!--Device-Font-isBaselineSnap(): boolean-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -657,7 +693,9 @@ isEmbeddedBitmaps(): boolean
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Font-isEmbeddedBitmaps(): boolean--><!--Device-Font-isEmbeddedBitmaps(): boolean-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -688,7 +726,9 @@ isEmbolden(): boolean
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Font-isEmbolden(): boolean--><!--Device-Font-isEmbolden(): boolean-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -718,7 +758,9 @@ isForceAutoHinting(): boolean
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Font-isForceAutoHinting(): boolean--><!--Device-Font-isForceAutoHinting(): boolean-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -749,7 +791,9 @@ isLinearMetrics(): boolean
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Font-isLinearMetrics(): boolean--><!--Device-Font-isLinearMetrics(): boolean-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -779,7 +823,9 @@ isSubpixel(): boolean
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Font-isSubpixel(): boolean--><!--Device-Font-isSubpixel(): boolean-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -809,7 +855,9 @@ isThemeFontFollowed(): boolean
 
 **起始版本：** 15
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Font-isThemeFontFollowed(): boolean--><!--Device-Font-isThemeFontFollowed(): boolean-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -839,7 +887,9 @@ measureSingleCharacter(text: string): number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Font-measureSingleCharacter(text: string): double--><!--Device-Font-measureSingleCharacter(text: string): double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -886,7 +936,9 @@ measureSingleCharacterWithFeatures(text: string, features: Array<FontFeature>): 
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Font-measureSingleCharacterWithFeatures(text: string, features: Array<FontFeature>): double--><!--Device-Font-measureSingleCharacterWithFeatures(text: string, features: Array<FontFeature>): double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -941,7 +993,9 @@ measureText(text: string, encoding: TextEncoding): number
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Font-measureText(text: string, encoding: TextEncoding): double--><!--Device-Font-measureText(text: string, encoding: TextEncoding): double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -985,6 +1039,8 @@ measureTextWithFallback(text: string, encoding: TextEncoding): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Font-measureTextWithFallback(text: string, encoding: TextEncoding): number--><!--Device-Font-measureTextWithFallback(text: string, encoding: TextEncoding): number-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -1016,7 +1072,9 @@ setBaselineSnap(isBaselineSnap: boolean): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Font-setBaselineSnap(isBaselineSnap: boolean): void--><!--Device-Font-setBaselineSnap(isBaselineSnap: boolean): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1052,7 +1110,9 @@ setEdging(edging: FontEdging): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Font-setEdging(edging: FontEdging): void--><!--Device-Font-setEdging(edging: FontEdging): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1087,7 +1147,9 @@ setEmbeddedBitmaps(isEmbeddedBitmaps: boolean): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Font-setEmbeddedBitmaps(isEmbeddedBitmaps: boolean): void--><!--Device-Font-setEmbeddedBitmaps(isEmbeddedBitmaps: boolean): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1124,7 +1186,9 @@ setForceAutoHinting(isForceAutoHinting: boolean): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Font-setForceAutoHinting(isForceAutoHinting: boolean): void--><!--Device-Font-setForceAutoHinting(isForceAutoHinting: boolean): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1161,7 +1225,9 @@ setHinting(hinting: FontHinting): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Font-setHinting(hinting: FontHinting): void--><!--Device-Font-setHinting(hinting: FontHinting): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1196,7 +1262,9 @@ setScaleX(scaleX: number): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Font-setScaleX(scaleX: double): void--><!--Device-Font-setScaleX(scaleX: double): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1244,7 +1312,9 @@ setSize(textSize: number): void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Font-setSize(textSize: double): void--><!--Device-Font-setSize(textSize: double): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1279,7 +1349,9 @@ setSkewX(skewX: number): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Font-setSkewX(skewX: double): void--><!--Device-Font-setSkewX(skewX: double): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1327,7 +1399,9 @@ setThemeFontFollowed(followed: boolean): void
 
 **起始版本：** 15
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Font-setThemeFontFollowed(followed: boolean): void--><!--Device-Font-setThemeFontFollowed(followed: boolean): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1363,7 +1437,9 @@ setTypeface(typeface: Typeface): void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Font-setTypeface(typeface: Typeface): void--><!--Device-Font-setTypeface(typeface: Typeface): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1399,6 +1475,8 @@ textToGlyphs(text: string, glyphCount?: number): Array<number>
 **起始版本：** 12
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Font-textToGlyphs(text: string, glyphCount?: number): Array<number>--><!--Device-Font-textToGlyphs(text: string, glyphCount?: number): Array<number>-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1443,6 +1521,8 @@ textToGlyphsWithFallback(text: string, glyphCount?: number): Array<TypefaceFallb
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Font-textToGlyphsWithFallback(text: string, glyphCount?: number): Array<TypefaceFallbackInfo>--><!--Device-Font-textToGlyphsWithFallback(text: string, glyphCount?: number): Array<TypefaceFallbackInfo>-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

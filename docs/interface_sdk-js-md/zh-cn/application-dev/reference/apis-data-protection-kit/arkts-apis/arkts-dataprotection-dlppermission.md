@@ -9,6 +9,8 @@
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare namespace dlpPermission--><!--Device-unnamed-declare namespace dlpPermission-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## 导入模块

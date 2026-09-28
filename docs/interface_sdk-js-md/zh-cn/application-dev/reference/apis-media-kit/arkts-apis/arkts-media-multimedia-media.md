@@ -4,6 +4,8 @@
 
 **起始版本：** 6
 
+<!--Device-unnamed-declare namespace media--><!--Device-unnamed-declare namespace media-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Multimedia.Media.Core
 

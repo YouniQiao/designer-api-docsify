@@ -18,6 +18,8 @@ function isInSandbox(): Promise<boolean>
 
 **起始版本：** 10
 
+<!--Device-dlpPermission-function isInSandbox(): Promise<boolean>--><!--Device-dlpPermission-function isInSandbox(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **返回值：**
@@ -60,6 +62,8 @@ function isInSandbox(callback: AsyncCallback<boolean>): void
 该接口用于判断当前应用是否处于DLP沙箱环境，以便决定是否执行沙箱相关的操作或调用沙箱专用接口。
 
 **起始版本：** 10
+
+<!--Device-dlpPermission-function isInSandbox(callback: AsyncCallback<boolean>): void--><!--Device-dlpPermission-function isInSandbox(callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 

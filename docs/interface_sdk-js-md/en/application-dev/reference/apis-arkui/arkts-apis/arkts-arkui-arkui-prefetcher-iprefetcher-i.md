@@ -8,6 +8,8 @@ Provides the prefetching capability. It works with **LazyForEach** to prefetch d
 
 **Since:** 12
 
+<!--Device-unnamed-export interface IPrefetcher--><!--Device-unnamed-export interface IPrefetcher-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -30,6 +32,8 @@ Sets the prefetching-capable data source to bind to the **Prefetcher**.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-IPrefetcher-setDataSource(dataSource: IDataSourcePrefetching): void--><!--Device-IPrefetcher-setDataSource(dataSource: IDataSourcePrefetching): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -51,6 +55,8 @@ Called when the boundary of the visible area changes. It notifies **Prefetcher**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-IPrefetcher-visibleAreaChanged(minVisible: number, maxVisible: number): void--><!--Device-IPrefetcher-visibleAreaChanged(minVisible: number, maxVisible: number): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

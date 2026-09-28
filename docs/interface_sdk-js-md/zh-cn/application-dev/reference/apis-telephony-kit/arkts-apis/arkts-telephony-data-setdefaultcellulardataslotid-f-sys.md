@@ -18,6 +18,8 @@ function setDefaultCellularDataSlotId(slotId: number, callback: AsyncCallback<vo
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-data-function setDefaultCellularDataSlotId(slotId: int, callback: AsyncCallback<void>): void--><!--Device-data-function setDefaultCellularDataSlotId(slotId: int, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CellularData
 
 **系统接口：** 此接口为系统接口。
@@ -72,6 +74,8 @@ function setDefaultCellularDataSlotId(slotId: number): Promise<void>
 **起始版本：** 7
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
+
+<!--Device-data-function setDefaultCellularDataSlotId(slotId: int): Promise<void>--><!--Device-data-function setDefaultCellularDataSlotId(slotId: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Telephony.CellularData
 

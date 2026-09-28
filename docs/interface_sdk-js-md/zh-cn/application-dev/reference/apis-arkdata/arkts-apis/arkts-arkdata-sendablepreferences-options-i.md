@@ -8,6 +8,8 @@ Preferences实例配置选项。
 
 **起始版本：** 12
 
+<!--Device-sendablePreferences-interface Options--><!--Device-sendablePreferences-interface Options-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
 ## 导入模块
@@ -36,6 +38,8 @@ dataGroupId?: string | null
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Options-dataGroupId?: string | null--><!--Device-Options-dataGroupId?: string | null-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
 ## name
@@ -51,5 +55,7 @@ Preferences实例的名称。名称长度需大于零且小于等于255字节，
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Options-name: string--><!--Device-Options-name: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core

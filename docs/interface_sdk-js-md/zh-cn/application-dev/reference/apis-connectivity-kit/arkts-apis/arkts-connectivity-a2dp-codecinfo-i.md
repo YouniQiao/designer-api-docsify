@@ -8,6 +8,8 @@ interface CodecInfo
 
 **起始版本：** 11
 
+<!--Device-a2dp-interface CodecInfo--><!--Device-a2dp-interface CodecInfo-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ codecBitRate?: CodecBitRate
 
 **起始版本：** 19
 
+<!--Device-CodecInfo-codecBitRate?: CodecBitRate--><!--Device-CodecInfo-codecBitRate?: CodecBitRate-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## codecBitsPerSample
@@ -41,6 +45,8 @@ codecBitsPerSample: CodecBitsPerSample
 **类型：** [CodecBitsPerSample](arkts-connectivity-a2dp-codecbitspersample-e.md)
 
 **起始版本：** 11
+
+<!--Device-CodecInfo-codecBitsPerSample: CodecBitsPerSample--><!--Device-CodecInfo-codecBitsPerSample: CodecBitsPerSample-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -56,6 +62,8 @@ codecChannelMode: CodecChannelMode
 
 **起始版本：** 11
 
+<!--Device-CodecInfo-codecChannelMode: CodecChannelMode--><!--Device-CodecInfo-codecChannelMode: CodecChannelMode-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## codecFrameLength
@@ -69,6 +77,8 @@ codecFrameLength?: CodecFrameLength
 **类型：** [CodecFrameLength](arkts-connectivity-a2dp-codecframelength-e.md)
 
 **起始版本：** 19
+
+<!--Device-CodecInfo-codecFrameLength?: CodecFrameLength--><!--Device-CodecInfo-codecFrameLength?: CodecFrameLength-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -84,6 +94,8 @@ codecSampleRate: CodecSampleRate
 
 **起始版本：** 11
 
+<!--Device-CodecInfo-codecSampleRate: CodecSampleRate--><!--Device-CodecInfo-codecSampleRate: CodecSampleRate-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## codecType
@@ -97,5 +109,7 @@ codecType: CodecType
 **类型：** [CodecType](arkts-connectivity-a2dp-codectype-e.md)
 
 **起始版本：** 11
+
+<!--Device-CodecInfo-codecType: CodecType--><!--Device-CodecInfo-codecType: CodecType-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

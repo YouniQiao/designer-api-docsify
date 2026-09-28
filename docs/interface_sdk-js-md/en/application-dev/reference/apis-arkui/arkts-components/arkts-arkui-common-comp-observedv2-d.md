@@ -16,4 +16,6 @@ For details, see [@ObservedV2 and @Trace Decorators: Observing Class Property Ch
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-unnamed-declare const ObservedV2: ClassDecorator--><!--Device-unnamed-declare const ObservedV2: ClassDecorator-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

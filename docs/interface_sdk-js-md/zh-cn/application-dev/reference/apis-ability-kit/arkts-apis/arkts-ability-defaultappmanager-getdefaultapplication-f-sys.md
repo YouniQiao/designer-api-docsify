@@ -18,6 +18,8 @@ function getDefaultApplication(type: string, userId: number, callback: AsyncCall
 
 **需要权限：** ohos.permission.GET_DEFAULT_APPLICATION
 
+<!--Device-defaultAppManager-function getDefaultApplication(type: string, userId: int, callback: AsyncCallback<BundleInfo>) : void--><!--Device-defaultAppManager-function getDefaultApplication(type: string, userId: int, callback: AsyncCallback<BundleInfo>) : void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.DefaultApp
 
 **系统接口：** 此接口为系统接口。
@@ -90,6 +92,8 @@ function getDefaultApplication(type: string, callback: AsyncCallback<BundleInfo>
 
 **需要权限：** ohos.permission.GET_DEFAULT_APPLICATION
 
+<!--Device-defaultAppManager-function getDefaultApplication(type: string, callback: AsyncCallback<BundleInfo>) : void--><!--Device-defaultAppManager-function getDefaultApplication(type: string, callback: AsyncCallback<BundleInfo>) : void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.DefaultApp
 
 **系统接口：** 此接口为系统接口。
@@ -158,6 +162,8 @@ function getDefaultApplication(type: string, userId?: number) : Promise<BundleIn
 **起始版本：** 9
 
 **需要权限：** ohos.permission.GET_DEFAULT_APPLICATION
+
+<!--Device-defaultAppManager-function getDefaultApplication(type: string, userId?: int) : Promise<BundleInfo>--><!--Device-defaultAppManager-function getDefaultApplication(type: string, userId?: int) : Promise<BundleInfo>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.DefaultApp
 

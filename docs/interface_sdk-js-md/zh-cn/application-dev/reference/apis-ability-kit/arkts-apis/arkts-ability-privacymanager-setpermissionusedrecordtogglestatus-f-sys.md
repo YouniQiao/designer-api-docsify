@@ -22,6 +22,8 @@ status为true时，[addPermissionUsedRecord](arkts-ability-privacymanager-addper
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-privacyManager-function setPermissionUsedRecordToggleStatus(status: boolean): Promise<void>--><!--Device-privacyManager-function setPermissionUsedRecordToggleStatus(status: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -81,6 +83,8 @@ status为true时，[addPermissionUsedRecord](arkts-ability-privacymanager-addper
 **需要权限：** ohos.permission.PERMISSION_RECORD_TOGGLE
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-privacyManager-function setPermissionUsedRecordToggleStatus(status: boolean, subProfileId: int): Promise<void>--><!--Device-privacyManager-function setPermissionUsedRecordToggleStatus(status: boolean, subProfileId: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 

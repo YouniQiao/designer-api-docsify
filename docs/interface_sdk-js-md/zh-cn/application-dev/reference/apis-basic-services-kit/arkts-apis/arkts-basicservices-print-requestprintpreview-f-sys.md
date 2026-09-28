@@ -18,6 +18,8 @@ function requestPrintPreview(jobInfo: PrintJob, callback: Callback<number>): voi
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-print-function requestPrintPreview(jobInfo: PrintJob, callback: Callback<int>): void--><!--Device-print-function requestPrintPreview(jobInfo: PrintJob, callback: Callback<int>): void-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **系统接口：** 此接口为系统接口。
@@ -79,6 +81,8 @@ function requestPrintPreview(jobInfo: PrintJob): Promise<number>
 **起始版本：** 10
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
+
+<!--Device-print-function requestPrintPreview(jobInfo: PrintJob): Promise<int>--><!--Device-print-function requestPrintPreview(jobInfo: PrintJob): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 

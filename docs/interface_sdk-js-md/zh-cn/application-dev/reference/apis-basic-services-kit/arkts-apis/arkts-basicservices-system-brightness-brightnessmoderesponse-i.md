@@ -10,6 +10,8 @@ export interface BrightnessModeResponse
 
 **废弃版本：** 7
 
+<!--Device-unnamed-export interface BrightnessModeResponse--><!--Device-unnamed-export interface BrightnessModeResponse-End-->
+
 **系统能力：** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
 ## 导入模块
@@ -33,5 +35,7 @@ mode: number
 **废弃版本：** 7
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-BrightnessModeResponse-mode: number--><!--Device-BrightnessModeResponse-mode: number-End-->
 
 **系统能力：** SystemCapability.PowerManager.DisplayPowerManager.Lite

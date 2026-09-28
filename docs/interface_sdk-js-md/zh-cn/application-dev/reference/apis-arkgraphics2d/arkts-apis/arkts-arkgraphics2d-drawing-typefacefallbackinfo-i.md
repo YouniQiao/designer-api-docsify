@@ -8,6 +8,8 @@ interface TypefaceFallbackInfo
 
 **起始版本：** 26.0.1
 
+<!--Device-drawing-interface TypefaceFallbackInfo--><!--Device-drawing-interface TypefaceFallbackInfo-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## 导入模块
@@ -30,6 +32,8 @@ glyphIds: Array<number>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TypefaceFallbackInfo-glyphIds: Array<number>--><!--Device-TypefaceFallbackInfo-glyphIds: Array<number>-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## typeface
@@ -45,5 +49,7 @@ typeface: Typeface
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TypefaceFallbackInfo-typeface: Typeface--><!--Device-TypefaceFallbackInfo-typeface: Typeface-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing

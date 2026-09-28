@@ -16,6 +16,8 @@ function getOverlayModuleInfo(moduleName: string, callback: AsyncCallback<Overla
 
 **起始版本：** 10
 
+<!--Device-overlay-function getOverlayModuleInfo(moduleName: string, callback: AsyncCallback<OverlayModuleInfo>): void--><!--Device-overlay-function getOverlayModuleInfo(moduleName: string, callback: AsyncCallback<OverlayModuleInfo>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Overlay
 
 **参数：**
@@ -69,6 +71,8 @@ function getOverlayModuleInfo(moduleName: string): Promise<OverlayModuleInfo>
 获取当前应用中overlay特征module的OverlayModuleInfo信息。使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-overlay-function getOverlayModuleInfo(moduleName: string): Promise<OverlayModuleInfo>--><!--Device-overlay-function getOverlayModuleInfo(moduleName: string): Promise<OverlayModuleInfo>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Overlay
 

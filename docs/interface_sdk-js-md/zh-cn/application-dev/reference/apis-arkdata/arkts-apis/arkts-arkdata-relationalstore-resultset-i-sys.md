@@ -12,6 +12,8 @@ ResultSet实例不会实时刷新。使用结果集后，如果数据库中的�
 
 **起始版本：** 9
 
+<!--Device-relationalStore-interface ResultSet--><!--Device-relationalStore-interface ResultSet-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## 导入模块
@@ -29,6 +31,8 @@ getFloat32Array(columnIndex: number): Float32Array
 以浮点数组的形式获取当前行中指定列的值，仅可在向量数据库（在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)中配置vector为true）下可用。
 
 **起始版本：** 12
+
+<!--Device-ResultSet-getFloat32Array(columnIndex: int): Float32Array--><!--Device-ResultSet-getFloat32Array(columnIndex: int): Float32Array-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 

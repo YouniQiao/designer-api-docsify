@@ -8,6 +8,8 @@ enum StrongAssociationType
 
 **起始版本：** 20
 
+<!--Device-photoAccessHelper-enum StrongAssociationType--><!--Device-photoAccessHelper-enum StrongAssociationType-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -22,6 +24,8 @@ NORMAL = 0
 
 **起始版本：** 20
 
+<!--Device-StrongAssociationType-NORMAL = 0--><!--Device-StrongAssociationType-NORMAL = 0-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -35,6 +39,8 @@ CLOUD_ENHANCEMENT = 1
 云增强图片类型。
 
 **起始版本：** 20
+
+<!--Device-StrongAssociationType-CLOUD_ENHANCEMENT = 1--><!--Device-StrongAssociationType-CLOUD_ENHANCEMENT = 1-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

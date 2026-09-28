@@ -8,6 +8,8 @@ A subscribable abstract class used to manage a collection of owned properties, p
 
 **Since:** 7
 
+<!--Device-unnamed-declare abstract class SubscribaleAbstract--><!--Device-unnamed-declare abstract class SubscribaleAbstract-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -23,6 +25,8 @@ Adds a subscriber to the list of owned properties. When the property is no longe
 **Since:** 7
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-SubscribaleAbstract-public addOwningProperty(subscriber: IPropertySubscriber): void--><!--Device-SubscribaleAbstract-public addOwningProperty(subscriber: IPropertySubscriber): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,6 +50,8 @@ A constructor.
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-SubscribaleAbstract-constructor()--><!--Device-SubscribaleAbstract-constructor()-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -61,6 +67,8 @@ Called when notifying a property change.
 **Since:** 7
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-SubscribaleAbstract-protected notifyPropertyHasChanged(propName: string, newValue: any): void--><!--Device-SubscribaleAbstract-protected notifyPropertyHasChanged(propName: string, newValue: any): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -85,6 +93,8 @@ Removes a subscriber from the list of owned properties.
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-SubscribaleAbstract-public removeOwningProperty(property: IPropertySubscriber): void--><!--Device-SubscribaleAbstract-public removeOwningProperty(property: IPropertySubscriber): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -106,6 +116,8 @@ Removes a subscriber from the list of owned properties by ID.
 **Since:** 7
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-SubscribaleAbstract-public removeOwningPropertyById(subscriberId: number): void--><!--Device-SubscribaleAbstract-public removeOwningPropertyById(subscriberId: number): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -130,6 +142,8 @@ A collection of owned properties.
 **Since:** 7
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-SubscribaleAbstract-private owningProperties_: Set<number>--><!--Device-SubscribaleAbstract-private owningProperties_: Set<number>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

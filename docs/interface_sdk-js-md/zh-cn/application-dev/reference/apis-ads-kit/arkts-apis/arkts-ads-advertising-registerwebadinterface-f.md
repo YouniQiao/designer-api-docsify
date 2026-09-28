@@ -18,6 +18,8 @@ function registerWebAdInterface(controller: web_webview.WebviewController, conte
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-advertising-function registerWebAdInterface(controller: web_webview.WebviewController, context: common.UIAbilityContext): void--><!--Device-advertising-function registerWebAdInterface(controller: web_webview.WebviewController, context: common.UIAbilityContext): void-End-->
+
 **系统能力：** SystemCapability.Advertising.Ads
 
 **参数：**
@@ -78,6 +80,8 @@ function registerWebAdInterface(controller: web_webview.WebviewController, conte
 **起始版本：** 16
 
 **原子化服务API：** 从API版本16开始，该接口支持在原子化服务中使用。
+
+<!--Device-advertising-function registerWebAdInterface(controller: web_webview.WebviewController, context: common.UIAbilityContext,     needRefresh: boolean): void--><!--Device-advertising-function registerWebAdInterface(controller: web_webview.WebviewController, context: common.UIAbilityContext,     needRefresh: boolean): void-End-->
 
 **系统能力：** SystemCapability.Advertising.Ads
 

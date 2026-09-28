@@ -10,6 +10,8 @@ USB设备驱动详细信息，继承自[DriverInfo](arkts-driverdevelopment-devi
 
 **起始版本：** 12
 
+<!--Device-deviceManager-interface USBDriverInfo extends DriverInfo--><!--Device-deviceManager-interface USBDriverInfo extends DriverInfo-End-->
+
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ productIdList: Array<number>
 
 **起始版本：** 12
 
+<!--Device-USBDriverInfo-productIdList: Array<int>--><!--Device-USBDriverInfo-productIdList: Array<int>-End-->
+
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
 **系统接口：** 此接口为系统接口。
@@ -47,6 +51,8 @@ vendorIdList: Array<number>
 **类型：** Array&lt;number&gt;
 
 **起始版本：** 12
+
+<!--Device-USBDriverInfo-vendorIdList: Array<int>--><!--Device-USBDriverInfo-vendorIdList: Array<int>-End-->
 
 **系统能力：** SystemCapability.Driver.ExternalDevice
 

@@ -13,11 +13,13 @@ Provides the capability to query device environment states. It can inject system
 | accessibilityEnabled | string | Whether to enable accessibility. If there is no value of **accessibilityEnabled** in the environment variables, the default value passed through APIs such as **envProp** and **envProps** is added to AppStorage.|
 | colorMode | [ColorMode](arkts-arkui-colormode-e.md) | Color mode. The options are as follows:<br> - **ColorMode.LIGHT**: light mode.<br> - **ColorMode.DARK**: dark mode. |
 | fontScale | number | Font scale. |
-| [fontWeightScale](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-configuration-configuration-i.md) | number | Font weight ratio. |
-| [layoutDirection](arkts-arkui-securitycomponentmethod-c.md) | [LayoutDirection](arkts-arkui-layoutdirection-e.md) | Layout direction. The options are as follows:<br> - **LayoutDirection.LTR**: left to right;<br> - **LayoutDirection.RTL**: right to left;<br> - **LayoutDirection.Auto**: follows the system settings. |
+| fontWeightScale | number | Font weight ratio. |
+| layoutDirection | [LayoutDirection](arkts-arkui-layoutdirection-e.md) | Layout direction. The options are as follows:<br> - **LayoutDirection.LTR**: left to right;<br> - **LayoutDirection.RTL**: right to left;<br> - **LayoutDirection.Auto**: follows the system settings. |
 | languageCode | string | Current system language, which is in lowercase letters, for example, **zh**. |
 
 **Since:** 7
+
+<!--Device-unnamed-declare class Environment--><!--Device-unnamed-declare class Environment-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,6 +36,8 @@ If **envProp** is not called, reading environment variables directly from AppSto
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Environment-static envProp<S>(key: string, value: S): boolean--><!--Device-Environment-static envProp<S>(key: string, value: S): boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -66,6 +70,8 @@ Works in a way similar to the [envProp](#envprop) API, with the difference that 
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Environment-static envProps(props: EnvPropsOptions[]): void--><!--Device-Environment-static envProps(props: EnvPropsOptions[]): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -94,6 +100,8 @@ Returns the property key array of environment variables.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Environment-static keys(): Array<string>--><!--Device-Environment-static keys(): Array<string>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -131,6 +139,8 @@ If **EnvProp** is not called, reading environment variables directly from AppSto
 **Substitutes:** [envProp](#envprop)
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-Environment-static EnvProp<S>(key: string, value: S): boolean--><!--Device-Environment-static EnvProp<S>(key: string, value: S): boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -174,6 +184,8 @@ Works in a way similar to the [EnvProp](#envprop) API, with the difference that 
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-Environment-static EnvProps(    props: {      key: string;      defaultValue: any;    }[],  ): void--><!--Device-Environment-static EnvProps(    props: {      key: string;      defaultValue: any;    }[],  ): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -206,6 +218,8 @@ Returns the property key array of environment variables.
 **Substitutes:** [keys](#keys)
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-Environment-static Keys(): Array<string>--><!--Device-Environment-static Keys(): Array<string>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

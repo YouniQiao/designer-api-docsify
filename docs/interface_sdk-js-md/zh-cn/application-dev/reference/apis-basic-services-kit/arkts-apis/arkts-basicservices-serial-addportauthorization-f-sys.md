@@ -18,6 +18,8 @@ function addPortAuthorization(tokenId: string, deviceId: string): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-serial-function addPortAuthorization(tokenId: string, deviceId: string): Promise<void>--><!--Device-serial-function addPortAuthorization(tokenId: string, deviceId: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.BusManager.Serial
 
 **系统接口：** 此接口为系统接口。

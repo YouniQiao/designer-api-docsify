@@ -8,6 +8,8 @@ interface CdsmMemberInfo
 
 **起始版本：** 26.0.0
 
+<!--Device-cdsm-interface CdsmMemberInfo--><!--Device-cdsm-interface CdsmMemberInfo-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## 导入模块
@@ -30,6 +32,8 @@ address: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-CdsmMemberInfo-address: string--><!--Device-CdsmMemberInfo-address: string-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## state
@@ -45,5 +49,7 @@ state: CdsmConnectionState
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-CdsmMemberInfo-state: CdsmConnectionState--><!--Device-CdsmMemberInfo-state: CdsmConnectionState-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base

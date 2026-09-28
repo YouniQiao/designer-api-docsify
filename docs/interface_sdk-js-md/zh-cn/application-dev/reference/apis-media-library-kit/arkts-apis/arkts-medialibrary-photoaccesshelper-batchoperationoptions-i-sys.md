@@ -8,6 +8,8 @@ interface BatchOperationOptions
 
 **起始版本：** 26.0.0
 
+<!--Device-photoAccessHelper-interface BatchOperationOptions--><!--Device-photoAccessHelper-interface BatchOperationOptions-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ countProgressListener?: ProgressListener
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BatchOperationOptions-countProgressListener?: ProgressListener--><!--Device-BatchOperationOptions-countProgressListener?: ProgressListener-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -46,6 +50,8 @@ resultListener?: ResultListener
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BatchOperationOptions-resultListener?: ResultListener--><!--Device-BatchOperationOptions-resultListener?: ResultListener-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +67,8 @@ sizeProgressListener?: ProgressListener
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BatchOperationOptions-sizeProgressListener?: ProgressListener--><!--Device-BatchOperationOptions-sizeProgressListener?: ProgressListener-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -80,6 +88,8 @@ mode?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BatchOperationOptions-mode?: int--><!--Device-BatchOperationOptions-mode?: int-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -97,6 +107,8 @@ taskSignal?: TaskSignal
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BatchOperationOptions-taskSignal?: TaskSignal--><!--Device-BatchOperationOptions-taskSignal?: TaskSignal-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

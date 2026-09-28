@@ -8,6 +8,8 @@ interface AudioRecordingManager
 
 **起始版本：** 26.0.0
 
+<!--Device-audio-interface AudioRecordingManager--><!--Device-audio-interface AudioRecordingManager-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 ## 导入模块
@@ -27,6 +29,8 @@ offSystemRecordControllerEnabledChange(callback?: Callback<SystemRecordControlle
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioRecordingManager-offSystemRecordControllerEnabledChange(callback?: Callback<SystemRecordControllerChangeInfo>): void--><!--Device-AudioRecordingManager-offSystemRecordControllerEnabledChange(callback?: Callback<SystemRecordControllerChangeInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -65,6 +69,8 @@ onSystemRecordControllerEnabledChange(callback: Callback<SystemRecordControllerC
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioRecordingManager-onSystemRecordControllerEnabledChange(callback: Callback<SystemRecordControllerChangeInfo>): void--><!--Device-AudioRecordingManager-onSystemRecordControllerEnabledChange(callback: Callback<SystemRecordControllerChangeInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 

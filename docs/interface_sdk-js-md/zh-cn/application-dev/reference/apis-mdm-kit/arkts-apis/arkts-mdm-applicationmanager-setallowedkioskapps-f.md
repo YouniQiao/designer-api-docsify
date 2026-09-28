@@ -22,6 +22,8 @@ Kiosk模式为系统层面提供的一种应用运行模式，该模式下会将
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-applicationManager-function setAllowedKioskApps(admin: Want, appIdentifiers: Array<string>): void--><!--Device-applicationManager-function setAllowedKioskApps(admin: Want, appIdentifiers: Array<string>): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**

@@ -8,6 +8,8 @@ type ProgressObserver = (sessionId: string, progress: number) => void
 
 **起始版本：** 20
 
+<!--Device-distributedDataObject-type ProgressObserver = (sessionId: string, progress: int) => void--><!--Device-distributedDataObject-type ProgressObserver = (sessionId: string, progress: int) => void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **参数：**

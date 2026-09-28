@@ -18,6 +18,8 @@ export interface NetConnection
 
 **起始版本：** 8
 
+<!--Device-connection-export interface NetConnection--><!--Device-connection-export interface NetConnection-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## 导入模块
@@ -37,6 +39,8 @@ on(type: 'netAvailable', callback: Callback<NetHandle>): void
 **起始版本：** 8
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-NetConnection-on(type: 'netAvailable', callback: Callback<NetHandle>): void--><!--Device-NetConnection-on(type: 'netAvailable', callback: Callback<NetHandle>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -81,6 +85,8 @@ on(type: 'netBlockStatusChange', callback: Callback<NetBlockStatusInfo>): void
 订阅网络阻塞状态事件。此接口需要在调用register接口之前调用。若无需接收网络状态变化的回调通知，应使用unregister取消订阅默认的网络状态变化通知。
 
 **起始版本：** 8
+
+<!--Device-NetConnection-on(type: 'netBlockStatusChange', callback: Callback<NetBlockStatusInfo>): void--><!--Device-NetConnection-on(type: 'netBlockStatusChange', callback: Callback<NetBlockStatusInfo>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -128,6 +134,8 @@ on(type: 'netCapabilitiesChange', callback: Callback<NetCapabilityInfo>): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-NetConnection-on(type: 'netCapabilitiesChange', callback: Callback<NetCapabilityInfo>): void--><!--Device-NetConnection-on(type: 'netCapabilitiesChange', callback: Callback<NetCapabilityInfo>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**
@@ -171,6 +179,8 @@ on(type: 'netConnectionPropertiesChange', callback: Callback<NetConnectionProper
 订阅网络连接信息变化事件。此接口要在register接口调用前调用，不需要网络状态变化回调通知时，使用unregister取消订阅默认网络状态变化的通知。
 
 **起始版本：** 8
+
+<!--Device-NetConnection-on(type: 'netConnectionPropertiesChange', callback: Callback<NetConnectionPropertyInfo>): void--><!--Device-NetConnection-on(type: 'netConnectionPropertiesChange', callback: Callback<NetConnectionPropertyInfo>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -218,6 +228,8 @@ on(type: 'netLost', callback: Callback<NetHandle>): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-NetConnection-on(type: 'netLost', callback: Callback<NetHandle>): void--><!--Device-NetConnection-on(type: 'netLost', callback: Callback<NetHandle>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**
@@ -263,6 +275,8 @@ on(type: 'netUnavailable', callback: Callback<void>): void
 **起始版本：** 8
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-NetConnection-on(type: 'netUnavailable', callback: Callback<void>): void--><!--Device-NetConnection-on(type: 'netUnavailable', callback: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -314,7 +328,9 @@ register(callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-NetConnection-register(callback: AsyncCallback<void>): void--><!--Device-NetConnection-register(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -357,7 +373,9 @@ unregister(callback: AsyncCallback<void>): void
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-NetConnection-unregister(callback: AsyncCallback<void>): void--><!--Device-NetConnection-unregister(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 

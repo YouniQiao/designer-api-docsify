@@ -10,6 +10,8 @@ To improve the performance of **Grid** in scenarios such as jumps and column qua
 
 **Since:** 10
 
+<!--Device-unnamed-declare interface GridLayoutOptions--><!--Device-unnamed-declare interface GridLayoutOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onGetIrregularSizeByIndex
@@ -25,6 +27,8 @@ Number of rows and columns occupied by the grid item with an irregular size. Thi
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-GridLayoutOptions-onGetIrregularSizeByIndex?: (index: number) => [number, number]--><!--Device-GridLayoutOptions-onGetIrregularSizeByIndex?: (index: number) => [number, number]-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,6 +51,8 @@ Position and size of the grid item with the specified index, in the format of [r
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GridLayoutOptions-onGetRectByIndex?: (index: number) => [number, number, number, number]--><!--Device-GridLayoutOptions-onGetRectByIndex?: (index: number) => [number, number, number, number]-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -74,6 +80,8 @@ Size of **GridItem** at the specified index in **Grid**. The size is irregular. 
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-GridLayoutOptions-irregularIndexes?: number[]--><!--Device-GridLayoutOptions-irregularIndexes?: number[]-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## regularSize
@@ -91,5 +99,7 @@ Number of rows and columns occupied by a grid item with regular size. The only s
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-GridLayoutOptions-regularSize: [number, number]--><!--Device-GridLayoutOptions-regularSize: [number, number]-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

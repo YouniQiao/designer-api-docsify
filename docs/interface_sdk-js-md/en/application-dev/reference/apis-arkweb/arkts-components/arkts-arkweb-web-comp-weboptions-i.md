@@ -8,6 +8,8 @@ Defines Web options through the [API](../../../reference/apis-arkweb/arkts-basic
 
 **Since:** 8
 
+<!--Device-unnamed-declare interface WebOptions--><!--Device-unnamed-declare interface WebOptions-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## controller
@@ -24,6 +26,8 @@ Controller used to control various behaviors of the Web component, including pag
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebOptions-controller: WebController | WebviewController--><!--Device-WebOptions-controller: WebController | WebviewController-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## emulateTouchFromMouseEvent
@@ -39,6 +43,8 @@ Default value: **false**.
 **Type:** boolean
 
 **Since:** 22
+
+<!--Device-WebOptions-emulateTouchFromMouseEvent? : boolean--><!--Device-WebOptions-emulateTouchFromMouseEvent? : boolean-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -60,6 +66,8 @@ The value is **false** when undefined or null is passed in.<!--RP1--><!--RP1End-
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebOptions-incognitoMode? : boolean--><!--Device-WebOptions-incognitoMode? : boolean-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## renderMode
@@ -76,6 +84,8 @@ Rendering mode of the current Web component. `RenderMode.ASYNC_RENDER` indicates
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-WebOptions-renderMode? : RenderMode--><!--Device-WebOptions-renderMode? : RenderMode-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## sharedRenderProcessToken
@@ -91,6 +101,8 @@ Default value: **""**.
 **Type:** string
 
 **Since:** 12
+
+<!--Device-WebOptions-sharedRenderProcessToken? : string--><!--Device-WebOptions-sharedRenderProcessToken? : string-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -109,5 +121,7 @@ src cannot be dynamically changed through a state variable (for example, @State)
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebOptions-src: string | Resource--><!--Device-WebOptions-src: string | Resource-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core

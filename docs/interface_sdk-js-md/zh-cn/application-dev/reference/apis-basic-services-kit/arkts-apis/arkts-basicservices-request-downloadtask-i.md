@@ -8,6 +8,8 @@ interface DownloadTask
 
 **起始版本：** 6
 
+<!--Device-request-interface DownloadTask--><!--Device-request-interface DownloadTask-End-->
+
 **系统能力：** SystemCapability.MiscServices.Download
 
 ## 导入模块
@@ -31,6 +33,8 @@ delete(callback: AsyncCallback<boolean>): void
 **起始版本：** 9
 
 **需要权限：** ohos.permission.INTERNET
+
+<!--Device-DownloadTask-delete(callback: AsyncCallback<boolean>): void--><!--Device-DownloadTask-delete(callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -91,6 +95,8 @@ delete(): Promise<boolean>
 
 **需要权限：** ohos.permission.INTERNET
 
+<!--Device-DownloadTask-delete(): Promise<boolean>--><!--Device-DownloadTask-delete(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.MiscServices.Download
 
 **返回值：**
@@ -144,6 +150,8 @@ getTaskInfo(callback: AsyncCallback<DownloadInfo>): void
 **起始版本：** 9
 
 **需要权限：** ohos.permission.INTERNET
+
+<!--Device-DownloadTask-getTaskInfo(callback: AsyncCallback<DownloadInfo>): void--><!--Device-DownloadTask-getTaskInfo(callback: AsyncCallback<DownloadInfo>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -204,6 +212,8 @@ getTaskInfo(): Promise<DownloadInfo>
 
 **需要权限：** ohos.permission.INTERNET
 
+<!--Device-DownloadTask-getTaskInfo(): Promise<DownloadInfo>--><!--Device-DownloadTask-getTaskInfo(): Promise<DownloadInfo>-End-->
+
 **系统能力：** SystemCapability.MiscServices.Download
 
 **返回值：**
@@ -258,6 +268,8 @@ getTaskMimeType(callback: AsyncCallback<string>): void
 **起始版本：** 9
 
 **需要权限：** ohos.permission.INTERNET
+
+<!--Device-DownloadTask-getTaskMimeType(callback: AsyncCallback<string>): void--><!--Device-DownloadTask-getTaskMimeType(callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -318,6 +330,8 @@ getTaskMimeType(): Promise<string>
 
 **需要权限：** ohos.permission.INTERNET
 
+<!--Device-DownloadTask-getTaskMimeType(): Promise<string>--><!--Device-DownloadTask-getTaskMimeType(): Promise<string>-End-->
+
 **系统能力：** SystemCapability.MiscServices.Download
 
 **返回值：**
@@ -366,6 +380,8 @@ off(type: 'progress', callback?: (receivedSize: number, totalSize: number) => vo
 取消订阅下载任务进度事件。
 
 **起始版本：** 6
+
+<!--Device-DownloadTask-off(type: 'progress', callback?: (receivedSize: long, totalSize: long) => void): void--><!--Device-DownloadTask-off(type: 'progress', callback?: (receivedSize: long, totalSize: long) => void): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -423,6 +439,8 @@ off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
 取消订阅下载任务相关的事件。
 
 **起始版本：** 7
+
+<!--Device-DownloadTask-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void--><!--Device-DownloadTask-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -507,6 +525,8 @@ off(type: 'fail', callback?: (err: number) => void): void
 
 **起始版本：** 7
 
+<!--Device-DownloadTask-off(type: 'fail', callback?: (err: int) => void): void--><!--Device-DownloadTask-off(type: 'fail', callback?: (err: int) => void): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Download
 
 **参数：**
@@ -568,6 +588,8 @@ on(type: 'progress', callback: (receivedSize: number, totalSize: number) => void
 
 **起始版本：** 6
 
+<!--Device-DownloadTask-on(type: 'progress', callback: (receivedSize: long, totalSize: long) => void): void--><!--Device-DownloadTask-on(type: 'progress', callback: (receivedSize: long, totalSize: long) => void): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Download
 
 **参数：**
@@ -616,6 +638,8 @@ on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
 订阅下载任务相关的事件，使用callback异步回调。
 
 **起始版本：** 7
+
+<!--Device-DownloadTask-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void--><!--Device-DownloadTask-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -676,6 +700,8 @@ on(type: 'fail', callback: (err: number) => void): void
 
 **起始版本：** 7
 
+<!--Device-DownloadTask-on(type: 'fail', callback: (err: int) => void): void--><!--Device-DownloadTask-on(type: 'fail', callback: (err: int) => void): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Download
 
 **参数：**
@@ -730,6 +756,8 @@ restore(callback: AsyncCallback<boolean>): void
 **起始版本：** 9
 
 **需要权限：** ohos.permission.INTERNET
+
+<!--Device-DownloadTask-restore(callback: AsyncCallback<boolean>): void--><!--Device-DownloadTask-restore(callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -790,6 +818,8 @@ restore(): Promise<boolean>
 
 **需要权限：** ohos.permission.INTERNET
 
+<!--Device-DownloadTask-restore(): Promise<boolean>--><!--Device-DownloadTask-restore(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.MiscServices.Download
 
 **返回值：**
@@ -844,6 +874,8 @@ suspend(callback: AsyncCallback<boolean>): void
 **起始版本：** 9
 
 **需要权限：** ohos.permission.INTERNET
+
+<!--Device-DownloadTask-suspend(callback: AsyncCallback<boolean>): void--><!--Device-DownloadTask-suspend(callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -903,6 +935,8 @@ suspend(): Promise<boolean>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.INTERNET
+
+<!--Device-DownloadTask-suspend(): Promise<boolean>--><!--Device-DownloadTask-suspend(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -964,6 +998,8 @@ pause(callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.INTERNET
 
+<!--Device-DownloadTask-pause(callback: AsyncCallback<void>): void--><!--Device-DownloadTask-pause(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Download
 
 **参数：**
@@ -1012,6 +1048,8 @@ pause(): Promise<void>
 
 **需要权限：** ohos.permission.INTERNET
 
+<!--Device-DownloadTask-pause(): Promise<void>--><!--Device-DownloadTask-pause(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.Download
 
 **返回值：**
@@ -1056,6 +1094,8 @@ query(callback: AsyncCallback<DownloadInfo>): void
 **替代接口：** [getTaskInfo](#gettaskinfo)(callback: AsyncCallback&lt;DownloadInfo&gt;)
 
 **需要权限：** ohos.permission.INTERNET
+
+<!--Device-DownloadTask-query(callback: AsyncCallback<DownloadInfo>): void--><!--Device-DownloadTask-query(callback: AsyncCallback<DownloadInfo>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -1105,6 +1145,8 @@ query(): Promise<DownloadInfo>
 
 **需要权限：** ohos.permission.INTERNET
 
+<!--Device-DownloadTask-query(): Promise<DownloadInfo>--><!--Device-DownloadTask-query(): Promise<DownloadInfo>-End-->
+
 **系统能力：** SystemCapability.MiscServices.Download
 
 **返回值：**
@@ -1149,6 +1191,8 @@ queryMimeType(callback: AsyncCallback<string>): void
 **替代接口：** [getTaskMimeType](#gettaskmimetype)(callback: AsyncCallback&lt;string&gt;)
 
 **需要权限：** ohos.permission.INTERNET
+
+<!--Device-DownloadTask-queryMimeType(callback: AsyncCallback<string>): void--><!--Device-DownloadTask-queryMimeType(callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -1198,6 +1242,8 @@ queryMimeType(): Promise<string>
 
 **需要权限：** ohos.permission.INTERNET
 
+<!--Device-DownloadTask-queryMimeType(): Promise<string>--><!--Device-DownloadTask-queryMimeType(): Promise<string>-End-->
+
 **系统能力：** SystemCapability.MiscServices.Download
 
 **返回值：**
@@ -1242,6 +1288,8 @@ remove(callback: AsyncCallback<boolean>): void
 **替代接口：** [delete](arkts-basicservices-request-uploadtask-i.md#delete)(callback: AsyncCallback&lt;boolean&gt;)
 
 **需要权限：** ohos.permission.INTERNET
+
+<!--Device-DownloadTask-remove(callback: AsyncCallback<boolean>): void--><!--Device-DownloadTask-remove(callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -1291,6 +1339,8 @@ remove(): Promise<boolean>
 
 **需要权限：** ohos.permission.INTERNET
 
+<!--Device-DownloadTask-remove(): Promise<boolean>--><!--Device-DownloadTask-remove(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.MiscServices.Download
 
 **返回值：**
@@ -1335,6 +1385,8 @@ resume(callback: AsyncCallback<void>): void
 **替代接口：** [restore](#restore)(callback: AsyncCallback&lt;boolean&gt;)
 
 **需要权限：** ohos.permission.INTERNET
+
+<!--Device-DownloadTask-resume(callback: AsyncCallback<void>): void--><!--Device-DownloadTask-resume(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -1383,6 +1435,8 @@ resume(): Promise<void>
 **替代接口：** [restore](#restore)()
 
 **需要权限：** ohos.permission.INTERNET
+
+<!--Device-DownloadTask-resume(): Promise<void>--><!--Device-DownloadTask-resume(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
 

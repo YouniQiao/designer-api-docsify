@@ -8,6 +8,8 @@ export interface CreateAppCloneParam
 
 **起始版本：** 12
 
+<!--Device-installer-export interface CreateAppCloneParam--><!--Device-installer-export interface CreateAppCloneParam-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -29,6 +31,8 @@ appIndex?: number
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-CreateAppCloneParam-appIndex?: int--><!--Device-CreateAppCloneParam-appIndex?: int-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -52,6 +56,8 @@ parameters?: Array<Parameters>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-CreateAppCloneParam-parameters?: Array<Parameters>--><!--Device-CreateAppCloneParam-parameters?: Array<Parameters>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -67,6 +73,8 @@ userId?: number
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-CreateAppCloneParam-userId?: int--><!--Device-CreateAppCloneParam-userId?: int-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

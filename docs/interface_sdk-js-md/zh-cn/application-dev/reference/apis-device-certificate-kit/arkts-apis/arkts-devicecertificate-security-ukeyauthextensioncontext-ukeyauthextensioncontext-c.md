@@ -10,6 +10,8 @@ UkeyAuthExtensionContext是UkeyAuthExtensionAbility的上下文，仅提供终�
 
 **起始版本：** 26.0.1
 
+<!--Device-unnamed-declare class UkeyAuthExtensionContext extends ExtensionContext--><!--Device-unnamed-declare class UkeyAuthExtensionContext extends ExtensionContext-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
 ## 导入模块
@@ -30,6 +32,8 @@ terminateSelf(): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UkeyAuthExtensionContext-terminateSelf(): Promise<void>--><!--Device-UkeyAuthExtensionContext-terminateSelf(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
 **返回值：**
@@ -49,6 +53,8 @@ terminateSelfWithResult(parameter: AbilityResult): Promise<void>
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UkeyAuthExtensionContext-terminateSelfWithResult(parameter: AbilityResult): Promise<void>--><!--Device-UkeyAuthExtensionContext-terminateSelfWithResult(parameter: AbilityResult): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 

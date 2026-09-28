@@ -18,6 +18,8 @@ function isCellularDataEnabledSync(): boolean
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-data-function isCellularDataEnabledSync(): boolean--><!--Device-data-function isCellularDataEnabledSync(): boolean-End-->
+
 **系统能力：** SystemCapability.Telephony.CellularData
 
 **返回值：**

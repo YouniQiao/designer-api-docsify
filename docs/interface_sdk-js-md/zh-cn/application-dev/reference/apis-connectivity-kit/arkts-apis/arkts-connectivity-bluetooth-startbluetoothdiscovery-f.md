@@ -24,6 +24,8 @@ function startBluetoothDiscovery(): boolean
 
 **需要权限：** ohos.permission.DISCOVER_BLUETOOTH and ohos.permission.LOCATION
 
+<!--Device-bluetooth-function startBluetoothDiscovery(): boolean--><!--Device-bluetooth-function startBluetoothDiscovery(): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **返回值：**

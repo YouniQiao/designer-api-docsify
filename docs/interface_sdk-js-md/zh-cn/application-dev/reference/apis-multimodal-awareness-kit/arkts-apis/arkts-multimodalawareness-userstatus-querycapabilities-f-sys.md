@@ -18,6 +18,8 @@ function queryCapabilities(capabilities: UserStatusAtomicCap[]): UserStatusAtomi
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-userStatus-function queryCapabilities(capabilities: UserStatusAtomicCap[]): UserStatusAtomicCap[]--><!--Device-userStatus-function queryCapabilities(capabilities: UserStatusAtomicCap[]): UserStatusAtomicCap[]-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
 **系统接口：** 此接口为系统接口。

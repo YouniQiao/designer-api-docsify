@@ -10,6 +10,8 @@ export interface Mat4x4
 
 **起始版本：** 23
 
+<!--Device-unnamed-export interface Mat4x4--><!--Device-unnamed-export interface Mat4x4-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## w
@@ -23,6 +25,8 @@ w: Vec4
 **类型：** [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md)
 
 **起始版本：** 23
+
+<!--Device-Mat4x4-w: Vec4--><!--Device-Mat4x4-w: Vec4-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -38,6 +42,8 @@ x: Vec4
 
 **起始版本：** 23
 
+<!--Device-Mat4x4-x: Vec4--><!--Device-Mat4x4-x: Vec4-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## y
@@ -52,6 +58,8 @@ y: Vec4
 
 **起始版本：** 23
 
+<!--Device-Mat4x4-y: Vec4--><!--Device-Mat4x4-y: Vec4-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## z
@@ -65,5 +73,7 @@ z: Vec4
 **类型：** [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md)
 
 **起始版本：** 23
+
+<!--Device-Mat4x4-z: Vec4--><!--Device-Mat4x4-z: Vec4-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

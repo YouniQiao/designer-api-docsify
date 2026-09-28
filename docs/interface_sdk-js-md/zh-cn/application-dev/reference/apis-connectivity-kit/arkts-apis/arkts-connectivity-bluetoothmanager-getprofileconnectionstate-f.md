@@ -26,6 +26,8 @@ function getProfileConnectionState(profileId: ProfileId): ProfileConnectionState
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH
 - API版本9：ohos.permission.USE_BLUETOOTH
 
+<!--Device-bluetoothManager-function getProfileConnectionState(profileId: ProfileId): ProfileConnectionState--><!--Device-bluetoothManager-function getProfileConnectionState(profileId: ProfileId): ProfileConnectionState-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**

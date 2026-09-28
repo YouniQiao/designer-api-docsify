@@ -1,6 +1,6 @@
 # ContainerSpan
 
-[Text](arkts-arkui-text-comp.md#text)组件的子组件，用于统一管理多个[Span](arkts-arkui-span-comp.md#span)、[ImageSpan](arkts-arkui-imagespan-comp.md#image_span)的背景色及圆角弧度，适用于需要为文本片段和图片组合设置统一背景样式的场景。
+[Text](arkts-arkui-text-comp.md)组件的子组件，用于统一管理多个[Span](arkts-arkui-span-comp.md)、[ImageSpan](arkts-arkui-imagespan-comp.md)的背景色及圆角弧度，适用于需要为文本片段和图片组合设置统一背景样式的场景。
 
 > **说明：** 
 > 
@@ -8,7 +8,7 @@
 
 ## 子组件
 
-可以包含[Span](arkts-arkui-span-comp.md#span)、[ImageSpan](arkts-arkui-imagespan-comp.md#image_span) 子组件。
+可以包含[Span](arkts-arkui-span-comp.md)、[ImageSpan](arkts-arkui-imagespan-comp.md) 子组件。
 
 ## ContainerSpan
 
@@ -23,6 +23,8 @@ ContainerSpan()
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ContainerSpanInterface-(): ContainerSpanAttribute--><!--Device-ContainerSpanInterface-(): ContainerSpanAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

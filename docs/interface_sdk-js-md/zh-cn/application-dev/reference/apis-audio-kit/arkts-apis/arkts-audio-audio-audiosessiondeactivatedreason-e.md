@@ -8,6 +8,8 @@ enum AudioSessionDeactivatedReason
 
 **起始版本：** 12
 
+<!--Device-audio-enum AudioSessionDeactivatedReason--><!--Device-audio-enum AudioSessionDeactivatedReason-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## DEACTIVATED_LOWER_PRIORITY
@@ -20,6 +22,8 @@ DEACTIVATED_LOWER_PRIORITY = 0
 
 **起始版本：** 12
 
+<!--Device-AudioSessionDeactivatedReason-DEACTIVATED_LOWER_PRIORITY = 0--><!--Device-AudioSessionDeactivatedReason-DEACTIVATED_LOWER_PRIORITY = 0-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## DEACTIVATED_TIMEOUT
@@ -31,5 +35,7 @@ DEACTIVATED_TIMEOUT = 1
 音频会话等待超时。
 
 **起始版本：** 12
+
+<!--Device-AudioSessionDeactivatedReason-DEACTIVATED_TIMEOUT = 1--><!--Device-AudioSessionDeactivatedReason-DEACTIVATED_TIMEOUT = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core

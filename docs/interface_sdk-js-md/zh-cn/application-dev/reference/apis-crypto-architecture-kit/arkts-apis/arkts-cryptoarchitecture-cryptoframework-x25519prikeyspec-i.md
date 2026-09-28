@@ -12,6 +12,8 @@ interface X25519PriKeySpec extends AsyKeySpec
 
 **起始版本：** 11
 
+<!--Device-cryptoFramework-interface X25519PriKeySpec extends AsyKeySpec--><!--Device-cryptoFramework-interface X25519PriKeySpec extends AsyKeySpec-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
 - API版本11：SystemCapability.Security.CryptoFramework
@@ -34,7 +36,9 @@ X25519算法中的私钥sk。
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-X25519PriKeySpec-sk: bigint--><!--Device-X25519PriKeySpec-sk: bigint-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey

@@ -8,6 +8,8 @@ interface SystemSoundManager
 
 **起始版本：** 10
 
+<!--Device-systemSoundManager-interface SystemSoundManager--><!--Device-systemSoundManager-interface SystemSoundManager-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -29,6 +31,8 @@ addCustomizedTone(context: BaseContext, toneAttr: ToneAttrs, externalUri: string
 **起始版本：** 12
 
 **需要权限：** ohos.permission.WRITE_RINGTONE
+
+<!--Device-SystemSoundManager-addCustomizedTone(context: BaseContext, toneAttr: ToneAttrs, externalUri: string): Promise<string>--><!--Device-SystemSoundManager-addCustomizedTone(context: BaseContext, toneAttr: ToneAttrs, externalUri: string): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -103,6 +107,8 @@ addCustomizedTone(context: BaseContext, toneAttr: ToneAttrs, fd: number, offset?
 
 **需要权限：** ohos.permission.WRITE_RINGTONE
 
+<!--Device-SystemSoundManager-addCustomizedTone(context: BaseContext, toneAttr: ToneAttrs, fd: int, offset?: long, length?: long)      : Promise<string>--><!--Device-SystemSoundManager-addCustomizedTone(context: BaseContext, toneAttr: ToneAttrs, fd: int, offset?: long, length?: long)      : Promise<string>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -175,6 +181,8 @@ close(fd: number): Promise<void>
 
 **起始版本：** 12
 
+<!--Device-SystemSoundManager-close(fd: int): Promise<void>--><!--Device-SystemSoundManager-close(fd: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -227,6 +235,8 @@ getAlarmToneAttrList(context: BaseContext): Promise<ToneAttrsArray>
 
 **起始版本：** 12
 
+<!--Device-SystemSoundManager-getAlarmToneAttrList(context: BaseContext): Promise<ToneAttrsArray>--><!--Device-SystemSoundManager-getAlarmToneAttrList(context: BaseContext): Promise<ToneAttrsArray>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -277,6 +287,8 @@ getAlarmToneUri(context: BaseContext): Promise<string>
 获取系统当前闹铃uri。使用Promise异步回调。
 
 **起始版本：** 12
+
+<!--Device-SystemSoundManager-getAlarmToneUri(context: BaseContext): Promise<string>--><!--Device-SystemSoundManager-getAlarmToneUri(context: BaseContext): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -329,6 +341,8 @@ getCurrentRingtoneAttribute(type: RingtoneType): Promise<ToneAttrs>
 
 **起始版本：** 20
 
+<!--Device-SystemSoundManager-getCurrentRingtoneAttribute(type: RingtoneType): Promise<ToneAttrs>--><!--Device-SystemSoundManager-getCurrentRingtoneAttribute(type: RingtoneType): Promise<ToneAttrs>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -376,6 +390,8 @@ getDefaultAlarmToneAttrs(context: BaseContext): Promise<ToneAttrs>
 获取系统闹铃的属性。使用Promise异步回调。
 
 **起始版本：** 12
+
+<!--Device-SystemSoundManager-getDefaultAlarmToneAttrs(context: BaseContext): Promise<ToneAttrs>--><!--Device-SystemSoundManager-getDefaultAlarmToneAttrs(context: BaseContext): Promise<ToneAttrs>-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -427,6 +443,8 @@ getDefaultRingtoneAttrs(context: BaseContext, type: RingtoneType): Promise<ToneA
 获取系统铃声的属性。使用Promise异步回调。
 
 **起始版本：** 12
+
+<!--Device-SystemSoundManager-getDefaultRingtoneAttrs(context: BaseContext, type: RingtoneType): Promise<ToneAttrs>--><!--Device-SystemSoundManager-getDefaultRingtoneAttrs(context: BaseContext, type: RingtoneType): Promise<ToneAttrs>-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -481,6 +499,8 @@ getDefaultSystemToneAttrs(context: BaseContext, type: SystemToneType): Promise<T
 
 **起始版本：** 12
 
+<!--Device-SystemSoundManager-getDefaultSystemToneAttrs(context: BaseContext, type: SystemToneType): Promise<ToneAttrs>--><!--Device-SystemSoundManager-getDefaultSystemToneAttrs(context: BaseContext, type: SystemToneType): Promise<ToneAttrs>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -533,6 +553,8 @@ getHapticsAttrsSyncedWithTone(context: BaseContext, toneUri: string): Promise<To
 获取与指定铃音同步的振动属性。使用Promise异步回调。
 
 **起始版本：** 14
+
+<!--Device-SystemSoundManager-getHapticsAttrsSyncedWithTone(context: BaseContext, toneUri: string): Promise<ToneHapticsAttrs>--><!--Device-SystemSoundManager-getHapticsAttrsSyncedWithTone(context: BaseContext, toneUri: string): Promise<ToneHapticsAttrs>-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -597,6 +619,8 @@ getMockHapticRingtonePlayer(
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SystemSoundManager-getMockHapticRingtonePlayer(      context: BaseContext, type: RingtoneType, ringtoneUri: string): Promise<RingtonePlayer | null>--><!--Device-SystemSoundManager-getMockHapticRingtonePlayer(      context: BaseContext, type: RingtoneType, ringtoneUri: string): Promise<RingtonePlayer | null>-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -667,6 +691,8 @@ getMockHapticRingtonePlayer(context: BaseContext, hapticUri: string): Promise<Ri
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SystemSoundManager-getMockHapticRingtonePlayer(context: BaseContext, hapticUri: string): Promise<RingtonePlayer | null>--><!--Device-SystemSoundManager-getMockHapticRingtonePlayer(context: BaseContext, hapticUri: string): Promise<RingtonePlayer | null>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -724,6 +750,8 @@ getRingtoneAttrList(context: BaseContext, type: RingtoneType): Promise<ToneAttrs
 
 **起始版本：** 12
 
+<!--Device-SystemSoundManager-getRingtoneAttrList(context: BaseContext, type: RingtoneType): Promise<ToneAttrsArray>--><!--Device-SystemSoundManager-getRingtoneAttrList(context: BaseContext, type: RingtoneType): Promise<ToneAttrsArray>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -776,6 +804,8 @@ getRingtonePlayer(context: BaseContext, type: RingtoneType): Promise<RingtonePla
 获取系统铃声播放器。使用Promise异步回调。
 
 **起始版本：** 11
+
+<!--Device-SystemSoundManager-getRingtonePlayer(context: BaseContext, type: RingtoneType): Promise<RingtonePlayer>--><!--Device-SystemSoundManager-getRingtonePlayer(context: BaseContext, type: RingtoneType): Promise<RingtonePlayer>-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -831,6 +861,8 @@ getRingtoneUri(context: BaseContext, type: RingtoneType): Promise<string>
 
 **起始版本：** 11
 
+<!--Device-SystemSoundManager-getRingtoneUri(context: BaseContext, type: RingtoneType): Promise<string>--><!--Device-SystemSoundManager-getRingtoneUri(context: BaseContext, type: RingtoneType): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -884,6 +916,8 @@ getSystemToneAttrList(context: BaseContext, type: SystemToneType): Promise<ToneA
 
 **起始版本：** 12
 
+<!--Device-SystemSoundManager-getSystemToneAttrList(context: BaseContext, type: SystemToneType): Promise<ToneAttrsArray>--><!--Device-SystemSoundManager-getSystemToneAttrList(context: BaseContext, type: SystemToneType): Promise<ToneAttrsArray>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -936,6 +970,8 @@ getSystemTonePlayer(context: BaseContext, type: SystemToneType): Promise<SystemT
 获取系统提示音播放器。使用Promise异步回调。
 
 **起始版本：** 11
+
+<!--Device-SystemSoundManager-getSystemTonePlayer(context: BaseContext, type: SystemToneType): Promise<SystemTonePlayer>--><!--Device-SystemSoundManager-getSystemTonePlayer(context: BaseContext, type: SystemToneType): Promise<SystemTonePlayer>-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -991,6 +1027,8 @@ getSystemToneUri(context: BaseContext, type: SystemToneType): Promise<string>
 
 **起始版本：** 11
 
+<!--Device-SystemSoundManager-getSystemToneUri(context: BaseContext, type: SystemToneType): Promise<string>--><!--Device-SystemSoundManager-getSystemToneUri(context: BaseContext, type: SystemToneType): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1044,6 +1082,8 @@ getToneHapticsList(context: BaseContext, isSynced: boolean): Promise<ToneHaptics
 
 **起始版本：** 14
 
+<!--Device-SystemSoundManager-getToneHapticsList(context: BaseContext, isSynced: boolean): Promise<ToneHapticsAttrsArray>--><!--Device-SystemSoundManager-getToneHapticsList(context: BaseContext, isSynced: boolean): Promise<ToneHapticsAttrsArray>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1096,6 +1136,8 @@ getToneHapticsSettings(context: BaseContext, type: ToneHapticsType): Promise<Ton
 获取系统铃音的振动设置。使用Promise异步回调。
 
 **起始版本：** 14
+
+<!--Device-SystemSoundManager-getToneHapticsSettings(context: BaseContext, type: ToneHapticsType): Promise<ToneHapticsSettings>--><!--Device-SystemSoundManager-getToneHapticsSettings(context: BaseContext, type: ToneHapticsType): Promise<ToneHapticsSettings>-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -1151,6 +1193,8 @@ openAlarmTone(context: BaseContext, uri: string): Promise<number>
 
 **起始版本：** 12
 
+<!--Device-SystemSoundManager-openAlarmTone(context: BaseContext, uri: string): Promise<int>--><!--Device-SystemSoundManager-openAlarmTone(context: BaseContext, uri: string): Promise<int>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1204,6 +1248,8 @@ openToneHaptics(context: BaseContext, hapticsUri: string): Promise<number>
 打开系统铃音的振动。使用Promise异步回调。
 
 **起始版本：** 14
+
+<!--Device-SystemSoundManager-openToneHaptics(context: BaseContext, hapticsUri: string): Promise<int>--><!--Device-SystemSoundManager-openToneHaptics(context: BaseContext, hapticsUri: string): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -1260,6 +1306,8 @@ openToneList(uriList: Array<string>): Promise<Array<[string, number, SystemSound
 
 **起始版本：** 20
 
+<!--Device-SystemSoundManager-openToneList(uriList: Array<string>): Promise<Array<[string, long, SystemSoundError]>>--><!--Device-SystemSoundManager-openToneList(uriList: Array<string>): Promise<Array<[string, long, SystemSoundError]>>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1314,6 +1362,8 @@ removeCustomizedTone(context: BaseContext, uri:string): Promise<void>
 **起始版本：** 12
 
 **需要权限：** ohos.permission.WRITE_RINGTONE
+
+<!--Device-SystemSoundManager-removeCustomizedTone(context: BaseContext, uri:string): Promise<void>--><!--Device-SystemSoundManager-removeCustomizedTone(context: BaseContext, uri:string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -1372,6 +1422,8 @@ removeCustomizedToneList(uriList: Array<string>): Promise<Array<[string, SystemS
 
 **需要权限：** ohos.permission.WRITE_RINGTONE
 
+<!--Device-SystemSoundManager-removeCustomizedToneList(uriList: Array<string>): Promise<Array<[string, SystemSoundError]>>--><!--Device-SystemSoundManager-removeCustomizedToneList(uriList: Array<string>): Promise<Array<[string, SystemSoundError]>>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1426,6 +1478,8 @@ setAlarmToneUri(context: BaseContext, uri: string): Promise<void>
 
 **起始版本：** 12
 
+<!--Device-SystemSoundManager-setAlarmToneUri(context: BaseContext, uri: string): Promise<void>--><!--Device-SystemSoundManager-setAlarmToneUri(context: BaseContext, uri: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1479,6 +1533,8 @@ setRingtoneUri(context: BaseContext, uri: string, type: RingtoneType): Promise<v
 设置系统铃声uri。使用Promise异步回调。
 
 **起始版本：** 11
+
+<!--Device-SystemSoundManager-setRingtoneUri(context: BaseContext, uri: string, type: RingtoneType): Promise<void>--><!--Device-SystemSoundManager-setRingtoneUri(context: BaseContext, uri: string, type: RingtoneType): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -1535,6 +1591,8 @@ setSystemToneUri(context: BaseContext, uri: string, type: SystemToneType): Promi
 
 **起始版本：** 11
 
+<!--Device-SystemSoundManager-setSystemToneUri(context: BaseContext, uri: string, type: SystemToneType): Promise<void>--><!--Device-SystemSoundManager-setSystemToneUri(context: BaseContext, uri: string, type: SystemToneType): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1589,6 +1647,8 @@ setToneHapticsSettings(context: BaseContext, type: ToneHapticsType, settings: To
 设置系统铃音的振动。使用Promise异步回调。
 
 **起始版本：** 14
+
+<!--Device-SystemSoundManager-setToneHapticsSettings(context: BaseContext, type: ToneHapticsType, settings: ToneHapticsSettings): Promise<void>--><!--Device-SystemSoundManager-setToneHapticsSettings(context: BaseContext, type: ToneHapticsType, settings: ToneHapticsSettings): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -1660,6 +1720,8 @@ getSystemRingtonePlayer(context: Context, type: RingtoneType, callback: AsyncCal
 
 **替代接口：** [getRingtonePlayer](#getringtoneplayer)
 
+<!--Device-SystemSoundManager-getSystemRingtonePlayer(context: Context, type: RingtoneType, callback: AsyncCallback<RingtonePlayer>): void--><!--Device-SystemSoundManager-getSystemRingtonePlayer(context: Context, type: RingtoneType, callback: AsyncCallback<RingtonePlayer>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1715,6 +1777,8 @@ getSystemRingtonePlayer(context: Context, type: RingtoneType): Promise<RingtoneP
 **废弃版本：** 11
 
 **替代接口：** [getRingtonePlayer](#getringtoneplayer)
+
+<!--Device-SystemSoundManager-getSystemRingtonePlayer(context: Context, type: RingtoneType): Promise<RingtonePlayer>--><!--Device-SystemSoundManager-getSystemRingtonePlayer(context: Context, type: RingtoneType): Promise<RingtonePlayer>-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -1772,6 +1836,8 @@ getSystemRingtoneUri(context: Context, type: RingtoneType, callback: AsyncCallba
 
 **替代接口：** [getRingtoneUri](#getringtoneuri)
 
+<!--Device-SystemSoundManager-getSystemRingtoneUri(context: Context, type: RingtoneType, callback: AsyncCallback<string>): void--><!--Device-SystemSoundManager-getSystemRingtoneUri(context: Context, type: RingtoneType, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1824,6 +1890,8 @@ getSystemRingtoneUri(context: Context, type: RingtoneType): Promise<string>
 **废弃版本：** 11
 
 **替代接口：** [getRingtoneUri](#getringtoneuri)
+
+<!--Device-SystemSoundManager-getSystemRingtoneUri(context: Context, type: RingtoneType): Promise<string>--><!--Device-SystemSoundManager-getSystemRingtoneUri(context: Context, type: RingtoneType): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -1879,6 +1947,8 @@ setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType, callback
 
 **替代接口：** [setRingtoneUri](#setringtoneuri)
 
+<!--Device-SystemSoundManager-setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType, callback: AsyncCallback<void>): void--><!--Device-SystemSoundManager-setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1933,6 +2003,8 @@ setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType): Promise
 **废弃版本：** 11
 
 **替代接口：** [setRingtoneUri](#setringtoneuri)
+
+<!--Device-SystemSoundManager-setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType): Promise<void>--><!--Device-SystemSoundManager-setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 

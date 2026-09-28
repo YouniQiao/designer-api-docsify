@@ -20,6 +20,8 @@ FaultLogExtensionContext模块提供访问[FaultLogExtensionAbility](arkts-perfo
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-unnamed-export default class FaultLogExtensionContext extends ExtensionContext--><!--Device-unnamed-export default class FaultLogExtensionContext extends ExtensionContext-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
 ## 导入模块

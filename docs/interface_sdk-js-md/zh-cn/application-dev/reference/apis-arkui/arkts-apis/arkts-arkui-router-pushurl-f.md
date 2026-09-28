@@ -28,6 +28,8 @@ function pushUrl(options: RouterOptions, callback: AsyncCallback<void>): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-router-function pushUrl(options: RouterOptions, callback: AsyncCallback<void>): void--><!--Device-router-function pushUrl(options: RouterOptions, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -105,6 +107,8 @@ function pushUrl(options: RouterOptions): Promise<void>
 **替代接口：** [pushUrl](arkts-arkui-arkui-uicontext-router-c.md#pushurl-1)(options: router.RouterOptions)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-router-function pushUrl(options: RouterOptions): Promise<void>--><!--Device-router-function pushUrl(options: RouterOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -191,6 +195,8 @@ function pushUrl(options: RouterOptions, mode: RouterMode, callback: AsyncCallba
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-router-function pushUrl(options: RouterOptions, mode: RouterMode, callback: AsyncCallback<void>): void--><!--Device-router-function pushUrl(options: RouterOptions, mode: RouterMode, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -269,6 +275,8 @@ function pushUrl(options: RouterOptions, mode: RouterMode): Promise<void>
 **替代接口：** [pushUrl](arkts-arkui-arkui-uicontext-router-c.md#pushurl-3)(options: router.RouterOptions, mode: router.RouterMode)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-router-function pushUrl(options: RouterOptions, mode: RouterMode): Promise<void>--><!--Device-router-function pushUrl(options: RouterOptions, mode: RouterMode): Promise<void>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

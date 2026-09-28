@@ -10,6 +10,8 @@ interface Album extends AbsAlbum
 
 **起始版本：** 12
 
+<!--Device-sendablePhotoAccessHelper-interface Album extends AbsAlbum--><!--Device-sendablePhotoAccessHelper-interface Album extends AbsAlbum-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
@@ -29,6 +31,8 @@ commitModify(): Promise<void>
 **起始版本：** 12
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-Album-commitModify(): Promise<void>--><!--Device-Album-commitModify(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -82,6 +86,8 @@ convertToPhotoAlbum(): photoAccessHelper.Album
 将Sendable类型Album转换为非Sendable类型Album。
 
 **起始版本：** 12
+
+<!--Device-Album-convertToPhotoAlbum(): photoAccessHelper.Album--><!--Device-Album-convertToPhotoAlbum(): photoAccessHelper.Album-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -141,6 +147,8 @@ readonly imageCount?: number
 
 **起始版本：** 12
 
+<!--Device-Album-readonly imageCount?: number--><!--Device-Album-readonly imageCount?: number-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## videoCount
@@ -154,5 +162,7 @@ readonly videoCount?: number
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-Album-readonly videoCount?: number--><!--Device-Album-readonly videoCount?: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core

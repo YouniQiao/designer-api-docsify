@@ -8,6 +8,8 @@ export class AsyncRunner
 
 **起始版本：** 18
 
+<!--Device-taskpool-export class AsyncRunner--><!--Device-taskpool-export class AsyncRunner-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -27,6 +29,8 @@ AsyncRunner的构造函数，用于创建一个**AsyncRunner**实例。构造一
 **起始版本：** 18
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-AsyncRunner-constructor(runningCapacity: number, waitingCapacity?: number)--><!--Device-AsyncRunner-constructor(runningCapacity: number, waitingCapacity?: number)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -62,6 +66,8 @@ AsyncRunner的构造函数，用于创建一个**AsyncRunner**实例。构造一
 **起始版本：** 18
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-AsyncRunner-constructor(name: string, runningCapacity: number, waitingCapacity?: number)--><!--Device-AsyncRunner-constructor(name: string, runningCapacity: number, waitingCapacity?: number)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -106,6 +112,8 @@ execute(task: Task, priority?: Priority): Promise<Object>
 **起始版本：** 18
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-AsyncRunner-execute(task: Task, priority?: Priority): Promise<Object>--><!--Device-AsyncRunner-execute(task: Task, priority?: Priority): Promise<Object>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

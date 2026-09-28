@@ -12,6 +12,8 @@ export interface Configuration
 
 **替代接口：** [Configuration/Configuration](arkts-ability-app-ability-configuration-configuration-i.md)
 
+<!--Device-unnamed-export interface Configuration--><!--Device-unnamed-export interface Configuration-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityBase
 
 ## 导入模块
@@ -35,6 +37,8 @@ colorMode?: ConfigurationConstant.ColorMode
 
 **替代接口：** [colorMode](arkts-ability-app-ability-configuration-configuration-i.md#colormode)
 
+<!--Device-Configuration-colorMode?: ConfigurationConstant.ColorMode--><!--Device-Configuration-colorMode?: ConfigurationConstant.ColorMode-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityBase
 
 ## language
@@ -52,6 +56,8 @@ language?: string
 **废弃版本：** 9
 
 **替代接口：** [language](arkts-ability-app-ability-configuration-configuration-i.md#language)
+
+<!--Device-Configuration-language?: string--><!--Device-Configuration-language?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 

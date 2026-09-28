@@ -8,6 +8,8 @@ Provides common style configuration options for the progress indicator.
 
 **Since:** 10
 
+<!--Device-unnamed-declare interface CommonProgressStyleOptions--><!--Device-unnamed-declare interface CommonProgressStyleOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## enableSmoothEffect
@@ -33,5 +35,7 @@ Default value: true
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-CommonProgressStyleOptions-enableSmoothEffect?: boolean--><!--Device-CommonProgressStyleOptions-enableSmoothEffect?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

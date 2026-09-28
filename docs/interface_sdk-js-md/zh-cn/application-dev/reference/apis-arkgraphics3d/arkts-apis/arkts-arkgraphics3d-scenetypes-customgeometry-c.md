@@ -12,6 +12,8 @@ export declare class CustomGeometry extends GeometryDefinition
 
 **起始版本：** 18
 
+<!--Device-unnamed-export declare class CustomGeometry extends GeometryDefinition--><!--Device-unnamed-export declare class CustomGeometry extends GeometryDefinition-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## colors
@@ -25,6 +27,8 @@ colors?: Color[]
 **类型：** [Color](arkts-arkgraphics3d-scenetypes-color-i.md)[]
 
 **起始版本：** 18
+
+<!--Device-CustomGeometry-colors?: Color[]--><!--Device-CustomGeometry-colors?: Color[]-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -42,6 +46,8 @@ indices?: number[]
 
 **起始版本：** 18
 
+<!--Device-CustomGeometry-indices?: int[]--><!--Device-CustomGeometry-indices?: int[]-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## normals
@@ -55,6 +61,8 @@ normals?: Vec3[]
 **类型：** [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)[]
 
 **起始版本：** 18
+
+<!--Device-CustomGeometry-normals?: Vec3[]--><!--Device-CustomGeometry-normals?: Vec3[]-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -72,6 +80,8 @@ topology?: PrimitiveTopology
 
 **起始版本：** 18
 
+<!--Device-CustomGeometry-topology?: PrimitiveTopology--><!--Device-CustomGeometry-topology?: PrimitiveTopology-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## uvs
@@ -85,6 +95,8 @@ uvs?: Vec2[]
 **类型：** [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md)[]
 
 **起始版本：** 18
+
+<!--Device-CustomGeometry-uvs?: Vec2[]--><!--Device-CustomGeometry-uvs?: Vec2[]-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -100,6 +112,8 @@ get vertices(): Vec3[]
 
 **起始版本：** 18
 
+<!--Device-CustomGeometry-get vertices(): Vec3[]--><!--Device-CustomGeometry-get vertices(): Vec3[]-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ```TypeScript
@@ -111,5 +125,7 @@ set vertices(value: Vec3[])
 **类型：** [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)[]
 
 **起始版本：** 18
+
+<!--Device-CustomGeometry-set vertices(value: Vec3[])--><!--Device-CustomGeometry-set vertices(value: Vec3[])-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

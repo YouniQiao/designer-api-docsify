@@ -18,6 +18,8 @@ function getDynamicIconInfo(bundleName: string): Promise<Array<DynamicIconInfo>>
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
+<!--Device-bundleManager-function getDynamicIconInfo(bundleName: string): Promise<Array<DynamicIconInfo>>--><!--Device-bundleManager-function getDynamicIconInfo(bundleName: string): Promise<Array<DynamicIconInfo>>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。

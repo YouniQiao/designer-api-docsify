@@ -20,6 +20,8 @@ function removeIptablesFilterRule(admin: Want, filterRule: RemoveFilterRule, cal
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-networkManager-function removeIptablesFilterRule(admin: Want, filterRule: RemoveFilterRule, callback: AsyncCallback<void>): void--><!--Device-networkManager-function removeIptablesFilterRule(admin: Want, filterRule: RemoveFilterRule, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -90,6 +92,8 @@ function removeIptablesFilterRule(admin: Want, filterRule: RemoveFilterRule): Pr
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_NETWORK
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-networkManager-function removeIptablesFilterRule(admin: Want, filterRule: RemoveFilterRule): Promise<void>--><!--Device-networkManager-function removeIptablesFilterRule(admin: Want, filterRule: RemoveFilterRule): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

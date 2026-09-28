@@ -10,6 +10,8 @@ interface AudioCollaborativeManager
 
 **起始版本：** 20
 
+<!--Device-audio-interface AudioCollaborativeManager--><!--Device-audio-interface AudioCollaborativeManager-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **系统接口：** 此接口为系统接口。
@@ -29,6 +31,8 @@ isCollaborativePlaybackEnabledForDevice(deviceDescriptor: AudioDeviceDescriptor)
 查询指定设备移动全景声状态，同步返回结果。
 
 **起始版本：** 20
+
+<!--Device-AudioCollaborativeManager-isCollaborativePlaybackEnabledForDevice(deviceDescriptor: AudioDeviceDescriptor): boolean--><!--Device-AudioCollaborativeManager-isCollaborativePlaybackEnabledForDevice(deviceDescriptor: AudioDeviceDescriptor): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -93,6 +97,8 @@ isCollaborativePlaybackSupported(): boolean
 
 **起始版本：** 20
 
+<!--Device-AudioCollaborativeManager-isCollaborativePlaybackSupported(): boolean--><!--Device-AudioCollaborativeManager-isCollaborativePlaybackSupported(): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **系统接口：** 此接口为系统接口。
@@ -136,6 +142,8 @@ isCollaborativePlaybackSupportedForDevice(deviceDescriptor: AudioDeviceDescripto
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioCollaborativeManager-isCollaborativePlaybackSupportedForDevice(deviceDescriptor: AudioDeviceDescriptor): boolean--><!--Device-AudioCollaborativeManager-isCollaborativePlaybackSupportedForDevice(deviceDescriptor: AudioDeviceDescriptor): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **系统接口：** 此接口为系统接口。
@@ -167,6 +175,8 @@ setCollaborativePlaybackEnabledForDevice(deviceDescriptor: AudioDeviceDescriptor
 根据输入指令，开启或关闭指定设备移动全景声。使用Promise异步回调。当前只有蓝牙A2DP（Advanced Audio Distribution Profile）设备支持移动全景声。当开启移动全景声后，指定蓝牙A2DP设备和本地扬声器将同时播放音频。
 
 **起始版本：** 20
+
+<!--Device-AudioCollaborativeManager-setCollaborativePlaybackEnabledForDevice(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise<void>--><!--Device-AudioCollaborativeManager-setCollaborativePlaybackEnabledForDevice(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 

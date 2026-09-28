@@ -8,6 +8,8 @@ interface AVTimedMetaData
 
 **起始版本：** 26.0.0
 
+<!--Device-media-interface AVTimedMetaData--><!--Device-media-interface AVTimedMetaData-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ classify?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVTimedMetaData-classify?: string--><!--Device-AVTimedMetaData-classify?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 ## contents
@@ -45,6 +49,8 @@ contents: Record<string, object>
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVTimedMetaData-contents: Record<string, object>--><!--Device-AVTimedMetaData-contents: Record<string, object>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -62,6 +68,8 @@ duration: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVTimedMetaData-duration: int--><!--Device-AVTimedMetaData-duration: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 ## id
@@ -78,6 +86,8 @@ id?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVTimedMetaData-id?: string--><!--Device-AVTimedMetaData-id?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 ## start
@@ -93,5 +103,7 @@ start: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVTimedMetaData-start: int--><!--Device-AVTimedMetaData-start: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core

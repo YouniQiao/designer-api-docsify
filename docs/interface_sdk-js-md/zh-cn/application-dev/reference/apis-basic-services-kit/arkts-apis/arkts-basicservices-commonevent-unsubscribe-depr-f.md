@@ -19,6 +19,8 @@ function unsubscribe(subscriber: CommonEventSubscriber, callback?: AsyncCallback
 
 **替代接口：** [unsubscribe](arkts-basicservices-commoneventmanager-unsubscribe-f.md)
 
+<!--Device-commonEvent-function unsubscribe(subscriber: CommonEventSubscriber, callback?: AsyncCallback<void>): void--><!--Device-commonEvent-function unsubscribe(subscriber: CommonEventSubscriber, callback?: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **参数：**

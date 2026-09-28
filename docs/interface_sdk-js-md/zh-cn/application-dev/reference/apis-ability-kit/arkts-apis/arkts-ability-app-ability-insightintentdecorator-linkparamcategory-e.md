@@ -8,6 +8,8 @@ declare enum LinkParamCategory
 
 **起始版本：** 20
 
+<!--Device-unnamed-declare enum LinkParamCategory--><!--Device-unnamed-declare enum LinkParamCategory-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## LINK
@@ -24,6 +26,8 @@ LINK = 'link'
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-LinkParamCategory-LINK = 'link'--><!--Device-LinkParamCategory-LINK = 'link'-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## WANT
@@ -39,5 +43,7 @@ WANT = 'want'
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-LinkParamCategory-WANT = 'want'--><!--Device-LinkParamCategory-WANT = 'want'-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

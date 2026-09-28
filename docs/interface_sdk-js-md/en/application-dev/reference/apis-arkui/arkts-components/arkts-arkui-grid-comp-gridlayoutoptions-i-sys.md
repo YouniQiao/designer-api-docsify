@@ -10,6 +10,8 @@ To improve the performance of **Grid** in scenarios such as jumps and column qua
 
 **Since:** 10
 
+<!--Device-unnamed-declare interface GridLayoutOptions--><!--Device-unnamed-declare interface GridLayoutOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onGetStartIndexByIndex
@@ -23,6 +25,8 @@ Calculates the start row within the page when the **Grid** scrolls to a specifie
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-GridLayoutOptions-onGetStartIndexByIndex?: OnGetStartIndexByIndexCallback--><!--Device-GridLayoutOptions-onGetStartIndexByIndex?: OnGetStartIndexByIndexCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -39,6 +43,8 @@ Calculates the start row position of the current grid page based on the total sc
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-GridLayoutOptions-onGetStartIndexByOffset?: OnGetStartIndexByOffsetCallback--><!--Device-GridLayoutOptions-onGetStartIndexByOffset?: OnGetStartIndexByOffsetCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

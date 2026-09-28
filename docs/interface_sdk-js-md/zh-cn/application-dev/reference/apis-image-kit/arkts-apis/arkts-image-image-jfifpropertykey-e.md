@@ -21,10 +21,12 @@ enum JfifPropertyKey
 
 | X_DENSITY | 'JfifXDensity' | JFIF图像X方向密度。 |  
 | Y_DENSITY | 'JfifYDensity' | JFIF图像Y方向密度。 |  
-| [VERSION](arkts-image-image-jfifpropertykey-e.md) | 'JfifVersion' | JFIF图像版本。 |
-| [IS_PROGRESSIVE](arkts-image-image-jfifpropertykey-e.md) | 'JfifIsProgressive' | 图像是否采用渐进式编码，即图像在加载过程中按多次扫描逐步提升清晰度。true表示采用，false表示不采用。 |
+| VERSION | 'JfifVersion' | JFIF图像版本。 |
+| IS_PROGRESSIVE | 'JfifIsProgressive' | 图像是否采用渐进式编码，即图像在加载过程中按多次扫描逐步提升清晰度。true表示采用，false表示不采用。 |
 
 **起始版本：** 26.0.0
+
+<!--Device-image-enum JfifPropertyKey--><!--Device-image-enum JfifPropertyKey-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -40,6 +42,8 @@ JFIF x density.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-JfifPropertyKey-X_DENSITY = 'JfifXDensity'--><!--Device-JfifPropertyKey-X_DENSITY = 'JfifXDensity'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## Y_DENSITY
@@ -53,6 +57,8 @@ JFIF y density.
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-JfifPropertyKey-Y_DENSITY = 'JfifYDensity'--><!--Device-JfifPropertyKey-Y_DENSITY = 'JfifYDensity'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -68,6 +74,8 @@ JFIF density unit.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-JfifPropertyKey-DENSITY_UNIT = 'JfifDensityUnit'--><!--Device-JfifPropertyKey-DENSITY_UNIT = 'JfifDensityUnit'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## VERSION
@@ -82,6 +90,8 @@ JFIF version.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-JfifPropertyKey-VERSION = 'JfifVersion'--><!--Device-JfifPropertyKey-VERSION = 'JfifVersion'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## IS_PROGRESSIVE
@@ -95,5 +105,7 @@ whether the JFIF image is progressive.
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-JfifPropertyKey-IS_PROGRESSIVE = 'JfifIsProgressive'--><!--Device-JfifPropertyKey-IS_PROGRESSIVE = 'JfifIsProgressive'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core

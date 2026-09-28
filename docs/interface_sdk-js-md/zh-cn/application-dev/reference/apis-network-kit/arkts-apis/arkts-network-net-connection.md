@@ -8,6 +8,8 @@
 
 **起始版本：** 8
 
+<!--Device-unnamed-declare namespace connection--><!--Device-unnamed-declare namespace connection-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## 导入模块

@@ -26,6 +26,8 @@ function stopBluetoothDiscovery(): void
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH
 - API版本9：ohos.permission.DISCOVER_BLUETOOTH
 
+<!--Device-bluetoothManager-function stopBluetoothDiscovery(): void--><!--Device-bluetoothManager-function stopBluetoothDiscovery(): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **错误码：**

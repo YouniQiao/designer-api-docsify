@@ -14,6 +14,8 @@ Specifies whether automatic screen brightness adjustment is enabled.
 
 **Since:** 7
 
+<!--Device-display-const AUTO_SCREEN_BRIGHTNESS: string--><!--Device-display-const AUTO_SCREEN_BRIGHTNESS: string-End-->
+
 **System capability:** SystemCapability.Applications.Settings.Core
 
 ## AUTO_SCREEN_BRIGHTNESS_MODE
@@ -27,6 +29,8 @@ Indicates the value of `AUTO_SCREEN_BRIGHTNESS` when automatic screen brightness
 **Type:** number
 
 **Since:** 7
+
+<!--Device-display-const AUTO_SCREEN_BRIGHTNESS_MODE: int--><!--Device-display-const AUTO_SCREEN_BRIGHTNESS_MODE: int-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
@@ -42,6 +46,8 @@ Indicates the scaling factor of fonts, which is a float number.
 
 **Since:** 7
 
+<!--Device-display-const FONT_SCALE: string--><!--Device-display-const FONT_SCALE: string-End-->
+
 **System capability:** SystemCapability.Applications.Settings.Core
 
 ## MANUAL_SCREEN_BRIGHTNESS_MODE
@@ -55,6 +61,8 @@ Indicates the value of `AUTO_SCREEN_BRIGHTNESS` when manual screen brightness ad
 **Type:** number
 
 **Since:** 7
+
+<!--Device-display-const MANUAL_SCREEN_BRIGHTNESS_MODE: int--><!--Device-display-const MANUAL_SCREEN_BRIGHTNESS_MODE: int-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
@@ -70,6 +78,8 @@ Indicates the screen brightness. The value ranges from 0 to 255.
 
 **Since:** 7
 
+<!--Device-display-const SCREEN_BRIGHTNESS_STATUS: string--><!--Device-display-const SCREEN_BRIGHTNESS_STATUS: string-End-->
+
 **System capability:** SystemCapability.Applications.Settings.Core
 
 ## SCREEN_OFF_TIMEOUT
@@ -83,6 +93,8 @@ Indicates the duration that the device waits before going to sleep after a perio
 **Type:** string
 
 **Since:** 7
+
+<!--Device-display-const SCREEN_OFF_TIMEOUT: string--><!--Device-display-const SCREEN_OFF_TIMEOUT: string-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
@@ -101,6 +113,8 @@ Indicates the scaling factor for the animation duration.
 **Since:** 7
 
 **Deprecated since:** 21
+
+<!--Device-display-const ANIMATOR_DURATION_SCALE: string--><!--Device-display-const ANIMATOR_DURATION_SCALE: string-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
@@ -122,6 +136,8 @@ Indicates the screen rotation when no other policy is available.
 
 **Deprecated since:** 21
 
+<!--Device-display-const DEFAULT_SCREEN_ROTATION: string--><!--Device-display-const DEFAULT_SCREEN_ROTATION: string-End-->
+
 **System capability:** SystemCapability.Applications.Settings.Core
 
 ## DISPLAY_INVERSION_STATUS
@@ -140,6 +156,8 @@ Specifies whether display color inversion is enabled.
 
 **Deprecated since:** 21
 
+<!--Device-display-const DISPLAY_INVERSION_STATUS: string--><!--Device-display-const DISPLAY_INVERSION_STATUS: string-End-->
+
 **System capability:** SystemCapability.Applications.Settings.Core
 
 ## TRANSITION_ANIMATION_SCALE
@@ -156,6 +174,8 @@ Indicates the scaling factor for transition animations. If the value is `0`, tra
 
 **Deprecated since:** 21
 
+<!--Device-display-const TRANSITION_ANIMATION_SCALE: string--><!--Device-display-const TRANSITION_ANIMATION_SCALE: string-End-->
+
 **System capability:** SystemCapability.Applications.Settings.Core
 
 ## WINDOW_ANIMATION_SCALE
@@ -171,5 +191,7 @@ Indicates the scaling factor for normal window animations. If the value is `0`, 
 **Since:** 7
 
 **Deprecated since:** 21
+
+<!--Device-display-const WINDOW_ANIMATION_SCALE: string--><!--Device-display-const WINDOW_ANIMATION_SCALE: string-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core

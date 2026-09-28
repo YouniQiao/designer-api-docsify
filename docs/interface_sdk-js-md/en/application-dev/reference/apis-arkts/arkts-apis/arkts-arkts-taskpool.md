@@ -9,6 +9,8 @@ TaskPool provides a multi-thread running environment for applications. It helps 
 
 **Since:** 9
 
+<!--Device-unnamed-declare namespace taskpool--><!--Device-unnamed-declare namespace taskpool-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import

@@ -8,6 +8,8 @@ interface PermissionInfo
 
 **起始版本：** 26.0.0
 
+<!--Device-abilityToolAccessCtrl-interface PermissionInfo--><!--Device-abilityToolAccessCtrl-interface PermissionInfo-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 **系统接口：** 此接口为系统接口。
@@ -31,6 +33,8 @@ authStatusInfo?: AuthStatusInfo
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-PermissionInfo-authStatusInfo?: AuthStatusInfo--><!--Device-PermissionInfo-authStatusInfo?: AuthStatusInfo-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ permission: string
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-PermissionInfo-permission: string--><!--Device-PermissionInfo-permission: string-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 **系统接口：** 此接口为系统接口。
@@ -66,6 +72,8 @@ permissionStatus: abilityAccessCtrl.PermissionStatus
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-PermissionInfo-permissionStatus: abilityAccessCtrl.PermissionStatus--><!--Device-PermissionInfo-permissionStatus: abilityAccessCtrl.PermissionStatus-End-->
 
 **系统能力：** SystemCapability.Security.Asset
 

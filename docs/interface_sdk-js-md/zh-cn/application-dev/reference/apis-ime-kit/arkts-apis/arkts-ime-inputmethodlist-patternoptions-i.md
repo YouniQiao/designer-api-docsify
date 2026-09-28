@@ -8,6 +8,8 @@ export interface PatternOptions
 
 **起始版本：** 11
 
+<!--Device-unnamed-export interface PatternOptions--><!--Device-unnamed-export interface PatternOptions-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## 导入模块
@@ -25,6 +27,8 @@ action: (index: number) => void
 模式选项改变时的回调函数。<br> <br>使用场景：当需要在用户切换键盘模式时执行相应逻辑（如更新键盘布局、保存用户偏好等）时，需设置此回调。<br> <br>使用后效果：当用户在输入法切换列表弹窗中点击某个模式选项时，系统将调用此回调并传入选中模式在patterns数组中的索引值。<br> <br>说明：回调参数index为选中模式在patterns数组中的索引值，与defaultSelected的取值范围一致。回调中可根据index值更新defaultSelected，以保持下次打开弹窗时选中状态与用户选择一致。
 
 **起始版本：** 11
+
+<!--Device-PatternOptions-action: (index: int) => void--><!--Device-PatternOptions-action: (index: int) => void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -46,6 +50,8 @@ defaultSelected?: number
 
 **起始版本：** 11
 
+<!--Device-PatternOptions-defaultSelected?: int--><!--Device-PatternOptions-defaultSelected?: int-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## patterns
@@ -59,5 +65,7 @@ patterns: Array<Pattern>
 **类型：** Array&lt;[Pattern](arkts-ime-inputmethodlist-pattern-i.md)&gt;
 
 **起始版本：** 11
+
+<!--Device-PatternOptions-patterns: Array<Pattern>--><!--Device-PatternOptions-patterns: Array<Pattern>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework

@@ -8,6 +8,8 @@ enum FirewallRuleAction
 
 **起始版本：** 15
 
+<!--Device-netFirewall-enum FirewallRuleAction--><!--Device-netFirewall-enum FirewallRuleAction-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 ## RULE_ALLOW
@@ -20,6 +22,8 @@ RULE_ALLOW = 0
 
 **起始版本：** 15
 
+<!--Device-FirewallRuleAction-RULE_ALLOW = 0--><!--Device-FirewallRuleAction-RULE_ALLOW = 0-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 ## RULE_DENY
@@ -31,5 +35,7 @@ RULE_DENY = 1
 阻止。
 
 **起始版本：** 15
+
+<!--Device-FirewallRuleAction-RULE_DENY = 1--><!--Device-FirewallRuleAction-RULE_DENY = 1-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall

@@ -16,6 +16,8 @@ function changeConfirmation(sharingResource: string, state: State, callback: Asy
 
 **起始版本：** 11
 
+<!--Device-sharing-function changeConfirmation(sharingResource: string, state: State, callback: AsyncCallback<Result<void>>): void--><!--Device-sharing-function changeConfirmation(sharingResource: string, state: State, callback: AsyncCallback<Result<void>>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
 **系统接口：** 此接口为系统接口。
@@ -62,6 +64,8 @@ function changeConfirmation(sharingResource: string, state: State): Promise<Resu
 根据共享资源标识更改共享邀请的状态，使用Promise异步回调。
 
 **起始版本：** 11
+
+<!--Device-sharing-function changeConfirmation(sharingResource: string, state: State): Promise<Result<void>>--><!--Device-sharing-function changeConfirmation(sharingResource: string, state: State): Promise<Result<void>>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 

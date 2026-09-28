@@ -8,6 +8,8 @@ interface ToneHapticsAttrs
 
 **起始版本：** 14
 
+<!--Device-systemSoundManager-interface ToneHapticsAttrs--><!--Device-systemSoundManager-interface ToneHapticsAttrs-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -27,6 +29,8 @@ getFileName(): string
 获取振动文件名。
 
 **起始版本：** 14
+
+<!--Device-ToneHapticsAttrs-getFileName(): string--><!--Device-ToneHapticsAttrs-getFileName(): string-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -60,6 +64,8 @@ getGentleFileName(): string | null
 
 **起始版本：** 22
 
+<!--Device-ToneHapticsAttrs-getGentleFileName(): string | null--><!--Device-ToneHapticsAttrs-getGentleFileName(): string | null-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -92,6 +98,8 @@ getGentleTitle(): string | null
 
 **起始版本：** 22
 
+<!--Device-ToneHapticsAttrs-getGentleTitle(): string | null--><!--Device-ToneHapticsAttrs-getGentleTitle(): string | null-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -123,6 +131,8 @@ getGentleUri(): string | null
 获取柔和振动资源路径。
 
 **起始版本：** 22
+
+<!--Device-ToneHapticsAttrs-getGentleUri(): string | null--><!--Device-ToneHapticsAttrs-getGentleUri(): string | null-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -158,6 +168,8 @@ getTitle(): string
 
 **起始版本：** 14
 
+<!--Device-ToneHapticsAttrs-getTitle(): string--><!--Device-ToneHapticsAttrs-getTitle(): string-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -189,6 +201,8 @@ getUri(): string
 获取振动资源路径。
 
 **起始版本：** 14
+
+<!--Device-ToneHapticsAttrs-getUri(): string--><!--Device-ToneHapticsAttrs-getUri(): string-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 

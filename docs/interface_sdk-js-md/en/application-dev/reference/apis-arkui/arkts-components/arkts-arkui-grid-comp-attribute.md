@@ -4,13 +4,15 @@
 declare class GridAttribute extends ScrollableCommonMethod<GridAttribute>
 ```
 
-In addition to [universal attributes](arkts-arkui-common-comp.md#common) and [scrollable component common attributes](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#attributes), the following attributes are also supported.
+In addition to [universal attributes](arkts-arkui-common-comp.md) and [scrollable component common attributes](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#attributes), the following attributes are also supported.
 
-In addition to [universal events](arkts-arkui-common-comp.md#common) and [scrollable component common events](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#events), the following events are also supported.
+In addition to [universal events](arkts-arkui-common-comp.md) and [scrollable component common events](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#events), the following events are also supported.
 
 **Inheritance/Implementation:** GridAttribute extends ScrollableCommonMethod<GridAttribute>
 
 **Since:** 7
+
+<!--Device-unnamed-declare class GridAttribute extends ScrollableCommonMethod<GridAttribute>--><!--Device-unnamed-declare class GridAttribute extends ScrollableCommonMethod<GridAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,6 +29,8 @@ Sets the alignment mode of grid items in the grid. For details about the usage, 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GridAttribute-alignItems(alignment: Optional<GridItemAlignment>): GridAttribute--><!--Device-GridAttribute-alignItems(alignment: Optional<GridItemAlignment>): GridAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,6 +58,8 @@ After caching is set, **cachedCount** grid rows/columns are preloaded on both si
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-GridAttribute-cachedCount(value: number): GridAttribute--><!--Device-GridAttribute-cachedCount(value: number): GridAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -79,6 +85,8 @@ After caching is set, **cachedCount** grid rows/columns are preloaded on both si
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-GridAttribute-cachedCount(count: number, show: boolean): GridAttribute--><!--Device-GridAttribute-cachedCount(count: number, show: boolean): GridAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -111,6 +119,8 @@ When **layoutDirection** is **Column** or **ColumnReverse**, the value indicates
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-GridAttribute-cellLength(value: number): GridAttribute--><!--Device-GridAttribute-cellLength(value: number): GridAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -132,6 +142,8 @@ Sets the gap between columns. A value less than 0 evaluates to the default value
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-GridAttribute-columnsGap(value: Length): GridAttribute--><!--Device-GridAttribute-columnsGap(value: Length): GridAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -161,7 +173,7 @@ For example, **&nbsp;'1fr&nbsp;1fr&nbsp;2fr'&nbsp;** indicates three columns, wi
 
 In auto-fit and auto-stretch modes, only a valid column width value is supported for **track-size**. Additionally, in auto-stretch mode, **track-size** only supports units such as px, vp, and valid numbers, but does not support percentage (%). The auto-fill mode supports one or more valid column widths, for example, columnsTemplate('repeat(auto-fill, 20)') or columnsTemplate('repeat(auto-fill, 20 80px)').
 
-For details about the effect, see [Example 8](arkts-arkui-grid-comp.md#grid).
+For details about the effect, see [Example 8](arkts-arkui-grid-comp.md).
 
 If this attribute is set to **'0fr'**, the column width is 0, and grid item in the column is not displayed. If this attribute is set to any other invalid value, the grid item is displayed as one column.
 
@@ -170,6 +182,8 @@ If this attribute is set to **'0fr'**, the column width is 0, and grid item in t
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-GridAttribute-columnsTemplate(value: string): GridAttribute--><!--Device-GridAttribute-columnsTemplate(value: string): GridAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -201,6 +215,8 @@ For example, **ItemFillPolicy.BREAKPOINT_DEFAULT** displays two columns when the
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-GridAttribute-columnsTemplate(value: string | ItemFillPolicy): GridAttribute--><!--Device-GridAttribute-columnsTemplate(value: string | ItemFillPolicy): GridAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -223,6 +239,8 @@ Sets the effect used when the scroll boundary is reached.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-GridAttribute-edgeEffect(value: EdgeEffect, options?: EdgeEffectOptions): GridAttribute--><!--Device-GridAttribute-edgeEffect(value: EdgeEffect, options?: EdgeEffectOptions): GridAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -238,7 +256,7 @@ Sets the effect used when the scroll boundary is reached.
 editMode(value: boolean)
 ```
 
-Sets whether to enable edit mode. In edit mode, the user can drag the [grid items](arkts-arkui-griditem-comp.md#griditem) in the **Grid** component.
+Sets whether to enable edit mode. In edit mode, the user can drag the [grid items](arkts-arkui-griditem-comp.md) in the **Grid** component.
 
 > **NOTE:** 
 > 
@@ -249,6 +267,8 @@ Sets whether to enable edit mode. In edit mode, the user can drag the [grid item
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-GridAttribute-editMode(value: boolean): GridAttribute--><!--Device-GridAttribute-editMode(value: boolean): GridAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -272,6 +292,8 @@ Sets the options of the edit mode.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-GridAttribute-editModeOptions(options?: EditModeOptions): GridAttribute--><!--Device-GridAttribute-editModeOptions(options?: EditModeOptions): GridAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -286,13 +308,15 @@ Sets the options of the edit mode.
 enableEditMode(enabled: boolean | undefined)
 ```
 
-Sets whether to enable the edit mode for the **Grid** component. After the edit mode is enabled, you can swipe to select multiple [GridItem](arkts-arkui-griditem-comp.md#griditem) components in the **Grid** component. If this API is not called, the edit mode is not enabled.
+Sets whether to enable the edit mode for the **Grid** component. After the edit mode is enabled, you can swipe to select multiple [GridItem](arkts-arkui-griditem-comp.md) components in the **Grid** component. If this API is not called, the edit mode is not enabled.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-GridAttribute-enableEditMode(enabled: boolean | undefined): GridAttribute--><!--Device-GridAttribute-enableEditMode(enabled: boolean | undefined): GridAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -320,6 +344,8 @@ Sets whether to support the scrolling gesture.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-GridAttribute-enableScrollInteraction(value: boolean): GridAttribute--><!--Device-GridAttribute-enableScrollInteraction(value: boolean): GridAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -342,6 +368,8 @@ Sets the focus wrap mode for cross-axis arrow keys.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-GridAttribute-focusWrapMode(mode: Optional<FocusWrapMode>): GridAttribute--><!--Device-GridAttribute-focusWrapMode(mode: Optional<FocusWrapMode>): GridAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -363,6 +391,8 @@ Sets the friction coefficient. It takes effect when the scroll area is swiped, a
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-GridAttribute-friction(value: number | Resource): GridAttribute--><!--Device-GridAttribute-friction(value: number | Resource): GridAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -389,6 +419,8 @@ Sets the main axis layout direction of the grid.
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-GridAttribute-layoutDirection(value: GridDirection): GridAttribute--><!--Device-GridAttribute-layoutDirection(value: GridDirection): GridAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -422,6 +454,8 @@ If the value of **maxCount** is smaller than that of **minCount**, the default v
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-GridAttribute-maxCount(value: number): GridAttribute--><!--Device-GridAttribute-maxCount(value: number): GridAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -454,6 +488,8 @@ If the value of **minCount** is greater than that of **maxCount**, both **minCou
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-GridAttribute-minCount(value: number): GridAttribute--><!--Device-GridAttribute-minCount(value: number): GridAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -468,13 +504,15 @@ If the value of **minCount** is greater than that of **maxCount**, both **minCou
 multiSelectable(value: boolean)
 ```
 
-Sets whether to enable multiselect. After multiselect is enabled, you can use **GridItem**'s **selected** attributeand **onSelect** event to obtain the selection state of **GridItem**. Additionally, you can set the selected state style of **GridItem** using [Polymorphic Style](arkts-arkui-common-comp.md#common) (by default, **GridItem** has no selected state style).
+Sets whether to enable multiselect. After multiselect is enabled, you can use **GridItem**'s **selected** attributeand **onSelect** event to obtain the selection state of **GridItem**. Additionally, you can set the selected state style of **GridItem** using [Polymorphic Style](arkts-arkui-common-comp.md) (by default, **GridItem** has no selected state style).
 
 **Since:** 8
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-GridAttribute-multiSelectable(value: boolean): GridAttribute--><!--Device-GridAttribute-multiSelectable(value: boolean): GridAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -498,6 +536,8 @@ Sets the nested scrolling options. Sets the nested scrolling modes for both forw
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-GridAttribute-nestedScroll(value: NestedScrollOptions): GridAttribute--><!--Device-GridAttribute-nestedScroll(value: NestedScrollOptions): GridAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -519,6 +559,8 @@ Triggered when the edit mode state of [enableEditMode](#enableeditmode) changes.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-GridAttribute-onEditModeChange(callback: Callback<boolean> | undefined): GridAttribute--><!--Device-GridAttribute-onEditModeChange(callback: Callback<boolean> | undefined): GridAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -542,6 +584,8 @@ Triggered when a dragged item enters the range of a **GridItem**.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-GridAttribute-onItemDragEnter(event: (event: ItemDragInfo) => void): GridAttribute--><!--Device-GridAttribute-onItemDragEnter(event: (event: ItemDragInfo) => void): GridAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -563,6 +607,8 @@ Triggered when a dragged item leaves a **GridItem**.
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-GridAttribute-onItemDragLeave(event: (event: ItemDragInfo, itemIndex: number) => void): GridAttribute--><!--Device-GridAttribute-onItemDragLeave(event: (event: ItemDragInfo, itemIndex: number) => void): GridAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -586,6 +632,8 @@ Triggered when a dragged item moves within the range of a **GridItem**.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-GridAttribute-onItemDragMove(event: (event: ItemDragInfo, itemIndex: number, insertIndex: number) => void): GridAttribute--><!--Device-GridAttribute-onItemDragMove(event: (event: ItemDragInfo, itemIndex: number, insertIndex: number) => void): GridAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -608,13 +656,15 @@ Drag gesture recognition is also initiated by a long press, and the event proces
 
 The dragged and lifted **GridItem** can move within the app window. To restrict the movement range, you can implement it through a custom gesture. For details, see [Example 16: Customizing the Drag Effect for GridItem](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#example-16-customizing-the-drag-effect-for-griditem).
 
-Automatic scrolling when dragging to the edge of the **Grid** is not supported. You can use the universal drag to implement it. For details, see [Example 17: Dragging Grid Items with Drag Events](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#example-17-dragging-grid-items-with-drag-events). Since API version 26.0.0, you can use the [onMove](arkts-arkui-common-comp-dynamicnode-c.md#onmove) API of [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md), [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md), and [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md) to implement this effect. For details, see [Example 22 (Dragging with OnMove)](arkts-arkui-grid-comp.md#grid). It also supports dragging of **GridItem** that spans rows and columns, but note that the **Grid** must be scrollable.
+Automatic scrolling when dragging to the edge of the **Grid** is not supported. You can use the universal drag to implement it. For details, see [Example 17: Dragging Grid Items with Drag Events](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#example-17-dragging-grid-items-with-drag-events). Since API version 26.0.0, you can use the [onMove](arkts-arkui-common-comp-dynamicnode-c.md#onmove) API of [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md), [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md), and [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md) to implement this effect. For details, see [Example 22 (Dragging with OnMove)](arkts-arkui-grid-comp.md). It also supports dragging of **GridItem** that spans rows and columns, but note that the **Grid** must be scrollable.
 
 **Since:** 8
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-GridAttribute-onItemDragStart(event: OnItemDragStartCallback): GridAttribute--><!--Device-GridAttribute-onItemDragStart(event: OnItemDragStartCallback): GridAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -642,6 +692,8 @@ When the drop position is within the **GridItem**, **isSuccess** returns **true*
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-GridAttribute-onItemDrop(    event: (event: ItemDragInfo, itemIndex: number, insertIndex: number, isSuccess: boolean) => void,  ): GridAttribute--><!--Device-GridAttribute-onItemDrop(    event: (event: ItemDragInfo, itemIndex: number, insertIndex: number, isSuccess: boolean) => void,  ): GridAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -665,6 +717,8 @@ When the edge effect of the **Grid** is a spring effect, this event is triggered
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-GridAttribute-onReachEnd(event: () => void): GridAttribute--><!--Device-GridAttribute-onReachEnd(event: () => void): GridAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -690,6 +744,8 @@ This event is triggered once when the **Grid** is initialized and once when the 
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-GridAttribute-onReachStart(event: () => void): GridAttribute--><!--Device-GridAttribute-onReachStart(event: () => void): GridAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -713,6 +769,8 @@ This API is intended solely for setting the scroll position of the grid. Avoid i
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-GridAttribute-onScrollBarUpdate(event: (index: number, offset: number) => ComputedBarAttribute): GridAttribute--><!--Device-GridAttribute-onScrollBarUpdate(event: (index: number, offset: number) => ComputedBarAttribute): GridAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -748,6 +806,8 @@ This event is not triggered in the following scenarios:
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-GridAttribute-onScrollFrameBegin(event: OnScrollFrameBeginCallback): GridAttribute--><!--Device-GridAttribute-onScrollFrameBegin(event: OnScrollFrameBeginCallback): GridAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -769,6 +829,8 @@ Triggered when the first or last item displayed in the grid changes, that is, wh
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-GridAttribute-onScrollIndex(event: (first: number, last: number) => void): GridAttribute--><!--Device-GridAttribute-onScrollIndex(event: (first: number, last: number) => void): GridAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -792,6 +854,8 @@ Triggered when the grid starts scrolling initiated by the user's finger dragging
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-GridAttribute-onScrollStart(event: () => void): GridAttribute--><!--Device-GridAttribute-onScrollStart(event: () => void): GridAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -814,6 +878,8 @@ Triggered when the grid stops scrolling after the user's finger leaves the scree
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-GridAttribute-onScrollStop(event: () => void): GridAttribute--><!--Device-GridAttribute-onScrollStop(event: () => void): GridAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -835,6 +901,8 @@ Sets the gap between rows. A value less than 0 evaluates to the default value.
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-GridAttribute-rowsGap(value: Length): GridAttribute--><!--Device-GridAttribute-rowsGap(value: Length): GridAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -872,6 +940,8 @@ If this attribute is set to **'0fr'**, the row height is 0, and grid item in the
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-GridAttribute-rowsTemplate(value: string): GridAttribute--><!--Device-GridAttribute-rowsTemplate(value: string): GridAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -894,6 +964,8 @@ Sets the scrollbar state.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-GridAttribute-scrollBar(value: BarState): GridAttribute--><!--Device-GridAttribute-scrollBar(value: BarState): GridAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -915,6 +987,8 @@ Sets the scrollbar color.
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-GridAttribute-scrollBarColor(value: Color | number | string): GridAttribute--><!--Device-GridAttribute-scrollBarColor(value: Color | number | string): GridAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -940,6 +1014,8 @@ Sets the scrollbar color. Compared with [scrollBarColor](#scrollbarcolor), the p
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-GridAttribute-scrollBarColor(color: Color | number | string | Resource): GridAttribute--><!--Device-GridAttribute-scrollBarColor(color: Color | number | string | Resource): GridAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -961,6 +1037,8 @@ Sets the width of the scrollbar. Percentage values are not supported. After the 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-GridAttribute-scrollBarWidth(value: number | string): GridAttribute--><!--Device-GridAttribute-scrollBarWidth(value: number | string): GridAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -988,6 +1066,8 @@ If this attribute is not set, the scrollbar width is 4 vp.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-GridAttribute-scrollBarWidth(value: number | string | Resource): GridAttribute--><!--Device-GridAttribute-scrollBarWidth(value: number | string | Resource): GridAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1014,6 +1094,8 @@ For details about the **supportAnimation** animation effect, see [Example 5: Imp
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-GridAttribute-supportAnimation(value: boolean): GridAttribute--><!--Device-GridAttribute-supportAnimation(value: boolean): GridAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1036,6 +1118,8 @@ Sets whether the current **Grid** component supports the use of the if/else rend
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-GridAttribute-supportEmptyBranchInLazyLoading(supported: boolean | undefined): GridAttribute--><!--Device-GridAttribute-supportEmptyBranchInLazyLoading(supported: boolean | undefined): GridAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1057,6 +1141,8 @@ Sets whether to synchronously load all child components in the grid.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-GridAttribute-syncLoad(enable: boolean): GridAttribute--><!--Device-GridAttribute-syncLoad(enable: boolean): GridAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1083,6 +1169,8 @@ Called When sliding the grid.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-GridAttribute-onScroll(event: (scrollOffset: number, scrollState: ScrollState) => void): GridAttribute--><!--Device-GridAttribute-onScroll(event: (scrollOffset: number, scrollState: ScrollState) => void): GridAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

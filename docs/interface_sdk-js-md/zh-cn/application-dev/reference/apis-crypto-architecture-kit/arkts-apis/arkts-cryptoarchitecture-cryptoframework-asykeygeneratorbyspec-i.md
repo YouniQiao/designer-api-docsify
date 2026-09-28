@@ -8,6 +8,8 @@ interface AsyKeyGeneratorBySpec
 
 **起始版本：** 10
 
+<!--Device-cryptoFramework-interface AsyKeyGeneratorBySpec--><!--Device-cryptoFramework-interface AsyKeyGeneratorBySpec-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
 - API版本10-11：SystemCapability.Security.CryptoFramework
@@ -30,7 +32,9 @@ generateKeyPair(callback: AsyncCallback<KeyPair>): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AsyKeyGeneratorBySpec-generateKeyPair(callback: AsyncCallback<KeyPair>): void--><!--Device-AsyKeyGeneratorBySpec-generateKeyPair(callback: AsyncCallback<KeyPair>): void-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -107,7 +111,9 @@ generateKeyPair(): Promise<KeyPair>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AsyKeyGeneratorBySpec-generateKeyPair(): Promise<KeyPair>--><!--Device-AsyKeyGeneratorBySpec-generateKeyPair(): Promise<KeyPair>-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -184,7 +190,9 @@ generateKeyPairSync(): KeyPair
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AsyKeyGeneratorBySpec-generateKeyPairSync(): KeyPair--><!--Device-AsyKeyGeneratorBySpec-generateKeyPairSync(): KeyPair-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
@@ -262,7 +270,9 @@ generatePriKey(callback: AsyncCallback<PriKey>): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AsyKeyGeneratorBySpec-generatePriKey(callback: AsyncCallback<PriKey>): void--><!--Device-AsyKeyGeneratorBySpec-generatePriKey(callback: AsyncCallback<PriKey>): void-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -339,7 +349,9 @@ generatePriKey(): Promise<PriKey>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AsyKeyGeneratorBySpec-generatePriKey(): Promise<PriKey>--><!--Device-AsyKeyGeneratorBySpec-generatePriKey(): Promise<PriKey>-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -416,7 +428,9 @@ generatePriKeySync(): PriKey
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AsyKeyGeneratorBySpec-generatePriKeySync(): PriKey--><!--Device-AsyKeyGeneratorBySpec-generatePriKeySync(): PriKey-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
@@ -492,7 +506,9 @@ generatePubKey(callback: AsyncCallback<PubKey>): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AsyKeyGeneratorBySpec-generatePubKey(callback: AsyncCallback<PubKey>): void--><!--Device-AsyKeyGeneratorBySpec-generatePubKey(callback: AsyncCallback<PubKey>): void-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -569,7 +585,9 @@ generatePubKey(): Promise<PubKey>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AsyKeyGeneratorBySpec-generatePubKey(): Promise<PubKey>--><!--Device-AsyKeyGeneratorBySpec-generatePubKey(): Promise<PubKey>-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -646,7 +664,9 @@ generatePubKeySync(): PubKey
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AsyKeyGeneratorBySpec-generatePubKeySync(): PubKey--><!--Device-AsyKeyGeneratorBySpec-generatePubKeySync(): PubKey-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
@@ -722,7 +742,9 @@ readonly algName: string
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AsyKeyGeneratorBySpec-readonly algName: string--><!--Device-AsyKeyGeneratorBySpec-readonly algName: string-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey

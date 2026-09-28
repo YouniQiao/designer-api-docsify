@@ -16,6 +16,8 @@ function removeNotificationSlot(slotType: notification.SlotType, callback: Async
 
 **起始版本：** 9
 
+<!--Device-reminderAgentManager-function removeNotificationSlot(slotType: notification.SlotType, callback: AsyncCallback<void>): void--><!--Device-reminderAgentManager-function removeNotificationSlot(slotType: notification.SlotType, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 **参数：**
@@ -60,6 +62,8 @@ function removeNotificationSlot(slotType: notification.SlotType): Promise<void>
 删除指定的通知渠道类型，使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-reminderAgentManager-function removeNotificationSlot(slotType: notification.SlotType): Promise<void>--><!--Device-reminderAgentManager-function removeNotificationSlot(slotType: notification.SlotType): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 

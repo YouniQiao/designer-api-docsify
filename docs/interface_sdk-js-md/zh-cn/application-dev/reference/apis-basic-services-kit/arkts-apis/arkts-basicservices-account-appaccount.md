@@ -4,6 +4,8 @@
 
 **起始版本：** 7
 
+<!--Device-unnamed-declare namespace appAccount--><!--Device-unnamed-declare namespace appAccount-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 ## 导入模块

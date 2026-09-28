@@ -18,6 +18,8 @@ function getErrorInfo(): HuksExternalErrorInfo
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-huksExternalCrypto-function getErrorInfo(): HuksExternalErrorInfo--><!--Device-huksExternalCrypto-function getErrorInfo(): HuksExternalErrorInfo-End-->
+
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
 **返回值：**

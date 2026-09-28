@@ -8,6 +8,8 @@ enum QualityPrioritization
 
 **起始版本：** 14
 
+<!--Device-camera-enum QualityPrioritization--><!--Device-camera-enum QualityPrioritization-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## HIGH_QUALITY
@@ -20,7 +22,9 @@ HIGH_QUALITY = 0
 
 **起始版本：** 14
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-QualityPrioritization-HIGH_QUALITY = 0--><!--Device-QualityPrioritization-HIGH_QUALITY = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -34,6 +38,8 @@ POWER_BALANCE = 1
 
 **起始版本：** 14
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-QualityPrioritization-POWER_BALANCE = 1--><!--Device-QualityPrioritization-POWER_BALANCE = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core

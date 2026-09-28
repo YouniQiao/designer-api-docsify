@@ -26,6 +26,8 @@ function p2pCancelConnect(): boolean
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
+<!--Device-wifi-function p2pCancelConnect(): boolean--><!--Device-wifi-function p2pCancelConnect(): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
 **返回值：**

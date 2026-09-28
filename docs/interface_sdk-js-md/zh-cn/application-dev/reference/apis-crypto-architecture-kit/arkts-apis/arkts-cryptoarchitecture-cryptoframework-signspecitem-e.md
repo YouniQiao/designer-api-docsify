@@ -10,6 +10,8 @@ enum SignSpecItem
 
 **起始版本：** 10
 
+<!--Device-cryptoFramework-enum SignSpecItem--><!--Device-cryptoFramework-enum SignSpecItem-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Signature
 - API版本10-11：SystemCapability.Security.CryptoFramework
@@ -24,7 +26,9 @@ PSS_MD_NAME_STR = 100
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-SignSpecItem-PSS_MD_NAME_STR = 100--><!--Device-SignSpecItem-PSS_MD_NAME_STR = 100-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Signature
@@ -40,7 +44,9 @@ PSS_MGF_NAME_STR = 101
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-SignSpecItem-PSS_MGF_NAME_STR = 101--><!--Device-SignSpecItem-PSS_MGF_NAME_STR = 101-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Signature
@@ -56,7 +62,9 @@ PSS_MGF1_MD_STR = 102
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-SignSpecItem-PSS_MGF1_MD_STR = 102--><!--Device-SignSpecItem-PSS_MGF1_MD_STR = 102-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Signature
@@ -83,7 +91,9 @@ PSS_SALT_LEN_NUM = 103
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-SignSpecItem-PSS_SALT_LEN_NUM = 103--><!--Device-SignSpecItem-PSS_SALT_LEN_NUM = 103-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Signature
@@ -99,7 +109,9 @@ PSS_TRAILER_FIELD_NUM = 104
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-SignSpecItem-PSS_TRAILER_FIELD_NUM = 104--><!--Device-SignSpecItem-PSS_TRAILER_FIELD_NUM = 104-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Signature
@@ -115,7 +127,9 @@ SM2_USER_ID_UINT8ARR = 105
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-SignSpecItem-SM2_USER_ID_UINT8ARR = 105--><!--Device-SignSpecItem-SM2_USER_ID_UINT8ARR = 105-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Signature
@@ -133,7 +147,9 @@ ML_DSA_DETERMINISTIC_BOOL = 106
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-SignSpecItem-ML_DSA_DETERMINISTIC_BOOL = 106--><!--Device-SignSpecItem-ML_DSA_DETERMINISTIC_BOOL = 106-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Signature
 
@@ -149,7 +165,9 @@ ML_DSA_MU_BOOL = 107
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-SignSpecItem-ML_DSA_MU_BOOL = 107--><!--Device-SignSpecItem-ML_DSA_MU_BOOL = 107-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Signature
 
@@ -165,6 +183,8 @@ ML_DSA_CONTEXT_UINT8ARR = 108
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-SignSpecItem-ML_DSA_CONTEXT_UINT8ARR = 108--><!--Device-SignSpecItem-ML_DSA_CONTEXT_UINT8ARR = 108-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Signature

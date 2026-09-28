@@ -12,6 +12,8 @@ const CURSOR_DOWN: number
 
 **起始版本：** 9
 
+<!--Device-inputMethodEngine-const CURSOR_DOWN: int--><!--Device-inputMethodEngine-const CURSOR_DOWN: int-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## CURSOR_LEFT
@@ -25,6 +27,8 @@ const CURSOR_LEFT: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-inputMethodEngine-const CURSOR_LEFT: int--><!--Device-inputMethodEngine-const CURSOR_LEFT: int-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -40,6 +44,8 @@ const CURSOR_RIGHT: number
 
 **起始版本：** 9
 
+<!--Device-inputMethodEngine-const CURSOR_RIGHT: int--><!--Device-inputMethodEngine-const CURSOR_RIGHT: int-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## CURSOR_UP
@@ -53,6 +59,8 @@ const CURSOR_UP: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-inputMethodEngine-const CURSOR_UP: int--><!--Device-inputMethodEngine-const CURSOR_UP: int-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -68,6 +76,8 @@ const DISPLAY_MODE_FULL: number
 
 **起始版本：** 8
 
+<!--Device-inputMethodEngine-const DISPLAY_MODE_FULL: int--><!--Device-inputMethodEngine-const DISPLAY_MODE_FULL: int-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## DISPLAY_MODE_PART
@@ -81,6 +91,8 @@ const DISPLAY_MODE_PART: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-inputMethodEngine-const DISPLAY_MODE_PART: int--><!--Device-inputMethodEngine-const DISPLAY_MODE_PART: int-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -96,6 +108,8 @@ const ENTER_KEY_TYPE_DONE: number
 
 **起始版本：** 8
 
+<!--Device-inputMethodEngine-const ENTER_KEY_TYPE_DONE: int--><!--Device-inputMethodEngine-const ENTER_KEY_TYPE_DONE: int-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## ENTER_KEY_TYPE_GO
@@ -109,6 +123,8 @@ const ENTER_KEY_TYPE_GO: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-inputMethodEngine-const ENTER_KEY_TYPE_GO: int--><!--Device-inputMethodEngine-const ENTER_KEY_TYPE_GO: int-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -124,6 +140,8 @@ const ENTER_KEY_TYPE_NEWLINE: number
 
 **起始版本：** 12
 
+<!--Device-inputMethodEngine-const ENTER_KEY_TYPE_NEWLINE: int--><!--Device-inputMethodEngine-const ENTER_KEY_TYPE_NEWLINE: int-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## ENTER_KEY_TYPE_NEXT
@@ -137,6 +155,8 @@ const ENTER_KEY_TYPE_NEXT: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-inputMethodEngine-const ENTER_KEY_TYPE_NEXT: int--><!--Device-inputMethodEngine-const ENTER_KEY_TYPE_NEXT: int-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -152,6 +172,8 @@ const ENTER_KEY_TYPE_PREVIOUS: number
 
 **起始版本：** 8
 
+<!--Device-inputMethodEngine-const ENTER_KEY_TYPE_PREVIOUS: int--><!--Device-inputMethodEngine-const ENTER_KEY_TYPE_PREVIOUS: int-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## ENTER_KEY_TYPE_SEARCH
@@ -165,6 +187,8 @@ const ENTER_KEY_TYPE_SEARCH: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-inputMethodEngine-const ENTER_KEY_TYPE_SEARCH: int--><!--Device-inputMethodEngine-const ENTER_KEY_TYPE_SEARCH: int-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -180,6 +204,8 @@ const ENTER_KEY_TYPE_SEND: number
 
 **起始版本：** 8
 
+<!--Device-inputMethodEngine-const ENTER_KEY_TYPE_SEND: int--><!--Device-inputMethodEngine-const ENTER_KEY_TYPE_SEND: int-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## ENTER_KEY_TYPE_UNSPECIFIED
@@ -193,6 +219,8 @@ const ENTER_KEY_TYPE_UNSPECIFIED: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-inputMethodEngine-const ENTER_KEY_TYPE_UNSPECIFIED: int--><!--Device-inputMethodEngine-const ENTER_KEY_TYPE_UNSPECIFIED: int-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -208,6 +236,8 @@ const FLAG_SELECTING: number
 
 **起始版本：** 8
 
+<!--Device-inputMethodEngine-const FLAG_SELECTING: int--><!--Device-inputMethodEngine-const FLAG_SELECTING: int-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## FLAG_SINGLE_LINE
@@ -221,6 +251,8 @@ const FLAG_SINGLE_LINE: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-inputMethodEngine-const FLAG_SINGLE_LINE: int--><!--Device-inputMethodEngine-const FLAG_SINGLE_LINE: int-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -236,6 +268,8 @@ const OPTION_ASCII: number
 
 **起始版本：** 8
 
+<!--Device-inputMethodEngine-const OPTION_ASCII: int--><!--Device-inputMethodEngine-const OPTION_ASCII: int-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## OPTION_AUTO_CAP_CHARACTERS
@@ -249,6 +283,8 @@ const OPTION_AUTO_CAP_CHARACTERS: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-inputMethodEngine-const OPTION_AUTO_CAP_CHARACTERS: int--><!--Device-inputMethodEngine-const OPTION_AUTO_CAP_CHARACTERS: int-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -264,6 +300,8 @@ const OPTION_AUTO_CAP_SENTENCES: number
 
 **起始版本：** 8
 
+<!--Device-inputMethodEngine-const OPTION_AUTO_CAP_SENTENCES: int--><!--Device-inputMethodEngine-const OPTION_AUTO_CAP_SENTENCES: int-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## OPTION_AUTO_WORDS
@@ -277,6 +315,8 @@ const OPTION_AUTO_WORDS: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-inputMethodEngine-const OPTION_AUTO_WORDS: int--><!--Device-inputMethodEngine-const OPTION_AUTO_WORDS: int-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -292,6 +332,8 @@ const OPTION_MULTI_LINE: number
 
 **起始版本：** 8
 
+<!--Device-inputMethodEngine-const OPTION_MULTI_LINE: int--><!--Device-inputMethodEngine-const OPTION_MULTI_LINE: int-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## OPTION_NO_FULLSCREEN
@@ -305,6 +347,8 @@ const OPTION_NO_FULLSCREEN: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-inputMethodEngine-const OPTION_NO_FULLSCREEN: int--><!--Device-inputMethodEngine-const OPTION_NO_FULLSCREEN: int-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -320,6 +364,8 @@ const OPTION_NONE: number
 
 **起始版本：** 8
 
+<!--Device-inputMethodEngine-const OPTION_NONE: int--><!--Device-inputMethodEngine-const OPTION_NONE: int-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## PATTERN_DATETIME
@@ -334,6 +380,8 @@ const PATTERN_DATETIME: number
 
 **起始版本：** 8
 
+<!--Device-inputMethodEngine-const PATTERN_DATETIME: int--><!--Device-inputMethodEngine-const PATTERN_DATETIME: int-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## PATTERN_EMAIL
@@ -347,6 +395,8 @@ const PATTERN_EMAIL: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-inputMethodEngine-const PATTERN_EMAIL: int--><!--Device-inputMethodEngine-const PATTERN_EMAIL: int-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -364,6 +414,8 @@ const PATTERN_NEW_PASSWORD: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-inputMethodEngine-const PATTERN_NEW_PASSWORD: int--><!--Device-inputMethodEngine-const PATTERN_NEW_PASSWORD: int-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## PATTERN_NULL
@@ -378,6 +430,8 @@ const PATTERN_NULL: number
 
 **起始版本：** 8
 
+<!--Device-inputMethodEngine-const PATTERN_NULL: int--><!--Device-inputMethodEngine-const PATTERN_NULL: int-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## PATTERN_NUMBER
@@ -391,6 +445,8 @@ const PATTERN_NUMBER: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-inputMethodEngine-const PATTERN_NUMBER: int--><!--Device-inputMethodEngine-const PATTERN_NUMBER: int-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -408,6 +464,8 @@ const PATTERN_NUMBER_DECIMAL: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-inputMethodEngine-const PATTERN_NUMBER_DECIMAL: int--><!--Device-inputMethodEngine-const PATTERN_NUMBER_DECIMAL: int-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## PATTERN_ONE_TIME_CODE
@@ -423,6 +481,8 @@ const PATTERN_ONE_TIME_CODE: number
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-inputMethodEngine-const PATTERN_ONE_TIME_CODE: int--><!--Device-inputMethodEngine-const PATTERN_ONE_TIME_CODE: int-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -440,6 +500,8 @@ const PATTERN_ONE_TIME_CODE_NUMBER: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-inputMethodEngine-const PATTERN_ONE_TIME_CODE_NUMBER: int--><!--Device-inputMethodEngine-const PATTERN_ONE_TIME_CODE_NUMBER: int-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## PATTERN_PASSWORD
@@ -453,6 +515,8 @@ const PATTERN_PASSWORD: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-inputMethodEngine-const PATTERN_PASSWORD: int--><!--Device-inputMethodEngine-const PATTERN_PASSWORD: int-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -468,6 +532,8 @@ const PATTERN_PASSWORD_NUMBER: number
 
 **起始版本：** 11
 
+<!--Device-inputMethodEngine-const PATTERN_PASSWORD_NUMBER: int--><!--Device-inputMethodEngine-const PATTERN_PASSWORD_NUMBER: int-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## PATTERN_PASSWORD_SCREEN_LOCK
@@ -481,6 +547,8 @@ const PATTERN_PASSWORD_SCREEN_LOCK: number
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-inputMethodEngine-const PATTERN_PASSWORD_SCREEN_LOCK: int--><!--Device-inputMethodEngine-const PATTERN_PASSWORD_SCREEN_LOCK: int-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -496,6 +564,8 @@ const PATTERN_PHONE: number
 
 **起始版本：** 8
 
+<!--Device-inputMethodEngine-const PATTERN_PHONE: int--><!--Device-inputMethodEngine-const PATTERN_PHONE: int-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## PATTERN_TEXT
@@ -510,6 +580,8 @@ const PATTERN_TEXT: number
 
 **起始版本：** 8
 
+<!--Device-inputMethodEngine-const PATTERN_TEXT: int--><!--Device-inputMethodEngine-const PATTERN_TEXT: int-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## PATTERN_URI
@@ -523,6 +595,8 @@ const PATTERN_URI: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-inputMethodEngine-const PATTERN_URI: int--><!--Device-inputMethodEngine-const PATTERN_URI: int-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -540,6 +614,8 @@ const PATTERN_USER_NAME: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-inputMethodEngine-const PATTERN_USER_NAME: int--><!--Device-inputMethodEngine-const PATTERN_USER_NAME: int-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## WINDOW_TYPE_INPUT_METHOD_FLOAT
@@ -553,5 +629,7 @@ const WINDOW_TYPE_INPUT_METHOD_FLOAT: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-inputMethodEngine-const WINDOW_TYPE_INPUT_METHOD_FLOAT: int--><!--Device-inputMethodEngine-const WINDOW_TYPE_INPUT_METHOD_FLOAT: int-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework

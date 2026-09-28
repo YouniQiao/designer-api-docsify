@@ -14,6 +14,8 @@ ImageSource的所有方法均不支持并发调用。
 
 **起始版本：** 6
 
+<!--Device-image-interface ImageSource--><!--Device-image-interface ImageSource-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 ## 导入模块
@@ -33,6 +35,8 @@ createImageRawData(): Promise<ImageRawData>
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ImageSource-createImageRawData(): Promise<ImageRawData>--><!--Device-ImageSource-createImageRawData(): Promise<ImageRawData>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -85,6 +89,8 @@ createPicture(options?: DecodingOptionsForPicture): Promise<Picture>
 释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。
 
 **起始版本：** 13
+
+<!--Device-ImageSource-createPicture(options?: DecodingOptionsForPicture): Promise<Picture>--><!--Device-ImageSource-createPicture(options?: DecodingOptionsForPicture): Promise<Picture>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -141,6 +147,8 @@ createPictureAtIndex(index: number): Promise<Picture>
 > - 释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。
 
 **起始版本：** 20
+
+<!--Device-ImageSource-createPictureAtIndex(index: int): Promise<Picture>--><!--Device-ImageSource-createPictureAtIndex(index: int): Promise<Picture>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -206,6 +214,8 @@ createPixelMap(options?: DecodingOptions): Promise<PixelMap>
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-ImageSource-createPixelMap(options?: DecodingOptions): Promise<PixelMap>--><!--Device-ImageSource-createPixelMap(options?: DecodingOptions): Promise<PixelMap>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
@@ -260,6 +270,8 @@ createPixelMap(callback: AsyncCallback<PixelMap>): void
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-ImageSource-createPixelMap(callback: AsyncCallback<PixelMap>): void--><!--Device-ImageSource-createPixelMap(callback: AsyncCallback<PixelMap>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
@@ -309,6 +321,8 @@ createPixelMap(options: DecodingOptions, callback: AsyncCallback<PixelMap>): voi
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-ImageSource-createPixelMap(options: DecodingOptions, callback: AsyncCallback<PixelMap>): void--><!--Device-ImageSource-createPixelMap(options: DecodingOptions, callback: AsyncCallback<PixelMap>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -367,6 +381,8 @@ createPixelMapList(options?: DecodingOptions): Promise<Array<PixelMap>>
 > - 此接口会一次性解码全部帧，当帧数过多或单帧图像过大时（如2000×3000像素的100帧GIF动图），会占用较大内存，造成系统内存紧张，此种情况推荐使用Image组件显示动图，Image组件采用逐帧解码，占用内存比此接口少。
 
 **起始版本：** 10
+
+<!--Device-ImageSource-createPixelMapList(options?: DecodingOptions): Promise<Array<PixelMap>>--><!--Device-ImageSource-createPixelMapList(options?: DecodingOptions): Promise<Array<PixelMap>>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -446,6 +462,8 @@ createPixelMapList(callback: AsyncCallback<Array<PixelMap>>): void
 
 **起始版本：** 10
 
+<!--Device-ImageSource-createPixelMapList(callback: AsyncCallback<Array<PixelMap>>): void--><!--Device-ImageSource-createPixelMapList(callback: AsyncCallback<Array<PixelMap>>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
@@ -511,6 +529,8 @@ createPixelMapList(options: DecodingOptions, callback: AsyncCallback<Array<Pixel
 > - 此接口会一次性解码全部帧，当帧数过多或单帧图像过大时，会占用较大内存，造成系统内存紧张，此种情况推荐使用Image组件显示动图，Image组件采用逐帧解码，占用内存比此接口少。
 
 **起始版本：** 10
+
+<!--Device-ImageSource-createPixelMapList(options: DecodingOptions, callback: AsyncCallback<Array<PixelMap>>): void--><!--Device-ImageSource-createPixelMapList(options: DecodingOptions, callback: AsyncCallback<Array<PixelMap>>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -584,6 +604,8 @@ createPixelMapSync(options?: DecodingOptions): PixelMap
 
 **起始版本：** 12
 
+<!--Device-ImageSource-createPixelMapSync(options?: DecodingOptions): PixelMap--><!--Device-ImageSource-createPixelMapSync(options?: DecodingOptions): PixelMap-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
@@ -642,6 +664,8 @@ createPixelMapUsingAllocator(options?: DecodingOptions, allocatorType?: Allocato
 > - 释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。
 
 **起始版本：** 15
+
+<!--Device-ImageSource-createPixelMapUsingAllocator(options?: DecodingOptions, allocatorType?: AllocatorType): Promise<PixelMap>--><!--Device-ImageSource-createPixelMapUsingAllocator(options?: DecodingOptions, allocatorType?: AllocatorType): Promise<PixelMap>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -715,6 +739,8 @@ createPixelMapUsingAllocatorSync(options?: DecodingOptions, allocatorType?: Allo
 > [耗时任务并发场景简介](../../../arkts-utils/time-consuming-task-overview.md)。
 
 **起始版本：** 15
+
+<!--Device-ImageSource-createPixelMapUsingAllocatorSync(options?: DecodingOptions, allocatorType?: AllocatorType): PixelMap--><!--Device-ImageSource-createPixelMapUsingAllocatorSync(options?: DecodingOptions, allocatorType?: AllocatorType): PixelMap-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -793,6 +819,8 @@ createThumbnail(options?: DecodingOptionsForThumbnail): Promise<PixelMap | undef
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ImageSource-createThumbnail(options?: DecodingOptionsForThumbnail): Promise<PixelMap | undefined>--><!--Device-ImageSource-createThumbnail(options?: DecodingOptionsForThumbnail): Promise<PixelMap | undefined>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -879,6 +907,8 @@ createThumbnailSync(options?: DecodingOptionsForThumbnail): PixelMap | undefined
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ImageSource-createThumbnailSync(options?: DecodingOptionsForThumbnail): PixelMap | undefined--><!--Device-ImageSource-createThumbnailSync(options?: DecodingOptionsForThumbnail): PixelMap | undefined-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
@@ -951,6 +981,8 @@ getDelayTimeList(): Promise<Array<number>>
 
 **起始版本：** 10
 
+<!--Device-ImageSource-getDelayTimeList(): Promise<Array<int>>--><!--Device-ImageSource-getDelayTimeList(): Promise<Array<int>>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **返回值：**
@@ -997,6 +1029,8 @@ getDelayTimeList(callback: AsyncCallback<Array<number>>): void
 获取图像延迟时间数组。使用callback异步回调。此接口仅用于gif图片和webp图片。
 
 **起始版本：** 10
+
+<!--Device-ImageSource-getDelayTimeList(callback: AsyncCallback<Array<int>>): void--><!--Device-ImageSource-getDelayTimeList(callback: AsyncCallback<Array<int>>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -1045,6 +1079,8 @@ getDisposalTypeList(): Promise<Array<number>>
 
 **起始版本：** 12
 
+<!--Device-ImageSource-getDisposalTypeList(): Promise<Array<int>>--><!--Device-ImageSource-getDisposalTypeList(): Promise<Array<int>>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **返回值：**
@@ -1085,6 +1121,8 @@ getFrameCount(): Promise<number>
 获取图像帧数。使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-ImageSource-getFrameCount(): Promise<int>--><!--Device-ImageSource-getFrameCount(): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -1133,6 +1171,8 @@ getFrameCount(callback: AsyncCallback<number>): void
 获取图像帧数。使用callback异步回调。
 
 **起始版本：** 10
+
+<!--Device-ImageSource-getFrameCount(callback: AsyncCallback<int>): void--><!--Device-ImageSource-getFrameCount(callback: AsyncCallback<int>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -1186,6 +1226,8 @@ getImageInfo(index: number, callback: AsyncCallback<ImageInfo>): void
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-ImageSource-getImageInfo(index: int, callback: AsyncCallback<ImageInfo>): void--><!--Device-ImageSource-getImageInfo(index: int, callback: AsyncCallback<ImageInfo>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
@@ -1227,6 +1269,8 @@ getImageInfo(callback: AsyncCallback<ImageInfo>): void
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-ImageSource-getImageInfo(callback: AsyncCallback<ImageInfo>): void--><!--Device-ImageSource-getImageInfo(callback: AsyncCallback<ImageInfo>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
@@ -1266,6 +1310,8 @@ getImageInfo(index?: number): Promise<ImageInfo>
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-ImageSource-getImageInfo(index?: int): Promise<ImageInfo>--><!--Device-ImageSource-getImageInfo(index?: int): Promise<ImageInfo>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -1311,6 +1357,8 @@ getImageInfoSync(index?: number): ImageInfo
 
 **起始版本：** 12
 
+<!--Device-ImageSource-getImageInfoSync(index?: int): ImageInfo--><!--Device-ImageSource-getImageInfoSync(index?: int): ImageInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
@@ -1354,6 +1402,8 @@ getImageProperties(key: Array<PropertyKey>): Promise<Record<PropertyKey, string|
 该接口仅支持JPEG、PNG、HEIF、WEBP&lt;sup&gt;23+&lt;/sup&gt;和DNG&lt;sup&gt;23+&lt;/sup&gt;（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
 
 **起始版本：** 12
+
+<!--Device-ImageSource-getImageProperties(key: Array<PropertyKey>): Promise<Record<PropertyKey, string|null>>--><!--Device-ImageSource-getImageProperties(key: Array<PropertyKey>): Promise<Record<PropertyKey, string|null>>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -1411,6 +1461,8 @@ getImageProperty(key: PropertyKey, options?: ImagePropertyOptions): Promise<stri
 该接口仅支持JPEG、PNG、HEIF&lt;sup&gt;12+&lt;/sup&gt;、WEBP&lt;sup&gt;23+&lt;/sup&gt;和DNG&lt;sup&gt;23+&lt;/sup&gt;（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
 
 **起始版本：** 11
+
+<!--Device-ImageSource-getImageProperty(key: PropertyKey, options?: ImagePropertyOptions): Promise<string>--><!--Device-ImageSource-getImageProperty(key: PropertyKey, options?: ImagePropertyOptions): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -1484,6 +1536,8 @@ getImageProperty(key: string, options?: GetImagePropertyOptions): Promise<string
 
 **替代接口：** [getImageProperty](#getimageproperty)(key: PropertyKey, options?: ImagePropertyOptions)
 
+<!--Device-ImageSource-getImageProperty(key: string, options?: GetImagePropertyOptions): Promise<string>--><!--Device-ImageSource-getImageProperty(key: string, options?: GetImagePropertyOptions): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
@@ -1538,6 +1592,8 @@ getImageProperty(key: string, callback: AsyncCallback<string>): void
 
 **替代接口：** [getImageProperty](#getimageproperty)(key: PropertyKey, options?: ImagePropertyOptions)
 
+<!--Device-ImageSource-getImageProperty(key: string, callback: AsyncCallback<string>): void--><!--Device-ImageSource-getImageProperty(key: string, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
@@ -1587,6 +1643,8 @@ getImageProperty(key: string, options: GetImagePropertyOptions, callback: AsyncC
 
 **替代接口：** [getImageProperty](#getimageproperty)(key: PropertyKey, options?: ImagePropertyOptions)
 
+<!--Device-ImageSource-getImageProperty(key: string, options: GetImagePropertyOptions, callback: AsyncCallback<string>): void--><!--Device-ImageSource-getImageProperty(key: string, options: GetImagePropertyOptions, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
@@ -1631,6 +1689,8 @@ getImagePropertySync(key: PropertyKey): string
 > - 该方法为同步方法，调用时会阻塞当前线程，不建议在主线程中调用，否则可能导致应用卡顿、掉帧或响应延迟。具体场景参考[耗时任务并发场景简介](../../../arkts-utils/time-consuming-task-overview.md)。
 
 **起始版本：** 20
+
+<!--Device-ImageSource-getImagePropertySync(key: PropertyKey): string--><!--Device-ImageSource-getImagePropertySync(key: PropertyKey): string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -1688,6 +1748,8 @@ modifyImageProperties(records: Record<PropertyKey, string|null>): Promise<void>
 > - 调用modifyImageProperties接口修改Exif字段时，必须确保对应的图片文件有写权限，否则会导致字段修改不成功。
 
 **起始版本：** 12
+
+<!--Device-ImageSource-modifyImageProperties(records: Record<PropertyKey, string|null>): Promise<void>--><!--Device-ImageSource-modifyImageProperties(records: Record<PropertyKey, string|null>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -1755,6 +1817,8 @@ modifyImagePropertiesEnhanced(records: Record<string, string | null>): Promise<v
 
 **起始版本：** 22
 
+<!--Device-ImageSource-modifyImagePropertiesEnhanced(records: Record<string, string | null>): Promise<void>--><!--Device-ImageSource-modifyImagePropertiesEnhanced(records: Record<string, string | null>): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
@@ -1818,6 +1882,8 @@ modifyImageProperty(key: PropertyKey, value: string): Promise<void>
 > - 调用modifyImageProperty接口修改Exif字段时，必须确保对应的图片文件有写权限，否则会导致字段修改不成功。
 
 **起始版本：** 11
+
+<!--Device-ImageSource-modifyImageProperty(key: PropertyKey, value: string): Promise<void>--><!--Device-ImageSource-modifyImageProperty(key: PropertyKey, value: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -1888,6 +1954,8 @@ modifyImageProperty(key: string, value: string): Promise<void>
 
 **替代接口：** [modifyImageProperty](#modifyimageproperty)(key: PropertyKey, value: string)
 
+<!--Device-ImageSource-modifyImageProperty(key: string, value: string): Promise<void>--><!--Device-ImageSource-modifyImageProperty(key: string, value: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
@@ -1946,6 +2014,8 @@ modifyImageProperty(key: string, value: string, callback: AsyncCallback<void>): 
 **废弃版本：** 11
 
 **替代接口：** [modifyImageProperty](#modifyimageproperty)(key: PropertyKey, value: string)
+
+<!--Device-ImageSource-modifyImageProperty(key: string, value: string, callback: AsyncCallback<void>): void--><!--Device-ImageSource-modifyImageProperty(key: string, value: string, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -2022,6 +2092,8 @@ readImageMetadata(propertyKeys?: string[], index?: number): Promise<ImageMetadat
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ImageSource-readImageMetadata(propertyKeys?: string[], index?: int): Promise<ImageMetadata>--><!--Device-ImageSource-readImageMetadata(propertyKeys?: string[], index?: int): Promise<ImageMetadata>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -2103,6 +2175,8 @@ readImageMetadataByType(metadataTypes?: MetadataType[], index?: number): Promise
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ImageSource-readImageMetadataByType(metadataTypes?: MetadataType[], index?: int): Promise<ImageMetadata>--><!--Device-ImageSource-readImageMetadataByType(metadataTypes?: MetadataType[], index?: int): Promise<ImageMetadata>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
@@ -2158,6 +2232,8 @@ release(callback: AsyncCallback<void>): void
 
 **起始版本：** 6
 
+<!--Device-ImageSource-release(callback: AsyncCallback<void>): void--><!--Device-ImageSource-release(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
@@ -2198,6 +2274,8 @@ release(): Promise<void>
 
 **起始版本：** 6
 
+<!--Device-ImageSource-release(): Promise<void>--><!--Device-ImageSource-release(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **返回值：**
@@ -2229,6 +2307,8 @@ updateData(buf: ArrayBuffer, isFinished: boolean, offset: number, length: number
 更新增量数据。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-ImageSource-updateData(buf: ArrayBuffer, isFinished: boolean, offset: int, length: int): Promise<void>--><!--Device-ImageSource-updateData(buf: ArrayBuffer, isFinished: boolean, offset: int, length: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -2279,6 +2359,8 @@ updateData(
 更新增量数据。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-ImageSource-updateData(      buf: ArrayBuffer,      isFinished: boolean,      offset: int,      length: int,      callback: AsyncCallback<void>    ): void--><!--Device-ImageSource-updateData(      buf: ArrayBuffer,      isFinished: boolean,      offset: int,      length: int,      callback: AsyncCallback<void>    ): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -2332,6 +2414,8 @@ writeImageMetadata(imageMetadata: ImageMetadata): Promise<void>
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ImageSource-writeImageMetadata(imageMetadata: ImageMetadata): Promise<void>--><!--Device-ImageSource-writeImageMetadata(imageMetadata: ImageMetadata): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -2389,5 +2473,7 @@ readonly supportedFormats: Array<string>
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 6
+
+<!--Device-ImageSource-readonly supportedFormats: Array<string>--><!--Device-ImageSource-readonly supportedFormats: Array<string>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource

@@ -24,6 +24,8 @@ function startTrace(name: string, taskId: number, expectedTime?: number): void
 
 **替代接口：** startTrace
 
+<!--Device-bytrace-function startTrace(name: string, taskId: number, expectedTime?: number): void--><!--Device-bytrace-function startTrace(name: string, taskId: number, expectedTime?: number): void-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
 
 **参数：**

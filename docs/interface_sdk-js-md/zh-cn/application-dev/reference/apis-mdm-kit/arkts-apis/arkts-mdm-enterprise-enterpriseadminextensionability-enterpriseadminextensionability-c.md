@@ -20,6 +20,8 @@ export default class EnterpriseAdminExtensionAbility
 
 **起始版本：** 12
 
+<!--Device-unnamed-export default class EnterpriseAdminExtensionAbility--><!--Device-unnamed-export default class EnterpriseAdminExtensionAbility-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## 导入模块
@@ -39,6 +41,8 @@ onAccountAdded(accountId: number): void
 **起始版本：** 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EnterpriseAdminExtensionAbility-onAccountAdded(accountId: number): void--><!--Device-EnterpriseAdminExtensionAbility-onAccountAdded(accountId: number): void-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -87,6 +91,8 @@ onAccountRemoved(accountId: number): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-EnterpriseAdminExtensionAbility-onAccountRemoved(accountId: number): void--><!--Device-EnterpriseAdminExtensionAbility-onAccountRemoved(accountId: number): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -133,6 +139,8 @@ onAccountSwitched(accountId: number): void
 **起始版本：** 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EnterpriseAdminExtensionAbility-onAccountSwitched(accountId: number): void--><!--Device-EnterpriseAdminExtensionAbility-onAccountSwitched(accountId: number): void-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -181,6 +189,8 @@ onAdminDisabled(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-EnterpriseAdminExtensionAbility-onAdminDisabled(): void--><!--Device-EnterpriseAdminExtensionAbility-onAdminDisabled(): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **示例**
@@ -214,6 +224,8 @@ onAdminEnabled(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-EnterpriseAdminExtensionAbility-onAdminEnabled(): void--><!--Device-EnterpriseAdminExtensionAbility-onAdminEnabled(): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **示例**
@@ -239,6 +251,8 @@ onAdminPolicyChanged(event: common.PolicyChangedEvent): void
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EnterpriseAdminExtensionAbility-onAdminPolicyChanged(event: common.PolicyChangedEvent): void--><!--Device-EnterpriseAdminExtensionAbility-onAdminPolicyChanged(event: common.PolicyChangedEvent): void-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -288,6 +302,8 @@ onAppStart(bundleName: string): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-EnterpriseAdminExtensionAbility-onAppStart(bundleName: string): void--><!--Device-EnterpriseAdminExtensionAbility-onAppStart(bundleName: string): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -335,6 +351,8 @@ onAppStop(bundleName: string): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-EnterpriseAdminExtensionAbility-onAppStop(bundleName: string): void--><!--Device-EnterpriseAdminExtensionAbility-onAppStop(bundleName: string): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -381,6 +399,8 @@ onBundleAdded(bundleName: string): void
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EnterpriseAdminExtensionAbility-onBundleAdded(bundleName: string): void--><!--Device-EnterpriseAdminExtensionAbility-onBundleAdded(bundleName: string): void-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -431,6 +451,8 @@ onBundleAdded(bundleName: string, accountId: number): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-EnterpriseAdminExtensionAbility-onBundleAdded(bundleName: string, accountId: number): void--><!--Device-EnterpriseAdminExtensionAbility-onBundleAdded(bundleName: string, accountId: number): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -479,6 +501,8 @@ onBundleRemoved(bundleName: string): void
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EnterpriseAdminExtensionAbility-onBundleRemoved(bundleName: string): void--><!--Device-EnterpriseAdminExtensionAbility-onBundleRemoved(bundleName: string): void-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -529,6 +553,8 @@ onBundleRemoved(bundleName: string, accountId: number): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-EnterpriseAdminExtensionAbility-onBundleRemoved(bundleName: string, accountId: number): void--><!--Device-EnterpriseAdminExtensionAbility-onBundleRemoved(bundleName: string, accountId: number): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -578,6 +604,8 @@ onBundleUpdated(bundleName: string, accountId: number): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-EnterpriseAdminExtensionAbility-onBundleUpdated(bundleName: string, accountId: number): void--><!--Device-EnterpriseAdminExtensionAbility-onBundleUpdated(bundleName: string, accountId: number): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -626,6 +654,8 @@ onDeviceAdminDisabled(bundleName: string): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-EnterpriseAdminExtensionAbility-onDeviceAdminDisabled(bundleName: string): void--><!--Device-EnterpriseAdminExtensionAbility-onDeviceAdminDisabled(bundleName: string): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -658,6 +688,8 @@ onDeviceAdminEnabled(bundleName: string): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-EnterpriseAdminExtensionAbility-onDeviceAdminEnabled(bundleName: string): void--><!--Device-EnterpriseAdminExtensionAbility-onDeviceAdminEnabled(bundleName: string): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -689,6 +721,8 @@ onDeviceBootCompleted(): void
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EnterpriseAdminExtensionAbility-onDeviceBootCompleted(): void--><!--Device-EnterpriseAdminExtensionAbility-onDeviceBootCompleted(): void-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -736,6 +770,8 @@ onKeyEvent(keyEvent: systemManager.KeyEvent): void
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EnterpriseAdminExtensionAbility-onKeyEvent(keyEvent: systemManager.KeyEvent): void--><!--Device-EnterpriseAdminExtensionAbility-onKeyEvent(keyEvent: systemManager.KeyEvent): void-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -858,6 +894,8 @@ Kiosk模式为系统层面提供的一种应用运行模式，该模式下会将
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-EnterpriseAdminExtensionAbility-onKioskModeEntering(bundleName: string, accountId: number): void--><!--Device-EnterpriseAdminExtensionAbility-onKioskModeEntering(bundleName: string, accountId: number): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -890,6 +928,8 @@ onKioskModeExiting(bundleName: string, accountId: number): void
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EnterpriseAdminExtensionAbility-onKioskModeExiting(bundleName: string, accountId: number): void--><!--Device-EnterpriseAdminExtensionAbility-onKioskModeExiting(bundleName: string, accountId: number): void-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -928,6 +968,8 @@ onLogCollected(result: common.Result): void
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EnterpriseAdminExtensionAbility-onLogCollected(result: common.Result): void--><!--Device-EnterpriseAdminExtensionAbility-onLogCollected(result: common.Result): void-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -991,6 +1033,8 @@ onMarketAppInstallResult(bundleName: string, result: common.InstallationResult):
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-EnterpriseAdminExtensionAbility-onMarketAppInstallResult(bundleName: string, result: common.InstallationResult): void--><!--Device-EnterpriseAdminExtensionAbility-onMarketAppInstallResult(bundleName: string, result: common.InstallationResult): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -1024,6 +1068,8 @@ EnterpriseAdminExtensionAbility启动事件回调。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-EnterpriseAdminExtensionAbility-onStart(): void--><!--Device-EnterpriseAdminExtensionAbility-onStart(): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **示例**
@@ -1049,6 +1095,8 @@ onStartupGuideCompleted(scene: common.StartupScene): void
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EnterpriseAdminExtensionAbility-onStartupGuideCompleted(scene: common.StartupScene): void--><!--Device-EnterpriseAdminExtensionAbility-onStartupGuideCompleted(scene: common.StartupScene): void-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -1103,6 +1151,8 @@ onSystemUpdate(systemUpdateInfo: systemManager.SystemUpdateInfo): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-EnterpriseAdminExtensionAbility-onSystemUpdate(systemUpdateInfo: systemManager.SystemUpdateInfo): void--><!--Device-EnterpriseAdminExtensionAbility-onSystemUpdate(systemUpdateInfo: systemManager.SystemUpdateInfo): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -1151,5 +1201,7 @@ EnterpriseAdminExtensionAbility的上下文。继承自[ExtensionContext](../../
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EnterpriseAdminExtensionAbility-context: EnterpriseAdminExtensionContext--><!--Device-EnterpriseAdminExtensionAbility-context: EnterpriseAdminExtensionContext-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager

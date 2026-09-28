@@ -10,6 +10,8 @@ interface ColorResponse extends Response
 
 **起始版本：** 10
 
+<!--Device-sensor-interface ColorResponse extends Response--><!--Device-sensor-interface ColorResponse extends Response-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ colorTemperature: number
 
 **起始版本：** 10
 
+<!--Device-ColorResponse-colorTemperature: double--><!--Device-ColorResponse-colorTemperature: double-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **系统接口：** 此接口为系统接口。
@@ -47,6 +51,8 @@ lightIntensity: number
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-ColorResponse-lightIntensity: double--><!--Device-ColorResponse-lightIntensity: double-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 

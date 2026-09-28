@@ -12,6 +12,8 @@ export class Character
 
 **替代接口：** [Unicode](arkts-localization-i18n-unicode-c.md)
 
+<!--Device-i18n-export class Character--><!--Device-i18n-export class Character-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## 导入模块
@@ -33,6 +35,8 @@ getType(ch: string): string
 **废弃版本：** 9
 
 **替代接口：** [getType](arkts-localization-i18n-unicode-c.md#gettype)
+
+<!--Device-Character-getType(ch: string): string--><!--Device-Character-getType(ch: string): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -62,6 +66,8 @@ isDigit(ch: string): boolean
 
 **替代接口：** [isDigit](arkts-localization-i18n-unicode-c.md#isdigit)
 
+<!--Device-Character-isDigit(ch: string): boolean--><!--Device-Character-isDigit(ch: string): boolean-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 **参数：**
@@ -89,6 +95,8 @@ isIdeograph(ch: string): boolean
 **废弃版本：** 9
 
 **替代接口：** [isIdeograph](arkts-localization-i18n-unicode-c.md#isideograph)
+
+<!--Device-Character-isIdeograph(ch: string): boolean--><!--Device-Character-isIdeograph(ch: string): boolean-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -118,6 +126,8 @@ isLetter(ch: string): boolean
 
 **替代接口：** [isLetter](arkts-localization-i18n-unicode-c.md#isletter)
 
+<!--Device-Character-isLetter(ch: string): boolean--><!--Device-Character-isLetter(ch: string): boolean-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 **参数：**
@@ -145,6 +155,8 @@ isLowerCase(ch: string): boolean
 **废弃版本：** 9
 
 **替代接口：** [isLowerCase](arkts-localization-i18n-unicode-c.md#islowercase)
+
+<!--Device-Character-isLowerCase(ch: string): boolean--><!--Device-Character-isLowerCase(ch: string): boolean-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -174,6 +186,8 @@ isRTL(ch: string): boolean
 
 **替代接口：** [isRTL](arkts-localization-i18n-unicode-c.md#isrtl)
 
+<!--Device-Character-isRTL(ch: string): boolean--><!--Device-Character-isRTL(ch: string): boolean-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 **参数：**
@@ -201,6 +215,8 @@ isSpaceChar(ch: string): boolean
 **废弃版本：** 9
 
 **替代接口：** [isSpaceChar](arkts-localization-i18n-unicode-c.md#isspacechar)
+
+<!--Device-Character-isSpaceChar(ch: string): boolean--><!--Device-Character-isSpaceChar(ch: string): boolean-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -230,6 +246,8 @@ isUpperCase(ch: string): boolean
 
 **替代接口：** [isUpperCase](arkts-localization-i18n-unicode-c.md#isuppercase)
 
+<!--Device-Character-isUpperCase(ch: string): boolean--><!--Device-Character-isUpperCase(ch: string): boolean-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 **参数：**
@@ -257,6 +275,8 @@ isWhitespace(ch: string): boolean
 **废弃版本：** 9
 
 **替代接口：** [isWhitespace](arkts-localization-i18n-unicode-c.md#iswhitespace)
+
+<!--Device-Character-isWhitespace(ch: string): boolean--><!--Device-Character-isWhitespace(ch: string): boolean-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 

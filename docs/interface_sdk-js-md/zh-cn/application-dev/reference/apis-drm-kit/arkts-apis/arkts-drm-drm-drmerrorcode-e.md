@@ -8,6 +8,8 @@ enum DrmErrorCode
 
 **起始版本：** 11
 
+<!--Device-drm-enum DrmErrorCode--><!--Device-drm-enum DrmErrorCode-End-->
+
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
 ## ERROR_UNKNOWN
@@ -20,7 +22,9 @@ ERROR_UNKNOWN = 24700101
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-DrmErrorCode-ERROR_UNKNOWN = 24700101--><!--Device-DrmErrorCode-ERROR_UNKNOWN = 24700101-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
@@ -34,7 +38,9 @@ MediaKeySystem实例数量超过上限（64个）。请调用[destroy](arkts-drm
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-DrmErrorCode-MAX_SYSTEM_NUM_REACHED = 24700103--><!--Device-DrmErrorCode-MAX_SYSTEM_NUM_REACHED = 24700103-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
@@ -48,7 +54,9 @@ MediaKeySession实例数量超过上限（64个）。请调用[destroy](arkts-dr
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-DrmErrorCode-MAX_SESSION_NUM_REACHED = 24700104--><!--Device-DrmErrorCode-MAX_SESSION_NUM_REACHED = 24700104-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
@@ -62,6 +70,8 @@ DRM服务异常，当DRM服务发生致命错误时返回。可能原因：系�
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-DrmErrorCode-SERVICE_FATAL_ERROR = 24700201--><!--Device-DrmErrorCode-SERVICE_FATAL_ERROR = 24700201-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core

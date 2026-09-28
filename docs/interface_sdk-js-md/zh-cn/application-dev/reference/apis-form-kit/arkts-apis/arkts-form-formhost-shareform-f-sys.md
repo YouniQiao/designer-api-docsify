@@ -18,6 +18,8 @@ function shareForm(formId: string, deviceId: string, callback: AsyncCallback<voi
 
 **需要权限：** ohos.permission.REQUIRE_FORM and ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-formHost-function shareForm(formId: string, deviceId: string, callback: AsyncCallback<void>): void--><!--Device-formHost-function shareForm(formId: string, deviceId: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -75,6 +77,8 @@ function shareForm(formId: string, deviceId: string): Promise<void>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.REQUIRE_FORM and ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-formHost-function shareForm(formId: string, deviceId: string): Promise<void>--><!--Device-formHost-function shareForm(formId: string, deviceId: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 

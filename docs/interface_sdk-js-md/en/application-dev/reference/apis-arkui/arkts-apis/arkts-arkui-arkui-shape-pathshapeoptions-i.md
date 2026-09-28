@@ -8,6 +8,8 @@ Represents the parameter of the constructor used to create a **PathShape** objec
 
 **Since:** 12
 
+<!--Device-unnamed-interface PathShapeOptions--><!--Device-unnamed-interface PathShapeOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -33,5 +35,7 @@ Path drawing commands. For more about the commands, see [commands](../arkts-comp
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-PathShapeOptions-commands?: string--><!--Device-PathShapeOptions-commands?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

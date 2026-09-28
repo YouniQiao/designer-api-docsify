@@ -8,6 +8,8 @@ USB设备端口角色信息。currentMode表示端口的当前USB模式，其值
 
 **起始版本：** 9
 
+<!--Device-usbManager-interface USBPortStatus--><!--Device-usbManager-interface USBPortStatus-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ currentDataRole: number
 
 **起始版本：** 9
 
+<!--Device-USBPortStatus-currentDataRole: int--><!--Device-USBPortStatus-currentDataRole: int-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 **系统接口：** 此接口为系统接口。
@@ -46,6 +50,8 @@ currentMode: number
 
 **起始版本：** 9
 
+<!--Device-USBPortStatus-currentMode: int--><!--Device-USBPortStatus-currentMode: int-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +67,8 @@ currentPowerRole: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-USBPortStatus-currentPowerRole: int--><!--Device-USBPortStatus-currentPowerRole: int-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 

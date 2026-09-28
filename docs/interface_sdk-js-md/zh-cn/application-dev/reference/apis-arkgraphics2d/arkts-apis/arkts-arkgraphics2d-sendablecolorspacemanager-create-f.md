@@ -16,6 +16,8 @@ function create(colorSpaceName: colorSpaceManager.ColorSpace): ColorSpaceManager
 
 **起始版本：** 12
 
+<!--Device-sendableColorSpaceManager-function create(colorSpaceName: colorSpaceManager.ColorSpace): ColorSpaceManager--><!--Device-sendableColorSpaceManager-function create(colorSpaceName: colorSpaceManager.ColorSpace): ColorSpaceManager-End-->
+
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
 **参数：**
@@ -58,6 +60,8 @@ function create(primaries: colorSpaceManager.ColorSpacePrimaries, gamma: number)
 创建用户自定义可共享的色彩管理实例。
 
 **起始版本：** 12
+
+<!--Device-sendableColorSpaceManager-function create(primaries: colorSpaceManager.ColorSpacePrimaries, gamma: number): ColorSpaceManager--><!--Device-sendableColorSpaceManager-function create(primaries: colorSpaceManager.ColorSpacePrimaries, gamma: number): ColorSpaceManager-End-->
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 

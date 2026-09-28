@@ -16,4 +16,6 @@ For details, see the development guide: [\@BuilderParam Decorator: Referencing t
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-unnamed-declare const BuilderParam: PropertyDecorator--><!--Device-unnamed-declare const BuilderParam: PropertyDecorator-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

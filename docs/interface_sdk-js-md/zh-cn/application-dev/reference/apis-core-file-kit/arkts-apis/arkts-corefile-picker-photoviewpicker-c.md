@@ -12,6 +12,8 @@ class PhotoViewPicker
 
 **替代接口：** [PhotoViewPicker](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md)
 
+<!--Device-picker-class PhotoViewPicker--><!--Device-picker-class PhotoViewPicker-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 ## 导入模块
@@ -33,6 +35,8 @@ constructor()
 **替代接口：** [PhotoViewPicker](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PhotoViewPicker-constructor()--><!--Device-PhotoViewPicker-constructor()-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -56,13 +60,15 @@ constructor(context: Context)
 
 **替代接口：** [PhotoViewPicker](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md)
 
+<!--Device-PhotoViewPicker-constructor(context: Context)--><!--Device-PhotoViewPicker-constructor(context: Context)-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 应用上下文（仅支持UIAbilityContext）。Stage模型的应用Context定义见Context。 |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 应用上下文（仅支持UIAbilityContext）。Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context.md)。 |
 
 **示例**
 
@@ -104,7 +110,9 @@ save(option?: PhotoSaveOptions): Promise<Array<string>>
 
 **废弃版本：** 12
 
-**替代接口：** [SaveButton](../../apis-arkui/arkts-components/arkts-arkui-savebutton-comp.md#savebutton)
+**替代接口：** [SaveButton](../../apis-arkui/arkts-components/arkts-arkui-savebutton-comp.md)
+
+<!--Device-PhotoViewPicker-save(option?: PhotoSaveOptions): Promise<Array<string>>--><!--Device-PhotoViewPicker-save(option?: PhotoSaveOptions): Promise<Array<string>>-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -157,7 +165,9 @@ save(option: PhotoSaveOptions, callback: AsyncCallback<Array<string>>): void
 
 **废弃版本：** 12
 
-**替代接口：** [SaveButton](../../apis-arkui/arkts-components/arkts-arkui-savebutton-comp.md#savebutton)
+**替代接口：** [SaveButton](../../apis-arkui/arkts-components/arkts-arkui-savebutton-comp.md)
+
+<!--Device-PhotoViewPicker-save(option: PhotoSaveOptions, callback: AsyncCallback<Array<string>>): void--><!--Device-PhotoViewPicker-save(option: PhotoSaveOptions, callback: AsyncCallback<Array<string>>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -207,7 +217,9 @@ save(callback: AsyncCallback<Array<string>>): void
 
 **废弃版本：** 12
 
-**替代接口：** [SaveButton](../../apis-arkui/arkts-components/arkts-arkui-savebutton-comp.md#savebutton)
+**替代接口：** [SaveButton](../../apis-arkui/arkts-components/arkts-arkui-savebutton-comp.md)
+
+<!--Device-PhotoViewPicker-save(callback: AsyncCallback<Array<string>>): void--><!--Device-PhotoViewPicker-save(callback: AsyncCallback<Array<string>>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -279,6 +291,8 @@ select(option?: PhotoSelectOptions): Promise<PhotoSelectResult>
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-PhotoViewPicker-select(option?: PhotoSelectOptions): Promise<PhotoSelectResult>--><!--Device-PhotoViewPicker-select(option?: PhotoSelectOptions): Promise<PhotoSelectResult>-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **参数：**
@@ -335,6 +349,8 @@ select(option: PhotoSelectOptions, callback: AsyncCallback<PhotoSelectResult>): 
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-PhotoViewPicker-select(option: PhotoSelectOptions, callback: AsyncCallback<PhotoSelectResult>): void--><!--Device-PhotoViewPicker-select(option: PhotoSelectOptions, callback: AsyncCallback<PhotoSelectResult>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **参数：**
@@ -387,6 +403,8 @@ select(callback: AsyncCallback<PhotoSelectResult>): void
 **替代接口：** [select](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md#select-2)(callback: AsyncCallback&lt;PhotoSelectResult&gt;)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-PhotoViewPicker-select(callback: AsyncCallback<PhotoSelectResult>): void--><!--Device-PhotoViewPicker-select(callback: AsyncCallback<PhotoSelectResult>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 

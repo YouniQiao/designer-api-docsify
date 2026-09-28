@@ -18,6 +18,8 @@ function isTokenizerSupported(tokenizer: Tokenizer): boolean
 
 **起始版本：** 18
 
+<!--Device-relationalStore-function isTokenizerSupported(tokenizer: Tokenizer): boolean--><!--Device-relationalStore-function isTokenizerSupported(tokenizer: Tokenizer): boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**

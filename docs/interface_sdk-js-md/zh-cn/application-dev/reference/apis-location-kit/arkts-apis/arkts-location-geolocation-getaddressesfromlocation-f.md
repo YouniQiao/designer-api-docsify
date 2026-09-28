@@ -22,6 +22,8 @@ function getAddressesFromLocation(request: ReverseGeoCodeRequest, callback: Asyn
 
 **需要权限：** ohos.permission.LOCATION
 
+<!--Device-geolocation-function getAddressesFromLocation(request: ReverseGeoCodeRequest, callback: AsyncCallback<Array<GeoAddress>>): void--><!--Device-geolocation-function getAddressesFromLocation(request: ReverseGeoCodeRequest, callback: AsyncCallback<Array<GeoAddress>>): void-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 **参数：**
@@ -64,6 +66,8 @@ function getAddressesFromLocation(request: ReverseGeoCodeRequest): Promise<Array
 **替代接口：** [getAddressesFromLocation](arkts-location-geolocationmanager-getaddressesfromlocation-f.md)
 
 **需要权限：** ohos.permission.LOCATION
+
+<!--Device-geolocation-function getAddressesFromLocation(request: ReverseGeoCodeRequest): Promise<Array<GeoAddress>>--><!--Device-geolocation-function getAddressesFromLocation(request: ReverseGeoCodeRequest): Promise<Array<GeoAddress>>-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geocoder
 

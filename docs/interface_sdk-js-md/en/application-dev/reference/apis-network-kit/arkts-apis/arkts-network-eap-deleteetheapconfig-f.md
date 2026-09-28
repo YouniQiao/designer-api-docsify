@@ -20,6 +20,8 @@ Deletes the persisted 802.1X EAP configuration and stops any ongoing auto-authen
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-eap-function deleteEthEapConfig(): Promise<void>--><!--Device-eap-function deleteEthEapConfig(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 **Return value:**

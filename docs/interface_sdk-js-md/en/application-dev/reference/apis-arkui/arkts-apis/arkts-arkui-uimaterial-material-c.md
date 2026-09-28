@@ -8,6 +8,8 @@ System material object on the UI.
 
 **Since:** 26.0.0
 
+<!--Device-uiMaterial-class Material--><!--Device-uiMaterial-class Material-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -31,5 +33,7 @@ In enabled state, you can disable the immersive system material effect for a com
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-Material-static get empty(): Material--><!--Device-Material-static get empty(): Material-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

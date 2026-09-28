@@ -24,6 +24,8 @@ function disallowAddLocalAccount(admin: Want, disallow: boolean, callback: Async
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-accountManager-function disallowAddLocalAccount(admin: Want, disallow: boolean, callback: AsyncCallback<void>): void--><!--Device-accountManager-function disallowAddLocalAccount(admin: Want, disallow: boolean, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -87,6 +89,8 @@ function disallowAddLocalAccount(admin: Want, disallow: boolean): Promise<void>
 **需要权限：** ohos.permission.ENTERPRISE_SET_ACCOUNT_POLICY
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-accountManager-function disallowAddLocalAccount(admin: Want, disallow: boolean): Promise<void>--><!--Device-accountManager-function disallowAddLocalAccount(admin: Want, disallow: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

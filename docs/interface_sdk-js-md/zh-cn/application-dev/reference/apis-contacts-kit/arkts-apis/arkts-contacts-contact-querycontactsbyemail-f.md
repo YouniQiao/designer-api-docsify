@@ -22,6 +22,8 @@ function queryContactsByEmail(email: string, callback: AsyncCallback<Array<Conta
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryContactsByEmail(email: string, callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function queryContactsByEmail(email: string, callback: AsyncCallback<Array<Contact>>): void-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 **参数：**
@@ -60,6 +62,8 @@ function queryContactsByEmail(context: Context, email: string, callback: AsyncCa
 **起始版本：** 10
 
 **需要权限：** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryContactsByEmail(context: Context, email: string, callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function queryContactsByEmail(context: Context, email: string, callback: AsyncCallback<Array<Contact>>): void-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -119,6 +123,8 @@ function queryContactsByEmail(email: string, holder: Holder, callback: AsyncCall
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryContactsByEmail(email: string, holder: Holder, callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function queryContactsByEmail(email: string, holder: Holder, callback: AsyncCallback<Array<Contact>>): void-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 **参数：**
@@ -163,6 +169,8 @@ function queryContactsByEmail(context: Context, email: string, holder: Holder,
 **起始版本：** 10
 
 **需要权限：** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryContactsByEmail(context: Context, email: string, holder: Holder,    callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function queryContactsByEmail(context: Context, email: string, holder: Holder,    callback: AsyncCallback<Array<Contact>>): void-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -227,6 +235,8 @@ function queryContactsByEmail(email: string, attrs: ContactAttributes, callback:
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryContactsByEmail(email: string, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function queryContactsByEmail(email: string, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 **参数：**
@@ -269,6 +279,8 @@ function queryContactsByEmail(context: Context, email: string, attrs: ContactAtt
 **起始版本：** 10
 
 **需要权限：** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryContactsByEmail(context: Context, email: string, attrs: ContactAttributes,    callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function queryContactsByEmail(context: Context, email: string, attrs: ContactAttributes,    callback: AsyncCallback<Array<Contact>>): void-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -331,6 +343,8 @@ function queryContactsByEmail(email: string, holder: Holder, attrs: ContactAttri
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryContactsByEmail(email: string, holder: Holder, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function queryContactsByEmail(email: string, holder: Holder, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 **参数：**
@@ -377,6 +391,8 @@ function queryContactsByEmail(context: Context, email: string, holder: Holder, a
 **起始版本：** 10
 
 **需要权限：** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryContactsByEmail(context: Context, email: string, holder: Holder, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function queryContactsByEmail(context: Context, email: string, holder: Holder, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -444,6 +460,8 @@ function queryContactsByEmail(email: string, holder?: Holder, attrs?: ContactAtt
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryContactsByEmail(email: string, holder?: Holder, attrs?: ContactAttributes): Promise<Array<Contact>>--><!--Device-contact-function queryContactsByEmail(email: string, holder?: Holder, attrs?: ContactAttributes): Promise<Array<Contact>>-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 **参数：**
@@ -491,6 +509,8 @@ function queryContactsByEmail(context: Context, email: string, holder?: Holder, 
 **起始版本：** 10
 
 **需要权限：** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryContactsByEmail(context: Context, email: string, holder?: Holder, attrs?: ContactAttributes): Promise<Array<Contact>>--><!--Device-contact-function queryContactsByEmail(context: Context, email: string, holder?: Holder, attrs?: ContactAttributes): Promise<Array<Contact>>-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 

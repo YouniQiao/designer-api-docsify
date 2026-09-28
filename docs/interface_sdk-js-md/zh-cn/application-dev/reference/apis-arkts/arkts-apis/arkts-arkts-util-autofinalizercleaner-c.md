@@ -8,6 +8,8 @@ class AutoFinalizerCleaner<T>
 
 **起始版本：** 22
 
+<!--Device-util-class AutoFinalizerCleaner<T>--><!--Device-util-class AutoFinalizerCleaner<T>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -27,6 +29,8 @@ static register<T>(obj: AutoFinalizer<T>, heldValue: T): void
 **起始版本：** 22
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-AutoFinalizerCleaner-static register<T>(obj: AutoFinalizer<T>, heldValue: T): void--><!--Device-AutoFinalizerCleaner-static register<T>(obj: AutoFinalizer<T>, heldValue: T): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

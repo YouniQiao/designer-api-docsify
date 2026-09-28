@@ -26,6 +26,8 @@ TextArea(value?: TextAreaOptions)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-TextAreaInterface-(value?: TextAreaOptions): TextAreaAttribute--><!--Device-TextAreaInterface-(value?: TextAreaOptions): TextAreaAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数:**

@@ -18,6 +18,8 @@ function setPrinterPreferences(printerId: string, printerPreferences: PrinterPre
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-print-function setPrinterPreferences(printerId: string, printerPreferences: PrinterPreferences): Promise<void>--><!--Device-print-function setPrinterPreferences(printerId: string, printerPreferences: PrinterPreferences): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **系统接口：** 此接口为系统接口。

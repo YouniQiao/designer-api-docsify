@@ -18,6 +18,8 @@ function getAllActiveNotifications(callback: AsyncCallback<Array<NotificationReq
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function getAllActiveNotifications(callback: AsyncCallback<Array<NotificationRequest>>): void--><!--Device-notificationManager-function getAllActiveNotifications(callback: AsyncCallback<Array<NotificationRequest>>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -69,6 +71,8 @@ function getAllActiveNotifications(): Promise<Array<NotificationRequest>>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function getAllActiveNotifications(): Promise<Array<NotificationRequest>>--><!--Device-notificationManager-function getAllActiveNotifications(): Promise<Array<NotificationRequest>>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

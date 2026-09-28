@@ -12,6 +12,8 @@ FormExtensionContext模块提供FormExtensionAbility具有的接口和能力。
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare class FormExtensionContext extends ExtensionContext--><!--Device-unnamed-declare class FormExtensionContext extends ExtensionContext-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 ## connectServiceExtensionAbility
@@ -25,6 +27,8 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): number
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FormExtensionContext-connectServiceExtensionAbility(want: Want, options: ConnectOptions): long--><!--Device-FormExtensionContext-connectServiceExtensionAbility(want: Want, options: ConnectOptions): long-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -118,6 +122,8 @@ disconnectServiceExtensionAbility(connection: number, callback: AsyncCallback<vo
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FormExtensionContext-disconnectServiceExtensionAbility(connection: long, callback: AsyncCallback<void>): void--><!--Device-FormExtensionContext-disconnectServiceExtensionAbility(connection: long, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -185,6 +191,8 @@ disconnectServiceExtensionAbility(connection: number): Promise<void>
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FormExtensionContext-disconnectServiceExtensionAbility(connection: long): Promise<void>--><!--Device-FormExtensionContext-disconnectServiceExtensionAbility(connection: long): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -258,6 +266,8 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FormExtensionContext-startAbility(want: Want, callback: AsyncCallback<void>): void--><!--Device-FormExtensionContext-startAbility(want: Want, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -323,6 +333,8 @@ startAbility(want: Want): Promise<void>
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FormExtensionContext-startAbility(want: Want): Promise<void>--><!--Device-FormExtensionContext-startAbility(want: Want): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 

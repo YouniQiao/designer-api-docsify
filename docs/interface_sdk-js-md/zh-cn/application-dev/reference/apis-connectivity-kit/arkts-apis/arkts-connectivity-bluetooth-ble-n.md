@@ -10,6 +10,8 @@ namespace BLE
 
 **替代接口：** [BLE](arkts-connectivity-bluetoothmanager-ble-n.md)
 
+<!--Device-bluetooth-namespace BLE--><!--Device-bluetooth-namespace BLE-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块

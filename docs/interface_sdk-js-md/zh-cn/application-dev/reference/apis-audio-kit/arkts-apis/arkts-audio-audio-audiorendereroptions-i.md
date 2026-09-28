@@ -8,6 +8,8 @@ interface AudioRendererOptions
 
 **起始版本：** 8
 
+<!--Device-audio-interface AudioRendererOptions--><!--Device-audio-interface AudioRendererOptions-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 ## 导入模块
@@ -28,6 +30,8 @@ privacyType?: AudioPrivacyType
 
 **起始版本：** 10
 
+<!--Device-AudioRendererOptions-privacyType?: AudioPrivacyType--><!--Device-AudioRendererOptions-privacyType?: AudioPrivacyType-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.PlaybackCapture
 
 ## rendererInfo
@@ -42,6 +46,8 @@ rendererInfo: AudioRendererInfo
 
 **起始版本：** 8
 
+<!--Device-AudioRendererOptions-rendererInfo: AudioRendererInfo--><!--Device-AudioRendererOptions-rendererInfo: AudioRendererInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 ## streamInfo
@@ -55,5 +61,7 @@ streamInfo: AudioStreamInfo
 **类型：** [AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)
 
 **起始版本：** 8
+
+<!--Device-AudioRendererOptions-streamInfo: AudioStreamInfo--><!--Device-AudioRendererOptions-streamInfo: AudioStreamInfo-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer

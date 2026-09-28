@@ -4,6 +4,8 @@
 
 **起始版本：** 7
 
+<!--Device-unnamed-declare namespace runningLock--><!--Device-unnamed-declare namespace runningLock-End-->
+
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 
 ## 导入模块

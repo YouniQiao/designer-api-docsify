@@ -16,6 +16,8 @@ function getDefaultCellularDataSlotId(callback: AsyncCallback<number>): void
 
 **起始版本：** 7
 
+<!--Device-data-function getDefaultCellularDataSlotId(callback: AsyncCallback<int>): void--><!--Device-data-function getDefaultCellularDataSlotId(callback: AsyncCallback<int>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CellularData
 
 **参数：**
@@ -51,6 +53,8 @@ function getDefaultCellularDataSlotId(): Promise<number>
 获取默认移动数据的SIM卡，使用Promise方式作为异步方法。
 
 **起始版本：** 7
+
+<!--Device-data-function getDefaultCellularDataSlotId(): Promise<int>--><!--Device-data-function getDefaultCellularDataSlotId(): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Telephony.CellularData
 

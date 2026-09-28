@@ -19,6 +19,8 @@ declare function copyFile(src: string | number, dest: string | number, mode?: nu
 
 **替代接口：** [copyFile](arkts-corefile-file-fs-copyfile-f.md)
 
+<!--Device-unnamed-declare function copyFile(src: string | number, dest: string | number, mode?: number): Promise<void>--><!--Device-unnamed-declare function copyFile(src: string | number, dest: string | number, mode?: number): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -52,6 +54,8 @@ copyFile.
 
 **替代接口：** [copyFile](arkts-corefile-file-fs-copyfile-f.md)
 
+<!--Device-unnamed-declare function copyFile(src: string | number, dest: string | number, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function copyFile(src: string | number, dest: string | number, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -83,6 +87,8 @@ declare function copyFile(
 **废弃版本：** 9
 
 **替代接口：** [copyFile](arkts-corefile-file-fs-copyfile-f.md)
+
+<!--Device-unnamed-declare function copyFile(  src: string | number,  dest: string | number,  mode: number,  callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function copyFile(  src: string | number,  dest: string | number,  mode: number,  callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

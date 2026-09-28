@@ -29,6 +29,8 @@ Configuration配置包括语言-文字-国家地区、横竖屏、颜色模式�
 
 **起始版本：** 6
 
+<!--Device-unnamed-declare namespace resourceManager--><!--Device-unnamed-declare namespace resourceManager-End-->
+
 **系统能力：** SystemCapability.Global.ResourceManager
 
 ## 导入模块

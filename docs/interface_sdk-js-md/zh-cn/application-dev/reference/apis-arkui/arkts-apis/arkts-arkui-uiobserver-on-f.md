@@ -20,6 +20,8 @@ export function on(type: 'navDestinationUpdate', options: { navigationId: Resour
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-uiObserver-export function on(type: 'navDestinationUpdate', options: { navigationId: ResourceStr }, callback: Callback<NavDestinationInfo>): void--><!--Device-uiObserver-export function on(type: 'navDestinationUpdate', options: { navigationId: ResourceStr }, callback: Callback<NavDestinationInfo>): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -101,6 +103,8 @@ export function on(type: 'navDestinationUpdate', callback: Callback<NavDestinati
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-uiObserver-export function on(type: 'navDestinationUpdate', callback: Callback<NavDestinationInfo>): void--><!--Device-uiObserver-export function on(type: 'navDestinationUpdate', callback: Callback<NavDestinationInfo>): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -172,13 +176,15 @@ struct Index {
 export function on(type: 'scrollEvent', options: ObserverOptions, callback: Callback<ScrollEventInfo>): void
 ```
 
-监听指定id的滚动组件滚动事件的开始和结束。滚动组件包括[List](../arkts-components/arkts-arkui-list-comp.md#list)、[Grid](../arkts-components/arkts-arkui-grid-comp.md#grid)、[Scroll](../arkts-components/arkts-arkui-scroll-comp.md#scroll)、[WaterFlow](../arkts-components/arkts-arkui-waterflow-comp.md#water_flow)、[ArcList](../arkts-components/arkts-arkui-arclist-comp.md#ohosarkuiarclist)。
+监听指定id的滚动组件滚动事件的开始和结束。滚动组件包括[List](../arkts-components/arkts-arkui-list-comp.md)、[Grid](../arkts-components/arkts-arkui-grid-comp.md)、[Scroll](../arkts-components/arkts-arkui-scroll-comp.md)、[WaterFlow](../arkts-components/arkts-arkui-waterflow-comp.md)、[ArcList](../arkts-components/arkts-arkui-arclist-comp.md)。
 
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-uiObserver-export function on(type: 'scrollEvent', options: ObserverOptions, callback: Callback<ScrollEventInfo>): void--><!--Device-uiObserver-export function on(type: 'scrollEvent', options: ObserverOptions, callback: Callback<ScrollEventInfo>): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -197,13 +203,15 @@ export function on(type: 'scrollEvent', options: ObserverOptions, callback: Call
 export function on(type: 'scrollEvent', callback: Callback<ScrollEventInfo>): void
 ```
 
-监听所有滚动组件滚动事件的开始和结束。滚动组件包括[List](../arkts-components/arkts-arkui-list-comp.md#list)、[Grid](../arkts-components/arkts-arkui-grid-comp.md#grid)、[Scroll](../arkts-components/arkts-arkui-scroll-comp.md#scroll)、[WaterFlow](../arkts-components/arkts-arkui-waterflow-comp.md#water_flow)、[ArcList](../arkts-components/arkts-arkui-arclist-comp.md#ohosarkuiarclist)。
+监听所有滚动组件滚动事件的开始和结束。滚动组件包括[List](../arkts-components/arkts-arkui-list-comp.md)、[Grid](../arkts-components/arkts-arkui-grid-comp.md)、[Scroll](../arkts-components/arkts-arkui-scroll-comp.md)、[WaterFlow](../arkts-components/arkts-arkui-waterflow-comp.md)、[ArcList](../arkts-components/arkts-arkui-arclist-comp.md)。
 
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-uiObserver-export function on(type: 'scrollEvent', callback: Callback<ScrollEventInfo>): void--><!--Device-uiObserver-export function on(type: 'scrollEvent', callback: Callback<ScrollEventInfo>): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -228,6 +236,8 @@ export function on(type: 'routerPageUpdate', context: UIAbilityContext | UIConte
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-uiObserver-export function on(type: 'routerPageUpdate', context: UIAbilityContext | UIContext, callback: Callback<RouterPageInfo>): void--><!--Device-uiObserver-export function on(type: 'routerPageUpdate', context: UIAbilityContext | UIContext, callback: Callback<RouterPageInfo>): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -290,6 +300,8 @@ export function on(type: 'densityUpdate', context: UIContext, callback: Callback
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-uiObserver-export function on(type: 'densityUpdate', context: UIContext, callback: Callback<DensityInfo>): void--><!--Device-uiObserver-export function on(type: 'densityUpdate', context: UIContext, callback: Callback<DensityInfo>): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -346,6 +358,8 @@ export function on(type: 'willDraw', context: UIContext, callback: Callback<void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-uiObserver-export function on(type: 'willDraw', context: UIContext, callback: Callback<void>): void--><!--Device-uiObserver-export function on(type: 'willDraw', context: UIContext, callback: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -393,6 +407,8 @@ export function on(type: 'didLayout', context: UIContext, callback: Callback<voi
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-uiObserver-export function on(type: 'didLayout', context: UIContext, callback: Callback<void>): void--><!--Device-uiObserver-export function on(type: 'didLayout', context: UIContext, callback: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -439,6 +455,8 @@ export function on(type: 'tabContentUpdate', options: ObserverOptions, callback:
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-uiObserver-export function on(type: 'tabContentUpdate', options: ObserverOptions, callback: Callback<TabContentInfo>): void--><!--Device-uiObserver-export function on(type: 'tabContentUpdate', options: ObserverOptions, callback: Callback<TabContentInfo>): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -515,6 +533,8 @@ export function on(type: 'tabContentUpdate', callback: Callback<TabContentInfo>)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-uiObserver-export function on(type: 'tabContentUpdate', callback: Callback<TabContentInfo>): void--><!--Device-uiObserver-export function on(type: 'tabContentUpdate', callback: Callback<TabContentInfo>): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -594,6 +614,8 @@ export function on(
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-uiObserver-export function on(    type: 'navDestinationSwitch',    context: UIAbilityContext | UIContext,    callback: Callback<NavDestinationSwitchInfo>  ): void--><!--Device-uiObserver-export function on(    type: 'navDestinationSwitch',    context: UIAbilityContext | UIContext,    callback: Callback<NavDestinationSwitchInfo>  ): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -732,6 +754,8 @@ export function on(
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-uiObserver-export function on(    type: 'navDestinationSwitch',    context: UIAbilityContext | UIContext,    observerOptions: NavDestinationSwitchObserverOptions,    callback: Callback<NavDestinationSwitchInfo>  ): void--><!--Device-uiObserver-export function on(    type: 'navDestinationSwitch',    context: UIAbilityContext | UIContext,    observerOptions: NavDestinationSwitchObserverOptions,    callback: Callback<NavDestinationSwitchInfo>  ): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

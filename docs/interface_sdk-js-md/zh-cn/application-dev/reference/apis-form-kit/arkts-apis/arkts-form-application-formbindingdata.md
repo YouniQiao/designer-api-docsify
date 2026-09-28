@@ -12,6 +12,8 @@
 
 **替代接口：** [formBindingData](arkts-form-app-form-formbindingdata.md)
 
+<!--Device-unnamed-declare namespace formBindingData--><!--Device-unnamed-declare namespace formBindingData-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 ## 导入模块
@@ -25,7 +27,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [createFormBindingData](arkts-form-formbindingdata-createformbindingdata-depr-f.md#createformbindingdata) | 创建一个FormBindingData对象。 |
+| [createFormBindingData](arkts-form-formbindingdata-createformbindingdata-depr-f.md) | 创建一个FormBindingData对象。 |
 
 ### 接口
 

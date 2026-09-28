@@ -24,6 +24,8 @@ function getRemoteDeviceClass(deviceId: string): DeviceClass
 
 **需要权限：** ohos.permission.USE_BLUETOOTH
 
+<!--Device-bluetooth-function getRemoteDeviceClass(deviceId: string): DeviceClass--><!--Device-bluetooth-function getRemoteDeviceClass(deviceId: string): DeviceClass-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**

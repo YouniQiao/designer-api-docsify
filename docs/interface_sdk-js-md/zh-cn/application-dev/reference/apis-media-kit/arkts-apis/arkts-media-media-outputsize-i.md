@@ -8,6 +8,8 @@ interface OutputSize
 
 **起始版本：** 20
 
+<!--Device-media-interface OutputSize--><!--Device-media-interface OutputSize-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVImageGenerator
 
 ## 导入模块
@@ -28,6 +30,8 @@ height?: number
 
 **起始版本：** 20
 
+<!--Device-OutputSize-height?: int--><!--Device-OutputSize-height?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVImageGenerator
 
 ## width
@@ -41,5 +45,7 @@ width?:number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-OutputSize-width?:int--><!--Device-OutputSize-width?:int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVImageGenerator

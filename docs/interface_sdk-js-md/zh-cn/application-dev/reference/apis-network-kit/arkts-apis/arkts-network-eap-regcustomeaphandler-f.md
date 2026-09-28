@@ -20,6 +20,8 @@ function regCustomEapHandler(netType: number, eapCode: number, eapType: number, 
 
 **需要权限：** ohos.permission.MANAGE_ENTERPRISE_WIFI_CONNECTION
 
+<!--Device-eap-function regCustomEapHandler(netType: int, eapCode: int, eapType: int, callback: Callback<EapData>): void--><!--Device-eap-function regCustomEapHandler(netType: int, eapCode: int, eapType: int, callback: Callback<EapData>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
 **参数：**

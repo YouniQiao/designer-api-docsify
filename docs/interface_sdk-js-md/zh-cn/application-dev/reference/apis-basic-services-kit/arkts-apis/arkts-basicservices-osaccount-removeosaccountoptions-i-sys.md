@@ -8,6 +8,8 @@ interface RemoveOsAccountOptions
 
 **起始版本：** 24
 
+<!--Device-osAccount-interface RemoveOsAccountOptions--><!--Device-osAccount-interface RemoveOsAccountOptions-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -29,6 +31,8 @@ token?: Uint8Array
 **类型：** Uint8Array
 
 **起始版本：** 24
+
+<!--Device-RemoveOsAccountOptions-token?: Uint8Array--><!--Device-RemoveOsAccountOptions-token?: Uint8Array-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 

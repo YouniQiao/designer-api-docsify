@@ -20,6 +20,8 @@ declare function symlink(target: string, srcPath: string): Promise<void>
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare function symlink(target: string, srcPath: string): Promise<void>--><!--Device-unnamed-declare function symlink(target: string, srcPath: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -70,6 +72,8 @@ declare function symlink(target: string, srcPath: string, callback: AsyncCallbac
 > 从API version 11开始，不支持三方应用使用。
 
 **起始版本：** 9
+
+<!--Device-unnamed-declare function symlink(target: string, srcPath: string, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function symlink(target: string, srcPath: string, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

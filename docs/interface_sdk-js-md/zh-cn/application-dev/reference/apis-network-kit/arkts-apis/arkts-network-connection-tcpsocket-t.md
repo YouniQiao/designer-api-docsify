@@ -8,6 +8,8 @@ type TCPSocket = socket.TCPSocket
 
 **起始版本：** 8
 
+<!--Device-connection-type TCPSocket = socket.TCPSocket--><!--Device-connection-type TCPSocket = socket.TCPSocket-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **类型：** [socket.TCPSocket](arkts-network-socket-tcpsocket-i.md)

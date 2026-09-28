@@ -16,6 +16,8 @@ function isVectorSupported(): boolean
 
 **起始版本：** 18
 
+<!--Device-relationalStore-function isVectorSupported(): boolean--><!--Device-relationalStore-function isVectorSupported(): boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **返回值：**

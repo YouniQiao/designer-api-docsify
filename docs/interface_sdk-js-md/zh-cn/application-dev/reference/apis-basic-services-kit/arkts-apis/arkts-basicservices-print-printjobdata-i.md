@@ -8,6 +8,8 @@ interface PrintJobData
 
 **起始版本：** 23
 
+<!--Device-print-interface PrintJobData--><!--Device-print-interface PrintJobData-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## 导入模块
@@ -30,6 +32,8 @@ binaryData?: Uint8Array
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PrintJobData-binaryData?: Uint8Array--><!--Device-PrintJobData-binaryData?: Uint8Array-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## colorMode
@@ -45,6 +49,8 @@ colorMode: PrintColorMode
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PrintJobData-colorMode: PrintColorMode--><!--Device-PrintJobData-colorMode: PrintColorMode-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -62,6 +68,8 @@ copyNumber: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PrintJobData-copyNumber: int--><!--Device-PrintJobData-copyNumber: int-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## docFlavor
@@ -77,6 +85,8 @@ docFlavor: DocFlavor
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PrintJobData-docFlavor: DocFlavor--><!--Device-PrintJobData-docFlavor: DocFlavor-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -94,6 +104,8 @@ documentFormat: PrintDocumentFormat
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PrintJobData-documentFormat: PrintDocumentFormat--><!--Device-PrintJobData-documentFormat: PrintDocumentFormat-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## duplexMode
@@ -109,6 +121,8 @@ duplexMode: PrintDuplexMode
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PrintJobData-duplexMode: PrintDuplexMode--><!--Device-PrintJobData-duplexMode: PrintDuplexMode-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -126,6 +140,8 @@ fdList?: number[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PrintJobData-fdList?: int[]--><!--Device-PrintJobData-fdList?: int[]-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## isAutoRotate
@@ -141,6 +157,8 @@ isAutoRotate?: boolean
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PrintJobData-isAutoRotate?: boolean--><!--Device-PrintJobData-isAutoRotate?: boolean-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -158,6 +176,8 @@ isBorderless?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PrintJobData-isBorderless?: boolean--><!--Device-PrintJobData-isBorderless?: boolean-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## isCollate
@@ -173,6 +193,8 @@ isCollate?: boolean
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PrintJobData-isCollate?: boolean--><!--Device-PrintJobData-isCollate?: boolean-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -190,6 +212,8 @@ isLandscape: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PrintJobData-isLandscape: boolean--><!--Device-PrintJobData-isLandscape: boolean-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## isReverse
@@ -205,6 +229,8 @@ isReverse?: boolean
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PrintJobData-isReverse?: boolean--><!--Device-PrintJobData-isReverse?: boolean-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -222,6 +248,8 @@ isSequential?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PrintJobData-isSequential?: boolean--><!--Device-PrintJobData-isSequential?: boolean-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## jobId
@@ -237,6 +265,8 @@ jobId?: string
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PrintJobData-jobId?: string--><!--Device-PrintJobData-jobId?: string-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -254,6 +284,8 @@ jobName: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PrintJobData-jobName: string--><!--Device-PrintJobData-jobName: string-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## mediaType
@@ -269,6 +301,8 @@ mediaType?: string
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PrintJobData-mediaType?: string--><!--Device-PrintJobData-mediaType?: string-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -286,6 +320,8 @@ options?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PrintJobData-options?: string--><!--Device-PrintJobData-options?: string-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## pageSize
@@ -301,6 +337,8 @@ pageSize: PrintPageSize
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PrintJobData-pageSize: PrintPageSize--><!--Device-PrintJobData-pageSize: PrintPageSize-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -318,6 +356,8 @@ printerId: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PrintJobData-printerId: string--><!--Device-PrintJobData-printerId: string-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## printQuality
@@ -333,5 +373,7 @@ printQuality?: PrintQuality
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PrintJobData-printQuality?: PrintQuality--><!--Device-PrintJobData-printQuality?: PrintQuality-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework

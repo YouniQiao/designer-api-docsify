@@ -16,6 +16,8 @@ function getCoreFileSyncState(uri: string): FileState
 
 **起始版本：** 20
 
+<!--Device-cloudSync-function getCoreFileSyncState(uri: string): FileState--><!--Device-cloudSync-function getCoreFileSyncState(uri: string): FileState-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **参数：**

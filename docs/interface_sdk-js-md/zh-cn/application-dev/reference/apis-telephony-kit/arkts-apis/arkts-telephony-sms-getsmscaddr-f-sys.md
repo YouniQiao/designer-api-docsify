@@ -18,6 +18,8 @@ function getSmscAddr(slotId: number, callback: AsyncCallback<string>): void
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-sms-function getSmscAddr(slotId: int, callback: AsyncCallback<string>): void--><!--Device-sms-function getSmscAddr(slotId: int, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -67,6 +69,8 @@ function getSmscAddr(slotId: number): Promise<string>
 **起始版本：** 7
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
+
+<!--Device-sms-function getSmscAddr(slotId: int): Promise<string>--><!--Device-sms-function getSmscAddr(slotId: int): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 

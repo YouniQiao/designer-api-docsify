@@ -14,6 +14,8 @@ enum SppType
 
 **替代接口：** [SppType](arkts-connectivity-bluetoothmanager-spptype-e.md)
 
+<!--Device-bluetooth-enum SppType--><!--Device-bluetooth-enum SppType-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## SPP_RFCOMM
@@ -29,5 +31,7 @@ SPP_RFCOMM = 0
 **废弃版本：** 9
 
 **替代接口：** [SPP_RFCOMM](arkts-connectivity-bluetoothmanager-spptype-e.md#spp_rfcomm)
+
+<!--Device-SppType-SPP_RFCOMM = 0--><!--Device-SppType-SPP_RFCOMM = 0-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

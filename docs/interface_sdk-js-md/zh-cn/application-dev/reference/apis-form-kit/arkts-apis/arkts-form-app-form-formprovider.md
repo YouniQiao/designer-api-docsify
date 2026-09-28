@@ -4,6 +4,8 @@ formProvider模块提供了获取卡片信息、更新卡片、设置卡片刷�
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace formProvider--><!--Device-unnamed-declare namespace formProvider-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 ## 导入模块

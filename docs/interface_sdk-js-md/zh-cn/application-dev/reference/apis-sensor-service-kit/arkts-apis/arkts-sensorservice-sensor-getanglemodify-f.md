@@ -21,6 +21,8 @@ Obtains the angle change between two rotation matrices. This API uses an asynchr
 
 **替代接口：** [getAngleVariation](arkts-sensorservice-sensor-getanglevariation-f.md)(currentRotationMatrix: Array&lt;number&gt;, preRotationMatrix: Array&lt;number&gt;, callback: AsyncCallback&lt;Array&lt;number&gt;&gt;)
 
+<!--Device-sensor-function getAngleModify(currentRotationMatrix: Array<number>, preRotationMatrix: Array<number>,    callback: AsyncCallback<Array<number>>): void--><!--Device-sensor-function getAngleModify(currentRotationMatrix: Array<number>, preRotationMatrix: Array<number>,    callback: AsyncCallback<Array<number>>): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -65,6 +67,8 @@ Obtains the angle change between two rotation matrices. This API uses a promise 
 **废弃版本：** 9
 
 **替代接口：** [getAngleVariation](arkts-sensorservice-sensor-getanglevariation-f.md)(currentRotationMatrix: Array&lt;number&gt;, preRotationMatrix: Array&lt;number&gt;)
+
+<!--Device-sensor-function getAngleModify(currentRotationMatrix: Array<number>, preRotationMatrix: Array<number>): Promise<Array<number>>--><!--Device-sensor-function getAngleModify(currentRotationMatrix: Array<number>, preRotationMatrix: Array<number>): Promise<Array<number>>-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 

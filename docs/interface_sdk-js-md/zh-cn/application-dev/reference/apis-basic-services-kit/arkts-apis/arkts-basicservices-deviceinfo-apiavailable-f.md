@@ -20,6 +20,8 @@ function apiAvailable(version: string | number): boolean
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-deviceInfo-function apiAvailable(version: string | number): boolean--><!--Device-deviceInfo-function apiAvailable(version: string | number): boolean-End-->
+
 **系统能力：** SystemCapability.Startup.SystemInfo
 
 **参数：**

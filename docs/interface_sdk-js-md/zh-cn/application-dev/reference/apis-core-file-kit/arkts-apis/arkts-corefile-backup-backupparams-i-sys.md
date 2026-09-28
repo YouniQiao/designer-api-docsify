@@ -10,6 +10,8 @@ interface BackupParams
 
 **起始版本：** 12
 
+<!--Device-backup-interface BackupParams--><!--Device-backup-interface BackupParams-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 **系统接口：** 此接口为系统接口。
@@ -31,6 +33,8 @@ parameters?: string
 **类型：** string
 
 **起始版本：** 12
+
+<!--Device-BackupParams-parameters?: string--><!--Device-BackupParams-parameters?: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 

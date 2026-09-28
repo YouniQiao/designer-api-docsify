@@ -8,6 +8,8 @@ Defines the options of DepthComponent.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-declare interface DepthComponentOptions--><!--Device-unnamed-declare interface DepthComponentOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -29,6 +31,8 @@ Color space of the background.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-DepthComponentOptions-colorSpace?: import('../api/@ohos.graphics.colorSpaceManager').default.ColorSpace--><!--Device-DepthComponentOptions-colorSpace?: import('../api/@ohos.graphics.colorSpaceManager').default.ColorSpace-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -52,6 +56,8 @@ Depth space type.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-DepthComponentOptions-depthSpace?: DepthSpaceType--><!--Device-DepthComponentOptions-depthSpace?: DepthSpaceType-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -73,6 +79,8 @@ Scale factor for 3D rendering window, applied to both width and height. The valu
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-DepthComponentOptions-render3DScale?: double--><!--Device-DepthComponentOptions-render3DScale?: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

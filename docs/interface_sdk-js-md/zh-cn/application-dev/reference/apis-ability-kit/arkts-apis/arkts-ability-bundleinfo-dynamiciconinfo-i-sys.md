@@ -8,6 +8,8 @@ export interface DynamicIconInfo
 
 **起始版本：** 20
 
+<!--Device-unnamed-export interface DynamicIconInfo--><!--Device-unnamed-export interface DynamicIconInfo-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -23,6 +25,8 @@ readonly appIndex: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-DynamicIconInfo-readonly appIndex: int--><!--Device-DynamicIconInfo-readonly appIndex: int-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -40,6 +44,8 @@ readonly bundleName: string
 
 **起始版本：** 20
 
+<!--Device-DynamicIconInfo-readonly bundleName: string--><!--Device-DynamicIconInfo-readonly bundleName: string-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -56,6 +62,8 @@ readonly moduleName: string
 
 **起始版本：** 20
 
+<!--Device-DynamicIconInfo-readonly moduleName: string--><!--Device-DynamicIconInfo-readonly moduleName: string-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -71,6 +79,8 @@ readonly userId: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-DynamicIconInfo-readonly userId: int--><!--Device-DynamicIconInfo-readonly userId: int-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

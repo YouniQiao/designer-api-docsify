@@ -10,6 +10,8 @@ In addition to the universal attributes, the following attributes are supported.
 
 **Since:** 9
 
+<!--Device-unnamed-declare class MenuAttribute extends CommonMethod<MenuAttribute>--><!--Device-unnamed-declare class MenuAttribute extends CommonMethod<MenuAttribute>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## font
@@ -25,6 +27,8 @@ Sets the size of all text within the menu.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-MenuAttribute-font(value: Font): MenuAttribute--><!--Device-MenuAttribute-font(value: Font): MenuAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,6 +51,8 @@ Sets the font color of all text within the menu.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-MenuAttribute-fontColor(value: ResourceColor): MenuAttribute--><!--Device-MenuAttribute-fontColor(value: ResourceColor): MenuAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,6 +78,8 @@ If the sum of **startMargin** and **endMargin** exceeds the component width, bot
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MenuAttribute-menuItemDivider(options: DividerStyleOptions | undefined): MenuAttribute--><!--Device-MenuAttribute-menuItemDivider(options: DividerStyleOptions | undefined): MenuAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -93,6 +101,8 @@ Sets the style of the top and bottom dividers for the menu item group. If this a
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MenuAttribute-menuItemGroupDivider(options: DividerStyleOptions | undefined): MenuAttribute--><!--Device-MenuAttribute-menuItemGroupDivider(options: DividerStyleOptions | undefined): MenuAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -116,6 +126,8 @@ Sets the radius of the menu border corners.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-MenuAttribute-radius(value: Dimension | BorderRadiuses): MenuAttribute--><!--Device-MenuAttribute-radius(value: Dimension | BorderRadiuses): MenuAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -138,6 +150,8 @@ Sets the submenu expanding mode of the menu.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MenuAttribute-subMenuExpandingMode(mode: SubMenuExpandingMode): MenuAttribute--><!--Device-MenuAttribute-subMenuExpandingMode(mode: SubMenuExpandingMode): MenuAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -159,6 +173,8 @@ Sets the submenu expand symbol of the menu.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-MenuAttribute-subMenuExpandSymbol(symbol: SymbolGlyphModifier): MenuAttribute--><!--Device-MenuAttribute-subMenuExpandSymbol(symbol: SymbolGlyphModifier): MenuAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -185,6 +201,8 @@ Sets the size of all text within the menu.
 **Substitutes:** [font](#font)
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-MenuAttribute-fontSize(value: Length): MenuAttribute--><!--Device-MenuAttribute-fontSize(value: Length): MenuAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

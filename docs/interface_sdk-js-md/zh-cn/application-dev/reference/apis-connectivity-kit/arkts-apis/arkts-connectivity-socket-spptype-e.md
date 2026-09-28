@@ -10,6 +10,8 @@ enum SppType
 
 **起始版本：** 10
 
+<!--Device-socket-enum SppType--><!--Device-socket-enum SppType-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## SPP_RFCOMM
@@ -21,6 +23,8 @@ SPP_RFCOMM = 0
 基于传统蓝牙（BR/EDR）的RFCOMM链路。
 
 **起始版本：** 10
+
+<!--Device-SppType-SPP_RFCOMM = 0--><!--Device-SppType-SPP_RFCOMM = 0-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -34,6 +38,8 @@ SPP_L2CAP = 1
 
 **起始版本：** 20
 
+<!--Device-SppType-SPP_L2CAP = 1--><!--Device-SppType-SPP_L2CAP = 1-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## SPP_L2CAP_BLE
@@ -45,5 +51,7 @@ SPP_L2CAP_BLE = 2
 基于低功耗蓝牙（BLE）的L2CAP链路。
 
 **起始版本：** 20
+
+<!--Device-SppType-SPP_L2CAP_BLE = 2--><!--Device-SppType-SPP_L2CAP_BLE = 2-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

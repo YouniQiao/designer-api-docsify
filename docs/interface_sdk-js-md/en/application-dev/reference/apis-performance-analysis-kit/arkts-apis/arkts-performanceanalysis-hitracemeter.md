@@ -23,6 +23,8 @@ For details about the development process, see [Using HiTraceMeter (ArkTS)](../.
 
 **Since:** 8
 
+<!--Device-unnamed-declare namespace hiTraceMeter--><!--Device-unnamed-declare namespace hiTraceMeter-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiTrace
 
 ## Modules to Import

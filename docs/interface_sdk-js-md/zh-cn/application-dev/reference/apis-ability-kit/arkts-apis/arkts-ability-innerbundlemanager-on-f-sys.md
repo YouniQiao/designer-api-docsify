@@ -29,6 +29,8 @@ function on(type: 'BundleStatusChange',
 
 **需要权限：** ohos.permission.LISTEN_BUNDLE_CHANGE
 
+<!--Device-innerBundleManager-function on(type: 'BundleStatusChange',    bundleStatusCallback: BundleStatusCallback, callback: AsyncCallback<string>): void--><!--Device-innerBundleManager-function on(type: 'BundleStatusChange',    bundleStatusCallback: BundleStatusCallback, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 **系统接口：** 此接口为系统接口。
@@ -63,6 +65,8 @@ function on(type: 'BundleStatusChange', bundleStatusCallback: BundleStatusCallba
 **替代接口：** on
 
 **需要权限：** ohos.permission.LISTEN_BUNDLE_CHANGE
+
+<!--Device-innerBundleManager-function on(type: 'BundleStatusChange', bundleStatusCallback: BundleStatusCallback): Promise<string>--><!--Device-innerBundleManager-function on(type: 'BundleStatusChange', bundleStatusCallback: BundleStatusCallback): Promise<string>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 

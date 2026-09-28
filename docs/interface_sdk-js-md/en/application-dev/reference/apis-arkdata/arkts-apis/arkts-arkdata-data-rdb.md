@@ -14,6 +14,8 @@ properties, characteristics, or relationships between data entities in an RDB st
 
 **Substitutes:** [relationalStore](arkts-arkdata-data-relationalstore.md)
 
+<!--Device-unnamed-declare namespace rdb--><!--Device-unnamed-declare namespace rdb-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## Modules to Import

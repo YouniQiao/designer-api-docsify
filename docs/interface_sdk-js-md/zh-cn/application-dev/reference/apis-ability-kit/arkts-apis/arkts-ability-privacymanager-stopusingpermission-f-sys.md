@@ -22,6 +22,8 @@ function stopUsingPermission(tokenID: number, permissionName: Permissions): Prom
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-privacyManager-function stopUsingPermission(tokenID: int, permissionName: Permissions): Promise<void>--><!--Device-privacyManager-function stopUsingPermission(tokenID: int, permissionName: Permissions): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -85,6 +87,8 @@ function stopUsingPermission(tokenID: number, permissionName: Permissions, callb
 **需要权限：** ohos.permission.PERMISSION_USED_STATS
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-privacyManager-function stopUsingPermission(tokenID: int, permissionName: Permissions, callback: AsyncCallback<void>): void--><!--Device-privacyManager-function stopUsingPermission(tokenID: int, permissionName: Permissions, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -151,6 +155,8 @@ pid需要与[startUsingPermission](arkts-ability-privacymanager-startusingpermis
 **需要权限：** ohos.permission.PERMISSION_USED_STATS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-privacyManager-function stopUsingPermission(    tokenID: int,    permissionName: Permissions,    pid?: int,    options?: PermissionUsingOptions  ): Promise<void>--><!--Device-privacyManager-function stopUsingPermission(    tokenID: int,    permissionName: Permissions,    pid?: int,    options?: PermissionUsingOptions  ): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -237,6 +243,8 @@ pid需要与[startUsingPermission](arkts-ability-privacymanager-startusingpermis
 **需要权限：** ohos.permission.PERMISSION_USED_STATS
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-privacyManager-function stopUsingPermission(    tokenID: int,    permissionName: Permissions,    pid?: int  ): Promise<void>--><!--Device-privacyManager-function stopUsingPermission(    tokenID: int,    permissionName: Permissions,    pid?: int  ): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 

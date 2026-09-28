@@ -8,6 +8,8 @@ export enum Direction
 
 **起始版本：** 9
 
+<!--Device-ConfigurationConstant-export enum Direction--><!--Device-ConfigurationConstant-export enum Direction-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityBase
 
 ## DIRECTION_NOT_SET
@@ -20,7 +22,9 @@ DIRECTION_NOT_SET = -1
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Direction-DIRECTION_NOT_SET = -1--><!--Device-Direction-DIRECTION_NOT_SET = -1-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -34,7 +38,9 @@ DIRECTION_VERTICAL = 0
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Direction-DIRECTION_VERTICAL = 0--><!--Device-Direction-DIRECTION_VERTICAL = 0-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -48,6 +54,8 @@ DIRECTION_HORIZONTAL = 1
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Direction-DIRECTION_HORIZONTAL = 1--><!--Device-Direction-DIRECTION_HORIZONTAL = 1-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase

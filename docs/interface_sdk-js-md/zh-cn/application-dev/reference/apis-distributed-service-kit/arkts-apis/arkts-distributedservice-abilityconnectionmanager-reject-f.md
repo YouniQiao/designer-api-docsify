@@ -18,6 +18,8 @@ function reject(token: string, reason: string): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-abilityConnectionManager-function reject(token: string, reason: string): void--><!--Device-abilityConnectionManager-function reject(token: string, reason: string): void-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **参数：**

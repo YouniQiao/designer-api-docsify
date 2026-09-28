@@ -11,6 +11,8 @@ type PasscodePromptCallback =
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-companionDeviceAuth-type PasscodePromptCallback =      (submit: PasscodeSubmitCallback, params: PasscodePromptParams) => void--><!--Device-companionDeviceAuth-type PasscodePromptCallback =      (submit: PasscodeSubmitCallback, params: PasscodePromptParams) => void-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
 **系统接口：** 此接口为系统接口。

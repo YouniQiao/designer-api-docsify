@@ -16,6 +16,8 @@ function getMaxSimCount(): number
 
 **起始版本：** 7
 
+<!--Device-sim-function getMaxSimCount(): int--><!--Device-sim-function getMaxSimCount(): int-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **返回值：**

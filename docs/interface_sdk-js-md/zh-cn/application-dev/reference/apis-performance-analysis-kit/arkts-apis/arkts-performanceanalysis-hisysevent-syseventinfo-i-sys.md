@@ -8,6 +8,8 @@ interface SysEventInfo
 
 **起始版本：** 9
 
+<!--Device-hiSysEvent-interface SysEventInfo--><!--Device-hiSysEvent-interface SysEventInfo-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ domain: string
 
 **起始版本：** 9
 
+<!--Device-SysEventInfo-domain: string--><!--Device-SysEventInfo-domain: string-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ eventType: EventType
 **类型：** EventType
 
 **起始版本：** 9
+
+<!--Device-SysEventInfo-eventType: EventType--><!--Device-SysEventInfo-eventType: EventType-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 
@@ -62,6 +68,8 @@ name: string
 
 **起始版本：** 9
 
+<!--Device-SysEventInfo-name: string--><!--Device-SysEventInfo-name: string-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +85,8 @@ params?: object
 **类型：** object
 
 **起始版本：** 9
+
+<!--Device-SysEventInfo-params?: object--><!--Device-SysEventInfo-params?: object-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 

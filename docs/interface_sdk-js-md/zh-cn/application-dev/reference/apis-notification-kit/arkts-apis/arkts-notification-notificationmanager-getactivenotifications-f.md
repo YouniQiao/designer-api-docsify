@@ -18,6 +18,8 @@ function getActiveNotifications(callback: AsyncCallback<Array<NotificationReques
 
 **起始版本：** 9
 
+<!--Device-notificationManager-function getActiveNotifications(callback: AsyncCallback<Array<NotificationRequest>>): void--><!--Device-notificationManager-function getActiveNotifications(callback: AsyncCallback<Array<NotificationRequest>>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **参见：** [setBadgeNumber](arkts-notification-notificationmanager-setbadgenumber-f.md) 设置角标个数。
@@ -66,6 +68,8 @@ function getActiveNotifications(): Promise<Array<NotificationRequest>>
 用于查询当前应用在通知中心中所有存量通知的详细信息列表，包括每条通知的ID、标签、内容、创建时间等。
 
 **起始版本：** 9
+
+<!--Device-notificationManager-function getActiveNotifications(): Promise<Array<NotificationRequest>>--><!--Device-notificationManager-function getActiveNotifications(): Promise<Array<NotificationRequest>>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

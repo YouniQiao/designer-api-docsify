@@ -8,6 +8,8 @@
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare namespace deviceStandby--><!--Device-unnamed-declare namespace deviceStandby-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.DeviceStandby
 
 ## 导入模块

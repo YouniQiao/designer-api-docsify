@@ -20,6 +20,8 @@ function deletePersistentGroup(netId: number): void
 
 **需要权限：** ohos.permission.SET_WIFI_INFO and ohos.permission.MANAGE_WIFI_CONNECTION
 
+<!--Device-wifiManager-function deletePersistentGroup(netId: int): void--><!--Device-wifiManager-function deletePersistentGroup(netId: int): void-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
 **系统接口：** 此接口为系统接口。

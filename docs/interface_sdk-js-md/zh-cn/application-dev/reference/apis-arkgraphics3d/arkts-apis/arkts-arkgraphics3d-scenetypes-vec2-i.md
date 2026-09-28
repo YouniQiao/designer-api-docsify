@@ -10,6 +10,8 @@ export interface Vec2
 
 **起始版本：** 12
 
+<!--Device-unnamed-export interface Vec2--><!--Device-unnamed-export interface Vec2-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## x
@@ -24,6 +26,8 @@ x轴分量，取值范围是实数。
 
 **起始版本：** 12
 
+<!--Device-Vec2-x: double--><!--Device-Vec2-x: double-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## y
@@ -37,5 +41,7 @@ y轴分量，取值范围是实数。
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-Vec2-y: double--><!--Device-Vec2-y: double-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

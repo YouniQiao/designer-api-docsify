@@ -8,6 +8,8 @@ interface AuthorizationManager
 
 **起始版本：** 24
 
+<!--Device-osAccount-interface AuthorizationManager--><!--Device-osAccount-interface AuthorizationManager-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -31,6 +33,8 @@ acquireAuthorization(privilege: string, options?: AcquireAuthorizationOptions): 
 **需要权限：** ohos.permission.ACQUIRE_LOCAL_ACCOUNT_AUTHORIZATION
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AuthorizationManager-acquireAuthorization(privilege: string, options?: AcquireAuthorizationOptions): Promise<AcquireAuthorizationResult>--><!--Device-AuthorizationManager-acquireAuthorization(privilege: string, options?: AcquireAuthorizationOptions): Promise<AcquireAuthorizationResult>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -94,6 +98,8 @@ hasAuthorization(privilege: string): Promise<boolean>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AuthorizationManager-hasAuthorization(privilege: string): Promise<boolean>--><!--Device-AuthorizationManager-hasAuthorization(privilege: string): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -150,6 +156,8 @@ releaseAuthorization(privilege: string): Promise<void>
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AuthorizationManager-releaseAuthorization(privilege: string): Promise<void>--><!--Device-AuthorizationManager-releaseAuthorization(privilege: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 

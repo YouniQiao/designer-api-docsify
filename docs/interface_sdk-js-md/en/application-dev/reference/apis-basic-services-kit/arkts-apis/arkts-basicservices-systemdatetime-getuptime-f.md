@@ -16,6 +16,8 @@ Obtains the time elapsed since system startup. This API returns the result synch
 
 **Since:** 10
 
+<!--Device-systemDateTime-function getUptime(timeType: TimeType, isNanoseconds?: boolean): long--><!--Device-systemDateTime-function getUptime(timeType: TimeType, isNanoseconds?: boolean): long-End-->
+
 **System capability:** SystemCapability.MiscServices.Time
 
 **Parameters:**

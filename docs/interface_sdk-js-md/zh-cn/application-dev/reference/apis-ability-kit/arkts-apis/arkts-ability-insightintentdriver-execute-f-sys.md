@@ -20,6 +20,8 @@ function execute(param: ExecuteParam, callback: AsyncCallback<insightIntent.Exec
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-insightIntentDriver-function execute(param: ExecuteParam, callback: AsyncCallback<insightIntent.ExecuteResult>): void--><!--Device-insightIntentDriver-function execute(param: ExecuteParam, callback: AsyncCallback<insightIntent.ExecuteResult>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -105,6 +107,8 @@ function execute(param: ExecuteParam): Promise<insightIntent.ExecuteResult>
 **需要权限：** ohos.permission.EXECUTE_INSIGHT_INTENT
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-insightIntentDriver-function execute(param: ExecuteParam): Promise<insightIntent.ExecuteResult>--><!--Device-insightIntentDriver-function execute(param: ExecuteParam): Promise<insightIntent.ExecuteResult>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

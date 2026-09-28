@@ -8,6 +8,8 @@ type CommandDataType = number | string | boolean
 
 **起始版本：** 12
 
+<!--Device-inputMethodEngine-type CommandDataType = int | string | boolean--><!--Device-inputMethodEngine-type CommandDataType = int | string | boolean-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 | 类型 | 说明 |

@@ -16,6 +16,8 @@ function getTouchpadPointerSpeed(callback: AsyncCallback<number>): void
 
 **起始版本：** 10
 
+<!--Device-pointer-function getTouchpadPointerSpeed(callback: AsyncCallback<int>): void--><!--Device-pointer-function getTouchpadPointerSpeed(callback: AsyncCallback<int>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 **系统接口：** 此接口为系统接口。
@@ -76,6 +78,8 @@ function getTouchpadPointerSpeed(): Promise<number>
 获取触控板光标移动速度，使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-pointer-function getTouchpadPointerSpeed(): Promise<int>--><!--Device-pointer-function getTouchpadPointerSpeed(): Promise<int>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 

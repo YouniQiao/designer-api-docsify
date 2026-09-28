@@ -12,6 +12,8 @@ export interface Material extends SceneResource
 
 **起始版本：** 12
 
+<!--Device-unnamed-export interface Material extends SceneResource--><!--Device-unnamed-export interface Material extends SceneResource-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## alphaCutoff
@@ -25,6 +27,8 @@ alphaCutoff?: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-Material-alphaCutoff?: double--><!--Device-Material-alphaCutoff?: double-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -42,6 +46,8 @@ blend?: Blend
 
 **起始版本：** 20
 
+<!--Device-Material-blend?: Blend--><!--Device-Material-blend?: Blend-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## cullMode
@@ -56,6 +62,8 @@ cullMode?: CullMode
 
 **起始版本：** 20
 
+<!--Device-Material-cullMode?: CullMode--><!--Device-Material-cullMode?: CullMode-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## materialType
@@ -69,6 +77,8 @@ readonly materialType: MaterialType
 **类型：** [MaterialType](arkts-arkgraphics3d-sceneresources-materialtype-e.md)
 
 **起始版本：** 12
+
+<!--Device-Material-readonly materialType: MaterialType--><!--Device-Material-readonly materialType: MaterialType-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -86,6 +96,8 @@ polygonMode?: PolygonMode
 
 **起始版本：** 23
 
+<!--Device-Material-polygonMode?: PolygonMode--><!--Device-Material-polygonMode?: PolygonMode-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## renderSort
@@ -100,6 +112,8 @@ renderSort?: RenderSort
 
 **起始版本：** 20
 
+<!--Device-Material-renderSort?: RenderSort--><!--Device-Material-renderSort?: RenderSort-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## shadowReceiver
@@ -113,5 +127,7 @@ shadowReceiver?: boolean
 **类型：** boolean
 
 **起始版本：** 20
+
+<!--Device-Material-shadowReceiver?: boolean--><!--Device-Material-shadowReceiver?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

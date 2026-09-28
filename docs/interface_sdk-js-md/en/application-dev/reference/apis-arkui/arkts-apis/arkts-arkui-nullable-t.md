@@ -12,6 +12,8 @@ The value of this type can be the type specified by the generic parameter **T**,
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-unnamed-declare type Nullable<T> = T | undefined--><!--Device-unnamed-declare type Nullable<T> = T | undefined-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 | Type | Description |

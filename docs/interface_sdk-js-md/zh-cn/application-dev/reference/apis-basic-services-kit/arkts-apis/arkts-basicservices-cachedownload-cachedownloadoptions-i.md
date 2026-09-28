@@ -8,6 +8,8 @@ interface CacheDownloadOptions
 
 **起始版本：** 18
 
+<!--Device-cacheDownload-interface CacheDownloadOptions--><!--Device-cacheDownload-interface CacheDownloadOptions-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## 导入模块
@@ -28,6 +30,8 @@ cacheStrategy?: CacheStrategy
 
 **起始版本：** 23
 
+<!--Device-CacheDownloadOptions-cacheStrategy?: CacheStrategy--><!--Device-CacheDownloadOptions-cacheStrategy?: CacheStrategy-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## caPath
@@ -42,6 +46,8 @@ CA证书路径。目前仅支持.pem格式证书，默认使用系统预设的CA
 
 **起始版本：** 21
 
+<!--Device-CacheDownloadOptions-caPath?: string--><!--Device-CacheDownloadOptions-caPath?: string-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## headers
@@ -55,6 +61,8 @@ headers?: Record<string, string>
 **类型：** Record&lt;string, string&gt;
 
 **起始版本：** 18
+
+<!--Device-CacheDownloadOptions-headers?: Record<string, string>--><!--Device-CacheDownloadOptions-headers?: Record<string, string>-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -72,6 +80,8 @@ Task retry configuration.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-CacheDownloadOptions-retry?: RetryOptions--><!--Device-CacheDownloadOptions-retry?: RetryOptions-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## sslType
@@ -85,6 +95,8 @@ sslType?: SslType
 **类型：** [SslType](arkts-basicservices-cachedownload-ssltype-e.md)
 
 **起始版本：** 21
+
+<!--Device-CacheDownloadOptions-sslType?: SslType--><!--Device-CacheDownloadOptions-sslType?: SslType-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -101,5 +113,7 @@ Task timeout configuration.
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-CacheDownloadOptions-timeout?: TimeoutOptions--><!--Device-CacheDownloadOptions-timeout?: TimeoutOptions-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent

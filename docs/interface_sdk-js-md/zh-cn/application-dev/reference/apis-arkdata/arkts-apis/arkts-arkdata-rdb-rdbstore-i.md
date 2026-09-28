@@ -14,6 +14,8 @@ interface RdbStore
 
 **替代接口：** [RdbStore](arkts-arkdata-relationalstore-rdbstore-i.md)
 
+<!--Device-rdb-interface RdbStore--><!--Device-rdb-interface RdbStore-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## 导入模块
@@ -34,6 +36,8 @@ batchInsert(table: string, values: Array<ValuesBucket>, callback: AsyncCallback<
 **废弃版本：** 9
 
 **替代接口：** [batchInsert](arkts-arkdata-relationalstore-rdbstore-i.md#batchinsert)
+
+<!--Device-RdbStore-batchInsert(table: string, values: Array<ValuesBucket>, callback: AsyncCallback<number>): void--><!--Device-RdbStore-batchInsert(table: string, values: Array<ValuesBucket>, callback: AsyncCallback<number>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -110,6 +114,8 @@ batchInsert(table: string, values: Array<ValuesBucket>): Promise<number>
 **废弃版本：** 9
 
 **替代接口：** [batchInsert](arkts-arkdata-relationalstore-rdbstore-i.md#batchinsert)
+
+<!--Device-RdbStore-batchInsert(table: string, values: Array<ValuesBucket>): Promise<number>--><!--Device-RdbStore-batchInsert(table: string, values: Array<ValuesBucket>): Promise<number>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -189,6 +195,8 @@ beginTransaction(): void
 
 **替代接口：** [beginTransaction](arkts-arkdata-relationalstore-rdbstore-i.md#begintransaction)
 
+<!--Device-RdbStore-beginTransaction(): void--><!--Device-RdbStore-beginTransaction(): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **示例**
@@ -233,6 +241,8 @@ commit(): void
 **废弃版本：** 9
 
 **替代接口：** [commit](arkts-arkdata-relationalstore-rdbstore-i.md#commit)
+
+<!--Device-RdbStore-commit(): void--><!--Device-RdbStore-commit(): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -279,6 +289,8 @@ delete(predicates: RdbPredicates, callback: AsyncCallback<number>): void
 
 **替代接口：** [delete](arkts-arkdata-relationalstore-rdbstore-i.md#delete)
 
+<!--Device-RdbStore-delete(predicates: RdbPredicates, callback: AsyncCallback<number>): void--><!--Device-RdbStore-delete(predicates: RdbPredicates, callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
@@ -317,6 +329,8 @@ delete(predicates: RdbPredicates): Promise<number>
 **废弃版本：** 9
 
 **替代接口：** [delete](arkts-arkdata-relationalstore-rdbstore-i.md#delete)
+
+<!--Device-RdbStore-delete(predicates: RdbPredicates): Promise<number>--><!--Device-RdbStore-delete(predicates: RdbPredicates): Promise<number>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -359,6 +373,8 @@ executeSql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<void
 
 **替代接口：** [executeSql](arkts-arkdata-relationalstore-rdbstore-i.md#executesql)
 
+<!--Device-RdbStore-executeSql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<void>): void--><!--Device-RdbStore-executeSql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
@@ -397,6 +413,8 @@ executeSql(sql: string, bindArgs?: Array<ValueType>): Promise<void>
 **废弃版本：** 9
 
 **替代接口：** [executeSql](arkts-arkdata-relationalstore-rdbstore-i.md#executesql)
+
+<!--Device-RdbStore-executeSql(sql: string, bindArgs?: Array<ValueType>): Promise<void>--><!--Device-RdbStore-executeSql(sql: string, bindArgs?: Array<ValueType>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -438,6 +456,8 @@ insert(table: string, values: ValuesBucket, callback: AsyncCallback<number>): vo
 **废弃版本：** 9
 
 **替代接口：** [insert](arkts-arkdata-relationalstore-rdbstore-i.md#insert)
+
+<!--Device-RdbStore-insert(table: string, values: ValuesBucket, callback: AsyncCallback<number>): void--><!--Device-RdbStore-insert(table: string, values: ValuesBucket, callback: AsyncCallback<number>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -493,6 +513,8 @@ insert(table: string, values: ValuesBucket): Promise<number>
 **废弃版本：** 9
 
 **替代接口：** [insert](arkts-arkdata-relationalstore-rdbstore-i.md#insert)
+
+<!--Device-RdbStore-insert(table: string, values: ValuesBucket): Promise<number>--><!--Device-RdbStore-insert(table: string, values: ValuesBucket): Promise<number>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -559,6 +581,8 @@ obtainDistributedTableName(device: string, table: string, callback: AsyncCallbac
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-RdbStore-obtainDistributedTableName(device: string, table: string, callback: AsyncCallback<string>): void--><!--Device-RdbStore-obtainDistributedTableName(device: string, table: string, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
@@ -619,6 +643,8 @@ obtainDistributedTableName(device: string, table: string): Promise<string>
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-RdbStore-obtainDistributedTableName(device: string, table: string): Promise<string>--><!--Device-RdbStore-obtainDistributedTableName(device: string, table: string): Promise<string>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
@@ -673,6 +699,8 @@ off(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>)
 
 **替代接口：** [off](arkts-arkdata-relationalstore-rdbstore-i.md#off)
 
+<!--Device-RdbStore-off(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>): void--><!--Device-RdbStore-off(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
@@ -712,6 +740,8 @@ on(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>):
 **废弃版本：** 9
 
 **替代接口：** [on](arkts-arkdata-relationalstore-rdbstore-i.md#on)
+
+<!--Device-RdbStore-on(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>): void--><!--Device-RdbStore-on(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -753,6 +783,8 @@ query(predicates: RdbPredicates, columns: Array<string>, callback: AsyncCallback
 
 **替代接口：** [query](arkts-arkdata-relationalstore-rdbstore-i.md#query)
 
+<!--Device-RdbStore-query(predicates: RdbPredicates, columns: Array<string>, callback: AsyncCallback<ResultSet>): void--><!--Device-RdbStore-query(predicates: RdbPredicates, columns: Array<string>, callback: AsyncCallback<ResultSet>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
@@ -793,6 +825,8 @@ query(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultSet>
 **废弃版本：** 9
 
 **替代接口：** [query](arkts-arkdata-relationalstore-rdbstore-i.md#query)
+
+<!--Device-RdbStore-query(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultSet>--><!--Device-RdbStore-query(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultSet>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -837,6 +871,8 @@ querySql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<Result
 
 **替代接口：** [querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)
 
+<!--Device-RdbStore-querySql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<ResultSet>): void--><!--Device-RdbStore-querySql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<ResultSet>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
@@ -875,6 +911,8 @@ querySql(sql: string, bindArgs?: Array<ValueType>): Promise<ResultSet>
 **废弃版本：** 9
 
 **替代接口：** [querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)
+
+<!--Device-RdbStore-querySql(sql: string, bindArgs?: Array<ValueType>): Promise<ResultSet>--><!--Device-RdbStore-querySql(sql: string, bindArgs?: Array<ValueType>): Promise<ResultSet>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -916,6 +954,8 @@ rollBack(): void
 **废弃版本：** 9
 
 **替代接口：** [rollBack](arkts-arkdata-relationalstore-rdbstore-i.md#rollback)
+
+<!--Device-RdbStore-rollBack(): void--><!--Device-RdbStore-rollBack(): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -969,6 +1009,8 @@ setDistributedTables(tables: Array<string>, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-RdbStore-setDistributedTables(tables: Array<string>, callback: AsyncCallback<void>): void--><!--Device-RdbStore-setDistributedTables(tables: Array<string>, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
@@ -1007,6 +1049,8 @@ setDistributedTables(tables: Array<string>): Promise<void>
 **替代接口：** [setDistributedTables](arkts-arkdata-relationalstore-rdbstore-i.md#setdistributedtables)
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-RdbStore-setDistributedTables(tables: Array<string>): Promise<void>--><!--Device-RdbStore-setDistributedTables(tables: Array<string>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -1048,6 +1092,8 @@ sync(mode: SyncMode, predicates: RdbPredicates, callback: AsyncCallback<Array<[s
 **替代接口：** [sync](arkts-arkdata-relationalstore-rdbstore-i.md#sync)
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-RdbStore-sync(mode: SyncMode, predicates: RdbPredicates, callback: AsyncCallback<Array<[string, number]>>): void--><!--Device-RdbStore-sync(mode: SyncMode, predicates: RdbPredicates, callback: AsyncCallback<Array<[string, number]>>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -1110,6 +1156,8 @@ sync(mode: SyncMode, predicates: RdbPredicates): Promise<Array<[string, number]>
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-RdbStore-sync(mode: SyncMode, predicates: RdbPredicates): Promise<Array<[string, number]>>--><!--Device-RdbStore-sync(mode: SyncMode, predicates: RdbPredicates): Promise<Array<[string, number]>>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
@@ -1171,6 +1219,8 @@ update(values: ValuesBucket, predicates: RdbPredicates, callback: AsyncCallback<
 
 **替代接口：** [update](arkts-arkdata-relationalstore-rdbstore-i.md#update)
 
+<!--Device-RdbStore-update(values: ValuesBucket, predicates: RdbPredicates, callback: AsyncCallback<number>): void--><!--Device-RdbStore-update(values: ValuesBucket, predicates: RdbPredicates, callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
@@ -1227,6 +1277,8 @@ update(values: ValuesBucket, predicates: RdbPredicates): Promise<number>
 **废弃版本：** 9
 
 **替代接口：** [update](arkts-arkdata-relationalstore-rdbstore-i.md#update)
+
+<!--Device-RdbStore-update(values: ValuesBucket, predicates: RdbPredicates): Promise<number>--><!--Device-RdbStore-update(values: ValuesBucket, predicates: RdbPredicates): Promise<number>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 

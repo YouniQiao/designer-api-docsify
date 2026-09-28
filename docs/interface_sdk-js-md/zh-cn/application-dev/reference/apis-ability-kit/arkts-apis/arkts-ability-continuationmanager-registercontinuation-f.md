@@ -24,6 +24,8 @@ function registerContinuation(callback: AsyncCallback<number>): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-continuationManager-function registerContinuation(callback: AsyncCallback<number>): void--><!--Device-continuationManager-function registerContinuation(callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.Ability.DistributedAbilityManager
 
 **参数：**
@@ -81,6 +83,8 @@ function registerContinuation(options: ContinuationExtraParams, callback: AsyncC
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-continuationManager-function registerContinuation(options: ContinuationExtraParams, callback: AsyncCallback<number>): void--><!--Device-continuationManager-function registerContinuation(options: ContinuationExtraParams, callback: AsyncCallback<number>): void-End-->
 
 **系统能力：** SystemCapability.Ability.DistributedAbilityManager
 
@@ -144,6 +148,8 @@ function registerContinuation(options?: ContinuationExtraParams): Promise<number
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-continuationManager-function registerContinuation(options?: ContinuationExtraParams): Promise<number>--><!--Device-continuationManager-function registerContinuation(options?: ContinuationExtraParams): Promise<number>-End-->
 
 **系统能力：** SystemCapability.Ability.DistributedAbilityManager
 

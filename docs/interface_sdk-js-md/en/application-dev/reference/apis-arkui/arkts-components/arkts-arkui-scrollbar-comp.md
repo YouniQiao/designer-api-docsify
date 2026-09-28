@@ -1,12 +1,12 @@
 # ScrollBar
 
-The **ScrollBar** component is used together with scrollable components, such as [ArcList](arkts-arkui-arclist-comp.md#ohosarkuiarclist), [List](arkts-arkui-list-comp.md#list), [Grid](arkts-arkui-grid-comp.md#grid), [Scroll](arkts-arkui-scroll-comp.md#scroll), and [WaterFlow](arkts-arkui-waterflow-comp.md#water_flow), to provide visual scrolling indication and control capabilities, and supports custom scrollbar styles.
+The **ScrollBar** component is used together with scrollable components, such as [ArcList](arkts-arkui-arclist-comp.md), [List](arkts-arkui-list-comp.md), [Grid](arkts-arkui-grid-comp.md), [Scroll](arkts-arkui-scroll-comp.md), and [WaterFlow](arkts-arkui-waterflow-comp.md), to provide visual scrolling indication and control capabilities, and supports custom scrollbar styles.
 
 > **NOTE:** 
 > 
 > - This component is supported since API version 8. Updates will be marked with a superscript to indicate their earliest API version.
 > 
-> - If the size of the main axis direction is not set for **ScrollBar**, the **maxSize** value in the [layout constraints](../arkts-apis/arkts-arkui-framenode-layoutconstraint-i.md) of the parent component is used. If the parent component of the **ScrollBar** component contains a scrollable component, such as [ArcList](arkts-arkui-arclist-comp.md#ohosarkuiarclist), [List](arkts-arkui-list-comp.md#list), [Grid](arkts-arkui-grid-comp.md#grid), [Scroll](arkts-arkui-scroll-comp.md#scroll), or [WaterFlow](arkts-arkui-waterflow-comp.md#water_flow), you are advised to set the size in the main axis direction of the **ScrollBar**;otherwise, the size in the main axis direction of **ScrollBar** may become infinite.
+> - If the size of the main axis direction is not set for **ScrollBar**, the **maxSize** value in the [layout constraints](../arkts-apis/arkts-arkui-framenode-layoutconstraint-i.md) of the parent component is used. If the parent component of the **ScrollBar** component contains a scrollable component, such as [ArcList](arkts-arkui-arclist-comp.md), [List](arkts-arkui-list-comp.md), [Grid](arkts-arkui-grid-comp.md), [Scroll](arkts-arkui-scroll-comp.md), or [WaterFlow](arkts-arkui-waterflow-comp.md), you are advised to set the size in the main axis direction of the **ScrollBar**;otherwise, the size in the main axis direction of **ScrollBar** may become infinite.
 
 ## Child Components
 
@@ -184,6 +184,8 @@ Creates a scroll bar.
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ScrollBarInterface-(value: ScrollBarOptions): ScrollBarAttribute--><!--Device-ScrollBarInterface-(value: ScrollBarOptions): ScrollBarAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

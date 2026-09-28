@@ -8,6 +8,8 @@ interface ExecCmdOptions
 
 **起始版本：** 26.0.1
 
+<!--Device-cliManager-interface ExecCmdOptions--><!--Device-cliManager-interface ExecCmdOptions-End-->
+
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 ## 导入模块
@@ -36,6 +38,8 @@ true：后台执行，false：前台执行。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExecCmdOptions-background?: boolean--><!--Device-ExecCmdOptions-background?: boolean-End-->
+
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 ## callback
@@ -51,6 +55,8 @@ callback?: ToolEventCallback
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExecCmdOptions-callback?: ToolEventCallback--><!--Device-ExecCmdOptions-callback?: ToolEventCallback-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -68,6 +74,8 @@ env?: Record<string, string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExecCmdOptions-env?: Record<string, string>--><!--Device-ExecCmdOptions-env?: Record<string, string>-End-->
+
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 ## policy
@@ -83,6 +91,8 @@ policy?: string
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExecCmdOptions-policy?: string--><!--Device-ExecCmdOptions-policy?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -102,6 +112,8 @@ timeout?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExecCmdOptions-timeout?: long--><!--Device-ExecCmdOptions-timeout?: long-End-->
+
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 ## workDir
@@ -117,6 +129,8 @@ workDir?: string
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExecCmdOptions-workDir?: string--><!--Device-ExecCmdOptions-workDir?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -135,5 +149,7 @@ yieldMs?: number
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExecCmdOptions-yieldMs?: long--><!--Device-ExecCmdOptions-yieldMs?: long-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core

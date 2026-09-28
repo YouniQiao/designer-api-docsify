@@ -22,6 +22,8 @@ declare class LayoutPolicy
 
 **起始版本：** 15
 
+<!--Device-unnamed-declare class LayoutPolicy--><!--Device-unnamed-declare class LayoutPolicy-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## fixAtIdealSize
@@ -41,6 +43,8 @@ static readonly fixAtIdealSize: LayoutPolicy
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本20开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-LayoutPolicy-static readonly fixAtIdealSize: LayoutPolicy--><!--Device-LayoutPolicy-static readonly fixAtIdealSize: LayoutPolicy-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,6 +66,8 @@ static readonly matchParent: LayoutPolicy
 
 **卡片能力：** 从API版本15开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-LayoutPolicy-static readonly matchParent: LayoutPolicy--><!--Device-LayoutPolicy-static readonly matchParent: LayoutPolicy-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## wrapContent
@@ -81,5 +87,7 @@ static readonly wrapContent: LayoutPolicy
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本20开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-LayoutPolicy-static readonly wrapContent: LayoutPolicy--><!--Device-LayoutPolicy-static readonly wrapContent: LayoutPolicy-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

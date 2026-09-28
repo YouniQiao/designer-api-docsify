@@ -30,6 +30,8 @@ Defines the constructor of SymbolSpan.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-SymbolSpanInterface-(value: Resource): SymbolSpanAttribute--><!--Device-SymbolSpanInterface-(value: Resource): SymbolSpanAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

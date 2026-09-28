@@ -18,6 +18,8 @@ Reset all network settings of telephony.
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-radio-function factoryReset(slotId: int): Promise<void>--><!--Device-radio-function factoryReset(slotId: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。

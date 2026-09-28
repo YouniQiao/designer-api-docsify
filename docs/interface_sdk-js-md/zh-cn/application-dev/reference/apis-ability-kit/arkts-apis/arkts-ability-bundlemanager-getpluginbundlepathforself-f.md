@@ -16,6 +16,8 @@ function getPluginBundlePathForSelf(pluginBundleName: string): string
 
 **起始版本：** 22
 
+<!--Device-bundleManager-function getPluginBundlePathForSelf(pluginBundleName: string): string--><!--Device-bundleManager-function getPluginBundlePathForSelf(pluginBundleName: string): string-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **参数：**

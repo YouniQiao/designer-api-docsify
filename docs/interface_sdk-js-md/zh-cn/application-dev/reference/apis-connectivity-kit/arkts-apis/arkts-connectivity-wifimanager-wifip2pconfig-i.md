@@ -8,6 +8,8 @@ interface WifiP2PConfig
 
 **起始版本：** 9
 
+<!--Device-wifiManager-interface WifiP2PConfig--><!--Device-wifiManager-interface WifiP2PConfig-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
 ## 导入模块
@@ -28,6 +30,8 @@ deviceAddress: string
 
 **起始版本：** 9
 
+<!--Device-WifiP2PConfig-deviceAddress: string--><!--Device-WifiP2PConfig-deviceAddress: string-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
 ## deviceAddressType
@@ -41,6 +45,8 @@ deviceAddressType?: DeviceAddressType
 **类型：** [DeviceAddressType](arkts-connectivity-wifimanager-deviceaddresstype-e.md)
 
 **起始版本：** 10
+
+<!--Device-WifiP2PConfig-deviceAddressType?: DeviceAddressType--><!--Device-WifiP2PConfig-deviceAddressType?: DeviceAddressType-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
@@ -56,6 +62,8 @@ goBand: GroupOwnerBand
 
 **起始版本：** 9
 
+<!--Device-WifiP2PConfig-goBand: GroupOwnerBand--><!--Device-WifiP2PConfig-goBand: GroupOwnerBand-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
 ## goFreq
@@ -69,6 +77,8 @@ goFreq?: number
 **类型：** number
 
 **起始版本：** 23
+
+<!--Device-WifiP2PConfig-goFreq?: int--><!--Device-WifiP2PConfig-goFreq?: int-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
@@ -84,6 +94,8 @@ groupName: string
 
 **起始版本：** 9
 
+<!--Device-WifiP2PConfig-groupName: string--><!--Device-WifiP2PConfig-groupName: string-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
 ## netId
@@ -98,6 +110,8 @@ netId: number
 
 **起始版本：** 9
 
+<!--Device-WifiP2PConfig-netId: int--><!--Device-WifiP2PConfig-netId: int-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
 ## passphrase
@@ -111,5 +125,7 @@ passphrase: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-WifiP2PConfig-passphrase: string--><!--Device-WifiP2PConfig-passphrase: string-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P

@@ -16,6 +16,8 @@ function constructMulticastSocketInstance(): MulticastSocket
 
 **起始版本：** 11
 
+<!--Device-socket-function constructMulticastSocketInstance(): MulticastSocket--><!--Device-socket-function constructMulticastSocketInstance(): MulticastSocket-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**

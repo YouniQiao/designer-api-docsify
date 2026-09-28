@@ -16,6 +16,8 @@ This API inherits from [CounterV2CommonOptions](arkts-arkui-arkui-advanced-count
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-declare class CounterV2InlineStyleOptions extends CounterV2CommonOptions--><!--Device-unnamed-declare class CounterV2InlineStyleOptions extends CounterV2CommonOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -43,6 +45,8 @@ If the value is **undefined**, the default value is used.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-CounterV2InlineStyleOptions-onChange?: OnInlineCounterV2Change--><!--Device-CounterV2InlineStyleOptions-onChange?: OnInlineCounterV2Change-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,6 +76,8 @@ If the value is **undefined**, the default value is used.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-CounterV2InlineStyleOptions-max?: int--><!--Device-CounterV2InlineStyleOptions-max?: int-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## min
@@ -99,6 +105,8 @@ If the value is **undefined**, the default value is used.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-CounterV2InlineStyleOptions-min?: int--><!--Device-CounterV2InlineStyleOptions-min?: int-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -130,6 +138,8 @@ If the value is **undefined**, the default value is used.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-CounterV2InlineStyleOptions-textWidth?: double--><!--Device-CounterV2InlineStyleOptions-textWidth?: double-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## value
@@ -157,5 +167,7 @@ Boundary handling: If value is less than **min**, **min** is used. If value is g
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-CounterV2InlineStyleOptions-value?: int--><!--Device-CounterV2InlineStyleOptions-value?: int-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

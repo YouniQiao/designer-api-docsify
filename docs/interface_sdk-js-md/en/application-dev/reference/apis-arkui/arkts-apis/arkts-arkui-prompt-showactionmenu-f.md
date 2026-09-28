@@ -22,6 +22,8 @@ Displays the menu.
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-prompt-function showActionMenu(options: ActionMenuOptions, callback: AsyncCallback<ActionMenuSuccessResponse>): void--><!--Device-prompt-function showActionMenu(options: ActionMenuOptions, callback: AsyncCallback<ActionMenuSuccessResponse>): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -74,6 +76,8 @@ Displays the menu.
 **Substitutes:** showActionMenu
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-prompt-function showActionMenu(options: ActionMenuOptions): Promise<ActionMenuSuccessResponse>--><!--Device-prompt-function showActionMenu(options: ActionMenuOptions): Promise<ActionMenuSuccessResponse>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

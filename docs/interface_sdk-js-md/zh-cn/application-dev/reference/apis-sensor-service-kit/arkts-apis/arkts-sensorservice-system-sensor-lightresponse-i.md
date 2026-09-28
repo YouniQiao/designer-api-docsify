@@ -14,6 +14,8 @@ export interface LightResponse
 
 **替代接口：** [LightResponse](arkts-sensorservice-sensor-lightresponse-i.md)
 
+<!--Device-unnamed-export interface LightResponse--><!--Device-unnamed-export interface LightResponse-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
 ## 导入模块
@@ -39,5 +41,7 @@ intensity: number
 **替代接口：** [intensity](arkts-sensorservice-sensor-lightresponse-i.md#intensity)
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-LightResponse-intensity: number--><!--Device-LightResponse-intensity: number-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite

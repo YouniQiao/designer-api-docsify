@@ -4,6 +4,8 @@
 
 **起始版本：** 22
 
+<!--Device-unnamed-declare namespace huksExternalCrypto--><!--Device-unnamed-declare namespace huksExternalCrypto-End-->
+
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
 ## 导入模块

@@ -22,6 +22,8 @@ function createFileAccessHelper(context: Context): FileAccessHelper
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-fileAccess-function createFileAccessHelper(context: Context): FileAccessHelper--><!--Device-fileAccess-function createFileAccessHelper(context: Context): FileAccessHelper-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -114,6 +116,8 @@ function createFileAccessHelper(context: Context, wants: Array<Want>): FileAcces
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER and ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-fileAccess-function createFileAccessHelper(context: Context, wants: Array<Want>): FileAccessHelper--><!--Device-fileAccess-function createFileAccessHelper(context: Context, wants: Array<Want>): FileAccessHelper-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 

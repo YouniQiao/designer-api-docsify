@@ -4,6 +4,8 @@ This module provides the capabilities for life cycle management of sensitive use
 
 **Since:** 11
 
+<!--Device-unnamed-declare namespace asset--><!--Device-unnamed-declare namespace asset-End-->
+
 **System capability:** SystemCapability.Security.Asset
 
 ## Modules to Import

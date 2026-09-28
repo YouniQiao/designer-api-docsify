@@ -8,6 +8,8 @@ class IncrementalBackupSession
 
 **起始版本：** 12
 
+<!--Device-backup-class IncrementalBackupSession--><!--Device-backup-class IncrementalBackupSession-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 **系统接口：** 此接口为系统接口。
@@ -29,6 +31,8 @@ appendBundles(bundlesToBackup: Array<IncrementalBackupData>): Promise<void>
 **起始版本：** 12
 
 **需要权限：** ohos.permission.BACKUP
+
+<!--Device-IncrementalBackupSession-appendBundles(bundlesToBackup: Array<IncrementalBackupData>): Promise<void>--><!--Device-IncrementalBackupSession-appendBundles(bundlesToBackup: Array<IncrementalBackupData>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
@@ -133,6 +137,8 @@ appendBundles(bundlesToAppend: Array<IncrementalBackupData>, infos: string[]): P
 **起始版本：** 12
 
 **需要权限：** ohos.permission.BACKUP
+
+<!--Device-IncrementalBackupSession-appendBundles(bundlesToAppend: Array<IncrementalBackupData>, infos: string[]): Promise<void>--><!--Device-IncrementalBackupSession-appendBundles(bundlesToAppend: Array<IncrementalBackupData>, infos: string[]): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
@@ -278,6 +284,8 @@ cancel(bundleName: string): number
 
 **需要权限：** ohos.permission.BACKUP
 
+<!--Device-IncrementalBackupSession-cancel(bundleName: string): int--><!--Device-IncrementalBackupSession-cancel(bundleName: string): int-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 **系统接口：** 此接口为系统接口。
@@ -377,6 +385,8 @@ cleanBundleTempDir(bundleName: string): Promise<boolean>
 **起始版本：** 20
 
 **需要权限：** ohos.permission.BACKUP
+
+<!--Device-IncrementalBackupSession-cleanBundleTempDir(bundleName: string): Promise<boolean>--><!--Device-IncrementalBackupSession-cleanBundleTempDir(bundleName: string): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
@@ -479,6 +489,8 @@ constructor(callbacks: GeneralCallbacks)
 
 **需要权限：** ohos.permission.BACKUP
 
+<!--Device-IncrementalBackupSession-constructor(callbacks: GeneralCallbacks)--><!--Device-IncrementalBackupSession-constructor(callbacks: GeneralCallbacks)-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 **系统接口：** 此接口为系统接口。
@@ -557,6 +569,8 @@ getBackupDataSize(isPreciseScan: boolean, dataList: Array<IncrementalBackupTime>
 **起始版本：** 18
 
 **需要权限：** ohos.permission.BACKUP
+
+<!--Device-IncrementalBackupSession-getBackupDataSize(isPreciseScan: boolean, dataList: Array<IncrementalBackupTime>): Promise<void>--><!--Device-IncrementalBackupSession-getBackupDataSize(isPreciseScan: boolean, dataList: Array<IncrementalBackupTime>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
@@ -707,6 +721,8 @@ getCompatibilityInfo(bundleName: string, extInfo: string): Promise<string>
 
 **需要权限：** ohos.permission.BACKUP
 
+<!--Device-IncrementalBackupSession-getCompatibilityInfo(bundleName: string, extInfo: string): Promise<string>--><!--Device-IncrementalBackupSession-getCompatibilityInfo(bundleName: string, extInfo: string): Promise<string>-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 **系统接口：** 此接口为系统接口。
@@ -807,6 +823,8 @@ getLocalCapabilities(): Promise<FileData>
 **起始版本：** 18
 
 **需要权限：** ohos.permission.BACKUP
+
+<!--Device-IncrementalBackupSession-getLocalCapabilities(): Promise<FileData>--><!--Device-IncrementalBackupSession-getLocalCapabilities(): Promise<FileData>-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
@@ -968,6 +986,8 @@ release(): Promise<void>
 **起始版本：** 12
 
 **需要权限：** ohos.permission.BACKUP
+
+<!--Device-IncrementalBackupSession-release(): Promise<void>--><!--Device-IncrementalBackupSession-release(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 

@@ -16,6 +16,8 @@ function setSecurityLabel(path: string, type: DataLevel): Promise<void>
 
 **起始版本：** 9
 
+<!--Device-securityLabel-function setSecurityLabel(path: string, type: DataLevel): Promise<void>--><!--Device-securityLabel-function setSecurityLabel(path: string, type: DataLevel): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -68,6 +70,8 @@ function setSecurityLabel(path: string, type: DataLevel, callback: AsyncCallback
 设置文件或目录的数据安全等级，用于实现文件的分级管理和访问控制。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-securityLabel-function setSecurityLabel(path: string, type: DataLevel, callback: AsyncCallback<void>): void--><!--Device-securityLabel-function setSecurityLabel(path: string, type: DataLevel, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

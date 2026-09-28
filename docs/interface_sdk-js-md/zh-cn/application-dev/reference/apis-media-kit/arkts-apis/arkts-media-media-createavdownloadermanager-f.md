@@ -18,6 +18,8 @@ function createAVDownloaderManager(): Promise<AVDownloaderManager>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-media-function createAVDownloaderManager(): Promise<AVDownloaderManager>--><!--Device-media-function createAVDownloaderManager(): Promise<AVDownloaderManager>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 **返回值：**

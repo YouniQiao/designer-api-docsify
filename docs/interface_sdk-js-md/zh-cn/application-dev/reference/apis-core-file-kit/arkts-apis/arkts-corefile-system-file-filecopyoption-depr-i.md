@@ -10,6 +10,8 @@ export interface FileCopyOption
 
 **废弃版本：** 10
 
+<!--Device-unnamed-export interface FileCopyOption--><!--Device-unnamed-export interface FileCopyOption-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## 导入模块
@@ -29,6 +31,8 @@ complete?: () => void
 
 **废弃版本：** 10
 
+<!--Device-FileCopyOption-complete?: () => void--><!--Device-FileCopyOption-complete?: () => void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## fail
@@ -42,6 +46,8 @@ fail?: (data: string, code: number) => void
 **起始版本：** 3
 
 **废弃版本：** 10
+
+<!--Device-FileCopyOption-fail?: (data: string, code: number) => void--><!--Device-FileCopyOption-fail?: (data: string, code: number) => void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -63,6 +69,8 @@ success?: (uri: string) => void
 **起始版本：** 3
 
 **废弃版本：** 10
+
+<!--Device-FileCopyOption-success?: (uri: string) => void--><!--Device-FileCopyOption-success?: (uri: string) => void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -88,6 +96,8 @@ dstUri: string
 
 **废弃版本：** 10
 
+<!--Device-FileCopyOption-dstUri: string--><!--Device-FileCopyOption-dstUri: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## srcUri
@@ -105,5 +115,7 @@ srcUri: string
 **起始版本：** 3
 
 **废弃版本：** 10
+
+<!--Device-FileCopyOption-srcUri: string--><!--Device-FileCopyOption-srcUri: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite

@@ -8,6 +8,8 @@ class CloudFileCache
 
 **起始版本：** 11
 
+<!--Device-cloudSync-class CloudFileCache--><!--Device-cloudSync-class CloudFileCache-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## 导入模块
@@ -27,6 +29,8 @@ cleanCache(uri: string): void
 **起始版本：** 11
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC
+
+<!--Device-CloudFileCache-cleanCache(uri: string): void--><!--Device-CloudFileCache-cleanCache(uri: string): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -81,6 +85,8 @@ A constructor used to create a CloudFileCache object.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-CloudFileCache-constructor(bundleName: string)--><!--Device-CloudFileCache-constructor(bundleName: string)-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **系统接口：** 此接口为系统接口。
@@ -116,6 +122,8 @@ getDownloadList(uris: Array<string>): Promise<Array<DownloadProgress>>
 **需要权限：** ohos.permission.CLOUDFILE_SYNC
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-CloudFileCache-getDownloadList(uris: Array<string>): Promise<Array<DownloadProgress>>--><!--Device-CloudFileCache-getDownloadList(uris: Array<string>): Promise<Array<DownloadProgress>>-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 

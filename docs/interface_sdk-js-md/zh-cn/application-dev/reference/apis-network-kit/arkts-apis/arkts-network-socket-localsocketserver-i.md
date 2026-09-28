@@ -8,6 +8,8 @@ LocalSocketServer类。在调用LocalSocketServer的方法前，需要先通过[
 
 **起始版本：** 11
 
+<!--Device-socket-export interface LocalSocketServer--><!--Device-socket-export interface LocalSocketServer-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块
@@ -30,6 +32,8 @@ LocalSocketServer停止监听并释放通过[listen](#listen)方法绑定的监�
 > [close](arkts-network-socket-localsocket-i.md#close)方法。
 
 **起始版本：** 20
+
+<!--Device-LocalSocketServer-close(): Promise<void>--><!--Device-LocalSocketServer-close(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -89,6 +93,8 @@ getExtraOptions(): Promise<ExtraOptionsBase>
 
 **起始版本：** 11
 
+<!--Device-LocalSocketServer-getExtraOptions(): Promise<ExtraOptionsBase>--><!--Device-LocalSocketServer-getExtraOptions(): Promise<ExtraOptionsBase>-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
@@ -144,6 +150,8 @@ getLocalAddress(): Promise<string>
 > listen方法调用成功后，才可调用此方法。
 
 **起始版本：** 12
+
+<!--Device-LocalSocketServer-getLocalAddress(): Promise<string>--><!--Device-LocalSocketServer-getLocalAddress(): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -208,6 +216,8 @@ getSocketFd(): Promise<number>
 
 **起始版本：** 23
 
+<!--Device-LocalSocketServer-getSocketFd(): Promise<int>--><!--Device-LocalSocketServer-getSocketFd(): Promise<int>-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
@@ -259,6 +269,8 @@ getState(): Promise<SocketStateBase>
 
 **起始版本：** 11
 
+<!--Device-LocalSocketServer-getState(): Promise<SocketStateBase>--><!--Device-LocalSocketServer-getState(): Promise<SocketStateBase>-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
@@ -309,6 +321,8 @@ listen(address: LocalAddress): Promise<void>
 > 服务端使用该方法完成bind，listen，accept操作，传入套接字文件路径，调用此接口后会自动生成本地套接字文件。
 
 **起始版本：** 11
+
+<!--Device-LocalSocketServer-listen(address: LocalAddress): Promise<void>--><!--Device-LocalSocketServer-listen(address: LocalAddress): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -367,6 +381,8 @@ off(type: 'connect', callback?: Callback<LocalSocketConnection>): void
 
 **起始版本：** 11
 
+<!--Device-LocalSocketServer-off(type: 'connect', callback?: Callback<LocalSocketConnection>): void--><!--Device-LocalSocketServer-off(type: 'connect', callback?: Callback<LocalSocketConnection>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -408,6 +424,8 @@ off(type: 'error', callback?: ErrorCallback): void
 取消订阅LocalSocketServer连接的error事件。使用callback异步回调。
 
 **起始版本：** 11
+
+<!--Device-LocalSocketServer-off(type: 'error', callback?: ErrorCallback): void--><!--Device-LocalSocketServer-off(type: 'error', callback?: ErrorCallback): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -453,6 +471,8 @@ on(type: 'connect', callback: Callback<LocalSocketConnection>): void
 
 **起始版本：** 11
 
+<!--Device-LocalSocketServer-on(type: 'connect', callback: Callback<LocalSocketConnection>): void--><!--Device-LocalSocketServer-on(type: 'connect', callback: Callback<LocalSocketConnection>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -495,6 +515,8 @@ on(type: 'error', callback: ErrorCallback): void
 
 **起始版本：** 11
 
+<!--Device-LocalSocketServer-on(type: 'error', callback: ErrorCallback): void--><!--Device-LocalSocketServer-on(type: 'error', callback: ErrorCallback): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -534,6 +556,8 @@ setExtraOptions(options: ExtraOptionsBase): Promise<void>
 > listen方法调用成功后，才可调用此方法。
 
 **起始版本：** 11
+
+<!--Device-LocalSocketServer-setExtraOptions(options: ExtraOptionsBase): Promise<void>--><!--Device-LocalSocketServer-setExtraOptions(options: ExtraOptionsBase): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 

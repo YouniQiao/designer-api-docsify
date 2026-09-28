@@ -8,6 +8,8 @@ enum CallerType
 
 **起始版本：** 22
 
+<!--Device-avSession-enum CallerType--><!--Device-avSession-enum CallerType-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 ## TYPE_CAST
@@ -20,6 +22,8 @@ TYPE_CAST = 'cast'
 
 **起始版本：** 22
 
+<!--Device-CallerType-TYPE_CAST = 'cast'--><!--Device-CallerType-TYPE_CAST = 'cast'-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 ## TYPE_BLUETOOTH
@@ -31,6 +35,8 @@ TYPE_BLUETOOTH = 'bluetooth'
 调用方来自蓝牙。
 
 **起始版本：** 22
+
+<!--Device-CallerType-TYPE_BLUETOOTH = 'bluetooth'--><!--Device-CallerType-TYPE_BLUETOOTH = 'bluetooth'-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -46,6 +52,8 @@ TYPE_NEARLINK = 'nearlink'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-CallerType-TYPE_NEARLINK = 'nearlink'--><!--Device-CallerType-TYPE_NEARLINK = 'nearlink'-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 ## TYPE_APP
@@ -57,5 +65,7 @@ TYPE_APP = 'app'
 调用方来自应用。
 
 **起始版本：** 22
+
+<!--Device-CallerType-TYPE_APP = 'app'--><!--Device-CallerType-TYPE_APP = 'app'-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core

@@ -12,6 +12,8 @@ Function that returns typed string to render one template.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-unnamed-declare type TemplateTypedFunc<T> = (item: T, index: number) => string--><!--Device-unnamed-declare type TemplateTypedFunc<T> = (item: T, index: number) => string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

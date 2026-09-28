@@ -20,6 +20,8 @@ function fileSystemServiceRequest(config: FileSystemRequestConfig): Promise<numb
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-backup-function fileSystemServiceRequest(config: FileSystemRequestConfig): Promise<int>--><!--Device-backup-function fileSystemServiceRequest(config: FileSystemRequestConfig): Promise<int>-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 **系统接口：** 此接口为系统接口。

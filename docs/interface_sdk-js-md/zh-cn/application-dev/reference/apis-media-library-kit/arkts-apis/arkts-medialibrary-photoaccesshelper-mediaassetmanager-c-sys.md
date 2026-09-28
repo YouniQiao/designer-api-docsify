@@ -12,6 +12,8 @@ class MediaAssetManager
 
 **起始版本：** 11
 
+<!--Device-photoAccessHelper-class MediaAssetManager--><!--Device-photoAccessHelper-class MediaAssetManager-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
@@ -39,6 +41,8 @@ AI增强会额外产生一张图片，该图片与原始图组成复合图。复
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-MediaAssetManager-static requestCompositeAuxiliaryImageData(      context: Context,      asset: PhotoAsset,      dataHandler: MediaAssetDataHandler<ArrayBuffer>    ): Promise<string>--><!--Device-MediaAssetManager-static requestCompositeAuxiliaryImageData(      context: Context,      asset: PhotoAsset,      dataHandler: MediaAssetDataHandler<ArrayBuffer>    ): Promise<string>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -133,6 +137,8 @@ AI增强分类端侧AI增强和云侧AI增强，该接口仅限于端侧AI增强
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-MediaAssetManager-static requestEnhancementImage(      context: Context,       asset: PhotoAsset,       dataHandler: MediaAssetDataHandler<image.ImageSource>    ) : Promise<string>--><!--Device-MediaAssetManager-static requestEnhancementImage(      context: Context,       asset: PhotoAsset,       dataHandler: MediaAssetDataHandler<image.ImageSource>    ) : Promise<string>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

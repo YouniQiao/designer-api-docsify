@@ -18,6 +18,8 @@ function off(type: 'netStatsChange', callback?: Callback<NetStatsChangeInfo>): v
 
 **需要权限：** ohos.permission.GET_NETWORK_STATS
 
+<!--Device-statistics-function off(type: 'netStatsChange', callback?: Callback<NetStatsChangeInfo>): void--><!--Device-statistics-function off(type: 'netStatsChange', callback?: Callback<NetStatsChangeInfo>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。

@@ -12,6 +12,8 @@ interface A2dpSourceProfile extends BaseProfile
 
 **起始版本：** 10
 
+<!--Device-a2dp-interface A2dpSourceProfile extends BaseProfile--><!--Device-a2dp-interface A2dpSourceProfile extends BaseProfile-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -33,6 +35,8 @@ getPlayingState(deviceId: string): PlayingState
 **起始版本：** 10
 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
+
+<!--Device-A2dpSourceProfile-getPlayingState(deviceId: string): PlayingState--><!--Device-A2dpSourceProfile-getPlayingState(deviceId: string): PlayingState-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

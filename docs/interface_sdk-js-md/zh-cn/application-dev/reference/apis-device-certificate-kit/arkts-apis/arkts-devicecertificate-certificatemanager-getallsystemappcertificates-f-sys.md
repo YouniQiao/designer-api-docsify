@@ -18,6 +18,8 @@ function getAllSystemAppCertificates(): Promise<CMResult>
 
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER
 
+<!--Device-certificateManager-function getAllSystemAppCertificates(): Promise<CMResult>--><!--Device-certificateManager-function getAllSystemAppCertificates(): Promise<CMResult>-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
 
 **系统接口：** 此接口为系统接口。

@@ -4,6 +4,8 @@
 
 **起始版本：** 20
 
+<!--Device-unnamed-declare namespace eap--><!--Device-unnamed-declare namespace eap-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
 ## 导入模块

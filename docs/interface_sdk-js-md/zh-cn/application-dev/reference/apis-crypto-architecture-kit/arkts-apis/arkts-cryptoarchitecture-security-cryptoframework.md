@@ -8,6 +8,8 @@
 - API版本12+：此接口可在Stage模型和FA模型下使用。
 - API版本9-11：此接口仅可在Stage模型下使用。
 
+<!--Device-unnamed-declare namespace cryptoFramework--><!--Device-unnamed-declare namespace cryptoFramework-End-->
+
 **系统能力：** SystemCapability.Security.CryptoFramework
 
 ## 导入模块

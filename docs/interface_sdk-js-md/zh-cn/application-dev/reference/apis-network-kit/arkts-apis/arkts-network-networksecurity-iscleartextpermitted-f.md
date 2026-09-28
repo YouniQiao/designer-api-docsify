@@ -18,6 +18,8 @@ export function isCleartextPermitted(): boolean
 
 **需要权限：** ohos.permission.INTERNET
 
+<!--Device-networkSecurity-export function isCleartextPermitted(): boolean--><!--Device-networkSecurity-export function isCleartextPermitted(): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**

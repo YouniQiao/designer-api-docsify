@@ -8,6 +8,8 @@ Sets the trigger status type of a touch operation.
 
 **Since:** 7
 
+<!--Device-unnamed-declare enum TouchType--><!--Device-unnamed-declare enum TouchType-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Down
@@ -21,6 +23,8 @@ A finger is pressed.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TouchType-Down--><!--Device-TouchType-Down-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,6 +40,8 @@ A finger is lifted.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TouchType-Up--><!--Device-TouchType-Up-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Move
@@ -50,6 +56,8 @@ A finger moves on the screen in pressed state.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TouchType-Move--><!--Device-TouchType-Move-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Cancel
@@ -63,6 +71,8 @@ A touch event is canceled. For example: 1. When a finger is held on the screen a
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TouchType-Cancel--><!--Device-TouchType-Cancel-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -80,6 +90,8 @@ A finger is pressed in accessibility mode.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-TouchType-HOVER_ENTER = 9--><!--Device-TouchType-HOVER_ENTER = 9-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## HOVER_MOVE
@@ -95,6 +107,8 @@ The touch moves in accessibility mode.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-TouchType-HOVER_MOVE = 10--><!--Device-TouchType-HOVER_MOVE = 10-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -112,6 +126,8 @@ A finger is lifted in accessibility mode.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-TouchType-HOVER_EXIT = 11--><!--Device-TouchType-HOVER_EXIT = 11-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## HOVER_CANCEL
@@ -127,5 +143,7 @@ The current event is canceled in accessibility mode.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-TouchType-HOVER_CANCEL = 12--><!--Device-TouchType-HOVER_CANCEL = 12-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

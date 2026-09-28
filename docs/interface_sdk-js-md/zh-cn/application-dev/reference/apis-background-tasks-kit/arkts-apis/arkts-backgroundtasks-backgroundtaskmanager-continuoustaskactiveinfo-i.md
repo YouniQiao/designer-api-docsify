@@ -8,6 +8,8 @@ interface ContinuousTaskActiveInfo
 
 **起始版本：** 20
 
+<!--Device-backgroundTaskManager-interface ContinuousTaskActiveInfo--><!--Device-backgroundTaskManager-interface ContinuousTaskActiveInfo-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## 导入模块
@@ -27,5 +29,7 @@ id: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-ContinuousTaskActiveInfo-id: int--><!--Device-ContinuousTaskActiveInfo-id: int-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask

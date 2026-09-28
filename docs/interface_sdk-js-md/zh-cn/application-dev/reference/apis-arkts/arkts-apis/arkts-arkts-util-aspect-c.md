@@ -8,6 +8,8 @@ class Aspect
 
 **起始版本：** 11
 
+<!--Device-util-class Aspect--><!--Device-util-class Aspect-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -27,6 +29,8 @@ static addAfter(targetClass: Object, methodName: string, isStatic: boolean, afte
 **起始版本：** 11
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Aspect-static addAfter(targetClass: Object, methodName: string, isStatic: boolean, after: Function): void--><!--Device-Aspect-static addAfter(targetClass: Object, methodName: string, isStatic: boolean, after: Function): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -106,6 +110,8 @@ static addBefore(targetClass: Object, methodName: string, isStatic: boolean, bef
 **起始版本：** 11
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Aspect-static addBefore(targetClass: Object, methodName: string, isStatic: boolean, before: Function): void--><!--Device-Aspect-static addBefore(targetClass: Object, methodName: string, isStatic: boolean, before: Function): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -194,6 +200,8 @@ static replace(targetClass: Object, methodName: string, isStatic: boolean, inste
 **起始版本：** 11
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Aspect-static replace(targetClass: Object, methodName: string, isStatic: boolean, instead: Function) : void--><!--Device-Aspect-static replace(targetClass: Object, methodName: string, isStatic: boolean, instead: Function) : void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

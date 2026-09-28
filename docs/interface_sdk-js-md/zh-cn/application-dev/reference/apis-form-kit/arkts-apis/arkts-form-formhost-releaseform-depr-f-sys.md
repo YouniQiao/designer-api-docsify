@@ -21,6 +21,8 @@ function releaseForm(formId: string, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.REQUIRE_FORM
 
+<!--Device-formHost-function releaseForm(formId: string, callback: AsyncCallback<void>): void--><!--Device-formHost-function releaseForm(formId: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -65,6 +67,8 @@ function releaseForm(formId: string, isReleaseCache: boolean, callback: AsyncCal
 **替代接口：** [releaseForm](arkts-form-formhost-releaseform-f-sys.md)
 
 **需要权限：** ohos.permission.REQUIRE_FORM
+
+<!--Device-formHost-function releaseForm(formId: string, isReleaseCache: boolean, callback: AsyncCallback<void>): void--><!--Device-formHost-function releaseForm(formId: string, isReleaseCache: boolean, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -111,6 +115,8 @@ function releaseForm(formId: string, isReleaseCache?: boolean): Promise<void>
 **替代接口：** [releaseForm](arkts-form-formhost-releaseform-f-sys.md)
 
 **需要权限：** ohos.permission.REQUIRE_FORM
+
+<!--Device-formHost-function releaseForm(formId: string, isReleaseCache?: boolean): Promise<void>--><!--Device-formHost-function releaseForm(formId: string, isReleaseCache?: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 

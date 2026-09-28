@@ -18,6 +18,8 @@ function dialCall(phoneNumber: string, options: DialCallOptions, callback: Async
 
 **需要权限：** ohos.permission.PLACE_CALL
 
+<!--Device-call-function dialCall(phoneNumber: string, options: DialCallOptions, callback: AsyncCallback<void>): void--><!--Device-call-function dialCall(phoneNumber: string, options: DialCallOptions, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -78,6 +80,8 @@ function dialCall(phoneNumber: string, options?: DialCallOptions): Promise<void>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.PLACE_CALL
+
+<!--Device-call-function dialCall(phoneNumber: string, options?: DialCallOptions): Promise<void>--><!--Device-call-function dialCall(phoneNumber: string, options?: DialCallOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -142,6 +146,8 @@ function dialCall(phoneNumber: string, callback: AsyncCallback<void>): void
 **起始版本：** 9
 
 **需要权限：** ohos.permission.PLACE_CALL
+
+<!--Device-call-function dialCall(phoneNumber: string, callback: AsyncCallback<void>): void--><!--Device-call-function dialCall(phoneNumber: string, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 

@@ -8,6 +8,8 @@ Implements the swipe action menu manager for list items.
 
 **Since:** 21
 
+<!--Device-unnamed-declare class ListItemSwipeActionManager--><!--Device-unnamed-declare class ListItemSwipeActionManager-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## collapse
@@ -23,6 +25,8 @@ Collapses the swipe action menu for the specified list item.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
+
+<!--Device-ListItemSwipeActionManager-static collapse(node: FrameNode): void--><!--Device-ListItemSwipeActionManager-static collapse(node: FrameNode): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -58,6 +62,8 @@ Expands the swipe action menu for the specified list item.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
+
+<!--Device-ListItemSwipeActionManager-static expand(node: FrameNode, direction: ListItemSwipeActionDirection): void--><!--Device-ListItemSwipeActionManager-static expand(node: FrameNode, direction: ListItemSwipeActionDirection): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

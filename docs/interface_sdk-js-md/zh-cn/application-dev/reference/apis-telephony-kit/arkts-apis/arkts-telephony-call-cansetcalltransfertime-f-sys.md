@@ -18,6 +18,8 @@ function canSetCallTransferTime(slotId: number, callback: AsyncCallback<boolean>
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-call-function canSetCallTransferTime(slotId: int, callback: AsyncCallback<boolean>): void--><!--Device-call-function canSetCallTransferTime(slotId: int, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -70,6 +72,8 @@ function canSetCallTransferTime(slotId: number): Promise<boolean>
 **起始版本：** 10
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
+
+<!--Device-call-function canSetCallTransferTime(slotId: int): Promise<boolean>--><!--Device-call-function canSetCallTransferTime(slotId: int): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 

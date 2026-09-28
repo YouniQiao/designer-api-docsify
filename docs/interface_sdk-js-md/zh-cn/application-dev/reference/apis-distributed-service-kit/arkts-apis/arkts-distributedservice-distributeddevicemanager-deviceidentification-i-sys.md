@@ -8,6 +8,8 @@ interface DeviceIdentification
 
 **起始版本：** 24
 
+<!--Device-distributedDeviceManager-interface DeviceIdentification--><!--Device-distributedDeviceManager-interface DeviceIdentification-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ deviceId: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DeviceIdentification-deviceId: string--><!--Device-DeviceIdentification-deviceId: string-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +55,8 @@ udid: string
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC and ohos.permission.ACCESS_SERVICE_DM and ohos.permission.sec.ACCESS_UDID
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DeviceIdentification-udid: string--><!--Device-DeviceIdentification-udid: string-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 

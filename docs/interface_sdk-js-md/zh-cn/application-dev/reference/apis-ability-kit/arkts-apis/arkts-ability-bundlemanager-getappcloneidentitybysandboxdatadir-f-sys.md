@@ -16,6 +16,8 @@ function getAppCloneIdentityBySandboxDataDir(sandboxDataDir: string): AppCloneId
 
 **起始版本：** 20
 
+<!--Device-bundleManager-function getAppCloneIdentityBySandboxDataDir(sandboxDataDir: string): AppCloneIdentity--><!--Device-bundleManager-function getAppCloneIdentityBySandboxDataDir(sandboxDataDir: string): AppCloneIdentity-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。

@@ -8,6 +8,8 @@ export interface NetUidRuleInfo
 
 **起始版本：** 11
 
+<!--Device-policy-export interface NetUidRuleInfo--><!--Device-policy-export interface NetUidRuleInfo-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ rule: NetUidRule
 
 **起始版本：** 11
 
+<!--Device-NetUidRuleInfo-rule: NetUidRule--><!--Device-NetUidRuleInfo-rule: NetUidRule-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ uid: number
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-NetUidRuleInfo-uid: int--><!--Device-NetUidRuleInfo-uid: int-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 

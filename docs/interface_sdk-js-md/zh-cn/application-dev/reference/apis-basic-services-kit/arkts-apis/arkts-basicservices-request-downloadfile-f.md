@@ -22,6 +22,8 @@ function downloadFile(context: BaseContext, config: DownloadConfig, callback: As
 
 **需要权限：** ohos.permission.INTERNET
 
+<!--Device-request-function downloadFile(context: BaseContext, config: DownloadConfig, callback: AsyncCallback<DownloadTask>): void--><!--Device-request-function downloadFile(context: BaseContext, config: DownloadConfig, callback: AsyncCallback<DownloadTask>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Download
 
 **参数：**
@@ -84,6 +86,8 @@ function downloadFile(context: BaseContext, config: DownloadConfig): Promise<Dow
 **起始版本：** 9
 
 **需要权限：** ohos.permission.INTERNET
+
+<!--Device-request-function downloadFile(context: BaseContext, config: DownloadConfig): Promise<DownloadTask>--><!--Device-request-function downloadFile(context: BaseContext, config: DownloadConfig): Promise<DownloadTask>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
 

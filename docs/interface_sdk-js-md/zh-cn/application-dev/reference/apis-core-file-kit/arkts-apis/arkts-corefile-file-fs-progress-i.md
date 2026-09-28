@@ -8,6 +8,8 @@ interface Progress
 
 **起始版本：** 11
 
+<!--Device-unnamed-interface Progress--><!--Device-unnamed-interface Progress-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## 导入模块
@@ -28,6 +30,8 @@ readonly processedSize: number
 
 **起始版本：** 11
 
+<!--Device-Progress-readonly processedSize: number--><!--Device-Progress-readonly processedSize: number-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## totalSize
@@ -41,5 +45,7 @@ readonly totalSize: number
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-Progress-readonly totalSize: number--><!--Device-Progress-readonly totalSize: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO

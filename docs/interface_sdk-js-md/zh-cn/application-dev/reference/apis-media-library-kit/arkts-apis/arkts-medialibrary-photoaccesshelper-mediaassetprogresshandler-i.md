@@ -12,6 +12,8 @@ interface MediaAssetProgressHandler
 
 **起始版本：** 15
 
+<!--Device-photoAccessHelper-interface MediaAssetProgressHandler--><!--Device-photoAccessHelper-interface MediaAssetProgressHandler-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
@@ -29,6 +31,8 @@ onProgress(progress: number): void
 当所请求的视频资源返回进度时系统会回调此方法。
 
 **起始版本：** 15
+
+<!--Device-MediaAssetProgressHandler-onProgress(progress: int): void--><!--Device-MediaAssetProgressHandler-onProgress(progress: int): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

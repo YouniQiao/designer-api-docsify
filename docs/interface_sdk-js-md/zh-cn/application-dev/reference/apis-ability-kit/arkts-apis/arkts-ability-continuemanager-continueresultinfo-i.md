@@ -8,6 +8,8 @@ interface ContinueResultInfo
 
 **起始版本：** 18
 
+<!--Device-continueManager-interface ContinueResultInfo--><!--Device-continueManager-interface ContinueResultInfo-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 ## 导入模块
@@ -32,6 +34,8 @@ resultInfo?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ContinueResultInfo-resultInfo?: string--><!--Device-ContinueResultInfo-resultInfo?: string-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 ## resultState
@@ -47,5 +51,7 @@ resultState: ContinueStateCode
 **起始版本：** 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ContinueResultInfo-resultState: ContinueStateCode--><!--Device-ContinueResultInfo-resultState: ContinueStateCode-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission

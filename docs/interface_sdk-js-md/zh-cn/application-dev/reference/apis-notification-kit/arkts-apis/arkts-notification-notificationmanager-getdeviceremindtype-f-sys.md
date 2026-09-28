@@ -20,6 +20,8 @@ function getDeviceRemindType(callback: AsyncCallback<DeviceRemindType>): void
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function getDeviceRemindType(callback: AsyncCallback<DeviceRemindType>): void--><!--Device-notificationManager-function getDeviceRemindType(callback: AsyncCallback<DeviceRemindType>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -73,6 +75,8 @@ function getDeviceRemindType(): Promise<DeviceRemindType>
 **废弃版本：** 26.0.0
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function getDeviceRemindType(): Promise<DeviceRemindType>--><!--Device-notificationManager-function getDeviceRemindType(): Promise<DeviceRemindType>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

@@ -6,12 +6,12 @@ The **Marquee** component is used to scroll and display a single line of text. I
 > 
 > To ensure that scrolling frame rates are not affected, it is recommended that the number of **Marquee** components
 > in a scrolling component does not exceed 4, or use [TextOverflow.MARQUEE](../arkts-apis/arkts-arkui-textoverflow-e.md) of the
-> [Text](arkts-arkui-text-comp.md#text) component instead.
+> [Text](arkts-arkui-text-comp.md) component instead.
 > 
 > For scenarios where the **Marquee** component requires dynamic frame rates, use the
 > [MarqueeDynamicSyncScene](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) API.
 > 
-> When the text width is smaller than the **Marquee** component's width, use the [property animation](arkts-arkui-common-comp.md#common)
+> When the text width is smaller than the **Marquee** component's width, use the [property animation](arkts-arkui-common-comp.md)
 > to implement scrolling.
 
 ## Child Components
@@ -31,6 +31,8 @@ Creates a marquee.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-MarqueeInterface-(options: MarqueeOptions): MarqueeAttribute--><!--Device-MarqueeInterface-(options: MarqueeOptions): MarqueeAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -23,6 +23,8 @@ function download(url: string, options: CacheDownloadOptions): void
 
 **需要权限：** ohos.permission.INTERNET
 
+<!--Device-cacheDownload-function download(url: string, options: CacheDownloadOptions): void--><!--Device-cacheDownload-function download(url: string, options: CacheDownloadOptions): void-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 **参数：**

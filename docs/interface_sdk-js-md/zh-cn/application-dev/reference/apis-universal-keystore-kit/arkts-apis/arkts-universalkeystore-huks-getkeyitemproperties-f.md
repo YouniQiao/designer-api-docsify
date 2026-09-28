@@ -28,6 +28,8 @@ Obtains key properties. This API uses an asynchronous callback to return the res
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-huks-function getKeyItemProperties(    keyAlias: string,    options: HuksOptions,    callback: AsyncCallback<HuksReturnResult>  ): void--><!--Device-huks-function getKeyItemProperties(    keyAlias: string,    options: HuksOptions,    callback: AsyncCallback<HuksReturnResult>  ): void-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core
 - API版本9-11：SystemCapability.Security.Huks.Extension
@@ -44,9 +46,9 @@ Obtains key properties. This API uses an asynchronous callback to return the res
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | The application permissions are insufficient, possibly because the ohos.permission.ACCESS_SE_KEY permission is missing.<br>**适用版本：** 26.0.0+ |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed: call the getKeyItemProperties API, missing Permission: ohos.permission.ACCESS_SE_KEY.<br>**适用版本：** 26.0.0+ |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | api is not supported |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: 1. The hardware does not support the capability. 2. The chip does not support the capability. 3. A dependent service feature is not supported. |
 | [12000001](../errorcode-huks.md#12000001-该子功能不支持特性) | algorithm mode is not supported |
 | [12000002](../errorcode-huks.md#12000002-缺少密钥算法参数) | algorithm param is missing<br>**适用版本：** 9 - 11 |
 | [12000003](../errorcode-huks.md#12000003-无效的密钥算法参数) | algorithm param is invalid<br>**适用版本：** 9 - 11 |
@@ -99,6 +101,8 @@ function getKeyItemProperties(keyAlias: string, options: HuksOptions): Promise<H
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-huks-function getKeyItemProperties(keyAlias: string, options: HuksOptions): Promise<HuksReturnResult>--><!--Device-huks-function getKeyItemProperties(keyAlias: string, options: HuksOptions): Promise<HuksReturnResult>-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Extension
 
 **参数：**
@@ -118,9 +122,9 @@ function getKeyItemProperties(keyAlias: string, options: HuksOptions): Promise<H
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | The application permissions are insufficient, possibly because the ohos.permission.ACCESS_SE_KEY permission is missing.<br>**适用版本：** 26.0.0+ |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed: call the getKeyItemProperties API, missing Permission: ohos.permission.ACCESS_SE_KEY.<br>**适用版本：** 26.0.0+ |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | api is not supported |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: 1. The hardware does not support the capability. 2. The chip does not support the capability. 3. A dependent service feature is not supported. |
 | [12000001](../errorcode-huks.md#12000001-该子功能不支持特性) | algorithm mode is not supported |
 | [12000002](../errorcode-huks.md#12000002-缺少密钥算法参数) | algorithm param is missing<br>**适用版本：** 9 - 11 |
 | [12000003](../errorcode-huks.md#12000003-无效的密钥算法参数) | algorithm param is invalid<br>**适用版本：** 9 - 11 |

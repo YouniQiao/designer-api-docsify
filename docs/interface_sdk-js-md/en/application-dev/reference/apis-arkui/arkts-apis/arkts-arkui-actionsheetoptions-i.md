@@ -8,6 +8,8 @@ Provides **ActionSheet** configuration options.
 
 **Since:** 8
 
+<!--Device-unnamed-interface ActionSheetOptions--><!--Device-unnamed-interface ActionSheetOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## cancel
@@ -23,6 +25,8 @@ Callback invoked when the dialog box is closed after the overlay is clicked.
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ActionSheetOptions-cancel?: VoidCallback--><!--Device-ActionSheetOptions-cancel?: VoidCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -48,6 +52,8 @@ If **showInSubWindow** is set to **true** in **UIExtension**, the dialog box is 
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ActionSheetOptions-alignment?: DialogAlignment--><!--Device-ActionSheetOptions-alignment?: DialogAlignment-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## autoCancel
@@ -69,6 +75,8 @@ The value **true** means to close the dialog box when the overlay is clicked, an
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ActionSheetOptions-autoCancel?: boolean--><!--Device-ActionSheetOptions-autoCancel?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -96,6 +104,8 @@ Setting this parameter to **BlurStyle.NONE** disables the background blur. When 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ActionSheetOptions-backgroundBlurStyle?: BlurStyle--><!--Device-ActionSheetOptions-backgroundBlurStyle?: BlurStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## backgroundBlurStyleOptions
@@ -113,6 +123,8 @@ Options for customizing the background blur style. For details about the default
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-ActionSheetOptions-backgroundBlurStyleOptions?: BackgroundBlurStyleOptions--><!--Device-ActionSheetOptions-backgroundBlurStyleOptions?: BackgroundBlurStyleOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -140,6 +152,8 @@ The background color will be visually combined with the blur effect when both pr
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ActionSheetOptions-backgroundColor?: ResourceColor--><!--Device-ActionSheetOptions-backgroundColor?: ResourceColor-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## backgroundEffect
@@ -157,6 +171,8 @@ Options for customizing the background effect. For details about the default val
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-ActionSheetOptions-backgroundEffect?: BackgroundEffectOptions--><!--Device-ActionSheetOptions-backgroundEffect?: BackgroundEffectOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -186,6 +202,8 @@ When **borderColor** is of type LocalizedEdgeColors, the layout order can be dyn
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ActionSheetOptions-borderColor?: ResourceColor | EdgeColors | LocalizedEdgeColors--><!--Device-ActionSheetOptions-borderColor?: ResourceColor | EdgeColors | LocalizedEdgeColors-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## borderStyle
@@ -209,6 +227,8 @@ Default value: **BorderStyle.Solid**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ActionSheetOptions-borderStyle?: BorderStyle | EdgeStyles--><!--Device-ActionSheetOptions-borderStyle?: BorderStyle | EdgeStyles-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -242,6 +262,8 @@ When **borderWidth** is of type LocalizedEdgeWidths, the layout order can be dyn
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ActionSheetOptions-borderWidth?: Dimension | EdgeWidths | LocalizedEdgeWidths--><!--Device-ActionSheetOptions-borderWidth?: Dimension | EdgeWidths | LocalizedEdgeWidths-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## confirm
@@ -259,6 +281,8 @@ Information about the confirm button. When the dialog box has focus and the **Ta
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ActionSheetOptions-confirm?: ActionSheetButtonOptions--><!--Device-ActionSheetOptions-confirm?: ActionSheetButtonOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -292,6 +316,8 @@ When **cornerRadius** is of type LocalizedBorderRadiuses, the layout order can b
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ActionSheetOptions-cornerRadius?: Dimension | BorderRadiuses | LocalizedBorderRadiuses--><!--Device-ActionSheetOptions-cornerRadius?: Dimension | BorderRadiuses | LocalizedBorderRadiuses-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## enableHoverMode
@@ -317,6 +343,8 @@ For a PC or 2-in-1 device, the dialog box is displayed on the upper half of the 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-ActionSheetOptions-enableHoverMode?: boolean--><!--Device-ActionSheetOptions-enableHoverMode?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -344,6 +372,8 @@ where the dialog box is located minus the safe area. You can decrease or increas
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ActionSheetOptions-height?: Dimension--><!--Device-ActionSheetOptions-height?: Dimension-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## hoverModeArea
@@ -365,6 +395,8 @@ Default value: **HoverModeAreaType.BOTTOM_SCREEN**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-ActionSheetOptions-hoverModeArea?: HoverModeAreaType--><!--Device-ActionSheetOptions-hoverModeArea?: HoverModeAreaType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -391,6 +423,8 @@ Overlay effect for the page-level dialog box.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-ActionSheetOptions-immersiveMode?: ImmersiveMode--><!--Device-ActionSheetOptions-immersiveMode?: ImmersiveMode-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## isModal
@@ -412,6 +446,8 @@ Default value: **true**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ActionSheetOptions-isModal?: boolean--><!--Device-ActionSheetOptions-isModal?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -438,6 +474,8 @@ Display level of the dialog box.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-ActionSheetOptions-levelMode?: LevelMode--><!--Device-ActionSheetOptions-levelMode?: LevelMode-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## levelOrder
@@ -463,6 +501,8 @@ Display order of the dialog box.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ActionSheetOptions-levelOrder?: LevelOrder--><!--Device-ActionSheetOptions-levelOrder?: LevelOrder-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## levelUniqueId
@@ -486,6 +526,8 @@ Value range: a number no less than 0
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-ActionSheetOptions-levelUniqueId?: number--><!--Device-ActionSheetOptions-levelUniqueId?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -514,6 +556,8 @@ Default value: **{ x: 0, y: 0, width: '100%', height: '100%' }**
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ActionSheetOptions-maskRect?: Rectangle--><!--Device-ActionSheetOptions-maskRect?: Rectangle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## message
@@ -533,6 +577,8 @@ If the text is too long to display, a scrollbar is displayed.
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ActionSheetOptions-message: string | Resource--><!--Device-ActionSheetOptions-message: string | Resource-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -556,6 +602,8 @@ Default value:
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ActionSheetOptions-offset?: ActionSheetOffset--><!--Device-ActionSheetOptions-offset?: ActionSheetOffset-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -582,6 +630,8 @@ Event callback after the dialog box appears.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-ActionSheetOptions-onDidAppear?: Callback<void>--><!--Device-ActionSheetOptions-onDidAppear?: Callback<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onDidDisappear
@@ -603,6 +653,8 @@ The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; onW
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-ActionSheetOptions-onDidDisappear?: Callback<void>--><!--Device-ActionSheetOptions-onDidDisappear?: Callback<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -627,6 +679,8 @@ Event callback when the dialog box is about to appear.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-ActionSheetOptions-onWillAppear?: Callback<void>--><!--Device-ActionSheetOptions-onWillAppear?: Callback<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onWillDisappear
@@ -648,6 +702,8 @@ The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; onW
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-ActionSheetOptions-onWillDisappear?: Callback<void>--><!--Device-ActionSheetOptions-onWillDisappear?: Callback<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -672,6 +728,8 @@ Callback for interactive closure of the dialog box.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ActionSheetOptions-onWillDismiss?: Callback<DismissDialogAction>--><!--Device-ActionSheetOptions-onWillDismiss?: Callback<DismissDialogAction>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## shadow
@@ -694,6 +752,8 @@ Default value on 2-in-1 devices: **ShadowStyle.OUTER_FLOATING_MD** when the dial
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ActionSheetOptions-shadow?: ShadowOptions | ShadowStyle--><!--Device-ActionSheetOptions-shadow?: ShadowOptions | ShadowStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## sheets
@@ -711,6 +771,8 @@ Options in the dialog box. Each option supports the image, text, and callback.
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ActionSheetOptions-sheets: Array<SheetInfo>--><!--Device-ActionSheetOptions-sheets: Array<SheetInfo>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -738,6 +800,8 @@ A dialog box whose **showInSubWindow** attribute is **true** cannot trigger the 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ActionSheetOptions-showInSubWindow?: boolean--><!--Device-ActionSheetOptions-showInSubWindow?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## subtitle
@@ -757,6 +821,8 @@ If the text is too long to display, it is truncated with an ellipsis (...).
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ActionSheetOptions-subtitle?: ResourceStr--><!--Device-ActionSheetOptions-subtitle?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -778,6 +844,8 @@ Device Behavior Differences:The effect of same material may vary across differen
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ActionSheetOptions-systemMaterial?: SystemUiMaterial--><!--Device-ActionSheetOptions-systemMaterial?: SystemUiMaterial-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## title
@@ -797,6 +865,8 @@ If the text is too long to display, it is truncated with an ellipsis (...).
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ActionSheetOptions-title: string | Resource--><!--Device-ActionSheetOptions-title: string | Resource-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -821,6 +891,8 @@ Transition effect for the entrance and exit of the dialog box.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ActionSheetOptions-transition?: TransitionEffect--><!--Device-ActionSheetOptions-transition?: TransitionEffect-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -847,5 +919,7 @@ where the dialog box is located. You can decrease or increase the width as neede
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ActionSheetOptions-width?: Dimension--><!--Device-ActionSheetOptions-width?: Dimension-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

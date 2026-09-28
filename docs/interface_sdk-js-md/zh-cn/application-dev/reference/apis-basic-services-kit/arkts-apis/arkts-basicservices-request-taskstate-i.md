@@ -8,6 +8,8 @@ interface TaskState
 
 **起始版本：** 9
 
+<!--Device-request-interface TaskState--><!--Device-request-interface TaskState-End-->
+
 **系统能力：** SystemCapability.MiscServices.Upload
 
 ## 导入模块
@@ -28,6 +30,8 @@ message: string
 
 **起始版本：** 9
 
+<!--Device-TaskState-message: string--><!--Device-TaskState-message: string-End-->
+
 **系统能力：** SystemCapability.MiscServices.Upload
 
 ## path
@@ -41,6 +45,8 @@ path: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-TaskState-path: string--><!--Device-TaskState-path: string-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload
 
@@ -57,5 +63,7 @@ responseCode: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-TaskState-responseCode: int--><!--Device-TaskState-responseCode: int-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload

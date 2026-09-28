@@ -16,6 +16,8 @@ function off(type: 'sessionCreate', callback?: (session: AVSessionDescriptor) =>
 
 **起始版本：** 9
 
+<!--Device-avSession-function off(type: 'sessionCreate', callback?: (session: AVSessionDescriptor) => void): void--><!--Device-avSession-function off(type: 'sessionCreate', callback?: (session: AVSessionDescriptor) => void): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 
 **系统接口：** 此接口为系统接口。
@@ -70,6 +72,8 @@ function off(type: 'sessionDestroy', callback?: (session: AVSessionDescriptor) =
 注销会话销毁事件监听。注销后，不再监听该事件。
 
 **起始版本：** 9
+
+<!--Device-avSession-function off(type: 'sessionDestroy', callback?: (session: AVSessionDescriptor) => void): void--><!--Device-avSession-function off(type: 'sessionDestroy', callback?: (session: AVSessionDescriptor) => void): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 
@@ -126,6 +130,8 @@ function off(type: 'topSessionChange', callback?: (session: AVSessionDescriptor)
 
 **起始版本：** 9
 
+<!--Device-avSession-function off(type: 'topSessionChange', callback?: (session: AVSessionDescriptor) => void): void--><!--Device-avSession-function off(type: 'topSessionChange', callback?: (session: AVSessionDescriptor) => void): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 
 **系统接口：** 此接口为系统接口。
@@ -181,6 +187,8 @@ function off(type: 'sessionServiceDie', callback?: () => void): void
 
 **起始版本：** 9
 
+<!--Device-avSession-function off(type: 'sessionServiceDie', callback?: () => void): void--><!--Device-avSession-function off(type: 'sessionServiceDie', callback?: () => void): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **系统接口：** 此接口为系统接口。
@@ -216,6 +224,8 @@ function off(type: 'distributedSessionChange', distributedSessionType: Distribut
 取消最新分布式远端会话变更的监听事件，取消后，不再进行该事件的监听。
 
 **起始版本：** 18
+
+<!--Device-avSession-function off(type: 'distributedSessionChange', distributedSessionType: DistributedSessionType, callback?: Callback<Array<AVSessionController>>): void--><!--Device-avSession-function off(type: 'distributedSessionChange', distributedSessionType: DistributedSessionType, callback?: Callback<Array<AVSessionController>>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 
@@ -253,6 +263,8 @@ function off(type: 'deviceAvailable', callback?: (device: OutputDeviceInfo) => v
 
 **起始版本：** 10
 
+<!--Device-avSession-function off(type: 'deviceAvailable', callback?: (device: OutputDeviceInfo) => void): void--><!--Device-avSession-function off(type: 'deviceAvailable', callback?: (device: OutputDeviceInfo) => void): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **系统接口：** 此接口为系统接口。
@@ -288,6 +300,8 @@ function off(type: 'deviceOffline', callback?: (deviceId: string) => void): void
 
 **起始版本：** 11
 
+<!--Device-avSession-function off(type: 'deviceOffline', callback?: (deviceId: string) => void): void--><!--Device-avSession-function off(type: 'deviceOffline', callback?: (deviceId: string) => void): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **系统接口：** 此接口为系统接口。
@@ -322,6 +336,8 @@ function off(type: 'deviceLogEvent', callback?: Callback<DeviceLogEventCode>): v
 取消监听日志事件的回调。
 
 **起始版本：** 13
+
+<!--Device-avSession-function off(type: 'deviceLogEvent', callback?: Callback<DeviceLogEventCode>): void--><!--Device-avSession-function off(type: 'deviceLogEvent', callback?: Callback<DeviceLogEventCode>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -361,6 +377,8 @@ function off(type: 'deviceStateChanged', callback?: Callback<DeviceState>): void
 **起始版本：** 20
 
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
+
+<!--Device-avSession-function off(type: 'deviceStateChanged', callback?: Callback<DeviceState>): void--><!--Device-avSession-function off(type: 'deviceStateChanged', callback?: Callback<DeviceState>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 

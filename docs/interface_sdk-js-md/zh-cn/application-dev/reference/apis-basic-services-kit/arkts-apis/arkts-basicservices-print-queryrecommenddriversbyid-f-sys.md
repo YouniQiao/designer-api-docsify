@@ -20,6 +20,8 @@ function queryRecommendDriversById(printerId: string): Promise<PpdInfo[]>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-print-function queryRecommendDriversById(printerId: string): Promise<PpdInfo[]>--><!--Device-print-function queryRecommendDriversById(printerId: string): Promise<PpdInfo[]>-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **系统接口：** 此接口为系统接口。

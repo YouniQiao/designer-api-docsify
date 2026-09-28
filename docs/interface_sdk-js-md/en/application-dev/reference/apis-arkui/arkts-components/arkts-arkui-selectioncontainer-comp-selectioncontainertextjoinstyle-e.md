@@ -8,6 +8,8 @@ Provides the concatenation method for text aggregation.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export declare enum SelectionContainerTextJoinStyle--><!--Device-unnamed-export declare enum SelectionContainerTextJoinStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## NEWLINE
@@ -24,6 +26,8 @@ Joined with a newline character `\n` between different text nodes.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-SelectionContainerTextJoinStyle-NEWLINE = 0--><!--Device-SelectionContainerTextJoinStyle-NEWLINE = 0-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## DIRECT
@@ -39,5 +43,7 @@ Joined directly between different text nodes without a separator.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-SelectionContainerTextJoinStyle-DIRECT = 1--><!--Device-SelectionContainerTextJoinStyle-DIRECT = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

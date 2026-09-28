@@ -8,6 +8,8 @@ export enum UserStatusAtomicCap
 
 **起始版本：** 26.0.0
 
+<!--Device-userStatus-export enum UserStatusAtomicCap--><!--Device-userStatus-export enum UserStatusAtomicCap-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
 **系统接口：** 此接口为系统接口。
@@ -23,6 +25,8 @@ ATOMIC_UNKNOWN = 0
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UserStatusAtomicCap-ATOMIC_UNKNOWN = 0--><!--Device-UserStatusAtomicCap-ATOMIC_UNKNOWN = 0-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -40,6 +44,8 @@ FACE_RELATIVE_POSITION = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UserStatusAtomicCap-FACE_RELATIVE_POSITION = 1--><!--Device-UserStatusAtomicCap-FACE_RELATIVE_POSITION = 1-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
 **系统接口：** 此接口为系统接口。
@@ -55,6 +61,8 @@ FACE_NUM_CHANGE = 2
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UserStatusAtomicCap-FACE_NUM_CHANGE = 2--><!--Device-UserStatusAtomicCap-FACE_NUM_CHANGE = 2-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -72,6 +80,8 @@ GESTURE = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UserStatusAtomicCap-GESTURE = 3--><!--Device-UserStatusAtomicCap-GESTURE = 3-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
 **系统接口：** 此接口为系统接口。
@@ -87,6 +97,8 @@ FACE_ANGLE = 4
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UserStatusAtomicCap-FACE_ANGLE = 4--><!--Device-UserStatusAtomicCap-FACE_ANGLE = 4-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -104,6 +116,8 @@ SENSOR_GRAVITY = 5
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UserStatusAtomicCap-SENSOR_GRAVITY = 5--><!--Device-UserStatusAtomicCap-SENSOR_GRAVITY = 5-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
 **系统接口：** 此接口为系统接口。
@@ -119,6 +133,8 @@ SENSOR_GYROSCOPE = 6
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UserStatusAtomicCap-SENSOR_GYROSCOPE = 6--><!--Device-UserStatusAtomicCap-SENSOR_GYROSCOPE = 6-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -136,6 +152,8 @@ SENSOR_ACCELEROMETER = 7
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UserStatusAtomicCap-SENSOR_ACCELEROMETER = 7--><!--Device-UserStatusAtomicCap-SENSOR_ACCELEROMETER = 7-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
 **系统接口：** 此接口为系统接口。
@@ -151,6 +169,8 @@ SENSOR_LINEAR_ACCELERATION = 8
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UserStatusAtomicCap-SENSOR_LINEAR_ACCELERATION = 8--><!--Device-UserStatusAtomicCap-SENSOR_LINEAR_ACCELERATION = 8-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -168,6 +188,8 @@ SENSOR_ROTATION_VECTOR = 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UserStatusAtomicCap-SENSOR_ROTATION_VECTOR = 9--><!--Device-UserStatusAtomicCap-SENSOR_ROTATION_VECTOR = 9-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
 **系统接口：** 此接口为系统接口。
@@ -183,6 +205,8 @@ SENSOR_ORIENTATION = 10
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UserStatusAtomicCap-SENSOR_ORIENTATION = 10--><!--Device-UserStatusAtomicCap-SENSOR_ORIENTATION = 10-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -200,6 +224,8 @@ BLOWING_STATUS = 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UserStatusAtomicCap-BLOWING_STATUS = 11--><!--Device-UserStatusAtomicCap-BLOWING_STATUS = 11-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
 **系统接口：** 此接口为系统接口。
@@ -215,6 +241,8 @@ MOOD_STATUS = 12
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UserStatusAtomicCap-MOOD_STATUS = 12--><!--Device-UserStatusAtomicCap-MOOD_STATUS = 12-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -232,6 +260,8 @@ ENV_SOUND = 13
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UserStatusAtomicCap-ENV_SOUND = 13--><!--Device-UserStatusAtomicCap-ENV_SOUND = 13-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
 **系统接口：** 此接口为系统接口。
@@ -248,6 +278,8 @@ NOISE_SOUND = 14
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UserStatusAtomicCap-NOISE_SOUND = 14--><!--Device-UserStatusAtomicCap-NOISE_SOUND = 14-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
 **系统接口：** 此接口为系统接口。
@@ -263,6 +295,8 @@ EYE_GAZE_SCREEN = 15
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UserStatusAtomicCap-EYE_GAZE_SCREEN = 15--><!--Device-UserStatusAtomicCap-EYE_GAZE_SCREEN = 15-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 

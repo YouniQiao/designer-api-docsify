@@ -17,6 +17,8 @@ function transformRotationMatrix(inRotationVector: Array<number>, coordinates: C
 
 **起始版本：** 9
 
+<!--Device-sensor-function transformRotationMatrix(inRotationVector: Array<double>, coordinates: CoordinatesOptions,    callback: AsyncCallback<Array<double>>): void--><!--Device-sensor-function transformRotationMatrix(inRotationVector: Array<double>, coordinates: CoordinatesOptions,    callback: AsyncCallback<Array<double>>): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -74,6 +76,8 @@ function transformRotationMatrix(inRotationVector: Array<number>, coordinates: C
 根据指定坐标系映射旋转矩阵。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-sensor-function transformRotationMatrix(inRotationVector: Array<double>, coordinates: CoordinatesOptions): Promise<Array<double>>--><!--Device-sensor-function transformRotationMatrix(inRotationVector: Array<double>, coordinates: CoordinatesOptions): Promise<Array<double>>-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 

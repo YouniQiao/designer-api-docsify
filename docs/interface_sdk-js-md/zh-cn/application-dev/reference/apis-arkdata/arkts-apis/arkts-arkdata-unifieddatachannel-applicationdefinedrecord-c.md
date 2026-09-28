@@ -10,6 +10,8 @@ ApplicationDefinedRecord是[UnifiedRecord](arkts-arkdata-unifieddatachannel-unif
 
 **起始版本：** 10
 
+<!--Device-unifiedDataChannel-class ApplicationDefinedRecord extends UnifiedRecord--><!--Device-unifiedDataChannel-class ApplicationDefinedRecord extends UnifiedRecord-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## 导入模块
@@ -32,7 +34,9 @@ get applicationDefinedType(): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ApplicationDefinedRecord-get applicationDefinedType(): string--><!--Device-ApplicationDefinedRecord-get applicationDefinedType(): string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -48,7 +52,9 @@ set applicationDefinedType(value: string)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ApplicationDefinedRecord-set applicationDefinedType(value: string)--><!--Device-ApplicationDefinedRecord-set applicationDefinedType(value: string)-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -66,7 +72,9 @@ get rawData(): Uint8Array
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ApplicationDefinedRecord-get rawData(): Uint8Array--><!--Device-ApplicationDefinedRecord-get rawData(): Uint8Array-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -82,6 +90,8 @@ set rawData(value: Uint8Array)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ApplicationDefinedRecord-set rawData(value: Uint8Array)--><!--Device-ApplicationDefinedRecord-set rawData(value: Uint8Array)-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core

@@ -8,6 +8,8 @@ enum PinType
 
 **起始版本：** 10
 
+<!--Device-connection-enum PinType--><!--Device-connection-enum PinType-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -23,6 +25,8 @@ PIN_TYPE_ENTER_PIN_CODE = 0
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PinType-PIN_TYPE_ENTER_PIN_CODE = 0--><!--Device-PinType-PIN_TYPE_ENTER_PIN_CODE = 0-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -40,6 +44,8 @@ PIN_TYPE_ENTER_PASSKEY = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PinType-PIN_TYPE_ENTER_PASSKEY = 1--><!--Device-PinType-PIN_TYPE_ENTER_PASSKEY = 1-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -55,6 +61,8 @@ PIN_TYPE_CONFIRM_PASSKEY = 2
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PinType-PIN_TYPE_CONFIRM_PASSKEY = 2--><!--Device-PinType-PIN_TYPE_CONFIRM_PASSKEY = 2-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -72,6 +80,8 @@ PIN_TYPE_NO_PASSKEY_CONSENT = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PinType-PIN_TYPE_NO_PASSKEY_CONSENT = 3--><!--Device-PinType-PIN_TYPE_NO_PASSKEY_CONSENT = 3-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -87,6 +97,8 @@ PIN_TYPE_NOTIFY_PASSKEY = 4
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PinType-PIN_TYPE_NOTIFY_PASSKEY = 4--><!--Device-PinType-PIN_TYPE_NOTIFY_PASSKEY = 4-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -104,6 +116,8 @@ bluetooth 2.0设备，用户需要输入对端设备上显示的PIN码。&lt;br/
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PinType-PIN_TYPE_DISPLAY_PIN_CODE = 5--><!--Device-PinType-PIN_TYPE_DISPLAY_PIN_CODE = 5-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -120,6 +134,8 @@ PIN_TYPE_OOB_CONSENT = 6
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PinType-PIN_TYPE_OOB_CONSENT = 6--><!--Device-PinType-PIN_TYPE_OOB_CONSENT = 6-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -135,6 +151,8 @@ PIN_TYPE_PIN_16_DIGITS = 7
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PinType-PIN_TYPE_PIN_16_DIGITS = 7--><!--Device-PinType-PIN_TYPE_PIN_16_DIGITS = 7-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

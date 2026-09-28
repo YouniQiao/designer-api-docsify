@@ -8,6 +8,8 @@ enum CloudMediaDownloadType
 
 **起始版本：** 14
 
+<!--Device-photoAccessHelper-enum CloudMediaDownloadType--><!--Device-photoAccessHelper-enum CloudMediaDownloadType-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -22,6 +24,8 @@ DOWNLOAD_FORCE = 0
 
 **起始版本：** 14
 
+<!--Device-CloudMediaDownloadType-DOWNLOAD_FORCE = 0--><!--Device-CloudMediaDownloadType-DOWNLOAD_FORCE = 0-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -35,6 +39,8 @@ DOWNLOAD_GENTLE = 1
 低优先级下载，需要进入息屏充电模式。
 
 **起始版本：** 14
+
+<!--Device-CloudMediaDownloadType-DOWNLOAD_GENTLE = 1--><!--Device-CloudMediaDownloadType-DOWNLOAD_GENTLE = 1-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

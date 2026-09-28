@@ -18,6 +18,8 @@ function getEid(slotId: number): Promise<string>
 
 **需要权限：** ohos.permission.GET_TELEPHONY_ESIM_STATE
 
+<!--Device-eSIM-function getEid(slotId: int): Promise<string>--><!--Device-eSIM-function getEid(slotId: int): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。

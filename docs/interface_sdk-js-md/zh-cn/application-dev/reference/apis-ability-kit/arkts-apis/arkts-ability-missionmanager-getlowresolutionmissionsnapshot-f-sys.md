@@ -22,6 +22,8 @@ function getLowResolutionMissionSnapShot(
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
+<!--Device-missionManager-function getLowResolutionMissionSnapShot(    deviceId: string,    missionId: int,    callback: AsyncCallback<MissionSnapshot>  ): void--><!--Device-missionManager-function getLowResolutionMissionSnapShot(    deviceId: string,    missionId: int,    callback: AsyncCallback<MissionSnapshot>  ): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -80,6 +82,8 @@ function getLowResolutionMissionSnapShot(deviceId: string, missionId: number): P
 **起始版本：** 9
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
+
+<!--Device-missionManager-function getLowResolutionMissionSnapShot(deviceId: string, missionId: int): Promise<MissionSnapshot>--><!--Device-missionManager-function getLowResolutionMissionSnapShot(deviceId: string, missionId: int): Promise<MissionSnapshot>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 

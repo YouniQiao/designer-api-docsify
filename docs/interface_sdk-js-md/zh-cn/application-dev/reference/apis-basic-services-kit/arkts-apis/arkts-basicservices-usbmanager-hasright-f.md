@@ -18,6 +18,8 @@ function hasRight(deviceName: string): boolean
 
 **起始版本：** 9
 
+<!--Device-usbManager-function hasRight(deviceName: string): boolean--><!--Device-usbManager-function hasRight(deviceName: string): boolean-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 **参数：**

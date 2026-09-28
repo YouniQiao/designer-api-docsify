@@ -18,6 +18,8 @@ paragraph.
 
 **Since:** 12
 
+<!--Device-unnamed-declare namespace text--><!--Device-unnamed-declare namespace text-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## Modules to Import

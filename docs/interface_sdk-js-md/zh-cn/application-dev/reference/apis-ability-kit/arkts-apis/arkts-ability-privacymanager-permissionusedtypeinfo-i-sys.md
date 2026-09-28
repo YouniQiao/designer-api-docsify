@@ -8,6 +8,8 @@ interface PermissionUsedTypeInfo
 
 **起始版本：** 12
 
+<!--Device-privacyManager-interface PermissionUsedTypeInfo--><!--Device-privacyManager-interface PermissionUsedTypeInfo-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ permissionName: Permissions
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-PermissionUsedTypeInfo-permissionName: Permissions--><!--Device-PermissionUsedTypeInfo-permissionName: Permissions-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -50,6 +54,8 @@ tokenId: number
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-PermissionUsedTypeInfo-tokenId: int--><!--Device-PermissionUsedTypeInfo-tokenId: int-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -67,6 +73,8 @@ usedType: PermissionUsedType
 **起始版本：** 12
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-PermissionUsedTypeInfo-usedType: PermissionUsedType--><!--Device-PermissionUsedTypeInfo-usedType: PermissionUsedType-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 

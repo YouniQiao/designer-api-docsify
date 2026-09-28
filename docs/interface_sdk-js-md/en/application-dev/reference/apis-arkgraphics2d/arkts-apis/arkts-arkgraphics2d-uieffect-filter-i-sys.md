@@ -8,6 +8,8 @@ Filter effect class, used to apply corresponding effects to specified components
 
 **Since:** 12
 
+<!--Device-uiEffect-interface Filter--><!--Device-uiEffect-interface Filter-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## Modules to Import
@@ -25,6 +27,8 @@ bezierWarp(controlPoints: Array<common2D.Point>): Filter
 Adds a Bezier curve deformation effect to the component. This effect achieves precise distortion and shape adjustment of the image by creating closed Bezier curves at the layer boundary. There are four Bezier curve segments, connected head to tail in sequence, with each segment containing one vertex and two tangent points. Typical application scenarios include face deformation effects, card perspective distortion, etc.
 
 **Since:** 20
+
+<!--Device-Filter-bezierWarp(controlPoints: Array<common2D.Point>): Filter--><!--Device-Filter-bezierWarp(controlPoints: Array<common2D.Point>): Filter-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -83,6 +87,8 @@ Applies a blur bubbles rise effect to the image, simulating a dreamy, bubbly dis
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Filter-blurBubblesRise(param: BlurBubblesRiseEffectParam): Filter--><!--Device-Filter-blurBubblesRise(param: BlurBubblesRiseEffectParam): Filter-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -163,6 +169,8 @@ Adds a color gradient effect to the component content.
 
 **Since:** 20
 
+<!--Device-Filter-colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths: Array<double>,        alphaMask?: Mask): Filter--><!--Device-Filter-colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths: Array<double>,        alphaMask?: Mask): Filter-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -230,6 +238,8 @@ contentLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightI
 Adds a 3D lighting effect to the component content.
 
 **Since:** 20
+
+<!--Device-Filter-contentLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIntensity: double,      displacementMap?: Mask): Filter--><!--Device-Filter-contentLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIntensity: double,      displacementMap?: Mask): Filter-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -306,6 +316,8 @@ Provides a Mask-based and directional light lighting effect for the component co
 
 **Since:** 20
 
+<!--Device-Filter-directionLight(direction: common2D.Point3d, color: Color, intensity: double, mask?: Mask, factor?: double): Filter--><!--Device-Filter-directionLight(direction: common2D.Point3d, color: Color, intensity: double, mask?: Mask, factor?: double): Filter-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -380,6 +392,8 @@ Adds a distortion effect to the component content.
 
 **Since:** 20
 
+<!--Device-Filter-displacementDistort(displacementMap: Mask, factor?: [double, double]): Filter--><!--Device-Filter-displacementDistort(displacementMap: Mask, factor?: [double, double]): Filter-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -436,6 +450,8 @@ Adds a lens distortion effect to the component.
 
 **Since:** 13
 
+<!--Device-Filter-distort(distortionK: double): Filter--><!--Device-Filter-distort(distortionK: double): Filter-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -475,6 +491,8 @@ edgeLight(alpha: number, color?: Color, mask?: Mask, bloom?: boolean): Filter
 Detects edges of the component content and adds an edge highlight effect. This effect automatically detects the edge contours of the component content and overlays a highlight stroke.
 
 **Since:** 20
+
+<!--Device-Filter-edgeLight(alpha: double, color?: Color, mask?: Mask, bloom?: boolean): Filter--><!--Device-Filter-edgeLight(alpha: double, color?: Color, mask?: Mask, bloom?: boolean): Filter-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -536,6 +554,8 @@ Adds a fly-in or fly-out deformation effect to the component. Typical applicatio
 
 **Since:** 12
 
+<!--Device-Filter-flyInFlyOutEffect(degree: double, flyMode: FlyMode): Filter--><!--Device-Filter-flyInFlyOutEffect(degree: double, flyMode: FlyMode): Filter-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -583,6 +603,8 @@ Applies a soft halo bloom effect to the image, creating a gentle glow around bri
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Filter-haloBloom(tintColor: Color, bloomFactor: double, glowExposure: double): Filter--><!--Device-Filter-haloBloom(tintColor: Color, bloomFactor: double, glowExposure: double): Filter-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -612,6 +634,8 @@ Applies a heat distortion effect to the image, simulating the visual distortion 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Filter-heatDistortion(param: HeatDistortionEffectParam): Filter--><!--Device-Filter-heatDistortion(param: HeatDistortionEffectParam): Filter-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -677,6 +701,8 @@ Performs color gradient mapping on the image based on its brightness. The mappin
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Filter-mapColorByBrightness(colors: Array<Color>, positions: Array<double>): Filter--><!--Device-Filter-mapColorByBrightness(colors: Array<Color>, positions: Array<double>): Filter-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -704,6 +730,8 @@ maskDispersion(dispersionMap: Mask, alpha: number, rFactor?: [number, number], g
 Adds a dispersion effect controlled by a displacement map to the component content, simulating the dispersion phenomenon when light passes through a prism. Typical application scenarios include colorful effects, prism refraction simulation, etc.
 
 **Since:** 20
+
+<!--Device-Filter-maskDispersion(dispersionMap: Mask, alpha: double, rFactor?: [double, double], gFactor?: [double, double],      bFactor?: [double, double]): Filter--><!--Device-Filter-maskDispersion(dispersionMap: Mask, alpha: double, rFactor?: [double, double], gFactor?: [double, double],      bFactor?: [double, double]): Filter-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -793,6 +821,8 @@ It is not recommended to use this effect during screen size changes, such as scr
 
 **Since:** 20
 
+<!--Device-Filter-maskTransition(alphaMask: Mask, factor?: double, inverse?: boolean): Filter--><!--Device-Filter-maskTransition(alphaMask: Mask, factor?: double, inverse?: boolean): Filter-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -873,6 +903,8 @@ Adds a pixel stretch effect to the component.
 
 **Since:** 12
 
+<!--Device-Filter-pixelStretch(stretchSizes: Array<double>, tileMode: TileMode): Filter--><!--Device-Filter-pixelStretch(stretchSizes: Array<double>, tileMode: TileMode): Filter-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -907,6 +939,8 @@ radiusGradientBlur(radius: number, gradientParam: LinearGradientBlurOptions): Fi
 Adds a radius linear gradient blur effect to the component content.
 
 **Since:** 19
+
+<!--Device-Filter-radiusGradientBlur(radius: double, gradientParam: LinearGradientBlurOptions): Filter--><!--Device-Filter-radiusGradientBlur(radius: double, gradientParam: LinearGradientBlurOptions): Filter-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -970,6 +1004,8 @@ Applies a spin blur effect to the image, creating rotational motion trails aroun
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Filter-spinBlur(center: common2D.Point, angle: double, samples: int): Filter--><!--Device-Filter-spinBlur(center: common2D.Point, angle: double, samples: int): Filter-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -997,6 +1033,8 @@ variableRadiusBlur(radius: number, radiusMap: Mask): Filter
 Provides a Mask-based gradient blur effect for the component content.
 
 **Since:** 20
+
+<!--Device-Filter-variableRadiusBlur(radius: double, radiusMap: Mask): Filter--><!--Device-Filter-variableRadiusBlur(radius: double, radiusMap: Mask): Filter-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -1053,6 +1091,8 @@ waterRipple(progress: number, waveCount: number, x: number, y: number, rippleMod
 Adds a water ripple effect to the component.
 
 **Since:** 12
+
+<!--Device-Filter-waterRipple(progress: double, waveCount: int, x: double, y: double, rippleMode: WaterRippleMode): Filter--><!--Device-Filter-waterRipple(progress: double, waveCount: int, x: double, y: double, rippleMode: WaterRippleMode): Filter-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 

@@ -16,6 +16,8 @@ function queryAppKeyState(): KeyStatus
 
 **起始版本：** 18
 
+<!--Device-screenLockFileManager-function queryAppKeyState(): KeyStatus--><!--Device-screenLockFileManager-function queryAppKeyState(): KeyStatus-End-->
+
 **系统能力：** SystemCapability.Security.ScreenLockFileManager
 
 **返回值：**

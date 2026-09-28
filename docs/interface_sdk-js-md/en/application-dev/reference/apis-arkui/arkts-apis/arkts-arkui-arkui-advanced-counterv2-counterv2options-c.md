@@ -10,6 +10,8 @@ When you select a **CounterV2** type, you must select the corresponding **Counte
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-declare class CounterV2Options--><!--Device-unnamed-declare class CounterV2Options-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -40,6 +42,8 @@ If the value is **undefined**, the default value is used.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-CounterV2Options-dateOptions?: CounterV2DateStyleOptions--><!--Device-CounterV2Options-dateOptions?: CounterV2DateStyleOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## direction
@@ -61,6 +65,8 @@ If the value is **undefined**, the default value is used.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-CounterV2Options-direction?: Direction--><!--Device-CounterV2Options-direction?: Direction-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -86,6 +92,8 @@ If the value is **undefined**, the default value is used.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-CounterV2Options-inlineOptions?: CounterV2InlineStyleOptions--><!--Device-CounterV2Options-inlineOptions?: CounterV2InlineStyleOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## numberOptions
@@ -110,6 +118,8 @@ If the value is **undefined**, the default value is used.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-CounterV2Options-numberOptions?: CounterV2NumberStyleOptions--><!--Device-CounterV2Options-numberOptions?: CounterV2NumberStyleOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## type
@@ -127,5 +137,7 @@ Type of the **CounterV2**. It must be used with the corresponding style paramete
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-CounterV2Options-type: CounterV2Type--><!--Device-CounterV2Options-type: CounterV2Type-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

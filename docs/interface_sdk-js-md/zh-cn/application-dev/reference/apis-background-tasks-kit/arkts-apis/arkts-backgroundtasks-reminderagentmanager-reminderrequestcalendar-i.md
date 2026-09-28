@@ -12,6 +12,8 @@ ReminderRequestCalendar extends ReminderRequest
 
 **起始版本：** 9
 
+<!--Device-reminderAgentManager-interface ReminderRequestCalendar extends ReminderRequest--><!--Device-reminderAgentManager-interface ReminderRequestCalendar extends ReminderRequest-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## 导入模块
@@ -32,6 +34,8 @@ dateTime: LocalDateTime
 
 **起始版本：** 9
 
+<!--Device-ReminderRequestCalendar-dateTime: LocalDateTime--><!--Device-ReminderRequestCalendar-dateTime: LocalDateTime-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## daysOfWeek
@@ -45,6 +49,8 @@ daysOfWeek?: Array<number>
 **类型：** Array&lt;number&gt;
 
 **起始版本：** 11
+
+<!--Device-ReminderRequestCalendar-daysOfWeek?: Array<int>--><!--Device-ReminderRequestCalendar-daysOfWeek?: Array<int>-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -60,6 +66,8 @@ endDateTime?: LocalDateTime
 
 **起始版本：** 12
 
+<!--Device-ReminderRequestCalendar-endDateTime?: LocalDateTime--><!--Device-ReminderRequestCalendar-endDateTime?: LocalDateTime-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## repeatDays
@@ -74,6 +82,8 @@ repeatDays?: Array<number>
 
 **起始版本：** 9
 
+<!--Device-ReminderRequestCalendar-repeatDays?: Array<int>--><!--Device-ReminderRequestCalendar-repeatDays?: Array<int>-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## repeatMonths
@@ -87,5 +97,7 @@ repeatMonths?: Array<number>
 **类型：** Array&lt;number&gt;
 
 **起始版本：** 9
+
+<!--Device-ReminderRequestCalendar-repeatMonths?: Array<int>--><!--Device-ReminderRequestCalendar-repeatMonths?: Array<int>-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent

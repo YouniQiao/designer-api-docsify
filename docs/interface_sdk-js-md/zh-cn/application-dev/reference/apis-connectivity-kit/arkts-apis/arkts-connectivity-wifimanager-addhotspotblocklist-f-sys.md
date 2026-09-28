@@ -18,6 +18,8 @@ function addHotspotBlockList(stationInfo: StationInfo): void
 
 **需要权限：** ohos.permission.SET_WIFI_INFO and ohos.permission.MANAGE_WIFI_HOTSPOT
 
+<!--Device-wifiManager-function addHotspotBlockList(stationInfo: StationInfo): void--><!--Device-wifiManager-function addHotspotBlockList(stationInfo: StationInfo): void-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
 **系统接口：** 此接口为系统接口。

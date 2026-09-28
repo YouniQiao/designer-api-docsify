@@ -8,6 +8,8 @@ enum AlbumKeys
 
 **起始版本：** 10
 
+<!--Device-photoAccessHelper-enum AlbumKeys--><!--Device-photoAccessHelper-enum AlbumKeys-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## BUNDLE_NAME
@@ -19,6 +21,8 @@ BUNDLE_NAME = 'bundle_name'
 相册的包名。
 
 **起始版本：** 18
+
+<!--Device-AlbumKeys-BUNDLE_NAME = 'bundle_name'--><!--Device-AlbumKeys-BUNDLE_NAME = 'bundle_name'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -34,6 +38,8 @@ DATE_MODIFIED = 'date_modified'
 
 **起始版本：** 18
 
+<!--Device-AlbumKeys-DATE_MODIFIED = 'date_modified'--><!--Device-AlbumKeys-DATE_MODIFIED = 'date_modified'-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -48,6 +54,8 @@ COVER_URI_SOURCE = 'cover_uri_source'
 
 **起始版本：** 20
 
+<!--Device-AlbumKeys-COVER_URI_SOURCE = 'cover_uri_source'--><!--Device-AlbumKeys-COVER_URI_SOURCE = 'cover_uri_source'-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +69,8 @@ UPLOAD_STATUS = 'upload_status'
 相册同步状态。
 
 **起始版本：** 22
+
+<!--Device-AlbumKeys-UPLOAD_STATUS = 'upload_status'--><!--Device-AlbumKeys-UPLOAD_STATUS = 'upload_status'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -78,6 +88,8 @@ HIDDEN = 'hidden'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AlbumKeys-HIDDEN = 'hidden'--><!--Device-AlbumKeys-HIDDEN = 'hidden'-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -93,6 +105,8 @@ FILE_HIDDEN = 'file_hidden'
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AlbumKeys-FILE_HIDDEN = 'file_hidden'--><!--Device-AlbumKeys-FILE_HIDDEN = 'file_hidden'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -110,6 +124,8 @@ SHARE_RISK_STATUS = 'share_risk_status'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AlbumKeys-SHARE_RISK_STATUS = 'share_risk_status'--><!--Device-AlbumKeys-SHARE_RISK_STATUS = 'share_risk_status'-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -125,6 +141,8 @@ SHARE_RISK_TYPE = 'share_risk_type'
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AlbumKeys-SHARE_RISK_TYPE = 'share_risk_type'--><!--Device-AlbumKeys-SHARE_RISK_TYPE = 'share_risk_type'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -142,6 +160,8 @@ SHARE_ALBUM_OWNER = 'share_album_owner'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AlbumKeys-SHARE_ALBUM_OWNER = 'share_album_owner'--><!--Device-AlbumKeys-SHARE_ALBUM_OWNER = 'share_album_owner'-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -157,6 +177,8 @@ CLOUD_ID = 'cloud_id'
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AlbumKeys-CLOUD_ID = 'cloud_id'--><!--Device-AlbumKeys-CLOUD_ID = 'cloud_id'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

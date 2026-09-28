@@ -16,6 +16,8 @@ export interface GeoCodeRequest
 
 **需要权限：** ohos.permission.LOCATION
 
+<!--Device-geolocation-export interface GeoCodeRequest--><!--Device-geolocation-export interface GeoCodeRequest-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 ## 导入模块
@@ -40,6 +42,8 @@ description: string
 
 **替代接口：** [description](arkts-location-geolocationmanager-geocoderequest-i.md#description)
 
+<!--Device-GeoCodeRequest-description: string--><!--Device-GeoCodeRequest-description: string-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 ## locale
@@ -57,6 +61,8 @@ locale?: string
 **废弃版本：** 9
 
 **替代接口：** [locale](arkts-location-geolocationmanager-geocoderequest-i.md#locale)
+
+<!--Device-GeoCodeRequest-locale?: string--><!--Device-GeoCodeRequest-locale?: string-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
@@ -76,6 +82,8 @@ maxItems?: number
 
 **替代接口：** [maxItems](arkts-location-geolocationmanager-geocoderequest-i.md#maxitems)
 
+<!--Device-GeoCodeRequest-maxItems?: number--><!--Device-GeoCodeRequest-maxItems?: number-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 ## maxLatitude
@@ -93,6 +101,8 @@ maxLatitude?: number
 **废弃版本：** 9
 
 **替代接口：** [maxLatitude](arkts-location-geolocationmanager-geocoderequest-i.md#maxlatitude)
+
+<!--Device-GeoCodeRequest-maxLatitude?: number--><!--Device-GeoCodeRequest-maxLatitude?: number-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
@@ -112,6 +122,8 @@ maxLongitude?: number
 
 **替代接口：** [maxLongitude](arkts-location-geolocationmanager-geocoderequest-i.md#maxlongitude)
 
+<!--Device-GeoCodeRequest-maxLongitude?: number--><!--Device-GeoCodeRequest-maxLongitude?: number-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 ## minLatitude
@@ -130,6 +142,8 @@ minLatitude?: number
 
 **替代接口：** [minLatitude](arkts-location-geolocationmanager-geocoderequest-i.md#minlatitude)
 
+<!--Device-GeoCodeRequest-minLatitude?: number--><!--Device-GeoCodeRequest-minLatitude?: number-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 ## minLongitude
@@ -147,5 +161,7 @@ minLongitude?: number
 **废弃版本：** 9
 
 **替代接口：** [minLongitude](arkts-location-geolocationmanager-geocoderequest-i.md#minlongitude)
+
+<!--Device-GeoCodeRequest-minLongitude?: number--><!--Device-GeoCodeRequest-minLongitude?: number-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geocoder

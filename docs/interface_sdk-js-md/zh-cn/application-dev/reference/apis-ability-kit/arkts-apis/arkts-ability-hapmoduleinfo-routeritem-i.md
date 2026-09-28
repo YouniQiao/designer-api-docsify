@@ -8,6 +8,8 @@ export interface RouterItem
 
 **起始版本：** 12
 
+<!--Device-unnamed-export interface RouterItem--><!--Device-unnamed-export interface RouterItem-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## buildFunction
@@ -22,7 +24,9 @@ readonly buildFunction: string
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-RouterItem-readonly buildFunction: string--><!--Device-RouterItem-readonly buildFunction: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -38,7 +42,9 @@ readonly customData: string
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-RouterItem-readonly customData: string--><!--Device-RouterItem-readonly customData: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -54,7 +60,9 @@ readonly data: Array<DataItem>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-RouterItem-readonly data: Array<DataItem>--><!--Device-RouterItem-readonly data: Array<DataItem>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -70,7 +78,9 @@ readonly name: string
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-RouterItem-readonly name: string--><!--Device-RouterItem-readonly name: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -86,6 +96,8 @@ readonly pageSourceFile: string
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-RouterItem-readonly pageSourceFile: string--><!--Device-RouterItem-readonly pageSourceFile: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core

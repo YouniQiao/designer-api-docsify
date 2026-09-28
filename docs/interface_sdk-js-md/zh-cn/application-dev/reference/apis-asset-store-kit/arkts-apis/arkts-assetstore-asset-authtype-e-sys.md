@@ -8,6 +8,8 @@ enum AuthType
 
 **起始版本：** 11
 
+<!--Device-asset-enum AuthType--><!--Device-asset-enum AuthType-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 ## PRIVATE_PIN
@@ -21,6 +23,8 @@ PRIVATE_PIN = 0x100
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-AuthType-PRIVATE_PIN = 0x100--><!--Device-AuthType-PRIVATE_PIN = 0x100-End-->
 
 **系统能力：** SystemCapability.Security.Asset
 

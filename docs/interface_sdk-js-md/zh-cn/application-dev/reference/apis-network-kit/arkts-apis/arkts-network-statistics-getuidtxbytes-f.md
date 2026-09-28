@@ -24,6 +24,8 @@ function getUidTxBytes(uid: number, callback: AsyncCallback<number>): void
 - API版本26+：ohos.permission.GET_NETWORK_STATS
 - API版本10-25：N/A
 
+<!--Device-statistics-function getUidTxBytes(uid: int, callback: AsyncCallback<long>): void--><!--Device-statistics-function getUidTxBytes(uid: int, callback: AsyncCallback<long>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**
@@ -80,6 +82,8 @@ function getUidTxBytes(uid: number): Promise<number>
 **需要权限：** 
 - API版本26+：ohos.permission.GET_NETWORK_STATS
 - API版本10-25：N/A
+
+<!--Device-statistics-function getUidTxBytes(uid: int): Promise<long>--><!--Device-statistics-function getUidTxBytes(uid: int): Promise<long>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 

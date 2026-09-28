@@ -18,6 +18,8 @@ function unlockMission(missionId: number, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
+<!--Device-missionManager-function unlockMission(missionId: int, callback: AsyncCallback<void>): void--><!--Device-missionManager-function unlockMission(missionId: int, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -75,6 +77,8 @@ function unlockMission(missionId: number): Promise<void>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
+
+<!--Device-missionManager-function unlockMission(missionId: int): Promise<void>--><!--Device-missionManager-function unlockMission(missionId: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 

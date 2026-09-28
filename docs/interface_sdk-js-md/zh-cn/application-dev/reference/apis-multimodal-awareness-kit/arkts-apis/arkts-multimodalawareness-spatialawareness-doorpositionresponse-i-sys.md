@@ -8,6 +8,8 @@ export interface DoorPositionResponse
 
 **起始版本：** 23
 
+<!--Device-spatialAwareness-export interface DoorPositionResponse--><!--Device-spatialAwareness-export interface DoorPositionResponse-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.DistanceMeasurement
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ deviceId: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DoorPositionResponse-deviceId: string--><!--Device-DoorPositionResponse-deviceId: string-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.DistanceMeasurement
 
 **系统接口：** 此接口为系统接口。
@@ -50,6 +54,8 @@ doorLockCode: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DoorPositionResponse-doorLockCode: int--><!--Device-DoorPositionResponse-doorLockCode: int-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.DistanceMeasurement
 
 **系统接口：** 此接口为系统接口。
@@ -67,6 +73,8 @@ position: PositionRelativeToDoor
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DoorPositionResponse-position: PositionRelativeToDoor--><!--Device-DoorPositionResponse-position: PositionRelativeToDoor-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.DistanceMeasurement
 

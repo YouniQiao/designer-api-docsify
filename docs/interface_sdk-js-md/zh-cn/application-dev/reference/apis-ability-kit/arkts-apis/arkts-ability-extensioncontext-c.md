@@ -10,6 +10,8 @@ ExtensionContext是[ExtensionAbility](arkts-ability-app-ability-extensionability
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare class ExtensionContext extends Context--><!--Device-unnamed-declare class ExtensionContext extends Context-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## config
@@ -26,7 +28,9 @@ config: Configuration
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ExtensionContext-config: Configuration--><!--Device-ExtensionContext-config: Configuration-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -44,7 +48,9 @@ currentHapModuleInfo: HapModuleInfo
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ExtensionContext-currentHapModuleInfo: HapModuleInfo--><!--Device-ExtensionContext-currentHapModuleInfo: HapModuleInfo-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -62,6 +68,8 @@ extensionAbilityInfo: ExtensionAbilityInfo
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ExtensionContext-extensionAbilityInfo: ExtensionAbilityInfo--><!--Device-ExtensionContext-extensionAbilityInfo: ExtensionAbilityInfo-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

@@ -8,6 +8,8 @@ Provides APIs to check whether a camera device supports manual ISO setting and o
 
 **起始版本：** 24
 
+<!--Device-camera-interface ManualIsoQuery--><!--Device-camera-interface ManualIsoQuery-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
@@ -26,7 +28,9 @@ Get a array of supported standard ISO sensitivity values, as defined in ISO 1223
 
 **起始版本：** 24
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-ManualIsoQuery-getSupportedIsoRange(): int[]--><!--Device-ManualIsoQuery-getSupportedIsoRange(): int[]-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

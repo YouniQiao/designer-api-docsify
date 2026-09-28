@@ -8,6 +8,8 @@ Sets the options used to build the **TextTimer** component.
 
 **Since:** 8
 
+<!--Device-unnamed-interface TextTimerOptions--><!--Device-unnamed-interface TextTimerOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## controller
@@ -25,6 +27,8 @@ Controller of the TextTimer, used to start, pause, and reset the timer programma
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
+
+<!--Device-TextTimerOptions-controller?: TextTimerController--><!--Device-TextTimerOptions-controller?: TextTimerController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,6 +51,8 @@ Value range: (0, 86400000), that is, no more than 24 hours. If the value is out 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
+
+<!--Device-TextTimerOptions-count?: number--><!--Device-TextTimerOptions-count?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -71,6 +77,8 @@ Default value: **false**
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
+
+<!--Device-TextTimerOptions-isCountDown?: boolean--><!--Device-TextTimerOptions-isCountDown?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -99,5 +107,7 @@ When the value is negative, the timer starts counting from the negative value an
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
+
+<!--Device-TextTimerOptions-startTime?: number--><!--Device-TextTimerOptions-startTime?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

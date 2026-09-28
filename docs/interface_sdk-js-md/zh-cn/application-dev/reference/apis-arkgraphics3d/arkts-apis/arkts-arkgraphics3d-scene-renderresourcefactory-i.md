@@ -10,6 +10,8 @@ export interface RenderResourceFactory
 
 **起始版本：** 20
 
+<!--Device-unnamed-export interface RenderResourceFactory--><!--Device-unnamed-export interface RenderResourceFactory-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## createImage
@@ -21,6 +23,8 @@ createImage(params: SceneResourceParameters): Promise<Image>
 根据指定场景资源参数创建一个图像资源，使用Promise异步回调。
 
 **起始版本：** 20
+
+<!--Device-RenderResourceFactory-createImage(params: SceneResourceParameters): Promise<Image>--><!--Device-RenderResourceFactory-createImage(params: SceneResourceParameters): Promise<Image>-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -68,6 +72,8 @@ createImageStream(params: SceneResourceParameters): Promise<ImageStream>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RenderResourceFactory-createImageStream(params: SceneResourceParameters): Promise<ImageStream>--><!--Device-RenderResourceFactory-createImageStream(params: SceneResourceParameters): Promise<ImageStream>-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **参数：**
@@ -109,6 +115,8 @@ createMesh(params: SceneResourceParameters, geometry: GeometryDefinition): Promi
 根据指定场景资源参数和几何体定义（GeometryDefinition）创建一个网格资源（MeshResource），使用Promise异步回调。
 
 **起始版本：** 20
+
+<!--Device-RenderResourceFactory-createMesh(params: SceneResourceParameters, geometry: GeometryDefinition): Promise<MeshResource>--><!--Device-RenderResourceFactory-createMesh(params: SceneResourceParameters, geometry: GeometryDefinition): Promise<MeshResource>-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -206,6 +214,8 @@ createSampler(params:SceneResourceParameters): Promise<Sampler>
 
 **起始版本：** 20
 
+<!--Device-RenderResourceFactory-createSampler(params:SceneResourceParameters): Promise<Sampler>--><!--Device-RenderResourceFactory-createSampler(params:SceneResourceParameters): Promise<Sampler>-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **参数：**
@@ -249,6 +259,8 @@ createScene(uri?: ResourceStr): Promise<Scene>
 从指定的资源URI创建一个新的场景。如果不指定URI，则创建一个空场景，使用Promise异步回调。
 
 **起始版本：** 20
+
+<!--Device-RenderResourceFactory-createScene(uri?: ResourceStr): Promise<Scene>--><!--Device-RenderResourceFactory-createScene(uri?: ResourceStr): Promise<Scene>-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -296,6 +308,8 @@ createShader(params: SceneResourceParameters): Promise<Shader>
 根据指定场景资源参数创建一个着色器，使用Promise异步回调。
 
 **起始版本：** 20
+
+<!--Device-RenderResourceFactory-createShader(params: SceneResourceParameters): Promise<Shader>--><!--Device-RenderResourceFactory-createShader(params: SceneResourceParameters): Promise<Shader>-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 

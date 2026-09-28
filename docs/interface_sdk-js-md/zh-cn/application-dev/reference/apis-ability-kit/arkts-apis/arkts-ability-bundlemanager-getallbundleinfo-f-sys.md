@@ -18,6 +18,8 @@ function getAllBundleInfo(bundleFlags: number, callback: AsyncCallback<Array<Bun
 
 **需要权限：** ohos.permission.GET_INSTALLED_BUNDLE_LIST
 
+<!--Device-bundleManager-function getAllBundleInfo(bundleFlags: int, callback: AsyncCallback<Array<BundleInfo>>): void--><!--Device-bundleManager-function getAllBundleInfo(bundleFlags: int, callback: AsyncCallback<Array<BundleInfo>>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -74,6 +76,8 @@ function getAllBundleInfo(bundleFlags: number, userId: number, callback: AsyncCa
 **起始版本：** 9
 
 **需要权限：** ohos.permission.GET_INSTALLED_BUNDLE_LIST
+
+<!--Device-bundleManager-function getAllBundleInfo(bundleFlags: int, userId: int, callback: AsyncCallback<Array<BundleInfo>>): void--><!--Device-bundleManager-function getAllBundleInfo(bundleFlags: int, userId: int, callback: AsyncCallback<Array<BundleInfo>>): void-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -134,6 +138,8 @@ function getAllBundleInfo(bundleFlags: number, userId?: number): Promise<Array<B
 **起始版本：** 9
 
 **需要权限：** ohos.permission.GET_INSTALLED_BUNDLE_LIST
+
+<!--Device-bundleManager-function getAllBundleInfo(bundleFlags: int, userId?: int): Promise<Array<BundleInfo>>--><!--Device-bundleManager-function getAllBundleInfo(bundleFlags: int, userId?: int): Promise<Array<BundleInfo>>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

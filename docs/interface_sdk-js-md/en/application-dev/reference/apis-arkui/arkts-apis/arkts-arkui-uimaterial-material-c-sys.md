@@ -8,6 +8,8 @@ System material object on the UI.
 
 **Since:** 26.0.0
 
+<!--Device-uiMaterial-class Material--><!--Device-uiMaterial-class Material-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -29,6 +31,8 @@ A constructor used to create a **Material** object.
 **Model restriction:** This API can be used only in the stage model.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
+
+<!--Device-Material-constructor(options?: MaterialOptions)--><!--Device-Material-constructor(options?: MaterialOptions)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

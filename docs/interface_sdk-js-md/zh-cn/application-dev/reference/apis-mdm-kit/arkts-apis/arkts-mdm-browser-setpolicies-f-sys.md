@@ -24,6 +24,8 @@ function setPolicies(admin: Want, appId: string, policies: string, callback: Asy
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-browser-function setPolicies(admin: Want, appId: string, policies: string, callback: AsyncCallback<void>): void--><!--Device-browser-function setPolicies(admin: Want, appId: string, policies: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -90,6 +92,8 @@ function setPolicies(admin: Want, appId: string, policies: string): Promise<void
 **需要权限：** ohos.permission.ENTERPRISE_SET_BROWSER_POLICY
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-browser-function setPolicies(admin: Want, appId: string, policies: string): Promise<void>--><!--Device-browser-function setPolicies(admin: Want, appId: string, policies: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

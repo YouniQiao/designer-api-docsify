@@ -8,6 +8,8 @@ Defines the controller of the **XComponent**. You can bind the controller to the
 
 **Since:** 8
 
+<!--Device-unnamed-declare class XComponentController--><!--Device-unnamed-declare class XComponentController-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
@@ -21,6 +23,8 @@ A constructor used to create a **XComponentController** object.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-XComponentController-constructor()--><!--Device-XComponentController-constructor()-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,6 +46,8 @@ Obtains the context of an **XComponent** object. This API works only when **type
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-XComponentController-getXComponentContext(): Object--><!--Device-XComponentController-getXComponentContext(): Object-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -61,6 +67,8 @@ Obtains the ID of the surface held by the **XComponent**. This API works only wh
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-XComponentController-getXComponentSurfaceId(): string--><!--Device-XComponentController-getXComponentSurfaceId(): string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -111,6 +119,8 @@ Obtains the display area for the surface held by the **XComponent**, including t
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-XComponentController-getXComponentSurfaceRect(): SurfaceRect--><!--Device-XComponentController-getXComponentSurfaceRect(): SurfaceRect-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -132,6 +142,8 @@ Obtains whether the orientation of the surface held by this **XComponent** is lo
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-XComponentController-getXComponentSurfaceRotation(): Required<SurfaceRotationOptions>--><!--Device-XComponentController-getXComponentSurfaceRotation(): Required<SurfaceRotationOptions>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -155,6 +167,8 @@ Obtains a canvas object for drawing content on the **XComponent** component. For
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-XComponentController-lockCanvas(): DrawingCanvas | null--><!--Device-XComponentController-lockCanvas(): DrawingCanvas | null-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -176,6 +190,8 @@ Triggered when the surface held by the **XComponent** has its size changed (incl
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-XComponentController-onSurfaceChanged(surfaceId: string, rect: SurfaceRect): void--><!--Device-XComponentController-onSurfaceChanged(surfaceId: string, rect: SurfaceRect): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -200,6 +216,8 @@ Triggered when the surface held by the **XComponent** is created. This API works
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-XComponentController-onSurfaceCreated(surfaceId: string): void--><!--Device-XComponentController-onSurfaceCreated(surfaceId: string): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -221,6 +239,8 @@ Triggered when the surface held by the **XComponent** is destroyed. This API wor
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-XComponentController-onSurfaceDestroyed(surfaceId: string): void--><!--Device-XComponentController-onSurfaceDestroyed(surfaceId: string): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -248,6 +268,8 @@ Sets the options of the surface created by the **XComponent**, which determine w
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-XComponentController-setXComponentSurfaceConfig(config: SurfaceConfig):void--><!--Device-XComponentController-setXComponentSurfaceConfig(config: SurfaceConfig):void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -270,6 +292,8 @@ Sets the display area for the surface held by the **XComponent**, including the 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-XComponentController-setXComponentSurfaceRect(rect: SurfaceRect): void--><!--Device-XComponentController-setXComponentSurfaceRect(rect: SurfaceRect): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -291,6 +315,8 @@ Sets whether to lock the orientation of the surface held by this **XComponent** 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-XComponentController-setXComponentSurfaceRotation(rotationOptions: SurfaceRotationOptions): void--><!--Device-XComponentController-setXComponentSurfaceRotation(rotationOptions: SurfaceRotationOptions): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -323,6 +349,8 @@ If this API is repeatedly called before the execution is complete, an error call
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-XComponentController-startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>--><!--Device-XComponentController-startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -367,6 +395,8 @@ Stops AI image analysis. The content displayed by the AI image analyzer will be 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-XComponentController-stopImageAnalyzer(): void--><!--Device-XComponentController-stopImageAnalyzer(): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## unlockCanvasAndPost
@@ -382,6 +412,8 @@ Submits the drawn content from a canvas object to the display area of the **XCom
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-XComponentController-unlockCanvasAndPost(canvas: DrawingCanvas):void--><!--Device-XComponentController-unlockCanvasAndPost(canvas: DrawingCanvas):void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -409,6 +441,8 @@ Unit: px.
 **Deprecated since:** 12
 
 **Substitutes:** [setXComponentSurfaceRect](#setxcomponentsurfacerect)
+
+<!--Device-XComponentController-setXComponentSurfaceSize(value: {    surfaceWidth: number;    surfaceHeight: number;  }): void--><!--Device-XComponentController-setXComponentSurfaceSize(value: {    surfaceWidth: number;    surfaceHeight: number;  }): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

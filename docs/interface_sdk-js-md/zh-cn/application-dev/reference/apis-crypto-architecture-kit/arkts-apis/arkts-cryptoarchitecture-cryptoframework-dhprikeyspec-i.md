@@ -12,6 +12,8 @@ interface DHPriKeySpec extends AsyKeySpec
 
 **起始版本：** 11
 
+<!--Device-cryptoFramework-interface DHPriKeySpec extends AsyKeySpec--><!--Device-cryptoFramework-interface DHPriKeySpec extends AsyKeySpec-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
 - API版本11：SystemCapability.Security.CryptoFramework
@@ -34,7 +36,9 @@ params: DHCommonParamsSpec
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-DHPriKeySpec-params: DHCommonParamsSpec--><!--Device-DHPriKeySpec-params: DHCommonParamsSpec-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -52,7 +56,9 @@ DH算法中的私钥sk。
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-DHPriKeySpec-sk: bigint--><!--Device-DHPriKeySpec-sk: bigint-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey

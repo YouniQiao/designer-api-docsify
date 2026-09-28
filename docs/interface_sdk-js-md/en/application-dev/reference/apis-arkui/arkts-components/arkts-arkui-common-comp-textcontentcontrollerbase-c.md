@@ -8,6 +8,8 @@ Represents the base controller for **TextInput**, **TextArea**, and **Search** c
 
 **Since:** 10
 
+<!--Device-unnamed-declare abstract class TextContentControllerBase--><!--Device-unnamed-declare abstract class TextContentControllerBase-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## addText
@@ -32,6 +34,8 @@ This API does not work when the text is being dragged.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-TextContentControllerBase-addText(text: string, textOperationOptions?: TextContentControllerOptions): number--><!--Device-TextContentControllerBase-addText(text: string, textOperationOptions?: TextContentControllerOptions): number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -67,6 +71,8 @@ Notifies the input method to clear the current preview text.
 
 **Atomic service API:** This API can be used in atomic services since API version 17.
 
+<!--Device-TextContentControllerBase-clearPreviewText(): void--><!--Device-TextContentControllerBase-clearPreviewText(): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## deleteBackward
@@ -89,6 +95,8 @@ This API is not effective in the state of dragged text.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-TextContentControllerBase-deleteBackward(): void--><!--Device-TextContentControllerBase-deleteBackward(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -123,6 +131,8 @@ This API does not work when the text is being dragged.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-TextContentControllerBase-deleteText(range?: TextRange): void--><!--Device-TextContentControllerBase-deleteText(range?: TextRange): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -149,13 +159,15 @@ Obtains the position information of the caret.
 > 
 > - The position information in the return value is the position of the caret relative to the editable component.
 > 
-> - When the caret position cannot be obtained (for example, when [TextInputController](arkts-arkui-textinput-comp-textinputcontroller-c.md)is not bound to the [TextInput](arkts-arkui-textinput-comp.md#text_input) component), this API returns undefined.
+> - When the caret position cannot be obtained (for example, when [TextInputController](arkts-arkui-textinput-comp-textinputcontroller-c.md)is not bound to the [TextInput](arkts-arkui-textinput-comp.md) component), this API returns undefined.
 
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextContentControllerBase-getCaretOffset() : CaretOffset--><!--Device-TextContentControllerBase-getCaretOffset() : CaretOffset-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -179,6 +191,8 @@ Obtains the current text selection range.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-TextContentControllerBase-getSelection(): TextRange--><!--Device-TextContentControllerBase-getSelection(): TextRange-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -201,6 +215,8 @@ Obtains the number of lines of the edited text.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TextContentControllerBase-getTextContentLineCount() : number--><!--Device-TextContentControllerBase-getTextContentLineCount() : number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -222,6 +238,8 @@ Obtains the position of the edited text area relative to the component and its s
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextContentControllerBase-getTextContentRect() : RectResult--><!--Device-TextContentControllerBase-getTextContentRect() : RectResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -250,6 +268,8 @@ Passes the start and end indexes to the bound text box components (**TextInput**
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-TextContentControllerBase-scrollToVisible(range?: TextRange): void--><!--Device-TextContentControllerBase-scrollToVisible(range?: TextRange): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -276,6 +296,8 @@ Sets the placeholder text with the styled string, triggering binding or update.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-TextContentControllerBase-setStyledPlaceholder(styledString: StyledString): void--><!--Device-TextContentControllerBase-setStyledPlaceholder(styledString: StyledString): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

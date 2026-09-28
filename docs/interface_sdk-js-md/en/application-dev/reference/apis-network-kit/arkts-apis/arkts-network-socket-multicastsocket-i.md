@@ -10,6 +10,8 @@ Defines a **MulticastSocket** connection. Before calling MulticastSocket APIs, y
 
 **Since:** 11
 
+<!--Device-socket-export interface MulticastSocket extends UDPSocket--><!--Device-socket-export interface MulticastSocket extends UDPSocket-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import
@@ -36,6 +38,8 @@ Adds a member to a multicast group. This API uses an asynchronous callback to re
 **Since:** 11
 
 **Required permissions:** ohos.permission.INTERNET
+
+<!--Device-MulticastSocket-addMembership(multicastAddress: NetAddress, callback: AsyncCallback<void>): void--><!--Device-MulticastSocket-addMembership(multicastAddress: NetAddress, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -96,6 +100,8 @@ Adds a member to a multicast group. This API uses a promise to return the result
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-MulticastSocket-addMembership(multicastAddress: NetAddress): Promise<void>--><!--Device-MulticastSocket-addMembership(multicastAddress: NetAddress): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -155,6 +161,8 @@ Drops a member from a multicast group. This API uses an asynchronous callback to
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-MulticastSocket-dropMembership(multicastAddress: NetAddress, callback: AsyncCallback<void>): void--><!--Device-MulticastSocket-dropMembership(multicastAddress: NetAddress, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -212,6 +220,8 @@ Drops a member from a multicast group. This API uses a promise to return the res
 **Since:** 11
 
 **Required permissions:** ohos.permission.INTERNET
+
+<!--Device-MulticastSocket-dropMembership(multicastAddress: NetAddress): Promise<void>--><!--Device-MulticastSocket-dropMembership(multicastAddress: NetAddress): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -274,6 +284,8 @@ Obtains the loopback mode flag for multicast communication. This API uses an asy
 
 **Since:** 11
 
+<!--Device-MulticastSocket-getLoopbackMode(callback: AsyncCallback<boolean>): void--><!--Device-MulticastSocket-getLoopbackMode(callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -327,6 +339,8 @@ Obtains the loopback mode flag for multicast communication. This API uses a prom
 
 **Since:** 11
 
+<!--Device-MulticastSocket-getLoopbackMode(): Promise<boolean>--><!--Device-MulticastSocket-getLoopbackMode(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
@@ -377,6 +391,8 @@ Obtains the TTL for multicast packets. This API uses an asynchronous callback to
 > is called.
 
 **Since:** 11
+
+<!--Device-MulticastSocket-getMulticastTTL(callback: AsyncCallback<int>): void--><!--Device-MulticastSocket-getMulticastTTL(callback: AsyncCallback<int>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -433,6 +449,8 @@ Obtains the TTL for multicast packets. This API uses a promise to return the res
 
 **Since:** 11
 
+<!--Device-MulticastSocket-getMulticastTTL(): Promise<int>--><!--Device-MulticastSocket-getMulticastTTL(): Promise<int>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
@@ -482,6 +500,8 @@ Obtains the file descriptor of the MulticastSocket. This API uses a promise to r
 **Required permissions:** ohos.permission.INTERNET
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MulticastSocket-getSocketFd(): Promise<int>--><!--Device-MulticastSocket-getSocketFd(): Promise<int>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -542,6 +562,8 @@ Sets the loopback mode flag for multicast communication. This API uses an asynch
 
 **Since:** 11
 
+<!--Device-MulticastSocket-setLoopbackMode(flag: boolean, callback: AsyncCallback<void>): void--><!--Device-MulticastSocket-setLoopbackMode(flag: boolean, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -595,6 +617,8 @@ Sets the loopback mode flag for multicast communication. This API uses a promise
 > is called.
 
 **Since:** 11
+
+<!--Device-MulticastSocket-setLoopbackMode(flag: boolean): Promise<void>--><!--Device-MulticastSocket-setLoopbackMode(flag: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -652,6 +676,8 @@ Sets the time to live (TTL) for multicast packets. This API uses an asynchronous
 > is called.
 
 **Since:** 11
+
+<!--Device-MulticastSocket-setMulticastTTL(ttl: int, callback: AsyncCallback<void>): void--><!--Device-MulticastSocket-setMulticastTTL(ttl: int, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -711,6 +737,8 @@ Sets the TTL for multicast packets. This API uses a promise to return the result
 
 **Since:** 11
 
+<!--Device-MulticastSocket-setMulticastTTL(ttl: int): Promise<void>--><!--Device-MulticastSocket-setMulticastTTL(ttl: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -766,6 +794,8 @@ Sets whether the multicast socket supports address reuse. This API is called in 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MulticastSocket-setReuseAddress(reuse: boolean): void--><!--Device-MulticastSocket-setReuseAddress(reuse: boolean): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 

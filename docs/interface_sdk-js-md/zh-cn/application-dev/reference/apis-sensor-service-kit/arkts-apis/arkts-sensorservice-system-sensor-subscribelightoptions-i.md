@@ -14,6 +14,8 @@ export interface SubscribeLightOptions
 
 **替代接口：** [AMBIENT_LIGHT](arkts-sensorservice-sensor-sensorid-e.md#ambient_light)
 
+<!--Device-unnamed-export interface SubscribeLightOptions--><!--Device-unnamed-export interface SubscribeLightOptions-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
 ## 导入模块
@@ -37,6 +39,8 @@ fail?: (data: string, code: number) => void
 **替代接口：** [on](arkts-sensorservice-sensor-on-f.md)
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-SubscribeLightOptions-fail?: (data: string, code: number) => void--><!--Device-SubscribeLightOptions-fail?: (data: string, code: number) => void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
@@ -62,6 +66,8 @@ success: (data: LightResponse) => void
 **替代接口：** [on](arkts-sensorservice-sensor-on-f.md)
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-SubscribeLightOptions-success: (data: LightResponse) => void--><!--Device-SubscribeLightOptions-success: (data: LightResponse) => void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 

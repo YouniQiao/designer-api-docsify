@@ -18,6 +18,8 @@ function reportAVScreenCaptureUserChoice(sessionId: number, choice: string): Pro
 
 **起始版本：** 12
 
+<!--Device-media-function reportAVScreenCaptureUserChoice(sessionId: int, choice: string): Promise<void>--><!--Device-media-function reportAVScreenCaptureUserChoice(sessionId: int, choice: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 **系统接口：** 此接口为系统接口。

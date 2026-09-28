@@ -16,6 +16,8 @@ function getOpName(slotId: number, callback: AsyncCallback<string>): void
 
 **起始版本：** 9
 
+<!--Device-sim-function getOpName(slotId: int, callback: AsyncCallback<string>): void--><!--Device-sim-function getOpName(slotId: int, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**
@@ -67,6 +69,8 @@ function getOpName(slotId: number): Promise<string>
 获取指定卡槽中SIM卡的OpName。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-sim-function getOpName(slotId: int): Promise<string>--><!--Device-sim-function getOpName(slotId: int): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

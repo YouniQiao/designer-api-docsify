@@ -20,6 +20,8 @@ function getBundleInfo(bundleName: string, bundleFlags: number, callback: AsyncC
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
+<!--Device-bundleManager-function getBundleInfo(bundleName: string, bundleFlags: int, callback: AsyncCallback<BundleInfo>): void--><!--Device-bundleManager-function getBundleInfo(bundleName: string, bundleFlags: int, callback: AsyncCallback<BundleInfo>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **参数：**
@@ -81,6 +83,8 @@ function getBundleInfo(bundleName: string, bundleFlags: number, userId: number, 
 **起始版本：** 14
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
+
+<!--Device-bundleManager-function getBundleInfo(bundleName: string, bundleFlags: int, userId: int, callback: AsyncCallback<BundleInfo>): void--><!--Device-bundleManager-function getBundleInfo(bundleName: string, bundleFlags: int, userId: int, callback: AsyncCallback<BundleInfo>): void-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -171,6 +175,8 @@ function getBundleInfo(bundleName: string, bundleFlags: number, userId?: number)
 **起始版本：** 14
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
+
+<!--Device-bundleManager-function getBundleInfo(bundleName: string, bundleFlags: int, userId?: int): Promise<BundleInfo>--><!--Device-bundleManager-function getBundleInfo(bundleName: string, bundleFlags: int, userId?: int): Promise<BundleInfo>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

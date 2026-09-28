@@ -8,13 +8,15 @@ Ability信息，未做特殊说明的属性，均通过[bundle.getAbilityInfo](a
 
 > **说明：** 
 > 
-> 从API version 9开始，该模块不再维护，建议使用[bundleManager-AbilityInfo](#abilityinfo)替代。
+> 从API version 9开始，该模块不再维护，建议使用[bundleManager-AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [AbilityInfo](#abilityinfo)
+**替代接口：** [AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md)
+
+<!--Device-unnamed-export interface AbilityInfo--><!--Device-unnamed-export interface AbilityInfo-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -38,6 +40,8 @@ readonly applicationInfo: ApplicationInfo
 
 **替代接口：** applicationInfo
 
+<!--Device-AbilityInfo-readonly applicationInfo: ApplicationInfo--><!--Device-AbilityInfo-readonly applicationInfo: ApplicationInfo-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## backgroundModes
@@ -60,6 +64,8 @@ readonly backgroundModes: number
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-AbilityInfo-readonly backgroundModes: number--><!--Device-AbilityInfo-readonly backgroundModes: number-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## bundleName
@@ -79,6 +85,8 @@ readonly bundleName: string
 **废弃版本：** 9
 
 **替代接口：** bundleName
+
+<!--Device-AbilityInfo-readonly bundleName: string--><!--Device-AbilityInfo-readonly bundleName: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -100,6 +108,8 @@ Ability的描述。
 
 **替代接口：** description
 
+<!--Device-AbilityInfo-readonly description: string--><!--Device-AbilityInfo-readonly description: string-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## descriptionId
@@ -120,6 +130,8 @@ Ability的描述的资源id值。
 
 **替代接口：** descriptionId
 
+<!--Device-AbilityInfo-readonly descriptionId: number--><!--Device-AbilityInfo-readonly descriptionId: number-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## deviceCapabilities
@@ -137,6 +149,8 @@ Ability需要的设备能力。
 **起始版本：** 7
 
 **废弃版本：** 9
+
+<!--Device-AbilityInfo-readonly deviceCapabilities: Array<string>--><!--Device-AbilityInfo-readonly deviceCapabilities: Array<string>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -158,6 +172,8 @@ Ability支持的设备类型。
 
 **替代接口：** deviceTypes
 
+<!--Device-AbilityInfo-readonly deviceTypes: Array<string>--><!--Device-AbilityInfo-readonly deviceTypes: Array<string>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## enabled
@@ -177,6 +193,8 @@ Ability是否可用，取值为true表示Ability可用，取值为false表示Abi
 **废弃版本：** 9
 
 **替代接口：** enabled
+
+<!--Device-AbilityInfo-readonly enabled: boolean--><!--Device-AbilityInfo-readonly enabled: boolean-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -200,6 +218,8 @@ readonly formEnabled: boolean
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-AbilityInfo-readonly formEnabled: boolean--><!--Device-AbilityInfo-readonly formEnabled: boolean-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## icon
@@ -219,6 +239,8 @@ Ability的图标资源文件索引。
 **废弃版本：** 9
 
 **替代接口：** icon
+
+<!--Device-AbilityInfo-readonly icon: string--><!--Device-AbilityInfo-readonly icon: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -240,6 +262,8 @@ Ability的图标的资源id值。
 
 **替代接口：** iconId
 
+<!--Device-AbilityInfo-readonly iconId: number--><!--Device-AbilityInfo-readonly iconId: number-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## isVisible
@@ -259,6 +283,8 @@ readonly isVisible: boolean
 **废弃版本：** 9
 
 **替代接口：** exported
+
+<!--Device-AbilityInfo-readonly isVisible: boolean--><!--Device-AbilityInfo-readonly isVisible: boolean-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -280,6 +306,8 @@ Ability对用户显示的名称。
 
 **替代接口：** label
 
+<!--Device-AbilityInfo-readonly label: string--><!--Device-AbilityInfo-readonly label: string-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## labelId
@@ -300,6 +328,8 @@ Ability的标签的资源id值。
 
 **替代接口：** labelId
 
+<!--Device-AbilityInfo-readonly labelId: number--><!--Device-AbilityInfo-readonly labelId: number-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## launchMode
@@ -319,6 +349,8 @@ Ability的启动模式。
 **废弃版本：** 9
 
 **替代接口：** launchType
+
+<!--Device-AbilityInfo-readonly launchMode: bundle.LaunchMode--><!--Device-AbilityInfo-readonly launchMode: bundle.LaunchMode-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -342,6 +374,8 @@ Ability的元信息。
 
 **替代接口：** metadata
 
+<!--Device-AbilityInfo-readonly metaData: Array<CustomizeData>--><!--Device-AbilityInfo-readonly metaData: Array<CustomizeData>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## moduleName
@@ -361,6 +395,8 @@ Ability所属的HAP的名称。
 **废弃版本：** 9
 
 **替代接口：** moduleName
+
+<!--Device-AbilityInfo-readonly moduleName: string--><!--Device-AbilityInfo-readonly moduleName: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -382,6 +418,8 @@ Ability名称。
 
 **替代接口：** name
 
+<!--Device-AbilityInfo-readonly name: string--><!--Device-AbilityInfo-readonly name: string-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## orientation
@@ -401,6 +439,8 @@ Ability的显示模式。
 **废弃版本：** 9
 
 **替代接口：** orientation
+
+<!--Device-AbilityInfo-readonly orientation: bundle.DisplayOrientation--><!--Device-AbilityInfo-readonly orientation: bundle.DisplayOrientation-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -424,6 +464,8 @@ readonly permissions: Array<string>
 
 **替代接口：** permissions
 
+<!--Device-AbilityInfo-readonly permissions: Array<string>--><!--Device-AbilityInfo-readonly permissions: Array<string>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## process
@@ -443,6 +485,8 @@ Ability的进程名称。
 **废弃版本：** 9
 
 **替代接口：** process
+
+<!--Device-AbilityInfo-readonly process: string--><!--Device-AbilityInfo-readonly process: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -466,6 +510,8 @@ readonly readPermission: string
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-AbilityInfo-readonly readPermission: string--><!--Device-AbilityInfo-readonly readPermission: string-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## subType
@@ -487,6 +533,8 @@ Ability中枚举使用的模板的子类型。
 **废弃版本：** 9
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-AbilityInfo-readonly subType: bundle.AbilitySubType--><!--Device-AbilityInfo-readonly subType: bundle.AbilitySubType-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -510,6 +558,8 @@ readonly targetAbility: string
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-AbilityInfo-readonly targetAbility: string--><!--Device-AbilityInfo-readonly targetAbility: string-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## type
@@ -531,6 +581,8 @@ Ability类型。
 **废弃版本：** 9
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-AbilityInfo-readonly type: bundle.AbilityType--><!--Device-AbilityInfo-readonly type: bundle.AbilityType-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -554,6 +606,8 @@ readonly uri: string
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-AbilityInfo-readonly uri: string--><!--Device-AbilityInfo-readonly uri: string-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## writePermission
@@ -575,5 +629,7 @@ readonly writePermission: string
 **废弃版本：** 9
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-AbilityInfo-readonly writePermission: string--><!--Device-AbilityInfo-readonly writePermission: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework

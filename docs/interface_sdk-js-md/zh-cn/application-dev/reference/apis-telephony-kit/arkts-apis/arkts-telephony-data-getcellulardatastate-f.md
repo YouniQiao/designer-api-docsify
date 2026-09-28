@@ -20,6 +20,8 @@ function getCellularDataState(callback: AsyncCallback<DataConnectState>): void
 - API版本22+：ohos.permission.GET_NETWORK_INFO
 - API版本7-21：N/A
 
+<!--Device-data-function getCellularDataState(callback: AsyncCallback<DataConnectState>): void--><!--Device-data-function getCellularDataState(callback: AsyncCallback<DataConnectState>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CellularData
 
 **参数：**
@@ -65,6 +67,8 @@ function getCellularDataState(): Promise<DataConnectState>
 **需要权限：** 
 - API版本22+：ohos.permission.GET_NETWORK_INFO
 - API版本7-21：N/A
+
+<!--Device-data-function getCellularDataState(): Promise<DataConnectState>--><!--Device-data-function getCellularDataState(): Promise<DataConnectState>-End-->
 
 **系统能力：** SystemCapability.Telephony.CellularData
 

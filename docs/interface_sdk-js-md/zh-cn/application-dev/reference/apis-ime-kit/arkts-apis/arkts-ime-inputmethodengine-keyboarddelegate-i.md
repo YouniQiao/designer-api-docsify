@@ -8,6 +8,8 @@ KeyboardDelegate是键盘事件监听代理对象，用于输入法应用监听�
 
 **起始版本：** 8
 
+<!--Device-inputMethodEngine-interface KeyboardDelegate--><!--Device-inputMethodEngine-interface KeyboardDelegate-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## 导入模块
@@ -25,6 +27,8 @@ off(type: 'keyDown' | 'keyUp', callback?: (event: KeyEvent) => boolean): void
 取消订阅硬键盘（即物理键盘）上物理按键的按下或抬起事件。
 
 **起始版本：** 8
+
+<!--Device-KeyboardDelegate-off(type: 'keyDown' | 'keyUp', callback?: (event: KeyEvent) => boolean): void--><!--Device-KeyboardDelegate-off(type: 'keyDown' | 'keyUp', callback?: (event: KeyEvent) => boolean): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -58,6 +62,8 @@ off(type: 'keyEvent', callback?: (event: InputKeyEvent) => boolean): void
 
 **起始版本：** 10
 
+<!--Device-KeyboardDelegate-off(type: 'keyEvent', callback?: (event: InputKeyEvent) => boolean): void--><!--Device-KeyboardDelegate-off(type: 'keyEvent', callback?: (event: InputKeyEvent) => boolean): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -89,6 +95,8 @@ off(type: 'cursorContextChange', callback?: (x: number, y: number, height: numbe
 
 **起始版本：** 8
 
+<!--Device-KeyboardDelegate-off(type: 'cursorContextChange', callback?: (x: number, y: number, height: number) => void): void--><!--Device-KeyboardDelegate-off(type: 'cursorContextChange', callback?: (x: number, y: number, height: number) => void): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -116,6 +124,8 @@ off(
 取消订阅文本选择范围变化事件。
 
 **起始版本：** 8
+
+<!--Device-KeyboardDelegate-off(      type: 'selectionChange',      callback?: (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) => void    ): void--><!--Device-KeyboardDelegate-off(      type: 'selectionChange',      callback?: (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) => void    ): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -145,6 +155,8 @@ off(type: 'textChange', callback?: (text: string) => void): void
 
 **起始版本：** 8
 
+<!--Device-KeyboardDelegate-off(type: 'textChange', callback?: (text: string) => void): void--><!--Device-KeyboardDelegate-off(type: 'textChange', callback?: (text: string) => void): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -172,6 +184,8 @@ off(type: 'editorAttributeChanged', callback?: (attr: EditorAttribute) => void):
 
 **起始版本：** 10
 
+<!--Device-KeyboardDelegate-off(type: 'editorAttributeChanged', callback?: (attr: EditorAttribute) => void): void--><!--Device-KeyboardDelegate-off(type: 'editorAttributeChanged', callback?: (attr: EditorAttribute) => void): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -196,6 +210,8 @@ on(type: 'keyDown' | 'keyUp', callback: (event: KeyEvent) => boolean): void
 订阅硬键盘（即物理键盘）上物理按键的按下或抬起事件。使用callback异步回调。<br> <br>使用场景：实现快捷键功能、拦截特殊按键、处理功能键（如删除、回车等）等。<br> <br>使用后效果：当物理按键按下/抬起时触发回调，回调函数返回按键信息。若按键事件被事件订阅者消费，则callback应返回true，否则返回false。返回true时按键事件不再向编辑框传递，返回false时按键事件继续向编辑框传递。
 
 **起始版本：** 8
+
+<!--Device-KeyboardDelegate-on(type: 'keyDown' | 'keyUp', callback: (event: KeyEvent) => boolean): void--><!--Device-KeyboardDelegate-on(type: 'keyDown' | 'keyUp', callback: (event: KeyEvent) => boolean): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -231,6 +247,8 @@ on(type: 'keyEvent', callback: (event: InputKeyEvent) => boolean): void
 
 **起始版本：** 10
 
+<!--Device-KeyboardDelegate-on(type: 'keyEvent', callback: (event: InputKeyEvent) => boolean): void--><!--Device-KeyboardDelegate-on(type: 'keyEvent', callback: (event: InputKeyEvent) => boolean): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -264,6 +282,8 @@ on(type: 'cursorContextChange', callback: (x: number, y: number, height: number)
 
 **起始版本：** 8
 
+<!--Device-KeyboardDelegate-on(type: 'cursorContextChange', callback: (x: number, y: number, height: number) => void): void--><!--Device-KeyboardDelegate-on(type: 'cursorContextChange', callback: (x: number, y: number, height: number) => void): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -296,6 +316,8 @@ on(
 
 **起始版本：** 8
 
+<!--Device-KeyboardDelegate-on(      type: 'selectionChange',      callback: (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) => void    ): void--><!--Device-KeyboardDelegate-on(      type: 'selectionChange',      callback: (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) => void    ): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -327,6 +349,8 @@ on(type: 'textChange', callback: (text: string) => void): void
 
 **起始版本：** 8
 
+<!--Device-KeyboardDelegate-on(type: 'textChange', callback: (text: string) => void): void--><!--Device-KeyboardDelegate-on(type: 'textChange', callback: (text: string) => void): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -353,6 +377,8 @@ on(type: 'editorAttributeChanged', callback: (attr: EditorAttribute) => void): v
 订阅编辑框属性变化事件。使用callback异步回调。<br> <br>使用场景：输入法应用需要根据编辑框属性变化（如输入类型从文本切换到数字、回车键类型从"搜索"切换到"发送"等）动态调整键盘布局。<br> <br>使用后效果：当编辑框属性发生变化时触发回调，返回变化后的编辑框属性信息（包括inputPattern和enterKeyType），输入法应用可据此重新调整键盘布局。
 
 **起始版本：** 10
+
+<!--Device-KeyboardDelegate-on(type: 'editorAttributeChanged', callback: (attr: EditorAttribute) => void): void--><!--Device-KeyboardDelegate-on(type: 'editorAttributeChanged', callback: (attr: EditorAttribute) => void): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 

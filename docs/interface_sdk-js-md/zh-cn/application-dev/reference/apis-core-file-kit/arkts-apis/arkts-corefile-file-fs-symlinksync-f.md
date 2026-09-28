@@ -20,6 +20,8 @@ declare function symlinkSync(target: string, srcPath: string): void
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare function symlinkSync(target: string, srcPath: string): void--><!--Device-unnamed-declare function symlinkSync(target: string, srcPath: string): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**

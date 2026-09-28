@@ -18,6 +18,8 @@ Sets retry options for all tasks. Used when task-specific retry configuration is
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-cacheDownload-function setGlobalRetryOptions(options?: RetryOptions): void--><!--Device-cacheDownload-function setGlobalRetryOptions(options?: RetryOptions): void-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 **参数：**

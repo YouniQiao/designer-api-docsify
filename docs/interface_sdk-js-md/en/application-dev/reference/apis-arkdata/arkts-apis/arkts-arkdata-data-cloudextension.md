@@ -4,6 +4,8 @@ The cloudExtension module provides APIs for third-party vendors to implement the
 
 **Since:** 11
 
+<!--Device-unnamed-declare namespace cloudExtension--><!--Device-unnamed-declare namespace cloudExtension-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
 ## Modules to Import

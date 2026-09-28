@@ -8,6 +8,8 @@ export class AdvancedMeasureFormat
 
 **起始版本：** 23
 
+<!--Device-i18n-export class AdvancedMeasureFormat--><!--Device-i18n-export class AdvancedMeasureFormat-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## 导入模块
@@ -28,7 +30,9 @@ constructor(numberFormat: Intl.NumberFormat, options?: AdvancedMeasureFormatOpti
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-AdvancedMeasureFormat-constructor(numberFormat: Intl.NumberFormat, options?: AdvancedMeasureFormatOptions)--><!--Device-AdvancedMeasureFormat-constructor(numberFormat: Intl.NumberFormat, options?: AdvancedMeasureFormatOptions)-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -62,7 +66,9 @@ format(num: number): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-AdvancedMeasureFormat-format(num: double): string--><!--Device-AdvancedMeasureFormat-format(num: double): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 

@@ -18,6 +18,8 @@ Set the SIM card display name of the specified card slot.
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-sim-function setShowName(slotId: int, name: string, callback: AsyncCallback<void>): void--><!--Device-sim-function setShowName(slotId: int, name: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -69,6 +71,8 @@ Set the SIM card display name of the specified card slot.
 **起始版本：** 8
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
+
+<!--Device-sim-function setShowName(slotId: int, name: string): Promise<void>--><!--Device-sim-function setShowName(slotId: int, name: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

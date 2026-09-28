@@ -4,6 +4,8 @@ The **notificationExtensionSubscription** module provides capabilities for manag
 
 **Since:** 22
 
+<!--Device-unnamed-declare namespace notificationExtensionSubscription--><!--Device-unnamed-declare namespace notificationExtensionSubscription-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 ## Modules to Import

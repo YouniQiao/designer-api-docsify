@@ -8,6 +8,8 @@ export interface CountryCode
 
 **起始版本：** 9
 
+<!--Device-geoLocationManager-export interface CountryCode--><!--Device-geoLocationManager-export interface CountryCode-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ country: string
 
 **起始版本：** 9
 
+<!--Device-CountryCode-country: string--><!--Device-CountryCode-country: string-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 ## type
@@ -41,5 +45,7 @@ type: CountryCodeType
 **类型：** [CountryCodeType](arkts-location-geolocationmanager-countrycodetype-e.md)
 
 **起始版本：** 9
+
+<!--Device-CountryCode-type: CountryCodeType--><!--Device-CountryCode-type: CountryCodeType-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core

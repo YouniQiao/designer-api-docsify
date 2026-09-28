@@ -16,6 +16,8 @@ function getOpKeySync(slotId: number): string
 
 **起始版本：** 10
 
+<!--Device-sim-function getOpKeySync(slotId: int): string--><!--Device-sim-function getOpKeySync(slotId: int): string-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**

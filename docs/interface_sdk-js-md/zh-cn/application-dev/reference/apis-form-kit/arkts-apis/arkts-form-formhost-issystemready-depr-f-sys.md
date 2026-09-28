@@ -19,6 +19,8 @@ function isSystemReady(callback: AsyncCallback<void>): void
 
 **替代接口：** [isSystemReady](arkts-form-formhost-issystemready-f-sys.md)
 
+<!--Device-formHost-function isSystemReady(callback: AsyncCallback<void>): void--><!--Device-formHost-function isSystemReady(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -58,6 +60,8 @@ function isSystemReady(): Promise<void>
 **废弃版本：** 9
 
 **替代接口：** [isSystemReady](arkts-form-formhost-issystemready-f-sys.md)
+
+<!--Device-formHost-function isSystemReady(): Promise<void>--><!--Device-formHost-function isSystemReady(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 

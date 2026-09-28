@@ -8,6 +8,8 @@ export enum NetBearType
 
 **起始版本：** 8
 
+<!--Device-connection-export enum NetBearType--><!--Device-connection-export enum NetBearType-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## BEARER_CELLULAR
@@ -20,7 +22,9 @@ BEARER_CELLULAR = 0
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-NetBearType-BEARER_CELLULAR = 0--><!--Device-NetBearType-BEARER_CELLULAR = 0-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -34,7 +38,9 @@ Wi-Fi网络。
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-NetBearType-BEARER_WIFI = 1--><!--Device-NetBearType-BEARER_WIFI = 1-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -48,7 +54,9 @@ BEARER_BLUETOOTH = 2
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-NetBearType-BEARER_BLUETOOTH = 2--><!--Device-NetBearType-BEARER_BLUETOOTH = 2-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -62,7 +70,9 @@ BEARER_ETHERNET = 3
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-NetBearType-BEARER_ETHERNET = 3--><!--Device-NetBearType-BEARER_ETHERNET = 3-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -75,5 +85,7 @@ BEARER_VPN = 4
 VPN网络。
 
 **起始版本：** 12
+
+<!--Device-NetBearType-BEARER_VPN = 4--><!--Device-NetBearType-BEARER_VPN = 4-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core

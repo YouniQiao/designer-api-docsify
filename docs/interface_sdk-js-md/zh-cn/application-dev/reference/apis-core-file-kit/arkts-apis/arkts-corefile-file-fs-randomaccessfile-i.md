@@ -8,6 +8,8 @@ declare interface RandomAccessFile
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare interface RandomAccessFile--><!--Device-unnamed-declare interface RandomAccessFile-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## 导入模块
@@ -25,6 +27,8 @@ close(): void
 以同步方式关闭RandomAccessFile对象，关闭后不可再用于读写等操作。
 
 **起始版本：** 10
+
+<!--Device-RandomAccessFile-close(): void--><!--Device-RandomAccessFile-close(): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -56,6 +60,8 @@ getReadStream(): ReadStream
 获取当前RandomAccessFile的一个ReadStream实例，用于流式读取文件数据。
 
 **起始版本：** 12
+
+<!--Device-RandomAccessFile-getReadStream(): ReadStream--><!--Device-RandomAccessFile-getReadStream(): ReadStream-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -95,6 +101,8 @@ getWriteStream(): WriteStream
 获取当前RandomAccessFile的一个WriteStream实例，用于流式写入文件数据。
 
 **起始版本：** 12
+
+<!--Device-RandomAccessFile-getWriteStream(): WriteStream--><!--Device-RandomAccessFile-getWriteStream(): WriteStream-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -137,6 +145,8 @@ read(
 从文件读取数据，返回实际读取的字节数。使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-RandomAccessFile-read(    buffer: ArrayBuffer,    options?: ReadOptions  ): Promise<number>--><!--Device-RandomAccessFile-read(    buffer: ArrayBuffer,    options?: ReadOptions  ): Promise<number>-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -205,6 +215,8 @@ read(buffer: ArrayBuffer, callback: AsyncCallback<number>): void
 
 **起始版本：** 10
 
+<!--Device-RandomAccessFile-read(buffer: ArrayBuffer, callback: AsyncCallback<number>): void--><!--Device-RandomAccessFile-read(buffer: ArrayBuffer, callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -267,6 +279,8 @@ read(
 从文件读取数据，支持配置读取选项，返回实际读取的字节数。使用callback异步回调。
 
 **起始版本：** 10
+
+<!--Device-RandomAccessFile-read(    buffer: ArrayBuffer,    options: ReadOptions,    callback: AsyncCallback<number>  ): void--><!--Device-RandomAccessFile-read(    buffer: ArrayBuffer,    options: ReadOptions,    callback: AsyncCallback<number>  ): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -333,6 +347,8 @@ readSync(
 
 **起始版本：** 10
 
+<!--Device-RandomAccessFile-readSync(    buffer: ArrayBuffer,    options?: ReadOptions  ): number--><!--Device-RandomAccessFile-readSync(    buffer: ArrayBuffer,    options?: ReadOptions  ): number-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -386,6 +402,8 @@ setFilePointer(filePointer: number): void
 
 **起始版本：** 10
 
+<!--Device-RandomAccessFile-setFilePointer(filePointer: number): void--><!--Device-RandomAccessFile-setFilePointer(filePointer: number): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -425,6 +443,8 @@ write(
 将数据写入文件。使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-RandomAccessFile-write(    buffer: ArrayBuffer | string,    options?: WriteOptions  ): Promise<number>--><!--Device-RandomAccessFile-write(    buffer: ArrayBuffer | string,    options?: WriteOptions  ): Promise<number>-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -496,6 +516,8 @@ write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void
 
 **起始版本：** 10
 
+<!--Device-RandomAccessFile-write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void--><!--Device-RandomAccessFile-write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -560,6 +582,8 @@ write(
 将数据写入文件，支持配置写入选项。使用callback异步回调。
 
 **起始版本：** 10
+
+<!--Device-RandomAccessFile-write(    buffer: ArrayBuffer | string,    options: WriteOptions,    callback: AsyncCallback<number>  ): void--><!--Device-RandomAccessFile-write(    buffer: ArrayBuffer | string,    options: WriteOptions,    callback: AsyncCallback<number>  ): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -630,6 +654,8 @@ writeSync(
 
 **起始版本：** 10
 
+<!--Device-RandomAccessFile-writeSync(    buffer: ArrayBuffer | string,    options?: WriteOptions  ): number--><!--Device-RandomAccessFile-writeSync(    buffer: ArrayBuffer | string,    options?: WriteOptions  ): number-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -690,6 +716,8 @@ readonly fd: number
 
 **起始版本：** 10
 
+<!--Device-RandomAccessFile-readonly fd: number--><!--Device-RandomAccessFile-readonly fd: number-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## filePointer
@@ -703,5 +731,7 @@ RandomAccessFile对象的偏移指针，表示当前读写位置，单位为Byte
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-RandomAccessFile-readonly filePointer: number--><!--Device-RandomAccessFile-readonly filePointer: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO

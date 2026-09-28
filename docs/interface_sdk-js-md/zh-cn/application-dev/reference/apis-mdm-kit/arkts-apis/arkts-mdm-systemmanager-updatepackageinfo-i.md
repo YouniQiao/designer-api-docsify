@@ -8,6 +8,8 @@ export interface UpdatePackageInfo
 
 **起始版本：** 12
 
+<!--Device-systemManager-export interface UpdatePackageInfo--><!--Device-systemManager-export interface UpdatePackageInfo-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## 导入模块
@@ -30,6 +32,8 @@ authInfo?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UpdatePackageInfo-authInfo?: string--><!--Device-UpdatePackageInfo-authInfo?: string-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## description
@@ -45,6 +49,8 @@ description?: PackageDescription
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UpdatePackageInfo-description?: PackageDescription--><!--Device-UpdatePackageInfo-description?: PackageDescription-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -62,6 +68,8 @@ packages: Array<Package>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UpdatePackageInfo-packages: Array<Package>--><!--Device-UpdatePackageInfo-packages: Array<Package>-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## version
@@ -77,5 +85,7 @@ version: string
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UpdatePackageInfo-version: string--><!--Device-UpdatePackageInfo-version: string-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager

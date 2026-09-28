@@ -37,6 +37,8 @@ Matrix constructor, which is used to create a 4 x 4 matrix with the input parame
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-matrix4-function init(    options: [      number,      number,      number,      number,      number,      number,      number,      number,      number,      number,      number,      number,      number,      number,      number,      number    ]  ): Matrix4Transit--><!--Device-matrix4-function init(    options: [      number,      number,      number,      number,      number,      number,      number,      number,      number,      number,      number,      number,      number,      number,      number,      number    ]  ): Matrix4Transit-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

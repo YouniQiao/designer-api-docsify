@@ -4,6 +4,8 @@ The module provides APIs for obtaining application information, including bundle
 
 **Since:** 9
 
+<!--Device-unnamed-declare namespace bundleManager--><!--Device-unnamed-declare namespace bundleManager-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## Modules to Import

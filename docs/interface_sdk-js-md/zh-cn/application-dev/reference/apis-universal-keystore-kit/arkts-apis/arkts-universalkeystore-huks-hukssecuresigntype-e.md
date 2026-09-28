@@ -8,6 +8,8 @@ export enum HuksSecureSignType
 
 **起始版本：** 9
 
+<!--Device-huks-export enum HuksSecureSignType--><!--Device-huks-export enum HuksSecureSignType-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Extension
 
 ## HUKS_SECURE_SIGN_WITH_AUTHINFO
@@ -25,5 +27,7 @@ HUKS_SECURE_SIGN_WITH_AUTHINFO = 1
 **起始版本：** 9
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HuksSecureSignType-HUKS_SECURE_SIGN_WITH_AUTHINFO = 1--><!--Device-HuksSecureSignType-HUKS_SECURE_SIGN_WITH_AUTHINFO = 1-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Extension

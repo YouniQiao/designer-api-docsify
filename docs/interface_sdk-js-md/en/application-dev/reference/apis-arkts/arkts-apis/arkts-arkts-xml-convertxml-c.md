@@ -8,6 +8,8 @@ ConvertXML representation refers to extensible markup language.
 
 **Since:** 8
 
+<!--Device-xml-class ConvertXML--><!--Device-xml-class ConvertXML-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
@@ -33,6 +35,8 @@ Converts an XML text to an object of the object type.
 **Since:** 14
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-ConvertXML-fastConvertToJSObject(xml: string, options?: ConvertOptions): Object--><!--Device-ConvertXML-fastConvertToJSObject(xml: string, options?: ConvertOptions): Object-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -102,6 +106,8 @@ Convert XML text to JavaScript objects, this method supports parsing large XML t
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-ConvertXML-largeConvertToJSObject(xml: string, options?: ConvertOptions): Object--><!--Device-ConvertXML-largeConvertToJSObject(xml: string, options?: ConvertOptions): Object-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -180,6 +186,8 @@ Converts an XML text to a JavaScript object.
 
 **Substitutes:** [fastConvertToJSObject](#fastconverttojsobject)
 
+<!--Device-ConvertXML-convert(xml: string, options?: ConvertOptions): Object--><!--Device-ConvertXML-convert(xml: string, options?: ConvertOptions): Object-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -241,6 +249,8 @@ Converts an XML text to an object of the object type.
 **Substitutes:** [fastConvertToJSObject](#fastconverttojsobject)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ConvertXML-convertToJSObject(xml: string, options?: ConvertOptions): Object--><!--Device-ConvertXML-convertToJSObject(xml: string, options?: ConvertOptions): Object-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

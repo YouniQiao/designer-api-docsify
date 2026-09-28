@@ -28,6 +28,8 @@ Draws a polygon.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-PolygonInterface-new (options?: PolygonOptions): PolygonAttribute--><!--Device-PolygonInterface-new (options?: PolygonOptions): PolygonAttribute-End-->
+
 **System capability:** 
 - API version 9 and later: SystemCapability.ArkUI.ArkUI.Full
 
@@ -52,6 +54,8 @@ Draws a polygon.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-PolygonInterface-(options?: PolygonOptions): PolygonAttribute--><!--Device-PolygonInterface-(options?: PolygonOptions): PolygonAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -8,6 +8,8 @@ interface Entity
 
 **起始版本：** 23
 
+<!--Device-photoAccessHelper-interface Entity--><!--Device-photoAccessHelper-interface Entity-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ alias: string[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Entity-alias: string[]--><!--Device-Entity-alias: string[]-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ field: FieldType
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Entity-field: FieldType--><!--Device-Entity-field: FieldType-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -68,6 +74,8 @@ id: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Entity-id: string--><!--Device-Entity-id: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -85,6 +93,8 @@ name: string
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Entity-name: string--><!--Device-Entity-name: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

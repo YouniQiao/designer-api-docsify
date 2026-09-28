@@ -10,6 +10,8 @@ Configures scroll event callbacks.
 
 **Since:** 19
 
+<!--Device-unnamed-declare interface UIScrollableCommonEvent extends UICommonEvent--><!--Device-unnamed-declare interface UIScrollableCommonEvent extends UICommonEvent-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## setOnReachEnd
@@ -27,6 +29,8 @@ If the input parameter is **undefined**, the event callback is reset.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-UIScrollableCommonEvent-setOnReachEnd(callback: Callback<void> | undefined): void--><!--Device-UIScrollableCommonEvent-setOnReachEnd(callback: Callback<void> | undefined): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -52,6 +56,8 @@ If the input parameter is **undefined**, the event callback is reset.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-UIScrollableCommonEvent-setOnReachStart(callback: Callback<void> | undefined): void--><!--Device-UIScrollableCommonEvent-setOnReachStart(callback: Callback<void> | undefined): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -75,6 +81,8 @@ If the input parameter is **undefined**, the event callback is reset.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-UIScrollableCommonEvent-setOnScrollFrameBegin(callback: OnScrollFrameBeginCallback | undefined): void--><!--Device-UIScrollableCommonEvent-setOnScrollFrameBegin(callback: OnScrollFrameBeginCallback | undefined): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -100,6 +108,8 @@ If the input parameter is **undefined**, the event callback is reset.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-UIScrollableCommonEvent-setOnScrollStart(callback: Callback<void> | undefined): void--><!--Device-UIScrollableCommonEvent-setOnScrollStart(callback: Callback<void> | undefined): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -123,6 +133,8 @@ If the input parameter is **undefined**, the event callback is reset.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-UIScrollableCommonEvent-setOnScrollStop(callback: Callback<void> | undefined): void--><!--Device-UIScrollableCommonEvent-setOnScrollStop(callback: Callback<void> | undefined): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

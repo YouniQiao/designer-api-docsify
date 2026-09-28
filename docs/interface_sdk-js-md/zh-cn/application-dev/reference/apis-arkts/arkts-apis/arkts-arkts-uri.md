@@ -12,6 +12,8 @@ URI遵循RFC3986规范标准，不支持非标准场景解析。
 
 **起始版本：** 8
 
+<!--Device-unnamed-declare namespace uri--><!--Device-unnamed-declare namespace uri-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块

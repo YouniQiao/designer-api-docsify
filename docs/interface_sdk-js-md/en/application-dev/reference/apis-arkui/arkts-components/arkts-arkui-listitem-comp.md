@@ -4,7 +4,7 @@
 
 > **NOTE:** 
 > 
-> - The parent of this component can only be [List](arkts-arkui-list-comp.md#list) or [ListItemGroup](arkts-arkui-listitemgroup-comp.md#list_item_group).
+> - The parent of this component can only be [List](arkts-arkui-list-comp.md) or [ListItemGroup](arkts-arkui-listitemgroup-comp.md).
 > 
 > - When this component is used with [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md), its child components are created when it is created. When this component is used with [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md) or [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md), or when the parent component is
 > **List** or **ListItemGroup**, its child components are created when it is laid out.
@@ -28,6 +28,8 @@ Creates a **ListItem** component.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
+
+<!--Device-ListItemInterface-(value?: ListItemOptions): ListItemAttribute--><!--Device-ListItemInterface-(value?: ListItemOptions): ListItemAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,6 +56,8 @@ Creates a **ListItem** component.
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-ListItemInterface-(value?: string): ListItemAttribute--><!--Device-ListItemInterface-(value?: string): ListItemAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

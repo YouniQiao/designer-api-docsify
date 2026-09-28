@@ -8,6 +8,8 @@ GNSS围栏信息。
 
 **起始版本：** 26.0.0
 
+<!--Device-geoLocationManager-export interface GnssFence--><!--Device-geoLocationManager-export interface GnssFence-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ circularFence?: Geofence
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-GnssFence-circularFence?: Geofence--><!--Device-GnssFence-circularFence?: Geofence-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 **系统接口：** 此接口为系统接口。
@@ -50,6 +54,8 @@ gnssFenceType: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-GnssFence-gnssFenceType: int--><!--Device-GnssFence-gnssFenceType: int-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 **系统接口：** 此接口为系统接口。
@@ -67,6 +73,8 @@ polygon?: Array<Point>
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-GnssFence-polygon?: Array<Point>--><!--Device-GnssFence-polygon?: Array<Point>-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geofence
 

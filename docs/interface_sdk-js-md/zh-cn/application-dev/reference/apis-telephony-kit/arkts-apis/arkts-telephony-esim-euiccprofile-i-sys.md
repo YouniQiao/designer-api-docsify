@@ -8,6 +8,8 @@ export interface EuiccProfile
 
 **起始版本：** 18
 
+<!--Device-eSIM-export interface EuiccProfile--><!--Device-eSIM-export interface EuiccProfile-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ accessRules: Array<AccessRule>
 
 **起始版本：** 18
 
+<!--Device-EuiccProfile-accessRules: Array<AccessRule>--><!--Device-EuiccProfile-accessRules: Array<AccessRule>-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ iccid: string
 **类型：** string
 
 **起始版本：** 18
+
+<!--Device-EuiccProfile-iccid: string--><!--Device-EuiccProfile-iccid: string-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
@@ -62,6 +68,8 @@ nickName: string
 
 **起始版本：** 18
 
+<!--Device-EuiccProfile-nickName: string--><!--Device-EuiccProfile-nickName: string-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +85,8 @@ operatorId: OperatorId
 **类型：** [OperatorId](arkts-telephony-esim-operatorid-i-sys.md)
 
 **起始版本：** 18
+
+<!--Device-EuiccProfile-operatorId: OperatorId--><!--Device-EuiccProfile-operatorId: OperatorId-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
@@ -94,6 +104,8 @@ policyRules: PolicyRules
 
 **起始版本：** 18
 
+<!--Device-EuiccProfile-policyRules: PolicyRules--><!--Device-EuiccProfile-policyRules: PolicyRules-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -109,6 +121,8 @@ profileClass: ProfileClass
 **类型：** [ProfileClass](arkts-telephony-esim-profileclass-e-sys.md)
 
 **起始版本：** 18
+
+<!--Device-EuiccProfile-profileClass: ProfileClass--><!--Device-EuiccProfile-profileClass: ProfileClass-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
@@ -126,6 +140,8 @@ profileName: string
 
 **起始版本：** 18
 
+<!--Device-EuiccProfile-profileName: string--><!--Device-EuiccProfile-profileName: string-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -142,6 +158,8 @@ serviceProviderName: string
 
 **起始版本：** 18
 
+<!--Device-EuiccProfile-serviceProviderName: string--><!--Device-EuiccProfile-serviceProviderName: string-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -157,6 +175,8 @@ state: ProfileState
 **类型：** [ProfileState](arkts-telephony-esim-profilestate-e-sys.md)
 
 **起始版本：** 18
+
+<!--Device-EuiccProfile-state: ProfileState--><!--Device-EuiccProfile-state: ProfileState-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 

@@ -8,6 +8,8 @@ export interface NotificationCheckResult
 
 **起始版本：** 10
 
+<!--Device-notificationManager-export interface NotificationCheckResult--><!--Device-notificationManager-export interface NotificationCheckResult-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ code: number
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
 
+<!--Device-NotificationCheckResult-code: int--><!--Device-NotificationCheckResult-code: int-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ message: string
 **起始版本：** 10
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
+
+<!--Device-NotificationCheckResult-message: string--><!--Device-NotificationCheckResult-message: string-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

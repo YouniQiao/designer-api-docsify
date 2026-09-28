@@ -8,6 +8,8 @@
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare namespace camera--><!--Device-unnamed-declare namespace camera-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块

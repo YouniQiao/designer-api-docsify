@@ -8,6 +8,8 @@ Enumerates the original operation intentions of smart gestures.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-declare enum OperateIntention--><!--Device-unnamed-declare enum OperateIntention-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## TAP
@@ -23,6 +25,8 @@ Tap gesture.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-OperateIntention-TAP = 0--><!--Device-OperateIntention-TAP = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,6 +44,8 @@ Slide gesture.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-OperateIntention-SLIDE_FORWARD = 1--><!--Device-OperateIntention-SLIDE_FORWARD = 1-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## BACK_PRESS
@@ -55,5 +61,7 @@ Wrist flip gesture.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-OperateIntention-BACK_PRESS = 2--><!--Device-OperateIntention-BACK_PRESS = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

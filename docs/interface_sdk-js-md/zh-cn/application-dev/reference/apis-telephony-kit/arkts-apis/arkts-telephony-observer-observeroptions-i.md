@@ -8,6 +8,8 @@ export interface ObserverOptions
 
 **起始版本：** 11
 
+<!--Device-observer-export interface ObserverOptions--><!--Device-observer-export interface ObserverOptions-End-->
+
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
 ## 导入模块
@@ -30,5 +32,7 @@ slotId: number
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-ObserverOptions-slotId: int--><!--Device-ObserverOptions-slotId: int-End-->
 
 **系统能力：** SystemCapability.Telephony.StateRegistry

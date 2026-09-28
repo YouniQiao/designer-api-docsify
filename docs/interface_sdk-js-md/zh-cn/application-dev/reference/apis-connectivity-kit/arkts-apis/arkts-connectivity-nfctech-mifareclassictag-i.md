@@ -16,6 +16,8 @@ MifareClassicTag获取方式请参考[nfc-tag开发指南](../../../connectivity
 
 **起始版本：** 9
 
+<!--Device-unnamed-export interface MifareClassicTag extends TagSession--><!--Device-unnamed-export interface MifareClassicTag extends TagSession-End-->
+
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 ## authenticateSector
@@ -30,7 +32,9 @@ authenticateSector(sectorIndex: number, key: number[], isKeyA: boolean): Promise
 
 **需要权限：** ohos.permission.NFC_TAG
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MifareClassicTag-authenticateSector(sectorIndex: int, key: int[], isKeyA: boolean): Promise<void>--><!--Device-MifareClassicTag-authenticateSector(sectorIndex: int, key: int[], isKeyA: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -102,7 +106,9 @@ authenticateSector(sectorIndex: number, key: number[], isKeyA: boolean, callback
 
 **需要权限：** ohos.permission.NFC_TAG
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MifareClassicTag-authenticateSector(sectorIndex: int, key: int[], isKeyA: boolean, callback: AsyncCallback<void>): void--><!--Device-MifareClassicTag-authenticateSector(sectorIndex: int, key: int[], isKeyA: boolean, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -169,7 +175,9 @@ decrementBlock(blockIndex: number, value: number): Promise<void>
 
 **需要权限：** ohos.permission.NFC_TAG
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MifareClassicTag-decrementBlock(blockIndex: int, value: int): Promise<void>--><!--Device-MifareClassicTag-decrementBlock(blockIndex: int, value: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -240,7 +248,9 @@ decrementBlock(blockIndex: number, value: number, callback: AsyncCallback<void>)
 
 **需要权限：** ohos.permission.NFC_TAG
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MifareClassicTag-decrementBlock(blockIndex: int, value: int, callback: AsyncCallback<void>): void--><!--Device-MifareClassicTag-decrementBlock(blockIndex: int, value: int, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -305,7 +315,9 @@ getBlockCountInSector(sectorIndex: number): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MifareClassicTag-getBlockCountInSector(sectorIndex: int): int--><!--Device-MifareClassicTag-getBlockCountInSector(sectorIndex: int): int-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -354,7 +366,9 @@ getBlockIndex(sectorIndex: number): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MifareClassicTag-getBlockIndex(sectorIndex: int): int--><!--Device-MifareClassicTag-getBlockIndex(sectorIndex: int): int-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -403,7 +417,9 @@ getSectorCount(): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MifareClassicTag-getSectorCount(): int--><!--Device-MifareClassicTag-getSectorCount(): int-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -434,7 +450,9 @@ getSectorIndex(blockIndex: number): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MifareClassicTag-getSectorIndex(blockIndex: int): int--><!--Device-MifareClassicTag-getSectorIndex(blockIndex: int): int-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -483,7 +501,9 @@ getTagSize(): number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MifareClassicTag-getTagSize(): int--><!--Device-MifareClassicTag-getTagSize(): int-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -514,7 +534,9 @@ getType(): tag.MifareClassicType
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MifareClassicTag-getType(): tag.MifareClassicType--><!--Device-MifareClassicTag-getType(): tag.MifareClassicType-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -546,7 +568,9 @@ incrementBlock(blockIndex: number, value: number): Promise<void>
 
 **需要权限：** ohos.permission.NFC_TAG
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MifareClassicTag-incrementBlock(blockIndex: int, value: int): Promise<void>--><!--Device-MifareClassicTag-incrementBlock(blockIndex: int, value: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -617,7 +641,9 @@ incrementBlock(blockIndex: number, value: number, callback: AsyncCallback<void>)
 
 **需要权限：** ohos.permission.NFC_TAG
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MifareClassicTag-incrementBlock(blockIndex: int, value: int, callback: AsyncCallback<void>): void--><!--Device-MifareClassicTag-incrementBlock(blockIndex: int, value: int, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -681,7 +707,9 @@ isEmulatedTag(): boolean
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MifareClassicTag-isEmulatedTag(): boolean--><!--Device-MifareClassicTag-isEmulatedTag(): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -714,7 +742,9 @@ readSingleBlock(blockIndex: number): Promise<number[]>
 
 **需要权限：** ohos.permission.NFC_TAG
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MifareClassicTag-readSingleBlock(blockIndex: int): Promise<int[]>--><!--Device-MifareClassicTag-readSingleBlock(blockIndex: int): Promise<int[]>-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -783,7 +813,9 @@ readSingleBlock(blockIndex: number, callback: AsyncCallback<number[]>): void
 
 **需要权限：** ohos.permission.NFC_TAG
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MifareClassicTag-readSingleBlock(blockIndex: int, callback: AsyncCallback<int[]>): void--><!--Device-MifareClassicTag-readSingleBlock(blockIndex: int, callback: AsyncCallback<int[]>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -847,7 +879,9 @@ restoreFromBlock(blockIndex: number): Promise<void>
 
 **需要权限：** ohos.permission.NFC_TAG
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MifareClassicTag-restoreFromBlock(blockIndex: int): Promise<void>--><!--Device-MifareClassicTag-restoreFromBlock(blockIndex: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -916,7 +950,9 @@ restoreFromBlock(blockIndex: number, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.NFC_TAG
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MifareClassicTag-restoreFromBlock(blockIndex: int, callback: AsyncCallback<void>): void--><!--Device-MifareClassicTag-restoreFromBlock(blockIndex: int, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -980,7 +1016,9 @@ transferToBlock(blockIndex: number): Promise<void>
 
 **需要权限：** ohos.permission.NFC_TAG
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MifareClassicTag-transferToBlock(blockIndex: int): Promise<void>--><!--Device-MifareClassicTag-transferToBlock(blockIndex: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -1049,7 +1087,9 @@ transferToBlock(blockIndex: number, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.NFC_TAG
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MifareClassicTag-transferToBlock(blockIndex: int, callback: AsyncCallback<void>): void--><!--Device-MifareClassicTag-transferToBlock(blockIndex: int, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -1113,7 +1153,9 @@ writeSingleBlock(blockIndex: number, data: number[]): Promise<void>
 
 **需要权限：** ohos.permission.NFC_TAG
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MifareClassicTag-writeSingleBlock(blockIndex: int, data: int[]): Promise<void>--><!--Device-MifareClassicTag-writeSingleBlock(blockIndex: int, data: int[]): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -1185,7 +1227,9 @@ writeSingleBlock(blockIndex: number, data: number[], callback: AsyncCallback<voi
 
 **需要权限：** ohos.permission.NFC_TAG
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MifareClassicTag-writeSingleBlock(blockIndex: int, data: int[], callback: AsyncCallback<void>): void--><!--Device-MifareClassicTag-writeSingleBlock(blockIndex: int, data: int[], callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 

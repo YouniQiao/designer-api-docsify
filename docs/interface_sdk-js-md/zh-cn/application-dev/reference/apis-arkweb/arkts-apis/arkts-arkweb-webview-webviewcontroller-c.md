@@ -8,6 +8,8 @@ WebviewController是Web组件各种行为的核心控制器，提供网页加载
 
 **起始版本：** 9
 
+<!--Device-webview-class WebviewController--><!--Device-webview-class WebviewController-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## 导入模块
@@ -37,6 +39,8 @@ accessBackward(): boolean
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-accessBackward(): boolean--><!--Device-WebviewController-accessBackward(): boolean-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -95,6 +99,8 @@ accessForward(): boolean
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-accessForward(): boolean--><!--Device-WebviewController-accessForward(): boolean-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -149,6 +155,8 @@ accessStep(step: number): boolean
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-accessStep(step: number): boolean--><!--Device-WebviewController-accessStep(step: number): boolean-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -213,6 +221,8 @@ static addIntelligentTrackingPreventionBypassingList(hostList: Array<string>): v
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-static addIntelligentTrackingPreventionBypassingList(hostList: Array<string>): void--><!--Device-WebviewController-static addIntelligentTrackingPreventionBypassingList(hostList: Array<string>): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -274,6 +284,8 @@ avoidVisibleViewportBottom(avoidHeight: number): void
 > - 该接口高度设置为0时，Web网页内容可恢复，键盘弹起避让模式将使用[keyboardAvoidMode()](../arkts-components/arkts-arkweb-web-comp-attribute.md#keyboardavoidmode)声明的模式。
 
 **起始版本：** 20
+
+<!--Device-WebviewController-avoidVisibleViewportBottom(avoidHeight: number): void--><!--Device-WebviewController-avoidVisibleViewportBottom(avoidHeight: number): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -341,6 +353,8 @@ backOrForward(step: number): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-backOrForward(step: number): void--><!--Device-WebviewController-backOrForward(step: number): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -397,6 +411,8 @@ backward(): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-backward(): void--><!--Device-WebviewController-backward(): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **错误码：**
@@ -448,6 +464,8 @@ static clearBlanklessLoadingCache(keys?: Array<string>) : void
 > - 清除之后的页面，需在第三次加载页面时才会产生优化效果。
 
 **起始版本：** 20
+
+<!--Device-WebviewController-static clearBlanklessLoadingCache(keys?: Array<string>) : void--><!--Device-WebviewController-static clearBlanklessLoadingCache(keys?: Array<string>) : void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -504,6 +522,8 @@ clearClientAuthenticationCache(): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-clearClientAuthenticationCache(): void--><!--Device-WebviewController-clearClientAuthenticationCache(): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **错误码：**
@@ -552,6 +572,8 @@ clearHistory(): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-clearHistory(): void--><!--Device-WebviewController-clearHistory(): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **错误码：**
@@ -599,6 +621,8 @@ static clearHostIP(hostName: string): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-static clearHostIP(hostName: string): void--><!--Device-WebviewController-static clearHostIP(hostName: string): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -663,6 +687,8 @@ static clearIntelligentTrackingPreventionBypassingList(): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-static clearIntelligentTrackingPreventionBypassingList(): void--><!--Device-WebviewController-static clearIntelligentTrackingPreventionBypassingList(): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **错误码：**
@@ -705,6 +731,8 @@ clearMatches(): void
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-clearMatches(): void--><!--Device-WebviewController-clearMatches(): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -753,6 +781,8 @@ static clearPrefetchedResource(cacheKeyList: Array<string>): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-static clearPrefetchedResource(cacheKeyList: Array<string>): void--><!--Device-WebviewController-static clearPrefetchedResource(cacheKeyList: Array<string>): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -811,6 +841,8 @@ static clearServiceWorkerWebSchemeHandler(): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-static clearServiceWorkerWebSchemeHandler(): void--><!--Device-WebviewController-static clearServiceWorkerWebSchemeHandler(): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **示例**
@@ -847,6 +879,8 @@ clearSslCache(): void
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-clearSslCache(): void--><!--Device-WebviewController-clearSslCache(): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -896,6 +930,8 @@ clearWebSchemeHandler(): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-clearWebSchemeHandler(): void--><!--Device-WebviewController-clearWebSchemeHandler(): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **错误码：**
@@ -943,6 +979,8 @@ closeAllMediaPresentations(): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-closeAllMediaPresentations(): void--><!--Device-WebviewController-closeAllMediaPresentations(): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -992,6 +1030,8 @@ closeCamera(): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-closeCamera(): void--><!--Device-WebviewController-closeCamera(): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **错误码：**
@@ -1028,6 +1068,8 @@ constructor(webTag?: string)
 **起始版本：** 11
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-constructor(webTag?: string)--><!--Device-WebviewController-constructor(webTag?: string)-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -1130,6 +1172,8 @@ createPdf(configuration: PdfConfiguration, callback: AsyncCallback<PdfData>): vo
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-createPdf(configuration: PdfConfiguration, callback: AsyncCallback<PdfData>): void--><!--Device-WebviewController-createPdf(configuration: PdfConfiguration, callback: AsyncCallback<PdfData>): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -1218,6 +1262,8 @@ createPdf(configuration: PdfConfiguration): Promise<PdfData>
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-createPdf(configuration: PdfConfiguration): Promise<PdfData>--><!--Device-WebviewController-createPdf(configuration: PdfConfiguration): Promise<PdfData>-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -1304,6 +1350,8 @@ createWebMessagePorts(isExtentionType?: boolean): Array<WebMessagePort>
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-createWebMessagePorts(isExtentionType?: boolean): Array<WebMessagePort>--><!--Device-WebviewController-createWebMessagePorts(isExtentionType?: boolean): Array<WebMessagePort>-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -1338,6 +1386,8 @@ createWebPrintDocumentAdapter(jobName: string): print.PrintDocumentAdapter
 创建web相关打印功能。
 
 **起始版本：** 11
+
+<!--Device-WebviewController-createWebPrintDocumentAdapter(jobName: string): print.PrintDocumentAdapter--><!--Device-WebviewController-createWebPrintDocumentAdapter(jobName: string): print.PrintDocumentAdapter-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -1400,6 +1450,8 @@ static customizeSchemes(schemes: Array<WebCustomScheme>): void
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-static customizeSchemes(schemes: Array<WebCustomScheme>): void--><!--Device-WebviewController-static customizeSchemes(schemes: Array<WebCustomScheme>): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -1468,6 +1520,8 @@ static customizeSchemes(schemes: Array<WebCustomScheme>, lazyInitWebEngine: bool
 
 **原子化服务API：** 从API版本21开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-static customizeSchemes(schemes: Array<WebCustomScheme>, lazyInitWebEngine: boolean): void--><!--Device-WebviewController-static customizeSchemes(schemes: Array<WebCustomScheme>, lazyInitWebEngine: boolean): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -1527,6 +1581,8 @@ deleteJavaScriptRegister(name: string): void
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-deleteJavaScriptRegister(name: string): void--><!--Device-WebviewController-deleteJavaScriptRegister(name: string): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -1642,6 +1698,8 @@ enableAdsBlock(enable: boolean): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-enableAdsBlock(enable: boolean): void--><!--Device-WebviewController-enableAdsBlock(enable: boolean): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -1705,6 +1763,8 @@ static enableAdvancedSecurityMode(securityParams: SecurityParams): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-WebviewController-static enableAdvancedSecurityMode(securityParams: SecurityParams): void--><!--Device-WebviewController-static enableAdvancedSecurityMode(securityParams: SecurityParams): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -1756,6 +1816,8 @@ static enableBackForwardCache(features: BackForwardCacheSupportedFeatures): void
 
 **起始版本：** 12
 
+<!--Device-WebviewController-static enableBackForwardCache(features: BackForwardCacheSupportedFeatures): void--><!--Device-WebviewController-static enableBackForwardCache(features: BackForwardCacheSupportedFeatures): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -1798,6 +1860,8 @@ enableIntelligentTrackingPrevention(enable: boolean): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-enableIntelligentTrackingPrevention(enable: boolean): void--><!--Device-WebviewController-enableIntelligentTrackingPrevention(enable: boolean): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -1860,6 +1924,8 @@ static enablePrivateNetworkAccess(enable: boolean): void
 
 **起始版本：** 20
 
+<!--Device-WebviewController-static enablePrivateNetworkAccess(enable: boolean): void--><!--Device-WebviewController-static enablePrivateNetworkAccess(enable: boolean): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -1907,6 +1973,8 @@ enableSafeBrowsing(enable: boolean): void
 **起始版本：** 11
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-enableSafeBrowsing(enable: boolean): void--><!--Device-WebviewController-enableSafeBrowsing(enable: boolean): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -1963,6 +2031,8 @@ static enableWholeWebPageDrawing(): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-static enableWholeWebPageDrawing(): void--><!--Device-WebviewController-static enableWholeWebPageDrawing(): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **示例**
@@ -2012,6 +2082,8 @@ executeAIPageCommand(command: string): Promise<string>
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WebviewController-executeAIPageCommand(command: string): Promise<string>--><!--Device-WebviewController-executeAIPageCommand(command: string): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -2081,6 +2153,8 @@ forward(): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-forward(): void--><!--Device-WebviewController-forward(): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **错误码：**
@@ -2127,6 +2201,8 @@ static getActiveWebEngineVersion(): ArkWebEngineVersion
 
 **起始版本：** 20
 
+<!--Device-WebviewController-static getActiveWebEngineVersion(): ArkWebEngineVersion--><!--Device-WebviewController-static getActiveWebEngineVersion(): ArkWebEngineVersion-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -2148,6 +2224,8 @@ getAttachState(): ControllerAttachState
 查询当前WebViewController是否绑定一个Web组件。
 
 **起始版本：** 20
+
+<!--Device-WebviewController-getAttachState(): ControllerAttachState--><!--Device-WebviewController-getAttachState(): ControllerAttachState-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -2173,6 +2251,8 @@ getBackForwardEntries(): BackForwardList
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-getBackForwardEntries(): BackForwardList--><!--Device-WebviewController-getBackForwardEntries(): BackForwardList-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -2237,6 +2317,8 @@ getBlanklessInfoWithKey(key: string) : BlanklessInfo
 > - 请在module.json5中添加权限: ohos.permission.INTERNET和ohos.permission.GET_NETWORK_INFO，具体权限的添加方法请参考[在配置文件中声明权限](../../../security/AccessToken/declare-permissions.md#在配置文件中声明权限)。
 
 **起始版本：** 20
+
+<!--Device-WebviewController-getBlanklessInfoWithKey(key: string) : BlanklessInfo--><!--Device-WebviewController-getBlanklessInfoWithKey(key: string) : BlanklessInfo-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -2306,6 +2388,8 @@ getCertificate(): Promise<Array<cert.X509Cert>>
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-getCertificate(): Promise<Array<cert.X509Cert>>--><!--Device-WebviewController-getCertificate(): Promise<Array<cert.X509Cert>>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -2473,6 +2557,8 @@ getCertificate(callback: AsyncCallback<Array<cert.X509Cert>>): void
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-getCertificate(callback: AsyncCallback<Array<cert.X509Cert>>): void--><!--Device-WebviewController-getCertificate(callback: AsyncCallback<Array<cert.X509Cert>>): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -2642,6 +2728,8 @@ getCustomUserAgent(): string
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-getCustomUserAgent(): string--><!--Device-WebviewController-getCustomUserAgent(): string-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -2700,6 +2788,8 @@ static getDefaultUserAgent(): string
 
 **起始版本：** 14
 
+<!--Device-WebviewController-static getDefaultUserAgent(): string--><!--Device-WebviewController-static getDefaultUserAgent(): string-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -2734,6 +2824,8 @@ getErrorPageEnabled(): boolean
 查询是否启用了默认错误页功能。
 
 **起始版本：** 20
+
+<!--Device-WebviewController-getErrorPageEnabled(): boolean--><!--Device-WebviewController-getErrorPageEnabled(): boolean-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -2783,6 +2875,8 @@ getFavicon(): image.PixelMap
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-getFavicon(): image.PixelMap--><!--Device-WebviewController-getFavicon(): image.PixelMap-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -2837,6 +2931,8 @@ getLastHitTest(): HitTestValue
 获取上一次被点击区域的元素信息。
 
 **起始版本：** 18
+
+<!--Device-WebviewController-getLastHitTest(): HitTestValue--><!--Device-WebviewController-getLastHitTest(): HitTestValue-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -2893,6 +2989,8 @@ getLastJavascriptProxyCallingFrameUrl(): string
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-getLastJavascriptProxyCallingFrameUrl(): string--><!--Device-WebviewController-getLastJavascriptProxyCallingFrameUrl(): string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -3045,6 +3143,8 @@ getMediaPlaybackState(): MediaPlaybackState
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-getMediaPlaybackState(): MediaPlaybackState--><!--Device-WebviewController-getMediaPlaybackState(): MediaPlaybackState-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -3101,6 +3201,8 @@ getOriginalUrl(): string
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-getOriginalUrl(): string--><!--Device-WebviewController-getOriginalUrl(): string-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -3156,6 +3258,8 @@ getPageHeight(): number
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-getPageHeight(): number--><!--Device-WebviewController-getPageHeight(): number-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -3208,6 +3312,8 @@ getPageOffset(): ScrollOffset
 获取网页当前的滚动偏移量（不包含过滚动偏移量）。
 
 **起始版本：** 20
+
+<!--Device-WebviewController-getPageOffset(): ScrollOffset--><!--Device-WebviewController-getPageOffset(): ScrollOffset-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -3296,6 +3402,8 @@ getPrintBackground(): boolean
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-getPrintBackground(): boolean--><!--Device-WebviewController-getPrintBackground(): boolean-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -3348,6 +3456,8 @@ getProgress() : number
 
 **起始版本：** 20
 
+<!--Device-WebviewController-getProgress() : number--><!--Device-WebviewController-getProgress() : number-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -3396,6 +3506,8 @@ static getRenderProcessMode(): RenderProcessMode
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-static getRenderProcessMode(): RenderProcessMode--><!--Device-WebviewController-static getRenderProcessMode(): RenderProcessMode-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -3439,6 +3551,8 @@ getScrollable(): boolean
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-getScrollable(): boolean--><!--Device-WebviewController-getScrollable(): boolean-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -3494,6 +3608,8 @@ getScrollOffset(): ScrollOffset
 **起始版本：** 13
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-getScrollOffset(): ScrollOffset--><!--Device-WebviewController-getScrollOffset(): ScrollOffset-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -3595,6 +3711,8 @@ getSecurityLevel(): SecurityLevel
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-getSecurityLevel(): SecurityLevel--><!--Device-WebviewController-getSecurityLevel(): SecurityLevel-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -3643,6 +3761,8 @@ static getSiteIsolationMode(): SiteIsolationMode
 
 **起始版本：** 21
 
+<!--Device-WebviewController-static getSiteIsolationMode(): SiteIsolationMode--><!--Device-WebviewController-static getSiteIsolationMode(): SiteIsolationMode-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -3689,6 +3809,8 @@ getSubframeErrorPageEnabled(): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-WebviewController-getSubframeErrorPageEnabled(): boolean--><!--Device-WebviewController-getSubframeErrorPageEnabled(): boolean-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -3720,6 +3842,8 @@ getSurfaceId(): string
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-getSurfaceId(): string--><!--Device-WebviewController-getSurfaceId(): string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -3779,6 +3903,8 @@ getTitle(): string
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-getTitle(): string--><!--Device-WebviewController-getTitle(): string-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -3833,6 +3959,8 @@ getUrl(): string
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-getUrl(): string--><!--Device-WebviewController-getUrl(): string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -3890,6 +4018,8 @@ getUserAgent(): string
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-getUserAgent(): string--><!--Device-WebviewController-getUserAgent(): string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -3977,6 +4107,8 @@ static getUserAgentClientHintsEnabled(): boolean
 
 **起始版本：** 24
 
+<!--Device-WebviewController-static getUserAgentClientHintsEnabled(): boolean--><!--Device-WebviewController-static getUserAgentClientHintsEnabled(): boolean-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -3998,6 +4130,8 @@ getUserAgentMetadata(userAgent: string): UserAgentMetadata
 查询userAgent对应的UserAgent Metadata信息。
 
 **起始版本：** 24
+
+<!--Device-WebviewController-getUserAgentMetadata(userAgent: string): UserAgentMetadata--><!--Device-WebviewController-getUserAgentMetadata(userAgent: string): UserAgentMetadata-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -4028,6 +4162,8 @@ getWebId(): number
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-getWebId(): number--><!--Device-WebviewController-getWebId(): number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -4084,6 +4220,8 @@ getZoomFactor(): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-WebviewController-getZoomFactor(): number--><!--Device-WebviewController-getZoomFactor(): number-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -4109,6 +4247,8 @@ hasImage(): Promise<boolean>
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-hasImage(): Promise<boolean>--><!--Device-WebviewController-hasImage(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -4170,6 +4310,8 @@ hasImage(callback: AsyncCallback<boolean>): void
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-hasImage(callback: AsyncCallback<boolean>): void--><!--Device-WebviewController-hasImage(callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -4238,6 +4380,8 @@ static initializeWebEngine(): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-static initializeWebEngine(): void--><!--Device-WebviewController-static initializeWebEngine(): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **示例**
@@ -4277,6 +4421,8 @@ injectOfflineResources(resourceMaps: Array<OfflineResourceMap>): void
 当调用`webview.WebviewController.SetRenderProcessMode(webview.RenderProcessMode.MULTIPLE)`接口后，应用会启动多渲染进程模式，此接口在此场景下不会生效。
 
 **起始版本：** 12
+
+<!--Device-WebviewController-injectOfflineResources(resourceMaps: Array<OfflineResourceMap>): void--><!--Device-WebviewController-injectOfflineResources(resourceMaps: Array<OfflineResourceMap>): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -4551,6 +4697,8 @@ static isActiveWebEngineEvergreen(): boolean
 
 **起始版本：** 23
 
+<!--Device-WebviewController-static isActiveWebEngineEvergreen(): boolean--><!--Device-WebviewController-static isActiveWebEngineEvergreen(): boolean-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -4590,6 +4738,8 @@ isAdsBlockEnabled(): boolean
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-isAdsBlockEnabled(): boolean--><!--Device-WebviewController-isAdsBlockEnabled(): boolean-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -4648,6 +4798,8 @@ isAdsBlockEnabledForCurPage(): boolean
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-isAdsBlockEnabledForCurPage(): boolean--><!--Device-WebviewController-isAdsBlockEnabledForCurPage(): boolean-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -4703,6 +4855,8 @@ static isAutoPreconnectEnabled(): boolean
 
 **起始版本：** 21
 
+<!--Device-WebviewController-static isAutoPreconnectEnabled(): boolean--><!--Device-WebviewController-static isAutoPreconnectEnabled(): boolean-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -4747,6 +4901,8 @@ isIncognitoMode(): boolean
 **起始版本：** 11
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-isIncognitoMode(): boolean--><!--Device-WebviewController-isIncognitoMode(): boolean-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -4802,6 +4958,8 @@ isIntelligentTrackingPreventionEnabled(): boolean
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-isIntelligentTrackingPreventionEnabled(): boolean--><!--Device-WebviewController-isIntelligentTrackingPreventionEnabled(): boolean-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -4861,6 +5019,8 @@ static isPrivateNetworkAccessEnabled(): boolean
 
 **起始版本：** 20
 
+<!--Device-WebviewController-static isPrivateNetworkAccessEnabled(): boolean--><!--Device-WebviewController-static isPrivateNetworkAccessEnabled(): boolean-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -4912,6 +5072,8 @@ isSafeBrowsingEnabled(): boolean
 **起始版本：** 11
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-isSafeBrowsingEnabled(): boolean--><!--Device-WebviewController-isSafeBrowsingEnabled(): boolean-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -4972,6 +5134,8 @@ data数据必须使用base64编码或将内容中的任何#字符编码为%23。
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-loadData(data: string, mimeType: string, encoding: string, baseUrl?: string, historyUrl?: string): void--><!--Device-WebviewController-loadData(data: string, mimeType: string, encoding: string, baseUrl?: string, historyUrl?: string): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -5171,6 +5335,8 @@ loadUrl(url: string | Resource, headers?: Array<WebHeader>): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-loadUrl(url: string | Resource, headers?: Array<WebHeader>): void--><!--Device-WebviewController-loadUrl(url: string | Resource, headers?: Array<WebHeader>): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -5362,6 +5528,8 @@ off(type: 'controllerAttachStateChange', callback?: Callback<ControllerAttachSta
 
 **起始版本：** 20
 
+<!--Device-WebviewController-off(type: 'controllerAttachStateChange', callback?: Callback<ControllerAttachState>): void--><!--Device-WebviewController-off(type: 'controllerAttachStateChange', callback?: Callback<ControllerAttachState>): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -5436,6 +5604,8 @@ on(type: 'controllerAttachStateChange', callback: Callback<ControllerAttachState
 
 **起始版本：** 20
 
+<!--Device-WebviewController-on(type: 'controllerAttachStateChange', callback: Callback<ControllerAttachState>): void--><!--Device-WebviewController-on(type: 'controllerAttachStateChange', callback: Callback<ControllerAttachState>): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -5464,6 +5634,8 @@ onActive(): void
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-onActive(): void--><!--Device-WebviewController-onActive(): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -5514,6 +5686,8 @@ onCreateNativeMediaPlayer(callback: CreateNativeMediaPlayerCallback): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-onCreateNativeMediaPlayer(callback: CreateNativeMediaPlayerCallback): void--><!--Device-WebviewController-onCreateNativeMediaPlayer(callback: CreateNativeMediaPlayerCallback): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -5745,6 +5919,8 @@ onInactive(): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-onInactive(): void--><!--Device-WebviewController-onInactive(): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **错误码：**
@@ -5792,6 +5968,8 @@ pageDown(bottom: boolean): void
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-pageDown(bottom: boolean): void--><!--Device-WebviewController-pageDown(bottom: boolean): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -5883,6 +6061,8 @@ pageUp(top: boolean): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-pageUp(top: boolean): void--><!--Device-WebviewController-pageUp(top: boolean): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -5971,6 +6151,8 @@ pauseAllMedia(): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-pauseAllMedia(): void--><!--Device-WebviewController-pauseAllMedia(): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **错误码：**
@@ -6018,6 +6200,8 @@ static pauseAllTimers(): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-static pauseAllTimers(): void--><!--Device-WebviewController-static pauseAllTimers(): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -6096,6 +6280,8 @@ pauseMicrophone(): void
 
 **起始版本：** 23
 
+<!--Device-WebviewController-pauseMicrophone(): void--><!--Device-WebviewController-pauseMicrophone(): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **错误码：**
@@ -6119,6 +6305,8 @@ postMessage(name: string, ports: Array<WebMessagePort>, uri: string): void
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-postMessage(name: string, ports: Array<WebMessagePort>, uri: string): void--><!--Device-WebviewController-postMessage(name: string, ports: Array<WebMessagePort>, uri: string): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -6287,6 +6475,8 @@ postUrl(url: string, postData: ArrayBuffer): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-postUrl(url: string, postData: ArrayBuffer): void--><!--Device-WebviewController-postUrl(url: string, postData: ArrayBuffer): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -6361,6 +6551,8 @@ precompileJavaScript(url: string, script: string | Uint8Array, cacheOptions: Cac
 接口通过提供的文件信息、E-Tag响应头和Last-Modified响应头判断是否需要更新已有的字节码缓存。
 
 **起始版本：** 12
+
+<!--Device-WebviewController-precompileJavaScript(url: string, script: string | Uint8Array, cacheOptions: CacheOptions): Promise<number>--><!--Device-WebviewController-precompileJavaScript(url: string, script: string | Uint8Array, cacheOptions: CacheOptions): Promise<number>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -6622,6 +6814,8 @@ prefetchPage(url: string, additionalHeaders?: Array<WebHeader>): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-prefetchPage(url: string, additionalHeaders?: Array<WebHeader>): void--><!--Device-WebviewController-prefetchPage(url: string, additionalHeaders?: Array<WebHeader>): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -6690,6 +6884,8 @@ prefetchPage(url: string, additionalHeaders?: Array<WebHeader>, prefetchOptions?
 
 **起始版本：** 21
 
+<!--Device-WebviewController-prefetchPage(url: string, additionalHeaders?: Array<WebHeader>, prefetchOptions?: PrefetchOptions): void--><!--Device-WebviewController-prefetchPage(url: string, additionalHeaders?: Array<WebHeader>, prefetchOptions?: PrefetchOptions): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -6753,6 +6949,8 @@ static prefetchResource(request: RequestInfo, additionalHeaders?: Array<WebHeade
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-static prefetchResource(request: RequestInfo, additionalHeaders?: Array<WebHeader>, cacheKey?: string,                            cacheValidTime?: number): void--><!--Device-WebviewController-static prefetchResource(request: RequestInfo, additionalHeaders?: Array<WebHeader>, cacheKey?: string,                            cacheValidTime?: number): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -6812,6 +7010,8 @@ static prepareForPageLoad(url: string, preconnectable: boolean, numSockets: numb
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-static prepareForPageLoad(url: string, preconnectable: boolean, numSockets: number): void--><!--Device-WebviewController-static prepareForPageLoad(url: string, preconnectable: boolean, numSockets: number): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -6860,6 +7060,8 @@ refresh(): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-refresh(): void--><!--Device-WebviewController-refresh(): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **错误码：**
@@ -6907,6 +7109,8 @@ refresh(ignoreCache: boolean): void
 通知Web组件刷新网页，可以选择是否忽略缓存刷新。
 
 **起始版本：** 24
+
+<!--Device-WebviewController-refresh(ignoreCache: boolean): void--><!--Device-WebviewController-refresh(ignoreCache: boolean): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -6980,6 +7184,8 @@ registerJavaScriptProxy提供了应用与Web组件加载的网页之间强大的
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-registerJavaScriptProxy(jsObject: object, name: string, methodList: Array<string>,        asyncMethodList?: Array<string>, permission?: string): void--><!--Device-WebviewController-registerJavaScriptProxy(jsObject: object, name: string, methodList: Array<string>,        asyncMethodList?: Array<string>, permission?: string): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -7155,6 +7361,8 @@ static removeAllCache(clearRom: boolean): void
 
 **起始版本：** 18
 
+<!--Device-WebviewController-static removeAllCache(clearRom: boolean): void--><!--Device-WebviewController-static removeAllCache(clearRom: boolean): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -7213,6 +7421,8 @@ removeCache(clearRom: boolean): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-removeCache(clearRom: boolean): void--><!--Device-WebviewController-removeCache(clearRom: boolean): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -7267,6 +7477,8 @@ static removeIntelligentTrackingPreventionBypassingList(hostList: Array<string>)
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-static removeIntelligentTrackingPreventionBypassingList(hostList: Array<string>): void--><!--Device-WebviewController-static removeIntelligentTrackingPreventionBypassingList(hostList: Array<string>): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -7324,6 +7536,8 @@ requestFocus(): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-requestFocus(): void--><!--Device-WebviewController-requestFocus(): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **错误码：**
@@ -7373,6 +7587,8 @@ restoreWebState(state: Uint8Array) : void
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-restoreWebState(state: Uint8Array) : void--><!--Device-WebviewController-restoreWebState(state: Uint8Array) : void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -7465,6 +7681,8 @@ resumeAllMedia(): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-resumeAllMedia(): void--><!--Device-WebviewController-resumeAllMedia(): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **错误码：**
@@ -7512,6 +7730,8 @@ static resumeAllTimers(): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-static resumeAllTimers(): void--><!--Device-WebviewController-static resumeAllTimers(): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -7587,6 +7807,8 @@ resumeMicrophone(): void
 恢复当前网页麦克风捕获。使用麦克风功能前请在module.json5中添加权限: ohos.permission.MICROPHONE，具体权限的添加方法请参考[在配置文件中声明权限](../../../security/AccessToken/declare-permissions.md#在配置文件中声明权限)。
 
 **起始版本：** 23
+
+<!--Device-WebviewController-resumeMicrophone(): void--><!--Device-WebviewController-resumeMicrophone(): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -7738,6 +7960,8 @@ runJavaScript(script: string): Promise<string>
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-runJavaScript(script: string): Promise<string>--><!--Device-WebviewController-runJavaScript(script: string): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -7844,6 +8068,8 @@ runJavaScript(script: string, callback: AsyncCallback<string>): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-runJavaScript(script: string, callback: AsyncCallback<string>): void--><!--Device-WebviewController-runJavaScript(script: string, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -7940,6 +8166,8 @@ runJavaScriptExt(script: string | ArrayBuffer): Promise<JsMessageExt>
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-runJavaScriptExt(script: string | ArrayBuffer): Promise<JsMessageExt>--><!--Device-WebviewController-runJavaScriptExt(script: string | ArrayBuffer): Promise<JsMessageExt>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -8164,6 +8392,8 @@ runJavaScriptExt(script: string | ArrayBuffer, callback: AsyncCallback<JsMessage
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-runJavaScriptExt(script: string | ArrayBuffer, callback: AsyncCallback<JsMessageExt>): void--><!--Device-WebviewController-runJavaScriptExt(script: string | ArrayBuffer, callback: AsyncCallback<JsMessageExt>): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -8391,6 +8621,8 @@ scrollBy(deltaX: number, deltaY: number, duration?: number): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-scrollBy(deltaX: number, deltaY: number, duration?: number): void--><!--Device-WebviewController-scrollBy(deltaX: number, deltaY: number, duration?: number): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -8478,6 +8710,8 @@ scrollByWithResult(deltaX: number, deltaY: number): boolean
 
 **起始版本：** 12
 
+<!--Device-WebviewController-scrollByWithResult(deltaX: number, deltaY: number): boolean--><!--Device-WebviewController-scrollByWithResult(deltaX: number, deltaY: number): boolean-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -8564,6 +8798,8 @@ scrollTo(x: number, y: number, duration?: number): void
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-scrollTo(x: number, y: number, duration?: number): void--><!--Device-WebviewController-scrollTo(x: number, y: number, duration?: number): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -8654,6 +8890,8 @@ searchAllAsync(searchString: string): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-searchAllAsync(searchString: string): void--><!--Device-WebviewController-searchAllAsync(searchString: string): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -8728,6 +8966,8 @@ searchNext(forward: boolean): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-searchNext(forward: boolean): void--><!--Device-WebviewController-searchNext(forward: boolean): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -8782,6 +9022,8 @@ serializeWebState() : Uint8Array
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-serializeWebState() : Uint8Array--><!--Device-WebviewController-serializeWebState() : Uint8Array-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -8868,6 +9110,8 @@ static setActiveWebEngineVersion(engineVersion: ArkWebEngineVersion): void
 
 **起始版本：** 20
 
+<!--Device-WebviewController-static setActiveWebEngineVersion(engineVersion: ArkWebEngineVersion): void--><!--Device-WebviewController-static setActiveWebEngineVersion(engineVersion: ArkWebEngineVersion): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -8910,6 +9154,8 @@ static setAppCustomUserAgent(userAgent: string) : void
 默认User-Agent定义与使用场景，及相关User-Agent接口定义优先级请参考[User-Agent开发指导](../../../web/web-default-userAgent.md)。
 
 **起始版本：** 20
+
+<!--Device-WebviewController-static setAppCustomUserAgent(userAgent: string) : void--><!--Device-WebviewController-static setAppCustomUserAgent(userAgent: string) : void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -8961,6 +9207,8 @@ setAudioMuted(mute: boolean): void
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-setAudioMuted(mute: boolean): void--><!--Device-WebviewController-setAudioMuted(mute: boolean): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -9016,6 +9264,8 @@ static setAutoPreconnect(enabled: boolean): void
 
 **起始版本：** 21
 
+<!--Device-WebviewController-static setAutoPreconnect(enabled: boolean): void--><!--Device-WebviewController-static setAutoPreconnect(enabled: boolean): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -9049,6 +9299,8 @@ setBackForwardCacheOptions(options: BackForwardCacheOptions): void
 可以设置Web组件中前进后退缓存的相关选项。
 
 **起始版本：** 12
+
+<!--Device-WebviewController-setBackForwardCacheOptions(options: BackForwardCacheOptions): void--><!--Device-WebviewController-setBackForwardCacheOptions(options: BackForwardCacheOptions): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -9108,6 +9360,8 @@ static setBlanklessLoadingCacheCapacity(capacity: number) : number
 设置无白屏加载方案的持久化缓存容量，返回实际生效值。当接口没有显式调用时，默认缓存容量为30MB。当实际缓存超过容量时，将采用淘汰不常用的过渡帧的方式清理。
 
 **起始版本：** 20
+
+<!--Device-WebviewController-static setBlanklessLoadingCacheCapacity(capacity: number) : number--><!--Device-WebviewController-static setBlanklessLoadingCacheCapacity(capacity: number) : number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -9171,6 +9425,8 @@ setBlanklessLoadingWithKey(key: string, is_start: boolean) : WebBlanklessErrorCo
 > - 请在module.json5中添加权限: ohos.permission.INTERNET和ohos.permission.GET_NETWORK_INFO，具体权限的添加方法请参考[在配置文件中声明权限](../../../security/AccessToken/declare-permissions.md#在配置文件中声明权限)。
 
 **起始版本：** 20
+
+<!--Device-WebviewController-setBlanklessLoadingWithKey(key: string, is_start: boolean) : WebBlanklessErrorCode--><!--Device-WebviewController-setBlanklessLoadingWithKey(key: string, is_start: boolean) : WebBlanklessErrorCode-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -9253,6 +9509,8 @@ setBlanklessLoadingWithParams(key: string,
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-WebviewController-setBlanklessLoadingWithParams(key: string,      param: BlanklessLoadingParam) : WebBlanklessErrorCode--><!--Device-WebviewController-setBlanklessLoadingWithParams(key: string,      param: BlanklessLoadingParam) : WebBlanklessErrorCode-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -9328,6 +9586,8 @@ static setConnectionTimeout(timeout: number): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-static setConnectionTimeout(timeout: number): void--><!--Device-WebviewController-static setConnectionTimeout(timeout: number): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -9399,6 +9659,8 @@ setCustomUserAgent(userAgent: string): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-setCustomUserAgent(userAgent: string): void--><!--Device-WebviewController-setCustomUserAgent(userAgent: string): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -9456,6 +9718,8 @@ setDownloadDelegate(delegate: WebDownloadDelegate): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-setDownloadDelegate(delegate: WebDownloadDelegate): void--><!--Device-WebviewController-setDownloadDelegate(delegate: WebDownloadDelegate): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -9510,6 +9774,8 @@ setErrorPageEnabled(enable: boolean): void
 在当前接口设置为true时如果页面加载发生错误将触发[onOverrideErrorPage](../arkts-components/arkts-arkweb-web-comp-attribute.md#onoverrideerrorpage)回调，可在该回调接口中设置自定义的错误展示页面。
 
 **起始版本：** 20
+
+<!--Device-WebviewController-setErrorPageEnabled(enable: boolean): void--><!--Device-WebviewController-setErrorPageEnabled(enable: boolean): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -9571,6 +9837,8 @@ setErrorPageEnabled(enable: boolean, includeSubframe: boolean): void
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WebviewController-setErrorPageEnabled(enable: boolean, includeSubframe: boolean): void--><!--Device-WebviewController-setErrorPageEnabled(enable: boolean, includeSubframe: boolean): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -9646,6 +9914,8 @@ static setHostIP(hostName: string, address: string, aliveTime: number): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-static setHostIP(hostName: string, address: string, aliveTime: number): void--><!--Device-WebviewController-static setHostIP(hostName: string, address: string, aliveTime: number): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -9677,6 +9947,8 @@ static setHttpDns(secureDnsMode: SecureDnsMode, secureDnsConfig: string): void
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-static setHttpDns(secureDnsMode: SecureDnsMode, secureDnsConfig: string): void--><!--Device-WebviewController-static setHttpDns(secureDnsMode: SecureDnsMode, secureDnsConfig: string): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -9727,6 +9999,8 @@ setNetworkAvailable(enable: boolean): void
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-setNetworkAvailable(enable: boolean): void--><!--Device-WebviewController-setNetworkAvailable(enable: boolean): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -9829,6 +10103,8 @@ setPathAllowingUniversalAccess放开目录的跨域访问限制是一个高风�
 当路径列表中有其中一个路径不满足以上条件之一，则会抛出异常码401，并且设置路径列表失败。当设置的路径列表为空，则file协议可访问范围以[fileAccess](../arkts-components/arkts-arkweb-web-comp-attribute.md#fileaccess)的行为为准。
 
 **起始版本：** 12
+
+<!--Device-WebviewController-setPathAllowingUniversalAccess(pathList: Array<string>): void--><!--Device-WebviewController-setPathAllowingUniversalAccess(pathList: Array<string>): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -9949,6 +10225,8 @@ setPrintBackground(enable: boolean): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-setPrintBackground(enable: boolean): void--><!--Device-WebviewController-setPrintBackground(enable: boolean): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -10003,6 +10281,8 @@ static setRenderProcessMode(mode: RenderProcessMode): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-static setRenderProcessMode(mode: RenderProcessMode): void--><!--Device-WebviewController-static setRenderProcessMode(mode: RenderProcessMode): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -10056,6 +10336,8 @@ setScrollable(enable: boolean, type?: ScrollType): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-setScrollable(enable: boolean, type?: ScrollType): void--><!--Device-WebviewController-setScrollable(enable: boolean, type?: ScrollType): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -10118,6 +10400,8 @@ static setScrollbarMode(scrollbarMode: ScrollbarMode): void
 > - 该接口需要在WebViewController绑定Web组件之前调用。
 
 **起始版本：** 23
+
+<!--Device-WebviewController-static setScrollbarMode(scrollbarMode: ScrollbarMode): void--><!--Device-WebviewController-static setScrollbarMode(scrollbarMode: ScrollbarMode): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -10186,6 +10470,8 @@ static setServiceWorkerWebSchemeHandler(scheme: string, handler: WebSchemeHandle
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-static setServiceWorkerWebSchemeHandler(scheme: string, handler: WebSchemeHandler): void--><!--Device-WebviewController-static setServiceWorkerWebSchemeHandler(scheme: string, handler: WebSchemeHandler): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -10248,6 +10534,8 @@ static setSiteIsolationMode(mode: SiteIsolationMode): void
 
 **起始版本：** 21
 
+<!--Device-WebviewController-static setSiteIsolationMode(mode: SiteIsolationMode): void--><!--Device-WebviewController-static setSiteIsolationMode(mode: SiteIsolationMode): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -10302,6 +10590,8 @@ static setSocketIdleTimeout(timeout: number): void
 
 **起始版本：** 21
 
+<!--Device-WebviewController-static setSocketIdleTimeout(timeout: number): void--><!--Device-WebviewController-static setSocketIdleTimeout(timeout: number): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -10334,6 +10624,8 @@ setSoftKeyboardBehaviorMode(mode: WebSoftKeyboardBehaviorMode): void
 设置软键盘自动控制模式，当接口没有显式调用时，Web组件失去焦点或获得焦点、状态切换为inactive或active时，系统均会尝试触发软键盘自动隐藏或拉起。典型使用场景：不希望Web组件在inactive或active状态切换时自动隐藏或重新拉起软键盘时，可使用DISABLE_AUTO_KEYBOARD_ON_ACTIVE；需要保留默认自动管理行为时，可使用DEFAULT。
 
 **起始版本：** 22
+
+<!--Device-WebviewController-setSoftKeyboardBehaviorMode(mode: WebSoftKeyboardBehaviorMode): void--><!--Device-WebviewController-setSoftKeyboardBehaviorMode(mode: WebSoftKeyboardBehaviorMode): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -10383,6 +10675,8 @@ setUrlTrustList(urlTrustList: string): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-setUrlTrustList(urlTrustList: string): void--><!--Device-WebviewController-setUrlTrustList(urlTrustList: string): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -10474,6 +10768,8 @@ setUrlTrustList(urlTrustList: string, allowOpaqueOrigin: boolean, supportWildcar
 设置Web的URL白名单，只有白名单内的URL才能允许加载/跳转，否则将拦截并弹出告警页。扩展了对Opaque Origin URL以及通配符规则的控制能力。
 
 **起始版本：** 24
+
+<!--Device-WebviewController-setUrlTrustList(urlTrustList: string, allowOpaqueOrigin: boolean, supportWildcard: boolean): void--><!--Device-WebviewController-setUrlTrustList(urlTrustList: string, allowOpaqueOrigin: boolean, supportWildcard: boolean): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -10582,6 +10878,8 @@ static setUserAgentClientHintsEnabled(enabled: boolean): void
 
 **起始版本：** 24
 
+<!--Device-WebviewController-static setUserAgentClientHintsEnabled(enabled: boolean): void--><!--Device-WebviewController-static setUserAgentClientHintsEnabled(enabled: boolean): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -10689,6 +10987,8 @@ static setUserAgentForHosts(userAgent: string, hosts : Array<string>) : void
 
 **起始版本：** 20
 
+<!--Device-WebviewController-static setUserAgentForHosts(userAgent: string, hosts : Array<string>) : void--><!--Device-WebviewController-static setUserAgentForHosts(userAgent: string, hosts : Array<string>) : void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -10755,6 +11055,8 @@ setUserAgentMetadata(userAgent: string, metaData: UserAgentMetadata): void
 
 **起始版本：** 24
 
+<!--Device-WebviewController-setUserAgentMetadata(userAgent: string, metaData: UserAgentMetadata): void--><!--Device-WebviewController-setUserAgentMetadata(userAgent: string, metaData: UserAgentMetadata): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -10781,6 +11083,8 @@ static setWebDebuggingAccess(webDebuggingAccess: boolean): void
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-static setWebDebuggingAccess(webDebuggingAccess: boolean): void--><!--Device-WebviewController-static setWebDebuggingAccess(webDebuggingAccess: boolean): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -10843,6 +11147,8 @@ static setWebDebuggingAccess(webDebuggingAccess: boolean, port: number): void
 
 **起始版本：** 20
 
+<!--Device-WebviewController-static setWebDebuggingAccess(webDebuggingAccess: boolean, port: number): void--><!--Device-WebviewController-static setWebDebuggingAccess(webDebuggingAccess: boolean, port: number): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -10903,6 +11209,8 @@ static setWebDestroyMode(mode: WebDestroyMode): void
 
 **起始版本：** 20
 
+<!--Device-WebviewController-static setWebDestroyMode(mode: WebDestroyMode): void--><!--Device-WebviewController-static setWebDestroyMode(mode: WebDestroyMode): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -10940,6 +11248,8 @@ setWebSchemeHandler(scheme: string, handler: WebSchemeHandler): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-setWebSchemeHandler(scheme: string, handler: WebSchemeHandler): void--><!--Device-WebviewController-setWebSchemeHandler(scheme: string, handler: WebSchemeHandler): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -10998,6 +11308,8 @@ setZoomFactor(zoomFactor: number): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-WebviewController-setZoomFactor(zoomFactor: number): void--><!--Device-WebviewController-setZoomFactor(zoomFactor: number): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -11023,6 +11335,8 @@ slideScroll(vx: number, vy: number): void
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-slideScroll(vx: number, vy: number): void--><!--Device-WebviewController-slideScroll(vx: number, vy: number): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -11103,6 +11417,8 @@ startCamera(): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-startCamera(): void--><!--Device-WebviewController-startCamera(): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -11235,6 +11551,8 @@ startDownload(url: string): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-startDownload(url: string): void--><!--Device-WebviewController-startDownload(url: string): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -11299,6 +11617,8 @@ stop(): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-stop(): void--><!--Device-WebviewController-stop(): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **错误码：**
@@ -11346,6 +11666,8 @@ stopAllMedia(): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-stopAllMedia(): void--><!--Device-WebviewController-stopAllMedia(): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -11395,6 +11717,8 @@ stopCamera(): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-stopCamera(): void--><!--Device-WebviewController-stopCamera(): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **错误码：**
@@ -11416,6 +11740,8 @@ stopMicrophone(): void
 停止当前网页麦克风捕获。
 
 **起始版本：** 23
+
+<!--Device-WebviewController-stopMicrophone(): void--><!--Device-WebviewController-stopMicrophone(): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -11440,6 +11766,8 @@ storeWebArchive(baseName: string, autoName: boolean): Promise<string>
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-storeWebArchive(baseName: string, autoName: boolean): Promise<string>--><!--Device-WebviewController-storeWebArchive(baseName: string, autoName: boolean): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -11514,6 +11842,8 @@ storeWebArchive(baseName: string, autoName: boolean, callback: AsyncCallback<str
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-storeWebArchive(baseName: string, autoName: boolean, callback: AsyncCallback<string>): void--><!--Device-WebviewController-storeWebArchive(baseName: string, autoName: boolean, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -11580,6 +11910,8 @@ terminateRenderProcess(): boolean
 
 **起始版本：** 12
 
+<!--Device-WebviewController-terminateRenderProcess(): boolean--><!--Device-WebviewController-terminateRenderProcess(): boolean-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -11629,6 +11961,8 @@ static trimMemoryByPressureLevel(level: PressureLevel): void
 **起始版本：** 14
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-static trimMemoryByPressureLevel(level: PressureLevel): void--><!--Device-WebviewController-static trimMemoryByPressureLevel(level: PressureLevel): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -11684,6 +12018,8 @@ waitForAttached(timeout: number): Promise<ControllerAttachState>
 异步等待WebViewController与Web组件绑定完成，绑定完成或超时触发回调，通过Promise方式返回当前[ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md)状态。
 
 **起始版本：** 20
+
+<!--Device-WebviewController-waitForAttached(timeout: number): Promise<ControllerAttachState>--><!--Device-WebviewController-waitForAttached(timeout: number): Promise<ControllerAttachState>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -11750,6 +12086,8 @@ static warmupServiceWorker(url: string): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-static warmupServiceWorker(url: string): void--><!--Device-WebviewController-static warmupServiceWorker(url: string): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -11802,6 +12140,8 @@ webPageSnapshot(info: SnapshotInfo, callback: AsyncCallback<SnapshotResult>): vo
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-webPageSnapshot(info: SnapshotInfo, callback: AsyncCallback<SnapshotResult>): void--><!--Device-WebviewController-webPageSnapshot(info: SnapshotInfo, callback: AsyncCallback<SnapshotResult>): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -11861,6 +12201,8 @@ zoom(factor: number): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-zoom(factor: number): void--><!--Device-WebviewController-zoom(factor: number): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -11919,6 +12261,8 @@ zoomIn(): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-WebviewController-zoomIn(): void--><!--Device-WebviewController-zoomIn(): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **错误码：**
@@ -11967,6 +12311,8 @@ zoomOut(): void
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-zoomOut(): void--><!--Device-WebviewController-zoomOut(): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -12020,6 +12366,8 @@ getHitTest(): WebHitTestType
 **替代接口：** [getLastHitTest](#getlasthittest)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-getHitTest(): WebHitTestType--><!--Device-WebviewController-getHitTest(): WebHitTestType-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -12079,6 +12427,8 @@ getHitTestValue(): HitTestValue
 **替代接口：** [getLastHitTest](#getlasthittest)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WebviewController-getHitTestValue(): HitTestValue--><!--Device-WebviewController-getHitTestValue(): HitTestValue-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

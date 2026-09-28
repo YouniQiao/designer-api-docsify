@@ -12,6 +12,8 @@ export interface CommonEventPublishData
 
 **起始版本：** 7
 
+<!--Device-unnamed-export interface CommonEventPublishData--><!--Device-unnamed-export interface CommonEventPublishData-End-->
+
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## bundleName
@@ -26,7 +28,9 @@ bundleName?: string
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-CommonEventPublishData-bundleName?: string--><!--Device-CommonEventPublishData-bundleName?: string-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -44,7 +48,9 @@ code?: number
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-CommonEventPublishData-code?: int--><!--Device-CommonEventPublishData-code?: int-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -60,7 +66,9 @@ data?: string
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-CommonEventPublishData-data?: string--><!--Device-CommonEventPublishData-data?: string-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -80,6 +88,8 @@ isOrdered?: boolean
 **默认值：** false
 
 **起始版本：** 7
+
+<!--Device-CommonEventPublishData-isOrdered?: boolean--><!--Device-CommonEventPublishData-isOrdered?: boolean-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -106,6 +116,8 @@ isSticky?: boolean
 
 **需要权限：** ohos.permission.COMMONEVENT_STICKY
 
+<!--Device-CommonEventPublishData-isSticky?: boolean--><!--Device-CommonEventPublishData-isSticky?: boolean-End-->
+
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## parameters
@@ -122,6 +134,8 @@ parameters?: { [key: string]: any }
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-CommonEventPublishData-parameters?: { [key: string]: any }--><!--Device-CommonEventPublishData-parameters?: { [key: string]: any }-End-->
+
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## subscriberPermissions
@@ -136,6 +150,8 @@ subscriberPermissions?: Array<string>
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-CommonEventPublishData-subscriberPermissions?: Array<string>--><!--Device-CommonEventPublishData-subscriberPermissions?: Array<string>-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent

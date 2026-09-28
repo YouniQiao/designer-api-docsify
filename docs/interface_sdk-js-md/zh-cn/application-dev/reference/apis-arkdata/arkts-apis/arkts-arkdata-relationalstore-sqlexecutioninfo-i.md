@@ -8,6 +8,8 @@ interface SqlExecutionInfo
 
 **起始版本：** 12
 
+<!--Device-relationalStore-interface SqlExecutionInfo--><!--Device-relationalStore-interface SqlExecutionInfo-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ executeTime: number
 
 **起始版本：** 12
 
+<!--Device-SqlExecutionInfo-executeTime: long--><!--Device-SqlExecutionInfo-executeTime: long-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## prepareTime
@@ -41,6 +45,8 @@ prepareTime: number
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-SqlExecutionInfo-prepareTime: long--><!--Device-SqlExecutionInfo-prepareTime: long-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -56,6 +62,8 @@ sql: Array<string>
 
 **起始版本：** 12
 
+<!--Device-SqlExecutionInfo-sql: Array<string>--><!--Device-SqlExecutionInfo-sql: Array<string>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## totalTime
@@ -70,6 +78,8 @@ totalTime: number
 
 **起始版本：** 12
 
+<!--Device-SqlExecutionInfo-totalTime: long--><!--Device-SqlExecutionInfo-totalTime: long-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## waitTime
@@ -83,5 +93,7 @@ waitTime: number
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-SqlExecutionInfo-waitTime: long--><!--Device-SqlExecutionInfo-waitTime: long-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core

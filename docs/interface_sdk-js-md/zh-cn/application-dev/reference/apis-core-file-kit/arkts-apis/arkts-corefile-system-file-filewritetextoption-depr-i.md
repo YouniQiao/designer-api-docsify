@@ -10,6 +10,8 @@ export interface FileWriteTextOption
 
 **废弃版本：** 10
 
+<!--Device-unnamed-export interface FileWriteTextOption--><!--Device-unnamed-export interface FileWriteTextOption-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## 导入模块
@@ -29,6 +31,8 @@ complete?: () => void
 
 **废弃版本：** 10
 
+<!--Device-FileWriteTextOption-complete?: () => void--><!--Device-FileWriteTextOption-complete?: () => void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## fail
@@ -42,6 +46,8 @@ fail?: (data: string, code: number) => void
 **起始版本：** 3
 
 **废弃版本：** 10
+
+<!--Device-FileWriteTextOption-fail?: (data: string, code: number) => void--><!--Device-FileWriteTextOption-fail?: (data: string, code: number) => void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -64,6 +70,8 @@ success?: () => void
 
 **废弃版本：** 10
 
+<!--Device-FileWriteTextOption-success?: () => void--><!--Device-FileWriteTextOption-success?: () => void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## append
@@ -79,6 +87,8 @@ append?: boolean
 **起始版本：** 3
 
 **废弃版本：** 10
+
+<!--Device-FileWriteTextOption-append?: boolean--><!--Device-FileWriteTextOption-append?: boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -96,6 +106,8 @@ encoding?: string
 
 **废弃版本：** 10
 
+<!--Device-FileWriteTextOption-encoding?: string--><!--Device-FileWriteTextOption-encoding?: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## text
@@ -111,6 +123,8 @@ text: string
 **起始版本：** 3
 
 **废弃版本：** 10
+
+<!--Device-FileWriteTextOption-text: string--><!--Device-FileWriteTextOption-text: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -129,5 +143,7 @@ uri: string
 **起始版本：** 3
 
 **废弃版本：** 10
+
+<!--Device-FileWriteTextOption-uri: string--><!--Device-FileWriteTextOption-uri: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite

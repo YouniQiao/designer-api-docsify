@@ -10,6 +10,8 @@ export interface ComfortReminderData extends UserStatusData
 
 **起始版本：** 26.0.0
 
+<!--Device-userStatus-export interface ComfortReminderData extends UserStatusData--><!--Device-userStatus-export interface ComfortReminderData extends UserStatusData-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
 **系统接口：** 此接口为系统接口。
@@ -34,6 +36,8 @@ eventType: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ComfortReminderData-eventType: int--><!--Device-ComfortReminderData-eventType: int-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
 **系统接口：** 此接口为系统接口。
@@ -52,6 +56,8 @@ fusionReminderData: ReminderLevel
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ComfortReminderData-fusionReminderData: ReminderLevel--><!--Device-ComfortReminderData-fusionReminderData: ReminderLevel-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
 **系统接口：** 此接口为系统接口。
@@ -69,6 +75,8 @@ swingReminderData: ReminderLevel
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ComfortReminderData-swingReminderData: ReminderLevel--><!--Device-ComfortReminderData-swingReminderData: ReminderLevel-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 

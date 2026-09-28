@@ -16,6 +16,8 @@ declare function lseek(fd: number, offset: number, whence?: WhenceType): number
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare function lseek(fd: number, offset: number, whence?: WhenceType): number--><!--Device-unnamed-declare function lseek(fd: number, offset: number, whence?: WhenceType): number-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**

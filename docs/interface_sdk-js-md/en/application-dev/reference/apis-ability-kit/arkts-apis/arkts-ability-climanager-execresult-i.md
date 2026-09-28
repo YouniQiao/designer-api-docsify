@@ -8,6 +8,8 @@ Describes the execution result of a tool or command.
 
 **Since:** 26.0.1
 
+<!--Device-cliManager-interface ExecResult--><!--Device-cliManager-interface ExecResult-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 ## Modules to Import
@@ -32,6 +34,8 @@ This field captures all text written by the tool to its standard error stream du
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExecResult-errorText?: string--><!--Device-ExecResult-errorText?: string-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 ## executionTime
@@ -48,6 +52,8 @@ Indicates the execution duration in milliseconds. The value range is all integer
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExecResult-executionTime: long--><!--Device-ExecResult-executionTime: long-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 ## exitCode
@@ -63,6 +69,8 @@ Indicates the exit code, 0 means success. The value range is all integers.
 **Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExecResult-exitCode?: int--><!--Device-ExecResult-exitCode?: int-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -82,6 +90,8 @@ This field captures all text written by the tool or command to its standard outp
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExecResult-outputText?: string--><!--Device-ExecResult-outputText?: string-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 ## signalNumber
@@ -97,6 +107,8 @@ Indicates the termination signal (if the tool process was terminated by a signal
 **Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExecResult-signalNumber?: int--><!--Device-ExecResult-signalNumber?: int-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -115,5 +127,7 @@ When **true**, the tool process was forcibly terminated because it exceeded the 
 **Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExecResult-timeOut: boolean--><!--Device-ExecResult-timeOut: boolean-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core

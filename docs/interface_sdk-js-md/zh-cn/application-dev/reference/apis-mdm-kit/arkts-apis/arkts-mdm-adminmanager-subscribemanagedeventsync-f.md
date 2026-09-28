@@ -22,6 +22,8 @@ function subscribeManagedEventSync(admin: Want, managedEvents: Array<ManagedEven
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-adminManager-function subscribeManagedEventSync(admin: Want, managedEvents: Array<ManagedEvent>): void--><!--Device-adminManager-function subscribeManagedEventSync(admin: Want, managedEvents: Array<ManagedEvent>): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**

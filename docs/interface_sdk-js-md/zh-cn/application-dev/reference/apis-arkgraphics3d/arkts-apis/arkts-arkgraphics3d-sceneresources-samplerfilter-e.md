@@ -10,6 +10,8 @@ export enum SamplerFilter
 
 **起始版本：** 20
 
+<!--Device-unnamed-export enum SamplerFilter--><!--Device-unnamed-export enum SamplerFilter-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## NEAREST
@@ -22,6 +24,8 @@ NEAREST = 0
 
 **起始版本：** 20
 
+<!--Device-SamplerFilter-NEAREST = 0--><!--Device-SamplerFilter-NEAREST = 0-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## LINEAR
@@ -33,5 +37,7 @@ LINEAR = 1
 使用线性插值进行采样，效果更平滑但性能略低。
 
 **起始版本：** 20
+
+<!--Device-SamplerFilter-LINEAR = 1--><!--Device-SamplerFilter-LINEAR = 1-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

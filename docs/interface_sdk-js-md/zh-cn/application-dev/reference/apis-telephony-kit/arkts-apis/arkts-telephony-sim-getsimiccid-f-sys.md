@@ -20,6 +20,8 @@ Obtains the ICCID of the SIM card in a specified slot.
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-sim-function getSimIccId(slotId: int, callback: AsyncCallback<string>): void--><!--Device-sim-function getSimIccId(slotId: int, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -71,6 +73,8 @@ Obtains the ICCID of the SIM card in a specified slot.
 **起始版本：** 7
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
+
+<!--Device-sim-function getSimIccId(slotId: int): Promise<string>--><!--Device-sim-function getSimIccId(slotId: int): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

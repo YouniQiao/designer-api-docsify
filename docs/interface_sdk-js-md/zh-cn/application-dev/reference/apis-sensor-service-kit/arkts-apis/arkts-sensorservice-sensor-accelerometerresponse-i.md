@@ -12,6 +12,8 @@ interface AccelerometerResponse extends Response
 
 **起始版本：** 8
 
+<!--Device-sensor-interface AccelerometerResponse extends Response--><!--Device-sensor-interface AccelerometerResponse extends Response-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## 导入模块
@@ -32,7 +34,9 @@ x: number
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-AccelerometerResponse-x: double--><!--Device-AccelerometerResponse-x: double-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -48,7 +52,9 @@ y: number
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-AccelerometerResponse-y: double--><!--Device-AccelerometerResponse-y: double-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -64,6 +70,8 @@ z: number
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-AccelerometerResponse-z: double--><!--Device-AccelerometerResponse-z: double-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor

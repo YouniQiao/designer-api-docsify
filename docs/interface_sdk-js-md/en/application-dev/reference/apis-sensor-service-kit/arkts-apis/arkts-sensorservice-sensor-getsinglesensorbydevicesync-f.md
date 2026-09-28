@@ -16,6 +16,8 @@ Obtains information about the sensor of a specific type. If peripherals exist an
 
 **Since:** 19
 
+<!--Device-sensor-function getSingleSensorByDeviceSync(type: SensorId, deviceId?: int): Array<Sensor>--><!--Device-sensor-function getSingleSensorByDeviceSync(type: SensorId, deviceId?: int): Array<Sensor>-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**

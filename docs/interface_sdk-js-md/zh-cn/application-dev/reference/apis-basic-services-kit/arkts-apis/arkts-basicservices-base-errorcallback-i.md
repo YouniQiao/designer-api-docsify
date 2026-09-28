@@ -12,6 +12,8 @@ export interface ErrorCallback<T extends Error = BusinessError>
 
 **起始版本：** 6
 
+<!--Device-unnamed-export interface ErrorCallback<T extends Error = BusinessError>--><!--Device-unnamed-export interface ErrorCallback<T extends Error = BusinessError>-End-->
+
 **系统能力：** SystemCapability.Base
 
 ## 导入模块
@@ -29,6 +31,8 @@ import { AsyncCallback, BusinessError, Callback, ErrorCallback } from '@kit.Basi
 **起始版本：** 6
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ErrorCallback-(err: T): void--><!--Device-ErrorCallback-(err: T): void-End-->
 
 **系统能力：** SystemCapability.Base
 

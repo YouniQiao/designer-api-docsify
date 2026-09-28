@@ -12,6 +12,8 @@ interface AuthInstance
 
 **替代接口：** [UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md)
 
+<!--Device-userAuth-interface AuthInstance--><!--Device-userAuth-interface AuthInstance-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 ## 导入模块
@@ -40,6 +42,8 @@ cancel: () => void
 **替代接口：** [cancel](arkts-userauthentication-userauth-userauthinstance-i.md#cancel)
 
 **需要权限：** ohos.permission.ACCESS_BIOMETRIC
+
+<!--Device-AuthInstance-cancel: () => void--><!--Device-AuthInstance-cancel: () => void-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -88,6 +92,8 @@ off: (name: AuthEventKey) => void
 **废弃版本：** 10
 
 **替代接口：** [off](arkts-userauthentication-userauth-userauthinstance-i.md#off)
+
+<!--Device-AuthInstance-off: (name: AuthEventKey) => void--><!--Device-AuthInstance-off: (name: AuthEventKey) => void-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -149,6 +155,8 @@ on: (name: AuthEventKey, callback: AuthEvent) => void
 **废弃版本：** 10
 
 **替代接口：** [on](arkts-userauthentication-userauth-userauthinstance-i.md#on)
+
+<!--Device-AuthInstance-on: (name: AuthEventKey, callback: AuthEvent) => void--><!--Device-AuthInstance-on: (name: AuthEventKey, callback: AuthEvent) => void-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -224,6 +232,8 @@ start: () => void
 **替代接口：** [start](arkts-userauthentication-userauth-userauthinstance-i.md#start)
 
 **需要权限：** ohos.permission.ACCESS_BIOMETRIC
+
+<!--Device-AuthInstance-start: () => void--><!--Device-AuthInstance-start: () => void-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 

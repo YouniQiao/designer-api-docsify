@@ -12,6 +12,8 @@ interface PanProfile extends BaseProfile
 
 **起始版本：** 10
 
+<!--Device-pan-interface PanProfile extends BaseProfile--><!--Device-pan-interface PanProfile extends BaseProfile-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -31,6 +33,8 @@ isPanSupported(): boolean
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PanProfile-isPanSupported(): boolean--><!--Device-PanProfile-isPanSupported(): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -70,6 +74,8 @@ isTetheringOn(): boolean
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PanProfile-isTetheringOn(): boolean--><!--Device-PanProfile-isTetheringOn(): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

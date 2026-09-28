@@ -27,6 +27,8 @@ function getDisallowedPolicy(admin: Want | null, feature: string): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-restrictions-function getDisallowedPolicy(admin: Want | null, feature: string): boolean--><!--Device-restrictions-function getDisallowedPolicy(admin: Want | null, feature: string): boolean-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -87,6 +89,8 @@ function getDisallowedPolicy(admin: Want | null, feature: FeatureForDevice): boo
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_RESTRICTIONS or ohos.permission.PERSONAL_MANAGE_RESTRICTIONS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-restrictions-function getDisallowedPolicy(admin: Want | null, feature: FeatureForDevice): boolean--><!--Device-restrictions-function getDisallowedPolicy(admin: Want | null, feature: FeatureForDevice): boolean-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

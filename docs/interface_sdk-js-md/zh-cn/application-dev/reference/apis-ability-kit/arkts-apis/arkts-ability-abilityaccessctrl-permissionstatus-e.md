@@ -34,6 +34,8 @@ export enum PermissionStatus
 
 **起始版本：** 20
 
+<!--Device-abilityAccessCtrl-export enum PermissionStatus--><!--Device-abilityAccessCtrl-export enum PermissionStatus-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 ## DENIED
@@ -48,7 +50,9 @@ DENIED = -1
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PermissionStatus-DENIED = -1--><!--Device-PermissionStatus-DENIED = -1-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -64,7 +68,9 @@ GRANTED = 0
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PermissionStatus-GRANTED = 0--><!--Device-PermissionStatus-GRANTED = 0-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -80,7 +86,9 @@ NOT_DETERMINED = 1
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PermissionStatus-NOT_DETERMINED = 1--><!--Device-PermissionStatus-NOT_DETERMINED = 1-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -96,7 +104,9 @@ INVALID = 2
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PermissionStatus-INVALID = 2--><!--Device-PermissionStatus-INVALID = 2-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -112,6 +122,8 @@ RESTRICTED = 3
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PermissionStatus-RESTRICTED = 3--><!--Device-PermissionStatus-RESTRICTED = 3-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken

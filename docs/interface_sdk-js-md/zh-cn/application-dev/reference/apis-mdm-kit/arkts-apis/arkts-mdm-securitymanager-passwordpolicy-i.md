@@ -8,6 +8,8 @@ export interface PasswordPolicy
 
 **起始版本：** 12
 
+<!--Device-securityManager-export interface PasswordPolicy--><!--Device-securityManager-export interface PasswordPolicy-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## 导入模块
@@ -30,6 +32,8 @@ additionalDescription?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PasswordPolicy-additionalDescription?: string--><!--Device-PasswordPolicy-additionalDescription?: string-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## complexityRegex
@@ -45,6 +49,8 @@ complexityRegex?: string
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PasswordPolicy-complexityRegex?: string--><!--Device-PasswordPolicy-complexityRegex?: string-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -62,6 +68,8 @@ passwordAlgs?: PasswordAlgs
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PasswordPolicy-passwordAlgs?: PasswordAlgs--><!--Device-PasswordPolicy-passwordAlgs?: PasswordAlgs-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## validityPeriod
@@ -77,5 +85,7 @@ validityPeriod?: number
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PasswordPolicy-validityPeriod?: long--><!--Device-PasswordPolicy-validityPeriod?: long-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager

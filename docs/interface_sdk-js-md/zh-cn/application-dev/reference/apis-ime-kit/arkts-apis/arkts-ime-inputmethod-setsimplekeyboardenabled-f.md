@@ -16,6 +16,8 @@ function setSimpleKeyboardEnabled(enable: boolean): void
 
 **起始版本：** 20
 
+<!--Device-inputMethod-function setSimpleKeyboardEnabled(enable: boolean): void--><!--Device-inputMethod-function setSimpleKeyboardEnabled(enable: boolean): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**

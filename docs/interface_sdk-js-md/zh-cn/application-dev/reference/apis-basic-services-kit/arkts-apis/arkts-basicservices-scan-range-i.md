@@ -8,6 +8,8 @@ interface Range
 
 **起始版本：** 20
 
+<!--Device-scan-interface Range--><!--Device-scan-interface Range-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## 导入模块
@@ -28,6 +30,8 @@ maxValue: number
 
 **起始版本：** 20
 
+<!--Device-Range-maxValue: int--><!--Device-Range-maxValue: int-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## minValue
@@ -42,6 +46,8 @@ minValue: number
 
 **起始版本：** 20
 
+<!--Device-Range-minValue: int--><!--Device-Range-minValue: int-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## quantValue
@@ -55,5 +61,7 @@ quantValue: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-Range-quantValue: int--><!--Device-Range-quantValue: int-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework

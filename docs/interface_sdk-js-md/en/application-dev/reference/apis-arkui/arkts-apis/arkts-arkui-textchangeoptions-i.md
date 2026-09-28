@@ -8,6 +8,8 @@ Text change information, including the selection range before and after the chan
 
 **Since:** 15
 
+<!--Device-unnamed-declare interface TextChangeOptions--><!--Device-unnamed-declare interface TextChangeOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## oldContent
@@ -25,6 +27,8 @@ Text content before the change.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-TextChangeOptions-oldContent: string--><!--Device-TextChangeOptions-oldContent: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,6 +48,8 @@ Preview text before the change.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-TextChangeOptions-oldPreviewText: PreviewText--><!--Device-TextChangeOptions-oldPreviewText: PreviewText-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## rangeAfter
@@ -62,6 +68,8 @@ Selection range after the change.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-TextChangeOptions-rangeAfter: TextRange--><!--Device-TextChangeOptions-rangeAfter: TextRange-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## rangeBefore
@@ -79,5 +87,7 @@ Selection range before the change.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-TextChangeOptions-rangeBefore: TextRange--><!--Device-TextChangeOptions-rangeBefore: TextRange-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

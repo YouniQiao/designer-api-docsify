@@ -8,6 +8,8 @@ interface ConnectionChangeState
 
 **起始版本：** 26.0.0
 
+<!--Device-ssap-interface ConnectionChangeState--><!--Device-ssap-interface ConnectionChangeState-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## 导入模块
@@ -30,6 +32,8 @@ address: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ConnectionChangeState-address: string--><!--Device-ConnectionChangeState-address: string-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## state
@@ -45,5 +49,7 @@ state: ConnectionState
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ConnectionChangeState-state: ConnectionState--><!--Device-ConnectionChangeState-state: ConnectionState-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base

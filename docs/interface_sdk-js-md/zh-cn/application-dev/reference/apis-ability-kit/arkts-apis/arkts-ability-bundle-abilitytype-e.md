@@ -18,6 +18,8 @@ Ability组件类型。
 
 **替代接口：** [AbilityType](arkts-ability-bundlemanager-abilitytype-e.md)
 
+<!--Device-bundle-export enum AbilityType--><!--Device-bundle-export enum AbilityType-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## UNKNOWN
@@ -31,6 +33,8 @@ UNKNOWN = 0
 **起始版本：** 7
 
 **废弃版本：** 9
+
+<!--Device-AbilityType-UNKNOWN = 0--><!--Device-AbilityType-UNKNOWN = 0-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -46,6 +50,8 @@ PAGE = 1
 
 **替代接口：** [PAGE](arkts-ability-bundlemanager-abilitytype-e.md#page)
 
+<!--Device-AbilityType-PAGE = 1--><!--Device-AbilityType-PAGE = 1-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## SERVICE
@@ -60,6 +66,8 @@ SERVICE = 2
 
 **替代接口：** [SERVICE](arkts-ability-bundlemanager-abilitytype-e.md#service)
 
+<!--Device-AbilityType-SERVICE = 2--><!--Device-AbilityType-SERVICE = 2-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## DATA
@@ -73,5 +81,7 @@ DATA = 3
 **废弃版本：** 9
 
 **替代接口：** [DATA](arkts-ability-bundlemanager-abilitytype-e.md#data)
+
+<!--Device-AbilityType-DATA = 3--><!--Device-AbilityType-DATA = 3-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework

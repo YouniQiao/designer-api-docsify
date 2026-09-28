@@ -8,6 +8,8 @@ interface HiTraceId
 
 **起始版本：** 8
 
+<!--Device-hiTraceChain-interface HiTraceId--><!--Device-hiTraceChain-interface HiTraceId-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
 
 ## 导入模块
@@ -28,6 +30,8 @@ chainId: bigint
 
 **起始版本：** 8
 
+<!--Device-HiTraceId-chainId: bigint--><!--Device-HiTraceId-chainId: bigint-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
 
 ## flags
@@ -41,6 +45,8 @@ flags?: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-HiTraceId-flags?: int--><!--Device-HiTraceId-flags?: int-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
 
@@ -56,6 +62,8 @@ parentSpanId?: number
 
 **起始版本：** 8
 
+<!--Device-HiTraceId-parentSpanId?: int--><!--Device-HiTraceId-parentSpanId?: int-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
 
 ## spanId
@@ -69,5 +77,7 @@ spanId?: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-HiTraceId-spanId?: int--><!--Device-HiTraceId-spanId?: int-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiTrace

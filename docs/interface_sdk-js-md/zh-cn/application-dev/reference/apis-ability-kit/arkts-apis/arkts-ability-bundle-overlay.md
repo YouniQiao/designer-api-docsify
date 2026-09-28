@@ -10,6 +10,8 @@ overlay特征应用指应用中包含有overlay资源包，overlay资源包详�
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare namespace overlay--><!--Device-unnamed-declare namespace overlay-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Overlay
 
 ## 导入模块

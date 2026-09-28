@@ -8,6 +8,8 @@ export class DefaultCoverOrderInfo
 
 **起始版本：** 26.0.0
 
+<!--Device-photoAccessHelper-export class DefaultCoverOrderInfo--><!--Device-photoAccessHelper-export class DefaultCoverOrderInfo-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ public albumSubtype: AlbumSubtype
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DefaultCoverOrderInfo-public albumSubtype: AlbumSubtype--><!--Device-DefaultCoverOrderInfo-public albumSubtype: AlbumSubtype-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ public albumType: AlbumType
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DefaultCoverOrderInfo-public albumType: AlbumType--><!--Device-DefaultCoverOrderInfo-public albumType: AlbumType-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -68,6 +74,8 @@ public lpath?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DefaultCoverOrderInfo-public lpath?: string--><!--Device-DefaultCoverOrderInfo-public lpath?: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -85,6 +93,8 @@ public orderKey: PhotoKeys
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DefaultCoverOrderInfo-public orderKey: PhotoKeys--><!--Device-DefaultCoverOrderInfo-public orderKey: PhotoKeys-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -104,6 +114,8 @@ public orderSubKey: PhotoKeys
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DefaultCoverOrderInfo-public orderSubKey: PhotoKeys--><!--Device-DefaultCoverOrderInfo-public orderSubKey: PhotoKeys-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -121,6 +133,8 @@ public orderType: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DefaultCoverOrderInfo-public orderType: int--><!--Device-DefaultCoverOrderInfo-public orderType: int-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

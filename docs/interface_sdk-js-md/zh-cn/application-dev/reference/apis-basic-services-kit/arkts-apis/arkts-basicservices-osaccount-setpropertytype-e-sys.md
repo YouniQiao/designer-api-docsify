@@ -8,6 +8,8 @@ enum SetPropertyType
 
 **起始版本：** 8
 
+<!--Device-osAccount-enum SetPropertyType--><!--Device-osAccount-enum SetPropertyType-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -21,6 +23,8 @@ INIT_ALGORITHM = 1
 初始化算法。
 
 **起始版本：** 8
+
+<!--Device-SetPropertyType-INIT_ALGORITHM = 1--><!--Device-SetPropertyType-INIT_ALGORITHM = 1-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 

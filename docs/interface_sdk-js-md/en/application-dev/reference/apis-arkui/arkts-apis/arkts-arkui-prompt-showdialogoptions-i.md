@@ -14,6 +14,8 @@ Defines the option of show dialog.
 
 **Substitutes:** [ShowDialogOptions](arkts-arkui-promptaction-showdialogoptions-i.md)
 
+<!--Device-prompt-interface ShowDialogOptions--><!--Device-prompt-interface ShowDialogOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -40,6 +42,8 @@ Array of buttons in the dialog box. The array structure is {text:'button', color
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-ShowDialogOptions-buttons?: [Button, Button?, Button?]--><!--Device-ShowDialogOptions-buttons?: [Button, Button?, Button?]-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## message
@@ -60,6 +64,8 @@ Text body.
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-ShowDialogOptions-message?: string--><!--Device-ShowDialogOptions-message?: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## title
@@ -79,5 +85,7 @@ Title of the text to display.
 **Substitutes:** [title](arkts-arkui-promptaction-showdialogoptions-i.md#title)
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-ShowDialogOptions-title?: string--><!--Device-ShowDialogOptions-title?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

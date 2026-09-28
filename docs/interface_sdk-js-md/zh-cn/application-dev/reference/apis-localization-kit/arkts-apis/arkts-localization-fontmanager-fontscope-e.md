@@ -8,6 +8,8 @@ enum FontScope
 
 **起始版本：** 26.0.1
 
+<!--Device-fontManager-enum FontScope--><!--Device-fontManager-enum FontScope-End-->
+
 **系统能力：** SystemCapability.Global.FontManager
 
 ## APP
@@ -22,6 +24,8 @@ APP = 0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FontScope-APP = 0--><!--Device-FontScope-APP = 0-End-->
+
 **系统能力：** SystemCapability.Global.FontManager
 
 ## SESSION
@@ -35,5 +39,7 @@ SESSION = 1
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FontScope-SESSION = 1--><!--Device-FontScope-SESSION = 1-End-->
 
 **系统能力：** SystemCapability.Global.FontManager

@@ -20,6 +20,8 @@ function getFreeSizeSync(): number
 - API版本15+：N/A
 - API版本10-14：ohos.permission.STORAGE_MANAGER
 
+<!--Device-storageStatistics-function getFreeSizeSync(): long--><!--Device-storageStatistics-function getFreeSizeSync(): long-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
 **返回值：**

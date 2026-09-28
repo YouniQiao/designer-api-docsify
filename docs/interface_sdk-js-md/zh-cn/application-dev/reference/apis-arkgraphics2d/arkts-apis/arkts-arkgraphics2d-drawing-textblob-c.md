@@ -14,6 +14,8 @@ TextBlob是由一个或多个具有相同字型的字符组成的字块。支持
 
 **起始版本：** 11
 
+<!--Device-drawing-class TextBlob--><!--Device-drawing-class TextBlob-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## 导入模块
@@ -31,6 +33,8 @@ bounds(): common2D.Rect
 获取文字边界框的矩形区域。
 
 **起始版本：** 11
+
+<!--Device-TextBlob-bounds(): common2D.Rect--><!--Device-TextBlob-bounds(): common2D.Rect-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -60,6 +64,8 @@ static makeFromPosText(text: string, len: number, points: common2D.Point[], font
 使用文本创建TextBlob对象，其中每个字形的坐标由points中对应的坐标信息决定。
 
 **起始版本：** 12
+
+<!--Device-TextBlob-static makeFromPosText(text: string, len: number, points: common2D.Point[], font: Font): TextBlob--><!--Device-TextBlob-static makeFromPosText(text: string, len: number, points: common2D.Point[], font: Font): TextBlob-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -120,6 +126,8 @@ static makeFromPosTextWithFallback(
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TextBlob-static makeFromPosTextWithFallback(      text: string, len: number, points: common2D.Point[], font: Font): Array<TextBlob>--><!--Device-TextBlob-static makeFromPosTextWithFallback(      text: string, len: number, points: common2D.Point[], font: Font): Array<TextBlob>-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -152,6 +160,8 @@ static makeFromRunBuffer(pos: Array<TextBlobRunBuffer>, font: Font, bounds?: com
 基于RunBuffer信息创建TextBlob对象。
 
 **起始版本：** 11
+
+<!--Device-TextBlob-static makeFromRunBuffer(pos: Array<TextBlobRunBuffer>, font: Font, bounds?: common2D.Rect): TextBlob--><!--Device-TextBlob-static makeFromRunBuffer(pos: Array<TextBlobRunBuffer>, font: Font, bounds?: common2D.Rect): TextBlob-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -213,6 +223,8 @@ static makeFromString(text: string, font: Font, encoding?: TextEncoding): TextBl
 
 **起始版本：** 11
 
+<!--Device-TextBlob-static makeFromString(text: string, font: Font, encoding?: TextEncoding): TextBlob--><!--Device-TextBlob-static makeFromString(text: string, font: Font, encoding?: TextEncoding): TextBlob-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -268,6 +280,8 @@ static makeFromStringWithFallback(text: string, font: Font): Array<TextBlob>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TextBlob-static makeFromStringWithFallback(text: string, font: Font): Array<TextBlob>--><!--Device-TextBlob-static makeFromStringWithFallback(text: string, font: Font): Array<TextBlob>-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -292,6 +306,8 @@ uniqueID(): number
 获取该TextBlob对象的唯一非零标识符。
 
 **起始版本：** 12
+
+<!--Device-TextBlob-uniqueID(): long--><!--Device-TextBlob-uniqueID(): long-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

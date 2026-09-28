@@ -10,6 +10,8 @@ interface Album extends AbsAlbum
 
 **起始版本：** 10
 
+<!--Device-photoAccessHelper-interface Album extends AbsAlbum--><!--Device-photoAccessHelper-interface Album extends AbsAlbum-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
@@ -31,6 +33,8 @@ getAttribute(attrs: AlbumAttribute[]): Promise<Record<AlbumAttribute, AlbumAttri
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Album-getAttribute(attrs: AlbumAttribute[]): Promise<Record<AlbumAttribute, AlbumAttributeInfo>>--><!--Device-Album-getAttribute(attrs: AlbumAttribute[]): Promise<Record<AlbumAttribute, AlbumAttributeInfo>>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -109,6 +113,8 @@ getFaceId(): Promise<string>
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-Album-getFaceId(): Promise<string>--><!--Device-Album-getFaceId(): Promise<string>-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -180,6 +186,8 @@ getFusionAssetsInfo(): Promise<FusionAssetsInfo[]>
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-Album-getFusionAssetsInfo(): Promise<FusionAssetsInfo[]>--><!--Device-Album-getFusionAssetsInfo(): Promise<FusionAssetsInfo[]>-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -209,6 +217,8 @@ getSelectedAssets(optionCheck: FetchOptions, filter?: string): Promise<FetchResu
 **起始版本：** 22
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-Album-getSelectedAssets(optionCheck: FetchOptions, filter?: string): Promise<FetchResult<PhotoAsset>>--><!--Device-Album-getSelectedAssets(optionCheck: FetchOptions, filter?: string): Promise<FetchResult<PhotoAsset>>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -314,6 +324,8 @@ deleteAssets(assets: Array<PhotoAsset>, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-Album-deleteAssets(assets: Array<PhotoAsset>, callback: AsyncCallback<void>): void--><!--Device-Album-deleteAssets(assets: Array<PhotoAsset>, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -389,6 +401,8 @@ deleteAssets(assets: Array<PhotoAsset>): Promise<void>
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-Album-deleteAssets(assets: Array<PhotoAsset>): Promise<void>--><!--Device-Album-deleteAssets(assets: Array<PhotoAsset>): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -462,6 +476,8 @@ recoverAssets(assets: Array<PhotoAsset>, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-Album-recoverAssets(assets: Array<PhotoAsset>, callback: AsyncCallback<void>): void--><!--Device-Album-recoverAssets(assets: Array<PhotoAsset>, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -532,6 +548,8 @@ recoverAssets(assets: Array<PhotoAsset>): Promise<void>
 **替代接口：** [recoverAssets](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c-sys.md#recoverassets)
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-Album-recoverAssets(assets: Array<PhotoAsset>): Promise<void>--><!--Device-Album-recoverAssets(assets: Array<PhotoAsset>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -606,6 +624,8 @@ setCoverUri(uri: string, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-Album-setCoverUri(uri: string, callback: AsyncCallback<void>): void--><!--Device-Album-setCoverUri(uri: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -676,6 +696,8 @@ setCoverUri(uri: string): Promise<void>
 **替代接口：** [setCoverUri](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c-sys.md#setcoveruri)
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-Album-setCoverUri(uri: string): Promise<void>--><!--Device-Album-setCoverUri(uri: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -749,6 +771,8 @@ readonly cloudId?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Album-readonly cloudId?: string--><!--Device-Album-readonly cloudId?: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -765,6 +789,8 @@ readonly dateAdded?: number
 
 **起始版本：** 18
 
+<!--Device-Album-readonly dateAdded?: long--><!--Device-Album-readonly dateAdded?: long-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -780,6 +806,8 @@ readonly dateModified?: number
 **类型：** number
 
 **起始版本：** 18
+
+<!--Device-Album-readonly dateModified?: long--><!--Device-Album-readonly dateModified?: long-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -799,6 +827,8 @@ readonly shareAlbumOwner?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Album-readonly shareAlbumOwner?: string--><!--Device-Album-readonly shareAlbumOwner?: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -817,6 +847,8 @@ readonly shareRiskStatus?: ShareAlbumRiskStatus
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Album-readonly shareRiskStatus?: ShareAlbumRiskStatus--><!--Device-Album-readonly shareRiskStatus?: ShareAlbumRiskStatus-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -834,6 +866,8 @@ readonly shareRiskType?: string
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Album-readonly shareRiskType?: string--><!--Device-Album-readonly shareRiskType?: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

@@ -12,6 +12,8 @@ declare namespace hiAppEvent
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace hiAppEvent--><!--Device-unnamed-declare namespace hiAppEvent-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 ## 导入模块

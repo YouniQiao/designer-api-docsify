@@ -12,6 +12,8 @@ Inherited from [TimePickerOptions](arkts-arkui-timepicker-comp-timepickeroptions
 
 **Since:** 8
 
+<!--Device-unnamed-declare interface TimePickerDialogOptions extends TimePickerOptions--><!--Device-unnamed-declare interface TimePickerDialogOptions extends TimePickerOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onAccept
@@ -27,6 +29,8 @@ Callback invoked when the OK button in the dialog box is clicked. The callback p
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TimePickerDialogOptions-onAccept?: (value: TimePickerResult) => void--><!--Device-TimePickerDialogOptions-onAccept?: (value: TimePickerResult) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,6 +54,8 @@ Callback invoked when the cancel button in the dialog box is clicked. This callb
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TimePickerDialogOptions-onCancel?: () => void--><!--Device-TimePickerDialogOptions-onCancel?: () => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onChange
@@ -65,6 +71,8 @@ Triggered when the text picker in the dialog box snaps to the selected item. The
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TimePickerDialogOptions-onChange?: (value: TimePickerResult) => void--><!--Device-TimePickerDialogOptions-onChange?: (value: TimePickerResult) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -100,6 +108,8 @@ take effect next time the dialog box appears.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TimePickerDialogOptions-onDidAppear?: () => void--><!--Device-TimePickerDialogOptions-onDidAppear?: () => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onDidDisappear
@@ -122,6 +132,8 @@ Event callback after the dialog box disappears.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TimePickerDialogOptions-onDidDisappear?: () => void--><!--Device-TimePickerDialogOptions-onDidDisappear?: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -148,6 +160,8 @@ take effect next time the dialog box appears.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TimePickerDialogOptions-onWillAppear?: () => void--><!--Device-TimePickerDialogOptions-onWillAppear?: () => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onWillDisappear
@@ -172,6 +186,8 @@ Event callback when the dialog box is about to disappear.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TimePickerDialogOptions-onWillDisappear?: () => void--><!--Device-TimePickerDialogOptions-onWillDisappear?: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -200,6 +216,8 @@ fixed even in accessibility and large-font modes. In addition, even if the butto
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TimePickerDialogOptions-acceptButtonStyle?: PickerDialogButtonStyle--><!--Device-TimePickerDialogOptions-acceptButtonStyle?: PickerDialogButtonStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## alignment
@@ -219,6 +237,8 @@ Default value: **DialogAlignment.Default**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TimePickerDialogOptions-alignment?: DialogAlignment--><!--Device-TimePickerDialogOptions-alignment?: DialogAlignment-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -248,6 +268,8 @@ set to a value other than **NONE**, do not set **backgroundColor**. If you do, t
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TimePickerDialogOptions-backgroundBlurStyle?: BlurStyle--><!--Device-TimePickerDialogOptions-backgroundBlurStyle?: BlurStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## backgroundBlurStyleOptions
@@ -269,6 +291,8 @@ If this parameter is not set, the default effect of [backgroundBlurStyle](arkts-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-TimePickerDialogOptions-backgroundBlurStyleOptions?: BackgroundBlurStyleOptions--><!--Device-TimePickerDialogOptions-backgroundBlurStyleOptions?: BackgroundBlurStyleOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -299,6 +323,8 @@ Default value: **Color.Transparent**
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TimePickerDialogOptions-backgroundColor?: ResourceColor--><!--Device-TimePickerDialogOptions-backgroundColor?: ResourceColor-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## backgroundEffect
@@ -320,6 +346,8 @@ If this parameter is not set, the setting does not take effect. In this case, th
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-TimePickerDialogOptions-backgroundEffect?: BackgroundEffectOptions--><!--Device-TimePickerDialogOptions-backgroundEffect?: BackgroundEffectOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -348,6 +376,8 @@ fixed even in accessibility and large-font modes. In addition, even if the butto
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TimePickerDialogOptions-cancelButtonStyle?: PickerDialogButtonStyle--><!--Device-TimePickerDialogOptions-cancelButtonStyle?: PickerDialogButtonStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## dateTimeOptions
@@ -371,6 +401,8 @@ Default value:
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TimePickerDialogOptions-dateTimeOptions?: DateTimeOptions--><!--Device-TimePickerDialogOptions-dateTimeOptions?: DateTimeOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -406,6 +438,8 @@ weight: FontWeight.Regular
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TimePickerDialogOptions-disappearTextStyle?: PickerTextStyle--><!--Device-TimePickerDialogOptions-disappearTextStyle?: PickerTextStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## enableCascade
@@ -430,6 +464,8 @@ Default value: **false**.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-TimePickerDialogOptions-enableCascade?: boolean--><!--Device-TimePickerDialogOptions-enableCascade?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -464,6 +500,8 @@ Default value: **true**.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TimePickerDialogOptions-enableHapticFeedback?: boolean--><!--Device-TimePickerDialogOptions-enableHapticFeedback?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## enableHoverMode
@@ -489,6 +527,8 @@ Default value: **false**.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-TimePickerDialogOptions-enableHoverMode?: boolean--><!--Device-TimePickerDialogOptions-enableHoverMode?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## hoverModeArea
@@ -511,6 +551,8 @@ Default value: **HoverModeAreaType.BOTTOM_SCREEN**
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-TimePickerDialogOptions-hoverModeArea?: HoverModeAreaType--><!--Device-TimePickerDialogOptions-hoverModeArea?: HoverModeAreaType-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## maskRect
@@ -530,6 +572,8 @@ Default value: **{ x: 0, y: 0, width: '100%', height: '100%' }**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TimePickerDialogOptions-maskRect?: Rectangle--><!--Device-TimePickerDialogOptions-maskRect?: Rectangle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -553,6 +597,8 @@ Unit: vp
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TimePickerDialogOptions-offset?: Offset--><!--Device-TimePickerDialogOptions-offset?: Offset-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onEnterSelectedArea
@@ -574,6 +620,8 @@ When **enableCascade** is set to **true**, using this callback is not recommende
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-TimePickerDialogOptions-onEnterSelectedArea?: Callback<TimePickerResult>--><!--Device-TimePickerDialogOptions-onEnterSelectedArea?: Callback<TimePickerResult>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -609,6 +657,8 @@ weight: FontWeight.Medium
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TimePickerDialogOptions-selectedTextStyle?: PickerTextStyle--><!--Device-TimePickerDialogOptions-selectedTextStyle?: PickerTextStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## shadow
@@ -633,6 +683,8 @@ In API version 26.0.0 and later, the **shadow** effect does not take effect afte
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TimePickerDialogOptions-shadow?: ShadowOptions | ShadowStyle--><!--Device-TimePickerDialogOptions-shadow?: ShadowOptions | ShadowStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## systemMaterial
@@ -656,6 +708,8 @@ object whose **style** in [ImmersiveOptions](../arkts-apis/arkts-arkui-uimateria
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-TimePickerDialogOptions-systemMaterial?: SystemUiMaterial--><!--Device-TimePickerDialogOptions-systemMaterial?: SystemUiMaterial-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -691,6 +745,8 @@ weight: FontWeight.Regular
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TimePickerDialogOptions-textStyle?: PickerTextStyle--><!--Device-TimePickerDialogOptions-textStyle?: PickerTextStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## useMilitaryTime
@@ -715,5 +771,7 @@ Default value: **false**.
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TimePickerDialogOptions-useMilitaryTime?: boolean--><!--Device-TimePickerDialogOptions-useMilitaryTime?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

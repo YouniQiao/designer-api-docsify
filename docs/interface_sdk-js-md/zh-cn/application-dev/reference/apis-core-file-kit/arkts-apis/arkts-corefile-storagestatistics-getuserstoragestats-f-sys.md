@@ -18,6 +18,8 @@ function getUserStorageStats(): Promise<StorageStats>
 
 **需要权限：** ohos.permission.STORAGE_MANAGER
 
+<!--Device-storageStatistics-function getUserStorageStats(): Promise<StorageStats>--><!--Device-storageStatistics-function getUserStorageStats(): Promise<StorageStats>-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
 **系统接口：** 此接口为系统接口。
@@ -63,6 +65,8 @@ function getUserStorageStats(callback: AsyncCallback<StorageStats>): void
 **起始版本：** 9
 
 **需要权限：** ohos.permission.STORAGE_MANAGER
+
+<!--Device-storageStatistics-function getUserStorageStats(callback: AsyncCallback<StorageStats>): void--><!--Device-storageStatistics-function getUserStorageStats(callback: AsyncCallback<StorageStats>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
@@ -112,6 +116,8 @@ function getUserStorageStats(userId: number): Promise<StorageStats>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.STORAGE_MANAGER
+
+<!--Device-storageStatistics-function getUserStorageStats(userId: long): Promise<StorageStats>--><!--Device-storageStatistics-function getUserStorageStats(userId: long): Promise<StorageStats>-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
@@ -166,6 +172,8 @@ function getUserStorageStats(userId: number, callback: AsyncCallback<StorageStat
 **起始版本：** 9
 
 **需要权限：** ohos.permission.STORAGE_MANAGER
+
+<!--Device-storageStatistics-function getUserStorageStats(userId: long, callback: AsyncCallback<StorageStats>): void--><!--Device-storageStatistics-function getUserStorageStats(userId: long, callback: AsyncCallback<StorageStats>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 

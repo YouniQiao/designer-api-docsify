@@ -8,6 +8,8 @@ class DataSharePredicates
 
 **起始版本：** 10
 
+<!--Device-dataSharePredicates-class DataSharePredicates--><!--Device-dataSharePredicates-class DataSharePredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 ## 导入模块
@@ -28,7 +30,9 @@ and(): DataSharePredicates
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-DataSharePredicates-and(): DataSharePredicates--><!--Device-DataSharePredicates-and(): DataSharePredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -58,6 +62,8 @@ beginWrap(): DataSharePredicates
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataSharePredicates-beginWrap(): DataSharePredicates--><!--Device-DataSharePredicates-beginWrap(): DataSharePredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -90,6 +96,8 @@ between(field: string, low: ValueType, high: ValueType): DataSharePredicates
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataSharePredicates-between(field: string, low: ValueType, high: ValueType): DataSharePredicates--><!--Device-DataSharePredicates-between(field: string, low: ValueType, high: ValueType): DataSharePredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -126,6 +134,8 @@ endWrap(): DataSharePredicates
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataSharePredicates-endWrap(): DataSharePredicates--><!--Device-DataSharePredicates-endWrap(): DataSharePredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **返回值：**
@@ -158,7 +168,9 @@ equalTo(field: string, value: ValueType): DataSharePredicates
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-DataSharePredicates-equalTo(field: string, value: ValueType): DataSharePredicates--><!--Device-DataSharePredicates-equalTo(field: string, value: ValueType): DataSharePredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -194,6 +206,8 @@ greaterThan(field: string, value: ValueType): DataSharePredicates
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataSharePredicates-greaterThan(field: string, value: ValueType): DataSharePredicates--><!--Device-DataSharePredicates-greaterThan(field: string, value: ValueType): DataSharePredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **参数：**
@@ -227,6 +241,8 @@ greaterThanOrEqualTo(field: string, value: ValueType): DataSharePredicates
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataSharePredicates-greaterThanOrEqualTo(field: string, value: ValueType): DataSharePredicates--><!--Device-DataSharePredicates-greaterThanOrEqualTo(field: string, value: ValueType): DataSharePredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -264,6 +280,8 @@ in(field: string, value: Array<ValueType>): DataSharePredicates
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-DataSharePredicates-in(field: string, value: Array<ValueType>): DataSharePredicates--><!--Device-DataSharePredicates-in(field: string, value: Array<ValueType>): DataSharePredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **参数：**
@@ -297,6 +315,8 @@ lessThan(field: string, value: ValueType): DataSharePredicates
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataSharePredicates-lessThan(field: string, value: ValueType): DataSharePredicates--><!--Device-DataSharePredicates-lessThan(field: string, value: ValueType): DataSharePredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -332,6 +352,8 @@ lessThanOrEqualTo(field: string, value: ValueType): DataSharePredicates
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataSharePredicates-lessThanOrEqualTo(field: string, value: ValueType): DataSharePredicates--><!--Device-DataSharePredicates-lessThanOrEqualTo(field: string, value: ValueType): DataSharePredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **参数：**
@@ -365,6 +387,8 @@ like(field: string, value: string): DataSharePredicates
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataSharePredicates-like(field: string, value: string): DataSharePredicates--><!--Device-DataSharePredicates-like(field: string, value: string): DataSharePredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -400,7 +424,9 @@ limit(total: number, offset: number): DataSharePredicates
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-DataSharePredicates-limit(total: int, offset: int): DataSharePredicates--><!--Device-DataSharePredicates-limit(total: int, offset: int): DataSharePredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -435,6 +461,8 @@ notBetween(field: string, low: ValueType, high: ValueType): DataSharePredicates
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataSharePredicates-notBetween(field: string, low: ValueType, high: ValueType): DataSharePredicates--><!--Device-DataSharePredicates-notBetween(field: string, low: ValueType, high: ValueType): DataSharePredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -471,6 +499,8 @@ notEqualTo(field: string, value: ValueType): DataSharePredicates
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataSharePredicates-notEqualTo(field: string, value: ValueType): DataSharePredicates--><!--Device-DataSharePredicates-notEqualTo(field: string, value: ValueType): DataSharePredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **参数：**
@@ -504,6 +534,8 @@ notIn(field: string, value: Array<ValueType>): DataSharePredicates
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataSharePredicates-notIn(field: string, value: Array<ValueType>): DataSharePredicates--><!--Device-DataSharePredicates-notIn(field: string, value: Array<ValueType>): DataSharePredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -539,6 +571,8 @@ or(): DataSharePredicates
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataSharePredicates-or(): DataSharePredicates--><!--Device-DataSharePredicates-or(): DataSharePredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **返回值：**
@@ -568,7 +602,9 @@ orderByAsc(field: string): DataSharePredicates
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-DataSharePredicates-orderByAsc(field: string): DataSharePredicates--><!--Device-DataSharePredicates-orderByAsc(field: string): DataSharePredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -603,7 +639,9 @@ orderByDesc(field: string): DataSharePredicates
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-DataSharePredicates-orderByDesc(field: string): DataSharePredicates--><!--Device-DataSharePredicates-orderByDesc(field: string): DataSharePredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 

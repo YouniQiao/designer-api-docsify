@@ -8,6 +8,8 @@ interface SweepRefractionParam
 
 **起始版本：** 26.0.1
 
+<!--Device-uiEffect-interface SweepRefractionParam--><!--Device-uiEffect-interface SweepRefractionParam-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ chromaDelta: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SweepRefractionParam-chromaDelta: double--><!--Device-SweepRefractionParam-chromaDelta: double-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ edgeThickness: number
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SweepRefractionParam-edgeThickness: double--><!--Device-SweepRefractionParam-edgeThickness: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -68,6 +74,8 @@ maskRadius: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SweepRefractionParam-maskRadius: double--><!--Device-SweepRefractionParam-maskRadius: double-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -85,6 +93,8 @@ refractAmount: number
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SweepRefractionParam-refractAmount: double--><!--Device-SweepRefractionParam-refractAmount: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -104,6 +114,8 @@ rippleWidth: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SweepRefractionParam-rippleWidth: double--><!--Device-SweepRefractionParam-rippleWidth: double-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -121,6 +133,8 @@ sweepOffset: number
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SweepRefractionParam-sweepOffset: double--><!--Device-SweepRefractionParam-sweepOffset: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

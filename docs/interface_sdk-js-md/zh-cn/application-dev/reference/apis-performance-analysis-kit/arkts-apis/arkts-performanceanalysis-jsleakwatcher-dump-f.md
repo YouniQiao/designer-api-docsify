@@ -16,6 +16,8 @@ function dump(filePath: string): Array<string>
 
 **起始版本：** 12
 
+<!--Device-jsLeakWatcher-function dump(filePath: string): Array<string>--><!--Device-jsLeakWatcher-function dump(filePath: string): Array<string>-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
 **参数：**

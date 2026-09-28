@@ -8,6 +8,8 @@ namespace event
 
 **起始版本：** 9
 
+<!--Device-hiAppEvent-namespace event--><!--Device-hiAppEvent-namespace event-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 ## 导入模块

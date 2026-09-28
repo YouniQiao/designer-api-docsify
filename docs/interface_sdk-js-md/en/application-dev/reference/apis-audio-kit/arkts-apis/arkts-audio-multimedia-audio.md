@@ -11,6 +11,8 @@ data.
 
 **Since:** 7
 
+<!--Device-unnamed-declare namespace audio--><!--Device-unnamed-declare namespace audio-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Multimedia.Audio.Core
 

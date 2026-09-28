@@ -22,6 +22,8 @@ function isDeviceControlEnabled(deviceAddress: PartnerDeviceAddress): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-partnerAgent-function isDeviceControlEnabled(deviceAddress: PartnerDeviceAddress): boolean--><!--Device-partnerAgent-function isDeviceControlEnabled(deviceAddress: PartnerDeviceAddress): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core
 
 **参数：**

@@ -8,6 +8,8 @@ export declare enum Action
 
 **起始版本：** 9
 
+<!--Device-unnamed-export declare enum Action--><!--Device-unnamed-export declare enum Action-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## CANCEL
@@ -20,7 +22,9 @@ CANCEL = 0
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Action-CANCEL = 0--><!--Device-Action-CANCEL = 0-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -34,7 +38,9 @@ DOWN = 1
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Action-DOWN = 1--><!--Device-Action-DOWN = 1-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -48,6 +54,8 @@ UP = 2
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Action-UP = 2--><!--Device-Action-UP = 2-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core

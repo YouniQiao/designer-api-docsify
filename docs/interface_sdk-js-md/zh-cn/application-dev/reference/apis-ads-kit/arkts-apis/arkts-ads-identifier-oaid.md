@@ -8,6 +8,8 @@
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare namespace identifier--><!--Device-unnamed-declare namespace identifier-End-->
+
 **系统能力：** SystemCapability.Advertising.OAID
 
 ## 导入模块

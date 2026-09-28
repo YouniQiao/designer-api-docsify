@@ -8,6 +8,8 @@ export interface CurrentLocationRequest
 
 **起始版本：** 9
 
+<!--Device-geoLocationManager-export interface CurrentLocationRequest--><!--Device-geoLocationManager-export interface CurrentLocationRequest-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 ## 导入模块
@@ -36,7 +38,9 @@ maxAccuracy?: number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-CurrentLocationRequest-maxAccuracy?: double--><!--Device-CurrentLocationRequest-maxAccuracy?: double-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -52,7 +56,9 @@ priority?: LocationRequestPriority
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-CurrentLocationRequest-priority?: LocationRequestPriority--><!--Device-CurrentLocationRequest-priority?: LocationRequestPriority-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -68,7 +74,9 @@ scenario?: LocationRequestScenario
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-CurrentLocationRequest-scenario?: LocationRequestScenario--><!--Device-CurrentLocationRequest-scenario?: LocationRequestScenario-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -84,6 +92,8 @@ timeoutMs?: number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-CurrentLocationRequest-timeoutMs?: int--><!--Device-CurrentLocationRequest-timeoutMs?: int-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core

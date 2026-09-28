@@ -12,6 +12,8 @@ Triggered when the fold status changes<!--RP4-->, which takes effect only in lan
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-unnamed-declare type OnFoldStatusChangeCallback = (event: OnFoldStatusChangeInfo) => void--><!--Device-unnamed-declare type OnFoldStatusChangeCallback = (event: OnFoldStatusChangeInfo) => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

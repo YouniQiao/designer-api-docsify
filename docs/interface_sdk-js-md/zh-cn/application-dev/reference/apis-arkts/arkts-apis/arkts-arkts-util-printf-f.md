@@ -20,6 +20,8 @@ function printf(format: string, ...args: Object[]): string
 
 **替代接口：** [format](arkts-arkts-util-format-f.md)
 
+<!--Device-util-function printf(format: string, ...args: Object[]): string--><!--Device-util-function printf(format: string, ...args: Object[]): string-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**

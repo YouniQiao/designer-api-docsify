@@ -8,6 +8,8 @@ class TextDecoder
 
 **起始版本：** 7
 
+<!--Device-util-class TextDecoder--><!--Device-util-class TextDecoder-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -27,6 +29,8 @@ constructor()
 **起始版本：** 9
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextDecoder-constructor()--><!--Device-TextDecoder-constructor()-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -55,6 +59,8 @@ constructor(encoding?: string, options?: { fatal?: boolean; ignoreBOM?: boolean 
 
 **替代接口：** [create](#create)
 
+<!--Device-TextDecoder-constructor(encoding?: string, options?: { fatal?: boolean; ignoreBOM?: boolean })--><!--Device-TextDecoder-constructor(encoding?: string, options?: { fatal?: boolean; ignoreBOM?: boolean })-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -81,6 +87,8 @@ static create(encoding?: string, options?: TextDecoderOptions): TextDecoder
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextDecoder-static create(encoding?: string, options?: TextDecoderOptions): TextDecoder--><!--Device-TextDecoder-static create(encoding?: string, options?: TextDecoderOptions): TextDecoder-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -121,6 +129,8 @@ decodeToString(input: Uint8Array, options?: DecodeToStringOptions): string
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextDecoder-decodeToString(input: Uint8Array, options?: DecodeToStringOptions): string--><!--Device-TextDecoder-decodeToString(input: Uint8Array, options?: DecodeToStringOptions): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -192,6 +202,8 @@ decode(input: Uint8Array, options?: { stream?: false }): string
 
 **替代接口：** [decodeToString](#decodetostring)
 
+<!--Device-TextDecoder-decode(input: Uint8Array, options?: { stream?: false }): string--><!--Device-TextDecoder-decode(input: Uint8Array, options?: { stream?: false }): string-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -239,6 +251,8 @@ decodeWithStream(input: Uint8Array, options?: DecodeWithStreamOptions): string
 **替代接口：** [decodeToString](#decodetostring)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextDecoder-decodeWithStream(input: Uint8Array, options?: DecodeWithStreamOptions): string--><!--Device-TextDecoder-decodeWithStream(input: Uint8Array, options?: DecodeWithStreamOptions): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -293,6 +307,8 @@ readonly encoding: string
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-TextDecoder-readonly encoding: string--><!--Device-TextDecoder-readonly encoding: string-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## fatal
@@ -309,6 +325,8 @@ readonly fatal: boolean
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-TextDecoder-readonly fatal: boolean--><!--Device-TextDecoder-readonly fatal: boolean-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## ignoreBOM
@@ -324,5 +342,7 @@ readonly ignoreBOM = false
 **起始版本：** 7
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextDecoder-readonly ignoreBOM = false--><!--Device-TextDecoder-readonly ignoreBOM = false-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

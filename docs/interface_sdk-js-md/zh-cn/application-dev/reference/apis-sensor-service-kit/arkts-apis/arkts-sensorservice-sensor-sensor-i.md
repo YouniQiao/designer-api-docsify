@@ -8,6 +8,8 @@ interface Sensor
 
 **起始版本：** 9
 
+<!--Device-sensor-interface Sensor--><!--Device-sensor-interface Sensor-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## 导入模块
@@ -28,6 +30,8 @@ deviceId?: number
 
 **起始版本：** 19
 
+<!--Device-Sensor-deviceId?: int--><!--Device-Sensor-deviceId?: int-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## deviceName
@@ -41,6 +45,8 @@ deviceName?: string
 **类型：** string
 
 **起始版本：** 19
+
+<!--Device-Sensor-deviceName?: string--><!--Device-Sensor-deviceName?: string-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -56,6 +62,8 @@ firmwareVersion:string
 
 **起始版本：** 9
 
+<!--Device-Sensor-firmwareVersion:string--><!--Device-Sensor-firmwareVersion:string-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## hardwareVersion
@@ -69,6 +77,8 @@ hardwareVersion:string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-Sensor-hardwareVersion:string--><!--Device-Sensor-hardwareVersion:string-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -84,6 +94,8 @@ isLocalSensor?: boolean
 
 **起始版本：** 19
 
+<!--Device-Sensor-isLocalSensor?: boolean--><!--Device-Sensor-isLocalSensor?: boolean-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## isMockSensor
@@ -97,6 +109,8 @@ isMockSensor?: boolean
 **类型：** boolean
 
 **起始版本：** 23
+
+<!--Device-Sensor-isMockSensor?: boolean--><!--Device-Sensor-isMockSensor?: boolean-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -112,6 +126,8 @@ maxRange:number
 
 **起始版本：** 9
 
+<!--Device-Sensor-maxRange:double--><!--Device-Sensor-maxRange:double-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## maxSamplePeriod
@@ -125,6 +141,8 @@ maxSamplePeriod:number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-Sensor-maxSamplePeriod:long--><!--Device-Sensor-maxSamplePeriod:long-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -140,6 +158,8 @@ minSamplePeriod:number
 
 **起始版本：** 9
 
+<!--Device-Sensor-minSamplePeriod:long--><!--Device-Sensor-minSamplePeriod:long-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## power
@@ -153,6 +173,8 @@ power:number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-Sensor-power:double--><!--Device-Sensor-power:double-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -168,6 +190,8 @@ precision:number
 
 **起始版本：** 9
 
+<!--Device-Sensor-precision:double--><!--Device-Sensor-precision:double-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## sensorId
@@ -181,6 +205,8 @@ sensorId:number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-Sensor-sensorId:int--><!--Device-Sensor-sensorId:int-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -196,6 +222,8 @@ sensorIndex?: number
 
 **起始版本：** 19
 
+<!--Device-Sensor-sensorIndex?: int--><!--Device-Sensor-sensorIndex?: int-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## sensorName
@@ -210,6 +238,8 @@ sensorName:string
 
 **起始版本：** 9
 
+<!--Device-Sensor-sensorName:string--><!--Device-Sensor-sensorName:string-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## vendorName
@@ -223,5 +253,7 @@ vendorName:string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-Sensor-vendorName:string--><!--Device-Sensor-vendorName:string-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor

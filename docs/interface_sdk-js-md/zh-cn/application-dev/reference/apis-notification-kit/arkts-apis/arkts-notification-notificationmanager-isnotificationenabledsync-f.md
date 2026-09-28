@@ -18,6 +18,8 @@ function isNotificationEnabledSync(): boolean
 
 **起始版本：** 12
 
+<!--Device-notificationManager-function isNotificationEnabledSync(): boolean--><!--Device-notificationManager-function isNotificationEnabledSync(): boolean-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **参见：** [requestEnableNotification](arkts-notification-notificationmanager-requestenablenotification-f.md#requestenablenotification-3) 请求通知使能。

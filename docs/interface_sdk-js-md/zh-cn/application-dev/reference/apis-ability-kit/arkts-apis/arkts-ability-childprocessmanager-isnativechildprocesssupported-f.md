@@ -18,6 +18,8 @@ function isNativeChildProcessSupported(): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-childProcessManager-function isNativeChildProcessSupported(): boolean--><!--Device-childProcessManager-function isNativeChildProcessSupported(): boolean-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **返回值：**

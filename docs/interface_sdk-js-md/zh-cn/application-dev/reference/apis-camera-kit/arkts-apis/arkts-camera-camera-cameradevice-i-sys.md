@@ -8,6 +8,8 @@ interface CameraDevice
 
 **起始版本：** 10
 
+<!--Device-camera-interface CameraDevice--><!--Device-camera-interface CameraDevice-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
@@ -27,6 +29,8 @@ Camera device retractable attribute
 **类型：** boolean
 
 **起始版本：** 18
+
+<!--Device-CameraDevice-readonly isRetractable?: boolean--><!--Device-CameraDevice-readonly isRetractable?: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

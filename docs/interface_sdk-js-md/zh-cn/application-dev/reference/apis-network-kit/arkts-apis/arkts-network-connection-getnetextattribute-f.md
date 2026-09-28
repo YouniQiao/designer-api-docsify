@@ -18,6 +18,8 @@ function getNetExtAttribute(netHandle: NetHandle): Promise<string>
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-connection-function getNetExtAttribute(netHandle: NetHandle): Promise<string>--><!--Device-connection-function getNetExtAttribute(netHandle: NetHandle): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**

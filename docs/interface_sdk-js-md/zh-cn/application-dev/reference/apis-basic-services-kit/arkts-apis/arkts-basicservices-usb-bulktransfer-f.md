@@ -27,6 +27,8 @@ function bulkTransfer(
 
 **替代接口：** [bulkTransfer](arkts-basicservices-usbmanager-bulktransfer-f.md)
 
+<!--Device-usb-function bulkTransfer(    pipe: USBDevicePipe,    endpoint: USBEndpoint,    buffer: Uint8Array,    timeout?: number  ): Promise<number>--><!--Device-usb-function bulkTransfer(    pipe: USBDevicePipe,    endpoint: USBEndpoint,    buffer: Uint8Array,    timeout?: number  ): Promise<number>-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 **参数：**

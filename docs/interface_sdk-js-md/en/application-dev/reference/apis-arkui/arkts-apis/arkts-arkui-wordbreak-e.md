@@ -8,6 +8,8 @@ Sets the word break rule.
 
 **Since:** 11
 
+<!--Device-unnamed-declare enum WordBreak--><!--Device-unnamed-declare enum WordBreak-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## NORMAL
@@ -25,6 +27,8 @@ Word breaks can occur between any two characters for Chinese, Japanese, and Kore
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
+
+<!--Device-WordBreak-NORMAL = 0--><!--Device-WordBreak-NORMAL = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,6 +48,8 @@ Line breaks can occur between any two characters for non-CJK text. For CJK text,
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
+<!--Device-WordBreak-BREAK_ALL = 1--><!--Device-WordBreak-BREAK_ALL = 1-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## BREAK_WORD
@@ -62,6 +68,8 @@ This option has the same effect as **BREAK_ALL** for non-CJK text, except that i
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
+<!--Device-WordBreak-BREAK_WORD = 2--><!--Device-WordBreak-BREAK_WORD = 2-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## HYPHENATION
@@ -79,5 +87,7 @@ Attempts are made to hyphenate words at the end of each line using a hyphen. If 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-WordBreak-HYPHENATION = 3--><!--Device-WordBreak-HYPHENATION = 3-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

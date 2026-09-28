@@ -8,6 +8,8 @@ The **CustomComponentContext** class provides access to component-level services
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export declare interface CustomComponentContext--><!--Device-unnamed-export declare interface CustomComponentContext-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -29,6 +31,8 @@ Obtains the global reuse pool of the custom component. If the component or its u
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-CustomComponentContext-getReusePool(): IReusePool | undefined--><!--Device-CustomComponentContext-getReusePool(): IReusePool | undefined-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

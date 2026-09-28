@@ -22,6 +22,8 @@ function queryNotificationEventStats(
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-usageStatistics-function queryNotificationEventStats(    begin: long,    end: long,    callback: AsyncCallback<Array<DeviceEventStats>>  ): void--><!--Device-usageStatistics-function queryNotificationEventStats(    begin: long,    end: long,    callback: AsyncCallback<Array<DeviceEventStats>>  ): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **系统接口：** 此接口为系统接口。
@@ -79,6 +81,8 @@ function queryNotificationEventStats(begin: number, end: number): Promise<Array<
 **起始版本：** 9
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
+
+<!--Device-usageStatistics-function queryNotificationEventStats(begin: long, end: long): Promise<Array<DeviceEventStats>>--><!--Device-usageStatistics-function queryNotificationEventStats(begin: long, end: long): Promise<Array<DeviceEventStats>>-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 

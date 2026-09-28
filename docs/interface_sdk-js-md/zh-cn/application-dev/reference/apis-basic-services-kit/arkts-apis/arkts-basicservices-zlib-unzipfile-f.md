@@ -28,13 +28,15 @@ function unzipFile(inFile: string, outFile: string, options: Options): Promise<v
 
 **替代接口：** [decompressFile](arkts-basicservices-zlib-decompressfile-f.md)(inFile: string, outFile: string, options: Options, callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-zlib-function unzipFile(inFile: string, outFile: string, options: Options): Promise<void>--><!--Device-zlib-function unzipFile(inFile: string, outFile: string, options: Options): Promise<void>-End-->
+
 **系统能力：** SystemCapability.BundleManager.Zlib
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| inFile | string | 是 | 指定的待解压缩文件的文件路径，路径必须为沙箱路径，沙箱路径可以通过context获取，可参考FA模型，Stage模型。如果待解压的.zip文件中包含中文的文件名或目录名，需使用UTF8进行编码，避免解压时文件名或目录名出现中文乱码。 |
+| inFile | string | 是 | 指定的待解压缩文件的文件路径，路径必须为沙箱路径，沙箱路径可以通过context获取，可参考[FA模型](../../apis-ability-kit/arkts-apis/arkts-ability-context.md)，[Stage模型](../../apis-ability-kit/arkts-apis/arkts-ability-context.md)。如果待解压的.zip文件中包含中文的文件名或目录名，需使用UTF8进行编码，避免解压时文件名或目录名出现中文乱码。 |
 | outFile | string | 是 | 指定的解压文件路径。 |
 | options | [Options](arkts-basicservices-zlib-options-i.md) | 是 | 解压的可选参数。 |
 

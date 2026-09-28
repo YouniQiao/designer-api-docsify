@@ -26,6 +26,8 @@ function createImageReceiver(width: number, height: number, format: number, capa
 
 **替代接口：** [createImageReceiver](arkts-image-image-createimagereceiver-f.md)(size: Size, format: ImageFormat, capacity: number)
 
+<!--Device-image-function createImageReceiver(width: number, height: number, format: number, capacity: number): ImageReceiver--><!--Device-image-function createImageReceiver(width: number, height: number, format: number, capacity: number): ImageReceiver-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
 **参数：**
@@ -63,6 +65,8 @@ function createImageReceiver(size: Size, format: ImageFormat, capacity: number):
 由于图片占用内存较大，所以当ImageReceiver实例使用完成后，应主动调用[release](arkts-image-image-imagereceiver-i.md#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 **起始版本：** 11
+
+<!--Device-image-function createImageReceiver(size: Size, format: ImageFormat, capacity: int): ImageReceiver--><!--Device-image-function createImageReceiver(size: Size, format: ImageFormat, capacity: int): ImageReceiver-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
@@ -112,6 +116,8 @@ function createImageReceiver(options?: ImageReceiverOptions): ImageReceiver | un
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-image-function createImageReceiver(options?: ImageReceiverOptions): ImageReceiver | undefined--><!--Device-image-function createImageReceiver(options?: ImageReceiverOptions): ImageReceiver | undefined-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 

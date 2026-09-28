@@ -40,6 +40,8 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace update--><!--Device-unnamed-declare namespace update-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。

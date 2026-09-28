@@ -6,6 +6,8 @@ The **BackgroundLoader** module provides the APIs for registering, unregistering
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-unnamed-declare namespace backgroundLoader--><!--Device-unnamed-declare namespace backgroundLoader-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
 ## Modules to Import

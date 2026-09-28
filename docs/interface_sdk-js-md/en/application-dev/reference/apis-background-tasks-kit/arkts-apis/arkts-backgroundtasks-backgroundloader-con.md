@@ -14,6 +14,8 @@ Start task method.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-backgroundLoader-const ON_START: string--><!--Device-backgroundLoader-const ON_START: string-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
 ## ON_STOP
@@ -29,5 +31,7 @@ Stop task method.
 **Since:** 26.2.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-backgroundLoader-const ON_STOP: string--><!--Device-backgroundLoader-const ON_STOP: string-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler

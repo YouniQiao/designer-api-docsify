@@ -18,6 +18,8 @@ function getAllVolumes(callback: AsyncCallback<Array<Volume>>): void
 
 **需要权限：** ohos.permission.STORAGE_MANAGER
 
+<!--Device-volumeManager-function getAllVolumes(callback: AsyncCallback<Array<Volume>>): void--><!--Device-volumeManager-function getAllVolumes(callback: AsyncCallback<Array<Volume>>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -52,6 +54,8 @@ function getAllVolumes(): Promise<Array<Volume>>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.STORAGE_MANAGER
+
+<!--Device-volumeManager-function getAllVolumes(): Promise<Array<Volume>>--><!--Device-volumeManager-function getAllVolumes(): Promise<Array<Volume>>-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Volume
 

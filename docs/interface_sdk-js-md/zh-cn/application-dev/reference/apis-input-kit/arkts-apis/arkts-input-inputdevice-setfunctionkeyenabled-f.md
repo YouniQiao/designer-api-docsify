@@ -18,6 +18,8 @@ function setFunctionKeyEnabled(functionKey: FunctionKey, enabled: boolean): Prom
 
 **需要权限：** ohos.permission.INPUT_KEYBOARD_CONTROLLER
 
+<!--Device-inputDevice-function setFunctionKeyEnabled(functionKey: FunctionKey, enabled: boolean): Promise<void>--><!--Device-inputDevice-function setFunctionKeyEnabled(functionKey: FunctionKey, enabled: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 **参数：**

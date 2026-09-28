@@ -26,6 +26,8 @@ Creates a check box.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-CheckboxInterface-(options?: CheckboxOptions): CheckboxAttribute--><!--Device-CheckboxInterface-(options?: CheckboxOptions): CheckboxAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

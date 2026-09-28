@@ -20,6 +20,8 @@ function resetExecFrequency(uid: number): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-workScheduler-function resetExecFrequency(uid: int): void--><!--Device-workScheduler-function resetExecFrequency(uid: int): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
 **系统接口：** 此接口为系统接口。

@@ -17,6 +17,8 @@ This API inherits from [CommonOptions](arkts-arkui-arkui-advanced-datepickercomp
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export declare class TimeOptions extends CommonOptions--><!--Device-unnamed-export declare class TimeOptions extends CommonOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -45,6 +47,8 @@ Default value: **TimeFormat.HOUR_MINUTE**
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-TimeOptions-format?: TimeFormat--><!--Device-TimeOptions-format?: TimeFormat-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## useMilitaryTime
@@ -71,5 +75,7 @@ Default value: **false**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-TimeOptions-useMilitaryTime?: boolean--><!--Device-TimeOptions-useMilitaryTime?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

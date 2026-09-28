@@ -8,6 +8,8 @@ interface IInputData
 
 **起始版本：** 8
 
+<!--Device-osAccount-interface IInputData--><!--Device-osAccount-interface IInputData-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -27,6 +29,8 @@ onSetData(authSubType: AuthSubType, data: Uint8Array): void
 通知设置数据。
 
 **起始版本：** 8
+
+<!--Device-IInputData-onSetData(authSubType: AuthSubType, data: Uint8Array): void--><!--Device-IInputData-onSetData(authSubType: AuthSubType, data: Uint8Array): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 

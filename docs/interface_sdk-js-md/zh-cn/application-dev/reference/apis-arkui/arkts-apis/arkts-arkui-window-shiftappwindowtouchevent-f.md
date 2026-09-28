@@ -18,6 +18,8 @@ function shiftAppWindowTouchEvent(sourceWindowId: number, targetWindowId: number
 
 **起始版本：** 20
 
+<!--Device-window-function shiftAppWindowTouchEvent(sourceWindowId: int, targetWindowId: int, fingerId: int): Promise<void>--><!--Device-window-function shiftAppWindowTouchEvent(sourceWindowId: int, targetWindowId: int, fingerId: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**

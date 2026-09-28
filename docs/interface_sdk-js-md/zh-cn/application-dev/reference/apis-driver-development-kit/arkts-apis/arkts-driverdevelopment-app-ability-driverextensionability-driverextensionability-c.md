@@ -8,6 +8,8 @@ DriverExtensionAbility模块提供驱动相关扩展能力，提供驱动创建�
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare class DriverExtensionAbility--><!--Device-unnamed-declare class DriverExtensionAbility-End-->
+
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
 ## 导入模块
@@ -27,6 +29,8 @@ Extension生命周期回调，会在[onCreate](../../apis-ability-kit/arkts-apis
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DriverExtensionAbility-onConnect(want: Want): rpc.RemoteObject | Promise<rpc.RemoteObject>--><!--Device-DriverExtensionAbility-onConnect(want: Want): rpc.RemoteObject | Promise<rpc.RemoteObject>-End-->
 
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
@@ -107,6 +111,8 @@ Extension的生命周期回调，客户端执行断开连接服务时回调。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DriverExtensionAbility-onDisconnect(want: Want): void | Promise<void>--><!--Device-DriverExtensionAbility-onDisconnect(want: Want): void | Promise<void>-End-->
+
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
 **参数：**
@@ -154,6 +160,8 @@ onDump(params: Array<string>): Array<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DriverExtensionAbility-onDump(params: Array<string>): Array<string>--><!--Device-DriverExtensionAbility-onDump(params: Array<string>): Array<string>-End-->
+
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
 **参数：**
@@ -191,6 +199,8 @@ Extension生命周期回调，在创建时回调，执行初始化业务逻辑�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DriverExtensionAbility-onInit(want: Want): void--><!--Device-DriverExtensionAbility-onInit(want: Want): void-End-->
+
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
 **参数：**
@@ -224,6 +234,8 @@ Extension生命周期回调，在销毁时回调，执行资源清理等操作�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DriverExtensionAbility-onRelease(): void--><!--Device-DriverExtensionAbility-onRelease(): void-End-->
+
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
 **示例**
@@ -249,5 +261,7 @@ DriverExtension的上下文环境，继承自ExtensionContext。
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DriverExtensionAbility-context: DriverExtensionContext--><!--Device-DriverExtensionAbility-context: DriverExtensionContext-End-->
 
 **系统能力：** SystemCapability.Driver.ExternalDevice

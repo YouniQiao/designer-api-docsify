@@ -10,6 +10,8 @@ interface DesktopLyricState
 
 **起始版本：** 23
 
+<!--Device-avSession-interface DesktopLyricState--><!--Device-avSession-interface DesktopLyricState-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 ## 导入模块
@@ -31,5 +33,7 @@ isLocked: boolean
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DesktopLyricState-isLocked: boolean--><!--Device-DesktopLyricState-isLocked: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core

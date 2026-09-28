@@ -13,6 +13,8 @@
 
 **替代接口：** preferences
 
+<!--Device-unnamed-declare namespace storage--><!--Device-unnamed-declare namespace storage-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
 ## 导入模块

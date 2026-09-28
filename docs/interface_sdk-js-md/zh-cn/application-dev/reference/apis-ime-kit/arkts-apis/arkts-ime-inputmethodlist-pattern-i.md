@@ -8,6 +8,8 @@ export interface Pattern
 
 **起始版本：** 11
 
+<!--Device-unnamed-export interface Pattern--><!--Device-unnamed-export interface Pattern-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## 导入模块
@@ -28,6 +30,8 @@ icon: Resource
 
 **起始版本：** 11
 
+<!--Device-Pattern-icon: Resource--><!--Device-Pattern-icon: Resource-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## selectedIcon
@@ -41,5 +45,7 @@ selectedIcon: Resource
 **类型：** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **起始版本：** 11
+
+<!--Device-Pattern-selectedIcon: Resource--><!--Device-Pattern-selectedIcon: Resource-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework

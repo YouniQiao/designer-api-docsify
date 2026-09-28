@@ -8,6 +8,8 @@ export interface AttachStateChangeInfo
 
 **起始版本：** 20
 
+<!--Device-mechanicManager-export interface AttachStateChangeInfo--><!--Device-mechanicManager-export interface AttachStateChangeInfo-End-->
+
 **系统能力：** SystemCapability.Mechanic.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ Mechanical device information.
 
 **起始版本：** 20
 
+<!--Device-AttachStateChangeInfo-mechInfo: MechInfo--><!--Device-AttachStateChangeInfo-mechInfo: MechInfo-End-->
+
 **系统能力：** SystemCapability.Mechanic.Core
 
 ## state
@@ -41,5 +45,7 @@ state: AttachState
 **类型：** [AttachState](arkts-mechanic-mechanicmanager-attachstate-e.md)
 
 **起始版本：** 20
+
+<!--Device-AttachStateChangeInfo-state: AttachState--><!--Device-AttachStateChangeInfo-state: AttachState-End-->
 
 **系统能力：** SystemCapability.Mechanic.Core

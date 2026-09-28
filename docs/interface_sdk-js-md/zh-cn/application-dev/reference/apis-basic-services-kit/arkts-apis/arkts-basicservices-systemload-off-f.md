@@ -16,6 +16,8 @@ function off(type: 'systemLoadChange', callback?: Callback<SystemLoadLevel>): vo
 
 **起始版本：** 12
 
+<!--Device-systemLoad-function off(type: 'systemLoadChange', callback?: Callback<SystemLoadLevel>): void--><!--Device-systemLoad-function off(type: 'systemLoadChange', callback?: Callback<SystemLoadLevel>): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.SystemLoad
 
 **参数：**

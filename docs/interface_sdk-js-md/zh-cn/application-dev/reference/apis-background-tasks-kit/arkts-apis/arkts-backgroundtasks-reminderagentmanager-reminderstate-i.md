@@ -13,6 +13,8 @@ interface ReminderState
 
 **起始版本：** 23
 
+<!--Device-reminderAgentManager-interface ReminderState--><!--Device-reminderAgentManager-interface ReminderState-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## 导入模块
@@ -35,6 +37,8 @@ buttonType: ActionButtonType
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ReminderState-buttonType: ActionButtonType--><!--Device-ReminderState-buttonType: ActionButtonType-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## isMessageResent
@@ -54,6 +58,8 @@ isMessageResent: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ReminderState-isMessageResent: boolean--><!--Device-ReminderState-isMessageResent: boolean-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## reminderId
@@ -69,5 +75,7 @@ reminderId: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ReminderState-reminderId: int--><!--Device-ReminderState-reminderId: int-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent

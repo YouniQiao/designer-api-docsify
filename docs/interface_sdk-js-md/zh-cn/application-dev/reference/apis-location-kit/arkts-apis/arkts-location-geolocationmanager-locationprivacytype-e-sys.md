@@ -8,6 +8,8 @@ export enum LocationPrivacyType
 
 **起始版本：** 9
 
+<!--Device-geoLocationManager-export enum LocationPrivacyType--><!--Device-geoLocationManager-export enum LocationPrivacyType-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **系统接口：** 此接口为系统接口。
@@ -21,6 +23,8 @@ OTHERS = 0
 其他场景。预留字段。
 
 **起始版本：** 9
+
+<!--Device-LocationPrivacyType-OTHERS = 0--><!--Device-LocationPrivacyType-OTHERS = 0-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -36,6 +40,8 @@ STARTUP = 1
 
 **起始版本：** 9
 
+<!--Device-LocationPrivacyType-STARTUP = 1--><!--Device-LocationPrivacyType-STARTUP = 1-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +55,8 @@ CORE_LOCATION = 2
 开启网络定位时弹出的隐私协议。
 
 **起始版本：** 9
+
+<!--Device-LocationPrivacyType-CORE_LOCATION = 2--><!--Device-LocationPrivacyType-CORE_LOCATION = 2-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 

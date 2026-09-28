@@ -8,6 +8,8 @@ class DomainAccountManager
 
 **起始版本：** 18
 
+<!--Device-osAccount-class DomainAccountManager--><!--Device-osAccount-class DomainAccountManager-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 ## 导入模块
@@ -27,6 +29,8 @@ static auth(domainAccountInfo: DomainAccountInfo, credential: Uint8Array, callba
 **起始版本：** 10
 
 **需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL
+
+<!--Device-DomainAccountManager-static auth(domainAccountInfo: DomainAccountInfo, credential: Uint8Array, callback: IUserAuthCallback): void--><!--Device-DomainAccountManager-static auth(domainAccountInfo: DomainAccountInfo, credential: Uint8Array, callback: IUserAuthCallback): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -101,6 +105,8 @@ static auth(
 **起始版本：** 24
 
 **需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL
+
+<!--Device-DomainAccountManager-static auth(      domainAccountInfo: DomainAccountInfo,      credential: Uint8Array,      options: DomainAccountAuthOptions,      callback: IUserAuthCallback): void--><!--Device-DomainAccountManager-static auth(      domainAccountInfo: DomainAccountInfo,      credential: Uint8Array,      options: DomainAccountAuthOptions,      callback: IUserAuthCallback): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -179,6 +185,8 @@ static authWithPopup(callback: IUserAuthCallback): void
 - API版本11+：N/A
 - API版本10：ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
+<!--Device-DomainAccountManager-static authWithPopup(callback: IUserAuthCallback): void--><!--Device-DomainAccountManager-static authWithPopup(callback: IUserAuthCallback): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -242,6 +250,8 @@ static authWithPopup(localId: number, callback: IUserAuthCallback): void
 - API版本11+：N/A
 - API版本10：ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
+<!--Device-DomainAccountManager-static authWithPopup(localId: int, callback: IUserAuthCallback): void--><!--Device-DomainAccountManager-static authWithPopup(localId: int, callback: IUserAuthCallback): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -300,6 +310,8 @@ static getAccessToken(businessParams: Record<string, Object>, callback: AsyncCal
 获取当前域账号的业务访问令牌。使用callback异步回调。
 
 **起始版本：** 11
+
+<!--Device-DomainAccountManager-static getAccessToken(businessParams: Record<string, Object>, callback: AsyncCallback<Uint8Array>): void--><!--Device-DomainAccountManager-static getAccessToken(businessParams: Record<string, Object>, callback: AsyncCallback<Uint8Array>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -363,6 +375,8 @@ static getAccessToken(businessParams: Record<string, Object>): Promise<Uint8Arra
 查询当前域账号的业务访问令牌。使用Promise异步回调。
 
 **起始版本：** 11
+
+<!--Device-DomainAccountManager-static getAccessToken(businessParams: Record<string, Object>): Promise<Uint8Array>--><!--Device-DomainAccountManager-static getAccessToken(businessParams: Record<string, Object>): Promise<Uint8Array>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -430,6 +444,8 @@ static getAccountInfo(options: GetDomainAccountInfoOptions, callback: AsyncCallb
 
 **需要权限：** ohos.permission.GET_DOMAIN_ACCOUNTS
 
+<!--Device-DomainAccountManager-static getAccountInfo(options: GetDomainAccountInfoOptions, callback: AsyncCallback<DomainAccountInfo>): void--><!--Device-DomainAccountManager-static getAccountInfo(options: GetDomainAccountInfoOptions, callback: AsyncCallback<DomainAccountInfo>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -494,6 +510,8 @@ static getAccountInfo(options: GetDomainAccountInfoOptions): Promise<DomainAccou
 **起始版本：** 10
 
 **需要权限：** ohos.permission.GET_DOMAIN_ACCOUNTS
+
+<!--Device-DomainAccountManager-static getAccountInfo(options: GetDomainAccountInfoOptions): Promise<DomainAccountInfo>--><!--Device-DomainAccountManager-static getAccountInfo(options: GetDomainAccountInfoOptions): Promise<DomainAccountInfo>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -561,6 +579,8 @@ static hasAccount(domainAccountInfo: DomainAccountInfo, callback: AsyncCallback<
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-DomainAccountManager-static hasAccount(domainAccountInfo: DomainAccountInfo, callback: AsyncCallback<boolean>): void--><!--Device-DomainAccountManager-static hasAccount(domainAccountInfo: DomainAccountInfo, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -624,6 +644,8 @@ static hasAccount(domainAccountInfo: DomainAccountInfo): Promise<boolean>
 **起始版本：** 10
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-DomainAccountManager-static hasAccount(domainAccountInfo: DomainAccountInfo): Promise<boolean>--><!--Device-DomainAccountManager-static hasAccount(domainAccountInfo: DomainAccountInfo): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -690,6 +712,8 @@ static isAuthenticationExpired(domainAccountInfo: DomainAccountInfo): Promise<bo
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
+<!--Device-DomainAccountManager-static isAuthenticationExpired(domainAccountInfo: DomainAccountInfo): Promise<boolean>--><!--Device-DomainAccountManager-static isAuthenticationExpired(domainAccountInfo: DomainAccountInfo): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -747,6 +771,8 @@ static registerPlugin(plugin: DomainPlugin): void
 **起始版本：** 9
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-DomainAccountManager-static registerPlugin(plugin: DomainPlugin): void--><!--Device-DomainAccountManager-static registerPlugin(plugin: DomainPlugin): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -811,6 +837,8 @@ static unregisterPlugin(): void
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-DomainAccountManager-static unregisterPlugin(): void--><!--Device-DomainAccountManager-static unregisterPlugin(): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -852,6 +880,8 @@ static updateAccountToken(
 **起始版本：** 10
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-DomainAccountManager-static updateAccountToken(      domainAccountInfo: DomainAccountInfo,      token: Uint8Array,      callback: AsyncCallback<void>    ): void--><!--Device-DomainAccountManager-static updateAccountToken(      domainAccountInfo: DomainAccountInfo,      token: Uint8Array,      callback: AsyncCallback<void>    ): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -914,6 +944,8 @@ static updateAccountToken(domainAccountInfo: DomainAccountInfo, token: Uint8Arra
 **起始版本：** 10
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-DomainAccountManager-static updateAccountToken(domainAccountInfo: DomainAccountInfo, token: Uint8Array): Promise<void>--><!--Device-DomainAccountManager-static updateAccountToken(domainAccountInfo: DomainAccountInfo, token: Uint8Array): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 

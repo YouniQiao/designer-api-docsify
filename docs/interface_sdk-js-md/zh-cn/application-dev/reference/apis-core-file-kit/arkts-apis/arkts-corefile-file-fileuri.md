@@ -6,6 +6,8 @@
 
 **起始版本：** 15
 
+<!--Device-unnamed-declare namespace fileUri--><!--Device-unnamed-declare namespace fileUri-End-->
+
 **系统能力：** SystemCapability.FileManagement.AppFileService
 
 ## 导入模块

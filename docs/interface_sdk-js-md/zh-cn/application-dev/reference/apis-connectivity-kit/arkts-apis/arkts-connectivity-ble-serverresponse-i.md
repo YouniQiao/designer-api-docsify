@@ -8,6 +8,8 @@ interface ServerResponse
 
 **起始版本：** 10
 
+<!--Device-ble-interface ServerResponse--><!--Device-ble-interface ServerResponse-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -30,7 +32,9 @@ client端蓝牙设备地址。例如："XX:XX:XX:XX:XX:XX"。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ServerResponse-deviceId: string--><!--Device-ServerResponse-deviceId: string-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -48,7 +52,9 @@ client端读或者写请求的数据偏移值，与订阅client端读或者写�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ServerResponse-offset: int--><!--Device-ServerResponse-offset: int-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -66,7 +72,9 @@ status: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ServerResponse-status: int--><!--Device-ServerResponse-status: int-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -84,7 +92,9 @@ client端写请求的标识符，server端回复时需填写相同的transId。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ServerResponse-transId: int--><!--Device-ServerResponse-transId: int-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -102,6 +112,8 @@ value: ArrayBuffer
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ServerResponse-value: ArrayBuffer--><!--Device-ServerResponse-value: ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

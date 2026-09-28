@@ -18,6 +18,8 @@ function getAllSimMessages(slotId: number, callback: AsyncCallback<Array<SimShor
 
 **需要权限：** ohos.permission.RECEIVE_SMS
 
+<!--Device-sms-function getAllSimMessages(slotId: int, callback: AsyncCallback<Array<SimShortMessage>>): void--><!--Device-sms-function getAllSimMessages(slotId: int, callback: AsyncCallback<Array<SimShortMessage>>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -67,6 +69,8 @@ function getAllSimMessages(slotId: number): Promise<Array<SimShortMessage>>
 **起始版本：** 7
 
 **需要权限：** ohos.permission.RECEIVE_SMS
+
+<!--Device-sms-function getAllSimMessages(slotId: int): Promise<Array<SimShortMessage>>--><!--Device-sms-function getAllSimMessages(slotId: int): Promise<Array<SimShortMessage>>-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 

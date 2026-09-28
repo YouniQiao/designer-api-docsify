@@ -8,6 +8,8 @@ interface AdvertisingStateChangeInfo
 
 **起始版本：** 26.0.0
 
+<!--Device-advertising-interface AdvertisingStateChangeInfo--><!--Device-advertising-interface AdvertisingStateChangeInfo-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## 导入模块
@@ -30,6 +32,8 @@ advertisingId: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AdvertisingStateChangeInfo-advertisingId: int--><!--Device-AdvertisingStateChangeInfo-advertisingId: int-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## state
@@ -45,5 +49,7 @@ state: AdvertisingState
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AdvertisingStateChangeInfo-state: AdvertisingState--><!--Device-AdvertisingStateChangeInfo-state: AdvertisingState-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base

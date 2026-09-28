@@ -12,6 +12,8 @@ interface FlashQuery
 
 **起始版本：** 12
 
+<!--Device-camera-interface FlashQuery--><!--Device-camera-interface FlashQuery-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
@@ -29,6 +31,8 @@ isLcdFlashSupported(): boolean
 Checks whether the LCD flash is supported.
 
 **起始版本：** 12
+
+<!--Device-FlashQuery-isLcdFlashSupported(): boolean--><!--Device-FlashQuery-isLcdFlashSupported(): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

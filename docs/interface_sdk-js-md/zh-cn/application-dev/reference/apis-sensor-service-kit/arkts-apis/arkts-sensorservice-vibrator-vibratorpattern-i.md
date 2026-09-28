@@ -8,6 +8,8 @@ interface VibratorPattern
 
 **起始版本：** 18
 
+<!--Device-vibrator-interface VibratorPattern--><!--Device-vibrator-interface VibratorPattern-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## 导入模块
@@ -28,6 +30,8 @@ events: Array<VibratorEvent>
 
 **起始版本：** 18
 
+<!--Device-VibratorPattern-events: Array<VibratorEvent>--><!--Device-VibratorPattern-events: Array<VibratorEvent>-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## time
@@ -41,5 +45,7 @@ time: number
 **类型：** number
 
 **起始版本：** 18
+
+<!--Device-VibratorPattern-time: int--><!--Device-VibratorPattern-time: int-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice

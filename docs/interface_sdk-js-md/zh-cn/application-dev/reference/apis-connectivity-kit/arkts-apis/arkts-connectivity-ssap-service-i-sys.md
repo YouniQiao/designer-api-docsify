@@ -8,6 +8,8 @@ interface Service
 
 **起始版本：** 26.0.0
 
+<!--Device-ssap-interface Service--><!--Device-ssap-interface Service-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## 导入模块
@@ -30,6 +32,8 @@ events?: Event[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Service-events?: Event[]--><!--Device-Service-events?: Event[]-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **系统接口：** 此接口为系统接口。
@@ -47,6 +51,8 @@ methods?: Method[]
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Service-methods?: Method[]--><!--Device-Service-methods?: Method[]-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 

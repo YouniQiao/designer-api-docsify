@@ -31,4 +31,6 @@ value: Used to set an alias. If no alias is specified, a variable name is used b
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-unnamed-declare const Consume: PropertyDecorator & ((value: string) => PropertyDecorator)--><!--Device-unnamed-declare const Consume: PropertyDecorator & ((value: string) => PropertyDecorator)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

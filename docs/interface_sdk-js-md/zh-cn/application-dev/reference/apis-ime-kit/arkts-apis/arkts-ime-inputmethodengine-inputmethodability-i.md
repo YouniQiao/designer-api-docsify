@@ -10,6 +10,8 @@ InputMethodAbility是输入法应用的核心能力对象，提供输入法生�
 
 **起始版本：** 9
 
+<!--Device-inputMethodEngine-interface InputMethodAbility--><!--Device-inputMethodEngine-interface InputMethodAbility-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## 导入模块
@@ -37,6 +39,8 @@ createPanel(ctx: BaseContext, info: PanelInfo, callback: AsyncCallback<Panel>): 
 > showInSubwindow为false。
 
 **起始版本：** 10
+
+<!--Device-InputMethodAbility-createPanel(ctx: BaseContext, info: PanelInfo, callback: AsyncCallback<Panel>): void--><!--Device-InputMethodAbility-createPanel(ctx: BaseContext, info: PanelInfo, callback: AsyncCallback<Panel>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -109,6 +113,8 @@ createPanel(ctx: BaseContext, info: PanelInfo): Promise<Panel>
 
 **起始版本：** 10
 
+<!--Device-InputMethodAbility-createPanel(ctx: BaseContext, info: PanelInfo): Promise<Panel>--><!--Device-InputMethodAbility-createPanel(ctx: BaseContext, info: PanelInfo): Promise<Panel>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -169,6 +175,8 @@ destroyPanel(panel: Panel, callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
+<!--Device-InputMethodAbility-destroyPanel(panel: Panel, callback: AsyncCallback<void>): void--><!--Device-InputMethodAbility-destroyPanel(panel: Panel, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -228,6 +236,8 @@ destroyPanel(panel: Panel): Promise<void>
 销毁输入法面板。使用promise异步回调。<br> <br>配对调用：<br> <br>- 必须与[createPanel](#createpanel)方法配合使用，用于销毁由createPanel()创建的输入法面板。<br>- 销毁的面板必须是已成功创建的面板对象。<br>- 未正确销毁面板会导致资源泄漏，建议在面板使用完毕后及时调用destroyPanel()释放资源。
 
 **起始版本：** 10
+
+<!--Device-InputMethodAbility-destroyPanel(panel: Panel): Promise<void>--><!--Device-InputMethodAbility-destroyPanel(panel: Panel): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -293,6 +303,8 @@ getSecurityMode(): SecurityMode
 
 **起始版本：** 11
 
+<!--Device-InputMethodAbility-getSecurityMode(): SecurityMode--><!--Device-InputMethodAbility-getSecurityMode(): SecurityMode-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**
@@ -324,6 +336,8 @@ off(type: 'inputStart', callback?: (kbController: KeyboardController, inputClien
 
 **起始版本：** 9
 
+<!--Device-InputMethodAbility-off(type: 'inputStart', callback?: (kbController: KeyboardController, inputClient: InputClient) => void): void--><!--Device-InputMethodAbility-off(type: 'inputStart', callback?: (kbController: KeyboardController, inputClient: InputClient) => void): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -348,6 +362,8 @@ off(type: 'inputStop', callback: () => void): void
 取消订阅停止输入法应用事件。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-InputMethodAbility-off(type: 'inputStop', callback: () => void): void--><!--Device-InputMethodAbility-off(type: 'inputStop', callback: () => void): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -376,6 +392,8 @@ off(type: 'setCallingWindow', callback: (wid: number) => void): void
 
 **起始版本：** 9
 
+<!--Device-InputMethodAbility-off(type: 'setCallingWindow', callback: (wid: number) => void): void--><!--Device-InputMethodAbility-off(type: 'setCallingWindow', callback: (wid: number) => void): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -402,6 +420,8 @@ off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
 取消订阅输入法软键盘显示或隐藏事件。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-InputMethodAbility-off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void--><!--Device-InputMethodAbility-off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -433,6 +453,8 @@ off(type: 'setSubtype', callback?: (inputMethodSubtype: InputMethodSubtype) => v
 
 **起始版本：** 9
 
+<!--Device-InputMethodAbility-off(type: 'setSubtype', callback?: (inputMethodSubtype: InputMethodSubtype) => void): void--><!--Device-InputMethodAbility-off(type: 'setSubtype', callback?: (inputMethodSubtype: InputMethodSubtype) => void): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -459,6 +481,8 @@ off(type: 'securityModeChange', callback?: Callback<SecurityMode>): void
 取消订阅输入法安全模式改变类型事件。使用callback异步回调。
 
 **起始版本：** 11
+
+<!--Device-InputMethodAbility-off(type: 'securityModeChange', callback?: Callback<SecurityMode>): void--><!--Device-InputMethodAbility-off(type: 'securityModeChange', callback?: Callback<SecurityMode>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -490,6 +514,8 @@ off(type: 'privateCommand', callback?: Callback<Record<string, CommandDataType>>
 取消订阅输入法私有数据事件。使用callback异步回调。
 
 **起始版本：** 12
+
+<!--Device-InputMethodAbility-off(type: 'privateCommand', callback?: Callback<Record<string, CommandDataType>>): void--><!--Device-InputMethodAbility-off(type: 'privateCommand', callback?: Callback<Record<string, CommandDataType>>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -529,6 +555,8 @@ off(type: 'callingDisplayDidChange', callback?: Callback<number>): void
 
 **起始版本：** 18
 
+<!--Device-InputMethodAbility-off(type: 'callingDisplayDidChange', callback?: Callback<number>): void--><!--Device-InputMethodAbility-off(type: 'callingDisplayDidChange', callback?: Callback<number>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -556,6 +584,8 @@ off(type: 'discardTypingText', callback?: Callback<void>): void
 
 **起始版本：** 20
 
+<!--Device-InputMethodAbility-off(type: 'discardTypingText', callback?: Callback<void>): void--><!--Device-InputMethodAbility-off(type: 'discardTypingText', callback?: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -582,6 +612,8 @@ on(type: 'inputStart', callback: (kbController: KeyboardController, inputClient:
 订阅输入法绑定成功事件。使用callback异步回调。<br> <br>使用场景：输入法应用需要在编辑框获得焦点并绑定输入法时，获取KeyboardController和InputClient实例以进行后续的键盘操作和文本交互。<br> <br>使用后效果：当编辑框绑定到输入法应用时，触发回调并返回KeyboardController和InputClient实例。输入法应用可在回调中创建面板、加载键盘页面、订阅KeyboardDelegate事件等。
 
 **起始版本：** 9
+
+<!--Device-InputMethodAbility-on(type: 'inputStart', callback: (kbController: KeyboardController, inputClient: InputClient) => void): void--><!--Device-InputMethodAbility-on(type: 'inputStart', callback: (kbController: KeyboardController, inputClient: InputClient) => void): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -612,6 +644,8 @@ on(type: 'inputStop', callback: () => void): void
 
 **起始版本：** 9
 
+<!--Device-InputMethodAbility-on(type: 'inputStop', callback: () => void): void--><!--Device-InputMethodAbility-on(type: 'inputStop', callback: () => void): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -639,6 +673,8 @@ on(type: 'setCallingWindow', callback: (wid: number) => void): void
 
 **起始版本：** 9
 
+<!--Device-InputMethodAbility-on(type: 'setCallingWindow', callback: (wid: number) => void): void--><!--Device-InputMethodAbility-on(type: 'setCallingWindow', callback: (wid: number) => void): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -665,6 +701,8 @@ on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void
 订阅输入法软键盘显示或隐藏事件。使用callback异步回调。<br> <br>使用场景：输入法应用需要在软键盘显示/隐藏时，执行相应的界面更新操作（如调整面板布局、更新候选词区域）。<br> <br>使用后效果：当软键盘显示请求触发时，'keyboardShow'回调被调用，输入法应用应在回调中调用panel.show()显示面板；当软键盘隐藏请求触发时，'keyboardHide'回调被调用，输入法应用应在回调中调用panel.hide()隐藏面板。
 
 **起始版本：** 9
+
+<!--Device-InputMethodAbility-on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void--><!--Device-InputMethodAbility-on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -696,6 +734,8 @@ on(type: 'setSubtype', callback: (inputMethodSubtype: InputMethodSubtype) => voi
 
 **起始版本：** 9
 
+<!--Device-InputMethodAbility-on(type: 'setSubtype', callback: (inputMethodSubtype: InputMethodSubtype) => void): void--><!--Device-InputMethodAbility-on(type: 'setSubtype', callback: (inputMethodSubtype: InputMethodSubtype) => void): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -725,6 +765,8 @@ on(type: 'securityModeChange', callback: Callback<SecurityMode>): void
 
 **起始版本：** 11
 
+<!--Device-InputMethodAbility-on(type: 'securityModeChange', callback: Callback<SecurityMode>): void--><!--Device-InputMethodAbility-on(type: 'securityModeChange', callback: Callback<SecurityMode>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -752,6 +794,8 @@ on(type: 'privateCommand', callback: Callback<Record<string, CommandDataType>>):
 订阅输入法私有数据事件。使用callback异步回调。<br> <br>使用场景：应用与输入法之间需要传递私有数据（如自定义命令、配置信息等）时使用。仅系统默认输入法应用可订阅此事件。<br> <br>使用后效果：当绑定应用向输入法发送私有数据时触发回调，返回私有数据记录。
 
 **起始版本：** 12
+
+<!--Device-InputMethodAbility-on(type: 'privateCommand', callback: Callback<Record<string, CommandDataType>>): void--><!--Device-InputMethodAbility-on(type: 'privateCommand', callback: Callback<Record<string, CommandDataType>>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -790,6 +834,8 @@ on(type: 'callingDisplayDidChange', callback: Callback<number>): void
 
 **起始版本：** 18
 
+<!--Device-InputMethodAbility-on(type: 'callingDisplayDidChange', callback: Callback<number>): void--><!--Device-InputMethodAbility-on(type: 'callingDisplayDidChange', callback: Callback<number>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -823,6 +869,8 @@ on(type: 'discardTypingText', callback: Callback<void>): void
 订阅编辑框应用发送\u201c清空候选词\u201d事件到输入法。使用callback异步回调。<br> <br>使用场景：编辑框应用需要通知输入法清空当前候选词列表时使用（如用户切换输入框、提交表单后等场景）。<br> <br>使用后效果：当编辑框应用发送清空候选词请求时触发回调，输入法应用应在回调中清空候选词列表和预输入文本。
 
 **起始版本：** 20
+
+<!--Device-InputMethodAbility-on(type: 'discardTypingText', callback: Callback<void>): void--><!--Device-InputMethodAbility-on(type: 'discardTypingText', callback: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 

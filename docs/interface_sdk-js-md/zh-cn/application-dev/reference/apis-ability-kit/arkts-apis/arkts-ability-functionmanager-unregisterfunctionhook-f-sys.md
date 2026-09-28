@@ -20,6 +20,8 @@ function unregisterFunctionHook(hook: FunctionHook): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-functionManager-function unregisterFunctionHook(hook: FunctionHook): Promise<void>--><!--Device-functionManager-function unregisterFunctionHook(hook: FunctionHook): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 **系统接口：** 此接口为系统接口。

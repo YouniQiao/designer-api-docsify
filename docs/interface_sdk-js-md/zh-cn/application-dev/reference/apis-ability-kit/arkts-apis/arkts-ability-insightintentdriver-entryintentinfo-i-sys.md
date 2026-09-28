@@ -8,6 +8,8 @@ FormIntentInfo用于描述[@InsightIntentForm](../../../reference/apis-ability-k
 
 **起始版本：** 20
 
+<!--Device-insightIntentDriver-interface EntryIntentInfo--><!--Device-insightIntentDriver-interface EntryIntentInfo-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ Ability名称。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-EntryIntentInfo-readonly abilityName: string--><!--Device-EntryIntentInfo-readonly abilityName: string-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ readonly executeMode: insightIntent.ExecuteMode[]
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EntryIntentInfo-readonly executeMode: insightIntent.ExecuteMode[]--><!--Device-EntryIntentInfo-readonly executeMode: insightIntent.ExecuteMode[]-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

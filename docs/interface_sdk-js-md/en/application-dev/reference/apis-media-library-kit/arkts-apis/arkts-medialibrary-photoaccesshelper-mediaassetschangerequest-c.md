@@ -10,6 +10,8 @@ Represents a request for changing multiple assets.
 
 **Since:** 26.0.0
 
+<!--Device-photoAccessHelper-class MediaAssetsChangeRequest implements MediaChangeRequest--><!--Device-photoAccessHelper-class MediaAssetsChangeRequest implements MediaChangeRequest-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
@@ -27,6 +29,8 @@ constructor(assets: Array<PhotoAsset>)
 Constructor.
 
 **Since:** 26.0.0
+
+<!--Device-MediaAssetsChangeRequest-constructor(assets: Array<PhotoAsset>)--><!--Device-MediaAssetsChangeRequest-constructor(assets: Array<PhotoAsset>)-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -71,6 +75,8 @@ setFavorite(favoriteState: boolean): void
 Favorites or unfavorites this file asset.
 
 **Since:** 26.0.0
+
+<!--Device-MediaAssetsChangeRequest-setFavorite(favoriteState: boolean): void--><!--Device-MediaAssetsChangeRequest-setFavorite(favoriteState: boolean): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

@@ -21,6 +21,8 @@ function sendEvent(event: EventInfo, callback: AsyncCallback<void>): void
 
 **替代接口：** [sendAccessibilityEvent](arkts-accessibility-accessibility-sendaccessibilityevent-f.md)(event: EventInfo, callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-accessibility-function sendEvent(event: EventInfo, callback: AsyncCallback<void>): void--><!--Device-accessibility-function sendEvent(event: EventInfo, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **参数：**
@@ -67,6 +69,8 @@ function sendEvent(event: EventInfo): Promise<void>
 **废弃版本：** 9
 
 **替代接口：** [sendAccessibilityEvent](arkts-accessibility-accessibility-sendaccessibilityevent-f.md#sendaccessibilityevent-1)(event: EventInfo)
+
+<!--Device-accessibility-function sendEvent(event: EventInfo): Promise<void>--><!--Device-accessibility-function sendEvent(event: EventInfo): Promise<void>-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 

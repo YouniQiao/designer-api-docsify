@@ -8,6 +8,8 @@ export interface MultiSlotsAdLoadListener
 
 **起始版本：** 11
 
+<!--Device-advertising-export interface MultiSlotsAdLoadListener--><!--Device-advertising-export interface MultiSlotsAdLoadListener-End-->
+
 **系统能力：** SystemCapability.Advertising.Ads
 
 ## 导入模块
@@ -27,6 +29,8 @@ onAdLoadFailure(errorCode: number, errorMsg: string): void
 **起始版本：** 11
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MultiSlotsAdLoadListener-onAdLoadFailure(errorCode: number, errorMsg: string): void--><!--Device-MultiSlotsAdLoadListener-onAdLoadFailure(errorCode: number, errorMsg: string): void-End-->
 
 **系统能力：** SystemCapability.Advertising.Ads
 
@@ -64,6 +68,8 @@ onAdLoadSuccess(adsMap: Map<string, Array<Advertisement>>): void
 **起始版本：** 11
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MultiSlotsAdLoadListener-onAdLoadSuccess(adsMap: Map<string, Array<Advertisement>>): void--><!--Device-MultiSlotsAdLoadListener-onAdLoadSuccess(adsMap: Map<string, Array<Advertisement>>): void-End-->
 
 **系统能力：** SystemCapability.Advertising.Ads
 

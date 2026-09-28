@@ -24,6 +24,8 @@ function on(type: 'bluetoothDeviceFind', callback: Callback<Array<string>>): voi
 
 **需要权限：** ohos.permission.USE_BLUETOOTH
 
+<!--Device-bluetooth-function on(type: 'bluetoothDeviceFind', callback: Callback<Array<string>>): void--><!--Device-bluetooth-function on(type: 'bluetoothDeviceFind', callback: Callback<Array<string>>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -60,6 +62,8 @@ function on(type: 'bondStateChange', callback: Callback<BondStateParam>): void
 **替代接口：** bondStateChange
 
 **需要权限：** ohos.permission.USE_BLUETOOTH
+
+<!--Device-bluetooth-function on(type: 'bondStateChange', callback: Callback<BondStateParam>): void--><!--Device-bluetooth-function on(type: 'bondStateChange', callback: Callback<BondStateParam>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -98,6 +102,8 @@ function on(type: 'pinRequired', callback: Callback<PinRequiredParam>): void
 
 **需要权限：** ohos.permission.DISCOVER_BLUETOOTH
 
+<!--Device-bluetooth-function on(type: 'pinRequired', callback: Callback<PinRequiredParam>): void--><!--Device-bluetooth-function on(type: 'pinRequired', callback: Callback<PinRequiredParam>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -135,6 +141,8 @@ function on(type: 'stateChange', callback: Callback<BluetoothState>): void
 
 **需要权限：** ohos.permission.USE_BLUETOOTH
 
+<!--Device-bluetooth-function on(type: 'stateChange', callback: Callback<BluetoothState>): void--><!--Device-bluetooth-function on(type: 'stateChange', callback: Callback<BluetoothState>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -167,6 +175,8 @@ function on(type: 'sppRead', clientSocket: number, callback: Callback<ArrayBuffe
 **废弃版本：** 9
 
 **替代接口：** sppRead
+
+<!--Device-bluetooth-function on(type: 'sppRead', clientSocket: number, callback: Callback<ArrayBuffer>): void--><!--Device-bluetooth-function on(type: 'sppRead', clientSocket: number, callback: Callback<ArrayBuffer>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

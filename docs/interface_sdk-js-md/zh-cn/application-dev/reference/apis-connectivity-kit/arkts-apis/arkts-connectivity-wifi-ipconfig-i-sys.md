@@ -12,6 +12,8 @@ IPv4配置信息。
 
 **替代接口：** [IpConfig](arkts-connectivity-wifimanager-ipconfig-i-sys.md)
 
+<!--Device-wifi-interface IpConfig--><!--Device-wifi-interface IpConfig-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。
@@ -38,6 +40,8 @@ DNS服务器。
 
 **替代接口：** [dnsServers](arkts-connectivity-wifimanager-ipconfig-i-sys.md#dnsservers)
 
+<!--Device-IpConfig-dnsServers: number[]--><!--Device-IpConfig-dnsServers: number[]-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。
@@ -57,6 +61,8 @@ domains: Array<string>
 **废弃版本：** 9
 
 **替代接口：** [domains](arkts-connectivity-wifimanager-ipconfig-i-sys.md#domains)
+
+<!--Device-IpConfig-domains: Array<string>--><!--Device-IpConfig-domains: Array<string>-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -78,6 +84,8 @@ gateway: number
 
 **替代接口：** [gateway](arkts-connectivity-wifimanager-ipconfig-i-sys.md#gateway)
 
+<!--Device-IpConfig-gateway: number--><!--Device-IpConfig-gateway: number-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。
@@ -97,6 +105,8 @@ IPv4地址。
 **废弃版本：** 9
 
 **替代接口：** [ipAddress](arkts-connectivity-wifimanager-ipconfig-i-sys.md#ipaddress)
+
+<!--Device-IpConfig-ipAddress: number--><!--Device-IpConfig-ipAddress: number-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 

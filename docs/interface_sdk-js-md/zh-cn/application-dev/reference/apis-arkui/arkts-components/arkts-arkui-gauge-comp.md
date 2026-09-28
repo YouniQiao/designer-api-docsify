@@ -6,7 +6,7 @@
 > 
 > - 该组件从API version 8开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 > 
-> - 该组件从API版本26.0.0开始支持[WithTheme](arkts-arkui-withtheme-comp.md#with_themedefines-withtheme-component)。
+> - 该组件从API版本26.0.0开始支持[WithTheme](arkts-arkui-withtheme-comp.md)。
 > 
 > - [startAngle](arkts-arkui-gauge-comp-attribute.md#startangle)和[endAngle](arkts-arkui-gauge-comp-attribute.md#endangle)仅决定圆弧路径范围，不影响组件大小。角度差值越小，圆弧在组件内占比越小，`min`/`max`标记与圆弧间留白越大。
 
@@ -35,6 +35,8 @@ Gauge(options: GaugeOptions)
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-GaugeInterface-(options: GaugeOptions): GaugeAttribute--><!--Device-GaugeInterface-(options: GaugeOptions): GaugeAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

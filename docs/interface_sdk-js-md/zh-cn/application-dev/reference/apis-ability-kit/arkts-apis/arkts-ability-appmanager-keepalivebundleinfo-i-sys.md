@@ -8,6 +8,8 @@ export interface KeepAliveBundleInfo
 
 **起始版本：** 14
 
+<!--Device-appManager-export interface KeepAliveBundleInfo--><!--Device-appManager-export interface KeepAliveBundleInfo-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ allowUserToCancel?: boolean
 
 **起始版本：** 20
 
+<!--Device-KeepAliveBundleInfo-allowUserToCancel?: boolean--><!--Device-KeepAliveBundleInfo-allowUserToCancel?: boolean-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ Bundle名称。
 **类型：** string
 
 **起始版本：** 14
+
+<!--Device-KeepAliveBundleInfo-bundleName: string--><!--Device-KeepAliveBundleInfo-bundleName: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -62,6 +68,8 @@ setter: KeepAliveSetter
 
 **起始版本：** 14
 
+<!--Device-KeepAliveBundleInfo-setter: KeepAliveSetter--><!--Device-KeepAliveBundleInfo-setter: KeepAliveSetter-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -78,6 +86,8 @@ setterUserId?: number
 
 **起始版本：** 20
 
+<!--Device-KeepAliveBundleInfo-setterUserId?: int--><!--Device-KeepAliveBundleInfo-setterUserId?: int-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -93,6 +103,8 @@ type: KeepAliveAppType
 **类型：** [KeepAliveAppType](arkts-ability-appmanager-keepaliveapptype-e-sys.md)
 
 **起始版本：** 14
+
+<!--Device-KeepAliveBundleInfo-type: KeepAliveAppType--><!--Device-KeepAliveBundleInfo-type: KeepAliveAppType-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

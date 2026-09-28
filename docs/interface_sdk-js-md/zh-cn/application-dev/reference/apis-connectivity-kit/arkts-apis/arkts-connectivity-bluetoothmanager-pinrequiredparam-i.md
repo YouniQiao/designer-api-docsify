@@ -14,6 +14,8 @@ interface PinRequiredParam
 
 **替代接口：** [PinRequiredParam](arkts-connectivity-connection-pinrequiredparam-i.md)
 
+<!--Device-bluetoothManager-interface PinRequiredParam--><!--Device-bluetoothManager-interface PinRequiredParam-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -38,6 +40,8 @@ deviceId: string
 
 **替代接口：** [deviceId](arkts-connectivity-connection-pinrequiredparam-i.md#deviceid)
 
+<!--Device-PinRequiredParam-deviceId: string--><!--Device-PinRequiredParam-deviceId: string-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## pinCode
@@ -55,5 +59,7 @@ pinCode: string
 **废弃版本：** 10
 
 **替代接口：** [pinCode](arkts-connectivity-connection-pinrequiredparam-i.md#pincode)
+
+<!--Device-PinRequiredParam-pinCode: string--><!--Device-PinRequiredParam-pinCode: string-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

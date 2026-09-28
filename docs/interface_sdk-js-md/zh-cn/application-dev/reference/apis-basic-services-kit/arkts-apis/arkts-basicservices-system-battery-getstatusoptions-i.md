@@ -10,6 +10,8 @@ export interface GetStatusOptions
 
 **废弃版本：** 6
 
+<!--Device-unnamed-export interface GetStatusOptions--><!--Device-unnamed-export interface GetStatusOptions-End-->
+
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Lite
 
 ## 导入模块
@@ -32,6 +34,8 @@ complete?: () => void
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-GetStatusOptions-complete?: () => void--><!--Device-GetStatusOptions-complete?: () => void-End-->
+
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Lite
 
 ## fail
@@ -47,6 +51,8 @@ fail?: (data: string, code: number) => void
 **废弃版本：** 6
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-GetStatusOptions-fail?: (data: string, code: number) => void--><!--Device-GetStatusOptions-fail?: (data: string, code: number) => void-End-->
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Lite
 
@@ -70,6 +76,8 @@ success?: (data: BatteryResponse) => void
 **废弃版本：** 6
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-GetStatusOptions-success?: (data: BatteryResponse) => void--><!--Device-GetStatusOptions-success?: (data: BatteryResponse) => void-End-->
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Lite
 

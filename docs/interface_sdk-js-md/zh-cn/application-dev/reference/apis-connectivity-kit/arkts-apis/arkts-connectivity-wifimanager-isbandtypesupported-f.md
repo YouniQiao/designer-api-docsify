@@ -18,6 +18,8 @@ function isBandTypeSupported(bandType: WifiBandType): boolean
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
+<!--Device-wifiManager-function isBandTypeSupported(bandType: WifiBandType): boolean--><!--Device-wifiManager-function isBandTypeSupported(bandType: WifiBandType): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **参数：**

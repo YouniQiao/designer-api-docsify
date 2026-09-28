@@ -16,6 +16,8 @@ function constructUDPSocketInstance(): UDPSocket
 
 **起始版本：** 7
 
+<!--Device-socket-function constructUDPSocketInstance(): UDPSocket--><!--Device-socket-function constructUDPSocketInstance(): UDPSocket-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**

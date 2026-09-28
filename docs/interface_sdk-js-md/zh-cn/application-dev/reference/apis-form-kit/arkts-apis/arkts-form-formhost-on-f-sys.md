@@ -20,6 +20,8 @@ function on(type: "formUninstall", callback: Callback<string>): void
 
 **起始版本：** 9
 
+<!--Device-formHost-function on(type: "formUninstall", callback: Callback<string>): void--><!--Device-formHost-function on(type: "formUninstall", callback: Callback<string>): void-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -48,6 +50,8 @@ function on(type: 'formOverflow', callback: Callback<formInfo.OverflowRequest>):
 订阅互动卡片动效请求事件。使用callback异步回调。
 
 **起始版本：** 20
+
+<!--Device-formHost-function on(type: 'formOverflow', callback: Callback<formInfo.OverflowRequest>): void--><!--Device-formHost-function on(type: 'formOverflow', callback: Callback<formInfo.OverflowRequest>): void-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -93,6 +97,8 @@ function on(type: 'changeSceneAnimationState',
 
 **起始版本：** 20
 
+<!--Device-formHost-function on(type: 'changeSceneAnimationState',     callback: Callback<formInfo.ChangeSceneAnimationStateRequest>): void--><!--Device-formHost-function on(type: 'changeSceneAnimationState',     callback: Callback<formInfo.ChangeSceneAnimationStateRequest>): void-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -135,6 +141,8 @@ function on(type: 'getFormRect', callback: formInfo.GetFormRectInfoCallback): vo
 订阅卡片位置尺寸查询请求事件。使用callback异步回调。
 
 **起始版本：** 20
+
+<!--Device-formHost-function on(type: 'getFormRect', callback: formInfo.GetFormRectInfoCallback): void--><!--Device-formHost-function on(type: 'getFormRect', callback: formInfo.GetFormRectInfoCallback): void-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -188,6 +196,8 @@ function on(type: 'getLiveFormStatus',  callback: formInfo.GetLiveFormStatusCall
 Listens to the event of get live form status.
 
 **起始版本：** 20
+
+<!--Device-formHost-function on(type: 'getLiveFormStatus',  callback: formInfo.GetLiveFormStatusCallback): void--><!--Device-formHost-function on(type: 'getLiveFormStatus',  callback: formInfo.GetLiveFormStatusCallback): void-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 

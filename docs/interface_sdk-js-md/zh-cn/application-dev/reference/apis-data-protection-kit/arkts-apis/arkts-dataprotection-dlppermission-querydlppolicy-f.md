@@ -24,6 +24,8 @@ function queryDlpPolicy(dlpFd: number): Promise<string>
 
 **需要权限：** ohos.permission.ENTERPRISE_ACCESS_DLP_FILE
 
+<!--Device-dlpPermission-function queryDlpPolicy(dlpFd: number): Promise<string>--><!--Device-dlpPermission-function queryDlpPolicy(dlpFd: number): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **参数：**

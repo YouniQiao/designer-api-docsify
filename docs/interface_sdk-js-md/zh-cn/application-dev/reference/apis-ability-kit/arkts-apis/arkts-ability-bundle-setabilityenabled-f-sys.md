@@ -22,6 +22,8 @@ function setAbilityEnabled(info: AbilityInfo, isEnable: boolean, callback: Async
 
 **需要权限：** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
 
+<!--Device-bundle-function setAbilityEnabled(info: AbilityInfo, isEnable: boolean, callback: AsyncCallback<void>): void--><!--Device-bundle-function setAbilityEnabled(info: AbilityInfo, isEnable: boolean, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 **系统接口：** 此接口为系统接口。
@@ -74,6 +76,8 @@ function setAbilityEnabled(info: AbilityInfo, isEnable: boolean): Promise<void>
 **替代接口：** null
 
 **需要权限：** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
+
+<!--Device-bundle-function setAbilityEnabled(info: AbilityInfo, isEnable: boolean): Promise<void>--><!--Device-bundle-function setAbilityEnabled(info: AbilityInfo, isEnable: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 

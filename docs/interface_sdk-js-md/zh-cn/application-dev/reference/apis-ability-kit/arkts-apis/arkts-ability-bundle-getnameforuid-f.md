@@ -18,6 +18,8 @@ function getNameForUid(uid: number, callback: AsyncCallback<string>): void
 
 **替代接口：** [getBundleNameByUid](arkts-ability-bundlemanager-getbundlenamebyuid-f.md)
 
+<!--Device-bundle-function getNameForUid(uid: number, callback: AsyncCallback<string>): void--><!--Device-bundle-function getNameForUid(uid: number, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 **参数：**
@@ -59,6 +61,8 @@ function getNameForUid(uid: number): Promise<string>
 **废弃版本：** 9
 
 **替代接口：** null
+
+<!--Device-bundle-function getNameForUid(uid: number): Promise<string>--><!--Device-bundle-function getNameForUid(uid: number): Promise<string>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 

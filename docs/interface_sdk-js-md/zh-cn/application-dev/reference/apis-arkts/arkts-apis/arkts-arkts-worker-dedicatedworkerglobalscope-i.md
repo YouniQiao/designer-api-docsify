@@ -14,6 +14,8 @@ Worker线程自身的运行环境，与宿主线程环境隔离。
 
 **替代接口：** [ThreadWorkerGlobalScope](arkts-arkts-worker-threadworkerglobalscope-i.md)
 
+<!--Device-unnamed-export interface DedicatedWorkerGlobalScope extends WorkerGlobalScope--><!--Device-unnamed-export interface DedicatedWorkerGlobalScope extends WorkerGlobalScope-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -35,6 +37,8 @@ close(): void
 **废弃版本：** 9
 
 **替代接口：** close
+
+<!--Device-DedicatedWorkerGlobalScope-close(): void--><!--Device-DedicatedWorkerGlobalScope-close(): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -72,6 +76,8 @@ onmessage?: (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void
 
 **替代接口：** onmessage
 
+<!--Device-DedicatedWorkerGlobalScope-onmessage?: (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void--><!--Device-DedicatedWorkerGlobalScope-onmessage?: (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -95,6 +101,8 @@ onmessageerror?: (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void
 
 **替代接口：** onmessageerror
 
+<!--Device-DedicatedWorkerGlobalScope-onmessageerror?: (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void--><!--Device-DedicatedWorkerGlobalScope-onmessageerror?: (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -117,6 +125,8 @@ Worker线程向宿主线程发送消息。
 **废弃版本：** 9
 
 **替代接口：** postMessage
+
+<!--Device-DedicatedWorkerGlobalScope-postMessage(messageObject: Object, transfer: Transferable[]): void--><!--Device-DedicatedWorkerGlobalScope-postMessage(messageObject: Object, transfer: Transferable[]): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -191,6 +201,8 @@ Worker线程向宿主线程发送消息。
 
 **替代接口：** postMessage
 
+<!--Device-DedicatedWorkerGlobalScope-postMessage(messageObject: Object, options?: PostMessageOptions): void--><!--Device-DedicatedWorkerGlobalScope-postMessage(messageObject: Object, options?: PostMessageOptions): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -238,6 +250,8 @@ Worker线程向宿主线程发送消息。
 **废弃版本：** 9
 
 **替代接口：** postMessage
+
+<!--Device-DedicatedWorkerGlobalScope-postMessage(messageObject: Object, transfer: ArrayBuffer[]): void--><!--Device-DedicatedWorkerGlobalScope-postMessage(messageObject: Object, transfer: ArrayBuffer[]): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

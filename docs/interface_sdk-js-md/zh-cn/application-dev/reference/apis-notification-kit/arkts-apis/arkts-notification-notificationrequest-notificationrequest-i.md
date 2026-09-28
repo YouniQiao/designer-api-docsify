@@ -8,6 +8,8 @@ export interface NotificationRequest
 
 **起始版本：** 7
 
+<!--Device-unnamed-export interface NotificationRequest--><!--Device-unnamed-export interface NotificationRequest-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## actionButtons
@@ -22,6 +24,8 @@ actionButtons?: Array<NotificationActionButton>
 
 **起始版本：** 7
 
+<!--Device-NotificationRequest-actionButtons?: Array<NotificationActionButton>--><!--Device-NotificationRequest-actionButtons?: Array<NotificationActionButton>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## appMessageId
@@ -35,6 +39,8 @@ appMessageId?: string
 **类型：** string
 
 **起始版本：** 12
+
+<!--Device-NotificationRequest-appMessageId?: string--><!--Device-NotificationRequest-appMessageId?: string-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -56,6 +62,8 @@ autoDeletedTime?: number
 
 **起始版本：** 7
 
+<!--Device-NotificationRequest-autoDeletedTime?: long--><!--Device-NotificationRequest-autoDeletedTime?: long-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## badgeIconStyle
@@ -69,6 +77,8 @@ badgeIconStyle?: number
 **类型：** number
 
 **起始版本：** 7
+
+<!--Device-NotificationRequest-badgeIconStyle?: int--><!--Device-NotificationRequest-badgeIconStyle?: int-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -90,6 +100,8 @@ badgeNumber?: number
 
 **起始版本：** 9
 
+<!--Device-NotificationRequest-badgeNumber?: long--><!--Device-NotificationRequest-badgeNumber?: long-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## color
@@ -103,6 +115,8 @@ color?: number
 **类型：** number
 
 **起始版本：** 7
+
+<!--Device-NotificationRequest-color?: long--><!--Device-NotificationRequest-color?: long-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -118,6 +132,8 @@ colorEnabled?: boolean
 
 **起始版本：** 7
 
+<!--Device-NotificationRequest-colorEnabled?: boolean--><!--Device-NotificationRequest-colorEnabled?: boolean-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## content
@@ -131,6 +147,8 @@ content: NotificationContent
 **类型：** [NotificationContent](arkts-notification-notificationcontent-notificationcontent-i.md)
 
 **起始版本：** 7
+
+<!--Device-NotificationRequest-content: NotificationContent--><!--Device-NotificationRequest-content: NotificationContent-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -146,6 +164,8 @@ readonly creatorBundleName?: string
 
 **起始版本：** 7
 
+<!--Device-NotificationRequest-readonly creatorBundleName?: string--><!--Device-NotificationRequest-readonly creatorBundleName?: string-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## creatorPid
@@ -159,6 +179,8 @@ readonly creatorPid?: number
 **类型：** number
 
 **起始版本：** 7
+
+<!--Device-NotificationRequest-readonly creatorPid?: int--><!--Device-NotificationRequest-readonly creatorPid?: int-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -174,6 +196,8 @@ readonly creatorUid?: number
 
 **起始版本：** 7
 
+<!--Device-NotificationRequest-readonly creatorUid?: int--><!--Device-NotificationRequest-readonly creatorUid?: int-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## creatorUserId
@@ -187,6 +211,8 @@ readonly creatorUserId?: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-NotificationRequest-readonly creatorUserId?: int--><!--Device-NotificationRequest-readonly creatorUserId?: int-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -206,6 +232,8 @@ deliveryTime?: number
 
 **起始版本：** 7
 
+<!--Device-NotificationRequest-deliveryTime?: long--><!--Device-NotificationRequest-deliveryTime?: long-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## distributedOption
@@ -220,6 +248,8 @@ distributedOption?: DistributedOptions
 
 **起始版本：** 8
 
+<!--Device-NotificationRequest-distributedOption?: DistributedOptions--><!--Device-NotificationRequest-distributedOption?: DistributedOptions-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## extraInfo
@@ -232,11 +262,13 @@ extraInfo?: { [key: string]: any }
 
 以下Key由系统赋值，开发者手动修改也不会生效，系统在数据传递时会自动修改为实际值。
 
-- 'ohos.notificationManager.wantUri'：用户点击通知时传递给应用的[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) 中的uri字段，使用[getActiveNotifications](arkts-notification-notification-getactivenotifications-depr-f.md#getactivenotifications)接口获取该信息。
+- 'ohos.notificationManager.wantUri'：用户点击通知时传递给应用的[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) 中的uri字段，使用[getActiveNotifications](arkts-notification-notification-getactivenotifications-depr-f.md)接口获取该信息。
 
 **类型：** { [key: string]: any }
 
 **起始版本：** 7
+
+<!--Device-NotificationRequest-extraInfo?: { [key: string]: any }--><!--Device-NotificationRequest-extraInfo?: { [key: string]: any }-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -252,6 +284,8 @@ groupName?: string
 
 **起始版本：** 8
 
+<!--Device-NotificationRequest-groupName?: string--><!--Device-NotificationRequest-groupName?: string-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## hashCode
@@ -266,6 +300,8 @@ readonly hashCode?: string
 
 **起始版本：** 7
 
+<!--Device-NotificationRequest-readonly hashCode?: string--><!--Device-NotificationRequest-readonly hashCode?: string-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## id
@@ -279,6 +315,8 @@ id?: number
 **类型：** number
 
 **起始版本：** 7
+
+<!--Device-NotificationRequest-id?: int--><!--Device-NotificationRequest-id?: int-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -297,6 +335,8 @@ isAlertOnce?: boolean
 
 **起始版本：** 7
 
+<!--Device-NotificationRequest-isAlertOnce?: boolean--><!--Device-NotificationRequest-isAlertOnce?: boolean-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## isCountDown
@@ -310,6 +350,8 @@ isCountDown?: boolean
 **类型：** boolean
 
 **起始版本：** 7
+
+<!--Device-NotificationRequest-isCountDown?: boolean--><!--Device-NotificationRequest-isCountDown?: boolean-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -325,6 +367,8 @@ isFloatingIcon?: boolean
 
 **起始版本：** 7
 
+<!--Device-NotificationRequest-isFloatingIcon?: boolean--><!--Device-NotificationRequest-isFloatingIcon?: boolean-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## isOngoing
@@ -338,6 +382,8 @@ isOngoing?: boolean
 **类型：** boolean
 
 **起始版本：** 7
+
+<!--Device-NotificationRequest-isOngoing?: boolean--><!--Device-NotificationRequest-isOngoing?: boolean-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -353,6 +399,8 @@ isStopwatch?: boolean
 
 **起始版本：** 7
 
+<!--Device-NotificationRequest-isStopwatch?: boolean--><!--Device-NotificationRequest-isStopwatch?: boolean-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## isUnremovable
@@ -366,6 +414,8 @@ isUnremovable?: boolean
 **类型：** boolean
 
 **起始版本：** 7
+
+<!--Device-NotificationRequest-isUnremovable?: boolean--><!--Device-NotificationRequest-isUnremovable?: boolean-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -385,6 +435,8 @@ label字段的功能类似于id，可以单独使用，也可与id结合共同�
 
 **起始版本：** 7
 
+<!--Device-NotificationRequest-label?: string--><!--Device-NotificationRequest-label?: string-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## largeIcon
@@ -398,6 +450,8 @@ largeIcon?: image.PixelMap
 **类型：** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **起始版本：** 7
+
+<!--Device-NotificationRequest-largeIcon?: image.PixelMap--><!--Device-NotificationRequest-largeIcon?: image.PixelMap-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -417,6 +471,8 @@ notificationFlags?: NotificationFlags
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-NotificationRequest-notificationFlags?: NotificationFlags--><!--Device-NotificationRequest-notificationFlags?: NotificationFlags-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## notificationSlotType
@@ -431,6 +487,8 @@ notificationSlotType?: notificationManager.SlotType
 
 **起始版本：** 11
 
+<!--Device-NotificationRequest-notificationSlotType?: notificationManager.SlotType--><!--Device-NotificationRequest-notificationSlotType?: notificationManager.SlotType-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## overlayIcon
@@ -444,6 +502,8 @@ overlayIcon?: image.PixelMap
 **类型：** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **起始版本：** 23
+
+<!--Device-NotificationRequest-overlayIcon?: image.PixelMap--><!--Device-NotificationRequest-overlayIcon?: image.PixelMap-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -461,6 +521,8 @@ priorityNotificationType?: notificationManager.PriorityNotificationType
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-NotificationRequest-priorityNotificationType?: notificationManager.PriorityNotificationType--><!--Device-NotificationRequest-priorityNotificationType?: notificationManager.PriorityNotificationType-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## removalWantAgent
@@ -477,6 +539,8 @@ removalWantAgent?: WantAgent
 
 **起始版本：** 9
 
+<!--Device-NotificationRequest-removalWantAgent?: WantAgent--><!--Device-NotificationRequest-removalWantAgent?: WantAgent-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## showDeliveryTime
@@ -491,6 +555,8 @@ showDeliveryTime?: boolean
 
 **起始版本：** 7
 
+<!--Device-NotificationRequest-showDeliveryTime?: boolean--><!--Device-NotificationRequest-showDeliveryTime?: boolean-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## smallIcon
@@ -504,6 +570,8 @@ smallIcon?: image.PixelMap
 **类型：** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **起始版本：** 7
+
+<!--Device-NotificationRequest-smallIcon?: image.PixelMap--><!--Device-NotificationRequest-smallIcon?: image.PixelMap-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -525,6 +593,8 @@ sound?: string
 
 **起始版本：** 12
 
+<!--Device-NotificationRequest-sound?: string--><!--Device-NotificationRequest-sound?: string-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## tapDismissed
@@ -542,6 +612,8 @@ tapDismissed?: boolean
 
 **起始版本：** 7
 
+<!--Device-NotificationRequest-tapDismissed?: boolean--><!--Device-NotificationRequest-tapDismissed?: boolean-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## template
@@ -555,6 +627,8 @@ template?: NotificationTemplate
 **类型：** [NotificationTemplate](arkts-notification-notificationtemplate-notificationtemplate-i.md)
 
 **起始版本：** 8
+
+<!--Device-NotificationRequest-template?: NotificationTemplate--><!--Device-NotificationRequest-template?: NotificationTemplate-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -573,6 +647,8 @@ updateOnly?: boolean
 
 **起始版本：** 18
 
+<!--Device-NotificationRequest-updateOnly?: boolean--><!--Device-NotificationRequest-updateOnly?: boolean-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## wantAgent
@@ -586,6 +662,8 @@ wantAgent?: WantAgent
 **类型：** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md)
 
 **起始版本：** 7
+
+<!--Device-NotificationRequest-wantAgent?: WantAgent--><!--Device-NotificationRequest-wantAgent?: WantAgent-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -604,5 +682,7 @@ slotType?: notification.SlotType
 **废弃版本：** 11
 
 **替代接口：** [notificationSlotType](#notificationslottype)
+
+<!--Device-NotificationRequest-slotType?: notification.SlotType--><!--Device-NotificationRequest-slotType?: notification.SlotType-End-->
 
 **系统能力：** SystemCapability.Notification.Notification

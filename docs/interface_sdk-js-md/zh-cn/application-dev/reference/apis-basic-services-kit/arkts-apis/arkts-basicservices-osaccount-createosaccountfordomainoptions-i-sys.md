@@ -10,6 +10,8 @@ interface CreateOsAccountForDomainOptions extends CreateOsAccountOptions
 
 **起始版本：** 12
 
+<!--Device-osAccount-interface CreateOsAccountForDomainOptions extends CreateOsAccountOptions--><!--Device-osAccount-interface CreateOsAccountForDomainOptions extends CreateOsAccountOptions-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。

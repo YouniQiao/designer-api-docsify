@@ -8,6 +8,8 @@ interface BatchResult
 
 **起始版本：** 26.0.0
 
+<!--Device-asset-interface BatchResult--><!--Device-asset-interface BatchResult-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 ## 导入模块
@@ -30,6 +32,8 @@ failedCount: number
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-BatchResult-failedCount: number--><!--Device-BatchResult-failedCount: number-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 ## failedErrorInfos
@@ -45,5 +49,7 @@ failedErrorInfos: Array<BatchErrInfo>
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-BatchResult-failedErrorInfos: Array<BatchErrInfo>--><!--Device-BatchResult-failedErrorInfos: Array<BatchErrInfo>-End-->
 
 **系统能力：** SystemCapability.Security.Asset

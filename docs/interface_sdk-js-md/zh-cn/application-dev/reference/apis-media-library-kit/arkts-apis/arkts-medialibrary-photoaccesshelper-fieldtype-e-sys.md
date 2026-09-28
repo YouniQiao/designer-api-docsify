@@ -8,6 +8,8 @@ Smartlabel类型字段名
 
 **起始版本：** 23
 
+<!--Device-photoAccessHelper-enum FieldType--><!--Device-photoAccessHelper-enum FieldType-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -23,6 +25,8 @@ NONE = 0
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FieldType-NONE = 0--><!--Device-FieldType-NONE = 0-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -40,6 +44,8 @@ ANALYSIS_PEOPLE = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FieldType-ANALYSIS_PEOPLE = 1--><!--Device-FieldType-ANALYSIS_PEOPLE = 1-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -55,6 +61,8 @@ ANALYSIS_LABEL = 2
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FieldType-ANALYSIS_LABEL = 2--><!--Device-FieldType-ANALYSIS_LABEL = 2-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -72,6 +80,8 @@ ANALYSIS_CITY = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FieldType-ANALYSIS_CITY = 3--><!--Device-FieldType-ANALYSIS_CITY = 3-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -87,6 +97,8 @@ YEAR = 4
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FieldType-YEAR = 4--><!--Device-FieldType-YEAR = 4-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -104,6 +116,8 @@ MONTH = 5
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FieldType-MONTH = 5--><!--Device-FieldType-MONTH = 5-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -119,6 +133,8 @@ DAY = 6
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FieldType-DAY = 6--><!--Device-FieldType-DAY = 6-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -136,6 +152,8 @@ HOLIDAY = 7
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FieldType-HOLIDAY = 7--><!--Device-FieldType-HOLIDAY = 7-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -151,6 +169,8 @@ MEDIA_TYPE = 8
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FieldType-MEDIA_TYPE = 8--><!--Device-FieldType-MEDIA_TYPE = 8-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

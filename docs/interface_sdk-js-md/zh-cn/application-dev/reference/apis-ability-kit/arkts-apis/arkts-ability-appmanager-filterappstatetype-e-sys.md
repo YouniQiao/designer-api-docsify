@@ -8,6 +8,8 @@ export enum FilterAppStateType
 
 **起始版本：** 21
 
+<!--Device-appManager-export enum FilterAppStateType--><!--Device-appManager-export enum FilterAppStateType-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -21,6 +23,8 @@ CREATE = 1 << 0
 应用正在初始化，对应[AppStateData](../../../reference/apis-ability-kit/js-apis-inner-application-appStateData.md#属性)中state取值为0的状态。
 
 **起始版本：** 21
+
+<!--Device-FilterAppStateType-CREATE = 1 << 0--><!--Device-FilterAppStateType-CREATE = 1 << 0-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -36,6 +40,8 @@ FOREGROUND = 1 << 1
 
 **起始版本：** 21
 
+<!--Device-FilterAppStateType-FOREGROUND = 1 << 1--><!--Device-FilterAppStateType-FOREGROUND = 1 << 1-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -50,6 +56,8 @@ BACKGROUND = 1 << 2
 
 **起始版本：** 21
 
+<!--Device-FilterAppStateType-BACKGROUND = 1 << 2--><!--Device-FilterAppStateType-BACKGROUND = 1 << 2-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -63,6 +71,8 @@ DESTROY = 1 << 3
 应用已退出，对应[AppStateData](../../../reference/apis-ability-kit/js-apis-inner-application-appStateData.md#属性)中state取值为5的状态。
 
 **起始版本：** 21
+
+<!--Device-FilterAppStateType-DESTROY = 1 << 3--><!--Device-FilterAppStateType-DESTROY = 1 << 3-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

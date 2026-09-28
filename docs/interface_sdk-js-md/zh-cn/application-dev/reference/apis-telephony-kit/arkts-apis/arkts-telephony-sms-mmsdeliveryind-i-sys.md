@@ -8,6 +8,8 @@ export interface MmsDeliveryInd
 
 **起始版本：** 8
 
+<!--Device-sms-export interface MmsDeliveryInd--><!--Device-sms-export interface MmsDeliveryInd-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ date: number
 
 **起始版本：** 8
 
+<!--Device-MmsDeliveryInd-date: long--><!--Device-MmsDeliveryInd-date: long-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ messageId: string
 **类型：** string
 
 **起始版本：** 8
+
+<!--Device-MmsDeliveryInd-messageId: string--><!--Device-MmsDeliveryInd-messageId: string-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -62,6 +68,8 @@ status: number
 
 **起始版本：** 8
 
+<!--Device-MmsDeliveryInd-status: int--><!--Device-MmsDeliveryInd-status: int-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -78,6 +86,8 @@ to: Array<MmsAddress>
 
 **起始版本：** 8
 
+<!--Device-MmsDeliveryInd-to: Array<MmsAddress>--><!--Device-MmsDeliveryInd-to: Array<MmsAddress>-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -93,6 +103,8 @@ version: MmsVersionType
 **类型：** [MmsVersionType](arkts-telephony-sms-mmsversiontype-e-sys.md)
 
 **起始版本：** 8
+
+<!--Device-MmsDeliveryInd-version: MmsVersionType--><!--Device-MmsDeliveryInd-version: MmsVersionType-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 

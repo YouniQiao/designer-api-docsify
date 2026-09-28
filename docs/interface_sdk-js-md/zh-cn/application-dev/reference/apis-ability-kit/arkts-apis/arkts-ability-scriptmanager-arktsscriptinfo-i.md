@@ -8,6 +8,8 @@ interface ArkTSScriptInfo
 
 **起始版本：** 26.0.0
 
+<!--Device-scriptManager-interface ArkTSScriptInfo--><!--Device-scriptManager-interface ArkTSScriptInfo-End-->
+
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 ## 导入模块
@@ -30,7 +32,9 @@ readonly context: Context
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-ArkTSScriptInfo-readonly context: Context--><!--Device-ArkTSScriptInfo-readonly context: Context-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -48,6 +52,8 @@ readonly requestCode: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-ArkTSScriptInfo-readonly requestCode: string--><!--Device-ArkTSScriptInfo-readonly requestCode: string-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core

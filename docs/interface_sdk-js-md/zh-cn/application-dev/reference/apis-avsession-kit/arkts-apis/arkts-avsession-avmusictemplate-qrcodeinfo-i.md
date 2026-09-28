@@ -10,6 +10,8 @@ interface QrCodeInfo
 
 **起始版本：** 23
 
+<!--Device-avMusicTemplate-interface QrCodeInfo--><!--Device-avMusicTemplate-interface QrCodeInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## 导入模块
@@ -32,6 +34,8 @@ codeData?: image.PixelMap
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-QrCodeInfo-codeData?: image.PixelMap--><!--Device-QrCodeInfo-codeData?: image.PixelMap-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## content
@@ -47,6 +51,8 @@ content: string
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-QrCodeInfo-content: string--><!--Device-QrCodeInfo-content: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -64,6 +70,8 @@ detailName: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-QrCodeInfo-detailName: string--><!--Device-QrCodeInfo-detailName: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## icon
@@ -79,6 +87,8 @@ icon?: image.PixelMap
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-QrCodeInfo-icon?: image.PixelMap--><!--Device-QrCodeInfo-icon?: image.PixelMap-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -98,6 +108,8 @@ id: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-QrCodeInfo-id: string--><!--Device-QrCodeInfo-id: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## price
@@ -113,6 +125,8 @@ price: string
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-QrCodeInfo-price: string--><!--Device-QrCodeInfo-price: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -130,6 +144,8 @@ tips: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-QrCodeInfo-tips: string--><!--Device-QrCodeInfo-tips: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## titleName
@@ -145,6 +161,8 @@ titleName: string
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-QrCodeInfo-titleName: string--><!--Device-QrCodeInfo-titleName: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -163,5 +181,7 @@ validPeriod: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-QrCodeInfo-validPeriod: int--><!--Device-QrCodeInfo-validPeriod: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate

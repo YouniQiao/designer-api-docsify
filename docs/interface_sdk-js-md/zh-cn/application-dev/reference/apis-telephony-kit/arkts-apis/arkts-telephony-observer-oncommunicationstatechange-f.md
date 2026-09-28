@@ -20,6 +20,8 @@ function onCommunicationStateChange(callback: Callback<boolean>, options?: Obser
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-observer-function onCommunicationStateChange(callback: Callback<boolean>, options?: ObserverOptions): void--><!--Device-observer-function onCommunicationStateChange(callback: Callback<boolean>, options?: ObserverOptions): void-End-->
+
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
 **参数：**

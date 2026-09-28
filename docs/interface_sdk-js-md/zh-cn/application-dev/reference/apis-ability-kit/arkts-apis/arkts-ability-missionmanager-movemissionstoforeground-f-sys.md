@@ -18,6 +18,8 @@ function moveMissionsToForeground(missionIds: Array<number>, callback: AsyncCall
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
+<!--Device-missionManager-function moveMissionsToForeground(missionIds: Array<int>, callback: AsyncCallback<void>): void--><!--Device-missionManager-function moveMissionsToForeground(missionIds: Array<int>, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -90,6 +92,8 @@ function moveMissionsToForeground(missionIds: Array<number>, topMission: number,
 **起始版本：** 10
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
+
+<!--Device-missionManager-function moveMissionsToForeground(missionIds: Array<int>, topMission: int, callback: AsyncCallback<void>): void--><!--Device-missionManager-function moveMissionsToForeground(missionIds: Array<int>, topMission: int, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -164,6 +168,8 @@ function moveMissionsToForeground(missionIds: Array<number>, topMission?: number
 **起始版本：** 10
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
+
+<!--Device-missionManager-function moveMissionsToForeground(missionIds: Array<int>, topMission?: int): Promise<void>--><!--Device-missionManager-function moveMissionsToForeground(missionIds: Array<int>, topMission?: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 

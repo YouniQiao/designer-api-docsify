@@ -12,6 +12,8 @@ export interface BundleInstaller
 
 **替代接口：** [BundleInstaller](arkts-ability-installer-bundleinstaller-i-sys.md)
 
+<!--Device-unnamed-export interface BundleInstaller--><!--Device-unnamed-export interface BundleInstaller-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 **系统接口：** 此接口为系统接口。
@@ -31,6 +33,8 @@ install(bundleFilePaths: Array<string>, param: InstallParam, callback: AsyncCall
 **替代接口：** [install](arkts-ability-installer-bundleinstaller-i-sys.md#install)
 
 **需要权限：** ohos.permission.INSTALL_BUNDLE
+
+<!--Device-BundleInstaller-install(bundleFilePaths: Array<string>, param: InstallParam, callback: AsyncCallback<InstallStatus>): void--><!--Device-BundleInstaller-install(bundleFilePaths: Array<string>, param: InstallParam, callback: AsyncCallback<InstallStatus>): void-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -87,6 +91,8 @@ recover(bundleName: string, param: InstallParam, callback: AsyncCallback<Install
 
 **需要权限：** ohos.permission.INSTALL_BUNDLE
 
+<!--Device-BundleInstaller-recover(bundleName: string, param: InstallParam, callback: AsyncCallback<InstallStatus>): void--><!--Device-BundleInstaller-recover(bundleName: string, param: InstallParam, callback: AsyncCallback<InstallStatus>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 **系统接口：** 此接口为系统接口。
@@ -141,6 +147,8 @@ uninstall(bundleName: string, param: InstallParam, callback: AsyncCallback<Insta
 **替代接口：** [uninstall](arkts-ability-installer-bundleinstaller-i-sys.md#uninstall)
 
 **需要权限：** ohos.permission.INSTALL_BUNDLE
+
+<!--Device-BundleInstaller-uninstall(bundleName: string, param: InstallParam, callback: AsyncCallback<InstallStatus>): void--><!--Device-BundleInstaller-uninstall(bundleName: string, param: InstallParam, callback: AsyncCallback<InstallStatus>): void-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 

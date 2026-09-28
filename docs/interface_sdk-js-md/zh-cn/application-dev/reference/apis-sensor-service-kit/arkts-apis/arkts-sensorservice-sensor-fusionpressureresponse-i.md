@@ -10,6 +10,8 @@ interface FusionPressureResponse extends Response
 
 **起始版本：** 22
 
+<!--Device-sensor-interface FusionPressureResponse extends Response--><!--Device-sensor-interface FusionPressureResponse extends Response-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## 导入模块
@@ -29,5 +31,7 @@ fusionPressure: number
 **类型：** number
 
 **起始版本：** 22
+
+<!--Device-FusionPressureResponse-fusionPressure: double--><!--Device-FusionPressureResponse-fusionPressure: double-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor

@@ -14,6 +14,8 @@ controller: TextController = new TextController()
 
 **Since:** 11
 
+<!--Device-unnamed-declare class TextController--><!--Device-unnamed-declare class TextController-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## closeSelectionMenu
@@ -30,6 +32,8 @@ Closes the custom or default text selection menu.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TextController-closeSelectionMenu(): void--><!--Device-TextController-closeSelectionMenu(): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## getLayoutManager
@@ -45,6 +49,8 @@ Obtains the **LayoutManager** object.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextController-getLayoutManager(): LayoutManager--><!--Device-TextController-getLayoutManager(): LayoutManager-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -67,6 +73,8 @@ Binds to or updates the specified styled string.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextController-setStyledString(value: StyledString): void--><!--Device-TextController-setStyledString(value: StyledString): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -112,6 +120,8 @@ Sets the text selection area, which will be highlighted.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-TextController-setTextSelection(selectionStart: number | undefined, selectionEnd: number | undefined,                   options?: SelectionOptions): void--><!--Device-TextController-setTextSelection(selectionStart: number | undefined, selectionEnd: number | undefined,                   options?: SelectionOptions): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

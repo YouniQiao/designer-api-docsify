@@ -8,6 +8,8 @@ formObserver模块提供了卡片监听方相关接口的能力，包括对同�
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare namespace formObserver--><!--Device-unnamed-declare namespace formObserver-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。

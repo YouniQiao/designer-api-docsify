@@ -8,6 +8,8 @@ export enum Scenarios
 
 **起始版本：** 20
 
+<!--Device-contextConstant-export enum Scenarios--><!--Device-contextConstant-export enum Scenarios-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## SCENARIO_MOVE_MISSION_TO_FRONT
@@ -22,7 +24,9 @@ SCENARIO_MOVE_MISSION_TO_FRONT = 0x00000001
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-Scenarios-SCENARIO_MOVE_MISSION_TO_FRONT = 0x00000001--><!--Device-Scenarios-SCENARIO_MOVE_MISSION_TO_FRONT = 0x00000001-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -38,7 +42,9 @@ SCENARIO_SHOW_ABILITY = 0x00000002
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-Scenarios-SCENARIO_SHOW_ABILITY = 0x00000002--><!--Device-Scenarios-SCENARIO_SHOW_ABILITY = 0x00000002-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -54,6 +60,8 @@ SCENARIO_BACK_TO_CALLER_ABILITY_WITH_RESULT = 0x00000004
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-Scenarios-SCENARIO_BACK_TO_CALLER_ABILITY_WITH_RESULT = 0x00000004--><!--Device-Scenarios-SCENARIO_BACK_TO_CALLER_ABILITY_WITH_RESULT = 0x00000004-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

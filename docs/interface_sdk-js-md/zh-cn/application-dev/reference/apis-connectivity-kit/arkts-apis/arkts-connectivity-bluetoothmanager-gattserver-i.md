@@ -14,6 +14,8 @@ server端类，使用server端方法之前需要创建该类的实例进行操�
 
 **替代接口：** [GattServer](arkts-connectivity-ble-gattserver-i.md)
 
+<!--Device-bluetoothManager-interface GattServer--><!--Device-bluetoothManager-interface GattServer-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -41,6 +43,8 @@ server端添加服务。
 **需要权限：** 
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH
 - API版本9：ohos.permission.USE_BLUETOOTH
+
+<!--Device-GattServer-addService(service: GattService): void--><!--Device-GattServer-addService(service: GattService): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -117,6 +121,8 @@ close(): void
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH
 - API版本9：ohos.permission.USE_BLUETOOTH
 
+<!--Device-GattServer-close(): void--><!--Device-GattServer-close(): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **错误码：**
@@ -160,6 +166,8 @@ server端特征值发生变化时，主动通知已连接的client设备。
 **需要权限：** 
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH
 - API版本9：ohos.permission.USE_BLUETOOTH
+
+<!--Device-GattServer-notifyCharacteristicChanged(deviceId: string, notifyCharacteristic: NotifyCharacteristic): void--><!--Device-GattServer-notifyCharacteristicChanged(deviceId: string, notifyCharacteristic: NotifyCharacteristic): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -227,6 +235,8 @@ server端取消订阅特征值读请求事件。
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH
 - API版本9：ohos.permission.USE_BLUETOOTH
 
+<!--Device-GattServer-off(type: 'characteristicRead', callback?: Callback<CharacteristicReadRequest>): void--><!--Device-GattServer-off(type: 'characteristicRead', callback?: Callback<CharacteristicReadRequest>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -275,6 +285,8 @@ server端取消订阅特征值写请求事件。
 **需要权限：** 
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH
 - API版本9：ohos.permission.USE_BLUETOOTH
+
+<!--Device-GattServer-off(type: 'characteristicWrite', callback?: Callback<CharacteristicWriteRequest>): void--><!--Device-GattServer-off(type: 'characteristicWrite', callback?: Callback<CharacteristicWriteRequest>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -325,6 +337,8 @@ server端取消订阅描述符读请求事件。
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH
 - API版本9：ohos.permission.USE_BLUETOOTH
 
+<!--Device-GattServer-off(type: 'descriptorRead', callback?: Callback<DescriptorReadRequest>): void--><!--Device-GattServer-off(type: 'descriptorRead', callback?: Callback<DescriptorReadRequest>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -373,6 +387,8 @@ server端取消订阅描述符写请求事件。
 **需要权限：** 
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH
 - API版本9：ohos.permission.USE_BLUETOOTH
+
+<!--Device-GattServer-off(type: 'descriptorWrite', callback?: Callback<DescriptorWriteRequest>): void--><!--Device-GattServer-off(type: 'descriptorWrite', callback?: Callback<DescriptorWriteRequest>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -423,6 +439,8 @@ server端取消订阅BLE连接状态变化事件。
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH
 - API版本9：ohos.permission.USE_BLUETOOTH
 
+<!--Device-GattServer-off(type: 'connectStateChange', callback?: Callback<BLEConnectChangedState>): void--><!--Device-GattServer-off(type: 'connectStateChange', callback?: Callback<BLEConnectChangedState>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -471,6 +489,8 @@ server端订阅特征值读请求事件。
 **需要权限：** 
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH
 - API版本9：ohos.permission.USE_BLUETOOTH
+
+<!--Device-GattServer-on(type: 'characteristicRead', callback: Callback<CharacteristicReadRequest>): void--><!--Device-GattServer-on(type: 'characteristicRead', callback: Callback<CharacteristicReadRequest>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -534,6 +554,8 @@ server端订阅特征值写请求事件。
 **需要权限：** 
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH
 - API版本9：ohos.permission.USE_BLUETOOTH
+
+<!--Device-GattServer-on(type: 'characteristicWrite', callback: Callback<CharacteristicWriteRequest>): void--><!--Device-GattServer-on(type: 'characteristicWrite', callback: Callback<CharacteristicWriteRequest>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -601,6 +623,8 @@ server端订阅描述符读请求事件。
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH
 - API版本9：ohos.permission.USE_BLUETOOTH
 
+<!--Device-GattServer-on(type: 'descriptorRead', callback: Callback<DescriptorReadRequest>): void--><!--Device-GattServer-on(type: 'descriptorRead', callback: Callback<DescriptorReadRequest>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -663,6 +687,8 @@ server端订阅描述符写请求事件。
 **需要权限：** 
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH
 - API版本9：ohos.permission.USE_BLUETOOTH
+
+<!--Device-GattServer-on(type: 'descriptorWrite', callback: Callback<DescriptorWriteRequest>): void--><!--Device-GattServer-on(type: 'descriptorWrite', callback: Callback<DescriptorWriteRequest>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -730,6 +756,8 @@ server端订阅BLE连接状态变化事件。
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH
 - API版本9：ohos.permission.USE_BLUETOOTH
 
+<!--Device-GattServer-on(type: 'connectStateChange', callback: Callback<BLEConnectChangedState>): void--><!--Device-GattServer-on(type: 'connectStateChange', callback: Callback<BLEConnectChangedState>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -783,6 +811,8 @@ removeService(serviceUuid: string): void
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH
 - API版本9：ohos.permission.USE_BLUETOOTH
 
+<!--Device-GattServer-removeService(serviceUuid: string): void--><!--Device-GattServer-removeService(serviceUuid: string): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -834,6 +864,8 @@ server端回复client端的读写请求。
 **需要权限：** 
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH
 - API版本9：ohos.permission.USE_BLUETOOTH
+
+<!--Device-GattServer-sendResponse(serverResponse: ServerResponse): void--><!--Device-GattServer-sendResponse(serverResponse: ServerResponse): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -897,6 +929,8 @@ startAdvertising(setting: AdvertiseSetting, advData: AdvertiseData, advResponse?
 **需要权限：** 
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH
 - API版本9：ohos.permission.DISCOVER_BLUETOOTH
+
+<!--Device-GattServer-startAdvertising(setting: AdvertiseSetting, advData: AdvertiseData, advResponse?: AdvertiseData): void--><!--Device-GattServer-startAdvertising(setting: AdvertiseSetting, advData: AdvertiseData, advResponse?: AdvertiseData): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -986,6 +1020,8 @@ stopAdvertising(): void
 **需要权限：** 
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH
 - API版本9：ohos.permission.DISCOVER_BLUETOOTH
+
+<!--Device-GattServer-stopAdvertising(): void--><!--Device-GattServer-stopAdvertising(): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

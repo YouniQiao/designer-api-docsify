@@ -20,6 +20,8 @@ function getErrorString(errno: number): string
 
 **替代接口：** [errnoToString](arkts-arkts-util-errnotostring-f.md)
 
+<!--Device-util-function getErrorString(errno: number): string--><!--Device-util-function getErrorString(errno: number): string-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**

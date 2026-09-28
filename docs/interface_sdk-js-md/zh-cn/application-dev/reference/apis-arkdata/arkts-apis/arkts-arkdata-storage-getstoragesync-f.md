@@ -19,6 +19,8 @@ function getStorageSync(path: string): Storage
 
 **替代接口：** getPreferences
 
+<!--Device-storage-function getStorageSync(path: string): Storage--><!--Device-storage-function getStorageSync(path: string): Storage-End-->
+
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |

@@ -18,6 +18,8 @@ function getPowerSaveTrustlist(callback: AsyncCallback<Array<number>>): void
 
 **需要权限：** ohos.permission.MANAGE_NET_STRATEGY
 
+<!--Device-policy-function getPowerSaveTrustlist(callback: AsyncCallback<Array<int>>): void--><!--Device-policy-function getPowerSaveTrustlist(callback: AsyncCallback<Array<int>>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -64,6 +66,8 @@ function getPowerSaveTrustlist(): Promise<Array<number>>
 **起始版本：** 10
 
 **需要权限：** ohos.permission.MANAGE_NET_STRATEGY
+
+<!--Device-policy-function getPowerSaveTrustlist(): Promise<Array<int>>--><!--Device-policy-function getPowerSaveTrustlist(): Promise<Array<int>>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 

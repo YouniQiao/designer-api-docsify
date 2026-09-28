@@ -12,13 +12,15 @@ import { inputEventClient } from '@kit.InputKit';
 function injectEvent({ KeyEvent: KeyEvent }): void
 ```
 
-按键(包括单个按键和组合键)注入。自API版本26.0.1起，调用者可指定按键事件注入的displayId。若指定的displayId不存在，则操作不生效。
+按键(包括单个按键和组合键)注入。从API版本26.0.1开始，调用者可指定按键事件注入的displayId。若指定的displayId不存在，则操作不生效。
 
 **起始版本：** 8
 
 **需要权限：** 
 - API版本12+：ohos.permission.INJECT_INPUT_EVENT
 - API版本8-11：N/A
+
+<!--Device-inputEventClient-function injectEvent({ KeyEvent: KeyEvent }): void--><!--Device-inputEventClient-function injectEvent({ KeyEvent: KeyEvent }): void-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
@@ -28,7 +30,7 @@ function injectEvent({ KeyEvent: KeyEvent }): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| KeyEvent | [KeyEvent](arkts-input-multimodalinput-keyevent-keyevent-i.md) | 是 |  |
+| KeyEvent | [KeyEvent](arkts-input-multimodalinput-keyevent-keyevent-i.md) | 是 | 按键注入描述信息。 |
 
 **错误码：**
 

@@ -8,6 +8,8 @@ Describes the scene feature detection result.
 
 **起始版本：** 12
 
+<!--Device-camera-interface SceneFeatureDetectionResult--><!--Device-camera-interface SceneFeatureDetectionResult-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ Whether the specified scene feature is detected. **true** if detected, **false**
 
 **起始版本：** 12
 
+<!--Device-SceneFeatureDetectionResult-readonly detected: boolean--><!--Device-SceneFeatureDetectionResult-readonly detected: boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ Scene feature type.
 **类型：** [SceneFeatureType](arkts-camera-camera-scenefeaturetype-e-sys.md)
 
 **起始版本：** 12
+
+<!--Device-SceneFeatureDetectionResult-readonly featureType: SceneFeatureType--><!--Device-SceneFeatureDetectionResult-readonly featureType: SceneFeatureType-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

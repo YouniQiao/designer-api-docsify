@@ -17,6 +17,8 @@ function setKeyDownDuration(businessKey: string, delay: number, callback: AsyncC
 
 **起始版本：** 10
 
+<!--Device-shortKey-function setKeyDownDuration(businessKey: string, delay: int, callback: AsyncCallback<void>): void--><!--Device-shortKey-function setKeyDownDuration(businessKey: string, delay: int, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.ShortKey
 
 **系统接口：** 此接口为系统接口。
@@ -79,6 +81,8 @@ function setKeyDownDuration(businessKey: string, delay: number): Promise<void>
 设置快捷键拉起Ability的延迟时间，使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-shortKey-function setKeyDownDuration(businessKey: string, delay: int): Promise<void>--><!--Device-shortKey-function setKeyDownDuration(businessKey: string, delay: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.ShortKey
 

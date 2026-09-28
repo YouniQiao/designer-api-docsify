@@ -8,6 +8,8 @@ interface NetFirewallIpParams
 
 **起始版本：** 15
 
+<!--Device-netFirewall-interface NetFirewallIpParams--><!--Device-netFirewall-interface NetFirewallIpParams-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 ## 导入模块
@@ -28,6 +30,8 @@ IP地址。当type等于1时需要设置，并且仅在type等于1时有效，�
 
 **起始版本：** 15
 
+<!--Device-NetFirewallIpParams-address?: string--><!--Device-NetFirewallIpParams-address?: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 ## endIp
@@ -41,6 +45,8 @@ endIp?: string
 **类型：** string
 
 **起始版本：** 15
+
+<!--Device-NetFirewallIpParams-endIp?: string--><!--Device-NetFirewallIpParams-endIp?: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -60,6 +66,8 @@ family?: number
 
 **起始版本：** 15
 
+<!--Device-NetFirewallIpParams-family?: int--><!--Device-NetFirewallIpParams-family?: int-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 ## mask
@@ -78,6 +86,8 @@ IPv6：前缀。
 
 **起始版本：** 15
 
+<!--Device-NetFirewallIpParams-mask?: int--><!--Device-NetFirewallIpParams-mask?: int-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 ## startIp
@@ -91,6 +101,8 @@ startIp?: string
 **类型：** string
 
 **起始版本：** 15
+
+<!--Device-NetFirewallIpParams-startIp?: string--><!--Device-NetFirewallIpParams-startIp?: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -107,5 +119,7 @@ type: number
 **类型：** number
 
 **起始版本：** 15
+
+<!--Device-NetFirewallIpParams-type: int--><!--Device-NetFirewallIpParams-type: int-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall

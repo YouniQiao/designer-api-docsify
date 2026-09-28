@@ -18,6 +18,8 @@ function deactivateUserKey(userId: number):void
 
 **需要权限：** ohos.permission.STORAGE_MANAGER_CRYPT
 
+<!--Device-keyManager-function deactivateUserKey(userId: long):void--><!--Device-keyManager-function deactivateUserKey(userId: long):void-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Encryption
 
 **系统接口：** 此接口为系统接口。

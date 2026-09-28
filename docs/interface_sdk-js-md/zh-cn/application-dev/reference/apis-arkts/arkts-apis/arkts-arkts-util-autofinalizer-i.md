@@ -12,6 +12,8 @@ interface AutoFinalizer<T>
 
 **起始版本：** 22
 
+<!--Device-util-interface AutoFinalizer<T>--><!--Device-util-interface AutoFinalizer<T>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -31,6 +33,8 @@ onFinalization(heldValue: T): void
 **起始版本：** 22
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-AutoFinalizer-onFinalization(heldValue: T): void--><!--Device-AutoFinalizer-onFinalization(heldValue: T): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

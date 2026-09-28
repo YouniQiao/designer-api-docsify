@@ -8,6 +8,8 @@ export interface HuksParam
 
 **起始版本：** 8
 
+<!--Device-huks-export interface HuksParam--><!--Device-huks-export interface HuksParam-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Core
 
 ## 导入模块
@@ -32,6 +34,8 @@ tag: HuksTag
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-HuksParam-tag: HuksTag--><!--Device-HuksParam-tag: HuksTag-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Core
 
 ## value
@@ -49,5 +53,7 @@ value: boolean | number | bigint | Uint8Array
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-HuksParam-value: boolean | number | bigint | Uint8Array--><!--Device-HuksParam-value: boolean | number | bigint | Uint8Array-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Core

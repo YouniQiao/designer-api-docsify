@@ -26,6 +26,8 @@ When this API is used with components that come with the caching mechanism, such
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-CheckboxGroupInterface-(options?: CheckboxGroupOptions): CheckboxGroupAttribute--><!--Device-CheckboxGroupInterface-(options?: CheckboxGroupOptions): CheckboxGroupAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

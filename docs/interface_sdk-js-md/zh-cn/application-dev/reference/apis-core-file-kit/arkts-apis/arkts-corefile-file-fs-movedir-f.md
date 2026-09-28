@@ -20,6 +20,8 @@ declare function moveDir(src: string, dest: string, mode?: number): Promise<void
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare function moveDir(src: string, dest: string, mode?: number): Promise<void>--><!--Device-unnamed-declare function moveDir(src: string, dest: string, mode?: number): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -79,6 +81,8 @@ declare function moveDir(src: string, dest: string, callback: AsyncCallback<void
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare function moveDir(src: string, dest: string, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function moveDir(src: string, dest: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -131,6 +135,8 @@ declare function moveDir(src: string, dest: string, callback: AsyncCallback<void
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare function moveDir(src: string, dest: string, callback: AsyncCallback<void, Array<ConflictFiles>>): void--><!--Device-unnamed-declare function moveDir(src: string, dest: string, callback: AsyncCallback<void, Array<ConflictFiles>>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -159,6 +165,8 @@ declare function moveDir(src: string, dest: string, mode: number, callback: Asyn
 移动源目录及其内容至目标路径下，支持设置冲突处理模式。使用callback异步回调。
 
 **起始版本：** 10
+
+<!--Device-unnamed-declare function moveDir(src: string, dest: string, mode: number, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function moveDir(src: string, dest: string, mode: number, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -210,6 +218,8 @@ declare function moveDir(src: string, dest: string, mode: number, callback: Asyn
 > 该接口不支持在分布式文件路径下操作。
 
 **起始版本：** 10
+
+<!--Device-unnamed-declare function moveDir(src: string, dest: string, mode: number, callback: AsyncCallback<void, Array<ConflictFiles>>): void--><!--Device-unnamed-declare function moveDir(src: string, dest: string, mode: number, callback: AsyncCallback<void, Array<ConflictFiles>>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

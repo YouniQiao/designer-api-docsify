@@ -8,6 +8,8 @@ interface PublishFormResult
 
 **起始版本：** 12
 
+<!--Device-formInfo-interface PublishFormResult--><!--Device-formInfo-interface PublishFormResult-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ code: PublishFormErrorCode
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PublishFormResult-code: PublishFormErrorCode--><!--Device-PublishFormResult-code: PublishFormErrorCode-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ message: string
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PublishFormResult-message: string--><!--Device-PublishFormResult-message: string-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 

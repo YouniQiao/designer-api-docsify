@@ -8,6 +8,8 @@
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare namespace vpn--><!--Device-unnamed-declare namespace vpn-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 ## 导入模块

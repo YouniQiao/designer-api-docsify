@@ -20,6 +20,8 @@ function notifyWatermarkComplete(jobId: string, result: WatermarkHandleResult): 
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-print-function notifyWatermarkComplete(jobId: string, result: WatermarkHandleResult): void--><!--Device-print-function notifyWatermarkComplete(jobId: string, result: WatermarkHandleResult): void-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **参数：**

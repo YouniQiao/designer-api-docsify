@@ -10,6 +10,8 @@ export interface InstallationResult
 
 **起始版本：** 22
 
+<!--Device-common-export interface InstallationResult--><!--Device-common-export interface InstallationResult-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## 导入模块
@@ -32,6 +34,8 @@ message: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-InstallationResult-message: string--><!--Device-InstallationResult-message: string-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## result
@@ -47,5 +51,7 @@ result: Result
 **起始版本：** 22
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-InstallationResult-result: Result--><!--Device-InstallationResult-result: Result-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager

@@ -18,6 +18,8 @@ function off(type: 'connect', callback?: Callback<VpnConnectState>): void
 
 **需要权限：** ohos.permission.MANAGE_VPN
 
+<!--Device-vpn-function off(type: 'connect', callback?: Callback<VpnConnectState>): void--><!--Device-vpn-function off(type: 'connect', callback?: Callback<VpnConnectState>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -52,6 +54,8 @@ function off(type: 'connectMulti', callback?: Callback<MultiVpnConnectState>): v
 **起始版本：** 20
 
 **需要权限：** ohos.permission.MANAGE_VPN
+
+<!--Device-vpn-function off(type: 'connectMulti', callback?: Callback<MultiVpnConnectState>): void--><!--Device-vpn-function off(type: 'connectMulti', callback?: Callback<MultiVpnConnectState>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 

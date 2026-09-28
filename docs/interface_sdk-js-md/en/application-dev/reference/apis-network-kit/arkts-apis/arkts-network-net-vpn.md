@@ -4,6 +4,8 @@ This module is the built-in VPN function provided by the OS. It allows users to 
 
 **Since:** 10
 
+<!--Device-unnamed-declare namespace vpn--><!--Device-unnamed-declare namespace vpn-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 ## Modules to Import

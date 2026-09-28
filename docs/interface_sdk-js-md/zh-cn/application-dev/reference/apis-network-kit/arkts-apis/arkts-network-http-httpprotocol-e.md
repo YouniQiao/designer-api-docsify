@@ -8,6 +8,8 @@ HTTP协议版本。
 
 **起始版本：** 9
 
+<!--Device-http-export enum HttpProtocol--><!--Device-http-export enum HttpProtocol-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## HTTP1_1
@@ -20,7 +22,9 @@ HTTP1_1 = 0
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-HttpProtocol-HTTP1_1 = 0--><!--Device-HttpProtocol-HTTP1_1 = 0-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -34,7 +38,9 @@ HTTP2 = 1
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-HttpProtocol-HTTP2 = 1--><!--Device-HttpProtocol-HTTP2 = 1-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -49,5 +55,7 @@ HTTP3 = 2
 **注意：** 仅对HTTPS的URL生效，HTTP则会请求失败。
 
 **起始版本：** 11
+
+<!--Device-HttpProtocol-HTTP3 = 2--><!--Device-HttpProtocol-HTTP3 = 2-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack

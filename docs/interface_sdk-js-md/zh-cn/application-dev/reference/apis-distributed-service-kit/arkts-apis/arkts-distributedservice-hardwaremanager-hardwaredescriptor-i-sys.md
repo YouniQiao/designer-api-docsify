@@ -10,6 +10,8 @@ interface HardwareDescriptor
 
 **起始版本：** 11
 
+<!--Device-hardwareManager-interface HardwareDescriptor--><!--Device-hardwareManager-interface HardwareDescriptor-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DistributedHardwareFWK
 
 **系统接口：** 此接口为系统接口。
@@ -34,6 +36,8 @@ srcNetworkId?: string
 
 **需要权限：** ohos.permission.ACCESS_DISTRIBUTED_HARDWARE
 
+<!--Device-HardwareDescriptor-srcNetworkId?: string--><!--Device-HardwareDescriptor-srcNetworkId?: string-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DistributedHardwareFWK
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +55,8 @@ type: DistributedHardwareType
 **起始版本：** 11
 
 **需要权限：** ohos.permission.ACCESS_DISTRIBUTED_HARDWARE
+
+<!--Device-HardwareDescriptor-type: DistributedHardwareType--><!--Device-HardwareDescriptor-type: DistributedHardwareType-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DistributedHardwareFWK
 

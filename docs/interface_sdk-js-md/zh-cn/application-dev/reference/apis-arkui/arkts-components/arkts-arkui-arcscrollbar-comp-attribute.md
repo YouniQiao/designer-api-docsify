@@ -10,6 +10,8 @@ export declare class ArcScrollBarAttribute extends CommonMethod<ArcScrollBarAttr
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-unnamed-export declare class ArcScrollBarAttribute extends CommonMethod<ArcScrollBarAttribute>--><!--Device-unnamed-export declare class ArcScrollBarAttribute extends CommonMethod<ArcScrollBarAttribute>-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
 ## 导入模块

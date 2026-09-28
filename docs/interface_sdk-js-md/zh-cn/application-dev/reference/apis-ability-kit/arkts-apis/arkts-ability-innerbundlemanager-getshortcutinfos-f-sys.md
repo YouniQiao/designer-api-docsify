@@ -28,6 +28,8 @@ function getShortcutInfos(bundleName: string, callback: AsyncCallback<Array<Shor
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-innerBundleManager-function getShortcutInfos(bundleName: string, callback: AsyncCallback<Array<ShortcutInfo>>): void--><!--Device-innerBundleManager-function getShortcutInfos(bundleName: string, callback: AsyncCallback<Array<ShortcutInfo>>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 **系统接口：** 此接口为系统接口。
@@ -63,6 +65,8 @@ function getShortcutInfos(bundleName: string): Promise<Array<ShortcutInfo>>
 **替代接口：** [getShortcutInfo](arkts-ability-launcherbundlemanager-getshortcutinfo-f-sys.md)(bundleName :string, callback: AsyncCallback&lt;Array&lt;ShortcutInfo&gt;&gt;)
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-innerBundleManager-function getShortcutInfos(bundleName: string): Promise<Array<ShortcutInfo>>--><!--Device-innerBundleManager-function getShortcutInfos(bundleName: string): Promise<Array<ShortcutInfo>>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 

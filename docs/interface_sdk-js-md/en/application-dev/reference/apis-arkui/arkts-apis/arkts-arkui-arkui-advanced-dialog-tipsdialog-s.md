@@ -10,6 +10,8 @@ Declare CustomDialog TipsDialog
 
 **Decorator:** @CustomDialog
 
+<!--Device-unnamed-export declare struct TipsDialog--><!--Device-unnamed-export declare struct TipsDialog-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -31,6 +33,8 @@ Sets the TipsDialog CheckBox Callback.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-TipsDialog-checkAction?: (isChecked: boolean) => void--><!--Device-TipsDialog-checkAction?: (isChecked: boolean) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -56,6 +60,8 @@ Sets the TipsDialog checkbox tips.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TipsDialog-checkTips?: ResourceStr--><!--Device-TipsDialog-checkTips?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## content
@@ -73,6 +79,8 @@ Sets the TipsDialog content.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-TipsDialog-content?: ResourceStr--><!--Device-TipsDialog-content?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -92,6 +100,8 @@ Sets the TipsDialog Controller.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TipsDialog-controller: CustomDialogController--><!--Device-TipsDialog-controller: CustomDialogController-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## imageRes
@@ -109,6 +119,8 @@ Sets the TipsDialog imageRes.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-TipsDialog-imageRes: ResourceStr | PixelMap--><!--Device-TipsDialog-imageRes: ResourceStr | PixelMap-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -128,6 +140,8 @@ Sets the TipsDialog image size.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TipsDialog-imageSize?: SizeOptions--><!--Device-TipsDialog-imageSize?: SizeOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## isChecked
@@ -145,6 +159,8 @@ Sets the TipsDialog checkbox check state.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-TipsDialog-isChecked?: boolean--><!--Device-TipsDialog-isChecked?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -164,6 +180,8 @@ Sets the TipsDialog CheckBox Callback.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TipsDialog-onCheckedChange?: Callback<boolean>--><!--Device-TipsDialog-onCheckedChange?: Callback<boolean>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## primaryButton
@@ -181,6 +199,8 @@ Sets the TipsDialog primary button.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-TipsDialog-primaryButton?: ButtonOptions--><!--Device-TipsDialog-primaryButton?: ButtonOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -200,6 +220,8 @@ Sets the TipsDialog secondary button.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TipsDialog-secondaryButton?: ButtonOptions--><!--Device-TipsDialog-secondaryButton?: ButtonOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## theme
@@ -217,6 +239,8 @@ Custom Theme.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TipsDialog-theme?: Theme | CustomTheme--><!--Device-TipsDialog-theme?: Theme | CustomTheme-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -236,6 +260,8 @@ Sets the TipsDialog dark or light Mode.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TipsDialog-themeColorMode?: ThemeColorMode--><!--Device-TipsDialog-themeColorMode?: ThemeColorMode-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## title
@@ -253,5 +279,7 @@ Sets the TipsDialog title.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-TipsDialog-title?: ResourceStr--><!--Device-TipsDialog-title?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

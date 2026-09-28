@@ -18,6 +18,8 @@ function createService(): Promise<SEService>
 
 **起始版本：** 12
 
+<!--Device-omapi-function createService(): Promise<SEService>--><!--Device-omapi-function createService(): Promise<SEService>-End-->
+
 **系统能力：** SystemCapability.Communication.SecureElement
 
 **返回值：**

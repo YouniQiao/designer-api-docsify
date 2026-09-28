@@ -8,6 +8,8 @@ export interface AttachOptions
 
 **起始版本：** 23
 
+<!--Device-inputMethod-export interface AttachOptions--><!--Device-inputMethod-export interface AttachOptions-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## 导入模块
@@ -32,6 +34,8 @@ requestKeyboardReason?: RequestKeyboardReason
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AttachOptions-requestKeyboardReason?: RequestKeyboardReason--><!--Device-AttachOptions-requestKeyboardReason?: RequestKeyboardReason-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## showKeyboard
@@ -49,5 +53,7 @@ showKeyboard?: boolean
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AttachOptions-showKeyboard?: boolean--><!--Device-AttachOptions-showKeyboard?: boolean-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework

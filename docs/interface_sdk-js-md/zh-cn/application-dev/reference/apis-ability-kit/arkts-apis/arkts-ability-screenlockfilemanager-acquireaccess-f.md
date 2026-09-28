@@ -18,6 +18,8 @@ function acquireAccess(): AccessStatus
 
 **起始版本：** 12
 
+<!--Device-screenLockFileManager-function acquireAccess(): AccessStatus--><!--Device-screenLockFileManager-function acquireAccess(): AccessStatus-End-->
+
 **系统能力：** SystemCapability.Security.ScreenLockFileManager
 
 **返回值：**

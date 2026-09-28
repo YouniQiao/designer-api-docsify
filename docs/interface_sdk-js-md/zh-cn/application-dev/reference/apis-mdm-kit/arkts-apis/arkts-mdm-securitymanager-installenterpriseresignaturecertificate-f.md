@@ -44,6 +44,8 @@ function installEnterpriseReSignatureCertificate(admin: Want, certificateAlias: 
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-securityManager-function installEnterpriseReSignatureCertificate(admin: Want, certificateAlias: string, fd: int, accountId: int): void--><!--Device-securityManager-function installEnterpriseReSignatureCertificate(admin: Want, certificateAlias: string, fd: int, accountId: int): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**

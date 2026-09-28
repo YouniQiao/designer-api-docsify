@@ -14,6 +14,8 @@ export interface SubscribeDeviceOrientationOptions
 
 **替代接口：** [ORIENTATION](arkts-sensorservice-sensor-sensorid-e.md#orientation)
 
+<!--Device-unnamed-export interface SubscribeDeviceOrientationOptions--><!--Device-unnamed-export interface SubscribeDeviceOrientationOptions-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
 ## 导入模块
@@ -37,6 +39,8 @@ fail?: (data: string, code: number) => void
 **替代接口：** [on](arkts-sensorservice-sensor-on-f.md)
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-SubscribeDeviceOrientationOptions-fail?: (data: string, code: number) => void--><!--Device-SubscribeDeviceOrientationOptions-fail?: (data: string, code: number) => void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
@@ -63,6 +67,8 @@ success: (data: DeviceOrientationResponse) => void
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-SubscribeDeviceOrientationOptions-success: (data: DeviceOrientationResponse) => void--><!--Device-SubscribeDeviceOrientationOptions-success: (data: DeviceOrientationResponse) => void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
 **参数：**
@@ -88,5 +94,7 @@ interval: string
 **替代接口：** [interval](arkts-sensorservice-sensor-options-i.md#interval)
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-SubscribeDeviceOrientationOptions-interval: string--><!--Device-SubscribeDeviceOrientationOptions-interval: string-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite

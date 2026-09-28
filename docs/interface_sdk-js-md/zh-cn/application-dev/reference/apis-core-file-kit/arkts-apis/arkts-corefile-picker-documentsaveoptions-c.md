@@ -8,6 +8,8 @@ class DocumentSaveOptions
 
 **起始版本：** 9
 
+<!--Device-picker-class DocumentSaveOptions--><!--Device-picker-class DocumentSaveOptions-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 ## 导入模块
@@ -32,6 +34,8 @@ autoCreateEmptyFile?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DocumentSaveOptions-autoCreateEmptyFile?: boolean--><!--Device-DocumentSaveOptions-autoCreateEmptyFile?: boolean-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService.FolderSelection
 
 ## defaultFilePathUri
@@ -47,6 +51,8 @@ defaultFilePathUri?: string
 **起始版本：** 10
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-DocumentSaveOptions-defaultFilePathUri?: string--><!--Device-DocumentSaveOptions-defaultFilePathUri?: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -64,6 +70,8 @@ fileSuffixChoices?: Array<string>
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-DocumentSaveOptions-fileSuffixChoices?: Array<string>--><!--Device-DocumentSaveOptions-fileSuffixChoices?: Array<string>-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 ## newFileNames
@@ -80,6 +88,8 @@ newFileNames?: Array<string>
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-DocumentSaveOptions-newFileNames?: Array<string>--><!--Device-DocumentSaveOptions-newFileNames?: Array<string>-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 ## pickerMode
@@ -95,5 +105,7 @@ pickerMode?: DocumentPickerMode
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-DocumentSaveOptions-pickerMode?: DocumentPickerMode--><!--Device-DocumentSaveOptions-pickerMode?: DocumentPickerMode-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService

@@ -22,6 +22,8 @@ Creates an instance of the **ArcAlphabetIndexer** component with initialization 
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ArcAlphabetIndexerInterface-(info: ArcAlphabetIndexerInitInfo): ArcAlphabetIndexerAttribute--><!--Device-ArcAlphabetIndexerInterface-(info: ArcAlphabetIndexerInitInfo): ArcAlphabetIndexerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 **Parameters:**

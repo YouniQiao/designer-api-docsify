@@ -8,6 +8,8 @@ export interface NetworkState
 
 **起始版本：** 6
 
+<!--Device-radio-export interface NetworkState--><!--Device-radio-export interface NetworkState-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## 导入模块
@@ -28,6 +30,8 @@ cfgTech: RadioTechnology
 
 **起始版本：** 8
 
+<!--Device-NetworkState-cfgTech: RadioTechnology--><!--Device-NetworkState-cfgTech: RadioTechnology-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## isCaActive
@@ -41,6 +45,8 @@ CA的状态。
 **类型：** boolean
 
 **起始版本：** 6
+
+<!--Device-NetworkState-isCaActive: boolean--><!--Device-NetworkState-isCaActive: boolean-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -56,6 +62,8 @@ isEmergency: boolean
 
 **起始版本：** 6
 
+<!--Device-NetworkState-isEmergency: boolean--><!--Device-NetworkState-isEmergency: boolean-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## isRoaming
@@ -69,6 +77,8 @@ isRoaming: boolean
 **类型：** boolean
 
 **起始版本：** 6
+
+<!--Device-NetworkState-isRoaming: boolean--><!--Device-NetworkState-isRoaming: boolean-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -84,6 +94,8 @@ longOperatorName: string
 
 **起始版本：** 6
 
+<!--Device-NetworkState-longOperatorName: string--><!--Device-NetworkState-longOperatorName: string-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## nsaState
@@ -97,6 +109,8 @@ nsaState: NsaState
 **类型：** [NsaState](arkts-telephony-radio-nsastate-e.md)
 
 **起始版本：** 6
+
+<!--Device-NetworkState-nsaState: NsaState--><!--Device-NetworkState-nsaState: NsaState-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -112,6 +126,8 @@ plmnNumeric: string
 
 **起始版本：** 6
 
+<!--Device-NetworkState-plmnNumeric: string--><!--Device-NetworkState-plmnNumeric: string-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## regState
@@ -126,6 +142,8 @@ regState: RegState
 
 **起始版本：** 6
 
+<!--Device-NetworkState-regState: RegState--><!--Device-NetworkState-regState: RegState-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## shortOperatorName
@@ -139,5 +157,7 @@ shortOperatorName: string
 **类型：** string
 
 **起始版本：** 6
+
+<!--Device-NetworkState-shortOperatorName: string--><!--Device-NetworkState-shortOperatorName: string-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService

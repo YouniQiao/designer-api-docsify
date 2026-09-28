@@ -14,6 +14,8 @@ Sets the page entrance animation.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-PageTransitionEnterInterface-(value: PageTransitionOptions): PageTransitionEnterInterface--><!--Device-PageTransitionEnterInterface-(value: PageTransitionOptions): PageTransitionEnterInterface-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -33,6 +35,8 @@ Invoked on a per-frame basis until the entrance animation is complete, with the 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PageTransitionEnterInterface-onEnter(event: PageTransitionCallback): PageTransitionEnterInterface--><!--Device-PageTransitionEnterInterface-onEnter(event: PageTransitionCallback): PageTransitionEnterInterface-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

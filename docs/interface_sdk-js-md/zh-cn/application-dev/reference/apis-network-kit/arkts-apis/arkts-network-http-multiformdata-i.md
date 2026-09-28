@@ -8,6 +8,8 @@ export interface MultiFormData
 
 **起始版本：** 11
 
+<!--Device-http-export interface MultiFormData--><!--Device-http-export interface MultiFormData-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块
@@ -28,6 +30,8 @@ contentType: string
 
 **起始版本：** 11
 
+<!--Device-MultiFormData-contentType: string--><!--Device-MultiFormData-contentType: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## data
@@ -41,6 +45,8 @@ data?: string | Object | ArrayBuffer
 **类型：** string &#124; Object &#124; ArrayBuffer
 
 **起始版本：** 11
+
+<!--Device-MultiFormData-data?: string | Object | ArrayBuffer--><!--Device-MultiFormData-data?: string | Object | ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -58,6 +64,8 @@ filePath?: string
 
 **起始版本：** 11
 
+<!--Device-MultiFormData-filePath?: string--><!--Device-MultiFormData-filePath?: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## name
@@ -71,6 +79,8 @@ name: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-MultiFormData-name: string--><!--Device-MultiFormData-name: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -93,5 +103,7 @@ remoteFileName?: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-MultiFormData-remoteFileName?: string--><!--Device-MultiFormData-remoteFileName?: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack

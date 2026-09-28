@@ -8,6 +8,8 @@ interface GeomagneticResponse
 
 **起始版本：** 8
 
+<!--Device-sensor-interface GeomagneticResponse--><!--Device-sensor-interface GeomagneticResponse-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## 导入模块
@@ -28,6 +30,8 @@ deflectionAngle: number
 
 **起始版本：** 8
 
+<!--Device-GeomagneticResponse-deflectionAngle: double--><!--Device-GeomagneticResponse-deflectionAngle: double-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## geomagneticDip
@@ -41,6 +45,8 @@ geomagneticDip: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-GeomagneticResponse-geomagneticDip: double--><!--Device-GeomagneticResponse-geomagneticDip: double-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -56,6 +62,8 @@ levelIntensity: number
 
 **起始版本：** 8
 
+<!--Device-GeomagneticResponse-levelIntensity: double--><!--Device-GeomagneticResponse-levelIntensity: double-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## totalIntensity
@@ -69,6 +77,8 @@ totalIntensity: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-GeomagneticResponse-totalIntensity: double--><!--Device-GeomagneticResponse-totalIntensity: double-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -84,6 +94,8 @@ x: number
 
 **起始版本：** 8
 
+<!--Device-GeomagneticResponse-x: double--><!--Device-GeomagneticResponse-x: double-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## y
@@ -98,6 +110,8 @@ y: number
 
 **起始版本：** 8
 
+<!--Device-GeomagneticResponse-y: double--><!--Device-GeomagneticResponse-y: double-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## z
@@ -111,5 +125,7 @@ z: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-GeomagneticResponse-z: double--><!--Device-GeomagneticResponse-z: double-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor

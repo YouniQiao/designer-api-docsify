@@ -18,6 +18,8 @@ function isWearDetectionEnabled(deviceId: string, callback: AsyncCallback<boolea
 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
 
+<!--Device-wearDetection-function isWearDetectionEnabled(deviceId: string, callback: AsyncCallback<boolean>): void--><!--Device-wearDetection-function isWearDetectionEnabled(deviceId: string, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -67,6 +69,8 @@ function isWearDetectionEnabled(deviceId: string): Promise<boolean>
 **起始版本：** 11
 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
+
+<!--Device-wearDetection-function isWearDetectionEnabled(deviceId: string): Promise<boolean>--><!--Device-wearDetection-function isWearDetectionEnabled(deviceId: string): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

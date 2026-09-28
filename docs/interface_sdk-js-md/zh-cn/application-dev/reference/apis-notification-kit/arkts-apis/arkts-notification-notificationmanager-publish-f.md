@@ -18,6 +18,8 @@ function publish(request: NotificationRequest, callback: AsyncCallback<void>): v
 
 **起始版本：** 9
 
+<!--Device-notificationManager-function publish(request: NotificationRequest, callback: AsyncCallback<void>): void--><!--Device-notificationManager-function publish(request: NotificationRequest, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **参见：**
@@ -97,6 +99,8 @@ function publish(request: NotificationRequest): Promise<void>
 发布通知后，通知将以通知卡片的形式展示在设备的通知中心、状态栏等位置。如果新发布通知与已发布通知的ID和标签都相同，则新通知将取代原有通知，实现通知的更新效果。
 
 **起始版本：** 9
+
+<!--Device-notificationManager-function publish(request: NotificationRequest): Promise<void>--><!--Device-notificationManager-function publish(request: NotificationRequest): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

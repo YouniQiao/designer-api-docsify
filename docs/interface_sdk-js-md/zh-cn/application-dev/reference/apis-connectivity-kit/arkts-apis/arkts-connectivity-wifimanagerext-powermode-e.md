@@ -8,6 +8,8 @@ export enum PowerMode
 
 **起始版本：** 9
 
+<!--Device-wifiManagerExt-export enum PowerMode--><!--Device-wifiManagerExt-export enum PowerMode-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.AP.Extension
 
 ## SLEEPING
@@ -19,6 +21,8 @@ SLEEPING = 0
 睡眠模式。
 
 **起始版本：** 9
+
+<!--Device-PowerMode-SLEEPING = 0--><!--Device-PowerMode-SLEEPING = 0-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -32,6 +36,8 @@ GENERAL = 1
 
 **起始版本：** 9
 
+<!--Device-PowerMode-GENERAL = 1--><!--Device-PowerMode-GENERAL = 1-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## THROUGH_WALL
@@ -43,5 +49,7 @@ THROUGH_WALL = 2
 穿墙模式。
 
 **起始版本：** 9
+
+<!--Device-PowerMode-THROUGH_WALL = 2--><!--Device-PowerMode-THROUGH_WALL = 2-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

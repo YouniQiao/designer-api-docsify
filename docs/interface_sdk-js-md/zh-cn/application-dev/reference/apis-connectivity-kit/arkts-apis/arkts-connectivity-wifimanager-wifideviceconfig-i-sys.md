@@ -8,6 +8,8 @@ Wi-Fi配置信息。
 
 **起始版本：** 9
 
+<!--Device-wifiManager-interface WifiDeviceConfig--><!--Device-wifiManager-interface WifiDeviceConfig-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## 导入模块
@@ -34,6 +36,8 @@ configStatus?: number
 
 **起始版本：** 12
 
+<!--Device-WifiDeviceConfig-configStatus?: int--><!--Device-WifiDeviceConfig-configStatus?: int-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +55,8 @@ creatorUid?: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-WifiDeviceConfig-creatorUid?: int--><!--Device-WifiDeviceConfig-creatorUid?: int-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -86,6 +92,8 @@ disableReason?: number
 
 **起始版本：** 9
 
+<!--Device-WifiDeviceConfig-disableReason?: int--><!--Device-WifiDeviceConfig-disableReason?: int-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。
@@ -101,6 +109,8 @@ Static IP family: 0 - IPv4, 1 - Ipv6.
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-WifiDeviceConfig-family?: int--><!--Device-WifiDeviceConfig-family?: int-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -120,6 +130,8 @@ IP地址类型。
 
 **起始版本：** 9
 
+<!--Device-WifiDeviceConfig-ipType?: IpType--><!--Device-WifiDeviceConfig-ipType?: IpType-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。
@@ -137,6 +149,8 @@ isAutoConnectAllowed?: boolean
 **类型：** boolean
 
 **起始版本：** 17
+
+<!--Device-WifiDeviceConfig-isAutoConnectAllowed?: boolean--><!--Device-WifiDeviceConfig-isAutoConnectAllowed?: boolean-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -156,6 +170,8 @@ isSecureWifi?: boolean
 
 **起始版本：** 20
 
+<!--Device-WifiDeviceConfig-isSecureWifi?: boolean--><!--Device-WifiDeviceConfig-isSecureWifi?: boolean-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。
@@ -173,6 +189,8 @@ proxyConfig?: WifiProxyConfig
 **类型：** [WifiProxyConfig](arkts-connectivity-wifimanager-wifiproxyconfig-i-sys.md)
 
 **起始版本：** 10
+
+<!--Device-WifiDeviceConfig-proxyConfig?: WifiProxyConfig--><!--Device-WifiDeviceConfig-proxyConfig?: WifiProxyConfig-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -192,6 +210,8 @@ MAC地址。
 
 **起始版本：** 9
 
+<!--Device-WifiDeviceConfig-randomMacAddr?: string--><!--Device-WifiDeviceConfig-randomMacAddr?: string-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。
@@ -209,6 +229,8 @@ MAC地址类型。0 - 随机MAC地址，1 - 设备MAC地址
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-WifiDeviceConfig-randomMacType?: int--><!--Device-WifiDeviceConfig-randomMacType?: int-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -228,6 +250,8 @@ staticIp?: IpConfig
 
 **起始版本：** 9
 
+<!--Device-WifiDeviceConfig-staticIp?: IpConfig--><!--Device-WifiDeviceConfig-staticIp?: IpConfig-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。
@@ -243,6 +267,8 @@ IPv6 config of static
 **类型：** [Ipv6Config](arkts-connectivity-wifimanager-ipv6config-i-sys.md)
 
 **起始版本：** 20
+
+<!--Device-WifiDeviceConfig-staticIpv6?: Ipv6Config--><!--Device-WifiDeviceConfig-staticIpv6?: Ipv6Config-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 

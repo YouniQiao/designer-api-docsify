@@ -10,6 +10,8 @@ export enum OperationMode
 
 **起始版本：** 11
 
+<!--Device-fileShare-export enum OperationMode--><!--Device-fileShare-export enum OperationMode-End-->
+
 **系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
 ## READ_MODE
@@ -21,6 +23,8 @@ READ_MODE = 0b1
 读权限。
 
 **起始版本：** 11
+
+<!--Device-OperationMode-READ_MODE = 0b1--><!--Device-OperationMode-READ_MODE = 0b1-End-->
 
 **系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
@@ -34,6 +38,8 @@ WRITE_MODE = 0b10
 
 **起始版本：** 11
 
+<!--Device-OperationMode-WRITE_MODE = 0b10--><!--Device-OperationMode-WRITE_MODE = 0b10-End-->
+
 **系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
 ## CREATE_MODE
@@ -45,6 +51,8 @@ CREATE_MODE = 0b100
 创建权限。
 
 **起始版本：** 20
+
+<!--Device-OperationMode-CREATE_MODE = 0b100--><!--Device-OperationMode-CREATE_MODE = 0b100-End-->
 
 **系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
@@ -58,6 +66,8 @@ DELETE_MODE = 0b1000
 
 **起始版本：** 20
 
+<!--Device-OperationMode-DELETE_MODE = 0b1000--><!--Device-OperationMode-DELETE_MODE = 0b1000-End-->
+
 **系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
 ## RENAME_MODE
@@ -69,5 +79,7 @@ RENAME_MODE = 0b10000
 重命名权限。
 
 **起始版本：** 20
+
+<!--Device-OperationMode-RENAME_MODE = 0b10000--><!--Device-OperationMode-RENAME_MODE = 0b10000-End-->
 
 **系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization

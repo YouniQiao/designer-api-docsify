@@ -18,6 +18,8 @@ function disableNotificationFeature(disabled:boolean, bundleList: Array<string>)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER or ohos.permission.MANAGE_EDM_POLICY
 
+<!--Device-notificationManager-function disableNotificationFeature(disabled:boolean, bundleList: Array<string>): Promise<void>--><!--Device-notificationManager-function disableNotificationFeature(disabled:boolean, bundleList: Array<string>): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -79,6 +81,8 @@ function disableNotificationFeature(disabled: boolean, bundleList: Array<string>
 **起始版本：** 20
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER or ohos.permission.MANAGE_EDM_POLICY
+
+<!--Device-notificationManager-function disableNotificationFeature(disabled: boolean, bundleList: Array<string>, userId: int): Promise<void>--><!--Device-notificationManager-function disableNotificationFeature(disabled: boolean, bundleList: Array<string>, userId: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

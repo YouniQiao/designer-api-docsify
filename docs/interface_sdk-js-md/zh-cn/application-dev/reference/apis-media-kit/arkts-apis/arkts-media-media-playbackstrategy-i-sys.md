@@ -8,6 +8,8 @@ interface PlaybackStrategy
 
 **起始版本：** 12
 
+<!--Device-media-interface PlaybackStrategy--><!--Device-media-interface PlaybackStrategy-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 ## 导入模块
@@ -27,6 +29,8 @@ enableCameraPostprocessing?: boolean
 **类型：** boolean
 
 **起始版本：** 20
+
+<!--Device-PlaybackStrategy-enableCameraPostprocessing?: boolean--><!--Device-PlaybackStrategy-enableCameraPostprocessing?: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 

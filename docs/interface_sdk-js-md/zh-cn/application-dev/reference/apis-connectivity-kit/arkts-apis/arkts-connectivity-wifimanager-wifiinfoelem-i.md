@@ -8,6 +8,8 @@ Wi-Fi热点信息。
 
 **起始版本：** 9
 
+<!--Device-wifiManager-interface WifiInfoElem--><!--Device-wifiManager-interface WifiInfoElem-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## 导入模块
@@ -28,6 +30,8 @@ content: Uint8Array
 
 **起始版本：** 9
 
+<!--Device-WifiInfoElem-content: Uint8Array--><!--Device-WifiInfoElem-content: Uint8Array-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## eid
@@ -41,5 +45,7 @@ eid: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-WifiInfoElem-eid: int--><!--Device-WifiInfoElem-eid: int-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA

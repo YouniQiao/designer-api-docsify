@@ -8,6 +8,8 @@ export interface PeerDimensionsDetail
 
 **起始版本：** 11
 
+<!--Device-call-export interface PeerDimensionsDetail--><!--Device-call-export interface PeerDimensionsDetail-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ callId: number
 
 **起始版本：** 11
 
+<!--Device-PeerDimensionsDetail-callId: int--><!--Device-PeerDimensionsDetail-callId: int-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -46,6 +50,8 @@ height: number
 
 **起始版本：** 11
 
+<!--Device-PeerDimensionsDetail-height: int--><!--Device-PeerDimensionsDetail-height: int-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +67,8 @@ width: number
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-PeerDimensionsDetail-width: int--><!--Device-PeerDimensionsDetail-width: int-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 

@@ -16,6 +16,8 @@ class ShadowLayer
 
 **起始版本：** 12
 
+<!--Device-drawing-class ShadowLayer--><!--Device-drawing-class ShadowLayer-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## 导入模块
@@ -33,6 +35,8 @@ static create(blurRadius: number, x: number, y: number, color: common2D.Color): 
 创建阴影层对象。
 
 **起始版本：** 12
+
+<!--Device-ShadowLayer-static create(blurRadius: number, x: number, y: number, color: common2D.Color): ShadowLayer--><!--Device-ShadowLayer-static create(blurRadius: number, x: number, y: number, color: common2D.Color): ShadowLayer-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -82,6 +86,8 @@ static create(blurRadius: number, x: number, y: number, color: common2D.Color | 
 创建阴影层对象。
 
 **起始版本：** 18
+
+<!--Device-ShadowLayer-static create(blurRadius: number, x: number, y: number, color: common2D.Color | number): ShadowLayer--><!--Device-ShadowLayer-static create(blurRadius: number, x: number, y: number, color: common2D.Color | number): ShadowLayer-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

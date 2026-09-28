@@ -8,6 +8,8 @@ export enum PolicyRules
 
 **起始版本：** 18
 
+<!--Device-eSIM-export enum PolicyRules--><!--Device-eSIM-export enum PolicyRules-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -21,6 +23,8 @@ POLICY_RULE_DISABLE_NOT_ALLOWED = 1
 启用此配置文件后，将无法禁用。
 
 **起始版本：** 18
+
+<!--Device-PolicyRules-POLICY_RULE_DISABLE_NOT_ALLOWED = 1--><!--Device-PolicyRules-POLICY_RULE_DISABLE_NOT_ALLOWED = 1-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
@@ -36,6 +40,8 @@ POLICY_RULE_DELETE_NOT_ALLOWED = 1 << 1
 
 **起始版本：** 18
 
+<!--Device-PolicyRules-POLICY_RULE_DELETE_NOT_ALLOWED = 1 << 1--><!--Device-PolicyRules-POLICY_RULE_DELETE_NOT_ALLOWED = 1 << 1-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +55,8 @@ POLICY_RULE_DISABLE_AND_DELETE = 1 << 2
 禁用后应删除此配置文件。
 
 **起始版本：** 18
+
+<!--Device-PolicyRules-POLICY_RULE_DISABLE_AND_DELETE = 1 << 2--><!--Device-PolicyRules-POLICY_RULE_DISABLE_AND_DELETE = 1 << 2-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 

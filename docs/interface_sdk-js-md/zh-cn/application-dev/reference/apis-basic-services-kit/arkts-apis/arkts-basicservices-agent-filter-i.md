@@ -8,6 +8,8 @@ interface Filter
 
 **起始版本：** 10
 
+<!--Device-agent-interface Filter--><!--Device-agent-interface Filter-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## 导入模块
@@ -32,6 +34,8 @@ action?: Action
 
 **起始版本：** 10
 
+<!--Device-Filter-action?: Action--><!--Device-Filter-action?: Action-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## after
@@ -46,6 +50,8 @@ after?: number
 
 **起始版本：** 10
 
+<!--Device-Filter-after?: long--><!--Device-Filter-after?: long-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## before
@@ -59,6 +65,8 @@ before?: number
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-Filter-before?: long--><!--Device-Filter-before?: long-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -78,6 +86,8 @@ mode?: Mode
 
 **起始版本：** 10
 
+<!--Device-Filter-mode?: Mode--><!--Device-Filter-mode?: Mode-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## state
@@ -91,5 +101,7 @@ state?: State
 **类型：** [State](arkts-basicservices-agent-state-e.md)
 
 **起始版本：** 10
+
+<!--Device-Filter-state?: State--><!--Device-Filter-state?: State-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent

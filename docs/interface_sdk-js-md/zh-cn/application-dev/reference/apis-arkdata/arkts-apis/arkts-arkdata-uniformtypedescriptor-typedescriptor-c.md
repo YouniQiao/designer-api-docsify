@@ -8,6 +8,8 @@ class TypeDescriptor
 
 **起始版本：** 11
 
+<!--Device-uniformTypeDescriptor-class TypeDescriptor--><!--Device-uniformTypeDescriptor-class TypeDescriptor-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## 导入模块
@@ -27,6 +29,8 @@ belongsTo(type: string): boolean
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TypeDescriptor-belongsTo(type: string): boolean--><!--Device-TypeDescriptor-belongsTo(type: string): boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -80,6 +84,8 @@ equals(typeDescriptor: TypeDescriptor): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TypeDescriptor-equals(typeDescriptor: TypeDescriptor): boolean--><!--Device-TypeDescriptor-equals(typeDescriptor: TypeDescriptor): boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 **参数：**
@@ -131,6 +137,8 @@ isHigherLevelType(type: string): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TypeDescriptor-isHigherLevelType(type: string): boolean--><!--Device-TypeDescriptor-isHigherLevelType(type: string): boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 **参数：**
@@ -181,6 +189,8 @@ isLowerLevelType(type: string): boolean
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TypeDescriptor-isLowerLevelType(type: string): boolean--><!--Device-TypeDescriptor-isLowerLevelType(type: string): boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -235,6 +245,8 @@ get belongingToTypes(): Array<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TypeDescriptor-get belongingToTypes(): Array<string>--><!--Device-TypeDescriptor-get belongingToTypes(): Array<string>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ```TypeScript
@@ -248,6 +260,8 @@ set belongingToTypes(value: Array<string>)
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TypeDescriptor-set belongingToTypes(value: Array<string>)--><!--Device-TypeDescriptor-set belongingToTypes(value: Array<string>)-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -265,6 +279,8 @@ get description(): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TypeDescriptor-get description(): string--><!--Device-TypeDescriptor-get description(): string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ```TypeScript
@@ -278,6 +294,8 @@ set description(value: string)
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TypeDescriptor-set description(value: string)--><!--Device-TypeDescriptor-set description(value: string)-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -295,6 +313,8 @@ get filenameExtensions(): Array<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TypeDescriptor-get filenameExtensions(): Array<string>--><!--Device-TypeDescriptor-get filenameExtensions(): Array<string>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ```TypeScript
@@ -308,6 +328,8 @@ set filenameExtensions(value: Array<string>)
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TypeDescriptor-set filenameExtensions(value: Array<string>)--><!--Device-TypeDescriptor-set filenameExtensions(value: Array<string>)-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -325,6 +347,8 @@ get iconFile(): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TypeDescriptor-get iconFile(): string--><!--Device-TypeDescriptor-get iconFile(): string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ```TypeScript
@@ -338,6 +362,8 @@ set iconFile(value: string)
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TypeDescriptor-set iconFile(value: string)--><!--Device-TypeDescriptor-set iconFile(value: string)-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -355,6 +381,8 @@ get mimeTypes(): Array<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TypeDescriptor-get mimeTypes(): Array<string>--><!--Device-TypeDescriptor-get mimeTypes(): Array<string>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ```TypeScript
@@ -368,6 +396,8 @@ set mimeTypes(value: Array<string>)
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TypeDescriptor-set mimeTypes(value: Array<string>)--><!--Device-TypeDescriptor-set mimeTypes(value: Array<string>)-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -385,6 +415,8 @@ get referenceURL(): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TypeDescriptor-get referenceURL(): string--><!--Device-TypeDescriptor-get referenceURL(): string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ```TypeScript
@@ -398,6 +430,8 @@ set referenceURL(value: string)
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TypeDescriptor-set referenceURL(value: string)--><!--Device-TypeDescriptor-set referenceURL(value: string)-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -415,6 +449,8 @@ get typeId(): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TypeDescriptor-get typeId(): string--><!--Device-TypeDescriptor-get typeId(): string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ```TypeScript
@@ -428,5 +464,7 @@ set typeId(value: string)
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TypeDescriptor-set typeId(value: string)--><!--Device-TypeDescriptor-set typeId(value: string)-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core

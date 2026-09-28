@@ -16,6 +16,8 @@ function getISOCountryCodeForNetwork(slotId: number, callback: AsyncCallback<str
 
 **起始版本：** 7
 
+<!--Device-radio-function getISOCountryCodeForNetwork(slotId: int, callback: AsyncCallback<string>): void--><!--Device-radio-function getISOCountryCodeForNetwork(slotId: int, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**
@@ -62,6 +64,8 @@ function getISOCountryCodeForNetwork(slotId: number): Promise<string>
 获取注册网络所在国家的ISO国家码。使用Promise异步回调。
 
 **起始版本：** 7
+
+<!--Device-radio-function getISOCountryCodeForNetwork(slotId: int): Promise<string>--><!--Device-radio-function getISOCountryCodeForNetwork(slotId: int): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

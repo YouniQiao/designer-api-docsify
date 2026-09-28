@@ -8,6 +8,8 @@ export interface ApplicationInstance
 
 **起始版本：** 20
 
+<!--Device-securityManager-export interface ApplicationInstance--><!--Device-securityManager-export interface ApplicationInstance-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## 导入模块
@@ -30,6 +32,8 @@ accountId: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ApplicationInstance-accountId: number--><!--Device-ApplicationInstance-accountId: number-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## appIdentifier
@@ -45,6 +49,8 @@ appIdentifier: string
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ApplicationInstance-appIdentifier: string--><!--Device-ApplicationInstance-appIdentifier: string-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -63,5 +69,7 @@ appIndex为0时，表示主应用。appIndex大于0时，表示指定的分身�
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ApplicationInstance-appIndex: number--><!--Device-ApplicationInstance-appIndex: number-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager

@@ -4,7 +4,7 @@ A gauge component that displays data in a circular chart. It is suitable for sce
 
 > **NOTE:** 
 > 
-> - This component supports [WithTheme](arkts-arkui-withtheme-comp.md#with_themedefines-withtheme-component) since API version 26.0.0.
+> - This component supports [WithTheme](arkts-arkui-withtheme-comp.md) since API version 26.0.0.
 > 
 > - [startAngle](arkts-arkui-gauge-comp-attribute.md#startangle) and [endAngle](arkts-arkui-gauge-comp-attribute.md#endangle) only determine the arc path range and do not affect the component size. The smaller the angle difference, the smaller the proportion of the arc within the component, and the larger the blank space between the `min`/`max` markers and the arc.
 
@@ -33,6 +33,8 @@ Creates a gauge.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-GaugeInterface-(options: GaugeOptions): GaugeAttribute--><!--Device-GaugeInterface-(options: GaugeOptions): GaugeAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

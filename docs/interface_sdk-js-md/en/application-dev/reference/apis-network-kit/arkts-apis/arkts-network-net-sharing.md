@@ -4,6 +4,8 @@ This module allows you to share your device's network connectivity with other co
 
 **Since:** 9
 
+<!--Device-unnamed-declare namespace sharing--><!--Device-unnamed-declare namespace sharing-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetSharing
 
 ## Modules to Import

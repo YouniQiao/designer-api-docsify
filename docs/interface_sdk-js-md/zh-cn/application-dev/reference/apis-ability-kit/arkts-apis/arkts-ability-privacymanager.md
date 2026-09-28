@@ -4,6 +4,8 @@
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-unnamed-declare namespace privacyManager--><!--Device-unnamed-declare namespace privacyManager-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 ## Core Enum Types

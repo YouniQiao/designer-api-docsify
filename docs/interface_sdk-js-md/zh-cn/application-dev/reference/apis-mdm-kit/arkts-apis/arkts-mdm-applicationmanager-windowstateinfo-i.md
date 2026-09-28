@@ -8,6 +8,8 @@ interface WindowStateInfo
 
 **起始版本：** 26.0.0
 
+<!--Device-applicationManager-interface WindowStateInfo--><!--Device-applicationManager-interface WindowStateInfo-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## 导入模块
@@ -30,6 +32,8 @@ isOnDock: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-WindowStateInfo-isOnDock: boolean--><!--Device-WindowStateInfo-isOnDock: boolean-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## name
@@ -45,6 +49,8 @@ name: string
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WindowStateInfo-name: string--><!--Device-WindowStateInfo-name: string-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -62,6 +68,8 @@ state: WindowState
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-WindowStateInfo-state: WindowState--><!--Device-WindowStateInfo-state: WindowState-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## windowId
@@ -77,5 +85,7 @@ windowId: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WindowStateInfo-windowId: number--><!--Device-WindowStateInfo-windowId: number-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager

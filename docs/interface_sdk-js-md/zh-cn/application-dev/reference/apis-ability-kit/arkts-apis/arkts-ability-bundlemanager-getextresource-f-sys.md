@@ -18,6 +18,8 @@ function getExtResource(bundleName: string): Promise<Array<string>>
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
+<!--Device-bundleManager-function getExtResource(bundleName: string): Promise<Array<string>>--><!--Device-bundleManager-function getExtResource(bundleName: string): Promise<Array<string>>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。

@@ -12,6 +12,8 @@ class MessageParcel
 
 **替代接口：** [MessageSequence](arkts-ipc-rpc-messagesequence-c.md)
 
+<!--Device-rpc-class MessageParcel--><!--Device-rpc-class MessageParcel-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 ## 导入模块
@@ -33,6 +35,8 @@ static closeFileDescriptor(fd: number): void
 **废弃版本：** 9
 
 **替代接口：** [closeFileDescriptor](arkts-ipc-rpc-messagesequence-c.md#closefiledescriptor)(fd: number)
+
+<!--Device-MessageParcel-static closeFileDescriptor(fd: number): void--><!--Device-MessageParcel-static closeFileDescriptor(fd: number): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -71,6 +75,8 @@ containFileDescriptors(): boolean
 **废弃版本：** 9
 
 **替代接口：** [containFileDescriptors](arkts-ipc-rpc-messagesequence-c.md#containfiledescriptors)()
+
+<!--Device-MessageParcel-containFileDescriptors(): boolean--><!--Device-MessageParcel-containFileDescriptors(): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -114,6 +120,8 @@ static create(): MessageParcel
 
 **替代接口：** [create](arkts-ipc-rpc-messagesequence-c.md#create)()
 
+<!--Device-MessageParcel-static create(): MessageParcel--><!--Device-MessageParcel-static create(): MessageParcel-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -152,6 +160,8 @@ static dupFileDescriptor(fd: number): number
 **废弃版本：** 9
 
 **替代接口：** [dupFileDescriptor](arkts-ipc-rpc-messagesequence-c.md#dupfiledescriptor)(fd: number)
+
+<!--Device-MessageParcel-static dupFileDescriptor(fd: number): number--><!--Device-MessageParcel-static dupFileDescriptor(fd: number): number-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -197,6 +207,8 @@ getCapacity(): number
 
 **替代接口：** [getCapacity](arkts-ipc-rpc-messagesequence-c.md#getcapacity)()
 
+<!--Device-MessageParcel-getCapacity(): number--><!--Device-MessageParcel-getCapacity(): number-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -234,6 +246,8 @@ getRawDataCapacity(): number
 
 **替代接口：** [getRawDataCapacity](arkts-ipc-rpc-messagesequence-c.md#getrawdatacapacity)()
 
+<!--Device-MessageParcel-getRawDataCapacity(): number--><!--Device-MessageParcel-getRawDataCapacity(): number-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -270,6 +284,8 @@ getReadableBytes(): number
 **废弃版本：** 9
 
 **替代接口：** [getReadableBytes](arkts-ipc-rpc-messagesequence-c.md#getreadablebytes)()
+
+<!--Device-MessageParcel-getReadableBytes(): number--><!--Device-MessageParcel-getReadableBytes(): number-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -309,6 +325,8 @@ getReadPosition(): number
 
 **替代接口：** [getReadPosition](arkts-ipc-rpc-messagesequence-c.md#getreadposition)()
 
+<!--Device-MessageParcel-getReadPosition(): number--><!--Device-MessageParcel-getReadPosition(): number-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -345,6 +363,8 @@ getSize(): number
 **废弃版本：** 9
 
 **替代接口：** [getSize](arkts-ipc-rpc-messagesequence-c.md#getsize)()
+
+<!--Device-MessageParcel-getSize(): number--><!--Device-MessageParcel-getSize(): number-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -384,6 +404,8 @@ getWritableBytes(): number
 
 **替代接口：** [getWritableBytes](arkts-ipc-rpc-messagesequence-c.md#getwritablebytes)()
 
+<!--Device-MessageParcel-getWritableBytes(): number--><!--Device-MessageParcel-getWritableBytes(): number-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -422,6 +444,8 @@ getWritePosition(): number
 
 **替代接口：** [getWritePosition](arkts-ipc-rpc-messagesequence-c.md#getwriteposition)()
 
+<!--Device-MessageParcel-getWritePosition(): number--><!--Device-MessageParcel-getWritePosition(): number-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -459,6 +483,8 @@ readAshmem(): Ashmem
 **废弃版本：** 9
 
 **替代接口：** [readAshmem](arkts-ipc-rpc-messagesequence-c.md#readashmem)()
+
+<!--Device-MessageParcel-readAshmem(): Ashmem--><!--Device-MessageParcel-readAshmem(): Ashmem-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -500,6 +526,8 @@ readBoolean(): boolean
 
 **替代接口：** [readBoolean](arkts-ipc-rpc-messagesequence-c.md#readboolean)()
 
+<!--Device-MessageParcel-readBoolean(): boolean--><!--Device-MessageParcel-readBoolean(): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -538,6 +566,8 @@ readBooleanArray(dataIn: boolean[]): void
 **废弃版本：** 9
 
 **替代接口：** [readBooleanArray](arkts-ipc-rpc-messagesequence-c.md#readbooleanarray)(dataIn: boolean[])
+
+<!--Device-MessageParcel-readBooleanArray(dataIn: boolean[]): void--><!--Device-MessageParcel-readBooleanArray(dataIn: boolean[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -581,6 +611,8 @@ readBooleanArray(): boolean[]
 
 **替代接口：** [readBooleanArray](arkts-ipc-rpc-messagesequence-c.md#readbooleanarray)()
 
+<!--Device-MessageParcel-readBooleanArray(): boolean[]--><!--Device-MessageParcel-readBooleanArray(): boolean[]-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -620,6 +652,8 @@ readByte(): number
 
 **替代接口：** [readByte](arkts-ipc-rpc-messagesequence-c.md#readbyte)()
 
+<!--Device-MessageParcel-readByte(): number--><!--Device-MessageParcel-readByte(): number-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -658,6 +692,8 @@ readByteArray(dataIn: number[]): void
 **废弃版本：** 9
 
 **替代接口：** [readByteArray](arkts-ipc-rpc-messagesequence-c.md#readbytearray)(dataIn: number[])
+
+<!--Device-MessageParcel-readByteArray(dataIn: number[]): void--><!--Device-MessageParcel-readByteArray(dataIn: number[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -701,6 +737,8 @@ readByteArray(): number[]
 
 **替代接口：** [readByteArray](arkts-ipc-rpc-messagesequence-c.md#readbytearray)()
 
+<!--Device-MessageParcel-readByteArray(): number[]--><!--Device-MessageParcel-readByteArray(): number[]-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -741,6 +779,8 @@ readChar(): number
 
 **替代接口：** [readChar](arkts-ipc-rpc-messagesequence-c.md#readchar)()
 
+<!--Device-MessageParcel-readChar(): number--><!--Device-MessageParcel-readChar(): number-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -779,6 +819,8 @@ readCharArray(dataIn: number[]): void
 **废弃版本：** 9
 
 **替代接口：** [readCharArray](arkts-ipc-rpc-messagesequence-c.md#readchararray)(dataIn: number[])
+
+<!--Device-MessageParcel-readCharArray(dataIn: number[]): void--><!--Device-MessageParcel-readCharArray(dataIn: number[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -822,6 +864,8 @@ readCharArray(): number[]
 
 **替代接口：** [readCharArray](arkts-ipc-rpc-messagesequence-c.md#readchararray)()
 
+<!--Device-MessageParcel-readCharArray(): number[]--><!--Device-MessageParcel-readCharArray(): number[]-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -861,6 +905,8 @@ readDouble(): number
 
 **替代接口：** [readDouble](arkts-ipc-rpc-messagesequence-c.md#readdouble)()
 
+<!--Device-MessageParcel-readDouble(): number--><!--Device-MessageParcel-readDouble(): number-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -899,6 +945,8 @@ readDoubleArray(dataIn: number[]): void
 **废弃版本：** 9
 
 **替代接口：** [readDoubleArray](arkts-ipc-rpc-messagesequence-c.md#readdoublearray)(dataIn: number[])
+
+<!--Device-MessageParcel-readDoubleArray(dataIn: number[]): void--><!--Device-MessageParcel-readDoubleArray(dataIn: number[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -942,6 +990,8 @@ readDoubleArray(): number[]
 
 **替代接口：** [readDoubleArray](arkts-ipc-rpc-messagesequence-c.md#readdoublearray)()
 
+<!--Device-MessageParcel-readDoubleArray(): number[]--><!--Device-MessageParcel-readDoubleArray(): number[]-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -980,6 +1030,8 @@ readException(): void
 **废弃版本：** 9
 
 **替代接口：** [readException](arkts-ipc-rpc-messagesequence-c.md#readexception)()
+
+<!--Device-MessageParcel-readException(): void--><!--Device-MessageParcel-readException(): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -1075,6 +1127,8 @@ readFileDescriptor(): number
 
 **替代接口：** [readFileDescriptor](arkts-ipc-rpc-messagesequence-c.md#readfiledescriptor)()
 
+<!--Device-MessageParcel-readFileDescriptor(): number--><!--Device-MessageParcel-readFileDescriptor(): number-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -1116,6 +1170,8 @@ readFloat(): number
 
 **替代接口：** [readFloat](arkts-ipc-rpc-messagesequence-c.md#readfloat)()
 
+<!--Device-MessageParcel-readFloat(): number--><!--Device-MessageParcel-readFloat(): number-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -1154,6 +1210,8 @@ readFloatArray(dataIn: number[]): void
 **废弃版本：** 9
 
 **替代接口：** [readFloatArray](arkts-ipc-rpc-messagesequence-c.md#readfloatarray)(dataIn: number[])
+
+<!--Device-MessageParcel-readFloatArray(dataIn: number[]): void--><!--Device-MessageParcel-readFloatArray(dataIn: number[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -1197,6 +1255,8 @@ readFloatArray(): number[]
 
 **替代接口：** [readFloatArray](arkts-ipc-rpc-messagesequence-c.md#readfloatarray)()
 
+<!--Device-MessageParcel-readFloatArray(): number[]--><!--Device-MessageParcel-readFloatArray(): number[]-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -1236,6 +1296,8 @@ readInt(): number
 
 **替代接口：** [readInt](arkts-ipc-rpc-messagesequence-c.md#readint)()
 
+<!--Device-MessageParcel-readInt(): number--><!--Device-MessageParcel-readInt(): number-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -1274,6 +1336,8 @@ readIntArray(dataIn: number[]): void
 **废弃版本：** 9
 
 **替代接口：** [readIntArray](arkts-ipc-rpc-messagesequence-c.md#readintarray)(dataIn: number[])
+
+<!--Device-MessageParcel-readIntArray(dataIn: number[]): void--><!--Device-MessageParcel-readIntArray(dataIn: number[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -1317,6 +1381,8 @@ readIntArray(): number[]
 
 **替代接口：** [readIntArray](arkts-ipc-rpc-messagesequence-c.md#readintarray)()
 
+<!--Device-MessageParcel-readIntArray(): number[]--><!--Device-MessageParcel-readIntArray(): number[]-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -1356,6 +1422,8 @@ readInterfaceToken(): string
 
 **替代接口：** [readInterfaceToken](arkts-ipc-rpc-messagesequence-c.md#readinterfacetoken)()
 
+<!--Device-MessageParcel-readInterfaceToken(): string--><!--Device-MessageParcel-readInterfaceToken(): string-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -1393,6 +1461,8 @@ readLong(): number
 **废弃版本：** 9
 
 **替代接口：** [readLong](arkts-ipc-rpc-messagesequence-c.md#readlong)()
+
+<!--Device-MessageParcel-readLong(): number--><!--Device-MessageParcel-readLong(): number-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -1432,6 +1502,8 @@ readLongArray(dataIn: number[]): void
 **废弃版本：** 9
 
 **替代接口：** [readLongArray](arkts-ipc-rpc-messagesequence-c.md#readlongarray)(dataIn: number[])
+
+<!--Device-MessageParcel-readLongArray(dataIn: number[]): void--><!--Device-MessageParcel-readLongArray(dataIn: number[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -1475,6 +1547,8 @@ readLongArray(): number[]
 
 **替代接口：** [readLongArray](arkts-ipc-rpc-messagesequence-c.md#readlongarray)()
 
+<!--Device-MessageParcel-readLongArray(): number[]--><!--Device-MessageParcel-readLongArray(): number[]-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -1513,6 +1587,8 @@ readRawData(size: number): number[]
 **废弃版本：** 9
 
 **替代接口：** [readRawDataBuffer](arkts-ipc-rpc-messagesequence-c.md#readrawdatabuffer)(size: number)
+
+<!--Device-MessageParcel-readRawData(size: number): number[]--><!--Device-MessageParcel-readRawData(size: number): number[]-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -1559,6 +1635,8 @@ readRemoteObject(): IRemoteObject
 **废弃版本：** 9
 
 **替代接口：** [readRemoteObject](arkts-ipc-rpc-messagesequence-c.md#readremoteobject)()
+
+<!--Device-MessageParcel-readRemoteObject(): IRemoteObject--><!--Device-MessageParcel-readRemoteObject(): IRemoteObject-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -1609,6 +1687,8 @@ readRemoteObjectArray(objects: IRemoteObject[]): void
 **废弃版本：** 9
 
 **替代接口：** [readRemoteObjectArray](arkts-ipc-rpc-messagesequence-c.md#readremoteobjectarray)(objects: IRemoteObject[])
+
+<!--Device-MessageParcel-readRemoteObjectArray(objects: IRemoteObject[]): void--><!--Device-MessageParcel-readRemoteObjectArray(objects: IRemoteObject[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -1664,6 +1744,8 @@ readRemoteObjectArray(): IRemoteObject[]
 
 **替代接口：** [readRemoteObjectArray](arkts-ipc-rpc-messagesequence-c.md#readremoteobjectarray)(objects: IRemoteObject[])
 
+<!--Device-MessageParcel-readRemoteObjectArray(): IRemoteObject[]--><!--Device-MessageParcel-readRemoteObjectArray(): IRemoteObject[]-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -1715,6 +1797,8 @@ readSequenceable(dataIn: Sequenceable): boolean
 **废弃版本：** 9
 
 **替代接口：** [readParcelable](arkts-ipc-rpc-messagesequence-c.md#readparcelable)(dataIn: Parcelable)
+
+<!--Device-MessageParcel-readSequenceable(dataIn: Sequenceable): boolean--><!--Device-MessageParcel-readSequenceable(dataIn: Sequenceable): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -1782,6 +1866,8 @@ readSequenceableArray(sequenceableArray: Sequenceable[]): void
 
 **替代接口：** [readParcelableArray](arkts-ipc-rpc-messagesequence-c.md#readparcelablearray)(parcelableArray: Parcelable[])
 
+<!--Device-MessageParcel-readSequenceableArray(sequenceableArray: Sequenceable[]): void--><!--Device-MessageParcel-readSequenceableArray(sequenceableArray: Sequenceable[]): void-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -1844,6 +1930,8 @@ readShort(): number
 
 **替代接口：** [readShort](arkts-ipc-rpc-messagesequence-c.md#readshort)()
 
+<!--Device-MessageParcel-readShort(): number--><!--Device-MessageParcel-readShort(): number-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -1882,6 +1970,8 @@ readShortArray(dataIn: number[]): void
 **废弃版本：** 9
 
 **替代接口：** [readShortArray](arkts-ipc-rpc-messagesequence-c.md#readshortarray)(dataIn: number[])
+
+<!--Device-MessageParcel-readShortArray(dataIn: number[]): void--><!--Device-MessageParcel-readShortArray(dataIn: number[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -1925,6 +2015,8 @@ readShortArray(): number[]
 
 **替代接口：** [readShortArray](arkts-ipc-rpc-messagesequence-c.md#readshortarray)()
 
+<!--Device-MessageParcel-readShortArray(): number[]--><!--Device-MessageParcel-readShortArray(): number[]-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -1964,6 +2056,8 @@ readString(): string
 
 **替代接口：** [readString](arkts-ipc-rpc-messagesequence-c.md#readstring)()
 
+<!--Device-MessageParcel-readString(): string--><!--Device-MessageParcel-readString(): string-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -2002,6 +2096,8 @@ readStringArray(dataIn: string[]): void
 **废弃版本：** 9
 
 **替代接口：** [readStringArray](arkts-ipc-rpc-messagesequence-c.md#readstringarray)(dataIn: string[])
+
+<!--Device-MessageParcel-readStringArray(dataIn: string[]): void--><!--Device-MessageParcel-readStringArray(dataIn: string[]): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -2045,6 +2141,8 @@ readStringArray(): string[]
 
 **替代接口：** [readStringArray](arkts-ipc-rpc-messagesequence-c.md#readstringarray)()
 
+<!--Device-MessageParcel-readStringArray(): string[]--><!--Device-MessageParcel-readStringArray(): string[]-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -2084,6 +2182,8 @@ reclaim(): void
 
 **替代接口：** [reclaim](arkts-ipc-rpc-messagesequence-c.md#reclaim)()
 
+<!--Device-MessageParcel-reclaim(): void--><!--Device-MessageParcel-reclaim(): void-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **示例**
@@ -2113,6 +2213,8 @@ rewindRead(pos: number): boolean
 **废弃版本：** 9
 
 **替代接口：** [rewindRead](arkts-ipc-rpc-messagesequence-c.md#rewindread)(pos: number)
+
+<!--Device-MessageParcel-rewindRead(pos: number): boolean--><!--Device-MessageParcel-rewindRead(pos: number): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -2162,6 +2264,8 @@ rewindWrite(pos: number): boolean
 
 **替代接口：** [rewindWrite](arkts-ipc-rpc-messagesequence-c.md#rewindwrite)(pos: number)
 
+<!--Device-MessageParcel-rewindWrite(pos: number): boolean--><!--Device-MessageParcel-rewindWrite(pos: number): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -2208,6 +2312,8 @@ setCapacity(size: number): boolean
 
 **替代接口：** [setCapacity](arkts-ipc-rpc-messagesequence-c.md#setcapacity)(size: number)
 
+<!--Device-MessageParcel-setCapacity(size: number): boolean--><!--Device-MessageParcel-setCapacity(size: number): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -2251,6 +2357,8 @@ setSize(size: number): boolean
 
 **替代接口：** [setSize](arkts-ipc-rpc-messagesequence-c.md#setsize)(size: number)
 
+<!--Device-MessageParcel-setSize(size: number): boolean--><!--Device-MessageParcel-setSize(size: number): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -2293,6 +2401,8 @@ writeAshmem(ashmem: Ashmem): boolean
 **废弃版本：** 9
 
 **替代接口：** [writeAshmem](arkts-ipc-rpc-messagesequence-c.md#writeashmem)(ashmem: Ashmem)
+
+<!--Device-MessageParcel-writeAshmem(ashmem: Ashmem): boolean--><!--Device-MessageParcel-writeAshmem(ashmem: Ashmem): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -2338,6 +2448,8 @@ writeBoolean(val: boolean): boolean
 
 **替代接口：** [writeBoolean](arkts-ipc-rpc-messagesequence-c.md#writeboolean)(val: boolean)
 
+<!--Device-MessageParcel-writeBoolean(val: boolean): boolean--><!--Device-MessageParcel-writeBoolean(val: boolean): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -2380,6 +2492,8 @@ writeBooleanArray(booleanArray: boolean[]): boolean
 **废弃版本：** 9
 
 **替代接口：** [writeBooleanArray](arkts-ipc-rpc-messagesequence-c.md#writebooleanarray)(booleanArray: boolean[])
+
+<!--Device-MessageParcel-writeBooleanArray(booleanArray: boolean[]): boolean--><!--Device-MessageParcel-writeBooleanArray(booleanArray: boolean[]): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -2424,6 +2538,8 @@ writeByte(val: number): boolean
 
 **替代接口：** [writeByte](arkts-ipc-rpc-messagesequence-c.md#writebyte)(val: number)
 
+<!--Device-MessageParcel-writeByte(val: number): boolean--><!--Device-MessageParcel-writeByte(val: number): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -2466,6 +2582,8 @@ writeByteArray(byteArray: number[]): boolean
 **废弃版本：** 9
 
 **替代接口：** [writeByteArray](arkts-ipc-rpc-messagesequence-c.md#writebytearray)(byteArray: number[])
+
+<!--Device-MessageParcel-writeByteArray(byteArray: number[]): boolean--><!--Device-MessageParcel-writeByteArray(byteArray: number[]): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -2511,6 +2629,8 @@ writeChar(val: number): boolean
 
 **替代接口：** [writeChar](arkts-ipc-rpc-messagesequence-c.md#writechar)(val: number)
 
+<!--Device-MessageParcel-writeChar(val: number): boolean--><!--Device-MessageParcel-writeChar(val: number): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -2553,6 +2673,8 @@ writeCharArray(charArray: number[]): boolean
 **废弃版本：** 9
 
 **替代接口：** [writeCharArray](arkts-ipc-rpc-messagesequence-c.md#writechararray)(charArray: number[])
+
+<!--Device-MessageParcel-writeCharArray(charArray: number[]): boolean--><!--Device-MessageParcel-writeCharArray(charArray: number[]): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -2597,6 +2719,8 @@ writeDouble(val: number): boolean
 
 **替代接口：** [writeDouble](arkts-ipc-rpc-messagesequence-c.md#writedouble)(val: number)
 
+<!--Device-MessageParcel-writeDouble(val: number): boolean--><!--Device-MessageParcel-writeDouble(val: number): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -2640,6 +2764,8 @@ writeDoubleArray(doubleArray: number[]): boolean
 
 **替代接口：** [writeDoubleArray](arkts-ipc-rpc-messagesequence-c.md#writedoublearray)(doubleArray: number[])
 
+<!--Device-MessageParcel-writeDoubleArray(doubleArray: number[]): boolean--><!--Device-MessageParcel-writeDoubleArray(doubleArray: number[]): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -2682,6 +2808,8 @@ writeFileDescriptor(fd: number): boolean
 **废弃版本：** 9
 
 **替代接口：** [writeFileDescriptor](arkts-ipc-rpc-messagesequence-c.md#writefiledescriptor)(fd: number)
+
+<!--Device-MessageParcel-writeFileDescriptor(fd: number): boolean--><!--Device-MessageParcel-writeFileDescriptor(fd: number): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -2729,6 +2857,8 @@ writeFloat(val: number): boolean
 
 **替代接口：** [writeFloat](arkts-ipc-rpc-messagesequence-c.md#writefloat)(val: number)
 
+<!--Device-MessageParcel-writeFloat(val: number): boolean--><!--Device-MessageParcel-writeFloat(val: number): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -2771,6 +2901,8 @@ writeFloatArray(floatArray: number[]): boolean
 **废弃版本：** 9
 
 **替代接口：** [writeFloatArray](arkts-ipc-rpc-messagesequence-c.md#writefloatarray)(floatArray: number[])
+
+<!--Device-MessageParcel-writeFloatArray(floatArray: number[]): boolean--><!--Device-MessageParcel-writeFloatArray(floatArray: number[]): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -2815,6 +2947,8 @@ writeInt(val: number): boolean
 
 **替代接口：** [writeInt](arkts-ipc-rpc-messagesequence-c.md#writeint)(val: number)
 
+<!--Device-MessageParcel-writeInt(val: number): boolean--><!--Device-MessageParcel-writeInt(val: number): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -2857,6 +2991,8 @@ writeIntArray(intArray: number[]): boolean
 **废弃版本：** 9
 
 **替代接口：** [writeIntArray](arkts-ipc-rpc-messagesequence-c.md#writeintarray)(intArray: number[])
+
+<!--Device-MessageParcel-writeIntArray(intArray: number[]): boolean--><!--Device-MessageParcel-writeIntArray(intArray: number[]): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -2901,6 +3037,8 @@ writeInterfaceToken(token: string): boolean
 
 **替代接口：** [writeInterfaceToken](arkts-ipc-rpc-messagesequence-c.md#writeinterfacetoken)(token: string)
 
+<!--Device-MessageParcel-writeInterfaceToken(token: string): boolean--><!--Device-MessageParcel-writeInterfaceToken(token: string): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -2943,6 +3081,8 @@ writeLong(val: number): boolean
 **废弃版本：** 9
 
 **替代接口：** [writeLong](arkts-ipc-rpc-messagesequence-c.md#writelong)(val: number)
+
+<!--Device-MessageParcel-writeLong(val: number): boolean--><!--Device-MessageParcel-writeLong(val: number): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -2987,6 +3127,8 @@ writeLongArray(longArray: number[]): boolean
 
 **替代接口：** [writeLongArray](arkts-ipc-rpc-messagesequence-c.md#writelongarray)(longArray: number[])
 
+<!--Device-MessageParcel-writeLongArray(longArray: number[]): boolean--><!--Device-MessageParcel-writeLongArray(longArray: number[]): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -3029,6 +3171,8 @@ writeNoException(): void
 **废弃版本：** 9
 
 **替代接口：** [writeNoException](arkts-ipc-rpc-messagesequence-c.md#writenoexception)()
+
+<!--Device-MessageParcel-writeNoException(): void--><!--Device-MessageParcel-writeNoException(): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -3075,6 +3219,8 @@ writeRawData(rawData: number[], size: number): boolean
 
 **替代接口：** [writeRawDataBuffer](arkts-ipc-rpc-messagesequence-c.md#writerawdatabuffer)(rawData: ArrayBuffer, size: number)
 
+<!--Device-MessageParcel-writeRawData(rawData: number[], size: number): boolean--><!--Device-MessageParcel-writeRawData(rawData: number[], size: number): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -3119,6 +3265,8 @@ writeRemoteObject(object: IRemoteObject): boolean
 **废弃版本：** 9
 
 **替代接口：** [writeRemoteObject](arkts-ipc-rpc-messagesequence-c.md#writeremoteobject)(obj: IRemoteObject)
+
+<!--Device-MessageParcel-writeRemoteObject(object: IRemoteObject): boolean--><!--Device-MessageParcel-writeRemoteObject(object: IRemoteObject): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -3172,6 +3320,8 @@ writeRemoteObjectArray(objectArray: IRemoteObject[]): boolean
 **废弃版本：** 9
 
 **替代接口：** [writeRemoteObjectArray](arkts-ipc-rpc-messagesequence-c.md#writeremoteobjectarray)(objectArray: IRemoteObject[])
+
+<!--Device-MessageParcel-writeRemoteObjectArray(objectArray: IRemoteObject[]): boolean--><!--Device-MessageParcel-writeRemoteObjectArray(objectArray: IRemoteObject[]): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -3227,6 +3377,8 @@ writeSequenceable(val: Sequenceable): boolean
 **废弃版本：** 9
 
 **替代接口：** [writeParcelable](arkts-ipc-rpc-messagesequence-c.md#writeparcelable)(val: Parcelable)
+
+<!--Device-MessageParcel-writeSequenceable(val: Sequenceable): boolean--><!--Device-MessageParcel-writeSequenceable(val: Sequenceable): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -3290,6 +3442,8 @@ writeSequenceableArray(sequenceableArray: Sequenceable[]): boolean
 **废弃版本：** 9
 
 **替代接口：** [writeParcelableArray](arkts-ipc-rpc-messagesequence-c.md#writeparcelablearray)(parcelableArray: Parcelable[])
+
+<!--Device-MessageParcel-writeSequenceableArray(sequenceableArray: Sequenceable[]): boolean--><!--Device-MessageParcel-writeSequenceableArray(sequenceableArray: Sequenceable[]): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -3357,6 +3511,8 @@ writeShort(val: number): boolean
 
 **替代接口：** [writeShort](arkts-ipc-rpc-messagesequence-c.md#writeshort)(val: number)
 
+<!--Device-MessageParcel-writeShort(val: number): boolean--><!--Device-MessageParcel-writeShort(val: number): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -3399,6 +3555,8 @@ writeShortArray(shortArray: number[]): boolean
 **废弃版本：** 9
 
 **替代接口：** [writeShortArray](arkts-ipc-rpc-messagesequence-c.md#writeshortarray)(shortArray: number[])
+
+<!--Device-MessageParcel-writeShortArray(shortArray: number[]): boolean--><!--Device-MessageParcel-writeShortArray(shortArray: number[]): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -3443,6 +3601,8 @@ writeString(val: string): boolean
 
 **替代接口：** [writeString](arkts-ipc-rpc-messagesequence-c.md#writestring)(val: string)
 
+<!--Device-MessageParcel-writeString(val: string): boolean--><!--Device-MessageParcel-writeString(val: string): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -3485,6 +3645,8 @@ writeStringArray(stringArray: string[]): boolean
 **废弃版本：** 9
 
 **替代接口：** [writeStringArray](arkts-ipc-rpc-messagesequence-c.md#writestringarray)(stringArray: string[])
+
+<!--Device-MessageParcel-writeStringArray(stringArray: string[]): boolean--><!--Device-MessageParcel-writeStringArray(stringArray: string[]): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 

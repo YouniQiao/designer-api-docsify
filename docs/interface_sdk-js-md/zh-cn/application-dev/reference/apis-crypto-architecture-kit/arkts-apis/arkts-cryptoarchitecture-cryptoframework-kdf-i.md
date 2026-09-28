@@ -8,6 +8,8 @@ interface Kdf
 
 **起始版本：** 11
 
+<!--Device-cryptoFramework-interface Kdf--><!--Device-cryptoFramework-interface Kdf-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Kdf
 - API版本11：SystemCapability.Security.CryptoFramework
@@ -28,7 +30,9 @@ generateSecret(params: KdfSpec, callback: AsyncCallback<DataBlob>): void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Kdf-generateSecret(params: KdfSpec, callback: AsyncCallback<DataBlob>): void--><!--Device-Kdf-generateSecret(params: KdfSpec, callback: AsyncCallback<DataBlob>): void-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Kdf
@@ -108,7 +112,9 @@ generateSecret(params: KdfSpec): Promise<DataBlob>
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Kdf-generateSecret(params: KdfSpec): Promise<DataBlob>--><!--Device-Kdf-generateSecret(params: KdfSpec): Promise<DataBlob>-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Kdf
@@ -193,7 +199,9 @@ generateSecretSync(params: KdfSpec): DataBlob
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Kdf-generateSecretSync(params: KdfSpec): DataBlob--><!--Device-Kdf-generateSecretSync(params: KdfSpec): DataBlob-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Kdf
 
@@ -267,7 +275,9 @@ readonly algName: string
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Kdf-readonly algName: string--><!--Device-Kdf-readonly algName: string-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Kdf

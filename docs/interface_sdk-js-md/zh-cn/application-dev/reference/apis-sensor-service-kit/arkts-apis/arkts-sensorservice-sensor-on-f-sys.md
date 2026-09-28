@@ -16,6 +16,8 @@ function on(type: SensorId.COLOR, callback: Callback<ColorResponse>, options?: O
 
 **起始版本：** 10
 
+<!--Device-sensor-function on(type: SensorId.COLOR, callback: Callback<ColorResponse>, options?: Options): void--><!--Device-sensor-function on(type: SensorId.COLOR, callback: Callback<ColorResponse>, options?: Options): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **系统接口：** 此接口为系统接口。
@@ -68,6 +70,8 @@ function on(type: SensorId.SAR, callback: Callback<SarResponse>, options?: Optio
 订阅吸收比率传感器数据变化。使用callback异步回调。通过回调函数异步上报SAR传感器数据，数据格式为SarResponse对象，包含absorptionRatio（吸收率）一个number类型字段。<br>当开发者需要监测设备电磁波吸收率以实现通信安全监测、辐射检测等功能时，使用此接口。
 
 **起始版本：** 10
+
+<!--Device-sensor-function on(type: SensorId.SAR, callback: Callback<SarResponse>, options?: Options): void--><!--Device-sensor-function on(type: SensorId.SAR, callback: Callback<SarResponse>, options?: Options): void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 

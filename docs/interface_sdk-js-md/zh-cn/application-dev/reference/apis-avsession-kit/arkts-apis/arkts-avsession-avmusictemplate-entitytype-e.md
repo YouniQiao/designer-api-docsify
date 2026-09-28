@@ -10,6 +10,8 @@ enum EntityType
 
 **起始版本：** 23
 
+<!--Device-avMusicTemplate-enum EntityType--><!--Device-avMusicTemplate-enum EntityType-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## UNKNOWN
@@ -23,6 +25,8 @@ UNKNOWN = 0
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EntityType-UNKNOWN = 0--><!--Device-EntityType-UNKNOWN = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -38,6 +42,8 @@ SINGLE = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-EntityType-SINGLE = 1--><!--Device-EntityType-SINGLE = 1-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## SINGER
@@ -51,6 +57,8 @@ SINGER = 2
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EntityType-SINGER = 2--><!--Device-EntityType-SINGER = 2-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -66,6 +74,8 @@ ALBUM = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-EntityType-ALBUM = 3--><!--Device-EntityType-ALBUM = 3-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## RANKING
@@ -79,6 +89,8 @@ RANKING = 4
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EntityType-RANKING = 4--><!--Device-EntityType-RANKING = 4-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -94,6 +106,8 @@ BANNER = 5
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-EntityType-BANNER = 5--><!--Device-EntityType-BANNER = 5-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## RADIO_STATION
@@ -107,5 +121,7 @@ RADIO_STATION = 6
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EntityType-RADIO_STATION = 6--><!--Device-EntityType-RADIO_STATION = 6-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate

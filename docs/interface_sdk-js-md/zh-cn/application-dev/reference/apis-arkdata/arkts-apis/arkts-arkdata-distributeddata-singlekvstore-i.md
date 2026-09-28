@@ -14,6 +14,8 @@ interface SingleKVStore extends KVStore
 
 **替代接口：** SingleKVStore
 
+<!--Device-distributedData-interface SingleKVStore extends KVStore--><!--Device-distributedData-interface SingleKVStore extends KVStore-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core @version 1
 
 ## 导入模块
@@ -34,6 +36,8 @@ closeResultSet(resultSet: KvStoreResultSet, callback: AsyncCallback<void>): void
 **废弃版本：** 9
 
 **替代接口：** closeResultSet
+
+<!--Device-SingleKVStore-closeResultSet(resultSet: KvStoreResultSet, callback: AsyncCallback<void>): void--><!--Device-SingleKVStore-closeResultSet(resultSet: KvStoreResultSet, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -78,6 +82,8 @@ closeResultSet(resultSet: KvStoreResultSet): Promise<void>
 
 **替代接口：** closeResultSet
 
+<!--Device-SingleKVStore-closeResultSet(resultSet: KvStoreResultSet): Promise<void>--><!--Device-SingleKVStore-closeResultSet(resultSet: KvStoreResultSet): Promise<void>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **参数：**
@@ -121,6 +127,8 @@ get(key: string, callback: AsyncCallback<Uint8Array | string | boolean | number>
 **废弃版本：** 9
 
 **替代接口：** get
+
+<!--Device-SingleKVStore-get(key: string, callback: AsyncCallback<Uint8Array | string | boolean | number>): void--><!--Device-SingleKVStore-get(key: string, callback: AsyncCallback<Uint8Array | string | boolean | number>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -168,6 +176,8 @@ get(key: string): Promise<Uint8Array | string | boolean | number>
 **废弃版本：** 9
 
 **替代接口：** get
+
+<!--Device-SingleKVStore-get(key: string): Promise<Uint8Array | string | boolean | number>--><!--Device-SingleKVStore-get(key: string): Promise<Uint8Array | string | boolean | number>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -218,6 +228,8 @@ getEntries(keyPrefix: string, callback: AsyncCallback<Entry[]>): void
 **废弃版本：** 9
 
 **替代接口：** getEntries
+
+<!--Device-SingleKVStore-getEntries(keyPrefix: string, callback: AsyncCallback<Entry[]>): void--><!--Device-SingleKVStore-getEntries(keyPrefix: string, callback: AsyncCallback<Entry[]>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -273,6 +285,8 @@ getEntries(keyPrefix: string): Promise<Entry[]>
 **废弃版本：** 9
 
 **替代接口：** getEntries
+
+<!--Device-SingleKVStore-getEntries(keyPrefix: string): Promise<Entry[]>--><!--Device-SingleKVStore-getEntries(keyPrefix: string): Promise<Entry[]>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -341,6 +355,8 @@ getEntries(query: Query, callback: AsyncCallback<Entry[]>): void
 
 **替代接口：** getEntries
 
+<!--Device-SingleKVStore-getEntries(query: Query, callback: AsyncCallback<Entry[]>): void--><!--Device-SingleKVStore-getEntries(query: Query, callback: AsyncCallback<Entry[]>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **参数：**
@@ -400,6 +416,8 @@ getEntries(query: Query): Promise<Entry[]>
 **废弃版本：** 9
 
 **替代接口：** getEntries
+
+<!--Device-SingleKVStore-getEntries(query: Query): Promise<Entry[]>--><!--Device-SingleKVStore-getEntries(query: Query): Promise<Entry[]>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -466,6 +484,8 @@ getResultSet(keyPrefix: string, callback: AsyncCallback<KvStoreResultSet>): void
 
 **替代接口：** getResultSet
 
+<!--Device-SingleKVStore-getResultSet(keyPrefix: string, callback: AsyncCallback<KvStoreResultSet>): void--><!--Device-SingleKVStore-getResultSet(keyPrefix: string, callback: AsyncCallback<KvStoreResultSet>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **参数：**
@@ -523,6 +543,8 @@ getResultSet(keyPrefix: string): Promise<KvStoreResultSet>
 **废弃版本：** 9
 
 **替代接口：** getResultSet
+
+<!--Device-SingleKVStore-getResultSet(keyPrefix: string): Promise<KvStoreResultSet>--><!--Device-SingleKVStore-getResultSet(keyPrefix: string): Promise<KvStoreResultSet>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -593,6 +615,8 @@ getResultSet(query: Query, callback: AsyncCallback<KvStoreResultSet>): void
 
 **替代接口：** getResultSet
 
+<!--Device-SingleKVStore-getResultSet(query: Query, callback: AsyncCallback<KvStoreResultSet>): void--><!--Device-SingleKVStore-getResultSet(query: Query, callback: AsyncCallback<KvStoreResultSet>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **参数：**
@@ -649,6 +673,8 @@ getResultSet(query: Query): Promise<KvStoreResultSet>
 **废弃版本：** 9
 
 **替代接口：** getResultSet
+
+<!--Device-SingleKVStore-getResultSet(query: Query): Promise<KvStoreResultSet>--><!--Device-SingleKVStore-getResultSet(query: Query): Promise<KvStoreResultSet>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -714,6 +740,8 @@ getResultSize(query: Query, callback: AsyncCallback<number>): void
 
 **替代接口：** getResultSize
 
+<!--Device-SingleKVStore-getResultSize(query: Query, callback: AsyncCallback<number>): void--><!--Device-SingleKVStore-getResultSize(query: Query, callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **参数：**
@@ -768,6 +796,8 @@ getResultSize(query: Query): Promise<number>
 **废弃版本：** 9
 
 **替代接口：** getResultSize
+
+<!--Device-SingleKVStore-getResultSize(query: Query): Promise<number>--><!--Device-SingleKVStore-getResultSize(query: Query): Promise<number>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -831,6 +861,8 @@ getSecurityLevel(callback: AsyncCallback<SecurityLevel>): void
 
 **替代接口：** getSecurityLevel
 
+<!--Device-SingleKVStore-getSecurityLevel(callback: AsyncCallback<SecurityLevel>): void--><!--Device-SingleKVStore-getSecurityLevel(callback: AsyncCallback<SecurityLevel>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **参数：**
@@ -868,6 +900,8 @@ getSecurityLevel(): Promise<SecurityLevel>
 
 **替代接口：** getSecurityLevel
 
+<!--Device-SingleKVStore-getSecurityLevel(): Promise<SecurityLevel>--><!--Device-SingleKVStore-getSecurityLevel(): Promise<SecurityLevel>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **返回值：**
@@ -904,6 +938,8 @@ off(event: 'dataChange', listener?: Callback<ChangeNotification>): void
 **废弃版本：** 9
 
 **替代接口：** off
+
+<!--Device-SingleKVStore-off(event: 'dataChange', listener?: Callback<ChangeNotification>): void--><!--Device-SingleKVStore-off(event: 'dataChange', listener?: Callback<ChangeNotification>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -951,6 +987,8 @@ off(event: 'syncComplete', syncCallback?: Callback<Array<[string, number]>>): vo
 
 **替代接口：** off
 
+<!--Device-SingleKVStore-off(event: 'syncComplete', syncCallback?: Callback<Array<[string, number]>>): void--><!--Device-SingleKVStore-off(event: 'syncComplete', syncCallback?: Callback<Array<[string, number]>>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **参数：**
@@ -995,6 +1033,8 @@ on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotificati
 
 **替代接口：** on
 
+<!--Device-SingleKVStore-on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotification>): void--><!--Device-SingleKVStore-on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotification>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **参数：**
@@ -1029,6 +1069,8 @@ on(event: 'syncComplete', syncCallback: Callback<Array<[string, number]>>): void
 **废弃版本：** 9
 
 **替代接口：** on
+
+<!--Device-SingleKVStore-on(event: 'syncComplete', syncCallback: Callback<Array<[string, number]>>): void--><!--Device-SingleKVStore-on(event: 'syncComplete', syncCallback: Callback<Array<[string, number]>>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -1072,6 +1114,8 @@ removeDeviceData(deviceId: string, callback: AsyncCallback<void>): void
 **废弃版本：** 9
 
 **替代接口：** removeDeviceData
+
+<!--Device-SingleKVStore-removeDeviceData(deviceId: string, callback: AsyncCallback<void>): void--><!--Device-SingleKVStore-removeDeviceData(deviceId: string, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -1123,6 +1167,8 @@ removeDeviceData(deviceId: string): Promise<void>
 **废弃版本：** 9
 
 **替代接口：** removeDeviceData
+
+<!--Device-SingleKVStore-removeDeviceData(deviceId: string): Promise<void>--><!--Device-SingleKVStore-removeDeviceData(deviceId: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -1180,6 +1226,8 @@ setSyncParam(defaultAllowedDelayMs: number, callback: AsyncCallback<void>): void
 
 **替代接口：** setSyncParam
 
+<!--Device-SingleKVStore-setSyncParam(defaultAllowedDelayMs: number, callback: AsyncCallback<void>): void--><!--Device-SingleKVStore-setSyncParam(defaultAllowedDelayMs: number, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **参数：**
@@ -1218,6 +1266,8 @@ setSyncParam(defaultAllowedDelayMs: number): Promise<void>
 **废弃版本：** 9
 
 **替代接口：** setSyncParam
+
+<!--Device-SingleKVStore-setSyncParam(defaultAllowedDelayMs: number): Promise<void>--><!--Device-SingleKVStore-setSyncParam(defaultAllowedDelayMs: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -1264,6 +1314,8 @@ sync(deviceIds: string[], mode: SyncMode, delayMs?: number): void
 **替代接口：** sync
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-SingleKVStore-sync(deviceIds: string[], mode: SyncMode, delayMs?: number): void--><!--Device-SingleKVStore-sync(deviceIds: string[], mode: SyncMode, delayMs?: number): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 

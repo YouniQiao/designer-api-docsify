@@ -8,6 +8,8 @@ export interface NotificationSortingMap
 
 **起始版本：** 7
 
+<!--Device-unnamed-export interface NotificationSortingMap--><!--Device-unnamed-export interface NotificationSortingMap-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -24,6 +26,8 @@ readonly sortedHashCode: Array<string>
 
 **起始版本：** 7
 
+<!--Device-NotificationSortingMap-readonly sortedHashCode: Array<string>--><!--Device-NotificationSortingMap-readonly sortedHashCode: Array<string>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -39,6 +43,8 @@ readonly sortings: Record<string, NotificationSorting>
 **类型：** Record&lt;string, [NotificationSorting](arkts-notification-notificationsorting-notificationsorting-i-sys.md)&gt;
 
 **起始版本：** 7
+
+<!--Device-NotificationSortingMap-readonly sortings: Record<string, NotificationSorting>--><!--Device-NotificationSortingMap-readonly sortings: Record<string, NotificationSorting>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

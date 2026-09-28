@@ -28,6 +28,8 @@ function replaceUrl(options: RouterOptions, callback: AsyncCallback<void>): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-router-function replaceUrl(options: RouterOptions, callback: AsyncCallback<void>): void--><!--Device-router-function replaceUrl(options: RouterOptions, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Lite
 
 **参数：**
@@ -94,6 +96,8 @@ function replaceUrl(options: RouterOptions): Promise<void>
 **替代接口：** [replaceUrl](arkts-arkui-arkui-uicontext-router-c.md#replaceurl-1)(options: router.RouterOptions)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-router-function replaceUrl(options: RouterOptions): Promise<void>--><!--Device-router-function replaceUrl(options: RouterOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -169,6 +173,8 @@ function replaceUrl(options: RouterOptions, mode: RouterMode, callback: AsyncCal
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-router-function replaceUrl(options: RouterOptions, mode: RouterMode, callback: AsyncCallback<void>): void--><!--Device-router-function replaceUrl(options: RouterOptions, mode: RouterMode, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Lite
 
 **参数：**
@@ -236,6 +242,8 @@ function replaceUrl(options: RouterOptions, mode: RouterMode): Promise<void>
 **替代接口：** [replaceUrl](arkts-arkui-arkui-uicontext-router-c.md#replaceurl-3)(options: router.RouterOptions, mode: router.RouterMode)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-router-function replaceUrl(options: RouterOptions, mode: RouterMode): Promise<void>--><!--Device-router-function replaceUrl(options: RouterOptions, mode: RouterMode): Promise<void>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Lite
 

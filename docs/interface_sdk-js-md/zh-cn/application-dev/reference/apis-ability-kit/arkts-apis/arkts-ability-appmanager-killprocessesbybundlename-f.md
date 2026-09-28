@@ -20,6 +20,8 @@ function killProcessesByBundleName(bundleName: string, clearPageStack: boolean, 
 
 **需要权限：** ohos.permission.KILL_APP_PROCESSES or ohos.permission.CLEAN_BACKGROUND_PROCESSES
 
+<!--Device-appManager-function killProcessesByBundleName(bundleName: string, clearPageStack: boolean, appIndex?: int): Promise<void>--><!--Device-appManager-function killProcessesByBundleName(bundleName: string, clearPageStack: boolean, appIndex?: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**

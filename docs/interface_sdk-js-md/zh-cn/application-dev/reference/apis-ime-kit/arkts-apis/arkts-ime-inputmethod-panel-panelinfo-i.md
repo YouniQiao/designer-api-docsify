@@ -8,6 +8,8 @@ export interface PanelInfo
 
 **起始版本：** 11
 
+<!--Device-unnamed-export interface PanelInfo--><!--Device-unnamed-export interface PanelInfo-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## 导入模块
@@ -30,6 +32,8 @@ flag?: PanelFlag
 
 **起始版本：** 11
 
+<!--Device-PanelInfo-flag?: PanelFlag--><!--Device-PanelInfo-flag?: PanelFlag-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## type
@@ -43,5 +47,7 @@ type: PanelType
 **类型：** [PanelType](arkts-ime-inputmethod-panel-paneltype-e.md)
 
 **起始版本：** 11
+
+<!--Device-PanelInfo-type: PanelType--><!--Device-PanelInfo-type: PanelType-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework

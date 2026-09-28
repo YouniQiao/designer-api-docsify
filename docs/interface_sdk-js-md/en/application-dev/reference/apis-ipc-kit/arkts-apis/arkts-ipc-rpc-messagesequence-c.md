@@ -8,6 +8,8 @@ Provides APIs for reading and writing data in specific format. During RPC or IPC
 
 **Since:** 9
 
+<!--Device-rpc-class MessageSequence--><!--Device-rpc-class MessageSequence-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 ## Modules to Import
@@ -30,6 +32,8 @@ Closes a file descriptor. This API is a static method.
 - After the file descriptor is closed, the file cannot be read or written.
 
 **Since:** 9
+
+<!--Device-MessageSequence-static closeFileDescriptor(fd: int): void--><!--Device-MessageSequence-static closeFileDescriptor(fd: int): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -73,6 +77,8 @@ containFileDescriptors(): boolean
 Checks whether this **MessageSequence** object contains file descriptors. This method is applicable to scenarios where you need to determine whether to process file descriptors during file transfer or check the data type before receiving data to determine the processing method.
 
 **Since:** 9
+
+<!--Device-MessageSequence-containFileDescriptors(): boolean--><!--Device-MessageSequence-containFileDescriptors(): boolean-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -121,6 +127,8 @@ frequent creation and release.
 
 **Since:** 9
 
+<!--Device-MessageSequence-static create(): MessageSequence--><!--Device-MessageSequence-static create(): MessageSequence-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -167,6 +175,8 @@ closed.
 - The lifecycle of each descriptor must be managed independently after duplication.
 
 **Since:** 9
+
+<!--Device-MessageSequence-static dupFileDescriptor(fd: int): int--><!--Device-MessageSequence-static dupFileDescriptor(fd: int): int-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -218,6 +228,8 @@ Obtains the capacity of this **MessageSequence** object.
 
 **Since:** 9
 
+<!--Device-MessageSequence-getCapacity(): int--><!--Device-MessageSequence-getCapacity(): int-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -253,6 +265,8 @@ getRawDataCapacity(): number
 Obtains the maximum amount of raw data that can be held by this **MessageSequence** object. This method is applicable to scenarios where you need to check whether the capacity meets the requirements before large-data transmission, or to estimate the data size in advance before processing large batches of data.
 
 **Since:** 9
+
+<!--Device-MessageSequence-getRawDataCapacity(): int--><!--Device-MessageSequence-getRawDataCapacity(): int-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -290,6 +304,8 @@ Obtains the readable capacity of this **MessageSequence** object.
 
 **Since:** 9
 
+<!--Device-MessageSequence-getReadableBytes(): int--><!--Device-MessageSequence-getReadableBytes(): int-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -326,6 +342,8 @@ getReadPosition(): number
 Obtains the read position of this **MessageSequence** object.
 
 **Since:** 9
+
+<!--Device-MessageSequence-getReadPosition(): int--><!--Device-MessageSequence-getReadPosition(): int-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -368,6 +386,8 @@ Obtains the data size of this **MessageSequence** object.
 
 **Since:** 9
 
+<!--Device-MessageSequence-getSize(): int--><!--Device-MessageSequence-getSize(): int-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -403,6 +423,8 @@ getWritableBytes(): number
 Obtains the writable capacity (in bytes) of this **MessageSequence** object.
 
 **Since:** 9
+
+<!--Device-MessageSequence-getWritableBytes(): int--><!--Device-MessageSequence-getWritableBytes(): int-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -440,6 +462,8 @@ getWritePosition(): number
 Obtains the write position of this **MessageSequence** object.
 
 **Since:** 9
+
+<!--Device-MessageSequence-getWritePosition(): int--><!--Device-MessageSequence-getWritePosition(): int-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -482,6 +506,8 @@ pairs.
 - A mismatch in **typeCode** values may cause data exception or errors. It is advised to select an appropriate [TypeCode](arkts-ipc-rpc-typecode-e.md) value based on the service type.
 
 **Since:** 12
+
+<!--Device-MessageSequence-readArrayBuffer(typeCode: TypeCode): ArrayBuffer--><!--Device-MessageSequence-readArrayBuffer(typeCode: TypeCode): ArrayBuffer-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -549,6 +575,8 @@ Reads the anonymous shared object from this **MessageSequence** object. Before u
 
 **Since:** 9
 
+<!--Device-MessageSequence-readAshmem(): Ashmem--><!--Device-MessageSequence-readAshmem(): Ashmem-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -613,6 +641,8 @@ Reads the Boolean value from this **MessageSequence** object.
 
 **Since:** 9
 
+<!--Device-MessageSequence-readBoolean(): boolean--><!--Device-MessageSequence-readBoolean(): boolean-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -655,6 +685,8 @@ readBooleanArray(dataIn: boolean[]): void
 Reads the Boolean array from this **MessageSequence** object and writes it to the created empty array.
 
 **Since:** 9
+
+<!--Device-MessageSequence-readBooleanArray(dataIn: boolean[]): void--><!--Device-MessageSequence-readBooleanArray(dataIn: boolean[]): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -706,6 +738,8 @@ Reads a boolean array from this MessageSequence instance.
 
 **Since:** 9
 
+<!--Device-MessageSequence-readBooleanArray(): boolean[]--><!--Device-MessageSequence-readBooleanArray(): boolean[]-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -752,6 +786,8 @@ Reads the byte value from this **MessageSequence** object.
 
 **Since:** 9
 
+<!--Device-MessageSequence-readByte(): int--><!--Device-MessageSequence-readByte(): int-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -794,6 +830,8 @@ readByteArray(dataIn: number[]): void
 Reads the byte array from this **MessageSequence** object and writes it to the created empty array. After reading, the **dataIn** array will be filled with the read byte data, and the read pointer advances by the corresponding number of bytes.
 
 **Since:** 9
+
+<!--Device-MessageSequence-readByteArray(dataIn: int[]): void--><!--Device-MessageSequence-readByteArray(dataIn: int[]): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -844,6 +882,8 @@ Reads the byte array from this **MessageSequence** object. After the read operat
 
 **Since:** 9
 
+<!--Device-MessageSequence-readByteArray(): int[]--><!--Device-MessageSequence-readByteArray(): int[]-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -889,6 +929,8 @@ Reads the character from this **MessageSequence** object.
 
 **Since:** 9
 
+<!--Device-MessageSequence-readChar(): int--><!--Device-MessageSequence-readChar(): int-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -931,6 +973,8 @@ readCharArray(dataIn: number[]): void
 Reads the character array from this **MessageSequence** object and writes it to the created empty array.
 
 **Since:** 9
+
+<!--Device-MessageSequence-readCharArray(dataIn: int[]): void--><!--Device-MessageSequence-readCharArray(dataIn: int[]): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -982,6 +1026,8 @@ Reads the character array from this **MessageSequence** object.
 
 **Since:** 9
 
+<!--Device-MessageSequence-readCharArray(): int[]--><!--Device-MessageSequence-readCharArray(): int[]-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -1028,6 +1074,8 @@ Reads the double value from this **MessageSequence** object.
 
 **Since:** 9
 
+<!--Device-MessageSequence-readDouble(): double--><!--Device-MessageSequence-readDouble(): double-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -1070,6 +1118,8 @@ readDoubleArray(dataIn: number[]): void
 Reads the double array from this **MessageSequence** object and writes it to the created empty array.
 
 **Since:** 9
+
+<!--Device-MessageSequence-readDoubleArray(dataIn: double[]): void--><!--Device-MessageSequence-readDoubleArray(dataIn: double[]): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -1117,6 +1167,8 @@ readDoubleArray(): number[]
 Reads the double array from this **MessageSequence** object. The system processes float data as that of the double type. Therefore, the total number of bytes occupied by a float array must be calculated as the double type.
 
 **Since:** 9
+
+<!--Device-MessageSequence-readDoubleArray(): double[]--><!--Device-MessageSequence-readDoubleArray(): double[]-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -1169,6 +1221,8 @@ method.
 - Calling sequence: the server processes a request → call [writeNoException](#writenoexception) → the client receives the response → call [readException](#readexception). If the server does not call [writeNoException](#writenoexception), calling this method will fail.
 
 **Since:** 9
+
+<!--Device-MessageSequence-readException(): void--><!--Device-MessageSequence-readException(): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -1275,6 +1329,8 @@ pairs.
 
 **Since:** 9
 
+<!--Device-MessageSequence-readFileDescriptor(): int--><!--Device-MessageSequence-readFileDescriptor(): int-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -1321,6 +1377,8 @@ Reads a float value from this **MessageSequence** instance. Since the system int
 
 **Since:** 9
 
+<!--Device-MessageSequence-readFloat(): double--><!--Device-MessageSequence-readFloat(): double-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -1363,6 +1421,8 @@ readFloatArray(dataIn: number[]): void
 Reads the double array from this **MessageSequence** object and writes it to the created empty array.
 
 **Since:** 9
+
+<!--Device-MessageSequence-readFloatArray(dataIn: double[]): void--><!--Device-MessageSequence-readFloatArray(dataIn: double[]): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -1411,6 +1471,8 @@ Reads the double array from this **MessageSequence** object. The system processe
 
 **Since:** 9
 
+<!--Device-MessageSequence-readFloatArray(): double[]--><!--Device-MessageSequence-readFloatArray(): double[]-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -1457,7 +1519,9 @@ Reads the integer from this **MessageSequence** object.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+
+<!--Device-MessageSequence-readInt(): int--><!--Device-MessageSequence-readInt(): int-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -1506,6 +1570,8 @@ Reads the integer array from this **MessageSequence** object and writes it to th
 
 **Since:** 9
 
+<!--Device-MessageSequence-readIntArray(dataIn: int[]): void--><!--Device-MessageSequence-readIntArray(dataIn: int[]): void-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
@@ -1552,6 +1618,8 @@ readIntArray(): number[]
 Reads the integer array from this **MessageSequence** object.
 
 **Since:** 9
+
+<!--Device-MessageSequence-readIntArray(): int[]--><!--Device-MessageSequence-readIntArray(): int[]-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -1601,6 +1669,8 @@ pairs.
 
 **Since:** 9
 
+<!--Device-MessageSequence-readInterfaceToken(): string--><!--Device-MessageSequence-readInterfaceToken(): string-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -1647,6 +1717,8 @@ Reads the long integer from this **MessageSequence** object.
 
 **Since:** 9
 
+<!--Device-MessageSequence-readLong(): long--><!--Device-MessageSequence-readLong(): long-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -1689,6 +1761,8 @@ readLongArray(dataIn: number[]): void
 Reads a long array from this **MessageSequence** object and writes it to a created empty array.
 
 **Since:** 9
+
+<!--Device-MessageSequence-readLongArray(dataIn: long[]): void--><!--Device-MessageSequence-readLongArray(dataIn: long[]): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -1737,6 +1811,8 @@ Reads a long array from this **MessageSequence** object.
 
 **Since:** 9
 
+<!--Device-MessageSequence-readLongArray(): long[]--><!--Device-MessageSequence-readLongArray(): long[]-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -1784,6 +1860,8 @@ Reads the **Parcelable** object from this **MessageSequence** object to the spec
 - It is advised to handle exceptions within the **unmarshalling** method.
 
 **Since:** 9
+
+<!--Device-MessageSequence-readParcelable(dataIn: Parcelable): void--><!--Device-MessageSequence-readParcelable(dataIn: Parcelable): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -1849,6 +1927,8 @@ readParcelableArray(parcelableArray: Parcelable[]): void
 Reads the **Parcelable** array from this **MessageSequence** object. This method is applicable to scenarios where multiple custom data structure objects that are transmitted in batches need to be received, such as reading multiple service records, batch configuration information, or multiple entity objects.
 
 **Since:** 9
+
+<!--Device-MessageSequence-readParcelableArray(parcelableArray: Parcelable[]): void--><!--Device-MessageSequence-readParcelableArray(parcelableArray: Parcelable[]): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -1924,6 +2004,8 @@ pairs.
 
 **Since:** 11
 
+<!--Device-MessageSequence-readRawDataBuffer(size: int): ArrayBuffer--><!--Device-MessageSequence-readRawDataBuffer(size: int): ArrayBuffer-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
@@ -1985,6 +2067,8 @@ Reads the remote object from **MessageSequence**. You can use this API to deseri
 
 **Since:** 9
 
+<!--Device-MessageSequence-readRemoteObject(): IRemoteObject--><!--Device-MessageSequence-readRemoteObject(): IRemoteObject-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -2043,6 +2127,8 @@ Reads the **IRemoteObject** array from this **MessageSequence** object and write
 - If the read operation fails, an exception will be thrown. It is advised to use a try-catch block to catch it.
 
 **Since:** 9
+
+<!--Device-MessageSequence-readRemoteObjectArray(objects: IRemoteObject[]): void--><!--Device-MessageSequence-readRemoteObjectArray(objects: IRemoteObject[]): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -2103,6 +2189,8 @@ Reads the **IRemoteObject** array from this **MessageSequence** object.
 
 **Since:** 9
 
+<!--Device-MessageSequence-readRemoteObjectArray(): IRemoteObject[]--><!--Device-MessageSequence-readRemoteObjectArray(): IRemoteObject[]-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -2161,6 +2249,8 @@ truncation.
 
 **Since:** 9
 
+<!--Device-MessageSequence-readShort(): int--><!--Device-MessageSequence-readShort(): int-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -2203,6 +2293,8 @@ readShortArray(dataIn: number[]): void
 Reads the short array from this **MessageSequence** object and writes it to the created empty array.
 
 **Since:** 9
+
+<!--Device-MessageSequence-readShortArray(dataIn: int[]): void--><!--Device-MessageSequence-readShortArray(dataIn: int[]): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -2251,6 +2343,8 @@ Reads the short array from this **MessageSequence** object.
 
 **Since:** 9
 
+<!--Device-MessageSequence-readShortArray(): int[]--><!--Device-MessageSequence-readShortArray(): int[]-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -2296,7 +2390,9 @@ Reads the string from this **MessageSequence** object.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+
+<!--Device-MessageSequence-readString(): string--><!--Device-MessageSequence-readString(): string-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -2345,6 +2441,8 @@ Reads the string array from this **MessageSequence** object and writes it to the
 - The read pointer advances by the corresponding number of bytes.
 
 **Since:** 9
+
+<!--Device-MessageSequence-readStringArray(dataIn: string[]): void--><!--Device-MessageSequence-readStringArray(dataIn: string[]): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -2396,6 +2494,8 @@ Reads the string array from this **MessageSequence** object.
 
 **Since:** 9
 
+<!--Device-MessageSequence-readStringArray(): string[]--><!--Device-MessageSequence-readStringArray(): string[]-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -2445,6 +2545,8 @@ Reclaims the **MessageSequence** object that is no longer used.
 
 **Since:** 9
 
+<!--Device-MessageSequence-reclaim(): void--><!--Device-MessageSequence-reclaim(): void-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Examples**
@@ -2473,6 +2575,8 @@ rewindRead(pos: number): void
 Moves the read pointer to the specified position.
 
 **Since:** 9
+
+<!--Device-MessageSequence-rewindRead(pos: int): void--><!--Device-MessageSequence-rewindRead(pos: int): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -2522,6 +2626,8 @@ Moves the write pointer to the specified position.
 
 **Since:** 9
 
+<!--Device-MessageSequence-rewindWrite(pos: int): void--><!--Device-MessageSequence-rewindWrite(pos: int): void-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
@@ -2568,6 +2674,8 @@ Sets the storage capacity of this **MessageSequence** object.
 
 **Since:** 9
 
+<!--Device-MessageSequence-setCapacity(size: int): void--><!--Device-MessageSequence-setCapacity(size: int): void-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
@@ -2610,6 +2718,8 @@ setSize(size: number): void
 Sets the size of the data contained in this **MessageSequence** object.
 
 **Since:** 9
+
+<!--Device-MessageSequence-setSize(size: int): void--><!--Device-MessageSequence-setSize(size: int): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -2660,6 +2770,8 @@ Writes data of the ArrayBuffer type to this **MessageSequence** object.
 - You must select the correct [TypeCode](arkts-ipc-rpc-typecode-e.md) enumeration value based on the actual data type.
 
 **Since:** 12
+
+<!--Device-MessageSequence-writeArrayBuffer(buf: ArrayBuffer, typeCode: TypeCode): void--><!--Device-MessageSequence-writeArrayBuffer(buf: ArrayBuffer, typeCode: TypeCode): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -2719,6 +2831,8 @@ Writes an anonymous shared object to this **MessageSequence** object.
 
 **Since:** 9
 
+<!--Device-MessageSequence-writeAshmem(ashmem: Ashmem): void--><!--Device-MessageSequence-writeAshmem(ashmem: Ashmem): void-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
@@ -2777,6 +2891,8 @@ Writes a Boolean value to this **MessageSequence** object.
 
 **Since:** 9
 
+<!--Device-MessageSequence-writeBoolean(val: boolean): void--><!--Device-MessageSequence-writeBoolean(val: boolean): void-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
@@ -2822,6 +2938,8 @@ must be used in pairs.
 - The length of the array to be read must match the length of the array that was written.
 
 **Since:** 9
+
+<!--Device-MessageSequence-writeBooleanArray(booleanArray: boolean[]): void--><!--Device-MessageSequence-writeBooleanArray(booleanArray: boolean[]): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -2871,6 +2989,8 @@ Writes a byte value to this **MessageSequence** object. After this method is cal
 
 **Since:** 9
 
+<!--Device-MessageSequence-writeByte(val: int): void--><!--Device-MessageSequence-writeByte(val: int): void-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
@@ -2916,6 +3036,8 @@ in pairs.
 - The length of the array to be read must match the length of the array that was written.
 
 **Since:** 9
+
+<!--Device-MessageSequence-writeByteArray(byteArray: int[]): void--><!--Device-MessageSequence-writeByteArray(byteArray: int[]): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -2964,6 +3086,8 @@ Writes a character to this **MessageSequence** object.
 
 **Since:** 9
 
+<!--Device-MessageSequence-writeChar(val: int): void--><!--Device-MessageSequence-writeChar(val: int): void-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
@@ -3008,6 +3132,8 @@ Writes a character array to this **MessageSequence** object.
 - The length of the array to be read must match the length of the array that was written.
 
 **Since:** 9
+
+<!--Device-MessageSequence-writeCharArray(charArray: int[]): void--><!--Device-MessageSequence-writeCharArray(charArray: int[]): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -3054,6 +3180,8 @@ Writes a double value to this **MessageSequence** object.
 
 **Since:** 9
 
+<!--Device-MessageSequence-writeDouble(val: double): void--><!--Device-MessageSequence-writeDouble(val: double): void-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
@@ -3099,6 +3227,8 @@ be used in pairs.
 - The length of the array to be read must match the length of the array that was written.
 
 **Since:** 9
+
+<!--Device-MessageSequence-writeDoubleArray(doubleArray: double[]): void--><!--Device-MessageSequence-writeDoubleArray(doubleArray: double[]): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -3152,6 +3282,8 @@ Writes a file descriptor to this **MessageSequence** object. After this method i
 
 **Since:** 9
 
+<!--Device-MessageSequence-writeFileDescriptor(fd: int): void--><!--Device-MessageSequence-writeFileDescriptor(fd: int): void-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
@@ -3196,6 +3328,8 @@ writeFloat(val: number): void
 Writes a double value to this **MessageSequence** object. Since the system internally processes float data as double, the data actually written is stored in double-precision format.
 
 **Since:** 9
+
+<!--Device-MessageSequence-writeFloat(val: double): void--><!--Device-MessageSequence-writeFloat(val: double): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -3242,6 +3376,8 @@ used in pairs.
 - The length of the array to be read must match the length of the array that was written.
 
 **Since:** 9
+
+<!--Device-MessageSequence-writeFloatArray(floatArray: double[]): void--><!--Device-MessageSequence-writeFloatArray(floatArray: double[]): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -3291,7 +3427,9 @@ Writes an integer to this **MessageSequence** object. After this method is calle
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+
+<!--Device-MessageSequence-writeInt(val: int): void--><!--Device-MessageSequence-writeInt(val: int): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -3339,6 +3477,8 @@ Writes an integer array to this **MessageSequence** object.
 
 **Since:** 9
 
+<!--Device-MessageSequence-writeIntArray(intArray: int[]): void--><!--Device-MessageSequence-writeIntArray(intArray: int[]): void-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
@@ -3384,6 +3524,8 @@ pairs.
 - If the length limit is exceeded, a parameter error exception will be thrown.
 
 **Since:** 9
+
+<!--Device-MessageSequence-writeInterfaceToken(token: string): void--><!--Device-MessageSequence-writeInterfaceToken(token: string): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -3431,6 +3573,8 @@ Writes a long integer to this **MessageSequence** object.
 
 **Since:** 9
 
+<!--Device-MessageSequence-writeLong(val: long): void--><!--Device-MessageSequence-writeLong(val: long): void-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
@@ -3476,6 +3620,8 @@ used in pairs.
 - The length of the array to be read must match the length of the array that was written.
 
 **Since:** 9
+
+<!--Device-MessageSequence-writeLongArray(longArray: long[]): void--><!--Device-MessageSequence-writeLongArray(longArray: long[]): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -3525,6 +3671,8 @@ to retrieve exception information.
 - If the server does not call **writeNoException()**, the client's call to [readException](#readexception) will fail.
 
 **Since:** 9
+
+<!--Device-MessageSequence-writeNoException(): void--><!--Device-MessageSequence-writeNoException(): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -3584,6 +3732,8 @@ Writes a **Parcelable** object to this **MessageSequence** object. After this me
 - Complex objects may occupy a significant amount of buffer space.
 
 **Since:** 9
+
+<!--Device-MessageSequence-writeParcelable(val: Parcelable): void--><!--Device-MessageSequence-writeParcelable(val: Parcelable): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -3650,6 +3800,8 @@ pairs.
 - The length of the array to be read must match the length of the array that was written.
 
 **Since:** 9
+
+<!--Device-MessageSequence-writeParcelableArray(parcelableArray: Parcelable[]): void--><!--Device-MessageSequence-writeParcelableArray(parcelableArray: Parcelable[]): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -3723,6 +3875,8 @@ Writes raw data to this **MessageSequence** object.
 
 **Since:** 11
 
+<!--Device-MessageSequence-writeRawDataBuffer(rawData: ArrayBuffer, size: int): void--><!--Device-MessageSequence-writeRawDataBuffer(rawData: ArrayBuffer, size: int): void-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
@@ -3776,6 +3930,8 @@ thrown.
 - This method and the **readRemoteObject** method must be used in pairs.
 
 **Since:** 9
+
+<!--Device-MessageSequence-writeRemoteObject(obj: IRemoteObject): void--><!--Device-MessageSequence-writeRemoteObject(obj: IRemoteObject): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -3836,6 +3992,8 @@ Writes an **IRemoteObject** array to this **MessageSequence** object. This metho
 
 **Since:** 9
 
+<!--Device-MessageSequence-writeRemoteObjectArray(objectArray: IRemoteObject[]): void--><!--Device-MessageSequence-writeRemoteObjectArray(objectArray: IRemoteObject[]): void-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
@@ -3894,6 +4052,8 @@ Writes a short integer to this **MessageSequence** object.
 
 **Since:** 9
 
+<!--Device-MessageSequence-writeShort(val: int): void--><!--Device-MessageSequence-writeShort(val: int): void-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
@@ -3939,6 +4099,8 @@ used in pairs.
 - The length of the array to be read must match the length of the array that was written.
 
 **Since:** 9
+
+<!--Device-MessageSequence-writeShortArray(shortArray: int[]): void--><!--Device-MessageSequence-writeShortArray(shortArray: int[]): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -3991,7 +4153,9 @@ bytes.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+
+<!--Device-MessageSequence-writeString(val: string): void--><!--Device-MessageSequence-writeString(val: string): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -4040,6 +4204,8 @@ be used in pairs.
 
 **Since:** 9
 
+<!--Device-MessageSequence-writeStringArray(stringArray: string[]): void--><!--Device-MessageSequence-writeStringArray(stringArray: string[]): void-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
@@ -4085,6 +4251,8 @@ Reads raw data from this **MessageSequence** object.
 **Deprecated since:** 11
 
 **Substitutes:** [readRawDataBuffer](#readrawdatabuffer)(size: number)
+
+<!--Device-MessageSequence-readRawData(size: number): number[]--><!--Device-MessageSequence-readRawData(size: number): number[]-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -4148,6 +4316,8 @@ Writes raw data to this **MessageSequence** object.
 **Deprecated since:** 11
 
 **Substitutes:** [writeRawDataBuffer](#writerawdatabuffer)(rawData: ArrayBuffer, size: number)
+
+<!--Device-MessageSequence-writeRawData(rawData: number[], size: number): void--><!--Device-MessageSequence-writeRawData(rawData: number[], size: number): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 

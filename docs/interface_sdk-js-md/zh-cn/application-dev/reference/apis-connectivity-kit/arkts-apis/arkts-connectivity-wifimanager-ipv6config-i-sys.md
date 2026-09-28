@@ -8,6 +8,8 @@ Wi-Fi IPv6配置信息。
 
 **起始版本：** 20
 
+<!--Device-wifiManager-interface Ipv6Config--><!--Device-wifiManager-interface Ipv6Config-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ DNS 服务器。
 
 **起始版本：** 20
 
+<!--Device-Ipv6Config-dnsServers: Array<string>--><!--Device-Ipv6Config-dnsServers: Array<string>-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ domains: Array<string>
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 20
+
+<!--Device-Ipv6Config-domains: Array<string>--><!--Device-Ipv6Config-domains: Array<string>-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -62,6 +68,8 @@ gateway: string
 
 **起始版本：** 20
 
+<!--Device-Ipv6Config-gateway: string--><!--Device-Ipv6Config-gateway: string-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。
@@ -78,6 +86,8 @@ IPv6地址。
 
 **起始版本：** 20
 
+<!--Device-Ipv6Config-ipAddress: string--><!--Device-Ipv6Config-ipAddress: string-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。
@@ -93,6 +103,8 @@ prefixLength: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-Ipv6Config-prefixLength: int--><!--Device-Ipv6Config-prefixLength: int-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 

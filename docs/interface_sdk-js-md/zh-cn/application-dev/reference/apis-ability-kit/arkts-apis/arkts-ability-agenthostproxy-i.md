@@ -14,6 +14,8 @@ AgentHostProxy用于从[AgentExtensionAbility](arkts-ability-app-agent-agentexte
 
 **起始版本：** 24
 
+<!--Device-unnamed-export interface AgentHostProxy--><!--Device-unnamed-export interface AgentHostProxy-End-->
+
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 ## authorize
@@ -28,7 +30,9 @@ authorize(handshakeData: string): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-AgentHostProxy-authorize(handshakeData: string): void--><!--Device-AgentHostProxy-authorize(handshakeData: string): void-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -56,7 +60,9 @@ sendData(data: string): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-AgentHostProxy-sendData(data: string): void--><!--Device-AgentHostProxy-sendData(data: string): void-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 

@@ -21,6 +21,8 @@ function killProcessesByBundleName(bundleName: string): Promise<void>
 
 **需要权限：** ohos.permission.CLEAN_BACKGROUND_PROCESSES
 
+<!--Device-appManager-function killProcessesByBundleName(bundleName: string): Promise<void>--><!--Device-appManager-function killProcessesByBundleName(bundleName: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -71,6 +73,8 @@ function killProcessesByBundleName(bundleName: string, callback: AsyncCallback<v
 **替代接口：** [killProcessesByBundleName](arkts-ability-appmanager-killprocessesbybundlename-f.md)
 
 **需要权限：** ohos.permission.CLEAN_BACKGROUND_PROCESSES
+
+<!--Device-appManager-function killProcessesByBundleName(bundleName: string, callback: AsyncCallback<void>)--><!--Device-appManager-function killProcessesByBundleName(bundleName: string, callback: AsyncCallback<void>)-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

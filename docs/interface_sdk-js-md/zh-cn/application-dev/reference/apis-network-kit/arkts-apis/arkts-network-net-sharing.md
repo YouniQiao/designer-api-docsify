@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace sharing--><!--Device-unnamed-declare namespace sharing-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.NetSharing
 
 ## 导入模块

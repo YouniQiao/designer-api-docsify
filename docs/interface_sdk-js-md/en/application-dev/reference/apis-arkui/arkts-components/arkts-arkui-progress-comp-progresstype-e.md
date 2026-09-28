@@ -8,6 +8,8 @@ Enumerates progress indicator types.
 
 **Since:** 8
 
+<!--Device-unnamed-declare enum ProgressType--><!--Device-unnamed-declare enum ProgressType-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Linear
@@ -23,6 +25,8 @@ Linear type. Since API version 9, the progress indicator adapts to vertical disp
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-ProgressType-Linear = 0--><!--Device-ProgressType-Linear = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,6 +44,8 @@ Ring type without scales. The ring gradually displays until it is fully filled.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-ProgressType-Ring = 1--><!--Device-ProgressType-Ring = 1-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Eclipse
@@ -55,6 +61,8 @@ Eclipse type, which visualizes the progress in a way similar to the moon waxing 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-ProgressType-Eclipse = 2--><!--Device-ProgressType-Eclipse = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,6 +80,8 @@ Ring style with scales, which is similar to the clock scale style. Since API ver
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-ProgressType-ScaleRing = 3--><!--Device-ProgressType-ScaleRing = 3-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Capsule
@@ -87,5 +97,7 @@ Capsule style. The progress display effect at the arc ends is the same as that o
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-ProgressType-Capsule = 4--><!--Device-ProgressType-Capsule = 4-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

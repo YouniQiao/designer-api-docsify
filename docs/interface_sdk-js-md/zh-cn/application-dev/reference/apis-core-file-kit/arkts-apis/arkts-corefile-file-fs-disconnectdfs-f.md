@@ -18,6 +18,8 @@ declare function disconnectDfs(networkId: string): Promise<void>
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-unnamed-declare function disconnectDfs(networkId: string): Promise<void>--><!--Device-unnamed-declare function disconnectDfs(networkId: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**

@@ -8,6 +8,8 @@ Describes the properties of the status bar<!--Del--> and three-button navigation
 
 **Since:** 6
 
+<!--Device-window-interface SystemBarProperties--><!--Device-window-interface SystemBarProperties-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 ## Modules to Import
@@ -30,7 +32,9 @@ Whether to enable animation for a three-button navigation bar property change. *
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-SystemBarProperties-enableNavigationBarAnimation?: boolean--><!--Device-SystemBarProperties-enableNavigationBarAnimation?: boolean-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -46,7 +50,9 @@ Whether to enable animation for a status bar property change. **true** to enable
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-SystemBarProperties-enableStatusBarAnimation?: boolean--><!--Device-SystemBarProperties-enableStatusBarAnimation?: boolean-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -64,7 +70,9 @@ Whether any icon on the three-button navigation bar is highlighted. **true** if 
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-SystemBarProperties-isNavigationBarLightIcon?: boolean--><!--Device-SystemBarProperties-isNavigationBarLightIcon?: boolean-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -80,7 +88,9 @@ Whether any icon on the status bar is highlighted. **true** if highlighted, **fa
 
 **Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-SystemBarProperties-isStatusBarLightIcon?: boolean--><!--Device-SystemBarProperties-isStatusBarLightIcon?: boolean-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -98,7 +108,9 @@ Background color of the three-button navigation bar. The value is a hexadecimal 
 
 **Since:** 6
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-SystemBarProperties-navigationBarColor?: string--><!--Device-SystemBarProperties-navigationBarColor?: string-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -116,7 +128,9 @@ Color of the text on the three-button navigation bar. After this property is set
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-SystemBarProperties-navigationBarContentColor?: string--><!--Device-SystemBarProperties-navigationBarContentColor?: string-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -132,7 +146,9 @@ Background color of the status bar. The value is a hexadecimal RGB or ARGB color
 
 **Since:** 6
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-SystemBarProperties-statusBarColor?: string--><!--Device-SystemBarProperties-statusBarColor?: string-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -148,6 +164,8 @@ Color of the text on the status bar. After this property is set, the setting of 
 
 **Since:** 8
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-SystemBarProperties-statusBarContentColor?: string--><!--Device-SystemBarProperties-statusBarContentColor?: string-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core

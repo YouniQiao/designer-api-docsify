@@ -20,6 +20,8 @@ function getFreezeExemptedApps(admin: Want): Array<common.ApplicationInstance>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-applicationManager-function getFreezeExemptedApps(admin: Want): Array<common.ApplicationInstance>--><!--Device-applicationManager-function getFreezeExemptedApps(admin: Want): Array<common.ApplicationInstance>-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -78,6 +80,8 @@ function getFreezeExemptedApps(admin: Want | null): Array<common.ApplicationInst
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-applicationManager-function getFreezeExemptedApps(admin: Want | null): Array<common.ApplicationInstance>--><!--Device-applicationManager-function getFreezeExemptedApps(admin: Want | null): Array<common.ApplicationInstance>-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

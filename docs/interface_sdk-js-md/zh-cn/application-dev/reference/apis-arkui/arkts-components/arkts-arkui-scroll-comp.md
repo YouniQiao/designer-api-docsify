@@ -14,7 +14,7 @@
 > 
 > - 手指触摸屏幕时，会停止当前触摸范围内所有滚动组件的滚动动画（[scrollTo](arkts-arkui-scroll-comp-scroller-c.md#scrollto)和[scrollToIndex](arkts-arkui-scroll-comp-scroller-c.md#scrolltoindex)接口触发的滚动动画除外），包括边缘回弹动画。
 > 
-> - 组件内部已绑定手势实现跟手滚动等功能，需要增加自定义手势操作时请参考[手势拦截增强](arkts-arkui-common-comp.md#common)进行处理。
+> - 组件内部已绑定手势实现跟手滚动等功能，需要增加自定义手势操作时请参考[手势拦截增强](arkts-arkui-common-comp.md)进行处理。
 
 ## 子组件
 
@@ -35,6 +35,8 @@ Scroll(scroller?: Scroller)
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ScrollInterface-(scroller?: Scroller): ScrollAttribute--><!--Device-ScrollInterface-(scroller?: Scroller): ScrollAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

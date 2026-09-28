@@ -14,6 +14,8 @@ interface ServerResponse
 
 **替代接口：** [ServerResponse](arkts-connectivity-bluetoothmanager-serverresponse-i.md)
 
+<!--Device-bluetooth-interface ServerResponse--><!--Device-bluetooth-interface ServerResponse-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -38,6 +40,8 @@ deviceId: string
 
 **替代接口：** [deviceId](arkts-connectivity-bluetoothmanager-serverresponse-i.md#deviceid)
 
+<!--Device-ServerResponse-deviceId: string--><!--Device-ServerResponse-deviceId: string-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## offset
@@ -55,6 +59,8 @@ offset: number
 **废弃版本：** 9
 
 **替代接口：** [offset](arkts-connectivity-bluetoothmanager-serverresponse-i.md#offset)
+
+<!--Device-ServerResponse-offset: number--><!--Device-ServerResponse-offset: number-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -74,6 +80,8 @@ status: number
 
 **替代接口：** [status](arkts-connectivity-bluetoothmanager-serverresponse-i.md#status)
 
+<!--Device-ServerResponse-status: number--><!--Device-ServerResponse-status: number-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## transId
@@ -92,6 +100,8 @@ transId: number
 
 **替代接口：** [transId](arkts-connectivity-bluetoothmanager-serverresponse-i.md#transid)
 
+<!--Device-ServerResponse-transId: number--><!--Device-ServerResponse-transId: number-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## value
@@ -109,5 +119,7 @@ value: ArrayBuffer
 **废弃版本：** 9
 
 **替代接口：** [value](arkts-connectivity-bluetoothmanager-serverresponse-i.md#value)
+
+<!--Device-ServerResponse-value: ArrayBuffer--><!--Device-ServerResponse-value: ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

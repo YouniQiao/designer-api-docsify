@@ -18,6 +18,8 @@ function getHash(object: object): number
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-util-function getHash(object: object): number--><!--Device-util-function getHash(object: object): number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**

@@ -8,6 +8,8 @@ export interface MmsConfig
 
 **起始版本：** 11
 
+<!--Device-sms-export interface MmsConfig--><!--Device-sms-export interface MmsConfig-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ userAgent: string
 
 **起始版本：** 11
 
+<!--Device-MmsConfig-userAgent: string--><!--Device-MmsConfig-userAgent: string-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ userAgentProfile: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-MmsConfig-userAgentProfile: string--><!--Device-MmsConfig-userAgentProfile: string-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 

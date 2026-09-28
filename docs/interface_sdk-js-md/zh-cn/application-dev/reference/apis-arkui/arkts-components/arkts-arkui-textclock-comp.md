@@ -26,6 +26,8 @@ TextClock(options?: TextClockOptions)
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-TextClockInterface-(options?: TextClockOptions): TextClockAttribute--><!--Device-TextClockInterface-(options?: TextClockOptions): TextClockAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数:**

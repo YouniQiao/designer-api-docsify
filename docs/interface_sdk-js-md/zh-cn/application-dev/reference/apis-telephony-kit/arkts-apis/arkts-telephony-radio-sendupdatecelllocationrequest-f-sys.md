@@ -18,6 +18,8 @@ Actively requests to update location information.
 
 **需要权限：** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
+<!--Device-radio-function sendUpdateCellLocationRequest(slotId: int, callback: AsyncCallback<void>): void--><!--Device-radio-function sendUpdateCellLocationRequest(slotId: int, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -70,6 +72,8 @@ Actively requests to update location information.
 **起始版本：** 8
 
 **需要权限：** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
+
+<!--Device-radio-function sendUpdateCellLocationRequest(slotId?: int): Promise<void>--><!--Device-radio-function sendUpdateCellLocationRequest(slotId?: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -126,6 +130,8 @@ Actively requests to update location information.
 **起始版本：** 8
 
 **需要权限：** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
+
+<!--Device-radio-function sendUpdateCellLocationRequest(callback: AsyncCallback<void>): void--><!--Device-radio-function sendUpdateCellLocationRequest(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

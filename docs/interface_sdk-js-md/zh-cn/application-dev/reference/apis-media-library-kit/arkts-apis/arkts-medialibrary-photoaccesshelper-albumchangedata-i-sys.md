@@ -8,6 +8,8 @@ interface AlbumChangeData
 
 **起始版本：** 20
 
+<!--Device-photoAccessHelper-interface AlbumChangeData--><!--Device-photoAccessHelper-interface AlbumChangeData-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
@@ -27,6 +29,8 @@ version: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-AlbumChangeData-version: long--><!--Device-AlbumChangeData-version: long-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

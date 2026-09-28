@@ -8,6 +8,8 @@ export interface CertificateDialogProperty
 
 **起始版本：** 18
 
+<!--Device-certificateManagerDialog-export interface CertificateDialogProperty--><!--Device-certificateManagerDialog-export interface CertificateDialogProperty-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
 ## 导入模块
@@ -29,5 +31,7 @@ showInstallButton: boolean
 **起始版本：** 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-CertificateDialogProperty-showInstallButton: boolean--><!--Device-CertificateDialogProperty-showInstallButton: boolean-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManagerDialog

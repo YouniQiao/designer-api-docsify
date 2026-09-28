@@ -18,7 +18,9 @@ function getPreferencesSync(context: Context, options: Options): Preferences
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-preferences-function getPreferencesSync(context: Context, options: Options): Preferences--><!--Device-preferences-function getPreferencesSync(context: Context, options: Options): Preferences-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
@@ -26,7 +28,7 @@ function getPreferencesSync(context: Context, options: Options): Preferences
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 应用上下文。<br>FA模型的应用Context定义见Context。<br>Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)。 |
+| context | Context | 是 | 应用上下文。<br>FA模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context.md)。<br>Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)。 |
 | options | [Options](arkts-arkdata-preferences-options-i.md) | 是 | 与Preferences实例相关的配置选项。 |
 
 **返回值：**

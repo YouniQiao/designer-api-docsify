@@ -8,6 +8,8 @@ enum ConflictResolution
 
 **起始版本：** 11
 
+<!--Device-asset-enum ConflictResolution--><!--Device-asset-enum ConflictResolution-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 ## OVERWRITE
@@ -22,6 +24,8 @@ OVERWRITE = 0
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
+<!--Device-ConflictResolution-OVERWRITE = 0--><!--Device-ConflictResolution-OVERWRITE = 0-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 ## THROW_ERROR
@@ -35,5 +39,7 @@ THROW_ERROR = 1
 **起始版本：** 11
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-ConflictResolution-THROW_ERROR = 1--><!--Device-ConflictResolution-THROW_ERROR = 1-End-->
 
 **系统能力：** SystemCapability.Security.Asset

@@ -8,6 +8,8 @@ interface WatermarkConfig
 
 **起始版本：** 13
 
+<!--Device-media-interface WatermarkConfig--><!--Device-media-interface WatermarkConfig-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ left: number
 
 **起始版本：** 13
 
+<!--Device-WatermarkConfig-left: int--><!--Device-WatermarkConfig-left: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ top: number
 **类型：** number
 
 **起始版本：** 13
+
+<!--Device-WatermarkConfig-top: int--><!--Device-WatermarkConfig-top: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 

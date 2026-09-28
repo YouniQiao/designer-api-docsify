@@ -8,6 +8,8 @@ interface FormCustomConfig
 
 **起始版本：** 26.0.0
 
+<!--Device-formInfo-interface FormCustomConfig--><!--Device-formInfo-interface FormCustomConfig-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ abilityName: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FormCustomConfig-abilityName: string--><!--Device-FormCustomConfig-abilityName: string-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -50,6 +54,8 @@ bundleName: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FormCustomConfig-bundleName: string--><!--Device-FormCustomConfig-bundleName: string-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -67,6 +73,8 @@ formName: string
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FormCustomConfig-formName: string--><!--Device-FormCustomConfig-formName: string-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -90,6 +98,8 @@ isRepeatAdditionSupported: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FormCustomConfig-isRepeatAdditionSupported: boolean--><!--Device-FormCustomConfig-isRepeatAdditionSupported: boolean-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -112,6 +122,8 @@ isShowInFormCenter: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FormCustomConfig-isShowInFormCenter: boolean--><!--Device-FormCustomConfig-isShowInFormCenter: boolean-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -130,6 +142,8 @@ moduleName: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FormCustomConfig-moduleName: string--><!--Device-FormCustomConfig-moduleName: string-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -147,6 +161,8 @@ relatedBundleName: string
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FormCustomConfig-relatedBundleName: string--><!--Device-FormCustomConfig-relatedBundleName: string-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 

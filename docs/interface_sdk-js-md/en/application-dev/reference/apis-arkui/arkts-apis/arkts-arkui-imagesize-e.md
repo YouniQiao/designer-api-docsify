@@ -8,6 +8,8 @@ Sets the width and height effect of an image.
 
 **Since:** 7
 
+<!--Device-unnamed-declare enum ImageSize--><!--Device-unnamed-declare enum ImageSize-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Auto
@@ -23,6 +25,8 @@ The original image aspect ratio is retained.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-ImageSize-Auto--><!--Device-ImageSize-Auto-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,6 +44,8 @@ The image is scaled with its aspect ratio retained for both sides to be greater 
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-ImageSize-Cover--><!--Device-ImageSize-Cover-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Contain
@@ -56,6 +62,8 @@ The image is scaled with its aspect ratio retained for the content to be complet
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-ImageSize-Contain--><!--Device-ImageSize-Contain-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## FILL
@@ -71,5 +79,7 @@ The image is scaled to fill the display area, and its aspect ratio is not retain
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ImageSize-FILL = 3--><!--Device-ImageSize-FILL = 3-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

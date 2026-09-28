@@ -16,6 +16,8 @@ export interface ReverseGeoCodeRequest
 
 **需要权限：** ohos.permission.LOCATION
 
+<!--Device-geolocation-export interface ReverseGeoCodeRequest--><!--Device-geolocation-export interface ReverseGeoCodeRequest-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 ## 导入模块
@@ -40,6 +42,8 @@ latitude: number
 
 **替代接口：** [latitude](arkts-location-geolocationmanager-reversegeocoderequest-i.md#latitude)
 
+<!--Device-ReverseGeoCodeRequest-latitude: number--><!--Device-ReverseGeoCodeRequest-latitude: number-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 ## locale
@@ -57,6 +61,8 @@ locale?: string
 **废弃版本：** 9
 
 **替代接口：** [locale](arkts-location-geolocationmanager-reversegeocoderequest-i.md#locale)
+
+<!--Device-ReverseGeoCodeRequest-locale?: string--><!--Device-ReverseGeoCodeRequest-locale?: string-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
@@ -76,6 +82,8 @@ longitude: number
 
 **替代接口：** [longitude](arkts-location-geolocationmanager-reversegeocoderequest-i.md#longitude)
 
+<!--Device-ReverseGeoCodeRequest-longitude: number--><!--Device-ReverseGeoCodeRequest-longitude: number-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 ## maxItems
@@ -93,5 +101,7 @@ maxItems?: number
 **废弃版本：** 9
 
 **替代接口：** [maxItems](arkts-location-geolocationmanager-reversegeocoderequest-i.md#maxitems)
+
+<!--Device-ReverseGeoCodeRequest-maxItems?: number--><!--Device-ReverseGeoCodeRequest-maxItems?: number-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geocoder

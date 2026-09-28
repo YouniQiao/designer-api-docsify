@@ -18,6 +18,8 @@ function isCellularDataEnabled(callback: AsyncCallback<boolean>): void
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-data-function isCellularDataEnabled(callback: AsyncCallback<boolean>): void--><!--Device-data-function isCellularDataEnabled(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CellularData
 
 **参数：**
@@ -66,6 +68,8 @@ function isCellularDataEnabled(): Promise<boolean>
 **起始版本：** 7
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
+
+<!--Device-data-function isCellularDataEnabled(): Promise<boolean>--><!--Device-data-function isCellularDataEnabled(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Telephony.CellularData
 

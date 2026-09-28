@@ -16,6 +16,8 @@ function getTouchpadScrollSwitch(callback: AsyncCallback<boolean>): void
 
 **起始版本：** 10
 
+<!--Device-pointer-function getTouchpadScrollSwitch(callback: AsyncCallback<boolean>): void--><!--Device-pointer-function getTouchpadScrollSwitch(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 **系统接口：** 此接口为系统接口。
@@ -76,6 +78,8 @@ function getTouchpadScrollSwitch(): Promise<boolean>
 获取触控板滚轴能力开启状态，使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-pointer-function getTouchpadScrollSwitch(): Promise<boolean>--><!--Device-pointer-function getTouchpadScrollSwitch(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 

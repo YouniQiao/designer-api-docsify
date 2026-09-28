@@ -8,6 +8,8 @@ export interface FusionFenceTransition
 
 **起始版本：** 26.0.0
 
+<!--Device-geoLocationManager-export interface FusionFenceTransition--><!--Device-geoLocationManager-export interface FusionFenceTransition-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ identifier: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FusionFenceTransition-identifier: string--><!--Device-FusionFenceTransition-identifier: string-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 **系统接口：** 此接口为系统接口。
@@ -50,6 +54,8 @@ scene: FusionFenceScene
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FusionFenceTransition-scene: FusionFenceScene--><!--Device-FusionFenceTransition-scene: FusionFenceScene-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 **系统接口：** 此接口为系统接口。
@@ -67,6 +73,8 @@ transitionEvent: GeofenceTransitionEvent
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FusionFenceTransition-transitionEvent: GeofenceTransitionEvent--><!--Device-FusionFenceTransition-transitionEvent: GeofenceTransitionEvent-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geofence
 

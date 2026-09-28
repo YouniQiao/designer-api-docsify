@@ -18,6 +18,8 @@ function removePrinterFromDiscovery(printerId: string): Promise<void>
 
 **需要权限：** ohos.permission.PRINT
 
+<!--Device-print-function removePrinterFromDiscovery(printerId: string): Promise<void>--><!--Device-print-function removePrinterFromDiscovery(printerId: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **参数：**

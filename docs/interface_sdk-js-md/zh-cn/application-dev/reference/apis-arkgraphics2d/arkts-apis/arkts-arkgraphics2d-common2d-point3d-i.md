@@ -10,6 +10,8 @@ interface Point3d extends Point
 
 **起始版本：** 12
 
+<!--Device-common2D-interface Point3d extends Point--><!--Device-common2D-interface Point3d extends Point-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## 导入模块
@@ -29,5 +31,7 @@ z轴坐标，浮点数。单位为物理像素px。
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-Point3d-z: double--><!--Device-Point3d-z: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing

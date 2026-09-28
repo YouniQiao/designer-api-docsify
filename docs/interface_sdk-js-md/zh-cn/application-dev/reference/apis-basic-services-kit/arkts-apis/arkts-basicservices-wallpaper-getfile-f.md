@@ -23,6 +23,8 @@ function getFile(wallpaperType: WallpaperType, callback: AsyncCallback<number>):
 
 **需要权限：** ohos.permission.GET_WALLPAPER
 
+<!--Device-wallpaper-function getFile(wallpaperType: WallpaperType, callback: AsyncCallback<number>): void--><!--Device-wallpaper-function getFile(wallpaperType: WallpaperType, callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
 **参数：**
@@ -65,6 +67,8 @@ function getFile(wallpaperType: WallpaperType): Promise<number>
 **废弃版本：** 9
 
 **需要权限：** ohos.permission.GET_WALLPAPER
+
+<!--Device-wallpaper-function getFile(wallpaperType: WallpaperType): Promise<number>--><!--Device-wallpaper-function getFile(wallpaperType: WallpaperType): Promise<number>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 

@@ -8,6 +8,8 @@ export interface NumberMarkInfo
 
 **起始版本：** 12
 
+<!--Device-call-export interface NumberMarkInfo--><!--Device-call-export interface NumberMarkInfo-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -34,6 +36,8 @@ isCloud?: boolean
 
 **起始版本：** 12
 
+<!--Device-NumberMarkInfo-isCloud?: boolean--><!--Device-NumberMarkInfo-isCloud?: boolean-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ markContent?: string
 **类型：** string
 
 **起始版本：** 12
+
+<!--Device-NumberMarkInfo-markContent?: string--><!--Device-NumberMarkInfo-markContent?: string-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -66,6 +72,8 @@ markCount?: number
 
 **起始版本：** 12
 
+<!--Device-NumberMarkInfo-markCount?: int--><!--Device-NumberMarkInfo-markCount?: int-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -81,6 +89,8 @@ markDetails?: string
 **类型：** string
 
 **起始版本：** 14
+
+<!--Device-NumberMarkInfo-markDetails?: string--><!--Device-NumberMarkInfo-markDetails?: string-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -98,6 +108,8 @@ markSource?: string
 
 **起始版本：** 12
 
+<!--Device-NumberMarkInfo-markSource?: string--><!--Device-NumberMarkInfo-markSource?: string-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -113,6 +125,8 @@ markType: MarkType
 **类型：** [MarkType](arkts-telephony-call-marktype-e-sys.md)
 
 **起始版本：** 12
+
+<!--Device-NumberMarkInfo-markType: MarkType--><!--Device-NumberMarkInfo-markType: MarkType-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 

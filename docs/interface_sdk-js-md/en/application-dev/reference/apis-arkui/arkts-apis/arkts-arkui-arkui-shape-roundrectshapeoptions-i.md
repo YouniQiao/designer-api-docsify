@@ -12,6 +12,8 @@ This API inherits from [ShapeSize](arkts-arkui-arkui-shape-shapesize-i.md).
 
 **Since:** 12
 
+<!--Device-unnamed-interface RoundRectShapeOptions extends ShapeSize--><!--Device-unnamed-interface RoundRectShapeOptions extends ShapeSize-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -44,6 +46,8 @@ If the value is invalid, 0 vp is used.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-RoundRectShapeOptions-radiusHeight?: number | string--><!--Device-RoundRectShapeOptions-radiusHeight?: number | string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## radiusWidth
@@ -69,5 +73,7 @@ If the value is invalid, 0 vp is used.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-RoundRectShapeOptions-radiusWidth?: number | string--><!--Device-RoundRectShapeOptions-radiusWidth?: number | string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

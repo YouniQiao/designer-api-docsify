@@ -8,6 +8,8 @@ export interface WorkerEventTarget
 
 **起始版本：** 9
 
+<!--Device-unnamed-export interface WorkerEventTarget--><!--Device-unnamed-export interface WorkerEventTarget-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -27,6 +29,8 @@ addEventListener(type: string, listener: WorkerEventListener): void
 **起始版本：** 9
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WorkerEventTarget-addEventListener(type: string, listener: WorkerEventListener): void--><!--Device-WorkerEventTarget-addEventListener(type: string, listener: WorkerEventListener): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -70,6 +74,8 @@ dispatchEvent(event: Event): boolean
 **起始版本：** 9
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WorkerEventTarget-dispatchEvent(event: Event): boolean--><!--Device-WorkerEventTarget-dispatchEvent(event: Event): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -120,6 +126,8 @@ removeAllListener(): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-WorkerEventTarget-removeAllListener(): void--><!--Device-WorkerEventTarget-removeAllListener(): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **错误码：**
@@ -156,6 +164,8 @@ removeEventListener(type: string, callback?: WorkerEventListener): void
 **起始版本：** 9
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WorkerEventTarget-removeEventListener(type: string, callback?: WorkerEventListener): void--><!--Device-WorkerEventTarget-removeEventListener(type: string, callback?: WorkerEventListener): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

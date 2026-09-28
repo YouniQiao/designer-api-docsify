@@ -16,4 +16,6 @@ For details, see [@Link Decorator: Implementing Two-Way Synchronization Between 
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-unnamed-declare const Link: PropertyDecorator--><!--Device-unnamed-declare const Link: PropertyDecorator-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

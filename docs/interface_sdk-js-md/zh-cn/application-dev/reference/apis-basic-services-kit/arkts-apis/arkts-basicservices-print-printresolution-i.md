@@ -8,6 +8,8 @@ interface PrintResolution
 
 **起始版本：** 24
 
+<!--Device-print-interface PrintResolution--><!--Device-print-interface PrintResolution-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## 导入模块
@@ -28,6 +30,8 @@ horizontalDpi: number
 
 **起始版本：** 24
 
+<!--Device-PrintResolution-horizontalDpi: int--><!--Device-PrintResolution-horizontalDpi: int-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## id
@@ -42,6 +46,8 @@ id: string
 
 **起始版本：** 24
 
+<!--Device-PrintResolution-id: string--><!--Device-PrintResolution-id: string-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## verticalDpi
@@ -55,5 +61,7 @@ verticalDpi: number
 **类型：** number
 
 **起始版本：** 24
+
+<!--Device-PrintResolution-verticalDpi: int--><!--Device-PrintResolution-verticalDpi: int-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework

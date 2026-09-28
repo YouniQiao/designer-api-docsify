@@ -29,6 +29,8 @@ function anonAttestKeyItemOfflineAsUser(userId: number, keyAlias: string,
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-huks-function anonAttestKeyItemOfflineAsUser(userId: number, keyAlias: string,      params: HuksParam[]): Promise<HuksReturnResult>--><!--Device-huks-function anonAttestKeyItemOfflineAsUser(userId: number, keyAlias: string,      params: HuksParam[]): Promise<HuksReturnResult>-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Extension
 
 **系统接口：** 此接口为系统接口。
@@ -51,9 +53,9 @@ function anonAttestKeyItemOfflineAsUser(userId: number, keyAlias: string,
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | The app does not have sufficient permissions. Possible causes: The cross-account permission is not granted, the system is not unlocked by the user, or the user does not exist. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed: call the anonAttestKeyItemOfflineAsUser API, missing Permission: ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS, or the system is not unlocked by the user, or the user does not exist. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Non-system apps use system APIs. |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | The API is not supported. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: 1. The hardware does not support the capability. 2. The chip does not support the capability. 3. A dependent service feature is not supported. |
 | [12000001](../errorcode-huks.md#12000001-该子功能不支持特性) | The function is not supported. Possible causes: 1. The algorithm mode is not supported. 2. The group key is not supported. 3. The extended encryption key is not supported. |
 | [12000002](../errorcode-huks.md#12000002-缺少密钥算法参数) | The algorithm parameter is missing. |
 | [12000003](../errorcode-huks.md#12000003-无效的密钥算法参数) | The algorithm parameter is invalid. |

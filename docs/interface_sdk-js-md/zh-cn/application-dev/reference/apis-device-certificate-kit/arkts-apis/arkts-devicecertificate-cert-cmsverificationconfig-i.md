@@ -8,6 +8,8 @@ CMS验签的配置。
 
 **起始版本：** 22
 
+<!--Device-cert-interface CmsVerificationConfig--><!--Device-cert-interface CmsVerificationConfig-End-->
+
 **系统能力：** SystemCapability.Security.Cert
 
 ## 导入模块
@@ -28,7 +30,9 @@ contentData?: Uint8Array
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-CmsVerificationConfig-contentData?: Uint8Array--><!--Device-CmsVerificationConfig-contentData?: Uint8Array-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -46,7 +50,9 @@ contentDataFormat?: CmsContentDataFormat
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-CmsVerificationConfig-contentDataFormat?: CmsContentDataFormat--><!--Device-CmsVerificationConfig-contentDataFormat?: CmsContentDataFormat-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -62,7 +68,9 @@ signerCerts?: Array<X509Cert>
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-CmsVerificationConfig-signerCerts?: Array<X509Cert>--><!--Device-CmsVerificationConfig-signerCerts?: Array<X509Cert>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -82,6 +90,8 @@ trustCerts: Array<X509Cert>
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-CmsVerificationConfig-trustCerts: Array<X509Cert>--><!--Device-CmsVerificationConfig-trustCerts: Array<X509Cert>-End-->
 
 **系统能力：** SystemCapability.Security.Cert

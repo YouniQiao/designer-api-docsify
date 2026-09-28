@@ -8,6 +8,8 @@ enum AVCastCategory
 
 **起始版本：** 10
 
+<!--Device-avSession-enum AVCastCategory--><!--Device-avSession-enum AVCastCategory-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 ## CATEGORY_LOCAL
@@ -20,7 +22,9 @@ CATEGORY_LOCAL = 0
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVCastCategory-CATEGORY_LOCAL = 0--><!--Device-AVCastCategory-CATEGORY_LOCAL = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -34,6 +38,8 @@ CATEGORY_REMOTE = 1
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVCastCategory-CATEGORY_REMOTE = 1--><!--Device-AVCastCategory-CATEGORY_REMOTE = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast

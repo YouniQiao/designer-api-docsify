@@ -18,6 +18,8 @@ function getActiveNotificationCount(callback: AsyncCallback<number>): void
 
 **起始版本：** 9
 
+<!--Device-notificationManager-function getActiveNotificationCount(callback: AsyncCallback<long>): void--><!--Device-notificationManager-function getActiveNotificationCount(callback: AsyncCallback<long>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **参见：** [setBadgeNumber](arkts-notification-notificationmanager-setbadgenumber-f.md) 设置角标个数。
@@ -67,6 +69,8 @@ function getActiveNotificationCount(): Promise<number>
 用于查询当前应用在通知中心中已发布的存量通知数量。适用于需要展示未读通知数量提示的场景。
 
 **起始版本：** 9
+
+<!--Device-notificationManager-function getActiveNotificationCount(): Promise<long>--><!--Device-notificationManager-function getActiveNotificationCount(): Promise<long>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

@@ -8,6 +8,8 @@ InputMethodSetting提供输入法配置与查询能力，面向前台应用提�
 
 **起始版本：** 8
 
+<!--Device-inputMethod-interface InputMethodSetting--><!--Device-inputMethod-interface InputMethodSetting-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## 导入模块
@@ -25,6 +27,8 @@ getAllInputMethods(callback: AsyncCallback<Array<InputMethodProperty>>): void
 获取所有输入法应用列表。使用callback异步回调。
 
 **起始版本：** 11
+
+<!--Device-InputMethodSetting-getAllInputMethods(callback: AsyncCallback<Array<InputMethodProperty>>): void--><!--Device-InputMethodSetting-getAllInputMethods(callback: AsyncCallback<Array<InputMethodProperty>>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -67,6 +71,8 @@ getAllInputMethods(): Promise<Array<InputMethodProperty>>
 
 **起始版本：** 11
 
+<!--Device-InputMethodSetting-getAllInputMethods(): Promise<Array<InputMethodProperty>>--><!--Device-InputMethodSetting-getAllInputMethods(): Promise<Array<InputMethodProperty>>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**
@@ -107,6 +113,8 @@ getAllInputMethodsSync(): Array<InputMethodProperty>
 
 **起始版本：** 11
 
+<!--Device-InputMethodSetting-getAllInputMethodsSync(): Array<InputMethodProperty>--><!--Device-InputMethodSetting-getAllInputMethodsSync(): Array<InputMethodProperty>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**
@@ -142,6 +150,8 @@ getInputMethods(enable: boolean, callback: AsyncCallback<Array<InputMethodProper
 > 已激活输入法列表包括默认输入法和已被设置为使能的输入法应用，未激活输入法列表包括除使能输入法以外的其他已安装的输入法。
 
 **起始版本：** 9
+
+<!--Device-InputMethodSetting-getInputMethods(enable: boolean, callback: AsyncCallback<Array<InputMethodProperty>>): void--><!--Device-InputMethodSetting-getInputMethods(enable: boolean, callback: AsyncCallback<Array<InputMethodProperty>>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -190,6 +200,8 @@ getInputMethods(enable: boolean): Promise<Array<InputMethodProperty>>
 > 已激活输入法列表包括默认输入法和已被设置为使能的输入法应用，未激活输入法列表包括除使能输入法以外的其他已安装的输入法。
 
 **起始版本：** 9
+
+<!--Device-InputMethodSetting-getInputMethods(enable: boolean): Promise<Array<InputMethodProperty>>--><!--Device-InputMethodSetting-getInputMethods(enable: boolean): Promise<Array<InputMethodProperty>>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -242,6 +254,8 @@ getInputMethodsSync(enable: boolean): Array<InputMethodProperty>
 
 **起始版本：** 11
 
+<!--Device-InputMethodSetting-getInputMethodsSync(enable: boolean): Array<InputMethodProperty>--><!--Device-InputMethodSetting-getInputMethodsSync(enable: boolean): Array<InputMethodProperty>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -280,6 +294,8 @@ getInputMethodState(): Promise<EnabledState>
 
 **起始版本：** 15
 
+<!--Device-InputMethodSetting-getInputMethodState(): Promise<EnabledState>--><!--Device-InputMethodSetting-getInputMethodState(): Promise<EnabledState>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**
@@ -316,6 +332,8 @@ listCurrentInputMethodSubtype(callback: AsyncCallback<Array<InputMethodSubtype>>
 查询当前输入法应用的所有子类型。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-InputMethodSetting-listCurrentInputMethodSubtype(callback: AsyncCallback<Array<InputMethodSubtype>>): void--><!--Device-InputMethodSetting-listCurrentInputMethodSubtype(callback: AsyncCallback<Array<InputMethodSubtype>>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -360,6 +378,8 @@ listCurrentInputMethodSubtype(): Promise<Array<InputMethodSubtype>>
 
 **起始版本：** 9
 
+<!--Device-InputMethodSetting-listCurrentInputMethodSubtype(): Promise<Array<InputMethodSubtype>>--><!--Device-InputMethodSetting-listCurrentInputMethodSubtype(): Promise<Array<InputMethodSubtype>>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**
@@ -402,6 +422,8 @@ listInputMethodSubtype(
 获取指定输入法应用的所有子类型。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-InputMethodSetting-listInputMethodSubtype(      inputMethodProperty: InputMethodProperty,      callback: AsyncCallback<Array<InputMethodSubtype>>    ): void--><!--Device-InputMethodSetting-listInputMethodSubtype(      inputMethodProperty: InputMethodProperty,      callback: AsyncCallback<Array<InputMethodSubtype>>    ): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -455,6 +477,8 @@ listInputMethodSubtype(inputMethodProperty: InputMethodProperty): Promise<Array<
 获取指定输入法应用的所有子类型。使用promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-InputMethodSetting-listInputMethodSubtype(inputMethodProperty: InputMethodProperty): Promise<Array<InputMethodSubtype>>--><!--Device-InputMethodSetting-listInputMethodSubtype(inputMethodProperty: InputMethodProperty): Promise<Array<InputMethodSubtype>>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -512,6 +536,8 @@ off(
 
 **起始版本：** 9
 
+<!--Device-InputMethodSetting-off(      type: 'imeChange',      callback?: (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) => void    ): void--><!--Device-InputMethodSetting-off(      type: 'imeChange',      callback?: (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) => void    ): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -539,6 +565,8 @@ on(
 订阅输入法及子类型变化监听事件。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-InputMethodSetting-on(      type: 'imeChange',      callback: (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) => void    ): void--><!--Device-InputMethodSetting-on(      type: 'imeChange',      callback: (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) => void    ): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -574,6 +602,8 @@ displayOptionalInputMethod(callback: AsyncCallback<void>): void
 **废弃版本：** 9
 
 **替代接口：** [inputMethodList/InputMethodListDialog](arkts-ime-inputmethodlist-inputmethodlistdialog-s.md)
+
+<!--Device-InputMethodSetting-displayOptionalInputMethod(callback: AsyncCallback<void>): void--><!--Device-InputMethodSetting-displayOptionalInputMethod(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -613,6 +643,8 @@ displayOptionalInputMethod(): Promise<void>
 
 **替代接口：** [inputMethodList/InputMethodListDialog](arkts-ime-inputmethodlist-inputmethodlistdialog-s.md)
 
+<!--Device-InputMethodSetting-displayOptionalInputMethod(): Promise<void>--><!--Device-InputMethodSetting-displayOptionalInputMethod(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**
@@ -646,6 +678,8 @@ listInputMethod(callback: AsyncCallback<Array<InputMethodProperty>>): void
 **废弃版本：** 9
 
 **替代接口：** [getInputMethods](#getinputmethods)
+
+<!--Device-InputMethodSetting-listInputMethod(callback: AsyncCallback<Array<InputMethodProperty>>): void--><!--Device-InputMethodSetting-listInputMethod(callback: AsyncCallback<Array<InputMethodProperty>>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -685,6 +719,8 @@ listInputMethod(): Promise<Array<InputMethodProperty>>
 
 **替代接口：** [getInputMethods](#getinputmethods)
 
+<!--Device-InputMethodSetting-listInputMethod(): Promise<Array<InputMethodProperty>>--><!--Device-InputMethodSetting-listInputMethod(): Promise<Array<InputMethodProperty>>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**
@@ -718,6 +754,8 @@ showOptionalInputMethods(callback: AsyncCallback<boolean>): void
 **废弃版本：** 18
 
 **替代接口：** [inputMethodList/InputMethodListDialog](arkts-ime-inputmethodlist-inputmethodlistdialog-s.md)
+
+<!--Device-InputMethodSetting-showOptionalInputMethods(callback: AsyncCallback<boolean>): void--><!--Device-InputMethodSetting-showOptionalInputMethods(callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -766,6 +804,8 @@ showOptionalInputMethods(): Promise<boolean>
 **废弃版本：** 18
 
 **替代接口：** [inputMethodList/InputMethodListDialog](arkts-ime-inputmethodlist-inputmethodlistdialog-s.md)
+
+<!--Device-InputMethodSetting-showOptionalInputMethods(): Promise<boolean>--><!--Device-InputMethodSetting-showOptionalInputMethods(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 

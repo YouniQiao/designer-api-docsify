@@ -16,6 +16,8 @@ function getPointerStyleSync(windowId: number): PointerStyle
 
 **起始版本：** 10
 
+<!--Device-pointer-function getPointerStyleSync(windowId: int): PointerStyle--><!--Device-pointer-function getPointerStyleSync(windowId: int): PointerStyle-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 **参数：**

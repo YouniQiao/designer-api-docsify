@@ -10,6 +10,8 @@ class Run
 
 **起始版本：** 12
 
+<!--Device-text-class Run--><!--Device-text-class Run-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## 导入模块
@@ -29,6 +31,8 @@ getAdvances(range: Range): Array<common2D.Point>
 **起始版本：** 20
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Run-getAdvances(range: Range): Array<common2D.Point>--><!--Device-Run-getAdvances(range: Range): Array<common2D.Point>-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -63,7 +67,9 @@ getFont(): drawing.Font
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Run-getFont(): drawing.Font--><!--Device-Run-getFont(): drawing.Font-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -89,7 +95,9 @@ getGlyphCount(): number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Run-getGlyphCount(): int--><!--Device-Run-getGlyphCount(): int-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -115,7 +123,9 @@ getGlyphs(): Array<number>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Run-getGlyphs(): Array<int>--><!--Device-Run-getGlyphs(): Array<int>-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -144,6 +154,8 @@ getGlyphs(range: Range): Array<number>
 **起始版本：** 18
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Run-getGlyphs(range: Range): Array<int>--><!--Device-Run-getGlyphs(range: Range): Array<int>-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -207,7 +219,9 @@ getImageBounds(): common2D.Rect
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Run-getImageBounds(): common2D.Rect--><!--Device-Run-getImageBounds(): common2D.Rect-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -233,7 +247,9 @@ getOffsets(): Array<common2D.Point>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Run-getOffsets(): Array<common2D.Point>--><!--Device-Run-getOffsets(): Array<common2D.Point>-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -259,7 +275,9 @@ getPositions(): Array<common2D.Point>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Run-getPositions(): Array<common2D.Point>--><!--Device-Run-getPositions(): Array<common2D.Point>-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -288,6 +306,8 @@ getPositions(range: Range): Array<common2D.Point>
 **起始版本：** 18
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Run-getPositions(range: Range): Array<common2D.Point>--><!--Device-Run-getPositions(range: Range): Array<common2D.Point>-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -343,6 +363,8 @@ getStringIndices(range?: Range): Array<number>
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
+<!--Device-Run-getStringIndices(range?: Range): Array<int>--><!--Device-Run-getStringIndices(range?: Range): Array<int>-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -395,7 +417,9 @@ getStringRange(): Range
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Run-getStringRange(): Range--><!--Device-Run-getStringRange(): Range-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -423,7 +447,9 @@ getTextDirection(): TextDirection
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Run-getTextDirection(): TextDirection--><!--Device-Run-getTextDirection(): TextDirection-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -451,7 +477,9 @@ getTextStyle(): TextStyle
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-Run-getTextStyle(): TextStyle--><!--Device-Run-getTextStyle(): TextStyle-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -541,7 +569,9 @@ getTypographicBounds(): TypographicBounds
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Run-getTypographicBounds(): TypographicBounds--><!--Device-Run-getTypographicBounds(): TypographicBounds-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -567,7 +597,9 @@ paint(canvas: drawing.Canvas, x: number, y: number): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Run-paint(canvas: drawing.Canvas, x: double, y: double): void--><!--Device-Run-paint(canvas: drawing.Canvas, x: double, y: double): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

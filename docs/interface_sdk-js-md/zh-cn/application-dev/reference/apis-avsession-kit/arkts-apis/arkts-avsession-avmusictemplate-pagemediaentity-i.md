@@ -12,6 +12,8 @@ interface PageMediaEntity extends OperResult
 
 **起始版本：** 23
 
+<!--Device-avMusicTemplate-interface PageMediaEntity extends OperResult--><!--Device-avMusicTemplate-interface PageMediaEntity extends OperResult-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## 导入模块
@@ -34,6 +36,8 @@ elements: MediaEntity[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PageMediaEntity-elements: MediaEntity[]--><!--Device-PageMediaEntity-elements: MediaEntity[]-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## episodeRange
@@ -49,6 +53,8 @@ episodeRange?: EpisodeRange
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PageMediaEntity-episodeRange?: EpisodeRange--><!--Device-PageMediaEntity-episodeRange?: EpisodeRange-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -66,6 +72,8 @@ hasMoreData: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PageMediaEntity-hasMoreData: boolean--><!--Device-PageMediaEntity-hasMoreData: boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## memberMediaType
@@ -81,6 +89,8 @@ memberMediaType: EntityType
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PageMediaEntity-memberMediaType: EntityType--><!--Device-PageMediaEntity-memberMediaType: EntityType-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -98,6 +108,8 @@ pageIndex: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PageMediaEntity-pageIndex: int--><!--Device-PageMediaEntity-pageIndex: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## pageSize
@@ -113,6 +125,8 @@ pageSize: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PageMediaEntity-pageSize: int--><!--Device-PageMediaEntity-pageSize: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -130,6 +144,8 @@ sort?: Sort
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PageMediaEntity-sort?: Sort--><!--Device-PageMediaEntity-sort?: Sort-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## totalSize
@@ -145,5 +161,7 @@ totalSize: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PageMediaEntity-totalSize: int--><!--Device-PageMediaEntity-totalSize: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate

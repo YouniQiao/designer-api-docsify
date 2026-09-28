@@ -10,6 +10,8 @@ UIExtensionContext是[UIExtensionAbility](arkts-ability-app-ability-uiextensiona
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare class UIExtensionContext extends ExtensionContext--><!--Device-unnamed-declare class UIExtensionContext extends ExtensionContext-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## connectServiceExtensionAbilityWithRootHostToken
@@ -27,6 +29,8 @@ connectServiceExtensionAbilityWithRootHostToken(want: Want, connect: ConnectOpti
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionContext-connectServiceExtensionAbilityWithRootHostToken(want: Want, connect: ConnectOptions): long--><!--Device-UIExtensionContext-connectServiceExtensionAbilityWithRootHostToken(want: Want, connect: ConnectOptions): long-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -82,6 +86,8 @@ setHostPageOverlayForbidden(isForbidden: boolean) : void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UIExtensionContext-setHostPageOverlayForbidden(isForbidden: boolean) : void--><!--Device-UIExtensionContext-setHostPageOverlayForbidden(isForbidden: boolean) : void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -119,6 +125,8 @@ startAbilityForResultAsCaller(want: Want, options?: StartOptions): Promise<Abili
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionContext-startAbilityForResultAsCaller(want: Want, options?: StartOptions): Promise<AbilityResult>--><!--Device-UIExtensionContext-startAbilityForResultAsCaller(want: Want, options?: StartOptions): Promise<AbilityResult>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -169,6 +177,8 @@ startServiceExtensionAbility(want: Want): Promise<void>
 **起始版本：** 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionContext-startServiceExtensionAbility(want: Want): Promise<void>--><!--Device-UIExtensionContext-startServiceExtensionAbility(want: Want): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -227,6 +237,8 @@ startServiceExtensionAbilityWithAccount(want: Want, accountId: number): Promise<
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UIExtensionContext-startServiceExtensionAbilityWithAccount(want: Want, accountId: int): Promise<void>--><!--Device-UIExtensionContext-startServiceExtensionAbilityWithAccount(want: Want, accountId: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -279,6 +291,8 @@ startUIAbilities(wantList: Array<Want>): Promise<void>
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionContext-startUIAbilities(wantList: Array<Want>): Promise<void>--><!--Device-UIExtensionContext-startUIAbilities(wantList: Array<Want>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -346,6 +360,8 @@ startUIAbilitiesInSplitWindowMode(primaryWindowId: number, secondaryWant: Want):
 **需要权限：** ohos.permission.START_ABILITIES_FROM_BACKGROUND
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionContext-startUIAbilitiesInSplitWindowMode(primaryWindowId: int, secondaryWant: Want): Promise<void>--><!--Device-UIExtensionContext-startUIAbilitiesInSplitWindowMode(primaryWindowId: int, secondaryWant: Want): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

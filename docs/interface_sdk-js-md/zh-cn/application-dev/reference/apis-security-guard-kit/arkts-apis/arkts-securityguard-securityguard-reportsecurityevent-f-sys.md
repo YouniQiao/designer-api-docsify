@@ -18,6 +18,8 @@ function reportSecurityEvent(securityEvent: SecurityEvent): void
 
 **需要权限：** ohos.permission.REPORT_SECURITY_EVENT
 
+<!--Device-securityGuard-function reportSecurityEvent(securityEvent: SecurityEvent): void--><!--Device-securityGuard-function reportSecurityEvent(securityEvent: SecurityEvent): void-End-->
+
 **系统能力：** SystemCapability.Security.SecurityGuard
 
 **系统接口：** 此接口为系统接口。

@@ -10,6 +10,8 @@ Hook对象可实现可选方法的任意子集。仅已实现的方法会被调�
 
 **起始版本：** 26.0.1
 
+<!--Device-unnamed-export interface CliHook--><!--Device-unnamed-export interface CliHook-End-->
+
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -25,6 +27,8 @@ onAfterCallCmd?(param: ExecResultWrap): ExecResultWrap
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-CliHook-onAfterCallCmd?(param: ExecResultWrap): ExecResultWrap--><!--Device-CliHook-onAfterCallCmd?(param: ExecResultWrap): ExecResultWrap-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -54,6 +58,8 @@ onAfterCallTool?(param: ExecResultWrap): ExecResultWrap
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-CliHook-onAfterCallTool?(param: ExecResultWrap): ExecResultWrap--><!--Device-CliHook-onAfterCallTool?(param: ExecResultWrap): ExecResultWrap-End-->
+
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -82,6 +88,8 @@ onBeforeCallCmd?(param: ExecCmdParam): ExecCmdParam
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-CliHook-onBeforeCallCmd?(param: ExecCmdParam): ExecCmdParam--><!--Device-CliHook-onBeforeCallCmd?(param: ExecCmdParam): ExecCmdParam-End-->
+
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -109,6 +117,8 @@ onBeforeCallTool?(param: ExecToolParam): ExecToolParam
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-CliHook-onBeforeCallTool?(param: ExecToolParam): ExecToolParam--><!--Device-CliHook-onBeforeCallTool?(param: ExecToolParam): ExecToolParam-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 

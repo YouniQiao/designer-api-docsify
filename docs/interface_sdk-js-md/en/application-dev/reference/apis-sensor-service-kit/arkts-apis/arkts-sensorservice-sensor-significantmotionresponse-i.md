@@ -10,6 +10,8 @@ Describes the significant motion sensor data. It extends from [Response](arkts-s
 
 **Since:** 8
 
+<!--Device-sensor-interface SignificantMotionResponse extends Response--><!--Device-sensor-interface SignificantMotionResponse extends Response-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## Modules to Import
@@ -29,5 +31,7 @@ Intensity of a motion. Value range: **1** indicates that a valid motion is detec
 **Type:** number
 
 **Since:** 8
+
+<!--Device-SignificantMotionResponse-scalar: double--><!--Device-SignificantMotionResponse-scalar: double-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor

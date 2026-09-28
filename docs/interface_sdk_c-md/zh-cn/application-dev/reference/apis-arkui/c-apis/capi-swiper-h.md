@@ -2,7 +2,7 @@
 
 ## 概述
 
-定义Swiper组件的枚举和接口。
+Defines the enumerations and APIs of the **Swiper** component for implementing scenarios such as carousel display and content navigation. It supports custom navigation indicators (dot/number types), navigation arrow styles, nested scrolling modes, mouse wheel page-turning modes, and animation modes, helping users quickly build carousel interaction experiences.
 
 **库：** libace_ndk.z.so
 
@@ -18,9 +18,9 @@
 
 | 名称 | typedef关键字 | 描述 |
 | -- | -- | -- |
-| [ArkUI_SwiperIndicator](capi-arkui-nativemodule-arkui-swiperindicator.md) | ArkUI_SwiperIndicator | 定义Swiper组件的导航指示器样式，用于在轮播等场景中展示当前位置和切换状态。 支持自定义指示器的大小、颜色、间距等属性配置，能够提升用户对当前浏览位置的感知，增强用户交互体验，适用于需要展示轮播图片、广告位、内容导航等多种应用场景。 |
-| [ArkUI_SwiperDigitIndicator](capi-arkui-nativemodule-arkui-swiperdigitindicator.md) | ArkUI_SwiperDigitIndicator | 定义Swiper组件的数字导航指示器样式，用于以数字形式展示当前位置和总页数。 |
-| [ArkUI_SwiperArrowStyle](capi-arkui-nativemodule-arkui-swiperarrowstyle.md) | ArkUI_SwiperArrowStyle | 定义Swiper组件的导航箭头样式结构体，通过配置箭头位置、大小、颜色等属性实现翻页指引。 |
+| [ArkUI_SwiperIndicator](capi-arkui-nativemodule-arkui-swiperindicator.md) | ArkUI_SwiperIndicator | 定义Swiper组件的导航指示器风格。 |
+| [ArkUI_SwiperDigitIndicator](capi-arkui-nativemodule-arkui-swiperdigitindicator.md) | ArkUI_SwiperDigitIndicator | 定义Swiper组件的数字导航指示器风格。 |
+| [ArkUI_SwiperArrowStyle](capi-arkui-nativemodule-arkui-swiperarrowstyle.md) | ArkUI_SwiperArrowStyle | 定义Swiper组件的导航箭头风格。 |
 
 ### 枚举
 
@@ -65,7 +65,7 @@
 | [void OH_ArkUI_SwiperIndicator_SetIgnoreSizeOfBottom(ArkUI_SwiperIndicator* indicator, int32_t ignoreSize)](#oh_arkui_swiperindicator_setignoresizeofbottom) | 设置OH_ArkUI_SwiperIndicator_SetBottomPosition是否忽略导航点大小。 |
 | [int32_t OH_ArkUI_SwiperIndicator_GetIgnoreSizeOfBottom(ArkUI_SwiperIndicator* indicator)](#oh_arkui_swiperindicator_getignoresizeofbottom) | 获取OH_ArkUI_SwiperIndicator_SetBottomPosition是否忽略导航点大小。 |
 | [void OH_ArkUI_SwiperIndicator_SetSpace(ArkUI_SwiperIndicator* indicator, float space)](#oh_arkui_swiperindicator_setspace) | 设置导航点间距。 |
-| [float OH_ArkUI_SwiperIndicator_GetSpace(ArkUI_SwiperIndicator* indicator)](#oh_arkui_swiperindicator_getspace) | Obtains 导航点间距。单位：vp。. |
+| [float OH_ArkUI_SwiperIndicator_GetSpace(ArkUI_SwiperIndicator* indicator)](#oh_arkui_swiperindicator_getspace) | 获取导航点间距。 |
 | [ArkUI_SwiperDigitIndicator *OH_ArkUI_SwiperDigitIndicator_Create()](#oh_arkui_swiperdigitindicator_create) | 创建Swiper组件的数字导航指示器。 |
 | [void OH_ArkUI_SwiperDigitIndicator_SetStartPosition(ArkUI_SwiperDigitIndicator* indicator, float value)](#oh_arkui_swiperdigitindicator_setstartposition) | 设置数字导航指示器距离Swiper组件左边的距离，在从右至左显示的语言模式下，设置其距离Swiper组件右边的距离。 |
 | [float OH_ArkUI_SwiperDigitIndicator_GetStartPosition(ArkUI_SwiperDigitIndicator* indicator)](#oh_arkui_swiperdigitindicator_getstartposition) | 获取数字导航指示器距离Swiper组件左边的距离，在从右至左显示的语言模式下，获取其距离Swiper组件右边的距离。 |
@@ -895,7 +895,7 @@ float OH_ArkUI_SwiperIndicator_GetSpace(ArkUI_SwiperIndicator* indicator)
 
 **描述：**
 
-Obtains 导航点间距。单位：vp。.
+获取导航点间距。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

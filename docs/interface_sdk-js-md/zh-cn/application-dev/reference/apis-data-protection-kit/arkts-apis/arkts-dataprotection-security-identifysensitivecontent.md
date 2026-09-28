@@ -4,6 +4,8 @@
 
 **起始版本：** 21
 
+<!--Device-unnamed-declare namespace identifySensitiveContent--><!--Device-unnamed-declare namespace identifySensitiveContent-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## 导入模块

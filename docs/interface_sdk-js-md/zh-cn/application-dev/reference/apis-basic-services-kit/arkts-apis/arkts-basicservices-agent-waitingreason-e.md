@@ -8,6 +8,8 @@ enum WaitingReason
 
 **起始版本：** 20
 
+<!--Device-agent-enum WaitingReason--><!--Device-agent-enum WaitingReason-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## TASK_QUEUE_FULL
@@ -19,6 +21,8 @@ TASK_QUEUE_FULL = 0x00
 表示任务因任务队列已满而进入等待状态。
 
 **起始版本：** 20
+
+<!--Device-WaitingReason-TASK_QUEUE_FULL = 0x00--><!--Device-WaitingReason-TASK_QUEUE_FULL = 0x00-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -32,6 +36,8 @@ NETWORK_NOT_MATCH = 0x01
 
 **起始版本：** 20
 
+<!--Device-WaitingReason-NETWORK_NOT_MATCH = 0x01--><!--Device-WaitingReason-NETWORK_NOT_MATCH = 0x01-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## APP_BACKGROUND
@@ -44,6 +50,8 @@ APP_BACKGROUND = 0x02
 
 **起始版本：** 20
 
+<!--Device-WaitingReason-APP_BACKGROUND = 0x02--><!--Device-WaitingReason-APP_BACKGROUND = 0x02-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## USER_INACTIVATED
@@ -55,5 +63,7 @@ USER_INACTIVATED = 0x03
 表示任务因所属用户处于非激活状态而进入等待状态。
 
 **起始版本：** 20
+
+<!--Device-WaitingReason-USER_INACTIVATED = 0x03--><!--Device-WaitingReason-USER_INACTIVATED = 0x03-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent

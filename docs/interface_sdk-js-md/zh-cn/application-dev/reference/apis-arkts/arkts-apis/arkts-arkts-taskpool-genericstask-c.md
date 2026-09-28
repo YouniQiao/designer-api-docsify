@@ -10,6 +10,8 @@ class GenericsTask<A extends Array<Object>, R> extends Task
 
 **起始版本：** 13
 
+<!--Device-taskpool-class GenericsTask<A extends Array<Object>, R> extends Task--><!--Device-taskpool-class GenericsTask<A extends Array<Object>, R> extends Task-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -29,6 +31,8 @@ GenericsTask的构造函数，用于创建一个**GenericsTask**对象。
 **起始版本：** 13
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
+
+<!--Device-GenericsTask-constructor(func: (...args: A) => R | Promise<R>, ...args: A)--><!--Device-GenericsTask-constructor(func: (...args: A) => R | Promise<R>, ...args: A)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -84,6 +88,8 @@ GenericsTask的构造函数，用于创建一个**GenericsTask**实例，并可�
 **起始版本：** 13
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
+
+<!--Device-GenericsTask-constructor(name: string, func: (...args: A) => R | Promise<R>, ...args: A)--><!--Device-GenericsTask-constructor(name: string, func: (...args: A) => R | Promise<R>, ...args: A)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

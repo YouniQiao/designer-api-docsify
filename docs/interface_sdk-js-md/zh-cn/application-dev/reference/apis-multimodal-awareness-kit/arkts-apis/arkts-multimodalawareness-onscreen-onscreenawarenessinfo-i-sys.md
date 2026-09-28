@@ -8,6 +8,8 @@ export interface OnscreenAwarenessInfo
 
 **起始版本：** 23
 
+<!--Device-onScreen-export interface OnscreenAwarenessInfo--><!--Device-onScreen-export interface OnscreenAwarenessInfo-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ appIndex?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OnscreenAwarenessInfo-appIndex?: int--><!--Device-OnscreenAwarenessInfo-appIndex?: int-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ appName?: string
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-OnscreenAwarenessInfo-appName?: string--><!--Device-OnscreenAwarenessInfo-appName?: string-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -68,6 +74,8 @@ bundleName?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OnscreenAwarenessInfo-bundleName?: string--><!--Device-OnscreenAwarenessInfo-bundleName?: string-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **系统接口：** 此接口为系统接口。
@@ -85,6 +93,8 @@ collectStrategy?: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-OnscreenAwarenessInfo-collectStrategy?: int--><!--Device-OnscreenAwarenessInfo-collectStrategy?: int-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -104,6 +114,8 @@ displayId?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OnscreenAwarenessInfo-displayId?: long--><!--Device-OnscreenAwarenessInfo-displayId?: long-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **系统接口：** 此接口为系统接口。
@@ -121,6 +133,8 @@ entityInfo?: EntityInfo[]
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-OnscreenAwarenessInfo-entityInfo?: EntityInfo[]--><!--Device-OnscreenAwarenessInfo-entityInfo?: EntityInfo[]-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -140,6 +154,8 @@ items?: AwarenessItem[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OnscreenAwarenessInfo-items?: AwarenessItem[]--><!--Device-OnscreenAwarenessInfo-items?: AwarenessItem[]-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **系统接口：** 此接口为系统接口。
@@ -157,6 +173,8 @@ languageInfo?: string
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-OnscreenAwarenessInfo-languageInfo?: string--><!--Device-OnscreenAwarenessInfo-languageInfo?: string-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -176,6 +194,8 @@ miniProgramId?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OnscreenAwarenessInfo-miniProgramId?: string--><!--Device-OnscreenAwarenessInfo-miniProgramId?: string-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **系统接口：** 此接口为系统接口。
@@ -193,6 +213,8 @@ miniProgramName?: string
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-OnscreenAwarenessInfo-miniProgramName?: string--><!--Device-OnscreenAwarenessInfo-miniProgramName?: string-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -212,6 +234,8 @@ pageId?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OnscreenAwarenessInfo-pageId?: string--><!--Device-OnscreenAwarenessInfo-pageId?: string-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **系统接口：** 此接口为系统接口。
@@ -229,6 +253,8 @@ pageTags?: string[]
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-OnscreenAwarenessInfo-pageTags?: string[]--><!--Device-OnscreenAwarenessInfo-pageTags?: string[]-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -248,6 +274,8 @@ resultCode: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OnscreenAwarenessInfo-resultCode: int--><!--Device-OnscreenAwarenessInfo-resultCode: int-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **系统接口：** 此接口为系统接口。
@@ -265,6 +293,8 @@ sampleId?: string
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-OnscreenAwarenessInfo-sampleId?: string--><!--Device-OnscreenAwarenessInfo-sampleId?: string-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -284,6 +314,8 @@ timestamp: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OnscreenAwarenessInfo-timestamp: long--><!--Device-OnscreenAwarenessInfo-timestamp: long-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **系统接口：** 此接口为系统接口。
@@ -302,6 +334,8 @@ uid?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OnscreenAwarenessInfo-uid?: string--><!--Device-OnscreenAwarenessInfo-uid?: string-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **系统接口：** 此接口为系统接口。
@@ -319,6 +353,8 @@ windowId?: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-OnscreenAwarenessInfo-windowId?: int--><!--Device-OnscreenAwarenessInfo-windowId?: int-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 

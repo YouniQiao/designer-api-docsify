@@ -8,6 +8,8 @@ export interface LocatingRequiredData
 
 **起始版本：** 10
 
+<!--Device-geoLocationManager-export interface LocatingRequiredData--><!--Device-geoLocationManager-export interface LocatingRequiredData-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ bluetoothData?: BluetoothScanInfo
 
 **起始版本：** 10
 
+<!--Device-LocatingRequiredData-bluetoothData?: BluetoothScanInfo--><!--Device-LocatingRequiredData-bluetoothData?: BluetoothScanInfo-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **系统接口：** 此接口为系统接口。
@@ -47,6 +51,8 @@ campedCellInfo?: CellInfo
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-LocatingRequiredData-campedCellInfo?: CellInfo--><!--Device-LocatingRequiredData-campedCellInfo?: CellInfo-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -66,6 +72,8 @@ neighboringCellInfo?: CellInfo[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-LocatingRequiredData-neighboringCellInfo?: CellInfo[]--><!--Device-LocatingRequiredData-neighboringCellInfo?: CellInfo[]-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **系统接口：** 此接口为系统接口。
@@ -84,6 +92,8 @@ slotId?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-LocatingRequiredData-slotId?: int--><!--Device-LocatingRequiredData-slotId?: int-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **系统接口：** 此接口为系统接口。
@@ -99,6 +109,8 @@ wifiData?: WifiScanInfo
 **类型：** [WifiScanInfo](arkts-location-geolocationmanager-wifiscaninfo-i-sys.md)
 
 **起始版本：** 10
+
+<!--Device-LocatingRequiredData-wifiData?: WifiScanInfo--><!--Device-LocatingRequiredData-wifiData?: WifiScanInfo-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 

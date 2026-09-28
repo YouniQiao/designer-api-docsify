@@ -10,6 +10,8 @@ Worker线程用于与宿主线程通信的类。其中postMessage接口用于向
 
 **起始版本：** 9
 
+<!--Device-unnamed-export interface ThreadWorkerGlobalScope extends GlobalScope--><!--Device-unnamed-export interface ThreadWorkerGlobalScope extends GlobalScope-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -29,6 +31,8 @@ Worker线程调用宿主线程上注册的对象的指定方法，此调用对Wo
 **起始版本：** 11
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ThreadWorkerGlobalScope-callGlobalCallObjectMethod(instanceName: string, methodName: string, timeout: number, ...args: Object[]): Object--><!--Device-ThreadWorkerGlobalScope-callGlobalCallObjectMethod(instanceName: string, methodName: string, timeout: number, ...args: Object[]): Object-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -116,6 +120,8 @@ close(): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-ThreadWorkerGlobalScope-close(): void--><!--Device-ThreadWorkerGlobalScope-close(): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **错误码：**
@@ -156,6 +162,8 @@ onmessage?: (this: ThreadWorkerGlobalScope, ev: MessageEvents) => void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-ThreadWorkerGlobalScope-onmessage?: (this: ThreadWorkerGlobalScope, ev: MessageEvents) => void--><!--Device-ThreadWorkerGlobalScope-onmessage?: (this: ThreadWorkerGlobalScope, ev: MessageEvents) => void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -184,6 +192,8 @@ onmessageerror?: (this: ThreadWorkerGlobalScope, ev: MessageEvents) => void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-ThreadWorkerGlobalScope-onmessageerror?: (this: ThreadWorkerGlobalScope, ev: MessageEvents) => void--><!--Device-ThreadWorkerGlobalScope-onmessageerror?: (this: ThreadWorkerGlobalScope, ev: MessageEvents) => void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -211,6 +221,8 @@ Worker线程通过转移对象所有权的方式向宿主线程发送消息。
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ThreadWorkerGlobalScope-postMessage(messageObject: Object, transfer: ArrayBuffer[]): void--><!--Device-ThreadWorkerGlobalScope-postMessage(messageObject: Object, transfer: ArrayBuffer[]): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -265,6 +277,8 @@ Worker线程通过转移对象所有权或拷贝数据的方式向宿主线程�
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ThreadWorkerGlobalScope-postMessage(messageObject: Object, options?: PostMessageOptions): void--><!--Device-ThreadWorkerGlobalScope-postMessage(messageObject: Object, options?: PostMessageOptions): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -326,6 +340,8 @@ Worker线程通过转移对象所有权的方式向宿主线程发送插队消�
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-ThreadWorkerGlobalScope-postMessageAtFront?(message: Object, priority: Priority, transfer?: ArrayBuffer[]): void--><!--Device-ThreadWorkerGlobalScope-postMessageAtFront?(message: Object, priority: Priority, transfer?: ArrayBuffer[]): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -437,6 +453,8 @@ Worker线程向宿主线程发送消息，消息中的Sendable对象通过引用
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ThreadWorkerGlobalScope-postMessageWithSharedSendable(message: Object, transfer?: ArrayBuffer[]): void--><!--Device-ThreadWorkerGlobalScope-postMessageWithSharedSendable(message: Object, transfer?: ArrayBuffer[]): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

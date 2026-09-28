@@ -21,6 +21,8 @@ function getAllActiveNotifications(callback: AsyncCallback<Array<NotificationReq
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notification-function getAllActiveNotifications(callback: AsyncCallback<Array<NotificationRequest>>): void--><!--Device-notification-function getAllActiveNotifications(callback: AsyncCallback<Array<NotificationRequest>>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +51,8 @@ function getAllActiveNotifications(): Promise<Array<NotificationRequest>>
 **替代接口：** [getAllActiveNotifications](arkts-notification-notificationmanager-getallactivenotifications-f-sys.md)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notification-function getAllActiveNotifications(): Promise<Array<NotificationRequest>>--><!--Device-notification-function getAllActiveNotifications(): Promise<Array<NotificationRequest>>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

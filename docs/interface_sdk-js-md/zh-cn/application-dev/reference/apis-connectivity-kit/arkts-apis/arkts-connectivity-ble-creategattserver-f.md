@@ -22,6 +22,8 @@ function createGattServer(): GattServer
 
 **替代接口：** [createGattServer](arkts-connectivity-ble-creategattserver-f.md)
 
+<!--Device-BLE-function createGattServer(): GattServer--><!--Device-BLE-function createGattServer(): GattServer-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **返回值：**

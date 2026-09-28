@@ -18,6 +18,8 @@ function off(type: 'locatingRequiredDataChange', callback?: Callback<Array<Locat
 
 **需要权限：** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
+<!--Device-geoLocationManager-function off(type: 'locatingRequiredDataChange', callback?: Callback<Array<LocatingRequiredData>>): void--><!--Device-geoLocationManager-function off(type: 'locatingRequiredDataChange', callback?: Callback<Array<LocatingRequiredData>>): void-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **系统接口：** 此接口为系统接口。
@@ -65,6 +67,8 @@ function off(type: 'locationIconStatusChange', callback?: Callback<LocationIconS
 订阅定位图标状态变化。使用callback异步回调。
 
 **起始版本：** 12
+
+<!--Device-geoLocationManager-function off(type: 'locationIconStatusChange', callback?: Callback<LocationIconStatus>): void--><!--Device-geoLocationManager-function off(type: 'locationIconStatusChange', callback?: Callback<LocationIconStatus>): void-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 

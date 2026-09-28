@@ -14,6 +14,8 @@ API version 10之前，此常量值为512，表示单个PasteData中所能包含
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-pasteboard-const MAX_RECORD_NUM = 512--><!--Device-pasteboard-const MAX_RECORD_NUM = 512-End-->
+
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
 ## MIMETYPE_PIXELMAP
@@ -27,6 +29,8 @@ PixelMap内容的MIME类型定义。
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-pasteboard-const MIMETYPE_PIXELMAP = 'pixelMap'--><!--Device-pasteboard-const MIMETYPE_PIXELMAP = 'pixelMap'-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -42,6 +46,8 @@ HTML内容的MIME类型定义。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-pasteboard-const MIMETYPE_TEXT_HTML = 'text/html'--><!--Device-pasteboard-const MIMETYPE_TEXT_HTML = 'text/html'-End-->
+
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
 ## MIMETYPE_TEXT_PLAIN
@@ -55,6 +61,8 @@ const MIMETYPE_TEXT_PLAIN = 'text/plain'
 **起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-pasteboard-const MIMETYPE_TEXT_PLAIN = 'text/plain'--><!--Device-pasteboard-const MIMETYPE_TEXT_PLAIN = 'text/plain'-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -70,6 +78,8 @@ URI内容的MIME类型定义。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-pasteboard-const MIMETYPE_TEXT_URI = 'text/uri'--><!--Device-pasteboard-const MIMETYPE_TEXT_URI = 'text/uri'-End-->
+
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
 ## MIMETYPE_TEXT_WANT
@@ -83,5 +93,7 @@ Want内容的MIME类型定义。
 **起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-pasteboard-const MIMETYPE_TEXT_WANT = 'text/want'--><!--Device-pasteboard-const MIMETYPE_TEXT_WANT = 'text/want'-End-->
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard

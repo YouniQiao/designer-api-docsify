@@ -61,6 +61,8 @@ function createImageSource(uri: string): ImageSource
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-image-function createImageSource(uri: string): ImageSource--><!--Device-image-function createImageSource(uri: string): ImageSource-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
@@ -145,6 +147,8 @@ function createImageSource(uri: string, options: SourceOptions): ImageSource
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-image-function createImageSource(uri: string, options: SourceOptions): ImageSource--><!--Device-image-function createImageSource(uri: string, options: SourceOptions): ImageSource-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
@@ -187,6 +191,8 @@ function createImageSource(fd: number): ImageSource
 **起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-image-function createImageSource(fd: int): ImageSource--><!--Device-image-function createImageSource(fd: int): ImageSource-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -233,6 +239,8 @@ function createImageSource(fd: number, options: SourceOptions): ImageSource
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-image-function createImageSource(fd: int, options: SourceOptions): ImageSource--><!--Device-image-function createImageSource(fd: int, options: SourceOptions): ImageSource-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -282,6 +290,8 @@ function createImageSource(buf: ArrayBuffer): ImageSource
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-image-function createImageSource(buf: ArrayBuffer): ImageSource--><!--Device-image-function createImageSource(buf: ArrayBuffer): ImageSource-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
@@ -324,6 +334,8 @@ function createImageSource(buf: ArrayBuffer, options: SourceOptions): ImageSourc
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-image-function createImageSource(buf: ArrayBuffer, options: SourceOptions): ImageSource--><!--Device-image-function createImageSource(buf: ArrayBuffer, options: SourceOptions): ImageSource-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
@@ -365,6 +377,8 @@ function createImageSource(rawfile: resourceManager.RawFileDescriptor, options?:
 **起始版本：** 11
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-image-function createImageSource(rawfile: resourceManager.RawFileDescriptor, options?: SourceOptions): ImageSource--><!--Device-image-function createImageSource(rawfile: resourceManager.RawFileDescriptor, options?: SourceOptions): ImageSource-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 

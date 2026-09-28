@@ -16,6 +16,8 @@ function getGlobalHttpProxy(callback: AsyncCallback<HttpProxy>): void
 
 **起始版本：** 10
 
+<!--Device-connection-function getGlobalHttpProxy(callback: AsyncCallback<HttpProxy>): void--><!--Device-connection-function getGlobalHttpProxy(callback: AsyncCallback<HttpProxy>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -59,6 +61,8 @@ function getGlobalHttpProxy(): Promise<HttpProxy>
 获取网络的全局代理配置信息，使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-connection-function getGlobalHttpProxy(): Promise<HttpProxy>--><!--Device-connection-function getGlobalHttpProxy(): Promise<HttpProxy>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 

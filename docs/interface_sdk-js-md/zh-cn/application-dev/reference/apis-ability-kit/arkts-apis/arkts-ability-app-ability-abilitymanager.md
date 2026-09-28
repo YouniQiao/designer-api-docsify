@@ -4,6 +4,8 @@ AbilityManager模块提供获取、新增、修改Ability相关信息和运行�
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace abilityManager--><!--Device-unnamed-declare namespace abilityManager-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块

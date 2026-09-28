@@ -8,6 +8,8 @@ export interface CheckResult
 
 **起始版本：** 9
 
+<!--Device-update-export interface CheckResult--><!--Device-update-export interface CheckResult-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ isExistNewVersion: boolean
 
 **起始版本：** 9
 
+<!--Device-CheckResult-isExistNewVersion: boolean--><!--Device-CheckResult-isExistNewVersion: boolean-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ newVersionInfo: NewVersionInfo
 **类型：** [NewVersionInfo](arkts-basicservices-update-newversioninfo-i-sys.md)
 
 **起始版本：** 9
+
+<!--Device-CheckResult-newVersionInfo: NewVersionInfo--><!--Device-CheckResult-newVersionInfo: NewVersionInfo-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
 

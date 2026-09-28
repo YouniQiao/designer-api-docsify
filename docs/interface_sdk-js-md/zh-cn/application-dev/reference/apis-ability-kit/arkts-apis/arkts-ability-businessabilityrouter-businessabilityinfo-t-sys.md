@@ -8,6 +8,8 @@ export type BusinessAbilityInfo = _BusinessAbilityInfo.BusinessAbilityInfo
 
 **起始版本：** 10
 
+<!--Device-businessAbilityRouter-export type BusinessAbilityInfo = _BusinessAbilityInfo.BusinessAbilityInfo--><!--Device-businessAbilityRouter-export type BusinessAbilityInfo = _BusinessAbilityInfo.BusinessAbilityInfo-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。

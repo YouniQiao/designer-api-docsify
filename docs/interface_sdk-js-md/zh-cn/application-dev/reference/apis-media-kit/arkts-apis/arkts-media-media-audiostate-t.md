@@ -16,6 +16,8 @@ type AudioState = 'idle' | 'playing' | 'paused' | 'stopped' | 'error'
 
 **替代接口：** [AVPlayerState](arkts-media-media-avplayerstate-t.md)
 
+<!--Device-media-type AudioState = 'idle' | 'playing' | 'paused' | 'stopped' | 'error'--><!--Device-media-type AudioState = 'idle' | 'playing' | 'paused' | 'stopped' | 'error'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
 | 类型 | 说明 |

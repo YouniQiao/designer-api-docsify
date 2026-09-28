@@ -18,6 +18,8 @@ function getPoliciesSync(admin: Want, appId: string): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-browser-function getPoliciesSync(admin: Want, appId: string): string--><!--Device-browser-function getPoliciesSync(admin: Want, appId: string): string-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -77,6 +79,8 @@ function getPoliciesSync(admin: Want | null, appId: string): string
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-browser-function getPoliciesSync(admin: Want | null, appId: string): string--><!--Device-browser-function getPoliciesSync(admin: Want | null, appId: string): string-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

@@ -8,6 +8,8 @@ The rotion angles, relative to the current position. @typedef RotationAngles
 
 **起始版本：** 20
 
+<!--Device-mechanicManager-export interface RotationAngles--><!--Device-mechanicManager-export interface RotationAngles-End-->
+
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ pitch?: number
 
 **起始版本：** 20
 
+<!--Device-RotationAngles-pitch?: double--><!--Device-RotationAngles-pitch?: double-End-->
+
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。
@@ -46,6 +50,8 @@ roll?: number
 
 **起始版本：** 20
 
+<!--Device-RotationAngles-roll?: double--><!--Device-RotationAngles-roll?: double-End-->
+
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +67,8 @@ yaw?: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-RotationAngles-yaw?: double--><!--Device-RotationAngles-yaw?: double-End-->
 
 **系统能力：** SystemCapability.Mechanic.Core
 

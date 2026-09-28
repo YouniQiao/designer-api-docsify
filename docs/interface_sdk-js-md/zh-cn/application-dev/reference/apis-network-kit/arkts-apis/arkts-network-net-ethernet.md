@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace ethernet--><!--Device-unnamed-declare namespace ethernet-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
 ## 导入模块

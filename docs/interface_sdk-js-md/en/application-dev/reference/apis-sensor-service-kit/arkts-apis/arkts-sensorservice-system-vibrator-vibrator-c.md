@@ -14,6 +14,8 @@ Provides static methods for triggering device vibration.
 
 **Required permissions:** ohos.permission.VIBRATE
 
+<!--Device-unnamed-export default class Vibrator--><!--Device-unnamed-export default class Vibrator-End-->
+
 **System capability:** SystemCapability.Sensors.MiscDevice.Lite
 
 ## Modules to Import
@@ -47,6 +49,8 @@ Use this API to trigger device vibration such as alarm clock vibration, incoming
 **Required permissions:** ohos.permission.VIBRATE
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-Vibrator-static vibrate(options?: VibrateOptions): void--><!--Device-Vibrator-static vibrate(options?: VibrateOptions): void-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice.Lite
 

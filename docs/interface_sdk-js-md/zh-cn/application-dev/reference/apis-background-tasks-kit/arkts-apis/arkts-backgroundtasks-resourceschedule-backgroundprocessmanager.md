@@ -4,6 +4,8 @@
 
 **起始版本：** 17
 
+<!--Device-unnamed-declare namespace backgroundProcessManager--><!--Device-unnamed-declare namespace backgroundProcessManager-End-->
+
 **系统能力：** SystemCapability.Resourceschedule.BackgroundProcessManager
 
 ## 导入模块

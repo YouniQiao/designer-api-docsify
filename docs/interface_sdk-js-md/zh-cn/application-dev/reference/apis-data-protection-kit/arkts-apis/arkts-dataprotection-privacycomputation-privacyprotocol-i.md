@@ -8,6 +8,8 @@ interface PrivacyProtocol
 
 **起始版本：** 26.0.1
 
+<!--Device-privacyComputation-interface PrivacyProtocol--><!--Device-privacyComputation-interface PrivacyProtocol-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 ## 导入模块
@@ -31,6 +33,8 @@ dataSetSize: DataSetSize
 
 **原子化服务API：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
 
+<!--Device-PrivacyProtocol-dataSetSize: DataSetSize--><!--Device-PrivacyProtocol-dataSetSize: DataSetSize-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 ## protocolType
@@ -48,5 +52,7 @@ protocolType: ProtocolType
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
+
+<!--Device-PrivacyProtocol-protocolType: ProtocolType--><!--Device-PrivacyProtocol-protocolType: ProtocolType-End-->
 
 **系统能力：** SystemCapability.Security.Asset

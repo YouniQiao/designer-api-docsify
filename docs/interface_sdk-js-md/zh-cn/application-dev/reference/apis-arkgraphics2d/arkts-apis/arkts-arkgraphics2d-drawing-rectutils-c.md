@@ -23,6 +23,8 @@ class RectUtils
 
 **起始版本：** 20
 
+<!--Device-drawing-class RectUtils--><!--Device-drawing-class RectUtils-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## 导入模块
@@ -40,6 +42,8 @@ static centerX(rect: common2D.Rect): number
 获取矩形中心的x轴坐标，中心x轴坐标为矩形左边界与右边界之和的一半。
 
 **起始版本：** 20
+
+<!--Device-RectUtils-static centerX(rect: common2D.Rect): double--><!--Device-RectUtils-static centerX(rect: common2D.Rect): double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -74,6 +78,8 @@ static centerY(rect: common2D.Rect): number
 
 **起始版本：** 20
 
+<!--Device-RectUtils-static centerY(rect: common2D.Rect): double--><!--Device-RectUtils-static centerY(rect: common2D.Rect): double-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -106,6 +112,8 @@ static contains(rect: common2D.Rect, other: common2D.Rect): boolean
 判断一个矩形是否完全包含另外一个矩形。
 
 **起始版本：** 20
+
+<!--Device-RectUtils-static contains(rect: common2D.Rect, other: common2D.Rect): boolean--><!--Device-RectUtils-static contains(rect: common2D.Rect, other: common2D.Rect): boolean-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -144,6 +152,8 @@ static contains(rect: common2D.Rect, left: number, top: number, right: number, b
 判断一个矩形是否完全包含另外一个矩形（另一个矩形分别用左上右下坐标表示）。
 
 **起始版本：** 20
+
+<!--Device-RectUtils-static contains(rect: common2D.Rect, left: double, top: double, right: double, bottom: double): boolean--><!--Device-RectUtils-static contains(rect: common2D.Rect, left: double, top: double, right: double, bottom: double): boolean-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -185,6 +195,8 @@ static contains(rect: common2D.Rect, x: number, y: number): boolean
 
 **起始版本：** 20
 
+<!--Device-RectUtils-static contains(rect: common2D.Rect, x: double, y: double): boolean--><!--Device-RectUtils-static contains(rect: common2D.Rect, x: double, y: double): boolean-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -221,6 +233,8 @@ static getHeight(rect: common2D.Rect): number
 
 **起始版本：** 20
 
+<!--Device-RectUtils-static getHeight(rect: common2D.Rect): double--><!--Device-RectUtils-static getHeight(rect: common2D.Rect): double-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -253,6 +267,8 @@ static getWidth(rect: common2D.Rect): number
 获取矩形的宽度。
 
 **起始版本：** 20
+
+<!--Device-RectUtils-static getWidth(rect: common2D.Rect): double--><!--Device-RectUtils-static getWidth(rect: common2D.Rect): double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -288,6 +304,8 @@ static inset(rect: common2D.Rect, left: number, top: number, right: number, bott
 
 **起始版本：** 20
 
+<!--Device-RectUtils-static inset(rect: common2D.Rect, left: double, top: double, right: double, bottom: double): void--><!--Device-RectUtils-static inset(rect: common2D.Rect, left: double, top: double, right: double, bottom: double): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -322,6 +340,8 @@ static intersect(rect: common2D.Rect, other: common2D.Rect): boolean
 计算两个矩形的交集区域，并将交集结果更新到第一个入参代表的矩形区域。
 
 **起始版本：** 20
+
+<!--Device-RectUtils-static intersect(rect: common2D.Rect, other: common2D.Rect): boolean--><!--Device-RectUtils-static intersect(rect: common2D.Rect, other: common2D.Rect): boolean-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -363,6 +383,8 @@ static isEmpty(rect: common2D.Rect): boolean
 
 **起始版本：** 20
 
+<!--Device-RectUtils-static isEmpty(rect: common2D.Rect): boolean--><!--Device-RectUtils-static isEmpty(rect: common2D.Rect): boolean-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -400,6 +422,8 @@ static isEqual(rect: common2D.Rect, other: common2D.Rect): boolean
 
 **起始版本：** 20
 
+<!--Device-RectUtils-static isEqual(rect: common2D.Rect, other: common2D.Rect): boolean--><!--Device-RectUtils-static isEqual(rect: common2D.Rect, other: common2D.Rect): boolean-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -436,6 +460,8 @@ static isIntersect(rect: common2D.Rect, other: common2D.Rect): boolean
 
 **起始版本：** 20
 
+<!--Device-RectUtils-static isIntersect(rect: common2D.Rect, other: common2D.Rect): boolean--><!--Device-RectUtils-static isIntersect(rect: common2D.Rect, other: common2D.Rect): boolean-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -471,6 +497,8 @@ static makeCopy(src: common2D.Rect): common2D.Rect
 拷贝一个矩形。
 
 **起始版本：** 20
+
+<!--Device-RectUtils-static makeCopy(src: common2D.Rect): common2D.Rect--><!--Device-RectUtils-static makeCopy(src: common2D.Rect): common2D.Rect-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -509,6 +537,8 @@ static makeEmpty(): common2D.Rect
 
 **起始版本：** 20
 
+<!--Device-RectUtils-static makeEmpty(): common2D.Rect--><!--Device-RectUtils-static makeEmpty(): common2D.Rect-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
@@ -534,6 +564,8 @@ static makeLtrb(left: number, top: number, right: number, bottom: number): commo
 创建指定上下左右边界的矩形。
 
 **起始版本：** 20
+
+<!--Device-RectUtils-static makeLtrb(left: number, top: number, right: number, bottom: number): common2D.Rect--><!--Device-RectUtils-static makeLtrb(left: number, top: number, right: number, bottom: number): common2D.Rect-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -570,6 +602,8 @@ static offset(rect: common2D.Rect, dx: number, dy: number): void
 
 **起始版本：** 20
 
+<!--Device-RectUtils-static offset(rect: common2D.Rect, dx: double, dy: double): void--><!--Device-RectUtils-static offset(rect: common2D.Rect, dx: double, dy: double): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -602,6 +636,8 @@ static offsetTo(rect: common2D.Rect, newLeft: number, newTop: number): void
 将矩形平移到指定位置。
 
 **起始版本：** 20
+
+<!--Device-RectUtils-static offsetTo(rect: common2D.Rect, newLeft: double, newTop: double): void--><!--Device-RectUtils-static offsetTo(rect: common2D.Rect, newLeft: double, newTop: double): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -636,6 +672,8 @@ static setEmpty(rect: common2D.Rect): void
 
 **起始版本：** 20
 
+<!--Device-RectUtils-static setEmpty(rect: common2D.Rect): void--><!--Device-RectUtils-static setEmpty(rect: common2D.Rect): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -666,6 +704,8 @@ static setLtrb(rect: common2D.Rect, left: number, top: number, right: number, bo
 使用传入的“左上右下”的值更新当前矩形的左上右下边界值。
 
 **起始版本：** 20
+
+<!--Device-RectUtils-static setLtrb(rect: common2D.Rect, left: double, top: double, right: double, bottom: double): void--><!--Device-RectUtils-static setLtrb(rect: common2D.Rect, left: double, top: double, right: double, bottom: double): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -702,6 +742,8 @@ static setRect(rect: common2D.Rect, other: common2D.Rect): void
 
 **起始版本：** 20
 
+<!--Device-RectUtils-static setRect(rect: common2D.Rect, other: common2D.Rect): void--><!--Device-RectUtils-static setRect(rect: common2D.Rect, other: common2D.Rect): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -737,6 +779,8 @@ static sort(rect: common2D.Rect): void
 
 **起始版本：** 20
 
+<!--Device-RectUtils-static sort(rect: common2D.Rect): void--><!--Device-RectUtils-static sort(rect: common2D.Rect): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -767,6 +811,8 @@ static union(rect: common2D.Rect, other: common2D.Rect): void
 计算两个矩形的并集区域，并将并集结果更新到第一个入参代表的矩形区域。如果第一个入参矩形为空，则将并集结果更新到第二个入参代表的矩形区域；如果第二个入参的矩形为空，则不进行任何操作。
 
 **起始版本：** 20
+
+<!--Device-RectUtils-static union(rect: common2D.Rect, other: common2D.Rect): void--><!--Device-RectUtils-static union(rect: common2D.Rect, other: common2D.Rect): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

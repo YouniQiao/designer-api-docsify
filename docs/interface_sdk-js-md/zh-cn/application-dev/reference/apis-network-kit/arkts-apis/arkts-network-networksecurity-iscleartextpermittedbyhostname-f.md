@@ -18,6 +18,8 @@ export function isCleartextPermittedByHostName(hostName: string): boolean
 
 **需要权限：** ohos.permission.INTERNET
 
+<!--Device-networkSecurity-export function isCleartextPermittedByHostName(hostName: string): boolean--><!--Device-networkSecurity-export function isCleartextPermittedByHostName(hostName: string): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**

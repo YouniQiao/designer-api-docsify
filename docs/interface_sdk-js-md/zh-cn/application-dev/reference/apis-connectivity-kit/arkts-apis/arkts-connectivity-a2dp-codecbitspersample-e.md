@@ -8,6 +8,8 @@ enum CodecBitsPerSample
 
 **起始版本：** 11
 
+<!--Device-a2dp-enum CodecBitsPerSample--><!--Device-a2dp-enum CodecBitsPerSample-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## CODEC_BITS_PER_SAMPLE_NONE
@@ -19,6 +21,8 @@ CODEC_BITS_PER_SAMPLE_NONE = 0
 位深未知。
 
 **起始版本：** 11
+
+<!--Device-CodecBitsPerSample-CODEC_BITS_PER_SAMPLE_NONE = 0--><!--Device-CodecBitsPerSample-CODEC_BITS_PER_SAMPLE_NONE = 0-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -32,6 +36,8 @@ CODEC_BITS_PER_SAMPLE_16 = 1
 
 **起始版本：** 11
 
+<!--Device-CodecBitsPerSample-CODEC_BITS_PER_SAMPLE_16 = 1--><!--Device-CodecBitsPerSample-CODEC_BITS_PER_SAMPLE_16 = 1-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## CODEC_BITS_PER_SAMPLE_24
@@ -44,6 +50,8 @@ CODEC_BITS_PER_SAMPLE_24 = 2
 
 **起始版本：** 11
 
+<!--Device-CodecBitsPerSample-CODEC_BITS_PER_SAMPLE_24 = 2--><!--Device-CodecBitsPerSample-CODEC_BITS_PER_SAMPLE_24 = 2-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## CODEC_BITS_PER_SAMPLE_32
@@ -55,5 +63,7 @@ CODEC_BITS_PER_SAMPLE_32 = 3
 32bit
 
 **起始版本：** 11
+
+<!--Device-CodecBitsPerSample-CODEC_BITS_PER_SAMPLE_32 = 3--><!--Device-CodecBitsPerSample-CODEC_BITS_PER_SAMPLE_32 = 3-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

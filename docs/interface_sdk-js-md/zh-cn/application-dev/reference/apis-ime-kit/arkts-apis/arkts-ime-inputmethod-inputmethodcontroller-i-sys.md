@@ -11,6 +11,8 @@ interface InputMethodController
 
 **起始版本：** 6
 
+<!--Device-inputMethod-interface InputMethodController--><!--Device-inputMethod-interface InputMethodController-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## 导入模块
@@ -37,6 +39,8 @@ hideSoftKeyboard(displayId: number): Promise<void>
 **需要权限：** ohos.permission.CONNECT_IME_ABILITY
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-InputMethodController-hideSoftKeyboard(displayId: long): Promise<void>--><!--Device-InputMethodController-hideSoftKeyboard(displayId: long): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -94,6 +98,8 @@ showSoftKeyboard(displayId: number): Promise<void>
 **需要权限：** ohos.permission.CONNECT_IME_ABILITY
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-InputMethodController-showSoftKeyboard(displayId: long): Promise<void>--><!--Device-InputMethodController-showSoftKeyboard(displayId: long): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 

@@ -10,6 +10,8 @@ export type SendableResource = _SendableResource
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-sendableResourceManager-export type SendableResource = _SendableResource--><!--Device-sendableResourceManager-export type SendableResource = _SendableResource-End-->
+
 **系统能力：** SystemCapability.Global.ResourceManager
 
 **类型：** _SendableResource

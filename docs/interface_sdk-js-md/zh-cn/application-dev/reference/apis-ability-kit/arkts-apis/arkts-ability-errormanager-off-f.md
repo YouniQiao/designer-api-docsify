@@ -20,6 +20,8 @@ function off(type: 'error', observerId: number, callback: AsyncCallback<void>): 
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-errorManager-function off(type: 'error', observerId: number, callback: AsyncCallback<void>): void--><!--Device-errorManager-function off(type: 'error', observerId: number, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -74,6 +76,8 @@ function off(type: 'error', observerId: number): Promise<void>
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-errorManager-function off(type: 'error', observerId: number): Promise<void>--><!--Device-errorManager-function off(type: 'error', observerId: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -135,6 +139,8 @@ function off(type: 'loopObserver', observer?: LoopObserver): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-errorManager-function off(type: 'loopObserver', observer?: LoopObserver): void--><!--Device-errorManager-function off(type: 'loopObserver', observer?: LoopObserver): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -181,6 +187,8 @@ function off(type: 'unhandledRejection', observer?: UnhandledRejectionObserver):
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-errorManager-function off(type: 'unhandledRejection', observer?: UnhandledRejectionObserver): void--><!--Device-errorManager-function off(type: 'unhandledRejection', observer?: UnhandledRejectionObserver): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -264,6 +272,8 @@ function off(type: 'globalUnhandledRejectionDetected', observer?: GlobalObserver
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-errorManager-function off(type: 'globalUnhandledRejectionDetected', observer?: GlobalObserver): void--><!--Device-errorManager-function off(type: 'globalUnhandledRejectionDetected', observer?: GlobalObserver): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -324,6 +334,8 @@ function off(type: 'freeze', observer?: FreezeObserver): void
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-errorManager-function off(type: 'freeze', observer?: FreezeObserver): void--><!--Device-errorManager-function off(type: 'freeze', observer?: FreezeObserver): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -373,6 +385,8 @@ function off(type: 'globalErrorOccurred', observer?: GlobalObserver): void
 **起始版本：** 18
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-errorManager-function off(type: 'globalErrorOccurred', observer?: GlobalObserver): void--><!--Device-errorManager-function off(type: 'globalErrorOccurred', observer?: GlobalObserver): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

@@ -16,6 +16,8 @@ function constructTCPSocketServerInstance(): TCPSocketServer
 
 **起始版本：** 10
 
+<!--Device-socket-function constructTCPSocketServerInstance(): TCPSocketServer--><!--Device-socket-function constructTCPSocketServerInstance(): TCPSocketServer-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**

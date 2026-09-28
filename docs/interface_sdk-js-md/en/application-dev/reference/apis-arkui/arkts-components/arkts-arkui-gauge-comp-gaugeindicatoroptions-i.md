@@ -8,6 +8,8 @@ Provides gauge indicator options.
 
 **Since:** 11
 
+<!--Device-unnamed-declare interface GaugeIndicatorOptions--><!--Device-unnamed-declare interface GaugeIndicatorOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## icon
@@ -35,6 +37,8 @@ Only icons in SVG format are supported. If an icon in another format is used, th
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
+
+<!--Device-GaugeIndicatorOptions-icon?: ResourceStr--><!--Device-GaugeIndicatorOptions-icon?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -71,5 +75,7 @@ If the value is greater than the ring radius, the default value is used.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
+
+<!--Device-GaugeIndicatorOptions-space?: Dimension--><!--Device-GaugeIndicatorOptions-space?: Dimension-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -12,6 +12,8 @@ UIServiceExtensionConnectCallback是UIServiceExtension连接回调接口类，�
 
 **起始版本：** 14
 
+<!--Device-unnamed-export default interface UIServiceExtensionConnectCallback--><!--Device-unnamed-export default interface UIServiceExtensionConnectCallback-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## onData
@@ -31,6 +33,8 @@ onData(data: Record<string, Object>): void
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIServiceExtensionConnectCallback-onData(data: Record<string, Object>): void--><!--Device-UIServiceExtensionConnectCallback-onData(data: Record<string, Object>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -142,7 +146,9 @@ onDisconnect(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIServiceExtensionConnectCallback-onDisconnect(): void--><!--Device-UIServiceExtensionConnectCallback-onDisconnect(): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

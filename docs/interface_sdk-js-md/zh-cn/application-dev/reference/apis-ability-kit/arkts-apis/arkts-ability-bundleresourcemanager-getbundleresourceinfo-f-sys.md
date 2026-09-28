@@ -18,6 +18,8 @@ function getBundleResourceInfo(bundleName: string, resourceFlags?: number): Bund
 
 **需要权限：** ohos.permission.GET_BUNDLE_RESOURCES
 
+<!--Device-bundleResourceManager-function getBundleResourceInfo(bundleName: string, resourceFlags?: int): BundleResourceInfo--><!--Device-bundleResourceManager-function getBundleResourceInfo(bundleName: string, resourceFlags?: int): BundleResourceInfo-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Resource
 
 **系统接口：** 此接口为系统接口。
@@ -95,6 +97,8 @@ function getBundleResourceInfo(bundleName: string, resourceFlags?: number, appIn
 **起始版本：** 12
 
 **需要权限：** ohos.permission.GET_BUNDLE_RESOURCES
+
+<!--Device-bundleResourceManager-function getBundleResourceInfo(bundleName: string, resourceFlags?: int, appIndex?: int): BundleResourceInfo--><!--Device-bundleResourceManager-function getBundleResourceInfo(bundleName: string, resourceFlags?: int, appIndex?: int): BundleResourceInfo-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Resource
 

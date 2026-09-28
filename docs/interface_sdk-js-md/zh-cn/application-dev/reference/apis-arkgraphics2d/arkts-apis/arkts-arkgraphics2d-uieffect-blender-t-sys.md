@@ -10,6 +10,8 @@ type Blender = BrightnessBlender | HdrBrightnessBlender | HdrDarkenBlender | Col
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-uiEffect-type Blender = BrightnessBlender | HdrBrightnessBlender | HdrDarkenBlender | ColorfulBrightnessBlender--><!--Device-uiEffect-type Blender = BrightnessBlender | HdrBrightnessBlender | HdrDarkenBlender | ColorfulBrightnessBlender-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。

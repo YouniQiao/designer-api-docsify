@@ -8,6 +8,8 @@ Sets the color type.
 
 **Since:** 7
 
+<!--Device-unnamed-declare enum Color--><!--Device-unnamed-declare enum Color-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## White
@@ -25,6 +27,8 @@ White
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-Color-White--><!--Device-Color-White-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,6 +48,8 @@ Black
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-Color-Black--><!--Device-Color-Black-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Blue
@@ -61,6 +67,8 @@ Blue
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-Color-Blue--><!--Device-Color-Blue-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -80,6 +88,8 @@ Brown
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-Color-Brown--><!--Device-Color-Brown-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Gray
@@ -97,6 +107,8 @@ Gray
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-Color-Gray--><!--Device-Color-Gray-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -116,6 +128,8 @@ Green
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-Color-Green--><!--Device-Color-Green-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Grey
@@ -133,6 +147,8 @@ Grey
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-Color-Grey--><!--Device-Color-Grey-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -152,6 +168,8 @@ Orange
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-Color-Orange--><!--Device-Color-Orange-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Pink
@@ -169,6 +187,8 @@ Pink
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-Color-Pink--><!--Device-Color-Pink-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -188,6 +208,8 @@ Red
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-Color-Red--><!--Device-Color-Red-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Yellow
@@ -206,6 +228,8 @@ Yellow
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-Color-Yellow--><!--Device-Color-Yellow-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Transparent
@@ -223,5 +247,7 @@ Transparent
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-Color-Transparent--><!--Device-Color-Transparent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

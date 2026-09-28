@@ -34,6 +34,8 @@ export enum PermissionStateChangeType
 
 **起始版本：** 18
 
+<!--Device-abilityAccessCtrl-export enum PermissionStateChangeType--><!--Device-abilityAccessCtrl-export enum PermissionStateChangeType-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 ## PERMISSION_REVOKED_OPER
@@ -48,7 +50,9 @@ PERMISSION_REVOKED_OPER = 0
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-PermissionStateChangeType-PERMISSION_REVOKED_OPER = 0--><!--Device-PermissionStateChangeType-PERMISSION_REVOKED_OPER = 0-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -64,6 +68,8 @@ PERMISSION_GRANTED_OPER = 1
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-PermissionStateChangeType-PERMISSION_GRANTED_OPER = 1--><!--Device-PermissionStateChangeType-PERMISSION_GRANTED_OPER = 1-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken

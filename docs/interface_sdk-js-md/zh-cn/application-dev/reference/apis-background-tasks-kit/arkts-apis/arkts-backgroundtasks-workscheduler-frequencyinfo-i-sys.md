@@ -8,6 +8,8 @@ export interface FrequencyInfo
 
 **起始版本：** 26.0.1
 
+<!--Device-workScheduler-export interface FrequencyInfo--><!--Device-workScheduler-export interface FrequencyInfo-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ interval: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FrequencyInfo-interval: int--><!--Device-FrequencyInfo-interval: int-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
 **系统接口：** 此接口为系统接口。
@@ -50,6 +54,8 @@ uid: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FrequencyInfo-uid: int--><!--Device-FrequencyInfo-uid: int-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
 **系统接口：** 此接口为系统接口。
@@ -67,6 +73,8 @@ workId: number
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FrequencyInfo-workId: int--><!--Device-FrequencyInfo-workId: int-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 

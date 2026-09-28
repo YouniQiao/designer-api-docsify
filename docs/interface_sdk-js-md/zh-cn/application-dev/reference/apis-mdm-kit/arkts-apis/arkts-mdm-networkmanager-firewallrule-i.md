@@ -12,6 +12,8 @@ API version 21及之前版本，仅支持IPv4。从API version 22开始，支持
 
 **起始版本：** 12
 
+<!--Device-networkManager-interface FirewallRule--><!--Device-networkManager-interface FirewallRule-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## 导入模块
@@ -38,6 +40,8 @@ action?: Action
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FirewallRule-action?: Action--><!--Device-FirewallRule-action?: Action-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## appUid
@@ -53,6 +57,8 @@ appUid?: string
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FirewallRule-appUid?: string--><!--Device-FirewallRule-appUid?: string-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -70,6 +76,8 @@ ip目标地址。支持IP段，例如：192.168.0.0/22或者192.168.1.100-192.16
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FirewallRule-destAddr?: string--><!--Device-FirewallRule-destAddr?: string-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## destPort
@@ -85,6 +93,8 @@ destPort?: string
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FirewallRule-destPort?: string--><!--Device-FirewallRule-destPort?: string-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -106,6 +116,8 @@ direction?: Direction
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FirewallRule-direction?: Direction--><!--Device-FirewallRule-direction?: Direction-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## family
@@ -121,6 +133,8 @@ IP协议版本。支持取值为1或2，取值为1表示IPv4，取值为2表示I
 **起始版本：** 22
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FirewallRule-family?: number--><!--Device-FirewallRule-family?: number-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -144,6 +158,8 @@ logType?: LogType
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FirewallRule-logType?: LogType--><!--Device-FirewallRule-logType?: LogType-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## protocol
@@ -159,6 +175,8 @@ protocol?: Protocol
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FirewallRule-protocol?: Protocol--><!--Device-FirewallRule-protocol?: Protocol-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -176,6 +194,8 @@ ip源地址。支持IP段，例如：192.168.0.0/22或者192.168.1.100-192.168.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FirewallRule-srcAddr?: string--><!--Device-FirewallRule-srcAddr?: string-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## srcPort
@@ -191,5 +211,7 @@ srcPort?: string
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FirewallRule-srcPort?: string--><!--Device-FirewallRule-srcPort?: string-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager

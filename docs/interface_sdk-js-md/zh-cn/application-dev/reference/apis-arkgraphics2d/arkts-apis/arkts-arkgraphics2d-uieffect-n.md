@@ -11,6 +11,8 @@ declare namespace uiEffect
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare namespace uiEffect--><!--Device-unnamed-declare namespace uiEffect-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## 导入模块

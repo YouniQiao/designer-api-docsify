@@ -8,6 +8,8 @@ interface BlurBubblesRiseEffectParam
 
 **起始版本：** 26.0.0
 
+<!--Device-uiEffect-interface BlurBubblesRiseEffectParam--><!--Device-uiEffect-interface BlurBubblesRiseEffectParam-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ blurIntensity: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BlurBubblesRiseEffectParam-blurIntensity: double--><!--Device-BlurBubblesRiseEffectParam-blurIntensity: double-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ maskImage: image.PixelMap
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BlurBubblesRiseEffectParam-maskImage: image.PixelMap--><!--Device-BlurBubblesRiseEffectParam-maskImage: image.PixelMap-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -68,6 +74,8 @@ mixStrength: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BlurBubblesRiseEffectParam-mixStrength: double--><!--Device-BlurBubblesRiseEffectParam-mixStrength: double-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -85,6 +93,8 @@ progress: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BlurBubblesRiseEffectParam-progress: double--><!--Device-BlurBubblesRiseEffectParam-progress: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

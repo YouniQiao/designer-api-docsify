@@ -8,6 +8,8 @@ Describes a depth data object.
 
 **起始版本：** 13
 
+<!--Device-camera-interface DepthData--><!--Device-camera-interface DepthData-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -27,6 +29,8 @@ release(): Promise<void>
 Releases depth data output resources. This API uses a promise to return the result.
 
 **起始版本：** 13
+
+<!--Device-DepthData-release(): Promise<void>--><!--Device-DepthData-release(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -64,6 +68,8 @@ Accuracy of the depth data, which can be either relative accuracy or absolute ac
 
 **起始版本：** 13
 
+<!--Device-DepthData-readonly dataAccuracy: DepthDataAccuracy--><!--Device-DepthData-readonly dataAccuracy: DepthDataAccuracy-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -79,6 +85,8 @@ Depth map.
 **类型：** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
 **起始版本：** 13
+
+<!--Device-DepthData-readonly depthMap: image.PixelMap--><!--Device-DepthData-readonly depthMap: image.PixelMap-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -96,6 +104,8 @@ Camera output format.
 
 **起始版本：** 13
 
+<!--Device-DepthData-readonly format: CameraFormat--><!--Device-DepthData-readonly format: CameraFormat-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -111,6 +121,8 @@ Quality level of the depth map.
 **类型：** [DepthDataQualityLevel](arkts-camera-camera-depthdataqualitylevel-e-sys.md)
 
 **起始版本：** 13
+
+<!--Device-DepthData-readonly qualityLevel: DepthDataQualityLevel--><!--Device-DepthData-readonly qualityLevel: DepthDataQualityLevel-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

@@ -8,6 +8,8 @@ interface IAuthCallback
 
 **起始版本：** 10
 
+<!--Device-userAuth-interface IAuthCallback--><!--Device-userAuth-interface IAuthCallback-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 ## 导入模块
@@ -27,6 +29,8 @@ onResult(result: UserAuthResult): void
 **起始版本：** 10
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-IAuthCallback-onResult(result: UserAuthResult): void--><!--Device-IAuthCallback-onResult(result: UserAuthResult): void-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 

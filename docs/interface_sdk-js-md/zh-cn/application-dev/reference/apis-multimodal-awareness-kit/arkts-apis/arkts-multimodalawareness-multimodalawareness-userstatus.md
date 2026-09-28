@@ -4,6 +4,8 @@
 
 **起始版本：** 20
 
+<!--Device-unnamed-declare namespace userStatus--><!--Device-unnamed-declare namespace userStatus-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
 ## 导入模块

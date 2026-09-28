@@ -16,6 +16,8 @@ function registerThermalLevelCallback(callback: Callback<ThermalLevel>): void
 
 **起始版本：** 9
 
+<!--Device-thermal-function registerThermalLevelCallback(callback: Callback<ThermalLevel>): void--><!--Device-thermal-function registerThermalLevelCallback(callback: Callback<ThermalLevel>): void-End-->
+
 **系统能力：** SystemCapability.PowerManager.ThermalManager
 
 **参数：**

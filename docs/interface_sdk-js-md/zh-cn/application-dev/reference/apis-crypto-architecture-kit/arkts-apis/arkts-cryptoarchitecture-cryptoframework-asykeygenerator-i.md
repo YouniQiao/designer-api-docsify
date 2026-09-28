@@ -8,6 +8,8 @@ interface AsyKeyGenerator
 
 **起始版本：** 9
 
+<!--Device-cryptoFramework-interface AsyKeyGenerator--><!--Device-cryptoFramework-interface AsyKeyGenerator-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
 - API版本9-11：SystemCapability.Security.CryptoFramework
@@ -29,6 +31,8 @@ convertKey(pubKey: DataBlob, priKey: DataBlob, callback: AsyncCallback<KeyPair>)
 **起始版本：** 9
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AsyKeyGenerator-convertKey(pubKey: DataBlob, priKey: DataBlob, callback: AsyncCallback<KeyPair>): void--><!--Device-AsyKeyGenerator-convertKey(pubKey: DataBlob, priKey: DataBlob, callback: AsyncCallback<KeyPair>): void-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -111,7 +115,9 @@ convertKey(pubKey: DataBlob | null, priKey: DataBlob | null, callback: AsyncCall
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AsyKeyGenerator-convertKey(pubKey: DataBlob | null, priKey: DataBlob | null, callback: AsyncCallback<KeyPair>): void--><!--Device-AsyKeyGenerator-convertKey(pubKey: DataBlob | null, priKey: DataBlob | null, callback: AsyncCallback<KeyPair>): void-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -172,6 +178,8 @@ convertKey(pubKey: DataBlob, priKey: DataBlob): Promise<KeyPair>
 **起始版本：** 9
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AsyKeyGenerator-convertKey(pubKey: DataBlob, priKey: DataBlob): Promise<KeyPair>--><!--Device-AsyKeyGenerator-convertKey(pubKey: DataBlob, priKey: DataBlob): Promise<KeyPair>-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -260,7 +268,9 @@ convertKey(pubKey: DataBlob | null, priKey: DataBlob | null): Promise<KeyPair>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AsyKeyGenerator-convertKey(pubKey: DataBlob | null, priKey: DataBlob | null): Promise<KeyPair>--><!--Device-AsyKeyGenerator-convertKey(pubKey: DataBlob | null, priKey: DataBlob | null): Promise<KeyPair>-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -326,7 +336,9 @@ convertKeySync(pubKey: DataBlob | null, priKey: DataBlob | null): KeyPair
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AsyKeyGenerator-convertKeySync(pubKey: DataBlob | null, priKey: DataBlob | null): KeyPair--><!--Device-AsyKeyGenerator-convertKeySync(pubKey: DataBlob | null, priKey: DataBlob | null): KeyPair-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
@@ -396,7 +408,9 @@ convertPemKey(pubKey: string | null, priKey: string | null): Promise<KeyPair>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AsyKeyGenerator-convertPemKey(pubKey: string | null, priKey: string | null): Promise<KeyPair>--><!--Device-AsyKeyGenerator-convertPemKey(pubKey: string | null, priKey: string | null): Promise<KeyPair>-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
@@ -482,7 +496,9 @@ convertPemKey(pubKey: string | null, priKey: string | null, password: string): P
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-AsyKeyGenerator-convertPemKey(pubKey: string | null, priKey: string | null, password: string): Promise<KeyPair>--><!--Device-AsyKeyGenerator-convertPemKey(pubKey: string | null, priKey: string | null, password: string): Promise<KeyPair>-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
@@ -562,7 +578,9 @@ convertPemKeySync(pubKey: string | null, priKey: string | null): KeyPair
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AsyKeyGenerator-convertPemKeySync(pubKey: string | null, priKey: string | null): KeyPair--><!--Device-AsyKeyGenerator-convertPemKeySync(pubKey: string | null, priKey: string | null): KeyPair-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
@@ -651,7 +669,9 @@ convertPemKeySync(pubKey: string | null, priKey: string | null, password: string
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-AsyKeyGenerator-convertPemKeySync(pubKey: string | null, priKey: string | null, password: string): KeyPair--><!--Device-AsyKeyGenerator-convertPemKeySync(pubKey: string | null, priKey: string | null, password: string): KeyPair-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
@@ -727,7 +747,9 @@ generateKeyPair(callback: AsyncCallback<KeyPair>): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AsyKeyGenerator-generateKeyPair(callback: AsyncCallback<KeyPair>): void--><!--Device-AsyKeyGenerator-generateKeyPair(callback: AsyncCallback<KeyPair>): void-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -774,7 +796,9 @@ generateKeyPair(): Promise<KeyPair>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AsyKeyGenerator-generateKeyPair(): Promise<KeyPair>--><!--Device-AsyKeyGenerator-generateKeyPair(): Promise<KeyPair>-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -822,7 +846,9 @@ generateKeyPairSync(): KeyPair
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AsyKeyGenerator-generateKeyPairSync(): KeyPair--><!--Device-AsyKeyGenerator-generateKeyPairSync(): KeyPair-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
@@ -870,7 +896,9 @@ readonly algName: string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AsyKeyGenerator-readonly algName: string--><!--Device-AsyKeyGenerator-readonly algName: string-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey

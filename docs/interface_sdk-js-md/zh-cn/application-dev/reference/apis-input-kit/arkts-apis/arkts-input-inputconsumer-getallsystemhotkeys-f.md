@@ -16,6 +16,8 @@ function getAllSystemHotkeys(): Promise<Array<HotkeyOptions>>
 
 **起始版本：** 14
 
+<!--Device-inputConsumer-function getAllSystemHotkeys(): Promise<Array<HotkeyOptions>>--><!--Device-inputConsumer-function getAllSystemHotkeys(): Promise<Array<HotkeyOptions>>-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 
 **返回值：**

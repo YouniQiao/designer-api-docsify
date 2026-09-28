@@ -26,6 +26,8 @@ function getGeomagneticDip(inclinationMatrix: Array<number>, callback: AsyncCall
 
 **替代接口：** [getInclination](arkts-sensorservice-sensor-getinclination-f.md)(inclinationMatrix: Array&lt;number&gt;, callback: AsyncCallback&lt;number&gt;)
 
+<!--Device-sensor-function getGeomagneticDip(inclinationMatrix: Array<number>, callback: AsyncCallback<number>): void--><!--Device-sensor-function getGeomagneticDip(inclinationMatrix: Array<number>, callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -71,6 +73,8 @@ function getGeomagneticDip(inclinationMatrix: Array<number>): Promise<number>
 **废弃版本：** 9
 
 **替代接口：** [getInclination](arkts-sensorservice-sensor-getinclination-f.md)(inclinationMatrix: Array&lt;number&gt;)
+
+<!--Device-sensor-function getGeomagneticDip(inclinationMatrix: Array<number>): Promise<number>--><!--Device-sensor-function getGeomagneticDip(inclinationMatrix: Array<number>): Promise<number>-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 

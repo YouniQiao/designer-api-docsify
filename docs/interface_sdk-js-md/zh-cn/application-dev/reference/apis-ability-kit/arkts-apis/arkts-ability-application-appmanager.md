@@ -8,6 +8,8 @@ appManager模块提供应用管理的能力，包括查询当前系统是否处�
 
 **替代接口：** [appManager/appManager](arkts-ability-app-ability-appmanager.md)
 
+<!--Device-unnamed-declare namespace appManager--><!--Device-unnamed-declare namespace appManager-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块
@@ -43,7 +45,7 @@ appManager模块提供应用管理的能力，包括查询当前系统是否处�
 | [killProcessesByBundleName](arkts-ability-appmanager-killprocessesbybundlename-depr-f-sys.md#killprocessesbybundlename-1) | 通过Bundle名称终止进程。使用callback异步回调。 |
 | [killProcessWithAccount](arkts-ability-appmanager-killprocesswithaccount-depr-f-sys.md#killprocesswithaccount) | 切断account进程。使用Promise异步回调。 |
 | [killProcessWithAccount](arkts-ability-appmanager-killprocesswithaccount-depr-f-sys.md#killprocesswithaccount-1) | 切断account进程。使用callback异步回调。 |
-| [registerApplicationStateObserver](arkts-ability-appmanager-registerapplicationstateobserver-depr-f-sys.md#registerapplicationstateobserver) | 注册全部应用程序状态观测器。 |
+| [registerApplicationStateObserver](arkts-ability-appmanager-registerapplicationstateobserver-depr-f-sys.md) | 注册全部应用程序状态观测器。 |
 | [unregisterApplicationStateObserver](arkts-ability-appmanager-unregisterapplicationstateobserver-depr-f-sys.md#unregisterapplicationstateobserver) | 取消注册应用程序状态观测器。使用callback异步回调。 |
 | [unregisterApplicationStateObserver](arkts-ability-appmanager-unregisterapplicationstateobserver-depr-f-sys.md#unregisterapplicationstateobserver-1) | 取消注册应用程序状态观测器。使用Promise异步回调。 |
 <!--DelEnd-->

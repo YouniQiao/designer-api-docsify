@@ -24,6 +24,8 @@ function onFontObserver(observer: FontClientObserver): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-fontManager-function onFontObserver(observer: FontClientObserver): void--><!--Device-fontManager-function onFontObserver(observer: FontClientObserver): void-End-->
+
 **系统能力：** SystemCapability.Global.FontManager
 
 **参数：**

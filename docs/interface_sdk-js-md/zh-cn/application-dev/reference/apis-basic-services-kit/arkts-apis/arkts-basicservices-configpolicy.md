@@ -4,6 +4,8 @@
 
 **起始版本：** 8
 
+<!--Device-unnamed-declare namespace configPolicy--><!--Device-unnamed-declare namespace configPolicy-End-->
+
 **系统能力：** SystemCapability.Customization.ConfigPolicy
 
 **系统接口：** 此接口为系统接口。

@@ -8,6 +8,8 @@ Defines the sliding effect of the scrollable container.
 
 **Since:** 7
 
+<!--Device-unnamed-declare enum EdgeEffect--><!--Device-unnamed-declare enum EdgeEffect-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Spring
@@ -28,6 +30,8 @@ In API version 23 and later versions, the spring effect of the scrollable compon
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-EdgeEffect-Spring--><!--Device-EdgeEffect-Spring-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Fade
@@ -44,6 +48,8 @@ Fade effect. When at one of the edges, the component produces a fade effect.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-EdgeEffect-Fade--><!--Device-EdgeEffect-Fade-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## None
@@ -59,5 +65,7 @@ No effect when the component is at one of the edges.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-EdgeEffect-None--><!--Device-EdgeEffect-None-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

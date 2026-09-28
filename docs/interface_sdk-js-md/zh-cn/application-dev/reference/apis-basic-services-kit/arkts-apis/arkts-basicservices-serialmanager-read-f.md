@@ -21,6 +21,8 @@ function read(portId: number, buffer: Uint8Array, timeout?: number): Promise<num
 
 **起始版本：** 19
 
+<!--Device-serialManager-function read(portId: int, buffer: Uint8Array, timeout?: int): Promise<int>--><!--Device-serialManager-function read(portId: int, buffer: Uint8Array, timeout?: int): Promise<int>-End-->
+
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
 **参数：**

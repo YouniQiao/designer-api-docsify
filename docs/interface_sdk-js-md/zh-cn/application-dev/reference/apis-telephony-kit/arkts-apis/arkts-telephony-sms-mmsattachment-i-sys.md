@@ -8,6 +8,8 @@ export interface MmsAttachment
 
 **起始版本：** 8
 
+<!--Device-sms-export interface MmsAttachment--><!--Device-sms-export interface MmsAttachment-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ charset?: MmsCharSets
 
 **起始版本：** 8
 
+<!--Device-MmsAttachment-charset?: MmsCharSets--><!--Device-MmsAttachment-charset?: MmsCharSets-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ contentDisposition: DispositionType
 **类型：** [DispositionType](arkts-telephony-sms-dispositiontype-e-sys.md)
 
 **起始版本：** 8
+
+<!--Device-MmsAttachment-contentDisposition: DispositionType--><!--Device-MmsAttachment-contentDisposition: DispositionType-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -62,6 +68,8 @@ contentId: string
 
 **起始版本：** 8
 
+<!--Device-MmsAttachment-contentId: string--><!--Device-MmsAttachment-contentId: string-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +85,8 @@ contentLocation: string
 **类型：** string
 
 **起始版本：** 8
+
+<!--Device-MmsAttachment-contentLocation: string--><!--Device-MmsAttachment-contentLocation: string-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -94,6 +104,8 @@ contentTransferEncoding: string
 
 **起始版本：** 8
 
+<!--Device-MmsAttachment-contentTransferEncoding: string--><!--Device-MmsAttachment-contentTransferEncoding: string-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -109,6 +121,8 @@ contentType: string
 **类型：** string
 
 **起始版本：** 8
+
+<!--Device-MmsAttachment-contentType: string--><!--Device-MmsAttachment-contentType: string-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -126,6 +140,8 @@ fileName?: string
 
 **起始版本：** 8
 
+<!--Device-MmsAttachment-fileName?: string--><!--Device-MmsAttachment-fileName?: string-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -141,6 +157,8 @@ inBuff?: Array<number>
 **类型：** Array&lt;number&gt;
 
 **起始版本：** 8
+
+<!--Device-MmsAttachment-inBuff?: Array<int>--><!--Device-MmsAttachment-inBuff?: Array<int>-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -158,6 +176,8 @@ isSmil: boolean
 
 **起始版本：** 8
 
+<!--Device-MmsAttachment-isSmil: boolean--><!--Device-MmsAttachment-isSmil: boolean-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -173,6 +193,8 @@ path?: string
 **类型：** string
 
 **起始版本：** 8
+
+<!--Device-MmsAttachment-path?: string--><!--Device-MmsAttachment-path?: string-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 

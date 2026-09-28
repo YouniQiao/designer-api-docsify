@@ -4,11 +4,13 @@ Provides APIs for listening for UI component behavior changes, including listeni
 
 > **NOTE:** 
 > 
-> - UIObserver can only listen for relevant information within the current process and does not support obtaining information in cross-process scenarios<!--Del--> such as [UIExtensionComponent](../arkts-components/arkts-arkui-uiextensioncomponent-comp-sys.md#ui_extension_componentsystem-api)<!--DelEnd-->.
+> - UIObserver can only listen for relevant information within the current process and does not support obtaining information in cross-process scenarios<!--Del--> such as [UIExtensionComponent](../arkts-components/arkts-arkui-uiextensioncomponent-comp-sys.md)<!--DelEnd-->.
 
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-unnamed-declare namespace uiObserver--><!--Device-unnamed-declare namespace uiObserver-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,8 +28,8 @@ import { uiObserver } from '@kit.ArkUI';
 | --- | --- |
 | [off](arkts-arkui-uiobserver-off-f.md#offnavdestinationupdate) | Unsubscribes from status changes of the **NavDestination** component. Compared with [uiObserver.off](arkts-arkui-uiobserver-off-f.md#offnavdestinationupdate), this API supports the **options** parameter, which enables you to specify the ID of the target **Navigation** component to observe. |
 | [off](arkts-arkui-uiobserver-off-f.md#offnavdestinationupdate) | Unsubscribes from status changes of the **NavDestination** component. |
-| [off](arkts-arkui-uiobserver-off-f.md#offscrollevent) | Unregisters the listener for the start and end of scroll events of a specific scrollable component identified by its ID. Supported components include [List](../arkts-components/arkts-arkui-list-comp.md#list), [Grid](../arkts-components/arkts-arkui-grid-comp.md#grid), [Scroll](../arkts-components/arkts-arkui-scroll-comp.md#scroll), [WaterFlow](../arkts-components/arkts-arkui-waterflow-comp.md#water_flow), and [ArcList](../arkts-components/arkts-arkui-arclist-comp.md#ohosarkuiarclist). |
-| [off](arkts-arkui-uiobserver-off-f.md#offscrollevent) | Unregisters the listener for the start and end of scroll events of all scrollable components. Supported components include [List](../arkts-components/arkts-arkui-list-comp.md#list), [Grid](../arkts-components/arkts-arkui-grid-comp.md#grid), [Scroll](../arkts-components/arkts-arkui-scroll-comp.md#scroll), [WaterFlow](../arkts-components/arkts-arkui-waterflow-comp.md#water_flow), and [ArcList](../arkts-components/arkts-arkui-arclist-comp.md#ohosarkuiarclist). |
+| [off](arkts-arkui-uiobserver-off-f.md#offscrollevent) | Unregisters the listener for the start and end of scroll events of a specific scrollable component identified by its ID. Supported components include [List](../arkts-components/arkts-arkui-list-comp.md), [Grid](../arkts-components/arkts-arkui-grid-comp.md), [Scroll](../arkts-components/arkts-arkui-scroll-comp.md), [WaterFlow](../arkts-components/arkts-arkui-waterflow-comp.md), and [ArcList](../arkts-components/arkts-arkui-arclist-comp.md). |
+| [off](arkts-arkui-uiobserver-off-f.md#offscrollevent) | Unregisters the listener for the start and end of scroll events of all scrollable components. Supported components include [List](../arkts-components/arkts-arkui-list-comp.md), [Grid](../arkts-components/arkts-arkui-grid-comp.md), [Scroll](../arkts-components/arkts-arkui-scroll-comp.md), [WaterFlow](../arkts-components/arkts-arkui-waterflow-comp.md), and [ArcList](../arkts-components/arkts-arkui-arclist-comp.md). |
 | [off](arkts-arkui-uiobserver-off-f.md#offrouterpageupdate) | Unsubscribes from state changes of the page during routing. |
 | [off](arkts-arkui-uiobserver-off-f.md#offdensityupdate) | Unregisters the listener for screen pixel density changes. |
 | [off](arkts-arkui-uiobserver-off-f.md#offwilldraw) | Unregisters the listener for drawing instruction dispatch in each frame. |
@@ -38,8 +40,8 @@ import { uiObserver } from '@kit.ArkUI';
 | [off](arkts-arkui-uiobserver-off-f.md#offnavdestinationswitch) | Unsubscribes from **Navigation** component page switching events. Compared with uiObserver.off, this API supports the **observerOptions** parameter, which enables you to configure observation options. |
 | [on](arkts-arkui-uiobserver-on-f.md#onnavdestinationupdate) | Subscribes to status changes of the **NavDestination** component. Compared with [uiObserver.on](arkts-arkui-uiobserver-on-f.md#onnavdestinationupdate), this API supports the **options** parameter, which enables you to specify the ID of the target **Navigation** component to observe. |
 | [on](arkts-arkui-uiobserver-on-f.md#onnavdestinationupdate) | Subscribes to status changes of the **NavDestination** component. |
-| [on](arkts-arkui-uiobserver-on-f.md#onscrollevent) | Listens for the start and end of scroll events of a specific scrollable component identified by its ID. Supported components include [List](../arkts-components/arkts-arkui-list-comp.md#list), [Grid](../arkts-components/arkts-arkui-grid-comp.md#grid), [Scroll](../arkts-components/arkts-arkui-scroll-comp.md#scroll), [WaterFlow](../arkts-components/arkts-arkui-waterflow-comp.md#water_flow), and [ArcList](../arkts-components/arkts-arkui-arclist-comp.md#ohosarkuiarclist). |
-| [on](arkts-arkui-uiobserver-on-f.md#onscrollevent) | Listens for the start and end of scroll events of all scrollable components. Supported components include [List](../arkts-components/arkts-arkui-list-comp.md#list), [Grid](../arkts-components/arkts-arkui-grid-comp.md#grid), [Scroll](../arkts-components/arkts-arkui-scroll-comp.md#scroll), [WaterFlow](../arkts-components/arkts-arkui-waterflow-comp.md#water_flow), and [ArcList](../arkts-components/arkts-arkui-arclist-comp.md#ohosarkuiarclist). |
+| [on](arkts-arkui-uiobserver-on-f.md#onscrollevent) | Listens for the start and end of scroll events of a specific scrollable component identified by its ID. Supported components include [List](../arkts-components/arkts-arkui-list-comp.md), [Grid](../arkts-components/arkts-arkui-grid-comp.md), [Scroll](../arkts-components/arkts-arkui-scroll-comp.md), [WaterFlow](../arkts-components/arkts-arkui-waterflow-comp.md), and [ArcList](../arkts-components/arkts-arkui-arclist-comp.md). |
+| [on](arkts-arkui-uiobserver-on-f.md#onscrollevent) | Listens for the start and end of scroll events of all scrollable components. Supported components include [List](../arkts-components/arkts-arkui-list-comp.md), [Grid](../arkts-components/arkts-arkui-grid-comp.md), [Scroll](../arkts-components/arkts-arkui-scroll-comp.md), [WaterFlow](../arkts-components/arkts-arkui-waterflow-comp.md), and [ArcList](../arkts-components/arkts-arkui-arclist-comp.md). |
 | [on](arkts-arkui-uiobserver-on-f.md#onrouterpageupdate) | Subscribes to state changes of the page during routing. |
 | [on](arkts-arkui-uiobserver-on-f.md#ondensityupdate) | Listens for screen pixel density changes. |
 | [on](arkts-arkui-uiobserver-on-f.md#onwilldraw) | Listens for drawing instruction dispatch in each frame. |

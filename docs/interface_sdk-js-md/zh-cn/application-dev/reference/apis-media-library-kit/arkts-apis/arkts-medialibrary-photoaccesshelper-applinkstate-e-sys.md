@@ -8,6 +8,8 @@ enum AppLinkState
 
 **起始版本：** 24
 
+<!--Device-photoAccessHelper-enum AppLinkState--><!--Device-photoAccessHelper-enum AppLinkState-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -23,6 +25,8 @@ DEFAULT = 0
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AppLinkState-DEFAULT = 0--><!--Device-AppLinkState-DEFAULT = 0-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -40,6 +44,8 @@ HAS_NO_LINK = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AppLinkState-HAS_NO_LINK = 1--><!--Device-AppLinkState-HAS_NO_LINK = 1-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -55,6 +61,8 @@ HAS_LINK = 2
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AppLinkState-HAS_LINK = 2--><!--Device-AppLinkState-HAS_LINK = 2-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

@@ -21,6 +21,8 @@ function addSlots(slots: Array<NotificationSlot>, callback: AsyncCallback<void>)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notification-function addSlots(slots: Array<NotificationSlot>, callback: AsyncCallback<void>): void--><!--Device-notification-function addSlots(slots: Array<NotificationSlot>, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -50,6 +52,8 @@ function addSlots(slots: Array<NotificationSlot>): Promise<void>
 **替代接口：** [addSlots](arkts-notification-notificationmanager-addslots-f-sys.md)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notification-function addSlots(slots: Array<NotificationSlot>): Promise<void>--><!--Device-notification-function addSlots(slots: Array<NotificationSlot>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

@@ -8,6 +8,8 @@ export interface CommonEventData
 
 **起始版本：** 7
 
+<!--Device-unnamed-export interface CommonEventData--><!--Device-unnamed-export interface CommonEventData-End-->
+
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## bundleName
@@ -22,7 +24,9 @@ bundleName?: string
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-CommonEventData-bundleName?: string--><!--Device-CommonEventData-bundleName?: string-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -40,7 +44,9 @@ code?: number
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-CommonEventData-code?: int--><!--Device-CommonEventData-code?: int-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -56,7 +62,9 @@ data?: string
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-CommonEventData-data?: string--><!--Device-CommonEventData-data?: string-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -72,7 +80,9 @@ event: string
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-CommonEventData-event: string--><!--Device-CommonEventData-event: string-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -89,5 +99,7 @@ parameters?: { [key: string]: any }
 **起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-CommonEventData-parameters?: { [key: string]: any }--><!--Device-CommonEventData-parameters?: { [key: string]: any }-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent

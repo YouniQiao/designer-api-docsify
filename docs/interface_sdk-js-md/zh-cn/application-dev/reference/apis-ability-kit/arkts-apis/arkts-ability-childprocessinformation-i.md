@@ -8,6 +8,8 @@ export interface ChildProcessInformation
 
 **起始版本：** 26.0.1
 
+<!--Device-unnamed-export interface ChildProcessInformation--><!--Device-unnamed-export interface ChildProcessInformation-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## parentPid
@@ -23,6 +25,8 @@ parentPid: number
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ChildProcessInformation-parentPid: int--><!--Device-ChildProcessInformation-parentPid: int-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -40,6 +44,8 @@ pid: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ChildProcessInformation-pid: int--><!--Device-ChildProcessInformation-pid: int-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## processName
@@ -55,5 +61,7 @@ processName: string
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ChildProcessInformation-processName: string--><!--Device-ChildProcessInformation-processName: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

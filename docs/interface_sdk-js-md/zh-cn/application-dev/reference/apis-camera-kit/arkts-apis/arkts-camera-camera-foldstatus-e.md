@@ -8,6 +8,8 @@ enum FoldStatus
 
 **起始版本：** 12
 
+<!--Device-camera-enum FoldStatus--><!--Device-camera-enum FoldStatus-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## NON_FOLDABLE
@@ -20,7 +22,9 @@ NON_FOLDABLE = 0
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-FoldStatus-NON_FOLDABLE = 0--><!--Device-FoldStatus-NON_FOLDABLE = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -34,7 +38,9 @@ EXPANDED = 1
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-FoldStatus-EXPANDED = 1--><!--Device-FoldStatus-EXPANDED = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -48,6 +54,8 @@ FOLDED = 2
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-FoldStatus-FOLDED = 2--><!--Device-FoldStatus-FOLDED = 2-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core

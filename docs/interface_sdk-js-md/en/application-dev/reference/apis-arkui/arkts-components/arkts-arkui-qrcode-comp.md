@@ -26,6 +26,8 @@ Creates a **QRCode** component. The displayed QR code can be scanned to obtain t
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-QRCodeInterface-(value: ResourceStr): QRCodeAttribute--><!--Device-QRCodeInterface-(value: ResourceStr): QRCodeAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

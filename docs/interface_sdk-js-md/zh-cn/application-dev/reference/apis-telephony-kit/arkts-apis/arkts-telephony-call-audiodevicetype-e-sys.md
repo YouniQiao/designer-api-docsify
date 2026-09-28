@@ -8,6 +8,8 @@ export enum AudioDeviceType
 
 **起始版本：** 10
 
+<!--Device-call-export enum AudioDeviceType--><!--Device-call-export enum AudioDeviceType-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -21,6 +23,8 @@ DEVICE_EARPIECE = 0
 耳机设备。
 
 **起始版本：** 10
+
+<!--Device-AudioDeviceType-DEVICE_EARPIECE = 0--><!--Device-AudioDeviceType-DEVICE_EARPIECE = 0-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -36,6 +40,8 @@ DEVICE_SPEAKER = 1
 
 **起始版本：** 10
 
+<!--Device-AudioDeviceType-DEVICE_SPEAKER = 1--><!--Device-AudioDeviceType-DEVICE_SPEAKER = 1-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +55,8 @@ DEVICE_WIRED_HEADSET = 2
 有线耳机设备。
 
 **起始版本：** 10
+
+<!--Device-AudioDeviceType-DEVICE_WIRED_HEADSET = 2--><!--Device-AudioDeviceType-DEVICE_WIRED_HEADSET = 2-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -64,6 +72,8 @@ DEVICE_BLUETOOTH_SCO = 3
 
 **起始版本：** 10
 
+<!--Device-AudioDeviceType-DEVICE_BLUETOOTH_SCO = 3--><!--Device-AudioDeviceType-DEVICE_BLUETOOTH_SCO = 3-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +87,8 @@ DEVICE_DISTRIBUTED_AUTOMOTIVE = 4
 分布式车机设备。
 
 **起始版本：** 11
+
+<!--Device-AudioDeviceType-DEVICE_DISTRIBUTED_AUTOMOTIVE = 4--><!--Device-AudioDeviceType-DEVICE_DISTRIBUTED_AUTOMOTIVE = 4-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 

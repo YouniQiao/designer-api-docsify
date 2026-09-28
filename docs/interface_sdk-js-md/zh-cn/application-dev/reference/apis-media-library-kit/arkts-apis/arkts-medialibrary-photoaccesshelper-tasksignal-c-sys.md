@@ -8,6 +8,8 @@ export class TaskSignal
 
 **起始版本：** 26.0.0
 
+<!--Device-photoAccessHelper-export class TaskSignal--><!--Device-photoAccessHelper-export class TaskSignal-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -31,6 +33,8 @@ cancel(): void
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TaskSignal-cancel(): void--><!--Device-TaskSignal-cancel(): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

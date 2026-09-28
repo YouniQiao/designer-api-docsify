@@ -20,6 +20,8 @@ function off(type: "formUninstall", callback?: Callback<string>): void
 
 **起始版本：** 9
 
+<!--Device-formHost-function off(type: "formUninstall", callback?: Callback<string>): void--><!--Device-formHost-function off(type: "formUninstall", callback?: Callback<string>): void-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -48,6 +50,8 @@ function off(type: 'formOverflow', callback?: Callback<formInfo.OverflowRequest>
 取消订阅互动卡片动效请求事件。使用callback异步回调。
 
 **起始版本：** 20
+
+<!--Device-formHost-function off(type: 'formOverflow', callback?: Callback<formInfo.OverflowRequest>): void--><!--Device-formHost-function off(type: 'formOverflow', callback?: Callback<formInfo.OverflowRequest>): void-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -93,6 +97,8 @@ function off(type: 'changeSceneAnimationState',
 
 **起始版本：** 20
 
+<!--Device-formHost-function off(type: 'changeSceneAnimationState',     callback?: Callback<formInfo.ChangeSceneAnimationStateRequest>): void--><!--Device-formHost-function off(type: 'changeSceneAnimationState',     callback?: Callback<formInfo.ChangeSceneAnimationStateRequest>): void-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -136,6 +142,8 @@ function off(type: 'getFormRect', callback?: formInfo.GetFormRectInfoCallback): 
 
 **起始版本：** 20
 
+<!--Device-formHost-function off(type: 'getFormRect', callback?: formInfo.GetFormRectInfoCallback): void--><!--Device-formHost-function off(type: 'getFormRect', callback?: formInfo.GetFormRectInfoCallback): void-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -177,6 +185,8 @@ function off(type: 'getLiveFormStatus',
 Cancels Listening to the event of get live form status.
 
 **起始版本：** 20
+
+<!--Device-formHost-function off(type: 'getLiveFormStatus',     callback?: formInfo.GetLiveFormStatusCallback): void--><!--Device-formHost-function off(type: 'getLiveFormStatus',     callback?: formInfo.GetLiveFormStatusCallback): void-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 

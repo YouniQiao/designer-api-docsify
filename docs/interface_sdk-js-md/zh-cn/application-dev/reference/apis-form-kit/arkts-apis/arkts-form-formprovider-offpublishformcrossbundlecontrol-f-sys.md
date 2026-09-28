@@ -20,6 +20,8 @@ function offPublishFormCrossBundleControl(callback?: formInfo.PublishFormCrossBu
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-formProvider-function offPublishFormCrossBundleControl(callback?: formInfo.PublishFormCrossBundleControlCallback): void--><!--Device-formProvider-function offPublishFormCrossBundleControl(callback?: formInfo.PublishFormCrossBundleControlCallback): void-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。

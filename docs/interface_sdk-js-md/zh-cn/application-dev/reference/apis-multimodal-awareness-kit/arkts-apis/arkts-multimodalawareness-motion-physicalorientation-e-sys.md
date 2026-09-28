@@ -8,6 +8,8 @@ export enum PhysicalOrientation
 
 **起始版本：** 26.0.0
 
+<!--Device-motion-export enum PhysicalOrientation--><!--Device-motion-export enum PhysicalOrientation-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.Motion
 
 **系统接口：** 此接口为系统接口。
@@ -23,6 +25,8 @@ UPRIGHT = 0
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PhysicalOrientation-UPRIGHT = 0--><!--Device-PhysicalOrientation-UPRIGHT = 0-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.Motion
 
@@ -40,6 +44,8 @@ LEFT = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PhysicalOrientation-LEFT = 1--><!--Device-PhysicalOrientation-LEFT = 1-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.Motion
 
 **系统接口：** 此接口为系统接口。
@@ -55,6 +61,8 @@ INVERTED = 2
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PhysicalOrientation-INVERTED = 2--><!--Device-PhysicalOrientation-INVERTED = 2-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.Motion
 
@@ -72,6 +80,8 @@ RIGHT = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PhysicalOrientation-RIGHT = 3--><!--Device-PhysicalOrientation-RIGHT = 3-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.Motion
 
 **系统接口：** 此接口为系统接口。
@@ -88,6 +98,8 @@ FACE_UP = 4
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PhysicalOrientation-FACE_UP = 4--><!--Device-PhysicalOrientation-FACE_UP = 4-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.Motion
 
 **系统接口：** 此接口为系统接口。
@@ -103,6 +115,8 @@ FACE_DOWN = 5
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PhysicalOrientation-FACE_DOWN = 5--><!--Device-PhysicalOrientation-FACE_DOWN = 5-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.Motion
 

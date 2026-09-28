@@ -19,6 +19,8 @@ function subscribe(featureId: UserStatusFeature, callback: Callback<UserStatusDa
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-userStatus-function subscribe(featureId: UserStatusFeature, callback: Callback<UserStatusData>,    deviceInfo?: DeviceInfo[]): number--><!--Device-userStatus-function subscribe(featureId: UserStatusFeature, callback: Callback<UserStatusData>,    deviceInfo?: DeviceInfo[]): number-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
 **系统接口：** 此接口为系统接口。

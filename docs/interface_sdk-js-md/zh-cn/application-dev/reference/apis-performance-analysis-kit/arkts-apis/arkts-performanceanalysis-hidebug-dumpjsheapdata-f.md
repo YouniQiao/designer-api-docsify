@@ -20,6 +20,8 @@ function dumpJsHeapData(filename : string) : void
 
 **起始版本：** 9
 
+<!--Device-hidebug-function dumpJsHeapData(filename : string) : void--><!--Device-hidebug-function dumpJsHeapData(filename : string) : void-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **参数：**
@@ -66,7 +68,9 @@ function dumpJsHeapData(filename : string, needClean : boolean) : void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-hidebug-function dumpJsHeapData(filename : string, needClean : boolean) : void--><!--Device-hidebug-function dumpJsHeapData(filename : string, needClean : boolean) : void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 

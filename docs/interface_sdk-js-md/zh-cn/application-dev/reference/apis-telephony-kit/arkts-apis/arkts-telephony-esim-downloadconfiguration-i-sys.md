@@ -8,6 +8,8 @@ export interface DownloadConfiguration
 
 **起始版本：** 18
 
+<!--Device-eSIM-export interface DownloadConfiguration--><!--Device-eSIM-export interface DownloadConfiguration-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ forceDisableProfile: boolean
 
 **起始版本：** 18
 
+<!--Device-DownloadConfiguration-forceDisableProfile: boolean--><!--Device-DownloadConfiguration-forceDisableProfile: boolean-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -46,6 +50,8 @@ isPprAllowed: boolean
 
 **起始版本：** 18
 
+<!--Device-DownloadConfiguration-isPprAllowed: boolean--><!--Device-DownloadConfiguration-isPprAllowed: boolean-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +67,8 @@ switchAfterDownload: boolean
 **类型：** boolean
 
 **起始版本：** 18
+
+<!--Device-DownloadConfiguration-switchAfterDownload: boolean--><!--Device-DownloadConfiguration-switchAfterDownload: boolean-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 

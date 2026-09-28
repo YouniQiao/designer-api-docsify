@@ -26,6 +26,8 @@ function removeUntrustedConfig(config: WifiDeviceConfig): Promise<boolean>
 
 **需要权限：** ohos.permission.SET_WIFI_INFO
 
+<!--Device-wifi-function removeUntrustedConfig(config: WifiDeviceConfig): Promise<boolean>--><!--Device-wifi-function removeUntrustedConfig(config: WifiDeviceConfig): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **参数：**
@@ -95,6 +97,8 @@ function removeUntrustedConfig(config: WifiDeviceConfig, callback: AsyncCallback
 **替代接口：** [removeCandidateConfig](arkts-connectivity-wifimanager-removecandidateconfig-f.md)
 
 **需要权限：** ohos.permission.SET_WIFI_INFO
+
+<!--Device-wifi-function removeUntrustedConfig(config: WifiDeviceConfig, callback: AsyncCallback<boolean>): void--><!--Device-wifi-function removeUntrustedConfig(config: WifiDeviceConfig, callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 

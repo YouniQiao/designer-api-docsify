@@ -13,6 +13,8 @@
 
 **替代接口：** [statfs](arkts-corefile-file-statvfs.md)
 
+<!--Device-unnamed-declare namespace Statfs--><!--Device-unnamed-declare namespace Statfs-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## 导入模块

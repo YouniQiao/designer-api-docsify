@@ -19,6 +19,8 @@ function cancelAll(callback: AsyncCallback<void>): void
 
 **替代接口：** [cancelAll](arkts-notification-notificationmanager-cancelall-f.md)
 
+<!--Device-notification-function cancelAll(callback: AsyncCallback<void>): void--><!--Device-notification-function cancelAll(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **参数：**
@@ -43,6 +45,8 @@ function cancelAll(): Promise<void>
 **废弃版本：** 9
 
 **替代接口：** [cancelAll](arkts-notification-notificationmanager-cancelall-f.md)
+
+<!--Device-notification-function cancelAll(): Promise<void>--><!--Device-notification-function cancelAll(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

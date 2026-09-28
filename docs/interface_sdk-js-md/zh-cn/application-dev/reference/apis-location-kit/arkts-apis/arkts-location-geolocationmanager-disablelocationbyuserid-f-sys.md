@@ -18,6 +18,8 @@ function disableLocationByUserId(userId: number): void
 
 **需要权限：** ohos.permission.MANAGE_SECURE_SETTINGS and ohos.permission.CONTROL_LOCATION_SWITCH
 
+<!--Device-geoLocationManager-function disableLocationByUserId(userId: int): void--><!--Device-geoLocationManager-function disableLocationByUserId(userId: int): void-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **系统接口：** 此接口为系统接口。

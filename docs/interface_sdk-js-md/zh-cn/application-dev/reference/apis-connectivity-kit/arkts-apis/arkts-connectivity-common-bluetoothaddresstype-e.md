@@ -8,6 +8,8 @@ export enum BluetoothAddressType
 
 **起始版本：** 21
 
+<!--Device-common-export enum BluetoothAddressType--><!--Device-common-export enum BluetoothAddressType-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## VIRTUAL
@@ -20,6 +22,8 @@ VIRTUAL = 1
 
 **起始版本：** 21
 
+<!--Device-BluetoothAddressType-VIRTUAL = 1--><!--Device-BluetoothAddressType-VIRTUAL = 1-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## REAL
@@ -31,5 +35,7 @@ REAL = 2
 实际MAC地址类型。
 
 **起始版本：** 21
+
+<!--Device-BluetoothAddressType-REAL = 2--><!--Device-BluetoothAddressType-REAL = 2-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

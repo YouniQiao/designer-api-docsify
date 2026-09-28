@@ -8,6 +8,8 @@ export interface ResourceRequest
 
 **起始版本：** 10
 
+<!--Device-deviceStandby-export interface ResourceRequest--><!--Device-deviceStandby-export interface ResourceRequest-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.DeviceStandby
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ duration: number
 
 **起始版本：** 10
 
+<!--Device-ResourceRequest-duration: int--><!--Device-ResourceRequest-duration: int-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.DeviceStandby
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ name: string
 **类型：** string
 
 **起始版本：** 10
+
+<!--Device-ResourceRequest-name: string--><!--Device-ResourceRequest-name: string-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.DeviceStandby
 
@@ -62,6 +68,8 @@ reason: string
 
 **起始版本：** 10
 
+<!--Device-ResourceRequest-reason: string--><!--Device-ResourceRequest-reason: string-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.DeviceStandby
 
 **系统接口：** 此接口为系统接口。
@@ -78,6 +86,8 @@ resourceTypes: number
 
 **起始版本：** 10
 
+<!--Device-ResourceRequest-resourceTypes: int--><!--Device-ResourceRequest-resourceTypes: int-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.DeviceStandby
 
 **系统接口：** 此接口为系统接口。
@@ -93,6 +103,8 @@ uid: number
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-ResourceRequest-uid: int--><!--Device-ResourceRequest-uid: int-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.DeviceStandby
 

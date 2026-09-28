@@ -22,6 +22,8 @@ function getAbilityRunningInfos(): Promise<Array<AbilityRunningInfo>>
 
 **需要权限：** ohos.permission.GET_RUNNING_INFO
 
+<!--Device-abilityManager-function getAbilityRunningInfos(): Promise<Array<AbilityRunningInfo>>--><!--Device-abilityManager-function getAbilityRunningInfos(): Promise<Array<AbilityRunningInfo>>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **返回值：**

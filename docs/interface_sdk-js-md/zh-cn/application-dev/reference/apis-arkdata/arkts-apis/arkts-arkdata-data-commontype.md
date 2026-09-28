@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare namespace commonType--><!--Device-unnamed-declare namespace commonType-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CommonType
 
 ## 导入模块

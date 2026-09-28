@@ -10,6 +10,8 @@ export interface SceneComponent
 
 **起始版本：** 20
 
+<!--Device-unnamed-export interface SceneComponent--><!--Device-unnamed-export interface SceneComponent-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## name
@@ -23,6 +25,8 @@ name: string
 **类型：** string
 
 **起始版本：** 20
+
+<!--Device-SceneComponent-name: string--><!--Device-SceneComponent-name: string-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -38,5 +42,7 @@ readonly property: Record<string, string | number | Vec2 | Vec3 | Vec4 | SceneRe
 **类型：** Record&lt;string, string &#124; number &#124; [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md) &#124; [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md) &#124; [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md) &#124; [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md) &#124; boolean[] &#124; string[] &#124; [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)[] &#124; [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md)[] &#124; [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)[] &#124; [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md)[] &#124; null &#124; undefined&gt;
 
 **起始版本：** 20
+
+<!--Device-SceneComponent-readonly property: Record<string, string | double | Vec2 | Vec3 | Vec4 | SceneResource | boolean | double[] |  string[] | SceneResource[] | Vec2[] | Vec3[] | Vec4[] | null | undefined>--><!--Device-SceneComponent-readonly property: Record<string, string | double | Vec2 | Vec3 | Vec4 | SceneResource | boolean | double[] |  string[] | SceneResource[] | Vec2[] | Vec3[] | Vec4[] | null | undefined>-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

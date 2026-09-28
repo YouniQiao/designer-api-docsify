@@ -16,6 +16,8 @@ function getCfgDirListSync(): Array<string>
 
 **起始版本：** 11
 
+<!--Device-configPolicy-function getCfgDirListSync(): Array<string>--><!--Device-configPolicy-function getCfgDirListSync(): Array<string>-End-->
+
 **系统能力：** SystemCapability.Customization.ConfigPolicy
 
 **系统接口：** 此接口为系统接口。

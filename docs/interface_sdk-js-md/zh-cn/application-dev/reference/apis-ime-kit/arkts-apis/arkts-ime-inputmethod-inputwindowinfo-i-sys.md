@@ -8,6 +8,8 @@ export interface InputWindowInfo
 
 **起始版本：** 10
 
+<!--Device-inputMethod-export interface InputWindowInfo--><!--Device-inputMethod-export interface InputWindowInfo-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## 导入模块
@@ -29,6 +31,8 @@ userId?: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-InputWindowInfo-userId?: int--><!--Device-InputWindowInfo-userId?: int-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 

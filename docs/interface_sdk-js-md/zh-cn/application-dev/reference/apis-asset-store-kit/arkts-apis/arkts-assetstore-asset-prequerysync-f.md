@@ -18,6 +18,8 @@ function preQuerySync(query: AssetMap): Uint8Array
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
+<!--Device-asset-function preQuerySync(query: AssetMap): Uint8Array--><!--Device-asset-function preQuerySync(query: AssetMap): Uint8Array-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 **参数：**

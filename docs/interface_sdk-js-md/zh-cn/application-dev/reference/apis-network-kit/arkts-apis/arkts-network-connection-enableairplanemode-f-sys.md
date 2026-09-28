@@ -18,6 +18,8 @@ function enableAirplaneMode(callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.CONNECTIVITY_INTERNAL
 
+<!--Device-connection-function enableAirplaneMode(callback: AsyncCallback<void>): void--><!--Device-connection-function enableAirplaneMode(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -63,6 +65,8 @@ function enableAirplaneMode(): Promise<void>
 **起始版本：** 8
 
 **需要权限：** ohos.permission.CONNECTIVITY_INTERNAL
+
+<!--Device-connection-function enableAirplaneMode(): Promise<void>--><!--Device-connection-function enableAirplaneMode(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 

@@ -8,6 +8,8 @@ Defines the ad display parameters.
 
 **Since:** 11
 
+<!--Device-advertising-export interface AdDisplayOptions--><!--Device-advertising-export interface AdDisplayOptions-End-->
+
 **System capability:** SystemCapability.Advertising.Ads
 
 ## Modules to Import
@@ -35,6 +37,8 @@ used to control the ad rotation interval. Type number, unit: ms, value range [30
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AdDisplayOptions-[key: string]: number | boolean | string | undefined--><!--Device-AdDisplayOptions-[key: string]: number | boolean | string | undefined-End-->
+
 **System capability:** SystemCapability.Advertising.Ads
 
 ## audioFocusType
@@ -57,6 +61,8 @@ so the default value is temporarily uncertain.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AdDisplayOptions-audioFocusType?: number--><!--Device-AdDisplayOptions-audioFocusType?: number-End-->
+
 **System capability:** SystemCapability.Advertising.Ads
 
 ## customData
@@ -72,6 +78,8 @@ Media custom data. Used for the server to notify the media server that a user sh
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AdDisplayOptions-customData?: string--><!--Device-AdDisplayOptions-customData?: string-End-->
 
 **System capability:** SystemCapability.Advertising.Ads
 
@@ -94,6 +102,8 @@ If not set, the business logic prevails.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AdDisplayOptions-mute?: boolean--><!--Device-AdDisplayOptions-mute?: boolean-End-->
+
 **System capability:** SystemCapability.Advertising.Ads
 
 ## useMobileDataReminder
@@ -115,6 +125,8 @@ which currently does not support full functionality, so the default value is tem
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AdDisplayOptions-useMobileDataReminder?: boolean--><!--Device-AdDisplayOptions-useMobileDataReminder?: boolean-End-->
+
 **System capability:** SystemCapability.Advertising.Ads
 
 ## userId
@@ -130,5 +142,7 @@ Media custom user ID. Used for the server to notify the media server that a user
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AdDisplayOptions-userId?: string--><!--Device-AdDisplayOptions-userId?: string-End-->
 
 **System capability:** SystemCapability.Advertising.Ads

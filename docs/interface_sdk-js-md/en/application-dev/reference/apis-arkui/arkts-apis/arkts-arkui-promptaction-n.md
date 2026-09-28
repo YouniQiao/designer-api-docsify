@@ -18,6 +18,8 @@ This module provides API for creating and displaying toasts, dialog boxes, and a
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-unnamed-declare namespace promptAction--><!--Device-unnamed-declare namespace promptAction-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import

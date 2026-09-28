@@ -8,6 +8,8 @@ interface Zip
 
 **起始版本：** 12
 
+<!--Device-zlib-interface Zip--><!--Device-zlib-interface Zip-End-->
+
 **系统能力：** SystemCapability.BundleManager.Zlib
 
 ## 导入模块
@@ -26,7 +28,9 @@ compress(dest: ArrayBuffer, source: ArrayBuffer, sourceLen?: number): Promise<Zi
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Zip-compress(dest: ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<ZipOutputInfo>--><!--Device-Zip-compress(dest: ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<ZipOutputInfo>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -82,7 +86,9 @@ compress2(dest: ArrayBuffer, source: ArrayBuffer, level: CompressLevel, sourceLe
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Zip-compress2(dest: ArrayBuffer, source: ArrayBuffer, level: CompressLevel, sourceLen?: long,): Promise<ZipOutputInfo>--><!--Device-Zip-compress2(dest: ArrayBuffer, source: ArrayBuffer, level: CompressLevel, sourceLen?: long,): Promise<ZipOutputInfo>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -140,7 +146,9 @@ compressBound(sourceLen: number): Promise<number>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Zip-compressBound(sourceLen: int): Promise<int>--><!--Device-Zip-compressBound(sourceLen: int): Promise<int>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -194,7 +202,9 @@ deflate(strm: ZStream, flush: CompressFlushMode): Promise<ReturnStatus>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Zip-deflate(strm: ZStream, flush: CompressFlushMode): Promise<ReturnStatus>--><!--Device-Zip-deflate(strm: ZStream, flush: CompressFlushMode): Promise<ReturnStatus>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -262,7 +272,9 @@ deflateBound(strm: ZStream, sourceLength: number): Promise<number>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Zip-deflateBound(strm: ZStream, sourceLength: long): Promise<int>--><!--Device-Zip-deflateBound(strm: ZStream, sourceLength: long): Promise<int>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -328,7 +340,9 @@ deflateCopy(source: Zip): Promise<ReturnStatus>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Zip-deflateCopy(source: Zip): Promise<ReturnStatus>--><!--Device-Zip-deflateCopy(source: Zip): Promise<ReturnStatus>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -394,7 +408,9 @@ deflateEnd(strm: ZStream): Promise<ReturnStatus>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Zip-deflateEnd(strm: ZStream): Promise<ReturnStatus>--><!--Device-Zip-deflateEnd(strm: ZStream): Promise<ReturnStatus>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -465,7 +481,9 @@ deflateGetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<Dictionary
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Zip-deflateGetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<DictionaryOutputInfo>--><!--Device-Zip-deflateGetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<DictionaryOutputInfo>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -537,7 +555,9 @@ deflateInit(strm: ZStream, level: CompressLevel): Promise<ReturnStatus>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Zip-deflateInit(strm: ZStream, level: CompressLevel): Promise<ReturnStatus>--><!--Device-Zip-deflateInit(strm: ZStream, level: CompressLevel): Promise<ReturnStatus>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -600,7 +620,9 @@ deflateInit2(strm: ZStream, level: CompressLevel, method: CompressMethod, window
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Zip-deflateInit2(strm: ZStream, level: CompressLevel, method: CompressMethod, windowBits: int,        memLevel: MemLevel, strategy: CompressStrategy): Promise<ReturnStatus>--><!--Device-Zip-deflateInit2(strm: ZStream, level: CompressLevel, method: CompressMethod, windowBits: int,        memLevel: MemLevel, strategy: CompressStrategy): Promise<ReturnStatus>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -667,7 +689,9 @@ deflateParams(strm: ZStream, level: CompressLevel, strategy: CompressStrategy): 
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Zip-deflateParams(strm: ZStream, level: CompressLevel, strategy: CompressStrategy): Promise<ReturnStatus>--><!--Device-Zip-deflateParams(strm: ZStream, level: CompressLevel, strategy: CompressStrategy): Promise<ReturnStatus>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -735,7 +759,9 @@ deflatePending(strm: ZStream): Promise<DeflatePendingOutputInfo>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Zip-deflatePending(strm: ZStream): Promise<DeflatePendingOutputInfo>--><!--Device-Zip-deflatePending(strm: ZStream): Promise<DeflatePendingOutputInfo>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -801,7 +827,9 @@ deflatePrime(strm: ZStream, bits: number, value: number): Promise<ReturnStatus>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Zip-deflatePrime(strm: ZStream, bits: int, value: int): Promise<ReturnStatus>--><!--Device-Zip-deflatePrime(strm: ZStream, bits: int, value: int): Promise<ReturnStatus>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -869,7 +897,9 @@ deflateReset(strm: ZStream): Promise<ReturnStatus>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Zip-deflateReset(strm: ZStream): Promise<ReturnStatus>--><!--Device-Zip-deflateReset(strm: ZStream): Promise<ReturnStatus>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -935,7 +965,9 @@ deflateResetKeep(strm: ZStream): Promise<ReturnStatus>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Zip-deflateResetKeep(strm: ZStream): Promise<ReturnStatus>--><!--Device-Zip-deflateResetKeep(strm: ZStream): Promise<ReturnStatus>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -1001,7 +1033,9 @@ deflateSetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<ReturnStat
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Zip-deflateSetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<ReturnStatus>--><!--Device-Zip-deflateSetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<ReturnStatus>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -1068,7 +1102,9 @@ deflateSetHeader(strm: ZStream, head: GzHeader): Promise<ReturnStatus>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Zip-deflateSetHeader(strm: ZStream, head: GzHeader): Promise<ReturnStatus>--><!--Device-Zip-deflateSetHeader(strm: ZStream, head: GzHeader): Promise<ReturnStatus>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -1136,7 +1172,9 @@ deflateTune(strm: ZStream, goodLength: number, maxLazy: number, niceLength: numb
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Zip-deflateTune(strm: ZStream, goodLength: int, maxLazy: int, niceLength: int, maxChain: int): Promise<ReturnStatus>--><!--Device-Zip-deflateTune(strm: ZStream, goodLength: int, maxLazy: int, niceLength: int, maxChain: int): Promise<ReturnStatus>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -1208,6 +1246,8 @@ getZStream(): Promise<ZStream>
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Zip-getZStream(): Promise<ZStream>--><!--Device-Zip-getZStream(): Promise<ZStream>-End-->
+
 **系统能力：** SystemCapability.BundleManager.Zlib
 
 **返回值：**
@@ -1238,7 +1278,9 @@ inflate(strm: ZStream, flush: CompressFlushMode): Promise<ReturnStatus>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Zip-inflate(strm: ZStream, flush: CompressFlushMode): Promise<ReturnStatus>--><!--Device-Zip-inflate(strm: ZStream, flush: CompressFlushMode): Promise<ReturnStatus>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -1328,6 +1370,8 @@ inflateBack(strm: ZStream, backIn: InflateBackInputCallback, inDesc: object, bac
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Zip-inflateBack(strm: ZStream, backIn: InflateBackInputCallback, inDesc: object, backOut: InflateBackOutputCallback, outDesc: object): Promise<ReturnStatus>--><!--Device-Zip-inflateBack(strm: ZStream, backIn: InflateBackInputCallback, inDesc: object, backOut: InflateBackOutputCallback, outDesc: object): Promise<ReturnStatus>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -1501,7 +1545,9 @@ inflateBackInit()函数分配的所有内存都被释放。使用Promise异步�
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Zip-inflateBackEnd(strm: ZStream): Promise<ReturnStatus>--><!--Device-Zip-inflateBackEnd(strm: ZStream): Promise<ReturnStatus>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -1538,7 +1584,9 @@ inflateBackInit(strm: ZStream, windowBits: number, window: ArrayBuffer): Promise
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Zip-inflateBackInit(strm: ZStream, windowBits: long, window: ArrayBuffer): Promise<ReturnStatus>--><!--Device-Zip-inflateBackInit(strm: ZStream, windowBits: long, window: ArrayBuffer): Promise<ReturnStatus>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -1577,7 +1625,9 @@ inflateCodesUsed(strm: ZStream): Promise<number>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Zip-inflateCodesUsed(strm: ZStream): Promise<long>--><!--Device-Zip-inflateCodesUsed(strm: ZStream): Promise<long>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -1637,7 +1687,9 @@ inflateCopy(source: Zip): Promise<ReturnStatus>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Zip-inflateCopy(source: Zip): Promise<ReturnStatus>--><!--Device-Zip-inflateCopy(source: Zip): Promise<ReturnStatus>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -1699,7 +1751,9 @@ inflateEnd(strm: ZStream): Promise<ReturnStatus>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Zip-inflateEnd(strm: ZStream): Promise<ReturnStatus>--><!--Device-Zip-inflateEnd(strm: ZStream): Promise<ReturnStatus>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -1765,7 +1819,9 @@ inflateGetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<Dictionary
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Zip-inflateGetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<DictionaryOutputInfo>--><!--Device-Zip-inflateGetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<DictionaryOutputInfo>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -1827,7 +1883,9 @@ inflateGetHeader(strm: ZStream, header: GzHeader): Promise<ReturnStatus>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Zip-inflateGetHeader(strm: ZStream, header: GzHeader): Promise<ReturnStatus>--><!--Device-Zip-inflateGetHeader(strm: ZStream, header: GzHeader): Promise<ReturnStatus>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -1889,7 +1947,9 @@ inflateInit(strm: ZStream): Promise<ReturnStatus>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Zip-inflateInit(strm: ZStream): Promise<ReturnStatus>--><!--Device-Zip-inflateInit(strm: ZStream): Promise<ReturnStatus>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -1945,7 +2005,9 @@ inflateInit2(strm: ZStream, windowBits: number): Promise<ReturnStatus>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Zip-inflateInit2(strm: ZStream, windowBits: int): Promise<ReturnStatus>--><!--Device-Zip-inflateInit2(strm: ZStream, windowBits: int): Promise<ReturnStatus>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -2003,7 +2065,9 @@ inflateMark(strm: ZStream): Promise<number>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Zip-inflateMark(strm: ZStream): Promise<int>--><!--Device-Zip-inflateMark(strm: ZStream): Promise<int>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -2063,7 +2127,9 @@ inflatePrime(strm: ZStream, bits: number, value: number): Promise<ReturnStatus>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Zip-inflatePrime(strm: ZStream, bits: int, value: int): Promise<ReturnStatus>--><!--Device-Zip-inflatePrime(strm: ZStream, bits: int, value: int): Promise<ReturnStatus>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -2126,7 +2192,9 @@ inflateReset(strm: ZStream): Promise<ReturnStatus>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Zip-inflateReset(strm: ZStream): Promise<ReturnStatus>--><!--Device-Zip-inflateReset(strm: ZStream): Promise<ReturnStatus>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -2187,7 +2255,9 @@ inflateReset2(strm: ZStream, windowBits: number): Promise<ReturnStatus>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Zip-inflateReset2(strm: ZStream, windowBits: int): Promise<ReturnStatus>--><!--Device-Zip-inflateReset2(strm: ZStream, windowBits: int): Promise<ReturnStatus>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -2249,7 +2319,9 @@ inflateResetKeep(strm: ZStream): Promise<ReturnStatus>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Zip-inflateResetKeep(strm: ZStream): Promise<ReturnStatus>--><!--Device-Zip-inflateResetKeep(strm: ZStream): Promise<ReturnStatus>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -2310,7 +2382,9 @@ inflateSetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<ReturnStat
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Zip-inflateSetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<ReturnStatus>--><!--Device-Zip-inflateSetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<ReturnStatus>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -2410,7 +2484,9 @@ inflateSync(strm: ZStream): Promise<ReturnStatus>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Zip-inflateSync(strm: ZStream): Promise<ReturnStatus>--><!--Device-Zip-inflateSync(strm: ZStream): Promise<ReturnStatus>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -2504,7 +2580,9 @@ inflateSyncPoint(strm: ZStream): Promise<ReturnStatus>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Zip-inflateSyncPoint(strm: ZStream): Promise<ReturnStatus>--><!--Device-Zip-inflateSyncPoint(strm: ZStream): Promise<ReturnStatus>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -2565,7 +2643,9 @@ inflateValidate(strm: ZStream, check: number): Promise<ReturnStatus>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Zip-inflateValidate(strm: ZStream, check: int): Promise<ReturnStatus>--><!--Device-Zip-inflateValidate(strm: ZStream, check: int): Promise<ReturnStatus>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -2627,7 +2707,9 @@ uncompress(dest:ArrayBuffer, source: ArrayBuffer, sourceLen?: number): Promise<Z
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Zip-uncompress(dest:ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<ZipOutputInfo>--><!--Device-Zip-uncompress(dest:ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<ZipOutputInfo>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -2690,7 +2772,9 @@ uncompress2(dest: ArrayBuffer, source: ArrayBuffer, sourceLen?: number): Promise
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Zip-uncompress2(dest: ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<DecompressionOutputInfo>--><!--Device-Zip-uncompress2(dest: ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<DecompressionOutputInfo>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -2753,7 +2837,9 @@ zlibCompileFlags(): Promise<number>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Zip-zlibCompileFlags(): Promise<int>--><!--Device-Zip-zlibCompileFlags(): Promise<int>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -2785,7 +2871,9 @@ zlibVersion(): Promise<string>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Zip-zlibVersion(): Promise<string>--><!--Device-Zip-zlibVersion(): Promise<string>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 

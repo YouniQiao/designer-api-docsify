@@ -22,6 +22,8 @@ function sppCloseClientSocket(socket: number): void
 
 **替代接口：** [sppCloseClientSocket](arkts-connectivity-socket-sppcloseclientsocket-f.md)
 
+<!--Device-bluetoothManager-function sppCloseClientSocket(socket: number): void--><!--Device-bluetoothManager-function sppCloseClientSocket(socket: number): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**

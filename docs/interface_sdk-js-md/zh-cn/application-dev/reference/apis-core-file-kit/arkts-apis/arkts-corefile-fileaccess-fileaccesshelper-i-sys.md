@@ -10,6 +10,8 @@ FileAccessHelper对象。
 
 **废弃版本：** 23
 
+<!--Device-fileAccess-interface FileAccessHelper--><!--Device-fileAccess-interface FileAccessHelper-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -35,6 +37,8 @@ access(sourceFileUri: string) : Promise<boolean>
 **替代接口：** access(path: string, mode?: AccessModeType)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
+
+<!--Device-FileAccessHelper-access(sourceFileUri: string) : Promise<boolean>--><!--Device-FileAccessHelper-access(sourceFileUri: string) : Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -136,6 +140,8 @@ access(sourceFileUri: string, callback: AsyncCallback<boolean>): void
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-access(sourceFileUri: string, callback: AsyncCallback<boolean>): void--><!--Device-FileAccessHelper-access(sourceFileUri: string, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -230,6 +236,8 @@ copy(sourceUri: string, destUri: string, force?: boolean): Promise<Array<CopyRes
 **替代接口：** copy(srcUri: string, destUri: string, options?: CopyOptions)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
+
+<!--Device-FileAccessHelper-copy(sourceUri: string, destUri: string, force?: boolean): Promise<Array<CopyResult>>--><!--Device-FileAccessHelper-copy(sourceUri: string, destUri: string, force?: boolean): Promise<Array<CopyResult>>-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -337,6 +345,8 @@ copy(sourceUri: string, destUri: string, callback: AsyncCallback<Array<CopyResul
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-copy(sourceUri: string, destUri: string, callback: AsyncCallback<Array<CopyResult>>): void--><!--Device-FileAccessHelper-copy(sourceUri: string, destUri: string, callback: AsyncCallback<Array<CopyResult>>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -403,6 +413,8 @@ copy(sourceUri: string, destUri: string, force: boolean, callback: AsyncCallback
 **替代接口：** copy(srcUri: string, destUri: string, options: CopyOptions, callback: AsyncCallback&lt;void&gt;)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
+
+<!--Device-FileAccessHelper-copy(sourceUri: string, destUri: string, force: boolean, callback: AsyncCallback<Array<CopyResult>>): void--><!--Device-FileAccessHelper-copy(sourceUri: string, destUri: string, force: boolean, callback: AsyncCallback<Array<CopyResult>>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -471,6 +483,8 @@ copyFile(sourceUri: string, destUri: string, fileName: string): Promise<string>
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FileAccessHelper-copyFile(sourceUri: string, destUri: string, fileName: string): Promise<string>--><!--Device-FileAccessHelper-copyFile(sourceUri: string, destUri: string, fileName: string): Promise<string>-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -565,6 +579,8 @@ copyFile(sourceUri: string, destUri: string, fileName: string, callback: AsyncCa
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FileAccessHelper-copyFile(sourceUri: string, destUri: string, fileName: string, callback: AsyncCallback<string>): void--><!--Device-FileAccessHelper-copyFile(sourceUri: string, destUri: string, fileName: string, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -628,6 +644,8 @@ createFile(uri: string, displayName: string) : Promise<string>
 **替代接口：** createRandomAccessFile(file: string | File, mode?: number, options?: RandomAccessFileOptions)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
+
+<!--Device-FileAccessHelper-createFile(uri: string, displayName: string) : Promise<string>--><!--Device-FileAccessHelper-createFile(uri: string, displayName: string) : Promise<string>-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -732,6 +750,8 @@ createFile(uri: string, displayName: string, callback: AsyncCallback<string>): v
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-createFile(uri: string, displayName: string, callback: AsyncCallback<string>): void--><!--Device-FileAccessHelper-createFile(uri: string, displayName: string, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -824,6 +844,8 @@ delete(uri: string) : Promise<number>
 **替代接口：** [delete](arkts-corefile-file-fs-atomicfile-c.md#delete)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
+
+<!--Device-FileAccessHelper-delete(uri: string) : Promise<number>--><!--Device-FileAccessHelper-delete(uri: string) : Promise<number>-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -922,6 +944,8 @@ delete(uri: string, callback: AsyncCallback<number>): void
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-delete(uri: string, callback: AsyncCallback<number>): void--><!--Device-FileAccessHelper-delete(uri: string, callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -1013,6 +1037,8 @@ getFileInfoFromRelativePath(relativePath: string) : Promise<FileInfo>
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-getFileInfoFromRelativePath(relativePath: string) : Promise<FileInfo>--><!--Device-FileAccessHelper-getFileInfoFromRelativePath(relativePath: string) : Promise<FileInfo>-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -1068,6 +1094,8 @@ getFileInfoFromRelativePath(relativePath: string, callback: AsyncCallback<FileIn
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-getFileInfoFromRelativePath(relativePath: string, callback: AsyncCallback<FileInfo>) : void--><!--Device-FileAccessHelper-getFileInfoFromRelativePath(relativePath: string, callback: AsyncCallback<FileInfo>) : void-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -1119,6 +1147,8 @@ getFileInfoFromUri(uri: string) : Promise<FileInfo>
 **替代接口：** stat(file: string | number)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
+
+<!--Device-FileAccessHelper-getFileInfoFromUri(uri: string) : Promise<FileInfo>--><!--Device-FileAccessHelper-getFileInfoFromUri(uri: string) : Promise<FileInfo>-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -1176,6 +1206,8 @@ getFileInfoFromUri(uri: string, callback: AsyncCallback<FileInfo>) : void
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-getFileInfoFromUri(uri: string, callback: AsyncCallback<FileInfo>) : void--><!--Device-FileAccessHelper-getFileInfoFromUri(uri: string, callback: AsyncCallback<FileInfo>) : void-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -1226,6 +1258,8 @@ getRoots(): Promise<RootIterator>
 **废弃版本：** 23
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
+
+<!--Device-FileAccessHelper-getRoots(): Promise<RootIterator>--><!--Device-FileAccessHelper-getRoots(): Promise<RootIterator>-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -1323,6 +1357,8 @@ getRoots(callback: AsyncCallback<RootIterator>): void
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-getRoots(callback: AsyncCallback<RootIterator>): void--><!--Device-FileAccessHelper-getRoots(callback: AsyncCallback<RootIterator>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -1419,6 +1455,8 @@ mkDir(parentUri: string, displayName: string) : Promise<string>
 **替代接口：** mkdir(path: string)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
+
+<!--Device-FileAccessHelper-mkDir(parentUri: string, displayName: string) : Promise<string>--><!--Device-FileAccessHelper-mkDir(parentUri: string, displayName: string) : Promise<string>-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -1523,6 +1561,8 @@ mkDir(parentUri: string, displayName: string, callback: AsyncCallback<string>): 
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-mkDir(parentUri: string, displayName: string, callback: AsyncCallback<string>): void--><!--Device-FileAccessHelper-mkDir(parentUri: string, displayName: string, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -1615,6 +1655,8 @@ move(sourceFile: string, destFile: string) : Promise<string>
 **替代接口：** moveFile(src: string, dest: string, mode?: number)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
+
+<!--Device-FileAccessHelper-move(sourceFile: string, destFile: string) : Promise<string>--><!--Device-FileAccessHelper-move(sourceFile: string, destFile: string) : Promise<string>-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -1714,6 +1756,8 @@ move(sourceFile: string, destFile: string, callback: AsyncCallback<string>): voi
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-move(sourceFile: string, destFile: string, callback: AsyncCallback<string>): void--><!--Device-FileAccessHelper-move(sourceFile: string, destFile: string, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -1809,6 +1853,8 @@ moveFile(sourceUri: string, destUri: string, fileName: string): Promise<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FileAccessHelper-moveFile(sourceUri: string, destUri: string, fileName: string): Promise<string>--><!--Device-FileAccessHelper-moveFile(sourceUri: string, destUri: string, fileName: string): Promise<string>-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -1901,6 +1947,8 @@ moveFile(sourceUri: string, destUri: string, fileName: string, callback: AsyncCa
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FileAccessHelper-moveFile(sourceUri: string, destUri: string, fileName: string, callback: AsyncCallback<string>): void--><!--Device-FileAccessHelper-moveFile(sourceUri: string, destUri: string, fileName: string, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -1987,6 +2035,8 @@ moveItem(sourceUri: string, destUri: string, force?: boolean): Promise<Array<Mov
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FileAccessHelper-moveItem(sourceUri: string, destUri: string, force?: boolean): Promise<Array<MoveResult>>--><!--Device-FileAccessHelper-moveItem(sourceUri: string, destUri: string, force?: boolean): Promise<Array<MoveResult>>-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -2123,6 +2173,8 @@ moveItem(sourceUri: string, destUri: string, callback: AsyncCallback<Array<MoveR
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FileAccessHelper-moveItem(sourceUri: string, destUri: string, callback: AsyncCallback<Array<MoveResult>>): void--><!--Device-FileAccessHelper-moveItem(sourceUri: string, destUri: string, callback: AsyncCallback<Array<MoveResult>>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -2219,6 +2271,8 @@ moveItem(sourceUri: string, destUri: string, force: boolean, callback: AsyncCall
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FileAccessHelper-moveItem(sourceUri: string, destUri: string, force: boolean, callback: AsyncCallback<Array<MoveResult>>): void--><!--Device-FileAccessHelper-moveItem(sourceUri: string, destUri: string, force: boolean, callback: AsyncCallback<Array<MoveResult>>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -2311,6 +2365,8 @@ openFile(uri: string, flags: OPENFLAGS) : Promise<number>
 **替代接口：** open(path: string, mode?: number)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
+
+<!--Device-FileAccessHelper-openFile(uri: string, flags: OPENFLAGS) : Promise<number>--><!--Device-FileAccessHelper-openFile(uri: string, flags: OPENFLAGS) : Promise<number>-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -2408,6 +2464,8 @@ openFile(uri: string, flags: OPENFLAGS, callback: AsyncCallback<number>): void
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-openFile(uri: string, flags: OPENFLAGS, callback: AsyncCallback<number>): void--><!--Device-FileAccessHelper-openFile(uri: string, flags: OPENFLAGS, callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -2500,6 +2558,8 @@ query(uri: string, metaJson: string) : Promise<string>
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-query(uri: string, metaJson: string) : Promise<string>--><!--Device-FileAccessHelper-query(uri: string, metaJson: string) : Promise<string>-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -2557,6 +2617,8 @@ query(uri: string, metaJson: string, callback: AsyncCallback<string>) : void
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-query(uri: string, metaJson: string, callback: AsyncCallback<string>) : void--><!--Device-FileAccessHelper-query(uri: string, metaJson: string, callback: AsyncCallback<string>) : void-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -2612,6 +2674,8 @@ registerObserver(uri: string, notifyForDescendants: boolean, callback: Callback<
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-registerObserver(uri: string, notifyForDescendants: boolean, callback: Callback<NotifyMessage>): void--><!--Device-FileAccessHelper-registerObserver(uri: string, notifyForDescendants: boolean, callback: Callback<NotifyMessage>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -2645,6 +2709,8 @@ rename(uri: string, displayName: string) : Promise<string>
 **替代接口：** rename(oldPath: string, newPath: string)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
+
+<!--Device-FileAccessHelper-rename(uri: string, displayName: string) : Promise<string>--><!--Device-FileAccessHelper-rename(uri: string, displayName: string) : Promise<string>-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -2743,6 +2809,8 @@ rename(uri: string, displayName: string, callback: AsyncCallback<string>): void
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-rename(uri: string, displayName: string, callback: AsyncCallback<string>): void--><!--Device-FileAccessHelper-rename(uri: string, displayName: string, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -2832,6 +2900,8 @@ unregisterObserver(uri: string, callback?: Callback<NotifyMessage>): void
 **废弃版本：** 23
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
+
+<!--Device-FileAccessHelper-unregisterObserver(uri: string, callback?: Callback<NotifyMessage>): void--><!--Device-FileAccessHelper-unregisterObserver(uri: string, callback?: Callback<NotifyMessage>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 

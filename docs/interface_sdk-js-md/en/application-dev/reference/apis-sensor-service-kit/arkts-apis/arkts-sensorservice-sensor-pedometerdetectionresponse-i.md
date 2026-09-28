@@ -10,6 +10,8 @@ Describes the pedometer detection sensor data. It extends from [Response](arkts-
 
 **Since:** 8
 
+<!--Device-sensor-interface PedometerDetectionResponse extends Response--><!--Device-sensor-interface PedometerDetectionResponse extends Response-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## Modules to Import
@@ -29,5 +31,7 @@ Pedometer detection scalar. The value can be **1** (a step counting event is det
 **Type:** number
 
 **Since:** 8
+
+<!--Device-PedometerDetectionResponse-scalar: double--><!--Device-PedometerDetectionResponse-scalar: double-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor

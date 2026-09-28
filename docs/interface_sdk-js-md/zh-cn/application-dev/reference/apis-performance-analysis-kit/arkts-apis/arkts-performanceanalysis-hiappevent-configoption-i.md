@@ -8,6 +8,8 @@ interface ConfigOption
 
 **起始版本：** 9
 
+<!--Device-hiAppEvent-interface ConfigOption--><!--Device-hiAppEvent-interface ConfigOption-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 ## 导入模块
@@ -28,7 +30,9 @@ disable?: boolean
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ConfigOption-disable?: boolean--><!--Device-ConfigOption-disable?: boolean-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -51,6 +55,8 @@ maxStorage?: string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ConfigOption-maxStorage?: string--><!--Device-ConfigOption-maxStorage?: string-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent

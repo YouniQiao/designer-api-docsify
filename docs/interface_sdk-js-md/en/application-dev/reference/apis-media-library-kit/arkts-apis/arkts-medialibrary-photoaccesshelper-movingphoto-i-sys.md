@@ -8,6 +8,8 @@ MovingPhoto provides APIs for managing a moving photo instance.
 
 **Since:** 12
 
+<!--Device-photoAccessHelper-interface MovingPhoto--><!--Device-photoAccessHelper-interface MovingPhoto-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
@@ -27,6 +29,8 @@ Checks whether the video of the moving photo is ready. This API uses a promise t
 **Since:** 20
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-MovingPhoto-isVideoReady(): Promise<boolean>--><!--Device-MovingPhoto-isVideoReady(): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

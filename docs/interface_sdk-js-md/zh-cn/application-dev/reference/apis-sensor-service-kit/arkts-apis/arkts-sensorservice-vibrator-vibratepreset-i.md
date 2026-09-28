@@ -8,6 +8,8 @@ interface VibratePreset
 
 **起始版本：** 9
 
+<!--Device-vibrator-interface VibratePreset--><!--Device-vibrator-interface VibratePreset-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## 导入模块
@@ -28,6 +30,8 @@ count?: number
 
 **起始版本：** 9
 
+<!--Device-VibratePreset-count?: int--><!--Device-VibratePreset-count?: int-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## effectId
@@ -41,6 +45,8 @@ effectId: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-VibratePreset-effectId: string--><!--Device-VibratePreset-effectId: string-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
@@ -56,6 +62,8 @@ intensity?: number
 
 **起始版本：** 12
 
+<!--Device-VibratePreset-intensity?: int--><!--Device-VibratePreset-intensity?: int-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## type
@@ -69,5 +77,7 @@ type: 'preset'
 **类型：** 'preset'
 
 **起始版本：** 9
+
+<!--Device-VibratePreset-type: 'preset'--><!--Device-VibratePreset-type: 'preset'-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice

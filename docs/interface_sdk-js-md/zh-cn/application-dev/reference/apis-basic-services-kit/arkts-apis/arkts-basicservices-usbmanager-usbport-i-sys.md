@@ -8,6 +8,8 @@ USB设备端口。
 
 **起始版本：** 9
 
+<!--Device-usbManager-interface USBPort--><!--Device-usbManager-interface USBPort-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ USB端口唯一标识。
 
 **起始版本：** 9
 
+<!--Device-USBPort-id: int--><!--Device-USBPort-id: int-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 **系统接口：** 此接口为系统接口。
@@ -46,6 +50,8 @@ USB端口角色信息。其currentMode应在supportedModes范围内。
 
 **起始版本：** 9
 
+<!--Device-USBPort-status: USBPortStatus--><!--Device-USBPort-status: USBPortStatus-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +67,8 @@ USB端口所支持的模式的数字组合掩码。status.currentMode应在此�
 **类型：** [PortModeType](arkts-basicservices-usbmanager-portmodetype-e-sys.md)
 
 **起始版本：** 9
+
+<!--Device-USBPort-supportedModes: PortModeType--><!--Device-USBPort-supportedModes: PortModeType-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 

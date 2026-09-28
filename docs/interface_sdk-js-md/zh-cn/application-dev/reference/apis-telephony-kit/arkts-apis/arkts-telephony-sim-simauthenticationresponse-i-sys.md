@@ -6,6 +6,8 @@ export interface SimAuthenticationResponse
 
 **起始版本：** 14
 
+<!--Device-sim-export interface SimAuthenticationResponse--><!--Device-sim-export interface SimAuthenticationResponse-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -26,6 +28,8 @@ response: string
 
 **起始版本：** 14
 
+<!--Device-SimAuthenticationResponse-response: string--><!--Device-SimAuthenticationResponse-response: string-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -42,6 +46,8 @@ Status word 1 of the SIM card, which is returned by the SIM card after command e
 
 **起始版本：** 14
 
+<!--Device-SimAuthenticationResponse-simStatusWord1: int--><!--Device-SimAuthenticationResponse-simStatusWord1: int-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -57,6 +63,8 @@ Status word 2 of the SIM card, which is returned by the SIM card after command e
 **类型：** number
 
 **起始版本：** 14
+
+<!--Device-SimAuthenticationResponse-simStatusWord2: int--><!--Device-SimAuthenticationResponse-simStatusWord2: int-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

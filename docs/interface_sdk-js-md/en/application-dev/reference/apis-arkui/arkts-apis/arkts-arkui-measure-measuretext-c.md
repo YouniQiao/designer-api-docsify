@@ -8,6 +8,8 @@ Defines the Measure interface.
 
 **Since:** 9
 
+<!--Device-unnamed-export default class MeasureText--><!--Device-unnamed-export default class MeasureText-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -39,6 +41,8 @@ Measures the single-line display width of the specified text. For multi-line tex
 **Substitutes:** measureText
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MeasureText-static measureText(options: MeasureOptions): number--><!--Device-MeasureText-static measureText(options: MeasureOptions): number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -101,6 +105,8 @@ Measures the width and height of the given text.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MeasureText-static measureTextSize(options: MeasureOptions): SizeOptions--><!--Device-MeasureText-static measureTextSize(options: MeasureOptions): SizeOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

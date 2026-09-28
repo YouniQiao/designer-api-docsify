@@ -8,6 +8,8 @@ ParagraphStyleInterface
 
 **Since:** 12
 
+<!--Device-unnamed-declare interface ParagraphStyleInterface--><!--Device-unnamed-declare interface ParagraphStyleInterface-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## leadingMargin
@@ -28,6 +30,8 @@ Default value: **0**
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ParagraphStyleInterface-leadingMargin?: LengthMetrics | LeadingMarginPlaceholder--><!--Device-ParagraphStyleInterface-leadingMargin?: LengthMetrics | LeadingMarginPlaceholder-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## leadingMarginSpan
@@ -47,6 +51,8 @@ Default value: **0**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-ParagraphStyleInterface-leadingMarginSpan?: LeadingMarginSpan--><!--Device-ParagraphStyleInterface-leadingMarginSpan?: LeadingMarginSpan-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,6 +78,8 @@ Value range: [0, INT32_MAX]. When a negative number is passed in, no limit is ap
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ParagraphStyleInterface-maxLines?: number--><!--Device-ParagraphStyleInterface-maxLines?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## overflow
@@ -96,6 +104,8 @@ It must be used together with **maxLines**; setting it alone does not take effec
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ParagraphStyleInterface-overflow?: TextOverflow--><!--Device-ParagraphStyleInterface-overflow?: TextOverflow-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## paragraphSpacing
@@ -115,6 +125,8 @@ The default paragraph spacing is 0. Percentage is not supported.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-ParagraphStyleInterface-paragraphSpacing?: LengthMetrics--><!--Device-ParagraphStyleInterface-paragraphSpacing?: LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -138,6 +150,8 @@ When this API is set together with **strokeWidth** of [TextStyleInterface](arkts
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ParagraphStyleInterface-shaderStyle?: ShaderStyle--><!--Device-ParagraphStyleInterface-shaderStyle?: ShaderStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## tailIndents
@@ -155,6 +169,8 @@ Tail indentation of the text paragraph. Percentage is not supported. When a sing
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ParagraphStyleInterface-tailIndents?: LengthMetrics | Array<LengthMetrics>--><!--Device-ParagraphStyleInterface-tailIndents?: LengthMetrics | Array<LengthMetrics>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -176,6 +192,8 @@ Default value: **TextAlign.Start**
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ParagraphStyleInterface-textAlign?: TextAlign--><!--Device-ParagraphStyleInterface-textAlign?: TextAlign-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## textDirection
@@ -195,6 +213,8 @@ Default value: **TextDirection.DEFAULT**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-ParagraphStyleInterface-textDirection?: TextDirection--><!--Device-ParagraphStyleInterface-textDirection?: TextDirection-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -216,6 +236,8 @@ Default value: **0**
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ParagraphStyleInterface-textIndent?: LengthMetrics--><!--Device-ParagraphStyleInterface-textIndent?: LengthMetrics-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## textVerticalAlign
@@ -236,6 +258,8 @@ Default value: **TextVerticalAlign.BASELINE**
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-ParagraphStyleInterface-textVerticalAlign?: TextVerticalAlign--><!--Device-ParagraphStyleInterface-textVerticalAlign?: TextVerticalAlign-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## wordBreak
@@ -255,5 +279,7 @@ Default value: **WordBreak.NORMAL**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ParagraphStyleInterface-wordBreak?: WordBreak--><!--Device-ParagraphStyleInterface-wordBreak?: WordBreak-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

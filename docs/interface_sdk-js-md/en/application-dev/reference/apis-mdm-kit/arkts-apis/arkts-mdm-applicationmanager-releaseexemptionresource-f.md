@@ -20,6 +20,8 @@ Releases a standby resource exemption for a specified application.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-applicationManager-function releaseExemptionResource(resourceType: StandbyResourceType, bundleName: string): void--><!--Device-applicationManager-function releaseExemptionResource(resourceType: StandbyResourceType, bundleName: string): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**

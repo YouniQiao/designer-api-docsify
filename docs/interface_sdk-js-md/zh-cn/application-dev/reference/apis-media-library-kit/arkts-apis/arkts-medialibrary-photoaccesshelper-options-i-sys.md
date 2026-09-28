@@ -8,6 +8,8 @@ interface Options
 
 **起始版本：** 23
 
+<!--Device-photoAccessHelper-interface Options--><!--Device-photoAccessHelper-interface Options-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ rankingMethod?: RankingMethod
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Options-rankingMethod?: RankingMethod--><!--Device-Options-rankingMethod?: RankingMethod-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -50,6 +54,8 @@ recommendationCount?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Options-recommendationCount?: int--><!--Device-Options-recommendationCount?: int-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -67,6 +73,8 @@ suggestionFields?: FieldType[]
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Options-suggestionFields?: FieldType[]--><!--Device-Options-suggestionFields?: FieldType[]-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

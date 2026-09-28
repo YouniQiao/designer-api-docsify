@@ -14,6 +14,8 @@ enum ScanDuty
 
 **替代接口：** [ScanDuty](arkts-connectivity-ble-scanduty-e.md)
 
+<!--Device-bluetoothManager-enum ScanDuty--><!--Device-bluetoothManager-enum ScanDuty-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## SCAN_MODE_LOW_POWER
@@ -29,6 +31,8 @@ SCAN_MODE_LOW_POWER = 0
 **废弃版本：** 10
 
 **替代接口：** [SCAN_MODE_LOW_POWER](arkts-connectivity-ble-scanduty-e.md#scan_mode_low_power)
+
+<!--Device-ScanDuty-SCAN_MODE_LOW_POWER = 0--><!--Device-ScanDuty-SCAN_MODE_LOW_POWER = 0-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -46,6 +50,8 @@ SCAN_MODE_BALANCED = 1
 
 **替代接口：** [SCAN_MODE_BALANCED](arkts-connectivity-ble-scanduty-e.md#scan_mode_balanced)
 
+<!--Device-ScanDuty-SCAN_MODE_BALANCED = 1--><!--Device-ScanDuty-SCAN_MODE_BALANCED = 1-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## SCAN_MODE_LOW_LATENCY
@@ -61,5 +67,7 @@ SCAN_MODE_LOW_LATENCY = 2
 **废弃版本：** 10
 
 **替代接口：** [SCAN_MODE_LOW_LATENCY](arkts-connectivity-ble-scanduty-e.md#scan_mode_low_latency)
+
+<!--Device-ScanDuty-SCAN_MODE_LOW_LATENCY = 2--><!--Device-ScanDuty-SCAN_MODE_LOW_LATENCY = 2-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

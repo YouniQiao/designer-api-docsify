@@ -8,6 +8,8 @@ export interface SceneLoadParams
 
 **起始版本：** 26.0.0
 
+<!--Device-unnamed-export interface SceneLoadParams--><!--Device-unnamed-export interface SceneLoadParams-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **系统接口：** 此接口为系统接口。
@@ -27,6 +29,8 @@ offset?: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SceneLoadParams-offset?: long--><!--Device-SceneLoadParams-offset?: long-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 

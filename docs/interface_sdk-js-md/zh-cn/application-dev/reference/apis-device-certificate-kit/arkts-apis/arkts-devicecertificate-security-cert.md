@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace cert--><!--Device-unnamed-declare namespace cert-End-->
+
 **系统能力：** SystemCapability.Security.Cert
 
 ## 导入模块

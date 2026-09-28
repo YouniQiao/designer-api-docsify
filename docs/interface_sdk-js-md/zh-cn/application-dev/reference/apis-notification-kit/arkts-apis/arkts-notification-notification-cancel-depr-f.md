@@ -19,6 +19,8 @@ function cancel(id: number, callback: AsyncCallback<void>): void
 
 **替代接口：** [cancel](arkts-notification-notificationmanager-cancel-f.md)
 
+<!--Device-notification-function cancel(id: number, callback: AsyncCallback<void>): void--><!--Device-notification-function cancel(id: number, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **参数：**
@@ -44,6 +46,8 @@ function cancel(id: number, label: string, callback: AsyncCallback<void>): void
 **废弃版本：** 9
 
 **替代接口：** [cancel](arkts-notification-notificationmanager-cancel-f.md)
+
+<!--Device-notification-function cancel(id: number, label: string, callback: AsyncCallback<void>): void--><!--Device-notification-function cancel(id: number, label: string, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -71,6 +75,8 @@ function cancel(id: number, label?: string): Promise<void>
 **废弃版本：** 9
 
 **替代接口：** [cancel](arkts-notification-notificationmanager-cancel-f.md)
+
+<!--Device-notification-function cancel(id: number, label?: string): Promise<void>--><!--Device-notification-function cancel(id: number, label?: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

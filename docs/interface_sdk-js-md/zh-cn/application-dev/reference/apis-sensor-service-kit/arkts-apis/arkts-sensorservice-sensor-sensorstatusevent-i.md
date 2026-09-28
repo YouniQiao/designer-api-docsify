@@ -8,6 +8,8 @@ interface SensorStatusEvent
 
 **起始版本：** 19
 
+<!--Device-sensor-interface SensorStatusEvent--><!--Device-sensor-interface SensorStatusEvent-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## 导入模块
@@ -28,6 +30,8 @@ deviceId: number
 
 **起始版本：** 19
 
+<!--Device-SensorStatusEvent-deviceId: int--><!--Device-SensorStatusEvent-deviceId: int-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## deviceName
@@ -41,6 +45,8 @@ deviceName: string
 **类型：** string
 
 **起始版本：** 19
+
+<!--Device-SensorStatusEvent-deviceName: string--><!--Device-SensorStatusEvent-deviceName: string-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -56,6 +62,8 @@ isSensorOnline: boolean
 
 **起始版本：** 19
 
+<!--Device-SensorStatusEvent-isSensorOnline: boolean--><!--Device-SensorStatusEvent-isSensorOnline: boolean-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## sensorId
@@ -69,6 +77,8 @@ sensorId: number
 **类型：** number
 
 **起始版本：** 19
+
+<!--Device-SensorStatusEvent-sensorId: int--><!--Device-SensorStatusEvent-sensorId: int-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -84,6 +94,8 @@ sensorIndex: number
 
 **起始版本：** 19
 
+<!--Device-SensorStatusEvent-sensorIndex: int--><!--Device-SensorStatusEvent-sensorIndex: int-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## timestamp
@@ -97,5 +109,7 @@ timestamp: number
 **类型：** number
 
 **起始版本：** 19
+
+<!--Device-SensorStatusEvent-timestamp: long--><!--Device-SensorStatusEvent-timestamp: long-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor

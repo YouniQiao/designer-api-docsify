@@ -20,6 +20,8 @@ function getSyncNotificationEnabledWithoutApp(userId: number, callback: AsyncCal
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function getSyncNotificationEnabledWithoutApp(userId: int, callback: AsyncCallback<boolean>): void--><!--Device-notificationManager-function getSyncNotificationEnabledWithoutApp(userId: int, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +79,8 @@ function getSyncNotificationEnabledWithoutApp(userId: number): Promise<boolean>
 **废弃版本：** 26.0.0
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function getSyncNotificationEnabledWithoutApp(userId: int): Promise<boolean>--><!--Device-notificationManager-function getSyncNotificationEnabledWithoutApp(userId: int): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

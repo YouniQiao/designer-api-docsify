@@ -8,6 +8,8 @@ enum BleProfile
 
 **起始版本：** 21
 
+<!--Device-ble-enum BleProfile--><!--Device-ble-enum BleProfile-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## GATT
@@ -21,6 +23,8 @@ GATT = 1
 **起始版本：** 21
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BleProfile-GATT = 1--><!--Device-BleProfile-GATT = 1-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -36,6 +40,8 @@ GATT_CLIENT = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BleProfile-GATT_CLIENT = 2--><!--Device-BleProfile-GATT_CLIENT = 2-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## GATT_SERVER
@@ -49,5 +55,7 @@ GATT_SERVER = 3
 **起始版本：** 21
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BleProfile-GATT_SERVER = 3--><!--Device-BleProfile-GATT_SERVER = 3-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

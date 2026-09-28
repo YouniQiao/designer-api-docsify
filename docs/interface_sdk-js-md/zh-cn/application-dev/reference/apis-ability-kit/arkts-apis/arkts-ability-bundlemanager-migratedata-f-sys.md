@@ -18,6 +18,8 @@ function migrateData(sourcePaths: Array<string>, destinationPath: string): Promi
 
 **需要权限：** ohos.permission.MIGRATE_DATA
 
+<!--Device-bundleManager-function migrateData(sourcePaths: Array<string>, destinationPath: string): Promise<void>--><!--Device-bundleManager-function migrateData(sourcePaths: Array<string>, destinationPath: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。

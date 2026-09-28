@@ -10,6 +10,8 @@ LiveFormExtensionContext是[LiveFormExtensionAbility](arkts-form-app-form-livefo
 
 **起始版本：** 20
 
+<!--Device-unnamed-declare class LiveFormExtensionContext extends ExtensionContext--><!--Device-unnamed-declare class LiveFormExtensionContext extends ExtensionContext-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 ## connectServiceExtensionAbility
@@ -33,6 +35,8 @@ ServiceExtensionAbility提供后台服务扩展能力，支持后台运行并对
 **起始版本：** 21
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-LiveFormExtensionContext-public connectServiceExtensionAbility(want: Want, connection: ConnectOptions): long--><!--Device-LiveFormExtensionContext-public connectServiceExtensionAbility(want: Want, connection: ConnectOptions): long-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -153,6 +157,8 @@ ServiceExtensionAbility是一类特殊的[ExtensionAbility](../../../application
 **起始版本：** 21
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-LiveFormExtensionContext-public disconnectServiceExtensionAbility(connectionId: long): Promise<void>--><!--Device-LiveFormExtensionContext-public disconnectServiceExtensionAbility(connectionId: long): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 

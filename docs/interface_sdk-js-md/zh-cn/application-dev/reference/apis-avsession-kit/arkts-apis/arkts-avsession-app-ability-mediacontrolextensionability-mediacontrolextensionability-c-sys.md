@@ -14,6 +14,8 @@ MediaControlExtensionAbility模块提供播放控制的扩展能力，继承自[
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-unnamed-export default class MediaControlExtensionAbility extends UIExtensionAbility--><!--Device-unnamed-export default class MediaControlExtensionAbility extends UIExtensionAbility-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **系统接口：** 此接口为系统接口。

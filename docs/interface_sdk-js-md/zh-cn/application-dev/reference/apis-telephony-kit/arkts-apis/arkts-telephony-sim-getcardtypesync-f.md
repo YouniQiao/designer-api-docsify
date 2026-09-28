@@ -16,6 +16,8 @@ function getCardTypeSync(slotId: number): CardType
 
 **起始版本：** 10
 
+<!--Device-sim-function getCardTypeSync(slotId: int): CardType--><!--Device-sim-function getCardTypeSync(slotId: int): CardType-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**

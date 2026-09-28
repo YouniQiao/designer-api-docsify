@@ -6,6 +6,8 @@
 
 **起始版本：** 6
 
+<!--Device-unnamed-declare namespace call--><!--Device-unnamed-declare namespace call-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 ## 导入模块

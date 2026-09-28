@@ -10,6 +10,8 @@ declare class LiveFormExtensionAbility extends ExtensionAbility
 
 **起始版本：** 20
 
+<!--Device-unnamed-declare class LiveFormExtensionAbility extends ExtensionAbility--><!--Device-unnamed-declare class LiveFormExtensionAbility extends ExtensionAbility-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 ## 导入模块
@@ -34,7 +36,9 @@ LiveFormExtensionAbility实例创建完成的回调。当用户切换到互动�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-LiveFormExtensionAbility-onLiveFormCreate(liveFormInfo: LiveFormInfo, session: UIExtensionContentSession): void--><!--Device-LiveFormExtensionAbility-onLiveFormCreate(liveFormInfo: LiveFormInfo, session: UIExtensionContentSession): void-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -72,7 +76,9 @@ LiveFormExtensionAbility生命周期回调，在销毁时回调，执行资源�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-LiveFormExtensionAbility-onLiveFormDestroy(liveFormInfo: LiveFormInfo): void--><!--Device-LiveFormExtensionAbility-onLiveFormDestroy(liveFormInfo: LiveFormInfo): void-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -111,5 +117,7 @@ LiveFormExtensionAbility的上下文环境，继承自[ExtensionContext](../../a
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-LiveFormExtensionAbility-context: LiveFormExtensionContext--><!--Device-LiveFormExtensionAbility-context: LiveFormExtensionContext-End-->
 
 **系统能力：** SystemCapability.Ability.Form

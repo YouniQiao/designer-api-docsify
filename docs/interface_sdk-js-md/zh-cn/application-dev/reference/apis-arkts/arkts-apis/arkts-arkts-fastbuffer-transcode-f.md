@@ -18,6 +18,8 @@ function transcode(source: FastBuffer | Uint8Array, fromEnc: string, toEnc: stri
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-fastbuffer-function transcode(source: FastBuffer | Uint8Array, fromEnc: string, toEnc: string): FastBuffer--><!--Device-fastbuffer-function transcode(source: FastBuffer | Uint8Array, fromEnc: string, toEnc: string): FastBuffer-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**

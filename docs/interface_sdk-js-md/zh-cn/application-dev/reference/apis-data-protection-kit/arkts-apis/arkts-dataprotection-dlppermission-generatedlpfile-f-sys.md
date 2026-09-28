@@ -20,6 +20,8 @@ DLP管理应用调用该接口，将明文文件加密生成DLPFile管理对象�
 
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
 
+<!--Device-dlpPermission-function generateDLPFile(plaintextFd: number, ciphertextFd: number, property: DLPProperty): Promise<DLPFile>--><!--Device-dlpPermission-function generateDLPFile(plaintextFd: number, ciphertextFd: number, property: DLPProperty): Promise<DLPFile>-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **系统接口：** 此接口为系统接口。
@@ -108,6 +110,8 @@ DLP管理应用调用该接口，将明文文件加密生成权限受控文件�
 **起始版本：** 10
 
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
+
+<!--Device-dlpPermission-function generateDLPFile(plaintextFd: number, ciphertextFd: number, property: DLPProperty, callback: AsyncCallback<DLPFile>): void--><!--Device-dlpPermission-function generateDLPFile(plaintextFd: number, ciphertextFd: number, property: DLPProperty, callback: AsyncCallback<DLPFile>): void-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 

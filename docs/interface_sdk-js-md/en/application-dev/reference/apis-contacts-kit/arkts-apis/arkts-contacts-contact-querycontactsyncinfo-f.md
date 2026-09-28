@@ -24,6 +24,8 @@ If the returned contact synchronization information is empty, the invoking party
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-contact-function queryContactSyncInfo(context: Context): Promise<Array<ContactSyncInfo>>--><!--Device-contact-function queryContactSyncInfo(context: Context): Promise<Array<ContactSyncInfo>>-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**

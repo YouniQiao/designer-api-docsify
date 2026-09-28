@@ -18,6 +18,8 @@ Creates a spring curve. The curve shape is subject to the spring parameters, and
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-curves-function springCurve(velocity: number, mass: number, stiffness: number, damping: number): ICurve--><!--Device-curves-function springCurve(velocity: number, mass: number, stiffness: number, damping: number): ICurve-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

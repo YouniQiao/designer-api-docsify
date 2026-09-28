@@ -8,6 +8,8 @@ export enum GeofenceTransitionEvent
 
 **起始版本：** 12
 
+<!--Device-geoLocationManager-export enum GeofenceTransitionEvent--><!--Device-geoLocationManager-export enum GeofenceTransitionEvent-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 ## GEOFENCE_TRANSITION_EVENT_APPROACHING_GEOFENCE
@@ -21,6 +23,8 @@ GEOFENCE_TRANSITION_EVENT_APPROACHING_GEOFENCE = 8
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-GeofenceTransitionEvent-GEOFENCE_TRANSITION_EVENT_APPROACHING_GEOFENCE = 8--><!--Device-GeofenceTransitionEvent-GEOFENCE_TRANSITION_EVENT_APPROACHING_GEOFENCE = 8-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geofence
 
@@ -38,6 +42,8 @@ GEOFENCE_TRANSITION_EVENT_LEAVING_GEOFENCE = 16
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-GeofenceTransitionEvent-GEOFENCE_TRANSITION_EVENT_LEAVING_GEOFENCE = 16--><!--Device-GeofenceTransitionEvent-GEOFENCE_TRANSITION_EVENT_LEAVING_GEOFENCE = 16-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 **系统接口：** 此接口为系统接口。
@@ -53,6 +59,8 @@ GEOFENCE_TRANSITION_EVENT_NEAR_WANDER = 32
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-GeofenceTransitionEvent-GEOFENCE_TRANSITION_EVENT_NEAR_WANDER = 32--><!--Device-GeofenceTransitionEvent-GEOFENCE_TRANSITION_EVENT_NEAR_WANDER = 32-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geofence
 

@@ -25,6 +25,8 @@ class EntryAbility extends AccessibilityExtensionAbility {
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare class AccessibilityExtensionContext extends ExtensionContext--><!--Device-unnamed-declare class AccessibilityExtensionContext extends ExtensionContext-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## getFocusElement
@@ -38,6 +40,8 @@ getFocusElement(isAccessibilityFocus: boolean, callback: AsyncCallback<Accessibi
 **起始版本：** 9
 
 **废弃版本：** 12
+
+<!--Device-AccessibilityExtensionContext-getFocusElement(isAccessibilityFocus: boolean, callback: AsyncCallback<AccessibilityElement>): void--><!--Device-AccessibilityExtensionContext-getFocusElement(isAccessibilityFocus: boolean, callback: AsyncCallback<AccessibilityElement>): void-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -88,6 +92,8 @@ getFocusElement(isAccessibilityFocus?: boolean): Promise<AccessibilityElement>
 **起始版本：** 9
 
 **废弃版本：** 12
+
+<!--Device-AccessibilityExtensionContext-getFocusElement(isAccessibilityFocus?: boolean): Promise<AccessibilityElement>--><!--Device-AccessibilityExtensionContext-getFocusElement(isAccessibilityFocus?: boolean): Promise<AccessibilityElement>-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -141,6 +147,8 @@ getFocusElement(callback: AsyncCallback<AccessibilityElement>): void
 
 **废弃版本：** 12
 
+<!--Device-AccessibilityExtensionContext-getFocusElement(callback: AsyncCallback<AccessibilityElement>): void--><!--Device-AccessibilityExtensionContext-getFocusElement(callback: AsyncCallback<AccessibilityElement>): void-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **参数：**
@@ -186,6 +194,8 @@ getWindowRootElement(windowId: number, callback: AsyncCallback<AccessibilityElem
 **起始版本：** 9
 
 **废弃版本：** 12
+
+<!--Device-AccessibilityExtensionContext-getWindowRootElement(windowId: int, callback: AsyncCallback<AccessibilityElement>): void--><!--Device-AccessibilityExtensionContext-getWindowRootElement(windowId: int, callback: AsyncCallback<AccessibilityElement>): void-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -236,6 +246,8 @@ getWindowRootElement(windowId?: number): Promise<AccessibilityElement>
 **起始版本：** 9
 
 **废弃版本：** 12
+
+<!--Device-AccessibilityExtensionContext-getWindowRootElement(windowId?: int): Promise<AccessibilityElement>--><!--Device-AccessibilityExtensionContext-getWindowRootElement(windowId?: int): Promise<AccessibilityElement>-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -289,6 +301,8 @@ getWindowRootElement(callback: AsyncCallback<AccessibilityElement>): void
 
 **废弃版本：** 12
 
+<!--Device-AccessibilityExtensionContext-getWindowRootElement(callback: AsyncCallback<AccessibilityElement>): void--><!--Device-AccessibilityExtensionContext-getWindowRootElement(callback: AsyncCallback<AccessibilityElement>): void-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **参数：**
@@ -334,6 +348,8 @@ getWindows(displayId: number, callback: AsyncCallback<Array<AccessibilityElement
 **起始版本：** 9
 
 **废弃版本：** 12
+
+<!--Device-AccessibilityExtensionContext-getWindows(displayId: long, callback: AsyncCallback<Array<AccessibilityElement>>): void--><!--Device-AccessibilityExtensionContext-getWindows(displayId: long, callback: AsyncCallback<Array<AccessibilityElement>>): void-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -381,6 +397,8 @@ getWindows(displayId?: number): Promise<Array<AccessibilityElement>>
 **起始版本：** 9
 
 **废弃版本：** 12
+
+<!--Device-AccessibilityExtensionContext-getWindows(displayId?: long): Promise<Array<AccessibilityElement>>--><!--Device-AccessibilityExtensionContext-getWindows(displayId?: long): Promise<Array<AccessibilityElement>>-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -431,6 +449,8 @@ getWindows(callback: AsyncCallback<Array<AccessibilityElement>>): void
 
 **废弃版本：** 12
 
+<!--Device-AccessibilityExtensionContext-getWindows(callback: AsyncCallback<Array<AccessibilityElement>>): void--><!--Device-AccessibilityExtensionContext-getWindows(callback: AsyncCallback<Array<AccessibilityElement>>): void-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **参数：**
@@ -475,6 +495,8 @@ injectGesture(gesturePath: GesturePath, callback: AsyncCallback<void>): void
 **废弃版本：** 10
 
 **替代接口：** [injectGestureSync](#injectgesturesync)
+
+<!--Device-AccessibilityExtensionContext-injectGesture(gesturePath: GesturePath, callback: AsyncCallback<void>): void--><!--Device-AccessibilityExtensionContext-injectGesture(gesturePath: GesturePath, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -529,6 +551,8 @@ injectGesture(gesturePath: GesturePath): Promise<void>
 
 **替代接口：** [injectGestureSync](#injectgesturesync)
 
+<!--Device-AccessibilityExtensionContext-injectGesture(gesturePath: GesturePath): Promise<void>--><!--Device-AccessibilityExtensionContext-injectGesture(gesturePath: GesturePath): Promise<void>-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **参数：**
@@ -582,6 +606,8 @@ injectGestureSync(gesturePath: GesturePath): void
 
 **废弃版本：** 12
 
+<!--Device-AccessibilityExtensionContext-injectGestureSync(gesturePath: GesturePath): void--><!--Device-AccessibilityExtensionContext-injectGestureSync(gesturePath: GesturePath): void-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **参数：**
@@ -622,6 +648,8 @@ setTargetBundleName(targetNames: Array<string>, callback: AsyncCallback<void>): 
 **起始版本：** 9
 
 **废弃版本：** 12
+
+<!--Device-AccessibilityExtensionContext-setTargetBundleName(targetNames: Array<string>, callback: AsyncCallback<void>): void--><!--Device-AccessibilityExtensionContext-setTargetBundleName(targetNames: Array<string>, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -671,6 +699,8 @@ setTargetBundleName(targetNames: Array<string>): Promise<void>
 **起始版本：** 9
 
 **废弃版本：** 12
+
+<!--Device-AccessibilityExtensionContext-setTargetBundleName(targetNames: Array<string>): Promise<void>--><!--Device-AccessibilityExtensionContext-setTargetBundleName(targetNames: Array<string>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 

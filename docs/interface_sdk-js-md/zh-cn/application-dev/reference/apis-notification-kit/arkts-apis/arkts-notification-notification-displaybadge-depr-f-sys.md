@@ -21,6 +21,8 @@ function displayBadge(bundle: BundleOption, enable: boolean, callback: AsyncCall
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notification-function displayBadge(bundle: BundleOption, enable: boolean, callback: AsyncCallback<void>): void--><!--Device-notification-function displayBadge(bundle: BundleOption, enable: boolean, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +53,8 @@ function displayBadge(bundle: BundleOption, enable: boolean): Promise<void>
 **替代接口：** [displayBadge](arkts-notification-notificationmanager-displaybadge-f-sys.md)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notification-function displayBadge(bundle: BundleOption, enable: boolean): Promise<void>--><!--Device-notification-function displayBadge(bundle: BundleOption, enable: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

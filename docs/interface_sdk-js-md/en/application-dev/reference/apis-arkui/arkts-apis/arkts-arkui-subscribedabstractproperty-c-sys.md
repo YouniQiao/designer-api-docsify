@@ -13,6 +13,8 @@ An object of a one-way or two-way synchronized property in [AppStorage](../../..
 
 **Since:** 9
 
+<!--Device-unnamed-declare abstract class SubscribedAbstractProperty<T>--><!--Device-unnamed-declare abstract class SubscribedAbstractProperty<T>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
@@ -47,6 +49,8 @@ Constructor. If the **subscribeMe** parameter has been passed in to establish a 
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-SubscribedAbstractProperty-constructor(    /**     * Subscriber used to receive property change notifications. If not passed, no subscription relationship is     * established.     *     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @systemapi     * @since 7     *      */    subscribeMe?: IPropertySubscriber,    /**     * Variable information used to identify the subscription relationship. Defaults to **undefined** if not passed.     *     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @systemapi     * @since 7     *      */    info?: string,  )--><!--Device-SubscribedAbstractProperty-constructor(    /**     * Subscriber used to receive property change notifications. If not passed, no subscription relationship is     * established.     *     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @systemapi     * @since 7     *      */    subscribeMe?: IPropertySubscriber,    /**     * Variable information used to identify the subscription relationship. Defaults to **undefined** if not passed.     *     * @syscap SystemCapability.ArkUI.ArkUI.Full     * @systemapi     * @since 7     *      */    info?: string,  )-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -69,6 +73,8 @@ Creates one-way synchronization. Data changes are transferred only from the data
 **Since:** 7
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-SubscribedAbstractProperty-createOneWaySync(subscribeMe?: IPropertySubscriber, info?: string): SyncedPropertyOneWay<T>--><!--Device-SubscribedAbstractProperty-createOneWaySync(subscribeMe?: IPropertySubscriber, info?: string): SyncedPropertyOneWay<T>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -99,6 +105,8 @@ Creates two-way synchronization. Data changes are transferred bidirectionally be
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-SubscribedAbstractProperty-createTwoWaySync(subscribeMe?: IPropertySubscriber, info?: string): SyncedPropertyTwoWay<T>--><!--Device-SubscribedAbstractProperty-createTwoWaySync(subscribeMe?: IPropertySubscriber, info?: string): SyncedPropertyTwoWay<T>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -128,6 +136,8 @@ Called when obtaining the ID.
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-SubscribedAbstractProperty-id(): number--><!--Device-SubscribedAbstractProperty-id(): number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -149,6 +159,8 @@ Notifies subscribers that the value has changed.
 **Since:** 7
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-SubscribedAbstractProperty-protected notifyHasChanged(newValue: T): void--><!--Device-SubscribedAbstractProperty-protected notifyHasChanged(newValue: T): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -172,6 +184,8 @@ Notifies subscribers that the property has been read.
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-SubscribedAbstractProperty-protected notifyPropertyRead(): void--><!--Device-SubscribedAbstractProperty-protected notifyPropertyRead(): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -187,6 +201,8 @@ Obtains the number of subscribers.
 **Since:** 7
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-SubscribedAbstractProperty-numberOfSubscrbers(): number--><!--Device-SubscribedAbstractProperty-numberOfSubscrbers(): number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -210,6 +226,8 @@ Removes a subscriber based on the subscriber ID.
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-SubscribedAbstractProperty-unlinkSuscriber(subscriberId: number): void--><!--Device-SubscribedAbstractProperty-unlinkSuscriber(subscriberId: number): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -232,6 +250,8 @@ Unique ID of the subscription property, used to distinguish different subscripti
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-SubscribedAbstractProperty-private id_--><!--Device-SubscribedAbstractProperty-private id_-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -247,6 +267,8 @@ Variable information used to identify the subscription relationship.
 **Since:** 7
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-SubscribedAbstractProperty-private info_?--><!--Device-SubscribedAbstractProperty-private info_?-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -265,6 +287,8 @@ A set of subscribers.
 **Since:** 7
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-SubscribedAbstractProperty-protected subscribers_: Set<number>--><!--Device-SubscribedAbstractProperty-protected subscribers_: Set<number>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

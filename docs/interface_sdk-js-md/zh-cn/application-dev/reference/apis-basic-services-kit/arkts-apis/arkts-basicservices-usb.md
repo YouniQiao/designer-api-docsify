@@ -13,6 +13,8 @@
 
 **替代接口：** [usbManager](arkts-basicservices-usbmanager.md)
 
+<!--Device-unnamed-declare namespace usb--><!--Device-unnamed-declare namespace usb-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## 导入模块

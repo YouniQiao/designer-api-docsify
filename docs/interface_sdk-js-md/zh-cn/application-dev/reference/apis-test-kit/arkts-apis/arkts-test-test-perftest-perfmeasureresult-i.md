@@ -8,6 +8,8 @@ declare interface PerfMeasureResult
 
 **起始版本：** 20
 
+<!--Device-unnamed-declare interface PerfMeasureResult--><!--Device-unnamed-declare interface PerfMeasureResult-End-->
+
 **系统能力：** SystemCapability.Test.PerfTest
 
 **测试接口：** 此接口仅在自动化测试脚本中使用。
@@ -30,7 +32,9 @@ readonly average: number
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PerfMeasureResult-readonly average: double--><!--Device-PerfMeasureResult-readonly average: double-End-->
 
 **系统能力：** SystemCapability.Test.PerfTest
 
@@ -48,7 +52,9 @@ readonly maximum: number
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PerfMeasureResult-readonly maximum: double--><!--Device-PerfMeasureResult-readonly maximum: double-End-->
 
 **系统能力：** SystemCapability.Test.PerfTest
 
@@ -66,7 +72,9 @@ readonly metric: PerfMetric
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PerfMeasureResult-readonly metric: PerfMetric--><!--Device-PerfMeasureResult-readonly metric: PerfMetric-End-->
 
 **系统能力：** SystemCapability.Test.PerfTest
 
@@ -84,7 +92,9 @@ readonly minimum: number
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PerfMeasureResult-readonly minimum: double--><!--Device-PerfMeasureResult-readonly minimum: double-End-->
 
 **系统能力：** SystemCapability.Test.PerfTest
 
@@ -102,7 +112,9 @@ readonly roundValues: Array<number>
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PerfMeasureResult-readonly roundValues: Array<double>--><!--Device-PerfMeasureResult-readonly roundValues: Array<double>-End-->
 
 **系统能力：** SystemCapability.Test.PerfTest
 

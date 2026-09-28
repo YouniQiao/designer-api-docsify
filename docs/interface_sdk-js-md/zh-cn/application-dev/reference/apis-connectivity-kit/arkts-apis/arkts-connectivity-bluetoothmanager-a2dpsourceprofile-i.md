@@ -16,6 +16,8 @@ interface A2dpSourceProfile extends BaseProfile
 
 **替代接口：** [A2dpSourceProfile](arkts-connectivity-a2dp-a2dpsourceprofile-i.md)
 
+<!--Device-bluetoothManager-interface A2dpSourceProfile extends BaseProfile--><!--Device-bluetoothManager-interface A2dpSourceProfile extends BaseProfile-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -43,6 +45,8 @@ connect(device: string): void
 **需要权限：** 
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH
 - API版本9：ohos.permission.DISCOVER_BLUETOOTH
+
+<!--Device-A2dpSourceProfile-connect(device: string): void--><!--Device-A2dpSourceProfile-connect(device: string): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -96,6 +100,8 @@ disconnect(device: string): void
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH
 - API版本9：ohos.permission.DISCOVER_BLUETOOTH
 
+<!--Device-A2dpSourceProfile-disconnect(device: string): void--><!--Device-A2dpSourceProfile-disconnect(device: string): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -147,6 +153,8 @@ getPlayingState(device: string): PlayingState
 **需要权限：** 
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH
 - API版本9：N/A
+
+<!--Device-A2dpSourceProfile-getPlayingState(device: string): PlayingState--><!--Device-A2dpSourceProfile-getPlayingState(device: string): PlayingState-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -205,6 +213,8 @@ off(type: 'connectionStateChange', callback?: Callback<StateChangeParam>): void
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH
 - API版本9：N/A
 
+<!--Device-A2dpSourceProfile-off(type: 'connectionStateChange', callback?: Callback<StateChangeParam>): void--><!--Device-A2dpSourceProfile-off(type: 'connectionStateChange', callback?: Callback<StateChangeParam>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -240,6 +250,8 @@ on(type: 'connectionStateChange', callback: Callback<StateChangeParam>): void
 **需要权限：** 
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH
 - API版本9：N/A
+
+<!--Device-A2dpSourceProfile-on(type: 'connectionStateChange', callback: Callback<StateChangeParam>): void--><!--Device-A2dpSourceProfile-on(type: 'connectionStateChange', callback: Callback<StateChangeParam>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

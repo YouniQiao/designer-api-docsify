@@ -8,6 +8,8 @@ interface TemplateId
 
 **起始版本：** 10
 
+<!--Device-dataShare-interface TemplateId--><!--Device-dataShare-interface TemplateId-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ bundleNameOfOwner: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TemplateId-bundleNameOfOwner: string--><!--Device-TemplateId-bundleNameOfOwner: string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ subscriberId: string
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TemplateId-subscriberId: string--><!--Device-TemplateId-subscriberId: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 

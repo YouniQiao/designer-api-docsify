@@ -8,6 +8,8 @@ interface PrintJob
 
 **起始版本：** 24
 
+<!--Device-print-interface PrintJob--><!--Device-print-interface PrintJob-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## 导入模块
@@ -28,6 +30,8 @@ colorMode: number
 
 **起始版本：** 24
 
+<!--Device-PrintJob-colorMode: int--><!--Device-PrintJob-colorMode: int-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## copyNumber
@@ -41,6 +45,8 @@ copyNumber: number
 **类型：** number
 
 **起始版本：** 24
+
+<!--Device-PrintJob-copyNumber: int--><!--Device-PrintJob-copyNumber: int-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -56,6 +62,8 @@ duplexMode: number
 
 **起始版本：** 24
 
+<!--Device-PrintJob-duplexMode: int--><!--Device-PrintJob-duplexMode: int-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## fdList
@@ -69,6 +77,8 @@ fdList: Array<number>
 **类型：** Array&lt;number&gt;
 
 **起始版本：** 24
+
+<!--Device-PrintJob-fdList: Array<int>--><!--Device-PrintJob-fdList: Array<int>-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -84,6 +94,8 @@ isLandscape: boolean
 
 **起始版本：** 24
 
+<!--Device-PrintJob-isLandscape: boolean--><!--Device-PrintJob-isLandscape: boolean-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## isSequential
@@ -97,6 +109,8 @@ isSequential: boolean
 **类型：** boolean
 
 **起始版本：** 24
+
+<!--Device-PrintJob-isSequential: boolean--><!--Device-PrintJob-isSequential: boolean-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -112,6 +126,8 @@ jobId: string
 
 **起始版本：** 24
 
+<!--Device-PrintJob-jobId: string--><!--Device-PrintJob-jobId: string-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## jobState
@@ -125,6 +141,8 @@ jobState: PrintJobState
 **类型：** [PrintJobState](arkts-basicservices-print-printjobstate-e.md)
 
 **起始版本：** 24
+
+<!--Device-PrintJob-jobState: PrintJobState--><!--Device-PrintJob-jobState: PrintJobState-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -140,6 +158,8 @@ jobSubstate: PrintJobSubState
 
 **起始版本：** 24
 
+<!--Device-PrintJob-jobSubstate: PrintJobSubState--><!--Device-PrintJob-jobSubstate: PrintJobSubState-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## margin
@@ -153,6 +173,8 @@ margin?: PrintMargin
 **类型：** [PrintMargin](arkts-basicservices-print-printmargin-i.md)
 
 **起始版本：** 24
+
+<!--Device-PrintJob-margin?: PrintMargin--><!--Device-PrintJob-margin?: PrintMargin-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -168,6 +190,8 @@ options?: Object
 
 **起始版本：** 24
 
+<!--Device-PrintJob-options?: Object--><!--Device-PrintJob-options?: Object-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## pageRange
@@ -181,6 +205,8 @@ pageRange: PrinterRange
 **类型：** [PrinterRange](arkts-basicservices-print-printerrange-i.md)
 
 **起始版本：** 24
+
+<!--Device-PrintJob-pageRange: PrinterRange--><!--Device-PrintJob-pageRange: PrinterRange-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -196,6 +222,8 @@ pageSize: PrintPageSize
 
 **起始版本：** 24
 
+<!--Device-PrintJob-pageSize: PrintPageSize--><!--Device-PrintJob-pageSize: PrintPageSize-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## preview
@@ -210,6 +238,8 @@ preview?: PreviewAttribute
 
 **起始版本：** 24
 
+<!--Device-PrintJob-preview?: PreviewAttribute--><!--Device-PrintJob-preview?: PreviewAttribute-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## printerId
@@ -223,5 +253,7 @@ printerId: string
 **类型：** string
 
 **起始版本：** 24
+
+<!--Device-PrintJob-printerId: string--><!--Device-PrintJob-printerId: string-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework

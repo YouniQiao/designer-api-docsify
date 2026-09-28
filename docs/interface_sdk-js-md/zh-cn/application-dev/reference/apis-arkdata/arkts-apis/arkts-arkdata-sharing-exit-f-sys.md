@@ -16,6 +16,8 @@ function exit(sharingResource: string, callback: AsyncCallback<Result<void>>): v
 
 **起始版本：** 11
 
+<!--Device-sharing-function exit(sharingResource: string, callback: AsyncCallback<Result<void>>): void--><!--Device-sharing-function exit(sharingResource: string, callback: AsyncCallback<Result<void>>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +63,8 @@ function exit(sharingResource: string): Promise<Result<void>>
 根据指定的共享资源标识退出共享，使用Promise异步回调。
 
 **起始版本：** 11
+
+<!--Device-sharing-function exit(sharingResource: string): Promise<Result<void>>--><!--Device-sharing-function exit(sharingResource: string): Promise<Result<void>>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 

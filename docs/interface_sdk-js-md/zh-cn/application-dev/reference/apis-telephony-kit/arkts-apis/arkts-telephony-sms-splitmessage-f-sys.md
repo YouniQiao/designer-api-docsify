@@ -18,6 +18,8 @@ function splitMessage(content: string, callback: AsyncCallback<Array<string>>): 
 
 **需要权限：** ohos.permission.SEND_MESSAGES
 
+<!--Device-sms-function splitMessage(content: string, callback: AsyncCallback<Array<string>>): void--><!--Device-sms-function splitMessage(content: string, callback: AsyncCallback<Array<string>>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -67,6 +69,8 @@ function splitMessage(content: string): Promise<Array<string>>
 **起始版本：** 8
 
 **需要权限：** ohos.permission.SEND_MESSAGES
+
+<!--Device-sms-function splitMessage(content: string): Promise<Array<string>>--><!--Device-sms-function splitMessage(content: string): Promise<Array<string>>-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 

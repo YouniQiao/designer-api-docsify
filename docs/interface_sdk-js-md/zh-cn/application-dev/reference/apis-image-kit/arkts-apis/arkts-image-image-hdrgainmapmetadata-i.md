@@ -8,6 +8,8 @@ Gainmap使用的元数据值，[HdrMetadataKey](arkts-image-image-hdrmetadatakey
 
 **起始版本：** 12
 
+<!--Device-image-interface HdrGainmapMetadata--><!--Device-image-interface HdrGainmapMetadata-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ The alternate hdr headroom.
 
 **起始版本：** 12
 
+<!--Device-HdrGainmapMetadata-alternateHeadroom: double--><!--Device-HdrGainmapMetadata-alternateHeadroom: double-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## baseHeadroom
@@ -41,6 +45,8 @@ The baseline hdr headroom.
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-HdrGainmapMetadata-baseHeadroom: double--><!--Device-HdrGainmapMetadata-baseHeadroom: double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -56,6 +62,8 @@ The per-channel metadata.
 
 **起始版本：** 12
 
+<!--Device-HdrGainmapMetadata-channels: Array<GainmapChannel>--><!--Device-HdrGainmapMetadata-channels: Array<GainmapChannel>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## gainmapChannelCount
@@ -69,6 +77,8 @@ The number of gain map channels, with a value of 1 or 3.
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-HdrGainmapMetadata-gainmapChannelCount: int--><!--Device-HdrGainmapMetadata-gainmapChannelCount: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -84,6 +94,8 @@ The minimum version a parser needs to understand.
 
 **起始版本：** 12
 
+<!--Device-HdrGainmapMetadata-miniVersion: int--><!--Device-HdrGainmapMetadata-miniVersion: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## useBaseColorFlag
@@ -98,6 +110,8 @@ Indicate whether to use the color space of the base image.
 
 **起始版本：** 12
 
+<!--Device-HdrGainmapMetadata-useBaseColorFlag: boolean--><!--Device-HdrGainmapMetadata-useBaseColorFlag: boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## writerVersion
@@ -111,5 +125,7 @@ The version used by the writer.
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-HdrGainmapMetadata-writerVersion: int--><!--Device-HdrGainmapMetadata-writerVersion: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core

@@ -8,6 +8,8 @@ export interface WorkerEventListener
 
 **起始版本：** 9
 
+<!--Device-unnamed-export interface WorkerEventListener--><!--Device-unnamed-export interface WorkerEventListener-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -27,6 +29,8 @@ import { worker, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, E
 **起始版本：** 9
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WorkerEventListener-(event: Event): void | Promise<void>--><!--Device-WorkerEventListener-(event: Event): void | Promise<void>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

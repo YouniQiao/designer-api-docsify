@@ -8,6 +8,8 @@ export class NumberFormat
 
 **起始版本：** 6
 
+<!--Device-intl-export class NumberFormat--><!--Device-intl-export class NumberFormat-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## 导入模块
@@ -27,6 +29,8 @@ constructor()
 **起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-NumberFormat-constructor()--><!--Device-NumberFormat-constructor()-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -52,6 +56,8 @@ constructor(locale: string | Array<string>, options?: NumberOptions)
 **起始版本：** 6
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-NumberFormat-constructor(locale: string | Array<string>, options?: NumberOptions)--><!--Device-NumberFormat-constructor(locale: string | Array<string>, options?: NumberOptions)-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -82,6 +88,8 @@ format(num: number): string
 **起始版本：** 6
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-NumberFormat-format(num: double): string--><!--Device-NumberFormat-format(num: double): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -126,6 +134,8 @@ formatRange(startRange: number, endRange: number): string
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-NumberFormat-formatRange(startRange: double, endRange: double): string--><!--Device-NumberFormat-formatRange(startRange: double, endRange: double): string-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 **参数：**
@@ -161,6 +171,8 @@ resolvedOptions(): NumberOptions
 **起始版本：** 6
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-NumberFormat-resolvedOptions(): NumberOptions--><!--Device-NumberFormat-resolvedOptions(): NumberOptions-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 

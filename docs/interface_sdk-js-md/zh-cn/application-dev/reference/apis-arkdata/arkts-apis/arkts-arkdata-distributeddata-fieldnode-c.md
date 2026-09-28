@@ -12,6 +12,8 @@ class FieldNode
 
 **替代接口：** FieldNode
 
+<!--Device-distributedData-class FieldNode--><!--Device-distributedData-class FieldNode-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 ## 导入模块
@@ -32,6 +34,8 @@ appendChild(child: FieldNode): boolean
 **废弃版本：** 9
 
 **替代接口：** appendChild
+
+<!--Device-FieldNode-appendChild(child: FieldNode): boolean--><!--Device-FieldNode-appendChild(child: FieldNode): boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
@@ -83,6 +87,8 @@ constructor(name: string)
 
 **替代接口：** constructor
 
+<!--Device-FieldNode-constructor(name: string)--><!--Device-FieldNode-constructor(name: string)-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 **参数：**
@@ -107,6 +113,8 @@ default: string
 
 **替代接口：** default
 
+<!--Device-FieldNode-default: string--><!--Device-FieldNode-default: string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 ## nullable
@@ -125,6 +133,8 @@ nullable: boolean
 
 **替代接口：** nullable
 
+<!--Device-FieldNode-nullable: boolean--><!--Device-FieldNode-nullable: boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 ## type
@@ -142,5 +152,7 @@ type: number
 **废弃版本：** 9
 
 **替代接口：** type
+
+<!--Device-FieldNode-type: number--><!--Device-FieldNode-type: number-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore

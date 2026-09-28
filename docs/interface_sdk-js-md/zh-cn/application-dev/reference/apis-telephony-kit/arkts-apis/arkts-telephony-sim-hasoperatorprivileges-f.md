@@ -16,6 +16,8 @@ function hasOperatorPrivileges(slotId: number, callback: AsyncCallback<boolean>)
 
 **起始版本：** 7
 
+<!--Device-sim-function hasOperatorPrivileges(slotId: int, callback: AsyncCallback<boolean>): void--><!--Device-sim-function hasOperatorPrivileges(slotId: int, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**
@@ -62,6 +64,8 @@ function hasOperatorPrivileges(slotId: number): Promise<boolean>
 检查应用(调用者)是否已被授予运营商权限。使用Promise异步回调。
 
 **起始版本：** 7
+
+<!--Device-sim-function hasOperatorPrivileges(slotId: int): Promise<boolean>--><!--Device-sim-function hasOperatorPrivileges(slotId: int): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

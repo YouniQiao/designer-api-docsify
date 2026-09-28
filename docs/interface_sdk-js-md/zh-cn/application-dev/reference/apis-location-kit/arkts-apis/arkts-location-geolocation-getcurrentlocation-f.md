@@ -22,6 +22,8 @@ function getCurrentLocation(request: CurrentLocationRequest, callback: AsyncCall
 
 **需要权限：** ohos.permission.LOCATION
 
+<!--Device-geolocation-function getCurrentLocation(request: CurrentLocationRequest, callback: AsyncCallback<Location>): void--><!--Device-geolocation-function getCurrentLocation(request: CurrentLocationRequest, callback: AsyncCallback<Location>): void-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **参数：**
@@ -67,6 +69,8 @@ function getCurrentLocation(callback: AsyncCallback<Location>): void
 
 **需要权限：** ohos.permission.LOCATION
 
+<!--Device-geolocation-function getCurrentLocation(callback: AsyncCallback<Location>): void--><!--Device-geolocation-function getCurrentLocation(callback: AsyncCallback<Location>): void-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **参数：**
@@ -109,6 +113,8 @@ function getCurrentLocation(request?: CurrentLocationRequest): Promise<Location>
 **替代接口：** [getCurrentLocation](arkts-location-geolocationmanager-getcurrentlocation-f.md)
 
 **需要权限：** ohos.permission.LOCATION
+
+<!--Device-geolocation-function getCurrentLocation(request?: CurrentLocationRequest): Promise<Location>--><!--Device-geolocation-function getCurrentLocation(request?: CurrentLocationRequest): Promise<Location>-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 

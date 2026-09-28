@@ -12,6 +12,8 @@ export interface NotificationCapsule
 
 **起始版本：** 11
 
+<!--Device-unnamed-export interface NotificationCapsule--><!--Device-unnamed-export interface NotificationCapsule-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## backgroundColor
@@ -25,6 +27,8 @@ backgroundColor?: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-NotificationCapsule-backgroundColor?: string--><!--Device-NotificationCapsule-backgroundColor?: string-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -40,6 +44,8 @@ icon?: image.PixelMap
 
 **起始版本：** 11
 
+<!--Device-NotificationCapsule-icon?: image.PixelMap--><!--Device-NotificationCapsule-icon?: image.PixelMap-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## title
@@ -53,5 +59,7 @@ title?: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-NotificationCapsule-title?: string--><!--Device-NotificationCapsule-title?: string-End-->
 
 **系统能力：** SystemCapability.Notification.Notification

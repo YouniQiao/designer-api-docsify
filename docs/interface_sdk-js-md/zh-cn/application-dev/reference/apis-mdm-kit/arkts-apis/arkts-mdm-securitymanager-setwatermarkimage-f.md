@@ -26,6 +26,8 @@ function setWatermarkImage(admin: Want, bundleName: string, source: string | ima
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-securityManager-function setWatermarkImage(admin: Want, bundleName: string, source: string | image.PixelMap, accountId: number): void--><!--Device-securityManager-function setWatermarkImage(admin: Want, bundleName: string, source: string | image.PixelMap, accountId: number): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -95,6 +97,8 @@ function setWatermarkImage(admin: Want, bundleName: string, source: string | ima
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_SECURITY
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-securityManager-function setWatermarkImage(admin: Want, bundleName: string, source: string | image.PixelMap, accountId: number, properties: WatermarkProperties): void--><!--Device-securityManager-function setWatermarkImage(admin: Want, bundleName: string, source: string | image.PixelMap, accountId: number, properties: WatermarkProperties): void-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

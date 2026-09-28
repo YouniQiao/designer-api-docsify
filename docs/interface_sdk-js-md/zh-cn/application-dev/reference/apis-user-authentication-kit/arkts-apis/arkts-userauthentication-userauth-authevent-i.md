@@ -12,6 +12,8 @@ interface AuthEvent
 
 **替代接口：** [IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md)
 
+<!--Device-userAuth-interface AuthEvent--><!--Device-userAuth-interface AuthEvent-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 ## 导入模块
@@ -33,6 +35,8 @@ callback(result: EventInfo): void
 **废弃版本：** 11
 
 **替代接口：** [onResult](arkts-userauthentication-userauth-iauthcallback-i.md#onresult)(result: UserAuthResult)
+
+<!--Device-AuthEvent-callback(result: EventInfo): void--><!--Device-AuthEvent-callback(result: EventInfo): void-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 

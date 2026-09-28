@@ -4,6 +4,8 @@ The util module provides common utility functions, such as [TextEncoder](arkts-a
 
 **Since:** 7
 
+<!--Device-unnamed-declare namespace util--><!--Device-unnamed-declare namespace util-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import

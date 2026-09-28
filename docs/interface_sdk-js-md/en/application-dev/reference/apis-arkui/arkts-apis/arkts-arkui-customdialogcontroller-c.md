@@ -22,6 +22,8 @@ dialogController : CustomDialogController | null = new CustomDialogController(Cu
 
 **Since:** 7
 
+<!--Device-unnamed-declare class CustomDialogController--><!--Device-unnamed-declare class CustomDialogController-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## close
@@ -35,6 +37,8 @@ close()
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-CustomDialogController-close()--><!--Device-CustomDialogController-close()-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -67,6 +71,8 @@ Constructor for a custom dialog box.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-CustomDialogController-constructor(value: CustomDialogControllerOptions)--><!--Device-CustomDialogController-constructor(value: CustomDialogControllerOptions)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -88,6 +94,8 @@ Obtains the state of the custom dialog box.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-CustomDialogController-getState(): PromptActionCommonState--><!--Device-CustomDialogController-getState(): PromptActionCommonState-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -117,5 +125,7 @@ Opens the content of the custom dialog box. This API can be called multiple time
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-CustomDialogController-open()--><!--Device-CustomDialogController-open()-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

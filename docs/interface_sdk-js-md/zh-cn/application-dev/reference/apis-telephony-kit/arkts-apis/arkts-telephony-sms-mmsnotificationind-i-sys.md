@@ -8,6 +8,8 @@ export interface MmsNotificationInd
 
 **起始版本：** 8
 
+<!--Device-sms-export interface MmsNotificationInd--><!--Device-sms-export interface MmsNotificationInd-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ contentClass?: number
 
 **起始版本：** 8
 
+<!--Device-MmsNotificationInd-contentClass?: int--><!--Device-MmsNotificationInd-contentClass?: int-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ contentLocation: string
 **类型：** string
 
 **起始版本：** 8
+
+<!--Device-MmsNotificationInd-contentLocation: string--><!--Device-MmsNotificationInd-contentLocation: string-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -62,6 +68,8 @@ deliveryReport?: number
 
 **起始版本：** 8
 
+<!--Device-MmsNotificationInd-deliveryReport?: int--><!--Device-MmsNotificationInd-deliveryReport?: int-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +85,8 @@ expiry: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-MmsNotificationInd-expiry: int--><!--Device-MmsNotificationInd-expiry: int-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -94,6 +104,8 @@ from?: MmsAddress
 
 **起始版本：** 8
 
+<!--Device-MmsNotificationInd-from?: MmsAddress--><!--Device-MmsNotificationInd-from?: MmsAddress-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -109,6 +121,8 @@ messageClass: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-MmsNotificationInd-messageClass: int--><!--Device-MmsNotificationInd-messageClass: int-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -126,6 +140,8 @@ messageSize: number
 
 **起始版本：** 8
 
+<!--Device-MmsNotificationInd-messageSize: long--><!--Device-MmsNotificationInd-messageSize: long-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -141,6 +157,8 @@ subject?: string
 **类型：** string
 
 **起始版本：** 8
+
+<!--Device-MmsNotificationInd-subject?: string--><!--Device-MmsNotificationInd-subject?: string-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -158,6 +176,8 @@ transactionId: string
 
 **起始版本：** 8
 
+<!--Device-MmsNotificationInd-transactionId: string--><!--Device-MmsNotificationInd-transactionId: string-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -173,6 +193,8 @@ version: MmsVersionType
 **类型：** [MmsVersionType](arkts-telephony-sms-mmsversiontype-e-sys.md)
 
 **起始版本：** 8
+
+<!--Device-MmsNotificationInd-version: MmsVersionType--><!--Device-MmsNotificationInd-version: MmsVersionType-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 

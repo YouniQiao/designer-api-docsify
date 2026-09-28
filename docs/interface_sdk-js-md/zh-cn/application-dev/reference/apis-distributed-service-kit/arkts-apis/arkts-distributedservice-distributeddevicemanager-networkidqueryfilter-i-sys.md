@@ -8,6 +8,8 @@ interface NetworkIdQueryFilter
 
 **起始版本：** 18
 
+<!--Device-distributedDeviceManager-interface NetworkIdQueryFilter--><!--Device-distributedDeviceManager-interface NetworkIdQueryFilter-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -33,6 +35,8 @@ onlineStatus : number
 
 **起始版本：** 18
 
+<!--Device-NetworkIdQueryFilter-onlineStatus : int--><!--Device-NetworkIdQueryFilter-onlineStatus : int-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -48,6 +52,8 @@ wiseDeviceId : string
 **类型：** string
 
 **起始版本：** 18
+
+<!--Device-NetworkIdQueryFilter-wiseDeviceId : string--><!--Device-NetworkIdQueryFilter-wiseDeviceId : string-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 

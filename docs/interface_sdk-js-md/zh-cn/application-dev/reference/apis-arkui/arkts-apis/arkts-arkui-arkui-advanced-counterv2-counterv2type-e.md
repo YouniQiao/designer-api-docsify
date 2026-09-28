@@ -10,6 +10,8 @@ CounterV2Type指定CounterV2类型。
 
 **起始版本：** 26.0.0
 
+<!--Device-unnamed-declare enum CounterV2Type--><!--Device-unnamed-declare enum CounterV2Type-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## LIST
@@ -25,6 +27,8 @@ LIST = 0
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-CounterV2Type-LIST = 0--><!--Device-CounterV2Type-LIST = 0-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,6 +46,8 @@ COMPACT = 1
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-CounterV2Type-COMPACT = 1--><!--Device-CounterV2Type-COMPACT = 1-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## INLINE
@@ -58,6 +64,8 @@ INLINE = 2
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-CounterV2Type-INLINE = 2--><!--Device-CounterV2Type-INLINE = 2-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## INLINE_DATE
@@ -73,5 +81,7 @@ INLINE_DATE = 3
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-CounterV2Type-INLINE_DATE = 3--><!--Device-CounterV2Type-INLINE_DATE = 3-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

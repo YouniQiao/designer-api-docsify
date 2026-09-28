@@ -8,6 +8,8 @@ picker内宫格的捏合模式。
 
 **起始版本：** 23
 
+<!--Device-photoAccessHelper-export class GridPinchMode--><!--Device-photoAccessHelper-export class GridPinchMode-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
@@ -30,7 +32,9 @@ defaultGridLevel?: GridLevel
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-GridPinchMode-defaultGridLevel?: GridLevel--><!--Device-GridPinchMode-defaultGridLevel?: GridLevel-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -48,6 +52,8 @@ gridPinchModeType?: GridPinchModeType
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-GridPinchMode-gridPinchModeType?: GridPinchModeType--><!--Device-GridPinchMode-gridPinchModeType?: GridPinchModeType-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core

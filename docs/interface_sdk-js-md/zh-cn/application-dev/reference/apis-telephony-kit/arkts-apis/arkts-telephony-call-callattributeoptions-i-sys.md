@@ -8,6 +8,8 @@ export interface CallAttributeOptions
 
 **起始版本：** 7
 
+<!--Device-call-export interface CallAttributeOptions--><!--Device-call-export interface CallAttributeOptions-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ accountId: number
 
 **起始版本：** 7
 
+<!--Device-CallAttributeOptions-accountId: int--><!--Device-CallAttributeOptions-accountId: int-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ accountNumber: string
 **类型：** string
 
 **起始版本：** 7
+
+<!--Device-CallAttributeOptions-accountNumber: string--><!--Device-CallAttributeOptions-accountNumber: string-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -62,6 +68,8 @@ callId: number
 
 **起始版本：** 7
 
+<!--Device-CallAttributeOptions-callId: int--><!--Device-CallAttributeOptions-callId: int-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +85,8 @@ callState: DetailedCallState
 **类型：** [DetailedCallState](arkts-telephony-call-detailedcallstate-e-sys.md)
 
 **起始版本：** 7
+
+<!--Device-CallAttributeOptions-callState: DetailedCallState--><!--Device-CallAttributeOptions-callState: DetailedCallState-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -94,6 +104,8 @@ callType: CallType
 
 **起始版本：** 7
 
+<!--Device-CallAttributeOptions-callType: CallType--><!--Device-CallAttributeOptions-callType: CallType-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -109,6 +121,8 @@ conferenceState: ConferenceState
 **类型：** [ConferenceState](arkts-telephony-call-conferencestate-e-sys.md)
 
 **起始版本：** 7
+
+<!--Device-CallAttributeOptions-conferenceState: ConferenceState--><!--Device-CallAttributeOptions-conferenceState: ConferenceState-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -126,6 +140,8 @@ crsType: number
 
 **起始版本：** 11
 
+<!--Device-CallAttributeOptions-crsType: int--><!--Device-CallAttributeOptions-crsType: int-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -141,6 +157,8 @@ Indicates the extra call parameters.
 **类型：** Record&lt;string, Object&gt;
 
 **起始版本：** 14
+
+<!--Device-CallAttributeOptions-extraParams?: Record<string, Object>--><!--Device-CallAttributeOptions-extraParams?: Record<string, Object>-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -166,6 +184,8 @@ isCustomAccessibility?: boolean
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-CallAttributeOptions-isCustomAccessibility?: boolean--><!--Device-CallAttributeOptions-isCustomAccessibility?: boolean-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -186,6 +206,8 @@ isEcc: boolean
 
 **起始版本：** 7
 
+<!--Device-CallAttributeOptions-isEcc: boolean--><!--Device-CallAttributeOptions-isEcc: boolean-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -201,6 +223,8 @@ numberLocation?: string
 **类型：** string
 
 **起始版本：** 12
+
+<!--Device-CallAttributeOptions-numberLocation?: string--><!--Device-CallAttributeOptions-numberLocation?: string-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -218,6 +242,8 @@ numberMarkInfo?: NumberMarkInfo
 
 **起始版本：** 12
 
+<!--Device-CallAttributeOptions-numberMarkInfo?: NumberMarkInfo--><!--Device-CallAttributeOptions-numberMarkInfo?: NumberMarkInfo-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -233,6 +259,8 @@ originalCallType: number
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-CallAttributeOptions-originalCallType: int--><!--Device-CallAttributeOptions-originalCallType: int-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -251,6 +279,8 @@ rtt通话状态
 **起始版本：** 22
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-CallAttributeOptions-rttState?: RttState--><!--Device-CallAttributeOptions-rttState?: RttState-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -272,6 +302,8 @@ speakerphoneOn: boolean
 
 **起始版本：** 7
 
+<!--Device-CallAttributeOptions-speakerphoneOn: boolean--><!--Device-CallAttributeOptions-speakerphoneOn: boolean-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -287,6 +319,8 @@ startTime: number
 **类型：** number
 
 **起始版本：** 7
+
+<!--Device-CallAttributeOptions-startTime: int--><!--Device-CallAttributeOptions-startTime: int-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -304,6 +338,8 @@ videoState: VideoStateType
 
 **起始版本：** 7
 
+<!--Device-CallAttributeOptions-videoState: VideoStateType--><!--Device-CallAttributeOptions-videoState: VideoStateType-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -319,6 +355,8 @@ VoIP通话信息。
 **类型：** [VoipCallAttribute](arkts-telephony-call-voipcallattribute-i-sys.md)
 
 **起始版本：** 11
+
+<!--Device-CallAttributeOptions-voipCallAttribute?: VoipCallAttribute--><!--Device-CallAttributeOptions-voipCallAttribute?: VoipCallAttribute-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -339,6 +377,8 @@ XCALL类型。
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-CallAttributeOptions-xCallType?: XCallType--><!--Device-CallAttributeOptions-xCallType?: XCallType-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 

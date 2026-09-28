@@ -8,6 +8,8 @@ export @interface Retention
 
 **起始版本：** 24
 
+<!--Device-unnamed-export @interface Retention--><!--Device-unnamed-export @interface Retention-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -29,5 +31,7 @@ policy: RetentionPolicy
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Retention-policy: RetentionPolicy--><!--Device-Retention-policy: RetentionPolicy-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

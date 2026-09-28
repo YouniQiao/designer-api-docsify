@@ -10,6 +10,8 @@ export interface FileAccessOption
 
 **废弃版本：** 10
 
+<!--Device-unnamed-export interface FileAccessOption--><!--Device-unnamed-export interface FileAccessOption-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## 导入模块
@@ -29,6 +31,8 @@ complete?: () => void
 
 **废弃版本：** 10
 
+<!--Device-FileAccessOption-complete?: () => void--><!--Device-FileAccessOption-complete?: () => void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## fail
@@ -42,6 +46,8 @@ fail?: (data: string, code: number) => void
 **起始版本：** 3
 
 **废弃版本：** 10
+
+<!--Device-FileAccessOption-fail?: (data: string, code: number) => void--><!--Device-FileAccessOption-fail?: (data: string, code: number) => void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -64,6 +70,8 @@ success?: () => void
 
 **废弃版本：** 10
 
+<!--Device-FileAccessOption-success?: () => void--><!--Device-FileAccessOption-success?: () => void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## uri
@@ -81,5 +89,7 @@ uri: string
 **起始版本：** 3
 
 **废弃版本：** 10
+
+<!--Device-FileAccessOption-uri: string--><!--Device-FileAccessOption-uri: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite

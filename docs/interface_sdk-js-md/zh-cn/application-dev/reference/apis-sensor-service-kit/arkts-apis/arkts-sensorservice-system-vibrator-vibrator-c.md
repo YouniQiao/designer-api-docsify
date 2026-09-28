@@ -12,6 +12,8 @@ export default class Vibrator
 
 **需要权限：** ohos.permission.VIBRATE
 
+<!--Device-unnamed-export default class Vibrator--><!--Device-unnamed-export default class Vibrator-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice.Lite
 
 ## 导入模块
@@ -43,6 +45,8 @@ static vibrate(options?: VibrateOptions): void
 **需要权限：** ohos.permission.VIBRATE
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-Vibrator-static vibrate(options?: VibrateOptions): void--><!--Device-Vibrator-static vibrate(options?: VibrateOptions): void-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice.Lite
 

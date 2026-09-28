@@ -8,6 +8,8 @@ Enumerates date display modes.
 
 **Since:** 18
 
+<!--Device-unnamed-declare enum DatePickerMode--><!--Device-unnamed-declare enum DatePickerMode-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## DATE
@@ -24,6 +26,8 @@ Three-column display: year, month, and day.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-DatePickerMode-DATE = 0--><!--Device-DatePickerMode-DATE = 0-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## YEAR_AND_MONTH
@@ -39,6 +43,8 @@ Two-column display: year and month.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-DatePickerMode-YEAR_AND_MONTH = 1--><!--Device-DatePickerMode-YEAR_AND_MONTH = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -57,5 +63,7 @@ In this mode, the year remains unchanged and takes the value specified by the **
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-DatePickerMode-MONTH_AND_DAY = 2--><!--Device-DatePickerMode-MONTH_AND_DAY = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

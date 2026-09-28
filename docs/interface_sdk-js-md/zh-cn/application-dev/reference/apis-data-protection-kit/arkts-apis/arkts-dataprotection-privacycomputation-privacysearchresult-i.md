@@ -8,6 +8,8 @@ interface PrivacySearchResult
 
 **起始版本：** 26.0.1
 
+<!--Device-privacyComputation-interface PrivacySearchResult--><!--Device-privacyComputation-interface PrivacySearchResult-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 ## 导入模块
@@ -31,6 +33,8 @@ resultCipherText: Uint8Array[]
 
 **原子化服务API：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
 
+<!--Device-PrivacySearchResult-resultCipherText: Uint8Array[]--><!--Device-PrivacySearchResult-resultCipherText: Uint8Array[]-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 ## valueCipherText
@@ -48,5 +52,7 @@ valueCipherText?: Uint8Array[]
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
+
+<!--Device-PrivacySearchResult-valueCipherText?: Uint8Array[]--><!--Device-PrivacySearchResult-valueCipherText?: Uint8Array[]-End-->
 
 **系统能力：** SystemCapability.Security.Asset

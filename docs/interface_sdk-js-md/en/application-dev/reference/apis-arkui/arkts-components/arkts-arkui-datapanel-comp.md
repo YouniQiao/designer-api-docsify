@@ -4,7 +4,7 @@ The **DataPanel** component is used to display the proportions of multiple data 
 
 > **NOTE:** 
 > 
-> - This component supports [WithTheme](arkts-arkui-withtheme-comp.md#with_themedefines-withtheme-component) since API version 26.0.0.
+> - This component supports [WithTheme](arkts-arkui-withtheme-comp.md) since API version 26.0.0.
 
 ## Child Components
 
@@ -23,6 +23,8 @@ Creates a data panel component.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-DataPanelInterface-(options: DataPanelOptions): DataPanelAttribute--><!--Device-DataPanelInterface-(options: DataPanelOptions): DataPanelAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

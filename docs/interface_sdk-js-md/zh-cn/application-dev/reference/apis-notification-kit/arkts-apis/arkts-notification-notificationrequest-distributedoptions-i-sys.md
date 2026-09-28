@@ -8,6 +8,8 @@ export interface DistributedOptions
 
 **起始版本：** 8
 
+<!--Device-unnamed-export interface DistributedOptions--><!--Device-unnamed-export interface DistributedOptions-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## remindType
@@ -21,6 +23,8 @@ readonly remindType?: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-DistributedOptions-readonly remindType?: int--><!--Device-DistributedOptions-readonly remindType?: int-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

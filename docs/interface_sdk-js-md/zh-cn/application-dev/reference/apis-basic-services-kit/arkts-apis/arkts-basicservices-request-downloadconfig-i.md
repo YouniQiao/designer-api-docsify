@@ -8,6 +8,8 @@ interface DownloadConfig
 
 **起始版本：** 6
 
+<!--Device-request-interface DownloadConfig--><!--Device-request-interface DownloadConfig-End-->
+
 **系统能力：** SystemCapability.MiscServices.Download
 
 ## 导入模块
@@ -28,6 +30,8 @@ background?: boolean
 
 **起始版本：** 9
 
+<!--Device-DownloadConfig-background?: boolean--><!--Device-DownloadConfig-background?: boolean-End-->
+
 **系统能力：** SystemCapability.MiscServices.Download
 
 ## description
@@ -41,6 +45,8 @@ description?: string
 **类型：** string
 
 **起始版本：** 6
+
+<!--Device-DownloadConfig-description?: string--><!--Device-DownloadConfig-description?: string-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -60,6 +66,8 @@ enableMetered?: boolean
 
 **起始版本：** 6
 
+<!--Device-DownloadConfig-enableMetered?: boolean--><!--Device-DownloadConfig-enableMetered?: boolean-End-->
+
 **系统能力：** SystemCapability.MiscServices.Download
 
 ## enableRoaming
@@ -73,6 +81,8 @@ enableRoaming?: boolean
 **类型：** boolean
 
 **起始版本：** 6
+
+<!--Device-DownloadConfig-enableRoaming?: boolean--><!--Device-DownloadConfig-enableRoaming?: boolean-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -92,6 +102,8 @@ filePath?: string
 
 **起始版本：** 7
 
+<!--Device-DownloadConfig-filePath?: string--><!--Device-DownloadConfig-filePath?: string-End-->
+
 **系统能力：** SystemCapability.MiscServices.Download
 
 ## header
@@ -105,6 +117,8 @@ header?: Object
 **类型：** Object
 
 **起始版本：** 6
+
+<!--Device-DownloadConfig-header?: Object--><!--Device-DownloadConfig-header?: Object-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -126,6 +140,8 @@ networkType?: number
 
 **起始版本：** 6
 
+<!--Device-DownloadConfig-networkType?: int--><!--Device-DownloadConfig-networkType?: int-End-->
+
 **系统能力：** SystemCapability.MiscServices.Download
 
 ## title
@@ -140,6 +156,8 @@ title?: string
 
 **起始版本：** 6
 
+<!--Device-DownloadConfig-title?: string--><!--Device-DownloadConfig-title?: string-End-->
+
 **系统能力：** SystemCapability.MiscServices.Download
 
 ## url
@@ -153,5 +171,7 @@ url: string
 **类型：** string
 
 **起始版本：** 6
+
+<!--Device-DownloadConfig-url: string--><!--Device-DownloadConfig-url: string-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download

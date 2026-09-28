@@ -10,6 +10,8 @@ Absolute euler angles relative to the home position.
 
 **起始版本：** 20
 
+<!--Device-mechanicManager-export interface EulerAngles--><!--Device-mechanicManager-export interface EulerAngles-End-->
+
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ pitch?: number
 
 **起始版本：** 20
 
+<!--Device-EulerAngles-pitch?: double--><!--Device-EulerAngles-pitch?: double-End-->
+
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。
@@ -48,6 +52,8 @@ roll?: number
 
 **起始版本：** 20
 
+<!--Device-EulerAngles-roll?: double--><!--Device-EulerAngles-roll?: double-End-->
+
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。
@@ -63,6 +69,8 @@ yaw?: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-EulerAngles-yaw?: double--><!--Device-EulerAngles-yaw?: double-End-->
 
 **系统能力：** SystemCapability.Mechanic.Core
 

@@ -22,6 +22,8 @@ function addContact(contact: Contact, callback: AsyncCallback<number>): void
 
 **需要权限：** ohos.permission.WRITE_CONTACTS
 
+<!--Device-contact-function addContact(contact: Contact, callback: AsyncCallback<number>): void--><!--Device-contact-function addContact(contact: Contact, callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 **参数：**
@@ -72,6 +74,8 @@ function addContact(context: Context, contact: Contact, callback: AsyncCallback<
 **需要权限：** ohos.permission.WRITE_CONTACTS
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-contact-function addContact(context: Context, contact: Contact, callback: AsyncCallback<number>): void--><!--Device-contact-function addContact(context: Context, contact: Contact, callback: AsyncCallback<number>): void-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -138,6 +142,8 @@ function addContact(contact: Contact): Promise<number>
 
 **需要权限：** ohos.permission.WRITE_CONTACTS
 
+<!--Device-contact-function addContact(contact: Contact): Promise<number>--><!--Device-contact-function addContact(contact: Contact): Promise<number>-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 **参数：**
@@ -188,6 +194,8 @@ function addContact(context: Context, contact: Contact): Promise<number>
 **需要权限：** ohos.permission.WRITE_CONTACTS
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-contact-function addContact(context: Context, contact: Contact): Promise<number>--><!--Device-contact-function addContact(context: Context, contact: Contact): Promise<number>-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 

@@ -10,6 +10,8 @@ export class SymbolNumberFormat implements Intl.NumberFormat
 
 **起始版本：** 26.0.0
 
+<!--Device-i18n-export class SymbolNumberFormat implements Intl.NumberFormat--><!--Device-i18n-export class SymbolNumberFormat implements Intl.NumberFormat-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## 导入模块
@@ -31,6 +33,8 @@ public constructor(locale?: Intl.Locale, options?: SymbolNumberFormatOptions)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-SymbolNumberFormat-public constructor(locale?: Intl.Locale, options?: SymbolNumberFormatOptions)--><!--Device-SymbolNumberFormat-public constructor(locale?: Intl.Locale, options?: SymbolNumberFormatOptions)-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -67,6 +71,8 @@ public format(value: number | bigint): string
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-SymbolNumberFormat-public format(value: number | bigint): string--><!--Device-SymbolNumberFormat-public format(value: number | bigint): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -109,6 +115,8 @@ public formatRange(startRange: number, endRange: number): string
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-SymbolNumberFormat-public formatRange(startRange: number, endRange: number): string--><!--Device-SymbolNumberFormat-public formatRange(startRange: number, endRange: number): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -153,6 +161,8 @@ public formatRangeToParts(startRange: number, endRange: number): Intl.NumberForm
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-SymbolNumberFormat-public formatRangeToParts(startRange: number, endRange: number): Intl.NumberFormatPart[]--><!--Device-SymbolNumberFormat-public formatRangeToParts(startRange: number, endRange: number): Intl.NumberFormatPart[]-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 **参数：**
@@ -196,6 +206,8 @@ public formatToParts(value?: number | bigint): Intl.NumberFormatPart[]
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-SymbolNumberFormat-public formatToParts(value?: number | bigint): Intl.NumberFormatPart[]--><!--Device-SymbolNumberFormat-public formatToParts(value?: number | bigint): Intl.NumberFormatPart[]-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 **参数：**
@@ -237,6 +249,8 @@ public parse(text: string, lenientMode: boolean): number
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-SymbolNumberFormat-public parse(text: string, lenientMode: boolean): number--><!--Device-SymbolNumberFormat-public parse(text: string, lenientMode: boolean): number-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -282,6 +296,8 @@ public resolvedOptions(): ResolvedSymbolNumberFormatOptions
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-SymbolNumberFormat-public resolvedOptions(): ResolvedSymbolNumberFormatOptions--><!--Device-SymbolNumberFormat-public resolvedOptions(): ResolvedSymbolNumberFormatOptions-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 

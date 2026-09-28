@@ -18,6 +18,8 @@ function stopVpnExtensionAbility(want: Want): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-vpnExtension-function stopVpnExtensionAbility(want: Want): Promise<void>--><!--Device-vpnExtension-function stopVpnExtensionAbility(want: Want): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**

@@ -16,6 +16,8 @@ function getLocationIconStatus(): LocationIconStatus
 
 **起始版本：** 12
 
+<!--Device-geoLocationManager-function getLocationIconStatus(): LocationIconStatus--><!--Device-geoLocationManager-function getLocationIconStatus(): LocationIconStatus-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **系统接口：** 此接口为系统接口。

@@ -8,6 +8,8 @@ Creates a text picker based on the specified selection range and displays it in 
 
 **Since:** 8
 
+<!--Device-unnamed-declare class TextPickerDialog--><!--Device-unnamed-declare class TextPickerDialog-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## show
@@ -34,6 +36,8 @@ Shows a text picker in the given settings.
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextPickerDialog-static show(options?: TextPickerDialogOptions)--><!--Device-TextPickerDialog-static show(options?: TextPickerDialogOptions)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

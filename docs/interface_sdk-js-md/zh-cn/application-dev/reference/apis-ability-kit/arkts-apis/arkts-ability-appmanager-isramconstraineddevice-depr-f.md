@@ -19,6 +19,8 @@ function isRamConstrainedDevice(): Promise<boolean>
 
 **替代接口：** [isRamConstrainedDevice](arkts-ability-appmanager-isramconstraineddevice-f.md)
 
+<!--Device-appManager-function isRamConstrainedDevice(): Promise<boolean>--><!--Device-appManager-function isRamConstrainedDevice(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **返回值：**
@@ -56,6 +58,8 @@ function isRamConstrainedDevice(callback: AsyncCallback<boolean>): void
 **废弃版本：** 9
 
 **替代接口：** [isRamConstrainedDevice](arkts-ability-appmanager-isramconstraineddevice-f.md)
+
+<!--Device-appManager-function isRamConstrainedDevice(callback: AsyncCallback<boolean>): void--><!--Device-appManager-function isRamConstrainedDevice(callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

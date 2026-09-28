@@ -8,6 +8,8 @@ Filter效果类，用于将模糊、边缘像素扩展、水波纹等效果添�
 
 **起始版本：** 12
 
+<!--Device-uiEffect-interface Filter--><!--Device-uiEffect-interface Filter-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## 导入模块
@@ -25,6 +27,8 @@ blur(blurRadius: number): Filter
 将模糊效果添加至组件上。
 
 **起始版本：** 12
+
+<!--Device-Filter-blur(blurRadius: double): Filter--><!--Device-Filter-blur(blurRadius: double): Filter-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -93,6 +97,8 @@ hdrBrightnessRatio(ratio: number): Filter
 **需要权限：** 
 - API版本24+：ohos.permission.HDR_BRIGHTNESS
 - API版本20-23：N/A
+
+<!--Device-Filter-hdrBrightnessRatio(ratio: double): Filter--><!--Device-Filter-hdrBrightnessRatio(ratio: double): Filter-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

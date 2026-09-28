@@ -4,6 +4,8 @@ SIM卡管理模块提供了SIM卡管理的基础能力，包括获取指定卡�
 
 **起始版本：** 6
 
+<!--Device-unnamed-declare namespace sim--><!--Device-unnamed-declare namespace sim-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## 导入模块

@@ -18,6 +18,8 @@ function getAlternateIcons(): Promise<Array<AlternateIconInfo>>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-bundleManager-function getAlternateIcons(): Promise<Array<AlternateIconInfo>>--><!--Device-bundleManager-function getAlternateIcons(): Promise<Array<AlternateIconInfo>>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **返回值：**

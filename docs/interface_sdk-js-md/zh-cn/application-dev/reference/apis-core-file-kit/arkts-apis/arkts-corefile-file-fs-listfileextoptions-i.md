@@ -8,6 +8,8 @@ export interface ListFileExtOptions
 
 **起始版本：** 26.0.0
 
+<!--Device-unnamed-export interface ListFileExtOptions--><!--Device-unnamed-export interface ListFileExtOptions-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## 导入模块
@@ -30,6 +32,8 @@ fileFilter?: FileFilter
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ListFileExtOptions-fileFilter?: FileFilter--><!--Device-ListFileExtOptions-fileFilter?: FileFilter-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## listNum
@@ -46,6 +50,8 @@ listNum?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ListFileExtOptions-listNum?: number--><!--Device-ListFileExtOptions-listNum?: number-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## recursion
@@ -61,5 +67,7 @@ recursion?: boolean
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ListFileExtOptions-recursion?: boolean--><!--Device-ListFileExtOptions-recursion?: boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO

@@ -20,6 +20,8 @@ function off(type: 'prepareContinue', context: Context, callback?: AsyncCallback
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-continueManager-function off(type: 'prepareContinue', context: Context, callback?: AsyncCallback<ContinueResultInfo>): void--><!--Device-continueManager-function off(type: 'prepareContinue', context: Context, callback?: AsyncCallback<ContinueResultInfo>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **参数：**

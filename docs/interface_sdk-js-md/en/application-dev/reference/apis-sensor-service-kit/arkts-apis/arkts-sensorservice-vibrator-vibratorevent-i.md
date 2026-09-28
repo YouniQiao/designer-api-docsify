@@ -8,6 +8,8 @@ Enumerates vibration events.
 
 **Since:** 18
 
+<!--Device-vibrator-interface VibratorEvent--><!--Device-vibrator-interface VibratorEvent-End-->
+
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Vibration duration, in ms. This parameter is optional. The value is an integer i
 
 **Since:** 18
 
+<!--Device-VibratorEvent-duration?: int--><!--Device-VibratorEvent-duration?: int-End-->
+
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 ## eventType
@@ -41,6 +45,8 @@ Vibration event type.
 **Type:** [VibratorEventType](arkts-sensorservice-vibrator-vibratoreventtype-e.md)
 
 **Since:** 18
+
+<!--Device-VibratorEvent-eventType: VibratorEventType--><!--Device-VibratorEvent-eventType: VibratorEventType-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice
 
@@ -56,6 +62,8 @@ Vibration frequency. This parameter is optional. The value range is [0,100]. If 
 
 **Since:** 18
 
+<!--Device-VibratorEvent-frequency?: int--><!--Device-VibratorEvent-frequency?: int-End-->
+
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 ## index
@@ -69,6 +77,8 @@ Channel number. This parameter is optional. The value range is [0,2]. If this pa
 **Type:** number
 
 **Since:** 18
+
+<!--Device-VibratorEvent-index?: int--><!--Device-VibratorEvent-index?: int-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice
 
@@ -84,6 +94,8 @@ Vibration intensity. This parameter is optional. The value range is [0,100]. If 
 
 **Since:** 18
 
+<!--Device-VibratorEvent-intensity?: int--><!--Device-VibratorEvent-intensity?: int-End-->
+
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 ## points
@@ -98,6 +110,8 @@ Adjustment points of the vibration curve.
 
 **Since:** 18
 
+<!--Device-VibratorEvent-points?: Array<VibratorCurvePoint>--><!--Device-VibratorEvent-points?: Array<VibratorCurvePoint>-End-->
+
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 ## time
@@ -111,5 +125,7 @@ Vibration start time, in ms. The value range is [0,1800000].
 **Type:** number
 
 **Since:** 18
+
+<!--Device-VibratorEvent-time: int--><!--Device-VibratorEvent-time: int-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice

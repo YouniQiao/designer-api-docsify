@@ -12,6 +12,8 @@ The following shows the examples of **StorageDefaultCreator\&lt;T&gt;** and **St
 
 **Since:** 23
 
+<!--Device-unnamed-export class ConnectOptionsCollections<T extends CollectionType<S>, S extends object> extends ConnectOptions<T>--><!--Device-unnamed-export class ConnectOptionsCollections<T extends CollectionType<S>, S extends object> extends ConnectOptions<T>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -34,6 +36,8 @@ Persists container data. **defaultSubCreator** should be provided together with 
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-ConnectOptionsCollections-defaultCreator?: StorageDefaultCreator<T>--><!--Device-ConnectOptionsCollections-defaultCreator?: StorageDefaultCreator<T>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## defaultSubCreator
@@ -49,5 +53,7 @@ Default constructor function of the collection item, which is used to persist co
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-ConnectOptionsCollections-defaultSubCreator?: StorageDefaultCreator<S>--><!--Device-ConnectOptionsCollections-defaultSubCreator?: StorageDefaultCreator<S>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

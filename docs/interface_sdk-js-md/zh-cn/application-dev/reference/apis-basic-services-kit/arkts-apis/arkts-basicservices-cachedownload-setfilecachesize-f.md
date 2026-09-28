@@ -20,6 +20,8 @@ function setFileCacheSize(bytes: number): void
 
 **起始版本：** 18
 
+<!--Device-cacheDownload-function setFileCacheSize(bytes: long): void--><!--Device-cacheDownload-function setFileCacheSize(bytes: long): void-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 **参数：**

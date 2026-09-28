@@ -10,6 +10,8 @@ interface Querier
 
 **起始版本：** 12
 
+<!--Device-securityGuard-interface Querier--><!--Device-securityGuard-interface Querier-End-->
+
 **系统能力：** SystemCapability.Security.SecurityGuard
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ onComplete: () => void
 
 **起始版本：** 12
 
+<!--Device-Querier-onComplete: () => void--><!--Device-Querier-onComplete: () => void-End-->
+
 **系统能力：** SystemCapability.Security.SecurityGuard
 
 **系统接口：** 此接口为系统接口。
@@ -43,6 +47,8 @@ onError: (message: string) => void
 查询存在失败时触发。
 
 **起始版本：** 12
+
+<!--Device-Querier-onError: (message: string) => void--><!--Device-Querier-onError: (message: string) => void-End-->
 
 **系统能力：** SystemCapability.Security.SecurityGuard
 
@@ -63,6 +69,8 @@ onQuery: (events: Array<SecurityEvent>) => void
 返回数据时触发。
 
 **起始版本：** 12
+
+<!--Device-Querier-onQuery: (events: Array<SecurityEvent>) => void--><!--Device-Querier-onQuery: (events: Array<SecurityEvent>) => void-End-->
 
 **系统能力：** SystemCapability.Security.SecurityGuard
 

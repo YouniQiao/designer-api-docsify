@@ -18,6 +18,8 @@ function getPublicCertificate(keyUri: string): Promise<CMResult>
 
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER
 
+<!--Device-certificateManager-function getPublicCertificate(keyUri: string): Promise<CMResult>--><!--Device-certificateManager-function getPublicCertificate(keyUri: string): Promise<CMResult>-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
 
 **参数：**

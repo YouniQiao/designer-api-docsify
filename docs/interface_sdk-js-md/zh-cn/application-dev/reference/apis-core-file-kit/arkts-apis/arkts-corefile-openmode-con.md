@@ -12,6 +12,8 @@ const APPEND = 0o2000
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-OpenMode-const APPEND = 0o2000--><!--Device-OpenMode-const APPEND = 0o2000-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## CREATE
@@ -26,6 +28,8 @@ const CREATE = 0o100
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-OpenMode-const CREATE = 0o100--><!--Device-OpenMode-const CREATE = 0o100-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## DIR
@@ -37,6 +41,8 @@ const DIR = 0o200000
 如果path不指向目录，则出错。
 
 **起始版本：** 9
+
+<!--Device-OpenMode-const DIR = 0o200000--><!--Device-OpenMode-const DIR = 0o200000-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -50,6 +56,8 @@ const NOFOLLOW = 0o400000
 
 **起始版本：** 9
 
+<!--Device-OpenMode-const NOFOLLOW = 0o400000--><!--Device-OpenMode-const NOFOLLOW = 0o400000-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## NONBLOCK
@@ -61,6 +69,8 @@ const NONBLOCK = 0o4000
 如果path指向FIFO、块特殊文件或字符特殊文件，则本次打开及后续IO进行非阻塞操作。
 
 **起始版本：** 9
+
+<!--Device-OpenMode-const NONBLOCK = 0o4000--><!--Device-OpenMode-const NONBLOCK = 0o4000-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -76,6 +86,8 @@ const READ_ONLY = 0o0
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-OpenMode-const READ_ONLY = 0o0--><!--Device-OpenMode-const READ_ONLY = 0o0-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## READ_WRITE
@@ -90,6 +102,8 @@ const READ_WRITE = 0o2
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-OpenMode-const READ_WRITE = 0o2--><!--Device-OpenMode-const READ_WRITE = 0o2-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## SYNC
@@ -101,6 +115,8 @@ const SYNC = 0o4010000
 以同步IO的方式打开文件。
 
 **起始版本：** 9
+
+<!--Device-OpenMode-const SYNC = 0o4010000--><!--Device-OpenMode-const SYNC = 0o4010000-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -115,6 +131,8 @@ const TRUNC = 0o1000
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-OpenMode-const TRUNC = 0o1000--><!--Device-OpenMode-const TRUNC = 0o1000-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -132,6 +150,8 @@ const UNCACHE = 0o10000000000
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-OpenMode-const UNCACHE = 0o10000000000--><!--Device-OpenMode-const UNCACHE = 0o10000000000-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## WRITE_ONLY
@@ -145,5 +165,7 @@ const WRITE_ONLY = 0o1
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-OpenMode-const WRITE_ONLY = 0o1--><!--Device-OpenMode-const WRITE_ONLY = 0o1-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO

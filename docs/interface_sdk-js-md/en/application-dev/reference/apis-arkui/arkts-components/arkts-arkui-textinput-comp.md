@@ -6,7 +6,7 @@ A single-line text input box component used to receive single-line text input fr
 > 
 > - This component is supported since API version 7. Newly added APIs in later versions are marked with a superscript to indicate their initial version.
 > 
-> - This component supports only a single text style. To implement rich text style, use the [RichEditor](arkts-arkui-richeditor-comp.md#rich_editor) component.
+> - This component supports only a single text style. To implement rich text style, use the [RichEditor](arkts-arkui-richeditor-comp.md) component.
 > 
 > - To set whether to clear text selection and handles when touching outside the text component, use the [setTextSelectionClearPolicy](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#settextselectionclearpolicy) API.
 
@@ -25,6 +25,8 @@ Defines the constructor of TextInput.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextInputInterface-(value?: TextInputOptions): TextInputAttribute--><!--Device-TextInputInterface-(value?: TextInputOptions): TextInputAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

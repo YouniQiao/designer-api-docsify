@@ -8,6 +8,8 @@ Provides APIs for managing OS accounts.
 
 **Since:** 7
 
+<!--Device-osAccount-interface AccountManager--><!--Device-osAccount-interface AccountManager-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 ## Modules to Import
@@ -25,6 +27,8 @@ checkMultiOsAccountEnabled(callback: AsyncCallback<boolean>): void
 Checks whether multiple OS accounts are supported. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-AccountManager-checkMultiOsAccountEnabled(callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-checkMultiOsAccountEnabled(callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -73,6 +77,8 @@ Checks whether multiple OS accounts are supported. This API uses a promise to re
 
 **Since:** 9
 
+<!--Device-AccountManager-checkMultiOsAccountEnabled(): Promise<boolean>--><!--Device-AccountManager-checkMultiOsAccountEnabled(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Return value:**
@@ -114,6 +120,8 @@ checkOsAccountTestable(callback: AsyncCallback<boolean>): void
 Checks whether the current OS account is a test account. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-AccountManager-checkOsAccountTestable(callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-checkOsAccountTestable(callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -164,6 +172,8 @@ Checks whether the current OS account is a test account. This API uses a promise
 
 **Since:** 9
 
+<!--Device-AccountManager-checkOsAccountTestable(): Promise<boolean>--><!--Device-AccountManager-checkOsAccountTestable(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Test API:** This API is used only in automated test scripts.
@@ -207,6 +217,8 @@ getActivatedOsAccountLocalIds(callback: AsyncCallback<Array<number>>): void
 Obtains information about all activated OS accounts. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-AccountManager-getActivatedOsAccountLocalIds(callback: AsyncCallback<Array<int>>): void--><!--Device-AccountManager-getActivatedOsAccountLocalIds(callback: AsyncCallback<Array<int>>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -258,6 +270,8 @@ Obtains information about all activated OS accounts. This API uses a promise to 
 
 **Since:** 9
 
+<!--Device-AccountManager-getActivatedOsAccountLocalIds(): Promise<Array<int>>--><!--Device-AccountManager-getActivatedOsAccountLocalIds(): Promise<Array<int>>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Return value:**
@@ -299,6 +313,8 @@ getForegroundOsAccountLocalId(): Promise<number>
 Obtains the ID of the foreground OS account. This API uses a promise to return the result.
 
 **Since:** 15
+
+<!--Device-AccountManager-getForegroundOsAccountLocalId(): Promise<int>--><!--Device-AccountManager-getForegroundOsAccountLocalId(): Promise<int>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -343,6 +359,8 @@ Obtains the number of OS accounts created. This API uses an asynchronous callbac
 **Since:** 9
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-getOsAccountCount(callback: AsyncCallback<int>): void--><!--Device-AccountManager-getOsAccountCount(callback: AsyncCallback<int>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -394,6 +412,8 @@ Obtains the number of OS accounts created. This API uses a promise to return the
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-getOsAccountCount(): Promise<int>--><!--Device-AccountManager-getOsAccountCount(): Promise<int>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Return value:**
@@ -438,6 +458,8 @@ Obtains the domain account information associated with a specified OS account. T
 **Since:** 15
 
 **Required permissions:** ohos.permission.GET_DOMAIN_ACCOUNTS and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-getOsAccountDomainInfo(localId: number): Promise<DomainAccountInfo>--><!--Device-AccountManager-getOsAccountDomainInfo(localId: number): Promise<DomainAccountInfo>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -492,6 +514,8 @@ Obtains the ID of the OS account to which the current process belongs. This API 
 
 **Since:** 9
 
+<!--Device-AccountManager-getOsAccountLocalId(callback: AsyncCallback<int>): void--><!--Device-AccountManager-getOsAccountLocalId(callback: AsyncCallback<int>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
@@ -539,6 +563,8 @@ Obtains the ID of the OS account to which the current process belongs. This API 
 
 **Since:** 9
 
+<!--Device-AccountManager-getOsAccountLocalId(): Promise<int>--><!--Device-AccountManager-getOsAccountLocalId(): Promise<int>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Return value:**
@@ -582,6 +608,8 @@ Obtains the OS account ID based on the domain account information. This API uses
 **Since:** 9
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-getOsAccountLocalIdForDomain(domainInfo: DomainAccountInfo, callback: AsyncCallback<int>): void--><!--Device-AccountManager-getOsAccountLocalIdForDomain(domainInfo: DomainAccountInfo, callback: AsyncCallback<int>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -637,6 +665,8 @@ Obtains the OS account ID based on the domain account information. This API uses
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-getOsAccountLocalIdForDomain(domainInfo: DomainAccountInfo): Promise<int>--><!--Device-AccountManager-getOsAccountLocalIdForDomain(domainInfo: DomainAccountInfo): Promise<int>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
@@ -689,6 +719,8 @@ getOsAccountLocalIdForSerialNumber(serialNumber: number, callback: AsyncCallback
 Obtains the OS account ID based on the SN. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-AccountManager-getOsAccountLocalIdForSerialNumber(serialNumber: long, callback: AsyncCallback<int>): void--><!--Device-AccountManager-getOsAccountLocalIdForSerialNumber(serialNumber: long, callback: AsyncCallback<int>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -743,6 +775,8 @@ getOsAccountLocalIdForSerialNumber(serialNumber: number): Promise<number>
 Obtains the OS account ID based on the SN. This API uses a promise to return the result.
 
 **Since:** 9
+
+<!--Device-AccountManager-getOsAccountLocalIdForSerialNumber(serialNumber: long): Promise<int>--><!--Device-AccountManager-getOsAccountLocalIdForSerialNumber(serialNumber: long): Promise<int>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -799,6 +833,8 @@ Obtains the OS account ID based on the process UID. This API uses an asynchronou
 
 **Since:** 9
 
+<!--Device-AccountManager-getOsAccountLocalIdForUid(uid: int, callback: AsyncCallback<int>): void--><!--Device-AccountManager-getOsAccountLocalIdForUid(uid: int, callback: AsyncCallback<int>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
@@ -851,6 +887,8 @@ getOsAccountLocalIdForUid(uid: number): Promise<number>
 Obtains the OS account ID based on the process UID. This API uses a promise to return the result.
 
 **Since:** 9
+
+<!--Device-AccountManager-getOsAccountLocalIdForUid(uid: int): Promise<int>--><!--Device-AccountManager-getOsAccountLocalIdForUid(uid: int): Promise<int>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -906,6 +944,8 @@ Obtains the OS account ID based on the process UID. The API returns the result s
 
 **Since:** 10
 
+<!--Device-AccountManager-getOsAccountLocalIdForUidSync(uid: int): int--><!--Device-AccountManager-getOsAccountLocalIdForUidSync(uid: int): int-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
@@ -960,6 +1000,8 @@ Obtains the local IDs of all non-system-level OS accounts. Non-system-level OS a
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AccountManager-getOsAccountLocalIds(): Promise<int[]>--><!--Device-AccountManager-getOsAccountLocalIds(): Promise<int[]>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Return value:**
@@ -1002,6 +1044,8 @@ getOsAccountName(): Promise<string>
 Obtains the name of the OS account of the caller. This API uses a promise to return the result.
 
 **Since:** 12
+
+<!--Device-AccountManager-getOsAccountName(): Promise<string>--><!--Device-AccountManager-getOsAccountName(): Promise<string>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -1048,6 +1092,8 @@ Obtains the name of an OS account based on its local ID. This API uses a promise
 **Required permissions:** ohos.permission.GET_LOCAL_ACCOUNT_IDENTIFIERS
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AccountManager-getOsAccountNameByLocalId(localId: int): Promise<string>--><!--Device-AccountManager-getOsAccountNameByLocalId(localId: int): Promise<string>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -1100,6 +1146,8 @@ Obtains the type of the account to which the current process belongs. This API u
 
 **Since:** 9
 
+<!--Device-AccountManager-getOsAccountType(callback: AsyncCallback<OsAccountType>): void--><!--Device-AccountManager-getOsAccountType(callback: AsyncCallback<OsAccountType>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
@@ -1147,6 +1195,8 @@ Obtains the type of the account to which the current process belongs. This API u
 
 **Since:** 9
 
+<!--Device-AccountManager-getOsAccountType(): Promise<OsAccountType>--><!--Device-AccountManager-getOsAccountType(): Promise<OsAccountType>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Return value:**
@@ -1188,6 +1238,8 @@ getSerialNumberForOsAccountLocalId(localId: number, callback: AsyncCallback<numb
 Obtains the SN of an OS account based on the account ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-AccountManager-getSerialNumberForOsAccountLocalId(localId: int, callback: AsyncCallback<long>): void--><!--Device-AccountManager-getSerialNumberForOsAccountLocalId(localId: int, callback: AsyncCallback<long>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -1242,6 +1294,8 @@ getSerialNumberForOsAccountLocalId(localId: number): Promise<number>
 Obtains the SN of an OS account based on the account ID. This API uses a promise to return the result.
 
 **Since:** 9
+
+<!--Device-AccountManager-getSerialNumberForOsAccountLocalId(localId: int): Promise<long>--><!--Device-AccountManager-getSerialNumberForOsAccountLocalId(localId: int): Promise<long>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -1298,6 +1352,8 @@ Checks whether a constraint is enabled for the current OS account. This API uses
 
 **Since:** 11
 
+<!--Device-AccountManager-isOsAccountConstraintEnabled(constraint: string): Promise<boolean>--><!--Device-AccountManager-isOsAccountConstraintEnabled(constraint: string): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
@@ -1350,6 +1406,8 @@ Checks whether the current OS account has been unlocked. This API uses a promise
 
 **Since:** 11
 
+<!--Device-AccountManager-isOsAccountUnlocked(): Promise<boolean>--><!--Device-AccountManager-isOsAccountUnlocked(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Return value:**
@@ -1393,6 +1451,8 @@ Queries the ID of a distributed virtual device. This API uses an asynchronous ca
 **Since:** 9
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC or ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-queryDistributedVirtualDeviceId(callback: AsyncCallback<string>): void--><!--Device-AccountManager-queryDistributedVirtualDeviceId(callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -1443,6 +1503,8 @@ Queries the ID of this distributed virtual device. This API uses a promise to re
 **Since:** 9
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC or ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-queryDistributedVirtualDeviceId(): Promise<string>--><!--Device-AccountManager-queryDistributedVirtualDeviceId(): Promise<string>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -1495,6 +1557,8 @@ Checks whether an OS account is activated. This API uses an asynchronous callbac
 **Deprecated since:** 11
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-checkOsAccountActivated(localId: number, callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-checkOsAccountActivated(localId: number, callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -1559,6 +1623,8 @@ Checks whether an OS account is activated. This API uses a promise to return the
 **Deprecated since:** 11
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-checkOsAccountActivated(localId: number): Promise<boolean>--><!--Device-AccountManager-checkOsAccountActivated(localId: number): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -1625,6 +1691,8 @@ Checks whether the specified constraint is enabled for an OS account. This API u
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-checkOsAccountConstraintEnabled(localId: number, constraint: string, callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-checkOsAccountConstraintEnabled(localId: number, constraint: string, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
@@ -1690,6 +1758,8 @@ Checks whether the specified constraint is enabled for an OS account. This API u
 **Deprecated since:** 11
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-checkOsAccountConstraintEnabled(localId: number, constraint: string): Promise<boolean>--><!--Device-AccountManager-checkOsAccountConstraintEnabled(localId: number, constraint: string): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -1758,6 +1828,8 @@ Checks whether the current OS account is unlocked. This API uses an asynchronous
 
 **Substitutes:** [isOsAccountUnlocked](#isosaccountunlocked)()
 
+<!--Device-AccountManager-checkOsAccountVerified(callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-checkOsAccountVerified(callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
@@ -1813,6 +1885,8 @@ Checks whether the current OS account has been verified. This API uses a promise
 
 **Substitutes:** [isOsAccountUnlocked](#isosaccountunlocked)()
 
+<!--Device-AccountManager-checkOsAccountVerified(): Promise<boolean>--><!--Device-AccountManager-checkOsAccountVerified(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Return value:**
@@ -1865,6 +1939,8 @@ Checks whether an OS account has been verified. This API uses an asynchronous ca
 **Deprecated since:** 11
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-checkOsAccountVerified(localId: number, callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-checkOsAccountVerified(localId: number, callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -1927,6 +2003,8 @@ Checks whether an OS account has been verified. This API uses a promise to retur
 **Deprecated since:** 11
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-checkOsAccountVerified(localId: number): Promise<boolean>--><!--Device-AccountManager-checkOsAccountVerified(localId: number): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -1993,6 +2071,8 @@ Obtains the number of OS accounts created. This API uses an asynchronous callbac
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-getCreatedOsAccountsCount(callback: AsyncCallback<number>): void--><!--Device-AccountManager-getCreatedOsAccountsCount(callback: AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
@@ -2039,6 +2119,8 @@ Obtains the number of OS accounts created. This API uses a promise to return the
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-getCreatedOsAccountsCount(): Promise<number>--><!--Device-AccountManager-getCreatedOsAccountsCount(): Promise<number>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Return value:**
@@ -2080,6 +2162,8 @@ Obtains information about the OS account to which the current process belongs. T
 **Required permissions:** 
 - API version 10 and later: ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.GET_LOCAL_ACCOUNTS
 - API version 9: ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-getCurrentOsAccount(callback: AsyncCallback<OsAccountInfo>): void--><!--Device-AccountManager-getCurrentOsAccount(callback: AsyncCallback<OsAccountInfo>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -2139,6 +2223,8 @@ Obtains information about the OS account to which the current process belongs. T
 - API version 10 and later: ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.GET_LOCAL_ACCOUNTS
 - API version 9: ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-getCurrentOsAccount(): Promise<OsAccountInfo>--><!--Device-AccountManager-getCurrentOsAccount(): Promise<OsAccountInfo>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Return value:**
@@ -2194,6 +2280,8 @@ Obtains the ID of a distributed virtual device. This API uses an asynchronous ca
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC or ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-getDistributedVirtualDeviceId(callback: AsyncCallback<string>): void--><!--Device-AccountManager-getDistributedVirtualDeviceId(callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
@@ -2240,6 +2328,8 @@ Queries the ID of a distributed virtual device. This API uses a promise to retur
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC or ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-getDistributedVirtualDeviceId(): Promise<string>--><!--Device-AccountManager-getDistributedVirtualDeviceId(): Promise<string>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Return value:**
@@ -2279,6 +2369,8 @@ Obtains all constraints enabled for an OS account. This API uses an asynchronous
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-getOsAccountAllConstraints(localId: number, callback: AsyncCallback<Array<string>>): void--><!--Device-AccountManager-getOsAccountAllConstraints(localId: number, callback: AsyncCallback<Array<string>>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -2329,6 +2421,8 @@ Obtains all constraints enabled for an OS account. This API uses a promise to re
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-getOsAccountAllConstraints(localId: number): Promise<Array<string>>--><!--Device-AccountManager-getOsAccountAllConstraints(localId: number): Promise<Array<string>>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
@@ -2378,6 +2472,8 @@ Obtains all constraints enabled for an OS account. This API uses an asynchronous
 **Deprecated since:** 11
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-getOsAccountConstraints(localId: number, callback: AsyncCallback<Array<string>>): void--><!--Device-AccountManager-getOsAccountConstraints(localId: number, callback: AsyncCallback<Array<string>>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -2442,6 +2538,8 @@ Obtains all constraints enabled for an OS account. This API uses a promise to re
 **Deprecated since:** 11
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-getOsAccountConstraints(localId: number): Promise<Array<string>>--><!--Device-AccountManager-getOsAccountConstraints(localId: number): Promise<Array<string>>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -2509,6 +2607,8 @@ Obtains the OS account ID based on the SN. This API uses an asynchronous callbac
 
 **Substitutes:** [getOsAccountLocalIdForSerialNumber](#getosaccountlocalidforserialnumber)(serialNumber: number, callback: AsyncCallback&lt;number&gt;)
 
+<!--Device-AccountManager-getOsAccountLocalIdBySerialNumber(serialNumber: number, callback: AsyncCallback<number>): void--><!--Device-AccountManager-getOsAccountLocalIdBySerialNumber(serialNumber: number, callback: AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
@@ -2557,6 +2657,8 @@ Obtains the OS account ID based on the SN. This API uses a promise to return the
 **Deprecated since:** 9
 
 **Substitutes:** [getOsAccountLocalIdForSerialNumber](#getosaccountlocalidforserialnumber)(serialNumber: number)
+
+<!--Device-AccountManager-getOsAccountLocalIdBySerialNumber(serialNumber: number): Promise<number>--><!--Device-AccountManager-getOsAccountLocalIdBySerialNumber(serialNumber: number): Promise<number>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -2610,6 +2712,8 @@ Obtains the OS account ID based on the domain account information. This API uses
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-getOsAccountLocalIdFromDomain(domainInfo: DomainAccountInfo, callback: AsyncCallback<number>): void--><!--Device-AccountManager-getOsAccountLocalIdFromDomain(domainInfo: DomainAccountInfo, callback: AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
@@ -2659,6 +2763,8 @@ Obtains the OS account ID based on the domain account information. This API uses
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-getOsAccountLocalIdFromDomain(domainInfo: DomainAccountInfo): Promise<number>--><!--Device-AccountManager-getOsAccountLocalIdFromDomain(domainInfo: DomainAccountInfo): Promise<number>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
@@ -2707,6 +2813,8 @@ Obtains the ID of the OS account to which the current process belongs. This API 
 
 **Substitutes:** [getOsAccountLocalId](#getosaccountlocalid)(callback: AsyncCallback&lt;number&gt;)
 
+<!--Device-AccountManager-getOsAccountLocalIdFromProcess(callback: AsyncCallback<number>): void--><!--Device-AccountManager-getOsAccountLocalIdFromProcess(callback: AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
@@ -2751,6 +2859,8 @@ Obtains the ID of the OS account to which the current process belongs. This API 
 
 **Substitutes:** [getOsAccountLocalId](#getosaccountlocalid)()
 
+<!--Device-AccountManager-getOsAccountLocalIdFromProcess(): Promise<number>--><!--Device-AccountManager-getOsAccountLocalIdFromProcess(): Promise<number>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Return value:**
@@ -2791,6 +2901,8 @@ Obtains the OS account ID based on the process UID. This API uses an asynchronou
 **Deprecated since:** 9
 
 **Substitutes:** [getOsAccountLocalIdForUid](#getosaccountlocalidforuid)(uid: number, callback: AsyncCallback&lt;number&gt;)
+
+<!--Device-AccountManager-getOsAccountLocalIdFromUid(uid: number, callback: AsyncCallback<number>): void--><!--Device-AccountManager-getOsAccountLocalIdFromUid(uid: number, callback: AsyncCallback<number>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -2839,6 +2951,8 @@ Obtains the OS account ID based on the process UID. This API uses a promise to r
 **Deprecated since:** 9
 
 **Substitutes:** [getOsAccountLocalIdForUid](#getosaccountlocalidforuid)(uid: number)
+
+<!--Device-AccountManager-getOsAccountLocalIdFromUid(uid: number): Promise<number>--><!--Device-AccountManager-getOsAccountLocalIdFromUid(uid: number): Promise<number>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -2890,6 +3004,8 @@ Obtains the type of the account to which the current process belongs. This API u
 
 **Substitutes:** [getOsAccountType](#getosaccounttype)(callback: AsyncCallback&lt;OsAccountType&gt;)
 
+<!--Device-AccountManager-getOsAccountTypeFromProcess(callback: AsyncCallback<OsAccountType>): void--><!--Device-AccountManager-getOsAccountTypeFromProcess(callback: AsyncCallback<OsAccountType>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
@@ -2934,6 +3050,8 @@ Obtains the type of the account to which the current process belongs. This API u
 
 **Substitutes:** [getOsAccountType](#getosaccounttype)()
 
+<!--Device-AccountManager-getOsAccountTypeFromProcess(): Promise<OsAccountType>--><!--Device-AccountManager-getOsAccountTypeFromProcess(): Promise<OsAccountType>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Return value:**
@@ -2974,6 +3092,8 @@ Obtains the SN of an OS account based on the account ID. This API uses an asynch
 **Deprecated since:** 9
 
 **Substitutes:** [getSerialNumberForOsAccountLocalId](#getserialnumberforosaccountlocalid)(localId: number, callback: AsyncCallback&lt;number&gt;)
+
+<!--Device-AccountManager-getSerialNumberByOsAccountLocalId(localId: number, callback: AsyncCallback<number>): void--><!--Device-AccountManager-getSerialNumberByOsAccountLocalId(localId: number, callback: AsyncCallback<number>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -3024,6 +3144,8 @@ Obtains the SN of an OS account based on the account ID. This API uses a promise
 **Deprecated since:** 9
 
 **Substitutes:** [getSerialNumberForOsAccountLocalId](#getserialnumberforosaccountlocalid)(localId: number)
+
+<!--Device-AccountManager-getSerialNumberByOsAccountLocalId(localId: number): Promise<number>--><!--Device-AccountManager-getSerialNumberByOsAccountLocalId(localId: number): Promise<number>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -3076,6 +3198,8 @@ Checks whether multiple OS accounts are supported. This API uses an asynchronous
 
 **Substitutes:** [checkMultiOsAccountEnabled](#checkmultiosaccountenabled)(callback: AsyncCallback&lt;boolean&gt;)
 
+<!--Device-AccountManager-isMultiOsAccountEnable(callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-isMultiOsAccountEnable(callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
@@ -3120,6 +3244,8 @@ Checks whether multiple OS accounts are supported. This API uses a promise to re
 
 **Substitutes:** [checkMultiOsAccountEnabled](#checkmultiosaccountenabled)()
 
+<!--Device-AccountManager-isMultiOsAccountEnable(): Promise<boolean>--><!--Device-AccountManager-isMultiOsAccountEnable(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Return value:**
@@ -3159,6 +3285,8 @@ Checks whether an OS account is activated. This API uses an asynchronous callbac
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-isOsAccountActived(localId: number, callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-isOsAccountActived(localId: number, callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -3208,6 +3336,8 @@ Checks whether an OS account is activated. This API uses a promise to return the
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-isOsAccountActived(localId: number): Promise<boolean>--><!--Device-AccountManager-isOsAccountActived(localId: number): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -3259,6 +3389,8 @@ Checks whether the specified constraint is enabled for an OS account. This API u
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-isOsAccountConstraintEnable(localId: number, constraint: string, callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-isOsAccountConstraintEnable(localId: number, constraint: string, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
@@ -3309,6 +3441,8 @@ Checks whether the specified constraint is enabled for an OS account. This API u
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-isOsAccountConstraintEnable(localId: number, constraint: string): Promise<boolean>--><!--Device-AccountManager-isOsAccountConstraintEnable(localId: number, constraint: string): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -3365,6 +3499,8 @@ Checks whether an OS account has been verified. This API uses an asynchronous ca
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-isOsAccountVerified(callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-isOsAccountVerified(callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
@@ -3408,6 +3544,8 @@ Checks whether an OS account has been verified. This API uses an asynchronous ca
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-isOsAccountVerified(localId: number, callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-isOsAccountVerified(localId: number, callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -3456,6 +3594,8 @@ Checks whether an OS account has been verified. This API uses a promise to retur
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-isOsAccountVerified(localId?: number): Promise<boolean>--><!--Device-AccountManager-isOsAccountVerified(localId?: number): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
@@ -3503,6 +3643,8 @@ Checks whether the current OS account is a test account. This API uses an asynch
 
 **Substitutes:** [checkOsAccountTestable](#checkosaccounttestable)(callback: AsyncCallback&lt;boolean&gt;)
 
+<!--Device-AccountManager-isTestOsAccount(callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-isTestOsAccount(callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Test API:** This API is used only in automated test scripts.
@@ -3549,6 +3691,8 @@ Checks whether the current OS account is a test account. This API uses a promise
 
 **Substitutes:** [checkOsAccountTestable](#checkosaccounttestable)()
 
+<!--Device-AccountManager-isTestOsAccount(): Promise<boolean>--><!--Device-AccountManager-isTestOsAccount(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Test API:** This API is used only in automated test scripts.
@@ -3591,6 +3735,8 @@ Obtains information about all activated OS accounts. This API uses an asynchrono
 **Deprecated since:** 9
 
 **Substitutes:** [getActivatedOsAccountLocalIds](#getactivatedosaccountlocalids)(callback: AsyncCallback&lt;Array&lt;number&gt;&gt;)
+
+<!--Device-AccountManager-queryActivatedOsAccountIds(callback: AsyncCallback<Array<number>>): void--><!--Device-AccountManager-queryActivatedOsAccountIds(callback: AsyncCallback<Array<number>>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -3639,6 +3785,8 @@ Obtains information about all activated OS accounts. This API uses a promise to 
 
 **Substitutes:** [getActivatedOsAccountLocalIds](#getactivatedosaccountlocalids)()
 
+<!--Device-AccountManager-queryActivatedOsAccountIds(): Promise<Array<number>>--><!--Device-AccountManager-queryActivatedOsAccountIds(): Promise<Array<number>>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Return value:**
@@ -3678,6 +3826,8 @@ Obtains information about the OS account to which the current process belongs. T
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-queryCurrentOsAccount(callback: AsyncCallback<OsAccountInfo>): void--><!--Device-AccountManager-queryCurrentOsAccount(callback: AsyncCallback<OsAccountInfo>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -3722,6 +3872,8 @@ Obtains information about the OS account to which the current process belongs. T
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-queryCurrentOsAccount(): Promise<OsAccountInfo>--><!--Device-AccountManager-queryCurrentOsAccount(): Promise<OsAccountInfo>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 

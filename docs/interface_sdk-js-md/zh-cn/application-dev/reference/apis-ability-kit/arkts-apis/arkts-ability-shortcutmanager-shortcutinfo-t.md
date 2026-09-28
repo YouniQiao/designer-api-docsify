@@ -8,6 +8,8 @@ export type ShortcutInfo = _ShortcutInfo
 
 **起始版本：** 20
 
+<!--Device-shortcutManager-export type ShortcutInfo = _ShortcutInfo--><!--Device-shortcutManager-export type ShortcutInfo = _ShortcutInfo-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
 **类型：** _ShortcutInfo

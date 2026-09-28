@@ -14,6 +14,8 @@ Defines the option of ShowActionMenu.
 
 **Substitutes:** [ActionMenuOptions](arkts-arkui-promptaction-actionmenuoptions-i.md)
 
+<!--Device-prompt-interface ActionMenuOptions--><!--Device-prompt-interface ActionMenuOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -40,6 +42,8 @@ Array of buttons in the dialog box. The array structure is {text:'button', color
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-ActionMenuOptions-buttons: [Button, Button?, Button?, Button?, Button?, Button?]--><!--Device-ActionMenuOptions-buttons: [Button, Button?, Button?, Button?, Button?, Button?]-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## title
@@ -59,5 +63,7 @@ Title of the text to display.
 **Substitutes:** [title](arkts-arkui-promptaction-actionmenuoptions-i.md#title)
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-ActionMenuOptions-title?: string--><!--Device-ActionMenuOptions-title?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

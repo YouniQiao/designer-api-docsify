@@ -8,6 +8,8 @@ interface DistributedAccountAbility
 
 **起始版本：** 7
 
+<!--Device-distributedAccount-interface DistributedAccountAbility--><!--Device-distributedAccount-interface DistributedAccountAbility-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 ## 导入模块
@@ -29,6 +31,8 @@ getOsAccountDistributedInfoByLocalId(localId: number, callback: AsyncCallback<Di
 **需要权限：** 
 - API版本20+：ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS or (ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS and ohos.permission.GET_DISTRIBUTED_ACCOUNTS)
 - API版本10-19：ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+
+<!--Device-DistributedAccountAbility-getOsAccountDistributedInfoByLocalId(localId: int, callback: AsyncCallback<DistributedInfo>): void--><!--Device-DistributedAccountAbility-getOsAccountDistributedInfoByLocalId(localId: int, callback: AsyncCallback<DistributedInfo>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -88,6 +92,8 @@ getOsAccountDistributedInfoByLocalId(localId: number): Promise<DistributedInfo>
 - API版本20+：ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS or (ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS and ohos.permission.GET_DISTRIBUTED_ACCOUNTS)
 - API版本10-19：ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
+<!--Device-DistributedAccountAbility-getOsAccountDistributedInfoByLocalId(localId: int): Promise<DistributedInfo>--><!--Device-DistributedAccountAbility-getOsAccountDistributedInfoByLocalId(localId: int): Promise<DistributedInfo>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -144,6 +150,8 @@ setOsAccountDistributedInfoByLocalId(localId: number, distributedInfo: Distribut
 **起始版本：** 10
 
 **需要权限：** ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS
+
+<!--Device-DistributedAccountAbility-setOsAccountDistributedInfoByLocalId(localId: int, distributedInfo: DistributedInfo, callback: AsyncCallback<void>): void--><!--Device-DistributedAccountAbility-setOsAccountDistributedInfoByLocalId(localId: int, distributedInfo: DistributedInfo, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -206,6 +214,8 @@ setOsAccountDistributedInfoByLocalId(localId: number, distributedInfo: Distribut
 **起始版本：** 10
 
 **需要权限：** ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS
+
+<!--Device-DistributedAccountAbility-setOsAccountDistributedInfoByLocalId(localId: int, distributedInfo: DistributedInfo): Promise<void>--><!--Device-DistributedAccountAbility-setOsAccountDistributedInfoByLocalId(localId: int, distributedInfo: DistributedInfo): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 

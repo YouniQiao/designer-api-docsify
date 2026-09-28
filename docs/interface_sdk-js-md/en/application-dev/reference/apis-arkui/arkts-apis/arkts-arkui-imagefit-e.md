@@ -8,6 +8,8 @@ Sets the image filling effect.
 
 **Since:** 7
 
+<!--Device-unnamed-declare enum ImageFit--><!--Device-unnamed-declare enum ImageFit-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Contain
@@ -27,6 +29,8 @@ The image or video is scaled with its aspect ratio retained to fit entirely with
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-ImageFit-Contain--><!--Device-ImageFit-Contain-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -48,6 +52,8 @@ The image or video is scaled while maintaining the aspect ratio so that both sid
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-ImageFit-Cover--><!--Device-ImageFit-Cover-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Auto
@@ -67,6 +73,8 @@ The image or video is scaled appropriately based on its own dimensions and the c
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-ImageFit-Auto--><!--Device-ImageFit-Auto-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -88,6 +96,8 @@ The image or video is scaled without maintaining the aspect ratio to fill the di
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-ImageFit-Fill--><!--Device-ImageFit-Fill-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## ScaleDown
@@ -107,6 +117,8 @@ The image or video is displayed while maintaining the aspect ratio, only scaling
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-ImageFit-ScaleDown--><!--Device-ImageFit-ScaleDown-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -128,6 +140,8 @@ The image is displayed at its original size, aligned horizontally in the center.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-ImageFit-None--><!--Device-ImageFit-None-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## TOP_START
@@ -147,6 +161,8 @@ The image or video is displayed at the top start position of the component in th
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-ImageFit-TOP_START = 7--><!--Device-ImageFit-TOP_START = 7-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -168,6 +184,8 @@ The image or video is displayed at the top center position of the component in t
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-ImageFit-TOP = 8--><!--Device-ImageFit-TOP = 8-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## TOP_END
@@ -187,6 +205,8 @@ The image or video is displayed at the top end position of the component in the 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-ImageFit-TOP_END = 9--><!--Device-ImageFit-TOP_END = 9-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -208,6 +228,8 @@ The image or video is displayed at the start position (vertically centered) of t
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-ImageFit-START = 10--><!--Device-ImageFit-START = 10-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## CENTER
@@ -227,6 +249,8 @@ The image or video is displayed at the center position of the component in the o
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-ImageFit-CENTER = 11--><!--Device-ImageFit-CENTER = 11-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -248,6 +272,8 @@ The image or video is displayed at the end position (vertically centered) of the
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-ImageFit-END = 12--><!--Device-ImageFit-END = 12-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## BOTTOM_START
@@ -267,6 +293,8 @@ The image or video is displayed at the bottom start position of the component in
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-ImageFit-BOTTOM_START = 13--><!--Device-ImageFit-BOTTOM_START = 13-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -288,6 +316,8 @@ The image or video is displayed at the bottom center position of the component i
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-ImageFit-BOTTOM = 14--><!--Device-ImageFit-BOTTOM = 14-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## BOTTOM_END
@@ -308,6 +338,8 @@ The image or video is displayed at the bottom end position of the component in t
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-ImageFit-BOTTOM_END = 15--><!--Device-ImageFit-BOTTOM_END = 15-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## MATRIX
@@ -323,5 +355,7 @@ The image, with the use of [imageMatrix](../arkts-components/arkts-arkui-image-c
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-ImageFit-MATRIX = 16--><!--Device-ImageFit-MATRIX = 16-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

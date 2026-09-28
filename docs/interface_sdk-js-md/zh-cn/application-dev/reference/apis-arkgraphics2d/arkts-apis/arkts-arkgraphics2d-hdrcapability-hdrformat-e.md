@@ -8,6 +8,8 @@ HDR格式枚举。
 
 **起始版本：** 11
 
+<!--Device-hdrCapability-enum HDRFormat--><!--Device-hdrCapability-enum HDRFormat-End-->
+
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
 ## NONE
@@ -20,7 +22,9 @@ NONE = 0
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HDRFormat-NONE = 0--><!--Device-HDRFormat-NONE = 0-End-->
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
@@ -34,7 +38,9 @@ VIDEO_HLG = 1
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HDRFormat-VIDEO_HLG = 1--><!--Device-HDRFormat-VIDEO_HLG = 1-End-->
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
@@ -48,7 +54,9 @@ VIDEO_HDR10 = 2
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HDRFormat-VIDEO_HDR10 = 2--><!--Device-HDRFormat-VIDEO_HDR10 = 2-End-->
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
@@ -62,7 +70,9 @@ VIDEO_HDR_VIVID = 3
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HDRFormat-VIDEO_HDR_VIVID = 3--><!--Device-HDRFormat-VIDEO_HDR_VIVID = 3-End-->
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
@@ -76,7 +86,9 @@ IMAGE_HDR_VIVID_DUAL = 4
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HDRFormat-IMAGE_HDR_VIVID_DUAL = 4--><!--Device-HDRFormat-IMAGE_HDR_VIVID_DUAL = 4-End-->
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
@@ -90,7 +102,9 @@ IMAGE_HDR_VIVID_SINGLE = 5
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HDRFormat-IMAGE_HDR_VIVID_SINGLE = 5--><!--Device-HDRFormat-IMAGE_HDR_VIVID_SINGLE = 5-End-->
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
@@ -104,7 +118,9 @@ IMAGE_HDR_ISO_DUAL = 6
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HDRFormat-IMAGE_HDR_ISO_DUAL = 6--><!--Device-HDRFormat-IMAGE_HDR_ISO_DUAL = 6-End-->
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
@@ -118,7 +134,9 @@ IMAGE_HDR_ISO_SINGLE = 7
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HDRFormat-IMAGE_HDR_ISO_SINGLE = 7--><!--Device-HDRFormat-IMAGE_HDR_ISO_SINGLE = 7-End-->
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
@@ -134,6 +152,8 @@ VIDEO_AIHDR = 8
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-HDRFormat-VIDEO_AIHDR = 8--><!--Device-HDRFormat-VIDEO_AIHDR = 8-End-->
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core

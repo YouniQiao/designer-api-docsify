@@ -20,6 +20,8 @@ function querySelfFaultLog(faultType: FaultType, callback: AsyncCallback<Array<F
 
 **替代接口：** query
 
+<!--Device-FaultLogger-function querySelfFaultLog(faultType: FaultType, callback: AsyncCallback<Array<FaultLogInfo>>): void--><!--Device-FaultLogger-function querySelfFaultLog(faultType: FaultType, callback: AsyncCallback<Array<FaultLogInfo>>): void-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
 **参数：**
@@ -73,6 +75,8 @@ function querySelfFaultLog(faultType: FaultType): Promise<Array<FaultLogInfo>>
 **废弃版本：** 9
 
 **替代接口：** query
+
+<!--Device-FaultLogger-function querySelfFaultLog(faultType: FaultType): Promise<Array<FaultLogInfo>>--><!--Device-FaultLogger-function querySelfFaultLog(faultType: FaultType): Promise<Array<FaultLogInfo>>-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.Hiview.FaultLogger
 

@@ -20,7 +20,9 @@ function removeBeaconFence(beaconFence?: BeaconFence): Promise<void>
 - API版本25+：N/A
 - API版本20-24：ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-geoLocationManager-function removeBeaconFence(beaconFence?: BeaconFence): Promise<void>--><!--Device-geoLocationManager-function removeBeaconFence(beaconFence?: BeaconFence): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geofence
 

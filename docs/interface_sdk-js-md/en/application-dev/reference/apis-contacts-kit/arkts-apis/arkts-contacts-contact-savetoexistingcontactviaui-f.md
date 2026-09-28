@@ -18,6 +18,8 @@ Saves the information to an existing contact through UI interaction.. This API u
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-contact-function saveToExistingContactViaUI(context: Context, contact: Contact): Promise<number>--><!--Device-contact-function saveToExistingContactViaUI(context: Context, contact: Contact): Promise<number>-End-->
+
 **System capability:** SystemCapability.Applications.Contacts
 
 **Parameters:**

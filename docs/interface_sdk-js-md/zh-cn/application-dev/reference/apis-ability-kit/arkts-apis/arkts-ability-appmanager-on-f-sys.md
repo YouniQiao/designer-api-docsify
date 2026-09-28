@@ -18,6 +18,8 @@ function on(type: 'applicationState', observer: ApplicationStateObserver, filter
 
 **需要权限：** ohos.permission.RUNNING_STATE_OBSERVER
 
+<!--Device-appManager-function on(type: 'applicationState', observer: ApplicationStateObserver, filter: AppStateFilter): int--><!--Device-appManager-function on(type: 'applicationState', observer: ApplicationStateObserver, filter: AppStateFilter): int-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -109,6 +111,8 @@ function on(type: 'appForegroundState', observer: AppForegroundStateObserver): v
 
 **需要权限：** ohos.permission.RUNNING_STATE_OBSERVER
 
+<!--Device-appManager-function on(type: 'appForegroundState', observer: AppForegroundStateObserver): void--><!--Device-appManager-function on(type: 'appForegroundState', observer: AppForegroundStateObserver): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -162,6 +166,8 @@ function on(type: 'abilityFirstFrameState', observer: AbilityFirstFrameStateObse
 **起始版本：** 12
 
 **需要权限：** ohos.permission.RUNNING_STATE_OBSERVER
+
+<!--Device-appManager-function on(type: 'abilityFirstFrameState', observer: AbilityFirstFrameStateObserver, bundleName?: string): void--><!--Device-appManager-function on(type: 'abilityFirstFrameState', observer: AbilityFirstFrameStateObserver, bundleName?: string): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

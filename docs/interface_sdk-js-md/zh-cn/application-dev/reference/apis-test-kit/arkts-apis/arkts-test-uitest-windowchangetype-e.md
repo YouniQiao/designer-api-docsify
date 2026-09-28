@@ -8,6 +8,8 @@ declare enum WindowChangeType
 
 **起始版本：** 22
 
+<!--Device-unnamed-declare enum WindowChangeType--><!--Device-unnamed-declare enum WindowChangeType-End-->
+
 **系统能力：** SystemCapability.Test.UiTest
 
 **测试接口：** 此接口仅在自动化测试脚本中使用。
@@ -24,7 +26,9 @@ WINDOW_UNDEFINED = 0
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-WindowChangeType-WINDOW_UNDEFINED = 0--><!--Device-WindowChangeType-WINDOW_UNDEFINED = 0-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -40,7 +44,9 @@ WINDOW_ADDED = 1
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-WindowChangeType-WINDOW_ADDED = 1--><!--Device-WindowChangeType-WINDOW_ADDED = 1-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -56,7 +62,9 @@ WINDOW_REMOVED = 2
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-WindowChangeType-WINDOW_REMOVED = 2--><!--Device-WindowChangeType-WINDOW_REMOVED = 2-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -72,7 +80,9 @@ WINDOW_BOUNDS_CHANGED = 3
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-WindowChangeType-WINDOW_BOUNDS_CHANGED = 3--><!--Device-WindowChangeType-WINDOW_BOUNDS_CHANGED = 3-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 

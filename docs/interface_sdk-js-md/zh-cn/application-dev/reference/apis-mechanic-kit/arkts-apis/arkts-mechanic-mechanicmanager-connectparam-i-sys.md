@@ -8,6 +8,8 @@ export interface ConnectParam
 
 **起始版本：** 26.0.0
 
+<!--Device-mechanicManager-export interface ConnectParam--><!--Device-mechanicManager-export interface ConnectParam-End-->
+
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ custdata: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ConnectParam-custdata: string--><!--Device-ConnectParam-custdata: string-End-->
+
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。
@@ -50,6 +54,8 @@ deviceName?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ConnectParam-deviceName?: string--><!--Device-ConnectParam-deviceName?: string-End-->
+
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。
@@ -67,6 +73,8 @@ identifier?: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ConnectParam-identifier?: int--><!--Device-ConnectParam-identifier?: int-End-->
 
 **系统能力：** SystemCapability.Mechanic.Core
 

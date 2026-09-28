@@ -8,6 +8,8 @@ interface KeyEventData
 
 **起始版本：** 11
 
+<!--Device-inputEventClient-interface KeyEventData--><!--Device-inputEventClient-interface KeyEventData-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **系统接口：** 此接口为系统接口。
@@ -29,6 +31,8 @@ keyEvent: KeyEvent
 **类型：** [KeyEvent](arkts-input-multimodalinput-keyevent-keyevent-i.md)
 
 **起始版本：** 11
+
+<!--Device-KeyEventData-keyEvent: KeyEvent--><!--Device-KeyEventData-keyEvent: KeyEvent-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 

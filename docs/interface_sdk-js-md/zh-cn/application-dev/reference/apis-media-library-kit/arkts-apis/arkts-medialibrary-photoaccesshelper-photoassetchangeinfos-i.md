@@ -8,6 +8,8 @@ interface PhotoAssetChangeInfos
 
 **起始版本：** 20
 
+<!--Device-photoAccessHelper-interface PhotoAssetChangeInfos--><!--Device-photoAccessHelper-interface PhotoAssetChangeInfos-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ assetChangeDatas: PhotoAssetChangeData[] | null
 
 **起始版本：** 20
 
+<!--Device-PhotoAssetChangeInfos-assetChangeDatas: PhotoAssetChangeData[] | null--><!--Device-PhotoAssetChangeInfos-assetChangeDatas: PhotoAssetChangeData[] | null-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## isForRecheck
@@ -46,6 +50,8 @@ isForRecheck: boolean
 
 **起始版本：** 20
 
+<!--Device-PhotoAssetChangeInfos-isForRecheck: boolean--><!--Device-PhotoAssetChangeInfos-isForRecheck: boolean-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## type
@@ -59,5 +65,7 @@ type: NotifyChangeType
 **类型：** [NotifyChangeType](arkts-medialibrary-photoaccesshelper-notifychangetype-e.md)
 
 **起始版本：** 20
+
+<!--Device-PhotoAssetChangeInfos-type: NotifyChangeType--><!--Device-PhotoAssetChangeInfos-type: NotifyChangeType-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core

@@ -10,6 +10,8 @@ UserAgentBrandVersion提供品牌名称和版本号的设置与获取方法：se
 
 **起始版本：** 24
 
+<!--Device-webview-class UserAgentBrandVersion--><!--Device-webview-class UserAgentBrandVersion-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## 导入模块
@@ -29,6 +31,8 @@ getBrand(): string
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UserAgentBrandVersion-getBrand(): string--><!--Device-UserAgentBrandVersion-getBrand(): string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -54,6 +58,8 @@ getFullVersion(): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UserAgentBrandVersion-getFullVersion(): string--><!--Device-UserAgentBrandVersion-getFullVersion(): string-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -77,6 +83,8 @@ getMajorVersion(): string
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UserAgentBrandVersion-getMajorVersion(): string--><!--Device-UserAgentBrandVersion-getMajorVersion(): string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -102,6 +110,8 @@ setBrand(brand: string): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UserAgentBrandVersion-setBrand(brand: string): void--><!--Device-UserAgentBrandVersion-setBrand(brand: string): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -126,6 +136,8 @@ setFullVersion(fullVersion: string): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UserAgentBrandVersion-setFullVersion(fullVersion: string): void--><!--Device-UserAgentBrandVersion-setFullVersion(fullVersion: string): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -149,6 +161,8 @@ setMajorVersion(majorVersion: string): void
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UserAgentBrandVersion-setMajorVersion(majorVersion: string): void--><!--Device-UserAgentBrandVersion-setMajorVersion(majorVersion: string): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

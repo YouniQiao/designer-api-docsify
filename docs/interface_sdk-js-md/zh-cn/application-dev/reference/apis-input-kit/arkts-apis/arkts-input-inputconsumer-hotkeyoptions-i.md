@@ -8,6 +8,8 @@ interface HotkeyOptions
 
 **起始版本：** 14
 
+<!--Device-inputConsumer-interface HotkeyOptions--><!--Device-inputConsumer-interface HotkeyOptions-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 
 ## 导入模块
@@ -28,6 +30,8 @@ finalKey: number
 
 **起始版本：** 14
 
+<!--Device-HotkeyOptions-finalKey: int--><!--Device-HotkeyOptions-finalKey: int-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 
 ## isRepeat
@@ -42,6 +46,8 @@ isRepeat?: boolean
 
 **起始版本：** 14
 
+<!--Device-HotkeyOptions-isRepeat?: boolean--><!--Device-HotkeyOptions-isRepeat?: boolean-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 
 ## preKeys
@@ -55,5 +61,7 @@ preKeys: Array<number>
 **类型：** Array&lt;number&gt;
 
 **起始版本：** 14
+
+<!--Device-HotkeyOptions-preKeys: Array<int>--><!--Device-HotkeyOptions-preKeys: Array<int>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer

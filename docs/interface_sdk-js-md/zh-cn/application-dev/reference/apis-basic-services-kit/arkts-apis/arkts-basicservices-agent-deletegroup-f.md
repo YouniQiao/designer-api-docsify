@@ -18,6 +18,8 @@ function deleteGroup(gid: string): Promise<void>
 
 **起始版本：** 15
 
+<!--Device-agent-function deleteGroup(gid: string): Promise<void>--><!--Device-agent-function deleteGroup(gid: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 **参数：**

@@ -18,6 +18,8 @@ function queryApnIds(apnInfo: ApnInfo): Promise<Array<number>>
 
 **需要权限：** ohos.permission.MANAGE_APN_SETTING
 
+<!--Device-data-function queryApnIds(apnInfo: ApnInfo): Promise<Array<int>>--><!--Device-data-function queryApnIds(apnInfo: ApnInfo): Promise<Array<int>>-End-->
+
 **系统能力：** SystemCapability.Telephony.CellularData
 
 **参数：**

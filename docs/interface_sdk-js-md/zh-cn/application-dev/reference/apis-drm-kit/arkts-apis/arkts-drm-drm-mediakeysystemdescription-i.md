@@ -8,6 +8,8 @@ interface MediaKeySystemDescription
 
 **起始版本：** 12
 
+<!--Device-drm-interface MediaKeySystemDescription--><!--Device-drm-interface MediaKeySystemDescription-End-->
+
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
 ## 导入模块
@@ -28,7 +30,9 @@ name: string
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-MediaKeySystemDescription-name: string--><!--Device-MediaKeySystemDescription-name: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
@@ -44,6 +48,8 @@ uuid: string
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-MediaKeySystemDescription-uuid: string--><!--Device-MediaKeySystemDescription-uuid: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core

@@ -12,6 +12,8 @@ interface File extends FileMeta, FileData, FileManifestData
 
 **起始版本：** 12
 
+<!--Device-backup-interface File extends FileMeta, FileData, FileManifestData--><!--Device-backup-interface File extends FileMeta, FileData, FileManifestData-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 **系统接口：** 此接口为系统接口。

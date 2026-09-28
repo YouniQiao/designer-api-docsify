@@ -8,6 +8,8 @@ interface ExecOptions
 
 **起始版本：** 26.0.0
 
+<!--Device-cliManager-interface ExecOptions--><!--Device-cliManager-interface ExecOptions-End-->
+
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -38,6 +40,8 @@ true：后台执行，false：前台执行。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExecOptions-background?: boolean--><!--Device-ExecOptions-background?: boolean-End-->
+
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -55,6 +59,8 @@ dmSessionId?: string
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExecOptions-dmSessionId?: string--><!--Device-ExecOptions-dmSessionId?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -76,6 +82,8 @@ timeout?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExecOptions-timeout?: long--><!--Device-ExecOptions-timeout?: long-End-->
+
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -93,6 +101,8 @@ toolCallId?: string
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExecOptions-toolCallId?: string--><!--Device-ExecOptions-toolCallId?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -113,6 +123,8 @@ yieldMs?: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExecOptions-yieldMs?: long--><!--Device-ExecOptions-yieldMs?: long-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 

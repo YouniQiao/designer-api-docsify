@@ -8,6 +8,8 @@ interface ChangeData
 
 **起始版本：** 10
 
+<!--Device-photoAccessHelper-interface ChangeData--><!--Device-photoAccessHelper-interface ChangeData-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ sharedAlbumAssets of the same type
 
 **起始版本：** 14
 
+<!--Device-ChangeData-sharedAlbumAssets: Array<SharedAlbumAsset>--><!--Device-ChangeData-sharedAlbumAssets: Array<SharedAlbumAsset>-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -44,6 +48,8 @@ sharedExtraPhotoAssets of the same type
 
 **起始版本：** 14
 
+<!--Device-ChangeData-sharedExtraPhotoAssets: Array<SharedPhotoAsset>--><!--Device-ChangeData-sharedExtraPhotoAssets: Array<SharedPhotoAsset>-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -59,6 +65,8 @@ sharedPhotoAssets of the same type
 **类型：** Array&lt;[SharedPhotoAsset](arkts-medialibrary-photoaccesshelper-sharedphotoasset-i-sys.md)&gt;
 
 **起始版本：** 14
+
+<!--Device-ChangeData-sharedPhotoAssets: Array<SharedPhotoAsset>--><!--Device-ChangeData-sharedPhotoAssets: Array<SharedPhotoAsset>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

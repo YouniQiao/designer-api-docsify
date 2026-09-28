@@ -12,13 +12,15 @@ interface AVRecorderProfile
 
 |编码格式|封装格式|采样率|比特率|声道数|  
 |----|----|----|----|----|  
-| [AUDIO_AAC](arkts-media-media-codecmimetype-e.md) |MP4,M4A|[8000, 11025, 12000, 16000, 22050, 24000, 32000, 44100, 48000, 64000, 88200, 96000]|[32000-500000]|[1-2]|
-| [AUDIO_MP3](arkts-media-media-codecmimetype-e.md) | [MP3](../../apis-arkdata/arkts-apis/arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md) |[8000, 11025, 12000, 16000, 22050, 24000, 32000, 44100, 48000]|<br>- 采样率使用16000以下时，对应比特率范围为[8000, 16000, 32000, 40000, 48000, 56000, 64000]。<br>- 采样率使用16000~32000时对应的比特率范围为[8000, 16000, 32000, 40000, 48000, 56000, 64000, 80000, 96000, 112000, 128000, 160000]。<br>- 采样率使用32000以上时对应的比特率范围为[32000, 40000, 48000, 56000, 64000, 80000, 96000, 112000, 128000, 160000, 192000, 224000, 256000, 320000]。|[1-2]|
-| [AUDIO_G711MU](arkts-media-media-codecmimetype-e.md) |WAV|[8000]|[64000]|[1]|
+|AUDIO_AAC|MP4,M4A|[8000, 11025, 12000, 16000, 22050, 24000, 32000, 44100, 48000, 64000, 88200, 96000]|[32000-500000]|[1-2]|
+|AUDIO_MP3| [MP3](../../apis-arkdata/arkts-apis/arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md) |[8000, 11025, 12000, 16000, 22050, 24000, 32000, 44100, 48000]|<br>- 采样率使用16000以下时，对应比特率范围为[8000, 16000, 32000, 40000, 48000, 56000, 64000]。<br>- 采样率使用16000~32000时对应的比特率范围为[8000, 16000, 32000, 40000, 48000, 56000, 64000, 80000, 96000, 112000, 128000, 160000]。<br>- 采样率使用32000以上时对应的比特率范围为[32000, 40000, 48000, 56000, 64000, 80000, 96000, 112000, 128000, 160000, 192000, 224000, 256000, 320000]。|[1-2]|
+|AUDIO_G711MU|WAV|[8000]|[64000]|[1]|
 |AUDIO_AMR_NB&lt;sup&gt;18+&lt;/sup&gt; |AMR|[8000]|[4750, 5150, 5900, 6700, 7400, 7950, 10200, 12200]|[1]|
 |AUDIO_AMR_WB&lt;sup&gt;18+&lt;/sup&gt; |AMR|[16000]|[6600, 8850, 12650, 14250, 15850, 18250, 19850, 23050, 23850]|[1]|
 
 **起始版本：** 9
+
+<!--Device-media-interface AVRecorderProfile--><!--Device-media-interface AVRecorderProfile-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -39,6 +41,8 @@ enableStableQualityMode?: boolean
 **类型：** boolean
 
 **起始版本：** 18
+
+<!--Device-AVRecorderProfile-enableStableQualityMode?: boolean--><!--Device-AVRecorderProfile-enableStableQualityMode?: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 

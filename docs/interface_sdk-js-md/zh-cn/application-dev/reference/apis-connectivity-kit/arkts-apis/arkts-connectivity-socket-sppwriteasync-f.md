@@ -18,6 +18,8 @@ function sppWriteAsync(clientSocket: number, data: ArrayBuffer): Promise<void>
 
 **起始版本：** 18
 
+<!--Device-socket-function sppWriteAsync(clientSocket: int, data: ArrayBuffer): Promise<void>--><!--Device-socket-function sppWriteAsync(clientSocket: int, data: ArrayBuffer): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**

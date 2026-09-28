@@ -8,6 +8,8 @@ interface PrintAttributes
 
 **起始版本：** 11
 
+<!--Device-print-interface PrintAttributes--><!--Device-print-interface PrintAttributes-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## 导入模块
@@ -28,6 +30,8 @@ colorMode?: PrintColorMode
 
 **起始版本：** 11
 
+<!--Device-PrintAttributes-colorMode?: PrintColorMode--><!--Device-PrintAttributes-colorMode?: PrintColorMode-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## copyNumber
@@ -41,6 +45,8 @@ copyNumber?: number
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-PrintAttributes-copyNumber?: int--><!--Device-PrintAttributes-copyNumber?: int-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -56,6 +62,8 @@ directionMode?: PrintDirectionMode
 
 **起始版本：** 11
 
+<!--Device-PrintAttributes-directionMode?: PrintDirectionMode--><!--Device-PrintAttributes-directionMode?: PrintDirectionMode-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## duplexMode
@@ -69,6 +77,8 @@ duplexMode?: PrintDuplexMode
 **类型：** [PrintDuplexMode](arkts-basicservices-print-printduplexmode-e.md)
 
 **起始版本：** 11
+
+<!--Device-PrintAttributes-duplexMode?: PrintDuplexMode--><!--Device-PrintAttributes-duplexMode?: PrintDuplexMode-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -84,6 +94,8 @@ pageRange?: PrintPageRange
 
 **起始版本：** 11
 
+<!--Device-PrintAttributes-pageRange?: PrintPageRange--><!--Device-PrintAttributes-pageRange?: PrintPageRange-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## pageSize
@@ -97,5 +109,7 @@ pageSize?: PrintPageSize | PrintPageType
 **类型：** [PrintPageSize](arkts-basicservices-print-printpagesize-i.md) &#124; [PrintPageType](arkts-basicservices-print-printpagetype-e.md)
 
 **起始版本：** 11
+
+<!--Device-PrintAttributes-pageSize?: PrintPageSize | PrintPageType--><!--Device-PrintAttributes-pageSize?: PrintPageSize | PrintPageType-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework

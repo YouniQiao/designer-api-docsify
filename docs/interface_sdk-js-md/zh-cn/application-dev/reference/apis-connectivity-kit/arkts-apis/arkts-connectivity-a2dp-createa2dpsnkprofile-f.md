@@ -18,6 +18,8 @@ function createA2dpSnkProfile(): A2dpSinkProfile
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-a2dp-function createA2dpSnkProfile(): A2dpSinkProfile--><!--Device-a2dp-function createA2dpSnkProfile(): A2dpSinkProfile-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **返回值：**

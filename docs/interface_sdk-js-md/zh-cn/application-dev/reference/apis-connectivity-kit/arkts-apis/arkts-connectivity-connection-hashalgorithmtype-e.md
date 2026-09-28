@@ -10,6 +10,8 @@ enum HashAlgorithmType
 
 **起始版本：** 24
 
+<!--Device-connection-enum HashAlgorithmType--><!--Device-connection-enum HashAlgorithmType-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## HASH_ALGORITHM_SHA256
@@ -23,5 +25,7 @@ SHA256哈希算法。
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HashAlgorithmType-HASH_ALGORITHM_SHA256 = 0--><!--Device-HashAlgorithmType-HASH_ALGORITHM_SHA256 = 0-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

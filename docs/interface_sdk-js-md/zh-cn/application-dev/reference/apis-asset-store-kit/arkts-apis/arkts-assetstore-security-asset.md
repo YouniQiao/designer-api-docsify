@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare namespace asset--><!--Device-unnamed-declare namespace asset-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 ## 导入模块

@@ -8,6 +8,8 @@ interface GattPermissions
 
 **起始版本：** 20
 
+<!--Device-ble-interface GattPermissions--><!--Device-ble-interface GattPermissions-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -32,7 +34,9 @@ true表示允许，false表示不允许。默认值为true。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-GattPermissions-read?: boolean--><!--Device-GattPermissions-read?: boolean-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -52,7 +56,9 @@ true表示需要加密后，方可读取内容，false表示不需要普通方�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-GattPermissions-readEncrypted?: boolean--><!--Device-GattPermissions-readEncrypted?: boolean-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -72,7 +78,9 @@ readEncryptedMitm?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-GattPermissions-readEncryptedMitm?: boolean--><!--Device-GattPermissions-readEncryptedMitm?: boolean-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -92,7 +100,9 @@ true表示允许，false表示不允许。默认值为true。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-GattPermissions-write?: boolean--><!--Device-GattPermissions-write?: boolean-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -112,7 +122,9 @@ true表示需要加密后，方可写入内容，false表示不需要普通方�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-GattPermissions-writeEncrypted?: boolean--><!--Device-GattPermissions-writeEncrypted?: boolean-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -132,7 +144,9 @@ true表示需要防中间人攻击的加密后才能写入内容，false表示�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-GattPermissions-writeEncryptedMitm?: boolean--><!--Device-GattPermissions-writeEncryptedMitm?: boolean-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -152,7 +166,9 @@ true表示内容需要签名处理后方可写入，false表示不需要签名�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-GattPermissions-writeSigned?: boolean--><!--Device-GattPermissions-writeSigned?: boolean-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -172,6 +188,8 @@ true表示需要防中间人攻击方式的签名处理后方可写入，false�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-GattPermissions-writeSignedMitm?: boolean--><!--Device-GattPermissions-writeSignedMitm?: boolean-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

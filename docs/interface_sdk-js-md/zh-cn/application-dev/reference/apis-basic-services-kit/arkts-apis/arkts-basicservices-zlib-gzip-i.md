@@ -8,6 +8,8 @@ Gzip相关接口。
 
 **起始版本：** 12
 
+<!--Device-zlib-interface GZip--><!--Device-zlib-interface GZip-End-->
+
 **系统能力：** SystemCapability.BundleManager.Zlib
 
 ## 导入模块
@@ -26,7 +28,9 @@ gzbuffer(size: number): Promise<number>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GZip-gzbuffer(size: long): Promise<int>--><!--Device-GZip-gzbuffer(size: long): Promise<int>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -100,7 +104,9 @@ gzclearerr(): Promise<void>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GZip-gzclearerr(): Promise<void>--><!--Device-GZip-gzclearerr(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -171,7 +177,9 @@ gzclose(): Promise<ReturnStatus>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GZip-gzclose(): Promise<ReturnStatus>--><!--Device-GZip-gzclose(): Promise<ReturnStatus>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -236,7 +244,9 @@ gzcloser(): Promise<ReturnStatus>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GZip-gzcloser(): Promise<ReturnStatus>--><!--Device-GZip-gzcloser(): Promise<ReturnStatus>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -302,7 +312,9 @@ gzclosew(): Promise<ReturnStatus>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GZip-gzclosew(): Promise<ReturnStatus>--><!--Device-GZip-gzclosew(): Promise<ReturnStatus>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -367,7 +379,9 @@ gzdirect(): Promise<number>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GZip-gzdirect(): Promise<int>--><!--Device-GZip-gzdirect(): Promise<int>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -426,7 +440,9 @@ gzdopen(fd: number, mode: string): Promise<void>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GZip-gzdopen(fd: int, mode: string): Promise<void>--><!--Device-GZip-gzdopen(fd: int, mode: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -499,7 +515,9 @@ gzeof(): Promise<number>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GZip-gzeof(): Promise<int>--><!--Device-GZip-gzeof(): Promise<int>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -568,7 +586,9 @@ gzerror(): Promise<GzErrorOutputInfo>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GZip-gzerror(): Promise<GzErrorOutputInfo>--><!--Device-GZip-gzerror(): Promise<GzErrorOutputInfo>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -645,7 +665,9 @@ gzflush(flush: CompressFlushMode): Promise<ReturnStatus>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GZip-gzflush(flush: CompressFlushMode): Promise<ReturnStatus>--><!--Device-GZip-gzflush(flush: CompressFlushMode): Promise<ReturnStatus>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -717,7 +739,9 @@ gzfread(buf: ArrayBuffer, size: number, nitems: number): Promise<number>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GZip-gzfread(buf: ArrayBuffer, size: long, nitems: long): Promise<long>--><!--Device-GZip-gzfread(buf: ArrayBuffer, size: long, nitems: long): Promise<long>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -800,7 +824,9 @@ gzfwrite(buf: ArrayBuffer, size: number, nitems: number): Promise<number>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GZip-gzfwrite(buf: ArrayBuffer, size: long, nitems: long): Promise<long>--><!--Device-GZip-gzfwrite(buf: ArrayBuffer, size: long, nitems: long): Promise<long>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -879,7 +905,9 @@ gzgetc(): Promise<number>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GZip-gzgetc(): Promise<int>--><!--Device-GZip-gzgetc(): Promise<int>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -947,7 +975,9 @@ gzgets(buf: ArrayBuffer): Promise<string>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GZip-gzgets(buf: ArrayBuffer): Promise<string>--><!--Device-GZip-gzgets(buf: ArrayBuffer): Promise<string>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -1023,7 +1053,9 @@ gzoffset(): Promise<number>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GZip-gzoffset(): Promise<long>--><!--Device-GZip-gzoffset(): Promise<long>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -1088,7 +1120,9 @@ gzopen(path: string, mode: string): Promise<void>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GZip-gzopen(path: string, mode: string): Promise<void>--><!--Device-GZip-gzopen(path: string, mode: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -1160,7 +1194,9 @@ gzprintf(format: string, ...args: Array<string | number>): Promise<number>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GZip-gzprintf(format: string, ...args: Array<string | double>): Promise<int>--><!--Device-GZip-gzprintf(format: string, ...args: Array<string | double>): Promise<int>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -1234,7 +1270,9 @@ gzputc(ch: number): Promise<number>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GZip-gzputc(ch: int): Promise<int>--><!--Device-GZip-gzputc(ch: int): Promise<int>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -1306,7 +1344,9 @@ gzputs(str: string): Promise<number>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GZip-gzputs(str: string): Promise<int>--><!--Device-GZip-gzputs(str: string): Promise<int>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -1378,7 +1418,9 @@ gzread(buf: ArrayBuffer): Promise<number>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GZip-gzread(buf: ArrayBuffer): Promise<long>--><!--Device-GZip-gzread(buf: ArrayBuffer): Promise<long>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -1459,7 +1501,9 @@ gzrewind(): Promise<ReturnStatus>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GZip-gzrewind(): Promise<ReturnStatus>--><!--Device-GZip-gzrewind(): Promise<ReturnStatus>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -1526,7 +1570,9 @@ gzseek(offset: number, whence: OffsetReferencePoint): Promise<number>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GZip-gzseek(offset: long, whence: OffsetReferencePoint): Promise<long>--><!--Device-GZip-gzseek(offset: long, whence: OffsetReferencePoint): Promise<long>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -1599,7 +1645,9 @@ gzsetparams(level: CompressLevel, strategy: CompressStrategy): Promise<ReturnSta
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GZip-gzsetparams(level: CompressLevel, strategy: CompressStrategy): Promise<ReturnStatus>--><!--Device-GZip-gzsetparams(level: CompressLevel, strategy: CompressStrategy): Promise<ReturnStatus>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -1673,7 +1721,9 @@ gztell(): Promise<number>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GZip-gztell(): Promise<long>--><!--Device-GZip-gztell(): Promise<long>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -1738,7 +1788,9 @@ gzungetc(c: number): Promise<number>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GZip-gzungetc(c: int): Promise<int>--><!--Device-GZip-gzungetc(c: int): Promise<int>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -1813,7 +1865,9 @@ gzwrite(buf: ArrayBuffer, len: number): Promise<number>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-GZip-gzwrite(buf: ArrayBuffer, len: long): Promise<long>--><!--Device-GZip-gzwrite(buf: ArrayBuffer, len: long): Promise<long>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 

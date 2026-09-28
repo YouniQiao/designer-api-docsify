@@ -8,6 +8,8 @@ Sets the status before and after execution of the animation in the current playb
 
 **Since:** 7
 
+<!--Device-unnamed-declare enum FillMode--><!--Device-unnamed-declare enum FillMode-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## None
@@ -25,6 +27,8 @@ If the animation is not executed, no style is applied to the target. After the a
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
+
+<!--Device-FillMode-None = 0--><!--Device-FillMode-None = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,6 +48,8 @@ The target component retains the state set by the last keyframe encountered duri
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
+<!--Device-FillMode-Forwards = 1--><!--Device-FillMode-Forwards = 1-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Backwards
@@ -62,6 +68,8 @@ The animation applies the values defined in the first relevant keyframe once it 
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
+<!--Device-FillMode-Backwards = 2--><!--Device-FillMode-Backwards = 2-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Both
@@ -79,5 +87,7 @@ The animation follows the rules for both **Forwards** and **Backwards**, extendi
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
+
+<!--Device-FillMode-Both = 3--><!--Device-FillMode-Both = 3-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

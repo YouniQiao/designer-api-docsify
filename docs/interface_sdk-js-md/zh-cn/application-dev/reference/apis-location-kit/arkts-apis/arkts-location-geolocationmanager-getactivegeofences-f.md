@@ -18,6 +18,8 @@ function getActiveGeoFences(): Promise<Map<number, Geofence>>
 
 **需要权限：** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
+<!--Device-geoLocationManager-function getActiveGeoFences(): Promise<Map<int, Geofence>>--><!--Device-geoLocationManager-function getActiveGeoFences(): Promise<Map<int, Geofence>>-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 **返回值：**

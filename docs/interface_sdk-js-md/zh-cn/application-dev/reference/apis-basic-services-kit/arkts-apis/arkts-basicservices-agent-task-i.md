@@ -12,6 +12,8 @@ interface Task
 
 **起始版本：** 10
 
+<!--Device-agent-interface Task--><!--Device-agent-interface Task-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## 导入模块
@@ -35,6 +37,8 @@ off(event: 'progress', callback?: (progress: Progress) => void): void
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Task-off(event: 'progress', callback?: (progress: Progress) => void): void--><!--Device-Task-off(event: 'progress', callback?: (progress: Progress) => void): void-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -70,6 +74,8 @@ off(event: 'completed', callback?: (progress: Progress) => void): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Task-off(event: 'completed', callback?: (progress: Progress) => void): void--><!--Device-Task-off(event: 'completed', callback?: (progress: Progress) => void): void-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 **参数：**
@@ -104,6 +110,8 @@ off(event: 'failed', callback?: (progress: Progress) => void): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Task-off(event: 'failed', callback?: (progress: Progress) => void): void--><!--Device-Task-off(event: 'failed', callback?: (progress: Progress) => void): void-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 **参数：**
@@ -136,6 +144,8 @@ off(event: 'pause', callback?: (progress: Progress) => void): void
 
 **起始版本：** 11
 
+<!--Device-Task-off(event: 'pause', callback?: (progress: Progress) => void): void--><!--Device-Task-off(event: 'pause', callback?: (progress: Progress) => void): void-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 **参数：**
@@ -167,6 +177,8 @@ off(event: 'resume', callback?: (progress: Progress) => void): void
 
 **起始版本：** 11
 
+<!--Device-Task-off(event: 'resume', callback?: (progress: Progress) => void): void--><!--Device-Task-off(event: 'resume', callback?: (progress: Progress) => void): void-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 **参数：**
@@ -197,6 +209,8 @@ off(event: 'remove', callback?: (progress: Progress) => void): void
 > 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 **起始版本：** 11
+
+<!--Device-Task-off(event: 'remove', callback?: (progress: Progress) => void): void--><!--Device-Task-off(event: 'remove', callback?: (progress: Progress) => void): void-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -231,6 +245,8 @@ off(event: 'response', callback?: Callback<HttpResponse>): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Task-off(event: 'response', callback?: Callback<HttpResponse>): void--><!--Device-Task-off(event: 'response', callback?: Callback<HttpResponse>): void-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 **参数：**
@@ -261,6 +277,8 @@ off(event: 'faultOccur', callback?: Callback<Faults>): void
 > 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 **起始版本：** 20
+
+<!--Device-Task-off(event: 'faultOccur', callback?: Callback<Faults>): void--><!--Device-Task-off(event: 'faultOccur', callback?: Callback<Faults>): void-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -293,6 +311,8 @@ off(event: 'wait', callback?: Callback<WaitingReason>): void
 
 **起始版本：** 20
 
+<!--Device-Task-off(event: 'wait', callback?: Callback<WaitingReason>): void--><!--Device-Task-off(event: 'wait', callback?: Callback<WaitingReason>): void-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 **参数：**
@@ -323,6 +343,8 @@ on(event: 'progress', callback: (progress: Progress) => void): void
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Task-on(event: 'progress', callback: (progress: Progress) => void): void--><!--Device-Task-on(event: 'progress', callback: (progress: Progress) => void): void-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -358,6 +380,8 @@ on(event: 'completed', callback: (progress: Progress) => void): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Task-on(event: 'completed', callback: (progress: Progress) => void): void--><!--Device-Task-on(event: 'completed', callback: (progress: Progress) => void): void-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 **参数：**
@@ -392,6 +416,8 @@ on(event: 'failed', callback: (progress: Progress) => void): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Task-on(event: 'failed', callback: (progress: Progress) => void): void--><!--Device-Task-on(event: 'failed', callback: (progress: Progress) => void): void-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 **参数：**
@@ -424,6 +450,8 @@ on(event: 'pause', callback: (progress: Progress) => void): void
 
 **起始版本：** 11
 
+<!--Device-Task-on(event: 'pause', callback: (progress: Progress) => void): void--><!--Device-Task-on(event: 'pause', callback: (progress: Progress) => void): void-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 **参数：**
@@ -455,6 +483,8 @@ on(event: 'resume', callback: (progress: Progress) => void): void
 
 **起始版本：** 11
 
+<!--Device-Task-on(event: 'resume', callback: (progress: Progress) => void): void--><!--Device-Task-on(event: 'resume', callback: (progress: Progress) => void): void-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 **参数：**
@@ -485,6 +515,8 @@ on(event: 'remove', callback: (progress: Progress) => void): void
 > 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 **起始版本：** 11
+
+<!--Device-Task-on(event: 'remove', callback: (progress: Progress) => void): void--><!--Device-Task-on(event: 'remove', callback: (progress: Progress) => void): void-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -519,6 +551,8 @@ on(event: 'response', callback: Callback<HttpResponse>): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Task-on(event: 'response', callback: Callback<HttpResponse>): void--><!--Device-Task-on(event: 'response', callback: Callback<HttpResponse>): void-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 **参数：**
@@ -549,6 +583,8 @@ on(event: 'faultOccur', callback: Callback<Faults>): void
 > 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 **起始版本：** 20
+
+<!--Device-Task-on(event: 'faultOccur', callback: Callback<Faults>): void--><!--Device-Task-on(event: 'faultOccur', callback: Callback<Faults>): void-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -581,6 +617,8 @@ on(event: 'wait', callback: Callback<WaitingReason>): void
 
 **起始版本：** 20
 
+<!--Device-Task-on(event: 'wait', callback: Callback<WaitingReason>): void--><!--Device-Task-on(event: 'wait', callback: Callback<WaitingReason>): void-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 **参数：**
@@ -605,6 +643,8 @@ pause(callback: AsyncCallback<void>): void
 暂停任务，可以暂停正在等待/正在运行/正在重试的任务，已暂停的任务可被[resume](#resume)恢复。使用callback异步回调。
 
 **起始版本：** 10
+
+<!--Device-Task-pause(callback: AsyncCallback<void>): void--><!--Device-Task-pause(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -634,6 +674,8 @@ pause(): Promise<void>
 
 **起始版本：** 10
 
+<!--Device-Task-pause(): Promise<void>--><!--Device-Task-pause(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 **返回值：**
@@ -661,6 +703,8 @@ resume(callback: AsyncCallback<void>): void
 **起始版本：** 10
 
 **需要权限：** ohos.permission.INTERNET
+
+<!--Device-Task-resume(callback: AsyncCallback<void>): void--><!--Device-Task-resume(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -693,6 +737,8 @@ resume(): Promise<void>
 
 **需要权限：** ohos.permission.INTERNET
 
+<!--Device-Task-resume(): Promise<void>--><!--Device-Task-resume(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 **返回值：**
@@ -719,6 +765,8 @@ setMaxSpeed(speed: number): Promise<void>
 设置任务每秒能传输的字节数上限。使用Promise异步回调。
 
 **起始版本：** 18
+
+<!--Device-Task-setMaxSpeed(speed: long): Promise<void>--><!--Device-Task-setMaxSpeed(speed: long): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -762,7 +810,9 @@ start(callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.INTERNET
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Task-start(callback: AsyncCallback<void>): void--><!--Device-Task-start(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -803,7 +853,9 @@ start(): Promise<void>
 
 **需要权限：** ohos.permission.INTERNET
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Task-start(): Promise<void>--><!--Device-Task-start(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -831,7 +883,9 @@ stop(callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Task-stop(callback: AsyncCallback<void>): void--><!--Device-Task-stop(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -860,7 +914,9 @@ stop(): Promise<void>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Task-stop(): Promise<void>--><!--Device-Task-stop(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -889,7 +945,9 @@ config: Config
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Task-config: Config--><!--Device-Task-config: Config-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -905,6 +963,8 @@ readonly tid: string
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Task-readonly tid: string--><!--Device-Task-readonly tid: string-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent

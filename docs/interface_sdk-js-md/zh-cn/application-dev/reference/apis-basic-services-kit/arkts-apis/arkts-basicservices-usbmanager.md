@@ -20,6 +20,8 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace usbManager--><!--Device-unnamed-declare namespace usbManager-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## 导入模块

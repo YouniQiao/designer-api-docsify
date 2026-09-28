@@ -12,6 +12,8 @@ export interface Mesh extends SceneResource
 
 **起始版本：** 12
 
+<!--Device-unnamed-export interface Mesh extends SceneResource--><!--Device-unnamed-export interface Mesh extends SceneResource-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## aabb
@@ -25,6 +27,8 @@ readonly aabb: Aabb
 **类型：** [Aabb](arkts-arkgraphics3d-scenetypes-aabb-i.md)
 
 **起始版本：** 12
+
+<!--Device-Mesh-readonly aabb: Aabb--><!--Device-Mesh-readonly aabb: Aabb-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -40,6 +44,8 @@ materialOverride?: Material
 
 **起始版本：** 12
 
+<!--Device-Mesh-materialOverride?: Material--><!--Device-Mesh-materialOverride?: Material-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## subMeshes
@@ -53,5 +59,7 @@ readonly subMeshes: SubMesh[]
 **类型：** [SubMesh](arkts-arkgraphics3d-sceneresources-submesh-i.md)[]
 
 **起始版本：** 12
+
+<!--Device-Mesh-readonly subMeshes: SubMesh[]--><!--Device-Mesh-readonly subMeshes: SubMesh[]-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

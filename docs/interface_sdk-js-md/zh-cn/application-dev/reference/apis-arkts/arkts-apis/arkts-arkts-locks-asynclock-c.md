@@ -10,6 +10,8 @@ class AsyncLock
 
 **装饰器类型：** @Sendable
 
+<!--Device-locks-class AsyncLock--><!--Device-locks-class AsyncLock-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -30,6 +32,8 @@ constructor()
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AsyncLock-constructor()--><!--Device-AsyncLock-constructor()-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## lockAsync
@@ -43,6 +47,8 @@ lockAsync<T>(callback: AsyncLockCallback<T>): Promise<T>
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AsyncLock-lockAsync<T>(callback: AsyncLockCallback<T>): Promise<T>--><!--Device-AsyncLock-lockAsync<T>(callback: AsyncLockCallback<T>): Promise<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -77,6 +83,8 @@ lockAsync<T>(callback: AsyncLockCallback<T>, mode: AsyncLockMode): Promise<T>
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AsyncLock-lockAsync<T>(callback: AsyncLockCallback<T>, mode: AsyncLockMode): Promise<T>--><!--Device-AsyncLock-lockAsync<T>(callback: AsyncLockCallback<T>, mode: AsyncLockMode): Promise<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -114,6 +122,8 @@ lockAsync<T, U>(callback: AsyncLockCallback<T>, mode: AsyncLockMode,
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AsyncLock-lockAsync<T, U>(callback: AsyncLockCallback<T>, mode: AsyncLockMode,        options: AsyncLockOptions<U>): Promise<T | U>--><!--Device-AsyncLock-lockAsync<T, U>(callback: AsyncLockCallback<T>, mode: AsyncLockMode,        options: AsyncLockOptions<U>): Promise<T | U>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -149,6 +159,8 @@ static query(name: string): AsyncLockState
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AsyncLock-static query(name: string): AsyncLockState--><!--Device-AsyncLock-static query(name: string): AsyncLockState-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -181,6 +193,8 @@ static queryAll(): AsyncLockState[]
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AsyncLock-static queryAll(): AsyncLockState[]--><!--Device-AsyncLock-static queryAll(): AsyncLockState[]-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -200,6 +214,8 @@ static request(name: string): AsyncLock
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AsyncLock-static request(name: string): AsyncLock--><!--Device-AsyncLock-static request(name: string): AsyncLock-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -228,5 +244,7 @@ readonly name: string
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AsyncLock-readonly name: string--><!--Device-AsyncLock-readonly name: string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

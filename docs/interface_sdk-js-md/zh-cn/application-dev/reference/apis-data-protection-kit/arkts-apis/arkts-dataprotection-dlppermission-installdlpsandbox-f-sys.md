@@ -22,6 +22,8 @@ DLP文件管理应用打开受保护文件前，需要先为目标应用安装DL
 
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
 
+<!--Device-dlpPermission-function installDLPSandbox(bundleName: string, access: DLPFileAccess, userId: number, uri: string): Promise<DLPSandboxInfo>--><!--Device-dlpPermission-function installDLPSandbox(bundleName: string, access: DLPFileAccess, userId: number, uri: string): Promise<DLPSandboxInfo>-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **系统接口：** 此接口为系统接口。
@@ -84,6 +86,8 @@ DLP文件管理应用打开受保护文件前，需要先为目标应用安装DL
 **起始版本：** 10
 
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
+
+<!--Device-dlpPermission-function installDLPSandbox(bundleName: string, access: DLPFileAccess, userId: number, uri: string, callback: AsyncCallback<DLPSandboxInfo>): void--><!--Device-dlpPermission-function installDLPSandbox(bundleName: string, access: DLPFileAccess, userId: number, uri: string, callback: AsyncCallback<DLPSandboxInfo>): void-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 

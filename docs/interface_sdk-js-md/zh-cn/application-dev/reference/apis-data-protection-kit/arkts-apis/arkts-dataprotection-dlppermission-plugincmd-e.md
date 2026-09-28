@@ -8,6 +8,8 @@ export enum PluginCmd
 
 **起始版本：** 26.0.1
 
+<!--Device-dlpPermission-export enum PluginCmd--><!--Device-dlpPermission-export enum PluginCmd-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## CMD_BASE_INSTALL_PLUGIN
@@ -21,6 +23,8 @@ CMD_BASE_INSTALL_PLUGIN = 0x1001
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PluginCmd-CMD_BASE_INSTALL_PLUGIN = 0x1001--><!--Device-PluginCmd-CMD_BASE_INSTALL_PLUGIN = 0x1001-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -36,6 +40,8 @@ CMD_BASE_INSTALL_CONFIG_FILE = 0x1002
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PluginCmd-CMD_BASE_INSTALL_CONFIG_FILE = 0x1002--><!--Device-PluginCmd-CMD_BASE_INSTALL_CONFIG_FILE = 0x1002-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## CMD_BASE_INSTALL_SUFFIX_FILTER_FILE
@@ -49,6 +55,8 @@ CMD_BASE_INSTALL_SUFFIX_FILTER_FILE = 0x1003
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PluginCmd-CMD_BASE_INSTALL_SUFFIX_FILTER_FILE = 0x1003--><!--Device-PluginCmd-CMD_BASE_INSTALL_SUFFIX_FILTER_FILE = 0x1003-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -64,6 +72,8 @@ CMD_BASE_UNINSTALL_PLUGIN = 0x1004
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PluginCmd-CMD_BASE_UNINSTALL_PLUGIN = 0x1004--><!--Device-PluginCmd-CMD_BASE_UNINSTALL_PLUGIN = 0x1004-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## CMD_BASE_QUERY_TRANSPARENT_CRYPTO_STATUS
@@ -78,6 +88,8 @@ CMD_BASE_QUERY_TRANSPARENT_CRYPTO_STATUS = 0x1005
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PluginCmd-CMD_BASE_QUERY_TRANSPARENT_CRYPTO_STATUS = 0x1005--><!--Device-PluginCmd-CMD_BASE_QUERY_TRANSPARENT_CRYPTO_STATUS = 0x1005-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## CMD_EVENT_REPORT_COMMON
@@ -91,5 +103,7 @@ CMD_EVENT_REPORT_COMMON = 0x2001
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PluginCmd-CMD_EVENT_REPORT_COMMON = 0x2001--><!--Device-PluginCmd-CMD_EVENT_REPORT_COMMON = 0x2001-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention

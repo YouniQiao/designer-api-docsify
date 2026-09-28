@@ -8,6 +8,8 @@ export enum HuksKeyAlg
 
 **起始版本：** 8
 
+<!--Device-huks-export enum HuksKeyAlg--><!--Device-huks-export enum HuksKeyAlg-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Core
 
 ## HUKS_ALG_RSA
@@ -23,6 +25,8 @@ HUKS_ALG_RSA = 1
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HuksKeyAlg-HUKS_ALG_RSA = 1--><!--Device-HuksKeyAlg-HUKS_ALG_RSA = 1-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core
@@ -42,6 +46,8 @@ HUKS_ALG_ECC = 2
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-HuksKeyAlg-HUKS_ALG_ECC = 2--><!--Device-HuksKeyAlg-HUKS_ALG_ECC = 2-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core
 - API版本8-11：SystemCapability.Security.Huks.Extension
@@ -59,6 +65,8 @@ HUKS_ALG_DSA = 3
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HuksKeyAlg-HUKS_ALG_DSA = 3--><!--Device-HuksKeyAlg-HUKS_ALG_DSA = 3-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core
@@ -78,6 +86,8 @@ HUKS_ALG_AES = 20
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-HuksKeyAlg-HUKS_ALG_AES = 20--><!--Device-HuksKeyAlg-HUKS_ALG_AES = 20-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Core
 
 ## HUKS_ALG_HMAC
@@ -93,6 +103,8 @@ HUKS_ALG_HMAC = 50
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HuksKeyAlg-HUKS_ALG_HMAC = 50--><!--Device-HuksKeyAlg-HUKS_ALG_HMAC = 50-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core
@@ -112,6 +124,8 @@ HUKS_ALG_HKDF = 51
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-HuksKeyAlg-HUKS_ALG_HKDF = 51--><!--Device-HuksKeyAlg-HUKS_ALG_HKDF = 51-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core
 - API版本8-11：SystemCapability.Security.Huks.Extension
@@ -129,6 +143,8 @@ HUKS_ALG_PBKDF2 = 52
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HuksKeyAlg-HUKS_ALG_PBKDF2 = 52--><!--Device-HuksKeyAlg-HUKS_ALG_PBKDF2 = 52-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core
@@ -148,6 +164,8 @@ HUKS_ALG_ECDH = 100
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-HuksKeyAlg-HUKS_ALG_ECDH = 100--><!--Device-HuksKeyAlg-HUKS_ALG_ECDH = 100-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core
 - API版本8-11：SystemCapability.Security.Huks.Extension
@@ -165,6 +183,8 @@ HUKS_ALG_X25519 = 101
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HuksKeyAlg-HUKS_ALG_X25519 = 101--><!--Device-HuksKeyAlg-HUKS_ALG_X25519 = 101-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core
@@ -184,6 +204,8 @@ HUKS_ALG_ED25519 = 102
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-HuksKeyAlg-HUKS_ALG_ED25519 = 102--><!--Device-HuksKeyAlg-HUKS_ALG_ED25519 = 102-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core
 - API版本8-11：SystemCapability.Security.Huks.Extension
@@ -201,6 +223,8 @@ HUKS_ALG_DH = 103
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HuksKeyAlg-HUKS_ALG_DH = 103--><!--Device-HuksKeyAlg-HUKS_ALG_DH = 103-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core
@@ -220,6 +244,8 @@ HUKS_ALG_SM2 = 150
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-HuksKeyAlg-HUKS_ALG_SM2 = 150--><!--Device-HuksKeyAlg-HUKS_ALG_SM2 = 150-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core
 - API版本9-11：SystemCapability.Security.Huks.Extension
@@ -237,6 +263,8 @@ HUKS_ALG_SM3 = 151
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HuksKeyAlg-HUKS_ALG_SM3 = 151--><!--Device-HuksKeyAlg-HUKS_ALG_SM3 = 151-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core
@@ -256,6 +284,8 @@ HUKS_ALG_SM4 = 152
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-HuksKeyAlg-HUKS_ALG_SM4 = 152--><!--Device-HuksKeyAlg-HUKS_ALG_SM4 = 152-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core
 - API版本9-11：SystemCapability.Security.Huks.Extension
@@ -274,6 +304,8 @@ HUKS_ALG_DES = 160
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-HuksKeyAlg-HUKS_ALG_DES = 160--><!--Device-HuksKeyAlg-HUKS_ALG_DES = 160-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Core
 
 ## HUKS_ALG_3DES
@@ -289,6 +321,8 @@ HUKS_ALG_3DES = 161
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HuksKeyAlg-HUKS_ALG_3DES = 161--><!--Device-HuksKeyAlg-HUKS_ALG_3DES = 161-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Core
 
@@ -306,6 +340,8 @@ HUKS_ALG_CMAC = 162
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-HuksKeyAlg-HUKS_ALG_CMAC = 162--><!--Device-HuksKeyAlg-HUKS_ALG_CMAC = 162-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Core
 
 ## HUKS_ALG_ML_KEM
@@ -322,6 +358,8 @@ ML-KEM算法
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-HuksKeyAlg-HUKS_ALG_ML_KEM = 200--><!--Device-HuksKeyAlg-HUKS_ALG_ML_KEM = 200-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Core
 
 ## HUKS_ALG_ML_DSA
@@ -337,5 +375,7 @@ ML-DSA算法
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-HuksKeyAlg-HUKS_ALG_ML_DSA = 201--><!--Device-HuksKeyAlg-HUKS_ALG_ML_DSA = 201-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Core

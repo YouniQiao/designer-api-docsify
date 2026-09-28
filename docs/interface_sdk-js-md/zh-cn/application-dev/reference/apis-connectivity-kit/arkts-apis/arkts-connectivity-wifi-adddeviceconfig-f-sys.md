@@ -22,6 +22,8 @@ function addDeviceConfig(config: WifiDeviceConfig): Promise<number>
 
 **需要权限：** ohos.permission.SET_WIFI_INFO and ohos.permission.SET_WIFI_CONFIG
 
+<!--Device-wifi-function addDeviceConfig(config: WifiDeviceConfig): Promise<number>--><!--Device-wifi-function addDeviceConfig(config: WifiDeviceConfig): Promise<number>-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。
@@ -89,6 +91,8 @@ function addDeviceConfig(config: WifiDeviceConfig, callback: AsyncCallback<numbe
 **替代接口：** [addDeviceConfig](arkts-connectivity-wifimanager-adddeviceconfig-f.md)
 
 **需要权限：** ohos.permission.SET_WIFI_INFO and ohos.permission.SET_WIFI_CONFIG
+
+<!--Device-wifi-function addDeviceConfig(config: WifiDeviceConfig, callback: AsyncCallback<number>): void--><!--Device-wifi-function addDeviceConfig(config: WifiDeviceConfig, callback: AsyncCallback<number>): void-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 

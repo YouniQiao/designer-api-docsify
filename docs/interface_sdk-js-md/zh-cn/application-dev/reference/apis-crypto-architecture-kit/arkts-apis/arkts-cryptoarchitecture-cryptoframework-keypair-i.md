@@ -16,6 +16,8 @@ interface KeyPair
 
 **起始版本：** 9
 
+<!--Device-cryptoFramework-interface KeyPair--><!--Device-cryptoFramework-interface KeyPair-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
 - API版本9-11：SystemCapability.Security.CryptoFramework
@@ -38,7 +40,9 @@ readonly priKey: PriKey
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-KeyPair-readonly priKey: PriKey--><!--Device-KeyPair-readonly priKey: PriKey-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -56,7 +60,9 @@ readonly pubKey: PubKey
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-KeyPair-readonly pubKey: PubKey--><!--Device-KeyPair-readonly pubKey: PubKey-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey

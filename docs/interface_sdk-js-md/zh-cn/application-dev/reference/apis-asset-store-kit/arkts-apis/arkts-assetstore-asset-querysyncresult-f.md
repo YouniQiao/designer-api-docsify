@@ -16,6 +16,8 @@ function querySyncResult(query: AssetMap): Promise<SyncResult>
 
 **起始版本：** 20
 
+<!--Device-asset-function querySyncResult(query: AssetMap): Promise<SyncResult>--><!--Device-asset-function querySyncResult(query: AssetMap): Promise<SyncResult>-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 **参数：**

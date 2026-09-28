@@ -8,6 +8,8 @@ export interface ApplicationInfo
 
 **起始版本：** 9
 
+<!--Device-unnamed-export interface ApplicationInfo--><!--Device-unnamed-export interface ApplicationInfo-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## applicationReservedFlag
@@ -24,6 +26,8 @@ readonly applicationReservedFlag?: bundleManager.ApplicationReservedFlag
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ApplicationInfo-readonly applicationReservedFlag?: bundleManager.ApplicationReservedFlag--><!--Device-ApplicationInfo-readonly applicationReservedFlag?: bundleManager.ApplicationReservedFlag-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -39,6 +43,8 @@ readonly flags?: number
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-ApplicationInfo-readonly flags?: int--><!--Device-ApplicationInfo-readonly flags?: int-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

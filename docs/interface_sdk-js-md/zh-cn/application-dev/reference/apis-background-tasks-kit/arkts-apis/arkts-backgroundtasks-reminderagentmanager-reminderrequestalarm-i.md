@@ -12,6 +12,8 @@ ReminderRequestAlarm extends ReminderRequest
 
 **起始版本：** 9
 
+<!--Device-reminderAgentManager-interface ReminderRequestAlarm extends ReminderRequest--><!--Device-reminderAgentManager-interface ReminderRequestAlarm extends ReminderRequest-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## 导入模块
@@ -32,6 +34,8 @@ daysOfWeek?: Array<number>
 
 **起始版本：** 9
 
+<!--Device-ReminderRequestAlarm-daysOfWeek?: Array<int>--><!--Device-ReminderRequestAlarm-daysOfWeek?: Array<int>-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## hour
@@ -46,6 +50,8 @@ hour: number
 
 **起始版本：** 9
 
+<!--Device-ReminderRequestAlarm-hour: int--><!--Device-ReminderRequestAlarm-hour: int-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## minute
@@ -59,5 +65,7 @@ minute: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-ReminderRequestAlarm-minute: int--><!--Device-ReminderRequestAlarm-minute: int-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent

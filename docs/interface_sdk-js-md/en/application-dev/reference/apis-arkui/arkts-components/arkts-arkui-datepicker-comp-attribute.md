@@ -4,15 +4,17 @@
 declare class DatePickerAttribute extends CommonMethod<DatePickerAttribute>
 ```
 
-In addition to the [universal attributes](arkts-arkui-common-comp.md#common), the following attributes are supported.
+In addition to the [universal attributes](arkts-arkui-common-comp.md), the following attributes are supported.
 
-In addition to the [universal events](arkts-arkui-common-comp.md#common), the following events are supported.
+In addition to the [universal events](arkts-arkui-common-comp.md), the following events are supported.
 
 @extends CommonMethod [since 8 - 10] @extends CommonMethod&lt;DatePickerAttribute&gt; [since 11]
 
 **Inheritance/Implementation:** DatePickerAttribute extends CommonMethod<DatePickerAttribute>
 
 **Since:** 8
+
+<!--Device-unnamed-declare class DatePickerAttribute extends CommonMethod<DatePickerAttribute>--><!--Device-unnamed-declare class DatePickerAttribute extends CommonMethod<DatePickerAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -29,6 +31,8 @@ Sets whether to enable cyclic scrolling.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-DatePickerAttribute-canLoop(isLoop: Optional<boolean>): DatePickerAttribute--><!--Device-DatePickerAttribute-canLoop(isLoop: Optional<boolean>): DatePickerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -52,6 +56,8 @@ Sets the sensitivity to the digital crown rotation.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-DatePickerAttribute-digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>): DatePickerAttribute--><!--Device-DatePickerAttribute-digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>): DatePickerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -73,6 +79,8 @@ Sets the text style for edge items (the second item above or below the selected 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DatePickerAttribute-disappearTextStyle(value: PickerTextStyle): DatePickerAttribute--><!--Device-DatePickerAttribute-disappearTextStyle(value: PickerTextStyle): DatePickerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -98,6 +106,8 @@ Sets the text style for edge items (the second item above or below the selected 
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-DatePickerAttribute-disappearTextStyle(style: Optional<PickerTextStyle>): DatePickerAttribute--><!--Device-DatePickerAttribute-disappearTextStyle(style: Optional<PickerTextStyle>): DatePickerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -119,6 +129,8 @@ Sets whether to enable haptic feedback.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-DatePickerAttribute-enableHapticFeedback(enable: Optional<boolean>): DatePickerAttribute--><!--Device-DatePickerAttribute-enableHapticFeedback(enable: Optional<boolean>): DatePickerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -146,6 +158,8 @@ Sets whether to display dates in lunar calendar format.
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DatePickerAttribute-lunar(value: boolean): DatePickerAttribute--><!--Device-DatePickerAttribute-lunar(value: boolean): DatePickerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -176,6 +190,8 @@ Sets whether to display dates in lunar calendar format. Compared with [lunar](#l
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-DatePickerAttribute-lunar(isLunar: Optional<boolean>): DatePickerAttribute--><!--Device-DatePickerAttribute-lunar(isLunar: Optional<boolean>): DatePickerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -197,6 +213,8 @@ Triggered when the options are completely settled at the selected position after
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DatePickerAttribute-onDateChange(callback: Callback<Date>): DatePickerAttribute--><!--Device-DatePickerAttribute-onDateChange(callback: Callback<Date>): DatePickerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -226,6 +244,8 @@ Triggered when the date picker snaps to the selected item. This event cannot be 
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-DatePickerAttribute-onDateChange(callback: Optional<Callback<Date>>): DatePickerAttribute--><!--Device-DatePickerAttribute-onDateChange(callback: Optional<Callback<Date>>): DatePickerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -247,6 +267,8 @@ Sets the text style for the selected item.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DatePickerAttribute-selectedTextStyle(value: PickerTextStyle): DatePickerAttribute--><!--Device-DatePickerAttribute-selectedTextStyle(value: PickerTextStyle): DatePickerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -272,6 +294,8 @@ Sets the text style for the selected item. Compared to [selectedTextStyle&lt;sup
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-DatePickerAttribute-selectedTextStyle(style: Optional<PickerTextStyle>): DatePickerAttribute--><!--Device-DatePickerAttribute-selectedTextStyle(style: Optional<PickerTextStyle>): DatePickerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -293,6 +317,8 @@ Sets the text style for candidate items (the first item immediately above or bel
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DatePickerAttribute-textStyle(value: PickerTextStyle): DatePickerAttribute--><!--Device-DatePickerAttribute-textStyle(value: PickerTextStyle): DatePickerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -317,6 +343,8 @@ Sets the text style for candidate items (the first item immediately above or bel
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-DatePickerAttribute-textStyle(style: Optional<PickerTextStyle>): DatePickerAttribute--><!--Device-DatePickerAttribute-textStyle(style: Optional<PickerTextStyle>): DatePickerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -343,6 +371,8 @@ This API is supported since API version 8 and deprecated since API version 10. Y
 **Substitutes:** [onDateChange](#ondatechange)(callback: Callback&lt;Date&gt;)
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-DatePickerAttribute-onChange(callback: (value: DatePickerResult) => void): DatePickerAttribute--><!--Device-DatePickerAttribute-onChange(callback: (value: DatePickerResult) => void): DatePickerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

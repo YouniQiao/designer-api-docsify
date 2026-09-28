@@ -12,6 +12,8 @@ export interface PluralRulesOptions
 
 **替代接口：** [Intl.PluralRulesOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules#options)
 
+<!--Device-intl-export interface PluralRulesOptions--><!--Device-intl-export interface PluralRulesOptions-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## 导入模块
@@ -42,6 +44,8 @@ localeMatcher?: string
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-PluralRulesOptions-localeMatcher?: string--><!--Device-PluralRulesOptions-localeMatcher?: string-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## maximumFractionDigits
@@ -65,6 +69,8 @@ maximumFractionDigits?: number
 **替代接口：** [Intl.PluralRulesOptions.maximumFractionDigits](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#maximumfractiondigits)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PluralRulesOptions-maximumFractionDigits?: int--><!--Device-PluralRulesOptions-maximumFractionDigits?: int-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -90,6 +96,8 @@ maximumSignificantDigits?: number
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-PluralRulesOptions-maximumSignificantDigits?: int--><!--Device-PluralRulesOptions-maximumSignificantDigits?: int-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## minimumFractionDigits
@@ -113,6 +121,8 @@ minimumFractionDigits?: number
 **替代接口：** [Intl.PluralRulesOptions.minimumFractionDigits](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#minimumfractiondigits)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PluralRulesOptions-minimumFractionDigits?: int--><!--Device-PluralRulesOptions-minimumFractionDigits?: int-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -138,6 +148,8 @@ minimumIntegerDigits?: number
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-PluralRulesOptions-minimumIntegerDigits?: int--><!--Device-PluralRulesOptions-minimumIntegerDigits?: int-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## minimumSignificantDigits
@@ -161,6 +173,8 @@ minimumSignificantDigits?: number
 **替代接口：** [Intl.PluralRulesOptions.minimumSignificantDigits](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#minimumsignificantdigits)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PluralRulesOptions-minimumSignificantDigits?: int--><!--Device-PluralRulesOptions-minimumSignificantDigits?: int-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -187,5 +201,7 @@ type?: string
 **替代接口：** [Intl.PluralRulesOptions.type](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules#type)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PluralRulesOptions-type?: string--><!--Device-PluralRulesOptions-type?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n

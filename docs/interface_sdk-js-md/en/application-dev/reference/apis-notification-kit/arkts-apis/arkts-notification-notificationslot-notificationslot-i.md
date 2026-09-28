@@ -8,6 +8,8 @@ The **NotificationSlot** module provides APIs for defining the notification slot
 
 **Since:** 7
 
+<!--Device-unnamed-export interface NotificationSlot--><!--Device-unnamed-export interface NotificationSlot-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 ## badgeFlag
@@ -24,6 +26,8 @@ Whether to display the badge. The default value is **true**.
 **Type:** boolean
 
 **Since:** 7
+
+<!--Device-NotificationSlot-badgeFlag?: boolean--><!--Device-NotificationSlot-badgeFlag?: boolean-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -42,6 +46,8 @@ Whether to bypass Do Not Disturb mode in the system. The default value is **fals
 
 **Since:** 7
 
+<!--Device-NotificationSlot-bypassDnd?: boolean--><!--Device-NotificationSlot-bypassDnd?: boolean-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 ## desc
@@ -55,6 +61,8 @@ Description of the notification channel. The size cannot exceed 243 bytes, and t
 **Type:** string
 
 **Since:** 7
+
+<!--Device-NotificationSlot-desc?: string--><!--Device-NotificationSlot-desc?: string-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -73,6 +81,8 @@ Whether to allow notifications of this slot type to be published.
 
 **Since:** 9
 
+<!--Device-NotificationSlot-readonly enabled?: boolean--><!--Device-NotificationSlot-readonly enabled?: boolean-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 ## lightColor
@@ -86,6 +96,8 @@ Indicator color of the notification. This is a reserved capability and is not su
 **Type:** number
 
 **Since:** 7
+
+<!--Device-NotificationSlot-lightColor?: int--><!--Device-NotificationSlot-lightColor?: int-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -104,6 +116,8 @@ Whether to enable the light. The default value is **false**.
 
 **Since:** 7
 
+<!--Device-NotificationSlot-lightEnabled?: boolean--><!--Device-NotificationSlot-lightEnabled?: boolean-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 ## lockscreenVisibility
@@ -117,6 +131,8 @@ Mode for displaying the notification on the lock screen. This is a reserved capa
 **Type:** number
 
 **Since:** 7
+
+<!--Device-NotificationSlot-lockscreenVisibility?: int--><!--Device-NotificationSlot-lockscreenVisibility?: int-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -132,6 +148,8 @@ Notification level, which is used to describe the display priority and alert int
 
 **Since:** 20
 
+<!--Device-NotificationSlot-notificationLevel?: notificationManager.SlotLevel--><!--Device-NotificationSlot-notificationLevel?: notificationManager.SlotLevel-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 ## notificationType
@@ -146,6 +164,8 @@ Slot type. Different slot types have different notification reminder types.
 
 **Since:** 11
 
+<!--Device-NotificationSlot-notificationType?: notificationManager.SlotType--><!--Device-NotificationSlot-notificationType?: notificationManager.SlotType-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 ## sound
@@ -159,6 +179,8 @@ File name of the custom ringtone for notifications from this channel. The file i
 **Type:** string
 
 **Since:** 7
+
+<!--Device-NotificationSlot-sound?: string--><!--Device-NotificationSlot-sound?: string-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -177,6 +199,8 @@ Whether to enable vibration. The default value is **false**.
 
 **Since:** 7
 
+<!--Device-NotificationSlot-vibrationEnabled?: boolean--><!--Device-NotificationSlot-vibrationEnabled?: boolean-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 ## vibrationValues
@@ -190,6 +214,8 @@ Vibration mode of the notification. This is a reserved capability and is not sup
 **Type:** Array&lt;number&gt;
 
 **Since:** 7
+
+<!--Device-NotificationSlot-vibrationValues?: Array<long>--><!--Device-NotificationSlot-vibrationValues?: Array<long>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -209,6 +235,8 @@ Notification level.
 
 **Substitutes:** [notificationLevel](#notificationlevel)
 
+<!--Device-NotificationSlot-level?: notification.SlotLevel--><!--Device-NotificationSlot-level?: notification.SlotLevel-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 ## type
@@ -226,5 +254,7 @@ Channel type.
 **Deprecated since:** 11
 
 **Substitutes:** [notificationType](#notificationtype)
+
+<!--Device-NotificationSlot-type?: notification.SlotType--><!--Device-NotificationSlot-type?: notification.SlotType-End-->
 
 **System capability:** SystemCapability.Notification.Notification

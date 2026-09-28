@@ -20,6 +20,8 @@ function getTimezone(callback: AsyncCallback<string>): void
 
 **替代接口：** [getTimezone](arkts-basicservices-systemdatetime-gettimezone-f.md)(callback: AsyncCallback&lt;string&gt;)
 
+<!--Device-systemTime-function getTimezone(callback: AsyncCallback<string>): void--><!--Device-systemTime-function getTimezone(callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Time
 
 **参数：**
@@ -69,6 +71,8 @@ function getTimezone(): Promise<string>
 **废弃版本：** 9
 
 **替代接口：** [getTimezone](arkts-basicservices-systemdatetime-gettimezone-f.md)()
+
+<!--Device-systemTime-function getTimezone(): Promise<string>--><!--Device-systemTime-function getTimezone(): Promise<string>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Time
 

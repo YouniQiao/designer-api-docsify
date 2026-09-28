@@ -22,6 +22,8 @@ function getPublishedFormInfoById(formId: string): Promise<formInfo.FormInfo>
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-formProvider-function getPublishedFormInfoById(formId: string): Promise<formInfo.FormInfo>--><!--Device-formProvider-function getPublishedFormInfoById(formId: string): Promise<formInfo.FormInfo>-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **参数：**

@@ -8,6 +8,8 @@ Provides APIs to obtain the manual exposure range supported.
 
 **起始版本：** 24
 
+<!--Device-camera-interface ManualExposureQuery--><!--Device-camera-interface ManualExposureQuery-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
@@ -25,6 +27,8 @@ getSupportedExposureRange(): Array<number>
 Obtains the supported manual exposure durations.
 
 **起始版本：** 11
+
+<!--Device-ManualExposureQuery-getSupportedExposureRange(): Array<int>--><!--Device-ManualExposureQuery-getSupportedExposureRange(): Array<int>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

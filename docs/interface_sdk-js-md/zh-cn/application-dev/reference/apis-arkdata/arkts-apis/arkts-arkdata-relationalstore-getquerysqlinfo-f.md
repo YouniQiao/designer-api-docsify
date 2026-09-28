@@ -16,6 +16,8 @@ function getQuerySqlInfo(predicates: RdbPredicates, columns?: Array<string>):Sql
 
 **起始版本：** 20
 
+<!--Device-relationalStore-function getQuerySqlInfo(predicates: RdbPredicates, columns?: Array<string>):SqlInfo--><!--Device-relationalStore-function getQuerySqlInfo(predicates: RdbPredicates, columns?: Array<string>):SqlInfo-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**

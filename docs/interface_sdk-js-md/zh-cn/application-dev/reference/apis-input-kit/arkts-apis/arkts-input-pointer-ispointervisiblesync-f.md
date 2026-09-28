@@ -16,6 +16,8 @@ function isPointerVisibleSync(): boolean
 
 **起始版本：** 10
 
+<!--Device-pointer-function isPointerVisibleSync(): boolean--><!--Device-pointer-function isPointerVisibleSync(): boolean-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 **返回值：**

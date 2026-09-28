@@ -18,6 +18,8 @@ function reportNetDisconnected(netHandle: NetHandle, callback: AsyncCallback<voi
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO and ohos.permission.INTERNET
 
+<!--Device-connection-function reportNetDisconnected(netHandle: NetHandle, callback: AsyncCallback<void>): void--><!--Device-connection-function reportNetDisconnected(netHandle: NetHandle, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**
@@ -72,6 +74,8 @@ function reportNetDisconnected(netHandle: NetHandle): Promise<void>
 **起始版本：** 8
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO and ohos.permission.INTERNET
+
+<!--Device-connection-function reportNetDisconnected(netHandle: NetHandle): Promise<void>--><!--Device-connection-function reportNetDisconnected(netHandle: NetHandle): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 

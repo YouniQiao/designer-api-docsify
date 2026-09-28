@@ -21,6 +21,8 @@ function lockMission(missionId: number, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
+<!--Device-missionManager-function lockMission(missionId: number, callback: AsyncCallback<void>): void--><!--Device-missionManager-function lockMission(missionId: number, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -72,6 +74,8 @@ function lockMission(missionId: number): Promise<void>
 **替代接口：** [lockMission](arkts-ability-missionmanager-lockmission-f-sys.md)
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
+
+<!--Device-missionManager-function lockMission(missionId: number): Promise<void>--><!--Device-missionManager-function lockMission(missionId: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 

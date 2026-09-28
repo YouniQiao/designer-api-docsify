@@ -20,6 +20,8 @@ function getLocationPolicy(admin: Want): LocationPolicy
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-locationManager-function getLocationPolicy(admin: Want): LocationPolicy--><!--Device-locationManager-function getLocationPolicy(admin: Want): LocationPolicy-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -79,6 +81,8 @@ function getLocationPolicy(admin: Want | null): LocationPolicy
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_LOCATION
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-locationManager-function getLocationPolicy(admin: Want | null): LocationPolicy--><!--Device-locationManager-function getLocationPolicy(admin: Want | null): LocationPolicy-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

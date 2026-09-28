@@ -18,6 +18,8 @@ function setCBConfig(options: CBConfigOptions, callback: AsyncCallback<void>): v
 
 **需要权限：** ohos.permission.RECEIVE_SMS
 
+<!--Device-sms-function setCBConfig(options: CBConfigOptions, callback: AsyncCallback<void>): void--><!--Device-sms-function setCBConfig(options: CBConfigOptions, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -73,6 +75,8 @@ function setCBConfig(options: CBConfigOptions): Promise<void>
 **起始版本：** 7
 
 **需要权限：** ohos.permission.RECEIVE_SMS
+
+<!--Device-sms-function setCBConfig(options: CBConfigOptions): Promise<void>--><!--Device-sms-function setCBConfig(options: CBConfigOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 

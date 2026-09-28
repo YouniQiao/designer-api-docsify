@@ -20,6 +20,8 @@ function getPhotoAccessHelper(context: Context): PhotoAccessHelper
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-sendablePhotoAccessHelper-function getPhotoAccessHelper(context: Context): PhotoAccessHelper--><!--Device-sendablePhotoAccessHelper-function getPhotoAccessHelper(context: Context): PhotoAccessHelper-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **参数：**

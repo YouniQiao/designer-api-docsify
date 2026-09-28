@@ -18,9 +18,9 @@
  <br>
  | Interface/类型 | 说明 |
  |---|---|
-| [PanelInfo](arkts-ime-inputmethod-panel-panelinfo-i.md) | 输入法面板属性信息接口，包含`type`（面板类型）和`flag`（面板状态类型，默认`FLAG_FIXED`）两个属性，用于描述一个输入法面板的类型和显示形态。 |
-| [PanelType](arkts-ime-inputmethod-panel-paneltype-e.md) | 输入法面板类型枚举，定义面板的类别：`SOFT_KEYBOARD`（软键盘，值为0）、`STATUS_BAR`（状态栏，值为1）。 |
-| [PanelFlag](arkts-ime-inputmethod-panel-panelflag-e.md) | 输入法面板状态类型枚举，定义面板的显示状态：`FLAG_FIXED`（固定态，值为0）、`FLAG_FLOATING`（悬浮态，值为1）、`FLAG_CANDIDATE`（候选词态，值为2）。候选词态面板的显隐需由开发者自行控制。 |
+| PanelInfo | 输入法面板属性信息接口，包含`type`（面板类型）和`flag`（面板状态类型，默认`FLAG_FIXED`）两个属性，用于描述一个输入法面板的类型和显示形态。 |
+| PanelType | 输入法面板类型枚举，定义面板的类别：`SOFT_KEYBOARD`（软键盘，值为0）、`STATUS_BAR`（状态栏，值为1）。 |
+| PanelFlag | 输入法面板状态类型枚举，定义面板的显示状态：`FLAG_FIXED`（固定态，值为0）、`FLAG_FLOATING`（悬浮态，值为1）、`FLAG_CANDIDATE`（候选词态，值为2）。候选词态面板的显隐需由开发者自行控制。 |
  <br>
  <br>本模块为纯数据定义模块，`PanelInfo`作为面板属性配置需与其他模块的API组合使用。典型组合为：在`@ohos.inputMethodEngine`模块中，通过
  `InputMethodAbility.createPanel()`创建面板时传入`PanelInfo`指定面板类型和状态。

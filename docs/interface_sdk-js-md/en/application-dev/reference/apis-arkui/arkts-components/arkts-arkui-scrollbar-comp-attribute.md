@@ -4,11 +4,13 @@
 declare class ScrollBarAttribute extends CommonMethod<ScrollBarAttribute>
 ```
 
-In addition to the [universal attributes](arkts-arkui-common-comp.md#common), the following attributes are supported.
+In addition to the [universal attributes](arkts-arkui-common-comp.md), the following attributes are supported.
 
 **Inheritance/Implementation:** ScrollBarAttribute extends CommonMethod<ScrollBarAttribute>
 
 **Since:** 8
+
+<!--Device-unnamed-declare class ScrollBarAttribute extends CommonMethod<ScrollBarAttribute>--><!--Device-unnamed-declare class ScrollBarAttribute extends CommonMethod<ScrollBarAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,6 +27,8 @@ Sets whether the scrollbar supports nested scrolling. It is used in scenarios su
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-ScrollBarAttribute-enableNestedScroll(enabled: Optional<boolean>): ScrollBarAttribute--><!--Device-ScrollBarAttribute-enableNestedScroll(enabled: Optional<boolean>): ScrollBarAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,6 +51,8 @@ Sets the color of the scrollbar. This parameter takes effect only when the scrol
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-ScrollBarAttribute-scrollBarColor(color: Optional<ColorMetrics>): ScrollBarAttribute--><!--Device-ScrollBarAttribute-scrollBarColor(color: Optional<ColorMetrics>): ScrollBarAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

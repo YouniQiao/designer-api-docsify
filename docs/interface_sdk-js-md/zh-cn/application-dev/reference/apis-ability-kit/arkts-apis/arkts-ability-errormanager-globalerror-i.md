@@ -10,6 +10,8 @@ export interface GlobalError extends Error
 
 **起始版本：** 18
 
+<!--Device-errorManager-export interface GlobalError extends Error--><!--Device-errorManager-export interface GlobalError extends Error-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块
@@ -40,6 +42,8 @@ TaskPool线程中异常的instanceName标识规则：
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-GlobalError-instanceName: string--><!--Device-GlobalError-instanceName: string-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## instanceType
@@ -55,5 +59,7 @@ instanceType: InstanceType
 **起始版本：** 18
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-GlobalError-instanceType: InstanceType--><!--Device-GlobalError-instanceType: InstanceType-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

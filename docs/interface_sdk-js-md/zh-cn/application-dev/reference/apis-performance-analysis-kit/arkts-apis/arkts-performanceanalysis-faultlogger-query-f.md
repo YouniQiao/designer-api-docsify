@@ -20,6 +20,8 @@ function query(faultType: FaultType, callback: AsyncCallback<Array<FaultLogInfo>
 
 **替代接口：** [addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md)
 
+<!--Device-FaultLogger-function query(faultType: FaultType, callback: AsyncCallback<Array<FaultLogInfo>>): void--><!--Device-FaultLogger-function query(faultType: FaultType, callback: AsyncCallback<Array<FaultLogInfo>>): void-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
 **参数：**
@@ -85,6 +87,8 @@ function query(faultType: FaultType): Promise<Array<FaultLogInfo>>
 **废弃版本：** 18
 
 **替代接口：** [addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md)
+
+<!--Device-FaultLogger-function query(faultType: FaultType): Promise<Array<FaultLogInfo>>--><!--Device-FaultLogger-function query(faultType: FaultType): Promise<Array<FaultLogInfo>>-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.Hiview.FaultLogger
 

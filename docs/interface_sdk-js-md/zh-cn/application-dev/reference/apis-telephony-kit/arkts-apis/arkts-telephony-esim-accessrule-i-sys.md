@@ -10,6 +10,8 @@ export interface AccessRule
 
 **起始版本：** 20
 
+<!--Device-eSIM-export interface AccessRule--><!--Device-eSIM-export interface AccessRule-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ accessType: number
 
 **起始版本：** 20
 
+<!--Device-AccessRule-accessType: int--><!--Device-AccessRule-accessType: int-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -48,6 +52,8 @@ certificateHashHexStr: string
 
 **起始版本：** 20
 
+<!--Device-AccessRule-certificateHashHexStr: string--><!--Device-AccessRule-certificateHashHexStr: string-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -63,6 +69,8 @@ packageName: string
 **类型：** string
 
 **起始版本：** 20
+
+<!--Device-AccessRule-packageName: string--><!--Device-AccessRule-packageName: string-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 

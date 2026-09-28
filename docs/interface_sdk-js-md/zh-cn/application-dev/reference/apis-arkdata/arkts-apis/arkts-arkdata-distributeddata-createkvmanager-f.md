@@ -19,6 +19,8 @@ function createKVManager(config: KVManagerConfig, callback: AsyncCallback<KVMana
 
 **替代接口：** createKVManager
 
+<!--Device-distributedData-function createKVManager(config: KVManagerConfig, callback: AsyncCallback<KVManager>): void--><!--Device-distributedData-function createKVManager(config: KVManagerConfig, callback: AsyncCallback<KVManager>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **参数：**
@@ -69,6 +71,8 @@ function createKVManager(config: KVManagerConfig): Promise<KVManager>
 **废弃版本：** 9
 
 **替代接口：** createKVManager
+
+<!--Device-distributedData-function createKVManager(config: KVManagerConfig): Promise<KVManager>--><!--Device-distributedData-function createKVManager(config: KVManagerConfig): Promise<KVManager>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 

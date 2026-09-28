@@ -8,6 +8,8 @@ export interface MmsSendReq
 
 **起始版本：** 8
 
+<!--Device-sms-export interface MmsSendReq--><!--Device-sms-export interface MmsSendReq-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ bcc?: Array<MmsAddress>
 
 **起始版本：** 8
 
+<!--Device-MmsSendReq-bcc?: Array<MmsAddress>--><!--Device-MmsSendReq-bcc?: Array<MmsAddress>-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ cc?: Array<MmsAddress>
 **类型：** Array&lt;[MmsAddress](arkts-telephony-sms-mmsaddress-i-sys.md)&gt;
 
 **起始版本：** 8
+
+<!--Device-MmsSendReq-cc?: Array<MmsAddress>--><!--Device-MmsSendReq-cc?: Array<MmsAddress>-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -62,6 +68,8 @@ contentType: string
 
 **起始版本：** 8
 
+<!--Device-MmsSendReq-contentType: string--><!--Device-MmsSendReq-contentType: string-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +85,8 @@ date?: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-MmsSendReq-date?: long--><!--Device-MmsSendReq-date?: long-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -94,6 +104,8 @@ deliveryReport?: number
 
 **起始版本：** 8
 
+<!--Device-MmsSendReq-deliveryReport?: int--><!--Device-MmsSendReq-deliveryReport?: int-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -109,6 +121,8 @@ expiry?: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-MmsSendReq-expiry?: int--><!--Device-MmsSendReq-expiry?: int-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -126,6 +140,8 @@ from: MmsAddress
 
 **起始版本：** 8
 
+<!--Device-MmsSendReq-from: MmsAddress--><!--Device-MmsSendReq-from: MmsAddress-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -141,6 +157,8 @@ messageClass?: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-MmsSendReq-messageClass?: int--><!--Device-MmsSendReq-messageClass?: int-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -158,6 +176,8 @@ priority?: MmsPriorityType
 
 **起始版本：** 8
 
+<!--Device-MmsSendReq-priority?: MmsPriorityType--><!--Device-MmsSendReq-priority?: MmsPriorityType-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -173,6 +193,8 @@ readReport?: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-MmsSendReq-readReport?: int--><!--Device-MmsSendReq-readReport?: int-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -190,6 +212,8 @@ senderVisibility?: number
 
 **起始版本：** 8
 
+<!--Device-MmsSendReq-senderVisibility?: int--><!--Device-MmsSendReq-senderVisibility?: int-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -205,6 +229,8 @@ subject?: string
 **类型：** string
 
 **起始版本：** 8
+
+<!--Device-MmsSendReq-subject?: string--><!--Device-MmsSendReq-subject?: string-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -222,6 +248,8 @@ to?: Array<MmsAddress>
 
 **起始版本：** 8
 
+<!--Device-MmsSendReq-to?: Array<MmsAddress>--><!--Device-MmsSendReq-to?: Array<MmsAddress>-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -238,6 +266,8 @@ transactionId: string
 
 **起始版本：** 8
 
+<!--Device-MmsSendReq-transactionId: string--><!--Device-MmsSendReq-transactionId: string-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -253,6 +283,8 @@ version: MmsVersionType
 **类型：** [MmsVersionType](arkts-telephony-sms-mmsversiontype-e-sys.md)
 
 **起始版本：** 8
+
+<!--Device-MmsSendReq-version: MmsVersionType--><!--Device-MmsSendReq-version: MmsVersionType-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 

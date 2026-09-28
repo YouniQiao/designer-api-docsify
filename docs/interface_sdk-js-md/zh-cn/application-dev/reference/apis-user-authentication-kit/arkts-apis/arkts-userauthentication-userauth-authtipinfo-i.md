@@ -8,6 +8,8 @@ interface AuthTipInfo
 
 **起始版本：** 20
 
+<!--Device-userAuth-interface AuthTipInfo--><!--Device-userAuth-interface AuthTipInfo-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 ## 导入模块
@@ -28,7 +30,9 @@ tipCode: UserAuthTipCode
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-AuthTipInfo-tipCode: UserAuthTipCode--><!--Device-AuthTipInfo-tipCode: UserAuthTipCode-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -44,6 +48,8 @@ tipType: UserAuthType
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-AuthTipInfo-tipType: UserAuthType--><!--Device-AuthTipInfo-tipType: UserAuthType-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core

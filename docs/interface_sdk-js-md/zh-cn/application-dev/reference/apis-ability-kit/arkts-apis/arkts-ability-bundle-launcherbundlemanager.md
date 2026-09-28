@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace launcherBundleManager--><!--Device-unnamed-declare namespace launcherBundleManager-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
 ## 导入模块

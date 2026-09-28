@@ -8,6 +8,8 @@ export enum CountryCodeType
 
 **起始版本：** 9
 
+<!--Device-geoLocationManager-export enum CountryCodeType--><!--Device-geoLocationManager-export enum CountryCodeType-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 ## COUNTRY_CODE_FROM_LOCALE
@@ -19,6 +21,8 @@ COUNTRY_CODE_FROM_LOCALE = 1
 从全球化模块的语言配置信息中获取到的国家码。
 
 **起始版本：** 9
+
+<!--Device-CountryCodeType-COUNTRY_CODE_FROM_LOCALE = 1--><!--Device-CountryCodeType-COUNTRY_CODE_FROM_LOCALE = 1-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -32,6 +36,8 @@ COUNTRY_CODE_FROM_SIM = 2
 
 **起始版本：** 9
 
+<!--Device-CountryCodeType-COUNTRY_CODE_FROM_SIM = 2--><!--Device-CountryCodeType-COUNTRY_CODE_FROM_SIM = 2-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 ## COUNTRY_CODE_FROM_LOCATION
@@ -44,6 +50,8 @@ COUNTRY_CODE_FROM_LOCATION = 3
 
 **起始版本：** 9
 
+<!--Device-CountryCodeType-COUNTRY_CODE_FROM_LOCATION = 3--><!--Device-CountryCodeType-COUNTRY_CODE_FROM_LOCATION = 3-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 ## COUNTRY_CODE_FROM_NETWORK
@@ -55,5 +63,7 @@ COUNTRY_CODE_FROM_NETWORK = 4
 从蜂窝网络注册信息中获取到的国家码。
 
 **起始版本：** 9
+
+<!--Device-CountryCodeType-COUNTRY_CODE_FROM_NETWORK = 4--><!--Device-CountryCodeType-COUNTRY_CODE_FROM_NETWORK = 4-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core

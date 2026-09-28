@@ -22,6 +22,8 @@ Slider(options?: SliderOptions)
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-SliderInterface-(options?: SliderOptions): SliderAttribute--><!--Device-SliderInterface-(options?: SliderOptions): SliderAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

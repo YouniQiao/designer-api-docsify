@@ -16,6 +16,8 @@ function removeRight(deviceName: string): boolean
 
 **起始版本：** 9
 
+<!--Device-usbManager-function removeRight(deviceName: string): boolean--><!--Device-usbManager-function removeRight(deviceName: string): boolean-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 **参数：**

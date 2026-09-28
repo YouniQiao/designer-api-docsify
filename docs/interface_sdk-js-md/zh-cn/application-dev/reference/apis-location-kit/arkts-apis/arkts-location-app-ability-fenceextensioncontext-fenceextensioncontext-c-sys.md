@@ -12,6 +12,8 @@ FenceExtensionContext，继承自ExtensionContext，是FenceExtensionAbility的�
 
 **起始版本：** 14
 
+<!--Device-unnamed-export default class FenceExtensionContext extends ExtensionContext--><!--Device-unnamed-export default class FenceExtensionContext extends ExtensionContext-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 ## 导入模块
@@ -31,6 +33,8 @@ startAbility(want: Want): Promise<void>
 **起始版本：** 14
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FenceExtensionContext-startAbility(want: Want): Promise<void>--><!--Device-FenceExtensionContext-startAbility(want: Want): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geofence
 

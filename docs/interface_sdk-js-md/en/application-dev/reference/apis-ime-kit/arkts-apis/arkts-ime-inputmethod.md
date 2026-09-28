@@ -2,6 +2,8 @@
 
 **Since:** 6
 
+<!--Device-unnamed-declare namespace inputMethod--><!--Device-unnamed-declare namespace inputMethod-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## Constant

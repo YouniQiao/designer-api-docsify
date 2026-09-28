@@ -8,6 +8,8 @@ USB设备连接通道，用于确定总线地址和设备地址。
 
 **起始版本：** 9
 
+<!--Device-usbManager-interface USBDevicePipe--><!--Device-usbManager-interface USBDevicePipe-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## 导入模块
@@ -28,6 +30,8 @@ busNum: number
 
 **起始版本：** 9
 
+<!--Device-USBDevicePipe-busNum: int--><!--Device-USBDevicePipe-busNum: int-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## devAddress
@@ -41,5 +45,7 @@ devAddress: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-USBDevicePipe-devAddress: int--><!--Device-USBDevicePipe-devAddress: int-End-->
 
 **系统能力：** SystemCapability.USB.USBManager

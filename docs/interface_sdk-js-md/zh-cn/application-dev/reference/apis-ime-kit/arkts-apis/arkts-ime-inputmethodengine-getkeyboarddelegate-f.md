@@ -16,6 +16,8 @@ function getKeyboardDelegate(): KeyboardDelegate
 
 **起始版本：** 9
 
+<!--Device-inputMethodEngine-function getKeyboardDelegate(): KeyboardDelegate--><!--Device-inputMethodEngine-function getKeyboardDelegate(): KeyboardDelegate-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**

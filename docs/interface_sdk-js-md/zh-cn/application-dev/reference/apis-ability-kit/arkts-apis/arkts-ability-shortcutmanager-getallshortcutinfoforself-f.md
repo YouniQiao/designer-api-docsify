@@ -16,6 +16,8 @@ function getAllShortcutInfoForSelf(): Promise<Array<ShortcutInfo>>
 
 **起始版本：** 20
 
+<!--Device-shortcutManager-function getAllShortcutInfoForSelf(): Promise<Array<ShortcutInfo>>--><!--Device-shortcutManager-function getAllShortcutInfoForSelf(): Promise<Array<ShortcutInfo>>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
 **返回值：**

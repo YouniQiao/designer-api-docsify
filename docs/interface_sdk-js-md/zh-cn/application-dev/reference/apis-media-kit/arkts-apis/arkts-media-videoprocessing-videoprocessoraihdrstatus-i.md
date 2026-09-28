@@ -8,6 +8,8 @@ interface VideoProcessorAiHdrStatus
 
 **起始版本：** 26.0.0
 
+<!--Device-videoProcessing-interface VideoProcessorAiHdrStatus--><!--Device-videoProcessing-interface VideoProcessorAiHdrStatus-End-->
+
 **系统能力：** SystemCapability.Multimedia.VideoProcessingEngine
 
 ## 导入模块
@@ -29,5 +31,7 @@ AIHDR是否启用。
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-VideoProcessorAiHdrStatus-enabled?: boolean--><!--Device-VideoProcessorAiHdrStatus-enabled?: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.VideoProcessingEngine

@@ -20,6 +20,8 @@ function getSystemConfig(name: number): number
 
 **替代接口：** [getSystemConfig](arkts-arkts-process-processmanager-c.md#getsystemconfig)
 
+<!--Device-process-function getSystemConfig(name: number): number--><!--Device-process-function getSystemConfig(name: number): number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**

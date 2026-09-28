@@ -24,6 +24,8 @@ function enable(isEnable: boolean): void
 
 **起始版本：** 12
 
+<!--Device-jsLeakWatcher-function enable(isEnable: boolean): void--><!--Device-jsLeakWatcher-function enable(isEnable: boolean): void-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
 **参数：**

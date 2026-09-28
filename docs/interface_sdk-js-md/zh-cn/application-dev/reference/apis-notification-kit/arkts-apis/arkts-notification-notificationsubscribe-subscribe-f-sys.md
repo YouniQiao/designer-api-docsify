@@ -22,6 +22,8 @@ function subscribe(subscriber: NotificationSubscriber, callback: AsyncCallback<v
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationSubscribe-function subscribe(subscriber: NotificationSubscriber, callback: AsyncCallback<void>): void--><!--Device-notificationSubscribe-function subscribe(subscriber: NotificationSubscriber, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -88,6 +90,8 @@ function subscribe(
 **替代接口：** [subscribeNotification](arkts-notification-notificationsubscribe-subscribenotification-f-sys.md)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationSubscribe-function subscribe(    subscriber: NotificationSubscriber,    info: NotificationSubscribeInfo,    callback: AsyncCallback<void>  ): void--><!--Device-notificationSubscribe-function subscribe(    subscriber: NotificationSubscriber,    info: NotificationSubscribeInfo,    callback: AsyncCallback<void>  ): void-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -157,6 +161,8 @@ function subscribe(subscriber: NotificationSubscriber, info?: NotificationSubscr
 **替代接口：** [subscribeNotification](arkts-notification-notificationsubscribe-subscribenotification-f-sys.md)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationSubscribe-function subscribe(subscriber: NotificationSubscriber, info?: NotificationSubscribeInfo): Promise<void>--><!--Device-notificationSubscribe-function subscribe(subscriber: NotificationSubscriber, info?: NotificationSubscribeInfo): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

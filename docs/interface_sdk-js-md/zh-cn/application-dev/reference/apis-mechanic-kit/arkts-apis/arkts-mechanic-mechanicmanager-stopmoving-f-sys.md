@@ -16,6 +16,8 @@ function stopMoving(mechId: number): Promise<void>
 
 **起始版本：** 20
 
+<!--Device-mechanicManager-function stopMoving(mechId: int): Promise<void>--><!--Device-mechanicManager-function stopMoving(mechId: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。

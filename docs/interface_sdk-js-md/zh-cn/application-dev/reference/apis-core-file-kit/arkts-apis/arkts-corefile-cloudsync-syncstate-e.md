@@ -12,6 +12,8 @@ enum SyncState
 
 **起始版本：** 12
 
+<!--Device-cloudSync-enum SyncState--><!--Device-cloudSync-enum SyncState-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## UPLOADING
@@ -23,6 +25,8 @@ UPLOADING = 0
 上行同步中。
 
 **起始版本：** 12
+
+<!--Device-SyncState-UPLOADING = 0--><!--Device-SyncState-UPLOADING = 0-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -36,6 +40,8 @@ UPLOAD_FAILED = 1
 
 **起始版本：** 12
 
+<!--Device-SyncState-UPLOAD_FAILED = 1--><!--Device-SyncState-UPLOAD_FAILED = 1-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## DOWNLOADING
@@ -47,6 +53,8 @@ DOWNLOADING = 2
 下行同步中。
 
 **起始版本：** 12
+
+<!--Device-SyncState-DOWNLOADING = 2--><!--Device-SyncState-DOWNLOADING = 2-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -60,6 +68,8 @@ DOWNLOAD_FAILED = 3
 
 **起始版本：** 12
 
+<!--Device-SyncState-DOWNLOAD_FAILED = 3--><!--Device-SyncState-DOWNLOAD_FAILED = 3-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## COMPLETED
@@ -72,6 +82,8 @@ COMPLETED = 4
 
 **起始版本：** 12
 
+<!--Device-SyncState-COMPLETED = 4--><!--Device-SyncState-COMPLETED = 4-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## STOPPED
@@ -83,5 +95,7 @@ STOPPED = 5
 同步已停止。
 
 **起始版本：** 12
+
+<!--Device-SyncState-STOPPED = 5--><!--Device-SyncState-STOPPED = 5-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core

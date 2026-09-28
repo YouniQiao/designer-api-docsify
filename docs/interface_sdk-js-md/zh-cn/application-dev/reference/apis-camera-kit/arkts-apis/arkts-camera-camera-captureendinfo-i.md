@@ -8,6 +8,8 @@ interface CaptureEndInfo
 
 **起始版本：** 10
 
+<!--Device-camera-interface CaptureEndInfo--><!--Device-camera-interface CaptureEndInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
@@ -28,7 +30,9 @@ captureId: number
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-CaptureEndInfo-captureId: int--><!--Device-CaptureEndInfo-captureId: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -44,6 +48,8 @@ frameCount: number
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-CaptureEndInfo-frameCount: int--><!--Device-CaptureEndInfo-frameCount: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core

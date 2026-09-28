@@ -26,6 +26,8 @@ function isFeatureSupported(featureId: number): boolean
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
+<!--Device-wifi-function isFeatureSupported(featureId: number): boolean--><!--Device-wifi-function isFeatureSupported(featureId: number): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.Core
 
 **参数：**

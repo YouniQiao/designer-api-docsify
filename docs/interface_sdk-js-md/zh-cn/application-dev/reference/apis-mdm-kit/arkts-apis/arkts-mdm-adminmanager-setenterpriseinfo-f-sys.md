@@ -20,6 +20,8 @@ function setEnterpriseInfo(admin: Want, enterpriseInfo: EnterpriseInfo, callback
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-adminManager-function setEnterpriseInfo(admin: Want, enterpriseInfo: EnterpriseInfo, callback: AsyncCallback<void>): void--><!--Device-adminManager-function setEnterpriseInfo(admin: Want, enterpriseInfo: EnterpriseInfo, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -83,6 +85,8 @@ function setEnterpriseInfo(admin: Want, enterpriseInfo: EnterpriseInfo): Promise
 **需要权限：** ohos.permission.SET_ENTERPRISE_INFO
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-adminManager-function setEnterpriseInfo(admin: Want, enterpriseInfo: EnterpriseInfo): Promise<void>--><!--Device-adminManager-function setEnterpriseInfo(admin: Want, enterpriseInfo: EnterpriseInfo): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

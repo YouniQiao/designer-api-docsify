@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare namespace logLibrary--><!--Device-unnamed-declare namespace logLibrary-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.Hiview.LogLibrary
 
 **系统接口：** 此接口为系统接口。

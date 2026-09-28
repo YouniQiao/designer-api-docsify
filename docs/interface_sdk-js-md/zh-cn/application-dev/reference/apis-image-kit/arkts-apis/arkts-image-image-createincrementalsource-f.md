@@ -28,6 +28,8 @@ function CreateIncrementalSource(buf: ArrayBuffer): ImageSource
 
 **起始版本：** 9
 
+<!--Device-image-function CreateIncrementalSource(buf: ArrayBuffer): ImageSource--><!--Device-image-function CreateIncrementalSource(buf: ArrayBuffer): ImageSource-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
@@ -82,6 +84,8 @@ function CreateIncrementalSource(buf: ArrayBuffer, options?: SourceOptions): Ima
 由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用[release](arkts-image-image-imagesource-i.md#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 **起始版本：** 9
+
+<!--Device-image-function CreateIncrementalSource(buf: ArrayBuffer, options?: SourceOptions): ImageSource--><!--Device-image-function CreateIncrementalSource(buf: ArrayBuffer, options?: SourceOptions): ImageSource-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 

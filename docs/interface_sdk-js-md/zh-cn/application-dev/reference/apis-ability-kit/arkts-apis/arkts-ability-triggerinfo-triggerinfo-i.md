@@ -8,6 +8,8 @@ export interface TriggerInfo
 
 **起始版本：** 7
 
+<!--Device-unnamed-export interface TriggerInfo--><!--Device-unnamed-export interface TriggerInfo-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## code
@@ -22,7 +24,9 @@ code: number
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TriggerInfo-code: int--><!--Device-TriggerInfo-code: int-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -40,6 +44,8 @@ extraInfo?: { [key: string]: any }
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-TriggerInfo-extraInfo?: { [key: string]: any }--><!--Device-TriggerInfo-extraInfo?: { [key: string]: any }-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## extraInfos
@@ -56,6 +62,8 @@ extraInfos?: Record<string, Object>
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-TriggerInfo-extraInfos?: Record<string, Object>--><!--Device-TriggerInfo-extraInfos?: Record<string, Object>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## permission
@@ -70,7 +78,9 @@ permission?: string
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TriggerInfo-permission?: string--><!--Device-TriggerInfo-permission?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -86,6 +96,8 @@ want?: Want
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-TriggerInfo-want?: Want--><!--Device-TriggerInfo-want?: Want-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

@@ -14,6 +14,8 @@ interface HandsFreeHfProfile extends BaseProfile
 
 **起始版本：** 26.0.0
 
+<!--Device-hfp-interface HandsFreeHfProfile extends BaseProfile--><!--Device-hfp-interface HandsFreeHfProfile extends BaseProfile-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -37,6 +39,8 @@ connect(deviceId: string): void
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HandsFreeHfProfile-connect(deviceId: string): void--><!--Device-HandsFreeHfProfile-connect(deviceId: string): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -86,6 +90,8 @@ disconnect(deviceId: string): void
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HandsFreeHfProfile-disconnect(deviceId: string): void--><!--Device-HandsFreeHfProfile-disconnect(deviceId: string): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

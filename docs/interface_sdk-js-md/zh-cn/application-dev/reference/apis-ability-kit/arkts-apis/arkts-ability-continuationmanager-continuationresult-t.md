@@ -16,6 +16,8 @@ export type ContinuationResult = _ContinuationResult
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-continuationManager-export type ContinuationResult = _ContinuationResult--><!--Device-continuationManager-export type ContinuationResult = _ContinuationResult-End-->
+
 **系统能力：** SystemCapability.Ability.DistributedAbilityManager
 
 **类型：** _ContinuationResult

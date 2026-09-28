@@ -18,6 +18,8 @@ function getAddressesByName(host: string, callback: AsyncCallback<Array<NetAddre
 
 **需要权限：** ohos.permission.INTERNET
 
+<!--Device-connection-function getAddressesByName(host: string, callback: AsyncCallback<Array<NetAddress>>): void--><!--Device-connection-function getAddressesByName(host: string, callback: AsyncCallback<Array<NetAddress>>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**
@@ -66,6 +68,8 @@ function getAddressesByName(host: string): Promise<Array<NetAddress>>
 **起始版本：** 8
 
 **需要权限：** ohos.permission.INTERNET
+
+<!--Device-connection-function getAddressesByName(host: string): Promise<Array<NetAddress>>--><!--Device-connection-function getAddressesByName(host: string): Promise<Array<NetAddress>>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 

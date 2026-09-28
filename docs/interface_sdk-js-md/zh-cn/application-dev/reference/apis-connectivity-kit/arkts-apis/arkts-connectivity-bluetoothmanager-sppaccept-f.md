@@ -22,6 +22,8 @@ function sppAccept(serverSocket: number, callback: AsyncCallback<number>): void
 
 **替代接口：** [sppAccept](arkts-connectivity-socket-sppaccept-f.md)
 
+<!--Device-bluetoothManager-function sppAccept(serverSocket: number, callback: AsyncCallback<number>): void--><!--Device-bluetoothManager-function sppAccept(serverSocket: number, callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**

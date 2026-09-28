@@ -10,6 +10,8 @@ declare class PolylineAttribute extends CommonShapeMethod<PolylineAttribute>
 
 **起始版本：** 7
 
+<!--Device-unnamed-declare class PolylineAttribute extends CommonShapeMethod<PolylineAttribute>--><!--Device-unnamed-declare class PolylineAttribute extends CommonShapeMethod<PolylineAttribute>-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## points
@@ -27,6 +29,8 @@ points(value: Array<any>)
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PolylineAttribute-points(value: Array<any>): PolylineAttribute--><!--Device-PolylineAttribute-points(value: Array<any>): PolylineAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

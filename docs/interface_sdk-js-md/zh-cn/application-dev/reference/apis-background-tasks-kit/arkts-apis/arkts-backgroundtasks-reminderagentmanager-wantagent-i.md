@@ -8,6 +8,8 @@ interface WantAgent
 
 **起始版本：** 9
 
+<!--Device-reminderAgentManager-interface WantAgent--><!--Device-reminderAgentManager-interface WantAgent-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## 导入模块
@@ -28,6 +30,8 @@ abilityName: string
 
 **起始版本：** 9
 
+<!--Device-WantAgent-abilityName: string--><!--Device-WantAgent-abilityName: string-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## parameters
@@ -41,6 +45,8 @@ parameters?: Record<string, Object>
 **类型：** Record&lt;string, Object&gt;
 
 **起始版本：** 12
+
+<!--Device-WantAgent-parameters?: Record<string, Object>--><!--Device-WantAgent-parameters?: Record<string, Object>-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -56,6 +62,8 @@ pkgName: string
 
 **起始版本：** 9
 
+<!--Device-WantAgent-pkgName: string--><!--Device-WantAgent-pkgName: string-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## uri
@@ -69,5 +77,7 @@ uri?: string
 **类型：** string
 
 **起始版本：** 12
+
+<!--Device-WantAgent-uri?: string--><!--Device-WantAgent-uri?: string-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent

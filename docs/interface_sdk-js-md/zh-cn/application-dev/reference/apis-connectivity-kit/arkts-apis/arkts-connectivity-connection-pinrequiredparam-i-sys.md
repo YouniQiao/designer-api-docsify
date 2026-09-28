@@ -8,6 +8,8 @@ interface PinRequiredParam
 
 **起始版本：** 10
 
+<!--Device-connection-interface PinRequiredParam--><!--Device-connection-interface PinRequiredParam-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -29,6 +31,8 @@ pinType: PinType
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PinRequiredParam-pinType: PinType--><!--Device-PinRequiredParam-pinType: PinType-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

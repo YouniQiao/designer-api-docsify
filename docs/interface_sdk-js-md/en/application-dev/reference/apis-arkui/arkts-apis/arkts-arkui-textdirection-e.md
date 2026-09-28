@@ -8,6 +8,8 @@ Enumerates the text layout directions.
 
 **Since:** 22
 
+<!--Device-unnamed-declare enum TextDirection--><!--Device-unnamed-declare enum TextDirection-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## LTR
@@ -23,6 +25,8 @@ Text layout direction is from left to right.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-TextDirection-LTR = 0--><!--Device-TextDirection-LTR = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,6 +44,8 @@ Text layout direction is from right to left.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-TextDirection-RTL = 1--><!--Device-TextDirection-RTL = 1-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## DEFAULT
@@ -56,6 +62,8 @@ The text layout direction follows the component layout direction.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-TextDirection-DEFAULT = 2--><!--Device-TextDirection-DEFAULT = 2-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## AUTO
@@ -71,5 +79,7 @@ The layout direction follows the actual text content. If the text is in an RTL (
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-TextDirection-AUTO = 3--><!--Device-TextDirection-AUTO = 3-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

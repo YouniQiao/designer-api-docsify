@@ -26,6 +26,8 @@ function createSoundPool(
 
 **起始版本：** 10
 
+<!--Device-media-function createSoundPool(    maxStreams: number,    audioRenderInfo: audio.AudioRendererInfo,    callback: AsyncCallback<SoundPool>  ): void--><!--Device-media-function createSoundPool(    maxStreams: number,    audioRenderInfo: audio.AudioRendererInfo,    callback: AsyncCallback<SoundPool>  ): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 **参数：**
@@ -82,6 +84,8 @@ function createSoundPool(maxStreams: number, audioRenderInfo: audio.AudioRendere
 > - API version 18及API version 18以上版本，创建的SoundPool对象底层为多实例模式，一个应用进程最多能够创建128个SoundPool实例。
 
 **起始版本：** 10
+
+<!--Device-media-function createSoundPool(maxStreams: number, audioRenderInfo: audio.AudioRendererInfo): Promise<SoundPool>--><!--Device-media-function createSoundPool(maxStreams: number, audioRenderInfo: audio.AudioRendererInfo): Promise<SoundPool>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 

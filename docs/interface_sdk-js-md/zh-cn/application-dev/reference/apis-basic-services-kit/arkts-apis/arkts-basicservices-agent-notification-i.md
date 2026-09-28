@@ -8,6 +8,8 @@ interface Notification
 
 **起始版本：** 15
 
+<!--Device-agent-interface Notification--><!--Device-agent-interface Notification-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## 导入模块
@@ -28,6 +30,8 @@ text?: string
 
 **起始版本：** 15
 
+<!--Device-Notification-text?: string--><!--Device-Notification-text?: string-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## title
@@ -41,6 +45,8 @@ title?: string
 **类型：** string
 
 **起始版本：** 15
+
+<!--Device-Notification-title?: string--><!--Device-Notification-title?: string-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -64,6 +70,8 @@ The value should be an integer.
 
 **起始版本：** 21
 
+<!--Device-Notification-visibility?: int--><!--Device-Notification-visibility?: int-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## wantAgent
@@ -77,5 +85,7 @@ wantAgent?: WantAgent
 **类型：** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)
 
 **起始版本：** 22
+
+<!--Device-Notification-wantAgent?: WantAgent--><!--Device-Notification-wantAgent?: WantAgent-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent

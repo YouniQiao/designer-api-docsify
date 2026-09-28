@@ -22,6 +22,8 @@ function queryContactsByPhoneNumber(phoneNumber: string, callback: AsyncCallback
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryContactsByPhoneNumber(phoneNumber: string, callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function queryContactsByPhoneNumber(phoneNumber: string, callback: AsyncCallback<Array<Contact>>): void-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 **参数：**
@@ -61,6 +63,8 @@ function queryContactsByPhoneNumber(context: Context, phoneNumber: string, callb
 **起始版本：** 10
 
 **需要权限：** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryContactsByPhoneNumber(context: Context, phoneNumber: string, callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function queryContactsByPhoneNumber(context: Context, phoneNumber: string, callback: AsyncCallback<Array<Contact>>): void-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -120,6 +124,8 @@ function queryContactsByPhoneNumber(phoneNumber: string, holder: Holder, callbac
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryContactsByPhoneNumber(phoneNumber: string, holder: Holder, callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function queryContactsByPhoneNumber(phoneNumber: string, holder: Holder, callback: AsyncCallback<Array<Contact>>): void-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 **参数：**
@@ -164,6 +170,8 @@ function queryContactsByPhoneNumber(context: Context, phoneNumber: string, holde
 **起始版本：** 10
 
 **需要权限：** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryContactsByPhoneNumber(context: Context, phoneNumber: string, holder: Holder, callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function queryContactsByPhoneNumber(context: Context, phoneNumber: string, holder: Holder, callback: AsyncCallback<Array<Contact>>): void-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -228,6 +236,8 @@ function queryContactsByPhoneNumber(phoneNumber: string, attrs: ContactAttribute
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryContactsByPhoneNumber(phoneNumber: string, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function queryContactsByPhoneNumber(phoneNumber: string, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 **参数：**
@@ -269,6 +279,8 @@ function queryContactsByPhoneNumber(context: Context, phoneNumber: string, attrs
 **起始版本：** 10
 
 **需要权限：** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryContactsByPhoneNumber(context: Context, phoneNumber: string, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function queryContactsByPhoneNumber(context: Context, phoneNumber: string, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -331,6 +343,8 @@ function queryContactsByPhoneNumber(phoneNumber: string, holder: Holder, attrs: 
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryContactsByPhoneNumber(phoneNumber: string, holder: Holder, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function queryContactsByPhoneNumber(phoneNumber: string, holder: Holder, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 **参数：**
@@ -378,6 +392,8 @@ function queryContactsByPhoneNumber(context: Context, phoneNumber: string, holde
 **起始版本：** 10
 
 **需要权限：** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryContactsByPhoneNumber(context: Context, phoneNumber: string, holder: Holder, attrs: ContactAttributes,    callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function queryContactsByPhoneNumber(context: Context, phoneNumber: string, holder: Holder, attrs: ContactAttributes,    callback: AsyncCallback<Array<Contact>>): void-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -445,6 +461,8 @@ function queryContactsByPhoneNumber(phoneNumber: string, holder?: Holder, attrs?
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryContactsByPhoneNumber(phoneNumber: string, holder?: Holder, attrs?: ContactAttributes): Promise<Array<Contact>>--><!--Device-contact-function queryContactsByPhoneNumber(phoneNumber: string, holder?: Holder, attrs?: ContactAttributes): Promise<Array<Contact>>-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 **参数：**
@@ -492,6 +510,8 @@ function queryContactsByPhoneNumber(context: Context, phoneNumber: string, holde
 **起始版本：** 10
 
 **需要权限：** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryContactsByPhoneNumber(context: Context, phoneNumber: string, holder?: Holder, attrs?: ContactAttributes): Promise<Array<Contact>>--><!--Device-contact-function queryContactsByPhoneNumber(context: Context, phoneNumber: string, holder?: Holder, attrs?: ContactAttributes): Promise<Array<Contact>>-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 

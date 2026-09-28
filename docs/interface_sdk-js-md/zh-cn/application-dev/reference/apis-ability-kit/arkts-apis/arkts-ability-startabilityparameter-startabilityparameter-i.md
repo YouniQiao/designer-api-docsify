@@ -8,6 +8,8 @@ export interface StartAbilityParameter
 
 **起始版本：** 6
 
+<!--Device-unnamed-export interface StartAbilityParameter--><!--Device-unnamed-export interface StartAbilityParameter-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 ## abilityStartSetting
@@ -23,6 +25,8 @@ abilityStartSetting?: { [key: string]: any }
 **起始版本：** 6
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-StartAbilityParameter-abilityStartSetting?: { [key: string]: any }--><!--Device-StartAbilityParameter-abilityStartSetting?: { [key: string]: any }-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -40,6 +44,8 @@ abilityStartSettings?: Record<string, Object>
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-StartAbilityParameter-abilityStartSettings?: Record<string, Object>--><!--Device-StartAbilityParameter-abilityStartSettings?: Record<string, Object>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 ## want
@@ -55,5 +61,7 @@ want: Want
 **起始版本：** 6
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-StartAbilityParameter-want: Want--><!--Device-StartAbilityParameter-want: Want-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel

@@ -10,6 +10,8 @@ PortraitPhotoSession extends Session, Flash, AutoExposure, Focus, Zoom, Beauty, 
 
 **起始版本：** 11
 
+<!--Device-camera-interface PortraitPhotoSession extends Session, Flash, AutoExposure, Focus, Zoom, Beauty, ColorEffect, ColorManagement, Portrait, Aperture--><!--Device-camera-interface PortraitPhotoSession extends Session, Flash, AutoExposure, Focus, Zoom, Beauty, ColorEffect, ColorManagement, Portrait, Aperture-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -29,6 +31,8 @@ getSessionConflictFunctions(): Array<PortraitPhotoConflictFunctions>
 Gets session conflict functions.
 
 **起始版本：** 13
+
+<!--Device-PortraitPhotoSession-getSessionConflictFunctions(): Array<PortraitPhotoConflictFunctions>--><!--Device-PortraitPhotoSession-getSessionConflictFunctions(): Array<PortraitPhotoConflictFunctions>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -55,6 +59,8 @@ getSessionFunctions(outputCapability: CameraOutputCapability): Array<PortraitPho
 Gets session functions.
 
 **起始版本：** 13
+
+<!--Device-PortraitPhotoSession-getSessionFunctions(outputCapability: CameraOutputCapability): Array<PortraitPhotoFunctions>--><!--Device-PortraitPhotoSession-getSessionFunctions(outputCapability: CameraOutputCapability): Array<PortraitPhotoFunctions>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -89,6 +95,8 @@ Unsubscribes from PortraitSession error events.
 
 **起始版本：** 11
 
+<!--Device-PortraitPhotoSession-off(type: 'error', callback?: ErrorCallback): void--><!--Device-PortraitPhotoSession-off(type: 'error', callback?: ErrorCallback): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -117,6 +125,8 @@ off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void
 Unsubscribes from focus state change events.
 
 **起始版本：** 11
+
+<!--Device-PortraitPhotoSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void--><!--Device-PortraitPhotoSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -147,6 +157,8 @@ Unsubscribes from smooth zoom state change events.
 
 **起始版本：** 11
 
+<!--Device-PortraitPhotoSession-off(type: 'smoothZoomInfoAvailable', callback?: AsyncCallback<SmoothZoomInfo>): void--><!--Device-PortraitPhotoSession-off(type: 'smoothZoomInfoAvailable', callback?: AsyncCallback<SmoothZoomInfo>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -175,6 +187,8 @@ off(type: 'lcdFlashStatus', callback?: AsyncCallback<LcdFlashStatus>): void
 Unsubscribes from LCD flash status change events.
 
 **起始版本：** 13
+
+<!--Device-PortraitPhotoSession-off(type: 'lcdFlashStatus', callback?: AsyncCallback<LcdFlashStatus>): void--><!--Device-PortraitPhotoSession-off(type: 'lcdFlashStatus', callback?: AsyncCallback<LcdFlashStatus>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -211,6 +225,8 @@ Subscribes to PortraitSession error events. This API uses an asynchronous callba
 
 **起始版本：** 11
 
+<!--Device-PortraitPhotoSession-on(type: 'error', callback: ErrorCallback): void--><!--Device-PortraitPhotoSession-on(type: 'error', callback: ErrorCallback): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -245,6 +261,8 @@ on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
 Subscribes to focus state change events. This API uses an asynchronous callback to return the result.
 
 **起始版本：** 11
+
+<!--Device-PortraitPhotoSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void--><!--Device-PortraitPhotoSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -285,6 +303,8 @@ Subscribes to smooth zoom state change events. This API uses an asynchronous cal
 
 **起始版本：** 11
 
+<!--Device-PortraitPhotoSession-on(type: 'smoothZoomInfoAvailable', callback: AsyncCallback<SmoothZoomInfo>): void--><!--Device-PortraitPhotoSession-on(type: 'smoothZoomInfoAvailable', callback: AsyncCallback<SmoothZoomInfo>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -323,6 +343,8 @@ on(type: 'lcdFlashStatus', callback: AsyncCallback<LcdFlashStatus>): void
 Subscribes to LCD flash status change events. This API uses an asynchronous callback to return the result.
 
 **起始版本：** 13
+
+<!--Device-PortraitPhotoSession-on(type: 'lcdFlashStatus', callback: AsyncCallback<LcdFlashStatus>): void--><!--Device-PortraitPhotoSession-on(type: 'lcdFlashStatus', callback: AsyncCallback<LcdFlashStatus>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

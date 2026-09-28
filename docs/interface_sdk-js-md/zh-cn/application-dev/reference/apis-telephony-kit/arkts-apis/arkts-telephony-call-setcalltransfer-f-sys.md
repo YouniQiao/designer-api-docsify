@@ -18,6 +18,8 @@ function setCallTransfer(slotId: number, info: CallTransferInfo, callback: Async
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-call-function setCallTransfer(slotId: int, info: CallTransferInfo, callback: AsyncCallback<void>): void--><!--Device-call-function setCallTransfer(slotId: int, info: CallTransferInfo, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -75,6 +77,8 @@ function setCallTransfer(slotId: number, info: CallTransferInfo): Promise<void>
 **起始版本：** 8
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
+
+<!--Device-call-function setCallTransfer(slotId: int, info: CallTransferInfo): Promise<void>--><!--Device-call-function setCallTransfer(slotId: int, info: CallTransferInfo): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 

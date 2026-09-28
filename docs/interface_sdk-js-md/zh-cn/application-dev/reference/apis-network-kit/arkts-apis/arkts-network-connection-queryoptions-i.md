@@ -8,6 +8,8 @@ export interface QueryOptions
 
 **起始版本：** 23
 
+<!--Device-connection-export interface QueryOptions--><!--Device-connection-export interface QueryOptions-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## 导入模块
@@ -27,5 +29,7 @@ family?: FamilyType
 **类型：** [FamilyType](arkts-network-connection-familytype-e.md)
 
 **起始版本：** 23
+
+<!--Device-QueryOptions-family?: FamilyType--><!--Device-QueryOptions-family?: FamilyType-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core

@@ -10,6 +10,8 @@ type AcbState = nearlinkConstant.AcbState
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-remoteDevice-type AcbState = nearlinkConstant.AcbState--><!--Device-remoteDevice-type AcbState = nearlinkConstant.AcbState-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **类型：** [nearlinkConstant.AcbState](arkts-connectivity-nearlinkconstant-acbstate-e.md)

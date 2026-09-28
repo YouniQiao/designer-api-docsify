@@ -16,6 +16,8 @@ function getAutoTimeStatus(): boolean
 
 **起始版本：** 21
 
+<!--Device-systemDateTime-function getAutoTimeStatus(): boolean--><!--Device-systemDateTime-function getAutoTimeStatus(): boolean-End-->
+
 **系统能力：** SystemCapability.MiscServices.Time
 
 **返回值：**

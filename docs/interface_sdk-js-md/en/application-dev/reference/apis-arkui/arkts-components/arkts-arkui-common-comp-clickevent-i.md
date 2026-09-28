@@ -10,6 +10,8 @@ Inherits from [BaseEvent](arkts-arkui-common-comp-baseevent-i.md).
 
 **Since:** 7
 
+<!--Device-unnamed-declare interface ClickEvent extends BaseEvent--><!--Device-unnamed-declare interface ClickEvent extends BaseEvent-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## getCurrentLocalPosition
@@ -25,6 +27,8 @@ Gets the coordinates of the top-left corner of the current component based on it
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ClickEvent-getCurrentLocalPosition?(): Coordinate2D--><!--Device-ClickEvent-getCurrentLocalPosition?(): Coordinate2D-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -49,6 +53,8 @@ Note: This API is only supported by the following components: **RichEditor** and
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ClickEvent-preventDefault: () => void--><!--Device-ClickEvent-preventDefault: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -76,6 +82,8 @@ Unit: vp
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ClickEvent-displayX: number--><!--Device-ClickEvent-displayX: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## displayY
@@ -95,6 +103,8 @@ Unit: vp
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ClickEvent-displayY: number--><!--Device-ClickEvent-displayY: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -118,6 +128,8 @@ Value range: (-∞, +∞).
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-ClickEvent-globalDisplayX?: number--><!--Device-ClickEvent-globalDisplayX?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## globalDisplayY
@@ -140,6 +152,8 @@ Value range: (-∞, +∞).
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-ClickEvent-globalDisplayY?: number--><!--Device-ClickEvent-globalDisplayY?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## hand
@@ -157,6 +171,8 @@ Whether the event is triggered by a left-hand or right-hand tap.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-ClickEvent-hand?: InteractionHand--><!--Device-ClickEvent-hand?: InteractionHand-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -178,6 +194,8 @@ Unit: vp
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ClickEvent-windowX: number--><!--Device-ClickEvent-windowX: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## windowY
@@ -197,6 +215,8 @@ Unit: vp
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ClickEvent-windowY: number--><!--Device-ClickEvent-windowY: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -218,6 +238,8 @@ Unit: vp
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-ClickEvent-x: number--><!--Device-ClickEvent-x: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## y
@@ -237,6 +259,8 @@ Unit: vp
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-ClickEvent-y: number--><!--Device-ClickEvent-y: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -260,6 +284,8 @@ Note: This API is supported since API version 7 and deprecated since API version
 
 **Substitutes:** [windowX](#windowx)
 
+<!--Device-ClickEvent-screenX: number--><!--Device-ClickEvent-screenX: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## screenY
@@ -281,5 +307,7 @@ Note: This API is supported since API version 7 and deprecated since API version
 **Deprecated since:** 10
 
 **Substitutes:** [windowY](#windowy)
+
+<!--Device-ClickEvent-screenY: number--><!--Device-ClickEvent-screenY: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

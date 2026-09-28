@@ -20,6 +20,8 @@ function grantPublicCertificate(keyUri: string, clientAppUid: number) : Promise<
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-certificateManager-function grantPublicCertificate(keyUri: string, clientAppUid: int) : Promise<CMResult>--><!--Device-certificateManager-function grantPublicCertificate(keyUri: string, clientAppUid: int) : Promise<CMResult>-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
 
 **系统接口：** 此接口为系统接口。

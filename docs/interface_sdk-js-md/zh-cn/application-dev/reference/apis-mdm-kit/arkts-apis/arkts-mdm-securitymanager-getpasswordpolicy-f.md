@@ -20,6 +20,8 @@ function getPasswordPolicy(admin: Want): PasswordPolicy
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-securityManager-function getPasswordPolicy(admin: Want): PasswordPolicy--><!--Device-securityManager-function getPasswordPolicy(admin: Want): PasswordPolicy-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -79,6 +81,8 @@ function getPasswordPolicy(admin: Want | null): PasswordPolicy
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_SECURITY
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-securityManager-function getPasswordPolicy(admin: Want | null): PasswordPolicy--><!--Device-securityManager-function getPasswordPolicy(admin: Want | null): PasswordPolicy-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

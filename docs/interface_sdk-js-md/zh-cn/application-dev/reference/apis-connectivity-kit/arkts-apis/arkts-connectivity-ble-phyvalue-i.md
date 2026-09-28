@@ -8,6 +8,8 @@ interface PhyValue
 
 **起始版本：** 23
 
+<!--Device-ble-interface PhyValue--><!--Device-ble-interface PhyValue-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -32,6 +34,8 @@ phyMode?: CodedPhyMode
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PhyValue-phyMode?: CodedPhyMode--><!--Device-PhyValue-phyMode?: CodedPhyMode-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## rxPhy
@@ -48,6 +52,8 @@ rxPhy: BlePhy
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PhyValue-rxPhy: BlePhy--><!--Device-PhyValue-rxPhy: BlePhy-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## txPhy
@@ -63,5 +69,7 @@ txPhy: BlePhy
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PhyValue-txPhy: BlePhy--><!--Device-PhyValue-txPhy: BlePhy-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

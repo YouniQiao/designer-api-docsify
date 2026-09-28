@@ -12,6 +12,8 @@ export interface CipherResponse
 
 **替代接口：** Cipher
 
+<!--Device-unnamed-export interface CipherResponse--><!--Device-unnamed-export interface CipherResponse-End-->
+
 **系统能力：** SystemCapability.Security.Cipher
 
 ## 导入模块
@@ -35,5 +37,7 @@ text: string
 **废弃版本：** 11
 
 **替代接口：** Cipher
+
+<!--Device-CipherResponse-text: string--><!--Device-CipherResponse-text: string-End-->
 
 **系统能力：** SystemCapability.Security.Cipher

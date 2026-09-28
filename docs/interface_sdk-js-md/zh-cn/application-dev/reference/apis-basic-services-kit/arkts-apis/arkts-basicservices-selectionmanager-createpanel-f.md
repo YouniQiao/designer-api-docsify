@@ -20,6 +20,8 @@ function createPanel(ctx: Context, info: PanelInfo): Promise<Panel>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-selectionManager-function createPanel(ctx: Context, info: PanelInfo): Promise<Panel>--><!--Device-selectionManager-function createPanel(ctx: Context, info: PanelInfo): Promise<Panel>-End-->
+
 **系统能力：** SystemCapability.SelectionInput.Selection
 
 **参数：**

@@ -8,6 +8,8 @@ Defines the configuration options of the text picker.
 
 **Since:** 8
 
+<!--Device-unnamed-declare interface TextPickerOptions--><!--Device-unnamed-declare interface TextPickerOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## columnWidths
@@ -42,6 +44,8 @@ beyond the number of columns are ignored; columns without a specified width even
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TextPickerOptions-columnWidths?: LengthMetrics[]--><!--Device-TextPickerOptions-columnWidths?: LengthMetrics[]-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## range
@@ -72,6 +76,8 @@ Data selection list of the picker. It cannot be set to an empty array. If it is 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextPickerOptions-range: string[] | string[][] | Resource | TextPickerRangeContent[] | TextCascadePickerRangeContent[]--><!--Device-TextPickerOptions-range: string[] | string[][] | Resource | TextPickerRangeContent[] | TextCascadePickerRangeContent[]-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -107,6 +113,8 @@ levels.
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextPickerOptions-selected?: number | number[]--><!--Device-TextPickerOptions-selected?: number | number[]-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -144,5 +152,7 @@ the same as the number of levels.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextPickerOptions-value?: ResourceStr | ResourceStr[]--><!--Device-TextPickerOptions-value?: ResourceStr | ResourceStr[]-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

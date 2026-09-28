@@ -10,6 +10,8 @@ interface SarResponse extends Response
 
 **起始版本：** 10
 
+<!--Device-sensor-interface SarResponse extends Response--><!--Device-sensor-interface SarResponse extends Response-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **系统接口：** 此接口为系统接口。
@@ -31,6 +33,8 @@ absorptionRatio: number
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-SarResponse-absorptionRatio: double--><!--Device-SarResponse-absorptionRatio: double-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 

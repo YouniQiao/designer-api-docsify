@@ -18,6 +18,8 @@ function getNetFirewallRules(userId: number, requestParam: RequestParam): Promis
 
 **需要权限：** ohos.permission.GET_NET_FIREWALL
 
+<!--Device-netFirewall-function getNetFirewallRules(userId: int, requestParam: RequestParam): Promise<FirewallRulePage>--><!--Device-netFirewall-function getNetFirewallRules(userId: int, requestParam: RequestParam): Promise<FirewallRulePage>-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 **参数：**

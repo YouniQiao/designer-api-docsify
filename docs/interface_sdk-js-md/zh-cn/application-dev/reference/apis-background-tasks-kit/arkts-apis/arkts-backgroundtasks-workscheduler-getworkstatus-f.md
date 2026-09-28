@@ -18,6 +18,8 @@ function getWorkStatus(workId: number, callback: AsyncCallback<WorkInfo>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-workScheduler-function getWorkStatus(workId: int, callback: AsyncCallback<WorkInfo>): void--><!--Device-workScheduler-function getWorkStatus(workId: int, callback: AsyncCallback<WorkInfo>): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
 **参数：**
@@ -66,6 +68,8 @@ function getWorkStatus(workId: number): Promise<WorkInfo>
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-workScheduler-function getWorkStatus(workId: int): Promise<WorkInfo>--><!--Device-workScheduler-function getWorkStatus(workId: int): Promise<WorkInfo>-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 

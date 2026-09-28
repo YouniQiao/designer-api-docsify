@@ -8,6 +8,8 @@ export enum HyperSnapErrorCode
 
 **起始版本：** 26.0.1
 
+<!--Device-hyperSnapManager-export enum HyperSnapErrorCode--><!--Device-hyperSnapManager-export enum HyperSnapErrorCode-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## ERR_OK
@@ -21,6 +23,8 @@ ERR_OK = 0
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HyperSnapErrorCode-ERR_OK = 0--><!--Device-HyperSnapErrorCode-ERR_OK = 0-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -36,6 +40,8 @@ ERR_SYSTEM_INNER = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HyperSnapErrorCode-ERR_SYSTEM_INNER = 1--><!--Device-HyperSnapErrorCode-ERR_SYSTEM_INNER = 1-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## ERR_SNAPSHOT_EXIST
@@ -49,6 +55,8 @@ ERR_SNAPSHOT_EXIST = 2
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HyperSnapErrorCode-ERR_SNAPSHOT_EXIST = 2--><!--Device-HyperSnapErrorCode-ERR_SNAPSHOT_EXIST = 2-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -64,6 +72,8 @@ ERR_PROCESS_IS_RUNNING = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HyperSnapErrorCode-ERR_PROCESS_IS_RUNNING = 3--><!--Device-HyperSnapErrorCode-ERR_PROCESS_IS_RUNNING = 3-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## ERR_SNAPSHOT_PROCESS_IS_DIED
@@ -77,6 +87,8 @@ ERR_SNAPSHOT_PROCESS_IS_DIED = 4
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HyperSnapErrorCode-ERR_SNAPSHOT_PROCESS_IS_DIED = 4--><!--Device-HyperSnapErrorCode-ERR_SNAPSHOT_PROCESS_IS_DIED = 4-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -92,6 +104,8 @@ ERR_SNAPSHOT_IS_INTERRUPTED = 5
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HyperSnapErrorCode-ERR_SNAPSHOT_IS_INTERRUPTED = 5--><!--Device-HyperSnapErrorCode-ERR_SNAPSHOT_IS_INTERRUPTED = 5-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## ERR_EXISTS_ILLEGAL_BINDER
@@ -106,6 +120,8 @@ ERR_EXISTS_ILLEGAL_BINDER = 6
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HyperSnapErrorCode-ERR_EXISTS_ILLEGAL_BINDER = 6--><!--Device-HyperSnapErrorCode-ERR_EXISTS_ILLEGAL_BINDER = 6-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## ERR_LAST_PROCESS_NOT_FULLY_EXITED
@@ -119,5 +135,7 @@ ERR_LAST_PROCESS_NOT_FULLY_EXITED = 7
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HyperSnapErrorCode-ERR_LAST_PROCESS_NOT_FULLY_EXITED = 7--><!--Device-HyperSnapErrorCode-ERR_LAST_PROCESS_NOT_FULLY_EXITED = 7-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

@@ -16,6 +16,8 @@ function activateSceneAnimation(formId: string): Promise<void>
 
 **起始版本：** 20
 
+<!--Device-formProvider-function activateSceneAnimation(formId: string): Promise<void>--><!--Device-formProvider-function activateSceneAnimation(formId: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。

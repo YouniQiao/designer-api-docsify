@@ -8,6 +8,8 @@ enum NetFirewallOrderType
 
 **起始版本：** 15
 
+<!--Device-netFirewall-enum NetFirewallOrderType--><!--Device-netFirewall-enum NetFirewallOrderType-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 ## ORDER_ASC
@@ -20,6 +22,8 @@ ORDER_ASC = 1
 
 **起始版本：** 15
 
+<!--Device-NetFirewallOrderType-ORDER_ASC = 1--><!--Device-NetFirewallOrderType-ORDER_ASC = 1-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 ## ORDER_DESC
@@ -31,5 +35,7 @@ ORDER_DESC = 100
 按防火墙规则排序类型降序排序。
 
 **起始版本：** 15
+
+<!--Device-NetFirewallOrderType-ORDER_DESC = 100--><!--Device-NetFirewallOrderType-ORDER_DESC = 100-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall

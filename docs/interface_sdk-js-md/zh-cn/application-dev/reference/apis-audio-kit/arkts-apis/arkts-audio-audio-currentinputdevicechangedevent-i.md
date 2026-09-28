@@ -8,6 +8,8 @@ interface CurrentInputDeviceChangedEvent
 
 **起始版本：** 21
 
+<!--Device-audio-interface CurrentInputDeviceChangedEvent--><!--Device-audio-interface CurrentInputDeviceChangedEvent-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ changeReason: AudioStreamDeviceChangeReason
 
 **起始版本：** 21
 
+<!--Device-CurrentInputDeviceChangedEvent-changeReason: AudioStreamDeviceChangeReason--><!--Device-CurrentInputDeviceChangedEvent-changeReason: AudioStreamDeviceChangeReason-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## devices
@@ -41,5 +45,7 @@ devices: AudioDeviceDescriptors
 **类型：** [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)
 
 **起始版本：** 21
+
+<!--Device-CurrentInputDeviceChangedEvent-devices: AudioDeviceDescriptors--><!--Device-CurrentInputDeviceChangedEvent-devices: AudioDeviceDescriptors-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core

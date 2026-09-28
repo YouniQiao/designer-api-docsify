@@ -18,9 +18,11 @@ interface Transaction
 
 **示例：**
 
-示例代码中this.context定义见Stage模型的应用Context。
+示例代码中this.context定义见Stage模型的应用[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context.md)。
 
 **起始版本：** 14
+
+<!--Device-relationalStore-interface Transaction--><!--Device-relationalStore-interface Transaction-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -49,6 +51,8 @@ batchInsert(table: string, values: Array<ValuesBucket>): Promise<number>
 按每批32766个参数，分批以[ConflictResolution.ON_CONFLICT_REPLACE](arkts-arkdata-relationalstore-conflictresolution-e.md)策略写入，参数数量计算方式为插入数据条数乘以插入数据的所有字段的并集大小，中途失败则立即返回。
 
 **起始版本：** 14
+
+<!--Device-Transaction-batchInsert(table: string, values: Array<ValuesBucket>): Promise<long>--><!--Device-Transaction-batchInsert(table: string, values: Array<ValuesBucket>): Promise<long>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -146,6 +150,8 @@ batchInsertSync(table: string, values: Array<ValuesBucket>): number
 按每批32766个参数，分批以[ConflictResolution.ON_CONFLICT_REPLACE](arkts-arkdata-relationalstore-conflictresolution-e.md)策略写入，参数数量计算方式为插入数据条数乘以插入数据的所有字段的并集大小，中途失败则立即返回。
 
 **起始版本：** 14
+
+<!--Device-Transaction-batchInsertSync(table: string, values: Array<ValuesBucket>): long--><!--Device-Transaction-batchInsertSync(table: string, values: Array<ValuesBucket>): long-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -251,6 +257,8 @@ batchInsertWithConflictResolution(
 请确保在调用接口时遵守此限制，以避免因参数数量过多而导致错误。
 
 **起始版本：** 18
+
+<!--Device-Transaction-batchInsertWithConflictResolution(        table: string,        values: Array<ValuesBucket>,        conflict: ConflictResolution    ): Promise<long>--><!--Device-Transaction-batchInsertWithConflictResolution(        table: string,        values: Array<ValuesBucket>,        conflict: ConflictResolution    ): Promise<long>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -362,6 +370,8 @@ batchInsertWithConflictResolutionSync(table: string, values: Array<ValuesBucket>
 请确保在调用接口时遵守此限制，以避免因参数数量过多而导致错误。
 
 **起始版本：** 18
+
+<!--Device-Transaction-batchInsertWithConflictResolutionSync(table: string, values: Array<ValuesBucket>,      conflict: ConflictResolution): long--><!--Device-Transaction-batchInsertWithConflictResolutionSync(table: string, values: Array<ValuesBucket>,      conflict: ConflictResolution): long-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -477,6 +487,8 @@ conflict参数不建议使用ON_CONFLICT_FAIL策略，可能无法返回正确�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Transaction-batchInsertWithReturning(table: string, values: Array<ValuesBucket>, config: ReturningConfig,      conflict?: ConflictResolution): Promise<Result>--><!--Device-Transaction-batchInsertWithReturning(table: string, values: Array<ValuesBucket>, config: ReturningConfig,      conflict?: ConflictResolution): Promise<Result>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
@@ -561,6 +573,8 @@ conflict参数不建议使用ON_CONFLICT_FAIL策略，可能无法返回正确�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Transaction-batchInsertWithReturningSync(table: string, values: Array<ValuesBucket>, config: ReturningConfig,      conflict?: ConflictResolution): Result--><!--Device-Transaction-batchInsertWithReturningSync(table: string, values: Array<ValuesBucket>, config: ReturningConfig,      conflict?: ConflictResolution): Result-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
@@ -626,6 +640,8 @@ commit(): Promise<void>
 
 **起始版本：** 14
 
+<!--Device-Transaction-commit(): Promise<void>--><!--Device-Transaction-commit(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **返回值：**
@@ -678,6 +694,8 @@ delete(predicates: RdbPredicates): Promise<number>
 根据RdbPredicates的指定实例对象从数据库中删除数据，使用Promise异步回调。
 
 **起始版本：** 14
+
+<!--Device-Transaction-delete(predicates: RdbPredicates): Promise<long>--><!--Device-Transaction-delete(predicates: RdbPredicates): Promise<long>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -747,6 +765,8 @@ deleteSync(predicates: RdbPredicates): number
 根据RdbPredicates的指定实例对象从数据库中删除数据。
 
 **起始版本：** 14
+
+<!--Device-Transaction-deleteSync(predicates: RdbPredicates): long--><!--Device-Transaction-deleteSync(predicates: RdbPredicates): long-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -818,6 +838,8 @@ deleteWithReturning(predicates: RdbPredicates, config: ReturningConfig): Promise
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Transaction-deleteWithReturning(predicates: RdbPredicates, config: ReturningConfig): Promise<Result>--><!--Device-Transaction-deleteWithReturning(predicates: RdbPredicates, config: ReturningConfig): Promise<Result>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
@@ -883,6 +905,8 @@ deleteWithReturningSync(predicates: RdbPredicates, config: ReturningConfig): Res
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Transaction-deleteWithReturningSync(predicates: RdbPredicates, config: ReturningConfig): Result--><!--Device-Transaction-deleteWithReturningSync(predicates: RdbPredicates, config: ReturningConfig): Result-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -955,6 +979,8 @@ execute(sql: string, args?: Array<ValueType>): Promise<ValueType>
 不支持开头包含注释的语句。
 
 **起始版本：** 14
+
+<!--Device-Transaction-execute(sql: string, args?: Array<ValueType>): Promise<ValueType>--><!--Device-Transaction-execute(sql: string, args?: Array<ValueType>): Promise<ValueType>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -1034,6 +1060,8 @@ executeSync(sql: string, args?: Array<ValueType>): ValueType
 
 **起始版本：** 14
 
+<!--Device-Transaction-executeSync(sql: string, args?: Array<ValueType>): ValueType--><!--Device-Transaction-executeSync(sql: string, args?: Array<ValueType>): ValueType-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
@@ -1111,6 +1139,8 @@ insert(table: string, values: ValuesBucket, conflict?: ConflictResolution): Prom
 单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
 
 **起始版本：** 14
+
+<!--Device-Transaction-insert(table: string, values: ValuesBucket, conflict?: ConflictResolution): Promise<long>--><!--Device-Transaction-insert(table: string, values: ValuesBucket, conflict?: ConflictResolution): Promise<long>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -1196,6 +1226,8 @@ insertSync(table: string, values: ValuesBucket | sendableRelationalStore.ValuesB
 
 **起始版本：** 14
 
+<!--Device-Transaction-insertSync(table: string, values: ValuesBucket | sendableRelationalStore.ValuesBucket,      conflict?: ConflictResolution): number--><!--Device-Transaction-insertSync(table: string, values: ValuesBucket | sendableRelationalStore.ValuesBucket,      conflict?: ConflictResolution): number-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
@@ -1278,6 +1310,8 @@ query(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultSet>
 
 **起始版本：** 14
 
+<!--Device-Transaction-query(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultSet>--><!--Device-Transaction-query(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultSet>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
@@ -1353,6 +1387,8 @@ querySql(sql: string, args?: Array<ValueType>): Promise<ResultSet>
 
 **起始版本：** 14
 
+<!--Device-Transaction-querySql(sql: string, args?: Array<ValueType>): Promise<ResultSet>--><!--Device-Transaction-querySql(sql: string, args?: Array<ValueType>): Promise<ResultSet>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
@@ -1425,6 +1461,8 @@ querySqlSync(sql: string, args?: Array<ValueType>): ResultSet
 根据指定SQL语句查询数据库中的数据，SQL语句中的各种表达式和操作符之间的关系操作符号不超过1000个。对query同步接口获得的resultSet进行操作时，若逻辑复杂且循环次数过多，可能造成freeze问题，建议将此步骤放到[taskpool](../../apis-arkts/arkts-apis/arkts-arkts-taskpool.md)线程中执行。
 
 **起始版本：** 14
+
+<!--Device-Transaction-querySqlSync(sql: string, args?: Array<ValueType>): ResultSet--><!--Device-Transaction-querySqlSync(sql: string, args?: Array<ValueType>): ResultSet-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -1501,6 +1539,8 @@ querySqlWithoutRowCount(sql: string, bindArgs?: Array<ValueType>): Promise<LiteR
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Transaction-querySqlWithoutRowCount(sql: string, bindArgs?: Array<ValueType>): Promise<LiteResultSet>--><!--Device-Transaction-querySqlWithoutRowCount(sql: string, bindArgs?: Array<ValueType>): Promise<LiteResultSet>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
@@ -1573,6 +1613,8 @@ querySqlWithoutRowCountSync(sql: string, bindArgs?: Array<ValueType>): LiteResul
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Transaction-querySqlWithoutRowCountSync(sql: string, bindArgs?: Array<ValueType>): LiteResultSet--><!--Device-Transaction-querySqlWithoutRowCountSync(sql: string, bindArgs?: Array<ValueType>): LiteResultSet-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
@@ -1642,6 +1684,8 @@ querySync(predicates: RdbPredicates, columns?: Array<string>): ResultSet
 根据指定条件查询数据库中的数据。对query同步接口获得的resultSet进行操作时，若逻辑复杂且循环次数过多，可能造成freeze问题，建议将此步骤放到[taskpool](../../apis-arkts/arkts-apis/arkts-arkts-taskpool.md)线程中执行。
 
 **起始版本：** 14
+
+<!--Device-Transaction-querySync(predicates: RdbPredicates, columns?: Array<string>): ResultSet--><!--Device-Transaction-querySync(predicates: RdbPredicates, columns?: Array<string>): ResultSet-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -1721,6 +1765,8 @@ queryWithoutRowCount(predicates: RdbPredicates, columns?: Array<string>): Promis
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Transaction-queryWithoutRowCount(predicates: RdbPredicates, columns?: Array<string>): Promise<LiteResultSet>--><!--Device-Transaction-queryWithoutRowCount(predicates: RdbPredicates, columns?: Array<string>): Promise<LiteResultSet>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
@@ -1794,6 +1840,8 @@ queryWithoutRowCountSync(predicates: RdbPredicates, columns?: Array<string>): Li
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Transaction-queryWithoutRowCountSync(predicates: RdbPredicates, columns?: Array<string>): LiteResultSet--><!--Device-Transaction-queryWithoutRowCountSync(predicates: RdbPredicates, columns?: Array<string>): LiteResultSet-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
@@ -1865,6 +1913,8 @@ rollback(): Promise<void>
 
 **起始版本：** 14
 
+<!--Device-Transaction-rollback(): Promise<void>--><!--Device-Transaction-rollback(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **返回值：**
@@ -1925,6 +1975,8 @@ update(values: ValuesBucket, predicates: RdbPredicates, conflict?: ConflictResol
 单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
 
 **起始版本：** 14
+
+<!--Device-Transaction-update(values: ValuesBucket, predicates: RdbPredicates, conflict?: ConflictResolution): Promise<long>--><!--Device-Transaction-update(values: ValuesBucket, predicates: RdbPredicates, conflict?: ConflictResolution): Promise<long>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -2010,6 +2062,8 @@ updateSync(values: ValuesBucket, predicates: RdbPredicates, conflict?: ConflictR
 单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
 
 **起始版本：** 14
+
+<!--Device-Transaction-updateSync(values: ValuesBucket, predicates: RdbPredicates, conflict?: ConflictResolution): long--><!--Device-Transaction-updateSync(values: ValuesBucket, predicates: RdbPredicates, conflict?: ConflictResolution): long-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -2101,6 +2155,8 @@ conflict参数不建议使用ON_CONFLICT_FAIL策略，可能无法返回正确�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Transaction-updateWithReturning(values: ValuesBucket, predicates: RdbPredicates, config: ReturningConfig,      conflict?: ConflictResolution): Promise<Result>--><!--Device-Transaction-updateWithReturning(values: ValuesBucket, predicates: RdbPredicates, config: ReturningConfig,      conflict?: ConflictResolution): Promise<Result>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
@@ -2182,6 +2238,8 @@ conflict参数不建议使用ON_CONFLICT_FAIL策略，可能无法返回正确�
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Transaction-updateWithReturningSync(values: ValuesBucket, predicates: RdbPredicates, config: ReturningConfig,      conflict?: ConflictResolution): Result--><!--Device-Transaction-updateWithReturningSync(values: ValuesBucket, predicates: RdbPredicates, config: ReturningConfig,      conflict?: ConflictResolution): Result-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 

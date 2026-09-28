@@ -22,6 +22,8 @@ function getDeviceMacAddress(): string[]
 
 **需要权限：** ohos.permission.GET_WIFI_LOCAL_MAC and ohos.permission.GET_WIFI_INFO
 
+<!--Device-wifi-function getDeviceMacAddress(): string[]--><!--Device-wifi-function getDeviceMacAddress(): string[]-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。

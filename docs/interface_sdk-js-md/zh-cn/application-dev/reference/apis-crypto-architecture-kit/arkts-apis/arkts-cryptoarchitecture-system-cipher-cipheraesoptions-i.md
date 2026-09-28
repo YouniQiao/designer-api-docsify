@@ -12,6 +12,8 @@ export interface CipherAesOptions
 
 **替代接口：** Cipher
 
+<!--Device-unnamed-export interface CipherAesOptions--><!--Device-unnamed-export interface CipherAesOptions-End-->
+
 **系统能力：** SystemCapability.Security.Cipher
 
 ## 导入模块
@@ -34,6 +36,8 @@ complete: () => void
 
 **替代接口：** Cipher
 
+<!--Device-CipherAesOptions-complete: () => void--><!--Device-CipherAesOptions-complete: () => void-End-->
+
 **系统能力：** SystemCapability.Security.Cipher
 
 ## fail
@@ -49,6 +53,8 @@ fail: (data: string, code: number) => void
 **废弃版本：** 11
 
 **替代接口：** Cipher
+
+<!--Device-CipherAesOptions-fail: (data: string, code: number) => void--><!--Device-CipherAesOptions-fail: (data: string, code: number) => void-End-->
 
 **系统能力：** SystemCapability.Security.Cipher
 
@@ -72,6 +78,8 @@ success: (data: CipherResponse) => void
 **废弃版本：** 11
 
 **替代接口：** Cipher
+
+<!--Device-CipherAesOptions-success: (data: CipherResponse) => void--><!--Device-CipherAesOptions-success: (data: CipherResponse) => void-End-->
 
 **系统能力：** SystemCapability.Security.Cipher
 
@@ -100,6 +108,8 @@ action: string
 
 **替代接口：** Cipher
 
+<!--Device-CipherAesOptions-action: string--><!--Device-CipherAesOptions-action: string-End-->
+
 **系统能力：** SystemCapability.Security.Cipher
 
 ## iv
@@ -117,6 +127,8 @@ AES加解密的初始向量，经过base64编码后的字符串，默认值为ke
 **废弃版本：** 11
 
 **替代接口：** Cipher
+
+<!--Device-CipherAesOptions-iv?: string--><!--Device-CipherAesOptions-iv?: string-End-->
 
 **系统能力：** SystemCapability.Security.Cipher
 
@@ -136,6 +148,8 @@ AES加解密的初始向量字节长度，当前为预留字段，默认值16，
 
 **替代接口：** Cipher
 
+<!--Device-CipherAesOptions-ivLen?: string--><!--Device-CipherAesOptions-ivLen?: string-End-->
+
 **系统能力：** SystemCapability.Security.Cipher
 
 ## ivOffset
@@ -153,6 +167,8 @@ AES加解密的初始向量偏移，默认值0，仅支持0。
 **废弃版本：** 11
 
 **替代接口：** Cipher
+
+<!--Device-CipherAesOptions-ivOffset?: string--><!--Device-CipherAesOptions-ivOffset?: string-End-->
 
 **系统能力：** SystemCapability.Security.Cipher
 
@@ -172,6 +188,8 @@ key: string
 
 **替代接口：** Cipher
 
+<!--Device-CipherAesOptions-key: string--><!--Device-CipherAesOptions-key: string-End-->
+
 **系统能力：** SystemCapability.Security.Cipher
 
 ## text
@@ -190,6 +208,8 @@ text: string
 
 **替代接口：** Cipher
 
+<!--Device-CipherAesOptions-text: string--><!--Device-CipherAesOptions-text: string-End-->
+
 **系统能力：** SystemCapability.Security.Cipher
 
 ## transformation
@@ -207,5 +227,7 @@ AES算法的加密模式和填充项，默认AES/CBC/PKCS5Padding。
 **废弃版本：** 11
 
 **替代接口：** Cipher
+
+<!--Device-CipherAesOptions-transformation?: string--><!--Device-CipherAesOptions-transformation?: string-End-->
 
 **系统能力：** SystemCapability.Security.Cipher

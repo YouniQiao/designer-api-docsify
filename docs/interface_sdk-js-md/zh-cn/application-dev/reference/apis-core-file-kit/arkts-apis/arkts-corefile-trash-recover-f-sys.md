@@ -22,6 +22,8 @@ function recover(uri: string): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-trash-function recover(uri: string): void--><!--Device-trash-function recover(uri: string): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。

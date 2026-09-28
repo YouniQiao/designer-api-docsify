@@ -8,6 +8,8 @@ export enum Scenario
 
 **起始版本：** 20
 
+<!--Device-onScreen-export enum Scenario--><!--Device-onScreen-export enum Scenario-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 ## UNKNOWN
@@ -19,6 +21,8 @@ UNKNOWN = 0
 表示屏上内容所处场景未知。
 
 **起始版本：** 20
+
+<!--Device-Scenario-UNKNOWN = 0--><!--Device-Scenario-UNKNOWN = 0-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -33,6 +37,8 @@ ARTICLE = 1
 表示屏上内容处于文章场景。
 
 **起始版本：** 20
+
+<!--Device-Scenario-ARTICLE = 1--><!--Device-Scenario-ARTICLE = 1-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 

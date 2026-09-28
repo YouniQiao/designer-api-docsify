@@ -8,6 +8,8 @@ interface Element
 
 **起始版本：** 26.0.1
 
+<!--Device-privacyComputation-interface Element--><!--Device-privacyComputation-interface Element-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 ## 导入模块
@@ -31,6 +33,8 @@ elemKey: Uint8Array
 
 **原子化服务API：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
 
+<!--Device-Element-elemKey: Uint8Array--><!--Device-Element-elemKey: Uint8Array-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 ## elemValue
@@ -49,6 +53,8 @@ elemValue?: Uint8Array
 
 **原子化服务API：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
 
+<!--Device-Element-elemValue?: Uint8Array--><!--Device-Element-elemValue?: Uint8Array-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 ## hashAlg
@@ -66,5 +72,7 @@ hashAlg?: HashAlg
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
+
+<!--Device-Element-hashAlg?: HashAlg--><!--Device-Element-hashAlg?: HashAlg-End-->
 
 **系统能力：** SystemCapability.Security.Asset

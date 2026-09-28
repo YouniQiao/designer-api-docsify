@@ -18,6 +18,8 @@ function isDLPFile(fd: number): Promise<boolean>
 
 **起始版本：** 10
 
+<!--Device-dlpPermission-function isDLPFile(fd: number): Promise<boolean>--><!--Device-dlpPermission-function isDLPFile(fd: number): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **参数：**
@@ -75,6 +77,8 @@ function isDLPFile(fd: number, callback: AsyncCallback<boolean>): void
 在文件处理流程中，需要先判断文件是否为DLP文件，再决定后续处理策略（如是否需要通过DLP沙箱打开）。
 
 **起始版本：** 10
+
+<!--Device-dlpPermission-function isDLPFile(fd: number, callback: AsyncCallback<boolean>): void--><!--Device-dlpPermission-function isDLPFile(fd: number, callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 

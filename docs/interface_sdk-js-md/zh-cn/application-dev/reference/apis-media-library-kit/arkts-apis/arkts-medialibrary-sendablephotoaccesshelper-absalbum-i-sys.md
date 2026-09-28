@@ -10,6 +10,8 @@ interface AbsAlbum  extends lang.ISendable
 
 **起始版本：** 12
 
+<!--Device-sendablePhotoAccessHelper-interface AbsAlbum  extends lang.ISendable--><!--Device-sendablePhotoAccessHelper-interface AbsAlbum  extends lang.ISendable-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
@@ -29,6 +31,8 @@ Fetch shared photo assets in an album.
 **起始版本：** 14
 
 **需要权限：** ohos.permission.ACCESS_MEDIALIB_THUMB_DB
+
+<!--Device-AbsAlbum-getSharedPhotoAssets(options: photoAccessHelper.FetchOptions): Array<SharedPhotoAsset>--><!--Device-AbsAlbum-getSharedPhotoAssets(options: photoAccessHelper.FetchOptions): Array<SharedPhotoAsset>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

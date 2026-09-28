@@ -4,7 +4,7 @@
 declare class TextInputAttribute extends CommonMethod<TextInputAttribute>
 ```
 
-In addition to the [universal attributes](arkts-arkui-common-comp.md#common), the following attributes are supported:
+In addition to the [universal attributes](arkts-arkui-common-comp.md), the following attributes are supported:
 
 > **NOTE:** 
 > 
@@ -43,11 +43,13 @@ In addition to the [universal attributes](arkts-arkui-common-comp.md#common), th
 > 
 > Since API version 10, a single-line input box can be set with .width('auto') to make the component width adapt to
 > the text width. During adaptation, the component width is limited by the constraintSize attribute and the maximum
-> and minimum widths passed by the parent container. For other usage, see [Sizing](arkts-arkui-common-comp.md#common).
+> and minimum widths passed by the parent container. For other usage, see [Sizing](arkts-arkui-common-comp.md).
 
 **Inheritance/Implementation:** TextInputAttribute extends CommonMethod<TextInputAttribute>
 
 **Since:** 7
+
+<!--Device-unnamed-declare class TextInputAttribute extends CommonMethod<TextInputAttribute>--><!--Device-unnamed-declare class TextInputAttribute extends CommonMethod<TextInputAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,6 +66,8 @@ Sets the text mode of the auto-capitalization mode. This API only provides the i
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-TextInputAttribute-autoCapitalizationMode(mode: AutoCapitalizationMode): TextInputAttribute--><!--Device-TextInputAttribute-autoCapitalizationMode(mode: AutoCapitalizationMode): TextInputAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -86,6 +90,8 @@ Sets the display mode of the scroll bar in the inline input style editing state.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextInputAttribute-barState(value: BarState): TextInputAttribute--><!--Device-TextInputAttribute-barState(value: BarState): TextInputAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -112,6 +118,8 @@ style: CancelButtonStyle.INPUT
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextInputAttribute-cancelButton(options: CancelButtonOptions): TextInputAttribute--><!--Device-TextInputAttribute-cancelButton(options: CancelButtonOptions): TextInputAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -141,6 +149,8 @@ style: CancelButtonStyle.INPUT
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TextInputAttribute-cancelButton(symbolOptions: CancelButtonSymbolOptions): TextInputAttribute--><!--Device-TextInputAttribute-cancelButton(symbolOptions: CancelButtonSymbolOptions): TextInputAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -160,6 +170,8 @@ Sets the color of the input box caret. When not set through this API, the defaul
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextInputAttribute-caretColor(value: ResourceColor): TextInputAttribute--><!--Device-TextInputAttribute-caretColor(value: ResourceColor): TextInputAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -183,6 +195,8 @@ Sets the caret position.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TextInputAttribute-caretPosition(value: number): TextInputAttribute--><!--Device-TextInputAttribute-caretPosition(value: number): TextInputAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -204,6 +218,8 @@ Sets the caret style.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextInputAttribute-caretStyle(value: CaretStyle): TextInputAttribute--><!--Device-TextInputAttribute-caretStyle(value: CaretStyle): TextInputAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -231,6 +247,8 @@ Sets whether to enable compression of leading punctuation. When not set through 
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-TextInputAttribute-compressLeadingPunctuation(enabled: Optional<boolean>): TextInputAttribute--><!--Device-TextInputAttribute-compressLeadingPunctuation(enabled: Optional<boolean>): TextInputAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -253,6 +271,8 @@ Sets the autofill type.<!--RP7--><!--RP7End-->
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TextInputAttribute-contentType(value: ContentType): TextInputAttribute--><!--Device-TextInputAttribute-contentType(value: ContentType): TextInputAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -272,6 +292,8 @@ Sets whether the input text can be copied. When CopyOptions.None is set, only pa
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextInputAttribute-copyOption(value: CopyOptions): TextInputAttribute--><!--Device-TextInputAttribute-copyOption(value: CopyOptions): TextInputAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -313,6 +335,8 @@ Since API version 23, a custom keyboard can enable continuation through [setCust
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TextInputAttribute-customKeyboard(value: CustomBuilder | ComponentContent | undefined, options?: KeyboardOptions): TextInputAttribute--><!--Device-TextInputAttribute-customKeyboard(value: CustomBuilder | ComponentContent | undefined, options?: KeyboardOptions): TextInputAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -346,6 +370,8 @@ Sets the type, style, and color of the text decoration line. When not set throug
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TextInputAttribute-decoration(value: TextDecorationOptions): TextInputAttribute--><!--Device-TextInputAttribute-decoration(value: TextDecorationOptions): TextInputAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -369,6 +395,8 @@ When [disableMenuItems](../arkts-apis/arkts-arkui-arkui-uicontext-textmenucontro
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextInputAttribute-editMenuOptions(editMenu: EditMenuOptions): TextInputAttribute--><!--Device-TextInputAttribute-editMenuOptions(editMenu: EditMenuOptions): TextInputAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -394,6 +422,8 @@ It takes effect normally in the non-editing state. In the editing state, Ellipsi
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TextInputAttribute-ellipsisMode(mode: Optional<EllipsisMode>): TextInputAttribute--><!--Device-TextInputAttribute-ellipsisMode(mode: Optional<EllipsisMode>): TextInputAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -415,6 +445,8 @@ Sets whether to enable auto-fill. When not set through this interface, auto-fill
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextInputAttribute-enableAutoFill(value: boolean): TextInputAttribute--><!--Device-TextInputAttribute-enableAutoFill(value: boolean): TextInputAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -438,6 +470,8 @@ Sets whether to enable the auto-fill animation. When not set through this interf
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-TextInputAttribute-enableAutoFillAnimation(enabled: Optional<boolean>): TextInputAttribute--><!--Device-TextInputAttribute-enableAutoFillAnimation(enabled: Optional<boolean>): TextInputAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -459,6 +493,8 @@ Sets whether to enable automatic spacing between Chinese and Western characters.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-TextInputAttribute-enableAutoSpacing(enabled: Optional<boolean>): TextInputAttribute--><!--Device-TextInputAttribute-enableAutoSpacing(enabled: Optional<boolean>): TextInputAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -484,6 +520,8 @@ When haptic feedback is enabled, you need to set the **requestPermissions** fiel
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
+<!--Device-TextInputAttribute-enableHapticFeedback(isEnabled: boolean): TextInputAttribute--><!--Device-TextInputAttribute-enableHapticFeedback(isEnabled: boolean): TextInputAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -508,6 +546,8 @@ Since API version 10, focus gain is bound to the input method by default.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TextInputAttribute-enableKeyboardOnFocus(value: boolean): TextInputAttribute--><!--Device-TextInputAttribute-enableKeyboardOnFocus(value: boolean): TextInputAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -531,6 +571,8 @@ Preview content is defined as a temporary text state, and the text interception 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextInputAttribute-enablePreviewText(enable: boolean): TextInputAttribute--><!--Device-TextInputAttribute-enablePreviewText(enable: boolean): TextInputAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -564,6 +606,8 @@ This feature takes effect only when CopyOptions is CopyOptions.LocalDevice or Co
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-TextInputAttribute-enableSelectedDataDetector(enable: boolean | undefined): TextInputAttribute--><!--Device-TextInputAttribute-enableSelectedDataDetector(enable: boolean | undefined): TextInputAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -583,6 +627,8 @@ Sets the Enter key type of the input method. When not set through this interface
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextInputAttribute-enterKeyType(value: EnterKeyType): TextInputAttribute--><!--Device-TextInputAttribute-enterKeyType(value: EnterKeyType): TextInputAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -606,6 +652,8 @@ For multi-line text stacking, supports line height adaptation based on the actua
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-TextInputAttribute-fallbackLineSpacing(enabled: Optional<boolean>): TextInputAttribute--><!--Device-TextInputAttribute-fallbackLineSpacing(enabled: Optional<boolean>): TextInputAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -625,6 +673,8 @@ Sets the font color. When not set through this interface, the default color foll
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextInputAttribute-fontColor(value: ResourceColor): TextInputAttribute--><!--Device-TextInputAttribute-fontColor(value: ResourceColor): TextInputAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -650,6 +700,8 @@ Sets the font list. When not set through this interface, the default font is 'Ha
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextInputAttribute-fontFamily(value: ResourceStr): TextInputAttribute--><!--Device-TextInputAttribute-fontFamily(value: ResourceStr): TextInputAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -681,6 +733,8 @@ For example, the input format for using monospaced digits is "ss01" on.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TextInputAttribute-fontFeature(value: string): TextInputAttribute--><!--Device-TextInputAttribute-fontFeature(value: string): TextInputAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -700,6 +754,8 @@ Sets the font size. When not set through this interface, the default font size i
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextInputAttribute-fontSize(value: Length): TextInputAttribute--><!--Device-TextInputAttribute-fontSize(value: Length): TextInputAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -721,6 +777,8 @@ Sets the font style. When not passed through this interface, the default value i
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TextInputAttribute-fontStyle(value: FontStyle): TextInputAttribute--><!--Device-TextInputAttribute-fontStyle(value: FontStyle): TextInputAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -740,6 +798,8 @@ Sets the font weight of the text. If the value is too large, the text may be tru
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextInputAttribute-fontWeight(value: number | FontWeight | ResourceStr): TextInputAttribute--><!--Device-TextInputAttribute-fontWeight(value: number | FontWeight | ResourceStr): TextInputAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -762,6 +822,8 @@ Sets the text to be vertically centered within the line, evenly distributing the
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-TextInputAttribute-halfLeading(halfLeading: Optional<boolean>): TextInputAttribute--><!--Device-TextInputAttribute-halfLeading(halfLeading: Optional<boolean>): TextInputAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -798,6 +860,8 @@ When the component is set to a non-inline input style, the three modes of settin
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TextInputAttribute-heightAdaptivePolicy(value: TextHeightAdaptivePolicy): TextInputAttribute--><!--Device-TextInputAttribute-heightAdaptivePolicy(value: TextHeightAdaptivePolicy): TextInputAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -819,6 +883,8 @@ Sets whether to add spacing to the first and last lines to prevent text truncati
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-TextInputAttribute-includeFontPadding(include: Optional<boolean>): TextInputAttribute--><!--Device-TextInputAttribute-includeFontPadding(include: Optional<boolean>): TextInputAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -842,6 +908,8 @@ Since API version 11, setting inputFilter with a non-empty input character cause
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TextInputAttribute-inputFilter(value: ResourceStr, error?: Callback<string>): TextInputAttribute--><!--Device-TextInputAttribute-inputFilter(value: ResourceStr, error?: Callback<string>): TextInputAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -864,6 +932,8 @@ Sets the style of the keyboard pulled up by the input box. This takes effect onl
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-TextInputAttribute-keyboardAppearance(appearance: Optional<KeyboardAppearance>): TextInputAttribute--><!--Device-TextInputAttribute-keyboardAppearance(appearance: Optional<KeyboardAppearance>): TextInputAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -891,6 +961,8 @@ This attribute takes effect on each character, including the character at the en
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TextInputAttribute-letterSpacing(value: number | string | Resource): TextInputAttribute--><!--Device-TextInputAttribute-letterSpacing(value: number | string | Resource): TextInputAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -914,6 +986,8 @@ This attribute applies to scenarios where the text wrapping effect needs to be o
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextInputAttribute-lineBreakStrategy(strategy: LineBreakStrategy): TextInputAttribute--><!--Device-TextInputAttribute-lineBreakStrategy(strategy: LineBreakStrategy): TextInputAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -945,6 +1019,8 @@ When the value is not greater than 0, the text line height is not limited and ad
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TextInputAttribute-lineHeight(value: number | string | Resource): TextInputAttribute--><!--Device-TextInputAttribute-lineHeight(value: number | string | Resource): TextInputAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -966,6 +1042,8 @@ Sets the maximum font scale factor of the text.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-TextInputAttribute-maxFontScale(scale: Optional<number|Resource>): TextInputAttribute--><!--Device-TextInputAttribute-maxFontScale(scale: Optional<number|Resource>): TextInputAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -995,6 +1073,8 @@ When maxFontSize is less than or equal to 0, or maxFontSize is less than minFont
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TextInputAttribute-maxFontSize(value: number | string | Resource): TextInputAttribute--><!--Device-TextInputAttribute-maxFontSize(value: number | string | Resource): TextInputAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1014,6 +1094,8 @@ Sets the maximum number of characters that can be entered. When not set through 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextInputAttribute-maxLength(value: number): TextInputAttribute--><!--Device-TextInputAttribute-maxLength(value: number): TextInputAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1037,6 +1119,8 @@ Sets the maximum number of lines that can be displayed for text in the inline in
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TextInputAttribute-maxLines(value: number): TextInputAttribute--><!--Device-TextInputAttribute-maxLines(value: number): TextInputAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1058,6 +1142,8 @@ Sets the minimum font scale factor for text.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-TextInputAttribute-minFontScale(scale: Optional<number|Resource>): TextInputAttribute--><!--Device-TextInputAttribute-minFontScale(scale: Optional<number|Resource>): TextInputAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1086,6 +1172,8 @@ When minFontSize is less than or equal to 0, adaptive font size does not take ef
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextInputAttribute-minFontSize(value: number | string | Resource): TextInputAttribute--><!--Device-TextInputAttribute-minFontSize(value: number | string | Resource): TextInputAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1119,6 +1207,8 @@ In this callback, if a cursor operation is performed, the developer needs to adj
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TextInputAttribute-onChange(callback: EditableTextOnChangeCallback): TextInputAttribute--><!--Device-TextInputAttribute-onChange(callback: EditableTextOnChangeCallback): TextInputAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1141,6 +1231,8 @@ Called when the text content scrolls.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TextInputAttribute-onContentScroll(callback: OnContentScrollCallback): TextInputAttribute--><!--Device-TextInputAttribute-onContentScroll(callback: OnContentScrollCallback): TextInputAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1161,6 +1253,8 @@ Triggered when a copy operation is performed.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TextInputAttribute-onCopy(callback: Callback<string>): TextInputAttribute--><!--Device-TextInputAttribute-onCopy(callback: Callback<string>): TextInputAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1180,6 +1274,8 @@ Triggered when a cut operation is performed.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextInputAttribute-onCut(callback: Callback<string>): TextInputAttribute--><!--Device-TextInputAttribute-onCut(callback: Callback<string>): TextInputAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1215,6 +1311,8 @@ Triggered when the deletion is complete.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TextInputAttribute-onDidDelete(callback: Callback<DeleteValue>): TextInputAttribute--><!--Device-TextInputAttribute-onDidDelete(callback: Callback<DeleteValue>): TextInputAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1237,6 +1335,8 @@ Triggered when input is complete.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TextInputAttribute-onDidInsert(callback: Callback<InsertValue>): TextInputAttribute--><!--Device-TextInputAttribute-onDidInsert(callback: Callback<InsertValue>): TextInputAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1257,6 +1357,8 @@ Triggered when the input state changes. The editing state is active when a curso
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TextInputAttribute-onEditChange(callback: Callback<boolean>): TextInputAttribute--><!--Device-TextInputAttribute-onEditChange(callback: Callback<boolean>): TextInputAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1276,6 +1378,8 @@ Triggered when a paste operation is performed.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextInputAttribute-onPaste(callback: OnPasteCallback): TextInputAttribute--><!--Device-TextInputAttribute-onPaste(callback: OnPasteCallback): TextInputAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1303,6 +1407,8 @@ Triggered when the password display state changes.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TextInputAttribute-onSecurityStateChange(callback: Callback<boolean>): TextInputAttribute--><!--Device-TextInputAttribute-onSecurityStateChange(callback: Callback<boolean>): TextInputAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1325,6 +1431,8 @@ On non-TV devices, when the Enter key is pressed, the input box loses focus and 
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TextInputAttribute-onSubmit(callback: OnSubmitCallback): TextInputAttribute--><!--Device-TextInputAttribute-onSubmit(callback: OnSubmitCallback): TextInputAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1346,6 +1454,8 @@ Triggered when the position of the text selection or the cursor position in edit
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextInputAttribute-onTextSelectionChange(callback: OnTextSelectionChangeCallback): TextInputAttribute--><!--Device-TextInputAttribute-onTextSelectionChange(callback: OnTextSelectionChangeCallback): TextInputAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1381,6 +1491,8 @@ IMEClient is valid only during the execution of onWillAttachIME and cannot be ca
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-TextInputAttribute-onWillAttachIME(callback: Callback<IMEClient>): TextInputAttribute--><!--Device-TextInputAttribute-onWillAttachIME(callback: Callback<IMEClient>): TextInputAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1415,6 +1527,8 @@ Triggers this callback when the text content is about to change.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-TextInputAttribute-onWillChange(callback: Callback<EditableTextChangeValue, boolean>): TextInputAttribute--><!--Device-TextInputAttribute-onWillChange(callback: Callback<EditableTextChangeValue, boolean>): TextInputAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1447,6 +1561,8 @@ This callback is triggered before a copy operation is performed.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-TextInputAttribute-onWillCopy(callback: Callback<string, boolean>): TextInputAttribute--><!--Device-TextInputAttribute-onWillCopy(callback: Callback<string, boolean>): TextInputAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1478,6 +1594,8 @@ Triggered before the cut operation is performed.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-TextInputAttribute-onWillCut(callback: Callback<string, boolean>): TextInputAttribute--><!--Device-TextInputAttribute-onWillCut(callback: Callback<string, boolean>): TextInputAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1513,6 +1631,8 @@ Triggered when the text is about to be deleted.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TextInputAttribute-onWillDelete(callback: Callback<DeleteValue, boolean>): TextInputAttribute--><!--Device-TextInputAttribute-onWillDelete(callback: Callback<DeleteValue, boolean>): TextInputAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1545,6 +1665,8 @@ Triggered when text is about to be inserted.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TextInputAttribute-onWillInsert(callback: Callback<InsertValue, boolean>): TextInputAttribute--><!--Device-TextInputAttribute-onWillInsert(callback: Callback<InsertValue, boolean>): TextInputAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1566,6 +1688,8 @@ When enabled, the line break points are adjusted to avoid isolated characters (t
 **Since:** 26.0.0
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-TextInputAttribute-orphanCharOptimization(enabled: Optional<boolean>): TextInputAttribute--><!--Device-TextInputAttribute-orphanCharOptimization(enabled: Optional<boolean>): TextInputAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1589,6 +1713,8 @@ Sets the icon at the end of the input box in password mode. When not set through
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TextInputAttribute-passwordIcon(value: PasswordIcon): TextInputAttribute--><!--Device-TextInputAttribute-passwordIcon(value: PasswordIcon): TextInputAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1611,6 +1737,8 @@ Defines the rules for generating a password. When auto-fill is triggered, the se
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TextInputAttribute-passwordRules(value: string): TextInputAttribute--><!--Device-TextInputAttribute-passwordRules(value: string): TextInputAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1630,6 +1758,8 @@ Sets the placeholder text color. When not set through this interface, the defaul
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextInputAttribute-placeholderColor(value: ResourceColor): TextInputAttribute--><!--Device-TextInputAttribute-placeholderColor(value: ResourceColor): TextInputAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1655,6 +1785,8 @@ Sets the placeholder text style, including font size, font weight, font family, 
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TextInputAttribute-placeholderFont(value?: Font): TextInputAttribute--><!--Device-TextInputAttribute-placeholderFont(value?: Font): TextInputAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1676,6 +1808,8 @@ Sets whether to enable hanging punctuation at the end of a line. If this API is 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-TextInputAttribute-punctuationOverflow(enabled: Optional<boolean>): TextInputAttribute--><!--Device-TextInputAttribute-punctuationOverflow(enabled: Optional<boolean>): TextInputAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1699,6 +1833,8 @@ Sets whether to select all text in the initial state. The inline mode of [TextIn
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TextInputAttribute-selectAll(value: boolean): TextInputAttribute--><!--Device-TextInputAttribute-selectAll(value: boolean): TextInputAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1720,6 +1856,8 @@ Sets the highlight color of the selected text. If the opacity is not set or is s
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextInputAttribute-selectedBackgroundColor(value: ResourceColor): TextInputAttribute--><!--Device-TextInputAttribute-selectedBackgroundColor(value: ResourceColor): TextInputAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1743,6 +1881,8 @@ Sets the backplane style during text dragging in the text input box.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-TextInputAttribute-selectedDragPreviewStyle(value: SelectedDragPreviewStyle | undefined): TextInputAttribute--><!--Device-TextInputAttribute-selectedDragPreviewStyle(value: SelectedDragPreviewStyle | undefined): TextInputAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1764,6 +1904,8 @@ Sets whether to hide the system text selection menu. When not set through this i
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextInputAttribute-selectionMenuHidden(value: boolean): TextInputAttribute--><!--Device-TextInputAttribute-selectionMenuHidden(value: boolean): TextInputAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1793,6 +1935,8 @@ Sets the text shader effect, such as linear gradient and radial gradient effects
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-TextInputAttribute-shaderStyle(shader: ShaderStyle | undefined): TextInputAttribute--><!--Device-TextInputAttribute-shaderStyle(shader: ShaderStyle | undefined): TextInputAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1828,6 +1972,8 @@ The character counter is not displayed in the inline mode of [TextInputStyle](ar
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TextInputAttribute-showCounter(value: boolean, options?: InputCounterOptions): TextInputAttribute--><!--Device-TextInputAttribute-showCounter(value: boolean, options?: InputCounterOptions): TextInputAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1852,6 +1998,8 @@ When the parameter type is ResourceStr and the input content does not comply wit
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextInputAttribute-showError(value?: ResourceStr | undefined): TextInputAttribute--><!--Device-TextInputAttribute-showError(value?: ResourceStr | undefined): TextInputAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1879,6 +2027,8 @@ In [password mode](../../../ui/arkts-common-components-text-input.md#password-mo
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TextInputAttribute-showPassword(visible: boolean): TextInputAttribute--><!--Device-TextInputAttribute-showPassword(visible: boolean): TextInputAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1898,6 +2048,8 @@ Sets whether to display the icon at the end of the input box in password mode. W
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextInputAttribute-showPasswordIcon(value: boolean): TextInputAttribute--><!--Device-TextInputAttribute-showPasswordIcon(value: boolean): TextInputAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1921,6 +2073,8 @@ Sets whether to enable the underline. When not set through this interface, the u
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TextInputAttribute-showUnderline(value: boolean): TextInputAttribute--><!--Device-TextInputAttribute-showUnderline(value: boolean): TextInputAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1942,6 +2096,8 @@ Sets a control as the unit of the text box. It must be used together with [showU
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextInputAttribute-showUnit(value: CustomBuilder): TextInputAttribute--><!--Device-TextInputAttribute-showUnit(value: CustomBuilder): TextInputAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1965,6 +2121,8 @@ Sets whether to prevent the back key event from being passed to other components
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-TextInputAttribute-stopBackPress(isStopped: Optional<boolean>): TextInputAttribute--><!--Device-TextInputAttribute-stopBackPress(isStopped: Optional<boolean>): TextInputAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -1986,6 +2144,8 @@ Sets the color of the text stroke. When not set through this interface, the defa
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-TextInputAttribute-strokeColor(color: Optional<ResourceColor>): TextInputAttribute--><!--Device-TextInputAttribute-strokeColor(color: Optional<ResourceColor>): TextInputAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2009,6 +2169,8 @@ Sets the corner style of the text stroke. This attribute takes effect only when 
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-TextInputAttribute-strokeJoinStyle(strokeJoinStyle: StrokeJoinStyle | undefined): TextInputAttribute--><!--Device-TextInputAttribute-strokeJoinStyle(strokeJoinStyle: StrokeJoinStyle | undefined): TextInputAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -2031,6 +2193,8 @@ Sets the width of the text stroke. When not set through this interface, the defa
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-TextInputAttribute-strokeWidth(width: Optional<LengthMetrics>): TextInputAttribute--><!--Device-TextInputAttribute-strokeWidth(width: Optional<LengthMetrics>): TextInputAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -2052,6 +2216,8 @@ For details about the input box types, see [type](#type). When not set through t
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextInputAttribute-style(value: TextInputStyle | TextContentStyle): TextInputAttribute--><!--Device-TextInputAttribute-style(value: TextInputStyle | TextContentStyle): TextInputAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2081,6 +2247,8 @@ The [align](arkts-arkui-common-comp-commonmethod-c.md#align) attribute can be us
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TextInputAttribute-textAlign(value: TextAlign): TextInputAttribute--><!--Device-TextInputAttribute-textAlign(value: TextAlign): TextInputAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -2103,6 +2271,8 @@ Specifies the text layout direction. When not set through this API, the default 
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-TextInputAttribute-textDirection(direction: TextDirection | undefined): TextInputAttribute--><!--Device-TextInputAttribute-textDirection(direction: TextDirection | undefined): TextInputAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -2124,6 +2294,8 @@ Sets the indentation of the first line of text. When not set through this interf
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextInputAttribute-textIndent(value: Dimension): TextInputAttribute--><!--Device-TextInputAttribute-textIndent(value: Dimension): TextInputAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2151,6 +2323,8 @@ When overflow is set to TextOverflow.None, the effect is the same as TextOverflo
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TextInputAttribute-textOverflow(value: TextOverflow): TextInputAttribute--><!--Device-TextInputAttribute-textOverflow(value: TextOverflow): TextInputAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -2172,6 +2346,8 @@ Different InputType values bring up the corresponding keyboard type and restrict
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextInputAttribute-type(value: InputType): TextInputAttribute--><!--Device-TextInputAttribute-type(value: InputType): TextInputAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2197,6 +2373,8 @@ When the input box underline [showUnderline](#showunderline) is enabled, the und
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TextInputAttribute-underlineColor(value: ResourceColor | UnderlineColor | undefined): TextInputAttribute--><!--Device-TextInputAttribute-underlineColor(value: ResourceColor | UnderlineColor | undefined): TextInputAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -2219,6 +2397,8 @@ Sets the text line break rule. This attribute takes effect when the component is
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TextInputAttribute-wordBreak(value: WordBreak): TextInputAttribute--><!--Device-TextInputAttribute-wordBreak(value: WordBreak): TextInputAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -2240,6 +2420,8 @@ Triggered when the input state changes.
 **Deprecated since:** 8
 
 **Substitutes:** [onEditChange](#oneditchange)
+
+<!--Device-TextInputAttribute-onEditChanged(callback: (isEditing: boolean) => void): TextInputAttribute--><!--Device-TextInputAttribute-onEditChanged(callback: (isEditing: boolean) => void): TextInputAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -8,6 +8,8 @@ enum AlbumOperationType
 
 **起始版本：** 26.0.0
 
+<!--Device-photoAccessHelper-enum AlbumOperationType--><!--Device-photoAccessHelper-enum AlbumOperationType-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -23,6 +25,8 @@ ADD = 'add'
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AlbumOperationType-ADD = 'add'--><!--Device-AlbumOperationType-ADD = 'add'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -40,6 +44,8 @@ REMOVE = 'remove'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AlbumOperationType-REMOVE = 'remove'--><!--Device-AlbumOperationType-REMOVE = 'remove'-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -55,6 +61,8 @@ UPDATE = 'update'
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AlbumOperationType-UPDATE = 'update'--><!--Device-AlbumOperationType-UPDATE = 'update'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

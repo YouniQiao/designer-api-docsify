@@ -21,6 +21,8 @@ function getColors(wallpaperType: WallpaperType, callback: AsyncCallback<Array<R
 
 **废弃版本：** 9
 
+<!--Device-wallpaper-function getColors(wallpaperType: WallpaperType, callback: AsyncCallback<Array<RgbaColor>>): void--><!--Device-wallpaper-function getColors(wallpaperType: WallpaperType, callback: AsyncCallback<Array<RgbaColor>>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
 **参数：**
@@ -61,6 +63,8 @@ function getColors(wallpaperType: WallpaperType): Promise<Array<RgbaColor>>
 **起始版本：** 7
 
 **废弃版本：** 9
+
+<!--Device-wallpaper-function getColors(wallpaperType: WallpaperType): Promise<Array<RgbaColor>>--><!--Device-wallpaper-function getColors(wallpaperType: WallpaperType): Promise<Array<RgbaColor>>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 

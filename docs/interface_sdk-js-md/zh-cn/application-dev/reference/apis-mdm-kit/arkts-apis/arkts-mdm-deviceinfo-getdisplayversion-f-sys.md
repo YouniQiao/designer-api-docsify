@@ -24,6 +24,8 @@ function getDisplayVersion(admin: Want, callback: AsyncCallback<string>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-deviceInfo-function getDisplayVersion(admin: Want, callback: AsyncCallback<string>): void--><!--Device-deviceInfo-function getDisplayVersion(admin: Want, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -86,6 +88,8 @@ function getDisplayVersion(admin: Want): Promise<string>
 **需要权限：** ohos.permission.ENTERPRISE_GET_DEVICE_INFO
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-deviceInfo-function getDisplayVersion(admin: Want): Promise<string>--><!--Device-deviceInfo-function getDisplayVersion(admin: Want): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

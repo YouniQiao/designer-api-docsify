@@ -16,6 +16,8 @@ function destroyTimer(timer: number, callback: AsyncCallback<void>): void
 
 **起始版本：** 7
 
+<!--Device-systemTimer-function destroyTimer(timer: long, callback: AsyncCallback<void>): void--><!--Device-systemTimer-function destroyTimer(timer: long, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Time
 
 **系统接口：** 此接口为系统接口。
@@ -79,6 +81,8 @@ function destroyTimer(timer: number): Promise<void>
 销毁定时器，使用Promise进行异步回调。
 
 **起始版本：** 7
+
+<!--Device-systemTimer-function destroyTimer(timer: long): Promise<void>--><!--Device-systemTimer-function destroyTimer(timer: long): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Time
 

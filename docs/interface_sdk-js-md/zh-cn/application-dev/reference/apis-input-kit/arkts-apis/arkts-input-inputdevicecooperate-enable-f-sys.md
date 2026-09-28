@@ -20,6 +20,8 @@ function enable(enable: boolean, callback: AsyncCallback<void>): void
 
 **替代接口：** [prepareCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-preparecooperate-f-sys.md)
 
+<!--Device-inputDeviceCooperate-function enable(enable: boolean, callback: AsyncCallback<void>): void--><!--Device-inputDeviceCooperate-function enable(enable: boolean, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Cooperator
 
 **系统接口：** 此接口为系统接口。
@@ -84,6 +86,8 @@ function enable(enable: boolean): Promise<void>
 **废弃版本：** 23
 
 **替代接口：** [prepareCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-preparecooperate-f-sys.md)
+
+<!--Device-inputDeviceCooperate-function enable(enable: boolean): Promise<void>--><!--Device-inputDeviceCooperate-function enable(enable: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Cooperator
 

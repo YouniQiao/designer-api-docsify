@@ -25,6 +25,8 @@ function startProfiling(filename: string): void
 
 **替代接口：** [startJsCpuProfiling](arkts-performanceanalysis-hidebug-startjscpuprofiling-f.md)
 
+<!--Device-hidebug-function startProfiling(filename: string): void--><!--Device-hidebug-function startProfiling(filename: string): void-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **参数：**

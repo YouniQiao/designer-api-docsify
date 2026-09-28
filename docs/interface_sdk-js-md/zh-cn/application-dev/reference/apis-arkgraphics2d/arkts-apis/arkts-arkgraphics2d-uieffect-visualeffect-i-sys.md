@@ -8,6 +8,8 @@ VisualEffect效果类，用于将背景颜色混合、边框光照、颜色渐�
 
 **起始版本：** 12
 
+<!--Device-uiEffect-interface VisualEffect--><!--Device-uiEffect-interface VisualEffect-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## 导入模块
@@ -26,7 +28,9 @@ backgroundColorBlender(blender: BrightnessBlender): VisualEffect
 
 **起始版本：** 12
 
-**卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-VisualEffect-backgroundColorBlender(blender: BrightnessBlender): VisualEffect--><!--Device-VisualEffect-backgroundColorBlender(blender: BrightnessBlender): VisualEffect-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -66,6 +70,8 @@ borderLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIn
 为圆角矩形组件边框添加3D光照效果。
 
 **起始版本：** 20
+
+<!--Device-VisualEffect-borderLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIntensity: double,      borderWidth: double): VisualEffect--><!--Device-VisualEffect-borderLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIntensity: double,      borderWidth: double): VisualEffect-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -145,6 +151,8 @@ colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths:
 此方法为组件添加颜色渐变效果。
 
 **起始版本：** 20
+
+<!--Device-VisualEffect-colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths: Array<double>,      alphaMask?: Mask): VisualEffect--><!--Device-VisualEffect-colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths: Array<double>,      alphaMask?: Mask): VisualEffect-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -230,6 +238,8 @@ backgroundEffect、brightness、blur等需要截屏的接口无法截取到正�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-VisualEffect-distortionCollapse(distortionParam: DistortionParam): VisualEffect--><!--Device-VisualEffect-distortionCollapse(distortionParam: DistortionParam): VisualEffect-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -291,6 +301,8 @@ glassMarbleEffect(material: GlassMarbleMaterialParam, marbleShell: GlassMarbleSp
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-VisualEffect-glassMarbleEffect(material: GlassMarbleMaterialParam, marbleShell: GlassMarbleSphereParam | Mask,      content?: GlassMarbleContentParam): VisualEffect--><!--Device-VisualEffect-glassMarbleEffect(material: GlassMarbleMaterialParam, marbleShell: GlassMarbleSphereParam | Mask,      content?: GlassMarbleContentParam): VisualEffect-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -319,6 +331,8 @@ liquidMaterial(param : LiquidMaterialEffectParam, useEffectMask: Mask, distortMa
 此方法为组件添加材质效果。材质效果通过模拟物理材质的光学特性（折射、反射）和动态扰动效果，实现玻璃、金属等材质的视觉呈现。可用于模拟玻璃质感UI、流体材质动画、磨砂玻璃效果等场景。
 
 **起始版本：** 22
+
+<!--Device-VisualEffect-liquidMaterial(param : LiquidMaterialEffectParam, useEffectMask: Mask, distortMask?: Mask,      brightnessParam?: BrightnessParam): VisualEffect--><!--Device-VisualEffect-liquidMaterial(param : LiquidMaterialEffectParam, useEffectMask: Mask, distortMask?: Mask,      brightnessParam?: BrightnessParam): VisualEffect-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

@@ -18,6 +18,8 @@ Open the view of forms belonging to the specified bundle. Client to communicatio
 
 **需要权限：** ohos.permission.PUBLISH_FORM_CROSS_BUNDLE
 
+<!--Device-formProvider-function openFormManagerCrossBundle(want: Want): void--><!--Device-formProvider-function openFormManagerCrossBundle(want: Want): void-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。

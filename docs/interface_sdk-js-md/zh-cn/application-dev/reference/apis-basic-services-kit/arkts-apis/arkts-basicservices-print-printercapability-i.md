@@ -8,6 +8,8 @@ interface PrinterCapability
 
 **起始版本：** 24
 
+<!--Device-print-interface PrinterCapability--><!--Device-print-interface PrinterCapability-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## 导入模块
@@ -28,6 +30,8 @@ colorMode: number
 
 **起始版本：** 24
 
+<!--Device-PrinterCapability-colorMode: int--><!--Device-PrinterCapability-colorMode: int-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## duplexMode
@@ -41,6 +45,8 @@ duplexMode: number
 **类型：** number
 
 **起始版本：** 24
+
+<!--Device-PrinterCapability-duplexMode: int--><!--Device-PrinterCapability-duplexMode: int-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -56,6 +62,8 @@ minMargin?: PrintMargin
 
 **起始版本：** 24
 
+<!--Device-PrinterCapability-minMargin?: PrintMargin--><!--Device-PrinterCapability-minMargin?: PrintMargin-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## options
@@ -69,6 +77,8 @@ options?: Object
 **类型：** Object
 
 **起始版本：** 24
+
+<!--Device-PrinterCapability-options?: Object--><!--Device-PrinterCapability-options?: Object-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -84,6 +94,8 @@ pageSize: Array<PrintPageSize>
 
 **起始版本：** 24
 
+<!--Device-PrinterCapability-pageSize: Array<PrintPageSize>--><!--Device-PrinterCapability-pageSize: Array<PrintPageSize>-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## resolution
@@ -97,5 +109,7 @@ resolution?: Array<PrintResolution>
 **类型：** Array&lt;[PrintResolution](arkts-basicservices-print-printresolution-i.md)&gt;
 
 **起始版本：** 24
+
+<!--Device-PrinterCapability-resolution?: Array<PrintResolution>--><!--Device-PrinterCapability-resolution?: Array<PrintResolution>-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework

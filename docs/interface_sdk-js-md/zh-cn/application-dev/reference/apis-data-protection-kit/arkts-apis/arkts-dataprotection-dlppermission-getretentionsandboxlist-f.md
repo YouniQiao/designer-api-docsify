@@ -18,6 +18,8 @@ function getRetentionSandboxList(bundleName?: string): Promise<Array<RetentionSa
 
 **起始版本：** 10
 
+<!--Device-dlpPermission-function getRetentionSandboxList(bundleName?: string): Promise<Array<RetentionSandboxInfo>>--><!--Device-dlpPermission-function getRetentionSandboxList(bundleName?: string): Promise<Array<RetentionSandboxInfo>>-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **参数：**
@@ -69,6 +71,8 @@ function getRetentionSandboxList(bundleName: string, callback: AsyncCallback<Arr
 
 **起始版本：** 10
 
+<!--Device-dlpPermission-function getRetentionSandboxList(bundleName: string, callback: AsyncCallback<Array<RetentionSandboxInfo>>): void--><!--Device-dlpPermission-function getRetentionSandboxList(bundleName: string, callback: AsyncCallback<Array<RetentionSandboxInfo>>): void-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **参数：**
@@ -116,6 +120,8 @@ function getRetentionSandboxList(callback: AsyncCallback<Array<RetentionSandboxI
 该接口用于查询当前应用的保留沙箱列表，以便查看或管理当前处于保留状态的沙箱环境。仅支持在非DLP沙箱应用中调用。
 
 **起始版本：** 10
+
+<!--Device-dlpPermission-function getRetentionSandboxList(callback: AsyncCallback<Array<RetentionSandboxInfo>>): void--><!--Device-dlpPermission-function getRetentionSandboxList(callback: AsyncCallback<Array<RetentionSandboxInfo>>): void-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 

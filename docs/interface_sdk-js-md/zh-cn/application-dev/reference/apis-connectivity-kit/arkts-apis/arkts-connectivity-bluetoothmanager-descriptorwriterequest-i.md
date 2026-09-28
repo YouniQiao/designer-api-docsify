@@ -14,6 +14,8 @@ interface DescriptorWriteRequest
 
 **替代接口：** [DescriptorWriteRequest](arkts-connectivity-ble-descriptorwriterequest-i.md)
 
+<!--Device-bluetoothManager-interface DescriptorWriteRequest--><!--Device-bluetoothManager-interface DescriptorWriteRequest-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -38,6 +40,8 @@ characteristicUuid: string
 
 **替代接口：** [characteristicUuid](arkts-connectivity-ble-descriptorwriterequest-i.md#characteristicuuid)
 
+<!--Device-DescriptorWriteRequest-characteristicUuid: string--><!--Device-DescriptorWriteRequest-characteristicUuid: string-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## descriptorUuid
@@ -55,6 +59,8 @@ descriptorUuid: string
 **废弃版本：** 10
 
 **替代接口：** [descriptorUuid](arkts-connectivity-ble-descriptorwriterequest-i.md#descriptoruuid)
+
+<!--Device-DescriptorWriteRequest-descriptorUuid: string--><!--Device-DescriptorWriteRequest-descriptorUuid: string-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -74,6 +80,8 @@ deviceId: string
 
 **替代接口：** [deviceId](arkts-connectivity-ble-descriptorwriterequest-i.md#deviceid)
 
+<!--Device-DescriptorWriteRequest-deviceId: string--><!--Device-DescriptorWriteRequest-deviceId: string-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## isPrep
@@ -91,6 +99,8 @@ isPrep: boolean
 **废弃版本：** 10
 
 **替代接口：** [isPrepared](arkts-connectivity-ble-descriptorwriterequest-i.md#isprepared)
+
+<!--Device-DescriptorWriteRequest-isPrep: boolean--><!--Device-DescriptorWriteRequest-isPrep: boolean-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -110,6 +120,8 @@ needRsp: boolean
 
 **替代接口：** [needRsp](arkts-connectivity-ble-descriptorwriterequest-i.md#needrsp)
 
+<!--Device-DescriptorWriteRequest-needRsp: boolean--><!--Device-DescriptorWriteRequest-needRsp: boolean-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## offset
@@ -127,6 +139,8 @@ offset: number
 **废弃版本：** 10
 
 **替代接口：** [offset](arkts-connectivity-ble-descriptorwriterequest-i.md#offset)
+
+<!--Device-DescriptorWriteRequest-offset: number--><!--Device-DescriptorWriteRequest-offset: number-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -146,6 +160,8 @@ serviceUuid: string
 
 **替代接口：** [serviceUuid](arkts-connectivity-ble-descriptorwriterequest-i.md#serviceuuid)
 
+<!--Device-DescriptorWriteRequest-serviceUuid: string--><!--Device-DescriptorWriteRequest-serviceUuid: string-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## transId
@@ -164,6 +180,8 @@ transId: number
 
 **替代接口：** [transId](arkts-connectivity-ble-descriptorwriterequest-i.md#transid)
 
+<!--Device-DescriptorWriteRequest-transId: number--><!--Device-DescriptorWriteRequest-transId: number-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## value
@@ -181,5 +199,7 @@ value: ArrayBuffer
 **废弃版本：** 10
 
 **替代接口：** [value](arkts-connectivity-ble-descriptorwriterequest-i.md#value)
+
+<!--Device-DescriptorWriteRequest-value: ArrayBuffer--><!--Device-DescriptorWriteRequest-value: ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

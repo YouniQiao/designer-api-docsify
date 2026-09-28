@@ -41,7 +41,7 @@
 | [StyledStringController](arkts-arkui-styledstringcontroller-i.md) | Defines a styled string controller. |
 | [TextBaseController](arkts-arkui-textbasecontroller-i.md) | Defines a text selection controller. |
 | [TextChangeOptions](arkts-arkui-textchangeoptions-i.md) | Text change information, including the selection range before and after the change and the text content before the change. |
-| [TextDataDetectorConfig](arkts-arkui-textdatadetectorconfig-i.md) | This configuration is only available for the [Text](../arkts-components/arkts-arkui-text-comp.md#text) and [RichEditor](../arkts-components/arkts-arkui-richeditor-comp.md#rich_editor) components. |
+| [TextDataDetectorConfig](arkts-arkui-textdatadetectorconfig-i.md) | This configuration is only available for the [Text](../arkts-components/arkts-arkui-text-comp.md) and [RichEditor](../arkts-components/arkts-arkui-richeditor-comp.md) components. |
 | [TextEditControllerEx](arkts-arkui-texteditcontrollerex-i.md) | Implements an extended text editing controller. |
 | [TextLayoutOptions](arkts-arkui-textlayoutoptions-i.md) | Defines the text layout options. |
 | [TextMenuItem](arkts-arkui-textmenuitem-i.md) | [TextMenuItem](arkts-arkui-textmenuitem-i.md) |

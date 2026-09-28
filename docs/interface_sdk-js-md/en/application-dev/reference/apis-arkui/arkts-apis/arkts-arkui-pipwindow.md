@@ -10,6 +10,8 @@ The module provides basic APIs for manipulating Picture in Picture (PiP). For ex
 
 **Since:** 11
 
+<!--Device-unnamed-declare namespace PiPWindow--><!--Device-unnamed-declare namespace PiPWindow-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 ## Modules to Import

@@ -18,6 +18,8 @@ function transmitInfrared(infraredFrequency: number, pattern: Array<number>): vo
 
 **需要权限：** ohos.permission.MANAGE_INPUT_INFRARED_EMITTER
 
+<!--Device-infraredEmitter-function transmitInfrared(infraredFrequency: long, pattern: Array<long>): void--><!--Device-infraredEmitter-function transmitInfrared(infraredFrequency: long, pattern: Array<long>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InfraredEmitter
 
 **参数：**

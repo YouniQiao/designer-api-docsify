@@ -10,6 +10,8 @@ request模块给应用提供上传下载文件、后台代理传输的基础功�
 
 **起始版本：** 6
 
+<!--Device-unnamed-declare namespace request--><!--Device-unnamed-declare namespace request-End-->
+
 **系统能力：** 
 - API版本10+：SystemCapability.Request.FileTransferAgent
 

@@ -8,6 +8,8 @@ export enum CMErrorCode
 
 **起始版本：** 11
 
+<!--Device-certificateManager-export enum CMErrorCode--><!--Device-certificateManager-export enum CMErrorCode-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
 
 ## CM_ERROR_NOT_SYSTEM_APP
@@ -21,6 +23,8 @@ CM_ERROR_NOT_SYSTEM_APP = 202
 此接口为系统接口。
 
 **起始版本：** 11
+
+<!--Device-CMErrorCode-CM_ERROR_NOT_SYSTEM_APP = 202--><!--Device-CMErrorCode-CM_ERROR_NOT_SYSTEM_APP = 202-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManager
 
@@ -41,6 +45,8 @@ CM_ERROR_PASSWORD_IS_ERR = 17500008
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-CMErrorCode-CM_ERROR_PASSWORD_IS_ERR = 17500008--><!--Device-CMErrorCode-CM_ERROR_PASSWORD_IS_ERR = 17500008-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManager
 

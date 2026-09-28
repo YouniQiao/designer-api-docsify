@@ -16,6 +16,8 @@ DepthComponent(background: ResourceStr | PixelMap, options?: DepthComponentOptio
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-DepthComponentInterface-(background: ResourceStr | PixelMap, options?: DepthComponentOptions): DepthComponentAttribute--><!--Device-DepthComponentInterface-(background: ResourceStr | PixelMap, options?: DepthComponentOptions): DepthComponentAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。

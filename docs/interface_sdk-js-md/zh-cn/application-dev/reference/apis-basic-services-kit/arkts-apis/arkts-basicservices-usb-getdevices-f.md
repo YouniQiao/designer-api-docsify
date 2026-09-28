@@ -20,6 +20,8 @@ function getDevices(): Array<Readonly<USBDevice>>
 
 **替代接口：** [getDevices](arkts-basicservices-usbmanager-getdevices-f.md)
 
+<!--Device-usb-function getDevices(): Array<Readonly<USBDevice>>--><!--Device-usb-function getDevices(): Array<Readonly<USBDevice>>-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 **返回值：**

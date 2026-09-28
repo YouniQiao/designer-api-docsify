@@ -20,6 +20,8 @@ function getBundleInfoSync(bundleName: string, bundleFlags: number, userId: numb
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
+<!--Device-bundleManager-function getBundleInfoSync(bundleName: string, bundleFlags: int, userId: int): BundleInfo--><!--Device-bundleManager-function getBundleInfoSync(bundleName: string, bundleFlags: int, userId: int): BundleInfo-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **参数：**
@@ -82,6 +84,8 @@ function getBundleInfoSync(bundleName: string, bundleFlags: number): BundleInfo
 **起始版本：** 14
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
+
+<!--Device-bundleManager-function getBundleInfoSync(bundleName: string, bundleFlags: int): BundleInfo--><!--Device-bundleManager-function getBundleInfoSync(bundleName: string, bundleFlags: int): BundleInfo-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

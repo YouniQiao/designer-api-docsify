@@ -4,11 +4,13 @@
 declare class TextClockAttribute extends CommonMethod<TextClockAttribute>
 ```
 
-In addition to the [universal attributes](arkts-arkui-common-comp.md#common), the following attributes are supported:
+In addition to the [universal attributes](arkts-arkui-common-comp.md), the following attributes are supported:
 
 **Inheritance/Implementation:** TextClockAttribute extends CommonMethod<TextClockAttribute>
 
 **Since:** 8
+
+<!--Device-unnamed-declare class TextClockAttribute extends CommonMethod<TextClockAttribute>--><!--Device-unnamed-declare class TextClockAttribute extends CommonMethod<TextClockAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,6 +27,8 @@ Creates a content modifier.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextClockAttribute-contentModifier(modifier: ContentModifier<TextClockConfiguration>): TextClockAttribute--><!--Device-TextClockAttribute-contentModifier(modifier: ContentModifier<TextClockConfiguration>): TextClockAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,6 +54,8 @@ Sets whether to display a leading zero for the hour.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-TextClockAttribute-dateTimeOptions(dateTimeOptions: Optional<DateTimeOptions>): TextClockAttribute--><!--Device-TextClockAttribute-dateTimeOptions(dateTimeOptions: Optional<DateTimeOptions>): TextClockAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -72,6 +78,8 @@ Sets the font color.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
+<!--Device-TextClockAttribute-fontColor(value: ResourceColor): TextClockAttribute--><!--Device-TextClockAttribute-fontColor(value: ResourceColor): TextClockAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -93,6 +101,8 @@ Sets the font family.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
+
+<!--Device-TextClockAttribute-fontFamily(value: ResourceStr): TextClockAttribute--><!--Device-TextClockAttribute-fontFamily(value: ResourceStr): TextClockAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -126,6 +136,8 @@ For example, the input format for monospaced clock fonts is "ss01" on.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
+<!--Device-TextClockAttribute-fontFeature(value: string): TextClockAttribute--><!--Device-TextClockAttribute-fontFeature(value: string): TextClockAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -147,6 +159,8 @@ Sets the font size.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
+
+<!--Device-TextClockAttribute-fontSize(value: Length): TextClockAttribute--><!--Device-TextClockAttribute-fontSize(value: Length): TextClockAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -170,6 +184,8 @@ Sets the font style.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
+<!--Device-TextClockAttribute-fontStyle(value: FontStyle): TextClockAttribute--><!--Device-TextClockAttribute-fontStyle(value: FontStyle): TextClockAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -191,6 +207,8 @@ Sets the font weight of the text. If the value is too large, the text in differe
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
+
+<!--Device-TextClockAttribute-fontWeight(value: number | FontWeight | string): TextClockAttribute--><!--Device-TextClockAttribute-fontWeight(value: number | FontWeight | string): TextClockAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -259,7 +277,7 @@ The following table shows how different settings of **format** work out.
 | MM | Feb |
 | M | Feb |
 | dd (complete date) | 04 |
-| [d](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | 4 |
+| d | 4 |
 | EEEE (full name) | Saturday |
 | E, EE, EEE (abbreviation) | [Sat](../arkts-apis/arkts-arkui-week-e.md) |
 | M d, yyyy | Feb 4, 2023 |
@@ -273,7 +291,7 @@ The following table shows how different settings of **format** work out.
 | aa hh:mm | AM 5:00 |
 | hh:mm | 5:00 |
 | mm:ss | 00:04 |
-| [mm:ss.SS](../../apis-performance-analysis-kit/arkts-apis/arkts-performanceanalysis-hitracechain-hitracetracepointtype-e.md) | 00:04.91 |
+| mm:ss.SS | 00:04.91 |
 | mm:ss.SSS | 00:04.536 |
 | hh:mm:ss aa | 5:00:04 AM |
 | HH | 17 |
@@ -283,6 +301,8 @@ The following table shows how different settings of **format** work out.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
+
+<!--Device-TextClockAttribute-format(value: ResourceStr): TextClockAttribute--><!--Device-TextClockAttribute-format(value: ResourceStr): TextClockAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -312,6 +332,8 @@ If the event is used in a widget, it is triggered when the change occurs in minu
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
+<!--Device-TextClockAttribute-onDateChange(event: (value: number) => void): TextClockAttribute--><!--Device-TextClockAttribute-onDateChange(event: (value: number) => void): TextClockAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -335,6 +357,8 @@ Sets the text shadow effect. This API supports passing an array as the input par
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
+
+<!--Device-TextClockAttribute-textShadow(value: ShadowOptions | Array<ShadowOptions>): TextClockAttribute--><!--Device-TextClockAttribute-textShadow(value: ShadowOptions | Array<ShadowOptions>): TextClockAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

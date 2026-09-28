@@ -8,6 +8,8 @@ Mask效果类，作为Filter以及VisualEffect的输入使用。不同类型的M
 
 **起始版本：** 20
 
+<!--Device-uiEffect-class Mask--><!--Device-uiEffect-class Mask-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -29,6 +31,8 @@ static createAtlasFrameMask(atlasInfo: drawing.AtlasImage): Mask
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Mask-static createAtlasFrameMask(atlasInfo: drawing.AtlasImage): Mask--><!--Device-Mask-static createAtlasFrameMask(atlasInfo: drawing.AtlasImage): Mask-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -57,6 +61,8 @@ static createBinocularMask(radiusX: number, radiusY: number, gap: number, softne
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Mask-static createBinocularMask(radiusX: double, radiusY: double, gap: double, softness: double): Mask--><!--Device-Mask-static createBinocularMask(radiusX: double, radiusY: double, gap: double, softness: double): Mask-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -116,6 +122,8 @@ static createFractalGlassMask(glassNum: number, glassStrength: number, glassSoft
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Mask-static createFractalGlassMask(glassNum: int, glassStrength: double, glassSoftness: double,      isSymmetric: boolean, refractMask?: image.PixelMap): Mask--><!--Device-Mask-static createFractalGlassMask(glassNum: int, glassStrength: double, glassSoftness: double,      isSymmetric: boolean, refractMask?: image.PixelMap): Mask-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -177,6 +185,8 @@ static createPixelMapMask(pixelMap: image.PixelMap, srcRect: common2D.Rect, dstR
 通过输入的pixelMap，以及pixelMap的待绘制区域、挂载节点的绘制区域和绘制区域外填充的颜色创建具有缩放效果的Mask实例。
 
 **起始版本：** 20
+
+<!--Device-Mask-static createPixelMapMask(pixelMap: image.PixelMap, srcRect: common2D.Rect, dstRect: common2D.Rect,      fillColor?: Color): Mask--><!--Device-Mask-static createPixelMapMask(pixelMap: image.PixelMap, srcRect: common2D.Rect, dstRect: common2D.Rect,      fillColor?: Color): Mask-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -255,6 +265,8 @@ static createPixelMapMask(pixelMap: image.PixelMap): Mask
 通过输入的pixelMap创建Mask实例。该接口不会对传入的pixelMap进行缩放处理。
 
 **起始版本：** 22
+
+<!--Device-Mask-static createPixelMapMask(pixelMap: image.PixelMap): Mask--><!--Device-Mask-static createPixelMapMask(pixelMap: image.PixelMap): Mask-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -380,6 +392,8 @@ static createRadialGradientMask(center: common2D.Point, radiusX: number, radiusY
 
 **起始版本：** 20
 
+<!--Device-Mask-static createRadialGradientMask(center: common2D.Point, radiusX: double, radiusY: double,      gradients: Array<[double, double]>): Mask--><!--Device-Mask-static createRadialGradientMask(center: common2D.Point, radiusX: double, radiusY: double,      gradients: Array<[double, double]>): Mask-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -437,6 +451,8 @@ static createRippleMask(center: common2D.Point, radius: number, width: number, o
 
 **起始版本：** 20
 
+<!--Device-Mask-static createRippleMask(center: common2D.Point, radius: double, width: double, offset?: double): Mask--><!--Device-Mask-static createRippleMask(center: common2D.Point, radius: double, width: double, offset?: double): Mask-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -480,6 +496,8 @@ static createSweepRefractionMask(param: SweepRefractionParam,
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Mask-static createSweepRefractionMask(param: SweepRefractionParam,      options?: SweepRefractionMaskOptions): Mask--><!--Device-Mask-static createSweepRefractionMask(param: SweepRefractionParam,      options?: SweepRefractionMaskOptions): Mask-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -575,6 +593,8 @@ static createUseEffectMask(useEffect: boolean): Mask
 
 **起始版本：** 22
 
+<!--Device-Mask-static createUseEffectMask(useEffect: boolean): Mask--><!--Device-Mask-static createUseEffectMask(useEffect: boolean): Mask-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -667,6 +687,8 @@ static createWarpedRingMask(ringParam: WarpedRingParam): Mask
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Mask-static createWarpedRingMask(ringParam: WarpedRingParam): Mask--><!--Device-Mask-static createWarpedRingMask(ringParam: WarpedRingParam): Mask-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -734,6 +756,8 @@ static createWaveGradientMask(center: common2D.Point, width: number, propagation
 输入波源中心位置、单波参数创建单波遮罩效果Mask实例。
 
 **起始版本：** 20
+
+<!--Device-Mask-static createWaveGradientMask(center: common2D.Point, width: double, propagationRadius: double,      blurRadius: double, turbulenceStrength?: double): Mask--><!--Device-Mask-static createWaveGradientMask(center: common2D.Point, width: double, propagationRadius: double,      blurRadius: double, turbulenceStrength?: double): Mask-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

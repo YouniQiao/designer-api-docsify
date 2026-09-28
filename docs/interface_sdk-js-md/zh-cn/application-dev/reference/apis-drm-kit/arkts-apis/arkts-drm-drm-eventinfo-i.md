@@ -8,6 +8,8 @@ interface EventInfo
 
 **起始版本：** 11
 
+<!--Device-drm-interface EventInfo--><!--Device-drm-interface EventInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
 ## 导入模块
@@ -28,7 +30,9 @@ extraInfo: string
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-EventInfo-extraInfo: string--><!--Device-EventInfo-extraInfo: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
@@ -44,6 +48,8 @@ info: Uint8Array
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-EventInfo-info: Uint8Array--><!--Device-EventInfo-info: Uint8Array-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core

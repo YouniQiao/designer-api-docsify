@@ -18,6 +18,8 @@ function off(type: 'callDetailsChange', callback?: Callback<CallAttributeOptions
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-call-function off(type: 'callDetailsChange', callback?: Callback<CallAttributeOptions>): void--><!--Device-call-function off(type: 'callDetailsChange', callback?: Callback<CallAttributeOptions>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +63,8 @@ function off(type: 'callEventChange', callback?: Callback<CallEventOptions>): vo
 **起始版本：** 8
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
+
+<!--Device-call-function off(type: 'callEventChange', callback?: Callback<CallEventOptions>): void--><!--Device-call-function off(type: 'callEventChange', callback?: Callback<CallEventOptions>): void-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -106,6 +110,8 @@ function off(type: 'callDisconnectedCause', callback?: Callback<DisconnectedDeta
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-call-function off(type: 'callDisconnectedCause', callback?: Callback<DisconnectedDetails>): void--><!--Device-call-function off(type: 'callDisconnectedCause', callback?: Callback<DisconnectedDetails>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -149,6 +155,8 @@ function off(type: 'mmiCodeResult', callback?: Callback<MmiCodeResults>): void
 **起始版本：** 9
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
+
+<!--Device-call-function off(type: 'mmiCodeResult', callback?: Callback<MmiCodeResults>): void--><!--Device-call-function off(type: 'mmiCodeResult', callback?: Callback<MmiCodeResults>): void-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -194,6 +202,8 @@ function off(type: 'audioDeviceChange', callback?: Callback<AudioDeviceCallbackI
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-call-function off(type: 'audioDeviceChange', callback?: Callback<AudioDeviceCallbackInfo>): void--><!--Device-call-function off(type: 'audioDeviceChange', callback?: Callback<AudioDeviceCallbackInfo>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -238,6 +248,8 @@ function off(type: 'postDialDelay', callback?: Callback<string>): void
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-call-function off(type: 'postDialDelay', callback?: Callback<string>): void--><!--Device-call-function off(type: 'postDialDelay', callback?: Callback<string>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -281,6 +293,8 @@ function off(type: 'imsCallModeChange', callback?: Callback<ImsCallModeInfo>): v
 **起始版本：** 11
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
+
+<!--Device-call-function off(type: 'imsCallModeChange', callback?: Callback<ImsCallModeInfo>): void--><!--Device-call-function off(type: 'imsCallModeChange', callback?: Callback<ImsCallModeInfo>): void-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -328,6 +342,8 @@ function off(type: 'callSessionEvent', callback?: Callback<CallSessionEvent>): v
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-call-function off(type: 'callSessionEvent', callback?: Callback<CallSessionEvent>): void--><!--Device-call-function off(type: 'callSessionEvent', callback?: Callback<CallSessionEvent>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -374,6 +390,8 @@ function off(type: 'peerDimensionsChange', callback?: Callback<PeerDimensionsDet
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-call-function off(type: 'peerDimensionsChange', callback?: Callback<PeerDimensionsDetail>): void--><!--Device-call-function off(type: 'peerDimensionsChange', callback?: Callback<PeerDimensionsDetail>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -419,6 +437,8 @@ function off(type: 'cameraCapabilitiesChange', callback?: Callback<CameraCapabil
 **起始版本：** 11
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
+
+<!--Device-call-function off(type: 'cameraCapabilitiesChange', callback?: Callback<CameraCapabilities>): void--><!--Device-call-function off(type: 'cameraCapabilitiesChange', callback?: Callback<CameraCapabilities>): void-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 

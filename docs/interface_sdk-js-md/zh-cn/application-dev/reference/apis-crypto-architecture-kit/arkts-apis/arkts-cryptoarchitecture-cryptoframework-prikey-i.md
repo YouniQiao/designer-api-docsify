@@ -12,6 +12,8 @@ interface PriKey extends Key
 
 **起始版本：** 9
 
+<!--Device-cryptoFramework-interface PriKey extends Key--><!--Device-cryptoFramework-interface PriKey extends Key-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
 - API版本9-11：SystemCapability.Security.CryptoFramework
@@ -32,7 +34,9 @@ clearMem(): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PriKey-clearMem(): void--><!--Device-PriKey-clearMem(): void-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -66,7 +70,9 @@ getAsyKeySpec(itemType: AsyKeySpecItem): bigint | string | number
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PriKey-getAsyKeySpec(itemType: AsyKeySpecItem): bigint | string | int--><!--Device-PriKey-getAsyKeySpec(itemType: AsyKeySpecItem): bigint | string | int-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -147,7 +153,9 @@ getEncodedDer(format: string): DataBlob
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PriKey-getEncodedDer(format: string): DataBlob--><!--Device-PriKey-getEncodedDer(format: string): DataBlob-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
@@ -200,7 +208,9 @@ getEncodedPem(format: string): string
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PriKey-getEncodedPem(format: string): string--><!--Device-PriKey-getEncodedPem(format: string): string-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
@@ -269,7 +279,9 @@ getEncodedPem(format: string, config: KeyEncodingConfig): string
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-PriKey-getEncodedPem(format: string, config: KeyEncodingConfig): string--><!--Device-PriKey-getEncodedPem(format: string, config: KeyEncodingConfig): string-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
@@ -342,7 +354,9 @@ getKeyData(itemType: AsyKeyDataItem): Promise<Uint8Array>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-PriKey-getKeyData(itemType: AsyKeyDataItem): Promise<Uint8Array>--><!--Device-PriKey-getKeyData(itemType: AsyKeyDataItem): Promise<Uint8Array>-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
@@ -395,7 +409,9 @@ getKeyDataSync(itemType: AsyKeyDataItem): Uint8Array
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-PriKey-getKeyDataSync(itemType: AsyKeyDataItem): Uint8Array--><!--Device-PriKey-getKeyDataSync(itemType: AsyKeyDataItem): Uint8Array-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
@@ -444,7 +460,9 @@ getPubKey(): Promise<PubKey>
 
 **起始版本：** 23
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-PriKey-getPubKey(): Promise<PubKey>--><!--Device-PriKey-getPubKey(): Promise<PubKey>-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
@@ -545,7 +563,9 @@ getPubKeySync(): PubKey
 
 **起始版本：** 23
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-PriKey-getPubKeySync(): PubKey--><!--Device-PriKey-getPubKeySync(): PubKey-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Key.AsymKey
 

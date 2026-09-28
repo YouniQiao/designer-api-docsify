@@ -30,6 +30,8 @@ function getFontScale(): number
 - API版本20+：N/A
 - API版本12-19：ohos.permission.UPDATE_CONFIGURATION
 
+<!--Device-uiAppearance-function getFontScale(): number--><!--Device-uiAppearance-function getFontScale(): number-End-->
+
 **系统能力：** SystemCapability.ArkUI.UiAppearance
 
 **返回值：**

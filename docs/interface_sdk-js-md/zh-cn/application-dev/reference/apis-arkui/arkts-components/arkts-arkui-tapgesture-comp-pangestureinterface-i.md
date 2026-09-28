@@ -10,6 +10,8 @@ interface PanGestureInterface extends GestureInterface<PanGestureInterface>
 
 **起始版本：** 7
 
+<!--Device-unnamed-interface PanGestureInterface extends GestureInterface<PanGestureInterface>--><!--Device-unnamed-interface PanGestureInterface extends GestureInterface<PanGestureInterface>-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## [[Call]]
@@ -23,6 +25,8 @@ interface PanGestureInterface extends GestureInterface<PanGestureInterface>
 **起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-PanGestureInterface-(value?: { fingers?: number; direction?: PanDirection; distance?: number } | PanGestureOptions): PanGestureInterface--><!--Device-PanGestureInterface-(value?: { fingers?: number; direction?: PanDirection; distance?: number } | PanGestureOptions): PanGestureInterface-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,6 +58,8 @@ interface PanGestureInterface extends GestureInterface<PanGestureInterface>
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
 
+<!--Device-PanGestureInterface-(options?: PanGestureHandlerOptions): PanGestureInterface--><!--Device-PanGestureInterface-(options?: PanGestureHandlerOptions): PanGestureInterface-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -79,6 +85,8 @@ onActionCancel(event: () => void): PanGestureInterface
 **起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-PanGestureInterface-onActionCancel(event: () => void): PanGestureInterface--><!--Device-PanGestureInterface-onActionCancel(event: () => void): PanGestureInterface-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -110,6 +118,8 @@ onActionCancel(event: Callback<GestureEvent>): PanGestureInterface
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-PanGestureInterface-onActionCancel(event: Callback<GestureEvent>): PanGestureInterface--><!--Device-PanGestureInterface-onActionCancel(event: Callback<GestureEvent>): PanGestureInterface-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -135,6 +145,8 @@ onActionEnd(event: (event: GestureEvent) => void): PanGestureInterface
 **起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-PanGestureInterface-onActionEnd(event: (event: GestureEvent) => void): PanGestureInterface--><!--Device-PanGestureInterface-onActionEnd(event: (event: GestureEvent) => void): PanGestureInterface-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -162,6 +174,8 @@ onActionStart(event: (event: GestureEvent) => void): PanGestureInterface
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-PanGestureInterface-onActionStart(event: (event: GestureEvent) => void): PanGestureInterface--><!--Device-PanGestureInterface-onActionStart(event: (event: GestureEvent) => void): PanGestureInterface-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -187,6 +201,8 @@ onActionUpdate(event: (event: GestureEvent) => void): PanGestureInterface
 **起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-PanGestureInterface-onActionUpdate(event: (event: GestureEvent) => void): PanGestureInterface--><!--Device-PanGestureInterface-onActionUpdate(event: (event: GestureEvent) => void): PanGestureInterface-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

@@ -20,6 +20,8 @@ function removePreferencesFromCache(context: Context, options: Options): Promise
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-sendablePreferences-function removePreferencesFromCache(context: Context, options: Options): Promise<void>--><!--Device-sendablePreferences-function removePreferencesFromCache(context: Context, options: Options): Promise<void>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
 **参数：**

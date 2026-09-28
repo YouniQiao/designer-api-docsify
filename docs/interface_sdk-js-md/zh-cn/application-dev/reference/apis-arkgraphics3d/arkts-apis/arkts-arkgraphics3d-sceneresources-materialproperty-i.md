@@ -10,6 +10,8 @@ export interface MaterialProperty
 
 **起始版本：** 20
 
+<!--Device-unnamed-export interface MaterialProperty--><!--Device-unnamed-export interface MaterialProperty-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## factor
@@ -23,6 +25,8 @@ factor: Vec4
 **类型：** [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md)
 
 **起始版本：** 20
+
+<!--Device-MaterialProperty-factor: Vec4--><!--Device-MaterialProperty-factor: Vec4-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -38,6 +42,8 @@ image: Image | null
 
 **起始版本：** 20
 
+<!--Device-MaterialProperty-image: Image | null--><!--Device-MaterialProperty-image: Image | null-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## sampler
@@ -51,5 +57,7 @@ sampler?: Sampler
 **类型：** [Sampler](arkts-arkgraphics3d-sceneresources-sampler-i.md)
 
 **起始版本：** 20
+
+<!--Device-MaterialProperty-sampler?: Sampler--><!--Device-MaterialProperty-sampler?: Sampler-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

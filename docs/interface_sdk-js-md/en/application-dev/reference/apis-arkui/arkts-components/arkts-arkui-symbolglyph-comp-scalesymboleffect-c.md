@@ -10,6 +10,8 @@ Inherits from **SymbolEffect**.
 
 **Since:** 12
 
+<!--Device-unnamed-declare class ScaleSymbolEffect extends SymbolEffect--><!--Device-unnamed-declare class ScaleSymbolEffect extends SymbolEffect-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
@@ -27,6 +29,8 @@ A constructor used to create a **ScaleSymbolEffect** instance, which comes with 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-ScaleSymbolEffect-constructor(scope?: EffectScope, direction?: EffectDirection)--><!--Device-ScaleSymbolEffect-constructor(scope?: EffectScope, direction?: EffectDirection)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -57,6 +61,8 @@ Default value: EffectDirection.DOWN
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-ScaleSymbolEffect-direction?: EffectDirection--><!--Device-ScaleSymbolEffect-direction?: EffectDirection-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## scope
@@ -78,5 +84,7 @@ Default value: EffectScope.LAYER
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-ScaleSymbolEffect-scope?: EffectScope--><!--Device-ScaleSymbolEffect-scope?: EffectScope-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

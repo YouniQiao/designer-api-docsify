@@ -28,6 +28,8 @@ function getSystemNetPortStates(): Promise<NetPortStatesInfo>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-connection-function getSystemNetPortStates(): Promise<NetPortStatesInfo>--><!--Device-connection-function getSystemNetPortStates(): Promise<NetPortStatesInfo>-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **返回值：**

@@ -8,6 +8,8 @@ interface Timeout
 
 **起始版本：** 20
 
+<!--Device-agent-interface Timeout--><!--Device-agent-interface Timeout-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## 导入模块
@@ -28,6 +30,8 @@ connectionTimeout?: number
 
 **起始版本：** 20
 
+<!--Device-Timeout-connectionTimeout?: int--><!--Device-Timeout-connectionTimeout?: int-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## totalTimeout
@@ -41,5 +45,7 @@ totalTimeout?: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-Timeout-totalTimeout?: int--><!--Device-Timeout-totalTimeout?: int-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent

@@ -8,7 +8,7 @@
 > 
 > WaterFlow组件支持展示瀑布流布局，不支持编辑模式和子元素拖动功能。
 > 
-> 组件内部已绑定手势实现跟手滚动等功能，需要增加自定义手势操作时请参考[手势拦截增强](arkts-arkui-common-comp.md#common)进行处理。
+> 组件内部已绑定手势实现跟手滚动等功能，需要增加自定义手势操作时请参考[手势拦截增强](arkts-arkui-common-comp.md)进行处理。
 
 ## 子组件
 
@@ -56,6 +56,8 @@ WaterFlow(options?: WaterFlowOptions)
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WaterFlowInterface-(options?: WaterFlowOptions): WaterFlowAttribute--><!--Device-WaterFlowInterface-(options?: WaterFlowOptions): WaterFlowAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

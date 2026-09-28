@@ -16,6 +16,8 @@ function isNewCallAllowed(callback: AsyncCallback<boolean>): void
 
 **起始版本：** 8
 
+<!--Device-call-function isNewCallAllowed(callback: AsyncCallback<boolean>): void--><!--Device-call-function isNewCallAllowed(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -63,6 +65,8 @@ function isNewCallAllowed(): Promise<boolean>
 判断是否允许再拨打一通新电话。使用Promise异步回调。
 
 **起始版本：** 8
+
+<!--Device-call-function isNewCallAllowed(): Promise<boolean>--><!--Device-call-function isNewCallAllowed(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 

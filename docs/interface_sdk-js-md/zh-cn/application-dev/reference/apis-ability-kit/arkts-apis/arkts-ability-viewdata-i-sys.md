@@ -8,6 +8,8 @@ export default interface ViewData
 
 **起始版本：** 26.0.0
 
+<!--Device-unnamed-export default interface ViewData--><!--Device-unnamed-export default interface ViewData-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 ## abilityName
@@ -23,6 +25,8 @@ Ability名称，用于指定自动填充数据所属的Ability。
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ViewData-abilityName: string--><!--Device-ViewData-abilityName: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -42,6 +46,8 @@ isOtherAccount: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ViewData-isOtherAccount: boolean--><!--Device-ViewData-isOtherAccount: boolean-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **系统接口：** 此接口为系统接口。
@@ -60,6 +66,8 @@ isUserSelected: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ViewData-isUserSelected: boolean--><!--Device-ViewData-isUserSelected: boolean-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +85,8 @@ moduleName: string
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ViewData-moduleName: string--><!--Device-ViewData-moduleName: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 

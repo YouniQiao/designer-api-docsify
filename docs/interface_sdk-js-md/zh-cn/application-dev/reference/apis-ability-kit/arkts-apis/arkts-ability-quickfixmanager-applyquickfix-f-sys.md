@@ -18,6 +18,8 @@ function applyQuickFix(hapModuleQuickFixFiles: Array<string>, callback: AsyncCal
 
 **需要权限：** ohos.permission.INSTALL_BUNDLE
 
+<!--Device-quickFixManager-function applyQuickFix(hapModuleQuickFixFiles: Array<string>, callback: AsyncCallback<void>): void--><!--Device-quickFixManager-function applyQuickFix(hapModuleQuickFixFiles: Array<string>, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.QuickFix
 
 **系统接口：** 此接口为系统接口。
@@ -72,6 +74,8 @@ function applyQuickFix(hapModuleQuickFixFiles: Array<string>): Promise<void>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.INSTALL_BUNDLE
+
+<!--Device-quickFixManager-function applyQuickFix(hapModuleQuickFixFiles: Array<string>): Promise<void>--><!--Device-quickFixManager-function applyQuickFix(hapModuleQuickFixFiles: Array<string>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.QuickFix
 

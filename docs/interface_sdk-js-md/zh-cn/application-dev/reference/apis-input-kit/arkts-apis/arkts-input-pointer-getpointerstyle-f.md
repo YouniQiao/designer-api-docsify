@@ -16,6 +16,8 @@ function getPointerStyle(windowId: number, callback: AsyncCallback<PointerStyle>
 
 **起始版本：** 9
 
+<!--Device-pointer-function getPointerStyle(windowId: int, callback: AsyncCallback<PointerStyle>): void--><!--Device-pointer-function getPointerStyle(windowId: int, callback: AsyncCallback<PointerStyle>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 **参数：**
@@ -87,6 +89,8 @@ function getPointerStyle(windowId: number): Promise<PointerStyle>
 获取鼠标样式类型，此接口仅支持获取本应用进程内窗口的鼠标样式类型，使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-pointer-function getPointerStyle(windowId: int): Promise<PointerStyle>--><!--Device-pointer-function getPointerStyle(windowId: int): Promise<PointerStyle>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 

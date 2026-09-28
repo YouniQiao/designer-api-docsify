@@ -8,6 +8,8 @@ interface ExecCmdOptions
 
 **起始版本：** 26.0.1
 
+<!--Device-cliManager-interface ExecCmdOptions--><!--Device-cliManager-interface ExecCmdOptions-End-->
+
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 ## 导入模块
@@ -34,6 +36,8 @@ challenge?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExecCmdOptions-challenge?: string--><!--Device-ExecCmdOptions-challenge?: string-End-->
+
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +55,8 @@ dmSessionId?: string
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExecCmdOptions-dmSessionId?: string--><!--Device-ExecCmdOptions-dmSessionId?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -72,6 +78,8 @@ isShellCommand?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ExecCmdOptions-isShellCommand?: boolean--><!--Device-ExecCmdOptions-isShellCommand?: boolean-End-->
+
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -89,6 +97,8 @@ toolCallId?: string
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ExecCmdOptions-toolCallId?: string--><!--Device-ExecCmdOptions-toolCallId?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 

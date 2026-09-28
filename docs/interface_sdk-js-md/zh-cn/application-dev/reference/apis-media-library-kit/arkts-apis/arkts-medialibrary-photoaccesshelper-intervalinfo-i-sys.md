@@ -8,6 +8,8 @@ interface IntervalInfo
 
 **起始版本：** 26.2.0
 
+<!--Device-photoAccessHelper-interface IntervalInfo--><!--Device-photoAccessHelper-interface IntervalInfo-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ beginTime: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-IntervalInfo-beginTime: int--><!--Device-IntervalInfo-beginTime: int-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -50,6 +54,8 @@ endTime: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-IntervalInfo-endTime: int--><!--Device-IntervalInfo-endTime: int-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -67,6 +73,8 @@ intervalIndex: number
 **起始版本：** 26.2.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-IntervalInfo-intervalIndex: int--><!--Device-IntervalInfo-intervalIndex: int-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

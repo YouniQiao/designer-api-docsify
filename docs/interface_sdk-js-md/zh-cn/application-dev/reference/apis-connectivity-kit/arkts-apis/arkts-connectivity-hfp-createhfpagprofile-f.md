@@ -16,6 +16,8 @@ function createHfpAgProfile(): HandsFreeAudioGatewayProfile
 
 **起始版本：** 10
 
+<!--Device-hfp-function createHfpAgProfile(): HandsFreeAudioGatewayProfile--><!--Device-hfp-function createHfpAgProfile(): HandsFreeAudioGatewayProfile-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **返回值：**

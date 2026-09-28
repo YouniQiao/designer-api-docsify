@@ -4,11 +4,13 @@
 declare class TextTimerAttribute extends CommonMethod<TextTimerAttribute>
 ```
 
-In addition to the [universal attributes](arkts-arkui-common-comp.md#common), the following attributes are supported.
+In addition to the [universal attributes](arkts-arkui-common-comp.md), the following attributes are supported.
 
 **Inheritance/Implementation:** TextTimerAttribute extends CommonMethod<TextTimerAttribute>
 
 **Since:** 8
+
+<!--Device-unnamed-declare class TextTimerAttribute extends CommonMethod<TextTimerAttribute>--><!--Device-unnamed-declare class TextTimerAttribute extends CommonMethod<TextTimerAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,6 +27,8 @@ Customizes the content area of **TextTimer**. When the default text display styl
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextTimerAttribute-contentModifier(modifier: ContentModifier<TextTimerConfiguration>): TextTimerAttribute--><!--Device-TextTimerAttribute-contentModifier(modifier: ContentModifier<TextTimerConfiguration>): TextTimerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -48,6 +52,8 @@ Sets the font color.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
+<!--Device-TextTimerAttribute-fontColor(value: ResourceColor): TextTimerAttribute--><!--Device-TextTimerAttribute-fontColor(value: ResourceColor): TextTimerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -69,6 +75,8 @@ Sets the font family.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
+
+<!--Device-TextTimerAttribute-fontFamily(value: ResourceStr): TextTimerAttribute--><!--Device-TextTimerAttribute-fontFamily(value: ResourceStr): TextTimerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -92,13 +100,15 @@ Sets the font size.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
+<!--Device-TextTimerAttribute-fontSize(value: Length): TextTimerAttribute--><!--Device-TextTimerAttribute-fontSize(value: Length): TextTimerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Font size. <br>Default value: 16fp <br>When value is of the number type in Length, the unit is fp. When value is of the string type in Length, if the set value does not start with a digit, it is processed as 0fp; if the set value starts with a digit, and the content after the digit contains characters other than [pixel units](arkts-arkui-common-comp.md#common) (such as letters and special symbols), the numeric part at the beginning of the string is used, with the unit being fp. <br>For example, when the set value is "abc", the value is 0fp; when the set value is "10vp", the value is 10 vp; when the set value is "10vp11abc", the value is 10fp. Percentage strings are not supported. |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Font size. <br>Default value: 16fp <br>When value is of the number type in Length, the unit is fp. When value is of the string type in Length, if the set value does not start with a digit, it is processed as 0fp; if the set value starts with a digit, and the content after the digit contains characters other than [pixel units](arkts-arkui-common-comp.md) (such as letters and special symbols), the numeric part at the beginning of the string is used, with the unit being fp. <br>For example, when the set value is "abc", the value is 0fp; when the set value is "10vp", the value is 10 vp; when the set value is "10vp11abc", the value is 10fp. Percentage strings are not supported. |
 
 ## fontStyle
 
@@ -113,6 +123,8 @@ Sets the font style.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
+
+<!--Device-TextTimerAttribute-fontStyle(value: FontStyle): TextTimerAttribute--><!--Device-TextTimerAttribute-fontStyle(value: FontStyle): TextTimerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -135,6 +147,8 @@ Sets the font weight of the text. If the value is too large, the text in differe
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
+
+<!--Device-TextTimerAttribute-fontWeight(value: number | FontWeight | ResourceStr): TextTimerAttribute--><!--Device-TextTimerAttribute-fontWeight(value: number | FontWeight | ResourceStr): TextTimerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -160,6 +174,8 @@ The timer update frequency is processed based on the minimum unit of **format**.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
+<!--Device-TextTimerAttribute-format(value: string): TextTimerAttribute--><!--Device-TextTimerAttribute-format(value: string): TextTimerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -181,6 +197,8 @@ Triggered when the time text changes. This event is not triggered in the locked-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
+
+<!--Device-TextTimerAttribute-onTimer(event: (utc: number, elapsedTime: number) => void): TextTimerAttribute--><!--Device-TextTimerAttribute-onTimer(event: (utc: number, elapsedTime: number) => void): TextTimerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -207,6 +225,8 @@ Sets the text shadow effect. This API supports input parameters in an array to i
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextTimerAttribute-textShadow(value: ShadowOptions | Array<ShadowOptions>): TextTimerAttribute--><!--Device-TextTimerAttribute-textShadow(value: ShadowOptions | Array<ShadowOptions>): TextTimerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

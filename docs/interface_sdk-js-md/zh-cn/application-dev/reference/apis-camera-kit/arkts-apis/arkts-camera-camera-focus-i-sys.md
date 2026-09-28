@@ -12,6 +12,8 @@ Focus继承自[FocusQuery](arkts-camera-camera-focusquery-i.md)。
 
 **起始版本：** 11
 
+<!--Device-camera-interface Focus extends FocusQuery--><!--Device-camera-interface Focus extends FocusQuery-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
@@ -29,6 +31,8 @@ getFocusAssist(): boolean
 Checks whether the focus assist is enabled.
 
 **起始版本：** 12
+
+<!--Device-Focus-getFocusAssist(): boolean--><!--Device-Focus-getFocusAssist(): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -72,6 +76,8 @@ getFocusDriven(): FocusDrivenType
 Obtains the focus drive type in use.
 
 **起始版本：** 15
+
+<!--Device-Focus-getFocusDriven(): FocusDrivenType--><!--Device-Focus-getFocusDriven(): FocusDrivenType-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -118,6 +124,8 @@ Obtains the focus range type in use.
 
 **起始版本：** 15
 
+<!--Device-Focus-getFocusRange(): FocusRangeType--><!--Device-Focus-getFocusRange(): FocusRangeType-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -163,6 +171,8 @@ Sets the focus assist. Before the setting, call [isFocusAssistSupported](arkts-c
 
 **起始版本：** 12
 
+<!--Device-Focus-setFocusAssist(enabled: boolean): void--><!--Device-Focus-setFocusAssist(enabled: boolean): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -206,6 +216,8 @@ setFocusDriven(type: FocusDrivenType): void
 Sets a focus drive type. Before the setting, call [isFocusDrivenTypeSupported](arkts-camera-camera-focusquery-i-sys.md#isfocusdriventypesupported) to check whether the focus drive type is supported.
 
 **起始版本：** 15
+
+<!--Device-Focus-setFocusDriven(type: FocusDrivenType): void--><!--Device-Focus-setFocusDriven(type: FocusDrivenType): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -252,6 +264,8 @@ setFocusRange(type: FocusRangeType): void
 Sets a focus range type. Before the setting, call [isFocusRangeTypeSupported](arkts-camera-camera-focusquery-i-sys.md#isfocusrangetypesupported) to check whether the focus range type is supported.
 
 **起始版本：** 15
+
+<!--Device-Focus-setFocusRange(type: FocusRangeType): void--><!--Device-Focus-setFocusRange(type: FocusRangeType): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

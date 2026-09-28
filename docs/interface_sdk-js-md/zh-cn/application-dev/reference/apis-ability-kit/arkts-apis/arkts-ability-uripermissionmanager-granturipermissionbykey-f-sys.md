@@ -16,6 +16,8 @@ function grantUriPermissionByKey(key: string, flag: wantConstant.Flags, targetTo
 
 **起始版本：** 20
 
+<!--Device-uriPermissionManager-function grantUriPermissionByKey(key: string, flag: wantConstant.Flags, targetTokenId: int): Promise<void>--><!--Device-uriPermissionManager-function grantUriPermissionByKey(key: string, flag: wantConstant.Flags, targetTokenId: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。

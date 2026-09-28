@@ -10,6 +10,8 @@ UIExtensionAbility组件是带界面的ExtensionAbility组件，继承自[Extens
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare class UIExtensionAbility extends ExtensionAbility--><!--Device-unnamed-declare class UIExtensionAbility extends ExtensionAbility-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块
@@ -29,6 +31,8 @@ onBackground(): void
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionAbility-onBackground(): void--><!--Device-UIExtensionAbility-onBackground(): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -58,6 +62,8 @@ onCreate(launchParam: AbilityConstant.LaunchParam): void
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionAbility-onCreate(launchParam: AbilityConstant.LaunchParam): void--><!--Device-UIExtensionAbility-onCreate(launchParam: AbilityConstant.LaunchParam): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -93,6 +99,8 @@ onDestroy(): void | Promise<void>
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionAbility-onDestroy(): void | Promise<void>--><!--Device-UIExtensionAbility-onDestroy(): void | Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -152,6 +160,8 @@ onForeground(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UIExtensionAbility-onForeground(): void--><!--Device-UIExtensionAbility-onForeground(): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **示例**
@@ -180,6 +190,8 @@ onSessionCreate(want: Want, session: UIExtensionContentSession): void
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionAbility-onSessionCreate(want: Want, session: UIExtensionContentSession): void--><!--Device-UIExtensionAbility-onSessionCreate(want: Want, session: UIExtensionContentSession): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -225,6 +237,8 @@ onSessionDestroy(session: UIExtensionContentSession): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UIExtensionAbility-onSessionDestroy(session: UIExtensionContentSession): void--><!--Device-UIExtensionAbility-onSessionDestroy(session: UIExtensionContentSession): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -261,5 +275,7 @@ UIExtensionAbility组件的上下文。
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionAbility-context: UIExtensionContext--><!--Device-UIExtensionAbility-context: UIExtensionContext-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore

@@ -8,6 +8,8 @@ interface DataProxyGetResult
 
 **起始版本：** 20
 
+<!--Device-dataShare-interface DataProxyGetResult--><!--Device-dataShare-interface DataProxyGetResult-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 ## 导入模块
@@ -30,6 +32,8 @@ allowList: string[] | undefined
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataProxyGetResult-allowList: string[] | undefined--><!--Device-DataProxyGetResult-allowList: string[] | undefined-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 ## result
@@ -45,6 +49,8 @@ result: DataProxyErrorCode
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataProxyGetResult-result: DataProxyErrorCode--><!--Device-DataProxyGetResult-result: DataProxyErrorCode-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -62,6 +68,8 @@ uri: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataProxyGetResult-uri: string--><!--Device-DataProxyGetResult-uri: string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 ## value
@@ -77,5 +85,7 @@ value: ValueType | undefined
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataProxyGetResult-value: ValueType | undefined--><!--Device-DataProxyGetResult-value: ValueType | undefined-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer

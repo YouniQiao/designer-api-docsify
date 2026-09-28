@@ -10,6 +10,8 @@ Provides methods to implement **RemoteObject**. The service provider must inheri
 
 **Since:** 7
 
+<!--Device-rpc-class RemoteObject extends IRemoteObject--><!--Device-rpc-class RemoteObject extends IRemoteObject-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 ## Modules to Import
@@ -27,6 +29,8 @@ constructor(descriptor: string)
 A constructor used to create a **RemoteObject** object.
 
 **Since:** 7
+
+<!--Device-RemoteObject-constructor(descriptor: string)--><!--Device-RemoteObject-constructor(descriptor: string)-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -57,6 +61,8 @@ getCallingPid(): number
 Obtains the PID of the remote process.
 
 **Since:** 7
+
+<!--Device-RemoteObject-getCallingPid(): int--><!--Device-RemoteObject-getCallingPid(): int-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -100,6 +106,8 @@ Obtains the UID of the remote process.
 
 **Since:** 7
 
+<!--Device-RemoteObject-getCallingUid(): int--><!--Device-RemoteObject-getCallingUid(): int-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -141,6 +149,8 @@ getDescriptor(): string
 Obtains the interface descriptor of this object. The interface descriptor is a string.
 
 **Since:** 9
+
+<!--Device-RemoteObject-getDescriptor(): string--><!--Device-RemoteObject-getDescriptor(): string-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -193,6 +203,8 @@ getLocalInterface(descriptor: string): IRemoteBroker
 Obtains the string of the interface descriptor.
 
 **Since:** 9
+
+<!--Device-RemoteObject-getLocalInterface(descriptor: string): IRemoteBroker--><!--Device-RemoteObject-getLocalInterface(descriptor: string): IRemoteBroker-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -250,6 +262,8 @@ modifyLocalInterface(localInterface: IRemoteBroker, descriptor: string): void
 Binds an interface descriptor to an **IRemoteBroker** object.
 
 **Since:** 9
+
+<!--Device-RemoteObject-modifyLocalInterface(localInterface: IRemoteBroker, descriptor: string): void--><!--Device-RemoteObject-modifyLocalInterface(localInterface: IRemoteBroker, descriptor: string): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -322,7 +336,9 @@ Called to return a response to **sendMessageRequest()**. The server processes th
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+
+<!--Device-RemoteObject-onRemoteMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption    ): boolean | Promise<boolean>--><!--Device-RemoteObject-onRemoteMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption    ): boolean | Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -453,6 +469,8 @@ Provides a response to **sendMessageRequest()**. The server processes the reques
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-RemoteObject-onRemoteMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption,      callingInfo?: CallingInfo    ): boolean | Promise<boolean>--><!--Device-RemoteObject-onRemoteMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption,      callingInfo?: CallingInfo    ): boolean | Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
@@ -573,6 +591,8 @@ Sends a **MessageSequence** message to the remote process in synchronous or asyn
 
 **Since:** 9
 
+<!--Device-RemoteObject-sendMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption    ): Promise<RequestResult>--><!--Device-RemoteObject-sendMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption    ): Promise<RequestResult>-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
@@ -660,6 +680,8 @@ Sends a **MessageSequence** message to the remote process in synchronous or asyn
 
 **Since:** 9
 
+<!--Device-RemoteObject-sendMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption,      callback: AsyncCallback<RequestResult>    ): void--><!--Device-RemoteObject-sendMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption,      callback: AsyncCallback<RequestResult>    ): void-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
@@ -738,6 +760,8 @@ Binds an interface descriptor to an **IRemoteBroker** object.
 
 **Substitutes:** [modifyLocalInterface](#modifylocalinterface)(localInterface: IRemoteBroker, descriptor: string)
 
+<!--Device-RemoteObject-attachLocalInterface(localInterface: IRemoteBroker, descriptor: string): void--><!--Device-RemoteObject-attachLocalInterface(localInterface: IRemoteBroker, descriptor: string): void-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
@@ -789,6 +813,8 @@ Obtains the interface descriptor.
 
 **Substitutes:** [getDescriptor](arkts-ipc-rpc-iremoteobject-c.md#getdescriptor)()
 
+<!--Device-RemoteObject-getInterfaceDescriptor(): string--><!--Device-RemoteObject-getInterfaceDescriptor(): string-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -836,6 +862,8 @@ Called to return a response to **sendRequest()**. The server processes the reque
 **Deprecated since:** 9
 
 **Substitutes:** [onRemoteMessageRequest](#onremotemessagerequest)(code: number, data: MessageSequence, reply: MessageSequence, options: MessageOption)
+
+<!--Device-RemoteObject-onRemoteRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean--><!--Device-RemoteObject-onRemoteRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -890,6 +918,8 @@ Checks whether the remote object corresponding to the specified interface token 
 
 **Substitutes:** [getLocalInterface](arkts-ipc-rpc-iremoteobject-c.md#getlocalinterface)(descriptor: string)
 
+<!--Device-RemoteObject-queryLocalInterface(descriptor: string): IRemoteBroker--><!--Device-RemoteObject-queryLocalInterface(descriptor: string): IRemoteBroker-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
@@ -941,6 +971,8 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 **Deprecated since:** 8
 
 **Substitutes:** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)(code: number, data: MessageSequence, reply: MessageSequence, options: MessageOption)
+
+<!--Device-RemoteObject-sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean--><!--Device-RemoteObject-sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -1015,6 +1047,8 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 **Deprecated since:** 9
 
 **Substitutes:** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)(code: number, data: MessageSequence, reply: MessageSequence, options: MessageOption)
+
+<!--Device-RemoteObject-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption    ): Promise<SendRequestResult>--><!--Device-RemoteObject-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption    ): Promise<SendRequestResult>-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -1100,6 +1134,8 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 **Deprecated since:** 9
 
 **Substitutes:** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)(code: number, data: MessageSequence, reply: MessageSequence, options: MessageOption, callback: AsyncCallback&lt;RequestResult&gt;)
+
+<!--Device-RemoteObject-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption,      callback: AsyncCallback<SendRequestResult>    ): void--><!--Device-RemoteObject-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption,      callback: AsyncCallback<SendRequestResult>    ): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 

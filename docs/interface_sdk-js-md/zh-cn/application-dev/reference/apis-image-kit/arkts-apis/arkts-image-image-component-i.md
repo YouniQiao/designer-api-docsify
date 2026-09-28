@@ -8,6 +8,8 @@ interface Component
 
 **起始版本：** 9
 
+<!--Device-image-interface Component--><!--Device-image-interface Component-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ readonly byteBuffer: ArrayBuffer
 
 **起始版本：** 9
 
+<!--Device-Component-readonly byteBuffer: ArrayBuffer--><!--Device-Component-readonly byteBuffer: ArrayBuffer-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## componentType
@@ -41,6 +45,8 @@ readonly componentType: ComponentType
 **类型：** [ComponentType](arkts-image-image-componenttype-e.md)
 
 **起始版本：** 9
+
+<!--Device-Component-readonly componentType: ComponentType--><!--Device-Component-readonly componentType: ComponentType-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -56,6 +62,8 @@ readonly pixelStride: number
 
 **起始版本：** 9
 
+<!--Device-Component-readonly pixelStride: int--><!--Device-Component-readonly pixelStride: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## rowStride
@@ -69,5 +77,7 @@ readonly rowStride: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-Component-readonly rowStride: int--><!--Device-Component-readonly rowStride: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core

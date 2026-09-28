@@ -16,6 +16,8 @@ function getCameraTrackingLayout(): CameraTrackingLayout
 
 **起始版本：** 20
 
+<!--Device-mechanicManager-function getCameraTrackingLayout(): CameraTrackingLayout--><!--Device-mechanicManager-function getCameraTrackingLayout(): CameraTrackingLayout-End-->
+
 **系统能力：** SystemCapability.Mechanic.Core
 
 **返回值：**

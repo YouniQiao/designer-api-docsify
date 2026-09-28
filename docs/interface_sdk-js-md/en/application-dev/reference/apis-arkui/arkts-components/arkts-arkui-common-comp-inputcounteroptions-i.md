@@ -8,6 +8,8 @@ Provides configuration options for the character counter.
 
 **Since:** 11
 
+<!--Device-unnamed-declare interface InputCounterOptions--><!--Device-unnamed-declare interface InputCounterOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## counterTextColor
@@ -25,6 +27,8 @@ Sets the text color of the character counter in the component. When the number o
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-InputCounterOptions-counterTextColor?: ColorMetrics--><!--Device-InputCounterOptions-counterTextColor?: ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -48,6 +52,8 @@ When the highlightBorder attribute of [InputCounterOptions](arkts-arkui-common-c
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-InputCounterOptions-counterTextOverflowColor?: ColorMetrics--><!--Device-InputCounterOptions-counterTextOverflowColor?: ColorMetrics-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## highlightBorder
@@ -70,6 +76,8 @@ Default value: true
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-InputCounterOptions-highlightBorder?: boolean--><!--Device-InputCounterOptions-highlightBorder?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## thresholdPercentage
@@ -87,5 +95,7 @@ Percentage of the maximum number of characters that can be entered. The characte
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-InputCounterOptions-thresholdPercentage?: number--><!--Device-InputCounterOptions-thresholdPercentage?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

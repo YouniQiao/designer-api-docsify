@@ -18,6 +18,8 @@ function sppReadAsync(clientSocket: number): Promise<ArrayBuffer>
 
 **起始版本：** 18
 
+<!--Device-socket-function sppReadAsync(clientSocket: int): Promise<ArrayBuffer>--><!--Device-socket-function sppReadAsync(clientSocket: int): Promise<ArrayBuffer>-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**

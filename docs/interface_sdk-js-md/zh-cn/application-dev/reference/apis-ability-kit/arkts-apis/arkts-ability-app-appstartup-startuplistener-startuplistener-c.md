@@ -8,6 +8,8 @@ declare class StartupListener
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare class StartupListener--><!--Device-unnamed-declare class StartupListener-End-->
+
 **系统能力：** SystemCapability.Ability.AppStartup
 
 ## 导入模块
@@ -27,6 +29,8 @@ onCompleted?(error: BusinessError<void>): void
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-StartupListener-onCompleted?(error: BusinessError<void>): void--><!--Device-StartupListener-onCompleted?(error: BusinessError<void>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AppStartup
 

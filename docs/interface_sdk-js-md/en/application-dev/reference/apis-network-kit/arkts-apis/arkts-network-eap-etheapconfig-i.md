@@ -8,6 +8,8 @@ Represents the 802.1X Ethernet EAP configuration, including the EAP profile and 
 
 **Since:** 26.2.0
 
+<!--Device-eap-interface EthEapConfig--><!--Device-eap-interface EthEapConfig-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 ## Modules to Import
@@ -30,6 +32,8 @@ Whether to automatically initiate authentication when the network cable is conne
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-EthEapConfig-autoAuth: boolean--><!--Device-EthEapConfig-autoAuth: boolean-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 ## enabled
@@ -45,6 +49,8 @@ Whether the 802.1X feature is enabled.
 **Since:** 26.2.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-EthEapConfig-enabled: boolean--><!--Device-EthEapConfig-enabled: boolean-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
@@ -62,6 +68,8 @@ Whether the configuration is locked. When locked, modifications are denied excep
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-EthEapConfig-locked: boolean--><!--Device-EthEapConfig-locked: boolean-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 ## profile
@@ -77,5 +85,7 @@ EAP profile information.
 **Since:** 26.2.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-EthEapConfig-profile: EthEapProfile--><!--Device-EthEapConfig-profile: EthEapProfile-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Eap

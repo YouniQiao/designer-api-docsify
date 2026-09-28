@@ -16,7 +16,9 @@ function getFormsInfo(filter: formInfo.FormInfoFilter, callback: AsyncCallback<A
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-formProvider-function getFormsInfo(filter: formInfo.FormInfoFilter, callback: AsyncCallback<Array<formInfo.FormInfo>>): void--><!--Device-formProvider-function getFormsInfo(filter: formInfo.FormInfoFilter, callback: AsyncCallback<Array<formInfo.FormInfo>>): void-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -72,7 +74,9 @@ function getFormsInfo(callback: AsyncCallback<Array<formInfo.FormInfo>>): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-formProvider-function getFormsInfo(callback: AsyncCallback<Array<formInfo.FormInfo>>): void--><!--Device-formProvider-function getFormsInfo(callback: AsyncCallback<Array<formInfo.FormInfo>>): void-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -123,7 +127,9 @@ function getFormsInfo(filter?: formInfo.FormInfoFilter): Promise<Array<formInfo.
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-formProvider-function getFormsInfo(filter?: formInfo.FormInfoFilter): Promise<Array<formInfo.FormInfo>>--><!--Device-formProvider-function getFormsInfo(filter?: formInfo.FormInfoFilter): Promise<Array<formInfo.FormInfo>>-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 

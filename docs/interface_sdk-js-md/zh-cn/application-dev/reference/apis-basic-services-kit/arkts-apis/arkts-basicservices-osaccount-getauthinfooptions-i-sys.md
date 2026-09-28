@@ -8,6 +8,8 @@ interface GetAuthInfoOptions
 
 **起始版本：** 12
 
+<!--Device-osAccount-interface GetAuthInfoOptions--><!--Device-osAccount-interface GetAuthInfoOptions-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ accountId?: number
 
 **起始版本：** 12
 
+<!--Device-GetAuthInfoOptions-accountId?: int--><!--Device-GetAuthInfoOptions-accountId?: int-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ authType?: AuthType
 **类型：** [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md)
 
 **起始版本：** 12
+
+<!--Device-GetAuthInfoOptions-authType?: AuthType--><!--Device-GetAuthInfoOptions-authType?: AuthType-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 

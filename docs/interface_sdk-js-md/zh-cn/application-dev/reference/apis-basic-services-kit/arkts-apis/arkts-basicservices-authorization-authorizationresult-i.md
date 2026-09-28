@@ -8,6 +8,8 @@ interface AuthorizationResult
 
 **起始版本：** 26.0.1
 
+<!--Device-authorization-interface AuthorizationResult--><!--Device-authorization-interface AuthorizationResult-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 ## 导入模块
@@ -30,6 +32,8 @@ privilege: Privilege
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AuthorizationResult-privilege: Privilege--><!--Device-AuthorizationResult-privilege: Privilege-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 ## resultCode
@@ -45,5 +49,7 @@ resultCode: AuthorizationResultCode
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AuthorizationResult-resultCode: AuthorizationResultCode--><!--Device-AuthorizationResult-resultCode: AuthorizationResultCode-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount

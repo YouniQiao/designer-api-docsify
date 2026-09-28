@@ -18,6 +18,8 @@ function setCBConfigList(configs: CBConfigListConfigs): Promise<void>
 
 **需要权限：** ohos.permission.RECEIVE_SMS
 
+<!--Device-sms-function setCBConfigList(configs: CBConfigListConfigs): Promise<void>--><!--Device-sms-function setCBConfigList(configs: CBConfigListConfigs): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。

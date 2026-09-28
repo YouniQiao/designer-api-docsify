@@ -18,6 +18,8 @@ function createTonePlayer(options: AudioRendererInfo, callback: AsyncCallback<To
 
 **起始版本：** 9
 
+<!--Device-audio-function createTonePlayer(options: AudioRendererInfo, callback: AsyncCallback<TonePlayer>): void--><!--Device-audio-function createTonePlayer(options: AudioRendererInfo, callback: AsyncCallback<TonePlayer>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
 **系统接口：** 此接口为系统接口。
@@ -63,6 +65,8 @@ function createTonePlayer(options: AudioRendererInfo): Promise<TonePlayer>
 创建DTMF播放器。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-audio-function createTonePlayer(options: AudioRendererInfo): Promise<TonePlayer>--><!--Device-audio-function createTonePlayer(options: AudioRendererInfo): Promise<TonePlayer>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 

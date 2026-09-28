@@ -18,6 +18,8 @@ function off(type: 'continuousTaskCancel', callback?: Callback<ContinuousTaskCan
 
 **需要权限：** ohos.permission.KEEP_BACKGROUND_RUNNING
 
+<!--Device-backgroundTaskManager-function off(type: 'continuousTaskCancel', callback?: Callback<ContinuousTaskCancelInfo>): void--><!--Device-backgroundTaskManager-function off(type: 'continuousTaskCancel', callback?: Callback<ContinuousTaskCancelInfo>): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 **参数：**
@@ -69,6 +71,8 @@ function off(type: 'continuousTaskSuspend', callback?: Callback<ContinuousTaskSu
 **起始版本：** 20
 
 **需要权限：** ohos.permission.KEEP_BACKGROUND_RUNNING
+
+<!--Device-backgroundTaskManager-function off(type: 'continuousTaskSuspend', callback?: Callback<ContinuousTaskSuspendInfo>): void--><!--Device-backgroundTaskManager-function off(type: 'continuousTaskSuspend', callback?: Callback<ContinuousTaskSuspendInfo>): void-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -122,6 +126,8 @@ function off(type: 'continuousTaskActive', callback?: Callback<ContinuousTaskAct
 **起始版本：** 20
 
 **需要权限：** ohos.permission.KEEP_BACKGROUND_RUNNING
+
+<!--Device-backgroundTaskManager-function off(type: 'continuousTaskActive', callback?: Callback<ContinuousTaskActiveInfo>): void--><!--Device-backgroundTaskManager-function off(type: 'continuousTaskActive', callback?: Callback<ContinuousTaskActiveInfo>): void-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 

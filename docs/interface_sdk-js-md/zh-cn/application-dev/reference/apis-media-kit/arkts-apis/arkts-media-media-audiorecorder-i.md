@@ -17,6 +17,8 @@ interface AudioRecorder
 
 **替代接口：** [media](arkts-media-multimedia-media.md)
 
+<!--Device-media-interface AudioRecorder--><!--Device-media-interface AudioRecorder-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
 
 ## 导入模块
@@ -44,6 +46,8 @@ on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset'
 **废弃版本：** 9
 
 **替代接口：** [on](arkts-media-media-avrecorder-i.md#onstatechange)(type: 'stateChange', callback: OnAVRecorderStateChangeHandler)
+
+<!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void--><!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
 
@@ -74,6 +78,8 @@ on(type: 'error', callback: ErrorCallback): void
 
 **替代接口：** [on](arkts-media-media-avrecorder-i.md#onerror)(type: 'error', callback: ErrorCallback)
 
+<!--Device-AudioRecorder-on(type: 'error', callback: ErrorCallback): void--><!--Device-AudioRecorder-on(type: 'error', callback: ErrorCallback): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
 
 **参数：**
@@ -102,6 +108,8 @@ pause(): void
 
 **替代接口：** [pause](arkts-media-media-avrecorder-i.md#pause)(callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-AudioRecorder-pause(): void--><!--Device-AudioRecorder-pause(): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
 
 ## prepare
@@ -125,6 +133,8 @@ prepare(config: AudioRecorderConfig): void
 **替代接口：** [prepare](arkts-media-media-avrecorder-i.md#prepare)(config: AVRecorderConfig, callback: AsyncCallback&lt;void&gt;)
 
 **需要权限：** ohos.permission.MICROPHONE
+
+<!--Device-AudioRecorder-prepare(config: AudioRecorderConfig): void--><!--Device-AudioRecorder-prepare(config: AudioRecorderConfig): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
 
@@ -159,6 +169,8 @@ release(): void
 
 **替代接口：** [release](arkts-media-media-avrecorder-i.md#release)(callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-AudioRecorder-release(): void--><!--Device-AudioRecorder-release(): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
 
 ## reset
@@ -182,6 +194,8 @@ reset(): void
 
 **替代接口：** [reset](arkts-media-media-avrecorder-i.md#reset)(callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-AudioRecorder-reset(): void--><!--Device-AudioRecorder-reset(): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
 
 ## resume
@@ -202,6 +216,8 @@ resume(): void
 **废弃版本：** 9
 
 **替代接口：** [resume](arkts-media-media-avrecorder-i.md#resume)(callback: AsyncCallback&lt;void&gt;)
+
+<!--Device-AudioRecorder-resume(): void--><!--Device-AudioRecorder-resume(): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
 
@@ -224,6 +240,8 @@ start(): void
 
 **替代接口：** [start](arkts-media-media-avrecorder-i.md#start)(callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-AudioRecorder-start(): void--><!--Device-AudioRecorder-start(): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
 
 ## stop
@@ -244,5 +262,7 @@ stop(): void
 **废弃版本：** 9
 
 **替代接口：** [stop](arkts-media-media-avrecorder-i.md#stop)(callback: AsyncCallback&lt;void&gt;)
+
+<!--Device-AudioRecorder-stop(): void--><!--Device-AudioRecorder-stop(): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder

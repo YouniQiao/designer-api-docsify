@@ -8,6 +8,8 @@ enum ConstraintSourceType
 
 **起始版本：** 9
 
+<!--Device-osAccount-enum ConstraintSourceType--><!--Device-osAccount-enum ConstraintSourceType-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -21,6 +23,8 @@ CONSTRAINT_NOT_EXIST = 0
 约束不存在。
 
 **起始版本：** 9
+
+<!--Device-ConstraintSourceType-CONSTRAINT_NOT_EXIST = 0--><!--Device-ConstraintSourceType-CONSTRAINT_NOT_EXIST = 0-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -36,6 +40,8 @@ CONSTRAINT_TYPE_BASE = 1
 
 **起始版本：** 9
 
+<!--Device-ConstraintSourceType-CONSTRAINT_TYPE_BASE = 1--><!--Device-ConstraintSourceType-CONSTRAINT_TYPE_BASE = 1-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -50,6 +56,8 @@ CONSTRAINT_TYPE_DEVICE_OWNER = 2
 
 **起始版本：** 9
 
+<!--Device-ConstraintSourceType-CONSTRAINT_TYPE_DEVICE_OWNER = 2--><!--Device-ConstraintSourceType-CONSTRAINT_TYPE_DEVICE_OWNER = 2-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -63,6 +71,8 @@ CONSTRAINT_TYPE_PROFILE_OWNER = 3
 约束源自资料所有者设置。
 
 **起始版本：** 9
+
+<!--Device-ConstraintSourceType-CONSTRAINT_TYPE_PROFILE_OWNER = 3--><!--Device-ConstraintSourceType-CONSTRAINT_TYPE_PROFILE_OWNER = 3-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 

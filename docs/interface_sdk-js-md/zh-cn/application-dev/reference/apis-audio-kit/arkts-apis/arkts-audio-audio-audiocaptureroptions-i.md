@@ -8,6 +8,8 @@ interface AudioCapturerOptions
 
 **起始版本：** 8
 
+<!--Device-audio-interface AudioCapturerOptions--><!--Device-audio-interface AudioCapturerOptions-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 ## 导入模块
@@ -30,6 +32,8 @@ SystemCapability.Multimedia.Audio.Capturer
 
 **起始版本：** 8
 
+<!--Device-AudioCapturerOptions-capturerInfo: AudioCapturerInfo--><!--Device-AudioCapturerOptions-capturerInfo: AudioCapturerInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 ## playbackCaptureMode
@@ -48,6 +52,8 @@ SystemCapability.Multimedia.Audio.PlaybackCapture
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioCapturerOptions-playbackCaptureMode?: AudioPlaybackCaptureMode--><!--Device-AudioCapturerOptions-playbackCaptureMode?: AudioPlaybackCaptureMode-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.PlaybackCapture
 
 ## streamInfo
@@ -63,6 +69,8 @@ SystemCapability.Multimedia.Audio.Capturer
 **类型：** [AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)
 
 **起始版本：** 8
+
+<!--Device-AudioCapturerOptions-streamInfo: AudioStreamInfo--><!--Device-AudioCapturerOptions-streamInfo: AudioStreamInfo-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -85,5 +93,7 @@ SystemCapability.Multimedia.Audio.PlaybackCapture
 **废弃版本：** 12
 
 **替代接口：** OH_AVScreenCapture in native interface.
+
+<!--Device-AudioCapturerOptions-playbackCaptureConfig?: AudioPlaybackCaptureConfig--><!--Device-AudioCapturerOptions-playbackCaptureConfig?: AudioPlaybackCaptureConfig-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.PlaybackCapture

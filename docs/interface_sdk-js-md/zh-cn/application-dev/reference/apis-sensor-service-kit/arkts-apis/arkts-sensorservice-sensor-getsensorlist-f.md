@@ -16,6 +16,8 @@ function getSensorList(callback: AsyncCallback<Array<Sensor>>): void
 
 **起始版本：** 9
 
+<!--Device-sensor-function getSensorList(callback: AsyncCallback<Array<Sensor>>): void--><!--Device-sensor-function getSensorList(callback: AsyncCallback<Array<Sensor>>): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -66,6 +68,8 @@ function getSensorList(): Promise<Array<Sensor>>
 获取设备上的所有传感器信息。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-sensor-function getSensorList(): Promise<Array<Sensor>>--><!--Device-sensor-function getSensorList(): Promise<Array<Sensor>>-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 

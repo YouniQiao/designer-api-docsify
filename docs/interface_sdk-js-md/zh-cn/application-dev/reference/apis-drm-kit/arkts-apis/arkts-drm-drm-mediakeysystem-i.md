@@ -8,6 +8,8 @@ interface MediaKeySystem
 
 **起始版本：** 11
 
+<!--Device-drm-interface MediaKeySystem--><!--Device-drm-interface MediaKeySystem-End-->
+
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
 ## 导入模块
@@ -26,7 +28,9 @@ clearOfflineMediaKeys(mediaKeyId: Uint8Array): void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-MediaKeySystem-clearOfflineMediaKeys(mediaKeyId: Uint8Array): void--><!--Device-MediaKeySystem-clearOfflineMediaKeys(mediaKeyId: Uint8Array): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
@@ -66,6 +70,8 @@ createMediaKeySession(level: ContentProtectionLevel): MediaKeySession
 **起始版本：** 11
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-MediaKeySystem-createMediaKeySession(level: ContentProtectionLevel): MediaKeySession--><!--Device-MediaKeySystem-createMediaKeySession(level: ContentProtectionLevel): MediaKeySession-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
@@ -113,6 +119,8 @@ createMediaKeySession(): MediaKeySession
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
+<!--Device-MediaKeySystem-createMediaKeySession(): MediaKeySession--><!--Device-MediaKeySystem-createMediaKeySession(): MediaKeySession-End-->
+
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **返回值：**
@@ -148,7 +156,9 @@ destroy(): void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-MediaKeySystem-destroy(): void--><!--Device-MediaKeySystem-destroy(): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
@@ -173,7 +183,9 @@ generateKeySystemRequest(): Promise<ProvisionRequest>
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-MediaKeySystem-generateKeySystemRequest(): Promise<ProvisionRequest>--><!--Device-MediaKeySystem-generateKeySystemRequest(): Promise<ProvisionRequest>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
@@ -213,7 +225,9 @@ getCertificateStatus(): CertificateStatus
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-MediaKeySystem-getCertificateStatus(): CertificateStatus--><!--Device-MediaKeySystem-getCertificateStatus(): CertificateStatus-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
@@ -249,7 +263,9 @@ getConfigurationByteArray(configName: string): Uint8Array
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-MediaKeySystem-getConfigurationByteArray(configName: string): Uint8Array--><!--Device-MediaKeySystem-getConfigurationByteArray(configName: string): Uint8Array-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
@@ -292,7 +308,9 @@ getConfigurationString(configName: string): string
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-MediaKeySystem-getConfigurationString(configName: string): string--><!--Device-MediaKeySystem-getConfigurationString(configName: string): string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
@@ -335,7 +353,9 @@ getMaxContentProtectionLevel(): ContentProtectionLevel
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-MediaKeySystem-getMaxContentProtectionLevel(): ContentProtectionLevel--><!--Device-MediaKeySystem-getMaxContentProtectionLevel(): ContentProtectionLevel-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
@@ -371,7 +391,9 @@ getOfflineMediaKeyIds(): Uint8Array[]
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-MediaKeySystem-getOfflineMediaKeyIds(): Uint8Array[]--><!--Device-MediaKeySystem-getOfflineMediaKeyIds(): Uint8Array[]-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
@@ -407,7 +429,9 @@ getOfflineMediaKeyStatus(mediaKeyId: Uint8Array): OfflineMediaKeyStatus
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-MediaKeySystem-getOfflineMediaKeyStatus(mediaKeyId: Uint8Array): OfflineMediaKeyStatus--><!--Device-MediaKeySystem-getOfflineMediaKeyStatus(mediaKeyId: Uint8Array): OfflineMediaKeyStatus-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
@@ -452,7 +476,9 @@ getStatistics(): StatisticKeyValue[]
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-MediaKeySystem-getStatistics(): StatisticKeyValue[]--><!--Device-MediaKeySystem-getStatistics(): StatisticKeyValue[]-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
@@ -490,6 +516,8 @@ off(type: 'keySystemRequired', callback?: (eventInfo: EventInfo) => void): void
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
+<!--Device-MediaKeySystem-off(type: 'keySystemRequired', callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySystem-off(type: 'keySystemRequired', callback?: (eventInfo: EventInfo) => void): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
 **参数：**
@@ -526,6 +554,8 @@ on(type: 'keySystemRequired', callback: (eventInfo: EventInfo) => void): void
 **起始版本：** 11
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-MediaKeySystem-on(type: 'keySystemRequired', callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySystem-on(type: 'keySystemRequired', callback: (eventInfo: EventInfo) => void): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
@@ -566,7 +596,9 @@ processKeySystemResponse(response: Uint8Array): Promise<void>
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-MediaKeySystem-processKeySystemResponse(response: Uint8Array): Promise<void>--><!--Device-MediaKeySystem-processKeySystemResponse(response: Uint8Array): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
@@ -613,7 +645,9 @@ setConfigurationByteArray(configName: string, value: Uint8Array): void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-MediaKeySystem-setConfigurationByteArray(configName: string, value: Uint8Array): void--><!--Device-MediaKeySystem-setConfigurationByteArray(configName: string, value: Uint8Array): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
@@ -654,7 +688,9 @@ setConfigurationString(configName: string, value: string): void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-MediaKeySystem-setConfigurationString(configName: string, value: string): void--><!--Device-MediaKeySystem-setConfigurationString(configName: string, value: string): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 

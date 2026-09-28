@@ -8,6 +8,8 @@ XmlSAXHandler定义了SAX解析xml文本时的回调方法。开发者需要实�
 
 **起始版本：** 24
 
+<!--Device-xml-interface XmlSAXHandler--><!--Device-xml-interface XmlSAXHandler-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -28,7 +30,9 @@ characters(content: string): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-XmlSAXHandler-characters(content: string): void--><!--Device-XmlSAXHandler-characters(content: string): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -124,7 +128,9 @@ endDocument(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-XmlSAXHandler-endDocument(): void--><!--Device-XmlSAXHandler-endDocument(): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -140,7 +146,9 @@ endElement(elementName: string, namespaceURI: string | undefined, qName: string 
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-XmlSAXHandler-endElement(elementName: string, namespaceURI: string | undefined, qName: string | undefined): void--><!--Device-XmlSAXHandler-endElement(elementName: string, namespaceURI: string | undefined, qName: string | undefined): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -164,7 +172,9 @@ startDocument(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-XmlSAXHandler-startDocument(): void--><!--Device-XmlSAXHandler-startDocument(): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -180,7 +190,9 @@ startElement(elementName: string, namespaceURI: string | undefined, qName: strin
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-XmlSAXHandler-startElement(elementName: string, namespaceURI: string | undefined, qName: string | undefined, attributes: Map<string,string>): void--><!--Device-XmlSAXHandler-startElement(elementName: string, namespaceURI: string | undefined, qName: string | undefined, attributes: Map<string,string>): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

@@ -8,6 +8,8 @@ export interface FusionFenceRequestParams
 
 **起始版本：** 26.0.0
 
+<!--Device-geoLocationManager-export interface FusionFenceRequestParams--><!--Device-geoLocationManager-export interface FusionFenceRequestParams-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ cellFences?: Array<CellFence>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FusionFenceRequestParams-cellFences?: Array<CellFence>--><!--Device-FusionFenceRequestParams-cellFences?: Array<CellFence>-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ expirationMs: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FusionFenceRequestParams-expirationMs: double--><!--Device-FusionFenceRequestParams-expirationMs: double-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geofence
 
@@ -68,6 +74,8 @@ fenceTransitionCallback: Callback<FusionFenceTransition>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FusionFenceRequestParams-fenceTransitionCallback: Callback<FusionFenceTransition>--><!--Device-FusionFenceRequestParams-fenceTransitionCallback: Callback<FusionFenceTransition>-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 **系统接口：** 此接口为系统接口。
@@ -85,6 +93,8 @@ fenceType: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FusionFenceRequestParams-fenceType: int--><!--Device-FusionFenceRequestParams-fenceType: int-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geofence
 
@@ -104,6 +114,8 @@ gnssFences?: Array<GnssFence>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FusionFenceRequestParams-gnssFences?: Array<GnssFence>--><!--Device-FusionFenceRequestParams-gnssFences?: Array<GnssFence>-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 **系统接口：** 此接口为系统接口。
@@ -121,6 +133,8 @@ identifier: string
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FusionFenceRequestParams-identifier: string--><!--Device-FusionFenceRequestParams-identifier: string-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geofence
 
@@ -140,6 +154,8 @@ loiterTimeMs: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FusionFenceRequestParams-loiterTimeMs: int--><!--Device-FusionFenceRequestParams-loiterTimeMs: int-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 **系统接口：** 此接口为系统接口。
@@ -157,6 +173,8 @@ monitorTransitionEvents: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FusionFenceRequestParams-monitorTransitionEvents: int--><!--Device-FusionFenceRequestParams-monitorTransitionEvents: int-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geofence
 
@@ -176,6 +194,8 @@ poiLocation: Point
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FusionFenceRequestParams-poiLocation: Point--><!--Device-FusionFenceRequestParams-poiLocation: Point-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 **系统接口：** 此接口为系统接口。
@@ -193,6 +213,8 @@ poiType?: string
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FusionFenceRequestParams-poiType?: string--><!--Device-FusionFenceRequestParams-poiType?: string-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geofence
 
@@ -212,6 +234,8 @@ scene: FusionFenceScene
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FusionFenceRequestParams-scene: FusionFenceScene--><!--Device-FusionFenceRequestParams-scene: FusionFenceScene-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 **系统接口：** 此接口为系统接口。
@@ -229,6 +253,8 @@ wifiFences?: Array<WifiFence>
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FusionFenceRequestParams-wifiFences?: Array<WifiFence>--><!--Device-FusionFenceRequestParams-wifiFences?: Array<WifiFence>-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geofence
 

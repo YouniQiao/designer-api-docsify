@@ -16,4 +16,6 @@ For details, see [@Prop Decorator: Implementing One-Way Synchronization from Par
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-unnamed-declare const Prop: PropertyDecorator--><!--Device-unnamed-declare const Prop: PropertyDecorator-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

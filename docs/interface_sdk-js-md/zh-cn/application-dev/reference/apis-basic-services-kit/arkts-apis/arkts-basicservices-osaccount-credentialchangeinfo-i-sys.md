@@ -8,6 +8,8 @@ interface CredentialChangeInfo
 
 **起始版本：** 23
 
+<!--Device-osAccount-interface CredentialChangeInfo--><!--Device-osAccount-interface CredentialChangeInfo-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ accountId: number
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-CredentialChangeInfo-accountId: int--><!--Device-CredentialChangeInfo-accountId: int-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ addedCredentialId?: Uint8Array
 **起始版本：** 23
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-CredentialChangeInfo-addedCredentialId?: Uint8Array--><!--Device-CredentialChangeInfo-addedCredentialId?: Uint8Array-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -68,6 +74,8 @@ changeType: CredentialChangeType
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-CredentialChangeInfo-changeType: CredentialChangeType--><!--Device-CredentialChangeInfo-changeType: CredentialChangeType-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -85,6 +93,8 @@ credentialType: AuthType
 **起始版本：** 23
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-CredentialChangeInfo-credentialType: AuthType--><!--Device-CredentialChangeInfo-credentialType: AuthType-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -104,6 +114,8 @@ deletedCredentialId?: Uint8Array
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-CredentialChangeInfo-deletedCredentialId?: Uint8Array--><!--Device-CredentialChangeInfo-deletedCredentialId?: Uint8Array-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -121,6 +133,8 @@ isSilent: boolean
 **起始版本：** 23
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-CredentialChangeInfo-isSilent: boolean--><!--Device-CredentialChangeInfo-isSilent: boolean-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 

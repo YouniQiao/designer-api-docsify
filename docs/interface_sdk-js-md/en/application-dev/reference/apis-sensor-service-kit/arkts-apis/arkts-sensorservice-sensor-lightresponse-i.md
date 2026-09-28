@@ -10,6 +10,8 @@ Describes the ambient light sensor data. It extends from [Response](arkts-sensor
 
 **Since:** 8
 
+<!--Device-sensor-interface LightResponse extends Response--><!--Device-sensor-interface LightResponse extends Response-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## Modules to Import
@@ -30,6 +32,8 @@ Color temperature, in K (Kelvin). This parameter is optional. If this parameter 
 
 **Since:** 12
 
+<!--Device-LightResponse-colorTemperature?: double--><!--Device-LightResponse-colorTemperature?: double-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## infraredLuminance
@@ -44,6 +48,8 @@ Infrared luminance. in cd/m². This parameter is optional. If this parameter is 
 
 **Since:** 12
 
+<!--Device-LightResponse-infraredLuminance?: double--><!--Device-LightResponse-infraredLuminance?: double-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## intensity
@@ -57,5 +63,7 @@ Ambient light intensity, in lux.
 **Type:** number
 
 **Since:** 8
+
+<!--Device-LightResponse-intensity: double--><!--Device-LightResponse-intensity: double-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor

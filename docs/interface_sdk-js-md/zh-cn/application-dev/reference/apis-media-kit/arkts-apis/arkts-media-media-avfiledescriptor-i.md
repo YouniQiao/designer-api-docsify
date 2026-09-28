@@ -8,6 +8,8 @@ interface AVFileDescriptor
 
 **起始版本：** 9
 
+<!--Device-media-interface AVFileDescriptor--><!--Device-media-interface AVFileDescriptor-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 ## 导入模块
@@ -28,7 +30,9 @@ fd: number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVFileDescriptor-fd: int--><!--Device-AVFileDescriptor-fd: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -44,7 +48,9 @@ length?: number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVFileDescriptor-length?: long--><!--Device-AVFileDescriptor-length?: long-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -60,6 +66,8 @@ offset?: number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVFileDescriptor-offset?: long--><!--Device-AVFileDescriptor-offset?: long-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core

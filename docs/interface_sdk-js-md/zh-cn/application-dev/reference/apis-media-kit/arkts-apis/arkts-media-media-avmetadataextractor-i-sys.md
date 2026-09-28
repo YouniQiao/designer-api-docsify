@@ -14,6 +14,8 @@ interface AVMetadataExtractor
 
 **起始版本：** 11
 
+<!--Device-media-interface AVMetadataExtractor--><!--Device-media-interface AVMetadataExtractor-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 ## 导入模块
@@ -31,6 +33,8 @@ getFrameIndexByTime(timeUs: number): Promise<number>
 获取目标视频时间戳对应的视频帧号（仅支持MP4视频文件）。使用Promise异步回调。
 
 **起始版本：** 12
+
+<!--Device-AVMetadataExtractor-getFrameIndexByTime(timeUs: long): Promise<int>--><!--Device-AVMetadataExtractor-getFrameIndexByTime(timeUs: long): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -78,6 +82,8 @@ getTimeByFrameIndex(index: number): Promise<number>
 获取目标视频帧号对应的视频时间戳（仅支持MP4视频文件）。使用Promise异步回调。
 
 **起始版本：** 12
+
+<!--Device-AVMetadataExtractor-getTimeByFrameIndex(index: int): Promise<long>--><!--Device-AVMetadataExtractor-getTimeByFrameIndex(index: int): Promise<long>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 

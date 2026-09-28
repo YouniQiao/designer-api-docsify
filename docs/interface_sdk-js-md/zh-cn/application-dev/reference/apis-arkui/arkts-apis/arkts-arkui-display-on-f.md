@@ -18,6 +18,8 @@ function on(type: 'add' | 'remove' | 'change', callback: Callback<number>): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-display-function on(type: 'add' | 'remove' | 'change', callback: Callback<long>): void--><!--Device-display-function on(type: 'add' | 'remove' | 'change', callback: Callback<long>): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **参数：**
@@ -58,6 +60,8 @@ function on(type: 'add' | 'remove' | 'change', callback: Callback<number>): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-display-function on(type: 'add' | 'remove' | 'change', callback: Callback<long>): void--><!--Device-display-function on(type: 'add' | 'remove' | 'change', callback: Callback<long>): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **参数：**
@@ -89,6 +93,8 @@ function on(type: 'add' | 'remove' | 'change', callback: Callback<number>): void
 **起始版本：** 7
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-display-function on(type: 'add' | 'remove' | 'change', callback: Callback<long>): void--><!--Device-display-function on(type: 'add' | 'remove' | 'change', callback: Callback<long>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -127,6 +133,8 @@ function on(type: 'foldStatusChange', callback: Callback<FoldStatus>): void
 **起始版本：** 10
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-display-function on(type: 'foldStatusChange', callback: Callback<FoldStatus>): void--><!--Device-display-function on(type: 'foldStatusChange', callback: Callback<FoldStatus>): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -172,6 +180,8 @@ function on(type: 'foldAngleChange', callback: Callback<Array<number>>): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-display-function on(type: 'foldAngleChange', callback: Callback<Array<double>>): void--><!--Device-display-function on(type: 'foldAngleChange', callback: Callback<Array<double>>): void-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
@@ -215,6 +225,8 @@ function on(type: 'captureStatusChange', callback: Callback<boolean>): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-display-function on(type: 'captureStatusChange', callback: Callback<boolean>): void--><!--Device-display-function on(type: 'captureStatusChange', callback: Callback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -260,6 +272,8 @@ function on(type: 'foldDisplayModeChange', callback: Callback<FoldDisplayMode>):
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-display-function on(type: 'foldDisplayModeChange', callback: Callback<FoldDisplayMode>): void--><!--Device-display-function on(type: 'foldDisplayModeChange', callback: Callback<FoldDisplayMode>): void-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
@@ -303,6 +317,8 @@ function on(type: 'brightnessInfoChange', callback: BrightnessCallback<number, B
 **起始版本：** 22
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-display-function on(type: 'brightnessInfoChange', callback: BrightnessCallback<long, BrightnessInfo>): void--><!--Device-display-function on(type: 'brightnessInfoChange', callback: BrightnessCallback<long, BrightnessInfo>): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 

@@ -8,6 +8,8 @@ export interface EventService
 
 **起始版本：** 10
 
+<!--Device-calendarManager-export interface EventService--><!--Device-calendarManager-export interface EventService-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 ## 导入模块
@@ -30,6 +32,8 @@ description?: string
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-EventService-description?: string--><!--Device-EventService-description?: string-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 ## type
@@ -46,6 +50,8 @@ type: ServiceType
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-EventService-type: ServiceType--><!--Device-EventService-type: ServiceType-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 ## uri
@@ -61,5 +67,7 @@ uri: string
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-EventService-uri: string--><!--Device-EventService-uri: string-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData

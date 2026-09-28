@@ -20,6 +20,8 @@ Inverts this matrix object.
 
 **Substitutes:** [invert](arkts-arkui-matrix4-matrix4transit-i.md#invert)
 
+<!--Device-matrix4-function invert(): Matrix4Transit--><!--Device-matrix4-function invert(): Matrix4Transit-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**

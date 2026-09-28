@@ -16,6 +16,8 @@ function getNativeHeapAllocatedSize() : bigint
 
 **起始版本：** 8
 
+<!--Device-hidebug-function getNativeHeapAllocatedSize() : bigint--><!--Device-hidebug-function getNativeHeapAllocatedSize() : bigint-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **返回值：**

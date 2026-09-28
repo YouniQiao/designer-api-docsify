@@ -16,6 +16,8 @@ function getOperatorName(slotId: number, callback: AsyncCallback<string>): void
 
 **起始版本：** 7
 
+<!--Device-radio-function getOperatorName(slotId: int, callback: AsyncCallback<string>): void--><!--Device-radio-function getOperatorName(slotId: int, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**
@@ -62,6 +64,8 @@ function getOperatorName(slotId: number): Promise<string>
 获取运营商名称。使用Promise异步回调。
 
 **起始版本：** 7
+
+<!--Device-radio-function getOperatorName(slotId: int): Promise<string>--><!--Device-radio-function getOperatorName(slotId: int): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

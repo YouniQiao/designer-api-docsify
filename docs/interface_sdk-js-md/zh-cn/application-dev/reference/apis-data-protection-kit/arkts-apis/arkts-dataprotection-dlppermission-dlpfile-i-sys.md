@@ -8,6 +8,8 @@ export interface DLPFile
 
 **起始版本：** 10
 
+<!--Device-dlpPermission-export interface DLPFile--><!--Device-dlpPermission-export interface DLPFile-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **系统接口：** 此接口为系统接口。
@@ -33,6 +35,8 @@ DLP应用需要通过标准文件接口访问加密文件内容时，先添加li
 **起始版本：** 10
 
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
+
+<!--Device-DLPFile-addDLPLinkFile(linkFileName: string): Promise<void>--><!--Device-DLPFile-addDLPLinkFile(linkFileName: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -112,6 +116,8 @@ DLP应用需要通过标准文件接口访问加密文件内容时使用此接�
 
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
 
+<!--Device-DLPFile-addDLPLinkFile(linkFileName: string, callback: AsyncCallback<void>): void--><!--Device-DLPFile-addDLPLinkFile(linkFileName: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **系统接口：** 此接口为系统接口。
@@ -190,6 +196,8 @@ closeDLPFile(): Promise<void>
 
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
 
+<!--Device-DLPFile-closeDLPFile(): Promise<void>--><!--Device-DLPFile-closeDLPFile(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **系统接口：** 此接口为系统接口。
@@ -264,6 +272,8 @@ closeDLPFile(callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
 
+<!--Device-DLPFile-closeDLPFile(callback: AsyncCallback<void>): void--><!--Device-DLPFile-closeDLPFile(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **系统接口：** 此接口为系统接口。
@@ -335,6 +345,8 @@ DLP文件访问结束后清理link文件映射时使用此接口。
 **起始版本：** 10
 
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
+
+<!--Device-DLPFile-deleteDLPLinkFile(linkFileName: string): Promise<void>--><!--Device-DLPFile-deleteDLPLinkFile(linkFileName: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -415,6 +427,8 @@ DLP文件访问结束后清理link文件映射时使用此接口。
 
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
 
+<!--Device-DLPFile-deleteDLPLinkFile(linkFileName: string, callback: AsyncCallback<void>): void--><!--Device-DLPFile-deleteDLPLinkFile(linkFileName: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **系统接口：** 此接口为系统接口。
@@ -487,6 +501,8 @@ recoverDLPFile(plaintextFd: number): Promise<void>
 **起始版本：** 10
 
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
+
+<!--Device-DLPFile-recoverDLPFile(plaintextFd: number): Promise<void>--><!--Device-DLPFile-recoverDLPFile(plaintextFd: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -574,6 +590,8 @@ recoverDLPFile(plaintextFd: number, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
 
+<!--Device-DLPFile-recoverDLPFile(plaintextFd: number, callback: AsyncCallback<void>): void--><!--Device-DLPFile-recoverDLPFile(plaintextFd: number, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **系统接口：** 此接口为系统接口。
@@ -655,6 +673,8 @@ replaceDLPLinkFile(linkFileName: string): Promise<void>
 
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
 
+<!--Device-DLPFile-replaceDLPLinkFile(linkFileName: string): Promise<void>--><!--Device-DLPFile-replaceDLPLinkFile(linkFileName: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **系统接口：** 此接口为系统接口。
@@ -734,6 +754,8 @@ replaceDLPLinkFile(linkFileName: string, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
 
+<!--Device-DLPFile-replaceDLPLinkFile(linkFileName: string, callback: AsyncCallback<void>): void--><!--Device-DLPFile-replaceDLPLinkFile(linkFileName: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **系统接口：** 此接口为系统接口。
@@ -811,6 +833,8 @@ link文件替换完成后，需要恢复读写关联以继续正常的文件访�
 
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
 
+<!--Device-DLPFile-resumeFuseLink(): Promise<void>--><!--Device-DLPFile-resumeFuseLink(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **系统接口：** 此接口为系统接口。
@@ -883,6 +907,8 @@ link文件替换完成后需要恢复读写关联。
 **起始版本：** 10
 
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
+
+<!--Device-DLPFile-resumeFuseLink(callback: AsyncCallback<void>): void--><!--Device-DLPFile-resumeFuseLink(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -959,6 +985,8 @@ stopFuseLink(): Promise<void>
 
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
 
+<!--Device-DLPFile-stopFuseLink(): Promise<void>--><!--Device-DLPFile-stopFuseLink(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **系统接口：** 此接口为系统接口。
@@ -1030,6 +1058,8 @@ stopFuseLink(callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
 
+<!--Device-DLPFile-stopFuseLink(callback: AsyncCallback<void>): void--><!--Device-DLPFile-stopFuseLink(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **系统接口：** 此接口为系统接口。
@@ -1099,6 +1129,8 @@ dlpProperty: DLPProperty
 **类型：** [DLPProperty](arkts-dataprotection-dlppermission-dlpproperty-i.md)
 
 **起始版本：** 10
+
+<!--Device-DLPFile-dlpProperty: DLPProperty--><!--Device-DLPFile-dlpProperty: DLPProperty-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 

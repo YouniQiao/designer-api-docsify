@@ -8,6 +8,8 @@ Sets whether elements are arranged in a single row/column or multiple rows/colum
 
 **Since:** 7
 
+<!--Device-unnamed-declare enum FlexWrap--><!--Device-unnamed-declare enum FlexWrap-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## NoWrap
@@ -23,6 +25,8 @@ The child components in the flex container are arranged in a single line. If any
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-FlexWrap-NoWrap--><!--Device-FlexWrap-NoWrap-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,6 +44,8 @@ The child components in the flex container are arranged in multiple lines, and t
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-FlexWrap-Wrap--><!--Device-FlexWrap-Wrap-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## WrapReverse
@@ -55,5 +61,7 @@ The child components in the flex container are reversely arranged in multiple li
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-FlexWrap-WrapReverse--><!--Device-FlexWrap-WrapReverse-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

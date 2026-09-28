@@ -24,6 +24,8 @@ function setGlobalProxy(admin: Want, httpProxy: connection.HttpProxy, callback: 
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-networkManager-function setGlobalProxy(admin: Want, httpProxy: connection.HttpProxy, callback: AsyncCallback<void>): void--><!--Device-networkManager-function setGlobalProxy(admin: Want, httpProxy: connection.HttpProxy, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -97,6 +99,8 @@ function setGlobalProxy(admin: Want, httpProxy: connection.HttpProxy): Promise<v
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_NETWORK
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-networkManager-function setGlobalProxy(admin: Want, httpProxy: connection.HttpProxy): Promise<void>--><!--Device-networkManager-function setGlobalProxy(admin: Want, httpProxy: connection.HttpProxy): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

@@ -8,6 +8,8 @@ This parameter specifies the selection result of a filtering dimension. The inde
 
 **Since:** 22
 
+<!--Device-unnamed-export declare class FilterResult--><!--Device-unnamed-export declare class FilterResult-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -32,6 +34,8 @@ result index.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-FilterResult-index: number--><!--Device-FilterResult-index: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## name
@@ -50,6 +54,8 @@ result name.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-FilterResult-name: ResourceStr--><!--Device-FilterResult-name: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## value
@@ -67,5 +73,7 @@ result value.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-FilterResult-value: ResourceStr--><!--Device-FilterResult-value: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

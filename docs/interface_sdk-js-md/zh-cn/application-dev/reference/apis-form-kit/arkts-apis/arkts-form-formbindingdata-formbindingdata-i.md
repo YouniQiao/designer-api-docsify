@@ -8,6 +8,8 @@ FormBindingData对象的属性定义。
 
 **起始版本：** 9
 
+<!--Device-formBindingData-interface FormBindingData--><!--Device-formBindingData-interface FormBindingData-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 ## 导入模块
@@ -30,6 +32,8 @@ data: Object
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-FormBindingData-data: Object--><!--Device-FormBindingData-data: Object-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 ## proxies
@@ -46,6 +50,8 @@ proxies?: Array<ProxyData>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-FormBindingData-proxies?: Array<ProxyData>--><!--Device-FormBindingData-proxies?: Array<ProxyData>-End-->
 
 **系统能力：** SystemCapability.Ability.Form

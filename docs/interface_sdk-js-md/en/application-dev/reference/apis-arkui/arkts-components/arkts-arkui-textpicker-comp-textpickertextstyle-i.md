@@ -10,6 +10,8 @@ Defines the text style options for the text picker. Inherits from [PickerTextSty
 
 **Since:** 15
 
+<!--Device-unnamed-declare interface TextPickerTextStyle extends PickerTextStyle--><!--Device-unnamed-declare interface TextPickerTextStyle extends PickerTextStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## maxFontSize
@@ -29,6 +31,8 @@ Sets the maximum font size of the text, used together with minFontSize. Pass thi
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-TextPickerTextStyle-maxFontSize?: number | string | Resource--><!--Device-TextPickerTextStyle-maxFontSize?: number | string | Resource-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,6 +54,8 @@ Sets the minimum font size of the text, used together with maxFontSize. Pass thi
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-TextPickerTextStyle-minFontSize?: number | string | Resource--><!--Device-TextPickerTextStyle-minFontSize?: number | string | Resource-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## overflow
@@ -67,5 +73,7 @@ Text overflow behavior. This property has no effect when set to **MARQUEE**. For
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-TextPickerTextStyle-overflow?: TextOverflow--><!--Device-TextPickerTextStyle-overflow?: TextOverflow-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

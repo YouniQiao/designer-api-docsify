@@ -8,6 +8,8 @@ Describes the text background color style.
 
 **Since:** 14
 
+<!--Device-unnamed-declare class BackgroundColorStyle--><!--Device-unnamed-declare class BackgroundColorStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
@@ -23,6 +25,8 @@ A constructor used to create the text background color. If this API is not used 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-BackgroundColorStyle-constructor(textBackgroundStyle: TextBackgroundStyle)--><!--Device-BackgroundColorStyle-constructor(textBackgroundStyle: TextBackgroundStyle)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -57,5 +61,7 @@ radius: 0
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-BackgroundColorStyle-readonly textBackgroundStyle: TextBackgroundStyle--><!--Device-BackgroundColorStyle-readonly textBackgroundStyle: TextBackgroundStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

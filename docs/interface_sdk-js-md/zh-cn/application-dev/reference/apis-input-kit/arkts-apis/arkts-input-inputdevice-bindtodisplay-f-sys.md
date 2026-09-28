@@ -20,6 +20,8 @@ function bindToDisplay(inputDeviceId: number, displayId: number): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-inputDevice-function bindToDisplay(inputDeviceId: int, displayId: int): Promise<void>--><!--Device-inputDevice-function bindToDisplay(inputDeviceId: int, displayId: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 **系统接口：** 此接口为系统接口。

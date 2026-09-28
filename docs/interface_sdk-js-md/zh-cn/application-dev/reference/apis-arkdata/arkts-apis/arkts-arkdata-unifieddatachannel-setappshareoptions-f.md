@@ -22,6 +22,8 @@ function setAppShareOptions(intention: Intention, shareOptions: ShareOptions): v
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-unifiedDataChannel-function setAppShareOptions(intention: Intention, shareOptions: ShareOptions): void--><!--Device-unifiedDataChannel-function setAppShareOptions(intention: Intention, shareOptions: ShareOptions): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 **参数：**

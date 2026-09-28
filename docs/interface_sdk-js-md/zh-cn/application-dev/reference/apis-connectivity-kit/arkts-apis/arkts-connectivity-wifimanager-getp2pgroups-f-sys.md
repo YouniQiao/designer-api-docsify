@@ -20,6 +20,8 @@ function getP2pGroups(): Promise<Array<WifiP2pGroupInfo>>
 - API版本10+：ohos.permission.GET_WIFI_INFO
 - API版本9：ohos.permission.GET_WIFI_INFO and ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
+<!--Device-wifiManager-function getP2pGroups(): Promise<Array<WifiP2pGroupInfo>>--><!--Device-wifiManager-function getP2pGroups(): Promise<Array<WifiP2pGroupInfo>>-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
 **系统接口：** 此接口为系统接口。
@@ -74,6 +76,8 @@ function getP2pGroups(callback: AsyncCallback<Array<WifiP2pGroupInfo>>): void
 **需要权限：** 
 - API版本10+：ohos.permission.GET_WIFI_INFO
 - API版本9：ohos.permission.GET_WIFI_INFO and ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
+
+<!--Device-wifiManager-function getP2pGroups(callback: AsyncCallback<Array<WifiP2pGroupInfo>>): void--><!--Device-wifiManager-function getP2pGroups(callback: AsyncCallback<Array<WifiP2pGroupInfo>>): void-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 

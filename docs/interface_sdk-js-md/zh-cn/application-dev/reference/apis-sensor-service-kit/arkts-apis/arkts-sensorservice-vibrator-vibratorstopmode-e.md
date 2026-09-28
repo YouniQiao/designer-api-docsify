@@ -8,6 +8,8 @@ enum VibratorStopMode
 
 **起始版本：** 8
 
+<!--Device-vibrator-enum VibratorStopMode--><!--Device-vibrator-enum VibratorStopMode-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## VIBRATOR_STOP_MODE_TIME
@@ -20,6 +22,8 @@ VIBRATOR_STOP_MODE_TIME = 'time'
 
 **起始版本：** 8
 
+<!--Device-VibratorStopMode-VIBRATOR_STOP_MODE_TIME = 'time'--><!--Device-VibratorStopMode-VIBRATOR_STOP_MODE_TIME = 'time'-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## VIBRATOR_STOP_MODE_PRESET
@@ -31,5 +35,7 @@ VIBRATOR_STOP_MODE_PRESET = 'preset'
 停止[VibratePreset](arkts-sensorservice-vibrator-vibratepreset-i.md)类型（预置EffectId模式）的振动。需与startVibration时使用的VibratePreset类型对应。
 
 **起始版本：** 8
+
+<!--Device-VibratorStopMode-VIBRATOR_STOP_MODE_PRESET = 'preset'--><!--Device-VibratorStopMode-VIBRATOR_STOP_MODE_PRESET = 'preset'-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice

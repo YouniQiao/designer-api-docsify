@@ -25,6 +25,8 @@ interface Poly1305ParamsSpec extends ParamsSpec
 
 **起始版本：** 22
 
+<!--Device-cryptoFramework-interface Poly1305ParamsSpec extends ParamsSpec--><!--Device-cryptoFramework-interface Poly1305ParamsSpec extends ParamsSpec-End-->
+
 **系统能力：** SystemCapability.Security.CryptoFramework.Cipher
 
 ## 导入模块
@@ -45,7 +47,9 @@ aad: DataBlob
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Poly1305ParamsSpec-aad: DataBlob--><!--Device-Poly1305ParamsSpec-aad: DataBlob-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Cipher
 
@@ -61,7 +65,9 @@ authTag: DataBlob
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Poly1305ParamsSpec-authTag: DataBlob--><!--Device-Poly1305ParamsSpec-authTag: DataBlob-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Cipher
 
@@ -77,6 +83,8 @@ Nonce（通过iv字段传入），长度为12字节。
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Poly1305ParamsSpec-iv: DataBlob--><!--Device-Poly1305ParamsSpec-iv: DataBlob-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Cipher

@@ -8,6 +8,8 @@ enum ReportType
 
 **起始版本：** 23
 
+<!--Device-hid-enum ReportType--><!--Device-hid-enum ReportType-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## REPORT_TYPE_INPUT
@@ -21,6 +23,8 @@ REPORT_TYPE_INPUT = 1
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ReportType-REPORT_TYPE_INPUT = 1--><!--Device-ReportType-REPORT_TYPE_INPUT = 1-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -36,6 +40,8 @@ REPORT_TYPE_OUTPUT = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ReportType-REPORT_TYPE_OUTPUT = 2--><!--Device-ReportType-REPORT_TYPE_OUTPUT = 2-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## REPORT_TYPE_FEATURE
@@ -49,5 +55,7 @@ REPORT_TYPE_FEATURE = 3
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ReportType-REPORT_TYPE_FEATURE = 3--><!--Device-ReportType-REPORT_TYPE_FEATURE = 3-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

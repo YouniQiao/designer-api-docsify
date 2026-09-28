@@ -20,6 +20,8 @@ function startAdvertising(advertisingParams: AdvertisingParams): Promise<number>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-advertising-function startAdvertising(advertisingParams: AdvertisingParams): Promise<int>--><!--Device-advertising-function startAdvertising(advertisingParams: AdvertisingParams): Promise<int>-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **参数：**

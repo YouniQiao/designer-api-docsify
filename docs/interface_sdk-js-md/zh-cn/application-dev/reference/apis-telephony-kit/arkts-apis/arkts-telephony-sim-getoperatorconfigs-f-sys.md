@@ -18,6 +18,8 @@ Obtains the operatorconfigs of the SIM card in a specified slot.
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-sim-function getOperatorConfigs(slotId: int, callback: AsyncCallback<Array<OperatorConfig>>): void--><!--Device-sim-function getOperatorConfigs(slotId: int, callback: AsyncCallback<Array<OperatorConfig>>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -66,6 +68,8 @@ Obtains the operatorconfigs of the SIM card in a specified slot.
 **起始版本：** 8
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
+
+<!--Device-sim-function getOperatorConfigs(slotId: int): Promise<Array<OperatorConfig>>--><!--Device-sim-function getOperatorConfigs(slotId: int): Promise<Array<OperatorConfig>>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

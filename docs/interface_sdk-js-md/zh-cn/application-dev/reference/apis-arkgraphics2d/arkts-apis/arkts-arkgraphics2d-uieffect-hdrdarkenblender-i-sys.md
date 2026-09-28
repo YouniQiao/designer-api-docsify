@@ -8,6 +8,8 @@ interface HdrDarkenBlender
 
 **起始版本：** 26.0.0
 
+<!--Device-uiEffect-interface HdrDarkenBlender--><!--Device-uiEffect-interface HdrDarkenBlender-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -36,6 +38,8 @@ grayscaleFactor?: [number, number, number]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HdrDarkenBlender-grayscaleFactor?: [double, double, double]--><!--Device-HdrDarkenBlender-grayscaleFactor?: [double, double, double]-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -55,6 +59,8 @@ HDR的提亮倍数。取值范围为[1.0, 设备当前支持最大提亮倍数]�
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HdrDarkenBlender-hdrBrightnessRatio: double--><!--Device-HdrDarkenBlender-hdrBrightnessRatio: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

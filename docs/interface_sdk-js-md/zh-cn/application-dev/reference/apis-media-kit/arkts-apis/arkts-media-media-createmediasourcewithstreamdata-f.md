@@ -18,6 +18,8 @@ function createMediaSourceWithStreamData(streams: Array<MediaStream>): MediaSour
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
+<!--Device-media-function createMediaSourceWithStreamData(streams: Array<MediaStream>): MediaSource--><!--Device-media-function createMediaSourceWithStreamData(streams: Array<MediaStream>): MediaSource-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 **参数：**

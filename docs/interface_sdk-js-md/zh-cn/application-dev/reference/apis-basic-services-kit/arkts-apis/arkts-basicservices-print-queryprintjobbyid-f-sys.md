@@ -18,6 +18,8 @@ function queryPrintJobById(jobId: string, callback: AsyncCallback<PrintJob>): vo
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-print-function queryPrintJobById(jobId: string, callback: AsyncCallback<PrintJob>): void--><!--Device-print-function queryPrintJobById(jobId: string, callback: AsyncCallback<PrintJob>): void-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **系统接口：** 此接口为系统接口。
@@ -67,6 +69,8 @@ function queryPrintJobById(jobId: string): Promise<PrintJob>
 **起始版本：** 11
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
+
+<!--Device-print-function queryPrintJobById(jobId: string): Promise<PrintJob>--><!--Device-print-function queryPrintJobById(jobId: string): Promise<PrintJob>-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 

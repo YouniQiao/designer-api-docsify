@@ -10,6 +10,8 @@ RestrictedWorker类继承[ThreadWorker](arkts-arkts-worker-threadworker-c.md)，
 
 **起始版本：** 11
 
+<!--Device-worker-class RestrictedWorker extends ThreadWorker--><!--Device-worker-class RestrictedWorker extends ThreadWorker-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **系统接口：** 此接口为系统接口。
@@ -29,6 +31,8 @@ constructor(scriptURL: string, options?: WorkerOptions)
 RestrictedWorker构造函数。使用其他方法前，均需先构造RestrictedWorker实例。
 
 **起始版本：** 11
+
+<!--Device-RestrictedWorker-constructor(scriptURL: string, options?: WorkerOptions)--><!--Device-RestrictedWorker-constructor(scriptURL: string, options?: WorkerOptions)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

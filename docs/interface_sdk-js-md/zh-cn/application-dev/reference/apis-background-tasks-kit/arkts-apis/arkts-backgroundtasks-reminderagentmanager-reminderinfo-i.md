@@ -8,6 +8,8 @@ interface ReminderInfo
 
 **起始版本：** 12
 
+<!--Device-reminderAgentManager-interface ReminderInfo--><!--Device-reminderAgentManager-interface ReminderInfo-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## 导入模块
@@ -28,6 +30,8 @@ reminderId: number
 
 **起始版本：** 12
 
+<!--Device-ReminderInfo-reminderId: int--><!--Device-ReminderInfo-reminderId: int-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## reminderReq
@@ -41,5 +45,7 @@ reminderReq: ReminderRequest
 **类型：** [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md)
 
 **起始版本：** 12
+
+<!--Device-ReminderInfo-reminderReq: ReminderRequest--><!--Device-ReminderInfo-reminderReq: ReminderRequest-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent

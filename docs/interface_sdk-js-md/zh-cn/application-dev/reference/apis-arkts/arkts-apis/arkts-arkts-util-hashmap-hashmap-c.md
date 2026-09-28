@@ -8,6 +8,8 @@ HashMap底层采用数组、链表和红黑树实现，支持高效查询、插�
 
 **起始版本：** 8
 
+<!--Device-unnamed-declare class HashMap<K, V>--><!--Device-unnamed-declare class HashMap<K, V>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -30,6 +32,8 @@ import { HashMap } from '@kit.ArkTS';
 **起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HashMap-[Symbol.iterator](): IterableIterator<[K, V]>--><!--Device-HashMap-[Symbol.iterator](): IterableIterator<[K, V]>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -98,7 +102,9 @@ clear(): void
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HashMap-clear(): void--><!--Device-HashMap-clear(): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -129,7 +135,9 @@ constructor()
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HashMap-constructor()--><!--Device-HashMap-constructor()-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -158,7 +166,9 @@ entries(): IterableIterator<[K, V]>
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HashMap-entries(): IterableIterator<[K, V]>--><!--Device-HashMap-entries(): IterableIterator<[K, V]>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -216,6 +226,8 @@ forEach(callbackFn: (value?: V, key?: K, map?: HashMap<K, V>) => void, thisArg?:
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-HashMap-forEach(callbackFn: (value?: V, key?: K, map?: HashMap<K, V>) => void, thisArg?: Object): void--><!--Device-HashMap-forEach(callbackFn: (value?: V, key?: K, map?: HashMap<K, V>) => void, thisArg?: Object): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -268,6 +280,8 @@ get(key: K): V
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-HashMap-get(key: K): V--><!--Device-HashMap-get(key: K): V-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -308,7 +322,9 @@ hasKey(key: K): boolean
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HashMap-hasKey(key: K): boolean--><!--Device-HashMap-hasKey(key: K): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -349,7 +365,9 @@ hasValue(value: V): boolean
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HashMap-hasValue(value: V): boolean--><!--Device-HashMap-hasValue(value: V): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -390,7 +408,9 @@ isEmpty(): boolean
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HashMap-isEmpty(): boolean--><!--Device-HashMap-isEmpty(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -427,7 +447,9 @@ keys(): IterableIterator<K>
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HashMap-keys(): IterableIterator<K>--><!--Device-HashMap-keys(): IterableIterator<K>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -469,6 +491,8 @@ remove(key: K): V
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-HashMap-remove(key: K): V--><!--Device-HashMap-remove(key: K): V-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -509,7 +533,9 @@ replace(key: K, newValue: V): boolean
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HashMap-replace(key: K, newValue: V): boolean--><!--Device-HashMap-replace(key: K, newValue: V): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -551,7 +577,9 @@ set(key: K, value: V): Object
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HashMap-set(key: K, value: V): Object--><!--Device-HashMap-set(key: K, value: V): Object-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -592,7 +620,9 @@ setAll(map: HashMap<K, V>): void
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HashMap-setAll(map: HashMap<K, V>): void--><!--Device-HashMap-setAll(map: HashMap<K, V>): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -634,7 +664,9 @@ values(): IterableIterator<V>
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HashMap-values(): IterableIterator<V>--><!--Device-HashMap-values(): IterableIterator<V>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -677,5 +709,7 @@ HashMap的元素个数。
 **起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HashMap-length: number--><!--Device-HashMap-length: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

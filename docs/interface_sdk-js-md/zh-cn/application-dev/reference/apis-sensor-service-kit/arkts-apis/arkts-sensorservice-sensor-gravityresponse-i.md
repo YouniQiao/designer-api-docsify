@@ -10,6 +10,8 @@ interface GravityResponse extends Response
 
 **起始版本：** 8
 
+<!--Device-sensor-interface GravityResponse extends Response--><!--Device-sensor-interface GravityResponse extends Response-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## 导入模块
@@ -30,6 +32,8 @@ x: number
 
 **起始版本：** 8
 
+<!--Device-GravityResponse-x: double--><!--Device-GravityResponse-x: double-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## y
@@ -44,6 +48,8 @@ y: number
 
 **起始版本：** 8
 
+<!--Device-GravityResponse-y: double--><!--Device-GravityResponse-y: double-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## z
@@ -57,5 +63,7 @@ z: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-GravityResponse-z: double--><!--Device-GravityResponse-z: double-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor

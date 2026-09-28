@@ -8,6 +8,8 @@ interface ExceptionMessage
 
 **起始版本：** 20
 
+<!--Device-relationalStore-interface ExceptionMessage--><!--Device-relationalStore-interface ExceptionMessage-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ code: number
 
 **起始版本：** 20
 
+<!--Device-ExceptionMessage-code: int--><!--Device-ExceptionMessage-code: int-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## message
@@ -42,6 +46,8 @@ message: string
 
 **起始版本：** 20
 
+<!--Device-ExceptionMessage-message: string--><!--Device-ExceptionMessage-message: string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## sql
@@ -55,5 +61,7 @@ sql: string
 **类型：** string
 
 **起始版本：** 20
+
+<!--Device-ExceptionMessage-sql: string--><!--Device-ExceptionMessage-sql: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core

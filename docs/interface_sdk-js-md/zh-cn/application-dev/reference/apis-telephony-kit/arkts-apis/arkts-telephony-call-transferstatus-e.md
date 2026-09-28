@@ -8,6 +8,8 @@ export enum TransferStatus
 
 **起始版本：** 26.0.0
 
+<!--Device-call-export enum TransferStatus--><!--Device-call-export enum TransferStatus-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 ## TRANSFER_DISABLE
@@ -20,6 +22,8 @@ TRANSFER_DISABLE = 0
 
 **起始版本：** 26.0.0
 
+<!--Device-TransferStatus-TRANSFER_DISABLE = 0--><!--Device-TransferStatus-TRANSFER_DISABLE = 0-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 ## TRANSFER_ENABLE
@@ -31,5 +35,7 @@ TRANSFER_ENABLE = 1
 启用转移。
 
 **起始版本：** 26.0.0
+
+<!--Device-TransferStatus-TRANSFER_ENABLE = 1--><!--Device-TransferStatus-TRANSFER_ENABLE = 1-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager

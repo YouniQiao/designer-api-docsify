@@ -8,6 +8,8 @@ enum KeyCode
 
 **起始版本：** 23
 
+<!--Device-systemManager-enum KeyCode--><!--Device-systemManager-enum KeyCode-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## POWER
@@ -21,6 +23,8 @@ POWER = 0
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-KeyCode-POWER = 0--><!--Device-KeyCode-POWER = 0-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -36,6 +40,8 @@ VOLUME_UP = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-KeyCode-VOLUME_UP = 1--><!--Device-KeyCode-VOLUME_UP = 1-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## VOLUME_DOWN
@@ -49,6 +55,8 @@ VOLUME_DOWN = 2
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-KeyCode-VOLUME_DOWN = 2--><!--Device-KeyCode-VOLUME_DOWN = 2-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -64,6 +72,8 @@ BACK = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-KeyCode-BACK = 3--><!--Device-KeyCode-BACK = 3-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## HOME
@@ -78,6 +88,8 @@ HOME = 4
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-KeyCode-HOME = 4--><!--Device-KeyCode-HOME = 4-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## RECENT
@@ -91,5 +103,7 @@ RECENT = 5
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-KeyCode-RECENT = 5--><!--Device-KeyCode-RECENT = 5-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager

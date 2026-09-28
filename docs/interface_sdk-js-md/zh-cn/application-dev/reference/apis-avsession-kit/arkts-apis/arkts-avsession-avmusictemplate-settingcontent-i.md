@@ -10,6 +10,8 @@ interface SettingContent
 
 **起始版本：** 23
 
+<!--Device-avMusicTemplate-interface SettingContent--><!--Device-avMusicTemplate-interface SettingContent-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## 导入模块
@@ -32,6 +34,8 @@ imageTags?: image.PixelMap[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SettingContent-imageTags?: image.PixelMap[]--><!--Device-SettingContent-imageTags?: image.PixelMap[]-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## isSelected
@@ -47,6 +51,8 @@ isSelected: boolean
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SettingContent-isSelected: boolean--><!--Device-SettingContent-isSelected: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -64,6 +70,8 @@ textTags?: string[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SettingContent-textTags?: string[]--><!--Device-SettingContent-textTags?: string[]-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## value
@@ -79,5 +87,7 @@ value: string
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SettingContent-value: string--><!--Device-SettingContent-value: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate

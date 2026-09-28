@@ -8,6 +8,8 @@ Defines a key-value pair object used to specify persistent properties and their 
 
 **Since:** 10
 
+<!--Device-unnamed-declare interface PersistPropsOptions--><!--Device-unnamed-declare interface PersistPropsOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## defaultValue
@@ -24,6 +26,8 @@ Default value used for initialization if the specified **key** is not found in P
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-PersistPropsOptions-defaultValue: number | string | boolean | Object--><!--Device-PersistPropsOptions-defaultValue: number | string | boolean | Object-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## key
@@ -39,5 +43,7 @@ Property name.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PersistPropsOptions-key: string--><!--Device-PersistPropsOptions-key: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

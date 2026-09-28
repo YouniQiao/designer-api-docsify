@@ -8,6 +8,8 @@ export interface CBConfigOptions
 
 **起始版本：** 7
 
+<!--Device-sms-export interface CBConfigOptions--><!--Device-sms-export interface CBConfigOptions-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ enable: boolean
 
 **起始版本：** 7
 
+<!--Device-CBConfigOptions-enable: boolean--><!--Device-CBConfigOptions-enable: boolean-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ endMessageId: number
 **类型：** number
 
 **起始版本：** 7
+
+<!--Device-CBConfigOptions-endMessageId: int--><!--Device-CBConfigOptions-endMessageId: int-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -62,6 +68,8 @@ ranType: RanType
 
 **起始版本：** 7
 
+<!--Device-CBConfigOptions-ranType: RanType--><!--Device-CBConfigOptions-ranType: RanType-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -78,6 +86,8 @@ slotId: number
 
 **起始版本：** 7
 
+<!--Device-CBConfigOptions-slotId: int--><!--Device-CBConfigOptions-slotId: int-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -93,6 +103,8 @@ startMessageId: number
 **类型：** number
 
 **起始版本：** 7
+
+<!--Device-CBConfigOptions-startMessageId: int--><!--Device-CBConfigOptions-startMessageId: int-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 

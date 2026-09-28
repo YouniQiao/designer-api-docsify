@@ -8,6 +8,8 @@ interface CloudModelInfo
 
 **起始版本：** 26.0.0
 
+<!--Device-intelligence-interface CloudModelInfo--><!--Device-intelligence-interface CloudModelInfo-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ modelType: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-CloudModelInfo-modelType: string--><!--Device-CloudModelInfo-modelType: string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
 ## modelVersionCode
@@ -45,5 +49,7 @@ modelVersionCode?: string
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-CloudModelInfo-modelVersionCode?: string--><!--Device-CloudModelInfo-modelVersionCode?: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataIntelligence.Core

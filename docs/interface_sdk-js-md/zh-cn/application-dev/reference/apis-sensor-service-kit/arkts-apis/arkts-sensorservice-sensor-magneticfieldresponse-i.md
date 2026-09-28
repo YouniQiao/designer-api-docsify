@@ -10,6 +10,8 @@ interface MagneticFieldResponse extends Response
 
 **起始版本：** 8
 
+<!--Device-sensor-interface MagneticFieldResponse extends Response--><!--Device-sensor-interface MagneticFieldResponse extends Response-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## 导入模块
@@ -30,6 +32,8 @@ x轴方向的环境磁场强度。单位：μT（微特斯拉）。
 
 **起始版本：** 8
 
+<!--Device-MagneticFieldResponse-x: double--><!--Device-MagneticFieldResponse-x: double-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## y
@@ -44,6 +48,8 @@ y轴方向的环境磁场强度。单位：μT（微特斯拉）。
 
 **起始版本：** 8
 
+<!--Device-MagneticFieldResponse-y: double--><!--Device-MagneticFieldResponse-y: double-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## z
@@ -57,5 +63,7 @@ z轴方向的环境磁场强度。单位：μT（微特斯拉）。
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-MagneticFieldResponse-z: double--><!--Device-MagneticFieldResponse-z: double-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor

@@ -18,6 +18,8 @@ function disconnectAbility(connection: number, callback: AsyncCallback<void>): v
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-particleAbility-function disconnectAbility(connection: number, callback: AsyncCallback<void>): void--><!--Device-particleAbility-function disconnectAbility(connection: number, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **参数：**
@@ -70,6 +72,8 @@ function disconnectAbility(connection: number): Promise<void>
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-particleAbility-function disconnectAbility(connection: number): Promise<void>--><!--Device-particleAbility-function disconnectAbility(connection: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 

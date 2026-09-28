@@ -4,7 +4,7 @@
 declare class ApplicationContext extends Context
 ```
 
-ApplicationContext inherits from Context and provides application-level management capabilities, such as application lifecycle listening, process management, and application environment setting.
+ApplicationContext inherits from [Context](arkts-ability-context.md) and provides application-level management capabilities, such as application lifecycle listening, process management, and application environment setting.
 
 > **NOTE:** 
 > 
@@ -13,6 +13,8 @@ ApplicationContext inherits from Context and provides application-level manageme
 **Inheritance/Implementation:** ApplicationContext extends [Context](arkts-ability-context-c.md)
 
 **Since:** 9
+
+<!--Device-unnamed-declare class ApplicationContext extends Context--><!--Device-unnamed-declare class ApplicationContext extends Context-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -37,6 +39,8 @@ A UIExtensionAbility instance can be preloaded for multiple times. Each time a p
 **Required permissions:** ohos.permission.PRELOAD_UI_EXTENSION_ABILITY
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ApplicationContext-preloadUIExtensionAbility(want: Want): Promise<void>--><!--Device-ApplicationContext-preloadUIExtensionAbility(want: Want): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -124,6 +128,8 @@ Obtains information about the running processes. This API uses a promise to retu
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ApplicationContext-getProcessRunningInformation(): Promise<Array<ProcessInformation>>--><!--Device-ApplicationContext-getProcessRunningInformation(): Promise<Array<ProcessInformation>>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -177,6 +183,8 @@ Obtains information about the running processes. This API uses an asynchronous c
 **Substitutes:** [getRunningProcessInformation](arkts-ability-applicationcontext-c.md#getrunningprocessinformation)
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ApplicationContext-getProcessRunningInformation(callback: AsyncCallback<Array<ProcessInformation>>): void--><!--Device-ApplicationContext-getProcessRunningInformation(callback: AsyncCallback<Array<ProcessInformation>>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -232,6 +240,8 @@ Registers a listener to monitor the ability lifecycle of the application. This A
 **Substitutes:** [on](arkts-ability-applicationcontext-c.md#onabilitylifecycle)(type: 'abilityLifecycle', callback: AbilityLifecycleCallback)
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ApplicationContext-registerAbilityLifecycleCallback(abilityLifecycleCallback: AbilityLifecycleCallback): number--><!--Device-ApplicationContext-registerAbilityLifecycleCallback(abilityLifecycleCallback: AbilityLifecycleCallback): number-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -323,6 +333,8 @@ Register environment callback.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ApplicationContext-registerEnvironmentCallback(environmentCallback: EnvironmentCallback): number--><!--Device-ApplicationContext-registerEnvironmentCallback(environmentCallback: EnvironmentCallback): number-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -390,6 +402,8 @@ Unregisters the listener that monitors the ability lifecycle of the application.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ApplicationContext-unregisterAbilityLifecycleCallback(callbackId: number, callback: AsyncCallback<void>): void--><!--Device-ApplicationContext-unregisterAbilityLifecycleCallback(callbackId: number, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -448,6 +462,8 @@ Unregisters a listener for the lifecycle of a UIAbility within the application. 
 **Substitutes:** [off](arkts-ability-applicationcontext-c.md#offabilitylifecycle)(type: 'abilityLifecycle', callbackId: number): Promise&lt;void&gt;;
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ApplicationContext-unregisterAbilityLifecycleCallback(callbackId: number): Promise<void>--><!--Device-ApplicationContext-unregisterAbilityLifecycleCallback(callbackId: number): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -509,6 +525,8 @@ Unregisters the listener for system environment changes. This API uses an asynch
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ApplicationContext-unregisterEnvironmentCallback(callbackId: number, envcallback: AsyncCallback<void>): void--><!--Device-ApplicationContext-unregisterEnvironmentCallback(callbackId: number, envcallback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -564,6 +582,8 @@ Unregisters the listener for system environment changes. This API uses a promise
 **Substitutes:** [off](arkts-ability-applicationcontext-c.md#offenvironment)(type: 'environment', callbackId: number): Promise&lt;void&gt;;
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ApplicationContext-unregisterEnvironmentCallback(callbackId: number): Promise<void>--><!--Device-ApplicationContext-unregisterEnvironmentCallback(callbackId: number): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

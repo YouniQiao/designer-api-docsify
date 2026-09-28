@@ -18,6 +18,8 @@ function setAbilityEnabledSync(info: AbilityInfo, isEnabled: boolean): void
 
 **需要权限：** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
 
+<!--Device-bundleManager-function setAbilityEnabledSync(info: AbilityInfo, isEnabled: boolean): void--><!--Device-bundleManager-function setAbilityEnabledSync(info: AbilityInfo, isEnabled: boolean): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。

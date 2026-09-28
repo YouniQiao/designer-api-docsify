@@ -8,6 +8,8 @@ Defines the icon options.
 
 **Since:** 10
 
+<!--Device-unnamed-interface IconOptions--><!--Device-unnamed-interface IconOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## color
@@ -25,6 +27,8 @@ Icon color. If not set, the default color is used (in light mode, '#99182431', w
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-IconOptions-color?: ResourceColor--><!--Device-IconOptions-color?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,6 +48,8 @@ Icon size. The default unit is vp when no unit is specified. Percentage is not s
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-IconOptions-size?: Length--><!--Device-IconOptions-size?: Length-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## src
@@ -61,5 +67,7 @@ Icon/image source. If not set, the system default icon is used.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-IconOptions-src?: ResourceStr--><!--Device-IconOptions-src?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

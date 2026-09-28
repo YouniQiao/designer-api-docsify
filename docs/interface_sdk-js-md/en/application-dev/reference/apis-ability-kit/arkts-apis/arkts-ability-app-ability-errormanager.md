@@ -4,6 +4,8 @@ The ErrorManager module provides capabilities for registering and unregistering 
 
 **Since:** 9
 
+<!--Device-unnamed-declare namespace errorManager--><!--Device-unnamed-declare namespace errorManager-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## Modules to Import

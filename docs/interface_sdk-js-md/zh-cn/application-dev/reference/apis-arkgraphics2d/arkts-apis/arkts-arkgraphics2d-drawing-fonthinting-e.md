@@ -8,6 +8,8 @@ enum FontHinting
 
 **起始版本：** 12
 
+<!--Device-drawing-enum FontHinting--><!--Device-drawing-enum FontHinting-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## NONE
@@ -20,7 +22,9 @@ NONE = 0
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-FontHinting-NONE = 0--><!--Device-FontHinting-NONE = 0-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -34,7 +38,9 @@ SLIGHT = 1
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-FontHinting-SLIGHT = 1--><!--Device-FontHinting-SLIGHT = 1-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -48,7 +54,9 @@ NORMAL = 2
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-FontHinting-NORMAL = 2--><!--Device-FontHinting-NORMAL = 2-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -62,6 +70,8 @@ FULL = 3
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-FontHinting-FULL = 3--><!--Device-FontHinting-FULL = 3-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing

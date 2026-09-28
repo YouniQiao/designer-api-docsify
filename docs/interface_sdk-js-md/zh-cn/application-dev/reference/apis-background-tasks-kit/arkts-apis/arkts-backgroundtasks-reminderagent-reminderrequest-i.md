@@ -12,6 +12,8 @@ interface ReminderRequest
 
 **替代接口：** [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md)
 
+<!--Device-reminderAgent-interface ReminderRequest--><!--Device-reminderAgent-interface ReminderRequest-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## 导入模块
@@ -36,6 +38,8 @@ actionButton?: [ActionButton?, ActionButton?]
 
 **替代接口：** [actionButton](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md#actionbutton)
 
+<!--Device-ReminderRequest-actionButton?: [ActionButton?, ActionButton?]--><!--Device-ReminderRequest-actionButton?: [ActionButton?, ActionButton?]-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## content
@@ -53,6 +57,8 @@ content?: string
 **废弃版本：** 9
 
 **替代接口：** [content](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md#content)
+
+<!--Device-ReminderRequest-content?: string--><!--Device-ReminderRequest-content?: string-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -72,6 +78,8 @@ expiredContent?: string
 
 **替代接口：** [expiredContent](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md#expiredcontent)
 
+<!--Device-ReminderRequest-expiredContent?: string--><!--Device-ReminderRequest-expiredContent?: string-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## maxScreenWantAgent
@@ -89,6 +97,8 @@ maxScreenWantAgent?: MaxScreenWantAgent
 **废弃版本：** 9
 
 **替代接口：** [maxScreenWantAgent](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md#maxscreenwantagent)
+
+<!--Device-ReminderRequest-maxScreenWantAgent?: MaxScreenWantAgent--><!--Device-ReminderRequest-maxScreenWantAgent?: MaxScreenWantAgent-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -108,6 +118,8 @@ notificationId?: number
 
 **替代接口：** [notificationId](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md#notificationid)
 
+<!--Device-ReminderRequest-notificationId?: number--><!--Device-ReminderRequest-notificationId?: number-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## reminderType
@@ -125,6 +137,8 @@ reminderType: ReminderType
 **废弃版本：** 9
 
 **替代接口：** [reminderType](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md#remindertype)
+
+<!--Device-ReminderRequest-reminderType: ReminderType--><!--Device-ReminderRequest-reminderType: ReminderType-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -144,6 +158,8 @@ ringDuration?: number
 
 **替代接口：** [ringDuration](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md#ringduration)
 
+<!--Device-ReminderRequest-ringDuration?: number--><!--Device-ReminderRequest-ringDuration?: number-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## slotType
@@ -161,6 +177,8 @@ slotType?: notification.SlotType
 **废弃版本：** 9
 
 **替代接口：** [slotType](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md#slottype)
+
+<!--Device-ReminderRequest-slotType?: notification.SlotType--><!--Device-ReminderRequest-slotType?: notification.SlotType-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -180,6 +198,8 @@ snoozeContent?: string
 
 **替代接口：** [snoozeContent](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md#snoozecontent)
 
+<!--Device-ReminderRequest-snoozeContent?: string--><!--Device-ReminderRequest-snoozeContent?: string-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## snoozeTimes
@@ -197,6 +217,8 @@ snoozeTimes?: number
 **废弃版本：** 9
 
 **替代接口：** [snoozeTimes](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md#snoozetimes)
+
+<!--Device-ReminderRequest-snoozeTimes?: number--><!--Device-ReminderRequest-snoozeTimes?: number-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -216,6 +238,8 @@ timeInterval?: number
 
 **替代接口：** [timeInterval](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md#timeinterval)
 
+<!--Device-ReminderRequest-timeInterval?: number--><!--Device-ReminderRequest-timeInterval?: number-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## title
@@ -234,6 +258,8 @@ title?: string
 
 **替代接口：** [title](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md#title)
 
+<!--Device-ReminderRequest-title?: string--><!--Device-ReminderRequest-title?: string-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## wantAgent
@@ -251,5 +277,7 @@ wantAgent?: WantAgent
 **废弃版本：** 9
 
 **替代接口：** [wantAgent](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md#wantagent)
+
+<!--Device-ReminderRequest-wantAgent?: WantAgent--><!--Device-ReminderRequest-wantAgent?: WantAgent-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent

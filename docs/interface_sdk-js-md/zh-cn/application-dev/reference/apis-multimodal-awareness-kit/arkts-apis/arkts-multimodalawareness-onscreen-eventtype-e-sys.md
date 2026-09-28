@@ -8,6 +8,8 @@ export enum EventType
 
 **起始版本：** 20
 
+<!--Device-onScreen-export enum EventType--><!--Device-onScreen-export enum EventType-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 ## SCROLL_TO_HOOK
@@ -19,6 +21,8 @@ SCROLL_TO_HOOK = 1
 表示滚动到hook点事件。
 
 **起始版本：** 20
+
+<!--Device-EventType-SCROLL_TO_HOOK = 1--><!--Device-EventType-SCROLL_TO_HOOK = 1-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 

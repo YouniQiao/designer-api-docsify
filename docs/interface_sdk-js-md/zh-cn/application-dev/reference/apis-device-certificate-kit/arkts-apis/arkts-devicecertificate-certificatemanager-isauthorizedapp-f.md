@@ -18,6 +18,8 @@ function isAuthorizedApp(keyUri: string): Promise<boolean>
 
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER
 
+<!--Device-certificateManager-function isAuthorizedApp(keyUri: string): Promise<boolean>--><!--Device-certificateManager-function isAuthorizedApp(keyUri: string): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
 
 **参数：**

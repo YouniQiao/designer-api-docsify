@@ -10,6 +10,8 @@ interface Album extends AbsAlbum
 
 **起始版本：** 12
 
+<!--Device-sendablePhotoAccessHelper-interface Album extends AbsAlbum--><!--Device-sendablePhotoAccessHelper-interface Album extends AbsAlbum-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
@@ -29,6 +31,8 @@ getFaceId(): Promise<string>
 **起始版本：** 13
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-Album-getFaceId(): Promise<string>--><!--Device-Album-getFaceId(): Promise<string>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

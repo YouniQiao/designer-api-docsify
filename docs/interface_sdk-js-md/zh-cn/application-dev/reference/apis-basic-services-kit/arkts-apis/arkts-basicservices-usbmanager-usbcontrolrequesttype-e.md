@@ -8,6 +8,8 @@ export enum USBControlRequestType
 
 **起始版本：** 9
 
+<!--Device-usbManager-export enum USBControlRequestType--><!--Device-usbManager-export enum USBControlRequestType-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## USB_REQUEST_TYPE_STANDARD
@@ -19,6 +21,8 @@ USB_REQUEST_TYPE_STANDARD = 0
 标准请求类型，用于发送USB协议定义的标准控制请求（如设备描述符、设置地址、设置配置等）。
 
 **起始版本：** 9
+
+<!--Device-USBControlRequestType-USB_REQUEST_TYPE_STANDARD = 0--><!--Device-USBControlRequestType-USB_REQUEST_TYPE_STANDARD = 0-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -32,6 +36,8 @@ USB_REQUEST_TYPE_CLASS = 1
 
 **起始版本：** 9
 
+<!--Device-USBControlRequestType-USB_REQUEST_TYPE_CLASS = 1--><!--Device-USBControlRequestType-USB_REQUEST_TYPE_CLASS = 1-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## USB_REQUEST_TYPE_VENDOR
@@ -43,5 +49,7 @@ USB_REQUEST_TYPE_VENDOR = 2
 厂商请求类型，用于发送厂商自定义的控制请求，具体请求内容由设备厂商定义。
 
 **起始版本：** 9
+
+<!--Device-USBControlRequestType-USB_REQUEST_TYPE_VENDOR = 2--><!--Device-USBControlRequestType-USB_REQUEST_TYPE_VENDOR = 2-End-->
 
 **系统能力：** SystemCapability.USB.USBManager

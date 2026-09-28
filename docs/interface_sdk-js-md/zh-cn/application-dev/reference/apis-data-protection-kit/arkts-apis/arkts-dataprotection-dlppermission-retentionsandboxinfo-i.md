@@ -8,6 +8,8 @@ export interface RetentionSandboxInfo
 
 **起始版本：** 10
 
+<!--Device-dlpPermission-export interface RetentionSandboxInfo--><!--Device-dlpPermission-export interface RetentionSandboxInfo-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## 导入模块
@@ -28,6 +30,8 @@ appIndex: number
 
 **起始版本：** 10
 
+<!--Device-RetentionSandboxInfo-appIndex: number--><!--Device-RetentionSandboxInfo-appIndex: number-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## bundleName
@@ -42,6 +46,8 @@ bundleName: string
 
 **起始版本：** 10
 
+<!--Device-RetentionSandboxInfo-bundleName: string--><!--Device-RetentionSandboxInfo-bundleName: string-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## docUris
@@ -55,5 +61,7 @@ docUris: Array<string>
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 10
+
+<!--Device-RetentionSandboxInfo-docUris: Array<string>--><!--Device-RetentionSandboxInfo-docUris: Array<string>-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention

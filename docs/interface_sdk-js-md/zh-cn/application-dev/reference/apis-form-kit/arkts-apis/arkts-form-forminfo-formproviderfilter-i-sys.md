@@ -10,6 +10,8 @@ Information about a running form.
 
 **起始版本：** 10
 
+<!--Device-formInfo-interface FormProviderFilter--><!--Device-formInfo-interface FormProviderFilter-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -34,6 +36,8 @@ Obtains the ability name of the provider application module.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FormProviderFilter-abilityName ?: string--><!--Device-FormProviderFilter-abilityName ?: string-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -52,6 +56,8 @@ Obtains the bundle name of the provider application.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FormProviderFilter-bundleName: string--><!--Device-FormProviderFilter-bundleName: string-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -69,6 +75,8 @@ Obtains the form name of the provider application form.
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FormProviderFilter-formName ?: string--><!--Device-FormProviderFilter-formName ?: string-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -90,6 +98,8 @@ Indicates whether to include unused form.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FormProviderFilter-isUnusedIncluded?: boolean--><!--Device-FormProviderFilter-isUnusedIncluded?: boolean-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -107,6 +117,8 @@ Obtains the module name of the provider application module.
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FormProviderFilter-moduleName ?: string--><!--Device-FormProviderFilter-moduleName ?: string-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 

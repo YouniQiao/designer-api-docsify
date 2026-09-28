@@ -12,6 +12,8 @@ KVStore数据库类型枚举。
 
 **替代接口：** KVStoreType
 
+<!--Device-distributedData-enum KVStoreType--><!--Device-distributedData-enum KVStoreType-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## DEVICE_COLLABORATION
@@ -29,6 +31,8 @@ DEVICE_COLLABORATION = 0
 **废弃版本：** 9
 
 **替代接口：** DEVICE_COLLABORATION
+
+<!--Device-KVStoreType-DEVICE_COLLABORATION = 0--><!--Device-KVStoreType-DEVICE_COLLABORATION = 0-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
@@ -48,6 +52,8 @@ SINGLE_VERSION = 1
 
 **替代接口：** SINGLE_VERSION
 
+<!--Device-KVStoreType-SINGLE_VERSION = 1--><!--Device-KVStoreType-SINGLE_VERSION = 1-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## MULTI_VERSION
@@ -61,5 +67,7 @@ MULTI_VERSION = 2
 **起始版本：** 7
 
 **废弃版本：** 9
+
+<!--Device-KVStoreType-MULTI_VERSION = 2--><!--Device-KVStoreType-MULTI_VERSION = 2-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore

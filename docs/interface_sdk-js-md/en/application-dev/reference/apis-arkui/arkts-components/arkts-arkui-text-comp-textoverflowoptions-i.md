@@ -14,6 +14,8 @@ Defines the configuration object for text overflow behavior.
 
 **Since:** 18
 
+<!--Device-unnamed-declare interface TextOverflowOptions--><!--Device-unnamed-declare interface TextOverflowOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## overflow
@@ -36,5 +38,7 @@ Default value: **TextOverflow.Clip**
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-TextOverflowOptions-overflow: TextOverflow--><!--Device-TextOverflowOptions-overflow: TextOverflow-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

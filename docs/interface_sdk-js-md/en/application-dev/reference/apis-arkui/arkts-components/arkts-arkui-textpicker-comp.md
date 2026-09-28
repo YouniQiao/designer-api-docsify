@@ -30,6 +30,8 @@ Creates a text picker based on the specified data list.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TextPickerInterface-(options?: TextPickerOptions): TextPickerAttribute--><!--Device-TextPickerInterface-(options?: TextPickerOptions): TextPickerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

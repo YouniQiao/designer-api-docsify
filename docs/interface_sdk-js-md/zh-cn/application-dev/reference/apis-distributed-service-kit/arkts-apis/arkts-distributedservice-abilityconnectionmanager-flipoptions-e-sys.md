@@ -8,6 +8,8 @@ export enum FlipOptions
 
 **起始版本：** 18
 
+<!--Device-abilityConnectionManager-export enum FlipOptions--><!--Device-abilityConnectionManager-export enum FlipOptions-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **系统接口：** 此接口为系统接口。
@@ -24,6 +26,8 @@ HORIZONTAL = 0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FlipOptions-HORIZONTAL = 0--><!--Device-FlipOptions-HORIZONTAL = 0-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **系统接口：** 此接口为系统接口。
@@ -39,6 +43,8 @@ VERTICAL = 1
 **起始版本：** 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FlipOptions-VERTICAL = 1--><!--Device-FlipOptions-VERTICAL = 1-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 

@@ -10,6 +10,8 @@ declare interface ProgressConfiguration extends CommonConfiguration<ProgressConf
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare interface ProgressConfiguration extends CommonConfiguration<ProgressConfiguration>--><!--Device-unnamed-declare interface ProgressConfiguration extends CommonConfiguration<ProgressConfiguration>-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## total
@@ -34,6 +36,8 @@ total小于等于0时，按照100处理。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-ProgressConfiguration-total: number--><!--Device-ProgressConfiguration-total: number-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## value
@@ -57,5 +61,7 @@ value: number
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ProgressConfiguration-value: number--><!--Device-ProgressConfiguration-value: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

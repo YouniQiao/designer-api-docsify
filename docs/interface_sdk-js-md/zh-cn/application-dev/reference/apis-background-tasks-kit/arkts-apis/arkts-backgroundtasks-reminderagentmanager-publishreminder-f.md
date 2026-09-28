@@ -24,6 +24,8 @@ function publishReminder(reminderReq: ReminderRequest, callback: AsyncCallback<n
 
 **需要权限：** ohos.permission.PUBLISH_AGENT_REMINDER
 
+<!--Device-reminderAgentManager-function publishReminder(reminderReq: ReminderRequest, callback: AsyncCallback<int>): void--><!--Device-reminderAgentManager-function publishReminder(reminderReq: ReminderRequest, callback: AsyncCallback<int>): void-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 **参数：**
@@ -82,6 +84,8 @@ function publishReminder(reminderReq: ReminderRequest): Promise<number>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.PUBLISH_AGENT_REMINDER
+
+<!--Device-reminderAgentManager-function publishReminder(reminderReq: ReminderRequest): Promise<int>--><!--Device-reminderAgentManager-function publishReminder(reminderReq: ReminderRequest): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 

@@ -8,6 +8,8 @@ Provides APIs for managing the **Highlights** album, which is an automatically g
 
 **Since:** 12
 
+<!--Device-photoAccessHelper-class HighlightAlbum--><!--Device-photoAccessHelper-class HighlightAlbum-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -27,6 +29,8 @@ constructor(album: Album)
 Constructor.
 
 **Since:** 12
+
+<!--Device-HighlightAlbum-constructor(album: Album)--><!--Device-HighlightAlbum-constructor(album: Album)-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -77,6 +81,8 @@ Deletes highlight albums.
 **Since:** 18
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-HighlightAlbum-static deleteHighlightAlbums(context: Context, albums: Array<Album>): Promise<int>--><!--Device-HighlightAlbum-static deleteHighlightAlbums(context: Context, albums: Array<Album>): Promise<int>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -145,6 +151,8 @@ Obtains specific information about the **Highlights** album.
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-HighlightAlbum-getHighlightAlbumInfo(type: HighlightAlbumInfoType): Promise<string>--><!--Device-HighlightAlbum-getHighlightAlbumInfo(type: HighlightAlbumInfoType): Promise<string>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -211,6 +219,8 @@ Obtains the ArrayBuffer for caching the specified asset.
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-HighlightAlbum-getHighlightResource(resourceUri: string): Promise<ArrayBuffer>--><!--Device-HighlightAlbum-getHighlightResource(resourceUri: string): Promise<ArrayBuffer>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -274,6 +284,8 @@ Sets the user behavior data for the **Highlights** album.
 **Since:** 12
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-HighlightAlbum-setHighlightUserActionData(type: HighlightUserActionType, actionData: int): Promise<void>--><!--Device-HighlightAlbum-setHighlightUserActionData(type: HighlightUserActionType, actionData: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -347,6 +359,8 @@ The subtitle must meet the following requirements:
 **Since:** 18
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-HighlightAlbum-setSubTitle(subTitle: string): Promise<void>--><!--Device-HighlightAlbum-setSubTitle(subTitle: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

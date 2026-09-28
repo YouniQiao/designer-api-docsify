@@ -20,6 +20,8 @@ export function getFirstPreferredLanguage(): string
 
 **替代接口：** [getFirstPreferredLanguage](arkts-localization-i18n-system-c.md#getfirstpreferredlanguage)
 
+<!--Device-i18n-export function getFirstPreferredLanguage(): string--><!--Device-i18n-export function getFirstPreferredLanguage(): string-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 **返回值：**

@@ -16,6 +16,8 @@ function subscribeSelf(subscriber: NotificationSubscriber): Promise<void>
 
 **起始版本：** 11
 
+<!--Device-notificationSubscribe-function subscribeSelf(subscriber: NotificationSubscriber): Promise<void>--><!--Device-notificationSubscribe-function subscribeSelf(subscriber: NotificationSubscriber): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。

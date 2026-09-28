@@ -8,6 +8,8 @@ export interface CommonEventSubscriber
 
 **起始版本：** 7
 
+<!--Device-unnamed-export interface CommonEventSubscriber--><!--Device-unnamed-export interface CommonEventSubscriber-End-->
+
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## abortCommonEvent
@@ -19,6 +21,8 @@ abortCommonEvent(callback: AsyncCallback<void>): void
 添加有序公共事件的中止状态。当该接口与[finishCommonEvent](#finishcommonevent)配合使用时，可以中止当前的有序公共事件，使该公共事件不再向下一个订阅者传递。使用callback异步回调。
 
 **起始版本：** 7
+
+<!--Device-CommonEventSubscriber-abortCommonEvent(callback: AsyncCallback<void>): void--><!--Device-CommonEventSubscriber-abortCommonEvent(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -65,6 +69,8 @@ abortCommonEvent(): Promise<void>
 
 **起始版本：** 7
 
+<!--Device-CommonEventSubscriber-abortCommonEvent(): Promise<void>--><!--Device-CommonEventSubscriber-abortCommonEvent(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **返回值：**
@@ -98,6 +104,8 @@ abortCommonEventSync(): void
 
 **起始版本：** 10
 
+<!--Device-CommonEventSubscriber-abortCommonEventSync(): void--><!--Device-CommonEventSubscriber-abortCommonEventSync(): void-End-->
+
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **示例**
@@ -120,6 +128,8 @@ clearAbortCommonEvent(callback: AsyncCallback<void>): void
 清理有序公共事件的中止状态。当该接口与[finishCommonEvent](#finishcommonevent)配合使用时，可以使该公共事件继续向下一个订阅者传递。使用callback异步回调。
 
 **起始版本：** 7
+
+<!--Device-CommonEventSubscriber-clearAbortCommonEvent(callback: AsyncCallback<void>): void--><!--Device-CommonEventSubscriber-clearAbortCommonEvent(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -166,6 +176,8 @@ clearAbortCommonEvent(): Promise<void>
 
 **起始版本：** 7
 
+<!--Device-CommonEventSubscriber-clearAbortCommonEvent(): Promise<void>--><!--Device-CommonEventSubscriber-clearAbortCommonEvent(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **返回值：**
@@ -199,6 +211,8 @@ clearAbortCommonEventSync(): void
 
 **起始版本：** 10
 
+<!--Device-CommonEventSubscriber-clearAbortCommonEventSync(): void--><!--Device-CommonEventSubscriber-clearAbortCommonEventSync(): void-End-->
+
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **示例**
@@ -221,6 +235,8 @@ finishCommonEvent(callback: AsyncCallback<void>): void
 用于订阅者结束对当前有序公共事件的处理。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-CommonEventSubscriber-finishCommonEvent(callback: AsyncCallback<void>): void--><!--Device-CommonEventSubscriber-finishCommonEvent(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -260,6 +276,8 @@ finishCommonEvent(): Promise<void>
 
 **起始版本：** 9
 
+<!--Device-CommonEventSubscriber-finishCommonEvent(): Promise<void>--><!--Device-CommonEventSubscriber-finishCommonEvent(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **返回值：**
@@ -287,6 +305,8 @@ getAbortCommonEvent(callback: AsyncCallback<boolean>): void
 获取当前有序公共事件是否处于中止状态。使用callback异步回调。
 
 **起始版本：** 7
+
+<!--Device-CommonEventSubscriber-getAbortCommonEvent(callback: AsyncCallback<boolean>): void--><!--Device-CommonEventSubscriber-getAbortCommonEvent(callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -326,6 +346,8 @@ getAbortCommonEvent(): Promise<boolean>
 
 **起始版本：** 7
 
+<!--Device-CommonEventSubscriber-getAbortCommonEvent(): Promise<boolean>--><!--Device-CommonEventSubscriber-getAbortCommonEvent(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **返回值：**
@@ -354,6 +376,8 @@ getAbortCommonEventSync(): boolean
 
 **起始版本：** 10
 
+<!--Device-CommonEventSubscriber-getAbortCommonEventSync(): boolean--><!--Device-CommonEventSubscriber-getAbortCommonEventSync(): boolean-End-->
+
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **返回值：**
@@ -379,7 +403,9 @@ getCode(callback: AsyncCallback<number>): void
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-CommonEventSubscriber-getCode(callback: AsyncCallback<int>): void--><!--Device-CommonEventSubscriber-getCode(callback: AsyncCallback<int>): void-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -419,7 +445,9 @@ getCode(): Promise<number>
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-CommonEventSubscriber-getCode(): Promise<int>--><!--Device-CommonEventSubscriber-getCode(): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -449,7 +477,9 @@ getCodeSync(): number
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-CommonEventSubscriber-getCodeSync(): int--><!--Device-CommonEventSubscriber-getCodeSync(): int-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -476,7 +506,9 @@ getData(callback: AsyncCallback<string>): void
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-CommonEventSubscriber-getData(callback: AsyncCallback<string>): void--><!--Device-CommonEventSubscriber-getData(callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -517,7 +549,9 @@ getData(): Promise<string>
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-CommonEventSubscriber-getData(): Promise<string>--><!--Device-CommonEventSubscriber-getData(): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -547,7 +581,9 @@ getDataSync(): string
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-CommonEventSubscriber-getDataSync(): string--><!--Device-CommonEventSubscriber-getDataSync(): string-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -575,6 +611,8 @@ getSubscribeInfo(callback: AsyncCallback<CommonEventSubscribeInfo>): void
 **起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-CommonEventSubscriber-getSubscribeInfo(callback: AsyncCallback<CommonEventSubscribeInfo>): void--><!--Device-CommonEventSubscriber-getSubscribeInfo(callback: AsyncCallback<CommonEventSubscribeInfo>): void-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -616,6 +654,8 @@ getSubscribeInfo(): Promise<CommonEventSubscribeInfo>
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-CommonEventSubscriber-getSubscribeInfo(): Promise<CommonEventSubscribeInfo>--><!--Device-CommonEventSubscriber-getSubscribeInfo(): Promise<CommonEventSubscribeInfo>-End-->
+
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **返回值：**
@@ -646,6 +686,8 @@ getSubscribeInfoSync(): CommonEventSubscribeInfo
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-CommonEventSubscriber-getSubscribeInfoSync(): CommonEventSubscribeInfo--><!--Device-CommonEventSubscriber-getSubscribeInfoSync(): CommonEventSubscribeInfo-End-->
+
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **返回值：**
@@ -670,6 +712,8 @@ isOrderedCommonEvent(callback: AsyncCallback<boolean>): void
 查询当前公共事件是否为有序公共事件。使用callback异步回调。
 
 **起始版本：** 7
+
+<!--Device-CommonEventSubscriber-isOrderedCommonEvent(callback: AsyncCallback<boolean>): void--><!--Device-CommonEventSubscriber-isOrderedCommonEvent(callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -709,6 +753,8 @@ isOrderedCommonEvent(): Promise<boolean>
 
 **起始版本：** 7
 
+<!--Device-CommonEventSubscriber-isOrderedCommonEvent(): Promise<boolean>--><!--Device-CommonEventSubscriber-isOrderedCommonEvent(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **返回值：**
@@ -737,6 +783,8 @@ isOrderedCommonEventSync(): boolean
 
 **起始版本：** 10
 
+<!--Device-CommonEventSubscriber-isOrderedCommonEventSync(): boolean--><!--Device-CommonEventSubscriber-isOrderedCommonEventSync(): boolean-End-->
+
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **返回值：**
@@ -761,6 +809,8 @@ isStickyCommonEvent(callback: AsyncCallback<boolean>): void
 查询当前公共事件是否为一个粘性公共事件。使用callback异步回调。
 
 **起始版本：** 7
+
+<!--Device-CommonEventSubscriber-isStickyCommonEvent(callback: AsyncCallback<boolean>): void--><!--Device-CommonEventSubscriber-isStickyCommonEvent(callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -800,6 +850,8 @@ isStickyCommonEvent(): Promise<boolean>
 
 **起始版本：** 7
 
+<!--Device-CommonEventSubscriber-isStickyCommonEvent(): Promise<boolean>--><!--Device-CommonEventSubscriber-isStickyCommonEvent(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **返回值：**
@@ -828,6 +880,8 @@ isStickyCommonEventSync(): boolean
 
 **起始版本：** 10
 
+<!--Device-CommonEventSubscriber-isStickyCommonEventSync(): boolean--><!--Device-CommonEventSubscriber-isStickyCommonEventSync(): boolean-End-->
+
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **返回值：**
@@ -853,7 +907,9 @@ setCode(code: number, callback: AsyncCallback<void>): void
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-CommonEventSubscriber-setCode(code: int, callback: AsyncCallback<void>): void--><!--Device-CommonEventSubscriber-setCode(code: int, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -894,7 +950,9 @@ setCode(code: number): Promise<void>
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-CommonEventSubscriber-setCode(code: int): Promise<void>--><!--Device-CommonEventSubscriber-setCode(code: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -936,7 +994,9 @@ setCodeAndData(code: number, data: string, callback: AsyncCallback<void>): void
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-CommonEventSubscriber-setCodeAndData(code: int, data: string, callback: AsyncCallback<void>): void--><!--Device-CommonEventSubscriber-setCodeAndData(code: int, data: string, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -978,7 +1038,9 @@ setCodeAndData(code: number, data: string): Promise<void>
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-CommonEventSubscriber-setCodeAndData(code: int, data: string): Promise<void>--><!--Device-CommonEventSubscriber-setCodeAndData(code: int, data: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -1021,7 +1083,9 @@ setCodeAndDataSync(code: number, data: string): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-CommonEventSubscriber-setCodeAndDataSync(code: int, data: string): void--><!--Device-CommonEventSubscriber-setCodeAndDataSync(code: int, data: string): void-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -1059,7 +1123,9 @@ setCodeSync(code: number): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-CommonEventSubscriber-setCodeSync(code: int): void--><!--Device-CommonEventSubscriber-setCodeSync(code: int): void-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -1096,7 +1162,9 @@ setData(data: string, callback: AsyncCallback<void>): void
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-CommonEventSubscriber-setData(data: string, callback: AsyncCallback<void>): void--><!--Device-CommonEventSubscriber-setData(data: string, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -1137,7 +1205,9 @@ setData(data: string): Promise<void>
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-CommonEventSubscriber-setData(data: string): Promise<void>--><!--Device-CommonEventSubscriber-setData(data: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -1179,7 +1249,9 @@ setDataSync(data: string): void
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-CommonEventSubscriber-setDataSync(data: string): void--><!--Device-CommonEventSubscriber-setDataSync(data: string): void-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 

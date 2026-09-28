@@ -24,6 +24,8 @@ function disallowAddOsAccountByUser(admin: Want, userId: number, disallow: boole
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-accountManager-function disallowAddOsAccountByUser(admin: Want, userId: number, disallow: boolean): void--><!--Device-accountManager-function disallowAddOsAccountByUser(admin: Want, userId: number, disallow: boolean): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。

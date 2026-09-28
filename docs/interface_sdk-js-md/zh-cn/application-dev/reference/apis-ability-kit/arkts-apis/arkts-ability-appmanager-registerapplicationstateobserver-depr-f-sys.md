@@ -21,6 +21,8 @@ function registerApplicationStateObserver(observer: ApplicationStateObserver): n
 
 **需要权限：** ohos.permission.RUNNING_STATE_OBSERVER
 
+<!--Device-appManager-function registerApplicationStateObserver(observer: ApplicationStateObserver): number--><!--Device-appManager-function registerApplicationStateObserver(observer: ApplicationStateObserver): number-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。

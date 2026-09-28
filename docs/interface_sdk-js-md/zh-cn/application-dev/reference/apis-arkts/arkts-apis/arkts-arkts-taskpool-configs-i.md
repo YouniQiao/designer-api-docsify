@@ -8,6 +8,8 @@ interface Configs
 
 **起始版本：** 24
 
+<!--Device-taskpool-interface Configs--><!--Device-taskpool-interface Configs-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -30,6 +32,8 @@ priority?: Priority
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
 
+<!--Device-Configs-priority?: Priority--><!--Device-Configs-priority?: Priority-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## timeout
@@ -48,5 +52,7 @@ timeout?: number
 **起始版本：** 24
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-Configs-timeout?: number--><!--Device-Configs-timeout?: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

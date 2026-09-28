@@ -10,6 +10,8 @@ export type UnhandledRejectionObserver = (reason: Error | any, promise: Promise<
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-errorManager-export type UnhandledRejectionObserver = (reason: Error | any, promise: Promise<any>) => void--><!--Device-errorManager-export type UnhandledRejectionObserver = (reason: Error | any, promise: Promise<any>) => void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**

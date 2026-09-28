@@ -12,6 +12,8 @@ Callback for text selection changes or cursor position changes.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-unnamed-declare type OnTextSelectionChangeCallback = (selectionStart: number, selectionEnd: number) => void--><!--Device-unnamed-declare type OnTextSelectionChangeCallback = (selectionStart: number, selectionEnd: number) => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

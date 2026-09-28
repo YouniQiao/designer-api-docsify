@@ -12,6 +12,8 @@ interface MovingPhoto
 
 **起始版本：** 12
 
+<!--Device-photoAccessHelper-interface MovingPhoto--><!--Device-photoAccessHelper-interface MovingPhoto-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
@@ -31,6 +33,8 @@ isVideoReady(): Promise<boolean>
 **起始版本：** 20
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-MovingPhoto-isVideoReady(): Promise<boolean>--><!--Device-MovingPhoto-isVideoReady(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

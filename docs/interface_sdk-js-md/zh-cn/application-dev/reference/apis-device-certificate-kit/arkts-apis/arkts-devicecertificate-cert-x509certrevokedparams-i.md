@@ -8,6 +8,8 @@ interface X509CertRevokedParams
 
 **起始版本：** 26.0.0
 
+<!--Device-cert-interface X509CertRevokedParams--><!--Device-cert-interface X509CertRevokedParams-End-->
+
 **系统能力：** SystemCapability.Security.Cert
 
 ## 导入模块
@@ -36,7 +38,9 @@ allowDownloadCrl?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-X509CertRevokedParams-allowDownloadCrl?: boolean--><!--Device-X509CertRevokedParams-allowDownloadCrl?: boolean-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -62,7 +66,9 @@ allowOcspCheckOnline?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-X509CertRevokedParams-allowOcspCheckOnline?: boolean--><!--Device-X509CertRevokedParams-allowOcspCheckOnline?: boolean-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -80,7 +86,9 @@ CRL列表。最大个数：100。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-X509CertRevokedParams-crls?: Array<X509CRL>--><!--Device-X509CertRevokedParams-crls?: Array<X509CRL>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -100,7 +108,9 @@ OCSP请求使用的摘要算法，默认值为SHA256。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-X509CertRevokedParams-ocspDigest?: OcspDigest--><!--Device-X509CertRevokedParams-ocspDigest?: OcspDigest-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -118,7 +128,9 @@ OCSP响应数据。预置的OCSP响应数据。最大个数：100。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-X509CertRevokedParams-ocspResponses?: Array<Uint8Array>--><!--Device-X509CertRevokedParams-ocspResponses?: Array<Uint8Array>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -136,6 +148,8 @@ revocationFlags: Array<CertRevocationFlag>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-X509CertRevokedParams-revocationFlags: Array<CertRevocationFlag>--><!--Device-X509CertRevokedParams-revocationFlags: Array<CertRevocationFlag>-End-->
 
 **系统能力：** SystemCapability.Security.Cert

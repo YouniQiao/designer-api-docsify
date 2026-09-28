@@ -21,6 +21,8 @@ function queryExtensionAbilityInfoSync(want: Want, extensionAbilityType: Extensi
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
+<!--Device-bundleManager-function queryExtensionAbilityInfoSync(want: Want, extensionAbilityType: ExtensionAbilityType,    extensionAbilityFlags: int, userId?: int): Array<ExtensionAbilityInfo>--><!--Device-bundleManager-function queryExtensionAbilityInfoSync(want: Want, extensionAbilityType: ExtensionAbilityType,    extensionAbilityFlags: int, userId?: int): Array<ExtensionAbilityInfo>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -119,6 +121,8 @@ function queryExtensionAbilityInfoSync(want: Want, extensionAbilityType: string,
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
+<!--Device-bundleManager-function queryExtensionAbilityInfoSync(want: Want, extensionAbilityType: string,    extensionAbilityFlags: int, userId?: int): Array<ExtensionAbilityInfo>--><!--Device-bundleManager-function queryExtensionAbilityInfoSync(want: Want, extensionAbilityType: string,    extensionAbilityFlags: int, userId?: int): Array<ExtensionAbilityInfo>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -216,6 +220,8 @@ function queryExtensionAbilityInfoSync(extensionAbilityType: string, extensionAb
 **起始版本：** 11
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
+
+<!--Device-bundleManager-function queryExtensionAbilityInfoSync(extensionAbilityType: string, extensionAbilityFlags: int,    userId?: int): Array<ExtensionAbilityInfo>--><!--Device-bundleManager-function queryExtensionAbilityInfoSync(extensionAbilityType: string, extensionAbilityFlags: int,    userId?: int): Array<ExtensionAbilityInfo>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

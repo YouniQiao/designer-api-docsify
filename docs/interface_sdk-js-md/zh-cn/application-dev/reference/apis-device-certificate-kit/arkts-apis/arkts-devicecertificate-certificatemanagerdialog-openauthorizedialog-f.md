@@ -20,6 +20,8 @@ function openAuthorizeDialog(context: common.Context): Promise<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-certificateManagerDialog-function openAuthorizeDialog(context: common.Context): Promise<string>--><!--Device-certificateManagerDialog-function openAuthorizeDialog(context: common.Context): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
 **参数：**
@@ -84,6 +86,8 @@ function openAuthorizeDialog(context: common.Context, authorizeRequest: Authoriz
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-certificateManagerDialog-function openAuthorizeDialog(context: common.Context, authorizeRequest: AuthorizeRequest): Promise<CertReference>--><!--Device-certificateManagerDialog-function openAuthorizeDialog(context: common.Context, authorizeRequest: AuthorizeRequest): Promise<CertReference>-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 

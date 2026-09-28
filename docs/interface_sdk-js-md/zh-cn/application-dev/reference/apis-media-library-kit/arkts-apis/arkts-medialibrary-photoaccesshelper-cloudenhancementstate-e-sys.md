@@ -8,6 +8,8 @@ enum CloudEnhancementState
 
 **起始版本：** 13
 
+<!--Device-photoAccessHelper-enum CloudEnhancementState--><!--Device-photoAccessHelper-enum CloudEnhancementState-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -21,6 +23,8 @@ UNAVAILABLE = 0
 云增强不可用。
 
 **起始版本：** 13
+
+<!--Device-CloudEnhancementState-UNAVAILABLE = 0--><!--Device-CloudEnhancementState-UNAVAILABLE = 0-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -36,6 +40,8 @@ AVAILABLE = 1
 
 **起始版本：** 13
 
+<!--Device-CloudEnhancementState-AVAILABLE = 1--><!--Device-CloudEnhancementState-AVAILABLE = 1-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -50,6 +56,8 @@ EXECUTING = 2
 
 **起始版本：** 13
 
+<!--Device-CloudEnhancementState-EXECUTING = 2--><!--Device-CloudEnhancementState-EXECUTING = 2-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -63,6 +71,8 @@ COMPLETED = 3
 云增强已完成。
 
 **起始版本：** 13
+
+<!--Device-CloudEnhancementState-COMPLETED = 3--><!--Device-CloudEnhancementState-COMPLETED = 3-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

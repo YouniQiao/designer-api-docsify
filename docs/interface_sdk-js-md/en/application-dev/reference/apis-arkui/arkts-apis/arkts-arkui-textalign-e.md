@@ -8,6 +8,8 @@ Sets the horizontal alignment of the text.
 
 **Since:** 7
 
+<!--Device-unnamed-declare enum TextAlign--><!--Device-unnamed-declare enum TextAlign-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Center
@@ -23,6 +25,8 @@ Horizontally centered.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-TextAlign-Center--><!--Device-TextAlign-Center-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,6 +44,8 @@ Aligned with the start.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-TextAlign-Start--><!--Device-TextAlign-Start-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## End
@@ -55,6 +61,8 @@ Aligned with the end.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-TextAlign-End--><!--Device-TextAlign-End-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -74,6 +82,8 @@ Aligned with both margins.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
+<!--Device-TextAlign-JUSTIFY--><!--Device-TextAlign-JUSTIFY-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## LEFT
@@ -92,6 +102,8 @@ Left aligned.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-TextAlign-LEFT = 4--><!--Device-TextAlign-LEFT = 4-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## RIGHT
@@ -109,5 +121,7 @@ Right aligned.
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
+
+<!--Device-TextAlign-RIGHT = 5--><!--Device-TextAlign-RIGHT = 5-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

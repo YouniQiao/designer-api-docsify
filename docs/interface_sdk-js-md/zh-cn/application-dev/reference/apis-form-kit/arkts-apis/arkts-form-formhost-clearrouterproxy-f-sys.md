@@ -18,6 +18,8 @@ function clearRouterProxy(formIds: Array<string>, callback: AsyncCallback<void>)
 
 **需要权限：** ohos.permission.REQUIRE_FORM
 
+<!--Device-formHost-function clearRouterProxy(formIds: Array<string>, callback: AsyncCallback<void>): void--><!--Device-formHost-function clearRouterProxy(formIds: Array<string>, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -73,6 +75,8 @@ function clearRouterProxy(formIds: Array<string>): Promise<void>
 **起始版本：** 11
 
 **需要权限：** ohos.permission.REQUIRE_FORM
+
+<!--Device-formHost-function clearRouterProxy(formIds: Array<string>): Promise<void>--><!--Device-formHost-function clearRouterProxy(formIds: Array<string>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 

@@ -10,6 +10,8 @@ interface PbapClientProfile extends BaseProfile
 
 **起始版本：** 26.0.1
 
+<!--Device-pbap-interface PbapClientProfile extends BaseProfile--><!--Device-pbap-interface PbapClientProfile extends BaseProfile-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -31,6 +33,8 @@ connect(deviceId: string): void
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PbapClientProfile-connect(deviceId: string): void--><!--Device-PbapClientProfile-connect(deviceId: string): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -67,6 +71,8 @@ disconnect(deviceId: string): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PbapClientProfile-disconnect(deviceId: string): void--><!--Device-PbapClientProfile-disconnect(deviceId: string): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -101,6 +107,8 @@ getSyncState(deviceId: string): SyncStateType
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PbapClientProfile-getSyncState(deviceId: string): SyncStateType--><!--Device-PbapClientProfile-getSyncState(deviceId: string): SyncStateType-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -143,6 +151,8 @@ offSyncStateChange(callback?: Callback<SyncStateChangeParam>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PbapClientProfile-offSyncStateChange(callback?: Callback<SyncStateChangeParam>): void--><!--Device-PbapClientProfile-offSyncStateChange(callback?: Callback<SyncStateChangeParam>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -173,6 +183,8 @@ onSyncStateChange(callback: Callback<SyncStateChangeParam>): void
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PbapClientProfile-onSyncStateChange(callback: Callback<SyncStateChangeParam>): void--><!--Device-PbapClientProfile-onSyncStateChange(callback: Callback<SyncStateChangeParam>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

@@ -18,6 +18,8 @@ function createStream(sessionId: number, param: StreamParam): Promise<number>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-abilityConnectionManager-function createStream(sessionId: int, param: StreamParam): Promise<int>--><!--Device-abilityConnectionManager-function createStream(sessionId: int, param: StreamParam): Promise<int>-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **系统接口：** 此接口为系统接口。

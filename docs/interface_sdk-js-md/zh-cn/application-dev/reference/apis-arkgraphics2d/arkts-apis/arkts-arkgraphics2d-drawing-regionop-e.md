@@ -12,6 +12,8 @@ enum RegionOp
 
 **起始版本：** 12
 
+<!--Device-drawing-enum RegionOp--><!--Device-drawing-enum RegionOp-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## DIFFERENCE
@@ -23,6 +25,8 @@ DIFFERENCE = 0
 两个区域的相减操作，从第一个区域中减去第二个区域。适用于需要裁剪掉特定区域的场景。
 
 **起始版本：** 12
+
+<!--Device-RegionOp-DIFFERENCE = 0--><!--Device-RegionOp-DIFFERENCE = 0-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -36,6 +40,8 @@ INTERSECT = 1
 
 **起始版本：** 12
 
+<!--Device-RegionOp-INTERSECT = 1--><!--Device-RegionOp-INTERSECT = 1-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## UNION
@@ -47,6 +53,8 @@ UNION = 2
 两个区域的联合操作，合并两个区域的所有部分。适用于需要合并区域的场景。
 
 **起始版本：** 12
+
+<!--Device-RegionOp-UNION = 2--><!--Device-RegionOp-UNION = 2-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -60,6 +68,8 @@ XOR = 3
 
 **起始版本：** 12
 
+<!--Device-RegionOp-XOR = 3--><!--Device-RegionOp-XOR = 3-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## REVERSE_DIFFERENCE
@@ -72,6 +82,8 @@ REVERSE_DIFFERENCE = 4
 
 **起始版本：** 12
 
+<!--Device-RegionOp-REVERSE_DIFFERENCE = 4--><!--Device-RegionOp-REVERSE_DIFFERENCE = 4-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## REPLACE
@@ -83,5 +95,7 @@ REPLACE = 5
 两个区域替换操作，用第二个区域完全替换第一个区域。适用于需要完全覆盖的场景。
 
 **起始版本：** 12
+
+<!--Device-RegionOp-REPLACE = 5--><!--Device-RegionOp-REPLACE = 5-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing

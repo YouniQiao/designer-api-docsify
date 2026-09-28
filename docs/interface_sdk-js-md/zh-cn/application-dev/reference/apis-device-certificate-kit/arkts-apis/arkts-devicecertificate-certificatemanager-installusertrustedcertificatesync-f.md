@@ -18,6 +18,8 @@ function installUserTrustedCertificateSync(cert: Uint8Array, certScope: CertScop
 
 **需要权限：** ohos.permission.ACCESS_ENTERPRISE_USER_TRUSTED_CERT or ohos.permission.ACCESS_USER_TRUSTED_CERT
 
+<!--Device-certificateManager-function installUserTrustedCertificateSync(cert: Uint8Array, certScope: CertScope): CMResult--><!--Device-certificateManager-function installUserTrustedCertificateSync(cert: Uint8Array, certScope: CertScope): CMResult-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
 
 **参数：**

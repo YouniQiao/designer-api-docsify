@@ -8,6 +8,8 @@ interface ContinuousParam
 
 **起始版本：** 18
 
+<!--Device-vibrator-interface ContinuousParam--><!--Device-vibrator-interface ContinuousParam-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## 导入模块
@@ -28,6 +30,8 @@ frequency?: number
 
 **起始版本：** 18
 
+<!--Device-ContinuousParam-frequency?: int--><!--Device-ContinuousParam-frequency?: int-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## index
@@ -41,6 +45,8 @@ index?: number
 **类型：** number
 
 **起始版本：** 18
+
+<!--Device-ContinuousParam-index?: int--><!--Device-ContinuousParam-index?: int-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
@@ -56,6 +62,8 @@ intensity?: number
 
 **起始版本：** 18
 
+<!--Device-ContinuousParam-intensity?: int--><!--Device-ContinuousParam-intensity?: int-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## points
@@ -69,5 +77,7 @@ points?: VibratorCurvePoint[]
 **类型：** [VibratorCurvePoint](arkts-sensorservice-vibrator-vibratorcurvepoint-i.md)[]
 
 **起始版本：** 18
+
+<!--Device-ContinuousParam-points?: VibratorCurvePoint[]--><!--Device-ContinuousParam-points?: VibratorCurvePoint[]-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice

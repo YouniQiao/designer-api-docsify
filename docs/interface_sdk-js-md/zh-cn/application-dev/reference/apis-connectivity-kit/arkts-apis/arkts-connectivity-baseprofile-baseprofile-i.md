@@ -8,6 +8,8 @@ export interface BaseProfile
 
 **起始版本：** 10
 
+<!--Device-baseProfile-export interface BaseProfile--><!--Device-baseProfile-export interface BaseProfile-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -32,6 +34,8 @@ getConnectedDevices(): Array<string>
 - API版本10-24：ohos.permission.ACCESS_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BaseProfile-getConnectedDevices(): Array<string>--><!--Device-BaseProfile-getConnectedDevices(): Array<string>-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -81,6 +85,8 @@ getConnectionState(deviceId: string): ProfileConnectionState
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BaseProfile-getConnectionState(deviceId: string): ProfileConnectionState--><!--Device-BaseProfile-getConnectionState(deviceId: string): ProfileConnectionState-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -136,6 +142,8 @@ off(type: 'connectionStateChange', callback?: Callback<StateChangeParam>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BaseProfile-off(type: 'connectionStateChange', callback?: Callback<StateChangeParam>): void--><!--Device-BaseProfile-off(type: 'connectionStateChange', callback?: Callback<StateChangeParam>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -169,6 +177,8 @@ on(type: 'connectionStateChange', callback: Callback<StateChangeParam>): void
 - API版本10-24：ohos.permission.ACCESS_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BaseProfile-on(type: 'connectionStateChange', callback: Callback<StateChangeParam>): void--><!--Device-BaseProfile-on(type: 'connectionStateChange', callback: Callback<StateChangeParam>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

@@ -8,6 +8,8 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace stationary--><!--Device-unnamed-declare namespace stationary-End-->
+
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Stationary
 
 ## 导入模块

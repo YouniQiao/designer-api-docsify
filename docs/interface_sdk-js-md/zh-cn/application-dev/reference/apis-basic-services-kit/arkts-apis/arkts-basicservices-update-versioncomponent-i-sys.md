@@ -8,6 +8,8 @@ export interface VersionComponent
 
 **起始版本：** 9
 
+<!--Device-update-export interface VersionComponent--><!--Device-update-export interface VersionComponent-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ componentId: string
 
 **起始版本：** 9
 
+<!--Device-VersionComponent-componentId: string--><!--Device-VersionComponent-componentId: string-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ componentType: ComponentType
 **类型：** [ComponentType](arkts-basicservices-update-componenttype-e-sys.md)
 
 **起始版本：** 9
+
+<!--Device-VersionComponent-componentType: ComponentType--><!--Device-VersionComponent-componentType: ComponentType-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -62,6 +68,8 @@ descriptionInfo: DescriptionInfo
 
 **起始版本：** 9
 
+<!--Device-VersionComponent-descriptionInfo: DescriptionInfo--><!--Device-VersionComponent-descriptionInfo: DescriptionInfo-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +85,8 @@ displayVersion: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-VersionComponent-displayVersion: string--><!--Device-VersionComponent-displayVersion: string-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -94,6 +104,8 @@ effectiveMode: EffectiveMode
 
 **起始版本：** 9
 
+<!--Device-VersionComponent-effectiveMode: EffectiveMode--><!--Device-VersionComponent-effectiveMode: EffectiveMode-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -109,6 +121,8 @@ innerVersion: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-VersionComponent-innerVersion: string--><!--Device-VersionComponent-innerVersion: string-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -126,6 +140,8 @@ otaMode?: OtaMode
 
 **起始版本：** 20
 
+<!--Device-VersionComponent-otaMode?: OtaMode--><!--Device-VersionComponent-otaMode?: OtaMode-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -142,6 +158,8 @@ size: number
 
 **起始版本：** 9
 
+<!--Device-VersionComponent-size: int--><!--Device-VersionComponent-size: int-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -157,6 +175,8 @@ upgradeAction: UpgradeAction
 **类型：** [UpgradeAction](arkts-basicservices-update-upgradeaction-e-sys.md)
 
 **起始版本：** 9
+
+<!--Device-VersionComponent-upgradeAction: UpgradeAction--><!--Device-VersionComponent-upgradeAction: UpgradeAction-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
 

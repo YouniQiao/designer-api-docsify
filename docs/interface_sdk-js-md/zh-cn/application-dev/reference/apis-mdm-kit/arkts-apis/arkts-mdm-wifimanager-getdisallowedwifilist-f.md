@@ -20,6 +20,8 @@ function getDisallowedWifiList(admin: Want): Array<WifiAccessInfo>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-wifiManager-function getDisallowedWifiList(admin: Want): Array<WifiAccessInfo>--><!--Device-wifiManager-function getDisallowedWifiList(admin: Want): Array<WifiAccessInfo>-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -77,6 +79,8 @@ function getDisallowedWifiList(admin: Want | null): Array<WifiAccessInfo>
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_WIFI
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-wifiManager-function getDisallowedWifiList(admin: Want | null): Array<WifiAccessInfo>--><!--Device-wifiManager-function getDisallowedWifiList(admin: Want | null): Array<WifiAccessInfo>-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

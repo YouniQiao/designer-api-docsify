@@ -8,6 +8,8 @@ export interface Watcher
 
 **起始版本：** 10
 
+<!--Device-unnamed-export interface Watcher--><!--Device-unnamed-export interface Watcher-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## 导入模块
@@ -25,6 +27,8 @@ start(): void
 开启监听文件或目录变动事件。
 
 **起始版本：** 10
+
+<!--Device-Watcher-start(): void--><!--Device-Watcher-start(): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -65,6 +69,8 @@ stop(): void
 停止监听文件或目录变动事件并移除Watcher对象。
 
 **起始版本：** 10
+
+<!--Device-Watcher-stop(): void--><!--Device-Watcher-stop(): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

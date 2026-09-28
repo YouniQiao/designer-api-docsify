@@ -10,6 +10,8 @@ interface FileSystemRequestConfig
 
 **起始版本：** 23
 
+<!--Device-backup-interface FileSystemRequestConfig--><!--Device-backup-interface FileSystemRequestConfig-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 **系统接口：** 此接口为系统接口。
@@ -34,6 +36,8 @@ triggerType: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FileSystemRequestConfig-triggerType: int--><!--Device-FileSystemRequestConfig-triggerType: int-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 **系统接口：** 此接口为系统接口。
@@ -52,6 +56,8 @@ waitTime: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FileSystemRequestConfig-waitTime: int--><!--Device-FileSystemRequestConfig-waitTime: int-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 **系统接口：** 此接口为系统接口。
@@ -69,6 +75,8 @@ writeSize: number
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FileSystemRequestConfig-writeSize: int--><!--Device-FileSystemRequestConfig-writeSize: int-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 8
 
+<!--Device-unnamed-declare namespace storageStatistics--><!--Device-unnamed-declare namespace storageStatistics-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
 ## 导入模块

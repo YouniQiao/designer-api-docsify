@@ -18,6 +18,8 @@ function getPortList(): Array<USBPort>
 
 **需要权限：** ohos.permission.MANAGE_USB_CONFIG
 
+<!--Device-usbManager-function getPortList(): Array<USBPort>--><!--Device-usbManager-function getPortList(): Array<USBPort>-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 **系统接口：** 此接口为系统接口。

@@ -20,6 +20,8 @@ function createHtmlData(htmlText: string): PasteData
 
 **替代接口：** [createData](arkts-basicservices-pasteboard-createdata-f.md)(mimeType: string, value: ValueType)
 
+<!--Device-pasteboard-function createHtmlData(htmlText: string): PasteData--><!--Device-pasteboard-function createHtmlData(htmlText: string): PasteData-End-->
+
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
 **参数：**

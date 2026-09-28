@@ -8,6 +8,8 @@ export interface BundleOptions
 
 **起始版本：** 20
 
+<!--Device-unnamed-export interface BundleOptions--><!--Device-unnamed-export interface BundleOptions-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -26,6 +28,8 @@ Ability名称。默认值为空字符串。**模型约束：** 此接口仅可�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BundleOptions-abilityName?: string--><!--Device-BundleOptions-abilityName?: string-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -41,6 +45,8 @@ appIndex?: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-BundleOptions-appIndex?: int--><!--Device-BundleOptions-appIndex?: int-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -60,6 +66,8 @@ bundleName?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BundleOptions-bundleName?: string--><!--Device-BundleOptions-bundleName?: string-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -78,6 +86,8 @@ Ability所属的模块名称。默认值为空字符串。**模型约束：** �
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BundleOptions-moduleName?: string--><!--Device-BundleOptions-moduleName?: string-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -93,6 +103,8 @@ userId?: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-BundleOptions-userId?: int--><!--Device-BundleOptions-userId?: int-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

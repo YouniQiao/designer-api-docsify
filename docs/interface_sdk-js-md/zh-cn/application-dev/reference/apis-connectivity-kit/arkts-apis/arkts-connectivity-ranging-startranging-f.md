@@ -42,6 +42,8 @@ function startRanging(params: RangingParams, callback: Callback<RangingResult>):
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ranging-function startRanging(params: RangingParams, callback: Callback<RangingResult>): void--><!--Device-ranging-function startRanging(params: RangingParams, callback: Callback<RangingResult>): void-End-->
+
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core
 
 **参数：**

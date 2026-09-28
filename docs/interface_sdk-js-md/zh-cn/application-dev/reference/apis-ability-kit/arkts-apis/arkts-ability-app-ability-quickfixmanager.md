@@ -4,6 +4,8 @@ quickFixManager模块提供快速修复的能力，快速修复是系统提供�
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace quickFixManager--><!--Device-unnamed-declare namespace quickFixManager-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.QuickFix
 
 **系统接口：** 此接口为系统接口。

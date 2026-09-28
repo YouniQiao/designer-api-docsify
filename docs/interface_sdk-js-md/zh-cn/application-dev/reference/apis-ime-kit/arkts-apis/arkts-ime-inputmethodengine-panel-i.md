@@ -8,6 +8,8 @@ Panel是输入法面板对象，提供面板页面加载、显示/隐藏、尺�
 
 **起始版本：** 10
 
+<!--Device-inputMethodEngine-interface Panel--><!--Device-inputMethodEngine-interface Panel-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## 导入模块
@@ -34,6 +36,8 @@ adjustPanelRect(flag: PanelFlag, rect: PanelRect): void
 > 手机的PanelFlag是FLG_FLOATING且面板宽度在0~288vp之间时，面板底部功能键将随面板宽度动态调整大小，为了保证最佳用户体验，建议面板宽度不小于90vp。
 
 **起始版本：** 12
+
+<!--Device-Panel-adjustPanelRect(flag: PanelFlag, rect: PanelRect): void--><!--Device-Panel-adjustPanelRect(flag: PanelFlag, rect: PanelRect): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -110,6 +114,8 @@ adjustPanelRect(flag: PanelFlag, rect: EnhancedPanelRect): void
 
 **起始版本：** 15
 
+<!--Device-Panel-adjustPanelRect(flag: PanelFlag, rect: EnhancedPanelRect): void--><!--Device-Panel-adjustPanelRect(flag: PanelFlag, rect: EnhancedPanelRect): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -170,6 +176,8 @@ changeFlag(flag: PanelFlag): void
 
 **起始版本：** 10
 
+<!--Device-Panel-changeFlag(flag: PanelFlag): void--><!--Device-Panel-changeFlag(flag: PanelFlag): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -200,6 +208,8 @@ getDisplayId(): Promise<number>
 获取当前窗口的displayId，使用Promise异步回调。
 
 **起始版本：** 15
+
+<!--Device-Panel-getDisplayId(): Promise<long>--><!--Device-Panel-getDisplayId(): Promise<long>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -238,6 +248,8 @@ getImmersiveMode(): ImmersiveMode
 
 **起始版本：** 15
 
+<!--Device-Panel-getImmersiveMode(): ImmersiveMode--><!--Device-Panel-getImmersiveMode(): ImmersiveMode-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**
@@ -261,6 +273,8 @@ getSystemPanelCurrentInsets(displayId: number): Promise<SystemPanelInsets>
 获取指定屏幕当前状态（例如：折叠或展开）下，当前输入法键盘状态（例如：悬浮或固定）下输入法软键盘相对系统面板的偏移区域。使用Promise异步回调。
 
 **起始版本：** 21
+
+<!--Device-Panel-getSystemPanelCurrentInsets(displayId: number): Promise<SystemPanelInsets>--><!--Device-Panel-getSystemPanelCurrentInsets(displayId: number): Promise<SystemPanelInsets>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -322,6 +336,8 @@ hide(callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
+<!--Device-Panel-hide(callback: AsyncCallback<void>): void--><!--Device-Panel-hide(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -356,6 +372,8 @@ hide(): Promise<void>
 
 **起始版本：** 10
 
+<!--Device-Panel-hide(): Promise<void>--><!--Device-Panel-hide(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**
@@ -385,6 +403,8 @@ moveTo(x: number, y: number, callback: AsyncCallback<void>): void
 移动面板位置，使用callback异步回调。[面板状态](arkts-ime-inputmethodengine-panelflag-e.md)为固定态时，不产生实际移动效果。
 
 **起始版本：** 10
+
+<!--Device-Panel-moveTo(x: int, y: int, callback: AsyncCallback<void>): void--><!--Device-Panel-moveTo(x: int, y: int, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -428,6 +448,8 @@ moveTo(x: number, y: number): Promise<void>
 移动面板位置，使用promise异步回调。[面板状态](arkts-ime-inputmethodengine-panelflag-e.md)为固定态时，不产生实际移动效果。
 
 **起始版本：** 10
+
+<!--Device-Panel-moveTo(x: int, y: int): Promise<void>--><!--Device-Panel-moveTo(x: int, y: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -473,6 +495,8 @@ off(type: 'show', callback?: () => void): void
 
 **起始版本：** 10
 
+<!--Device-Panel-off(type: 'show', callback?: () => void): void--><!--Device-Panel-off(type: 'show', callback?: () => void): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -503,6 +527,8 @@ off(type: 'hide', callback?: () => void): void
 取消监听当前面板的隐藏状态，使用callback异步回调。
 
 **起始版本：** 10
+
+<!--Device-Panel-off(type: 'hide', callback?: () => void): void--><!--Device-Panel-off(type: 'hide', callback?: () => void): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -542,6 +568,8 @@ off(type: 'sizeChange', callback?: SizeChangeCallback): void
 
 **起始版本：** 12
 
+<!--Device-Panel-off(type: 'sizeChange', callback?: SizeChangeCallback): void--><!--Device-Panel-off(type: 'sizeChange', callback?: SizeChangeCallback): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -571,6 +599,8 @@ on(type: 'show', callback: () => void): void
 
 **起始版本：** 10
 
+<!--Device-Panel-on(type: 'show', callback: () => void): void--><!--Device-Panel-on(type: 'show', callback: () => void): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -597,6 +627,8 @@ on(type: 'hide', callback: () => void): void
 监听当前面板隐藏状态，使用callback异步回调。
 
 **起始版本：** 10
+
+<!--Device-Panel-on(type: 'hide', callback: () => void): void--><!--Device-Panel-on(type: 'hide', callback: () => void): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -631,6 +663,8 @@ on(type: 'sizeChange', callback: SizeChangeCallback): void
 > - 从API version 15起，调用<br>[adjustPanelRect](#adjustpanelrect-1)接口后，此<br>接口回调函数增加[KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md)类型的可选参数。
 
 **起始版本：** 12
+
+<!--Device-Panel-on(type: 'sizeChange', callback: SizeChangeCallback): void--><!--Device-Panel-on(type: 'sizeChange', callback: SizeChangeCallback): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -672,6 +706,8 @@ resize(width: number, height: number, callback: AsyncCallback<void>): void
 > 手机的PanelFlag是FLG_FLOATING且面板宽度在0~288vp之间时，面板底部功能键将随面板宽度动态调整大小，为了保证最佳用户体验，建议面板宽度不小于90vp。
 
 **起始版本：** 10
+
+<!--Device-Panel-resize(width: long, height: long, callback: AsyncCallback<void>): void--><!--Device-Panel-resize(width: long, height: long, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -721,6 +757,8 @@ resize(width: number, height: number): Promise<void>
 
 **起始版本：** 10
 
+<!--Device-Panel-resize(width: long, height: long): Promise<void>--><!--Device-Panel-resize(width: long, height: long): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -765,6 +803,8 @@ setImmersiveEffect(effect: ImmersiveEffect): void
 
 **起始版本：** 20
 
+<!--Device-Panel-setImmersiveEffect(effect: ImmersiveEffect): void--><!--Device-Panel-setImmersiveEffect(effect: ImmersiveEffect): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -803,6 +843,8 @@ setImmersiveMode(mode: ImmersiveMode): void
 
 **起始版本：** 15
 
+<!--Device-Panel-setImmersiveMode(mode: ImmersiveMode): void--><!--Device-Panel-setImmersiveMode(mode: ImmersiveMode): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -838,6 +880,8 @@ setKeepScreenOn(isKeepScreenOn: boolean): Promise<void>
 > - 规范使用该接口：必要场景（例如：语音输入）下，设置该属性为true；退出必要场景后，重置该属性为false；其他场景下，不使用该接口。
 
 **起始版本：** 20
+
+<!--Device-Panel-setKeepScreenOn(isKeepScreenOn: boolean): Promise<void>--><!--Device-Panel-setKeepScreenOn(isKeepScreenOn: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -883,6 +927,8 @@ setPrivacyMode(isPrivacyMode: boolean): void
 
 **需要权限：** ohos.permission.PRIVACY_WINDOW
 
+<!--Device-Panel-setPrivacyMode(isPrivacyMode: boolean): void--><!--Device-Panel-setPrivacyMode(isPrivacyMode: boolean): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -914,6 +960,8 @@ setSystemPanelButtonColor(fillColor: string | undefined, backgroundColor: string
 设置当前面板功能键颜色和功能键的背景颜色。使用Promise异步回调。
 
 **起始版本：** 22
+
+<!--Device-Panel-setSystemPanelButtonColor(fillColor: string | undefined, backgroundColor: string | undefined): Promise<void>--><!--Device-Panel-setSystemPanelButtonColor(fillColor: string | undefined, backgroundColor: string | undefined): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -960,6 +1008,8 @@ setUiContent(path: string, callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
+<!--Device-Panel-setUiContent(path: string, callback: AsyncCallback<void>): void--><!--Device-Panel-setUiContent(path: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1002,6 +1052,8 @@ setUiContent(path: string): Promise<void>
 为当前的输入法面板加载具体页面内容，使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-Panel-setUiContent(path: string): Promise<void>--><!--Device-Panel-setUiContent(path: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1047,6 +1099,8 @@ setUiContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>)
 
 **起始版本：** 10
 
+<!--Device-Panel-setUiContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>): void--><!--Device-Panel-setUiContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1091,6 +1145,8 @@ setUiContent(path: string, storage: LocalStorage): Promise<void>
 为当前面板加载与LocalStorage相关联的具体页面内容，使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-Panel-setUiContent(path: string, storage: LocalStorage): Promise<void>--><!--Device-Panel-setUiContent(path: string, storage: LocalStorage): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1138,6 +1194,8 @@ show(callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
+<!--Device-Panel-show(callback: AsyncCallback<void>): void--><!--Device-Panel-show(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1172,6 +1230,8 @@ show(): Promise<void>
 
 **起始版本：** 10
 
+<!--Device-Panel-show(): Promise<void>--><!--Device-Panel-show(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**
@@ -1201,6 +1261,8 @@ startMoving(): void
 发送移动命令给窗口，使面板进入可拖动状态。不产生实际移动效果，仅在用户通过鼠标拖动面板时才会移动。
 
 **起始版本：** 15
+
+<!--Device-Panel-startMoving(): void--><!--Device-Panel-startMoving(): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1237,6 +1299,8 @@ updatePanelRect(flag: PanelFlag, rect: PanelRect): Promise<void>
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Panel-updatePanelRect(flag: PanelFlag, rect: PanelRect): Promise<void>--><!--Device-Panel-updatePanelRect(flag: PanelFlag, rect: PanelRect): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1313,6 +1377,8 @@ updatePanelRect(flag: PanelFlag, rect: EnhancedPanelRect): Promise<void>
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Panel-updatePanelRect(flag: PanelFlag, rect: EnhancedPanelRect): Promise<void>--><!--Device-Panel-updatePanelRect(flag: PanelFlag, rect: EnhancedPanelRect): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1391,6 +1457,8 @@ updatePanelRectSync(flag: PanelFlag, rect: PanelRect): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Panel-updatePanelRectSync(flag: PanelFlag, rect: PanelRect): void--><!--Device-Panel-updatePanelRectSync(flag: PanelFlag, rect: PanelRect): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1464,6 +1532,8 @@ updatePanelRectSync(flag: PanelFlag, rect: EnhancedPanelRect): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Panel-updatePanelRectSync(flag: PanelFlag, rect: EnhancedPanelRect): void--><!--Device-Panel-updatePanelRectSync(flag: PanelFlag, rect: EnhancedPanelRect): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1529,6 +1599,8 @@ updateRegion(inputRegion: Array<window.Rect>): void
 > 当com.ohos.sceneboard进程不存在时，输入法热区生效范围保持和软键盘区域一致。
 
 **起始版本：** 15
+
+<!--Device-Panel-updateRegion(inputRegion: Array<window.Rect>): void--><!--Device-Panel-updateRegion(inputRegion: Array<window.Rect>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 

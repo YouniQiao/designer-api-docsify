@@ -6,6 +6,8 @@ declare namespace utils
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare namespace utils--><!--Device-unnamed-declare namespace utils-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块

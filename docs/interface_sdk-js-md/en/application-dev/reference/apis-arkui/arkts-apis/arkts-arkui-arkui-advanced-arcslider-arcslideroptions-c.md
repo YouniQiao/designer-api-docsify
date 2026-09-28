@@ -10,6 +10,8 @@ Defines the properties of the arc slider.
 
 **Decorator:** @ObservedV2
 
+<!--Device-unnamed-declare class ArcSliderOptions--><!--Device-unnamed-declare class ArcSliderOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## Modules to Import
@@ -29,6 +31,8 @@ A constructor used to create an **ArcSliderOptions** instance.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcSliderOptions-constructor(options?: ArcSliderOptionsConstructorOptions)--><!--Device-ArcSliderOptions-constructor(options?: ArcSliderOptionsConstructorOptions)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -56,6 +60,8 @@ Default value: If this parameter is not provided, no callback will be invoked.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ArcSliderOptions-onChange?: ArcSliderChangeHandler--><!--Device-ArcSliderOptions-onChange?: ArcSliderChangeHandler-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## onEnlarge
@@ -76,6 +82,8 @@ Default value: If this parameter is not provided, no callback will be invoked.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ArcSliderOptions-onEnlarge?: ArcSliderEnlargeHandler--><!--Device-ArcSliderOptions-onEnlarge?: ArcSliderEnlargeHandler-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## onTouch
@@ -95,6 +103,8 @@ Default value: If this parameter is not provided, no callback will be invoked.
 **Decorator:** @Trace
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcSliderOptions-onTouch?: ArcSliderTouchHandler--><!--Device-ArcSliderOptions-onTouch?: ArcSliderTouchHandler-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -118,6 +128,8 @@ Default value: **CrownSensitivity.MEDIUM**
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ArcSliderOptions-digitalCrownSensitivity?: CrownSensitivity--><!--Device-ArcSliderOptions-digitalCrownSensitivity?: CrownSensitivity-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## layoutOptions
@@ -139,6 +151,8 @@ Default value: default values of all properties of [ArcSliderStyleOptions](arkts
 **Decorator:** @Trace
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcSliderOptions-layoutOptions?: ArcSliderLayoutOptions--><!--Device-ArcSliderOptions-layoutOptions?: ArcSliderLayoutOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -162,6 +176,8 @@ Default value: default values of all properties of [ArcSliderStyleOptions](arkts
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ArcSliderOptions-styleOptions?: ArcSliderStyleOptions--><!--Device-ArcSliderOptions-styleOptions?: ArcSliderStyleOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## valueOptions
@@ -183,5 +199,7 @@ Default value: default values of all properties of [ArcSliderStyleOptions](arkts
 **Decorator:** @Trace
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcSliderOptions-valueOptions?: ArcSliderValueOptions--><!--Device-ArcSliderOptions-valueOptions?: ArcSliderValueOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle

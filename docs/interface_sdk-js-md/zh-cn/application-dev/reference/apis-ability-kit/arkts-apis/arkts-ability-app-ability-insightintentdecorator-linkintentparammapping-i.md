@@ -8,6 +8,8 @@ LinkIntentParamMapping是[@InsightIntentLink](../../../reference/apis-ability-ki
 
 **起始版本：** 20
 
+<!--Device-unnamed-declare interface LinkIntentParamMapping--><!--Device-unnamed-declare interface LinkIntentParamMapping-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块
@@ -36,6 +38,8 @@ paramCategory?: LinkParamCategory
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-LinkIntentParamMapping-paramCategory?: LinkParamCategory--><!--Device-LinkIntentParamMapping-paramCategory?: LinkParamCategory-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## paramMappingName
@@ -54,6 +58,8 @@ paramMappingName?: string
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-LinkIntentParamMapping-paramMappingName?: string--><!--Device-LinkIntentParamMapping-paramMappingName?: string-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## paramName
@@ -71,5 +77,7 @@ paramName: string
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-LinkIntentParamMapping-paramName: string--><!--Device-LinkIntentParamMapping-paramName: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

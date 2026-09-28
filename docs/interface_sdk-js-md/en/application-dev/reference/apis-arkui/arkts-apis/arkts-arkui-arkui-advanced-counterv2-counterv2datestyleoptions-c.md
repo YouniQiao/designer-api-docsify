@@ -12,6 +12,8 @@ This API inherits from [CounterV2CommonOptions](arkts-arkui-arkui-advanced-count
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-declare class CounterV2DateStyleOptions extends CounterV2CommonOptions--><!--Device-unnamed-declare class CounterV2DateStyleOptions extends CounterV2CommonOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -39,6 +41,8 @@ If the value is **undefined**, the default value is used.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-CounterV2DateStyleOptions-onDateChange?: OnDateCounterV2ChangeCallback--><!--Device-CounterV2DateStyleOptions-onDateChange?: OnDateCounterV2ChangeCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -70,6 +74,8 @@ If the value is **undefined**, the default value is used.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-CounterV2DateStyleOptions-day?: int--><!--Device-CounterV2DateStyleOptions-day?: int-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## month
@@ -98,6 +104,8 @@ If the value is **undefined**, the default value is used.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-CounterV2DateStyleOptions-month?: int--><!--Device-CounterV2DateStyleOptions-month?: int-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## year
@@ -125,5 +133,7 @@ If the value is **undefined**, the default value is used.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-CounterV2DateStyleOptions-year?: int--><!--Device-CounterV2DateStyleOptions-year?: int-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

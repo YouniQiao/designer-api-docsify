@@ -8,6 +8,8 @@ class DataAbilityPredicates
 
 **起始版本：** 7
 
+<!--Device-dataAbility-class DataAbilityPredicates--><!--Device-dataAbility-class DataAbilityPredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 ## 导入模块
@@ -25,6 +27,8 @@ and(): DataAbilityPredicates
 将和条件添加到谓词中。
 
 **起始版本：** 7
+
+<!--Device-DataAbilityPredicates-and(): DataAbilityPredicates--><!--Device-DataAbilityPredicates-and(): DataAbilityPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -53,6 +57,8 @@ beginsWith(field: string, value: string): DataAbilityPredicates
 此方法类似于SQL语句的“value%”。
 
 **起始版本：** 7
+
+<!--Device-DataAbilityPredicates-beginsWith(field: string, value: string): DataAbilityPredicates--><!--Device-DataAbilityPredicates-beginsWith(field: string, value: string): DataAbilityPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -85,6 +91,8 @@ beginWrap(): DataAbilityPredicates
 
 **起始版本：** 7
 
+<!--Device-DataAbilityPredicates-beginWrap(): DataAbilityPredicates--><!--Device-DataAbilityPredicates-beginWrap(): DataAbilityPredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **返回值：**
@@ -113,6 +121,8 @@ between(field: string, low: ValueType, high: ValueType): DataAbilityPredicates
 配置谓词以匹配数据类型为ValueType且value在指定范围内的指定字段。
 
 **起始版本：** 7
+
+<!--Device-DataAbilityPredicates-between(field: string, low: ValueType, high: ValueType): DataAbilityPredicates--><!--Device-DataAbilityPredicates-between(field: string, low: ValueType, high: ValueType): DataAbilityPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -146,6 +156,8 @@ contains(field: string, value: string): DataAbilityPredicates
 
 **起始版本：** 7
 
+<!--Device-DataAbilityPredicates-contains(field: string, value: string): DataAbilityPredicates--><!--Device-DataAbilityPredicates-contains(field: string, value: string): DataAbilityPredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **参数：**
@@ -177,6 +189,8 @@ distinct(): DataAbilityPredicates
 
 **起始版本：** 7
 
+<!--Device-DataAbilityPredicates-distinct(): DataAbilityPredicates--><!--Device-DataAbilityPredicates-distinct(): DataAbilityPredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **返回值：**
@@ -202,6 +216,8 @@ endsWith(field: string, value: string): DataAbilityPredicates
 此方法类似于SQL语句的“%value”。
 
 **起始版本：** 7
+
+<!--Device-DataAbilityPredicates-endsWith(field: string, value: string): DataAbilityPredicates--><!--Device-DataAbilityPredicates-endsWith(field: string, value: string): DataAbilityPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -234,6 +250,8 @@ endWrap(): DataAbilityPredicates
 
 **起始版本：** 7
 
+<!--Device-DataAbilityPredicates-endWrap(): DataAbilityPredicates--><!--Device-DataAbilityPredicates-endWrap(): DataAbilityPredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **返回值：**
@@ -265,6 +283,8 @@ equalTo(field: string, value: ValueType): DataAbilityPredicates
 
 **起始版本：** 7
 
+<!--Device-DataAbilityPredicates-equalTo(field: string, value: ValueType): DataAbilityPredicates--><!--Device-DataAbilityPredicates-equalTo(field: string, value: ValueType): DataAbilityPredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **参数：**
@@ -295,6 +315,8 @@ glob(field: string, value: string): DataAbilityPredicates
 配置谓词以匹配数据类型为string的指定字段。与like方法不同，该方法的输入参数区分大小写。
 
 **起始版本：** 7
+
+<!--Device-DataAbilityPredicates-glob(field: string, value: string): DataAbilityPredicates--><!--Device-DataAbilityPredicates-glob(field: string, value: string): DataAbilityPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -333,6 +355,8 @@ greaterThan(field: string, value: ValueType): DataAbilityPredicates
 
 **起始版本：** 7
 
+<!--Device-DataAbilityPredicates-greaterThan(field: string, value: ValueType): DataAbilityPredicates--><!--Device-DataAbilityPredicates-greaterThan(field: string, value: ValueType): DataAbilityPredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **参数：**
@@ -363,6 +387,8 @@ greaterThanOrEqualTo(field: string, value: ValueType): DataAbilityPredicates
 配置谓词以匹配数据类型为ValueType且value大于或等于指定值的字段。
 
 **起始版本：** 7
+
+<!--Device-DataAbilityPredicates-greaterThanOrEqualTo(field: string, value: ValueType): DataAbilityPredicates--><!--Device-DataAbilityPredicates-greaterThanOrEqualTo(field: string, value: ValueType): DataAbilityPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -395,6 +421,8 @@ groupBy(fields: Array<string>): DataAbilityPredicates
 
 **起始版本：** 7
 
+<!--Device-DataAbilityPredicates-groupBy(fields: Array<string>): DataAbilityPredicates--><!--Device-DataAbilityPredicates-groupBy(fields: Array<string>): DataAbilityPredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **参数：**
@@ -424,6 +452,8 @@ in(field: string, value: Array<ValueType>): DataAbilityPredicates
 配置谓词以匹配数据类型为ValueType数组且值在给定范围内的指定字段。
 
 **起始版本：** 7
+
+<!--Device-DataAbilityPredicates-in(field: string, value: Array<ValueType>): DataAbilityPredicates--><!--Device-DataAbilityPredicates-in(field: string, value: Array<ValueType>): DataAbilityPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -455,6 +485,8 @@ indexedBy(field: string): DataAbilityPredicates
 配置谓词以指定索引列。在使用此方法之前，您需要创建一个索引列。
 
 **起始版本：** 7
+
+<!--Device-DataAbilityPredicates-indexedBy(field: string): DataAbilityPredicates--><!--Device-DataAbilityPredicates-indexedBy(field: string): DataAbilityPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -525,6 +557,8 @@ isNotNull(field: string): DataAbilityPredicates
 
 **起始版本：** 7
 
+<!--Device-DataAbilityPredicates-isNotNull(field: string): DataAbilityPredicates--><!--Device-DataAbilityPredicates-isNotNull(field: string): DataAbilityPredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **参数：**
@@ -554,6 +588,8 @@ isNull(field: string): DataAbilityPredicates
 配置谓词以匹配值为null的字段。
 
 **起始版本：** 7
+
+<!--Device-DataAbilityPredicates-isNull(field: string): DataAbilityPredicates--><!--Device-DataAbilityPredicates-isNull(field: string): DataAbilityPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -585,6 +621,8 @@ lessThan(field: string, value: ValueType): DataAbilityPredicates
 
 **起始版本：** 7
 
+<!--Device-DataAbilityPredicates-lessThan(field: string, value: ValueType): DataAbilityPredicates--><!--Device-DataAbilityPredicates-lessThan(field: string, value: ValueType): DataAbilityPredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **参数：**
@@ -615,6 +653,8 @@ lessThanOrEqualTo(field: string, value: ValueType): DataAbilityPredicates
 配置谓词以匹配数据类型为ValueType且value小于或等于指定值的字段。
 
 **起始版本：** 7
+
+<!--Device-DataAbilityPredicates-lessThanOrEqualTo(field: string, value: ValueType): DataAbilityPredicates--><!--Device-DataAbilityPredicates-lessThanOrEqualTo(field: string, value: ValueType): DataAbilityPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -649,6 +689,8 @@ like(field: string, value: string): DataAbilityPredicates
 
 **起始版本：** 7
 
+<!--Device-DataAbilityPredicates-like(field: string, value: string): DataAbilityPredicates--><!--Device-DataAbilityPredicates-like(field: string, value: string): DataAbilityPredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **参数：**
@@ -680,6 +722,8 @@ limitAs(value: number): DataAbilityPredicates
 
 **起始版本：** 7
 
+<!--Device-DataAbilityPredicates-limitAs(value: number): DataAbilityPredicates--><!--Device-DataAbilityPredicates-limitAs(value: number): DataAbilityPredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **参数：**
@@ -709,6 +753,8 @@ notBetween(field: string, low: ValueType, high: ValueType): DataAbilityPredicate
 配置谓词以匹配数据类型为ValueType且value超出给定范围的指定字段。
 
 **起始版本：** 7
+
+<!--Device-DataAbilityPredicates-notBetween(field: string, low: ValueType, high: ValueType): DataAbilityPredicates--><!--Device-DataAbilityPredicates-notBetween(field: string, low: ValueType, high: ValueType): DataAbilityPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -744,6 +790,8 @@ notEqualTo(field: string, value: ValueType): DataAbilityPredicates
 
 **起始版本：** 7
 
+<!--Device-DataAbilityPredicates-notEqualTo(field: string, value: ValueType): DataAbilityPredicates--><!--Device-DataAbilityPredicates-notEqualTo(field: string, value: ValueType): DataAbilityPredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **参数：**
@@ -775,6 +823,8 @@ notIn(field: string, value: Array<ValueType>): DataAbilityPredicates
 
 **起始版本：** 7
 
+<!--Device-DataAbilityPredicates-notIn(field: string, value: Array<ValueType>): DataAbilityPredicates--><!--Device-DataAbilityPredicates-notIn(field: string, value: Array<ValueType>): DataAbilityPredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **参数：**
@@ -805,6 +855,8 @@ offsetAs(rowOffset: number): DataAbilityPredicates
 设置谓词查询结果的起始位置。需要同步调用[limitAs](#limitas)接口指定查询数量，否则无查询结果。查询指定偏移位置后的所有行时，[limitAs](#limitas)接口需传入参数-1。
 
 **起始版本：** 7
+
+<!--Device-DataAbilityPredicates-offsetAs(rowOffset: number): DataAbilityPredicates--><!--Device-DataAbilityPredicates-offsetAs(rowOffset: number): DataAbilityPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -839,6 +891,8 @@ or(): DataAbilityPredicates
 
 **起始版本：** 7
 
+<!--Device-DataAbilityPredicates-or(): DataAbilityPredicates--><!--Device-DataAbilityPredicates-or(): DataAbilityPredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **返回值：**
@@ -864,6 +918,8 @@ orderByAsc(field: string): DataAbilityPredicates
 配置谓词以匹配其值按升序排序的列。当有多个orderByAsc使用时，最先使用的具有最高优先级。
 
 **起始版本：** 7
+
+<!--Device-DataAbilityPredicates-orderByAsc(field: string): DataAbilityPredicates--><!--Device-DataAbilityPredicates-orderByAsc(field: string): DataAbilityPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -895,6 +951,8 @@ orderByDesc(field: string): DataAbilityPredicates
 配置谓词以匹配其值按降序排序的列。当有多个orderByDesc使用时，最先使用的具有最高优先级。
 
 **起始版本：** 7
+
+<!--Device-DataAbilityPredicates-orderByDesc(field: string): DataAbilityPredicates--><!--Device-DataAbilityPredicates-orderByDesc(field: string): DataAbilityPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 

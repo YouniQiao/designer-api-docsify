@@ -16,6 +16,8 @@ function getMousePrimaryButton(callback: AsyncCallback<PrimaryButton>): void
 
 **起始版本：** 10
 
+<!--Device-pointer-function getMousePrimaryButton(callback: AsyncCallback<PrimaryButton>): void--><!--Device-pointer-function getMousePrimaryButton(callback: AsyncCallback<PrimaryButton>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 **系统接口：** 此接口为系统接口。
@@ -76,6 +78,8 @@ function getMousePrimaryButton(): Promise<PrimaryButton>
 获取当前鼠标主键，使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-pointer-function getMousePrimaryButton(): Promise<PrimaryButton>--><!--Device-pointer-function getMousePrimaryButton(): Promise<PrimaryButton>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 

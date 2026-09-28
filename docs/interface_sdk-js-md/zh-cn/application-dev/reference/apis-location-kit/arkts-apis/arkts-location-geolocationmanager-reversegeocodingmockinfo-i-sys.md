@@ -8,6 +8,8 @@ export interface ReverseGeocodingMockInfo
 
 **起始版本：** 9
 
+<!--Device-geoLocationManager-export interface ReverseGeocodingMockInfo--><!--Device-geoLocationManager-export interface ReverseGeocodingMockInfo-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ geoAddress: GeoAddress
 
 **起始版本：** 9
 
+<!--Device-ReverseGeocodingMockInfo-geoAddress: GeoAddress--><!--Device-ReverseGeocodingMockInfo-geoAddress: GeoAddress-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ location: ReverseGeoCodeRequest
 **类型：** [ReverseGeoCodeRequest](arkts-location-geolocationmanager-reversegeocoderequest-i.md)
 
 **起始版本：** 9
+
+<!--Device-ReverseGeocodingMockInfo-location: ReverseGeoCodeRequest--><!--Device-ReverseGeocodingMockInfo-location: ReverseGeoCodeRequest-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 

@@ -8,6 +8,8 @@ Defines Close contextMenu.
 
 **Since:** 11
 
+<!--Device-unnamed-declare class ContextMenu--><!--Device-unnamed-declare class ContextMenu-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## close
@@ -25,5 +27,7 @@ Invoking method close.
 **Substitutes:** close
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ContextMenu-static close()--><!--Device-ContextMenu-static close()-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

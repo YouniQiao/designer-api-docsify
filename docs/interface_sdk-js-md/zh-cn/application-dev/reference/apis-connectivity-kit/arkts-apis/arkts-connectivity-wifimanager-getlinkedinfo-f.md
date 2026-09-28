@@ -24,7 +24,9 @@ function getLinkedInfo(): Promise<WifiLinkedInfo>
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-wifiManager-function getLinkedInfo(): Promise<WifiLinkedInfo>--><!--Device-wifiManager-function getLinkedInfo(): Promise<WifiLinkedInfo>-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -75,6 +77,8 @@ function getLinkedInfo(callback: AsyncCallback<WifiLinkedInfo>): void
 **起始版本：** 9
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
+
+<!--Device-wifiManager-function getLinkedInfo(callback: AsyncCallback<WifiLinkedInfo>): void--><!--Device-wifiManager-function getLinkedInfo(callback: AsyncCallback<WifiLinkedInfo>): void-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 

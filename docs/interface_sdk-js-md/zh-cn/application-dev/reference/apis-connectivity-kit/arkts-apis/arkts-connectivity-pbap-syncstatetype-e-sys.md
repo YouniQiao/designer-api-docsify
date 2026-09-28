@@ -8,6 +8,8 @@ enum SyncStateType
 
 **起始版本：** 26.0.1
 
+<!--Device-pbap-enum SyncStateType--><!--Device-pbap-enum SyncStateType-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -23,6 +25,8 @@ PHONEBOOK_STATE_IDLE = 0
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SyncStateType-PHONEBOOK_STATE_IDLE = 0--><!--Device-SyncStateType-PHONEBOOK_STATE_IDLE = 0-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -40,6 +44,8 @@ PHONEBOOK_STATE_DOWNLOADING = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SyncStateType-PHONEBOOK_STATE_DOWNLOADING = 1--><!--Device-SyncStateType-PHONEBOOK_STATE_DOWNLOADING = 1-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -56,6 +62,8 @@ PHONEBOOK_STATE_DOWNLOADED = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SyncStateType-PHONEBOOK_STATE_DOWNLOADED = 2--><!--Device-SyncStateType-PHONEBOOK_STATE_DOWNLOADED = 2-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -71,6 +79,8 @@ PHONEBOOK_STATE_DOWNLOAD_ERROR = 3
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SyncStateType-PHONEBOOK_STATE_DOWNLOAD_ERROR = 3--><!--Device-SyncStateType-PHONEBOOK_STATE_DOWNLOAD_ERROR = 3-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

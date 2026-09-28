@@ -8,6 +8,8 @@ export interface GetDownloadableProfilesResult
 
 **起始版本：** 18
 
+<!--Device-eSIM-export interface GetDownloadableProfilesResult--><!--Device-eSIM-export interface GetDownloadableProfilesResult-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ downloadableProfiles: Array<DownloadableProfile>
 
 **起始版本：** 18
 
+<!--Device-GetDownloadableProfilesResult-downloadableProfiles: Array<DownloadableProfile>--><!--Device-GetDownloadableProfilesResult-downloadableProfiles: Array<DownloadableProfile>-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ responseResult: ResultCode
 **类型：** [ResultCode](arkts-telephony-esim-resultcode-e-sys.md)
 
 **起始版本：** 18
+
+<!--Device-GetDownloadableProfilesResult-responseResult: ResultCode--><!--Device-GetDownloadableProfilesResult-responseResult: ResultCode-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 

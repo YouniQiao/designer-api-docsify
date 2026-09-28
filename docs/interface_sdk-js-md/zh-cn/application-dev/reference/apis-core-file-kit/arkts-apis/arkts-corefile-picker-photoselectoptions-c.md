@@ -12,6 +12,8 @@ class PhotoSelectOptions
 
 **替代接口：** [PhotoSelectOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoselectoptions-c.md)
 
+<!--Device-picker-class PhotoSelectOptions--><!--Device-picker-class PhotoSelectOptions-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 ## 导入模块
@@ -38,6 +40,8 @@ maxSelectNumber?: number
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-PhotoSelectOptions-maxSelectNumber?: number--><!--Device-PhotoSelectOptions-maxSelectNumber?: number-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 ## MIMEType
@@ -57,5 +61,7 @@ MIMEType?: PhotoViewMIMETypes
 **替代接口：** MIMEType
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-PhotoSelectOptions-MIMEType?: PhotoViewMIMETypes--><!--Device-PhotoSelectOptions-MIMEType?: PhotoViewMIMETypes-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService

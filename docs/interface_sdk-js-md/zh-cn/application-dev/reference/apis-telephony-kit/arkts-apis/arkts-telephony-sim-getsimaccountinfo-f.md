@@ -22,6 +22,8 @@ function getSimAccountInfo(slotId: number, callback: AsyncCallback<IccAccountInf
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-sim-function getSimAccountInfo(slotId: int, callback: AsyncCallback<IccAccountInfo>): void--><!--Device-sim-function getSimAccountInfo(slotId: int, callback: AsyncCallback<IccAccountInfo>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**
@@ -77,6 +79,8 @@ function getSimAccountInfo(slotId: number): Promise<IccAccountInfo>
 **起始版本：** 10
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
+
+<!--Device-sim-function getSimAccountInfo(slotId: int): Promise<IccAccountInfo>--><!--Device-sim-function getSimAccountInfo(slotId: int): Promise<IccAccountInfo>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

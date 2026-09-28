@@ -8,6 +8,8 @@ export interface ServiceInfo
 
 **起始版本：** 11
 
+<!--Device-cloudExtension-export interface ServiceInfo--><!--Device-cloudExtension-export interface ServiceInfo-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ enableCloud: boolean
 
 **起始版本：** 11
 
+<!--Device-ServiceInfo-enableCloud: boolean--><!--Device-ServiceInfo-enableCloud: boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ id: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-ServiceInfo-id: string--><!--Device-ServiceInfo-id: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -62,6 +68,8 @@ remainingSpace: number
 
 **起始版本：** 11
 
+<!--Device-ServiceInfo-remainingSpace: long--><!--Device-ServiceInfo-remainingSpace: long-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
@@ -78,6 +86,8 @@ totalSpace: number
 
 **起始版本：** 11
 
+<!--Device-ServiceInfo-totalSpace: long--><!--Device-ServiceInfo-totalSpace: long-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
@@ -93,6 +103,8 @@ user: number
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-ServiceInfo-user: int--><!--Device-ServiceInfo-user: int-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 

@@ -12,6 +12,8 @@ class AVMusicTemplateController
 
 **起始版本：** 23
 
+<!--Device-avMusicTemplate-class AVMusicTemplateController--><!--Device-avMusicTemplate-class AVMusicTemplateController-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## 导入模块
@@ -31,6 +33,8 @@ clearSearchHistory(): Promise<OperResult>
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVMusicTemplateController-clearSearchHistory(): Promise<OperResult>--><!--Device-AVMusicTemplateController-clearSearchHistory(): Promise<OperResult>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -61,6 +65,8 @@ destroy(): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVMusicTemplateController-destroy(): Promise<void>--><!--Device-AVMusicTemplateController-destroy(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **返回值：**
@@ -86,6 +92,8 @@ downloadMediaEntity(controlType: DownloadControlType, mediaEntity: MediaEntity):
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVMusicTemplateController-downloadMediaEntity(controlType: DownloadControlType, mediaEntity: MediaEntity): Promise<OperResult>--><!--Device-AVMusicTemplateController-downloadMediaEntity(controlType: DownloadControlType, mediaEntity: MediaEntity): Promise<OperResult>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -123,6 +131,8 @@ executeAction(actionType: string, params: string): Promise<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVMusicTemplateController-executeAction(actionType: string, params: string): Promise<string>--><!--Device-AVMusicTemplateController-executeAction(actionType: string, params: string): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **参数：**
@@ -158,6 +168,8 @@ favoriteMediaEntity(actionType: MediaFavoriteType, mediaEntity: MediaEntity): Pr
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVMusicTemplateController-favoriteMediaEntity(actionType: MediaFavoriteType, mediaEntity: MediaEntity): Promise<OperResult>--><!--Device-AVMusicTemplateController-favoriteMediaEntity(actionType: MediaFavoriteType, mediaEntity: MediaEntity): Promise<OperResult>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -195,6 +207,8 @@ handleMemberPurchase(info: MemberPurchaseInfo): Promise<DialogInfo>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVMusicTemplateController-handleMemberPurchase(info: MemberPurchaseInfo): Promise<DialogInfo>--><!--Device-AVMusicTemplateController-handleMemberPurchase(info: MemberPurchaseInfo): Promise<DialogInfo>-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **参数：**
@@ -229,6 +243,8 @@ login(controlType: LoginType, id?: string): Promise<QrCodeInfo[]>
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVMusicTemplateController-login(controlType: LoginType, id?: string): Promise<QrCodeInfo[]>--><!--Device-AVMusicTemplateController-login(controlType: LoginType, id?: string): Promise<QrCodeInfo[]>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -266,6 +282,8 @@ offCurrentSingleChange(callback?: Callback<Single>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVMusicTemplateController-offCurrentSingleChange(callback?: Callback<Single>): void--><!--Device-AVMusicTemplateController-offCurrentSingleChange(callback?: Callback<Single>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **参数：**
@@ -293,6 +311,8 @@ offCustomElementsChange(callback?: ReportCustomElementsChangeEvent): void
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVMusicTemplateController-offCustomElementsChange(callback?: ReportCustomElementsChangeEvent): void--><!--Device-AVMusicTemplateController-offCustomElementsChange(callback?: ReportCustomElementsChangeEvent): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -322,6 +342,8 @@ offDialogCommandChange(callback?: ReportDialogCommandEvent): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVMusicTemplateController-offDialogCommandChange(callback?: ReportDialogCommandEvent): void--><!--Device-AVMusicTemplateController-offDialogCommandChange(callback?: ReportDialogCommandEvent): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **参数：**
@@ -349,6 +371,8 @@ offDownloadMediaEntityStatusChange(callback?: Callback<MediaEntity>): void
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVMusicTemplateController-offDownloadMediaEntityStatusChange(callback?: Callback<MediaEntity>): void--><!--Device-AVMusicTemplateController-offDownloadMediaEntityStatusChange(callback?: Callback<MediaEntity>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -378,6 +402,8 @@ offExtensionAbilityChange(callback?: ReportExecuteAbilityEvent): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVMusicTemplateController-offExtensionAbilityChange(callback?: ReportExecuteAbilityEvent): void--><!--Device-AVMusicTemplateController-offExtensionAbilityChange(callback?: ReportExecuteAbilityEvent): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **参数：**
@@ -405,6 +431,8 @@ offMediaEntitiesChange(callback?: Callback<MediaEntity[]>): void
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVMusicTemplateController-offMediaEntitiesChange(callback?: Callback<MediaEntity[]>): void--><!--Device-AVMusicTemplateController-offMediaEntitiesChange(callback?: Callback<MediaEntity[]>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -434,6 +462,8 @@ offPlaylistChange(callback?: Callback<PageMediaEntity>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVMusicTemplateController-offPlaylistChange(callback?: Callback<PageMediaEntity>): void--><!--Device-AVMusicTemplateController-offPlaylistChange(callback?: Callback<PageMediaEntity>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **参数：**
@@ -461,6 +491,8 @@ offReportExecuteAction(callback?: ReportExecuteActionEvent): void
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVMusicTemplateController-offReportExecuteAction(callback?: ReportExecuteActionEvent): void--><!--Device-AVMusicTemplateController-offReportExecuteAction(callback?: ReportExecuteActionEvent): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -490,6 +522,8 @@ offSettingsChange(callback?: Callback<SettingItem[]>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVMusicTemplateController-offSettingsChange(callback?: Callback<SettingItem[]>): void--><!--Device-AVMusicTemplateController-offSettingsChange(callback?: Callback<SettingItem[]>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **参数：**
@@ -517,6 +551,8 @@ offTabContentChange(callback?: ReportTabContentEvent): void
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVMusicTemplateController-offTabContentChange(callback?: ReportTabContentEvent): void--><!--Device-AVMusicTemplateController-offTabContentChange(callback?: ReportTabContentEvent): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -546,6 +582,8 @@ offUserInfoChange(callback?: Callback<UserInfo>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVMusicTemplateController-offUserInfoChange(callback?: Callback<UserInfo>): void--><!--Device-AVMusicTemplateController-offUserInfoChange(callback?: Callback<UserInfo>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **参数：**
@@ -573,6 +611,8 @@ onCurrentSingleChange(callback: Callback<Single>): void
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVMusicTemplateController-onCurrentSingleChange(callback: Callback<Single>): void--><!--Device-AVMusicTemplateController-onCurrentSingleChange(callback: Callback<Single>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -602,6 +642,8 @@ onCustomElementsChange(callback: ReportCustomElementsChangeEvent): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVMusicTemplateController-onCustomElementsChange(callback: ReportCustomElementsChangeEvent): void--><!--Device-AVMusicTemplateController-onCustomElementsChange(callback: ReportCustomElementsChangeEvent): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **参数：**
@@ -629,6 +671,8 @@ onDialogCommandChange(callback: ReportDialogCommandEvent): void
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVMusicTemplateController-onDialogCommandChange(callback: ReportDialogCommandEvent): void--><!--Device-AVMusicTemplateController-onDialogCommandChange(callback: ReportDialogCommandEvent): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -658,6 +702,8 @@ onDownloadMediaEntityStatusChange(callback: Callback<MediaEntity>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVMusicTemplateController-onDownloadMediaEntityStatusChange(callback: Callback<MediaEntity>): void--><!--Device-AVMusicTemplateController-onDownloadMediaEntityStatusChange(callback: Callback<MediaEntity>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **参数：**
@@ -685,6 +731,8 @@ onExtensionAbilityChange(callback: ReportExecuteAbilityEvent): void
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVMusicTemplateController-onExtensionAbilityChange(callback: ReportExecuteAbilityEvent): void--><!--Device-AVMusicTemplateController-onExtensionAbilityChange(callback: ReportExecuteAbilityEvent): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -714,6 +762,8 @@ onMediaEntitiesChange(callback: Callback<MediaEntity[]>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVMusicTemplateController-onMediaEntitiesChange(callback: Callback<MediaEntity[]>): void--><!--Device-AVMusicTemplateController-onMediaEntitiesChange(callback: Callback<MediaEntity[]>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **参数：**
@@ -741,6 +791,8 @@ onPlaylistChange(callback: Callback<PageMediaEntity>): void
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVMusicTemplateController-onPlaylistChange(callback: Callback<PageMediaEntity>): void--><!--Device-AVMusicTemplateController-onPlaylistChange(callback: Callback<PageMediaEntity>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -770,6 +822,8 @@ onReportExecuteAction(callback: ReportExecuteActionEvent): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVMusicTemplateController-onReportExecuteAction(callback: ReportExecuteActionEvent): void--><!--Device-AVMusicTemplateController-onReportExecuteAction(callback: ReportExecuteActionEvent): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **参数：**
@@ -797,6 +851,8 @@ onSettingsChange(callback: Callback<SettingItem[]>): void
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVMusicTemplateController-onSettingsChange(callback: Callback<SettingItem[]>): void--><!--Device-AVMusicTemplateController-onSettingsChange(callback: Callback<SettingItem[]>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -826,6 +882,8 @@ onTabContentChange(callback: ReportTabContentEvent): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVMusicTemplateController-onTabContentChange(callback: ReportTabContentEvent): void--><!--Device-AVMusicTemplateController-onTabContentChange(callback: ReportTabContentEvent): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **参数：**
@@ -854,6 +912,8 @@ onUserInfoChange(callback: Callback<UserInfo>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVMusicTemplateController-onUserInfoChange(callback: Callback<UserInfo>): void--><!--Device-AVMusicTemplateController-onUserInfoChange(callback: Callback<UserInfo>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **参数：**
@@ -881,6 +941,8 @@ playForSearch(command: SearchPlayInfoType, args: SearchPlayInfo): Promise<OperRe
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVMusicTemplateController-playForSearch(command: SearchPlayInfoType, args: SearchPlayInfo): Promise<OperResult>--><!--Device-AVMusicTemplateController-playForSearch(command: SearchPlayInfoType, args: SearchPlayInfo): Promise<OperResult>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -918,6 +980,8 @@ playMediaEntity(mediaEntity: MediaEntity): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVMusicTemplateController-playMediaEntity(mediaEntity: MediaEntity): Promise<void>--><!--Device-AVMusicTemplateController-playMediaEntity(mediaEntity: MediaEntity): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **参数：**
@@ -952,6 +1016,8 @@ queryCompilation(compilationId: string, pageIndex: number): Promise<PageMediaEnt
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVMusicTemplateController-queryCompilation(compilationId: string, pageIndex: int): Promise<PageMediaEntity>--><!--Device-AVMusicTemplateController-queryCompilation(compilationId: string, pageIndex: int): Promise<PageMediaEntity>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -989,6 +1055,8 @@ queryCompilationByKeyword(keyword: string): Promise<Compilation[]>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVMusicTemplateController-queryCompilationByKeyword(keyword: string): Promise<Compilation[]>--><!--Device-AVMusicTemplateController-queryCompilationByKeyword(keyword: string): Promise<Compilation[]>-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **参数：**
@@ -1024,6 +1092,8 @@ queryCurrentSingle(): Promise<Single>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVMusicTemplateController-queryCurrentSingle(): Promise<Single>--><!--Device-AVMusicTemplateController-queryCurrentSingle(): Promise<Single>-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **返回值：**
@@ -1052,6 +1122,8 @@ queryCustomContent(queryType: CustomType[]): Promise<CustomElement>
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVMusicTemplateController-queryCustomContent(queryType: CustomType[]): Promise<CustomElement>--><!--Device-AVMusicTemplateController-queryCustomContent(queryType: CustomType[]): Promise<CustomElement>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -1088,6 +1160,8 @@ queryHotWords(): Promise<string[]>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVMusicTemplateController-queryHotWords(): Promise<string[]>--><!--Device-AVMusicTemplateController-queryHotWords(): Promise<string[]>-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **返回值：**
@@ -1117,6 +1191,8 @@ queryMainTabs(): Promise<MediaTab[]>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVMusicTemplateController-queryMainTabs(): Promise<MediaTab[]>--><!--Device-AVMusicTemplateController-queryMainTabs(): Promise<MediaTab[]>-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **返回值：**
@@ -1145,6 +1221,8 @@ queryMediaEntity(params: QueryMediaEntityParam): Promise<PageMediaEntity>
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVMusicTemplateController-queryMediaEntity(params: QueryMediaEntityParam): Promise<PageMediaEntity>--><!--Device-AVMusicTemplateController-queryMediaEntity(params: QueryMediaEntityParam): Promise<PageMediaEntity>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -1180,6 +1258,8 @@ queryMediaEntityByKeyword(keyword: string, searchType: EntityType, pageIndex: nu
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVMusicTemplateController-queryMediaEntityByKeyword(keyword: string, searchType: EntityType, pageIndex: int): Promise<PageMediaEntity>--><!--Device-AVMusicTemplateController-queryMediaEntityByKeyword(keyword: string, searchType: EntityType, pageIndex: int): Promise<PageMediaEntity>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -1218,6 +1298,8 @@ queryMediaTabContent(tabId: string): Promise<MediaTabContent>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVMusicTemplateController-queryMediaTabContent(tabId: string): Promise<MediaTabContent>--><!--Device-AVMusicTemplateController-queryMediaTabContent(tabId: string): Promise<MediaTabContent>-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **参数：**
@@ -1253,6 +1335,8 @@ queryMemberPurchase(memberPurchaseType: MemberPurchaseType): Promise<MemberPurch
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVMusicTemplateController-queryMemberPurchase(memberPurchaseType: MemberPurchaseType): Promise<MemberPurchaseInfo[]>--><!--Device-AVMusicTemplateController-queryMemberPurchase(memberPurchaseType: MemberPurchaseType): Promise<MemberPurchaseInfo[]>-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **参数：**
@@ -1287,6 +1371,8 @@ queryPlaylist(pageIndex: number, sort: Sort): Promise<PageMediaEntity>
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVMusicTemplateController-queryPlaylist(pageIndex: int, sort: Sort): Promise<PageMediaEntity>--><!--Device-AVMusicTemplateController-queryPlaylist(pageIndex: int, sort: Sort): Promise<PageMediaEntity>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -1324,6 +1410,8 @@ queryRecommendMediaEntityList(): Promise<MediaEntity[]>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVMusicTemplateController-queryRecommendMediaEntityList(): Promise<MediaEntity[]>--><!--Device-AVMusicTemplateController-queryRecommendMediaEntityList(): Promise<MediaEntity[]>-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **返回值：**
@@ -1353,6 +1441,8 @@ querySearchHistory(): Promise<string[]>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVMusicTemplateController-querySearchHistory(): Promise<string[]>--><!--Device-AVMusicTemplateController-querySearchHistory(): Promise<string[]>-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **返回值：**
@@ -1381,6 +1471,8 @@ reportProblemAndAdvice(advice: string): Promise<OperResult>
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVMusicTemplateController-reportProblemAndAdvice(advice: string): Promise<OperResult>--><!--Device-AVMusicTemplateController-reportProblemAndAdvice(advice: string): Promise<OperResult>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -1417,6 +1509,8 @@ requestDialogInfo(actionType: DialogActionType, actionInfo?: DialogActionInfo): 
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVMusicTemplateController-requestDialogInfo(actionType: DialogActionType, actionInfo?: DialogActionInfo): Promise<DialogInfo>--><!--Device-AVMusicTemplateController-requestDialogInfo(actionType: DialogActionType, actionInfo?: DialogActionInfo): Promise<DialogInfo>-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **参数：**
@@ -1452,6 +1546,8 @@ updateSettings(settingItem: SettingItem): Promise<SettingItem>
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVMusicTemplateController-updateSettings(settingItem: SettingItem): Promise<SettingItem>--><!--Device-AVMusicTemplateController-updateSettings(settingItem: SettingItem): Promise<SettingItem>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -1490,6 +1586,8 @@ isDestroy: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVMusicTemplateController-isDestroy: boolean--><!--Device-AVMusicTemplateController-isDestroy: boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## sessionId
@@ -1505,5 +1603,7 @@ sessionId: string
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVMusicTemplateController-sessionId: string--><!--Device-AVMusicTemplateController-sessionId: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate

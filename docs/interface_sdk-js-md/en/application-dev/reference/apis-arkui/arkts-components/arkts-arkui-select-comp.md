@@ -20,6 +20,8 @@ Select(options: Array<SelectOption>)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SelectInterface-(options: Array<SelectOption>): SelectAttribute--><!--Device-SelectInterface-(options: Array<SelectOption>): SelectAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

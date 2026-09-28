@@ -8,11 +8,13 @@ enum SelectionType
 
 | 名称 | 值 | 说明 |  
 | ------------ | -- | ------------------ |  
-| [MOUSE_MOVE](arkts-basicservices-selectionmanager-selectiontype-e.md) | 1 | 鼠标或触控板滑动划词。 |
-| [DOUBLE_CLICK](arkts-basicservices-selectionmanager-selectiontype-e.md) | 2 | 鼠标或触控板双击划词。 |
-| [TRIPLE_CLICK](arkts-basicservices-selectionmanager-selectiontype-e.md) | 3 | 鼠标或触控板三击划词。 |
+| MOUSE_MOVE | 1 | 鼠标或触控板滑动划词。 |
+| DOUBLE_CLICK | 2 | 鼠标或触控板双击划词。 |
+| TRIPLE_CLICK | 3 | 鼠标或触控板三击划词。 |
 
 **起始版本：** 24
+
+<!--Device-selectionManager-enum SelectionType--><!--Device-selectionManager-enum SelectionType-End-->
 
 **系统能力：** SystemCapability.SelectionInput.Selection
 
@@ -28,6 +30,8 @@ MOUSE_MOVE = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SelectionType-MOUSE_MOVE = 1--><!--Device-SelectionType-MOUSE_MOVE = 1-End-->
+
 **系统能力：** SystemCapability.SelectionInput.Selection
 
 ## DOUBLE_CLICK
@@ -42,6 +46,8 @@ DOUBLE_CLICK = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SelectionType-DOUBLE_CLICK = 2--><!--Device-SelectionType-DOUBLE_CLICK = 2-End-->
+
 **系统能力：** SystemCapability.SelectionInput.Selection
 
 ## TRIPLE_CLICK
@@ -55,5 +61,7 @@ TRIPLE_CLICK = 3
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SelectionType-TRIPLE_CLICK = 3--><!--Device-SelectionType-TRIPLE_CLICK = 3-End-->
 
 **系统能力：** SystemCapability.SelectionInput.Selection

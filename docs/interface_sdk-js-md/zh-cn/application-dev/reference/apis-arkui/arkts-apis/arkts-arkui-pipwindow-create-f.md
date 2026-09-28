@@ -16,7 +16,9 @@ function create(config: PiPConfiguration): Promise<PiPController>
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PiPWindow-function create(config: PiPConfiguration): Promise<PiPController>--><!--Device-PiPWindow-function create(config: PiPConfiguration): Promise<PiPController>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -154,7 +156,9 @@ function create(config: PiPConfiguration, contentNode: typeNode.XComponent): Pro
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PiPWindow-function create(config: PiPConfiguration, contentNode: typeNode.XComponent): Promise<PiPController>--><!--Device-PiPWindow-function create(config: PiPConfiguration, contentNode: typeNode.XComponent): Promise<PiPController>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 

@@ -8,6 +8,8 @@ export enum HuksSendType
 
 **起始版本：** 8
 
+<!--Device-huks-export enum HuksSendType--><!--Device-huks-export enum HuksSendType-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core
 - API版本8-11：SystemCapability.Security.Huks.Extension
@@ -26,6 +28,8 @@ HUKS_SEND_TYPE_ASYNC = 0
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-HuksSendType-HUKS_SEND_TYPE_ASYNC = 0--><!--Device-HuksSendType-HUKS_SEND_TYPE_ASYNC = 0-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core
 - API版本8-11：SystemCapability.Security.Huks.Extension
@@ -43,6 +47,8 @@ HUKS_SEND_TYPE_SYNC = 1
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HuksSendType-HUKS_SEND_TYPE_SYNC = 1--><!--Device-HuksSendType-HUKS_SEND_TYPE_SYNC = 1-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core

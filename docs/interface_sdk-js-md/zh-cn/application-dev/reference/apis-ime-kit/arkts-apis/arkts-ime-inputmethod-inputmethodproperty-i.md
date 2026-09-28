@@ -8,6 +8,8 @@ interface InputMethodProperty
 
 **起始版本：** 8
 
+<!--Device-inputMethod-interface InputMethodProperty--><!--Device-inputMethod-interface InputMethodProperty-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## 导入模块
@@ -28,6 +30,8 @@ readonly enabledState?: EnabledState
 
 **起始版本：** 20
 
+<!--Device-InputMethodProperty-readonly enabledState?: EnabledState--><!--Device-InputMethodProperty-readonly enabledState?: EnabledState-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## extra
@@ -41,6 +45,8 @@ extra?: object
 **类型：** object
 
 **起始版本：** 9
+
+<!--Device-InputMethodProperty-extra?: object--><!--Device-InputMethodProperty-extra?: object-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -56,6 +62,8 @@ readonly icon?: string
 
 **起始版本：** 9
 
+<!--Device-InputMethodProperty-readonly icon?: string--><!--Device-InputMethodProperty-readonly icon?: string-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## iconId
@@ -69,6 +77,8 @@ readonly iconId?: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-InputMethodProperty-readonly iconId?: long--><!--Device-InputMethodProperty-readonly iconId?: long-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -84,6 +94,8 @@ readonly id: string
 
 **起始版本：** 9
 
+<!--Device-InputMethodProperty-readonly id: string--><!--Device-InputMethodProperty-readonly id: string-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## label
@@ -97,6 +109,8 @@ readonly label?: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-InputMethodProperty-readonly label?: string--><!--Device-InputMethodProperty-readonly label?: string-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -112,6 +126,8 @@ readonly labelId?: number
 
 **起始版本：** 10
 
+<!--Device-InputMethodProperty-readonly labelId?: long--><!--Device-InputMethodProperty-readonly labelId?: long-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## name
@@ -125,6 +141,8 @@ readonly name: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-InputMethodProperty-readonly name: string--><!--Device-InputMethodProperty-readonly name: string-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -144,6 +162,8 @@ readonly methodId: string
 
 **替代接口：** [id](#id)
 
+<!--Device-InputMethodProperty-readonly methodId: string--><!--Device-InputMethodProperty-readonly methodId: string-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## packageName
@@ -161,5 +181,7 @@ readonly packageName: string
 **废弃版本：** 9
 
 **替代接口：** [name](#name)
+
+<!--Device-InputMethodProperty-readonly packageName: string--><!--Device-InputMethodProperty-readonly packageName: string-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework

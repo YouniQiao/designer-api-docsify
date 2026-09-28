@@ -8,6 +8,8 @@ interface KeyPressedConfig
 
 **起始版本：** 16
 
+<!--Device-inputConsumer-interface KeyPressedConfig--><!--Device-inputConsumer-interface KeyPressedConfig-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 
 ## 导入模块
@@ -28,6 +30,8 @@ action: number
 
 **起始版本：** 16
 
+<!--Device-KeyPressedConfig-action: int--><!--Device-KeyPressedConfig-action: int-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 
 ## isRepeat
@@ -42,6 +46,8 @@ isRepeat: boolean
 
 **起始版本：** 16
 
+<!--Device-KeyPressedConfig-isRepeat: boolean--><!--Device-KeyPressedConfig-isRepeat: boolean-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 
 ## key
@@ -55,5 +61,7 @@ key: number
 **类型：** number
 
 **起始版本：** 16
+
+<!--Device-KeyPressedConfig-key: int--><!--Device-KeyPressedConfig-key: int-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer

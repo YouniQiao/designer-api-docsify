@@ -8,6 +8,8 @@ export interface DecimalConfig
 
 **起始版本：** 12
 
+<!--Device-unnamed-export interface DecimalConfig--><!--Device-unnamed-export interface DecimalConfig-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -28,7 +30,9 @@ crypto?: boolean
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-DecimalConfig-crypto?: boolean--><!--Device-DecimalConfig-crypto?: boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -44,7 +48,9 @@ defaults?: boolean
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-DecimalConfig-defaults?: boolean--><!--Device-DecimalConfig-defaults?: boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -60,7 +66,9 @@ maxE?: number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-DecimalConfig-maxE?: double--><!--Device-DecimalConfig-maxE?: double-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -76,7 +84,9 @@ minE?: number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-DecimalConfig-minE?: double--><!--Device-DecimalConfig-minE?: double-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -92,7 +102,9 @@ modulo?: Modulo
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-DecimalConfig-modulo?: Modulo--><!--Device-DecimalConfig-modulo?: Modulo-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -108,7 +120,9 @@ precision?: number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-DecimalConfig-precision?: double--><!--Device-DecimalConfig-precision?: double-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -124,7 +138,9 @@ rounding?: Rounding
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-DecimalConfig-rounding?: Rounding--><!--Device-DecimalConfig-rounding?: Rounding-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -140,7 +156,9 @@ toExpNeg?: number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-DecimalConfig-toExpNeg?: double--><!--Device-DecimalConfig-toExpNeg?: double-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -156,6 +174,8 @@ toExpPos?: number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-DecimalConfig-toExpPos?: double--><!--Device-DecimalConfig-toExpPos?: double-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

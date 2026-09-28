@@ -20,6 +20,8 @@ declare interface MouseHistoricalPoint
 
 **起始版本：** 26.0.0
 
+<!--Device-unnamed-declare interface MouseHistoricalPoint--><!--Device-unnamed-declare interface MouseHistoricalPoint-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## displayX
@@ -39,6 +41,8 @@ displayX: number
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-MouseHistoricalPoint-displayX: double--><!--Device-MouseHistoricalPoint-displayX: double-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -60,6 +64,8 @@ displayY: number
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-MouseHistoricalPoint-displayY: double--><!--Device-MouseHistoricalPoint-displayY: double-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## globalDisplayX
@@ -79,6 +85,8 @@ globalDisplayX: number
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-MouseHistoricalPoint-globalDisplayX: double--><!--Device-MouseHistoricalPoint-globalDisplayX: double-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -100,6 +108,8 @@ globalDisplayY: number
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-MouseHistoricalPoint-globalDisplayY: double--><!--Device-MouseHistoricalPoint-globalDisplayY: double-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## timestamp
@@ -119,6 +129,8 @@ timestamp: number
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-MouseHistoricalPoint-timestamp: long--><!--Device-MouseHistoricalPoint-timestamp: long-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -140,6 +152,8 @@ windowX: number
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-MouseHistoricalPoint-windowX: double--><!--Device-MouseHistoricalPoint-windowX: double-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## windowY
@@ -159,6 +173,8 @@ windowY: number
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-MouseHistoricalPoint-windowY: double--><!--Device-MouseHistoricalPoint-windowY: double-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -180,6 +196,8 @@ x: number
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-MouseHistoricalPoint-x: double--><!--Device-MouseHistoricalPoint-x: double-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## y
@@ -199,5 +217,7 @@ y: number
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-MouseHistoricalPoint-y: double--><!--Device-MouseHistoricalPoint-y: double-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

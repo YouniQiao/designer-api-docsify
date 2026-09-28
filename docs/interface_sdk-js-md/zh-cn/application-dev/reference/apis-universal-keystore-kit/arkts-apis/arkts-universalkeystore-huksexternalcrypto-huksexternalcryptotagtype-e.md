@@ -8,6 +8,8 @@ export enum HuksExternalCryptoTagType
 
 **起始版本：** 22
 
+<!--Device-huksExternalCrypto-export enum HuksExternalCryptoTagType--><!--Device-huksExternalCrypto-export enum HuksExternalCryptoTagType-End-->
+
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
 ## HUKS_EXT_CRYPTO_TAG_TYPE_INT
@@ -20,6 +22,8 @@ HUKS_EXT_CRYPTO_TAG_TYPE_INT = 1 << 28
 
 **起始版本：** 22
 
+<!--Device-HuksExternalCryptoTagType-HUKS_EXT_CRYPTO_TAG_TYPE_INT = 1 << 28--><!--Device-HuksExternalCryptoTagType-HUKS_EXT_CRYPTO_TAG_TYPE_INT = 1 << 28-End-->
+
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
 ## HUKS_EXT_CRYPTO_TAG_TYPE_BYTES
@@ -31,5 +35,7 @@ HUKS_EXT_CRYPTO_TAG_TYPE_BYTES = 5 << 28
 表示TAG的值为字节数组。
 
 **起始版本：** 22
+
+<!--Device-HuksExternalCryptoTagType-HUKS_EXT_CRYPTO_TAG_TYPE_BYTES = 5 << 28--><!--Device-HuksExternalCryptoTagType-HUKS_EXT_CRYPTO_TAG_TYPE_BYTES = 5 << 28-End-->
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension

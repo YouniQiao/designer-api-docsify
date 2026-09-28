@@ -16,6 +16,8 @@ function isSupportAction(mechId: number, actionType: ActionType): boolean
 
 **起始版本：** 26.0.0
 
+<!--Device-mechanicManager-function isSupportAction(mechId: int, actionType: ActionType): boolean--><!--Device-mechanicManager-function isSupportAction(mechId: int, actionType: ActionType): boolean-End-->
+
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。

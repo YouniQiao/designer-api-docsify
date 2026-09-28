@@ -20,6 +20,8 @@ function unregisterConversationListener(bundleName: string, abilityName: string)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-conversation-function unregisterConversationListener(bundleName: string, abilityName: string): void--><!--Device-conversation-function unregisterConversationListener(bundleName: string, abilityName: string): void-End-->
+
 **系统能力：** SystemCapability.Communication.SoftBus.Core
 
 **系统接口：** 此接口为系统接口。

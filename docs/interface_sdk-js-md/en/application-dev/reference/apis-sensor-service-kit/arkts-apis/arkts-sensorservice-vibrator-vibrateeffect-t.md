@@ -8,7 +8,9 @@ Defines the vibration effect. This parameter is required for [vibrator.startVibr
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-vibrator-type VibrateEffect = VibrateTime | VibratePreset | VibrateFromFile | VibrateFromPattern--><!--Device-vibrator-type VibrateEffect = VibrateTime | VibratePreset | VibrateFromFile | VibrateFromPattern-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice
 

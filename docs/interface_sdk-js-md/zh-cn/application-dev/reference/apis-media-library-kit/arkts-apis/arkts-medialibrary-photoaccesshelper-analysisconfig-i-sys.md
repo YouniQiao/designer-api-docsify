@@ -8,6 +8,8 @@ interface AnalysisConfig
 
 **起始版本：** 24
 
+<!--Device-photoAccessHelper-interface AnalysisConfig--><!--Device-photoAccessHelper-interface AnalysisConfig-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -34,6 +36,8 @@ JSON字符串格式的扩展信息。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AnalysisConfig-extraInfos?: string--><!--Device-AnalysisConfig-extraInfos?: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +55,8 @@ types: AnalysisType[]
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AnalysisConfig-types: AnalysisType[]--><!--Device-AnalysisConfig-types: AnalysisType[]-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -71,6 +77,8 @@ uris: string[]
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AnalysisConfig-uris: string[]--><!--Device-AnalysisConfig-uris: string[]-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

@@ -18,6 +18,8 @@ function getBackgroundPolicyByUid(uid: number, callback: AsyncCallback<NetBackgr
 
 **需要权限：** ohos.permission.MANAGE_NET_STRATEGY
 
+<!--Device-policy-function getBackgroundPolicyByUid(uid: int, callback: AsyncCallback<NetBackgroundPolicy>): void--><!--Device-policy-function getBackgroundPolicyByUid(uid: int, callback: AsyncCallback<NetBackgroundPolicy>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -65,6 +67,8 @@ function getBackgroundPolicyByUid(uid: number): Promise<NetBackgroundPolicy>
 **起始版本：** 10
 
 **需要权限：** ohos.permission.MANAGE_NET_STRATEGY
+
+<!--Device-policy-function getBackgroundPolicyByUid(uid: int): Promise<NetBackgroundPolicy>--><!--Device-policy-function getBackgroundPolicyByUid(uid: int): Promise<NetBackgroundPolicy>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 

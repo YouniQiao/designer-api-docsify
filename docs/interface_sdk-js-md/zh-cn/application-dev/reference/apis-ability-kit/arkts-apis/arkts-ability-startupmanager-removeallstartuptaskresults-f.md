@@ -18,6 +18,8 @@ function removeAllStartupTaskResults(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-startupManager-function removeAllStartupTaskResults(): void--><!--Device-startupManager-function removeAllStartupTaskResults(): void-End-->
+
 **系统能力：** SystemCapability.Ability.AppStartup
 
 **示例**

@@ -18,6 +18,8 @@ function setStaticSubscriberState(enable: boolean, callback: AsyncCallback<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-commonEventManager-function setStaticSubscriberState(enable: boolean, callback: AsyncCallback<void>): void--><!--Device-commonEventManager-function setStaticSubscriberState(enable: boolean, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **系统接口：** 此接口为系统接口。
@@ -66,6 +68,8 @@ function setStaticSubscriberState(enable: boolean): Promise<void>
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-commonEventManager-function setStaticSubscriberState(enable: boolean): Promise<void>--><!--Device-commonEventManager-function setStaticSubscriberState(enable: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -118,6 +122,8 @@ function setStaticSubscriberState(enable: boolean, events?: Array<string>): Prom
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-commonEventManager-function setStaticSubscriberState(enable: boolean, events?: Array<string>): Promise<void>--><!--Device-commonEventManager-function setStaticSubscriberState(enable: boolean, events?: Array<string>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 

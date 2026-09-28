@@ -18,6 +18,8 @@ function getAllDesktopShortcutInfo(userId: number): Promise<Array<ShortcutInfo>>
 
 **需要权限：** ohos.permission.MANAGE_SHORTCUTS
 
+<!--Device-shortcutManager-function getAllDesktopShortcutInfo(userId: int): Promise<Array<ShortcutInfo>>--><!--Device-shortcutManager-function getAllDesktopShortcutInfo(userId: int): Promise<Array<ShortcutInfo>>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
 **系统接口：** 此接口为系统接口。

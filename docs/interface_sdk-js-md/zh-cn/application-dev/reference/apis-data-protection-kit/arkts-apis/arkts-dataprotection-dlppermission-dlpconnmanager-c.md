@@ -12,6 +12,8 @@ export class DlpConnManager
 
 **起始版本：** 21
 
+<!--Device-dlpPermission-export class DlpConnManager--><!--Device-dlpPermission-export class DlpConnManager-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## 导入模块
@@ -34,6 +36,8 @@ constructor()
 - API版本26+：ohos.permission.ENTERPRISE_ACCESS_DLP_FILE or ohos.permission.ACCESS_DLP_SERVICE
 - API版本25：N/A
 - API版本21-24：ohos.permission.ENTERPRISE_ACCESS_DLP_FILE
+
+<!--Device-DlpConnManager-constructor()--><!--Device-DlpConnManager-constructor()-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -70,6 +74,8 @@ static registerPlugin(plugin: DlpConnPlugin): number
 - API版本26+：ohos.permission.ENTERPRISE_ACCESS_DLP_FILE or ohos.permission.ACCESS_DLP_SERVICE
 - API版本25：N/A
 - API版本21-24：ohos.permission.ENTERPRISE_ACCESS_DLP_FILE
+
+<!--Device-DlpConnManager-static registerPlugin(plugin: DlpConnPlugin): number--><!--Device-DlpConnManager-static registerPlugin(plugin: DlpConnPlugin): number-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -141,6 +147,8 @@ static unregisterPlugin(): void
 - API版本26+：ohos.permission.ENTERPRISE_ACCESS_DLP_FILE or ohos.permission.ACCESS_DLP_SERVICE
 - API版本25：N/A
 - API版本21-24：ohos.permission.ENTERPRISE_ACCESS_DLP_FILE
+
+<!--Device-DlpConnManager-static unregisterPlugin(): void--><!--Device-DlpConnManager-static unregisterPlugin(): void-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 

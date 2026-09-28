@@ -6,6 +6,8 @@ This module provides APIs for system materials. Different system materials corre
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-unnamed-declare namespace uiMaterial--><!--Device-unnamed-declare namespace uiMaterial-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import

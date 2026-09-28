@@ -13,6 +13,8 @@ Initialization parameters of Search.
 
 **Since:** 18
 
+<!--Device-unnamed-declare interface SearchOptions--><!--Device-unnamed-declare interface SearchOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## controller
@@ -28,6 +30,8 @@ Sets the controller of the Search component. Pass this parameter when you need t
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SearchOptions-controller?: SearchController--><!--Device-SearchOptions-controller?: SearchController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -57,6 +61,8 @@ On wearable devices, the default icon size is 16 vp.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SearchOptions-icon?: string--><!--Device-SearchOptions-icon?: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## placeholder
@@ -72,6 +78,8 @@ Sets the placeholder text displayed when there is no input. Pass this parameter 
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SearchOptions-placeholder?: ResourceStr--><!--Device-SearchOptions-placeholder?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -94,5 +102,7 @@ Since API version 20, the Resource type is supported.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SearchOptions-value?: ResourceStr--><!--Device-SearchOptions-value?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

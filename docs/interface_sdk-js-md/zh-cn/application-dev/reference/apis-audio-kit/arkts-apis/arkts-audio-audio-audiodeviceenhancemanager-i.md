@@ -12,6 +12,8 @@ interface AudioDeviceEnhanceManager
 
 **起始版本：** 26.0.0
 
+<!--Device-audio-interface AudioDeviceEnhanceManager--><!--Device-audio-interface AudioDeviceEnhanceManager-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.DeviceEnhance
 
 ## 导入模块
@@ -39,6 +41,8 @@ isEnhancedRoutingSupported(): boolean
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioDeviceEnhanceManager-isEnhancedRoutingSupported(): boolean--><!--Device-AudioDeviceEnhanceManager-isEnhancedRoutingSupported(): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.DeviceEnhance
 
@@ -69,6 +73,8 @@ selectInputDevice(inputDevice: AudioDeviceDescriptor): Promise<void>
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioDeviceEnhanceManager-selectInputDevice(inputDevice: AudioDeviceDescriptor): Promise<void>--><!--Device-AudioDeviceEnhanceManager-selectInputDevice(inputDevice: AudioDeviceDescriptor): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.DeviceEnhance
 
@@ -112,6 +118,8 @@ selectInputDeviceForAudioCapturer(capturer: AudioCapturer, inputDevice: AudioDev
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioDeviceEnhanceManager-selectInputDeviceForAudioCapturer(capturer: AudioCapturer, inputDevice: AudioDeviceDescriptor): Promise<void>--><!--Device-AudioDeviceEnhanceManager-selectInputDeviceForAudioCapturer(capturer: AudioCapturer, inputDevice: AudioDeviceDescriptor): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.DeviceEnhance
 
@@ -157,6 +165,8 @@ selectOutputDevice(outputDevice: AudioDeviceDescriptor): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioDeviceEnhanceManager-selectOutputDevice(outputDevice: AudioDeviceDescriptor): Promise<void>--><!--Device-AudioDeviceEnhanceManager-selectOutputDevice(outputDevice: AudioDeviceDescriptor): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.DeviceEnhance
 
 **参数：**
@@ -199,6 +209,8 @@ selectOutputDeviceForAudioRenderer(renderer: AudioRenderer, outputDevice: AudioD
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioDeviceEnhanceManager-selectOutputDeviceForAudioRenderer(renderer: AudioRenderer, outputDevice: AudioDeviceDescriptor): Promise<void>--><!--Device-AudioDeviceEnhanceManager-selectOutputDeviceForAudioRenderer(renderer: AudioRenderer, outputDevice: AudioDeviceDescriptor): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.DeviceEnhance
 

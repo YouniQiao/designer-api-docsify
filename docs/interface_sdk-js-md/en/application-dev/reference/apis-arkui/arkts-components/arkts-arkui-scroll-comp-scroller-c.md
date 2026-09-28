@@ -21,6 +21,8 @@ Defines a controller for scrollable container components. It can be bound to a c
 
 **Since:** 7
 
+<!--Device-unnamed-declare class Scroller--><!--Device-unnamed-declare class Scroller-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
@@ -37,6 +39,8 @@ A constructor used to create a **Scroller** object.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Scroller-constructor()--><!--Device-Scroller-constructor()-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## contentSize
@@ -52,6 +56,8 @@ Obtains the content size.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-Scroller-contentSize(): SizeResult--><!--Device-Scroller-contentSize(): SizeResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -87,6 +93,8 @@ Obtains the current scroll offset.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Scroller-currentOffset() : OffsetResult--><!--Device-Scroller-currentOffset() : OffsetResult-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -108,6 +116,8 @@ The scroll component performs inertial scrolling based on the initial velocity p
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Scroller-fling(velocity: number): void--><!--Device-Scroller-fling(velocity: number): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -138,6 +148,8 @@ Obtains the FrameNode corresponding to this scroller.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-Scroller-getFrameNode(): FrameNode | undefined--><!--Device-Scroller-getFrameNode(): FrameNode | undefined-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -163,6 +175,8 @@ Obtains the index of a child component based on coordinates.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-Scroller-getItemIndex(x: number, y: number): number--><!--Device-Scroller-getItemIndex(x: number, y: number): number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -204,6 +218,8 @@ Obtains the size and position of a child component relative to its container.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Scroller-getItemRect(index: number): RectResult--><!--Device-Scroller-getItemRect(index: number): RectResult-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -243,6 +259,8 @@ Checks whether the component has scrolled to the bottom.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Scroller-isAtEnd(): boolean--><!--Device-Scroller-isAtEnd(): boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -264,6 +282,8 @@ Obtains the current scroll offset. Except for **undefined** in the API declarati
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-Scroller-offset() : OffsetResult | undefined--><!--Device-Scroller-offset() : OffsetResult | undefined-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -287,7 +307,7 @@ Scrolls by the specified amount.
 > 
 > - Component behavior varies:
 > 
-> - The [ArcList](arkts-arkui-arclist-comp.md#ohosarkuiarclist) and [List](arkts-arkui-list-comp.md#list) components load and lay out all items that are passed through.
+> - The [ArcList](arkts-arkui-arclist-comp.md) and [List](arkts-arkui-list-comp.md) components load and lay out all items that are passed through.
 > 
 > - The **Grid** components and the **WaterFlow** components in [SLIDING_WINDOW](arkts-arkui-waterflow-comp-waterflowlayoutmode-e.md) mode directly estimate the items to be displayed when the jump distance is large (greater than twice the component main axis height). A jump refers to a one-frame scroll.
 > 
@@ -298,6 +318,8 @@ Scrolls by the specified amount.
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Scroller-scrollBy(dx: Length, dy: Length)--><!--Device-Scroller-scrollBy(dx: Length, dy: Length)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -324,6 +346,8 @@ By default, the **Scroll** component comes with an animation, while the **Grid**
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Scroller-scrollEdge(value: Edge, options?: ScrollEdgeOptions)--><!--Device-Scroller-scrollEdge(value: Edge, options?: ScrollEdgeOptions)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -346,6 +370,8 @@ Scrolls to the next or previous page.
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Scroller-scrollPage(value: ScrollPageOptions)--><!--Device-Scroller-scrollPage(value: ScrollPageOptions)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -373,6 +399,8 @@ Scrolls to the next or previous page.
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-Scroller-scrollPage(value: { next: boolean; direction?: Axis })--><!--Device-Scroller-scrollPage(value: { next: boolean; direction?: Axis })-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -395,9 +423,9 @@ Scrolls to a specified position. This API can be used for scenarios such as dire
 > 
 > - Component behavior varies:
 > 
-> - The [ArcList](arkts-arkui-arclist-comp.md#ohosarkuiarclist) and [List](arkts-arkui-list-comp.md#list) components load and lay out all items that are passed through.
+> - The [ArcList](arkts-arkui-arclist-comp.md) and [List](arkts-arkui-list-comp.md) components load and lay out all items that are passed through.
 > 
-> - The **Grid** components and the [WaterFlow](arkts-arkui-waterflow-comp.md#water_flow) components in [SLIDING_WINDOW](arkts-arkui-waterflow-comp-waterflowlayoutmode-e.md) mode directly estimate the items to be displayed when the jump distance is large (greater than twice the component main axis height). A jump refers to a one-frame scroll.
+> - The **Grid** components and the [WaterFlow](arkts-arkui-waterflow-comp.md) components in [SLIDING_WINDOW](arkts-arkui-waterflow-comp-waterflowlayoutmode-e.md) mode directly estimate the items to be displayed when the jump distance is large (greater than twice the component main axis height). A jump refers to a one-frame scroll.
 > 
 > - The **WaterFlow** components in [ALWAYS_TOP_DOWN](arkts-arkui-waterflow-comp-waterflowlayoutmode-e.md) mode load and lay out all items passed through when jumping backward (when **dx** or **dy** is positive), and jump directly to the corresponding position when jumping forward (when **dx** or **dy** is negative). A jump refers to a one-frame scroll.
 
@@ -406,6 +434,8 @@ Scrolls to a specified position. This API can be used for scenarios such as dire
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Scroller-scrollTo(options: ScrollOptions)--><!--Device-Scroller-scrollTo(options: ScrollOptions)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -429,7 +459,7 @@ When the smooth animation is enabled, all items passed through are loaded and la
 > 
 > 1. This API is supported only by the **ArcList**, **Grid**, **List**, and **WaterFlow** components.
 > 
-> 2. When refreshing the data source in [LazyForEach](arkts-arkui-lazyforeach-comp.md#lazy_for_each), [ForEach](arkts-arkui-foreach-comp-attribute.md#foreachattribute), or [Repeat](arkts-arkui-repeat-comp.md#repeat), ensure that this API is called after the data refresh is complete.
+> 2. When refreshing the data source in [LazyForEach](arkts-arkui-lazyforeach-comp.md), [ForEach](arkts-arkui-foreach-comp-attribute.md#foreachattribute), or [Repeat](arkts-arkui-repeat-comp.md), ensure that this API is called after the data refresh is complete.
 > 
 > 3. Since API version 11, [contentStartOffset](arkts-arkui-list-comp-attribute.md#contentstartoffset) and [contentEndOffset](arkts-arkui-list-comp-attribute.md#contentendoffset) are supported in **List**. Since API version 22,contentStartOffsetand contentEndOffsetcan be set in the **Grid** and **WaterFlow** components.
 > 
@@ -449,6 +479,8 @@ When the smooth animation is enabled, all items passed through are loaded and la
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Scroller-scrollToIndex(value: number, smooth?: boolean, align?: ScrollAlign, options?: ScrollToIndexOptions)--><!--Device-Scroller-scrollToIndex(value: number, smooth?: boolean, align?: ScrollAlign, options?: ScrollToIndexOptions)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

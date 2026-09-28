@@ -16,6 +16,8 @@ function isRequestPublishFormSupported(callback: AsyncCallback<boolean>): void
 
 **起始版本：** 9
 
+<!--Device-formProvider-function isRequestPublishFormSupported(callback: AsyncCallback<boolean>): void--><!--Device-formProvider-function isRequestPublishFormSupported(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -87,6 +89,8 @@ function isRequestPublishFormSupported(): Promise<boolean>
 查询是否可以发布卡片到卡片使用方，使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-formProvider-function isRequestPublishFormSupported(): Promise<boolean>--><!--Device-formProvider-function isRequestPublishFormSupported(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 

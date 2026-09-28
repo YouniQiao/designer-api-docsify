@@ -8,6 +8,8 @@ Sets the construction parameters of the current EffectComponent, including the r
 
 **Since:** 20
 
+<!--Device-unnamed-declare interface EffectComponentOptions--><!--Device-unnamed-declare interface EffectComponentOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -27,6 +29,8 @@ Default value: EffectLayer.NONE
 **Since:** 20
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-EffectComponentOptions-effectLayer?: EffectLayer--><!--Device-EffectComponentOptions-effectLayer?: EffectLayer-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

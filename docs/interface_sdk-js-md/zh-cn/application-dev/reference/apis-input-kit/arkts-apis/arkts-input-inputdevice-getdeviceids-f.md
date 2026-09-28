@@ -22,6 +22,8 @@ function getDeviceIds(callback: AsyncCallback<Array<number>>): void
 
 **替代接口：** [getDeviceList](arkts-input-inputdevice-getdevicelist-f.md)
 
+<!--Device-inputDevice-function getDeviceIds(callback: AsyncCallback<Array<number>>): void--><!--Device-inputDevice-function getDeviceIds(callback: AsyncCallback<Array<number>>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 **参数：**
@@ -75,6 +77,8 @@ function getDeviceIds(): Promise<Array<number>>
 **废弃版本：** 9
 
 **替代接口：** [getDeviceList](arkts-input-inputdevice-getdevicelist-f.md)
+
+<!--Device-inputDevice-function getDeviceIds(): Promise<Array<number>>--><!--Device-inputDevice-function getDeviceIds(): Promise<Array<number>>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 

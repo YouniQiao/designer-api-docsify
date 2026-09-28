@@ -18,6 +18,8 @@ function notifyPrintServiceEvent(event: ApplicationEvent): Promise<void>
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-print-function notifyPrintServiceEvent(event: ApplicationEvent): Promise<void>--><!--Device-print-function notifyPrintServiceEvent(event: ApplicationEvent): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **系统接口：** 此接口为系统接口。
@@ -70,6 +72,8 @@ function notifyPrintServiceEvent(event: ApplicationEvent, jobId: string): Promis
 **起始版本：** 18
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
+
+<!--Device-print-function notifyPrintServiceEvent(event: ApplicationEvent, jobId: string): Promise<void>--><!--Device-print-function notifyPrintServiceEvent(event: ApplicationEvent, jobId: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 

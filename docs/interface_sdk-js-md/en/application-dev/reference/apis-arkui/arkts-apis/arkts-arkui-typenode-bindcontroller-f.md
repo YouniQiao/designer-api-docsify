@@ -14,6 +14,8 @@ Binds a [TextController](../arkts-components/arkts-arkui-text-comp-textcontrolle
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-typeNode-export function bindController(node: FrameNode, controller: TextController, nodeType: 'Text'): void--><!--Device-typeNode-export function bindController(node: FrameNode, controller: TextController, nodeType: 'Text'): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -95,6 +97,8 @@ Binds a [SwiperController](../arkts-components/arkts-arkui-swiper-comp-swipercon
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-typeNode-export function bindController(node: FrameNode, controller: SwiperController, nodeType: 'Swiper'): void--><!--Device-typeNode-export function bindController(node: FrameNode, controller: SwiperController, nodeType: 'Swiper'): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -132,6 +136,8 @@ Binds the [Scroller](../arkts-components/arkts-arkui-scroll-comp-scroller-c.md) 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-typeNode-function bindController(node: FrameNode, controller: Scroller, nodeType: 'Scroll'): void--><!--Device-typeNode-function bindController(node: FrameNode, controller: Scroller, nodeType: 'Scroll'): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -173,6 +179,8 @@ Binds a [Scroller](../arkts-components/arkts-arkui-scroll-comp-scroller-c.md) in
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-typeNode-export function bindController(node: FrameNode, controller: Scroller, nodeType: 'List'): void--><!--Device-typeNode-export function bindController(node: FrameNode, controller: Scroller, nodeType: 'List'): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -212,6 +220,8 @@ Binds the input box controller [TextInputController](../arkts-components/arkts-a
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-typeNode-export function bindController(node: FrameNode, controller: TextInputController, nodeType: 'TextInput'): void--><!--Device-typeNode-export function bindController(node: FrameNode, controller: TextInputController, nodeType: 'TextInput'): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -287,6 +297,8 @@ Binds a [Scroller](../arkts-components/arkts-arkui-scroll-comp-scroller-c.md) in
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-typeNode-export function bindController(node: FrameNode, controller: Scroller, nodeType: 'WaterFlow'): void--><!--Device-typeNode-export function bindController(node: FrameNode, controller: Scroller, nodeType: 'WaterFlow'): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -326,6 +338,8 @@ Binds the input box controller [TextAreaController](../arkts-components/arkts-ar
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-typeNode-export function bindController(node: FrameNode, controller: TextAreaController, nodeType: 'TextArea'): void--><!--Device-typeNode-export function bindController(node: FrameNode, controller: TextAreaController, nodeType: 'TextArea'): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -400,6 +414,8 @@ Binds a [Scroller](../arkts-components/arkts-arkui-scroll-comp-scroller-c.md) in
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-typeNode-export function bindController(node: FrameNode, controller: Scroller, nodeType: 'Grid'): void--><!--Device-typeNode-export function bindController(node: FrameNode, controller: Scroller, nodeType: 'Grid'): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

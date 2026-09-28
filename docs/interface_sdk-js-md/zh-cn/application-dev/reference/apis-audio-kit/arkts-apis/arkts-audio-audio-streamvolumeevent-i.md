@@ -8,6 +8,8 @@ interface StreamVolumeEvent
 
 **起始版本：** 20
 
+<!--Device-audio-interface StreamVolumeEvent--><!--Device-audio-interface StreamVolumeEvent-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 ## 导入模块
@@ -28,6 +30,8 @@ previousVolume?: number
 
 **起始版本：** 23
 
+<!--Device-StreamVolumeEvent-previousVolume?: int--><!--Device-StreamVolumeEvent-previousVolume?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 ## streamUsage
@@ -41,6 +45,8 @@ streamUsage: StreamUsage
 **类型：** [StreamUsage](arkts-audio-audio-streamusage-e.md)
 
 **起始版本：** 20
+
+<!--Device-StreamVolumeEvent-streamUsage: StreamUsage--><!--Device-StreamVolumeEvent-streamUsage: StreamUsage-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -58,6 +64,8 @@ updateUi: boolean
 
 **起始版本：** 20
 
+<!--Device-StreamVolumeEvent-updateUi: boolean--><!--Device-StreamVolumeEvent-updateUi: boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 ## volume
@@ -71,5 +79,7 @@ volume: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-StreamVolumeEvent-volume: int--><!--Device-StreamVolumeEvent-volume: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume

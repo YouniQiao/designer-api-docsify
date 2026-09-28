@@ -8,6 +8,8 @@ export interface GetDownloadableProfileMetadataResult
 
 **起始版本：** 18
 
+<!--Device-eSIM-export interface GetDownloadableProfileMetadataResult--><!--Device-eSIM-export interface GetDownloadableProfileMetadataResult-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ downloadableProfile: DownloadableProfile
 
 **起始版本：** 18
 
+<!--Device-GetDownloadableProfileMetadataResult-downloadableProfile: DownloadableProfile--><!--Device-GetDownloadableProfileMetadataResult-downloadableProfile: DownloadableProfile-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ iccid: string
 **类型：** string
 
 **起始版本：** 18
+
+<!--Device-GetDownloadableProfileMetadataResult-iccid: string--><!--Device-GetDownloadableProfileMetadataResult-iccid: string-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
@@ -62,6 +68,8 @@ pprFlag: boolean
 
 **起始版本：** 18
 
+<!--Device-GetDownloadableProfileMetadataResult-pprFlag: boolean--><!--Device-GetDownloadableProfileMetadataResult-pprFlag: boolean-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +85,8 @@ pprType: number
 **类型：** number
 
 **起始版本：** 18
+
+<!--Device-GetDownloadableProfileMetadataResult-pprType: int--><!--Device-GetDownloadableProfileMetadataResult-pprType: int-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
@@ -94,6 +104,8 @@ profileClass: ProfileClass
 
 **起始版本：** 18
 
+<!--Device-GetDownloadableProfileMetadataResult-profileClass: ProfileClass--><!--Device-GetDownloadableProfileMetadataResult-profileClass: ProfileClass-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -109,6 +121,8 @@ profileName: string
 **类型：** string
 
 **起始版本：** 18
+
+<!--Device-GetDownloadableProfileMetadataResult-profileName: string--><!--Device-GetDownloadableProfileMetadataResult-profileName: string-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
@@ -126,6 +140,8 @@ responseResult: ResultCode
 
 **起始版本：** 18
 
+<!--Device-GetDownloadableProfileMetadataResult-responseResult: ResultCode--><!--Device-GetDownloadableProfileMetadataResult-responseResult: ResultCode-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -142,6 +158,8 @@ serviceProviderName: string
 
 **起始版本：** 18
 
+<!--Device-GetDownloadableProfileMetadataResult-serviceProviderName: string--><!--Device-GetDownloadableProfileMetadataResult-serviceProviderName: string-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -157,6 +175,8 @@ solvableErrors: SolvableErrors
 **类型：** [SolvableErrors](arkts-telephony-esim-solvableerrors-e-sys.md)
 
 **起始版本：** 18
+
+<!--Device-GetDownloadableProfileMetadataResult-solvableErrors: SolvableErrors--><!--Device-GetDownloadableProfileMetadataResult-solvableErrors: SolvableErrors-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 

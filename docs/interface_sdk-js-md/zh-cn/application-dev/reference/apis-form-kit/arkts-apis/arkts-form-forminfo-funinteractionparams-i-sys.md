@@ -8,6 +8,8 @@ interface FunInteractionParams
 
 **起始版本：** 20
 
+<!--Device-formInfo-interface FunInteractionParams--><!--Device-formInfo-interface FunInteractionParams-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ abilityName?: string
 
 **起始版本：** 20
 
+<!--Device-FunInteractionParams-abilityName?: string--><!--Device-FunInteractionParams-abilityName?: string-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -48,6 +52,8 @@ keepStateDuration?: number
 
 **起始版本：** 20
 
+<!--Device-FunInteractionParams-keepStateDuration?: int--><!--Device-FunInteractionParams-keepStateDuration?: int-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -64,6 +70,8 @@ subBundleName: string
 
 **起始版本：** 20
 
+<!--Device-FunInteractionParams-subBundleName: string--><!--Device-FunInteractionParams-subBundleName: string-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -79,6 +87,8 @@ targetBundleName: string
 **类型：** string
 
 **起始版本：** 20
+
+<!--Device-FunInteractionParams-targetBundleName: string--><!--Device-FunInteractionParams-targetBundleName: string-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 

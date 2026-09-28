@@ -20,6 +20,8 @@ function getPorts(): Array<USBPort>
 
 **替代接口：** [getPortList](arkts-basicservices-usbmanager-getportlist-f-sys.md)()
 
+<!--Device-usbManager-function getPorts(): Array<USBPort>--><!--Device-usbManager-function getPorts(): Array<USBPort>-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 **系统接口：** 此接口为系统接口。

@@ -10,6 +10,8 @@
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-unnamed-declare namespace prompt--><!--Device-unnamed-declare namespace prompt-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import

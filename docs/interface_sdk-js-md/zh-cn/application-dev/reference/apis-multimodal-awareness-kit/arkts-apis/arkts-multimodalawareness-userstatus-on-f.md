@@ -24,6 +24,8 @@ function on(type: 'userAgeGroupDetected', callback: Callback<UserClassification>
 
 **废弃版本：** 24
 
+<!--Device-userStatus-function on(type: 'userAgeGroupDetected', callback: Callback<UserClassification>): void--><!--Device-userStatus-function on(type: 'userAgeGroupDetected', callback: Callback<UserClassification>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
 **参数：**

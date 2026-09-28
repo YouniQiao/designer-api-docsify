@@ -16,4 +16,6 @@ For details, see [@Track Decorator: Implementing Class Object Property-Level Upd
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
+<!--Device-unnamed-declare const Track: PropertyDecorator--><!--Device-unnamed-declare const Track: PropertyDecorator-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

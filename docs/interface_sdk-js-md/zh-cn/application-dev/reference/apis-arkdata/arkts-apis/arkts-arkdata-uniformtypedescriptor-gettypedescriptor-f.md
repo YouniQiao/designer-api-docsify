@@ -18,6 +18,8 @@ function getTypeDescriptor(typeId: string): TypeDescriptor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-uniformTypeDescriptor-function getTypeDescriptor(typeId: string): TypeDescriptor--><!--Device-uniformTypeDescriptor-function getTypeDescriptor(typeId: string): TypeDescriptor-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 **参数：**

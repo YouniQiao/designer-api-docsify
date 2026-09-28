@@ -18,6 +18,8 @@ function getBundleArchiveInfo(hapFilePath: string, bundleFlags: number, callback
 
 **废弃版本：** 9
 
+<!--Device-bundle-function getBundleArchiveInfo(hapFilePath: string, bundleFlags: number, callback: AsyncCallback<BundleInfo>): void--><!--Device-bundle-function getBundleArchiveInfo(hapFilePath: string, bundleFlags: number, callback: AsyncCallback<BundleInfo>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 **参数：**
@@ -59,6 +61,8 @@ function getBundleArchiveInfo(hapFilePath: string, bundleFlags: number): Promise
 **起始版本：** 7
 
 **废弃版本：** 9
+
+<!--Device-bundle-function getBundleArchiveInfo(hapFilePath: string, bundleFlags: number): Promise<BundleInfo>--><!--Device-bundle-function getBundleArchiveInfo(hapFilePath: string, bundleFlags: number): Promise<BundleInfo>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 

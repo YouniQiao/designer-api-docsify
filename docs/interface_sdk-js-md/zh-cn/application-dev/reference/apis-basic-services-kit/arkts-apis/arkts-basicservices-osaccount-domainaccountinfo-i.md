@@ -8,6 +8,8 @@ interface DomainAccountInfo
 
 **起始版本：** 8
 
+<!--Device-osAccount-interface DomainAccountInfo--><!--Device-osAccount-interface DomainAccountInfo-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 ## 导入模块
@@ -28,6 +30,8 @@ accountName: string
 
 **起始版本：** 8
 
+<!--Device-DomainAccountInfo-accountName: string--><!--Device-DomainAccountInfo-accountName: string-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 ## additionalInfo
@@ -46,6 +50,8 @@ additionalInfo?: Record<string, Object>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DomainAccountInfo-additionalInfo?: Record<string, Object>--><!--Device-DomainAccountInfo-additionalInfo?: Record<string, Object>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 ## domain
@@ -60,6 +66,8 @@ domain: string
 
 **起始版本：** 8
 
+<!--Device-DomainAccountInfo-domain: string--><!--Device-DomainAccountInfo-domain: string-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 ## serverConfigId
@@ -73,5 +81,7 @@ serverConfigId?: string
 **类型：** string
 
 **起始版本：** 18
+
+<!--Device-DomainAccountInfo-serverConfigId?: string--><!--Device-DomainAccountInfo-serverConfigId?: string-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount

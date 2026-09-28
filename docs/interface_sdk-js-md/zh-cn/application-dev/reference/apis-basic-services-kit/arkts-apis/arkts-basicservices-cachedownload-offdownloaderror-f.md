@@ -16,6 +16,8 @@ function offDownloadError(url: string, callback?: Callback<DownloadError>): void
 
 **起始版本：** 23
 
+<!--Device-cacheDownload-function offDownloadError(url: string, callback?: Callback<DownloadError>): void--><!--Device-cacheDownload-function offDownloadError(url: string, callback?: Callback<DownloadError>): void-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 **参数：**

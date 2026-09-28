@@ -8,6 +8,8 @@ export interface EnabledPriorityNotificationByBundleCallbackData
 
 **起始版本：** 23
 
+<!--Device-unnamed-export interface EnabledPriorityNotificationByBundleCallbackData--><!--Device-unnamed-export interface EnabledPriorityNotificationByBundleCallbackData-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -23,6 +25,8 @@ readonly bundle: string
 **类型：** string
 
 **起始版本：** 23
+
+<!--Device-EnabledPriorityNotificationByBundleCallbackData-readonly bundle: string--><!--Device-EnabledPriorityNotificationByBundleCallbackData-readonly bundle: string-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -40,6 +44,8 @@ readonly enableStatus: notificationManager.PriorityEnableStatus
 
 **起始版本：** 23
 
+<!--Device-EnabledPriorityNotificationByBundleCallbackData-readonly enableStatus: notificationManager.PriorityEnableStatus--><!--Device-EnabledPriorityNotificationByBundleCallbackData-readonly enableStatus: notificationManager.PriorityEnableStatus-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -55,6 +61,8 @@ readonly uid: number
 **类型：** number
 
 **起始版本：** 23
+
+<!--Device-EnabledPriorityNotificationByBundleCallbackData-readonly uid: int--><!--Device-EnabledPriorityNotificationByBundleCallbackData-readonly uid: int-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

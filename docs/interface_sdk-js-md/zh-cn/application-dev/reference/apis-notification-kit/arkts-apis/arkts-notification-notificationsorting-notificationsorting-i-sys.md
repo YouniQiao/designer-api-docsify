@@ -8,6 +8,8 @@ export interface NotificationSorting
 
 **起始版本：** 7
 
+<!--Device-unnamed-export interface NotificationSorting--><!--Device-unnamed-export interface NotificationSorting-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -23,6 +25,8 @@ readonly hashCode: string
 **类型：** string
 
 **起始版本：** 7
+
+<!--Device-NotificationSorting-readonly hashCode: string--><!--Device-NotificationSorting-readonly hashCode: string-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -40,6 +44,8 @@ readonly ranking: number
 
 **起始版本：** 7
 
+<!--Device-NotificationSorting-readonly ranking: long--><!--Device-NotificationSorting-readonly ranking: long-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -55,6 +61,8 @@ readonly slot: NotificationSlot
 **类型：** [NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md)
 
 **起始版本：** 7
+
+<!--Device-NotificationSorting-readonly slot: NotificationSlot--><!--Device-NotificationSorting-readonly slot: NotificationSlot-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

@@ -8,6 +8,8 @@ interface ScannerOptionValue
 
 **起始版本：** 20
 
+<!--Device-scan-interface ScannerOptionValue--><!--Device-scan-interface ScannerOptionValue-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## 导入模块
@@ -28,6 +30,8 @@ boolValue?: boolean
 
 **起始版本：** 20
 
+<!--Device-ScannerOptionValue-boolValue?: boolean--><!--Device-ScannerOptionValue-boolValue?: boolean-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## numValue
@@ -41,6 +45,8 @@ numValue?: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-ScannerOptionValue-numValue?: int--><!--Device-ScannerOptionValue-numValue?: int-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -56,6 +62,8 @@ strValue?: string
 
 **起始版本：** 20
 
+<!--Device-ScannerOptionValue-strValue?: string--><!--Device-ScannerOptionValue-strValue?: string-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## valueType
@@ -69,5 +77,7 @@ valueType: OptionValueType
 **类型：** [OptionValueType](arkts-basicservices-scan-optionvaluetype-e.md)
 
 **起始版本：** 20
+
+<!--Device-ScannerOptionValue-valueType: OptionValueType--><!--Device-ScannerOptionValue-valueType: OptionValueType-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework

@@ -8,6 +8,8 @@ ServiceExtensionAbility模块提供后台服务相关扩展能力，提供后台
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare class ServiceExtensionAbility--><!--Device-unnamed-declare class ServiceExtensionAbility-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -29,6 +31,8 @@ onConfigurationUpdate(newConfig: Configuration): void
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ServiceExtensionAbility-onConfigurationUpdate(newConfig: Configuration): void--><!--Device-ServiceExtensionAbility-onConfigurationUpdate(newConfig: Configuration): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -63,6 +67,8 @@ Extension生命周期回调，如果是connectAbility拉起的服务，会在onC
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ServiceExtensionAbility-onConnect(want: Want): rpc.RemoteObject | Promise<rpc.RemoteObject>--><!--Device-ServiceExtensionAbility-onConnect(want: Want): rpc.RemoteObject | Promise<rpc.RemoteObject>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -139,6 +145,8 @@ Extension生命周期回调，在创建时回调，执行初始化业务逻辑�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ServiceExtensionAbility-onCreate(want: Want): void--><!--Device-ServiceExtensionAbility-onCreate(want: Want): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -173,6 +181,8 @@ Extension生命周期回调，在销毁时回调，执行资源清理等操作�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ServiceExtensionAbility-onDestroy(): void--><!--Device-ServiceExtensionAbility-onDestroy(): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -200,6 +210,8 @@ Extension的生命周期回调，客户端执行断开连接服务时回调。
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ServiceExtensionAbility-onDisconnect(want: Want): void | Promise<void>--><!--Device-ServiceExtensionAbility-onDisconnect(want: Want): void | Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -250,6 +262,8 @@ onDump(params: Array<string>): Array<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ServiceExtensionAbility-onDump(params: Array<string>): Array<string>--><!--Device-ServiceExtensionAbility-onDump(params: Array<string>): Array<string>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -291,6 +305,8 @@ Extension的生命周期回调，当所有以前的客户端都断开连接之�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ServiceExtensionAbility-onReconnect(want: Want): void--><!--Device-ServiceExtensionAbility-onReconnect(want: Want): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -324,6 +340,8 @@ Extension生命周期回调，如果是startAbility或者startServiceExtensionAb
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ServiceExtensionAbility-onRequest(want: Want, startId: int): void--><!--Device-ServiceExtensionAbility-onRequest(want: Want, startId: int): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -361,6 +379,8 @@ ServiceExtension的上下文环境，继承自ExtensionContext。
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ServiceExtensionAbility-context: ServiceExtensionContext--><!--Device-ServiceExtensionAbility-context: ServiceExtensionContext-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

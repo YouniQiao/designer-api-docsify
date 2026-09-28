@@ -20,6 +20,8 @@ function off(type: 'wifiStateChange', callback?: Callback<number>): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-wifiManager-function off(type: 'wifiStateChange', callback?: Callback<number>): void--><!--Device-wifiManager-function off(type: 'wifiStateChange', callback?: Callback<number>): void-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **参数：**
@@ -68,6 +70,8 @@ function off(type: 'wifiConnectionChange', callback?: Callback<number>): void
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-wifiManager-function off(type: 'wifiConnectionChange', callback?: Callback<number>): void--><!--Device-wifiManager-function off(type: 'wifiConnectionChange', callback?: Callback<number>): void-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -118,6 +122,8 @@ function off(type: 'wifiScanStateChange', callback?: Callback<number>): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-wifiManager-function off(type: 'wifiScanStateChange', callback?: Callback<number>): void--><!--Device-wifiManager-function off(type: 'wifiScanStateChange', callback?: Callback<number>): void-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **参数：**
@@ -164,6 +170,8 @@ function off(type: 'wifiRssiChange', callback?: Callback<number>): void
 **起始版本：** 9
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
+
+<!--Device-wifiManager-function off(type: 'wifiRssiChange', callback?: Callback<number>): void--><!--Device-wifiManager-function off(type: 'wifiRssiChange', callback?: Callback<number>): void-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -212,6 +220,8 @@ function off(type: 'hotspotStateChange', callback?: Callback<number>): void
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
+<!--Device-wifiManager-function off(type: 'hotspotStateChange', callback?: Callback<number>): void--><!--Device-wifiManager-function off(type: 'hotspotStateChange', callback?: Callback<number>): void-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
 **参数：**
@@ -259,6 +269,8 @@ function off(type: 'p2pStateChange', callback?: Callback<number>): void
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
+<!--Device-wifiManager-function off(type: 'p2pStateChange', callback?: Callback<number>): void--><!--Device-wifiManager-function off(type: 'p2pStateChange', callback?: Callback<number>): void-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
 **参数：**
@@ -305,6 +317,8 @@ function off(type: 'p2pConnectionChange', callback?: Callback<WifiP2pLinkedInfo>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
+
+<!--Device-wifiManager-function off(type: 'p2pConnectionChange', callback?: Callback<WifiP2pLinkedInfo>): void--><!--Device-wifiManager-function off(type: 'p2pConnectionChange', callback?: Callback<WifiP2pLinkedInfo>): void-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
@@ -355,6 +369,8 @@ function off(type: 'p2pDeviceChange', callback?: Callback<WifiP2pDevice>): void
 - API版本10+：N/A
 - API版本9：ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
+<!--Device-wifiManager-function off(type: 'p2pDeviceChange', callback?: Callback<WifiP2pDevice>): void--><!--Device-wifiManager-function off(type: 'p2pDeviceChange', callback?: Callback<WifiP2pDevice>): void-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
 **参数：**
@@ -404,6 +420,8 @@ function off(type: 'p2pPeerDeviceChange', callback?: Callback<WifiP2pDevice[]>):
 - API版本10+：N/A
 - API版本9：ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
+<!--Device-wifiManager-function off(type: 'p2pPeerDeviceChange', callback?: Callback<WifiP2pDevice[]>): void--><!--Device-wifiManager-function off(type: 'p2pPeerDeviceChange', callback?: Callback<WifiP2pDevice[]>): void-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
 **参数：**
@@ -451,6 +469,8 @@ function off(type: 'p2pPersistentGroupChange', callback?: Callback<void>): void
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
+<!--Device-wifiManager-function off(type: 'p2pPersistentGroupChange', callback?: Callback<void>): void--><!--Device-wifiManager-function off(type: 'p2pPersistentGroupChange', callback?: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
 **参数：**
@@ -497,6 +517,8 @@ function off(type: 'p2pDiscoveryChange', callback?: Callback<number>): void
 **起始版本：** 9
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
+
+<!--Device-wifiManager-function off(type: 'p2pDiscoveryChange', callback?: Callback<number>): void--><!--Device-wifiManager-function off(type: 'p2pDiscoveryChange', callback?: Callback<number>): void-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 

@@ -4,11 +4,13 @@
 export class AnimatedDrawableDescriptor extends DrawableDescriptor
 ```
 
-Defines a descriptor object used to play animated content (for example, **PixelMap** arrays or animated image resources) using the [Image](../arkts-components/arkts-arkui-image-comp.md#image) component. It inherits from [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md).
+Defines a descriptor object used to play animated content (for example, **PixelMap** arrays or animated image resources) using the [Image](../arkts-components/arkts-arkui-image-comp.md) component. It inherits from [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md).
 
 **Inheritance/Implementation:** AnimatedDrawableDescriptor extends [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md)
 
 **Since:** 12
+
+<!--Device-unnamed-export class AnimatedDrawableDescriptor extends DrawableDescriptor--><!--Device-unnamed-export class AnimatedDrawableDescriptor extends DrawableDescriptor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -31,6 +33,8 @@ A constructor used to create an **AnimatedDrawableDescriptor** object.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AnimatedDrawableDescriptor-constructor(pixelMaps: Array<image.PixelMap>, options?: AnimationOptions)--><!--Device-AnimatedDrawableDescriptor-constructor(pixelMaps: Array<image.PixelMap>, options?: AnimationOptions)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -89,6 +93,8 @@ A constructor used to create an **AnimatedDrawableDescriptor** object.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
+<!--Device-AnimatedDrawableDescriptor-constructor(src: ResourceStr | Array<image.PixelMap>, options?: AnimationOptions)--><!--Device-AnimatedDrawableDescriptor-constructor(src: ResourceStr | Array<image.PixelMap>, options?: AnimationOptions)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -144,13 +150,15 @@ Obtains the animation controller for playback control.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
+<!--Device-AnimatedDrawableDescriptor-getAnimationController(id?: string): AnimationController | undefined--><!--Device-AnimatedDrawableDescriptor-getAnimationController(id?: string): AnimationController | undefined-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | No | ID of the target component. <br>Optional when the [Image](../arkts-components/arkts-arkui-image-comp.md#image) component and **AnimatedDrawableDescriptor** object have a 1:1 relationship. <br>Required when the same **AnimatedDrawableDescriptor** object is bound to multiple [Image](../arkts-components/arkts-arkui-image-comp.md#image) components (in this case, you must ensure the ID uniqueness). <br>This rule is based on the design principle of the animation system: Animation data can be shared across multiple components, but each component's animation runs independently. Correspondingly, an **AnimationController** object maintains a strict 1:1 relationship with a component, meaning one component is paired with exactly one **AnimationController** object. <br>In addition, [AnimatedDrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md) supports the feature for automatically pausing animation playback when the bound component is not visible (for example, when the component is scrolled out of the screen or hidden). For specific implementation details, see [onVisibleAreaChange] [onVisibleAreaChange](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#onvisibleareachange). |
+| id | string | No | ID of the target component. <br>Optional when the [Image](../arkts-components/arkts-arkui-image-comp.md) component and **AnimatedDrawableDescriptor** object have a 1:1 relationship. <br>Required when the same **AnimatedDrawableDescriptor** object is bound to multiple [Image](../arkts-components/arkts-arkui-image-comp.md) components (in this case, you must ensure the ID uniqueness). <br>This rule is based on the design principle of the animation system: Animation data can be shared across multiple components, but each component's animation runs independently. Correspondingly, an **AnimationController** object maintains a strict 1:1 relationship with a component, meaning one component is paired with exactly one **AnimationController** object. <br>In addition, [AnimatedDrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md) supports the feature for automatically pausing animation playback when the bound component is not visible (for example, when the component is scrolled out of the screen or hidden). For specific implementation details, see [onVisibleAreaChange] [onVisibleAreaChange](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#onvisibleareachange). |
 
 **Return value:**
 

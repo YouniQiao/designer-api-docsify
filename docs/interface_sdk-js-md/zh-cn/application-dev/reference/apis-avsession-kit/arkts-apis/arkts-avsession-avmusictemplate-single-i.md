@@ -12,6 +12,8 @@ interface Single extends MediaEntity
 
 **起始版本：** 23
 
+<!--Device-avMusicTemplate-interface Single extends MediaEntity--><!--Device-avMusicTemplate-interface Single extends MediaEntity-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## 导入模块
@@ -34,6 +36,8 @@ downloadProgress?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Single-downloadProgress?: int--><!--Device-Single-downloadProgress?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## downloadStatus
@@ -49,6 +53,8 @@ downloadStatus?: DownloadStatus
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Single-downloadStatus?: DownloadStatus--><!--Device-Single-downloadStatus?: DownloadStatus-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -66,6 +72,8 @@ favSubscribeData: FavoriteData
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Single-favSubscribeData: FavoriteData--><!--Device-Single-favSubscribeData: FavoriteData-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## isVip
@@ -81,6 +89,8 @@ isVip: boolean
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Single-isVip: boolean--><!--Device-Single-isVip: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -98,6 +108,8 @@ playInfo: PlayInfo
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Single-playInfo: PlayInfo--><!--Device-Single-playInfo: PlayInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## settings
@@ -113,6 +125,8 @@ settings?: SettingItem[]
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Single-settings?: SettingItem[]--><!--Device-Single-settings?: SettingItem[]-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -130,6 +144,8 @@ singer: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Single-singer: string--><!--Device-Single-singer: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## tags
@@ -145,5 +161,7 @@ tags?: string[]
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Single-tags?: string[]--><!--Device-Single-tags?: string[]-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate

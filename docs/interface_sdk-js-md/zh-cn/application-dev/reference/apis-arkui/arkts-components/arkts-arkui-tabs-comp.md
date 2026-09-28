@@ -15,7 +15,7 @@
 > Tabs子组件设置了通用属性[visibility](arkts-arkui-common-comp-commonmethod-c.md#visibility)的值为None，或者设置值为Hidden时，对应子组件不显示，但依然会在视窗内占位。
 > 
 > 已经显示的Tabs子组件TabContent后续隐藏时不会被销毁，若需要页面懒加载和释放，可以参考
-> [示例13](#tabs)。
+> [示例13](arkts-arkui-tabs-comp.md)。
 > 
 > Tabs设置[height](arkts-arkui-common-comp-commonmethod-c.md#height)为auto时，可根据子组件高度自适应高度大小。设置
 > [width](arkts-arkui-common-comp-commonmethod-c.md#width)为auto时，可根据子组件宽度自适应宽度大小。
@@ -31,6 +31,8 @@ Tabs(options?: TabsOptions)
 **起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-TabsInterface-(options?: TabsOptions): TabsAttribute--><!--Device-TabsInterface-(options?: TabsOptions): TabsAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

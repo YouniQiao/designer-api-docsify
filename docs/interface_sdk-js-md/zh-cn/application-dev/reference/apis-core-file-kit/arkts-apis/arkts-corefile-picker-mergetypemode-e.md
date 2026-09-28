@@ -8,6 +8,8 @@ Enumerates file aggregation types.
 
 **起始版本：** 15
 
+<!--Device-picker-export enum MergeTypeMode--><!--Device-picker-export enum MergeTypeMode-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 ## DEFAULT
@@ -20,7 +22,9 @@ DEFAULT = 0
 
 **起始版本：** 15
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-MergeTypeMode-DEFAULT = 0--><!--Device-MergeTypeMode-DEFAULT = 0-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -34,7 +38,9 @@ AUDIO = 1
 
 **起始版本：** 15
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-MergeTypeMode-AUDIO = 1--><!--Device-MergeTypeMode-AUDIO = 1-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -48,7 +54,9 @@ VIDEO = 2
 
 **起始版本：** 15
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-MergeTypeMode-VIDEO = 2--><!--Device-MergeTypeMode-VIDEO = 2-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -62,7 +70,9 @@ DOCUMENT = 3
 
 **起始版本：** 15
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-MergeTypeMode-DOCUMENT = 3--><!--Device-MergeTypeMode-DOCUMENT = 3-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -76,6 +86,8 @@ PICTURE = 4
 
 **起始版本：** 15
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-MergeTypeMode-PICTURE = 4--><!--Device-MergeTypeMode-PICTURE = 4-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService

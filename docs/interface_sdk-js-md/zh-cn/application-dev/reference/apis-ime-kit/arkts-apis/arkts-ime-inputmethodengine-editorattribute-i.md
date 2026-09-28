@@ -8,6 +8,8 @@ interface EditorAttribute
 
 **起始版本：** 8
 
+<!--Device-inputMethodEngine-interface EditorAttribute--><!--Device-inputMethodEngine-interface EditorAttribute-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## 导入模块
@@ -28,6 +30,8 @@ readonly abilityName?: string
 
 **起始版本：** 20
 
+<!--Device-EditorAttribute-readonly abilityName?: string--><!--Device-EditorAttribute-readonly abilityName?: string-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## bundleName
@@ -42,6 +46,8 @@ readonly bundleName?: string
 
 **起始版本：** 14
 
+<!--Device-EditorAttribute-readonly bundleName?: string--><!--Device-EditorAttribute-readonly bundleName?: string-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## capitalizeMode
@@ -55,6 +61,8 @@ readonly capitalizeMode?: CapitalizeMode
 **类型：** [CapitalizeMode](arkts-ime-inputmethodengine-capitalizemode-e.md)
 
 **起始版本：** 20
+
+<!--Device-EditorAttribute-readonly capitalizeMode?: CapitalizeMode--><!--Device-EditorAttribute-readonly capitalizeMode?: CapitalizeMode-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -72,6 +80,8 @@ readonly consumeKeyEvents?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-EditorAttribute-readonly consumeKeyEvents?: boolean--><!--Device-EditorAttribute-readonly consumeKeyEvents?: boolean-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## displayId
@@ -85,6 +95,8 @@ readonly displayId?: number
 **类型：** number
 
 **起始版本：** 18
+
+<!--Device-EditorAttribute-readonly displayId?: long--><!--Device-EditorAttribute-readonly displayId?: long-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -100,6 +112,8 @@ readonly enterKeyType: number
 
 **起始版本：** 8
 
+<!--Device-EditorAttribute-readonly enterKeyType: int--><!--Device-EditorAttribute-readonly enterKeyType: int-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## extraConfig
@@ -113,6 +127,8 @@ readonly extraConfig?: InputMethodExtraConfig
 **类型：** [InputMethodExtraConfig](arkts-ime-inputmethod-extraconfig-inputmethodextraconfig-i.md)
 
 **起始版本：** 22
+
+<!--Device-EditorAttribute-readonly extraConfig?: InputMethodExtraConfig--><!--Device-EditorAttribute-readonly extraConfig?: InputMethodExtraConfig-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -128,6 +144,8 @@ readonly gradientMode?: GradientMode
 
 **起始版本：** 20
 
+<!--Device-EditorAttribute-readonly gradientMode?: GradientMode--><!--Device-EditorAttribute-readonly gradientMode?: GradientMode-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## immersiveMode
@@ -141,6 +159,8 @@ readonly immersiveMode?: ImmersiveMode
 **类型：** [ImmersiveMode](arkts-ime-inputmethodengine-immersivemode-e.md)
 
 **起始版本：** 15
+
+<!--Device-EditorAttribute-readonly immersiveMode?: ImmersiveMode--><!--Device-EditorAttribute-readonly immersiveMode?: ImmersiveMode-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -156,6 +176,8 @@ readonly inputPattern: number
 
 **起始版本：** 8
 
+<!--Device-EditorAttribute-readonly inputPattern: int--><!--Device-EditorAttribute-readonly inputPattern: int-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## isTextPreviewSupported
@@ -169,6 +191,8 @@ isTextPreviewSupported: boolean
 **类型：** boolean
 
 **起始版本：** 12
+
+<!--Device-EditorAttribute-isTextPreviewSupported: boolean--><!--Device-EditorAttribute-isTextPreviewSupported: boolean-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -184,6 +208,8 @@ readonly placeholder?: string
 
 **起始版本：** 20
 
+<!--Device-EditorAttribute-readonly placeholder?: string--><!--Device-EditorAttribute-readonly placeholder?: string-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## windowId
@@ -197,5 +223,7 @@ readonly windowId?: number
 **类型：** number
 
 **起始版本：** 18
+
+<!--Device-EditorAttribute-readonly windowId?: int--><!--Device-EditorAttribute-readonly windowId?: int-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework

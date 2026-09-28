@@ -15,6 +15,8 @@ AVRecorder是音视频录制管理类，用于音视频录制的全流程管理�
 
 **起始版本：** 9
 
+<!--Device-media-interface AVRecorder--><!--Device-media-interface AVRecorder-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 ## 导入模块
@@ -37,6 +39,8 @@ addWatermark(watermark: image.PixelMap, config: WatermarkConfiguration): Promise
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVRecorder-addWatermark(watermark: image.PixelMap, config: WatermarkConfiguration): Promise<int>--><!--Device-AVRecorder-addWatermark(watermark: image.PixelMap, config: WatermarkConfiguration): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -92,6 +96,8 @@ getAudioCapturerMaxAmplitude(callback: AsyncCallback<number>): void
 
 **起始版本：** 11
 
+<!--Device-AVRecorder-getAudioCapturerMaxAmplitude(callback: AsyncCallback<int>): void--><!--Device-AVRecorder-getAudioCapturerMaxAmplitude(callback: AsyncCallback<int>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 **参数：**
@@ -136,6 +142,8 @@ getAudioCapturerMaxAmplitude(): Promise<number>
 
 **起始版本：** 11
 
+<!--Device-AVRecorder-getAudioCapturerMaxAmplitude(): Promise<int>--><!--Device-AVRecorder-getAudioCapturerMaxAmplitude(): Promise<int>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 **返回值：**
@@ -176,6 +184,8 @@ getAvailableEncoder(callback: AsyncCallback<Array<EncoderInfo>>): void
 获取可用的编码器参数。适用于需要根据设备能力选择合适编码器的场景。使用callback异步回调。<br>必须在非released/error状态下调用。
 
 **起始版本：** 11
+
+<!--Device-AVRecorder-getAvailableEncoder(callback: AsyncCallback<Array<EncoderInfo>>): void--><!--Device-AVRecorder-getAvailableEncoder(callback: AsyncCallback<Array<EncoderInfo>>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -225,6 +235,8 @@ getAvailableEncoder(): Promise<Array<EncoderInfo>>
 
 **起始版本：** 11
 
+<!--Device-AVRecorder-getAvailableEncoder(): Promise<Array<EncoderInfo>>--><!--Device-AVRecorder-getAvailableEncoder(): Promise<Array<EncoderInfo>>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 **返回值：**
@@ -271,6 +283,8 @@ getAVRecorderConfig(callback: AsyncCallback<AVRecorderConfig>): void
 必须在[prepare](#prepare)之后调用。
 
 **起始版本：** 11
+
+<!--Device-AVRecorder-getAVRecorderConfig(callback: AsyncCallback<AVRecorderConfig>): void--><!--Device-AVRecorder-getAVRecorderConfig(callback: AsyncCallback<AVRecorderConfig>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -319,6 +333,8 @@ getAVRecorderConfig(): Promise<AVRecorderConfig>
 
 **起始版本：** 11
 
+<!--Device-AVRecorder-getAVRecorderConfig(): Promise<AVRecorderConfig>--><!--Device-AVRecorder-getAVRecorderConfig(): Promise<AVRecorderConfig>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 **返回值：**
@@ -360,6 +376,8 @@ getCurrentAudioCapturerInfo(callback: AsyncCallback<audio.AudioCapturerChangeInf
 获取当前音频采集参数。适用于需要确认当前音频采集设备类型或验证音频配置的场景。使用callback异步回调。<br>必须在[prepare](#prepare)和[stop](#stop)之间调用。
 
 **起始版本：** 11
+
+<!--Device-AVRecorder-getCurrentAudioCapturerInfo(callback: AsyncCallback<audio.AudioCapturerChangeInfo>): void--><!--Device-AVRecorder-getCurrentAudioCapturerInfo(callback: AsyncCallback<audio.AudioCapturerChangeInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -407,6 +425,8 @@ getCurrentAudioCapturerInfo(): Promise<audio.AudioCapturerChangeInfo>
 
 **起始版本：** 11
 
+<!--Device-AVRecorder-getCurrentAudioCapturerInfo(): Promise<audio.AudioCapturerChangeInfo>--><!--Device-AVRecorder-getCurrentAudioCapturerInfo(): Promise<audio.AudioCapturerChangeInfo>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 **返回值：**
@@ -449,6 +469,8 @@ getInputSurface(callback: AsyncCallback<string>): void
 获得录制需要的surface。适用于纯视频或音视频录制时需要获取surface传递视频数据的场景。相机视频录制功能需配合相机模块使用，详情请参考[相机管理](../apis-camera-kit/arkts-apis-camera.md)。使用callback异步回调。<br>开发者从此surface中获取surfaceBuffer，填入待录制的视频数据。<br>填入视频数据时需携带时间戳（单位ns）和buffer size。时间戳的起始时间以系统启动时间为基准。<br>必须在[prepare](#prepare)和[start](#start)之间调用。
 
 **起始版本：** 9
+
+<!--Device-AVRecorder-getInputSurface(callback: AsyncCallback<string>): void--><!--Device-AVRecorder-getInputSurface(callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -495,6 +517,8 @@ getInputSurface(): Promise<string>
 
 **起始版本：** 9
 
+<!--Device-AVRecorder-getInputSurface(): Promise<string>--><!--Device-AVRecorder-getInputSurface(): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 **返回值：**
@@ -539,6 +563,8 @@ off(type: 'stateChange', callback?: OnAVRecorderStateChangeHandler): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVRecorder-off(type: 'stateChange', callback?: OnAVRecorderStateChangeHandler): void--><!--Device-AVRecorder-off(type: 'stateChange', callback?: OnAVRecorderStateChangeHandler): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 **参数：**
@@ -566,6 +592,8 @@ off(type: 'error', callback?: ErrorCallback): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVRecorder-off(type: 'error', callback?: ErrorCallback): void--><!--Device-AVRecorder-off(type: 'error', callback?: ErrorCallback): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 **参数：**
@@ -590,6 +618,8 @@ off(type: 'audioCapturerChange', callback?: Callback<audio.AudioCapturerChangeIn
 取消订阅录音配置变化的回调事件。使用callback异步回调。
 
 **起始版本：** 11
+
+<!--Device-AVRecorder-off(type: 'audioCapturerChange', callback?: Callback<audio.AudioCapturerChangeInfo>): void--><!--Device-AVRecorder-off(type: 'audioCapturerChange', callback?: Callback<audio.AudioCapturerChangeInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -616,6 +646,8 @@ off(type: 'photoAssetAvailable', callback?: Callback<photoAccessHelper.PhotoAsse
 
 **起始版本：** 12
 
+<!--Device-AVRecorder-off(type: 'photoAssetAvailable', callback?: Callback<photoAccessHelper.PhotoAsset>): void--><!--Device-AVRecorder-off(type: 'photoAssetAvailable', callback?: Callback<photoAccessHelper.PhotoAsset>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 **参数：**
@@ -640,6 +672,8 @@ on(type: 'audioCapturerChange', callback: Callback<audio.AudioCapturerChangeInfo
 订阅录音配置变化的回调事件。当录音配置发生变化时，会触发回调返回变化后的录音配置全量信息。使用callback异步回调。<br>用户只能订阅一个录音配置变化事件的回调方法，当用户重复订阅时，以最后一次订阅的回调接口为准。
 
 **起始版本：** 11
+
+<!--Device-AVRecorder-on(type: 'audioCapturerChange', callback: Callback<audio.AudioCapturerChangeInfo>): void--><!--Device-AVRecorder-on(type: 'audioCapturerChange', callback: Callback<audio.AudioCapturerChangeInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -678,6 +712,8 @@ on(type: 'photoAssetAvailable', callback: Callback<photoAccessHelper.PhotoAsset>
 订阅媒体资源创建完成的回调事件。当[FileGenerationMode](arkts-media-media-filegenerationmode-e.md)枚举设置为系统创建媒体文件时，[stop](#stop)操作结束后会把[PhotoAsset](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photoaccesshelper.md)对象回调给应用。使用callback异步回调。<br>用户只能订阅一个媒体资源回调事件的回调方法，当用户重复订阅时，以最后一次订阅的回调接口为准。
 
 **起始版本：** 12
+
+<!--Device-AVRecorder-on(type: 'photoAssetAvailable', callback: Callback<photoAccessHelper.PhotoAsset>): void--><!--Device-AVRecorder-on(type: 'photoAssetAvailable', callback: Callback<photoAccessHelper.PhotoAsset>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -741,6 +777,8 @@ on(type: 'stateChange', callback: OnAVRecorderStateChangeHandler): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVRecorder-on(type: 'stateChange', callback: OnAVRecorderStateChangeHandler): void--><!--Device-AVRecorder-on(type: 'stateChange', callback: OnAVRecorderStateChangeHandler): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 **参数：**
@@ -776,6 +814,8 @@ on(type: 'error', callback: ErrorCallback): void
 **起始版本：** 9
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVRecorder-on(type: 'error', callback: ErrorCallback): void--><!--Device-AVRecorder-on(type: 'error', callback: ErrorCallback): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -821,6 +861,8 @@ pause(callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
+<!--Device-AVRecorder-pause(callback: AsyncCallback<void>): void--><!--Device-AVRecorder-pause(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 **参数：**
@@ -863,7 +905,9 @@ pause(): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVRecorder-pause(): Promise<void>--><!--Device-AVRecorder-pause(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -905,6 +949,8 @@ prepare(config: AVRecorderConfig, callback: AsyncCallback<void>): void
 **起始版本：** 9
 
 **需要权限：** ohos.permission.MICROPHONE
+
+<!--Device-AVRecorder-prepare(config: AVRecorderConfig, callback: AsyncCallback<void>): void--><!--Device-AVRecorder-prepare(config: AVRecorderConfig, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -977,7 +1023,9 @@ prepare(config: AVRecorderConfig): Promise<void>
 
 **需要权限：** ohos.permission.MICROPHONE
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVRecorder-prepare(config: AVRecorderConfig): Promise<void>--><!--Device-AVRecorder-prepare(config: AVRecorderConfig): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -1050,6 +1098,8 @@ release(callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
+<!--Device-AVRecorder-release(callback: AsyncCallback<void>): void--><!--Device-AVRecorder-release(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 **参数：**
@@ -1090,7 +1140,9 @@ release(): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVRecorder-release(): Promise<void>--><!--Device-AVRecorder-release(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -1128,6 +1180,8 @@ reset(callback: AsyncCallback<void>): void
 重置音视频录制，将录制器恢复至初始状态以便重新配置参数。使用callback异步回调。<br>必须在非released状态下调用，调用成功后进入idle状态。<br>纯音频录制时，需要重新调用[prepare](#prepare)接口才能重新录制。纯视频录制、音视频录制时，需要重新调用[prepare](#prepare)和[getInputSurface](#getinputsurface)接口才能重新录制。
 
 **起始版本：** 9
+
+<!--Device-AVRecorder-reset(callback: AsyncCallback<void>): void--><!--Device-AVRecorder-reset(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -1170,6 +1224,8 @@ reset(): Promise<void>
 
 **起始版本：** 9
 
+<!--Device-AVRecorder-reset(): Promise<void>--><!--Device-AVRecorder-reset(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 **返回值：**
@@ -1207,6 +1263,8 @@ resume(callback: AsyncCallback<void>): void
 恢复录制。使用callback异步回调。<br>必须在[pause](#pause)之后调用，调用成功后进入started状态，之后可以再次调用[pause](#pause)接口暂停录制，或调用[stop](#stop)接口停止录制。
 
 **起始版本：** 9
+
+<!--Device-AVRecorder-resume(callback: AsyncCallback<void>): void--><!--Device-AVRecorder-resume(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -1250,7 +1308,9 @@ resume(): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVRecorder-resume(): Promise<void>--><!--Device-AVRecorder-resume(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -1290,6 +1350,8 @@ setMetadata(metadata: Record<string, string>): void
 设置录制的元数据信息。适用于需要在录制文件中嵌入自定义元数据（如作者、标题、标签等）的场景。如果metadata参数与config.metadata.customInfo（参考[prepare()](#prepare-1)和[AVRecorderConfig](arkts-media-media-avrecorderconfig-i.md)）中存在相同的键，前者的对应值将覆盖后者。<br>必须在[prepare()](#prepare-1)和[stop()](#stop)之间调用。
 
 **起始版本：** 26.0.0
+
+<!--Device-AVRecorder-setMetadata(metadata: Record<string, string>): void--><!--Device-AVRecorder-setMetadata(metadata: Record<string, string>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -1337,6 +1399,8 @@ setWillMuteWhenInterrupted(muteWhenInterrupted: boolean): Promise<void>
 
 **起始版本：** 20
 
+<!--Device-AVRecorder-setWillMuteWhenInterrupted(muteWhenInterrupted: boolean): Promise<void>--><!--Device-AVRecorder-setWillMuteWhenInterrupted(muteWhenInterrupted: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 **参数：**
@@ -1381,6 +1445,8 @@ start(callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
+<!--Device-AVRecorder-start(callback: AsyncCallback<void>): void--><!--Device-AVRecorder-start(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 **参数：**
@@ -1423,7 +1489,9 @@ start(): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVRecorder-start(): Promise<void>--><!--Device-AVRecorder-start(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -1463,6 +1531,8 @@ stop(callback: AsyncCallback<void>): void
 停止录制。使用callback异步回调。<br>必须在[start](#start)或[pause](#pause)之后调用，调用成功后进入stopped状态。当prepare配置中将FileGenerationMode设置为系统创建媒体文件模式时，本接口调用结束后会触发on('photoAssetAvailable')回调。纯音频录制时，需要重新调用[prepare](#prepare)接口才能重新录制；纯视频录制、音视频录制时，需要重新调用[prepare](#prepare)和[getInputSurface](#getinputsurface)接口才能重新录制。
 
 **起始版本：** 9
+
+<!--Device-AVRecorder-stop(callback: AsyncCallback<void>): void--><!--Device-AVRecorder-stop(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -1506,7 +1576,9 @@ stop(): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVRecorder-stop(): Promise<void>--><!--Device-AVRecorder-stop(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -1546,6 +1618,8 @@ updateRotation(rotation: number): Promise<void>
 更新视频旋转角度。适用于设备方向发生变化（如横竖屏切换）时需要动态调整录制视频旋转角度的场景。使用Promise异步回调。<br>必须在[prepare](#prepare-1)和[start](#start)之间调用。
 
 **起始版本：** 12
+
+<!--Device-AVRecorder-updateRotation(rotation: int): Promise<void>--><!--Device-AVRecorder-updateRotation(rotation: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -1599,6 +1673,8 @@ readonly state: AVRecorderState
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVRecorder-readonly state: AVRecorderState--><!--Device-AVRecorder-readonly state: AVRecorderState-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder

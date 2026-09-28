@@ -8,6 +8,8 @@ enum KeyAction
 
 **起始版本：** 23
 
+<!--Device-systemManager-enum KeyAction--><!--Device-systemManager-enum KeyAction-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## UNKNOWN
@@ -21,6 +23,8 @@ UNKNOWN = -1
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-KeyAction-UNKNOWN = -1--><!--Device-KeyAction-UNKNOWN = -1-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -36,6 +40,8 @@ DOWN = 0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-KeyAction-DOWN = 0--><!--Device-KeyAction-DOWN = 0-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## UP
@@ -49,5 +55,7 @@ UP = 1
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-KeyAction-UP = 1--><!--Device-KeyAction-UP = 1-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager

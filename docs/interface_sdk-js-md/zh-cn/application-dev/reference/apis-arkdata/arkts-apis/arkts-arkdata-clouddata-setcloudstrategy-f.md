@@ -16,6 +16,8 @@ function setCloudStrategy(strategy: StrategyType, param?: Array<commonType.Value
 
 **起始版本：** 12
 
+<!--Device-cloudData-function setCloudStrategy(strategy: StrategyType, param?: Array<commonType.ValueType>): Promise<void>--><!--Device-cloudData-function setCloudStrategy(strategy: StrategyType, param?: Array<commonType.ValueType>): Promise<void>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
 **参数：**

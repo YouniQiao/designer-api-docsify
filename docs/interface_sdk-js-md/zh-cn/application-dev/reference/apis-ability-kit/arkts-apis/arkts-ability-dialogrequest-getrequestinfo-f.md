@@ -20,6 +20,8 @@ function getRequestInfo(want: Want): RequestInfo
 
 **起始版本：** 9
 
+<!--Device-dialogRequest-function getRequestInfo(want: Want): RequestInfo--><!--Device-dialogRequest-function getRequestInfo(want: Want): RequestInfo-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**

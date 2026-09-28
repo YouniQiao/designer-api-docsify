@@ -10,6 +10,8 @@ export interface OnDownloadCompleteOptions
 
 **替代接口：** on
 
+<!--Device-unnamed-export interface OnDownloadCompleteOptions--><!--Device-unnamed-export interface OnDownloadCompleteOptions-End-->
+
 **系统能力：** SystemCapability.MiscServices.Download
 
 ## 导入模块
@@ -32,6 +34,8 @@ complete?: () => void
 
 **替代接口：** on
 
+<!--Device-OnDownloadCompleteOptions-complete?: () => void--><!--Device-OnDownloadCompleteOptions-complete?: () => void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Download
 
 ## fail
@@ -47,6 +51,8 @@ fail?: (data: any, code: number) => void
 **废弃版本：** 9
 
 **替代接口：** on
+
+<!--Device-OnDownloadCompleteOptions-fail?: (data: any, code: number) => void--><!--Device-OnDownloadCompleteOptions-fail?: (data: any, code: number) => void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -71,6 +77,8 @@ success?: (data: OnDownloadCompleteResponse) => void
 
 **替代接口：** on
 
+<!--Device-OnDownloadCompleteOptions-success?: (data: OnDownloadCompleteResponse) => void--><!--Device-OnDownloadCompleteOptions-success?: (data: OnDownloadCompleteResponse) => void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Download
 
 **参数：**
@@ -94,5 +102,7 @@ download 接口返回的结果 token。
 **废弃版本：** 9
 
 **替代接口：** tid
+
+<!--Device-OnDownloadCompleteOptions-token: string--><!--Device-OnDownloadCompleteOptions-token: string-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download

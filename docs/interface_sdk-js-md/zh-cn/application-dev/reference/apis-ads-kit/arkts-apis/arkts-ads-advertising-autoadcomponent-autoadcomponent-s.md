@@ -10,6 +10,8 @@ declare struct AutoAdComponent
 
 **装饰器类型：** @Component
 
+<!--Device-unnamed-declare struct AutoAdComponent--><!--Device-unnamed-declare struct AutoAdComponent-End-->
+
 **系统能力：** SystemCapability.Advertising.Ads
 
 ## 导入模块
@@ -30,6 +32,8 @@ build(): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AutoAdComponent-build(): void--><!--Device-AutoAdComponent-build(): void-End-->
+
 **系统能力：** SystemCapability.Advertising.Ads
 
 ## adOptions
@@ -45,6 +49,8 @@ adOptions: advertising.AdOptions
 **起始版本：** 11
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AutoAdComponent-adOptions: advertising.AdOptions--><!--Device-AutoAdComponent-adOptions: advertising.AdOptions-End-->
 
 **系统能力：** SystemCapability.Advertising.Ads
 
@@ -62,6 +68,8 @@ adParam: advertising.AdRequestParams
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AutoAdComponent-adParam: advertising.AdRequestParams--><!--Device-AutoAdComponent-adParam: advertising.AdRequestParams-End-->
+
 **系统能力：** SystemCapability.Advertising.Ads
 
 ## displayOptions
@@ -78,6 +86,8 @@ displayOptions: advertising.AdDisplayOptions
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AutoAdComponent-displayOptions: advertising.AdDisplayOptions--><!--Device-AutoAdComponent-displayOptions: advertising.AdDisplayOptions-End-->
+
 **系统能力：** SystemCapability.Advertising.Ads
 
 ## interactionListener
@@ -93,5 +103,7 @@ interactionListener: advertising.AdInteractionListener
 **起始版本：** 11
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AutoAdComponent-interactionListener: advertising.AdInteractionListener--><!--Device-AutoAdComponent-interactionListener: advertising.AdInteractionListener-End-->
 
 **系统能力：** SystemCapability.Advertising.Ads

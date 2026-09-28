@@ -8,6 +8,8 @@ interface AuthLockState
 
 **起始版本：** 22
 
+<!--Device-userAuth-interface AuthLockState--><!--Device-userAuth-interface AuthLockState-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 ## 导入模块
@@ -28,7 +30,9 @@ isLocked: boolean
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-AuthLockState-isLocked: boolean--><!--Device-AuthLockState-isLocked: boolean-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -46,7 +50,9 @@ lockoutDuration: number
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-AuthLockState-lockoutDuration: int--><!--Device-AuthLockState-lockoutDuration: int-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -62,6 +68,8 @@ remainingAuthAttempts: number
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-AuthLockState-remainingAuthAttempts: int--><!--Device-AuthLockState-remainingAuthAttempts: int-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core

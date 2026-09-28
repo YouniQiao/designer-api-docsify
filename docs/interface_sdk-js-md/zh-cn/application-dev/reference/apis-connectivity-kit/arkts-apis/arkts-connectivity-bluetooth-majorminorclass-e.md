@@ -14,6 +14,8 @@ enum MajorMinorClass
 
 **替代接口：** [MajorMinorClass](arkts-connectivity-bluetoothmanager-majorminorclass-e.md)
 
+<!--Device-bluetooth-enum MajorMinorClass--><!--Device-bluetooth-enum MajorMinorClass-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## COMPUTER_UNCATEGORIZED
@@ -29,6 +31,8 @@ COMPUTER_UNCATEGORIZED = 0x0100
 **废弃版本：** 9
 
 **替代接口：** [COMPUTER_UNCATEGORIZED](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#computer_uncategorized)
+
+<!--Device-MajorMinorClass-COMPUTER_UNCATEGORIZED = 0x0100--><!--Device-MajorMinorClass-COMPUTER_UNCATEGORIZED = 0x0100-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -46,6 +50,8 @@ COMPUTER_DESKTOP = 0x0104
 
 **替代接口：** [COMPUTER_DESKTOP](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#computer_desktop)
 
+<!--Device-MajorMinorClass-COMPUTER_DESKTOP = 0x0104--><!--Device-MajorMinorClass-COMPUTER_DESKTOP = 0x0104-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## COMPUTER_SERVER
@@ -61,6 +67,8 @@ COMPUTER_SERVER = 0x0108
 **废弃版本：** 9
 
 **替代接口：** [COMPUTER_SERVER](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#computer_server)
+
+<!--Device-MajorMinorClass-COMPUTER_SERVER = 0x0108--><!--Device-MajorMinorClass-COMPUTER_SERVER = 0x0108-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -78,6 +86,8 @@ COMPUTER_LAPTOP = 0x010C
 
 **替代接口：** [COMPUTER_LAPTOP](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#computer_laptop)
 
+<!--Device-MajorMinorClass-COMPUTER_LAPTOP = 0x010C--><!--Device-MajorMinorClass-COMPUTER_LAPTOP = 0x010C-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## COMPUTER_HANDHELD_PC_PDA
@@ -93,6 +103,8 @@ COMPUTER_HANDHELD_PC_PDA = 0x0110
 **废弃版本：** 9
 
 **替代接口：** [COMPUTER_HANDHELD_PC_PDA](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#computer_handheld_pc_pda)
+
+<!--Device-MajorMinorClass-COMPUTER_HANDHELD_PC_PDA = 0x0110--><!--Device-MajorMinorClass-COMPUTER_HANDHELD_PC_PDA = 0x0110-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -110,6 +122,8 @@ COMPUTER_PALM_SIZE_PC_PDA = 0x0114
 
 **替代接口：** [COMPUTER_PALM_SIZE_PC_PDA](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#computer_palm_size_pc_pda)
 
+<!--Device-MajorMinorClass-COMPUTER_PALM_SIZE_PC_PDA = 0x0114--><!--Device-MajorMinorClass-COMPUTER_PALM_SIZE_PC_PDA = 0x0114-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## COMPUTER_WEARABLE
@@ -125,6 +139,8 @@ COMPUTER_WEARABLE = 0x0118
 **废弃版本：** 9
 
 **替代接口：** [COMPUTER_WEARABLE](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#computer_wearable)
+
+<!--Device-MajorMinorClass-COMPUTER_WEARABLE = 0x0118--><!--Device-MajorMinorClass-COMPUTER_WEARABLE = 0x0118-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -142,6 +158,8 @@ COMPUTER_TABLET = 0x011C
 
 **替代接口：** [COMPUTER_TABLET](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#computer_tablet)
 
+<!--Device-MajorMinorClass-COMPUTER_TABLET = 0x011C--><!--Device-MajorMinorClass-COMPUTER_TABLET = 0x011C-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## PHONE_UNCATEGORIZED
@@ -157,6 +175,8 @@ PHONE_UNCATEGORIZED = 0x0200
 **废弃版本：** 9
 
 **替代接口：** [PHONE_UNCATEGORIZED](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#phone_uncategorized)
+
+<!--Device-MajorMinorClass-PHONE_UNCATEGORIZED = 0x0200--><!--Device-MajorMinorClass-PHONE_UNCATEGORIZED = 0x0200-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -174,6 +194,8 @@ PHONE_CELLULAR = 0x0204
 
 **替代接口：** [PHONE_CELLULAR](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#phone_cellular)
 
+<!--Device-MajorMinorClass-PHONE_CELLULAR = 0x0204--><!--Device-MajorMinorClass-PHONE_CELLULAR = 0x0204-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## PHONE_CORDLESS
@@ -189,6 +211,8 @@ PHONE_CORDLESS = 0x0208
 **废弃版本：** 9
 
 **替代接口：** [PHONE_CORDLESS](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#phone_cordless)
+
+<!--Device-MajorMinorClass-PHONE_CORDLESS = 0x0208--><!--Device-MajorMinorClass-PHONE_CORDLESS = 0x0208-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -206,6 +230,8 @@ PHONE_SMART = 0x020C
 
 **替代接口：** [PHONE_SMART](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#phone_smart)
 
+<!--Device-MajorMinorClass-PHONE_SMART = 0x020C--><!--Device-MajorMinorClass-PHONE_SMART = 0x020C-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## PHONE_MODEM_OR_GATEWAY
@@ -221,6 +247,8 @@ PHONE_MODEM_OR_GATEWAY = 0x0210
 **废弃版本：** 9
 
 **替代接口：** [PHONE_MODEM_OR_GATEWAY](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#phone_modem_or_gateway)
+
+<!--Device-MajorMinorClass-PHONE_MODEM_OR_GATEWAY = 0x0210--><!--Device-MajorMinorClass-PHONE_MODEM_OR_GATEWAY = 0x0210-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -238,6 +266,8 @@ PHONE_ISDN = 0x0214
 
 **替代接口：** [PHONE_ISDN](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#phone_isdn)
 
+<!--Device-MajorMinorClass-PHONE_ISDN = 0x0214--><!--Device-MajorMinorClass-PHONE_ISDN = 0x0214-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## NETWORK_FULLY_AVAILABLE
@@ -253,6 +283,8 @@ NETWORK_FULLY_AVAILABLE = 0x0300
 **废弃版本：** 9
 
 **替代接口：** [NETWORK_FULLY_AVAILABLE](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#network_fully_available)
+
+<!--Device-MajorMinorClass-NETWORK_FULLY_AVAILABLE = 0x0300--><!--Device-MajorMinorClass-NETWORK_FULLY_AVAILABLE = 0x0300-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -270,6 +302,8 @@ NETWORK_1_TO_17_UTILIZED = 0x0320
 
 **替代接口：** [NETWORK_1_TO_17_UTILIZED](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#network_1_to_17_utilized)
 
+<!--Device-MajorMinorClass-NETWORK_1_TO_17_UTILIZED = 0x0320--><!--Device-MajorMinorClass-NETWORK_1_TO_17_UTILIZED = 0x0320-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## NETWORK_17_TO_33_UTILIZED
@@ -285,6 +319,8 @@ NETWORK_17_TO_33_UTILIZED = 0x0340
 **废弃版本：** 9
 
 **替代接口：** [NETWORK_17_TO_33_UTILIZED](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#network_17_to_33_utilized)
+
+<!--Device-MajorMinorClass-NETWORK_17_TO_33_UTILIZED = 0x0340--><!--Device-MajorMinorClass-NETWORK_17_TO_33_UTILIZED = 0x0340-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -302,6 +338,8 @@ NETWORK_33_TO_50_UTILIZED = 0x0360
 
 **替代接口：** [NETWORK_33_TO_50_UTILIZED](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#network_33_to_50_utilized)
 
+<!--Device-MajorMinorClass-NETWORK_33_TO_50_UTILIZED = 0x0360--><!--Device-MajorMinorClass-NETWORK_33_TO_50_UTILIZED = 0x0360-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## NETWORK_60_TO_67_UTILIZED
@@ -317,6 +355,8 @@ NETWORK_60_TO_67_UTILIZED = 0x0380
 **废弃版本：** 9
 
 **替代接口：** [NETWORK_60_TO_67_UTILIZED](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#network_60_to_67_utilized)
+
+<!--Device-MajorMinorClass-NETWORK_60_TO_67_UTILIZED = 0x0380--><!--Device-MajorMinorClass-NETWORK_60_TO_67_UTILIZED = 0x0380-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -334,6 +374,8 @@ NETWORK_67_TO_83_UTILIZED = 0x03A0
 
 **替代接口：** [NETWORK_67_TO_83_UTILIZED](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#network_67_to_83_utilized)
 
+<!--Device-MajorMinorClass-NETWORK_67_TO_83_UTILIZED = 0x03A0--><!--Device-MajorMinorClass-NETWORK_67_TO_83_UTILIZED = 0x03A0-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## NETWORK_83_TO_99_UTILIZED
@@ -349,6 +391,8 @@ NETWORK_83_TO_99_UTILIZED = 0x03C0
 **废弃版本：** 9
 
 **替代接口：** [NETWORK_83_TO_99_UTILIZED](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#network_83_to_99_utilized)
+
+<!--Device-MajorMinorClass-NETWORK_83_TO_99_UTILIZED = 0x03C0--><!--Device-MajorMinorClass-NETWORK_83_TO_99_UTILIZED = 0x03C0-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -366,6 +410,8 @@ NETWORK_NO_SERVICE = 0x03E0
 
 **替代接口：** [NETWORK_NO_SERVICE](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#network_no_service)
 
+<!--Device-MajorMinorClass-NETWORK_NO_SERVICE = 0x03E0--><!--Device-MajorMinorClass-NETWORK_NO_SERVICE = 0x03E0-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## AUDIO_VIDEO_UNCATEGORIZED
@@ -381,6 +427,8 @@ AUDIO_VIDEO_UNCATEGORIZED = 0x0400
 **废弃版本：** 9
 
 **替代接口：** [AUDIO_VIDEO_UNCATEGORIZED](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#audio_video_uncategorized)
+
+<!--Device-MajorMinorClass-AUDIO_VIDEO_UNCATEGORIZED = 0x0400--><!--Device-MajorMinorClass-AUDIO_VIDEO_UNCATEGORIZED = 0x0400-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -398,6 +446,8 @@ AUDIO_VIDEO_WEARABLE_HEADSET = 0x0404
 
 **替代接口：** [AUDIO_VIDEO_WEARABLE_HEADSET](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#audio_video_wearable_headset)
 
+<!--Device-MajorMinorClass-AUDIO_VIDEO_WEARABLE_HEADSET = 0x0404--><!--Device-MajorMinorClass-AUDIO_VIDEO_WEARABLE_HEADSET = 0x0404-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## AUDIO_VIDEO_HANDSFREE
@@ -413,6 +463,8 @@ AUDIO_VIDEO_HANDSFREE = 0x0408
 **废弃版本：** 9
 
 **替代接口：** [AUDIO_VIDEO_HANDSFREE](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#audio_video_handsfree)
+
+<!--Device-MajorMinorClass-AUDIO_VIDEO_HANDSFREE = 0x0408--><!--Device-MajorMinorClass-AUDIO_VIDEO_HANDSFREE = 0x0408-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -430,6 +482,8 @@ AUDIO_VIDEO_MICROPHONE = 0x0410
 
 **替代接口：** [AUDIO_VIDEO_MICROPHONE](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#audio_video_microphone)
 
+<!--Device-MajorMinorClass-AUDIO_VIDEO_MICROPHONE = 0x0410--><!--Device-MajorMinorClass-AUDIO_VIDEO_MICROPHONE = 0x0410-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## AUDIO_VIDEO_LOUDSPEAKER
@@ -445,6 +499,8 @@ AUDIO_VIDEO_LOUDSPEAKER = 0x0414
 **废弃版本：** 9
 
 **替代接口：** [AUDIO_VIDEO_LOUDSPEAKER](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#audio_video_loudspeaker)
+
+<!--Device-MajorMinorClass-AUDIO_VIDEO_LOUDSPEAKER = 0x0414--><!--Device-MajorMinorClass-AUDIO_VIDEO_LOUDSPEAKER = 0x0414-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -462,6 +518,8 @@ AUDIO_VIDEO_HEADPHONES = 0x0418
 
 **替代接口：** [AUDIO_VIDEO_HEADPHONES](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#audio_video_headphones)
 
+<!--Device-MajorMinorClass-AUDIO_VIDEO_HEADPHONES = 0x0418--><!--Device-MajorMinorClass-AUDIO_VIDEO_HEADPHONES = 0x0418-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## AUDIO_VIDEO_PORTABLE_AUDIO
@@ -477,6 +535,8 @@ AUDIO_VIDEO_PORTABLE_AUDIO = 0x041C
 **废弃版本：** 9
 
 **替代接口：** [AUDIO_VIDEO_PORTABLE_AUDIO](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#audio_video_portable_audio)
+
+<!--Device-MajorMinorClass-AUDIO_VIDEO_PORTABLE_AUDIO = 0x041C--><!--Device-MajorMinorClass-AUDIO_VIDEO_PORTABLE_AUDIO = 0x041C-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -494,6 +554,8 @@ AUDIO_VIDEO_CAR_AUDIO = 0x0420
 
 **替代接口：** [AUDIO_VIDEO_CAR_AUDIO](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#audio_video_car_audio)
 
+<!--Device-MajorMinorClass-AUDIO_VIDEO_CAR_AUDIO = 0x0420--><!--Device-MajorMinorClass-AUDIO_VIDEO_CAR_AUDIO = 0x0420-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## AUDIO_VIDEO_SET_TOP_BOX
@@ -509,6 +571,8 @@ AUDIO_VIDEO_SET_TOP_BOX = 0x0424
 **废弃版本：** 9
 
 **替代接口：** [AUDIO_VIDEO_SET_TOP_BOX](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#audio_video_set_top_box)
+
+<!--Device-MajorMinorClass-AUDIO_VIDEO_SET_TOP_BOX = 0x0424--><!--Device-MajorMinorClass-AUDIO_VIDEO_SET_TOP_BOX = 0x0424-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -526,6 +590,8 @@ AUDIO_VIDEO_HIFI_AUDIO = 0x0428
 
 **替代接口：** [AUDIO_VIDEO_HIFI_AUDIO](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#audio_video_hifi_audio)
 
+<!--Device-MajorMinorClass-AUDIO_VIDEO_HIFI_AUDIO = 0x0428--><!--Device-MajorMinorClass-AUDIO_VIDEO_HIFI_AUDIO = 0x0428-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## AUDIO_VIDEO_VCR
@@ -541,6 +607,8 @@ AUDIO_VIDEO_VCR = 0x042C
 **废弃版本：** 9
 
 **替代接口：** [AUDIO_VIDEO_VCR](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#audio_video_vcr)
+
+<!--Device-MajorMinorClass-AUDIO_VIDEO_VCR = 0x042C--><!--Device-MajorMinorClass-AUDIO_VIDEO_VCR = 0x042C-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -558,6 +626,8 @@ AUDIO_VIDEO_VIDEO_CAMERA = 0x0430
 
 **替代接口：** [AUDIO_VIDEO_VIDEO_CAMERA](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#audio_video_video_camera)
 
+<!--Device-MajorMinorClass-AUDIO_VIDEO_VIDEO_CAMERA = 0x0430--><!--Device-MajorMinorClass-AUDIO_VIDEO_VIDEO_CAMERA = 0x0430-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## AUDIO_VIDEO_CAMCORDER
@@ -573,6 +643,8 @@ AUDIO_VIDEO_CAMCORDER = 0x0434
 **废弃版本：** 9
 
 **替代接口：** [AUDIO_VIDEO_CAMCORDER](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#audio_video_camcorder)
+
+<!--Device-MajorMinorClass-AUDIO_VIDEO_CAMCORDER = 0x0434--><!--Device-MajorMinorClass-AUDIO_VIDEO_CAMCORDER = 0x0434-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -590,6 +662,8 @@ AUDIO_VIDEO_VIDEO_MONITOR = 0x0438
 
 **替代接口：** [AUDIO_VIDEO_VIDEO_MONITOR](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#audio_video_video_monitor)
 
+<!--Device-MajorMinorClass-AUDIO_VIDEO_VIDEO_MONITOR = 0x0438--><!--Device-MajorMinorClass-AUDIO_VIDEO_VIDEO_MONITOR = 0x0438-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## AUDIO_VIDEO_VIDEO_DISPLAY_AND_LOUDSPEAKER
@@ -605,6 +679,8 @@ AUDIO_VIDEO_VIDEO_DISPLAY_AND_LOUDSPEAKER = 0x043C
 **废弃版本：** 9
 
 **替代接口：** [AUDIO_VIDEO_VIDEO_DISPLAY_AND_LOUDSPEAKER](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#audio_video_video_display_and_loudspeaker)
+
+<!--Device-MajorMinorClass-AUDIO_VIDEO_VIDEO_DISPLAY_AND_LOUDSPEAKER = 0x043C--><!--Device-MajorMinorClass-AUDIO_VIDEO_VIDEO_DISPLAY_AND_LOUDSPEAKER = 0x043C-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -622,6 +698,8 @@ AUDIO_VIDEO_VIDEO_CONFERENCING = 0x0440
 
 **替代接口：** [AUDIO_VIDEO_VIDEO_CONFERENCING](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#audio_video_video_conferencing)
 
+<!--Device-MajorMinorClass-AUDIO_VIDEO_VIDEO_CONFERENCING = 0x0440--><!--Device-MajorMinorClass-AUDIO_VIDEO_VIDEO_CONFERENCING = 0x0440-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## AUDIO_VIDEO_VIDEO_GAMING_TOY
@@ -637,6 +715,8 @@ AUDIO_VIDEO_VIDEO_GAMING_TOY = 0x0448
 **废弃版本：** 9
 
 **替代接口：** [AUDIO_VIDEO_VIDEO_GAMING_TOY](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#audio_video_video_gaming_toy)
+
+<!--Device-MajorMinorClass-AUDIO_VIDEO_VIDEO_GAMING_TOY = 0x0448--><!--Device-MajorMinorClass-AUDIO_VIDEO_VIDEO_GAMING_TOY = 0x0448-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -654,6 +734,8 @@ PERIPHERAL_NON_KEYBOARD_NON_POINTING = 0x0500
 
 **替代接口：** [PERIPHERAL_NON_KEYBOARD_NON_POINTING](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#peripheral_non_keyboard_non_pointing)
 
+<!--Device-MajorMinorClass-PERIPHERAL_NON_KEYBOARD_NON_POINTING = 0x0500--><!--Device-MajorMinorClass-PERIPHERAL_NON_KEYBOARD_NON_POINTING = 0x0500-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## PERIPHERAL_KEYBOARD
@@ -669,6 +751,8 @@ PERIPHERAL_KEYBOARD = 0x0540
 **废弃版本：** 9
 
 **替代接口：** [PERIPHERAL_KEYBOARD](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#peripheral_keyboard)
+
+<!--Device-MajorMinorClass-PERIPHERAL_KEYBOARD = 0x0540--><!--Device-MajorMinorClass-PERIPHERAL_KEYBOARD = 0x0540-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -686,6 +770,8 @@ PERIPHERAL_POINTING_DEVICE = 0x0580
 
 **替代接口：** [PERIPHERAL_POINTING_DEVICE](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#peripheral_pointing_device)
 
+<!--Device-MajorMinorClass-PERIPHERAL_POINTING_DEVICE = 0x0580--><!--Device-MajorMinorClass-PERIPHERAL_POINTING_DEVICE = 0x0580-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## PERIPHERAL_KEYBOARD_POINTING
@@ -701,6 +787,8 @@ PERIPHERAL_KEYBOARD_POINTING = 0x05C0
 **废弃版本：** 9
 
 **替代接口：** [PERIPHERAL_KEYBOARD_POINTING](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#peripheral_keyboard_pointing)
+
+<!--Device-MajorMinorClass-PERIPHERAL_KEYBOARD_POINTING = 0x05C0--><!--Device-MajorMinorClass-PERIPHERAL_KEYBOARD_POINTING = 0x05C0-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -718,6 +806,8 @@ PERIPHERAL_UNCATEGORIZED = 0x0500
 
 **替代接口：** [PERIPHERAL_UNCATEGORIZED](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#peripheral_uncategorized)
 
+<!--Device-MajorMinorClass-PERIPHERAL_UNCATEGORIZED = 0x0500--><!--Device-MajorMinorClass-PERIPHERAL_UNCATEGORIZED = 0x0500-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## PERIPHERAL_JOYSTICK
@@ -733,6 +823,8 @@ PERIPHERAL_JOYSTICK = 0x0504
 **废弃版本：** 9
 
 **替代接口：** [PERIPHERAL_JOYSTICK](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#peripheral_joystick)
+
+<!--Device-MajorMinorClass-PERIPHERAL_JOYSTICK = 0x0504--><!--Device-MajorMinorClass-PERIPHERAL_JOYSTICK = 0x0504-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -750,6 +842,8 @@ PERIPHERAL_GAMEPAD = 0x0508
 
 **替代接口：** [PERIPHERAL_GAMEPAD](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#peripheral_gamepad)
 
+<!--Device-MajorMinorClass-PERIPHERAL_GAMEPAD = 0x0508--><!--Device-MajorMinorClass-PERIPHERAL_GAMEPAD = 0x0508-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## PERIPHERAL_REMOTE_CONTROL
@@ -765,6 +859,8 @@ PERIPHERAL_REMOTE_CONTROL = 0x05C0
 **废弃版本：** 9
 
 **替代接口：** [PERIPHERAL_REMOTE_CONTROL](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#peripheral_remote_control)
+
+<!--Device-MajorMinorClass-PERIPHERAL_REMOTE_CONTROL = 0x05C0--><!--Device-MajorMinorClass-PERIPHERAL_REMOTE_CONTROL = 0x05C0-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -782,6 +878,8 @@ PERIPHERAL_SENSING_DEVICE = 0x0510
 
 **替代接口：** [PERIPHERAL_SENSING_DEVICE](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#peripheral_sensing_device)
 
+<!--Device-MajorMinorClass-PERIPHERAL_SENSING_DEVICE = 0x0510--><!--Device-MajorMinorClass-PERIPHERAL_SENSING_DEVICE = 0x0510-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## PERIPHERAL_DIGITIZER_TABLET
@@ -797,6 +895,8 @@ PERIPHERAL_DIGITIZER_TABLET = 0x0514
 **废弃版本：** 9
 
 **替代接口：** [PERIPHERAL_DIGITIZER_TABLET](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#peripheral_digitizer_tablet)
+
+<!--Device-MajorMinorClass-PERIPHERAL_DIGITIZER_TABLET = 0x0514--><!--Device-MajorMinorClass-PERIPHERAL_DIGITIZER_TABLET = 0x0514-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -814,6 +914,8 @@ PERIPHERAL_CARD_READER = 0x0518
 
 **替代接口：** [PERIPHERAL_CARD_READER](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#peripheral_card_reader)
 
+<!--Device-MajorMinorClass-PERIPHERAL_CARD_READER = 0x0518--><!--Device-MajorMinorClass-PERIPHERAL_CARD_READER = 0x0518-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## PERIPHERAL_DIGITAL_PEN
@@ -829,6 +931,8 @@ PERIPHERAL_DIGITAL_PEN = 0x051C
 **废弃版本：** 9
 
 **替代接口：** [PERIPHERAL_DIGITAL_PEN](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#peripheral_digital_pen)
+
+<!--Device-MajorMinorClass-PERIPHERAL_DIGITAL_PEN = 0x051C--><!--Device-MajorMinorClass-PERIPHERAL_DIGITAL_PEN = 0x051C-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -846,6 +950,8 @@ PERIPHERAL_SCANNER_RFID = 0x0520
 
 **替代接口：** [PERIPHERAL_SCANNER_RFID](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#peripheral_scanner_rfid)
 
+<!--Device-MajorMinorClass-PERIPHERAL_SCANNER_RFID = 0x0520--><!--Device-MajorMinorClass-PERIPHERAL_SCANNER_RFID = 0x0520-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## PERIPHERAL_GESTURAL_INPUT
@@ -861,6 +967,8 @@ PERIPHERAL_GESTURAL_INPUT = 0x0522
 **废弃版本：** 9
 
 **替代接口：** [PERIPHERAL_GESTURAL_INPUT](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#peripheral_gestural_input)
+
+<!--Device-MajorMinorClass-PERIPHERAL_GESTURAL_INPUT = 0x0522--><!--Device-MajorMinorClass-PERIPHERAL_GESTURAL_INPUT = 0x0522-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -878,6 +986,8 @@ IMAGING_UNCATEGORIZED = 0x0600
 
 **替代接口：** [IMAGING_UNCATEGORIZED](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#imaging_uncategorized)
 
+<!--Device-MajorMinorClass-IMAGING_UNCATEGORIZED = 0x0600--><!--Device-MajorMinorClass-IMAGING_UNCATEGORIZED = 0x0600-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## IMAGING_DISPLAY
@@ -893,6 +1003,8 @@ IMAGING_DISPLAY = 0x0610
 **废弃版本：** 9
 
 **替代接口：** [IMAGING_DISPLAY](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#imaging_display)
+
+<!--Device-MajorMinorClass-IMAGING_DISPLAY = 0x0610--><!--Device-MajorMinorClass-IMAGING_DISPLAY = 0x0610-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -910,6 +1022,8 @@ IMAGING_CAMERA = 0x0620
 
 **替代接口：** [IMAGING_CAMERA](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#imaging_camera)
 
+<!--Device-MajorMinorClass-IMAGING_CAMERA = 0x0620--><!--Device-MajorMinorClass-IMAGING_CAMERA = 0x0620-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## IMAGING_SCANNER
@@ -925,6 +1039,8 @@ IMAGING_SCANNER = 0x0640
 **废弃版本：** 9
 
 **替代接口：** [IMAGING_SCANNER](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#imaging_scanner)
+
+<!--Device-MajorMinorClass-IMAGING_SCANNER = 0x0640--><!--Device-MajorMinorClass-IMAGING_SCANNER = 0x0640-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -942,6 +1058,8 @@ IMAGING_PRINTER = 0x0680
 
 **替代接口：** [IMAGING_PRINTER](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#imaging_printer)
 
+<!--Device-MajorMinorClass-IMAGING_PRINTER = 0x0680--><!--Device-MajorMinorClass-IMAGING_PRINTER = 0x0680-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## WEARABLE_UNCATEGORIZED
@@ -957,6 +1075,8 @@ WEARABLE_UNCATEGORIZED = 0x0700
 **废弃版本：** 9
 
 **替代接口：** [WEARABLE_UNCATEGORIZED](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#wearable_uncategorized)
+
+<!--Device-MajorMinorClass-WEARABLE_UNCATEGORIZED = 0x0700--><!--Device-MajorMinorClass-WEARABLE_UNCATEGORIZED = 0x0700-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -974,6 +1094,8 @@ WEARABLE_WRIST_WATCH = 0x0704
 
 **替代接口：** [WEARABLE_WRIST_WATCH](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#wearable_wrist_watch)
 
+<!--Device-MajorMinorClass-WEARABLE_WRIST_WATCH = 0x0704--><!--Device-MajorMinorClass-WEARABLE_WRIST_WATCH = 0x0704-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## WEARABLE_PAGER
@@ -989,6 +1111,8 @@ WEARABLE_PAGER = 0x0708
 **废弃版本：** 9
 
 **替代接口：** [WEARABLE_PAGER](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#wearable_pager)
+
+<!--Device-MajorMinorClass-WEARABLE_PAGER = 0x0708--><!--Device-MajorMinorClass-WEARABLE_PAGER = 0x0708-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -1006,6 +1130,8 @@ WEARABLE_JACKET = 0x070C
 
 **替代接口：** [WEARABLE_JACKET](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#wearable_jacket)
 
+<!--Device-MajorMinorClass-WEARABLE_JACKET = 0x070C--><!--Device-MajorMinorClass-WEARABLE_JACKET = 0x070C-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## WEARABLE_HELMET
@@ -1021,6 +1147,8 @@ WEARABLE_HELMET = 0x0710
 **废弃版本：** 9
 
 **替代接口：** [WEARABLE_HELMET](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#wearable_helmet)
+
+<!--Device-MajorMinorClass-WEARABLE_HELMET = 0x0710--><!--Device-MajorMinorClass-WEARABLE_HELMET = 0x0710-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -1038,6 +1166,8 @@ WEARABLE_GLASSES = 0x0714
 
 **替代接口：** [WEARABLE_GLASSES](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#wearable_glasses)
 
+<!--Device-MajorMinorClass-WEARABLE_GLASSES = 0x0714--><!--Device-MajorMinorClass-WEARABLE_GLASSES = 0x0714-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## TOY_UNCATEGORIZED
@@ -1053,6 +1183,8 @@ TOY_UNCATEGORIZED = 0x0800
 **废弃版本：** 9
 
 **替代接口：** [TOY_UNCATEGORIZED](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#toy_uncategorized)
+
+<!--Device-MajorMinorClass-TOY_UNCATEGORIZED = 0x0800--><!--Device-MajorMinorClass-TOY_UNCATEGORIZED = 0x0800-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -1070,6 +1202,8 @@ TOY_ROBOT = 0x0804
 
 **替代接口：** [TOY_ROBOT](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#toy_robot)
 
+<!--Device-MajorMinorClass-TOY_ROBOT = 0x0804--><!--Device-MajorMinorClass-TOY_ROBOT = 0x0804-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## TOY_VEHICLE
@@ -1085,6 +1219,8 @@ TOY_VEHICLE = 0x0808
 **废弃版本：** 9
 
 **替代接口：** [TOY_VEHICLE](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#toy_vehicle)
+
+<!--Device-MajorMinorClass-TOY_VEHICLE = 0x0808--><!--Device-MajorMinorClass-TOY_VEHICLE = 0x0808-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -1102,6 +1238,8 @@ TOY_DOLL_ACTION_FIGURE = 0x080C
 
 **替代接口：** [TOY_DOLL_ACTION_FIGURE](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#toy_doll_action_figure)
 
+<!--Device-MajorMinorClass-TOY_DOLL_ACTION_FIGURE = 0x080C--><!--Device-MajorMinorClass-TOY_DOLL_ACTION_FIGURE = 0x080C-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## TOY_CONTROLLER
@@ -1117,6 +1255,8 @@ TOY_CONTROLLER = 0x0810
 **废弃版本：** 9
 
 **替代接口：** [TOY_CONTROLLER](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#toy_controller)
+
+<!--Device-MajorMinorClass-TOY_CONTROLLER = 0x0810--><!--Device-MajorMinorClass-TOY_CONTROLLER = 0x0810-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -1134,6 +1274,8 @@ TOY_GAME = 0x0814
 
 **替代接口：** [TOY_GAME](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#toy_game)
 
+<!--Device-MajorMinorClass-TOY_GAME = 0x0814--><!--Device-MajorMinorClass-TOY_GAME = 0x0814-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## HEALTH_UNCATEGORIZED
@@ -1149,6 +1291,8 @@ HEALTH_UNCATEGORIZED = 0x0900
 **废弃版本：** 9
 
 **替代接口：** [HEALTH_UNCATEGORIZED](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#health_uncategorized)
+
+<!--Device-MajorMinorClass-HEALTH_UNCATEGORIZED = 0x0900--><!--Device-MajorMinorClass-HEALTH_UNCATEGORIZED = 0x0900-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -1166,6 +1310,8 @@ HEALTH_BLOOD_PRESSURE = 0x0904
 
 **替代接口：** [HEALTH_BLOOD_PRESSURE](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#health_blood_pressure)
 
+<!--Device-MajorMinorClass-HEALTH_BLOOD_PRESSURE = 0x0904--><!--Device-MajorMinorClass-HEALTH_BLOOD_PRESSURE = 0x0904-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## HEALTH_THERMOMETER
@@ -1181,6 +1327,8 @@ HEALTH_THERMOMETER = 0x0908
 **废弃版本：** 9
 
 **替代接口：** [HEALTH_THERMOMETER](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#health_thermometer)
+
+<!--Device-MajorMinorClass-HEALTH_THERMOMETER = 0x0908--><!--Device-MajorMinorClass-HEALTH_THERMOMETER = 0x0908-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -1198,6 +1346,8 @@ HEALTH_WEIGHING = 0x090C
 
 **替代接口：** [HEALTH_WEIGHING](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#health_weighing)
 
+<!--Device-MajorMinorClass-HEALTH_WEIGHING = 0x090C--><!--Device-MajorMinorClass-HEALTH_WEIGHING = 0x090C-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## HEALTH_GLUCOSE
@@ -1213,6 +1363,8 @@ HEALTH_GLUCOSE = 0x0910
 **废弃版本：** 9
 
 **替代接口：** [HEALTH_GLUCOSE](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#health_glucose)
+
+<!--Device-MajorMinorClass-HEALTH_GLUCOSE = 0x0910--><!--Device-MajorMinorClass-HEALTH_GLUCOSE = 0x0910-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -1230,6 +1382,8 @@ HEALTH_PULSE_OXIMETER = 0x0914
 
 **替代接口：** [HEALTH_PULSE_OXIMETER](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#health_pulse_oximeter)
 
+<!--Device-MajorMinorClass-HEALTH_PULSE_OXIMETER = 0x0914--><!--Device-MajorMinorClass-HEALTH_PULSE_OXIMETER = 0x0914-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## HEALTH_PULSE_RATE
@@ -1245,6 +1399,8 @@ HEALTH_PULSE_RATE = 0x0918
 **废弃版本：** 9
 
 **替代接口：** [HEALTH_PULSE_RATE](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#health_pulse_rate)
+
+<!--Device-MajorMinorClass-HEALTH_PULSE_RATE = 0x0918--><!--Device-MajorMinorClass-HEALTH_PULSE_RATE = 0x0918-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -1262,6 +1418,8 @@ HEALTH_DATA_DISPLAY = 0x091C
 
 **替代接口：** [HEALTH_DATA_DISPLAY](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#health_data_display)
 
+<!--Device-MajorMinorClass-HEALTH_DATA_DISPLAY = 0x091C--><!--Device-MajorMinorClass-HEALTH_DATA_DISPLAY = 0x091C-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## HEALTH_STEP_COUNTER
@@ -1277,6 +1435,8 @@ HEALTH_STEP_COUNTER = 0x0920
 **废弃版本：** 9
 
 **替代接口：** [HEALTH_STEP_COUNTER](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#health_step_counter)
+
+<!--Device-MajorMinorClass-HEALTH_STEP_COUNTER = 0x0920--><!--Device-MajorMinorClass-HEALTH_STEP_COUNTER = 0x0920-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -1294,6 +1454,8 @@ HEALTH_BODY_COMPOSITION_ANALYZER = 0x0924
 
 **替代接口：** [HEALTH_BODY_COMPOSITION_ANALYZER](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#health_body_composition_analyzer)
 
+<!--Device-MajorMinorClass-HEALTH_BODY_COMPOSITION_ANALYZER = 0x0924--><!--Device-MajorMinorClass-HEALTH_BODY_COMPOSITION_ANALYZER = 0x0924-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## HEALTH_PEAK_FLOW_MOITOR
@@ -1309,6 +1471,8 @@ HEALTH_PEAK_FLOW_MOITOR = 0x0928
 **废弃版本：** 9
 
 **替代接口：** HEALTH_PEAK_FLOW_MOITOR
+
+<!--Device-MajorMinorClass-HEALTH_PEAK_FLOW_MOITOR = 0x0928--><!--Device-MajorMinorClass-HEALTH_PEAK_FLOW_MOITOR = 0x0928-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -1326,6 +1490,8 @@ HEALTH_MEDICATION_MONITOR = 0x092C
 
 **替代接口：** [HEALTH_MEDICATION_MONITOR](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#health_medication_monitor)
 
+<!--Device-MajorMinorClass-HEALTH_MEDICATION_MONITOR = 0x092C--><!--Device-MajorMinorClass-HEALTH_MEDICATION_MONITOR = 0x092C-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## HEALTH_KNEE_PROSTHESIS
@@ -1341,6 +1507,8 @@ HEALTH_KNEE_PROSTHESIS = 0x0930
 **废弃版本：** 9
 
 **替代接口：** [HEALTH_KNEE_PROSTHESIS](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#health_knee_prosthesis)
+
+<!--Device-MajorMinorClass-HEALTH_KNEE_PROSTHESIS = 0x0930--><!--Device-MajorMinorClass-HEALTH_KNEE_PROSTHESIS = 0x0930-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -1358,6 +1526,8 @@ HEALTH_ANKLE_PROSTHESIS = 0x0934
 
 **替代接口：** [HEALTH_ANKLE_PROSTHESIS](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#health_ankle_prosthesis)
 
+<!--Device-MajorMinorClass-HEALTH_ANKLE_PROSTHESIS = 0x0934--><!--Device-MajorMinorClass-HEALTH_ANKLE_PROSTHESIS = 0x0934-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## HEALTH_GENERIC_HEALTH_MANAGER
@@ -1374,6 +1544,8 @@ HEALTH_GENERIC_HEALTH_MANAGER = 0x0938
 
 **替代接口：** [HEALTH_GENERIC_HEALTH_MANAGER](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#health_generic_health_manager)
 
+<!--Device-MajorMinorClass-HEALTH_GENERIC_HEALTH_MANAGER = 0x0938--><!--Device-MajorMinorClass-HEALTH_GENERIC_HEALTH_MANAGER = 0x0938-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## HEALTH_PERSONAL_MOBILITY_DEVICE
@@ -1389,5 +1561,7 @@ HEALTH_PERSONAL_MOBILITY_DEVICE = 0x093C
 **废弃版本：** 9
 
 **替代接口：** [HEALTH_PERSONAL_MOBILITY_DEVICE](arkts-connectivity-bluetoothmanager-majorminorclass-e.md#health_personal_mobility_device)
+
+<!--Device-MajorMinorClass-HEALTH_PERSONAL_MOBILITY_DEVICE = 0x093C--><!--Device-MajorMinorClass-HEALTH_PERSONAL_MOBILITY_DEVICE = 0x093C-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

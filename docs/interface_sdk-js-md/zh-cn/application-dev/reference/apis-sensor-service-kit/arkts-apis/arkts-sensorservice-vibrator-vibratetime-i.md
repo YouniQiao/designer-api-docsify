@@ -10,6 +10,8 @@ interface VibrateTime
 
 **起始版本：** 9
 
+<!--Device-vibrator-interface VibrateTime--><!--Device-vibrator-interface VibrateTime-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## 导入模块
@@ -30,7 +32,9 @@ duration: number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-VibrateTime-duration: int--><!--Device-VibrateTime-duration: int-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
@@ -46,6 +50,8 @@ type: 'time'
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-VibrateTime-type: 'time'--><!--Device-VibrateTime-type: 'time'-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice

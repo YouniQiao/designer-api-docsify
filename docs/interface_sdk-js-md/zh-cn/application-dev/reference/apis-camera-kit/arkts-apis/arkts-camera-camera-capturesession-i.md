@@ -16,6 +16,8 @@ interface CaptureSession
 
 **替代接口：** [VideoSession](arkts-camera-camera-videosession-i.md)
 
+<!--Device-camera-interface CaptureSession--><!--Device-camera-interface CaptureSession-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
@@ -41,6 +43,8 @@ addInput(cameraInput: CameraInput): void
 **废弃版本：** 11
 
 **替代接口：** [addInput](arkts-camera-camera-session-i.md#addinput)
+
+<!--Device-CaptureSession-addInput(cameraInput: CameraInput): void--><!--Device-CaptureSession-addInput(cameraInput: CameraInput): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -75,6 +79,8 @@ addOutput(cameraOutput: CameraOutput): void
 
 **替代接口：** [addOutput](arkts-camera-camera-session-i.md#addoutput)
 
+<!--Device-CaptureSession-addOutput(cameraOutput: CameraOutput): void--><!--Device-CaptureSession-addOutput(cameraOutput: CameraOutput): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **参数：**
@@ -108,6 +114,8 @@ beginConfig(): void
 
 **替代接口：** [beginConfig](arkts-camera-camera-session-i.md#beginconfig)
 
+<!--Device-CaptureSession-beginConfig(): void--><!--Device-CaptureSession-beginConfig(): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **错误码：**
@@ -133,6 +141,8 @@ commitConfig(callback: AsyncCallback<void>): void
 **废弃版本：** 11
 
 **替代接口：** [commitConfig](arkts-camera-camera-session-i.md#commitconfig)(callback: AsyncCallback&lt;void&gt;)
+
+<!--Device-CaptureSession-commitConfig(callback: AsyncCallback<void>): void--><!--Device-CaptureSession-commitConfig(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -169,6 +179,8 @@ commitConfig(): Promise<void>
 
 **替代接口：** [commitConfig](arkts-camera-camera-session-i.md#commitconfig)()
 
+<!--Device-CaptureSession-commitConfig(): Promise<void>--><!--Device-CaptureSession-commitConfig(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **返回值：**
@@ -202,6 +214,8 @@ getActiveVideoStabilizationMode(): VideoStabilizationMode
 
 **替代接口：** [getActiveVideoStabilizationMode](arkts-camera-camera-stabilization-i.md#getactivevideostabilizationmode)
 
+<!--Device-CaptureSession-getActiveVideoStabilizationMode(): VideoStabilizationMode--><!--Device-CaptureSession-getActiveVideoStabilizationMode(): VideoStabilizationMode-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **返回值：**
@@ -233,6 +247,8 @@ getExposureBiasRange(): Array<number>
 **废弃版本：** 11
 
 **替代接口：** [getExposureBiasRange](arkts-camera-camera-autoexposurequery-i.md#getexposurebiasrange)
+
+<!--Device-CaptureSession-getExposureBiasRange(): Array<number>--><!--Device-CaptureSession-getExposureBiasRange(): Array<number>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -266,6 +282,8 @@ getExposureMode(): ExposureMode
 
 **替代接口：** [getExposureMode](arkts-camera-camera-autoexposure-i.md#getexposuremode)
 
+<!--Device-CaptureSession-getExposureMode(): ExposureMode--><!--Device-CaptureSession-getExposureMode(): ExposureMode-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **返回值：**
@@ -297,6 +315,8 @@ getExposureValue(): number
 **废弃版本：** 11
 
 **替代接口：** [getExposureValue](arkts-camera-camera-autoexposure-i.md#getexposurevalue)
+
+<!--Device-CaptureSession-getExposureValue(): number--><!--Device-CaptureSession-getExposureValue(): number-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -330,6 +350,8 @@ getFlashMode(): FlashMode
 
 **替代接口：** [getFlashMode](arkts-camera-camera-flash-i.md#getflashmode)
 
+<!--Device-CaptureSession-getFlashMode(): FlashMode--><!--Device-CaptureSession-getFlashMode(): FlashMode-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **返回值：**
@@ -361,6 +383,8 @@ getFocalLength(): number
 **废弃版本：** 11
 
 **替代接口：** [getFocalLength](arkts-camera-camera-focus-i.md#getfocallength)
+
+<!--Device-CaptureSession-getFocalLength(): number--><!--Device-CaptureSession-getFocalLength(): number-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -394,6 +418,8 @@ getFocusMode(): FocusMode
 
 **替代接口：** [getFocusMode](arkts-camera-camera-focus-i.md#getfocusmode)
 
+<!--Device-CaptureSession-getFocusMode(): FocusMode--><!--Device-CaptureSession-getFocusMode(): FocusMode-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **返回值：**
@@ -425,6 +451,8 @@ getFocusPoint(): Point
 **废弃版本：** 11
 
 **替代接口：** [getFocusPoint](arkts-camera-camera-focus-i.md#getfocuspoint)
+
+<!--Device-CaptureSession-getFocusPoint(): Point--><!--Device-CaptureSession-getFocusPoint(): Point-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -458,6 +486,8 @@ getMeteringPoint(): Point
 
 **替代接口：** [getMeteringPoint](arkts-camera-camera-autoexposure-i.md#getmeteringpoint)
 
+<!--Device-CaptureSession-getMeteringPoint(): Point--><!--Device-CaptureSession-getMeteringPoint(): Point-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **返回值：**
@@ -489,6 +519,8 @@ getZoomRatio(): number
 **废弃版本：** 11
 
 **替代接口：** [getZoomRatio](arkts-camera-camera-zoom-i.md#getzoomratio)
+
+<!--Device-CaptureSession-getZoomRatio(): number--><!--Device-CaptureSession-getZoomRatio(): number-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -522,6 +554,8 @@ getZoomRatioRange(): Array<number>
 
 **替代接口：** [getZoomRatioRange](arkts-camera-camera-zoomquery-i.md#getzoomratiorange)
 
+<!--Device-CaptureSession-getZoomRatioRange(): Array<number>--><!--Device-CaptureSession-getZoomRatioRange(): Array<number>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **返回值：**
@@ -554,6 +588,8 @@ hasFlash(): boolean
 
 **替代接口：** [hasFlash](arkts-camera-camera-flashquery-i.md#hasflash)
 
+<!--Device-CaptureSession-hasFlash(): boolean--><!--Device-CaptureSession-hasFlash(): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **返回值：**
@@ -585,6 +621,8 @@ isExposureModeSupported(aeMode: ExposureMode): boolean
 **废弃版本：** 11
 
 **替代接口：** [isExposureModeSupported](arkts-camera-camera-autoexposurequery-i.md#isexposuremodesupported)
+
+<!--Device-CaptureSession-isExposureModeSupported(aeMode: ExposureMode): boolean--><!--Device-CaptureSession-isExposureModeSupported(aeMode: ExposureMode): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -624,6 +662,8 @@ isFlashModeSupported(flashMode: FlashMode): boolean
 
 **替代接口：** [isFlashModeSupported](arkts-camera-camera-flashquery-i.md#isflashmodesupported)
 
+<!--Device-CaptureSession-isFlashModeSupported(flashMode: FlashMode): boolean--><!--Device-CaptureSession-isFlashModeSupported(flashMode: FlashMode): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **参数：**
@@ -661,6 +701,8 @@ isFocusModeSupported(afMode: FocusMode): boolean
 **废弃版本：** 11
 
 **替代接口：** [isFocusModeSupported](arkts-camera-camera-focusquery-i.md#isfocusmodesupported)
+
+<!--Device-CaptureSession-isFocusModeSupported(afMode: FocusMode): boolean--><!--Device-CaptureSession-isFocusModeSupported(afMode: FocusMode): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -700,6 +742,8 @@ isVideoStabilizationModeSupported(vsMode: VideoStabilizationMode): boolean
 
 **替代接口：** [isVideoStabilizationModeSupported](arkts-camera-camera-stabilizationquery-i.md#isvideostabilizationmodesupported)
 
+<!--Device-CaptureSession-isVideoStabilizationModeSupported(vsMode: VideoStabilizationMode): boolean--><!--Device-CaptureSession-isVideoStabilizationModeSupported(vsMode: VideoStabilizationMode): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **参数：**
@@ -738,6 +782,8 @@ off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void
 
 **替代接口：** [off](arkts-camera-camera-videosession-i.md#offfocusstatechange)(type: 'focusStateChange', callback?: AsyncCallback&lt;FocusState&gt;)
 
+<!--Device-CaptureSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void--><!--Device-CaptureSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **参数：**
@@ -764,6 +810,8 @@ off(type: 'error', callback?: ErrorCallback): void
 **废弃版本：** 11
 
 **替代接口：** [off](arkts-camera-camera-videosession-i.md#offerror)(type: 'error', callback?: ErrorCallback)
+
+<!--Device-CaptureSession-off(type: 'error', callback?: ErrorCallback): void--><!--Device-CaptureSession-off(type: 'error', callback?: ErrorCallback): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -794,6 +842,8 @@ on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
 
 **替代接口：** [on](arkts-camera-camera-videosession-i.md#onfocusstatechange)(type: 'focusStateChange', callback: AsyncCallback&lt;FocusState&gt;)
 
+<!--Device-CaptureSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void--><!--Device-CaptureSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **参数：**
@@ -823,6 +873,8 @@ on(type: 'error', callback: ErrorCallback): void
 
 **替代接口：** [on](arkts-camera-camera-videosession-i.md#onerror)(type: 'error', callback: ErrorCallback)
 
+<!--Device-CaptureSession-on(type: 'error', callback: ErrorCallback): void--><!--Device-CaptureSession-on(type: 'error', callback: ErrorCallback): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **参数：**
@@ -849,6 +901,8 @@ release(callback: AsyncCallback<void>): void
 **废弃版本：** 11
 
 **替代接口：** [release](arkts-camera-camera-session-i.md#release)(callback: AsyncCallback&lt;void&gt;)
+
+<!--Device-CaptureSession-release(callback: AsyncCallback<void>): void--><!--Device-CaptureSession-release(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -884,6 +938,8 @@ release(): Promise<void>
 
 **替代接口：** [release](arkts-camera-camera-session-i.md#release)()
 
+<!--Device-CaptureSession-release(): Promise<void>--><!--Device-CaptureSession-release(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **返回值：**
@@ -915,6 +971,8 @@ removeInput(cameraInput: CameraInput): void
 **废弃版本：** 11
 
 **替代接口：** [removeInput](arkts-camera-camera-session-i.md#removeinput)
+
+<!--Device-CaptureSession-removeInput(cameraInput: CameraInput): void--><!--Device-CaptureSession-removeInput(cameraInput: CameraInput): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -948,6 +1006,8 @@ removeOutput(cameraOutput: CameraOutput): void
 **废弃版本：** 11
 
 **替代接口：** [removeOutput](arkts-camera-camera-session-i.md#removeoutput)
+
+<!--Device-CaptureSession-removeOutput(cameraOutput: CameraOutput): void--><!--Device-CaptureSession-removeOutput(cameraOutput: CameraOutput): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -984,6 +1044,8 @@ setExposureBias(exposureBias: number): void
 
 **替代接口：** [setExposureBias](arkts-camera-camera-autoexposure-i.md#setexposurebias)
 
+<!--Device-CaptureSession-setExposureBias(exposureBias: number): void--><!--Device-CaptureSession-setExposureBias(exposureBias: number): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **参数：**
@@ -1015,6 +1077,8 @@ setExposureMode(aeMode: ExposureMode): void
 **废弃版本：** 11
 
 **替代接口：** [setExposureMode](arkts-camera-camera-autoexposure-i.md#setexposuremode)
+
+<!--Device-CaptureSession-setExposureMode(aeMode: ExposureMode): void--><!--Device-CaptureSession-setExposureMode(aeMode: ExposureMode): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -1053,6 +1117,8 @@ setFlashMode(flashMode: FlashMode): void
 
 **替代接口：** [setFlashMode](arkts-camera-camera-flash-i.md#setflashmode)
 
+<!--Device-CaptureSession-setFlashMode(flashMode: FlashMode): void--><!--Device-CaptureSession-setFlashMode(flashMode: FlashMode): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **参数：**
@@ -1086,6 +1152,8 @@ setFocusMode(afMode: FocusMode): void
 **废弃版本：** 11
 
 **替代接口：** [setFocusMode](arkts-camera-camera-focus-i.md#setfocusmode)
+
+<!--Device-CaptureSession-setFocusMode(afMode: FocusMode): void--><!--Device-CaptureSession-setFocusMode(afMode: FocusMode): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -1121,6 +1189,8 @@ setFocusPoint(point: Point): void
 
 **替代接口：** [setFocusPoint](arkts-camera-camera-focus-i.md#setfocuspoint)
 
+<!--Device-CaptureSession-setFocusPoint(point: Point): void--><!--Device-CaptureSession-setFocusPoint(point: Point): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **参数：**
@@ -1155,6 +1225,8 @@ setMeteringPoint(point: Point): void
 
 **替代接口：** [setMeteringPoint](arkts-camera-camera-autoexposure-i.md#setmeteringpoint)
 
+<!--Device-CaptureSession-setMeteringPoint(point: Point): void--><!--Device-CaptureSession-setMeteringPoint(point: Point): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **参数：**
@@ -1186,6 +1258,8 @@ setVideoStabilizationMode(mode: VideoStabilizationMode): void
 **废弃版本：** 11
 
 **替代接口：** [setVideoStabilizationMode](arkts-camera-camera-stabilization-i.md#setvideostabilizationmode)
+
+<!--Device-CaptureSession-setVideoStabilizationMode(mode: VideoStabilizationMode): void--><!--Device-CaptureSession-setVideoStabilizationMode(mode: VideoStabilizationMode): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -1219,6 +1293,8 @@ setZoomRatio(zoomRatio: number): void
 
 **替代接口：** [setZoomRatio](arkts-camera-camera-zoom-i.md#setzoomratio)
 
+<!--Device-CaptureSession-setZoomRatio(zoomRatio: number): void--><!--Device-CaptureSession-setZoomRatio(zoomRatio: number): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **参数：**
@@ -1250,6 +1326,8 @@ start(callback: AsyncCallback<void>): void
 **废弃版本：** 11
 
 **替代接口：** [start](arkts-camera-camera-session-i.md#start)(callback: AsyncCallback&lt;void&gt;)
+
+<!--Device-CaptureSession-start(callback: AsyncCallback<void>): void--><!--Device-CaptureSession-start(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -1286,6 +1364,8 @@ start(): Promise<void>
 
 **替代接口：** [start](arkts-camera-camera-session-i.md#start)()
 
+<!--Device-CaptureSession-start(): Promise<void>--><!--Device-CaptureSession-start(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **返回值：**
@@ -1318,6 +1398,8 @@ stop(callback: AsyncCallback<void>): void
 **废弃版本：** 11
 
 **替代接口：** [stop](arkts-camera-camera-session-i.md#stop)(callback: AsyncCallback&lt;void&gt;)
+
+<!--Device-CaptureSession-stop(callback: AsyncCallback<void>): void--><!--Device-CaptureSession-stop(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -1352,6 +1434,8 @@ stop(): Promise<void>
 **废弃版本：** 11
 
 **替代接口：** [stop](arkts-camera-camera-session-i.md#stop)()
+
+<!--Device-CaptureSession-stop(): Promise<void>--><!--Device-CaptureSession-stop(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

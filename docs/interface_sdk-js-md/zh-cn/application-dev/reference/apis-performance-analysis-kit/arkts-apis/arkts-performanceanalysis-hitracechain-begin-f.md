@@ -18,6 +18,8 @@ function begin(name: string, flags?: number): HiTraceId
 
 **起始版本：** 8
 
+<!--Device-hiTraceChain-function begin(name: string, flags?: int): HiTraceId--><!--Device-hiTraceChain-function begin(name: string, flags?: int): HiTraceId-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
 
 **参数：**

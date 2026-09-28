@@ -8,6 +8,8 @@ Provides additional configuration options for the text decoration line style.
 
 **Since:** 20
 
+<!--Device-unnamed-declare interface DecorationOptions--><!--Device-unnamed-declare interface DecorationOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## enableMultiType
@@ -29,5 +31,7 @@ All decoration lines to be displayed must have this option enabled. In the inter
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-DecorationOptions-enableMultiType?: boolean--><!--Device-DecorationOptions-enableMultiType?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

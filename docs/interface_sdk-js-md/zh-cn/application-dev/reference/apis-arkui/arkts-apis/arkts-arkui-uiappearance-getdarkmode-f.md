@@ -30,6 +30,8 @@ function getDarkMode(): DarkMode
 - API版本20+：N/A
 - API版本10-19：ohos.permission.UPDATE_CONFIGURATION
 
+<!--Device-uiAppearance-function getDarkMode(): DarkMode--><!--Device-uiAppearance-function getDarkMode(): DarkMode-End-->
+
 **系统能力：** SystemCapability.ArkUI.UiAppearance
 
 **返回值：**

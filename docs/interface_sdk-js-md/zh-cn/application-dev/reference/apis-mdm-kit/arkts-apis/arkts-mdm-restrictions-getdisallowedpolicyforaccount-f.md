@@ -24,6 +24,8 @@ function getDisallowedPolicyForAccount(admin: Want | null, feature: string, acco
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-restrictions-function getDisallowedPolicyForAccount(admin: Want | null, feature: string, accountId: number): boolean--><!--Device-restrictions-function getDisallowedPolicyForAccount(admin: Want | null, feature: string, accountId: number): boolean-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -85,6 +87,8 @@ function getDisallowedPolicyForAccount(admin: Want | null, feature: FeatureForAc
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_RESTRICTIONS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-restrictions-function getDisallowedPolicyForAccount(admin: Want | null, feature: FeatureForAccount, accountId: number): boolean--><!--Device-restrictions-function getDisallowedPolicyForAccount(admin: Want | null, feature: FeatureForAccount, accountId: number): boolean-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

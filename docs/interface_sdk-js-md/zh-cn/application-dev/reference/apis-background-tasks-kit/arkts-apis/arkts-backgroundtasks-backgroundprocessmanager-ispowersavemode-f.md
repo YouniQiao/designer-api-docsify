@@ -18,6 +18,8 @@ function isPowerSaveMode(pid: number): Promise<boolean>
 
 **需要权限：** ohos.permission.BACKGROUND_MANAGER_POWER_SAVE_MODE
 
+<!--Device-backgroundProcessManager-function isPowerSaveMode(pid: int): Promise<boolean>--><!--Device-backgroundProcessManager-function isPowerSaveMode(pid: int): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Resourceschedule.BackgroundProcessManager
 
 **参数：**

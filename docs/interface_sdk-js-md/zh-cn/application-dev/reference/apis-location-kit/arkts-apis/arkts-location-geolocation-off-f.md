@@ -22,6 +22,8 @@ function off(type: 'locationChange', callback?: Callback<Location>): void
 
 **需要权限：** ohos.permission.LOCATION
 
+<!--Device-geolocation-function off(type: 'locationChange', callback?: Callback<Location>): void--><!--Device-geolocation-function off(type: 'locationChange', callback?: Callback<Location>): void-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **参数：**
@@ -60,6 +62,8 @@ function off(type: 'locationServiceState', callback?: Callback<boolean>): void
 
 **需要权限：** ohos.permission.LOCATION
 
+<!--Device-geolocation-function off(type: 'locationServiceState', callback?: Callback<boolean>): void--><!--Device-geolocation-function off(type: 'locationServiceState', callback?: Callback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **参数：**
@@ -96,6 +100,8 @@ function off(type: 'cachedGnssLocationsReporting', callback?: Callback<Array<Loc
 **替代接口：** cachedGnssLocationsChange
 
 **需要权限：** ohos.permission.LOCATION
+
+<!--Device-geolocation-function off(type: 'cachedGnssLocationsReporting', callback?: Callback<Array<Location>>): void--><!--Device-geolocation-function off(type: 'cachedGnssLocationsReporting', callback?: Callback<Array<Location>>): void-End-->
 
 **系统能力：** SystemCapability.Location.Location.Gnss
 
@@ -135,6 +141,8 @@ function off(type: 'gnssStatusChange', callback?: Callback<SatelliteStatusInfo>)
 
 **需要权限：** ohos.permission.LOCATION
 
+<!--Device-geolocation-function off(type: 'gnssStatusChange', callback?: Callback<SatelliteStatusInfo>): void--><!--Device-geolocation-function off(type: 'gnssStatusChange', callback?: Callback<SatelliteStatusInfo>): void-End-->
+
 **系统能力：** SystemCapability.Location.Location.Gnss
 
 **参数：**
@@ -172,6 +180,8 @@ function off(type: 'nmeaMessageChange', callback?: Callback<string>): void
 
 **需要权限：** ohos.permission.LOCATION
 
+<!--Device-geolocation-function off(type: 'nmeaMessageChange', callback?: Callback<string>): void--><!--Device-geolocation-function off(type: 'nmeaMessageChange', callback?: Callback<string>): void-End-->
+
 **系统能力：** SystemCapability.Location.Location.Gnss
 
 **参数：**
@@ -208,6 +218,8 @@ function off(type: 'fenceStatusChange', request: GeofenceRequest, want: WantAgen
 **替代接口：** gnssFenceStatusChange
 
 **需要权限：** ohos.permission.LOCATION
+
+<!--Device-geolocation-function off(type: 'fenceStatusChange', request: GeofenceRequest, want: WantAgent): void--><!--Device-geolocation-function off(type: 'fenceStatusChange', request: GeofenceRequest, want: WantAgent): void-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geofence
 

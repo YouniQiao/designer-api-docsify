@@ -8,6 +8,8 @@ export interface Options
 
 **起始版本：** 11
 
+<!--Device-emitter-export interface Options--><!--Device-emitter-export interface Options-End-->
+
 **系统能力：** SystemCapability.Notification.Emitter
 
 ## 导入模块
@@ -28,6 +30,8 @@ priority?: EventPriority
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Options-priority?: EventPriority--><!--Device-Options-priority?: EventPriority-End-->
 
 **系统能力：** SystemCapability.Notification.Emitter

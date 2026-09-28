@@ -8,6 +8,8 @@ enum VibratorEventType
 
 **起始版本：** 18
 
+<!--Device-vibrator-enum VibratorEventType--><!--Device-vibrator-enum VibratorEventType-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## CONTINUOUS
@@ -20,6 +22,8 @@ CONTINUOUS = 0
 
 **起始版本：** 18
 
+<!--Device-VibratorEventType-CONTINUOUS = 0--><!--Device-VibratorEventType-CONTINUOUS = 0-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## TRANSIENT
@@ -31,5 +35,7 @@ TRANSIENT = 1
 表示短振。适用于需要短暂振动反馈的场景（如点击、按键反馈等）。
 
 **起始版本：** 18
+
+<!--Device-VibratorEventType-TRANSIENT = 1--><!--Device-VibratorEventType-TRANSIENT = 1-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice

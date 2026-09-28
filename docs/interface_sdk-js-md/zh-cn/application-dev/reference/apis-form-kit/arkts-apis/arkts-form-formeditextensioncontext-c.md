@@ -10,6 +10,8 @@ FormEditExtensionContext是[FormEditExtensionAbility](arkts-form-app-form-formed
 
 **起始版本：** 18
 
+<!--Device-unnamed-declare class FormEditExtensionContext extends UIExtensionContext--><!--Device-unnamed-declare class FormEditExtensionContext extends UIExtensionContext-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 ## startSecondPage
@@ -26,6 +28,8 @@ startSecondPage(want: Want): Promise<AbilityResult>
 **起始版本：** 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FormEditExtensionContext-startSecondPage(want: Want): Promise<AbilityResult>--><!--Device-FormEditExtensionContext-startSecondPage(want: Want): Promise<AbilityResult>-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -91,6 +95,8 @@ startUIAbility(want: Want): Promise<void>
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FormEditExtensionContext-startUIAbility(want: Want): Promise<void>--><!--Device-FormEditExtensionContext-startUIAbility(want: Want): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 

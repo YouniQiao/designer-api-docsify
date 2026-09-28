@@ -8,6 +8,8 @@ Provides APIs for cloud enhancement management, including managing the tasks of 
 
 **Since:** 13
 
+<!--Device-photoAccessHelper-class CloudEnhancement--><!--Device-photoAccessHelper-class CloudEnhancement-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -29,6 +31,8 @@ Cancels all cloud enhancement tasks.
 **Since:** 13
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-CloudEnhancement-cancelAllCloudEnhancementTasks(): Promise<void>--><!--Device-CloudEnhancement-cancelAllCloudEnhancementTasks(): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -76,6 +80,8 @@ Cancels cloud enhancement tasks.
 **Since:** 13
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-CloudEnhancement-cancelCloudEnhancementTasks(photoAssets: Array<PhotoAsset>): Promise<void>--><!--Device-CloudEnhancement-cancelCloudEnhancementTasks(photoAssets: Array<PhotoAsset>): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -141,6 +147,8 @@ Obtains a cloud enhancement instance.
 
 **Since:** 13
 
+<!--Device-CloudEnhancement-static getCloudEnhancementInstance(context: Context): CloudEnhancement--><!--Device-CloudEnhancement-static getCloudEnhancementInstance(context: Context): CloudEnhancement-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -202,6 +210,8 @@ Obtains the photo after cloud enhancement.
 **Since:** 13
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-CloudEnhancement-getCloudEnhancementPair(asset: PhotoAsset): Promise<PhotoAsset>--><!--Device-CloudEnhancement-getCloudEnhancementPair(asset: PhotoAsset): Promise<PhotoAsset>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -270,6 +280,8 @@ Prioritizes a cloud enhancement task.
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-CloudEnhancement-prioritizeCloudEnhancementTask(photoAsset: PhotoAsset): Promise<void>--><!--Device-CloudEnhancement-prioritizeCloudEnhancementTask(photoAsset: PhotoAsset): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -336,6 +348,8 @@ Queries information about a cloud enhancement task.
 **Since:** 13
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-CloudEnhancement-queryCloudEnhancementTaskState(photoAsset: PhotoAsset): Promise<CloudEnhancementTaskState>--><!--Device-CloudEnhancement-queryCloudEnhancementTaskState(photoAsset: PhotoAsset): Promise<CloudEnhancementTaskState>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -432,6 +446,8 @@ Query the local AI-enhanced task status.
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-CloudEnhancement-queryLocalEnhancementTaskState(photoAsset: PhotoAsset): Promise<LocalEnhancementTaskState>--><!--Device-CloudEnhancement-queryLocalEnhancementTaskState(photoAsset: PhotoAsset): Promise<LocalEnhancementTaskState>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -469,6 +485,8 @@ Submits cloud enhancement tasks. This API uses a promise to return the result.
 **Since:** 13
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-CloudEnhancement-submitCloudEnhancementTasks(photoAssets: Array<PhotoAsset>, hasCloudWatermark: boolean): Promise<void>--><!--Device-CloudEnhancement-submitCloudEnhancementTasks(photoAssets: Array<PhotoAsset>, hasCloudWatermark: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -542,6 +560,8 @@ Submits cloud enhancement tasks. You can select the trigger mode of the cloud en
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-CloudEnhancement-submitCloudEnhancementTasks(      photoAssets: Array<PhotoAsset>,      hasCloudWatermark: boolean,      triggerMode?: int    ): Promise<void>--><!--Device-CloudEnhancement-submitCloudEnhancementTasks(      photoAssets: Array<PhotoAsset>,      hasCloudWatermark: boolean,      triggerMode?: int    ): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -609,6 +629,8 @@ Synchronizes the cloud enhancement task status.
 **Since:** 13
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-CloudEnhancement-syncCloudEnhancementTaskStatus(): Promise<void>--><!--Device-CloudEnhancement-syncCloudEnhancementTaskStatus(): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

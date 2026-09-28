@@ -8,6 +8,8 @@ System sound manager object.
 
 **Since:** 10
 
+<!--Device-systemSoundManager-interface SystemSoundManager--><!--Device-systemSoundManager-interface SystemSoundManager-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -29,6 +31,8 @@ Add customized tone into ringtone library.
 **Since:** 12
 
 **Required permissions:** ohos.permission.WRITE_RINGTONE
+
+<!--Device-SystemSoundManager-addCustomizedTone(context: BaseContext, toneAttr: ToneAttrs, externalUri: string): Promise<string>--><!--Device-SystemSoundManager-addCustomizedTone(context: BaseContext, toneAttr: ToneAttrs, externalUri: string): Promise<string>-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -103,6 +107,8 @@ Add customized tone into ringtone library.
 
 **Required permissions:** ohos.permission.WRITE_RINGTONE
 
+<!--Device-SystemSoundManager-addCustomizedTone(context: BaseContext, toneAttr: ToneAttrs, fd: int, offset?: long, length?: long)      : Promise<string>--><!--Device-SystemSoundManager-addCustomizedTone(context: BaseContext, toneAttr: ToneAttrs, fd: int, offset?: long, length?: long)      : Promise<string>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -175,6 +181,8 @@ Close fd.
 
 **Since:** 12
 
+<!--Device-SystemSoundManager-close(fd: int): Promise<void>--><!--Device-SystemSoundManager-close(fd: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -227,6 +235,8 @@ Gets attribute list of alarm tones.
 
 **Since:** 12
 
+<!--Device-SystemSoundManager-getAlarmToneAttrList(context: BaseContext): Promise<ToneAttrsArray>--><!--Device-SystemSoundManager-getAlarmToneAttrList(context: BaseContext): Promise<ToneAttrsArray>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -277,6 +287,8 @@ getAlarmToneUri(context: BaseContext): Promise<string>
 Gets uri of the current alarm tone.
 
 **Since:** 12
+
+<!--Device-SystemSoundManager-getAlarmToneUri(context: BaseContext): Promise<string>--><!--Device-SystemSoundManager-getAlarmToneUri(context: BaseContext): Promise<string>-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -329,6 +341,8 @@ Gets the ringtone attribute which is in use.
 
 **Since:** 20
 
+<!--Device-SystemSoundManager-getCurrentRingtoneAttribute(type: RingtoneType): Promise<ToneAttrs>--><!--Device-SystemSoundManager-getCurrentRingtoneAttribute(type: RingtoneType): Promise<ToneAttrs>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -376,6 +390,8 @@ getDefaultAlarmToneAttrs(context: BaseContext): Promise<ToneAttrs>
 Gets attributes of the default alarm tone.
 
 **Since:** 12
+
+<!--Device-SystemSoundManager-getDefaultAlarmToneAttrs(context: BaseContext): Promise<ToneAttrs>--><!--Device-SystemSoundManager-getDefaultAlarmToneAttrs(context: BaseContext): Promise<ToneAttrs>-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -427,6 +443,8 @@ getDefaultRingtoneAttrs(context: BaseContext, type: RingtoneType): Promise<ToneA
 Gets attributes of the default ringtone.
 
 **Since:** 12
+
+<!--Device-SystemSoundManager-getDefaultRingtoneAttrs(context: BaseContext, type: RingtoneType): Promise<ToneAttrs>--><!--Device-SystemSoundManager-getDefaultRingtoneAttrs(context: BaseContext, type: RingtoneType): Promise<ToneAttrs>-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -481,6 +499,8 @@ Gets attributes of the default system tone.
 
 **Since:** 12
 
+<!--Device-SystemSoundManager-getDefaultSystemToneAttrs(context: BaseContext, type: SystemToneType): Promise<ToneAttrs>--><!--Device-SystemSoundManager-getDefaultSystemToneAttrs(context: BaseContext, type: SystemToneType): Promise<ToneAttrs>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -533,6 +553,8 @@ getHapticsAttrsSyncedWithTone(context: BaseContext, toneUri: string): Promise<To
 Get attributes of haptics which is synchronized with one tone. If no haptics is found, then the attributes in the returned ToneHapticsAttrs is empty.
 
 **Since:** 14
+
+<!--Device-SystemSoundManager-getHapticsAttrsSyncedWithTone(context: BaseContext, toneUri: string): Promise<ToneHapticsAttrs>--><!--Device-SystemSoundManager-getHapticsAttrsSyncedWithTone(context: BaseContext, toneUri: string): Promise<ToneHapticsAttrs>-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -591,6 +613,8 @@ Obtains a mock haptic ringtone player for playing vibration files and their corr
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SystemSoundManager-getMockHapticRingtonePlayer(context: BaseContext, hapticUri: string): Promise<RingtonePlayer | null>--><!--Device-SystemSoundManager-getMockHapticRingtonePlayer(context: BaseContext, hapticUri: string): Promise<RingtonePlayer | null>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -630,6 +654,8 @@ Obtains a mock haptic ringtone player for playing vibration files and their corr
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SystemSoundManager-getMockHapticRingtonePlayer(context: BaseContext, type: RingtoneType, ringtoneUri: string): Promise<RingtonePlayer | null>--><!--Device-SystemSoundManager-getMockHapticRingtonePlayer(context: BaseContext, type: RingtoneType, ringtoneUri: string): Promise<RingtonePlayer | null>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -665,6 +691,8 @@ getRingtoneAttrList(context: BaseContext, type: RingtoneType): Promise<ToneAttrs
 Gets attribute list of ringtones.
 
 **Since:** 12
+
+<!--Device-SystemSoundManager-getRingtoneAttrList(context: BaseContext, type: RingtoneType): Promise<ToneAttrsArray>--><!--Device-SystemSoundManager-getRingtoneAttrList(context: BaseContext, type: RingtoneType): Promise<ToneAttrsArray>-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -718,6 +746,8 @@ getRingtonePlayer(context: BaseContext, type: RingtoneType): Promise<RingtonePla
 Gets the ringtone player.
 
 **Since:** 11
+
+<!--Device-SystemSoundManager-getRingtonePlayer(context: BaseContext, type: RingtoneType): Promise<RingtonePlayer>--><!--Device-SystemSoundManager-getRingtonePlayer(context: BaseContext, type: RingtoneType): Promise<RingtonePlayer>-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -773,6 +803,8 @@ Gets the ringtone uri.
 
 **Since:** 11
 
+<!--Device-SystemSoundManager-getRingtoneUri(context: BaseContext, type: RingtoneType): Promise<string>--><!--Device-SystemSoundManager-getRingtoneUri(context: BaseContext, type: RingtoneType): Promise<string>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -826,6 +858,8 @@ Gets attribute list of alarm tones.
 
 **Since:** 12
 
+<!--Device-SystemSoundManager-getSystemToneAttrList(context: BaseContext, type: SystemToneType): Promise<ToneAttrsArray>--><!--Device-SystemSoundManager-getSystemToneAttrList(context: BaseContext, type: SystemToneType): Promise<ToneAttrsArray>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -878,6 +912,8 @@ getSystemTonePlayer(context: BaseContext, type: SystemToneType): Promise<SystemT
 Gets the system tone player.
 
 **Since:** 11
+
+<!--Device-SystemSoundManager-getSystemTonePlayer(context: BaseContext, type: SystemToneType): Promise<SystemTonePlayer>--><!--Device-SystemSoundManager-getSystemTonePlayer(context: BaseContext, type: SystemToneType): Promise<SystemTonePlayer>-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -933,6 +969,8 @@ Gets the system tone uri.
 
 **Since:** 11
 
+<!--Device-SystemSoundManager-getSystemToneUri(context: BaseContext, type: SystemToneType): Promise<string>--><!--Device-SystemSoundManager-getSystemToneUri(context: BaseContext, type: SystemToneType): Promise<string>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -986,6 +1024,8 @@ Get haptics list.
 
 **Since:** 14
 
+<!--Device-SystemSoundManager-getToneHapticsList(context: BaseContext, isSynced: boolean): Promise<ToneHapticsAttrsArray>--><!--Device-SystemSoundManager-getToneHapticsList(context: BaseContext, isSynced: boolean): Promise<ToneHapticsAttrsArray>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -1038,6 +1078,8 @@ getToneHapticsSettings(context: BaseContext, type: ToneHapticsType): Promise<Ton
 Get haptics settings.
 
 **Since:** 14
+
+<!--Device-SystemSoundManager-getToneHapticsSettings(context: BaseContext, type: ToneHapticsType): Promise<ToneHapticsSettings>--><!--Device-SystemSoundManager-getToneHapticsSettings(context: BaseContext, type: ToneHapticsType): Promise<ToneHapticsSettings>-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -1093,6 +1135,8 @@ Open alarm tone file.
 
 **Since:** 12
 
+<!--Device-SystemSoundManager-openAlarmTone(context: BaseContext, uri: string): Promise<int>--><!--Device-SystemSoundManager-openAlarmTone(context: BaseContext, uri: string): Promise<int>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -1146,6 +1190,8 @@ openToneHaptics(context: BaseContext, hapticsUri: string): Promise<number>
 Open haptics.
 
 **Since:** 14
+
+<!--Device-SystemSoundManager-openToneHaptics(context: BaseContext, hapticsUri: string): Promise<int>--><!--Device-SystemSoundManager-openToneHaptics(context: BaseContext, hapticsUri: string): Promise<int>-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -1202,6 +1248,8 @@ Open tone list in batch.
 
 **Since:** 20
 
+<!--Device-SystemSoundManager-openToneList(uriList: Array<string>): Promise<Array<[string, long, SystemSoundError]>>--><!--Device-SystemSoundManager-openToneList(uriList: Array<string>): Promise<Array<[string, long, SystemSoundError]>>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -1256,6 +1304,8 @@ Remove customized tone in ringtone library.
 **Since:** 12
 
 **Required permissions:** ohos.permission.WRITE_RINGTONE
+
+<!--Device-SystemSoundManager-removeCustomizedTone(context: BaseContext, uri:string): Promise<void>--><!--Device-SystemSoundManager-removeCustomizedTone(context: BaseContext, uri:string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -1314,6 +1364,8 @@ Remove customized tone list in batch.
 
 **Required permissions:** ohos.permission.WRITE_RINGTONE
 
+<!--Device-SystemSoundManager-removeCustomizedToneList(uriList: Array<string>): Promise<Array<[string, SystemSoundError]>>--><!--Device-SystemSoundManager-removeCustomizedToneList(uriList: Array<string>): Promise<Array<[string, SystemSoundError]>>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -1368,6 +1420,8 @@ Sets uri of the current alarm tone.
 
 **Since:** 12
 
+<!--Device-SystemSoundManager-setAlarmToneUri(context: BaseContext, uri: string): Promise<void>--><!--Device-SystemSoundManager-setAlarmToneUri(context: BaseContext, uri: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -1421,6 +1475,8 @@ setRingtoneUri(context: BaseContext, uri: string, type: RingtoneType): Promise<v
 Sets the ringtone uri to system.
 
 **Since:** 11
+
+<!--Device-SystemSoundManager-setRingtoneUri(context: BaseContext, uri: string, type: RingtoneType): Promise<void>--><!--Device-SystemSoundManager-setRingtoneUri(context: BaseContext, uri: string, type: RingtoneType): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -1477,6 +1533,8 @@ Sets the system tone uri to system.
 
 **Since:** 11
 
+<!--Device-SystemSoundManager-setSystemToneUri(context: BaseContext, uri: string, type: SystemToneType): Promise<void>--><!--Device-SystemSoundManager-setSystemToneUri(context: BaseContext, uri: string, type: SystemToneType): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -1531,6 +1589,8 @@ setToneHapticsSettings(context: BaseContext, type: ToneHapticsType, settings: To
 Set haptics settings.
 
 **Since:** 14
+
+<!--Device-SystemSoundManager-setToneHapticsSettings(context: BaseContext, type: ToneHapticsType, settings: ToneHapticsSettings): Promise<void>--><!--Device-SystemSoundManager-setToneHapticsSettings(context: BaseContext, type: ToneHapticsType, settings: ToneHapticsSettings): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -1596,6 +1656,8 @@ Gets the ringtone player.
 
 **Substitutes:** [getRingtonePlayer](#getringtoneplayer)
 
+<!--Device-SystemSoundManager-getSystemRingtonePlayer(context: Context, type: RingtoneType, callback: AsyncCallback<RingtonePlayer>): void--><!--Device-SystemSoundManager-getSystemRingtonePlayer(context: Context, type: RingtoneType, callback: AsyncCallback<RingtonePlayer>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -1645,6 +1707,8 @@ Gets the ringtone player.
 **Deprecated since:** 11
 
 **Substitutes:** [getRingtonePlayer](#getringtoneplayer)
+
+<!--Device-SystemSoundManager-getSystemRingtonePlayer(context: Context, type: RingtoneType): Promise<RingtonePlayer>--><!--Device-SystemSoundManager-getSystemRingtonePlayer(context: Context, type: RingtoneType): Promise<RingtonePlayer>-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -1697,6 +1761,8 @@ Gets the ringtone uri.
 
 **Substitutes:** [getRingtoneUri](#getringtoneuri)
 
+<!--Device-SystemSoundManager-getSystemRingtoneUri(context: Context, type: RingtoneType, callback: AsyncCallback<string>): void--><!--Device-SystemSoundManager-getSystemRingtoneUri(context: Context, type: RingtoneType, callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -1744,6 +1810,8 @@ Gets the ringtone uri.
 **Deprecated since:** 11
 
 **Substitutes:** [getRingtoneUri](#getringtoneuri)
+
+<!--Device-SystemSoundManager-getSystemRingtoneUri(context: Context, type: RingtoneType): Promise<string>--><!--Device-SystemSoundManager-getSystemRingtoneUri(context: Context, type: RingtoneType): Promise<string>-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -1794,6 +1862,8 @@ Sets the ringtone uri to system.
 
 **Substitutes:** [setRingtoneUri](#setringtoneuri)
 
+<!--Device-SystemSoundManager-setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType, callback: AsyncCallback<void>): void--><!--Device-SystemSoundManager-setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -1843,6 +1913,8 @@ Sets the ringtone uri to system.
 **Deprecated since:** 11
 
 **Substitutes:** [setRingtoneUri](#setringtoneuri)
+
+<!--Device-SystemSoundManager-setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType): Promise<void>--><!--Device-SystemSoundManager-setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 

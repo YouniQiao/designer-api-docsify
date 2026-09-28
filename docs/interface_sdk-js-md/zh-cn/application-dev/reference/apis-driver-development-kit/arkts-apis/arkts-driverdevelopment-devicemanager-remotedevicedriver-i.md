@@ -8,6 +8,8 @@ interface RemoteDeviceDriver
 
 **起始版本：** 11
 
+<!--Device-deviceManager-interface RemoteDeviceDriver--><!--Device-deviceManager-interface RemoteDeviceDriver-End-->
+
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
 ## 导入模块
@@ -28,6 +30,8 @@ deviceId: number
 
 **起始版本：** 11
 
+<!--Device-RemoteDeviceDriver-deviceId: long--><!--Device-RemoteDeviceDriver-deviceId: long-End-->
+
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
 ## remote
@@ -41,5 +45,7 @@ remote: rpc.IRemoteObject
 **类型：** [rpc.IRemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-iremoteobject-c.md)
 
 **起始版本：** 11
+
+<!--Device-RemoteDeviceDriver-remote: rpc.IRemoteObject--><!--Device-RemoteDeviceDriver-remote: rpc.IRemoteObject-End-->
 
 **系统能力：** SystemCapability.Driver.ExternalDevice

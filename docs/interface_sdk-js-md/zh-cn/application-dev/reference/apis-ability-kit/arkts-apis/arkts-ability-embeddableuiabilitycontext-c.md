@@ -20,4 +20,6 @@ EmbeddableUIAbilityContext是[EmbeddableUIAbility](arkts-ability-app-ability-emb
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-unnamed-export default class EmbeddableUIAbilityContext extends UIAbilityContext--><!--Device-unnamed-export default class EmbeddableUIAbilityContext extends UIAbilityContext-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

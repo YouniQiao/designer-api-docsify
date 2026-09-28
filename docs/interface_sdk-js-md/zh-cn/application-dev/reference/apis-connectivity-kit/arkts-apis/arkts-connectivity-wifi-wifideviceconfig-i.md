@@ -16,6 +16,8 @@ Wi-Fi配置信息。
 
 **替代接口：** [WifiDeviceConfig](arkts-connectivity-wifimanager-wifideviceconfig-i.md)
 
+<!--Device-wifi-interface WifiDeviceConfig--><!--Device-wifi-interface WifiDeviceConfig-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## 导入模块
@@ -40,6 +42,8 @@ bssid: string
 
 **替代接口：** [bssid](arkts-connectivity-wifimanager-wifideviceconfig-i.md#bssid)
 
+<!--Device-WifiDeviceConfig-bssid: string--><!--Device-WifiDeviceConfig-bssid: string-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## isHiddenSsid
@@ -57,6 +61,8 @@ isHiddenSsid: boolean
 **废弃版本：** 9
 
 **替代接口：** [isHiddenSsid](arkts-connectivity-wifimanager-wifideviceconfig-i.md#ishiddenssid)
+
+<!--Device-WifiDeviceConfig-isHiddenSsid: boolean--><!--Device-WifiDeviceConfig-isHiddenSsid: boolean-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -76,6 +82,8 @@ preSharedKey: string
 
 **替代接口：** [preSharedKey](arkts-connectivity-wifimanager-wifideviceconfig-i.md#presharedkey)
 
+<!--Device-WifiDeviceConfig-preSharedKey: string--><!--Device-WifiDeviceConfig-preSharedKey: string-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## securityType
@@ -94,6 +102,8 @@ securityType: WifiSecurityType
 
 **替代接口：** [securityType](arkts-connectivity-wifimanager-wifideviceconfig-i.md#securitytype)
 
+<!--Device-WifiDeviceConfig-securityType: WifiSecurityType--><!--Device-WifiDeviceConfig-securityType: WifiSecurityType-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## ssid
@@ -111,5 +121,7 @@ ssid: string
 **废弃版本：** 9
 
 **替代接口：** [ssid](arkts-connectivity-wifimanager-wifideviceconfig-i.md#ssid)
+
+<!--Device-WifiDeviceConfig-ssid: string--><!--Device-WifiDeviceConfig-ssid: string-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA

@@ -8,6 +8,8 @@ interface NetFirewallDomainParams
 
 **起始版本：** 15
 
+<!--Device-netFirewall-interface NetFirewallDomainParams--><!--Device-netFirewall-interface NetFirewallDomainParams-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 ## 导入模块
@@ -28,6 +30,8 @@ domain: string
 
 **起始版本：** 15
 
+<!--Device-NetFirewallDomainParams-domain: string--><!--Device-NetFirewallDomainParams-domain: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 ## isWildcard
@@ -41,5 +45,7 @@ isWildcard: boolean
 **类型：** boolean
 
 **起始版本：** 15
+
+<!--Device-NetFirewallDomainParams-isWildcard: boolean--><!--Device-NetFirewallDomainParams-isWildcard: boolean-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall

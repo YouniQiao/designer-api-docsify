@@ -16,6 +16,8 @@ function stopCastDeviceDiscovery(callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
+<!--Device-avSession-function stopCastDeviceDiscovery(callback: AsyncCallback<void>): void--><!--Device-avSession-function stopCastDeviceDiscovery(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **系统接口：** 此接口为系统接口。
@@ -52,6 +54,8 @@ function stopCastDeviceDiscovery(): Promise<void>
 结束设备搜索发现。结果通过Promise异步回调方式返回。
 
 **起始版本：** 10
+
+<!--Device-avSession-function stopCastDeviceDiscovery(): Promise<void>--><!--Device-avSession-function stopCastDeviceDiscovery(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 

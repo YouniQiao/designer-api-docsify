@@ -24,6 +24,8 @@ function getLinkedInfoSync(): WifiLinkedInfo
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
+<!--Device-wifiManager-function getLinkedInfoSync(): WifiLinkedInfo--><!--Device-wifiManager-function getLinkedInfoSync(): WifiLinkedInfo-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **返回值：**

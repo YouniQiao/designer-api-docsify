@@ -8,6 +8,8 @@ Sets the direction of the linear gradient.
 
 **Since:** 7
 
+<!--Device-unnamed-declare enum GradientDirection--><!--Device-unnamed-declare enum GradientDirection-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Left
@@ -25,6 +27,8 @@ From right to left.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-GradientDirection-Left = 0--><!--Device-GradientDirection-Left = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,6 +48,8 @@ From bottom to top.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-GradientDirection-Top = 1--><!--Device-GradientDirection-Top = 1-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Right
@@ -61,6 +67,8 @@ From left to right.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-GradientDirection-Right = 2--><!--Device-GradientDirection-Right = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -80,6 +88,8 @@ From top to bottom.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-GradientDirection-Bottom = 3--><!--Device-GradientDirection-Bottom = 3-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## LeftTop
@@ -97,6 +107,8 @@ From top left to bottom right.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-GradientDirection-LeftTop = 4--><!--Device-GradientDirection-LeftTop = 4-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -116,6 +128,8 @@ From bottom left to top right.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-GradientDirection-LeftBottom = 5--><!--Device-GradientDirection-LeftBottom = 5-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## RightTop
@@ -133,6 +147,8 @@ From top right to bottom left.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-GradientDirection-RightTop = 6--><!--Device-GradientDirection-RightTop = 6-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -152,6 +168,8 @@ From bottom right to top left.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-GradientDirection-RightBottom = 7--><!--Device-GradientDirection-RightBottom = 7-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## None
@@ -169,5 +187,7 @@ None.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-GradientDirection-None = 8--><!--Device-GradientDirection-None = 8-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -20,6 +20,8 @@ declare function accessSync(path: string, mode?: AccessModeType): boolean
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-unnamed-declare function accessSync(path: string, mode?: AccessModeType): boolean--><!--Device-unnamed-declare function accessSync(path: string, mode?: AccessModeType): boolean-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -66,6 +68,8 @@ declare function accessSync(path: string, mode: AccessModeType, flag: AccessFlag
 校验读、写或读写权限不通过会抛出13900012（Permission denied）错误码。
 
 **起始版本：** 12
+
+<!--Device-unnamed-declare function accessSync(path: string, mode: AccessModeType, flag: AccessFlagType): boolean--><!--Device-unnamed-declare function accessSync(path: string, mode: AccessModeType, flag: AccessFlagType): boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

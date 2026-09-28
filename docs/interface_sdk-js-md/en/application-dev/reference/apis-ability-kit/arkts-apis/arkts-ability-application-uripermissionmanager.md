@@ -4,6 +4,8 @@ The **uriPermissionManager** module provides capabilities for granting the permi
 
 **Since:** 10
 
+<!--Device-unnamed-declare namespace uriPermissionManager--><!--Device-unnamed-declare namespace uriPermissionManager-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## Modules to Import

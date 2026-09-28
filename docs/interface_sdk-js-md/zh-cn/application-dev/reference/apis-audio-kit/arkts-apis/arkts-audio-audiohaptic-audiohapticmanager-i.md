@@ -8,6 +8,8 @@ interface AudioHapticManager
 
 **起始版本：** 11
 
+<!--Device-audioHaptic-interface AudioHapticManager--><!--Device-audioHaptic-interface AudioHapticManager-End-->
+
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
 ## 导入模块
@@ -27,6 +29,8 @@ createPlayer(id: number, options?: AudioHapticPlayerOptions): Promise<AudioHapti
 **起始版本：** 11
 
 **需要权限：** ohos.permission.VIBRATE
+
+<!--Device-AudioHapticManager-createPlayer(id: number, options?: AudioHapticPlayerOptions): Promise<AudioHapticPlayer>--><!--Device-AudioHapticManager-createPlayer(id: number, options?: AudioHapticPlayerOptions): Promise<AudioHapticPlayer>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -85,6 +89,8 @@ registerSource(audioUri: string, hapticUri: string): Promise<number>
 
 **起始版本：** 11
 
+<!--Device-AudioHapticManager-registerSource(audioUri: string, hapticUri: string): Promise<int>--><!--Device-AudioHapticManager-registerSource(audioUri: string, hapticUri: string): Promise<int>-End-->
+
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
 **参数：**
@@ -138,6 +144,8 @@ registerSourceFromFd(audioFd: AudioHapticFileDescriptor, hapticFd: AudioHapticFi
 > 单个应用最多支持同时注册128个资源，超过之后将会注册失败（返回注册的资源ID为负数）。推荐应用合理控制注册资源数量，对于不再需要使用的资源，建议及时取消注册。
 
 **起始版本：** 20
+
+<!--Device-AudioHapticManager-registerSourceFromFd(audioFd: AudioHapticFileDescriptor, hapticFd: AudioHapticFileDescriptor): Promise<int>--><!--Device-AudioHapticManager-registerSourceFromFd(audioFd: AudioHapticFileDescriptor, hapticFd: AudioHapticFileDescriptor): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -196,6 +204,8 @@ setAudioLatencyMode(id:number, latencyMode: AudioLatencyMode): void
 
 **起始版本：** 11
 
+<!--Device-AudioHapticManager-setAudioLatencyMode(id:int, latencyMode: AudioLatencyMode): void--><!--Device-AudioHapticManager-setAudioLatencyMode(id:int, latencyMode: AudioLatencyMode): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
 **参数：**
@@ -233,6 +243,8 @@ setStreamUsage(id: number, usage: audio.StreamUsage): void
 设置音频流使用类型。
 
 **起始版本：** 11
+
+<!--Device-AudioHapticManager-setStreamUsage(id: int, usage: audio.StreamUsage): void--><!--Device-AudioHapticManager-setStreamUsage(id: int, usage: audio.StreamUsage): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -276,6 +288,8 @@ unregisterSource(id: number): Promise<void>
 > 对于不再需要使用的资源，建议应用及时取消注册，避免出现资源泄漏或资源数量超上限等问题。
 
 **起始版本：** 11
+
+<!--Device-AudioHapticManager-unregisterSource(id: int): Promise<void>--><!--Device-AudioHapticManager-unregisterSource(id: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 

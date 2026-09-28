@@ -8,6 +8,8 @@ class Event
 
 **起始版本：** 7
 
+<!--Device-contact-class Event--><!--Device-contact-class Event-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 ## 导入模块
@@ -30,6 +32,8 @@ static readonly CUSTOM_LABEL: 0
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Event-static readonly CUSTOM_LABEL: 0--><!--Device-Event-static readonly CUSTOM_LABEL: 0-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 ## EVENT_ANNIVERSARY
@@ -45,6 +49,8 @@ static readonly EVENT_ANNIVERSARY: 1
 **起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Event-static readonly EVENT_ANNIVERSARY: 1--><!--Device-Event-static readonly EVENT_ANNIVERSARY: 1-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -62,6 +68,8 @@ static readonly EVENT_BIRTHDAY: 3
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Event-static readonly EVENT_BIRTHDAY: 3--><!--Device-Event-static readonly EVENT_BIRTHDAY: 3-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 ## EVENT_OTHER
@@ -77,6 +85,8 @@ static readonly EVENT_OTHER: 2
 **起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Event-static readonly EVENT_OTHER: 2--><!--Device-Event-static readonly EVENT_OTHER: 2-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -94,6 +104,8 @@ eventDate: string
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Event-eventDate: string--><!--Device-Event-eventDate: string-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 ## INVALID_LABEL_ID
@@ -109,6 +121,8 @@ static readonly INVALID_LABEL_ID: -1
 **起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Event-static readonly INVALID_LABEL_ID: -1--><!--Device-Event-static readonly INVALID_LABEL_ID: -1-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -126,6 +140,8 @@ labelId?: number
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Event-labelId?: number--><!--Device-Event-labelId?: number-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 ## labelName
@@ -141,5 +157,7 @@ labelName?: string
 **起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Event-labelName?: string--><!--Device-Event-labelName?: string-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData

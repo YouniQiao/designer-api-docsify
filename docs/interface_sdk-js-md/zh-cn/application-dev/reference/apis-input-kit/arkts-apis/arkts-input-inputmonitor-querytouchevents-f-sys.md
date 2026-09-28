@@ -18,6 +18,8 @@ function queryTouchEvents(count: number) : Promise<Array<TouchEvent>>
 
 **需要权限：** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function queryTouchEvents(count: int) : Promise<Array<TouchEvent>>--><!--Device-inputMonitor-function queryTouchEvents(count: int) : Promise<Array<TouchEvent>>-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **系统接口：** 此接口为系统接口。

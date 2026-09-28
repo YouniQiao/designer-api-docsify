@@ -21,6 +21,8 @@ function cancel(agent: WantAgent, callback: AsyncCallback<void>): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-wantAgent-function cancel(agent: WantAgent, callback: AsyncCallback<void>): void--><!--Device-wantAgent-function cancel(agent: WantAgent, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -102,6 +104,8 @@ function cancel(agent: WantAgent): Promise<void>
 **替代接口：** [cancel](arkts-ability-wantagent-cancel-f.md)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-wantAgent-function cancel(agent: WantAgent): Promise<void>--><!--Device-wantAgent-function cancel(agent: WantAgent): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

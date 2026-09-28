@@ -10,6 +10,8 @@ interface StreamParam
 
 **起始版本：** 18
 
+<!--Device-abilityConnectionManager-interface StreamParam--><!--Device-abilityConnectionManager-interface StreamParam-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **系统接口：** 此接口为系统接口。
@@ -34,6 +36,8 @@ bitrate?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-StreamParam-bitrate?: int--><!--Device-StreamParam-bitrate?: int-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +55,8 @@ colorSpaceConversionTarget?: colorSpaceManager.ColorSpace
 **起始版本：** 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-StreamParam-colorSpaceConversionTarget?: colorSpaceManager.ColorSpace--><!--Device-StreamParam-colorSpaceConversionTarget?: colorSpaceManager.ColorSpace-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
@@ -70,6 +76,8 @@ name: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-StreamParam-name: string--><!--Device-StreamParam-name: string-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **系统接口：** 此接口为系统接口。
@@ -87,6 +95,8 @@ role: StreamRole
 **起始版本：** 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-StreamParam-role: StreamRole--><!--Device-StreamParam-role: StreamRole-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 

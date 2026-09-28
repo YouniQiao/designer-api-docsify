@@ -8,6 +8,8 @@ HTTP请求上下文数据。该对象实例在拦截器的[interceptorHandle](ar
 
 **起始版本：** 22
 
+<!--Device-http-export interface HttpRequestContext--><!--Device-http-export interface HttpRequestContext-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块
@@ -30,6 +32,8 @@ The header of an HTTP request interceptor. It can be modified in an interceptor.
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
+<!--Device-HttpRequestContext-body: Object--><!--Device-HttpRequestContext-body: Object-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## header
@@ -46,6 +50,8 @@ The header of an HTTP request interceptor. It can be modified in an interceptor.
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
+<!--Device-HttpRequestContext-header: Object--><!--Device-HttpRequestContext-header: Object-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## url
@@ -61,5 +67,7 @@ The URL of an HTTP request interceptor. It can be modified in an interceptor.
 **起始版本：** 22
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-HttpRequestContext-url: string--><!--Device-HttpRequestContext-url: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack

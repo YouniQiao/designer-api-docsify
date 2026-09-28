@@ -8,6 +8,8 @@ Describes the notification contents.
 
 **Since:** 7
 
+<!--Device-unnamed-export interface NotificationContent--><!--Device-unnamed-export interface NotificationContent-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 ## longText
@@ -21,6 +23,8 @@ Long text notification content. This parameter is used when **notificationConten
 **Type:** [NotificationLongTextContent](arkts-notification-notificationcontent-notificationlongtextcontent-i.md)
 
 **Since:** 7
+
+<!--Device-NotificationContent-longText?: NotificationLongTextContent--><!--Device-NotificationContent-longText?: NotificationLongTextContent-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -36,6 +40,8 @@ Multi-line notification content. This parameter is used when **notificationConte
 
 **Since:** 7
 
+<!--Device-NotificationContent-multiLine?: NotificationMultiLineContent--><!--Device-NotificationContent-multiLine?: NotificationMultiLineContent-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 ## normal
@@ -49,6 +55,8 @@ Basic notification content. This parameter is used when **notificationContentTyp
 **Type:** [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md)
 
 **Since:** 7
+
+<!--Device-NotificationContent-normal?: NotificationBasicContent--><!--Device-NotificationContent-normal?: NotificationBasicContent-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -64,6 +72,8 @@ Notification content type, used to specify the content layout type of the notifi
 
 **Since:** 11
 
+<!--Device-NotificationContent-notificationContentType?: notificationManager.ContentType--><!--Device-NotificationContent-notificationContentType?: notificationManager.ContentType-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 ## picture
@@ -78,6 +88,8 @@ Picture notification content. This parameter is used when **notificationContentT
 
 **Since:** 7
 
+<!--Device-NotificationContent-picture?: NotificationPictureContent--><!--Device-NotificationContent-picture?: NotificationPictureContent-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 ## systemLiveView
@@ -91,6 +103,8 @@ System live view notification content. Third-party applications are not supporte
 **Type:** [NotificationSystemLiveViewContent](arkts-notification-notificationcontent-notificationsystemliveviewcontent-i.md)
 
 **Since:** 11
+
+<!--Device-NotificationContent-systemLiveView?: NotificationSystemLiveViewContent--><!--Device-NotificationContent-systemLiveView?: NotificationSystemLiveViewContent-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -109,5 +123,7 @@ Notification content type.
 **Deprecated since:** 11
 
 **Substitutes:** [notificationContentType](#notificationcontenttype)
+
+<!--Device-NotificationContent-contentType?: notification.ContentType--><!--Device-NotificationContent-contentType?: notification.ContentType-End-->
 
 **System capability:** SystemCapability.Notification.Notification

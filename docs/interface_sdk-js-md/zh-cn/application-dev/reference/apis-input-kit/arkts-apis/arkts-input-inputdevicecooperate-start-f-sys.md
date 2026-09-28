@@ -20,6 +20,8 @@ function start(sinkDeviceDescriptor: string, srcInputDeviceId: number, callback:
 
 **替代接口：** [activateCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-activatecooperate-f-sys.md)
 
+<!--Device-inputDeviceCooperate-function start(sinkDeviceDescriptor: string, srcInputDeviceId: number, callback: AsyncCallback<void>): void--><!--Device-inputDeviceCooperate-function start(sinkDeviceDescriptor: string, srcInputDeviceId: number, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Cooperator
 
 **系统接口：** 此接口为系统接口。
@@ -89,6 +91,8 @@ function start(sinkDeviceDescriptor: string, srcInputDeviceId: number): Promise<
 **废弃版本：** 23
 
 **替代接口：** [activateCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-activatecooperate-f-sys.md)
+
+<!--Device-inputDeviceCooperate-function start(sinkDeviceDescriptor: string, srcInputDeviceId: number): Promise<void>--><!--Device-inputDeviceCooperate-function start(sinkDeviceDescriptor: string, srcInputDeviceId: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Cooperator
 

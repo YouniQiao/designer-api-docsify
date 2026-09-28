@@ -20,6 +20,8 @@ function savePdfFileJob(jobId: string, fd: number): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-print-function savePdfFileJob(jobId: string, fd: int): Promise<void>--><!--Device-print-function savePdfFileJob(jobId: string, fd: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **系统接口：** 此接口为系统接口。

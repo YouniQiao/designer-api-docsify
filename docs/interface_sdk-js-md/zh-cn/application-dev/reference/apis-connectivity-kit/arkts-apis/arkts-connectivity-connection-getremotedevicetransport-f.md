@@ -20,6 +20,8 @@ function getRemoteDeviceTransport(deviceId: string): BluetoothTransport
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-connection-function getRemoteDeviceTransport(deviceId: string): BluetoothTransport--><!--Device-connection-function getRemoteDeviceTransport(deviceId: string): BluetoothTransport-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**

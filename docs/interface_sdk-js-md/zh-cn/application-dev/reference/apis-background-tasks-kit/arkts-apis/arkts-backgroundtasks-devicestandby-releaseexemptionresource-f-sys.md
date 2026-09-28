@@ -18,6 +18,8 @@ function releaseExemptionResource(request: ResourceRequest): void
 
 **需要权限：** ohos.permission.DEVICE_STANDBY_EXEMPTION
 
+<!--Device-deviceStandby-function releaseExemptionResource(request: ResourceRequest): void--><!--Device-deviceStandby-function releaseExemptionResource(request: ResourceRequest): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.DeviceStandby
 
 **系统接口：** 此接口为系统接口。

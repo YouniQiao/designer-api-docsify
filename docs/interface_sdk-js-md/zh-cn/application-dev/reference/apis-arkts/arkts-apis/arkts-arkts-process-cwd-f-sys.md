@@ -16,6 +16,8 @@ function cwd(): string
 
 **起始版本：** 7
 
+<!--Device-process-function cwd(): string--><!--Device-process-function cwd(): string-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **系统接口：** 此接口为系统接口。

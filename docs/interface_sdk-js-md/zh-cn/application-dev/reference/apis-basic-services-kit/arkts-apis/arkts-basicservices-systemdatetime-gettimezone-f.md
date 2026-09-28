@@ -16,6 +16,8 @@ function getTimezone(callback: AsyncCallback<string>): void
 
 **起始版本：** 9
 
+<!--Device-systemDateTime-function getTimezone(callback: AsyncCallback<string>): void--><!--Device-systemDateTime-function getTimezone(callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Time
 
 **参数：**
@@ -55,6 +57,8 @@ function getTimezone(): Promise<string>
 获取系统时区，使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-systemDateTime-function getTimezone(): Promise<string>--><!--Device-systemDateTime-function getTimezone(): Promise<string>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Time
 

@@ -8,6 +8,8 @@ export interface CertBlob
 
 **起始版本：** 26.0.0
 
+<!--Device-certificateManager-export interface CertBlob--><!--Device-certificateManager-export interface CertBlob-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
 
 ## 导入模块
@@ -30,6 +32,8 @@ certData: Uint8Array
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-CertBlob-certData: Uint8Array--><!--Device-CertBlob-certData: Uint8Array-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
 
 ## certFormat
@@ -46,6 +50,8 @@ certFormat? : CertFileFormat
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-CertBlob-certFormat? : CertFileFormat--><!--Device-CertBlob-certFormat? : CertFileFormat-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
 
 ## certScope
@@ -61,5 +67,7 @@ certScope? : CertScope
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-CertBlob-certScope? : CertScope--><!--Device-CertBlob-certScope? : CertScope-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManager

@@ -18,6 +18,8 @@ function create(config: FloatViewConfiguration): Promise<FloatViewController>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-floatView-function create(config: FloatViewConfiguration): Promise<FloatViewController>--><!--Device-floatView-function create(config: FloatViewConfiguration): Promise<FloatViewController>-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**

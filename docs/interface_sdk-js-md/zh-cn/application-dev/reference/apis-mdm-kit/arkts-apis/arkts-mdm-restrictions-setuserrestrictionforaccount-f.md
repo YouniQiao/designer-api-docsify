@@ -24,6 +24,8 @@ function setUserRestrictionForAccount(admin: Want, settingsItem: string, account
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-restrictions-function setUserRestrictionForAccount(admin: Want, settingsItem: string, accountId: int, restricted: boolean): void--><!--Device-restrictions-function setUserRestrictionForAccount(admin: Want, settingsItem: string, accountId: int, restricted: boolean): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -82,6 +84,8 @@ function setUserRestrictionForAccount(admin: Want, settingsItem: SettingsForAcco
 **需要权限：** ohos.permission.ENTERPRISE_SET_USER_RESTRICTION
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-restrictions-function setUserRestrictionForAccount(admin: Want, settingsItem: SettingsForAccount, accountId: int, restricted: boolean): void--><!--Device-restrictions-function setUserRestrictionForAccount(admin: Want, settingsItem: SettingsForAccount, accountId: int, restricted: boolean): void-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

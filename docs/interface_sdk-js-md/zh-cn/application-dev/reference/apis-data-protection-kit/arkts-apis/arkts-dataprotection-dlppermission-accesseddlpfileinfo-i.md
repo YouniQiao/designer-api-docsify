@@ -8,6 +8,8 @@ export interface AccessedDLPFileInfo
 
 **起始版本：** 10
 
+<!--Device-dlpPermission-export interface AccessedDLPFileInfo--><!--Device-dlpPermission-export interface AccessedDLPFileInfo-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## 导入模块
@@ -28,6 +30,8 @@ lastOpenTime: number
 
 **起始版本：** 10
 
+<!--Device-AccessedDLPFileInfo-lastOpenTime: number--><!--Device-AccessedDLPFileInfo-lastOpenTime: number-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## uri
@@ -41,5 +45,7 @@ uri: string
 **类型：** string
 
 **起始版本：** 10
+
+<!--Device-AccessedDLPFileInfo-uri: string--><!--Device-AccessedDLPFileInfo-uri: string-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention

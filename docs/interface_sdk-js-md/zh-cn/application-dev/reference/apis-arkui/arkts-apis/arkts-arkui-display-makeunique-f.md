@@ -18,6 +18,8 @@ function makeUnique(screenId: number): Promise<void>
 
 **需要权限：** ohos.permission.ACCESS_VIRTUAL_SCREEN
 
+<!--Device-display-function makeUnique(screenId: long): Promise<void>--><!--Device-display-function makeUnique(screenId: long): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**

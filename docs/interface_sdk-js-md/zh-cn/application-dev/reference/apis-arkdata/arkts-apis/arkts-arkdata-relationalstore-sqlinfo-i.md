@@ -8,6 +8,8 @@ interface SqlInfo
 
 **起始版本：** 20
 
+<!--Device-relationalStore-interface SqlInfo--><!--Device-relationalStore-interface SqlInfo-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ args: Array<ValueType>
 
 **起始版本：** 20
 
+<!--Device-SqlInfo-args: Array<ValueType>--><!--Device-SqlInfo-args: Array<ValueType>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## sql
@@ -41,5 +45,7 @@ sql: string
 **类型：** string
 
 **起始版本：** 20
+
+<!--Device-SqlInfo-sql: string--><!--Device-SqlInfo-sql: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core

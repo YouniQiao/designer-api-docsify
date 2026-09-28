@@ -8,6 +8,8 @@ Trail optimization configuration for spring animations.
 
 **Since:** 26.0.0
 
+<!--Device-curves-interface TrailOptimization--><!--Device-curves-interface TrailOptimization-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -34,6 +36,8 @@ Animation progress threshold. <br>Value range: [0, 1].
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-TrailOptimization-progressThreshold?: number--><!--Device-TrailOptimization-progressThreshold?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -53,6 +57,8 @@ Response decay factor. Value range: (0, 1].
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-TrailOptimization-responseDecayFactor?: number--><!--Device-TrailOptimization-responseDecayFactor?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

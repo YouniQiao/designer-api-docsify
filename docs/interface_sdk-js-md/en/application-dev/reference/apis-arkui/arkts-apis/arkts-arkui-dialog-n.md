@@ -10,6 +10,8 @@ Provides unified dialog APIs.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-unnamed-declare namespace dialog--><!--Device-unnamed-declare namespace dialog-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import

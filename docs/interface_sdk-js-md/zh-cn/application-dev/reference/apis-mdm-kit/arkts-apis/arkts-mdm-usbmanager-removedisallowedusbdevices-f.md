@@ -26,6 +26,8 @@ function removeDisallowedUsbDevices(admin: Want, usbDevices: Array<UsbDeviceType
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-usbManager-function removeDisallowedUsbDevices(admin: Want, usbDevices: Array<UsbDeviceType>): void--><!--Device-usbManager-function removeDisallowedUsbDevices(admin: Want, usbDevices: Array<UsbDeviceType>): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**

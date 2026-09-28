@@ -8,6 +8,8 @@ export interface Options
 
 **起始版本：** 11
 
+<!--Device-unnamed-export interface Options--><!--Device-unnamed-export interface Options-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## 导入模块
@@ -27,5 +29,7 @@ encoding?: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-Options-encoding?: string--><!--Device-Options-encoding?: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO

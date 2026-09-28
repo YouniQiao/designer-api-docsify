@@ -14,6 +14,8 @@ interface DeviceClass
 
 **替代接口：** [DeviceClass](arkts-connectivity-bluetoothmanager-deviceclass-i.md)
 
+<!--Device-bluetooth-interface DeviceClass--><!--Device-bluetooth-interface DeviceClass-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -38,6 +40,8 @@ classOfDevice: number
 
 **替代接口：** [classOfDevice](arkts-connectivity-bluetoothmanager-deviceclass-i.md#classofdevice)
 
+<!--Device-DeviceClass-classOfDevice: number--><!--Device-DeviceClass-classOfDevice: number-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## majorClass
@@ -56,6 +60,8 @@ majorClass: MajorClass
 
 **替代接口：** [majorClass](arkts-connectivity-bluetoothmanager-deviceclass-i.md#majorclass)
 
+<!--Device-DeviceClass-majorClass: MajorClass--><!--Device-DeviceClass-majorClass: MajorClass-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## majorMinorClass
@@ -73,5 +79,7 @@ majorMinorClass: MajorMinorClass
 **废弃版本：** 9
 
 **替代接口：** [majorMinorClass](arkts-connectivity-bluetoothmanager-deviceclass-i.md#majorminorclass)
+
+<!--Device-DeviceClass-majorMinorClass: MajorMinorClass--><!--Device-DeviceClass-majorMinorClass: MajorMinorClass-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

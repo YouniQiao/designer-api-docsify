@@ -10,6 +10,8 @@ TCPSocket连接的其他属性。继承自[ExtraOptionsBase](arkts-network-socke
 
 **起始版本：** 7
 
+<!--Device-socket-export interface TCPExtraOptions extends ExtraOptionsBase--><!--Device-socket-export interface TCPExtraOptions extends ExtraOptionsBase-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块
@@ -30,6 +32,8 @@ keepAlive?: boolean
 
 **起始版本：** 7
 
+<!--Device-TCPExtraOptions-keepAlive?: boolean--><!--Device-TCPExtraOptions-keepAlive?: boolean-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## OOBInline
@@ -43,6 +47,8 @@ OOBInline?: boolean
 **类型：** boolean
 
 **起始版本：** 7
+
+<!--Device-TCPExtraOptions-OOBInline?: boolean--><!--Device-TCPExtraOptions-OOBInline?: boolean-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -63,6 +69,8 @@ socket是否继续逗留。
 
 **起始版本：** 7
 
+<!--Device-TCPExtraOptions-socketLinger?: {on: boolean, linger: int}--><!--Device-TCPExtraOptions-socketLinger?: {on: boolean, linger: int}-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## tcpFastOpen
@@ -81,6 +89,8 @@ tcpFastOpen?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TCPExtraOptions-tcpFastOpen?: boolean--><!--Device-TCPExtraOptions-tcpFastOpen?: boolean-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## TCPNoDelay
@@ -94,5 +104,7 @@ TCPSocket连接是否无时延。默认为false。true：无时延；false：有
 **类型：** boolean
 
 **起始版本：** 7
+
+<!--Device-TCPExtraOptions-TCPNoDelay?: boolean--><!--Device-TCPExtraOptions-TCPNoDelay?: boolean-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack

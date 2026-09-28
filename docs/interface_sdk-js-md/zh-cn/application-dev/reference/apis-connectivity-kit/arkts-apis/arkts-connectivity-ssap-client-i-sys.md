@@ -12,6 +12,8 @@ SSAP客户端类，提供了和服务端进行连接和数据传输等操作方�
 
 **起始版本：** 26.0.0
 
+<!--Device-ssap-interface Client--><!--Device-ssap-interface Client-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## 导入模块
@@ -33,6 +35,8 @@ callMethod(method: Method): Promise<Method>
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Client-callMethod(method: Method): Promise<Method>--><!--Device-Client-callMethod(method: Method): Promise<Method>-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -73,6 +77,8 @@ offEventNotify(callback?: Callback<Event>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Client-offEventNotify(callback?: Callback<Event>): void--><!--Device-Client-offEventNotify(callback?: Callback<Event>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **系统接口：** 此接口为系统接口。
@@ -97,6 +103,8 @@ onEventNotify(callback: Callback<Event>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Client-onEventNotify(callback: Callback<Event>): void--><!--Device-Client-onEventNotify(callback: Callback<Event>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **系统接口：** 此接口为系统接口。
@@ -120,6 +128,8 @@ readDescriptor(descriptor: PropertyDescriptor): Promise<PropertyDescriptor>
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Client-readDescriptor(descriptor: PropertyDescriptor): Promise<PropertyDescriptor>--><!--Device-Client-readDescriptor(descriptor: PropertyDescriptor): Promise<PropertyDescriptor>-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -161,6 +171,8 @@ setPropertyIndication(property: Property, enable: boolean): Promise<void>
 **需要权限：** ohos.permission.ACCESS_NEARLINK and ohos.permission.MANAGE_NEARLINK
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Client-setPropertyIndication(property: Property, enable: boolean): Promise<void>--><!--Device-Client-setPropertyIndication(property: Property, enable: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -210,6 +222,8 @@ writeDescriptor(descriptor: PropertyDescriptor): Promise<void>
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Client-writeDescriptor(descriptor: PropertyDescriptor): Promise<void>--><!--Device-Client-writeDescriptor(descriptor: PropertyDescriptor): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 

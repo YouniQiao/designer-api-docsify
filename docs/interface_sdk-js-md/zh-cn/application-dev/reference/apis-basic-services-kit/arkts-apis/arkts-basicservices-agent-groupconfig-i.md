@@ -8,6 +8,8 @@ interface GroupConfig
 
 **起始版本：** 15
 
+<!--Device-agent-interface GroupConfig--><!--Device-agent-interface GroupConfig-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## 导入模块
@@ -33,6 +35,8 @@ gauge?: boolean
 
 **起始版本：** 15
 
+<!--Device-GroupConfig-gauge?: boolean--><!--Device-GroupConfig-gauge?: boolean-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## notification
@@ -46,5 +50,7 @@ notification: Notification
 **类型：** [Notification](arkts-basicservices-agent-notification-i.md)
 
 **起始版本：** 15
+
+<!--Device-GroupConfig-notification: Notification--><!--Device-GroupConfig-notification: Notification-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent

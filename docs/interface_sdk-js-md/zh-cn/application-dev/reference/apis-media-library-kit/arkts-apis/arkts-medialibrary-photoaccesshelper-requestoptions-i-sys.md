@@ -8,6 +8,8 @@ interface RequestOptions
 
 **起始版本：** 11
 
+<!--Device-photoAccessHelper-interface RequestOptions--><!--Device-photoAccessHelper-interface RequestOptions-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
@@ -27,6 +29,8 @@ sourceMode?: SourceMode
 **类型：** [SourceMode](arkts-medialibrary-photoaccesshelper-sourcemode-e-sys.md)
 
 **起始版本：** 11
+
+<!--Device-RequestOptions-sourceMode?: SourceMode--><!--Device-RequestOptions-sourceMode?: SourceMode-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

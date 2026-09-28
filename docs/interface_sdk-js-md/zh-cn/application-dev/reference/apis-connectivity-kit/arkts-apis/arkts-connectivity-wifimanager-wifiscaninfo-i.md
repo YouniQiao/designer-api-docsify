@@ -8,6 +8,8 @@ Wi-Fi热点信息。
 
 **起始版本：** 9
 
+<!--Device-wifiManager-interface WifiScanInfo--><!--Device-wifiManager-interface WifiScanInfo-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## 导入模块
@@ -28,6 +30,8 @@ Wi-Fi接入点的频段，1表示2.4GHz；2表示5GHz。
 
 **起始版本：** 9
 
+<!--Device-WifiScanInfo-band: int--><!--Device-WifiScanInfo-band: int-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## bssid
@@ -42,7 +46,9 @@ bssid: string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WifiScanInfo-bssid: string--><!--Device-WifiScanInfo-bssid: string-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -58,7 +64,9 @@ bssidType: DeviceAddressType
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WifiScanInfo-bssidType: DeviceAddressType--><!--Device-WifiScanInfo-bssidType: DeviceAddressType-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -74,6 +82,8 @@ capabilities: string
 
 **起始版本：** 9
 
+<!--Device-WifiScanInfo-capabilities: string--><!--Device-WifiScanInfo-capabilities: string-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## centerFrequency0
@@ -87,6 +97,8 @@ centerFrequency0: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-WifiScanInfo-centerFrequency0: int--><!--Device-WifiScanInfo-centerFrequency0: int-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -102,6 +114,8 @@ centerFrequency1: number
 
 **起始版本：** 9
 
+<!--Device-WifiScanInfo-centerFrequency1: int--><!--Device-WifiScanInfo-centerFrequency1: int-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## channelWidth
@@ -115,6 +129,8 @@ Wi-Fi接入点的带宽，具体定义参见[WifiChannelWidth](arkts-connectivit
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-WifiScanInfo-channelWidth: int--><!--Device-WifiScanInfo-channelWidth: int-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -130,7 +146,9 @@ Wi-Fi接入点的频率。
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WifiScanInfo-frequency: int--><!--Device-WifiScanInfo-frequency: int-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -146,6 +164,8 @@ infoElems: Array<WifiInfoElem>
 
 **起始版本：** 9
 
+<!--Device-WifiScanInfo-infoElems: Array<WifiInfoElem>--><!--Device-WifiScanInfo-infoElems: Array<WifiInfoElem>-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## isHiLinkNetwork
@@ -159,6 +179,8 @@ isHiLinkNetwork: boolean
 **类型：** boolean
 
 **起始版本：** 12
+
+<!--Device-WifiScanInfo-isHiLinkNetwork: boolean--><!--Device-WifiScanInfo-isHiLinkNetwork: boolean-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -174,7 +196,9 @@ rssi: number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WifiScanInfo-rssi: int--><!--Device-WifiScanInfo-rssi: int-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -190,7 +214,9 @@ Wi-Fi加密类型。
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WifiScanInfo-securityType: WifiSecurityType--><!--Device-WifiScanInfo-securityType: WifiSecurityType-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -206,7 +232,9 @@ ssid: string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WifiScanInfo-ssid: string--><!--Device-WifiScanInfo-ssid: string-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -222,6 +250,8 @@ supportedWifiCategory: WifiCategory
 
 **起始版本：** 12
 
+<!--Device-WifiScanInfo-supportedWifiCategory: WifiCategory--><!--Device-WifiScanInfo-supportedWifiCategory: WifiCategory-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## timestamp
@@ -235,5 +265,7 @@ timestamp: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-WifiScanInfo-timestamp: long--><!--Device-WifiScanInfo-timestamp: long-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA

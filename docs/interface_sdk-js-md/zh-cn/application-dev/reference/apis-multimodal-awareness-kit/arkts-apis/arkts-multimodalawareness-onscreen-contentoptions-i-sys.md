@@ -8,6 +8,8 @@ export interface ContentOptions
 
 **起始版本：** 20
 
+<!--Device-onScreen-export interface ContentOptions--><!--Device-onScreen-export interface ContentOptions-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ contentUnderstand?: boolean
 
 **起始版本：** 20
 
+<!--Device-ContentOptions-contentUnderstand?: boolean--><!--Device-ContentOptions-contentUnderstand?: boolean-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ pageLink?: boolean
 **类型：** boolean
 
 **起始版本：** 20
+
+<!--Device-ContentOptions-pageLink?: boolean--><!--Device-ContentOptions-pageLink?: boolean-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -62,6 +68,8 @@ textOnly?: boolean
 
 **起始版本：** 20
 
+<!--Device-ContentOptions-textOnly?: boolean--><!--Device-ContentOptions-textOnly?: boolean-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +85,8 @@ windowId?: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-ContentOptions-windowId?: int--><!--Device-ContentOptions-windowId?: int-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 

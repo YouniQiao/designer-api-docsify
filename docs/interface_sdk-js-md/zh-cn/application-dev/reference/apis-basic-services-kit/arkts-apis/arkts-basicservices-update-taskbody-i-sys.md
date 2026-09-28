@@ -8,6 +8,8 @@ export interface TaskBody
 
 **起始版本：** 9
 
+<!--Device-update-export interface TaskBody--><!--Device-update-export interface TaskBody-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ errorMessages: Array<ErrorMessage>
 
 **起始版本：** 9
 
+<!--Device-TaskBody-errorMessages: Array<ErrorMessage>--><!--Device-TaskBody-errorMessages: Array<ErrorMessage>-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ installMode: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-TaskBody-installMode: int--><!--Device-TaskBody-installMode: int-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -62,6 +68,8 @@ progress: number
 
 **起始版本：** 9
 
+<!--Device-TaskBody-progress: int--><!--Device-TaskBody-progress: int-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +85,8 @@ status: UpgradeStatus
 **类型：** [UpgradeStatus](arkts-basicservices-update-upgradestatus-e-sys.md)
 
 **起始版本：** 9
+
+<!--Device-TaskBody-status: UpgradeStatus--><!--Device-TaskBody-status: UpgradeStatus-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -94,6 +104,8 @@ subStatus: number
 
 **起始版本：** 9
 
+<!--Device-TaskBody-subStatus: int--><!--Device-TaskBody-subStatus: int-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -110,6 +122,8 @@ versionComponents: Array<VersionComponent>
 
 **起始版本：** 9
 
+<!--Device-TaskBody-versionComponents: Array<VersionComponent>--><!--Device-TaskBody-versionComponents: Array<VersionComponent>-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -125,6 +139,8 @@ versionDigestInfo: VersionDigestInfo
 **类型：** [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md)
 
 **起始版本：** 9
+
+<!--Device-TaskBody-versionDigestInfo: VersionDigestInfo--><!--Device-TaskBody-versionDigestInfo: VersionDigestInfo-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
 

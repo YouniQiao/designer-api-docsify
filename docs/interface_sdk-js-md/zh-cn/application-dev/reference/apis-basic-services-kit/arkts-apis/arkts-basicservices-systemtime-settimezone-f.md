@@ -22,6 +22,8 @@ function setTimezone(timezone: string, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.SET_TIME_ZONE
 
+<!--Device-systemTime-function setTimezone(timezone: string, callback: AsyncCallback<void>): void--><!--Device-systemTime-function setTimezone(timezone: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Time
 
 **参数：**
@@ -74,6 +76,8 @@ function setTimezone(timezone: string): Promise<void>
 **替代接口：** [setTimezone](arkts-basicservices-systemdatetime-settimezone-f-sys.md)
 
 **需要权限：** ohos.permission.SET_TIME_ZONE
+
+<!--Device-systemTime-function setTimezone(timezone: string): Promise<void>--><!--Device-systemTime-function setTimezone(timezone: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Time
 

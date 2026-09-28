@@ -18,6 +18,8 @@ function disableHotspot(): void
 
 **需要权限：** ohos.permission.MANAGE_WIFI_HOTSPOT
 
+<!--Device-wifiManager-function disableHotspot(): void--><!--Device-wifiManager-function disableHotspot(): void-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
 **系统接口：** 此接口为系统接口。

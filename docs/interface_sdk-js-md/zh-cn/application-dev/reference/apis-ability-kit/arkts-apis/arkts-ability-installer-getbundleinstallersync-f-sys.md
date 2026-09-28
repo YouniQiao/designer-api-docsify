@@ -16,6 +16,8 @@ function getBundleInstallerSync(): BundleInstaller
 
 **起始版本：** 10
 
+<!--Device-installer-function getBundleInstallerSync(): BundleInstaller--><!--Device-installer-function getBundleInstallerSync(): BundleInstaller-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。

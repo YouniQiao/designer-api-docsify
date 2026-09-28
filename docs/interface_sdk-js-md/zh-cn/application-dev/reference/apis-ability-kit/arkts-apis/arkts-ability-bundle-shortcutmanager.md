@@ -4,6 +4,8 @@
 
 **起始版本：** 20
 
+<!--Device-unnamed-declare namespace shortcutManager--><!--Device-unnamed-declare namespace shortcutManager-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
 ## 导入模块

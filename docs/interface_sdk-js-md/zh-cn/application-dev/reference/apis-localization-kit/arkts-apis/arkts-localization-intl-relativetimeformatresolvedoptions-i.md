@@ -12,6 +12,8 @@ export interface RelativeTimeFormatResolvedOptions
 
 **替代接口：** [Intl.ResolvedRelativeTimeFormatOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions#return_value)
 
+<!--Device-intl-export interface RelativeTimeFormatResolvedOptions--><!--Device-intl-export interface RelativeTimeFormatResolvedOptions-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## 导入模块
@@ -38,6 +40,8 @@ locale: string
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-RelativeTimeFormatResolvedOptions-locale: string--><!--Device-RelativeTimeFormatResolvedOptions-locale: string-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## numberingSystem
@@ -59,6 +63,8 @@ numberingSystem: string
 **替代接口：** [Intl.ResolvedRelativeTimeFormatOptions.numberingSystem](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions#numberingsystem)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-RelativeTimeFormatResolvedOptions-numberingSystem: string--><!--Device-RelativeTimeFormatResolvedOptions-numberingSystem: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -82,6 +88,8 @@ numeric: string
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-RelativeTimeFormatResolvedOptions-numeric: string--><!--Device-RelativeTimeFormatResolvedOptions-numeric: string-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## style
@@ -103,5 +111,7 @@ style: string
 **替代接口：** [Intl.ResolvedRelativeTimeFormatOptions.style](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions#style)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-RelativeTimeFormatResolvedOptions-style: string--><!--Device-RelativeTimeFormatResolvedOptions-style: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n

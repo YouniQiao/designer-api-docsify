@@ -8,6 +8,8 @@ export enum CompressFlushMode
 
 **起始版本：** 12
 
+<!--Device-zlib-export enum CompressFlushMode--><!--Device-zlib-export enum CompressFlushMode-End-->
+
 **系统能力：** SystemCapability.BundleManager.Zlib
 
 ## NO_FLUSH
@@ -20,7 +22,9 @@ NO_FLUSH = 0
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-CompressFlushMode-NO_FLUSH = 0--><!--Device-CompressFlushMode-NO_FLUSH = 0-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -34,7 +38,9 @@ PARTIAL_FLUSH = 1
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-CompressFlushMode-PARTIAL_FLUSH = 1--><!--Device-CompressFlushMode-PARTIAL_FLUSH = 1-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -48,7 +54,9 @@ SYNC_FLUSH = 2
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-CompressFlushMode-SYNC_FLUSH = 2--><!--Device-CompressFlushMode-SYNC_FLUSH = 2-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -62,7 +70,9 @@ FULL_FLUSH = 3
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-CompressFlushMode-FULL_FLUSH = 3--><!--Device-CompressFlushMode-FULL_FLUSH = 3-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -76,7 +86,9 @@ FINISH = 4
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-CompressFlushMode-FINISH = 4--><!--Device-CompressFlushMode-FINISH = 4-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -90,7 +102,9 @@ BLOCK = 5
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-CompressFlushMode-BLOCK = 5--><!--Device-CompressFlushMode-BLOCK = 5-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -104,6 +118,8 @@ TREES = 6
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-CompressFlushMode-TREES = 6--><!--Device-CompressFlushMode-TREES = 6-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib

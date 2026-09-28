@@ -23,6 +23,8 @@ function cancelAsBundle(
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
 
+<!--Device-notificationManager-function cancelAsBundle(    id: int,    representativeBundle: string,    userId: int,    callback: AsyncCallback<void>  ): void--><!--Device-notificationManager-function cancelAsBundle(    id: int,    representativeBundle: string,    userId: int,    callback: AsyncCallback<void>  ): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -84,6 +86,8 @@ function cancelAsBundle(id: number, representativeBundle: string, userId: number
 **起始版本：** 9
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
+
+<!--Device-notificationManager-function cancelAsBundle(id: int, representativeBundle: string, userId: int): Promise<void>--><!--Device-notificationManager-function cancelAsBundle(id: int, representativeBundle: string, userId: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -147,6 +151,8 @@ function cancelAsBundle(representativeBundle: BundleOption, id: number): Promise
 **起始版本：** 12
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
+
+<!--Device-notificationManager-function cancelAsBundle(representativeBundle: BundleOption, id: int): Promise<void>--><!--Device-notificationManager-function cancelAsBundle(representativeBundle: BundleOption, id: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

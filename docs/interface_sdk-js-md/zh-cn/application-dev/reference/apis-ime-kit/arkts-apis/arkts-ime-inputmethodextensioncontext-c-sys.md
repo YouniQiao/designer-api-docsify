@@ -47,6 +47,8 @@ this.context.startAbility(targetWant);
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare class InputMethodExtensionContext extends ExtensionContext--><!--Device-unnamed-declare class InputMethodExtensionContext extends ExtensionContext-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## 导入模块
@@ -71,6 +73,8 @@ connectAbility(want: Want, options: ConnectOptions): number
 **废弃版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-InputMethodExtensionContext-connectAbility(want: Want, options: ConnectOptions): number--><!--Device-InputMethodExtensionContext-connectAbility(want: Want, options: ConnectOptions): number-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -120,6 +124,8 @@ connectAbilityWithAccount(want: Want, accountId: number): number
 **需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-InputMethodExtensionContext-connectAbilityWithAccount(want: Want, accountId: number): number--><!--Device-InputMethodExtensionContext-connectAbilityWithAccount(want: Want, accountId: number): number-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -173,6 +179,8 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-InputMethodExtensionContext-connectServiceExtensionAbility(want: Want, options: ConnectOptions): number--><!--Device-InputMethodExtensionContext-connectServiceExtensionAbility(want: Want, options: ConnectOptions): number-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **系统接口：** 此接口为系统接口。
@@ -220,6 +228,8 @@ disconnectAbility(connection: number, callback: AsyncCallback<void>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-InputMethodExtensionContext-disconnectAbility(connection: number, callback: AsyncCallback<void>): void--><!--Device-InputMethodExtensionContext-disconnectAbility(connection: number, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **系统接口：** 此接口为系统接口。
@@ -254,6 +264,8 @@ disconnectAbility(connection: number): Promise<void>
 **废弃版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-InputMethodExtensionContext-disconnectAbility(connection: number): Promise<void>--><!--Device-InputMethodExtensionContext-disconnectAbility(connection: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -293,6 +305,8 @@ disconnectServiceExtensionAbility(connection: number, callback: AsyncCallback<vo
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-InputMethodExtensionContext-disconnectServiceExtensionAbility(connection: number, callback: AsyncCallback<void>): void--><!--Device-InputMethodExtensionContext-disconnectServiceExtensionAbility(connection: number, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **系统接口：** 此接口为系统接口。
@@ -330,6 +344,8 @@ disconnectServiceExtensionAbility(connection: number): Promise<void>
 **废弃版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-InputMethodExtensionContext-disconnectServiceExtensionAbility(connection: number): Promise<void>--><!--Device-InputMethodExtensionContext-disconnectServiceExtensionAbility(connection: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -370,6 +386,8 @@ startAbilityWithAccount(want: Want, accountId: number, callback: AsyncCallback<v
 **需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-InputMethodExtensionContext-startAbilityWithAccount(want: Want, accountId: number, callback: AsyncCallback<void>): void--><!--Device-InputMethodExtensionContext-startAbilityWithAccount(want: Want, accountId: number, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -423,6 +441,8 @@ startAbilityWithAccount(want: Want, accountId: number): Promise<void>
 **需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-InputMethodExtensionContext-startAbilityWithAccount(want: Want, accountId: number): Promise<void>--><!--Device-InputMethodExtensionContext-startAbilityWithAccount(want: Want, accountId: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -480,6 +500,8 @@ terminateSelf(callback: AsyncCallback<void>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-InputMethodExtensionContext-terminateSelf(callback: AsyncCallback<void>): void--><!--Device-InputMethodExtensionContext-terminateSelf(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **系统接口：** 此接口为系统接口。
@@ -507,6 +529,8 @@ terminateSelf(): Promise<void>
 **替代接口：** [destroy](arkts-ime-inputmethodextensioncontext-c.md#destroy)()
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-InputMethodExtensionContext-terminateSelf(): Promise<void>--><!--Device-InputMethodExtensionContext-terminateSelf(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 

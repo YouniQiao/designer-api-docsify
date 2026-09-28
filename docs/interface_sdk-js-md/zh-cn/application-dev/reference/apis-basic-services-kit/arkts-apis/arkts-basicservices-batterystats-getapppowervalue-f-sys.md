@@ -16,6 +16,8 @@ function getAppPowerValue(uid: number): number
 
 **起始版本：** 8
 
+<!--Device-batteryStats-function getAppPowerValue(uid: int): double--><!--Device-batteryStats-function getAppPowerValue(uid: int): double-End-->
+
 **系统能力：** SystemCapability.PowerManager.BatteryStatistics
 
 **系统接口：** 此接口为系统接口。

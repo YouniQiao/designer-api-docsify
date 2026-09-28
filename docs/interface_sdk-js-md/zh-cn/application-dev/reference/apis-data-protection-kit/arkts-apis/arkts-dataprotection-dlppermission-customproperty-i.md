@@ -8,6 +8,8 @@ export interface CustomProperty
 
 **起始版本：** 21
 
+<!--Device-dlpPermission-export interface CustomProperty--><!--Device-dlpPermission-export interface CustomProperty-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## 导入模块
@@ -28,6 +30,8 @@ enterprise: string
 
 **起始版本：** 21
 
+<!--Device-CustomProperty-enterprise: string--><!--Device-CustomProperty-enterprise: string-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## options
@@ -43,5 +47,7 @@ options?: DlpFileQueryOptions
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-CustomProperty-options?: DlpFileQueryOptions--><!--Device-CustomProperty-options?: DlpFileQueryOptions-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention

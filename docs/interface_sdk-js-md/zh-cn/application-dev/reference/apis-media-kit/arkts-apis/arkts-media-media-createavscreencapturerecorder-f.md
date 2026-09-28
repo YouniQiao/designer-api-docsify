@@ -16,6 +16,8 @@ function createAVScreenCaptureRecorder(): Promise<AVScreenCaptureRecorder>
 
 **起始版本：** 12
 
+<!--Device-media-function createAVScreenCaptureRecorder(): Promise<AVScreenCaptureRecorder>--><!--Device-media-function createAVScreenCaptureRecorder(): Promise<AVScreenCaptureRecorder>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 **返回值：**

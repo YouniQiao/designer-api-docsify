@@ -20,6 +20,8 @@ function isAppUid(v: number): boolean
 
 **替代接口：** [isAppUid](arkts-arkts-process-processmanager-c.md#isappuid)
 
+<!--Device-process-function isAppUid(v: number): boolean--><!--Device-process-function isAppUid(v: number): boolean-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**

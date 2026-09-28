@@ -8,6 +8,8 @@ interface ContinueCallbackInfo
 
 **起始版本：** 11
 
+<!--Device-distributedMissionManager-interface ContinueCallbackInfo--><!--Device-distributedMissionManager-interface ContinueCallbackInfo-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ info: ContinuableInfo
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ContinueCallbackInfo-info: ContinuableInfo--><!--Device-ContinueCallbackInfo-info: ContinuableInfo-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ state: ContinueState
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ContinueCallbackInfo-state: ContinueState--><!--Device-ContinueCallbackInfo-state: ContinueState-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 

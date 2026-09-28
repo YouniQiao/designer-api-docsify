@@ -8,6 +8,8 @@ export interface RotationSpeed
 
 **起始版本：** 20
 
+<!--Device-mechanicManager-export interface RotationSpeed--><!--Device-mechanicManager-export interface RotationSpeed-End-->
+
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ pitchSpeed?: number
 
 **起始版本：** 20
 
+<!--Device-RotationSpeed-pitchSpeed?: double--><!--Device-RotationSpeed-pitchSpeed?: double-End-->
+
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。
@@ -46,6 +50,8 @@ rollSpeed?: number
 
 **起始版本：** 20
 
+<!--Device-RotationSpeed-rollSpeed?: double--><!--Device-RotationSpeed-rollSpeed?: double-End-->
+
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +67,8 @@ yawSpeed?: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-RotationSpeed-yawSpeed?: double--><!--Device-RotationSpeed-yawSpeed?: double-End-->
 
 **系统能力：** SystemCapability.Mechanic.Core
 

@@ -8,6 +8,8 @@ interface AddressSanitizerPolicy
 
 **起始版本：** 24
 
+<!--Device-hiAppEvent-interface AddressSanitizerPolicy--><!--Device-hiAppEvent-interface AddressSanitizerPolicy-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 ## 导入模块
@@ -38,6 +40,8 @@ false：不使能地址越界事件的页面切换日志。
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-AddressSanitizerPolicy-pageSwitchLogEnable?: boolean--><!--Device-AddressSanitizerPolicy-pageSwitchLogEnable?: boolean-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent

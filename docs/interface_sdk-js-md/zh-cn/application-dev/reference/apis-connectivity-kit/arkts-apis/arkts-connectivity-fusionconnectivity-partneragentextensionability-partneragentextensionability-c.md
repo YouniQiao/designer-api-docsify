@@ -10,6 +10,8 @@ PartnerAgentExtensionAbility提供设备发现与扩展能力销毁的通知功�
 
 **起始版本：** 23
 
+<!--Device-unnamed-export default declare class PartnerAgentExtensionAbility extends ExtensionAbility--><!--Device-unnamed-export default declare class PartnerAgentExtensionAbility extends ExtensionAbility-End-->
+
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core
 
 ## 导入模块
@@ -29,6 +31,8 @@ onDestroyWithReason(reason: PartnerAgentExtensionAbilityDestroyReason): void
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PartnerAgentExtensionAbility-onDestroyWithReason(reason: PartnerAgentExtensionAbilityDestroyReason): void--><!--Device-PartnerAgentExtensionAbility-onDestroyWithReason(reason: PartnerAgentExtensionAbilityDestroyReason): void-End-->
 
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core
 
@@ -59,6 +63,8 @@ onDeviceDiscovered(deviceAddress: PartnerDeviceAddress): void
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PartnerAgentExtensionAbility-onDeviceDiscovered(deviceAddress: PartnerDeviceAddress): void--><!--Device-PartnerAgentExtensionAbility-onDeviceDiscovered(deviceAddress: PartnerDeviceAddress): void-End-->
 
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core
 
@@ -91,5 +97,7 @@ PartnerAgentExtensionAbility的上下文。
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PartnerAgentExtensionAbility-context: PartnerAgentExtensionContext--><!--Device-PartnerAgentExtensionAbility-context: PartnerAgentExtensionContext-End-->
 
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core

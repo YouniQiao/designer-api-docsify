@@ -8,6 +8,8 @@ interface StoreConfig
 
 **起始版本：** 9
 
+<!--Device-relationalStore-interface StoreConfig--><!--Device-relationalStore-interface StoreConfig-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## 导入模块
@@ -34,6 +36,8 @@ autoCleanDeviceDirtyData?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-StoreConfig-autoCleanDeviceDirtyData?: boolean--><!--Device-StoreConfig-autoCleanDeviceDirtyData?: boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **系统接口：** 此接口为系统接口。
@@ -54,6 +58,8 @@ haMode?: HAMode
 
 **起始版本：** 12
 
+<!--Device-StoreConfig-haMode?: HAMode--><!--Device-StoreConfig-haMode?: HAMode-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **系统接口：** 此接口为系统接口。
@@ -73,6 +79,8 @@ isSearchable?: boolean
 **类型：** boolean
 
 **起始版本：** 11
+
+<!--Device-StoreConfig-isSearchable?: boolean--><!--Device-StoreConfig-isSearchable?: boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 

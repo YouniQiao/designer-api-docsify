@@ -8,6 +8,8 @@ export interface SendMessageOptions
 
 **起始版本：** 6
 
+<!--Device-sms-export interface SendMessageOptions--><!--Device-sms-export interface SendMessageOptions-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 ## 导入模块
@@ -28,6 +30,8 @@ content: string | Array<number>
 
 **起始版本：** 6
 
+<!--Device-SendMessageOptions-content: string | Array<int>--><!--Device-SendMessageOptions-content: string | Array<int>-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 ## deliveryCallback
@@ -41,6 +45,8 @@ deliveryCallback?: AsyncCallback<IDeliveryShortMessageCallback>
 **类型：** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[IDeliveryShortMessageCallback](arkts-telephony-sms-ideliveryshortmessagecallback-i.md)&gt;
 
 **起始版本：** 6
+
+<!--Device-SendMessageOptions-deliveryCallback?: AsyncCallback<IDeliveryShortMessageCallback>--><!--Device-SendMessageOptions-deliveryCallback?: AsyncCallback<IDeliveryShortMessageCallback>-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -56,6 +62,8 @@ destinationHost: string
 
 **起始版本：** 6
 
+<!--Device-SendMessageOptions-destinationHost: string--><!--Device-SendMessageOptions-destinationHost: string-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 ## destinationPort
@@ -69,6 +77,8 @@ destinationPort?: number
 **类型：** number
 
 **起始版本：** 6
+
+<!--Device-SendMessageOptions-destinationPort?: int--><!--Device-SendMessageOptions-destinationPort?: int-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -84,6 +94,8 @@ sendCallback?: AsyncCallback<ISendShortMessageCallback>
 
 **起始版本：** 6
 
+<!--Device-SendMessageOptions-sendCallback?: AsyncCallback<ISendShortMessageCallback>--><!--Device-SendMessageOptions-sendCallback?: AsyncCallback<ISendShortMessageCallback>-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 ## serviceCenter
@@ -97,6 +109,8 @@ serviceCenter?: string
 **类型：** string
 
 **起始版本：** 6
+
+<!--Device-SendMessageOptions-serviceCenter?: string--><!--Device-SendMessageOptions-serviceCenter?: string-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -114,5 +128,7 @@ slotId: number
 **类型：** number
 
 **起始版本：** 6
+
+<!--Device-SendMessageOptions-slotId: int--><!--Device-SendMessageOptions-slotId: int-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms

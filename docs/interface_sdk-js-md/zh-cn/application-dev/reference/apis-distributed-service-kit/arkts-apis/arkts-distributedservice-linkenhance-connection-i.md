@@ -8,6 +8,8 @@ interface Connection
 
 **起始版本：** 20
 
+<!--Device-linkEnhance-interface Connection--><!--Device-linkEnhance-interface Connection-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 ## 导入模块
@@ -29,6 +31,8 @@ close(): void
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Connection-close(): void--><!--Device-Connection-close(): void-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
@@ -77,6 +81,8 @@ connect(): void
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Connection-connect(): void--><!--Device-Connection-connect(): void-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
@@ -129,6 +135,8 @@ disconnect(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Connection-disconnect(): void--><!--Device-Connection-disconnect(): void-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **错误码：**
@@ -177,6 +185,8 @@ getPeerDeviceId(): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Connection-getPeerDeviceId(): string--><!--Device-Connection-getPeerDeviceId(): string-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **返回值：**
@@ -224,6 +234,8 @@ off(type: 'connectResult', callback?: Callback<ConnectResult>): void
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Connection-off(type: 'connectResult', callback?: Callback<ConnectResult>): void--><!--Device-Connection-off(type: 'connectResult', callback?: Callback<ConnectResult>): void-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
@@ -281,6 +293,8 @@ off(type: 'disconnected', callback?: Callback<number>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Connection-off(type: 'disconnected', callback?: Callback<number>): void--><!--Device-Connection-off(type: 'disconnected', callback?: Callback<number>): void-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **参数：**
@@ -336,6 +350,8 @@ off(type: 'dataReceived', callback?: Callback<ArrayBuffer>): void
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Connection-off(type: 'dataReceived', callback?: Callback<ArrayBuffer>): void--><!--Device-Connection-off(type: 'dataReceived', callback?: Callback<ArrayBuffer>): void-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
@@ -394,6 +410,8 @@ on(type: 'connectResult', callback: Callback<ConnectResult>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Connection-on(type: 'connectResult', callback: Callback<ConnectResult>): void--><!--Device-Connection-on(type: 'connectResult', callback: Callback<ConnectResult>): void-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **参数：**
@@ -450,6 +468,8 @@ on(type: 'disconnected', callback: Callback<number>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Connection-on(type: 'disconnected', callback: Callback<number>): void--><!--Device-Connection-on(type: 'disconnected', callback: Callback<number>): void-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **参数：**
@@ -502,6 +522,8 @@ on(type: 'dataReceived', callback: Callback<ArrayBuffer>): void
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Connection-on(type: 'dataReceived', callback: Callback<ArrayBuffer>): void--><!--Device-Connection-on(type: 'dataReceived', callback: Callback<ArrayBuffer>): void-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
@@ -557,6 +579,8 @@ sendData(data: ArrayBuffer): void
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Connection-sendData(data: ArrayBuffer): void--><!--Device-Connection-sendData(data: ArrayBuffer): void-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 

@@ -8,6 +8,8 @@ interface ContactSyncInfo
 
 **起始版本：** 26.0.0
 
+<!--Device-contact-interface ContactSyncInfo--><!--Device-contact-interface ContactSyncInfo-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 ## 导入模块
@@ -34,6 +36,8 @@ completedBatches: Array<number>
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-ContactSyncInfo-completedBatches: Array<int>--><!--Device-ContactSyncInfo-completedBatches: Array<int>-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 ## lastSyncTime
@@ -51,6 +55,8 @@ lastSyncTime: number
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-ContactSyncInfo-lastSyncTime: int--><!--Device-ContactSyncInfo-lastSyncTime: int-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -70,6 +76,8 @@ mode: ContactSyncMode
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-ContactSyncInfo-mode: ContactSyncMode--><!--Device-ContactSyncInfo-mode: ContactSyncMode-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 ## syncId
@@ -88,6 +96,8 @@ syncId: number
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-ContactSyncInfo-syncId: int--><!--Device-ContactSyncInfo-syncId: int-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 ## totalBatches
@@ -105,5 +115,7 @@ totalBatches: number
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-ContactSyncInfo-totalBatches: int--><!--Device-ContactSyncInfo-totalBatches: int-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData

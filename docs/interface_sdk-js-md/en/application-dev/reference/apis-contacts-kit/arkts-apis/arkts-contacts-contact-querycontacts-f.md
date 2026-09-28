@@ -22,6 +22,8 @@ Queries all contacts. This API uses an asynchronous callback to return the resul
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryContacts(callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function queryContacts(callback: AsyncCallback<Array<Contact>>): void-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
@@ -60,6 +62,8 @@ Queries all contacts. This API uses an asynchronous callback to return the resul
 **Since:** 10
 
 **Required permissions:** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryContacts(context: Context, callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function queryContacts(context: Context, callback: AsyncCallback<Array<Contact>>): void-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -118,6 +122,8 @@ Queries all contacts based on the specified holder. This API uses an asynchronou
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryContacts(holder: Holder, callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function queryContacts(holder: Holder, callback: AsyncCallback<Array<Contact>>): void-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
@@ -161,6 +167,8 @@ Queries all contacts based on the specified holder. This API uses an asynchronou
 **Since:** 10
 
 **Required permissions:** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryContacts(context: Context, holder: Holder, callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function queryContacts(context: Context, holder: Holder, callback: AsyncCallback<Array<Contact>>): void-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -224,6 +232,8 @@ Queries all contacts based on the specified attributes. This API uses an asynchr
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryContacts(attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function queryContacts(attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
@@ -265,6 +275,8 @@ Queries all contacts based on the specified attributes. This API uses an asynchr
 **Since:** 10
 
 **Required permissions:** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryContacts(context: Context, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function queryContacts(context: Context, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -326,6 +338,8 @@ Queries all contacts based on the specified holder and attributes. This API uses
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryContacts(holder: Holder, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function queryContacts(holder: Holder, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
@@ -372,6 +386,8 @@ Queries all contacts based on the specified holder and attributes. This API uses
 **Since:** 10
 
 **Required permissions:** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryContacts(context: Context, holder: Holder, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function queryContacts(context: Context, holder: Holder, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -438,6 +454,8 @@ Queries all contacts based on the specified holder and attributes. This API uses
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryContacts(holder?: Holder, attrs?: ContactAttributes): Promise<Array<Contact>>--><!--Device-contact-function queryContacts(holder?: Holder, attrs?: ContactAttributes): Promise<Array<Contact>>-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
@@ -485,6 +503,8 @@ Queries all contacts based on the specified holder and attributes. This API uses
 **Since:** 10
 
 **Required permissions:** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryContacts(context: Context, holder?: Holder, attrs?: ContactAttributes): Promise<Array<Contact>>--><!--Device-contact-function queryContacts(context: Context, holder?: Holder, attrs?: ContactAttributes): Promise<Array<Contact>>-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 

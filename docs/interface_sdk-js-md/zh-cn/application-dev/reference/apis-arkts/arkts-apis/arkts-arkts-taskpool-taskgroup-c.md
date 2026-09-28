@@ -8,6 +8,8 @@ class TaskGroup
 
 **起始版本：** 10
 
+<!--Device-taskpool-class TaskGroup--><!--Device-taskpool-class TaskGroup-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -27,6 +29,8 @@ addTask(func: Function, ...args: Object[]): void
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-TaskGroup-addTask(func: Function, ...args: Object[]): void--><!--Device-TaskGroup-addTask(func: Function, ...args: Object[]): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -70,6 +74,8 @@ addTask(task: Task): void
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-TaskGroup-addTask(task: Task): void--><!--Device-TaskGroup-addTask(task: Task): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -112,6 +118,8 @@ TaskGroup的构造函数。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-TaskGroup-constructor()--><!--Device-TaskGroup-constructor()-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **示例**
@@ -133,6 +141,8 @@ TaskGroup的构造函数，支持指定任务组名称。
 **起始版本：** 11
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-TaskGroup-constructor(name: string)--><!--Device-TaskGroup-constructor(name: string)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -163,5 +173,7 @@ name: string
 **起始版本：** 11
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-TaskGroup-name: string--><!--Device-TaskGroup-name: string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

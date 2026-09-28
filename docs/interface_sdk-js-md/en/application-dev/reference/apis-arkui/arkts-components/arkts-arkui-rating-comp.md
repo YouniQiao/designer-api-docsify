@@ -34,6 +34,8 @@ Rating(options?: RatingOptions)
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-RatingInterface-(options?: RatingOptions): RatingAttribute--><!--Device-RatingInterface-(options?: RatingOptions): RatingAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

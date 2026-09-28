@@ -6,6 +6,8 @@
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare namespace hid--><!--Device-unnamed-declare namespace hid-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块

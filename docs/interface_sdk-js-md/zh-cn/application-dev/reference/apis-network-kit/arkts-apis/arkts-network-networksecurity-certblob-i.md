@@ -8,6 +8,8 @@ export interface CertBlob
 
 **起始版本：** 11
 
+<!--Device-networkSecurity-export interface CertBlob--><!--Device-networkSecurity-export interface CertBlob-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块
@@ -28,6 +30,8 @@ data: string | ArrayBuffer
 
 **起始版本：** 11
 
+<!--Device-CertBlob-data: string | ArrayBuffer--><!--Device-CertBlob-data: string | ArrayBuffer-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## type
@@ -41,5 +45,7 @@ type: CertType
 **类型：** [CertType](arkts-network-networksecurity-certtype-e.md)
 
 **起始版本：** 11
+
+<!--Device-CertBlob-type: CertType--><!--Device-CertBlob-type: CertType-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack

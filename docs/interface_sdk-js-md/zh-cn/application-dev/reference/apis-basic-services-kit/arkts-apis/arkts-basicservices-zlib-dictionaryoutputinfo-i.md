@@ -8,6 +8,8 @@ InflateGetDictionary和deflateGetDictionary这两个函数会返回值的相关�
 
 **起始版本：** 12
 
+<!--Device-zlib-interface DictionaryOutputInfo--><!--Device-zlib-interface DictionaryOutputInfo-End-->
+
 **系统能力：** SystemCapability.BundleManager.Zlib
 
 ## 导入模块
@@ -28,7 +30,9 @@ dictionaryLength: number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-DictionaryOutputInfo-dictionaryLength: int--><!--Device-DictionaryOutputInfo-dictionaryLength: int-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -44,6 +48,8 @@ status: ReturnStatus
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-DictionaryOutputInfo-status: ReturnStatus--><!--Device-DictionaryOutputInfo-status: ReturnStatus-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib

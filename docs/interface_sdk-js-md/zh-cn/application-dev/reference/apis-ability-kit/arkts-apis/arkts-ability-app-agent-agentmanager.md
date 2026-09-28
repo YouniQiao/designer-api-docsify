@@ -8,6 +8,8 @@ agentManager模块提供Agent管理能力，支持AgentExtensionAbility的连接
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-unnamed-declare namespace agentManager--><!--Device-unnamed-declare namespace agentManager-End-->
+
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 **系统接口：** 此接口为系统接口。

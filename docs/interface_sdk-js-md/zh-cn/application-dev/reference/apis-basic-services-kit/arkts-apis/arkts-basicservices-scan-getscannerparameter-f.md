@@ -18,6 +18,8 @@ function getScannerParameter(scannerId: string): Promise<ScannerParameter[]>
 
 **需要权限：** ohos.permission.PRINT
 
+<!--Device-scan-function getScannerParameter(scannerId: string): Promise<ScannerParameter[]>--><!--Device-scan-function getScannerParameter(scannerId: string): Promise<ScannerParameter[]>-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **参数：**

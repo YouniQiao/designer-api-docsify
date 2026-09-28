@@ -19,6 +19,8 @@ function getMainWindowSnapshot(windowId: Array<number>, config: WindowSnapshotCo
 
 **需要权限：** ohos.permission.CUSTOM_SCREEN_CAPTURE
 
+<!--Device-window-function getMainWindowSnapshot(windowId: Array<int>, config: WindowSnapshotConfiguration):    Promise<Array<image.PixelMap | undefined>>--><!--Device-window-function getMainWindowSnapshot(windowId: Array<int>, config: WindowSnapshotConfiguration):    Promise<Array<image.PixelMap | undefined>>-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**

@@ -10,6 +10,8 @@ export interface ContinueCallback
 
 **起始版本：** 9
 
+<!--Device-unnamed-export interface ContinueCallback--><!--Device-unnamed-export interface ContinueCallback-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -25,6 +27,8 @@ Mission迁移完成后调用，回调参数result返回迁移结果。当目标�
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ContinueCallback-onContinueDone: OnContinueDoneCallback--><!--Device-ContinueCallback-onContinueDone: OnContinueDoneCallback-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 

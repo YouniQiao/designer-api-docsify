@@ -22,6 +22,8 @@ function getPolicies(admin: Want, appId: string, callback: AsyncCallback<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-browser-function getPolicies(admin: Want, appId: string, callback: AsyncCallback<string>): void--><!--Device-browser-function getPolicies(admin: Want, appId: string, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -82,6 +84,8 @@ function getPolicies(admin: Want, appId: string): Promise<string>
 **替代接口：** [getPoliciesSync](arkts-mdm-browser-getpoliciessync-f.md)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-browser-function getPolicies(admin: Want, appId: string): Promise<string>--><!--Device-browser-function getPolicies(admin: Want, appId: string): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

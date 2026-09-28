@@ -22,6 +22,8 @@ function setTime(time: number, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.SET_TIME
 
+<!--Device-systemTime-function setTime(time: number, callback: AsyncCallback<void>): void--><!--Device-systemTime-function setTime(time: number, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Time
 
 **参数：**
@@ -76,6 +78,8 @@ function setTime(time: number): Promise<void>
 **替代接口：** [setTime](arkts-basicservices-systemdatetime-settime-f-sys.md)
 
 **需要权限：** ohos.permission.SET_TIME
+
+<!--Device-systemTime-function setTime(time: number): Promise<void>--><!--Device-systemTime-function setTime(time: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Time
 

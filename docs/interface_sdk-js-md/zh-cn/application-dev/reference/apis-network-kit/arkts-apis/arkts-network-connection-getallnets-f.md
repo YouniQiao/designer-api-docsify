@@ -18,6 +18,8 @@ function getAllNets(callback: AsyncCallback<Array<NetHandle>>): void
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-connection-function getAllNets(callback: AsyncCallback<Array<NetHandle>>): void--><!--Device-connection-function getAllNets(callback: AsyncCallback<Array<NetHandle>>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**
@@ -64,6 +66,8 @@ function getAllNets(): Promise<Array<NetHandle>>
 **起始版本：** 8
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
+
+<!--Device-connection-function getAllNets(): Promise<Array<NetHandle>>--><!--Device-connection-function getAllNets(): Promise<Array<NetHandle>>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 

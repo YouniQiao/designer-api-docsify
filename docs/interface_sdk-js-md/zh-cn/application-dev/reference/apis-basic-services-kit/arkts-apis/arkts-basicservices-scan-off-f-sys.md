@@ -18,6 +18,8 @@ function off(type: 'scanDeviceAdd', callback?: Callback<ScannerDevice>): void
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-scan-function off(type: 'scanDeviceAdd', callback?: Callback<ScannerDevice>): void--><!--Device-scan-function off(type: 'scanDeviceAdd', callback?: Callback<ScannerDevice>): void-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +63,8 @@ function off(type: 'scanDeviceDel', callback?: Callback<ScannerDevice>): void
 **起始版本：** 20
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
+
+<!--Device-scan-function off(type: 'scanDeviceDel', callback?: Callback<ScannerDevice>): void--><!--Device-scan-function off(type: 'scanDeviceDel', callback?: Callback<ScannerDevice>): void-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 

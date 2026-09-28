@@ -22,6 +22,8 @@ function claimInterface(pipe: USBDevicePipe, iface: USBInterface, force?: boolea
 
 **替代接口：** [claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md)
 
+<!--Device-usb-function claimInterface(pipe: USBDevicePipe, iface: USBInterface, force?: boolean): number--><!--Device-usb-function claimInterface(pipe: USBDevicePipe, iface: USBInterface, force?: boolean): number-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 **参数：**

@@ -8,6 +8,8 @@ interface DeviceProfileInfoFilterOptions
 
 **起始版本：** 15
 
+<!--Device-distributedDeviceManager-interface DeviceProfileInfoFilterOptions--><!--Device-distributedDeviceManager-interface DeviceProfileInfoFilterOptions-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ deviceIdList?: Array<string>
 
 **起始版本：** 15
 
+<!--Device-DeviceProfileInfoFilterOptions-deviceIdList?: Array<string>--><!--Device-DeviceProfileInfoFilterOptions-deviceIdList?: Array<string>-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -48,6 +52,8 @@ isCloud : boolean
 **类型：** boolean
 
 **起始版本：** 15
+
+<!--Device-DeviceProfileInfoFilterOptions-isCloud : boolean--><!--Device-DeviceProfileInfoFilterOptions-isCloud : boolean-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 

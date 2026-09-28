@@ -8,6 +8,8 @@ interface VibrateFromFile
 
 **起始版本：** 10
 
+<!--Device-vibrator-interface VibrateFromFile--><!--Device-vibrator-interface VibrateFromFile-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## 导入模块
@@ -28,6 +30,8 @@ hapticFd: HapticFileDescriptor
 
 **起始版本：** 10
 
+<!--Device-VibrateFromFile-hapticFd: HapticFileDescriptor--><!--Device-VibrateFromFile-hapticFd: HapticFileDescriptor-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## type
@@ -41,5 +45,7 @@ type: 'file'
 **类型：** 'file'
 
 **起始版本：** 10
+
+<!--Device-VibrateFromFile-type: 'file'--><!--Device-VibrateFromFile-type: 'file'-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice

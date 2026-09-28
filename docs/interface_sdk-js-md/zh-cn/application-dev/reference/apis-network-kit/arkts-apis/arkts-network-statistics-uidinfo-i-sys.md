@@ -8,6 +8,8 @@ export interface UidInfo
 
 **起始版本：** 10
 
+<!--Device-statistics-export interface UidInfo--><!--Device-statistics-export interface UidInfo-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ ifaceInfo: IfaceInfo
 
 **起始版本：** 10
 
+<!--Device-UidInfo-ifaceInfo: IfaceInfo--><!--Device-UidInfo-ifaceInfo: IfaceInfo-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ uid: number
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-UidInfo-uid: int--><!--Device-UidInfo-uid: int-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 

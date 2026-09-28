@@ -8,6 +8,8 @@ enum Parity
 
 **起始版本：** 26.0.0
 
+<!--Device-serial-enum Parity--><!--Device-serial-enum Parity-End-->
+
 **系统能力：** SystemCapability.BusManager.Serial
 
 ## NONE
@@ -21,6 +23,8 @@ NONE = 'none'
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Parity-NONE = 'none'--><!--Device-Parity-NONE = 'none'-End-->
 
 **系统能力：** SystemCapability.BusManager.Serial
 
@@ -36,6 +40,8 @@ EVEN = 'even'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Parity-EVEN = 'even'--><!--Device-Parity-EVEN = 'even'-End-->
+
 **系统能力：** SystemCapability.BusManager.Serial
 
 ## ODD
@@ -49,6 +55,8 @@ ODD = 'odd'
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Parity-ODD = 'odd'--><!--Device-Parity-ODD = 'odd'-End-->
 
 **系统能力：** SystemCapability.BusManager.Serial
 
@@ -64,6 +72,8 @@ MARK = 'mark'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Parity-MARK = 'mark'--><!--Device-Parity-MARK = 'mark'-End-->
+
 **系统能力：** SystemCapability.BusManager.Serial
 
 ## SPACE
@@ -77,5 +87,7 @@ SPACE = 'space'
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Parity-SPACE = 'space'--><!--Device-Parity-SPACE = 'space'-End-->
 
 **系统能力：** SystemCapability.BusManager.Serial

@@ -16,6 +16,8 @@ Creates a PixelMap object from surface id.
 
 **起始版本：** 11
 
+<!--Device-image-function createPixelMapFromSurface(surfaceId: string, region: Region): Promise<PixelMap>--><!--Device-image-function createPixelMapFromSurface(surfaceId: string, region: Region): Promise<PixelMap>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
@@ -66,6 +68,8 @@ function createPixelMapFromSurface(surfaceId: string): Promise<PixelMap>
 Creates a PixelMap object from surface id.
 
 **起始版本：** 15
+
+<!--Device-image-function createPixelMapFromSurface(surfaceId: string): Promise<PixelMap>--><!--Device-image-function createPixelMapFromSurface(surfaceId: string): Promise<PixelMap>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 

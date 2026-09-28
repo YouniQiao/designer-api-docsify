@@ -12,6 +12,8 @@ Triggered before the menu is displayed after the text selection area changes. Me
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-unnamed-type OnPrepareMenuCallback = (menuItems: Array<TextMenuItem>) => Array<TextMenuItem>--><!--Device-unnamed-type OnPrepareMenuCallback = (menuItems: Array<TextMenuItem>) => Array<TextMenuItem>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

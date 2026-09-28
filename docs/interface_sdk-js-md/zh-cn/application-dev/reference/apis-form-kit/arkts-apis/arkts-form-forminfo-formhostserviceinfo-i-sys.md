@@ -8,6 +8,8 @@ interface FormHostServiceInfo
 
 **起始版本：** 26.0.1
 
+<!--Device-formInfo-interface FormHostServiceInfo--><!--Device-formInfo-interface FormHostServiceInfo-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ customData?: Record<string, string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FormHostServiceInfo-customData?: Record<string, string>--><!--Device-FormHostServiceInfo-customData?: Record<string, string>-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ displayId: string
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FormHostServiceInfo-displayId: string--><!--Device-FormHostServiceInfo-displayId: string-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -68,6 +74,8 @@ serviceDisplayName: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FormHostServiceInfo-serviceDisplayName: string--><!--Device-FormHostServiceInfo-serviceDisplayName: string-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -85,6 +93,8 @@ serviceName: string
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FormHostServiceInfo-serviceName: string--><!--Device-FormHostServiceInfo-serviceName: string-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 

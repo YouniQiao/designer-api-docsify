@@ -4,6 +4,8 @@ VCard是电子名片的文件格式标准，它可包含的信息有：姓名、
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare namespace vcard--><!--Device-unnamed-declare namespace vcard-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## 导入模块

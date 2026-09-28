@@ -8,6 +8,8 @@ interface PhotoCreateOptions
 
 **起始版本：** 10
 
+<!--Device-photoAccessHelper-interface PhotoCreateOptions--><!--Device-photoAccessHelper-interface PhotoCreateOptions-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ cameraShotKey?: string
 
 **起始版本：** 10
 
+<!--Device-PhotoCreateOptions-cameraShotKey?: string--><!--Device-PhotoCreateOptions-cameraShotKey?: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -46,6 +50,8 @@ subtype?: PhotoSubtype
 
 **起始版本：** 10
 
+<!--Device-PhotoCreateOptions-subtype?: PhotoSubtype--><!--Device-PhotoCreateOptions-subtype?: PhotoSubtype-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +67,8 @@ userId?: number
 **类型：** number
 
 **起始版本：** 19
+
+<!--Device-PhotoCreateOptions-userId?: int--><!--Device-PhotoCreateOptions-userId?: int-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

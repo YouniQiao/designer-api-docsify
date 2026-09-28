@@ -21,6 +21,8 @@ function getId(wallpaperType: WallpaperType, callback: AsyncCallback<number>): v
 
 **废弃版本：** 9
 
+<!--Device-wallpaper-function getId(wallpaperType: WallpaperType, callback: AsyncCallback<number>): void--><!--Device-wallpaper-function getId(wallpaperType: WallpaperType, callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
 **参数：**
@@ -61,6 +63,8 @@ function getId(wallpaperType: WallpaperType): Promise<number>
 **起始版本：** 7
 
 **废弃版本：** 9
+
+<!--Device-wallpaper-function getId(wallpaperType: WallpaperType): Promise<number>--><!--Device-wallpaper-function getId(wallpaperType: WallpaperType): Promise<number>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 

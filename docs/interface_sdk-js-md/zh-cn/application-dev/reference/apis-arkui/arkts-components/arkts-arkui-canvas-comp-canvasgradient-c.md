@@ -8,6 +8,8 @@ OffscreenCanvas支持以下属性：
 
 **起始版本：** 8
 
+<!--Device-unnamed-declare class CanvasGradient--><!--Device-unnamed-declare class CanvasGradient-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## addColorStop
@@ -25,6 +27,8 @@ addColorStop(offset: number, color: string): void
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasGradient-addColorStop(offset: number, color: string): void--><!--Device-CanvasGradient-addColorStop(offset: number, color: string): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -85,6 +89,8 @@ addColorStop(offset: number, color: string | ColorMetrics): void
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本20开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasGradient-addColorStop(offset: number, color: string | ColorMetrics): void--><!--Device-CanvasGradient-addColorStop(offset: number, color: string | ColorMetrics): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

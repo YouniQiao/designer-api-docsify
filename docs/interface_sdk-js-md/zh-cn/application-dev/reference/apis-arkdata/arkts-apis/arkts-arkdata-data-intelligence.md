@@ -6,6 +6,8 @@
 
 **起始版本：** 15
 
+<!--Device-unnamed-declare namespace intelligence--><!--Device-unnamed-declare namespace intelligence-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
 ## 导入模块

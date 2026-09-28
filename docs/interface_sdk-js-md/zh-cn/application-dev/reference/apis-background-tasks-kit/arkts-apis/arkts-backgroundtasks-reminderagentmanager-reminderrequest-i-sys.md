@@ -8,6 +8,8 @@ interface ReminderRequest
 
 **起始版本：** 9
 
+<!--Device-reminderAgentManager-interface ReminderRequest--><!--Device-reminderAgentManager-interface ReminderRequest-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## 导入模块
@@ -35,6 +37,8 @@ forceDistributed?: boolean
 
 **起始版本：** 23
 
+<!--Device-ReminderRequest-forceDistributed?: boolean--><!--Device-ReminderRequest-forceDistributed?: boolean-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 **系统接口：** 此接口为系统接口。
@@ -57,6 +61,8 @@ notDistributed?: boolean
 **默认值：** false
 
 **起始版本：** 23
+
+<!--Device-ReminderRequest-notDistributed?: boolean--><!--Device-ReminderRequest-notDistributed?: boolean-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 

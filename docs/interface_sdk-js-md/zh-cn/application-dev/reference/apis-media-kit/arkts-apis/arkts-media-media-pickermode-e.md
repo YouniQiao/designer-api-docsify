@@ -8,6 +8,8 @@ enum PickerMode
 
 **起始版本：** 22
 
+<!--Device-media-enum PickerMode--><!--Device-media-enum PickerMode-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 ## WINDOW_ONLY
@@ -19,6 +21,8 @@ WINDOW_ONLY = 0
 仅显示窗口列表。
 
 **起始版本：** 22
+
+<!--Device-PickerMode-WINDOW_ONLY = 0--><!--Device-PickerMode-WINDOW_ONLY = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -32,6 +36,8 @@ SCREEN_ONLY = 1
 
 **起始版本：** 22
 
+<!--Device-PickerMode-SCREEN_ONLY = 1--><!--Device-PickerMode-SCREEN_ONLY = 1-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 ## SCREEN_AND_WINDOW
@@ -43,6 +49,8 @@ SCREEN_AND_WINDOW = 2
 同时显示屏幕列表和窗口列表。
 
 **起始版本：** 22
+
+<!--Device-PickerMode-SCREEN_AND_WINDOW = 2--><!--Device-PickerMode-SCREEN_AND_WINDOW = 2-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -58,6 +66,8 @@ APP_ONLY = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PickerMode-APP_ONLY = 3--><!--Device-PickerMode-APP_ONLY = 3-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 ## WINDOW_AND_APP
@@ -71,6 +81,8 @@ WINDOW_AND_APP = 4
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PickerMode-WINDOW_AND_APP = 4--><!--Device-PickerMode-WINDOW_AND_APP = 4-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -86,6 +98,8 @@ SCREEN_AND_APP = 5
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PickerMode-SCREEN_AND_APP = 5--><!--Device-PickerMode-SCREEN_AND_APP = 5-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 ## SCREEN_WINDOW_AND_APP
@@ -99,5 +113,7 @@ SCREEN_WINDOW_AND_APP = 6
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PickerMode-SCREEN_WINDOW_AND_APP = 6--><!--Device-PickerMode-SCREEN_WINDOW_AND_APP = 6-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture

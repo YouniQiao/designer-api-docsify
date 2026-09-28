@@ -12,6 +12,8 @@ export interface NotificationProgress
 
 **起始版本：** 11
 
+<!--Device-unnamed-export interface NotificationProgress--><!--Device-unnamed-export interface NotificationProgress-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## currentValue
@@ -25,6 +27,8 @@ currentValue?: number
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-NotificationProgress-currentValue?: int--><!--Device-NotificationProgress-currentValue?: int-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -43,6 +47,8 @@ isPercentage?: boolean
 
 **起始版本：** 11
 
+<!--Device-NotificationProgress-isPercentage?: boolean--><!--Device-NotificationProgress-isPercentage?: boolean-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## maxValue
@@ -56,5 +62,7 @@ maxValue?: number
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-NotificationProgress-maxValue?: int--><!--Device-NotificationProgress-maxValue?: int-End-->
 
 **系统能力：** SystemCapability.Notification.Notification

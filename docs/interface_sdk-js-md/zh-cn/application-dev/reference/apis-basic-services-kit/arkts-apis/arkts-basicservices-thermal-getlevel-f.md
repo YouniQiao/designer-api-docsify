@@ -16,6 +16,8 @@ function getLevel(): ThermalLevel
 
 **起始版本：** 9
 
+<!--Device-thermal-function getLevel(): ThermalLevel--><!--Device-thermal-function getLevel(): ThermalLevel-End-->
+
 **系统能力：** SystemCapability.PowerManager.ThermalManager
 
 **返回值：**

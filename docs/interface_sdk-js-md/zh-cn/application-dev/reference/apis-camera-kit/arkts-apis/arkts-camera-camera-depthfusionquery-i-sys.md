@@ -8,6 +8,8 @@ A class for querying depth fusion capabilities.
 
 **起始版本：** 14
 
+<!--Device-camera-interface DepthFusionQuery--><!--Device-camera-interface DepthFusionQuery-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -27,6 +29,8 @@ getDepthFusionThreshold(): Array<number>
 Obtains the depth fusion threshold.
 
 **起始版本：** 14
+
+<!--Device-DepthFusionQuery-getDepthFusionThreshold(): Array<double>--><!--Device-DepthFusionQuery-getDepthFusionThreshold(): Array<double>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -70,6 +74,8 @@ isDepthFusionSupported(): boolean
 Checks whether depth fusion is supported.
 
 **起始版本：** 14
+
+<!--Device-DepthFusionQuery-isDepthFusionSupported(): boolean--><!--Device-DepthFusionQuery-isDepthFusionSupported(): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

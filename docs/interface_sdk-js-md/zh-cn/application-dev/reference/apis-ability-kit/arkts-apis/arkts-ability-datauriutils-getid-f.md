@@ -16,6 +16,8 @@ function getId(uri: string): number
 
 **起始版本：** 9
 
+<!--Device-dataUriUtils-function getId(uri: string): double--><!--Device-dataUriUtils-function getId(uri: string): double-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**

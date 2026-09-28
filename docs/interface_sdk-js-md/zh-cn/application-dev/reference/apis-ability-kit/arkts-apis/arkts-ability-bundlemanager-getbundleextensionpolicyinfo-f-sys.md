@@ -20,6 +20,8 @@ function getBundleExtensionPolicyInfo(bundleName: string, userId: number): Bundl
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-bundleManager-function getBundleExtensionPolicyInfo(bundleName: string, userId: int): BundleExtensionPolicyInfo--><!--Device-bundleManager-function getBundleExtensionPolicyInfo(bundleName: string, userId: int): BundleExtensionPolicyInfo-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。

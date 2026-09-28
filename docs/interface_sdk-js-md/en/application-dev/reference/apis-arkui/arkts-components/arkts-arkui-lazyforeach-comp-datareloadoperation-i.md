@@ -14,6 +14,8 @@ When reuse of old child components during the update is not allowed, data items 
 
 **Since:** 12
 
+<!--Device-unnamed-interface DataReloadOperation--><!--Device-unnamed-interface DataReloadOperation-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## reuseImmediately
@@ -32,6 +34,8 @@ Whether to reuse the old child components during the update. **true**: allows re
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.1.
 
+<!--Device-DataReloadOperation-reuseImmediately?: boolean--><!--Device-DataReloadOperation-reuseImmediately?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## type
@@ -49,5 +53,7 @@ Type for reloading all data.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DataReloadOperation-type: DataOperationType.RELOAD--><!--Device-DataReloadOperation-type: DataOperationType.RELOAD-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

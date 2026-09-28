@@ -16,6 +16,8 @@ UiTest中，UiComponent类代表了UI界面上的一个控件，提供控件属�
 
 **替代接口：** [Component](arkts-test-uitest-component-c.md)
 
+<!--Device-unnamed-declare class UiComponent--><!--Device-unnamed-declare class UiComponent-End-->
+
 **系统能力：** SystemCapability.Test.UiTest
 
 **测试接口：** 此接口仅在自动化测试脚本中使用。
@@ -44,6 +46,8 @@ click(): Promise<void>
 **废弃版本：** 9
 
 **替代接口：** [click](arkts-test-uitest-component-c.md#click)
+
+<!--Device-UiComponent-click(): Promise<void>--><!--Device-UiComponent-click(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -86,6 +90,8 @@ doubleClick(): Promise<void>
 
 **替代接口：** [doubleClick](arkts-test-uitest-component-c.md#doubleclick)
 
+<!--Device-UiComponent-doubleClick(): Promise<void>--><!--Device-UiComponent-doubleClick(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Test.UiTest
 
 **测试接口：** 此接口仅在自动化测试脚本中使用。
@@ -126,6 +132,8 @@ getId(): Promise<number>
 **废弃版本：** 9
 
 **替代接口：** [getId](arkts-test-uitest-component-c.md#getid)
+
+<!--Device-UiComponent-getId(): Promise<number>--><!--Device-UiComponent-getId(): Promise<number>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -168,6 +176,8 @@ getKey(): Promise<string>
 
 **替代接口：** [getId](arkts-test-uitest-component-c.md#getid)
 
+<!--Device-UiComponent-getKey(): Promise<string>--><!--Device-UiComponent-getKey(): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Test.UiTest
 
 **测试接口：** 此接口仅在自动化测试脚本中使用。
@@ -208,6 +218,8 @@ getText(): Promise<string>
 **废弃版本：** 9
 
 **替代接口：** [getText](arkts-test-uitest-component-c.md#gettext)
+
+<!--Device-UiComponent-getText(): Promise<string>--><!--Device-UiComponent-getText(): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -250,6 +262,8 @@ getType(): Promise<string>
 
 **替代接口：** [getType](arkts-test-uitest-component-c.md#gettype)
 
+<!--Device-UiComponent-getType(): Promise<string>--><!--Device-UiComponent-getType(): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Test.UiTest
 
 **测试接口：** 此接口仅在自动化测试脚本中使用。
@@ -290,6 +304,8 @@ inputText(text: string): Promise<void>
 **废弃版本：** 9
 
 **替代接口：** [inputText](arkts-test-uitest-component-c.md#inputtext)(text: string)
+
+<!--Device-UiComponent-inputText(text: string): Promise<void>--><!--Device-UiComponent-inputText(text: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -338,6 +354,8 @@ isClickable(): Promise<boolean>
 
 **替代接口：** [isClickable](arkts-test-uitest-component-c.md#isclickable)
 
+<!--Device-UiComponent-isClickable(): Promise<boolean>--><!--Device-UiComponent-isClickable(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Test.UiTest
 
 **测试接口：** 此接口仅在自动化测试脚本中使用。
@@ -382,6 +400,8 @@ isEnabled(): Promise<boolean>
 **废弃版本：** 9
 
 **替代接口：** [isEnabled](arkts-test-uitest-component-c.md#isenabled)
+
+<!--Device-UiComponent-isEnabled(): Promise<boolean>--><!--Device-UiComponent-isEnabled(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -428,6 +448,8 @@ isFocused(): Promise<boolean>
 
 **替代接口：** [isFocused](arkts-test-uitest-component-c.md#isfocused)
 
+<!--Device-UiComponent-isFocused(): Promise<boolean>--><!--Device-UiComponent-isFocused(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Test.UiTest
 
 **测试接口：** 此接口仅在自动化测试脚本中使用。
@@ -472,6 +494,8 @@ isScrollable(): Promise<boolean>
 **废弃版本：** 9
 
 **替代接口：** [isScrollable](arkts-test-uitest-component-c.md#isscrollable)
+
+<!--Device-UiComponent-isScrollable(): Promise<boolean>--><!--Device-UiComponent-isScrollable(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -518,6 +542,8 @@ isSelected(): Promise<boolean>
 
 **替代接口：** [isSelected](arkts-test-uitest-component-c.md#isselected)
 
+<!--Device-UiComponent-isSelected(): Promise<boolean>--><!--Device-UiComponent-isSelected(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Test.UiTest
 
 **测试接口：** 此接口仅在自动化测试脚本中使用。
@@ -563,6 +589,8 @@ longClick(): Promise<void>
 
 **替代接口：** [longClick](arkts-test-uitest-component-c.md#longclick)
 
+<!--Device-UiComponent-longClick(): Promise<void>--><!--Device-UiComponent-longClick(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Test.UiTest
 
 **测试接口：** 此接口仅在自动化测试脚本中使用。
@@ -603,6 +631,8 @@ scrollSearch(by: By): Promise<UiComponent>
 **废弃版本：** 9
 
 **替代接口：** [scrollSearch](arkts-test-uitest-component-c.md#scrollsearch)(on: On)
+
+<!--Device-UiComponent-scrollSearch(by: By): Promise<UiComponent>--><!--Device-UiComponent-scrollSearch(by: By): Promise<UiComponent>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 

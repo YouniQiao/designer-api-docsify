@@ -14,6 +14,8 @@ HTTP请求指定特定网络的类型枚举。
 
 **起始版本：** 23
 
+<!--Device-http-export type PathPreference = 'auto' | 'primaryCellular' | 'secondaryCellular'--><!--Device-http-export type PathPreference = 'auto' | 'primaryCellular' | 'secondaryCellular'-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 | 类型 | 说明 |

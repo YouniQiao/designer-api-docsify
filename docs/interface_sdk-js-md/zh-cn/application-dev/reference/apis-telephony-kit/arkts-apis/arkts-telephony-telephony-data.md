@@ -4,6 +4,8 @@
 
 **起始版本：** 7
 
+<!--Device-unnamed-declare namespace data--><!--Device-unnamed-declare namespace data-End-->
+
 **系统能力：** SystemCapability.Telephony.CellularData
 
 ## 导入模块

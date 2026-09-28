@@ -12,6 +12,8 @@ Defines the overlay effect for the dialog box.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-unnamed-declare type ImmersiveMode = import('../api/@ohos.promptAction').ImmersiveMode--><!--Device-unnamed-declare type ImmersiveMode = import('../api/@ohos.promptAction').ImmersiveMode-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Type:** import('../api/@ohos.promptAction').ImmersiveMode

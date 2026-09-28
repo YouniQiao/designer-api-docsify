@@ -24,6 +24,8 @@ function subscribeManagedEvent(admin: Want, managedEvents: Array<ManagedEvent>, 
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-adminManager-function subscribeManagedEvent(admin: Want, managedEvents: Array<ManagedEvent>, callback: AsyncCallback<void>): void--><!--Device-adminManager-function subscribeManagedEvent(admin: Want, managedEvents: Array<ManagedEvent>, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -88,6 +90,8 @@ function subscribeManagedEvent(admin: Want, managedEvents: Array<ManagedEvent>):
 **需要权限：** ohos.permission.ENTERPRISE_SUBSCRIBE_MANAGED_EVENT
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-adminManager-function subscribeManagedEvent(admin: Want, managedEvents: Array<ManagedEvent>): Promise<void>--><!--Device-adminManager-function subscribeManagedEvent(admin: Want, managedEvents: Array<ManagedEvent>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

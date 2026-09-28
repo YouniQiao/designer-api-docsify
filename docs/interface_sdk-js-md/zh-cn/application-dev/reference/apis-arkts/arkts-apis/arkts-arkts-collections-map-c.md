@@ -18,6 +18,8 @@ K和V类型都需为[Sendable支持的数据类型](../../../arkts-utils/arkts-s
 
 **装饰器类型：** @Sendable
 
+<!--Device-collections-class Map<K, V>--><!--Device-collections-class Map<K, V>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -37,6 +39,8 @@ import { collections } from '@kit.ArkTS';
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Map-[Symbol.iterator](): IterableIterator<[K, V]>--><!--Device-Map-[Symbol.iterator](): IterableIterator<[K, V]>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -64,6 +68,8 @@ clear(): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Map-clear(): void--><!--Device-Map-clear(): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **错误码：**
@@ -84,6 +90,8 @@ constructor(entries?: readonly (readonly [K, V])[] | null)
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Map-constructor(entries?: readonly (readonly [K, V])[] | null)--><!--Device-Map-constructor(entries?: readonly (readonly [K, V])[] | null)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -113,6 +121,8 @@ constructor(iterable: Iterable<readonly [K, V]>)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Map-constructor(iterable: Iterable<readonly [K, V]>)--><!--Device-Map-constructor(iterable: Iterable<readonly [K, V]>)-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -140,6 +150,8 @@ containsValue(value: V): boolean
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
+
+<!--Device-Map-containsValue(value: V): boolean--><!--Device-Map-containsValue(value: V): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -174,6 +186,8 @@ delete(key: K): boolean
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Map-delete(key: K): boolean--><!--Device-Map-delete(key: K): boolean-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -207,6 +221,8 @@ entries(): IterableIterator<[K, V]>
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Map-entries(): IterableIterator<[K, V]>--><!--Device-Map-entries(): IterableIterator<[K, V]>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -234,6 +250,8 @@ forEach(callbackFn: (value: V, key: K, map: Map<K, V>) => void): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Map-forEach(callbackFn: (value: V, key: K, map: Map<K, V>) => void): void--><!--Device-Map-forEach(callbackFn: (value: V, key: K, map: Map<K, V>) => void): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -260,6 +278,8 @@ get(key: K): V | undefined
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Map-get(key: K): V | undefined--><!--Device-Map-get(key: K): V | undefined-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -294,6 +314,8 @@ has(key: K): boolean
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Map-has(key: K): boolean--><!--Device-Map-has(key: K): boolean-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -326,6 +348,8 @@ keys(): IterableIterator<K>
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Map-keys(): IterableIterator<K>--><!--Device-Map-keys(): IterableIterator<K>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -360,6 +384,8 @@ put(key: K, value: V): V | undefined
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
+
+<!--Device-Map-put(key: K, value: V): V | undefined--><!--Device-Map-put(key: K, value: V): V | undefined-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -397,6 +423,8 @@ putAll(from: Map<K, V>): void
 
 **原子化服务API：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
 
+<!--Device-Map-putAll(from: Map<K, V>): void--><!--Device-Map-putAll(from: Map<K, V>): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -427,6 +455,8 @@ putAll(from: ReadonlyMap<K, V>): void
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
+
+<!--Device-Map-putAll(from: ReadonlyMap<K, V>): void--><!--Device-Map-putAll(from: ReadonlyMap<K, V>): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -462,6 +492,8 @@ remove(key: K): V | undefined
 
 **原子化服务API：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
 
+<!--Device-Map-remove(key: K): V | undefined--><!--Device-Map-remove(key: K): V | undefined-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -494,6 +526,8 @@ set(key: K, value: V): Map<K, V>
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Map-set(key: K, value: V): Map<K, V>--><!--Device-Map-set(key: K, value: V): Map<K, V>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -529,6 +563,8 @@ values(): IterableIterator<V>
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Map-values(): IterableIterator<V>--><!--Device-Map-values(): IterableIterator<V>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -557,5 +593,7 @@ Map的元素个数。
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Map-readonly size: number--><!--Device-Map-readonly size: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

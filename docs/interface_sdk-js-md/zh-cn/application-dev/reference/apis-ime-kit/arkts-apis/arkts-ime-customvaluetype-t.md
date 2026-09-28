@@ -8,6 +8,8 @@ export type CustomValueType = number | string | boolean
 
 **起始版本：** 22
 
+<!--Device-unnamed-export type CustomValueType = int | string | boolean--><!--Device-unnamed-export type CustomValueType = int | string | boolean-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 | 类型 | 说明 |

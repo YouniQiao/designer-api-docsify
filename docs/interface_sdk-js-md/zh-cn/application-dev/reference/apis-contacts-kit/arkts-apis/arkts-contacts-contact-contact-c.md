@@ -8,6 +8,8 @@ class Contact
 
 **起始版本：** 7
 
+<!--Device-contact-class Contact--><!--Device-contact-class Contact-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 ## 导入模块
@@ -30,6 +32,8 @@ contactAttributes?: ContactAttributes
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Contact-contactAttributes?: ContactAttributes--><!--Device-Contact-contactAttributes?: ContactAttributes-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 ## emails
@@ -45,6 +49,8 @@ emails?: Email[]
 **起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Contact-emails?: Email[]--><!--Device-Contact-emails?: Email[]-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -62,6 +68,8 @@ events?: Event[]
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Contact-events?: Event[]--><!--Device-Contact-events?: Event[]-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 ## groups
@@ -77,6 +85,8 @@ groups?: Group[]
 **起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Contact-groups?: Group[]--><!--Device-Contact-groups?: Group[]-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -94,6 +104,8 @@ readonly id?: number
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Contact-readonly id?: number--><!--Device-Contact-readonly id?: number-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 ## imAddresses
@@ -109,6 +121,8 @@ imAddresses?: ImAddress[]
 **起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Contact-imAddresses?: ImAddress[]--><!--Device-Contact-imAddresses?: ImAddress[]-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -126,6 +140,8 @@ static readonly INVALID_CONTACT_ID: -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Contact-static readonly INVALID_CONTACT_ID: -1--><!--Device-Contact-static readonly INVALID_CONTACT_ID: -1-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 ## key
@@ -141,6 +157,8 @@ readonly key?: string
 **起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Contact-readonly key?: string--><!--Device-Contact-readonly key?: string-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -158,6 +176,8 @@ name?: Name
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Contact-name?: Name--><!--Device-Contact-name?: Name-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 ## nickName
@@ -173,6 +193,8 @@ nickName?: NickName
 **起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Contact-nickName?: NickName--><!--Device-Contact-nickName?: NickName-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -190,6 +212,8 @@ note?: Note
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Contact-note?: Note--><!--Device-Contact-note?: Note-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 ## organization
@@ -205,6 +229,8 @@ organization?: Organization
 **起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Contact-organization?: Organization--><!--Device-Contact-organization?: Organization-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -222,6 +248,8 @@ phoneNumbers?: PhoneNumber[]
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Contact-phoneNumbers?: PhoneNumber[]--><!--Device-Contact-phoneNumbers?: PhoneNumber[]-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 ## portrait
@@ -237,6 +265,8 @@ portrait?: Portrait
 **起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Contact-portrait?: Portrait--><!--Device-Contact-portrait?: Portrait-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -254,6 +284,8 @@ postalAddresses?: PostalAddress[]
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Contact-postalAddresses?: PostalAddress[]--><!--Device-Contact-postalAddresses?: PostalAddress[]-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 ## relations
@@ -269,6 +301,8 @@ relations?: Relation[]
 **起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Contact-relations?: Relation[]--><!--Device-Contact-relations?: Relation[]-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -286,6 +320,8 @@ sipAddresses?: SipAddress[]
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Contact-sipAddresses?: SipAddress[]--><!--Device-Contact-sipAddresses?: SipAddress[]-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 ## websites
@@ -301,5 +337,7 @@ websites?: Website[]
 **起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Contact-websites?: Website[]--><!--Device-Contact-websites?: Website[]-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData

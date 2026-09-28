@@ -24,6 +24,8 @@ function getIpNeighTable(): Promise<Array<NetIpMacInfo>>
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO and ohos.permission.GET_IP_MAC_INFO
 
+<!--Device-connection-function getIpNeighTable(): Promise<Array<NetIpMacInfo>>--><!--Device-connection-function getIpNeighTable(): Promise<Array<NetIpMacInfo>>-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **返回值：**

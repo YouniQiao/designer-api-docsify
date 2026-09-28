@@ -8,6 +8,8 @@ Swiper容器组件的控制器，可以将此对象绑定至Swiper组件，实�
 
 **起始版本：** 7
 
+<!--Device-unnamed-declare class SwiperController--><!--Device-unnamed-declare class SwiperController-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## changeIndex
@@ -25,6 +27,8 @@ changeIndex(index: number, useAnimation?: boolean)
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-SwiperController-changeIndex(index: number, useAnimation?: boolean)--><!--Device-SwiperController-changeIndex(index: number, useAnimation?: boolean)-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -58,6 +62,8 @@ changeIndex(index: number, animationMode?: SwiperAnimationMode | boolean)
 
 **卡片能力：** 从API版本15开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-SwiperController-changeIndex(index: number, animationMode?: SwiperAnimationMode | boolean)--><!--Device-SwiperController-changeIndex(index: number, animationMode?: SwiperAnimationMode | boolean)-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -80,6 +86,8 @@ SwiperController的构造函数。
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-SwiperController-constructor()--><!--Device-SwiperController-constructor()-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -106,6 +114,8 @@ fakeDragBy(offset: number): boolean
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-SwiperController-fakeDragBy(offset: number): boolean--><!--Device-SwiperController-fakeDragBy(offset: number): boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -135,6 +145,8 @@ finishAnimation(callback?: VoidCallback)
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-SwiperController-finishAnimation(callback?: VoidCallback)--><!--Device-SwiperController-finishAnimation(callback?: VoidCallback)-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -158,6 +170,8 @@ isFakeDragging(): boolean
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-SwiperController-isFakeDragging(): boolean--><!--Device-SwiperController-isFakeDragging(): boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -190,6 +204,8 @@ preloadItems(indices: Optional<Array<number>>): Promise<void>
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-SwiperController-preloadItems(indices: Optional<Array<number>>): Promise<void>--><!--Device-SwiperController-preloadItems(indices: Optional<Array<number>>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -226,6 +242,8 @@ showNext()
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-SwiperController-showNext()--><!--Device-SwiperController-showNext()-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## showPrevious
@@ -241,6 +259,8 @@ showPrevious()
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-SwiperController-showPrevious()--><!--Device-SwiperController-showPrevious()-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -265,6 +285,8 @@ startFakeDrag(): boolean
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-SwiperController-startFakeDrag(): boolean--><!--Device-SwiperController-startFakeDrag(): boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -293,6 +315,8 @@ stopFakeDrag(): boolean
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-SwiperController-stopFakeDrag(): boolean--><!--Device-SwiperController-stopFakeDrag(): boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

@@ -16,6 +16,8 @@ function joinConference(mainCallId: number, callNumberList: Array<string>, callb
 
 **起始版本：** 8
 
+<!--Device-call-function joinConference(mainCallId: int, callNumberList: Array<string>, callback: AsyncCallback<void>): void--><!--Device-call-function joinConference(mainCallId: int, callNumberList: Array<string>, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -68,6 +70,8 @@ function joinConference(mainCallId: number, callNumberList: Array<string>): Prom
 加入会议。使用Promise异步回调。
 
 **起始版本：** 8
+
+<!--Device-call-function joinConference(mainCallId: int, callNumberList: Array<string>): Promise<void>--><!--Device-call-function joinConference(mainCallId: int, callNumberList: Array<string>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 

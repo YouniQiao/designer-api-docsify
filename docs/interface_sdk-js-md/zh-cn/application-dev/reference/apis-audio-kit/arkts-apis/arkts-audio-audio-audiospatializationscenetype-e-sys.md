@@ -8,6 +8,8 @@ enum AudioSpatializationSceneType
 
 **起始版本：** 12
 
+<!--Device-audio-enum AudioSpatializationSceneType--><!--Device-audio-enum AudioSpatializationSceneType-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -21,6 +23,8 @@ DEFAULT = 0
 空间音频默认渲染场景。
 
 **起始版本：** 12
+
+<!--Device-AudioSpatializationSceneType-DEFAULT = 0--><!--Device-AudioSpatializationSceneType-DEFAULT = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -36,6 +40,8 @@ MUSIC = 1
 
 **起始版本：** 12
 
+<!--Device-AudioSpatializationSceneType-MUSIC = 1--><!--Device-AudioSpatializationSceneType-MUSIC = 1-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -50,6 +56,8 @@ MOVIE = 2
 
 **起始版本：** 12
 
+<!--Device-AudioSpatializationSceneType-MOVIE = 2--><!--Device-AudioSpatializationSceneType-MOVIE = 2-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -63,6 +71,8 @@ AUDIOBOOK = 3
 空间音频有声读物渲染场景。
 
 **起始版本：** 12
+
+<!--Device-AudioSpatializationSceneType-AUDIOBOOK = 3--><!--Device-AudioSpatializationSceneType-AUDIOBOOK = 3-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 

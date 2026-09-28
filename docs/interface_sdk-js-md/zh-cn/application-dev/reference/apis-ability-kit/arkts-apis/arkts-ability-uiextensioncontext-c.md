@@ -10,6 +10,8 @@ UIExtensionContext是[UIExtensionAbility](arkts-ability-app-ability-uiextensiona
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare class UIExtensionContext extends ExtensionContext--><!--Device-unnamed-declare class UIExtensionContext extends ExtensionContext-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## connectServiceExtensionAbility
@@ -27,6 +29,8 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): number
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionContext-connectServiceExtensionAbility(want: Want, options: ConnectOptions): long--><!--Device-UIExtensionContext-connectServiceExtensionAbility(want: Want, options: ConnectOptions): long-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -79,6 +83,8 @@ connectUIServiceExtensionAbility(want: Want, callback: UIServiceExtensionConnect
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UIExtensionContext-connectUIServiceExtensionAbility(want: Want, callback: UIServiceExtensionConnectCallback) : Promise<UIServiceProxy>--><!--Device-UIExtensionContext-connectUIServiceExtensionAbility(want: Want, callback: UIServiceExtensionConnectCallback) : Promise<UIServiceProxy>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -123,6 +129,8 @@ disconnectServiceExtensionAbility(connection: number, callback: AsyncCallback<vo
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UIExtensionContext-disconnectServiceExtensionAbility(connection: long, callback: AsyncCallback<void>): void--><!--Device-UIExtensionContext-disconnectServiceExtensionAbility(connection: long, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -153,6 +161,8 @@ disconnectServiceExtensionAbility(connection: number): Promise<void>
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionContext-disconnectServiceExtensionAbility(connection: long): Promise<void>--><!--Device-UIExtensionContext-disconnectServiceExtensionAbility(connection: long): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -187,6 +197,8 @@ disconnectUIServiceExtensionAbility(proxy: UIServiceProxy): Promise<void>
 **起始版本：** 14
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionContext-disconnectUIServiceExtensionAbility(proxy: UIServiceProxy): Promise<void>--><!--Device-UIExtensionContext-disconnectUIServiceExtensionAbility(proxy: UIServiceProxy): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -229,6 +241,8 @@ openAtomicService(appId: string, options?: AtomicServiceOptions): Promise<Abilit
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionContext-openAtomicService(appId: string, options?: AtomicServiceOptions): Promise<AbilityResult>--><!--Device-UIExtensionContext-openAtomicService(appId: string, options?: AtomicServiceOptions): Promise<AbilityResult>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -279,6 +293,8 @@ openLink(link: string, options?: OpenLinkOptions, callback?: AsyncCallback<Abili
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionContext-openLink(link: string, options?: OpenLinkOptions, callback?: AsyncCallback<AbilityResult>): Promise<void>--><!--Device-UIExtensionContext-openLink(link: string, options?: OpenLinkOptions, callback?: AsyncCallback<AbilityResult>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -331,6 +347,8 @@ reportDrawnCompleted(callback: AsyncCallback<void>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UIExtensionContext-reportDrawnCompleted(callback: AsyncCallback<void>): void--><!--Device-UIExtensionContext-reportDrawnCompleted(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -364,6 +382,8 @@ setColorMode(colorMode: ConfigurationConstant.ColorMode): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UIExtensionContext-setColorMode(colorMode: ConfigurationConstant.ColorMode): void--><!--Device-UIExtensionContext-setColorMode(colorMode: ConfigurationConstant.ColorMode): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -393,6 +413,8 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionContext-startAbility(want: Want, callback: AsyncCallback<void>): void--><!--Device-UIExtensionContext-startAbility(want: Want, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -455,6 +477,8 @@ startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): 
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UIExtensionContext-startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): void--><!--Device-UIExtensionContext-startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -514,6 +538,8 @@ startAbility(want: Want, options?: StartOptions): Promise<void>
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionContext-startAbility(want: Want, options?: StartOptions): Promise<void>--><!--Device-UIExtensionContext-startAbility(want: Want, options?: StartOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -584,6 +610,8 @@ startAbilityForResult(want: Want, callback: AsyncCallback<AbilityResult>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UIExtensionContext-startAbilityForResult(want: Want, callback: AsyncCallback<AbilityResult>): void--><!--Device-UIExtensionContext-startAbilityForResult(want: Want, callback: AsyncCallback<AbilityResult>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -649,6 +677,8 @@ startAbilityForResult(want: Want, options: StartOptions, callback: AsyncCallback
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UIExtensionContext-startAbilityForResult(want: Want, options: StartOptions, callback: AsyncCallback<AbilityResult>): void--><!--Device-UIExtensionContext-startAbilityForResult(want: Want, options: StartOptions, callback: AsyncCallback<AbilityResult>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -712,6 +742,8 @@ startAbilityForResult(want: Want, options?: StartOptions): Promise<AbilityResult
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionContext-startAbilityForResult(want: Want, options?: StartOptions): Promise<AbilityResult>--><!--Device-UIExtensionContext-startAbilityForResult(want: Want, options?: StartOptions): Promise<AbilityResult>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -778,6 +810,8 @@ startUIServiceExtensionAbility(want: Want): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UIExtensionContext-startUIServiceExtensionAbility(want: Want): Promise<void>--><!--Device-UIExtensionContext-startUIServiceExtensionAbility(want: Want): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -823,6 +857,8 @@ terminateSelf(callback: AsyncCallback<void>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UIExtensionContext-terminateSelf(callback: AsyncCallback<void>): void--><!--Device-UIExtensionContext-terminateSelf(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -851,6 +887,8 @@ terminateSelf(): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UIExtensionContext-terminateSelf(): Promise<void>--><!--Device-UIExtensionContext-terminateSelf(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **返回值：**
@@ -870,6 +908,8 @@ terminateSelfWithResult(parameter: AbilityResult, callback: AsyncCallback<void>)
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionContext-terminateSelfWithResult(parameter: AbilityResult, callback: AsyncCallback<void>): void--><!--Device-UIExtensionContext-terminateSelfWithResult(parameter: AbilityResult, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -899,6 +939,8 @@ terminateSelfWithResult(parameter: AbilityResult): Promise<void>
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionContext-terminateSelfWithResult(parameter: AbilityResult): Promise<void>--><!--Device-UIExtensionContext-terminateSelfWithResult(parameter: AbilityResult): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

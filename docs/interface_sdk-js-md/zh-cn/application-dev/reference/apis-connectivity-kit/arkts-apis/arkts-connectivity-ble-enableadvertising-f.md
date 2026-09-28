@@ -22,6 +22,8 @@ function enableAdvertising(advertisingEnableParams: AdvertisingEnableParams, cal
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ble-function enableAdvertising(advertisingEnableParams: AdvertisingEnableParams, callback: AsyncCallback<void>): void--><!--Device-ble-function enableAdvertising(advertisingEnableParams: AdvertisingEnableParams, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -131,6 +133,8 @@ function enableAdvertising(advertisingEnableParams: AdvertisingEnableParams): Pr
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ble-function enableAdvertising(advertisingEnableParams: AdvertisingEnableParams): Promise<void>--><!--Device-ble-function enableAdvertising(advertisingEnableParams: AdvertisingEnableParams): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

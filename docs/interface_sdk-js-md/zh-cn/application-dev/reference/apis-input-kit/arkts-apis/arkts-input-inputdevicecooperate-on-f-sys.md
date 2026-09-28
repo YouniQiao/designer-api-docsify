@@ -20,6 +20,8 @@ function on(type: 'cooperation', callback: AsyncCallback<{ deviceDescriptor: str
 
 **替代接口：** [on](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-on-f-sys.md)
 
+<!--Device-inputDeviceCooperate-function on(type: 'cooperation', callback: AsyncCallback<{ deviceDescriptor: string, eventMsg: EventMsg }>): void--><!--Device-inputDeviceCooperate-function on(type: 'cooperation', callback: AsyncCallback<{ deviceDescriptor: string, eventMsg: EventMsg }>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Cooperator
 
 **系统接口：** 此接口为系统接口。

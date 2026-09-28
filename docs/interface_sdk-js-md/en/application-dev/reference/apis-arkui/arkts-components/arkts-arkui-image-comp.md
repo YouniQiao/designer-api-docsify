@@ -5,7 +5,7 @@ The **Image** component is usually used to display images in applications.
 > **NOTE:** 
 > 
 > This topic describes only system APIs provided by the module. For details about its public APIs, see
-> [Image](#image).
+> [Image](arkts-arkui-image-comp.md).
 
 ## Image
 
@@ -61,6 +61,8 @@ If the **Image** component does not have its width and height set, its size adap
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-ImageInterface-(src: PixelMap | ResourceStr | DrawableDescriptor): ImageAttribute--><!--Device-ImageInterface-(src: PixelMap | ResourceStr | DrawableDescriptor): ImageAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -84,6 +86,8 @@ Obtains an image. The [ImageContent](arkts-arkui-image-comp-imagecontent-e.md) t
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-ImageInterface-(src: PixelMap | ResourceStr | DrawableDescriptor | ImageContent): ImageAttribute--><!--Device-ImageInterface-(src: PixelMap | ResourceStr | DrawableDescriptor | ImageContent): ImageAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -109,6 +113,8 @@ Set src to obtain images
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
 
+<!--Device-ImageInterface-(src: PixelMap | ResourceStr | DrawableDescriptor | ImageContent, reloadKey?: string): ImageAttribute--><!--Device-ImageInterface-(src: PixelMap | ResourceStr | DrawableDescriptor | ImageContent, reloadKey?: string): ImageAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -131,6 +137,8 @@ Obtains an image. The [imageAIOptions](../arkts-apis/arkts-arkui-imageaioptions-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ImageInterface-(src: PixelMap | ResourceStr | DrawableDescriptor, imageAIOptions: ImageAIOptions): ImageAttribute--><!--Device-ImageInterface-(src: PixelMap | ResourceStr | DrawableDescriptor, imageAIOptions: ImageAIOptions): ImageAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -155,6 +163,8 @@ Set src and ai options to obtain images
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ImageInterface-(src: PixelMap | ResourceStr | DrawableDescriptor,      imageAIOptions?: ImageAIOptions, reloadKey?: string): ImageAttribute--><!--Device-ImageInterface-(src: PixelMap | ResourceStr | DrawableDescriptor,      imageAIOptions?: ImageAIOptions, reloadKey?: string): ImageAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

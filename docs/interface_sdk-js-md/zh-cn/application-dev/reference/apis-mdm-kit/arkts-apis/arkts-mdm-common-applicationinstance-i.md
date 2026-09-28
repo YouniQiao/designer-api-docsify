@@ -10,6 +10,8 @@ export interface ApplicationInstance
 
 **起始版本：** 22
 
+<!--Device-common-export interface ApplicationInstance--><!--Device-common-export interface ApplicationInstance-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## 导入模块
@@ -32,6 +34,8 @@ accountId: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ApplicationInstance-accountId: number--><!--Device-ApplicationInstance-accountId: number-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## appIdentifier
@@ -47,6 +51,8 @@ appIdentifier: string
 **起始版本：** 22
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ApplicationInstance-appIdentifier: string--><!--Device-ApplicationInstance-appIdentifier: string-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -65,5 +71,7 @@ appIndex可以通过[getAppCloneIdentity](../../apis-ability-kit/arkts-apis/arkt
 **起始版本：** 22
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ApplicationInstance-appIndex: number--><!--Device-ApplicationInstance-appIndex: number-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager

@@ -28,6 +28,8 @@ Draws the **Shape** component. After being called, it creates a **Shape** object
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ShapeInterface-new (value?: PixelMap): ShapeAttribute--><!--Device-ShapeInterface-new (value?: PixelMap): ShapeAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -49,6 +51,8 @@ Draws the **Shape** component. After being called, it creates a **Shape** object
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ShapeInterface-(value: PixelMap): ShapeAttribute--><!--Device-ShapeInterface-(value: PixelMap): ShapeAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -73,6 +77,8 @@ Draws the **Shape** component. This function has no parameter. After being calle
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-ShapeInterface-(): ShapeAttribute--><!--Device-ShapeInterface-(): ShapeAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

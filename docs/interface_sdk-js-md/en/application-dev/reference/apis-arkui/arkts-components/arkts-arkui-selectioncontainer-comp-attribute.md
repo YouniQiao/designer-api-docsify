@@ -4,18 +4,20 @@
 export declare class SelectionContainerAttribute extends CommonMethod<SelectionContainerAttribute>
 ```
 
-[Universal attributes](arkts-arkui-common-comp.md#common) are supported.
+[Universal attributes](arkts-arkui-common-comp.md) are supported.
 
 > **NOTE:** 
 > 
-> - The [obscuring](arkts-arkui-common-comp.md#common) attribute is not supported.
+> - The [obscuring](arkts-arkui-common-comp.md) attribute is not supported.
 > 
-> - The [transformation](arkts-arkui-common-comp.md#common) attribute is not supported. In the
+> - The [transformation](arkts-arkui-common-comp.md) attribute is not supported. In the
 > **SelectionContainer** container, the **Text** child component does not support transformation.
 
 **Inheritance/Implementation:** SelectionContainerAttribute extends CommonMethod<SelectionContainerAttribute>
 
 **Since:** 26.0.0
+
+<!--Device-unnamed-export declare class SelectionContainerAttribute extends CommonMethod<SelectionContainerAttribute>--><!--Device-unnamed-export declare class SelectionContainerAttribute extends CommonMethod<SelectionContainerAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,7 +40,7 @@ Sets a custom selection menu. If this attribute is not used, the default value o
 > 
 > - The long-press response duration of **bindSelectionMenu** is 600 ms, while that of [bindContextMenu](arkts-arkui-common-comp-commonmethod-c.md#bindcontextmenu)is 800 ms. When both are bound and both are triggered by a long press, **bindSelectionMenu** is responded to first.
 > 
-> - When the custom menu is too long, you are advised to nest a [Scroll](arkts-arkui-scroll-comp.md#scroll)component inside it to prevent the keyboard from being obscured.
+> - When the custom menu is too long, you are advised to nest a [Scroll](arkts-arkui-scroll-comp.md)component inside it to prevent the keyboard from being obscured.
 > 
 > - When the selection spans non-copyable text, the menu is displayed and processed based only on the copyable text actually selected.
 > 
@@ -49,6 +51,8 @@ Sets a custom selection menu. If this attribute is not used, the default value o
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-SelectionContainerAttribute-bindSelectionMenu(spanType: Optional<TextSpanType>, content: Optional<CustomBuilder>,    responseType: Optional<TextResponseType>, options?: Optional<SelectionContainerMenuOptions>): SelectionContainerAttribute--><!--Device-SelectionContainerAttribute-bindSelectionMenu(spanType: Optional<TextSpanType>, content: Optional<CustomBuilder>,    responseType: Optional<TextResponseType>, options?: Optional<SelectionContainerMenuOptions>): SelectionContainerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -82,6 +86,8 @@ Sets the caret color of the selected text. If this attribute is not used, the de
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-SelectionContainerAttribute-caretColor(color: Optional<ResourceColor>): SelectionContainerAttribute--><!--Device-SelectionContainerAttribute-caretColor(color: Optional<ResourceColor>): SelectionContainerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -109,6 +115,8 @@ Sets the copy option for the component. If this attribute is not used, the defau
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-SelectionContainerAttribute-copyOption(value: Optional<CopyOptions>): SelectionContainerAttribute--><!--Device-SelectionContainerAttribute-copyOption(value: Optional<CopyOptions>): SelectionContainerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -138,6 +146,8 @@ Sets the edit menu options for the selected text, including the menu text, icon,
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-SelectionContainerAttribute-editMenuOptions(editMenu: Optional<SelectionContainerEditMenuOptions>): SelectionContainerAttribute--><!--Device-SelectionContainerAttribute-editMenuOptions(editMenu: Optional<SelectionContainerEditMenuOptions>): SelectionContainerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -161,6 +171,8 @@ When haptic feedback is enabled, you need to set the **requestPermissions** fiel
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-SelectionContainerAttribute-enableHapticFeedback(isEnabled: Optional<boolean>): SelectionContainerAttribute--><!--Device-SelectionContainerAttribute-enableHapticFeedback(isEnabled: Optional<boolean>): SelectionContainerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -189,6 +201,8 @@ Triggered when the copy button on the selection menu is tapped after the selecti
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-SelectionContainerAttribute-onCopy(callback: Optional<Callback<string>>): SelectionContainerAttribute--><!--Device-SelectionContainerAttribute-onCopy(callback: Optional<Callback<string>>): SelectionContainerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -220,6 +234,8 @@ Triggered when the selected text in **SelectionContainer** changes. This API ret
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-SelectionContainerAttribute-onTextSelectionChange(callback: Optional<Callback<Array<string>>>): SelectionContainerAttribute--><!--Device-SelectionContainerAttribute-onTextSelectionChange(callback: Optional<Callback<Array<string>>>): SelectionContainerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -248,6 +264,8 @@ Triggered before a copy operation is performed. This API returns the result asyn
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-SelectionContainerAttribute-onWillCopy(callback: Optional<Callback<string, boolean>>): SelectionContainerAttribute--><!--Device-SelectionContainerAttribute-onWillCopy(callback: Optional<Callback<string, boolean>>): SelectionContainerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -275,6 +293,8 @@ Sets the highlight color of the selected text. If this attribute is not used, th
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-SelectionContainerAttribute-selectedBackgroundColor(color: Optional<ResourceColor>): SelectionContainerAttribute--><!--Device-SelectionContainerAttribute-selectedBackgroundColor(color: Optional<ResourceColor>): SelectionContainerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -306,6 +326,8 @@ Sets the concatenation method for the aggregated text in **SelectionContainer**.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-SelectionContainerAttribute-textJoinStyle(style: Optional<SelectionContainerTextJoinStyle>): SelectionContainerAttribute--><!--Device-SelectionContainerAttribute-textJoinStyle(style: Optional<SelectionContainerTextJoinStyle>): SelectionContainerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

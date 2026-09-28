@@ -12,6 +12,8 @@ The **NodeController** module provides APIs for managing custom nodes, such as c
 
 **Since:** 11
 
+<!--Device-unnamed-export abstract class NodeController--><!--Device-unnamed-export abstract class NodeController-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## aboutToAppear
@@ -31,6 +33,8 @@ Called when the [NodeContainer](../arkts-components/arkts-arkui-nodecontainer-co
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NodeController-aboutToAppear?(): void--><!--Device-NodeController-aboutToAppear?(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -52,6 +56,8 @@ Called when the [NodeContainer](../arkts-components/arkts-arkui-nodecontainer-co
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-NodeController-aboutToDisappear?(): void--><!--Device-NodeController-aboutToDisappear?(): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## aboutToResize
@@ -67,6 +73,8 @@ Called when [NodeContainer](../arkts-components/arkts-arkui-nodecontainer-comp-a
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NodeController-aboutToResize?(size: Size): void--><!--Device-NodeController-aboutToResize?(size: Size): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -103,6 +111,8 @@ Alternatively, the callback can be triggered through the **rebuild()** API of **
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-NodeController-abstract makeNode(uiContext: UIContext): FrameNode | null--><!--Device-NodeController-abstract makeNode(uiContext: UIContext): FrameNode | null-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -135,6 +145,8 @@ Called when the [NodeContainer](../arkts-components/arkts-arkui-nodecontainer-co
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-NodeController-onAttach?(): void--><!--Device-NodeController-onAttach?(): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onBind
@@ -150,6 +162,8 @@ Called after **NodeController** is bound to [NodeContainer](../arkts-components/
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-NodeController-onBind?(containerId: number): void--><!--Device-NodeController-onBind?(containerId: number): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -177,6 +191,8 @@ Called when the [NodeContainer](../arkts-components/arkts-arkui-nodecontainer-co
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-NodeController-onDetach?(): void--><!--Device-NodeController-onDetach?(): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onTouchEvent
@@ -192,6 +208,8 @@ Called when [NodeContainer](../arkts-components/arkts-arkui-nodecontainer-comp-a
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NodeController-onTouchEvent?(event: TouchEvent): void--><!--Device-NodeController-onTouchEvent?(event: TouchEvent): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -215,6 +233,8 @@ Called after **NodeController** is unbound from [NodeContainer](../arkts-compone
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-NodeController-onUnbind?(containerId: number): void--><!--Device-NodeController-onUnbind?(containerId: number): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -237,6 +257,8 @@ Called when **NodeController** is about to be bound to [NodeContainer](../arkts-
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-NodeController-onWillBind?(containerId: number): void--><!--Device-NodeController-onWillBind?(containerId: number): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -258,6 +280,8 @@ Called when **NodeController** is about to be unbound from [NodeContainer](../ar
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-NodeController-onWillUnbind?(containerId: number): void--><!--Device-NodeController-onWillUnbind?(containerId: number): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -291,5 +315,7 @@ Notifies the [NodeContainer](../arkts-components/arkts-arkui-nodecontainer-comp-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NodeController-rebuild(): void--><!--Device-NodeController-rebuild(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

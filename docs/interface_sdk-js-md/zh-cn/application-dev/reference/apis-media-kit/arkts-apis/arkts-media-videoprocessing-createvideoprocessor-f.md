@@ -18,6 +18,8 @@ function createVideoProcessor(): VideoProcessor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-videoProcessing-function createVideoProcessor(): VideoProcessor--><!--Device-videoProcessing-function createVideoProcessor(): VideoProcessor-End-->
+
 **系统能力：** SystemCapability.Multimedia.VideoProcessingEngine
 
 **返回值：**

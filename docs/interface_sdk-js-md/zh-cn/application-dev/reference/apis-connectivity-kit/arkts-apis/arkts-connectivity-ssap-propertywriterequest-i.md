@@ -8,6 +8,8 @@ interface PropertyWriteRequest
 
 **起始版本：** 26.0.0
 
+<!--Device-ssap-interface PropertyWriteRequest--><!--Device-ssap-interface PropertyWriteRequest-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## 导入模块
@@ -30,6 +32,8 @@ address: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PropertyWriteRequest-address: string--><!--Device-PropertyWriteRequest-address: string-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## propertyUuid
@@ -45,6 +49,8 @@ propertyUuid: string
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PropertyWriteRequest-propertyUuid: string--><!--Device-PropertyWriteRequest-propertyUuid: string-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -62,6 +68,8 @@ requestId: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PropertyWriteRequest-requestId: int--><!--Device-PropertyWriteRequest-requestId: int-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## serviceUuid
@@ -77,6 +85,8 @@ serviceUuid: string
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PropertyWriteRequest-serviceUuid: string--><!--Device-PropertyWriteRequest-serviceUuid: string-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -94,6 +104,8 @@ value: ArrayBuffer
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PropertyWriteRequest-value: ArrayBuffer--><!--Device-PropertyWriteRequest-value: ArrayBuffer-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## writeType
@@ -109,5 +121,7 @@ writeType: PropertyWriteType
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PropertyWriteRequest-writeType: PropertyWriteType--><!--Device-PropertyWriteRequest-writeType: PropertyWriteType-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base

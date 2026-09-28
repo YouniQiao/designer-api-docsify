@@ -8,6 +8,8 @@ enum PhotoSubtype
 
 **起始版本：** 14
 
+<!--Device-sendablePhotoAccessHelper-enum PhotoSubtype--><!--Device-sendablePhotoAccessHelper-enum PhotoSubtype-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## SCREENSHOT
@@ -19,6 +21,8 @@ SCREENSHOT = 1
 Screenshot Photo Type
 
 **起始版本：** 14
+
+<!--Device-PhotoSubtype-SCREENSHOT = 1--><!--Device-PhotoSubtype-SCREENSHOT = 1-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

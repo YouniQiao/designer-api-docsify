@@ -8,6 +8,8 @@ export enum PhotoSource
 
 **起始版本：** 20
 
+<!--Device-photoAccessHelper-export enum PhotoSource--><!--Device-photoAccessHelper-export enum PhotoSource-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## ALL
@@ -20,7 +22,9 @@ ALL = 0
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PhotoSource-ALL = 0--><!--Device-PhotoSource-ALL = 0-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -34,7 +38,9 @@ CAMERA = 1
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PhotoSource-CAMERA = 1--><!--Device-PhotoSource-CAMERA = 1-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -48,6 +54,8 @@ SCREENSHOT = 2
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-PhotoSource-SCREENSHOT = 2--><!--Device-PhotoSource-SCREENSHOT = 2-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core

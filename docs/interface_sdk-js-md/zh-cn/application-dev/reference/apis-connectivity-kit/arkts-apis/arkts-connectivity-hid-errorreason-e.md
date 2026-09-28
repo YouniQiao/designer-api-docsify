@@ -8,6 +8,8 @@ enum ErrorReason
 
 **起始版本：** 23
 
+<!--Device-hid-enum ErrorReason--><!--Device-hid-enum ErrorReason-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## RSP_SUCCESS
@@ -21,6 +23,8 @@ RSP_SUCCESS = 0
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ErrorReason-RSP_SUCCESS = 0--><!--Device-ErrorReason-RSP_SUCCESS = 0-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -36,6 +40,8 @@ RSP_NOT_READY = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ErrorReason-RSP_NOT_READY = 1--><!--Device-ErrorReason-RSP_NOT_READY = 1-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## RSP_INVALID_REPORT_ID
@@ -49,6 +55,8 @@ RSP_INVALID_REPORT_ID = 2
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ErrorReason-RSP_INVALID_REPORT_ID = 2--><!--Device-ErrorReason-RSP_INVALID_REPORT_ID = 2-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -64,6 +72,8 @@ RSP_UNSUPPORTED_REQ = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ErrorReason-RSP_UNSUPPORTED_REQ = 3--><!--Device-ErrorReason-RSP_UNSUPPORTED_REQ = 3-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## RSP_INVALID_PARAM
@@ -78,6 +88,8 @@ RSP_INVALID_PARAM = 4
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ErrorReason-RSP_INVALID_PARAM = 4--><!--Device-ErrorReason-RSP_INVALID_PARAM = 4-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## RSP_UNKNOWN
@@ -91,5 +103,7 @@ RSP_UNKNOWN = 14
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ErrorReason-RSP_UNKNOWN = 14--><!--Device-ErrorReason-RSP_UNKNOWN = 14-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

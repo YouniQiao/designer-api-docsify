@@ -18,6 +18,8 @@ function queryAllApns(): Promise<Array<ApnInfo>>
 
 **需要权限：** ohos.permission.MANAGE_APN_SETTING
 
+<!--Device-data-function queryAllApns(): Promise<Array<ApnInfo>>--><!--Device-data-function queryAllApns(): Promise<Array<ApnInfo>>-End-->
+
 **系统能力：** SystemCapability.Telephony.CellularData
 
 **返回值：**

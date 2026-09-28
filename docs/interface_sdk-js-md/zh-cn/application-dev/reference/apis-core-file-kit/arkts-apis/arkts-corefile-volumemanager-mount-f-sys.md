@@ -18,6 +18,8 @@ function mount(volumeId: string, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.MOUNT_UNMOUNT_MANAGER
 
+<!--Device-volumeManager-function mount(volumeId: string, callback: AsyncCallback<void>): void--><!--Device-volumeManager-function mount(volumeId: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -57,6 +59,8 @@ function mount(volumeId: string): Promise<void>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.MOUNT_UNMOUNT_MANAGER
+
+<!--Device-volumeManager-function mount(volumeId: string): Promise<void>--><!--Device-volumeManager-function mount(volumeId: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Volume
 

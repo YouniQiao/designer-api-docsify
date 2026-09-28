@@ -14,6 +14,8 @@ Defines a response object of the callback function after the device orientation 
 
 **Substitutes:** [OrientationResponse](arkts-sensorservice-sensor-orientationresponse-i.md)
 
+<!--Device-unnamed-export interface DeviceOrientationResponse--><!--Device-unnamed-export interface DeviceOrientationResponse-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 ## Modules to Import
@@ -40,6 +42,8 @@ Rotation angle around the Z axis when the X/Y axis of the device coincides with 
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-DeviceOrientationResponse-alpha: number--><!--Device-DeviceOrientationResponse-alpha: number-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 ## beta
@@ -60,6 +64,8 @@ Rotation angle around the X axis when the Y/Z axis of the device coincides with 
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-DeviceOrientationResponse-beta: number--><!--Device-DeviceOrientationResponse-beta: number-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 ## gamma
@@ -79,5 +85,7 @@ Rotation angle around the Y axis when the X/Z axis of the device coincides with 
 **Substitutes:** [gamma](arkts-sensorservice-sensor-orientationresponse-i.md#gamma)
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-DeviceOrientationResponse-gamma: number--><!--Device-DeviceOrientationResponse-gamma: number-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite

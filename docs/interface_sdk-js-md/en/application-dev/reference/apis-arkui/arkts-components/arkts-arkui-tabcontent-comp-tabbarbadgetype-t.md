@@ -12,6 +12,8 @@ Types for TabBar badge.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.1.
 
+<!--Device-unnamed-declare type TabBarBadgeType = number | ResourceStr--><!--Device-unnamed-declare type TabBarBadgeType = number | ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 | Type | Description |

@@ -12,6 +12,8 @@ declare class RemoteWindowAttribute extends CommonMethod<RemoteWindowAttribute>
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare class RemoteWindowAttribute extends CommonMethod<RemoteWindowAttribute>--><!--Device-unnamed-declare class RemoteWindowAttribute extends CommonMethod<RemoteWindowAttribute>-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。

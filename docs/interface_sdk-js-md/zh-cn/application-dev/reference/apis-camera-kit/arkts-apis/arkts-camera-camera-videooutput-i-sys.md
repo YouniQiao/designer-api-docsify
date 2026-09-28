@@ -10,6 +10,8 @@ interface VideoOutput extends CameraOutput
 
 **起始版本：** 10
 
+<!--Device-camera-interface VideoOutput extends CameraOutput--><!--Device-camera-interface VideoOutput extends CameraOutput-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
@@ -27,6 +29,8 @@ attachMetaSurface(surfaceId: string, type: VideoMetaType): void
 Attach a meta surface to VideoOutput.
 
 **起始版本：** 12
+
+<!--Device-VideoOutput-attachMetaSurface(surfaceId: string, type: VideoMetaType): void--><!--Device-VideoOutput-attachMetaSurface(surfaceId: string, type: VideoMetaType): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -57,6 +61,8 @@ Enable auto deferred video enhancement if needed.
 
 **起始版本：** 13
 
+<!--Device-VideoOutput-enableAutoDeferredVideoEnhancement(enabled: boolean): void--><!--Device-VideoOutput-enableAutoDeferredVideoEnhancement(enabled: boolean): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -85,6 +91,8 @@ Enable auto frame rate for video capture.
 
 **起始版本：** 18
 
+<!--Device-VideoOutput-enableAutoVideoFrameRate(enabled: boolean): void--><!--Device-VideoOutput-enableAutoVideoFrameRate(enabled: boolean): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -112,6 +120,8 @@ Get supported video rotations.
 
 **起始版本：** 14
 
+<!--Device-VideoOutput-getSupportedRotations(): Array<ImageRotation>--><!--Device-VideoOutput-getSupportedRotations(): Array<ImageRotation>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -137,6 +147,8 @@ getSupportedVideoMetaTypes(): Array<VideoMetaType>
 Get supported video meta types.
 
 **起始版本：** 12
+
+<!--Device-VideoOutput-getSupportedVideoMetaTypes(): Array<VideoMetaType>--><!--Device-VideoOutput-getSupportedVideoMetaTypes(): Array<VideoMetaType>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -165,6 +177,8 @@ Confirm if auto deferred video enhancement is enabled.
 
 **起始版本：** 13
 
+<!--Device-VideoOutput-isAutoDeferredVideoEnhancementEnabled(): boolean--><!--Device-VideoOutput-isAutoDeferredVideoEnhancementEnabled(): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -191,6 +205,8 @@ isAutoDeferredVideoEnhancementSupported(): boolean
 Confirm if auto deferred video enhancement is supported in the specific device.
 
 **起始版本：** 13
+
+<!--Device-VideoOutput-isAutoDeferredVideoEnhancementSupported(): boolean--><!--Device-VideoOutput-isAutoDeferredVideoEnhancementSupported(): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -219,6 +235,8 @@ Determine whether auto frame rate is supported.
 
 **起始版本：** 18
 
+<!--Device-VideoOutput-isAutoVideoFrameRateSupported(): boolean--><!--Device-VideoOutput-isAutoVideoFrameRateSupported(): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -245,6 +263,8 @@ Determine whether video rotation is supported.
 
 **起始版本：** 14
 
+<!--Device-VideoOutput-isRotationSupported(): boolean--><!--Device-VideoOutput-isRotationSupported(): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -270,6 +290,8 @@ off(type: 'deferredVideoEnhancementInfo', callback?: AsyncCallback<DeferredVideo
 Unsubscribes from deferred video enhancement info callback.
 
 **起始版本：** 13
+
+<!--Device-VideoOutput-off(type: 'deferredVideoEnhancementInfo', callback?: AsyncCallback<DeferredVideoEnhancementInfo>): void--><!--Device-VideoOutput-off(type: 'deferredVideoEnhancementInfo', callback?: AsyncCallback<DeferredVideoEnhancementInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -298,6 +320,8 @@ Subscribes deferred video enhancement info callback.
 
 **起始版本：** 13
 
+<!--Device-VideoOutput-on(type: 'deferredVideoEnhancementInfo', callback: AsyncCallback<DeferredVideoEnhancementInfo>): void--><!--Device-VideoOutput-on(type: 'deferredVideoEnhancementInfo', callback: AsyncCallback<DeferredVideoEnhancementInfo>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -324,6 +348,8 @@ setRotation(rotation: ImageRotation): void
 Set a video rotation.
 
 **起始版本：** 14
+
+<!--Device-VideoOutput-setRotation(rotation: ImageRotation): void--><!--Device-VideoOutput-setRotation(rotation: ImageRotation): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

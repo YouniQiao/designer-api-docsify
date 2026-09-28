@@ -8,6 +8,8 @@ export interface AuthUser
 
 **起始版本：** 21
 
+<!--Device-dlpPermission-export interface AuthUser--><!--Device-dlpPermission-export interface AuthUser-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## 导入模块
@@ -28,6 +30,8 @@ authAccount: string
 
 **起始版本：** 21
 
+<!--Device-AuthUser-authAccount: string--><!--Device-AuthUser-authAccount: string-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## authAccountType
@@ -41,6 +45,8 @@ authAccountType: AccountType
 **类型：** [AccountType](arkts-dataprotection-dlppermission-accounttype-e.md)
 
 **起始版本：** 21
+
+<!--Device-AuthUser-authAccountType: AccountType--><!--Device-AuthUser-authAccountType: AccountType-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -56,6 +62,8 @@ dlpFileAccess: DLPFileAccess
 
 **起始版本：** 21
 
+<!--Device-AuthUser-dlpFileAccess: DLPFileAccess--><!--Device-AuthUser-dlpFileAccess: DLPFileAccess-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## permExpiryTime
@@ -69,5 +77,7 @@ permExpiryTime: number
 **类型：** number
 
 **起始版本：** 21
+
+<!--Device-AuthUser-permExpiryTime: number--><!--Device-AuthUser-permExpiryTime: number-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention

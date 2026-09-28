@@ -8,6 +8,8 @@ enum PackageType
 
 **起始版本：** 12
 
+<!--Device-systemManager-enum PackageType--><!--Device-systemManager-enum PackageType-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## FIRMWARE
@@ -21,5 +23,7 @@ FIRMWARE = 1
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PackageType-FIRMWARE = 1--><!--Device-PackageType-FIRMWARE = 1-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager

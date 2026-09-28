@@ -16,6 +16,8 @@ function on(type: 'vibratorStateChange', callback: Callback<VibratorStatusEvent>
 
 **起始版本：** 19
 
+<!--Device-vibrator-function on(type: 'vibratorStateChange', callback: Callback<VibratorStatusEvent>): void--><!--Device-vibrator-function on(type: 'vibratorStateChange', callback: Callback<VibratorStatusEvent>): void-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 **参数：**

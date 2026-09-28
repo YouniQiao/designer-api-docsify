@@ -18,6 +18,8 @@ function queryModuleUsageRecords(maxNum: number, callback: AsyncCallback<Array<H
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-usageStatistics-function queryModuleUsageRecords(maxNum: int, callback: AsyncCallback<Array<HapModuleInfo>>): void--><!--Device-usageStatistics-function queryModuleUsageRecords(maxNum: int, callback: AsyncCallback<Array<HapModuleInfo>>): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +79,8 @@ function queryModuleUsageRecords(maxNum: number): Promise<Array<HapModuleInfo>>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
+
+<!--Device-usageStatistics-function queryModuleUsageRecords(maxNum: int): Promise<Array<HapModuleInfo>>--><!--Device-usageStatistics-function queryModuleUsageRecords(maxNum: int): Promise<Array<HapModuleInfo>>-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -141,6 +145,8 @@ function queryModuleUsageRecords(callback: AsyncCallback<Array<HapModuleInfo>>):
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-usageStatistics-function queryModuleUsageRecords(callback: AsyncCallback<Array<HapModuleInfo>>): void--><!--Device-usageStatistics-function queryModuleUsageRecords(callback: AsyncCallback<Array<HapModuleInfo>>): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **系统接口：** 此接口为系统接口。
@@ -201,6 +207,8 @@ function queryModuleUsageRecords(): Promise<Array<HapModuleInfo>>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
+
+<!--Device-usageStatistics-function queryModuleUsageRecords(): Promise<Array<HapModuleInfo>>--><!--Device-usageStatistics-function queryModuleUsageRecords(): Promise<Array<HapModuleInfo>>-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 

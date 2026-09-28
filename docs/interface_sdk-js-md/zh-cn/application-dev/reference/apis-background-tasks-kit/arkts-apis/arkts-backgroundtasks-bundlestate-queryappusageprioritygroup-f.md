@@ -20,6 +20,8 @@ The priority defined in a priority group restricts the resource usage of an appl
 
 **废弃版本：** 9
 
+<!--Device-bundleState-function queryAppUsagePriorityGroup(callback: AsyncCallback<number>): void--><!--Device-bundleState-function queryAppUsagePriorityGroup(callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
 **参数：**
@@ -59,6 +61,8 @@ The priority defined in a priority group restricts the resource usage of an appl
 **起始版本：** 7
 
 **废弃版本：** 9
+
+<!--Device-bundleState-function queryAppUsagePriorityGroup(): Promise<number>--><!--Device-bundleState-function queryAppUsagePriorityGroup(): Promise<number>-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 

@@ -18,6 +18,8 @@ Obtains the IMEI of a specified card slot of the device.
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-radio-function getIMEI(slotId: int, callback: AsyncCallback<string>): void--><!--Device-radio-function getIMEI(slotId: int, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -70,6 +72,8 @@ Obtains the IMEI of a specified card slot of the device.
 **起始版本：** 8
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
+
+<!--Device-radio-function getIMEI(slotId?: int): Promise<string>--><!--Device-radio-function getIMEI(slotId?: int): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -126,6 +130,8 @@ Obtains the IMEI of a specified card slot of the device.
 **起始版本：** 8
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
+
+<!--Device-radio-function getIMEI(callback: AsyncCallback<string>): void--><!--Device-radio-function getIMEI(callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

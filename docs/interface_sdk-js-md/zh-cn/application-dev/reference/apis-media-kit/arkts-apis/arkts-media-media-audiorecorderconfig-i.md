@@ -16,6 +16,8 @@ interface AudioRecorderConfig
 
 **替代接口：** [AVRecorderConfig](arkts-media-media-avrecorderconfig-i.md)
 
+<!--Device-media-interface AudioRecorderConfig--><!--Device-media-interface AudioRecorderConfig-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
 
 ## 导入模块
@@ -40,6 +42,8 @@ audioEncodeBitRate?: number
 
 **替代接口：** [audioBitrate](arkts-media-media-avrecorderprofile-i.md#audiobitrate)
 
+<!--Device-AudioRecorderConfig-audioEncodeBitRate?: number--><!--Device-AudioRecorderConfig-audioEncodeBitRate?: number-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
 
 ## audioEncoder
@@ -57,6 +61,8 @@ audioEncoder?: AudioEncoder
 **废弃版本：** 8
 
 **替代接口：** [audioEncoderMime](#audioencodermime)
+
+<!--Device-AudioRecorderConfig-audioEncoder?: AudioEncoder--><!--Device-AudioRecorderConfig-audioEncoder?: AudioEncoder-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
 
@@ -76,6 +82,8 @@ audioEncoderMime?: CodecMimeType
 
 **替代接口：** [audioCodec](arkts-media-media-avrecorderprofile-i.md#audiocodec)
 
+<!--Device-AudioRecorderConfig-audioEncoderMime?: CodecMimeType--><!--Device-AudioRecorderConfig-audioEncoderMime?: CodecMimeType-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
 
 ## audioSampleRate
@@ -93,6 +101,8 @@ audioSampleRate?: number
 **废弃版本：** 9
 
 **替代接口：** [audioSampleRate](arkts-media-media-avrecorderprofile-i.md#audiosamplerate)
+
+<!--Device-AudioRecorderConfig-audioSampleRate?: number--><!--Device-AudioRecorderConfig-audioSampleRate?: number-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
 
@@ -112,6 +122,8 @@ fileFormat?: ContainerFormatType
 
 **替代接口：** [fileFormat](arkts-media-media-avrecorderprofile-i.md#fileformat)
 
+<!--Device-AudioRecorderConfig-fileFormat?: ContainerFormatType--><!--Device-AudioRecorderConfig-fileFormat?: ContainerFormatType-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
 
 ## format
@@ -129,6 +141,8 @@ format?: AudioOutputFormat
 **废弃版本：** 8
 
 **替代接口：** [fileFormat](#fileformat)
+
+<!--Device-AudioRecorderConfig-format?: AudioOutputFormat--><!--Device-AudioRecorderConfig-format?: AudioOutputFormat-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
 
@@ -148,6 +162,8 @@ location?: Location
 
 **替代接口：** [location](arkts-media-media-avmetadata-i.md#location)
 
+<!--Device-AudioRecorderConfig-location?: Location--><!--Device-AudioRecorderConfig-location?: Location-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
 
 ## numberOfChannels
@@ -166,6 +182,8 @@ numberOfChannels?: number
 
 **替代接口：** [audioChannels](arkts-media-media-avrecorderprofile-i.md#audiochannels)
 
+<!--Device-AudioRecorderConfig-numberOfChannels?: number--><!--Device-AudioRecorderConfig-numberOfChannels?: number-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
 
 ## uri
@@ -183,5 +201,7 @@ uri: string
 **废弃版本：** 9
 
 **替代接口：** [url](arkts-media-media-avrecorderconfig-i.md#url)
+
+<!--Device-AudioRecorderConfig-uri: string--><!--Device-AudioRecorderConfig-uri: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder

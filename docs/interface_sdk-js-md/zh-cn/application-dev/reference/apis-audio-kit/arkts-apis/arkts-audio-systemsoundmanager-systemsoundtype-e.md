@@ -8,6 +8,8 @@ enum SystemSoundType
 
 **起始版本：** 23
 
+<!--Device-systemSoundManager-enum SystemSoundType--><!--Device-systemSoundManager-enum SystemSoundType-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 ## PHOTO_SHUTTER
@@ -21,6 +23,8 @@ PHOTO_SHUTTER = 0
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SystemSoundType-PHOTO_SHUTTER = 0--><!--Device-SystemSoundType-PHOTO_SHUTTER = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -36,6 +40,8 @@ VIDEO_RECORDING_BEGIN = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SystemSoundType-VIDEO_RECORDING_BEGIN = 1--><!--Device-SystemSoundType-VIDEO_RECORDING_BEGIN = 1-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 ## VIDEO_RECORDING_END
@@ -49,5 +55,7 @@ VIDEO_RECORDING_END = 2
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SystemSoundType-VIDEO_RECORDING_END = 2--><!--Device-SystemSoundType-VIDEO_RECORDING_END = 2-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core

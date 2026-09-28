@@ -8,6 +8,8 @@ enum AsrNoiseSuppressionMode
 
 **起始版本：** 12
 
+<!--Device-audio-enum AsrNoiseSuppressionMode--><!--Device-audio-enum AsrNoiseSuppressionMode-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **系统接口：** 此接口为系统接口。
@@ -21,6 +23,8 @@ BYPASS = 0
 旁路噪音抑制。
 
 **起始版本：** 12
+
+<!--Device-AsrNoiseSuppressionMode-BYPASS = 0--><!--Device-AsrNoiseSuppressionMode-BYPASS = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -36,6 +40,8 @@ STANDARD = 1
 
 **起始版本：** 12
 
+<!--Device-AsrNoiseSuppressionMode-STANDARD = 1--><!--Device-AsrNoiseSuppressionMode-STANDARD = 1-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **系统接口：** 此接口为系统接口。
@@ -50,6 +56,8 @@ NEAR_FIELD = 2
 
 **起始版本：** 12
 
+<!--Device-AsrNoiseSuppressionMode-NEAR_FIELD = 2--><!--Device-AsrNoiseSuppressionMode-NEAR_FIELD = 2-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **系统接口：** 此接口为系统接口。
@@ -63,6 +71,8 @@ FAR_FIELD = 3
 远场噪音抑制。
 
 **起始版本：** 12
+
+<!--Device-AsrNoiseSuppressionMode-FAR_FIELD = 3--><!--Device-AsrNoiseSuppressionMode-FAR_FIELD = 3-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 

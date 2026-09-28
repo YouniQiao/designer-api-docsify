@@ -14,6 +14,8 @@ RSA私钥编码参数，使用获取私钥字符串时，可以添加此参数�
 
 **起始版本：** 18
 
+<!--Device-cryptoFramework-interface KeyEncodingConfig--><!--Device-cryptoFramework-interface KeyEncodingConfig-End-->
+
 **系统能力：** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
 ## 导入模块
@@ -34,7 +36,9 @@ cipherName: string
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-KeyEncodingConfig-cipherName: string--><!--Device-KeyEncodingConfig-cipherName: string-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
@@ -50,6 +54,8 @@ password: string
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-KeyEncodingConfig-password: string--><!--Device-KeyEncodingConfig-password: string-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Key.AsymKey

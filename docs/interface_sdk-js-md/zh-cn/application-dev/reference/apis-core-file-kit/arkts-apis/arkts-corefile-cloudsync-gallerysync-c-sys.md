@@ -8,6 +8,8 @@ class GallerySync
 
 **起始版本：** 10
 
+<!--Device-cloudSync-class GallerySync--><!--Device-cloudSync-class GallerySync-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **系统接口：** 此接口为系统接口。
@@ -27,6 +29,8 @@ constructor()
 端云同步流程的构造函数，用于获取GallerySync类的实例。
 
 **起始版本：** 10
+
+<!--Device-GallerySync-constructor()--><!--Device-GallerySync-constructor()-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -49,6 +53,8 @@ off(evt: 'progress', callback: (pg: SyncProgress) => void): void
 **起始版本：** 10
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC
+
+<!--Device-GallerySync-off(evt: 'progress', callback: (pg: SyncProgress) => void): void--><!--Device-GallerySync-off(evt: 'progress', callback: (pg: SyncProgress) => void): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -98,6 +104,8 @@ off(evt: 'progress'): void
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC
 
+<!--Device-GallerySync-off(evt: 'progress'): void--><!--Device-GallerySync-off(evt: 'progress'): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **系统接口：** 此接口为系统接口。
@@ -141,6 +149,8 @@ on(evt: 'progress', callback: (pg: SyncProgress) => void): void
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC
 
+<!--Device-GallerySync-on(evt: 'progress', callback: (pg: SyncProgress) => void): void--><!--Device-GallerySync-on(evt: 'progress', callback: (pg: SyncProgress) => void): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **系统接口：** 此接口为系统接口。
@@ -182,6 +192,8 @@ start(): Promise<void>
 **起始版本：** 10
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC
+
+<!--Device-GallerySync-start(): Promise<void>--><!--Device-GallerySync-start(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -236,6 +248,8 @@ start(callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC
 
+<!--Device-GallerySync-start(callback: AsyncCallback<void>): void--><!--Device-GallerySync-start(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **系统接口：** 此接口为系统接口。
@@ -289,6 +303,8 @@ stop(): Promise<void>
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC
 
+<!--Device-GallerySync-stop(): Promise<void>--><!--Device-GallerySync-stop(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **系统接口：** 此接口为系统接口。
@@ -338,6 +354,8 @@ stop(callback: AsyncCallback<void>): void
 **起始版本：** 10
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC
+
+<!--Device-GallerySync-stop(callback: AsyncCallback<void>): void--><!--Device-GallerySync-stop(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 

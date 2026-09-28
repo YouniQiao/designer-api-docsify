@@ -25,6 +25,8 @@ function getGlobalProxyForAccount(admin: Want | null, accountId: number): connec
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-networkManager-function getGlobalProxyForAccount(admin: Want | null, accountId: number): connection.HttpProxy--><!--Device-networkManager-function getGlobalProxyForAccount(admin: Want | null, accountId: number): connection.HttpProxy-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**

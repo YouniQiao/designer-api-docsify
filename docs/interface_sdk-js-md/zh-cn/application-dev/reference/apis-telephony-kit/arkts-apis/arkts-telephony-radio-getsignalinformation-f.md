@@ -16,6 +16,8 @@ function getSignalInformation(slotId: number, callback: AsyncCallback<Array<Sign
 
 **起始版本：** 7
 
+<!--Device-radio-function getSignalInformation(slotId: int, callback: AsyncCallback<Array<SignalInformation>>): void--><!--Device-radio-function getSignalInformation(slotId: int, callback: AsyncCallback<Array<SignalInformation>>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**
@@ -62,6 +64,8 @@ function getSignalInformation(slotId: number): Promise<Array<SignalInformation>>
 获取指定SIM卡槽对应的注册网络信号强度信息列表。使用Promise异步回调。
 
 **起始版本：** 7
+
+<!--Device-radio-function getSignalInformation(slotId: int): Promise<Array<SignalInformation>>--><!--Device-radio-function getSignalInformation(slotId: int): Promise<Array<SignalInformation>>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

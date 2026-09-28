@@ -24,6 +24,8 @@ function switchCurrentInputMethodAndSubtype(
 - API版本11+：N/A
 - API版本9-10：ohos.permission.CONNECT_IME_ABILITY
 
+<!--Device-inputMethod-function switchCurrentInputMethodAndSubtype(    inputMethodProperty: InputMethodProperty,    inputMethodSubtype: InputMethodSubtype,    callback: AsyncCallback<boolean>  ): void--><!--Device-inputMethod-function switchCurrentInputMethodAndSubtype(    inputMethodProperty: InputMethodProperty,    inputMethodSubtype: InputMethodSubtype,    callback: AsyncCallback<boolean>  ): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -83,6 +85,8 @@ function switchCurrentInputMethodAndSubtype(
 **需要权限：** 
 - API版本11+：N/A
 - API版本9-10：ohos.permission.CONNECT_IME_ABILITY
+
+<!--Device-inputMethod-function switchCurrentInputMethodAndSubtype(    inputMethodProperty: InputMethodProperty,    inputMethodSubtype: InputMethodSubtype  ): Promise<boolean>--><!--Device-inputMethod-function switchCurrentInputMethodAndSubtype(    inputMethodProperty: InputMethodProperty,    inputMethodSubtype: InputMethodSubtype  ): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 

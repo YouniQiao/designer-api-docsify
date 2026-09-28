@@ -8,6 +8,8 @@ enum RangingState
 
 **起始版本：** 26.0.0
 
+<!--Device-ranging-enum RangingState--><!--Device-ranging-enum RangingState-End-->
+
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core
 
 ## RANGING_STOPPED
@@ -22,6 +24,8 @@ RANGING_STOPPED = 0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RangingState-RANGING_STOPPED = 0--><!--Device-RangingState-RANGING_STOPPED = 0-End-->
+
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core
 
 ## RANGING_STARTED
@@ -35,5 +39,7 @@ RANGING_STARTED = 1
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-RangingState-RANGING_STARTED = 1--><!--Device-RangingState-RANGING_STARTED = 1-End-->
 
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core

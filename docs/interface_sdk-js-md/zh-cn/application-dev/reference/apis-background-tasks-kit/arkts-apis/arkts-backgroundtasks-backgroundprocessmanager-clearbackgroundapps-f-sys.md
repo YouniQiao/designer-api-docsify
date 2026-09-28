@@ -20,6 +20,8 @@ function clearBackgroundApps(clearType: ClearType): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-backgroundProcessManager-function clearBackgroundApps(clearType: ClearType): Promise<void>--><!--Device-backgroundProcessManager-function clearBackgroundApps(clearType: ClearType): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Resourceschedule.BackgroundProcessManager
 
 **系统接口：** 此接口为系统接口。

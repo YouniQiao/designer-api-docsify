@@ -13,6 +13,8 @@ export interface DlpConnPlugin
 
 **起始版本：** 21
 
+<!--Device-dlpPermission-export interface DlpConnPlugin--><!--Device-dlpPermission-export interface DlpConnPlugin-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## 导入模块
@@ -41,6 +43,8 @@ connectServer(requestId: string, requestData: string, callback: Callback<string>
 - API版本26+：ohos.permission.ENTERPRISE_ACCESS_DLP_FILE or ohos.permission.ACCESS_DLP_SERVICE
 - API版本25：N/A
 - API版本21-24：ohos.permission.ENTERPRISE_ACCESS_DLP_FILE
+
+<!--Device-DlpConnPlugin-connectServer(requestId: string, requestData: string, callback: Callback<string>): void--><!--Device-DlpConnPlugin-connectServer(requestId: string, requestData: string, callback: Callback<string>): void-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 

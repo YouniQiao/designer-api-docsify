@@ -8,6 +8,8 @@ declare class InsightIntentContext
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare class InsightIntentContext--><!--Device-unnamed-declare class InsightIntentContext-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块
@@ -28,7 +30,9 @@ setReturnModeForUIAbilityForeground(returnMode: insightIntent.ReturnMode): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-InsightIntentContext-setReturnModeForUIAbilityForeground(returnMode: insightIntent.ReturnMode): void--><!--Device-InsightIntentContext-setReturnModeForUIAbilityForeground(returnMode: insightIntent.ReturnMode): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -99,7 +103,9 @@ setReturnModeForUIExtensionAbility(returnMode: insightIntent.ReturnMode): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-InsightIntentContext-setReturnModeForUIExtensionAbility(returnMode: insightIntent.ReturnMode): void--><!--Device-InsightIntentContext-setReturnModeForUIExtensionAbility(returnMode: insightIntent.ReturnMode): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -169,7 +175,9 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-InsightIntentContext-startAbility(want: Want, callback: AsyncCallback<void>): void--><!--Device-InsightIntentContext-startAbility(want: Want, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -255,7 +263,9 @@ startAbility(want: Want): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-InsightIntentContext-startAbility(want: Want): Promise<void>--><!--Device-InsightIntentContext-startAbility(want: Want): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -341,6 +351,8 @@ instanceId: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-InsightIntentContext-instanceId: int--><!--Device-InsightIntentContext-instanceId: int-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

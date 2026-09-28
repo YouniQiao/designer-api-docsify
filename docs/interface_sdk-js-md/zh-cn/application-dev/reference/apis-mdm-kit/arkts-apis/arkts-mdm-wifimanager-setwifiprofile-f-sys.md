@@ -24,6 +24,8 @@ function setWifiProfile(admin: Want, profile: WifiProfile, callback: AsyncCallba
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-wifiManager-function setWifiProfile(admin: Want, profile: WifiProfile, callback: AsyncCallback<void>): void--><!--Device-wifiManager-function setWifiProfile(admin: Want, profile: WifiProfile, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -93,6 +95,8 @@ function setWifiProfile(admin: Want, profile: WifiProfile): Promise<void>
 **需要权限：** ohos.permission.ENTERPRISE_SET_WIFI
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-wifiManager-function setWifiProfile(admin: Want, profile: WifiProfile): Promise<void>--><!--Device-wifiManager-function setWifiProfile(admin: Want, profile: WifiProfile): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

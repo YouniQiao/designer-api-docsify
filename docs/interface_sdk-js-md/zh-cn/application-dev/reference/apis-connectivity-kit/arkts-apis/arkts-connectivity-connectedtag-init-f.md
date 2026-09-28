@@ -22,6 +22,8 @@ function init(): boolean
 
 **需要权限：** ohos.permission.NFC_TAG
 
+<!--Device-connectedTag-function init(): boolean--><!--Device-connectedTag-function init(): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.ConnectedTag
 
 **返回值：**

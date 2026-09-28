@@ -8,6 +8,8 @@ interface MouseEventData
 
 **起始版本：** 11
 
+<!--Device-inputEventClient-interface MouseEventData--><!--Device-inputEventClient-interface MouseEventData-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ mouseEvent: MouseEvent
 
 **起始版本：** 11
 
+<!--Device-MouseEventData-mouseEvent: MouseEvent--><!--Device-MouseEventData-mouseEvent: MouseEvent-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ useGlobalCoordinate? : boolean
 **类型：** boolean
 
 **起始版本：** 20
+
+<!--Device-MouseEventData-useGlobalCoordinate? : boolean--><!--Device-MouseEventData-useGlobalCoordinate? : boolean-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 

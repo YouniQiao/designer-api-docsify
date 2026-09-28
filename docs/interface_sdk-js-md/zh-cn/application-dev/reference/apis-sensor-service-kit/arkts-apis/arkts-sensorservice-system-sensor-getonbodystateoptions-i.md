@@ -12,6 +12,8 @@ export interface GetOnBodyStateOptions
 
 **替代接口：** [WEAR_DETECTION](arkts-sensorservice-sensor-sensorid-e.md#wear_detection)
 
+<!--Device-unnamed-export interface GetOnBodyStateOptions--><!--Device-unnamed-export interface GetOnBodyStateOptions-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
 ## 导入模块
@@ -36,6 +38,8 @@ complete?: () => void
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-GetOnBodyStateOptions-complete?: () => void--><!--Device-GetOnBodyStateOptions-complete?: () => void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
 ## fail
@@ -53,6 +57,8 @@ fail?: (data: string, code: number) => void
 **替代接口：** [once](arkts-sensorservice-sensor-once-f.md)
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-GetOnBodyStateOptions-fail?: (data: string, code: number) => void--><!--Device-GetOnBodyStateOptions-fail?: (data: string, code: number) => void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
@@ -78,6 +84,8 @@ success: (data: OnBodyStateResponse) => void
 **替代接口：** [once](arkts-sensorservice-sensor-once-f.md)
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-GetOnBodyStateOptions-success: (data: OnBodyStateResponse) => void--><!--Device-GetOnBodyStateOptions-success: (data: OnBodyStateResponse) => void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 

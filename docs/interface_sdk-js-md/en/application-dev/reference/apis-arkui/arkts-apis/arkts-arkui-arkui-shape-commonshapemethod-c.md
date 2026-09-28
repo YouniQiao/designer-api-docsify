@@ -8,6 +8,8 @@ Implements the common shape methods.
 
 **Since:** 12
 
+<!--Device-unnamed-declare class CommonShapeMethod<T>--><!--Device-unnamed-declare class CommonShapeMethod<T>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -31,6 +33,8 @@ Sets the fill color of this shape, which determines its opacity, with black repr
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-CommonShapeMethod-fill(color: ResourceColor): T--><!--Device-CommonShapeMethod-fill(color: ResourceColor): T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,6 +66,8 @@ Sets the coordinate offset relative to the component's layout position.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-CommonShapeMethod-offset(offset: Position): T--><!--Device-CommonShapeMethod-offset(offset: Position): T-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -91,6 +97,8 @@ Sets the position of the shape.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-CommonShapeMethod-position(position: Position): T--><!--Device-CommonShapeMethod-position(position: Position): T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

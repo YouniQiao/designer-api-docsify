@@ -8,6 +8,8 @@ Png metadata.
 
 **起始版本：** 26.0.0
 
+<!--Device-image-class PngMetadata--><!--Device-image-class PngMetadata-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ PNG author.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PngMetadata-readonly author?: string--><!--Device-PngMetadata-readonly author?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## chromaticities
@@ -45,6 +49,8 @@ PNG color primary/white-point coordinates.
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PngMetadata-readonly chromaticities?: double[]--><!--Device-PngMetadata-readonly chromaticities?: double[]-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -62,6 +68,8 @@ PNG comment.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PngMetadata-readonly comment?: string--><!--Device-PngMetadata-readonly comment?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## copyright
@@ -77,6 +85,8 @@ PNG copyright.
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PngMetadata-readonly copyright?: string--><!--Device-PngMetadata-readonly copyright?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -94,6 +104,8 @@ PNG creation time.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PngMetadata-readonly creationTime?: string--><!--Device-PngMetadata-readonly creationTime?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## description
@@ -109,6 +121,8 @@ PNG description.
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PngMetadata-readonly description?: string--><!--Device-PngMetadata-readonly description?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -126,6 +140,8 @@ PNG disclaimer.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PngMetadata-readonly disclaimer?: string--><!--Device-PngMetadata-readonly disclaimer?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## gamma
@@ -141,6 +157,8 @@ PNG gamma.
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PngMetadata-readonly gamma?: double--><!--Device-PngMetadata-readonly gamma?: double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -158,6 +176,8 @@ PNG interlacing mode. The value should be an integer.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PngMetadata-readonly interlaceType?: int--><!--Device-PngMetadata-readonly interlaceType?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## modificationTime
@@ -173,6 +193,8 @@ PNG modification time.
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PngMetadata-readonly modificationTime?: string--><!--Device-PngMetadata-readonly modificationTime?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -190,6 +212,8 @@ PNG software.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PngMetadata-readonly software?: string--><!--Device-PngMetadata-readonly software?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## sRGBIntent
@@ -205,6 +229,8 @@ PNG sRGB rendering intent. The value should be an integer.
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PngMetadata-readonly sRGBIntent?: int--><!--Device-PngMetadata-readonly sRGBIntent?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -222,6 +248,8 @@ PNG title.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PngMetadata-readonly title?: string--><!--Device-PngMetadata-readonly title?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## warning
@@ -237,6 +265,8 @@ PNG warning.
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PngMetadata-readonly warning?: string--><!--Device-PngMetadata-readonly warning?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -254,6 +284,8 @@ PNG x pixels per meter. The value should be an integer.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PngMetadata-readonly xPixelsPerMeter?: int--><!--Device-PngMetadata-readonly xPixelsPerMeter?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## yPixelsPerMeter
@@ -269,5 +301,7 @@ PNG y pixels per meter. The value should be an integer.
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PngMetadata-readonly yPixelsPerMeter?: int--><!--Device-PngMetadata-readonly yPixelsPerMeter?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core

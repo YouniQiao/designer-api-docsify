@@ -18,6 +18,8 @@ function permitInjection(result: boolean): void
 
 **需要权限：** ohos.permission.INJECT_INPUT_EVENT
 
+<!--Device-inputEventClient-function permitInjection(result: boolean): void--><!--Device-inputEventClient-function permitInjection(result: boolean): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **系统接口：** 此接口为系统接口。

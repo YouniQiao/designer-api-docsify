@@ -20,6 +20,8 @@ Gets the 802.1X EAP configuration for Ethernet. Sensitive fields (password, cert
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-eap-function getEthEapConfig(): Promise<EthEapConfig>--><!--Device-eap-function getEthEapConfig(): Promise<EthEapConfig>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 **Return value:**

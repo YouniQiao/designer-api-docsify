@@ -22,6 +22,8 @@ function getStatusMonitor(localUserId: number): StatusMonitor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-companionDeviceAuth-function getStatusMonitor(localUserId: int): StatusMonitor--><!--Device-companionDeviceAuth-function getStatusMonitor(localUserId: int): StatusMonitor-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
 **系统接口：** 此接口为系统接口。

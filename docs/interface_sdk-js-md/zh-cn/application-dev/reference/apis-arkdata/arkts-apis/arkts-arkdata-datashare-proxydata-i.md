@@ -8,6 +8,8 @@ interface ProxyData
 
 **起始版本：** 20
 
+<!--Device-dataShare-interface ProxyData--><!--Device-dataShare-interface ProxyData-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 ## 导入模块
@@ -30,6 +32,8 @@ allowList?: string[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ProxyData-allowList?: string[]--><!--Device-ProxyData-allowList?: string[]-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 ## isMultiValues
@@ -45,6 +49,8 @@ isMultiValues?: boolean
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ProxyData-isMultiValues?: boolean--><!--Device-ProxyData-isMultiValues?: boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -62,6 +68,8 @@ trustProviders?: string[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ProxyData-trustProviders?: string[]--><!--Device-ProxyData-trustProviders?: string[]-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 ## uri
@@ -77,6 +85,8 @@ uri: string
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ProxyData-uri: string--><!--Device-ProxyData-uri: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -96,6 +106,8 @@ value?: ValueType
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ProxyData-value?: ValueType--><!--Device-ProxyData-value?: ValueType-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 ## values
@@ -111,5 +123,7 @@ values?: Record<number, ValueType>
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ProxyData-values?: Record<int, ValueType>--><!--Device-ProxyData-values?: Record<int, ValueType>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer

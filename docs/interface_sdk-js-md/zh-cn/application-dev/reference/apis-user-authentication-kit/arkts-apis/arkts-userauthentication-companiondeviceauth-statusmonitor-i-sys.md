@@ -8,6 +8,8 @@ interface StatusMonitor
 
 **起始版本：** 23
 
+<!--Device-companionDeviceAuth-interface StatusMonitor--><!--Device-companionDeviceAuth-interface StatusMonitor-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
 **系统接口：** 此接口为系统接口。
@@ -35,6 +37,8 @@ getTemplateStatus(): Promise<TemplateStatus[]>
 **需要权限：** ohos.permission.USE_USER_IDM
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-StatusMonitor-getTemplateStatus(): Promise<TemplateStatus[]>--><!--Device-StatusMonitor-getTemplateStatus(): Promise<TemplateStatus[]>-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
@@ -81,6 +85,8 @@ offAvailableDeviceChange(callback?: AvailableDeviceStatusCallback): void
 **需要权限：** ohos.permission.USE_USER_IDM
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-StatusMonitor-offAvailableDeviceChange(callback?: AvailableDeviceStatusCallback): void--><!--Device-StatusMonitor-offAvailableDeviceChange(callback?: AvailableDeviceStatusCallback): void-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
@@ -130,6 +136,8 @@ offContinuousAuthChange(callback?: ContinuousAuthStatusCallback): void
 **需要权限：** ohos.permission.USE_USER_IDM
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-StatusMonitor-offContinuousAuthChange(callback?: ContinuousAuthStatusCallback): void--><!--Device-StatusMonitor-offContinuousAuthChange(callback?: ContinuousAuthStatusCallback): void-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
@@ -189,6 +197,8 @@ offTemplateChange(callback?: TemplateStatusCallback): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-StatusMonitor-offTemplateChange(callback?: TemplateStatusCallback): void--><!--Device-StatusMonitor-offTemplateChange(callback?: TemplateStatusCallback): void-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
 **系统接口：** 此接口为系统接口。
@@ -240,6 +250,8 @@ onAvailableDeviceChange(callback: AvailableDeviceStatusCallback): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-StatusMonitor-onAvailableDeviceChange(callback: AvailableDeviceStatusCallback): void--><!--Device-StatusMonitor-onAvailableDeviceChange(callback: AvailableDeviceStatusCallback): void-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
 **系统接口：** 此接口为系统接口。
@@ -289,6 +301,8 @@ onContinuousAuthChange(param: ContinuousAuthParam, callback: ContinuousAuthStatu
 **需要权限：** ohos.permission.USE_USER_IDM
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-StatusMonitor-onContinuousAuthChange(param: ContinuousAuthParam, callback: ContinuousAuthStatusCallback): void--><!--Device-StatusMonitor-onContinuousAuthChange(param: ContinuousAuthParam, callback: ContinuousAuthStatusCallback): void-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
@@ -350,6 +364,8 @@ onTemplateChange(callback: TemplateStatusCallback): void
 **需要权限：** ohos.permission.USE_USER_IDM
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-StatusMonitor-onTemplateChange(callback: TemplateStatusCallback): void--><!--Device-StatusMonitor-onTemplateChange(callback: TemplateStatusCallback): void-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 

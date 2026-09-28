@@ -8,6 +8,8 @@ interface ScreenCaptureMonitor
 
 **起始版本：** 18
 
+<!--Device-media-interface ScreenCaptureMonitor--><!--Device-media-interface ScreenCaptureMonitor-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 **系统接口：** 此接口为系统接口。
@@ -27,6 +29,8 @@ off(type: 'systemScreenRecorder', callback?: Callback<ScreenCaptureEvent>): void
 取消订阅系统录屏的录屏状态。使用callback异步回调。
 
 **起始版本：** 18
+
+<!--Device-ScreenCaptureMonitor-off(type: 'systemScreenRecorder', callback?: Callback<ScreenCaptureEvent>): void--><!--Device-ScreenCaptureMonitor-off(type: 'systemScreenRecorder', callback?: Callback<ScreenCaptureEvent>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -60,6 +64,8 @@ on(type: 'systemScreenRecorder', callback: Callback<ScreenCaptureEvent>): void
 开始订阅系统录屏的录屏状态。当上报ScreenCaptureEvent事件后，用户可以根据ScreenCaptureEvent事件得知系统录屏当前处于开启还是停止的状态。使用callback异步回调。
 
 **起始版本：** 18
+
+<!--Device-ScreenCaptureMonitor-on(type: 'systemScreenRecorder', callback: Callback<ScreenCaptureEvent>): void--><!--Device-ScreenCaptureMonitor-on(type: 'systemScreenRecorder', callback: Callback<ScreenCaptureEvent>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -99,6 +105,8 @@ readonly isSystemScreenRecorderWorking: boolean
 **类型：** boolean
 
 **起始版本：** 18
+
+<!--Device-ScreenCaptureMonitor-readonly isSystemScreenRecorderWorking: boolean--><!--Device-ScreenCaptureMonitor-readonly isSystemScreenRecorderWorking: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 

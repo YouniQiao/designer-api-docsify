@@ -8,6 +8,8 @@ export class Emitter
 
 **起始版本：** 22
 
+<!--Device-emitter-export class Emitter--><!--Device-emitter-export class Emitter-End-->
+
 **系统能力：** SystemCapability.Notification.Emitter
 
 ## 导入模块
@@ -26,7 +28,9 @@ constructor()
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Emitter-constructor()--><!--Device-Emitter-constructor()-End-->
 
 **系统能力：** SystemCapability.Notification.Emitter
 
@@ -50,7 +54,9 @@ emit(eventId: string, data?: EventData): void
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Emitter-emit(eventId: string, data?: EventData): void--><!--Device-Emitter-emit(eventId: string, data?: EventData): void-End-->
 
 **系统能力：** SystemCapability.Notification.Emitter
 
@@ -91,7 +97,9 @@ emit<T>(eventId: string, data?: GenericEventData<T>): void
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Emitter-emit<T>(eventId: string, data?: GenericEventData<T>): void--><!--Device-Emitter-emit<T>(eventId: string, data?: GenericEventData<T>): void-End-->
 
 **系统能力：** SystemCapability.Notification.Emitter
 
@@ -141,7 +149,9 @@ emit(eventId: string, options: Options, data?: EventData): void
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Emitter-emit(eventId: string, options: Options, data?: EventData): void--><!--Device-Emitter-emit(eventId: string, options: Options, data?: EventData): void-End-->
 
 **系统能力：** SystemCapability.Notification.Emitter
 
@@ -187,7 +197,9 @@ emit<T>(eventId: string, options: Options, data?: GenericEventData<T>): void
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Emitter-emit<T>(eventId: string, options: Options, data?: GenericEventData<T>): void--><!--Device-Emitter-emit<T>(eventId: string, options: Options, data?: GenericEventData<T>): void-End-->
 
 **系统能力：** SystemCapability.Notification.Emitter
 
@@ -235,7 +247,9 @@ getListenerCount(eventId: string): number
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Emitter-getListenerCount(eventId: string): long--><!--Device-Emitter-getListenerCount(eventId: string): long-End-->
 
 **系统能力：** SystemCapability.Notification.Emitter
 
@@ -270,7 +284,9 @@ off(eventId: string): void
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Emitter-off(eventId: string): void--><!--Device-Emitter-off(eventId: string): void-End-->
 
 **系统能力：** SystemCapability.Notification.Emitter
 
@@ -303,6 +319,8 @@ off(eventId: string, callback: Callback<EventData>): void
 **起始版本：** 22
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Emitter-off(eventId: string, callback: Callback<EventData>): void--><!--Device-Emitter-off(eventId: string, callback: Callback<EventData>): void-End-->
 
 **系统能力：** SystemCapability.Notification.Emitter
 
@@ -342,6 +360,8 @@ off<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
 **起始版本：** 22
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Emitter-off<T>(eventId: string, callback: Callback<GenericEventData<T>>): void--><!--Device-Emitter-off<T>(eventId: string, callback: Callback<GenericEventData<T>>): void-End-->
 
 **系统能力：** SystemCapability.Notification.Emitter
 
@@ -392,6 +412,8 @@ on(eventId: string, callback: Callback<EventData>): void
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
+<!--Device-Emitter-on(eventId: string, callback: Callback<EventData>): void--><!--Device-Emitter-on(eventId: string, callback: Callback<EventData>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Emitter
 
 **参数：**
@@ -428,6 +450,8 @@ on<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
 **起始版本：** 22
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Emitter-on<T>(eventId: string, callback: Callback<GenericEventData<T>>): void--><!--Device-Emitter-on<T>(eventId: string, callback: Callback<GenericEventData<T>>): void-End-->
 
 **系统能力：** SystemCapability.Notification.Emitter
 
@@ -478,6 +502,8 @@ once(eventId: string, callback: Callback<EventData>): void
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
+<!--Device-Emitter-once(eventId: string, callback: Callback<EventData>): void--><!--Device-Emitter-once(eventId: string, callback: Callback<EventData>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Emitter
 
 **参数：**
@@ -514,6 +540,8 @@ once<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
 **起始版本：** 22
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-Emitter-once<T>(eventId: string, callback: Callback<GenericEventData<T>>): void--><!--Device-Emitter-once<T>(eventId: string, callback: Callback<GenericEventData<T>>): void-End-->
 
 **系统能力：** SystemCapability.Notification.Emitter
 

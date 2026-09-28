@@ -10,6 +10,8 @@ In the following API examples, you must use [getLastWindow()](arkts-arkui-window
 
 **Since:** 6
 
+<!--Device-window-interface Window--><!--Device-window-interface Window-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 ## Modules to Import
@@ -29,6 +31,8 @@ Clear the window mask of window
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Window-clearWindowMask(): Promise<void>--><!--Device-Window-clearWindowMask(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -87,6 +91,8 @@ Converts relative coordinates (based on the top-left corner of the current windo
 This API is not supported in windows that are subject to display scaling, such as floating windows on phones or tablets not in free windows mode.
 
 **Since:** 20
+
+<!--Device-Window-clientToGlobalDisplay(winX: int, winY: int): Position--><!--Device-Window-clientToGlobalDisplay(winX: int, winY: int): Position-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -148,6 +154,8 @@ Window orientation refers to the direction of the screen where the window reside
 
 **Since:** 23
 
+<!--Device-Window-convertOrientationAndRotation(from: RotationInfoType, to: RotationInfoType, value: int): int--><!--Device-Window-convertOrientationAndRotation(from: RotationInfoType, to: RotationInfoType, value: int): int-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
@@ -198,7 +206,9 @@ Creates a child window under the main window, another child window, or floating 
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Window-createSubWindowWithOptions(name: string, options: SubWindowOptions): Promise<Window>--><!--Device-Window-createSubWindowWithOptions(name: string, options: SubWindowOptions): Promise<Window>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -257,7 +267,9 @@ Destroys this window. This API uses an asynchronous callback to return the resul
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-Window-destroyWindow(callback: AsyncCallback<void>): void--><!--Device-Window-destroyWindow(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -301,7 +313,9 @@ Destroys this window. This API uses a promise to return the result. It takes eff
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-Window-destroyWindow(): Promise<void>--><!--Device-Window-destroyWindow(): Promise<void>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -343,7 +357,9 @@ This API takes effect only for the main window of the application. In addition, 
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Window-disableLandscapeMultiWindow(): Promise<void>--><!--Device-Window-disableLandscapeMultiWindow(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -403,6 +419,8 @@ After window dragging is enabled, the window can be resized using the mouse or t
 
 **Since:** 20
 
+<!--Device-Window-enableDrag(enable: boolean): Promise<void>--><!--Device-Window-enableDrag(enable: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
@@ -455,7 +473,9 @@ This API takes effect only for the main window of the application. In addition, 
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Window-enableLandscapeMultiWindow(): Promise<void>--><!--Device-Window-enableLandscapeMultiWindow(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -513,7 +533,9 @@ Obtains the button style of the decoration bar. The setting takes effect only fo
 
 **Since:** 14
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 14.
+
+<!--Device-Window-getDecorButtonStyle(): DecorButtonStyle--><!--Device-Window-getDecorButtonStyle(): DecorButtonStyle-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -555,7 +577,9 @@ This API can determine the actual on-screen location and size of a window that h
 
 **Since:** 13
 
-**Atomic service API:** This API can be used in atomic services since API version 13.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+
+<!--Device-Window-getGlobalRect(): Rect--><!--Device-Window-getGlobalRect(): Rect-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -598,7 +622,9 @@ The return value is consistent with the settings applied via [setImmersiveModeEn
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Window-getImmersiveModeEnabledState(): boolean--><!--Device-Window-getImmersiveModeEnabledState(): boolean-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -635,7 +661,9 @@ Obtains the parent window of this child window.
 
 **Since:** 19
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+
+<!--Device-Window-getParentWindow(): Window--><!--Device-Window-getParentWindow(): Window-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -677,7 +705,9 @@ Obtains the orientation of the window. If no orientation is specified, **window.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Window-getPreferredOrientation(): Orientation--><!--Device-Window-getPreferredOrientation(): Orientation-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -736,7 +766,9 @@ Calling this API is not supported for child window and will cause error code 130
 
 **Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
+
+<!--Device-Window-getStatusBarProperty(): StatusBarProperty--><!--Device-Window-getStatusBarProperty(): StatusBarProperty-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -793,7 +825,9 @@ Obtains the z-level of the current child window. This API cannot be called by th
 
 **Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
+
+<!--Device-Window-getSubWindowZLevel(): int--><!--Device-Window-getSubWindowZLevel(): int-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -850,7 +884,9 @@ Obtains the rectangle that holds the minimize, maximize, and close buttons on th
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Window-getTitleButtonRect(): TitleButtonRect--><!--Device-Window-getTitleButtonRect(): TitleButtonRect-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -910,7 +946,9 @@ Obtains a UIContext instance.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-Window-getUIContext() : UIContext--><!--Device-Window-getUIContext() : UIContext-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -994,7 +1032,9 @@ avoid certain areas.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-Window-getWindowAvoidArea(type: AvoidAreaType): AvoidArea--><!--Device-Window-getWindowAvoidArea(type: AvoidAreaType): AvoidArea-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -1050,6 +1090,8 @@ Global floating window, modal window, or system window:
 
 **Since:** 22
 
+<!--Device-Window-getWindowAvoidAreaIgnoringVisibility(type: AvoidAreaType): AvoidArea--><!--Device-Window-getWindowAvoidAreaIgnoringVisibility(type: AvoidAreaType): AvoidArea-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
@@ -1094,7 +1136,9 @@ Obtains the color space of this window.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Window-getWindowColorSpace(): ColorSpace--><!--Device-Window-getWindowColorSpace(): ColorSpace-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -1133,7 +1177,9 @@ Obtains the radius of rounded corners of a child window or floating window. If [
 
 **Since:** 17
 
-**Atomic service API:** This API can be used in atomic services since API version 17.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 17.
+
+<!--Device-Window-getWindowCornerRadius(): double--><!--Device-Window-getWindowCornerRadius(): double-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -1171,7 +1217,9 @@ Obtains the height of the title bar of this window. This API takes effect for th
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Window-getWindowDecorHeight(): int--><!--Device-Window-getWindowDecorHeight(): int-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -1211,7 +1259,9 @@ Checks whether the title bar of this window is visible. In the stage model, this
 
 **Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
+
+<!--Device-Window-getWindowDecorVisible(): boolean--><!--Device-Window-getWindowDecorVisible(): boolean-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -1251,7 +1301,9 @@ Obtains the display density information of this window.
 
 **Since:** 15
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 15.
+
+<!--Device-Window-getWindowDensityInfo(): WindowDensityInfo--><!--Device-Window-getWindowDensityInfo(): WindowDensityInfo-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -1288,7 +1340,9 @@ Obtains the size limits of this application window, in px.
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Window-getWindowLimits(): WindowLimits--><!--Device-Window-getWindowLimits(): WindowLimits-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -1327,6 +1381,8 @@ For system windows and global floating windows, the default minimum width and he
 
 **Since:** 22
 
+<!--Device-Window-getWindowLimitsVP(): WindowLimits--><!--Device-Window-getWindowLimitsVP(): WindowLimits-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Return value:**
@@ -1362,7 +1418,9 @@ Obtains the properties of this window.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-Window-getWindowProperties(): WindowProperties--><!--Device-Window-getWindowProperties(): WindowProperties-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -1400,7 +1458,9 @@ Get window state snapshot, including isPcMode information.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 23.
+
+<!--Device-Window-getWindowStateSnapshot(): Promise<string>--><!--Device-Window-getWindowStateSnapshot(): Promise<string>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -1439,7 +1499,9 @@ Obtains the mode of this window.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Window-getWindowStatus(): WindowStatusType--><!--Device-Window-getWindowStatus(): WindowStatusType-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -1476,7 +1538,9 @@ Obtains the properties of the <!--Del-->three-button navigation bar and <!--DelE
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Window-getWindowSystemBarProperties(): SystemBarProperties--><!--Device-Window-getWindowSystemBarProperties(): SystemBarProperties-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -1539,7 +1603,9 @@ Currently, this API can be used only on the main window of an application.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+
+<!--Device-Window-getWindowTransitionAnimation(transitionType: WindowTransitionType): TransitionAnimation | undefined--><!--Device-Window-getWindowTransitionAnimation(transitionType: WindowTransitionType): TransitionAnimation | undefined-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -1608,6 +1674,8 @@ This API is not supported in windows that are subject to display scaling, such a
 
 **Since:** 20
 
+<!--Device-Window-globalDisplayToClient(globalDisplayX: int, globalDisplayY: int): Position--><!--Device-Window-globalDisplayToClient(globalDisplayX: int, globalDisplayY: int): Position-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
@@ -1655,7 +1723,9 @@ Get whether the float navigation avoid area can be obtained.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+
+<!--Device-Window-isFloatNavigationAvoidAreaEnabled(): boolean--><!--Device-Window-isFloatNavigationAvoidAreaEnabled(): boolean-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -1691,7 +1761,9 @@ Checks whether this window is focused.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Window-isFocused(): boolean--><!--Device-Window-isFocused(): boolean-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -1728,7 +1800,9 @@ Obtains whether the back gesture is enabled for the current window. This API can
 
 **Since:** 13
 
-**Atomic service API:** This API can be used in atomic services since API version 13.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+
+<!--Device-Window-isGestureBackEnabled(): boolean--><!--Device-Window-isGestureBackEnabled(): boolean-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -1789,6 +1863,8 @@ Checks whether this window is in immersive mode.
 
 **Since:** 20
 
+<!--Device-Window-isImmersiveLayout(): boolean--><!--Device-Window-isImmersiveLayout(): boolean-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Return value:**
@@ -1824,7 +1900,9 @@ Checks whether this window is in [freeform window](../../../windowmanager/window
 
 **Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+
+<!--Device-Window-isInFreeWindowMode(): boolean--><!--Device-Window-isInFreeWindowMode(): boolean-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -1860,6 +1938,8 @@ Checks whether this window is in the specified window posture mode.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Window-isInWindowPostureMode(mode: WindowPostureMode): boolean--><!--Device-Window-isInWindowPostureMode(mode: WindowPostureMode): boolean-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
@@ -1893,6 +1973,8 @@ Obtains whether the current window can receive [drag events](../arkts-components
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Window-isReceiveDragEventEnabled(): boolean--><!--Device-Window-isReceiveDragEventEnabled(): boolean-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -1935,6 +2017,8 @@ Obtains whether the current window supports the event separation state.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Window-isSeparationTouchEnabled(): boolean--><!--Device-Window-isSeparationTouchEnabled(): boolean-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Return value:**
@@ -1974,7 +2058,9 @@ Checks whether a floating window, modal window, or system window (**WindowType**
 
 **Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
+
+<!--Device-Window-isSystemAvoidAreaEnabled(): boolean--><!--Device-Window-isSystemAvoidAreaEnabled(): boolean-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -2054,7 +2140,9 @@ You can use [on('windowHighlightChange')](#onwindowhighlightchange) to listen fo
 
 **Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
+
+<!--Device-Window-isWindowHighlighted(): boolean--><!--Device-Window-isWindowHighlighted(): boolean-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -2094,7 +2182,9 @@ Checks whether this window is displayed.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-Window-isWindowShowing(): boolean--><!--Device-Window-isWindowShowing(): boolean-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -2131,7 +2221,9 @@ Checks whether this window supports the wide-gamut color space. This API uses a 
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Window-isWindowSupportWideGamut(): Promise<boolean>--><!--Device-Window-isWindowSupportWideGamut(): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -2172,7 +2264,9 @@ Checks whether this window supports the wide-gamut color space. This API uses an
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Window-isWindowSupportWideGamut(callback: AsyncCallback<boolean>): void--><!--Device-Window-isWindowSupportWideGamut(callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -2213,7 +2307,9 @@ Determines whether to retain the soft keyboard created by another window when th
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Window-keepKeyboardOnFocus(keepKeyboardFlag: boolean): void--><!--Device-Window-keepKeyboardOnFocus(keepKeyboardFlag: boolean): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -2254,7 +2350,9 @@ Loads the content of a page, with its path in the current project specified, to 
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-Window-loadContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>): void--><!--Device-Window-loadContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -2305,7 +2403,9 @@ Loads the content of a page, with its path in the current project specified, to 
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-Window-loadContent(path: string, storage: LocalStorage): Promise<void>--><!--Device-Window-loadContent(path: string, storage: LocalStorage): Promise<void>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -2361,6 +2461,8 @@ Loads content from a page to this window. This API uses an asynchronous callback
 
 **Substitutes:** [setUIContent](#setuicontent)(path: string, callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-Window-loadContent(path: string, callback: AsyncCallback<void>): void--><!--Device-Window-loadContent(path: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
@@ -2401,6 +2503,8 @@ Loads content from a page to this window. This API uses a promise to return the 
 
 **Substitutes:** [setUIContent](#setuicontent-1)(path: string)
 
+<!--Device-Window-loadContent(path: string): Promise<void>--><!--Device-Window-loadContent(path: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
@@ -2440,7 +2544,9 @@ Loads the content of a [named route](../../../ui/arkts-routing.md#named-route) p
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-Window-loadContentByName(name: string, storage: LocalStorage, callback: AsyncCallback<void>): void--><!--Device-Window-loadContentByName(name: string, storage: LocalStorage, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -2533,7 +2639,9 @@ Loads the content of a [named route](../../../ui/arkts-routing.md#named-route) p
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-Window-loadContentByName(name: string, callback: AsyncCallback<void>): void--><!--Device-Window-loadContentByName(name: string, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -2607,7 +2715,9 @@ Loads the content of a [named route](../../../ui/arkts-routing.md#named-route) p
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-Window-loadContentByName(name: string, storage?: LocalStorage): Promise<void>--><!--Device-Window-loadContentByName(name: string, storage?: LocalStorage): Promise<void>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -2684,7 +2794,9 @@ Maximizes the window. The main window can use this API to maximize. For child wi
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Window-maximize(presentation?: MaximizePresentation): Promise<void>--><!--Device-Window-maximize(presentation?: MaximizePresentation): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -2755,6 +2867,8 @@ Maximizes the window. The main window can use this API to maximize. For child wi
 
 **Since:** 22
 
+<!--Device-Window-maximize(presentation?: MaximizePresentation, acrossDisplay?: boolean): Promise<void>--><!--Device-Window-maximize(presentation?: MaximizePresentation, acrossDisplay?: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
@@ -2820,6 +2934,8 @@ Maximize the app window.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Window-maximizeWithOptions(maximizeOptions?: MaximizeOptions): Promise<void>--><!--Device-Window-maximizeWithOptions(maximizeOptions?: MaximizeOptions): Promise<void>-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
@@ -2861,7 +2977,9 @@ This API can be called only by the main window, child window, or global floating
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Window-minimize(callback: AsyncCallback<void>): void--><!--Device-Window-minimize(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -2913,7 +3031,9 @@ This API can be called only by the main window, child window, or global floating
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Window-minimize(): Promise<void>--><!--Device-Window-minimize(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -2968,7 +3088,9 @@ Moves this window. This API uses a promise to return the result. A value is retu
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-Window-moveWindowTo(x: int, y: int): Promise<void>--><!--Device-Window-moveWindowTo(x: int, y: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -3036,7 +3158,9 @@ Moves this window. This API uses an asynchronous callback to return the result. 
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-Window-moveWindowTo(x: int, y: int, callback: AsyncCallback<void>): void--><!--Device-Window-moveWindowTo(x: int, y: int, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -3091,7 +3215,9 @@ This API takes effect only when the window is in floating window mode (**window.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Window-moveWindowToAsync(x: int, y: int): Promise<void>--><!--Device-Window-moveWindowToAsync(x: int, y: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -3160,7 +3286,9 @@ This API takes effect only when the window is in floating window mode (**window.
 
 **Since:** 15
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 15.
+
+<!--Device-Window-moveWindowToAsync(x: int, y: int, moveConfiguration?: MoveConfiguration): Promise<void>--><!--Device-Window-moveWindowToAsync(x: int, y: int, moveConfiguration?: MoveConfiguration): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -3228,7 +3356,9 @@ This API takes effect only when the window is in floating window mode (**window.
 
 **Since:** 13
 
-**Atomic service API:** This API can be used in atomic services since API version 13.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+
+<!--Device-Window-moveWindowToGlobal(x: int, y: int): Promise<void>--><!--Device-Window-moveWindowToGlobal(x: int, y: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -3293,7 +3423,9 @@ This API takes effect only when the window is in floating window mode (**window.
 
 **Since:** 15
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 15.
+
+<!--Device-Window-moveWindowToGlobal(x: int, y: int, moveConfiguration?: MoveConfiguration): Promise<void>--><!--Device-Window-moveWindowToGlobal(x: int, y: int, moveConfiguration?: MoveConfiguration): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -3363,6 +3495,8 @@ This API takes effect only when the window is in floating window mode (**window.
 
 **Since:** 20
 
+<!--Device-Window-moveWindowToGlobalDisplay(x: int, y: int): Promise<void>--><!--Device-Window-moveWindowToGlobalDisplay(x: int, y: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
@@ -3418,6 +3552,8 @@ Unsubscribes from the window rotation change event.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-Window-off(type: 'rotationChange',        callback?: RotationChangeCallback<RotationChangeInfo, RotationChangeResult | void>): void--><!--Device-Window-off(type: 'rotationChange',        callback?: RotationChangeCallback<RotationChangeInfo, RotationChangeResult | void>): void-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
@@ -3465,6 +3601,8 @@ Unsubscribes from the event indicating changes in the security restrictions of t
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-Window-off(eventType: 'uiExtensionSecureLimitChange', callback?: Callback<boolean>): void--><!--Device-Window-off(eventType: 'uiExtensionSecureLimitChange', callback?: Callback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
@@ -3510,6 +3648,8 @@ Unsubscribes from events indicating changes in window frame metrics. This API mu
 
 **Since:** 22
 
+<!--Device-Window-off(type: 'frameMetricsMeasured', callback?: Callback<FrameMetrics>): void--><!--Device-Window-off(type: 'frameMetricsMeasured', callback?: Callback<FrameMetrics>): void-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
@@ -3553,6 +3693,8 @@ off(type: 'occlusionStateChanged', callback?: Callback<OcclusionState>): void
 Unsubscribes from the visibility status change event of the window.
 
 **Since:** 22
+
+<!--Device-Window-off(type: 'occlusionStateChanged', callback?: Callback<OcclusionState>): void--><!--Device-Window-off(type: 'occlusionStateChanged', callback?: Callback<OcclusionState>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -3601,6 +3743,8 @@ Unsubscribes from the window size change event. This API can be called only by t
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Window-off(type: 'windowSizeChange', callback?: Callback<Size>): void--><!--Device-Window-off(type: 'windowSizeChange', callback?: Callback<Size>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
@@ -3645,6 +3789,8 @@ Unsubscribes from the event indicating changes to the area where this window can
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Window-off(type: 'avoidAreaChange', callback?: Callback<AvoidAreaOptions>): void--><!--Device-Window-off(type: 'avoidAreaChange', callback?: Callback<AvoidAreaOptions>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -3694,6 +3840,8 @@ Unsubscribes from the event indicating soft keyboard height changes in the fixed
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Window-off(type: 'keyboardHeightChange', callback?: Callback<int>): void--><!--Device-Window-off(type: 'keyboardHeightChange', callback?: Callback<int>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
@@ -3739,6 +3887,8 @@ Unsubscribes from the event indicating that the soft keyboard in the fixed state
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-Window-off(type: 'keyboardWillShow', callback?: Callback<KeyboardInfo>): void--><!--Device-Window-off(type: 'keyboardWillShow', callback?: Callback<KeyboardInfo>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -3787,6 +3937,8 @@ Unsubscribes from the event indicating that the show animation of the soft keybo
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-Window-off(type: 'keyboardDidShow', callback?: Callback<KeyboardInfo>): void--><!--Device-Window-off(type: 'keyboardDidShow', callback?: Callback<KeyboardInfo>): void-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
@@ -3832,6 +3984,8 @@ Unsubscribes from the event indicating that the soft keyboard in the fixed state
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-Window-off(type: 'keyboardWillHide', callback?: Callback<KeyboardInfo>): void--><!--Device-Window-off(type: 'keyboardWillHide', callback?: Callback<KeyboardInfo>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -3880,6 +4034,8 @@ Unsubscribes from the event indicating that the hide animation of the soft keybo
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-Window-off(type: 'keyboardDidHide', callback?: Callback<KeyboardInfo>): void--><!--Device-Window-off(type: 'keyboardDidHide', callback?: Callback<KeyboardInfo>): void-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
@@ -3926,6 +4082,8 @@ Unsubscribes from the touch event outside this window.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Window-off(type: 'touchOutside', callback?: Callback<void>): void--><!--Device-Window-off(type: 'touchOutside', callback?: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
@@ -3968,6 +4126,8 @@ Unsubscribes from the display change event of this window.
 **Since:** 14
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-Window-off(type: 'displayIdChange', callback?: Callback<long>): void--><!--Device-Window-off(type: 'displayIdChange', callback?: Callback<long>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -4015,6 +4175,8 @@ Unsubscribes from the visibility status change event of this window.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Window-off(type: 'windowVisibilityChange', callback?: Callback<boolean>): void--><!--Device-Window-off(type: 'windowVisibilityChange', callback?: Callback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -4066,6 +4228,8 @@ In the callback function, you are advised to directly use the return value to co
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-Window-off(type: 'systemDensityChange', callback?: Callback<double>): void--><!--Device-Window-off(type: 'systemDensityChange', callback?: Callback<double>): void-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
@@ -4113,6 +4277,8 @@ Unsubscribes from non-interaction events in a window within the specified period
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Window-off(type: 'noInteractionDetected', callback?: Callback<void>): void--><!--Device-Window-off(type: 'noInteractionDetected', callback?: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
@@ -4159,6 +4325,8 @@ Unsubscribes from the screenshot event.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Window-off(type: 'screenshot', callback?: Callback<void>): void--><!--Device-Window-off(type: 'screenshot', callback?: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
@@ -4199,6 +4367,8 @@ off(type: 'screenshotAppEvent', callback?: Callback<ScreenshotEventType>): void
 Unsubscribes from the screenshot event.
 
 **Since:** 20
+
+<!--Device-Window-off(type: 'screenshotAppEvent', callback?: Callback<ScreenshotEventType>): void--><!--Device-Window-off(type: 'screenshotAppEvent', callback?: Callback<ScreenshotEventType>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -4246,6 +4416,8 @@ Unsubscribes from the touch event of the target window in the modal window mode.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Window-off(type: 'dialogTargetTouch', callback?: Callback<void>): void--><!--Device-Window-off(type: 'dialogTargetTouch', callback?: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
@@ -4288,6 +4460,8 @@ Unsubscribes from the window lifecycle change event.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Window-off(type: 'windowEvent', callback?: Callback<WindowEventType>): void--><!--Device-Window-off(type: 'windowEvent', callback?: Callback<WindowEventType>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -4334,6 +4508,8 @@ Disables the listening for window status changes.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Window-off(type: 'windowStatusChange', callback?: Callback<WindowStatusType>): void--><!--Device-Window-off(type: 'windowStatusChange', callback?: Callback<WindowStatusType>): void-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
@@ -4375,6 +4551,8 @@ off(type: 'windowStatusDidChange', callback?: Callback<WindowStatusType>): void
 Unsubscribes from the event indicating that the window status has changed.
 
 **Since:** 20
+
+<!--Device-Window-off(type: 'windowStatusDidChange', callback?: Callback<WindowStatusType>): void--><!--Device-Window-off(type: 'windowStatusDidChange', callback?: Callback<WindowStatusType>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -4419,6 +4597,8 @@ Unsubscribes from the event indicating that the child window is closed.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Window-off(type: 'subWindowClose', callback?: Callback<void>): void--><!--Device-Window-off(type: 'subWindowClose', callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -4466,6 +4646,8 @@ Unsubscribes from the event indicating that the main window or child window will
 **Since:** 15
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-Window-off(type: 'windowWillClose', callback?: Callback<void, Promise<boolean>>): void--><!--Device-Window-off(type: 'windowWillClose', callback?: Callback<void, Promise<boolean>>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -4529,6 +4711,8 @@ Unsubscribes from the highlighted state change event of the window.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-Window-off(type: 'windowHighlightChange', callback?: Callback<boolean>): void--><!--Device-Window-off(type: 'windowHighlightChange', callback?: Callback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
@@ -4576,6 +4760,8 @@ Unsubscribes from the change event of the rectangle that holds the minimize, max
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Window-off(type: 'windowTitleButtonRectChange', callback?: Callback<TitleButtonRect>): void--><!--Device-Window-off(type: 'windowTitleButtonRectChange', callback?: Callback<TitleButtonRect>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -4626,6 +4812,8 @@ Unsubscribes from window rectangle (position and size) change events.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Window-off(type: 'windowRectChange', callback?: Callback<RectChangeOptions>): void--><!--Device-Window-off(type: 'windowRectChange', callback?: Callback<RectChangeOptions>): void-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
@@ -4670,6 +4858,8 @@ off(type: 'rectChangeInGlobalDisplay', callback?: Callback<RectChangeOptions>): 
 Disables the listening event for changes in the window rectangle (window position and size) in the [global coordinate system](../../../windowmanager/window-terminology.md#global-coordinate-system).
 
 **Since:** 20
+
+<!--Device-Window-off(type: 'rectChangeInGlobalDisplay', callback?: Callback<RectChangeOptions>): void--><!--Device-Window-off(type: 'rectChangeInGlobalDisplay', callback?: Callback<RectChangeOptions>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -4716,6 +4906,8 @@ Unsubscribes from the freeform window mode change event.
 **Since:** 22
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-Window-off(type: 'freeWindowModeChange', callback?: Callback<boolean>): void--><!--Device-Window-off(type: 'freeWindowModeChange', callback?: Callback<boolean>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -4765,6 +4957,8 @@ Unsubscribes from the event indicating changes to the area where this window can
 
 **Substitutes:** [off](#offavoidareachange)(type: 'avoidAreaChange', callback?: Callback&lt;AvoidAreaOptions&gt;)
 
+<!--Device-Window-off(type: 'systemAvoidAreaChange', callback?: Callback<AvoidArea>): void--><!--Device-Window-off(type: 'systemAvoidAreaChange', callback?: Callback<AvoidArea>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
@@ -4798,6 +4992,8 @@ Unregisters the callback of the window focus state change event.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Window-offWindowFocusStateChange(callback?: Callback<WindowFocusState>): void--><!--Device-Window-offWindowFocusStateChange(callback?: Callback<WindowFocusState>): void-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
@@ -4825,6 +5021,8 @@ Unregisters a callback that is invoked when he window changes to the specified w
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Window-offWindowPostureModeChange(mode: WindowPostureMode, callback?: Callback<boolean>): void--><!--Device-Window-offWindowPostureModeChange(mode: WindowPostureMode, callback?: Callback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -4856,6 +5054,8 @@ This API can be registered only on the main thread. If a window registers multip
 **Since:** 19
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-Window-on(type: 'rotationChange', callback: RotationChangeCallback<RotationChangeInfo, RotationChangeResult | void>): void--><!--Device-Window-on(type: 'rotationChange', callback: RotationChangeCallback<RotationChangeInfo, RotationChangeResult | void>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -4960,6 +5160,8 @@ Subscribes to the event indicating changes in the security restrictions of the U
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-Window-on(eventType: 'uiExtensionSecureLimitChange', callback: Callback<boolean>): void--><!--Device-Window-on(eventType: 'uiExtensionSecureLimitChange', callback: Callback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
@@ -5000,6 +5202,8 @@ Subscribes to events indicating changes in window frame metrics. This API must b
 The callback is triggered only when the client UI content is redrawn (for example, during page transitions, interactions with responsive components, setting background colors, or adjusting opacity).
 
 **Since:** 22
+
+<!--Device-Window-on(type: 'frameMetricsMeasured', callback: Callback<FrameMetrics>): void--><!--Device-Window-on(type: 'frameMetricsMeasured', callback: Callback<FrameMetrics>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -5046,6 +5250,8 @@ window on a mobile phone, the lower-layer window returned remains visible.
 
 **Since:** 22
 
+<!--Device-Window-on(type: 'occlusionStateChanged', callback: Callback<OcclusionState>): void--><!--Device-Window-on(type: 'occlusionStateChanged', callback: Callback<OcclusionState>): void-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
@@ -5087,6 +5293,8 @@ Subscribes to the window size change event. This API can be called only by the m
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Window-on(type: 'windowSizeChange', callback: Callback<Size>): void--><!--Device-Window-on(type: 'windowSizeChange', callback: Callback<Size>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -5144,6 +5352,8 @@ Global floating window, modal window, or system window:
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Window-on(type: 'avoidAreaChange', callback: Callback<AvoidAreaOptions>): void--><!--Device-Window-on(type: 'avoidAreaChange', callback: Callback<AvoidAreaOptions>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
@@ -5183,6 +5393,8 @@ Subscribes to the event indicating soft keyboard height changes in the fixed sta
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Window-on(type: 'keyboardHeightChange', callback: Callback<int>): void--><!--Device-Window-on(type: 'keyboardHeightChange', callback: Callback<int>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -5226,6 +5438,8 @@ For details about the APIs used to set the soft keyboard to the fixed or floatin
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-Window-on(type: 'keyboardWillShow', callback: Callback<KeyboardInfo>): void--><!--Device-Window-on(type: 'keyboardWillShow', callback: Callback<KeyboardInfo>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -5273,6 +5487,8 @@ For details about the APIs used to set the soft keyboard to the fixed or floatin
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-Window-on(type: 'keyboardDidShow', callback: Callback<KeyboardInfo>): void--><!--Device-Window-on(type: 'keyboardDidShow', callback: Callback<KeyboardInfo>): void-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
@@ -5316,6 +5532,8 @@ For details about the APIs used to set the soft keyboard to the fixed or floatin
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-Window-on(type: 'keyboardWillHide', callback: Callback<KeyboardInfo>): void--><!--Device-Window-on(type: 'keyboardWillHide', callback: Callback<KeyboardInfo>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -5363,6 +5581,8 @@ For details about the APIs used to set the soft keyboard to the fixed or floatin
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-Window-on(type: 'keyboardDidHide', callback: Callback<KeyboardInfo>): void--><!--Device-Window-on(type: 'keyboardDidHide', callback: Callback<KeyboardInfo>): void-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
@@ -5405,6 +5625,8 @@ Subscribes to the touch event outside this window.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Window-on(type: 'touchOutside', callback: Callback<void>): void--><!--Device-Window-on(type: 'touchOutside', callback: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
@@ -5443,6 +5665,8 @@ Subscribes to the display change event of this window. For example, this event i
 **Since:** 14
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-Window-on(type: 'displayIdChange', callback: Callback<long>): void--><!--Device-Window-on(type: 'displayIdChange', callback: Callback<long>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -5491,6 +5715,8 @@ window on a mobile phone, the lower-layer window returned remains visible.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Window-on(type: 'windowVisibilityChange', callback: Callback<boolean>): void--><!--Device-Window-on(type: 'windowVisibilityChange', callback: Callback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
@@ -5534,6 +5760,8 @@ In the callback function, you are advised to directly use the return value to co
 **Since:** 15
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-Window-on(type: 'systemDensityChange', callback: Callback<double>): void--><!--Device-Window-on(type: 'systemDensityChange', callback: Callback<double>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -5580,6 +5808,8 @@ Register the callback function that has no interaction for a long time. Interact
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Window-on(type: 'noInteractionDetected', timeout: number, callback: Callback<void>): void--><!--Device-Window-on(type: 'noInteractionDetected', timeout: number, callback: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
@@ -5623,6 +5853,8 @@ Subscribes to the screenshot event.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Window-on(type: 'screenshot', callback: Callback<void>): void--><!--Device-Window-on(type: 'screenshot', callback: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
@@ -5659,6 +5891,8 @@ on(type: 'screenshotAppEvent', callback: Callback<ScreenshotEventType>): void
 Subscribes to the screenshot event.
 
 **Since:** 20
+
+<!--Device-Window-on(type: 'screenshotAppEvent', callback: Callback<ScreenshotEventType>): void--><!--Device-Window-on(type: 'screenshotAppEvent', callback: Callback<ScreenshotEventType>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -5701,6 +5935,8 @@ Subscribes to click or touch events in a window covered by a modal window. This 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Window-on(type: 'dialogTargetTouch', callback: Callback<void>): void--><!--Device-Window-on(type: 'dialogTargetTouch', callback: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
@@ -5739,6 +5975,8 @@ Subscribes to the window lifecycle change event.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Window-on(type: 'windowEvent', callback: Callback<WindowEventType>): void--><!--Device-Window-on(type: 'windowEvent', callback: Callback<WindowEventType>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -5790,6 +6028,8 @@ After the listening is enabled using this API, multiple callbacks will be receiv
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Window-on(type: 'windowStatusChange', callback: Callback<WindowStatusType>): void--><!--Device-Window-on(type: 'windowStatusChange', callback: Callback<WindowStatusType>): void-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
@@ -5827,6 +6067,8 @@ on(type: 'windowStatusDidChange', callback: Callback<WindowStatusType>): void
 Subscribes to the event indicating that the window status has changed (the [Rect](arkts-arkui-window-rect-i.md) property of the window has been updated).
 
 **Since:** 20
+
+<!--Device-Window-on(type: 'windowStatusDidChange', callback: Callback<WindowStatusType>): void--><!--Device-Window-on(type: 'windowStatusDidChange', callback: Callback<WindowStatusType>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -5874,6 +6116,8 @@ If there is an existing event subscribed to by calling [on('windowWillClose')](#
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Window-on(type: 'subWindowClose', callback: Callback<void>): void--><!--Device-Window-on(type: 'subWindowClose', callback: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
@@ -5919,6 +6163,8 @@ The callback function in this API is executed asynchronously. For synchronous cl
 **Since:** 15
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-Window-on(type: 'windowWillClose', callback: Callback<void, Promise<boolean>>): void--><!--Device-Window-on(type: 'windowWillClose', callback: Callback<void, Promise<boolean>>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -5979,6 +6225,8 @@ Subscribes to the highlighted state change event of the window.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-Window-on(type: 'windowHighlightChange', callback: Callback<boolean>): void--><!--Device-Window-on(type: 'windowHighlightChange', callback: Callback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
@@ -6020,6 +6268,8 @@ Subscribes to the change event of the rectangle that holds the minimize, maximiz
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Window-on(type: 'windowTitleButtonRectChange', callback: Callback<TitleButtonRect>): void--><!--Device-Window-on(type: 'windowTitleButtonRectChange', callback: Callback<TitleButtonRect>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -6064,6 +6314,8 @@ Subscribes to window rectangle (position and size) change events.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Window-on(type: 'windowRectChange', callback: Callback<RectChangeOptions>): void--><!--Device-Window-on(type: 'windowRectChange', callback: Callback<RectChangeOptions>): void-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
@@ -6103,6 +6355,8 @@ on(type: 'rectChangeInGlobalDisplay', callback: Callback<RectChangeOptions>): vo
 Enables the listening event for changes in the window rectangle (window position and size) in the [global coordinate system](../../../windowmanager/window-terminology.md#global-coordinate-system).
 
 **Since:** 20
+
+<!--Device-Window-on(type: 'rectChangeInGlobalDisplay', callback: Callback<RectChangeOptions>): void--><!--Device-Window-on(type: 'rectChangeInGlobalDisplay', callback: Callback<RectChangeOptions>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -6147,6 +6401,8 @@ Subscribes to the freeform window mode change event.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-Window-on(type: 'freeWindowModeChange', callback: Callback<boolean>): void--><!--Device-Window-on(type: 'freeWindowModeChange', callback: Callback<boolean>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
@@ -6189,6 +6445,8 @@ Subscribes to the event indicating changes to the area where this window cannot 
 
 **Substitutes:** [on](#onavoidareachange)(type: 'avoidAreaChange', callback: Callback&lt;AvoidAreaOptions&gt;)
 
+<!--Device-Window-on(type: 'systemAvoidAreaChange', callback: Callback<AvoidArea>): void--><!--Device-Window-on(type: 'systemAvoidAreaChange', callback: Callback<AvoidArea>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
@@ -6218,6 +6476,8 @@ Registers the callback of the window focus state change event.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Window-onWindowFocusStateChange(callback: Callback<WindowFocusState>): void--><!--Device-Window-onWindowFocusStateChange(callback: Callback<WindowFocusState>): void-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
@@ -6245,6 +6505,8 @@ Registers a callback that is invoked when the window changes to the specified wi
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Window-onWindowPostureModeChange(mode: WindowPostureMode, callback: Callback<boolean>): void--><!--Device-Window-onWindowPostureModeChange(mode: WindowPostureMode, callback: Callback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -6276,6 +6538,8 @@ Brings a child window to the top. This action is limited to child windows of the
 Before calling this API, ensure that the child window has been created and [showWindow()](#showwindow) has been successfully executed.
 
 **Since:** 14
+
+<!--Device-Window-raiseToAppTop(): Promise<void>--><!--Device-Window-raiseToAppTop(): Promise<void>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -6334,7 +6598,9 @@ Restores the main window from the full-screen, maximized, or split-screen mode t
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Window-recover(): Promise<void>--><!--Device-Window-recover(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -6397,6 +6663,8 @@ Restores the main window from full-screen, maximized, or split-screen mode to a 
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Window-recover(snapshotAnimationConfig: WindowSnapshotAnimationConfig): Promise<void>--><!--Device-Window-recover(snapshotAnimationConfig: WindowSnapshotAnimationConfig): Promise<void>-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
@@ -6438,7 +6706,9 @@ This API is valid only for the main window. After it is called, the persistently
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Window-resetAspectRatio(callback: AsyncCallback<void>): void--><!--Device-Window-resetAspectRatio(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -6502,7 +6772,9 @@ This API is valid only for the main window. After it is called, the persistently
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Window-resetAspectRatio(): Promise<void>--><!--Device-Window-resetAspectRatio(): Promise<void>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -6576,7 +6848,9 @@ This API takes effect only when the window is in floating window mode (**window.
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-Window-resize(width: int, height: int): Promise<void>--><!--Device-Window-resize(width: int, height: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -6644,7 +6918,9 @@ If the window width or height is greater than the maximum width or height limit,
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-Window-resize(width: int, height: int, callback: AsyncCallback<void>): void--><!--Device-Window-resize(width: int, height: int, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -6709,7 +6985,9 @@ This API takes effect only when the window is in floating window mode (**window.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Window-resizeAsync(width: int, height: int): Promise<void>--><!--Device-Window-resizeAsync(width: int, height: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -6765,7 +7043,9 @@ Restores the main window from minimization to the foreground, returning it to it
 
 **Since:** 14
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 14.
+
+<!--Device-Window-restore(): Promise<void>--><!--Device-Window-restore(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -6826,6 +7106,8 @@ Restores the main window of the current window to the foreground. If the main wi
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Window-restoreMainWindow(wantParameters?: Record<string, Object>): Promise<void>--><!--Device-Window-restoreMainWindow(wantParameters?: Record<string, Object>): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -6977,7 +7259,9 @@ Sets the aspect ratio of the window content layout (excluding decorations like b
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Window-setAspectRatio(ratio: double, callback: AsyncCallback<void>): void--><!--Device-Window-setAspectRatio(ratio: double, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -7052,7 +7336,9 @@ Sets the aspect ratio of the window content layout (excluding decorations like b
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Window-setAspectRatio(ratio: double): Promise<void>--><!--Device-Window-setAspectRatio(ratio: double): Promise<void>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -7129,6 +7415,8 @@ Sets the aspect ratio of the window content layout (excluding decorations like b
 
 **Since:** 21
 
+<!--Device-Window-setContentAspectRatio(ratio: double, isPersistent?: boolean, needUpdateRect?: boolean): Promise<void>--><!--Device-Window-setContentAspectRatio(ratio: double, isPersistent?: boolean, needUpdateRect?: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
@@ -7192,7 +7480,9 @@ Sets the button style of the decoration bar. The setting takes effect only for t
 
 **Since:** 14
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 14.
+
+<!--Device-Window-setDecorButtonStyle(dectorStyle: DecorButtonStyle): void--><!--Device-Window-setDecorButtonStyle(dectorStyle: DecorButtonStyle): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -7253,7 +7543,9 @@ Sets whether the modal window responds to the back gesture event. An error code 
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Window-setDialogBackGestureEnabled(enabled: boolean): Promise<void>--><!--Device-Window-setDialogBackGestureEnabled(enabled: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -7356,6 +7648,8 @@ If this API is called by a non-main window, error code 1300004 is returned.
 
 **Since:** 20
 
+<!--Device-Window-setDragKeyFramePolicy(keyFramePolicy: KeyFramePolicy): Promise<KeyFramePolicy>--><!--Device-Window-setDragKeyFramePolicy(keyFramePolicy: KeyFramePolicy): Promise<KeyFramePolicy>-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
@@ -7430,7 +7724,9 @@ This API does not take effect for the main window or modal window.
 
 **Since:** 15
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 15.
+
+<!--Device-Window-setExclusivelyHighlighted(exclusivelyHighlighted: boolean): Promise<void>--><!--Device-Window-setExclusivelyHighlighted(exclusivelyHighlighted: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -7486,7 +7782,9 @@ Specifies whether to enable the avoid area for the float navigation type. When e
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+
+<!--Device-Window-setFloatNavigationAvoidAreaEnabled(enabled: boolean): Promise<void>--><!--Device-Window-setFloatNavigationAvoidAreaEnabled(enabled: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -7535,7 +7833,9 @@ However, calling this API on the child window enables it to span multiple screen
 
 **Since:** 17
 
-**Atomic service API:** This API can be used in atomic services since API version 17.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 17.
+
+<!--Device-Window-setFollowParentMultiScreenPolicy(enabled: boolean): Promise<void>--><!--Device-Window-setFollowParentMultiScreenPolicy(enabled: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -7599,7 +7899,9 @@ Once this API is successfully called, the [setRelativePositionToParentWindowEnab
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 17.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 17.
+
+<!--Device-Window-setFollowParentWindowLayoutEnabled(enabled: boolean): Promise<void>--><!--Device-Window-setFollowParentWindowLayoutEnabled(enabled: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -7673,7 +7975,9 @@ After this function is disabled, the gesture hot zone of the current application
 
 **Since:** 13
 
-**Atomic service API:** This API can be used in atomic services since API version 13.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+
+<!--Device-Window-setGestureBackEnabled(enabled: boolean): Promise<void>--><!--Device-Window-setGestureBackEnabled(enabled: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -7747,7 +8051,9 @@ Sets whether to enable the immersive layout for the main window. This API does n
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Window-setImmersiveModeEnabledState(enabled: boolean): void--><!--Device-Window-setImmersiveModeEnabledState(enabled: boolean): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -7791,7 +8097,9 @@ If the child window is focused and the new parent window has a modal child windo
 
 **Since:** 19
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+
+<!--Device-Window-setParentWindow(windowId: int): Promise<void>--><!--Device-Window-setParentWindow(windowId: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -7851,7 +8159,9 @@ Starting from <!--RP1-->OpenHarmony 6.1<!--RP1End-->, this API can be called by 
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-Window-setPreferredOrientation(orientation: Orientation): Promise<void>--><!--Device-Window-setPreferredOrientation(orientation: Orientation): Promise<void>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -7926,7 +8236,9 @@ Starting from <!--RP1-->OpenHarmony 6.1<!--RP1End-->, this API can be called by 
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-Window-setPreferredOrientation(orientation: Orientation, callback: AsyncCallback<void>): void--><!--Device-Window-setPreferredOrientation(orientation: Orientation, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -7994,7 +8306,9 @@ Sets the preferred orientation for the main window. This API uses a promise to r
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+
+<!--Device-Window-setPreferredOrientationWithResult(orientation: Orientation): Promise<OrientationResult>--><!--Device-Window-setPreferredOrientationWithResult(orientation: Orientation): Promise<OrientationResult>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -8068,6 +8382,8 @@ Generally, when a child window is clicked, it is brought to the forefront among 
 Before calling this API, ensure that the child window has been created and [showWindow()](#showwindow) has been successfully executed.
 
 **Since:** 14
+
+<!--Device-Window-setRaiseByClickEnabled(enable: boolean): Promise<void>--><!--Device-Window-setRaiseByClickEnabled(enable: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -8145,6 +8461,8 @@ If the value of **enabled** is **false**, the current window cannot receive drag
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Window-setReceiveDragEventEnabled(enabled: boolean): Promise<void>--><!--Device-Window-setReceiveDragEventEnabled(enabled: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
@@ -8203,6 +8521,8 @@ The relative position is defined by the offset between the anchor points of the 
 Once this API is successfully called, the [setFollowParentWindowLayoutEnabled()](#setfollowparentwindowlayoutenabled) API will no longer take effect.
 
 **Since:** 20
+
+<!--Device-Window-setRelativePositionToParentWindowEnabled(enabled: boolean, anchor?: WindowAnchor,        offsetX?: int, offsetY?: int): Promise<void>--><!--Device-Window-setRelativePositionToParentWindowEnabled(enabled: boolean, anchor?: WindowAnchor,        offsetX?: int, offsetY?: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -8274,7 +8594,9 @@ Sets whether to enable the main window or child window with decorations to resiz
 
 **Since:** 14
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 14.
+
+<!--Device-Window-setResizeByDragEnabled(enable: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setResizeByDragEnabled(enable: boolean, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -8323,7 +8645,9 @@ Sets whether to enable the main window or child window with decorations to resiz
 
 **Since:** 14
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 14.
+
+<!--Device-Window-setResizeByDragEnabled(enable: boolean): Promise<void>--><!--Device-Window-setResizeByDragEnabled(enable: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -8389,6 +8713,8 @@ taps of other fingers are not distributed to the window and are discarded by the
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Window-setSeparationTouchEnabled(enabled: boolean): Promise<void>--><!--Device-Window-setSeparationTouchEnabled(enabled: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
@@ -8441,7 +8767,9 @@ The return value does not indicate that the status bar and <!--RP15-->three-butt
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-Window-setSpecificSystemBarEnabled(name: SpecificSystemBar, enable: boolean, enableAnimation?: boolean): Promise<void>--><!--Device-Window-setSpecificSystemBarEnabled(name: SpecificSystemBar, enable: boolean, enableAnimation?: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -8516,7 +8844,9 @@ Setting the status bar text color is not supported for child windows. Calling th
 
 **Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
+
+<!--Device-Window-setStatusBarColor(color: ColorMetrics): Promise<void>--><!--Device-Window-setStatusBarColor(color: ColorMetrics): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -8590,7 +8920,9 @@ If this API is called by a main window, an error is reported.
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Window-setSubWindowModal(isModal: boolean): Promise<void>--><!--Device-Window-setSubWindowModal(isModal: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -8672,7 +9004,9 @@ If this API is called by a window other than the child window, an error is repor
 
 **Since:** 14
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 14.
+
+<!--Device-Window-setSubWindowModal(isModal: boolean, modalityType: ModalityType): Promise<void>--><!--Device-Window-setSubWindowModal(isModal: boolean, modalityType: ModalityType): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -8747,7 +9081,9 @@ Changing the z-level of a child window using this API will not cause a focus swi
 
 **Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
+
+<!--Device-Window-setSubWindowZLevel(zLevel: int): Promise<void>--><!--Device-Window-setSubWindowZLevel(zLevel: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -8819,6 +9155,8 @@ Sets the supported window modes of the app window.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Window-setSupportedWindowModes(supportedWindowModes: Array<bundleManager.SupportWindowMode>): Promise<void>--><!--Device-Window-setSupportedWindowModes(supportedWindowModes: Array<bundleManager.SupportWindowMode>): Promise<void>-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
@@ -8853,7 +9191,9 @@ Enables the capability to obtain the window avoidance area information using [ge
 
 **Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
+
+<!--Device-Window-setSystemAvoidAreaEnabled(enabled: boolean): Promise<void>--><!--Device-Window-setSystemAvoidAreaEnabled(enabled: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -8939,7 +9279,9 @@ Sets whether to show the window title bar and dock bar when the cursor hovers ov
 
 **Since:** 14
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 14.
+
+<!--Device-Window-setTitleAndDockHoverShown(isTitleHoverShown?: boolean, isDockHoverShown?: boolean): Promise<void>--><!--Device-Window-setTitleAndDockHoverShown(isTitleHoverShown?: boolean, isDockHoverShown?: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -9018,6 +9360,8 @@ Sets the touchable areas for this window. By default, the entire window is touch
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Window-setTouchableAreas(rects: Array<Rect>): Promise<void>--><!--Device-Window-setTouchableAreas(rects: Array<Rect>): Promise<void>-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
@@ -9072,7 +9416,9 @@ Loads the content of a page, with its path in the current project specified, to 
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-Window-setUIContent(path: string, callback: AsyncCallback<void>): void--><!--Device-Window-setUIContent(path: string, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -9122,7 +9468,9 @@ Loads the content of a page, with its path in the current project specified, to 
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-Window-setUIContent(path: string): Promise<void>--><!--Device-Window-setUIContent(path: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -9177,7 +9525,9 @@ In the stage model, this API must be used after the call of [loadContent](#loadc
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-Window-setWindowBackgroundColor(color: string | ColorMetrics): void--><!--Device-Window-setWindowBackgroundColor(color: string | ColorMetrics): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -9235,7 +9585,9 @@ When the window moves to the background, the setting becomes invalid, and bright
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-Window-setWindowBrightness(brightness: double): Promise<void>--><!--Device-Window-setWindowBrightness(brightness: double): Promise<void>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -9319,7 +9671,9 @@ When the window moves to the background, the setting becomes invalid, and bright
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-Window-setWindowBrightness(brightness: double, callback: AsyncCallback<void>): void--><!--Device-Window-setWindowBrightness(brightness: double, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -9392,7 +9746,9 @@ Sets a color space for this window. This API uses a promise to return the result
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Window-setWindowColorSpace(colorSpace:ColorSpace): Promise<void>--><!--Device-Window-setWindowColorSpace(colorSpace:ColorSpace): Promise<void>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -9444,7 +9800,9 @@ Sets a color space for this window. This API uses an asynchronous callback to re
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Window-setWindowColorSpace(colorSpace:ColorSpace, callback: AsyncCallback<void>): void--><!--Device-Window-setWindowColorSpace(colorSpace:ColorSpace, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -9494,6 +9852,8 @@ The background color you set here covers the entire window, including both the t
 **Since:** 20
 
 **Required permissions:** ohos.permission.SET_WINDOW_TRANSPARENT
+
+<!--Device-Window-setWindowContainerColor(activeColor: string, inactiveColor: string): void--><!--Device-Window-setWindowContainerColor(activeColor: string, inactiveColor: string): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -9569,6 +9929,8 @@ The background color you set here covers the entire window, including both the t
 - API version 26 and later: ohos.permission.SET_WINDOW_ALPHA
 - API versions 20 to 25: N/A
 
+<!--Device-Window-setWindowContainerModalColor(activeColor: string, inactiveColor: string): void--><!--Device-Window-setWindowContainerModalColor(activeColor: string, inactiveColor: string): void-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
@@ -9602,7 +9964,9 @@ Before calling this API, you can call [getWindowCornerRadius()](#getwindowcorner
 
 **Since:** 17
 
-**Atomic service API:** This API can be used in atomic services since API version 17.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 17.
+
+<!--Device-Window-setWindowCornerRadius(cornerRadius: double): Promise<void>--><!--Device-Window-setWindowCornerRadius(cornerRadius: double): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -9659,7 +10023,9 @@ When the main window transitions into full-screen mode, hovering the mouse over 
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Window-setWindowDecorHeight(height: int): void--><!--Device-Window-setWindowDecorHeight(height: int): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -9703,7 +10069,9 @@ When the window title bar is hidden and the main window transitions into full-sc
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Window-setWindowDecorVisible(isVisible: boolean): void--><!--Device-Window-setWindowDecorVisible(isVisible: boolean): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -9759,7 +10127,9 @@ When this API is called to enable delayed raising, in cross-window drag-and-drop
 
 **Since:** 19
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+
+<!--Device-Window-setWindowDelayRaiseOnDrag(isEnabled: boolean): void--><!--Device-Window-setWindowDelayRaiseOnDrag(isEnabled: boolean): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -9798,7 +10168,9 @@ Starting from API version 22, if a virtual screen is created by calling [createV
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Window-setWindowFocusable(isFocusable: boolean): Promise<void>--><!--Device-Window-setWindowFocusable(isFocusable: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -9854,7 +10226,9 @@ Starting from API version 22, if a virtual screen is created by calling [createV
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Window-setWindowFocusable(isFocusable: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setWindowFocusable(isFocusable: boolean, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -9903,7 +10277,9 @@ Sets the grayscale effect for this window. This API uses a promise to return the
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Window-setWindowGrayScale(grayScale: double): Promise<void>--><!--Device-Window-setWindowGrayScale(grayScale: double): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -9967,7 +10343,9 @@ Set **isKeepScreenOn** to **true** only in necessary scenarios (such as navigati
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-Window-setWindowKeepScreenOn(isKeepScreenOn: boolean): Promise<void>--><!--Device-Window-setWindowKeepScreenOn(isKeepScreenOn: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -10023,7 +10401,9 @@ Set **isKeepScreenOn** to **true** only in necessary scenarios (such as navigati
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-Window-setWindowKeepScreenOn(isKeepScreenOn: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setWindowKeepScreenOn(isKeepScreenOn: boolean, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -10078,7 +10458,9 @@ A non-immersive layout means that the layout avoids the status bar and <!--RP15-
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Window-setWindowLayoutFullScreen(isLayoutFullScreen: boolean): Promise<void>--><!--Device-Window-setWindowLayoutFullScreen(isLayoutFullScreen: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -10158,6 +10540,8 @@ A non-immersive layout means that the layout avoids the status bar and <!--RP15-
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Window-setWindowLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setWindowLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
@@ -10227,7 +10611,9 @@ If **setWindowLimits** has not been called, you can call [getWindowLimits](#getw
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Window-setWindowLimits(windowLimits: WindowLimits): Promise<WindowLimits>--><!--Device-Window-setWindowLimits(windowLimits: WindowLimits): Promise<WindowLimits>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -10291,7 +10677,9 @@ If **setWindowLimits** has not been called, you can call [getWindowLimits](#getw
 
 **Since:** 15
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 15.
+
+<!--Device-Window-setWindowLimits(windowLimits: WindowLimits, isForcible: boolean): Promise<WindowLimits>--><!--Device-Window-setWindowLimits(windowLimits: WindowLimits, isForcible: boolean): Promise<WindowLimits>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -10354,7 +10742,9 @@ Error code 1300002 may be returned only when multiple threads operate the same w
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Window-setWindowMask(windowMask: Array<Array<long>>): Promise<void>--><!--Device-Window-setWindowMask(windowMask: Array<Array<long>>): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -10417,6 +10807,8 @@ Set the window mask using a per-pixel alpha array
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Window-setWindowMaskWithAlpha(windowMask: Uint8Array, maskWidth: int, maskHeight: int): Promise<void>--><!--Device-Window-setWindowMaskWithAlpha(windowMask: Uint8Array, maskWidth: int, maskHeight: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
@@ -10461,7 +10853,9 @@ If this API is not called, the privacy mode is disabled by default, and the wind
 
 **Required permissions:** ohos.permission.PRIVACY_WINDOW
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Window-setWindowPrivacyMode(isPrivacyMode: boolean): Promise<void>--><!--Device-Window-setWindowPrivacyMode(isPrivacyMode: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -10522,7 +10916,9 @@ If this API is not called, the privacy mode is disabled by default, and the wind
 
 **Required permissions:** ohos.permission.PRIVACY_WINDOW
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Window-setWindowPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setWindowPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -10571,6 +10967,8 @@ Sets whether the main window displays a shadow. This API uses a promise to retur
 **Since:** 20
 
 **Required permissions:** ohos.permission.SET_WINDOW_TRANSPARENT
+
+<!--Device-Window-setWindowShadowEnabled(enable: boolean): Promise<void>--><!--Device-Window-setWindowShadowEnabled(enable: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -10645,7 +11043,9 @@ Sets the blur radius of the shadow on the edges of a child window or floating wi
 
 **Since:** 17
 
-**Atomic service API:** This API can be used in atomic services since API version 17.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 17.
+
+<!--Device-Window-setWindowShadowRadius(radius: double): void--><!--Device-Window-setWindowShadowRadius(radius: double): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -10688,7 +11088,9 @@ The return value does not indicate that the status bar and <!--RP15-->three-butt
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Window-setWindowSystemBarEnable(names: Array<'status'|'navigation'>): Promise<void>--><!--Device-Window-setWindowSystemBarEnable(names: Array<'status'|'navigation'>): Promise<void>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -10769,6 +11171,8 @@ The return value does not indicate that the status bar and <!--RP15-->three-butt
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Window-setWindowSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncCallback<void>): void--><!--Device-Window-setWindowSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
@@ -10839,7 +11243,9 @@ This API does not take effect when it is called by a child window. The setting d
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Window-setWindowSystemBarProperties(systemBarProperties: SystemBarProperties): Promise<void>--><!--Device-Window-setWindowSystemBarProperties(systemBarProperties: SystemBarProperties): Promise<void>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -10923,6 +11329,8 @@ This API does not take effect when it is called by a child window.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Window-setWindowSystemBarProperties(systemBarProperties: SystemBarProperties, callback: AsyncCallback<void>): void--><!--Device-Window-setWindowSystemBarProperties(systemBarProperties: SystemBarProperties, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
@@ -10995,7 +11403,9 @@ Sets the window title. This API uses a promise to return the result. In the stag
 
 **Since:** 15
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 15.
+
+<!--Device-Window-setWindowTitle(titleName: string): Promise<void>--><!--Device-Window-setWindowTitle(titleName: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -11046,7 +11456,9 @@ Shows or hides the maximize, minimize, and close buttons on the title bar of the
 
 **Since:** 14
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 14.
+
+<!--Device-Window-setWindowTitleButtonVisible(isMaximizeButtonVisible: boolean, isMinimizeButtonVisible: boolean, isCloseButtonVisible?: boolean): void--><!--Device-Window-setWindowTitleButtonVisible(isMaximizeButtonVisible: boolean, isMinimizeButtonVisible: boolean, isCloseButtonVisible?: boolean): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -11112,7 +11524,9 @@ Enables or disables the capability to move the window (either main window or chi
 
 **Since:** 14
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 14.
+
+<!--Device-Window-setWindowTitleMoveEnabled(enabled: boolean): void--><!--Device-Window-setWindowTitleMoveEnabled(enabled: boolean): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -11168,7 +11582,9 @@ Applications use custom shortcut keys to pin or unpin the main window.
 
 **Required permissions:** ohos.permission.WINDOW_TOPMOST
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 14.
+
+<!--Device-Window-setWindowTopmost(isWindowTopmost: boolean): Promise<void>--><!--Device-Window-setWindowTopmost(isWindowTopmost: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -11261,7 +11677,9 @@ Sets whether this window is touchable. This API uses a promise to return the res
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Window-setWindowTouchable(isTouchable: boolean): Promise<void>--><!--Device-Window-setWindowTouchable(isTouchable: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -11315,7 +11733,9 @@ Sets whether this window is touchable. This API uses an asynchronous callback to
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Window-setWindowTouchable(isTouchable: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setWindowTouchable(isTouchable: boolean, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -11368,7 +11788,9 @@ Currently, this API can be used only on the main window of an application.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+
+<!--Device-Window-setWindowTransitionAnimation(transitionType: WindowTransitionType, animation: TransitionAnimation): Promise<void>--><!--Device-Window-setWindowTransitionAnimation(transitionType: WindowTransitionType, animation: TransitionAnimation): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -11457,7 +11879,9 @@ Shows this window. This API uses an asynchronous callback to return the result. 
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-Window-showWindow(callback: AsyncCallback<void>): void--><!--Device-Window-showWindow(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -11546,7 +11970,9 @@ Shows this window. This API uses a promise to return the result. This API takes 
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-Window-showWindow(): Promise<void>--><!--Device-Window-showWindow(): Promise<void>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -11636,7 +12062,9 @@ This API can be used only for application child windows, application main window
 
 **Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+
+<!--Device-Window-showWindow(options: ShowWindowOptions): Promise<void>--><!--Device-Window-showWindow(options: ShowWindowOptions): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -11723,7 +12151,9 @@ Captures this window. This API uses an asynchronous callback to return the resul
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Window-snapshot(callback: AsyncCallback<image.PixelMap>): void--><!--Device-Window-snapshot(callback: AsyncCallback<image.PixelMap>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -11768,7 +12198,9 @@ Captures this window. If privacy mode is enabled for the current window (using [
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Window-snapshot(): Promise<image.PixelMap>--><!--Device-Window-snapshot(): Promise<image.PixelMap>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -11809,7 +12241,9 @@ Captures this window. This API can be called to obtain the screenshot of the cur
 
 **Since:** 18
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
+
+<!--Device-Window-snapshotIgnorePrivacy(): Promise<image.PixelMap>--><!--Device-Window-snapshotIgnorePrivacy(): Promise<image.PixelMap>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -11852,6 +12286,8 @@ Captures this window. This API returns the result synchronously. If privacy mode
 In the stage model, this API must be used after the call of [loadContent](#loadcontent) or [setUIContent()](#setuicontent) takes effect.
 
 **Since:** 20
+
+<!--Device-Window-snapshotSync(): image.PixelMap--><!--Device-Window-snapshotSync(): image.PixelMap-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -11898,7 +12334,9 @@ In click-and-drag scenarios, if you do not want the drag to start as soon as you
 
 **Since:** 14
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 14.
+
+<!--Device-Window-startMoving(): Promise<void>--><!--Device-Window-startMoving(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -11987,7 +12425,9 @@ In click-and-drag scenarios, if you do not want the drag to start as soon as you
 
 **Since:** 15
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 15.
+
+<!--Device-Window-startMoving(offsetX: int, offsetY: int): Promise<void>--><!--Device-Window-startMoving(offsetX: int, offsetY: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -12072,7 +12512,9 @@ Stops window movement when a window is being dragged. This API uses a promise to
 
 **Since:** 15
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 15.
+
+<!--Device-Window-stopMoving(): Promise<void>--><!--Device-Window-stopMoving(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -12134,6 +12576,8 @@ Destroys this window. This API uses an asynchronous callback to return the resul
 
 **Substitutes:** [destroyWindow](#destroywindow)(callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-Window-destroy(callback: AsyncCallback<void>): void--><!--Device-Window-destroy(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
@@ -12172,6 +12616,8 @@ Destroys this window. This API uses a promise to return the result.
 **Deprecated since:** 9
 
 **Substitutes:** [destroyWindow](#destroywindow)()
+
+<!--Device-Window-destroy(): Promise<void>--><!--Device-Window-destroy(): Promise<void>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -12221,6 +12667,8 @@ Global floating window, modal window, or system window:
 **Deprecated since:** 9
 
 **Substitutes:** [getWindowAvoidArea](#getwindowavoidarea)
+
+<!--Device-Window-getAvoidArea(type: AvoidAreaType, callback: AsyncCallback<AvoidArea>): void--><!--Device-Window-getAvoidArea(type: AvoidAreaType, callback: AsyncCallback<AvoidArea>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -12289,6 +12737,8 @@ Global floating window, modal window, or system window:
 
 **Substitutes:** [getWindowAvoidArea](#getwindowavoidarea)
 
+<!--Device-Window-getAvoidArea(type: AvoidAreaType): Promise<AvoidArea>--><!--Device-Window-getAvoidArea(type: AvoidAreaType): Promise<AvoidArea>-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
@@ -12320,6 +12770,8 @@ Obtains the color space of this window. This API uses a promise to return the re
 **Deprecated since:** 9
 
 **Substitutes:** [getWindowColorSpace](#getwindowcolorspace)
+
+<!--Device-Window-getColorSpace(): Promise<ColorSpace>--><!--Device-Window-getColorSpace(): Promise<ColorSpace>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -12358,6 +12810,8 @@ Obtains the color space of this window. This API uses an asynchronous callback t
 
 **Substitutes:** [getWindowColorSpace](#getwindowcolorspace)
 
+<!--Device-Window-getColorSpace(callback: AsyncCallback<ColorSpace>): void--><!--Device-Window-getColorSpace(callback: AsyncCallback<ColorSpace>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
@@ -12394,6 +12848,8 @@ Obtains the properties of this window. This API uses an asynchronous callback to
 **Deprecated since:** 9
 
 **Substitutes:** [getWindowProperties](#getwindowproperties)
+
+<!--Device-Window-getProperties(callback: AsyncCallback<WindowProperties>): void--><!--Device-Window-getProperties(callback: AsyncCallback<WindowProperties>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -12434,6 +12890,8 @@ Obtains the properties of this window. This API uses a promise to return the res
 
 **Substitutes:** [getWindowProperties](#getwindowproperties)
 
+<!--Device-Window-getProperties(): Promise<WindowProperties>--><!--Device-Window-getProperties(): Promise<WindowProperties>-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Return value:**
@@ -12468,6 +12926,8 @@ Checks whether this window is displayed. This API uses an asynchronous callback 
 **Deprecated since:** 9
 
 **Substitutes:** [isWindowShowing](#iswindowshowing)
+
+<!--Device-Window-isShowing(callback: AsyncCallback<boolean>): void--><!--Device-Window-isShowing(callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -12508,6 +12968,8 @@ Checks whether this window is displayed. This API uses a promise to return the r
 
 **Substitutes:** [isWindowShowing](#iswindowshowing)
 
+<!--Device-Window-isShowing(): Promise<boolean>--><!--Device-Window-isShowing(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Return value:**
@@ -12542,6 +13004,8 @@ Checks whether this window supports the wide-gamut color space. This API uses a 
 **Deprecated since:** 9
 
 **Substitutes:** [isWindowSupportWideGamut](#iswindowsupportwidegamut)()
+
+<!--Device-Window-isSupportWideGamut(): Promise<boolean>--><!--Device-Window-isSupportWideGamut(): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -12579,6 +13043,8 @@ Checks whether this window supports the wide-gamut color space. This API uses an
 **Deprecated since:** 9
 
 **Substitutes:** [isWindowSupportWideGamut](#iswindowsupportwidegamut-1)(callback: AsyncCallback&lt;boolean&gt;)
+
+<!--Device-Window-isSupportWideGamut(callback: AsyncCallback<boolean>): void--><!--Device-Window-isSupportWideGamut(callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -12618,6 +13084,8 @@ This operation is not supported in a window in full-screen mode.
 **Deprecated since:** 9
 
 **Substitutes:** [moveWindowTo](#movewindowto)(x: number, y: number)
+
+<!--Device-Window-moveTo(x: number, y: number): Promise<void>--><!--Device-Window-moveTo(x: number, y: number): Promise<void>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -12664,6 +13132,8 @@ This operation is not supported in a window in full-screen mode.
 **Deprecated since:** 9
 
 **Substitutes:** [moveWindowTo](#movewindowto)(x: number, y: number, callback: AsyncCallback&lt;void&gt;)
+
+<!--Device-Window-moveTo(x: number, y: number, callback: AsyncCallback<void>): void--><!--Device-Window-moveTo(x: number, y: number, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -12717,6 +13187,8 @@ This operation is not supported in a window in full-screen mode.
 **Deprecated since:** 9
 
 **Substitutes:** [resize](#resize)(width: number, height: number)
+
+<!--Device-Window-resetSize(width: number, height: number): Promise<void>--><!--Device-Window-resetSize(width: number, height: number): Promise<void>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -12776,6 +13248,8 @@ This operation is not supported in a window in full-screen mode.
 
 **Substitutes:** [resize](#resize)(width: number, height: number, callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-Window-resetSize(width: number, height: number, callback: AsyncCallback<void>): void--><!--Device-Window-resetSize(width: number, height: number, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
@@ -12814,6 +13288,8 @@ Sets the background color for this window. This API uses a promise to return the
 **Deprecated since:** 9
 
 **Substitutes:** [setWindowBackgroundColor](#setwindowbackgroundcolor)
+
+<!--Device-Window-setBackgroundColor(color: string): Promise<void>--><!--Device-Window-setBackgroundColor(color: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -12859,6 +13335,8 @@ Sets the background color for this window. This API uses an asynchronous callbac
 
 **Substitutes:** [setWindowBackgroundColor](#setwindowbackgroundcolor)
 
+<!--Device-Window-setBackgroundColor(color: string, callback: AsyncCallback<void>): void--><!--Device-Window-setBackgroundColor(color: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
@@ -12899,6 +13377,8 @@ When the screen brightness setting for the window takes effect, Control Panel ca
 **Deprecated since:** 9
 
 **Substitutes:** [setWindowBrightness](#setwindowbrightness)(brightness: number)
+
+<!--Device-Window-setBrightness(brightness: number): Promise<void>--><!--Device-Window-setBrightness(brightness: number): Promise<void>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -12946,6 +13426,8 @@ When the screen brightness setting for the window takes effect, Control Panel ca
 
 **Substitutes:** [setWindowBrightness](#setwindowbrightness)(brightness: number, callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-Window-setBrightness(brightness: number, callback: AsyncCallback<void>): void--><!--Device-Window-setBrightness(brightness: number, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
@@ -12984,6 +13466,8 @@ Sets a color space for this window. This API uses a promise to return the result
 **Deprecated since:** 9
 
 **Substitutes:** [setWindowColorSpace](#setwindowcolorspace)(colorSpace:ColorSpace)
+
+<!--Device-Window-setColorSpace(colorSpace: ColorSpace): Promise<void>--><!--Device-Window-setColorSpace(colorSpace: ColorSpace): Promise<void>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -13028,6 +13512,8 @@ Sets a color space for this window. This API uses an asynchronous callback to re
 
 **Substitutes:** [setWindowColorSpace](#setwindowcolorspace-1)(colorSpace:ColorSpace, callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-Window-setColorSpace(colorSpace: ColorSpace, callback: AsyncCallback<void>): void--><!--Device-Window-setColorSpace(colorSpace: ColorSpace, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
@@ -13063,6 +13549,8 @@ Sets the dimness of the window that is not on top. This API uses an asynchronous
 **Since:** 7
 
 **Deprecated since:** 9
+
+<!--Device-Window-setDimBehind(dimBehindValue: number, callback: AsyncCallback<void>): void--><!--Device-Window-setDimBehind(dimBehindValue: number, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -13101,6 +13589,8 @@ Sets the dimness of the window that is not on top. This API uses a promise to re
 **Since:** 7
 
 **Deprecated since:** 9
+
+<!--Device-Window-setDimBehind(dimBehindValue: number): Promise<void>--><!--Device-Window-setDimBehind(dimBehindValue: number): Promise<void>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -13142,6 +13632,8 @@ Sets whether this window is focusable, that is, whether the window can gain focu
 **Deprecated since:** 9
 
 **Substitutes:** [setWindowFocusable](#setwindowfocusable)(isFocusable: boolean)
+
+<!--Device-Window-setFocusable(isFocusable: boolean): Promise<void>--><!--Device-Window-setFocusable(isFocusable: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -13186,6 +13678,8 @@ Sets whether this window is focusable, that is, whether the window can gain focu
 **Deprecated since:** 9
 
 **Substitutes:** [setWindowFocusable](#setwindowfocusable-1)(isFocusable: boolean, callback: AsyncCallback&lt;void&gt;)
+
+<!--Device-Window-setFocusable(isFocusable: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setFocusable(isFocusable: boolean, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -13236,6 +13730,8 @@ Non-full-screen mode means that the layout avoids the status bar and <!--RP15-->
 **Deprecated since:** 9
 
 **Substitutes:** [setWindowSystemBarEnable](#setwindowsystembarenable-1)(names: Array&lt;'status' | 'navigation'&gt;), [setWindowLayoutFullScreen](#setwindowlayoutfullscreen-1)(isLayoutFullScreen: boolean)
+
+<!--Device-Window-setFullScreen(isFullScreen: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setFullScreen(isFullScreen: boolean, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -13307,6 +13803,8 @@ Non-full-screen mode means that the layout avoids the status bar and <!--RP15-->
 
 **Substitutes:** [setWindowSystemBarEnable](#setwindowsystembarenable-1)(names: Array&lt;'status' | 'navigation'&gt;), [setWindowLayoutFullScreen](#setwindowlayoutfullscreen-1)(isLayoutFullScreen: boolean)
 
+<!--Device-Window-setFullScreen(isFullScreen: boolean): Promise<void>--><!--Device-Window-setFullScreen(isFullScreen: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
@@ -13367,6 +13865,8 @@ Sets whether to keep the screen always on. This API uses a promise to return the
 
 **Substitutes:** [setWindowKeepScreenOn](#setwindowkeepscreenon)(isKeepScreenOn: boolean)
 
+<!--Device-Window-setKeepScreenOn(isKeepScreenOn: boolean): Promise<void>--><!--Device-Window-setKeepScreenOn(isKeepScreenOn: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
@@ -13411,6 +13911,8 @@ Sets whether to keep the screen always on. This API uses an asynchronous callbac
 
 **Substitutes:** [setWindowKeepScreenOn](#setwindowkeepscreenon-1)(isKeepScreenOn: boolean, callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-Window-setKeepScreenOn(isKeepScreenOn: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setKeepScreenOn(isKeepScreenOn: boolean, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
@@ -13453,6 +13955,8 @@ A non-immersive layout means that the layout avoids the status bar and <!--RP15-
 **Deprecated since:** 9
 
 **Substitutes:** [setWindowLayoutFullScreen](#setwindowlayoutfullscreen-1)(isLayoutFullScreen: boolean)
+
+<!--Device-Window-setLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -13517,6 +14021,8 @@ A non-immersive layout means that the layout avoids the status bar and <!--RP15-
 
 **Substitutes:** [setWindowLayoutFullScreen](#setwindowlayoutfullscreen-1)(isLayoutFullScreen: boolean)
 
+<!--Device-Window-setLayoutFullScreen(isLayoutFullScreen: boolean): Promise<void>--><!--Device-Window-setLayoutFullScreen(isLayoutFullScreen: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
@@ -13578,6 +14084,8 @@ Sets whether the area outside the child window is touchable. This API uses a pro
 
 **Deprecated since:** 9
 
+<!--Device-Window-setOutsideTouchable(touchable: boolean): Promise<void>--><!--Device-Window-setOutsideTouchable(touchable: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
@@ -13622,6 +14130,8 @@ Sets whether the area outside the child window is touchable. This API uses an as
 
 **Deprecated since:** 9
 
+<!--Device-Window-setOutsideTouchable(touchable: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setOutsideTouchable(touchable: boolean, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
@@ -13659,6 +14169,8 @@ Sets whether this window is in privacy mode. This API uses a promise to return t
 **Deprecated since:** 9
 
 **Substitutes:** [setWindowPrivacyMode](#setwindowprivacymode)(isPrivacyMode: boolean)
+
+<!--Device-Window-setPrivacyMode(isPrivacyMode: boolean): Promise<void>--><!--Device-Window-setPrivacyMode(isPrivacyMode: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -13704,6 +14216,8 @@ Sets whether this window is in privacy mode. This API uses an asynchronous callb
 
 **Substitutes:** [setWindowPrivacyMode](#setwindowprivacymode-1)(isPrivacyMode: boolean, callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-Window-setPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
@@ -13746,6 +14260,8 @@ The return value does not indicate that the status bar and <!--RP15-->three-butt
 **Deprecated since:** 9
 
 **Substitutes:** [setWindowSystemBarEnable](#setwindowsystembarenable-1)(names: Array&lt;'status'|'navigation'&gt;)
+
+<!--Device-Window-setSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncCallback<void>): void--><!--Device-Window-setSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -13811,6 +14327,8 @@ The return value does not indicate that the status bar and <!--RP15-->three-butt
 
 **Substitutes:** [setWindowSystemBarEnable](#setwindowsystembarenable-1)(names: Array&lt;'status'|'navigation'&gt;)
 
+<!--Device-Window-setSystemBarEnable(names: Array<'status' | 'navigation'>): Promise<void>--><!--Device-Window-setSystemBarEnable(names: Array<'status' | 'navigation'>): Promise<void>-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
@@ -13873,6 +14391,8 @@ This API does not take effect when it is called by a child window. The configura
 **Deprecated since:** 9
 
 **Substitutes:** [setWindowSystemBarProperties](#setwindowsystembarproperties-1)(systemBarProperties: SystemBarProperties)
+
+<!--Device-Window-setSystemBarProperties(systemBarProperties: SystemBarProperties, callback: AsyncCallback<void>): void--><!--Device-Window-setSystemBarProperties(systemBarProperties: SystemBarProperties, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -13941,6 +14461,8 @@ This API does not take effect when it is called by a child window.
 
 **Substitutes:** [setWindowSystemBarProperties](#setwindowsystembarproperties-1)(systemBarProperties: SystemBarProperties)
 
+<!--Device-Window-setSystemBarProperties(systemBarProperties: SystemBarProperties): Promise<void>--><!--Device-Window-setSystemBarProperties(systemBarProperties: SystemBarProperties): Promise<void>-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
@@ -14007,6 +14529,8 @@ Sets whether this window is touchable. This API uses a promise to return the res
 
 **Substitutes:** [setWindowTouchable](#setwindowtouchable)(isTouchable: boolean)
 
+<!--Device-Window-setTouchable(isTouchable: boolean): Promise<void>--><!--Device-Window-setTouchable(isTouchable: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
@@ -14051,6 +14575,8 @@ Sets whether this window is touchable. This API uses an asynchronous callback to
 
 **Substitutes:** [setWindowTouchable](#setwindowtouchable-1)(isTouchable: boolean, callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-Window-setTouchable(isTouchable: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setTouchable(isTouchable: boolean, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
@@ -14090,6 +14616,8 @@ Shows this window. This API uses an asynchronous callback to return the result.
 
 **Substitutes:** [showWindow](#showwindow)(callback: AsyncCallback&lt;void&gt;)
 
+<!--Device-Window-show(callback: AsyncCallback<void>): void--><!--Device-Window-show(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
@@ -14128,6 +14656,8 @@ Shows this window. This API uses a promise to return the result.
 **Deprecated since:** 9
 
 **Substitutes:** [showWindow](#showwindow)()
+
+<!--Device-Window-show(): Promise<void>--><!--Device-Window-show(): Promise<void>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 

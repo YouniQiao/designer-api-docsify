@@ -18,6 +18,8 @@ function cancelGroup(groupName: string, callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
+<!--Device-notificationManager-function cancelGroup(groupName: string, callback: AsyncCallback<void>): void--><!--Device-notificationManager-function cancelGroup(groupName: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **参数：**
@@ -66,6 +68,8 @@ function cancelGroup(groupName: string): Promise<void>
 通知组groupName是在发布通知时通过NotificationRequest的groupName字段指定的分组标识。取消后，该组下所有通知将从通知中心移除。适用于需要按业务分组批量取消通知的场景。
 
 **起始版本：** 9
+
+<!--Device-notificationManager-function cancelGroup(groupName: string): Promise<void>--><!--Device-notificationManager-function cancelGroup(groupName: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

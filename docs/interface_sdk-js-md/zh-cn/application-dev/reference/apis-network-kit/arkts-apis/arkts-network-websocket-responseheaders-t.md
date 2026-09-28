@@ -10,6 +10,8 @@ export type ResponseHeaders = {
 
 **起始版本：** 12
 
+<!--Device-webSocket-export type ResponseHeaders = {    [k: string]: string | string[] | undefined;  }--><!--Device-webSocket-export type ResponseHeaders = {    [k: string]: string | string[] | undefined;  }-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **类型：** {

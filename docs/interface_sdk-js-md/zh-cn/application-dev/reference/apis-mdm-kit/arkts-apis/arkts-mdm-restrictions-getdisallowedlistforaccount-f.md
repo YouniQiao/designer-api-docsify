@@ -20,6 +20,8 @@ function getDisallowedListForAccount(admin: Want, feature: string, accountId: nu
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-restrictions-function getDisallowedListForAccount(admin: Want, feature: string, accountId: number): Array<string>--><!--Device-restrictions-function getDisallowedListForAccount(admin: Want, feature: string, accountId: number): Array<string>-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**

@@ -12,6 +12,8 @@ type ReportExecuteActionEvent = (actionType: string, params: string) => void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-avMusicTemplate-type ReportExecuteActionEvent = (actionType: string, params: string) => void--><!--Device-avMusicTemplate-type ReportExecuteActionEvent = (actionType: string, params: string) => void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **参数：**

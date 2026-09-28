@@ -10,6 +10,8 @@ interface BatteryInfo
 
 **起始版本：** 12
 
+<!--Device-connection-interface BatteryInfo--><!--Device-connection-interface BatteryInfo-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -31,6 +33,8 @@ deviceId: string
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BatteryInfo-deviceId: string--><!--Device-BatteryInfo-deviceId: string-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

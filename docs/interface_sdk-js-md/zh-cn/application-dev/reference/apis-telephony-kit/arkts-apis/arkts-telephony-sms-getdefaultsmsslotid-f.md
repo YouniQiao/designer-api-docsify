@@ -16,6 +16,8 @@ function getDefaultSmsSlotId(callback: AsyncCallback<number>): void
 
 **起始版本：** 7
 
+<!--Device-sms-function getDefaultSmsSlotId(callback: AsyncCallback<int>): void--><!--Device-sms-function getDefaultSmsSlotId(callback: AsyncCallback<int>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **参数：**
@@ -51,6 +53,8 @@ function getDefaultSmsSlotId(): Promise<number>
 获取发送短信的默认SIM卡槽ID。使用Promise异步回调。
 
 **起始版本：** 7
+
+<!--Device-sms-function getDefaultSmsSlotId(): Promise<int>--><!--Device-sms-function getDefaultSmsSlotId(): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 

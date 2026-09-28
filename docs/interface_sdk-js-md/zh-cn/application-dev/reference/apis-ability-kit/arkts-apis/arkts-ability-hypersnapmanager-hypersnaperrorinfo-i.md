@@ -8,6 +8,8 @@ export interface HyperSnapErrorInfo
 
 **起始版本：** 26.0.1
 
+<!--Device-hyperSnapManager-export interface HyperSnapErrorInfo--><!--Device-hyperSnapManager-export interface HyperSnapErrorInfo-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ code: HyperSnapErrorCode
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HyperSnapErrorInfo-code: HyperSnapErrorCode--><!--Device-HyperSnapErrorInfo-code: HyperSnapErrorCode-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## msg
@@ -46,6 +50,8 @@ msg: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HyperSnapErrorInfo-msg: string--><!--Device-HyperSnapErrorInfo-msg: string-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## occurTimeStamp
@@ -61,5 +67,7 @@ occurTimeStamp: number
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HyperSnapErrorInfo-occurTimeStamp: long--><!--Device-HyperSnapErrorInfo-occurTimeStamp: long-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

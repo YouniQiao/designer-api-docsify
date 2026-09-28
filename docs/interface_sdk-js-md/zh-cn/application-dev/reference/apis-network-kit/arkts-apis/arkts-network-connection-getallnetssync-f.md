@@ -18,6 +18,8 @@ function getAllNetsSync(): Array<NetHandle>
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-connection-function getAllNetsSync(): Array<NetHandle>--><!--Device-connection-function getAllNetsSync(): Array<NetHandle>-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **返回值：**

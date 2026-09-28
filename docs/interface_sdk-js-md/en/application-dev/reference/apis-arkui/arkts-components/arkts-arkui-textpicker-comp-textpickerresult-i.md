@@ -8,6 +8,8 @@ Represents the selection result of a **TextPicker** component.
 
 **Since:** 8
 
+<!--Device-unnamed-declare interface TextPickerResult--><!--Device-unnamed-declare interface TextPickerResult-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## index
@@ -25,6 +27,8 @@ Index of the selected item in the range. The index is zero-based. (For a multi-c
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextPickerResult-index: number | number[]--><!--Device-TextPickerResult-index: number | number[]-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -51,5 +55,7 @@ The value must be within the range defined by the **range** attribute and cannot
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextPickerResult-value: string | string[]--><!--Device-TextPickerResult-value: string | string[]-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

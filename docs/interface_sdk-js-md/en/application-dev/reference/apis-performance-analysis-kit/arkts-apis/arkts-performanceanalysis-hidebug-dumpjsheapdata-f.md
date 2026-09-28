@@ -21,6 +21,8 @@ Dumps VM heap data.
 
 **Since:** 9
 
+<!--Device-hidebug-function dumpJsHeapData(filename : string) : void--><!--Device-hidebug-function dumpJsHeapData(filename : string) : void-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **Parameters:**
@@ -68,7 +70,9 @@ Dumps VM heap data and clears the nodeId cache.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 24.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 24.
+
+<!--Device-hidebug-function dumpJsHeapData(filename : string, needClean : boolean) : void--><!--Device-hidebug-function dumpJsHeapData(filename : string, needClean : boolean) : void-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 

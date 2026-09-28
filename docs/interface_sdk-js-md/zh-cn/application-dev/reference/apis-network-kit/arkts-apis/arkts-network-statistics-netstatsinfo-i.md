@@ -8,6 +8,8 @@ export interface NetStatsInfo
 
 **起始版本：** 22
 
+<!--Device-statistics-export interface NetStatsInfo--><!--Device-statistics-export interface NetStatsInfo-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ rxBytes: number
 
 **起始版本：** 22
 
+<!--Device-NetStatsInfo-rxBytes: long--><!--Device-NetStatsInfo-rxBytes: long-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## rxPackets
@@ -41,6 +45,8 @@ rxPackets: number
 **类型：** number
 
 **起始版本：** 22
+
+<!--Device-NetStatsInfo-rxPackets: long--><!--Device-NetStatsInfo-rxPackets: long-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -56,6 +62,8 @@ txBytes: number
 
 **起始版本：** 22
 
+<!--Device-NetStatsInfo-txBytes: long--><!--Device-NetStatsInfo-txBytes: long-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## txPackets
@@ -69,5 +77,7 @@ txPackets: number
 **类型：** number
 
 **起始版本：** 22
+
+<!--Device-NetStatsInfo-txPackets: long--><!--Device-NetStatsInfo-txPackets: long-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core

@@ -16,6 +16,8 @@ function getMouseScrollRows(callback: AsyncCallback<number>): void
 
 **起始版本：** 10
 
+<!--Device-pointer-function getMouseScrollRows(callback: AsyncCallback<int>): void--><!--Device-pointer-function getMouseScrollRows(callback: AsyncCallback<int>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 **系统接口：** 此接口为系统接口。
@@ -76,6 +78,8 @@ function getMouseScrollRows(): Promise<number>
 获取当前鼠标滚动行数，使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-pointer-function getMouseScrollRows(): Promise<int>--><!--Device-pointer-function getMouseScrollRows(): Promise<int>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 

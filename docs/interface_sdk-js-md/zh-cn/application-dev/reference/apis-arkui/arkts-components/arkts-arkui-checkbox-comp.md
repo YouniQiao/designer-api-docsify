@@ -26,6 +26,8 @@ Checkbox(options?: CheckboxOptions)
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-CheckboxInterface-(options?: CheckboxOptions): CheckboxAttribute--><!--Device-CheckboxInterface-(options?: CheckboxOptions): CheckboxAttribute-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数:**

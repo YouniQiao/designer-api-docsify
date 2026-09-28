@@ -8,6 +8,8 @@ interface InsightIntentInfo
 
 **起始版本：** 20
 
+<!--Device-insightIntentDriver-interface InsightIntentInfo--><!--Device-insightIntentDriver-interface InsightIntentInfo-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ readonly bundleName: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-InsightIntentInfo-readonly bundleName: string--><!--Device-InsightIntentInfo-readonly bundleName: string-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ readonly developType?: DevelopType
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-InsightIntentInfo-readonly developType?: DevelopType--><!--Device-InsightIntentInfo-readonly developType?: DevelopType-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -68,6 +74,8 @@ readonly displayDescription: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-InsightIntentInfo-readonly displayDescription: string--><!--Device-InsightIntentInfo-readonly displayDescription: string-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -85,6 +93,8 @@ readonly displayName: string
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-InsightIntentInfo-readonly displayName: string--><!--Device-InsightIntentInfo-readonly displayName: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -104,6 +114,8 @@ readonly domain: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-InsightIntentInfo-readonly domain: string--><!--Device-InsightIntentInfo-readonly domain: string-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -121,6 +133,8 @@ readonly entities: Array<EntityInfo>
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-InsightIntentInfo-readonly entities: Array<EntityInfo>--><!--Device-InsightIntentInfo-readonly entities: Array<EntityInfo>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -140,6 +154,8 @@ readonly icon: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-InsightIntentInfo-readonly icon: string--><!--Device-InsightIntentInfo-readonly icon: string-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -157,6 +173,8 @@ readonly intentName: string
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-InsightIntentInfo-readonly intentName: string--><!--Device-InsightIntentInfo-readonly intentName: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -180,6 +198,8 @@ readonly intentType: InsightIntentType
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-InsightIntentInfo-readonly intentType: InsightIntentType--><!--Device-InsightIntentInfo-readonly intentType: InsightIntentType-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -197,6 +217,8 @@ readonly intentVersion: string
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-InsightIntentInfo-readonly intentVersion: string--><!--Device-InsightIntentInfo-readonly intentVersion: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -216,6 +238,8 @@ readonly keywords: string[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-InsightIntentInfo-readonly keywords: string[]--><!--Device-InsightIntentInfo-readonly keywords: string[]-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -233,6 +257,8 @@ readonly llmDescription: string
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-InsightIntentInfo-readonly llmDescription: string--><!--Device-InsightIntentInfo-readonly llmDescription: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -252,6 +278,8 @@ readonly moduleName: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-InsightIntentInfo-readonly moduleName: string--><!--Device-InsightIntentInfo-readonly moduleName: string-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -269,6 +297,8 @@ readonly parameters: Record<string, Object>
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-InsightIntentInfo-readonly parameters: Record<string, Object>--><!--Device-InsightIntentInfo-readonly parameters: Record<string, Object>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -288,6 +318,8 @@ readonly result: Record<string, Object>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-InsightIntentInfo-readonly result: Record<string, Object>--><!--Device-InsightIntentInfo-readonly result: Record<string, Object>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -305,6 +337,8 @@ readonly schema: string
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-InsightIntentInfo-readonly schema: string--><!--Device-InsightIntentInfo-readonly schema: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -328,6 +362,8 @@ readonly subIntentInfo: LinkIntentInfo | PageIntentInfo | FunctionIntentInfo | F
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-InsightIntentInfo-readonly subIntentInfo: LinkIntentInfo | PageIntentInfo | FunctionIntentInfo | FormIntentInfo | EntryIntentInfo--><!--Device-InsightIntentInfo-readonly subIntentInfo: LinkIntentInfo | PageIntentInfo | FunctionIntentInfo | FormIntentInfo | EntryIntentInfo-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -345,6 +381,8 @@ readonly subIntentInfoForConfiguration?: SubIntentInfoForConfiguration
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-InsightIntentInfo-readonly subIntentInfoForConfiguration?: SubIntentInfoForConfiguration--><!--Device-InsightIntentInfo-readonly subIntentInfoForConfiguration?: SubIntentInfoForConfiguration-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

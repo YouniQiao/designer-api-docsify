@@ -8,6 +8,8 @@ enum InterruptHint
 
 **起始版本：** 7
 
+<!--Device-audio-enum InterruptHint--><!--Device-audio-enum InterruptHint-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 ## INTERRUPT_HINT_NONE
@@ -20,7 +22,9 @@ INTERRUPT_HINT_NONE = 0
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-InterruptHint-INTERRUPT_HINT_NONE = 0--><!--Device-InterruptHint-INTERRUPT_HINT_NONE = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -36,7 +40,9 @@ INTERRUPT_HINT_RESUME = 1
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-InterruptHint-INTERRUPT_HINT_RESUME = 1--><!--Device-InterruptHint-INTERRUPT_HINT_RESUME = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -52,7 +58,9 @@ INTERRUPT_HINT_PAUSE = 2
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-InterruptHint-INTERRUPT_HINT_PAUSE = 2--><!--Device-InterruptHint-INTERRUPT_HINT_PAUSE = 2-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -66,7 +74,9 @@ INTERRUPT_HINT_STOP = 3
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-InterruptHint-INTERRUPT_HINT_STOP = 3--><!--Device-InterruptHint-INTERRUPT_HINT_STOP = 3-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -80,7 +90,9 @@ INTERRUPT_HINT_DUCK = 4
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-InterruptHint-INTERRUPT_HINT_DUCK = 4--><!--Device-InterruptHint-INTERRUPT_HINT_DUCK = 4-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -94,7 +106,9 @@ INTERRUPT_HINT_UNDUCK = 5
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-InterruptHint-INTERRUPT_HINT_UNDUCK = 5--><!--Device-InterruptHint-INTERRUPT_HINT_UNDUCK = 5-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -108,6 +122,8 @@ INTERRUPT_HINT_MUTE = 6
 
 **起始版本：** 20
 
+<!--Device-InterruptHint-INTERRUPT_HINT_MUTE = 6--><!--Device-InterruptHint-INTERRUPT_HINT_MUTE = 6-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 ## INTERRUPT_HINT_UNMUTE
@@ -119,5 +135,7 @@ INTERRUPT_HINT_UNMUTE = 7
 提示音频解除静音。
 
 **起始版本：** 20
+
+<!--Device-InterruptHint-INTERRUPT_HINT_UNMUTE = 7--><!--Device-InterruptHint-INTERRUPT_HINT_UNMUTE = 7-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer

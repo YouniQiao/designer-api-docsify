@@ -20,6 +20,8 @@ function setNetworkInterfaceDisabledSync(admin: Want, networkInterface: string, 
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-networkManager-function setNetworkInterfaceDisabledSync(admin: Want, networkInterface: string, isDisabled: boolean): void--><!--Device-networkManager-function setNetworkInterfaceDisabledSync(admin: Want, networkInterface: string, isDisabled: boolean): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**

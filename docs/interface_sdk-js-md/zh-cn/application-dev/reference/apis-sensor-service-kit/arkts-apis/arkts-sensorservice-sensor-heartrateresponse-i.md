@@ -10,6 +10,8 @@ interface HeartRateResponse extends Response
 
 **起始版本：** 8
 
+<!--Device-sensor-interface HeartRateResponse extends Response--><!--Device-sensor-interface HeartRateResponse extends Response-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## 导入模块
@@ -29,5 +31,7 @@ heartRate: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-HeartRateResponse-heartRate: double--><!--Device-HeartRateResponse-heartRate: double-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor

@@ -10,6 +10,8 @@ class RemoteObject extends IRemoteObject
 
 **起始版本：** 7
 
+<!--Device-rpc-class RemoteObject extends IRemoteObject--><!--Device-rpc-class RemoteObject extends IRemoteObject-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 ## 导入模块
@@ -27,6 +29,8 @@ constructor(descriptor: string)
 RemoteObject构造函数。
 
 **起始版本：** 7
+
+<!--Device-RemoteObject-constructor(descriptor: string)--><!--Device-RemoteObject-constructor(descriptor: string)-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -57,6 +61,8 @@ getCallingPid(): number
 获取通信对端的进程Pid。
 
 **起始版本：** 7
+
+<!--Device-RemoteObject-getCallingPid(): int--><!--Device-RemoteObject-getCallingPid(): int-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -100,6 +106,8 @@ getCallingUid(): number
 
 **起始版本：** 7
 
+<!--Device-RemoteObject-getCallingUid(): int--><!--Device-RemoteObject-getCallingUid(): int-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -141,6 +149,8 @@ getDescriptor(): string
 获取对象的接口描述符。接口描述符为字符串。
 
 **起始版本：** 9
+
+<!--Device-RemoteObject-getDescriptor(): string--><!--Device-RemoteObject-getDescriptor(): string-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -193,6 +203,8 @@ getLocalInterface(descriptor: string): IRemoteBroker
 查询接口描述符的字符串。
 
 **起始版本：** 9
+
+<!--Device-RemoteObject-getLocalInterface(descriptor: string): IRemoteBroker--><!--Device-RemoteObject-getLocalInterface(descriptor: string): IRemoteBroker-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -250,6 +262,8 @@ modifyLocalInterface(localInterface: IRemoteBroker, descriptor: string): void
 此接口用于把接口描述符和IRemoteBroker对象绑定。
 
 **起始版本：** 9
+
+<!--Device-RemoteObject-modifyLocalInterface(localInterface: IRemoteBroker, descriptor: string): void--><!--Device-RemoteObject-modifyLocalInterface(localInterface: IRemoteBroker, descriptor: string): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -314,7 +328,9 @@ Sets an entry for receiving requests. <p>This method is implemented by the remot
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-RemoteObject-onRemoteMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption    ): boolean | Promise<boolean>--><!--Device-RemoteObject-onRemoteMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption    ): boolean | Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -437,6 +453,8 @@ Sets an entry for receiving requests. <p>This method is implemented by the remot
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-RemoteObject-onRemoteMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption,      callingInfo?: CallingInfo    ): boolean | Promise<boolean>--><!--Device-RemoteObject-onRemoteMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption,      callingInfo?: CallingInfo    ): boolean | Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -557,6 +575,8 @@ Sends a [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) message to the pee
 
 **起始版本：** 9
 
+<!--Device-RemoteObject-sendMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption    ): Promise<RequestResult>--><!--Device-RemoteObject-sendMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption    ): Promise<RequestResult>-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -644,6 +664,8 @@ Sends a [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) message to the pee
 
 **起始版本：** 9
 
+<!--Device-RemoteObject-sendMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption,      callback: AsyncCallback<RequestResult>    ): void--><!--Device-RemoteObject-sendMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption,      callback: AsyncCallback<RequestResult>    ): void-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -722,6 +744,8 @@ attachLocalInterface(localInterface: IRemoteBroker, descriptor: string): void
 
 **替代接口：** [modifyLocalInterface](#modifylocalinterface)(localInterface: IRemoteBroker, descriptor: string)
 
+<!--Device-RemoteObject-attachLocalInterface(localInterface: IRemoteBroker, descriptor: string): void--><!--Device-RemoteObject-attachLocalInterface(localInterface: IRemoteBroker, descriptor: string): void-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -773,6 +797,8 @@ getInterfaceDescriptor(): string
 
 **替代接口：** [getDescriptor](arkts-ipc-rpc-iremoteobject-c.md#getdescriptor)()
 
+<!--Device-RemoteObject-getInterfaceDescriptor(): string--><!--Device-RemoteObject-getInterfaceDescriptor(): string-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **返回值：**
@@ -820,6 +846,8 @@ sendRequest请求的响应处理函数，服务端在该函数里处理请求，
 **废弃版本：** 9
 
 **替代接口：** [onRemoteMessageRequest](#onremotemessagerequest)(code: number, data: MessageSequence, reply: MessageSequence, options: MessageOption)
+
+<!--Device-RemoteObject-onRemoteRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean--><!--Device-RemoteObject-onRemoteRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -874,6 +902,8 @@ queryLocalInterface(descriptor: string): IRemoteBroker
 
 **替代接口：** [getLocalInterface](arkts-ipc-rpc-iremoteobject-c.md#getlocalinterface)(descriptor: string)
 
+<!--Device-RemoteObject-queryLocalInterface(descriptor: string): IRemoteBroker--><!--Device-RemoteObject-queryLocalInterface(descriptor: string): IRemoteBroker-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -925,6 +955,8 @@ sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: Me
 **废弃版本：** 8
 
 **替代接口：** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)(code: number, data: MessageSequence, reply: MessageSequence, options: MessageOption)
+
+<!--Device-RemoteObject-sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean--><!--Device-RemoteObject-sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -997,6 +1029,8 @@ sendRequest(
 **废弃版本：** 9
 
 **替代接口：** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)(code: number, data: MessageSequence, reply: MessageSequence, options: MessageOption)
+
+<!--Device-RemoteObject-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption    ): Promise<SendRequestResult>--><!--Device-RemoteObject-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption    ): Promise<SendRequestResult>-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -1080,6 +1114,8 @@ sendRequest(
 **废弃版本：** 9
 
 **替代接口：** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)(code: number, data: MessageSequence, reply: MessageSequence, options: MessageOption, callback: AsyncCallback&lt;RequestResult&gt;)
+
+<!--Device-RemoteObject-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption,      callback: AsyncCallback<SendRequestResult>    ): void--><!--Device-RemoteObject-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption,      callback: AsyncCallback<SendRequestResult>    ): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 

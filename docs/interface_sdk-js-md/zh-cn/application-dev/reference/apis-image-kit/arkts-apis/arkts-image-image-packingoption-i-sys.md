@@ -8,6 +8,8 @@ interface PackingOption
 
 **起始版本：** 6
 
+<!--Device-image-interface PackingOption--><!--Device-image-interface PackingOption-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
 ## 导入模块
@@ -29,6 +31,8 @@ c2paDataSize?: number
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PackingOption-c2paDataSize?: int--><!--Device-PackingOption-c2paDataSize?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 

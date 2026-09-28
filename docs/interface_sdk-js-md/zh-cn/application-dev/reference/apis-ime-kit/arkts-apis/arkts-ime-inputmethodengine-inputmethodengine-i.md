@@ -16,6 +16,8 @@ interface InputMethodEngine
 
 **替代接口：** [InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md)
 
+<!--Device-inputMethodEngine-interface InputMethodEngine--><!--Device-inputMethodEngine-interface InputMethodEngine-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## 导入模块
@@ -43,6 +45,8 @@ off(
 **废弃版本：** 23
 
 **替代接口：** [off](arkts-ime-inputmethodengine-inputmethodability-i.md#offinputstart)(type: 'inputStart', callback?: (kbController: KeyboardController, inputClient: InputClient) =&gt; void)
+
+<!--Device-InputMethodEngine-off(      type: 'inputStart',      callback?: (kbController: KeyboardController, textInputClient: TextInputClient) => void    ): void--><!--Device-InputMethodEngine-off(      type: 'inputStart',      callback?: (kbController: KeyboardController, textInputClient: TextInputClient) => void    ): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -80,6 +84,8 @@ off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
 
 **替代接口：** off(type: 'keyboardShow' | 'keyboardHide', callback?: () =&gt; void)
 
+<!--Device-InputMethodEngine-off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void--><!--Device-InputMethodEngine-off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -116,6 +122,8 @@ on(
 
 **替代接口：** [on](arkts-ime-inputmethodengine-inputmethodability-i.md#oninputstart)(type: 'inputStart', callback: (kbController: KeyboardController, inputClient: InputClient) =&gt; void)
 
+<!--Device-InputMethodEngine-on(      type: 'inputStart',      callback: (kbController: KeyboardController, textInputClient: TextInputClient) => void    ): void--><!--Device-InputMethodEngine-on(      type: 'inputStart',      callback: (kbController: KeyboardController, textInputClient: TextInputClient) => void    ): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -151,6 +159,8 @@ on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void
 **废弃版本：** 23
 
 **替代接口：** on(type: 'keyboardShow' | 'keyboardHide', callback: () =&gt; void)
+
+<!--Device-InputMethodEngine-on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void--><!--Device-InputMethodEngine-on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 

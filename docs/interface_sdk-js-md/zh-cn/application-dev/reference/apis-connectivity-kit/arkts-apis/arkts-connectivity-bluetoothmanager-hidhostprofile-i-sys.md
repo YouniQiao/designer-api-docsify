@@ -14,6 +14,8 @@ interface HidHostProfile extends BaseProfile
 
 **替代接口：** [HidHostProfile](arkts-connectivity-hid-hidhostprofile-i-sys.md)
 
+<!--Device-bluetoothManager-interface HidHostProfile extends BaseProfile--><!--Device-bluetoothManager-interface HidHostProfile extends BaseProfile-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -37,6 +39,8 @@ connect(device: string): void
 **需要权限：** 
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 - API版本9：ohos.permission.DISCOVER_BLUETOOTH
+
+<!--Device-HidHostProfile-connect(device: string): void--><!--Device-HidHostProfile-connect(device: string): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -76,6 +80,8 @@ disconnect(device: string): void
 **需要权限：** 
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 - API版本9：ohos.permission.DISCOVER_BLUETOOTH
+
+<!--Device-HidHostProfile-disconnect(device: string): void--><!--Device-HidHostProfile-disconnect(device: string): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

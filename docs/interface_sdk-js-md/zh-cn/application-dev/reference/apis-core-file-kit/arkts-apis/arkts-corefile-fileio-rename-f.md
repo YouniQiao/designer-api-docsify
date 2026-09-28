@@ -19,6 +19,8 @@ declare function rename(oldPath: string, newPath: string): Promise<void>
 
 **替代接口：** [rename](arkts-corefile-file-fs-rename-f.md)
 
+<!--Device-unnamed-declare function rename(oldPath: string, newPath: string): Promise<void>--><!--Device-unnamed-declare function rename(oldPath: string, newPath: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -50,6 +52,8 @@ declare function rename(oldPath: string, newPath: string, callback: AsyncCallbac
 **废弃版本：** 9
 
 **替代接口：** [rename](arkts-corefile-file-fs-rename-f.md)
+
+<!--Device-unnamed-declare function rename(oldPath: string, newPath: string, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function rename(oldPath: string, newPath: string, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

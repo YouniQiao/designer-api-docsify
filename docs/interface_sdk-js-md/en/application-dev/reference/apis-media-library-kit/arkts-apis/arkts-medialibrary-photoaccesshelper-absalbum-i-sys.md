@@ -8,6 +8,8 @@ Defines the abstract interface of albums.
 
 **Since:** 10
 
+<!--Device-photoAccessHelper-interface AbsAlbum--><!--Device-photoAccessHelper-interface AbsAlbum-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
@@ -27,6 +29,8 @@ Fetch shared photo assets in an album.
 **Since:** 13
 
 **Required permissions:** ohos.permission.ACCESS_MEDIALIB_THUMB_DB
+
+<!--Device-AbsAlbum-getSharedPhotoAssets(options: FetchOptions): Array<SharedPhotoAsset>--><!--Device-AbsAlbum-getSharedPhotoAssets(options: FetchOptions): Array<SharedPhotoAsset>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -65,6 +69,8 @@ Source URI of the album cover.<br>
 
 **Since:** 20
 
+<!--Device-AbsAlbum-readonly coverUriSource?: CoverUriSource--><!--Device-AbsAlbum-readonly coverUriSource?: CoverUriSource-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -83,6 +89,8 @@ Whether the album is hidden. **true** if hidden, **false** otherwise.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AbsAlbum-readonly hidden?: boolean--><!--Device-AbsAlbum-readonly hidden?: boolean-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -98,6 +106,8 @@ Whether the album can be synced to cloud storage or family storage. **true** if 
 **Type:** boolean
 
 **Since:** 22
+
+<!--Device-AbsAlbum-readonly uploadStatus: boolean--><!--Device-AbsAlbum-readonly uploadStatus: boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

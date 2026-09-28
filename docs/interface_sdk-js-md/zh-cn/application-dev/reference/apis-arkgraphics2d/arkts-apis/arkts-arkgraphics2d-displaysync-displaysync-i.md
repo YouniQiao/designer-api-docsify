@@ -8,6 +8,8 @@ interface DisplaySync
 
 **起始版本：** 11
 
+<!--Device-displaySync-interface DisplaySync--><!--Device-displaySync-interface DisplaySync-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -27,6 +29,8 @@ off(type: 'frame', callback?: Callback<IntervalInfo>): void
 **起始版本：** 11
 
 **原子化服务API：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-DisplaySync-off(type: 'frame', callback?: Callback<IntervalInfo>): void--><!--Device-DisplaySync-off(type: 'frame', callback?: Callback<IntervalInfo>): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,6 +68,8 @@ on(type: 'frame', callback: Callback<IntervalInfo>): void
 
 **原子化服务API：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-DisplaySync-on(type: 'frame', callback: Callback<IntervalInfo>): void--><!--Device-DisplaySync-on(type: 'frame', callback: Callback<IntervalInfo>): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -98,7 +104,9 @@ setExpectedFrameRateRange(rateRange: ExpectedFrameRateRange) : void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-DisplaySync-setExpectedFrameRateRange(rateRange: ExpectedFrameRateRange) : void--><!--Device-DisplaySync-setExpectedFrameRateRange(rateRange: ExpectedFrameRateRange) : void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -141,7 +149,9 @@ start(): void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-DisplaySync-start(): void--><!--Device-DisplaySync-start(): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -209,7 +219,9 @@ stop(): void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-DisplaySync-stop(): void--><!--Device-DisplaySync-stop(): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

@@ -16,6 +16,8 @@ function getCameraTrackingEnabled(): boolean
 
 **起始版本：** 20
 
+<!--Device-mechanicManager-function getCameraTrackingEnabled(): boolean--><!--Device-mechanicManager-function getCameraTrackingEnabled(): boolean-End-->
+
 **系统能力：** SystemCapability.Mechanic.Core
 
 **返回值：**

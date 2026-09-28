@@ -20,6 +20,8 @@ function getInputMethodController(): InputMethodController
 
 **替代接口：** [getController](arkts-ime-inputmethod-getcontroller-f.md)
 
+<!--Device-inputMethod-function getInputMethodController(): InputMethodController--><!--Device-inputMethod-function getInputMethodController(): InputMethodController-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**

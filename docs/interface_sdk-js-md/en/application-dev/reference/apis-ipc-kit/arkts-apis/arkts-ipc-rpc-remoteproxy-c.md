@@ -10,6 +10,8 @@ Provides APIs to implement **IRemoteObject**.
 
 **Since:** 7
 
+<!--Device-rpc-class RemoteProxy extends IRemoteObject--><!--Device-rpc-class RemoteProxy extends IRemoteObject-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 ## Modules to Import
@@ -27,6 +29,8 @@ getDescriptor(): string
 Obtains the interface descriptor (which is a string) of this object.
 
 **Since:** 9
+
+<!--Device-RemoteProxy-getDescriptor(): string--><!--Device-RemoteProxy-getDescriptor(): string-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -112,6 +116,8 @@ getLocalInterface(interfaceDes: string): IRemoteBroker
 Obtains the **LocalInterface** object of an interface token.
 
 **Since:** 9
+
+<!--Device-RemoteProxy-getLocalInterface(interfaceDes: string): IRemoteBroker--><!--Device-RemoteProxy-getLocalInterface(interfaceDes: string): IRemoteBroker-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -204,6 +210,8 @@ Checks whether the **RemoteObject** is dead.
 
 **Since:** 7
 
+<!--Device-RemoteProxy-isObjectDead(): boolean--><!--Device-RemoteProxy-isObjectDead(): boolean-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -274,6 +282,8 @@ registerDeathRecipient(recipient: DeathRecipient, flags: number): void
 Registers a callback for receiving death notifications of the remote object.
 
 **Since:** 9
+
+<!--Device-RemoteProxy-registerDeathRecipient(recipient: DeathRecipient, flags: int): void--><!--Device-RemoteProxy-registerDeathRecipient(recipient: DeathRecipient, flags: int): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -370,6 +380,8 @@ sendMessageRequest(
 Sends a **MessageSequence** message to the remote process in synchronous or asynchronous mode. If the asynchronous mode is set in **options**, the response result is returned immediately and **reply** is empty. The specific response needs to be obtained from the callback on the service side. If the synchronous mode is set in **options**, the response result is returned when **sendMessageRequest** returns, and **reply** contains the response content. This API returns the result asynchronously through a promise.
 
 **Since:** 9
+
+<!--Device-RemoteProxy-sendMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption    ): Promise<RequestResult>--><!--Device-RemoteProxy-sendMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption    ): Promise<RequestResult>-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -490,6 +502,8 @@ Sends a **MessageSequence** message to the remote process in synchronous or asyn
 
 **Since:** 9
 
+<!--Device-RemoteProxy-sendMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption,      callback: AsyncCallback<RequestResult>    ): void--><!--Device-RemoteProxy-sendMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption,      callback: AsyncCallback<RequestResult>    ): void-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
@@ -596,6 +610,8 @@ Unregisters from the callback used to receive death notifications of the remote 
 
 **Since:** 9
 
+<!--Device-RemoteProxy-unregisterDeathRecipient(recipient: DeathRecipient, flags: int): void--><!--Device-RemoteProxy-unregisterDeathRecipient(recipient: DeathRecipient, flags: int): void-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
@@ -692,6 +708,8 @@ Adds a callback for receiving death notifications of the remote object.
 
 **Substitutes:** [registerDeathRecipient](arkts-ipc-rpc-iremoteobject-c.md#registerdeathrecipient)(recipient: DeathRecipient, flags: number)
 
+<!--Device-RemoteProxy-addDeathRecipient(recipient: DeathRecipient, flags: number): boolean--><!--Device-RemoteProxy-addDeathRecipient(recipient: DeathRecipient, flags: number): boolean-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
@@ -779,6 +797,8 @@ Obtains the interface descriptor of this proxy object.
 
 **Substitutes:** [getDescriptor](arkts-ipc-rpc-iremoteobject-c.md#getdescriptor)()
 
+<!--Device-RemoteProxy-getInterfaceDescriptor(): string--><!--Device-RemoteProxy-getInterfaceDescriptor(): string-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -853,6 +873,8 @@ Obtains the **LocalInterface** object of an interface token.
 **Deprecated since:** 9
 
 **Substitutes:** [getLocalInterface](arkts-ipc-rpc-iremoteobject-c.md#getlocalinterface)(descriptor: string)
+
+<!--Device-RemoteProxy-queryLocalInterface(interface: string): IRemoteBroker--><!--Device-RemoteProxy-queryLocalInterface(interface: string): IRemoteBroker-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -934,6 +956,8 @@ Removes the callback used to receive death notifications of the remote object.
 **Deprecated since:** 9
 
 **Substitutes:** [unregisterDeathRecipient](arkts-ipc-rpc-iremoteobject-c.md#unregisterdeathrecipient)(recipient: DeathRecipient, flags: number)
+
+<!--Device-RemoteProxy-removeDeathRecipient(recipient: DeathRecipient, flags: number): boolean--><!--Device-RemoteProxy-removeDeathRecipient(recipient: DeathRecipient, flags: number): boolean-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -1022,6 +1046,8 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 **Deprecated since:** 8
 
 **Substitutes:** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)(code: number, data: MessageSequence, reply: MessageSequence, options: MessageOption)
+
+<!--Device-RemoteProxy-sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean--><!--Device-RemoteProxy-sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -1131,6 +1157,8 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 **Deprecated since:** 9
 
 **Substitutes:** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)(code: number, data: MessageSequence, reply: MessageSequence, options: MessageOption)
+
+<!--Device-RemoteProxy-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption    ): Promise<SendRequestResult>--><!--Device-RemoteProxy-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption    ): Promise<SendRequestResult>-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -1249,6 +1277,8 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 **Deprecated since:** 9
 
 **Substitutes:** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)(code: number, data: MessageSequence, reply: MessageSequence, options: MessageOption, callback: AsyncCallback&lt;RequestResult&gt;)
+
+<!--Device-RemoteProxy-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption,      callback: AsyncCallback<SendRequestResult>    ): void--><!--Device-RemoteProxy-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption,      callback: AsyncCallback<SendRequestResult>    ): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -1385,6 +1415,8 @@ Internal instruction code used to obtain IPC service status information.
 
 **Since:** 7
 
+<!--Device-RemoteProxy-static readonly DUMP_TRANSACTION: number--><!--Device-RemoteProxy-static readonly DUMP_TRANSACTION: number-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 ## INTERFACE_TRANSACTION
@@ -1400,6 +1432,8 @@ Internal instruction code used to obtain the remote interface token.
 **Default:** 1598968902
 
 **Since:** 7
+
+<!--Device-RemoteProxy-static readonly INTERFACE_TRANSACTION: number--><!--Device-RemoteProxy-static readonly INTERFACE_TRANSACTION: number-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -1417,6 +1451,8 @@ Maximum valid instruction code.
 
 **Since:** 7
 
+<!--Device-RemoteProxy-static readonly MAX_TRANSACTION_ID: number--><!--Device-RemoteProxy-static readonly MAX_TRANSACTION_ID: number-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 ## MIN_TRANSACTION_ID
@@ -1433,6 +1469,8 @@ Minimum valid instruction code.
 
 **Since:** 7
 
+<!--Device-RemoteProxy-static readonly MIN_TRANSACTION_ID: number--><!--Device-RemoteProxy-static readonly MIN_TRANSACTION_ID: number-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 ## PING_TRANSACTION
@@ -1448,6 +1486,8 @@ Internal instruction code used to test whether the IPC service is normal.
 **Default:** 1599098439
 
 **Since:** 7
+
+<!--Device-RemoteProxy-static readonly PING_TRANSACTION: number--><!--Device-RemoteProxy-static readonly PING_TRANSACTION: number-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 

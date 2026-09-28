@@ -20,6 +20,8 @@ function subscribeThermalLevel(callback: AsyncCallback<ThermalLevel>): void
 
 **替代接口：** [registerThermalLevelCallback](arkts-basicservices-thermal-registerthermallevelcallback-f.md)
 
+<!--Device-thermal-function subscribeThermalLevel(callback: AsyncCallback<ThermalLevel>): void--><!--Device-thermal-function subscribeThermalLevel(callback: AsyncCallback<ThermalLevel>): void-End-->
+
 **系统能力：** SystemCapability.PowerManager.ThermalManager
 
 **参数：**

@@ -12,6 +12,8 @@ This API inherits from [CommonOptions](arkts-arkui-arkui-advanced-datepickercomp
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export declare class DateOptions extends CommonOptions--><!--Device-unnamed-export declare class DateOptions extends CommonOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -49,6 +51,8 @@ This attribute takes effect only in the simplified Chinese and traditional Chine
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-DateOptions-lunar?: boolean--><!--Device-DateOptions-lunar?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## mode
@@ -70,5 +74,7 @@ Default value: DateMode.DATE
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-DateOptions-mode?: DateMode--><!--Device-DateOptions-mode?: DateMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

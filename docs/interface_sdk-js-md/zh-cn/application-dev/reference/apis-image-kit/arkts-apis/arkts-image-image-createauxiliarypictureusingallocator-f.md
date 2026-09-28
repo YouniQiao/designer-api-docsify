@@ -25,6 +25,8 @@ function createAuxiliaryPictureUsingAllocator(auxiliaryPictureInfo: AuxiliaryPic
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-image-function createAuxiliaryPictureUsingAllocator(auxiliaryPictureInfo: AuxiliaryPictureInfo,    allocatorType?: AllocatorType, pixels?: ArrayBuffer): AuxiliaryPicture--><!--Device-image-function createAuxiliaryPictureUsingAllocator(auxiliaryPictureInfo: AuxiliaryPictureInfo,    allocatorType?: AllocatorType, pixels?: ArrayBuffer): AuxiliaryPicture-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**

@@ -8,6 +8,8 @@ Sets a graphics mask, which supports multiple shapes such as rectangles, rounded
 
 **Since:** 12
 
+<!--Device-unnamed-export declare class ShapeMask--><!--Device-unnamed-export declare class ShapeMask-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
@@ -24,6 +26,8 @@ A constructor used to create a **ShapeMask** instance.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ShapeMask-constructor()--><!--Device-ShapeMask-constructor()-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## setCircleShape
@@ -39,6 +43,8 @@ Sets a round mask.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ShapeMask-setCircleShape(circle: Circle): void--><!--Device-ShapeMask-setCircleShape(circle: Circle): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -108,6 +114,8 @@ Sets the command for drawing a path.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ShapeMask-setCommandPath(path: CommandPath): void--><!--Device-ShapeMask-setCommandPath(path: CommandPath): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -179,6 +187,8 @@ Sets an oval mask.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ShapeMask-setOvalShape(oval: Rect): void--><!--Device-ShapeMask-setOvalShape(oval: Rect): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -242,6 +252,8 @@ Sets a rectangle mask.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ShapeMask-setRectShape(rect: Rect): void--><!--Device-ShapeMask-setRectShape(rect: Rect): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -316,6 +328,8 @@ Sets the mask in the shape of a rectangle with rounded corners.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ShapeMask-setRoundRectShape(roundRect: RoundRect): void--><!--Device-ShapeMask-setRoundRectShape(roundRect: RoundRect): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -400,6 +414,8 @@ A color containing only transparency is generated based on the transparency and 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ShapeMask-fillColor: number--><!--Device-ShapeMask-fillColor: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## strokeColor
@@ -426,6 +442,8 @@ A color containing only transparency is generated based on the transparency and 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ShapeMask-strokeColor: number--><!--Device-ShapeMask-strokeColor: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## strokeWidth
@@ -449,5 +467,7 @@ A negative value is treated as the default value.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ShapeMask-strokeWidth: number--><!--Device-ShapeMask-strokeWidth: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

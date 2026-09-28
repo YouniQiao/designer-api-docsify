@@ -16,6 +16,8 @@ NdefTag获取方式请参考[nfc-tag开发指南](../../../connectivity/nfc/nfc-
 
 **起始版本：** 9
 
+<!--Device-unnamed-export interface NdefTag extends TagSession--><!--Device-unnamed-export interface NdefTag extends TagSession-End-->
+
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 ## canSetReadOnly
@@ -30,7 +32,9 @@ canSetReadOnly(): boolean
 
 **需要权限：** ohos.permission.NFC_TAG
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-NdefTag-canSetReadOnly(): boolean--><!--Device-NdefTag-canSetReadOnly(): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -67,7 +71,9 @@ getNdefMessage(): NdefMessage
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-NdefTag-getNdefMessage(): NdefMessage--><!--Device-NdefTag-getNdefMessage(): NdefMessage-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -97,7 +103,9 @@ getNdefTagType(): tag.NfcForumType
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-NdefTag-getNdefTagType(): tag.NfcForumType--><!--Device-NdefTag-getNdefTagType(): tag.NfcForumType-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -127,7 +135,9 @@ getNdefTagTypeString(type: tag.NfcForumType): string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-NdefTag-getNdefTagTypeString(type: tag.NfcForumType): string--><!--Device-NdefTag-getNdefTagTypeString(type: tag.NfcForumType): string-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -175,7 +185,9 @@ isNdefWritable(): boolean
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-NdefTag-isNdefWritable(): boolean--><!--Device-NdefTag-isNdefWritable(): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -207,7 +219,9 @@ readNdef(): Promise<NdefMessage>
 
 **需要权限：** ohos.permission.NFC_TAG
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-NdefTag-readNdef(): Promise<NdefMessage>--><!--Device-NdefTag-readNdef(): Promise<NdefMessage>-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -296,7 +310,9 @@ readNdef(callback: AsyncCallback<NdefMessage>): void
 
 **需要权限：** ohos.permission.NFC_TAG
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-NdefTag-readNdef(callback: AsyncCallback<NdefMessage>): void--><!--Device-NdefTag-readNdef(callback: AsyncCallback<NdefMessage>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -331,7 +347,9 @@ setReadOnly(): Promise<void>
 
 **需要权限：** ohos.permission.NFC_TAG
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-NdefTag-setReadOnly(): Promise<void>--><!--Device-NdefTag-setReadOnly(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -393,7 +411,9 @@ setReadOnly(callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.NFC_TAG
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-NdefTag-setReadOnly(callback: AsyncCallback<void>): void--><!--Device-NdefTag-setReadOnly(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -455,7 +475,9 @@ writeNdef(msg: NdefMessage): Promise<void>
 
 **需要权限：** ohos.permission.NFC_TAG
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-NdefTag-writeNdef(msg: NdefMessage): Promise<void>--><!--Device-NdefTag-writeNdef(msg: NdefMessage): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -560,7 +582,9 @@ writeNdef(msg: NdefMessage, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.NFC_TAG
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-NdefTag-writeNdef(msg: NdefMessage, callback: AsyncCallback<void>): void--><!--Device-NdefTag-writeNdef(msg: NdefMessage, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 

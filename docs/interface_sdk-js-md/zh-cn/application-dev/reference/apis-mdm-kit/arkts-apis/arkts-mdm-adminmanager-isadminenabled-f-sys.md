@@ -18,6 +18,8 @@ function isAdminEnabled(admin: Want, callback: AsyncCallback<boolean>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-adminManager-function isAdminEnabled(admin: Want, callback: AsyncCallback<boolean>): void--><!--Device-adminManager-function isAdminEnabled(admin: Want, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -71,6 +73,8 @@ function isAdminEnabled(admin: Want, userId: number, callback: AsyncCallback<boo
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-adminManager-function isAdminEnabled(admin: Want, userId: number, callback: AsyncCallback<boolean>): void--><!--Device-adminManager-function isAdminEnabled(admin: Want, userId: number, callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -127,6 +131,8 @@ function isAdminEnabled(admin: Want, userId?: number): Promise<boolean>
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-adminManager-function isAdminEnabled(admin: Want, userId?: number): Promise<boolean>--><!--Device-adminManager-function isAdminEnabled(admin: Want, userId?: number): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

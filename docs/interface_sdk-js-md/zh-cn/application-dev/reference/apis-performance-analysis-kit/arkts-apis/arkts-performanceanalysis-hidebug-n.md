@@ -10,6 +10,8 @@ declare namespace hidebug
 
 **起始版本：** 8
 
+<!--Device-unnamed-declare namespace hidebug--><!--Device-unnamed-declare namespace hidebug-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 ## 导入模块

@@ -8,6 +8,8 @@ export class AdLoader
 
 **起始版本：** 11
 
+<!--Device-advertising-export class AdLoader--><!--Device-advertising-export class AdLoader-End-->
+
 **系统能力：** SystemCapability.Advertising.Ads
 
 ## 导入模块
@@ -27,6 +29,8 @@ constructor(context: common.Context)
 **起始版本：** 11
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AdLoader-constructor(context: common.Context)--><!--Device-AdLoader-constructor(context: common.Context)-End-->
 
 **系统能力：** SystemCapability.Advertising.Ads
 
@@ -61,6 +65,8 @@ loadAd(adParam: AdRequestParams, adOptions: AdOptions, listener: AdLoadListener)
 **起始版本：** 11
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AdLoader-loadAd(adParam: AdRequestParams, adOptions: AdOptions, listener: AdLoadListener): void--><!--Device-AdLoader-loadAd(adParam: AdRequestParams, adOptions: AdOptions, listener: AdLoadListener): void-End-->
 
 **系统能力：** SystemCapability.Advertising.Ads
 
@@ -123,6 +129,8 @@ loadAdWithMultiSlots(adParams: AdRequestParams[], adOptions: AdOptions, listener
 **起始版本：** 11
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AdLoader-loadAdWithMultiSlots(adParams: AdRequestParams[], adOptions: AdOptions, listener: MultiSlotsAdLoadListener): void--><!--Device-AdLoader-loadAdWithMultiSlots(adParams: AdRequestParams[], adOptions: AdOptions, listener: MultiSlotsAdLoadListener): void-End-->
 
 **系统能力：** SystemCapability.Advertising.Ads
 

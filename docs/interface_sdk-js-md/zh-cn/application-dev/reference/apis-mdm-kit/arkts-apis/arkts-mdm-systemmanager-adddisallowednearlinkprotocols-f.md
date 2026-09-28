@@ -20,6 +20,8 @@ function addDisallowedNearLinkProtocols(admin: Want, protocols: Array<NearLinkPr
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-systemManager-function addDisallowedNearLinkProtocols(admin: Want, protocols: Array<NearLinkProtocol>, accountId: number): void--><!--Device-systemManager-function addDisallowedNearLinkProtocols(admin: Want, protocols: Array<NearLinkProtocol>, accountId: number): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**

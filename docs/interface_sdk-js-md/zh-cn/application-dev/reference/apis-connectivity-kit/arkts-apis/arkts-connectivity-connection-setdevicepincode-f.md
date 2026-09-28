@@ -20,6 +20,8 @@ function setDevicePinCode(deviceId: string, code: string, callback: AsyncCallbac
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-connection-function setDevicePinCode(deviceId: string, code: string, callback: AsyncCallback<void>): void--><!--Device-connection-function setDevicePinCode(deviceId: string, code: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -71,6 +73,8 @@ function setDevicePinCode(deviceId: string, code: string): Promise<void>
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-connection-function setDevicePinCode(deviceId: string, code: string): Promise<void>--><!--Device-connection-function setDevicePinCode(deviceId: string, code: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

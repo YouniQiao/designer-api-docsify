@@ -10,6 +10,8 @@ export enum MaterialType
 
 **起始版本：** 12
 
+<!--Device-unnamed-export enum MaterialType--><!--Device-unnamed-export enum MaterialType-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## SHADER
@@ -21,6 +23,8 @@ SHADER = 1
 材质由着色器定义。
 
 **起始版本：** 12
+
+<!--Device-MaterialType-SHADER = 1--><!--Device-MaterialType-SHADER = 1-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -34,6 +38,8 @@ METALLIC_ROUGHNESS = 2
 
 **起始版本：** 20
 
+<!--Device-MaterialType-METALLIC_ROUGHNESS = 2--><!--Device-MaterialType-METALLIC_ROUGHNESS = 2-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## UNLIT
@@ -46,6 +52,8 @@ UNLIT = 3
 
 **起始版本：** 23
 
+<!--Device-MaterialType-UNLIT = 3--><!--Device-MaterialType-UNLIT = 3-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## OCCLUSION
@@ -57,5 +65,7 @@ OCCLUSION = 4
 遮挡材质，能够遮挡场景中的其他物体但不会遮挡环境。
 
 **起始版本：** 23
+
+<!--Device-MaterialType-OCCLUSION = 4--><!--Device-MaterialType-OCCLUSION = 4-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

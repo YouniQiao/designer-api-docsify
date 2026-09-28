@@ -12,6 +12,8 @@ interface AudioLoopback
 
 **起始版本：** 20
 
+<!--Device-audio-interface AudioLoopback--><!--Device-audio-interface AudioLoopback-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 ## 导入模块
@@ -31,6 +33,8 @@ enable(enable: boolean): Promise<boolean>
 **起始版本：** 20
 
 **需要权限：** ohos.permission.MICROPHONE
+
+<!--Device-AudioLoopback-enable(enable: boolean): Promise<boolean>--><!--Device-AudioLoopback-enable(enable: boolean): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -63,6 +67,8 @@ getEqualizerPreset(): AudioLoopbackEqualizerPreset
 
 **起始版本：** 21
 
+<!--Device-AudioLoopback-getEqualizerPreset(): AudioLoopbackEqualizerPreset--><!--Device-AudioLoopback-getEqualizerPreset(): AudioLoopbackEqualizerPreset-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **返回值：**
@@ -83,6 +89,8 @@ getPreferredDevicePair(): AudioDevicePair | null
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioLoopback-getPreferredDevicePair(): AudioDevicePair | null--><!--Device-AudioLoopback-getPreferredDevicePair(): AudioDevicePair | null-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **返回值：**
@@ -101,6 +109,8 @@ getReverbPreset(): AudioLoopbackReverbPreset
 
 **起始版本：** 21
 
+<!--Device-AudioLoopback-getReverbPreset(): AudioLoopbackReverbPreset--><!--Device-AudioLoopback-getReverbPreset(): AudioLoopbackReverbPreset-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **返回值：**
@@ -118,6 +128,8 @@ getStatus(): Promise<AudioLoopbackStatus>
 获取音频返听状态。使用Promise异步回调。
 
 **起始版本：** 20
+
+<!--Device-AudioLoopback-getStatus(): Promise<AudioLoopbackStatus>--><!--Device-AudioLoopback-getStatus(): Promise<AudioLoopbackStatus>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -139,6 +151,8 @@ getSupportedDevicePairs(): Array<AudioDevicePair>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioLoopback-getSupportedDevicePairs(): Array<AudioDevicePair>--><!--Device-AudioLoopback-getSupportedDevicePairs(): Array<AudioDevicePair>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **返回值：**
@@ -159,6 +173,8 @@ getVolume(): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioLoopback-getVolume(): double--><!--Device-AudioLoopback-getVolume(): double-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **返回值：**
@@ -176,6 +192,8 @@ off(type: 'statusChange', callback?: Callback<AudioLoopbackStatus>): void
 取消监听音频返听状态变化事件。
 
 **起始版本：** 20
+
+<!--Device-AudioLoopback-off(type: 'statusChange', callback?: Callback<AudioLoopbackStatus>): void--><!--Device-AudioLoopback-off(type: 'statusChange', callback?: Callback<AudioLoopbackStatus>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -202,6 +220,8 @@ on(type: 'statusChange', callback: Callback<AudioLoopbackStatus>): void
 
 **起始版本：** 20
 
+<!--Device-AudioLoopback-on(type: 'statusChange', callback: Callback<AudioLoopbackStatus>): void--><!--Device-AudioLoopback-on(type: 'statusChange', callback: Callback<AudioLoopbackStatus>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **参数：**
@@ -226,6 +246,8 @@ setEqualizerPreset(preset: AudioLoopbackEqualizerPreset): boolean
 设置音频返听器的均衡器类型。
 
 **起始版本：** 21
+
+<!--Device-AudioLoopback-setEqualizerPreset(preset: AudioLoopbackEqualizerPreset): boolean--><!--Device-AudioLoopback-setEqualizerPreset(preset: AudioLoopbackEqualizerPreset): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -257,6 +279,8 @@ setReverbPreset(preset: AudioLoopbackReverbPreset): boolean
 
 **起始版本：** 21
 
+<!--Device-AudioLoopback-setReverbPreset(preset: AudioLoopbackReverbPreset): boolean--><!--Device-AudioLoopback-setReverbPreset(preset: AudioLoopbackReverbPreset): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **参数：**
@@ -286,6 +310,8 @@ setVolume(volume: number): Promise<void>
 设置音频返听的音量。使用Promise异步回调。
 
 **起始版本：** 20
+
+<!--Device-AudioLoopback-setVolume(volume: double): Promise<void>--><!--Device-AudioLoopback-setVolume(volume: double): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 

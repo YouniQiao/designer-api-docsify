@@ -10,6 +10,8 @@ These parameters are used to control the playback volume, number of loops, and p
 
 **Since:** 10
 
+<!--Device-unnamed-export interface PlayParameters--><!--Device-unnamed-export interface PlayParameters-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 ## leftVolume
@@ -25,6 +27,8 @@ When the volume exceeds the boundary value, the boundary value is automatically 
 **Type:** number
 
 **Since:** 10
+
+<!--Device-PlayParameters-leftVolume?: double--><!--Device-PlayParameters-leftVolume?: double-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -48,6 +52,8 @@ If this parameter is set to a floating-point number, only the integer part is us
 
 **Since:** 10
 
+<!--Device-PlayParameters-loop?: int--><!--Device-PlayParameters-loop?: int-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 ## pitch
@@ -63,6 +69,8 @@ Pitch of the sound. The value ranges from 0.25 to 4.0 with a step size of 0.001.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PlayParameters-pitch?: double--><!--Device-PlayParameters-pitch?: double-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -83,6 +91,8 @@ If this parameter is set to a negative value, it is automatically set to 0. If t
 
 **Since:** 10
 
+<!--Device-PlayParameters-priority?: int--><!--Device-PlayParameters-priority?: int-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 ## rate
@@ -96,6 +106,8 @@ Playback rate. For details, see [AudioRendererRate](../../apis-audio-kit/arkts-a
 **Type:** number
 
 **Since:** 10
+
+<!--Device-PlayParameters-rate?: int--><!--Device-PlayParameters-rate?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -112,5 +124,7 @@ When the volume exceeds the boundary value, the boundary value is automatically 
 **Type:** number
 
 **Since:** 10
+
+<!--Device-PlayParameters-rightVolume?: double--><!--Device-PlayParameters-rightVolume?: double-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool

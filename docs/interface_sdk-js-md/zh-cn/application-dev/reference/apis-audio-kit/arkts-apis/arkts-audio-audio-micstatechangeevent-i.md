@@ -8,6 +8,8 @@ interface MicStateChangeEvent
 
 **起始版本：** 9
 
+<!--Device-audio-interface MicStateChangeEvent--><!--Device-audio-interface MicStateChangeEvent-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 ## 导入模块
@@ -27,5 +29,7 @@ mute: boolean
 **类型：** boolean
 
 **起始版本：** 9
+
+<!--Device-MicStateChangeEvent-mute: boolean--><!--Device-MicStateChangeEvent-mute: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device

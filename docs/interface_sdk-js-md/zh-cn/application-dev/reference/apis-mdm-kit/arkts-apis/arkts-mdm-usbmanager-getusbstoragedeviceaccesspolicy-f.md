@@ -23,6 +23,8 @@ function getUsbStorageDeviceAccessPolicy(admin: Want): UsbPolicy
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-usbManager-function getUsbStorageDeviceAccessPolicy(admin: Want): UsbPolicy--><!--Device-usbManager-function getUsbStorageDeviceAccessPolicy(admin: Want): UsbPolicy-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -81,6 +83,8 @@ function getUsbStorageDeviceAccessPolicy(admin: Want | null): UsbPolicy
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_USB or ohos.permission.PERSONAL_MANAGE_RESTRICTIONS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-usbManager-function getUsbStorageDeviceAccessPolicy(admin: Want | null): UsbPolicy--><!--Device-usbManager-function getUsbStorageDeviceAccessPolicy(admin: Want | null): UsbPolicy-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

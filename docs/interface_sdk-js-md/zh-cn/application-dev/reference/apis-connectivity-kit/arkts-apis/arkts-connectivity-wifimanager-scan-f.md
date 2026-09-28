@@ -22,6 +22,8 @@ function scan(): void
 
 **需要权限：** ohos.permission.SET_WIFI_INFO and ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
+<!--Device-wifiManager-function scan(): void--><!--Device-wifiManager-function scan(): void-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **错误码：**

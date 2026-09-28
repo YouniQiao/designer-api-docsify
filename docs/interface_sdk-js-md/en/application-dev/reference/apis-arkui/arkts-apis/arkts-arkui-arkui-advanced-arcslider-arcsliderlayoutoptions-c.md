@@ -10,6 +10,8 @@ Defines the layout of the arc slider.
 
 **Decorator:** @ObservedV2
 
+<!--Device-unnamed-declare class ArcSliderLayoutOptions--><!--Device-unnamed-declare class ArcSliderLayoutOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## Modules to Import
@@ -29,6 +31,8 @@ A constructor used to create an **ArcSliderLayoutOptions** instance.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcSliderLayoutOptions-constructor(options?: ArcSliderLayoutOptionsConstructorOptions)--><!--Device-ArcSliderLayoutOptions-constructor(options?: ArcSliderLayoutOptionsConstructorOptions)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -60,6 +64,8 @@ Default value: **ArcSliderPosition.RIGHT**
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ArcSliderLayoutOptions-position?: ArcSliderPosition--><!--Device-ArcSliderLayoutOptions-position?: ArcSliderPosition-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## reverse
@@ -83,5 +89,7 @@ Whether the value range of the arc slider is reversed. **false**: top-to-bottom 
 **Decorator:** @Trace
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcSliderLayoutOptions-reverse?: boolean--><!--Device-ArcSliderLayoutOptions-reverse?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle

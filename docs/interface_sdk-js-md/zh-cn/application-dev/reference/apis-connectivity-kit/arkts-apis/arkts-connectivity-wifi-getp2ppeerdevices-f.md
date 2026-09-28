@@ -26,6 +26,8 @@ function getP2pPeerDevices(): Promise<WifiP2pDevice[]>
 
 **需要权限：** ohos.permission.GET_WIFI_INFO and ohos.permission.LOCATION
 
+<!--Device-wifi-function getP2pPeerDevices(): Promise<WifiP2pDevice[]>--><!--Device-wifi-function getP2pPeerDevices(): Promise<WifiP2pDevice[]>-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
 **返回值：**
@@ -74,6 +76,8 @@ function getP2pPeerDevices(callback: AsyncCallback<WifiP2pDevice[]>): void
 **替代接口：** [getP2pPeerDevices](arkts-connectivity-wifimanager-getp2ppeerdevices-f.md)
 
 **需要权限：** ohos.permission.GET_WIFI_INFO and ohos.permission.LOCATION
+
+<!--Device-wifi-function getP2pPeerDevices(callback: AsyncCallback<WifiP2pDevice[]>): void--><!--Device-wifi-function getP2pPeerDevices(callback: AsyncCallback<WifiP2pDevice[]>): void-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 

@@ -18,6 +18,8 @@ function setProxyMode(mode: ProxyMode): Promise<void>
 
 **需要权限：** ohos.permission.CONNECTIVITY_INTERNAL
 
+<!--Device-connection-function setProxyMode(mode: ProxyMode): Promise<void>--><!--Device-connection-function setProxyMode(mode: ProxyMode): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。

@@ -8,6 +8,8 @@ Describes the optional menu type items and their configuration parameters for **
 
 **Since:** 11
 
+<!--Device-unnamed-export interface SelectionMenuOptions--><!--Device-unnamed-export interface SelectionMenuOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -35,6 +37,8 @@ event is the return information.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SelectionMenuOptions-onCopy?: (event?: EditorEventInfo) => void--><!--Device-SelectionMenuOptions-onCopy?: (event?: EditorEventInfo) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,6 +68,8 @@ event is the return information.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SelectionMenuOptions-onCut?: (event?: EditorEventInfo) => void--><!--Device-SelectionMenuOptions-onCut?: (event?: EditorEventInfo) => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -91,6 +97,8 @@ event is the return information.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SelectionMenuOptions-onPaste?: (event?: EditorEventInfo) => void--><!--Device-SelectionMenuOptions-onPaste?: (event?: EditorEventInfo) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -120,6 +128,8 @@ event is the return information.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SelectionMenuOptions-onSelectAll?: (event?: EditorEventInfo) => void--><!--Device-SelectionMenuOptions-onSelectAll?: (event?: EditorEventInfo) => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -144,6 +154,8 @@ System material used for the menu background panel, which implements visual effe
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-SelectionMenuOptions-backgroundSystemMaterial?: uiMaterial.Material--><!--Device-SelectionMenuOptions-backgroundSystemMaterial?: uiMaterial.Material-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## controller
@@ -166,7 +178,7 @@ After tapping the built-in select all option in the custom text selection menu, 
 
 After tapping the built-in paste option in the custom text selection menu, pasting in a blank area or replacing selected text with paste both retain the style of the copied text.
 
-When the copyOptions attribute of the rich text component [RichEditor](../arkts-components/arkts-arkui-richeditor-comp.md#rich_editor) is set to `CopyOptions.None`, the built-in copy and cut functions are not restricted.
+When the copyOptions attribute of the rich text component [RichEditor](../arkts-components/arkts-arkui-richeditor-comp.md) is set to `CopyOptions.None`, the built-in copy and cut functions are not restricted.
 
 **Type:** [RichEditorController](../arkts-components/arkts-arkui-richeditor-comp-richeditorcontroller-c.md)
 
@@ -175,6 +187,8 @@ When the copyOptions attribute of the rich text component [RichEditor](../arkts-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SelectionMenuOptions-controller?: RichEditorController--><!--Device-SelectionMenuOptions-controller?: RichEditorController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -200,6 +214,8 @@ Tapping an edit menu icon does not close the entire menu by default. The app can
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SelectionMenuOptions-editorMenuOptions?: Array<EditorMenuOptions>--><!--Device-SelectionMenuOptions-editorMenuOptions?: Array<EditorMenuOptions>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## expandedMenuOptions
@@ -223,5 +239,7 @@ When controller is empty, the More button is not displayed. If expandedMenuOptio
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SelectionMenuOptions-expandedMenuOptions?: Array<ExpandedMenuOptions>--><!--Device-SelectionMenuOptions-expandedMenuOptions?: Array<ExpandedMenuOptions>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -8,6 +8,8 @@ export interface ContractRequestData
 
 **起始版本：** 20
 
+<!--Device-eSIM-export interface ContractRequestData--><!--Device-eSIM-export interface ContractRequestData-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ nonce: string
 
 **起始版本：** 20
 
+<!--Device-ContractRequestData-nonce: string--><!--Device-ContractRequestData-nonce: string-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -46,6 +50,8 @@ pkid: string
 
 **起始版本：** 20
 
+<!--Device-ContractRequestData-pkid: string--><!--Device-ContractRequestData-pkid: string-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +67,8 @@ publicKey: string
 **类型：** string
 
 **起始版本：** 20
+
+<!--Device-ContractRequestData-publicKey: string--><!--Device-ContractRequestData-publicKey: string-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 

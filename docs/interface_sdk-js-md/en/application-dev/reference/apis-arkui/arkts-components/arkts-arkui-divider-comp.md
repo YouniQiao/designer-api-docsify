@@ -25,6 +25,8 @@ Creates a **Divider** component.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-DividerInterface-(): DividerAttribute--><!--Device-DividerInterface-(): DividerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Summary

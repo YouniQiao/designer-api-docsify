@@ -6,6 +6,8 @@ namespace tags
 
 **起始版本：** 12
 
+<!--Device-hidebug-namespace tags--><!--Device-hidebug-namespace tags-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 ## 导入模块

@@ -8,6 +8,8 @@ interface AudioEffectProperty
 
 **起始版本：** 18
 
+<!--Device-audio-interface AudioEffectProperty--><!--Device-audio-interface AudioEffectProperty-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ category: string
 
 **起始版本：** 18
 
+<!--Device-AudioEffectProperty-category: string--><!--Device-AudioEffectProperty-category: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **系统接口：** 此接口为系统接口。
@@ -46,6 +50,8 @@ flag: EffectFlag
 
 **起始版本：** 18
 
+<!--Device-AudioEffectProperty-flag: EffectFlag--><!--Device-AudioEffectProperty-flag: EffectFlag-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +67,8 @@ name: string
 **类型：** string
 
 **起始版本：** 18
+
+<!--Device-AudioEffectProperty-name: string--><!--Device-AudioEffectProperty-name: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 

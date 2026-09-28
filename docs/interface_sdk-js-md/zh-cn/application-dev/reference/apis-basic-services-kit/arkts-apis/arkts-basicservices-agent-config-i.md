@@ -8,6 +8,8 @@ interface Config
 
 **起始版本：** 10
 
+<!--Device-agent-interface Config--><!--Device-agent-interface Config-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## 导入模块
@@ -31,7 +33,9 @@ action: Action
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Config-action: Action--><!--Device-Config-action: Action-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -50,7 +54,9 @@ begins?: number
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Config-begins?: long--><!--Device-Config-begins?: long-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -67,7 +73,9 @@ data?: string | Array<FormItem>
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Config-data?: string | Array<FormItem>--><!--Device-Config-data?: string | Array<FormItem>-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -83,7 +91,9 @@ description?: string
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Config-description?: string--><!--Device-Config-description?: string-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -102,7 +112,9 @@ ends?: number
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Config-ends?: long--><!--Device-Config-ends?: long-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -119,6 +131,8 @@ extras?: object
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Config-extras?: object--><!--Device-Config-extras?: object-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -137,7 +151,9 @@ gauge?: boolean
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Config-gauge?: boolean--><!--Device-Config-gauge?: boolean-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -158,6 +174,8 @@ headers?: object
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-Config-headers?: object--><!--Device-Config-headers?: object-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## index
@@ -172,7 +190,9 @@ index?: number
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Config-index?: int--><!--Device-Config-index?: int-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -193,7 +213,9 @@ metered?: boolean
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Config-metered?: boolean--><!--Device-Config-metered?: boolean-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -212,7 +234,9 @@ method?: string
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Config-method?: string--><!--Device-Config-method?: string-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -228,6 +252,8 @@ minSpeed?: MinSpeed
 
 **起始版本：** 20
 
+<!--Device-Config-minSpeed?: MinSpeed--><!--Device-Config-minSpeed?: MinSpeed-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## mode
@@ -242,7 +268,9 @@ mode?: Mode
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Config-mode?: Mode--><!--Device-Config-mode?: Mode-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -263,6 +291,8 @@ multipart?: boolean
 
 **起始版本：** 15
 
+<!--Device-Config-multipart?: boolean--><!--Device-Config-multipart?: boolean-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## network
@@ -279,7 +309,9 @@ network?: Network
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Config-network?: Network--><!--Device-Config-network?: Network-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -294,6 +326,8 @@ notification?: Notification
 **类型：** [Notification](arkts-basicservices-agent-notification-i.md)
 
 **起始版本：** 15
+
+<!--Device-Config-notification?: Notification--><!--Device-Config-notification?: Notification-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -316,7 +350,9 @@ overwrite?: boolean
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Config-overwrite?: boolean--><!--Device-Config-overwrite?: boolean-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -335,7 +371,9 @@ precise?: boolean
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Config-precise?: boolean--><!--Device-Config-precise?: boolean-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -350,6 +388,8 @@ priority?: number
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-Config-priority?: int--><!--Device-Config-priority?: int-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -366,6 +406,8 @@ proxy?: string
 **类型：** string
 
 **起始版本：** 12
+
+<!--Device-Config-proxy?: string--><!--Device-Config-proxy?: string-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -384,7 +426,9 @@ redirect?: boolean
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Config-redirect?: boolean--><!--Device-Config-redirect?: boolean-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -403,7 +447,9 @@ retry?: boolean
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Config-retry?: boolean--><!--Device-Config-retry?: boolean-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -422,7 +468,9 @@ roaming?: boolean
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Config-roaming?: boolean--><!--Device-Config-roaming?: boolean-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -449,7 +497,9 @@ internal://cache/path/to/file.txt"。
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Config-saveas?: string--><!--Device-Config-saveas?: string-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -467,6 +517,8 @@ timeout?: Timeout
 
 **起始版本：** 20
 
+<!--Device-Config-timeout?: Timeout--><!--Device-Config-timeout?: Timeout-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## title
@@ -481,7 +533,9 @@ title?: string
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Config-title?: string--><!--Device-Config-title?: string-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -497,7 +551,9 @@ token?: string
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Config-token?: string--><!--Device-Config-token?: string-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -513,6 +569,8 @@ url: string
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Config-url: string--><!--Device-Config-url: string-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent

@@ -18,6 +18,8 @@ function getMacAddress(): Promise<Array<MacAddressInfo>>
 
 **需要权限：** ohos.permission.GET_ETHERNET_LOCAL_MAC
 
+<!--Device-ethernet-function getMacAddress(): Promise<Array<MacAddressInfo>>--><!--Device-ethernet-function getMacAddress(): Promise<Array<MacAddressInfo>>-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
 **返回值：**

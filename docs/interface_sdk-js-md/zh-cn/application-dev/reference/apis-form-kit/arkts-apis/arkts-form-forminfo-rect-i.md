@@ -10,6 +10,8 @@ interface Rect
 
 **起始版本：** 20
 
+<!--Device-formInfo-interface Rect--><!--Device-formInfo-interface Rect-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 ## 导入模块
@@ -30,7 +32,9 @@ height: number
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-Rect-height: double--><!--Device-Rect-height: double-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -46,7 +50,9 @@ left: number
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-Rect-left: double--><!--Device-Rect-left: double-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -62,7 +68,9 @@ top: number
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-Rect-top: double--><!--Device-Rect-top: double-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -78,6 +86,8 @@ width: number
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-Rect-width: double--><!--Device-Rect-width: double-End-->
 
 **系统能力：** SystemCapability.Ability.Form

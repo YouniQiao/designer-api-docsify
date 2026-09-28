@@ -16,6 +16,8 @@ function getQuaternion(rotationVector: Array<number>, callback: AsyncCallback<Ar
 
 **起始版本：** 9
 
+<!--Device-sensor-function getQuaternion(rotationVector: Array<double>, callback: AsyncCallback<Array<double>>): void--><!--Device-sensor-function getQuaternion(rotationVector: Array<double>, callback: AsyncCallback<Array<double>>): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -68,6 +70,8 @@ function getQuaternion(rotationVector: Array<number>): Promise<Array<number>>
 根据旋转向量计算归一化四元数。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-sensor-function getQuaternion(rotationVector: Array<double>): Promise<Array<double>>--><!--Device-sensor-function getQuaternion(rotationVector: Array<double>): Promise<Array<double>>-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 

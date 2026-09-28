@@ -12,6 +12,8 @@ WantAgent模块提供了创建WantAgent实例、获取实例的用户ID、获取
 
 **替代接口：** [wantAgent/wantAgent](arkts-ability-wantagent-n.md)
 
+<!--Device-unnamed-declare namespace wantAgent--><!--Device-unnamed-declare namespace wantAgent-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块
@@ -31,7 +33,7 @@ WantAgent模块提供了创建WantAgent实例、获取实例的用户ID、获取
 | [getUid](arkts-ability-wantagent-getuid-depr-f.md#getuid-1) | 获取WantAgent实例的用户ID。使用Promise异步回调。 |
 | [cancel](arkts-ability-wantagent-cancel-depr-f.md#cancel) | 取消WantAgent实例。使用callback异步回调。 |
 | [cancel](arkts-ability-wantagent-cancel-depr-f.md#cancel-1) | 取消WantAgent实例。使用Promise异步回调。 |
-| [trigger](arkts-ability-wantagent-trigger-depr-f.md#trigger) | 主动激发WantAgent实例。使用callback异步回调。 |
+| [trigger](arkts-ability-wantagent-trigger-depr-f.md) | 主动激发WantAgent实例。使用callback异步回调。 |
 | [equal](arkts-ability-wantagent-equal-depr-f.md#equal) | 判断两个WantAgent实例是否相等，以此来判断是否是来自同一应用的相同操作。使用callback异步回调。 |
 | [equal](arkts-ability-wantagent-equal-depr-f.md#equal-1) | 判断两个WantAgent实例是否相等，以此来判断是否是来自同一应用的相同操作。使用Promise异步回调。 |
 | [getWantAgent](arkts-ability-wantagent-getwantagent-depr-f.md#getwantagent) | 创建WantAgent。创建失败返回的WantAgent为空值。使用callback异步回调。 |

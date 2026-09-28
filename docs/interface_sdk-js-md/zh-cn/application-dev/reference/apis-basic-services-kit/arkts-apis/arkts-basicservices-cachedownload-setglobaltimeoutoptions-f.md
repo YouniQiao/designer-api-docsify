@@ -18,6 +18,8 @@ Sets timeout configuration for all tasks. Used when task-specific timeout config
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-cacheDownload-function setGlobalTimeoutOptions(options?: TimeoutOptions): void--><!--Device-cacheDownload-function setGlobalTimeoutOptions(options?: TimeoutOptions): void-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 **参数：**

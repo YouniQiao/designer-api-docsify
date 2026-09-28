@@ -14,6 +14,8 @@ export interface SubscribeProximityOptions
 
 **替代接口：** [PROXIMITY](arkts-sensorservice-sensor-sensorid-e.md#proximity)
 
+<!--Device-unnamed-export interface SubscribeProximityOptions--><!--Device-unnamed-export interface SubscribeProximityOptions-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
 ## 导入模块
@@ -37,6 +39,8 @@ fail?: (data: string, code: number) => void
 **替代接口：** [on](arkts-sensorservice-sensor-on-f.md)
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-SubscribeProximityOptions-fail?: (data: string, code: number) => void--><!--Device-SubscribeProximityOptions-fail?: (data: string, code: number) => void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
@@ -62,6 +66,8 @@ success: (data: ProximityResponse) => void
 **替代接口：** [on](arkts-sensorservice-sensor-on-f.md)
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-SubscribeProximityOptions-success: (data: ProximityResponse) => void--><!--Device-SubscribeProximityOptions-success: (data: ProximityResponse) => void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 

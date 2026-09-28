@@ -22,6 +22,8 @@ function flushCachedGnssLocations(callback: AsyncCallback<boolean>): void
 
 **需要权限：** ohos.permission.LOCATION
 
+<!--Device-geolocation-function flushCachedGnssLocations(callback: AsyncCallback<boolean>): void--><!--Device-geolocation-function flushCachedGnssLocations(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Location.Location.Gnss
 
 **参数：**
@@ -62,6 +64,8 @@ function flushCachedGnssLocations(): Promise<boolean>
 **替代接口：** [flushCachedGnssLocations](arkts-location-geolocationmanager-flushcachedgnsslocations-f.md)
 
 **需要权限：** ohos.permission.LOCATION
+
+<!--Device-geolocation-function flushCachedGnssLocations(): Promise<boolean>--><!--Device-geolocation-function flushCachedGnssLocations(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Location.Location.Gnss
 

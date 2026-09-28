@@ -8,6 +8,8 @@ export interface BatteryLevelInfo
 
 **起始版本：** 26.2.0
 
+<!--Device-mechanicManager-export interface BatteryLevelInfo--><!--Device-mechanicManager-export interface BatteryLevelInfo-End-->
+
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ batteryLevel: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BatteryLevelInfo-batteryLevel: int--><!--Device-BatteryLevelInfo-batteryLevel: int-End-->
+
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。
@@ -50,6 +54,8 @@ isCharging: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BatteryLevelInfo-isCharging: boolean--><!--Device-BatteryLevelInfo-isCharging: boolean-End-->
+
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。
@@ -67,6 +73,8 @@ ID of the mechanical device. ID of the mechanical device. ID of the mechanical d
 **起始版本：** 26.2.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BatteryLevelInfo-mechId: int--><!--Device-BatteryLevelInfo-mechId: int-End-->
 
 **系统能力：** SystemCapability.Mechanic.Core
 

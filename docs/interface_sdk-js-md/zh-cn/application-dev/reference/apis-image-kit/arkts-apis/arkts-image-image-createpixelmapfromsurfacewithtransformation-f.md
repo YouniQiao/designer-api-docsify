@@ -18,6 +18,8 @@ Creates a PixelMap object based on the ID of a Surface with transformation.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-image-function createPixelMapFromSurfaceWithTransformation(surfaceId: string, transformEnabled: boolean): Promise<PixelMap>--><!--Device-image-function createPixelMapFromSurfaceWithTransformation(surfaceId: string, transformEnabled: boolean): Promise<PixelMap>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**

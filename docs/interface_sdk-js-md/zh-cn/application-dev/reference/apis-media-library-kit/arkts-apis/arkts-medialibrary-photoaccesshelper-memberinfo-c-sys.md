@@ -8,6 +8,8 @@ export class MemberInfo
 
 **起始版本：** 26.0.1
 
+<!--Device-photoAccessHelper-export class MemberInfo--><!--Device-photoAccessHelper-export class MemberInfo-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ public member: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MemberInfo-public member: string--><!--Device-MemberInfo-public member: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ public status: ShareMemberStatus
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MemberInfo-public status: ShareMemberStatus--><!--Device-MemberInfo-public status: ShareMemberStatus-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

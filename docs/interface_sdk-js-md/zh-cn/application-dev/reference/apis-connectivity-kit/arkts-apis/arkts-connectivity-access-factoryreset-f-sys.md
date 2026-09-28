@@ -18,6 +18,8 @@ function factoryReset(callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
+<!--Device-access-function factoryReset(callback: AsyncCallback<void>): void--><!--Device-access-function factoryReset(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -68,6 +70,8 @@ function factoryReset(): Promise<void>
 **起始版本：** 11
 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
+
+<!--Device-access-function factoryReset(): Promise<void>--><!--Device-access-function factoryReset(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

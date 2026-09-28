@@ -8,6 +8,8 @@ export interface DataAbilityOperation
 
 **起始版本：** 7
 
+<!--Device-unnamed-export interface DataAbilityOperation--><!--Device-unnamed-export interface DataAbilityOperation-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 ## expectedCount
@@ -23,6 +25,8 @@ expectedCount?: number
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-DataAbilityOperation-expectedCount?: number--><!--Device-DataAbilityOperation-expectedCount?: number-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -40,6 +44,8 @@ interrupted?: boolean
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-DataAbilityOperation-interrupted?: boolean--><!--Device-DataAbilityOperation-interrupted?: boolean-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 ## predicates
@@ -55,6 +61,8 @@ predicates?: dataAbility.DataAbilityPredicates
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-DataAbilityOperation-predicates?: dataAbility.DataAbilityPredicates--><!--Device-DataAbilityOperation-predicates?: dataAbility.DataAbilityPredicates-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -72,6 +80,8 @@ predicatesBackReferences?: Map<number, number>
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-DataAbilityOperation-predicatesBackReferences?: Map<number, number>--><!--Device-DataAbilityOperation-predicatesBackReferences?: Map<number, number>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 ## type
@@ -87,6 +97,8 @@ type: featureAbility.DataAbilityOperationType
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-DataAbilityOperation-type: featureAbility.DataAbilityOperationType--><!--Device-DataAbilityOperation-type: featureAbility.DataAbilityOperationType-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -104,6 +116,8 @@ uri: string
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-DataAbilityOperation-uri: string--><!--Device-DataAbilityOperation-uri: string-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 ## valueBackReferences
@@ -120,6 +134,8 @@ valueBackReferences?: rdb.ValuesBucket
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-DataAbilityOperation-valueBackReferences?: rdb.ValuesBucket--><!--Device-DataAbilityOperation-valueBackReferences?: rdb.ValuesBucket-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 ## valuesBucket
@@ -135,5 +151,7 @@ valuesBucket?: rdb.ValuesBucket
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-DataAbilityOperation-valuesBucket?: rdb.ValuesBucket--><!--Device-DataAbilityOperation-valuesBucket?: rdb.ValuesBucket-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel

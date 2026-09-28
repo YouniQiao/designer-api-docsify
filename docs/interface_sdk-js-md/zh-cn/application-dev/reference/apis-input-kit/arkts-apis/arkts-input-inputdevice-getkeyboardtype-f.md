@@ -16,6 +16,8 @@ function getKeyboardType(deviceId: number, callback: AsyncCallback<KeyboardType>
 
 **起始版本：** 9
 
+<!--Device-inputDevice-function getKeyboardType(deviceId: int, callback: AsyncCallback<KeyboardType>): void--><!--Device-inputDevice-function getKeyboardType(deviceId: int, callback: AsyncCallback<KeyboardType>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 **参数：**
@@ -75,6 +77,8 @@ function getKeyboardType(deviceId: number): Promise<KeyboardType>
 获取输入设备的键盘类型，使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-inputDevice-function getKeyboardType(deviceId: int): Promise<KeyboardType>--><!--Device-inputDevice-function getKeyboardType(deviceId: int): Promise<KeyboardType>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 

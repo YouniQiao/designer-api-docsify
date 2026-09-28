@@ -20,6 +20,8 @@ Subscribes to status changes of the **NavDestination** component. Compared with 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-uiObserver-export function on(type: 'navDestinationUpdate', options: { navigationId: ResourceStr }, callback: Callback<NavDestinationInfo>): void--><!--Device-uiObserver-export function on(type: 'navDestinationUpdate', options: { navigationId: ResourceStr }, callback: Callback<NavDestinationInfo>): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -101,6 +103,8 @@ Subscribes to status changes of the **NavDestination** component.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-uiObserver-export function on(type: 'navDestinationUpdate', callback: Callback<NavDestinationInfo>): void--><!--Device-uiObserver-export function on(type: 'navDestinationUpdate', callback: Callback<NavDestinationInfo>): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -172,13 +176,15 @@ struct Index {
 export function on(type: 'scrollEvent', options: ObserverOptions, callback: Callback<ScrollEventInfo>): void
 ```
 
-Listens for the start and end of scroll events of a specific scrollable component identified by its ID. Supported components include [List](../arkts-components/arkts-arkui-list-comp.md#list), [Grid](../arkts-components/arkts-arkui-grid-comp.md#grid), [Scroll](../arkts-components/arkts-arkui-scroll-comp.md#scroll), [WaterFlow](../arkts-components/arkts-arkui-waterflow-comp.md#water_flow), and [ArcList](../arkts-components/arkts-arkui-arclist-comp.md#ohosarkuiarclist).
+Listens for the start and end of scroll events of a specific scrollable component identified by its ID. Supported components include [List](../arkts-components/arkts-arkui-list-comp.md), [Grid](../arkts-components/arkts-arkui-grid-comp.md), [Scroll](../arkts-components/arkts-arkui-scroll-comp.md), [WaterFlow](../arkts-components/arkts-arkui-waterflow-comp.md), and [ArcList](../arkts-components/arkts-arkui-arclist-comp.md).
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-uiObserver-export function on(type: 'scrollEvent', options: ObserverOptions, callback: Callback<ScrollEventInfo>): void--><!--Device-uiObserver-export function on(type: 'scrollEvent', options: ObserverOptions, callback: Callback<ScrollEventInfo>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -197,13 +203,15 @@ Listens for the start and end of scroll events of a specific scrollable componen
 export function on(type: 'scrollEvent', callback: Callback<ScrollEventInfo>): void
 ```
 
-Listens for the start and end of scroll events of all scrollable components. Supported components include [List](../arkts-components/arkts-arkui-list-comp.md#list), [Grid](../arkts-components/arkts-arkui-grid-comp.md#grid), [Scroll](../arkts-components/arkts-arkui-scroll-comp.md#scroll), [WaterFlow](../arkts-components/arkts-arkui-waterflow-comp.md#water_flow), and [ArcList](../arkts-components/arkts-arkui-arclist-comp.md#ohosarkuiarclist).
+Listens for the start and end of scroll events of all scrollable components. Supported components include [List](../arkts-components/arkts-arkui-list-comp.md), [Grid](../arkts-components/arkts-arkui-grid-comp.md), [Scroll](../arkts-components/arkts-arkui-scroll-comp.md), [WaterFlow](../arkts-components/arkts-arkui-waterflow-comp.md), and [ArcList](../arkts-components/arkts-arkui-arclist-comp.md).
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-uiObserver-export function on(type: 'scrollEvent', callback: Callback<ScrollEventInfo>): void--><!--Device-uiObserver-export function on(type: 'scrollEvent', callback: Callback<ScrollEventInfo>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -228,6 +236,8 @@ Subscribes to state changes of the page during routing.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-uiObserver-export function on(type: 'routerPageUpdate', context: UIAbilityContext | UIContext, callback: Callback<RouterPageInfo>): void--><!--Device-uiObserver-export function on(type: 'routerPageUpdate', context: UIAbilityContext | UIContext, callback: Callback<RouterPageInfo>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -290,6 +300,8 @@ Listens for screen pixel density changes.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-uiObserver-export function on(type: 'densityUpdate', context: UIContext, callback: Callback<DensityInfo>): void--><!--Device-uiObserver-export function on(type: 'densityUpdate', context: UIContext, callback: Callback<DensityInfo>): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -346,6 +358,8 @@ Listens for drawing instruction dispatch in each frame.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-uiObserver-export function on(type: 'willDraw', context: UIContext, callback: Callback<void>): void--><!--Device-uiObserver-export function on(type: 'willDraw', context: UIContext, callback: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -393,6 +407,8 @@ Listens for layout completion status in each frame.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-uiObserver-export function on(type: 'didLayout', context: UIContext, callback: Callback<void>): void--><!--Device-uiObserver-export function on(type: 'didLayout', context: UIContext, callback: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -439,6 +455,8 @@ Subscribes to **TabContent** page switching events for the specified **Tabs** co
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-uiObserver-export function on(type: 'tabContentUpdate', options: ObserverOptions, callback: Callback<TabContentInfo>): void--><!--Device-uiObserver-export function on(type: 'tabContentUpdate', options: ObserverOptions, callback: Callback<TabContentInfo>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -515,6 +533,8 @@ Subscribes to **TabContent** switch events. Unlike [on('tabChange')](../../../re
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-uiObserver-export function on(type: 'tabContentUpdate', callback: Callback<TabContentInfo>): void--><!--Device-uiObserver-export function on(type: 'tabContentUpdate', callback: Callback<TabContentInfo>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -594,6 +614,8 @@ Subscribes to **Navigation** component page switching events.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-uiObserver-export function on(    type: 'navDestinationSwitch',    context: UIAbilityContext | UIContext,    callback: Callback<NavDestinationSwitchInfo>  ): void--><!--Device-uiObserver-export function on(    type: 'navDestinationSwitch',    context: UIAbilityContext | UIContext,    callback: Callback<NavDestinationSwitchInfo>  ): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -732,6 +754,8 @@ Subscribes to **Navigation** component page switching events. Compared with [uiO
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-uiObserver-export function on(    type: 'navDestinationSwitch',    context: UIAbilityContext | UIContext,    observerOptions: NavDestinationSwitchObserverOptions,    callback: Callback<NavDestinationSwitchInfo>  ): void--><!--Device-uiObserver-export function on(    type: 'navDestinationSwitch',    context: UIAbilityContext | UIContext,    observerOptions: NavDestinationSwitchObserverOptions,    callback: Callback<NavDestinationSwitchInfo>  ): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

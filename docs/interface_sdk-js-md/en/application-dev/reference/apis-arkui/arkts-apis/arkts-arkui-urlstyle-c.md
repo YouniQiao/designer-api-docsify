@@ -10,6 +10,8 @@ The default color, font size, and font weight are **'#ff0a59f7'**, **'16fp'**, a
 
 **Since:** 14
 
+<!--Device-unnamed-declare class UrlStyle--><!--Device-unnamed-declare class UrlStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
@@ -25,6 +27,8 @@ A constructor used to create a URL object.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-UrlStyle-constructor(url: string)--><!--Device-UrlStyle-constructor(url: string)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -49,5 +53,7 @@ Hyperlink content of the styled string.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-UrlStyle-readonly url: string--><!--Device-UrlStyle-readonly url: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

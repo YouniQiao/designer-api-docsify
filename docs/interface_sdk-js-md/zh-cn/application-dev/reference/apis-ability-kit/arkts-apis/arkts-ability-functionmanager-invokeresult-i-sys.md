@@ -8,6 +8,8 @@ Function调用的结果。包含Function调用成功时返回的数据，调用�
 
 **起始版本：** 26.0.0
 
+<!--Device-functionManager-interface InvokeResult--><!--Device-functionManager-interface InvokeResult-End-->
+
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ data?: any
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-InvokeResult-data?: any--><!--Device-InvokeResult-data?: any-End-->
+
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ errorCode?: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-InvokeResult-errorCode?: number--><!--Device-InvokeResult-errorCode?: number-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
@@ -68,6 +74,8 @@ errorMsg?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-InvokeResult-errorMsg?: string--><!--Device-InvokeResult-errorMsg?: string-End-->
+
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -85,6 +93,8 @@ success: boolean
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-InvokeResult-success: boolean--><!--Device-InvokeResult-success: boolean-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 

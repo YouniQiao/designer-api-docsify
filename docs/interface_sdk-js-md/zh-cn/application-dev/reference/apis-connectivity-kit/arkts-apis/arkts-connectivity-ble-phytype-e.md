@@ -8,6 +8,8 @@ enum PhyType
 
 **起始版本：** 12
 
+<!--Device-ble-enum PhyType--><!--Device-ble-enum PhyType-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## PHY_LE_1M
@@ -22,7 +24,9 @@ PHY_LE_1M = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PhyType-PHY_LE_1M = 1--><!--Device-PhyType-PHY_LE_1M = 1-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -38,6 +42,8 @@ PHY_LE_ALL_SUPPORTED = 255
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PhyType-PHY_LE_ALL_SUPPORTED = 255--><!--Device-PhyType-PHY_LE_ALL_SUPPORTED = 255-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

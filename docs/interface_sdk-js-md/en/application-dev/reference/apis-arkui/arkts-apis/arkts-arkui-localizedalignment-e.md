@@ -8,6 +8,8 @@ Enumerated type that supports the align and [layoutGravity](../arkts-components/
 
 **Since:** 20
 
+<!--Device-unnamed-declare enum LocalizedAlignment--><!--Device-unnamed-declare enum LocalizedAlignment-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## TOP_START
@@ -25,6 +27,8 @@ Top start.
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 20.
+
+<!--Device-LocalizedAlignment-TOP_START = "top_start"--><!--Device-LocalizedAlignment-TOP_START = "top_start"-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,6 +48,8 @@ Horizontally centered on the top.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 20.
 
+<!--Device-LocalizedAlignment-TOP = "top"--><!--Device-LocalizedAlignment-TOP = "top"-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## TOP_END
@@ -61,6 +67,8 @@ Top end.
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 20.
+
+<!--Device-LocalizedAlignment-TOP_END = "top_end"--><!--Device-LocalizedAlignment-TOP_END = "top_end"-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -80,6 +88,8 @@ Vertically centered start.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 20.
 
+<!--Device-LocalizedAlignment-START = "start"--><!--Device-LocalizedAlignment-START = "start"-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## CENTER
@@ -97,6 +107,8 @@ Horizontally and vertically centered.
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 20.
+
+<!--Device-LocalizedAlignment-CENTER = "center"--><!--Device-LocalizedAlignment-CENTER = "center"-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -116,6 +128,8 @@ Vertically centered end.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 20.
 
+<!--Device-LocalizedAlignment-END = "end"--><!--Device-LocalizedAlignment-END = "end"-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## BOTTOM_START
@@ -133,6 +147,8 @@ Bottom start.
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 20.
+
+<!--Device-LocalizedAlignment-BOTTOM_START = "bottom_start"--><!--Device-LocalizedAlignment-BOTTOM_START = "bottom_start"-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -152,6 +168,8 @@ Horizontally centered on the bottom.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 20.
 
+<!--Device-LocalizedAlignment-BOTTOM = "bottom"--><!--Device-LocalizedAlignment-BOTTOM = "bottom"-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## BOTTOM_END
@@ -169,5 +187,7 @@ Bottom end.
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 20.
+
+<!--Device-LocalizedAlignment-BOTTOM_END = "bottom_end"--><!--Device-LocalizedAlignment-BOTTOM_END = "bottom_end"-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

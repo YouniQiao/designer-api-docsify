@@ -8,6 +8,8 @@ export interface DeviceRotationRadian
 
 **起始版本：** 20
 
+<!--Device-deviceStatus-export interface DeviceRotationRadian--><!--Device-deviceStatus-export interface DeviceRotationRadian-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.DeviceStatus
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ x: number
 
 **起始版本：** 20
 
+<!--Device-DeviceRotationRadian-x: double--><!--Device-DeviceRotationRadian-x: double-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.DeviceStatus
 
 **系统接口：** 此接口为系统接口。
@@ -46,6 +50,8 @@ y: number
 
 **起始版本：** 20
 
+<!--Device-DeviceRotationRadian-y: double--><!--Device-DeviceRotationRadian-y: double-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.DeviceStatus
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +67,8 @@ z: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-DeviceRotationRadian-z: double--><!--Device-DeviceRotationRadian-z: double-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.DeviceStatus
 

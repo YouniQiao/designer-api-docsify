@@ -8,6 +8,8 @@ enum FontMetricsFlags
 
 **起始版本：** 12
 
+<!--Device-drawing-enum FontMetricsFlags--><!--Device-drawing-enum FontMetricsFlags-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## UNDERLINE_THICKNESS_VALID
@@ -20,7 +22,9 @@ UNDERLINE_THICKNESS_VALID = 1 << 0
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-FontMetricsFlags-UNDERLINE_THICKNESS_VALID = 1 << 0--><!--Device-FontMetricsFlags-UNDERLINE_THICKNESS_VALID = 1 << 0-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -34,7 +38,9 @@ UNDERLINE_POSITION_VALID = 1 << 1
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-FontMetricsFlags-UNDERLINE_POSITION_VALID = 1 << 1--><!--Device-FontMetricsFlags-UNDERLINE_POSITION_VALID = 1 << 1-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -48,7 +54,9 @@ STRIKETHROUGH_THICKNESS_VALID = 1 << 2
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-FontMetricsFlags-STRIKETHROUGH_THICKNESS_VALID = 1 << 2--><!--Device-FontMetricsFlags-STRIKETHROUGH_THICKNESS_VALID = 1 << 2-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -62,7 +70,9 @@ STRIKETHROUGH_POSITION_VALID = 1 << 3
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-FontMetricsFlags-STRIKETHROUGH_POSITION_VALID = 1 << 3--><!--Device-FontMetricsFlags-STRIKETHROUGH_POSITION_VALID = 1 << 3-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -76,6 +86,8 @@ BOUNDS_INVALID = 1 << 4
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-FontMetricsFlags-BOUNDS_INVALID = 1 << 4--><!--Device-FontMetricsFlags-BOUNDS_INVALID = 1 << 4-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing

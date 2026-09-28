@@ -8,6 +8,8 @@ LinkedList底层通过双向链表实现，每个节点都包含对前一个元�
 
 **起始版本：** 8
 
+<!--Device-unnamed-declare class LinkedList<T>--><!--Device-unnamed-declare class LinkedList<T>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -27,6 +29,8 @@ import { LinkedList } from '@kit.ArkTS';
 **起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LinkedList-[Symbol.iterator](): IterableIterator<T>--><!--Device-LinkedList-[Symbol.iterator](): IterableIterator<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -83,7 +87,9 @@ add(element: T): boolean
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LinkedList-add(element: T): boolean--><!--Device-LinkedList-add(element: T): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -137,7 +143,9 @@ addFirst(element: T): void
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LinkedList-addFirst(element: T): void--><!--Device-LinkedList-addFirst(element: T): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -182,7 +190,9 @@ clear(): void
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LinkedList-clear(): void--><!--Device-LinkedList-clear(): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -215,7 +225,9 @@ clone(): LinkedList<T>
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LinkedList-clone(): LinkedList<T>--><!--Device-LinkedList-clone(): LinkedList<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -253,7 +265,9 @@ LinkedList的构造函数。调用后，创建一个空的LinkedList实例。
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LinkedList-constructor()--><!--Device-LinkedList-constructor()-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -279,7 +293,9 @@ convertToArray(): Array<T>
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LinkedList-convertToArray(): Array<T>--><!--Device-LinkedList-convertToArray(): Array<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -318,6 +334,8 @@ forEach(callbackFn: (value: T, index?: number, LinkedList?: LinkedList<T>) => vo
 **起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LinkedList-forEach(callbackFn: (value: T, index?: number, LinkedList?: LinkedList<T>) => void, thisArg?: Object): void--><!--Device-LinkedList-forEach(callbackFn: (value: T, index?: number, LinkedList?: LinkedList<T>) => void, thisArg?: Object): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -361,7 +379,9 @@ get(index: number): T
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LinkedList-get(index: int): T--><!--Device-LinkedList-get(index: int): T-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -409,7 +429,9 @@ getFirst(): T
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LinkedList-getFirst(): T--><!--Device-LinkedList-getFirst(): T-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -448,7 +470,9 @@ getIndexOf(element: T): number
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LinkedList-getIndexOf(element: T): int--><!--Device-LinkedList-getIndexOf(element: T): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -495,7 +519,9 @@ getLast(): T
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LinkedList-getLast(): T--><!--Device-LinkedList-getLast(): T-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -534,7 +560,9 @@ getLastIndexOf(element: T): number
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LinkedList-getLastIndexOf(element: T): int--><!--Device-LinkedList-getLastIndexOf(element: T): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -581,7 +609,9 @@ has(element: T): boolean
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LinkedList-has(element: T): boolean--><!--Device-LinkedList-has(element: T): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -622,7 +652,9 @@ insert(index: number, element: T): void
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LinkedList-insert(index: int, element: T): void--><!--Device-LinkedList-insert(index: int, element: T): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -661,7 +693,9 @@ remove(element: T): boolean
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LinkedList-remove(element: T): boolean--><!--Device-LinkedList-remove(element: T): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -706,6 +740,8 @@ removeByIndex(index: number): T
 **起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LinkedList-removeByIndex(index: number): T--><!--Device-LinkedList-removeByIndex(index: number): T-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -753,6 +789,8 @@ removeFirst(): T
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-LinkedList-removeFirst(): T--><!--Device-LinkedList-removeFirst(): T-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -791,7 +829,9 @@ removeFirstFound(element: T): boolean
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LinkedList-removeFirstFound(element: T): boolean--><!--Device-LinkedList-removeFirstFound(element: T): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -839,6 +879,8 @@ removeLast(): T
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-LinkedList-removeLast(): T--><!--Device-LinkedList-removeLast(): T-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -877,7 +919,9 @@ removeLastFound(element: T): boolean
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LinkedList-removeLastFound(element: T): boolean--><!--Device-LinkedList-removeLastFound(element: T): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -923,7 +967,9 @@ set(index: number, element: T): T
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LinkedList-set(index: int, element: T): T--><!--Device-LinkedList-set(index: int, element: T): T-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -973,5 +1019,7 @@ LinkedList的元素个数。
 **起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LinkedList-length: number--><!--Device-LinkedList-length: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

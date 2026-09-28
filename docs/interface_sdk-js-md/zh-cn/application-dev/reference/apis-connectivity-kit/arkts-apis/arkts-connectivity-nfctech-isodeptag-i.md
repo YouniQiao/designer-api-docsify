@@ -16,6 +16,8 @@ IsoDepTag获取方式请参考[nfc-tag开发指南](../../../connectivity/nfc/nf
 
 **起始版本：** 9
 
+<!--Device-unnamed-export interface IsoDepTag extends TagSession--><!--Device-unnamed-export interface IsoDepTag extends TagSession-End-->
+
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 ## getHiLayerResponse
@@ -28,7 +30,9 @@ getHiLayerResponse(): number[]
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-IsoDepTag-getHiLayerResponse(): int[]--><!--Device-IsoDepTag-getHiLayerResponse(): int[]-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -58,7 +62,9 @@ getHistoricalBytes(): number[]
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-IsoDepTag-getHistoricalBytes(): int[]--><!--Device-IsoDepTag-getHistoricalBytes(): int[]-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -90,7 +96,9 @@ isExtendedApduSupported(): Promise<boolean>
 
 **需要权限：** ohos.permission.NFC_TAG
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-IsoDepTag-isExtendedApduSupported(): Promise<boolean>--><!--Device-IsoDepTag-isExtendedApduSupported(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
@@ -151,7 +159,9 @@ isExtendedApduSupported(callback: AsyncCallback<boolean>): void
 
 **需要权限：** ohos.permission.NFC_TAG
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-IsoDepTag-isExtendedApduSupported(callback: AsyncCallback<boolean>): void--><!--Device-IsoDepTag-isExtendedApduSupported(callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
 

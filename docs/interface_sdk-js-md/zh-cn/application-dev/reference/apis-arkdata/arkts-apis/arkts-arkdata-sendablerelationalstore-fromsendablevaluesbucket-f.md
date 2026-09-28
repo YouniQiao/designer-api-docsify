@@ -16,6 +16,8 @@ function fromSendableValuesBucket(valuesBucket: ValuesBucket): NonSendableBucket
 
 **起始版本：** 12
 
+<!--Device-sendableRelationalStore-function fromSendableValuesBucket(valuesBucket: ValuesBucket): NonSendableBucket--><!--Device-sendableRelationalStore-function fromSendableValuesBucket(valuesBucket: ValuesBucket): NonSendableBucket-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**

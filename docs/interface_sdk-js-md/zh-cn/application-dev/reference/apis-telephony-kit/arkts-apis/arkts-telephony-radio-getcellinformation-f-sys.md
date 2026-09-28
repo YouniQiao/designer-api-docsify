@@ -18,6 +18,8 @@ Get the current cell information.
 
 **需要权限：** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
+<!--Device-radio-function getCellInformation(slotId: int, callback: AsyncCallback<Array<CellInformation>>): void--><!--Device-radio-function getCellInformation(slotId: int, callback: AsyncCallback<Array<CellInformation>>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -70,6 +72,8 @@ Get the current cell information.
 **起始版本：** 8
 
 **需要权限：** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
+
+<!--Device-radio-function getCellInformation(slotId?: int): Promise<Array<CellInformation>>--><!--Device-radio-function getCellInformation(slotId?: int): Promise<Array<CellInformation>>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -126,6 +130,8 @@ Get the current cell information.
 **起始版本：** 8
 
 **需要权限：** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
+
+<!--Device-radio-function getCellInformation(callback: AsyncCallback<Array<CellInformation>>): void--><!--Device-radio-function getCellInformation(callback: AsyncCallback<Array<CellInformation>>): void-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

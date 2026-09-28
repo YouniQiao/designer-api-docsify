@@ -8,6 +8,8 @@ interface AlbumOrder
 
 **起始版本：** 20
 
+<!--Device-photoAccessHelper-interface AlbumOrder--><!--Device-photoAccessHelper-interface AlbumOrder-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ albumId: number
 
 **起始版本：** 20
 
+<!--Device-AlbumOrder-albumId: int--><!--Device-AlbumOrder-albumId: int-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ albumOrder: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-AlbumOrder-albumOrder: int--><!--Device-AlbumOrder-albumOrder: int-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -62,6 +68,8 @@ orderSection: number
 
 **起始版本：** 20
 
+<!--Device-AlbumOrder-orderSection: int--><!--Device-AlbumOrder-orderSection: int-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -78,6 +86,8 @@ orderStatus: number
 
 **起始版本：** 20
 
+<!--Device-AlbumOrder-orderStatus: int--><!--Device-AlbumOrder-orderStatus: int-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -93,6 +103,8 @@ orderType: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-AlbumOrder-orderType: int--><!--Device-AlbumOrder-orderType: int-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

@@ -8,6 +8,8 @@ interface FormInfoFilter
 
 **起始版本：** 9
 
+<!--Device-formInfo-interface FormInfoFilter--><!--Device-formInfo-interface FormInfoFilter-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 ## 导入模块
@@ -29,6 +31,8 @@ bundleName?: string
 **类型：** string
 
 **起始版本：** 12
+
+<!--Device-FormInfoFilter-bundleName?: string--><!--Device-FormInfoFilter-bundleName?: string-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -52,6 +56,8 @@ supportedDimensions?: Array<number>
 
 **起始版本：** 12
 
+<!--Device-FormInfoFilter-supportedDimensions?: Array<int>--><!--Device-FormInfoFilter-supportedDimensions?: Array<int>-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -71,6 +77,8 @@ supportedShapes?: Array<number>
 **类型：** Array&lt;number&gt;
 
 **起始版本：** 12
+
+<!--Device-FormInfoFilter-supportedShapes?: Array<int>--><!--Device-FormInfoFilter-supportedShapes?: Array<int>-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 

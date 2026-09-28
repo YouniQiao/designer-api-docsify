@@ -12,6 +12,8 @@ ControlCenter继承自[ControlCenterQuery](arkts-camera-camera-controlcenterquer
 
 **起始版本：** 20
 
+<!--Device-camera-interface ControlCenter extends ControlCenterQuery--><!--Device-camera-interface ControlCenter extends ControlCenterQuery-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
@@ -30,7 +32,9 @@ enableControlCenter(enabled: boolean): void
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-ControlCenter-enableControlCenter(enabled: boolean): void--><!--Device-ControlCenter-enableControlCenter(enabled: boolean): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

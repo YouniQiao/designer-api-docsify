@@ -22,6 +22,8 @@ Checks whether the ID of this contact is in the local address book. This API use
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function isLocalContact(id: number, callback: AsyncCallback<boolean>): void--><!--Device-contact-function isLocalContact(id: number, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
@@ -61,6 +63,8 @@ Checks whether the ID of this contact is in the local address book. This API use
 **Since:** 10
 
 **Required permissions:** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function isLocalContact(context: Context, id: number, callback: AsyncCallback<boolean>): void--><!--Device-contact-function isLocalContact(context: Context, id: number, callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -120,6 +124,8 @@ Checks whether the ID of this contact is in the local address book. This API use
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function isLocalContact(id: number): Promise<boolean>--><!--Device-contact-function isLocalContact(id: number): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
@@ -160,6 +166,8 @@ Checks whether the ID of this contact is in the local address book. This API use
 **Since:** 10
 
 **Required permissions:** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function isLocalContact(context: Context, id: number): Promise<boolean>--><!--Device-contact-function isLocalContact(context: Context, id: number): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 

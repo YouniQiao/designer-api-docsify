@@ -14,6 +14,8 @@ CDSM客户端类，提供了获取远端设备的合作设备集合信息等操�
 
 **起始版本：** 26.0.0
 
+<!--Device-cdsm-interface CdsmClient--><!--Device-cdsm-interface CdsmClient-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## 导入模块
@@ -35,6 +37,8 @@ getCdsmInfo(): CdsmInfo
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-CdsmClient-getCdsmInfo(): CdsmInfo--><!--Device-CdsmClient-getCdsmInfo(): CdsmInfo-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -64,6 +68,8 @@ offCdsmInfoChange(callback?: Callback<CdsmInfo>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-CdsmClient-offCdsmInfoChange(callback?: Callback<CdsmInfo>): void--><!--Device-CdsmClient-offCdsmInfoChange(callback?: Callback<CdsmInfo>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **参数：**
@@ -85,6 +91,8 @@ onCdsmInfoChange(callback: Callback<CdsmInfo>): void
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-CdsmClient-onCdsmInfoChange(callback: Callback<CdsmInfo>): void--><!--Device-CdsmClient-onCdsmInfoChange(callback: Callback<CdsmInfo>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 

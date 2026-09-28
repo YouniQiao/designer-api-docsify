@@ -8,6 +8,8 @@ export enum CertificateScope
 
 **起始版本：** 14
 
+<!--Device-certificateManagerDialog-export enum CertificateScope--><!--Device-certificateManagerDialog-export enum CertificateScope-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
 ## NOT_SPECIFIED
@@ -21,6 +23,8 @@ NOT_SPECIFIED = 0
 **起始版本：** 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-CertificateScope-NOT_SPECIFIED = 0--><!--Device-CertificateScope-NOT_SPECIFIED = 0-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
@@ -36,6 +40,8 @@ CURRENT_USER = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-CertificateScope-CURRENT_USER = 1--><!--Device-CertificateScope-CURRENT_USER = 1-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
 ## GLOBAL_USER
@@ -49,5 +55,7 @@ GLOBAL_USER = 2
 **起始版本：** 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-CertificateScope-GLOBAL_USER = 2--><!--Device-CertificateScope-GLOBAL_USER = 2-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManagerDialog

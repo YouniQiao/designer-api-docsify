@@ -24,6 +24,8 @@
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare namespace vpnExtension--><!--Device-unnamed-declare namespace vpnExtension-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 ## 导入模块

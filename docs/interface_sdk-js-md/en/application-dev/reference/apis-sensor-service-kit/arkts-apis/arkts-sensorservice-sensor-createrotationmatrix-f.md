@@ -26,6 +26,8 @@ Converts a rotation vector into a rotation matrix. This API uses an asynchronous
 
 **Substitutes:** [getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md)(rotationVector: Array&lt;number&gt;, callback: AsyncCallback&lt;Array&lt;number&gt;&gt;)
 
+<!--Device-sensor-function createRotationMatrix(rotationVector: Array<number>, callback: AsyncCallback<Array<number>>): void--><!--Device-sensor-function createRotationMatrix(rotationVector: Array<number>, callback: AsyncCallback<Array<number>>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -74,6 +76,8 @@ Converts a rotation vector into a rotation matrix. This API uses a promise to re
 **Deprecated since:** 9
 
 **Substitutes:** [getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md)(rotationVector: Array&lt;number&gt;)
+
+<!--Device-sensor-function createRotationMatrix(rotationVector: Array<number>): Promise<Array<number>>--><!--Device-sensor-function createRotationMatrix(rotationVector: Array<number>): Promise<Array<number>>-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -129,6 +133,8 @@ Obtains the rotation matrix based on a gravity vector and geomagnetic vector. Th
 
 **Substitutes:** [getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md)(gravity: Array&lt;number&gt;, geomagnetic: Array&lt;number&gt;, callback: AsyncCallback&lt;RotationMatrixResponse&gt;)
 
+<!--Device-sensor-function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>, callback: AsyncCallback<RotationMatrixResponse>): void--><!--Device-sensor-function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>, callback: AsyncCallback<RotationMatrixResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -177,6 +183,8 @@ Obtains the rotation matrix based on a gravity vector and geomagnetic vector. Th
 **Deprecated since:** 9
 
 **Substitutes:** [getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md)(gravity: Array&lt;number&gt;, geomagnetic: Array&lt;number&gt;)
+
+<!--Device-sensor-function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>,): Promise<RotationMatrixResponse>--><!--Device-sensor-function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>,): Promise<RotationMatrixResponse>-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 

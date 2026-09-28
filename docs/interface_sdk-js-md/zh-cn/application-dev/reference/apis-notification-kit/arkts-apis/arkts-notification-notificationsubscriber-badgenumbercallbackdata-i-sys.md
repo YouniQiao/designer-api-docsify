@@ -8,6 +8,8 @@ export interface BadgeNumberCallbackData
 
 **起始版本：** 10
 
+<!--Device-unnamed-export interface BadgeNumberCallbackData--><!--Device-unnamed-export interface BadgeNumberCallbackData-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -23,6 +25,8 @@ readonly appInstanceKey?: string
 **类型：** string
 
 **起始版本：** 15
+
+<!--Device-BadgeNumberCallbackData-readonly appInstanceKey?: string--><!--Device-BadgeNumberCallbackData-readonly appInstanceKey?: string-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -40,6 +44,8 @@ readonly badgeNumber: number
 
 **起始版本：** 10
 
+<!--Device-BadgeNumberCallbackData-readonly badgeNumber: int--><!--Device-BadgeNumberCallbackData-readonly badgeNumber: int-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -56,6 +62,8 @@ readonly bundle: string
 
 **起始版本：** 10
 
+<!--Device-BadgeNumberCallbackData-readonly bundle: string--><!--Device-BadgeNumberCallbackData-readonly bundle: string-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -71,6 +79,8 @@ readonly uid: number
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-BadgeNumberCallbackData-readonly uid: int--><!--Device-BadgeNumberCallbackData-readonly uid: int-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -91,6 +101,8 @@ readonly instanceKey?: number
 **废弃版本：** 15
 
 **替代接口：** [appInstanceKey](#appinstancekey)
+
+<!--Device-BadgeNumberCallbackData-readonly instanceKey?: number--><!--Device-BadgeNumberCallbackData-readonly instanceKey?: number-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

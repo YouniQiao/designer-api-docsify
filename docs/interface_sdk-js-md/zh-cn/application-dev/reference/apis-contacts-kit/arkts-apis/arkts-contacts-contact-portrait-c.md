@@ -21,6 +21,8 @@ class Portrait
 
 **起始版本：** 7
 
+<!--Device-contact-class Portrait--><!--Device-contact-class Portrait-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 ## 导入模块
@@ -43,6 +45,8 @@ PixelMap格式的联系人头像。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
+<!--Device-Portrait-photo?: image.PixelMap--><!--Device-Portrait-photo?: image.PixelMap-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 ## uri
@@ -58,5 +62,7 @@ uri格式联系人头像。
 **起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-Portrait-uri: string--><!--Device-Portrait-uri: string-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData

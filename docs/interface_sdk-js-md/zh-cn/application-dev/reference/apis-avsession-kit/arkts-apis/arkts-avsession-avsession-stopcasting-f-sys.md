@@ -16,6 +16,8 @@ function stopCasting(session: SessionToken, callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
+<!--Device-avSession-function stopCasting(session: SessionToken, callback: AsyncCallback<void>): void--><!--Device-avSession-function stopCasting(session: SessionToken, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **系统接口：** 此接口为系统接口。
@@ -59,6 +61,8 @@ function stopCasting(session: SessionToken): Promise<void>
 结束投播。结果通过Promise异步回调方式返回。
 
 **起始版本：** 10
+
+<!--Device-avSession-function stopCasting(session: SessionToken): Promise<void>--><!--Device-avSession-function stopCasting(session: SessionToken): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 

@@ -8,6 +8,8 @@ Provides the container definition for media description key-value pairs.
 
 **起始版本：** 8
 
+<!--Device-media-interface MediaDescription--><!--Device-media-interface MediaDescription-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 ## 导入模块
@@ -29,5 +31,7 @@ key:value pair, key see @MediaDescriptionKey .
 **起始版本：** 8
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-MediaDescription-[key: string]: Object--><!--Device-MediaDescription-[key: string]: Object-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core

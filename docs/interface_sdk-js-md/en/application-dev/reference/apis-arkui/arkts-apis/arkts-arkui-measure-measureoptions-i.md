@@ -8,6 +8,8 @@ Provides attributes of the measured text.
 
 **Since:** 9
 
+<!--Device-unnamed-export interface MeasureOptions--><!--Device-unnamed-export interface MeasureOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -36,6 +38,8 @@ Default value: **0**. Unit: vp. The string type supports strings with units, for
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MeasureOptions-baselineOffset?: number | string--><!--Device-MeasureOptions-baselineOffset?: number | string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## constraintWidth
@@ -58,6 +62,8 @@ The default unit is vp. The value cannot be a percentage. This parameter takes e
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MeasureOptions-constraintWidth?: number | string | Resource--><!--Device-MeasureOptions-constraintWidth?: number | string | Resource-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## fontFamily
@@ -73,6 +79,8 @@ Font family of the measured text. The default font is **'HarmonyOS Sans'**, and 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MeasureOptions-fontFamily?: string | Resource--><!--Device-MeasureOptions-fontFamily?: string | Resource-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -98,6 +106,8 @@ When **fontSize** is of the number type, the fp unit is used since API version 1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MeasureOptions-fontSize?: number | string | Resource--><!--Device-MeasureOptions-fontSize?: number | string | Resource-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## fontStyle
@@ -118,6 +128,8 @@ The value range of the number type is [0, 1], with an interval of 1, correspondi
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MeasureOptions-fontStyle?: number | FontStyle--><!--Device-MeasureOptions-fontStyle?: number | FontStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## fontWeight
@@ -135,6 +147,8 @@ Default value: **FontWeight.Normal**
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MeasureOptions-fontWeight?: number | string | FontWeight--><!--Device-MeasureOptions-fontWeight?: number | string | FontWeight-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -157,6 +171,8 @@ The default unit is vp. The string type supports strings with units, for example
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MeasureOptions-letterSpacing?: number | string--><!--Device-MeasureOptions-letterSpacing?: number | string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -182,6 +198,8 @@ The default unit is vp.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MeasureOptions-lineHeight?: number | string | Resource--><!--Device-MeasureOptions-lineHeight?: number | string | Resource-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## maxLines
@@ -205,6 +223,8 @@ Default value: no limit
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MeasureOptions-maxLines?: number--><!--Device-MeasureOptions-maxLines?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -230,6 +250,8 @@ The value range of the number type is [0, 3], with an interval of 1, correspondi
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MeasureOptions-overflow?: number | TextOverflow--><!--Device-MeasureOptions-overflow?: number | TextOverflow-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## textAlign
@@ -251,6 +273,8 @@ The value range of the number type is [0, 3], with an interval of 1, correspondi
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MeasureOptions-textAlign?: number | TextAlign--><!--Device-MeasureOptions-textAlign?: number | TextAlign-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -274,6 +298,8 @@ The value range of the number type is [0, 2], with an interval of 1, correspondi
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MeasureOptions-textCase?: number | TextCase--><!--Device-MeasureOptions-textCase?: number | TextCase-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## textContent
@@ -289,6 +315,8 @@ Content of the measured text.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MeasureOptions-textContent: string | Resource--><!--Device-MeasureOptions-textContent: string | Resource-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -314,6 +342,8 @@ The default unit is vp. The string type supports strings with units, for example
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MeasureOptions-textIndent?: number | string--><!--Device-MeasureOptions-textIndent?: number | string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## wordBreak
@@ -337,5 +367,7 @@ WordBreak.BREAK_ALL, when used together with **TextOverflow.Ellipsis** of **over
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MeasureOptions-wordBreak?: WordBreak--><!--Device-MeasureOptions-wordBreak?: WordBreak-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

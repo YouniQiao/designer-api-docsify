@@ -75,6 +75,8 @@ The file declares the photo output concepts.
 | [Camera_ErrorCode OH_PhotoCaptureSettingExt_SetLocation(OH_Camera_PhotoCaptureSettingExt* photoCaptureSettingExt, Camera_Location location)](#oh_photocapturesettingext_setlocation) | - | Sets the image location for the photo capture extension configuration. |
 | [Camera_ErrorCode OH_PhotoOutput_EnableAutoExtendedGainmapDelivery(Camera_PhotoOutput* photoOutput, bool enabled)](#oh_photooutput_enableautoextendedgainmapdelivery) | - | Enables auto extended gainmap delivery. |
 | [bool OH_PhotoOutput_IsAutoExtendedGainmapDeliverySupported(const Camera_PhotoOutput* photoOutput)](#oh_photooutput_isautoextendedgainmapdeliverysupported) | - | Checks whether the auto extended gainmap delivery is supported. |
+| [Camera_ErrorCode OH_PhotoOutput_IsAutoAuxiliaryPhotoDeliverySupported(const Camera_PhotoOutput* photoOutput, OH_Camera_AuxiliaryPhotoType auxPhotoType, bool* isSupported)](#oh_photooutput_isautoauxiliaryphotodeliverysupported) | - | Check if the automatic auxiliary photo delivery is supported. |
+| [Camera_ErrorCode OH_PhotoOutput_SetAutoAuxiliaryPhotosDeliveryEnabled(Camera_PhotoOutput* photoOutput, const OH_Camera_AuxiliaryPhotoType* auxPhotoTypes, uint32_t size, bool enable)](#oh_photooutput_setautoauxiliaryphotosdeliveryenabled) | - | Enable or disable auto auxiliary photo delivery. |
 
 ### Variable
 
@@ -1350,5 +1352,62 @@ Checks whether the auto extended gainmap delivery is supported.
 | Type | Description |
 | -- | -- |
 | bool | true if supported, false otherwise. |
+
+### OH_PhotoOutput_IsAutoAuxiliaryPhotoDeliverySupported()
+
+```c
+Camera_ErrorCode OH_PhotoOutput_IsAutoAuxiliaryPhotoDeliverySupported(const Camera_PhotoOutput* photoOutput, OH_Camera_AuxiliaryPhotoType auxPhotoType, bool* isSupported)
+```
+
+**Description**
+
+Check if the automatic auxiliary photo delivery is supported.
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
+**Since**: 26.0.1
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [const Camera_PhotoOutput](capi-oh-camera-camera-photooutput.md)* photoOutput | [in] Pointer to the target PhotoOutput instance. |
+| OH_Camera_AuxiliaryPhotoType auxPhotoType | [in] Target auxiliary photo type. |
+| bool* isSupported | [out] Pointer to the check result for the support of capturing auxiliary photo. **true** if supported, **false** otherwise. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| Camera_ErrorCode | <ul>          <li>CAMERA_OK: The operation is successful.</li>          <li>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.</li>          <li>CAMERA_ERROR_PARAM_OUT_OF_RANGE: A parameter is out of the range.</li>          <li>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal.</li>          </ul> |
+
+### OH_PhotoOutput_SetAutoAuxiliaryPhotosDeliveryEnabled()
+
+```c
+Camera_ErrorCode OH_PhotoOutput_SetAutoAuxiliaryPhotosDeliveryEnabled(Camera_PhotoOutput* photoOutput, const OH_Camera_AuxiliaryPhotoType* auxPhotoTypes, uint32_t size, bool enable)
+```
+
+**Description**
+
+Enable or disable auto auxiliary photo delivery.
+
+**System capability**: SystemCapability.Multimedia.Camera.Core
+
+**Since**: 26.0.1
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [Camera_PhotoOutput](capi-oh-camera-camera-photooutput.md)* photoOutput | [in] Pointer to the target PhotoOutput instance. |
+| const OH_Camera_AuxiliaryPhotoType* auxPhotoTypes | [in] Pointer to the target auxiliary photo types array. |
+| uint32_t size | [in] The size of the auxiliary photo types array(number of elements). |
+| bool enable | [in] Whether to enable or disable auxiliary photo delivery. **true** to enable, **false** otherwise. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| Camera_ErrorCode | <ul>          <li>CAMERA_OK: The operation is successful.</li>          <li>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.</li>          <li>CAMERA_ERROR_PARAM_OUT_OF_RANGE: A parameter is out of the range.</li>          <li>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal.</li>          </ul> |
 
 

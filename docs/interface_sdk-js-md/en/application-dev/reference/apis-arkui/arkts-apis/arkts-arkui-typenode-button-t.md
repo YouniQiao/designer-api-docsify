@@ -12,6 +12,8 @@ Represents a FrameNode of the **Button** type. When created in child component m
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-typeNode-type Button = TypedFrameNode<ButtonInterface, ButtonAttribute>--><!--Device-typeNode-type Button = TypedFrameNode<ButtonInterface, ButtonAttribute>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Type:** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;ButtonInterface, [ButtonAttribute](../arkts-components/arkts-arkui-button-comp-attribute.md)&gt;

@@ -8,6 +8,8 @@ export interface CompleteData
 
 **起始版本：** 9
 
+<!--Device-wantAgent-export interface CompleteData--><!--Device-wantAgent-export interface CompleteData-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ extraInfo?: Record<string, Object>
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-CompleteData-extraInfo?: Record<string, Object>--><!--Device-CompleteData-extraInfo?: Record<string, Object>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## finalCode
@@ -44,7 +48,9 @@ finalCode: number
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-CompleteData-finalCode: int--><!--Device-CompleteData-finalCode: int-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -60,7 +66,9 @@ finalData: string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-CompleteData-finalData: string--><!--Device-CompleteData-finalData: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -76,7 +84,9 @@ info: WantAgent
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-CompleteData-info: WantAgent--><!--Device-CompleteData-info: WantAgent-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -92,6 +102,8 @@ want: Want
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-CompleteData-want: Want--><!--Device-CompleteData-want: Want-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

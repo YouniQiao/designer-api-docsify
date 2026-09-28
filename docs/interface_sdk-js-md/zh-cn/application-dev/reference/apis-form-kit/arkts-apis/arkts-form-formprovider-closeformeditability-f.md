@@ -18,6 +18,8 @@ function closeFormEditAbility(isMainPage?: boolean): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-formProvider-function closeFormEditAbility(isMainPage?: boolean): void--><!--Device-formProvider-function closeFormEditAbility(isMainPage?: boolean): void-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **参数：**

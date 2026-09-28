@@ -6,6 +6,8 @@ privateComputation的命名空间，提供隐私保护的计算能力。如隐�
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-unnamed-declare namespace privacyComputation--><!--Device-unnamed-declare namespace privacyComputation-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 ## 导入模块

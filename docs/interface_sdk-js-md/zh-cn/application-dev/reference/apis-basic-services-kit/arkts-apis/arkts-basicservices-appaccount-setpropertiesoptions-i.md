@@ -8,6 +8,8 @@ interface SetPropertiesOptions
 
 **起始版本：** 9
 
+<!--Device-appAccount-interface SetPropertiesOptions--><!--Device-appAccount-interface SetPropertiesOptions-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 ## 导入模块
@@ -28,6 +30,8 @@ parameters?: Record<string, Object>
 
 **起始版本：** 9
 
+<!--Device-SetPropertiesOptions-parameters?: Record<string, Object>--><!--Device-SetPropertiesOptions-parameters?: Record<string, Object>-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 ## properties
@@ -41,5 +45,7 @@ properties?: Record<string, Object>
 **类型：** Record&lt;string, Object&gt;
 
 **起始版本：** 9
+
+<!--Device-SetPropertiesOptions-properties?: Record<string, Object>--><!--Device-SetPropertiesOptions-properties?: Record<string, Object>-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount

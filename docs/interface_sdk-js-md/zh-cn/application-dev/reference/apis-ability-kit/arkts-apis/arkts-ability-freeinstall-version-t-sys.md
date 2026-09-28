@@ -8,6 +8,8 @@ export type Version = _PackInfo.Version
 
 **起始版本：** 9
 
+<!--Device-freeInstall-export type Version = _PackInfo.Version--><!--Device-freeInstall-export type Version = _PackInfo.Version-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **系统接口：** 此接口为系统接口。

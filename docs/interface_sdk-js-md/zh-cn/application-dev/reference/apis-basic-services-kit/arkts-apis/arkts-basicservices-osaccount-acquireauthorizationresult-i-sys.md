@@ -8,6 +8,8 @@ interface AcquireAuthorizationResult
 
 **起始版本：** 24
 
+<!--Device-osAccount-interface AcquireAuthorizationResult--><!--Device-osAccount-interface AcquireAuthorizationResult-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -34,6 +36,8 @@ true：表示是复用的授权结果。false：表示不是复用的授权结�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AcquireAuthorizationResult-isReused?: boolean--><!--Device-AcquireAuthorizationResult-isReused?: boolean-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +55,8 @@ privilege: string
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AcquireAuthorizationResult-privilege: string--><!--Device-AcquireAuthorizationResult-privilege: string-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -70,6 +76,8 @@ resultCode: AuthorizationResultCode
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AcquireAuthorizationResult-resultCode: AuthorizationResultCode--><!--Device-AcquireAuthorizationResult-resultCode: AuthorizationResultCode-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -88,6 +96,8 @@ token?: Uint8Array
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AcquireAuthorizationResult-token?: Uint8Array--><!--Device-AcquireAuthorizationResult-token?: Uint8Array-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -105,6 +115,8 @@ validityPeriod?: number
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AcquireAuthorizationResult-validityPeriod?: int--><!--Device-AcquireAuthorizationResult-validityPeriod?: int-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 

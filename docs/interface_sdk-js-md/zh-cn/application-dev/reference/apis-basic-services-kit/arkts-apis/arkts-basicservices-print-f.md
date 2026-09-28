@@ -18,6 +18,8 @@ function print(files: Array<string>, callback: AsyncCallback<PrintTask>): void
 
 **需要权限：** ohos.permission.PRINT
 
+<!--Device-print-function print(files: Array<string>, callback: AsyncCallback<PrintTask>): void--><!--Device-print-function print(files: Array<string>, callback: AsyncCallback<PrintTask>): void-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **参数：**
@@ -69,6 +71,8 @@ function print(files: Array<string>): Promise<PrintTask>
 **起始版本：** 10
 
 **需要权限：** ohos.permission.PRINT
+
+<!--Device-print-function print(files: Array<string>): Promise<PrintTask>--><!--Device-print-function print(files: Array<string>): Promise<PrintTask>-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -124,6 +128,8 @@ function print(files: Array<string>, context: Context, callback: AsyncCallback<P
 **起始版本：** 11
 
 **需要权限：** ohos.permission.PRINT
+
+<!--Device-print-function print(files: Array<string>, context: Context, callback: AsyncCallback<PrintTask>): void--><!--Device-print-function print(files: Array<string>, context: Context, callback: AsyncCallback<PrintTask>): void-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -193,6 +199,8 @@ function print(files: Array<string>, context: Context): Promise<PrintTask>
 **起始版本：** 11
 
 **需要权限：** ohos.permission.PRINT
+
+<!--Device-print-function print(files: Array<string>, context: Context): Promise<PrintTask>--><!--Device-print-function print(files: Array<string>, context: Context): Promise<PrintTask>-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -266,6 +274,8 @@ function print(jobName: string, printAdapter: PrintDocumentAdapter, printAttribu
 **起始版本：** 11
 
 **需要权限：** ohos.permission.PRINT
+
+<!--Device-print-function print(jobName: string, printAdapter: PrintDocumentAdapter, printAttributes: PrintAttributes,    context: Context): Promise<PrintTask>--><!--Device-print-function print(jobName: string, printAdapter: PrintDocumentAdapter, printAttributes: PrintAttributes,    context: Context): Promise<PrintTask>-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 

@@ -8,6 +8,8 @@ VPN 配置参数。
 
 **起始版本：** 10
 
+<!--Device-vpn-export interface VpnConfig--><!--Device-vpn-export interface VpnConfig-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ VPN虚拟网卡的 IP 地址。
 
 **起始版本：** 10
 
+<!--Device-VpnConfig-addresses: Array<LinkAddress>--><!--Device-VpnConfig-addresses: Array<LinkAddress>-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ string类型表示的包名不能接入VPN网络。
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 10
+
+<!--Device-VpnConfig-blockedApplications?: Array<string>--><!--Device-VpnConfig-blockedApplications?: Array<string>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -62,6 +68,8 @@ DNS服务器地址信息。
 
 **起始版本：** 10
 
+<!--Device-VpnConfig-dnsAddresses?: Array<string>--><!--Device-VpnConfig-dnsAddresses?: Array<string>-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +85,8 @@ isBlocking?: boolean
 **类型：** boolean
 
 **起始版本：** 10
+
+<!--Device-VpnConfig-isBlocking?: boolean--><!--Device-VpnConfig-isBlocking?: boolean-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -94,6 +104,8 @@ isIPv4Accepted?: boolean
 
 **起始版本：** 10
 
+<!--Device-VpnConfig-isIPv4Accepted?: boolean--><!--Device-VpnConfig-isIPv4Accepted?: boolean-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -109,6 +121,8 @@ isIPv6Accepted?: boolean
 **类型：** boolean
 
 **起始版本：** 10
+
+<!--Device-VpnConfig-isIPv6Accepted?: boolean--><!--Device-VpnConfig-isIPv6Accepted?: boolean-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -126,6 +140,8 @@ isLegacy?: boolean
 
 **起始版本：** 10
 
+<!--Device-VpnConfig-isLegacy?: boolean--><!--Device-VpnConfig-isLegacy?: boolean-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -141,6 +157,8 @@ mtu?: number
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-VpnConfig-mtu?: int--><!--Device-VpnConfig-mtu?: int-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -158,6 +176,8 @@ VPN虚拟网卡的路由信息。
 
 **起始版本：** 10
 
+<!--Device-VpnConfig-routes?: Array<RouteInfo>--><!--Device-VpnConfig-routes?: Array<RouteInfo>-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -173,6 +193,8 @@ DNS 的搜索域列表。
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 10
+
+<!--Device-VpnConfig-searchDomains?: Array<string>--><!--Device-VpnConfig-searchDomains?: Array<string>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -190,6 +212,8 @@ string类型表示的包名可以接入VPN网络。
 
 **起始版本：** 10
 
+<!--Device-VpnConfig-trustedApplications?: Array<string>--><!--Device-VpnConfig-trustedApplications?: Array<string>-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -205,6 +229,8 @@ VPN唯一标识。
 **类型：** string
 
 **起始版本：** 20
+
+<!--Device-VpnConfig-vpnId?: string--><!--Device-VpnConfig-vpnId?: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 

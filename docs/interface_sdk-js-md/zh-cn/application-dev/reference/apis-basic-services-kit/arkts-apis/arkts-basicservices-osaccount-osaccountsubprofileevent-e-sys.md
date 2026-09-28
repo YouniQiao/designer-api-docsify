@@ -8,6 +8,8 @@ enum OsAccountSubProfileEvent
 
 **起始版本：** 26.0.0
 
+<!--Device-osAccount-enum OsAccountSubProfileEvent--><!--Device-osAccount-enum OsAccountSubProfileEvent-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -23,6 +25,8 @@ CREATED = 0
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-OsAccountSubProfileEvent-CREATED = 0--><!--Device-OsAccountSubProfileEvent-CREATED = 0-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -40,6 +44,8 @@ DELETED = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OsAccountSubProfileEvent-DELETED = 1--><!--Device-OsAccountSubProfileEvent-DELETED = 1-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -56,6 +62,8 @@ SWITCHING = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OsAccountSubProfileEvent-SWITCHING = 2--><!--Device-OsAccountSubProfileEvent-SWITCHING = 2-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -71,6 +79,8 @@ SWITCHED = 3
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-OsAccountSubProfileEvent-SWITCHED = 3--><!--Device-OsAccountSubProfileEvent-SWITCHED = 3-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 

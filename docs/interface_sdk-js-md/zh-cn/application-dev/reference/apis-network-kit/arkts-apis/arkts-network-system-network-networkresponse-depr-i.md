@@ -8,6 +8,8 @@ This module provides the Network Response.
 
 **起始版本：** 3
 
+<!--Device-unnamed-export interface NetworkResponse--><!--Device-unnamed-export interface NetworkResponse-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## 导入模块
@@ -27,6 +29,8 @@ metered: boolean
 
 **起始版本：** 3
 
+<!--Device-NetworkResponse-metered: boolean--><!--Device-NetworkResponse-metered: boolean-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## type
@@ -40,5 +44,7 @@ type: string
 **类型：** string
 
 **起始版本：** 3
+
+<!--Device-NetworkResponse-type: string--><!--Device-NetworkResponse-type: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core

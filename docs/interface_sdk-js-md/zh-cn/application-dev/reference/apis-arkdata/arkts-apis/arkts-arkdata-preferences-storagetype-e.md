@@ -18,6 +18,8 @@ Preferences的存储模式枚举。
 
 **起始版本：** 18
 
+<!--Device-preferences-enum StorageType--><!--Device-preferences-enum StorageType-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
 ## XML
@@ -32,7 +34,9 @@ XML = 0
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-StorageType-XML = 0--><!--Device-StorageType-XML = 0-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
@@ -48,6 +52,8 @@ GSKV
 
 **起始版本：** 18
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-StorageType-GSKV--><!--Device-StorageType-GSKV-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core

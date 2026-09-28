@@ -10,6 +10,8 @@ interface SecurityEvent
 
 **起始版本：** 12
 
+<!--Device-securityGuard-interface SecurityEvent--><!--Device-securityGuard-interface SecurityEvent-End-->
+
 **系统能力：** SystemCapability.Security.SecurityGuard
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ content: string
 
 **起始版本：** 12
 
+<!--Device-SecurityEvent-content: string--><!--Device-SecurityEvent-content: string-End-->
+
 **系统能力：** SystemCapability.Security.SecurityGuard
 
 **系统接口：** 此接口为系统接口。
@@ -47,6 +51,8 @@ eventId: number
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-SecurityEvent-eventId: number--><!--Device-SecurityEvent-eventId: number-End-->
 
 **系统能力：** SystemCapability.Security.SecurityGuard
 
@@ -64,6 +70,8 @@ timestamp?: string
 
 **起始版本：** 12
 
+<!--Device-SecurityEvent-timestamp?: string--><!--Device-SecurityEvent-timestamp?: string-End-->
+
 **系统能力：** SystemCapability.Security.SecurityGuard
 
 **系统接口：** 此接口为系统接口。
@@ -79,6 +87,8 @@ version: string
 **类型：** string
 
 **起始版本：** 12
+
+<!--Device-SecurityEvent-version: string--><!--Device-SecurityEvent-version: string-End-->
 
 **系统能力：** SystemCapability.Security.SecurityGuard
 

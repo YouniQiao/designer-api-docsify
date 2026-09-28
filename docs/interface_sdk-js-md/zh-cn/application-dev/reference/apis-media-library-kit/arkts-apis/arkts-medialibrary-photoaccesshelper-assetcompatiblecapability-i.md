@@ -8,6 +8,8 @@ interface AssetCompatibleCapability
 
 **起始版本：** 24
 
+<!--Device-photoAccessHelper-interface AssetCompatibleCapability--><!--Device-photoAccessHelper-interface AssetCompatibleCapability-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
@@ -32,7 +34,9 @@ supportedHighResolution: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-AssetCompatibleCapability-supportedHighResolution: boolean--><!--Device-AssetCompatibleCapability-supportedHighResolution: boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -53,6 +57,8 @@ supportedMimeType?: Array<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-AssetCompatibleCapability-supportedMimeType?: Array<string>--><!--Device-AssetCompatibleCapability-supportedMimeType?: Array<string>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core

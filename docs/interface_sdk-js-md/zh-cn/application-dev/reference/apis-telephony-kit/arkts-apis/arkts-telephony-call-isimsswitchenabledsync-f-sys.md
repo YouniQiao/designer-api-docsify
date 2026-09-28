@@ -16,6 +16,8 @@ function isImsSwitchEnabledSync(slotId: number): boolean
 
 **起始版本：** 12
 
+<!--Device-call-function isImsSwitchEnabledSync(slotId: int): boolean--><!--Device-call-function isImsSwitchEnabledSync(slotId: int): boolean-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。

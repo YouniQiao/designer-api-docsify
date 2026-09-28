@@ -18,6 +18,8 @@ function getCallWaitingStatus(slotId: number, callback: AsyncCallback<CallWaitin
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-call-function getCallWaitingStatus(slotId: int, callback: AsyncCallback<CallWaitingStatus>): void--><!--Device-call-function getCallWaitingStatus(slotId: int, callback: AsyncCallback<CallWaitingStatus>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -69,6 +71,8 @@ function getCallWaitingStatus(slotId: number): Promise<CallWaitingStatus>
 **起始版本：** 7
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
+
+<!--Device-call-function getCallWaitingStatus(slotId: int): Promise<CallWaitingStatus>--><!--Device-call-function getCallWaitingStatus(slotId: int): Promise<CallWaitingStatus>-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 

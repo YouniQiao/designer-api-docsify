@@ -8,6 +8,8 @@ class AudioViewPicker
 
 **起始版本：** 9
 
+<!--Device-picker-class AudioViewPicker--><!--Device-picker-class AudioViewPicker-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 ## 导入模块
@@ -26,7 +28,9 @@ constructor()
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AudioViewPicker-constructor()--><!--Device-AudioViewPicker-constructor()-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -48,7 +52,9 @@ constructor(context: Context)
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AudioViewPicker-constructor(context: Context)--><!--Device-AudioViewPicker-constructor(context: Context)-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -56,7 +62,7 @@ constructor(context: Context)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 应用上下文（仅支持UIAbilityContext）。Stage模型的应用Context定义见Context。 |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 应用上下文（仅支持UIAbilityContext）。Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context.md)。 |
 
 **示例**
 
@@ -96,7 +102,9 @@ save(option?: AudioSaveOptions): Promise<Array<string>>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AudioViewPicker-save(option?: AudioSaveOptions): Promise<Array<string>>--><!--Device-AudioViewPicker-save(option?: AudioSaveOptions): Promise<Array<string>>-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -147,6 +155,8 @@ save(option: AudioSaveOptions, callback: AsyncCallback<Array<string>>): void
 
 **起始版本：** 9
 
+<!--Device-AudioViewPicker-save(option: AudioSaveOptions, callback: AsyncCallback<Array<string>>): void--><!--Device-AudioViewPicker-save(option: AudioSaveOptions, callback: AsyncCallback<Array<string>>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **参数：**
@@ -193,6 +203,8 @@ save(callback: AsyncCallback<Array<string>>): void
 
 **起始版本：** 9
 
+<!--Device-AudioViewPicker-save(callback: AsyncCallback<Array<string>>): void--><!--Device-AudioViewPicker-save(callback: AsyncCallback<Array<string>>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **参数：**
@@ -234,7 +246,9 @@ select(option?: AudioSelectOptions): Promise<Array<string>>
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AudioViewPicker-select(option?: AudioSelectOptions): Promise<Array<string>>--><!--Device-AudioViewPicker-select(option?: AudioSelectOptions): Promise<Array<string>>-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -284,6 +298,8 @@ select(option: AudioSelectOptions, callback: AsyncCallback<Array<string>>): void
 
 **起始版本：** 9
 
+<!--Device-AudioViewPicker-select(option: AudioSelectOptions, callback: AsyncCallback<Array<string>>): void--><!--Device-AudioViewPicker-select(option: AudioSelectOptions, callback: AsyncCallback<Array<string>>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **参数：**
@@ -328,6 +344,8 @@ select(callback: AsyncCallback<Array<string>>): void
 通过选择模式拉起audioPicker界面，用户可以选择一个或多个音频文件。使用callback异步回调。**系统能力**：SystemCapability.FileManagement.UserFileService
 
 **起始版本：** 9
+
+<!--Device-AudioViewPicker-select(callback: AsyncCallback<Array<string>>): void--><!--Device-AudioViewPicker-select(callback: AsyncCallback<Array<string>>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 

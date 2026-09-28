@@ -20,6 +20,8 @@ function getAddressesByNameWithOptions(host: string, option?: QueryOptions): Pro
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-connection-function getAddressesByNameWithOptions(host: string, option?: QueryOptions): Promise<Array<NetAddress>>--><!--Device-connection-function getAddressesByNameWithOptions(host: string, option?: QueryOptions): Promise<Array<NetAddress>>-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**

@@ -24,6 +24,8 @@ function download(config: DownloadConfig, callback: AsyncCallback<DownloadTask>)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-request-function download(config: DownloadConfig, callback: AsyncCallback<DownloadTask>): void--><!--Device-request-function download(config: DownloadConfig, callback: AsyncCallback<DownloadTask>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Download
 
 **参数：**
@@ -74,6 +76,8 @@ function download(config: DownloadConfig): Promise<DownloadTask>
 **需要权限：** ohos.permission.INTERNET
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-request-function download(config: DownloadConfig): Promise<DownloadTask>--><!--Device-request-function download(config: DownloadConfig): Promise<DownloadTask>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Download
 

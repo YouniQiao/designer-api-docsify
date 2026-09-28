@@ -18,6 +18,8 @@ function enableCellularData(callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-data-function enableCellularData(callback: AsyncCallback<void>): void--><!--Device-data-function enableCellularData(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CellularData
 
 **系统接口：** 此接口为系统接口。
@@ -69,6 +71,8 @@ function enableCellularData(): Promise<void>
 **起始版本：** 7
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
+
+<!--Device-data-function enableCellularData(): Promise<void>--><!--Device-data-function enableCellularData(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Telephony.CellularData
 

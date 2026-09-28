@@ -12,6 +12,8 @@ interface MaxScreenWantAgent
 
 **替代接口：** [MaxScreenWantAgent](arkts-backgroundtasks-reminderagentmanager-maxscreenwantagent-i.md)
 
+<!--Device-reminderAgent-interface MaxScreenWantAgent--><!--Device-reminderAgent-interface MaxScreenWantAgent-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## 导入模块
@@ -36,6 +38,8 @@ abilityName: string
 
 **替代接口：** [abilityName](arkts-backgroundtasks-reminderagentmanager-maxscreenwantagent-i.md#abilityname)
 
+<!--Device-MaxScreenWantAgent-abilityName: string--><!--Device-MaxScreenWantAgent-abilityName: string-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## pkgName
@@ -53,5 +57,7 @@ pkgName: string
 **废弃版本：** 9
 
 **替代接口：** [pkgName](arkts-backgroundtasks-reminderagentmanager-maxscreenwantagent-i.md#pkgname)
+
+<!--Device-MaxScreenWantAgent-pkgName: string--><!--Device-MaxScreenWantAgent-pkgName: string-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent

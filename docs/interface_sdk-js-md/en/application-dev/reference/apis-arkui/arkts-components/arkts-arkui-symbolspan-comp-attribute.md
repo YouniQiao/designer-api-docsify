@@ -4,11 +4,13 @@
 declare class SymbolSpanAttribute extends CommonMethod<SymbolSpanAttribute>
 ```
 
-The [universal attributes](arkts-arkui-common-comp.md#common) are not supported. Only the following attributes are supported.
+The [universal attributes](arkts-arkui-common-comp.md) are not supported. Only the following attributes are supported.
 
 **Inheritance/Implementation:** SymbolSpanAttribute extends CommonMethod<SymbolSpanAttribute>
 
 **Since:** 11
+
+<!--Device-unnamed-declare class SymbolSpanAttribute extends CommonMethod<SymbolSpanAttribute>--><!--Device-unnamed-declare class SymbolSpanAttribute extends CommonMethod<SymbolSpanAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,6 +27,8 @@ Creates an attribute modifier.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SymbolSpanAttribute-attributeModifier(modifier: AttributeModifier<SymbolSpanAttribute>): SymbolSpanAttribute--><!--Device-SymbolSpanAttribute-attributeModifier(modifier: AttributeModifier<SymbolSpanAttribute>): SymbolSpanAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -58,6 +62,8 @@ For the effects of different effect strategies, see [Example 1: Setting Renderin
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-SymbolSpanAttribute-effectStrategy(value: SymbolEffectStrategy): SymbolSpanAttribute--><!--Device-SymbolSpanAttribute-effectStrategy(value: SymbolEffectStrategy): SymbolSpanAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -86,6 +92,8 @@ Sets the color of the **SymbolSpan** component. If this API is not called, the d
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-SymbolSpanAttribute-fontColor(value: Array<ResourceColor>): SymbolSpanAttribute--><!--Device-SymbolSpanAttribute-fontColor(value: Array<ResourceColor>): SymbolSpanAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -113,6 +121,8 @@ Sets the size of the **SymbolSpan** component. When the value is of the string t
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-SymbolSpanAttribute-fontSize(value: number | string | Resource): SymbolSpanAttribute--><!--Device-SymbolSpanAttribute-fontSize(value: number | string | Resource): SymbolSpanAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -144,6 +154,8 @@ The **sys.symbol.ohos_lungs** icon does not support font weight setting.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-SymbolSpanAttribute-fontWeight(value: number | FontWeight | string): SymbolSpanAttribute--><!--Device-SymbolSpanAttribute-fontWeight(value: number | FontWeight | string): SymbolSpanAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -171,6 +183,8 @@ The sys.symbol.ohos_lungs icon does not support setting fontWeight.
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
+
+<!--Device-SymbolSpanAttribute-fontWeight(value: number | FontWeight | ResourceStr, fontWeightConfigs?: FontWeightConfigs): SymbolSpanAttribute--><!--Device-SymbolSpanAttribute-fontWeight(value: number | FontWeight | ResourceStr, fontWeightConfigs?: FontWeightConfigs): SymbolSpanAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -202,6 +216,8 @@ SINGLE indicates single-color rendering, which is suitable for scenarios where i
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-SymbolSpanAttribute-renderingStrategy(value: SymbolRenderingStrategy): SymbolSpanAttribute--><!--Device-SymbolSpanAttribute-renderingStrategy(value: SymbolRenderingStrategy): SymbolSpanAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

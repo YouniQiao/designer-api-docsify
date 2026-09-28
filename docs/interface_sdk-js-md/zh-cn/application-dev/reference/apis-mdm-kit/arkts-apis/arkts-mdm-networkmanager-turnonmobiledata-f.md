@@ -20,6 +20,8 @@ function turnOnMobileData(admin: Want, isForce: boolean): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-networkManager-function turnOnMobileData(admin: Want, isForce: boolean): void--><!--Device-networkManager-function turnOnMobileData(admin: Want, isForce: boolean): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**

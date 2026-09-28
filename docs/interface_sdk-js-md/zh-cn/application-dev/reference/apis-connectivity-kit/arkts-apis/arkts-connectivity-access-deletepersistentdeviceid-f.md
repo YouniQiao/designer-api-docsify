@@ -20,7 +20,9 @@ function deletePersistentDeviceId(deviceId: string): Promise<void>
 
 **需要权限：** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.PERSISTENT_BLUETOOTH_PEERS_MAC
 
-**原子化服务API：** 从API版本16开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本16开始，该接口支持在原子化服务中使用。
+
+<!--Device-access-function deletePersistentDeviceId(deviceId: string): Promise<void>--><!--Device-access-function deletePersistentDeviceId(deviceId: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

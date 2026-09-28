@@ -30,6 +30,8 @@ Creates a page component for the Stepper container.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-StepperItemInterface-(): StepperItemAttribute--><!--Device-StepperItemInterface-(): StepperItemAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Summary

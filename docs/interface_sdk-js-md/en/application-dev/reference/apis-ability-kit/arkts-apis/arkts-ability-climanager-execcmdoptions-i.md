@@ -8,6 +8,8 @@ Describes the options for executing a raw command string via [execCmd](arkts-abi
 
 **Since:** 26.0.1
 
+<!--Device-cliManager-interface ExecCmdOptions--><!--Device-cliManager-interface ExecCmdOptions-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 ## Modules to Import
@@ -34,6 +36,8 @@ When set to **true**, the [execCmd](arkts-ability-climanager-execcmd-f.md) metho
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExecCmdOptions-background?: boolean--><!--Device-ExecCmdOptions-background?: boolean-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 ## callback
@@ -51,6 +55,8 @@ If provided, the system automatically subscribes to the session events (such as 
 **Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExecCmdOptions-callback?: ToolEventCallback--><!--Device-ExecCmdOptions-callback?: ToolEventCallback-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -70,6 +76,8 @@ The keys are variable names and the values are their corresponding string values
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExecCmdOptions-env?: Record<string, string>--><!--Device-ExecCmdOptions-env?: Record<string, string>-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 ## policy
@@ -87,6 +95,8 @@ The policy string is interpreted by the system service to enforce additional sec
 **Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExecCmdOptions-policy?: string--><!--Device-ExecCmdOptions-policy?: string-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -108,6 +118,8 @@ If the command process runs longer than this duration, it is forcibly terminated
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExecCmdOptions-timeout?: long--><!--Device-ExecCmdOptions-timeout?: long-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 ## workDir
@@ -125,6 +137,8 @@ If not specified, the default working directory of the system service is used.
 **Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExecCmdOptions-workDir?: string--><!--Device-ExecCmdOptions-workDir?: string-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -145,5 +159,7 @@ This value is effective only when background is **false**. It specifies how long
 **Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExecCmdOptions-yieldMs?: long--><!--Device-ExecCmdOptions-yieldMs?: long-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core

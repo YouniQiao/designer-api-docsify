@@ -10,6 +10,8 @@ Declare struct ExceptionPromptV2 higher-order component. The exception prompt co
 
 **Decorator:** @ComponentV2
 
+<!--Device-unnamed-export declare struct ExceptionPromptV2--><!--Device-unnamed-export declare struct ExceptionPromptV2-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -34,6 +36,8 @@ Callback invoked when the icon on the right is clicked.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ExceptionPromptV2-onActionTextClick?: OnActionTextClickCallback--><!--Device-ExceptionPromptV2-onActionTextClick?: OnActionTextClickCallback-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onTipClick
@@ -52,6 +56,8 @@ Callback invoked when the prompt text on the left is clicked.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ExceptionPromptV2-onTipClick?: OnTipClickCallback--><!--Device-ExceptionPromptV2-onTipClick?: OnTipClickCallback-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## options
@@ -69,5 +75,7 @@ ExceptionPromptV2 configuration.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ExceptionPromptV2-options: PromptOptionsV2--><!--Device-ExceptionPromptV2-options: PromptOptionsV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

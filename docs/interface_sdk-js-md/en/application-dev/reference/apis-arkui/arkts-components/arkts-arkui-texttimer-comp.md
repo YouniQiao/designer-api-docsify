@@ -27,6 +27,8 @@ Create TextTimer component.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
+<!--Device-TextTimerInterface-(options?: TextTimerOptions): TextTimerAttribute--><!--Device-TextTimerInterface-(options?: TextTimerOptions): TextTimerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

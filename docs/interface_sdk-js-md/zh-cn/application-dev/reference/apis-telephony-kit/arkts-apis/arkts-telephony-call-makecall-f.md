@@ -16,7 +16,9 @@ function makeCall(phoneNumber: string, callback: AsyncCallback<void>): void
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-call-function makeCall(phoneNumber: string, callback: AsyncCallback<void>): void--><!--Device-call-function makeCall(phoneNumber: string, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Applications.Contacts
 
@@ -64,7 +66,9 @@ function makeCall(phoneNumber: string): Promise<void>
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-call-function makeCall(phoneNumber: string): Promise<void>--><!--Device-call-function makeCall(phoneNumber: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Applications.Contacts
 
@@ -118,6 +122,8 @@ function makeCall(phoneNumber: string, options?: MakeCallOptions): Promise<void>
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-call-function makeCall(phoneNumber: string, options?: MakeCallOptions): Promise<void>--><!--Device-call-function makeCall(phoneNumber: string, options?: MakeCallOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Applications.Contacts
 
@@ -174,7 +180,9 @@ function makeCall(context: Context, phoneNumber: string): Promise<void>
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-call-function makeCall(context: Context, phoneNumber: string): Promise<void>--><!--Device-call-function makeCall(context: Context, phoneNumber: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Applications.Contacts
 

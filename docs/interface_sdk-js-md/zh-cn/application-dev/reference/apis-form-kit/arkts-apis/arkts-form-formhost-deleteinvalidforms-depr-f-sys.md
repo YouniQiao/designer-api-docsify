@@ -21,6 +21,8 @@ function deleteInvalidForms(formIds: Array<string>, callback: AsyncCallback<numb
 
 **需要权限：** ohos.permission.REQUIRE_FORM
 
+<!--Device-formHost-function deleteInvalidForms(formIds: Array<string>, callback: AsyncCallback<number>): void--><!--Device-formHost-function deleteInvalidForms(formIds: Array<string>, callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -65,6 +67,8 @@ function deleteInvalidForms(formIds: Array<string>): Promise<number>
 **替代接口：** [deleteInvalidForms](arkts-form-formhost-deleteinvalidforms-f-sys.md)
 
 **需要权限：** ohos.permission.REQUIRE_FORM
+
+<!--Device-formHost-function deleteInvalidForms(formIds: Array<string>): Promise<number>--><!--Device-formHost-function deleteInvalidForms(formIds: Array<string>): Promise<number>-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 

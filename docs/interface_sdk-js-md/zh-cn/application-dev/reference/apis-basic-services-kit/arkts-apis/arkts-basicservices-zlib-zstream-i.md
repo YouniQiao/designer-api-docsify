@@ -8,6 +8,8 @@ interface ZStream
 
 **起始版本：** 12
 
+<!--Device-zlib-interface ZStream--><!--Device-zlib-interface ZStream-End-->
+
 **系统能力：** SystemCapability.BundleManager.Zlib
 
 ## 导入模块
@@ -28,7 +30,9 @@ adler?: number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ZStream-adler?: long--><!--Device-ZStream-adler?: long-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -44,7 +48,9 @@ nextIn可用的字节数。
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ZStream-availableIn?: int--><!--Device-ZStream-availableIn?: int-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -60,7 +66,9 @@ nextOut的剩余可用字节数。
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ZStream-availableOut?: int--><!--Device-ZStream-availableOut?: int-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -76,7 +84,9 @@ dataType?: number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ZStream-dataType?: int--><!--Device-ZStream-dataType?: int-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -92,7 +102,9 @@ nextIn?: ArrayBuffer
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ZStream-nextIn?: ArrayBuffer--><!--Device-ZStream-nextIn?: ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -108,7 +120,9 @@ nextOut?: ArrayBuffer
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ZStream-nextOut?: ArrayBuffer--><!--Device-ZStream-nextOut?: ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -124,7 +138,9 @@ totalIn?: number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ZStream-totalIn?: long--><!--Device-ZStream-totalIn?: long-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -140,6 +156,8 @@ totalOut?: number
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ZStream-totalOut?: long--><!--Device-ZStream-totalOut?: long-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib

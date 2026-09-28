@@ -8,6 +8,8 @@ class MessageOption
 
 **起始版本：** 7
 
+<!--Device-rpc-class MessageOption--><!--Device-rpc-class MessageOption-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 ## 导入模块
@@ -27,6 +29,8 @@ MessageOption构造函数。
 **起始版本：** 7
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-MessageOption-constructor(syncFlags?: number, waitTime?: number)--><!--Device-MessageOption-constructor(syncFlags?: number, waitTime?: number)-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -63,6 +67,8 @@ MessageOption构造函数。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-MessageOption-constructor(async?: boolean)--><!--Device-MessageOption-constructor(async?: boolean)-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -93,7 +99,9 @@ getFlags(): number
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-MessageOption-getFlags(): int--><!--Device-MessageOption-getFlags(): int-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -133,7 +141,9 @@ getWaitTime(): number
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-MessageOption-getWaitTime(): int--><!--Device-MessageOption-getWaitTime(): int-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -171,7 +181,9 @@ isAsync(): boolean
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-MessageOption-isAsync(): boolean--><!--Device-MessageOption-isAsync(): boolean-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -205,7 +217,9 @@ setAsync(isAsync: boolean): void
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-MessageOption-setAsync(isAsync: boolean): void--><!--Device-MessageOption-setAsync(isAsync: boolean): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -239,7 +253,9 @@ setFlags(flags: number): void
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-MessageOption-setFlags(flags: int): void--><!--Device-MessageOption-setFlags(flags: int): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -276,7 +292,9 @@ setWaitTime(waitTime: number): void
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-MessageOption-setWaitTime(waitTime: int): void--><!--Device-MessageOption-setWaitTime(waitTime: int): void-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -318,6 +336,8 @@ static readonly TF_ACCEPT_FDS: number
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-MessageOption-static readonly TF_ACCEPT_FDS: number--><!--Device-MessageOption-static readonly TF_ACCEPT_FDS: number-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 ## TF_ASYNC
@@ -336,6 +356,8 @@ static readonly TF_ASYNC: number
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-MessageOption-static readonly TF_ASYNC: number--><!--Device-MessageOption-static readonly TF_ASYNC: number-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 ## TF_SYNC
@@ -353,6 +375,8 @@ static readonly TF_SYNC: number
 **起始版本：** 7
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-MessageOption-static readonly TF_SYNC: number--><!--Device-MessageOption-static readonly TF_SYNC: number-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -373,5 +397,7 @@ RPC等待时间（单位：秒），IPC场景下无效。默认等待为8秒（�
 **起始版本：** 7
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-MessageOption-static readonly TF_WAIT_TIME: number--><!--Device-MessageOption-static readonly TF_WAIT_TIME: number-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core

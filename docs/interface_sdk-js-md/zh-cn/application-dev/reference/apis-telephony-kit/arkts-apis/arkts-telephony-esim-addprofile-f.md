@@ -18,6 +18,8 @@ function addProfile(profile: DownloadableProfile): Promise<boolean>
 
 **需要权限：** ohos.permission.SET_TELEPHONY_ESIM_STATE_OPEN
 
+<!--Device-eSIM-function addProfile(profile: DownloadableProfile): Promise<boolean>--><!--Device-eSIM-function addProfile(profile: DownloadableProfile): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **参数：**

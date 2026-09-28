@@ -8,6 +8,8 @@ Represents an operation for deleting data.
 
 **Since:** 12
 
+<!--Device-unnamed-interface DataDeleteOperation--><!--Device-unnamed-interface DataDeleteOperation-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## count
@@ -28,6 +30,8 @@ Number of data items to delete. It must be a positive integer (greater than 0), 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DataDeleteOperation-count?: number--><!--Device-DataDeleteOperation-count?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## index
@@ -46,6 +50,8 @@ Index of the start position for deletion. The value range is [0, data source len
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DataDeleteOperation-index: number--><!--Device-DataDeleteOperation-index: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## type
@@ -63,5 +69,7 @@ Data deletion type.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DataDeleteOperation-type: DataOperationType.DELETE--><!--Device-DataDeleteOperation-type: DataOperationType.DELETE-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

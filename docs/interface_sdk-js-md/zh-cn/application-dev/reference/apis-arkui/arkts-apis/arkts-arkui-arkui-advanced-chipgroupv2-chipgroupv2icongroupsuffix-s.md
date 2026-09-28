@@ -12,6 +12,8 @@ ChipGroupV2组件提供操作块群组容器，支持单选或多选、自定义
 
 **装饰器类型：** @ComponentV2
 
+<!--Device-unnamed-export declare struct ChipGroupV2IconGroupSuffix--><!--Device-unnamed-export declare struct ChipGroupV2IconGroupSuffix-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -34,6 +36,8 @@ build函数用于构造ChipGroupV2IconGroupSuffix组件。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-ChipGroupV2IconGroupSuffix-build(): void--><!--Device-ChipGroupV2IconGroupSuffix-build(): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## iconBackgroundSystemMaterial
@@ -53,6 +57,8 @@ iconBackgroundSystemMaterial?: uiMaterial.Material
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-ChipGroupV2IconGroupSuffix-iconBackgroundSystemMaterial?: uiMaterial.Material--><!--Device-ChipGroupV2IconGroupSuffix-iconBackgroundSystemMaterial?: uiMaterial.Material-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -75,5 +81,7 @@ items: Array<ChipGroupV2IconItemConfig | SymbolGlyphModifier | ChipGroupV2Symbol
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-ChipGroupV2IconGroupSuffix-items: Array<ChipGroupV2IconItemConfig | SymbolGlyphModifier | ChipGroupV2SymbolItemConfig>--><!--Device-ChipGroupV2IconGroupSuffix-items: Array<ChipGroupV2IconItemConfig | SymbolGlyphModifier | ChipGroupV2SymbolItemConfig>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

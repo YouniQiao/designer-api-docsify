@@ -8,6 +8,8 @@ interface StatisticInfo
 
 **起始版本：** 12
 
+<!--Device-cloudData-interface StatisticInfo--><!--Device-cloudData-interface StatisticInfo-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ inserted: number
 
 **起始版本：** 12
 
+<!--Device-StatisticInfo-inserted: int--><!--Device-StatisticInfo-inserted: int-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ normal: number
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-StatisticInfo-normal: int--><!--Device-StatisticInfo-normal: int-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -62,6 +68,8 @@ table: string
 
 **起始版本：** 12
 
+<!--Device-StatisticInfo-table: string--><!--Device-StatisticInfo-table: string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +85,8 @@ updated: number
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-StatisticInfo-updated: int--><!--Device-StatisticInfo-updated: int-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 

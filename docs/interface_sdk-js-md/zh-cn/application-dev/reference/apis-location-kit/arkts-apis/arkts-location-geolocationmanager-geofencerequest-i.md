@@ -8,6 +8,8 @@ export interface GeofenceRequest
 
 **起始版本：** 9
 
+<!--Device-geoLocationManager-export interface GeofenceRequest--><!--Device-geoLocationManager-export interface GeofenceRequest-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 ## 导入模块
@@ -28,6 +30,8 @@ geofence: Geofence
 
 **起始版本：** 9
 
+<!--Device-GeofenceRequest-geofence: Geofence--><!--Device-GeofenceRequest-geofence: Geofence-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 ## scenario
@@ -41,5 +45,7 @@ scenario: LocationRequestScenario
 **类型：** [LocationRequestScenario](arkts-location-geolocationmanager-locationrequestscenario-e.md)
 
 **起始版本：** 9
+
+<!--Device-GeofenceRequest-scenario: LocationRequestScenario--><!--Device-GeofenceRequest-scenario: LocationRequestScenario-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geofence

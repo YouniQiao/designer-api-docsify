@@ -12,6 +12,8 @@ interface StoreConfig
 
 **替代接口：** [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)
 
+<!--Device-rdb-interface StoreConfig--><!--Device-rdb-interface StoreConfig-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## 导入模块
@@ -34,5 +36,7 @@ name: string
 **废弃版本：** 9
 
 **替代接口：** [name](arkts-arkdata-relationalstore-storeconfig-i.md#name)
+
+<!--Device-StoreConfig-name: string--><!--Device-StoreConfig-name: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core

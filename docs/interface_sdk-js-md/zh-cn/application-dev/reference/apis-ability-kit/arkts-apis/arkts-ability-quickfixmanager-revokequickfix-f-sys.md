@@ -18,6 +18,8 @@ function revokeQuickFix(bundleName: string, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED and ohos.permission.INSTALL_BUNDLE
 
+<!--Device-quickFixManager-function revokeQuickFix(bundleName: string, callback: AsyncCallback<void>): void--><!--Device-quickFixManager-function revokeQuickFix(bundleName: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.QuickFix
 
 **系统接口：** 此接口为系统接口。
@@ -67,6 +69,8 @@ function revokeQuickFix(bundleName: string): Promise<void>
 **起始版本：** 10
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED and ohos.permission.INSTALL_BUNDLE
+
+<!--Device-quickFixManager-function revokeQuickFix(bundleName: string): Promise<void>--><!--Device-quickFixManager-function revokeQuickFix(bundleName: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.QuickFix
 

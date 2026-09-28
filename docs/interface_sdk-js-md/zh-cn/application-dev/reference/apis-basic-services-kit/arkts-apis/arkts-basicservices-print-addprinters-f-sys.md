@@ -18,6 +18,8 @@ function addPrinters(printers: Array<PrinterInfo>, callback: AsyncCallback<void>
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-print-function addPrinters(printers: Array<PrinterInfo>, callback: AsyncCallback<void>): void--><!--Device-print-function addPrinters(printers: Array<PrinterInfo>, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **系统接口：** 此接口为系统接口。
@@ -75,6 +77,8 @@ function addPrinters(printers: Array<PrinterInfo>): Promise<void>
 **起始版本：** 10
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
+
+<!--Device-print-function addPrinters(printers: Array<PrinterInfo>): Promise<void>--><!--Device-print-function addPrinters(printers: Array<PrinterInfo>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 

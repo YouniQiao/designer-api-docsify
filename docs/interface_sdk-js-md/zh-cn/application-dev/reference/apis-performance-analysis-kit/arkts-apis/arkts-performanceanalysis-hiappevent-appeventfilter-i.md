@@ -12,6 +12,8 @@ interface AppEventFilter
 
 **起始版本：** 9
 
+<!--Device-hiAppEvent-interface AppEventFilter--><!--Device-hiAppEvent-interface AppEventFilter-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 ## 导入模块
@@ -32,7 +34,9 @@ domain: string
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-AppEventFilter-domain: string--><!--Device-AppEventFilter-domain: string-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -48,7 +52,9 @@ eventTypes?: EventType[]
 
 **起始版本：** 9
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-AppEventFilter-eventTypes?: EventType[]--><!--Device-AppEventFilter-eventTypes?: EventType[]-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -64,6 +70,8 @@ names?: string[]
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-AppEventFilter-names?: string[]--><!--Device-AppEventFilter-names?: string[]-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent

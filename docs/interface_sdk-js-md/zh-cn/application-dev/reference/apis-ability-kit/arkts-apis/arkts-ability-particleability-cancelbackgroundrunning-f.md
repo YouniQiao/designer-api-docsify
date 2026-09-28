@@ -22,6 +22,8 @@ function cancelBackgroundRunning(callback: AsyncCallback<void>): void
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-particleAbility-function cancelBackgroundRunning(callback: AsyncCallback<void>): void--><!--Device-particleAbility-function cancelBackgroundRunning(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 **参数：**
@@ -65,6 +67,8 @@ function cancelBackgroundRunning(): Promise<void>
 **替代接口：** [stopBackgroundRunning](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-backgroundtaskmanager-stopbackgroundrunning-f.md)
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-particleAbility-function cancelBackgroundRunning(): Promise<void>--><!--Device-particleAbility-function cancelBackgroundRunning(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 

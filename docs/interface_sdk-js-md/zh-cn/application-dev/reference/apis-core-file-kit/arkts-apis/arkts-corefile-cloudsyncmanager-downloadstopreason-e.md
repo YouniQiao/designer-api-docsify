@@ -8,6 +8,8 @@ enum DownloadStopReason
 
 **起始版本：** 20
 
+<!--Device-cloudSyncManager-enum DownloadStopReason--><!--Device-cloudSyncManager-enum DownloadStopReason-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 ## NO_STOP
@@ -19,6 +21,8 @@ NO_STOP = 0
 下载中未停止。
 
 **起始版本：** 20
+
+<!--Device-DownloadStopReason-NO_STOP = 0--><!--Device-DownloadStopReason-NO_STOP = 0-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
@@ -32,6 +36,8 @@ NETWORK_UNAVAILABLE = 1
 
 **起始版本：** 20
 
+<!--Device-DownloadStopReason-NETWORK_UNAVAILABLE = 1--><!--Device-DownloadStopReason-NETWORK_UNAVAILABLE = 1-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 ## LOCAL_STORAGE_FULL
@@ -43,6 +49,8 @@ LOCAL_STORAGE_FULL = 2
 下载过程中，当前设备空间不足。
 
 **起始版本：** 20
+
+<!--Device-DownloadStopReason-LOCAL_STORAGE_FULL = 2--><!--Device-DownloadStopReason-LOCAL_STORAGE_FULL = 2-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
@@ -56,6 +64,8 @@ TEMPERATURE_LIMIT = 3
 
 **起始版本：** 20
 
+<!--Device-DownloadStopReason-TEMPERATURE_LIMIT = 3--><!--Device-DownloadStopReason-TEMPERATURE_LIMIT = 3-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 ## USER_STOPPED
@@ -67,6 +77,8 @@ USER_STOPPED = 4
 下载过程中，客户端主动停止下载。
 
 **起始版本：** 20
+
+<!--Device-DownloadStopReason-USER_STOPPED = 4--><!--Device-DownloadStopReason-USER_STOPPED = 4-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
@@ -80,6 +92,8 @@ APP_UNLOAD = 5
 
 **起始版本：** 20
 
+<!--Device-DownloadStopReason-APP_UNLOAD = 5--><!--Device-DownloadStopReason-APP_UNLOAD = 5-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 ## OTHER_REASON
@@ -91,5 +105,7 @@ OTHER_REASON = 6
 下载过程中，因其他原因停止下载，如：云服务器未响应等。
 
 **起始版本：** 20
+
+<!--Device-DownloadStopReason-OTHER_REASON = 6--><!--Device-DownloadStopReason-OTHER_REASON = 6-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager

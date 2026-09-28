@@ -8,6 +8,8 @@ interface RequestResult
 
 **起始版本：** 9
 
+<!--Device-rpc-interface RequestResult--><!--Device-rpc-interface RequestResult-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ code: number
 
 **起始版本：** 9
 
+<!--Device-RequestResult-code: int--><!--Device-RequestResult-code: int-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 ## data
@@ -41,6 +45,8 @@ data: MessageSequence
 **类型：** [MessageSequence](arkts-ipc-rpc-messagesequence-c.md)
 
 **起始版本：** 9
+
+<!--Device-RequestResult-data: MessageSequence--><!--Device-RequestResult-data: MessageSequence-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -56,6 +62,8 @@ errCode: number
 
 **起始版本：** 9
 
+<!--Device-RequestResult-errCode: int--><!--Device-RequestResult-errCode: int-End-->
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 ## reply
@@ -69,5 +77,7 @@ reply: MessageSequence
 **类型：** [MessageSequence](arkts-ipc-rpc-messagesequence-c.md)
 
 **起始版本：** 9
+
+<!--Device-RequestResult-reply: MessageSequence--><!--Device-RequestResult-reply: MessageSequence-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core

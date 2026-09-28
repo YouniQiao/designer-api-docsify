@@ -18,6 +18,8 @@ function p2pCancelConnect(): void
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
+<!--Device-wifiManager-function p2pCancelConnect(): void--><!--Device-wifiManager-function p2pCancelConnect(): void-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
 **错误码：**

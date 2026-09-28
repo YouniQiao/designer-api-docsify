@@ -16,6 +16,8 @@ declare function fdatasync(fd: number): Promise<void>
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare function fdatasync(fd: number): Promise<void>--><!--Device-unnamed-declare function fdatasync(fd: number): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -54,6 +56,8 @@ declare function fdatasync(fd: number, callback: AsyncCallback<void>): void
 实现文件内容数据同步。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-unnamed-declare function fdatasync(fd: number, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function fdatasync(fd: number, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

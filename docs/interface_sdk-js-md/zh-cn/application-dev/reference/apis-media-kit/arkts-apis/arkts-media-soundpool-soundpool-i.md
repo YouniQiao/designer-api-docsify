@@ -24,6 +24,8 @@ export declare interface SoundPool
 
 **起始版本：** 10
 
+<!--Device-unnamed-export declare interface SoundPool--><!--Device-unnamed-export declare interface SoundPool-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 ## load
@@ -45,6 +47,8 @@ load(uri: string, callback: AsyncCallback<number>): void
 > - 同一时间通过同一个资源句柄或加载路径描述读写文件时存在竞争关系，将导致播放异常。
 
 **起始版本：** 10
+
+<!--Device-SoundPool-load(uri: string, callback: AsyncCallback<int>): void--><!--Device-SoundPool-load(uri: string, callback: AsyncCallback<int>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
@@ -84,6 +88,8 @@ load(uri: string): Promise<number>
 > - 同一时间通过同一个资源句柄或加载路径描述读写文件时存在竞争关系，将导致播放异常。
 
 **起始版本：** 10
+
+<!--Device-SoundPool-load(uri: string): Promise<int>--><!--Device-SoundPool-load(uri: string): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
@@ -127,6 +133,8 @@ load(fd: number, offset: number, length: number, callback: AsyncCallback<number>
 
 **起始版本：** 10
 
+<!--Device-SoundPool-load(fd: int, offset: long, length: long, callback: AsyncCallback<int>): void--><!--Device-SoundPool-load(fd: int, offset: long, length: long, callback: AsyncCallback<int>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 **参数：**
@@ -166,6 +174,8 @@ load(fd: number, offset: number, length: number): Promise<number>
 
 **起始版本：** 10
 
+<!--Device-SoundPool-load(fd: int, offset: long, length: long): Promise<int>--><!--Device-SoundPool-load(fd: int, offset: long, length: long): Promise<int>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 **参数：**
@@ -200,6 +210,8 @@ off(type: 'loadComplete'): void
 
 **起始版本：** 10
 
+<!--Device-SoundPool-off(type: 'loadComplete'): void--><!--Device-SoundPool-off(type: 'loadComplete'): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 **参数：**
@@ -217,6 +229,8 @@ off(type: 'playFinished'): void
 取消监听音频池资源播放完成。
 
 **起始版本：** 10
+
+<!--Device-SoundPool-off(type: 'playFinished'): void--><!--Device-SoundPool-off(type: 'playFinished'): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
@@ -236,6 +250,8 @@ off(type: 'error'): void
 
 **起始版本：** 10
 
+<!--Device-SoundPool-off(type: 'error'): void--><!--Device-SoundPool-off(type: 'error'): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 **参数：**
@@ -254,6 +270,8 @@ off(type: 'playFinishedWithStreamId'): void
 
 **起始版本：** 18
 
+<!--Device-SoundPool-off(type: 'playFinishedWithStreamId'): void--><!--Device-SoundPool-off(type: 'playFinishedWithStreamId'): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 **参数：**
@@ -271,6 +289,8 @@ off(type: 'errorOccurred', callback?: Callback<ErrorInfo>): void
 取消监听音频池的错误事件。
 
 **起始版本：** 20
+
+<!--Device-SoundPool-off(type: 'errorOccurred', callback?: Callback<ErrorInfo>): void--><!--Device-SoundPool-off(type: 'errorOccurred', callback?: Callback<ErrorInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
@@ -291,6 +311,8 @@ on(type: 'loadComplete', callback: Callback<number>): void
 
 **起始版本：** 10
 
+<!--Device-SoundPool-on(type: 'loadComplete', callback: Callback<int>): void--><!--Device-SoundPool-on(type: 'loadComplete', callback: Callback<int>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 **参数：**
@@ -310,6 +332,8 @@ on(type: 'playFinished', callback: Callback<void>): void
 
 **起始版本：** 10
 
+<!--Device-SoundPool-on(type: 'playFinished', callback: Callback<void>): void--><!--Device-SoundPool-on(type: 'playFinished', callback: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 **参数：**
@@ -328,6 +352,8 @@ on(type: 'error', callback: ErrorCallback): void
 监听[SoundPool](arkts-media-soundpool-soundpool-i.md)的错误事件，该事件仅用于错误提示。使用callback异步回调。
 
 **起始版本：** 10
+
+<!--Device-SoundPool-on(type: 'error', callback: ErrorCallback): void--><!--Device-SoundPool-on(type: 'error', callback: ErrorCallback): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
@@ -352,6 +378,8 @@ on(type: 'playFinishedWithStreamId', callback: Callback<number>): void
 
 **起始版本：** 18
 
+<!--Device-SoundPool-on(type: 'playFinishedWithStreamId', callback: Callback<int>): void--><!--Device-SoundPool-on(type: 'playFinishedWithStreamId', callback: Callback<int>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 **参数：**
@@ -371,6 +399,8 @@ on(type: 'errorOccurred', callback: Callback<ErrorInfo>): void
 
 **起始版本：** 20
 
+<!--Device-SoundPool-on(type: 'errorOccurred', callback: Callback<ErrorInfo>): void--><!--Device-SoundPool-on(type: 'errorOccurred', callback: Callback<ErrorInfo>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 **参数：**
@@ -389,6 +419,8 @@ play(soundID: number, params: PlayParameters, callback: AsyncCallback<number>): 
 播放音频资源，获取音频流streamID。使用callback异步回调。
 
 **起始版本：** 10
+
+<!--Device-SoundPool-play(soundID: int, params: PlayParameters, callback: AsyncCallback<int>): void--><!--Device-SoundPool-play(soundID: int, params: PlayParameters, callback: AsyncCallback<int>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
@@ -420,6 +452,8 @@ play(soundID: number, callback: AsyncCallback<number>): void
 
 **起始版本：** 10
 
+<!--Device-SoundPool-play(soundID: int, callback: AsyncCallback<int>): void--><!--Device-SoundPool-play(soundID: int, callback: AsyncCallback<int>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 **参数：**
@@ -448,6 +482,8 @@ play(soundID: number, params?: PlayParameters): Promise<number>
 播放音频资源，获取音频流streamID。使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-SoundPool-play(soundID: int, params?: PlayParameters): Promise<int>--><!--Device-SoundPool-play(soundID: int, params?: PlayParameters): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
@@ -482,6 +518,8 @@ release(callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
+<!--Device-SoundPool-release(callback: AsyncCallback<void>): void--><!--Device-SoundPool-release(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 **参数：**
@@ -507,6 +545,8 @@ release(): Promise<void>
 释放音频池实例。使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-SoundPool-release(): Promise<void>--><!--Device-SoundPool-release(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
@@ -534,6 +574,8 @@ setInterruptMode(interruptMode: media.SoundInterruptMode): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SoundPool-setInterruptMode(interruptMode: media.SoundInterruptMode): void--><!--Device-SoundPool-setInterruptMode(interruptMode: media.SoundInterruptMode): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 **参数：**
@@ -551,6 +593,8 @@ setLoop(streamID: number, loop: number, callback: AsyncCallback<void>): void
 设置循环模式。使用callback异步回调。
 
 **起始版本：** 10
+
+<!--Device-SoundPool-setLoop(streamID: int, loop: int, callback: AsyncCallback<void>): void--><!--Device-SoundPool-setLoop(streamID: int, loop: int, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
@@ -581,6 +625,8 @@ setLoop(streamID: number, loop: number): Promise<void>
 设置循环模式。使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-SoundPool-setLoop(streamID: int, loop: int): Promise<void>--><!--Device-SoundPool-setLoop(streamID: int, loop: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
@@ -615,6 +661,8 @@ setPriority(streamID: number, priority: number, callback: AsyncCallback<void>): 
 
 **起始版本：** 10
 
+<!--Device-SoundPool-setPriority(streamID: int, priority: int, callback: AsyncCallback<void>): void--><!--Device-SoundPool-setPriority(streamID: int, priority: int, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 **参数：**
@@ -644,6 +692,8 @@ setPriority(streamID: number, priority: number): Promise<void>
 设置音频流优先级。使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-SoundPool-setPriority(streamID: int, priority: int): Promise<void>--><!--Device-SoundPool-setPriority(streamID: int, priority: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
@@ -678,6 +728,8 @@ setRate(streamID: number, rate: audio.AudioRendererRate, callback: AsyncCallback
 
 **起始版本：** 10
 
+<!--Device-SoundPool-setRate(streamID: int, rate: audio.AudioRendererRate, callback: AsyncCallback<void>): void--><!--Device-SoundPool-setRate(streamID: int, rate: audio.AudioRendererRate, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 **参数：**
@@ -707,6 +759,8 @@ setRate(streamID: number, rate: audio.AudioRendererRate): Promise<void>
 设置音频流的播放速率。使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-SoundPool-setRate(streamID: int, rate: audio.AudioRendererRate): Promise<void>--><!--Device-SoundPool-setRate(streamID: int, rate: audio.AudioRendererRate): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
@@ -741,6 +795,8 @@ setVolume(streamID: number, leftVolume: number, rightVolume: number, callback: A
 
 **起始版本：** 10
 
+<!--Device-SoundPool-setVolume(streamID: int, leftVolume: double, rightVolume: double, callback: AsyncCallback<void>): void--><!--Device-SoundPool-setVolume(streamID: int, leftVolume: double, rightVolume: double, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 **参数：**
@@ -771,6 +827,8 @@ setVolume(streamID: number, leftVolume: number, rightVolume: number): Promise<vo
 设置音频流的播放音量。使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-SoundPool-setVolume(streamID: int, leftVolume: double, rightVolume: double): Promise<void>--><!--Device-SoundPool-setVolume(streamID: int, leftVolume: double, rightVolume: double): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
@@ -806,6 +864,8 @@ stop(streamID: number, callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
+<!--Device-SoundPool-stop(streamID: int, callback: AsyncCallback<void>): void--><!--Device-SoundPool-stop(streamID: int, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 **参数：**
@@ -834,6 +894,8 @@ stop(streamID: number): Promise<void>
 停止streamID对应的音频播放。使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-SoundPool-stop(streamID: int): Promise<void>--><!--Device-SoundPool-stop(streamID: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
@@ -867,6 +929,8 @@ unload(soundID: number, callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
+<!--Device-SoundPool-unload(soundID: int, callback: AsyncCallback<void>): void--><!--Device-SoundPool-unload(soundID: int, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 **参数：**
@@ -895,6 +959,8 @@ unload(soundID: number): Promise<void>
 卸载音频资源。使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-SoundPool-unload(soundID: int): Promise<void>--><!--Device-SoundPool-unload(soundID: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 

@@ -16,6 +16,8 @@ export class ComponentSnapshot
 
 **起始版本：** 12
 
+<!--Device-unnamed-export class ComponentSnapshot--><!--Device-unnamed-export class ComponentSnapshot-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -47,6 +49,8 @@ createFromBuilder(builder: CustomBuilder, callback: AsyncCallback<image.PixelMap
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ComponentSnapshot-createFromBuilder(builder: CustomBuilder, callback: AsyncCallback<image.PixelMap>,    delay?: number, checkImageStatus?: boolean, options?: componentSnapshot.SnapshotOptions): void--><!--Device-ComponentSnapshot-createFromBuilder(builder: CustomBuilder, callback: AsyncCallback<image.PixelMap>,    delay?: number, checkImageStatus?: boolean, options?: componentSnapshot.SnapshotOptions): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -149,6 +153,8 @@ createFromBuilder(builder: CustomBuilder, delay?: number,
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-ComponentSnapshot-createFromBuilder(builder: CustomBuilder, delay?: number,    checkImageStatus?: boolean, options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap>--><!--Device-ComponentSnapshot-createFromBuilder(builder: CustomBuilder, delay?: number,    checkImageStatus?: boolean, options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap>-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -246,6 +252,8 @@ createFromComponent<T extends Object>(content: ComponentContent<T>, delay?: numb
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-ComponentSnapshot-createFromComponent<T extends Object>(content: ComponentContent<T>, delay?: number,    checkImageStatus?: boolean, options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap>--><!--Device-ComponentSnapshot-createFromComponent<T extends Object>(content: ComponentContent<T>, delay?: number,    checkImageStatus?: boolean, options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -372,6 +380,8 @@ get(id: string, callback: AsyncCallback<image.PixelMap>, options?: componentSnap
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-ComponentSnapshot-get(id: string, callback: AsyncCallback<image.PixelMap>, options?: componentSnapshot.SnapshotOptions): void--><!--Device-ComponentSnapshot-get(id: string, callback: AsyncCallback<image.PixelMap>, options?: componentSnapshot.SnapshotOptions): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -452,6 +462,8 @@ get(id: string, options?: componentSnapshot.SnapshotOptions): Promise<image.Pixe
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ComponentSnapshot-get(id: string, options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap>--><!--Device-ComponentSnapshot-get(id: string, options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -534,6 +546,8 @@ getSizeLimitation(): componentSnapshot.SnapshotSizeLimitation
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-ComponentSnapshot-getSizeLimitation(): componentSnapshot.SnapshotSizeLimitation--><!--Device-ComponentSnapshot-getSizeLimitation(): componentSnapshot.SnapshotSizeLimitation-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
@@ -607,6 +621,8 @@ getSync(id: string, options?: componentSnapshot.SnapshotOptions): image.PixelMap
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ComponentSnapshot-getSync(id: string, options?: componentSnapshot.SnapshotOptions): image.PixelMap--><!--Device-ComponentSnapshot-getSync(id: string, options?: componentSnapshot.SnapshotOptions): image.PixelMap-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -690,6 +706,8 @@ getSyncWithUniqueId(uniqueId: number, options?: componentSnapshot.SnapshotOption
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-ComponentSnapshot-getSyncWithUniqueId(uniqueId: number, options?: componentSnapshot.SnapshotOptions): image.PixelMap--><!--Device-ComponentSnapshot-getSyncWithUniqueId(uniqueId: number, options?: componentSnapshot.SnapshotOptions): image.PixelMap-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -790,6 +808,8 @@ getWithUniqueId(uniqueId: number, options?: componentSnapshot.SnapshotOptions): 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-ComponentSnapshot-getWithUniqueId(uniqueId: number, options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap>--><!--Device-ComponentSnapshot-getWithUniqueId(uniqueId: number, options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

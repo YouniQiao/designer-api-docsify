@@ -8,6 +8,8 @@ Only the following attributes are supported.
 
 **Since:** 11
 
+<!--Device-unnamed-declare class ContainerSpanAttribute--><!--Device-unnamed-declare class ContainerSpanAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## attributeModifier
@@ -23,6 +25,8 @@ Creates an attribute modifier.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ContainerSpanAttribute-attributeModifier(modifier: AttributeModifier<ContainerSpanAttribute>): ContainerSpanAttribute--><!--Device-ContainerSpanAttribute-attributeModifier(modifier: AttributeModifier<ContainerSpanAttribute>): ContainerSpanAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -49,6 +53,8 @@ Sets the text background style. Child components inherit this attribute value wh
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ContainerSpanAttribute-textBackgroundStyle(style: TextBackgroundStyle): ContainerSpanAttribute--><!--Device-ContainerSpanAttribute-textBackgroundStyle(style: TextBackgroundStyle): ContainerSpanAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

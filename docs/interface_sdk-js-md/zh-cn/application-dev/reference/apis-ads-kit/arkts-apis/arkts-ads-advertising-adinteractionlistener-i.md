@@ -8,6 +8,8 @@ export interface AdInteractionListener
 
 **起始版本：** 11
 
+<!--Device-advertising-export interface AdInteractionListener--><!--Device-advertising-export interface AdInteractionListener-End-->
+
 **系统能力：** SystemCapability.Advertising.Ads
 
 ## 导入模块
@@ -27,6 +29,8 @@ onStatusChanged(status: string, ad: Advertisement, data: string)
 **起始版本：** 11
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AdInteractionListener-onStatusChanged(status: string, ad: Advertisement, data: string)--><!--Device-AdInteractionListener-onStatusChanged(status: string, ad: Advertisement, data: string)-End-->
 
 **系统能力：** SystemCapability.Advertising.Ads
 

@@ -20,6 +20,8 @@ function queryApn(admin: Want, apnInfo: Record<string, string>): Array<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-networkManager-function queryApn(admin: Want, apnInfo: Record<string, string>): Array<string>--><!--Device-networkManager-function queryApn(admin: Want, apnInfo: Record<string, string>): Array<string>-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -85,6 +87,8 @@ function queryApn(admin: Want, apnId: string): Record<string, string>
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_APN
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-networkManager-function queryApn(admin: Want, apnId: string): Record<string, string>--><!--Device-networkManager-function queryApn(admin: Want, apnId: string): Record<string, string>-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

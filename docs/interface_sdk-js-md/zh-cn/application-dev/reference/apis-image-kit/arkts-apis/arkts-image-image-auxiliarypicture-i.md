@@ -16,6 +16,8 @@ AuxiliaryPicture类，用于读取或写入图像的辅助图数据以及获取�
 
 **起始版本：** 13
 
+<!--Device-image-interface AuxiliaryPicture--><!--Device-image-interface AuxiliaryPicture-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## 导入模块
@@ -33,6 +35,8 @@ getAuxiliaryPictureInfo(): AuxiliaryPictureInfo
 获取有关此辅助图的图像信息。
 
 **起始版本：** 13
+
+<!--Device-AuxiliaryPicture-getAuxiliaryPictureInfo(): AuxiliaryPictureInfo--><!--Device-AuxiliaryPicture-getAuxiliaryPictureInfo(): AuxiliaryPictureInfo-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -67,6 +71,8 @@ getMetadata(metadataType: MetadataType): Promise<Metadata>
 从辅助图中获取元数据。使用Promise异步回调。
 
 **起始版本：** 13
+
+<!--Device-AuxiliaryPicture-getMetadata(metadataType: MetadataType): Promise<Metadata>--><!--Device-AuxiliaryPicture-getMetadata(metadataType: MetadataType): Promise<Metadata>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -117,6 +123,8 @@ getType(): AuxiliaryPictureType
 
 **起始版本：** 13
 
+<!--Device-AuxiliaryPicture-getType(): AuxiliaryPictureType--><!--Device-AuxiliaryPicture-getType(): AuxiliaryPictureType-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **返回值：**
@@ -147,6 +155,8 @@ readPixelsToBuffer(): Promise<ArrayBuffer>
 读取图像像素映射数据并将数据写入ArrayBuffer。使用Promise异步回调。
 
 **起始版本：** 13
+
+<!--Device-AuxiliaryPicture-readPixelsToBuffer(): Promise<ArrayBuffer>--><!--Device-AuxiliaryPicture-readPixelsToBuffer(): Promise<ArrayBuffer>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -197,6 +207,8 @@ release():void
 
 **起始版本：** 13
 
+<!--Device-AuxiliaryPicture-release():void--><!--Device-AuxiliaryPicture-release():void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **示例**
@@ -226,6 +238,8 @@ setAuxiliaryPictureInfo(info: AuxiliaryPictureInfo): void
 设置辅助图的图像信息。
 
 **起始版本：** 13
+
+<!--Device-AuxiliaryPicture-setAuxiliaryPictureInfo(info: AuxiliaryPictureInfo): void--><!--Device-AuxiliaryPicture-setAuxiliaryPictureInfo(info: AuxiliaryPictureInfo): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -270,6 +284,8 @@ setMetadata(metadataType: MetadataType, metadata: Metadata): Promise<void>
 设置辅助图元数据。使用Promise异步回调。
 
 **起始版本：** 13
+
+<!--Device-AuxiliaryPicture-setMetadata(metadataType: MetadataType, metadata: Metadata): Promise<void>--><!--Device-AuxiliaryPicture-setMetadata(metadataType: MetadataType, metadata: Metadata): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -336,6 +352,8 @@ writePixelsFromBuffer(data: ArrayBuffer): Promise<void>
 读取ArrayBuffer中的辅助图片数据，并将数据写入AuxiliaryPicture对象。使用Promise异步回调。
 
 **起始版本：** 13
+
+<!--Device-AuxiliaryPicture-writePixelsFromBuffer(data: ArrayBuffer): Promise<void>--><!--Device-AuxiliaryPicture-writePixelsFromBuffer(data: ArrayBuffer): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 

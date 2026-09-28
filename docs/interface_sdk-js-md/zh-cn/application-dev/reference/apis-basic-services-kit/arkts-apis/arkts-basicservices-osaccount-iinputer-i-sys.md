@@ -8,6 +8,8 @@ interface IInputer
 
 **起始版本：** 8
 
+<!--Device-osAccount-interface IInputer--><!--Device-osAccount-interface IInputer-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -27,6 +29,8 @@ onGetData: (authSubType: AuthSubType, callback: IInputData, options: GetInputDat
 通知调用者获取数据的回调函数。
 
 **起始版本：** 8
+
+<!--Device-IInputer-onGetData: (authSubType: AuthSubType, callback: IInputData, options: GetInputDataOptions) => void--><!--Device-IInputer-onGetData: (authSubType: AuthSubType, callback: IInputData, options: GetInputDataOptions) => void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 

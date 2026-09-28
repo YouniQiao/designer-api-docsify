@@ -10,6 +10,8 @@ You need a custom class to implement the **ContentModifier** API. Inherits from 
 
 **Since:** 12
 
+<!--Device-unnamed-declare interface RatingConfiguration extends CommonConfiguration<RatingConfiguration>--><!--Device-unnamed-declare interface RatingConfiguration extends CommonConfiguration<RatingConfiguration>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## indicator
@@ -29,6 +31,8 @@ Default value: **false**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-RatingConfiguration-indicator: boolean--><!--Device-RatingConfiguration-indicator: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -58,6 +62,8 @@ This parameter supports two-way binding through [!!](../../../ui/state-managemen
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-RatingConfiguration-rating: number--><!--Device-RatingConfiguration-rating: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## stars
@@ -77,6 +83,8 @@ Default value: **5**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-RatingConfiguration-stars: number--><!--Device-RatingConfiguration-stars: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -98,6 +106,8 @@ Default value: **0.5**
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-RatingConfiguration-stepSize: number--><!--Device-RatingConfiguration-stepSize: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## triggerChange
@@ -115,5 +125,7 @@ Callback triggered when the rating value changes.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-RatingConfiguration-triggerChange: Callback<number>--><!--Device-RatingConfiguration-triggerChange: Callback<number>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -16,6 +16,8 @@ function getDeviceInfoSync(deviceId: number): InputDeviceData
 
 **起始版本：** 10
 
+<!--Device-inputDevice-function getDeviceInfoSync(deviceId: int): InputDeviceData--><!--Device-inputDevice-function getDeviceInfoSync(deviceId: int): InputDeviceData-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 **参数：**

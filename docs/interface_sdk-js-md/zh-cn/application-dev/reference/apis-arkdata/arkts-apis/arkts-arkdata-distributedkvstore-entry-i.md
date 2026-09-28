@@ -8,6 +8,8 @@ interface Entry
 
 **起始版本：** 9
 
+<!--Device-distributedKVStore-interface Entry--><!--Device-distributedKVStore-interface Entry-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ key: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Entry-key: string--><!--Device-Entry-key: string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## value
@@ -45,5 +49,7 @@ value: Value
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Entry-value: Value--><!--Device-Entry-value: Value-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core

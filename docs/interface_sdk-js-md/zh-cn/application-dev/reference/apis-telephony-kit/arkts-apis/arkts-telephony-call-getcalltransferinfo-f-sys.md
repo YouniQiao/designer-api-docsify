@@ -20,6 +20,8 @@ function getCallTransferInfo(slotId: number, type: CallTransferType, callback: A
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-call-function getCallTransferInfo(slotId: int, type: CallTransferType, callback: AsyncCallback<CallTransferResult>): void--><!--Device-call-function getCallTransferInfo(slotId: int, type: CallTransferType, callback: AsyncCallback<CallTransferResult>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -72,6 +74,8 @@ function getCallTransferInfo(slotId: number, type: CallTransferType): Promise<Ca
 **起始版本：** 8
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
+
+<!--Device-call-function getCallTransferInfo(slotId: int, type: CallTransferType): Promise<CallTransferResult>--><!--Device-call-function getCallTransferInfo(slotId: int, type: CallTransferType): Promise<CallTransferResult>-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 

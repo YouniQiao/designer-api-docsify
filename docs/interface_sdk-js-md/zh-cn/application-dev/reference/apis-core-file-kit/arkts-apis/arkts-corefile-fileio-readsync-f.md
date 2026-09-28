@@ -27,6 +27,8 @@ declare function readSync(
 
 **替代接口：** [readSync](arkts-corefile-file-fs-readsync-f.md)
 
+<!--Device-unnamed-declare function readSync(  fd: number,  buffer: ArrayBuffer,  options?: {    offset?: number;    length?: number;    position?: number;  }): number--><!--Device-unnamed-declare function readSync(  fd: number,  buffer: ArrayBuffer,  options?: {    offset?: number;    length?: number;    position?: number;  }): number-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**

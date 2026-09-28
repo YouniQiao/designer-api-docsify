@@ -8,6 +8,8 @@ TLSSocketServer连接。在调用TLSSocketServer的方法前，需要先通过[s
 
 **起始版本：** 10
 
+<!--Device-socket-export interface TLSSocketServer--><!--Device-socket-export interface TLSSocketServer-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块
@@ -32,6 +34,8 @@ TLSSocketServer停止监听并释放通过[listen](arkts-network-socket-tcpsocke
 **起始版本：** 20
 
 **需要权限：** ohos.permission.INTERNET
+
+<!--Device-TLSSocketServer-close(): Promise<void>--><!--Device-TLSSocketServer-close(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -100,6 +104,8 @@ getCertificate(callback: AsyncCallback<X509CertRawData>): void
 > listen方法调用成功后，才可调用此方法。
 
 **起始版本：** 10
+
+<!--Device-TLSSocketServer-getCertificate(callback: AsyncCallback<X509CertRawData>): void--><!--Device-TLSSocketServer-getCertificate(callback: AsyncCallback<X509CertRawData>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -216,6 +222,8 @@ getCertificate(): Promise<X509CertRawData>
 
 **起始版本：** 10
 
+<!--Device-TLSSocketServer-getCertificate(): Promise<X509CertRawData>--><!--Device-TLSSocketServer-getCertificate(): Promise<X509CertRawData>-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
@@ -328,6 +336,8 @@ getLocalAddress(): Promise<NetAddress>
 
 **起始版本：** 12
 
+<!--Device-TLSSocketServer-getLocalAddress(): Promise<NetAddress>--><!--Device-TLSSocketServer-getLocalAddress(): Promise<NetAddress>-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
@@ -371,6 +381,8 @@ getProtocol(callback: AsyncCallback<string>): void
 > listen方法调用成功后，才可调用此方法。
 
 **起始版本：** 10
+
+<!--Device-TLSSocketServer-getProtocol(callback: AsyncCallback<string>): void--><!--Device-TLSSocketServer-getProtocol(callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -444,6 +456,8 @@ getProtocol(): Promise<string>
 > listen方法调用成功后，才可调用此方法。
 
 **起始版本：** 10
+
+<!--Device-TLSSocketServer-getProtocol(): Promise<string>--><!--Device-TLSSocketServer-getProtocol(): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -519,6 +533,8 @@ getSocketFd(): Promise<number>
 
 **需要权限：** ohos.permission.INTERNET
 
+<!--Device-TLSSocketServer-getSocketFd(): Promise<int>--><!--Device-TLSSocketServer-getSocketFd(): Promise<int>-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
@@ -584,6 +600,8 @@ getState(callback: AsyncCallback<SocketStateBase>): void
 > listen方法调用成功后，才可调用此方法。
 
 **起始版本：** 10
+
+<!--Device-TLSSocketServer-getState(callback: AsyncCallback<SocketStateBase>): void--><!--Device-TLSSocketServer-getState(callback: AsyncCallback<SocketStateBase>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -657,6 +675,8 @@ getState(): Promise<SocketStateBase>
 
 **起始版本：** 10
 
+<!--Device-TLSSocketServer-getState(): Promise<SocketStateBase>--><!--Device-TLSSocketServer-getState(): Promise<SocketStateBase>-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
@@ -725,6 +745,8 @@ listen(options: TLSConnectOptions, callback: AsyncCallback<void>): void
 **起始版本：** 10
 
 **需要权限：** ohos.permission.INTERNET
+
+<!--Device-TLSSocketServer-listen(options: TLSConnectOptions, callback: AsyncCallback<void>): void--><!--Device-TLSSocketServer-listen(options: TLSConnectOptions, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -797,6 +819,8 @@ listen(options: TLSConnectOptions): Promise<void>
 **起始版本：** 10
 
 **需要权限：** ohos.permission.INTERNET
+
+<!--Device-TLSSocketServer-listen(options: TLSConnectOptions): Promise<void>--><!--Device-TLSSocketServer-listen(options: TLSConnectOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -879,6 +903,8 @@ off(type: 'connect', callback?: Callback<TLSSocketConnection>): void
 
 **起始版本：** 10
 
+<!--Device-TLSSocketServer-off(type: 'connect', callback?: Callback<TLSSocketConnection>): void--><!--Device-TLSSocketServer-off(type: 'connect', callback?: Callback<TLSSocketConnection>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -951,6 +977,8 @@ off(type: 'error', callback?: ErrorCallback): void
 
 **起始版本：** 10
 
+<!--Device-TLSSocketServer-off(type: 'error', callback?: ErrorCallback): void--><!--Device-TLSSocketServer-off(type: 'error', callback?: ErrorCallback): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -1021,6 +1049,8 @@ on(type: 'connect', callback: Callback<TLSSocketConnection>): void
 
 **起始版本：** 10
 
+<!--Device-TLSSocketServer-on(type: 'connect', callback: Callback<TLSSocketConnection>): void--><!--Device-TLSSocketServer-on(type: 'connect', callback: Callback<TLSSocketConnection>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -1086,6 +1116,8 @@ on(type: 'error', callback: ErrorCallback): void
 
 **起始版本：** 10
 
+<!--Device-TLSSocketServer-on(type: 'error', callback: ErrorCallback): void--><!--Device-TLSSocketServer-on(type: 'error', callback: ErrorCallback): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -1150,6 +1182,8 @@ setExtraOptions(options: TCPExtraOptions, callback: AsyncCallback<void>): void
 > listen方法调用成功后，才可调用此方法。
 
 **起始版本：** 10
+
+<!--Device-TLSSocketServer-setExtraOptions(options: TCPExtraOptions, callback: AsyncCallback<void>): void--><!--Device-TLSSocketServer-setExtraOptions(options: TCPExtraOptions, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -1239,6 +1273,8 @@ setExtraOptions(options: TCPExtraOptions): Promise<void>
 > listen方法调用成功后，才可调用此方法。
 
 **起始版本：** 10
+
+<!--Device-TLSSocketServer-setExtraOptions(options: TCPExtraOptions): Promise<void>--><!--Device-TLSSocketServer-setExtraOptions(options: TCPExtraOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 

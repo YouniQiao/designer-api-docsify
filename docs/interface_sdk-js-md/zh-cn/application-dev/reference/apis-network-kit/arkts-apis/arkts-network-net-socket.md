@@ -8,6 +8,8 @@
 
 **起始版本：** 7
 
+<!--Device-unnamed-declare namespace socket--><!--Device-unnamed-declare namespace socket-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块

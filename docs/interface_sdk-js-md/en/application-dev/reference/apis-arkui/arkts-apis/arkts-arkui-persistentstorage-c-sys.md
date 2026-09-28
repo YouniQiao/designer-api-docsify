@@ -12,6 +12,8 @@ Provides the persistent storage capability for UI states. It persists selected A
 
 **Since:** 7
 
+<!--Device-unnamed-declare class PersistentStorage--><!--Device-unnamed-declare class PersistentStorage-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
@@ -25,6 +27,8 @@ A constructor.
 **Since:** 7
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-PersistentStorage-constructor(appStorage: AppStorage, storage: Storage)--><!--Device-PersistentStorage-constructor(appStorage: AppStorage, storage: Storage)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

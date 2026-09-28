@@ -17,6 +17,8 @@ enum AudioOutputFormat
 
 **替代接口：** [ContainerFormatType](arkts-media-media-containerformattype-e.md)
 
+<!--Device-media-enum AudioOutputFormat--><!--Device-media-enum AudioOutputFormat-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
 
 ## DEFAULT
@@ -35,6 +37,8 @@ DEFAULT = 0
 
 **废弃版本：** 8
 
+<!--Device-AudioOutputFormat-DEFAULT = 0--><!--Device-AudioOutputFormat-DEFAULT = 0-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
 
 ## MPEG_4
@@ -52,6 +56,8 @@ MPEG_4 = 2
 **废弃版本：** 8
 
 **替代接口：** [CFT_MPEG_4](arkts-media-media-containerformattype-e.md#cft_mpeg_4)
+
+<!--Device-AudioOutputFormat-MPEG_4 = 2--><!--Device-AudioOutputFormat-MPEG_4 = 2-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
 
@@ -73,6 +79,8 @@ AMR_NB = 3
 
 **替代接口：** [CFT_AMR](arkts-media-media-containerformattype-e.md#cft_amr)
 
+<!--Device-AudioOutputFormat-AMR_NB = 3--><!--Device-AudioOutputFormat-AMR_NB = 3-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
 
 ## AMR_WB
@@ -93,6 +101,8 @@ AMR_WB = 4
 
 **替代接口：** [CFT_AMR](arkts-media-media-containerformattype-e.md#cft_amr)
 
+<!--Device-AudioOutputFormat-AMR_WB = 4--><!--Device-AudioOutputFormat-AMR_WB = 4-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
 
 ## AAC_ADTS
@@ -110,5 +120,7 @@ AAC_ADTS = 6
 **废弃版本：** 8
 
 **替代接口：** [CFT_AAC](arkts-media-media-containerformattype-e.md#cft_aac)
+
+<!--Device-AudioOutputFormat-AAC_ADTS = 6--><!--Device-AudioOutputFormat-AAC_ADTS = 6-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder

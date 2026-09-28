@@ -8,6 +8,8 @@ interface Asset
 
 **起始版本：** 10
 
+<!--Device-relationalStore-interface Asset--><!--Device-relationalStore-interface Asset-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ createTime: string
 
 **起始版本：** 10
 
+<!--Device-Asset-createTime: string--><!--Device-Asset-createTime: string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## modifyTime
@@ -41,6 +45,8 @@ modifyTime: string
 **类型：** string
 
 **起始版本：** 10
+
+<!--Device-Asset-modifyTime: string--><!--Device-Asset-modifyTime: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -56,6 +62,8 @@ name: string
 
 **起始版本：** 10
 
+<!--Device-Asset-name: string--><!--Device-Asset-name: string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## path
@@ -69,6 +77,8 @@ path: string
 **类型：** string
 
 **起始版本：** 10
+
+<!--Device-Asset-path: string--><!--Device-Asset-path: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -84,6 +94,8 @@ size: string
 
 **起始版本：** 10
 
+<!--Device-Asset-size: string--><!--Device-Asset-size: string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## status
@@ -98,6 +110,8 @@ status?: AssetStatus
 
 **起始版本：** 10
 
+<!--Device-Asset-status?: AssetStatus--><!--Device-Asset-status?: AssetStatus-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## uri
@@ -111,5 +125,7 @@ uri: string
 **类型：** string
 
 **起始版本：** 10
+
+<!--Device-Asset-uri: string--><!--Device-Asset-uri: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core

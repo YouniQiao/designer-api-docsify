@@ -20,6 +20,8 @@ function getInstalledBundleList(admin: Want, accountId: number): Promise<Array<B
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-bundleManager-function getInstalledBundleList(admin: Want, accountId: number): Promise<Array<BundleInfo>>--><!--Device-bundleManager-function getInstalledBundleList(admin: Want, accountId: number): Promise<Array<BundleInfo>>-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -80,6 +82,8 @@ function getInstalledBundleList(admin: Want, accountId: number, bundleInfoGetFla
 **需要权限：** ohos.permission.ENTERPRISE_GET_ALL_BUNDLE_INFO
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-bundleManager-function getInstalledBundleList(admin: Want, accountId: int, bundleInfoGetFlag: int): Promise<Array<BundleInfo>>--><!--Device-bundleManager-function getInstalledBundleList(admin: Want, accountId: int, bundleInfoGetFlag: int): Promise<Array<BundleInfo>>-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

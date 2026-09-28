@@ -19,6 +19,8 @@ Defines the configuration parameters for triggering device vibration, including 
 
 **Required permissions:** ohos.permission.VIBRATE
 
+<!--Device-unnamed-export interface VibrateOptions--><!--Device-unnamed-export interface VibrateOptions-End-->
+
 **System capability:** SystemCapability.Sensors.MiscDevice.Lite
 
 ## Modules to Import
@@ -45,6 +47,8 @@ Callback function invoked when the vibration API call is complete. Usage scenari
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-VibrateOptions-complete?: () => void--><!--Device-VibrateOptions-complete?: () => void-End-->
+
 **System capability:** SystemCapability.Sensors.MiscDevice.Lite
 
 ## fail
@@ -64,6 +68,8 @@ Callback invoked when the vibration fails to be triggered. Use scenarios: This c
 **Required permissions:** ohos.permission.VIBRATE
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-VibrateOptions-fail?: (data: string, code: number) => void--><!--Device-VibrateOptions-fail?: (data: string, code: number) => void-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice.Lite
 
@@ -92,6 +98,8 @@ Callback invoked when the vibration is successfully triggered. Use scenarios: Th
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-VibrateOptions-success: () => void--><!--Device-VibrateOptions-success: () => void-End-->
+
 **System capability:** SystemCapability.Sensors.MiscDevice.Lite
 
 ## mode
@@ -113,5 +121,7 @@ Vibration mode, which specifies the duration type of device vibration. The optio
 **Required permissions:** ohos.permission.VIBRATE
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-VibrateOptions-mode?: 'long' | 'short'--><!--Device-VibrateOptions-mode?: 'long' | 'short'-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice.Lite

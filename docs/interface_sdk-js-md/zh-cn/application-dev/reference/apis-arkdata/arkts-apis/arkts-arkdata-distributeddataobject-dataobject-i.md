@@ -8,6 +8,8 @@ interface DataObject
 
 **起始版本：** 9
 
+<!--Device-distributedDataObject-interface DataObject--><!--Device-distributedDataObject-interface DataObject-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 ## 导入模块
@@ -25,6 +27,8 @@ bindAssetStore(assetKey: string, bindInfo: BindInfo, callback: AsyncCallback<voi
 绑定分布式数据对象中的单个资产与其对应的数据库信息，当前版本只支持分布式数据对象中的资产与关系型数据库的绑定。使用callback异步回调。<br> <br>当分布式数据对象中包含的资产和关系型数据库中包含的资产指向同一个实体资产文件，即两个资产的Uri相同时，就会存在冲突，我们把这种资产称为融合资产。如果需要分布式数据管理进行融合资产的冲突解决，需要先进行资产的绑定。当应用退出session后，绑定关系随之消失。
 
 **起始版本：** 11
+
+<!--Device-DataObject-bindAssetStore(assetKey: string, bindInfo: BindInfo, callback: AsyncCallback<void>): void--><!--Device-DataObject-bindAssetStore(assetKey: string, bindInfo: BindInfo, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -110,6 +114,8 @@ bindAssetStore(assetKey: string, bindInfo: BindInfo): Promise<void>
 绑定分布式数据对象中的单个资产与其对应的数据库信息，当前版本只支持分布式数据对象中的资产与关系型数据库的绑定。使用Promise异步回调。<br> <br>当分布式数据对象中包含的资产和关系型数据库中包含的资产指向同一个实体资产文件，即两个资产的Uri相同时，就会存在冲突，我们把这种资产称为融合资产。如果需要分布式数据管理进行融合资产的冲突解决，需要先进行资产的绑定。当应用退出session后，绑定关系随之消失。
 
 **起始版本：** 11
+
+<!--Device-DataObject-bindAssetStore(assetKey: string, bindInfo: BindInfo): Promise<void>--><!--Device-DataObject-bindAssetStore(assetKey: string, bindInfo: BindInfo): Promise<void>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -197,6 +203,8 @@ off(type: 'change', callback?: (sessionId: string, fields: Array<string>) => voi
 
 **起始版本：** 9
 
+<!--Device-DataObject-off(type: 'change', callback?: (sessionId: string, fields: Array<string>) => void ): void--><!--Device-DataObject-off(type: 'change', callback?: (sessionId: string, fields: Array<string>) => void ): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **参数：**
@@ -241,6 +249,8 @@ off(
 
 **起始版本：** 9
 
+<!--Device-DataObject-off(      type: 'status',      callback?: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void    ): void--><!--Device-DataObject-off(      type: 'status',      callback?: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void    ): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **参数：**
@@ -276,6 +286,8 @@ off(type: 'change', callback?: DataObserver): void
 当不再进行数据变更监听时，使用此接口删除分布式数据对象数据变更监听的回调实例。
 
 **起始版本：** 20
+
+<!--Device-DataObject-off(type: 'change', callback?: DataObserver): void--><!--Device-DataObject-off(type: 'change', callback?: DataObserver): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -334,6 +346,8 @@ off(type: 'status', callback?: StatusObserver): void
 
 **起始版本：** 20
 
+<!--Device-DataObject-off(type: 'status', callback?: StatusObserver): void--><!--Device-DataObject-off(type: 'status', callback?: StatusObserver): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **参数：**
@@ -379,6 +393,8 @@ off(type: 'progressChanged', callback?: ProgressObserver): void
 当不再进行资产传输进度监听时，使用此接口删除资产传输进度监听的回调实例。
 
 **起始版本：** 20
+
+<!--Device-DataObject-off(type: 'progressChanged', callback?: ProgressObserver): void--><!--Device-DataObject-off(type: 'progressChanged', callback?: ProgressObserver): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -428,6 +444,8 @@ on(type: 'change', callback: (sessionId: string, fields: Array<string>) => void 
 
 **起始版本：** 9
 
+<!--Device-DataObject-on(type: 'change', callback: (sessionId: string, fields: Array<string>) => void ): void--><!--Device-DataObject-on(type: 'change', callback: (sessionId: string, fields: Array<string>) => void ): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **参数：**
@@ -469,6 +487,8 @@ on(
 
 **起始版本：** 9
 
+<!--Device-DataObject-on(      type: 'status',      callback: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void    ): void--><!--Device-DataObject-on(      type: 'status',      callback: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void    ): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **参数：**
@@ -501,6 +521,8 @@ on(type: 'change', callback: DataObserver): void
 监听分布式数据对象的数据变更。
 
 **起始版本：** 20
+
+<!--Device-DataObject-on(type: 'change', callback: DataObserver): void--><!--Device-DataObject-on(type: 'change', callback: DataObserver): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -542,6 +564,8 @@ on(type: 'status', callback: StatusObserver): void
 
 **起始版本：** 20
 
+<!--Device-DataObject-on(type: 'status', callback: StatusObserver): void--><!--Device-DataObject-on(type: 'status', callback: StatusObserver): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **参数：**
@@ -576,6 +600,8 @@ on(type: 'progressChanged', callback: ProgressObserver): void
 监听资产传输进度。
 
 **起始版本：** 20
+
+<!--Device-DataObject-on(type: 'progressChanged', callback: ProgressObserver): void--><!--Device-DataObject-on(type: 'progressChanged', callback: ProgressObserver): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -612,6 +638,8 @@ revokeSave(callback: AsyncCallback<RevokeSaveSuccessResponse>): void
 撤回保存的分布式数据对象。使用callback异步回调。<br> <br>如果对象保存在本地设备，那么将删除所有受信任设备上所保存的数据。<br> <br>如果对象保存在其他设备，那么将删除本地设备上的数据。
 
 **起始版本：** 9
+
+<!--Device-DataObject-revokeSave(callback: AsyncCallback<RevokeSaveSuccessResponse>): void--><!--Device-DataObject-revokeSave(callback: AsyncCallback<RevokeSaveSuccessResponse>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -666,6 +694,8 @@ revokeSave(): Promise<RevokeSaveSuccessResponse>
 
 **起始版本：** 9
 
+<!--Device-DataObject-revokeSave(): Promise<RevokeSaveSuccessResponse>--><!--Device-DataObject-revokeSave(): Promise<RevokeSaveSuccessResponse>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **返回值：**
@@ -715,6 +745,8 @@ save(deviceId: string, callback: AsyncCallback<SaveSuccessResponse>): void
 
 **起始版本：** 9
 
+<!--Device-DataObject-save(deviceId: string, callback: AsyncCallback<SaveSuccessResponse>): void--><!--Device-DataObject-save(deviceId: string, callback: AsyncCallback<SaveSuccessResponse>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **参数：**
@@ -761,6 +793,8 @@ save(deviceId: string): Promise<SaveSuccessResponse>
 - 成功恢复数据之后。
 
 **起始版本：** 9
+
+<!--Device-DataObject-save(deviceId: string): Promise<SaveSuccessResponse>--><!--Device-DataObject-save(deviceId: string): Promise<SaveSuccessResponse>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -819,6 +853,8 @@ setAsset(assetKey: string, uri: string): Promise<void>
 | uri为无效值，例如：null（不存在）、undefined（未定义）或''（空字符串）。 | 设置资产失败，抛出15400002异常。 |
 
 **起始版本：** 20
+
+<!--Device-DataObject-setAsset(assetKey: string, uri: string): Promise<void>--><!--Device-DataObject-setAsset(assetKey: string, uri: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -911,6 +947,8 @@ setAssets(assetsKey: string, uris: Array<string>): Promise<void>
 
 **起始版本：** 20
 
+<!--Device-DataObject-setAssets(assetsKey: string, uris: Array<string>): Promise<void>--><!--Device-DataObject-setAssets(assetsKey: string, uris: Array<string>): Promise<void>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **参数：**
@@ -989,6 +1027,8 @@ setSessionId(sessionId: string, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DataObject-setSessionId(sessionId: string, callback: AsyncCallback<void>): void--><!--Device-DataObject-setSessionId(sessionId: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **参数：**
@@ -1035,6 +1075,8 @@ setSessionId(callback: AsyncCallback<void>): void
 - API版本20+：N/A
 - API版本9-19：ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DataObject-setSessionId(callback: AsyncCallback<void>): void--><!--Device-DataObject-setSessionId(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **参数：**
@@ -1077,6 +1119,8 @@ setSessionId(sessionId?: string): Promise<void>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DataObject-setSessionId(sessionId?: string): Promise<void>--><!--Device-DataObject-setSessionId(sessionId?: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 

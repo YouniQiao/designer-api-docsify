@@ -8,6 +8,8 @@ interface Panel
 
 **起始版本：** 24
 
+<!--Device-selectionManager-interface Panel--><!--Device-selectionManager-interface Panel-End-->
+
 **系统能力：** SystemCapability.SelectionInput.Selection
 
 ## 导入模块
@@ -33,6 +35,8 @@ moveTo(x: number, y: number): Promise<void>
 **废弃版本：** 24
 
 **替代接口：** [moveToGlobalDisplay](arkts-basicservices-selectionmanager-panel-i.md#movetoglobaldisplay)
+
+<!--Device-Panel-moveTo(x: int, y: int): Promise<void>--><!--Device-Panel-moveTo(x: int, y: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.SelectionInput.Selection
 

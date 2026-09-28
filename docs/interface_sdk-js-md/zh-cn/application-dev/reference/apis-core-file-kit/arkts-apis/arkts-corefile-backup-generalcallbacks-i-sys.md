@@ -10,6 +10,8 @@ interface GeneralCallbacks
 
 **起始版本：** 10
 
+<!--Device-backup-interface GeneralCallbacks--><!--Device-backup-interface GeneralCallbacks-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ onBackupSizeReport?: OnBackupSizeReport
 
 **起始版本：** 18
 
+<!--Device-GeneralCallbacks-onBackupSizeReport?: OnBackupSizeReport--><!--Device-GeneralCallbacks-onBackupSizeReport?: OnBackupSizeReport-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ onFileReadyBatch?: OnFileReadyBatch
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-GeneralCallbacks-onFileReadyBatch?: OnFileReadyBatch--><!--Device-GeneralCallbacks-onFileReadyBatch?: OnFileReadyBatch-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
@@ -72,6 +78,8 @@ onProcess(bundleName: string, process: string): void
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-GeneralCallbacks-onProcess(bundleName: string, process: string): void--><!--Device-GeneralCallbacks-onProcess(bundleName: string, process: string): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
@@ -122,6 +130,8 @@ onResultReport(bundleName: string, result: string): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-GeneralCallbacks-onResultReport(bundleName: string, result: string): void--><!--Device-GeneralCallbacks-onResultReport(bundleName: string, result: string): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 **系统接口：** 此接口为系统接口。
@@ -168,6 +178,8 @@ onAllBundlesEnd: AsyncCallback<undefined>
 
 **起始版本：** 10
 
+<!--Device-GeneralCallbacks-onAllBundlesEnd: AsyncCallback<undefined>--><!--Device-GeneralCallbacks-onAllBundlesEnd: AsyncCallback<undefined>-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 **系统接口：** 此接口为系统接口。
@@ -195,6 +207,8 @@ onBackupServiceDied: Callback<undefined>
 
 **起始版本：** 10
 
+<!--Device-GeneralCallbacks-onBackupServiceDied: Callback<undefined>--><!--Device-GeneralCallbacks-onBackupServiceDied: Callback<undefined>-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 **系统接口：** 此接口为系统接口。
@@ -210,6 +224,8 @@ onBundleBegin: AsyncCallback<string, void | string>
 **类型：** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string, void &#124; string&gt;
 
 **起始版本：** 12
+
+<!--Device-GeneralCallbacks-onBundleBegin: AsyncCallback<string, void | string>--><!--Device-GeneralCallbacks-onBundleBegin: AsyncCallback<string, void | string>-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
@@ -240,6 +256,8 @@ onBundleEnd: AsyncCallback<string, void | string>
 
 **起始版本：** 12
 
+<!--Device-GeneralCallbacks-onBundleEnd: AsyncCallback<string, void | string>--><!--Device-GeneralCallbacks-onBundleEnd: AsyncCallback<string, void | string>-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 **系统接口：** 此接口为系统接口。
@@ -269,6 +287,8 @@ onFileReady: AsyncCallback<File>
 
 **起始版本：** 10
 
+<!--Device-GeneralCallbacks-onFileReady: AsyncCallback<File>--><!--Device-GeneralCallbacks-onFileReady: AsyncCallback<File>-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 **系统接口：** 此接口为系统接口。
@@ -297,6 +317,8 @@ onMigrateResult?: AsyncCallback<string, void | string>
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-GeneralCallbacks-onMigrateResult?: AsyncCallback<string, void | string>--><!--Device-GeneralCallbacks-onMigrateResult?: AsyncCallback<string, void | string>-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 

@@ -8,6 +8,8 @@ export interface DataAbilityResult
 
 **起始版本：** 7
 
+<!--Device-unnamed-export interface DataAbilityResult--><!--Device-unnamed-export interface DataAbilityResult-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 ## count
@@ -24,6 +26,8 @@ count?: number
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-DataAbilityResult-count?: number--><!--Device-DataAbilityResult-count?: number-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 ## uri
@@ -39,5 +43,7 @@ uri?: string
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-DataAbilityResult-uri?: string--><!--Device-DataAbilityResult-uri?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel

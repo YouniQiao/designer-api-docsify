@@ -19,6 +19,8 @@ declare function mkdtempSync(prefix: string): string
 
 **替代接口：** [mkdtempSync](arkts-corefile-file-fs-mkdtempsync-f.md)
 
+<!--Device-unnamed-declare function mkdtempSync(prefix: string): string--><!--Device-unnamed-declare function mkdtempSync(prefix: string): string-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**

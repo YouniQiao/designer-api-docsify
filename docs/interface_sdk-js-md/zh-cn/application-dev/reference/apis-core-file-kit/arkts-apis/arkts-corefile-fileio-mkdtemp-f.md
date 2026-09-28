@@ -19,6 +19,8 @@ declare function mkdtemp(prefix: string): Promise<string>
 
 **替代接口：** [mkdtemp](arkts-corefile-file-fs-mkdtemp-f.md)
 
+<!--Device-unnamed-declare function mkdtemp(prefix: string): Promise<string>--><!--Device-unnamed-declare function mkdtemp(prefix: string): Promise<string>-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -49,6 +51,8 @@ declare function mkdtemp(prefix: string, callback: AsyncCallback<string>): void
 **废弃版本：** 9
 
 **替代接口：** [mkdtemp](arkts-corefile-file-fs-mkdtemp-f.md)
+
+<!--Device-unnamed-declare function mkdtemp(prefix: string, callback: AsyncCallback<string>): void--><!--Device-unnamed-declare function mkdtemp(prefix: string, callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

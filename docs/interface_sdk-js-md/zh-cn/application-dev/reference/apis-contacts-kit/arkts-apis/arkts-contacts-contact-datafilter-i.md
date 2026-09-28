@@ -8,6 +8,8 @@ interface DataFilter
 
 **起始版本：** 15
 
+<!--Device-contact-interface DataFilter--><!--Device-contact-interface DataFilter-End-->
+
 **系统能力：** SystemCapability.Applications.Contacts
 
 ## 导入模块
@@ -30,6 +32,8 @@ field: DataField
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
 
+<!--Device-DataFilter-field: DataField--><!--Device-DataFilter-field: DataField-End-->
+
 **系统能力：** SystemCapability.Applications.Contacts
 
 ## options
@@ -45,5 +49,7 @@ options: Array<FilterOptions>
 **起始版本：** 15
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-DataFilter-options: Array<FilterOptions>--><!--Device-DataFilter-options: Array<FilterOptions>-End-->
 
 **系统能力：** SystemCapability.Applications.Contacts

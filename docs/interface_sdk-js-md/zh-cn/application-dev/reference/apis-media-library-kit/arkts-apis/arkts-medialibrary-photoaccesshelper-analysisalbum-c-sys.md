@@ -8,6 +8,8 @@ class AnalysisAlbum
 
 **起始版本：** 18
 
+<!--Device-photoAccessHelper-class AnalysisAlbum--><!--Device-photoAccessHelper-class AnalysisAlbum-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -27,6 +29,8 @@ constructor(album: Album)
 构造函数。
 
 **起始版本：** 18
+
+<!--Device-AnalysisAlbum-constructor(album: Album)--><!--Device-AnalysisAlbum-constructor(album: Album)-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -80,6 +84,8 @@ getOrderPosition(assets: Array<PhotoAsset>): Promise<Array<number>>
 **起始版本：** 18
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-AnalysisAlbum-getOrderPosition(assets: Array<PhotoAsset>): Promise<Array<int>>--><!--Device-AnalysisAlbum-getOrderPosition(assets: Array<PhotoAsset>): Promise<Array<int>>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -155,6 +161,8 @@ getRelationship(): Promise<string>
 **起始版本：** 21
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-AnalysisAlbum-getRelationship(): Promise<string>--><!--Device-AnalysisAlbum-getRelationship(): Promise<string>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

@@ -8,6 +8,8 @@ export interface CellInformation
 
 **起始版本：** 8
 
+<!--Device-radio-export interface CellInformation--><!--Device-radio-export interface CellInformation-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## 导入模块
@@ -28,6 +30,8 @@ networkType: NetworkType
 
 **起始版本：** 8
 
+<!--Device-CellInformation-networkType: NetworkType--><!--Device-CellInformation-networkType: NetworkType-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## signalInformation
@@ -41,5 +45,7 @@ signalInformation: SignalInformation
 **类型：** [SignalInformation](arkts-telephony-radio-signalinformation-i.md)
 
 **起始版本：** 8
+
+<!--Device-CellInformation-signalInformation: SignalInformation--><!--Device-CellInformation-signalInformation: SignalInformation-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService

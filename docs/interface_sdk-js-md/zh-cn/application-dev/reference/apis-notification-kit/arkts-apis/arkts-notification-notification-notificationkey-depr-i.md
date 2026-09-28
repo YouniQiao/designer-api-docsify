@@ -10,6 +10,8 @@ export interface NotificationKey
 
 **废弃版本：** 9
 
+<!--Device-notification-export interface NotificationKey--><!--Device-notification-export interface NotificationKey-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## 导入模块
@@ -33,6 +35,8 @@ id: number
 
 **替代接口：** NotificationKey
 
+<!--Device-NotificationKey-id: number--><!--Device-NotificationKey-id: number-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## label
@@ -50,5 +54,7 @@ label?: string
 **废弃版本：** 9
 
 **替代接口：** NotificationKey
+
+<!--Device-NotificationKey-label?: string--><!--Device-NotificationKey-label?: string-End-->
 
 **系统能力：** SystemCapability.Notification.Notification

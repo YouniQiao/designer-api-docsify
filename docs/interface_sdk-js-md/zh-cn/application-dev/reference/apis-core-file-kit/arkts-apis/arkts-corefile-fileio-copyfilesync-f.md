@@ -19,6 +19,8 @@ declare function copyFileSync(src: string | number, dest: string | number, mode?
 
 **替代接口：** [copyFileSync](arkts-corefile-file-fs-copyfilesync-f.md)
 
+<!--Device-unnamed-declare function copyFileSync(src: string | number, dest: string | number, mode?: number): void--><!--Device-unnamed-declare function copyFileSync(src: string | number, dest: string | number, mode?: number): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**

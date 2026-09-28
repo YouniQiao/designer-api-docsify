@@ -16,6 +16,8 @@ function getSimState(slotId: number, callback: AsyncCallback<SimState>): void
 
 **起始版本：** 6
 
+<!--Device-sim-function getSimState(slotId: int, callback: AsyncCallback<SimState>): void--><!--Device-sim-function getSimState(slotId: int, callback: AsyncCallback<SimState>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**
@@ -62,6 +64,8 @@ function getSimState(slotId: number): Promise<SimState>
 获取指定卡槽的SIM卡状态。使用Promise异步回调。
 
 **起始版本：** 6
+
+<!--Device-sim-function getSimState(slotId: int): Promise<SimState>--><!--Device-sim-function getSimState(slotId: int): Promise<SimState>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

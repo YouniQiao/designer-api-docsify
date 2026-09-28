@@ -8,6 +8,8 @@ export enum ManagedFeature
 
 **起始版本：** 26.0.1
 
+<!--Device-common-export enum ManagedFeature--><!--Device-common-export enum ManagedFeature-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## LOCAL_HOTA_DOMAIN
@@ -21,6 +23,8 @@ LOCAL_HOTA_DOMAIN = 0
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ManagedFeature-LOCAL_HOTA_DOMAIN = 0--><!--Device-ManagedFeature-LOCAL_HOTA_DOMAIN = 0-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -36,6 +40,8 @@ USER_EXTEND_CREDENTIAL = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ManagedFeature-USER_EXTEND_CREDENTIAL = 1--><!--Device-ManagedFeature-USER_EXTEND_CREDENTIAL = 1-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## DEVICE_SECURITY_LEVEL
@@ -50,6 +56,8 @@ DEVICE_SECURITY_LEVEL = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ManagedFeature-DEVICE_SECURITY_LEVEL = 2--><!--Device-ManagedFeature-DEVICE_SECURITY_LEVEL = 2-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## PRINTER_IP_ADDRESS_POLICY
@@ -63,5 +71,7 @@ PRINTER_IP_ADDRESS_POLICY = 3
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ManagedFeature-PRINTER_IP_ADDRESS_POLICY = 3--><!--Device-ManagedFeature-PRINTER_IP_ADDRESS_POLICY = 3-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager

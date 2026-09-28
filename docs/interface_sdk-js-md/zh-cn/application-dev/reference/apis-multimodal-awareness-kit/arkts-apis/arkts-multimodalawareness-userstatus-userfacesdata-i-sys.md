@@ -10,6 +10,8 @@ export interface UserFacesData extends UserStatusData
 
 **起始版本：** 26.0.0
 
+<!--Device-userStatus-export interface UserFacesData extends UserStatusData--><!--Device-userStatus-export interface UserFacesData extends UserStatusData-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
 **系统接口：** 此接口为系统接口。
@@ -34,6 +36,8 @@ angularVelocity?: number[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UserFacesData-angularVelocity?: double[]--><!--Device-UserFacesData-angularVelocity?: double[]-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +55,8 @@ azimuth?: number[]
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UserFacesData-azimuth?: double[]--><!--Device-UserFacesData-azimuth?: double[]-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -70,6 +76,8 @@ faceNum?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UserFacesData-faceNum?: int--><!--Device-UserFacesData-faceNum?: int-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
 **系统接口：** 此接口为系统接口。
@@ -87,6 +95,8 @@ gravityAcceleration?: number[]
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UserFacesData-gravityAcceleration?: double[]--><!--Device-UserFacesData-gravityAcceleration?: double[]-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -106,6 +116,8 @@ linearAcceleration?: number[][]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UserFacesData-linearAcceleration?: double[][]--><!--Device-UserFacesData-linearAcceleration?: double[][]-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
 **系统接口：** 此接口为系统接口。
@@ -123,6 +135,8 @@ visualAngle?: number[]
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UserFacesData-visualAngle?: double[]--><!--Device-UserFacesData-visualAngle?: double[]-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 

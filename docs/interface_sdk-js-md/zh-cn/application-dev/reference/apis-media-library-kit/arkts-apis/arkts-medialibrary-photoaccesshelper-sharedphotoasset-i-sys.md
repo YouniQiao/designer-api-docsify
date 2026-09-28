@@ -8,6 +8,8 @@ interface SharedPhotoAsset
 
 **起始版本：** 13
 
+<!--Device-photoAccessHelper-interface SharedPhotoAsset--><!--Device-photoAccessHelper-interface SharedPhotoAsset-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ cameraShotKey: string
 
 **起始版本：** 13
 
+<!--Device-SharedPhotoAsset-cameraShotKey: string--><!--Device-SharedPhotoAsset-cameraShotKey: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ data: string
 **类型：** string
 
 **起始版本：** 13
+
+<!--Device-SharedPhotoAsset-data: string--><!--Device-SharedPhotoAsset-data: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -62,6 +68,8 @@ dateAdded: number
 
 **起始版本：** 13
 
+<!--Device-SharedPhotoAsset-dateAdded: long--><!--Device-SharedPhotoAsset-dateAdded: long-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +85,8 @@ dateAddedMs: number
 **类型：** number
 
 **起始版本：** 13
+
+<!--Device-SharedPhotoAsset-dateAddedMs: long--><!--Device-SharedPhotoAsset-dateAddedMs: long-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -94,6 +104,8 @@ dateDay: string
 
 **起始版本：** 13
 
+<!--Device-SharedPhotoAsset-dateDay: string--><!--Device-SharedPhotoAsset-dateDay: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -109,6 +121,8 @@ dateModified: number
 **类型：** number
 
 **起始版本：** 13
+
+<!--Device-SharedPhotoAsset-dateModified: long--><!--Device-SharedPhotoAsset-dateModified: long-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -126,6 +140,8 @@ dateModifiedMs: number
 
 **起始版本：** 13
 
+<!--Device-SharedPhotoAsset-dateModifiedMs: long--><!--Device-SharedPhotoAsset-dateModifiedMs: long-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -141,6 +157,8 @@ dateMonth: string
 **类型：** string
 
 **起始版本：** 13
+
+<!--Device-SharedPhotoAsset-dateMonth: string--><!--Device-SharedPhotoAsset-dateMonth: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -158,6 +176,8 @@ dateTaken: number
 
 **起始版本：** 13
 
+<!--Device-SharedPhotoAsset-dateTaken: long--><!--Device-SharedPhotoAsset-dateTaken: long-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -173,6 +193,8 @@ dateTrashed: number
 **类型：** number
 
 **起始版本：** 13
+
+<!--Device-SharedPhotoAsset-dateTrashed: long--><!--Device-SharedPhotoAsset-dateTrashed: long-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -190,6 +212,8 @@ dateTrashedMs: number
 
 **起始版本：** 13
 
+<!--Device-SharedPhotoAsset-dateTrashedMs: long--><!--Device-SharedPhotoAsset-dateTrashedMs: long-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -205,6 +229,8 @@ dateYear: string
 **类型：** string
 
 **起始版本：** 13
+
+<!--Device-SharedPhotoAsset-dateYear: string--><!--Device-SharedPhotoAsset-dateYear: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -222,6 +248,8 @@ displayName: string
 
 **起始版本：** 13
 
+<!--Device-SharedPhotoAsset-displayName: string--><!--Device-SharedPhotoAsset-displayName: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -237,6 +265,8 @@ duration: number
 **类型：** number
 
 **起始版本：** 13
+
+<!--Device-SharedPhotoAsset-duration: int--><!--Device-SharedPhotoAsset-duration: int-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -254,6 +284,8 @@ dynamicRangeType: DynamicRangeType
 
 **起始版本：** 13
 
+<!--Device-SharedPhotoAsset-dynamicRangeType: DynamicRangeType--><!--Device-SharedPhotoAsset-dynamicRangeType: DynamicRangeType-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -269,6 +301,8 @@ fileId: number
 **类型：** number
 
 **起始版本：** 13
+
+<!--Device-SharedPhotoAsset-fileId: int--><!--Device-SharedPhotoAsset-fileId: int-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -286,6 +320,8 @@ height: number
 
 **起始版本：** 13
 
+<!--Device-SharedPhotoAsset-height: int--><!--Device-SharedPhotoAsset-height: int-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -301,6 +337,8 @@ hidden: boolean
 **类型：** boolean
 
 **起始版本：** 13
+
+<!--Device-SharedPhotoAsset-hidden: boolean--><!--Device-SharedPhotoAsset-hidden: boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -318,6 +356,8 @@ isFavorite: boolean
 
 **起始版本：** 13
 
+<!--Device-SharedPhotoAsset-isFavorite: boolean--><!--Device-SharedPhotoAsset-isFavorite: boolean-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -333,6 +373,8 @@ lcdSize: string
 **类型：** string
 
 **起始版本：** 13
+
+<!--Device-SharedPhotoAsset-lcdSize: string--><!--Device-SharedPhotoAsset-lcdSize: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -350,6 +392,8 @@ mediaType: PhotoType
 
 **起始版本：** 13
 
+<!--Device-SharedPhotoAsset-mediaType: PhotoType--><!--Device-SharedPhotoAsset-mediaType: PhotoType-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -365,6 +409,8 @@ movingPhotoEffectMode: MovingPhotoEffectMode
 **类型：** [MovingPhotoEffectMode](arkts-medialibrary-photoaccesshelper-movingphotoeffectmode-e-sys.md)
 
 **起始版本：** 13
+
+<!--Device-SharedPhotoAsset-movingPhotoEffectMode: MovingPhotoEffectMode--><!--Device-SharedPhotoAsset-movingPhotoEffectMode: MovingPhotoEffectMode-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -382,6 +428,8 @@ orientation: number
 
 **起始版本：** 13
 
+<!--Device-SharedPhotoAsset-orientation: int--><!--Device-SharedPhotoAsset-orientation: int-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -397,6 +445,8 @@ pending: boolean
 **类型：** boolean
 
 **起始版本：** 13
+
+<!--Device-SharedPhotoAsset-pending: boolean--><!--Device-SharedPhotoAsset-pending: boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -414,6 +464,8 @@ position: PositionType
 
 **起始版本：** 13
 
+<!--Device-SharedPhotoAsset-position: PositionType--><!--Device-SharedPhotoAsset-position: PositionType-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -429,6 +481,8 @@ size: number
 **类型：** number
 
 **起始版本：** 13
+
+<!--Device-SharedPhotoAsset-size: long--><!--Device-SharedPhotoAsset-size: long-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -446,6 +500,8 @@ subtype: PhotoSubtype
 
 **起始版本：** 13
 
+<!--Device-SharedPhotoAsset-subtype: PhotoSubtype--><!--Device-SharedPhotoAsset-subtype: PhotoSubtype-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -461,6 +517,8 @@ thmSize: string
 **类型：** string
 
 **起始版本：** 13
+
+<!--Device-SharedPhotoAsset-thmSize: string--><!--Device-SharedPhotoAsset-thmSize: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -478,6 +536,8 @@ thumbnailModifiedMs?: number
 
 **起始版本：** 14
 
+<!--Device-SharedPhotoAsset-thumbnailModifiedMs?: long--><!--Device-SharedPhotoAsset-thumbnailModifiedMs?: long-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -493,6 +553,8 @@ thumbnailReady: boolean
 **类型：** boolean
 
 **起始版本：** 13
+
+<!--Device-SharedPhotoAsset-thumbnailReady: boolean--><!--Device-SharedPhotoAsset-thumbnailReady: boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -510,6 +572,8 @@ thumbnailVisible: ThumbnailVisibility
 
 **起始版本：** 14
 
+<!--Device-SharedPhotoAsset-thumbnailVisible: ThumbnailVisibility--><!--Device-SharedPhotoAsset-thumbnailVisible: ThumbnailVisibility-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -525,6 +589,8 @@ title: string
 **类型：** string
 
 **起始版本：** 13
+
+<!--Device-SharedPhotoAsset-title: string--><!--Device-SharedPhotoAsset-title: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -542,6 +608,8 @@ uri: string
 
 **起始版本：** 13
 
+<!--Device-SharedPhotoAsset-uri: string--><!--Device-SharedPhotoAsset-uri: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -558,6 +626,8 @@ userComment: string
 
 **起始版本：** 13
 
+<!--Device-SharedPhotoAsset-userComment: string--><!--Device-SharedPhotoAsset-userComment: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -573,6 +643,8 @@ width: number
 **类型：** number
 
 **起始版本：** 13
+
+<!--Device-SharedPhotoAsset-width: int--><!--Device-SharedPhotoAsset-width: int-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

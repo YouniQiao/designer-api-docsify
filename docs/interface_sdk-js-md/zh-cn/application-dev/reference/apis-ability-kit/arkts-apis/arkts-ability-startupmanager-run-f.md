@@ -24,6 +24,8 @@ function run(startupTasks: Array<string>, config?: StartupConfig): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-startupManager-function run(startupTasks: Array<string>, config?: StartupConfig): Promise<void>--><!--Device-startupManager-function run(startupTasks: Array<string>, config?: StartupConfig): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Ability.AppStartup
 
 **参数：**
@@ -98,6 +100,8 @@ function run(startupTasks: Array<string>, context: common.AbilityStageContext, c
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-startupManager-function run(startupTasks: Array<string>, context: common.AbilityStageContext, config: StartupConfig): Promise<void>--><!--Device-startupManager-function run(startupTasks: Array<string>, context: common.AbilityStageContext, config: StartupConfig): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AppStartup
 

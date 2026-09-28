@@ -16,6 +16,8 @@ function unregisterChange(uri: string): void
 
 **起始版本：** 12
 
+<!--Device-cloudSync-function unregisterChange(uri: string): void--><!--Device-cloudSync-function unregisterChange(uri: string): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **参数：**

@@ -8,6 +8,8 @@ beacon围栏请求参数。transitionCallback与fenceExtensionAbilityName任选�
 
 **起始版本：** 20
 
+<!--Device-geoLocationManager-export interface BeaconFenceRequest--><!--Device-geoLocationManager-export interface BeaconFenceRequest-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 ## 导入模块
@@ -28,7 +30,9 @@ beacon围栏的参数配置。
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-BeaconFenceRequest-beacon: BeaconFence--><!--Device-BeaconFenceRequest-beacon: BeaconFence-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geofence
 
@@ -44,7 +48,9 @@ fenceExtensionAbilityName?: string
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-BeaconFenceRequest-fenceExtensionAbilityName?: string--><!--Device-BeaconFenceRequest-fenceExtensionAbilityName?: string-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geofence
 
@@ -60,6 +66,8 @@ beacon围栏事件信息。默认值为undefined。仅支持前台回调。
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-BeaconFenceRequest-transitionCallback?: Callback<GeofenceTransition>--><!--Device-BeaconFenceRequest-transitionCallback?: Callback<GeofenceTransition>-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geofence

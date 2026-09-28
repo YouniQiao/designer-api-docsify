@@ -18,6 +18,8 @@ function on(type: 'callDetailsChange', callback: Callback<CallAttributeOptions>)
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-call-function on(type: 'callDetailsChange', callback: Callback<CallAttributeOptions>): void--><!--Device-call-function on(type: 'callDetailsChange', callback: Callback<CallAttributeOptions>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +63,8 @@ function on(type: 'callEventChange', callback: Callback<CallEventOptions>): void
 **起始版本：** 8
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
+
+<!--Device-call-function on(type: 'callEventChange', callback: Callback<CallEventOptions>): void--><!--Device-call-function on(type: 'callEventChange', callback: Callback<CallEventOptions>): void-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -106,6 +110,8 @@ function on(type: 'callDisconnectedCause', callback: Callback<DisconnectedDetail
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-call-function on(type: 'callDisconnectedCause', callback: Callback<DisconnectedDetails>): void--><!--Device-call-function on(type: 'callDisconnectedCause', callback: Callback<DisconnectedDetails>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -149,6 +155,8 @@ function on(type: 'mmiCodeResult', callback: Callback<MmiCodeResults>): void
 **起始版本：** 9
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
+
+<!--Device-call-function on(type: 'mmiCodeResult', callback: Callback<MmiCodeResults>): void--><!--Device-call-function on(type: 'mmiCodeResult', callback: Callback<MmiCodeResults>): void-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -194,6 +202,8 @@ function on(type: 'audioDeviceChange', callback: Callback<AudioDeviceCallbackInf
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-call-function on(type: 'audioDeviceChange', callback: Callback<AudioDeviceCallbackInfo>): void--><!--Device-call-function on(type: 'audioDeviceChange', callback: Callback<AudioDeviceCallbackInfo>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -238,6 +248,8 @@ function on(type: 'postDialDelay', callback: Callback<string>): void
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-call-function on(type: 'postDialDelay', callback: Callback<string>): void--><!--Device-call-function on(type: 'postDialDelay', callback: Callback<string>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -281,6 +293,8 @@ function on(type: 'imsCallModeChange', callback: Callback<ImsCallModeInfo>): voi
 **起始版本：** 11
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
+
+<!--Device-call-function on(type: 'imsCallModeChange', callback: Callback<ImsCallModeInfo>): void--><!--Device-call-function on(type: 'imsCallModeChange', callback: Callback<ImsCallModeInfo>): void-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -328,6 +342,8 @@ function on(type: 'callSessionEvent', callback: Callback<CallSessionEvent>): voi
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-call-function on(type: 'callSessionEvent', callback: Callback<CallSessionEvent>): void--><!--Device-call-function on(type: 'callSessionEvent', callback: Callback<CallSessionEvent>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -374,6 +390,8 @@ function on(type: 'peerDimensionsChange', callback: Callback<PeerDimensionsDetai
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-call-function on(type: 'peerDimensionsChange', callback: Callback<PeerDimensionsDetail>): void--><!--Device-call-function on(type: 'peerDimensionsChange', callback: Callback<PeerDimensionsDetail>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -419,6 +437,8 @@ function on(type: 'cameraCapabilitiesChange', callback: Callback<CameraCapabilit
 **起始版本：** 11
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
+
+<!--Device-call-function on(type: 'cameraCapabilitiesChange', callback: Callback<CameraCapabilities>): void--><!--Device-call-function on(type: 'cameraCapabilitiesChange', callback: Callback<CameraCapabilities>): void-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 

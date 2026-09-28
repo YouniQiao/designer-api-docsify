@@ -8,6 +8,8 @@ interface EffectInfo
 
 **起始版本：** 19
 
+<!--Device-vibrator-interface EffectInfo--><!--Device-vibrator-interface EffectInfo-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## 导入模块
@@ -27,5 +29,7 @@ isEffectSupported: boolean
 **类型：** boolean
 
 **起始版本：** 19
+
+<!--Device-EffectInfo-isEffectSupported: boolean--><!--Device-EffectInfo-isEffectSupported: boolean-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice

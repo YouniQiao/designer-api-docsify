@@ -20,6 +20,8 @@ class Array<T> implements ConcatArray<T>
 
 **装饰器类型：** @Sendable
 
+<!--Device-collections-class Array<T> implements ConcatArray<T>--><!--Device-collections-class Array<T> implements ConcatArray<T>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -39,6 +41,8 @@ import { collections } from '@kit.ArkTS';
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Array-[Symbol.iterator](): IterableIterator<T>--><!--Device-Array-[Symbol.iterator](): IterableIterator<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -65,6 +69,8 @@ at(index: number): T | undefined
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Array-at(index: number): T | undefined--><!--Device-Array-at(index: number): T | undefined-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -99,6 +105,8 @@ concat(...items: ConcatArray<T>[]): Array<T>
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Array-concat(...items: ConcatArray<T>[]): Array<T>--><!--Device-Array-concat(...items: ConcatArray<T>[]): Array<T>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -132,6 +140,8 @@ constructor()
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Array-constructor()--><!--Device-Array-constructor()-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **错误码：**
@@ -153,6 +163,8 @@ ArkTS Array的构造函数，通过开发者提供的元素进行初始化。
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Array-constructor(first: T, ...left: T[])--><!--Device-Array-constructor(first: T, ...left: T[])-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -183,6 +195,8 @@ ArkTS Array的构造函数，通过开发者提供的元素进行初始化。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Array-constructor(...items: T[])--><!--Device-Array-constructor(...items: T[])-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -210,6 +224,8 @@ containsAll(elements: Array<T>): boolean
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
+
+<!--Device-Array-containsAll(elements: Array<T>): boolean--><!--Device-Array-containsAll(elements: Array<T>): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -248,6 +264,8 @@ containsAll(elements: readonly T[]): boolean
 
 **原子化服务API：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
 
+<!--Device-Array-containsAll(elements: readonly T[]): boolean--><!--Device-Array-containsAll(elements: readonly T[]): boolean-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -280,6 +298,8 @@ copyWithin(target: number, start: number, end?: number): Array<T>
 **起始版本：** 18
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-Array-copyWithin(target: number, start: number, end?: number): Array<T>--><!--Device-Array-copyWithin(target: number, start: number, end?: number): Array<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -316,6 +336,8 @@ static create<T>(arrayLength: number, initialValue: T): Array<T>
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Array-static create<T>(arrayLength: number, initialValue: T): Array<T>--><!--Device-Array-static create<T>(arrayLength: number, initialValue: T): Array<T>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -349,6 +371,8 @@ entries(): IterableIterator<[number, T]>
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Array-entries(): IterableIterator<[number, T]>--><!--Device-Array-entries(): IterableIterator<[number, T]>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -375,6 +399,8 @@ every(predicate: ArrayPredicateFn<T, Array<T>>): boolean
 **起始版本：** 18
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-Array-every(predicate: ArrayPredicateFn<T, Array<T>>): boolean--><!--Device-Array-every(predicate: ArrayPredicateFn<T, Array<T>>): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -409,6 +435,8 @@ extendTo(arrayLength: number, initialValue: T): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Array-extendTo(arrayLength: number, initialValue: T): void--><!--Device-Array-extendTo(arrayLength: number, initialValue: T): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -436,6 +464,8 @@ fill(value: T, start?: number, end?: number): Array<T>
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Array-fill(value: T, start?: number, end?: number): Array<T>--><!--Device-Array-fill(value: T, start?: number, end?: number): Array<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -472,6 +502,8 @@ filter(predicate: (value: T, index: number, array: Array<T>) => boolean): Array<
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Array-filter(predicate: (value: T, index: number, array: Array<T>) => boolean): Array<T>--><!--Device-Array-filter(predicate: (value: T, index: number, array: Array<T>) => boolean): Array<T>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -504,6 +536,8 @@ find(predicate: (value: T, index: number, obj: Array<T>) => boolean): T | undefi
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Array-find(predicate: (value: T, index: number, obj: Array<T>) => boolean): T | undefined--><!--Device-Array-find(predicate: (value: T, index: number, obj: Array<T>) => boolean): T | undefined-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -538,6 +572,8 @@ findIndex(predicate: (value: T, index: number, obj: Array<T>) => boolean): numbe
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Array-findIndex(predicate: (value: T, index: number, obj: Array<T>) => boolean): number--><!--Device-Array-findIndex(predicate: (value: T, index: number, obj: Array<T>) => boolean): number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -571,6 +607,8 @@ forEach(callbackFn: (value: T, index: number, array: Array<T>) => void): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Array-forEach(callbackFn: (value: T, index: number, array: Array<T>) => void): void--><!--Device-Array-forEach(callbackFn: (value: T, index: number, array: Array<T>) => void): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -597,6 +635,8 @@ static from<T>(arrayLike: ArrayLike<T>): Array<T>
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Array-static from<T>(arrayLike: ArrayLike<T>): Array<T>--><!--Device-Array-static from<T>(arrayLike: ArrayLike<T>): Array<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -632,6 +672,8 @@ static from<T>(iterable: Iterable<T>): Array<T>
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Array-static from<T>(iterable: Iterable<T>): Array<T>--><!--Device-Array-static from<T>(iterable: Iterable<T>): Array<T>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -666,6 +708,8 @@ static from<T>(arrayLike: ArrayLike<T> | Iterable<T>, mapFn: ArrayFromMapFn<T, T
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-Array-static from<T>(arrayLike: ArrayLike<T> | Iterable<T>, mapFn: ArrayFromMapFn<T, T>): Array<T>--><!--Device-Array-static from<T>(arrayLike: ArrayLike<T> | Iterable<T>, mapFn: ArrayFromMapFn<T, T>): Array<T>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -695,6 +739,8 @@ static from<U, T>(arrayLike: ArrayLike<U> | Iterable<U>, mapFn: ArrayFromMapFn<U
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-Array-static from<U, T>(arrayLike: ArrayLike<U> | Iterable<U>, mapFn: ArrayFromMapFn<U, T>): Array<T>--><!--Device-Array-static from<U, T>(arrayLike: ArrayLike<U> | Iterable<U>, mapFn: ArrayFromMapFn<U, T>): Array<T>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -721,6 +767,8 @@ includes(searchElement: T, fromIndex?: number): boolean
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Array-includes(searchElement: T, fromIndex?: number): boolean--><!--Device-Array-includes(searchElement: T, fromIndex?: number): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -756,6 +804,8 @@ indexOf(searchElement: T, fromIndex?: number): number
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Array-indexOf(searchElement: T, fromIndex?: number): number--><!--Device-Array-indexOf(searchElement: T, fromIndex?: number): number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -790,6 +840,8 @@ static isArray(value: Object | undefined | null): boolean
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-Array-static isArray(value: Object | undefined | null): boolean--><!--Device-Array-static isArray(value: Object | undefined | null): boolean-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -815,6 +867,8 @@ join(separator?: string): string
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Array-join(separator?: string): string--><!--Device-Array-join(separator?: string): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -849,6 +903,8 @@ keys(): IterableIterator<number>
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Array-keys(): IterableIterator<number>--><!--Device-Array-keys(): IterableIterator<number>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -875,6 +931,8 @@ lastIndexOf(searchElement: T, fromIndex?: number): number
 **起始版本：** 18
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-Array-lastIndexOf(searchElement: T, fromIndex?: number): number--><!--Device-Array-lastIndexOf(searchElement: T, fromIndex?: number): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -910,6 +968,8 @@ map<U>(callbackFn: (value: T, index: number, array: Array<T>) => U): Array<U>
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Array-map<U>(callbackFn: (value: T, index: number, array: Array<T>) => U): Array<U>--><!--Device-Array-map<U>(callbackFn: (value: T, index: number, array: Array<T>) => U): Array<U>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -943,6 +1003,8 @@ static of<T>(...items: T[]): Array<T>
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-Array-static of<T>(...items: T[]): Array<T>--><!--Device-Array-static of<T>(...items: T[]): Array<T>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -968,6 +1030,8 @@ pop(): T | undefined
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Array-pop(): T | undefined--><!--Device-Array-pop(): T | undefined-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -995,6 +1059,8 @@ push(...items: T[]): number
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Array-push(...items: T[]): number--><!--Device-Array-push(...items: T[]): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1028,6 +1094,8 @@ reduce(callbackFn: (previousValue: T, currentValue: T, currentIndex: number, arr
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Array-reduce(callbackFn: (previousValue: T, currentValue: T, currentIndex: number, array: Array<T>) => T): T--><!--Device-Array-reduce(callbackFn: (previousValue: T, currentValue: T, currentIndex: number, array: Array<T>) => T): T-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1067,6 +1135,8 @@ reduce<U>(
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Array-reduce<U>(      callbackFn: (previousValue: U, currentValue: T, currentIndex: number, array: Array<T>) => U,      initialValue: U    ): U--><!--Device-Array-reduce<U>(      callbackFn: (previousValue: U, currentValue: T, currentIndex: number, array: Array<T>) => U,      initialValue: U    ): U-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -1100,6 +1170,8 @@ reduceRight<U = T>(callbackFn: ArrayReduceCallback<U, T, Array<T>>, initialValue
 **起始版本：** 18
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-Array-reduceRight<U = T>(callbackFn: ArrayReduceCallback<U, T, Array<T>>, initialValue: U): U--><!--Device-Array-reduceRight<U = T>(callbackFn: ArrayReduceCallback<U, T, Array<T>>, initialValue: U): U-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1137,6 +1209,8 @@ reduceRight(callbackFn: ArrayReduceCallback<T, T, Array<T>>): T
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-Array-reduceRight(callbackFn: ArrayReduceCallback<T, T, Array<T>>): T--><!--Device-Array-reduceRight(callbackFn: ArrayReduceCallback<T, T, Array<T>>): T-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -1171,6 +1245,8 @@ retainAll(elements: Array<T>): boolean
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
+
+<!--Device-Array-retainAll(elements: Array<T>): boolean--><!--Device-Array-retainAll(elements: Array<T>): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1209,6 +1285,8 @@ retainAll(elements: readonly T[]): boolean
 
 **原子化服务API：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
 
+<!--Device-Array-retainAll(elements: readonly T[]): boolean--><!--Device-Array-retainAll(elements: readonly T[]): boolean-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -1246,6 +1324,8 @@ retainAll(predicate: ArrayElementPredicateFn<T>): boolean
 
 **原子化服务API：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
 
+<!--Device-Array-retainAll(predicate: ArrayElementPredicateFn<T>): boolean--><!--Device-Array-retainAll(predicate: ArrayElementPredicateFn<T>): boolean-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -1279,6 +1359,8 @@ reverse(): Array<T>
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-Array-reverse(): Array<T>--><!--Device-Array-reverse(): Array<T>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -1305,6 +1387,8 @@ shift(): T | undefined
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Array-shift(): T | undefined--><!--Device-Array-shift(): T | undefined-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1333,6 +1417,8 @@ shrinkTo(arrayLength: number): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Array-shrinkTo(arrayLength: number): void--><!--Device-Array-shrinkTo(arrayLength: number): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -1359,6 +1445,8 @@ slice(start?: number, end?: number): Array<T>
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Array-slice(start?: number, end?: number): Array<T>--><!--Device-Array-slice(start?: number, end?: number): Array<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1394,6 +1482,8 @@ some(predicate: ArrayPredicateFn<T, Array<T>>): boolean
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-Array-some(predicate: ArrayPredicateFn<T, Array<T>>): boolean--><!--Device-Array-some(predicate: ArrayPredicateFn<T, Array<T>>): boolean-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -1427,6 +1517,8 @@ sort(compareFn?: (a: T, b: T) => number): Array<T>
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Array-sort(compareFn?: (a: T, b: T) => number): Array<T>--><!--Device-Array-sort(compareFn?: (a: T, b: T) => number): Array<T>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -1459,6 +1551,8 @@ splice(start: number): Array<T>
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Array-splice(start: number): Array<T>--><!--Device-Array-splice(start: number): Array<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1495,6 +1589,8 @@ splice(start: number, deleteCount: number, ...items: T[]): Array<T>
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Array-splice(start: number, deleteCount: number, ...items: T[]): Array<T>--><!--Device-Array-splice(start: number, deleteCount: number, ...items: T[]): Array<T>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -1530,6 +1626,8 @@ toLocaleString(): string
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-Array-toLocaleString(): string--><!--Device-Array-toLocaleString(): string-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -1557,6 +1655,8 @@ toString(): string
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-Array-toString(): string--><!--Device-Array-toString(): string-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -1583,6 +1683,8 @@ unshift(...items: T[]): number
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Array-unshift(...items: T[]): number--><!--Device-Array-unshift(...items: T[]): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1617,6 +1719,8 @@ values(): IterableIterator<T>
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Array-values(): IterableIterator<T>--><!--Device-Array-values(): IterableIterator<T>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -1646,6 +1750,8 @@ values(): IterableIterator<T>
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-Array-[index: number]: T--><!--Device-Array-[index: number]: T-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **错误码：**
@@ -1667,5 +1773,7 @@ Array的元素个数。
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Array-readonly length: number--><!--Device-Array-readonly length: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

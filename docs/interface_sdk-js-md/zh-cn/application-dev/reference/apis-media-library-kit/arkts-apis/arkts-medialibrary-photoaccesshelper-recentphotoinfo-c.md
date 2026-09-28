@@ -8,6 +8,8 @@ export class RecentPhotoInfo
 
 **起始版本：** 20
 
+<!--Device-photoAccessHelper-export class RecentPhotoInfo--><!--Device-photoAccessHelper-export class RecentPhotoInfo-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
@@ -28,7 +30,9 @@ dateTaken?: number
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-RecentPhotoInfo-dateTaken?: long--><!--Device-RecentPhotoInfo-dateTaken?: long-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -44,6 +48,8 @@ identifier?: string
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-RecentPhotoInfo-identifier?: string--><!--Device-RecentPhotoInfo-identifier?: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core

@@ -8,6 +8,8 @@ export enum LogicalOrientation
 
 **起始版本：** 26.0.0
 
+<!--Device-motion-export enum LogicalOrientation--><!--Device-motion-export enum LogicalOrientation-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.Motion
 
 **系统接口：** 此接口为系统接口。
@@ -23,6 +25,8 @@ UNKNOWN = -1
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-LogicalOrientation-UNKNOWN = -1--><!--Device-LogicalOrientation-UNKNOWN = -1-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.Motion
 
@@ -40,6 +44,8 @@ UPRIGHT = 0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-LogicalOrientation-UPRIGHT = 0--><!--Device-LogicalOrientation-UPRIGHT = 0-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.Motion
 
 **系统接口：** 此接口为系统接口。
@@ -55,6 +61,8 @@ LEFT = 1
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-LogicalOrientation-LEFT = 1--><!--Device-LogicalOrientation-LEFT = 1-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.Motion
 
@@ -72,6 +80,8 @@ INVERTED = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-LogicalOrientation-INVERTED = 2--><!--Device-LogicalOrientation-INVERTED = 2-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.Motion
 
 **系统接口：** 此接口为系统接口。
@@ -87,6 +97,8 @@ RIGHT = 3
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-LogicalOrientation-RIGHT = 3--><!--Device-LogicalOrientation-RIGHT = 3-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.Motion
 

@@ -18,6 +18,8 @@ function getDoNotDisturbProfile(id: number): Promise<DoNotDisturbProfile>
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function getDoNotDisturbProfile(id: long): Promise<DoNotDisturbProfile>--><!--Device-notificationManager-function getDoNotDisturbProfile(id: long): Promise<DoNotDisturbProfile>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -75,6 +77,8 @@ function getDoNotDisturbProfile(id: number, userId: number): Promise<DoNotDistur
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-notificationManager-function getDoNotDisturbProfile(id: long, userId: int): Promise<DoNotDisturbProfile>--><!--Device-notificationManager-function getDoNotDisturbProfile(id: long, userId: int): Promise<DoNotDisturbProfile>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

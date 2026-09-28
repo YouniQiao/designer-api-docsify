@@ -10,6 +10,8 @@ export interface GetLocationTypeResponse
 
 **废弃版本：** 9
 
+<!--Device-unnamed-export interface GetLocationTypeResponse--><!--Device-unnamed-export interface GetLocationTypeResponse-End-->
+
 **系统能力：** SystemCapability.Location.Location.Lite
 
 ## 导入模块
@@ -33,5 +35,7 @@ types: Array<string>
 **废弃版本：** 9
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-GetLocationTypeResponse-types: Array<string>--><!--Device-GetLocationTypeResponse-types: Array<string>-End-->
 
 **系统能力：** SystemCapability.Location.Location.Lite

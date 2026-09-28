@@ -10,6 +10,8 @@ EnterpriseAdminExtensionContext是[EnterpriseAdminExtensionAbility](arkts-mdm-en
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-common-export type EnterpriseAdminExtensionContext = _EnterpriseAdminExtensionContext.default--><!--Device-common-export type EnterpriseAdminExtensionContext = _EnterpriseAdminExtensionContext.default-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **类型：** _EnterpriseAdminExtensionContext.default

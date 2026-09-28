@@ -12,6 +12,8 @@ export class DragController
 
 **起始版本：** 11
 
+<!--Device-unnamed-export class DragController--><!--Device-unnamed-export class DragController-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -36,6 +38,8 @@ cancelDataLoading(key: string): void
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-DragController-cancelDataLoading(key: string): void--><!--Device-DragController-cancelDataLoading(key: string): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -69,6 +73,8 @@ createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, dragInfo: dra
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-DragController-createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, dragInfo: dragController.DragInfo): dragController.DragAction--><!--Device-DragController-createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, dragInfo: dragController.DragInfo): dragController.DragAction-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -252,6 +258,8 @@ enableDropDisallowedBadge(enabled: boolean): void
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-DragController-enableDropDisallowedBadge(enabled: boolean): void--><!--Device-DragController-enableDropDisallowedBadge(enabled: boolean): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -327,6 +335,8 @@ executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: dragController.DragI
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-DragController-executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: dragController.DragInfo,    callback: AsyncCallback<dragController.DragEventParam>): void--><!--Device-DragController-executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: dragController.DragInfo,    callback: AsyncCallback<dragController.DragEventParam>): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -420,6 +430,8 @@ executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: dragController.DragI
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-DragController-executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: dragController.DragInfo)    : Promise<dragController.DragEventParam>--><!--Device-DragController-executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: dragController.DragInfo)    : Promise<dragController.DragEventParam>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -544,6 +556,8 @@ getDragPreview(): dragController.DragPreview
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-DragController-getDragPreview(): dragController.DragPreview--><!--Device-DragController-getDragPreview(): dragController.DragPreview-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
@@ -569,6 +583,8 @@ notifyDragStartRequest(requestStatus: dragController.DragStartRequestStatus): vo
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-DragController-notifyDragStartRequest(requestStatus: dragController.DragStartRequestStatus): void--><!--Device-DragController-notifyDragStartRequest(requestStatus: dragController.DragStartRequestStatus): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -667,6 +683,8 @@ setDragEventStrictReportingEnabled(enable: boolean): void
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-DragController-setDragEventStrictReportingEnabled(enable: boolean): void--><!--Device-DragController-setDragEventStrictReportingEnabled(enable: boolean): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

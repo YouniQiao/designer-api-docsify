@@ -20,6 +20,8 @@ function enableEthernetInterface(): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ethernet-function enableEthernetInterface(): Promise<void>--><!--Device-ethernet-function enableEthernetInterface(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
 **系统接口：** 此接口为系统接口。

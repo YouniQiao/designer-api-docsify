@@ -16,6 +16,8 @@ Defines the options of the **Refresh** component.
 
 **Since:** 8
 
+<!--Device-unnamed-interface RefreshOptions--><!--Device-unnamed-interface RefreshOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## builder
@@ -33,6 +35,8 @@ Custom content in the refreshing area. NOTE In API version 10 and earlier versio
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-RefreshOptions-builder?: CustomBuilder--><!--Device-RefreshOptions-builder?: CustomBuilder-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -52,6 +56,8 @@ Custom text displayed at the bottom of the refreshing area. NOTE When setting th
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-RefreshOptions-promptText?: ResourceStr--><!--Device-RefreshOptions-promptText?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## refreshing
@@ -70,6 +76,8 @@ Whether the component is being refreshed. The value **true** means that the comp
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-RefreshOptions-refreshing: boolean--><!--Device-RefreshOptions-refreshing: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## refreshingContent
@@ -87,6 +95,8 @@ Custom content in the refreshing area. NOTE If this parameter and the **builder*
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-RefreshOptions-refreshingContent?: ComponentContent--><!--Device-RefreshOptions-refreshingContent?: ComponentContent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -112,6 +122,8 @@ Coefficient of friction, which indicates the component's sensitivity to the pull
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-RefreshOptions-friction?: number | string--><!--Device-RefreshOptions-friction?: number | string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## offset
@@ -129,5 +141,7 @@ Distance from the pull-down starting point to the top of the component. Default 
 **Deprecated since:** 11
 
 **Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-RefreshOptions-offset?: number | string--><!--Device-RefreshOptions-offset?: number | string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

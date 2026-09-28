@@ -8,6 +8,8 @@ interface GlassMarbleSphereParam
 
 **起始版本：** 26.0.1
 
+<!--Device-uiEffect-interface GlassMarbleSphereParam--><!--Device-uiEffect-interface GlassMarbleSphereParam-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ center: [number, number]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-GlassMarbleSphereParam-center: [double, double]--><!--Device-GlassMarbleSphereParam-center: [double, double]-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ radius: number
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-GlassMarbleSphereParam-radius: double--><!--Device-GlassMarbleSphereParam-radius: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

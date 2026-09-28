@@ -16,6 +16,8 @@ function getAppVMMemoryInfo(): VMMemoryInfo
 
 **起始版本：** 12
 
+<!--Device-hidebug-function getAppVMMemoryInfo(): VMMemoryInfo--><!--Device-hidebug-function getAppVMMemoryInfo(): VMMemoryInfo-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **返回值：**

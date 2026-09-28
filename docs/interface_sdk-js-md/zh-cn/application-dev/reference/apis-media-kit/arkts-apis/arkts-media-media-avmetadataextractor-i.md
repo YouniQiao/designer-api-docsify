@@ -14,6 +14,8 @@ interface AVMetadataExtractor
 
 **起始版本：** 11
 
+<!--Device-media-interface AVMetadataExtractor--><!--Device-media-interface AVMetadataExtractor-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 ## 导入模块
@@ -33,6 +35,8 @@ cancelAllFetchFrames(): void
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVMetadataExtractor-cancelAllFetchFrames(): void--><!--Device-AVMetadataExtractor-cancelAllFetchFrames(): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -64,6 +68,8 @@ fetchAlbumCover(callback: AsyncCallback<image.PixelMap>): void
 获取音频专辑封面。使用callback异步回调。
 
 **起始版本：** 11
+
+<!--Device-AVMetadataExtractor-fetchAlbumCover(callback: AsyncCallback<image.PixelMap>): void--><!--Device-AVMetadataExtractor-fetchAlbumCover(callback: AsyncCallback<image.PixelMap>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -114,6 +120,8 @@ fetchAlbumCover(): Promise<image.PixelMap>
 
 **起始版本：** 11
 
+<!--Device-AVMetadataExtractor-fetchAlbumCover(): Promise<image.PixelMap>--><!--Device-AVMetadataExtractor-fetchAlbumCover(): Promise<image.PixelMap>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 **返回值：**
@@ -158,6 +166,8 @@ fetchFrameByTime(timeUs: number, options: AVImageQueryOptions, param: PixelMapPa
 获取视频缩略图。使用Promise异步回调。
 
 **起始版本：** 20
+
+<!--Device-AVMetadataExtractor-fetchFrameByTime(timeUs: number, options: AVImageQueryOptions, param: PixelMapParams): Promise<image.PixelMap>--><!--Device-AVMetadataExtractor-fetchFrameByTime(timeUs: number, options: AVImageQueryOptions, param: PixelMapParams): Promise<image.PixelMap>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -229,6 +239,8 @@ fetchFrameByTimeWithTimeout(timeUs: number, options: AVImageQueryOptions, param:
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVMetadataExtractor-fetchFrameByTimeWithTimeout(timeUs: long, options: AVImageQueryOptions, param: PixelMapParams,      timeoutMs: long): Promise<image.PixelMap | undefined>--><!--Device-AVMetadataExtractor-fetchFrameByTimeWithTimeout(timeUs: long, options: AVImageQueryOptions, param: PixelMapParams,      timeoutMs: long): Promise<image.PixelMap | undefined>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -310,6 +322,8 @@ fetchFramesByTimes(timesUs: number[], queryOption: AVImageQueryOptions, param: P
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVMetadataExtractor-fetchFramesByTimes(timesUs: long[], queryOption: AVImageQueryOptions, param: PixelMapParams,        callback: OnFrameFetched): void--><!--Device-AVMetadataExtractor-fetchFramesByTimes(timesUs: long[], queryOption: AVImageQueryOptions, param: PixelMapParams,        callback: OnFrameFetched): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 **参数：**
@@ -384,6 +398,8 @@ fetchFramesByTimesWithTimeout(timesUs: number[], queryOption: AVImageQueryOption
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVMetadataExtractor-fetchFramesByTimesWithTimeout(timesUs: long[], queryOption: AVImageQueryOptions, param: PixelMapParams,      timeoutMs: long, callback: OnFrameFetched): void--><!--Device-AVMetadataExtractor-fetchFramesByTimesWithTimeout(timesUs: long[], queryOption: AVImageQueryOptions, param: PixelMapParams,      timeoutMs: long, callback: OnFrameFetched): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 **参数：**
@@ -449,6 +465,8 @@ fetchMetadata(callback: AsyncCallback<AVMetadata>): void
 
 **起始版本：** 11
 
+<!--Device-AVMetadataExtractor-fetchMetadata(callback: AsyncCallback<AVMetadata>): void--><!--Device-AVMetadataExtractor-fetchMetadata(callback: AsyncCallback<AVMetadata>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 **参数：**
@@ -496,6 +514,8 @@ fetchMetadata(): Promise<AVMetadata>
 
 **起始版本：** 11
 
+<!--Device-AVMetadataExtractor-fetchMetadata(): Promise<AVMetadata>--><!--Device-AVMetadataExtractor-fetchMetadata(): Promise<AVMetadata>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 **返回值：**
@@ -540,6 +560,8 @@ fetchMetadataWithTimeout(timeoutMs: number): Promise<AVMetadata | undefined>
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVMetadataExtractor-fetchMetadataWithTimeout(timeoutMs: long): Promise<AVMetadata | undefined>--><!--Device-AVMetadataExtractor-fetchMetadataWithTimeout(timeoutMs: long): Promise<AVMetadata | undefined>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -595,6 +617,8 @@ release(callback: AsyncCallback<void>): void
 
 **起始版本：** 11
 
+<!--Device-AVMetadataExtractor-release(callback: AsyncCallback<void>): void--><!--Device-AVMetadataExtractor-release(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 **参数：**
@@ -640,6 +664,8 @@ release(): Promise<void>
 
 **起始版本：** 11
 
+<!--Device-AVMetadataExtractor-release(): Promise<void>--><!--Device-AVMetadataExtractor-release(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 **返回值：**
@@ -682,6 +708,8 @@ setUrlSource(url: string, headers?: Record<string, string>): void
 网络点播资源地址描述，通过该接口设置数据源。只支持获取网络[fetchMetadata](#fetchmetadata)（元数据）和[fetchFrameByTime](#fetchframebytime)（缩略图），在获取之前，必须设置媒体资源URL。
 
 **起始版本：** 20
+
+<!--Device-AVMetadataExtractor-setUrlSource(url: string, headers?: Record<string, string>): void--><!--Device-AVMetadataExtractor-setUrlSource(url: string, headers?: Record<string, string>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -729,6 +757,8 @@ dataSrc ?: AVDataSrcDescriptor
 
 **起始版本：** 11
 
+<!--Device-AVMetadataExtractor-dataSrc ?: AVDataSrcDescriptor--><!--Device-AVMetadataExtractor-dataSrc ?: AVDataSrcDescriptor-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 ## fdSrc
@@ -750,5 +780,7 @@ fdSrc ?: AVFileDescriptor
 **类型：** [AVFileDescriptor](arkts-media-media-avfiledescriptor-i.md)
 
 **起始版本：** 11
+
+<!--Device-AVMetadataExtractor-fdSrc ?: AVFileDescriptor--><!--Device-AVMetadataExtractor-fdSrc ?: AVFileDescriptor-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor

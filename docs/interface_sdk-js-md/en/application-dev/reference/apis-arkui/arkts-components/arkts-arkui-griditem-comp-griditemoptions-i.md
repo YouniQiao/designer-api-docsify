@@ -8,6 +8,8 @@ Defines the **GridItem** style object, used to configure the style options of **
 
 **Since:** 11
 
+<!--Device-unnamed-declare interface GridItemOptions--><!--Device-unnamed-declare interface GridItemOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## style
@@ -31,5 +33,7 @@ When set to **GridItemStyle.PLAIN**, the **Hover** and **Press** state styles ar
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GridItemOptions-style?: GridItemStyle--><!--Device-GridItemOptions-style?: GridItemStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

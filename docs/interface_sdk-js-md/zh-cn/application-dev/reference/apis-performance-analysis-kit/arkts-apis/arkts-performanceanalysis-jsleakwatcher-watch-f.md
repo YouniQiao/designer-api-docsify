@@ -22,6 +22,8 @@ function watch(obj: object, msg: string): void
 
 **起始版本：** 12
 
+<!--Device-jsLeakWatcher-function watch(obj: object, msg: string): void--><!--Device-jsLeakWatcher-function watch(obj: object, msg: string): void-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
 **参数：**

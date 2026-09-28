@@ -8,6 +8,8 @@ Provides a unified representation and encapsulation of colors. It supports color
 
 **Since:** 12
 
+<!--Device-unnamed-declare class ColorMetrics--><!--Device-unnamed-declare class ColorMetrics-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## autoRefresh
@@ -23,6 +25,8 @@ Sets whether the **ColorMetrics** object automatically updates with system confi
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ColorMetrics-autoRefresh?(value: boolean): ColorMetrics--><!--Device-ColorMetrics-autoRefresh?(value: boolean): ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -73,6 +77,8 @@ Blends a specified color (**overlayColor**) with the current color and returns t
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ColorMetrics-blendColor(overlayColor: ColorMetrics): ColorMetrics--><!--Device-ColorMetrics-blendColor(overlayColor: ColorMetrics): ColorMetrics-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -107,6 +113,8 @@ Instantiates the **ColorMetrics** class using ColorSpace and RGBA colorS. Only t
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-ColorMetrics-static colorWithSpace(colorSpace: ColorSpace, red: number, green: number, blue: number, alpha?: number): ColorMetrics--><!--Device-ColorMetrics-static colorWithSpace(colorSpace: ColorSpace, red: number, green: number, blue: number, alpha?: number): ColorMetrics-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -139,6 +147,8 @@ Instantiates the **ColorMetrics** class using a color in HEX format.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ColorMetrics-static numeric(value: number): ColorMetrics--><!--Device-ColorMetrics-static numeric(value: number): ColorMetrics-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -166,6 +176,8 @@ Instantiates the **ColorMetrics** class using a color in Resource format.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ColorMetrics-static resourceColor(color: ResourceColor): ColorMetrics--><!--Device-ColorMetrics-static resourceColor(color: ResourceColor): ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -202,6 +214,8 @@ Instantiates the **ColorMetrics** class using colors in RGB or RGBA format.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ColorMetrics-static rgba(red: number, green: number, blue: number, alpha?: number): ColorMetrics--><!--Device-ColorMetrics-static rgba(red: number, green: number, blue: number, alpha?: number): ColorMetrics-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -234,6 +248,8 @@ Obtains the alpha component of the ColorMetrics color.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ColorMetrics-get alpha(): number--><!--Device-ColorMetrics-get alpha(): number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -310,6 +326,8 @@ Obtains the blue component of the ColorMetrics color.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ColorMetrics-get blue(): number--><!--Device-ColorMetrics-get blue(): number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## color
@@ -327,6 +345,8 @@ Obtains the color of **ColorMetrics**. The return value is a string indicating a
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ColorMetrics-get color(): string--><!--Device-ColorMetrics-get color(): string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -346,6 +366,8 @@ Obtains the green component of the ColorMetrics color.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ColorMetrics-get green(): number--><!--Device-ColorMetrics-get green(): number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## red
@@ -363,5 +385,7 @@ Obtains the red component of the ColorMetrics color.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ColorMetrics-get red(): number--><!--Device-ColorMetrics-get red(): number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

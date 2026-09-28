@@ -26,6 +26,8 @@ function setLocalName(name: string): void
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH
 - API版本9：ohos.permission.DISCOVER_BLUETOOTH
 
+<!--Device-bluetoothManager-function setLocalName(name: string): void--><!--Device-bluetoothManager-function setLocalName(name: string): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**

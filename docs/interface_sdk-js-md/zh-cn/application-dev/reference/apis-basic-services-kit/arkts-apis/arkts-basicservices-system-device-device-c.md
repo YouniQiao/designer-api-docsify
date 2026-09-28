@@ -10,6 +10,8 @@ getInfo interface
 
 **废弃版本：** 6
 
+<!--Device-unnamed-export default class Device--><!--Device-unnamed-export default class Device-End-->
+
 **系统能力：** SystemCapability.Startup.SystemInfo.Lite
 
 ## 导入模块
@@ -41,6 +43,8 @@ static getInfo(options?: GetDeviceOptions): void
 **起始版本：** 3
 
 **废弃版本：** 6
+
+<!--Device-Device-static getInfo(options?: GetDeviceOptions): void--><!--Device-Device-static getInfo(options?: GetDeviceOptions): void-End-->
 
 **系统能力：** SystemCapability.Startup.SystemInfo.Lite
 

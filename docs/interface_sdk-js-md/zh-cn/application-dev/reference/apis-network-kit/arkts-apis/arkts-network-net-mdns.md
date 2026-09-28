@@ -4,6 +4,8 @@ MDNS即多播DNS（Multicast DNS），提供局域网内的本地服务添加、
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare namespace mdns--><!--Device-unnamed-declare namespace mdns-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.MDNS
 
 ## 导入模块

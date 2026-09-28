@@ -16,6 +16,8 @@ function acquireShareData(missionId: number, callback: AsyncCallback<Record<stri
 
 **起始版本：** 10
 
+<!--Device-abilityManager-function acquireShareData(missionId: int, callback: AsyncCallback<Record<string, Object>>): void--><!--Device-abilityManager-function acquireShareData(missionId: int, callback: AsyncCallback<Record<string, Object>>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -47,6 +49,8 @@ function acquireShareData(missionId: number): Promise<Record<string, Object>>
 系统弹框通过该接口发起原子化服务分享，触发目标UIAbility的[onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare)回调并返回分享数据。使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-abilityManager-function acquireShareData(missionId: int): Promise<Record<string, Object>>--><!--Device-abilityManager-function acquireShareData(missionId: int): Promise<Record<string, Object>>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

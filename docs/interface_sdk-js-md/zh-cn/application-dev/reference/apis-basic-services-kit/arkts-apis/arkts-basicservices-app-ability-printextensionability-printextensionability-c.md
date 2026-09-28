@@ -8,6 +8,8 @@ declare class PrintExtensionAbility
 
 **起始版本：** 14
 
+<!--Device-unnamed-declare class PrintExtensionAbility--><!--Device-unnamed-declare class PrintExtensionAbility-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## 导入模块
@@ -27,6 +29,8 @@ public onCancelPrintJob(jobInfo: print.PrintJob): void
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PrintExtensionAbility-public onCancelPrintJob(jobInfo: print.PrintJob): void--><!--Device-PrintExtensionAbility-public onCancelPrintJob(jobInfo: print.PrintJob): void-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -67,6 +71,8 @@ onConnectPrinter(printerId: number): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PrintExtensionAbility-onConnectPrinter(printerId: int): void--><!--Device-PrintExtensionAbility-onConnectPrinter(printerId: int): void-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **参数：**
@@ -99,6 +105,8 @@ onCreate(want: Want): void
 **起始版本：** 14
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PrintExtensionAbility-onCreate(want: Want): void--><!--Device-PrintExtensionAbility-onCreate(want: Want): void-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -134,6 +142,8 @@ onDestroy(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PrintExtensionAbility-onDestroy(): void--><!--Device-PrintExtensionAbility-onDestroy(): void-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **示例**
@@ -159,6 +169,8 @@ onDisconnectPrinter(printerId: number): void
 **起始版本：** 14
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PrintExtensionAbility-onDisconnectPrinter(printerId: int): void--><!--Device-PrintExtensionAbility-onDisconnectPrinter(printerId: int): void-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -192,6 +204,8 @@ public onRequestPrinterCapability(printerId: number): print.PrinterCapability
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PrintExtensionAbility-public onRequestPrinterCapability(printerId: int): print.PrinterCapability--><!--Device-PrintExtensionAbility-public onRequestPrinterCapability(printerId: int): print.PrinterCapability-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -244,6 +258,8 @@ onStartDiscoverPrinter(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PrintExtensionAbility-onStartDiscoverPrinter(): void--><!--Device-PrintExtensionAbility-onStartDiscoverPrinter(): void-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **示例**
@@ -270,6 +286,8 @@ public onStartPrintJob(jobInfo: print.PrintJob): void
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PrintExtensionAbility-public onStartPrintJob(jobInfo: print.PrintJob): void--><!--Device-PrintExtensionAbility-public onStartPrintJob(jobInfo: print.PrintJob): void-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -310,6 +328,8 @@ onStopDiscoverPrinter(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PrintExtensionAbility-onStopDiscoverPrinter(): void--><!--Device-PrintExtensionAbility-onStopDiscoverPrinter(): void-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **示例**
@@ -338,5 +358,7 @@ context: PrintExtensionContext
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PrintExtensionAbility-context: PrintExtensionContext--><!--Device-PrintExtensionAbility-context: PrintExtensionContext-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework

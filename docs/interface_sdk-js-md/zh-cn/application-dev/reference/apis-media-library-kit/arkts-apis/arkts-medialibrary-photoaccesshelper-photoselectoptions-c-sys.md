@@ -10,6 +10,8 @@ class PhotoSelectOptions extends BaseSelectOptions
 
 **起始版本：** 10
 
+<!--Device-photoAccessHelper-class PhotoSelectOptions extends BaseSelectOptions--><!--Device-photoAccessHelper-class PhotoSelectOptions extends BaseSelectOptions-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ Theme color
 
 **起始版本：** 12
 
+<!--Device-PhotoSelectOptions-themeColor?: CustomColors--><!--Device-PhotoSelectOptions-themeColor?: CustomColors-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -47,6 +51,8 @@ userId?: number
 **类型：** number
 
 **起始版本：** 18
+
+<!--Device-PhotoSelectOptions-userId?: int--><!--Device-PhotoSelectOptions-userId?: int-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

@@ -8,6 +8,8 @@ export interface ControlEvent
 
 **起始版本：** 20
 
+<!--Device-onScreen-export interface ControlEvent--><!--Device-onScreen-export interface ControlEvent-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ eventType: EventType
 
 **起始版本：** 20
 
+<!--Device-ControlEvent-eventType: EventType--><!--Device-ControlEvent-eventType: EventType-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ hookId?: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-ControlEvent-hookId?: long--><!--Device-ControlEvent-hookId?: long-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -62,6 +68,8 @@ sessionId: number
 
 **起始版本：** 20
 
+<!--Device-ControlEvent-sessionId: long--><!--Device-ControlEvent-sessionId: long-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +85,8 @@ windowId: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-ControlEvent-windowId: int--><!--Device-ControlEvent-windowId: int-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 

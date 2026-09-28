@@ -16,6 +16,8 @@ function getIfaceRxBytes(nic: string, callback: AsyncCallback<number>): void
 
 **起始版本：** 10
 
+<!--Device-statistics-function getIfaceRxBytes(nic: string, callback: AsyncCallback<long>): void--><!--Device-statistics-function getIfaceRxBytes(nic: string, callback: AsyncCallback<long>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**
@@ -63,6 +65,8 @@ function getIfaceRxBytes(nic: string): Promise<number>
 获取指定网卡从最近一次开机开始至接口调用时刻的下行流量总和（单位：字节）。使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-statistics-function getIfaceRxBytes(nic: string): Promise<long>--><!--Device-statistics-function getIfaceRxBytes(nic: string): Promise<long>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 

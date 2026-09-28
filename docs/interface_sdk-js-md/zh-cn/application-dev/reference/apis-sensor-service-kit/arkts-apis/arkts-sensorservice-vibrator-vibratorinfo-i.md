@@ -8,6 +8,8 @@ interface VibratorInfo
 
 **起始版本：** 19
 
+<!--Device-vibrator-interface VibratorInfo--><!--Device-vibrator-interface VibratorInfo-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## 导入模块
@@ -28,6 +30,8 @@ deviceId: number
 
 **起始版本：** 19
 
+<!--Device-VibratorInfo-deviceId: int--><!--Device-VibratorInfo-deviceId: int-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## deviceName
@@ -41,6 +45,8 @@ deviceName: string
 **类型：** string
 
 **起始版本：** 19
+
+<!--Device-VibratorInfo-deviceName: string--><!--Device-VibratorInfo-deviceName: string-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
@@ -56,6 +62,8 @@ isHdHapticSupported: boolean
 
 **起始版本：** 19
 
+<!--Device-VibratorInfo-isHdHapticSupported: boolean--><!--Device-VibratorInfo-isHdHapticSupported: boolean-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## isLocalVibrator
@@ -70,6 +78,8 @@ isLocalVibrator: boolean
 
 **起始版本：** 19
 
+<!--Device-VibratorInfo-isLocalVibrator: boolean--><!--Device-VibratorInfo-isLocalVibrator: boolean-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## vibratorId
@@ -83,5 +93,7 @@ vibratorId: number
 **类型：** number
 
 **起始版本：** 19
+
+<!--Device-VibratorInfo-vibratorId: int--><!--Device-VibratorInfo-vibratorId: int-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice

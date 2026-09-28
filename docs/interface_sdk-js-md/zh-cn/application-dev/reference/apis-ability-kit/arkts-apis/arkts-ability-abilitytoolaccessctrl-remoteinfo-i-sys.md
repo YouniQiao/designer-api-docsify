@@ -8,6 +8,8 @@ interface RemoteInfo
 
 **起始版本：** 26.0.1
 
+<!--Device-abilityToolAccessCtrl-interface RemoteInfo--><!--Device-abilityToolAccessCtrl-interface RemoteInfo-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 **系统接口：** 此接口为系统接口。
@@ -31,6 +33,8 @@ domainId: string
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-RemoteInfo-domainId: string--><!--Device-RemoteInfo-domainId: string-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 **系统接口：** 此接口为系统接口。
@@ -48,6 +52,8 @@ remoteControlParams?: RemoteControlParams
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-RemoteInfo-remoteControlParams?: RemoteControlParams--><!--Device-RemoteInfo-remoteControlParams?: RemoteControlParams-End-->
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -67,6 +73,8 @@ remoteId: string
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-RemoteInfo-remoteId: string--><!--Device-RemoteInfo-remoteId: string-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 **系统接口：** 此接口为系统接口。
@@ -84,6 +92,8 @@ role: Role
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-RemoteInfo-role: Role--><!--Device-RemoteInfo-role: Role-End-->
 
 **系统能力：** SystemCapability.Security.Asset
 

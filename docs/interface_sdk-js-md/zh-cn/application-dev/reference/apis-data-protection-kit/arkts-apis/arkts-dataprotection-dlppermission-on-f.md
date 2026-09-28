@@ -18,6 +18,8 @@ function on(type: 'openDLPFile', listener: Callback<AccessedDLPFileInfo>): void
 
 **起始版本：** 10
 
+<!--Device-dlpPermission-function on(type: 'openDLPFile', listener: Callback<AccessedDLPFileInfo>): void--><!--Device-dlpPermission-function on(type: 'openDLPFile', listener: Callback<AccessedDLPFileInfo>): void-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **参数：**

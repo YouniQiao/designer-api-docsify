@@ -8,6 +8,8 @@ interface TextRectSize
 
 **起始版本：** 24
 
+<!--Device-text-interface TextRectSize--><!--Device-text-interface TextRectSize-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## 导入模块
@@ -30,7 +32,9 @@ height: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextRectSize-height: double--><!--Device-TextRectSize-height: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -48,6 +52,8 @@ width: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextRectSize-width: double--><!--Device-TextRectSize-width: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing

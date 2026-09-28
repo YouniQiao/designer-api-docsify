@@ -10,6 +10,8 @@ Parameters of the exit or entrance animation.
 
 **Since:** 7
 
+<!--Device-unnamed-declare interface PageTransitionOptions--><!--Device-unnamed-declare interface PageTransitionOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## curve
@@ -33,6 +35,8 @@ Default value: **Curve.Linear**
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PageTransitionOptions-curve?: Curve | string | ICurve--><!--Device-PageTransitionOptions-curve?: Curve | string | ICurve-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -60,6 +64,8 @@ If no match is found, the default page transition effect is used (which may vary
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-PageTransitionOptions-delay?: number--><!--Device-PageTransitionOptions-delay?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## duration
@@ -82,6 +88,8 @@ Value range: [0, +∞)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-PageTransitionOptions-duration?: number--><!--Device-PageTransitionOptions-duration?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## type
@@ -99,5 +107,7 @@ Default value: **RouteType.None**
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PageTransitionOptions-type?: RouteType--><!--Device-PageTransitionOptions-type?: RouteType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -16,6 +16,8 @@ function isLocationPrivacyConfirmed(type: LocationPrivacyType): boolean
 
 **起始版本：** 9
 
+<!--Device-geoLocationManager-function isLocationPrivacyConfirmed(type: LocationPrivacyType): boolean--><!--Device-geoLocationManager-function isLocationPrivacyConfirmed(type: LocationPrivacyType): boolean-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **系统接口：** 此接口为系统接口。

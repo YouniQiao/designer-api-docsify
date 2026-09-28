@@ -14,6 +14,8 @@ export declare struct AVInputCastPicker
 
 **装饰器类型：** @Component
 
+<!--Device-unnamed-export declare struct AVInputCastPicker--><!--Device-unnamed-export declare struct AVInputCastPicker-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVInputCast
 
 ## 导入模块
@@ -34,6 +36,8 @@ onStateChange?: OnPickerStateCallback
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
+<!--Device-AVInputCastPicker-onStateChange?: OnPickerStateCallback--><!--Device-AVInputCastPicker-onStateChange?: OnPickerStateCallback-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVInputCast
 
 ## customPicker
@@ -51,5 +55,7 @@ customPicker?: CustomBuilder
 **装饰器类型：** @Prop
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVInputCastPicker-customPicker?: CustomBuilder--><!--Device-AVInputCastPicker-customPicker?: CustomBuilder-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVInputCast

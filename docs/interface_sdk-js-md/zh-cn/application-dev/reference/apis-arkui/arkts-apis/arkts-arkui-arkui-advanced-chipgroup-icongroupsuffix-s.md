@@ -10,6 +10,8 @@ ChipGroup组件提供操作块群组能力，支持单选或多选模式，可�
 
 **装饰器类型：** @Component
 
+<!--Device-unnamed-export declare struct IconGroupSuffix--><!--Device-unnamed-export declare struct IconGroupSuffix-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -40,6 +42,8 @@ iconBackgroundSystemMaterial?: uiMaterial.Material
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
+<!--Device-IconGroupSuffix-iconBackgroundSystemMaterial?: uiMaterial.Material--><!--Device-IconGroupSuffix-iconBackgroundSystemMaterial?: uiMaterial.Material-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## items
@@ -59,5 +63,7 @@ items: Array<IconItemOptions | SymbolGlyphModifier | SymbolItemOptions>
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-IconGroupSuffix-items: Array<IconItemOptions | SymbolGlyphModifier | SymbolItemOptions>--><!--Device-IconGroupSuffix-items: Array<IconItemOptions | SymbolGlyphModifier | SymbolItemOptions>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

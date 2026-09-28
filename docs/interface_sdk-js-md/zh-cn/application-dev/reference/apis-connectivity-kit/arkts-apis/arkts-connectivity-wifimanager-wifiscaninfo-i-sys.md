@@ -8,6 +8,8 @@ Wi-Fi热点信息。
 
 **起始版本：** 9
 
+<!--Device-wifiManager-interface WifiScanInfo--><!--Device-wifiManager-interface WifiScanInfo-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## 导入模块
@@ -29,6 +31,8 @@ isHiLinkProNetwork?: boolean
 **类型：** boolean
 
 **起始版本：** 20
+
+<!--Device-WifiScanInfo-isHiLinkProNetwork?: boolean--><!--Device-WifiScanInfo-isHiLinkProNetwork?: boolean-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 

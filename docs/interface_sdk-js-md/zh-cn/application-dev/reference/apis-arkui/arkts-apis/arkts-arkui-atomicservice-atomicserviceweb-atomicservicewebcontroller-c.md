@@ -10,6 +10,8 @@ export declare class AtomicServiceWebController
 
 **装饰器类型：** @Observed
 
+<!--Device-unnamed-export declare class AtomicServiceWebController--><!--Device-unnamed-export declare class AtomicServiceWebController-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -29,6 +31,8 @@ accessBackward(): boolean
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AtomicServiceWebController-accessBackward(): boolean--><!--Device-AtomicServiceWebController-accessBackward(): boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -56,6 +60,8 @@ accessForward(): boolean
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AtomicServiceWebController-accessForward(): boolean--><!--Device-AtomicServiceWebController-accessForward(): boolean-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
@@ -81,6 +87,8 @@ accessStep(step: number): boolean
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AtomicServiceWebController-accessStep(step: number): boolean--><!--Device-AtomicServiceWebController-accessStep(step: number): boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -115,6 +123,8 @@ backward(): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AtomicServiceWebController-backward(): void--><!--Device-AtomicServiceWebController-backward(): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **错误码：**
@@ -135,6 +145,8 @@ forward(): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AtomicServiceWebController-forward(): void--><!--Device-AtomicServiceWebController-forward(): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **错误码：**
@@ -154,6 +166,8 @@ getCustomUserAgent(): string
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AtomicServiceWebController-getCustomUserAgent(): string--><!--Device-AtomicServiceWebController-getCustomUserAgent(): string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -181,6 +195,8 @@ getUserAgent(): string
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AtomicServiceWebController-getUserAgent(): string--><!--Device-AtomicServiceWebController-getUserAgent(): string-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
@@ -206,6 +222,8 @@ loadUrl(url: string | Resource, headers?: Array<WebHeader>): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AtomicServiceWebController-loadUrl(url: string | Resource, headers?: Array<WebHeader>): void--><!--Device-AtomicServiceWebController-loadUrl(url: string | Resource, headers?: Array<WebHeader>): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -237,6 +255,8 @@ refresh(): void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-AtomicServiceWebController-refresh(): void--><!--Device-AtomicServiceWebController-refresh(): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **错误码：**
@@ -263,6 +283,8 @@ setCustomUserAgent(userAgent: string): void
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AtomicServiceWebController-setCustomUserAgent(userAgent: string): void--><!--Device-AtomicServiceWebController-setCustomUserAgent(userAgent: string): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

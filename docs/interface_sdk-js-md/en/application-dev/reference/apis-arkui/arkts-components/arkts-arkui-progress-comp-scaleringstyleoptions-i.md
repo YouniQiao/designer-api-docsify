@@ -12,6 +12,8 @@ Inherits from [CommonProgressStyleOptions](arkts-arkui-progress-comp-commonprogr
 
 **Since:** 10
 
+<!--Device-unnamed-declare interface ScaleRingStyleOptions extends CommonProgressStyleOptions--><!--Device-unnamed-declare interface ScaleRingStyleOptions extends CommonProgressStyleOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## scaleCount
@@ -35,6 +37,8 @@ When both scaleCount and scaleWidth are equal to their default values, setting t
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ScaleRingStyleOptions-scaleCount?: number--><!--Device-ScaleRingStyleOptions-scaleCount?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,6 +66,8 @@ When both scaleCount and scaleWidth are equal to their default values, setting t
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ScaleRingStyleOptions-scaleWidth?: Length--><!--Device-ScaleRingStyleOptions-scaleWidth?: Length-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## strokeWidth
@@ -85,5 +91,7 @@ Exceeding the value range or setting an invalid value is handled as the default 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ScaleRingStyleOptions-strokeWidth?: Length--><!--Device-ScaleRingStyleOptions-strokeWidth?: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

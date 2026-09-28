@@ -24,6 +24,8 @@ function getAuthInstance(challenge: Uint8Array, authType: UserAuthType, authTrus
 
 **替代接口：** [getUserAuthInstance](arkts-userauthentication-userauth-getuserauthinstance-f.md)
 
+<!--Device-userAuth-function getAuthInstance(challenge: Uint8Array, authType: UserAuthType, authTrustLevel: AuthTrustLevel): AuthInstance--><!--Device-userAuth-function getAuthInstance(challenge: Uint8Array, authType: UserAuthType, authTrustLevel: AuthTrustLevel): AuthInstance-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 **参数：**

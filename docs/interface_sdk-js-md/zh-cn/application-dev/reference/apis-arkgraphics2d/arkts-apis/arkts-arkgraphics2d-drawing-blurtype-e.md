@@ -15,6 +15,8 @@ enum BlurType
 
 **起始版本：** 12
 
+<!--Device-drawing-enum BlurType--><!--Device-drawing-enum BlurType-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## NORMAL
@@ -26,6 +28,8 @@ NORMAL = 0
 全面模糊，外圈边缘和内部实体一起模糊。
 
 **起始版本：** 12
+
+<!--Device-BlurType-NORMAL = 0--><!--Device-BlurType-NORMAL = 0-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -39,6 +43,8 @@ SOLID = 1
 
 **起始版本：** 12
 
+<!--Device-BlurType-SOLID = 1--><!--Device-BlurType-SOLID = 1-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## OUTER
@@ -51,6 +57,8 @@ OUTER = 2
 
 **起始版本：** 12
 
+<!--Device-BlurType-OUTER = 2--><!--Device-BlurType-OUTER = 2-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## INNER
@@ -62,5 +70,7 @@ INNER = 3
 只有内部实体模糊，外圈边缘清晰。
 
 **起始版本：** 12
+
+<!--Device-BlurType-INNER = 3--><!--Device-BlurType-INNER = 3-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing

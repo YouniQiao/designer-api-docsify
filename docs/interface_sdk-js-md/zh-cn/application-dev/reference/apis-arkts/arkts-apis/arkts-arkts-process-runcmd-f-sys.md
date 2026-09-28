@@ -19,6 +19,8 @@ function runCmd(
 
 **起始版本：** 7
 
+<!--Device-process-function runCmd(    command: string,    options?: ConditionType  ): ChildProcess--><!--Device-process-function runCmd(    command: string,    options?: ConditionType  ): ChildProcess-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **系统接口：** 此接口为系统接口。

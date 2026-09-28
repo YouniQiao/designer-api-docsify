@@ -8,6 +8,8 @@ interface Filter
 
 **起始版本：** 10
 
+<!--Device-agent-interface Filter--><!--Device-agent-interface Filter-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## 导入模块
@@ -27,6 +29,8 @@ Specify the package name of an application. Only for advanced search, common sea
 **类型：** string
 
 **起始版本：** 10
+
+<!--Device-Filter-bundle?: string--><!--Device-Filter-bundle?: string-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 

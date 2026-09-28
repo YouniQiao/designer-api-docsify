@@ -1,10 +1,12 @@
-# @ohos.multimodalAwareness.carAwareness
+# @ohos.multimodalAwareness.carAwareness(车辆感知)
 
 此模块提供使用汽车感知的功能
 
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-unnamed-declare namespace carAwareness--><!--Device-unnamed-declare namespace carAwareness-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.CarAwareness
 

@@ -18,6 +18,8 @@ function clearId(): void
 
 **起始版本：** 8
 
+<!--Device-hiTraceChain-function clearId(): void--><!--Device-hiTraceChain-function clearId(): void-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
 
 **示例**

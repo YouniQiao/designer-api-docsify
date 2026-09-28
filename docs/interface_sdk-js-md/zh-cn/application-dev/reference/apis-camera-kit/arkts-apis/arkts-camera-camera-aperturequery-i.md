@@ -8,6 +8,8 @@ interface ApertureQuery
 
 **起始版本：** 24
 
+<!--Device-camera-interface ApertureQuery--><!--Device-camera-interface ApertureQuery-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
@@ -26,7 +28,9 @@ getSupportedPhysicalApertures(): Array<PhysicalAperture>
 
 **起始版本：** 24
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-ApertureQuery-getSupportedPhysicalApertures(): Array<PhysicalAperture>--><!--Device-ApertureQuery-getSupportedPhysicalApertures(): Array<PhysicalAperture>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

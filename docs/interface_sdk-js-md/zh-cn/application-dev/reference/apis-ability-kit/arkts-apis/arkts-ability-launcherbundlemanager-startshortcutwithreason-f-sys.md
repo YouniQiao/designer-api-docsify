@@ -20,6 +20,8 @@ function startShortcutWithReason(shortcutInfo: ShortcutInfo, startReason: string
 
 **需要权限：** ohos.permission.START_SHORTCUT and ohos.permission.SET_LAUNCH_REASON_MESSAGE
 
+<!--Device-launcherBundleManager-function startShortcutWithReason(shortcutInfo: ShortcutInfo, startReason: string, options?: StartOptions): Promise<void>--><!--Device-launcherBundleManager-function startShortcutWithReason(shortcutInfo: ShortcutInfo, startReason: string, options?: StartOptions): Promise<void>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
 **系统接口：** 此接口为系统接口。

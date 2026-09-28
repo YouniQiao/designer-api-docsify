@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare namespace a2dp--><!--Device-unnamed-declare namespace a2dp-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块

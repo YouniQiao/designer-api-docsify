@@ -26,6 +26,8 @@ function off(type: 'bluetoothDeviceFind', callback?: Callback<Array<string>>): v
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH
 - API版本9：ohos.permission.USE_BLUETOOTH
 
+<!--Device-bluetoothManager-function off(type: 'bluetoothDeviceFind', callback?: Callback<Array<string>>): void--><!--Device-bluetoothManager-function off(type: 'bluetoothDeviceFind', callback?: Callback<Array<string>>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -78,6 +80,8 @@ function off(type: 'bondStateChange', callback?: Callback<BondStateParam>): void
 **需要权限：** 
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH
 - API版本9：ohos.permission.USE_BLUETOOTH
+
+<!--Device-bluetoothManager-function off(type: 'bondStateChange', callback?: Callback<BondStateParam>): void--><!--Device-bluetoothManager-function off(type: 'bondStateChange', callback?: Callback<BondStateParam>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -133,6 +137,8 @@ function off(type: 'pinRequired', callback?: Callback<PinRequiredParam>): void
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH
 - API版本9：ohos.permission.DISCOVER_BLUETOOTH
 
+<!--Device-bluetoothManager-function off(type: 'pinRequired', callback?: Callback<PinRequiredParam>): void--><!--Device-bluetoothManager-function off(type: 'pinRequired', callback?: Callback<PinRequiredParam>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -187,6 +193,8 @@ function off(type: 'stateChange', callback?: Callback<BluetoothState>): void
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH
 - API版本9：ohos.permission.USE_BLUETOOTH
 
+<!--Device-bluetoothManager-function off(type: 'stateChange', callback?: Callback<BluetoothState>): void--><!--Device-bluetoothManager-function off(type: 'stateChange', callback?: Callback<BluetoothState>): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**
@@ -236,6 +244,8 @@ function off(type: 'sppRead', clientSocket: number, callback?: Callback<ArrayBuf
 **废弃版本：** 10
 
 **替代接口：** sppRead
+
+<!--Device-bluetoothManager-function off(type: 'sppRead', clientSocket: number, callback?: Callback<ArrayBuffer>): void--><!--Device-bluetoothManager-function off(type: 'sppRead', clientSocket: number, callback?: Callback<ArrayBuffer>): void-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 

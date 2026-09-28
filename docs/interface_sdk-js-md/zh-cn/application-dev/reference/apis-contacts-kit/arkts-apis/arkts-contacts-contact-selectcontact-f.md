@@ -20,6 +20,8 @@ function selectContact(callback: AsyncCallback<Array<Contact>>): void
 
 **替代接口：** [selectContacts](arkts-contacts-contact-selectcontacts-f.md)(callback: AsyncCallback&lt;Array&lt;Contact&gt;&gt;)
 
+<!--Device-contact-function selectContact(callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function selectContact(callback: AsyncCallback<Array<Contact>>): void-End-->
+
 **系统能力：** SystemCapability.Applications.Contacts
 
 **参数：**
@@ -60,6 +62,8 @@ function selectContact(): Promise<Array<Contact>>
 **废弃版本：** 10
 
 **替代接口：** [selectContacts](arkts-contacts-contact-selectcontacts-f.md)()
+
+<!--Device-contact-function selectContact(): Promise<Array<Contact>>--><!--Device-contact-function selectContact(): Promise<Array<Contact>>-End-->
 
 **系统能力：** SystemCapability.Applications.Contacts
 

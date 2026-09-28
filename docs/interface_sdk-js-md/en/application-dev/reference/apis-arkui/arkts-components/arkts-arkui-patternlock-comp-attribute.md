@@ -4,11 +4,13 @@
 declare class PatternLockAttribute extends CommonMethod<PatternLockAttribute>
 ```
 
-In addition to the [universal attributes](arkts-arkui-common-comp.md#common), the following attributes are supported.
+In addition to the [universal attributes](arkts-arkui-common-comp.md), the following attributes are supported.
 
 **Inheritance/Implementation:** PatternLockAttribute extends CommonMethod<PatternLockAttribute>
 
 **Since:** 9
+
+<!--Device-unnamed-declare class PatternLockAttribute extends CommonMethod<PatternLockAttribute>--><!--Device-unnamed-declare class PatternLockAttribute extends CommonMethod<PatternLockAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,6 +27,8 @@ Sets the background circle style for the dots in a grid when they are in the act
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PatternLockAttribute-activateCircleStyle(options: Optional<CircleStyleOptions>): PatternLockAttribute--><!--Device-PatternLockAttribute-activateCircleStyle(options: Optional<CircleStyleOptions>): PatternLockAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,6 +50,8 @@ Sets the fill color of the grid dots in the active state, which is the state whe
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PatternLockAttribute-activeColor(value: ResourceColor): PatternLockAttribute--><!--Device-PatternLockAttribute-activeColor(value: ResourceColor): PatternLockAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -65,6 +71,8 @@ Sets whether to reset the component state when the component area is pressed aga
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PatternLockAttribute-autoReset(value: boolean): PatternLockAttribute--><!--Device-PatternLockAttribute-autoReset(value: boolean): PatternLockAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -90,6 +98,8 @@ Sets the background color. If this attribute is not set, the background is trans
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PatternLockAttribute-backgroundColor(value: ResourceColor): PatternLockAttribute--><!--Device-PatternLockAttribute-backgroundColor(value: ResourceColor): PatternLockAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -109,6 +119,8 @@ Sets the radius of the grid dots. If this attribute is not set, the default radi
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PatternLockAttribute-circleRadius(value: Length): PatternLockAttribute--><!--Device-PatternLockAttribute-circleRadius(value: Length): PatternLockAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -135,6 +147,8 @@ Invoked when a grid dot is connected during pattern password input.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PatternLockAttribute-onDotConnect(callback: import('../api/@ohos.base').Callback<number>): PatternLockAttribute--><!--Device-PatternLockAttribute-onDotConnect(callback: import('../api/@ohos.base').Callback<number>): PatternLockAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -163,6 +177,8 @@ Invoked when the pattern password input is complete.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PatternLockAttribute-onPatternComplete(callback: (input: Array<number>) => void): PatternLockAttribute--><!--Device-PatternLockAttribute-onPatternComplete(callback: (input: Array<number>) => void): PatternLockAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -182,6 +198,8 @@ Sets the color of the connecting lines. If this attribute is not set, the defaul
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PatternLockAttribute-pathColor(value: ResourceColor): PatternLockAttribute--><!--Device-PatternLockAttribute-pathColor(value: ResourceColor): PatternLockAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -203,6 +221,8 @@ Sets the width of the connecting lines. If this attribute is not set, the defaul
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PatternLockAttribute-pathStrokeWidth(value: number | string): PatternLockAttribute--><!--Device-PatternLockAttribute-pathStrokeWidth(value: number | string): PatternLockAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -223,6 +243,8 @@ Sets the fill color of the grid dots in the unselected state. If this attribute 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PatternLockAttribute-regularColor(value: ResourceColor): PatternLockAttribute--><!--Device-PatternLockAttribute-regularColor(value: ResourceColor): PatternLockAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -242,6 +264,8 @@ Sets the fill color of the grid dots in the selected state. If this attribute is
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PatternLockAttribute-selectedColor(value: ResourceColor): PatternLockAttribute--><!--Device-PatternLockAttribute-selectedColor(value: ResourceColor): PatternLockAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -269,6 +293,8 @@ Sets the width and height of the component (the width and height are equal). If 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PatternLockAttribute-sideLength(value: Length): PatternLockAttribute--><!--Device-PatternLockAttribute-sideLength(value: Length): PatternLockAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -290,6 +316,8 @@ Sets whether unselected grid dots are skipped when the password path passes over
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-PatternLockAttribute-skipUnselectedPoint(skipped: boolean): PatternLockAttribute--><!--Device-PatternLockAttribute-skipUnselectedPoint(skipped: boolean): PatternLockAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

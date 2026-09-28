@@ -16,6 +16,8 @@ function createAppAccountManager(): AppAccountManager
 
 **起始版本：** 7
 
+<!--Device-appAccount-function createAppAccountManager(): AppAccountManager--><!--Device-appAccount-function createAppAccountManager(): AppAccountManager-End-->
+
 **系统能力：** SystemCapability.Account.AppAccount
 
 **返回值：**

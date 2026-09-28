@@ -8,6 +8,8 @@ TCP端口状态信息。
 
 **起始版本：** 24
 
+<!--Device-connection-export interface TcpNetPortStatesInfo--><!--Device-connection-export interface TcpNetPortStatesInfo-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ TCP网络本地IP地址。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TcpNetPortStatesInfo-tcpLocalIp: string--><!--Device-TcpNetPortStatesInfo-tcpLocalIp: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## tcpLocalPort
@@ -45,6 +49,8 @@ TCP网络本地端口，取值范围[0, 65535]。
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TcpNetPortStatesInfo-tcpLocalPort: int--><!--Device-TcpNetPortStatesInfo-tcpLocalPort: int-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -62,6 +68,8 @@ tcpPid: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TcpNetPortStatesInfo-tcpPid: int--><!--Device-TcpNetPortStatesInfo-tcpPid: int-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## tcpRemoteIp
@@ -77,6 +85,8 @@ TCP网络远程IP地址。
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TcpNetPortStatesInfo-tcpRemoteIp: string--><!--Device-TcpNetPortStatesInfo-tcpRemoteIp: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -94,6 +104,8 @@ TCP网络远程端口，取值范围[0, 65535]。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TcpNetPortStatesInfo-tcpRemotePort: int--><!--Device-TcpNetPortStatesInfo-tcpRemotePort: int-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## tcpState
@@ -110,6 +122,8 @@ TCP网络状态。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TcpNetPortStatesInfo-tcpState: TcpState--><!--Device-TcpNetPortStatesInfo-tcpState: TcpState-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## tcpUid
@@ -125,5 +139,7 @@ tcpUid: number
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TcpNetPortStatesInfo-tcpUid: int--><!--Device-TcpNetPortStatesInfo-tcpUid: int-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core

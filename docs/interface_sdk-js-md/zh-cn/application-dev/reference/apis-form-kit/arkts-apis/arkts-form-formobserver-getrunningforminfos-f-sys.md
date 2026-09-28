@@ -18,6 +18,8 @@ function getRunningFormInfos(callback: AsyncCallback<Array<formInfo.RunningFormI
 
 **需要权限：** ohos.permission.OBSERVE_FORM_RUNNING
 
+<!--Device-formObserver-function getRunningFormInfos(callback: AsyncCallback<Array<formInfo.RunningFormInfo>>, hostBundleName?: string): void--><!--Device-formObserver-function getRunningFormInfos(callback: AsyncCallback<Array<formInfo.RunningFormInfo>>, hostBundleName?: string): void-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -79,6 +81,8 @@ function getRunningFormInfos(
 
 **需要权限：** ohos.permission.OBSERVE_FORM_RUNNING
 
+<!--Device-formObserver-function getRunningFormInfos(    callback: AsyncCallback<Array<formInfo.RunningFormInfo>>,    isUnusedIncluded: boolean,    hostBundleName?: string  ): void--><!--Device-formObserver-function getRunningFormInfos(    callback: AsyncCallback<Array<formInfo.RunningFormInfo>>,    isUnusedIncluded: boolean,    hostBundleName?: string  ): void-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -136,6 +140,8 @@ function getRunningFormInfos(hostBundleName?: string): Promise<Array<formInfo.Ru
 **起始版本：** 10
 
 **需要权限：** ohos.permission.OBSERVE_FORM_RUNNING
+
+<!--Device-formObserver-function getRunningFormInfos(hostBundleName?: string): Promise<Array<formInfo.RunningFormInfo>>--><!--Device-formObserver-function getRunningFormInfos(hostBundleName?: string): Promise<Array<formInfo.RunningFormInfo>>-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -197,6 +203,8 @@ function getRunningFormInfos(
 **起始版本：** 11
 
 **需要权限：** ohos.permission.OBSERVE_FORM_RUNNING
+
+<!--Device-formObserver-function getRunningFormInfos(    isUnusedIncluded: boolean,    hostBundleName?: string  ): Promise<Array<formInfo.RunningFormInfo>>--><!--Device-formObserver-function getRunningFormInfos(    isUnusedIncluded: boolean,    hostBundleName?: string  ): Promise<Array<formInfo.RunningFormInfo>>-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 

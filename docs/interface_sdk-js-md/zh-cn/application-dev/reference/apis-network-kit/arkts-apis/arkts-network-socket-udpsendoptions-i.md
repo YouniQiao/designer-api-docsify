@@ -8,6 +8,8 @@ UDPSocket发送参数。
 
 **起始版本：** 7
 
+<!--Device-socket-export interface UDPSendOptions--><!--Device-socket-export interface UDPSendOptions-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块
@@ -28,6 +30,8 @@ address: NetAddress
 
 **起始版本：** 7
 
+<!--Device-UDPSendOptions-address: NetAddress--><!--Device-UDPSendOptions-address: NetAddress-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## data
@@ -42,6 +46,8 @@ data: string | ArrayBuffer
 
 **起始版本：** 7
 
+<!--Device-UDPSendOptions-data: string | ArrayBuffer--><!--Device-UDPSendOptions-data: string | ArrayBuffer-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## proxy
@@ -55,5 +61,7 @@ proxy?: ProxyOptions
 **类型：** [ProxyOptions](arkts-network-socket-proxyoptions-i.md)
 
 **起始版本：** 18
+
+<!--Device-UDPSendOptions-proxy?: ProxyOptions--><!--Device-UDPSendOptions-proxy?: ProxyOptions-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack

@@ -20,6 +20,8 @@ function closeProxyChannel(channelId: number): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-proxyChannelManager-function closeProxyChannel(channelId: int): void--><!--Device-proxyChannelManager-function closeProxyChannel(channelId: int): void-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **参数：**

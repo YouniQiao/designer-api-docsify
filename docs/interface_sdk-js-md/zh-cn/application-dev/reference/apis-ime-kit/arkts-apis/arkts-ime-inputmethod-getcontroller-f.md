@@ -16,6 +16,8 @@ function getController(): InputMethodController
 
 **起始版本：** 9
 
+<!--Device-inputMethod-function getController(): InputMethodController--><!--Device-inputMethod-function getController(): InputMethodController-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**

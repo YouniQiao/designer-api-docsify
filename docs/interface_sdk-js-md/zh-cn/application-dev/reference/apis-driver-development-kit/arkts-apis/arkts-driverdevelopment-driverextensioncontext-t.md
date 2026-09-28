@@ -10,6 +10,8 @@ DriverExtensionAbility的上下文环境，继承自ExtensionContext，其具体
 
 **起始版本：** 10
 
+<!--Device-unnamed-export type DriverExtensionContext = _DriverExtensionContext--><!--Device-unnamed-export type DriverExtensionContext = _DriverExtensionContext-End-->
+
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
 **类型：** _DriverExtensionContext

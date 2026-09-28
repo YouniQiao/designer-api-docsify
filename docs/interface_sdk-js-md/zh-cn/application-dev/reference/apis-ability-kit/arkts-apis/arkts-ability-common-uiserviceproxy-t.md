@@ -12,6 +12,8 @@ UIServiceProxy提供了与UIServiceExtensionAbility服务端数据通信的能�
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
+<!--Device-common-export type UIServiceProxy = _UIServiceProxy.default--><!--Device-common-export type UIServiceProxy = _UIServiceProxy.default-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **类型：** _UIServiceProxy.default

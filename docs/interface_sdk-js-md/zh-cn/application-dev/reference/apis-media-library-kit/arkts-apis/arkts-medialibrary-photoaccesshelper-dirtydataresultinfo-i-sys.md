@@ -8,6 +8,8 @@ interface DirtyDataResultInfo
 
 **起始版本：** 26.2.0
 
+<!--Device-photoAccessHelper-interface DirtyDataResultInfo--><!--Device-photoAccessHelper-interface DirtyDataResultInfo-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ elapsedTime: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DirtyDataResultInfo-elapsedTime: int--><!--Device-DirtyDataResultInfo-elapsedTime: int-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -50,6 +54,8 @@ errorMsg: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DirtyDataResultInfo-errorMsg: string--><!--Device-DirtyDataResultInfo-errorMsg: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -67,6 +73,8 @@ profit: number
 **起始版本：** 26.2.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DirtyDataResultInfo-profit: int--><!--Device-DirtyDataResultInfo-profit: int-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

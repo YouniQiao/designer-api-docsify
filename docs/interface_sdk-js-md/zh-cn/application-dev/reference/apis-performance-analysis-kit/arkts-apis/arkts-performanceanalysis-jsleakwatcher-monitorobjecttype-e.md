@@ -8,6 +8,8 @@ export enum MonitorObjectType
 
 **起始版本：** 24
 
+<!--Device-jsLeakWatcher-export enum MonitorObjectType--><!--Device-jsLeakWatcher-export enum MonitorObjectType-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
 ## ALL
@@ -21,6 +23,8 @@ ALL = -1
 **起始版本：** 24
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-MonitorObjectType-ALL = -1--><!--Device-MonitorObjectType-ALL = -1-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
@@ -36,6 +40,8 @@ CUSTOM_COMPONENT = 1 << 0
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-MonitorObjectType-CUSTOM_COMPONENT = 1 << 0--><!--Device-MonitorObjectType-CUSTOM_COMPONENT = 1 << 0-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
 ## WINDOW
@@ -49,6 +55,8 @@ WINDOW = 1 << 1
 **起始版本：** 24
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-MonitorObjectType-WINDOW = 1 << 1--><!--Device-MonitorObjectType-WINDOW = 1 << 1-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
@@ -64,6 +72,8 @@ NODE_CONTAINER = 1 << 2
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-MonitorObjectType-NODE_CONTAINER = 1 << 2--><!--Device-MonitorObjectType-NODE_CONTAINER = 1 << 2-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
 ## X_COMPONENT
@@ -78,6 +88,8 @@ X_COMPONENT = 1 << 3
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-MonitorObjectType-X_COMPONENT = 1 << 3--><!--Device-MonitorObjectType-X_COMPONENT = 1 << 3-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
 ## ABILITY
@@ -91,5 +103,7 @@ ABILITY = 1 << 4
 **起始版本：** 24
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-MonitorObjectType-ABILITY = 1 << 4--><!--Device-MonitorObjectType-ABILITY = 1 << 4-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiChecker

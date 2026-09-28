@@ -19,6 +19,8 @@ function queryParticipantsByInvitation(
 
 **起始版本：** 11
 
+<!--Device-sharing-function queryParticipantsByInvitation(      invitationCode: string,      callback: AsyncCallback<Result<Array<Participant>>>    ): void--><!--Device-sharing-function queryParticipantsByInvitation(      invitationCode: string,      callback: AsyncCallback<Result<Array<Participant>>>    ): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
 **系统接口：** 此接口为系统接口。
@@ -64,6 +66,8 @@ function queryParticipantsByInvitation(invitationCode: string): Promise<Result<A
 根据指定的共享邀请码查询当前共享的参与者，使用Promise异步回调。
 
 **起始版本：** 11
+
+<!--Device-sharing-function queryParticipantsByInvitation(invitationCode: string): Promise<Result<Array<Participant>>>--><!--Device-sharing-function queryParticipantsByInvitation(invitationCode: string): Promise<Result<Array<Participant>>>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 

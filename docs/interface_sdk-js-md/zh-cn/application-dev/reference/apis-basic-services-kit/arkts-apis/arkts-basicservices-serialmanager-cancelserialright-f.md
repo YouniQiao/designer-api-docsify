@@ -25,6 +25,8 @@ function cancelSerialRight(portId: number): void
 
 **起始版本：** 19
 
+<!--Device-serialManager-function cancelSerialRight(portId: int): void--><!--Device-serialManager-function cancelSerialRight(portId: int): void-End-->
+
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
 **参数：**

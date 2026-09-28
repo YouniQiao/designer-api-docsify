@@ -20,6 +20,8 @@ Creates a custom curve.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-curves-function customCurve(interpolate: (fraction: number) => number): ICurve--><!--Device-curves-function customCurve(interpolate: (fraction: number) => number): ICurve-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

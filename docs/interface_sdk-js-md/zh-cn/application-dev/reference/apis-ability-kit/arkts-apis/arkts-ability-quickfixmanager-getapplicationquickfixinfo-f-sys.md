@@ -18,6 +18,8 @@ function getApplicationQuickFixInfo(bundleName: string, callback: AsyncCallback<
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-quickFixManager-function getApplicationQuickFixInfo(bundleName: string, callback: AsyncCallback<ApplicationQuickFixInfo>): void--><!--Device-quickFixManager-function getApplicationQuickFixInfo(bundleName: string, callback: AsyncCallback<ApplicationQuickFixInfo>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.QuickFix
 
 **系统接口：** 此接口为系统接口。
@@ -73,6 +75,8 @@ function getApplicationQuickFixInfo(bundleName: string): Promise<ApplicationQuic
 **起始版本：** 9
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-quickFixManager-function getApplicationQuickFixInfo(bundleName: string): Promise<ApplicationQuickFixInfo>--><!--Device-quickFixManager-function getApplicationQuickFixInfo(bundleName: string): Promise<ApplicationQuickFixInfo>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.QuickFix
 

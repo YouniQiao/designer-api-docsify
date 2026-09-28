@@ -14,11 +14,11 @@ UIPickerComponent容器是用于实现用户选择操作的组件。它支持从
 > 
 > - UIPickerComponent容器当前不支持智能手表设备。开发者可通过deviceInfo.deviceType获取设备类型，判断是否为智能手表设备。
 > 
-> - 该组件从API版本26.0.0开始支持[WithTheme](arkts-arkui-withtheme-comp.md#with_themedefines-withtheme-component)。
+> - 该组件从API版本26.0.0开始支持[WithTheme](arkts-arkui-withtheme-comp.md)。
 
 > 
 
-## 子组件 > > - 支持多个子组件。 > - 支持子组件类型：[Text](arkts-arkui-text-comp.md#text)、[Image](arkts-arkui-image-comp.md#image)、[Row](arkts-arkui-row-comp.md#row)和[SymbolGlyph](arkts-arkui-symbolglyph-comp.md#symbolglyph)。 > - 支持渲染控制类型：[if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)和 > [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)。
+## 子组件 > > - 支持多个子组件。 > - 支持子组件类型：[Text](arkts-arkui-text-comp.md)、[Image](arkts-arkui-image-comp.md)、[Row](arkts-arkui-row-comp.md)和[SymbolGlyph](arkts-arkui-symbolglyph-comp.md)。 > - 支持渲染控制类型：[if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)和 > [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)。
 
 
 > **说明：** 
@@ -48,6 +48,8 @@ UIPickerComponent(options?: UIPickerComponentOptions)
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-UIPickerComponentInterface-(options?: UIPickerComponentOptions): UIPickerComponentAttribute--><!--Device-UIPickerComponentInterface-(options?: UIPickerComponentOptions): UIPickerComponentAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

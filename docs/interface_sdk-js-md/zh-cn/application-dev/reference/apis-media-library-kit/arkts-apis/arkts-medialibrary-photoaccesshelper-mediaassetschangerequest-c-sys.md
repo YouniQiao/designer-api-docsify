@@ -10,6 +10,8 @@ class MediaAssetsChangeRequest implements MediaChangeRequest
 
 **起始版本：** 26.0.0
 
+<!--Device-photoAccessHelper-class MediaAssetsChangeRequest implements MediaChangeRequest--><!--Device-photoAccessHelper-class MediaAssetsChangeRequest implements MediaChangeRequest-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
@@ -27,6 +29,8 @@ setHidden(hiddenState: boolean): void
 将文件设置为隐藏文件。
 
 **起始版本：** 11
+
+<!--Device-MediaAssetsChangeRequest-setHidden(hiddenState: boolean): void--><!--Device-MediaAssetsChangeRequest-setHidden(hiddenState: boolean): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -83,6 +87,8 @@ setIsRecentShow(isRencentShow: boolean): void
 
 **起始版本：** 18
 
+<!--Device-MediaAssetsChangeRequest-setIsRecentShow(isRencentShow: boolean): void--><!--Device-MediaAssetsChangeRequest-setIsRecentShow(isRencentShow: boolean): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -137,6 +143,8 @@ setUserComment(userComment: string): void
 修改媒体资产的备注信息。
 
 **起始版本：** 11
+
+<!--Device-MediaAssetsChangeRequest-setUserComment(userComment: string): void--><!--Device-MediaAssetsChangeRequest-setUserComment(userComment: string): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -196,6 +204,8 @@ readonly comment: string
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MediaAssetsChangeRequest-readonly comment: string--><!--Device-MediaAssetsChangeRequest-readonly comment: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

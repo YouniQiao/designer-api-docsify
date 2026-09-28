@@ -8,6 +8,8 @@ interface ApertureQuery
 
 **起始版本：** 24
 
+<!--Device-camera-interface ApertureQuery--><!--Device-camera-interface ApertureQuery-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
@@ -25,6 +27,8 @@ getSupportedVirtualApertures(): Array<number>
 获取支持的虚拟光圈列表。
 
 **起始版本：** 11
+
+<!--Device-ApertureQuery-getSupportedVirtualApertures(): Array<double>--><!--Device-ApertureQuery-getSupportedVirtualApertures(): Array<double>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

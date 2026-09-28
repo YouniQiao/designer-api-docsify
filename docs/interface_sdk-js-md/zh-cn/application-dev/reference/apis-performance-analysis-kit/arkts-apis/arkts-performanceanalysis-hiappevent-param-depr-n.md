@@ -18,6 +18,8 @@ namespace Param
 
 **替代接口：** Param
 
+<!--Device-hiAppEvent-namespace Param--><!--Device-hiAppEvent-namespace Param-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 ## 导入模块

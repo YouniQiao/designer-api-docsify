@@ -8,6 +8,8 @@ interface PrinterCapabilities
 
 **起始版本：** 14
 
+<!--Device-print-interface PrinterCapabilities--><!--Device-print-interface PrinterCapabilities-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## 导入模块
@@ -28,6 +30,8 @@ options?: string
 
 **起始版本：** 14
 
+<!--Device-PrinterCapabilities-options?: string--><!--Device-PrinterCapabilities-options?: string-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## supportedColorModes
@@ -41,6 +45,8 @@ supportedColorModes: Array<PrintColorMode>
 **类型：** Array&lt;[PrintColorMode](arkts-basicservices-print-printcolormode-e.md)&gt;
 
 **起始版本：** 14
+
+<!--Device-PrinterCapabilities-supportedColorModes: Array<PrintColorMode>--><!--Device-PrinterCapabilities-supportedColorModes: Array<PrintColorMode>-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -56,6 +62,8 @@ supportedDuplexModes: Array<PrintDuplexMode>
 
 **起始版本：** 14
 
+<!--Device-PrinterCapabilities-supportedDuplexModes: Array<PrintDuplexMode>--><!--Device-PrinterCapabilities-supportedDuplexModes: Array<PrintDuplexMode>-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## supportedMediaTypes
@@ -69,6 +77,8 @@ supportedMediaTypes?: Array<string>
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 14
+
+<!--Device-PrinterCapabilities-supportedMediaTypes?: Array<string>--><!--Device-PrinterCapabilities-supportedMediaTypes?: Array<string>-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -84,6 +94,8 @@ supportedOrientations?: Array<PrintOrientationMode>
 
 **起始版本：** 14
 
+<!--Device-PrinterCapabilities-supportedOrientations?: Array<PrintOrientationMode>--><!--Device-PrinterCapabilities-supportedOrientations?: Array<PrintOrientationMode>-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## supportedPageSizes
@@ -98,6 +110,8 @@ supportedPageSizes: Array<PrintPageSize>
 
 **起始版本：** 14
 
+<!--Device-PrinterCapabilities-supportedPageSizes: Array<PrintPageSize>--><!--Device-PrinterCapabilities-supportedPageSizes: Array<PrintPageSize>-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## supportedQualities
@@ -111,5 +125,7 @@ supportedQualities?: Array<PrintQuality>
 **类型：** Array&lt;[PrintQuality](arkts-basicservices-print-printquality-e.md)&gt;
 
 **起始版本：** 14
+
+<!--Device-PrinterCapabilities-supportedQualities?: Array<PrintQuality>--><!--Device-PrinterCapabilities-supportedQualities?: Array<PrintQuality>-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework

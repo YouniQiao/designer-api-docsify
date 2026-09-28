@@ -8,6 +8,8 @@ export enum EventPriority
 
 **起始版本：** 7
 
+<!--Device-emitter-export enum EventPriority--><!--Device-emitter-export enum EventPriority-End-->
+
 **系统能力：** SystemCapability.Notification.Emitter
 
 ## IMMEDIATE
@@ -20,7 +22,9 @@ IMMEDIATE = 0
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-EventPriority-IMMEDIATE = 0--><!--Device-EventPriority-IMMEDIATE = 0-End-->
 
 **系统能力：** SystemCapability.Notification.Emitter
 
@@ -34,7 +38,9 @@ HIGH
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-EventPriority-HIGH--><!--Device-EventPriority-HIGH-End-->
 
 **系统能力：** SystemCapability.Notification.Emitter
 
@@ -48,7 +54,9 @@ LOW
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-EventPriority-LOW--><!--Device-EventPriority-LOW-End-->
 
 **系统能力：** SystemCapability.Notification.Emitter
 
@@ -62,6 +70,8 @@ IDLE
 
 **起始版本：** 7
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-EventPriority-IDLE--><!--Device-EventPriority-IDLE-End-->
 
 **系统能力：** SystemCapability.Notification.Emitter

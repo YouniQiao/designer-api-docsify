@@ -8,6 +8,8 @@ LocalSocket客户端与服务端通信时接收的数据。
 
 **起始版本：** 11
 
+<!--Device-socket-export interface LocalSocketMessageInfo--><!--Device-socket-export interface LocalSocketMessageInfo-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块
@@ -28,6 +30,8 @@ address: string
 
 **起始版本：** 11
 
+<!--Device-LocalSocketMessageInfo-address: string--><!--Device-LocalSocketMessageInfo-address: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## message
@@ -42,6 +46,8 @@ message: ArrayBuffer
 
 **起始版本：** 11
 
+<!--Device-LocalSocketMessageInfo-message: ArrayBuffer--><!--Device-LocalSocketMessageInfo-message: ArrayBuffer-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## size
@@ -55,5 +61,7 @@ size: number
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-LocalSocketMessageInfo-size: int--><!--Device-LocalSocketMessageInfo-size: int-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack

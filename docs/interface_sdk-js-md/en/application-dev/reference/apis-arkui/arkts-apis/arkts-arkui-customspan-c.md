@@ -10,6 +10,8 @@ The drag preview of a custom span is blank.
 
 **Since:** 12
 
+<!--Device-unnamed-declare abstract class CustomSpan--><!--Device-unnamed-declare abstract class CustomSpan-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## invalidate
@@ -26,6 +28,8 @@ Manually triggers a refresh of the **Text** component that uses this **CustomSpa
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
+<!--Device-CustomSpan-invalidate(): void--><!--Device-CustomSpan-invalidate(): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onDraw
@@ -41,6 +45,8 @@ Called to draw a custom span.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-CustomSpan-abstract onDraw(context: DrawContext,  drawInfo: CustomSpanDrawInfo): void--><!--Device-CustomSpan-abstract onDraw(context: DrawContext,  drawInfo: CustomSpanDrawInfo): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,6 +70,8 @@ Called to obtain the size of a custom span.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-CustomSpan-abstract onMeasure(measureInfo: CustomSpanMeasureInfo) : CustomSpanMetrics--><!--Device-CustomSpan-abstract onMeasure(measureInfo: CustomSpanMeasureInfo) : CustomSpanMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

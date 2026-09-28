@@ -8,6 +8,8 @@ Enumerates the badge display positions.
 
 **Since:** 7
 
+<!--Device-unnamed-declare enum BadgePosition--><!--Device-unnamed-declare enum BadgePosition-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## RightTop
@@ -23,6 +25,8 @@ The badge is displayed in the upper right corner.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-BadgePosition-RightTop--><!--Device-BadgePosition-RightTop-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,6 +44,8 @@ The badge is displayed vertically centered on the right.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-BadgePosition-Right--><!--Device-BadgePosition-Right-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Left
@@ -55,5 +61,7 @@ The badge is displayed vertically centered on the left.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-BadgePosition-Left--><!--Device-BadgePosition-Left-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

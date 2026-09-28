@@ -27,6 +27,8 @@ Creates a radio button.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-RadioInterface-(options: RadioOptions): RadioAttribute--><!--Device-RadioInterface-(options: RadioOptions): RadioAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

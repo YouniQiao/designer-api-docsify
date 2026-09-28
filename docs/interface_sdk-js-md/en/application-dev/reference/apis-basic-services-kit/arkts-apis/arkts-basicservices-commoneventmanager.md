@@ -40,6 +40,8 @@ next highest priority. To stop delivering the event, call **abortCommonEvent** t
 
 **Since:** 9
 
+<!--Device-unnamed-declare namespace commonEventManager--><!--Device-unnamed-declare namespace commonEventManager-End-->
+
 **System capability:** SystemCapability.Notification.CommonEvent
 
 ## Modules to Import

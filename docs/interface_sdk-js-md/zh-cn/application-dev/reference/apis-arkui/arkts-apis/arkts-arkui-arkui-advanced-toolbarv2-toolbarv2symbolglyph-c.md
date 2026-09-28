@@ -10,6 +10,8 @@ Defines toolBarV2 symbolGlyph.
 
 **装饰器类型：** @ObservedV2
 
+<!--Device-unnamed-export class ToolBarV2SymbolGlyph--><!--Device-unnamed-export class ToolBarV2SymbolGlyph-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -31,6 +33,8 @@ The constructor used to create a ToolBarV2SymbolGlyph object.
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-ToolBarV2SymbolGlyph-constructor(options: ToolBarV2SymbolGlyphOptions)--><!--Device-ToolBarV2SymbolGlyph-constructor(options: ToolBarV2SymbolGlyphOptions)-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -58,6 +62,8 @@ Modifier of toolbarV2's activated symbol.
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
+<!--Device-ToolBarV2SymbolGlyph-activated?: SymbolGlyphModifier--><!--Device-ToolBarV2SymbolGlyph-activated?: SymbolGlyphModifier-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## normal
@@ -77,5 +83,7 @@ Modifier of toolbarV2's normal symbol.
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-ToolBarV2SymbolGlyph-normal: SymbolGlyphModifier--><!--Device-ToolBarV2SymbolGlyph-normal: SymbolGlyphModifier-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

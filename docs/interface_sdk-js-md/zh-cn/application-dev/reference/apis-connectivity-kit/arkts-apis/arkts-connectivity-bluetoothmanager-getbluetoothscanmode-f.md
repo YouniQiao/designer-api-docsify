@@ -26,6 +26,8 @@ function getBluetoothScanMode(): ScanMode
 - API版本10+：ohos.permission.ACCESS_BLUETOOTH
 - API版本9：ohos.permission.USE_BLUETOOTH
 
+<!--Device-bluetoothManager-function getBluetoothScanMode(): ScanMode--><!--Device-bluetoothManager-function getBluetoothScanMode(): ScanMode-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **返回值：**

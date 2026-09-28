@@ -16,6 +16,8 @@ function constructTLSSocketInstance(): TLSSocket
 
 **起始版本：** 9
 
+<!--Device-socket-function constructTLSSocketInstance(): TLSSocket--><!--Device-socket-function constructTLSSocketInstance(): TLSSocket-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
@@ -48,6 +50,8 @@ function constructTLSSocketInstance(tcpSocket: TCPSocket): TLSSocket
 > 需要确保TCPSocket已连接，并且当前已经没有传输数据，再调用constructTLSSocketInstance升级TLSSocket。当升级成功后，无需对TCPSocket对象调用close方法。
 
 **起始版本：** 12
+
+<!--Device-socket-function constructTLSSocketInstance(tcpSocket: TCPSocket): TLSSocket--><!--Device-socket-function constructTLSSocketInstance(tcpSocket: TCPSocket): TLSSocket-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 

@@ -20,6 +20,8 @@ After this method is called, the callback registered using **sensor.on(sensor.Se
 
 **Since:** 10
 
+<!--Device-sensor-function off(type: SensorId.COLOR, callback?: Callback<ColorResponse>): void--><!--Device-sensor-function off(type: SensorId.COLOR, callback?: Callback<ColorResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **System API:** This is a system API.
@@ -81,6 +83,8 @@ Use this API when you need to unsubscribe from the color sensor data of a specif
 After this API is called, the callback function of the color sensor on the specified device will not be triggered. If the **callback** parameter is passed, only the specified callback is unregistered. If the **callback** parameter is not passed, all callbacks of the **SensorId.COLOR** type on the specified device are unregistered.
 
 **Since:** 19
+
+<!--Device-sensor-function off(type: SensorId.COLOR, sensorInfoParam?: SensorInfoParam, callback?: Callback<ColorResponse>): void--><!--Device-sensor-function off(type: SensorId.COLOR, sensorInfoParam?: SensorInfoParam, callback?: Callback<ColorResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -176,6 +180,8 @@ After this method is called, the callback registered using **sensor.on(sensor.Se
 
 **Since:** 10
 
+<!--Device-sensor-function off(type: SensorId.SAR, callback?: Callback<SarResponse>): void--><!--Device-sensor-function off(type: SensorId.SAR, callback?: Callback<SarResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **System API:** This is a system API.
@@ -237,6 +243,8 @@ Use this API when you need to unsubscribe from the SAR sensor data of a specific
 After this API is called, the callback function of the SAR sensor on the specified device will not be triggered. If the **callback** parameter is passed, only the specified callback is unregistered. If the **callback** parameter is not passed, all callbacks of the **SensorId.SAR** type on the specified device are unregistered.
 
 **Since:** 19
+
+<!--Device-sensor-function off(type: SensorId.SAR, sensorInfoParam?: SensorInfoParam, callback?: Callback<SarResponse>): void--><!--Device-sensor-function off(type: SensorId.SAR, sensorInfoParam?: SensorInfoParam, callback?: Callback<SarResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 

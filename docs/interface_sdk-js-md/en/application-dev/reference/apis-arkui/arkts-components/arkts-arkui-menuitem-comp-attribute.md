@@ -10,6 +10,8 @@ In addition to the universal attributes, the following attributes are supported.
 
 **Since:** 9
 
+<!--Device-unnamed-declare class MenuItemAttribute extends CommonMethod<MenuItemAttribute>--><!--Device-unnamed-declare class MenuItemAttribute extends CommonMethod<MenuItemAttribute>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## contentFont
@@ -25,6 +27,8 @@ Sets the font style of the menu item content.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-MenuItemAttribute-contentFont(value: Font): MenuItemAttribute--><!--Device-MenuItemAttribute-contentFont(value: Font): MenuItemAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -48,6 +52,8 @@ Sets the font color of the menu item content.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-MenuItemAttribute-contentFontColor(value: ResourceColor): MenuItemAttribute--><!--Device-MenuItemAttribute-contentFontColor(value: ResourceColor): MenuItemAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -69,6 +75,8 @@ Sets the font style of the menu item label.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-MenuItemAttribute-labelFont(value: Font): MenuItemAttribute--><!--Device-MenuItemAttribute-labelFont(value: Font): MenuItemAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -92,6 +100,8 @@ Sets the font color of the menu item label.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-MenuItemAttribute-labelFontColor(value: ResourceColor): MenuItemAttribute--><!--Device-MenuItemAttribute-labelFontColor(value: ResourceColor): MenuItemAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -113,6 +123,8 @@ Triggered when the selection status of the menu item is changed manually.
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-MenuItemAttribute-onChange(callback: (selected: boolean) => void): MenuItemAttribute--><!--Device-MenuItemAttribute-onChange(callback: (selected: boolean) => void): MenuItemAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -140,6 +152,8 @@ Since API version 18, this parameter supports two-way binding through [!!](../..
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-MenuItemAttribute-selected(value: boolean): MenuItemAttribute--><!--Device-MenuItemAttribute-selected(value: boolean): MenuItemAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -162,6 +176,8 @@ Sets whether to display the selected icon when the menu item is selected.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-MenuItemAttribute-selectIcon(value: boolean | ResourceStr | SymbolGlyphModifier): MenuItemAttribute--><!--Device-MenuItemAttribute-selectIcon(value: boolean | ResourceStr | SymbolGlyphModifier): MenuItemAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -183,6 +199,8 @@ Create the submenu for custom menu item.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-MenuItemAttribute-subMenuBuilder(builder: CustomBuilder): MenuItemAttribute--><!--Device-MenuItemAttribute-subMenuBuilder(builder: CustomBuilder): MenuItemAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

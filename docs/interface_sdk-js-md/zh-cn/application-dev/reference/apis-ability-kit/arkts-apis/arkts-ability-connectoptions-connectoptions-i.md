@@ -8,6 +8,8 @@ export interface ConnectOptions
 
 **起始版本：** 7
 
+<!--Device-unnamed-export interface ConnectOptions--><!--Device-unnamed-export interface ConnectOptions-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## onConnect
@@ -19,6 +21,8 @@ onConnect(elementName: ElementName, remote: rpc.IRemoteObject): void
 建立连接时的回调函数。
 
 **起始版本：** 7
+
+<!--Device-ConnectOptions-onConnect(elementName: ElementName, remote: rpc.IRemoteObject): void--><!--Device-ConnectOptions-onConnect(elementName: ElementName, remote: rpc.IRemoteObject): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -70,6 +74,8 @@ onDisconnect(elementName: ElementName): void
 
 **起始版本：** 7
 
+<!--Device-ConnectOptions-onDisconnect(elementName: ElementName): void--><!--Device-ConnectOptions-onDisconnect(elementName: ElementName): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -118,6 +124,8 @@ onFailed(code: number): void
 连接失败时的回调函数。
 
 **起始版本：** 7
+
+<!--Device-ConnectOptions-onFailed(code: number): void--><!--Device-ConnectOptions-onFailed(code: number): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

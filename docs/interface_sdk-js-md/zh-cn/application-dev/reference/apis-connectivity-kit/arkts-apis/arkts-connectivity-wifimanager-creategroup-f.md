@@ -18,6 +18,8 @@ function createGroup(config: WifiP2PConfig): void
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
+<!--Device-wifiManager-function createGroup(config: WifiP2PConfig): void--><!--Device-wifiManager-function createGroup(config: WifiP2PConfig): void-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
 **参数：**

@@ -16,6 +16,8 @@ function getRunningProcessInfoByBundleName(bundleName: string, callback: AsyncCa
 
 **起始版本：** 10
 
+<!--Device-appManager-function getRunningProcessInfoByBundleName(bundleName: string, callback: AsyncCallback<Array<ProcessInformation>>): void--><!--Device-appManager-function getRunningProcessInfoByBundleName(bundleName: string, callback: AsyncCallback<Array<ProcessInformation>>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -71,6 +73,8 @@ function getRunningProcessInfoByBundleName(bundleName: string, userId: number, c
 通过bundleName和userId获取有关运行进程的信息。使用callback异步回调。
 
 **起始版本：** 10
+
+<!--Device-appManager-function getRunningProcessInfoByBundleName(bundleName: string, userId: int, callback: AsyncCallback<Array<ProcessInformation>>): void--><!--Device-appManager-function getRunningProcessInfoByBundleName(bundleName: string, userId: int, callback: AsyncCallback<Array<ProcessInformation>>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -130,6 +134,8 @@ function getRunningProcessInfoByBundleName(bundleName: string): Promise<Array<Pr
 
 **起始版本：** 10
 
+<!--Device-appManager-function getRunningProcessInfoByBundleName(bundleName: string): Promise<Array<ProcessInformation>>--><!--Device-appManager-function getRunningProcessInfoByBundleName(bundleName: string): Promise<Array<ProcessInformation>>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -187,6 +193,8 @@ function getRunningProcessInfoByBundleName(bundleName: string, userId: number): 
 通过bundleName和userId获取有关运行进程的信息。使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-appManager-function getRunningProcessInfoByBundleName(bundleName: string, userId: int): Promise<Array<ProcessInformation>>--><!--Device-appManager-function getRunningProcessInfoByBundleName(bundleName: string, userId: int): Promise<Array<ProcessInformation>>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

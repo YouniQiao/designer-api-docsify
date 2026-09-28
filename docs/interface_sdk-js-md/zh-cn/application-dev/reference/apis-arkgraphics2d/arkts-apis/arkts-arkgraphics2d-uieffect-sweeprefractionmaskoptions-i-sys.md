@@ -8,6 +8,8 @@ interface SweepRefractionMaskOptions
 
 **起始版本：** 26.0.1
 
+<!--Device-uiEffect-interface SweepRefractionMaskOptions--><!--Device-uiEffect-interface SweepRefractionMaskOptions-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -34,6 +36,8 @@ cornerRadius?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SweepRefractionMaskOptions-cornerRadius?: double--><!--Device-SweepRefractionMaskOptions-cornerRadius?: double-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -53,6 +57,8 @@ prismHeight?: number
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SweepRefractionMaskOptions-prismHeight?: double--><!--Device-SweepRefractionMaskOptions-prismHeight?: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -74,6 +80,8 @@ prismWidth?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SweepRefractionMaskOptions-prismWidth?: double--><!--Device-SweepRefractionMaskOptions-prismWidth?: double-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -93,6 +101,8 @@ shapeType?: PrismShapeType
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SweepRefractionMaskOptions-shapeType?: PrismShapeType--><!--Device-SweepRefractionMaskOptions-shapeType?: PrismShapeType-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -114,6 +124,8 @@ sweepCenterX?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SweepRefractionMaskOptions-sweepCenterX?: double--><!--Device-SweepRefractionMaskOptions-sweepCenterX?: double-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -133,6 +145,8 @@ sweepCenterY?: number
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SweepRefractionMaskOptions-sweepCenterY?: double--><!--Device-SweepRefractionMaskOptions-sweepCenterY?: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

@@ -8,6 +8,8 @@ export interface ExemptedAppInfo
 
 **起始版本：** 10
 
+<!--Device-deviceStandby-export interface ExemptedAppInfo--><!--Device-deviceStandby-export interface ExemptedAppInfo-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.DeviceStandby
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ duration: number
 
 **起始版本：** 10
 
+<!--Device-ExemptedAppInfo-duration: int--><!--Device-ExemptedAppInfo-duration: int-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.DeviceStandby
 
 **系统接口：** 此接口为系统接口。
@@ -46,6 +50,8 @@ name: string
 
 **起始版本：** 10
 
+<!--Device-ExemptedAppInfo-name: string--><!--Device-ExemptedAppInfo-name: string-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.DeviceStandby
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +67,8 @@ resourceTypes: number
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-ExemptedAppInfo-resourceTypes: int--><!--Device-ExemptedAppInfo-resourceTypes: int-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.DeviceStandby
 

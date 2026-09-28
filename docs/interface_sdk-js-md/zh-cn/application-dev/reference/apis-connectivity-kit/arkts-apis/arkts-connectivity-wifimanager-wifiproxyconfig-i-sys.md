@@ -8,6 +8,8 @@ Wifi 代理配置。
 
 **起始版本：** 10
 
+<!--Device-wifiManager-interface WifiProxyConfig--><!--Device-wifiManager-interface WifiProxyConfig-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ exclusionObjects?: string
 
 **起始版本：** 10
 
+<!--Device-WifiProxyConfig-exclusionObjects?: string--><!--Device-WifiProxyConfig-exclusionObjects?: string-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +49,8 @@ pacWebAddress?: string
 **类型：** string
 
 **起始版本：** 10
+
+<!--Device-WifiProxyConfig-pacWebAddress?: string--><!--Device-WifiProxyConfig-pacWebAddress?: string-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -62,6 +68,8 @@ proxyMethod?: ProxyMethod
 
 **起始版本：** 10
 
+<!--Device-WifiProxyConfig-proxyMethod?: ProxyMethod--><!--Device-WifiProxyConfig-proxyMethod?: ProxyMethod-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。
@@ -78,6 +86,8 @@ serverHostName?: string
 
 **起始版本：** 10
 
+<!--Device-WifiProxyConfig-serverHostName?: string--><!--Device-WifiProxyConfig-serverHostName?: string-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。
@@ -93,6 +103,8 @@ serverPort?: number
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-WifiProxyConfig-serverPort?: int--><!--Device-WifiProxyConfig-serverPort?: int-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 

@@ -18,6 +18,8 @@ function read(): Promise<number[]>
 
 **需要权限：** ohos.permission.NFC_TAG
 
+<!--Device-connectedTag-function read(): Promise<number[]>--><!--Device-connectedTag-function read(): Promise<number[]>-End-->
+
 **系统能力：** SystemCapability.Communication.ConnectedTag
 
 **返回值：**
@@ -61,6 +63,8 @@ function read(callback: AsyncCallback<number[]>): void
 **起始版本：** 9
 
 **需要权限：** ohos.permission.NFC_TAG
+
+<!--Device-connectedTag-function read(callback: AsyncCallback<number[]>): void--><!--Device-connectedTag-function read(callback: AsyncCallback<number[]>): void-End-->
 
 **系统能力：** SystemCapability.Communication.ConnectedTag
 

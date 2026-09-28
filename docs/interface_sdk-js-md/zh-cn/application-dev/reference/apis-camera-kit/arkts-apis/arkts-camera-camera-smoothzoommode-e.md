@@ -8,6 +8,8 @@ enum SmoothZoomMode
 
 **起始版本：** 11
 
+<!--Device-camera-enum SmoothZoomMode--><!--Device-camera-enum SmoothZoomMode-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## NORMAL
@@ -20,6 +22,8 @@ NORMAL = 0
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-SmoothZoomMode-NORMAL = 0--><!--Device-SmoothZoomMode-NORMAL = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core

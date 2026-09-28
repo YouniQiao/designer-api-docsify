@@ -20,6 +20,8 @@ function setSimEnabled(admin: Want, slotId: number): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-telephonyManager-function setSimEnabled(admin: Want, slotId: number): void--><!--Device-telephonyManager-function setSimEnabled(admin: Want, slotId: number): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**

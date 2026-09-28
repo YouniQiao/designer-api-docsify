@@ -14,6 +14,8 @@ interface StateChangeParam
 
 **替代接口：** [StateChangeParam](arkts-connectivity-bluetoothmanager-statechangeparam-i.md)
 
+<!--Device-bluetooth-interface StateChangeParam--><!--Device-bluetooth-interface StateChangeParam-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -38,6 +40,8 @@ deviceId: string
 
 **替代接口：** [deviceId](arkts-connectivity-bluetoothmanager-statechangeparam-i.md#deviceid)
 
+<!--Device-StateChangeParam-deviceId: string--><!--Device-StateChangeParam-deviceId: string-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## state
@@ -55,5 +59,7 @@ state: ProfileConnectionState
 **废弃版本：** 9
 
 **替代接口：** [state](arkts-connectivity-bluetoothmanager-statechangeparam-i.md#state)
+
+<!--Device-StateChangeParam-state: ProfileConnectionState--><!--Device-StateChangeParam-state: ProfileConnectionState-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

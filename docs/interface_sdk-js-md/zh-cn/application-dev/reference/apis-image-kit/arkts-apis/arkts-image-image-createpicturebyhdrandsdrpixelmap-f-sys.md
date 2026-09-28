@@ -16,6 +16,8 @@ function createPictureByHdrAndSdrPixelMap(hdrPixelMap: PixelMap, sdrPixelMap: Pi
 
 **起始版本：** 20
 
+<!--Device-image-function createPictureByHdrAndSdrPixelMap(hdrPixelMap: PixelMap, sdrPixelMap: PixelMap): Promise<Picture>--><!--Device-image-function createPictureByHdrAndSdrPixelMap(hdrPixelMap: PixelMap, sdrPixelMap: PixelMap): Promise<Picture>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **系统接口：** 此接口为系统接口。
@@ -92,6 +94,8 @@ function createPictureByHdrAndSdrPixelMap(hdrPixelMap: PixelMap, sdrPixelMap: Pi
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-image-function createPictureByHdrAndSdrPixelMap(hdrPixelMap: PixelMap, sdrPixelMap: PixelMap,       params: GainmapParams): Promise<Picture>--><!--Device-image-function createPictureByHdrAndSdrPixelMap(hdrPixelMap: PixelMap, sdrPixelMap: PixelMap,       params: GainmapParams): Promise<Picture>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 

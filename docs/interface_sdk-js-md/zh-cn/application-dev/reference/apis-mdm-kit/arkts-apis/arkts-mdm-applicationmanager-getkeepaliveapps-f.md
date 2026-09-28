@@ -20,6 +20,8 @@ function getKeepAliveApps(admin: Want, accountId: number): Array<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-applicationManager-function getKeepAliveApps(admin: Want, accountId: number): Array<string>--><!--Device-applicationManager-function getKeepAliveApps(admin: Want, accountId: number): Array<string>-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -80,6 +82,8 @@ function getKeepAliveApps(admin: Want | null, accountId: number): Array<string>
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-applicationManager-function getKeepAliveApps(admin: Want | null, accountId: number): Array<string>--><!--Device-applicationManager-function getKeepAliveApps(admin: Want | null, accountId: number): Array<string>-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

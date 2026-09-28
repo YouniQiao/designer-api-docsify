@@ -4,6 +4,8 @@ hilog日志系统，使应用/服务可以按照指定级别、标识和格式�
 
 **起始版本：** 7
 
+<!--Device-unnamed-declare namespace hilog--><!--Device-unnamed-declare namespace hilog-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiLog
 
 ## 导入模块

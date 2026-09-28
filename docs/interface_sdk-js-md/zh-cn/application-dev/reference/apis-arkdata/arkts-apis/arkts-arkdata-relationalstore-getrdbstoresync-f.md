@@ -29,13 +29,15 @@ getRdbStoreSync支持多线程并发操作。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-relationalStore-function getRdbStoreSync(context: Context, config: StoreConfig): RdbStore--><!--Device-relationalStore-function getRdbStoreSync(context: Context, config: StoreConfig): RdbStore-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 应用的上下文。<br>FA模型的应用Context定义见Context。<br>Stage模型的应用Context定义见Context。 |
+| context | Context | 是 | 应用的上下文。<br>FA模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context.md)。<br>Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context.md)。 |
 | config | [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md) | 是 | 与此RDB存储相关的数据库配置。 |
 
 **返回值：**

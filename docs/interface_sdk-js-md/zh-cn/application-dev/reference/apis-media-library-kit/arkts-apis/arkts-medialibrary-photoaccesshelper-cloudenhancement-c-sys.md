@@ -8,6 +8,8 @@ class CloudEnhancement
 
 **起始版本：** 13
 
+<!--Device-photoAccessHelper-class CloudEnhancement--><!--Device-photoAccessHelper-class CloudEnhancement-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -29,6 +31,8 @@ cancelAllCloudEnhancementTasks(): Promise<void>
 **起始版本：** 13
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-CloudEnhancement-cancelAllCloudEnhancementTasks(): Promise<void>--><!--Device-CloudEnhancement-cancelAllCloudEnhancementTasks(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -74,6 +78,8 @@ cancelCloudEnhancementTasks(photoAssets: Array<PhotoAsset>): Promise<void>
 **起始版本：** 13
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-CloudEnhancement-cancelCloudEnhancementTasks(photoAssets: Array<PhotoAsset>): Promise<void>--><!--Device-CloudEnhancement-cancelCloudEnhancementTasks(photoAssets: Array<PhotoAsset>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -139,6 +145,8 @@ static getCloudEnhancementInstance(context: Context): CloudEnhancement
 
 **起始版本：** 13
 
+<!--Device-CloudEnhancement-static getCloudEnhancementInstance(context: Context): CloudEnhancement--><!--Device-CloudEnhancement-static getCloudEnhancementInstance(context: Context): CloudEnhancement-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -200,6 +208,8 @@ getCloudEnhancementPair(asset: PhotoAsset): Promise<PhotoAsset>
 **起始版本：** 13
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-CloudEnhancement-getCloudEnhancementPair(asset: PhotoAsset): Promise<PhotoAsset>--><!--Device-CloudEnhancement-getCloudEnhancementPair(asset: PhotoAsset): Promise<PhotoAsset>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -268,6 +278,8 @@ prioritizeCloudEnhancementTask(photoAsset: PhotoAsset): Promise<void>
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-CloudEnhancement-prioritizeCloudEnhancementTask(photoAsset: PhotoAsset): Promise<void>--><!--Device-CloudEnhancement-prioritizeCloudEnhancementTask(photoAsset: PhotoAsset): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -334,6 +346,8 @@ queryCloudEnhancementTaskState(photoAsset: PhotoAsset): Promise<CloudEnhancement
 **起始版本：** 13
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-CloudEnhancement-queryCloudEnhancementTaskState(photoAsset: PhotoAsset): Promise<CloudEnhancementTaskState>--><!--Device-CloudEnhancement-queryCloudEnhancementTaskState(photoAsset: PhotoAsset): Promise<CloudEnhancementTaskState>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -430,6 +444,8 @@ queryLocalEnhancementTaskState(photoAsset: PhotoAsset): Promise<LocalEnhancement
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-CloudEnhancement-queryLocalEnhancementTaskState(photoAsset: PhotoAsset): Promise<LocalEnhancementTaskState>--><!--Device-CloudEnhancement-queryLocalEnhancementTaskState(photoAsset: PhotoAsset): Promise<LocalEnhancementTaskState>-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -467,6 +483,8 @@ submitCloudEnhancementTasks(photoAssets: Array<PhotoAsset>, hasCloudWatermark: b
 **起始版本：** 13
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-CloudEnhancement-submitCloudEnhancementTasks(photoAssets: Array<PhotoAsset>, hasCloudWatermark: boolean): Promise<void>--><!--Device-CloudEnhancement-submitCloudEnhancementTasks(photoAssets: Array<PhotoAsset>, hasCloudWatermark: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -540,6 +558,8 @@ submitCloudEnhancementTasks(
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-CloudEnhancement-submitCloudEnhancementTasks(      photoAssets: Array<PhotoAsset>,      hasCloudWatermark: boolean,      triggerMode?: int    ): Promise<void>--><!--Device-CloudEnhancement-submitCloudEnhancementTasks(      photoAssets: Array<PhotoAsset>,      hasCloudWatermark: boolean,      triggerMode?: int    ): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -607,6 +627,8 @@ syncCloudEnhancementTaskStatus(): Promise<void>
 **起始版本：** 13
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-CloudEnhancement-syncCloudEnhancementTaskStatus(): Promise<void>--><!--Device-CloudEnhancement-syncCloudEnhancementTaskStatus(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

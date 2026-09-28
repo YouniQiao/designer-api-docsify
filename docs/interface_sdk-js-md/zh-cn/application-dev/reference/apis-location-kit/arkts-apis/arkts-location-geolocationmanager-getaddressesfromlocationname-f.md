@@ -16,6 +16,8 @@ function getAddressesFromLocationName(request: GeoCodeRequest, callback: AsyncCa
 
 **起始版本：** 9
 
+<!--Device-geoLocationManager-function getAddressesFromLocationName(request: GeoCodeRequest, callback: AsyncCallback<Array<GeoAddress>>): void--><!--Device-geoLocationManager-function getAddressesFromLocationName(request: GeoCodeRequest, callback: AsyncCallback<Array<GeoAddress>>): void-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 **参数：**
@@ -66,6 +68,8 @@ function getAddressesFromLocationName(request: GeoCodeRequest): Promise<Array<Ge
 调用地理编码服务，将地理描述转换为具体坐标，使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-geoLocationManager-function getAddressesFromLocationName(request: GeoCodeRequest): Promise<Array<GeoAddress>>--><!--Device-geoLocationManager-function getAddressesFromLocationName(request: GeoCodeRequest): Promise<Array<GeoAddress>>-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geocoder
 

@@ -8,6 +8,8 @@ interface GetReportData
 
 **起始版本：** 23
 
+<!--Device-hid-interface GetReportData--><!--Device-hid-interface GetReportData-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ bufferSize: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-GetReportData-bufferSize: int--><!--Device-GetReportData-bufferSize: int-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## id
@@ -46,6 +50,8 @@ id: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-GetReportData-id: int--><!--Device-GetReportData-id: int-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## type
@@ -61,5 +67,7 @@ type: ReportType
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-GetReportData-type: ReportType--><!--Device-GetReportData-type: ReportType-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

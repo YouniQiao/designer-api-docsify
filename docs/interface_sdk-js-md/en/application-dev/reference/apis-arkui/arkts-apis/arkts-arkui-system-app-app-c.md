@@ -8,6 +8,8 @@ Defines static functions of App class
 
 **Since:** 3
 
+<!--Device-unnamed-export default class App--><!--Device-unnamed-export default class App-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 ## Modules to Import
@@ -31,6 +33,8 @@ This API is deprecated since API version 9. You are advised to use [bundleManage
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-App-static getInfo(): AppResponse--><!--Device-App-static getInfo(): AppResponse-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -169,6 +173,8 @@ Set image cache capacity of decoded image count. if not set, the application wil
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-App-static setImageCacheCount(value: number): void--><!--Device-App-static setImageCacheCount(value: number): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -220,6 +226,8 @@ Set image file cache size in bytes on disk before decode. if not set, the applic
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-App-static setImageFileCacheSize(value: number): void--><!--Device-App-static setImageFileCacheSize(value: number): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -259,6 +267,8 @@ Set image cache capacity of raw image data size in bytes before decode. if not s
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-App-static setImageRawDataCacheSize(value: number): void--><!--Device-App-static setImageRawDataCacheSize(value: number): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -312,6 +322,8 @@ This API is deprecated since API version 7. You are advised to use [@ohos.abilit
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-App-static terminate(): void--><!--Device-App-static terminate(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -408,6 +420,8 @@ Requests the application to run in full window. In some scenarios, such as semi-
 
 **Substitutes:** startAbility
 
+<!--Device-App-static requestFullWindow(options?: RequestFullWindowOptions): void--><!--Device-App-static requestFullWindow(options?: RequestFullWindowOptions): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -442,6 +456,8 @@ This API is deprecated since API version 8.
 **Since:** 3
 
 **Deprecated since:** 8
+
+<!--Device-App-static screenOnVisible(options?: ScreenOnVisibleOptions): void--><!--Device-App-static screenOnVisible(options?: ScreenOnVisibleOptions): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

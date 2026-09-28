@@ -4,6 +4,8 @@
 
 **起始版本：** 15
 
+<!--Device-unnamed-declare namespace motion--><!--Device-unnamed-declare namespace motion-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.Motion
 
 ## 导入模块

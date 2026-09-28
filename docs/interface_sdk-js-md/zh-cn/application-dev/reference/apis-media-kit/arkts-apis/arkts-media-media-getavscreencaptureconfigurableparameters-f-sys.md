@@ -20,6 +20,8 @@ function getAVScreenCaptureConfigurableParameters(sessionId: number): Promise<st
 
 **起始版本：** 20
 
+<!--Device-media-function getAVScreenCaptureConfigurableParameters(sessionId: int): Promise<string>--><!--Device-media-function getAVScreenCaptureConfigurableParameters(sessionId: int): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 **系统接口：** 此接口为系统接口。

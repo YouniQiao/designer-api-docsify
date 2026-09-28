@@ -25,6 +25,8 @@ Provides the capability of accessing application resources and system resources.
 
 **Since:** 6
 
+<!--Device-resourceManager-export interface ResourceManager--><!--Device-resourceManager-export interface ResourceManager-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Test API:** This API is used only in automated test scripts.
@@ -49,7 +51,9 @@ Loads the specified overlay resource during application runtime to implement the
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-addResource(path: string) : void--><!--Device-ResourceManager-addResource(path: string) : void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -97,7 +101,9 @@ Closes the file descriptor (fd) of the HAP where a specific rawfile in the **res
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-closeRawFd(path: string, callback: _AsyncCallback<void>): void--><!--Device-ResourceManager-closeRawFd(path: string, callback: _AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -157,7 +163,9 @@ Closes the file descriptor (fd) of the HAP where a specific rawfile in the **res
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-closeRawFd(path: string): Promise<void>--><!--Device-ResourceManager-closeRawFd(path: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -215,7 +223,9 @@ Closes the file descriptor (fd) of the HAP where the **rawfile** file in the **r
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-closeRawFdSync(path: string): void--><!--Device-ResourceManager-closeRawFdSync(path: string): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -268,7 +278,9 @@ Obtains a Boolean value based on the specified resource ID. This API returns the
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getBoolean(resId: long): boolean--><!--Device-ResourceManager-getBoolean(resId: long): boolean-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -347,6 +359,8 @@ Obtains a Boolean value based on the specified resource object. This API returns
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getBoolean(resource: Resource): boolean--><!--Device-ResourceManager-getBoolean(resource: Resource): boolean-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -414,7 +428,9 @@ Obtains a Boolean value based on the specified resource name. This API returns t
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getBooleanByName(resName: string): boolean--><!--Device-ResourceManager-getBooleanByName(resName: string): boolean-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -483,7 +499,9 @@ Obtains the color value corresponding to the specified resource ID. This API use
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getColor(resId: long, callback: _AsyncCallback<long>): void--><!--Device-ResourceManager-getColor(resId: long, callback: _AsyncCallback<long>): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -586,7 +604,9 @@ Obtains the color value corresponding to the specified resource ID. This API use
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getColor(resId: long): Promise<long>--><!--Device-ResourceManager-getColor(resId: long): Promise<long>-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -664,6 +684,8 @@ Obtains the color value corresponding to the specified resource object. This API
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getColor(resource: Resource, callback: _AsyncCallback<number>): void--><!--Device-ResourceManager-getColor(resource: Resource, callback: _AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -735,6 +757,8 @@ Obtains the color value corresponding to the specified resource object. This API
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getColor(resource: Resource): Promise<number>--><!--Device-ResourceManager-getColor(resource: Resource): Promise<number>-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -801,7 +825,9 @@ Obtains the color value corresponding to the specified resource name. This API u
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getColorByName(resName: string, callback: _AsyncCallback<long>): void--><!--Device-ResourceManager-getColorByName(resName: string, callback: _AsyncCallback<long>): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -866,7 +892,9 @@ Obtains the color value corresponding to the specified resource name. This API u
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getColorByName(resName: string): Promise<long>--><!--Device-ResourceManager-getColorByName(resName: string): Promise<long>-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -934,7 +962,9 @@ Obtains a color value based on the specified resource name. This API returns the
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getColorByNameSync(resName: string) : long--><!--Device-ResourceManager-getColorByNameSync(resName: string) : long-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -1003,7 +1033,9 @@ Obtains a color value based on the specified resource ID. This API returns the r
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getColorSync(resId: long) : long--><!--Device-ResourceManager-getColorSync(resId: long) : long-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -1082,6 +1114,8 @@ Obtains a color value based on the specified resource object. This API returns t
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getColorSync(resource: Resource) : number--><!--Device-ResourceManager-getColorSync(resource: Resource) : number-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -1149,7 +1183,9 @@ Obtains the configuration of a device. This API uses an asynchronous callback to
 
 **Since:** 6
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getConfiguration(callback: _AsyncCallback<Configuration>): void--><!--Device-ResourceManager-getConfiguration(callback: _AsyncCallback<Configuration>): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -1196,7 +1232,9 @@ Obtains the configuration of a device. This API uses a promise to return the res
 
 **Since:** 6
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getConfiguration(): Promise<Configuration>--><!--Device-ResourceManager-getConfiguration(): Promise<Configuration>-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -1239,7 +1277,9 @@ Obtains the device configuration. This API returns the result synchronously.
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getConfigurationSync(): Configuration--><!--Device-ResourceManager-getConfigurationSync(): Configuration-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -1277,7 +1317,9 @@ Obtains the device capabilities of a device. This API uses an asynchronous callb
 
 **Since:** 6
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getDeviceCapability(callback: _AsyncCallback<DeviceCapability>): void--><!--Device-ResourceManager-getDeviceCapability(callback: _AsyncCallback<DeviceCapability>): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -1324,7 +1366,9 @@ Obtains the device capabilities of a device. This API uses a promise to return t
 
 **Since:** 6
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getDeviceCapability(): Promise<DeviceCapability>--><!--Device-ResourceManager-getDeviceCapability(): Promise<DeviceCapability>-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -1367,7 +1411,9 @@ Obtains the device capability. This API returns the result synchronously.
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getDeviceCapabilitySync(): DeviceCapability--><!--Device-ResourceManager-getDeviceCapabilitySync(): DeviceCapability-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -1412,6 +1458,8 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ResourceManager-getDoublePluralStringByNameSync(resName: string, num: number, ...args: Array<string | number>): string--><!--Device-ResourceManager-getDoublePluralStringByNameSync(resName: string, num: number, ...args: Array<string | number>): string-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -1500,6 +1548,8 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ResourceManager-getDoublePluralStringValueSync(resId: number, num: number, ...args: Array<string | number>): string--><!--Device-ResourceManager-getDoublePluralStringValueSync(resId: number, num: number, ...args: Array<string | number>): string-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -1595,6 +1645,8 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ResourceManager-getDoublePluralStringValueSync(resource: Resource, num: number, ...args: Array<string | number>): string--><!--Device-ResourceManager-getDoublePluralStringValueSync(resource: Resource, num: number, ...args: Array<string | number>): string-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -1676,7 +1728,9 @@ Obtains the **DrawableDescriptor** object for icon display corresponding to the 
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getDrawableDescriptor(resId: long, density?: int, type?: int): DrawableDescriptor--><!--Device-ResourceManager-getDrawableDescriptor(resId: long, density?: int, type?: int): DrawableDescriptor-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -1759,6 +1813,8 @@ Obtains a **DrawableDescriptor** object for icon display based on the specified 
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getDrawableDescriptor(resource: Resource, density?: number, type?: number): DrawableDescriptor--><!--Device-ResourceManager-getDrawableDescriptor(resource: Resource, density?: number, type?: number): DrawableDescriptor-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -1828,7 +1884,9 @@ Obtains the **DrawableDescriptor** object for icon display corresponding to the 
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getDrawableDescriptorByName(resName: string, density?: int, type?: int): DrawableDescriptor--><!--Device-ResourceManager-getDrawableDescriptorByName(resName: string, density?: int, type?: int): DrawableDescriptor-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -1908,6 +1966,8 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ResourceManager-getIntPluralStringByNameSync(resName: string, num: number, ...args: Array<string | number>): string--><!--Device-ResourceManager-getIntPluralStringByNameSync(resName: string, num: number, ...args: Array<string | number>): string-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -1996,6 +2056,8 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ResourceManager-getIntPluralStringValueSync(resId: number, num: number,...args: Array<string | number>): string--><!--Device-ResourceManager-getIntPluralStringValueSync(resId: number, num: number,...args: Array<string | number>): string-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -2091,6 +2153,8 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ResourceManager-getIntPluralStringValueSync(resource: Resource, num: number, ...args: Array<string | number>): string--><!--Device-ResourceManager-getIntPluralStringValueSync(resource: Resource, num: number, ...args: Array<string | number>): string-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -2172,7 +2236,9 @@ Obtains the language list of an application.
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getLocales(includeSystem?: boolean): Array<string>--><!--Device-ResourceManager-getLocales(includeSystem?: boolean): Array<string>-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -2240,7 +2306,9 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getMediaBase64ByName(resName: string, callback: _AsyncCallback<string>): void--><!--Device-ResourceManager-getMediaBase64ByName(resName: string, callback: _AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -2297,7 +2365,9 @@ Obtains the Base64 encoding of the image resource for the specified screen densi
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getMediaBase64ByName(resName: string, density: int, callback: _AsyncCallback<string>): void--><!--Device-ResourceManager-getMediaBase64ByName(resName: string, density: int, callback: _AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -2355,7 +2425,9 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getMediaBase64ByName(resName: string): Promise<string>--><!--Device-ResourceManager-getMediaBase64ByName(resName: string): Promise<string>-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -2415,7 +2487,9 @@ Obtains the Base64 encoding of the image resource for the specified screen densi
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getMediaBase64ByName(resName: string, density: int): Promise<string>--><!--Device-ResourceManager-getMediaBase64ByName(resName: string, density: int): Promise<string>-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -2474,7 +2548,9 @@ Obtains an image's Base64 encoding for the default or specified screen density b
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getMediaBase64ByNameSync(resName: string, density?: int): string--><!--Device-ResourceManager-getMediaBase64ByNameSync(resName: string, density?: int): string-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -2538,7 +2614,9 @@ Obtains the content of the media file corresponding to the specified resource na
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getMediaByName(resName: string, callback: _AsyncCallback<Uint8Array>): void--><!--Device-ResourceManager-getMediaByName(resName: string, callback: _AsyncCallback<Uint8Array>): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -2595,7 +2673,9 @@ Obtains the media file content for the specified screen density based on the spe
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getMediaByName(resName: string, density: int, callback: _AsyncCallback<Uint8Array>): void--><!--Device-ResourceManager-getMediaByName(resName: string, density: int, callback: _AsyncCallback<Uint8Array>): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -2653,7 +2733,9 @@ Obtains the content of the media file corresponding to the specified resource na
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getMediaByName(resName: string): Promise<Uint8Array>--><!--Device-ResourceManager-getMediaByName(resName: string): Promise<Uint8Array>-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -2713,7 +2795,9 @@ Obtains the media file content for the specified screen density based on the spe
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getMediaByName(resName: string, density: int): Promise<Uint8Array>--><!--Device-ResourceManager-getMediaByName(resName: string, density: int): Promise<Uint8Array>-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -2772,7 +2856,9 @@ Obtains the media file content for the default or specified screen density based
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getMediaByNameSync(resName: string, density?: int): Uint8Array--><!--Device-ResourceManager-getMediaByNameSync(resName: string, density?: int): Uint8Array-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -2838,7 +2924,9 @@ Obtains the content of the media file corresponding to the specified resource ID
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getMediaContent(resId: long, callback: _AsyncCallback<Uint8Array>): void--><!--Device-ResourceManager-getMediaContent(resId: long, callback: _AsyncCallback<Uint8Array>): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -2896,7 +2984,9 @@ Obtains the media file content for the specified screen density based on the spe
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getMediaContent(resId: long, density: int, callback: _AsyncCallback<Uint8Array>): void--><!--Device-ResourceManager-getMediaContent(resId: long, density: int, callback: _AsyncCallback<Uint8Array>): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -2954,7 +3044,9 @@ Obtains the content of the media file corresponding to the specified resource ID
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getMediaContent(resId: long): Promise<Uint8Array>--><!--Device-ResourceManager-getMediaContent(resId: long): Promise<Uint8Array>-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -3014,7 +3106,9 @@ Obtains the media file content for the specified screen density based on the spe
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getMediaContent(resId: long, density: int): Promise<Uint8Array>--><!--Device-ResourceManager-getMediaContent(resId: long, density: int): Promise<Uint8Array>-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -3081,6 +3175,8 @@ Obtains the content of the media file corresponding to the specified resource ob
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getMediaContent(resource: Resource, callback: _AsyncCallback<Uint8Array>): void--><!--Device-ResourceManager-getMediaContent(resource: Resource, callback: _AsyncCallback<Uint8Array>): void-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -3143,6 +3239,8 @@ Obtains the media file content for the specified screen density based on the spe
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getMediaContent(resource: Resource, density: number, callback: _AsyncCallback<Uint8Array>): void--><!--Device-ResourceManager-getMediaContent(resource: Resource, density: number, callback: _AsyncCallback<Uint8Array>): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -3207,6 +3305,8 @@ Obtains the content of the media file corresponding to the specified resource ob
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getMediaContent(resource: Resource): Promise<Uint8Array>--><!--Device-ResourceManager-getMediaContent(resource: Resource): Promise<Uint8Array>-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -3274,6 +3374,8 @@ Obtains the media file content for the specified screen density based on the spe
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getMediaContent(resource: Resource, density: number): Promise<Uint8Array>--><!--Device-ResourceManager-getMediaContent(resource: Resource, density: number): Promise<Uint8Array>-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -3333,7 +3435,9 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getMediaContentBase64(resId: long, callback: _AsyncCallback<string>): void--><!--Device-ResourceManager-getMediaContentBase64(resId: long, callback: _AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -3390,7 +3494,9 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getMediaContentBase64(resId: long, density: int, callback: _AsyncCallback<string>): void--><!--Device-ResourceManager-getMediaContentBase64(resId: long, density: int, callback: _AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -3448,7 +3554,9 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getMediaContentBase64(resId: long): Promise<string>--><!--Device-ResourceManager-getMediaContentBase64(resId: long): Promise<string>-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -3508,7 +3616,9 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getMediaContentBase64(resId: long, density: int): Promise<string>--><!--Device-ResourceManager-getMediaContentBase64(resId: long, density: int): Promise<string>-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -3575,6 +3685,8 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getMediaContentBase64(resource: Resource, callback: _AsyncCallback<string>): void--><!--Device-ResourceManager-getMediaContentBase64(resource: Resource, callback: _AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -3637,6 +3749,8 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getMediaContentBase64(resource: Resource, density: number, callback: _AsyncCallback<string>): void--><!--Device-ResourceManager-getMediaContentBase64(resource: Resource, density: number, callback: _AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -3701,6 +3815,8 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getMediaContentBase64(resource: Resource): Promise<string>--><!--Device-ResourceManager-getMediaContentBase64(resource: Resource): Promise<string>-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -3768,6 +3884,8 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getMediaContentBase64(resource: Resource, density: number): Promise<string>--><!--Device-ResourceManager-getMediaContentBase64(resource: Resource, density: number): Promise<string>-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -3825,7 +3943,9 @@ Obtains an image's Base64 encoding for the default or specified screen density b
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getMediaContentBase64Sync(resId: long, density?: int): string--><!--Device-ResourceManager-getMediaContentBase64Sync(resId: long, density?: int): string-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -3899,6 +4019,8 @@ Obtains an image's Base64 encoding for the default or specified screen density b
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getMediaContentBase64Sync(resource: Resource, density?: number): string--><!--Device-ResourceManager-getMediaContentBase64Sync(resource: Resource, density?: number): string-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -3960,7 +4082,9 @@ Obtains the media file content for the default or specified screen density based
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getMediaContentSync(resId: long, density?: int): Uint8Array--><!--Device-ResourceManager-getMediaContentSync(resId: long, density?: int): Uint8Array-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -4034,6 +4158,8 @@ Obtains the media file content for the default or specified screen density based
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getMediaContentSync(resource: Resource, density?: number): Uint8Array--><!--Device-ResourceManager-getMediaContentSync(resource: Resource, density?: number): Uint8Array-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -4096,6 +4222,8 @@ Obtains an integer or float number based on the specified resource ID. This API 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getNumber(resId: number): number--><!--Device-ResourceManager-getNumber(resId: number): number-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -4200,6 +4328,8 @@ Obtains an integer or float number based on the specified resource object. This 
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getNumber(resource: Resource): number--><!--Device-ResourceManager-getNumber(resource: Resource): number-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -4269,6 +4399,8 @@ Obtains an integer or float number based on the specified resource name. This AP
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getNumberByName(resName: string): number--><!--Device-ResourceManager-getNumberByName(resName: string): number-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -4365,7 +4497,9 @@ For both the common resource management object and the differentiated resource m
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-ResourceManager-getOverrideConfiguration(): Configuration--><!--Device-ResourceManager-getOverrideConfiguration(): Configuration-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -4410,7 +4544,9 @@ The resource configuration (including the language, color mode, resolution, and 
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-ResourceManager-getOverrideResourceManager(configuration?: Configuration): ResourceManager--><!--Device-ResourceManager-getOverrideResourceManager(configuration?: Configuration): ResourceManager-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -4471,7 +4607,9 @@ Obtains the file descriptor (fd) of the HAP where a specific rawfile in the **re
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getRawFd(path: string, callback: _AsyncCallback<RawFileDescriptor>): void--><!--Device-ResourceManager-getRawFd(path: string, callback: _AsyncCallback<RawFileDescriptor>): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -4538,7 +4676,9 @@ Obtains the file descriptor (fd) of the HAP where a specific rawfile in the **re
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getRawFd(path: string): Promise<RawFileDescriptor>--><!--Device-ResourceManager-getRawFd(path: string): Promise<RawFileDescriptor>-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -4606,7 +4746,9 @@ Obtains the file descriptor (fd) of the HAP where the rawfile file in the resour
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getRawFdSync(path: string): RawFileDescriptor--><!--Device-ResourceManager-getRawFdSync(path: string): RawFileDescriptor-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -4661,7 +4803,9 @@ Obtain the content of a rawfile in the **resources/rawfile** directory. This API
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getRawFileContent(path: string, callback: _AsyncCallback<Uint8Array>): void--><!--Device-ResourceManager-getRawFileContent(path: string, callback: _AsyncCallback<Uint8Array>): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -4719,7 +4863,9 @@ Obtain the content of a rawfile in the **resources/rawfile** directory. This API
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getRawFileContent(path: string): Promise<Uint8Array>--><!--Device-ResourceManager-getRawFileContent(path: string): Promise<Uint8Array>-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -4778,7 +4924,9 @@ Obtains the content of a rawfile in the **resources/rawfile** directory. This AP
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getRawFileContentSync(path: string): Uint8Array--><!--Device-ResourceManager-getRawFileContentSync(path: string): Uint8Array-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -4838,7 +4986,9 @@ Obtains the list of directories and files in the specified subdirectory under **
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getRawFileList(path: string, callback: _AsyncCallback<Array<string>>): void--><!--Device-ResourceManager-getRawFileList(path: string, callback: _AsyncCallback<Array<string>>): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -4895,7 +5045,9 @@ Obtains the list of directories and files in the specified subdirectory under **
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getRawFileList(path: string): Promise<Array<string>>--><!--Device-ResourceManager-getRawFileList(path: string): Promise<Array<string>>-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -4955,7 +5107,9 @@ Obtains the list of directories and files in the specified subdirectory under **
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getRawFileListSync(path: string): Array<string>--><!--Device-ResourceManager-getRawFileListSync(path: string): Array<string>-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -5013,7 +5167,9 @@ Obtains the resource name corresponding to the specified resource ID.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+
+<!--Device-ResourceManager-getResourceName(resId: long): string--><!--Device-ResourceManager-getResourceName(resId: long): string-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -5079,7 +5235,9 @@ Obtains the string array corresponding to the specified resource name. This API 
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getStringArrayByName(resName: string, callback: _AsyncCallback<Array<string>>): void--><!--Device-ResourceManager-getStringArrayByName(resName: string, callback: _AsyncCallback<Array<string>>): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -5149,7 +5307,9 @@ Obtains the string array corresponding to the specified resource name. This API 
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getStringArrayByName(resName: string): Promise<Array<string>>--><!--Device-ResourceManager-getStringArrayByName(resName: string): Promise<Array<string>>-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -5221,7 +5381,9 @@ Obtains the string array corresponding to the specified resource name. This API 
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getStringArrayByNameSync(resName: string): Array<string>--><!--Device-ResourceManager-getStringArrayByNameSync(resName: string): Array<string>-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -5296,7 +5458,9 @@ Obtains the string array corresponding to the specified resource ID. This API us
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getStringArrayValue(resId: long, callback: _AsyncCallback<Array<string>>): void--><!--Device-ResourceManager-getStringArrayValue(resId: long, callback: _AsyncCallback<Array<string>>): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -5366,7 +5530,9 @@ Obtains the string array corresponding to the specified resource ID. This API us
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getStringArrayValue(resId: long): Promise<Array<string>>--><!--Device-ResourceManager-getStringArrayValue(resId: long): Promise<Array<string>>-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -5446,6 +5612,8 @@ Obtains the string array corresponding to the specified resource object. This AP
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getStringArrayValue(resource: Resource, callback: _AsyncCallback<Array<string>>): void--><!--Device-ResourceManager-getStringArrayValue(resource: Resource, callback: _AsyncCallback<Array<string>>): void-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -5521,6 +5689,8 @@ Obtains the string array corresponding to the specified resource object. This AP
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getStringArrayValue(resource: Resource): Promise<Array<string>>--><!--Device-ResourceManager-getStringArrayValue(resource: Resource): Promise<Array<string>>-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -5591,7 +5761,9 @@ Obtains the string array corresponding to the specified resource ID. This API re
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getStringArrayValueSync(resId: long): Array<string>--><!--Device-ResourceManager-getStringArrayValueSync(resId: long): Array<string>-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -5674,6 +5846,8 @@ Obtains a string array based on the specified resource object. This API returns 
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getStringArrayValueSync(resource: Resource): Array<string>--><!--Device-ResourceManager-getStringArrayValueSync(resource: Resource): Array<string>-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -5745,7 +5919,9 @@ Obtains the string corresponding to the specified resource name. This API uses a
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getStringByName(resName: string, callback: _AsyncCallback<string>): void--><!--Device-ResourceManager-getStringByName(resName: string, callback: _AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -5810,7 +5986,9 @@ Obtains the string corresponding to the specified resource name. This API uses a
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getStringByName(resName: string): Promise<string>--><!--Device-ResourceManager-getStringByName(resName: string): Promise<string>-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -5877,6 +6055,8 @@ Obtains the string corresponding to the specified resource name. This API return
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getStringByNameSync(resName: string): string--><!--Device-ResourceManager-getStringByNameSync(resName: string): string-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -5949,6 +6129,8 @@ Obtains the string corresponding to the specified resource name, and replaces th
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getStringByNameSync(resName: string, ...args: Array<string | number>): string--><!--Device-ResourceManager-getStringByNameSync(resName: string, ...args: Array<string | number>): string-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -6020,6 +6202,8 @@ Obtains the string corresponding to the specified resource ID. This API returns 
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getStringSync(resId: long): string--><!--Device-ResourceManager-getStringSync(resId: long): string-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -6090,6 +6274,8 @@ Obtains the string corresponding to the specified resource ID, and replaces the 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getStringSync(resId: number, ...args: Array<string | number>): string--><!--Device-ResourceManager-getStringSync(resId: number, ...args: Array<string | number>): string-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -6170,6 +6356,8 @@ Obtains a string based on the specified resource object. This API returns the re
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getStringSync(resource: Resource): string--><!--Device-ResourceManager-getStringSync(resource: Resource): string-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -6247,6 +6435,8 @@ Obtains the string corresponding to the specified resource object, and replaces 
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getStringSync(resource: Resource, ...args: Array<string | number>): string--><!--Device-ResourceManager-getStringSync(resource: Resource, ...args: Array<string | number>): string-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -6318,7 +6508,9 @@ Obtains the string corresponding to the specified resource ID. This API uses an 
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getStringValue(resId: long, callback: _AsyncCallback<string>): void--><!--Device-ResourceManager-getStringValue(resId: long, callback: _AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -6400,7 +6592,9 @@ Obtains the string corresponding to the specified resource ID. This API uses a p
 
 **Since:** 9
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getStringValue(resId: long): Promise<string>--><!--Device-ResourceManager-getStringValue(resId: long): Promise<string>-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -6474,6 +6668,8 @@ Obtains the string corresponding to the specified resource object. This API uses
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getStringValue(resource: Resource, callback: _AsyncCallback<string>): void--><!--Device-ResourceManager-getStringValue(resource: Resource, callback: _AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -6545,6 +6741,8 @@ Obtains the string corresponding to the specified resource object. This API uses
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getStringValue(resource: Resource): Promise<string>--><!--Device-ResourceManager-getStringValue(resource: Resource): Promise<string>-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -6599,7 +6797,9 @@ Obtains the Unicode of a [symbol](https://developer.huawei.com/consumer/en/desig
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getSymbol(resId: long) : long--><!--Device-ResourceManager-getSymbol(resId: long) : long-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -6666,6 +6866,8 @@ Obtains the Unicode of a [symbol](https://developer.huawei.com/consumer/en/desig
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getSymbol(resource: Resource) : number--><!--Device-ResourceManager-getSymbol(resource: Resource) : number-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -6721,7 +6923,9 @@ Obtains the Unicode of a [symbol](https://developer.huawei.com/consumer/en/desig
 
 **Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-getSymbolByName(resName: string) : long--><!--Device-ResourceManager-getSymbolByName(resName: string) : long-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -6778,7 +6982,9 @@ Checks whether a path is a subdirectory in the **rawfile** directory. This API r
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-ResourceManager-isRawDir(path: string): boolean--><!--Device-ResourceManager-isRawDir(path: string): boolean-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -6846,7 +7052,9 @@ Removes the specified overlay resource during application runtime and restores t
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResourceManager-removeResource(path: string) : void--><!--Device-ResourceManager-removeResource(path: string) : void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -6896,7 +7104,9 @@ This API updates the configuration of the differentiated resource management obj
 
 **Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-ResourceManager-updateOverrideConfiguration(configuration: Configuration): void--><!--Device-ResourceManager-updateOverrideConfiguration(configuration: Configuration): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -6949,6 +7159,8 @@ Closes the file descriptor (fd) of a specific rawfile in the **resources/rawfile
 
 **Substitutes:** [closeRawFd](#closerawfd)(path: string, callback: _AsyncCallback&lt;void&gt;)
 
+<!--Device-ResourceManager-closeRawFileDescriptor(path: string, callback: AsyncCallback<void>): void--><!--Device-ResourceManager-closeRawFileDescriptor(path: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Test API:** This API is used only in automated test scripts.
@@ -6990,6 +7202,8 @@ Closes the file descriptor (fd) of a specific rawfile in the **resources/rawfile
 
 **Substitutes:** [closeRawFd](#closerawfd-1)(path: string)
 
+<!--Device-ResourceManager-closeRawFileDescriptor(path: string): Promise<void>--><!--Device-ResourceManager-closeRawFileDescriptor(path: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Test API:** This API is used only in automated test scripts.
@@ -7030,6 +7244,8 @@ Obtains the content of the media file corresponding to the specified resource ID
 
 **Substitutes:** [getMediaContent](#getmediacontent)(resId: number, callback: _AsyncCallback&lt;Uint8Array&gt;)
 
+<!--Device-ResourceManager-getMedia(resId: number, callback: AsyncCallback<Uint8Array>): void--><!--Device-ResourceManager-getMedia(resId: number, callback: AsyncCallback<Uint8Array>): void-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -7068,6 +7284,8 @@ Obtains the content of the media file corresponding to the specified resource ID
 **Deprecated since:** 9
 
 **Substitutes:** [getMediaContent](#getmediacontent)(resId: number)
+
+<!--Device-ResourceManager-getMedia(resId: number): Promise<Uint8Array>--><!--Device-ResourceManager-getMedia(resId: number): Promise<Uint8Array>-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -7111,6 +7329,8 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 **Substitutes:** [getMediaContentBase64](#getmediacontentbase64)(resId: number, callback: _AsyncCallback&lt;string&gt;)
 
+<!--Device-ResourceManager-getMediaBase64(resId: number, callback: AsyncCallback<string>): void--><!--Device-ResourceManager-getMediaBase64(resId: number, callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -7149,6 +7369,8 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 **Deprecated since:** 9
 
 **Substitutes:** [getMediaContentBase64](#getmediacontentbase64)(resId: number)
+
+<!--Device-ResourceManager-getMediaBase64(resId: number): Promise<string>--><!--Device-ResourceManager-getMediaBase64(resId: number): Promise<string>-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -7197,6 +7419,8 @@ Obtains the plural string based on the specified resource ID and the specified r
 
 **Substitutes:** [getPluralStringValue](#getpluralstringvalue-2)(resId: number, num: number, callback: _AsyncCallback&lt;string&gt;)
 
+<!--Device-ResourceManager-getPluralString(resId: number, num: number, callback: AsyncCallback<string>): void--><!--Device-ResourceManager-getPluralString(resId: number, num: number, callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -7243,6 +7467,8 @@ Obtains the plural string based on the specified resource ID and the specified r
 **Deprecated since:** 9
 
 **Substitutes:** [getPluralStringValue](#getpluralstringvalue-3)(resId: number, num: number)
+
+<!--Device-ResourceManager-getPluralString(resId: number, num: number): Promise<string>--><!--Device-ResourceManager-getPluralString(resId: number, num: number): Promise<string>-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -7293,6 +7519,8 @@ Obtains the plural string based on the specified resource name and the specified
 **Substitutes:** [getIntPluralStringByNameSync](#getintpluralstringbynamesync)(resName: string, num: number, ...args: Array&lt;string | number&gt;)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getPluralStringByName(resName: string, num: number, callback: _AsyncCallback<string>): void--><!--Device-ResourceManager-getPluralStringByName(resName: string, num: number, callback: _AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -7373,6 +7601,8 @@ Obtains the plural string based on the specified resource name and the specified
 **Substitutes:** [getIntPluralStringByNameSync](#getintpluralstringbynamesync)(resName: string, num: number, ...args: Array&lt;string | number&gt;)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getPluralStringByName(resName: string, num: number): Promise<string>--><!--Device-ResourceManager-getPluralStringByName(resName: string, num: number): Promise<string>-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -7456,6 +7686,8 @@ Obtains singular/plural strings based on the specified quantity and resource nam
 **Substitutes:** [getIntPluralStringByNameSync](#getintpluralstringbynamesync)(resName: string, num: number, ...args: Array&lt;string | number&gt;)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getPluralStringByNameSync(resName: string, num: number): string--><!--Device-ResourceManager-getPluralStringByNameSync(resName: string, num: number): string-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -7542,6 +7774,8 @@ Obtains the plural string based on the specified resource information and the sp
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getPluralStringValue(resource: Resource, num: number, callback: _AsyncCallback<string>): void--><!--Device-ResourceManager-getPluralStringValue(resource: Resource, num: number, callback: _AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -7631,6 +7865,8 @@ Obtains the plural string based on the specified resource information and the sp
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getPluralStringValue(resource: Resource, num: number): Promise<string>--><!--Device-ResourceManager-getPluralStringValue(resource: Resource, num: number): Promise<string>-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -7723,6 +7959,8 @@ Obtains the plural string based on the specified resource ID and the specified r
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getPluralStringValue(resId: number, num: number, callback: _AsyncCallback<string>): void--><!--Device-ResourceManager-getPluralStringValue(resId: number, num: number, callback: _AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -7803,6 +8041,8 @@ Obtains the plural string based on the specified resource ID and the specified r
 **Substitutes:** [getIntPluralStringValueSync](#getintpluralstringvaluesync)(resId: number, num: number,...args: Array&lt;string | number&gt;)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getPluralStringValue(resId: number, num: number): Promise<string>--><!--Device-ResourceManager-getPluralStringValue(resId: number, num: number): Promise<string>-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -7886,6 +8126,8 @@ Obtains singular/plural strings based on the specified resource ID and quantity.
 **Substitutes:** [getIntPluralStringValueSync](#getintpluralstringvaluesync)(resId: number, num: number,...args: Array&lt;string | number&gt;)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getPluralStringValueSync(resId: number, num: number): string--><!--Device-ResourceManager-getPluralStringValueSync(resId: number, num: number): string-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -7975,6 +8217,8 @@ Obtains singular/plural strings based on the specified quantity and resource obj
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getPluralStringValueSync(resource: Resource, num: number): string--><!--Device-ResourceManager-getPluralStringValueSync(resource: Resource, num: number): string-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -8058,6 +8302,8 @@ Obtain the content of a rawfile in the **resources/rawfile** directory. This API
 
 **Substitutes:** [getRawFileContent](#getrawfilecontent)(path: string, callback: _AsyncCallback&lt;Uint8Array&gt;)
 
+<!--Device-ResourceManager-getRawFile(path: string, callback: AsyncCallback<Uint8Array>): void--><!--Device-ResourceManager-getRawFile(path: string, callback: AsyncCallback<Uint8Array>): void-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Test API:** This API is used only in automated test scripts.
@@ -8100,6 +8346,8 @@ Obtain the content of a rawfile in the **resources/rawfile** directory. This API
 **Deprecated since:** 9
 
 **Substitutes:** [getRawFileContent](#getrawfilecontent-1)(path: string)
+
+<!--Device-ResourceManager-getRawFile(path: string): Promise<Uint8Array>--><!--Device-ResourceManager-getRawFile(path: string): Promise<Uint8Array>-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -8145,6 +8393,8 @@ Obtains the file descriptor (fd) of a specific rawfile in the **resources/rawfil
 
 **Substitutes:** [getRawFd](#getrawfd)(path: string, callback: _AsyncCallback&lt;RawFileDescriptor&gt;)
 
+<!--Device-ResourceManager-getRawFileDescriptor(path: string, callback: AsyncCallback<RawFileDescriptor>): void--><!--Device-ResourceManager-getRawFileDescriptor(path: string, callback: AsyncCallback<RawFileDescriptor>): void-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Test API:** This API is used only in automated test scripts.
@@ -8189,6 +8439,8 @@ Obtains the file descriptor (fd) of a specific rawfile in the **resources/rawfil
 **Deprecated since:** 9
 
 **Substitutes:** [getRawFd](#getrawfd-1)(path: string)
+
+<!--Device-ResourceManager-getRawFileDescriptor(path: string): Promise<RawFileDescriptor>--><!--Device-ResourceManager-getRawFileDescriptor(path: string): Promise<RawFileDescriptor>-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -8236,6 +8488,8 @@ Obtains the string corresponding to the specified resource ID. This API uses an 
 
 **Substitutes:** [getStringValue](#getstringvalue)(resId: number, callback: _AsyncCallback&lt;string&gt;)
 
+<!--Device-ResourceManager-getString(resId: number, callback: AsyncCallback<string>): void--><!--Device-ResourceManager-getString(resId: number, callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -8274,6 +8528,8 @@ Obtains the string corresponding to the specified resource ID. This API uses a p
 **Deprecated since:** 9
 
 **Substitutes:** [getStringValue](#getstringvalue)(resId: number)
+
+<!--Device-ResourceManager-getString(resId: number): Promise<string>--><!--Device-ResourceManager-getString(resId: number): Promise<string>-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -8317,6 +8573,8 @@ Obtains the string array corresponding to the specified resource ID. This API us
 
 **Substitutes:** [getStringArrayValue](#getstringarrayvalue)(resId: number, callback: _AsyncCallback&lt;Array&lt;string&gt;&gt;)
 
+<!--Device-ResourceManager-getStringArray(resId: number, callback: AsyncCallback<Array<string>>): void--><!--Device-ResourceManager-getStringArray(resId: number, callback: AsyncCallback<Array<string>>): void-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -8355,6 +8613,8 @@ Obtains the string array corresponding to the specified resource ID. This API us
 **Deprecated since:** 9
 
 **Substitutes:** [getStringArrayValue](#getstringarrayvalue)(resId: number)
+
+<!--Device-ResourceManager-getStringArray(resId: number): Promise<Array<string>>--><!--Device-ResourceManager-getStringArray(resId: number): Promise<Array<string>>-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -8397,6 +8657,8 @@ Releases an **resourceManager **object. This API is not supported currently. Cal
 **Deprecated since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-release()--><!--Device-ResourceManager-release()-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 

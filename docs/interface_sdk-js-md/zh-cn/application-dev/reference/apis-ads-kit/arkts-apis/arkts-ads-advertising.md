@@ -8,6 +8,8 @@
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare namespace advertising--><!--Device-unnamed-declare namespace advertising-End-->
+
 **系统能力：** SystemCapability.Advertising.Ads
 
 ## 导入模块

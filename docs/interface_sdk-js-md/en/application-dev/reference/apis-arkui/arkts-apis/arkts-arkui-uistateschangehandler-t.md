@@ -12,6 +12,8 @@ Defines the callback triggered when the UI state changes. It receives the curren
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-unnamed-declare type UIStatesChangeHandler = (node: FrameNode, currentUIStates: number) => void--><!--Device-unnamed-declare type UIStatesChangeHandler = (node: FrameNode, currentUIStates: number) => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

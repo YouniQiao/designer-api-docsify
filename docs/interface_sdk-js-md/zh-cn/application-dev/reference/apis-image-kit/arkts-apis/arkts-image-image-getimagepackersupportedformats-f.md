@@ -16,6 +16,8 @@ function getImagePackerSupportedFormats(): string[]
 
 **起始版本：** 20
 
+<!--Device-image-function getImagePackerSupportedFormats(): string[]--><!--Device-image-function getImagePackerSupportedFormats(): string[]-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
 **返回值：**

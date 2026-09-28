@@ -20,6 +20,8 @@ function getAllowedBluetoothDevices(admin: Want): Array<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-bluetoothManager-function getAllowedBluetoothDevices(admin: Want): Array<string>--><!--Device-bluetoothManager-function getAllowedBluetoothDevices(admin: Want): Array<string>-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -80,6 +82,8 @@ function getAllowedBluetoothDevices(admin: Want | null): Array<string>
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-bluetoothManager-function getAllowedBluetoothDevices(admin: Want | null): Array<string>--><!--Device-bluetoothManager-function getAllowedBluetoothDevices(admin: Want | null): Array<string>-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

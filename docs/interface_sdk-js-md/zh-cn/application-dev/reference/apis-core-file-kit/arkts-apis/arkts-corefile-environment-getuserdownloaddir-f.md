@@ -20,6 +20,8 @@ function getUserDownloadDir(): string
 - API版本12+：N/A
 - API版本11：ohos.permission.READ_WRITE_DOWNLOAD_DIRECTORY
 
+<!--Device-Environment-function getUserDownloadDir(): string--><!--Device-Environment-function getUserDownloadDir(): string-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.Environment.FolderObtain
 
 **返回值：**

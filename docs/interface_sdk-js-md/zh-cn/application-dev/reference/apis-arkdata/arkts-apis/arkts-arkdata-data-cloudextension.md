@@ -2,6 +2,8 @@
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare namespace cloudExtension--><!--Device-unnamed-declare namespace cloudExtension-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 ## 完整示例

@@ -10,6 +10,8 @@ export interface InstallStatus
 
 **废弃版本：** 9
 
+<!--Device-unnamed-export interface InstallStatus--><!--Device-unnamed-export interface InstallStatus-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 **系统接口：** 此接口为系统接口。
@@ -29,6 +31,8 @@ status: bundle.InstallErrorCode
 **起始版本：** 7
 
 **废弃版本：** 9
+
+<!--Device-InstallStatus-status: bundle.InstallErrorCode--><!--Device-InstallStatus-status: bundle.InstallErrorCode-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -51,6 +55,8 @@ statusMessage: string
 **起始版本：** 7
 
 **废弃版本：** 9
+
+<!--Device-InstallStatus-statusMessage: string--><!--Device-InstallStatus-statusMessage: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 

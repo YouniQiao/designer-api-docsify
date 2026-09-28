@@ -8,6 +8,8 @@ export interface MmsParams
 
 **起始版本：** 11
 
+<!--Device-sms-export interface MmsParams--><!--Device-sms-export interface MmsParams-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ data: string
 
 **起始版本：** 11
 
+<!--Device-MmsParams-data: string--><!--Device-MmsParams-data: string-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -46,6 +50,8 @@ mmsc: string
 
 **起始版本：** 11
 
+<!--Device-MmsParams-mmsc: string--><!--Device-MmsParams-mmsc: string-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +67,8 @@ mmsConfig?: MmsConfig
 **类型：** [MmsConfig](arkts-telephony-sms-mmsconfig-i-sys.md)
 
 **起始版本：** 11
+
+<!--Device-MmsParams-mmsConfig?: MmsConfig--><!--Device-MmsParams-mmsConfig?: MmsConfig-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -80,6 +88,8 @@ slotId: number
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-MmsParams-slotId: int--><!--Device-MmsParams-slotId: int-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 

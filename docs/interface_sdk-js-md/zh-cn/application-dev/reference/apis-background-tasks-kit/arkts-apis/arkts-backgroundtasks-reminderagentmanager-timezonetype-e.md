@@ -8,6 +8,8 @@ export enum TimeZoneType
 
 **起始版本：** 26.0.0
 
+<!--Device-reminderAgentManager-export enum TimeZoneType--><!--Device-reminderAgentManager-export enum TimeZoneType-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## DEFAULT
@@ -21,6 +23,8 @@ DEFAULT = 0
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TimeZoneType-DEFAULT = 0--><!--Device-TimeZoneType-DEFAULT = 0-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -36,6 +40,8 @@ FIXED_TIME_ZONE = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TimeZoneType-FIXED_TIME_ZONE = 1--><!--Device-TimeZoneType-FIXED_TIME_ZONE = 1-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## SYSTEM_TIME_ZONE
@@ -49,5 +55,7 @@ SYSTEM_TIME_ZONE = 2
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TimeZoneType-SYSTEM_TIME_ZONE = 2--><!--Device-TimeZoneType-SYSTEM_TIME_ZONE = 2-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent

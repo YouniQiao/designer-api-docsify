@@ -18,6 +18,8 @@ function getSlots(callback: AsyncCallback<Array<NotificationSlot>>): void
 
 **起始版本：** 9
 
+<!--Device-notificationManager-function getSlots(callback: AsyncCallback<Array<NotificationSlot>>): void--><!--Device-notificationManager-function getSlots(callback: AsyncCallback<Array<NotificationSlot>>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **参见：**
@@ -73,6 +75,8 @@ function getSlots(): Promise<Array<NotificationSlot>>
 用于批量查询当前应用已创建的所有通知渠道的配置信息，包括各渠道的类型、提醒方式、级别等设置。适用于需要查看所有渠道配置的场景。需先通过addSlot创建对应类型的通知渠道，否则获取结果为空。
 
 **起始版本：** 9
+
+<!--Device-notificationManager-function getSlots(): Promise<Array<NotificationSlot>>--><!--Device-notificationManager-function getSlots(): Promise<Array<NotificationSlot>>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

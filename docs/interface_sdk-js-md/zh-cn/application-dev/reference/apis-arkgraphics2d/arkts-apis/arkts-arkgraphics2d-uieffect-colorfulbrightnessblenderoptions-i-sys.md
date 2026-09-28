@@ -8,6 +8,8 @@ interface ColorfulBrightnessBlenderOptions
 
 **起始版本：** 26.2.0
 
+<!--Device-uiEffect-interface ColorfulBrightnessBlenderOptions--><!--Device-uiEffect-interface ColorfulBrightnessBlenderOptions-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -36,6 +38,8 @@ darkenWeight?: number
 
 **卡片能力：** 从API版本26.2.0开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-ColorfulBrightnessBlenderOptions-darkenWeight?: double--><!--Device-ColorfulBrightnessBlenderOptions-darkenWeight?: double-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -57,6 +61,8 @@ hdrEnabled?: boolean
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **卡片能力：** 从API版本26.2.0开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-ColorfulBrightnessBlenderOptions-hdrEnabled?: boolean--><!--Device-ColorfulBrightnessBlenderOptions-hdrEnabled?: boolean-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -80,6 +86,8 @@ lumaDiff?: number
 
 **卡片能力：** 从API版本26.2.0开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-ColorfulBrightnessBlenderOptions-lumaDiff?: double--><!--Device-ColorfulBrightnessBlenderOptions-lumaDiff?: double-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -102,6 +110,8 @@ tintedColorPercent?: number
 
 **卡片能力：** 从API版本26.2.0开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-ColorfulBrightnessBlenderOptions-tintedColorPercent?: double--><!--Device-ColorfulBrightnessBlenderOptions-tintedColorPercent?: double-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -123,6 +133,8 @@ vibrancyStrength?: number
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **卡片能力：** 从API版本26.2.0开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-ColorfulBrightnessBlenderOptions-vibrancyStrength?: double--><!--Device-ColorfulBrightnessBlenderOptions-vibrancyStrength?: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

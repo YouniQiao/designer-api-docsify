@@ -12,6 +12,8 @@ BackupExtensionAbility的上下文环境，继承自ExtensionContext。用于在
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare class BackupExtensionContext extends ExtensionContext--><!--Device-unnamed-declare class BackupExtensionContext extends ExtensionContext-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 ## 导入模块
@@ -33,5 +35,7 @@ readonly backupDir: string
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BackupExtensionContext-readonly backupDir: string--><!--Device-BackupExtensionContext-readonly backupDir: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup

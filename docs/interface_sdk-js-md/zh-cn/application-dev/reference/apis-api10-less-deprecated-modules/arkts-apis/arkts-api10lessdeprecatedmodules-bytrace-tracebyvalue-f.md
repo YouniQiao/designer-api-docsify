@@ -23,6 +23,8 @@ function traceByValue(name: string, count: number): void
 
 **替代接口：** traceByValue
 
+<!--Device-bytrace-function traceByValue(name: string, count: number): void--><!--Device-bytrace-function traceByValue(name: string, count: number): void-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
 
 **参数：**

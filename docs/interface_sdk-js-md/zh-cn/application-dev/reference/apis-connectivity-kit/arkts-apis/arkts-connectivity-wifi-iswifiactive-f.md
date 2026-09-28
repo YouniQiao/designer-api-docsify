@@ -26,6 +26,8 @@ function isWifiActive(): boolean
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
+<!--Device-wifi-function isWifiActive(): boolean--><!--Device-wifi-function isWifiActive(): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **返回值：**

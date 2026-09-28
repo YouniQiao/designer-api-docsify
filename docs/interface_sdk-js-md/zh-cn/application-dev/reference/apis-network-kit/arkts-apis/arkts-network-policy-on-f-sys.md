@@ -18,6 +18,8 @@ function on(type: 'netUidPolicyChange', callback: Callback<NetUidPolicyInfo>): v
 
 **需要权限：** ohos.permission.MANAGE_NET_STRATEGY
 
+<!--Device-policy-function on(type: 'netUidPolicyChange', callback: Callback<NetUidPolicyInfo>): void--><!--Device-policy-function on(type: 'netUidPolicyChange', callback: Callback<NetUidPolicyInfo>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -71,6 +73,8 @@ function on(type: 'netUidRuleChange', callback: Callback<NetUidRuleInfo>): void
 **起始版本：** 10
 
 **需要权限：** ohos.permission.MANAGE_NET_STRATEGY
+
+<!--Device-policy-function on(type: 'netUidRuleChange', callback: Callback<NetUidRuleInfo>): void--><!--Device-policy-function on(type: 'netUidRuleChange', callback: Callback<NetUidRuleInfo>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -126,6 +130,8 @@ function on(type: 'netMeteredIfacesChange', callback: Callback<Array<string>>): 
 
 **需要权限：** ohos.permission.MANAGE_NET_STRATEGY
 
+<!--Device-policy-function on(type: 'netMeteredIfacesChange', callback: Callback<Array<string>>): void--><!--Device-policy-function on(type: 'netMeteredIfacesChange', callback: Callback<Array<string>>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -174,6 +180,8 @@ function on(type: 'netQuotaPolicyChange', callback: Callback<Array<NetQuotaPolic
 **起始版本：** 10
 
 **需要权限：** ohos.permission.MANAGE_NET_STRATEGY
+
+<!--Device-policy-function on(type: 'netQuotaPolicyChange', callback: Callback<Array<NetQuotaPolicy>>): void--><!--Device-policy-function on(type: 'netQuotaPolicyChange', callback: Callback<Array<NetQuotaPolicy>>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -228,6 +236,8 @@ function on(type: 'netBackgroundPolicyChange', callback: Callback<boolean>): voi
 **起始版本：** 10
 
 **需要权限：** ohos.permission.MANAGE_NET_STRATEGY
+
+<!--Device-policy-function on(type: 'netBackgroundPolicyChange', callback: Callback<boolean>): void--><!--Device-policy-function on(type: 'netBackgroundPolicyChange', callback: Callback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 

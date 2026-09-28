@@ -16,6 +16,8 @@ function getBundleInstaller(callback: AsyncCallback<BundleInstaller>): void
 
 **起始版本：** 9
 
+<!--Device-installer-function getBundleInstaller(callback: AsyncCallback<BundleInstaller>): void--><!--Device-installer-function getBundleInstaller(callback: AsyncCallback<BundleInstaller>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +47,8 @@ function getBundleInstaller(): Promise<BundleInstaller>
 获取BundleInstaller对象。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-installer-function getBundleInstaller(): Promise<BundleInstaller>--><!--Device-installer-function getBundleInstaller(): Promise<BundleInstaller>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

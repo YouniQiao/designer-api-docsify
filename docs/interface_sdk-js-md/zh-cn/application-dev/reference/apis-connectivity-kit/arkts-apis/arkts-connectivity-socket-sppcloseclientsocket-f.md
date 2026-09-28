@@ -18,6 +18,8 @@ function sppCloseClientSocket(socket: number): void
 
 **起始版本：** 10
 
+<!--Device-socket-function sppCloseClientSocket(socket: int): void--><!--Device-socket-function sppCloseClientSocket(socket: int): void-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**

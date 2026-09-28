@@ -22,6 +22,8 @@ DLP管理应用或授权应用需要访问受保护的DLP文件内容时，先�
 
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
 
+<!--Device-dlpPermission-function openDLPFile(ciphertextFd: number, appId: string): Promise<DLPFile>--><!--Device-dlpPermission-function openDLPFile(ciphertextFd: number, appId: string): Promise<DLPFile>-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **系统接口：** 此接口为系统接口。
@@ -104,6 +106,8 @@ DLP管理应用调用该接口，打开DLP文件。使用callback异步回调。
 **起始版本：** 11
 
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
+
+<!--Device-dlpPermission-function openDLPFile(ciphertextFd: number, appId: string, callback: AsyncCallback<DLPFile>): void--><!--Device-dlpPermission-function openDLPFile(ciphertextFd: number, appId: string, callback: AsyncCallback<DLPFile>): void-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 

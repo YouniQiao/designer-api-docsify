@@ -19,6 +19,8 @@ declare function lstat(path: string): Promise<Stat>
 
 **替代接口：** [lstat](arkts-corefile-file-fs-lstat-f.md)
 
+<!--Device-unnamed-declare function lstat(path: string): Promise<Stat>--><!--Device-unnamed-declare function lstat(path: string): Promise<Stat>-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -49,6 +51,8 @@ declare function lstat(path: string, callback: AsyncCallback<Stat>): void
 **废弃版本：** 9
 
 **替代接口：** [lstat](arkts-corefile-file-fs-lstat-f.md)
+
+<!--Device-unnamed-declare function lstat(path: string, callback: AsyncCallback<Stat>): void--><!--Device-unnamed-declare function lstat(path: string, callback: AsyncCallback<Stat>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

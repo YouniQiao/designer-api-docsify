@@ -10,6 +10,8 @@ enum FingerprintTips
 
 **废弃版本：** 11
 
+<!--Device-userAuth-enum FingerprintTips--><!--Device-userAuth-enum FingerprintTips-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 ## FINGERPRINT_AUTH_TIP_GOOD
@@ -23,6 +25,8 @@ FINGERPRINT_AUTH_TIP_GOOD = 0
 **起始版本：** 8
 
 **废弃版本：** 11
+
+<!--Device-FingerprintTips-FINGERPRINT_AUTH_TIP_GOOD = 0--><!--Device-FingerprintTips-FINGERPRINT_AUTH_TIP_GOOD = 0-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -38,6 +42,8 @@ FINGERPRINT_AUTH_TIP_DIRTY = 1
 
 **废弃版本：** 11
 
+<!--Device-FingerprintTips-FINGERPRINT_AUTH_TIP_DIRTY = 1--><!--Device-FingerprintTips-FINGERPRINT_AUTH_TIP_DIRTY = 1-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 ## FINGERPRINT_AUTH_TIP_INSUFFICIENT
@@ -51,6 +57,8 @@ FINGERPRINT_AUTH_TIP_INSUFFICIENT = 2
 **起始版本：** 8
 
 **废弃版本：** 11
+
+<!--Device-FingerprintTips-FINGERPRINT_AUTH_TIP_INSUFFICIENT = 2--><!--Device-FingerprintTips-FINGERPRINT_AUTH_TIP_INSUFFICIENT = 2-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -66,6 +74,8 @@ FINGERPRINT_AUTH_TIP_PARTIAL = 3
 
 **废弃版本：** 11
 
+<!--Device-FingerprintTips-FINGERPRINT_AUTH_TIP_PARTIAL = 3--><!--Device-FingerprintTips-FINGERPRINT_AUTH_TIP_PARTIAL = 3-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 ## FINGERPRINT_AUTH_TIP_TOO_FAST
@@ -80,6 +90,8 @@ FINGERPRINT_AUTH_TIP_TOO_FAST = 4
 
 **废弃版本：** 11
 
+<!--Device-FingerprintTips-FINGERPRINT_AUTH_TIP_TOO_FAST = 4--><!--Device-FingerprintTips-FINGERPRINT_AUTH_TIP_TOO_FAST = 4-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 ## FINGERPRINT_AUTH_TIP_TOO_SLOW
@@ -93,5 +105,7 @@ FINGERPRINT_AUTH_TIP_TOO_SLOW = 5
 **起始版本：** 8
 
 **废弃版本：** 11
+
+<!--Device-FingerprintTips-FINGERPRINT_AUTH_TIP_TOO_SLOW = 5--><!--Device-FingerprintTips-FINGERPRINT_AUTH_TIP_TOO_SLOW = 5-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core

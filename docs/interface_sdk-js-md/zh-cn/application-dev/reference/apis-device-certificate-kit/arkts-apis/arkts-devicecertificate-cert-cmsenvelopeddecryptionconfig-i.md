@@ -8,6 +8,8 @@ CMS解封装的配置。
 
 **起始版本：** 22
 
+<!--Device-cert-interface CmsEnvelopedDecryptionConfig--><!--Device-cert-interface CmsEnvelopedDecryptionConfig-End-->
+
 **系统能力：** SystemCapability.Security.Cert
 
 ## 导入模块
@@ -28,7 +30,9 @@ cert?: X509Cert
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-CmsEnvelopedDecryptionConfig-cert?: X509Cert--><!--Device-CmsEnvelopedDecryptionConfig-cert?: X509Cert-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -46,7 +50,9 @@ contentDataFormat?: CmsContentDataFormat
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-CmsEnvelopedDecryptionConfig-contentDataFormat?: CmsContentDataFormat--><!--Device-CmsEnvelopedDecryptionConfig-contentDataFormat?: CmsContentDataFormat-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -62,7 +68,9 @@ encryptedContentData?: Uint8Array
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-CmsEnvelopedDecryptionConfig-encryptedContentData?: Uint8Array--><!--Device-CmsEnvelopedDecryptionConfig-encryptedContentData?: Uint8Array-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -78,6 +86,8 @@ keyInfo?: PrivateKeyInfo
 
 **起始版本：** 22
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-CmsEnvelopedDecryptionConfig-keyInfo?: PrivateKeyInfo--><!--Device-CmsEnvelopedDecryptionConfig-keyInfo?: PrivateKeyInfo-End-->
 
 **系统能力：** SystemCapability.Security.Cert

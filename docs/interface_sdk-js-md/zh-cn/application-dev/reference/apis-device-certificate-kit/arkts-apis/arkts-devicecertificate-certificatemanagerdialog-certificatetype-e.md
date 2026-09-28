@@ -8,6 +8,8 @@ export enum CertificateType
 
 **起始版本：** 14
 
+<!--Device-certificateManagerDialog-export enum CertificateType--><!--Device-certificateManagerDialog-export enum CertificateType-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
 ## CA_CERT
@@ -21,6 +23,8 @@ CA证书。
 **起始版本：** 14
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-CertificateType-CA_CERT = 1--><!--Device-CertificateType-CA_CERT = 1-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
@@ -36,6 +40,8 @@ CREDENTIAL_USER = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-CertificateType-CREDENTIAL_USER = 2--><!--Device-CertificateType-CREDENTIAL_USER = 2-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
 ## CREDENTIAL_APP
@@ -49,6 +55,8 @@ CREDENTIAL_APP = 3
 **起始版本：** 22
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-CertificateType-CREDENTIAL_APP = 3--><!--Device-CertificateType-CREDENTIAL_APP = 3-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
@@ -64,6 +72,8 @@ USB Key证书凭据。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-CertificateType-CREDENTIAL_UKEY = 4--><!--Device-CertificateType-CREDENTIAL_UKEY = 4-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
 ## CREDENTIAL_SYSTEM
@@ -77,5 +87,7 @@ CREDENTIAL_SYSTEM = 5
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-CertificateType-CREDENTIAL_SYSTEM = 5--><!--Device-CertificateType-CREDENTIAL_SYSTEM = 5-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManagerDialog

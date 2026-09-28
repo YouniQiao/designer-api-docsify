@@ -16,6 +16,8 @@ export default struct UserAuthIcon
 
 **装饰器类型：** @Component
 
+<!--Device-unnamed-export default struct UserAuthIcon--><!--Device-unnamed-export default struct UserAuthIcon-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 ## 导入模块
@@ -38,6 +40,8 @@ onAuthResult: (result: userAuth.UserAuthResult) => void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-UserAuthIcon-onAuthResult: (result: userAuth.UserAuthResult) => void--><!--Device-UserAuthIcon-onAuthResult: (result: userAuth.UserAuthResult) => void-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 **参数：**
@@ -58,6 +62,8 @@ onIconClick?: () => void
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-UserAuthIcon-onIconClick?: () => void--><!--Device-UserAuthIcon-onIconClick?: () => void-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 ## authParam
@@ -73,6 +79,8 @@ authParam: userAuth.AuthParam
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-UserAuthIcon-authParam: userAuth.AuthParam--><!--Device-UserAuthIcon-authParam: userAuth.AuthParam-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -92,6 +100,8 @@ iconColor?: ResourceColor
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-UserAuthIcon-iconColor?: ResourceColor--><!--Device-UserAuthIcon-iconColor?: ResourceColor-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 ## iconHeight
@@ -110,6 +120,8 @@ iconHeight?: Dimension
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-UserAuthIcon-iconHeight?: Dimension--><!--Device-UserAuthIcon-iconHeight?: Dimension-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 ## widgetParam
@@ -125,5 +137,7 @@ widgetParam: userAuth.WidgetParam
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-UserAuthIcon-widgetParam: userAuth.WidgetParam--><!--Device-UserAuthIcon-widgetParam: userAuth.WidgetParam-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core

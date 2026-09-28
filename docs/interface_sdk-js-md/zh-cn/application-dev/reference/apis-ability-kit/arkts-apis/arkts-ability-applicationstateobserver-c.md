@@ -17,6 +17,8 @@ import { appManager } from '@kit.AbilityKit';
 
 **起始版本：** 14
 
+<!--Device-unnamed-export default class ApplicationStateObserver--><!--Device-unnamed-export default class ApplicationStateObserver-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## onAbilityStateChanged
@@ -28,6 +30,8 @@ onAbilityStateChanged(abilityStateData: AbilityStateData): void
 Ability状态发生变化时执行的回调函数。
 
 **起始版本：** 14
+
+<!--Device-ApplicationStateObserver-onAbilityStateChanged(abilityStateData: AbilityStateData): void--><!--Device-ApplicationStateObserver-onAbilityStateChanged(abilityStateData: AbilityStateData): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -47,6 +51,8 @@ onAppStarted(appStateData: AppStateData): void
 
 **起始版本：** 14
 
+<!--Device-ApplicationStateObserver-onAppStarted(appStateData: AppStateData): void--><!--Device-ApplicationStateObserver-onAppStarted(appStateData: AppStateData): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -64,6 +70,8 @@ onAppStopped(appStateData: AppStateData): void
 应用最后一个进程销毁时执行的回调函数。
 
 **起始版本：** 14
+
+<!--Device-ApplicationStateObserver-onAppStopped(appStateData: AppStateData): void--><!--Device-ApplicationStateObserver-onAppStopped(appStateData: AppStateData): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -83,6 +91,8 @@ onForegroundApplicationChanged(appStateData: AppStateData): void
 
 **起始版本：** 14
 
+<!--Device-ApplicationStateObserver-onForegroundApplicationChanged(appStateData: AppStateData): void--><!--Device-ApplicationStateObserver-onForegroundApplicationChanged(appStateData: AppStateData): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -100,6 +110,8 @@ onProcessCreated(processData: ProcessData): void
 进程创建时执行的回调函数。
 
 **起始版本：** 14
+
+<!--Device-ApplicationStateObserver-onProcessCreated(processData: ProcessData): void--><!--Device-ApplicationStateObserver-onProcessCreated(processData: ProcessData): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -119,6 +131,8 @@ onProcessDied(processData: ProcessData): void
 
 **起始版本：** 14
 
+<!--Device-ApplicationStateObserver-onProcessDied(processData: ProcessData): void--><!--Device-ApplicationStateObserver-onProcessDied(processData: ProcessData): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -136,6 +150,8 @@ onProcessStateChanged(processData: ProcessData): void
 进程状态发生变化时执行的回调函数。
 
 **起始版本：** 14
+
+<!--Device-ApplicationStateObserver-onProcessStateChanged(processData: ProcessData): void--><!--Device-ApplicationStateObserver-onProcessStateChanged(processData: ProcessData): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

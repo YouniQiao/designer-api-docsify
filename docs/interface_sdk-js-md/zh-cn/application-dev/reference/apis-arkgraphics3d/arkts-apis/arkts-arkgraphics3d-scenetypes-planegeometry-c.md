@@ -12,6 +12,8 @@ export declare class PlaneGeometry extends GeometryDefinition
 
 **起始版本：** 18
 
+<!--Device-unnamed-export declare class PlaneGeometry extends GeometryDefinition--><!--Device-unnamed-export declare class PlaneGeometry extends GeometryDefinition-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## size
@@ -26,6 +28,8 @@ get size(): Vec2
 
 **起始版本：** 18
 
+<!--Device-PlaneGeometry-get size(): Vec2--><!--Device-PlaneGeometry-get size(): Vec2-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ```TypeScript
@@ -37,5 +41,7 @@ set size(value: Vec2)
 **类型：** [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md)
 
 **起始版本：** 18
+
+<!--Device-PlaneGeometry-set size(value: Vec2)--><!--Device-PlaneGeometry-set size(value: Vec2)-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

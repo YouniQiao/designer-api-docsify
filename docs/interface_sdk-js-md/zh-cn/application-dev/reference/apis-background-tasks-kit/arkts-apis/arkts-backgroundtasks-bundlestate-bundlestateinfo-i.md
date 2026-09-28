@@ -8,6 +8,8 @@ interface BundleStateInfo
 
 **废弃版本：** 9
 
+<!--Device-bundleState-interface BundleStateInfo--><!--Device-bundleState-interface BundleStateInfo-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 ## 导入模块
@@ -27,6 +29,8 @@ Merges a specified BundleActiveInfo object with this BundleActiveInfo object. Th
 **起始版本：** 7
 
 **废弃版本：** 9
+
+<!--Device-BundleStateInfo-merge(toMerge: BundleStateInfo): void--><!--Device-BundleStateInfo-merge(toMerge: BundleStateInfo): void-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -50,6 +54,8 @@ The total duration, in milliseconds. <br> Unit:ms
 
 **废弃版本：** 9
 
+<!--Device-BundleStateInfo-abilityInFgTotalTime?: number--><!--Device-BundleStateInfo-abilityInFgTotalTime?: number-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 ## abilityPrevAccessTime
@@ -65,6 +71,8 @@ The last time when the application was accessed, in milliseconds. <br> Unit:ms
 **起始版本：** 7
 
 **废弃版本：** 9
+
+<!--Device-BundleStateInfo-abilityPrevAccessTime?: number--><!--Device-BundleStateInfo-abilityPrevAccessTime?: number-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -82,6 +90,8 @@ The last time when the application was visible in the foreground, in millisecond
 
 **废弃版本：** 9
 
+<!--Device-BundleStateInfo-abilityPrevSeenTime?: number--><!--Device-BundleStateInfo-abilityPrevSeenTime?: number-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 ## abilitySeenTotalTime
@@ -97,6 +107,8 @@ The total duration when the application was visible in the foreground, in millis
 **起始版本：** 7
 
 **废弃版本：** 9
+
+<!--Device-BundleStateInfo-abilitySeenTotalTime?: number--><!--Device-BundleStateInfo-abilitySeenTotalTime?: number-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -114,6 +126,8 @@ The bundle name of the application.
 
 **废弃版本：** 9
 
+<!--Device-BundleStateInfo-bundleName?: string--><!--Device-BundleStateInfo-bundleName?: string-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 ## fgAbilityAccessTotalTime
@@ -129,6 +143,8 @@ The total duration when the foreground application was accessed, in milliseconds
 **起始版本：** 7
 
 **废弃版本：** 9
+
+<!--Device-BundleStateInfo-fgAbilityAccessTotalTime?: number--><!--Device-BundleStateInfo-fgAbilityAccessTotalTime?: number-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -146,6 +162,8 @@ The last time when the foreground application was accessed, in milliseconds. <br
 
 **废弃版本：** 9
 
+<!--Device-BundleStateInfo-fgAbilityPrevAccessTime?: number--><!--Device-BundleStateInfo-fgAbilityPrevAccessTime?: number-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 ## id
@@ -161,6 +179,8 @@ The identifier of BundleStateInfo.
 **起始版本：** 7
 
 **废弃版本：** 9
+
+<!--Device-BundleStateInfo-id: number--><!--Device-BundleStateInfo-id: number-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -178,6 +198,8 @@ The time of the first bundle usage record in this `BundleActiveInfo` object, in 
 
 **废弃版本：** 9
 
+<!--Device-BundleStateInfo-infosBeginTime?: number--><!--Device-BundleStateInfo-infosBeginTime?: number-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 ## infosEndTime
@@ -193,5 +215,7 @@ The time of the last bundle usage record in this `BundleActiveInfo` object, in m
 **起始版本：** 7
 
 **废弃版本：** 9
+
+<!--Device-BundleStateInfo-infosEndTime?: number--><!--Device-BundleStateInfo-infosEndTime?: number-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App

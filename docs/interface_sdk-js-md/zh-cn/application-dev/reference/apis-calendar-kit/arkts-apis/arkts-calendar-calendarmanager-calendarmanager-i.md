@@ -8,6 +8,8 @@ export interface CalendarManager
 
 **起始版本：** 10
 
+<!--Device-calendarManager-export interface CalendarManager--><!--Device-calendarManager-export interface CalendarManager-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 ## 导入模块
@@ -27,6 +29,8 @@ createCalendar(calendarAccount: CalendarAccount): Promise<Calendar>
 **起始版本：** 10
 
 **需要权限：** ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
+
+<!--Device-CalendarManager-createCalendar(calendarAccount: CalendarAccount): Promise<Calendar>--><!--Device-CalendarManager-createCalendar(calendarAccount: CalendarAccount): Promise<Calendar>-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -86,6 +90,8 @@ createCalendar(calendarAccount: CalendarAccount, callback: AsyncCallback<Calenda
 
 **需要权限：** ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
 
+<!--Device-CalendarManager-createCalendar(calendarAccount: CalendarAccount, callback: AsyncCallback<Calendar>): void--><!--Device-CalendarManager-createCalendar(calendarAccount: CalendarAccount, callback: AsyncCallback<Calendar>): void-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 **参数：**
@@ -141,6 +147,8 @@ deleteCalendar(calendar: Calendar): Promise<void>
 **起始版本：** 10
 
 **需要权限：** ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
+
+<!--Device-CalendarManager-deleteCalendar(calendar: Calendar): Promise<void>--><!--Device-CalendarManager-deleteCalendar(calendar: Calendar): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -211,6 +219,8 @@ deleteCalendar(calendar: Calendar, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
 
+<!--Device-CalendarManager-deleteCalendar(calendar: Calendar, callback: AsyncCallback<void>): void--><!--Device-CalendarManager-deleteCalendar(calendar: Calendar, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 **参数：**
@@ -276,6 +286,8 @@ editEvent(event: Event): Promise<number>
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-CalendarManager-editEvent(event: Event): Promise<number>--><!--Device-CalendarManager-editEvent(event: Event): Promise<number>-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 **参数：**
@@ -320,6 +332,8 @@ getAllCalendars(): Promise<Calendar[]>
 **起始版本：** 10
 
 **需要权限：** ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
+
+<!--Device-CalendarManager-getAllCalendars(): Promise<Calendar[]>--><!--Device-CalendarManager-getAllCalendars(): Promise<Calendar[]>-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -373,6 +387,8 @@ getAllCalendars(callback: AsyncCallback<Calendar[]>): void
 
 **需要权限：** ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
 
+<!--Device-CalendarManager-getAllCalendars(callback: AsyncCallback<Calendar[]>): void--><!--Device-CalendarManager-getAllCalendars(callback: AsyncCallback<Calendar[]>): void-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 **参数：**
@@ -424,6 +440,8 @@ getCalendar(calendarAccount?: CalendarAccount): Promise<Calendar>
 **需要权限：** ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-CalendarManager-getCalendar(calendarAccount?: CalendarAccount): Promise<Calendar>--><!--Device-CalendarManager-getCalendar(calendarAccount?: CalendarAccount): Promise<Calendar>-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -480,6 +498,8 @@ getCalendar(calendarAccount: CalendarAccount, callback: AsyncCallback<Calendar>)
 **需要权限：** ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-CalendarManager-getCalendar(calendarAccount: CalendarAccount, callback: AsyncCallback<Calendar>): void--><!--Device-CalendarManager-getCalendar(calendarAccount: CalendarAccount, callback: AsyncCallback<Calendar>): void-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -543,6 +563,8 @@ getCalendar(callback: AsyncCallback<Calendar>): void
 **需要权限：** ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-CalendarManager-getCalendar(callback: AsyncCallback<Calendar>): void--><!--Device-CalendarManager-getCalendar(callback: AsyncCallback<Calendar>): void-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 

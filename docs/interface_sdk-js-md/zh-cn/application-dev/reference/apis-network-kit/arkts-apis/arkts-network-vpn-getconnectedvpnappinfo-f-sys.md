@@ -18,6 +18,8 @@ function getConnectedVpnAppInfo(): Promise<Array<string>>
 
 **需要权限：** ohos.permission.MANAGE_VPN
 
+<!--Device-vpn-function getConnectedVpnAppInfo(): Promise<Array<string>>--><!--Device-vpn-function getConnectedVpnAppInfo(): Promise<Array<string>>-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。

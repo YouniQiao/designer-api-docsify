@@ -18,6 +18,8 @@ function updateImsCallMode(callId: number, mode: ImsCallMode, callback: AsyncCal
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-call-function updateImsCallMode(callId: int, mode: ImsCallMode, callback: AsyncCallback<void>): void--><!--Device-call-function updateImsCallMode(callId: int, mode: ImsCallMode, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -70,6 +72,8 @@ function updateImsCallMode(callId: number, mode: ImsCallMode): Promise<void>
 **起始版本：** 8
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
+
+<!--Device-call-function updateImsCallMode(callId: int, mode: ImsCallMode): Promise<void>--><!--Device-call-function updateImsCallMode(callId: int, mode: ImsCallMode): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
 

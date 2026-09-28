@@ -2,6 +2,8 @@
 
 **起始版本：** 8
 
+<!--Device-unnamed-declare namespace formError--><!--Device-unnamed-declare namespace formError-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 ## 权限

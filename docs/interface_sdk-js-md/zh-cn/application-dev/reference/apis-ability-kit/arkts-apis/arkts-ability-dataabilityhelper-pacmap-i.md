@@ -8,6 +8,8 @@ export interface PacMap
 
 **起始版本：** 7
 
+<!--Device-unnamed-export interface PacMap--><!--Device-unnamed-export interface PacMap-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 ## [key: string]
@@ -24,5 +26,7 @@ export interface PacMap
 
 **模型约束：** 
 - API版本7-10：此接口仅可在FA模型下使用。
+
+<!--Device-PacMap-[key: string]: number | string | boolean | Array<string | number | boolean> | null--><!--Device-PacMap-[key: string]: number | string | boolean | Array<string | number | boolean> | null-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel

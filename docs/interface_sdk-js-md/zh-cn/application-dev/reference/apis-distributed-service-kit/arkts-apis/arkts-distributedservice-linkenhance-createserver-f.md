@@ -20,6 +20,8 @@ function createServer(name: string): Server
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-linkEnhance-function createServer(name: string): Server--><!--Device-linkEnhance-function createServer(name: string): Server-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **参数：**

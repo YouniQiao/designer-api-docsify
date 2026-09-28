@@ -18,6 +18,8 @@ Set the lock status of the SIM card in the specified slot.
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-sim-function setLockState(slotId: int, options: LockInfo, callback: AsyncCallback<LockStatusResponse>): void--><!--Device-sim-function setLockState(slotId: int, options: LockInfo, callback: AsyncCallback<LockStatusResponse>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -74,6 +76,8 @@ Set the lock status of the SIM card in the specified slot.
 **起始版本：** 7
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
+
+<!--Device-sim-function setLockState(slotId: int, options: LockInfo): Promise<LockStatusResponse>--><!--Device-sim-function setLockState(slotId: int, options: LockInfo): Promise<LockStatusResponse>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

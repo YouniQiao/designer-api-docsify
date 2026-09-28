@@ -14,6 +14,8 @@ export interface subscribeAccelerometerOptions
 
 **需要权限：** ohos.permission.ACCELEROMETER
 
+<!--Device-unnamed-export interface subscribeAccelerometerOptions--><!--Device-unnamed-export interface subscribeAccelerometerOptions-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
 ## 导入模块
@@ -39,6 +41,8 @@ fail?: (data: string, code: number) => void
 **需要权限：** ohos.permission.ACCELEROMETER
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-subscribeAccelerometerOptions-fail?: (data: string, code: number) => void--><!--Device-subscribeAccelerometerOptions-fail?: (data: string, code: number) => void-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
@@ -67,6 +71,8 @@ success: (data: AccelerometerResponse) => void
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-subscribeAccelerometerOptions-success: (data: AccelerometerResponse) => void--><!--Device-subscribeAccelerometerOptions-success: (data: AccelerometerResponse) => void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
 **参数：**
@@ -94,5 +100,7 @@ interval: string
 **需要权限：** ohos.permission.ACCELEROMETER
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-subscribeAccelerometerOptions-interval: string--><!--Device-subscribeAccelerometerOptions-interval: string-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite

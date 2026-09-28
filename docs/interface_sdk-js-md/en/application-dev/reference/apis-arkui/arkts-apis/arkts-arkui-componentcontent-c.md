@@ -20,6 +20,8 @@ You can create an entity encapsulation component in either of the following ways
 
 **Since:** 12
 
+<!--Device-unnamed-export class ComponentContent<T extends Object> extends Content--><!--Device-unnamed-export class ComponentContent<T extends Object> extends Content-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
@@ -35,6 +37,8 @@ A constructor used to create a **ComponentContent** object.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ComponentContent-constructor(uiContext: UIContext, builder: WrappedBuilder<[]>)--><!--Device-ComponentContent-constructor(uiContext: UIContext, builder: WrappedBuilder<[]>)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -122,6 +126,8 @@ A constructor used to create a **ComponentContent** object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ComponentContent-constructor(uiContext: UIContext, builder: WrappedBuilder<[T]>, args: T)--><!--Device-ComponentContent-constructor(uiContext: UIContext, builder: WrappedBuilder<[T]>, args: T)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -208,6 +214,8 @@ A constructor used to create a **ComponentContent** object.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ComponentContent-constructor(uiContext: UIContext, builder: WrappedBuilder<[T]>, args: T, options: BuildOptions)--><!--Device-ComponentContent-constructor(uiContext: UIContext, builder: WrappedBuilder<[T]>, args: T, options: BuildOptions)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -305,6 +313,8 @@ Immediately releases the reference relationship between this **ComponentContent*
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ComponentContent-dispose(): void--><!--Device-ComponentContent-dispose(): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Examples**
@@ -389,6 +399,8 @@ Sets whether the current **ComponentContent** object inherits the freeze policy 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-ComponentContent-inheritFreezeOptions(enabled: boolean): void--><!--Device-ComponentContent-inheritFreezeOptions(enabled: boolean): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -600,6 +612,8 @@ Checks whether this **ComponentContent** object has released its reference to it
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-ComponentContent-isDisposed(): boolean--><!--Device-ComponentContent-isDisposed(): boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -696,6 +710,8 @@ Returns a flag indicating whether the current ComponentContent was obtained thro
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-ComponentContent-isTransferred(): boolean--><!--Device-ComponentContent-isTransferred(): boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -721,6 +737,8 @@ component reuse mechanism. For details, see [@Reusable Decorator: Reusing V1 Com
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ComponentContent-recycle(): void--><!--Device-ComponentContent-recycle(): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## reuse
@@ -736,6 +754,8 @@ Triggers component reuse for custom components in **ComponentContent**. For deta
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ComponentContent-reuse(param?: Object): void--><!--Device-ComponentContent-reuse(param?: Object): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -758,6 +778,8 @@ Updates the arguments of the builder function encapsulated by the [WrappedBuilde
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ComponentContent-update(args: T): void--><!--Device-ComponentContent-update(args: T): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -836,6 +858,8 @@ Transfers a system environment change event and triggers full update of a node. 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ComponentContent-updateConfiguration(): void--><!--Device-ComponentContent-updateConfiguration(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

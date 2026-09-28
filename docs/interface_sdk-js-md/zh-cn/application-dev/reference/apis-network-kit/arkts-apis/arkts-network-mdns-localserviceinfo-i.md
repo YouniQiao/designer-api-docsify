@@ -8,6 +8,8 @@ MDNS服务信息。
 
 **起始版本：** 10
 
+<!--Device-mdns-export interface LocalServiceInfo--><!--Device-mdns-export interface LocalServiceInfo-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.MDNS
 
 ## 导入模块
@@ -30,6 +32,8 @@ MDNS服务设备的IP地址。采用设备的IP，添加服务和移除服务时
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-LocalServiceInfo-host?: NetAddress--><!--Device-LocalServiceInfo-host?: NetAddress-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.MDNS
 
 ## port
@@ -45,6 +49,8 @@ MDNS服务的端口号。取值范围[0，65535]。
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-LocalServiceInfo-port?: int--><!--Device-LocalServiceInfo-port?: int-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.MDNS
 
@@ -62,6 +68,8 @@ MDNS服务属性信息。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-LocalServiceInfo-serviceAttribute?: Array<ServiceAttribute>--><!--Device-LocalServiceInfo-serviceAttribute?: Array<ServiceAttribute>-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.MDNS
 
 ## serviceName
@@ -78,6 +86,8 @@ MDNS服务的名字。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-LocalServiceInfo-serviceName: string--><!--Device-LocalServiceInfo-serviceName: string-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.MDNS
 
 ## serviceType
@@ -93,5 +103,7 @@ MDNS服务的类型。格式：_&lt;name&gt;.&lt;_tcp/_udp&gt;，name长度小�
 **起始版本：** 10
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-LocalServiceInfo-serviceType: string--><!--Device-LocalServiceInfo-serviceType: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.MDNS

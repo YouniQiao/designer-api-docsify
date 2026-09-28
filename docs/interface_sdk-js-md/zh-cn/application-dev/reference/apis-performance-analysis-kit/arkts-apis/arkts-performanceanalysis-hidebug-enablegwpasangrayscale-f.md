@@ -28,6 +28,8 @@ function enableGwpAsanGrayscale(options?: GwpAsanOptions, duration?: number): vo
 
 **起始版本：** 20
 
+<!--Device-hidebug-function enableGwpAsanGrayscale(options?: GwpAsanOptions, duration?: int): void--><!--Device-hidebug-function enableGwpAsanGrayscale(options?: GwpAsanOptions, duration?: int): void-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **参数：**

@@ -10,6 +10,8 @@ Implements a **PixelMapDrawableDescriptor** object, which can be created by pass
 
 **Since:** 12
 
+<!--Device-unnamed-export class PixelMapDrawableDescriptor extends DrawableDescriptor--><!--Device-unnamed-export class PixelMapDrawableDescriptor extends DrawableDescriptor-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -31,6 +33,8 @@ A constructor used to create a **PixelMapDrawableDescriptor** object.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PixelMapDrawableDescriptor-constructor(src?: image.PixelMap)--><!--Device-PixelMapDrawableDescriptor-constructor(src?: image.PixelMap)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -81,6 +85,8 @@ A constructor used to create a **PixelMapDrawableDescriptor** object through the
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-PixelMapDrawableDescriptor-constructor(src?: image.PixelMap | ResourceStr)--><!--Device-PixelMapDrawableDescriptor-constructor(src?: image.PixelMap | ResourceStr)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

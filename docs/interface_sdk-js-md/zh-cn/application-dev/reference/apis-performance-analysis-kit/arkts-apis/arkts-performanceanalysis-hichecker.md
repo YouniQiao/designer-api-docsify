@@ -4,6 +4,8 @@ HiChecker可以作为应用开发阶段使用的检测工具，用于检测代�
 
 **起始版本：** 8
 
+<!--Device-unnamed-declare namespace hichecker--><!--Device-unnamed-declare namespace hichecker-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
 ## 导入模块

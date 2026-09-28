@@ -4,6 +4,8 @@
 
 **起始版本：** 14
 
+<!--Device-unnamed-declare namespace inputConsumer--><!--Device-unnamed-declare namespace inputConsumer-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 
 ## 导入模块

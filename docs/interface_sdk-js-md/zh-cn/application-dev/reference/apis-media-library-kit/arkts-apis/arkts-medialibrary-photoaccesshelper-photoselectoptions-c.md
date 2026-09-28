@@ -10,6 +10,8 @@ class PhotoSelectOptions extends BaseSelectOptions
 
 **起始版本：** 10
 
+<!--Device-photoAccessHelper-class PhotoSelectOptions extends BaseSelectOptions--><!--Device-photoAccessHelper-class PhotoSelectOptions extends BaseSelectOptions-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
@@ -32,7 +34,9 @@ completeButtonText?: CompleteButtonText
 
 **起始版本：** 14
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-PhotoSelectOptions-completeButtonText?: CompleteButtonText--><!--Device-PhotoSelectOptions-completeButtonText?: CompleteButtonText-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -50,7 +54,9 @@ contextRecoveryInfo?: ContextRecoveryInfo
 
 **起始版本：** 21
 
-**原子化服务API：** 从API版本21开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本21开始，该接口支持在原子化服务中使用。
+
+<!--Device-PhotoSelectOptions-contextRecoveryInfo?: ContextRecoveryInfo--><!--Device-PhotoSelectOptions-contextRecoveryInfo?: ContextRecoveryInfo-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -60,7 +66,7 @@ contextRecoveryInfo?: ContextRecoveryInfo
 isDestroyedWithNavigation?: boolean
 ```
 
-是否支持跟随[Navigation](../../apis-arkui/arkts-components/arkts-arkui-navigation-comp.md#navigation)销毁，true表示支持，false表示不支持，默认为false。
+是否支持跟随[Navigation](../../apis-arkui/arkts-components/arkts-arkui-navigation-comp.md)销毁，true表示支持，false表示不支持，默认为false。
 
 **模型约束**： 此接口仅可在Stage模型下使用。
 
@@ -70,7 +76,9 @@ isDestroyedWithNavigation?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-PhotoSelectOptions-isDestroyedWithNavigation?: boolean--><!--Device-PhotoSelectOptions-isDestroyedWithNavigation?: boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -86,7 +94,9 @@ isEditSupported?: boolean
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-PhotoSelectOptions-isEditSupported?: boolean--><!--Device-PhotoSelectOptions-isEditSupported?: boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -102,7 +112,9 @@ isOriginalSupported?: boolean
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PhotoSelectOptions-isOriginalSupported?: boolean--><!--Device-PhotoSelectOptions-isOriginalSupported?: boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -124,7 +136,9 @@ isReturnToPhotoBrowserEnabled?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-PhotoSelectOptions-isReturnToPhotoBrowserEnabled?: boolean--><!--Device-PhotoSelectOptions-isReturnToPhotoBrowserEnabled?: boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -142,7 +156,9 @@ isSelectionNumberVisible?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-PhotoSelectOptions-isSelectionNumberVisible?: boolean--><!--Device-PhotoSelectOptions-isSelectionNumberVisible?: boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -160,7 +176,9 @@ isSelectionOrderAdjustable?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-PhotoSelectOptions-isSelectionOrderAdjustable?: boolean--><!--Device-PhotoSelectOptions-isSelectionOrderAdjustable?: boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -180,7 +198,9 @@ maxPhotoSelectNumber?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-PhotoSelectOptions-maxPhotoSelectNumber?: int--><!--Device-PhotoSelectOptions-maxPhotoSelectNumber?: int-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -200,7 +220,9 @@ maxVideoSelectNumber?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-PhotoSelectOptions-maxVideoSelectNumber?: int--><!--Device-PhotoSelectOptions-maxVideoSelectNumber?: int-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -218,7 +240,9 @@ pickerColorMode?: PickerColorMode
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
+
+<!--Device-PhotoSelectOptions-pickerColorMode?: PickerColorMode--><!--Device-PhotoSelectOptions-pickerColorMode?: PickerColorMode-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -234,6 +258,8 @@ subWindowName?: string
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PhotoSelectOptions-subWindowName?: string--><!--Device-PhotoSelectOptions-subWindowName?: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core

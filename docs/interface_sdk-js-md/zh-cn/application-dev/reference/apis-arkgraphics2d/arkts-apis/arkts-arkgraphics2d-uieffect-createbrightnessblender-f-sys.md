@@ -16,7 +16,9 @@ function createBrightnessBlender(param: BrightnessBlenderParam): BrightnessBlend
 
 **起始版本：** 12
 
-**卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
+**卡片能力（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-uiEffect-function createBrightnessBlender(param: BrightnessBlenderParam): BrightnessBlender--><!--Device-uiEffect-function createBrightnessBlender(param: BrightnessBlenderParam): BrightnessBlender-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

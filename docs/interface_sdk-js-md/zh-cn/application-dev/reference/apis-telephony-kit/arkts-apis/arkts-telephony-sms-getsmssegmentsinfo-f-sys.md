@@ -16,6 +16,8 @@ function getSmsSegmentsInfo(slotId: number, message: string, force7bit: boolean,
 
 **起始版本：** 8
 
+<!--Device-sms-function getSmsSegmentsInfo(slotId: int, message: string, force7bit: boolean, callback: AsyncCallback<SmsSegmentsInfo>): void--><!--Device-sms-function getSmsSegmentsInfo(slotId: int, message: string, force7bit: boolean, callback: AsyncCallback<SmsSegmentsInfo>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -64,6 +66,8 @@ function getSmsSegmentsInfo(slotId: number, message: string, force7bit: boolean)
 获取短信段信息。使用Promise异步回调。
 
 **起始版本：** 8
+
+<!--Device-sms-function getSmsSegmentsInfo(slotId: int, message: string, force7bit: boolean): Promise<SmsSegmentsInfo>--><!--Device-sms-function getSmsSegmentsInfo(slotId: int, message: string, force7bit: boolean): Promise<SmsSegmentsInfo>-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 

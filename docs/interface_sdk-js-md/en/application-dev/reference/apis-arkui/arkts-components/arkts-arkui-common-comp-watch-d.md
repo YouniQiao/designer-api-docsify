@@ -18,4 +18,6 @@ value: Name of the callback function for listening to changes in the state varia
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-unnamed-declare const Watch: (value: string) => PropertyDecorator--><!--Device-unnamed-declare const Watch: (value: string) => PropertyDecorator-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

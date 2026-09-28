@@ -22,6 +22,8 @@ function getCachedGnssLocationsSize(callback: AsyncCallback<number>): void
 
 **需要权限：** ohos.permission.LOCATION
 
+<!--Device-geolocation-function getCachedGnssLocationsSize(callback: AsyncCallback<number>): void--><!--Device-geolocation-function getCachedGnssLocationsSize(callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.Location.Location.Gnss
 
 **参数：**
@@ -62,6 +64,8 @@ function getCachedGnssLocationsSize(): Promise<number>
 **替代接口：** [getCachedGnssLocationsSize](arkts-location-geolocationmanager-getcachedgnsslocationssize-f.md)
 
 **需要权限：** ohos.permission.LOCATION
+
+<!--Device-geolocation-function getCachedGnssLocationsSize(): Promise<number>--><!--Device-geolocation-function getCachedGnssLocationsSize(): Promise<number>-End-->
 
 **系统能力：** SystemCapability.Location.Location.Gnss
 

@@ -8,6 +8,8 @@ enum UserRecognitionStatus
 
 **起始版本：** 26.0.1
 
+<!--Device-userAuth-enum UserRecognitionStatus--><!--Device-userAuth-enum UserRecognitionStatus-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 ## UNCERTAIN
@@ -22,7 +24,9 @@ UNCERTAIN = 0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
+
+<!--Device-UserRecognitionStatus-UNCERTAIN = 0--><!--Device-UserRecognitionStatus-UNCERTAIN = 0-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -38,7 +42,9 @@ MISMATCH = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
+
+<!--Device-UserRecognitionStatus-MISMATCH = 1--><!--Device-UserRecognitionStatus-MISMATCH = 1-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -54,6 +60,8 @@ MATCH = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
+
+<!--Device-UserRecognitionStatus-MATCH = 2--><!--Device-UserRecognitionStatus-MATCH = 2-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core

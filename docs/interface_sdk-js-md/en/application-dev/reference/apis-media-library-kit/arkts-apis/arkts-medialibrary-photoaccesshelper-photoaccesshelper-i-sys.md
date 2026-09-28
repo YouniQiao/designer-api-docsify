@@ -8,6 +8,8 @@ Helper functions to access photos and albums.
 
 **Since:** 10
 
+<!--Device-photoAccessHelper-interface PhotoAccessHelper--><!--Device-photoAccessHelper-interface PhotoAccessHelper-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
@@ -25,6 +27,8 @@ acquireDebugDatabase(betaIssueId: string, betaScenario: string): Promise<Map<str
 Start medialibrary database backup and wait for returning with backup information which only works on beta device.
 
 **Since:** 23
+
+<!--Device-PhotoAccessHelper-acquireDebugDatabase(betaIssueId: string, betaScenario: string): Promise<Map<string, string>>--><!--Device-PhotoAccessHelper-acquireDebugDatabase(betaIssueId: string, betaScenario: string): Promise<Map<string, string>>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -66,6 +70,8 @@ Applies media changes of share album. This API uses a promise to return the targ
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PhotoAccessHelper-applyShareAlbumChanges(mediaChangeRequest: MediaShareAlbumChangeRequest): Promise<Album|null>--><!--Device-PhotoAccessHelper-applyShareAlbumChanges(mediaChangeRequest: MediaShareAlbumChangeRequest): Promise<Album|null>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -101,6 +107,8 @@ batchGetPhotoAssetParams(assets: PhotoAsset[], members: string[]): PhotoAssetPar
 Obtains the values of specified properties for an array of [PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md) objects in batches.
 
 **Since:** 21
+
+<!--Device-PhotoAccessHelper-batchGetPhotoAssetParams(assets: PhotoAsset[], members: string[]): PhotoAssetParams--><!--Device-PhotoAccessHelper-batchGetPhotoAssetParams(assets: PhotoAsset[], members: string[]): PhotoAssetParams-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -199,6 +207,8 @@ Cancels the execution of an intelligent analysis tool.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PhotoAccessHelper-cancelAnalysisTool(config: ToolCancelConfig): Promise<void>--><!--Device-PhotoAccessHelper-cancelAnalysisTool(config: ToolCancelConfig): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -235,6 +245,8 @@ Cancels the permission for accessing a URI from an application. This API uses a 
 **Since:** 19
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-cancelPhotoUriPermission(tokenId: long, uri: string, photoPermissionType: PhotoPermissionType): Promise<int>--><!--Device-PhotoAccessHelper-cancelPhotoUriPermission(tokenId: long, uri: string, photoPermissionType: PhotoPermissionType): Promise<int>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -298,6 +310,8 @@ Whether deep storage space optimization can be performed.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PhotoAccessHelper-canPerformDeepOptimizeSpace(): Promise<boolean>--><!--Device-PhotoAccessHelper-canPerformDeepOptimizeSpace(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -344,6 +358,8 @@ clone assets of filemanager to Album.
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PhotoAccessHelper-cloneAssetsByPath(assets: string[], target: Album, option?: BatchOperationOptions): Promise<string[]>--><!--Device-PhotoAccessHelper-cloneAssetsByPath(assets: string[], target: Album, option?: BatchOperationOptions): Promise<string[]>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -403,6 +419,8 @@ clone assets to Album.
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PhotoAccessHelper-cloneToAlbum(assets: PhotoAsset[], target: Album, option?: BatchOperationOptions): Promise<PhotoAsset[]>--><!--Device-PhotoAccessHelper-cloneToAlbum(assets: PhotoAsset[], target: Album, option?: BatchOperationOptions): Promise<PhotoAsset[]>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -474,6 +492,8 @@ clone assets of medialibrary sandbox to directory of filemanager.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PhotoAccessHelper-cloneToDir(assets: string[], target: string, option?: BatchOperationOptions): Promise<string[]>--><!--Device-PhotoAccessHelper-cloneToDir(assets: string[], target: string, option?: BatchOperationOptions): Promise<string[]>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -542,6 +562,8 @@ Clone assets in shared albums. Resources can be copied from a common album to a 
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PhotoAccessHelper-cloneWithShareAlbum(owner:string, assets: PhotoAsset[], targetAlbum: Album, shareGroup: long,      option?: BatchOperationOptions): Promise<PhotoAsset[]>--><!--Device-PhotoAccessHelper-cloneWithShareAlbum(owner:string, assets: PhotoAsset[], targetAlbum: Album, shareGroup: long,      option?: BatchOperationOptions): Promise<PhotoAsset[]>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -583,6 +605,8 @@ Convert Asset Attributes to Compatibility Attributes
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PhotoAccessHelper-convertAssetToCompatibleAsset(assets: Array<PhotoAsset>): Promise<Array<PhotoAsset>>--><!--Device-PhotoAccessHelper-convertAssetToCompatibleAsset(assets: Array<PhotoAsset>): Promise<Array<PhotoAsset>>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -619,6 +643,8 @@ convert to PhotoAsset from path of filemanagerr.
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PhotoAccessHelper-convertToAsset(path: string): Promise<PhotoAsset>--><!--Device-PhotoAccessHelper-convertToAsset(path: string): Promise<PhotoAsset>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -682,6 +708,8 @@ For API versions 10 to 17, the following characters are considered invalid: . ..
 **Since:** 10
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-createAsset(displayName: string, callback: AsyncCallback<PhotoAsset>): void--><!--Device-PhotoAccessHelper-createAsset(displayName: string, callback: AsyncCallback<PhotoAsset>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -747,6 +775,8 @@ For API versions 10 to 17, the following characters are considered invalid: . ..
 **Since:** 10
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-createAsset(displayName: string): Promise<PhotoAsset>--><!--Device-PhotoAccessHelper-createAsset(displayName: string): Promise<PhotoAsset>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -816,6 +846,8 @@ For API versions 10 to 17, the following characters are considered invalid: . ..
 **Since:** 10
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-createAsset(displayName: string, options: PhotoCreateOptions): Promise<PhotoAsset>--><!--Device-PhotoAccessHelper-createAsset(displayName: string, options: PhotoCreateOptions): Promise<PhotoAsset>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -890,6 +922,8 @@ For API versions 10 to 17, the following characters are considered invalid: . ..
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-PhotoAccessHelper-createAsset(displayName: string, options: PhotoCreateOptions, callback: AsyncCallback<PhotoAsset>): void--><!--Device-PhotoAccessHelper-createAsset(displayName: string, options: PhotoCreateOptions, callback: AsyncCallback<PhotoAsset>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -946,6 +980,8 @@ Creates media assets for an application with the specified token ID. The returne
 **Since:** 19
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-createAssetsForApp(bundleName: string, appName: string, tokenId: long, photoCreationConfigs: Array<PhotoCreationConfig>): Promise<Array<string>>--><!--Device-PhotoAccessHelper-createAssetsForApp(bundleName: string, appName: string, tokenId: long, photoCreationConfigs: Array<PhotoCreationConfig>): Promise<Array<string>>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -1014,6 +1050,8 @@ Creates assets for the current application or other applications in the specifie
 **Since:** 18
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-createAssetsForAppWithAlbum(source: PhotoCreationSource, albumUri: string, isAuthorized: boolean, photoCreationConfigs: Array<PhotoCreationConfig>): Promise<Array<string>>--><!--Device-PhotoAccessHelper-createAssetsForAppWithAlbum(source: PhotoCreationSource, albumUri: string, isAuthorized: boolean, photoCreationConfigs: Array<PhotoCreationConfig>): Promise<Array<string>>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -1095,6 +1133,8 @@ Creates assets with a temporary permission. This API uses a promise to return th
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-PhotoAccessHelper-createAssetsForAppWithMode(      bundleName: string,      appName: string,      appId: string,      tokenId: long,      authorizationMode: AuthorizationMode,      photoCreationConfigs: Array<PhotoCreationConfig>    ): Promise<Array<string>>--><!--Device-PhotoAccessHelper-createAssetsForAppWithMode(      bundleName: string,      appName: string,      appId: string,      tokenId: long,      authorizationMode: AuthorizationMode,      photoCreationConfigs: Array<PhotoCreationConfig>    ): Promise<Array<string>>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -1173,6 +1213,8 @@ Batch create assets, which also support to choose whether specifying an album an
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PhotoAccessHelper-createAssetsWithAlbum(      creationSettings: CreationSetting[],       isRealTimeThumb: boolean,       albumUri?: string): Promise<string[]>--><!--Device-PhotoAccessHelper-createAssetsWithAlbum(      creationSettings: CreationSetting[],       isRealTimeThumb: boolean,       albumUri?: string): Promise<string[]>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -1246,6 +1288,8 @@ Get the corresponding albumId of a bundleName.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PhotoAccessHelper-getAlbumIdByBundleName(bundleName: string): Promise<int>--><!--Device-PhotoAccessHelper-getAlbumIdByBundleName(bundleName: string): Promise<int>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -1302,6 +1346,8 @@ Obtains album information by album IDs. This API uses a promise to return the re
 **Since:** 18
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-getAlbumsByIds(albumIds: Array<int>): Promise<Map<int, Album>>--><!--Device-PhotoAccessHelper-getAlbumsByIds(albumIds: Array<int>): Promise<Map<int, Album>>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -1361,6 +1407,8 @@ Obtains the asset compatibility capability based on the bundle name. When an app
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PhotoAccessHelper-getAssetCompatibleCapability(bundleName: string): Promise<AssetCompatibleCapability>--><!--Device-PhotoAccessHelper-getAssetCompatibleCapability(bundleName: string): Promise<AssetCompatibleCapability>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -1411,6 +1459,8 @@ Obtain the URI list to be transcoded based on bundleName, photoAsset list, and c
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PhotoAccessHelper-getAssetCompatibleUris(bundleName: string, assets: Array<PhotoAsset>, compatibleFlag?: int): Promise<Array<string>>--><!--Device-PhotoAccessHelper-getAssetCompatibleUris(bundleName: string, assets: Array<PhotoAsset>, compatibleFlag?: int): Promise<Array<string>>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -1479,6 +1529,8 @@ To control the size of the database table space, the system automatically delete
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-PhotoAccessHelper-getClonedAlbumUris(oldUris: Array<string>): Promise<Map<string, string>>--><!--Device-PhotoAccessHelper-getClonedAlbumUris(oldUris: Array<string>): Promise<Map<string, string>>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -1540,6 +1592,8 @@ To control the size of the database table space, the system automatically delete
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-PhotoAccessHelper-getClonedAssetUris(oldUris: Array<string>): Promise<Map<string, string>>--><!--Device-PhotoAccessHelper-getClonedAssetUris(oldUris: Array<string>): Promise<Map<string, string>>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -1598,6 +1652,8 @@ Obtains the asset analysis progress. This API uses a promise to return the resul
 **Since:** 12
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-getDataAnalysisProgress(analysisType?: AnalysisType): Promise<string>--><!--Device-PhotoAccessHelper-getDataAnalysisProgress(analysisType?: AnalysisType): Promise<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -1658,6 +1714,8 @@ This API is time-consuming. Before using this API, you are advised to call [canP
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PhotoAccessHelper-getDeepOptimizeSpace(): Promise<long>--><!--Device-PhotoAccessHelper-getDeepOptimizeSpace(): Promise<long>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -1705,6 +1763,8 @@ Obtains hidden albums based on the specified display mode and retrieval options.
 **Since:** 11
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
+
+<!--Device-PhotoAccessHelper-getHiddenAlbums(mode: HiddenPhotosDisplayMode, options: FetchOptions, callback: AsyncCallback<FetchResult<Album>>): void--><!--Device-PhotoAccessHelper-getHiddenAlbums(mode: HiddenPhotosDisplayMode, options: FetchOptions, callback: AsyncCallback<FetchResult<Album>>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -1778,6 +1838,8 @@ Obtains hidden albums based on the specified display mode. This API uses an asyn
 **Since:** 11
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
+
+<!--Device-PhotoAccessHelper-getHiddenAlbums(mode: HiddenPhotosDisplayMode, callback: AsyncCallback<FetchResult<Album>>): void--><!--Device-PhotoAccessHelper-getHiddenAlbums(mode: HiddenPhotosDisplayMode, callback: AsyncCallback<FetchResult<Album>>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -1875,6 +1937,8 @@ Obtains hidden albums based on the specified display mode and retrieval options.
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
 
+<!--Device-PhotoAccessHelper-getHiddenAlbums(mode: HiddenPhotosDisplayMode, options?: FetchOptions): Promise<FetchResult<Album>>--><!--Device-PhotoAccessHelper-getHiddenAlbums(mode: HiddenPhotosDisplayMode, options?: FetchOptions): Promise<FetchResult<Album>>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -1969,6 +2033,8 @@ Obtains the index construction progress. This API uses a promise to return the r
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-PhotoAccessHelper-getIndexConstructProgress(): Promise<string>--><!--Device-PhotoAccessHelper-getIndexConstructProgress(): Promise<string>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -2025,6 +2091,8 @@ Obtains the sorting order for system, user, and source albums. This API uses a p
 **Since:** 20
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-getPhotoAlbumOrder(orderStyle: int, options?: FetchOptions): Promise<FetchResult<AlbumOrder>>--><!--Device-PhotoAccessHelper-getPhotoAlbumOrder(orderStyle: int, options?: FetchOptions): Promise<FetchResult<AlbumOrder>>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -2096,6 +2164,8 @@ Before the operation, ensure that the albums to obtain exist.
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-PhotoAccessHelper-getPhotoAlbums(options?: FetchOptions):Promise<FetchResult<Album>>--><!--Device-PhotoAccessHelper-getPhotoAlbums(options?: FetchOptions):Promise<FetchResult<Album>>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -2161,6 +2231,8 @@ Converts the **ValuesBucket** record to a **PhotoAsset** object.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PhotoAccessHelper-getPhotoAssets(assetsData: ValuesBucket[]): Promise<PhotoAsset[]>--><!--Device-PhotoAccessHelper-getPhotoAssets(assetsData: ValuesBucket[]): Promise<PhotoAsset[]>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -2223,6 +2295,8 @@ Obtains the index of an image or video in an album. This API uses an asynchronou
 **Since:** 10
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-getPhotoIndex(photoUri: string, albumUri: string, options: FetchOptions, callback: AsyncCallback<int>): void--><!--Device-PhotoAccessHelper-getPhotoIndex(photoUri: string, albumUri: string, options: FetchOptions, callback: AsyncCallback<int>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -2302,6 +2376,8 @@ Obtains the index of an image or video in an album. This API uses a promise to r
 **Since:** 10
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-getPhotoIndex(photoUri: string, albumUri: string, options: FetchOptions): Promise<int>--><!--Device-PhotoAccessHelper-getPhotoIndex(photoUri: string, albumUri: string, options: FetchOptions): Promise<int>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -2383,6 +2459,8 @@ Obtains the preferred compatible mode configured by the application based on bun
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PhotoAccessHelper-getPreferredCompatibleMode(bundleName: string): Promise<PreferredCompatibleMode>--><!--Device-PhotoAccessHelper-getPreferredCompatibleMode(bundleName: string): Promise<PreferredCompatibleMode>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -2446,6 +2524,8 @@ Query shared photo albums.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PhotoAccessHelper-getShareAlbums(options?: FetchOptions): Promise<FetchResult<Album>>--><!--Device-PhotoAccessHelper-getShareAlbums(options?: FetchOptions): Promise<FetchResult<Album>>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -2482,6 +2562,8 @@ Obtains the shared photo assets.
 **Since:** 13
 
 **Required permissions:** ohos.permission.ACCESS_MEDIALIB_THUMB_DB
+
+<!--Device-PhotoAccessHelper-getSharedPhotoAssets(options: FetchOptions): Array<SharedPhotoAsset>--><!--Device-PhotoAccessHelper-getSharedPhotoAssets(options: FetchOptions): Array<SharedPhotoAsset>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -2548,6 +2630,8 @@ Grants an application the permission to access a URI. This API uses a promise to
 **Since:** 19
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-grantPhotoUriPermission(      tokenId: long,       uri: string,       photoPermissionType: PhotoPermissionType,       hideSensitiveType: HideSensitiveType    ): Promise<int>--><!--Device-PhotoAccessHelper-grantPhotoUriPermission(      tokenId: long,       uri: string,       photoPermissionType: PhotoPermissionType,       hideSensitiveType: HideSensitiveType    ): Promise<int>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -2616,6 +2700,8 @@ Grants an application the permission to access multiple URIs. This API uses a pr
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-PhotoAccessHelper-grantPhotoUrisPermission(      tokenId: long,       uriList: Array<string>,       photoPermissionType: PhotoPermissionType,       hideSensitiveType: HideSensitiveType    ): Promise<int>--><!--Device-PhotoAccessHelper-grantPhotoUrisPermission(      tokenId: long,       uriList: Array<string>,       photoPermissionType: PhotoPermissionType,       hideSensitiveType: HideSensitiveType    ): Promise<int>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -2683,6 +2769,8 @@ Triggers the execution of an analysis tool. This API uses an asynchronous callba
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PhotoAccessHelper-invokeAnalysisTool(config: ToolInvokeConfig, callback: Callback<AnalysisToolResult>): Promise<string>--><!--Device-PhotoAccessHelper-invokeAnalysisTool(config: ToolInvokeConfig, callback: Callback<AnalysisToolResult>): Promise<string>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -2720,6 +2808,8 @@ Checks whether a temporary JPEG copy should be created for an application. This 
 **Since:** 21
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-isCompatibleDuplicateSupported(bundleName: string): Promise<boolean>--><!--Device-PhotoAccessHelper-isCompatibleDuplicateSupported(bundleName: string): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -2774,6 +2864,8 @@ Checks whether the specified media data is ready.
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PhotoAccessHelper-isMediaDataReady(mediaDataKey: string): Promise<boolean>--><!--Device-PhotoAccessHelper-isMediaDataReady(mediaDataKey: string): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -2836,6 +2928,8 @@ modify the default cover order of album.
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PhotoAccessHelper-modifyAlbumDefaultCoverOrder(coverOrderInfos: DefaultCoverOrderInfo[],     disableModification: boolean,     isAsyncRefreshAlbum: boolean): Promise<void>--><!--Device-PhotoAccessHelper-modifyAlbumDefaultCoverOrder(coverOrderInfos: DefaultCoverOrderInfo[],     disableModification: boolean,     isAsyncRefreshAlbum: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -2907,6 +3001,8 @@ modify the default cover order of hidden album.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PhotoAccessHelper-modifyHiddenAlbumDefaultCoverOrder(coverOrderInfos: DefaultCoverOrderInfo[],     disableModification: boolean,     isAsyncRefreshAlbum: boolean): Promise<void>--><!--Device-PhotoAccessHelper-modifyHiddenAlbumDefaultCoverOrder(coverOrderInfos: DefaultCoverOrderInfo[],     disableModification: boolean,     isAsyncRefreshAlbum: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -2974,6 +3070,8 @@ move assets of filemanager to Album.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PhotoAccessHelper-moveAssetsByPath(assets: string[], target: Album, option?: BatchOperationOptions): Promise<string[]>--><!--Device-PhotoAccessHelper-moveAssetsByPath(assets: string[], target: Album, option?: BatchOperationOptions): Promise<string[]>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -3034,6 +3132,8 @@ move assets of medialibrary sandbox to directory of filemanager.
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PhotoAccessHelper-moveAssetsToDir(assets: string[], target: string, option?: BatchOperationOptions): Promise<string[]>--><!--Device-PhotoAccessHelper-moveAssetsToDir(assets: string[], target: string, option?: BatchOperationOptions): Promise<string[]>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -3100,6 +3200,8 @@ Unregisters a listener for the **'hiddenPhotoChange'** event to stop monitoring 
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
 
+<!--Device-PhotoAccessHelper-off(type: 'hiddenPhotoChange', callback?: Callback<PhotoAssetChangeInfos>): void--><!--Device-PhotoAccessHelper-off(type: 'hiddenPhotoChange', callback?: Callback<PhotoAssetChangeInfos>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -3164,6 +3266,8 @@ Unregisters a listener for the **'trashedPhotoChange'** event to stop monitoring
 **Since:** 20
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-off(type: 'trashedPhotoChange', callback?: Callback<PhotoAssetChangeInfos>): void--><!--Device-PhotoAccessHelper-off(type: 'trashedPhotoChange', callback?: Callback<PhotoAssetChangeInfos>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -3230,6 +3334,8 @@ Unregisters a listener for the **'hiddenAlbumChange'** event to stop monitoring 
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
 
+<!--Device-PhotoAccessHelper-off(type: 'hiddenAlbumChange', callback?: Callback<AlbumChangeInfos>): void--><!--Device-PhotoAccessHelper-off(type: 'hiddenAlbumChange', callback?: Callback<AlbumChangeInfos>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -3294,6 +3400,8 @@ Unregisters a listener for the **'trashedAlbumChange'** event to stop monitoring
 **Since:** 20
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-off(type: 'trashedAlbumChange', callback?: Callback<AlbumChangeInfos>): void--><!--Device-PhotoAccessHelper-off(type: 'trashedAlbumChange', callback?: Callback<AlbumChangeInfos>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -3362,6 +3470,8 @@ Cancels the listener for the smart analysis album. If multiple listeners are reg
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PhotoAccessHelper-offAnalysisAlbumChange(callback?: Callback<AlbumChangeInfos>): void--><!--Device-PhotoAccessHelper-offAnalysisAlbumChange(callback?: Callback<AlbumChangeInfos>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -3428,6 +3538,8 @@ Cancels the listening for the media asset changes related to the smart analysis 
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PhotoAccessHelper-offAnalysisPhotoChange(callback?: Callback<PhotoAssetChangeInfos>): void--><!--Device-PhotoAccessHelper-offAnalysisPhotoChange(callback?: Callback<PhotoAssetChangeInfos>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -3492,6 +3604,8 @@ Unsubscribes from changes in the share album.
 
 **Required permissions:** ohos.permission.MANAGE_SHARE_PHOTO
 
+<!--Device-PhotoAccessHelper-offShareAlbumChange(callback?: Callback<AlbumChangeInfos>): void--><!--Device-PhotoAccessHelper-offShareAlbumChange(callback?: Callback<AlbumChangeInfos>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -3523,6 +3637,8 @@ Unsubscribes from changes of share photos and videos.
 
 **Required permissions:** ohos.permission.MANAGE_SHARE_PHOTO
 
+<!--Device-PhotoAccessHelper-offSharePhotoChange(callback?: Callback<PhotoAssetChangeInfos>): void--><!--Device-PhotoAccessHelper-offSharePhotoChange(callback?: Callback<PhotoAssetChangeInfos>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -3553,6 +3669,8 @@ Registers a listener for the **'hiddenPhotoChange'** event to monitor hidden med
 **Since:** 20
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
+
+<!--Device-PhotoAccessHelper-on(type: 'hiddenPhotoChange', callback: Callback<PhotoAssetChangeInfos>): void--><!--Device-PhotoAccessHelper-on(type: 'hiddenPhotoChange', callback: Callback<PhotoAssetChangeInfos>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -3616,6 +3734,8 @@ Registers a listener for the **'trashedPhotoChange'** event to monitor media ass
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-PhotoAccessHelper-on(type: 'trashedPhotoChange', callback: Callback<PhotoAssetChangeInfos>): void--><!--Device-PhotoAccessHelper-on(type: 'trashedPhotoChange', callback: Callback<PhotoAssetChangeInfos>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -3678,6 +3798,8 @@ Registers a listener for the **'hiddenAlbumChange'** event to monitor hidden alb
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
 
+<!--Device-PhotoAccessHelper-on(type: 'hiddenAlbumChange', callback: Callback<AlbumChangeInfos>): void--><!--Device-PhotoAccessHelper-on(type: 'hiddenAlbumChange', callback: Callback<AlbumChangeInfos>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -3739,6 +3861,8 @@ Registers a listener for the **'trashedAlbumChange'** event to monitor album cha
 **Since:** 20
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-on(type: 'trashedAlbumChange', callback: Callback<AlbumChangeInfos>): void--><!--Device-PhotoAccessHelper-on(type: 'trashedAlbumChange', callback: Callback<AlbumChangeInfos>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -3804,6 +3928,8 @@ Listens for the smart analysis album and returns the album change result using a
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PhotoAccessHelper-onAnalysisAlbumChange(callback: Callback<AlbumChangeInfos>): void--><!--Device-PhotoAccessHelper-onAnalysisAlbumChange(callback: Callback<AlbumChangeInfos>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -3867,6 +3993,8 @@ Listens for the changes of media assets associated with the smart analysis album
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PhotoAccessHelper-onAnalysisPhotoChange(callback: Callback<PhotoAssetChangeInfos>): void--><!--Device-PhotoAccessHelper-onAnalysisPhotoChange(callback: Callback<PhotoAssetChangeInfos>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -3928,6 +4056,8 @@ Subscribes to changes of the share album.
 
 **Required permissions:** ohos.permission.MANAGE_SHARE_PHOTO
 
+<!--Device-PhotoAccessHelper-onShareAlbumChange(callback: Callback<AlbumChangeInfos>): void--><!--Device-PhotoAccessHelper-onShareAlbumChange(callback: Callback<AlbumChangeInfos>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -3959,6 +4089,8 @@ Subscribes to changes of share photos and videos.
 
 **Required permissions:** ohos.permission.MANAGE_SHARE_PHOTO
 
+<!--Device-PhotoAccessHelper-onSharePhotoChange(callback: Callback<PhotoAssetChangeInfos>): void--><!--Device-PhotoAccessHelper-onSharePhotoChange(callback: Callback<PhotoAssetChangeInfos>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -3989,6 +4121,8 @@ Queries data in the database using the specified SQL statement. This API does no
 **Since:** 22
 
 **Required permissions:** ohos.permission.ACCESS_MEDIALIB_THUMB_DB
+
+<!--Device-PhotoAccessHelper-query(sql: string): Promise<ResultSet>--><!--Device-PhotoAccessHelper-query(sql: string): Promise<ResultSet>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -4048,6 +4182,8 @@ Release medialibrary database backup resources incluses closing backup database 
 
 **Since:** 23
 
+<!--Device-PhotoAccessHelper-releaseDebugDatabase(betaIssueId: string, dbFd: int): Promise<void>--><!--Device-PhotoAccessHelper-releaseDebugDatabase(betaIssueId: string, dbFd: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -4085,6 +4221,8 @@ Removes the Gallery widget information bound to a single image from the database
 **Since:** 11
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-removeFormInfo(info: FormInfo, callback: AsyncCallback<void>): void--><!--Device-PhotoAccessHelper-removeFormInfo(info: FormInfo, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -4144,6 +4282,8 @@ Removes the Gallery widget information bound to a single image from the database
 **Since:** 11
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-removeFormInfo(info: FormInfo): Promise<void>--><!--Device-PhotoAccessHelper-removeFormInfo(info: FormInfo): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -4205,6 +4345,8 @@ Removes the Gallery widget information bound to a group of images from the datab
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-PhotoAccessHelper-removeGalleryFormInfo(info: GalleryFormInfo): Promise<void>--><!--Device-PhotoAccessHelper-removeGalleryFormInfo(info: GalleryFormInfo): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -4261,6 +4403,8 @@ Saves the Gallery widget information bound to a single image to the database. Th
 **Since:** 11
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-saveFormInfo(info: FormInfo, callback: AsyncCallback<void>): void--><!--Device-PhotoAccessHelper-saveFormInfo(info: FormInfo, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -4330,6 +4474,8 @@ Saves the Gallery widget information bound to a single image to the database. Th
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-PhotoAccessHelper-saveFormInfo(info: FormInfo): Promise<void>--><!--Device-PhotoAccessHelper-saveFormInfo(info: FormInfo): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -4398,6 +4544,8 @@ Saves the Gallery widget information bound to a group of images to the database.
 **Since:** 18
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-saveGalleryFormInfo(info: GalleryFormInfo): Promise<void>--><!--Device-PhotoAccessHelper-saveGalleryFormInfo(info: GalleryFormInfo): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -4476,6 +4624,8 @@ Sets the asset compatibility capability based on the bundle name. You can obtain
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PhotoAccessHelper-setAssetCompatibleCapability(bundleName: string, capability: AssetCompatibleCapability): Promise<void>--><!--Device-PhotoAccessHelper-setAssetCompatibleCapability(bundleName: string, capability: AssetCompatibleCapability): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -4530,6 +4680,8 @@ Sets the sorting order for system, user, and source albums. This API uses a prom
 **Since:** 20
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-setPhotoAlbumOrder(orderStyle: int, albumOrders: Array<AlbumOrder>): Promise<void>--><!--Device-PhotoAccessHelper-setPhotoAlbumOrder(orderStyle: int, albumOrders: Array<AlbumOrder>): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -4604,6 +4756,8 @@ Configure the preferred compatible mode configured by the application based on b
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PhotoAccessHelper-setPreferredCompatibleMode(bundleName: string, compatibleMode: PreferredCompatibleMode): Promise<void>--><!--Device-PhotoAccessHelper-setPreferredCompatibleMode(bundleName: string, compatibleMode: PreferredCompatibleMode): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -4664,6 +4818,8 @@ Starts asset analysis.
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-PhotoAccessHelper-startAssetAnalysis(type: AnalysisType, assetUris?: Array<string>): Promise<int>--><!--Device-PhotoAccessHelper-startAssetAnalysis(type: AnalysisType, assetUris?: Array<string>): Promise<int>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -4722,6 +4878,8 @@ Starts asynchronous asset analysis. This API uses an asynchronous callback to re
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PhotoAccessHelper-startAssetAnalysisAsync(config: AnalysisConfig, callback: Callback<AnalysisResult>): Promise<int>--><!--Device-PhotoAccessHelper-startAssetAnalysisAsync(config: AnalysisConfig, callback: Callback<AnalysisResult>): Promise<int>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -4791,6 +4949,8 @@ Before using this API, you are advised to call [canPerformDeepOptimizeSpace()] [
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PhotoAccessHelper-startDeepOptimizeSpace(callback?: Callback<DeepOptimizeSpaceProgress>): Promise<void>--><!--Device-PhotoAccessHelper-startDeepOptimizeSpace(callback?: Callback<DeepOptimizeSpaceProgress>): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -4844,6 +5004,8 @@ Generates a thumbnail based on the specified rule.
 **Since:** 13
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-startThumbnailCreationTask(predicate: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<void>): int--><!--Device-PhotoAccessHelper-startThumbnailCreationTask(predicate: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<void>): int-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -4909,6 +5071,8 @@ Generates a thumbnail based on the specified rule. This API uses an asynchronous
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PhotoAccessHelper-startThumbnailCreationTask(predicate: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<void>, response: AsyncCallback<int>): int--><!--Device-PhotoAccessHelper-startThumbnailCreationTask(predicate: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<void>, response: AsyncCallback<int>): int-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -4981,6 +5145,8 @@ Stops asset analysis.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PhotoAccessHelper-stopAssetAnalysis(config: AnalysisConfig): void--><!--Device-PhotoAccessHelper-stopAssetAnalysis(config: AnalysisConfig): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -5035,6 +5201,8 @@ Stop deep optimize storage space.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PhotoAccessHelper-stopDeepOptimizeSpace(): Promise<void>--><!--Device-PhotoAccessHelper-stopDeepOptimizeSpace(): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -5079,6 +5247,8 @@ Stops generating a thumbnail.
 **Since:** 13
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-stopThumbnailCreationTask(taskId: int): void--><!--Device-PhotoAccessHelper-stopThumbnailCreationTask(taskId: int): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -5126,6 +5296,8 @@ Updates the information about a Gallery widget and saves the information to the 
 **Since:** 18
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-updateGalleryFormInfo(info: GalleryFormInfo): Promise<void>--><!--Device-PhotoAccessHelper-updateGalleryFormInfo(info: GalleryFormInfo): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -5211,6 +5383,8 @@ The album name must meet the following requirements:
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-PhotoAccessHelper-createAlbum(name: string, callback: AsyncCallback<Album>): void--><!--Device-PhotoAccessHelper-createAlbum(name: string, callback: AsyncCallback<Album>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -5278,6 +5452,8 @@ The album name must meet the following requirements:
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-PhotoAccessHelper-createAlbum(name: string): Promise<Album>--><!--Device-PhotoAccessHelper-createAlbum(name: string): Promise<Album>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -5338,6 +5514,8 @@ Deletes user albums. This API uses an asynchronous callback to return the result
 **Substitutes:** [deleteAlbums](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c-sys.md#deletealbums)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-deleteAlbums(albums: Array<Album>, callback: AsyncCallback<void>): void--><!--Device-PhotoAccessHelper-deleteAlbums(albums: Array<Album>, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -5406,6 +5584,8 @@ Deletes user albums. This API uses a promise to return the result.
 **Substitutes:** [deleteAlbums](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c-sys.md#deletealbums)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-deleteAlbums(albums: Array<Album>): Promise<void>--><!--Device-PhotoAccessHelper-deleteAlbums(albums: Array<Album>): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -5476,6 +5656,8 @@ Deletes media assets. The deleted assets are moved to the trash. This API uses a
 **Substitutes:** [deleteAssets](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md#deleteassets)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-deleteAssets(uriList: Array<string>, callback: AsyncCallback<void>): void--><!--Device-PhotoAccessHelper-deleteAssets(uriList: Array<string>, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -5550,6 +5732,8 @@ Deletes media assets. The deleted assets are moved to the trash. This API uses a
 **Substitutes:** [deleteAssets](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md#deleteassets)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-deleteAssets(uriList: Array<string>): Promise<void>--><!--Device-PhotoAccessHelper-deleteAssets(uriList: Array<string>): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

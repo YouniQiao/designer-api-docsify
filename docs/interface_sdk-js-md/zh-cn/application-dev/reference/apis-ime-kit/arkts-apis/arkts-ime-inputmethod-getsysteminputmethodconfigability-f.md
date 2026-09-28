@@ -16,6 +16,8 @@ function getSystemInputMethodConfigAbility(): ElementName
 
 **起始版本：** 11
 
+<!--Device-inputMethod-function getSystemInputMethodConfigAbility(): ElementName--><!--Device-inputMethod-function getSystemInputMethodConfigAbility(): ElementName-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**

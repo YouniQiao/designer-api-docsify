@@ -8,6 +8,8 @@ class UserAuth
 
 **起始版本：** 8
 
+<!--Device-osAccount-class UserAuth--><!--Device-osAccount-class UserAuth-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -34,6 +36,8 @@ auth(
 **起始版本：** 8
 
 **需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL
+
+<!--Device-UserAuth-auth(      challenge: Uint8Array,      authType: AuthType,      authTrustLevel: AuthTrustLevel,      callback: IUserAuthCallback    ): Uint8Array--><!--Device-UserAuth-auth(      challenge: Uint8Array,      authType: AuthType,      authTrustLevel: AuthTrustLevel,      callback: IUserAuthCallback    ): Uint8Array-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -122,6 +126,8 @@ auth(
 **起始版本：** 12
 
 **需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL
+
+<!--Device-UserAuth-auth(      challenge: Uint8Array,      authType: AuthType,      authTrustLevel: AuthTrustLevel,      options: AuthOptions,      callback: IUserAuthCallback    ): Uint8Array--><!--Device-UserAuth-auth(      challenge: Uint8Array,      authType: AuthType,      authTrustLevel: AuthTrustLevel,      options: AuthOptions,      callback: IUserAuthCallback    ): Uint8Array-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -214,6 +220,8 @@ authUser(
 
 **需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
+<!--Device-UserAuth-authUser(      userId: int,      challenge: Uint8Array,      authType: AuthType,      authTrustLevel: AuthTrustLevel,      callback: IUserAuthCallback    ): Uint8Array--><!--Device-UserAuth-authUser(      userId: int,      challenge: Uint8Array,      authType: AuthType,      authTrustLevel: AuthTrustLevel,      callback: IUserAuthCallback    ): Uint8Array-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -297,6 +305,8 @@ cancelAuth(contextID: Uint8Array): void
 
 **需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
+<!--Device-UserAuth-cancelAuth(contextID: Uint8Array): void--><!--Device-UserAuth-cancelAuth(contextID: Uint8Array): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -349,6 +359,8 @@ constructor()
 
 **起始版本：** 8
 
+<!--Device-UserAuth-constructor()--><!--Device-UserAuth-constructor()-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -376,6 +388,8 @@ getAvailableStatus(authType: AuthType, authTrustLevel: AuthTrustLevel): number
 **起始版本：** 8
 
 **需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL
+
+<!--Device-UserAuth-getAvailableStatus(authType: AuthType, authTrustLevel: AuthTrustLevel): int--><!--Device-UserAuth-getAvailableStatus(authType: AuthType, authTrustLevel: AuthTrustLevel): int-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -433,6 +447,8 @@ getProperty(request: GetPropertyRequest, callback: AsyncCallback<ExecutorPropert
 **起始版本：** 8
 
 **需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL
+
+<!--Device-UserAuth-getProperty(request: GetPropertyRequest, callback: AsyncCallback<ExecutorProperty>): void--><!--Device-UserAuth-getProperty(request: GetPropertyRequest, callback: AsyncCallback<ExecutorProperty>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -499,6 +515,8 @@ getProperty(request: GetPropertyRequest): Promise<ExecutorProperty>
 
 **需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
+<!--Device-UserAuth-getProperty(request: GetPropertyRequest): Promise<ExecutorProperty>--><!--Device-UserAuth-getProperty(request: GetPropertyRequest): Promise<ExecutorProperty>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -564,6 +582,8 @@ getPropertyByCredentialId(credentialId: Uint8Array, keys: Array<GetPropertyType>
 **起始版本：** 14
 
 **需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL
+
+<!--Device-UserAuth-getPropertyByCredentialId(credentialId: Uint8Array, keys: Array<GetPropertyType>): Promise<ExecutorProperty>--><!--Device-UserAuth-getPropertyByCredentialId(credentialId: Uint8Array, keys: Array<GetPropertyType>): Promise<ExecutorProperty>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -642,6 +662,8 @@ getVersion(): number
 
 **起始版本：** 8
 
+<!--Device-UserAuth-getVersion(): int--><!--Device-UserAuth-getVersion(): int-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -677,6 +699,8 @@ prepareRemoteAuth(remoteNetworkId: string): Promise<void>
 **起始版本：** 12
 
 **需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL
+
+<!--Device-UserAuth-prepareRemoteAuth(remoteNetworkId: string): Promise<void>--><!--Device-UserAuth-prepareRemoteAuth(remoteNetworkId: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -743,6 +767,8 @@ setProperty(request: SetPropertyRequest, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
+<!--Device-UserAuth-setProperty(request: SetPropertyRequest, callback: AsyncCallback<void>): void--><!--Device-UserAuth-setProperty(request: SetPropertyRequest, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -802,6 +828,8 @@ setProperty(request: SetPropertyRequest): Promise<void>
 **起始版本：** 8
 
 **需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL
+
+<!--Device-UserAuth-setProperty(request: SetPropertyRequest): Promise<void>--><!--Device-UserAuth-setProperty(request: SetPropertyRequest): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 

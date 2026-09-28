@@ -22,6 +22,8 @@ Displays the notification text.
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
+<!--Device-prompt-function showToast(options: ShowToastOptions): void--><!--Device-prompt-function showToast(options: ShowToastOptions): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

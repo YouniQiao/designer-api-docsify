@@ -8,6 +8,8 @@ Gainmap（增益图）参数设置选项。
 
 **起始版本：** 26.0.0
 
+<!--Device-image-interface GainmapParams--><!--Device-image-interface GainmapParams-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **系统接口：** 此接口为系统接口。
@@ -33,6 +35,8 @@ true表示使用全尺寸图，宽高和主图一致；false表示不使用全�
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-GainmapParams-isFullSizeGainmap: boolean--><!--Device-GainmapParams-isFullSizeGainmap: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 

@@ -16,6 +16,8 @@ Creates a PixelMap object based on MessageSequence parameter.
 
 **起始版本：** 11
 
+<!--Device-image-function createPixelMapFromParcel(sequence: rpc.MessageSequence): PixelMap--><!--Device-image-function createPixelMapFromParcel(sequence: rpc.MessageSequence): PixelMap-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**

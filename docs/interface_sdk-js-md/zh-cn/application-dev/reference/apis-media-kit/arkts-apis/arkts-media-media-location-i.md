@@ -8,6 +8,8 @@ interface Location
 
 **起始版本：** 6
 
+<!--Device-media-interface Location--><!--Device-media-interface Location-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ latitude: number
 
 **起始版本：** 6
 
+<!--Device-Location-latitude: double--><!--Device-Location-latitude: double-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 ## longitude
@@ -41,5 +45,7 @@ longitude: number
 **类型：** number
 
 **起始版本：** 6
+
+<!--Device-Location-longitude: double--><!--Device-Location-longitude: double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core

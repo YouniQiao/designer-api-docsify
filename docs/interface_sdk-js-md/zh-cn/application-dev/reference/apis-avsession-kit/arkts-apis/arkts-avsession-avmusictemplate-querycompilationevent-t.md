@@ -12,6 +12,8 @@ type QueryCompilationEvent = (compilationId: string, pageIndex: number) => Promi
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-avMusicTemplate-type QueryCompilationEvent = (compilationId: string, pageIndex: int) => Promise<PageMediaEntity>--><!--Device-avMusicTemplate-type QueryCompilationEvent = (compilationId: string, pageIndex: int) => Promise<PageMediaEntity>-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **参数：**

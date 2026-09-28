@@ -18,6 +18,8 @@ function getPrivateCertificate(keyUri: string, callback: AsyncCallback<CMResult>
 
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER
 
+<!--Device-certificateManager-function getPrivateCertificate(keyUri: string, callback: AsyncCallback<CMResult>): void--><!--Device-certificateManager-function getPrivateCertificate(keyUri: string, callback: AsyncCallback<CMResult>): void-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
 
 **参数：**
@@ -74,6 +76,8 @@ function getPrivateCertificate(keyUri: string): Promise<CMResult>
 **起始版本：** 11
 
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER
+
+<!--Device-certificateManager-function getPrivateCertificate(keyUri: string): Promise<CMResult>--><!--Device-certificateManager-function getPrivateCertificate(keyUri: string): Promise<CMResult>-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManager
 

@@ -10,6 +10,8 @@ interface GetDomainAccountInfoPluginOptions extends GetDomainAccountInfoOptions
 
 **起始版本：** 10
 
+<!--Device-osAccount-interface GetDomainAccountInfoPluginOptions extends GetDomainAccountInfoOptions--><!--Device-osAccount-interface GetDomainAccountInfoPluginOptions extends GetDomainAccountInfoOptions-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -31,6 +33,8 @@ callerUid: number
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-GetDomainAccountInfoPluginOptions-callerUid: int--><!--Device-GetDomainAccountInfoPluginOptions-callerUid: int-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 

@@ -8,6 +8,8 @@ interface WifiP2pGroupInfo
 
 **起始版本：** 9
 
+<!--Device-wifiManager-interface WifiP2pGroupInfo--><!--Device-wifiManager-interface WifiP2pGroupInfo-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
 ## 导入模块
@@ -28,6 +30,8 @@ clientDevices: WifiP2pDevice[]
 
 **起始版本：** 9
 
+<!--Device-WifiP2pGroupInfo-clientDevices: WifiP2pDevice[]--><!--Device-WifiP2pGroupInfo-clientDevices: WifiP2pDevice[]-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
 ## frequency
@@ -41,6 +45,8 @@ frequency: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-WifiP2pGroupInfo-frequency: int--><!--Device-WifiP2pGroupInfo-frequency: int-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
@@ -56,6 +62,8 @@ goIpAddress: string
 
 **起始版本：** 9
 
+<!--Device-WifiP2pGroupInfo-goIpAddress: string--><!--Device-WifiP2pGroupInfo-goIpAddress: string-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
 ## groupName
@@ -69,6 +77,8 @@ groupName: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-WifiP2pGroupInfo-groupName: string--><!--Device-WifiP2pGroupInfo-groupName: string-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
@@ -84,6 +94,8 @@ interface: string
 
 **起始版本：** 9
 
+<!--Device-WifiP2pGroupInfo-interface: string--><!--Device-WifiP2pGroupInfo-interface: string-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
 ## isP2pGo
@@ -97,6 +109,8 @@ isP2pGo: boolean
 **类型：** boolean
 
 **起始版本：** 9
+
+<!--Device-WifiP2pGroupInfo-isP2pGo: boolean--><!--Device-WifiP2pGroupInfo-isP2pGo: boolean-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
@@ -112,6 +126,8 @@ networkId: number
 
 **起始版本：** 9
 
+<!--Device-WifiP2pGroupInfo-networkId: int--><!--Device-WifiP2pGroupInfo-networkId: int-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
 ## ownerInfo
@@ -126,6 +142,8 @@ ownerInfo: WifiP2pDevice
 
 **起始版本：** 9
 
+<!--Device-WifiP2pGroupInfo-ownerInfo: WifiP2pDevice--><!--Device-WifiP2pGroupInfo-ownerInfo: WifiP2pDevice-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
 ## passphrase
@@ -139,5 +157,7 @@ passphrase: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-WifiP2pGroupInfo-passphrase: string--><!--Device-WifiP2pGroupInfo-passphrase: string-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P

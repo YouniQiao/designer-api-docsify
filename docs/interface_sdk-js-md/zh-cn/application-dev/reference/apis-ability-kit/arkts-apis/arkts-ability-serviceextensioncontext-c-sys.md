@@ -16,6 +16,8 @@ ServiceExtensionContext模块提供ServiceExtensionAbility具有的能力，包�
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare class ServiceExtensionContext extends ExtensionContext--><!--Device-unnamed-declare class ServiceExtensionContext extends ExtensionContext-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -35,6 +37,8 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): number
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ServiceExtensionContext-connectServiceExtensionAbility(want: Want, options: ConnectOptions): long--><!--Device-ServiceExtensionContext-connectServiceExtensionAbility(want: Want, options: ConnectOptions): long-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -131,6 +135,8 @@ connectServiceExtensionAbilityWithAccount(want: Want, accountId: number, options
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ServiceExtensionContext-connectServiceExtensionAbilityWithAccount(want: Want, accountId: int, options: ConnectOptions): long--><!--Device-ServiceExtensionContext-connectServiceExtensionAbilityWithAccount(want: Want, accountId: int, options: ConnectOptions): long-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -223,6 +229,8 @@ disconnectServiceExtensionAbility(connection: number, callback: AsyncCallback<vo
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ServiceExtensionContext-disconnectServiceExtensionAbility(connection: long, callback: AsyncCallback<void>): void--><!--Device-ServiceExtensionContext-disconnectServiceExtensionAbility(connection: long, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -288,6 +296,8 @@ disconnectServiceExtensionAbility(connection: number): Promise<void>
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ServiceExtensionContext-disconnectServiceExtensionAbility(connection: long): Promise<void>--><!--Device-ServiceExtensionContext-disconnectServiceExtensionAbility(connection: long): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -362,6 +372,8 @@ openAtomicService(appId: string, options?: AtomicServiceOptions): Promise<void>
 **起始版本：** 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ServiceExtensionContext-openAtomicService(appId: string, options?: AtomicServiceOptions): Promise<void>--><!--Device-ServiceExtensionContext-openAtomicService(appId: string, options?: AtomicServiceOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -445,6 +457,8 @@ openLink(link: string, options?: OpenLinkOptions): Promise<void>
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ServiceExtensionContext-openLink(link: string, options?: OpenLinkOptions): Promise<void>--><!--Device-ServiceExtensionContext-openLink(link: string, options?: OpenLinkOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -543,6 +557,8 @@ preStartMission(bundleName: string, moduleName: string, abilityName: string, sta
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ServiceExtensionContext-preStartMission(bundleName: string, moduleName: string, abilityName: string, startTime: string): Promise<void>--><!--Device-ServiceExtensionContext-preStartMission(bundleName: string, moduleName: string, abilityName: string, startTime: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -634,6 +650,8 @@ requestModalUIExtension(pickerWant: Want, callback: AsyncCallback<void>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ServiceExtensionContext-requestModalUIExtension(pickerWant: Want, callback: AsyncCallback<void>): void--><!--Device-ServiceExtensionContext-requestModalUIExtension(pickerWant: Want, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -716,6 +734,8 @@ requestModalUIExtension(pickerWant: Want): Promise<void>
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ServiceExtensionContext-requestModalUIExtension(pickerWant: Want): Promise<void>--><!--Device-ServiceExtensionContext-requestModalUIExtension(pickerWant: Want): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -804,6 +824,8 @@ requestModalUIExtensionWithAccount(pickerWant: Want, accountId: number): Promise
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ServiceExtensionContext-requestModalUIExtensionWithAccount(pickerWant: Want, accountId: int): Promise<void>--><!--Device-ServiceExtensionContext-requestModalUIExtensionWithAccount(pickerWant: Want, accountId: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -883,6 +905,8 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ServiceExtensionContext-startAbility(want: Want, callback: AsyncCallback<void>): void--><!--Device-ServiceExtensionContext-startAbility(want: Want, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -970,6 +994,8 @@ startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): 
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ServiceExtensionContext-startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): void--><!--Device-ServiceExtensionContext-startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -1062,6 +1088,8 @@ startAbility(want: Want, options?: StartOptions): Promise<void>
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ServiceExtensionContext-startAbility(want: Want, options?: StartOptions): Promise<void>--><!--Device-ServiceExtensionContext-startAbility(want: Want, options?: StartOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -1161,6 +1189,8 @@ startAbilityAsCaller(want: Want, callback: AsyncCallback<void>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ServiceExtensionContext-startAbilityAsCaller(want: Want, callback: AsyncCallback<void>): void--><!--Device-ServiceExtensionContext-startAbilityAsCaller(want: Want, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1245,6 +1275,8 @@ startAbilityAsCaller(want: Want, options: StartOptions, callback: AsyncCallback<
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ServiceExtensionContext-startAbilityAsCaller(want: Want, options: StartOptions, callback: AsyncCallback<void>): void--><!--Device-ServiceExtensionContext-startAbilityAsCaller(want: Want, options: StartOptions, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -1333,6 +1365,8 @@ startAbilityAsCaller(want: Want, options?: StartOptions): Promise<void>
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ServiceExtensionContext-startAbilityAsCaller(want: Want, options?: StartOptions): Promise<void>--><!--Device-ServiceExtensionContext-startAbilityAsCaller(want: Want, options?: StartOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -1433,6 +1467,8 @@ startAbilityByCall(want: Want): Promise<Caller>
 **需要权限：** ohos.permission.ABILITY_BACKGROUND_COMMUNICATION
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ServiceExtensionContext-startAbilityByCall(want: Want): Promise<Caller>--><!--Device-ServiceExtensionContext-startAbilityByCall(want: Want): Promise<Caller>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -1565,6 +1601,8 @@ ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS`权限。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ServiceExtensionContext-startAbilityByCallWithAccount(want: Want, accountId: int): Promise<Caller>--><!--Device-ServiceExtensionContext-startAbilityByCallWithAccount(want: Want, accountId: int): Promise<Caller>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1659,6 +1697,8 @@ startAbilityWithAccount(want: Want, accountId: number, callback: AsyncCallback<v
 **需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ServiceExtensionContext-startAbilityWithAccount(want: Want, accountId: int, callback: AsyncCallback<void>): void--><!--Device-ServiceExtensionContext-startAbilityWithAccount(want: Want, accountId: int, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -1756,6 +1796,8 @@ startAbilityWithAccount(want: Want, accountId: number, options: StartOptions, ca
 **需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ServiceExtensionContext-startAbilityWithAccount(want: Want, accountId: int, options: StartOptions, callback: AsyncCallback<void>): void--><!--Device-ServiceExtensionContext-startAbilityWithAccount(want: Want, accountId: int, options: StartOptions, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -1858,6 +1900,8 @@ startAbilityWithAccount(want: Want, accountId: number, options?: StartOptions): 
 **需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ServiceExtensionContext-startAbilityWithAccount(want: Want, accountId: int, options?: StartOptions): Promise<void>--><!--Device-ServiceExtensionContext-startAbilityWithAccount(want: Want, accountId: int, options?: StartOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -1962,6 +2006,8 @@ startRecentAbility(want: Want, callback: AsyncCallback<void>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ServiceExtensionContext-startRecentAbility(want: Want, callback: AsyncCallback<void>): void--><!--Device-ServiceExtensionContext-startRecentAbility(want: Want, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -2054,6 +2100,8 @@ startRecentAbility(want: Want, options: StartOptions, callback: AsyncCallback<vo
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ServiceExtensionContext-startRecentAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): void--><!--Device-ServiceExtensionContext-startRecentAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -2151,6 +2199,8 @@ startRecentAbility(want: Want, options?: StartOptions): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ServiceExtensionContext-startRecentAbility(want: Want, options?: StartOptions): Promise<void>--><!--Device-ServiceExtensionContext-startRecentAbility(want: Want, options?: StartOptions): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -2245,6 +2295,8 @@ startServiceExtensionAbility(want: Want, callback: AsyncCallback<void>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ServiceExtensionContext-startServiceExtensionAbility(want: Want, callback: AsyncCallback<void>): void--><!--Device-ServiceExtensionContext-startServiceExtensionAbility(want: Want, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -2321,6 +2373,8 @@ startServiceExtensionAbility(want: Want): Promise<void>
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ServiceExtensionContext-startServiceExtensionAbility(want: Want): Promise<void>--><!--Device-ServiceExtensionContext-startServiceExtensionAbility(want: Want): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -2410,6 +2464,8 @@ startServiceExtensionAbilityWithAccount(want: Want, accountId: number, callback:
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ServiceExtensionContext-startServiceExtensionAbilityWithAccount(want: Want, accountId: int, callback: AsyncCallback<void>): void--><!--Device-ServiceExtensionContext-startServiceExtensionAbilityWithAccount(want: Want, accountId: int, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -2497,6 +2553,8 @@ startServiceExtensionAbilityWithAccount(want: Want, accountId: number): Promise<
 **需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ServiceExtensionContext-startServiceExtensionAbilityWithAccount(want: Want, accountId: int): Promise<void>--><!--Device-ServiceExtensionContext-startServiceExtensionAbilityWithAccount(want: Want, accountId: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -2586,6 +2644,8 @@ startUIAbilities(wantList: Array<Want>): Promise<void>
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ServiceExtensionContext-startUIAbilities(wantList: Array<Want>): Promise<void>--><!--Device-ServiceExtensionContext-startUIAbilities(wantList: Array<Want>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -2677,6 +2737,8 @@ startUIServiceExtensionAbility(want: Want): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ServiceExtensionContext-startUIServiceExtensionAbility(want: Want): Promise<void>--><!--Device-ServiceExtensionContext-startUIServiceExtensionAbility(want: Want): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -2746,6 +2808,8 @@ stopServiceExtensionAbility(want: Want, callback: AsyncCallback<void>): void
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ServiceExtensionContext-stopServiceExtensionAbility(want: Want, callback: AsyncCallback<void>): void--><!--Device-ServiceExtensionContext-stopServiceExtensionAbility(want: Want, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -2819,6 +2883,8 @@ stopServiceExtensionAbility(want: Want): Promise<void>
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ServiceExtensionContext-stopServiceExtensionAbility(want: Want): Promise<void>--><!--Device-ServiceExtensionContext-stopServiceExtensionAbility(want: Want): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -2902,6 +2968,8 @@ stopServiceExtensionAbilityWithAccount(want: Want, accountId: number, callback: 
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ServiceExtensionContext-stopServiceExtensionAbilityWithAccount(want: Want, accountId: int, callback: AsyncCallback<void>): void--><!--Device-ServiceExtensionContext-stopServiceExtensionAbilityWithAccount(want: Want, accountId: int, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -2984,6 +3052,8 @@ stopServiceExtensionAbilityWithAccount(want: Want, accountId: number): Promise<v
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ServiceExtensionContext-stopServiceExtensionAbilityWithAccount(want: Want, accountId: int): Promise<void>--><!--Device-ServiceExtensionContext-stopServiceExtensionAbilityWithAccount(want: Want, accountId: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -3063,6 +3133,8 @@ terminateSelf(callback: AsyncCallback<void>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ServiceExtensionContext-terminateSelf(callback: AsyncCallback<void>): void--><!--Device-ServiceExtensionContext-terminateSelf(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -3119,6 +3191,8 @@ terminateSelf(): Promise<void>
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ServiceExtensionContext-terminateSelf(): Promise<void>--><!--Device-ServiceExtensionContext-terminateSelf(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

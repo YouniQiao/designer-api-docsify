@@ -27,6 +27,8 @@ function disconnectAllowedProfiles(deviceId: string): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-connection-function disconnectAllowedProfiles(deviceId: string): Promise<void>--><!--Device-connection-function disconnectAllowedProfiles(deviceId: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 **参数：**

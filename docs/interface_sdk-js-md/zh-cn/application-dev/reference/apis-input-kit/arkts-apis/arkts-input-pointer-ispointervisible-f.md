@@ -16,6 +16,8 @@ function isPointerVisible(callback: AsyncCallback<boolean>): void
 
 **起始版本：** 9
 
+<!--Device-pointer-function isPointerVisible(callback: AsyncCallback<boolean>): void--><!--Device-pointer-function isPointerVisible(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 **参数：**
@@ -73,6 +75,8 @@ function isPointerVisible(): Promise<boolean>
 获取当前窗口的显示/隐藏状态，此状态反映的是多模进程对此窗口所在进程的光标显示/隐藏状态，并非真实的光标显示/隐藏情况，光标是否正确显示/隐藏还受渲染服务进程影响，使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-pointer-function isPointerVisible(): Promise<boolean>--><!--Device-pointer-function isPointerVisible(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 

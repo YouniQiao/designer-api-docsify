@@ -20,6 +20,8 @@ function getAppThreadCpuUsage(): ThreadCpuUsage[]
 
 **起始版本：** 12
 
+<!--Device-hidebug-function getAppThreadCpuUsage(): ThreadCpuUsage[]--><!--Device-hidebug-function getAppThreadCpuUsage(): ThreadCpuUsage[]-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **返回值：**

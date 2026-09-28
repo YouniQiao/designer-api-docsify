@@ -9,6 +9,8 @@ DRM（Digital Rights Management）框架组件支持音视频媒体业务数字�
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare namespace drm--><!--Device-unnamed-declare namespace drm-End-->
+
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
 ## 导入模块

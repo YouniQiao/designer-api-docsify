@@ -10,6 +10,8 @@ interface MetadataBasicFaceObject extends MetadataObject
 
 **起始版本：** 26.0.0
 
+<!--Device-camera-interface MetadataBasicFaceObject extends MetadataObject--><!--Device-camera-interface MetadataBasicFaceObject extends MetadataObject-End-->
+
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
@@ -30,7 +32,9 @@ readonly leftEyeBoundingBox?: Rect
 
 **起始版本：** 26.0.0
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-MetadataBasicFaceObject-readonly leftEyeBoundingBox?: Rect--><!--Device-MetadataBasicFaceObject-readonly leftEyeBoundingBox?: Rect-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -46,7 +50,9 @@ readonly pitchAngle?: number
 
 **起始版本：** 26.0.0
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-MetadataBasicFaceObject-readonly pitchAngle?: int--><!--Device-MetadataBasicFaceObject-readonly pitchAngle?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -62,7 +68,9 @@ readonly rightEyeBoundingBox?: Rect
 
 **起始版本：** 26.0.0
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-MetadataBasicFaceObject-readonly rightEyeBoundingBox?: Rect--><!--Device-MetadataBasicFaceObject-readonly rightEyeBoundingBox?: Rect-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -78,7 +86,9 @@ readonly rollAngle?: number
 
 **起始版本：** 26.0.0
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-MetadataBasicFaceObject-readonly rollAngle?: int--><!--Device-MetadataBasicFaceObject-readonly rollAngle?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -94,6 +104,8 @@ readonly yawAngle?: number
 
 **起始版本：** 26.0.0
 
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-MetadataBasicFaceObject-readonly yawAngle?: int--><!--Device-MetadataBasicFaceObject-readonly yawAngle?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core

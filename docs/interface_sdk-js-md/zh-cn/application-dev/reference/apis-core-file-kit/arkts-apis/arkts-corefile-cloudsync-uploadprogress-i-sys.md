@@ -8,6 +8,8 @@ interface UploadProgress
 
 **起始版本：** 26.0.0
 
+<!--Device-cloudSync-interface UploadProgress--><!--Device-cloudSync-interface UploadProgress-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ error: ErrorType
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UploadProgress-error: ErrorType--><!--Device-UploadProgress-error: ErrorType-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ processed: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UploadProgress-processed: long--><!--Device-UploadProgress-processed: long-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -68,6 +74,8 @@ size: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UploadProgress-size: long--><!--Device-UploadProgress-size: long-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **系统接口：** 此接口为系统接口。
@@ -86,6 +94,8 @@ state: UploadState
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UploadProgress-state: UploadState--><!--Device-UploadProgress-state: UploadState-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **系统接口：** 此接口为系统接口。
@@ -103,6 +113,8 @@ uri: string
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UploadProgress-uri: string--><!--Device-UploadProgress-uri: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 

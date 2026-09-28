@@ -18,6 +18,8 @@ function on(type: 'applicationState', observer: ApplicationStateObserver): numbe
 
 **需要权限：** ohos.permission.RUNNING_STATE_OBSERVER
 
+<!--Device-appManager-function on(type: 'applicationState', observer: ApplicationStateObserver): int--><!--Device-appManager-function on(type: 'applicationState', observer: ApplicationStateObserver): int-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -93,6 +95,8 @@ function on(type: 'applicationState', observer: ApplicationStateObserver, bundle
 **起始版本：** 14
 
 **需要权限：** ohos.permission.RUNNING_STATE_OBSERVER
+
+<!--Device-appManager-function on(type: 'applicationState', observer: ApplicationStateObserver, bundleNameList: Array<string>): int--><!--Device-appManager-function on(type: 'applicationState', observer: ApplicationStateObserver, bundleNameList: Array<string>): int-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

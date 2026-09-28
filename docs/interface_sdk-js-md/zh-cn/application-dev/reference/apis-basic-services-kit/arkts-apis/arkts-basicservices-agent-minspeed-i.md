@@ -8,6 +8,8 @@ interface MinSpeed
 
 **起始版本：** 20
 
+<!--Device-agent-interface MinSpeed--><!--Device-agent-interface MinSpeed-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## 导入模块
@@ -28,6 +30,8 @@ duration: number
 
 **起始版本：** 20
 
+<!--Device-MinSpeed-duration: int--><!--Device-MinSpeed-duration: int-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## speed
@@ -41,5 +45,7 @@ speed: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-MinSpeed-speed: long--><!--Device-MinSpeed-speed: long-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent

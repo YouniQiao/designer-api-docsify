@@ -10,6 +10,8 @@ Callback when the network state corresponding to the default sim card is updated
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-observer-type NetworkSearchRealTimeResult = radio.NetworkSearchRealTimeResult--><!--Device-observer-type NetworkSearchRealTimeResult = radio.NetworkSearchRealTimeResult-End-->
+
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
 **系统接口：** 此接口为系统接口。

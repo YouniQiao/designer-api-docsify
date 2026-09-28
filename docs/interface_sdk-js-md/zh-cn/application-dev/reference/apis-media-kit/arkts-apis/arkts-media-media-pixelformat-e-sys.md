@@ -8,6 +8,8 @@ enum PixelFormat
 
 **起始版本：** 11
 
+<!--Device-media-enum PixelFormat--><!--Device-media-enum PixelFormat-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVImageGenerator
 
 **系统接口：** 此接口为系统接口。
@@ -21,6 +23,8 @@ RGB_565 = 2
 表示RGB_565颜色格式。
 
 **起始版本：** 11
+
+<!--Device-PixelFormat-RGB_565 = 2--><!--Device-PixelFormat-RGB_565 = 2-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVImageGenerator
 
@@ -36,6 +40,8 @@ RGBA_8888 = 3
 
 **起始版本：** 11
 
+<!--Device-PixelFormat-RGBA_8888 = 3--><!--Device-PixelFormat-RGBA_8888 = 3-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVImageGenerator
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +55,8 @@ RGB_888 = 5
 表示RGB_888颜色格式。
 
 **起始版本：** 11
+
+<!--Device-PixelFormat-RGB_888 = 5--><!--Device-PixelFormat-RGB_888 = 5-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVImageGenerator
 

@@ -20,6 +20,8 @@ function createDeviceManager(bundleName: string, callback: AsyncCallback<DeviceM
 
 **替代接口：** [createDeviceManager](arkts-distributedservice-distributeddevicemanager-createdevicemanager-f.md)
 
+<!--Device-deviceManager-function createDeviceManager(bundleName: string, callback: AsyncCallback<DeviceManager>): void--><!--Device-deviceManager-function createDeviceManager(bundleName: string, callback: AsyncCallback<DeviceManager>): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。

@@ -16,6 +16,8 @@ declare namespace fileIo
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace fileIo--><!--Device-unnamed-declare namespace fileIo-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## 导入模块

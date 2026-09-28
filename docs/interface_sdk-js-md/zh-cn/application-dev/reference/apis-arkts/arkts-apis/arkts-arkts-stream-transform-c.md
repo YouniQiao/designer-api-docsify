@@ -10,6 +10,8 @@ class Transform extends Duplex
 
 **起始版本：** 12
 
+<!--Device-stream-class Transform extends Duplex--><!--Device-stream-class Transform extends Duplex-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -28,7 +30,9 @@ constructor()
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Transform-constructor()--><!--Device-Transform-constructor()-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -48,7 +52,9 @@ doFlush(callback: Function): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Transform-doFlush(callback: Function): void--><!--Device-Transform-doFlush(callback: Function): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -92,7 +98,9 @@ doTransform(chunk: string, encoding: string, callback: Function): void
 
 **起始版本：** 12
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-Transform-doTransform(chunk: string, encoding: string, callback: Function): void--><!--Device-Transform-doTransform(chunk: string, encoding: string, callback: Function): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

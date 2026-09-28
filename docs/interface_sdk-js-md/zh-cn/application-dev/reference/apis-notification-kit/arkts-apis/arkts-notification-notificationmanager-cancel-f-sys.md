@@ -20,6 +20,8 @@ function cancel(representativeBundle: BundleOption, id: number): Promise<void>
 
 **起始版本：** 12
 
+<!--Device-notificationManager-function cancel(representativeBundle: BundleOption, id: int): Promise<void>--><!--Device-notificationManager-function cancel(representativeBundle: BundleOption, id: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。

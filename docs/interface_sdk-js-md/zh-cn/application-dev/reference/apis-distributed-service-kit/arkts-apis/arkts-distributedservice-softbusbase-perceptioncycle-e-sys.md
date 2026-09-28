@@ -8,6 +8,8 @@ export enum PerceptionCycle
 
 **起始版本：** 26.0.1
 
+<!--Device-softbusBase-export enum PerceptionCycle--><!--Device-softbusBase-export enum PerceptionCycle-End-->
+
 **系统能力：** SystemCapability.Communication.SoftBus.Core
 
 **系统接口：** 此接口为系统接口。
@@ -23,6 +25,8 @@ PERCEPTION_CYCLE_LOW = 0
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PerceptionCycle-PERCEPTION_CYCLE_LOW = 0--><!--Device-PerceptionCycle-PERCEPTION_CYCLE_LOW = 0-End-->
 
 **系统能力：** SystemCapability.Communication.SoftBus.Core
 
@@ -40,6 +44,8 @@ PERCEPTION_CYCLE_MEDIUM = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PerceptionCycle-PERCEPTION_CYCLE_MEDIUM = 1--><!--Device-PerceptionCycle-PERCEPTION_CYCLE_MEDIUM = 1-End-->
+
 **系统能力：** SystemCapability.Communication.SoftBus.Core
 
 **系统接口：** 此接口为系统接口。
@@ -55,6 +61,8 @@ PERCEPTION_CYCLE_HIGH = 2
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PerceptionCycle-PERCEPTION_CYCLE_HIGH = 2--><!--Device-PerceptionCycle-PERCEPTION_CYCLE_HIGH = 2-End-->
 
 **系统能力：** SystemCapability.Communication.SoftBus.Core
 

@@ -26,6 +26,8 @@ function createRotationMatrix(rotationVector: Array<number>, callback: AsyncCall
 
 **替代接口：** [getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md)(rotationVector: Array&lt;number&gt;, callback: AsyncCallback&lt;Array&lt;number&gt;&gt;)
 
+<!--Device-sensor-function createRotationMatrix(rotationVector: Array<number>, callback: AsyncCallback<Array<number>>): void--><!--Device-sensor-function createRotationMatrix(rotationVector: Array<number>, callback: AsyncCallback<Array<number>>): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -74,6 +76,8 @@ function createRotationMatrix(rotationVector: Array<number>): Promise<Array<numb
 **废弃版本：** 9
 
 **替代接口：** [getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md)(rotationVector: Array&lt;number&gt;)
+
+<!--Device-sensor-function createRotationMatrix(rotationVector: Array<number>): Promise<Array<number>>--><!--Device-sensor-function createRotationMatrix(rotationVector: Array<number>): Promise<Array<number>>-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -129,6 +133,8 @@ function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>
 
 **替代接口：** [getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md)(gravity: Array&lt;number&gt;, geomagnetic: Array&lt;number&gt;, callback: AsyncCallback&lt;RotationMatrixResponse&gt;)
 
+<!--Device-sensor-function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>, callback: AsyncCallback<RotationMatrixResponse>): void--><!--Device-sensor-function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>, callback: AsyncCallback<RotationMatrixResponse>): void-End-->
+
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -176,6 +182,8 @@ function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>
 **废弃版本：** 9
 
 **替代接口：** [getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md)(gravity: Array&lt;number&gt;, geomagnetic: Array&lt;number&gt;)
+
+<!--Device-sensor-function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>,): Promise<RotationMatrixResponse>--><!--Device-sensor-function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>,): Promise<RotationMatrixResponse>-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 

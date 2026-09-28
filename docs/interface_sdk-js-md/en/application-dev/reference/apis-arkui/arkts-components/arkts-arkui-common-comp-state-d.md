@@ -16,4 +16,6 @@ For details, see [@State Decorator: State Owned by Component](../../../ui/state-
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-unnamed-declare const State: PropertyDecorator--><!--Device-unnamed-declare const State: PropertyDecorator-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

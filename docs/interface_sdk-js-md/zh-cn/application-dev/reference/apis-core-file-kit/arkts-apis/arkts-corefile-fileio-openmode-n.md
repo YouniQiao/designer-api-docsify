@@ -8,6 +8,8 @@ open接口flags参数常量，用于指定文件打开模式（如只读、只�
 
 **起始版本：** 9
 
+<!--Device-fileIo-namespace OpenMode--><!--Device-fileIo-namespace OpenMode-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## 导入模块

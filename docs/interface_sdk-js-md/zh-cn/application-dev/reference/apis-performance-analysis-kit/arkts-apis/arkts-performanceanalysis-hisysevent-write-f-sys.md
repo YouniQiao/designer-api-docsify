@@ -16,6 +16,8 @@ function write(info: SysEventInfo): Promise<void>
 
 **起始版本：** 9
 
+<!--Device-hiSysEvent-function write(info: SysEventInfo): Promise<void>--><!--Device-hiSysEvent-function write(info: SysEventInfo): Promise<void>-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 
 **系统接口：** 此接口为系统接口。
@@ -95,6 +97,8 @@ function write(info: SysEventInfo, callback: AsyncCallback<void>): void
 系统事件打点方法，接收[SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md)类型的对象作为事件参数，使用callback方式作为异步回调。
 
 **起始版本：** 9
+
+<!--Device-hiSysEvent-function write(info: SysEventInfo, callback: AsyncCallback<void>): void--><!--Device-hiSysEvent-function write(info: SysEventInfo, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 

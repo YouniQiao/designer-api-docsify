@@ -8,6 +8,8 @@ export interface ErrorMessage
 
 **起始版本：** 9
 
+<!--Device-update-export interface ErrorMessage--><!--Device-update-export interface ErrorMessage-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -32,6 +34,8 @@ errorCode: number
 
 **起始版本：** 9
 
+<!--Device-ErrorMessage-errorCode: int--><!--Device-ErrorMessage-errorCode: int-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ errorMessage: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-ErrorMessage-errorMessage: string--><!--Device-ErrorMessage-errorMessage: string-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
 

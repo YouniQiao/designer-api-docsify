@@ -8,6 +8,8 @@ interface ConnectionResult
 
 **起始版本：** 26.0.0
 
+<!--Device-dataTransfer-interface ConnectionResult--><!--Device-dataTransfer-interface ConnectionResult-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## 导入模块
@@ -30,6 +32,8 @@ address: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ConnectionResult-address: string--><!--Device-ConnectionResult-address: string-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## mtu
@@ -45,6 +49,8 @@ mtu: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ConnectionResult-mtu: int--><!--Device-ConnectionResult-mtu: int-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -62,6 +68,8 @@ state: ConnectionState
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ConnectionResult-state: ConnectionState--><!--Device-ConnectionResult-state: ConnectionState-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## uuid
@@ -77,5 +85,7 @@ uuid: string
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ConnectionResult-uuid: string--><!--Device-ConnectionResult-uuid: string-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base

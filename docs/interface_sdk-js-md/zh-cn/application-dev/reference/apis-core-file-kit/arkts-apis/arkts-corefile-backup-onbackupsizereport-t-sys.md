@@ -10,6 +10,8 @@ type OnBackupSizeReport = (reportInfo: string) => void
 
 **起始版本：** 18
 
+<!--Device-backup-type OnBackupSizeReport = (reportInfo: string) => void--><!--Device-backup-type OnBackupSizeReport = (reportInfo: string) => void-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 **系统接口：** 此接口为系统接口。

@@ -18,6 +18,8 @@ function restore(wallpaperType: WallpaperType, callback: AsyncCallback<void>): v
 
 **需要权限：** ohos.permission.SET_WALLPAPER
 
+<!--Device-wallpaper-function restore(wallpaperType: WallpaperType, callback: AsyncCallback<void>): void--><!--Device-wallpaper-function restore(wallpaperType: WallpaperType, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
 **系统接口：** 此接口为系统接口。
@@ -65,6 +67,8 @@ function restore(wallpaperType: WallpaperType): Promise<void>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.SET_WALLPAPER
+
+<!--Device-wallpaper-function restore(wallpaperType: WallpaperType): Promise<void>--><!--Device-wallpaper-function restore(wallpaperType: WallpaperType): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 

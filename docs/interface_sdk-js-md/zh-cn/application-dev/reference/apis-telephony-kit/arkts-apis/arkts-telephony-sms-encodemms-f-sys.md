@@ -16,6 +16,8 @@ function encodeMms(mms: MmsInformation, callback: AsyncCallback<Array<number>>):
 
 **起始版本：** 8
 
+<!--Device-sms-function encodeMms(mms: MmsInformation, callback: AsyncCallback<Array<int>>): void--><!--Device-sms-function encodeMms(mms: MmsInformation, callback: AsyncCallback<Array<int>>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -70,6 +72,8 @@ function encodeMms(mms: MmsInformation): Promise<Array<number>>
 彩信编码。使用Promise异步回调。
 
 **起始版本：** 8
+
+<!--Device-sms-function encodeMms(mms: MmsInformation): Promise<Array<int>>--><!--Device-sms-function encodeMms(mms: MmsInformation): Promise<Array<int>>-End-->
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 

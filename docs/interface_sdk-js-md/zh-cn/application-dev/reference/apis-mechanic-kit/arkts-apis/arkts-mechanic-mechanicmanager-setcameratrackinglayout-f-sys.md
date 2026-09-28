@@ -16,6 +16,8 @@ function setCameraTrackingLayout(trackingLayout: CameraTrackingLayout): void
 
 **起始版本：** 20
 
+<!--Device-mechanicManager-function setCameraTrackingLayout(trackingLayout: CameraTrackingLayout): void--><!--Device-mechanicManager-function setCameraTrackingLayout(trackingLayout: CameraTrackingLayout): void-End-->
+
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。

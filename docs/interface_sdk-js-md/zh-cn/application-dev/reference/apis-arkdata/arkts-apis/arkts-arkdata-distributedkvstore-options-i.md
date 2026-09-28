@@ -8,6 +8,8 @@ interface Options
 
 **起始版本：** 9
 
+<!--Device-distributedKVStore-interface Options--><!--Device-distributedKVStore-interface Options-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## 导入模块
@@ -32,6 +34,8 @@ autoSync?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Options-autoSync?: boolean--><!--Device-Options-autoSync?: boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## backup
@@ -47,6 +51,8 @@ backup?: boolean
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Options-backup?: boolean--><!--Device-Options-backup?: boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -64,6 +70,8 @@ createIfMissing?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Options-createIfMissing?: boolean--><!--Device-Options-createIfMissing?: boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## encrypt
@@ -79,6 +87,8 @@ encrypt?: boolean
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Options-encrypt?: boolean--><!--Device-Options-encrypt?: boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -96,6 +106,8 @@ kvStoreType?: KVStoreType
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Options-kvStoreType?: KVStoreType--><!--Device-Options-kvStoreType?: KVStoreType-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## rootDir
@@ -111,6 +123,8 @@ rootDir?: string
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Options-rootDir?: string--><!--Device-Options-rootDir?: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
@@ -128,6 +142,8 @@ schema?: Schema
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Options-schema?: Schema--><!--Device-Options-schema?: Schema-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 ## securityLevel
@@ -143,5 +159,7 @@ securityLevel: SecurityLevel
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Options-securityLevel: SecurityLevel--><!--Device-Options-securityLevel: SecurityLevel-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core

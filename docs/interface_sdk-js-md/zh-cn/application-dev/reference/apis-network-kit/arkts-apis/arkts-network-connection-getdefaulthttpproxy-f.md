@@ -22,6 +22,8 @@ function getDefaultHttpProxy(callback: AsyncCallback<HttpProxy>): void
 
 **起始版本：** 10
 
+<!--Device-connection-function getDefaultHttpProxy(callback: AsyncCallback<HttpProxy>): void--><!--Device-connection-function getDefaultHttpProxy(callback: AsyncCallback<HttpProxy>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**
@@ -70,6 +72,8 @@ function getDefaultHttpProxy(): Promise<HttpProxy>
 > - 如果进程使用[setAppNet](arkts-network-connection-setappnet-f.md)绑定到指定[NetHandle](arkts-network-connection-nethandle-i.md)对应的网络，则返回[NetHandle](arkts-network-connection-nethandle-i.md)对应网络的代理配置信息。在其它情况下，将返回默认网络的代理配置信息。
 
 **起始版本：** 10
+
+<!--Device-connection-function getDefaultHttpProxy(): Promise<HttpProxy>--><!--Device-connection-function getDefaultHttpProxy(): Promise<HttpProxy>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 

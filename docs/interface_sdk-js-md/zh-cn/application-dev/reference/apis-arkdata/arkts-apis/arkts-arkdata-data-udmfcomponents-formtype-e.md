@@ -8,6 +8,8 @@ declare enum FormType
 
 **起始版本：** 20
 
+<!--Device-unnamed-declare enum FormType--><!--Device-unnamed-declare enum FormType-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## TYPE_BIG
@@ -21,6 +23,8 @@ TYPE_BIG = 0
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FormType-TYPE_BIG = 0--><!--Device-FormType-TYPE_BIG = 0-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -36,6 +40,8 @@ TYPE_MID = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FormType-TYPE_MID = 1--><!--Device-FormType-TYPE_MID = 1-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## TYPE_SMALL
@@ -49,5 +55,7 @@ TYPE_SMALL = 2
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FormType-TYPE_SMALL = 2--><!--Device-FormType-TYPE_SMALL = 2-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core

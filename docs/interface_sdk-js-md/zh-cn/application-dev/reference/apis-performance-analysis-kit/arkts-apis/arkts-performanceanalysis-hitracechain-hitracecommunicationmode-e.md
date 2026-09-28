@@ -8,6 +8,8 @@ enum HiTraceCommunicationMode
 
 **起始版本：** 8
 
+<!--Device-hiTraceChain-enum HiTraceCommunicationMode--><!--Device-hiTraceChain-enum HiTraceCommunicationMode-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
 
 ## DEFAULT
@@ -19,6 +21,8 @@ DEFAULT = 0
 缺省通信类型。
 
 **起始版本：** 8
+
+<!--Device-HiTraceCommunicationMode-DEFAULT = 0--><!--Device-HiTraceCommunicationMode-DEFAULT = 0-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
 
@@ -32,6 +36,8 @@ THREAD = 1
 
 **起始版本：** 8
 
+<!--Device-HiTraceCommunicationMode-THREAD = 1--><!--Device-HiTraceCommunicationMode-THREAD = 1-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
 
 ## PROCESS
@@ -44,6 +50,8 @@ PROCESS = 2
 
 **起始版本：** 8
 
+<!--Device-HiTraceCommunicationMode-PROCESS = 2--><!--Device-HiTraceCommunicationMode-PROCESS = 2-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
 
 ## DEVICE
@@ -55,5 +63,7 @@ DEVICE = 3
 设备间通信。
 
 **起始版本：** 8
+
+<!--Device-HiTraceCommunicationMode-DEVICE = 3--><!--Device-HiTraceCommunicationMode-DEVICE = 3-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiTrace

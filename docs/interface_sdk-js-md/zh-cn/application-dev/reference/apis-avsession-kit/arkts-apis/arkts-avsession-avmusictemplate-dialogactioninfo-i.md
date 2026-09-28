@@ -10,6 +10,8 @@ interface DialogActionInfo
 
 **起始版本：** 23
 
+<!--Device-avMusicTemplate-interface DialogActionInfo--><!--Device-avMusicTemplate-interface DialogActionInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## 导入模块
@@ -32,6 +34,8 @@ clickedBtnId: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DialogActionInfo-clickedBtnId: string--><!--Device-DialogActionInfo-clickedBtnId: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## dialogId
@@ -48,6 +52,8 @@ dialogId: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DialogActionInfo-dialogId: string--><!--Device-DialogActionInfo-dialogId: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## isChecked
@@ -63,5 +69,7 @@ isChecked: boolean
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DialogActionInfo-isChecked: boolean--><!--Device-DialogActionInfo-isChecked: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate

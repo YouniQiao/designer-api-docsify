@@ -8,6 +8,8 @@ export declare interface AxisValue
 
 **起始版本：** 9
 
+<!--Device-unnamed-export declare interface AxisValue--><!--Device-unnamed-export declare interface AxisValue-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## 导入模块
@@ -28,6 +30,8 @@ axis: Axis
 
 **起始版本：** 9
 
+<!--Device-AxisValue-axis: Axis--><!--Device-AxisValue-axis: Axis-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## value
@@ -41,5 +45,7 @@ value: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-AxisValue-value: int--><!--Device-AxisValue-value: int-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core

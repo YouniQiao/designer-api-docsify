@@ -8,6 +8,8 @@ export interface CloudDB
 
 **起始版本：** 11
 
+<!--Device-cloudExtension-export interface CloudDB--><!--Device-cloudExtension-export interface CloudDB-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
@@ -30,6 +32,8 @@ delete(
 删除云数据库表中的指定数据。使用Promise异步回调。
 
 **起始版本：** 11
+
+<!--Device-CloudDB-delete(      table: string,      extensions: Array<Record<string, CloudType>>    ): Promise<Array<Result<Record<string, CloudType>>>>--><!--Device-CloudDB-delete(      table: string,      extensions: Array<Record<string, CloudType>>    ): Promise<Array<Result<Record<string, CloudType>>>>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -74,6 +78,8 @@ generateId(count: number): Promise<Result<Array<string>>>
 
 **起始版本：** 11
 
+<!--Device-CloudDB-generateId(count: int): Promise<Result<Array<string>>>--><!--Device-CloudDB-generateId(count: int): Promise<Result<Array<string>>>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
@@ -117,6 +123,8 @@ heartbeat(lockId: number): Promise<Result<LockInfo>>
 延长数据库的加锁时效。使用Promise异步回调。
 
 **起始版本：** 11
+
+<!--Device-CloudDB-heartbeat(lockId: int): Promise<Result<LockInfo>>--><!--Device-CloudDB-heartbeat(lockId: int): Promise<Result<LockInfo>>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -172,6 +180,8 @@ insert(
 
 **起始版本：** 11
 
+<!--Device-CloudDB-insert(      table: string,      values: Array<Record<string, CloudType>>,      extensions: Array<Record<string, CloudType>>    ): Promise<Array<Result<Record<string, CloudType>>>>--><!--Device-CloudDB-insert(      table: string,      values: Array<Record<string, CloudType>>,      extensions: Array<Record<string, CloudType>>    ): Promise<Array<Result<Record<string, CloudType>>>>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
@@ -216,6 +226,8 @@ lock(): Promise<Result<LockInfo>>
 
 **起始版本：** 11
 
+<!--Device-CloudDB-lock(): Promise<Result<LockInfo>>--><!--Device-CloudDB-lock(): Promise<Result<LockInfo>>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
@@ -259,6 +271,8 @@ query(table: string, fields: Array<string>, queryCount: number, queryCursor: str
 在云数据库表中查询数据。使用Promise异步回调。
 
 **起始版本：** 11
+
+<!--Device-CloudDB-query(table: string, fields: Array<string>, queryCount: int, queryCursor: string): Promise<Result<CloudData>>--><!--Device-CloudDB-query(table: string, fields: Array<string>, queryCount: int, queryCursor: string): Promise<Result<CloudData>>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -312,6 +326,8 @@ unlock(lockId: number): Promise<Result<boolean>>
 
 **起始版本：** 11
 
+<!--Device-CloudDB-unlock(lockId: int): Promise<Result<boolean>>--><!--Device-CloudDB-unlock(lockId: int): Promise<Result<boolean>>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
@@ -360,6 +376,8 @@ update(
 通过该接口更新云上的数据。使用Promise异步回调。
 
 **起始版本：** 11
+
+<!--Device-CloudDB-update(      table: string,      values: Array<Record<string, CloudType>>,      extensions: Array<Record<string, CloudType>>    ): Promise<Array<Result<Record<string, CloudType>>>>--><!--Device-CloudDB-update(      table: string,      values: Array<Record<string, CloudType>>,      extensions: Array<Record<string, CloudType>>    ): Promise<Array<Result<Record<string, CloudType>>>>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 

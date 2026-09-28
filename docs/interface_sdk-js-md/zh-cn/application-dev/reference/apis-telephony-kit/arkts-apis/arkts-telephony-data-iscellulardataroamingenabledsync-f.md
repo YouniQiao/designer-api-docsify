@@ -18,6 +18,8 @@ function isCellularDataRoamingEnabledSync(slotId: number): boolean
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-data-function isCellularDataRoamingEnabledSync(slotId: int): boolean--><!--Device-data-function isCellularDataRoamingEnabledSync(slotId: int): boolean-End-->
+
 **系统能力：** SystemCapability.Telephony.CellularData
 
 **参数：**

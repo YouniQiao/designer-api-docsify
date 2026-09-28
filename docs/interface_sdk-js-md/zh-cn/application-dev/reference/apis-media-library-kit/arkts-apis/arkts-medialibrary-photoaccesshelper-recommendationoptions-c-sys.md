@@ -8,6 +8,8 @@ class RecommendationOptions
 
 **起始版本：** 11
 
+<!--Device-photoAccessHelper-class RecommendationOptions--><!--Device-photoAccessHelper-class RecommendationOptions-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
@@ -34,6 +36,8 @@ defaultRecommendationType?: RecommendationType
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RecommendationOptions-defaultRecommendationType?: RecommendationType--><!--Device-RecommendationOptions-defaultRecommendationType?: RecommendationType-End-->
+
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +55,8 @@ recommendationTypeList?: Array<RecommendationType>
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-RecommendationOptions-recommendationTypeList?: Array<RecommendationType>--><!--Device-RecommendationOptions-recommendationTypeList?: Array<RecommendationType>-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

@@ -8,6 +8,8 @@ beacon设备制造商数据。
 
 **起始版本：** 20
 
+<!--Device-geoLocationManager-export interface BeaconManufactureData--><!--Device-geoLocationManager-export interface BeaconManufactureData-End-->
+
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 ## 导入模块
@@ -28,7 +30,9 @@ manufactureData: ArrayBuffer
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-BeaconManufactureData-manufactureData: ArrayBuffer--><!--Device-BeaconManufactureData-manufactureData: ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geofence
 
@@ -44,7 +48,9 @@ manufactureDataMask: ArrayBuffer
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-BeaconManufactureData-manufactureDataMask: ArrayBuffer--><!--Device-BeaconManufactureData-manufactureDataMask: ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geofence
 
@@ -60,6 +66,8 @@ manufactureId: number
 
 **起始版本：** 20
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-BeaconManufactureData-manufactureId: int--><!--Device-BeaconManufactureData-manufactureId: int-End-->
 
 **系统能力：** SystemCapability.Location.Location.Geofence

@@ -21,6 +21,8 @@ function offIndoorOrOutdoorIdentify(configParams: DistanceMeasurementConfigParam
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-spatialAwareness-function offIndoorOrOutdoorIdentify(configParams: DistanceMeasurementConfigParams,    callback?: Callback<DoorPositionResponse>): void--><!--Device-spatialAwareness-function offIndoorOrOutdoorIdentify(configParams: DistanceMeasurementConfigParams,    callback?: Callback<DoorPositionResponse>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.DistanceMeasurement
 
 **系统接口：** 此接口为系统接口。

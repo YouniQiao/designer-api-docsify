@@ -8,6 +8,8 @@ interface VibratorEvent
 
 **起始版本：** 18
 
+<!--Device-vibrator-interface VibratorEvent--><!--Device-vibrator-interface VibratorEvent-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## 导入模块
@@ -28,6 +30,8 @@ duration?: number
 
 **起始版本：** 18
 
+<!--Device-VibratorEvent-duration?: int--><!--Device-VibratorEvent-duration?: int-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## eventType
@@ -41,6 +45,8 @@ eventType: VibratorEventType
 **类型：** [VibratorEventType](arkts-sensorservice-vibrator-vibratoreventtype-e.md)
 
 **起始版本：** 18
+
+<!--Device-VibratorEvent-eventType: VibratorEventType--><!--Device-VibratorEvent-eventType: VibratorEventType-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
@@ -56,6 +62,8 @@ frequency?: number
 
 **起始版本：** 18
 
+<!--Device-VibratorEvent-frequency?: int--><!--Device-VibratorEvent-frequency?: int-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## index
@@ -69,6 +77,8 @@ index?: number
 **类型：** number
 
 **起始版本：** 18
+
+<!--Device-VibratorEvent-index?: int--><!--Device-VibratorEvent-index?: int-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
@@ -84,6 +94,8 @@ intensity?: number
 
 **起始版本：** 18
 
+<!--Device-VibratorEvent-intensity?: int--><!--Device-VibratorEvent-intensity?: int-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## points
@@ -98,6 +110,8 @@ points?: Array<VibratorCurvePoint>
 
 **起始版本：** 18
 
+<!--Device-VibratorEvent-points?: Array<VibratorCurvePoint>--><!--Device-VibratorEvent-points?: Array<VibratorCurvePoint>-End-->
+
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## time
@@ -111,5 +125,7 @@ time: number
 **类型：** number
 
 **起始版本：** 18
+
+<!--Device-VibratorEvent-time: int--><!--Device-VibratorEvent-time: int-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice

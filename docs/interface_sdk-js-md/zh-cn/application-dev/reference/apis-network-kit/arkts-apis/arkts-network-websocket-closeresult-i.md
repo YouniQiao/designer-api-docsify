@@ -8,6 +8,8 @@ export interface CloseResult
 
 **起始版本：** 10
 
+<!--Device-webSocket-export interface CloseResult--><!--Device-webSocket-export interface CloseResult-End-->
+
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块
@@ -28,7 +30,9 @@ code: number
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-CloseResult-code: int--><!--Device-CloseResult-code: int-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -44,6 +48,8 @@ reason: string
 
 **起始版本：** 10
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-CloseResult-reason: string--><!--Device-CloseResult-reason: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack

@@ -20,6 +20,8 @@ function getRunningFormInfoById(formId: string): Promise<formInfo.RunningFormInf
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-formObserver-function getRunningFormInfoById(formId: string): Promise<formInfo.RunningFormInfo>--><!--Device-formObserver-function getRunningFormInfoById(formId: string): Promise<formInfo.RunningFormInfo>-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -81,6 +83,8 @@ function getRunningFormInfoById(formId: string, isUnusedIncluded: boolean): Prom
 **需要权限：** ohos.permission.OBSERVE_FORM_RUNNING
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-formObserver-function getRunningFormInfoById(formId: string, isUnusedIncluded: boolean): Promise<formInfo.RunningFormInfo>--><!--Device-formObserver-function getRunningFormInfoById(formId: string, isUnusedIncluded: boolean): Promise<formInfo.RunningFormInfo>-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -145,6 +149,8 @@ function getRunningFormInfoById(formId: string, callback: AsyncCallback<formInfo
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-formObserver-function getRunningFormInfoById(formId: string, callback: AsyncCallback<formInfo.RunningFormInfo>): void--><!--Device-formObserver-function getRunningFormInfoById(formId: string, callback: AsyncCallback<formInfo.RunningFormInfo>): void-End-->
+
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -207,6 +213,8 @@ function getRunningFormInfoById(
 **需要权限：** ohos.permission.OBSERVE_FORM_RUNNING
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-formObserver-function getRunningFormInfoById(    formId: string,    isUnusedIncluded: boolean,    callback: AsyncCallback<formInfo.RunningFormInfo>  ): void--><!--Device-formObserver-function getRunningFormInfoById(    formId: string,    isUnusedIncluded: boolean,    callback: AsyncCallback<formInfo.RunningFormInfo>  ): void-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 

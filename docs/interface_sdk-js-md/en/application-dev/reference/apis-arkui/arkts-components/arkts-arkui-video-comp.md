@@ -8,7 +8,7 @@ The **Video** component is used to play a video and control its playback state. 
 > The **Video** component provides only simple video playback and cannot support complex video playback control
 > scenarios. For complex development scenarios, you are advised to use the
 > [AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-media-avplayer-i.md) playback control API and the
-> [XComponent](arkts-arkui-xcomponent-comp.md#xcomponent) component.
+> [XComponent](arkts-arkui-xcomponent-comp.md) component.
 > <br>
 > 
 > When the **Video** component uses [expandSafeArea](arkts-arkui-common-comp-commonmethod-c.md#expandsafearea) to expand the safe area, the
@@ -33,6 +33,8 @@ Video(value: VideoOptions)
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-VideoInterface-(value: VideoOptions): VideoAttribute--><!--Device-VideoInterface-(value: VideoOptions): VideoAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

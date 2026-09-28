@@ -8,6 +8,8 @@ interface AudioDeviceDescriptor
 
 **起始版本：** 7
 
+<!--Device-audio-interface AudioDeviceDescriptor--><!--Device-audio-interface AudioDeviceDescriptor-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 ## 导入模块
@@ -34,6 +36,8 @@ SystemCapability.Multimedia.Audio.Core
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioDeviceDescriptor-readonly dmDeviceInfo?: string--><!--Device-AudioDeviceDescriptor-readonly dmDeviceInfo?: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +55,8 @@ SystemCapability.Multimedia.Audio.Core
 **类型：** number
 
 **起始版本：** 18
+
+<!--Device-AudioDeviceDescriptor-readonly dmDeviceType?: int--><!--Device-AudioDeviceDescriptor-readonly dmDeviceType?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -70,6 +76,8 @@ SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 21
 
+<!--Device-AudioDeviceDescriptor-readonly highQualityRecordingSupported?: boolean--><!--Device-AudioDeviceDescriptor-readonly highQualityRecordingSupported?: boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **系统接口：** 此接口为系统接口。
@@ -87,6 +95,8 @@ SystemCapability.Multimedia.Audio.Device
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-AudioDeviceDescriptor-readonly interruptGroupId: int--><!--Device-AudioDeviceDescriptor-readonly interruptGroupId: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -106,6 +116,8 @@ SystemCapability.Multimedia.Audio.Device
 
 **起始版本：** 9
 
+<!--Device-AudioDeviceDescriptor-readonly networkId: string--><!--Device-AudioDeviceDescriptor-readonly networkId: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **系统接口：** 此接口为系统接口。
@@ -123,6 +135,8 @@ SystemCapability.Multimedia.Audio.Device
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-AudioDeviceDescriptor-readonly volumeGroupId: int--><!--Device-AudioDeviceDescriptor-readonly volumeGroupId: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 

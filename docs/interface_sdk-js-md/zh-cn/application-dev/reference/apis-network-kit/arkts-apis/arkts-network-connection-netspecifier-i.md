@@ -8,6 +8,8 @@ export interface NetSpecifier
 
 **起始版本：** 8
 
+<!--Device-connection-export interface NetSpecifier--><!--Device-connection-export interface NetSpecifier-End-->
+
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## 导入模块
@@ -28,7 +30,9 @@ bearerPrivateIdentifier?: string
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-NetSpecifier-bearerPrivateIdentifier?: string--><!--Device-NetSpecifier-bearerPrivateIdentifier?: string-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -44,6 +48,8 @@ netCapabilities: NetCapabilities
 
 **起始版本：** 8
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-NetSpecifier-netCapabilities: NetCapabilities--><!--Device-NetSpecifier-netCapabilities: NetCapabilities-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Core

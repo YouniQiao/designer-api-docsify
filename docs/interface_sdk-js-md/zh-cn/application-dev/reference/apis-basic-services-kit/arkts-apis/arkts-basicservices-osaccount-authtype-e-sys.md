@@ -8,6 +8,8 @@ enum AuthType
 
 **起始版本：** 8
 
+<!--Device-osAccount-enum AuthType--><!--Device-osAccount-enum AuthType-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -21,6 +23,8 @@ PIN = 1
 表示PIN认证类型。
 
 **起始版本：** 8
+
+<!--Device-AuthType-PIN = 1--><!--Device-AuthType-PIN = 1-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -36,6 +40,8 @@ FACE = 2
 
 **起始版本：** 8
 
+<!--Device-AuthType-FACE = 2--><!--Device-AuthType-FACE = 2-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +55,8 @@ FINGERPRINT = 4
 表示指纹认证类型。
 
 **起始版本：** 10
+
+<!--Device-AuthType-FINGERPRINT = 4--><!--Device-AuthType-FINGERPRINT = 4-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -64,6 +72,8 @@ RECOVERY_KEY = 8
 
 **起始版本：** 12
 
+<!--Device-AuthType-RECOVERY_KEY = 8--><!--Device-AuthType-RECOVERY_KEY = 8-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -78,6 +88,8 @@ PRIVATE_PIN = 16
 
 **起始版本：** 14
 
+<!--Device-AuthType-PRIVATE_PIN = 16--><!--Device-AuthType-PRIVATE_PIN = 16-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -91,6 +103,8 @@ COMPANION_DEVICE = 64
 表示伴随设备认证类型。
 
 **起始版本：** 23
+
+<!--Device-AuthType-COMPANION_DEVICE = 64--><!--Device-AuthType-COMPANION_DEVICE = 64-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -108,6 +122,8 @@ CUSTOM = 128
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AuthType-CUSTOM = 128--><!--Device-AuthType-CUSTOM = 128-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -121,6 +137,8 @@ DOMAIN = 1024
 表示域认证类型。
 
 **起始版本：** 9
+
+<!--Device-AuthType-DOMAIN = 1024--><!--Device-AuthType-DOMAIN = 1024-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 

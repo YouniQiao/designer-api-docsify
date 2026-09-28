@@ -12,6 +12,8 @@ export interface NotificationTime
 
 **起始版本：** 11
 
+<!--Device-unnamed-export interface NotificationTime--><!--Device-unnamed-export interface NotificationTime-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## initialTime
@@ -25,6 +27,8 @@ initialTime?: number
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-NotificationTime-initialTime?: int--><!--Device-NotificationTime-initialTime?: int-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -43,6 +47,8 @@ isCountDown?: boolean
 
 **起始版本：** 11
 
+<!--Device-NotificationTime-isCountDown?: boolean--><!--Device-NotificationTime-isCountDown?: boolean-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## isInTitle
@@ -60,6 +66,8 @@ isInTitle?: boolean
 
 **起始版本：** 11
 
+<!--Device-NotificationTime-isInTitle?: boolean--><!--Device-NotificationTime-isInTitle?: boolean-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## isPaused
@@ -76,5 +84,7 @@ isPaused?: boolean
 **类型：** boolean
 
 **起始版本：** 11
+
+<!--Device-NotificationTime-isPaused?: boolean--><!--Device-NotificationTime-isPaused?: boolean-End-->
 
 **系统能力：** SystemCapability.Notification.Notification

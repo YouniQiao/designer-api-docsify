@@ -16,6 +16,8 @@ function getTime(isNanoseconds?: boolean): number
 
 **起始版本：** 10
 
+<!--Device-systemDateTime-function getTime(isNanoseconds?: boolean): long--><!--Device-systemDateTime-function getTime(isNanoseconds?: boolean): long-End-->
+
 **系统能力：** SystemCapability.MiscServices.Time
 
 **参数：**

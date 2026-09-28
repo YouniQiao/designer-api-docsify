@@ -21,6 +21,8 @@ function allocResourceAndShare(
 
 **起始版本：** 11
 
+<!--Device-sharing-function allocResourceAndShare(      storeId: string,      predicates: relationalStore.RdbPredicates,      participants: Array<Participant>,      columns?: Array<string>    ): Promise<relationalStore.ResultSet>--><!--Device-sharing-function allocResourceAndShare(      storeId: string,      predicates: relationalStore.RdbPredicates,      participants: Array<Participant>,      columns?: Array<string>    ): Promise<relationalStore.ResultSet>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
 **系统接口：** 此接口为系统接口。
@@ -112,6 +114,8 @@ function allocResourceAndShare(
 
 **起始版本：** 11
 
+<!--Device-sharing-function allocResourceAndShare(      storeId: string,      predicates: relationalStore.RdbPredicates,      participants: Array<Participant>,      callback: AsyncCallback<relationalStore.ResultSet>    ): void--><!--Device-sharing-function allocResourceAndShare(      storeId: string,      predicates: relationalStore.RdbPredicates,      participants: Array<Participant>,      callback: AsyncCallback<relationalStore.ResultSet>    ): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
 **系统接口：** 此接口为系统接口。
@@ -199,6 +203,8 @@ function allocResourceAndShare(
 根据谓词条件匹配的数据申请共享资源标识并发起共享，返回已共享资源的结果集。并根据指定的列字段，返回的结果集中同时包含对应列的字段值，使用callback异步回调。
 
 **起始版本：** 11
+
+<!--Device-sharing-function allocResourceAndShare(      storeId: string,      predicates: relationalStore.RdbPredicates,      participants: Array<Participant>,      columns: Array<string>,      callback: AsyncCallback<relationalStore.ResultSet>    ): void--><!--Device-sharing-function allocResourceAndShare(      storeId: string,      predicates: relationalStore.RdbPredicates,      participants: Array<Participant>,      columns: Array<string>,      callback: AsyncCallback<relationalStore.ResultSet>    ): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 

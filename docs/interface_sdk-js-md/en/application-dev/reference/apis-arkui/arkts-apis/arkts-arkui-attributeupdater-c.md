@@ -10,6 +10,8 @@ Sets attributes directly to a component to trigger UI re-renders, without markin
 
 **Since:** 12
 
+<!--Device-unnamed-export declare class AttributeUpdater<T, C = Initializer<T>> implements AttributeModifier<T>--><!--Device-unnamed-export declare class AttributeUpdater<T, C = Initializer<T>> implements AttributeModifier<T>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## applyNormalAttribute
@@ -25,6 +27,8 @@ Defines the normal-state attribute update function, which is triggered when **At
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AttributeUpdater-applyNormalAttribute?(instance: T): void--><!--Device-AttributeUpdater-applyNormalAttribute?(instance: T): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -48,6 +52,8 @@ Provides the style when **AttributeUpdater** initially sets attributes to a comp
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AttributeUpdater-initializeModifier(instance: T): void--><!--Device-AttributeUpdater-initializeModifier(instance: T): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -69,6 +75,8 @@ Invoked to notify the application when multiple components are bound to the same
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AttributeUpdater-onComponentChanged(component: T): void--><!--Device-AttributeUpdater-onComponentChanged(component: T): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -94,6 +102,8 @@ Obtains the attribute class instance corresponding to the component in **Attribu
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AttributeUpdater-get attribute(): T | undefined--><!--Device-AttributeUpdater-get attribute(): T | undefined-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## updateConstructorParams
@@ -111,5 +121,7 @@ updateConstructorParams: C
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AttributeUpdater-updateConstructorParams: C--><!--Device-AttributeUpdater-updateConstructorParams: C-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

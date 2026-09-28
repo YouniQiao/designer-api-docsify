@@ -15,6 +15,8 @@
 
 **起始版本：** 7
 
+<!--Device-unnamed-declare namespace i18n--><!--Device-unnamed-declare namespace i18n-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## 导入模块

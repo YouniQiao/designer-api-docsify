@@ -18,6 +18,8 @@ function getSignalLevel(rssi: number, band: number): number
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
+<!--Device-wifiManager-function getSignalLevel(rssi: int, band: int): int--><!--Device-wifiManager-function getSignalLevel(rssi: int, band: int): int-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **参数：**

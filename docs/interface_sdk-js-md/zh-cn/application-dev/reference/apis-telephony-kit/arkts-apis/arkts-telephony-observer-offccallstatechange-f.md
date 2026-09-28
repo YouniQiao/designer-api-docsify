@@ -20,6 +20,8 @@ function offCCallStateChange(callback?: Callback<CCallStateInfo>): void
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
+<!--Device-observer-function offCCallStateChange(callback?: Callback<CCallStateInfo>): void--><!--Device-observer-function offCCallStateChange(callback?: Callback<CCallStateInfo>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
 **参数：**

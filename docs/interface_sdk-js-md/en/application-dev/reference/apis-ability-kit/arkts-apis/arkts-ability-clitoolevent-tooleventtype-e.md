@@ -8,6 +8,8 @@ Enumerates the event types that a CLI tool or command process can produce during
 
 **Since:** 26.0.1
 
+<!--Device-unnamed-export enum ToolEventType--><!--Device-unnamed-export enum ToolEventType-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 ## STDOUT
@@ -21,6 +23,8 @@ Standard output event. The [data](arkts-ability-clitoolevent-i.md#data) field co
 **Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ToolEventType-STDOUT = 'stdout'--><!--Device-ToolEventType-STDOUT = 'stdout'-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -36,6 +40,8 @@ Standard error event. The [data](arkts-ability-clitoolevent-i.md#data) field con
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ToolEventType-STDERR = 'stderr'--><!--Device-ToolEventType-STDERR = 'stderr'-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 ## EXIT
@@ -50,6 +56,8 @@ Exit event. The tool process has exited. The [data](arkts-ability-clitoolevent-i
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ToolEventType-EXIT = 'exit'--><!--Device-ToolEventType-EXIT = 'exit'-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 ## ERROR
@@ -63,5 +71,7 @@ Error event. The tool process encountered an error that prevented normal executi
 **Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ToolEventType-ERROR = 'error'--><!--Device-ToolEventType-ERROR = 'error'-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core

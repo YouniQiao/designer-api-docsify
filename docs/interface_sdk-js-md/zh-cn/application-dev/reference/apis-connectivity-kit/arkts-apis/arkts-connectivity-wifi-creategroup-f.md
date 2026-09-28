@@ -26,6 +26,8 @@ function createGroup(config: WifiP2PConfig): boolean
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
+<!--Device-wifi-function createGroup(config: WifiP2PConfig): boolean--><!--Device-wifi-function createGroup(config: WifiP2PConfig): boolean-End-->
+
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
 **参数：**

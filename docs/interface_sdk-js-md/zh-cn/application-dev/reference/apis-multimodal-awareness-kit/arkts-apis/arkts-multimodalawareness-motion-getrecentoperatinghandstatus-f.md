@@ -20,6 +20,8 @@ function getRecentOperatingHandStatus(): OperatingHandStatus
 - API版本20+：ohos.permission.ACTIVITY_MOTION 或 ohos.permission.DETECT_GESTURE
 - API版本15-19：ohos.permission.ACTIVITY_MOTION
 
+<!--Device-motion-function getRecentOperatingHandStatus(): OperatingHandStatus--><!--Device-motion-function getRecentOperatingHandStatus(): OperatingHandStatus-End-->
+
 **系统能力：** SystemCapability.MultimodalAwareness.Motion
 
 **返回值：**

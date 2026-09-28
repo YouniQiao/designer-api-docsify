@@ -6,6 +6,8 @@
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-unnamed-declare namespace workScheduler--><!--Device-unnamed-declare namespace workScheduler-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
 ## 导入模块

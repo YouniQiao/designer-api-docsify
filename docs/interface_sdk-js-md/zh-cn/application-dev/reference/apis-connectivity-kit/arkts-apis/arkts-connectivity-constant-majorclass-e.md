@@ -8,6 +8,8 @@ export enum MajorClass
 
 **起始版本：** 10
 
+<!--Device-constant-export enum MajorClass--><!--Device-constant-export enum MajorClass-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## MAJOR_MISC
@@ -19,6 +21,8 @@ MAJOR_MISC = 0x0000
 表示不属于其他标准类别的杂项设备。
 
 **起始版本：** 10
+
+<!--Device-MajorClass-MAJOR_MISC = 0x0000--><!--Device-MajorClass-MAJOR_MISC = 0x0000-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -32,6 +36,8 @@ MAJOR_COMPUTER = 0x0100
 
 **起始版本：** 10
 
+<!--Device-MajorClass-MAJOR_COMPUTER = 0x0100--><!--Device-MajorClass-MAJOR_COMPUTER = 0x0100-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## MAJOR_PHONE
@@ -43,6 +49,8 @@ MAJOR_PHONE = 0x0200
 表示手机设备。
 
 **起始版本：** 10
+
+<!--Device-MajorClass-MAJOR_PHONE = 0x0200--><!--Device-MajorClass-MAJOR_PHONE = 0x0200-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -56,6 +64,8 @@ MAJOR_NETWORKING = 0x0300
 
 **起始版本：** 10
 
+<!--Device-MajorClass-MAJOR_NETWORKING = 0x0300--><!--Device-MajorClass-MAJOR_NETWORKING = 0x0300-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## MAJOR_AUDIO_VIDEO
@@ -67,6 +77,8 @@ MAJOR_AUDIO_VIDEO = 0x0400
 表示音频/视频设备。
 
 **起始版本：** 10
+
+<!--Device-MajorClass-MAJOR_AUDIO_VIDEO = 0x0400--><!--Device-MajorClass-MAJOR_AUDIO_VIDEO = 0x0400-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -80,6 +92,8 @@ MAJOR_PERIPHERAL = 0x0500
 
 **起始版本：** 10
 
+<!--Device-MajorClass-MAJOR_PERIPHERAL = 0x0500--><!--Device-MajorClass-MAJOR_PERIPHERAL = 0x0500-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## MAJOR_IMAGING
@@ -91,6 +105,8 @@ MAJOR_IMAGING = 0x0600
 表示成像设备。
 
 **起始版本：** 10
+
+<!--Device-MajorClass-MAJOR_IMAGING = 0x0600--><!--Device-MajorClass-MAJOR_IMAGING = 0x0600-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -104,6 +120,8 @@ MAJOR_WEARABLE = 0x0700
 
 **起始版本：** 10
 
+<!--Device-MajorClass-MAJOR_WEARABLE = 0x0700--><!--Device-MajorClass-MAJOR_WEARABLE = 0x0700-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## MAJOR_TOY
@@ -115,6 +133,8 @@ MAJOR_TOY = 0x0800
 表示玩具设备。
 
 **起始版本：** 10
+
+<!--Device-MajorClass-MAJOR_TOY = 0x0800--><!--Device-MajorClass-MAJOR_TOY = 0x0800-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -128,6 +148,8 @@ MAJOR_HEALTH = 0x0900
 
 **起始版本：** 10
 
+<!--Device-MajorClass-MAJOR_HEALTH = 0x0900--><!--Device-MajorClass-MAJOR_HEALTH = 0x0900-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## MAJOR_UNCATEGORIZED
@@ -139,5 +161,7 @@ MAJOR_UNCATEGORIZED = 0x1F00
 表示未分类设备。
 
 **起始版本：** 10
+
+<!--Device-MajorClass-MAJOR_UNCATEGORIZED = 0x1F00--><!--Device-MajorClass-MAJOR_UNCATEGORIZED = 0x1F00-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

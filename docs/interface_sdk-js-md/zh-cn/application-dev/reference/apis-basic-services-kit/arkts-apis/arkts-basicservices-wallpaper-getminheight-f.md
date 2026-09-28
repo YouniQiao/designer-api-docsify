@@ -21,6 +21,8 @@ function getMinHeight(callback: AsyncCallback<number>): void
 
 **废弃版本：** 9
 
+<!--Device-wallpaper-function getMinHeight(callback: AsyncCallback<number>): void--><!--Device-wallpaper-function getMinHeight(callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
 **参数：**
@@ -60,6 +62,8 @@ function getMinHeight(): Promise<number>
 **起始版本：** 7
 
 **废弃版本：** 9
+
+<!--Device-wallpaper-function getMinHeight(): Promise<number>--><!--Device-wallpaper-function getMinHeight(): Promise<number>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 

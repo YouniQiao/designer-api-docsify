@@ -16,6 +16,8 @@ function getTopAbility(): Promise<ElementName>
 
 **起始版本：** 9
 
+<!--Device-abilityManager-function getTopAbility(): Promise<ElementName>--><!--Device-abilityManager-function getTopAbility(): Promise<ElementName>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +47,8 @@ function getTopAbility(callback: AsyncCallback<ElementName>): void
 获取窗口焦点所在的Ability。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-abilityManager-function getTopAbility(callback: AsyncCallback<ElementName>): void--><!--Device-abilityManager-function getTopAbility(callback: AsyncCallback<ElementName>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

@@ -8,6 +8,8 @@ export interface HuksReturnResult
 
 **起始版本：** 9
 
+<!--Device-huks-export interface HuksReturnResult--><!--Device-huks-export interface HuksReturnResult-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Core
 
 ## 导入模块
@@ -32,6 +34,8 @@ certChains?: Array<string>
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
+<!--Device-HuksReturnResult-certChains?: Array<string>--><!--Device-HuksReturnResult-certChains?: Array<string>-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Core
 
 ## outData
@@ -49,6 +53,8 @@ outData?: Uint8Array
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-HuksReturnResult-outData?: Uint8Array--><!--Device-HuksReturnResult-outData?: Uint8Array-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Core
 
@@ -68,6 +74,8 @@ properties?: Array<HuksParam>
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
+<!--Device-HuksReturnResult-properties?: Array<HuksParam>--><!--Device-HuksReturnResult-properties?: Array<HuksParam>-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Core
 
 ## sharedSecret
@@ -85,5 +93,7 @@ sharedSecret?: Uint8Array
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-HuksReturnResult-sharedSecret?: Uint8Array--><!--Device-HuksReturnResult-sharedSecret?: Uint8Array-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Core

@@ -12,6 +12,8 @@ const DEFAULT_INTERRUPT_GROUP_ID: number
 
 **起始版本：** 9
 
+<!--Device-audio-const DEFAULT_INTERRUPT_GROUP_ID: int--><!--Device-audio-const DEFAULT_INTERRUPT_GROUP_ID: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Interrupt
 
 ## DEFAULT_VOLUME_GROUP_ID
@@ -25,5 +27,7 @@ const DEFAULT_VOLUME_GROUP_ID: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-audio-const DEFAULT_VOLUME_GROUP_ID: int--><!--Device-audio-const DEFAULT_VOLUME_GROUP_ID: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume

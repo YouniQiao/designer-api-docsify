@@ -10,6 +10,8 @@ Defines the base class **BaseSpan**, including the universal attributes of the *
 
 **Since:** 11
 
+<!--Device-unnamed-declare class BaseSpan<T> extends CommonMethod<T>--><!--Device-unnamed-declare class BaseSpan<T> extends CommonMethod<T>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## baselineOffset
@@ -25,6 +27,8 @@ Sets the baseline offset of the Span. This is applicable to scenarios such as su
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-BaseSpan-baselineOffset(value: LengthMetrics): T--><!--Device-BaseSpan-baselineOffset(value: LengthMetrics): T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -53,6 +57,8 @@ Sets the text background style. When used as a child component of [ContainerSpan
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-BaseSpan-textBackgroundStyle(style: TextBackgroundStyle): T--><!--Device-BaseSpan-textBackgroundStyle(style: TextBackgroundStyle): T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

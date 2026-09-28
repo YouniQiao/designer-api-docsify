@@ -8,6 +8,8 @@ interface ScanResult
 
 **起始版本：** 10
 
+<!--Device-ble-interface ScanResult--><!--Device-ble-interface ScanResult-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## 导入模块
@@ -30,6 +32,8 @@ address?: BluetoothAddress
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ScanResult-address?: BluetoothAddress--><!--Device-ScanResult-address?: BluetoothAddress-End-->
+
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
 ## advertiseFlags
@@ -46,7 +50,9 @@ advertiseFlags?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-ScanResult-advertiseFlags?: int--><!--Device-ScanResult-advertiseFlags?: int-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -66,7 +72,9 @@ Map的key表示广播数据类型，value表示对应数据类型的具体内容
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-ScanResult-advertisingDataMap?: Map<int, Uint8Array>--><!--Device-ScanResult-advertisingDataMap?: Map<int, Uint8Array>-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -84,7 +92,9 @@ connectable: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ScanResult-connectable: boolean--><!--Device-ScanResult-connectable: boolean-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -102,7 +112,9 @@ data: ArrayBuffer
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ScanResult-data: ArrayBuffer--><!--Device-ScanResult-data: ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -124,7 +136,9 @@ deviceId: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ScanResult-deviceId: string--><!--Device-ScanResult-deviceId: string-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -142,7 +156,9 @@ deviceName: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ScanResult-deviceName: string--><!--Device-ScanResult-deviceName: string-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -162,7 +178,9 @@ Map的key表示制造商ID，value表示对应制造商数据的具体内容。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-ScanResult-manufacturerDataMap?: Map<int, Uint8Array>--><!--Device-ScanResult-manufacturerDataMap?: Map<int, Uint8Array>-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -180,7 +198,9 @@ rssi: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-ScanResult-rssi: int--><!--Device-ScanResult-rssi: int-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -200,7 +220,9 @@ Map的key表示服务UUID，value表示对应UUID服务的具体内容。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-ScanResult-serviceDataMap?: Map<string, Uint8Array>--><!--Device-ScanResult-serviceDataMap?: Map<string, Uint8Array>-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -218,7 +240,9 @@ serviceUuids?: string[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-ScanResult-serviceUuids?: string[]--><!--Device-ScanResult-serviceUuids?: string[]-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
 
@@ -236,6 +260,8 @@ txPowerLevel?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-ScanResult-txPowerLevel?: int--><!--Device-ScanResult-txPowerLevel?: int-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core

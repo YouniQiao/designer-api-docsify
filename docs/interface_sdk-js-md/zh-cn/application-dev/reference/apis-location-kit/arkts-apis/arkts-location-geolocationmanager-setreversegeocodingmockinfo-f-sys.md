@@ -20,6 +20,8 @@ function setReverseGeocodingMockInfo(mockInfos: Array<ReverseGeocodingMockInfo>)
 - API版本20+：ohos.permission.MOCK_LOCATION
 - API版本9-19：N/A
 
+<!--Device-geoLocationManager-function setReverseGeocodingMockInfo(mockInfos: Array<ReverseGeocodingMockInfo>): void--><!--Device-geoLocationManager-function setReverseGeocodingMockInfo(mockInfos: Array<ReverseGeocodingMockInfo>): void-End-->
+
 **系统能力：** SystemCapability.Location.Location.Core
 
 **系统接口：** 此接口为系统接口。

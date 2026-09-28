@@ -8,6 +8,8 @@ export enum ComponentType
 
 **起始版本：** 9
 
+<!--Device-update-export enum ComponentType--><!--Device-update-export enum ComponentType-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -21,6 +23,8 @@ OTA = 1
 OTA升级包，用于固件升级的完整升级包文件。
 
 **起始版本：** 9
+
+<!--Device-ComponentType-OTA = 1--><!--Device-ComponentType-OTA = 1-End-->
 
 **系统能力：** SystemCapability.Update.UpdateService
 

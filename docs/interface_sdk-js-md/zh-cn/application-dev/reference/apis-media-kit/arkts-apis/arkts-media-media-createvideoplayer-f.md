@@ -25,6 +25,8 @@ function createVideoPlayer(callback: AsyncCallback<VideoPlayer>): void
 
 **替代接口：** [createAVPlayer](arkts-media-media-createavplayer-f.md)(callback: AsyncCallback&lt;AVPlayer&gt;)
 
+<!--Device-media-function createVideoPlayer(callback: AsyncCallback<VideoPlayer>): void--><!--Device-media-function createVideoPlayer(callback: AsyncCallback<VideoPlayer>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
 **参数：**
@@ -69,6 +71,8 @@ function createVideoPlayer(): Promise<VideoPlayer>
 **废弃版本：** 9
 
 **替代接口：** [createAVPlayer](arkts-media-media-createavplayer-f.md)()
+
+<!--Device-media-function createVideoPlayer(): Promise<VideoPlayer>--><!--Device-media-function createVideoPlayer(): Promise<VideoPlayer>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 

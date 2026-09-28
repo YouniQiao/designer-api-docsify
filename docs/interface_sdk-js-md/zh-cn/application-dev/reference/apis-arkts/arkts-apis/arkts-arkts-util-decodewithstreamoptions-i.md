@@ -8,6 +8,8 @@ interface DecodeWithStreamOptions
 
 **起始版本：** 11
 
+<!--Device-util-interface DecodeWithStreamOptions--><!--Device-util-interface DecodeWithStreamOptions-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
@@ -29,5 +31,7 @@ stream?: boolean
 **起始版本：** 11
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-DecodeWithStreamOptions-stream?: boolean--><!--Device-DecodeWithStreamOptions-stream?: boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

@@ -16,6 +16,8 @@ function setOverlayEnabled(moduleName:string, isEnabled: boolean, callback: Asyn
 
 **起始版本：** 10
 
+<!--Device-overlay-function setOverlayEnabled(moduleName:string, isEnabled: boolean, callback: AsyncCallback<void>): void--><!--Device-overlay-function setOverlayEnabled(moduleName:string, isEnabled: boolean, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Overlay
 
 **参数：**
@@ -70,6 +72,8 @@ function setOverlayEnabled(moduleName:string, isEnabled: boolean): Promise<void>
 设置当前应用中overlay特征module的禁用使能状态。使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-overlay-function setOverlayEnabled(moduleName:string, isEnabled: boolean): Promise<void>--><!--Device-overlay-function setOverlayEnabled(moduleName:string, isEnabled: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Overlay
 
